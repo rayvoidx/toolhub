@@ -62,6 +62,14 @@
   이후 새 도구 등재 시 locales.js 전 언어에 `tool.<slug>.*` 키를 같은 커밋에서
   추가해야 한다(게이트 F-4, docs/I18N.md). 한국어 baked SEO 를 잃는 대신 글로벌
   기본을 얻는 트레이드오프 — 언어별 정적 페이지 + hreflang 은 지표 검증 후 승격 과제.
+- **2026-07-10 — tool-hub.me 도구 경로 전면 404 장애 (원인·수리 박제)**: 커스텀 도메인
+  연결이 'DNS → GitHub Pages'가 아니라 'Workers 커스텀 도메인 → toolhub Worker'로
+  구성됐는데, Worker 가 허브 자산만 서빙해 `/​<slug>/` 가 전부 404. 동시에 허브 레포의
+  CNAME 파일 때문에 github.io 쪽은 301 → tool-hub.me 로 회송 = **모든 도구가 외부에서
+  접속 불가**. 수리(d8741cc): ① worker/index.js — 자산에 없는 경로를 rayvoidx.github.io
+  로 프록시(새 도구 자동 편입, 재배포 불필요) ② CNAME 제거(301 루프 해소) ③ .assetsignore
+  신설 — 기존 배포가 `/.git/config` 를 200 으로 노출하던 문제 차단. 수리 후 10개 도구
+  전부 200 실측. **재발 방지: CNAME 파일을 절대 되살리지 말 것, 서비스 레포는 공개 유지.**
 
 ## 7. 연관 문서
 - [팩토리 파이프라인](../../docs/PIPELINE.md)
