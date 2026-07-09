@@ -1,6 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "toolhub",
+  // 자산 우선 서빙: 이 레포의 파일이 곧 tool-hub.me 의 허브다.
+  // 자산에 없는 경로는 main(worker/index.js)이 rayvoidx.github.io 로 프록시한다
+  // — 개별 도구(프로젝트 페이지)가 tool-hub.me/<slug>/ 로 자동 편입되는 원리.
+  "main": "worker/index.js",
   "compatibility_date": "2026-07-09",
   "observability": {
     "enabled": true
