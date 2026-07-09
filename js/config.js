@@ -21,7 +21,7 @@ window.APP_CONFIG = {
 
   // 허브(다른 도구 모음) 링크
   hub: {
-    url: "https://rayvoidx.github.io/",
+    url: "https://tool-hub.me/",
     brand: "Toolhub"
   }
 };
