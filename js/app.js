@@ -107,7 +107,8 @@
 
     for (var i = 0; i < cards.length; i++) {
       var card = cards[i];
-      var haystack = normalize(card.getAttribute("data-name") || card.textContent);
+      // data-name(영·한 키워드) + 화면에 표시된 현재 언어 텍스트 둘 다 검색 대상 — 어느 언어로 검색해도 매칭
+      var haystack = normalize((card.getAttribute("data-name") || "") + " " + card.textContent);
       var match = query === "" || haystack.indexOf(query) !== -1;
       card.hidden = !match;
       if (match) visibleCount++;

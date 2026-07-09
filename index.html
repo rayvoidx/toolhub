@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="auto">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Toolhub — 회원가입 없이 바로 쓰는 무료 웹 도구 모음</title>
-<meta name="description" content="가격 비교부터 글자수 세기까지, 생활 속 계산과 변환을 브라우저에서 바로 처리하는 무료 웹 도구 모음. 설치도 회원가입도 필요 없습니다.">
-<meta name="keywords" content="무료 웹 도구, 온라인 계산기 모음, 웹 유틸리티 모음, 설치 없는 계산기">
+<title>Toolhub — Free Online Tools, No Sign-Up</title>
+<meta name="description" content="From price comparison to character counting: free web tools that run right in your browser. No installs, no accounts.">
+<meta name="keywords" content="free online tools, online calculator collection, web utilities, no sign-up tools, 무료 웹 도구, 온라인 계산기 모음">
 <link rel="canonical" href="https://rayvoidx.github.io/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Toolhub — 회원가입 없이 바로 쓰는 무료 웹 도구 모음">
-<meta property="og:description" content="가격 비교부터 글자수 세기까지, 생활 속 계산과 변환을 브라우저에서 바로 처리하는 무료 웹 도구 모음. 설치도 회원가입도 필요 없습니다.">
+<meta property="og:title" content="Toolhub — Free Online Tools, No Sign-Up">
+<meta property="og:description" content="From price comparison to character counting: free web tools that run right in your browser. No installs, no accounts.">
 <meta property="og:url" content="https://rayvoidx.github.io/">
 <meta property="og:image" content="https://rayvoidx.github.io/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,10 +23,11 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Toolhub",
-  "description": "가격 비교부터 글자수 세기까지, 생활 속 계산과 변환을 브라우저에서 바로 처리하는 무료 웹 도구 모음. 설치도 회원가입도 필요 없습니다.",
+  "description": "From price comparison to character counting: free web tools that run right in your browser. No installs, no accounts.",
   "url": "https://rayvoidx.github.io/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
+  "inLanguage": ["en","zh","hi","es","ar","fr","bn","pt","ru","ur","id","de","ja","ko"],
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
@@ -41,25 +42,26 @@ ADSENSE:END -->
     <span>Toolhub</span>
   </a>
   <nav class="header-actions">
-    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
   <section class="hero">
     <h1>Toolhub</h1>
-    <p class="lede">필요한 순간, 설치 없이 바로 쓰는 무료 웹 도구를 모았습니다.</p>
+    <p class="lede" data-i18n="hero.lede">Free web tools you can use the moment you need them — no installs, no sign-ups.</p>
   </section>
 
   <!-- FLAGSHIP:START — /maintain 이 등재 서비스 변경 시 이 블록을 갱신한다 -->
-  <section aria-label="플래그십 서비스" style="margin:0 0 28px;">
+  <section aria-label="Flagship service" style="margin:0 0 28px;">
     <a href="https://social-trend-agent.com" target="_blank" rel="noopener noreferrer"
        style="display:flex;align-items:flex-start;gap:16px;padding:20px 22px;border-radius:14px;background:linear-gradient(135deg,#4338ca 0%,#7c3aed 100%);color:#fff;text-decoration:none;box-shadow:0 4px 20px rgba(79,70,229,.25);">
       <span aria-hidden="true" style="font-size:26px;line-height:1;margin-top:2px;flex-shrink:0;">📊</span>
       <span style="flex:1;min-width:0;">
         <strong style="display:block;font-size:16px;margin-bottom:4px;letter-spacing:-.2px;">Social Trend AI</strong>
-        <span style="display:block;font-size:13px;opacity:.88;line-height:1.55;">크리에이터·인플루언서를 위한 소셜 트렌드 분석 플랫폼. 키워드 분석 · 경쟁사 레이더 · 시그널 아카이브를 한 곳에서.</span>
+        <span style="display:block;font-size:13px;opacity:.88;line-height:1.55;" data-i18n="flagship.desc">A social trend analytics platform for creators and influencers. Keyword analysis, competitor radar, and a signal archive in one place.</span>
         <span style="display:inline-flex;align-items:center;gap:4px;margin-top:10px;font-size:12px;font-weight:700;letter-spacing:.4px;opacity:.95;">social-trend-agent.com <span aria-hidden="true">→</span></span>
       </span>
     </a>
@@ -68,67 +70,69 @@ ADSENSE:END -->
 
   <!-- TOOL:START — builder agent replaces everything inside this section -->
   <section class="tool-card" id="tool" aria-live="polite">
-    <h2>도구 모음</h2>
-    <label for="tool-search">도구 검색</label>
-    <input type="text" id="tool-search" name="tool-search" placeholder="도구 이름으로 검색 (예: 단위가격)" autocomplete="off">
+    <h2 data-i18n="tools.heading">All tools</h2>
+    <label for="tool-search" data-i18n="tools.searchLabel">Search tools</label>
+    <input type="text" id="tool-search" name="tool-search" placeholder="Search by tool name (e.g. unit price)" data-i18n-placeholder="tools.searchPlaceholder" autocomplete="off">
 
     <!-- MAINTAIN:CARDS-START — ontology/services.yaml 의 status:launched 서비스 카드 목록.
          새 도구가 launched 되면 /maintain 이 이 블록 안에 카드를 추가·갱신한다. 각 카드는
-         data-name 에 검색용 이름/키워드를, href 는 서비스의 배포 URL을 그대로 넣는다. -->
+         data-name 에 검색용 이름/키워드(영·한 병기)를, href 는 서비스의 배포 URL을 그대로 넣는다.
+         ★ i18n 규칙 (docs/I18N.md): 카드의 이름/설명에는 data-i18n="tool.<slug>.name|desc" 를 달고,
+           같은 커밋에서 js/locales.js 의 "모든" 언어 블록에 해당 키를 추가한다. -->
     <div id="tool-list" style="display:flex; flex-direction:column; gap:12px; margin:18px 0 8px;">
       <a class="tool-item" href="https://rayvoidx.github.io/unit-price/"
-         data-name="단위가격 계산기 unit-price 100g당 가격 단위가격 비교 g당 가격"
+         data-name="unit price calculator 단위가격 계산기 unit-price 100g당 가격 단위가격 비교 g당 가격 price per 100g compare"
          style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
         <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">₩</span>
         <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;">단위가격 계산기</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;">대용량 vs 소용량, 어느 쪽이 더 싼지 3초 만에 비교 →</span>
+          <strong style="display:block; font-size:16px;" data-i18n="tool.unit-price.name">Unit Price Calculator</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.unit-price.desc">Bulk pack vs. small pack — see which is actually cheaper in seconds</span>
         </span>
       </a>
       <a class="tool-item" href="https://rayvoidx.github.io/char-count/"
-         data-name="글자수 세기 char-count 자소서 글자수 공백 포함 글자수 바이트 계산기 원고지 매수"
+         data-name="character counter word count 글자수 세기 char-count 자소서 글자수 공백 포함 글자수 바이트 계산기 원고지 매수 byte counter"
          style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
         <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">字</span>
         <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;">글자수 세기</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;">자소서·리포트 글자수, 바이트, 원고지 매수를 붙여넣기 즉시 계산 →</span>
+          <strong style="display:block; font-size:16px;" data-i18n="tool.char-count.name">Character Counter</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.char-count.desc">Paste text to instantly count characters, words, and bytes</span>
         </span>
       </a>
     </div>
     <!-- MAINTAIN:CARDS-END -->
-    <p id="tool-empty" class="placeholder-note" hidden>검색 결과가 없습니다. 다른 검색어로 시도해 보세요.</p>
+    <p id="tool-empty" class="placeholder-note" hidden data-i18n="tools.empty">No tools match your search. Try a different term.</p>
 
     <hr style="border:none; border-top:1px solid var(--line); margin:32px 0;">
 
-    <h2>도구 사용법 &amp; 활용 예시</h2>
+    <h2 data-i18n="usage.heading">How to use the tools</h2>
     <article>
-      <h3>단위가격 계산기 — 이렇게 써보세요</h3>
-      <p>마트에서 500g에 4,900원짜리 세제와 1.2kg에 10,900원짜리 세제 중 뭐가 더 싼지 헷갈릴 때, 상품 A·B 칸에 가격과 용량만 넣으면 자동으로 100g당 가격으로 맞춰 비교해 줍니다. 온라인 쇼핑의 "2+1" 같은 묶음 상품은 묶음 개수 칸에 낱개 수를 입력하면 총용량 기준으로 정확히 계산됩니다. 회원가입도 설치도 필요 없고, 입력값은 브라우저 밖으로 나가지 않습니다.</p>
+      <h3 data-i18n="usage.unit-price.title">Unit Price Calculator — how to use it</h3>
+      <p data-i18n="usage.unit-price.body">Standing in a store wondering whether the 500 g detergent or the 1.2 kg one is the better deal? Enter each product's price and size, and the calculator converts both to a price per 100 g so you can compare instantly. For bundles like "buy two, get one free", enter the number of items in the bundle and it computes the true price for the total volume. No sign-up, no install — and your numbers never leave your browser.</p>
     </article>
     <article>
-      <h3>글자수 세기 — 이렇게 써보세요</h3>
-      <p>자소서 500자 제한을 앞두고 있다면 본문을 그대로 붙여넣기만 하면 공백 포함·제외 글자수와 목표 대비 잔여량이 즉시 표시됩니다. 기업 지원 시스템마다 UTF-8(3byte)과 EUC-KR(2byte) 기준이 달라 혼란스럽다면, 두 기준의 바이트 수를 동시에 보여주므로 어떤 시스템에서도 한 번에 확인할 수 있습니다. 입력한 텍스트는 서버로 전송되지 않고 브라우저 안에서만 계산되므로 민감한 내용도 안심하고 붙여넣을 수 있습니다.</p>
+      <h3 data-i18n="usage.char-count.title">Character Counter — how to use it</h3>
+      <p data-i18n="usage.char-count.body">Writing against a character limit — a cover letter, an essay, a social post, or a meta description? Paste your text and you instantly see counts with and without spaces, plus how much room is left against your target. It also shows byte counts (UTF-8 and EUC-KR) for systems that limit by bytes rather than characters. Everything is calculated inside your browser; nothing is sent to a server, so sensitive text is safe to paste.</p>
     </article>
 
     <hr style="border:none; border-top:1px solid var(--line); margin:32px 0;">
 
-    <h2>만든 사람의 다른 서비스</h2>
-    <p>Toolhub 를 만든 팀이 운영하는 다른 서비스도 확인해 보세요.</p>
+    <h2 data-i18n="others.heading">More from the makers</h2>
+    <p data-i18n="others.lede">Other services run by the team behind Toolhub.</p>
     <div style="display:flex;flex-direction:column;gap:10px;margin-top:14px;">
       <a href="https://social-trend-agent.com" target="_blank" rel="noopener noreferrer"
          style="display:flex;align-items:center;gap:14px;padding:16px;border:1.5px solid #4f46e5;border-radius:10px;background:color-mix(in srgb,#4f46e5 6%,var(--surface));color:var(--ink);text-decoration:none;">
         <span aria-hidden="true" style="font-size:20px;width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#4f46e5;color:#fff;">📊</span>
         <span style="flex:1;min-width:0;">
           <strong style="display:block;font-size:15px;">Social Trend AI</strong>
-          <span style="display:block;color:var(--muted);font-size:13px;margin-top:2px;">크리에이터·인플루언서 전용 소셜 트렌드 분석 플랫폼</span>
+          <span style="display:block;color:var(--muted);font-size:13px;margin-top:2px;" data-i18n="others.sta.desc">Social trend analytics platform for creators and influencers</span>
         </span>
       </a>
       <a href="https://isitai.me" target="_blank" rel="noopener noreferrer"
          style="display:flex;align-items:center;gap:14px;padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);text-decoration:none;">
         <span aria-hidden="true" style="font-size:20px;width:40px;height:40px;flex-shrink:0;display:flex;align-items:center;justify-content:center;border-radius:8px;background:color-mix(in srgb,var(--accent) 15%,var(--surface));">🔍</span>
         <span style="flex:1;min-width:0;">
-          <strong style="display:block;font-size:15px;">이거 AI야? (isitai.me)</strong>
-          <span style="display:block;color:var(--muted);font-size:13px;margin-top:2px;">이미지·영상이 AI로 생성되었는지 무료로 판별</span>
+          <strong style="display:block;font-size:15px;" data-i18n="others.isitai.name">Is It AI? (isitai.me)</strong>
+          <span style="display:block;color:var(--muted);font-size:13px;margin-top:2px;" data-i18n="others.isitai.desc">Free check for whether an image or video was AI-generated</span>
         </span>
       </a>
     </div>
@@ -140,33 +144,35 @@ ADSENSE:END -->
   </section>
 
   <section class="faq" id="faq">
-    <h2>자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
     <details>
-      <summary>Toolhub는 뭐하는 곳인가?</summary>
-      <p><strong>Toolhub</strong>는 단위가격 계산기처럼 일상에서 바로 쓸 수 있는 <strong>무료 웹 도구</strong>를 한 곳에 모아둔 <strong>온라인 계산기 모음</strong>입니다. 회원가입이나 앱 설치 없이 브라우저만 열면 바로 사용할 수 있고, 각 도구는 하나의 문제만 빠르게 해결하도록 만들어졌습니다.</p>
+      <summary data-i18n="faq.q1">What is Toolhub?</summary>
+      <p data-i18n="faq.a1">Toolhub is a collection of free online tools — like the unit price calculator — for everyday tasks. There is nothing to install and no account to create: open your browser and it just works. Each tool is built to solve one problem, fast.</p>
     </details>
     <details>
-      <summary>도구는 전부 무료인가?</summary>
-      <p>네, Toolhub 에 등재된 모든 <strong>웹 유틸리티 모음</strong>은 완전 무료입니다. 결제나 구독 없이 <strong>설치 없는 계산기</strong>를 그대로 사용하시면 됩니다. 별도 유료 기능이 생기면 도구 페이지에 명시적으로 안내합니다.</p>
+      <summary data-i18n="faq.q2">Are all the tools free?</summary>
+      <p data-i18n="faq.a2">Yes. Every tool listed on Toolhub is completely free — no payments, no subscriptions. If a paid feature ever appears, it will be clearly labeled on the tool's page.</p>
     </details>
     <details>
-      <summary>데이터가 서버로 전송되나?</summary>
-      <p>아니오. Toolhub 에 등재된 도구들은 pure-static 방식으로 만들어져 입력값을 서버로 전송하지 않고 브라우저 안에서만 계산합니다. 편의를 위한 마지막 입력값 저장 등은 이 브라우저의 localStorage 에만 남고, 외부로 전송되지 않습니다.</p>
+      <summary data-i18n="faq.q3">Is my data sent to a server?</summary>
+      <p data-i18n="faq.a3">No. Toolhub tools are pure static pages: your input is processed entirely inside your browser and never transmitted. Convenience settings such as theme or language are stored only in this browser's localStorage.</p>
     </details>
     <details>
-      <summary>새 도구는 얼마나 자주 나오나?</summary>
-      <p>검증된 아이디어부터 순서대로, 주 2-3개 페이스로 새 도구를 만들어 이 페이지의 도구 모음에 추가합니다. 새 도구가 런칭되면 이 목록에 카드가 바로 추가되니 가끔 다시 들러 확인해 보세요.</p>
+      <summary data-i18n="faq.q4">How often are new tools added?</summary>
+      <p data-i18n="faq.a4">We ship new tools at a pace of two to three per week, starting from the most useful ideas. New tools appear on this page as soon as they launch, so check back from time to time.</p>
     </details>
     <!-- FAQ:END -->
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://rayvoidx.github.io/">다른 도구 보기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://rayvoidx.github.io/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
 </footer>
 
 <script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ service:
   name: "Toolhub"
   tagline: "회원가입 없이 바로 쓰는 무료 웹 도구 모음"
   archetype: pure-static          # pure-static | static-external-api | static-serverless
-  lang: "ko"
+  lang: "en"                      # baked 기본 언어. 런타임 14개 언어 지원 — js/locales.js (docs/I18N.md)
 
 positioning:
   problem: "필요할 때마다 쓸만한 무료 웹 도구를 찾아 헤매는 게 번거롭다"          # 어떤 문제를 푸는가 (한 문장)
@@ -40,7 +40,8 @@ quality:
   lighthouse: null                # 런칭 시 점수 기록
 
 lineage:
-  template_version: "1.0"
+  template_version: "1.1"       # 2026-07-10 i18n 스캐폴딩 계약 충족 (docs/I18N.md)
   parent_service: null            # 파생 붕어빵이면 원본 slug
   decisions:
     - "2026-07-09: QA 게이트 PASS — 전 항목 PASS 또는 N/A. 콘솔 에러 0건, 검색 필터 정상, 테마 3단 순환, 375px 가로 스크롤 없음 실측 확인."
+    - "2026-07-10: 글로벌 i18n 도입 — 기본 언어 ko→en, 14개 언어 스위처(세계 인구 ~75%), ar·ur RTL. 이유: 사용자 지시(글로벌 겨냥). 이후 도구 등재 시 locales.js 전 언어 키 동시 추가가 게이트 조건 (docs/I18N.md). 언어별 정적 페이지+hreflang 은 지표 검증 후 승격 과제."
