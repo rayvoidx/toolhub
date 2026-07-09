@@ -26,7 +26,7 @@ lifecycle:
 deploy:
   host: github-pages              # github-pages | cloudflare-pages
   repo: "https://github.com/rayvoidx/rayvoidx.github.io"
-  url: "https://rayvoidx.github.io/"
+  url: "https://tool-hub.me/"
   hub_listed: false               # 허브 사이트 등재 여부
 
 monetization:
@@ -45,3 +45,4 @@ lineage:
   decisions:
     - "2026-07-09: QA 게이트 PASS — 전 항목 PASS 또는 N/A. 콘솔 에러 0건, 검색 필터 정상, 테마 3단 순환, 375px 가로 스크롤 없음 실측 확인."
     - "2026-07-10: 글로벌 i18n 도입 — 기본 언어 ko→en, 14개 언어 스위처(세계 인구 ~75%), ar·ur RTL. 이유: 사용자 지시(글로벌 겨냥). 이후 도구 등재 시 locales.js 전 언어 키 동시 추가가 게이트 조건 (docs/I18N.md). 언어별 정적 페이지+hreflang 은 지표 검증 후 승격 과제."
+    - "2026-07-10: 커스텀 도메인 tool-hub.me 연결 (Cloudflare 프록시 → GitHub Pages 오리진) + AdSense 로더·ads.txt 배포 (pub-6324953789479730, 사용자 지시). canonical/OG/config.js 전부 tool-hub.me 로 교체. 광고 게재는 아직 아님 — 사이트 승인 + slot 발급 후 config.js adsense.enabled=true 가 별도 단계."
