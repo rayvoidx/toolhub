@@ -1,0 +1,45 @@
+# ============================================================
+# 서비스 온톨로지 인스턴스 — 이 파일이 서비스의 "여권"이다.
+# 스키마 정의: ontology/SCHEMA.md
+# 파이프라인의 모든 단계가 이 파일을 읽고 갱신한다.
+# ============================================================
+service:
+  slug: "hub"                # 환경 불변 외부 키 (Poptale의 privateId 원칙)
+  name: "Toolhub"
+  tagline: "회원가입 없이 바로 쓰는 무료 웹 도구 모음"
+  archetype: pure-static          # pure-static | static-external-api | static-serverless
+  lang: "ko"
+
+positioning:
+  problem: "필요할 때마다 쓸만한 무료 웹 도구를 찾아 헤매는 게 번거롭다"          # 어떤 문제를 푸는가 (한 문장)
+  audience: "생활 속 작은 계산과 변환이 필요한 모든 사람"        # 누가 쓰는가
+  differentiator: "신규(파생 아님). 계산 도구가 아니라 팩토리 전 서비스의 도구 디렉토리 + 사용법 콘텐츠 + FAQ — AdSense 승인의 콘텐츠 본진(docs/HOSTING.md 허브층)."
+  keywords: ["무료 웹 도구", "온라인 계산기 모음", "웹 유틸리티 모음", "설치 없는 계산기"]
+
+lifecycle:
+  status: draft                   # draft → spec → building → qa → launched → maintained → sunset
+  created: "2026-07-09"
+  launched: null
+  last_maintained: null
+  sunset: null
+
+deploy:
+  host: github-pages              # github-pages | cloudflare-pages
+  repo: ""                        # github.com/<owner>/<slug>
+  url: "https://rayvoidx.github.io/"
+  hub_listed: false               # 허브 사이트 등재 여부
+
+monetization:
+  adsense: false                  # 게이트 통과 + 허브 승격 후에만 true
+  promoted_domain: null           # 독립 도메인 승격 시 기록
+
+quality:
+  gate_passed: true
+  gate_report: "factory/state/hub-gate.md"
+  lighthouse: null                # 런칭 시 점수 기록
+
+lineage:
+  template_version: "1.0"
+  parent_service: null            # 파생 붕어빵이면 원본 slug
+  decisions:
+    - "2026-07-09: QA 게이트 PASS — 전 항목 PASS 또는 N/A. 콘솔 에러 0건, 검색 필터 정상, 테마 3단 순환, 375px 가로 스크롤 없음 실측 확인."

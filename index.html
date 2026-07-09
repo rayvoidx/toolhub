@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toolhub — 회원가입 없이 바로 쓰는 무료 웹 도구 모음</title>
+<meta name="description" content="가격 비교부터 글자수 세기까지, 생활 속 계산과 변환을 브라우저에서 바로 처리하는 무료 웹 도구 모음. 설치도 회원가입도 필요 없습니다.">
+<meta name="keywords" content="무료 웹 도구, 온라인 계산기 모음, 웹 유틸리티 모음, 설치 없는 계산기">
+<link rel="canonical" href="https://rayvoidx.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Toolhub — 회원가입 없이 바로 쓰는 무료 웹 도구 모음">
+<meta property="og:description" content="가격 비교부터 글자수 세기까지, 생활 속 계산과 변환을 브라우저에서 바로 처리하는 무료 웹 도구 모음. 설치도 회원가입도 필요 없습니다.">
+<meta property="og:url" content="https://rayvoidx.github.io/">
+<meta property="og:image" content="https://rayvoidx.github.io/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Toolhub",
+  "description": "가격 비교부터 글자수 세기까지, 생활 속 계산과 변환을 브라우저에서 바로 처리하는 무료 웹 도구 모음. 설치도 회원가입도 필요 없습니다.",
+  "url": "https://rayvoidx.github.io/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Toolhub</span>
+  </a>
+  <nav class="header-actions">
+    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Toolhub</h1>
+    <p class="lede">필요한 순간, 설치 없이 바로 쓰는 무료 웹 도구를 모았습니다.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <h2>도구 모음</h2>
+    <label for="tool-search">도구 검색</label>
+    <input type="text" id="tool-search" name="tool-search" placeholder="도구 이름으로 검색 (예: 단위가격)" autocomplete="off">
+
+    <!-- MAINTAIN:CARDS-START — ontology/services.yaml 의 status:launched 서비스 카드 목록.
+         새 도구가 launched 되면 /maintain 이 이 블록 안에 카드를 추가·갱신한다. 각 카드는
+         data-name 에 검색용 이름/키워드를, href 는 서비스의 배포 URL을 그대로 넣는다. -->
+    <div id="tool-list" style="display:flex; flex-direction:column; gap:12px; margin:18px 0 8px;">
+      <a class="tool-item" href="https://rayvoidx.github.io/unit-price/"
+         data-name="단위가격 계산기 unit-price 100g당 가격 단위가격 비교 g당 가격"
+         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
+        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">₩</span>
+        <span style="flex:1; min-width:0;">
+          <strong style="display:block; font-size:16px;">단위가격 계산기</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;">대용량 vs 소용량, 어느 쪽이 더 싼지 3초 만에 비교 →</span>
+        </span>
+      </a>
+    </div>
+    <!-- MAINTAIN:CARDS-END -->
+    <p id="tool-empty" class="placeholder-note" hidden>검색 결과가 없습니다. 다른 검색어로 시도해 보세요.</p>
+
+    <hr style="border:none; border-top:1px solid var(--line); margin:32px 0;">
+
+    <h2>도구 사용법 &amp; 활용 예시</h2>
+    <article>
+      <h3>단위가격 계산기 — 이렇게 써보세요</h3>
+      <p>마트에서 500g에 4,900원짜리 세제와 1.2kg에 10,900원짜리 세제 중 뭐가 더 싼지 헷갈릴 때, 상품 A·B 칸에 가격과 용량만 넣으면 자동으로 100g당 가격으로 맞춰 비교해 줍니다. 온라인 쇼핑의 "2+1" 같은 묶음 상품은 묶음 개수 칸에 낱개 수를 입력하면 총용량 기준으로 정확히 계산됩니다. 회원가입도 설치도 필요 없고, 입력값은 브라우저 밖으로 나가지 않습니다.</p>
+    </article>
+
+    <hr style="border:none; border-top:1px solid var(--line); margin:32px 0;">
+
+    <h2>만든 사람의 다른 서비스</h2>
+    <p>Toolhub 를 만든 사람이 운영하는 다른 서비스도 확인해 보세요.</p>
+    <p><a href="https://isitai.me" target="_blank" rel="noopener noreferrer">isitai.me</a> — 이미지·영상이 AI로 생성되었는지 무료로 판별해주는 도구입니다.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
+    <details>
+      <summary>Toolhub는 뭐하는 곳인가?</summary>
+      <p><strong>Toolhub</strong>는 단위가격 계산기처럼 일상에서 바로 쓸 수 있는 <strong>무료 웹 도구</strong>를 한 곳에 모아둔 <strong>온라인 계산기 모음</strong>입니다. 회원가입이나 앱 설치 없이 브라우저만 열면 바로 사용할 수 있고, 각 도구는 하나의 문제만 빠르게 해결하도록 만들어졌습니다.</p>
+    </details>
+    <details>
+      <summary>도구는 전부 무료인가?</summary>
+      <p>네, Toolhub 에 등재된 모든 <strong>웹 유틸리티 모음</strong>은 완전 무료입니다. 결제나 구독 없이 <strong>설치 없는 계산기</strong>를 그대로 사용하시면 됩니다. 별도 유료 기능이 생기면 도구 페이지에 명시적으로 안내합니다.</p>
+    </details>
+    <details>
+      <summary>데이터가 서버로 전송되나?</summary>
+      <p>아니오. Toolhub 에 등재된 도구들은 pure-static 방식으로 만들어져 입력값을 서버로 전송하지 않고 브라우저 안에서만 계산합니다. 편의를 위한 마지막 입력값 저장 등은 이 브라우저의 localStorage 에만 남고, 외부로 전송되지 않습니다.</p>
+    </details>
+    <details>
+      <summary>새 도구는 얼마나 자주 나오나?</summary>
+      <p>검증된 아이디어부터 순서대로, 주 2-3개 페이스로 새 도구를 만들어 이 페이지의 도구 모음에 추가합니다. 새 도구가 런칭되면 이 목록에 카드가 바로 추가되니 가끔 다시 들러 확인해 보세요.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://rayvoidx.github.io/">다른 도구 보기</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
