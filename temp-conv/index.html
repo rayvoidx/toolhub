@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temperature Converter — Celsius, Fahrenheit and Kelvin at once</title>
+<meta name="description" content="Type one number and Celsius, Fahrenheit, and Kelvin update instantly. Oven temperatures, travel weather, science homework — converted in seconds, right in your browser.">
+<meta name="keywords" content="temperature converter, celsius to fahrenheit, fahrenheit to celsius, 온도 변환기, 섭씨 화씨 변환">
+<link rel="canonical" href="https://tool-hub.me/temp-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Temperature Converter — Celsius, Fahrenheit and Kelvin at once">
+<meta property="og:description" content="Type one number and Celsius, Fahrenheit, and Kelvin update instantly. Oven temperatures, travel weather, science homework — converted in seconds, right in your browser.">
+<meta property="og:url" content="https://tool-hub.me/temp-conv/">
+<meta property="og:image" content="https://tool-hub.me/temp-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ea580c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Temperature Converter",
+  "description": "Type one number and Celsius, Fahrenheit, and Kelvin update instantly. Oven temperatures, travel weather, science homework — converted in seconds, right in your browser.",
+  "url": "https://tool-hub.me/temp-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Temperature Converter</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Temperature Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type in any field — the other two update instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .tc-fields { display: grid; gap: 2px; }
+      .tc-inrow { display: flex; gap: 8px; align-items: stretch; }
+      .tool-card .tc-input { flex: 1 1 auto; }
+      .tc-copy {
+        flex: 0 0 auto; width: 48px; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--muted); font-size: 18px; cursor: pointer; line-height: 1;
+      }
+      .tc-copy:hover { border-color: var(--accent); color: var(--accent); }
+      .tc-copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+      .tc-copymsg { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; color: var(--accent-strong); }
+      .tc-quick-label { margin: 24px 0 8px; font-weight: 600; font-size: 14px; }
+      .tc-quick { display: flex; flex-wrap: wrap; gap: 8px; }
+      .tc-preset {
+        flex: 1 1 auto; min-width: 96px; padding: 11px 8px; font-family: inherit; font-size: 14px;
+        font-weight: 700; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink); cursor: pointer;
+      }
+      .tc-preset:hover { border-color: var(--accent); color: var(--accent); }
+      .tc-placeholder { margin: 0; color: var(--muted); }
+      .tc-summary { margin: 0; font-size: 19px; font-weight: 800; color: var(--accent-strong); word-break: break-word; letter-spacing: -0.01em; }
+      .tc-warn { margin: 10px 0 0; font-size: 14px; font-weight: 600; color: #b91c1c; }
+      .tc-hint { margin: 16px 0 0; font-size: 13px; color: var(--muted); }
+      [data-theme="dark"] .tc-copymsg, [data-theme="dark"] .tc-summary { color: var(--accent); }
+      [data-theme="dark"] .tc-warn { color: #fca5a5; }
+      @media (prefers-color-scheme: dark) {
+        [data-theme="auto"] .tc-copymsg, [data-theme="auto"] .tc-summary { color: var(--accent); }
+        [data-theme="auto"] .tc-warn { color: #fca5a5; }
+      }
+    </style>
+
+    <div class="tc-fields">
+      <div class="tc-field">
+        <label for="c-input" data-i18n="tool.celsius.label">Celsius (°C)</label>
+        <div class="tc-inrow">
+          <input id="c-input" class="tc-input" type="number" inputmode="decimal" step="any" data-unit="c" placeholder="e.g. 100" data-i18n-placeholder="tool.celsius.placeholder" autocomplete="off">
+          <button type="button" class="tc-copy" data-target="c-input" aria-label="Copy Celsius value" data-i18n-aria-label="tool.copy.celsius">⧉</button>
+        </div>
+      </div>
+      <div class="tc-field">
+        <label for="f-input" data-i18n="tool.fahrenheit.label">Fahrenheit (°F)</label>
+        <div class="tc-inrow">
+          <input id="f-input" class="tc-input" type="number" inputmode="decimal" step="any" data-unit="f" placeholder="e.g. 212" data-i18n-placeholder="tool.fahrenheit.placeholder" autocomplete="off">
+          <button type="button" class="tc-copy" data-target="f-input" aria-label="Copy Fahrenheit value" data-i18n-aria-label="tool.copy.fahrenheit">⧉</button>
+        </div>
+      </div>
+      <div class="tc-field">
+        <label for="k-input" data-i18n="tool.kelvin.label">Kelvin (K)</label>
+        <div class="tc-inrow">
+          <input id="k-input" class="tc-input" type="number" inputmode="decimal" step="any" data-unit="k" placeholder="e.g. 373.15" data-i18n-placeholder="tool.kelvin.placeholder" autocomplete="off">
+          <button type="button" class="tc-copy" data-target="k-input" aria-label="Copy Kelvin value" data-i18n-aria-label="tool.copy.kelvin">⧉</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="tc-copymsg" id="tc-copymsg" role="status" aria-live="polite" hidden></p>
+
+    <p class="tc-quick-label" data-i18n="tool.quick.label">Quick presets</p>
+    <div class="tc-quick" role="group" aria-label="Quick temperature presets" data-i18n-aria-label="tool.quick.aria">
+      <button type="button" class="tc-preset" data-unit="f" data-val="350" data-i18n="tool.quick.oven">Oven 350°F</button>
+      <button type="button" class="tc-preset" data-unit="c" data-val="37" data-i18n="tool.quick.body">Body 37°C</button>
+      <button type="button" class="tc-preset" data-unit="c" data-val="100" data-i18n="tool.quick.boiling">Boiling 100°C</button>
+      <button type="button" class="tc-preset" data-unit="c" data-val="0" data-i18n="tool.quick.freezing">Freezing 0°C</button>
+    </div>
+
+    <div class="result" id="tc-result">
+      <p class="tc-placeholder" id="tc-placeholder" data-i18n="tool.result.placeholder">Type a number in any field and the other two convert instantly.</p>
+      <p class="tc-summary" id="tc-summary" hidden></p>
+      <p class="tc-warn" id="tc-warn" role="alert" hidden></p>
+    </div>
+
+    <p class="tc-hint" data-i18n="tool.hint">Everything is calculated in your browser — nothing is sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">How do I convert Celsius to Fahrenheit in my head?</summary><p data-i18n="faq.a1">The exact formula is °F = °C × 9/5 + 32. For a quick mental estimate use "double it and add 30" (°C × 2 + 30). At everyday temperatures the shortcut is close — 20 °C gives 70 vs the exact 68 °F — but the error grows as you move away from 10-20 °C, reaching about 6 °F near boiling. For cooking or fever checks, use the exact converter above rather than the approximation.</p></details>
+    <details><summary data-i18n="faq.q2">What is 350°F in Celsius?</summary><p data-i18n="faq.a2">350 °F is about 176.7 °C, which most ovens round to 175 °C or 180 °C — the classic "moderate oven" for cakes and roasts. Other common US baking temperatures: 325 °F ≈ 160 °C, 375 °F ≈ 190 °C, 400 °F ≈ 200 °C and 425 °F ≈ 220 °C. Type 350 into the Fahrenheit box above to see the exact Celsius and Kelvin values.</p></details>
+    <details><summary data-i18n="faq.q3">Why does Kelvin have no degree (°) symbol?</summary><p data-i18n="faq.a3">Kelvin is an absolute thermodynamic unit, not a scale of "degrees" measured from an arbitrary point. Since the 1967 SI redefinition, temperatures are written as "300 K", not "300 °K". Each kelvin is exactly the same size as one degree Celsius, so the two scales differ only by an offset of 273.15.</p></details>
+    <details><summary data-i18n="faq.q4">What is absolute zero?</summary><p data-i18n="faq.a4">Absolute zero is the lowest temperature possible: −273.15 °C, −459.67 °F, or 0 K. At that point molecular motion reaches its theoretical minimum, so nothing can get colder. This converter shows values below absolute zero for reference but flags them with a warning, because no real substance can actually reach such a temperature.</p></details>
+    <details><summary data-i18n="faq.q5">Are the numbers I enter sent to a server?</summary><p data-i18n="faq.a5">No. This temperature converter runs entirely in your browser using plain JavaScript — every Celsius, Fahrenheit and Kelvin calculation happens on your device. Nothing you type is uploaded, stored or tracked, and the tool keeps working offline once the page has loaded.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
