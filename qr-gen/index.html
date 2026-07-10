@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR Code Generator — Permanent QR codes, made in your browser — no sign-up, no expiry</title>
+<meta name="description" content="Free QR code generator that creates permanent, never-expiring QR codes right in your browser and downloads them as PNG. No sign-up, no watermark, no server upload.">
+<meta name="keywords" content="QR code generator, free QR code generator, QR code maker no sign up, permanent QR code, QR 코드 생성기, QR 코드 만들기">
+<link rel="canonical" href="https://tool-hub.me/qr-gen/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="QR Code Generator — Permanent QR codes, made in your browser — no sign-up, no expiry">
+<meta property="og:description" content="Free QR code generator that creates permanent, never-expiring QR codes right in your browser and downloads them as PNG. No sign-up, no watermark, no server upload.">
+<meta property="og:url" content="https://tool-hub.me/qr-gen/">
+<meta property="og:image" content="https://tool-hub.me/qr-gen/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#65a30d">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "QR Code Generator",
+  "description": "Free QR code generator that creates permanent, never-expiring QR codes right in your browser and downloads them as PNG. No sign-up, no watermark, no server upload.",
+  "url": "https://tool-hub.me/qr-gen/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>QR Code Generator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>QR Code Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Your QR code appears as you type. No sign-up, no expiration, and nothing is ever sent to a server.</p>
+  </section>
+
+  <!-- TOOL:START — QR code generator. Engine: vendor/qrcode.js (self-implemented, 100% client-side).
+       i18n: every visible string carries a data-i18n hook; keys live in js/locales.js (all 14 locales). -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <label for="qr-text" data-i18n="tool.textLabel">URL or text</label>
+    <textarea id="qr-text" rows="3" dir="auto" autocomplete="off" autocapitalize="off" spellcheck="false"
+              placeholder="https://example.com or any text" data-i18n-placeholder="tool.textPlaceholder"></textarea>
+
+    <label for="qr-size" data-i18n="tool.sizeLabel">Image size (PNG)</label>
+    <select id="qr-size">
+      <option value="256">256 × 256 px</option>
+      <option value="512" selected>512 × 512 px</option>
+      <option value="1024">1024 × 1024 px</option>
+    </select>
+
+    <label for="qr-ec" data-i18n="tool.ecLabel">Error correction level</label>
+    <select id="qr-ec">
+      <option value="L" data-i18n="tool.ec.l">L — recovers ~7% damage · highest capacity</option>
+      <option value="M" selected data-i18n="tool.ec.m">M — recovers ~15% damage (recommended)</option>
+      <option value="Q" data-i18n="tool.ec.q">Q — recovers ~25% damage</option>
+      <option value="H" data-i18n="tool.ec.h">H — recovers ~30% damage · for logo overlays</option>
+    </select>
+
+    <div class="result" id="qr-result" style="text-align:center">
+      <p id="qr-message" style="margin:0" data-i18n="tool.empty">Enter a URL or text above and your QR code will appear instantly.</p>
+      <div id="qr-preview-wrap" hidden>
+        <canvas id="qr-canvas" width="512" height="512" role="img"
+                aria-label="Generated QR code preview" data-i18n-aria-label="tool.preview"
+                style="width:100%;max-width:280px;height:auto;background:#fff;border:1px solid var(--line);border-radius:8px"></canvas>
+        <p id="qr-stats" style="margin:10px 0 0;font-size:13.5px;color:var(--muted)"></p>
+      </div>
+    </div>
+
+    <button id="qr-download" class="btn" type="button" disabled data-i18n="tool.download">Download PNG</button>
+    <p style="margin:14px 0 0;font-size:13.5px;color:var(--muted)" data-i18n="tool.privacy">Nothing you type is sent anywhere — the code is generated 100% inside your browser.</p>
+  </section>
+  <script src="vendor/qrcode.js"></script>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — 5 Q&As, keys faq.q1-5/a1-5 in js/locales.js (all 14 locales) -->
+    <details>
+      <summary data-i18n="faq.q1">Does the QR code expire?</summary>
+      <p data-i18n="faq.a1">No. This QR code generator creates static QR codes: your content is encoded directly into the pattern itself, so there is nothing to expire. Codes that stop working come from dynamic QR services that route through a short link. A code made here keeps working forever, even in print.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Is my URL or text uploaded to a server?</summary>
+      <p data-i18n="faq.a2">No. QR code generation runs 100% in your browser — neither your input nor the generated image is ever transmitted. Only your settings (size and error correction level) are kept in this browser's localStorage; the text itself is never stored.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">My QR code won't scan — what should I check?</summary>
+      <p data-i18n="faq.a3">Check in order: ① the white margin (quiet zone) around the code hasn't been cropped, ② the printed size is large enough (roughly 1/10 of the scanning distance), ③ there is strong contrast with the background, ④ for long content, raise the error correction level or shorten the URL. This free QR code generator always outputs the required 4-module quiet zone.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What is the difference between error correction levels L, M, Q and H?</summary>
+      <p data-i18n="faq.a4">It is how much of the code can be damaged and still scan: L ≈ 7%, M ≈ 15%, Q ≈ 25%, H ≈ 30%. Higher levels make the pattern denser and reduce the maximum text length. M suits most uses; pick H if a logo will overlap the code or it may get dirty.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can I use the QR codes commercially?</summary>
+      <p data-i18n="faq.a5">Yes. QR codes you generate and download as PNG are yours to use freely — business cards, menus, posters, packaging, slides and any other commercial use — with no watermark, no fees and no restrictions.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
