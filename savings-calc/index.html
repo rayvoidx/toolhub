@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Savings Calculator — See what your monthly deposits grow into — interest, tax and all</title>
+<meta name="description" content="Free savings calculator: enter monthly deposit, interest rate, and term to get your maturity amount — simple or compound interest, before and after tax.">
+<meta name="keywords" content="savings calculator, compound interest calculator, monthly deposit calculator, recurring deposit calculator, savings interest calculator, 적금 계산기, 적금 만기 계산기">
+<link rel="canonical" href="https://tool-hub.me/savings-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Savings Calculator — See what your monthly deposits grow into — interest, tax and all">
+<meta property="og:description" content="Free savings calculator: enter monthly deposit, interest rate, and term to get your maturity amount — simple or compound interest, before and after tax.">
+<meta property="og:url" content="https://tool-hub.me/savings-calc/">
+<meta property="og:image" content="https://tool-hub.me/savings-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Savings Calculator",
+  "description": "Free savings calculator: enter monthly deposit, interest rate, and term to get your maturity amount — simple or compound interest, before and after tax.",
+  "url": "https://tool-hub.me/savings-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Savings Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Savings Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How much will you have if you save every month? Get your maturity amount — gross interest, tax taken out, net in hand — in seconds. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .method-row { display:flex; gap:18px; flex-wrap:wrap; margin-top:8px; }
+      #tool .method-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:15px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+    </style>
+
+    <label for="start-input" data-i18n="tool.start.label">Starting balance (optional)</label>
+    <input type="text" id="start-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 0" data-i18n-placeholder="tool.start.ph">
+
+    <label for="monthly-input" data-i18n="tool.monthly.label">Monthly deposit</label>
+    <input type="text" id="monthly-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 500,000" data-i18n-placeholder="tool.monthly.ph">
+
+    <label for="rate-input" data-i18n="tool.rate.label">Annual interest rate (%)</label>
+    <input type="number" id="rate-input" inputmode="decimal" min="0" max="30" step="0.01"
+           placeholder="e.g. 3.5" data-i18n-placeholder="tool.rate.ph">
+
+    <label for="term-input" data-i18n="tool.term.label">Term (months)</label>
+    <input type="number" id="term-input" inputmode="numeric" min="1" max="360" step="1"
+           placeholder="e.g. 24" data-i18n-placeholder="tool.term.ph">
+    <div class="chips" id="term-chips" role="group" aria-label="Quick term presets" data-i18n-aria-label="tool.term.chipsAria">
+      <button type="button" class="chip" data-term="12">12</button>
+      <button type="button" class="chip" data-term="24">24</button>
+      <button type="button" class="chip" data-term="36">36</button>
+      <button type="button" class="chip" data-term="60">60</button>
+      <button type="button" class="chip" data-term="120">120</button>
+    </div>
+
+    <p id="method-label" style="font-weight:600;font-size:14px;margin:14px 0 0;" data-i18n="tool.method.label">Interest method</p>
+    <div class="method-row" role="radiogroup" aria-labelledby="method-label">
+      <label><input type="radio" name="method" value="compound" checked><span data-i18n="tool.method.compound">Monthly compound</span></label>
+      <label><input type="radio" name="method" value="simple"><span data-i18n="tool.method.simple">Simple interest</span></label>
+    </div>
+
+    <label for="tax-input" data-i18n="tool.tax.label">Interest tax rate (%)</label>
+    <input type="number" id="tax-input" inputmode="decimal" min="0" max="60" step="0.1"
+           placeholder="e.g. 0" data-i18n-placeholder="tool.tax.ph">
+    <div class="chips" id="tax-chips" role="group" aria-label="Tax rate presets" data-i18n-aria-label="tool.tax.chipsAria">
+      <button type="button" class="chip" data-tax="0" data-i18n="tool.tax.chip0">0%</button>
+      <button type="button" class="chip" data-tax="15.4" data-i18n="tool.tax.chipKr">15.4% (Korea)</button>
+    </div>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate savings</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p class="subtle" style="margin:0;" data-i18n="tool.result.maturityLabel">Maturity amount (net in hand)</p>
+        <p style="margin:2px 0 2px;"><strong id="r-maturity"></strong></p>
+        <p class="subtle" id="r-sub" style="margin:0 0 10px;"></p>
+        <p id="r-compare" style="margin:0 0 8px;font-weight:700;color:var(--accent);"></p>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.principal">Total deposited</div><div class="rc-val" id="r-principal"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.preTax">Interest before tax</div><div class="rc-val" id="r-pretax"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.tax">Tax withheld</div><div class="rc-val" id="r-tax"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.afterTax">Interest after tax</div><div class="rc-val" id="r-aftertax"></div></div>
+        </div>
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:10px 0 0;" data-i18n="tool.note.assume">Deposits are assumed at the start of each month (annuity-due), interest compounds monthly.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">Simple vs compound interest — what changes when you deposit monthly?</summary><p data-i18n="faq.a1">With simple interest every deposit earns the same flat rate until maturity, so this savings calculator just adds up each month's interest. With monthly compound interest, the interest you have already earned itself earns interest, so later months grow faster. On a monthly deposit plan the gap stays small for short terms and widens over years — this compound interest calculator shows both side by side so you can see the exact difference.</p></details>
+    <details><summary data-i18n="faq.q2">Why does after-tax interest differ from country to country?</summary><p data-i18n="faq.a2">Most countries tax the interest your savings earn, and the rate varies. In Korea, for example, savings interest is taxed at 15.4% (14% income tax plus a 1.4% local surtax), while other countries use different rates or tax-free allowances. Because rates differ, this savings calculator lets you type any tax rate — use 0% for a tax-free account or the 15.4% preset for a Korean deposit — and shows the tax withheld and the net interest you actually keep.</p></details>
+    <details><summary data-i18n="faq.q3">Why might my bank statement differ slightly from this calculator?</summary><p data-i18n="faq.a3">This recurring deposit calculator assumes deposits on the first of each month, monthly compounding, and whole-number rounding. Real banks may use daily day-count, credit interest on the exact date each deposit lands, apply their own rounding, or pay interest only at maturity. Those small differences can shift the final figure a little, so treat this as a close estimate rather than a to-the-cent quote.</p></details>
+    <details><summary data-i18n="faq.q4">Does this tool assume deposits at the start or end of the month?</summary><p data-i18n="faq.a4">It assumes each deposit is made at the start of the month (an annuity-due), so every deposit earns one extra period of interest compared with end-of-month timing. If your real plan deposits at the end of the month you will earn slightly less than shown. Depositing earlier in the cycle is one simple way to squeeze a little more interest out of the same monthly deposit interest calculator plan.</p></details>
+    <details><summary data-i18n="faq.q5">Lump sum vs monthly deposits at the same rate — which earns more?</summary><p data-i18n="faq.a5">A single lump sum left for the whole term earns more interest than the same total split into monthly deposits, because the lump sum is invested for longer. In this savings calculator you can model a lump sum by putting it in the starting balance, a savings plan by using the monthly deposit, or combine both to compare them on one screen.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
