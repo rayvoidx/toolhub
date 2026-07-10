@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Fat Calculator — Tape-measured girths in, body fat % out — U.S. Navy method</title>
+<meta name="description" content="Free body fat calculator using the U.S. Navy circumference method. Enter your sex, height, weight, and neck/waist/hip measurements to instantly get body fat percentage, fat mass, lean body mass, and the ACE body-fat category — no InBody or DEXA scan needed.">
+<meta name="keywords" content="body fat calculator, navy body fat calculator, body fat percentage, lean body mass, 체지방률 계산기, 체지방 계산기">
+<link rel="canonical" href="https://tool-hub.me/body-fat-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Body Fat Calculator — Tape-measured girths in, body fat % out — U.S. Navy method">
+<meta property="og:description" content="Free body fat calculator using the U.S. Navy circumference method. Enter your sex, height, weight, and neck/waist/hip measurements to instantly get body fat percentage, fat mass, lean body mass, and the ACE body-fat category — no InBody or DEXA scan needed.">
+<meta property="og:url" content="https://tool-hub.me/body-fat-calc/">
+<meta property="og:image" content="https://tool-hub.me/body-fat-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ec4899">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Body Fat Calculator",
+  "description": "Free body fat calculator using the U.S. Navy circumference method. Enter your sex, height, weight, and neck/waist/hip measurements to instantly get body fat percentage, fat mass, lean body mass, and the ACE body-fat category — no InBody or DEXA scan needed.",
+  "url": "https://tool-hub.me/body-fat-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Body Fat Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Body Fat Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">No InBody scan needed — estimate your body fat with just a tape measure.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <p id="sex-heading" style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.sex.label">Sex</p>
+    <div role="radiogroup" aria-labelledby="sex-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="male" checked>
+        <span data-i18n="tool.sex.male">Male</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="female">
+        <span data-i18n="tool.sex.female">Female</span>
+      </label>
+    </div>
+
+    <label for="height-input" data-i18n="tool.height.label">Height (cm)</label>
+    <input type="number" id="height-input" inputmode="decimal" min="50" max="250" step="0.1"
+           placeholder="e.g. 175" data-i18n-placeholder="tool.height.placeholder">
+
+    <label for="weight-input" data-i18n="tool.weight.label">Weight (kg)</label>
+    <input type="number" id="weight-input" inputmode="decimal" min="10" max="300" step="0.1"
+           placeholder="e.g. 70" data-i18n-placeholder="tool.weight.placeholder">
+
+    <label for="neck-input" data-i18n="tool.neck.label">Neck girth (cm)</label>
+    <input type="number" id="neck-input" inputmode="decimal" min="10" max="80" step="0.1"
+           placeholder="e.g. 38" data-i18n-placeholder="tool.neck.placeholder">
+
+    <label for="waist-input" data-i18n="tool.waist.label">Waist girth (cm)</label>
+    <input type="number" id="waist-input" inputmode="decimal" min="30" max="200" step="0.1"
+           placeholder="e.g. 84" data-i18n-placeholder="tool.waist.placeholder">
+
+    <div id="hip-group" hidden>
+      <label for="hip-input" data-i18n="tool.hip.label">Hip girth (cm)</label>
+      <input type="number" id="hip-input" inputmode="decimal" min="30" max="200" step="0.1"
+             placeholder="e.g. 96" data-i18n-placeholder="tool.hip.placeholder">
+    </div>
+
+    <p style="margin:14px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.hint.measure">Measure snugly without squeezing the skin: neck just below the larynx, waist at the navel (men) or narrowest point (women), hip at the widest point.</p>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate body fat</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p id="result-warning" style="margin:0 0 12px;color:#d97706;font-weight:600;" data-i18n="tool.warn.extreme" hidden>This looks like an unrealistic reading — recheck your measuring spots.</p>
+
+        <div style="text-align:center;margin-bottom:16px;">
+          <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.bf">Body fat percentage</div>
+          <div style="font-weight:800;font-size:42px;line-height:1.1;color:var(--accent-strong);" id="r-bf"></div>
+          <span id="r-badge" style="display:inline-block;margin-top:6px;padding:4px 14px;border-radius:999px;font-weight:700;font-size:14px;color:#fff;"></span>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;">
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.fatmass">Fat mass</div>
+            <div style="font-weight:700;font-size:19px;" id="r-fatmass"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.leanmass">Lean body mass</div>
+            <div style="font-weight:700;font-size:19px;" id="r-leanmass"></div>
+          </div>
+        </div>
+
+        <p style="margin:12px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.disclaimer">Estimated with the U.S. Navy circumference method (±3-4% vs DEXA). Treat it as a trend indicator, not a clinical measurement.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How accurate is the U.S. Navy tape method?</summary>
+      <p data-i18n="faq.a1">For most people, the U.S. Navy circumference method is accurate to about ±3-4% body fat compared with a DEXA or InBody scan — good enough to track progress over weeks. Accuracy depends on measuring at the same spots each time with a snug, level tape. It is less reliable at the extremes (very lean athletes or high body fat), where a lab method like DEXA is better.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Where exactly do I measure neck, waist and hip?</summary>
+      <p data-i18n="faq.a2">Stand relaxed and keep the tape horizontal and snug without compressing the skin. Neck: just below the larynx (Adam's apple), sloping slightly down toward the front. Waist: at the navel for men, at the narrowest point for women. Hip (women only): around the widest part of the buttocks. Measure on bare skin after a normal exhale, and repeat each measurement twice for consistency.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is a healthy body fat percentage?</summary>
+      <p data-i18n="faq.a3">Using ACE categories: for men, essential fat is 2-5%, athletes 6-13%, fitness 14-17%, average 18-24%, and obese 25%+. For women, essential fat is 10-13%, athletes 14-20%, fitness 21-24%, average 25-31%, and obese 32%+. Women naturally carry more essential fat for hormonal and reproductive health, so the healthy ranges are higher than for men.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can my BMI be normal but my body fat high?</summary>
+      <p data-i18n="faq.a4">Yes — this is often called "skinny fat". BMI only uses height and weight, so someone with little muscle and more fat can have a normal BMI while their body fat percentage is high. Because this calculator measures actual girths and reports fat mass and lean body mass separately, it catches cases that a BMI calculator misses.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my body data sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation runs entirely inside your browser; your measurements never leave your device. They are only saved to your browser's localStorage so the form is pre-filled on your next visit, and you can clear them anytime from your browser settings.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
