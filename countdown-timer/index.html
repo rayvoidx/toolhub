@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown Timer — Set minutes and seconds, press start — a sound alarm rings the moment time runs out</title>
+<meta name="description" content="Free online countdown timer with sound alarm. Set hours, minutes, seconds or tap a 1/3/5/10/30 minute preset. Accurate in background tabs, time left shown in the tab title. No install, no sign-up.">
+<meta name="keywords" content="countdown timer, online timer, 5 minute timer, timer with alarm, 카운트다운 타이머, 온라인 타이머, 요리 타이머">
+<link rel="canonical" href="https://tool-hub.me/countdown-timer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Countdown Timer — Set minutes and seconds, press start — a sound alarm rings the moment time runs out">
+<meta property="og:description" content="Free online countdown timer with sound alarm. Set hours, minutes, seconds or tap a 1/3/5/10/30 minute preset. Accurate in background tabs, time left shown in the tab title. No install, no sign-up.">
+<meta property="og:url" content="https://tool-hub.me/countdown-timer/">
+<meta property="og:image" content="https://tool-hub.me/countdown-timer/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f97316">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Countdown Timer",
+  "description": "Free online countdown timer with sound alarm. Set hours, minutes, seconds or tap a 1/3/5/10/30 minute preset. Accurate in background tabs, time left shown in the tab title. No install, no sign-up.",
+  "url": "https://tool-hub.me/countdown-timer/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Countdown Timer</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Online Countdown Timer</h1>
+    <p class="lede" data-i18n="hero.lede">Set your time and press start. It rings the moment time is up — even in a background tab.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Countdown timer tool" data-i18n-aria-label="tool.aria">
+    <div id="timer-display" role="timer" aria-live="off" aria-label="Time remaining" data-i18n-aria-label="tool.remaining"
+         style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;font-size:clamp(52px,15vw,88px);font-weight:700;line-height:1.1;text-align:center;letter-spacing:0.02em;margin:6px 0 14px;">05:00</div>
+
+    <div aria-hidden="true" style="height:8px;border-radius:999px;background:var(--line);overflow:hidden;margin:0 auto 22px;max-width:520px;">
+      <div id="timer-progress" style="height:100%;width:100%;background:var(--accent);border-radius:999px;transition:width .3s linear;"></div>
+    </div>
+
+    <div class="result" id="timer-banner" hidden role="alert">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+        <strong data-i18n="tool.done">Time's up!</strong>
+        <button class="btn" id="stop-sound-btn" type="button" data-i18n="tool.stopSound" style="margin-top:0;">Stop alarm</button>
+      </div>
+    </div>
+
+    <div class="result" id="timer-msg" hidden aria-live="polite" style="font-size:15px;"></div>
+
+    <div id="timer-fields" style="display:flex;gap:10px;max-width:520px;margin:0 auto;">
+      <div style="flex:1;min-width:0;">
+        <label for="in-hours" data-i18n="tool.hours">Hours</label>
+        <input type="number" id="in-hours" min="0" max="23" step="1" value="0" inputmode="numeric" autocomplete="off" style="text-align:center;font-size:20px;font-variant-numeric:tabular-nums;">
+      </div>
+      <div style="flex:1;min-width:0;">
+        <label for="in-minutes" data-i18n="tool.minutes">Minutes</label>
+        <input type="number" id="in-minutes" min="0" max="59" step="1" value="5" inputmode="numeric" autocomplete="off" style="text-align:center;font-size:20px;font-variant-numeric:tabular-nums;">
+      </div>
+      <div style="flex:1;min-width:0;">
+        <label for="in-seconds" data-i18n="tool.seconds">Seconds</label>
+        <input type="number" id="in-seconds" min="0" max="59" step="1" value="0" inputmode="numeric" autocomplete="off" style="text-align:center;font-size:20px;font-variant-numeric:tabular-nums;">
+      </div>
+    </div>
+
+    <div id="timer-presets" style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px;">
+      <button class="btn" type="button" data-preset-min="1" data-i18n="tool.preset1" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">1 min</button>
+      <button class="btn" type="button" data-preset-min="3" data-i18n="tool.preset3" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">3 min</button>
+      <button class="btn" type="button" data-preset-min="5" data-i18n="tool.preset5" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">5 min</button>
+      <button class="btn" type="button" data-preset-min="10" data-i18n="tool.preset10" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">10 min</button>
+      <button class="btn" type="button" data-preset-min="30" data-i18n="tool.preset30" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">30 min</button>
+    </div>
+
+    <div id="timer-controls" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px;">
+      <button class="btn" id="start-btn" type="button" data-i18n="tool.start" style="min-width:130px;">Start</button>
+      <button class="btn" id="pause-btn" type="button" data-i18n="tool.pause" style="min-width:130px;background:var(--muted);display:none;">Pause</button>
+      <button class="btn" id="reset-btn" type="button" data-i18n="tool.reset" style="background:var(--muted);">Reset</button>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Is the timer accurate when the tab is in the background or minimized?</summary>
+      <p data-i18n="faq.a1">Yes. Instead of counting ticks, this countdown timer stores the exact end time when you press start and recomputes the time left from the clock on every update. Even if the browser throttles background tabs, the correct time shows the moment you return — and if the end time has already passed, the alarm rings immediately.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">I can't hear the alarm — why, and how do I fix it?</summary>
+      <p data-i18n="faq.a2">Browsers only allow sound after you interact with the page, so this online timer arms the sound the moment you press Start. If you still hear nothing, check the system volume, the tab's mute setting and the silent switch on phones. If your browser doesn't support Web Audio, a notice appears and the alert stays visual only.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I use the 1/3/5/10/30 minute presets for cooking, studying or workouts?</summary>
+      <p data-i18n="faq.a3">One tap sets a common time: 3 minutes for instant noodles or tea as a cooking timer, a 5 minute timer for breaks and stretching, 10 minutes for a short study sprint, 30 minutes for a focus session or workout. After a preset just press Start — your last setting is restored on your next visit.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What's the difference between a stopwatch and a countdown timer?</summary>
+      <p data-i18n="faq.a4">A stopwatch counts up from zero to measure how long something takes. A countdown timer does the opposite: you set a duration, it counts down to zero and then rings. Use a stopwatch to record times, and a timer with alarm to be reminded.</p>
+      <p><a href="https://tool-hub.me/stopwatch/" data-i18n="faq.a4link">Try the online stopwatch →</a></p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Does it keep working if the internet disconnects?</summary>
+      <p data-i18n="faq.a5">Yes. Once the page is loaded, everything runs inside your browser and nothing is sent to a server. A running online timer keeps counting down and rings even while offline, and you can install it as a PWA for offline use.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

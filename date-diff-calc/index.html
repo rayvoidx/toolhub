@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>날짜 차이 계산기 — 두 날짜 사이 며칠? 년·개월·주·일 즉시 계산</title>
+<meta name="description" content="두 날짜를 선택하면 총 일수와 년·개월·주 단위 차이를 즉시 계산. 당일 포함 셈법 지원으로 기념일 100일·근속일수·경과일을 정확하게. 광고 없는 무료 날짜 차이 계산기.">
+<meta name="keywords" content="날짜 차이 계산기, 날짜 계산기, 두 날짜 사이 일수, 며칠 지났는지 계산, 기념일 계산">
+<link rel="canonical" href="https://tool-hub.me/date-diff-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="날짜 차이 계산기 — 두 날짜 사이 며칠? 년·개월·주·일 즉시 계산">
+<meta property="og:description" content="두 날짜를 선택하면 총 일수와 년·개월·주 단위 차이를 즉시 계산. 당일 포함 셈법 지원으로 기념일 100일·근속일수·경과일을 정확하게. 광고 없는 무료 날짜 차이 계산기.">
+<meta property="og:url" content="https://tool-hub.me/date-diff-calc/">
+<meta property="og:image" content="https://tool-hub.me/date-diff-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0ea5e9">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "날짜 차이 계산기",
+  "description": "두 날짜를 선택하면 총 일수와 년·개월·주 단위 차이를 즉시 계산. 당일 포함 셈법 지원으로 기념일 100일·근속일수·경과일을 정확하게. 광고 없는 무료 날짜 차이 계산기.",
+  "url": "https://tool-hub.me/date-diff-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>날짜 차이 계산기</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>날짜 차이 계산기</h1>
+    <p class="lede" data-i18n="hero.lede">두 날짜만 고르세요. 며칠 지났는지, 몇 년 몇 개월인지 바로 나옵니다.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .ddc-grid { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
+      #tool .ddc-field { flex: 1; min-width: 150px; }
+      #tool .ddc-field label { margin-top: 0; }
+      #tool input[type="date"] {
+        width: 100%; padding: 12px 14px; font-size: 16px; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink); min-height: 48px;
+      }
+      #tool input[type="date"]:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+      #tool .ddc-swap {
+        width: 46px; height: 48px; flex-shrink: 0; border: 1px solid var(--line);
+        border-radius: 10px; background: var(--surface); color: var(--accent);
+        font-size: 20px; cursor: pointer; line-height: 1;
+      }
+      #tool .ddc-swap:hover { border-color: var(--accent); }
+      #tool .ddc-presets { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+      #tool .ddc-preset {
+        padding: 6px 12px; font-size: 13px; font-weight: 600; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 8px; background: none;
+        color: var(--muted); cursor: pointer;
+      }
+      #tool .ddc-preset:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .ddc-check { display: flex; align-items: center; gap: 8px; margin: 18px 0 0; font-weight: 500; font-size: 15px; cursor: pointer; }
+      #tool .ddc-check input { width: 18px; height: 18px; accent-color: var(--accent); }
+      #tool .ddc-notices p { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+      #tool .ddc-big { font-size: clamp(30px, 7vw, 44px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.2; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .ddc-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .ddc-big { color: var(--accent); } }
+      #tool .ddc-dayth { display: inline-block; margin-inline-start: 10px; font-size: 17px; font-weight: 700; color: var(--muted); letter-spacing: 0; }
+      #tool .ddc-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; margin: 16px 0 0; }
+      #tool .ddc-cell { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+      #tool .ddc-cell dt { font-size: 13px; font-weight: 700; color: var(--muted); margin: 0 0 4px; }
+      #tool .ddc-cell dd { margin: 0; font-size: 16px; font-weight: 700; }
+      #tool .ddc-copyrow { margin-top: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool .ddc-copyrow .btn { margin-top: 0; padding: 9px 16px; font-size: 14px; }
+      #tool .ddc-copytext { font-size: 13px; color: var(--muted); word-break: break-all; }
+      #tool .ddc-copyfail { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+      #tool .ddc-msg { margin: 0; color: var(--muted); }
+    </style>
+
+    <div class="ddc-grid">
+      <div class="ddc-field">
+        <label for="ddc-start" data-i18n="tool.start">시작일</label>
+        <input type="date" id="ddc-start" min="1900-01-01" max="2999-12-31" autocomplete="off">
+      </div>
+      <button type="button" class="ddc-swap" id="ddc-swap" aria-label="두 날짜 바꾸기" data-i18n-aria-label="tool.swap" title="두 날짜 바꾸기" data-i18n-title="tool.swap">⇄</button>
+      <div class="ddc-field">
+        <label for="ddc-end" data-i18n="tool.end">종료일</label>
+        <input type="date" id="ddc-end" min="1900-01-01" max="2999-12-31" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="ddc-presets">
+      <button type="button" class="ddc-preset" id="ddc-preset-start" data-i18n="tool.presetStart">오늘부터</button>
+      <button type="button" class="ddc-preset" id="ddc-preset-end" data-i18n="tool.presetEnd">오늘까지</button>
+    </div>
+
+    <label class="ddc-check">
+      <input type="checkbox" id="ddc-include">
+      <span data-i18n="tool.include">당일 포함 (사귄 날을 1일차로, +1일)</span>
+    </label>
+
+    <div class="result" id="ddc-result">
+      <p class="ddc-msg" data-i18n="tool.n.empty">두 날짜를 모두 선택하세요.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">기념일 100일이 계산기마다 하루씩 다르게 나오는 이유는 뭔가요?</summary>
+      <p data-i18n="faq.a1">두 날짜 사이 간격만 세는 도구가 있고, 사귄 날(첫날)을 1일차로 세는 도구가 있기 때문입니다. 100일 기념일은 시작일로부터 99일 뒤입니다. 이 날짜 차이 계산기는 '당일 포함' 체크로 셈법을 명시해, 기념일 계산에서 하루 오차가 생기지 않습니다.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">년·개월·일 분해는 어떻게 계산하나요?</summary>
+      <p data-i18n="faq.a2">달마다 일수가 달라서 실제 달력을 따라 계산합니다. 이 날짜 계산기는 시작일에 년 → 개월 순서로 더하고(짧은 달은 말일로 보정, 예: 1월 31일 + 1개월 = 2월 28/29일), 남은 일수를 셉니다.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">윤년(2월 29일)이 낀 기간도 정확한가요?</summary>
+      <p data-i18n="faq.a3">네. 모든 계산이 실제 그레고리력 날짜로 이루어져 2월 29일도 하루로 정확히 세며, 두 날짜 사이 일수는 윤년과 무관하게 항상 정확합니다.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">디데이(D-day) 계산기와는 뭐가 다른가요?</summary>
+      <p><span data-i18n="faq.a4">이 도구는 두 날짜 '사이'를 잽니다 — 총 일수와 년/개월/주 분해까지. 하나의 목표일까지 남은 날을 세는 카운트다운이 필요하면 디데이 계산기를 쓰세요:</span> <a href="https://tool-hub.me/dday-calc/" data-i18n="faq.a4.link">디데이 계산기 →</a></p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">근속연수나 임신 주수 계산에도 쓸 수 있나요?</summary>
+      <p data-i18n="faq.a5">네. 입사일과 오늘을 넣으면 정확한 근속기간이, 마지막 생리 시작일과 오늘을 넣으면 주 단위 행에서 임신 주수(예: 24주 3일)가 나옵니다. 며칠 지났는지 계산이 필요한 모든 상황에 쓸 수 있습니다.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
