@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>단위가격 계산기 — 어느 쪽이 더 싼지 3초 만에</title>
+<meta name="description" content="가격과 용량만 입력하면 100g당·100ml당·개당 단위가격을 비교해 어느 상품이 더 싼지 알려주는 무료 계산기">
+<meta name="keywords" content="단위가격 계산기, 100g당 가격, g당 가격 계산, 단위가격 비교">
+<link rel="canonical" href="https://tool-hub.me/unit-price/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="단위가격 계산기 — 어느 쪽이 더 싼지 3초 만에">
+<meta property="og:description" content="가격과 용량만 입력하면 100g당·100ml당·개당 단위가격을 비교해 어느 상품이 더 싼지 알려주는 무료 계산기">
+<meta property="og:url" content="https://tool-hub.me/unit-price/">
+<meta property="og:image" content="https://tool-hub.me/unit-price/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#e11d48">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "단위가격 계산기",
+  "description": "가격과 용량만 입력하면 100g당·100ml당·개당 단위가격을 비교해 어느 상품이 더 싼지 알려주는 무료 계산기",
+  "url": "https://tool-hub.me/unit-price/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>단위가격 계산기</span>
+  </a>
+  <nav class="header-actions">
+    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>단위가격 계산기</h1>
+    <p class="lede">가격과 용량만 입력하세요. 어느 쪽이 더 싼지 바로 알려드립니다.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <fieldset class="product-fields">
+      <legend>상품 A</legend>
+      <label for="a-price">가격 (원)</label>
+      <input type="number" inputmode="decimal" id="a-price" name="a-price" min="0" step="1" placeholder="예: 1000">
+
+      <label for="a-capacity">용량</label>
+      <input type="number" inputmode="decimal" id="a-capacity" name="a-capacity" min="0" step="any" placeholder="예: 500">
+
+      <label for="a-unit">단위</label>
+      <select id="a-unit" name="a-unit">
+        <option value="g">g</option>
+        <option value="kg">kg</option>
+        <option value="ml">ml</option>
+        <option value="L">L</option>
+        <option value="개">개</option>
+      </select>
+
+      <label for="a-count">묶음 개수</label>
+      <input type="number" inputmode="numeric" id="a-count" name="a-count" min="1" step="1" value="1">
+    </fieldset>
+
+    <fieldset class="product-fields">
+      <legend>상품 B</legend>
+      <label for="b-price">가격 (원)</label>
+      <input type="number" inputmode="decimal" id="b-price" name="b-price" min="0" step="1" placeholder="예: 1800">
+
+      <label for="b-capacity">용량</label>
+      <input type="number" inputmode="decimal" id="b-capacity" name="b-capacity" min="0" step="any" placeholder="예: 1">
+
+      <label for="b-unit">단위</label>
+      <select id="b-unit" name="b-unit">
+        <option value="g">g</option>
+        <option value="kg" selected>kg</option>
+        <option value="ml">ml</option>
+        <option value="L">L</option>
+        <option value="개">개</option>
+      </select>
+
+      <label for="b-count">묶음 개수</label>
+      <input type="number" inputmode="numeric" id="b-count" name="b-count" min="1" step="1" value="1">
+    </fieldset>
+
+    <button type="button" class="btn" id="compare-btn">단위가격 비교하기</button>
+
+    <div class="result" id="result" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
+    <details>
+      <summary>단위가격이란? (100g당 가격의 의미)</summary>
+      <p>단위가격이란 상품의 총가격을 총용량으로 나눈, g당·ml당·개당 가격을 뜻합니다. 이 <strong>단위가격 계산기</strong>는 g·ml 상품은 사람이 감을 잡기 쉽도록 <strong>100g당 가격</strong>·100ml당 가격으로 환산해 보여줍니다. 용량이 다른 두 상품도 단위가격만 맞추면 바로 비교할 수 있습니다.</p>
+    </details>
+    <details>
+      <summary>kg과 g이 섞여 있어도 비교되나?</summary>
+      <p>네. 한쪽이 kg, 다른 쪽이 g이어도 자동으로 g 단위로 맞춰 계산하므로 <strong>g당 가격 계산</strong>이 정확합니다. 같은 방식으로 L과 ml도 ml로 정규화합니다. 다만 g(무게)과 ml(부피)처럼 서로 종류가 다른 단위, 혹은 '개'와 무게·부피 단위는 성격이 달라 <strong>단위가격 비교</strong>가 불가능하니 같은 종류의 단위끼리만 입력해 주세요.</p>
+    </details>
+    <details>
+      <summary>묶음 상품(2+1 등)은 어떻게 입력하나?</summary>
+      <p>묶음 개수 칸에 낱개 수를 입력하면 됩니다. 예를 들어 500g짜리 상품을 3개 묶음으로 9,000원에 판다면 용량 500·단위 g·묶음 개수 3으로 입력하세요. 총용량(용량×묶음 개수) 기준으로 단위가격을 계산해 <strong>어느게 더 싼지</strong> 알려드립니다.</p>
+    </details>
+    <details>
+      <summary>입력한 정보가 서버로 전송되나?</summary>
+      <p>아니오. 가격과 용량 등 입력값은 서버로 전송되지 않고 브라우저 안에서만 계산됩니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값만 이 브라우저의 localStorage에 저장되며, 다른 곳으로 전송되지 않습니다.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -9,12 +9,18 @@
    ============================================================ */
 const ORIGIN = "https://rayvoidx.github.io";
 
+// 내부 문서·메타 파일은 어떤 경로 깊이에서도 서빙하지 않는다 (자산·프록시 공통 차단)
+const BLOCKED = /(^|\/)(SERVICE\.yaml|WIKI\.md|wrangler\.jsonc|\.assetsignore|\.gitignore|\.git(\/|$)|worker(\/|$))/;
+
 export default {
   async fetch(request) {
     if (request.method !== "GET" && request.method !== "HEAD") {
       return new Response("Method Not Allowed", { status: 405, headers: { allow: "GET, HEAD" } });
     }
     const url = new URL(request.url);
+    if (BLOCKED.test(url.pathname)) {
+      return new Response("Not Found", { status: 404 });
+    }
     const upstream = await fetch(ORIGIN + url.pathname + url.search, {
       method: request.method,
       headers: { accept: request.headers.get("accept") || "*/*" },
