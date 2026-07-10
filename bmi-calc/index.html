@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI 계산기 — 키·몸무게 입력 → 체질량지수·비만도 즉시 확인</title>
+<meta name="description" content="키와 몸무게만 입력하면 BMI 수치, WHO 기준 및 한국 비만학회 아시아 기준 분류, 건강 체중 범위를 즉시 계산하는 무료 체질량지수 계산기">
+<meta name="keywords" content="BMI 계산기, 체질량지수 계산기, 비만도 계산기, 체질량지수, 비만 기준">
+<link rel="canonical" href="https://tool-hub.me/bmi-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BMI 계산기 — 키·몸무게 입력 → 체질량지수·비만도 즉시 확인">
+<meta property="og:description" content="키와 몸무게만 입력하면 BMI 수치, WHO 기준 및 한국 비만학회 아시아 기준 분류, 건강 체중 범위를 즉시 계산하는 무료 체질량지수 계산기">
+<meta property="og:url" content="https://tool-hub.me/bmi-calc/">
+<meta property="og:image" content="https://tool-hub.me/bmi-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#10b981">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BMI 계산기",
+  "description": "키와 몸무게만 입력하면 BMI 수치, WHO 기준 및 한국 비만학회 아시아 기준 분류, 건강 체중 범위를 즉시 계산하는 무료 체질량지수 계산기",
+  "url": "https://tool-hub.me/bmi-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>BMI 계산기</span>
+  </a>
+  <nav class="header-actions">
+    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>BMI 계산기</h1>
+    <p class="lede">숫자 두 개면 충분합니다. WHO 기준과 아시아 기준을 동시에 확인하세요.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <div class="tool-inputs">
+      <div class="input-group">
+        <label for="height-input">키 (cm)</label>
+        <input type="number" id="height-input" min="50" max="250" step="0.1" placeholder="예: 170" aria-label="키 (cm)">
+      </div>
+      <div class="input-group">
+        <label for="weight-input">몸무게 (kg)</label>
+        <input type="number" id="weight-input" min="10" max="300" step="0.1" placeholder="예: 65" aria-label="몸무게 (kg)">
+      </div>
+      <button class="btn" id="calc-btn" type="button">BMI 계산하기</button>
+    </div>
+    <div class="result" id="result" role="region" aria-label="계산 결과" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
+    <details>
+      <summary>BMI가 높으면 무조건 비만인가요?</summary>
+      <p>체질량지수(BMI)는 키와 몸무게만으로 계산하기 때문에 근육량을 반영하지 못합니다. 근육이 많은 운동선수는 BMI가 높아도 체지방률은 낮을 수 있습니다. 비만도 계산기로 나온 수치는 참고 지표로 활용하고, 정확한 체성분 평가는 의료 전문가와 상담하는 것이 좋습니다.</p>
+    </details>
+    <details>
+      <summary>WHO 기준과 아시아(한국 비만학회) 기준은 왜 다른가요?</summary>
+      <p>서양인 대상으로 수립된 WHO 기준(과체중 25 이상)은 아시아인에게 적용하면 실제 위험을 과소평가할 수 있습니다. 아시아인은 같은 BMI에서도 체지방이 상대적으로 많이 분포해 대사 질환 위험이 높습니다. 이에 한국 비만학회(2022)는 23 이상을 비만 전단계, 25 이상을 1단계 비만으로 더 엄격한 기준을 적용합니다. 이 BMI 계산기는 두 기준을 동시에 보여줍니다.</p>
+    </details>
+    <details>
+      <summary>건강한 BMI 범위가 왜 18.5~22.9인가요?</summary>
+      <p>한국 비만학회는 아시아인 역학 연구 결과를 바탕으로 BMI 18.5~22.9를 정상 범위로 정의합니다. 이 구간에서 심혈관 질환, 당뇨병 등 만성 질환 위험이 가장 낮다는 연구 결과가 근거입니다. 건강 체중 범위는 입력한 키를 기준으로 역산해 표시합니다.</p>
+    </details>
+    <details>
+      <summary>키와 몸무게 입력값이 서버로 전송되나요?</summary>
+      <p>아니요. 이 체질량지수 계산기는 모든 계산을 브라우저 안에서 수행합니다. 입력값은 외부 서버로 전송되지 않으며, 다음 방문 시 편의를 위해 브라우저 localStorage에만 저장됩니다. 언제든지 브라우저 설정에서 삭제할 수 있습니다.</p>
+    </details>
+    <details>
+      <summary>BMI 계산기와 체지방률 계산기의 차이는?</summary>
+      <p>BMI(체질량지수) 계산기는 키와 몸무게만으로 간편하게 비만도를 추정합니다. 체지방률 계산기는 실제 체지방 비율을 측정하는 것으로 DEXA 스캔, 생체전기저항(BIA) 등 별도 측정 장비가 필요합니다. BMI는 빠른 선별 지표로 유용하고, 체지방률은 더 정밀한 체성분 분석에 쓰입니다.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

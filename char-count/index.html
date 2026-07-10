@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>글자수 세기 — 붙여넣기 즉시 글자수·바이트·원고지 계산</title>
+<meta name="description" content="공백 포함/제외 글자수, UTF-8·한글 2byte 바이트, 원고지 매수를 실시간으로 계산하고 목표 글자수 대비 잔여량을 보여주는 자소서·리포트용 무료 도구">
+<meta name="keywords" content="글자수 세기, 자소서 글자수, 공백 포함 글자수, 바이트 계산기, 원고지 매수">
+<link rel="canonical" href="https://tool-hub.me/char-count/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="글자수 세기 — 붙여넣기 즉시 글자수·바이트·원고지 계산">
+<meta property="og:description" content="공백 포함/제외 글자수, UTF-8·한글 2byte 바이트, 원고지 매수를 실시간으로 계산하고 목표 글자수 대비 잔여량을 보여주는 자소서·리포트용 무료 도구">
+<meta property="og:url" content="https://tool-hub.me/char-count/">
+<meta property="og:image" content="https://tool-hub.me/char-count/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d9488">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "글자수 세기",
+  "description": "공백 포함/제외 글자수, UTF-8·한글 2byte 바이트, 원고지 매수를 실시간으로 계산하고 목표 글자수 대비 잔여량을 보여주는 자소서·리포트용 무료 도구",
+  "url": "https://tool-hub.me/char-count/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>글자수 세기</span>
+  </a>
+  <nav class="header-actions">
+    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>글자수 세기</h1>
+    <p class="lede">붙여넣기 하면 바로 셉니다. 자소서 500자 제한도, 리포트 원고지 매수도.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <label for="main-text" style="display:block;font-weight:600;margin-bottom:.5rem;color:var(--ink)">텍스트 입력</label>
+    <textarea
+      id="main-text"
+      rows="8"
+      placeholder="여기에 텍스트를 붙여넣으세요…"
+      style="width:100%;box-sizing:border-box;resize:vertical;padding:.75rem;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--ink);font-size:1rem;font-family:inherit;line-height:1.6;"
+    ></textarea>
+
+    <div style="display:flex;align-items:center;gap:.5rem;margin-top:.75rem;flex-wrap:wrap;">
+      <label for="goal-count" style="color:var(--muted);font-size:.9rem;white-space:nowrap;">목표 글자수 (선택)</label>
+      <input
+        type="number"
+        id="goal-count"
+        min="1"
+        step="1"
+        placeholder="예: 500"
+        style="width:9rem;padding:.45rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--surface);color:var(--ink);font-size:.95rem;"
+      >
+    </div>
+
+    <div id="goal-banner" hidden
+      style="margin-top:.75rem;padding:.6rem 1rem;border-radius:.5rem;font-weight:600;font-size:1rem;">
+    </div>
+
+    <div id="stat-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.75rem;margin-top:1rem;">
+      <div class="stat-card" id="sc-with-sp"  style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">공백 포함 글자수</div>
+        <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
+        <div style="font-size:.75rem;color:var(--muted);">자</div>
+      </div>
+      <div class="stat-card" id="sc-no-sp" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">공백 제외 글자수</div>
+        <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
+        <div style="font-size:.75rem;color:var(--muted);">자</div>
+      </div>
+      <div class="stat-card" id="sc-words" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">단어 수</div>
+        <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
+        <div style="font-size:.75rem;color:var(--muted);">단어</div>
+      </div>
+      <div class="stat-card" id="sc-ms" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">원고지 매수</div>
+        <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
+        <div style="font-size:.75rem;color:var(--muted);">매 (200자)</div>
+      </div>
+      <div class="stat-card" id="sc-utf8" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">바이트 (UTF-8)</div>
+        <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
+        <div style="font-size:.75rem;color:var(--muted);">byte</div>
+      </div>
+      <div class="stat-card" id="sc-euckr" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
+        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">바이트 (한글 2byte)</div>
+        <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
+        <div style="font-size:.75rem;color:var(--muted);">byte</div>
+      </div>
+    </div>
+
+    <div class="result" id="result" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
+    <details>
+      <summary>공백 포함과 공백 제외 중 어떤 기준으로 세어야 하나?</summary>
+      <p>기업 공고나 제출처마다 기준이 다릅니다. <strong>공백 포함 글자수</strong>를 기준으로 삼는 곳이 가장 많으며, 자소서나 지원서에 "○○자 이내"라고만 적힌 경우 공백 포함으로 계산하는 것이 일반적입니다. 반면 일부 공고는 "공백 제외 ○○자"라고 명시합니다. 공고 문구를 확인한 뒤 이 <strong>글자수 세기</strong> 도구의 두 수치를 모두 참고하세요. 헷갈리면 더 엄격한 쪽(공백 포함) 기준으로 맞추는 것이 안전합니다.</p>
+    </details>
+    <details>
+      <summary>바이트 수가 두 가지인 이유는?</summary>
+      <p>한글 한 글자는 인코딩 방식에 따라 바이트 크기가 달라집니다. <strong>UTF-8</strong>에서는 한글 한 자가 3byte를 차지하며, 이는 현대 웹 표준 인코딩입니다. 반면 사람인·잡코리아·일부 공공기관 시스템은 <strong>EUC-KR</strong> 방식으로 한글을 2byte로 처리합니다. 같은 자소서라도 어느 시스템에 입력하느냐에 따라 <strong>바이트 계산기</strong> 결과가 다를 수 있어, 두 가지 바이트 수를 모두 제공합니다. 시스템이 "몇 byte 이내"라고 제한을 걸고 있다면 해당 시스템의 인코딩에 맞는 수치를 참고하세요.</p>
+    </details>
+    <details>
+      <summary>원고지 매수는 어떻게 계산하나?</summary>
+      <p><strong>원고지 매수</strong>는 공백·구두점을 포함한 공백 포함 글자수를 200으로 나눠 올림한 값입니다. 일반적인 원고지는 한 면이 20자×10행 = 200자 기준이기 때문입니다. 예를 들어 글자수 201자이면 원고지 2매로 계산됩니다. 보고서·과제 제출에 "원고지 ○매 이상"이라는 조건이 있을 때 활용하세요.</p>
+    </details>
+    <details>
+      <summary>이모지나 특수문자는 몇 글자로 계산되나?</summary>
+      <p>이모지(예: 😀)는 유니코드 코드포인트 기준으로 <strong>1글자</strong>로 셉니다. 이 도구는 서로게이트 페어가 깨지지 않도록 <code>Array.from(text).length</code> 방식으로 글자수를 셉니다. 다만 바이트는 UTF-8 실제 인코딩 결과로 계산되므로, 이모지 하나가 4byte를 차지할 수 있습니다. 특수문자는 종류에 따라 1byte(ASCII)~3byte(한자·특수기호)까지 다양합니다. <strong>자소서 글자수</strong> 제한은 대부분 코드포인트(글자) 기준이므로 걱정 없이 사용하셔도 됩니다.</p>
+    </details>
+    <details>
+      <summary>입력한 텍스트가 서버로 전송되나?</summary>
+      <p>아니오. 이 <strong>글자수 세기</strong> 도구의 모든 계산은 브라우저 안에서만 이루어집니다. 입력한 텍스트는 인터넷을 통해 어디에도 전송되지 않습니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값이 이 기기의 localStorage에만 저장되며, 이것 역시 외부로 전송되지 않습니다. 민감한 <strong>자소서 글자수</strong> 확인도 안심하고 사용하세요.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

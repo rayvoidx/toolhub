@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>디데이 계산기 — 목표일까지 몇 일? 수능·기념일·마감일 D-day 즉시 계산</title>
+<meta name="description" content="날짜 선택 즉시 D-day·D+day를 카운트다운. 수능 프리셋 원클릭, 최대 5개 날짜 동시 트래킹. 광고 없는 깔끔한 무료 디데이 계산기.">
+<meta name="keywords" content="디데이 계산기, D-day 계산기, 수능 디데이, 기념일 계산기, 날짜 카운트다운">
+<link rel="canonical" href="https://tool-hub.me/dday-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="디데이 계산기 — 목표일까지 몇 일? 수능·기념일·마감일 D-day 즉시 계산">
+<meta property="og:description" content="날짜 선택 즉시 D-day·D+day를 카운트다운. 수능 프리셋 원클릭, 최대 5개 날짜 동시 트래킹. 광고 없는 깔끔한 무료 디데이 계산기.">
+<meta property="og:url" content="https://tool-hub.me/dday-calc/">
+<meta property="og:image" content="https://tool-hub.me/dday-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6366f1">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "디데이 계산기",
+  "description": "날짜 선택 즉시 D-day·D+day를 카운트다운. 수능 프리셋 원클릭, 최대 5개 날짜 동시 트래킹. 광고 없는 깔끔한 무료 디데이 계산기.",
+  "url": "https://tool-hub.me/dday-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>디데이 계산기</span>
+  </a>
+  <nav class="header-actions">
+    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>디데이 계산기</h1>
+    <p class="lede">목표일을 선택하면 바로 셉니다. 수능, 기념일, 마감일 — 뭐든.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section -->
+  <section class="tool-card" id="tool" aria-label="디데이 계산기 도구">
+    <div id="dday-add-form">
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:flex-end;">
+        <div style="flex:1;min-width:160px;">
+          <label for="dday-date">목표 날짜</label>
+          <input type="date" id="dday-date" aria-label="목표 날짜 선택">
+        </div>
+        <div style="flex:1;min-width:120px;">
+          <label for="dday-name">이름 (선택)</label>
+          <input type="text" id="dday-name" maxlength="20" placeholder="예: 수능, 졸업식" aria-label="D-day 이름">
+        </div>
+        <div>
+          <button class="btn" id="dday-add-btn" type="button" disabled style="margin-top:18px;">추가</button>
+        </div>
+      </div>
+      <div style="margin-top:14px;display:flex;gap:8px;flex-wrap:wrap;">
+        <button class="btn" type="button" id="preset-suneung" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">수능</button>
+        <button class="btn" type="button" id="preset-xmas" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">크리스마스</button>
+        <button class="btn" type="button" id="preset-newyear" style="background:var(--muted);font-size:14px;padding:8px 14px;margin-top:0;">새해</button>
+      </div>
+      <div class="result" id="dday-form-msg" style="display:none;" aria-live="polite"></div>
+    </div>
+
+    <div id="dday-list" style="margin-top:24px;" aria-live="polite"></div>
+
+    <div id="dday-toast" role="alert" aria-live="assertive" style="display:none;margin-top:12px;padding:10px 16px;background:var(--accent);color:#fff;border-radius:8px;font-size:14px;"></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2>자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
+    <details>
+      <summary>D-day와 D+day는 어떻게 다른가요?</summary>
+      <p>D-day 계산기에서 <strong>D-숫자</strong>는 목표일이 오늘보다 <em>미래</em>에 있을 때 남은 일수를, <strong>D+숫자</strong>는 목표일이 이미 <em>지났을 때</em> 경과 일수를 나타냅니다. 예를 들어 D-30은 목표일까지 30일 남은 것, D+5는 목표일로부터 5일이 지난 것입니다. 당일은 <strong>D-Day</strong>로 표시됩니다. 기념일 카운트다운이나 마감일 추적 모두 방향이 자동으로 전환됩니다.</p>
+    </details>
+    <details>
+      <summary>수능 날짜는 어떻게 자동 계산하나요?</summary>
+      <p>수능은 매년 11월 <strong>둘째 목요일</strong>에 시행됩니다. 이 디데이 계산기는 해당 연도 11월 1일부터 날짜를 순서대로 살펴 첫 번째 목요일을 찾은 뒤 7일을 더해 둘째 목요일을 자동으로 산출합니다. 수능 프리셋 버튼을 누르면 올해 또는 내년 수능 날짜가 즉시 입력됩니다. <strong>수능 디데이</strong>를 수동으로 찾을 필요가 없습니다.</p>
+    </details>
+    <details>
+      <summary>여러 날짜를 동시에 추적할 수 있나요?</summary>
+      <p>네, 최대 <strong>5개</strong>의 D-day 카드를 동시에 추가해 관리할 수 있습니다. 수능 D-day, 기념일, 프로젝트 마감일 등을 한 화면에 나란히 놓고 날짜 카운트다운을 비교해 볼 수 있습니다. 5개를 초과해 추가하려 하면 안내 메시지가 표시됩니다.</p>
+    </details>
+    <details>
+      <summary>브라우저를 닫아도 추가한 날짜가 저장되나요?</summary>
+      <p>추가한 D-day 카드 목록은 브라우저의 <strong>localStorage</strong>에 자동 저장됩니다. 창을 닫았다 다시 열어도 이전에 추가한 날짜가 그대로 복원됩니다. 단, Safari 개인정보 보호 모드처럼 localStorage를 허용하지 않는 환경에서는 세션 동안만 유지되며, 해당 상황에는 안내 문구가 표시됩니다.</p>
+    </details>
+    <details>
+      <summary>기념일 100일·200일 계산에도 쓸 수 있나요?</summary>
+      <p>물론입니다. 처음 만난 날, 결혼기념일 등 과거 날짜를 입력하면 오늘까지 경과한 일수가 <strong>D+숫자</strong>로 표시됩니다. 반대로 앞으로의 100일·200일 기념일 날짜를 목표일로 설정하면 남은 일수를 카운트다운할 수 있습니다. <strong>기념일 계산기</strong>로도 활용 가능합니다.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
