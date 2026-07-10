@@ -80,6 +80,60 @@
          ★ i18n 규칙 (docs/I18N.md): 카드의 이름/설명에는 data-i18n="tool.<slug>.name|desc" 를 달고,
            같은 커밋에서 js/locales.js 의 "모든" 언어 블록에 해당 키를 추가한다. -->
     <div id="tool-list" style="display:flex; flex-direction:column; gap:12px; margin:18px 0 8px;">
+      <a class="tool-item" href="https://tool-hub.me/temp-conv/"
+         data-name="temperature converter celsius fahrenheit kelvin 온도 변환기 temp-conv 섭씨 화씨 켈빈"
+         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
+        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🌡️</span>
+        <span style="flex:1; min-width:0;">
+          <strong style="display:block; font-size:16px;" data-i18n="tool.temp-conv.name">Temperature Converter</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.temp-conv.desc">Type in any field — the other two update instantly.</span>
+        </span>
+      </a>
+      <a class="tool-item" href="https://tool-hub.me/length-conv/"
+         data-name="length converter meter feet inch 길이 단위 변환 length-conv cm 인치 피트 미터"
+         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
+        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">📏</span>
+        <span style="flex:1; min-width:0;">
+          <strong style="display:block; font-size:16px;" data-i18n="tool.length-conv.name">Length Converter</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.length-conv.desc">Type a number once — see it in all 8 length units instantly.</span>
+        </span>
+      </a>
+      <a class="tool-item" href="https://tool-hub.me/loan-calc/"
+         data-name="loan calculator repayment interest 대출이자 계산기 loan-calc 원리금 원금균등 대출 상환"
+         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
+        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🏦</span>
+        <span style="flex:1; min-width:0;">
+          <strong style="display:block; font-size:16px;" data-i18n="tool.loan-calc.name">Loan Calculator</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.loan-calc.desc">Enter loan amount, interest rate, and term — your monthly payment, total interest, and full repayment schedule appear instantly, with three repayment methods compared in one view.</span>
+        </span>
+      </a>
+      <a class="tool-item" href="https://tool-hub.me/savings-calc/"
+         data-name="savings calculator maturity 적금 만기 계산기 savings-calc 예금 복리 이자 저축"
+         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
+        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🐷</span>
+        <span style="flex:1; min-width:0;">
+          <strong style="display:block; font-size:16px;" data-i18n="tool.savings-calc.name">Savings Calculator</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.savings-calc.desc">How much will you have if you save every month? Get your maturity amount — gross interest, tax taken out, net in hand — in seconds. Works in any currency.</span>
+        </span>
+      </a>
+      <a class="tool-item" href="https://tool-hub.me/body-fat-calc/"
+         data-name="body fat percentage calculator navy 체지방률 계산기 body-fat-calc 체지방 측정"
+         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
+        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">📊</span>
+        <span style="flex:1; min-width:0;">
+          <strong style="display:block; font-size:16px;" data-i18n="tool.body-fat-calc.name">Body Fat Calculator</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.body-fat-calc.desc">No InBody scan needed — estimate your body fat with just a tape measure.</span>
+        </span>
+      </a>
+      <a class="tool-item" href="https://tool-hub.me/world-clock/"
+         data-name="world clock timezone city time 세계 시계 world-clock 도시 시간 시차 현재 시각"
+         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
+        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🌍</span>
+        <span style="flex:1; min-width:0;">
+          <strong style="display:block; font-size:16px;" data-i18n="tool.world-clock.name">World Clock</strong>
+          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.world-clock.desc">Add a city and it starts ticking. We handle the time difference for you.</span>
+        </span>
+      </a>
       <a class="tool-item" href="https://tool-hub.me/bmr-calc/"
          data-name="bmr calculator basal metabolic rate tdee 기초대사량 계산기 bmr-calc 칼로리 대사량 다이어트 harris mifflin"
          style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
