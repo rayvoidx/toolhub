@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Length Converter — Inches, feet, miles ↔ cm, m, km — all at once</title>
+<meta name="description" content="Free online length converter. Type one number and instantly see it in millimeters, centimeters, meters, kilometers, inches, feet, yards and miles — all in your browser.">
+<meta name="keywords" content="length converter, cm to inches, inches to cm, feet to meters, miles to km, 길이 단위 변환, 인치 cm 변환">
+<link rel="canonical" href="https://tool-hub.me/length-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Length Converter — Inches, feet, miles ↔ cm, m, km — all at once">
+<meta property="og:description" content="Free online length converter. Type one number and instantly see it in millimeters, centimeters, meters, kilometers, inches, feet, yards and miles — all in your browser.">
+<meta property="og:url" content="https://tool-hub.me/length-conv/">
+<meta property="og:image" content="https://tool-hub.me/length-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d9488">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Length Converter",
+  "description": "Free online length converter. Type one number and instantly see it in millimeters, centimeters, meters, kilometers, inches, feet, yards and miles — all in your browser.",
+  "url": "https://tool-hub.me/length-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Length Converter</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Length Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in all 8 length units instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .lc-row { display: flex; gap: 10px; align-items: flex-end; }
+      .lc-row > div { flex: 1 1 0; min-width: 0; }
+      .lc-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .lc-swap:hover { border-color: var(--accent); }
+      .tool-card label.lc-inline { margin-top: 0; }
+      .lc-result { margin-top: 22px; }
+      .lc-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .lc-eq { font-size: clamp(20px, 5.4vw, 26px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .lc-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .lc-eq { color: var(--accent); } }
+      .lc-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .lc-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .lc-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .lc-copybtn { color: var(--accent); } }
+      .lc-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .lc-tablewrap { margin-top: 24px; }
+      .lc-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .lc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .lc-table th, .lc-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      .lc-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .lc-table td.lc-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .lc-table tbody tr.lc-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+    </style>
+
+    <div class="lc-row">
+      <div>
+        <label for="lc-value" data-i18n="tool.value.label">Value</label>
+        <input id="lc-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="lc-row">
+      <div>
+        <label for="lc-from" class="lc-inline" data-i18n="tool.from.label">From</label>
+        <select id="lc-from">
+          <option value="mm" data-i18n="tool.unit.mm">Millimeter (mm)</option>
+          <option value="cm" data-i18n="tool.unit.cm">Centimeter (cm)</option>
+          <option value="m" data-i18n="tool.unit.m">Meter (m)</option>
+          <option value="km" data-i18n="tool.unit.km">Kilometer (km)</option>
+          <option value="in" selected data-i18n="tool.unit.in">Inch (in)</option>
+          <option value="ft" data-i18n="tool.unit.ft">Foot (ft)</option>
+          <option value="yd" data-i18n="tool.unit.yd">Yard (yd)</option>
+          <option value="mi" data-i18n="tool.unit.mi">Mile (mi)</option>
+        </select>
+      </div>
+      <button type="button" class="lc-swap" id="lc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="lc-to" class="lc-inline" data-i18n="tool.to.label">To</label>
+        <select id="lc-to">
+          <option value="mm" data-i18n="tool.unit.mm">Millimeter (mm)</option>
+          <option value="cm" selected data-i18n="tool.unit.cm">Centimeter (cm)</option>
+          <option value="m" data-i18n="tool.unit.m">Meter (m)</option>
+          <option value="km" data-i18n="tool.unit.km">Kilometer (km)</option>
+          <option value="in" data-i18n="tool.unit.in">Inch (in)</option>
+          <option value="ft" data-i18n="tool.unit.ft">Foot (ft)</option>
+          <option value="yd" data-i18n="tool.unit.yd">Yard (yd)</option>
+          <option value="mi" data-i18n="tool.unit.mi">Mile (mi)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result lc-result">
+      <div class="lc-primary">
+        <span class="lc-eq" id="lc-eq">—</span>
+        <button type="button" class="lc-copybtn" id="lc-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="lc-note" id="lc-note" data-i18n="tool.result.placeholder">Enter a number to see it in every unit.</p>
+    </div>
+
+    <div class="lc-tablewrap">
+      <h2 data-i18n="tool.table.heading">All units at once</h2>
+      <table class="lc-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.unit">Unit</th>
+            <th class="lc-val" data-i18n="tool.table.col.value">Value</th>
+          </tr>
+        </thead>
+        <tbody id="lc-tbody">
+          <tr data-unit="mm"><td data-i18n="tool.unit.mm">Millimeter (mm)</td><td class="lc-val" id="cell-mm">—</td></tr>
+          <tr data-unit="cm"><td data-i18n="tool.unit.cm">Centimeter (cm)</td><td class="lc-val" id="cell-cm">—</td></tr>
+          <tr data-unit="m"><td data-i18n="tool.unit.m">Meter (m)</td><td class="lc-val" id="cell-m">—</td></tr>
+          <tr data-unit="km"><td data-i18n="tool.unit.km">Kilometer (km)</td><td class="lc-val" id="cell-km">—</td></tr>
+          <tr data-unit="in"><td data-i18n="tool.unit.in">Inch (in)</td><td class="lc-val" id="cell-in">—</td></tr>
+          <tr data-unit="ft"><td data-i18n="tool.unit.ft">Foot (ft)</td><td class="lc-val" id="cell-ft">—</td></tr>
+          <tr data-unit="yd"><td data-i18n="tool.unit.yd">Yard (yd)</td><td class="lc-val" id="cell-yd">—</td></tr>
+          <tr data-unit="mi"><td data-i18n="tool.unit.mi">Mile (mi)</td><td class="lc-val" id="cell-mi">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How many centimeters are in an inch?</summary>
+      <p data-i18n="faq.a1">Exactly 2.54. One inch equals 2.54 centimeters — an exact value fixed by the 1959 international yard and pound agreement, not a rounded approximation. So 10 in = 25.4 cm and 12 in (1 foot) = 30.48 cm. To convert cm to inches, divide the centimeters by 2.54.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What are the feet, yards and miles to meters conversion factors?</summary>
+      <p data-i18n="faq.a2">1 foot = 0.3048 m, 1 yard = 0.9144 m, and 1 mile = 1609.344 m (1.609344 km). These all follow from the inch: a foot is 12 inches, a yard is 3 feet, and a mile is 1760 yards. This converter uses these exact factors, so 5 miles = 8.04672 km and 100 m ≈ 328.08 ft.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How precise are the results?</summary>
+      <p data-i18n="faq.a3">Every conversion keeps up to 10 significant figures, then trailing zeros are trimmed for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values come from the exact metric definition of each unit.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a4">No. This length converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example inches → centimeters), kept in your browser's local storage so it is ready next time. The value itself is not stored.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Where can I convert weight, temperature and other units?</summary>
+      <p data-i18n="faq.a5">This tool focuses on length. For other conversions — weight, temperature, area, volume, speed and data size — visit the Toolhub home, where the matching converters live alongside this one, all free and ad-light.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
