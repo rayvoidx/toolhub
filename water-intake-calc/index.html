@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water Intake Calculator — Enter your weight — get your daily water target in mL, liters, and cups</title>
+<meta name="description" content="Free water intake calculator: enter your body weight and activity level to see how much water you should drink each day — in milliliters, liters, US fl oz, cups, and 500 mL bottles. Runs 100% in your browser, no sign-up.">
+<meta name="keywords" content="water intake calculator, how much water should I drink, daily water intake calculator, water intake by weight, 물 섭취량 계산기, 하루 물 권장량">
+<link rel="canonical" href="https://tool-hub.me/water-intake-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Water Intake Calculator — Enter your weight — get your daily water target in mL, liters, and cups">
+<meta property="og:description" content="Free water intake calculator: enter your body weight and activity level to see how much water you should drink each day — in milliliters, liters, US fl oz, cups, and 500 mL bottles. Runs 100% in your browser, no sign-up.">
+<meta property="og:url" content="https://tool-hub.me/water-intake-calc/">
+<meta property="og:image" content="https://tool-hub.me/water-intake-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0ea5e9">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Water Intake Calculator",
+  "description": "Free water intake calculator: enter your body weight and activity level to see how much water you should drink each day — in milliliters, liters, US fl oz, cups, and 500 mL bottles. Runs 100% in your browser, no sign-up.",
+  "url": "https://tool-hub.me/water-intake-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Water Intake Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Water Intake Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">One number is all it takes. See how much water to drink today — in cups and bottles.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <p id="unit-heading" style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.unit.label">Unit</p>
+    <div role="radiogroup" aria-labelledby="unit-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="unit" value="kg" checked>
+        <span data-i18n="tool.unit.kg">kg</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="unit" value="lb">
+        <span data-i18n="tool.unit.lb">lb</span>
+      </label>
+    </div>
+
+    <label for="weight-input" data-i18n="tool.weight.label">Body weight</label>
+    <input type="number" id="weight-input" inputmode="decimal" min="10" max="300" step="0.1"
+           placeholder="e.g. 70" data-i18n-placeholder="tool.weight.placeholder" aria-describedby="result-box">
+
+    <label for="activity-select" data-i18n="tool.activity.label">Activity level</label>
+    <select id="activity-select">
+      <option value="0" selected data-i18n="tool.activity.low">Low — mostly sitting (+0 mL)</option>
+      <option value="350" data-i18n="tool.activity.moderate">Moderate — exercise 1–3×/week (+350 mL)</option>
+      <option value="700" data-i18n="tool.activity.high">High — exercise 4+×/week or physical work (+700 mL)</option>
+    </select>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate water intake</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p id="result-warning" style="margin:0 0 12px;color:#d97706;font-weight:600;" data-i18n="tool.warn.extreme" hidden>This looks unusually high — double-check your input.</p>
+        <p style="margin:0;color:var(--muted);font-size:14px;" data-i18n="tool.result.heading">Your daily water target</p>
+        <p style="margin:2px 0 2px;font-size:30px;font-weight:800;line-height:1.1;color:var(--accent);"><span id="r-liters"></span></p>
+        <p style="margin:0 0 14px;font-size:14px;color:var(--muted);" id="r-detail"></p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;">
+          <div style="border:1px solid var(--line);border-radius:8px;padding:12px 14px;text-align:center;">
+            <div style="font-weight:700;font-size:18px;" id="r-cups"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:12px 14px;text-align:center;">
+            <div style="font-weight:700;font-size:18px;" id="r-bottles"></div>
+          </div>
+        </div>
+        <p id="r-hypo" style="margin:12px 0 0;font-size:13px;color:#d97706;font-weight:600;" data-i18n="tool.warn.hyponatremia" hidden>Drinking this much in a short time can cause hyponatremia — consult a professional.</p>
+        <p style="margin:10px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.result.foodnote">Includes the ~20% of water you get from food.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How much water should I drink a day?</summary>
+      <p data-i18n="faq.a1">A common guideline is 30–35 mL of water per kilogram of body weight. This water intake calculator uses 33 mL/kg — the middle of that range — so a 70 kg adult gets about 2.3 liters (roughly 9–10 cups) before activity. Needs vary with climate, health and pregnancy, so treat the number as a starting point, not a strict rule.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Do coffee, tea and soup count toward water intake?</summary>
+      <p data-i18n="faq.a2">Yes, mostly. Coffee, tea, milk, juice and watery foods like soup, fruit and vegetables all add to your daily fluids. Caffeine has only a mild diuretic effect at normal amounts, so a regular cup of coffee still hydrates you on balance. This calculator already assumes about 20% of your water comes from food, so it targets what you actually drink.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Can drinking too much water be dangerous?</summary>
+      <p data-i18n="faq.a3">It can. Drinking very large volumes in a short time can dilute blood sodium and cause hyponatremia, which is dangerous. As a rule of thumb, avoid drinking more than about 1 liter in a single hour and spread your intake across the day. If your target here is very high, it reflects a large body weight or heavy activity — consult a professional before pushing far beyond it.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How much extra water do I need on workout days?</summary>
+      <p data-i18n="faq.a4">This water intake calculator adds a fixed activity allowance on top of the base amount: +0 mL for a mostly sedentary day, +350 mL for light-to-moderate exercise (1–3 times a week) and +700 mL for hard training or physical work (4+ times a week). On intense or hot days you may need more to replace sweat, so drink to thirst and check that your urine stays pale.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my weight sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This water intake calculator runs entirely in your browser — your weight and activity level are never uploaded to any server. Your last entry is saved only in your browser's localStorage so the form is ready next time, and you can clear it anytime.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

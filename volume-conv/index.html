@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volume Converter — Liters, milliliters, gallons, cups ↔ all at once</title>
+<meta name="description" content="Free online volume converter. Type one number and instantly see it in milliliters, liters, cubic meters, US teaspoons, tablespoons, fluid ounces, cups, pints, quarts and gallons — plus UK gallons — all in your browser.">
+<meta name="keywords" content="volume converter, gallons to liters, liters to gallons, ml to oz, cups to ml, tablespoons to ml, 부피 단위 변환, 갤런 리터 변환">
+<link rel="canonical" href="https://tool-hub.me/volume-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Volume Converter — Liters, milliliters, gallons, cups ↔ all at once">
+<meta property="og:description" content="Free online volume converter. Type one number and instantly see it in milliliters, liters, cubic meters, US teaspoons, tablespoons, fluid ounces, cups, pints, quarts and gallons — plus UK gallons — all in your browser.">
+<meta property="og:url" content="https://tool-hub.me/volume-conv/">
+<meta property="og:image" content="https://tool-hub.me/volume-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0891b2">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Volume Converter",
+  "description": "Free online volume converter. Type one number and instantly see it in milliliters, liters, cubic meters, US teaspoons, tablespoons, fluid ounces, cups, pints, quarts and gallons — plus UK gallons — all in your browser.",
+  "url": "https://tool-hub.me/volume-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Volume Converter</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Volume Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in every volume unit instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .vc-row { display: flex; gap: 10px; align-items: flex-end; }
+      .vc-row > div { flex: 1 1 0; min-width: 0; }
+      .vc-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .vc-swap:hover { border-color: var(--accent); }
+      .tool-card label.vc-inline { margin-top: 0; }
+      .vc-result { margin-top: 22px; }
+      .vc-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .vc-eq { font-size: clamp(20px, 5.4vw, 26px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .vc-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .vc-eq { color: var(--accent); } }
+      .vc-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .vc-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .vc-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .vc-copybtn { color: var(--accent); } }
+      .vc-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .vc-tablewrap { margin-top: 24px; }
+      .vc-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .vc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .vc-table th, .vc-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      .vc-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .vc-table td.vc-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .vc-table tbody tr.vc-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+      .vc-hint { margin: 16px 0 0; font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+    </style>
+
+    <div class="vc-row">
+      <div>
+        <label for="vc-value" data-i18n="tool.value.label">Value</label>
+        <input id="vc-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="vc-row">
+      <div>
+        <label for="vc-from" class="vc-inline" data-i18n="tool.from.label">From</label>
+        <select id="vc-from">
+          <option value="ml" data-i18n="tool.unit.ml">Milliliter (mL)</option>
+          <option value="l" data-i18n="tool.unit.l">Liter (L)</option>
+          <option value="m3" data-i18n="tool.unit.m3">Cubic meter (m³)</option>
+          <option value="tsp" data-i18n="tool.unit.tsp">Teaspoon US (tsp)</option>
+          <option value="tbsp" data-i18n="tool.unit.tbsp">Tablespoon US (tbsp)</option>
+          <option value="floz" data-i18n="tool.unit.floz">Fluid ounce US (fl oz)</option>
+          <option value="cup" data-i18n="tool.unit.cup">Cup US</option>
+          <option value="pt" data-i18n="tool.unit.pt">Pint US (pt)</option>
+          <option value="qt" data-i18n="tool.unit.qt">Quart US (qt)</option>
+          <option value="galus" selected data-i18n="tool.unit.galus">Gallon US (gal)</option>
+          <option value="galuk" data-i18n="tool.unit.galuk">Gallon UK (imperial)</option>
+        </select>
+      </div>
+      <button type="button" class="vc-swap" id="vc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="vc-to" class="vc-inline" data-i18n="tool.to.label">To</label>
+        <select id="vc-to">
+          <option value="ml" data-i18n="tool.unit.ml">Milliliter (mL)</option>
+          <option value="l" selected data-i18n="tool.unit.l">Liter (L)</option>
+          <option value="m3" data-i18n="tool.unit.m3">Cubic meter (m³)</option>
+          <option value="tsp" data-i18n="tool.unit.tsp">Teaspoon US (tsp)</option>
+          <option value="tbsp" data-i18n="tool.unit.tbsp">Tablespoon US (tbsp)</option>
+          <option value="floz" data-i18n="tool.unit.floz">Fluid ounce US (fl oz)</option>
+          <option value="cup" data-i18n="tool.unit.cup">Cup US</option>
+          <option value="pt" data-i18n="tool.unit.pt">Pint US (pt)</option>
+          <option value="qt" data-i18n="tool.unit.qt">Quart US (qt)</option>
+          <option value="galus" data-i18n="tool.unit.galus">Gallon US (gal)</option>
+          <option value="galuk" data-i18n="tool.unit.galuk">Gallon UK (imperial)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result vc-result">
+      <div class="vc-primary">
+        <span class="vc-eq" id="vc-eq">—</span>
+        <button type="button" class="vc-copybtn" id="vc-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="vc-note" id="vc-note" data-i18n="tool.result.placeholder">Enter a number to see it in every unit.</p>
+    </div>
+
+    <div class="vc-tablewrap">
+      <h2 data-i18n="tool.table.heading">All units at once</h2>
+      <table class="vc-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.unit">Unit</th>
+            <th class="vc-val" data-i18n="tool.table.col.value">Value</th>
+          </tr>
+        </thead>
+        <tbody id="vc-tbody">
+          <tr data-unit="ml"><td data-i18n="tool.unit.ml">Milliliter (mL)</td><td class="vc-val" id="cell-ml">—</td></tr>
+          <tr data-unit="l"><td data-i18n="tool.unit.l">Liter (L)</td><td class="vc-val" id="cell-l">—</td></tr>
+          <tr data-unit="m3"><td data-i18n="tool.unit.m3">Cubic meter (m³)</td><td class="vc-val" id="cell-m3">—</td></tr>
+          <tr data-unit="tsp"><td data-i18n="tool.unit.tsp">Teaspoon US (tsp)</td><td class="vc-val" id="cell-tsp">—</td></tr>
+          <tr data-unit="tbsp"><td data-i18n="tool.unit.tbsp">Tablespoon US (tbsp)</td><td class="vc-val" id="cell-tbsp">—</td></tr>
+          <tr data-unit="floz"><td data-i18n="tool.unit.floz">Fluid ounce US (fl oz)</td><td class="vc-val" id="cell-floz">—</td></tr>
+          <tr data-unit="cup"><td data-i18n="tool.unit.cup">Cup US</td><td class="vc-val" id="cell-cup">—</td></tr>
+          <tr data-unit="pt"><td data-i18n="tool.unit.pt">Pint US (pt)</td><td class="vc-val" id="cell-pt">—</td></tr>
+          <tr data-unit="qt"><td data-i18n="tool.unit.qt">Quart US (qt)</td><td class="vc-val" id="cell-qt">—</td></tr>
+          <tr data-unit="galus"><td data-i18n="tool.unit.galus">Gallon US (gal)</td><td class="vc-val" id="cell-galus">—</td></tr>
+          <tr data-unit="galuk"><td data-i18n="tool.unit.galuk">Gallon UK (imperial)</td><td class="vc-val" id="cell-galuk">—</td></tr>
+        </tbody>
+      </table>
+      <p class="vc-hint" data-i18n="tool.note">Cups, pints, quarts, gallons, teaspoons and tablespoons are US customary units (1 US gallon = 3.785 L). Gallon UK is the larger imperial gallon (4.546 L).</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How many liters are in a gallon? (US vs UK)</summary>
+      <p data-i18n="faq.a1">It depends which gallon you mean. 1 US gallon = 3.785411784 liters, while 1 UK (imperial) gallon = 4.54609 liters — about 20% larger. This converter defaults to the US gallon and labels the imperial one separately as "Gallon UK", so you never mix them up. So 5 US gal = 18.927 L, but 5 UK gal = 22.730 L.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I convert mL to fl oz and cups for cooking?</summary>
+      <p data-i18n="faq.a2">Using US customary kitchen units: 1 US fluid ounce = 29.5735 mL and 1 US cup = 236.588 mL (8 fl oz). So 250 mL ≈ 8.45 fl oz ≈ 1.06 cups, and 500 mL ≈ 2.11 cups. Type the milliliters once and the table shows teaspoons, tablespoons, fluid ounces and cups together — handy for scaling a recipe.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Which cup, ounce and gallon does this converter use?</summary>
+      <p data-i18n="faq.a3">By default it uses US customary units: 1 cup = 236.588 mL, 1 fluid ounce = 29.5735 mL, 1 pint = 473.176 mL, 1 quart = 946.353 mL and 1 gallon = 3.785411784 L. The imperial (UK) gallon is offered as a separate "Gallon UK" option at 4.54609 L. Every option and table row is labeled US or UK to avoid the common gallon and fluid-ounce mix-up.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How precise are the volume results?</summary>
+      <p data-i18n="faq.a4">Every conversion keeps up to 10 significant figures, then trailing zeros are trimmed for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values use the exact liter-based definition of each unit.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This volume converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example gallons → liters), kept in your browser's local storage so it is ready next time. The value itself is not stored.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
