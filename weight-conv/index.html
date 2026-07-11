@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weight Converter — Kilograms, pounds, ounces, stone ↔ all at once</title>
+<meta name="description" content="Free online weight & mass converter. Type one number and instantly see it in milligrams, grams, kilograms, tonnes, ounces, pounds and stone — plus Korean geun and don — all in your browser.">
+<meta name="keywords" content="weight converter, kg to lbs, lbs to kg, pounds to kg, ounces to grams, stone to kg, 무게 단위 변환, 파운드 킬로그램 변환">
+<link rel="canonical" href="https://tool-hub.me/weight-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Weight Converter — Kilograms, pounds, ounces, stone ↔ all at once">
+<meta property="og:description" content="Free online weight & mass converter. Type one number and instantly see it in milligrams, grams, kilograms, tonnes, ounces, pounds and stone — plus Korean geun and don — all in your browser.">
+<meta property="og:url" content="https://tool-hub.me/weight-conv/">
+<meta property="og:image" content="https://tool-hub.me/weight-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Weight Converter",
+  "description": "Free online weight & mass converter. Type one number and instantly see it in milligrams, grams, kilograms, tonnes, ounces, pounds and stone — plus Korean geun and don — all in your browser.",
+  "url": "https://tool-hub.me/weight-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Weight Converter</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Weight Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in every mass unit instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .wc-row { display: flex; gap: 10px; align-items: flex-end; }
+      .wc-row > div { flex: 1 1 0; min-width: 0; }
+      .wc-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .wc-swap:hover { border-color: var(--accent); }
+      .tool-card label.wc-inline { margin-top: 0; }
+      .wc-result { margin-top: 22px; }
+      .wc-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .wc-eq { font-size: clamp(20px, 5.4vw, 26px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .wc-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .wc-eq { color: var(--accent); } }
+      .wc-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .wc-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .wc-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .wc-copybtn { color: var(--accent); } }
+      .wc-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .wc-tablewrap { margin-top: 24px; }
+      .wc-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .wc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .wc-table th, .wc-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      .wc-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .wc-table td.wc-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .wc-table tbody tr.wc-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+    </style>
+
+    <div class="wc-row">
+      <div>
+        <label for="wc-value" data-i18n="tool.value.label">Value</label>
+        <input id="wc-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="wc-row">
+      <div>
+        <label for="wc-from" class="wc-inline" data-i18n="tool.from.label">From</label>
+        <select id="wc-from">
+          <option value="mg" data-i18n="tool.unit.mg">Milligram (mg)</option>
+          <option value="g" data-i18n="tool.unit.g">Gram (g)</option>
+          <option value="kg" data-i18n="tool.unit.kg">Kilogram (kg)</option>
+          <option value="t" data-i18n="tool.unit.t">Tonne (t)</option>
+          <option value="oz" data-i18n="tool.unit.oz">Ounce (oz)</option>
+          <option value="lb" selected data-i18n="tool.unit.lb">Pound (lb)</option>
+          <option value="st" data-i18n="tool.unit.st">Stone (st)</option>
+          <option value="geun" data-i18n="tool.unit.geun">Geun 근 (600 g)</option>
+          <option value="don" data-i18n="tool.unit.don">Don 돈 (3.75 g)</option>
+        </select>
+      </div>
+      <button type="button" class="wc-swap" id="wc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="wc-to" class="wc-inline" data-i18n="tool.to.label">To</label>
+        <select id="wc-to">
+          <option value="mg" data-i18n="tool.unit.mg">Milligram (mg)</option>
+          <option value="g" data-i18n="tool.unit.g">Gram (g)</option>
+          <option value="kg" selected data-i18n="tool.unit.kg">Kilogram (kg)</option>
+          <option value="t" data-i18n="tool.unit.t">Tonne (t)</option>
+          <option value="oz" data-i18n="tool.unit.oz">Ounce (oz)</option>
+          <option value="lb" data-i18n="tool.unit.lb">Pound (lb)</option>
+          <option value="st" data-i18n="tool.unit.st">Stone (st)</option>
+          <option value="geun" data-i18n="tool.unit.geun">Geun 근 (600 g)</option>
+          <option value="don" data-i18n="tool.unit.don">Don 돈 (3.75 g)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result wc-result">
+      <div class="wc-primary">
+        <span class="wc-eq" id="wc-eq">—</span>
+        <button type="button" class="wc-copybtn" id="wc-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="wc-note" id="wc-note" data-i18n="tool.result.placeholder">Enter a number to see it in every unit.</p>
+    </div>
+
+    <div class="wc-tablewrap">
+      <h2 data-i18n="tool.table.heading">All units at once</h2>
+      <table class="wc-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.unit">Unit</th>
+            <th class="wc-val" data-i18n="tool.table.col.value">Value</th>
+          </tr>
+        </thead>
+        <tbody id="wc-tbody">
+          <tr data-unit="mg"><td data-i18n="tool.unit.mg">Milligram (mg)</td><td class="wc-val" id="cell-mg">—</td></tr>
+          <tr data-unit="g"><td data-i18n="tool.unit.g">Gram (g)</td><td class="wc-val" id="cell-g">—</td></tr>
+          <tr data-unit="kg"><td data-i18n="tool.unit.kg">Kilogram (kg)</td><td class="wc-val" id="cell-kg">—</td></tr>
+          <tr data-unit="t"><td data-i18n="tool.unit.t">Tonne (t)</td><td class="wc-val" id="cell-t">—</td></tr>
+          <tr data-unit="oz"><td data-i18n="tool.unit.oz">Ounce (oz)</td><td class="wc-val" id="cell-oz">—</td></tr>
+          <tr data-unit="lb"><td data-i18n="tool.unit.lb">Pound (lb)</td><td class="wc-val" id="cell-lb">—</td></tr>
+          <tr data-unit="st"><td data-i18n="tool.unit.st">Stone (st)</td><td class="wc-val" id="cell-st">—</td></tr>
+          <tr data-unit="geun"><td data-i18n="tool.unit.geun">Geun 근 (600 g)</td><td class="wc-val" id="cell-geun">—</td></tr>
+          <tr data-unit="don"><td data-i18n="tool.unit.don">Don 돈 (3.75 g)</td><td class="wc-val" id="cell-don">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How many pounds are in a kilogram?</summary>
+      <p data-i18n="faq.a1">1 kilogram = 2.2046226218 pounds, and 1 pound = 0.45359237 kg exactly — the exact value of the international avoirdupois pound, not a rounded 2.2. So going kg to lbs, 70 kg ≈ 154.32 lb; going pounds to kg, 150 lb ≈ 68.04 kg. This weight converter uses the exact factor, so kg-to-lbs and lbs-to-kg both stay accurate.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What about ounces and stone?</summary>
+      <p data-i18n="faq.a2">1 ounce = 28.349523125 grams (so converting ounces to grams is handy for recipes and postage), 1 pound = 16 ounces, and 1 stone = 14 pounds = 6.35029318 kg. Stone is the everyday body-weight unit in the UK and Ireland, so 11 st = 154 lb ≈ 69.85 kg. Type a value once to see stone to kg and every other unit at the same time.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What are 근 (geun) and 돈 (don)?</summary>
+      <p data-i18n="faq.a3">They are traditional Korean mass units. One 근 (geun) is 600 g, used to weigh food such as meat and vegetables at markets. One 돈 (don) is 3.75 g, the standard unit for weighing gold and other precious metals at jewelers. Most global converters leave them out, so this tool adds both next to the metric and imperial units.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How precise are the results?</summary>
+      <p data-i18n="faq.a4">Every conversion keeps up to 10 significant figures, then trims trailing zeros for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values use the exact SI definition of each unit.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This weight converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example pounds → kilograms), kept in your browser's local storage so it is ready next time. The value itself is not stored.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

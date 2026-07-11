@@ -79,205 +79,149 @@
          data-name 에 검색용 이름/키워드(영·한 병기)를, href 는 서비스의 배포 URL을 그대로 넣는다.
          ★ i18n 규칙 (docs/I18N.md): 카드의 이름/설명에는 data-i18n="tool.<slug>.name|desc" 를 달고,
            같은 커밋에서 js/locales.js 의 "모든" 언어 블록에 해당 키를 추가한다. -->
-    <div id="tool-list" style="display:flex; flex-direction:column; gap:12px; margin:18px 0 8px;">
-      <a class="tool-item" href="https://tool-hub.me/temp-conv/"
-         data-name="temperature converter celsius fahrenheit kelvin 온도 변환기 temp-conv 섭씨 화씨 켈빈"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🌡️</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.temp-conv.name">Temperature Converter</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.temp-conv.desc">Type in any field — the other two update instantly.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/length-conv/"
-         data-name="length converter meter feet inch 길이 단위 변환 length-conv cm 인치 피트 미터"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">📏</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.length-conv.name">Length Converter</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.length-conv.desc">Type a number once — see it in all 8 length units instantly.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/loan-calc/"
-         data-name="loan calculator repayment interest 대출이자 계산기 loan-calc 원리금 원금균등 대출 상환"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🏦</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.loan-calc.name">Loan Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.loan-calc.desc">Enter loan amount, interest rate, and term — your monthly payment, total interest, and full repayment schedule appear instantly, with three repayment methods compared in one view.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/savings-calc/"
-         data-name="savings calculator maturity 적금 만기 계산기 savings-calc 예금 복리 이자 저축"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🐷</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.savings-calc.name">Savings Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.savings-calc.desc">How much will you have if you save every month? Get your maturity amount — gross interest, tax taken out, net in hand — in seconds. Works in any currency.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/body-fat-calc/"
-         data-name="body fat percentage calculator navy 체지방률 계산기 body-fat-calc 체지방 측정"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">📊</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.body-fat-calc.name">Body Fat Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.body-fat-calc.desc">No InBody scan needed — estimate your body fat with just a tape measure.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/world-clock/"
-         data-name="world clock timezone city time 세계 시계 world-clock 도시 시간 시차 현재 시각"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🌍</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.world-clock.name">World Clock</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.world-clock.desc">Add a city and it starts ticking. We handle the time difference for you.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/bmr-calc/"
-         data-name="bmr calculator basal metabolic rate tdee 기초대사량 계산기 bmr-calc 칼로리 대사량 다이어트 harris mifflin"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🔥</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.bmr-calc.name">BMR Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.bmr-calc.desc">Calories you burn just by breathing — check them accurately with two proven formulas.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/countdown-timer/"
-         data-name="countdown timer online timer 카운트다운 타이머 countdown-timer 요리 타이머 알람 타이머 kitchen timer"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">⏲️</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.countdown-timer.name">Countdown Timer</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.countdown-timer.desc">Set your time and press start. It rings the moment time is up — even in a background tab.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/qr-gen/"
-         data-name="qr code generator qr 코드 생성기 qr-gen qr 만들기 qr코드 png qr maker"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">▦</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.qr-gen.name">QR Code Generator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.qr-gen.desc">Your QR code appears as you type. No sign-up, no expiration, and nothing is ever sent to a server.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/date-diff-calc/"
-         data-name="date difference calculator days between dates 날짜 차이 계산기 date-diff-calc 날짜 계산 며칠 기념일"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">📅</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.date-diff-calc.name">Date Difference Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.date-diff-calc.desc">Just pick two dates. See how many days apart — and how many years and months — instantly.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/interest-calc/"
-         data-name="interest calculator simple compound 이자 계산기 interest-calc 단리 복리 예금 이자 세후"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">💵</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.interest-calc.name">Interest Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.interest-calc.desc">How much interest will a lump sum earn? Simple or compound, with tax deducted — see the actual payout instantly.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/pomodoro-timer/"
-         data-name="pomodoro timer focus timer 뽀모도로 타이머 pomodoro-timer 집중 타이머 공부 타이머 25분"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🍅</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.pomodoro-timer.name">Pomodoro Timer</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.pomodoro-timer.desc">Focus for 25 minutes, rest for 5. The timer runs the cycle for you.</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/unit-price/"
-         data-name="unit price calculator 단위가격 계산기 unit-price 100g당 가격 단위가격 비교 g당 가격 price per 100g compare"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">₩</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.unit-price.name">Unit Price Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.unit-price.desc">Bulk pack vs. small pack — see which is actually cheaper in seconds</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/char-count/"
-         data-name="character counter word count 글자수 세기 char-count 자소서 글자수 공백 포함 글자수 바이트 계산기 원고지 매수 byte counter"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">字</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.char-count.name">Character Counter</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.char-count.desc">Paste text to instantly count characters, words, and bytes</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/age-calc/"
-         data-name="age calculator korean age zodiac 나이 계산기 age-calc 만나이 세는나이 연나이 띠"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🎂</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.age-calc.name">Age Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.age-calc.desc">Exact age, Korean counting age, and zodiac animal in one tap</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/bmi-calc/"
-         data-name="bmi calculator body mass index BMI 계산기 bmi-calc 체질량지수 비만도 표준체중"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">⚖️</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.bmi-calc.name">BMI Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.bmi-calc.desc">Enter height and weight to get your body mass index instantly</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/dday-calc/"
-         data-name="d-day counter countdown date calculator 디데이 계산기 dday-calc 디데이 수능 기념일 마감일 날짜계산"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">📅</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.dday-calc.name">D-Day Counter</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.dday-calc.desc">Count down to exams, anniversaries, and deadlines</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/discount-calc/"
-         data-name="discount calculator sale price 할인율 계산기 discount-calc 할인가 세일 퍼센트 할인"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🏷️</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.discount-calc.name">Discount Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.discount-calc.desc">Sale price or discount rate — compute both ways instantly</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/password-gen/"
-         data-name="password generator random secure 비밀번호 생성기 password-gen 랜덤 패스워드 암호 생성"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🔐</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.password-gen.name">Password Generator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.password-gen.desc">Cryptographically secure random passwords — no server, no ads</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/percent-calc/"
-         data-name="percentage calculator percent change 퍼센트 계산기 percent-calc 비율 증감률 변화량 백분율"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">％</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.percent-calc.name">Percentage Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.percent-calc.desc">Ratios, percent change, and differences in one tab</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/salary-calc/"
-         data-name="salary take-home pay korea net income 연봉 실수령액 계산기 salary-calc 세후 월급 연봉계산기 4대보험"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">💰</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.salary-calc.name">Korean Salary Calculator</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.salary-calc.desc">Annual salary in, after-tax monthly pay out (Korean taxes)</span>
-        </span>
-      </a>
-      <a class="tool-item" href="https://tool-hub.me/tax-calc/"
-         data-name="vat calculator korea 부가세 계산기 tax-calc 부가가치세 공급가액 공급대가 세금"
-         style="display:flex; align-items:center; gap:14px; padding:16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); color:var(--ink); text-decoration:none;">
-        <span aria-hidden="true" style="font-size:22px; width:42px; height:42px; flex-shrink:0; display:flex; align-items:center; justify-content:center; border-radius:8px; background:color-mix(in srgb, var(--accent) 15%, var(--surface));">🧾</span>
-        <span style="flex:1; min-width:0;">
-          <strong style="display:block; font-size:16px;" data-i18n="tool.tax-calc.name">VAT Calculator (Korea 10%)</strong>
-          <span style="display:block; color:var(--muted); font-size:14px; margin-top:2px;" data-i18n="tool.tax-calc.desc">Split any amount into net price and 10% VAT instantly</span>
-        </span>
-      </a>
+    <div id="tool-list" class="tool-directory">
+      <section class="tool-group" data-group="finance">
+        <h3 class="tool-group-title" data-i18n="cat.finance">Finance & Shopping</h3>
+        <div class="tool-grid">
+        <a class="tool-item" href="https://tool-hub.me/loan-calc/" data-name="loan calculator repayment interest 대출이자 계산기 loan-calc 원리금 원금균등 대출 상환">
+          <span class="tool-ico" aria-hidden="true">🏦</span>
+          <span class="tool-name" data-i18n="tool.loan-calc.name">Loan Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/savings-calc/" data-name="savings calculator maturity 적금 만기 계산기 savings-calc 예금 복리 이자 저축">
+          <span class="tool-ico" aria-hidden="true">🐷</span>
+          <span class="tool-name" data-i18n="tool.savings-calc.name">Savings Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/interest-calc/" data-name="interest calculator simple compound 이자 계산기 interest-calc 단리 복리 예금 이자 세후">
+          <span class="tool-ico" aria-hidden="true">💵</span>
+          <span class="tool-name" data-i18n="tool.interest-calc.name">Interest Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/unit-price/" data-name="unit price calculator 단위가격 계산기 unit-price 100g당 가격 단위가격 비교 g당 가격 price per 100g compare">
+          <span class="tool-ico" aria-hidden="true">₩</span>
+          <span class="tool-name" data-i18n="tool.unit-price.name">Unit Price Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/discount-calc/" data-name="discount calculator sale price 할인율 계산기 discount-calc 할인가 세일 퍼센트 할인">
+          <span class="tool-ico" aria-hidden="true">🏷️</span>
+          <span class="tool-name" data-i18n="tool.discount-calc.name">Discount Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/percent-calc/" data-name="percentage calculator percent change 퍼센트 계산기 percent-calc 비율 증감률 변화량 백분율">
+          <span class="tool-ico" aria-hidden="true">％</span>
+          <span class="tool-name" data-i18n="tool.percent-calc.name">Percentage Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/salary-calc/" data-name="salary take-home pay korea net income 연봉 실수령액 계산기 salary-calc 세후 월급 연봉계산기 4대보험">
+          <span class="tool-ico" aria-hidden="true">💰</span>
+          <span class="tool-name" data-i18n="tool.salary-calc.name">Korean Salary Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/tax-calc/" data-name="vat calculator korea 부가세 계산기 tax-calc 부가가치세 공급가액 공급대가 세금">
+          <span class="tool-ico" aria-hidden="true">🧾</span>
+          <span class="tool-name" data-i18n="tool.tax-calc.name">VAT Calculator (Korea 10%)</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/tip-calc/" data-name="tip calculator gratuity 팁 계산기 tip-calc 팁 퍼센트 더치페이 봉사료">
+          <span class="tool-ico" aria-hidden="true">🪙</span>
+          <span class="tool-name" data-i18n="tool.tip-calc.name">Tip Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/split-bill-calc/" data-name="split bill calculator 더치페이 계산기 split-bill-calc n빵 회식 나누기 1인당">
+          <span class="tool-ico" aria-hidden="true">🤝</span>
+          <span class="tool-name" data-i18n="tool.split-bill-calc.name">Split Bill Calculator</span>
+        </a>
+        </div>
+      </section>
+      <section class="tool-group" data-group="date">
+        <h3 class="tool-group-title" data-i18n="cat.date">Date & Time</h3>
+        <div class="tool-grid">
+        <a class="tool-item" href="https://tool-hub.me/world-clock/" data-name="world clock timezone city time 세계 시계 world-clock 도시 시간 시차 현재 시각">
+          <span class="tool-ico" aria-hidden="true">🌍</span>
+          <span class="tool-name" data-i18n="tool.world-clock.name">World Clock</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/countdown-timer/" data-name="countdown timer online timer 카운트다운 타이머 countdown-timer 요리 타이머 알람 타이머 kitchen timer">
+          <span class="tool-ico" aria-hidden="true">⏲️</span>
+          <span class="tool-name" data-i18n="tool.countdown-timer.name">Countdown Timer</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/date-diff-calc/" data-name="date difference calculator days between dates 날짜 차이 계산기 date-diff-calc 날짜 계산 며칠 기념일">
+          <span class="tool-ico" aria-hidden="true">🗓️</span>
+          <span class="tool-name" data-i18n="tool.date-diff-calc.name">Date Difference Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/pomodoro-timer/" data-name="pomodoro timer focus timer 뽀모도로 타이머 pomodoro-timer 집중 타이머 공부 타이머 25분">
+          <span class="tool-ico" aria-hidden="true">🍅</span>
+          <span class="tool-name" data-i18n="tool.pomodoro-timer.name">Pomodoro Timer</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/age-calc/" data-name="age calculator korean age zodiac 나이 계산기 age-calc 만나이 세는나이 연나이 띠">
+          <span class="tool-ico" aria-hidden="true">🎂</span>
+          <span class="tool-name" data-i18n="tool.age-calc.name">Age Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/dday-calc/" data-name="d-day counter countdown date calculator 디데이 계산기 dday-calc 디데이 수능 기념일 마감일 날짜계산">
+          <span class="tool-ico" aria-hidden="true">📅</span>
+          <span class="tool-name" data-i18n="tool.dday-calc.name">D-Day Counter</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/stopwatch/" data-name="stopwatch lap timer 스톱워치 stopwatch 랩타임 시간 측정 온라인 스톱워치">
+          <span class="tool-ico" aria-hidden="true">⏱️</span>
+          <span class="tool-name" data-i18n="tool.stopwatch.name">Online Stopwatch</span>
+        </a>
+        </div>
+      </section>
+      <section class="tool-group" data-group="health">
+        <h3 class="tool-group-title" data-i18n="cat.health">Health & Body</h3>
+        <div class="tool-grid">
+        <a class="tool-item" href="https://tool-hub.me/body-fat-calc/" data-name="body fat percentage calculator navy 체지방률 계산기 body-fat-calc 체지방 측정">
+          <span class="tool-ico" aria-hidden="true">📊</span>
+          <span class="tool-name" data-i18n="tool.body-fat-calc.name">Body Fat Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/bmr-calc/" data-name="bmr calculator basal metabolic rate tdee 기초대사량 계산기 bmr-calc 칼로리 대사량 다이어트 harris mifflin">
+          <span class="tool-ico" aria-hidden="true">🔥</span>
+          <span class="tool-name" data-i18n="tool.bmr-calc.name">BMR Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/bmi-calc/" data-name="bmi calculator body mass index BMI 계산기 bmi-calc 체질량지수 비만도 표준체중">
+          <span class="tool-ico" aria-hidden="true">⚖️</span>
+          <span class="tool-name" data-i18n="tool.bmi-calc.name">BMI Calculator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/calorie-calc/" data-name="calorie burn calculator met 칼로리 소모 계산기 calorie-calc 운동 칼로리 다이어트">
+          <span class="tool-ico" aria-hidden="true">🍎</span>
+          <span class="tool-name" data-i18n="tool.calorie-calc.name">Calories Burned Calculator</span>
+        </a>
+        </div>
+      </section>
+      <section class="tool-group" data-group="units">
+        <h3 class="tool-group-title" data-i18n="cat.units">Units & Conversion</h3>
+        <div class="tool-grid">
+        <a class="tool-item" href="https://tool-hub.me/temp-conv/" data-name="temperature converter celsius fahrenheit kelvin 온도 변환기 temp-conv 섭씨 화씨 켈빈">
+          <span class="tool-ico" aria-hidden="true">🌡️</span>
+          <span class="tool-name" data-i18n="tool.temp-conv.name">Temperature Converter</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/length-conv/" data-name="length converter meter feet inch 길이 단위 변환 length-conv cm 인치 피트 미터">
+          <span class="tool-ico" aria-hidden="true">📏</span>
+          <span class="tool-name" data-i18n="tool.length-conv.name">Length Converter</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/weight-conv/" data-name="weight converter kg lb oz 무게 단위 변환 weight-conv 파운드 킬로그램 근">
+          <span class="tool-ico" aria-hidden="true">🏋️</span>
+          <span class="tool-name" data-i18n="tool.weight-conv.name">Weight Converter</span>
+        </a>
+        </div>
+      </section>
+      <section class="tool-group" data-group="text">
+        <h3 class="tool-group-title" data-i18n="cat.text">Text</h3>
+        <div class="tool-grid">
+        <a class="tool-item" href="https://tool-hub.me/char-count/" data-name="character counter word count 글자수 세기 char-count 자소서 글자수 공백 포함 글자수 바이트 계산기 원고지 매수 byte counter">
+          <span class="tool-ico" aria-hidden="true">字</span>
+          <span class="tool-name" data-i18n="tool.char-count.name">Character Counter</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/word-counter/" data-name="word counter reading time 단어수 세기 word-counter 단어 문장 읽기 시간 word count">
+          <span class="tool-ico" aria-hidden="true">📝</span>
+          <span class="tool-name" data-i18n="tool.word-counter.name">Word Counter</span>
+        </a>
+        </div>
+      </section>
+      <section class="tool-group" data-group="utility">
+        <h3 class="tool-group-title" data-i18n="cat.utility">Utilities</h3>
+        <div class="tool-grid">
+        <a class="tool-item" href="https://tool-hub.me/qr-gen/" data-name="qr code generator qr 코드 생성기 qr-gen qr 만들기 qr코드 png qr maker">
+          <span class="tool-ico" aria-hidden="true">▦</span>
+          <span class="tool-name" data-i18n="tool.qr-gen.name">QR Code Generator</span>
+        </a>
+        <a class="tool-item" href="https://tool-hub.me/password-gen/" data-name="password generator random secure 비밀번호 생성기 password-gen 랜덤 패스워드 암호 생성">
+          <span class="tool-ico" aria-hidden="true">🔐</span>
+          <span class="tool-name" data-i18n="tool.password-gen.name">Password Generator</span>
+        </a>
+        </div>
+      </section>
     </div>
     <!-- MAINTAIN:CARDS-END -->
     <p id="tool-empty" class="placeholder-note" hidden data-i18n="tools.empty">No tools match your search. Try a different term.</p>

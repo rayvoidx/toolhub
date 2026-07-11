@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Stopwatch — Lap times, 1/100s precision, keyboard shortcuts — a free online stopwatch with no ads</title>
+<meta name="description" content="Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install, no ads.">
+<meta name="keywords" content="online stopwatch, stopwatch with laps, lap timer, stopwatch online, 스톱워치, 온라인 스톱워치, 초시계">
+<link rel="canonical" href="https://tool-hub.me/stopwatch/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Online Stopwatch — Lap times, 1/100s precision, keyboard shortcuts — a free online stopwatch with no ads">
+<meta property="og:description" content="Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install, no ads.">
+<meta property="og:url" content="https://tool-hub.me/stopwatch/">
+<meta property="og:image" content="https://tool-hub.me/stopwatch/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#22c55e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Online Stopwatch",
+  "description": "Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install, no ads.",
+  "url": "https://tool-hub.me/stopwatch/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Online Stopwatch</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Online Stopwatch</h1>
+    <p class="lede" data-i18n="hero.lede">Space to start and pause, L for laps. Stays accurate even in a background tab.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Stopwatch" data-i18n-aria-label="tool.aria">
+    <div id="sw-display" role="timer" aria-live="off" aria-label="Elapsed time" data-i18n-aria-label="tool.elapsed"
+         style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;font-size:clamp(46px,14vw,84px);font-weight:700;line-height:1.1;text-align:center;letter-spacing:0.02em;margin:6px 0 22px;">00:00.00</div>
+
+    <div id="sw-controls" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <button class="btn" id="lapreset-btn" type="button" data-i18n="tool.reset" disabled
+              style="min-width:150px;margin-top:0;background:var(--muted);">Reset</button>
+      <button class="btn" id="startpause-btn" type="button" data-i18n="tool.start"
+              style="min-width:150px;margin-top:0;">Start</button>
+    </div>
+
+    <p id="sw-hint" data-i18n="tool.hint" style="text-align:center;color:var(--muted);font-size:13px;margin:14px 0 0;">Shortcuts: Space start/pause · L lap · R reset</p>
+
+    <div class="result" id="sw-msg" hidden aria-live="polite" style="font-size:15px;"></div>
+
+    <div id="sw-laps" style="margin-top:24px;">
+      <div id="sw-laps-head" style="display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:10px;">
+        <strong style="font-size:15px;"><span data-i18n="tool.lapsHeading">Laps</span> <span id="sw-lap-count" style="font-variant-numeric:tabular-nums;color:var(--muted);font-weight:600;">0</span></strong>
+        <button class="btn" id="copy-btn" type="button" data-i18n="tool.copy" hidden
+                style="margin-top:0;background:var(--muted);font-size:14px;padding:8px 14px;">Copy results</button>
+      </div>
+
+      <p id="sw-laps-empty" data-i18n="tool.noLaps" style="text-align:center;color:var(--muted);padding:16px 0;margin:0;">No laps yet</p>
+
+      <table id="sw-laps-table" hidden style="width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;">
+        <thead>
+          <tr style="border-bottom:1px solid var(--line);color:var(--muted);font-size:13px;">
+            <th scope="col" data-i18n="tool.thLap" style="text-align:left;padding:8px 6px;font-weight:600;">Lap</th>
+            <th scope="col" data-i18n="tool.thSplit" style="text-align:right;padding:8px 6px;font-weight:600;">Split</th>
+            <th scope="col" data-i18n="tool.thTotal" style="text-align:right;padding:8px 6px;font-weight:600;">Total</th>
+          </tr>
+        </thead>
+        <tbody id="sw-laps-body"></tbody>
+      </table>
+
+      <textarea id="sw-copy-area" readonly aria-hidden="true" hidden
+                style="width:100%;margin-top:12px;min-height:96px;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;padding:10px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);color:var(--ink);"></textarea>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Is the stopwatch accurate when the tab is in the background or the device is asleep?</summary>
+      <p data-i18n="faq.a1">Yes. Instead of adding up ticks, this online stopwatch records the moment you press start and, on every frame, recomputes elapsed time as the difference from the system clock. So even if the browser throttles a background tab or the screen sleeps, the time is correct the instant you return — no drift piling up.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between a lap (split) and the total time?</summary>
+      <p data-i18n="faq.a2">The total is the full time since you pressed start. A lap — also called a split — is the time for that segment alone: the gap between one lap press and the previous one. Press L or the Lap button and the stopwatch records both, so you see each interval and the running total side by side. With two or more laps, the fastest is highlighted in green and the slowest in red.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Do my times survive a page refresh or closing the browser?</summary>
+      <p data-i18n="faq.a3">Yes. The running state and every lap are saved in your browser's localStorage under the stopwatch: key, and nothing is sent to a server. Refresh the page or reopen it later and a stopwatch that was running keeps counting from the right moment, with all laps intact. Reset clears them.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What are the keyboard shortcuts?</summary>
+      <p data-i18n="faq.a4">Space starts and pauses, L records a lap, and R resets. The shortcuts read physical key positions, so they work the same on any keyboard layout or input method, and they're ignored while you're typing in a field — so they never get in the way.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">How do I paste my lap times into Excel or Google Sheets?</summary>
+      <p data-i18n="faq.a5">Press Copy results and the laps are copied as tab-separated text — lap number, split and total per line. Paste into Excel, Google Sheets or Numbers and each value lands in its own cell automatically. If the browser blocks the clipboard, the results appear on screen so you can select and copy them by hand.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

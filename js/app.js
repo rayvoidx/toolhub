@@ -115,6 +115,16 @@
     }
 
     // 빈 검색 결과 — 조용한 실패 금지: 명시적 안내 문구를 보여준다
+    // 빈 카테고리 그룹 숨김
+
+    var groups = listEl.querySelectorAll(".tool-group");
+
+    for (var g = 0; g < groups.length; g++) {
+
+      groups[g].hidden = groups[g].querySelectorAll(".tool-item:not([hidden])").length === 0;
+
+    }
+
     if (emptyEl) emptyEl.hidden = visibleCount > 0;
   }
 

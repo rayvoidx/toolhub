@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calories Burned Calculator — Enter activity, duration, and weight to see calories burned instantly</title>
+<meta name="description" content="Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up, no ads.">
+<meta name="keywords" content="calories burned calculator, 칼로리 소모 계산기, exercise calorie calculator, MET calculator, 운동 칼로리 계산">
+<link rel="canonical" href="https://tool-hub.me/calorie-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calories Burned Calculator — Enter activity, duration, and weight to see calories burned instantly">
+<meta property="og:description" content="Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up, no ads.">
+<meta property="og:url" content="https://tool-hub.me/calorie-calc/">
+<meta property="og:image" content="https://tool-hub.me/calorie-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ef4444">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calories Burned Calculator",
+  "description": "Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up, no ads.",
+  "url": "https://tool-hub.me/calorie-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Calories Burned Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Calories Burned Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How many calories did that workout burn? Three inputs, an answer in three seconds.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <label for="activity-select" data-i18n="tool.activity.label">Activity</label>
+    <select id="activity-select" aria-describedby="result-box"></select>
+
+    <label for="duration-input" data-i18n="tool.duration.label">Duration (minutes)</label>
+    <input type="number" id="duration-input" inputmode="numeric" min="1" max="1440" step="1"
+           placeholder="e.g. 30" data-i18n-placeholder="tool.duration.placeholder">
+
+    <label for="weight-input" data-i18n="tool.weight.label">Body weight</label>
+    <input type="number" id="weight-input" inputmode="decimal" min="10" max="300" step="0.1"
+           placeholder="e.g. 70" data-i18n-placeholder="tool.weight.placeholder">
+    <div role="radiogroup" aria-label="Weight unit" data-i18n-aria-label="tool.weight.unitlabel"
+         style="display:flex;gap:16px;margin-top:8px;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="wunit" value="kg" checked>
+        <span data-i18n="tool.unit.kg">kg</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="wunit" value="lb">
+        <span data-i18n="tool.unit.lb">lb</span>
+      </label>
+    </div>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate calories</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p id="result-warning" style="margin:0 0 12px;color:#d97706;font-weight:600;" data-i18n="tool.warn.unrealistic" hidden>This value may be unrealistic — double-check your duration and weight.</p>
+        <p style="margin:0;color:var(--muted);font-size:14px;" data-i18n="tool.result.caption">Estimated calories burned</p>
+        <p style="margin:2px 0 2px;"><span style="color:var(--muted);font-weight:700;">≈ </span><strong id="r-kcal"></strong> <span style="font-weight:700;">kcal</span></p>
+        <p id="r-summary" style="margin:0 0 16px;font-size:13.5px;color:var(--muted);"></p>
+
+        <p style="font-weight:600;font-size:14px;margin:0 0 8px;" data-i18n="tool.food.heading">That's roughly the same as…</p>
+        <div id="r-foods" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:16px;"></div>
+
+        <p style="font-weight:600;font-size:14px;margin:0 0 8px;" data-i18n="tool.compare.heading">Same time, other workouts</p>
+        <div id="r-compare" style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;"></div>
+
+        <p style="margin:0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.disclaimer">Estimates use the MET formula (2011 Compendium of Physical Activities). Actual burn varies with fitness, terrain and effort.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is a MET?</summary>
+      <p data-i18n="faq.a1">A MET (Metabolic Equivalent of Task) is the ratio of your energy use during an activity to your energy use at rest. Sitting quietly is 1 MET; an activity rated at 8 METs burns about eight times as much energy per minute. This calories burned calculator multiplies the activity's MET value by your body weight and time using the standard formula kcal = MET × 3.5 × weight(kg) ÷ 200 × minutes, so the answer scales with both how hard and how long you exercised.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why does this differ from my smartwatch or running app?</summary>
+      <p data-i18n="faq.a2">A MET calculator uses population-average values for each activity, while a smartwatch adds your real-time heart rate, GPS pace and personal profile. Neither is exact — wearables typically run 10-30% off in validation studies. Treat this exercise calorie calculator as a quick, ad-free estimate for planning, not a lab measurement, and expect some gap from any device.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why do calories differ by intensity for the same activity?</summary>
+      <p data-i18n="faq.a3">Because effort is what burns energy. Running at 10 km/h has a higher MET than a brisk walk, so it burns more per minute even though both are "on your feet." That is why this tool lists activities by intensity (slow vs brisk walking, moderate vs vigorous cycling): picking the option that matches your actual pace gives a far more accurate calories burned estimate.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How many calories equal 1 kg or 1 lb of body fat?</summary>
+      <p data-i18n="faq.a4">Roughly 7,700 kcal per kilogram of fat, or about 3,500 kcal per pound. So the ~300 kcal a typical workout burns is a fraction of a kilogram — sustainable fat loss comes from a steady daily deficit, not a single session. Use the food equivalents in this exercise calorie calculator to see how one workout compares to what you eat.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my weight sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation in this calories burned calculator runs inside your browser, and your weight, activity and duration never leave your device. Your last entry is saved only to your browser's localStorage for convenience on your next visit, and you can clear it anytime by clearing site data.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
