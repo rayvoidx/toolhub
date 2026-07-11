@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Word Counter — Count words, characters, sentences & reading time instantly</title>
+<meta name="description" content="Free online word counter. Paste your text to instantly count words, characters, sentences, and paragraphs, plus estimated reading and speaking time. Runs entirely in your browser — nothing is uploaded.">
+<meta name="keywords" content="word counter, 단어수 세기, word count, reading time calculator, words to time">
+<link rel="canonical" href="https://tool-hub.me/word-counter/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Word Counter — Count words, characters, sentences & reading time instantly">
+<meta property="og:description" content="Free online word counter. Paste your text to instantly count words, characters, sentences, and paragraphs, plus estimated reading and speaking time. Runs entirely in your browser — nothing is uploaded.">
+<meta property="og:url" content="https://tool-hub.me/word-counter/">
+<meta property="og:image" content="https://tool-hub.me/word-counter/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6366f1">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Word Counter",
+  "description": "Free online word counter. Paste your text to instantly count words, characters, sentences, and paragraphs, plus estimated reading and speaking time. Runs entirely in your browser — nothing is uploaded.",
+  "url": "https://tool-hub.me/word-counter/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Word Counter</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Word Counter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your text and get instant counts — words, characters, sentences, paragraphs, plus reading and speaking time.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <label for="wc-text" data-i18n="tool.textLabel">Your text</label>
+    <textarea id="wc-text" rows="8" dir="auto" autocomplete="off"
+      placeholder="Paste or type your text here…" data-i18n-placeholder="tool.textPlaceholder"
+      style="resize:vertical;line-height:1.6;"></textarea>
+
+    <div style="display:flex;align-items:center;gap:.6rem;margin-top:.9rem;flex-wrap:wrap;">
+      <label for="wc-speed" style="margin:0;white-space:nowrap;" data-i18n="tool.speedLabel">Reading speed</label>
+      <select id="wc-speed" style="width:auto;flex:1;min-width:12rem;">
+        <option value="150" data-i18n="tool.speed.slow">Slow — 150 wpm</option>
+        <option value="200" selected data-i18n="tool.speed.normal">Normal — 200 wpm</option>
+        <option value="250" data-i18n="tool.speed.fast">Fast — 250 wpm</option>
+      </select>
+    </div>
+
+    <div id="wc-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.7rem;margin-top:1.1rem;">
+      <button type="button" class="stat-card" id="sc-words" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.words">Words</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-chars" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.characters">Characters</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-chars-ns" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.charactersNoSpaces">Characters (no spaces)</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-sentences" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.sentences">Sentences</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-paragraphs" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.paragraphs">Paragraphs</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-read" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.readingTime">Reading time</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0:00</span>
+      </button>
+      <button type="button" class="stat-card" id="sc-speak" title="Click to copy" data-i18n-title="tool.copyHint"
+        style="text-align:start;cursor:pointer;font-family:inherit;background:var(--bg);border:1px solid var(--line);border-radius:.6rem;padding:.7rem .9rem;color:var(--ink);">
+        <span style="display:block;font-size:.78rem;color:var(--muted);margin-bottom:.2rem;" data-i18n="tool.speakingTime">Speaking time</span>
+        <span class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0:00</span>
+      </button>
+    </div>
+
+    <label style="display:flex;align-items:center;gap:.5rem;margin-top:1.1rem;font-weight:400;cursor:pointer;">
+      <input type="checkbox" id="wc-remember" checked style="width:auto;margin:0;">
+      <span data-i18n="tool.remember">Save my text in this browser</span>
+    </label>
+
+    <div class="result" id="wc-result">
+      <p id="wc-hint" style="margin:0" data-i18n="tool.hint">Counts update as you type. Tap any card to copy its value.</p>
+      <p id="wc-feedback" aria-live="polite" hidden style="margin:.5rem 0 0;font-weight:600;color:var(--accent);"></p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does the word counter count words?</summary>
+      <p data-i18n="faq.a1">For languages that separate words with spaces — English, Spanish, Korean and most others — the word counter splits your text on whitespace. For Chinese and Japanese, which are written without spaces, each Han character and kana is counted individually, so pasted CJK text is not undercounted. A whitespace-separated token counts as a word only if it contains at least one letter or number, so numbers count while lone emoji and standalone punctuation do not.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How are reading time and speaking time estimated?</summary>
+      <p data-i18n="faq.a2">Reading time assumes an average silent reading speed, which you can set to Slow (150), Normal (200) or Fast (250) words per minute; the default is 200 wpm. Speaking time uses about 130 words per minute, a comfortable pace for presentations and voice-overs. Both are shown as minutes:seconds and update instantly as you type, so it doubles as a words-to-time and reading-time calculator.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Word counter or character counter — which do I need?</summary>
+      <p data-i18n="faq.a3">Use this word counter when your limit is in words — essays, blog posts, article briefs, SEO copy and social captions. Use a character counter when your limit is in characters or bytes — tweets, meta descriptions, SMS or cover-letter fields with a strict character cap. This tool shows both word and character totals, so you are covered either way.</p>
+      <p style="margin:8px 0 4px"><a href="https://tool-hub.me/char-count/" data-i18n="faq.a3link">Open the Character Counter →</a></p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How are sentences and paragraphs counted?</summary>
+      <p data-i18n="faq.a4">A sentence ends at a period, question mark or exclamation mark (or their full-width CJK equivalents 。！？), and the final sentence is still counted even without closing punctuation. A paragraph is any non-empty line, so pressing Enter starts a new paragraph. Very long single-line text with no line breaks counts as one paragraph.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text uploaded to a server?</summary>
+      <p data-i18n="faq.a5">No. Every count runs entirely inside your browser — nothing you type is ever sent to a server or shared. Your most recent text is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it in memory for this session only, and clearing it removes the stored copy immediately.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
