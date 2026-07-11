@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blood Alcohol Calculator (BAC) — Estimate your blood alcohol content with the Widmark formula — for reference only</title>
+<meta name="description" content="Free blood alcohol content (BAC) calculator using the Widmark formula. Enter your sex, body weight, the drinks you had, and hours elapsed to estimate your current BAC and roughly how long until it falls below common legal limits (0.03% / 0.08%). An educational estimate only — never use it to decide whether to drive. Runs 100% in your browser.">
+<meta name="keywords" content="blood alcohol calculator, BAC calculator, Widmark formula calculator, blood alcohol content, 혈중 알코올농도 계산기, 위드마크 공식 계산기">
+<link rel="canonical" href="https://tool-hub.me/blood-alcohol-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blood Alcohol Calculator (BAC) — Estimate your blood alcohol content with the Widmark formula — for reference only">
+<meta property="og:description" content="Free blood alcohol content (BAC) calculator using the Widmark formula. Enter your sex, body weight, the drinks you had, and hours elapsed to estimate your current BAC and roughly how long until it falls below common legal limits (0.03% / 0.08%). An educational estimate only — never use it to decide whether to drive. Runs 100% in your browser.">
+<meta property="og:url" content="https://tool-hub.me/blood-alcohol-calc/">
+<meta property="og:image" content="https://tool-hub.me/blood-alcohol-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d97706">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Blood Alcohol Calculator (BAC)",
+  "description": "Free blood alcohol content (BAC) calculator using the Widmark formula. Enter your sex, body weight, the drinks you had, and hours elapsed to estimate your current BAC and roughly how long until it falls below common legal limits (0.03% / 0.08%). An educational estimate only — never use it to decide whether to drive. Runs 100% in your browser.",
+  "url": "https://tool-hub.me/blood-alcohol-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Blood Alcohol Calculator (BAC)</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Blood Alcohol Calculator (BAC)</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your drinks and see an estimated BAC — an educational guide, never a green light to drive.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <div role="note" style="background:rgba(217,119,6,0.12);border:1px solid rgba(217,119,6,0.35);border-radius:10px;padding:10px 14px;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:8px;" data-i18n="tool.banner">Estimate only — never use this tool to decide whether to drive. If you have been drinking, do not drive.</div>
+
+    <p id="sex-heading" style="font-weight:600;font-size:14px;margin:8px 0 6px;" data-i18n="tool.sex.label">Sex</p>
+    <div role="radiogroup" aria-labelledby="sex-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="male" checked>
+        <span data-i18n="tool.sex.male">Male</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="female">
+        <span data-i18n="tool.sex.female">Female</span>
+      </label>
+    </div>
+    <p style="margin:6px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.sex.note">Sex sets the Widmark r factor (0.68 male / 0.55 female, population averages).</p>
+
+    <label for="weight-input" data-i18n="tool.weight.label">Body weight</label>
+    <div style="display:flex;gap:8px;align-items:stretch;">
+      <input type="number" id="weight-input" inputmode="decimal" min="30" max="250" step="0.1"
+             placeholder="e.g. 70" data-i18n-placeholder="tool.weight.placeholder" style="flex:1;min-width:0;">
+      <div role="radiogroup" aria-label="Weight unit" data-i18n-aria-label="tool.unit.aria" style="display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:0 0 auto;">
+        <label style="margin:0;display:flex;align-items:center;padding:0 12px;font-weight:600;font-size:14px;cursor:pointer;">
+          <input type="radio" name="wunit" value="kg" checked style="margin-right:5px;"><span data-i18n="tool.unit.kg">kg</span>
+        </label>
+        <label style="margin:0;display:flex;align-items:center;padding:0 12px;font-weight:600;font-size:14px;cursor:pointer;border-left:1px solid var(--line);">
+          <input type="radio" name="wunit" value="lb" style="margin-right:5px;"><span data-i18n="tool.unit.lb">lb</span>
+        </label>
+      </div>
+    </div>
+
+    <p style="font-weight:600;font-size:14px;margin:18px 0 6px;" data-i18n="tool.drinks.label">Drinks</p>
+    <p style="margin:0 0 8px;font-size:12.5px;color:var(--muted);" data-i18n="tool.drinks.hint">Add each drink you had. Presets use typical serving sizes; choose Custom to enter your own volume and ABV.</p>
+    <div id="drink-rows"></div>
+    <button type="button" id="add-drink" style="background:none;border:1px dashed var(--line);color:var(--accent-strong);border-radius:10px;padding:10px;font-weight:700;font-size:14px;cursor:pointer;width:100%;font-family:inherit;margin-top:2px;" data-i18n="tool.drinks.add">+ Add a drink</button>
+
+    <label for="hours-input" data-i18n="tool.hours.label">Hours since you started drinking</label>
+    <input type="number" id="hours-input" inputmode="decimal" min="0" max="24" step="0.5"
+           placeholder="e.g. 2" data-i18n-placeholder="tool.hours.placeholder">
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Estimate my BAC</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p style="margin:0;color:var(--muted);font-size:14px;" data-i18n="tool.result.current">Estimated current BAC</p>
+        <p style="margin:2px 0 8px;"><strong id="r-bac"></strong></p>
+        <p id="r-metabolized" style="margin:0 0 10px;color:#16a34a;font-weight:600;font-size:14px;" data-i18n="tool.result.metabolized" hidden>≈ 0.00 % — alcohol has likely been metabolized.</p>
+        <p style="margin:0 0 12px;"><span id="r-badge"></span></p>
+        <p id="r-extreme" style="margin:0 0 12px;padding:10px 12px;border-radius:8px;background:rgba(220,38,38,0.12);color:#dc2626;font-weight:700;font-size:14px;" data-i18n="tool.result.lifethreat" hidden>Potentially life-threatening range — seek emergency help immediately.</p>
+        <p id="r-peak" style="margin:0 0 12px;font-size:14px;color:var(--muted);"></p>
+        <div id="r-times" style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+          <div id="r-time-003" style="font-weight:600;" hidden></div>
+          <div id="r-time-008" style="font-weight:600;" hidden></div>
+          <div id="r-time-000" style="font-weight:600;color:var(--muted);" hidden></div>
+        </div>
+        <p style="margin:0 0 10px;font-size:13px;color:var(--muted);" data-i18n="tool.result.limits">Legal BAC limits vary by country — e.g. 0.03% in Korea and Japan, 0.05% across much of the EU, 0.08% in the US and UK, and zero for novice or commercial drivers in many places.</p>
+        <p style="margin:0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.disclaimer">This is a rough statistical estimate from the Widmark formula. Real BAC depends on food, metabolism, medication and health, and can be higher than shown. Never use this tool to decide whether to drive.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is the Widmark formula and how is BAC estimated?</summary>
+      <p data-i18n="faq.a1">The Widmark formula is the classic way to estimate blood alcohol content (BAC). This blood alcohol calculator adds up the pure ethanol in your drinks in grams (A), then computes peak BAC = A ÷ (body weight in grams × r) × 100, where r is a body-water constant (0.68 for men, 0.55 for women). It then subtracts the alcohol your liver has already burned off — about 0.015% per hour — to estimate your current BAC. It is the same Widmark formula calculator method used in textbooks, applied entirely in your browser.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How accurate is this, and why can't I trust it to decide to drive?</summary>
+      <p data-i18n="faq.a2">Treat every number here as a rough educational estimate, not a measurement. Real BAC varies widely with food in your stomach, how fast you drank, body composition, liver health, medication and even the day. Two people of the same weight can end up far apart, and your true BAC can be higher than this calculator shows. Only a breathalyzer or blood test measures your actual level — so never use a BAC calculator to decide whether it is safe to drive. If you have been drinking, do not drive.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How long does it take for alcohol to leave your system?</summary>
+      <p data-i18n="faq.a3">Your body clears alcohol at a fairly steady rate of roughly 0.015% BAC per hour, and only time lets the liver do this work. Coffee, cold showers, water, food and fresh air can make you feel more alert but do not speed up how fast alcohol leaves your system. This calculator shows an estimated time until your BAC falls below common limits and back to about 0.00%, but the safest assumption is always to allow more time than the estimate suggests.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What are the legal BAC limits around the world?</summary>
+      <p data-i18n="faq.a4">Legal driving limits differ by country: about 0.03% in South Korea and Japan, 0.05% across much of Europe, and 0.08% in the United States and the United Kingdom. Many places set a zero or near-zero limit for novice, young or commercial drivers. Because the threshold that counts as "over the limit" depends on where you are, this tool shows reference lines rather than a single pass/fail — and being under a limit still does not mean you are safe to drive.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my drinking data sent anywhere?</summary>
+      <p data-i18n="faq.a5">No. This blood alcohol calculator runs 100% in your browser. Your sex, weight, drinks and hours are used only to compute an estimate on your device and are never uploaded to any server. For convenience they are saved to your browser's localStorage so the form is ready next time, and you can clear them anytime by clearing your site data.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
