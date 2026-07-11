@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Zone Converter — Convert one time to major cities at once — with automatic daylight saving</title>
+<meta name="description" content="Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up, ad-free.">
+<meta name="keywords" content="time zone converter, world time, time zone difference, daylight saving time calculator, 시간대 변환기, 세계 시간 변환, 한국 미국 시차">
+<link rel="canonical" href="https://tool-hub.me/time-zone-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Time Zone Converter — Convert one time to major cities at once — with automatic daylight saving">
+<meta property="og:description" content="Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up, ad-free.">
+<meta property="og:url" content="https://tool-hub.me/time-zone-conv/">
+<meta property="og:image" content="https://tool-hub.me/time-zone-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0891b2">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Time Zone Converter",
+  "description": "Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up, ad-free.",
+  "url": "https://tool-hub.me/time-zone-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Time Zone Converter</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Time Zone Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Pick a time and a few cities. We handle the offsets and daylight saving for you.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:220px;">
+        <label for="tzc-datetime" data-i18n="tool.baseTime">Base time</label>
+        <div style="display:flex;gap:8px;align-items:stretch;">
+          <input type="datetime-local" id="tzc-datetime" style="flex:1;margin:0;">
+          <button class="btn" id="tzc-now" type="button" data-i18n="tool.now" style="margin:0;white-space:nowrap;padding:9px 16px;">Now</button>
+        </div>
+      </div>
+      <div style="flex:1;min-width:220px;">
+        <label for="tzc-basezone" data-i18n="tool.baseZone">Base time zone</label>
+        <select id="tzc-basezone" style="margin:0;"></select>
+      </div>
+    </div>
+
+    <div class="result" id="tzc-notice" hidden aria-live="polite" style="font-size:14px;"></div>
+
+    <div style="margin-top:4px;">
+      <label for="tzc-addcity" data-i18n="tool.addCity">Add a city</label>
+      <select id="tzc-addcity" style="margin:0;"></select>
+    </div>
+
+    <div id="tzc-grid" aria-live="polite" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:18px;"></div>
+    <p class="placeholder-note" id="tzc-empty" data-i18n="tool.empty" hidden>Add a city above to convert your base time.</p>
+
+    <div id="tzc-toast" role="status" aria-live="polite" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.28);z-index:50;max-width:90vw;text-align:center;"></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">Does the converter handle daylight saving time (DST) automatically?</summary><p data-i18n="faq.a1">Yes. This time zone converter never stores fixed offsets. It reads each city's UTC offset for the exact instant you enter from your browser's built-in IANA time zone database, which already knows every country's daylight saving rules and the exact dates they switch. So if the moment you pick falls after a city has sprung forward, the result reflects that automatically — a "DST" badge appears on cities that are on daylight saving time, and no offset is ever hardcoded.</p></details>
+    <details><summary data-i18n="faq.q2">How many hours ahead or behind is one city from another?</summary><p data-i18n="faq.a2">Read the UTC offset badge on each card. A city showing UTC+9:00 and another showing UTC-4:00 are 13 hours apart (9 plus 4). Because the offsets are worked out in minutes for the exact instant you chose, half-hour and quarter-hour zones such as India (UTC+5:30) and Nepal (UTC+5:45) are shown exactly, and the +1 day / -1 day badge tells you when the difference pushes a city onto the next or previous calendar day.</p></details>
+    <details><summary data-i18n="faq.q3">Where does the time zone data come from?</summary><p data-i18n="faq.a3">From the IANA time zone database that is built into your own browser and operating system — the same database phones and computers use worldwide. Nothing you enter is sent to a server: the entire conversion runs on your device, so your base time and city list stay private. Your chosen cities are saved locally with localStorage on this device, and in private browsing they simply reset when you close the tab.</p></details>
+    <details><summary data-i18n="faq.q4">How do I read the +1 day / -1 day badge when scheduling a meeting across time zones?</summary><p data-i18n="faq.a4">The badge tells you whether a city lands on a different calendar day from your base time. Say you set 4:00 PM in Los Angeles for a call: Tokyo may show the next morning with a +1 day badge, while it is still the same day for London. Checking these badges before you send an invite is the easiest way to avoid booking someone for 9 a.m. when it is really 2 a.m. the following night for them.</p></details>
+    <details><summary data-i18n="faq.q5">What time does the New York Stock Exchange open in my time zone?</summary><p data-i18n="faq.a5">The NYSE opens at 9:30 AM Eastern Time and closes at 4:00 PM Eastern. To see that in your own time, set the base time zone to New York, enter 9:30 AM, then add your own city as a card — the converter shows the exact local time and whether it falls on the same day. Because it follows daylight saving automatically, the answer stays correct whether New York is on EST in winter or EDT in summer.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

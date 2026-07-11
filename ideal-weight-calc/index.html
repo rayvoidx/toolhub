@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideal Weight Calculator — Enter your height — see your ideal weight by 4 proven formulas</title>
+<meta name="description" content="Free ideal weight calculator. Enter your height and sex to instantly see your ideal body weight from the Devine, Robinson, Miller and Hamwi formulas, plus a healthy weight range based on BMI — in cm/ft and kg/lb. Add your current weight to see how far you are from a healthy range.">
+<meta name="keywords" content="ideal weight calculator, ideal body weight, healthy weight for height, how much should I weigh, 적정 체중 계산기, 표준 체중 계산기">
+<link rel="canonical" href="https://tool-hub.me/ideal-weight-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ideal Weight Calculator — Enter your height — see your ideal weight by 4 proven formulas">
+<meta property="og:description" content="Free ideal weight calculator. Enter your height and sex to instantly see your ideal body weight from the Devine, Robinson, Miller and Hamwi formulas, plus a healthy weight range based on BMI — in cm/ft and kg/lb. Add your current weight to see how far you are from a healthy range.">
+<meta property="og:url" content="https://tool-hub.me/ideal-weight-calc/">
+<meta property="og:image" content="https://tool-hub.me/ideal-weight-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14b8a6">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ideal Weight Calculator",
+  "description": "Free ideal weight calculator. Enter your height and sex to instantly see your ideal body weight from the Devine, Robinson, Miller and Hamwi formulas, plus a healthy weight range based on BMI — in cm/ft and kg/lb. Add your current weight to see how far you are from a healthy range.",
+  "url": "https://tool-hub.me/ideal-weight-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Ideal Weight Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Ideal Weight Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Your ideal weight isn't a single number — compare four trusted formulas and a healthy BMI range at a glance.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <!-- Sex -->
+    <p id="sex-heading" style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.sex.label">Sex</p>
+    <div role="radiogroup" aria-labelledby="sex-heading" style="display:flex;gap:16px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="male">
+        <span data-i18n="tool.sex.male">Male</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="female">
+        <span data-i18n="tool.sex.female">Female</span>
+      </label>
+    </div>
+
+    <!-- Height + unit toggle -->
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:18px 0 6px;">
+      <label for="height-cm" style="margin:0;" data-i18n="tool.height.label">Height</label>
+      <span role="radiogroup" aria-label="Height unit" style="font-size:13px;white-space:nowrap;">
+        <label style="margin:0;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="hunit" value="cm" checked><span data-i18n="tool.unit.cm">cm</span>
+        </label>
+        <label style="margin:0 0 0 12px;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="hunit" value="ft"><span data-i18n="tool.unit.ft">ft / in</span>
+        </label>
+      </span>
+    </div>
+    <div id="height-cm-wrap">
+      <input type="number" id="height-cm" inputmode="decimal" min="100" max="250" step="0.1"
+             placeholder="e.g. 175" data-i18n-placeholder="tool.height.ph.cm" aria-label="Height in centimeters">
+    </div>
+    <div id="height-ft-wrap" hidden style="display:flex;gap:8px;">
+      <input type="number" id="height-ft" inputmode="numeric" min="3" max="8" step="1"
+             placeholder="ft" aria-label="Height, feet">
+      <input type="number" id="height-in" inputmode="decimal" min="0" max="11.9" step="0.1"
+             placeholder="in" aria-label="Height, inches">
+    </div>
+
+    <!-- Current weight (optional) + unit toggle -->
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:18px 0 6px;">
+      <label for="weight-input" style="margin:0;" data-i18n="tool.weight.label">Current weight (optional)</label>
+      <span role="radiogroup" aria-label="Weight unit" style="font-size:13px;white-space:nowrap;">
+        <label style="margin:0;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="wunit" value="kg" checked><span data-i18n="tool.unit.kg">kg</span>
+        </label>
+        <label style="margin:0 0 0 12px;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="wunit" value="lb"><span data-i18n="tool.unit.lb">lb</span>
+        </label>
+      </span>
+    </div>
+    <input type="number" id="weight-input" inputmode="decimal" min="1" max="880" step="0.1"
+           placeholder="e.g. 70" data-i18n-placeholder="tool.weight.ph" aria-label="Current weight">
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate ideal weight</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p id="result-warning" style="margin:0 0 14px;color:#d97706;font-weight:600;font-size:14px;" data-i18n="tool.warn.calib" hidden>These formulas are calibrated for average adult heights — treat the result as a rough estimate.</p>
+
+        <p style="margin:0 0 8px;font-weight:600;font-size:14px;" data-i18n="tool.result.ideal">Ideal body weight</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;">
+          <div data-card="devine" style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.formula.devine">Devine</div>
+            <div style="font-weight:700;font-size:18px;" id="r-devine"></div>
+          </div>
+          <div data-card="robinson" style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.formula.robinson">Robinson</div>
+            <div style="font-weight:700;font-size:18px;" id="r-robinson"></div>
+          </div>
+          <div data-card="miller" style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.formula.miller">Miller</div>
+            <div style="font-weight:700;font-size:18px;" id="r-miller"></div>
+          </div>
+          <div data-card="hamwi" style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.formula.hamwi">Hamwi</div>
+            <div style="font-weight:700;font-size:18px;" id="r-hamwi"></div>
+          </div>
+        </div>
+
+        <div style="border:1px solid var(--line);border-radius:8px;padding:12px 14px;margin-top:12px;">
+          <div style="font-size:13px;color:var(--muted);"><span data-i18n="tool.result.range">Healthy weight range</span> · <span data-i18n="tool.result.rangesub">BMI 18.5–24.9</span></div>
+          <div style="font-weight:700;font-size:20px;" id="r-range"></div>
+        </div>
+
+        <div id="r-position" style="margin-top:12px;padding:10px 14px;border-radius:8px;font-weight:600;font-size:15px;" hidden></div>
+
+        <p style="margin:12px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.disclaimer">Estimates based on statistical formulas, not medical advice. Ideal body weight also depends on age, frame size and muscle mass.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Devine, Robinson, Miller or Hamwi — which ideal-weight formula should I trust?</summary>
+      <p data-i18n="faq.a1">None of them is the single "true" answer. All four estimate ideal body weight from height and sex, but they were derived from different populations, so they disagree by a few kilograms — that spread is exactly why this ideal weight calculator shows them side by side. The Devine formula (1974) is the most widely used and was originally built for medication dosing; Robinson and Miller (both 1983) usually give slightly lower figures; Hamwi (1964) is the oldest quick rule of thumb. Read them as a range, not a target to the decimal.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why show a healthy weight RANGE instead of one ideal number?</summary>
+      <p data-i18n="faq.a2">Because no single number fits every healthy body. The four formulas give point estimates, but real bodies differ in bone structure and muscle. The healthy weight range here comes from the WHO's healthy BMI band (18.5–24.9) applied to your height, so it answers "how much should I weigh" as a span rather than one figure. Sitting anywhere inside that range is generally considered a healthy weight for your height.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why do men and women get different ideal weights at the same height?</summary>
+      <p data-i18n="faq.a3">On average, men carry more muscle and denser bone than women at the same height, so every one of these formulas sets a higher baseline for males. That is why the calculator asks for your sex before computing your ideal body weight. The healthy BMI range, by contrast, is identical for both sexes, because BMI itself does not separate by sex.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Ideal weight vs healthy weight vs BMI — what is the difference?</summary>
+      <p data-i18n="faq.a4">Ideal (body) weight is a single target figure from a formula like Devine or Hamwi. A healthy weight is a range you can sit anywhere within, taken here from a healthy BMI. BMI is the underlying number (weight ÷ height²) used to define that band. This tool shows all three at once: four ideal-weight figures, the healthy weight range, and — if you add your current weight — where you fall relative to it.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my height and weight sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation in this ideal weight calculator runs entirely in your browser; your height, sex and weight never leave your device. Your last entry is saved only in your browser's localStorage for convenience on your next visit, and you can clear it anytime.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
