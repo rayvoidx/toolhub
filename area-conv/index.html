@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Area Converter — Square feet, acres, hectares ↔ m² — all at once</title>
+<meta name="description" content="Free online area converter. Type one number and instantly see it in square millimeters, centimeters, meters, kilometers, hectares, square inches, feet, yards, acres — plus Korean pyeong — all in your browser.">
+<meta name="keywords" content="area converter, square feet to square meters, sq ft to sq m, acres to hectares, square meters to acres, 넓이 단위 변환, 평 제곱미터 변환">
+<link rel="canonical" href="https://tool-hub.me/area-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Area Converter — Square feet, acres, hectares ↔ m² — all at once">
+<meta property="og:description" content="Free online area converter. Type one number and instantly see it in square millimeters, centimeters, meters, kilometers, hectares, square inches, feet, yards, acres — plus Korean pyeong — all in your browser.">
+<meta property="og:url" content="https://tool-hub.me/area-conv/">
+<meta property="og:image" content="https://tool-hub.me/area-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#059669">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Area Converter",
+  "description": "Free online area converter. Type one number and instantly see it in square millimeters, centimeters, meters, kilometers, hectares, square inches, feet, yards, acres — plus Korean pyeong — all in your browser.",
+  "url": "https://tool-hub.me/area-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Area Converter</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Area Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in every area unit instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .ac-row { display: flex; gap: 10px; align-items: flex-end; }
+      .ac-row > div { flex: 1 1 0; min-width: 0; }
+      .ac-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .ac-swap:hover { border-color: var(--accent); }
+      .tool-card label.ac-inline { margin-top: 0; }
+      .ac-result { margin-top: 22px; }
+      .ac-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .ac-eq { font-size: clamp(20px, 5.4vw, 26px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .ac-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .ac-eq { color: var(--accent); } }
+      .ac-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .ac-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .ac-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .ac-copybtn { color: var(--accent); } }
+      .ac-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .ac-tablewrap { margin-top: 24px; }
+      .ac-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .ac-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .ac-table th, .ac-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      .ac-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .ac-table td.ac-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .ac-table tbody tr.ac-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+    </style>
+
+    <div class="ac-row">
+      <div>
+        <label for="ac-value" data-i18n="tool.value.label">Value</label>
+        <input id="ac-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="ac-row">
+      <div>
+        <label for="ac-from" class="ac-inline" data-i18n="tool.from.label">From</label>
+        <select id="ac-from">
+          <option value="mm2" data-i18n="tool.unit.mm2">Square millimeter (mm²)</option>
+          <option value="cm2" data-i18n="tool.unit.cm2">Square centimeter (cm²)</option>
+          <option value="m2" data-i18n="tool.unit.m2">Square meter (m²)</option>
+          <option value="km2" data-i18n="tool.unit.km2">Square kilometer (km²)</option>
+          <option value="ha" data-i18n="tool.unit.ha">Hectare (ha)</option>
+          <option value="in2" data-i18n="tool.unit.in2">Square inch (in²)</option>
+          <option value="ft2" selected data-i18n="tool.unit.ft2">Square foot (ft²)</option>
+          <option value="yd2" data-i18n="tool.unit.yd2">Square yard (yd²)</option>
+          <option value="ac" data-i18n="tool.unit.ac">Acre (ac)</option>
+          <option value="py" data-i18n="tool.unit.py">Pyeong (평)</option>
+        </select>
+      </div>
+      <button type="button" class="ac-swap" id="ac-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="ac-to" class="ac-inline" data-i18n="tool.to.label">To</label>
+        <select id="ac-to">
+          <option value="mm2" data-i18n="tool.unit.mm2">Square millimeter (mm²)</option>
+          <option value="cm2" data-i18n="tool.unit.cm2">Square centimeter (cm²)</option>
+          <option value="m2" selected data-i18n="tool.unit.m2">Square meter (m²)</option>
+          <option value="km2" data-i18n="tool.unit.km2">Square kilometer (km²)</option>
+          <option value="ha" data-i18n="tool.unit.ha">Hectare (ha)</option>
+          <option value="in2" data-i18n="tool.unit.in2">Square inch (in²)</option>
+          <option value="ft2" data-i18n="tool.unit.ft2">Square foot (ft²)</option>
+          <option value="yd2" data-i18n="tool.unit.yd2">Square yard (yd²)</option>
+          <option value="ac" data-i18n="tool.unit.ac">Acre (ac)</option>
+          <option value="py" data-i18n="tool.unit.py">Pyeong (평)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result ac-result">
+      <div class="ac-primary">
+        <span class="ac-eq" id="ac-eq">—</span>
+        <button type="button" class="ac-copybtn" id="ac-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="ac-note" id="ac-note" data-i18n="tool.result.placeholder">Enter a number to see it in every unit.</p>
+    </div>
+
+    <div class="ac-tablewrap">
+      <h2 data-i18n="tool.table.heading">All units at once</h2>
+      <table class="ac-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.unit">Unit</th>
+            <th class="ac-val" data-i18n="tool.table.col.value">Value</th>
+          </tr>
+        </thead>
+        <tbody id="ac-tbody">
+          <tr data-unit="mm2"><td data-i18n="tool.unit.mm2">Square millimeter (mm²)</td><td class="ac-val" id="cell-mm2">—</td></tr>
+          <tr data-unit="cm2"><td data-i18n="tool.unit.cm2">Square centimeter (cm²)</td><td class="ac-val" id="cell-cm2">—</td></tr>
+          <tr data-unit="m2"><td data-i18n="tool.unit.m2">Square meter (m²)</td><td class="ac-val" id="cell-m2">—</td></tr>
+          <tr data-unit="km2"><td data-i18n="tool.unit.km2">Square kilometer (km²)</td><td class="ac-val" id="cell-km2">—</td></tr>
+          <tr data-unit="ha"><td data-i18n="tool.unit.ha">Hectare (ha)</td><td class="ac-val" id="cell-ha">—</td></tr>
+          <tr data-unit="in2"><td data-i18n="tool.unit.in2">Square inch (in²)</td><td class="ac-val" id="cell-in2">—</td></tr>
+          <tr data-unit="ft2"><td data-i18n="tool.unit.ft2">Square foot (ft²)</td><td class="ac-val" id="cell-ft2">—</td></tr>
+          <tr data-unit="yd2"><td data-i18n="tool.unit.yd2">Square yard (yd²)</td><td class="ac-val" id="cell-yd2">—</td></tr>
+          <tr data-unit="ac"><td data-i18n="tool.unit.ac">Acre (ac)</td><td class="ac-val" id="cell-ac">—</td></tr>
+          <tr data-unit="py"><td data-i18n="tool.unit.py">Pyeong (평)</td><td class="ac-val" id="cell-py">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How many square feet are in a square meter?</summary>
+      <p data-i18n="faq.a1">One square meter equals about 10.7639 square feet, and 1 square foot equals exactly 0.09290304 m². That factor is exact because a foot is exactly 0.3048 m, so a square foot is 0.3048² m². To go from sq ft to sq m, multiply by 0.09290304; to go the other way, divide by it. For example 100 ft² = 9.290304 m² and 50 m² ≈ 538.2 ft².</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do acres and hectares compare?</summary>
+      <p data-i18n="faq.a2">1 acre = 4046.8564224 m² and 1 hectare = 10,000 m² exactly, so 1 ha ≈ 2.4711 acres and 1 acre ≈ 0.4047 ha. Acres are common for land and farm plots in the US and UK, while hectares are the metric standard used almost everywhere else. Type a plot size once here and read it in both acres and hectares at the same time.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is 평 (pyeong)?</summary>
+      <p data-i18n="faq.a3">Pyeong (평) is the traditional Korean unit for floor area and land, still used for apartments and real estate. One pyeong equals 400/121 ≈ 3.3058 m² (about 35.58 ft²). So a 84 m² apartment is roughly 25.4 pyeong. This converter includes pyeong alongside the metric and imperial units so Korean listings and global units line up instantly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How precise are the results?</summary>
+      <p data-i18n="faq.a4">Every conversion keeps up to 10 significant figures, then trims trailing zeros for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values come from the exact definition of each area unit — for example the square foot is exactly 0.09290304 m².</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This area converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example square feet → square meters), kept in your browser's local storage so it is ready next time. The value itself is not stored.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

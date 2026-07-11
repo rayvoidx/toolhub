@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Days Calculator — Count working days between two dates — weekends and public holidays excluded</title>
+<meta name="description" content="Pick a start and end date to instantly count business (working) days with weekends and public holidays excluded. Choose a country holiday preset (US, UK, Korea) or add your own, add or subtract business days to find a due date, and see exactly which holidays were skipped. Free, private, ad-free — all math runs in your browser.">
+<meta name="keywords" content="business days calculator, working days calculator, add business days to date, 근무일 계산기, 영업일 계산기">
+<link rel="canonical" href="https://tool-hub.me/workday-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Business Days Calculator — Count working days between two dates — weekends and public holidays excluded">
+<meta property="og:description" content="Pick a start and end date to instantly count business (working) days with weekends and public holidays excluded. Choose a country holiday preset (US, UK, Korea) or add your own, add or subtract business days to find a due date, and see exactly which holidays were skipped. Free, private, ad-free — all math runs in your browser.">
+<meta property="og:url" content="https://tool-hub.me/workday-calc/">
+<meta property="og:image" content="https://tool-hub.me/workday-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d9488">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Business Days Calculator",
+  "description": "Pick a start and end date to instantly count business (working) days with weekends and public holidays excluded. Choose a country holiday preset (US, UK, Korea) or add your own, add or subtract business days to find a due date, and see exactly which holidays were skipped. Free, private, ad-free — all math runs in your browser.",
+  "url": "https://tool-hub.me/workday-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Business Days Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Business Days Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Pick two dates. Weekends and public holidays are subtracted for you.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Business days calculator" data-i18n-aria-label="tool.aria">
+
+    <div id="tabs" role="tablist" style="display:flex;gap:6px;margin-bottom:20px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:4px;">
+      <button class="tab-btn" id="tabbtn-1" type="button" role="tab" aria-selected="true" data-i18n="tool.tab1"
+        style="flex:1;padding:10px 8px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-weight:700;font-family:inherit;font-size:14px;cursor:pointer;">Days between dates</button>
+      <button class="tab-btn" id="tabbtn-2" type="button" role="tab" aria-selected="false" data-i18n="tool.tab2"
+        style="flex:1;padding:10px 8px;border:none;border-radius:9px;background:transparent;color:var(--ink);font-weight:700;font-family:inherit;font-size:14px;cursor:pointer;">Add or subtract days</button>
+    </div>
+
+    <!-- Shared settings -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;">
+        <label for="in-preset" data-i18n="tool.holidayPreset">Public holidays</label>
+        <select id="in-preset">
+          <option value="us" data-i18n="tool.opt.us">United States (federal)</option>
+          <option value="uk" data-i18n="tool.opt.uk">United Kingdom (bank)</option>
+          <option value="kr" data-i18n="tool.opt.kr">South Korea (statutory)</option>
+          <option value="none" data-i18n="tool.opt.weekendsOnly">Weekends only</option>
+        </select>
+      </div>
+      <div style="flex:1;min-width:150px;">
+        <label for="in-weekend" data-i18n="tool.weekendDef">Weekend days</label>
+        <select id="in-weekend">
+          <option value="satsun" data-i18n="tool.opt.satSun">Sat–Sun</option>
+          <option value="frisat" data-i18n="tool.opt.friSat">Fri–Sat</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Panel 1: days between dates -->
+    <div id="panel-1" role="tabpanel">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;">
+          <label for="in-start" data-i18n="tool.startDate">Start date</label>
+          <input type="date" id="in-start">
+        </div>
+        <div style="flex:1;min-width:150px;">
+          <label for="in-end" data-i18n="tool.endDate">End date</label>
+          <input type="date" id="in-end">
+        </div>
+      </div>
+      <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:14px;">
+        <label style="display:flex;align-items:center;gap:8px;font-weight:500;margin:0;cursor:pointer;">
+          <input type="checkbox" id="in-inc-start" checked style="width:auto;"> <span data-i18n="tool.includeStart">Include start date</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:8px;font-weight:500;margin:0;cursor:pointer;">
+          <input type="checkbox" id="in-inc-end" checked style="width:auto;"> <span data-i18n="tool.includeEnd">Include end date</span>
+        </label>
+      </div>
+      <button class="btn" id="calc-btn" type="button" data-i18n="tool.calcBtn" style="width:100%;">Count business days</button>
+    </div>
+
+    <!-- Panel 2: add / subtract business days -->
+    <div id="panel-2" role="tabpanel" hidden>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;">
+          <label for="in-start2" data-i18n="tool.startDate">Start date</label>
+          <input type="date" id="in-start2">
+        </div>
+        <div style="flex:1;min-width:110px;">
+          <label for="in-n" data-i18n="tool.countLabel">Business days</label>
+          <input type="number" id="in-n" min="1" max="365" step="1" value="10" inputmode="numeric" autocomplete="off">
+        </div>
+      </div>
+      <label for="in-dir" data-i18n="tool.direction">Direction</label>
+      <select id="in-dir">
+        <option value="after" data-i18n="tool.opt.after">After — find a due date</option>
+        <option value="before" data-i18n="tool.opt.before">Before — find a start date</option>
+      </select>
+      <button class="btn" id="find-btn" type="button" data-i18n="tool.findBtn" style="width:100%;">Find the date</button>
+    </div>
+
+    <!-- Custom holidays -->
+    <details id="custom-wrap" style="margin-top:20px;border:1px solid var(--line);border-radius:10px;padding:10px 14px;">
+      <summary style="font-weight:600;cursor:pointer;" data-i18n="tool.customLabel">Custom holidays</summary>
+      <p style="color:var(--muted);font-size:14px;margin:8px 0;" data-i18n="tool.customHint">Add a company or local holiday that isn't in the preset. Weekends and duplicates are ignored.</p>
+      <div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;">
+        <div style="flex:1;min-width:150px;">
+          <input type="date" id="in-custom" aria-label="Custom holiday date" data-i18n-aria-label="tool.customLabel">
+        </div>
+        <button class="btn" id="custom-add-btn" type="button" data-i18n="tool.addBtn" style="margin-top:0;">Add</button>
+      </div>
+      <div id="custom-msg" role="alert" aria-live="polite" style="color:var(--muted);font-size:13px;margin-top:8px;"></div>
+      <div id="custom-list" style="margin-top:12px;"></div>
+    </details>
+
+    <div class="result" id="result" hidden aria-live="polite" style="margin-top:22px;"></div>
+
+    <p id="store-note" hidden style="color:var(--muted);font-size:12.5px;margin-top:12px;text-align:center;"></p>
+    <p style="color:var(--muted);font-size:12.5px;margin-top:14px;text-align:center;" data-i18n="tool.disclaimer">US, UK and Korea public holidays cover 2025–2027 only. Add custom holidays for other years or countries.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What's the difference between business days, working days and calendar days?</summary>
+      <p data-i18n="faq.a1">Calendar days count every day, including weekends and holidays. Business days (also called working days) count only the days most offices are open, so this business days calculator subtracts weekends and public holidays from the total to show the number of actual working days between your two dates. Use calendar days for age or countdowns, and business days for deadlines, SLAs, payroll and delivery estimates.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Which public holidays does the working days calculator exclude?</summary>
+      <p data-i18n="faq.a2">Pick a country preset and it removes the official days off: United States federal holidays, United Kingdom (England &amp; Wales) bank holidays, or South Korea statutory holidays including substitute days. The built-in holiday data covers 2025 to 2027. For any other year or country, or a company day off, open Custom holidays and add the dates yourself — they are merged with the preset and never double-counted with weekends.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Are the start and end dates counted?</summary>
+      <p data-i18n="faq.a3">By default both the start and end date are included, which is what most contracts and SLAs mean by "within N business days". Turn off "Include start date" or "Include end date" if your rule counts from the day after or stops the day before. The breakdown always splits the total into business, weekend and public-holiday days so you can check the math.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can I change the weekend from Saturday–Sunday?</summary>
+      <p data-i18n="faq.a4">Yes. The default weekend is Saturday and Sunday, but you can switch to Friday–Saturday for regions such as much of the Middle East. The same weekend setting applies to counting days between dates and to adding or subtracting business days.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">How do I add business days to a date to find a due date?</summary>
+      <p data-i18n="faq.a5">Switch to the "Add or subtract days" tab, pick a start date, enter a number of business days and choose After to get a due date or Before to work back to a start date. Weekends and the selected holidays are skipped automatically, which is handy for shipping ETAs, payment terms and SLA deadlines. Everything runs in your browser, so your dates never leave your device.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
