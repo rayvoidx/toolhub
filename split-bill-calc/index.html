@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Split Bill Calculator — Split any bill evenly in 3 seconds</title>
+<meta name="description" content="Enter the total and the number of people to get each person's share instantly. Add a tip, round up to avoid awkward change, and copy a ready-to-send message for the group chat.">
+<meta name="keywords" content="split bill calculator, bill splitter, split the bill, 더치페이 계산기, n빵 계산기, 회식비 정산">
+<link rel="canonical" href="https://tool-hub.me/split-bill-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Split Bill Calculator — Split any bill evenly in 3 seconds">
+<meta property="og:description" content="Enter the total and the number of people to get each person's share instantly. Add a tip, round up to avoid awkward change, and copy a ready-to-send message for the group chat.">
+<meta property="og:url" content="https://tool-hub.me/split-bill-calc/">
+<meta property="og:image" content="https://tool-hub.me/split-bill-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#06b6d4">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Split Bill Calculator",
+  "description": "Enter the total and the number of people to get each person's share instantly. Add a tip, round up to avoid awkward change, and copy a ready-to-send message for the group chat.",
+  "url": "https://tool-hub.me/split-bill-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Split Bill Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Split Bill Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Total divided by people — tip and rounding handled. Copy each share to your group chat.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 18px; }
+      #tool label:first-of-type { margin-top: 0; }
+      #tool .sbc-stepper { display: flex; align-items: stretch; gap: 8px; }
+      #tool .sbc-stepper input { text-align: center; }
+      #tool .sbc-step {
+        width: 48px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--surface); color: var(--accent); font-size: 22px; font-weight: 700;
+        cursor: pointer; line-height: 1;
+      }
+      #tool .sbc-step:hover { border-color: var(--accent); }
+      #tool .sbc-chips { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+      #tool .sbc-chip {
+        padding: 9px 15px; font-size: 14px; font-weight: 700; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 999px; background: none;
+        color: var(--muted); cursor: pointer;
+      }
+      #tool .sbc-chip:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .sbc-chip.is-on { background: var(--accent); border-color: var(--accent); color: #fff; }
+      #tool .sbc-custom { width: 118px; padding: 9px 12px; }
+      #tool .sbc-notices p { margin: 0 0 8px; font-size: 14px; color: var(--muted); }
+      #tool .sbc-err { margin: 0; color: var(--accent-strong); font-weight: 700; }
+      [data-theme="dark"] #tool .sbc-err { color: var(--accent); }
+      #tool .sbc-heroLabel { font-size: 14px; font-weight: 700; color: var(--muted); }
+      #tool .sbc-big {
+        display: inline-block; font-size: clamp(32px, 8vw, 48px); font-weight: 900;
+        letter-spacing: -0.04em; line-height: 1.15; color: var(--accent-strong); cursor: pointer;
+      }
+      [data-theme="dark"] #tool .sbc-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .sbc-big { color: var(--accent); } }
+      #tool .sbc-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 16px 0 0; }
+      #tool .sbc-cell { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; }
+      #tool .sbc-cell:hover { border-color: var(--accent); }
+      #tool .sbc-cell dt { font-size: 13px; font-weight: 700; color: var(--muted); margin: 0 0 4px; }
+      #tool .sbc-cell dd { margin: 0; font-size: 17px; font-weight: 800; }
+      #tool .sbc-copyrow { margin-top: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool .sbc-copyrow .btn { margin-top: 0; padding: 10px 18px; font-size: 14px; }
+      #tool .sbc-copytext { font-size: 13px; color: var(--muted); word-break: break-word; flex: 1; min-width: 180px; cursor: pointer; }
+      #tool .sbc-hint { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); }
+      #tool .sbc-status { margin: 8px 0 0; font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .sbc-status { color: var(--accent); }
+      #tool .sbc-msg { margin: 0; color: var(--muted); }
+    </style>
+
+    <label for="sbc-total" data-i18n="tool.total.label">Total bill amount</label>
+    <input type="text" id="sbc-total" inputmode="decimal" autocomplete="off"
+           placeholder="e.g. 84,500" data-i18n-placeholder="tool.total.ph">
+
+    <label for="sbc-people" data-i18n="tool.people.label">Number of people</label>
+    <div class="sbc-stepper">
+      <button type="button" class="sbc-step" id="sbc-minus" aria-label="One fewer person" data-i18n-aria-label="tool.people.dec">−</button>
+      <input type="number" id="sbc-people" min="1" step="1" value="2" inputmode="numeric" autocomplete="off">
+      <button type="button" class="sbc-step" id="sbc-plus" aria-label="One more person" data-i18n-aria-label="tool.people.inc">+</button>
+    </div>
+
+    <label data-i18n="tool.tip.label">Tip (optional)</label>
+    <div class="sbc-chips" id="sbc-tips" role="group" aria-label="Tip percentage" data-i18n-aria-label="tool.tip.label">
+      <button type="button" class="sbc-chip is-on" data-tip="0" aria-pressed="true">0%</button>
+      <button type="button" class="sbc-chip" data-tip="10" aria-pressed="false">10%</button>
+      <button type="button" class="sbc-chip" data-tip="15" aria-pressed="false">15%</button>
+      <button type="button" class="sbc-chip" data-tip="18" aria-pressed="false">18%</button>
+      <button type="button" class="sbc-chip" data-tip="20" aria-pressed="false">20%</button>
+      <input type="number" id="sbc-tip-custom" class="sbc-custom" min="0" step="1" inputmode="decimal"
+             placeholder="Custom %" data-i18n-placeholder="tool.tip.custom" autocomplete="off">
+    </div>
+
+    <label data-i18n="tool.round.label">Round up each share to</label>
+    <div class="sbc-chips" id="sbc-rounds" role="group" aria-label="Round up each share to" data-i18n-aria-label="tool.round.label">
+      <button type="button" class="sbc-chip is-on" data-round="0" aria-pressed="true" data-i18n="tool.round.exact">Exact</button>
+      <button type="button" class="sbc-chip" data-round="1" aria-pressed="false">1</button>
+      <button type="button" class="sbc-chip" data-round="10" aria-pressed="false">10</button>
+      <button type="button" class="sbc-chip" data-round="100" aria-pressed="false">100</button>
+      <button type="button" class="sbc-chip" data-round="1000" aria-pressed="false">1,000</button>
+    </div>
+
+    <div class="result" id="sbc-result">
+      <p class="sbc-msg" data-i18n="tool.n.empty">Enter the total and the number of people to see each share.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What if the bill doesn't split evenly?</summary>
+      <p data-i18n="faq.a1">Pick a round-up amount — nearest 1, 10, 100, or 1,000 — and this split bill calculator rounds every share up to a clean number. The little bit extra that gets collected shows up as the rounding surplus, which the organizer usually keeps or covers. Leave it on "Exact" if you'd rather split to the cent.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Does it include tip and tax?</summary>
+      <p data-i18n="faq.a2">Tip is optional: tap a preset (10 / 15 / 18 / 20%) or type your own, and it's added before the bill splitter divides. For tax, fold it into the total amount (or into the tip field), then split — one even share per person.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Even split (n빵) or itemized Dutch pay?</summary>
+      <p data-i18n="faq.a3">This tool does one thing fast: an even split where everyone pays the same share — exactly what people mean by n빵 계산기 or 회식비 정산. Itemized or weighted Dutch pay, where each person owes a different amount, is out of scope by design.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is my amount sent to a server?</summary>
+      <p data-i18n="faq.a4">No. Every calculation runs locally in your browser. Nothing you type is uploaded, saved, or shared — this 더치페이 계산기 has no account, no tracking, and works offline.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">How do I use the copy button?</summary>
+      <p data-i18n="faq.a5">Tap "Copy message" to grab a ready-to-send line like "Each of 4 pays 21,200 (total 84,800)" and paste it straight into your group chat. You can also tap any single figure — each share, total, or surplus — to copy just that number.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
