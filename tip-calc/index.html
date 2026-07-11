@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tip Calculator — Tip, total & per-person split in 3 seconds</title>
+<meta name="description" content="Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, no ads, computed locally in your browser.">
+<meta name="keywords" content="tip calculator, 팁 계산기, bill split calculator, gratuity calculator, 팁 퍼센트 계산">
+<link rel="canonical" href="https://tool-hub.me/tip-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tip Calculator — Tip, total & per-person split in 3 seconds">
+<meta property="og:description" content="Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, no ads, computed locally in your browser.">
+<meta property="og:url" content="https://tool-hub.me/tip-calc/">
+<meta property="og:image" content="https://tool-hub.me/tip-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f97316">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Tip Calculator",
+  "description": "Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, no ads, computed locally in your browser.",
+  "url": "https://tool-hub.me/tip-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Tip Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Tip Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How much should I tip? Enter the bill amount and the tip plus each person's share appear instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Tip calculator" data-i18n-aria-label="tool.aria">
+    <div class="input-group">
+      <label for="bill" data-i18n="tool.bill.label">Bill amount</label>
+      <input id="bill" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 50000" data-i18n-placeholder="tool.bill.ph" autocomplete="off">
+    </div>
+
+    <label data-i18n="tool.tip.label">Tip %</label>
+    <div id="tip-presets" role="group" aria-label="Tip percentage presets" data-i18n-aria-label="tool.tip.group" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+      <button type="button" class="tip-preset" data-tip="10" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">10%</button>
+      <button type="button" class="tip-preset" data-tip="15" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">15%</button>
+      <button type="button" class="tip-preset" data-tip="18" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">18%</button>
+      <button type="button" class="tip-preset" data-tip="20" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">20%</button>
+      <button type="button" class="tip-preset" data-tip="25" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">25%</button>
+      <input id="tip" type="number" inputmode="decimal" min="0" step="any" value="15" placeholder="e.g. 15" data-i18n-placeholder="tool.tip.ph" aria-label="Tip percentage" data-i18n-aria-label="tool.tip.label" autocomplete="off" style="flex:1 1 90px;min-width:90px;width:auto;">
+    </div>
+    <div id="tip-badge" role="status" hidden data-i18n="tool.badge.zero" style="margin-top:10px;font-size:13.5px;font-weight:600;color:var(--accent-strong);">Calculating at 0% tip</div>
+
+    <label for="people" data-i18n="tool.people.label">People</label>
+    <div style="display:flex;gap:8px;align-items:stretch;max-width:240px;">
+      <button type="button" id="people-minus" aria-label="Remove a person" data-i18n-aria-label="tool.people.dec" style="flex:0 0 50px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font-size:22px;font-weight:700;cursor:pointer;">&#8722;</button>
+      <input id="people" type="number" inputmode="numeric" min="1" step="1" value="1" autocomplete="off" style="text-align:center;font-variant-numeric:tabular-nums;">
+      <button type="button" id="people-plus" aria-label="Add a person" data-i18n-aria-label="tool.people.inc" style="flex:0 0 50px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font-size:22px;font-weight:700;cursor:pointer;">+</button>
+    </div>
+
+    <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-top:18px;font-weight:600;font-size:15px;">
+      <input type="checkbox" id="roundup" style="width:auto;flex:0 0 auto;">
+      <span data-i18n="tool.roundup.label">Round up per person</span>
+    </label>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter the bill amount</p>
+      <div id="result-grid" hidden style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <button type="button" class="res-card" data-copy="tip" style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.tip" style="font-size:13px;color:var(--muted);font-weight:600;">Tip amount</span>
+          <span class="rc-value" style="font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="total" style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.total" style="font-size:13px;color:var(--muted);font-weight:600;">Grand total</span>
+          <span class="rc-value" style="font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="perPerson" style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.perPerson" style="font-size:13px;color:var(--muted);font-weight:600;">Per person</span>
+          <span class="rc-value" style="font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="perPersonTip" style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.perPersonTip" style="font-size:13px;color:var(--muted);font-weight:600;">Tip per person</span>
+          <span class="rc-value" style="font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+      </div>
+      <p id="round-helper" hidden style="margin:12px 0 0;font-size:13.5px;color:var(--muted);"></p>
+      <p id="copy-hint" hidden data-i18n="tool.copyHint" style="margin:12px 0 0;font-size:12.5px;color:var(--muted);text-align:center;">Tap a card to copy the number</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How much should I tip? Standard tip rates by country and situation</summary>
+      <p data-i18n="faq.a1">In the US, restaurants usually expect a 15–20% tip (18–20% for good service), cafes and coffee counters 0–15%, taxis and ride-shares about 10–15%, and hotel housekeeping or bellhops a small amount per service. Many countries in Europe and Asia include a service charge or tip far less, so a tip calculator matters most where tipping is customary. Pick the preset that fits your situation or type your own rate.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Should I tip on the pre-tax subtotal or the post-tax total?</summary>
+      <p data-i18n="faq.a2">Etiquette guides say the tip is technically figured on the pre-tax subtotal, since tax isn't part of the service. In practice many people tip on the total at the bottom of the check because it's simpler. This gratuity calculator applies your chosen percentage to whatever bill amount you enter, so type the subtotal to be precise or the grand total for the easy route.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">The check already says gratuity included or auto-gratuity — do I tip again?</summary>
+      <p data-i18n="faq.a3">Large parties (often 6 or more) frequently have an automatic gratuity of 18–20% added to the bill. If you see "service charge", "gratuity included" or "auto-gratuity", the tip is already there and any extra is optional. Enter only the food-and-drink amount in the tip calculator and skip the added percentage unless you want to reward exceptional service.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why round the per-person amount up when splitting a bill?</summary>
+      <p data-i18n="faq.a4">When you split a check in cash, awkward shares like 17.43 each are a pain to collect. Turning on "Round up per person" makes this bill split calculator round each share up to a whole number, so everyone pays a clean amount and the small surplus covers the rounding. The tool shows exactly how much the rounding adds to the total paid.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my bill amount sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This tip calculator runs entirely in your browser — the bill, tip percentage and headcount never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can split a private dinner bill with peace of mind.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
