@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Encoder / Decoder — Encode & decode URLs and query strings — UTF-8 safe, 100% in your browser</title>
+<meta name="description" content="Free online URL encoder and decoder. Percent-encode text for safe use in URLs and query strings, or decode %-encoded strings back to plain text — with component vs full-URL modes, an optional form (+) encoding toggle, and full UTF-8 support. Everything runs entirely in your browser; nothing is uploaded.">
+<meta name="keywords" content="url encode, url decode, percent encoding, URL 인코더 디코더, url encoder decoder online">
+<link rel="canonical" href="https://tool-hub.me/url-encoder/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="URL Encoder / Decoder — Encode & decode URLs and query strings — UTF-8 safe, 100% in your browser">
+<meta property="og:description" content="Free online URL encoder and decoder. Percent-encode text for safe use in URLs and query strings, or decode %-encoded strings back to plain text — with component vs full-URL modes, an optional form (+) encoding toggle, and full UTF-8 support. Everything runs entirely in your browser; nothing is uploaded.">
+<meta property="og:url" content="https://tool-hub.me/url-encoder/">
+<meta property="og:image" content="https://tool-hub.me/url-encoder/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0891b2">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "URL Encoder / Decoder",
+  "description": "Free online URL encoder and decoder. Percent-encode text for safe use in URLs and query strings, or decode %-encoded strings back to plain text — with component vs full-URL modes, an optional form (+) encoding toggle, and full UTF-8 support. Everything runs entirely in your browser; nothing is uploaded.",
+  "url": "https://tool-hub.me/url-encoder/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>URL Encoder / Decoder</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>URL Encoder / Decoder</h1>
+    <p class="lede" data-i18n="hero.lede">Percent-encode and decode URLs instantly. Choose component or full-URL mode, toggle form (+) encoding, and keep every character — Korean, emoji, CJK — intact. Nothing leaves your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <!-- Direction -->
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.7rem;">
+      <button type="button" id="dir-encode" aria-pressed="true" data-i18n="tool.dir.encode"
+        style="flex:1;min-width:14rem;padding:.55rem;border:1px solid var(--accent);border-radius:.6rem;background:var(--accent);color:#fff;font-weight:600;font-family:inherit;cursor:pointer;">Encode (Text → URL-encoded)</button>
+      <button type="button" id="dir-decode" aria-pressed="false" data-i18n="tool.dir.decode"
+        style="flex:1;min-width:14rem;padding:.55rem;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--ink);font-weight:600;font-family:inherit;cursor:pointer;">Decode (URL-encoded → Text)</button>
+    </div>
+
+    <!-- Encoding scope -->
+    <fieldset style="border:1px solid var(--line);border-radius:.6rem;padding:.55rem .8rem .7rem;margin:0 0 .7rem;">
+      <legend data-i18n="tool.scope.legend" style="font-size:.8rem;color:var(--muted);padding:0 .35rem;">Encoding scope</legend>
+      <div style="display:flex;gap:1.2rem;flex-wrap:wrap;">
+        <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;cursor:pointer;margin:0;">
+          <input type="radio" name="ue-mode" id="mode-component" value="component" checked style="width:auto;margin:0;">
+          <span data-i18n="tool.scope.component">Component (encodeURIComponent)</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:.4rem;font-weight:400;cursor:pointer;margin:0;">
+          <input type="radio" name="ue-mode" id="mode-full" value="full" style="width:auto;margin:0;">
+          <span data-i18n="tool.scope.full">Full URL (encodeURI)</span>
+        </label>
+      </div>
+      <p data-i18n="tool.scope.hint" style="margin:.45rem 0 0;font-size:.78rem;color:var(--muted);line-height:1.5;">Component encodes reserved characters like ? &amp; = / # — use it for query values and path segments. Full URL keeps those structural characters intact for encoding a whole address.</p>
+    </fieldset>
+
+    <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;cursor:pointer;margin:0 0 .8rem;">
+      <input type="checkbox" id="ue-form" style="width:auto;margin:0;">
+      <span data-i18n="tool.form">Form encoding (space → +)</span>
+    </label>
+
+    <!-- Text -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem;">
+      <label for="ue-text" data-i18n="tool.textLabel">Text</label>
+      <button type="button" class="ue-copy" data-copy="ue-text" data-i18n="tool.copy"
+        style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;">Copy</button>
+    </div>
+    <textarea id="ue-text" rows="5" dir="auto" autocomplete="off" spellcheck="false"
+      placeholder="Type or paste text to encode…" data-i18n-placeholder="tool.textPlaceholder"
+      style="resize:vertical;line-height:1.5;"></textarea>
+
+    <!-- URL-encoded -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem;">
+      <label for="ue-url" data-i18n="tool.urlLabel">URL-encoded</label>
+      <button type="button" class="ue-copy" data-copy="ue-url" data-i18n="tool.copy"
+        style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;">Copy</button>
+    </div>
+    <textarea id="ue-url" rows="5" dir="ltr" autocomplete="off" spellcheck="false"
+      placeholder="Paste a %-encoded string to decode…" data-i18n-placeholder="tool.urlPlaceholder"
+      style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9rem;"></textarea>
+
+    <button type="button" class="btn" id="ue-clear" data-i18n="tool.clear"
+      style="background:var(--bg);color:var(--muted);border:1px solid var(--line);font-weight:600;">Clear</button>
+
+    <!-- Query string breakdown (shown only when the URL-encoded side has parameters) -->
+    <div id="ue-query" hidden style="margin-top:1.1rem;">
+      <h3 data-i18n="tool.query.heading" style="font-size:.95rem;margin:0 0 .5rem;">Query string parameters (decoded)</h3>
+      <div style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:.88rem;">
+          <thead>
+            <tr>
+              <th data-i18n="tool.query.key" style="text-align:left;padding:.35rem .55rem;border-bottom:1px solid var(--line);color:var(--muted);font-weight:600;white-space:nowrap;">Key</th>
+              <th data-i18n="tool.query.value" style="text-align:left;padding:.35rem .55rem;border-bottom:1px solid var(--line);color:var(--muted);font-weight:600;">Value</th>
+            </tr>
+          </thead>
+          <tbody id="ue-query-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="result" id="text-result">
+      <p id="text-hint" style="margin:0" data-i18n="tool.hint">Type in either box — the other updates instantly. Encoding is UTF-8 safe, so Korean, CJK and emoji round-trip perfectly.</p>
+      <p id="text-error" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:#b91c1c;"></p>
+      <p id="text-feedback" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:var(--accent);"></p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is URL encoding (percent-encoding) and when do I need it?</summary>
+      <p data-i18n="faq.a1">URL encoding, also called percent-encoding, replaces characters that have a special meaning in a URL — or that aren't allowed at all — with a % followed by their byte value, like a space becoming %20. RFC 3986 reserves characters such as ? &amp; = # / : because they mark the boundaries of a URL. Whenever you put arbitrary text into a query string, path segment or fragment, url encode it first so those reserved characters don't break the link; url decode reverses it.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Component vs Full URL — encodeURIComponent vs encodeURI, which mode should I pick?</summary>
+      <p data-i18n="faq.a2">Pick Component (encodeURIComponent) when you're encoding a single piece of a URL — one query-parameter value, a path segment or a fragment — because it also escapes the reserved characters ? &amp; = / # that would otherwise be mistaken for structure. Pick Full URL (encodeURI) when you have an already-assembled address and only want to escape spaces and illegal characters while leaving :// ? &amp; = # intact. Choosing the wrong scope is the most common URL-encoding mistake, which is why this url encoder decoder online lets you switch.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why is a space sometimes %20 and sometimes + ?</summary>
+      <p data-i18n="faq.a3">Both are valid, but they come from different rules. In a generic URL a space is percent-encoded as %20. Inside an HTML form submitted as application/x-www-form-urlencoded, a space is written as +. Turn on the Form encoding (space → +) toggle when you're building or reading form-style query strings; leave it off for strict RFC 3986 percent encoding. When decoding, the toggle turns + back into a space.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why do Korean, emoji and other non-ASCII characters encode correctly here?</summary>
+      <p data-i18n="faq.a4">Because encoding runs on UTF-8 bytes. encodeURIComponent first converts each character to its UTF-8 byte sequence and then percent-encodes those bytes, so Korean (한글), Japanese, Chinese and emoji become valid %XX%XX sequences and decode back to exactly the original text — no mojibake. That makes this a reliable URL 인코더 디코더 for any language, not just ASCII.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text or URL sent to a server?</summary>
+      <p data-i18n="faq.a5">No. All encoding and decoding happens 100% in your browser with the built-in encodeURIComponent/encodeURI and decodeURIComponent/decodeURI functions — nothing is uploaded and there are no external requests. Only your last text plus your mode and form-encoding choices are saved to this browser's local storage for convenience; clear the box or your site data to remove them.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

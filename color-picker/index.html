@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Color Picker & Converter — Pick any color and convert between HEX, RGB, HSL, HSV & CMYK</title>
+<meta name="description" content="Free online color picker and converter. Pick a color with the swatch or grab one from anywhere on your screen with the eyedropper, then copy it as HEX, RGB(A), HSL(A), HSV or CMYK. See a live preview, transparency (alpha) and a WCAG contrast check. Runs entirely in your browser — nothing is uploaded.">
+<meta name="keywords" content="color picker, hex to rgb, color converter, hsl to hex, rgb to hex, 색상 코드 변환, HEX RGB 변환, 색상 변환기, 컬러 피커">
+<link rel="canonical" href="https://tool-hub.me/color-picker/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Color Picker & Converter — Pick any color and convert between HEX, RGB, HSL, HSV & CMYK">
+<meta property="og:description" content="Free online color picker and converter. Pick a color with the swatch or grab one from anywhere on your screen with the eyedropper, then copy it as HEX, RGB(A), HSL(A), HSV or CMYK. See a live preview, transparency (alpha) and a WCAG contrast check. Runs entirely in your browser — nothing is uploaded.">
+<meta property="og:url" content="https://tool-hub.me/color-picker/">
+<meta property="og:image" content="https://tool-hub.me/color-picker/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d946ef">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Color Picker & Converter",
+  "description": "Free online color picker and converter. Pick a color with the swatch or grab one from anywhere on your screen with the eyedropper, then copy it as HEX, RGB(A), HSL(A), HSV or CMYK. See a live preview, transparency (alpha) and a WCAG contrast check. Runs entirely in your browser — nothing is uploaded.",
+  "url": "https://tool-hub.me/color-picker/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Color Picker & Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Color Picker & Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Pick a color or paste any code — get HEX, RGB, HSL, HSV and CMYK instantly, with one-click copy. Everything stays in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .cp-top { display: flex; flex-wrap: wrap; gap: 22px; align-items: stretch; }
+      #tool .cp-preview { flex: 1 1 240px; min-width: 220px; display: flex; flex-direction: column; gap: 10px; }
+      #tool .cp-controls { flex: 1 1 300px; min-width: 260px; }
+      #tool .cp-swatch-wrap {
+        flex: 1 1 auto; min-height: 150px; border-radius: 12px; border: 1px solid var(--line); overflow: hidden;
+        background-image:
+          linear-gradient(45deg, #ccc 25%, transparent 25%), linear-gradient(-45deg, #ccc 25%, transparent 25%),
+          linear-gradient(45deg, transparent 75%, #ccc 75%), linear-gradient(-45deg, transparent 75%, #ccc 75%);
+        background-size: 18px 18px; background-position: 0 0, 0 9px, 9px -9px, -9px 0; background-color: #fff;
+      }
+      #tool .cp-swatch {
+        width: 100%; height: 100%; min-height: 150px; box-sizing: border-box;
+        display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+        padding: 16px; font-size: 19px; font-weight: 700; letter-spacing: 0.02em;
+      }
+      #tool .cp-sample--dark { color: #000; }
+      #tool .cp-sample--light { color: #fff; }
+      #tool .cp-contrast { display: flex; gap: 8px; }
+      #tool .cp-contrast-cell {
+        flex: 1 1 0; min-width: 0; border: 1px solid var(--line); border-radius: 9px; padding: 8px 10px;
+        background: var(--bg); font-size: 12.5px; line-height: 1.45;
+      }
+      #tool .cp-contrast-name { font-weight: 700; color: var(--ink); display: flex; align-items: center; gap: 6px; }
+      #tool .cp-contrast-ratio { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--muted); }
+      #tool .cp-best {
+        font-size: 10.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em;
+        padding: 1px 6px; border-radius: 20px; color: #fff; background: var(--accent);
+      }
+      #tool .cp-level { font-weight: 700; }
+      #tool .cp-level.is-pass { color: var(--accent-strong); }
+      [data-theme="dark"] #tool .cp-level.is-pass { color: var(--accent); }
+      #tool .cp-level.is-fail { color: #b91c1c; }
+      #tool .cp-field { margin-bottom: 4px; }
+      #tool .cp-field label { margin-top: 12px; }
+      #tool input[type="color"] {
+        width: 100%; height: 48px; padding: 4px; border: 1px solid var(--line);
+        border-radius: 10px; background: var(--bg); cursor: pointer;
+      }
+      #tool input[type="range"] { width: 100%; accent-color: var(--accent); cursor: pointer; }
+      #tool .cp-alpha-val { float: right; font-weight: 700; color: var(--muted); font-family: ui-monospace, Menlo, monospace; }
+      #tool .cp-invalid { margin: 6px 0 0; font-size: 13px; font-weight: 600; color: #b91c1c; }
+      #tool .cp-eyedropper { width: 100%; margin-top: 16px; }
+      #tool .cp-eyedropper-note { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+      #tool .result.cp-rows { display: flex; flex-direction: column; gap: 6px; }
+      #tool .cp-row {
+        display: flex; align-items: center; gap: 10px;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 7px 8px 7px 12px;
+      }
+      #tool .cp-row-label {
+        flex: 0 0 58px; font-size: 12px; font-weight: 800; letter-spacing: 0.03em; color: var(--muted);
+      }
+      #tool .cp-row-value {
+        flex: 1 1 auto; min-width: 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 15px; color: var(--ink); word-break: break-all; background: none;
+      }
+      #tool .cp-copy {
+        flex: 0 0 auto; font-family: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer;
+        padding: 5px 12px; border-radius: 7px; border: 1px solid var(--line); background: var(--bg); color: var(--ink);
+      }
+      #tool .cp-copy:hover { border-color: var(--accent); color: var(--accent-strong); }
+      #tool .cp-copy.is-copied { border-color: var(--accent); color: var(--accent-strong); font-weight: 800; }
+      [data-theme="dark"] #tool .cp-copy:hover, [data-theme="dark"] #tool .cp-copy.is-copied { color: var(--accent); }
+      #tool .cp-shades-wrap { margin-top: 18px; }
+      #tool .cp-shades-toggle { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; font-size: 14px; cursor: pointer; }
+      #tool .cp-shades-toggle input { width: auto; margin: 0; }
+      #tool .cp-shades { display: flex; margin-top: 10px; border-radius: 9px; overflow: hidden; border: 1px solid var(--line); }
+      #tool .cp-shade { flex: 1 1 0; height: 40px; border: none; padding: 0; cursor: pointer; }
+      #tool .cp-shade:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+      #tool .cp-toast { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; min-height: 1.2em; }
+      #tool .cp-toast.is-ok { color: var(--accent-strong); }
+      [data-theme="dark"] #tool .cp-toast.is-ok { color: var(--accent); }
+      #tool .cp-toast.is-error { color: #b91c1c; }
+    </style>
+
+    <div class="cp-top">
+      <div class="cp-preview">
+        <div class="cp-swatch-wrap" role="img" aria-label="Live color preview" data-i18n-aria-label="tool.previewAria">
+          <div class="cp-swatch" id="cp-swatch-preview">
+            <span class="cp-sample cp-sample--dark" data-i18n="tool.sampleText">Aa Gg 123</span>
+            <span class="cp-sample cp-sample--light" data-i18n="tool.sampleText">Aa Gg 123</span>
+          </div>
+        </div>
+        <div class="cp-contrast" id="cp-contrast" aria-live="polite"></div>
+      </div>
+
+      <div class="cp-controls">
+        <div class="cp-field">
+          <label for="cp-swatch" data-i18n="tool.pickLabel">Pick a color</label>
+          <input type="color" id="cp-swatch" value="#d946ef" aria-label="Color swatch" data-i18n-aria-label="tool.swatchAria">
+        </div>
+        <div class="cp-field">
+          <label for="cp-text" data-i18n="tool.textLabel">Or paste a color code</label>
+          <input type="text" id="cp-text" spellcheck="false" autocomplete="off" autocapitalize="off"
+                 placeholder="#d946ef · rgb(217, 70, 239) · hsl(292, 84%, 61%) · rebeccapurple"
+                 data-i18n-placeholder="tool.textPlaceholder">
+          <p class="cp-invalid" id="cp-invalid" role="alert" hidden data-i18n="tool.invalidColor">Not a valid color — keeping the previous one.</p>
+        </div>
+        <div class="cp-field">
+          <label for="cp-alpha"><span data-i18n="tool.alphaLabel">Opacity (alpha)</span><span class="cp-alpha-val" id="cp-alpha-val">100%</span></label>
+          <input type="range" id="cp-alpha" min="0" max="100" step="1" value="100">
+        </div>
+        <button type="button" class="btn cp-eyedropper" id="cp-eyedropper" hidden data-i18n="tool.eyedropper">Pick from screen</button>
+        <p class="cp-eyedropper-note" id="cp-eyedropper-note" hidden data-i18n="tool.eyedropperNote">Screen eyedropper works in Chrome and Edge.</p>
+      </div>
+    </div>
+
+    <div class="result cp-rows" id="cp-rows" aria-live="polite"></div>
+
+    <div class="cp-shades-wrap">
+      <label class="cp-shades-toggle">
+        <input type="checkbox" id="cp-shades-toggle"><span data-i18n="tool.shadesToggle">Show tints &amp; shades</span>
+      </label>
+      <div class="cp-shades" id="cp-shades" hidden aria-label="Tints and shades — click one to use it" data-i18n-aria-label="tool.shadesAria"></div>
+    </div>
+
+    <p class="cp-toast" id="cp-toast" role="status" aria-live="polite"></p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">HEX, RGB, HSL, HSV and CMYK — what does each color format mean?</summary>
+      <p data-i18n="faq.a1">They are five ways to write the same color. HEX (#RRGGBB) is the compact hexadecimal notation CSS and design tools use most; this color converter turns any HEX to RGB and back. RGB(A) gives the red, green and blue channels as 0–255 (plus an optional alpha for transparency) and is how screens actually mix light. HSL and HSV both describe a color by its hue (the angle on the color wheel), saturation and either lightness (HSL) or value/brightness (HSV) — far more intuitive when you want a lighter or more muted variant. CMYK (cyan, magenta, yellow, black as percentages) is the subtractive model for print. Pick a color once and this tool shows every format at the same time, each with its own copy button.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I pick a color from anywhere on my screen?</summary>
+      <p data-i18n="faq.a2">Click “Pick from screen” and a magnifier appears — hover over any pixel, anywhere on your display (a photo, another app, a website), and click to grab its exact color. It uses the browser’s built-in EyeDropper API, so the button only shows up where that is supported: today that means Chromium browsers such as Chrome, Edge, Opera and Brave on desktop. Firefox and Safari do not expose the API yet, so the button is hidden there and you can still type or paste any color code instead. Nothing about the screen is uploaded — the sampling happens locally in the browser.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is 8-digit hex and the alpha channel?</summary>
+      <p data-i18n="faq.a3">Alpha is the opacity of a color: 1 (or 100%) is fully solid and 0 is fully transparent. A normal 6-digit hex like #d946ef has no alpha, so to store transparency CSS added 8-digit hex — #RRGGBBAA — where the last two digits are the alpha as hex (for example #d946ef80 is about 50% opaque). This picker has an opacity slider; the moment you drop below 100% it adds the 8-digit hex and the rgba()/hsla() rows so you can copy whichever your CSS needs, and the preview shows the checkerboard through the transparent color.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What does the WCAG AA / AAA contrast badge tell me?</summary>
+      <p data-i18n="faq.a4">It measures how legible text would be on the color you picked. The tool computes the WCAG contrast ratio (from 1:1 up to 21:1) for both black and white text and marks the more readable one as “Best”. As a rule of thumb, normal body text needs a ratio of at least 4.5:1 to pass WCAG AA and 7:1 to reach the stricter AAA, while large or bold text can pass AA at 3:1. If both black and white read “Fail”, the color is a poor background for text and you should darken or lighten it. This lets designers check accessibility while they choose a color, not afterward.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my color data sent anywhere?</summary>
+      <p data-i18n="faq.a5">No. Every conversion — HEX to RGB, RGB to HEX, HSL, HSV, CMYK, the contrast check and the eyedropper — runs entirely in your browser with plain JavaScript. Nothing is uploaded, logged or shared, so it is safe to use with brand or client colors. Your last color is remembered only in your own browser’s local storage so the tool reopens where you left off, and the page URL also carries the color so you can bookmark or share an exact shade.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

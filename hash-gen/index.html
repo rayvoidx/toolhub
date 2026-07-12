@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hash Generator — MD5, SHA-1, SHA-256 & SHA-512 for text and files — computed in your browser, nothing uploaded</title>
+<meta name="description" content="Free online hash generator. Compute MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text or files all at once, paste an expected checksum to verify a download, and copy any result — everything runs entirely in your browser. Nothing is uploaded.">
+<meta name="keywords" content="hash generator, SHA256 hash generator, MD5 generator, SHA512 hash, 해시 생성기, SHA256 해시 생성기, file checksum verifier, 체크섬 검증">
+<link rel="canonical" href="https://tool-hub.me/hash-gen/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hash Generator — MD5, SHA-1, SHA-256 & SHA-512 for text and files — computed in your browser, nothing uploaded">
+<meta property="og:description" content="Free online hash generator. Compute MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text or files all at once, paste an expected checksum to verify a download, and copy any result — everything runs entirely in your browser. Nothing is uploaded.">
+<meta property="og:url" content="https://tool-hub.me/hash-gen/">
+<meta property="og:image" content="https://tool-hub.me/hash-gen/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Hash Generator",
+  "description": "Free online hash generator. Compute MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes from text or files all at once, paste an expected checksum to verify a download, and copy any result — everything runs entirely in your browser. Nothing is uploaded.",
+  "url": "https://tool-hub.me/hash-gen/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Hash Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Hash Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Paste text or drop a file to get its MD5, SHA-1, SHA-256, SHA-384, and SHA-512 hashes instantly. Verify a checksum by pasting the expected value — all in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <!-- Tabs -->
+    <div role="tablist" style="display:flex;gap:.5rem;margin-bottom:1.1rem;">
+      <button type="button" id="tab-text" class="hg-tab" role="tab" aria-selected="true" data-i18n="tool.tab.text"
+        style="flex:1;padding:.6rem;border:1px solid var(--accent);border-radius:.6rem;background:var(--accent);color:#fff;font-weight:700;font-family:inherit;cursor:pointer;">Text</button>
+      <button type="button" id="tab-file" class="hg-tab" role="tab" aria-selected="false" data-i18n="tool.tab.file"
+        style="flex:1;padding:.6rem;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--ink);font-weight:700;font-family:inherit;cursor:pointer;">File</button>
+    </div>
+
+    <!-- ===================== TEXT PANEL ===================== -->
+    <div id="panel-text" role="tabpanel">
+      <label for="hg-text" data-i18n="tool.textLabel">Text to hash</label>
+      <textarea id="hg-text" rows="4" dir="auto" autocomplete="off" spellcheck="false"
+        placeholder="Type or paste text to hash…" data-i18n-placeholder="tool.textPlaceholder"
+        style="resize:vertical;line-height:1.5;"></textarea>
+    </div>
+
+    <!-- ===================== FILE PANEL ===================== -->
+    <div id="panel-file" role="tabpanel" hidden>
+      <label id="hg-drop" for="hg-file" tabindex="0"
+        style="display:block;border:2px dashed var(--line);border-radius:.7rem;padding:1.5rem 1rem;text-align:center;color:var(--muted);cursor:pointer;font-weight:400;margin:0;">
+        <span data-i18n="tool.file.drop">Drop a file here, or click to choose one</span>
+      </label>
+      <input type="file" id="hg-file" style="display:none;">
+      <div id="hg-file-meta" hidden style="margin-top:.7rem;">
+        <p id="hg-file-info" style="text-align:center;color:var(--muted);font-size:.85rem;margin:.2rem 0 .6rem;word-break:break-all;"></p>
+        <div style="text-align:center;">
+          <button type="button" class="btn" id="hg-rehash" data-i18n="tool.file.rehash"
+            style="margin-top:0;padding:.5rem 1.1rem;font-size:.9rem;background:var(--bg);color:var(--accent);border:1px solid var(--accent);">Re-hash file</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== COMMON CONTROLS ===================== -->
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;justify-content:space-between;margin-top:1.1rem;">
+      <span style="font-weight:600;font-size:.85rem;color:var(--muted);" data-i18n="tool.caseLabel">Output case</span>
+      <div style="display:flex;gap:.4rem;">
+        <button type="button" id="case-lower" class="hg-case" aria-pressed="true" data-i18n="tool.case.lower"
+          style="padding:.4rem .8rem;font-size:.82rem;font-weight:600;border:1px solid var(--accent);border-radius:.5rem;background:var(--accent);color:#fff;cursor:pointer;font-family:inherit;">lowercase</button>
+        <button type="button" id="case-upper" class="hg-case" aria-pressed="false" data-i18n="tool.case.upper"
+          style="padding:.4rem .8rem;font-size:.82rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--ink);cursor:pointer;font-family:inherit;">UPPERCASE</button>
+      </div>
+    </div>
+
+    <label for="hg-verify" data-i18n="tool.verifyLabel">Verify against a checksum (optional)</label>
+    <input type="text" id="hg-verify" dir="ltr" autocomplete="off" spellcheck="false"
+      placeholder="Paste an expected hash to compare…" data-i18n-placeholder="tool.verifyPlaceholder"
+      style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.85rem;">
+
+    <!-- ===================== RESULT CARDS (always all 5) ===================== -->
+    <div id="hg-cards" style="margin-top:1.1rem;">
+      <div class="hg-card" data-algo="md5" style="border:1px solid var(--line);border-radius:.6rem;padding:.7rem .8rem;margin-bottom:.55rem;background:var(--bg);">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.35rem;">
+          <span style="font-weight:700;font-size:.9rem;">MD5<span class="hg-match" data-i18n="tool.match" hidden style="margin-inline-start:.5rem;color:#16a34a;font-weight:600;font-size:.8rem;">Match ✓</span></span>
+          <button type="button" class="hg-copy" data-algo="md5" data-i18n="tool.copy"
+            style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--accent);cursor:pointer;font-family:inherit;">Copy</button>
+        </div>
+        <code class="hg-hex" data-algo="md5" style="display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;word-break:break-all;color:var(--ink);opacity:.5;">—</code>
+      </div>
+      <div class="hg-card" data-algo="sha1" style="border:1px solid var(--line);border-radius:.6rem;padding:.7rem .8rem;margin-bottom:.55rem;background:var(--bg);">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.35rem;">
+          <span style="font-weight:700;font-size:.9rem;">SHA-1<span class="hg-match" data-i18n="tool.match" hidden style="margin-inline-start:.5rem;color:#16a34a;font-weight:600;font-size:.8rem;">Match ✓</span></span>
+          <button type="button" class="hg-copy" data-algo="sha1" data-i18n="tool.copy"
+            style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--accent);cursor:pointer;font-family:inherit;">Copy</button>
+        </div>
+        <code class="hg-hex" data-algo="sha1" style="display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;word-break:break-all;color:var(--ink);opacity:.5;">—</code>
+      </div>
+      <div class="hg-card" data-algo="sha256" style="border:1px solid var(--line);border-radius:.6rem;padding:.7rem .8rem;margin-bottom:.55rem;background:var(--bg);">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.35rem;">
+          <span style="font-weight:700;font-size:.9rem;">SHA-256<span class="hg-match" data-i18n="tool.match" hidden style="margin-inline-start:.5rem;color:#16a34a;font-weight:600;font-size:.8rem;">Match ✓</span></span>
+          <button type="button" class="hg-copy" data-algo="sha256" data-i18n="tool.copy"
+            style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--accent);cursor:pointer;font-family:inherit;">Copy</button>
+        </div>
+        <code class="hg-hex" data-algo="sha256" style="display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;word-break:break-all;color:var(--ink);opacity:.5;">—</code>
+      </div>
+      <div class="hg-card" data-algo="sha384" style="border:1px solid var(--line);border-radius:.6rem;padding:.7rem .8rem;margin-bottom:.55rem;background:var(--bg);">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.35rem;">
+          <span style="font-weight:700;font-size:.9rem;">SHA-384<span class="hg-match" data-i18n="tool.match" hidden style="margin-inline-start:.5rem;color:#16a34a;font-weight:600;font-size:.8rem;">Match ✓</span></span>
+          <button type="button" class="hg-copy" data-algo="sha384" data-i18n="tool.copy"
+            style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--accent);cursor:pointer;font-family:inherit;">Copy</button>
+        </div>
+        <code class="hg-hex" data-algo="sha384" style="display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;word-break:break-all;color:var(--ink);opacity:.5;">—</code>
+      </div>
+      <div class="hg-card" data-algo="sha512" style="border:1px solid var(--line);border-radius:.6rem;padding:.7rem .8rem;margin-bottom:.55rem;background:var(--bg);">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.35rem;">
+          <span style="font-weight:700;font-size:.9rem;">SHA-512<span class="hg-match" data-i18n="tool.match" hidden style="margin-inline-start:.5rem;color:#16a34a;font-weight:600;font-size:.8rem;">Match ✓</span></span>
+          <button type="button" class="hg-copy" data-algo="sha512" data-i18n="tool.copy"
+            style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--accent);cursor:pointer;font-family:inherit;">Copy</button>
+        </div>
+        <code class="hg-hex" data-algo="sha512" style="display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.8rem;word-break:break-all;color:var(--ink);opacity:.5;">—</code>
+      </div>
+    </div>
+
+    <button type="button" class="btn" id="hg-copy-all" data-i18n="tool.copyAll">Copy all</button>
+
+    <div class="result" id="hg-result">
+      <p id="hg-hint" style="margin:0" data-i18n="tool.hint">Enter text or choose a file — all five hashes are computed instantly in your browser.</p>
+      <p id="hg-banner" hidden style="margin:.45rem 0 0;font-weight:600;color:#b45309;" data-i18n="tool.msg.shaUnavailable">SHA hashes need a secure (HTTPS) page — MD5 still works here.</p>
+      <p id="hg-note" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:#b45309;"></p>
+      <p id="hg-feedback" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:var(--accent);"></p>
+      <p id="hg-verify-msg" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;"></p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is a cryptographic hash?</summary>
+      <p data-i18n="faq.a1">A cryptographic hash is a fixed-length fingerprint of your data — the same input always produces the same digest, but the function is one-way, so you can't reverse a hash back into the original text or file. That's why hashes are used to check integrity and store password verifiers rather than to hide recoverable data.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">MD5 vs SHA-1 vs SHA-256/384/512 — which should I use?</summary>
+      <p data-i18n="faq.a2">For anything security-related, use SHA-256 or stronger (SHA-384, SHA-512). MD5 and SHA-1 are fast and still fine as non-security checksums, but both are broken against collision attacks and must not be used for signatures, certificates or password hashing. This hash generator shows all five at once so you can pick the right one.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I verify a downloaded file's checksum?</summary>
+      <p data-i18n="faq.a3">Open the File tab, drop in the file you downloaded, then paste the checksum published by the project (often an MD5 or SHA-256) into the Verify box. If any row lights up as a match, the file is intact and untampered; if nothing matches, the download is corrupt or altered. It's a full file checksum verifier, right in your browser.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is my text or file uploaded anywhere?</summary>
+      <p data-i18n="faq.a4">No. Every hash is computed locally — SHA-1/256/384/512 use the browser's built-in Web Crypto API and files are read with FileReader, so your data never leaves your device. Nothing is uploaded, logged or stored on a server.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Why does MD5 work here when browsers don't support it?</summary>
+      <p data-i18n="faq.a5">The Web Crypto API deliberately omits MD5, so this hash generator ships a small pure-JavaScript MD5 implementation that runs locally in your browser — no external library or CDN. That's how you still get an MD5 alongside the SHA hashes with zero network calls.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
