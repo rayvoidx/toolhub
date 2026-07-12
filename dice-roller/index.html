@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dice Roller — Roll any dice — d4 to d100, dice notation, no ads, no sign-up</title>
+<meta name="description" content="Free online dice roller. Roll d4, d6, d8, d10, d12, d20, and d100, use dice notation like 2d6+3, roll up to 100 dice at once, and keep a roll history. Fair rolls via your browser's crypto RNG — no ads, no sign-up, nothing sent to a server.">
+<meta name="keywords" content="dice roller, 주사위 굴리기, d20 dice roller, virtual dice roller, roll a dice online, 온라인 주사위, dnd dice">
+<link rel="canonical" href="https://tool-hub.me/dice-roller/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dice Roller — Roll any dice — d4 to d100, dice notation, no ads, no sign-up">
+<meta property="og:description" content="Free online dice roller. Roll d4, d6, d8, d10, d12, d20, and d100, use dice notation like 2d6+3, roll up to 100 dice at once, and keep a roll history. Fair rolls via your browser's crypto RNG — no ads, no sign-up, nothing sent to a server.">
+<meta property="og:url" content="https://tool-hub.me/dice-roller/">
+<meta property="og:image" content="https://tool-hub.me/dice-roller/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#dc2626">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dice Roller",
+  "description": "Free online dice roller. Roll d4, d6, d8, d10, d12, d20, and d100, use dice notation like 2d6+3, roll up to 100 dice at once, and keep a roll history. Fair rolls via your browser's crypto RNG — no ads, no sign-up, nothing sent to a server.",
+  "url": "https://tool-hub.me/dice-roller/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Dice Roller</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Dice Roller</h1>
+    <p class="lede" data-i18n="hero.lede">Pick a die and roll — or type dice notation like 2d6+3. Fair results, right in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Dice roller" data-i18n-aria-label="tool.aria">
+
+    <label id="lbl-die" data-i18n="tool.dieType">Die type</label>
+    <div id="die-buttons" role="group" aria-labelledby="lbl-die" style="display:flex;flex-wrap:wrap;gap:8px;">
+      <button type="button" class="die-btn" data-sides="4" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d4</button>
+      <button type="button" class="die-btn" data-sides="6" aria-pressed="true" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--accent);border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;">d6</button>
+      <button type="button" class="die-btn" data-sides="8" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d8</button>
+      <button type="button" class="die-btn" data-sides="10" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d10</button>
+      <button type="button" class="die-btn" data-sides="12" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d12</button>
+      <button type="button" class="die-btn" data-sides="20" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d20</button>
+      <button type="button" class="die-btn" data-sides="100" aria-pressed="false" style="flex:1;min-width:56px;padding:11px 0;font-weight:700;font-size:15px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--ink);cursor:pointer;">d100</button>
+    </div>
+
+    <label for="in-sides" data-i18n="tool.customSides">Custom sides (2–1000)</label>
+    <input type="number" id="in-sides" min="2" max="1000" step="1" inputmode="numeric" autocomplete="off" placeholder="e.g. 30" data-i18n-placeholder="tool.customPh">
+
+    <div style="display:flex;gap:12px;">
+      <div style="flex:1;min-width:0;">
+        <label for="in-qty" data-i18n="tool.quantity">Number of dice (1–100)</label>
+        <input type="number" id="in-qty" min="1" max="100" step="1" value="1" inputmode="numeric" autocomplete="off">
+      </div>
+      <div style="flex:1;min-width:0;">
+        <label for="in-mod" data-i18n="tool.modifier">Modifier (+/−)</label>
+        <input type="number" id="in-mod" step="1" value="0" inputmode="numeric" autocomplete="off">
+      </div>
+    </div>
+
+    <label for="in-notation" data-i18n="tool.notation">Dice notation (optional)</label>
+    <input type="text" id="in-notation" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. 2d6+3" data-i18n-placeholder="tool.notationPh">
+    <p id="notation-err" role="alert" hidden style="color:var(--accent);font-size:14px;margin:6px 0 0;"></p>
+
+    <button class="btn" id="roll-btn" type="button" data-i18n="tool.roll" style="width:100%;">Roll</button>
+
+    <div class="result" id="roll-result" hidden aria-live="polite">
+      <div id="roll-label" style="color:var(--muted);font-size:14px;margin-bottom:12px;font-variant-numeric:tabular-nums;"></div>
+      <div id="roll-dice" style="display:flex;flex-wrap:wrap;gap:8px;"></div>
+      <div style="margin-top:16px;"><span data-i18n="tool.total">Total</span> <strong id="roll-total">0</strong><span id="roll-breakdown" style="color:var(--muted);font-size:14px;margin-inline-start:8px;font-variant-numeric:tabular-nums;"></span></div>
+    </div>
+
+    <p class="result" id="roll-msg" hidden aria-live="polite" style="font-size:14px;"></p>
+
+    <div id="history-block" style="margin-top:28px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+        <strong data-i18n="tool.historyTitle" style="font-size:15px;">Roll history</strong>
+        <button type="button" id="clear-history" data-i18n="tool.clearHistory" style="background:none;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-family:inherit;font-size:13px;padding:6px 12px;cursor:pointer;">Clear history</button>
+      </div>
+      <p id="history-empty" data-i18n="tool.historyEmpty" style="color:var(--muted);font-size:14px;margin:12px 0 0;">No rolls yet — your last 20 rolls will show up here.</p>
+      <ol id="history-list" style="list-style:none;padding:0;margin:10px 0 0;"></ol>
+    </div>
+
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Are these dice fair and truly random?</summary>
+      <p data-i18n="faq.a1">Yes. This dice roller uses your browser's cryptographic generator, crypto.getRandomValues, with rejection sampling — it throws away the small leftover range instead of using a plain modulo, so there is no modulo bias and every face is equally likely. If a browser has no crypto generator, it falls back to Math.random and shows a note, so a roll is never blocked.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Which dice can I roll?</summary>
+      <p data-i18n="faq.a2">All the standard polyhedral dice: d4, d6, d8, d10, d12, d20 and d100. Need something unusual? Type any custom number of sides from 2 to 1000, so this virtual dice roller works as a d3, d16, d30 or any die your game asks for.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I use dice notation like 2d6+3?</summary>
+      <p data-i18n="faq.a3">Dice notation is written as count-d-sides with an optional modifier: 2d6+3 means "roll two six-sided dice and add 3", d20 means "roll one d20", and 4d8-2 means "roll four d8 and subtract 2". Type it in the notation box and press Roll — the notation overrides the buttons for that roll and the total already includes the modifier.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is anything sent to a server?</summary>
+      <p data-i18n="faq.a4">No. When you roll a dice online here, every roll happens locally in your browser — no accounts, no ads and nothing is uploaded. You can even install it as an app and keep rolling offline.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can I roll many dice at once for D&D or board games?</summary>
+      <p data-i18n="faq.a5">Yes. Set the number of dice up to 100 and add a single modifier to the total — handy for a fistful of DnD dice, a d20 attack with a bonus, or a board-game handful. Each die is shown separately and your last 20 rolls are kept in the roll history so you can check a previous result.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

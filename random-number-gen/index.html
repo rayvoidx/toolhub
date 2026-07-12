@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Number Generator — Truly random numbers in any range — plus lottery quick picks</title>
+<meta name="description" content="Free random number generator. Pick numbers in any range with no-repeat and sort options, or get lottery quick picks for Powerball, Mega Millions, EuroMillions, and Lotto 6/45. Cryptographically secure, ad-free, and nothing leaves your browser.">
+<meta name="keywords" content="random number generator, lottery number generator, random number picker, powerball number generator, 랜덤 숫자 생성기, 로또 번호 생성기, 난수 생성기">
+<link rel="canonical" href="https://tool-hub.me/random-number-gen/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Random Number Generator — Truly random numbers in any range — plus lottery quick picks">
+<meta property="og:description" content="Free random number generator. Pick numbers in any range with no-repeat and sort options, or get lottery quick picks for Powerball, Mega Millions, EuroMillions, and Lotto 6/45. Cryptographically secure, ad-free, and nothing leaves your browser.">
+<meta property="og:url" content="https://tool-hub.me/random-number-gen/">
+<meta property="og:image" content="https://tool-hub.me/random-number-gen/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d97706">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Random Number Generator",
+  "description": "Free random number generator. Pick numbers in any range with no-repeat and sort options, or get lottery quick picks for Powerball, Mega Millions, EuroMillions, and Lotto 6/45. Cryptographically secure, ad-free, and nothing leaves your browser.",
+  "url": "https://tool-hub.me/random-number-gen/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Random Number Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Random Number Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Set a range, choose how many, and get unbiased random numbers instantly — or grab lottery quick picks for Powerball, Mega Millions, EuroMillions, and Lotto 6/45.</p>
+  </section>
+
+  <!-- TOOL:START — Random number generator + lottery quick pick. Engine: crypto.getRandomValues
+       with rejection sampling (100% client-side). Every visible string carries a data-i18n hook;
+       keys live in js/locales.js (all 14 locales). Dynamic strings go through window.I18N.t(),
+       and re-render on the "i18n:change" event. -->
+  <style>
+    .rng-tabs { display:flex; gap:6px; margin-bottom:4px; }
+    .rng-tab { flex:1; padding:11px 8px; border:1px solid var(--line); border-radius:10px;
+               background:var(--bg); color:var(--muted); font-weight:700; font-size:15px;
+               font-family:inherit; cursor:pointer; }
+    .rng-tab[aria-selected="true"] { background:var(--accent); color:#fff; border-color:var(--accent); }
+    .rng-row { display:flex; flex-wrap:wrap; gap:14px; }
+    .rng-col { flex:1 1 130px; }
+    .tool-card .rng-check { display:flex; align-items:center; gap:9px; font-weight:400;
+                            font-size:15px; margin:14px 0 0; cursor:pointer; }
+    .rng-check input[type="checkbox"] { width:18px; height:18px; accent-color:var(--accent); }
+    .rng-notice > div { color:var(--accent-strong); font-size:13.5px; font-weight:600; margin:0 0 6px; }
+    [data-theme="dark"] .rng-notice > div, [data-theme="auto"] .rng-notice > div { color:var(--accent); }
+    .rng-numbers { display:flex; flex-wrap:wrap; gap:8px; }
+    .rng-num { display:inline-flex; align-items:center; justify-content:center; min-width:46px;
+               height:46px; padding:0 12px; border-radius:11px; background:var(--surface);
+               border:1px solid color-mix(in srgb, var(--accent) 32%, var(--line));
+               font-weight:800; font-size:19px; color:var(--ink); }
+    .rng-play { display:flex; flex-wrap:wrap; align-items:center; gap:7px; margin:0 0 12px; }
+    .rng-play:last-child { margin-bottom:0; }
+    .rng-play-label { font-size:12.5px; color:var(--muted); min-width:54px; font-weight:600; }
+    .rng-ball { display:inline-flex; align-items:center; justify-content:center; width:42px;
+                height:42px; border-radius:50%; font-weight:800; font-size:16px; color:#fff;
+                box-shadow: inset 0 -3px 5px rgba(0,0,0,0.18); }
+    .rng-star { border-radius:0; width:46px; height:46px; font-size:14px;
+                clip-path: polygon(50% 2%,61% 35%,97% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,3% 35%,39% 35%); }
+    .rng-btn-sec { background:none; color:var(--accent); border:1px solid var(--accent);
+                   border-radius:10px; padding:9px 18px; font-weight:700; font-size:14px;
+                   font-family:inherit; cursor:pointer; margin:14px 8px 0 0; }
+    .rng-btn-sec:hover { background:color-mix(in srgb, var(--accent) 10%, transparent); }
+  </style>
+  <section class="tool-card" id="tool" aria-live="polite">
+    <div class="rng-tabs" role="tablist">
+      <button id="tab-range" class="rng-tab" type="button" role="tab" aria-selected="true"
+              aria-controls="panel-range" data-i18n="tool.tab.range">Number range</button>
+      <button id="tab-lottery" class="rng-tab" type="button" role="tab" aria-selected="false"
+              aria-controls="panel-lottery" data-i18n="tool.tab.lottery">Lottery quick pick</button>
+    </div>
+
+    <!-- Number range -->
+    <div id="panel-range" role="tabpanel" aria-labelledby="tab-range">
+      <div class="rng-row">
+        <div class="rng-col">
+          <label for="rng-min" data-i18n="tool.range.minLabel">Minimum</label>
+          <input type="number" id="rng-min" value="1" step="1" inputmode="numeric">
+        </div>
+        <div class="rng-col">
+          <label for="rng-max" data-i18n="tool.range.maxLabel">Maximum</label>
+          <input type="number" id="rng-max" value="100" step="1" inputmode="numeric">
+        </div>
+      </div>
+      <label for="rng-count" data-i18n="tool.range.countLabel">How many</label>
+      <input type="number" id="rng-count" value="1" min="1" max="100" step="1" inputmode="numeric">
+      <label class="rng-check"><input type="checkbox" id="rng-dup" checked>
+        <span data-i18n="tool.range.dupLabel">Allow duplicates</span></label>
+      <label class="rng-check"><input type="checkbox" id="rng-sort">
+        <span data-i18n="tool.range.sortLabel">Sort ascending</span></label>
+      <button id="rng-generate" class="btn" type="button" data-i18n="tool.range.generate">Generate</button>
+
+      <div class="result" id="rng-result">
+        <div class="rng-notice" id="rng-notice" hidden></div>
+        <div class="rng-numbers" id="rng-numbers"></div>
+        <div id="rng-actions" hidden>
+          <button id="rng-copy" class="rng-btn-sec" type="button" data-i18n="tool.range.copy">Copy</button>
+          <button id="rng-regen" class="rng-btn-sec" type="button" data-i18n="tool.range.regenerate">Regenerate</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lottery quick pick -->
+    <div id="panel-lottery" role="tabpanel" aria-labelledby="tab-lottery" hidden>
+      <label for="lot-preset" data-i18n="tool.lottery.presetLabel">Lottery game</label>
+      <select id="lot-preset">
+        <option value="powerball" data-i18n="tool.lottery.preset.powerball">Powerball (USA)</option>
+        <option value="mega" data-i18n="tool.lottery.preset.mega">Mega Millions (USA)</option>
+        <option value="euro" data-i18n="tool.lottery.preset.euro">EuroMillions (Europe)</option>
+        <option value="lotto645" data-i18n="tool.lottery.preset.lotto645">Lotto 6/45 (Korea)</option>
+      </select>
+      <label for="lot-plays" data-i18n="tool.lottery.playsLabel">Number of plays</label>
+      <input type="number" id="lot-plays" value="1" min="1" max="5" step="1" inputmode="numeric">
+      <button id="lot-pick" class="btn" type="button" data-i18n="tool.lottery.pick">Pick numbers</button>
+
+      <div class="result" id="lot-result">
+        <p id="lot-rules" style="margin:0 0 14px;font-size:13.5px;color:var(--muted)"></p>
+        <div id="lot-plays-out"></div>
+        <div id="lot-actions" hidden>
+          <button id="lot-copy" class="rng-btn-sec" type="button" data-i18n="tool.lottery.copy">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin:16px 0 0;font-size:13.5px;color:var(--muted)" data-i18n="tool.privacy">Numbers are generated with your browser's cryptographic RNG and never sent anywhere.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — 5 Q&As, keys faq.q1-5/a1-5 in js/locales.js (all 14 locales) -->
+    <details>
+      <summary data-i18n="faq.q1">How are the numbers generated?</summary>
+      <p data-i18n="faq.a1">Every number comes from your browser's cryptographic random source (crypto.getRandomValues) with rejection sampling to remove modulo bias, so each value in the range is equally likely. That is stronger than the ordinary Math.random(), which is fast but not built to be unpredictable or perfectly uniform. This random number generator never falls back to Math.random().</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Do quick picks improve my odds of winning?</summary>
+      <p data-i18n="faq.a2">No. Every combination has exactly the same chance, whether you choose it yourself or use a quick pick — the draw has no idea how the numbers were picked. For scale, the odds of matching all six Powerball numbers are about 1 in 292,201,338. A lottery number generator only saves you time; it cannot beat the odds.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Are my numbers stored or sent anywhere?</summary>
+      <p data-i18n="faq.a3">No. Everything runs inside your browser and nothing is uploaded — no server ever sees your numbers. Only your last settings (range, count, options and chosen lottery) are kept in this browser's localStorage so the tool remembers them; the generated numbers themselves are never stored.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Which lottery rules are used, and are they current?</summary>
+      <p data-i18n="faq.a4">The four presets are accurate as of July 2026: Powerball draws 5 numbers from 1–69 plus 1 Powerball from 1–26; Mega Millions draws 5 from 1–70 plus 1 Mega Ball from 1–24 (the April 2025 revision); EuroMillions draws 5 from 1–50 plus 2 Lucky Stars from 1–12; and Korea's Lotto 6/45 draws 6 from 1–45. Bonus balls are drawn from their own separate pool, exactly like the official machines.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">When should I turn duplicates off?</summary>
+      <p data-i18n="faq.a5">Turn duplicates off whenever each result must be unique — drawing raffle or giveaway winners, assigning seats or turn order, or splitting people into teams — so no number can repeat. Leave duplicates on for things like dice rolls or independent picks, where the same number can legitimately come up again.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
