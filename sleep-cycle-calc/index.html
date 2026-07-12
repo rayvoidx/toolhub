@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sleep Cycle Calculator — Find the best bedtime to wake up refreshed — full 90-minute sleep cycles</title>
+<meta name="description" content="Free sleep cycle calculator that finds the best times to go to bed or wake up so you complete full 90-minute sleep cycles and wake up refreshed instead of groggy. Enter your wake-up time to see recommended bedtimes, or tap 'Sleep now' for the best wake-up times. Adjustable fall-asleep time, no sign-up, computed entirely in your browser.">
+<meta name="keywords" content="sleep calculator, sleep cycle calculator, bedtime calculator, when should I go to sleep, 수면 사이클 계산기, 취침 시간 계산기">
+<link rel="canonical" href="https://tool-hub.me/sleep-cycle-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sleep Cycle Calculator — Find the best bedtime to wake up refreshed — full 90-minute sleep cycles">
+<meta property="og:description" content="Free sleep cycle calculator that finds the best times to go to bed or wake up so you complete full 90-minute sleep cycles and wake up refreshed instead of groggy. Enter your wake-up time to see recommended bedtimes, or tap 'Sleep now' for the best wake-up times. Adjustable fall-asleep time, no sign-up, computed entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/sleep-cycle-calc/">
+<meta property="og:image" content="https://tool-hub.me/sleep-cycle-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d28d9">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sleep Cycle Calculator",
+  "description": "Free sleep cycle calculator that finds the best times to go to bed or wake up so you complete full 90-minute sleep cycles and wake up refreshed instead of groggy. Enter your wake-up time to see recommended bedtimes, or tap 'Sleep now' for the best wake-up times. Adjustable fall-asleep time, no sign-up, computed entirely in your browser.",
+  "url": "https://tool-hub.me/sleep-cycle-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Sleep Cycle Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Sleep Cycle Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">When should you go to bed to wake up refreshed? Get bedtimes that finish full 90-minute sleep cycles in seconds.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Sleep cycle calculator" data-i18n-aria-label="tool.aria">
+    <div role="radiogroup" aria-label="What do you want to calculate" data-i18n-aria-label="tool.modeAria"
+         style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
+      <label style="flex:1;min-width:170px;display:flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;cursor:pointer;font-weight:600;font-size:14px;margin:0;">
+        <input type="radio" name="scc-mode" value="wake" checked style="accent-color:var(--accent);width:auto;">
+        <span data-i18n="tool.modeWake">I want to wake up at…</span>
+      </label>
+      <label style="flex:1;min-width:170px;display:flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;cursor:pointer;font-weight:600;font-size:14px;margin:0;">
+        <input type="radio" name="scc-mode" value="bed" style="accent-color:var(--accent);width:auto;">
+        <span data-i18n="tool.modeBed">I'm going to bed at…</span>
+      </label>
+    </div>
+
+    <label id="time-label" for="scc-time">What time do you want to wake up?</label>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:stretch;">
+      <input type="time" id="scc-time" style="flex:1;min-width:150px;font-size:20px;font-variant-numeric:tabular-nums;">
+      <button class="btn" id="scc-sleep-now" type="button" data-i18n="tool.sleepNow"
+              style="margin-top:0;white-space:nowrap;background:var(--muted);">Sleep now</button>
+    </div>
+
+    <label for="scc-latency" data-i18n="tool.latencyLabel">Time it takes you to fall asleep (minutes)</label>
+    <input type="number" id="scc-latency" min="0" max="60" step="1" value="15" inputmode="numeric" autocomplete="off">
+
+    <details style="margin-top:14px;">
+      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--muted);" data-i18n="tool.advanced">Advanced: sleep cycle length</summary>
+      <label for="scc-cycle" data-i18n="tool.cycleLabel">Average sleep cycle length (minutes)</label>
+      <input type="number" id="scc-cycle" min="80" max="120" step="1" value="90" inputmode="numeric" autocomplete="off">
+      <p style="color:var(--muted);font-size:13px;margin:6px 0 0;" data-i18n="tool.cycleHint">Most people average about 90 minutes. Leave it at 90 unless you know yours is different.</p>
+    </details>
+
+    <button class="btn" id="scc-calc" type="button" data-i18n="tool.calc">Show my times</button>
+
+    <div class="result" id="scc-result" aria-live="polite" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is a sleep cycle, and why 90 minutes?</summary>
+      <p data-i18n="faq.a1">During the night your brain moves through repeating sleep cycles — light sleep, then deep sleep, then REM (dreaming) — before starting over. One full cycle lasts about 90 minutes on average, so a good night is usually made of several complete cycles rather than a fixed number of hours.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How many sleep cycles or hours of sleep do I need?</summary>
+      <p data-i18n="faq.a2">Most adults feel best on 5 to 6 full cycles a night, which is roughly 7.5 to 9 hours of sleep. This sleep cycle calculator highlights the 5- and 6-cycle options as recommended, and still shows shorter 3- to 4-cycle plans for the nights when you simply can't get a full rest.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why is it better to wake up at the end of a cycle?</summary>
+      <p data-i18n="faq.a3">Waking in the middle of deep sleep triggers sleep inertia — that heavy, groggy feeling that can linger for a while. If your alarm lands at the end of a cycle, when sleep is lightest, you tend to wake up more easily and feel refreshed, even after the same amount of sleep.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why does the calculator add about 15 minutes to fall asleep?</summary>
+      <p data-i18n="faq.a4">Almost nobody falls asleep the instant their head hits the pillow. This gap is called sleep latency, and it shifts your real bedtime. The bedtime calculator adds your fall-asleep time (15 minutes by default, adjustable from 0 to 60) so the cycles are counted from when you actually drift off, not from when you get into bed.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is this medical advice, and is my sleep data private?</summary>
+      <p data-i18n="faq.a5">No — the times here are averages meant for general reference, not medical advice; if you have ongoing sleep problems, talk to a doctor. Your privacy is fully protected: every calculation runs inside your browser, your times are saved only on your own device, and nothing is ever sent to a server.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

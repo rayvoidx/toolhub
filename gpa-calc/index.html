@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GPA Calculator — Semester & cumulative GPA on 4.0, 4.3 and 4.5 scales, instantly</title>
+<meta name="description" content="Free online GPA calculator. Add your courses, credits and grades to instantly get your semester and cumulative GPA on the 4.0, 4.3 or 4.5 scale — with weighted (AP/IB, Honors) support and scale conversion. Runs entirely in your browser, no sign-up.">
+<meta name="keywords" content="GPA calculator, 학점 계산기, college GPA calculator, cumulative GPA, weighted GPA, GPA 환산, 4.5 4.3 4.0 환산, grade point average">
+<link rel="canonical" href="https://tool-hub.me/gpa-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GPA Calculator — Semester & cumulative GPA on 4.0, 4.3 and 4.5 scales, instantly">
+<meta property="og:description" content="Free online GPA calculator. Add your courses, credits and grades to instantly get your semester and cumulative GPA on the 4.0, 4.3 or 4.5 scale — with weighted (AP/IB, Honors) support and scale conversion. Runs entirely in your browser, no sign-up.">
+<meta property="og:url" content="https://tool-hub.me/gpa-calc/">
+<meta property="og:image" content="https://tool-hub.me/gpa-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#059669">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GPA Calculator",
+  "description": "Free online GPA calculator. Add your courses, credits and grades to instantly get your semester and cumulative GPA on the 4.0, 4.3 or 4.5 scale — with weighted (AP/IB, Honors) support and scale conversion. Runs entirely in your browser, no sign-up.",
+  "url": "https://tool-hub.me/gpa-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>GPA Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>GPA Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Add your courses, credits and grades — get your semester and cumulative GPA instantly, on any scale.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 0; }
+      #tool .gpa-top { display: flex; gap: 16px; flex-wrap: wrap; align-items: flex-end; margin-bottom: 18px; }
+      #tool .gpa-field { flex: 1 1 200px; min-width: 160px; }
+      #tool .gpa-field label { margin: 0 0 6px; }
+      #tool .gpa-weighted-wrap { flex: 1 1 230px; padding-bottom: 6px; }
+      #tool .gpa-check { display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: 14px; cursor: pointer; margin: 0; }
+      #tool .gpa-check input { width: 18px; height: 18px; flex: 0 0 auto; accent-color: var(--accent); cursor: pointer; }
+
+      #tool .gpa-head { display: flex; gap: 8px; align-items: center; padding: 0 2px 6px; font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+      #tool .gpa-h-course { flex: 1 1 130px; }
+      #tool .gpa-h-credit { flex: 0 0 70px; }
+      #tool .gpa-h-grade { flex: 0 0 92px; }
+      #tool .gpa-h-type { flex: 0 0 108px; display: none; }
+      #tool .gpa-head.is-weighted .gpa-h-type { display: block; }
+      #tool .gpa-h-rm { flex: 0 0 34px; }
+
+      #tool .gpa-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+      #tool .gpa-row input, #tool .gpa-row select { padding: 9px 10px; font-size: 15px; }
+      #tool .gpa-name { flex: 1 1 130px; min-width: 110px; width: auto; }
+      #tool .gpa-credit { flex: 0 0 70px; width: 70px; text-align: center; }
+      #tool .gpa-grade { flex: 0 0 92px; width: 92px; }
+      #tool .gpa-type { flex: 0 0 108px; width: 108px; display: none; }
+      #tool #gpa-rows.is-weighted .gpa-type { display: block; }
+      #tool .gpa-remove { flex: 0 0 34px; width: 34px; height: 38px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; padding: 0; }
+      #tool .gpa-remove:hover { border-color: var(--accent); color: var(--accent); }
+
+      #tool .gpa-add { margin-top: 4px; padding: 9px 16px; font-size: 14px; font-weight: 700; font-family: inherit; border: 1px dashed var(--line); border-radius: 10px; background: none; color: var(--accent); cursor: pointer; }
+      #tool .gpa-add:hover { border-color: var(--accent); }
+
+      #tool .gpa-cumul { margin-top: 18px; border: 1px solid var(--line); border-radius: 10px; padding: 2px 14px; }
+      #tool .gpa-cumul summary { font-weight: 600; font-size: 14px; cursor: pointer; padding: 10px 0; color: var(--ink); }
+      #tool .gpa-cumul-grid { display: flex; gap: 12px; flex-wrap: wrap; padding: 0 0 12px; }
+      #tool .gpa-cumul-grid .gpa-field { flex: 1 1 160px; }
+      #tool .gpa-cumul-grid label { margin: 0 0 6px; }
+
+      #tool .gpa-hint { margin: 0; color: var(--muted); }
+      #tool .gpa-note { margin: 0 0 10px; font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .gpa-note { color: var(--accent); }
+      #tool .gpa-heroLabel { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+      #tool .gpa-big { font-size: clamp(38px, 10vw, 56px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.1; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .gpa-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .gpa-big { color: var(--accent); } }
+      #tool .gpa-sub { font-size: 14px; color: var(--muted); margin-top: 2px; }
+      #tool .gpa-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; margin: 16px 0 0; }
+      #tool .gpa-cards > div { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+      #tool .gpa-cards dt { font-size: 12.5px; font-weight: 700; color: var(--muted); margin: 0 0 4px; }
+      #tool .gpa-cards dd { margin: 0; font-size: 18px; font-weight: 800; }
+      #tool .gpa-cell-note { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-top: 2px; }
+      #tool .gpa-conv { margin-top: 18px; }
+      #tool .gpa-conv-title { font-size: 13px; font-weight: 700; color: var(--muted); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .03em; }
+      #tool .gpa-conv-t { width: 100%; border-collapse: collapse; font-size: 15px; text-align: center; }
+      #tool .gpa-conv-t th { font-size: 12px; font-weight: 700; color: var(--muted); padding: 4px 2px; border-bottom: 1px solid var(--line); }
+      #tool .gpa-conv-t td { padding: 8px 2px; font-weight: 800; }
+      #tool .gpa-conv-note { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+      #tool .gpa-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 16px; }
+      #tool .gpa-actions .btn { margin-top: 0; }
+      #tool .gpa-clear { background: none; border: none; color: var(--muted); font-size: 13.5px; font-family: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; padding: 6px 4px; }
+      #tool .gpa-clear:hover { color: var(--accent); }
+      #tool .gpa-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .gpa-status { color: var(--accent); }
+
+      @media (max-width: 520px) {
+        #tool .gpa-head { display: none; }
+        #tool .gpa-row { flex-wrap: wrap; position: relative; border: 1px solid var(--line); border-radius: 10px; padding: 10px 44px 10px 10px; }
+        #tool .gpa-name { flex: 1 1 100%; }
+        #tool .gpa-credit { flex: 1 1 60px; width: auto; }
+        #tool .gpa-grade { flex: 1 1 74px; width: auto; }
+        #tool #gpa-rows.is-weighted .gpa-type { flex: 1 1 90px; width: auto; }
+        #tool .gpa-remove { position: absolute; top: 10px; right: 8px; height: 34px; }
+      }
+    </style>
+
+    <div class="gpa-top">
+      <div class="gpa-field">
+        <label for="gpa-scale" data-i18n="tool.scale.label">Grading scale</label>
+        <select id="gpa-scale">
+          <option value="us40" data-i18n="tool.scale.us40">US 4.0 (letter)</option>
+          <option value="kr45" data-i18n="tool.scale.kr45">Korea 4.5</option>
+          <option value="kr43" data-i18n="tool.scale.kr43">Korea 4.3</option>
+        </select>
+      </div>
+      <div class="gpa-weighted-wrap" id="gpa-weighted-wrap">
+        <label class="gpa-check">
+          <input type="checkbox" id="gpa-weighted">
+          <span data-i18n="tool.weighted.label">Weighted (Honors +0.5, AP/IB +1.0)</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="gpa-head" id="gpa-head" aria-hidden="true">
+      <span class="gpa-h-course" data-i18n="tool.col.course">Course</span>
+      <span class="gpa-h-credit" data-i18n="tool.col.credits">Credits</span>
+      <span class="gpa-h-grade" data-i18n="tool.col.grade">Grade</span>
+      <span class="gpa-h-type" data-i18n="tool.col.type">Type</span>
+      <span class="gpa-h-rm"></span>
+    </div>
+
+    <div id="gpa-rows"></div>
+
+    <button type="button" class="gpa-add" id="gpa-add"><span data-i18n="tool.add">+ Add course</span></button>
+
+    <details class="gpa-cumul" id="gpa-cumul">
+      <summary data-i18n="tool.cumulative.summary">Include previous semesters (cumulative GPA)</summary>
+      <div class="gpa-cumul-grid">
+        <div class="gpa-field">
+          <label for="gpa-prior-gpa" data-i18n="tool.prior.gpaLabel">Prior cumulative GPA</label>
+          <input type="text" id="gpa-prior-gpa" inputmode="decimal" autocomplete="off" placeholder="e.g. 3.60" data-i18n-placeholder="tool.prior.gpaPh">
+        </div>
+        <div class="gpa-field">
+          <label for="gpa-prior-credits" data-i18n="tool.prior.creditsLabel">Prior credits earned</label>
+          <input type="text" id="gpa-prior-credits" inputmode="decimal" autocomplete="off" placeholder="e.g. 60" data-i18n-placeholder="tool.prior.creditsPh">
+        </div>
+      </div>
+    </details>
+
+    <div class="result" id="gpa-result" aria-live="polite">
+      <p class="gpa-hint" data-i18n="tool.res.hint">Enter credits and a grade for at least one course to see your GPA.</p>
+    </div>
+
+    <div class="gpa-actions">
+      <button type="button" class="btn" id="gpa-copy" data-i18n="tool.copy">Copy result</button>
+      <button type="button" class="gpa-clear" id="gpa-clear" data-i18n="tool.clear">Clear all</button>
+      <span class="gpa-status" id="gpa-status" aria-live="polite"></span>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">How is GPA calculated?</summary><p data-i18n="faq.a1">Your GPA is a credit-weighted average of grade points. Each grade becomes points (on a 4.0 scale, A = 4.0, B = 3.0, and so on), those points are multiplied by the course's credits to get "quality points", and the total quality points are divided by the total credits. Example: an A (4.0) in a 3-credit course and a B (3.0) in a 4-credit course give (4.0×3 + 3.0×4) ÷ 7 = 24 ÷ 7 = 3.43. Pass/No-Pass courses carry no grade points and are left out of both totals.</p></details>
+    <details><summary data-i18n="faq.q2">Weighted vs unweighted GPA — how do AP/IB and Honors boosts work?</summary><p data-i18n="faq.a2">An unweighted GPA treats every course the same and caps at 4.0. A weighted GPA rewards harder courses by adding to their grade points — commonly +0.5 for Honors and +1.0 for AP or IB — so an A in an AP class can count as 5.0. Turn on "Weighted" (US 4.0 scale) and pick each course's type; this GPA calculator then shows both your weighted and unweighted GPA. A failing grade (F) stays at 0 and gets no boost.</p></details>
+    <details><summary data-i18n="faq.q3">4.5 vs 4.3 vs 4.0 — which scale does my school use, and how are conversions estimated?</summary><p data-i18n="faq.a3">Many US schools use a 4.0 letter scale (A = 4.0). Most Korean universities use a 4.5 scale (A+ = 4.5), while some such as KAIST and POSTECH use 4.3. Pick the scale your transcript uses. The conversion table gives a quick linear estimate between 4.0, 4.3, 4.5 and a percentage — it is approximate only, because every school maps grades differently, so treat it as a reference and not an official figure.</p></details>
+    <details><summary data-i18n="faq.q4">How do I calculate cumulative GPA across multiple semesters?</summary><p data-i18n="faq.a4">Open "Include previous semesters" and enter your prior cumulative GPA and the total credits you have already earned. The calculator turns your prior GPA back into quality points (prior GPA × prior credits), adds this semester's quality points and credits, and divides the totals — giving your new cumulative GPA. Make sure the prior GPA is on the same scale you selected above.</p></details>
+    <details><summary data-i18n="faq.q5">Is my data sent to a server?</summary><p data-i18n="faq.a5">No. Everything runs entirely in your browser — your courses, grades and credits never leave your device. Your entries are saved only in your browser's local storage so they are still there when you return, and you can wipe them any time with "Clear all". There is no sign-up and no tracking of what you type.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
