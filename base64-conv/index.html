@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Base64 Encoder / Decoder — Encode & decode Base64 for text and images — UTF-8 safe, 100% in your browser</title>
+<meta name="description" content="Free online Base64 encoder and decoder. Convert text to and from Base64 (UTF-8 safe, with a URL-safe option), and turn images into Base64 data URIs or decode them back — everything runs entirely in your browser. Nothing is uploaded.">
+<meta name="keywords" content="base64 encode, base64 decode, base64 이미지 인코더, image to base64 data uri, base64 인코더 디코더">
+<link rel="canonical" href="https://tool-hub.me/base64-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Base64 Encoder / Decoder — Encode & decode Base64 for text and images — UTF-8 safe, 100% in your browser">
+<meta property="og:description" content="Free online Base64 encoder and decoder. Convert text to and from Base64 (UTF-8 safe, with a URL-safe option), and turn images into Base64 data URIs or decode them back — everything runs entirely in your browser. Nothing is uploaded.">
+<meta property="og:url" content="https://tool-hub.me/base64-conv/">
+<meta property="og:image" content="https://tool-hub.me/base64-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2563eb">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Base64 Encoder / Decoder",
+  "description": "Free online Base64 encoder and decoder. Convert text to and from Base64 (UTF-8 safe, with a URL-safe option), and turn images into Base64 data URIs or decode them back — everything runs entirely in your browser. Nothing is uploaded.",
+  "url": "https://tool-hub.me/base64-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Base64 Encoder / Decoder</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Base64 Encoder / Decoder</h1>
+    <p class="lede" data-i18n="hero.lede">Encode and decode Base64 instantly — text or images. Full UTF-8 support (Korean, emoji, CJK), a URL-safe option, and everything stays in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <!-- Tabs -->
+    <div role="tablist" style="display:flex;gap:.5rem;margin-bottom:1.1rem;">
+      <button type="button" id="tab-text" class="b64-tab" role="tab" aria-selected="true" data-i18n="tool.tab.text"
+        style="flex:1;padding:.6rem;border:1px solid var(--accent);border-radius:.6rem;background:var(--accent);color:#fff;font-weight:700;font-family:inherit;cursor:pointer;">Text</button>
+      <button type="button" id="tab-image" class="b64-tab" role="tab" aria-selected="false" data-i18n="tool.tab.image"
+        style="flex:1;padding:.6rem;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--ink);font-weight:700;font-family:inherit;cursor:pointer;">Image</button>
+    </div>
+
+    <!-- ===================== TEXT PANEL ===================== -->
+    <div id="panel-text" role="tabpanel">
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.7rem;">
+        <button type="button" id="dir-encode" aria-pressed="true" data-i18n="tool.dir.encode"
+          style="flex:1;min-width:13rem;padding:.55rem;border:1px solid var(--accent);border-radius:.6rem;background:var(--accent);color:#fff;font-weight:600;font-family:inherit;cursor:pointer;">Encode (Text → Base64)</button>
+        <button type="button" id="dir-decode" aria-pressed="false" data-i18n="tool.dir.decode"
+          style="flex:1;min-width:13rem;padding:.55rem;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--ink);font-weight:600;font-family:inherit;cursor:pointer;">Decode (Base64 → Text)</button>
+      </div>
+
+      <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;cursor:pointer;margin:0 0 .3rem;">
+        <input type="checkbox" id="b64-urlsafe" style="width:auto;margin:0;">
+        <span data-i18n="tool.urlSafe">URL-safe (Base64URL)</span>
+      </label>
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem;">
+        <label for="b64-text" data-i18n="tool.textLabel">Text</label>
+        <button type="button" class="b64-copy" data-copy="b64-text" data-i18n="tool.copy"
+          style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;">Copy</button>
+      </div>
+      <textarea id="b64-text" rows="5" dir="auto" autocomplete="off" spellcheck="false"
+        placeholder="Type or paste text to encode…" data-i18n-placeholder="tool.textPlaceholder"
+        style="resize:vertical;line-height:1.5;"></textarea>
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem;">
+        <label for="b64-b64" data-i18n="tool.b64Label">Base64</label>
+        <button type="button" class="b64-copy" data-copy="b64-b64" data-i18n="tool.copy"
+          style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;">Copy</button>
+      </div>
+      <textarea id="b64-b64" rows="5" dir="ltr" autocomplete="off" spellcheck="false"
+        placeholder="Paste Base64 to decode…" data-i18n-placeholder="tool.b64Placeholder"
+        style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9rem;"></textarea>
+
+      <button type="button" class="btn" id="b64-clear" data-i18n="tool.clear"
+        style="background:var(--bg);color:var(--muted);border:1px solid var(--line);font-weight:600;">Clear</button>
+
+      <div class="result" id="text-result">
+        <p id="text-hint" style="margin:0" data-i18n="tool.textHint">Type in either box — the other updates instantly, and encoding is UTF-8 safe.</p>
+        <p id="text-error" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:#b91c1c;"></p>
+        <p id="text-feedback" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:var(--accent);"></p>
+      </div>
+    </div>
+
+    <!-- ===================== IMAGE PANEL ===================== -->
+    <div id="panel-image" role="tabpanel" hidden>
+      <h3 data-i18n="tool.img.encHeading" style="font-size:1rem;margin:.2rem 0 .6rem;">Image → Base64</h3>
+      <label id="img-drop" for="img-file" tabindex="0"
+        style="display:block;border:2px dashed var(--line);border-radius:.7rem;padding:1.5rem 1rem;text-align:center;color:var(--muted);cursor:pointer;font-weight:400;margin:0;">
+        <span data-i18n="tool.img.drop">Drop an image here, or click to choose a file</span>
+      </label>
+      <input type="file" id="img-file" accept="image/*" style="display:none;">
+
+      <div id="img-enc-out" hidden>
+        <div style="text-align:center;margin:.9rem 0 .3rem;">
+          <img id="img-preview" alt="" style="max-width:100%;max-height:240px;border-radius:.5rem;border:1px solid var(--line);">
+        </div>
+        <p id="img-info" style="text-align:center;color:var(--muted);font-size:.85rem;margin:.2rem 0 .8rem;"></p>
+
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem;">
+          <label for="img-datauri" data-i18n="tool.img.dataUriLabel">Data URI</label>
+          <button type="button" class="b64-copy" data-copy="img-datauri" data-i18n="tool.copy"
+            style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;">Copy</button>
+        </div>
+        <textarea id="img-datauri" rows="3" readonly spellcheck="false"
+          style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;resize:vertical;"></textarea>
+
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem;">
+          <label for="img-raw" data-i18n="tool.img.rawLabel">Raw Base64 (after the comma)</label>
+          <button type="button" class="b64-copy" data-copy="img-raw" data-i18n="tool.copy"
+            style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;">Copy</button>
+        </div>
+        <textarea id="img-raw" rows="3" readonly spellcheck="false"
+          style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;resize:vertical;"></textarea>
+      </div>
+
+      <h3 data-i18n="tool.img.decHeading" style="font-size:1rem;margin:1.5rem 0 .6rem;">Base64 → Image</h3>
+      <textarea id="img-decode-in" rows="4" dir="ltr" autocomplete="off" spellcheck="false"
+        placeholder="Paste a Base64 string or data URI…" data-i18n-placeholder="tool.img.pastePlaceholder"
+        style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;resize:vertical;"></textarea>
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;">
+        <button type="button" class="btn" id="img-decode-btn" data-i18n="tool.img.preview">Preview image</button>
+        <a id="img-download" class="btn" download="image.png" hidden
+          style="text-decoration:none;background:var(--bg);color:var(--accent);border:1px solid var(--accent);" data-i18n="tool.img.download">Download</a>
+      </div>
+      <div id="img-dec-preview" style="text-align:center;margin-top:.9rem;" hidden>
+        <img id="img-decoded" alt="" style="max-width:100%;max-height:240px;border-radius:.5rem;border:1px solid var(--line);">
+      </div>
+
+      <div class="result" id="img-result">
+        <p id="img-hint" style="margin:0" data-i18n="tool.img.decHint">Everything runs locally with FileReader — your image is never uploaded.</p>
+        <p id="img-error" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:#b91c1c;"></p>
+        <p id="img-feedback" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:var(--accent);"></p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is Base64 and when do I use it?</summary>
+      <p data-i18n="faq.a1">Base64 turns any binary data into plain ASCII text so it can travel safely through channels built for text — data URIs that embed images in HTML or CSS, JSON and JWT tokens, and email attachments. Use base64 encode to pack data into a string, and base64 decode to get the original bytes back.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why does Korean, emoji and CJK text encode correctly here?</summary>
+      <p data-i18n="faq.a2">Many quick scripts call btoa() directly, which only handles Latin-1 and mangles anything else. This base64 encoder decoder first converts your text to UTF-8 bytes with TextEncoder, so Korean, Japanese, Chinese and emoji round-trip perfectly, and decoding uses TextDecoder to rebuild the exact original text.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is URL-safe Base64 (Base64URL) and when do I need it?</summary>
+      <p data-i18n="faq.a3">Standard Base64 uses + and / plus = padding, which get escaped inside URLs, query strings and JWTs. URL-safe Base64 (RFC 4648 §5) replaces + with -, / with _, and drops the padding. Tick the URL-safe option to produce it; decoding accepts both variants automatically.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How do I convert an image to a Base64 data URI and back?</summary>
+      <p data-i18n="faq.a4">On the Image tab, drop or choose a file to get its full data URI plus the raw Base64 — ready to paste into an &lt;img&gt;, a CSS background or JSON. To go the other way, paste a Base64 string or data URI to preview the picture, then download it. It works as an image to base64 data uri converter both ways.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text or image uploaded to a server?</summary>
+      <p data-i18n="faq.a5">No. Everything runs 100% in your browser — text uses btoa/atob with TextEncoder, and images are read locally with FileReader, so nothing is uploaded. Only your last text and the URL-safe option are saved to this browser's local storage for convenience; image data is never stored.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
