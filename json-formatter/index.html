@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Formatter — Format, validate & minify JSON with exact error locations</title>
+<meta name="description" content="Free online JSON formatter, validator and minifier. Paste JSON to beautify it with 2/4-space or tab indentation, minify it to a single line, or validate it and see the exact line and column of any syntax error. Runs entirely in your browser — your JSON, including API keys and secrets, is never uploaded.">
+<meta name="keywords" content="json formatter, json beautifier, json validator, json minify, JSON 포매터, json 정렬">
+<link rel="canonical" href="https://tool-hub.me/json-formatter/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JSON Formatter — Format, validate & minify JSON with exact error locations">
+<meta property="og:description" content="Free online JSON formatter, validator and minifier. Paste JSON to beautify it with 2/4-space or tab indentation, minify it to a single line, or validate it and see the exact line and column of any syntax error. Runs entirely in your browser — your JSON, including API keys and secrets, is never uploaded.">
+<meta property="og:url" content="https://tool-hub.me/json-formatter/">
+<meta property="og:image" content="https://tool-hub.me/json-formatter/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#10b981">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "JSON Formatter",
+  "description": "Free online JSON formatter, validator and minifier. Paste JSON to beautify it with 2/4-space or tab indentation, minify it to a single line, or validate it and see the exact line and column of any syntax error. Runs entirely in your browser — your JSON, including API keys and secrets, is never uploaded.",
+  "url": "https://tool-hub.me/json-formatter/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>JSON Formatter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>JSON Formatter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste JSON to format, validate or minify it instantly — with the exact line and column of any error. Nothing leaves your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <label for="jf-input" data-i18n="tool.inputLabel">JSON input</label>
+    <textarea id="jf-input" rows="10" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+      placeholder='{ "name": "Ada", "age": 36, "skills": ["math", "code"] }' data-i18n-placeholder="tool.inputPlaceholder"
+      style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;"></textarea>
+
+    <div style="display:flex;align-items:center;gap:1.1rem;margin-top:.8rem;flex-wrap:wrap;">
+      <label for="jf-indent" style="display:flex;align-items:center;gap:.5rem;margin:0;font-weight:400;">
+        <span data-i18n="tool.indentLabel">Indent</span>
+        <select id="jf-indent" style="width:auto;">
+          <option value="2" data-i18n="tool.indent2">2 spaces</option>
+          <option value="4" data-i18n="tool.indent4">4 spaces</option>
+          <option value="tab" data-i18n="tool.indentTab">Tab</option>
+        </select>
+      </label>
+      <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+        <input type="checkbox" id="jf-sort" style="width:auto;margin:0;">
+        <span data-i18n="tool.sortKeys">Sort keys</span>
+      </label>
+      <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+        <input type="checkbox" id="jf-remember" checked style="width:auto;margin:0;">
+        <span data-i18n="tool.remember">Save my JSON in this browser</span>
+      </label>
+    </div>
+
+    <div style="display:flex;gap:.6rem;margin-top:.9rem;flex-wrap:wrap;">
+      <button type="button" class="btn" id="jf-format" data-i18n="tool.format" style="width:auto;">Format</button>
+      <button type="button" class="btn" id="jf-minify" data-i18n="tool.minify" style="width:auto;">Minify</button>
+      <button type="button" class="btn" id="jf-clear" data-i18n="tool.clear" style="width:auto;background:var(--bg);color:var(--ink);border:1px solid var(--line);">Clear</button>
+    </div>
+
+    <div class="result" id="jf-result" aria-live="polite" style="margin-top:1.1rem;">
+      <div style="display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;">
+        <span id="jf-badge" style="display:inline-block;font-weight:700;font-size:.82rem;letter-spacing:.02em;padding:.22rem .6rem;border-radius:.5rem;background:var(--bg);border:1px solid var(--line);color:var(--muted);">—</span>
+        <span id="jf-stats" style="font-size:.85rem;color:var(--muted);"></span>
+      </div>
+      <p id="jf-message" style="margin:.6rem 0 0;line-height:1.55;overflow-wrap:anywhere;" data-i18n="tool.emptyHint">Paste or type JSON above to validate, format or minify it — with the exact line and column of any error.</p>
+    </div>
+
+    <label for="jf-output" data-i18n="tool.outputLabel" style="margin-top:1.3rem;">Output</label>
+    <textarea id="jf-output" rows="10" dir="ltr" readonly autocomplete="off" spellcheck="false"
+      placeholder="Formatted or minified JSON appears here." data-i18n-placeholder="tool.outputPlaceholder"
+      style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;"></textarea>
+
+    <div style="display:flex;align-items:center;gap:.6rem;margin-top:.8rem;flex-wrap:wrap;">
+      <button type="button" class="btn" id="jf-copy" data-i18n="tool.copy" style="width:auto;">Copy</button>
+      <button type="button" class="btn" id="jf-download" data-i18n="tool.download" style="width:auto;background:var(--bg);color:var(--ink);border:1px solid var(--line);">Download .json</button>
+      <span id="jf-feedback" aria-live="polite" hidden style="font-weight:600;color:var(--accent);font-size:.9rem;"></span>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does this JSON formatter show the exact error location?</summary>
+      <p data-i18n="faq.a1">When your text is not valid JSON, most online tools only say "invalid". This JSON validator goes further: it reads the byte position that the browser's own JSON parser reports for the first syntax error, converts it into a human line and column, and prints "Invalid JSON — line L, column C" alongside the parser's own message. Click Format or Minify and the offending line is selected in the input box so you can jump straight to it. That makes fixing a missing comma, an unclosed bracket or a stray quote far quicker than hunting through the whole document.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Format vs Minify vs Validate — what does each button do?</summary>
+      <p data-i18n="faq.a2">Format (beautify) re-indents your JSON with 2 spaces, 4 spaces or a tab so it is easy to read, optionally sorting object keys alphabetically. Minify strips every unnecessary space and newline to produce the smallest single-line JSON, ideal for API payloads and config values. Validate happens automatically as you type: the status badge turns green "Valid JSON" with key, depth and byte statistics, or red with the line and column of the first error. All three run instantly in your browser on the same parsed data.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Is my JSON sent to a server?</summary>
+      <p data-i18n="faq.a3">No. This JSON formatter runs 100% in your browser using the built-in JSON engine — nothing you paste is ever uploaded, logged or shared. That makes it safe for JSON that contains API keys, access tokens, secrets or personal data (PII), unlike ad-heavy sites that post your text to a backend. Your most recent input is optionally kept in this browser's local storage so it is still here when you return; untick "Save my JSON in this browser" to keep it for the session only, and Clear removes the stored copy.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why do comments, single quotes or trailing commas fail?</summary>
+      <p data-i18n="faq.a4">Because this tool validates against the standard JSON specification (RFC 8259), not the relaxed JSON5 or JSONC dialects. Standard JSON requires double quotes around every key and string, forbids trailing commas after the last item, and does not allow comments (// or /* */) or single quotes. If your file uses those, the validator will point to the exact spot that breaks the rules — remove the comment, swap single quotes for double quotes, or delete the trailing comma and it will parse.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Why do very large integers lose precision, and how are duplicate keys handled?</summary>
+      <p data-i18n="faq.a5">JSON numbers are parsed as standard IEEE-754 doubles, so any integer above 2^53 − 1 (9,007,199,254,740,991) may be rounded — for example a 64-bit ID like 9223372036854775807 can come back slightly changed. Keep such values as strings if exact digits matter. When an object contains the same key twice, standard JSON keeps only the last occurrence, so duplicates are silently merged; the formatter follows that rule, which is another reason to validate machine-generated JSON before trusting it.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
