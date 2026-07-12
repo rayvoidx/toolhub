@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speed Converter — km/h, mph, knots, m/s ↔ all at once</title>
+<meta name="description" content="Free online speed converter. Type one number and instantly see it in meters per second, kilometers per hour, miles per hour, feet per second, knots and Mach — all in your browser.">
+<meta name="keywords" content="speed converter, km/h to mph, mph to km/h, knots to km/h, m/s to km/h, 속도 단위 변환, km/h mph 변환">
+<link rel="canonical" href="https://tool-hub.me/speed-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Speed Converter — km/h, mph, knots, m/s ↔ all at once">
+<meta property="og:description" content="Free online speed converter. Type one number and instantly see it in meters per second, kilometers per hour, miles per hour, feet per second, knots and Mach — all in your browser.">
+<meta property="og:url" content="https://tool-hub.me/speed-conv/">
+<meta property="og:image" content="https://tool-hub.me/speed-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2563eb">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Speed Converter",
+  "description": "Free online speed converter. Type one number and instantly see it in meters per second, kilometers per hour, miles per hour, feet per second, knots and Mach — all in your browser.",
+  "url": "https://tool-hub.me/speed-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Speed Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Speed Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in every speed unit instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .sc-row { display: flex; gap: 10px; align-items: flex-end; }
+      .sc-row > div { flex: 1 1 0; min-width: 0; }
+      .sc-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .sc-swap:hover { border-color: var(--accent); }
+      .tool-card label.sc-inline { margin-top: 0; }
+      .sc-result { margin-top: 22px; }
+      .sc-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .sc-eq { font-size: clamp(20px, 5.4vw, 26px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .sc-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .sc-eq { color: var(--accent); } }
+      .sc-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .sc-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .sc-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .sc-copybtn { color: var(--accent); } }
+      .sc-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .sc-tablewrap { margin-top: 24px; }
+      .sc-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .sc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .sc-table th, .sc-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      .sc-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .sc-table td.sc-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .sc-table tbody tr.sc-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+      .sc-sub { display: block; margin-top: 2px; font-size: 11.5px; font-weight: 400; color: var(--muted); }
+    </style>
+
+    <div class="sc-row">
+      <div>
+        <label for="sc-value" data-i18n="tool.value.label">Value</label>
+        <input id="sc-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="sc-row">
+      <div>
+        <label for="sc-from" class="sc-inline" data-i18n="tool.from.label">From</label>
+        <select id="sc-from">
+          <option value="mps" data-i18n="tool.unit.mps">Meters per second (m/s)</option>
+          <option value="kmh" selected data-i18n="tool.unit.kmh">Kilometers per hour (km/h)</option>
+          <option value="mph" data-i18n="tool.unit.mph">Miles per hour (mph)</option>
+          <option value="fps" data-i18n="tool.unit.fps">Feet per second (ft/s)</option>
+          <option value="knot" data-i18n="tool.unit.knot">Knots (kn)</option>
+          <option value="mach" data-i18n="tool.unit.mach">Mach (sea level, 15°C)</option>
+        </select>
+      </div>
+      <button type="button" class="sc-swap" id="sc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="sc-to" class="sc-inline" data-i18n="tool.to.label">To</label>
+        <select id="sc-to">
+          <option value="mps" data-i18n="tool.unit.mps">Meters per second (m/s)</option>
+          <option value="kmh" data-i18n="tool.unit.kmh">Kilometers per hour (km/h)</option>
+          <option value="mph" selected data-i18n="tool.unit.mph">Miles per hour (mph)</option>
+          <option value="fps" data-i18n="tool.unit.fps">Feet per second (ft/s)</option>
+          <option value="knot" data-i18n="tool.unit.knot">Knots (kn)</option>
+          <option value="mach" data-i18n="tool.unit.mach">Mach (sea level, 15°C)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result sc-result">
+      <div class="sc-primary">
+        <span class="sc-eq" id="sc-eq">—</span>
+        <button type="button" class="sc-copybtn" id="sc-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="sc-note" id="sc-note" data-i18n="tool.result.placeholder">Enter a number to see it in every speed unit.</p>
+    </div>
+
+    <div class="sc-tablewrap">
+      <h2 data-i18n="tool.table.heading">All speed units at once</h2>
+      <table class="sc-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.unit">Unit</th>
+            <th class="sc-val" data-i18n="tool.table.col.value">Value</th>
+          </tr>
+        </thead>
+        <tbody id="sc-tbody">
+          <tr data-unit="mps"><td data-i18n="tool.unit.mps">Meters per second (m/s)</td><td class="sc-val" id="cell-mps">—</td></tr>
+          <tr data-unit="kmh"><td data-i18n="tool.unit.kmh">Kilometers per hour (km/h)</td><td class="sc-val" id="cell-kmh">—</td></tr>
+          <tr data-unit="mph"><td data-i18n="tool.unit.mph">Miles per hour (mph)</td><td class="sc-val" id="cell-mph">—</td></tr>
+          <tr data-unit="fps"><td data-i18n="tool.unit.fps">Feet per second (ft/s)</td><td class="sc-val" id="cell-fps">—</td></tr>
+          <tr data-unit="knot"><td><span data-i18n="tool.unit.knot">Knots (kn)</span><span class="sc-sub" data-i18n="tool.unit.knot.note">1 nautical mile per hour = 1.852 km/h</span></td><td class="sc-val" id="cell-knot">—</td></tr>
+          <tr data-unit="mach"><td><span data-i18n="tool.unit.mach">Mach (sea level, 15°C)</span><span class="sc-sub" data-i18n="tool.unit.mach.note">Reference: sea level, 15°C (≈340.29 m/s)</span></td><td class="sc-val" id="cell-mach">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I convert km/h to mph (and mph to km/h)?</summary>
+      <p data-i18n="faq.a1">To convert km/h to mph, multiply by 0.621371 — so 1 km/h = 0.6213711922 mph and 100 km/h ≈ 62.14 mph. Going the other way, multiply mph by 1.609344, so 1 mph = 1.609344 km/h and 60 mph ≈ 96.56 km/h. This converter does both directions at once: type a number, pick km/h → mph (or swap), and read every unit instantly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What is a knot, and how does it relate to km/h and mph?</summary>
+      <p data-i18n="faq.a2">A knot is one nautical mile per hour, used in aviation and sailing. One knot equals exactly 1.852 km/h, which is about 1.15078 mph or 0.514444 m/s. So 10 knots ≈ 18.52 km/h ≈ 11.51 mph. Because a nautical mile is based on the Earth's circumference, knots are handy for navigation across latitude and longitude.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I convert m/s to km/h, and what is Mach?</summary>
+      <p data-i18n="faq.a3">To convert meters per second to km/h, multiply by 3.6 — so 1 m/s = 3.6 km/h and 10 m/s = 36 km/h. Feet per second (ft/s) uses a factor of 0.3048 m/s. Mach is the ratio to the speed of sound; this tool uses the standard sea-level value at 15°C, where Mach 1 ≈ 340.29 m/s ≈ 1225 km/h. The real speed of sound changes with altitude and temperature, so Mach here is a reference figure.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How precise are the results?</summary>
+      <p data-i18n="faq.a4">Every conversion keeps up to 10 significant figures, then trailing zeros are trimmed for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. The km/h, mph, ft/s and knot factors are exact by definition; only Mach depends on the chosen air condition.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This speed converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example km/h → mph), kept in your browser's local storage so it is ready next time. The value itself is not stored, and there are no accounts or trackers.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
