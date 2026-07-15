@@ -10,7 +10,7 @@ window.APP_CONFIG = {
   // 수익화: 런칭 게이트 통과 + 허브 승격 전까지 반드시 false
   adsense: {
     enabled: false,
-    client: "ca-pub-0000000000000000",   // ca-pub-XXXX
+    client: "ca-pub-6324953789479730",   // ca-pub-XXXX
     slot: ""                        // 광고 단위 ID
   },
 
