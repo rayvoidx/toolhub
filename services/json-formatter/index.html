@@ -30,9 +30,9 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
-ADSENSE:END -->
+<!-- ADSENSE:START -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+<!-- ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -110,6 +110,17 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <section class="guide">
+    <h2 data-i18n="guide.heading">About the JSON formatter</h2>
+    <p data-i18n="guide.lead">Paste JSON to pretty-print, validate or minify it in one click. When something is wrong, the tool points to the exact line and column so you can fix a stray comma or bracket fast. Everything runs in your browser.</p>
+    <h3 data-i18n="guide.useTitle">How to use it</h3>
+    <p data-i18n="guide.useBody">Paste or type your JSON, then choose Format to indent it readably or Minify to strip it into a compact one-liner. If the JSON is invalid, an error message shows what went wrong and where. Copy the result with one click.</p>
+    <h3 data-i18n="guide.howTitle">What formatting and validation do</h3>
+    <p data-i18n="guide.howBody">Formatting parses the text into a data structure and re-serialises it with consistent indentation (usually 2 spaces), so nested objects and arrays line up. Validation reports the first syntax error — a missing quote, trailing comma or unbalanced bracket — with its position. Minifying removes every non-essential space and newline, so {"a": 1, "b": 2} becomes {"a":1,"b":2}, which is smaller to send over a network.</p>
+    <h3 data-i18n="guide.tipTitle">Good to know</h3>
+    <p data-i18n="guide.tipBody">JSON needs double quotes around keys and strings, no trailing commas and no comments — the usual reasons a file fails to parse. Minified JSON suits APIs and storage; formatted JSON is easier to read and to diff. Your data is parsed locally and never uploaded.</p>
+  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
