@@ -27,6 +27,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Privacy Policy",
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
+    "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "URL Encoder / Decoder — Percent-encode & decode URLs",
     "meta.description": "Free online URL encoder and decoder. Percent-encode text for safe use in URLs and query strings, or decode %-encoded strings back to plain text — with component vs full-URL modes, an optional form (+) encoding toggle, and full UTF-8 support. Everything runs entirely in your browser; nothing is uploaded.",
@@ -75,6 +76,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "隐私政策",
     "footer.more": "更多工具",
     "footer.credit": "由 rayv 制作",
+    "footer.coffee": "☕ 请我喝杯咖啡",
 
     "meta.title": "URL 编码/解码器 — 对 URL 和查询字符串进行百分号编码与解码",
     "meta.description": "免费在线 URL 编码解码工具。将文本进行百分号编码以安全用于 URL 和查询字符串，或把 %-编码字符串还原为普通文本——支持 Component 与 Full-URL 两种范围、可选的 form(+) 编码开关，并完整支持 UTF-8。全部在浏览器本地完成，不上传任何内容。",
@@ -123,6 +125,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "गोपनीयता नीति",
     "footer.more": "और टूल्स",
     "footer.credit": "निर्माता: rayv",
+    "footer.coffee": "☕ मुझे एक कॉफ़ी पिलाएँ",
 
     "meta.title": "URL एन्कोडर / डिकोडर",
     "meta.description": "मुफ़्त ऑनलाइन URL एन्कोडर और डिकोडर। टेक्स्ट को URL और क्वेरी स्ट्रिंग में सुरक्षित उपयोग के लिए पर्सेंट-एन्कोड करें, या %-एन्कोडेड स्ट्रिंग को वापस सामान्य टेक्स्ट में डिकोड करें — Component बनाम Full-URL मोड, वैकल्पिक form (+) एन्कोडिंग टॉगल और पूर्ण UTF-8 समर्थन के साथ। सब कुछ आपके ब्राउज़र में ही चलता है; कुछ भी अपलोड नहीं होता।",
@@ -171,6 +174,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de privacidad",
     "footer.more": "Más herramientas",
     "footer.credit": "Creado por rayv",
+    "footer.coffee": "☕ Invítame a un café",
 
     "meta.title": "Codificador / Decodificador de URL",
     "meta.description": "Codificador y decodificador de URL en línea y gratuito. Codifica texto en porcentaje para usarlo de forma segura en URLs y query strings, o decodifica cadenas con %-codificación de vuelta a texto normal, con modos Componente o URL completa, un interruptor opcional de codificación de formulario (+) y soporte completo de UTF-8. Todo se ejecuta en tu navegador; no se sube nada.",
@@ -219,6 +223,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "سياسة الخصوصية",
     "footer.more": "المزيد من الأدوات",
     "footer.credit": "صنعه rayv",
+    "footer.coffee": "☕ اشترِ لي قهوة",
 
     "meta.title": "مُرمِّز / مُفكِّك ترميز URL",
     "meta.description": "أداة مجانية على الإنترنت لترميز وفك ترميز الروابط (URL). رمِّز النص بترميز النسبة المئوية لاستخدامه بأمان في الروابط وسلاسل الاستعلام، أو فُكّ ترميز السلاسل المُرمَّزة بـ % إلى نص عادي — مع وضعَي المكوّن أو الرابط الكامل، ومفتاح اختياري لترميز النموذج (+)، ودعم كامل لـ UTF-8. كل شيء يعمل داخل متصفحك؛ لا يُرفع أي شيء.",
@@ -267,6 +272,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Politique de confidentialité",
     "footer.more": "Plus d'outils",
     "footer.credit": "Créé par rayv",
+    "footer.coffee": "☕ Offrez-moi un café",
 
     "meta.title": "Encodeur / Décodeur d'URL",
     "meta.description": "Encodeur et décodeur d'URL en ligne et gratuit. Encodez du texte en pourcentage pour l'utiliser en toute sécurité dans les URL et les query strings, ou décodez les chaînes %-encodées en texte brut — avec les modes Composant ou URL complète, une option d'encodage de formulaire (+) et une prise en charge complète de l'UTF-8. Tout s'exécute dans votre navigateur ; rien n'est envoyé.",
@@ -315,6 +321,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "গোপনীয়তা নীতি",
     "footer.more": "আরও টুল",
     "footer.credit": "নির্মাতা: rayv",
+    "footer.coffee": "☕ আমাকে এক কাপ কফি খাওয়ান",
 
     "meta.title": "URL এনকোডার / ডিকোডার",
     "meta.description": "বিনামূল্যের অনলাইন URL এনকোডার ও ডিকোডার। URL ও কোয়েরি স্ট্রিং-এ নিরাপদে ব্যবহারের জন্য টেক্সট পার্সেন্ট-এনকোড করুন, অথবা %-এনকোডেড স্ট্রিং আবার সাধারণ টেক্সটে ডিকোড করুন — Component বনাম Full-URL মোড, ঐচ্ছিক form (+) এনকোডিং টগল এবং সম্পূর্ণ UTF-8 সমর্থন সহ। সবকিছু আপনার ব্রাউজারেই চলে; কিছুই আপলোড হয় না।",
@@ -363,6 +370,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de Privacidade",
     "footer.more": "Mais ferramentas",
     "footer.credit": "Criado por rayv",
+    "footer.coffee": "☕ Pague-me um café",
 
     "meta.title": "Codificador / Decodificador de URL",
     "meta.description": "Codificador e decodificador de URL online e gratuito. Codifique texto em porcentagem para uso seguro em URLs e query strings, ou decodifique strings com %-codificação de volta para texto simples — com modos Componente ou URL completa, um botão opcional de codificação de formulário (+) e suporte total a UTF-8. Tudo roda no seu navegador; nada é enviado.",
@@ -411,6 +419,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Политика конфиденциальности",
     "footer.more": "Больше инструментов",
     "footer.credit": "Создано rayv",
+    "footer.coffee": "☕ Угостите меня кофе",
 
     "meta.title": "URL-кодировщик / декодировщик",
     "meta.description": "Бесплатный онлайн-кодировщик и декодировщик URL. Кодируйте текст в процентах для безопасного использования в URL и строках запроса или декодируйте %-кодированные строки обратно в обычный текст — с режимами «Компонент» и «Полный URL», необязательным переключателем кодирования форм (+) и полной поддержкой UTF-8. Всё работает в вашем браузере; ничего не загружается.",
@@ -459,6 +468,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "رازداری کی پالیسی",
     "footer.more": "مزید ٹولز",
     "footer.credit": "تخلیق کار: rayv",
+    "footer.coffee": "☕ مجھے ایک کافی پلائیں",
 
     "meta.title": "URL اینکوڈر / ڈی کوڈر",
     "meta.description": "مفت آن لائن URL اینکوڈر اور ڈی کوڈر۔ متن کو URLs اور کوئری اسٹرنگز میں محفوظ استعمال کے لیے پرسنٹ اینکوڈ کریں، یا %-اینکوڈڈ اسٹرنگز کو دوبارہ سادہ متن میں ڈی کوڈ کریں — Component بمقابلہ Full-URL موڈز، اختیاری form (+) اینکوڈنگ ٹوگل اور مکمل UTF-8 سپورٹ کے ساتھ۔ سب کچھ آپ کے براؤزر میں چلتا ہے؛ کچھ بھی اپ لوڈ نہیں ہوتا۔",
@@ -507,6 +517,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Kebijakan Privasi",
     "footer.more": "Alat lainnya",
     "footer.credit": "Dibuat oleh rayv",
+    "footer.coffee": "☕ Traktir saya kopi",
 
     "meta.title": "Encoder / Decoder URL — encode & decode URL dan query string",
     "meta.description": "Encoder dan decoder URL online gratis. Percent-encode teks agar aman dipakai di URL dan query string, atau decode string ber-%-encoding kembali menjadi teks biasa — dengan mode Component atau Full-URL, sakelar opsional form (+) encoding, dan dukungan UTF-8 penuh. Semua berjalan di browser Anda; tidak ada yang diunggah.",
@@ -555,6 +566,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Datenschutzerklärung",
     "footer.more": "Weitere Tools",
     "footer.credit": "Erstellt von rayv",
+    "footer.coffee": "☕ Spendier mir einen Kaffee",
 
     "meta.title": "URL-Encoder / -Decoder",
     "meta.description": "Kostenloser Online-URL-Encoder und -Decoder. Codiere Text per Prozentcodierung für die sichere Verwendung in URLs und Query-Strings oder decodiere %-codierte Zeichenketten zurück in Klartext — mit den Modi „Komponente“ und „Vollständige URL“, einem optionalen Formular-(+)-Codierungsschalter und voller UTF-8-Unterstützung. Alles läuft in deinem Browser; nichts wird hochgeladen.",
@@ -603,6 +615,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "プライバシーポリシー",
     "footer.more": "他のツールを見る",
     "footer.credit": "制作:rayv",
+    "footer.coffee": "☕ コーヒーをおごる",
 
     "meta.title": "URL エンコーダー / デコーダー",
     "meta.description": "無料のオンライン URL エンコーダー・デコーダー。テキストをパーセントエンコードして URL やクエリ文字列で安全に使えるようにしたり、%-エンコードされた文字列を元のテキストにデコードしたりできます。コンポーネント/フル URL モード、任意の form(+) エンコード切替、完全な UTF-8 対応。すべてブラウザー内で処理され、何もアップロードされません。",
@@ -651,6 +664,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "개인정보처리방침",
     "footer.more": "다른 도구 보기",
     "footer.credit": "만든 사람: rayv",
+    "footer.coffee": "☕ 커피 한 잔 사주기",
 
     "meta.title": "URL 인코더 / 디코더 — URL과 쿼리스트링 퍼센트 인코딩·디코딩",
     "meta.description": "무료 온라인 URL 인코더·디코더. 텍스트를 퍼센트 인코딩해 URL과 쿼리스트링에 안전하게 쓰거나, %-인코딩된 문자열을 다시 일반 텍스트로 디코딩하세요. Component/Full-URL 모드, 선택형 form(+) 인코딩 토글, 완전한 UTF-8 지원. 모든 처리는 브라우저 안에서만 이뤄지며 아무것도 업로드되지 않습니다.",

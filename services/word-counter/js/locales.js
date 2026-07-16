@@ -19,6 +19,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Privacy Policy",
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
+    "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Word Counter — Count words, characters, sentences",
     "meta.description": "Free online word counter. Paste your text to instantly count words, characters, sentences, and paragraphs, plus estimated reading and speaking time. Runs entirely in your browser — nothing is uploaded.",
@@ -63,6 +64,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "隐私政策",
     "footer.more": "更多工具",
     "footer.credit": "由 rayv 制作",
+    "footer.coffee": "☕ 请我喝杯咖啡",
 
     "meta.title": "字数统计 — 即时统计字数、字符、句子与阅读时间",
     "meta.description": "免费在线字数统计工具。粘贴文本即可即时统计单词数、字符数、句子数和段落数，并估算阅读与朗读时间。全部在浏览器本地完成，不上传任何内容。",
@@ -107,6 +109,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "गोपनीयता नीति",
     "footer.more": "और टूल्स",
     "footer.credit": "निर्माता: rayv",
+    "footer.coffee": "☕ मुझे एक कॉफ़ी पिलाएँ",
 
     "meta.title": "वर्ड काउंटर — शब्द, अक्षर, वाक्य और पढ़ने का समय तुरंत गिनें",
     "meta.description": "मुफ़्त ऑनलाइन वर्ड काउंटर। अपना टेक्स्ट पेस्ट करें और तुरंत शब्द, अक्षर, वाक्य और अनुच्छेद गिनें, साथ ही पढ़ने और बोलने का अनुमानित समय पाएं। सब कुछ आपके ब्राउज़र में ही चलता है — कुछ भी अपलोड नहीं होता।",
@@ -151,6 +154,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de privacidad",
     "footer.more": "Más herramientas",
     "footer.credit": "Creado por rayv",
+    "footer.coffee": "☕ Invítame a un café",
 
     "meta.title": "Contador de palabras",
     "meta.description": "Contador de palabras en línea gratuito. Pega tu texto para contar al instante palabras, caracteres, frases y párrafos, además del tiempo estimado de lectura y de habla. Todo funciona en tu navegador: no se sube nada.",
@@ -195,6 +199,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "سياسة الخصوصية",
     "footer.more": "المزيد من الأدوات",
     "footer.credit": "صنعه rayv",
+    "footer.coffee": "☕ اشترِ لي قهوة",
 
     "meta.title": "عدّاد الكلمات",
     "meta.description": "عدّاد كلمات مجاني عبر الإنترنت. الصق نصك لتحسب فورًا الكلمات والحروف والجمل والفقرات، إضافةً إلى وقت القراءة والتحدّث التقديري. يعمل كليًا داخل متصفحك — لا يُرفع أي شيء.",
@@ -239,6 +244,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Politique de confidentialité",
     "footer.more": "Plus d'outils",
     "footer.credit": "Créé par rayv",
+    "footer.coffee": "☕ Offrez-moi un café",
 
     "meta.title": "Compteur de mots",
     "meta.description": "Compteur de mots en ligne gratuit. Collez votre texte pour compter instantanément les mots, caractères, phrases et paragraphes, ainsi que le temps de lecture et de parole estimé. Tout fonctionne dans votre navigateur — rien n'est envoyé.",
@@ -283,6 +289,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "গোপনীয়তা নীতি",
     "footer.more": "আরও টুল",
     "footer.credit": "নির্মাতা: rayv",
+    "footer.coffee": "☕ আমাকে এক কাপ কফি খাওয়ান",
 
     "meta.title": "শব্দ গণনা — শব্দ, অক্ষর, বাক্য ও পড়ার সময় তাৎক্ষণিক গণনা",
     "meta.description": "বিনামূল্যের অনলাইন শব্দ গণনা টুল। আপনার লেখা পেস্ট করে তাৎক্ষণিকভাবে শব্দ, অক্ষর, বাক্য ও অনুচ্ছেদ গণনা করুন, সেই সাথে আনুমানিক পড়া ও বলার সময়। সবকিছু আপনার ব্রাউজারেই চলে — কিছুই আপলোড হয় না।",
@@ -327,6 +334,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de Privacidade",
     "footer.more": "Mais ferramentas",
     "footer.credit": "Criado por rayv",
+    "footer.coffee": "☕ Pague-me um café",
 
     "meta.title": "Contador de palavras",
     "meta.description": "Contador de palavras online gratuito. Cole o seu texto para contar na hora palavras, caracteres, frases e parágrafos, além do tempo estimado de leitura e de fala. Tudo funciona no seu navegador — nada é enviado.",
@@ -371,6 +379,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Политика конфиденциальности",
     "footer.more": "Больше инструментов",
     "footer.credit": "Создано rayv",
+    "footer.coffee": "☕ Угостите меня кофе",
 
     "meta.title": "Счётчик слов",
     "meta.description": "Бесплатный онлайн-счётчик слов. Вставьте текст, чтобы мгновенно посчитать слова, символы, предложения и абзацы, а также оценить время чтения и произношения. Всё работает в браузере — ничего не загружается.",
@@ -415,6 +424,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "رازداری کی پالیسی",
     "footer.more": "مزید ٹولز",
     "footer.credit": "تخلیق کار: rayv",
+    "footer.coffee": "☕ مجھے ایک کافی پلائیں",
 
     "meta.title": "ورڈ کاؤنٹر — الفاظ، حروف، جملے اور پڑھنے کا وقت فوری گنیں",
     "meta.description": "مفت آن لائن ورڈ کاؤنٹر۔ اپنا متن پیسٹ کریں اور فوراً الفاظ، حروف، جملے اور پیراگراف گنیں، ساتھ ہی پڑھنے اور بولنے کا تخمینی وقت۔ سب کچھ آپ کے براؤزر میں چلتا ہے — کچھ اپ لوڈ نہیں ہوتا۔",
@@ -459,6 +469,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Kebijakan Privasi",
     "footer.more": "Alat lainnya",
     "footer.credit": "Dibuat oleh rayv",
+    "footer.coffee": "☕ Traktir saya kopi",
 
     "meta.title": "Penghitung Kata",
     "meta.description": "Penghitung kata online gratis. Tempel teks Anda untuk langsung menghitung kata, karakter, kalimat, dan paragraf, plus perkiraan waktu baca dan bicara. Semua berjalan di browser Anda — tidak ada yang diunggah.",
@@ -503,6 +514,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Datenschutzerklärung",
     "footer.more": "Weitere Tools",
     "footer.credit": "Erstellt von rayv",
+    "footer.coffee": "☕ Spendier mir einen Kaffee",
 
     "meta.title": "Wortzähler",
     "meta.description": "Kostenloser Online-Wortzähler. Fügen Sie Ihren Text ein, um sofort Wörter, Zeichen, Sätze und Absätze zu zählen — plus geschätzte Lese- und Sprechzeit. Alles läuft in Ihrem Browser — nichts wird hochgeladen.",
@@ -547,6 +559,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "プライバシーポリシー",
     "footer.more": "他のツールを見る",
     "footer.credit": "制作:rayv",
+    "footer.coffee": "☕ コーヒーをおごる",
 
     "meta.title": "単語カウンター — 単語・文字・文・読了時間を即計算",
     "meta.description": "無料のオンライン単語カウンター。テキストを貼り付けるだけで、単語数・文字数・文の数・段落数に加え、読む時間と話す時間の目安を即座に計算します。すべてブラウザー内で動作し、何もアップロードしません。",
@@ -591,6 +604,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "개인정보처리방침",
     "footer.more": "다른 도구 보기",
     "footer.credit": "만든 사람: rayv",
+    "footer.coffee": "☕ 커피 한 잔 사주기",
 
     "meta.title": "단어수 세기 — 단어·글자·문장·읽기 시간을 즉시 계산",
     "meta.description": "무료 온라인 단어수 세기 도구. 텍스트를 붙여넣으면 단어·글자·문장·문단 수와 예상 읽기·말하기 시간을 즉시 계산합니다. 모든 계산은 브라우저 안에서만 이뤄지며 아무것도 업로드하지 않습니다.",
