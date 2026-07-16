@@ -30,9 +30,57 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "연봉 4,000만원·5,000만원 실수령액은 얼마인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이 연봉 실수령액 계산기의 기본값(부양가족 본인 1명, 비과세 월 10만원, 2026년 요율) 기준으로 연봉 3,000만원은 월 2,126,141원, 4,000만원은 월 2,755,057원, 5,000만원은 월 3,365,075원, 6,000만원은 월 4,005,650원입니다. 연봉이 오를수록 실수령 비율은 낮아집니다 — 3,000만원은 세전 월급의 85.0%를 받지만 6,000만원은 80.1%만 받습니다. 소득세가 누진 구조이기 때문입니다. 위 입력창에 연봉만 넣으면 본인 기준 세후 월급이 바로 나옵니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "세금·4대보험 요율은 왜 입력하지 않나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "도구가 이미 알고 있는 값이기 때문입니다. 2026년 직장인 본인 부담 요율 — 국민연금 4.5%, 건강보험 3.545%, 장기요양보험 건강보험료의 9.182%, 고용보험 0.9%, 소득세 국세청 간이세액표, 지방소득세는 소득세의 10% — 는 전부 내장되어 자동 적용됩니다. 사용자가 요율을 찾아 입력할 이유가 없습니다. 이 4대보험 계산기에서 직접 만지는 값은 연봉과 부양가족 수뿐이고, 비과세액 같은 예외만 '상세 조정'에서 고르면 됩니다. 적용 중인 요율은 상세 조정을 펼치면 전부 확인할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "부양가족 수에 따라 소득세가 왜 달라지나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "국세청 간이세액표는 부양가족(본인 포함) 수에 따라 공제액을 다르게 적용합니다. 부양가족이 많을수록 원천징수 세액이 낮아집니다. 연봉 4,000만원 기준 부양가족 1명(본인만)의 월 소득세는 167,100원이지만, 3명(본인+배우자+자녀 1)이면 142,570원으로 줄어 월 실수령액이 약 26,983원 늘어납니다. 위 계산기에서는 &minus;/+ 버튼으로 인원만 고르면 됩니다. 간이세액표 근사치는 7명까지 구분합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "비과세액이란 무엇인가요? 기본값 10만원은 왜인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "비과세액은 소득세·4대보험 과세 기준에서 제외되는 급여 항목으로, 대표적으로 월 20만원 한도의 식대, 자가운전보조금(월 20만원), 출산·육아 수당이 있습니다. 비과세액이 클수록 실수령액이 올라갑니다. 가장 흔한 경우인 월 10만원을 기본값으로 두었고, 식대를 20만원 받는다면 '상세 조정'에서 20만원을 고르세요 — 연봉 4,000만원 기준 월 실수령액이 2,755,057원에서 2,767,258원으로 12,201원 늘어납니다. 비과세가 아예 없다면 '없음'을 고르면 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "실제 급여명세서와 계산 결과가 다를 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네, 소액 차이가 발생할 수 있습니다. 이 연봉 계산기는 기본급 기준 연봉을 12등분해 계산하므로, 성과급·시간외수당·상여금이 있으면 실제 공제액이 달라집니다. 소득세는 간이세액표 근사치이며 연말정산에서 정확히 조정됩니다. 또 국민연금에는 기준소득 상한(2026년 월 590만원)이 있어 과세 월급여가 이를 넘어도 보험료는 월 265,500원에서 멈춥니다. 연봉협상·이직 시 월급 실수령액을 가늠하는 용도로는 충분합니다."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -53,79 +101,107 @@
     <p class="lede">연봉을 입력하면 세후 월급이 바로 나옵니다. 2026년 최신 요율 적용.</p>
   </section>
 
-  <!-- TOOL:START — builder agent replaces everything inside this section -->
-  <section class="tool-card" id="tool" aria-live="polite">
-    <div class="tool-inputs">
-      <div class="input-group">
-        <label for="annual-salary">연봉 (만원)</label>
-        <input type="number" id="annual-salary" placeholder="예: 4000" min="0" max="500000" step="100" inputmode="numeric">
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       설계 원칙 (docs/OPTIMIZATION.md 축3): 세율·공제 상수는 전부 내장·은닉한다.
+       사용자가 만지는 것은 "연봉"(필수) + "부양가족 수"(스텝퍼) 뿐이고,
+       비과세액 같은 예외는 접힌 <details> 안에서 선택형으로 조정한다.
+       스타일은 style.css 공통부를 건드리지 않기 위해 인라인으로 둔다(템플릿 계약). -->
+  <section class="tool-card" id="tool">
+    <div class="input-group">
+      <label for="annual-salary">연봉 (세전, 만원)</label>
+      <input type="number" id="annual-salary" placeholder="예: 4000" min="0" max="500000" step="100"
+             inputmode="numeric" autocomplete="off" autofocus>
+      <p id="salary-echo" hidden style="margin:8px 2px 0;font-size:13.5px;color:var(--muted);font-variant-numeric:tabular-nums;"></p>
+      <div id="salary-presets" role="group" aria-label="자주 찾는 연봉" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
+        <button type="button" class="salary-preset" data-salary="3000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">3,000만원</button>
+        <button type="button" class="salary-preset" data-salary="4000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">4,000만원</button>
+        <button type="button" class="salary-preset" data-salary="5000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">5,000만원</button>
+        <button type="button" class="salary-preset" data-salary="6000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">6,000만원</button>
       </div>
-      <div class="input-group">
-        <label for="non-taxable">비과세액 (월, 원)
-          <span class="hint">식대 등 소득세 제외 항목 — 기본 100,000원</span>
-        </label>
-        <input type="number" id="non-taxable" value="100000" min="0" step="10000" inputmode="numeric">
-      </div>
-      <div class="input-group">
-        <label for="dependants">부양가족 수 (본인 포함)
-          <span class="hint">본인 1명 + 배우자·자녀 등</span>
-        </label>
-        <input type="number" id="dependants" value="1" min="1" max="20" step="1" inputmode="numeric">
-      </div>
-      <button class="btn" id="calc-btn" type="button">계산하기</button>
     </div>
 
-    <div class="result" id="result" hidden>
-      <div class="result-main">
-        <span class="result-label">세후 월 실수령액</span>
-        <strong class="result-value" id="res-monthly"></strong>
-      </div>
-      <div class="result-sub">
-        <span>연간 실수령 총액</span>
-        <strong id="res-annual"></strong>
-      </div>
-      <div class="deduction-grid">
-        <div class="deduction-item">
-          <span class="di-label">국민연금</span>
-          <span class="di-value" id="d-pension"></span>
-        </div>
-        <div class="deduction-item">
-          <span class="di-label">건강+장기요양</span>
-          <span class="di-value" id="d-health"></span>
-        </div>
-        <div class="deduction-item">
-          <span class="di-label">고용보험</span>
-          <span class="di-value" id="d-employ"></span>
-        </div>
-        <div class="deduction-item">
-          <span class="di-label">소득세</span>
-          <span class="di-value" id="d-income"></span>
-        </div>
-        <div class="deduction-item">
-          <span class="di-label">지방소득세</span>
-          <span class="di-value" id="d-local"></span>
-        </div>
-        <div class="deduction-item deduction-total">
-          <span class="di-label">합계 공제</span>
-          <span class="di-value" id="d-total"></span>
-        </div>
-      </div>
-      <p class="result-note">※ 2026년 요율 기준. 성과급·시간외수당 미포함. 실제 급여명세서와 소액 차이 있을 수 있습니다.</p>
+    <label for="dependants" style="margin-top:22px;">부양가족 수
+      <span style="display:block;font-weight:400;font-size:13px;color:var(--muted);margin-top:2px;">본인 포함 · 혼자 살면 1명 그대로 두세요</span>
+    </label>
+    <div style="display:flex;gap:8px;align-items:stretch;max-width:220px;">
+      <button type="button" id="dep-minus" aria-label="부양가족 한 명 줄이기" style="flex:0 0 50px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font-size:22px;font-weight:700;line-height:1;cursor:pointer;">&#8722;</button>
+      <input type="number" id="dependants" value="1" min="1" max="7" step="1" inputmode="numeric"
+             autocomplete="off" aria-describedby="dep-note"
+             style="text-align:center;font-weight:700;font-variant-numeric:tabular-nums;">
+      <button type="button" id="dep-plus" aria-label="부양가족 한 명 늘리기" style="flex:0 0 50px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font-size:22px;font-weight:700;line-height:1;cursor:pointer;">+</button>
     </div>
-    <div class="result result-error" id="result-error" hidden></div>
+    <p id="dep-note" hidden style="margin:8px 2px 0;font-size:13px;color:var(--muted);"></p>
+
+    <details id="advanced" style="margin-top:20px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--bg);">
+      <summary style="font-weight:600;font-size:14px;cursor:pointer;">상세 조정 — 비과세액 (대부분 그대로 두면 됩니다)</summary>
+      <label for="non-taxable-preset" style="margin-top:12px;">월 비과세액</label>
+      <select id="non-taxable-preset">
+        <option value="0">없음 — 전액 과세</option>
+        <option value="100000" selected>10만원 — 일반적인 식대</option>
+        <option value="200000">20만원 — 식대 비과세 한도(최대)</option>
+        <option value="custom">직접 입력</option>
+      </select>
+      <input type="number" id="non-taxable" value="100000" min="0" step="10000" inputmode="numeric"
+             autocomplete="off" aria-label="비과세액 직접 입력 (월, 원)" hidden style="margin-top:8px;">
+      <p style="margin:12px 0 0;font-size:12.5px;color:var(--muted);line-height:1.6;">
+        아래 <strong>2026년 기준</strong>은 자동 적용됩니다 — 직접 입력할 필요가 없습니다.<br>
+        국민연금 4.5%(기준소득 상한 월 590만원) · 건강보험 3.545% · 장기요양 건보료의 9.182% ·
+        고용보험 0.9% · 소득세 국세청 간이세액표 · 지방소득세 소득세의 10%
+      </p>
+    </details>
+
+    <div class="result" id="result" role="status" aria-live="polite" hidden>
+      <button type="button" id="copy-monthly" title="탭하면 금액이 복사됩니다"
+              style="width:100%;text-align:left;display:flex;flex-direction:column;gap:2px;padding:14px 16px;border:1px solid color-mix(in srgb, var(--accent) 30%, var(--line));border-radius:11px;background:var(--surface);color:var(--ink);font-family:inherit;cursor:pointer;">
+        <span style="font-size:13px;font-weight:600;color:var(--muted);">세후 월 실수령액</span>
+        <strong class="result-value" id="res-monthly" style="font-size:30px;line-height:1.25;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</strong>
+        <span id="copy-hint" style="font-size:12px;color:var(--muted);">탭하면 복사</span>
+      </button>
+
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-top:12px;padding:0 2px;">
+        <span style="font-size:13.5px;font-weight:600;color:var(--muted);">연간 실수령 총액</span>
+        <strong id="res-annual" style="font-size:17px;font-variant-numeric:tabular-nums;">&mdash;</strong>
+      </div>
+
+      <div id="ratio-bar" aria-hidden="true" style="display:flex;height:9px;border-radius:999px;overflow:hidden;background:var(--line);margin:14px 0 8px;">
+        <div id="bar-net" style="width:0;background:var(--accent);"></div>
+        <div id="bar-ded" style="width:0;background:color-mix(in srgb, var(--muted) 45%, transparent);"></div>
+      </div>
+      <p id="explain" style="margin:0 2px;font-size:13.5px;color:var(--muted);"></p>
+
+      <div id="d-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px;">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);">
+          <span style="font-size:13px;font-weight:600;color:var(--muted);">국민연금</span>
+          <span id="d-pension" style="font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;">&mdash;</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);">
+          <span style="font-size:13px;font-weight:600;color:var(--muted);">건강+장기요양</span>
+          <span id="d-health" style="font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;">&mdash;</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);">
+          <span style="font-size:13px;font-weight:600;color:var(--muted);">고용보험</span>
+          <span id="d-employ" style="font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;">&mdash;</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);">
+          <span style="font-size:13px;font-weight:600;color:var(--muted);">소득세</span>
+          <span id="d-income" style="font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;">&mdash;</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 12px;border:1px solid var(--line);border-radius:9px;background:var(--surface);">
+          <span style="font-size:13px;font-weight:600;color:var(--muted);">지방소득세</span>
+          <span id="d-local" style="font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;">&mdash;</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:8px;padding:10px 12px;border:1px solid color-mix(in srgb, var(--accent) 30%, var(--line));border-radius:9px;background:color-mix(in srgb, var(--accent) 7%, var(--surface));">
+          <span style="font-size:13px;font-weight:700;color:var(--ink);">합계 공제</span>
+          <span id="d-total" style="font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums;">&mdash;</span>
+        </div>
+      </div>
+
+      <p id="insight" hidden style="margin:14px 0 0;font-size:13px;color:var(--muted);line-height:1.6;"></p>
+      <p class="result-note" style="margin:12px 0 0;font-size:12.5px;color:var(--muted);">※ 2026년 요율 기준. 성과급·시간외수당 미포함. 실제 급여명세서와 소액 차이 있을 수 있습니다.</p>
+    </div>
+    <div class="result result-error" id="result-error" role="status" aria-live="polite" hidden></div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2>이 연봉 실수령액 계산기 소개</h2>
-    <p>이 계산기는 세전 연봉을 넣으면 4대보험과 소득세를 뗀 뒤 실제로 손에 쥐는 세후 월급을 즉시 보여 줍니다. 이직이나 연봉협상을 앞두고 통장에 찍히는 금액이 궁금한 직장인, 매달 공제 내역이 어떻게 구성되는지 확인하고 싶은 사람에게 맞습니다. 2026년 최신 요율을 반영합니다.</p>
-    <h3>사용 방법</h3>
-    <p>연봉을 만원 단위로 입력하고(예: 4000), 식대 등 비과세액(기본 월 100,000원)과 본인을 포함한 부양가족 수를 채운 뒤 계산하기를 누르세요. 세후 월 실수령액과 연간 실수령 총액이 나오고, 그 아래에 국민연금·건강+장기요양·고용보험·소득세·지방소득세와 합계 공제가 항목별로 정리됩니다.</p>
-    <h3>실수령액은 이렇게 계산됩니다</h3>
-    <p>실수령액 = 세전 급여 − 4대보험 − 소득세(지방소득세 포함)입니다. 연봉 4,000만원이면 월 세전은 4,000만 ÷ 12, 약 333만원. 식대 등 비과세 10만원을 뺀 과세소득 약 323만원을 기준으로 국민연금 4.5%(약 145,500원), 건강보험 3.545%(약 114,600원)와 여기에 연동되는 장기요양보험, 고용보험 0.9%(약 29,100원)를 떼고, 국세청 간이세액표에 따른 소득세와 그 10 %인 지방소득세를 공제합니다. 그 결과 월 실수령액은 대략 290만원 안팎이 됩니다.</p>
-    <h3>알아두면 좋은 점</h3>
-    <p>여기 나온 금액은 매달 원천징수되는 추정치일 뿐, 최종 세금은 이듬해 연말정산에서 확정됩니다. 그래서 신용카드·의료비·기부금 공제가 많은 해에는 실제 부담이 더 줄기도 합니다. 이직·연봉협상 때는 세전 연봉 숫자보다 이 세후 실수령액과 복리후생을 함께 놓고 비교하는 편이 훨씬 현실적입니다.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
@@ -137,24 +213,24 @@
     <h2>자주 묻는 질문</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
     <details>
-      <summary>비과세액이란 무엇인가요? 왜 입력하나요?</summary>
-      <p>비과세액은 소득세 계산에서 제외되는 급여 항목입니다. 대표적으로 <strong>월 20만원 한도의 식대</strong>, 자가운전보조금(월 20만원), 출산·육아 수당 등이 해당합니다. 비과세액만큼은 소득세·4대보험 과세 기준에서 빠지므로 실수령액이 올라갑니다. 식대를 20만원 받는다면 비과세액에 200,000원을 입력하세요. 이 <strong>연봉 실수령액 계산기</strong>는 비과세 항목을 반영해 더 정확한 <strong>세후 월급</strong>을 계산합니다.</p>
+      <summary>연봉 4,000만원·5,000만원 실수령액은 얼마인가요?</summary>
+      <p>이 <strong>연봉 실수령액 계산기</strong>의 기본값(부양가족 본인 1명, 비과세 월 10만원, 2026년 요율) 기준으로 <strong>연봉 3,000만원은 월 2,126,141원</strong>, <strong>4,000만원은 월 2,755,057원</strong>, <strong>5,000만원은 월 3,365,075원</strong>, <strong>6,000만원은 월 4,005,650원</strong>입니다. 연봉이 오를수록 실수령 비율은 낮아집니다 — 3,000만원은 세전 월급의 85.0%를 받지만 6,000만원은 80.1%만 받습니다. 소득세가 누진 구조이기 때문입니다. 위 입력창에 연봉만 넣으면 본인 기준 <strong>세후 월급</strong>이 바로 나옵니다.</p>
+    </details>
+    <details>
+      <summary>세금·4대보험 요율은 왜 입력하지 않나요?</summary>
+      <p>도구가 이미 알고 있는 값이기 때문입니다. 2026년 직장인 본인 부담 요율 — <strong>국민연금 4.5%</strong>, <strong>건강보험 3.545%</strong>, <strong>장기요양보험 건강보험료의 9.182%</strong>, <strong>고용보험 0.9%</strong>, 소득세 국세청 <strong>간이세액표</strong>, 지방소득세는 소득세의 10% — 는 전부 내장되어 자동 적용됩니다. 사용자가 요율을 찾아 입력할 이유가 없습니다. 이 <strong>4대보험 계산기</strong>에서 직접 만지는 값은 연봉과 부양가족 수뿐이고, 비과세액 같은 예외만 '상세 조정'에서 고르면 됩니다. 적용 중인 요율은 상세 조정을 펼치면 전부 확인할 수 있습니다.</p>
     </details>
     <details>
       <summary>부양가족 수에 따라 소득세가 왜 달라지나요?</summary>
-      <p>국세청 <strong>간이세액표</strong>는 부양가족(본인 포함) 수에 따라 공제액을 다르게 적용합니다. 부양가족이 많을수록 소득세 공제액이 커져 원천징수 세액이 낮아집니다. 예를 들어 연봉 4,000만원 직장인 기준 부양가족 1명(본인만)과 3명(본인+배우자+자녀 1)의 월 소득세 차이는 수만 원에 달할 수 있습니다. <strong>4대보험 계산기</strong>와 달리 이 도구는 부양가족 수까지 반영해 보다 정확한 실수령액을 제공합니다.</p>
+      <p>국세청 <strong>간이세액표</strong>는 부양가족(본인 포함) 수에 따라 공제액을 다르게 적용합니다. 부양가족이 많을수록 원천징수 세액이 낮아집니다. 연봉 4,000만원 기준 부양가족 1명(본인만)의 월 소득세는 167,100원이지만, 3명(본인+배우자+자녀 1)이면 142,570원으로 줄어 <strong>월 실수령액이 약 26,983원 늘어납니다</strong>. 위 계산기에서는 &minus;/+ 버튼으로 인원만 고르면 됩니다. 간이세액표 근사치는 7명까지 구분합니다.</p>
     </details>
     <details>
-      <summary>국민연금 상한·하한 기준월보수란?</summary>
-      <p>국민연금 보험료는 월 기준소득에 4.5%를 곱해 계산하지만, 기준소득에는 상한과 하한이 있습니다. 2026년 기준 <strong>상한 590만원, 하한 39만원</strong>입니다. 과세 월급여가 590만원을 초과해도 국민연금은 590만원 기준(월 265,500원)까지만 부과됩니다. 이 <strong>월급 실수령액</strong> 계산기는 상한선을 자동 적용합니다.</p>
-    </details>
-    <details>
-      <summary>2026년 4대보험 요율은 어떻게 되나요?</summary>
-      <p>2026년 직장인 본인 부담 요율은 다음과 같습니다. <strong>국민연금 4.5%</strong>, <strong>건강보험 3.545%</strong>(건보료 인상 반영), <strong>장기요양보험 건강보험료의 0.9182%</strong>, <strong>고용보험 0.9%</strong>입니다. 이 <strong>4대보험 계산기</strong>는 2026년 최신 요율을 하드코딩하여 별도 설정 없이 바로 적용됩니다.</p>
+      <summary>비과세액이란 무엇인가요? 기본값 10만원은 왜인가요?</summary>
+      <p>비과세액은 소득세·4대보험 과세 기준에서 제외되는 급여 항목으로, 대표적으로 <strong>월 20만원 한도의 식대</strong>, 자가운전보조금(월 20만원), 출산·육아 수당이 있습니다. 비과세액이 클수록 실수령액이 올라갑니다. 가장 흔한 경우인 <strong>월 10만원</strong>을 기본값으로 두었고, 식대를 20만원 받는다면 '상세 조정'에서 20만원을 고르세요 — 연봉 4,000만원 기준 월 실수령액이 2,755,057원에서 2,767,258원으로 <strong>12,201원</strong> 늘어납니다. 비과세가 아예 없다면 '없음'을 고르면 됩니다.</p>
     </details>
     <details>
       <summary>실제 급여명세서와 계산 결과가 다를 수 있나요?</summary>
-      <p>네, 소액 차이가 발생할 수 있습니다. 이 <strong>연봉 계산기</strong>는 기본급 기준 연봉을 12등분해 계산하므로, 성과급·시간외수당·상여금이 있으면 실제 공제액이 달라집니다. 또한 소득세는 간이세액표 근사치로 계산하며, 연말정산에서 정확히 조정됩니다. 연봉협상·이직 시 대략적인 <strong>세후 월급</strong> 파악에는 충분히 활용할 수 있습니다.</p>
+      <p>네, 소액 차이가 발생할 수 있습니다. 이 <strong>연봉 계산기</strong>는 기본급 기준 연봉을 12등분해 계산하므로, 성과급·시간외수당·상여금이 있으면 실제 공제액이 달라집니다. 소득세는 간이세액표 근사치이며 연말정산에서 정확히 조정됩니다. 또 국민연금에는 기준소득 상한(2026년 월 590만원)이 있어 과세 월급여가 이를 넘어도 보험료는 <strong>월 265,500원</strong>에서 멈춥니다. 연봉협상·이직 시 <strong>월급 실수령액</strong>을 가늠하는 용도로는 충분합니다.</p>
     </details>
     <!-- FAQ:END -->
   </section>

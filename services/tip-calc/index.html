@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tip Calculator — Tip, total & per-person split in 3 seconds</title>
-<meta name="description" content="Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, computed locally in your browser.">
+<meta name="description" content="Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, no ads, computed locally in your browser.">
 <meta name="keywords" content="tip calculator, 팁 계산기, bill split calculator, gratuity calculator, 팁 퍼센트 계산">
 <link rel="canonical" href="https://tool-hub.me/tip-calc/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Tip Calculator — Tip, total & per-person split in 3 seconds">
-<meta property="og:description" content="Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, computed locally in your browser.">
+<meta property="og:description" content="Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, no ads, computed locally in your browser.">
 <meta property="og:url" content="https://tool-hub.me/tip-calc/">
 <meta property="og:image" content="https://tool-hub.me/tip-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,16 +23,72 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Tip Calculator",
-  "description": "Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, computed locally in your browser.",
+  "description": "Enter the bill, pick a tip percentage, set the number of people — get the tip amount, grand total, and each person's share instantly. Free, no ads, computed locally in your browser.",
   "url": "https://tool-hub.me/tip-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "More options",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Round up per person"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much should I tip? Standard tip rates by country and situation",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick your country at the top of the tip calculator and it loads the local custom for you. In the US and Canada restaurants expect 15–20% (18–20% for good service), taxis around 10–15%, and hotel staff a small amount per service. Much of Europe includes service in the price, so people simply round up or add 5–10% for good service. Japan, Korea and mainland China have no tipping culture at all — the listed price is the full price and staff may politely refuse a tip. In the UK, Brazil, India and the Gulf a service charge is usually already printed on the bill, so anything extra is optional."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I tip on the pre-tax subtotal or the post-tax total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Etiquette guides say the tip is technically figured on the pre-tax subtotal, since tax isn't part of the service. In practice many people tip on the total at the bottom of the check because it's simpler. This gratuity calculator applies your chosen percentage to whatever bill amount you enter, so type the subtotal to be precise or the grand total for the easy route."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The check already says gratuity included or auto-gratuity — do I tip again?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Large parties (often 6 or more) frequently have an automatic gratuity of 18–20% added to the bill. If you see \"service charge\", \"gratuity included\" or \"auto-gratuity\", the tip is already there and any extra is optional. Enter only the food-and-drink amount in the tip calculator and skip the added percentage unless you want to reward exceptional service."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why round the per-person amount up when splitting a bill?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When you split a check in cash, awkward shares like 17.43 each are a pain to collect. Turning on \"Round up per person\" makes this bill split calculator round each share up to a clean cash unit for the country you picked — a whole dollar or euro, ¥100 in Japan, ₩1,000 in Korea — so everyone pays a tidy amount and the small surplus covers the rounding. The tool shows exactly how much the rounding adds to the total paid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my bill amount sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This tip calculator runs entirely in your browser — the bill, tip percentage and headcount never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can split a private dinner bill with peace of mind."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -61,18 +117,26 @@
          document 의 "i18n:change" 이벤트를 구독한다. -->
   <section class="tool-card" id="tool" aria-label="Tip calculator" data-i18n-aria-label="tool.aria">
     <div class="input-group">
+      <label for="country" data-i18n="tool.country.label">Country you're paying in</label>
+      <select id="country" autocomplete="off">
+        <option value="US">United States</option>
+      </select>
+    </div>
+    <p id="country-note" role="status" style="margin:8px 0 0;font-size:13.5px;line-height:1.55;color:var(--muted);"></p>
+
+    <div class="input-group">
       <label for="bill" data-i18n="tool.bill.label">Bill amount</label>
-      <input id="bill" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 50000" data-i18n-placeholder="tool.bill.ph" autocomplete="off">
+      <input id="bill" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 50" data-i18n-placeholder="tool.bill.ph" autocomplete="off" autofocus>
     </div>
 
     <label data-i18n="tool.tip.label">Tip %</label>
-    <div id="tip-presets" role="group" aria-label="Tip percentage presets" data-i18n-aria-label="tool.tip.group" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
-      <button type="button" class="tip-preset" data-tip="10" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">10%</button>
-      <button type="button" class="tip-preset" data-tip="15" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">15%</button>
-      <button type="button" class="tip-preset" data-tip="18" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">18%</button>
-      <button type="button" class="tip-preset" data-tip="20" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">20%</button>
-      <button type="button" class="tip-preset" data-tip="25" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">25%</button>
-      <input id="tip" type="number" inputmode="decimal" min="0" step="any" value="15" placeholder="e.g. 15" data-i18n-placeholder="tool.tip.ph" aria-label="Tip percentage" data-i18n-aria-label="tool.tip.label" autocomplete="off" style="flex:1 1 90px;min-width:90px;width:auto;">
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+      <div id="tip-presets" role="group" aria-label="Tip percentage presets" data-i18n-aria-label="tool.tip.group" style="display:flex;gap:8px;flex-wrap:wrap;flex:1 1 auto;">
+        <button type="button" class="tip-preset" data-tip="15" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">15%</button>
+        <button type="button" class="tip-preset" data-tip="18" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">18%</button>
+        <button type="button" class="tip-preset" data-tip="20" aria-pressed="false" style="flex:0 0 auto;padding:9px 14px;border:none;border-radius:10px;font-weight:700;font-size:15px;cursor:pointer;background:var(--muted);color:#fff;">20%</button>
+      </div>
+      <input id="tip" type="number" inputmode="decimal" min="0" step="any" value="15" placeholder="e.g. 15" data-i18n-placeholder="tool.tip.ph" aria-label="Tip percentage" data-i18n-aria-label="tool.tip.label" autocomplete="off" style="flex:0 1 96px;min-width:80px;width:auto;">
     </div>
     <div id="tip-badge" role="status" hidden data-i18n="tool.badge.zero" style="margin-top:10px;font-size:13.5px;font-weight:600;color:var(--accent-strong);">Calculating at 0% tip</div>
 
@@ -83,10 +147,13 @@
       <button type="button" id="people-plus" aria-label="Add a person" data-i18n-aria-label="tool.people.inc" style="flex:0 0 50px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font-size:22px;font-weight:700;cursor:pointer;">+</button>
     </div>
 
-    <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-top:18px;font-weight:600;font-size:15px;">
-      <input type="checkbox" id="roundup" style="width:auto;flex:0 0 auto;">
-      <span data-i18n="tool.roundup.label">Round up per person</span>
-    </label>
+    <details id="tool-more" style="margin-top:18px;">
+      <summary data-i18n="tool.details.summary" style="font-weight:600;font-size:14px;color:var(--muted);cursor:pointer;">More options</summary>
+      <label style="display:flex;align-items:center;gap:10px;cursor:pointer;margin-top:12px;font-weight:600;font-size:15px;">
+        <input type="checkbox" id="roundup" style="width:auto;flex:0 0 auto;">
+        <span id="roundup-label" data-i18n="tool.roundup.label">Round up per person</span>
+      </label>
+    </details>
 
     <div class="result" id="result" aria-live="polite">
       <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter the bill amount</p>
@@ -114,17 +181,6 @@
   </section>
   <!-- TOOL:END -->
 
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this tip calculator</h2>
-    <p data-i18n="guide.lead">This free tip calculator works out the gratuity, the grand total, and each person's share the instant you type your bill. It's built for everyday moments when you need a quick, fair answer — a restaurant dinner, a taxi ride, a group meal — without doing the mental math or reaching for a spreadsheet.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Enter the bill amount, then pick a tip percentage from the presets (10–25%) or type your own. Set how many people are splitting the check, and switch on "Round up per person" if you want everyone to pay a clean, whole number. The tip, total, per-person share and tip-per-person update instantly — tap any result card to copy that number to your clipboard.</p>
-    <h3 data-i18n="guide.howTitle">How the tip is calculated</h3>
-    <p data-i18n="guide.howBody">The math is simple: tip = bill × (tip % ÷ 100), and the grand total = bill + tip. To split it, both the total and the tip are divided by the number of people. On a 60 bill with a 20% tip split between 3 people, the tip is 12, the total is 72, and each person pays 24 — of which 4 is tip. Rounding up nudges each share to the next whole unit and shows how much extra that adds.</p>
-    <h3 data-i18n="guide.tipTitle">Tipping made easy</h3>
-    <p data-i18n="guide.tipBody">Keep a mental default for common situations: many people use 15% as a baseline and 20% for good service. When unsure, tip on the pre-tax subtotal and round to a comfortable figure. If a service charge is already on the bill you usually don't need to add more. Because everything is computed in your browser, you can settle up at the table in seconds without sharing any of your numbers.</p>
-  </section>
-
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
@@ -137,7 +193,7 @@
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
       <summary data-i18n="faq.q1">How much should I tip? Standard tip rates by country and situation</summary>
-      <p data-i18n="faq.a1">In the US, restaurants usually expect a 15–20% tip (18–20% for good service), cafes and coffee counters 0–15%, taxis and ride-shares about 10–15%, and hotel housekeeping or bellhops a small amount per service. Many countries in Europe and Asia include a service charge or tip far less, so a tip calculator matters most where tipping is customary. Pick the preset that fits your situation or type your own rate.</p>
+      <p data-i18n="faq.a1">Pick your country at the top of the tip calculator and it loads the local custom for you. In the US and Canada restaurants expect 15–20% (18–20% for good service), taxis around 10–15%, and hotel staff a small amount per service. Much of Europe includes service in the price, so people simply round up or add 5–10% for good service. Japan, Korea and mainland China have no tipping culture at all — the listed price is the full price and staff may politely refuse a tip. In the UK, Brazil, India and the Gulf a service charge is usually already printed on the bill, so anything extra is optional.</p>
     </details>
     <details>
       <summary data-i18n="faq.q2">Should I tip on the pre-tax subtotal or the post-tax total?</summary>
@@ -149,7 +205,7 @@
     </details>
     <details>
       <summary data-i18n="faq.q4">Why round the per-person amount up when splitting a bill?</summary>
-      <p data-i18n="faq.a4">When you split a check in cash, awkward shares like 17.43 each are a pain to collect. Turning on "Round up per person" makes this bill split calculator round each share up to a whole number, so everyone pays a clean amount and the small surplus covers the rounding. The tool shows exactly how much the rounding adds to the total paid.</p>
+      <p data-i18n="faq.a4">When you split a check in cash, awkward shares like 17.43 each are a pain to collect. Turning on "Round up per person" makes this bill split calculator round each share up to a clean cash unit for the country you picked — a whole dollar or euro, ¥100 in Japan, ₩1,000 in Korea — so everyone pays a tidy amount and the small surplus covers the rounding. The tool shows exactly how much the rounding adds to the total paid.</p>
     </details>
     <details>
       <summary data-i18n="faq.q5">Is my bill amount sent to a server?</summary>

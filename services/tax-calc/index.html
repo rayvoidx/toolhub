@@ -30,9 +30,57 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "부가세(VAT)란 무엇이고, 왜 나라마다 세율이 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "부가가치세(VAT·GST)는 재화나 서비스가 거래될 때마다 붙는 간접세입니다. 세율은 각국 법률이 정하기 때문에 나라마다 다릅니다 — 한국·일본 10%, 중국 13%, 독일 19%, 영국 20%, 인도 GST 표준 18%처럼요. 이 부가세 계산기는 국가를 선택하면 해당 국가의 표준 세율을 자동으로 적용하므로, 세율을 따로 검색할 필요가 없습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "공급가와 공급대가의 차이는 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "공급가(공급가액)는 부가세를 제외한 순수 거래 금액이고, 공급대가는 공급가에 부가세를 더한 실제 수취 금액입니다. 세금계산서에는 공급가액과 세액을 각각 기재해야 하므로, 받기로 한 금액에서 두 항목을 분리할 때는 ‘공급대가 입력’을, 견적 금액에 부가세를 더할 때는 ‘공급가 입력’을 사용하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "세금계산서 발행 시 어느 금액을 기입하고, 부가세 신고는 언제 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "세금계산서에는 공급가액과 세액을 별도로 기재합니다. 총 결제금액이 1,100,000원이면 공급가액 1,000,000원, 세액 100,000원입니다. 한국 일반과세자의 부가세 신고는 연 2회로, 1기(1~6월 거래분)는 7월 1~25일, 2기(7~12월 거래분)는 다음 해 1월 1~25일에 합니다. 간이과세자는 연 1회(다음 해 1월) 신고합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "세율표는 언제 기준이며, 경감세율은 어떻게 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "내장된 국가별 표준 세율은 2026년 7월 기준이며 연 1회 검토·갱신합니다. 식품·도서·의약품 등에 적용되는 경감세율(예: 독일 7%, 영국 5%, 일본 8%)이나 영세율은 품목마다 달라 자동 적용하지 않습니다. 이런 경우 ‘상세 조정’을 열어 세율을 직접 입력하면 그 값으로 계산합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "입력한 금액이 서버로 전송되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아닙니다. 이 계산기는 브라우저 안에서 완전히 동작하며 외부로 어떤 데이터도 전송하지 않습니다. 마지막 입력값은 편의를 위해 사용자 기기의 localStorage에만 저장되며, 언제든지 브라우저 설정에서 삭제할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -41,76 +89,85 @@
     <span>부가세 계산기</span>
   </a>
   <nav class="header-actions">
-    <a class="home-btn" href="https://tool-hub.me/" aria-label="툴허브 홈" title="툴허브 홈"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="툴허브 홈" data-i18n-aria-label="nav.home" title="툴허브 홈" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
   <section class="hero">
     <h1>부가세 계산기</h1>
-    <p class="lede">금액을 입력하세요. 공급가·부가세·공급대가를 바로 알려드립니다.</p>
+    <p class="lede" data-i18n="hero.lede">금액만 입력하세요. 국가별 부가세율이 자동 적용되어 공급가·부가세·공급대가를 바로 알려드립니다.</p>
   </section>
 
-  <!-- TOOL:START — builder agent replaces everything inside this section -->
-  <section class="tool-card" id="tool" aria-live="polite">
-    <div id="direction-group">
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다.
+       국가별 세율표는 js/app.js 의 VAT_TABLE (정적 · 연 1회 갱신). -->
+  <section class="tool-card" id="tool" aria-label="부가세 계산기" data-i18n-aria-label="tool.aria">
+    <label for="country-select" data-i18n="tool.country.label">국가 (세율 자동 적용)</label>
+    <select id="country-select" autocomplete="off"></select>
+
+    <div id="direction-group" style="margin-top:14px;">
       <label for="dir-forward" style="display:inline;font-weight:600;cursor:pointer;">
-        <input type="radio" id="dir-forward" name="direction" value="forward" checked> 공급가 입력
+        <input type="radio" id="dir-forward" name="direction" value="forward" checked> <span data-i18n="tool.dir.forward">공급가 입력</span>
       </label>
       &nbsp;&nbsp;
       <label for="dir-reverse" style="display:inline;font-weight:600;cursor:pointer;">
-        <input type="radio" id="dir-reverse" name="direction" value="reverse"> 공급대가 입력
+        <input type="radio" id="dir-reverse" name="direction" value="reverse"> <span data-i18n="tool.dir.reverse">공급대가 입력</span>
       </label>
     </div>
 
-    <label for="amount-input" id="amount-label">공급가 (원)</label>
-    <input type="text" id="amount-input" inputmode="numeric" placeholder="예: 1,000,000" autocomplete="off" aria-describedby="result-box">
+    <label for="amount-input" id="amount-label">공급가 (₩)</label>
+    <input type="text" id="amount-input" inputmode="decimal" placeholder="예: 1,000,000" autocomplete="off" aria-describedby="result-box">
 
-    <button class="btn" id="calc-btn" type="button">계산하기</button>
-    <button class="btn" id="reset-btn" type="button" style="background:var(--muted);margin-left:8px;">초기화</button>
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">계산하기</button>
+    <button class="btn" id="reset-btn" type="button" style="background:var(--muted);margin-left:8px;" data-i18n="tool.reset">초기화</button>
 
-    <div class="result" id="result-box" hidden>
+    <details id="advanced" style="margin-top:18px;">
+      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--muted);" data-i18n="tool.details">상세 조정</summary>
+      <label for="rate-input" data-i18n="tool.rate.label">세율 직접 입력 (%)</label>
+      <input type="number" id="rate-input" inputmode="decimal" min="0" max="100" step="0.1" placeholder="예: 10" autocomplete="off">
+      <p id="rate-hint" style="font-size:13px;color:var(--muted);margin:8px 0 0;"></p>
+      <p id="rates-asof" style="font-size:12px;color:var(--muted);margin:6px 0 0;"></p>
+    </details>
+
+    <div class="result" id="result-box" aria-live="polite" hidden>
       <div id="result-error" style="color:#e11d48;" hidden></div>
+      <div id="result-notice" style="color:var(--muted);font-size:15px;" hidden></div>
       <div id="result-rows" hidden>
-        <div class="result-row" style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);">
-          <span style="color:var(--muted);font-size:14px;">공급가</span>
+        <div class="result-row" style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);">
+          <span id="r-supply-label" style="color:var(--muted);font-size:14px;">공급가</span>
           <span style="display:flex;align-items:center;gap:10px;">
             <strong id="r-supply"></strong>
-            <button type="button" class="copy-btn" data-target="r-supply" title="복사" style="background:none;border:1px solid var(--line);border-radius:6px;padding:2px 8px;cursor:pointer;font-size:12px;color:var(--muted);">복사</button>
+            <button type="button" class="copy-btn" data-target="r-supply" title="복사" data-i18n-title="tool.copy" style="background:none;border:1px solid var(--line);border-radius:6px;padding:2px 8px;cursor:pointer;font-size:12px;color:var(--muted);" data-i18n="tool.copy">복사</button>
           </span>
         </div>
-        <div class="result-row" style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);">
-          <span style="color:var(--muted);font-size:14px;">부가세 (10%)</span>
+        <div class="result-row" style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid var(--line);">
+          <span id="r-vat-label" style="color:var(--muted);font-size:14px;">부가세 (10%)</span>
           <span style="display:flex;align-items:center;gap:10px;">
             <strong id="r-vat"></strong>
-            <button type="button" class="copy-btn" data-target="r-vat" title="복사" style="background:none;border:1px solid var(--line);border-radius:6px;padding:2px 8px;cursor:pointer;font-size:12px;color:var(--muted);">복사</button>
+            <button type="button" class="copy-btn" data-target="r-vat" title="복사" data-i18n-title="tool.copy" style="background:none;border:1px solid var(--line);border-radius:6px;padding:2px 8px;cursor:pointer;font-size:12px;color:var(--muted);" data-i18n="tool.copy">복사</button>
           </span>
         </div>
-        <div class="result-row" style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;">
-          <span style="color:var(--muted);font-size:14px;">공급대가 (합계)</span>
+        <div class="result-row" style="display:flex;justify-content:space-between;align-items:center;gap:10px;padding:6px 0;">
+          <span id="r-total-label" style="color:var(--muted);font-size:14px;">공급대가 (합계)</span>
           <span style="display:flex;align-items:center;gap:10px;">
             <strong id="r-total"></strong>
-            <button type="button" class="copy-btn" data-target="r-total" title="복사" style="background:none;border:1px solid var(--line);border-radius:6px;padding:2px 8px;cursor:pointer;font-size:12px;color:var(--muted);">복사</button>
+            <button type="button" class="copy-btn" data-target="r-total" title="복사" data-i18n-title="tool.copy" style="background:none;border:1px solid var(--line);border-radius:6px;padding:2px 8px;cursor:pointer;font-size:12px;color:var(--muted);" data-i18n="tool.copy">복사</button>
           </span>
         </div>
-        <p id="round-note" style="font-size:13px;color:var(--muted);margin:10px 0 0;" hidden>* 소수점 이하는 원 단위로 반올림하였습니다.</p>
+        <p id="applied-note" style="font-size:13px;color:var(--muted);margin:10px 0 0;"></p>
+        <p id="country-note" style="font-size:13px;color:var(--muted);margin:6px 0 0;" hidden></p>
+        <p id="round-note" style="font-size:13px;color:var(--muted);margin:6px 0 0;" hidden>* 선택한 통화의 최소 단위로 반올림하였습니다.</p>
       </div>
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2>이 부가세 계산기 소개</h2>
-    <p>이 부가세 계산기는 공급가 또는 공급대가 중 아는 금액 하나만 넣으면 나머지 두 값을 즉시 분리해 줍니다. 세금계산서나 견적서를 작성하는 프리랜서와 소상공인이 공급가액과 세액을 정확히 나눠 적어야 할 때, 암산이나 엑셀 없이 몇 초 만에 확인할 수 있습니다.</p>
-    <h3>사용 방법</h3>
-    <p>'공급가 입력'과 '공급대가 입력' 중 가진 금액의 종류를 라디오 버튼으로 고르고, 금액을 입력하세요(콤마는 자동으로 붙습니다). 계산하기를 누르면 공급가·부가세(10%)·공급대가 세 줄이 나오고, 각 줄의 복사 버튼으로 필요한 값만 클립보드에 담을 수 있습니다. 초기화 버튼으로 입력을 비웁니다.</p>
-    <h3>계산 공식과 예시</h3>
-    <p>공급가를 알 때는 부가세 = 공급가 × 10 %, 공급대가 = 공급가 × 1.1입니다. 예를 들어 공급가 1,000,000원이면 부가세는 100,000원, 공급대가는 1,100,000원. 반대로 공급대가만 알 때는 나눗셈으로 역산합니다 — 공급가 = 공급대가 ÷ 1.1, 부가세 = 공급대가 ÷ 11. 공급대가 1,100,000원이면 공급가 1,000,000원, 부가세 100,000원이 나옵니다. 원 단위 미만은 반올림해 표시합니다.</p>
-    <h3>알아두면 좋은 점</h3>
-    <p>모든 거래가 10 %인 것은 아닙니다. 수출 등 영세율 거래는 0 %, 미가공 식료품·도서 같은 면세 품목에는 부가세가 붙지 않습니다. 또 간이과세자는 업종별 부가가치율이 적용돼 실제 납부세액이 이 계산과 다를 수 있습니다. 이 도구는 일반과세 10 % 기준으로 금액을 분리할 때 사용하세요.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
@@ -119,27 +176,27 @@
   <section id="related-tools" hidden></section>
 
   <section class="faq" id="faq">
-    <h2>자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
     <details>
-      <summary>부가세(VAT)란 무엇이고 왜 10%인가요?</summary>
-      <p>부가가치세(VAT)는 재화나 서비스가 거래될 때마다 발생하는 간접세입니다. 대한민국 부가가치세법은 기본 세율을 10%로 규정하며, 사업자는 공급가액의 10%를 부가세로 징수해 국세청에 신고·납부해야 합니다. 계산기가 적용하는 10% 세율이 이 법정 세율입니다.</p>
+      <summary data-i18n="faq.q1">부가세(VAT)란 무엇이고, 왜 나라마다 세율이 다른가요?</summary>
+      <p data-i18n="faq.a1">부가가치세(VAT·GST)는 재화나 서비스가 거래될 때마다 붙는 간접세입니다. 세율은 각국 법률이 정하기 때문에 나라마다 다릅니다 — 한국·일본 10%, 중국 13%, 독일 19%, 영국 20%, 인도 GST 표준 18%처럼요. 이 부가세 계산기는 국가를 선택하면 해당 국가의 표준 세율을 자동으로 적용하므로, 세율을 따로 검색할 필요가 없습니다.</p>
     </details>
     <details>
-      <summary>공급가와 공급대가의 차이는 무엇인가요?</summary>
-      <p>공급가(공급가액)는 부가세를 제외한 순수 거래 금액입니다. 공급대가는 공급가에 부가세 10%를 더한 실제 수취 금액입니다. 세금계산서를 발행할 때 공급가액과 세액을 각각 기재해야 하므로, 받기로 한 금액(공급대가)에서 두 항목을 분리하거나, 견적 금액(공급가)에서 합산 금액을 구할 때 이 계산기를 사용하세요.</p>
+      <summary data-i18n="faq.q2">공급가와 공급대가의 차이는 무엇인가요?</summary>
+      <p data-i18n="faq.a2">공급가(공급가액)는 부가세를 제외한 순수 거래 금액이고, 공급대가는 공급가에 부가세를 더한 실제 수취 금액입니다. 세금계산서에는 공급가액과 세액을 각각 기재해야 하므로, 받기로 한 금액에서 두 항목을 분리할 때는 ‘공급대가 입력’을, 견적 금액에 부가세를 더할 때는 ‘공급가 입력’을 사용하세요.</p>
     </details>
     <details>
-      <summary>세금계산서 발행 시 어느 금액을 기입해야 하나요?</summary>
-      <p>세금계산서 양식에는 공급가액과 세액을 별도로 기재합니다. 예를 들어 총 결제금액이 1,100,000원이라면 공급가액 1,000,000원, 세액 100,000원을 각각 입력합니다. 이 계산기에서 "공급대가 입력" 모드를 선택하고 1,100,000을 입력하면 두 값을 즉시 확인할 수 있습니다.</p>
+      <summary data-i18n="faq.q3">세금계산서 발행 시 어느 금액을 기입하고, 부가세 신고는 언제 하나요?</summary>
+      <p data-i18n="faq.a3">세금계산서에는 공급가액과 세액을 별도로 기재합니다. 총 결제금액이 1,100,000원이면 공급가액 1,000,000원, 세액 100,000원입니다. 한국 일반과세자의 부가세 신고는 연 2회로, 1기(1~6월 거래분)는 7월 1~25일, 2기(7~12월 거래분)는 다음 해 1월 1~25일에 합니다. 간이과세자는 연 1회(다음 해 1월) 신고합니다.</p>
     </details>
     <details>
-      <summary>부가세 신고 기간은 언제인가요?</summary>
-      <p>일반과세자는 연 2회 신고합니다. 1기 확정신고는 1월 1일~6월 30일 거래분을 7월 1일~25일에, 2기 확정신고는 7월 1일~12월 31일 거래분을 다음 해 1월 1일~25일에 진행합니다. 간이과세자는 연 1회(다음 해 1월) 신고합니다. 신고 시즌 직전에 이 계산기로 매출·매입 부가세를 미리 정리해 두면 편리합니다.</p>
+      <summary data-i18n="faq.q4">세율표는 언제 기준이며, 경감세율은 어떻게 하나요?</summary>
+      <p data-i18n="faq.a4">내장된 국가별 표준 세율은 2026년 7월 기준이며 연 1회 검토·갱신합니다. 식품·도서·의약품 등에 적용되는 경감세율(예: 독일 7%, 영국 5%, 일본 8%)이나 영세율은 품목마다 달라 자동 적용하지 않습니다. 이런 경우 ‘상세 조정’을 열어 세율을 직접 입력하면 그 값으로 계산합니다.</p>
     </details>
     <details>
-      <summary>입력한 금액이 서버로 전송되나요?</summary>
-      <p>아닙니다. 이 계산기는 브라우저 내에서 완전히 동작하며 외부 서버에 어떤 데이터도 전송하지 않습니다. 입력값은 사용 편의를 위해 사용자 기기의 localStorage에만 임시 저장되며, 언제든지 브라우저 설정에서 삭제할 수 있습니다.</p>
+      <summary data-i18n="faq.q5">입력한 금액이 서버로 전송되나요?</summary>
+      <p data-i18n="faq.a5">아닙니다. 이 계산기는 브라우저 안에서 완전히 동작하며 외부로 어떤 데이터도 전송하지 않습니다. 마지막 입력값은 편의를 위해 사용자 기기의 localStorage에만 저장되며, 언제든지 브라우저 설정에서 삭제할 수 있습니다.</p>
     </details>
     <!-- FAQ:END -->
   </section>
@@ -150,6 +207,8 @@
 </footer>
 
 <script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 <script src="js/related.js"></script>
 </body>
