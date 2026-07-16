@@ -1,0 +1,23 @@
+# Toolhub — https://tool-hub.me/
+# 2026-07-17 신설. 이전에는 우리 robots.txt 가 없어 Cloudflare 기본 파일이 서빙됐고
+# Sitemap 줄이 없어 크롤러가 사이트맵을 찾을 길이 없었다.
+
+User-agent: *
+Allow: /
+
+# 색인 가치가 없는 경로 — 크롤링 예산 절약.
+# privacy.html 은 문서 자체에 <meta name="robots" content="noindex"> 가 이미 있다.
+Disallow: /*/privacy.html
+Disallow: /*/404.html
+
+# 저장소 내부 파일 — worker/index.js 의 BLOCKED 정규식도 같은 것을 막는다(이중 방어).
+Disallow: /*/SERVICE.yaml
+Disallow: /*/WIKI.md
+
+# 도구는 브라우저 안에서 완결되며 입력 데이터는 서버로 전송되지 않는다(각 도구 privacy.html §1).
+# 크롤러가 만질 수 있는 상태 파라미터는 결과 공유용이라 색인할 필요가 없다.
+Disallow: /*?*lang=
+Disallow: /*?*amount=
+Disallow: /*?*salary=
+
+Sitemap: https://tool-hub.me/sitemap.xml
