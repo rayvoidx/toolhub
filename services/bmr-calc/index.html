@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>기초대사량 계산기 — 성별·나이·키·몸무게 → 기초대사량·활동대사량 즉시 계산</title>
+<title>BMR Calculator — Basal Metabolic Rate & TDEE from Sex, Age</title>
 <meta name="description" content="성별, 나이, 키, 몸무게를 입력하면 미플린-세인트 지어와 해리스-베네딕트 공식으로 기초대사량(BMR), 활동대사량(TDEE), 하루 권장 칼로리를 즉시 계산하는 무료 계산기">
 <meta name="keywords" content="기초대사량 계산기, BMR 계산기, 활동대사량 계산기, TDEE 계산기, 하루 권장 칼로리">
 <link rel="canonical" href="https://tool-hub.me/bmr-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="기초대사량 계산기 — 성별·나이·키·몸무게 → 기초대사량·활동대사량 즉시 계산">
+<meta property="og:title" content="BMR Calculator — Basal Metabolic Rate & TDEE from Sex, Age">
 <meta property="og:description" content="성별, 나이, 키, 몸무게를 입력하면 미플린-세인트 지어와 해리스-베네딕트 공식으로 기초대사량(BMR), 활동대사량(TDEE), 하루 권장 칼로리를 즉시 계산하는 무료 계산기">
 <meta property="og:url" content="https://tool-hub.me/bmr-calc/">
 <meta property="og:image" content="https://tool-hub.me/bmr-calc/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "BMR Calculator",
+      "item": "https://tool-hub.me/bmr-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "기초대사량(BMR)과 활동대사량(TDEE)의 차이는 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "기초대사량(BMR)은 숨쉬기·체온 유지 등 생명 유지에만 쓰이는 최소 칼로리이고, 활동대사량(TDEE)은 여기에 일상 활동·운동으로 소모하는 칼로리를 더한 하루 총 소비량입니다. 이 기초대사량 계산기는 BMR에 활동계수(1.2~1.9)를 곱해 TDEE까지 한 번에 계산하므로, 별도의 TDEE 계산기 없이 하루 권장 칼로리를 바로 확인할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "미플린-세인트 지어와 해리스-베네딕트 공식 중 어느 것을 봐야 하나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "기본으로는 미플린-세인트 지어 공식을 권합니다. 1990년에 제안된 미플린 공식은 현대인의 체형 데이터를 기반으로 해, 1919년에 만들어진(1984년 개정) 해리스-베네딕트 공식보다 실측 기초대사량에 더 가깝다는 연구가 많습니다. 이 BMR 계산기는 두 공식을 병기해 차이를 직접 비교할 수 있게 했고, TDEE 계산에는 미플린 값을 사용합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "기초대사량보다 적게 먹으면 왜 안 되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "섭취 칼로리가 기초대사량 아래로 오래 유지되면 몸이 에너지 소비를 줄이는 대사 적응이 일어나고, 지방보다 근육이 먼저 분해돼 근손실 위험이 커집니다. 결과적으로 기초대사량 자체가 낮아져 요요가 오기 쉽습니다. 감량할 때도 활동대사량(TDEE)에서 500kcal 정도만 줄이고, 기초대사량 미만 섭취는 피하는 것이 안전합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "기초대사량을 높이는 방법이 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "가장 확실한 방법은 근육량을 늘리는 것입니다. 근육은 같은 무게의 지방보다 유지에 더 많은 에너지를 쓰므로, 주 2~3회 근력 운동과 충분한 단백질 섭취가 기초대사량을 서서히 끌어올립니다. 반대로 극단적인 절식은 기초대사량을 떨어뜨리므로 피해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "입력한 신체 정보가 서버로 전송되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 이 기초대사량 계산기의 모든 계산은 브라우저 안에서 이루어지며, 성별·나이·키·몸무게는 외부 서버로 전송되지 않습니다. 다음 방문 시 편의를 위해 브라우저 localStorage에만 저장되며 언제든 삭제할 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -127,17 +195,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">이 기초대사량 계산기 소개</h2>
-    <p data-i18n="guide.lead">이 무료 기초대사량 계산기는 성별·나이·키·몸무게를 미플린-세인트 지어와 해리스-베네딕트 두 공식에 넣어 기초대사량(BMR)을 구하고, 활동 수준을 곱해 하루에 실제로 소모하는 활동대사량(TDEE)까지 추정합니다. 다이어트 목표 칼로리를 잡거나 유지·증량 식단을 설계하려는 사람에게 출발점이 됩니다.</p>
-    <h3 data-i18n="guide.useTitle">사용 방법</h3>
-    <p data-i18n="guide.useBody">남성 또는 여성을 고른 뒤 나이(만), 키(cm), 몸무게(kg)를 입력하세요. 좌식(×1.2)부터 매우 적극적(×1.9)까지 다섯 단계 중 자신의 활동 수준을 고릅니다. '기초대사량 계산하기'를 누르면 두 공식의 BMR, 활동대사량, 그리고 감량(−500)·유지·증량(+500) 하루 칼로리 가이드가 모두 kcal 정수로 표시됩니다.</p>
-    <h3 data-i18n="guide.howTitle">계산 원리</h3>
-    <p data-i18n="guide.howBody">미플린-세인트 지어 공식은 남성 BMR = 10×몸무게(kg) + 6.25×키(cm) − 5×나이 + 5이고, 여성은 마지막 항을 −161로 바꿉니다. 30세 남성이 키 170cm, 몸무게 65kg이면 10×65 + 6.25×170 − 5×30 + 5 = 1568 kcal입니다. 여기에 보통 활동 계수 1.55를 곱하면 활동대사량은 약 2430 kcal, 감량 목표는 약 1930 kcal가 됩니다.</p>
-    <h3 data-i18n="guide.tipTitle">알아두면 좋은 점</h3>
-    <p data-i18n="guide.tipBody">몸무게는 날마다 조금씩 변하니 아침 공복처럼 같은 조건에서 재고 몇 주에 한 번 값을 갱신하세요. 키와 몸무게가 같아도 근육이 많으면 실제 대사량이 더 높으므로, 이 값은 정확한 측정이 아니라 식단의 출발점으로 쓰는 것이 좋습니다. 활동 계수는 운동뿐 아니라 직업과 일상 활동까지 반영해 고르세요.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

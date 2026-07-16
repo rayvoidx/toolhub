@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Body Fat Calculator — Tape-measured girths in, body fat % out — U.S. Navy method</title>
+<title>Body Fat Calculator — U.S. Navy Method (Body Fat %, Fat Mass</title>
 <meta name="description" content="Free body fat calculator using the U.S. Navy circumference method. Enter your sex, height, weight, and neck/waist/hip measurements to instantly get body fat percentage, fat mass, lean body mass, and the ACE body-fat category — no InBody or DEXA scan needed.">
 <meta name="keywords" content="body fat calculator, navy body fat calculator, body fat percentage, lean body mass, 체지방률 계산기, 체지방 계산기">
 <link rel="canonical" href="https://tool-hub.me/body-fat-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Body Fat Calculator — Tape-measured girths in, body fat % out — U.S. Navy method">
+<meta property="og:title" content="Body Fat Calculator — U.S. Navy Method (Body Fat %, Fat Mass">
 <meta property="og:description" content="Free body fat calculator using the U.S. Navy circumference method. Enter your sex, height, weight, and neck/waist/hip measurements to instantly get body fat percentage, fat mass, lean body mass, and the ACE body-fat category — no InBody or DEXA scan needed.">
 <meta property="og:url" content="https://tool-hub.me/body-fat-calc/">
 <meta property="og:image" content="https://tool-hub.me/body-fat-calc/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Body Fat Calculator",
+      "item": "https://tool-hub.me/body-fat-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is the U.S. Navy tape method?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most people, the U.S. Navy circumference method is accurate to about ±3-4% body fat compared with a DEXA or InBody scan — good enough to track progress over weeks. Accuracy depends on measuring at the same spots each time with a snug, level tape. It is less reliable at the extremes (very lean athletes or high body fat), where a lab method like DEXA is better."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where exactly do I measure neck, waist and hip?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stand relaxed and keep the tape horizontal and snug without compressing the skin. Neck: just below the larynx (Adam's apple), sloping slightly down toward the front. Waist: at the navel for men, at the narrowest point for women. Hip (women only): around the widest part of the buttocks. Measure on bare skin after a normal exhale, and repeat each measurement twice for consistency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a healthy body fat percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Using ACE categories: for men, essential fat is 2-5%, athletes 6-13%, fitness 14-17%, average 18-24%, and obese 25%+. For women, essential fat is 10-13%, athletes 14-20%, fitness 21-24%, average 25-31%, and obese 32%+. Women naturally carry more essential fat for hormonal and reproductive health, so the healthy ranges are higher than for men."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my BMI be normal but my body fat high?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — this is often called \"skinny fat\". BMI only uses height and weight, so someone with little muscle and more fat can have a normal BMI while their body fat percentage is high. Because this calculator measures actual girths and reports fat mass and lean body mass separately, it catches cases that a BMI calculator misses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my body data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation runs entirely inside your browser; your measurements never leave your device. They are only saved to your browser's localStorage so the form is pre-filled on your next visit, and you can clear them anytime from your browser settings."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -125,17 +193,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this body fat calculator</h2>
-    <p data-i18n="guide.lead">This body fat calculator estimates your body fat percentage from a few tape-measure readings, using the U.S. Navy circumference method. It's a quick, private alternative to an InBody or DEXA scan — useful for anyone tracking a cut, a recomposition or general fitness who wants a repeatable number without a lab appointment. It also splits your weight into fat mass and lean body mass.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Pick your sex, then enter your height and weight. Measure your neck just below the larynx and your waist at the navel (men) or narrowest point (women); women also add a hip measurement. Keep the tape snug and level, and read after a normal exhale. Tap Calculate and you get your body fat percentage, an ACE fitness category, and your fat mass and lean body mass in kilograms.</p>
-    <h3 data-i18n="guide.howTitle">The Navy formula, with an example</h3>
-    <p data-i18n="guide.howBody">The method feeds your girths into a logarithmic equation. For men: body fat % = 495 ÷ (1.0324 − 0.19077 × log10(waist − neck) + 0.15456 × log10(height)) − 450, everything in centimetres; women use waist + hip − neck and different constants. Take a man of 175 cm, 70 kg, neck 38 cm, waist 84 cm: waist − neck is 46, and the formula returns about 16.2%. That is 11.3 kg of fat and 58.7 kg of lean mass.</p>
-    <h3 data-i18n="guide.tipTitle">Getting a reliable reading</h3>
-    <p data-i18n="guide.tipBody">Read the number as a trend, not a verdict: measure under the same conditions each time and compare week to week, not day to day. Because the tool also reports lean body mass, you can tell whether a lower weight came from fat or from muscle — something the scale alone hides. Expect roughly ±3–4% versus a DEXA scan, and less certainty at very low or very high body fat.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

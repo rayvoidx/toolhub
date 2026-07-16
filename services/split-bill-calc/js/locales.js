@@ -8,16 +8,8 @@
    서비스 키(meta.*, hero.lede, tool.*, faq.qN/aN)는 전 언어 동일 세트 (게이트 B-6).
    ============================================================ */
 window.I18N_LOCALES = {
-  en: {
+  "en": {
     "_label": "English",
-    "guide.heading": "About this split bill calculator",
-    "guide.lead": "This split bill calculator divides any bill evenly among a group, adds an optional tip, and rounds each share to a clean number so nobody fumbles for small change. It's made for the moment the check lands — a group dinner, a shared taxi, a team lunch — when you want one fair figure per person and a ready-to-send message you can drop straight into the group chat.",
-    "guide.useTitle": "How to use it",
-    "guide.useBody": "Enter the total bill, then set how many people are sharing with the − and + buttons. Add a tip if you like — tap a preset (10, 15, 18, 20%) or type a custom percentage — and choose whether to round each share up to the nearest 1, 10, 100, or 1,000, or leave it Exact. Each person's share, the grand total, and any rounding surplus update as you type; tap Copy message for a line to paste into chat.",
-    "guide.howTitle": "How the split is calculated",
-    "guide.howBody": "The core math is simple: the amount to split = bill × (1 + tip % ÷ 100), and each share = that amount ÷ the number of people. Rounding then bumps each share up to your chosen step, and the small extra collected becomes the surplus. Split 84,500 between 4 people with no tip: each owes 21,125 exactly. Round each share up to the nearest 100 and everyone pays 21,200 — collecting 84,800, a 300 surplus the organizer usually keeps or puts toward the next round.",
-    "guide.tipTitle": "Tips & good to know",
-    "guide.tipBody": "Rounding up is the easiest way to avoid passing coins around a table — set it to the nearest 100 or 1,000 and every share becomes a note you can hand over cleanly. The surplus it creates is small and often quietly covers a forgotten tip or the tip jar. For a big group, agree on the tip and rounding before you split so nobody feels short-changed, then share the copied message so everyone sees the same numbers.",
     "nav.theme": "Toggle theme",
     "nav.share": "Share",
     "nav.language": "Language",
@@ -67,16 +59,8 @@ window.I18N_LOCALES = {
     "faq.q5": "How do I use the copy button?",
     "faq.a5": "Tap \"Copy message\" for a ready-to-send line like \"Each of 4 pays 21,200 (total 84,800)\" and paste it into your group chat. You can also tap any single figure to copy just that number."
   },
-  zh: {
+  "zh": {
     "_label": "中文",
-    "guide.heading": "关于这个账单分摊计算器",
-    "guide.lead": "这个账单分摊计算器把任意账单在一群人之间平均分配，可选择加上小费，并把每人应付的金额向上取整为整洁的数字，让谁都不必再翻找零钱。它专为账单送上桌的那一刻而设计——聚餐、拼车、团队午餐——当你想要每人一个公平的数字，以及一条能直接发进群聊的现成消息。",
-    "guide.useTitle": "如何使用",
-    "guide.useBody": "输入账单总额，然后用 − 和 + 按钮设置分摊人数。愿意的话可以加小费——点选一个预设（10、15、18、20%）或输入自定义百分比——再选择把每人金额向上取整到最接近的 1、10、100 或 1,000，或保持 Exact（精确）。每人应付、总计以及任何取整多收的余额都会随你输入即时更新；点按 Copy message，即可得到一行粘贴到群聊的文本。",
-    "guide.howTitle": "分摊如何计算",
-    "guide.howBody": "核心算法很简单：待分摊金额 = 账单 × (1 + 小费 % ÷ 100)，每人份额 = 该金额 ÷ 人数。取整会把每人份额向上提到你选定的档位，多收的那点小额就成为余额。把 84,500 在 4 人之间平摊、不加小费：每人正好应付 21,125。把每人份额向上取整到最接近的 100，则人人支付 21,200——共收 84,800，多出的 300 余额通常由组织者留下或用于下一轮。",
-    "guide.tipTitle": "实用提示与须知",
-    "guide.tipBody": "向上取整是避免在餐桌上传递零钱的最简单办法——设为最接近的 100 或 1,000，每份都会变成一张能干脆递出的整钞。由此产生的余额很小，往往悄悄补上被遗忘的小费或投进小费罐。人多时，先就小费和取整方式达成一致再分摊，这样谁都不会觉得吃亏，然后把复制好的消息分享出去，让大家看到相同的数字。",
     "nav.theme": "切换主题",
     "nav.share": "分享",
     "nav.language": "语言",
@@ -126,16 +110,8 @@ window.I18N_LOCALES = {
     "faq.q5": "复制按钮怎么用？",
     "faq.a5": "点“复制消息”即可得到一条可直接发送的文本，例如“4 人平摊，每人 21,200（合计 84,800）”，粘贴到群聊即可。也可点按单个数字只复制该数值。"
   },
-  hi: {
+  "hi": {
     "_label": "हिन्दी",
-    "guide.heading": "इस बिल बँटवारा कैलकुलेटर के बारे में",
-    "guide.lead": "यह बिल बँटवारा कैलकुलेटर किसी भी बिल को समूह में बराबर बाँटता है, चाहें तो टिप जोड़ता है, और हर हिस्से को साफ़-सुथरी संख्या तक गोल कर देता है ताकि किसी को छुट्टे पैसे न टटोलने पड़ें। यह उस पल के लिए बना है जब बिल टेबल पर आता है — समूह डिनर, साझा टैक्सी, टीम लंच — जब आप हर व्यक्ति के लिए एक निष्पक्ष आँकड़ा चाहते हैं और एक तैयार संदेश जिसे सीधे ग्रुप चैट में डाल सकें।",
-    "guide.useTitle": "इसका उपयोग कैसे करें",
-    "guide.useBody": "कुल बिल दर्ज करें, फिर − और + बटनों से तय करें कि कितने लोग बाँट रहे हैं। चाहें तो टिप जोड़ें — कोई प्रीसेट चुनें (10, 15, 18, 20%) या अपना प्रतिशत टाइप करें — और चुनें कि हर हिस्से को निकटतम 1, 10, 100 या 1,000 तक ऊपर गोल करना है या उसे Exact (सटीक) रहने देना है। हर व्यक्ति का हिस्सा, कुल राशि, और गोल करने से बची कोई अतिरिक्त राशि आपके टाइप करते ही अपडेट होती है; चैट में चिपकाने योग्य एक पंक्ति पाने के लिए Copy message पर टैप करें।",
-    "guide.howTitle": "बँटवारा कैसे गणना होता है",
-    "guide.howBody": "मूल गणित सरल है: बाँटने योग्य राशि = बिल × (1 + टिप % ÷ 100), और हर हिस्सा = वह राशि ÷ लोगों की संख्या। फिर गोल करना हर हिस्से को आपके चुने चरण तक ऊपर बढ़ाता है, और जो थोड़ी अतिरिक्त राशि जमा होती है वह अधिशेष बन जाती है। 84,500 को 4 लोगों में बिना टिप बाँटें: हर किसी पर ठीक 21,125 आता है। हर हिस्से को निकटतम 100 तक ऊपर गोल करें तो सब 21,200 चुकाते हैं — कुल 84,800 इकट्ठा होता है, और बचा 300 का अधिशेष आमतौर पर आयोजक अपने पास रखता है या अगले दौर में लगा देता है।",
-    "guide.tipTitle": "सुझाव और जानने योग्य बातें",
-    "guide.tipBody": "ऊपर गोल करना टेबल पर सिक्के इधर-उधर करने से बचने का सबसे आसान तरीका है — इसे निकटतम 100 या 1,000 पर सेट करें और हर हिस्सा एक ऐसा नोट बन जाता है जिसे आप साफ़ ढंग से थमा सकते हैं। इससे बनने वाला अधिशेष छोटा होता है और अक्सर चुपचाप किसी भूली हुई टिप या टिप जार की भरपाई कर देता है। बड़े समूह के लिए, बाँटने से पहले टिप और गोल करने पर सहमत हो जाएँ ताकि किसी को कम मिलने का एहसास न हो, फिर कॉपी किया हुआ संदेश साझा करें ताकि सबको एक जैसी संख्याएँ दिखें।",
     "nav.theme": "थीम बदलें",
     "nav.share": "शेयर करें",
     "nav.language": "भाषा",
@@ -185,16 +161,8 @@ window.I18N_LOCALES = {
     "faq.q5": "कॉपी बटन कैसे इस्तेमाल करें?",
     "faq.a5": "“मैसेज कॉपी करें” दबाएँ और भेजने लायक लाइन पाएँ जैसे “4 लोगों में हर एक 21,200 (कुल 84,800)” और उसे ग्रुप चैट में पेस्ट करें। किसी एक संख्या पर टैप कर सिर्फ़ वही भी कॉपी कर सकते हैं।"
   },
-  es: {
+  "es": {
     "_label": "Español",
-    "guide.heading": "Sobre esta calculadora para dividir la cuenta",
-    "guide.lead": "Esta calculadora para dividir la cuenta reparte cualquier cuenta por igual entre un grupo, añade una propina opcional y redondea la parte de cada uno a una cifra limpia para que nadie tenga que buscar cambio. Está pensada para el momento en que llega la cuenta — una cena en grupo, un taxi compartido, un almuerzo de equipo — cuando quieres una cifra justa por persona y un mensaje listo para enviar directamente al chat del grupo.",
-    "guide.useTitle": "Cómo usarla",
-    "guide.useBody": "Introduce el total de la cuenta y luego indica cuántas personas la comparten con los botones − y +. Añade una propina si quieres — toca un preajuste (10, 15, 18, 20%) o escribe un porcentaje propio — y elige si redondear cada parte hacia arriba al 1, 10, 100 o 1,000 más cercano, o dejarla en Exacto. La parte de cada persona, el total general y cualquier excedente por redondeo se actualizan mientras escribes; toca Copiar mensaje para obtener una línea que pegar en el chat.",
-    "guide.howTitle": "Cómo se calcula el reparto",
-    "guide.howBody": "La base matemática es sencilla: la cantidad a repartir = cuenta × (1 + % de propina ÷ 100), y cada parte = esa cantidad ÷ el número de personas. El redondeo sube luego cada parte al paso que hayas elegido, y el pequeño extra recaudado se convierte en el excedente. Reparte 84,500 entre 4 personas sin propina: cada uno debe exactamente 21,125. Redondea cada parte hacia arriba al 100 más cercano y todos pagan 21,200 — recaudando 84,800, un excedente de 300 que el organizador suele quedarse o destinar a la siguiente ronda.",
-    "guide.tipTitle": "Consejos y cosas útiles",
-    "guide.tipBody": "Redondear hacia arriba es la forma más fácil de evitar pasar monedas alrededor de la mesa — ajústalo al 100 o al 1,000 más cercano y cada parte se convierte en un billete que puedes entregar sin líos. El excedente que genera es pequeño y a menudo cubre discretamente una propina olvidada o el bote de propinas. Para un grupo grande, acordad la propina y el redondeo antes de dividir para que nadie se sienta perjudicado, y luego comparte el mensaje copiado para que todos vean las mismas cifras.",
     "nav.theme": "Cambiar tema",
     "nav.share": "Compartir",
     "nav.language": "Idioma",
@@ -244,16 +212,8 @@ window.I18N_LOCALES = {
     "faq.q5": "¿Cómo uso el botón de copiar?",
     "faq.a5": "Toca \"Copiar mensaje\" para obtener una línea lista como \"Cada uno de 4 paga 21.200 (total 84.800)\" y pégala en tu chat de grupo. También puedes tocar una sola cifra para copiar solo ese número."
   },
-  ar: {
+  "ar": {
     "_label": "العربية",
-    "guide.heading": "حول حاسبة تقسيم الفاتورة هذه",
-    "guide.lead": "تقسم حاسبة تقسيم الفاتورة هذه أي فاتورة بالتساوي بين مجموعة، وتضيف بقشيشًا اختياريًا، وتقرّب حصة كل شخص إلى رقم مرتب حتى لا يضطر أحد للبحث عن الفكة. صُممت للحظة وصول الفاتورة — عشاء جماعي، تاكسي مشترك، غداء فريق العمل — حين تريد رقمًا عادلًا واحدًا لكل شخص ورسالة جاهزة يمكنك إرسالها مباشرة إلى محادثة المجموعة.",
-    "guide.useTitle": "كيفية الاستخدام",
-    "guide.useBody": "أدخل إجمالي الفاتورة، ثم حدّد عدد المشاركين باستخدام زرّي − و +. أضف بقشيشًا إن أردت — اضغط على خيار جاهز (10، 15، 18، 20%) أو اكتب نسبة مخصصة — واختر تقريب كل حصة إلى الأعلى إلى أقرب 1 أو 10 أو 100 أو 1,000، أو اتركها على Exact (بالضبط). تتحدث حصة كل شخص والمجموع الكلي وأي فائض ناتج عن التقريب أثناء كتابتك؛ اضغط على Copy message للحصول على سطر تلصقه في المحادثة.",
-    "guide.howTitle": "كيف يُحسب التقسيم",
-    "guide.howBody": "الحساب الأساسي بسيط: المبلغ المراد تقسيمه = الفاتورة × (1 + نسبة البقشيش % ÷ 100)، وكل حصة = ذلك المبلغ ÷ عدد الأشخاص. ثم يرفع التقريب كل حصة إلى الخطوة التي اخترتها، ويصبح المبلغ الإضافي الصغير المُحصَّل هو الفائض. قسّم 84,500 بين 4 أشخاص دون بقشيش: يدفع كل واحد 21,125 بالضبط. قرّب كل حصة إلى الأعلى إلى أقرب 100 فيدفع الجميع 21,200 — بإجمالي محصّل 84,800، وفائض قدره 300 عادةً ما يحتفظ به المنظّم أو يخصّصه للجولة التالية.",
-    "guide.tipTitle": "نصائح ومعلومات مفيدة",
-    "guide.tipBody": "التقريب إلى الأعلى هو أسهل طريقة لتجنّب تمرير القطع النقدية حول الطاولة — اضبطه على أقرب 100 أو 1,000 فتصبح كل حصة ورقة نقدية تسلّمها بسهولة. الفائض الناتج صغير وكثيرًا ما يغطي بهدوء بقشيشًا منسيًّا أو مرطبان البقشيش. في المجموعات الكبيرة، اتفقوا على البقشيش والتقريب قبل التقسيم حتى لا يشعر أحد بالغبن، ثم شارك الرسالة المنسوخة ليرى الجميع الأرقام نفسها.",
     "nav.theme": "تبديل المظهر",
     "nav.share": "مشاركة",
     "nav.language": "اللغة",
@@ -303,16 +263,8 @@ window.I18N_LOCALES = {
     "faq.q5": "كيف أستخدم زر النسخ؟",
     "faq.a5": "انقر \"نسخ الرسالة\" للحصول على سطر جاهز مثل \"كل واحد من 4 يدفع 21,200 (الإجمالي 84,800)\" والصقه في مجموعتك. يمكنك أيضًا النقر على رقم واحد لنسخه وحده."
   },
-  fr: {
+  "fr": {
     "_label": "Français",
-    "guide.heading": "À propos de ce calculateur de partage d'addition",
-    "guide.lead": "Ce calculateur de partage d'addition répartit n'importe quelle addition à parts égales dans un groupe, ajoute un pourboire facultatif et arrondit la part de chacun à un chiffre net pour que personne n'ait à chercher de la monnaie. Il est conçu pour le moment où l'addition arrive — un dîner de groupe, un taxi partagé, un déjeuner d'équipe — quand vous voulez un montant juste par personne et un message prêt à envoyer directement dans la discussion de groupe.",
-    "guide.useTitle": "Comment l'utiliser",
-    "guide.useBody": "Saisissez le total de l'addition, puis indiquez le nombre de participants avec les boutons − et +. Ajoutez un pourboire si vous le souhaitez — touchez un préréglage (10, 15, 18, 20 %) ou saisissez un pourcentage personnalisé — et choisissez d'arrondir chaque part au 1, 10, 100 ou 1,000 le plus proche, ou de la laisser en mode Exact. La part de chacun, le total général et tout surplus d'arrondi se mettent à jour au fur et à mesure ; touchez Copier le message pour obtenir une ligne à coller dans la discussion.",
-    "guide.howTitle": "Comment le partage est calculé",
-    "guide.howBody": "Le calcul de base est simple : le montant à partager = addition × (1 + pourboire % ÷ 100), et chaque part = ce montant ÷ le nombre de personnes. L'arrondi remonte ensuite chaque part au palier que vous avez choisi, et le petit supplément collecté devient le surplus. Partagez 84,500 entre 4 personnes sans pourboire : chacun doit exactement 21,125. Arrondissez chaque part au 100 le plus proche et tout le monde paie 21,200 — soit 84,800 collectés, un surplus de 300 que l'organisateur garde généralement ou met de côté pour la tournée suivante.",
-    "guide.tipTitle": "Conseils et bon à savoir",
-    "guide.tipBody": "Arrondir vers le haut est le moyen le plus simple d'éviter de faire circuler des pièces autour de la table — réglez-le sur le 100 ou le 1,000 le plus proche et chaque part devient un billet que vous pouvez tendre proprement. Le surplus ainsi créé est faible et couvre souvent discrètement un pourboire oublié ou la cagnotte à pourboires. Pour un grand groupe, mettez-vous d'accord sur le pourboire et l'arrondi avant de partager pour que personne ne se sente lésé, puis partagez le message copié afin que tout le monde voie les mêmes chiffres.",
     "nav.theme": "Changer de thème",
     "nav.share": "Partager",
     "nav.language": "Langue",
@@ -362,16 +314,8 @@ window.I18N_LOCALES = {
     "faq.q5": "Comment utiliser le bouton copier ?",
     "faq.a5": "Touchez « Copier le message » pour obtenir une ligne prête comme « Chacun des 4 paie 21 200 (total 84 800) » et collez-la dans votre discussion. Vous pouvez aussi toucher un seul chiffre pour ne copier que ce montant."
   },
-  bn: {
+  "bn": {
     "_label": "বাংলা",
-    "guide.heading": "এই বিল ভাগ করার ক্যালকুলেটর সম্পর্কে",
-    "guide.lead": "এই বিল ভাগ করার ক্যালকুলেটর যেকোনো বিলকে একটি দলের মধ্যে সমানভাবে ভাগ করে, চাইলে একটি টিপ যোগ করে, এবং প্রত্যেকের ভাগকে একটি পরিষ্কার সংখ্যায় গোল করে দেয় যাতে কাউকে খুচরো পয়সা হাতড়াতে না হয়। এটি সেই মুহূর্তের জন্য তৈরি যখন বিল টেবিলে আসে — দলবদ্ধ ডিনার, ভাগাভাগির ট্যাক্সি, টিম লাঞ্চ — যখন আপনি প্রত্যেকের জন্য একটি ন্যায্য অঙ্ক চান এবং একটি তৈরি বার্তা যা সরাসরি গ্রুপ চ্যাটে পাঠিয়ে দেওয়া যায়।",
-    "guide.useTitle": "কীভাবে ব্যবহার করবেন",
-    "guide.useBody": "মোট বিল লিখুন, তারপর − ও + বোতাম দিয়ে কতজন ভাগ করছেন তা ঠিক করুন। চাইলে একটি টিপ যোগ করুন — একটি প্রিসেট বেছে নিন (10, 15, 18, 20%) বা নিজের শতাংশ টাইপ করুন — এবং বেছে নিন প্রতিটি ভাগকে নিকটতম 1, 10, 100 বা 1,000-এ উপরের দিকে গোল করবেন, নাকি Exact (হুবহু) রাখবেন। প্রত্যেকের ভাগ, সর্বমোট, এবং গোল করার ফলে জমা হওয়া যেকোনো উদ্বৃত্ত আপনি টাইপ করার সঙ্গে সঙ্গে আপডেট হয়; চ্যাটে পেস্ট করার মতো একটি লাইন পেতে Copy message-এ ট্যাপ করুন।",
-    "guide.howTitle": "ভাগ কীভাবে হিসাব হয়",
-    "guide.howBody": "মূল হিসাব সহজ: ভাগ করার পরিমাণ = বিল × (1 + টিপ % ÷ 100), এবং প্রতিটি ভাগ = সেই পরিমাণ ÷ মানুষের সংখ্যা। এরপর গোল করা প্রতিটি ভাগকে আপনার বেছে নেওয়া ধাপ পর্যন্ত উপরে তোলে, এবং জমা হওয়া সামান্য অতিরিক্তটুকু উদ্বৃত্ত হয়ে যায়। 84,500 কে 4 জনের মধ্যে টিপ ছাড়া ভাগ করুন: প্রত্যেকের ঠিক 21,125 দিতে হয়। প্রতিটি ভাগকে নিকটতম 100-এ উপরে গোল করুন, তখন সবাই 21,200 দেয় — মোট 84,800 জমা হয়, আর বাড়তি 300 উদ্বৃত্ত সাধারণত আয়োজক নিজের কাছে রাখেন বা পরের রাউন্ডে লাগান।",
-    "guide.tipTitle": "টিপস ও জেনে রাখা ভালো",
-    "guide.tipBody": "উপরে গোল করা টেবিলে খুচরো এদিক-ওদিক চালাচালি এড়ানোর সবচেয়ে সহজ উপায় — নিকটতম 100 বা 1,000-এ সেট করুন, তাহলে প্রতিটি ভাগ এমন একটি নোট হয়ে যায় যা আপনি পরিষ্কারভাবে হাতে তুলে দিতে পারেন। এতে তৈরি হওয়া উদ্বৃত্ত ছোট এবং প্রায়ই নিঃশব্দে কোনো ভুলে যাওয়া টিপ বা টিপ জারের খরচ মিটিয়ে দেয়। বড় দলের জন্য, ভাগ করার আগে টিপ ও গোল করা নিয়ে একমত হয়ে নিন যাতে কেউ ঠকেছে মনে না করে, তারপর কপি করা বার্তাটি শেয়ার করুন যাতে সবাই একই সংখ্যা দেখে।",
     "nav.theme": "থিম পরিবর্তন",
     "nav.share": "শেয়ার করুন",
     "nav.language": "ভাষা",
@@ -421,16 +365,8 @@ window.I18N_LOCALES = {
     "faq.q5": "কপি বোতাম কীভাবে ব্যবহার করব?",
     "faq.a5": "“বার্তা কপি করুন” চাপুন, পাবেন পাঠানোর মতো লাইন যেমন “৪ জনের প্রত্যেকে 21,200 (মোট 84,800)”, গ্রুপ চ্যাটে পেস্ট করুন। যেকোনো একটি সংখ্যায় ট্যাপ করে শুধু সেটিও কপি করা যায়।"
   },
-  pt: {
+  "pt": {
     "_label": "Português",
-    "guide.heading": "Sobre esta calculadora de divisão de conta",
-    "guide.lead": "Esta calculadora de divisão de conta reparte qualquer conta igualmente entre um grupo, adiciona uma gorjeta opcional e arredonda a parte de cada um para um número limpo, para que ninguém precise procurar troco. Foi feita para o momento em que a conta chega — um jantar em grupo, um táxi compartilhado, um almoço de equipe — quando você quer um valor justo por pessoa e uma mensagem pronta para enviar direto no chat do grupo.",
-    "guide.useTitle": "Como usar",
-    "guide.useBody": "Digite o total da conta e depois defina quantas pessoas estão dividindo com os botões − e +. Adicione uma gorjeta se quiser — toque em uma predefinição (10, 15, 18, 20%) ou digite uma porcentagem personalizada — e escolha se quer arredondar cada parte para cima até o 1, 10, 100 ou 1,000 mais próximo, ou deixá-la em Exato. A parte de cada pessoa, o total geral e qualquer excedente de arredondamento se atualizam enquanto você digita; toque em Copiar mensagem para obter uma linha para colar no chat.",
-    "guide.howTitle": "Como a divisão é calculada",
-    "guide.howBody": "A matemática básica é simples: o valor a dividir = conta × (1 + gorjeta % ÷ 100), e cada parte = esse valor ÷ o número de pessoas. O arredondamento então eleva cada parte até o passo que você escolheu, e o pequeno extra arrecadado vira o excedente. Divida 84,500 entre 4 pessoas sem gorjeta: cada um deve exatamente 21,125. Arredonde cada parte para cima até o 100 mais próximo e todos pagam 21,200 — arrecadando 84,800, um excedente de 300 que o organizador costuma guardar ou usar na próxima rodada.",
-    "guide.tipTitle": "Dicas e o que é bom saber",
-    "guide.tipBody": "Arredondar para cima é a maneira mais fácil de evitar passar moedas pela mesa — ajuste para o 100 ou 1,000 mais próximo e cada parte vira uma nota que você pode entregar sem complicação. O excedente gerado é pequeno e muitas vezes cobre discretamente uma gorjeta esquecida ou o pote de gorjetas. Para um grupo grande, combinem a gorjeta e o arredondamento antes de dividir, para que ninguém se sinta prejudicado, e depois compartilhe a mensagem copiada para que todos vejam os mesmos números.",
     "nav.theme": "Alternar tema",
     "nav.share": "Compartilhar",
     "nav.language": "Idioma",
@@ -480,16 +416,8 @@ window.I18N_LOCALES = {
     "faq.q5": "Como uso o botão de copiar?",
     "faq.a5": "Toque em \"Copiar mensagem\" para obter uma linha pronta como \"Cada um dos 4 paga 21.200 (total 84.800)\" e cole no seu grupo. Você também pode tocar num número só para copiar apenas ele."
   },
-  ru: {
+  "ru": {
     "_label": "Русский",
-    "guide.heading": "Об этом калькуляторе разделения счёта",
-    "guide.lead": "Этот калькулятор разделения счёта делит любой счёт поровну на группу, по желанию добавляет чаевые и округляет долю каждого до аккуратного числа, чтобы никому не пришлось искать мелочь. Он создан для момента, когда приносят счёт — общий ужин, поездка на такси вскладчину, рабочий обед — когда вам нужна одна справедливая сумма с человека и готовое сообщение, которое можно сразу отправить в групповой чат.",
-    "guide.useTitle": "Как пользоваться",
-    "guide.useBody": "Введите общую сумму счёта, затем задайте число участников кнопками − и +. При желании добавьте чаевые — нажмите готовый вариант (10, 15, 18, 20%) или введите свой процент — и выберите, округлять ли каждую долю вверх до ближайших 1, 10, 100 или 1,000, либо оставить её как Точно. Доля каждого, итоговая сумма и любой излишек от округления обновляются по мере ввода; нажмите Копировать сообщение, чтобы получить строку для вставки в чат.",
-    "guide.howTitle": "Как рассчитывается разделение",
-    "guide.howBody": "Основная математика проста: сумма к разделению = счёт × (1 + чаевые % ÷ 100), а каждая доля = эта сумма ÷ число людей. Затем округление поднимает каждую долю до выбранного вами шага, и небольшой собранный излишек становится профицитом. Разделите 84,500 на 4 человек без чаевых: каждый должен ровно 21,125. Округлите каждую долю вверх до ближайших 100 — и все платят по 21,200, собирая 84,800; излишек в 300 организатор обычно оставляет себе или пускает на следующий заказ.",
-    "guide.tipTitle": "Советы и полезно знать",
-    "guide.tipBody": "Округление вверх — самый простой способ не передавать монеты по столу: задайте ближайшие 100 или 1,000, и каждая доля превращается в купюру, которую удобно передать. Возникающий излишек невелик и часто незаметно покрывает забытые чаевые или чаевые в общую банку. Для большой компании договоритесь о чаевых и округлении до разделения, чтобы никто не чувствовал себя обделённым, а затем разошлите скопированное сообщение, чтобы все видели одни и те же цифры.",
     "nav.theme": "Сменить тему",
     "nav.share": "Поделиться",
     "nav.language": "Язык",
@@ -539,16 +467,8 @@ window.I18N_LOCALES = {
     "faq.q5": "Как пользоваться кнопкой копирования?",
     "faq.a5": "Нажмите «Скопировать сообщение», чтобы получить готовую строку вроде «Каждый из 4 платит 21 200 (всего 84 800)», и вставьте её в чат. Можно также нажать отдельное число, чтобы скопировать только его."
   },
-  ur: {
+  "ur": {
     "_label": "اردو",
-    "guide.heading": "اس بل تقسیم کیلکولیٹر کے بارے میں",
-    "guide.lead": "یہ بل تقسیم کیلکولیٹر کسی بھی بل کو ایک گروپ میں برابر تقسیم کرتا ہے، چاہیں تو ٹِپ شامل کرتا ہے، اور ہر حصے کو ایک صاف عدد تک گول کر دیتا ہے تاکہ کسی کو چھٹے پیسے نہ ڈھونڈنے پڑیں۔ یہ اُس لمحے کے لیے بنایا گیا ہے جب بل میز پر آتا ہے — گروپ ڈنر، مشترکہ ٹیکسی، ٹیم لنچ — جب آپ ہر شخص کے لیے ایک منصفانہ عدد چاہتے ہیں اور ایک تیار پیغام جسے سیدھا گروپ چیٹ میں بھیجا جا سکے۔",
-    "guide.useTitle": "استعمال کیسے کریں",
-    "guide.useBody": "کل بل درج کریں، پھر − اور + بٹنوں سے طے کریں کہ کتنے لوگ تقسیم کر رہے ہیں۔ چاہیں تو ٹِپ شامل کریں — کوئی پری سیٹ چنیں (10، 15، 18، 20%) یا اپنا فیصد لکھیں — اور منتخب کریں کہ ہر حصے کو قریب ترین 1، 10، 100 یا 1,000 تک اوپر گول کرنا ہے یا اسے Exact (بالکل ٹھیک) رہنے دینا ہے۔ ہر شخص کا حصہ، مجموعی کل، اور گول کرنے سے بننے والا کوئی بھی فاضل رقم آپ کے لکھتے ہی اپ ڈیٹ ہوتا ہے؛ چیٹ میں پیسٹ کرنے کے لیے ایک سطر حاصل کرنے کو Copy message پر ٹیپ کریں۔",
-    "guide.howTitle": "تقسیم کیسے شمار ہوتی ہے",
-    "guide.howBody": "بنیادی حساب سادہ ہے: تقسیم ہونے والی رقم = بل × (1 + ٹِپ % ÷ 100)، اور ہر حصہ = وہ رقم ÷ افراد کی تعداد۔ پھر گول کرنا ہر حصے کو آپ کے چنے ہوئے مرحلے تک اوپر لے جاتا ہے، اور جو تھوڑی اضافی رقم جمع ہوتی ہے وہ فاضل بن جاتی ہے۔ 84,500 کو 4 افراد میں بغیر ٹِپ تقسیم کریں: ہر ایک پر ٹھیک 21,125 آتا ہے۔ ہر حصے کو قریب ترین 100 تک اوپر گول کریں تو سب 21,200 ادا کرتے ہیں — کل 84,800 جمع ہوتا ہے، اور 300 کا فاضل عموماً منتظم اپنے پاس رکھتا ہے یا اگلے دور میں لگا دیتا ہے۔",
-    "guide.tipTitle": "مشورے اور جاننے کے قابل باتیں",
-    "guide.tipBody": "اوپر گول کرنا میز پر سکے اِدھر اُدھر گھمانے سے بچنے کا آسان ترین طریقہ ہے — اسے قریب ترین 100 یا 1,000 پر مقرر کریں اور ہر حصہ ایک ایسا نوٹ بن جاتا ہے جسے آپ صفائی سے تھما سکتے ہیں۔ اس سے بننے والا فاضل چھوٹا ہوتا ہے اور اکثر خاموشی سے کسی بھولی ہوئی ٹِپ یا ٹِپ جار کی بھرپائی کر دیتا ہے۔ بڑے گروپ کے لیے، تقسیم سے پہلے ٹِپ اور گول کرنے پر اتفاق کر لیں تاکہ کسی کو کم ملنے کا احساس نہ ہو، پھر کاپی کیا ہوا پیغام شیئر کریں تاکہ سب کو ایک جیسے اعداد نظر آئیں۔",
     "nav.theme": "تھیم تبدیل کریں",
     "nav.share": "شیئر کریں",
     "nav.language": "زبان",
@@ -598,16 +518,8 @@ window.I18N_LOCALES = {
     "faq.q5": "کاپی بٹن کیسے استعمال کریں؟",
     "faq.a5": "”پیغام کاپی کریں“ دبائیں اور بھیجنے کے لیے تیار لائن پائیں جیسے ”4 افراد میں ہر ایک 21,200 (کل 84,800)“ اور اسے گروپ چیٹ میں پیسٹ کریں۔ کسی ایک عدد پر ٹیپ کر کے صرف وہی بھی کاپی کر سکتے ہیں۔"
   },
-  id: {
+  "id": {
     "_label": "Bahasa Indonesia",
-    "guide.heading": "Tentang kalkulator pembagi tagihan ini",
-    "guide.lead": "Kalkulator pembagi tagihan ini membagi tagihan apa pun secara merata dalam satu kelompok, menambahkan tip opsional, dan membulatkan bagian tiap orang ke angka yang rapi agar tak ada yang perlu mencari uang receh. Dibuat untuk momen saat tagihan datang — makan malam bersama, taksi patungan, makan siang tim — ketika Anda ingin satu angka yang adil per orang dan pesan siap kirim yang bisa langsung ditempel ke obrolan grup.",
-    "guide.useTitle": "Cara memakainya",
-    "guide.useBody": "Masukkan total tagihan, lalu tentukan berapa orang yang berbagi dengan tombol − dan +. Tambahkan tip jika mau — ketuk preset (10, 15, 18, 20%) atau ketik persentase khusus — dan pilih apakah membulatkan tiap bagian ke atas ke 1, 10, 100, atau 1,000 terdekat, atau membiarkannya Persis (Exact). Bagian tiap orang, total keseluruhan, dan kelebihan dari pembulatan diperbarui saat Anda mengetik; ketuk Salin pesan untuk mendapatkan satu baris yang bisa ditempel ke obrolan.",
-    "guide.howTitle": "Bagaimana pembagian dihitung",
-    "guide.howBody": "Matematika intinya sederhana: jumlah yang dibagi = tagihan × (1 + tip % ÷ 100), dan tiap bagian = jumlah itu ÷ jumlah orang. Pembulatan lalu menaikkan tiap bagian ke langkah yang Anda pilih, dan sedikit kelebihan yang terkumpul menjadi surplus. Bagi 84,500 di antara 4 orang tanpa tip: tiap orang tepat menanggung 21,125. Bulatkan tiap bagian ke atas ke 100 terdekat dan semua membayar 21,200 — terkumpul 84,800, surplus 300 yang biasanya disimpan penyelenggara atau dipakai untuk ronde berikutnya.",
-    "guide.tipTitle": "Tips dan hal yang perlu diketahui",
-    "guide.tipBody": "Membulatkan ke atas adalah cara termudah menghindari mengoper koin di meja — atur ke 100 atau 1,000 terdekat dan tiap bagian menjadi selembar uang yang bisa Anda serahkan dengan rapi. Surplus yang timbul kecil dan sering diam-diam menutup tip yang terlupa atau toples tip. Untuk kelompok besar, sepakati tip dan pembulatan sebelum membagi agar tak ada yang merasa dirugikan, lalu bagikan pesan yang disalin supaya semua melihat angka yang sama.",
     "nav.theme": "Ganti tema",
     "nav.share": "Bagikan",
     "nav.language": "Bahasa",
@@ -657,16 +569,8 @@ window.I18N_LOCALES = {
     "faq.q5": "Bagaimana memakai tombol salin?",
     "faq.a5": "Ketuk \"Salin pesan\" untuk mendapat baris siap kirim seperti \"Masing-masing dari 4 bayar 21.200 (total 84.800)\" lalu tempel ke chat grup. Anda juga bisa mengetuk satu angka untuk menyalin angka itu saja."
   },
-  de: {
+  "de": {
     "_label": "Deutsch",
-    "guide.heading": "Über diesen Rechnungsteiler",
-    "guide.lead": "Dieser Rechnungsteiler teilt jede Rechnung gleichmäßig auf eine Gruppe auf, fügt auf Wunsch ein Trinkgeld hinzu und rundet den Anteil jeder Person auf eine glatte Zahl, damit niemand nach Kleingeld kramen muss. Er ist für den Moment gemacht, in dem die Rechnung kommt — ein Gruppenessen, ein geteiltes Taxi, ein Team-Lunch — wenn du einen fairen Betrag pro Person willst und eine fertige Nachricht, die du direkt in den Gruppenchat schicken kannst.",
-    "guide.useTitle": "So funktioniert's",
-    "guide.useBody": "Gib die Gesamtrechnung ein und lege dann mit den Tasten − und + fest, auf wie viele Personen geteilt wird. Füge bei Bedarf ein Trinkgeld hinzu — tippe auf eine Vorgabe (10, 15, 18, 20 %) oder gib einen eigenen Prozentsatz ein — und wähle, ob jeder Anteil auf die nächsten 1, 10, 100 oder 1,000 aufgerundet oder Exakt belassen wird. Der Anteil jeder Person, die Gesamtsumme und ein etwaiger Rundungsüberschuss aktualisieren sich beim Tippen; tippe auf Nachricht kopieren, um eine Zeile zum Einfügen in den Chat zu erhalten.",
-    "guide.howTitle": "Wie die Aufteilung berechnet wird",
-    "guide.howBody": "Die grundlegende Rechnung ist einfach: der zu teilende Betrag = Rechnung × (1 + Trinkgeld % ÷ 100), und jeder Anteil = dieser Betrag ÷ Anzahl der Personen. Das Runden hebt dann jeden Anteil auf die von dir gewählte Stufe, und der kleine eingesammelte Aufschlag wird zum Überschuss. Teile 84,500 ohne Trinkgeld auf 4 Personen: jeder schuldet genau 21,125. Runde jeden Anteil auf die nächsten 100 auf, und alle zahlen 21,200 — eingesammelt werden 84,800, ein Überschuss von 300, den der Organisator meist behält oder für die nächste Runde verwendet.",
-    "guide.tipTitle": "Tipps und Wissenswertes",
-    "guide.tipBody": "Aufrunden ist der einfachste Weg, um nicht am Tisch Münzen herumzureichen — stell es auf die nächsten 100 oder 1,000, und jeder Anteil wird zu einem Schein, den du sauber übergeben kannst. Der dabei entstehende Überschuss ist gering und deckt oft unauffällig ein vergessenes Trinkgeld oder das Trinkgeldglas. Bei einer großen Gruppe einigt euch vor dem Teilen auf Trinkgeld und Rundung, damit sich niemand benachteiligt fühlt, und teile dann die kopierte Nachricht, damit alle dieselben Zahlen sehen.",
     "nav.theme": "Design wechseln",
     "nav.share": "Teilen",
     "nav.language": "Sprache",
@@ -716,16 +620,8 @@ window.I18N_LOCALES = {
     "faq.q5": "Wie nutze ich die Kopieren-Schaltfläche?",
     "faq.a5": "Tippe auf \"Nachricht kopieren\" für eine fertige Zeile wie \"Jede*r der 4 zahlt 21.200 (gesamt 84.800)\" und füge sie in deinen Gruppenchat ein. Du kannst auch eine einzelne Zahl antippen, um nur diese zu kopieren."
   },
-  ja: {
+  "ja": {
     "_label": "日本語",
-    "guide.heading": "この割り勘計算機について",
-    "guide.lead": "この割り勘計算機は、どんな会計もグループで均等に分け、必要ならチップを加え、各自の負担額をきりのよい数字に切り上げるので、誰も小銭を探さずに済みます。会計が来たその瞬間——グループでの食事、相乗りタクシー、チームのランチ——一人あたりの公平な金額と、グループチャットにそのまま貼れる送信用メッセージが欲しいときのために作られています。",
-    "guide.useTitle": "使い方",
-    "guide.useBody": "合計金額を入力し、− と + ボタンで何人で分けるかを設定します。よければチップを追加できます——プリセット（10、15、18、20%）をタップするか、任意の割合を入力します——そして各自の負担を最も近い 1、10、100、1,000 に切り上げるか、Exact（そのまま）にするかを選びます。各自の負担額、総額、切り上げで生じた余りは入力に合わせて即座に更新されます。Copy message をタップすると、チャットに貼れる一行が得られます。",
-    "guide.howTitle": "割り勘の計算方法",
-    "guide.howBody": "基本の計算は簡単です。分ける金額 = 会計 ×（1 + チップ % ÷ 100）、各自の負担 = その金額 ÷ 人数。切り上げは各自の負担をあなたが選んだ単位まで引き上げ、集まった少しの上乗せが余りになります。84,500 を 4 人でチップなしで分けると、各自ちょうど 21,125 です。各自の負担を最も近い 100 に切り上げると全員が 21,200 を払い——合計 84,800 が集まり、余りの 300 は幹事が取っておくか次の一杯に回すのが普通です。",
-    "guide.tipTitle": "ヒントと知っておくとよいこと",
-    "guide.tipBody": "切り上げは、テーブルで小銭をやり取りしないための一番簡単な方法です——最も近い 100 や 1,000 に設定すれば、どの負担額もそのまま渡せるお札になります。生じる余りはわずかで、忘れがちなチップやチップの箱をそっと埋めてくれることも多いです。大人数のときは、分ける前にチップと切り上げを決めておくと誰も損をした気になりません。そのうえでコピーしたメッセージを共有すれば、全員が同じ数字を見られます。",
     "nav.theme": "テーマ切替",
     "nav.share": "共有",
     "nav.language": "言語",
@@ -775,16 +671,8 @@ window.I18N_LOCALES = {
     "faq.q5": "コピーボタンの使い方は？",
     "faq.a5": "「メッセージをコピー」を押すと、「4人でそれぞれ21,200（合計84,800）」のような送信用の一文が手に入り、グループチャットに貼り付けられます。数字を1つタップすれば、その数字だけコピーもできます。"
   },
-  ko: {
+  "ko": {
     "_label": "한국어",
-    "guide.heading": "이 더치페이 계산기 소개",
-    "guide.lead": "이 더치페이 계산기는 어떤 금액이든 여러 명에게 똑같이 나누고, 원하면 팁을 더하며, 각자의 몫을 딱 떨어지는 숫자로 올림해 아무도 잔돈을 뒤적이지 않게 해 줍니다. 계산서가 나오는 바로 그 순간을 위해 만들어졌습니다 — 여럿이 함께한 저녁, 합승 택시, 팀 점심 — 1인당 공정한 금액 하나와, 단체 채팅방에 바로 붙여 넣을 수 있는 완성된 메시지가 필요할 때요.",
-    "guide.useTitle": "사용 방법",
-    "guide.useBody": "총 금액을 입력한 뒤 − 와 + 버튼으로 몇 명이 나눠 낼지 설정하세요. 원하면 팁을 추가하세요 — 프리셋(10, 15, 18, 20%)을 누르거나 원하는 비율을 직접 입력하고 — 각자의 몫을 가장 가까운 1, 10, 100, 1,000 단위로 올림할지, 아니면 Exact(정확히)로 둘지 고르세요. 각자의 몫, 총합, 올림으로 생기는 잉여금이 입력하는 대로 갱신됩니다. Copy message를 누르면 채팅에 붙여 넣을 한 줄이 나옵니다.",
-    "guide.howTitle": "나누기 계산 원리",
-    "guide.howBody": "핵심 계산은 간단합니다. 나눌 금액 = 금액 × (1 + 팁 % ÷ 100), 각자의 몫 = 그 금액 ÷ 인원수. 이어서 올림이 각자의 몫을 당신이 고른 단위까지 끌어올리고, 이렇게 조금 더 걷힌 금액이 잉여금이 됩니다. 84,500을 팁 없이 4명이 나누면 각자 정확히 21,125을 냅니다. 각자의 몫을 가장 가까운 100으로 올리면 모두가 21,200을 내고 — 84,800이 걷혀 300의 잉여금이 생기는데, 보통 총무가 갖거나 다음 차수에 씁니다.",
-    "guide.tipTitle": "팁과 알아두면 좋은 점",
-    "guide.tipBody": "올림은 식탁에서 동전을 주고받지 않는 가장 쉬운 방법입니다 — 가장 가까운 100이나 1,000으로 설정하면 각자의 몫이 깔끔하게 건넬 수 있는 지폐가 됩니다. 이렇게 생기는 잉여금은 적고, 깜빡한 팁이나 팁 통을 조용히 메워 주는 경우가 많습니다. 인원이 많을 때는 나누기 전에 팁과 올림 방식을 먼저 합의해야 아무도 손해 봤다고 느끼지 않습니다. 그런 다음 복사한 메시지를 공유하면 모두가 같은 숫자를 보게 됩니다.",
     "nav.theme": "테마 전환",
     "nav.share": "공유하기",
     "nav.language": "언어",

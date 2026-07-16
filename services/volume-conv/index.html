@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Volume Converter — Liters, milliliters, gallons, cups ↔ all at once</title>
+<title>Volume Converter — gallons to liters, mL to fl oz</title>
 <meta name="description" content="Free online volume converter. Type one number and instantly see it in milliliters, liters, cubic meters, US teaspoons, tablespoons, fluid ounces, cups, pints, quarts and gallons — plus UK gallons — all in your browser.">
 <meta name="keywords" content="volume converter, gallons to liters, liters to gallons, ml to oz, cups to ml, tablespoons to ml, 부피 단위 변환, 갤런 리터 변환">
 <link rel="canonical" href="https://tool-hub.me/volume-conv/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Volume Converter — Liters, milliliters, gallons, cups ↔ all at once">
+<meta property="og:title" content="Volume Converter — gallons to liters, mL to fl oz">
 <meta property="og:description" content="Free online volume converter. Type one number and instantly see it in milliliters, liters, cubic meters, US teaspoons, tablespoons, fluid ounces, cups, pints, quarts and gallons — plus UK gallons — all in your browser.">
 <meta property="og:url" content="https://tool-hub.me/volume-conv/">
 <meta property="og:image" content="https://tool-hub.me/volume-conv/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Volume Converter",
+      "item": "https://tool-hub.me/volume-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many liters are in a gallon? (US vs UK)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends which gallon you mean. 1 US gallon = 3.785411784 liters, while 1 UK (imperial) gallon = 4.54609 liters — about 20% larger. This converter defaults to the US gallon and labels the imperial one separately as \"Gallon UK\", so you never mix them up. So 5 US gal = 18.927 L, but 5 UK gal = 22.730 L."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert mL to fl oz and cups for cooking?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Using US customary kitchen units: 1 US fluid ounce = 29.5735 mL and 1 US cup = 236.588 mL (8 fl oz). So 250 mL ≈ 8.45 fl oz ≈ 1.06 cups, and 500 mL ≈ 2.11 cups. Type the milliliters once and the table shows teaspoons, tablespoons, fluid ounces and cups together — handy for scaling a recipe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which cup, ounce and gallon does this converter use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By default it uses US customary units: 1 cup = 236.588 mL, 1 fluid ounce = 29.5735 mL, 1 pint = 473.176 mL, 1 quart = 946.353 mL and 1 gallon = 3.785411784 L. The imperial (UK) gallon is offered as a separate \"Gallon UK\" option at 4.54609 L. Every option and table row is labeled US or UK to avoid the common gallon and fluid-ounce mix-up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How precise are the volume results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every conversion keeps up to 10 significant figures, then trailing zeros are trimmed for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values use the exact liter-based definition of each unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my input sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This volume converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example gallons → liters), kept in your browser's local storage so it is ready next time. The value itself is not stored."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -165,17 +233,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this volume converter</h2>
-    <p data-i18n="guide.lead">This volume converter turns one number into every common capacity unit at once — milliliters, liters and cubic meters in metric, plus US teaspoons, tablespoons, fluid ounces, cups, pints, quarts and gallons, and the larger UK imperial gallon. It is made for cooking, fuel, drinks and shipping, where a recipe in cups, a tank in gallons and a bottle in milliliters all describe the same thing.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Enter your amount in the Value box, choose the unit you have under From and the one you want under To, and the headline equivalent updates live. The table shows every unit together, so milliliters appear as cups, fluid ounces and tablespoons at the same time. The swap arrow flips the pair, Copy grabs the main figure, and a note reminds you which units are US customary versus UK imperial.</p>
-    <h3 data-i18n="guide.howTitle">How the conversion works</h3>
-    <p data-i18n="guide.howBody">All units are defined in liters, so your value goes to liters first and then to the target. The US kitchen units are exact multiples of the milliliter: 1 US cup = 236.5882365 mL, 1 US fluid ounce = 29.5735296 mL, 1 US tablespoon = 14.7867648 mL and 1 US gallon = 3.785411784 L. As a worked example, filling a 12-gallon US fuel tank is 12 × 3.785411784 ≈ 45.42 liters.</p>
-    <h3 data-i18n="guide.tipTitle">Tips &amp; good to know</h3>
-    <p data-i18n="guide.tipBody">The biggest trap is US versus UK: an imperial gallon (4.54609 L) is about 20% larger than a US gallon, and UK cooking often weighs ingredients in grams instead. For quick cooking swaps, remember 1 cup is roughly 240 mL and 1 tablespoon about 15 mL. Since dry ingredients like flour vary by density, a kitchen scale is more reliable than volume for baking.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

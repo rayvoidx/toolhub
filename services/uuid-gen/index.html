@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UUID Generator — Secure v4 & v7 UUIDs, generated in your browser — no server</title>
+<title>UUID Generator — Secure v4 & v7 UUIDs</title>
 <meta name="description" content="Free online UUID generator. Create cryptographically random UUID v4 and time-ordered UUID v7 in bulk, copy them instantly, and pick uppercase, hyphenless, or braces formats. 100% local — nothing leaves your browser.">
 <meta name="keywords" content="uuid generator, UUID 생성기, guid generator, uuid v4 generator, uuid v7 generator, random uuid, 고유 식별자 생성">
 <link rel="canonical" href="https://tool-hub.me/uuid-gen/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="UUID Generator — Secure v4 & v7 UUIDs, generated in your browser — no server">
+<meta property="og:title" content="UUID Generator — Secure v4 & v7 UUIDs">
 <meta property="og:description" content="Free online UUID generator. Create cryptographically random UUID v4 and time-ordered UUID v7 in bulk, copy them instantly, and pick uppercase, hyphenless, or braces formats. 100% local — nothing leaves your browser.">
 <meta property="og:url" content="https://tool-hub.me/uuid-gen/">
 <meta property="og:image" content="https://tool-hub.me/uuid-gen/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "UUID Generator",
+      "item": "https://tool-hub.me/uuid-gen/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a UUID, and is a GUID the same thing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A UUID (Universally Unique Identifier) is a 128-bit value defined by RFC 4122 (updated by RFC 9562), written as 32 hexadecimal digits in five hyphen-separated groups like 550e8400-e29b-41d4-a716-446655440000. GUID (Globally Unique Identifier) is Microsoft's name for exactly the same thing, so this UUID generator doubles as a GUID generator. Because a random UUID draws from 2^122 possibilities, anyone can create one independently on any machine — no central registry — and still trust it will not collide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "UUID v4 vs UUID v7 — which one should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A UUID v4 generator produces 122 bits of pure randomness — perfect as a general random UUID whenever you just need uniqueness. A UUID v7 generator produces time-ordered values: the first 48 bits are a Unix millisecond timestamp, so v7 UUIDs sort chronologically. That makes v7 ideal for database primary keys and B-tree indexes, where sequential inserts stay compact and fast instead of scattering across the index the way random v4 keys do. Choose v4 for opacity and no time leakage; choose v7 when insert locality and sortability matter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these UUIDs really unique and random?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Every random value comes from crypto.getRandomValues (using crypto.randomUUID where the browser offers it) — the cryptographically secure generator built into your browser, never the predictable Math.random. With 122 random bits, the odds of two v4 UUIDs colliding are astronomically small: you would have to generate billions per second for roughly a century before a collision became likely. If a browser is too old to provide a secure generator, this tool disables itself instead of silently falling back to something insecure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the generated UUIDs sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This uuid generator runs 100% in your browser — every UUID v4, UUID v7 and nil value is created locally in JavaScript, and nothing is ever uploaded, logged, or shared. That makes it safe for API keys, database rows, secrets, and test fixtures. The values are one-shot: reload the page and they are gone, because nothing is stored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I generate UUIDs in bulk and copy them all at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set the count to any number from 1 to 500 and click Generate to create a whole batch. Each row has its own copy button, or use \"Copy all\" to put the entire list on your clipboard as newline-separated lines — perfect for seeding a database, filling a test dataset, or pasting into a spreadsheet. The format toggles (Uppercase, Hyphens, and Wrap in braces) reformat the current batch instantly without regenerating, so you can match whatever your database or code expects."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -159,17 +227,6 @@
     <p class="uuid-toast" id="uuid-toast" role="alert" aria-live="assertive"></p>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About the UUID generator</h2>
-    <p data-i18n="guide.lead">Generate RFC 4122 version-4 UUIDs — the 128-bit identifiers used for database keys, request IDs and file names — one at a time or up to 500 at once. Every value is created in your browser.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Click generate for a fresh UUID, or set a count to create many at once and copy them all with one click. Each value is unique and ready to paste into code, a spreadsheet or a config file.</p>
-    <h3 data-i18n="guide.howTitle">How UUID v4 works</h3>
-    <p data-i18n="guide.howBody">A version-4 UUID is 122 random bits with the version and variant fixed, written as 32 hexadecimal digits in the 8-4-4-4-12 pattern — for example 3f2504e0-4f89-41d3-9a0c-0305e82c3301. With about 2^122 possibilities, the odds of ever producing the same one twice are effectively zero, so no central server is needed to keep them unique.</p>
-    <h3 data-i18n="guide.tipTitle">When to use them</h3>
-    <p data-i18n="guide.tipBody">UUIDs shine when independent systems must create IDs without coordinating — offline clients, distributed databases or merge-friendly records. They are random, not sequential, so do not rely on them for ordering; use a timestamp for that.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

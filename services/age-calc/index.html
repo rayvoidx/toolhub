@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "나이 계산기",
+      "item": "https://tool-hub.me/age-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "만 나이와 세는나이의 차이는 무엇인가요? 2023년 만 나이 통일법 이후 어디에 적용되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "만 나이는 태어난 날을 0세로 시작해 생일이 지날 때마다 1살씩 늘어나는 계산법입니다. 2023년 6월 28일 시행된 만 나이 통일법으로 이제 민법·행정·일상 대화 모두 만 나이가 공식 기준입니다. 세는나이는 태어나자마자 1세로 보고 새해 1월 1일마다 1살을 더하는 한국 전통 방식으로, 여전히 일상 대화나 오래된 관습에서 쓰입니다. 같은 해에 태어났더라도 생일이 지나지 않았으면 만 나이는 세는나이보다 2살 적을 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "연나이란 무엇인가요? 어디에 사용되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "연나이는 현재 연도에서 출생 연도를 빼기만 한 단순 계산법입니다(생일 월·일 무관). 병역법(병역 의무 연령 판정)이나 학제(학교 입학 기준 연령) 등 일부 특정 법령에서 여전히 연나이를 기준으로 삼습니다. 예를 들어 2000년생은 생일에 관계없이 2025년에 연나이 25세입니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "생일이 지나지 않았으면 만 나이가 달라지나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 만 나이 계산기는 기준일(기본값: 오늘)의 월·일이 생일 월·일보다 이전이면 자동으로 1을 빼서 계산합니다. 예를 들어 1990년 12월 1일생이 2025년 7월에 계산하면 만 나이는 34세입니다. 12월 1일이 지나야 35세가 됩니다. 이 계산기는 기준일을 원하는 날짜로 바꿔 특정 시점의 만 나이도 확인할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "띠(12지) 계산은 음력 기준인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이 띠 계산기는 양력 1월 1일 기준으로 계산합니다. 엄밀하게는 입춘(양력 2월 4일경)을 기준으로 하는 전통 방식도 있으나, 일반적으로 사용되는 양력 연도 기준을 따릅니다. 12지는 쥐·소·범·토끼·용·뱀·말·양·원숭이·닭·개·돼지 순서로 4년을 기준 연도로 하여 12년 주기로 순환합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "입력한 생년월일이 서버로 전송되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니오. 이 나이 계산기는 브라우저 내에서만 계산이 이루어지며 입력된 생년월일은 어떠한 서버로도 전송되지 않습니다. 마지막으로 입력한 생년월일은 편의를 위해 사용자의 기기 로컬 저장소(localStorage)에만 저장되며, 이 데이터는 외부로 나가지 않습니다."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -102,17 +170,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2>나이 계산기 안내</h2>
-    <p>이 나이 계산기는 생년월일 하나로 만 나이, 세는나이, 연나이를 한 번에 계산하고 다음 생일까지 남은 D-day와 열두 띠까지 함께 보여 줍니다. 2023년 만 나이 통일법 이후 서류와 일상에서 헷갈리기 쉬운 세 가지 나이를 한눈에 비교하고 싶은 분, 특정 시점의 나이를 정확히 확인해야 하는 분에게 유용합니다.</p>
-    <h3>사용 방법</h3>
-    <p>생년월일 칸에 태어난 날짜를 입력하세요. 기준일은 기본값이 오늘이지만, 입사 예정일이나 시험 당일처럼 원하는 날짜로 바꿔 그 시점의 나이를 확인할 수 있습니다. 계산하기 버튼을 누르면 만 나이·세는나이·연나이 카드와 다음 생일 D-day, 그리고 띠 배너가 함께 나타납니다.</p>
-    <h3>세 가지 나이 계산 원리</h3>
-    <p>세 나이는 계산법이 다릅니다. 연나이는 기준 연도에서 출생 연도를 빼고(월·일 무시), 만 나이는 여기서 생일이 아직 지나지 않았으면 1을 더 뺍니다. 세는나이는 연나이에 1을 더합니다. 예를 들어 1998년 12월 25일생을 2026년 7월 14일 기준으로 계산하면 연나이는 28세, 생일이 지나지 않아 만 나이는 27세, 세는나이는 29세로 세 값이 모두 다릅니다.</p>
-    <h3>알아두면 좋은 점</h3>
-    <p>계약·의료·행정 등 공식 문서는 모두 만 나이가 기준이므로 세는나이와 혼동하지 마세요. 기준일을 미래나 과거로 바꾸면 내년 입학 시점의 나이처럼 특정 순간의 나이도 계산할 수 있습니다. 다음 생일 D-day는 선물이나 모임을 미리 준비할 때 유용하며, 결과는 브라우저에만 남으니 안심하고 여러 번 확인해 보세요.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "퍼센트 계산기",
+      "item": "https://tool-hub.me/percent-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "퍼센트(%p)와 퍼센트포인트(%p)는 어떻게 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "퍼센트(%)와 퍼센트포인트(%p)는 의미가 다릅니다. 예를 들어 이자율이 10%에서 12%로 오르면, 2%p(퍼센트포인트) 증가이지 2% 증가가 아닙니다. 2% 증가라고 하면 10%의 2%, 즉 0.2%p가 오른 것을 뜻합니다. 증감률 계산기(탭 3)는 퍼센트 변화율을 계산하며, 비율 자체의 차이(퍼센트포인트)와는 구분해야 합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "증감률이 -100% 이하로 나오는 경우는 어떤 때인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이전값 A가 양수이고 이후값 B가 0보다 작은 경우, 또는 이전값 A가 음수일 때 증감률이 -100% 이하로 나올 수 있습니다. 예를 들어 A=100, B=-50이면 증감률은 -150%입니다. 이는 수학적으로 올바른 결과이지만, 실생활에서는 이전값이 음수인 경우 증감률 해석에 주의가 필요합니다. 이 계산기는 기준값(A)이 0인 경우 \"기준값은 0이 될 수 없습니다\"라고 안내합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "소수점 계산이 약간 다르게 나오는 이유가 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "컴퓨터는 내부적으로 이진수(부동소수점)로 숫자를 저장하기 때문에 0.1 + 0.2 = 0.30000000000000004 같은 미세한 오차가 생길 수 있습니다. 이 퍼센트 계산기는 결과를 소수점 2자리로 반올림하여 표시하므로 실용적인 계산에는 충분합니다. 정밀한 회계·세무 계산이 필요하다면 전문 소프트웨어를 사용하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "할인율 계산과 증감률 계산은 어떻게 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "할인율 계산은 정가와 할인가를 입력해 얼마나 싸게 샀는지를 구하는 것이고, 증감률 계산은 두 값 사이의 변화 비율을 구하는 것입니다. 수식은 동일하지만 목적이 다릅니다. 쇼핑 할인율 계산에 특화된 도구를 원한다면 할인율 계산기(discount-calc)를 이용하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "계산 결과가 서버로 전송되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니오. 이 백분율 계산기는 입력한 숫자를 브라우저 안에서만 처리합니다. 모든 계산은 자바스크립트로 로컬 실행되며, 서버 통신이 전혀 없습니다. 민감한 재무 수치를 입력해도 외부로 전송되지 않으니 안심하고 사용하실 수 있습니다."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -114,17 +182,6 @@
     <p class="copy-hint" id="copy-hint" hidden>결과를 클릭하면 클립보드에 복사됩니다.</p>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2>이 퍼센트 계산기 소개</h2>
-    <p>이 퍼센트 계산기는 일상에서 자주 마주치는 세 가지 백분율 질문을 탭 하나로 해결합니다. 'A는 B의 몇 %인지', '어떤 값이 X % 오르거나 내리면 얼마인지', '값이 A에서 B로 바뀌면 증감률이 몇 %인지'를 공식 없이 숫자만 넣어 바로 확인할 수 있어, 할인·통계·성적·환율을 다룰 때 두루 유용합니다.</p>
-    <h3>사용 방법</h3>
-    <p>상단에서 원하는 계산 유형 탭을 고르세요. 첫 번째 탭은 부분값 A와 전체값 B를, 두 번째 탭은 기준값 A와 퍼센트 X를(증가·감소 토글로 방향 선택), 세 번째 탭은 이전값 A와 이후값 B를 입력합니다. 계산하기를 누르면 결과가 즉시 나오고, 결과를 클릭하면 그 숫자가 클립보드에 복사됩니다.</p>
-    <h3>계산 공식과 예시</h3>
-    <p>세 계산의 공식은 이렇습니다. 비율은 A ÷ B × 100 — 30이 120의 몇 %인지 보면 30 ÷ 120 × 100 = 25 %입니다. 증감은 기준값 × (1 ± X ÷ 100) — 50,000원이 15 % 오르면 50,000 × 1.15 = 57,500원. 증감률은 (이후 − 이전) ÷ 이전 × 100 — 80,000에서 100,000으로 오르면 (100,000 − 80,000) ÷ 80,000 × 100 = 25 % 증가입니다.</p>
-    <h3>알아두면 좋은 점</h3>
-    <p>한 가지 함정이 있습니다. 같은 퍼센트로 올렸다가 다시 내려도 원래 값으로 돌아오지 않습니다. 100이 10 % 오르면 110, 거기서 다시 10 % 내리면 99가 됩니다. 기준이 되는 값이 달라지기 때문이죠. 반대로 여러 번 곱할 때 순서(먼저 오르든 내리든)는 최종 결과에 영향을 주지 않습니다.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

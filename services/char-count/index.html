@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "글자수 세기",
+      "item": "https://tool-hub.me/char-count/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "공백 포함과 공백 제외 중 어떤 기준으로 세어야 하나?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "기업 공고나 제출처마다 기준이 다릅니다. 공백 포함 글자수를 기준으로 삼는 곳이 가장 많으며, 자소서나 지원서에 \"○○자 이내\"라고만 적힌 경우 공백 포함으로 계산하는 것이 일반적입니다. 반면 일부 공고는 \"공백 제외 ○○자\"라고 명시합니다. 공고 문구를 확인한 뒤 이 글자수 세기 도구의 두 수치를 모두 참고하세요. 헷갈리면 더 엄격한 쪽(공백 포함) 기준으로 맞추는 것이 안전합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "바이트 수가 두 가지인 이유는?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "한글 한 글자는 인코딩 방식에 따라 바이트 크기가 달라집니다. UTF-8에서는 한글 한 자가 3byte를 차지하며, 이는 현대 웹 표준 인코딩입니다. 반면 사람인·잡코리아·일부 공공기관 시스템은 EUC-KR 방식으로 한글을 2byte로 처리합니다. 같은 자소서라도 어느 시스템에 입력하느냐에 따라 바이트 계산기 결과가 다를 수 있어, 두 가지 바이트 수를 모두 제공합니다. 시스템이 \"몇 byte 이내\"라고 제한을 걸고 있다면 해당 시스템의 인코딩에 맞는 수치를 참고하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "원고지 매수는 어떻게 계산하나?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "원고지 매수는 공백·구두점을 포함한 공백 포함 글자수를 200으로 나눠 올림한 값입니다. 일반적인 원고지는 한 면이 20자×10행 = 200자 기준이기 때문입니다. 예를 들어 글자수 201자이면 원고지 2매로 계산됩니다. 보고서·과제 제출에 \"원고지 ○매 이상\"이라는 조건이 있을 때 활용하세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "이모지나 특수문자는 몇 글자로 계산되나?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이모지(예: 😀)는 유니코드 코드포인트 기준으로 1글자로 셉니다. 이 도구는 서로게이트 페어가 깨지지 않도록 Array.from(text).length 방식으로 글자수를 셉니다. 다만 바이트는 UTF-8 실제 인코딩 결과로 계산되므로, 이모지 하나가 4byte를 차지할 수 있습니다. 특수문자는 종류에 따라 1byte(ASCII)~3byte(한자·특수기호)까지 다양합니다. 자소서 글자수 제한은 대부분 코드포인트(글자) 기준이므로 걱정 없이 사용하셔도 됩니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "입력한 텍스트가 서버로 전송되나?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니오. 이 글자수 세기 도구의 모든 계산은 브라우저 안에서만 이루어집니다. 입력한 텍스트는 인터넷을 통해 어디에도 전송되지 않습니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값이 이 기기의 localStorage에만 저장되며, 이것 역시 외부로 전송되지 않습니다. 민감한 자소서 글자수 확인도 안심하고 사용하세요."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -115,17 +183,6 @@
     <div class="result" id="result" hidden></div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2>글자수 세기 도구 안내</h2>
-    <p>이 글자수 세기 도구는 텍스트를 붙여넣는 즉시 공백 포함·제외 글자수, 단어 수, 원고지 매수, UTF-8과 한글 2바이트 기준 바이트 수를 실시간으로 계산합니다. 글자수·바이트 제한이 걸린 자기소개서, 리포트, 지원서, SNS 게시글을 쓰는 분이 제출 전에 분량을 정확히 맞추는 데 도움이 됩니다.</p>
-    <h3>사용 방법</h3>
-    <p>입력창에 글을 붙여넣거나 직접 타이핑하면 아래 여섯 개 지표가 실시간으로 갱신됩니다. 목표 글자수 칸에 제한값(예: 500)을 넣으면 현재 글자수와 남은 분량 또는 초과한 분량을 색으로 알려 주는 배너가 나타납니다. 계산 버튼을 누를 필요 없이 수정하는 대로 값이 바뀝니다.</p>
-    <h3>글자수·바이트 계산 방식</h3>
-    <p>글자수는 유니코드 코드포인트 개수로 세므로 이모지도 1자로 처리됩니다. 공백 제외 값은 띄어쓰기·줄바꿈·탭을 뺀 수이고, 바이트는 실제 인코딩 규칙을 따릅니다. 예를 들어 안녕하세요 ABC라는 글은 공백 포함 9자, 공백 제외 8자입니다. UTF-8에서는 한글 5자 × 3바이트 + 공백·영문 4바이트 = 19바이트, 한글 2바이트 기준으로는 5 × 2 + 4 = 14바이트가 됩니다.</p>
-    <h3>알아두면 좋은 점</h3>
-    <p>줄바꿈과 탭도 공백 포함 글자수에 잡히니, 붙여넣은 뒤 빈 줄이 남아 있지 않은지 확인하세요. 자소서는 대부분 글자수(코드포인트)로 제한하지만 채용 시스템에 따라 바이트로 막는 경우가 있어 두 값을 모두 확인하는 편이 안전합니다. 목표 글자수 배너를 켜 두면 500자·1000자 같은 상한에 맞춰 실시간으로 분량을 조절하기 편합니다.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

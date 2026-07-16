@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blood Alcohol Calculator (BAC) — Estimate your blood alcohol content with the Widmark formula — for reference only</title>
+<title>Blood Alcohol Calculator (BAC) — Widmark Formula Estimate</title>
 <meta name="description" content="Free blood alcohol content (BAC) calculator using the Widmark formula. Enter your sex, body weight, the drinks you had, and hours elapsed to estimate your current BAC and roughly how long until it falls below common legal limits (0.03% / 0.08%). An educational estimate only — never use it to decide whether to drive. Runs 100% in your browser.">
 <meta name="keywords" content="blood alcohol calculator, BAC calculator, Widmark formula calculator, blood alcohol content, 혈중 알코올농도 계산기, 위드마크 공식 계산기">
 <link rel="canonical" href="https://tool-hub.me/blood-alcohol-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Blood Alcohol Calculator (BAC) — Estimate your blood alcohol content with the Widmark formula — for reference only">
+<meta property="og:title" content="Blood Alcohol Calculator (BAC) — Widmark Formula Estimate">
 <meta property="og:description" content="Free blood alcohol content (BAC) calculator using the Widmark formula. Enter your sex, body weight, the drinks you had, and hours elapsed to estimate your current BAC and roughly how long until it falls below common legal limits (0.03% / 0.08%). An educational estimate only — never use it to decide whether to drive. Runs 100% in your browser.">
 <meta property="og:url" content="https://tool-hub.me/blood-alcohol-calc/">
 <meta property="og:image" content="https://tool-hub.me/blood-alcohol-calc/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blood Alcohol Calculator (BAC)",
+      "item": "https://tool-hub.me/blood-alcohol-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Widmark formula and how is BAC estimated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Widmark formula is the classic way to estimate blood alcohol content (BAC). This blood alcohol calculator adds up the pure ethanol in your drinks in grams (A), then computes peak BAC = A ÷ (body weight in grams × r) × 100, where r is a body-water constant (0.68 for men, 0.55 for women). It then subtracts the alcohol your liver has already burned off — about 0.015% per hour — to estimate your current BAC. It is the same Widmark formula calculator method used in textbooks, applied entirely in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is this, and why can't I trust it to decide to drive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treat every number here as a rough educational estimate, not a measurement. Real BAC varies widely with food in your stomach, how fast you drank, body composition, liver health, medication and even the day. Two people of the same weight can end up far apart, and your true BAC can be higher than this calculator shows. Only a breathalyzer or blood test measures your actual level — so never use a BAC calculator to decide whether it is safe to drive. If you have been drinking, do not drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take for alcohol to leave your system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your body clears alcohol at a fairly steady rate of roughly 0.015% BAC per hour, and only time lets the liver do this work. Coffee, cold showers, water, food and fresh air can make you feel more alert but do not speed up how fast alcohol leaves your system. This calculator shows an estimated time until your BAC falls below common limits and back to about 0.00%, but the safest assumption is always to allow more time than the estimate suggests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the legal BAC limits around the world?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Legal driving limits differ by country: about 0.03% in South Korea and Japan, 0.05% across much of Europe, and 0.08% in the United States and the United Kingdom. Many places set a zero or near-zero limit for novice, young or commercial drivers. Because the threshold that counts as \"over the limit\" depends on where you are, this tool shows reference lines rather than a single pass/fail — and being under a limit still does not mean you are safe to drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my drinking data sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This blood alcohol calculator runs 100% in your browser. Your sex, weight, drinks and hours are used only to compute an estimate on your device and are never uploaded to any server. For convenience they are saved to your browser's localStorage so the form is ready next time, and you can clear them anytime by clearing your site data."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -120,17 +188,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About the blood alcohol calculator</h2>
-    <p data-i18n="guide.lead">Estimate your blood alcohol concentration (BAC) from the drinks you have had, your weight and sex. It is an educational guide to how alcohol adds up — never a green light to drive.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Enter your sex and body weight, then the number and type of drinks and the time since your first one. The tool returns an estimated BAC as a percentage and a rough sense of how long until it falls back to zero.</p>
-    <h3 data-i18n="guide.howTitle">The Widmark formula</h3>
-    <p data-i18n="guide.howBody">BAC is estimated with the Widmark equation: BAC = grams of alcohol ÷ (body weight in grams × r) × 100, minus the alcohol already metabolised. The distribution factor r is about 0.68 for men and 0.55 for women, and the body clears roughly 0.015% per hour. For example, a 70 kg man who has had two 14 g standard drinks peaks near 0.05% before metabolism is subtracted.</p>
-    <h3 data-i18n="guide.tipTitle">Important limits</h3>
-    <p data-i18n="guide.tipBody">This is only an estimate — real BAC also depends on food, hydration, medication, genetics and how fast you drank, which no formula fully captures. Never use it to decide whether to drive. In many countries the legal limit is 0.03–0.05%, and the only safe amount before driving is zero.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

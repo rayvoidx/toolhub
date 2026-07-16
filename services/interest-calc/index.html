@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>이자 계산기 — 원금·이율·기간 입력, 단리/복리 세후 이자 즉시 확인</title>
+<title>Interest Calculator — Simple & Compound After-Tax Interest</title>
 <meta name="description" content="예금 이자 계산기. 원금·연이율·기간을 입력하면 단리/월복리/연복리, 일반과세·세금우대·비과세 기준 세후 이자와 만기 수령액을 즉시 계산하는 무료 도구">
 <meta name="keywords" content="이자 계산기, 예금 이자 계산기, 단리 계산기, 복리 계산기, 세후 이자 계산">
 <link rel="canonical" href="https://tool-hub.me/interest-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="이자 계산기 — 원금·이율·기간 입력, 단리/복리 세후 이자 즉시 확인">
+<meta property="og:title" content="Interest Calculator — Simple & Compound After-Tax Interest">
 <meta property="og:description" content="예금 이자 계산기. 원금·연이율·기간을 입력하면 단리/월복리/연복리, 일반과세·세금우대·비과세 기준 세후 이자와 만기 수령액을 즉시 계산하는 무료 도구">
 <meta property="og:url" content="https://tool-hub.me/interest-calc/">
 <meta property="og:image" content="https://tool-hub.me/interest-calc/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interest Calculator",
+      "item": "https://tool-hub.me/interest-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "단리·월복리·연복리는 무엇이 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "단리는 원금에만 이자가 붙습니다(원금×연이율×기간). 월복리는 매달, 연복리는 매년 발생한 이자가 원금에 더해져 다시 이자가 붙습니다. 국내 은행 정기예금은 대부분 만기 일시지급식 단리라서 기본값을 단리로 두었고, 라디오 버튼만 바꾸면 이 이자 계산기를 단리 계산기·복리 계산기로 모두 쓸 수 있어 세 방식의 이자 차이를 한 화면에서 비교할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "이자소득세 15.4%는 어떻게 구성되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이자소득세 14%에 지방소득세 1.4%(소득세의 10%)를 더한 값입니다. 은행 예금 이자에는 기본적으로 15.4%가 원천징수되며, 이 계산기의 '일반과세'가 그 기준이라 세후 이자 계산 결과가 실제 수령액에 가깝습니다. 상호금융 조합원이라면 세금우대 9.5%, 비과세종합저축(만 65세 이상 등) 대상이라면 비과세 0%를 선택해 비교해 보세요."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "72의 법칙이 무엇인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "72를 연이율(%)로 나누면 복리로 원금이 2배가 되는 데 걸리는 햇수를 어림할 수 있는 법칙입니다. 예를 들어 연 4% 복리면 72÷4=약 18년입니다. 이 계산기의 연복리 옵션에서 기간을 바꿔 가며 세전 이자가 원금에 가까워지는 시점을 직접 확인해 볼 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "예금(거치식)과 적금(적립식)의 이자는 어떻게 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "예금은 목돈 전액이 전체 기간 동안 예치되지만, 적금은 매달 나눠 넣어 평균 예치 기간이 만기의 절반 수준입니다. 그래서 같은 연 이율이라도 적금의 세전 이자는 예금의 약 절반입니다. 이 예금 이자 계산기는 목돈 거치식 기준이므로, 매달 납입하는 적금은 적금 만기 계산기를 이용하세요. 적금 만기 계산기로 계산하기 →"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "계산 결과가 은행의 실제 이자와 왜 다를 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "이 계산기는 개월 단위 예치와 원 단위 버림을 가정한 세후 이자 계산 도구입니다. 실제 은행은 예치일 기준 일할 계산을 적용하고, 중도해지 시 약정보다 낮은 중도해지 금리가 적용되며, 우대금리 조건 충족 여부에 따라 적용 금리도 달라집니다. 그래서 실제 지급액과 몇 원~몇천 원 정도 차이가 날 수 있으며, 결과는 참고용으로 활용하세요."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -143,17 +211,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">이 이자 계산기 소개</h2>
-    <p data-i18n="guide.lead">이 무료 이자 계산기는 원금·연이율·기간을 넣으면 단리, 월복리, 연복리로 붙는 이자를 구하고 이자소득세를 뗀 세후 이자와 만기 수령액까지 한 번에 보여 줍니다. 예금 상품을 비교하거나 목돈을 얼마간 맡길 때 실제로 손에 쥐는 금액이 궁금한 사람에게 알맞습니다.</p>
-    <h3 data-i18n="guide.useTitle">사용 방법</h3>
-    <p data-i18n="guide.useBody">원금과 세전 연이율(%)을 입력하고, 기간을 개월 수로 넣거나 6·12·24·36개월 프리셋을 누르세요. 이자 방식(단리·월복리·연복리)과 과세 방식(일반 15.4%·세금우대 9.5%·비과세)을 고른 뒤 '계산하기'를 누르면 만기 수령액, 원금, 세전 이자, 이자 과세, 세후 이자가 한눈에 표시됩니다.</p>
-    <h3 data-i18n="guide.howTitle">계산 원리</h3>
-    <p data-i18n="guide.howBody">단리 이자는 원금 × 연이율 × 기간(년)입니다. 1,000만 원을 연 3.5%로 1년 맡기면 세전 이자 = 10,000,000 × 0.035 × 1 = 350,000이고, 일반과세 15.4%를 떼면 세금 53,900, 세후 이자는 296,100입니다. 월복리는 매달 이자가 원금에 더해져 (1 + 0.035÷12)^12 ≈ 1.0356배로 불어나, 같은 조건에서 세전 이자가 약 355,700으로 단리보다 조금 많습니다.</p>
-    <h3 data-i18n="guide.tipTitle">알아두면 좋은 점</h3>
-    <p data-i18n="guide.tipBody">예금을 비교할 때는 광고에 적힌 세전 이율이 아니라 세후 이자로 견주세요. 세금우대나 비과세 대상이라면 같은 이율이라도 손에 쥐는 금액이 커집니다. 이율 차이는 작아 보여도 기간이 길수록 복리로 벌어지니, 방식과 기간을 바꿔 가며 비교해 보세요. 결과는 원 단위 버림 기준의 추정치이므로 가입 전 참고용으로 활용하세요.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

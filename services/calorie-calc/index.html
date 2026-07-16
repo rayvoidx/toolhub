@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Calories Burned Calculator — Enter activity, duration, and weight to see calories burned instantly</title>
-<meta name="description" content="Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up.">
+<title>Calories Burned Calculator — MET-based Exercise Calorie</title>
+<meta name="description" content="Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up, no ads.">
 <meta name="keywords" content="calories burned calculator, 칼로리 소모 계산기, exercise calorie calculator, MET calculator, 운동 칼로리 계산">
 <link rel="canonical" href="https://tool-hub.me/calorie-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Calories Burned Calculator — Enter activity, duration, and weight to see calories burned instantly">
-<meta property="og:description" content="Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up.">
+<meta property="og:title" content="Calories Burned Calculator — MET-based Exercise Calorie">
+<meta property="og:description" content="Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up, no ads.">
 <meta property="og:url" content="https://tool-hub.me/calorie-calc/">
 <meta property="og:image" content="https://tool-hub.me/calorie-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,16 +23,84 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Calories Burned Calculator",
-  "description": "Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up.",
+  "description": "Free calories burned calculator. Enter your activity, exercise duration, and body weight to instantly estimate calories burned with the MET formula, plus food equivalents and comparisons to other workouts. No sign-up, no ads.",
   "url": "https://tool-hub.me/calorie-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calories Burned Calculator",
+      "item": "https://tool-hub.me/calorie-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a MET?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A MET (Metabolic Equivalent of Task) is the ratio of your energy use during an activity to your energy use at rest. Sitting quietly is 1 MET; an activity rated at 8 METs burns about eight times as much energy per minute. This calories burned calculator multiplies the activity's MET value by your body weight and time using the standard formula kcal = MET × 3.5 × weight(kg) ÷ 200 × minutes, so the answer scales with both how hard and how long you exercised."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does this differ from my smartwatch or running app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A MET calculator uses population-average values for each activity, while a smartwatch adds your real-time heart rate, GPS pace and personal profile. Neither is exact — wearables typically run 10-30% off in validation studies. Treat this exercise calorie calculator as a quick, ad-free estimate for planning, not a lab measurement, and expect some gap from any device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do calories differ by intensity for the same activity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because effort is what burns energy. Running at 10 km/h has a higher MET than a brisk walk, so it burns more per minute even though both are \"on your feet.\" That is why this tool lists activities by intensity (slow vs brisk walking, moderate vs vigorous cycling): picking the option that matches your actual pace gives a far more accurate calories burned estimate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many calories equal 1 kg or 1 lb of body fat?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roughly 7,700 kcal per kilogram of fat, or about 3,500 kcal per pound. So the ~300 kcal a typical workout burns is a fraction of a kilogram — sustainable fat loss comes from a steady daily deficit, not a single session. Use the food equivalents in this exercise calorie calculator to see how one workout compares to what you eat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my weight sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation in this calories burned calculator runs inside your browser, and your weight, activity and duration never leave your device. Your last entry is saved only to your browser's localStorage for convenience on your next visit, and you can clear it anytime by clearing site data."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -104,17 +172,6 @@
   </section>
   <!-- TOOL:END -->
 
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this calories burned calculator</h2>
-    <p data-i18n="guide.lead">This calories burned calculator turns three quick inputs — activity, duration and body weight — into an estimate of the energy you spent on a workout. It's built for planning and curiosity: comparing a run with a bike ride, sanity-checking a smartwatch, or seeing how a session stacks up against what you eat. It covers walking, running, cycling, swimming, strength work, sports and everyday chores.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Choose an activity from the list — each option names an intensity, like brisk walking or running at 10 km/h, so pick the one closest to your real pace. Enter how many minutes you exercised, then your body weight in kg or lb. Tap Calculate to see the estimated calories burned, food equivalents such as slices of pizza or bananas, and how much the same time would burn in other workouts.</p>
-    <h3 data-i18n="guide.howTitle">The MET formula, with an example</h3>
-    <p data-i18n="guide.howBody">Each activity has a MET value — the ratio of its energy cost to sitting at rest. The tool uses kcal = MET × 3.5 × weight(kg) ÷ 200 × minutes, drawn from the 2011 Compendium of Physical Activities. Running at 8 km/h is about 8.3 METs, so a 70 kg person running 30 minutes burns 8.3 × 3.5 × 70 ÷ 200 × 30 ≈ 305 kcal — roughly one slice of pizza. Double the weight or the time and the number doubles too.</p>
-    <h3 data-i18n="guide.tipTitle">Reading the estimate</h3>
-    <p data-i18n="guide.tipBody">This figure is the gross energy for the session, not extra calories on top of what you would burn anyway just living, so don't eat all of it back. Match the listed intensity to your real pace — over-picking the hard option is the most common way people overestimate burn. Use the food comparisons as a reality check: a single latte or pastry can quietly undo much of a moderate workout.</p>
-  </section>
-
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
@@ -131,7 +188,7 @@
     </details>
     <details>
       <summary data-i18n="faq.q2">Why does this differ from my smartwatch or running app?</summary>
-      <p data-i18n="faq.a2">A MET calculator uses population-average values for each activity, while a smartwatch adds your real-time heart rate, GPS pace and personal profile. Neither is exact — wearables typically run 10-30% off in validation studies. Treat this exercise calorie calculator as a quick estimate for planning, not a lab measurement, and expect some gap from any device.</p>
+      <p data-i18n="faq.a2">A MET calculator uses population-average values for each activity, while a smartwatch adds your real-time heart rate, GPS pace and personal profile. Neither is exact — wearables typically run 10-30% off in validation studies. Treat this exercise calorie calculator as a quick, ad-free estimate for planning, not a lab measurement, and expect some gap from any device.</p>
     </details>
     <details>
       <summary data-i18n="faq.q3">Why do calories differ by intensity for the same activity?</summary>

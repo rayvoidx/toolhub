@@ -135,11 +135,56 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 64px; }
 .header-actions a.home-btn { display:inline-flex; align-items:center; justify-content:center; box-sizing:border-box; width:36px; height:36px; border:1px solid var(--line); border-radius:8px; color:var(--ink); margin-inline-start:6px; text-decoration:none; }
 .header-actions a.home-btn:hover { border-color:var(--accent); }
 
-/* ── 도구 해설 가이드 (콘텐츠 본문) ──────────────────────────── */
-.guide { margin: 40px 0 8px; }
-.guide h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: -0.02em; line-height: 1.3; }
-.guide h3 { font-size: 16px; margin: 24px 0 6px; letter-spacing: -0.01em; }
-.guide p { color: var(--muted); margin: 0 0 12px; }
-.guide ul, .guide ol { color: var(--muted); margin: 0 0 12px; padding-inline-start: 22px; }
-.guide li { margin: 5px 0; }
-.guide strong { color: var(--ink); font-weight: 700; }
+/* ============================================================
+   접근성·인터랙션 기본기 (2026-07-17 UX 패스 — docs/OPTIMIZATION.md §셸 기본기)
+   전부 추가 전용(기존 규칙 무수정)이라 시각 회귀 위험이 낮다.
+   ============================================================ */
+
+/* 다크모드에서 네이티브 컨트롤(셀렉트 드롭다운·숫자 스피너·스크롤바)이
+   라이트로 렌더되던 버그 — color-scheme 속성이 없으면 UA 는 테마를 모른다. */
+:root { color-scheme: light; }
+[data-theme="dark"] { color-scheme: dark; }
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] { color-scheme: dark; }
+}
+
+/* iOS 가로 회전 시 임의 텍스트 확대 방지 */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+
+/* 키보드 사용자의 현재 위치 표시 — 마우스 클릭에는 나타나지 않는다(:focus-visible).
+   입력 필드는 기존 :focus 스타일이 있으므로 제외해 이중 테두리를 피한다. */
+:where(a, button, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* 터치 기기에서 최소 44px 탭 타깃 (Apple HIG / Material 48dp) —
+   데스크톱 36px 은 유지하고 coarse pointer 에서만 키운다. */
+@media (pointer: coarse) {
+  .header-actions button,
+  .header-actions a.home-btn { width: 44px; height: 44px; }
+  .header-actions .lang-select { height: 44px; }
+  .btn { min-height: 48px; }
+  .faq summary { padding: 8px 0; }
+}
+
+/* 전정기관 장애·멀미 사용자의 OS 설정 존중 — 서비스가 추가한 애니메이션까지 봉인 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 탭 피드백 — 버튼이 눌렸다는 물리적 감각 */
+.btn:active { transform: translateY(1px); }
+
+/* 공용 유틸 — 서비스마다 재발명하지 않도록 셸이 제공한다 */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.hint { color: var(--muted); font-size: 14px; margin-top: 8px; }

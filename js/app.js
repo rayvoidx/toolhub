@@ -130,6 +130,12 @@
 
   if (searchEl) {
     searchEl.addEventListener("input", filterCards);
+    // ?q= 딥링크 — WebSite SearchAction 스키마(index.html JSON-LD)의 target 이 실제로 동작해야 한다.
+    // 스키마가 가리키는 URL 이 기능하지 않으면 구조화 데이터 스팸 신호가 된다.
+    try {
+      var q = new URLSearchParams(location.search).get("q");
+      if (q) searchEl.value = q;
+    } catch (e) { /* URLSearchParams 미지원 구형 브라우저 — 검색 자체는 정상 동작 */ }
     filterCards();
   }
   // TOOLJS:END

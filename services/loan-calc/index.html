@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loan Calculator — Monthly payment and total interest in seconds</title>
+<title>Loan Calculator — Monthly Payment, Total Interest</title>
 <meta name="description" content="Free loan calculator with amortization schedule. Enter amount, rate, and term to get your monthly payment and total interest instantly — and compare amortized, equal principal, and interest-only repayment side by side.">
 <meta name="keywords" content="loan calculator, loan payment calculator, amortization calculator, loan interest calculator, 대출이자 계산기, 대출 계산기">
 <link rel="canonical" href="https://tool-hub.me/loan-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Loan Calculator — Monthly payment and total interest in seconds">
+<meta property="og:title" content="Loan Calculator — Monthly Payment, Total Interest">
 <meta property="og:description" content="Free loan calculator with amortization schedule. Enter amount, rate, and term to get your monthly payment and total interest instantly — and compare amortized, equal principal, and interest-only repayment side by side.">
 <meta property="og:url" content="https://tool-hub.me/loan-calc/">
 <meta property="og:image" content="https://tool-hub.me/loan-calc/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Loan Calculator",
+      "item": "https://tool-hub.me/loan-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Amortized vs equal principal — which saves more total interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Equal principal almost always costs less total interest than an amortized (equal-payment) loan at the same rate and term, because you pay the balance down faster. In this loan calculator, run the same amount, rate, and term through both methods and read the \"Total interest by repayment method\" bars. The trade-off is the early burden: equal principal starts with the highest monthly payment and it declines every month, while an amortized loan keeps one fixed, easier-to-budget payment throughout."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does interest-only (balloon) repayment cost the most total interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With interest-only repayment you pay only the interest each month and the full principal as a single balloon at the end, so the balance never shrinks and interest is charged on the whole amount for the entire term. That makes it the most expensive of the three methods in total interest — but the smallest monthly payment until the balloon is due. This amortization calculator shows all three totals side by side so you can see the gap instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do my results differ from my bank's quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This loan payment calculator uses a clean monthly compounding model: monthly rate = annual rate ÷ 12, applied to the outstanding balance. Real lenders may use daily interest accrual, a different day-count convention, variable or promotional rates, origination fees, insurance, or rounding rules of their own. Treat these numbers as an accurate comparison between repayment methods rather than an exact reproduction of a specific bank's contract."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I read an amortization schedule?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each row is one installment. \"Payment\" is what you pay that month, split into \"Principal\" (the part that reduces what you owe) and \"Interest\" (the lender's charge on the remaining balance). \"Balance\" is what's still owed after that payment. Early on, most of an amortized payment is interest; over time the principal share grows. The last balance always reaches zero, and the principal column sums exactly to your loan amount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a 0.5%p rate difference change total interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "More than most people expect on long loans. Because interest compounds over the whole term, even half a percentage point can shift total interest by a large amount on a 20-to-30-year loan. To judge a refinance, enter your current rate, note the total interest, then change only the rate by the offered amount and compare — if the interest saved clearly beats the refinancing fees, the switch usually pays off."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -154,17 +222,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this loan calculator</h2>
-    <p data-i18n="guide.lead">This loan calculator turns a loan amount, an annual interest rate, and a term into your monthly payment, total interest, and a full repayment schedule. It's built for anyone weighing a mortgage, car loan, or personal loan who wants to see the real cost before signing — and to compare amortized, equal-principal, and interest-only repayment side by side in one view.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Type the loan amount using digits only — no currency symbol — then enter the annual interest rate as a percentage. Set the term in years or months, and choose a repayment method: amortized, equal principal, or interest-only. Press Calculate to see the monthly payment, total interest, and total repayment, plus a month-by-month schedule and bars comparing total interest across all three methods.</p>
-    <h3 data-i18n="guide.howTitle">The amortization formula</h3>
-    <p data-i18n="guide.howBody">For an amortized loan the monthly payment is M = P × r × (1+r)^n ÷ ((1+r)^n − 1), where P is the amount borrowed, r is the monthly rate (annual rate ÷ 12), and n is the number of months. Borrow 300,000 at 6% for 30 years: r = 0.005 and n = 360, giving a payment of about 1,799 a month. Over the full term you repay roughly 647,500 — about 347,500 of it interest. Equal-principal and interest-only methods reshape that same balance differently.</p>
-    <h3 data-i18n="guide.tipTitle">Tips &amp; good to know</h3>
-    <p data-i18n="guide.tipBody">A lower monthly payment often hides a higher total cost: stretching the term reduces each payment but adds years of interest, so always check the total-repayment figure, not just the monthly one. Even a modest extra amount paid toward principal each month can shorten the loan and cut interest noticeably. Because everything is computed in your browser, you can test scenarios freely without sharing any financial details.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

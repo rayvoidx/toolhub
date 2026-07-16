@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Color Picker & Converter — Pick any color and convert between HEX, RGB, HSL, HSV & CMYK</title>
+<title>Color Picker & Converter — HEX, RGB, HSL, HSV</title>
 <meta name="description" content="Free online color picker and converter. Pick a color with the swatch or grab one from anywhere on your screen with the eyedropper, then copy it as HEX, RGB(A), HSL(A), HSV or CMYK. See a live preview, transparency (alpha) and a WCAG contrast check. Runs entirely in your browser — nothing is uploaded.">
 <meta name="keywords" content="color picker, hex to rgb, color converter, hsl to hex, rgb to hex, 색상 코드 변환, HEX RGB 변환, 색상 변환기, 컬러 피커">
 <link rel="canonical" href="https://tool-hub.me/color-picker/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Color Picker & Converter — Pick any color and convert between HEX, RGB, HSL, HSV & CMYK">
+<meta property="og:title" content="Color Picker & Converter — HEX, RGB, HSL, HSV">
 <meta property="og:description" content="Free online color picker and converter. Pick a color with the swatch or grab one from anywhere on your screen with the eyedropper, then copy it as HEX, RGB(A), HSL(A), HSV or CMYK. See a live preview, transparency (alpha) and a WCAG contrast check. Runs entirely in your browser — nothing is uploaded.">
 <meta property="og:url" content="https://tool-hub.me/color-picker/">
 <meta property="og:image" content="https://tool-hub.me/color-picker/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Color Picker & Converter",
+      "item": "https://tool-hub.me/color-picker/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "HEX, RGB, HSL, HSV and CMYK — what does each color format mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are five ways to write the same color. HEX (#RRGGBB) is the compact hexadecimal notation CSS and design tools use most; this color converter turns any HEX to RGB and back. RGB(A) gives the red, green and blue channels as 0–255 (plus an optional alpha for transparency) and is how screens actually mix light. HSL and HSV both describe a color by its hue (the angle on the color wheel), saturation and either lightness (HSL) or value/brightness (HSV) — far more intuitive when you want a lighter or more muted variant. CMYK (cyan, magenta, yellow, black as percentages) is the subtractive model for print. Pick a color once and this tool shows every format at the same time, each with its own copy button."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I pick a color from anywhere on my screen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click “Pick from screen” and a magnifier appears — hover over any pixel, anywhere on your display (a photo, another app, a website), and click to grab its exact color. It uses the browser’s built-in EyeDropper API, so the button only shows up where that is supported: today that means Chromium browsers such as Chrome, Edge, Opera and Brave on desktop. Firefox and Safari do not expose the API yet, so the button is hidden there and you can still type or paste any color code instead. Nothing about the screen is uploaded — the sampling happens locally in the browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 8-digit hex and the alpha channel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alpha is the opacity of a color: 1 (or 100%) is fully solid and 0 is fully transparent. A normal 6-digit hex like #d946ef has no alpha, so to store transparency CSS added 8-digit hex — #RRGGBBAA — where the last two digits are the alpha as hex (for example #d946ef80 is about 50% opaque). This picker has an opacity slider; the moment you drop below 100% it adds the 8-digit hex and the rgba()/hsla() rows so you can copy whichever your CSS needs, and the preview shows the checkerboard through the transparent color."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the WCAG AA / AAA contrast badge tell me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It measures how legible text would be on the color you picked. The tool computes the WCAG contrast ratio (from 1:1 up to 21:1) for both black and white text and marks the more readable one as “Best”. As a rule of thumb, normal body text needs a ratio of at least 4.5:1 to pass WCAG AA and 7:1 to reach the stricter AAA, while large or bold text can pass AA at 3:1. If both black and white read “Fail”, the color is a poor background for text and you should darken or lighten it. This lets designers check accessibility while they choose a color, not afterward."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my color data sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every conversion — HEX to RGB, RGB to HEX, HSL, HSV, CMYK, the contrast check and the eyedropper — runs entirely in your browser with plain JavaScript. Nothing is uploaded, logged or shared, so it is safe to use with brand or client colors. Your last color is remembered only in your own browser’s local storage so the tool reopens where you left off, and the page URL also carries the color so you can bookmark or share an exact shade."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -180,17 +248,6 @@
     <p class="cp-toast" id="cp-toast" role="status" aria-live="polite"></p>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this color picker &amp; converter</h2>
-    <p data-i18n="guide.lead">This free color picker lets you choose a color from a swatch, paste any code, or grab one from your screen with the eyedropper, then instantly see it as HEX, RGB, HSL, HSV and CMYK. It's built for designers, developers and anyone matching brand colors, building a palette, or converting a value between formats — all in your browser.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Click the swatch to pick a color, or paste a code — #4f46e5, rgb(79, 70, 229) or even a name like rebeccapurple — into the text box. Drag the opacity slider to add transparency, and use Pick from screen (in Chrome or Edge) to sample any pixel. Every format appears at once with its own copy button, a live preview shows contrast, and you can reveal tints and shades to build a palette.</p>
-    <h3 data-i18n="guide.howTitle">How the conversions work</h3>
-    <p data-i18n="guide.howBody">Each format is the same color expressed with different math. HEX packs every channel into two base-16 digits, so in #4f46e5 the 4f means 4×16+15 = 79 red, 46 means 70 green and e5 means 229 blue — exactly rgb(79, 70, 229). To reach HSL, each channel is divided by 255 and the hue is read from whichever channel is largest, giving roughly hsl(244, 75%, 59%). CMYK inverts and rescales the channels for print. One pick runs all of these at once, so every equivalent code stays in sync.</p>
-    <h3 data-i18n="guide.tipTitle">Tips &amp; good to know</h3>
-    <p data-i18n="guide.tipBody">When adjusting a color, tweak HSL rather than HEX — nudging lightness or saturation is far more predictable than editing raw hex digits. The eyedropper is perfect for matching a color from a screenshot or photo. Check the contrast readout before placing a color behind text, and reach for the 8-digit hex only where you truly need transparency, since some older tools ignore the alpha pair.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Online Stopwatch — Lap times, 1/100s precision, keyboard shortcuts — a free online stopwatch</title>
-<meta name="description" content="Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install.">
+<title>Online Stopwatch — Lap times, 1/100s precision</title>
+<meta name="description" content="Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install, no ads.">
 <meta name="keywords" content="online stopwatch, stopwatch with laps, lap timer, stopwatch online, 스톱워치, 온라인 스톱워치, 초시계">
 <link rel="canonical" href="https://tool-hub.me/stopwatch/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Online Stopwatch — Lap times, 1/100s precision, keyboard shortcuts — a free online stopwatch">
-<meta property="og:description" content="Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install.">
+<meta property="og:title" content="Online Stopwatch — Lap times, 1/100s precision">
+<meta property="og:description" content="Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install, no ads.">
 <meta property="og:url" content="https://tool-hub.me/stopwatch/">
 <meta property="og:image" content="https://tool-hub.me/stopwatch/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,16 +23,84 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Online Stopwatch",
-  "description": "Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install.",
+  "description": "Free online stopwatch with lap times. Start with the spacebar, measure to 1/100 of a second, highlight your best and worst laps, keep time through page refreshes, and copy results — no install, no ads.",
   "url": "https://tool-hub.me/stopwatch/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Online Stopwatch",
+      "item": "https://tool-hub.me/stopwatch/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the stopwatch accurate when the tab is in the background or the device is asleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Instead of adding up ticks, this online stopwatch records the moment you press start and, on every frame, recomputes elapsed time as the difference from the system clock. So even if the browser throttles a background tab or the screen sleeps, the time is correct the instant you return — no drift piling up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a lap (split) and the total time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The total is the full time since you pressed start. A lap — also called a split — is the time for that segment alone: the gap between one lap press and the previous one. Press L or the Lap button and the stopwatch records both, so you see each interval and the running total side by side. With two or more laps, the fastest is highlighted in green and the slowest in red."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do my times survive a page refresh or closing the browser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The running state and every lap are saved in your browser's localStorage under the stopwatch: key, and nothing is sent to a server. Refresh the page or reopen it later and a stopwatch that was running keeps counting from the right moment, with all laps intact. Reset clears them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the keyboard shortcuts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Space starts and pauses, L records a lap, and R resets. The shortcuts read physical key positions, so they work the same on any keyboard layout or input method, and they're ignored while you're typing in a field — so they never get in the way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I paste my lap times into Excel or Google Sheets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Press Copy results and the laps are copied as tab-separated text — lap number, split and total per line. Paste into Excel, Google Sheets or Numbers and each value lands in its own cell automatically. If the browser blocks the clipboard, the results appear on screen so you can select and copy them by hand."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -99,17 +167,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this online stopwatch</h2>
-    <p data-i18n="guide.lead">This free online stopwatch measures elapsed time counting up from zero, to a hundredth of a second, and records lap (split) times as you go. It's handy for timing a workout or run, a cooking step, a presentation rehearsal, or any task where you want to know exactly how long something took.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Press Start — or tap the spacebar — and the display counts up. Hit Lap (or the L key) each time you want to mark a segment; every lap is listed with its own split and the running total. Space pauses and resumes, R resets. When you're done, Copy results puts the whole table on your clipboard as tab-separated text.</p>
-    <h3 data-i18n="guide.howTitle">How it works</h3>
-    <p data-i18n="guide.howBody">The stopwatch stores the timestamp when you press start and, on every frame, shows elapsed time as now minus that start (plus any time banked before a pause). A lap's split is the current total minus the previous lap's total. Start, and at 1:12.30 tap Lap — split one is 1:12.30. Tap again at 2:00.00 — split two is 2:00.00 minus 1:12.30, which is 47.70. With two or more laps the fastest turns green and the slowest red.</p>
-    <h3 data-i18n="guide.tipTitle">Tips &amp; good to know</h3>
-    <p data-i18n="guide.tipBody">Lap timing is the real strength here: use it to compare rounds in interval training, laps of a track, or repeated runs of a task, then read the green and red highlights to spot your best and worst. The spacebar makes it hands-free when your hands are busy. Because the digits are fixed-width, the numbers stay steady and easy to read as they tick.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

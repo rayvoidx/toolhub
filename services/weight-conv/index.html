@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Weight Converter — Kilograms, pounds, ounces, stone ↔ all at once</title>
+<title>Weight Converter — kg to lbs, pounds to kg, ounces to grams</title>
 <meta name="description" content="Free online weight & mass converter. Type one number and instantly see it in milligrams, grams, kilograms, tonnes, ounces, pounds and stone — plus Korean geun and don — all in your browser.">
 <meta name="keywords" content="weight converter, kg to lbs, lbs to kg, pounds to kg, ounces to grams, stone to kg, 무게 단위 변환, 파운드 킬로그램 변환">
 <link rel="canonical" href="https://tool-hub.me/weight-conv/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Weight Converter — Kilograms, pounds, ounces, stone ↔ all at once">
+<meta property="og:title" content="Weight Converter — kg to lbs, pounds to kg, ounces to grams">
 <meta property="og:description" content="Free online weight & mass converter. Type one number and instantly see it in milligrams, grams, kilograms, tonnes, ounces, pounds and stone — plus Korean geun and don — all in your browser.">
 <meta property="og:url" content="https://tool-hub.me/weight-conv/">
 <meta property="og:image" content="https://tool-hub.me/weight-conv/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Weight Converter",
+      "item": "https://tool-hub.me/weight-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many pounds are in a kilogram?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 kilogram = 2.2046226218 pounds, and 1 pound = 0.45359237 kg exactly — the exact value of the international avoirdupois pound, not a rounded 2.2. So going kg to lbs, 70 kg ≈ 154.32 lb; going pounds to kg, 150 lb ≈ 68.04 kg. This weight converter uses the exact factor, so kg-to-lbs and lbs-to-kg both stay accurate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about ounces and stone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 ounce = 28.349523125 grams (so converting ounces to grams is handy for recipes and postage), 1 pound = 16 ounces, and 1 stone = 14 pounds = 6.35029318 kg. Stone is the everyday body-weight unit in the UK and Ireland, so 11 st = 154 lb ≈ 69.85 kg. Type a value once to see stone to kg and every other unit at the same time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are 근 (geun) and 돈 (don)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are traditional Korean mass units. One 근 (geun) is 600 g, used to weigh food such as meat and vegetables at markets. One 돈 (don) is 3.75 g, the standard unit for weighing gold and other precious metals at jewelers. Most global converters leave them out, so this tool adds both next to the metric and imperial units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How precise are the results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every conversion keeps up to 10 significant figures, then trims trailing zeros for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values use the exact SI definition of each unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my input sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This weight converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example pounds → kilograms), kept in your browser's local storage so it is ready next time. The value itself is not stored."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -157,17 +225,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this weight converter</h2>
-    <p data-i18n="guide.lead">This weight and mass converter shows one figure in every common unit at the same time — milligrams, grams, kilograms and tonnes in metric, ounces, pounds and stone in imperial, plus the traditional Korean 근 (geun) and 돈 (don). It is built for recipes, shipping labels, gym goals, market shopping and jewelry, where the same weight is quoted in whichever unit a country or trade prefers.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Enter your number in the Value box, set From to the unit you have and To to the unit you want, and read the headline equivalent as you type. The table underneath lists all nine units together, so a single pound or kilogram is shown as grams, ounces, stone and more at once. Use the swap arrow to flip the pair, and Copy to lift the main result to your clipboard.</p>
-    <h3 data-i18n="guide.howTitle">How the conversion works</h3>
-    <p data-i18n="guide.howBody">Each unit is defined in grams, so your value is converted to grams and then out to the target. The key factors are exact: 1 kg = 1000 g, 1 pound = 453.59237 g, 1 ounce = 28.349523125 g, 1 근 = 600 g and 1 돈 = 3.75 g. As a worked example, buying 3 근 of beef at a Korean market is 3 × 600 = 1800 g = 1.8 kg, which is about 3.97 pounds.</p>
-    <h3 data-i18n="guide.tipTitle">Tips &amp; good to know</h3>
-    <p data-i18n="guide.tipBody">Weight in everyday speech usually means mass here, which is what a scale reports. For a quick check, a kilogram is a bit over two pounds and 100 g is around 3.5 ounces. Keep 근 for food shopping and 돈 for gold — a common gold ring of 1 돈 is just 3.75 g. When precision matters, prefer grams or kilograms, since they avoid the rounding that creeps into ounces.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

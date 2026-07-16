@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Time Zone Converter — Convert one time to major cities at once — with automatic daylight saving</title>
-<meta name="description" content="Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up.">
+<title>Time Zone Converter — convert one time to major cities</title>
+<meta name="description" content="Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up, ad-free.">
 <meta name="keywords" content="time zone converter, world time, time zone difference, daylight saving time calculator, 시간대 변환기, 세계 시간 변환, 한국 미국 시차">
 <link rel="canonical" href="https://tool-hub.me/time-zone-conv/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Time Zone Converter — Convert one time to major cities at once — with automatic daylight saving">
-<meta property="og:description" content="Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up.">
+<meta property="og:title" content="Time Zone Converter — convert one time to major cities">
+<meta property="og:description" content="Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up, ad-free.">
 <meta property="og:url" content="https://tool-hub.me/time-zone-conv/">
 <meta property="og:image" content="https://tool-hub.me/time-zone-conv/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -23,16 +23,84 @@
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Time Zone Converter",
-  "description": "Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up.",
+  "description": "Free online time zone converter. Enter one time and instantly see it in New York, London, Tokyo and more, with UTC offsets, +1 day / -1 day badges and automatic daylight saving. No install, no sign-up, ad-free.",
   "url": "https://tool-hub.me/time-zone-conv/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Time Zone Converter",
+      "item": "https://tool-hub.me/time-zone-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the converter handle daylight saving time (DST) automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. This time zone converter never stores fixed offsets. It reads each city's UTC offset for the exact instant you enter from your browser's built-in IANA time zone database, which already knows every country's daylight saving rules and the exact dates they switch. So if the moment you pick falls after a city has sprung forward, the result reflects that automatically — a \"DST\" badge appears on cities that are on daylight saving time, and no offset is ever hardcoded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many hours ahead or behind is one city from another?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Read the UTC offset badge on each card. A city showing UTC+9:00 and another showing UTC-4:00 are 13 hours apart (9 plus 4). Because the offsets are worked out in minutes for the exact instant you chose, half-hour and quarter-hour zones such as India (UTC+5:30) and Nepal (UTC+5:45) are shown exactly, and the +1 day / -1 day badge tells you when the difference pushes a city onto the next or previous calendar day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the time zone data come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "From the IANA time zone database that is built into your own browser and operating system — the same database phones and computers use worldwide. Nothing you enter is sent to a server: the entire conversion runs on your device, so your base time and city list stay private. Your chosen cities are saved locally with localStorage on this device, and in private browsing they simply reset when you close the tab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I read the +1 day / -1 day badge when scheduling a meeting across time zones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The badge tells you whether a city lands on a different calendar day from your base time. Say you set 4:00 PM in Los Angeles for a call: Tokyo may show the next morning with a +1 day badge, while it is still the same day for London. Checking these badges before you send an invite is the easiest way to avoid booking someone for 9 a.m. when it is really 2 a.m. the following night for them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What time does the New York Stock Exchange open in my time zone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The NYSE opens at 9:30 AM Eastern Time and closes at 4:00 PM Eastern. To see that in your own time, set the base time zone to New York, enter 9:30 AM, then add your own city as a card — the converter shows the exact local time and whether it falls on the same day. Because it follows daylight saving automatically, the answer stays correct whether New York is on EST in winter or EDT in summer."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -87,17 +155,6 @@
     <div id="tzc-toast" role="status" aria-live="polite" hidden style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;box-shadow:0 6px 20px rgba(0,0,0,.28);z-index:50;max-width:90vw;text-align:center;"></div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About this time zone converter</h2>
-    <p data-i18n="guide.lead">This free time zone converter takes one specific moment and shows what it is in several cities at once. Unlike a live clock, you choose the exact date and time, so it's ideal for scheduling — booking a cross-border meeting, catching a livestream or product launch, or planning a call while everyone is still awake.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Set the base date and time — or tap Now for the current moment — and choose the base time zone it belongs to. Then add cities from the dropdown. Each card shows that same instant in local time, with a UTC offset badge and a +1 day or -1 day marker when the date rolls over. Daylight saving is applied for the exact date you picked.</p>
-    <h3 data-i18n="guide.howTitle">How it works</h3>
-    <p data-i18n="guide.howBody">Your base time is anchored to a single instant in UTC using the base zone's offset, then re-expressed in each city's offset — so the gap between two cities is just the difference of their offsets. Enter 9:00 AM in New York (UTC-4): that is 1:00 PM UTC, so London (UTC+1) shows 2:00 PM the same day and Tokyo (UTC+9) shows 10:00 PM. Sydney (UTC+10) lands at 11:00 PM, still the same calendar day.</p>
-    <h3 data-i18n="guide.tipTitle">Tips &amp; good to know</h3>
-    <p data-i18n="guide.tipBody">For a meeting, nudge the base time until every card sits in a daytime window — then send the invite in each person's local time. Tap Now to see how the current moment spreads across your cities. Remember this converts one chosen instant, not a live clock, so it's the tool for planning ahead; for the ticking current time in each city, use a world clock instead.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
