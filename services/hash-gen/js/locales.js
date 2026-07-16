@@ -27,6 +27,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Privacy Policy",
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
+    "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Hash Generator — MD5, SHA-1, SHA-256, SHA-384 & SHA-512",
     "meta.description": "Free online hash generator. Compute MD5, SHA-1, SHA-256, SHA-384 and SHA-512 from text or files all at once, paste an expected checksum to verify a download, and copy any result — everything runs in your browser. Nothing is uploaded.",
@@ -76,6 +77,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "隐私政策",
     "footer.more": "更多工具",
     "footer.credit": "由 rayv 制作",
+    "footer.coffee": "☕ 请我喝杯咖啡",
 
     "meta.title": "哈希生成器 — MD5、SHA-1、SHA-256、SHA-384 与 SHA-512",
     "meta.description": "免费在线哈希生成器。可从文本或文件一次性计算 MD5、SHA-1、SHA-256、SHA-384 和 SHA-512，粘贴预期校验和即可验证下载文件，并复制任意结果——全部在浏览器本地完成，不上传任何数据。",
@@ -125,6 +127,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "गोपनीयता नीति",
     "footer.more": "और टूल्स",
     "footer.credit": "निर्माता: rayv",
+    "footer.coffee": "☕ मुझे एक कॉफ़ी पिलाएँ",
 
     "meta.title": "हैश जनरेटर — MD5, SHA-1, SHA-256, SHA-384 और SHA-512",
     "meta.description": "मुफ़्त ऑनलाइन हैश जनरेटर। टेक्स्ट या फ़ाइल से MD5, SHA-1, SHA-256, SHA-384 और SHA-512 एक साथ निकालें, अपेक्षित चेकसम पेस्ट करके डाउनलोड सत्यापित करें, और कोई भी परिणाम कॉपी करें — सब कुछ आपके ब्राउज़र में ही चलता है। कुछ भी अपलोड नहीं होता।",
@@ -174,6 +177,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de privacidad",
     "footer.more": "Más herramientas",
     "footer.credit": "Creado por rayv",
+    "footer.coffee": "☕ Invítame a un café",
 
     "meta.title": "Generador de hash — MD5, SHA-1, SHA-256, SHA-384 y SHA-512",
     "meta.description": "Generador de hash en línea gratuito. Calcula MD5, SHA-1, SHA-256, SHA-384 y SHA-512 de texto o archivos de una sola vez, pega una suma de comprobación esperada para verificar una descarga y copia cualquier resultado; todo se ejecuta en tu navegador. No se sube nada.",
@@ -223,6 +227,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "سياسة الخصوصية",
     "footer.more": "المزيد من الأدوات",
     "footer.credit": "صنعه rayv",
+    "footer.coffee": "☕ اشترِ لي قهوة",
 
     "meta.title": "مولّد التجزئة — MD5 وSHA-1 وSHA-256 وSHA-384 وSHA-512",
     "meta.description": "مولّد تجزئة مجاني عبر الإنترنت. احسب MD5 وSHA-1 وSHA-256 وSHA-384 وSHA-512 من النص أو الملفات دفعة واحدة، والصق مجموع تحقق متوقعًا للتحقق من ملف مُنزَّل، وانسخ أي نتيجة — كل شيء يعمل داخل متصفحك. لا يُرفع أي شيء.",
@@ -272,6 +277,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Politique de confidentialité",
     "footer.more": "Plus d'outils",
     "footer.credit": "Créé par rayv",
+    "footer.coffee": "☕ Offrez-moi un café",
 
     "meta.title": "Générateur de hachage",
     "meta.description": "Générateur de hachage en ligne gratuit. Calculez MD5, SHA-1, SHA-256, SHA-384 et SHA-512 à partir de texte ou de fichiers en une seule fois, collez une somme de contrôle attendue pour vérifier un téléchargement et copiez n'importe quel résultat : tout s'exécute dans votre navigateur. Rien n'est envoyé.",
@@ -321,6 +327,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "গোপনীয়তা নীতি",
     "footer.more": "আরও টুল",
     "footer.credit": "নির্মাতা: rayv",
+    "footer.coffee": "☕ আমাকে এক কাপ কফি খাওয়ান",
 
     "meta.title": "হ্যাশ জেনারেটর — MD5, SHA-1, SHA-256, SHA-384 ও SHA-512",
     "meta.description": "ফ্রি অনলাইন হ্যাশ জেনারেটর। টেক্সট বা ফাইল থেকে MD5, SHA-1, SHA-256, SHA-384 ও SHA-512 একসঙ্গে হিসাব করুন, প্রত্যাশিত চেকসাম পেস্ট করে ডাউনলোড যাচাই করুন এবং যেকোনো ফলাফল কপি করুন — সবকিছু আপনার ব্রাউজারেই চলে। কিছুই আপলোড হয় না।",
@@ -370,6 +377,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de Privacidade",
     "footer.more": "Mais ferramentas",
     "footer.credit": "Criado por rayv",
+    "footer.coffee": "☕ Pague-me um café",
 
     "meta.title": "Gerador de hash — MD5, SHA-1, SHA-256, SHA-384 e SHA-512",
     "meta.description": "Gerador de hash on-line gratuito. Calcule MD5, SHA-1, SHA-256, SHA-384 e SHA-512 de texto ou arquivos de uma só vez, cole uma soma de verificação esperada para validar um download e copie qualquer resultado; tudo roda no seu navegador. Nada é enviado.",
@@ -419,6 +427,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Политика конфиденциальности",
     "footer.more": "Больше инструментов",
     "footer.credit": "Создано rayv",
+    "footer.coffee": "☕ Угостите меня кофе",
 
     "meta.title": "Генератор хешей — MD5, SHA-1, SHA-256, SHA-384 и SHA-512",
     "meta.description": "Бесплатный онлайн-генератор хешей. Вычисляйте MD5, SHA-1, SHA-256, SHA-384 и SHA-512 из текста или файлов сразу все, вставляйте ожидаемую контрольную сумму для проверки загрузки и копируйте любой результат — всё работает в вашем браузере. Ничего не загружается на сервер.",
@@ -468,6 +477,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "رازداری کی پالیسی",
     "footer.more": "مزید ٹولز",
     "footer.credit": "تخلیق کار: rayv",
+    "footer.coffee": "☕ مجھے ایک کافی پلائیں",
 
     "meta.title": "ہیش جنریٹر — MD5، SHA-1، SHA-256، SHA-384 اور SHA-512",
     "meta.description": "مفت آن لائن ہیش جنریٹر۔ متن یا فائلوں سے MD5، SHA-1، SHA-256، SHA-384 اور SHA-512 ایک ساتھ نکالیں، متوقع چیک سم پیسٹ کر کے ڈاؤن لوڈ کی تصدیق کریں، اور کوئی بھی نتیجہ کاپی کریں — سب کچھ آپ کے براؤزر میں چلتا ہے۔ کچھ بھی اپ لوڈ نہیں ہوتا۔",
@@ -517,6 +527,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Kebijakan Privasi",
     "footer.more": "Alat lainnya",
     "footer.credit": "Dibuat oleh rayv",
+    "footer.coffee": "☕ Traktir saya kopi",
 
     "meta.title": "Generator Hash — MD5, SHA-1, SHA-256, SHA-384 & SHA-512",
     "meta.description": "Generator hash online gratis. Hitung MD5, SHA-1, SHA-256, SHA-384, dan SHA-512 dari teks atau file sekaligus, tempel checksum yang diharapkan untuk memverifikasi unduhan, dan salin hasil apa pun — semuanya berjalan di peramban Anda. Tidak ada yang diunggah.",
@@ -566,6 +577,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Datenschutzerklärung",
     "footer.more": "Weitere Tools",
     "footer.credit": "Erstellt von rayv",
+    "footer.coffee": "☕ Spendier mir einen Kaffee",
 
     "meta.title": "Hash-Generator — MD5, SHA-1, SHA-256, SHA-384 & SHA-512",
     "meta.description": "Kostenloser Online-Hash-Generator. Berechnen Sie MD5, SHA-1, SHA-256, SHA-384 und SHA-512 aus Text oder Dateien auf einmal, fügen Sie eine erwartete Prüfsumme ein, um einen Download zu verifizieren, und kopieren Sie jedes Ergebnis — alles läuft in Ihrem Browser. Nichts wird hochgeladen.",
@@ -615,6 +627,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "プライバシーポリシー",
     "footer.more": "他のツールを見る",
     "footer.credit": "制作:rayv",
+    "footer.coffee": "☕ コーヒーをおごる",
 
     "meta.title": "ハッシュ生成ツール — MD5・SHA-1・SHA-256・SHA-384・SHA-512",
     "meta.description": "無料のオンライン・ハッシュ生成ツール。テキストやファイルから MD5・SHA-1・SHA-256・SHA-384・SHA-512 を一度にまとめて計算し、期待するチェックサムを貼り付けてダウンロードを検証、任意の結果をコピーできます。すべてブラウザー内で動作し、何もアップロードしません。",
@@ -664,6 +677,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "개인정보처리방침",
     "footer.more": "다른 도구 보기",
     "footer.credit": "만든 사람: rayv",
+    "footer.coffee": "☕ 커피 한 잔 사주기",
 
     "meta.title": "해시 생성기 — MD5, SHA-1, SHA-256, SHA-384, SHA-512",
     "meta.description": "무료 온라인 해시 생성기. 텍스트나 파일에서 MD5, SHA-1, SHA-256, SHA-384, SHA-512 해시를 한 번에 계산하고, 예상 체크섬을 붙여넣어 다운로드를 검증하며, 어떤 결과든 복사할 수 있습니다. 모든 처리가 브라우저 안에서 이뤄지며 아무것도 업로드되지 않습니다.",

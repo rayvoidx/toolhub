@@ -30,6 +30,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Privacy Policy",
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
+    "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Case Converter — Convert text to UPPERCASE, lowercase, Title",
     "meta.description": "Free online case converter. Paste text to instantly convert it to UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case and dot.case — copy any result with one click. Runs entirely in your browser; nothing is uploaded.",
@@ -78,6 +79,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "隐私政策",
     "footer.more": "更多工具",
     "footer.credit": "由 rayv 制作",
+    "footer.coffee": "☕ 请我喝杯咖啡",
 
     "meta.title": "大小写转换器",
     "meta.description": "免费在线大小写转换器。粘贴文本即可即时转换为 UPPERCASE、小写、Title Case、Sentence case、camelCase、PascalCase、snake_case、CONSTANT_CASE、kebab-case 和 dot.case——单击任意结果即可复制。全部在浏览器本地运行，不上传任何内容。",
@@ -126,6 +128,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "गोपनीयता नीति",
     "footer.more": "और टूल्स",
     "footer.credit": "निर्माता: rayv",
+    "footer.coffee": "☕ मुझे एक कॉफ़ी पिलाएँ",
 
     "meta.title": "केस कन्वर्टर",
     "meta.description": "मुफ़्त ऑनलाइन केस कन्वर्टर। टेक्स्ट पेस्ट करें और तुरंत उसे UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case और dot.case में बदलें — किसी भी परिणाम को एक क्लिक में कॉपी करें। पूरी तरह आपके ब्राउज़र में चलता है; कुछ भी अपलोड नहीं होता।",
@@ -174,6 +177,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de privacidad",
     "footer.more": "Más herramientas",
     "footer.credit": "Creado por rayv",
+    "footer.coffee": "☕ Invítame a un café",
 
     "meta.title": "Conversor de mayúsculas y minúsculas",
     "meta.description": "Conversor de mayúsculas y minúsculas en línea y gratis. Pega tu texto para convertirlo al instante a UPPERCASE, minúsculas, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case y dot.case — copia cualquier resultado con un clic. Funciona por completo en tu navegador; no se sube nada.",
@@ -222,6 +226,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "سياسة الخصوصية",
     "footer.more": "المزيد من الأدوات",
     "footer.credit": "صنعه rayv",
+    "footer.coffee": "☕ اشترِ لي قهوة",
 
     "meta.title": "محوّل حالة الأحرف",
     "meta.description": "محوّل حالة الأحرف مجاني عبر الإنترنت. الصق النص لتحويله فورًا إلى UPPERCASE وأحرف صغيرة وTitle Case وSentence case وcamelCase وPascalCase وsnake_case وCONSTANT_CASE وkebab-case وdot.case — انسخ أي نتيجة بنقرة واحدة. يعمل بالكامل في متصفحك؛ لا يتم رفع أي شيء.",
@@ -270,6 +275,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Politique de confidentialité",
     "footer.more": "Plus d'outils",
     "footer.credit": "Créé par rayv",
+    "footer.coffee": "☕ Offrez-moi un café",
 
     "meta.title": "Convertisseur de casse",
     "meta.description": "Convertisseur de casse en ligne et gratuit. Collez votre texte pour le convertir instantanément en UPPERCASE, minuscules, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case et dot.case — copiez n'importe quel résultat d'un clic. Fonctionne entièrement dans votre navigateur ; rien n'est envoyé.",
@@ -318,6 +324,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "গোপনীয়তা নীতি",
     "footer.more": "আরও টুল",
     "footer.credit": "নির্মাতা: rayv",
+    "footer.coffee": "☕ আমাকে এক কাপ কফি খাওয়ান",
 
     "meta.title": "কেস কনভার্টার",
     "meta.description": "বিনামূল্যে অনলাইন কেস কনভার্টার। টেক্সট পেস্ট করে তাৎক্ষণিকভাবে UPPERCASE, lowercase, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case এবং dot.case-এ রূপান্তর করুন — যেকোনো ফলাফল এক ক্লিকে কপি করুন। সম্পূর্ণ আপনার ব্রাউজারে চলে; কিছুই আপলোড হয় না।",
@@ -366,6 +373,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de Privacidade",
     "footer.more": "Mais ferramentas",
     "footer.credit": "Criado por rayv",
+    "footer.coffee": "☕ Pague-me um café",
 
     "meta.title": "Conversor de maiúsculas e minúsculas",
     "meta.description": "Conversor de maiúsculas e minúsculas on-line e gratuito. Cole seu texto para convertê-lo instantaneamente para UPPERCASE, minúsculas, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case e dot.case — copie qualquer resultado com um clique. Funciona totalmente no seu navegador; nada é enviado.",
@@ -414,6 +422,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Политика конфиденциальности",
     "footer.more": "Больше инструментов",
     "footer.credit": "Создано rayv",
+    "footer.coffee": "☕ Угостите меня кофе",
 
     "meta.title": "Конвертер регистра",
     "meta.description": "Бесплатный онлайн-конвертер регистра. Вставьте текст, чтобы мгновенно преобразовать его в UPPERCASE, строчные, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case и dot.case — скопируйте любой результат одним щелчком. Работает полностью в вашем браузере; ничего не загружается.",
@@ -462,6 +471,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "رازداری کی پالیسی",
     "footer.more": "مزید ٹولز",
     "footer.credit": "تخلیق کار: rayv",
+    "footer.coffee": "☕ مجھے ایک کافی پلائیں",
 
     "meta.title": "کیس کنورٹر",
     "meta.description": "مفت آن لائن کیس کنورٹر۔ متن پیسٹ کریں اور اسے فوراً UPPERCASE، چھوٹے حروف، Title Case، Sentence case، camelCase، PascalCase، snake_case، CONSTANT_CASE، kebab-case اور dot.case میں تبدیل کریں — کوئی بھی نتیجہ ایک کلک میں کاپی کریں۔ مکمل طور پر آپ کے براؤزر میں چلتا ہے؛ کچھ بھی اپ لوڈ نہیں ہوتا۔",
@@ -510,6 +520,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Kebijakan Privasi",
     "footer.more": "Alat lainnya",
     "footer.credit": "Dibuat oleh rayv",
+    "footer.coffee": "☕ Traktir saya kopi",
 
     "meta.title": "Konverter Huruf Besar-Kecil",
     "meta.description": "Konverter huruf besar-kecil daring gratis. Tempel teks untuk langsung mengubahnya ke UPPERCASE, huruf kecil, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case, dan dot.case — salin hasil apa pun dengan satu klik. Berjalan sepenuhnya di peramban Anda; tidak ada yang diunggah.",
@@ -558,6 +569,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Datenschutzerklärung",
     "footer.more": "Weitere Tools",
     "footer.credit": "Erstellt von rayv",
+    "footer.coffee": "☕ Spendier mir einen Kaffee",
 
     "meta.title": "Groß-/Kleinschreibung-Konverter",
     "meta.description": "Kostenloser Online-Konverter für Groß-/Kleinschreibung. Fügen Sie Text ein, um ihn sofort in UPPERCASE, Kleinbuchstaben, Title Case, Sentence case, camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case und dot.case umzuwandeln — jedes Ergebnis mit einem Klick kopieren. Läuft vollständig in Ihrem Browser; nichts wird hochgeladen.",
@@ -606,6 +618,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "プライバシーポリシー",
     "footer.more": "他のツールを見る",
     "footer.credit": "制作:rayv",
+    "footer.coffee": "☕ コーヒーをおごる",
 
     "meta.title": "大文字・小文字変換ツール",
     "meta.description": "無料のオンライン大文字・小文字変換ツール。テキストを貼り付けるだけで、UPPERCASE・小文字・Title Case・Sentence case・camelCase・PascalCase・snake_case・CONSTANT_CASE・kebab-case・dot.case に即変換 — どの結果もワンクリックでコピー。すべてブラウザ内で動作し、何もアップロードされません。",
@@ -654,6 +667,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "개인정보처리방침",
     "footer.more": "다른 도구 보기",
     "footer.credit": "만든 사람: rayv",
+    "footer.coffee": "☕ 커피 한 잔 사주기",
 
     "meta.title": "대소문자 변환기",
     "meta.description": "무료 온라인 대소문자 변환기. 텍스트를 붙여넣으면 즉시 UPPERCASE·소문자·Title Case·Sentence case·camelCase·PascalCase·snake_case·CONSTANT_CASE·kebab-case·dot.case 로 변환 — 어떤 결과든 한 번 클릭으로 복사. 전부 브라우저 안에서 실행되며 아무것도 업로드되지 않습니다.",

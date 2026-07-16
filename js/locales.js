@@ -167,7 +167,8 @@ window.I18N_LOCALES = {
     "faq.a4": "We ship new tools at a pace of two to three per week, starting from the most useful ideas. New tools appear on this page as soon as they launch, so check back from time to time.",
     "footer.privacy": "Privacy Policy",
     "footer.more": "More tools",
-    "footer.credit": "Created by rayv"
+    "footer.credit": "Created by rayv",
+    "footer.coffee": "☕ Buy me a coffee",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -324,7 +325,8 @@ window.I18N_LOCALES = {
     "faq.a4": "我们按每周 2-3 个的节奏推出经过验证的新工具。新工具上线后会立即添加到本页列表中，欢迎不时回来看看。",
     "footer.privacy": "隐私政策",
     "footer.more": "更多工具",
-    "footer.credit": "由 rayv 制作"
+    "footer.credit": "由 rayv 制作",
+    "footer.coffee": "☕ 请我喝杯咖啡",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -481,7 +483,8 @@ window.I18N_LOCALES = {
     "faq.a4": "हम हर हफ़्ते 2-3 नए टूल्स लॉन्च करते हैं। नया टूल लॉन्च होते ही इस पेज की सूची में जुड़ जाता है, इसलिए समय-समय पर देखते रहें।",
     "footer.privacy": "गोपनीयता नीति",
     "footer.more": "और टूल्स",
-    "footer.credit": "निर्माता: rayv"
+    "footer.credit": "निर्माता: rayv",
+    "footer.coffee": "☕ मुझे एक कॉफ़ी पिलाएँ",
   },
 
   /* ---------------- Español ---------------- */
@@ -638,7 +641,8 @@ window.I18N_LOCALES = {
     "faq.a4": "Lanzamos herramientas nuevas a un ritmo de dos o tres por semana, empezando por las ideas más útiles. Las novedades aparecen en esta página en cuanto se publican, así que vuelve de vez en cuando.",
     "footer.privacy": "Política de privacidad",
     "footer.more": "Más herramientas",
-    "footer.credit": "Creado por rayv"
+    "footer.credit": "Creado por rayv",
+    "footer.coffee": "☕ Invítame a un café",
   },
 
   /* ---------------- العربية ---------------- */
@@ -795,7 +799,8 @@ window.I18N_LOCALES = {
     "faq.a4": "نطلق أدوات جديدة بوتيرة أداتين إلى ثلاث كل أسبوع، بدءاً من الأفكار الأكثر فائدة. تظهر الأدوات الجديدة في هذه الصفحة فور إطلاقها، فعُد إلينا بين حين وآخر.",
     "footer.privacy": "سياسة الخصوصية",
     "footer.more": "المزيد من الأدوات",
-    "footer.credit": "صنعه rayv"
+    "footer.credit": "صنعه rayv",
+    "footer.coffee": "☕ اشترِ لي قهوة",
   },
 
   /* ---------------- Français ---------------- */
@@ -952,7 +957,8 @@ window.I18N_LOCALES = {
     "faq.a4": "Nous lançons deux à trois nouveaux outils par semaine, en commençant par les idées les plus utiles. Les nouveautés apparaissent sur cette page dès leur mise en ligne : repassez nous voir de temps en temps.",
     "footer.privacy": "Politique de confidentialité",
     "footer.more": "Plus d'outils",
-    "footer.credit": "Créé par rayv"
+    "footer.credit": "Créé par rayv",
+    "footer.coffee": "☕ Offrez-moi un café",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1109,7 +1115,8 @@ window.I18N_LOCALES = {
     "faq.a4": "আমরা সপ্তাহে ২-৩টি নতুন টুল চালু করি, সবচেয়ে দরকারি আইডিয়া থেকে শুরু করে। নতুন টুল চালু হওয়ামাত্র এই পাতায় যুক্ত হয়, তাই মাঝে মাঝে ঘুরে যান।",
     "footer.privacy": "গোপনীয়তা নীতি",
     "footer.more": "আরও টুল",
-    "footer.credit": "নির্মাতা: rayv"
+    "footer.credit": "নির্মাতা: rayv",
+    "footer.coffee": "☕ আমাকে এক কাপ কফি খাওয়ান",
   },
 
   /* ---------------- Português ---------------- */
@@ -1266,7 +1273,8 @@ window.I18N_LOCALES = {
     "faq.a4": "Lançamos novas ferramentas no ritmo de duas a três por semana, começando pelas ideias mais úteis. As novidades aparecem nesta página assim que são publicadas — volte de vez em quando.",
     "footer.privacy": "Política de Privacidade",
     "footer.more": "Mais ferramentas",
-    "footer.credit": "Criado por rayv"
+    "footer.credit": "Criado por rayv",
+    "footer.coffee": "☕ Pague-me um café",
   },
 
   /* ---------------- Русский ---------------- */
@@ -1423,7 +1431,8 @@ window.I18N_LOCALES = {
     "faq.a4": "Мы выпускаем новые инструменты в темпе два-три в неделю, начиная с самых полезных идей. Новинки появляются на этой странице сразу после запуска — заглядывайте время от времени.",
     "footer.privacy": "Политика конфиденциальности",
     "footer.more": "Больше инструментов",
-    "footer.credit": "Создано rayv"
+    "footer.credit": "Создано rayv",
+    "footer.coffee": "☕ Угостите меня кофе",
   },
 
   /* ---------------- اردو ---------------- */
@@ -1580,7 +1589,8 @@ window.I18N_LOCALES = {
     "faq.a4": "ہم ہر ہفتے 2-3 نئے ٹولز جاری کرتے ہیں، سب سے مفید خیالات سے شروع کر کے۔ نیا ٹول جاری ہوتے ہی اس صفحے کی فہرست میں شامل ہو جاتا ہے، اس لیے وقتاً فوقتاً چکر لگاتے رہیں۔",
     "footer.privacy": "رازداری کی پالیسی",
     "footer.more": "مزید ٹولز",
-    "footer.credit": "تخلیق کار: rayv"
+    "footer.credit": "تخلیق کار: rayv",
+    "footer.coffee": "☕ مجھے ایک کافی پلائیں",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -1737,7 +1747,8 @@ window.I18N_LOCALES = {
     "faq.a4": "Kami merilis alat baru dengan kecepatan dua sampai tiga per minggu, dimulai dari ide yang paling berguna. Alat baru langsung muncul di halaman ini begitu dirilis — mampirlah sesekali.",
     "footer.privacy": "Kebijakan Privasi",
     "footer.more": "Alat lainnya",
-    "footer.credit": "Dibuat oleh rayv"
+    "footer.credit": "Dibuat oleh rayv",
+    "footer.coffee": "☕ Traktir saya kopi",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -1894,7 +1905,8 @@ window.I18N_LOCALES = {
     "faq.a4": "Wir veröffentlichen neue Tools im Tempo von zwei bis drei pro Woche, beginnend mit den nützlichsten Ideen. Neue Tools erscheinen sofort nach dem Start auf dieser Seite — schauen Sie gelegentlich vorbei.",
     "footer.privacy": "Datenschutzerklärung",
     "footer.more": "Weitere Tools",
-    "footer.credit": "Erstellt von rayv"
+    "footer.credit": "Erstellt von rayv",
+    "footer.coffee": "☕ Spendier mir einen Kaffee",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -2051,7 +2063,8 @@ window.I18N_LOCALES = {
     "faq.a4": "有用なアイデアから順に、週 2〜3 個のペースで新しいツールを公開しています。新ツールは公開と同時にこのページに追加されるので、ときどきチェックしてみてください。",
     "footer.privacy": "プライバシーポリシー",
     "footer.more": "他のツールを見る",
-    "footer.credit": "制作:rayv"
+    "footer.credit": "制作:rayv",
+    "footer.coffee": "☕ コーヒーをおごる",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -2208,6 +2221,7 @@ window.I18N_LOCALES = {
     "faq.a4": "검증된 아이디어부터 순서대로, 주 2-3개 페이스로 새 도구를 만들어 이 페이지의 도구 모음에 추가합니다. 새 도구가 런칭되면 이 목록에 카드가 바로 추가되니 가끔 다시 들러 확인해 보세요.",
     "footer.privacy": "개인정보처리방침",
     "footer.more": "다른 도구 보기",
-    "footer.credit": "만든 사람: rayv"
+    "footer.credit": "만든 사람: rayv",
+    "footer.coffee": "☕ 커피 한 잔 사주기",
   }
 };

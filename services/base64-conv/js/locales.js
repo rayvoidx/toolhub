@@ -27,6 +27,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Privacy Policy",
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
+    "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "Base64 Encoder / Decoder — Encode & decode text and images",
     "meta.description": "Free online Base64 encoder and decoder. Convert text to and from Base64 (UTF-8 safe, with a URL-safe option), and turn images into Base64 data URIs or decode them back — everything runs in your browser. Nothing is uploaded.",
@@ -82,6 +83,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "隐私政策",
     "footer.more": "更多工具",
     "footer.credit": "由 rayv 制作",
+    "footer.coffee": "☕ 请我喝杯咖啡",
 
     "meta.title": "Base64 编码/解码器 — 文本与图片互转，UTF-8 安全",
     "meta.description": "免费在线 Base64 编码解码工具。对文本进行 Base64 编码和解码（UTF-8 安全，支持 URL-safe 选项），也能将图片转换为 Base64 data URI 或还原为图片——全部在浏览器本地完成，不上传任何内容。",
@@ -137,6 +139,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "गोपनीयता नीति",
     "footer.more": "और टूल्स",
     "footer.credit": "निर्माता: rayv",
+    "footer.coffee": "☕ मुझे एक कॉफ़ी पिलाएँ",
 
     "meta.title": "Base64 एन्कोडर / डिकोडर — टेक्स्ट और इमेज, UTF-8 सुरक्षित",
     "meta.description": "मुफ़्त ऑनलाइन Base64 एन्कोडर और डिकोडर। टेक्स्ट को Base64 में बदलें और वापस लाएँ (UTF-8 सुरक्षित, URL-safe विकल्प के साथ), और इमेज को Base64 data URI में बदलें या वापस डिकोड करें — सब कुछ आपके ब्राउज़र में ही चलता है। कुछ भी अपलोड नहीं होता।",
@@ -192,6 +195,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de privacidad",
     "footer.more": "Más herramientas",
     "footer.credit": "Creado por rayv",
+    "footer.coffee": "☕ Invítame a un café",
 
     "meta.title": "Codificador / Decodificador Base64",
     "meta.description": "Codificador y decodificador Base64 online y gratis. Convierte texto a Base64 y viceversa (seguro con UTF-8, con opción URL-safe), y transforma imágenes en data URIs Base64 o decodifícalas de vuelta — todo se ejecuta en tu navegador. Nada se sube.",
@@ -247,6 +251,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "سياسة الخصوصية",
     "footer.more": "المزيد من الأدوات",
     "footer.credit": "صنعه rayv",
+    "footer.coffee": "☕ اشترِ لي قهوة",
 
     "meta.title": "مُرمِّز / فاكّ ترميز Base64 — نص وصور، آمن مع UTF-8",
     "meta.description": "أداة مجانية لترميز وفك ترميز Base64 عبر الإنترنت. حوّل النص إلى Base64 والعكس (آمن مع UTF-8، مع خيار URL-safe)، وحوّل الصور إلى data URI بترميز Base64 أو فُكّها — كل شيء يعمل داخل متصفحك. لا يتم رفع أي شيء.",
@@ -302,6 +307,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Politique de confidentialité",
     "footer.more": "Plus d'outils",
     "footer.credit": "Créé par rayv",
+    "footer.coffee": "☕ Offrez-moi un café",
 
     "meta.title": "Encodeur / Décodeur Base64 — texte et images, sûr en UTF-8",
     "meta.description": "Encodeur et décodeur Base64 en ligne et gratuit. Convertissez du texte en Base64 et inversement (sûr en UTF-8, avec une option URL-safe), et transformez des images en data URI Base64 ou décodez-les — tout s'exécute dans votre navigateur. Rien n'est envoyé.",
@@ -357,6 +363,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "গোপনীয়তা নীতি",
     "footer.more": "আরও টুল",
     "footer.credit": "নির্মাতা: rayv",
+    "footer.coffee": "☕ আমাকে এক কাপ কফি খাওয়ান",
 
     "meta.title": "Base64 এনকোডার / ডিকোডার — টেক্সট ও ছবি, UTF-8 নিরাপদ",
     "meta.description": "বিনামূল্যে অনলাইন Base64 এনকোডার ও ডিকোডার। টেক্সটকে Base64-এ রূপান্তর করুন ও ফিরিয়ে আনুন (UTF-8 নিরাপদ, URL-safe বিকল্পসহ), এবং ছবিকে Base64 data URI-তে বদলান বা ডিকোড করুন — সবকিছু আপনার ব্রাউজারেই চলে। কিছুই আপলোড হয় না।",
@@ -412,6 +419,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de Privacidade",
     "footer.more": "Mais ferramentas",
     "footer.credit": "Criado por rayv",
+    "footer.coffee": "☕ Pague-me um café",
 
     "meta.title": "Codificador / Decodificador Base64",
     "meta.description": "Codificador e decodificador Base64 online e gratuito. Converta texto para Base64 e de volta (seguro em UTF-8, com opção URL-safe), e transforme imagens em data URIs Base64 ou decodifique-as — tudo roda no seu navegador. Nada é enviado.",
@@ -467,6 +475,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Политика конфиденциальности",
     "footer.more": "Больше инструментов",
     "footer.credit": "Создано rayv",
+    "footer.coffee": "☕ Угостите меня кофе",
 
     "meta.title": "Base64 кодировщик / декодировщик",
     "meta.description": "Бесплатный онлайн-кодировщик и декодировщик Base64. Преобразуйте текст в Base64 и обратно (безопасно для UTF-8, с опцией URL-safe), а также превращайте изображения в data URI Base64 или декодируйте их обратно — всё работает в вашем браузере. Ничего не загружается.",
@@ -522,6 +531,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "رازداری کی پالیسی",
     "footer.more": "مزید ٹولز",
     "footer.credit": "تخلیق کار: rayv",
+    "footer.coffee": "☕ مجھے ایک کافی پلائیں",
 
     "meta.title": "Base64 اینکوڈر / ڈیکوڈر — ٹیکسٹ اور تصاویر، UTF-8 محفوظ",
     "meta.description": "مفت آن لائن Base64 اینکوڈر اور ڈیکوڈر۔ ٹیکسٹ کو Base64 میں اور واپس تبدیل کریں (UTF-8 محفوظ، URL-safe اختیار کے ساتھ)، اور تصاویر کو Base64 data URI میں بدلیں یا ڈیکوڈ کریں — سب کچھ آپ کے براؤزر میں چلتا ہے۔ کچھ بھی اپ لوڈ نہیں ہوتا۔",
@@ -577,6 +587,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Kebijakan Privasi",
     "footer.more": "Alat lainnya",
     "footer.credit": "Dibuat oleh rayv",
+    "footer.coffee": "☕ Traktir saya kopi",
 
     "meta.title": "Encoder / Decoder Base64 — teks dan gambar, aman UTF-8",
     "meta.description": "Encoder dan decoder Base64 online gratis. Ubah teks ke Base64 dan sebaliknya (aman UTF-8, dengan opsi URL-safe), serta ubah gambar menjadi data URI Base64 atau dekode kembali — semuanya berjalan di browser Anda. Tidak ada yang diunggah.",
@@ -632,6 +643,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Datenschutzerklärung",
     "footer.more": "Weitere Tools",
     "footer.credit": "Erstellt von rayv",
+    "footer.coffee": "☕ Spendier mir einen Kaffee",
 
     "meta.title": "Base64-Encoder / -Decoder — Text und Bilder, UTF-8-sicher",
     "meta.description": "Kostenloser Online-Base64-Encoder und -Decoder. Wandeln Sie Text in Base64 und zurück (UTF-8-sicher, mit URL-safe-Option) und verwandeln Sie Bilder in Base64-Data-URIs oder dekodieren Sie sie — alles läuft in Ihrem Browser. Nichts wird hochgeladen.",
@@ -687,6 +699,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "プライバシーポリシー",
     "footer.more": "他のツールを見る",
     "footer.credit": "制作:rayv",
+    "footer.coffee": "☕ コーヒーをおごる",
 
     "meta.title": "Base64 エンコーダー / デコーダー",
     "meta.description": "無料のオンライン Base64 エンコーダー・デコーダー。テキストを Base64 に相互変換（UTF-8 対応、URL-safe オプション付き）し、画像を Base64 data URI に変換したりデコードしたりできます。すべてブラウザー内で動作し、何もアップロードしません。",
@@ -742,6 +755,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "개인정보처리방침",
     "footer.more": "다른 도구 보기",
     "footer.credit": "만든 사람: rayv",
+    "footer.coffee": "☕ 커피 한 잔 사주기",
 
     "meta.title": "Base64 인코더 / 디코더 — 텍스트와 이미지, UTF-8 안전",
     "meta.description": "무료 온라인 Base64 인코더 디코더. 텍스트를 Base64로 상호 변환하고(UTF-8 안전, URL-safe 옵션 지원), 이미지를 Base64 data URI로 바꾸거나 다시 디코딩합니다 — 모든 처리는 브라우저 안에서만 이루어지며 아무것도 업로드되지 않습니다.",
