@@ -35,6 +35,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Privacy Policy",
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
+    "footer.coffee": "☕ Buy me a coffee",
 
     "meta.title": "JSON Formatter — Format, validate & minify JSON with exact error locations",
     "meta.description": "Free online JSON formatter, validator and minifier. Paste JSON to beautify it with 2/4-space or tab indentation, minify it to a single line, or validate it and see the exact line and column of any syntax error. Runs entirely in your browser — your JSON, including API keys and secrets, is never uploaded.",
@@ -103,6 +104,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "隐私政策",
     "footer.more": "更多工具",
     "footer.credit": "由 rayv 制作",
+    "footer.coffee": "☕ 请我喝杯咖啡",
 
     "meta.title": "JSON 格式化工具 — 格式化、校验并压缩 JSON，精确定位错误",
     "meta.description": "免费在线 JSON 格式化、校验与压缩工具。粘贴 JSON 即可用 2/4 空格或制表符缩进美化、压缩成单行，或校验并查看任何语法错误的精确行号与列号。全部在浏览器本地运行——你的 JSON（包括 API 密钥和机密）绝不会上传。",
@@ -171,6 +173,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "गोपनीयता नीति",
     "footer.more": "और टूल्स",
     "footer.credit": "निर्माता: rayv",
+    "footer.coffee": "☕ मुझे एक कॉफ़ी पिलाएँ",
 
     "meta.title": "JSON फ़ॉर्मैटर — JSON को फ़ॉर्मैट, वैलिडेट और मिनिफ़ाई करें, सटीक त्रुटि स्थान के साथ",
     "meta.description": "मुफ़्त ऑनलाइन JSON फ़ॉर्मैटर, वैलिडेटर और मिनिफ़ायर। JSON पेस्ट करें और उसे 2/4-स्पेस या टैब इंडेंट के साथ सुंदर बनाएं, एक ही लाइन में मिनिफ़ाई करें, या वैलिडेट करके किसी भी सिंटैक्स त्रुटि की सटीक लाइन और कॉलम देखें। सब कुछ आपके ब्राउज़र में ही चलता है — आपका JSON, जिसमें API कुंजियाँ और सीक्रेट भी शामिल हैं, कभी अपलोड नहीं होता।",
@@ -239,6 +242,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de privacidad",
     "footer.more": "Más herramientas",
     "footer.credit": "Creado por rayv",
+    "footer.coffee": "☕ Invítame a un café",
 
     "meta.title": "Formateador JSON — Formatea, valida y minifica JSON con la ubicación exacta del error",
     "meta.description": "Formateador, validador y minificador de JSON en línea y gratis. Pega JSON para embellecerlo con sangría de 2/4 espacios o tabulación, minifícalo a una sola línea, o valídalo y ve la línea y columna exactas de cualquier error de sintaxis. Todo se ejecuta en tu navegador: tu JSON, incluidas claves de API y secretos, nunca se sube.",
@@ -307,6 +311,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "سياسة الخصوصية",
     "footer.more": "المزيد من الأدوات",
     "footer.credit": "صنعه rayv",
+    "footer.coffee": "☕ اشترِ لي قهوة",
 
     "meta.title": "منسّق JSON — نسّق وتحقّق واضغط JSON مع تحديد موقع الخطأ بدقة",
     "meta.description": "منسّق ومدقّق وضاغط JSON مجاني عبر الإنترنت. الصق JSON لتجميله بمسافة بادئة من مسافتين أو أربع أو Tab، أو ضغطه في سطر واحد، أو التحقق منه ورؤية السطر والعمود الدقيقين لأي خطأ في بناء الجملة. يعمل بالكامل في متصفحك — JSON الخاص بك، بما في ذلك مفاتيح API والأسرار، لا يُرفع أبدًا.",
@@ -375,6 +380,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Politique de confidentialité",
     "footer.more": "Plus d'outils",
     "footer.credit": "Créé par rayv",
+    "footer.coffee": "☕ Offrez-moi un café",
 
     "meta.title": "Formateur JSON — Formatez, validez et minifiez du JSON avec l'emplacement exact de l'erreur",
     "meta.description": "Formateur, validateur et minifieur JSON en ligne et gratuit. Collez du JSON pour l'embellir avec une indentation de 2/4 espaces ou une tabulation, le minifier sur une seule ligne, ou le valider et voir la ligne et la colonne exactes de toute erreur de syntaxe. Tout s'exécute dans votre navigateur — votre JSON, y compris les clés d'API et les secrets, n'est jamais envoyé.",
@@ -443,6 +449,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "গোপনীয়তা নীতি",
     "footer.more": "আরও টুল",
     "footer.credit": "নির্মাতা: rayv",
+    "footer.coffee": "☕ আমাকে এক কাপ কফি খাওয়ান",
 
     "meta.title": "JSON ফরম্যাটার — সঠিক ত্রুটি অবস্থানসহ JSON ফরম্যাট, যাচাই ও মিনিফাই করুন",
     "meta.description": "বিনামূল্যের অনলাইন JSON ফরম্যাটার, ভ্যালিডেটর ও মিনিফায়ার। JSON পেস্ট করে ২/৪-স্পেস বা ট্যাব ইন্ডেন্টে সুন্দর করুন, এক লাইনে মিনিফাই করুন, অথবা যাচাই করে যেকোনো সিনট্যাক্স ত্রুটির সঠিক লাইন ও কলাম দেখুন। সবকিছু আপনার ব্রাউজারেই চলে — API কী ও সিক্রেটসহ আপনার JSON কখনও আপলোড হয় না।",
@@ -511,6 +518,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Política de Privacidade",
     "footer.more": "Mais ferramentas",
     "footer.credit": "Criado por rayv",
+    "footer.coffee": "☕ Pague-me um café",
 
     "meta.title": "Formatador JSON — Formate, valide e minifique JSON com a localização exata do erro",
     "meta.description": "Formatador, validador e minificador de JSON on-line e gratuito. Cole JSON para embelezá-lo com indentação de 2/4 espaços ou tabulação, minificá-lo em uma única linha, ou validá-lo e ver a linha e coluna exatas de qualquer erro de sintaxe. Tudo roda no seu navegador — seu JSON, incluindo chaves de API e segredos, nunca é enviado.",
@@ -579,6 +587,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Политика конфиденциальности",
     "footer.more": "Больше инструментов",
     "footer.credit": "Создано rayv",
+    "footer.coffee": "☕ Угостите меня кофе",
 
     "meta.title": "Форматтер JSON — форматирование, проверка и минификация JSON с точным местом ошибки",
     "meta.description": "Бесплатный онлайн-форматтер, валидатор и минификатор JSON. Вставьте JSON, чтобы красиво отформатировать его с отступом в 2/4 пробела или табуляцией, свернуть в одну строку или проверить и увидеть точную строку и столбец любой синтаксической ошибки. Всё работает прямо в вашем браузере — ваш JSON, включая ключи API и секреты, никогда не загружается.",
@@ -647,6 +656,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "رازداری کی پالیسی",
     "footer.more": "مزید ٹولز",
     "footer.credit": "تخلیق کار: rayv",
+    "footer.coffee": "☕ مجھے ایک کافی پلائیں",
 
     "meta.title": "JSON فارمیٹر — درست خرابی مقام کے ساتھ JSON کو فارمیٹ، تصدیق اور کم کریں",
     "meta.description": "مفت آن لائن JSON فارمیٹر، ویلیڈیٹر اور مِنیفائر۔ JSON پیسٹ کریں اور اسے 2/4 اسپیس یا Tab اِنڈینٹ کے ساتھ خوبصورت بنائیں، ایک لائن میں کم کریں، یا تصدیق کر کے کسی بھی نحوی خرابی کی درست لائن اور کالم دیکھیں۔ سب کچھ آپ کے براؤزر میں چلتا ہے — آپ کا JSON، بشمول API کیز اور سیکریٹس، کبھی اپ لوڈ نہیں ہوتا۔",
@@ -715,6 +725,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Kebijakan Privasi",
     "footer.more": "Alat lainnya",
     "footer.credit": "Dibuat oleh rayv",
+    "footer.coffee": "☕ Traktir saya kopi",
 
     "meta.title": "Pemformat JSON — Format, validasi & perkecil JSON dengan lokasi kesalahan yang tepat",
     "meta.description": "Pemformat, validator, dan pengecil JSON online gratis. Tempel JSON untuk mempercantiknya dengan indentasi 2/4 spasi atau tab, memperkecilnya menjadi satu baris, atau memvalidasinya dan melihat baris dan kolom persis dari setiap kesalahan sintaks. Berjalan sepenuhnya di browser Anda — JSON Anda, termasuk kunci API dan rahasia, tidak pernah diunggah.",
@@ -783,6 +794,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "Datenschutzerklärung",
     "footer.more": "Weitere Tools",
     "footer.credit": "Erstellt von rayv",
+    "footer.coffee": "☕ Spendier mir einen Kaffee",
 
     "meta.title": "JSON-Formatter — JSON formatieren, validieren & minifizieren mit exakter Fehlerstelle",
     "meta.description": "Kostenloser Online-JSON-Formatter, -Validator und -Minifier. Fügen Sie JSON ein, um es mit 2/4-Leerzeichen- oder Tab-Einrückung zu verschönern, in eine Zeile zu minifizieren oder zu validieren und die genaue Zeile und Spalte jedes Syntaxfehlers zu sehen. Läuft vollständig in Ihrem Browser — Ihr JSON, einschließlich API-Schlüssel und Geheimnisse, wird nie hochgeladen.",
@@ -851,6 +863,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "プライバシーポリシー",
     "footer.more": "他のツールを見る",
     "footer.credit": "制作:rayv",
+    "footer.coffee": "☕ コーヒーをおごる",
 
     "meta.title": "JSONフォーマッター — 正確なエラー位置つきでJSONを整形・検証・圧縮",
     "meta.description": "無料オンラインのJSONフォーマッター・バリデーター・ミニファイア。JSONを貼り付ければ、2/4スペースまたはタブのインデントで整形、1行に圧縮、または検証して構文エラーの正確な行と列を確認できます。すべてブラウザ内で動作し、APIキーやシークレットを含むあなたのJSONは決してアップロードされません。",
@@ -919,6 +932,7 @@ window.I18N_LOCALES = {
     "footer.privacy": "개인정보처리방침",
     "footer.more": "다른 도구 보기",
     "footer.credit": "만든 사람: rayv",
+    "footer.coffee": "☕ 커피 한 잔 사주기",
 
     "meta.title": "JSON 포매터 — 정확한 오류 위치와 함께 JSON 정렬·검증·압축",
     "meta.description": "무료 온라인 JSON 포매터·검증기·압축기. JSON을 붙여넣어 2/4칸 또는 탭 들여쓰기로 예쁘게 정렬하거나, 한 줄로 압축하거나, 검증해 모든 문법 오류의 정확한 줄과 열을 확인하세요. 모든 처리가 브라우저 안에서 이뤄져 API 키와 시크릿을 포함한 JSON이 절대 업로드되지 않습니다.",
