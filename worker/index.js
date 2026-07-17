@@ -41,20 +41,40 @@ export default {
 
     /*
      * services/에도 없는 경로만 기존 GitHub Pages 프로젝트로 넘긴다.
+     * ★ 폴백 오리진(rayvoidx.github.io)은 2026-07 기준 죽어 있다("Site not found" 404).
+     *   그대로 흘려보내면 사용자가 GitHub 의 404 를 보게 되므로, 오리진이 404/5xx/실패면
+     *   우리 404 페이지(ASSETS /404)를 status 404 로 서빙한다.
      */
-    const upstream = await fetch(
-      ORIGIN + url.pathname + url.search,
-      {
-        method: request.method,
-        headers: {
-          accept: request.headers.get("accept") || "*/*",
-        },
-        redirect: "manual",
-        cf: {
-          cacheTtl: 300,
-        },
+    let upstream = null;
+    try {
+      upstream = await fetch(
+        ORIGIN + url.pathname + url.search,
+        {
+          method: request.method,
+          headers: {
+            accept: request.headers.get("accept") || "*/*",
+          },
+          redirect: "manual",
+          cf: {
+            cacheTtl: 300,
+          },
+        }
+      );
+    } catch (e) { /* 오리진 접속 실패 — 아래 404 폴백 */ }
+
+    if (!upstream || upstream.status === 404 || upstream.status >= 500) {
+      // 허브 404.html 은 루트 자산 — html_handling 이 /404 를 404.html 로 해석한다
+      const nfUrl = new URL(request.url);
+      nfUrl.pathname = "/404";
+      const nf = await env.ASSETS.fetch(new Request(nfUrl.toString(), { headers: { accept: "text/html" } }));
+      if (nf.status === 200) {
+        return new Response(nf.body, {
+          status: 404,
+          headers: { "content-type": "text/html; charset=utf-8" },
+        });
       }
-    );
+      return new Response("Not Found", { status: 404 });
+    }
 
     const location = upstream.headers.get("location");
 
