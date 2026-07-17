@@ -30,9 +30,85 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "BMI 계산기",
+      "item": "https://tool-hub.me/bmi-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "BMI가 높으면 무조건 비만인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "체질량지수(BMI)는 키와 몸무게만으로 계산하기 때문에 근육량을 반영하지 못합니다. 근육이 많은 운동선수는 BMI가 높아도 체지방률은 낮을 수 있습니다. 비만도 계산기로 나온 수치는 참고 지표로 활용하고, 정확한 체성분 평가는 의료 전문가와 상담하는 것이 좋습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "WHO 기준과 아시아(한국 비만학회) 기준은 왜 다른가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "서양인 대상으로 수립된 WHO 기준(과체중 25 이상)은 아시아인에게 적용하면 실제 위험을 과소평가할 수 있습니다. 아시아인은 같은 BMI에서도 체지방이 상대적으로 많이 분포해 대사 질환 위험이 높습니다. 이에 한국 비만학회(2022)는 23 이상을 비만 전단계, 25 이상을 1단계 비만으로 더 엄격한 기준을 적용합니다. 이 BMI 계산기는 두 기준을 항상 함께 보여주고, 접속 지역을 추정해 둘 중 하나를 해석 기준으로 자동 선택합니다. 결과 아래 링크로 언제든 다른 기준으로 바꿔 볼 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "건강한 BMI 범위가 왜 18.5~22.9인가요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "한국 비만학회는 아시아인 역학 연구 결과를 바탕으로 BMI 18.5~22.9를 정상 범위로 정의합니다. 이 구간에서 심혈관 질환, 당뇨병 등 만성 질환 위험이 가장 낮다는 연구 결과가 근거입니다. WHO 기준으로 보면 정상 범위는 18.5~24.9로 조금 더 넓습니다. 건강 체중 범위는 지금 보고 있는 해석 기준과 입력한 키를 바탕으로 역산해 표시합니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "파운드(lb)·피트(ft)로도 계산할 수 있나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "네. 이 비만도 계산기는 브라우저의 언어·지역 설정을 보고 단위계를 자동으로 고릅니다. 미국·영국처럼 야드파운드법을 쓰는 지역이면 ft·in·lb로, 그 밖의 지역이면 cm·kg로 시작합니다. 상단 토글로 언제든 바꿀 수 있고, 이미 입력한 값은 자동으로 환산되므로 다시 입력할 필요가 없습니다. 선택한 단위계는 브라우저에 기억되어 다음 방문에도 유지됩니다. BMI 자체는 단위가 없는 지수라 어느 단위로 입력해도 같은 값이 나옵니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "키와 몸무게 입력값이 서버로 전송되나요?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "아니요. 이 체질량지수 계산기는 모든 계산을 브라우저 안에서 수행합니다. 입력값은 외부 서버로 전송되지 않으며, 다음 방문 시 편의를 위해 브라우저 localStorage에만 저장됩니다(키·몸무게, 단위계, 해석 기준). 같은 이유로 입력값을 주소창(URL)에 싣지 않습니다 — 링크를 새로 열 때 수치가 서버 접속 기록에 남지 않게 하기 위해서입니다. 저장된 값은 언제든지 브라우저 설정에서 삭제할 수 있습니다."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "BMI 계산기와 체지방률 계산기의 차이는?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BMI(체질량지수) 계산기는 키와 몸무게만으로 간편하게 비만도를 추정합니다. 체지방률 계산기는 실제 체지방 비율을 측정하는 것으로 DEXA 스캔, 생체전기저항(BIA) 등 별도 측정 장비가 필요합니다. BMI는 빠른 선별 지표로 유용하고, 체지방률은 더 정밀한 체성분 분석에 쓰입니다."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -55,31 +131,34 @@
 
   <!-- TOOL:START — builder agent replaces everything inside this section -->
   <section class="tool-card" id="tool" aria-live="polite">
+    <div class="unit-switch" role="group" aria-label="단위계 선택">
+      <button type="button" class="unit-btn" data-units="metric" aria-pressed="true">미터법 · cm·kg</button>
+      <button type="button" class="unit-btn" data-units="imperial" aria-pressed="false">야드파운드법 · ft·in·lb</button>
+    </div>
+    <p class="unit-hint" id="unit-hint" hidden></p>
     <div class="tool-inputs">
-      <div class="input-group">
+      <div class="input-group" id="height-metric">
         <label for="height-input">키 (cm)</label>
-        <input type="number" id="height-input" min="50" max="250" step="0.1" placeholder="예: 170" aria-label="키 (cm)">
+        <input type="number" id="height-input" inputmode="decimal" min="50" max="250" step="0.1" placeholder="예: 170" aria-label="키 (cm)">
+      </div>
+      <div class="input-group" id="height-imperial" hidden>
+        <label for="height-ft">키 (ft · in)</label>
+        <div class="ftin-row">
+          <input type="number" id="height-ft" inputmode="numeric" min="0" max="8" step="1" placeholder="5" aria-label="키 (피트)">
+          <span aria-hidden="true">ft</span>
+          <input type="number" id="height-in" inputmode="decimal" min="0" max="11.9" step="0.5" placeholder="7" aria-label="키 (인치)">
+          <span aria-hidden="true">in</span>
+        </div>
       </div>
       <div class="input-group">
-        <label for="weight-input">몸무게 (kg)</label>
-        <input type="number" id="weight-input" min="10" max="300" step="0.1" placeholder="예: 65" aria-label="몸무게 (kg)">
+        <label for="weight-input" id="weight-label">몸무게 (kg)</label>
+        <input type="number" id="weight-input" inputmode="decimal" min="10" max="300" step="0.1" placeholder="예: 65" aria-label="몸무게 (kg)">
       </div>
       <button class="btn" id="calc-btn" type="button">BMI 계산하기</button>
     </div>
     <div class="result" id="result" role="region" aria-label="계산 결과" hidden></div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2>BMI 계산기 안내</h2>
-    <p>이 BMI 계산기는 키와 몸무게만으로 체질량지수를 구해 세계보건기구(WHO) 기준과 대한비만학회 아시아 기준으로 동시에 분류하고, 입력한 키에 맞는 건강 체중 범위까지 알려 줍니다. 건강검진 결과를 스스로 확인하거나 체중 관리 목표를 잡을 때, 두 기준의 차이를 한 화면에서 비교하고 싶은 분에게 알맞습니다.</p>
-    <h3>사용 방법</h3>
-    <p>키를 센티미터(cm) 단위로, 몸무게를 킬로그램(kg) 단위로 입력한 뒤 BMI 계산하기를 누르세요. 소수점 한 자리까지 정밀하게 넣을 수 있습니다. 결과에는 BMI 수치와 함께 WHO·아시아 기준의 비만도 분류, 그리고 지금 키에서 정상 범위에 해당하는 체중 구간이 표시됩니다.</p>
-    <h3>BMI 계산 공식</h3>
-    <p>BMI는 체중(kg)을 키(m)의 제곱으로 나눈 값입니다. 키는 미터로 환산해야 하므로 170cm는 1.70m로 바꿔 계산합니다. 예를 들어 키 170cm에 몸무게 68kg이면 1.70 × 1.70 = 2.89이고, 68 ÷ 2.89 = 약 23.5입니다. 아시아 기준으로는 비만 전단계에 해당합니다. 건강 체중 범위는 반대로 정상 상한 22.9에 2.89를 곱해 약 66kg처럼 역산합니다.</p>
-    <h3>알아두면 좋은 점</h3>
-    <p>측정은 아침 공복에 같은 조건으로 하면 값이 안정적입니다. BMI는 복부비만을 반영하지 못하므로 허리둘레(남성 90cm, 여성 85cm 이상 주의)를 함께 살펴보는 것이 좋습니다. 성장기 어린이·청소년, 임산부, 노인, 근육량이 많은 사람은 성인 기준을 그대로 적용하기 어렵습니다. 하나의 수치보다 시간에 따른 변화 추세를 보는 편이 건강 관리에 도움이 됩니다.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
@@ -96,15 +175,19 @@
     </details>
     <details>
       <summary>WHO 기준과 아시아(한국 비만학회) 기준은 왜 다른가요?</summary>
-      <p>서양인 대상으로 수립된 WHO 기준(과체중 25 이상)은 아시아인에게 적용하면 실제 위험을 과소평가할 수 있습니다. 아시아인은 같은 BMI에서도 체지방이 상대적으로 많이 분포해 대사 질환 위험이 높습니다. 이에 한국 비만학회(2022)는 23 이상을 비만 전단계, 25 이상을 1단계 비만으로 더 엄격한 기준을 적용합니다. 이 BMI 계산기는 두 기준을 동시에 보여줍니다.</p>
+      <p>서양인 대상으로 수립된 WHO 기준(과체중 25 이상)은 아시아인에게 적용하면 실제 위험을 과소평가할 수 있습니다. 아시아인은 같은 BMI에서도 체지방이 상대적으로 많이 분포해 대사 질환 위험이 높습니다. 이에 한국 비만학회(2022)는 23 이상을 비만 전단계, 25 이상을 1단계 비만으로 더 엄격한 기준을 적용합니다. 이 BMI 계산기는 두 기준을 항상 함께 보여주고, 접속 지역을 추정해 둘 중 하나를 해석 기준으로 자동 선택합니다. 결과 아래 링크로 언제든 다른 기준으로 바꿔 볼 수 있습니다.</p>
     </details>
     <details>
       <summary>건강한 BMI 범위가 왜 18.5~22.9인가요?</summary>
-      <p>한국 비만학회는 아시아인 역학 연구 결과를 바탕으로 BMI 18.5~22.9를 정상 범위로 정의합니다. 이 구간에서 심혈관 질환, 당뇨병 등 만성 질환 위험이 가장 낮다는 연구 결과가 근거입니다. 건강 체중 범위는 입력한 키를 기준으로 역산해 표시합니다.</p>
+      <p>한국 비만학회는 아시아인 역학 연구 결과를 바탕으로 BMI 18.5~22.9를 정상 범위로 정의합니다. 이 구간에서 심혈관 질환, 당뇨병 등 만성 질환 위험이 가장 낮다는 연구 결과가 근거입니다. WHO 기준으로 보면 정상 범위는 18.5~24.9로 조금 더 넓습니다. 건강 체중 범위는 지금 보고 있는 해석 기준과 입력한 키를 바탕으로 역산해 표시합니다.</p>
+    </details>
+    <details>
+      <summary>파운드(lb)·피트(ft)로도 계산할 수 있나요?</summary>
+      <p>네. 이 비만도 계산기는 브라우저의 언어·지역 설정을 보고 단위계를 자동으로 고릅니다. 미국·영국처럼 야드파운드법을 쓰는 지역이면 ft·in·lb로, 그 밖의 지역이면 cm·kg로 시작합니다. 상단 토글로 언제든 바꿀 수 있고, 이미 입력한 값은 자동으로 환산되므로 다시 입력할 필요가 없습니다. 선택한 단위계는 브라우저에 기억되어 다음 방문에도 유지됩니다. BMI 자체는 단위가 없는 지수라 어느 단위로 입력해도 같은 값이 나옵니다.</p>
     </details>
     <details>
       <summary>키와 몸무게 입력값이 서버로 전송되나요?</summary>
-      <p>아니요. 이 체질량지수 계산기는 모든 계산을 브라우저 안에서 수행합니다. 입력값은 외부 서버로 전송되지 않으며, 다음 방문 시 편의를 위해 브라우저 localStorage에만 저장됩니다. 언제든지 브라우저 설정에서 삭제할 수 있습니다.</p>
+      <p>아니요. 이 체질량지수 계산기는 모든 계산을 브라우저 안에서 수행합니다. 입력값은 외부 서버로 전송되지 않으며, 다음 방문 시 편의를 위해 브라우저 localStorage에만 저장됩니다(키·몸무게, 단위계, 해석 기준). 같은 이유로 입력값을 주소창(URL)에 싣지 않습니다 — 링크를 새로 열 때 수치가 서버 접속 기록에 남지 않게 하기 위해서입니다. 저장된 값은 언제든지 브라우저 설정에서 삭제할 수 있습니다.</p>
     </details>
     <details>
       <summary>BMI 계산기와 체지방률 계산기의 차이는?</summary>
@@ -115,7 +198,7 @@
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer">☕ 커피 한 잔 사주기</a></p>
 </footer>
 
 <script src="js/config.js"></script>

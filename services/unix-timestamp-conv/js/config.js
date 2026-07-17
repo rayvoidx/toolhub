@@ -3,8 +3,8 @@
    스탬핑 시 factory/stamp.py 가 플레이스홀더 토큰을 치환한다.
    ============================================================ */
 window.APP_CONFIG = {
-  slug: "workday-calc",
-  name: "Business Days Calculator",
+  slug: "unix-timestamp-conv",
+  name: "Unix Timestamp Converter",
   version: "0.1.0",
 
   // 수익화: 런칭 게이트 통과 + 허브 승격 전까지 반드시 false

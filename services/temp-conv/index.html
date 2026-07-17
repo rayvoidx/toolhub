@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Temperature Converter — Celsius, Fahrenheit and Kelvin at once</title>
+<title>Temperature Converter — Celsius, Fahrenheit & Kelvin at Once</title>
 <meta name="description" content="Type one number and Celsius, Fahrenheit, and Kelvin update instantly. Oven temperatures, travel weather, science homework — converted in seconds, right in your browser.">
 <meta name="keywords" content="temperature converter, celsius to fahrenheit, fahrenheit to celsius, 온도 변환기, 섭씨 화씨 변환">
 <link rel="canonical" href="https://tool-hub.me/temp-conv/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Temperature Converter — Celsius, Fahrenheit and Kelvin at once">
+<meta property="og:title" content="Temperature Converter — Celsius, Fahrenheit & Kelvin at Once">
 <meta property="og:description" content="Type one number and Celsius, Fahrenheit, and Kelvin update instantly. Oven temperatures, travel weather, science homework — converted in seconds, right in your browser.">
 <meta property="og:url" content="https://tool-hub.me/temp-conv/">
 <meta property="og:image" content="https://tool-hub.me/temp-conv/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Temperature Converter",
+      "item": "https://tool-hub.me/temp-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert Celsius to Fahrenheit in my head?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The exact formula is °F = °C × 9/5 + 32. For a quick mental estimate use \"double it and add 30\" (°C × 2 + 30). At everyday temperatures the shortcut is close — 20 °C gives 70 vs the exact 68 °F — but the error grows as you move away from 10-20 °C, reaching about 6 °F near boiling. For cooking or fever checks, use the exact converter above rather than the approximation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is 350°F in Celsius?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "350 °F is about 176.7 °C, which most ovens round to 175 °C or 180 °C — the classic \"moderate oven\" for cakes and roasts. Other common US baking temperatures: 325 °F ≈ 160 °C, 375 °F ≈ 190 °C, 400 °F ≈ 200 °C and 425 °F ≈ 220 °C. Type 350 into the Fahrenheit box above to see the exact Celsius and Kelvin values."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Kelvin have no degree (°) symbol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Kelvin is an absolute thermodynamic unit, not a scale of \"degrees\" measured from an arbitrary point. Since the 1967 SI redefinition, temperatures are written as \"300 K\", not \"300 °K\". Each kelvin is exactly the same size as one degree Celsius, so the two scales differ only by an offset of 273.15."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is absolute zero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolute zero is the lowest temperature possible: −273.15 °C, −459.67 °F, or 0 K. At that point molecular motion reaches its theoretical minimum, so nothing can get colder. This converter shows values below absolute zero for reference but flags them with a warning, because no real substance can actually reach such a temperature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the numbers I enter sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This temperature converter runs entirely in your browser using plain JavaScript — every Celsius, Fahrenheit and Kelvin calculation happens on your device. Nothing you type is uploaded, stored or tracked, and the tool keeps working offline once the page has loaded."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -72,7 +140,14 @@
       .tc-copy:hover { border-color: var(--accent); color: var(--accent); }
       .tc-copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
       .tc-copymsg { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; color: var(--accent-strong); }
-      .tc-quick-label { margin: 24px 0 8px; font-weight: 600; font-size: 14px; }
+      .tc-quick-head {
+        display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+        gap: 8px 14px; margin: 24px 0 8px;
+      }
+      .tc-quick-label { margin: 0; font-weight: 600; font-size: 14px; }
+      .tc-homepick { display: flex; align-items: center; gap: 7px; }
+      .tool-card .tc-homepick label { margin: 0; font-size: 13px; font-weight: 500; color: var(--muted); }
+      .tool-card select.tc-home { width: auto; padding: 6px 26px 6px 9px; font-size: 13px; font-weight: 600; border-radius: 8px; }
       .tc-quick { display: flex; flex-wrap: wrap; gap: 8px; }
       .tc-preset {
         flex: 1 1 auto; min-width: 96px; padding: 11px 8px; font-family: inherit; font-size: 14px;
@@ -80,8 +155,11 @@
         background: var(--bg); color: var(--ink); cursor: pointer;
       }
       .tc-preset:hover { border-color: var(--accent); color: var(--accent); }
+      .tc-preset:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+      .tc-note { margin: 10px 0 0; font-size: 13px; color: var(--muted); line-height: 1.55; }
       .tc-placeholder { margin: 0; color: var(--muted); }
       .tc-summary { margin: 0; font-size: 19px; font-weight: 800; color: var(--accent-strong); word-break: break-word; letter-spacing: -0.01em; }
+      .tc-context { margin: 9px 0 0; font-size: 14.5px; font-weight: 600; color: var(--ink); line-height: 1.5; }
       .tc-warn { margin: 10px 0 0; font-size: 14px; font-weight: 600; color: #b91c1c; }
       .tc-hint { margin: 16px 0 0; font-size: 13px; color: var(--muted); }
       [data-theme="dark"] .tc-copymsg, [data-theme="dark"] .tc-summary { color: var(--accent); }
@@ -118,34 +196,30 @@
 
     <p class="tc-copymsg" id="tc-copymsg" role="status" aria-live="polite" hidden></p>
 
-    <p class="tc-quick-label" data-i18n="tool.quick.label">Quick presets</p>
-    <div class="tc-quick" role="group" aria-label="Quick temperature presets" data-i18n-aria-label="tool.quick.aria">
-      <button type="button" class="tc-preset" data-unit="f" data-val="350" data-i18n="tool.quick.oven">Oven 350°F</button>
-      <button type="button" class="tc-preset" data-unit="c" data-val="37" data-i18n="tool.quick.body">Body 37°C</button>
-      <button type="button" class="tc-preset" data-unit="c" data-val="100" data-i18n="tool.quick.boiling">Boiling 100°C</button>
-      <button type="button" class="tc-preset" data-unit="c" data-val="0" data-i18n="tool.quick.freezing">Freezing 0°C</button>
+    <div class="tc-quick-head">
+      <p class="tc-quick-label" data-i18n="tool.quick.label">Quick presets</p>
+      <div class="tc-homepick">
+        <label for="tc-home" data-i18n="tool.home.label">You normally use</label>
+        <select id="tc-home" class="tc-home">
+          <option value="c" data-i18n="tool.celsius.label">Celsius (°C)</option>
+          <option value="f" data-i18n="tool.fahrenheit.label">Fahrenheit (°F)</option>
+        </select>
+      </div>
     </div>
+    <!-- 프리셋은 app.js 가 "내가 쓰지 않는 단위"로 렌더한다 (섭씨권엔 °F 값, 화씨권엔 °C 값) -->
+    <div class="tc-quick" id="tc-quick" role="group" aria-label="Quick temperature presets" data-i18n-aria-label="tool.quick.aria"></div>
+    <p class="tc-note" id="tc-home-note"></p>
 
     <div class="result" id="tc-result">
       <p class="tc-placeholder" id="tc-placeholder" data-i18n="tool.result.placeholder">Type a number in any field and the other two convert instantly.</p>
       <p class="tc-summary" id="tc-summary" hidden></p>
+      <p class="tc-context" id="tc-context" hidden></p>
       <p class="tc-warn" id="tc-warn" role="alert" hidden></p>
     </div>
 
     <p class="tc-hint" data-i18n="tool.hint">Everything is calculated in your browser — nothing is sent to a server.</p>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About the temperature converter</h2>
-    <p data-i18n="guide.lead">This free temperature converter turns any value between Celsius, Fahrenheit and Kelvin the instant you type. It is handy for following a US recipe with an oven marked in °F, reading travel weather, or checking a science homework answer — no app, no sign-up.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Type a number into any one of the three fields — Celsius, Fahrenheit or Kelvin — and the other two update at once. There is no convert button and no wrong field to start in: edit whichever unit you have and read off the rest. Clear the box to start over.</p>
-    <h3 data-i18n="guide.howTitle">The conversion formulas</h3>
-    <p data-i18n="guide.howBody">Fahrenheit is °F = °C × 9/5 + 32, and back is °C = (°F − 32) × 5/9. Kelvin shifts Celsius by 273.15, so K = °C + 273.15. For example, 25 °C is 25 × 9/5 + 32 = 77 °F and 25 + 273.15 = 298.15 K. Water freezes at 0 °C / 32 °F / 273.15 K and boils at 100 °C / 212 °F.</p>
-    <h3 data-i18n="guide.tipTitle">Handy reference points</h3>
-    <p data-i18n="guide.tipBody">A few anchors make conversions easy to sanity-check: normal body temperature is about 37 °C (98.6 °F), a comfortable room is 20–22 °C (68–72 °F), and −40 °C equals −40 °F — the one point where the two scales meet. Kelvin never goes negative, because 0 K is absolute zero.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
@@ -167,7 +241,7 @@
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>
