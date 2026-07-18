@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fraction Calculator — add, subtract, multiply, divide</title>
+<meta name="description" content="Free online fraction calculator. Enter two fractions and an operation to add, subtract, multiply or divide them, or simplify a single fraction to lowest terms. Get the exact result as a reduced fraction, mixed number and decimal — with the steps. Runs entirely in your browser, no sign-up.">
+<meta name="keywords" content="fraction calculator, 분수 계산기, simplify fractions, 기약분수 계산기, 약분 계산기, mixed number calculator, adding fractions calculator, add subtract multiply divide fractions">
+<link rel="canonical" href="https://tool-hub.me/fraction-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fraction Calculator — add, subtract, multiply, divide">
+<meta property="og:description" content="Free online fraction calculator. Enter two fractions and an operation to add, subtract, multiply or divide them, or simplify a single fraction to lowest terms. Get the exact result as a reduced fraction, mixed number and decimal — with the steps. Runs entirely in your browser, no sign-up.">
+<meta property="og:url" content="https://tool-hub.me/fraction-calc/">
+<meta property="og:image" content="https://tool-hub.me/fraction-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4f46e5">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fraction Calculator",
+  "description": "Free online fraction calculator. Enter two fractions and an operation to add, subtract, multiply or divide them, or simplify a single fraction to lowest terms. Get the exact result as a reduced fraction, mixed number and decimal — with the steps. Runs entirely in your browser, no sign-up.",
+  "url": "https://tool-hub.me/fraction-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fraction Calculator",
+      "item": "https://tool-hub.me/fraction-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you add and subtract fractions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Give both fractions the same (common) denominator, then add or subtract the numerators and keep the denominator. Example: 1/2 + 1/3 → 3/6 + 2/6 = 5/6. This fraction calculator does it for you and reduces the answer to lowest terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you multiply and divide fractions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To multiply, multiply straight across: 2/3 × 4/5 = 8/15. To divide, flip the second fraction and multiply — dividing is the same as multiplying by the reciprocal: 2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between a mixed number and an improper fraction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An improper fraction has a numerator larger than its denominator, like 7/3. A mixed number writes the same value as a whole part plus a proper fraction: 7/3 = 2 1/3. This calculator shows both, so you can convert either way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you simplify a fraction to lowest terms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the numerator and denominator by their greatest common divisor (GCD). For 8/12 the GCD is 4, so 8/12 = 2/3. The Simplify tab does this for any fraction and shows the GCD it used — handy for reducing fractions to lowest terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my calculation sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation runs entirely in your browser using exact integer math, and your inputs are saved only in your browser's local storage. Nothing is uploaded, there's no sign-up, and there are no ads."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Fraction Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Fraction Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter two fractions, pick an operation, and get the exact answer reduced to lowest terms — with the steps.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .fc-tabs { display: flex; gap: 8px; margin-bottom: 4px; }
+      #tool .fc-tab {
+        flex: 1; padding: 11px 12px; font-size: 15px; font-weight: 700; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 10px; background: none; color: var(--muted); cursor: pointer;
+      }
+      #tool .fc-tab:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .fc-tab.is-on { background: var(--accent); border-color: var(--accent); color: #fff; }
+      #tool .fc-panel[hidden] { display: none; }
+      #tool .fc-cap { display: block; font-weight: 700; font-size: 14px; margin: 18px 0 6px; }
+      #tool .fc-frac { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+      #tool .fc-frac input { width: auto; flex: 1 1 72px; min-width: 0; text-align: center; }
+      #tool .fc-frac .fc-whole { flex: 0 0 88px; }
+      #tool .fc-slash { font-size: 22px; color: var(--muted); line-height: 1; }
+      #tool select.fc-op { width: 100%; }
+      #tool .fc-hint { margin: 12px 0 0; font-size: 13px; color: var(--muted); }
+      #tool .result { margin-top: 20px; }
+      #tool .fc-answer { text-align: center; margin: 2px 0 16px; }
+      #tool .fc-int, #tool .fc-frac-view .fc-n, #tool .fc-frac-view .fc-d {
+        font-size: 34px; font-weight: 900; letter-spacing: -0.02em; color: var(--accent-strong);
+        /* BigInt 극단 입력(자릿수 큰 결과)도 카드 안에서 줄바꿈 — 375px 가로 스크롤 방지 */
+        overflow-wrap: anywhere; word-break: break-word;
+      }
+      #tool .fc-int { font-size: 44px; }
+      #tool .fc-frac-view {
+        display: inline-flex; flex-direction: column; align-items: center; line-height: 1.12;
+        max-width: 100%; /* inline-flex 는 기본이 max-content — 부모 폭으로 상한을 건다 */
+      }
+      #tool .fc-frac-view .fc-n, #tool .fc-frac-view .fc-d { max-width: 100%; }
+      #tool .fc-frac-view .fc-n { padding: 0 12px 4px; border-bottom: 3px solid var(--accent-strong); }
+      #tool .fc-frac-view .fc-d { padding: 5px 12px 0; }
+      /* 자릿수가 많으면 단계적으로 축소 — 줄바꿈(위)은 안전망, 이쪽은 가독성 유지용 */
+      #tool .fc-answer.is-long .fc-int { font-size: 26px; }
+      #tool .fc-answer.is-long .fc-frac-view .fc-n,
+      #tool .fc-answer.is-long .fc-frac-view .fc-d { font-size: 21px; }
+      #tool .fc-answer.is-xlong .fc-int { font-size: 18px; letter-spacing: 0; }
+      #tool .fc-answer.is-xlong .fc-frac-view .fc-n,
+      #tool .fc-answer.is-xlong .fc-frac-view .fc-d { font-size: 15px; letter-spacing: 0; }
+      #tool .fc-answer.is-xlong .fc-frac-view .fc-n { border-bottom-width: 2px; }
+      [data-theme="dark"] #tool .fc-int,
+      [data-theme="dark"] #tool .fc-frac-view .fc-n,
+      [data-theme="dark"] #tool .fc-frac-view .fc-d { color: var(--accent); }
+      [data-theme="dark"] #tool .fc-frac-view .fc-n { border-bottom-color: var(--accent); }
+      @media (prefers-color-scheme: dark) {
+        [data-theme="auto"] #tool .fc-int,
+        [data-theme="auto"] #tool .fc-frac-view .fc-n,
+        [data-theme="auto"] #tool .fc-frac-view .fc-d { color: var(--accent); }
+        [data-theme="auto"] #tool .fc-frac-view .fc-n { border-bottom-color: var(--accent); }
+      }
+      #tool .fc-line { display: flex; justify-content: space-between; gap: 14px; margin: 7px 0; font-size: 15px; }
+      #tool .fc-line b { color: var(--muted); font-weight: 700; }
+      #tool .fc-line span { font-weight: 800; font-variant-numeric: tabular-nums; word-break: break-word; text-align: right; }
+      #tool .fc-actions { margin-top: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool .fc-actions .btn { margin-top: 0; padding: 9px 18px; font-size: 14px; }
+      #tool .fc-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .fc-status { color: var(--accent); }
+      #tool .fc-steps { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+      #tool .fc-steps summary { cursor: pointer; font-weight: 700; font-size: 14px; color: var(--accent); }
+      #tool .fc-steps ol { margin: 12px 0 2px; padding-inline-start: 22px; }
+      #tool .fc-steps li { margin: 8px 0; font-size: 14px; color: var(--muted); }
+      #tool .fc-steps .fc-expr {
+        display: block; margin-top: 3px; font-size: 15px; font-weight: 700;
+        color: var(--ink); font-variant-numeric: tabular-nums; word-break: break-word;
+      }
+      #tool .fc-msg { margin: 0; color: var(--muted); }
+      #tool .fc-note { margin: 0 0 10px; font-size: 13px; color: var(--muted); }
+      #tool .fc-err { margin: 0; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .fc-err { color: var(--accent); }
+    </style>
+
+    <div class="fc-tabs" role="tablist">
+      <button type="button" class="fc-tab is-on" id="fc-tab-calc" role="tab" aria-selected="true" data-tab="calc" data-i18n="tool.tab.calc">Calculate</button>
+      <button type="button" class="fc-tab" id="fc-tab-simplify" role="tab" aria-selected="false" data-tab="simplify" data-i18n="tool.tab.simplify">Simplify</button>
+    </div>
+
+    <!-- 탭 1: Calculate — A (op) B -->
+    <div class="fc-panel" id="fc-panel-calc" role="tabpanel" aria-labelledby="fc-tab-calc">
+      <span class="fc-cap" data-i18n="tool.a.legend">Fraction A</span>
+      <div class="fc-frac" role="group" aria-label="Fraction A" data-i18n-aria-label="tool.a.legend">
+        <input type="text" class="fc-whole" id="fc-a-w" inputmode="numeric" autocomplete="off" placeholder="whole" data-i18n-placeholder="tool.whole.ph" aria-label="Whole number of fraction A">
+        <input type="text" class="fc-num" id="fc-a-n" inputmode="numeric" autocomplete="off" placeholder="numerator" data-i18n-placeholder="tool.num.ph" aria-label="Numerator of fraction A">
+        <span class="fc-slash" aria-hidden="true">/</span>
+        <input type="text" class="fc-den" id="fc-a-d" inputmode="numeric" autocomplete="off" placeholder="denominator" data-i18n-placeholder="tool.den.ph" aria-label="Denominator of fraction A">
+      </div>
+
+      <label class="fc-cap" for="fc-op" data-i18n="tool.op.label">Operation</label>
+      <select id="fc-op" class="fc-op">
+        <option value="+" data-i18n="tool.op.add">+  Add</option>
+        <option value="-" data-i18n="tool.op.sub">−  Subtract</option>
+        <option value="*" data-i18n="tool.op.mul">×  Multiply</option>
+        <option value="/" data-i18n="tool.op.div">÷  Divide</option>
+      </select>
+
+      <span class="fc-cap" data-i18n="tool.b.legend">Fraction B</span>
+      <div class="fc-frac" role="group" aria-label="Fraction B" data-i18n-aria-label="tool.b.legend">
+        <input type="text" class="fc-whole" id="fc-b-w" inputmode="numeric" autocomplete="off" placeholder="whole" data-i18n-placeholder="tool.whole.ph" aria-label="Whole number of fraction B">
+        <input type="text" class="fc-num" id="fc-b-n" inputmode="numeric" autocomplete="off" placeholder="numerator" data-i18n-placeholder="tool.num.ph" aria-label="Numerator of fraction B">
+        <span class="fc-slash" aria-hidden="true">/</span>
+        <input type="text" class="fc-den" id="fc-b-d" inputmode="numeric" autocomplete="off" placeholder="denominator" data-i18n-placeholder="tool.den.ph" aria-label="Denominator of fraction B">
+      </div>
+
+      <p class="fc-hint" data-i18n="tool.calc.hint">Whole numbers only. Leave the whole box empty for a simple fraction; use it for mixed numbers like 2 1/4. Negative signs are allowed.</p>
+
+      <div class="result" id="fc-result" aria-live="polite"></div>
+    </div>
+
+    <!-- 탭 2: Simplify — 한 분수를 기약분수로 -->
+    <div class="fc-panel" id="fc-panel-simplify" role="tabpanel" aria-labelledby="fc-tab-simplify" hidden>
+      <span class="fc-cap" data-i18n="tool.s.legend">Fraction to simplify</span>
+      <div class="fc-frac" role="group" aria-label="Fraction to simplify" data-i18n-aria-label="tool.s.legend">
+        <input type="text" class="fc-num" id="fc-s-n" inputmode="numeric" autocomplete="off" placeholder="numerator" data-i18n-placeholder="tool.num.ph" aria-label="Numerator to simplify">
+        <span class="fc-slash" aria-hidden="true">/</span>
+        <input type="text" class="fc-den" id="fc-s-d" inputmode="numeric" autocomplete="off" placeholder="denominator" data-i18n-placeholder="tool.den.ph" aria-label="Denominator to simplify">
+      </div>
+
+      <p class="fc-hint" data-i18n="tool.s.hint">Enter any fraction to reduce it to lowest terms. Whole numbers only.</p>
+
+      <div class="result" id="fc-result-s" aria-live="polite"></div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">How do you add and subtract fractions?</summary><p data-i18n="faq.a1">Give both fractions the same (common) denominator, then add or subtract the numerators and keep the denominator. Example: 1/2 + 1/3 → 3/6 + 2/6 = 5/6. This fraction calculator does it for you and reduces the answer to lowest terms.</p></details>
+    <details><summary data-i18n="faq.q2">How do you multiply and divide fractions?</summary><p data-i18n="faq.a2">To multiply, multiply straight across: 2/3 × 4/5 = 8/15. To divide, flip the second fraction and multiply — dividing is the same as multiplying by the reciprocal: 2/3 ÷ 4/5 = 2/3 × 5/4 = 10/12 = 5/6.</p></details>
+    <details><summary data-i18n="faq.q3">What's the difference between a mixed number and an improper fraction?</summary><p data-i18n="faq.a3">An improper fraction has a numerator larger than its denominator, like 7/3. A mixed number writes the same value as a whole part plus a proper fraction: 7/3 = 2 1/3. This calculator shows both, so you can convert either way.</p></details>
+    <details><summary data-i18n="faq.q4">How do you simplify a fraction to lowest terms?</summary><p data-i18n="faq.a4">Divide the numerator and denominator by their greatest common divisor (GCD). For 8/12 the GCD is 4, so 8/12 = 2/3. The Simplify tab does this for any fraction and shows the GCD it used — handy for reducing fractions to lowest terms.</p></details>
+    <details><summary data-i18n="faq.q5">Is my calculation sent to a server?</summary><p data-i18n="faq.a5">No. Every calculation runs entirely in your browser using exact integer math, and your inputs are saved only in your browser's local storage. Nothing is uploaded, there's no sign-up, and there are no ads.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
