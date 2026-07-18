@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JSON Formatter — Format, validate & minify JSON with exact error locations</title>
+<title>JSON Formatter — Format, validate</title>
 <meta name="description" content="Free online JSON formatter, validator and minifier. Paste JSON to beautify it with 2/4-space or tab indentation, minify it to a single line, or validate it and see the exact line and column of any syntax error. Runs entirely in your browser — your JSON, including API keys and secrets, is never uploaded.">
 <meta name="keywords" content="json formatter, json beautifier, json validator, json minify, JSON 포매터, json 정렬">
 <link rel="canonical" href="https://tool-hub.me/json-formatter/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="JSON Formatter — Format, validate & minify JSON with exact error locations">
+<meta property="og:title" content="JSON Formatter — Format, validate">
 <meta property="og:description" content="Free online JSON formatter, validator and minifier. Paste JSON to beautify it with 2/4-space or tab indentation, minify it to a single line, or validate it and see the exact line and column of any syntax error. Runs entirely in your browser — your JSON, including API keys and secrets, is never uploaded.">
 <meta property="og:url" content="https://tool-hub.me/json-formatter/">
 <meta property="og:image" content="https://tool-hub.me/json-formatter/og-image.png">
@@ -30,9 +30,77 @@
   "offers": { "@type": "Offer", "price": "0" }
 }
 </script>
-<!-- ADSENSE:START -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
-<!-- ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSON Formatter",
+      "item": "https://tool-hub.me/json-formatter/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does this JSON formatter show the exact error location?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When your text is not valid JSON, most online tools only say \"invalid\". This JSON validator goes further: it reads the byte position that the browser's own JSON parser reports for the first syntax error, converts it into a human line and column, and prints \"Invalid JSON — line L, column C\" alongside the parser's own message. Click Format or Minify and the offending line is selected in the input box so you can jump straight to it. That makes fixing a missing comma, an unclosed bracket or a stray quote far quicker than hunting through the whole document."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Format vs Minify vs Validate — what does each button do?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Format (beautify) re-indents your JSON with 2 spaces, 4 spaces or a tab so it is easy to read, optionally sorting object keys alphabetically. Minify strips every unnecessary space and newline to produce the smallest single-line JSON, ideal for API payloads and config values. Validate happens automatically as you type: the status badge turns green \"Valid JSON\" with key, depth and byte statistics, or red with the line and column of the first error. All three run instantly in your browser on the same parsed data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my JSON sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This JSON formatter runs 100% in your browser using the built-in JSON engine — nothing you paste is ever uploaded, logged or shared. That makes it safe for JSON that contains API keys, access tokens, secrets or personal data (PII), unlike ad-heavy sites that post your text to a backend. Your most recent input is optionally kept in this browser's local storage so it is still here when you return; untick \"Save my JSON in this browser\" to keep it for the session only, and Clear removes the stored copy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do comments, single quotes or trailing commas fail?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because this tool validates against the standard JSON specification (RFC 8259), not the relaxed JSON5 or JSONC dialects. Standard JSON requires double quotes around every key and string, forbids trailing commas after the last item, and does not allow comments (// or /* */) or single quotes. If your file uses those, the validator will point to the exact spot that breaks the rules — remove the comment, swap single quotes for double quotes, or delete the trailing comma and it will parse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do very large integers lose precision, and how are duplicate keys handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JSON numbers are parsed as standard IEEE-754 doubles, so any integer above 2^53 − 1 (9,007,199,254,740,991) may be rounded — for example a 64-bit ID like 9223372036854775807 can come back slightly changed. Keep such values as strings if exact digits matter. When an object contains the same key twice, standard JSON keeps only the last occurrence, so duplicates are silently merged; the formatter follows that rule, which is another reason to validate machine-generated JSON before trusting it."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
 </head>
 <body>
 <header class="site-header">
@@ -65,30 +133,45 @@
       placeholder='{ "name": "Ada", "age": 36, "skills": ["math", "code"] }' data-i18n-placeholder="tool.inputPlaceholder"
       style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem;"></textarea>
 
-    <div style="display:flex;align-items:center;gap:1.1rem;margin-top:.8rem;flex-wrap:wrap;">
-      <label for="jf-indent" style="display:flex;align-items:center;gap:.5rem;margin:0;font-weight:400;">
-        <span data-i18n="tool.indentLabel">Indent</span>
-        <select id="jf-indent" style="width:auto;">
-          <option value="2" data-i18n="tool.indent2">2 spaces</option>
-          <option value="4" data-i18n="tool.indent4">4 spaces</option>
-          <option value="tab" data-i18n="tool.indentTab">Tab</option>
-        </select>
-      </label>
-      <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
-        <input type="checkbox" id="jf-sort" style="width:auto;margin:0;">
-        <span data-i18n="tool.sortKeys">Sort keys</span>
-      </label>
-      <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
-        <input type="checkbox" id="jf-remember" checked style="width:auto;margin:0;">
-        <span data-i18n="tool.remember">Save my JSON in this browser</span>
-      </label>
+    <div style="display:flex;align-items:center;gap:.9rem;margin-top:.85rem;flex-wrap:wrap;">
+      <div id="jf-mode" role="group" aria-label="Output style" data-i18n-aria-label="tool.modeLabel"
+        style="display:inline-flex;border:1px solid var(--line);border-radius:.6rem;overflow:hidden;background:var(--bg);">
+        <button type="button" id="jf-format" data-mode="format" aria-pressed="true" data-i18n="tool.format"
+          style="padding:.5rem .85rem;font-size:.85rem;font-weight:700;font-family:inherit;border:0;background:var(--accent);color:#fff;cursor:pointer;">Format</button>
+        <button type="button" id="jf-minify" data-mode="minify" aria-pressed="false" data-i18n="tool.minify"
+          style="padding:.5rem .85rem;font-size:.85rem;font-weight:500;font-family:inherit;border:0;border-inline-start:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;">Minify</button>
+      </div>
+
+      <div id="jf-indent-row" style="display:flex;align-items:center;gap:.5rem;">
+        <span data-i18n="tool.indentLabel" style="font-size:.85rem;color:var(--muted);">Indent</span>
+        <div id="jf-indent" role="group" aria-label="Indent" data-i18n-aria-label="tool.indentLabel"
+          style="display:inline-flex;border:1px solid var(--line);border-radius:.6rem;overflow:hidden;background:var(--bg);">
+          <button type="button" data-indent="2" aria-pressed="true" data-i18n="tool.indent2"
+            style="padding:.5rem .7rem;font-size:.85rem;font-weight:700;font-family:inherit;border:0;background:var(--accent);color:#fff;cursor:pointer;">2 spaces</button>
+          <button type="button" data-indent="4" aria-pressed="false" data-i18n="tool.indent4"
+            style="padding:.5rem .7rem;font-size:.85rem;font-weight:500;font-family:inherit;border:0;border-inline-start:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;">4 spaces</button>
+          <button type="button" data-indent="tab" aria-pressed="false" data-i18n="tool.indentTab"
+            style="padding:.5rem .7rem;font-size:.85rem;font-weight:500;font-family:inherit;border:0;border-inline-start:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;">Tab</button>
+        </div>
+      </div>
+
+      <button type="button" id="jf-clear" data-i18n="tool.clear"
+        style="padding:.5rem .85rem;font-size:.85rem;font-weight:600;font-family:inherit;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--muted);cursor:pointer;">Clear</button>
     </div>
 
-    <div style="display:flex;gap:.6rem;margin-top:.9rem;flex-wrap:wrap;">
-      <button type="button" class="btn" id="jf-format" data-i18n="tool.format" style="width:auto;">Format</button>
-      <button type="button" class="btn" id="jf-minify" data-i18n="tool.minify" style="width:auto;">Minify</button>
-      <button type="button" class="btn" id="jf-clear" data-i18n="tool.clear" style="width:auto;background:var(--bg);color:var(--ink);border:1px solid var(--line);">Clear</button>
-    </div>
+    <details id="jf-advanced" style="margin-top:.75rem;">
+      <summary data-i18n="tool.advanced" style="cursor:pointer;font-size:.85rem;color:var(--muted);">More options</summary>
+      <div style="display:flex;align-items:center;gap:1.1rem;flex-wrap:wrap;margin-top:.6rem;">
+        <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+          <input type="checkbox" id="jf-sort" style="width:auto;margin:0;">
+          <span data-i18n="tool.sortKeys">Sort keys</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+          <input type="checkbox" id="jf-remember" checked style="width:auto;margin:0;">
+          <span data-i18n="tool.remember">Save my JSON in this browser</span>
+        </label>
+      </div>
+    </details>
 
     <div class="result" id="jf-result" aria-live="polite" style="margin-top:1.1rem;">
       <div style="display:flex;align-items:center;gap:.7rem;flex-wrap:wrap;">
@@ -96,6 +179,13 @@
         <span id="jf-stats" style="font-size:.85rem;color:var(--muted);"></span>
       </div>
       <p id="jf-message" style="margin:.6rem 0 0;line-height:1.55;overflow-wrap:anywhere;" data-i18n="tool.emptyHint">Paste or type JSON above to validate, format or minify it — with the exact line and column of any error.</p>
+      <div id="jf-error" hidden style="margin-top:.7rem;">
+        <pre id="jf-excerpt" dir="ltr" aria-hidden="true" style="margin:0 0 .6rem;padding:.6rem .7rem;overflow-x:auto;background:var(--bg);border:1px solid var(--line);border-radius:.5rem;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.8rem;line-height:1.45;white-space:pre;color:var(--ink);"></pre>
+        <p id="jf-hint" style="margin:0;font-size:.95rem;line-height:1.55;"></p>
+        <p id="jf-raw" dir="ltr" style="margin:.45rem 0 0;font-size:.8rem;color:var(--muted);line-height:1.45;overflow-wrap:anywhere;"></p>
+        <button type="button" id="jf-jump" data-i18n="tool.jumpToError"
+          style="margin-top:.7rem;padding:.45rem .8rem;font-size:.82rem;font-weight:600;font-family:inherit;border:1px solid var(--line);border-radius:.6rem;background:var(--surface);color:var(--ink);cursor:pointer;">Go to the error line</button>
+      </div>
     </div>
 
     <label for="jf-output" data-i18n="tool.outputLabel" style="margin-top:1.3rem;">Output</label>
@@ -110,17 +200,6 @@
     </div>
   </section>
   <!-- TOOL:END -->
-
-  <section class="guide">
-    <h2 data-i18n="guide.heading">About the JSON formatter</h2>
-    <p data-i18n="guide.lead">Paste JSON to pretty-print, validate or minify it in one click. When something is wrong, the tool points to the exact line and column so you can fix a stray comma or bracket fast. Everything runs in your browser.</p>
-    <h3 data-i18n="guide.useTitle">How to use it</h3>
-    <p data-i18n="guide.useBody">Paste or type your JSON, then choose Format to indent it readably or Minify to strip it into a compact one-liner. If the JSON is invalid, an error message shows what went wrong and where. Copy the result with one click.</p>
-    <h3 data-i18n="guide.howTitle">What formatting and validation do</h3>
-    <p data-i18n="guide.howBody">Formatting parses the text into a data structure and re-serialises it with consistent indentation (usually 2 spaces), so nested objects and arrays line up. Validation reports the first syntax error — a missing quote, trailing comma or unbalanced bracket — with its position. Minifying removes every non-essential space and newline, so {"a": 1, "b": 2} becomes {"a":1,"b":2}, which is smaller to send over a network.</p>
-    <h3 data-i18n="guide.tipTitle">Good to know</h3>
-    <p data-i18n="guide.tipBody">JSON needs double quotes around keys and strings, no trailing commas and no comments — the usual reasons a file fails to parse. Minified JSON suits APIs and storage; formatted JSON is easier to read and to diff. Your data is parsed locally and never uploaded.</p>
-  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
