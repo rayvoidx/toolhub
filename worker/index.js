@@ -34,6 +34,22 @@ export default {
       const assetRequest = new Request(assetUrl.toString(), request);
       const assetResponse = await env.ASSETS.fetch(assetRequest);
 
+      /*
+       * html_handling 이 /age-calc 를 307 Location: /services/age-calc/ 로 돌려준다.
+       * 내부 /services/ 경로가 공개 URL 로 새면 중복 URL 색인 오염이므로
+       * 공개 경로로 되돌리고, 임시(307) 대신 영구(301)로 내보낸다.
+       */
+      const assetLoc = assetResponse.headers.get("location");
+      if (
+        assetResponse.status >= 300 &&
+        assetResponse.status < 400 &&
+        assetLoc
+      ) {
+        const loc = new URL(assetLoc, url.origin);
+        loc.pathname = loc.pathname.replace(/^\/services(?=\/)/, "");
+        return Response.redirect(loc.toString(), 301);
+      }
+
       if (assetResponse.status !== 404) {
         return assetResponse;
       }
