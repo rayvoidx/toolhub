@@ -4,7 +4,7 @@
    ============================================================ */
 window.APP_CONFIG = {
   slug: "pomodoro-timer",
-  name: "뽀모도로 타이머",
+  name: "Pomodoro Timer",
   version: "0.1.0",
 
   // 수익화: 런칭 게이트 통과 + 허브 승격 전까지 반드시 false

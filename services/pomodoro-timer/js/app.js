@@ -99,20 +99,20 @@
   var FREQ_BREAK_END = 660;             // 휴식 종료 비프 (낮은 음)
   var DEFAULTS = { focus: 25, short: 5, long: 15, interval: 4, auto: false };
 
-  // ko 원문 폴백 (i18n 카탈로그가 우선 — tr() 참조)
+  // en baked fallback (i18n 카탈로그가 우선 — tr() 참조)
   var MSG = {
-    modeFocus: "집중",
-    modeShort: "짧은 휴식",
-    modeLong: "긴 휴식",
-    cycle: "{n} / {m}번째 뽀모도로",
-    start: "시작",
-    pause: "일시정지",
-    resume: "재개",
-    focusDone: "집중 세션 종료! 다음: {next} — 시작을 누르세요.",
-    breakDone: "휴식 종료! 다음: {next} — 시작을 누르세요.",
-    overrun: "탭이 백그라운드에 있는 동안 세션이 끝났습니다. 자동 진행을 멈췄으니 시작을 눌러 이어가세요.",
-    noAudio: "이 브라우저에서는 소리를 사용할 수 없습니다 — 시각 알림만 제공됩니다.",
-    noStorage: "저장소를 사용할 수 없어(개인정보 보호 모드) 설정과 오늘 카운트가 이번 세션 동안만 유지됩니다."
+    modeFocus: "Focus",
+    modeShort: "Short break",
+    modeLong: "Long break",
+    cycle: "Pomodoro {n} of {m}",
+    start: "Start",
+    pause: "Pause",
+    resume: "Resume",
+    focusDone: "Focus session complete! Next: {next} — press Start.",
+    breakDone: "Break over! Next: {next} — press Start.",
+    overrun: "The session ended while the tab was in the background. Auto-run paused — press Start to continue.",
+    noAudio: "Sound is unavailable in this browser — you'll still get the visual alert.",
+    noStorage: "Storage is unavailable (private browsing) — settings and today's count last for this session only."
   };
 
   /* ---- 순수 계산 (node 단위 검증 대상) ---- */

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="auto">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Interest Calculator — Simple & Compound After-Tax Interest</title>
-<meta name="description" content="예금 이자 계산기. 원금·연이율·기간을 입력하면 단리/월복리/연복리, 일반과세·세금우대·비과세 기준 세후 이자와 만기 수령액을 즉시 계산하는 무료 도구">
-<meta name="keywords" content="이자 계산기, 예금 이자 계산기, 단리 계산기, 복리 계산기, 세후 이자 계산">
+<meta name="description" content="Free deposit interest calculator: enter principal, annual rate and term to instantly get simple, monthly-compound or annual-compound interest, tax (15.4%/9.5%/0%) and the after-tax maturity payout.">
+<meta name="keywords" content="interest calculator, deposit interest calculator, simple interest calculator, compound interest calculator, after-tax interest">
 <link rel="canonical" href="https://tool-hub.me/interest-calc/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Interest Calculator — Simple & Compound After-Tax Interest">
-<meta property="og:description" content="예금 이자 계산기. 원금·연이율·기간을 입력하면 단리/월복리/연복리, 일반과세·세금우대·비과세 기준 세후 이자와 만기 수령액을 즉시 계산하는 무료 도구">
+<meta property="og:description" content="Free deposit interest calculator: enter principal, annual rate and term to instantly get simple, monthly-compound or annual-compound interest, tax (15.4%/9.5%/0%) and the after-tax maturity payout.">
 <meta property="og:url" content="https://tool-hub.me/interest-calc/">
 <meta property="og:image" content="https://tool-hub.me/interest-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,8 +22,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "이자 계산기",
-  "description": "예금 이자 계산기. 원금·연이율·기간을 입력하면 단리/월복리/연복리, 일반과세·세금우대·비과세 기준 세후 이자와 만기 수령액을 즉시 계산하는 무료 도구",
+  "name": "Interest Calculator",
+  "description": "Free deposit interest calculator: enter principal, annual rate and term to instantly get simple, monthly-compound or annual-compound interest, tax (15.4%/9.5%/0%) and the after-tax maturity payout.",
   "url": "https://tool-hub.me/interest-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -57,42 +57,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "단리·월복리·연복리는 무엇이 다른가요?",
+      "name": "What is the difference between simple, monthly compound and annual compound interest?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "단리는 원금에만 이자가 붙습니다(원금×연이율×기간). 월복리는 매달, 연복리는 매년 발생한 이자가 원금에 더해져 다시 이자가 붙습니다. 국내 은행 정기예금은 대부분 만기 일시지급식 단리라서 기본값을 단리로 두었고, 라디오 버튼만 바꾸면 이 이자 계산기를 단리 계산기·복리 계산기로 모두 쓸 수 있어 세 방식의 이자 차이를 한 화면에서 비교할 수 있습니다."
+        "text": "With simple interest, only the principal earns interest (principal x rate x years). With monthly or annual compounding, the interest earned each month or year is added to the principal and earns interest again. Most Korean time deposits pay simple interest at maturity, so Simple is the default — switch the radio buttons to use this tool as a simple or compound interest calculator and compare all three methods on one screen."
       }
     },
     {
       "@type": "Question",
-      "name": "이자소득세 15.4%는 어떻게 구성되나요?",
+      "name": "What makes up the 15.4% interest income tax?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "이자소득세 14%에 지방소득세 1.4%(소득세의 10%)를 더한 값입니다. 은행 예금 이자에는 기본적으로 15.4%가 원천징수되며, 이 계산기의 '일반과세'가 그 기준이라 세후 이자 계산 결과가 실제 수령액에 가깝습니다. 상호금융 조합원이라면 세금우대 9.5%, 비과세종합저축(만 65세 이상 등) 대상이라면 비과세 0%를 선택해 비교해 보세요."
+        "text": "It is 14% income tax plus 1.4% local income tax (10% of the income tax). Korean bank deposit interest is withheld at 15.4% by default, and the Standard option applies that rate, so the after-tax interest is close to what you actually receive. Members of mutual-finance cooperatives can pick Preferential 9.5%, and eligible tax-free comprehensive savings (e.g. aged 65+) can pick Tax-free 0%."
       }
     },
     {
       "@type": "Question",
-      "name": "72의 법칙이 무엇인가요?",
+      "name": "What is the Rule of 72?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "72를 연이율(%)로 나누면 복리로 원금이 2배가 되는 데 걸리는 햇수를 어림할 수 있는 법칙입니다. 예를 들어 연 4% 복리면 72÷4=약 18년입니다. 이 계산기의 연복리 옵션에서 기간을 바꿔 가며 세전 이자가 원금에 가까워지는 시점을 직접 확인해 볼 수 있습니다."
+        "text": "Divide 72 by the annual rate (%) to estimate how many years it takes for money to double with compound interest. At 4% a year, 72 / 4 = about 18 years. Try the annual compound option of this interest calculator with different terms and watch the pre-tax interest approach the principal."
       }
     },
     {
       "@type": "Question",
-      "name": "예금(거치식)과 적금(적립식)의 이자는 어떻게 다른가요?",
+      "name": "How does interest differ between a time deposit (lump sum) and installment savings?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "예금은 목돈 전액이 전체 기간 동안 예치되지만, 적금은 매달 나눠 넣어 평균 예치 기간이 만기의 절반 수준입니다. 그래서 같은 연 이율이라도 적금의 세전 이자는 예금의 약 절반입니다. 이 예금 이자 계산기는 목돈 거치식 기준이므로, 매달 납입하는 적금은 적금 만기 계산기를 이용하세요. 적금 만기 계산기로 계산하기 →"
+        "text": "A time deposit keeps the whole lump sum invested for the entire term, while installment savings deposit money month by month, so the average deposit period is about half the term — at the same rate, pre-tax interest is roughly half. This deposit interest calculator assumes a lump sum; if you save monthly, use the savings maturity calculator. Open the savings maturity calculator →"
       }
     },
     {
       "@type": "Question",
-      "name": "계산 결과가 은행의 실제 이자와 왜 다를 수 있나요?",
+      "name": "Why can the result differ from the interest my bank actually pays?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "이 계산기는 개월 단위 예치와 원 단위 버림을 가정한 세후 이자 계산 도구입니다. 실제 은행은 예치일 기준 일할 계산을 적용하고, 중도해지 시 약정보다 낮은 중도해지 금리가 적용되며, 우대금리 조건 충족 여부에 따라 적용 금리도 달라집니다. 그래서 실제 지급액과 몇 원~몇천 원 정도 차이가 날 수 있으며, 결과는 참고용으로 활용하세요."
+        "text": "This after-tax interest calculator assumes whole-month terms and rounds amounts down to the won. Banks count exact days, early withdrawal applies a lower early-termination rate, and bonus-rate conditions can change the applied rate — so the actual payout can differ by a few won to a few thousand won. Use the result as an estimate."
       }
     }
   ]
@@ -106,107 +106,106 @@ ADSENSE:END -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
-    <span>이자 계산기</span>
+    <span>Interest Calculator</span>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <h1>이자 계산기</h1>
-    <p class="lede" data-i18n="hero.lede">목돈을 넣어두면 이자가 얼마 붙을까? 단리·복리, 세금 떼고 실제 받는 금액까지 바로 계산합니다.</p>
+    <h1>Interest Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How much interest will a lump sum earn? Simple or compound, with tax deducted — see the actual payout instantly.</p>
   </section>
 
   <!-- TOOL:START — builder agent replaces everything inside this section.
-       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
-         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
-         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
-         document 의 "i18n:change" 이벤트를 구독한다. -->
+       i18n contract (docs/I18N.md): attach a data-i18n hook to every user-visible string and add
+         the same key to "all" language blocks (14) in js/locales.js. Look up dynamic JS strings via
+         window.I18N.t("key"), and subscribe to the document "i18n:change" event when a refresh is needed. -->
   <section class="tool-card" id="tool" aria-live="polite">
-    <label for="principal-input" data-i18n="tool.principal.label">원금 (원)</label>
+    <label for="principal-input" data-i18n="tool.principal.label">Principal (KRW)</label>
     <input type="text" id="principal-input" inputmode="numeric" autocomplete="off" spellcheck="false"
-           placeholder="예: 10,000,000" data-i18n-placeholder="tool.principal.placeholder" aria-describedby="result-box">
+           placeholder="e.g. 10,000,000" data-i18n-placeholder="tool.principal.placeholder" aria-describedby="result-box">
 
-    <label for="rate-input" data-i18n="tool.rate.label">연 이율 (%, 세전)</label>
+    <label for="rate-input" data-i18n="tool.rate.label">Annual interest rate (%, before tax)</label>
     <input type="number" id="rate-input" inputmode="decimal" min="0" max="30" step="0.01"
-           placeholder="예: 3.5" data-i18n-placeholder="tool.rate.placeholder">
+           placeholder="e.g. 3.5" data-i18n-placeholder="tool.rate.placeholder">
 
-    <label for="months-input" data-i18n="tool.months.label">기간 (개월)</label>
+    <label for="months-input" data-i18n="tool.months.label">Term (months)</label>
     <input type="number" id="months-input" inputmode="numeric" min="1" max="360" step="1"
-           placeholder="예: 12" data-i18n-placeholder="tool.months.placeholder">
+           placeholder="e.g. 12" data-i18n-placeholder="tool.months.placeholder">
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
-      <button type="button" class="preset-btn" data-months="6" data-i18n="tool.preset.m6" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">6개월</button>
-      <button type="button" class="preset-btn" data-months="12" data-i18n="tool.preset.m12" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">12개월</button>
-      <button type="button" class="preset-btn" data-months="24" data-i18n="tool.preset.m24" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">24개월</button>
-      <button type="button" class="preset-btn" data-months="36" data-i18n="tool.preset.m36" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">36개월</button>
+      <button type="button" class="preset-btn" data-months="6" data-i18n="tool.preset.m6" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">6 mo</button>
+      <button type="button" class="preset-btn" data-months="12" data-i18n="tool.preset.m12" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">12 mo</button>
+      <button type="button" class="preset-btn" data-months="24" data-i18n="tool.preset.m24" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">24 mo</button>
+      <button type="button" class="preset-btn" data-months="36" data-i18n="tool.preset.m36" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">36 mo</button>
     </div>
 
-    <p id="method-heading" style="font-weight:600;font-size:14px;margin:14px 0 6px;" data-i18n="tool.method.label">이자 방식</p>
+    <p id="method-heading" style="font-weight:600;font-size:14px;margin:14px 0 6px;" data-i18n="tool.method.label">Interest type</p>
     <div role="radiogroup" aria-labelledby="method-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
       <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
         <input type="radio" name="method" value="simple" checked>
-        <span data-i18n="tool.method.simple">단리</span>
+        <span data-i18n="tool.method.simple">Simple</span>
       </label>
       <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
         <input type="radio" name="method" value="monthly">
-        <span data-i18n="tool.method.monthly">월복리</span>
+        <span data-i18n="tool.method.monthly">Monthly compound</span>
       </label>
       <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
         <input type="radio" name="method" value="yearly">
-        <span data-i18n="tool.method.yearly">연복리</span>
+        <span data-i18n="tool.method.yearly">Annual compound</span>
       </label>
     </div>
 
-    <p id="tax-heading" style="font-weight:600;font-size:14px;margin:14px 0 6px;" data-i18n="tool.tax.label">과세 방식</p>
+    <p id="tax-heading" style="font-weight:600;font-size:14px;margin:14px 0 6px;" data-i18n="tool.tax.label">Tax</p>
     <div role="radiogroup" aria-labelledby="tax-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
       <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
         <input type="radio" name="tax" value="154" checked>
-        <span data-i18n="tool.tax.normal">일반과세 15.4%</span>
+        <span data-i18n="tool.tax.normal">Standard 15.4%</span>
       </label>
       <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
         <input type="radio" name="tax" value="95">
-        <span data-i18n="tool.tax.pref">세금우대 9.5%</span>
+        <span data-i18n="tool.tax.pref">Preferential 9.5%</span>
       </label>
       <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
         <input type="radio" name="tax" value="0">
-        <span data-i18n="tool.tax.exempt">비과세 0%</span>
+        <span data-i18n="tool.tax.exempt">Tax-free 0%</span>
       </label>
     </div>
 
-    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">계산하기</button>
-    <button class="btn" id="reset-btn" type="button" data-i18n="tool.reset" style="background:var(--muted);margin-inline-start:8px;">초기화</button>
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+    <button class="btn" id="reset-btn" type="button" data-i18n="tool.reset" style="background:var(--muted);margin-inline-start:8px;">Reset</button>
 
     <div class="result" id="result-box" hidden>
       <div id="result-error" style="color:#dc2626;font-weight:600;" hidden></div>
       <div id="result-body" hidden>
-        <p style="margin:0;color:var(--muted);font-size:14px;" data-i18n="tool.result.maturity">만기 수령액</p>
+        <p style="margin:0;color:var(--muted);font-size:14px;" data-i18n="tool.result.maturity">Maturity payout</p>
         <p style="margin:2px 0 14px;"><strong id="r-maturity"></strong></p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;">
           <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
-            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.principal">원금</div>
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.principal">Principal</div>
             <div style="font-weight:700;" id="r-principal"></div>
           </div>
           <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
-            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.pretax">세전 이자</div>
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.pretax">Interest before tax</div>
             <div style="font-weight:700;" id="r-pretax"></div>
           </div>
           <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
-            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.tax">이자 과세</div>
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.tax">Tax withheld</div>
             <div style="font-weight:700;" id="r-tax"></div>
           </div>
           <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
-            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.aftertax">세후 이자</div>
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.aftertax">Interest after tax</div>
             <div style="font-weight:700;" id="r-aftertax"></div>
           </div>
         </div>
         <p id="r-compare" style="margin:14px 0 0;font-size:14px;color:var(--muted);"></p>
-        <p id="r-clip-note" style="margin:8px 0 0;font-size:13px;color:#dc2626;" data-i18n="tool.note.clipped" hidden>일부 입력이 지원 범위를 초과해 조정했습니다 (원금 1,000원~100억 원 · 연 이율 0~30% · 기간 1~360개월).</p>
-        <p style="margin:10px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.floor">만기 일시 수령(거치식 예치) 기준, 원 단위 미만은 버림 계산입니다. 실제 지급액은 은행의 일할 계산·중도해지 금리에 따라 다를 수 있습니다.</p>
+        <p id="r-clip-note" style="margin:8px 0 0;font-size:13px;color:#dc2626;" data-i18n="tool.note.clipped" hidden>Some inputs were outside the supported range and were adjusted (principal 1,000-10,000,000,000 KRW / rate 0-30% / term 1-360 months).</p>
+        <p style="margin:10px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.floor">Assumes a lump-sum deposit paid out at maturity; amounts are rounded down to the won. Actual bank payouts may differ due to day-count rules and early-termination rates.</p>
       </div>
     </div>
   </section>
@@ -219,36 +218,36 @@ ADSENSE:END -->
   <section id="related-tools" hidden></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
-         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+         attach data-i18n="faq.qN|faq.aN" to each summary/p and fill every language in locales.js. -->
     <details>
-      <summary data-i18n="faq.q1">단리·월복리·연복리는 무엇이 다른가요?</summary>
-      <p data-i18n="faq.a1">단리는 원금에만 이자가 붙습니다(원금×연이율×기간). 월복리는 매달, 연복리는 매년 발생한 이자가 원금에 더해져 다시 이자가 붙습니다. 국내 은행 정기예금은 대부분 만기 일시지급식 단리라서 기본값을 단리로 두었고, 라디오 버튼만 바꾸면 이 이자 계산기를 단리 계산기·복리 계산기로 모두 쓸 수 있어 세 방식의 이자 차이를 한 화면에서 비교할 수 있습니다.</p>
+      <summary data-i18n="faq.q1">What is the difference between simple, monthly compound and annual compound interest?</summary>
+      <p data-i18n="faq.a1">With simple interest, only the principal earns interest (principal x rate x years). With monthly or annual compounding, the interest earned each month or year is added to the principal and earns interest again. Most Korean time deposits pay simple interest at maturity, so Simple is the default — switch the radio buttons to use this tool as a simple or compound interest calculator and compare all three methods on one screen.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q2">이자소득세 15.4%는 어떻게 구성되나요?</summary>
-      <p data-i18n="faq.a2">이자소득세 14%에 지방소득세 1.4%(소득세의 10%)를 더한 값입니다. 은행 예금 이자에는 기본적으로 15.4%가 원천징수되며, 이 계산기의 '일반과세'가 그 기준이라 세후 이자 계산 결과가 실제 수령액에 가깝습니다. 상호금융 조합원이라면 세금우대 9.5%, 비과세종합저축(만 65세 이상 등) 대상이라면 비과세 0%를 선택해 비교해 보세요.</p>
+      <summary data-i18n="faq.q2">What makes up the 15.4% interest income tax?</summary>
+      <p data-i18n="faq.a2">It is 14% income tax plus 1.4% local income tax (10% of the income tax). Korean bank deposit interest is withheld at 15.4% by default, and the Standard option applies that rate, so the after-tax interest is close to what you actually receive. Members of mutual-finance cooperatives can pick Preferential 9.5%, and eligible tax-free comprehensive savings (e.g. aged 65+) can pick Tax-free 0%.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q3">72의 법칙이 무엇인가요?</summary>
-      <p data-i18n="faq.a3">72를 연이율(%)로 나누면 복리로 원금이 2배가 되는 데 걸리는 햇수를 어림할 수 있는 법칙입니다. 예를 들어 연 4% 복리면 72÷4=약 18년입니다. 이 계산기의 연복리 옵션에서 기간을 바꿔 가며 세전 이자가 원금에 가까워지는 시점을 직접 확인해 볼 수 있습니다.</p>
+      <summary data-i18n="faq.q3">What is the Rule of 72?</summary>
+      <p data-i18n="faq.a3">Divide 72 by the annual rate (%) to estimate how many years it takes for money to double with compound interest. At 4% a year, 72 / 4 = about 18 years. Try the annual compound option of this interest calculator with different terms and watch the pre-tax interest approach the principal.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q4">예금(거치식)과 적금(적립식)의 이자는 어떻게 다른가요?</summary>
-      <p data-i18n="faq.a4">예금은 목돈 전액이 전체 기간 동안 예치되지만, 적금은 매달 나눠 넣어 평균 예치 기간이 만기의 절반 수준입니다. 그래서 같은 연 이율이라도 적금의 세전 이자는 예금의 약 절반입니다. 이 예금 이자 계산기는 목돈 거치식 기준이므로, 매달 납입하는 적금은 적금 만기 계산기를 이용하세요.</p>
-      <p><a href="https://tool-hub.me/savings-calc/" data-i18n="faq.a4.link">적금 만기 계산기로 계산하기 →</a></p>
+      <summary data-i18n="faq.q4">How does interest differ between a time deposit (lump sum) and installment savings?</summary>
+      <p data-i18n="faq.a4">A time deposit keeps the whole lump sum invested for the entire term, while installment savings deposit money month by month, so the average deposit period is about half the term — at the same rate, pre-tax interest is roughly half. This deposit interest calculator assumes a lump sum; if you save monthly, use the savings maturity calculator.</p>
+      <p><a href="https://tool-hub.me/savings-calc/" data-i18n="faq.a4.link">Open the savings maturity calculator →</a></p>
     </details>
     <details>
-      <summary data-i18n="faq.q5">계산 결과가 은행의 실제 이자와 왜 다를 수 있나요?</summary>
-      <p data-i18n="faq.a5">이 계산기는 개월 단위 예치와 원 단위 버림을 가정한 세후 이자 계산 도구입니다. 실제 은행은 예치일 기준 일할 계산을 적용하고, 중도해지 시 약정보다 낮은 중도해지 금리가 적용되며, 우대금리 조건 충족 여부에 따라 적용 금리도 달라집니다. 그래서 실제 지급액과 몇 원~몇천 원 정도 차이가 날 수 있으며, 결과는 참고용으로 활용하세요.</p>
+      <summary data-i18n="faq.q5">Why can the result differ from the interest my bank actually pays?</summary>
+      <p data-i18n="faq.a5">This after-tax interest calculator assumes whole-month terms and rounds amounts down to the won. Banks count exact days, early withdrawal applies a lower early-termination rate, and bonus-rate conditions can change the applied rate — so the actual payout can differ by a few won to a few thousand won. Use the result as an estimate.</p>
     </details>
     <!-- FAQ:END -->
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ 커피 한 잔 사주기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

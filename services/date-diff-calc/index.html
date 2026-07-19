@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="auto">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Date Difference Calculator — Days Between Two Dates in Years</title>
-<meta name="description" content="두 날짜를 선택하면 총 일수와 년·개월·주 단위 차이를 즉시 계산. 당일 포함 셈법 지원으로 기념일 100일·근속일수·경과일을 정확하게. 광고 없는 무료 날짜 차이 계산기.">
-<meta name="keywords" content="날짜 차이 계산기, 날짜 계산기, 두 날짜 사이 일수, 며칠 지났는지 계산, 기념일 계산">
+<meta name="description" content="Pick two dates and instantly get the total days plus the difference in years, months and weeks. Inclusive day-one counting for anniversaries, tenure and elapsed days. Free and ad-free.">
+<meta name="keywords" content="date difference calculator, date calculator, days between two dates, how many days since, anniversary calculator">
 <link rel="canonical" href="https://tool-hub.me/date-diff-calc/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Date Difference Calculator — Days Between Two Dates in Years">
-<meta property="og:description" content="두 날짜를 선택하면 총 일수와 년·개월·주 단위 차이를 즉시 계산. 당일 포함 셈법 지원으로 기념일 100일·근속일수·경과일을 정확하게. 광고 없는 무료 날짜 차이 계산기.">
+<meta property="og:description" content="Pick two dates and instantly get the total days plus the difference in years, months and weeks. Inclusive day-one counting for anniversaries, tenure and elapsed days. Free and ad-free.">
 <meta property="og:url" content="https://tool-hub.me/date-diff-calc/">
 <meta property="og:image" content="https://tool-hub.me/date-diff-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,8 +22,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "날짜 차이 계산기",
-  "description": "두 날짜를 선택하면 총 일수와 년·개월·주 단위 차이를 즉시 계산. 당일 포함 셈법 지원으로 기념일 100일·근속일수·경과일을 정확하게. 광고 없는 무료 날짜 차이 계산기.",
+  "name": "Date Difference Calculator",
+  "description": "Pick two dates and instantly get the total days plus the difference in years, months and weeks. Inclusive day-one counting for anniversaries, tenure and elapsed days. Free and ad-free.",
   "url": "https://tool-hub.me/date-diff-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -57,42 +57,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "기념일 100일이 계산기마다 하루씩 다르게 나오는 이유는 뭔가요?",
+      "name": "Why do anniversary counters differ by one day between tools?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "두 날짜 사이 간격만 세는 도구가 있고, 사귄 날(첫날)을 1일차로 세는 도구가 있기 때문입니다. 100일 기념일은 시작일로부터 99일 뒤입니다. 이 날짜 차이 계산기는 '당일 포함' 체크로 셈법을 명시해, 기념일 계산에서 하루 오차가 생기지 않습니다."
+        "text": "Some tools count the interval between dates, others count the first day as day 1 (inclusive). A 100th-day anniversary falls 99 days after the start. This date difference calculator makes the counting explicit with the inclusive checkbox, so there is no hidden one-day surprise."
       }
     },
     {
       "@type": "Question",
-      "name": "년·개월·일 분해는 어떻게 계산하나요?",
+      "name": "How is the years-months-days breakdown calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "달마다 일수가 달라서 실제 달력을 따라 계산합니다. 이 날짜 계산기는 시작일에 년 → 개월 순서로 더하고(짧은 달은 말일로 보정, 예: 1월 31일 + 1개월 = 2월 28/29일), 남은 일수를 셉니다."
+        "text": "Months have different lengths, so the calculator walks the real calendar: it adds whole years, then whole months to the start date (clamping to the last day of shorter months, e.g. Jan 31 + 1 month = Feb 28/29), then counts the remaining days."
       }
     },
     {
       "@type": "Question",
-      "name": "윤년(2월 29일)이 낀 기간도 정확한가요?",
+      "name": "Are periods that include a leap day (February 29) accurate?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네. 모든 계산이 실제 그레고리력 날짜로 이루어져 2월 29일도 하루로 정확히 세며, 두 날짜 사이 일수는 윤년과 무관하게 항상 정확합니다."
+        "text": "Yes. All math runs on real Gregorian calendar dates, so February 29 counts as a normal day and the total days between two dates are exact regardless of leap years."
       }
     },
     {
       "@type": "Question",
-      "name": "디데이(D-day) 계산기와는 뭐가 다른가요?",
+      "name": "How is this different from a D-day calculator?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "이 도구는 두 날짜 '사이'를 잽니다 — 총 일수와 년/개월/주 분해까지. 하나의 목표일까지 남은 날을 세는 카운트다운이 필요하면 디데이 계산기를 쓰세요: 디데이 계산기 →"
+        "text": "This tool measures the gap between two dates — total days plus a years/months/weeks breakdown. If you want a countdown to a single target date, use our D-day calculator instead: D-day calculator →"
       }
     },
     {
       "@type": "Question",
-      "name": "근속연수나 임신 주수 계산에도 쓸 수 있나요?",
+      "name": "Can I use it for job tenure or pregnancy weeks?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네. 입사일과 오늘을 넣으면 정확한 근속기간이, 마지막 생리 시작일과 오늘을 넣으면 주 단위 행에서 임신 주수(예: 24주 3일)가 나옵니다. 며칠 지났는지 계산이 필요한 모든 상황에 쓸 수 있습니다."
+        "text": "Yes. Enter your hire date and today for exact tenure, or the first day of the last period and today to read pregnancy progress from the weeks row (e.g. 24 weeks 3 days). It works for any elapsed-days question."
       }
     }
   ]
@@ -106,30 +106,30 @@ ADSENSE:END -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
-    <span>날짜 차이 계산기</span>
+    <span>Date Difference Calculator</span>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <h1>날짜 차이 계산기</h1>
-    <p class="lede" data-i18n="hero.lede">두 날짜만 고르세요. 며칠 지났는지, 몇 년 몇 개월인지 바로 나옵니다.</p>
+    <h1>Date Difference Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Just pick two dates. See how many days apart — and how many years and months — instantly.</p>
   </section>
 
   <!-- TOOL:START — builder agent replaces everything inside this section.
-       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
-         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
-         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
-         document 의 "i18n:change" 이벤트를 구독한다. -->
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+         with the same key added to all 14 language blocks in js/locales.js. Dynamic JS
+         strings are looked up via window.I18N.t("key"); subscribe to the document
+         "i18n:change" event when a re-render on language switch is needed. -->
   <section class="tool-card" id="tool" aria-live="polite">
     <style>
-      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      /* Tool-specific styles — scoped to #tool. The shared shell style.css is not modified. */
       #tool .ddc-grid { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; }
       #tool .ddc-field { flex: 1; min-width: 150px; }
       #tool .ddc-field label { margin-top: 0; }
@@ -172,28 +172,28 @@ ADSENSE:END -->
 
     <div class="ddc-grid">
       <div class="ddc-field">
-        <label for="ddc-start" data-i18n="tool.start">시작일</label>
+        <label for="ddc-start" data-i18n="tool.start">Start date</label>
         <input type="date" id="ddc-start" min="1900-01-01" max="2999-12-31" autocomplete="off">
       </div>
-      <button type="button" class="ddc-swap" id="ddc-swap" aria-label="두 날짜 바꾸기" data-i18n-aria-label="tool.swap" title="두 날짜 바꾸기" data-i18n-title="tool.swap">⇄</button>
+      <button type="button" class="ddc-swap" id="ddc-swap" aria-label="Swap the two dates" data-i18n-aria-label="tool.swap" title="Swap the two dates" data-i18n-title="tool.swap">⇄</button>
       <div class="ddc-field">
-        <label for="ddc-end" data-i18n="tool.end">종료일</label>
+        <label for="ddc-end" data-i18n="tool.end">End date</label>
         <input type="date" id="ddc-end" min="1900-01-01" max="2999-12-31" autocomplete="off">
       </div>
     </div>
 
     <div class="ddc-presets">
-      <button type="button" class="ddc-preset" id="ddc-preset-start" data-i18n="tool.presetStart">오늘부터</button>
-      <button type="button" class="ddc-preset" id="ddc-preset-end" data-i18n="tool.presetEnd">오늘까지</button>
+      <button type="button" class="ddc-preset" id="ddc-preset-start" data-i18n="tool.presetStart">From today</button>
+      <button type="button" class="ddc-preset" id="ddc-preset-end" data-i18n="tool.presetEnd">Until today</button>
     </div>
 
     <label class="ddc-check">
       <input type="checkbox" id="ddc-include">
-      <span data-i18n="tool.include">당일 포함 (사귄 날을 1일차로, +1일)</span>
+      <span data-i18n="tool.include">Include both days (start day counts as day 1, +1 day)</span>
     </label>
 
     <div class="result" id="ddc-result">
-      <p class="ddc-msg" data-i18n="tool.n.empty">두 날짜를 모두 선택하세요.</p>
+      <p class="ddc-msg" data-i18n="tool.n.empty">Select both dates.</p>
     </div>
   </section>
   <!-- TOOL:END -->
@@ -205,35 +205,35 @@ ADSENSE:END -->
   <section id="related-tools" hidden></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
-         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+         Each summary/p carries data-i18n="faq.qN|faq.aN", filled for every language in locales.js. -->
     <details>
-      <summary data-i18n="faq.q1">기념일 100일이 계산기마다 하루씩 다르게 나오는 이유는 뭔가요?</summary>
-      <p data-i18n="faq.a1">두 날짜 사이 간격만 세는 도구가 있고, 사귄 날(첫날)을 1일차로 세는 도구가 있기 때문입니다. 100일 기념일은 시작일로부터 99일 뒤입니다. 이 날짜 차이 계산기는 '당일 포함' 체크로 셈법을 명시해, 기념일 계산에서 하루 오차가 생기지 않습니다.</p>
+      <summary data-i18n="faq.q1">Why do anniversary counters differ by one day between tools?</summary>
+      <p data-i18n="faq.a1">Some tools count the interval between dates, others count the first day as day 1 (inclusive). A 100th-day anniversary falls 99 days after the start. This date difference calculator makes the counting explicit with the inclusive checkbox, so there is no hidden one-day surprise.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q2">년·개월·일 분해는 어떻게 계산하나요?</summary>
-      <p data-i18n="faq.a2">달마다 일수가 달라서 실제 달력을 따라 계산합니다. 이 날짜 계산기는 시작일에 년 → 개월 순서로 더하고(짧은 달은 말일로 보정, 예: 1월 31일 + 1개월 = 2월 28/29일), 남은 일수를 셉니다.</p>
+      <summary data-i18n="faq.q2">How is the years-months-days breakdown calculated?</summary>
+      <p data-i18n="faq.a2">Months have different lengths, so the calculator walks the real calendar: it adds whole years, then whole months to the start date (clamping to the last day of shorter months, e.g. Jan 31 + 1 month = Feb 28/29), then counts the remaining days.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q3">윤년(2월 29일)이 낀 기간도 정확한가요?</summary>
-      <p data-i18n="faq.a3">네. 모든 계산이 실제 그레고리력 날짜로 이루어져 2월 29일도 하루로 정확히 세며, 두 날짜 사이 일수는 윤년과 무관하게 항상 정확합니다.</p>
+      <summary data-i18n="faq.q3">Are periods that include a leap day (February 29) accurate?</summary>
+      <p data-i18n="faq.a3">Yes. All math runs on real Gregorian calendar dates, so February 29 counts as a normal day and the total days between two dates are exact regardless of leap years.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q4">디데이(D-day) 계산기와는 뭐가 다른가요?</summary>
-      <p><span data-i18n="faq.a4">이 도구는 두 날짜 '사이'를 잽니다 — 총 일수와 년/개월/주 분해까지. 하나의 목표일까지 남은 날을 세는 카운트다운이 필요하면 디데이 계산기를 쓰세요:</span> <a href="https://tool-hub.me/dday-calc/" data-i18n="faq.a4.link">디데이 계산기 →</a></p>
+      <summary data-i18n="faq.q4">How is this different from a D-day calculator?</summary>
+      <p><span data-i18n="faq.a4">This tool measures the gap between two dates — total days plus a years/months/weeks breakdown. If you want a countdown to a single target date, use our D-day calculator instead:</span> <a href="https://tool-hub.me/dday-calc/" data-i18n="faq.a4.link">D-day calculator →</a></p>
     </details>
     <details>
-      <summary data-i18n="faq.q5">근속연수나 임신 주수 계산에도 쓸 수 있나요?</summary>
-      <p data-i18n="faq.a5">네. 입사일과 오늘을 넣으면 정확한 근속기간이, 마지막 생리 시작일과 오늘을 넣으면 주 단위 행에서 임신 주수(예: 24주 3일)가 나옵니다. 며칠 지났는지 계산이 필요한 모든 상황에 쓸 수 있습니다.</p>
+      <summary data-i18n="faq.q5">Can I use it for job tenure or pregnancy weeks?</summary>
+      <p data-i18n="faq.a5">Yes. Enter your hire date and today for exact tenure, or the first day of the last period and today to read pregnancy progress from the weeks row (e.g. 24 weeks 3 days). It works for any elapsed-days question.</p>
     </details>
     <!-- FAQ:END -->
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ 커피 한 잔 사주기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

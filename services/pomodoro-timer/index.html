@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="auto">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pomodoro Timer — 25 min focus + 5 min break</title>
-<meta name="description" content="시작 버튼 하나로 25분 집중과 5분 휴식이 자동 반복. 4회마다 긴 휴식, 소리 알림, 오늘 완료한 뽀모도로 카운트까지. 설치·가입 없는 무료 온라인 뽀모도로 타이머.">
-<meta name="keywords" content="뽀모도로 타이머, 집중 타이머, 공부 타이머, pomodoro timer, 25분 타이머">
+<meta name="description" content="One click on Start runs 25-minute focus and 5-minute break cycles automatically. Long break every 4 pomodoros, sound alerts and a count of today's pomodoros. Free online pomodoro timer — no install, no sign-up.">
+<meta name="keywords" content="pomodoro timer, focus timer, study timer, 25 minute timer, productivity timer">
 <link rel="canonical" href="https://tool-hub.me/pomodoro-timer/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Pomodoro Timer — 25 min focus + 5 min break">
-<meta property="og:description" content="시작 버튼 하나로 25분 집중과 5분 휴식이 자동 반복. 4회마다 긴 휴식, 소리 알림, 오늘 완료한 뽀모도로 카운트까지. 설치·가입 없는 무료 온라인 뽀모도로 타이머.">
+<meta property="og:description" content="One click on Start runs 25-minute focus and 5-minute break cycles automatically. Long break every 4 pomodoros, sound alerts and a count of today's pomodoros. Free online pomodoro timer — no install, no sign-up.">
 <meta property="og:url" content="https://tool-hub.me/pomodoro-timer/">
 <meta property="og:image" content="https://tool-hub.me/pomodoro-timer/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,8 +22,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "뽀모도로 타이머",
-  "description": "시작 버튼 하나로 25분 집중과 5분 휴식이 자동 반복. 4회마다 긴 휴식, 소리 알림, 오늘 완료한 뽀모도로 카운트까지. 설치·가입 없는 무료 온라인 뽀모도로 타이머.",
+  "name": "Pomodoro Timer",
+  "description": "One click on Start runs 25-minute focus and 5-minute break cycles automatically. Long break every 4 pomodoros, sound alerts and a count of today's pomodoros. Free online pomodoro timer — no install, no sign-up.",
   "url": "https://tool-hub.me/pomodoro-timer/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -57,50 +57,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "타이머 설정",
+      "name": "What is the Pomodoro Technique, and why 25 minutes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "집중 시간 (분) 짧은 휴식 (분) 긴 휴식 (분) 긴 휴식 주기 (뽀모도로 수) 세션이 끝나면 다음 세션 자동 시작"
+        "text": "The Pomodoro Technique alternates 25 minutes of focus with 5-minute breaks — one set is a \"pomodoro\" — and inserts a longer break of about 15 minutes every 4 pomodoros. 25 minutes is short enough to start without resistance yet long enough for deep focus, so this pomodoro timer uses a 25-minute timer by default and rotates the cycle automatically. Press Start once and the focus-break switching is handled for you."
       }
     },
     {
       "@type": "Question",
-      "name": "뽀모도로 기법이 뭔가요? 왜 25분인가요?",
+      "name": "Can I change the focus and break lengths to my own rhythm (like 50/10)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "뽀모도로 기법은 25분 집중 + 5분 휴식을 1세트(뽀모도로)로 반복하고, 4회마다 15분 안팎의 긴 휴식을 넣는 시간 관리법입니다. 25분은 부담 없이 시작할 수 있으면서도 몰입에 충분한 길이로 검증된 단위라서, 이 뽀모도로 타이머(pomodoro timer)도 25분 타이머를 기본값으로 사이클을 자동으로 돌립니다. 시작 버튼 한 번이면 집중→휴식 전환을 타이머가 알아서 처리합니다."
+        "text": "Yes. In the timer settings you can set focus time to 1–90 minutes, short breaks to 1–30, long breaks to 1–60, and the long-break interval to every 2–8 pomodoros. Build a 50-minute deep-work focus timer or a 90-minute study timer — out-of-range values are corrected automatically, and your settings are saved in the browser and restored on your next visit."
       }
     },
     {
       "@type": "Question",
-      "name": "집중·휴식 시간을 제 리듬(50/10 등)으로 바꿀 수 있나요?",
+      "name": "Is it accurate when the tab is in the background?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네. 타이머 설정에서 집중 시간 1-90분, 짧은 휴식 1-30분, 긴 휴식 1-60분, 긴 휴식 주기 2-8뽀모도로까지 자유롭게 바꿀 수 있습니다. 딥워크용 50분 집중 타이머나 수험생용 90분 공부 타이머처럼 내 리듬에 맞추면 되고, 범위를 벗어난 값은 자동으로 보정됩니다. 설정은 브라우저에 저장되어 다음 방문 때 그대로 복원됩니다."
+        "text": "Yes. Instead of counting ticks, this focus timer stores the exact end time when a session starts and recomputes the remaining time from the clock on every update. Even if the browser throttles background tabs, the correct time shows the moment you return — and if the session already ended, it alerts and switches immediately. The remaining time also appears in the tab title so you can watch it from another window."
       }
     },
     {
       "@type": "Question",
-      "name": "탭을 백그라운드에 둬도 정확한가요?",
+      "name": "I can't hear the alert sound — why?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네. 이 집중 타이머는 매 틱을 세는 방식이 아니라 세션 시작 시 종료 시각을 확정해 두고, 갱신 때마다 현재 시계와의 차이로 남은 시간을 다시 계산합니다. 브라우저가 백그라운드 탭을 느리게 돌려도 돌아오는 순간 정확한 시간이 표시되고, 이미 세션이 끝났다면 즉시 알림과 함께 전환됩니다. 남은 시간은 탭 제목에도 표시되어 다른 창에서 작업하면서도 확인할 수 있습니다."
+        "text": "Browsers only allow sound after you interact with the page, so this timer arms the audio the moment you press Start. Focus endings use a higher beep (880Hz) and break endings a lower one (660Hz), so you can tell them apart without looking. If you still hear nothing, check the system volume, tab mute and your phone's silent switch. Without Web Audio support, a notice appears and the alert stays visual."
       }
     },
     {
       "@type": "Question",
-      "name": "알림음이 안 들려요 — 왜 그런가요?",
+      "name": "Where is my daily pomodoro count stored?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "브라우저 자동재생 정책 때문에 소리는 사용자가 페이지와 상호작용한 뒤에만 허용됩니다. 그래서 이 타이머는 시작 버튼을 누르는 순간 소리를 준비합니다. 집중 종료는 높은 음(880Hz), 휴식 종료는 낮은 음(660Hz)으로 구분되어 화면을 보지 않아도 알 수 있습니다. 그래도 안 들리면 시스템 볼륨, 탭 음소거, 휴대폰 무음 스위치를 확인하세요. Web Audio 미지원 브라우저에서는 안내 문구와 함께 시각 알림으로 대신합니다."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "오늘 완료한 뽀모도로 수는 어디에 저장되나요?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "오늘 카운트와 타이머 설정은 모두 내 브라우저(localStorage)에만 저장되며 서버로는 아무것도 전송되지 않습니다. 가입도 설치도 필요 없고, 날짜가 바뀌면 카운트는 자동으로 0부터 다시 시작합니다. 브라우저 데이터를 지우거나 다른 기기에서 열면 카운트는 이어지지 않습니다."
+        "text": "Today's count and your timer settings are stored only in your browser (localStorage) — nothing is sent to a server. No sign-up or install is needed, and the count automatically resets to zero when the date changes. Clearing browser data or opening the page on another device starts a fresh count."
       }
     }
   ]
@@ -114,32 +106,32 @@ ADSENSE:END -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
-    <span>뽀모도로 타이머</span>
+    <span>Pomodoro Timer</span>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <h1>뽀모도로 타이머</h1>
-    <p class="lede" data-i18n="hero.lede">25분 집중하고 5분 쉬세요. 사이클은 타이머가 알아서 돌립니다.</p>
+    <h1>Pomodoro Timer</h1>
+    <p class="lede" data-i18n="hero.lede">Focus for 25 minutes, rest for 5. The timer runs the cycle for you.</p>
   </section>
 
   <!-- TOOL:START — builder agent replaces everything inside this section.
-       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
-         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
-         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
-         document 의 "i18n:change" 이벤트를 구독한다. -->
-  <section class="tool-card" id="tool" aria-label="뽀모도로 타이머 도구" data-i18n-aria-label="tool.aria">
+       i18n contract (docs/I18N.md): add a data-i18n hook to every user-facing string and
+       add the same key to "all" language blocks (14) in js/locales.js. Look up dynamic JS
+       strings via window.I18N.t("key"); subscribe to the document "i18n:change" event when
+       a value needs to be re-rendered on language switch. -->
+  <section class="tool-card" id="tool" aria-label="Pomodoro timer tool" data-i18n-aria-label="tool.aria">
     <div id="pomo-mode" data-i18n="tool.mode.focus"
-         style="text-align:center;font-weight:700;font-size:15px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:2px 0 0;">집중</div>
+         style="text-align:center;font-weight:700;font-size:15px;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin:2px 0 0;">Focus</div>
 
-    <div id="pomo-display" role="timer" aria-live="off" aria-label="남은 시간" data-i18n-aria-label="tool.remaining"
+    <div id="pomo-display" role="timer" aria-live="off" aria-label="Time remaining" data-i18n-aria-label="tool.remaining"
          style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-variant-numeric:tabular-nums;font-size:clamp(52px,15vw,88px);font-weight:700;line-height:1.1;text-align:center;letter-spacing:0.02em;margin:2px 0 14px;">25:00</div>
 
     <div aria-hidden="true" style="height:8px;border-radius:999px;background:var(--line);overflow:hidden;margin:0 auto 14px;max-width:520px;">
@@ -147,42 +139,42 @@ ADSENSE:END -->
     </div>
 
     <div style="display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;color:var(--muted);font-size:15px;margin-bottom:6px;">
-      <span id="pomo-cycle" style="font-variant-numeric:tabular-nums;">1 / 4번째 뽀모도로</span>
+      <span id="pomo-cycle" style="font-variant-numeric:tabular-nums;">Pomodoro 1 of 4</span>
       <span aria-hidden="true">·</span>
-      <span><span data-i18n="tool.today">오늘 완료</span> <strong id="pomo-today" style="font-variant-numeric:tabular-nums;">🍅 × 0</strong></span>
+      <span><span data-i18n="tool.today">Completed today</span> <strong id="pomo-today" style="font-variant-numeric:tabular-nums;">🍅 × 0</strong></span>
     </div>
 
     <div class="result" id="pomo-msg" hidden aria-live="polite" style="font-size:15px;"></div>
 
     <div id="pomo-controls" style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:6px;">
-      <button class="btn" id="pomo-start" type="button" data-i18n="tool.start" style="min-width:150px;">시작</button>
-      <button class="btn" id="pomo-reset" type="button" data-i18n="tool.reset" style="background:var(--muted);">리셋</button>
-      <button class="btn" id="pomo-skip" type="button" data-i18n="tool.skip" style="background:var(--muted);">건너뛰기</button>
+      <button class="btn" id="pomo-start" type="button" data-i18n="tool.start" style="min-width:150px;">Start</button>
+      <button class="btn" id="pomo-reset" type="button" data-i18n="tool.reset" style="background:var(--muted);">Reset</button>
+      <button class="btn" id="pomo-skip" type="button" data-i18n="tool.skip" style="background:var(--muted);">Skip</button>
     </div>
 
     <details id="pomo-settings" style="margin-top:24px;border-top:1px solid var(--line);padding-top:14px;">
-      <summary data-i18n="tool.settings" style="font-weight:600;cursor:pointer;">타이머 설정</summary>
+      <summary data-i18n="tool.settings" style="font-weight:600;cursor:pointer;">Timer settings</summary>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0 12px;">
         <div>
-          <label for="set-focus" data-i18n="tool.focusLen">집중 시간 (분)</label>
+          <label for="set-focus" data-i18n="tool.focusLen">Focus length (minutes)</label>
           <input type="number" id="set-focus" min="1" max="90" step="1" value="25" inputmode="numeric" autocomplete="off">
         </div>
         <div>
-          <label for="set-short" data-i18n="tool.shortLen">짧은 휴식 (분)</label>
+          <label for="set-short" data-i18n="tool.shortLen">Short break (minutes)</label>
           <input type="number" id="set-short" min="1" max="30" step="1" value="5" inputmode="numeric" autocomplete="off">
         </div>
         <div>
-          <label for="set-long" data-i18n="tool.longLen">긴 휴식 (분)</label>
+          <label for="set-long" data-i18n="tool.longLen">Long break (minutes)</label>
           <input type="number" id="set-long" min="1" max="60" step="1" value="15" inputmode="numeric" autocomplete="off">
         </div>
         <div>
-          <label for="set-interval" data-i18n="tool.interval">긴 휴식 주기 (뽀모도로 수)</label>
+          <label for="set-interval" data-i18n="tool.interval">Long break every (pomodoros)</label>
           <input type="number" id="set-interval" min="2" max="8" step="1" value="4" inputmode="numeric" autocomplete="off">
         </div>
       </div>
       <label for="set-auto" style="display:flex;align-items:center;gap:8px;margin-top:16px;font-weight:600;font-size:14px;cursor:pointer;">
         <input type="checkbox" id="set-auto" style="width:18px;height:18px;accent-color:var(--accent);margin:0;">
-        <span data-i18n="tool.autoStart">세션이 끝나면 다음 세션 자동 시작</span>
+        <span data-i18n="tool.autoStart">Auto-start the next session</span>
       </label>
     </details>
   </section>
@@ -195,35 +187,35 @@ ADSENSE:END -->
   <section id="related-tools" hidden></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
-         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+         Add data-i18n="faq.qN|faq.aN" to each summary/p and fill every language in locales.js. -->
     <details>
-      <summary data-i18n="faq.q1">뽀모도로 기법이 뭔가요? 왜 25분인가요?</summary>
-      <p data-i18n="faq.a1">뽀모도로 기법은 25분 집중 + 5분 휴식을 1세트(뽀모도로)로 반복하고, 4회마다 15분 안팎의 긴 휴식을 넣는 시간 관리법입니다. 25분은 부담 없이 시작할 수 있으면서도 몰입에 충분한 길이로 검증된 단위라서, 이 뽀모도로 타이머(pomodoro timer)도 25분 타이머를 기본값으로 사이클을 자동으로 돌립니다. 시작 버튼 한 번이면 집중→휴식 전환을 타이머가 알아서 처리합니다.</p>
+      <summary data-i18n="faq.q1">What is the Pomodoro Technique, and why 25 minutes?</summary>
+      <p data-i18n="faq.a1">The Pomodoro Technique alternates 25 minutes of focus with 5-minute breaks — one set is a "pomodoro" — and inserts a longer break of about 15 minutes every 4 pomodoros. 25 minutes is short enough to start without resistance yet long enough for deep focus, so this pomodoro timer uses a 25-minute timer by default and rotates the cycle automatically. Press Start once and the focus-break switching is handled for you.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q2">집중·휴식 시간을 제 리듬(50/10 등)으로 바꿀 수 있나요?</summary>
-      <p data-i18n="faq.a2">네. 타이머 설정에서 집중 시간 1-90분, 짧은 휴식 1-30분, 긴 휴식 1-60분, 긴 휴식 주기 2-8뽀모도로까지 자유롭게 바꿀 수 있습니다. 딥워크용 50분 집중 타이머나 수험생용 90분 공부 타이머처럼 내 리듬에 맞추면 되고, 범위를 벗어난 값은 자동으로 보정됩니다. 설정은 브라우저에 저장되어 다음 방문 때 그대로 복원됩니다.</p>
+      <summary data-i18n="faq.q2">Can I change the focus and break lengths to my own rhythm (like 50/10)?</summary>
+      <p data-i18n="faq.a2">Yes. In the timer settings you can set focus time to 1–90 minutes, short breaks to 1–30, long breaks to 1–60, and the long-break interval to every 2–8 pomodoros. Build a 50-minute deep-work focus timer or a 90-minute study timer — out-of-range values are corrected automatically, and your settings are saved in the browser and restored on your next visit.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q3">탭을 백그라운드에 둬도 정확한가요?</summary>
-      <p data-i18n="faq.a3">네. 이 집중 타이머는 매 틱을 세는 방식이 아니라 세션 시작 시 종료 시각을 확정해 두고, 갱신 때마다 현재 시계와의 차이로 남은 시간을 다시 계산합니다. 브라우저가 백그라운드 탭을 느리게 돌려도 돌아오는 순간 정확한 시간이 표시되고, 이미 세션이 끝났다면 즉시 알림과 함께 전환됩니다. 남은 시간은 탭 제목에도 표시되어 다른 창에서 작업하면서도 확인할 수 있습니다.</p>
+      <summary data-i18n="faq.q3">Is it accurate when the tab is in the background?</summary>
+      <p data-i18n="faq.a3">Yes. Instead of counting ticks, this focus timer stores the exact end time when a session starts and recomputes the remaining time from the clock on every update. Even if the browser throttles background tabs, the correct time shows the moment you return — and if the session already ended, it alerts and switches immediately. The remaining time also appears in the tab title so you can watch it from another window.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q4">알림음이 안 들려요 — 왜 그런가요?</summary>
-      <p data-i18n="faq.a4">브라우저 자동재생 정책 때문에 소리는 사용자가 페이지와 상호작용한 뒤에만 허용됩니다. 그래서 이 타이머는 시작 버튼을 누르는 순간 소리를 준비합니다. 집중 종료는 높은 음(880Hz), 휴식 종료는 낮은 음(660Hz)으로 구분되어 화면을 보지 않아도 알 수 있습니다. 그래도 안 들리면 시스템 볼륨, 탭 음소거, 휴대폰 무음 스위치를 확인하세요. Web Audio 미지원 브라우저에서는 안내 문구와 함께 시각 알림으로 대신합니다.</p>
+      <summary data-i18n="faq.q4">I can't hear the alert sound — why?</summary>
+      <p data-i18n="faq.a4">Browsers only allow sound after you interact with the page, so this timer arms the audio the moment you press Start. Focus endings use a higher beep (880Hz) and break endings a lower one (660Hz), so you can tell them apart without looking. If you still hear nothing, check the system volume, tab mute and your phone's silent switch. Without Web Audio support, a notice appears and the alert stays visual.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q5">오늘 완료한 뽀모도로 수는 어디에 저장되나요?</summary>
-      <p data-i18n="faq.a5">오늘 카운트와 타이머 설정은 모두 내 브라우저(localStorage)에만 저장되며 서버로는 아무것도 전송되지 않습니다. 가입도 설치도 필요 없고, 날짜가 바뀌면 카운트는 자동으로 0부터 다시 시작합니다. 브라우저 데이터를 지우거나 다른 기기에서 열면 카운트는 이어지지 않습니다.</p>
+      <summary data-i18n="faq.q5">Where is my daily pomodoro count stored?</summary>
+      <p data-i18n="faq.a5">Today's count and your timer settings are stored only in your browser (localStorage) — nothing is sent to a server. No sign-up or install is needed, and the count automatically resets to zero when the date changes. Clearing browser data or opening the page on another device starts a fresh count.</p>
     </details>
     <!-- FAQ:END -->
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ 커피 한 잔 사주기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>
