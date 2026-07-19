@@ -91,6 +91,30 @@
   // TOOLJS:START
   var STORAGE_KEY = "unit-price:last";
 
+  /* ---- i18n 헬퍼 (docs/I18N.md) ---- */
+  function t(key) {
+    var s = window.I18N && window.I18N.t(key);
+    return s != null ? s : key;
+  }
+  function fmt(s, params) {
+    return String(s).replace(/\{(\w+)\}/g, function (m, k) {
+      return params && params[k] != null ? String(params[k]) : m;
+    });
+  }
+  // 통화 기호 하드코딩 금지 — 현재 언어 로케일로 숫자만 포맷 (단위가격은 비율이라 통화 중립)
+  function nf(n) {
+    var rounded = Math.round(n * 100) / 100;
+    try {
+      var lang = window.I18N && window.I18N.lang();
+      return rounded.toLocaleString(lang || undefined, { maximumFractionDigits: 2 });
+    } catch (e) { return String(rounded); }
+  }
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
+
   var els = {
     aPrice: document.getElementById("a-price"),
     aCapacity: document.getElementById("a-capacity"),
@@ -104,29 +128,25 @@
     result: document.getElementById("result")
   };
 
-  // g/kg는 무게, ml/L는 부피, 개는 개수 — 서로 다른 종류는 비교 불가
+  // g/kg는 무게, ml/L는 부피, ea(개)는 개수 — 서로 다른 종류는 비교 불가
   function unitCategory(unit) {
     if (unit === "g" || unit === "kg") return "weight";
     if (unit === "ml" || unit === "L") return "volume";
-    if (unit === "개") return "count";
+    if (unit === "ea") return "count";
     return null;
   }
 
-  // kg→g, L→ml 로 정규화 (g/ml/개는 그대로)
+  // kg→g, L→ml 로 정규화 (g/ml/ea는 그대로)
   function normalizedCapacity(capacity, unit) {
     if (unit === "kg" || unit === "L") return capacity * 1000;
     return capacity;
   }
 
-  function displayUnitLabel(category) {
-    if (category === "weight") return "100g";
-    if (category === "volume") return "100ml";
-    return "1개";
-  }
-
-  function formatWon(n) {
-    var rounded = Math.round(n * 100) / 100;
-    return rounded.toLocaleString("ko-KR", { maximumFractionDigits: 2 }) + "원";
+  // 결과에 붙는 "per 100 g / per 100 ml / per item" 라벨 (언어별)
+  function perLabel(category) {
+    if (category === "weight") return t("tool.per.weight");
+    if (category === "volume") return t("tool.per.volume");
+    return t("tool.per.count");
   }
 
   function parseNumber(el) {
@@ -145,16 +165,16 @@
     };
   }
 
-  // 빈 값/0/음수 등 명시적 안내 문구를 돌려준다 (문제 없으면 null)
-  function validate(p, label) {
+  // 빈 값/0/음수 등 명시적 안내 문구를 돌려준다 (문제 없으면 null). name = 현지화된 상품명
+  function validate(p, name) {
     if (isNaN(p.price) || isNaN(p.capacity) || p.price <= 0 || p.capacity <= 0) {
-      return label + "의 가격과 용량을 모두 입력해 주세요.";
+      return fmt(t("tool.err.priceAmount"), { name: name });
     }
     if (isNaN(p.count) || p.count <= 0) {
-      return label + "의 묶음 개수를 1 이상으로 입력해 주세요.";
+      return fmt(t("tool.err.pack"), { name: name });
     }
     if (!isFinite(p.price) || !isFinite(p.capacity) || !isFinite(p.count)) {
-      return label + "의 값이 너무 큽니다. 다시 확인해 주세요.";
+      return fmt(t("tool.err.tooLarge"), { name: name });
     }
     return null;
   }
@@ -169,6 +189,7 @@
     els.result.innerHTML = html;
     els.result.hidden = false;
   }
+  function showMsg(msg) { showResult("<p>" + escHtml(msg) + "</p>"); }
 
   function save() {
     try {
@@ -200,43 +221,37 @@
   function compare() {
     var a = readProduct("a");
     var b = readProduct("b");
+    var nameA = t("tool.legendA");
+    var nameB = t("tool.legendB");
 
-    var errA = validate(a, "상품 A");
-    if (errA) { showResult("<p>" + errA + "</p>"); return; }
-    var errB = validate(b, "상품 B");
-    if (errB) { showResult("<p>" + errB + "</p>"); return; }
+    var errA = validate(a, nameA);
+    if (errA) { showMsg(errA); return; }
+    var errB = validate(b, nameB);
+    if (errB) { showMsg(errB); return; }
 
     var catA = unitCategory(a.unit);
     var catB = unitCategory(b.unit);
-    if (catA !== catB) {
-      showResult("<p>같은 종류의 단위끼리 비교해 주세요. (무게 g·kg / 부피 ml·L / 개수 개 는 서로 다른 종류라 비교할 수 없습니다.)</p>");
-      return;
-    }
+    if (catA !== catB) { showMsg(t("tool.err.mismatch")); return; }
 
     var priceA = unitPriceOf(a);
     var priceB = unitPriceOf(b);
+    if (!isFinite(priceA) || !isFinite(priceB)) { showMsg(t("tool.err.compute")); return; }
 
-    if (!isFinite(priceA) || !isFinite(priceB)) {
-      showResult("<p>값이 너무 크거나 작아 계산할 수 없습니다. 입력값을 다시 확인해 주세요.</p>");
-      return;
-    }
-
-    var label = displayUnitLabel(catA);
+    var per = perLabel(catA);
     var factor = catA === "count" ? 1 : 100;
-    var displayA = priceA * factor;
-    var displayB = priceB * factor;
 
-    var html = "<p>상품 A: " + label + "당 " + formatWon(displayA) + "</p>"
-      + "<p>상품 B: " + label + "당 " + formatWon(displayB) + "</p>";
+    var lineTpl = t("tool.r.line");
+    var html = "<p>" + escHtml(fmt(lineTpl, { name: nameA, price: nf(priceA * factor), per: per })) + "</p>"
+      + "<p>" + escHtml(fmt(lineTpl, { name: nameB, price: nf(priceB * factor), per: per })) + "</p>";
 
     if (priceA === priceB) {
-      html += "<p><strong>두 상품의 단위가격이 같습니다.</strong></p>";
+      html += "<p><strong>" + escHtml(t("tool.r.same")) + "</strong></p>";
     } else {
       var winner = priceA < priceB ? "A" : "B";
       var moreExpensive = Math.max(priceA, priceB);
       var cheaper = Math.min(priceA, priceB);
       var percent = Math.round(((moreExpensive - cheaper) / moreExpensive) * 1000) / 10;
-      html += "<p><strong>상품 " + winner + "가 약 " + percent + "% 더 쌉니다.</strong></p>";
+      html += "<p><strong>" + escHtml(fmt(t("tool.r.cheaper"), { winner: winner, percent: nf(percent) })) + "</strong></p>";
     }
 
     showResult(html);
@@ -244,6 +259,10 @@
   }
 
   if (els.btn) els.btn.addEventListener("click", compare);
+  // 언어 전환 시 이미 표시 중인 결과를 새 언어로 다시 렌더 (숨김 상태면 그대로 둔다)
+  document.addEventListener("i18n:change", function () {
+    if (els.result && !els.result.hidden) compare();
+  });
   restore();
   // TOOLJS:END
 })();

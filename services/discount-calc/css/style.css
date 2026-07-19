@@ -58,6 +58,14 @@ a:hover { text-decoration: underline; }
   cursor: pointer; margin-left: 6px;
 }
 .header-actions button:hover { border-color: var(--accent); }
+.header-actions .lang-select {
+  background: none; border: 1px solid var(--line); border-radius: 8px;
+  color: var(--ink); font-family: inherit; font-size: 13px;
+  height: 36px; max-width: 118px; padding: 0 8px; cursor: pointer;
+  margin-inline-start: 6px;
+}
+.header-actions .lang-select:hover { border-color: var(--accent); }
+.header-actions .lang-select:empty { display: none; }
 
 main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 64px; }
 

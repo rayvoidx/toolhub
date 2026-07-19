@@ -4,7 +4,7 @@
    ============================================================ */
 window.APP_CONFIG = {
   slug: "unit-price",
-  name: "단위가격 계산기",
+  name: "Unit Price Calculator",
   version: "0.1.0",
 
   // 수익화: 런칭 게이트 통과 + 허브 승격 전까지 반드시 false

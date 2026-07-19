@@ -4,7 +4,7 @@
    ============================================================ */
 window.APP_CONFIG = {
   slug: "password-gen",
-  name: "비밀번호 생성기",
+  name: "Password Generator",
   version: "0.1.0",
 
   // 수익화: 런칭 게이트 통과 + 허브 승격 전까지 반드시 false

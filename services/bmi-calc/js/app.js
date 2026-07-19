@@ -113,7 +113,18 @@
   var CM_PER_IN = 2.54;
   var GMIN = 15, GMAX = 40;   // 게이지 표시 범위
 
-  var PAGE_LANG = document.documentElement.getAttribute("lang") || "ko";
+  var PAGE_LANG = (window.I18N && window.I18N.lang()) || document.documentElement.getAttribute("lang") || "en";
+  // i18n 헬퍼 — 카탈로그 키를 읽고 {placeholder} 를 치환한다 (없으면 키 원문 폴백)
+  function T(key, params) {
+    var s = (window.I18N && window.I18N.t(key));
+    if (s == null) s = key;
+    if (params) {
+      for (var p in params) {
+        if (params.hasOwnProperty(p)) s = s.split("{" + p + "}").join(params[p]);
+      }
+    }
+    return s;
+  }
   var TOOL_URL = (function () {
     var c = document.querySelector('link[rel="canonical"]');
     return (c && c.href) || (location.origin + location.pathname);
@@ -193,17 +204,17 @@
 
   var BANDS = {
     who: [
-      { max: 18.5,     label: "저체중", cls: "badge-blue",   seg: "g-blue" },
-      { max: 25,       label: "정상",   cls: "badge-green",  seg: "g-green" },
-      { max: 30,       label: "과체중", cls: "badge-orange", seg: "g-orange" },
-      { max: Infinity, label: "비만",   cls: "badge-red",    seg: "g-red" }
+      { max: 18.5,     key: "tool.band.under",      cls: "badge-blue",   seg: "g-blue" },
+      { max: 25,       key: "tool.band.normal",     cls: "badge-green",  seg: "g-green" },
+      { max: 30,       key: "tool.band.overweight", cls: "badge-orange", seg: "g-orange" },
+      { max: Infinity, key: "tool.band.obese",      cls: "badge-red",    seg: "g-red" }
     ],
     asia: [
-      { max: 18.5,     label: "저체중",      cls: "badge-blue",   seg: "g-blue" },
-      { max: 23,       label: "정상",        cls: "badge-green",  seg: "g-green" },
-      { max: 25,       label: "비만 전단계", cls: "badge-orange", seg: "g-orange" },
-      { max: 30,       label: "1단계 비만",  cls: "badge-red",    seg: "g-red" },
-      { max: Infinity, label: "2단계 비만",  cls: "badge-red",    seg: "g-red2" }
+      { max: 18.5,     key: "tool.band.under",     cls: "badge-blue",   seg: "g-blue" },
+      { max: 23,       key: "tool.band.normal",    cls: "badge-green",  seg: "g-green" },
+      { max: 25,       key: "tool.band.preObese",  cls: "badge-orange", seg: "g-orange" },
+      { max: 30,       key: "tool.band.obese1",    cls: "badge-red",    seg: "g-red" },
+      { max: Infinity, key: "tool.band.obese2",    cls: "badge-red",    seg: "g-red2" }
     ]
   };
   var NORM_MAX = { who: 24.9, asia: 22.9 };   // 정상 표기 상한
@@ -215,7 +226,7 @@
     for (i = 0; i < b.length; i++) { if (bmi < b[i].max) return b[i]; }
     return b[b.length - 1];
   }
-  function stdShort(std) { return std === "asia" ? "아시아·태평양" : "WHO"; }
+  function stdShort(std) { return T(std === "asia" ? "tool.std.asia" : "tool.std.who"); }
 
   /* ---------- 활성 단위계에서 바로 검증 (경계 환산 오차로 인한 모순 안내 방지) ---------- */
 
@@ -271,7 +282,7 @@
       if (!raw || isNaN(parseFloat(raw))) st.hEmpty = true;
       else {
         var v = parseFloat(raw);
-        if (v < L.hMin || v > L.hMax) st.hErr = "키를 " + L.hText + " 범위로 입력해 주세요.";
+        if (v < L.hMin || v > L.hMax) st.hErr = T("tool.err.height", { range: L.hText });
         else st.hCm = v;
       }
     } else {
@@ -280,7 +291,7 @@
       else {
         var tot = (parseFloat(rf) || 0) * 12 + (parseFloat(ri) || 0);
         if (!(tot > 0)) st.hEmpty = true;
-        else if (tot < L.hMin || tot > L.hMax) st.hErr = "키를 " + L.hText + " 범위로 입력해 주세요.";
+        else if (tot < L.hMin || tot > L.hMax) st.hErr = T("tool.err.height", { range: L.hText });
         else st.hCm = tot * CM_PER_IN;
       }
     }
@@ -289,7 +300,7 @@
     if (!rw || isNaN(parseFloat(rw))) st.wEmpty = true;
     else {
       var w = parseFloat(rw);
-      if (w < L.wMin || w > L.wMax) st.wErr = "몸무게를 " + L.wText + " 범위로 입력해 주세요.";
+      if (w < L.wMin || w > L.wMax) st.wErr = T("tool.err.weight", { range: L.wText });
       else st.wKg = units === "imperial" ? w / LB_PER_KG : w;
     }
     return st;
@@ -318,11 +329,12 @@
     var imp = units === "imperial";
     groupMetric.hidden = imp;
     groupImperial.hidden = !imp;
-    weightLabel.textContent = imp ? "몸무게 (lb)" : "몸무게 (kg)";
-    weightInput.setAttribute("aria-label", imp ? "몸무게 (lb)" : "몸무게 (kg)");
+    var wLabel = T(imp ? "tool.weightLabel.lb" : "tool.weightLabel.kg");
+    weightLabel.textContent = wLabel;
+    weightInput.setAttribute("aria-label", wLabel);
     weightInput.setAttribute("min", imp ? "22" : "10");
     weightInput.setAttribute("max", imp ? "661" : "300");
-    weightInput.setAttribute("placeholder", imp ? "예: 143" : "예: 65");
+    weightInput.setAttribute("placeholder", T(imp ? "tool.weightPh.lb" : "tool.weightPh.kg"));
     for (var i = 0; i < unitBtns.length; i++) {
       unitBtns[i].setAttribute("aria-pressed",
         unitBtns[i].getAttribute("data-units") === units ? "true" : "false");
@@ -362,8 +374,9 @@
         ticks += '<span style="left:' + pct(v).toFixed(2) + '%">' + tick(v) + "</span>";
       }
     }
-    var label = "BMI 게이지 — " + fmt(bmiR, 2) + ", " + stdShort(std) + " 기준 " +
-                band.label + " 구간 (표시 범위 15~40)";
+    var label = T("tool.gauge.label", {
+      bmi: fmt(bmiR, 2), std: stdShort(std), band: T(band.key)
+    });
     return '<div class="gauge" role="img" aria-label="' + label + '">' +
              '<div class="gauge-bar">' +
                '<div class="gauge-track">' + segs + "</div>" +
@@ -375,41 +388,44 @@
 
   // 숫자에 의미를 붙인다 — 어느 구간의 어디쯤인지 + 정상까지 남은 체중
   function buildVerdict(bmi, wKg, minKg, maxKg, band) {
-    var sl = stdShort(std) + " 기준";
+    var basis = T("tool.v.basis", { std: stdShort(std) });
     var normMax = NORM_MAX[std];
     if (bmi < NORM_MIN) {
-      return sl + ' <b class="v-blue">저체중</b> — 정상 하한(' + tick(NORM_MIN) + ')보다 ' +
-             fmt(NORM_MIN - bmi, 1) + " 낮습니다. 정상 범위에 들려면 약 " +
-             fmt(wDisp(minKg - wKg), 1) + " " + wUnit() + " 증량이 필요합니다.";
+      return basis + ' <b class="v-blue">' + T("tool.band.under") + "</b> — " +
+        T("tool.v.underTail", {
+          min: tick(NORM_MIN), gap: fmt(NORM_MIN - bmi, 1),
+          amt: fmt(wDisp(minKg - wKg), 1), unit: wUnit()
+        });
     }
     if (bmi < NORM_TOP[std]) {
       var third = (normMax - NORM_MIN) / 3;
-      var pos, tail;
+      var posKey, tail;
       if (bmi < NORM_MIN + third) {
-        pos = "하단";
-        tail = "정상 하한(" + tick(NORM_MIN) + ")보다 " + fmt(bmi - NORM_MIN, 1) + " 높습니다.";
+        posKey = "tool.v.normalLower";
+        tail = T("tool.v.tailLower", { min: tick(NORM_MIN), gap: fmt(bmi - NORM_MIN, 1) });
       } else if (bmi < NORM_MIN + third * 2) {
-        pos = "중간";
-        tail = "정상 범위 한가운데로, 가장 안정적인 구간입니다.";
+        posKey = "tool.v.normalMid";
+        tail = T("tool.v.tailMid");
       } else {
-        pos = "상단";
-        tail = "정상 상한(" + tick(normMax) + ")까지 " + fmt(normMax - bmi, 1) + " 남았습니다.";
+        posKey = "tool.v.normalUpper";
+        tail = T("tool.v.tailUpper", { max: tick(normMax), gap: fmt(normMax - bmi, 1) });
       }
-      return sl + ' <b class="v-green">정상 ' + pos + "</b> — " + tail;
+      return basis + ' <b class="v-green">' + T(posKey) + "</b> — " + tail;
     }
-    return sl + ' <b class="' + (bmi < 30 ? "v-orange" : "v-red") + '">' + band.label +
-           "</b> — 정상 상한(" + tick(normMax) + ")보다 " + fmt(bmi - normMax, 1) +
-           " 높습니다. 정상 범위에 들려면 약 " + fmt(wDisp(wKg - maxKg), 1) + " " +
-           wUnit() + " 감량이 필요합니다.";
+    return basis + ' <b class="' + (bmi < 30 ? "v-orange" : "v-red") + '">' + T(band.key) +
+      "</b> — " + T("tool.v.overTail", {
+        max: tick(normMax), gap: fmt(bmi - normMax, 1),
+        amt: fmt(wDisp(wKg - maxKg), 1), unit: wUnit()
+      });
   }
 
   function stdNote() {
     var otherStd = std === "asia" ? "who" : "asia";
     var rn = regionName(REGION);
-    var src = stdAuto ? (rn ? rn + " 자동 감지" : "기본값") : "직접 선택";
-    return "해석 기준: <b>" + stdShort(std) + "</b> (" + src +
+    var src = stdAuto ? (rn ? T("tool.src.auto", { region: rn }) : T("tool.src.default")) : T("tool.src.manual");
+    return T("tool.stdNote.label") + ": <b>" + stdShort(std) + "</b> (" + src +
            ') · <button type="button" class="link-btn" id="std-toggle">' +
-           stdShort(otherStd) + " 기준으로 보기</button>";
+           T("tool.stdNote.switch", { std: stdShort(otherStd) }) + "</button>";
   }
 
   function renderResult(hCm, wKg) {
@@ -424,7 +440,7 @@
 
     var warn = "";
     if (bmi < 10 || bmi > 60) {
-      warn = '<p class="result-warning">비정상적인 수치일 수 있습니다. 키와 몸무게를 다시 확인해 주세요.</p>';
+      warn = '<p class="result-warning">' + T("tool.warn.extreme") + "</p>";
     }
 
     resultEl.innerHTML = warn +
@@ -432,20 +448,22 @@
       buildGauge(bmi, bmiR, pBand) +
       '<p class="verdict">' + buildVerdict(bmi, wKg, minKg, maxKg, pBand) + "</p>" +
       '<div class="badge-row">' +
-        '<span class="badge ' + pBand.cls + '">' + stdShort(std) + ": " + pBand.label + "</span>" +
-        '<span class="badge ' + oBand.cls + '">' + stdShort(other) + ": " + oBand.label + "</span>" +
+        '<span class="badge ' + pBand.cls + '">' + stdShort(std) + ": " + T(pBand.key) + "</span>" +
+        '<span class="badge ' + oBand.cls + '">' + stdShort(other) + ": " + T(oBand.key) + "</span>" +
       "</div>" +
-      '<p class="healthy-range">건강 체중 범위(' + stdShort(std) + " 정상): <b>" +
+      '<p class="healthy-range">' + T("tool.healthyRange", { std: stdShort(std) }) + ' <b>' +
         fmt(wDisp(minKg), 1) + " ~ " + fmt(wDisp(maxKg), 1) + " " + wUnit() + "</b></p>" +
       '<p class="std-note">' + stdNote() + "</p>" +
-      '<button type="button" class="copy-btn" id="copy-btn">결과 복사</button>';
+      '<button type="button" class="copy-btn" id="copy-btn">' + T("tool.copy") + "</button>";
     resultEl.hidden = false;
 
     lastCopy = [
-      "BMI " + fmt(bmiR, 2) + " — " + stdShort(std) + " 기준 " + pBand.label +
-        " (" + stdShort(other) + " 기준 " + oBand.label + ")",
-      "키 " + hDispText(hCm) + " · 몸무게 " + fmt(wDisp(wKg), 1) + " " + wUnit(),
-      "건강 체중 범위 " + fmt(wDisp(minKg), 1) + " ~ " + fmt(wDisp(maxKg), 1) + " " + wUnit(),
+      T("tool.copy.line1", {
+        bmi: fmt(bmiR, 2), band: T(pBand.key), std: stdShort(std),
+        oband: T(oBand.key), ostd: stdShort(other)
+      }),
+      T("tool.copy.line2", { h: hDispText(hCm), w: fmt(wDisp(wKg), 1), unit: wUnit() }),
+      T("tool.copy.line3", { min: fmt(wDisp(minKg), 1), max: fmt(wDisp(maxKg), 1), unit: wUnit() }),
       TOOL_URL
     ].join("\n");
   }
@@ -457,7 +475,7 @@
     // 아직 입력하지 않은 상태는 실패가 아니다 — 실시간 계산 중에는 결과를 감춘다.
     // 버튼/Enter 로 명시 요청했을 때는 반드시 안내한다 (조용한 실패 금지).
     if (st.hEmpty || st.wEmpty) {
-      if (explicit) showGuide("키와 몸무게를 입력해 주세요.");
+      if (explicit) showGuide(T("tool.err.empty"));
       else hideResult();
       return;
     }
@@ -492,18 +510,18 @@
 
   function doCopy(btn) {
     if (!lastCopy) return;
-    var original = "결과 복사";
+    var original = T("tool.copy");
     function done(msg) {
       btn.textContent = msg;
       setTimeout(function () { btn.textContent = original; }, 1500);
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(lastCopy).then(
-        function () { done("복사됨 ✓"); },
-        function () { done(legacyCopy(lastCopy) ? "복사됨 ✓" : "복사 실패 — 직접 선택해 주세요"); }
+        function () { done(T("tool.copied")); },
+        function () { done(legacyCopy(lastCopy) ? T("tool.copied") : T("tool.copyFail")); }
       );
     } else {
-      done(legacyCopy(lastCopy) ? "복사됨 ✓" : "복사 실패 — 직접 선택해 주세요");
+      done(legacyCopy(lastCopy) ? T("tool.copied") : T("tool.copyFail"));
     }
   }
 
@@ -568,8 +586,7 @@
   // 자동 감지로 야드파운드법을 골랐을 때만 이유를 알린다 (미터법 사용자에겐 소음)
   if (!savedUnits && units === "imperial" && unitHint) {
     var rn0 = regionName(REGION);
-    unitHint.textContent = (rn0 ? rn0 + " 지역으로 감지해 " : "") +
-      "야드파운드법(ft·in·lb)을 기본으로 뒀습니다. 위 버튼으로 미터법으로 바꿀 수 있어요.";
+    unitHint.textContent = rn0 ? T("tool.unitHint.region", { region: rn0 }) : T("tool.unitHint");
     unitHint.hidden = false;
   }
 
@@ -586,6 +603,17 @@
   })();
 
   calculate({ explicit: false });   // 복원된 값이 있으면 재방문 즉시 결과 표시
+
+  // 언어 전환 시 단위 라벨·안내·결과를 새 언어로 다시 렌더 (셸 i18n:change 구독)
+  document.addEventListener("i18n:change", function (e) {
+    PAGE_LANG = (e && e.detail && e.detail.lang) || PAGE_LANG;
+    applyUnitsUI();
+    if (unitHint && !unitHint.hidden) {
+      var rnx = regionName(REGION);
+      unitHint.textContent = rnx ? T("tool.unitHint.region", { region: rnx }) : T("tool.unitHint");
+    }
+    calculate({ explicit: false });
+  });
 
   // 도구 전용 스킨 — 공통 style.css 를 건드리지 않기 위해 주입 (related.js 선례)
   (function injectStyle() {

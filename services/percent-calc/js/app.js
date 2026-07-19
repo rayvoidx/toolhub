@@ -91,6 +91,12 @@
   // TOOLJS:START
   var cfg = window.APP_CONFIG || {};
 
+  /* ── i18n 헬퍼: 카탈로그 미로드 시 키를 그대로 반환 (조용한 실패 아님) ── */
+  function t(key) {
+    var s = window.I18N && window.I18N.t(key);
+    return s != null ? s : key;
+  }
+
   /* ── 유틸 ── */
   function fmt(n) {
     return n.toFixed(2);
@@ -124,7 +130,7 @@
       if (navigator.clipboard) {
         navigator.clipboard.writeText(text.trim()).then(function () {
           var orig = el.innerHTML;
-          el.innerHTML = "복사됨 ✓";
+          el.innerHTML = t("tool.copied");
           setTimeout(function () { el.innerHTML = orig; }, 1000);
         }).catch(function () { /* 복사 실패 무시 */ });
       }
@@ -166,17 +172,17 @@
     var a = ratioA ? ratioA.value.trim() : "";
     var b = ratioB ? ratioB.value.trim() : "";
     if (a === "" || b === "") {
-      showError(ratioResult, "A와 B를 모두 입력해 주세요.");
+      showError(ratioResult, t("tool.ratio.errEmpty"));
       return;
     }
     var numA = parseFloat(a);
     var numB = parseFloat(b);
     if (isNaN(numA) || isNaN(numB)) {
-      showError(ratioResult, "숫자만 입력해 주세요.");
+      showError(ratioResult, t("tool.errNaN"));
       return;
     }
     if (numB === 0) {
-      showError(ratioResult, "분모(B)는 0이 될 수 없습니다.");
+      showError(ratioResult, t("tool.ratio.errZero"));
       return;
     }
     var result = (numA / numB) * 100;
@@ -212,17 +218,17 @@
     var a = changeA ? changeA.value.trim() : "";
     var x = changeX ? changeX.value.trim() : "";
     if (a === "" || x === "") {
-      showError(changeResult, "기준값 A와 퍼센트 X를 모두 입력해 주세요.");
+      showError(changeResult, t("tool.change.errEmpty"));
       return;
     }
     var numA = parseFloat(a);
     var numX = parseFloat(x);
     if (isNaN(numA) || isNaN(numX)) {
-      showError(changeResult, "숫자만 입력해 주세요.");
+      showError(changeResult, t("tool.errNaN"));
       return;
     }
     if (numX < 0) {
-      showError(changeResult, "퍼센트(X)에 음수를 입력하셨습니다. 양수를 입력하고 감소 모드를 선택하세요.");
+      showError(changeResult, t("tool.change.errNegative"));
       return;
     }
     var delta, result, sign;
@@ -238,7 +244,7 @@
 
     var warningHtml = "";
     if (currentChangeMode === "decrease" && numX > 100) {
-      warningHtml = "<small style='display:block;margin-top:4px;color:var(--color-warning, #d97706)'>감소율이 100% 초과 — 결과가 음수일 수 있습니다.</small>";
+      warningHtml = "<small style='display:block;margin-top:4px;color:var(--color-warning, #d97706)'>" + t("tool.change.warnOver100") + "</small>";
     }
 
     var displayDelta = Math.abs(delta);
@@ -266,21 +272,21 @@
     var a = rateA ? rateA.value.trim() : "";
     var b = rateB ? rateB.value.trim() : "";
     if (a === "" || b === "") {
-      showError(rateResult, "이전값 A와 이후값 B를 모두 입력해 주세요.");
+      showError(rateResult, t("tool.rate.errEmpty"));
       return;
     }
     var numA = parseFloat(a);
     var numB = parseFloat(b);
     if (isNaN(numA) || isNaN(numB)) {
-      showError(rateResult, "숫자만 입력해 주세요.");
+      showError(rateResult, t("tool.errNaN"));
       return;
     }
     if (numA === 0) {
-      showError(rateResult, "기준값(A)은 0이 될 수 없습니다.");
+      showError(rateResult, t("tool.rate.errZero"));
       return;
     }
     if (numA === numB) {
-      showResult(rateResult, "0.00 % <small>(변동 없음)</small>", "neutral");
+      showResult(rateResult, "0.00 % <small>(" + t("tool.rate.noChange") + ")</small>", "neutral");
       return;
     }
     var rate = ((numB - numA) / numA) * 100;
@@ -296,5 +302,12 @@
   if (rateCalcBtn) rateCalcBtn.addEventListener("click", calcRate);
   if (rateA) rateA.addEventListener("input", calcRate);
   if (rateB) rateB.addEventListener("input", calcRate);
+
+  /* ── 언어 전환 시 이미 표시된 결과만 새 언어로 다시 렌더 ── */
+  document.addEventListener("i18n:change", function () {
+    if (ratioResult && ratioResult.innerHTML.trim()) calcRatio();
+    if (changeResult && changeResult.innerHTML.trim()) calcChange();
+    if (rateResult && rateResult.innerHTML.trim()) calcRate();
+  });
   // TOOLJS:END
 })();

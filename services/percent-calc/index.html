@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="auto">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>퍼센트 계산기 — 비율·증감률·변화량을 탭 하나로</title>
-<meta name="description" content="A는 B의 몇%인지, X% 오르면 얼마인지, A에서 B로 변하면 증감률이 얼마인지 — 3가지 퍼센트 질문을 즉시 계산합니다">
-<meta name="keywords" content="퍼센트 계산기, 증감률 계산기, 비율 계산기, 백분율 계산기">
+<title>Percentage Calculator — Ratio, Increase/Decrease and Percent Change</title>
+<meta name="description" content="Work out what percent A is of B, the result after an X% increase or decrease, and the percent change from A to B — three percentage questions answered instantly. Free and ad-free.">
+<meta name="keywords" content="percentage calculator, percent change calculator, ratio calculator, percent increase calculator">
 <link rel="canonical" href="https://tool-hub.me/percent-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="퍼센트 계산기 — 비율·증감률·변화량을 탭 하나로">
-<meta property="og:description" content="A는 B의 몇%인지, X% 오르면 얼마인지, A에서 B로 변하면 증감률이 얼마인지 — 3가지 퍼센트 질문을 즉시 계산합니다">
+<meta property="og:title" content="Percentage Calculator — Ratio, Increase/Decrease and Percent Change">
+<meta property="og:description" content="Work out what percent A is of B, the result after an X% increase or decrease, and the percent change from A to B — three percentage questions answered instantly. Free and ad-free.">
 <meta property="og:url" content="https://tool-hub.me/percent-calc/">
 <meta property="og:image" content="https://tool-hub.me/percent-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,8 +22,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "퍼센트 계산기",
-  "description": "A는 B의 몇%인지, X% 오르면 얼마인지, A에서 B로 변하면 증감률이 얼마인지 — 3가지 퍼센트 질문을 즉시 계산합니다",
+  "name": "Percentage Calculator",
+  "description": "Work out what percent A is of B, the result after an X% increase or decrease, and the percent change from A to B — three percentage questions answered instantly. Free and ad-free.",
   "url": "https://tool-hub.me/percent-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -44,7 +44,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "퍼센트 계산기",
+      "name": "Percentage Calculator",
       "item": "https://tool-hub.me/percent-calc/"
     }
   ]
@@ -57,42 +57,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "퍼센트(%p)와 퍼센트포인트(%p)는 어떻게 다른가요?",
+      "name": "What is the difference between percent (%) and percentage points (pp)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "퍼센트(%)와 퍼센트포인트(%p)는 의미가 다릅니다. 예를 들어 이자율이 10%에서 12%로 오르면, 2%p(퍼센트포인트) 증가이지 2% 증가가 아닙니다. 2% 증가라고 하면 10%의 2%, 즉 0.2%p가 오른 것을 뜻합니다. 증감률 계산기(탭 3)는 퍼센트 변화율을 계산하며, 비율 자체의 차이(퍼센트포인트)와는 구분해야 합니다."
+        "text": "Percent (%) and percentage points (pp) mean different things. If an interest rate rises from 10% to 12%, that is a 2 percentage-point increase, not a 2% increase. A 2% increase would mean 2% of 10%, i.e. 0.2pp. The change-rate tab (tab 3) computes the percent change, which is distinct from the difference in the rates themselves (percentage points)."
       }
     },
     {
       "@type": "Question",
-      "name": "증감률이 -100% 이하로 나오는 경우는 어떤 때인가요?",
+      "name": "When does the change rate come out below -100%?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "이전값 A가 양수이고 이후값 B가 0보다 작은 경우, 또는 이전값 A가 음수일 때 증감률이 -100% 이하로 나올 수 있습니다. 예를 들어 A=100, B=-50이면 증감률은 -150%입니다. 이는 수학적으로 올바른 결과이지만, 실생활에서는 이전값이 음수인 경우 증감률 해석에 주의가 필요합니다. 이 계산기는 기준값(A)이 0인 경우 \"기준값은 0이 될 수 없습니다\"라고 안내합니다."
+        "text": "The change rate can fall below -100% when the before value A is positive and the after value B is negative, or when the before value A is negative. For example, A=100 and B=-50 gives a change rate of -150%. That is mathematically correct, but in real life a negative starting value needs careful interpretation. When the base value (A) is zero, this calculator tells you that the base value cannot be zero."
       }
     },
     {
       "@type": "Question",
-      "name": "소수점 계산이 약간 다르게 나오는 이유가 있나요?",
+      "name": "Why do the decimals sometimes look slightly off?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "컴퓨터는 내부적으로 이진수(부동소수점)로 숫자를 저장하기 때문에 0.1 + 0.2 = 0.30000000000000004 같은 미세한 오차가 생길 수 있습니다. 이 퍼센트 계산기는 결과를 소수점 2자리로 반올림하여 표시하므로 실용적인 계산에는 충분합니다. 정밀한 회계·세무 계산이 필요하다면 전문 소프트웨어를 사용하세요."
+        "text": "Computers store numbers internally in binary (floating point), so tiny errors like 0.1 + 0.2 = 0.30000000000000004 can appear. This percentage calculator rounds results to two decimal places, which is plenty for everyday math. For precise accounting or tax work, use dedicated software."
       }
     },
     {
       "@type": "Question",
-      "name": "할인율 계산과 증감률 계산은 어떻게 다른가요?",
+      "name": "How is a discount calculation different from a change-rate calculation?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "할인율 계산은 정가와 할인가를 입력해 얼마나 싸게 샀는지를 구하는 것이고, 증감률 계산은 두 값 사이의 변화 비율을 구하는 것입니다. 수식은 동일하지만 목적이 다릅니다. 쇼핑 할인율 계산에 특화된 도구를 원한다면 할인율 계산기(discount-calc)를 이용하세요."
+        "text": "A discount calculation takes a list price and a sale price to find how much you saved, while a change-rate calculation finds the rate of change between two values. The formula is the same but the purpose differs. If you want a tool built for shopping discounts, use our discount calculator →"
       }
     },
     {
       "@type": "Question",
-      "name": "계산 결과가 서버로 전송되나요?",
+      "name": "Are my results sent to a server?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "아니오. 이 백분율 계산기는 입력한 숫자를 브라우저 안에서만 처리합니다. 모든 계산은 자바스크립트로 로컬 실행되며, 서버 통신이 전혀 없습니다. 민감한 재무 수치를 입력해도 외부로 전송되지 않으니 안심하고 사용하실 수 있습니다."
+        "text": "No. This percentage calculator processes the numbers you type entirely inside your browser. Every calculation runs locally in JavaScript with no server communication at all. Even sensitive financial figures never leave your device, so you can use it with peace of mind."
       }
     }
   ]
@@ -106,80 +106,84 @@ ADSENSE:END -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
-    <span>퍼센트 계산기</span>
+    <span>Percentage Calculator</span>
   </a>
   <nav class="header-actions">
-    <a class="home-btn" href="https://tool-hub.me/" aria-label="툴허브 홈" title="툴허브 홈"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <h1>퍼센트 계산기</h1>
-    <p class="lede">공식 외울 필요 없어요. 숫자 넣으면 바로 나옵니다.</p>
+    <h1>Percentage Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">No formulas to memorize. Type the numbers and the answer appears instantly.</p>
   </section>
 
-  <!-- TOOL:START — builder agent replaces everything inside this section -->
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+       mirrored in all 14 language blocks of js/locales.js. Dynamic JS strings go through
+       window.I18N.t("key"); the tool re-renders on the "i18n:change" event. -->
   <section class="tool-card" id="tool" aria-live="polite">
-    <!-- 탭 네비게이션 -->
-    <div class="tab-nav" role="tablist" aria-label="계산 유형 선택">
-      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-ratio" id="btn-ratio" data-tab="ratio">A는 B의 몇 %</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-change" id="btn-change" data-tab="change">% 오르면/내리면</button>
-      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-rate" id="btn-rate" data-tab="rate">증감률 계산</button>
+    <!-- Tab navigation -->
+    <div class="tab-nav" role="tablist" aria-label="Select calculation type" data-i18n-aria-label="tool.tablabel">
+      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-ratio" id="btn-ratio" data-tab="ratio" data-i18n="tool.tab.ratio">What % is A of B</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-change" id="btn-change" data-tab="change" data-i18n="tool.tab.change">% increase / decrease</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-rate" id="btn-rate" data-tab="rate" data-i18n="tool.tab.rate">Change rate</button>
     </div>
 
-    <!-- 탭 1: A는 B의 몇 %인가 -->
+    <!-- Tab 1: what percent is A of B -->
     <div class="tab-panel" id="tab-ratio" role="tabpanel" aria-labelledby="btn-ratio">
       <div class="field-group">
-        <label for="ratio-a">부분값 A</label>
-        <input type="number" id="ratio-a" class="input" placeholder="예: 30" inputmode="decimal">
+        <label for="ratio-a" data-i18n="tool.ratio.aLabel">Part value A</label>
+        <input type="number" id="ratio-a" class="input" placeholder="e.g. 30" data-i18n-placeholder="tool.ratio.aPh" inputmode="decimal">
       </div>
       <div class="field-group">
-        <label for="ratio-b">전체값 B</label>
-        <input type="number" id="ratio-b" class="input" placeholder="예: 120" inputmode="decimal">
+        <label for="ratio-b" data-i18n="tool.ratio.bLabel">Whole value B</label>
+        <input type="number" id="ratio-b" class="input" placeholder="e.g. 120" data-i18n-placeholder="tool.ratio.bPh" inputmode="decimal">
       </div>
-      <button type="button" class="btn" id="ratio-calc-btn">계산하기</button>
+      <button type="button" class="btn" id="ratio-calc-btn" data-i18n="tool.calc">Calculate</button>
       <div class="result" id="ratio-result" aria-live="polite"></div>
     </div>
 
-    <!-- 탭 2: A에서 X% 오르면/내리면 얼마인가 -->
+    <!-- Tab 2: A after an X% increase / decrease -->
     <div class="tab-panel" id="tab-change" role="tabpanel" aria-labelledby="btn-change" hidden>
       <div class="field-group">
-        <label for="change-a">기준값 A</label>
-        <input type="number" id="change-a" class="input" placeholder="예: 50000" inputmode="decimal">
+        <label for="change-a" data-i18n="tool.change.aLabel">Base value A</label>
+        <input type="number" id="change-a" class="input" placeholder="e.g. 50000" data-i18n-placeholder="tool.change.aPh" inputmode="decimal">
       </div>
       <div class="field-group">
-        <label for="change-x">퍼센트 X (%)</label>
-        <input type="number" id="change-x" class="input" placeholder="예: 15" inputmode="decimal">
+        <label for="change-x" data-i18n="tool.change.xLabel">Percent X (%)</label>
+        <input type="number" id="change-x" class="input" placeholder="e.g. 15" data-i18n-placeholder="tool.change.xPh" inputmode="decimal">
       </div>
       <div class="field-group">
-        <label>모드</label>
-        <div class="toggle-group" role="group" aria-label="증가/감소 선택">
-          <button type="button" class="toggle-btn active" id="change-increase" data-mode="increase">증가 ▲</button>
-          <button type="button" class="toggle-btn" id="change-decrease" data-mode="decrease">감소 ▼</button>
+        <label data-i18n="tool.change.modeLabel">Mode</label>
+        <div class="toggle-group" role="group" aria-label="Increase / decrease" data-i18n-aria-label="tool.change.modeGroup">
+          <button type="button" class="toggle-btn active" id="change-increase" data-mode="increase" data-i18n="tool.change.increase">Increase ▲</button>
+          <button type="button" class="toggle-btn" id="change-decrease" data-mode="decrease" data-i18n="tool.change.decrease">Decrease ▼</button>
         </div>
       </div>
-      <button type="button" class="btn" id="change-calc-btn">계산하기</button>
+      <button type="button" class="btn" id="change-calc-btn" data-i18n="tool.calc">Calculate</button>
       <div class="result" id="change-result" aria-live="polite"></div>
     </div>
 
-    <!-- 탭 3: A에서 B로 변하면 증감률은? -->
+    <!-- Tab 3: change rate from A to B -->
     <div class="tab-panel" id="tab-rate" role="tabpanel" aria-labelledby="btn-rate" hidden>
       <div class="field-group">
-        <label for="rate-a">이전값 A</label>
-        <input type="number" id="rate-a" class="input" placeholder="예: 80000" inputmode="decimal">
+        <label for="rate-a" data-i18n="tool.rate.aLabel">Before value A</label>
+        <input type="number" id="rate-a" class="input" placeholder="e.g. 80000" data-i18n-placeholder="tool.rate.aPh" inputmode="decimal">
       </div>
       <div class="field-group">
-        <label for="rate-b">이후값 B</label>
-        <input type="number" id="rate-b" class="input" placeholder="예: 100000" inputmode="decimal">
+        <label for="rate-b" data-i18n="tool.rate.bLabel">After value B</label>
+        <input type="number" id="rate-b" class="input" placeholder="e.g. 100000" data-i18n-placeholder="tool.rate.bPh" inputmode="decimal">
       </div>
-      <button type="button" class="btn" id="rate-calc-btn">계산하기</button>
+      <button type="button" class="btn" id="rate-calc-btn" data-i18n="tool.calc">Calculate</button>
       <div class="result" id="rate-result" aria-live="polite"></div>
     </div>
 
-    <p class="copy-hint" id="copy-hint" hidden>결과를 클릭하면 클립보드에 복사됩니다.</p>
+    <p class="copy-hint" id="copy-hint" data-i18n="tool.copyHint" hidden>Click the result to copy it to the clipboard.</p>
   </section>
   <!-- TOOL:END -->
 
@@ -190,37 +194,40 @@ ADSENSE:END -->
   <section id="related-tools" hidden></section>
 
   <section class="faq" id="faq">
-    <h2>자주 묻는 질문</h2>
-    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Each summary/p carries data-i18n="faq.qN|faq.aN", filled for every language in locales.js. -->
     <details>
-      <summary>퍼센트(%p)와 퍼센트포인트(%p)는 어떻게 다른가요?</summary>
-      <p>퍼센트(%)와 퍼센트포인트(%p)는 의미가 다릅니다. 예를 들어 이자율이 10%에서 12%로 오르면, <strong>2%p(퍼센트포인트) 증가</strong>이지 2% 증가가 아닙니다. 2% 증가라고 하면 10%의 2%, 즉 0.2%p가 오른 것을 뜻합니다. 증감률 계산기(탭 3)는 퍼센트 변화율을 계산하며, 비율 자체의 차이(퍼센트포인트)와는 구분해야 합니다.</p>
+      <summary data-i18n="faq.q1">What is the difference between percent (%) and percentage points (pp)?</summary>
+      <p data-i18n="faq.a1">Percent (%) and percentage points (pp) mean different things. If an interest rate rises from 10% to 12%, that is a 2 percentage-point increase, not a 2% increase. A 2% increase would mean 2% of 10%, i.e. 0.2pp. The change-rate tab (tab 3) computes the percent change, which is distinct from the difference in the rates themselves (percentage points).</p>
     </details>
     <details>
-      <summary>증감률이 -100% 이하로 나오는 경우는 어떤 때인가요?</summary>
-      <p>이전값 A가 양수이고 이후값 B가 0보다 작은 경우, 또는 이전값 A가 음수일 때 증감률이 -100% 이하로 나올 수 있습니다. 예를 들어 A=100, B=-50이면 증감률은 -150%입니다. 이는 수학적으로 올바른 결과이지만, 실생활에서는 이전값이 음수인 경우 증감률 해석에 주의가 필요합니다. 이 계산기는 기준값(A)이 0인 경우 "기준값은 0이 될 수 없습니다"라고 안내합니다.</p>
+      <summary data-i18n="faq.q2">When does the change rate come out below -100%?</summary>
+      <p data-i18n="faq.a2">The change rate can fall below -100% when the before value A is positive and the after value B is negative, or when the before value A is negative. For example, A=100 and B=-50 gives a change rate of -150%. That is mathematically correct, but in real life a negative starting value needs careful interpretation. When the base value (A) is zero, this calculator tells you that the base value cannot be zero.</p>
     </details>
     <details>
-      <summary>소수점 계산이 약간 다르게 나오는 이유가 있나요?</summary>
-      <p>컴퓨터는 내부적으로 이진수(부동소수점)로 숫자를 저장하기 때문에 0.1 + 0.2 = 0.30000000000000004 같은 미세한 오차가 생길 수 있습니다. 이 <strong>퍼센트 계산기</strong>는 결과를 소수점 2자리로 반올림하여 표시하므로 실용적인 계산에는 충분합니다. 정밀한 회계·세무 계산이 필요하다면 전문 소프트웨어를 사용하세요.</p>
+      <summary data-i18n="faq.q3">Why do the decimals sometimes look slightly off?</summary>
+      <p data-i18n="faq.a3">Computers store numbers internally in binary (floating point), so tiny errors like 0.1 + 0.2 = 0.30000000000000004 can appear. This percentage calculator rounds results to two decimal places, which is plenty for everyday math. For precise accounting or tax work, use dedicated software.</p>
     </details>
     <details>
-      <summary>할인율 계산과 증감률 계산은 어떻게 다른가요?</summary>
-      <p>할인율 계산은 정가와 할인가를 입력해 얼마나 싸게 샀는지를 구하는 것이고, 증감률 계산은 두 값 사이의 변화 비율을 구하는 것입니다. 수식은 동일하지만 목적이 다릅니다. 쇼핑 할인율 계산에 특화된 도구를 원한다면 <a href="https://tool-hub.me/discount-calc/" rel="noopener">할인율 계산기(discount-calc)</a>를 이용하세요.</p>
+      <summary data-i18n="faq.q4">How is a discount calculation different from a change-rate calculation?</summary>
+      <p><span data-i18n="faq.a4">A discount calculation takes a list price and a sale price to find how much you saved, while a change-rate calculation finds the rate of change between two values. The formula is the same but the purpose differs. If you want a tool built for shopping discounts, use our</span> <a href="https://tool-hub.me/discount-calc/" rel="noopener" data-i18n="faq.a4.link">discount calculator →</a></p>
     </details>
     <details>
-      <summary>계산 결과가 서버로 전송되나요?</summary>
-      <p>아니오. 이 <strong>백분율 계산기</strong>는 입력한 숫자를 브라우저 안에서만 처리합니다. 모든 계산은 자바스크립트로 로컬 실행되며, 서버 통신이 전혀 없습니다. 민감한 재무 수치를 입력해도 외부로 전송되지 않으니 안심하고 사용하실 수 있습니다.</p>
+      <summary data-i18n="faq.q5">Are my results sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This percentage calculator processes the numbers you type entirely inside your browser. Every calculation runs locally in JavaScript with no server communication at all. Even sensitive financial figures never leave your device, so you can use it with peace of mind.</p>
     </details>
     <!-- FAQ:END -->
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer">☕ 커피 한 잔 사주기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 <script src="js/related.js"></script>
 </body>

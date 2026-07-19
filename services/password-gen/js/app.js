@@ -92,6 +92,14 @@
   var cfg = window.APP_CONFIG || {};
   var SLUG = cfg.slug || "password-gen";
 
+  // i18n lookup — falls back to the key string if the engine/catalog is missing
+  function t(key) {
+    var v = window.I18N && window.I18N.t ? window.I18N.t(key) : null;
+    return v != null ? v : key;
+  }
+  var LEVEL_KEY = { weak: "tool.strengthWeak", medium: "tool.strengthFair", strong: "tool.strengthStrong" };
+  var lastLevel = null;   // remembered so the strength label can re-render on language switch
+
   var CHARSETS = {
     upper:  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
     lower:  "abcdefghijklmnopqrstuvwxyz",
@@ -154,12 +162,17 @@
     return pool;
   }
 
-  // Strength rating: weak / medium / strong
+  // Strength rating: weak / medium / strong (label is resolved via i18n at render time)
   function rateStrength(length, poolSize) {
     var entropy = length * Math.log2(poolSize || 1);
-    if (entropy < 40)  return { level: "weak",   label: "약함 (Weak)",   pct: 33,  color: "#ef4444" };
-    if (entropy < 80)  return { level: "medium", label: "보통 (Medium)", pct: 66,  color: "#f59e0b" };
-    return              { level: "strong", label: "강함 (Strong)", pct: 100, color: "#22c55e" };
+    if (entropy < 40)  return { level: "weak",   pct: 33,  color: "#ef4444" };
+    if (entropy < 80)  return { level: "medium", pct: 66,  color: "#f59e0b" };
+    return              { level: "strong", pct: 100, color: "#22c55e" };
+  }
+
+  function renderStrengthLabel() {
+    if (!lastLevel) return;
+    strengthLabel.textContent = t("tool.strength") + ": " + t(LEVEL_KEY[lastLevel]);
   }
 
   function showToast(msg, durationMs) {
@@ -180,12 +193,12 @@
     var anyChecked = optUpper.checked || optLower.checked || optDigit.checked || optSymbol.checked;
     if (!anyChecked) {
       optLower.checked = true;
-      showToast("최소 한 가지 문자 유형이 필요해 소문자를 자동으로 활성화했습니다.");
+      showToast(t("tool.n.autoLower"));
     }
 
     var pool = buildPool();
     if (pool.length === 0) {
-      resultEl.textContent = "문자 유형을 하나 이상 선택하세요.";
+      resultEl.textContent = t("tool.n.noCharset");
       btnCopy.disabled = true;
       return;
     }
@@ -203,7 +216,8 @@
     strengthWrap.hidden = false;
     strengthBar.style.width  = rating.pct + "%";
     strengthBar.style.background = rating.color;
-    strengthLabel.textContent = "강도: " + rating.label;
+    lastLevel = rating.level;
+    renderStrengthLabel();
 
     // Persist preferences
     try {
@@ -221,8 +235,8 @@
 
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function () {
-        btnCopy.textContent = "복사됨!";
-        setTimeout(function () { btnCopy.textContent = "복사"; }, 1500);
+        btnCopy.textContent = t("tool.copied");
+        setTimeout(function () { btnCopy.textContent = t("tool.copy"); }, 1500);
       }).catch(function () {
         fallbackCopy(text);
       });
@@ -242,10 +256,10 @@
       ta.select();
       document.execCommand("copy");
       document.body.removeChild(ta);
-      btnCopy.textContent = "복사됨!";
-      setTimeout(function () { btnCopy.textContent = "복사"; }, 1500);
+      btnCopy.textContent = t("tool.copied");
+      setTimeout(function () { btnCopy.textContent = t("tool.copy"); }, 1500);
     } catch (e) {
-      showToast("클립보드 접근이 거부되었습니다. 비밀번호를 직접 선택해 복사하세요.");
+      showToast(t("tool.n.copyFail"));
     }
   }
 
@@ -258,6 +272,12 @@
 
   btnGen.addEventListener("click", generate);
   btnCopy.addEventListener("click", copyToClipboard);
+
+  // Re-render the dynamic strength label when the language changes (keeps the
+  // existing password untouched — regenerating on switch would lose it).
+  document.addEventListener("i18n:change", function () {
+    if (!strengthWrap.hidden) renderStrengthLabel();
+  });
 
   // Auto-generate on load
   generate();

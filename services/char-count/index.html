@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="auto">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>글자수 세기 — 붙여넣기 즉시 글자수·바이트·원고지 계산</title>
-<meta name="description" content="공백 포함/제외 글자수, UTF-8·한글 2byte 바이트, 원고지 매수를 실시간으로 계산하고 목표 글자수 대비 잔여량을 보여주는 자소서·리포트용 무료 도구">
-<meta name="keywords" content="글자수 세기, 자소서 글자수, 공백 포함 글자수, 바이트 계산기, 원고지 매수">
+<title>Character Counter — Count Letters, Words, Spaces & Bytes</title>
+<meta name="description" content="Paste your text to instantly count characters with and without spaces, words, bytes (UTF-8 and legacy 2-byte), and manuscript pages. Track remaining characters against a goal limit. Free and ad-free.">
+<meta name="keywords" content="character counter, letter count, word count, character count with spaces, byte calculator">
 <link rel="canonical" href="https://tool-hub.me/char-count/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="글자수 세기 — 붙여넣기 즉시 글자수·바이트·원고지 계산">
-<meta property="og:description" content="공백 포함/제외 글자수, UTF-8·한글 2byte 바이트, 원고지 매수를 실시간으로 계산하고 목표 글자수 대비 잔여량을 보여주는 자소서·리포트용 무료 도구">
+<meta property="og:title" content="Character Counter — Count Letters, Words, Spaces & Bytes">
+<meta property="og:description" content="Paste your text to instantly count characters with and without spaces, words, bytes (UTF-8 and legacy 2-byte), and manuscript pages. Track remaining characters against a goal limit. Free and ad-free.">
 <meta property="og:url" content="https://tool-hub.me/char-count/">
 <meta property="og:image" content="https://tool-hub.me/char-count/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,8 +22,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "글자수 세기",
-  "description": "공백 포함/제외 글자수, UTF-8·한글 2byte 바이트, 원고지 매수를 실시간으로 계산하고 목표 글자수 대비 잔여량을 보여주는 자소서·리포트용 무료 도구",
+  "name": "Character Counter",
+  "description": "Paste your text to instantly count characters with and without spaces, words, bytes (UTF-8 and legacy 2-byte), and manuscript pages. Track remaining characters against a goal limit. Free and ad-free.",
   "url": "https://tool-hub.me/char-count/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -44,7 +44,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "글자수 세기",
+      "name": "Character Counter",
       "item": "https://tool-hub.me/char-count/"
     }
   ]
@@ -57,42 +57,42 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "공백 포함과 공백 제외 중 어떤 기준으로 세어야 하나?",
+      "name": "Should I count characters with or without spaces?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "기업 공고나 제출처마다 기준이 다릅니다. 공백 포함 글자수를 기준으로 삼는 곳이 가장 많으며, 자소서나 지원서에 \"○○자 이내\"라고만 적힌 경우 공백 포함으로 계산하는 것이 일반적입니다. 반면 일부 공고는 \"공백 제외 ○○자\"라고 명시합니다. 공고 문구를 확인한 뒤 이 글자수 세기 도구의 두 수치를 모두 참고하세요. 헷갈리면 더 엄격한 쪽(공백 포함) 기준으로 맞추는 것이 안전합니다."
+        "text": "It depends on where you're submitting. Character count with spaces is the most common standard — when a form says \"up to 500 characters\" with no further note, it usually means spaces included. Some forms specify \"without spaces.\" Check the requirement, then read both numbers this character counter shows. When in doubt, the stricter with-spaces count is the safe choice."
       }
     },
     {
       "@type": "Question",
-      "name": "바이트 수가 두 가지인 이유는?",
+      "name": "Why are there two byte counts?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "한글 한 글자는 인코딩 방식에 따라 바이트 크기가 달라집니다. UTF-8에서는 한글 한 자가 3byte를 차지하며, 이는 현대 웹 표준 인코딩입니다. 반면 사람인·잡코리아·일부 공공기관 시스템은 EUC-KR 방식으로 한글을 2byte로 처리합니다. 같은 자소서라도 어느 시스템에 입력하느냐에 따라 바이트 계산기 결과가 다를 수 있어, 두 가지 바이트 수를 모두 제공합니다. 시스템이 \"몇 byte 이내\"라고 제한을 걸고 있다면 해당 시스템의 인코딩에 맞는 수치를 참고하세요."
+        "text": "One character takes a different number of bytes depending on the encoding. In UTF-8 — the modern web standard — a Latin letter is 1 byte while a CJK character is 3 bytes. Legacy systems (EUC-KR, Shift-JIS and similar) store each CJK character as 2 bytes. Because the same text can hit a different byte limit in different systems, this byte calculator shows both. If a system limits you by bytes, use the count that matches its encoding."
       }
     },
     {
       "@type": "Question",
-      "name": "원고지 매수는 어떻게 계산하나?",
+      "name": "How is the manuscript page count calculated?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "원고지 매수는 공백·구두점을 포함한 공백 포함 글자수를 200으로 나눠 올림한 값입니다. 일반적인 원고지는 한 면이 20자×10행 = 200자 기준이기 때문입니다. 예를 들어 글자수 201자이면 원고지 2매로 계산됩니다. 보고서·과제 제출에 \"원고지 ○매 이상\"이라는 조건이 있을 때 활용하세요."
+        "text": "The page count is the with-spaces character count divided by 200, rounded up. A standard manuscript page holds 20 columns × 10 rows = 200 characters, punctuation and spaces included. So 201 characters becomes 2 pages. Use it when an assignment asks for \"at least N pages.\""
       }
     },
     {
       "@type": "Question",
-      "name": "이모지나 특수문자는 몇 글자로 계산되나?",
+      "name": "How are emoji and special characters counted?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "이모지(예: 😀)는 유니코드 코드포인트 기준으로 1글자로 셉니다. 이 도구는 서로게이트 페어가 깨지지 않도록 Array.from(text).length 방식으로 글자수를 셉니다. 다만 바이트는 UTF-8 실제 인코딩 결과로 계산되므로, 이모지 하나가 4byte를 차지할 수 있습니다. 특수문자는 종류에 따라 1byte(ASCII)~3byte(한자·특수기호)까지 다양합니다. 자소서 글자수 제한은 대부분 코드포인트(글자) 기준이므로 걱정 없이 사용하셔도 됩니다."
+        "text": "Emoji (for example 😀) count as one character by Unicode code point. This tool uses Array.from(text).length, so surrogate pairs are never split. Bytes, however, reflect real UTF-8 encoding, so a single emoji can take 4 bytes. Special characters range from 1 byte (ASCII) to 3 bytes (CJK and symbols). Most character limits count code points, so you can rely on the character number."
       }
     },
     {
       "@type": "Question",
-      "name": "입력한 텍스트가 서버로 전송되나?",
+      "name": "Is my text sent to a server?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "아니오. 이 글자수 세기 도구의 모든 계산은 브라우저 안에서만 이루어집니다. 입력한 텍스트는 인터넷을 통해 어디에도 전송되지 않습니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값이 이 기기의 localStorage에만 저장되며, 이것 역시 외부로 전송되지 않습니다. 민감한 자소서 글자수 확인도 안심하고 사용하세요."
+        "text": "No. Every calculation in this character counter happens inside your browser. Your text is never transmitted anywhere over the internet. Your last input is saved only in this device's localStorage so you can continue where you left off — and that never leaves your device either. Even sensitive drafts like a cover letter are safe to check here."
       }
     }
   ]
@@ -106,39 +106,45 @@ ADSENSE:END -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
-    <span>글자수 세기</span>
+    <span>Character Counter</span>
   </a>
   <nav class="header-actions">
-    <a class="home-btn" href="https://tool-hub.me/" aria-label="툴허브 홈" title="툴허브 홈"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <h1>글자수 세기</h1>
-    <p class="lede">붙여넣기 하면 바로 셉니다. 자소서 500자 제한도, 리포트 원고지 매수도.</p>
+    <h1>Character Counter</h1>
+    <p class="lede" data-i18n="hero.lede">Just paste your text. Character count, word count, and bytes — instantly, right in your browser.</p>
   </section>
 
-  <!-- TOOL:START — builder agent replaces everything inside this section -->
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+         with the same key added to all 14 language blocks in js/locales.js. Dynamic JS
+         strings are looked up via window.I18N.t("key"). -->
   <section class="tool-card" id="tool" aria-live="polite">
-    <label for="main-text" style="display:block;font-weight:600;margin-bottom:.5rem;color:var(--ink)">텍스트 입력</label>
+    <label for="main-text" data-i18n="tool.inputLabel" style="display:block;font-weight:600;margin-bottom:.5rem;color:var(--ink)">Text input</label>
     <textarea
       id="main-text"
       rows="8"
-      placeholder="여기에 텍스트를 붙여넣으세요…"
+      placeholder="Paste your text here…"
+      data-i18n-placeholder="tool.inputPh"
       style="width:100%;box-sizing:border-box;resize:vertical;padding:.75rem;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--ink);font-size:1rem;font-family:inherit;line-height:1.6;"
     ></textarea>
 
     <div style="display:flex;align-items:center;gap:.5rem;margin-top:.75rem;flex-wrap:wrap;">
-      <label for="goal-count" style="color:var(--muted);font-size:.9rem;white-space:nowrap;">목표 글자수 (선택)</label>
+      <label for="goal-count" data-i18n="tool.goalLabel" style="color:var(--muted);font-size:.9rem;white-space:nowrap;">Goal character count (optional)</label>
       <input
         type="number"
         id="goal-count"
         min="1"
         step="1"
-        placeholder="예: 500"
+        placeholder="e.g. 500"
+        data-i18n-placeholder="tool.goalPh"
         style="width:9rem;padding:.45rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--surface);color:var(--ink);font-size:.95rem;"
       >
     </div>
@@ -149,34 +155,34 @@ ADSENSE:END -->
 
     <div id="stat-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.75rem;margin-top:1rem;">
       <div class="stat-card" id="sc-with-sp"  style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
-        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">공백 포함 글자수</div>
+        <div data-i18n="tool.k.withSpace" style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">Characters (with spaces)</div>
         <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
-        <div style="font-size:.75rem;color:var(--muted);">자</div>
+        <div data-i18n="tool.u.chars" style="font-size:.75rem;color:var(--muted);">chars</div>
       </div>
       <div class="stat-card" id="sc-no-sp" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
-        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">공백 제외 글자수</div>
+        <div data-i18n="tool.k.noSpace" style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">Characters (no spaces)</div>
         <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
-        <div style="font-size:.75rem;color:var(--muted);">자</div>
+        <div data-i18n="tool.u.chars" style="font-size:.75rem;color:var(--muted);">chars</div>
       </div>
       <div class="stat-card" id="sc-words" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
-        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">단어 수</div>
+        <div data-i18n="tool.k.words" style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">Words</div>
         <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
-        <div style="font-size:.75rem;color:var(--muted);">단어</div>
+        <div data-i18n="tool.u.words" style="font-size:.75rem;color:var(--muted);">words</div>
       </div>
       <div class="stat-card" id="sc-ms" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
-        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">원고지 매수</div>
+        <div data-i18n="tool.k.manuscript" style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">Manuscript pages</div>
         <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
-        <div style="font-size:.75rem;color:var(--muted);">매 (200자)</div>
+        <div data-i18n="tool.u.pages" style="font-size:.75rem;color:var(--muted);">pages (200 chars)</div>
       </div>
       <div class="stat-card" id="sc-utf8" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
-        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">바이트 (UTF-8)</div>
+        <div data-i18n="tool.k.utf8" style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">Bytes (UTF-8)</div>
         <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
-        <div style="font-size:.75rem;color:var(--muted);">byte</div>
+        <div data-i18n="tool.u.bytes" style="font-size:.75rem;color:var(--muted);">bytes</div>
       </div>
       <div class="stat-card" id="sc-euckr" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
-        <div style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">바이트 (한글 2byte)</div>
+        <div data-i18n="tool.k.euckr" style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">Bytes (legacy 2-byte)</div>
         <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
-        <div style="font-size:.75rem;color:var(--muted);">byte</div>
+        <div data-i18n="tool.u.bytes" style="font-size:.75rem;color:var(--muted);">bytes</div>
       </div>
     </div>
 
@@ -191,37 +197,40 @@ ADSENSE:END -->
   <section id="related-tools" hidden></section>
 
   <section class="faq" id="faq">
-    <h2>자주 묻는 질문</h2>
-    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Each summary/p carries data-i18n="faq.qN|faq.aN", filled for every language in locales.js. -->
     <details>
-      <summary>공백 포함과 공백 제외 중 어떤 기준으로 세어야 하나?</summary>
-      <p>기업 공고나 제출처마다 기준이 다릅니다. <strong>공백 포함 글자수</strong>를 기준으로 삼는 곳이 가장 많으며, 자소서나 지원서에 "○○자 이내"라고만 적힌 경우 공백 포함으로 계산하는 것이 일반적입니다. 반면 일부 공고는 "공백 제외 ○○자"라고 명시합니다. 공고 문구를 확인한 뒤 이 <strong>글자수 세기</strong> 도구의 두 수치를 모두 참고하세요. 헷갈리면 더 엄격한 쪽(공백 포함) 기준으로 맞추는 것이 안전합니다.</p>
+      <summary data-i18n="faq.q1">Should I count characters with or without spaces?</summary>
+      <p data-i18n="faq.a1">It depends on where you're submitting. Character count with spaces is the most common standard — when a form says "up to 500 characters" with no further note, it usually means spaces included. Some forms specify "without spaces." Check the requirement, then read both numbers this character counter shows. When in doubt, the stricter with-spaces count is the safe choice.</p>
     </details>
     <details>
-      <summary>바이트 수가 두 가지인 이유는?</summary>
-      <p>한글 한 글자는 인코딩 방식에 따라 바이트 크기가 달라집니다. <strong>UTF-8</strong>에서는 한글 한 자가 3byte를 차지하며, 이는 현대 웹 표준 인코딩입니다. 반면 사람인·잡코리아·일부 공공기관 시스템은 <strong>EUC-KR</strong> 방식으로 한글을 2byte로 처리합니다. 같은 자소서라도 어느 시스템에 입력하느냐에 따라 <strong>바이트 계산기</strong> 결과가 다를 수 있어, 두 가지 바이트 수를 모두 제공합니다. 시스템이 "몇 byte 이내"라고 제한을 걸고 있다면 해당 시스템의 인코딩에 맞는 수치를 참고하세요.</p>
+      <summary data-i18n="faq.q2">Why are there two byte counts?</summary>
+      <p data-i18n="faq.a2">One character takes a different number of bytes depending on the encoding. In UTF-8 — the modern web standard — a Latin letter is 1 byte while a CJK character is 3 bytes. Legacy systems (EUC-KR, Shift-JIS and similar) store each CJK character as 2 bytes. Because the same text can hit a different byte limit in different systems, this byte calculator shows both. If a system limits you by bytes, use the count that matches its encoding.</p>
     </details>
     <details>
-      <summary>원고지 매수는 어떻게 계산하나?</summary>
-      <p><strong>원고지 매수</strong>는 공백·구두점을 포함한 공백 포함 글자수를 200으로 나눠 올림한 값입니다. 일반적인 원고지는 한 면이 20자×10행 = 200자 기준이기 때문입니다. 예를 들어 글자수 201자이면 원고지 2매로 계산됩니다. 보고서·과제 제출에 "원고지 ○매 이상"이라는 조건이 있을 때 활용하세요.</p>
+      <summary data-i18n="faq.q3">How is the manuscript page count calculated?</summary>
+      <p data-i18n="faq.a3">The page count is the with-spaces character count divided by 200, rounded up. A standard manuscript page holds 20 columns × 10 rows = 200 characters, punctuation and spaces included. So 201 characters becomes 2 pages. Use it when an assignment asks for "at least N pages."</p>
     </details>
     <details>
-      <summary>이모지나 특수문자는 몇 글자로 계산되나?</summary>
-      <p>이모지(예: 😀)는 유니코드 코드포인트 기준으로 <strong>1글자</strong>로 셉니다. 이 도구는 서로게이트 페어가 깨지지 않도록 <code>Array.from(text).length</code> 방식으로 글자수를 셉니다. 다만 바이트는 UTF-8 실제 인코딩 결과로 계산되므로, 이모지 하나가 4byte를 차지할 수 있습니다. 특수문자는 종류에 따라 1byte(ASCII)~3byte(한자·특수기호)까지 다양합니다. <strong>자소서 글자수</strong> 제한은 대부분 코드포인트(글자) 기준이므로 걱정 없이 사용하셔도 됩니다.</p>
+      <summary data-i18n="faq.q4">How are emoji and special characters counted?</summary>
+      <p data-i18n="faq.a4">Emoji (for example 😀) count as one character by Unicode code point. This tool uses Array.from(text).length, so surrogate pairs are never split. Bytes, however, reflect real UTF-8 encoding, so a single emoji can take 4 bytes. Special characters range from 1 byte (ASCII) to 3 bytes (CJK and symbols). Most character limits count code points, so you can rely on the character number.</p>
     </details>
     <details>
-      <summary>입력한 텍스트가 서버로 전송되나?</summary>
-      <p>아니오. 이 <strong>글자수 세기</strong> 도구의 모든 계산은 브라우저 안에서만 이루어집니다. 입력한 텍스트는 인터넷을 통해 어디에도 전송되지 않습니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값이 이 기기의 localStorage에만 저장되며, 이것 역시 외부로 전송되지 않습니다. 민감한 <strong>자소서 글자수</strong> 확인도 안심하고 사용하세요.</p>
+      <summary data-i18n="faq.q5">Is my text sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation in this character counter happens inside your browser. Your text is never transmitted anywhere over the internet. Your last input is saved only in this device's localStorage so you can continue where you left off — and that never leaves your device either. Even sensitive drafts like a cover letter are safe to check here.</p>
     </details>
     <!-- FAQ:END -->
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer">☕ 커피 한 잔 사주기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 <script src="js/related.js"></script>
 </body>

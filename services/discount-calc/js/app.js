@@ -94,8 +94,15 @@
   var STORAGE_KEY = SLUG + ":last";
 
   /* ── 유틸 ── */
+  function t(key) {
+    /* 카탈로그에 키가 없으면 null → 폴백은 호출부에서 처리 */
+    return (window.I18N && window.I18N.t(key)) || key;
+  }
+
   function fmt(n) {
-    return n.toLocaleString("ko-KR");
+    /* 통화 기호는 붙이지 않는다 (숫자 중심) — 자리수 구분만 현재 언어 로케일로 */
+    var lang = (window.I18N && window.I18N.lang && window.I18N.lang()) || "en";
+    try { return n.toLocaleString(lang); } catch (e) { return n.toLocaleString(); }
   }
 
   function showResult(el, html, isError) {
@@ -113,13 +120,13 @@
   function calcRate(original, sale) {
     /* 모드 A: 정가 + 할인가 → 할인율, 할인금액 */
     if (!original || isNaN(original) || original <= 0) {
-      return { error: "정가를 올바르게 입력해 주세요." };
+      return { error: t("tool.err.original") };
     }
     if (!sale || isNaN(sale) || sale < 0) {
-      return { error: "할인가를 올바르게 입력해 주세요." };
+      return { error: t("tool.err.sale") };
     }
     if (sale > original) {
-      return { error: "할인가가 정가보다 클 수 없습니다." };
+      return { error: t("tool.err.saleGtOriginal") };
     }
     var discountAmt = original - sale;
     var rate = Math.round((discountAmt / original) * 1000) / 10; /* 소수점 1자리 */
@@ -129,13 +136,13 @@
   function calcPrice(original, rate) {
     /* 모드 B: 정가 + 할인율 → 최종가, 할인금액 */
     if (!original || isNaN(original) || original <= 0) {
-      return { error: "정가를 올바르게 입력해 주세요." };
+      return { error: t("tool.err.original") };
     }
     if (rate === "" || isNaN(rate) || rate < 0) {
-      return { error: "할인율을 올바르게 입력해 주세요." };
+      return { error: t("tool.err.rate") };
     }
     if (rate > 100) {
-      return { error: "할인율은 0~100% 사이여야 합니다." };
+      return { error: t("tool.err.rateRange") };
     }
     var discountAmt = original * (rate / 100);
     var finalPrice = original - discountAmt;
@@ -239,12 +246,12 @@
     showResult(aResult,
       "<div class=\"result__cards\">" +
         "<div class=\"result__card\">" +
-          "<span class=\"result__label\">할인율</span>" +
+          "<span class=\"result__label\">" + t("tool.r.rate") + "</span>" +
           "<span class=\"result__value\">" + res.rate + "%</span>" +
         "</div>" +
         "<div class=\"result__card\">" +
-          "<span class=\"result__label\">할인금액</span>" +
-          "<span class=\"result__value\">" + fmt(res.discountAmt) + "원</span>" +
+          "<span class=\"result__label\">" + t("tool.r.discountAmt") + "</span>" +
+          "<span class=\"result__value\">" + fmt(res.discountAmt) + "</span>" +
         "</div>" +
       "</div>",
       false);
@@ -265,12 +272,12 @@
     showResult(bResult,
       "<div class=\"result__cards\">" +
         "<div class=\"result__card\">" +
-          "<span class=\"result__label\">최종가</span>" +
-          "<span class=\"result__value\">" + fmt(res.finalPrice) + "원</span>" +
+          "<span class=\"result__label\">" + t("tool.r.finalPrice") + "</span>" +
+          "<span class=\"result__value\">" + fmt(res.finalPrice) + "</span>" +
         "</div>" +
         "<div class=\"result__card\">" +
-          "<span class=\"result__label\">할인금액</span>" +
-          "<span class=\"result__value\">" + fmt(res.discountAmt) + "원</span>" +
+          "<span class=\"result__label\">" + t("tool.r.discountAmt") + "</span>" +
+          "<span class=\"result__value\">" + fmt(res.discountAmt) + "</span>" +
         "</div>" +
       "</div>",
       false);
@@ -290,6 +297,12 @@
     el.addEventListener("keydown", function (e) {
       if (e.key === "Enter") { runB(); }
     });
+  });
+
+  /* 언어 전환 시 이미 표시된 결과를 새 언어로 다시 렌더 (조용한 스테일 방지) */
+  document.addEventListener("i18n:change", function () {
+    if (!aResult.hidden) { runA(); }
+    if (!bResult.hidden) { runB(); }
   });
   // TOOLJS:END
 })();

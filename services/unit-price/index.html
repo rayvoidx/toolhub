@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko" data-theme="auto">
+<html lang="en" data-theme="auto">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>단위가격 계산기 — 어느 쪽이 더 싼지 3초 만에</title>
-<meta name="description" content="가격과 용량만 입력하면 100g당·100ml당·개당 단위가격을 비교해 어느 상품이 더 싼지 알려주는 무료 계산기">
-<meta name="keywords" content="단위가격 계산기, 100g당 가격, g당 가격 계산, 단위가격 비교">
+<title>Unit Price Calculator — Price per Unit Comparison</title>
+<meta name="description" content="Enter price and amount to compare the price per unit — per 100g, per 100ml or per item — and instantly see which product is cheaper. Free and ad-free.">
+<meta name="keywords" content="unit price calculator, price per unit comparison, price per 100g, cost per unit, price comparison">
 <link rel="canonical" href="https://tool-hub.me/unit-price/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="단위가격 계산기 — 어느 쪽이 더 싼지 3초 만에">
-<meta property="og:description" content="가격과 용량만 입력하면 100g당·100ml당·개당 단위가격을 비교해 어느 상품이 더 싼지 알려주는 무료 계산기">
+<meta property="og:title" content="Unit Price Calculator — Price per Unit Comparison">
+<meta property="og:description" content="Enter price and amount to compare the price per unit — per 100g, per 100ml or per item — and instantly see which product is cheaper. Free and ad-free.">
 <meta property="og:url" content="https://tool-hub.me/unit-price/">
 <meta property="og:image" content="https://tool-hub.me/unit-price/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -22,8 +22,8 @@
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "단위가격 계산기",
-  "description": "가격과 용량만 입력하면 100g당·100ml당·개당 단위가격을 비교해 어느 상품이 더 싼지 알려주는 무료 계산기",
+  "name": "Unit Price Calculator",
+  "description": "Enter price and amount to compare the price per unit — per 100g, per 100ml or per item — and instantly see which product is cheaper. Free and ad-free.",
   "url": "https://tool-hub.me/unit-price/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -44,7 +44,7 @@
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "단위가격 계산기",
+      "name": "Unit Price Calculator",
       "item": "https://tool-hub.me/unit-price/"
     }
   ]
@@ -57,34 +57,34 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "단위가격이란? (100g당 가격의 의미)",
+      "name": "What is unit price (price per 100g)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "단위가격이란 상품의 총가격을 총용량으로 나눈, g당·ml당·개당 가격을 뜻합니다. 이 단위가격 계산기는 g·ml 상품은 사람이 감을 잡기 쉽도록 100g당 가격·100ml당 가격으로 환산해 보여줍니다. 용량이 다른 두 상품도 단위가격만 맞추면 바로 비교할 수 있습니다."
+        "text": "Unit price is a product's total price divided by its total amount — the price per gram, per milliliter or per item. This unit price calculator converts weight and volume products to price per 100g and price per 100ml so they are easy to compare at a glance. Even two products with different sizes can be compared directly once their unit prices line up."
       }
     },
     {
       "@type": "Question",
-      "name": "kg과 g이 섞여 있어도 비교되나?",
+      "name": "Can it compare kg and g mixed together?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "네. 한쪽이 kg, 다른 쪽이 g이어도 자동으로 g 단위로 맞춰 계산하므로 g당 가격 계산이 정확합니다. 같은 방식으로 L과 ml도 ml로 정규화합니다. 다만 g(무게)과 ml(부피)처럼 서로 종류가 다른 단위, 혹은 '개'와 무게·부피 단위는 성격이 달라 단위가격 비교가 불가능하니 같은 종류의 단위끼리만 입력해 주세요."
+        "text": "Yes. If one product is in kg and the other in g, the calculator automatically converts both to grams, so the price per unit is accurate. Volume works the same way — L and ml are normalized to ml. Just note that different types of units — weight (g), volume (ml) and count (item) — measure different things and cannot be compared, so enter units of the same type on both sides."
       }
     },
     {
       "@type": "Question",
-      "name": "묶음 상품(2+1 등)은 어떻게 입력하나?",
+      "name": "How do I enter a multipack (2+1 etc.)?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "묶음 개수 칸에 낱개 수를 입력하면 됩니다. 예를 들어 500g짜리 상품을 3개 묶음으로 9,000원에 판다면 용량 500·단위 g·묶음 개수 3으로 입력하세요. 총용량(용량×묶음 개수) 기준으로 단위가격을 계산해 어느게 더 싼지 알려드립니다."
+        "text": "Enter the number of items in the items-per-pack field. For example, if a 500g product is sold as a pack of 3 for 9,000, enter amount 500, unit g and items per pack 3. The unit price is calculated from the total amount (amount × items per pack) to tell you which is cheaper."
       }
     },
     {
       "@type": "Question",
-      "name": "입력한 정보가 서버로 전송되나?",
+      "name": "Is my data sent to a server?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "아니오. 가격과 용량 등 입력값은 서버로 전송되지 않고 브라우저 안에서만 계산됩니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값만 이 브라우저의 localStorage에 저장되며, 다른 곳으로 전송되지 않습니다."
+        "text": "No. The price, amount and other inputs are never sent to a server — everything is calculated inside your browser. Only your last inputs are saved in this browser's localStorage so you can pick up where you left off; nothing is transmitted anywhere else."
       }
     }
   ]
@@ -98,66 +98,71 @@ ADSENSE:END -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
-    <span>단위가격 계산기</span>
+    <span>Unit Price Calculator</span>
   </a>
   <nav class="header-actions">
-    <a class="home-btn" href="https://tool-hub.me/" aria-label="툴허브 홈" title="툴허브 홈"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" title="테마 전환">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" title="공유하기">↗</button>
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <h1>단위가격 계산기</h1>
-    <p class="lede">가격과 용량만 입력하세요. 어느 쪽이 더 싼지 바로 알려드립니다.</p>
+    <h1>Unit Price Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Just enter the price and amount. We'll instantly show you which one is the better deal.</p>
   </section>
 
-  <!-- TOOL:START — builder agent replaces everything inside this section -->
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+         with the same key added to all 14 language blocks in js/locales.js. Dynamic JS
+         strings are looked up via window.I18N.t("key"); subscribe to the document
+         "i18n:change" event when a re-render on language switch is needed. -->
   <section class="tool-card" id="tool" aria-live="polite">
     <fieldset class="product-fields">
-      <legend>상품 A</legend>
-      <label for="a-price">가격 (원)</label>
-      <input type="number" inputmode="decimal" id="a-price" name="a-price" min="0" step="1" placeholder="예: 1000">
+      <legend data-i18n="tool.legendA">Product A</legend>
+      <label for="a-price" data-i18n="tool.price">Price</label>
+      <input type="number" inputmode="decimal" id="a-price" name="a-price" min="0" step="1" placeholder="e.g. 1000" data-i18n-placeholder="tool.ph.priceA">
 
-      <label for="a-capacity">용량</label>
-      <input type="number" inputmode="decimal" id="a-capacity" name="a-capacity" min="0" step="any" placeholder="예: 500">
+      <label for="a-capacity" data-i18n="tool.amount">Amount</label>
+      <input type="number" inputmode="decimal" id="a-capacity" name="a-capacity" min="0" step="any" placeholder="e.g. 500" data-i18n-placeholder="tool.ph.amountA">
 
-      <label for="a-unit">단위</label>
+      <label for="a-unit" data-i18n="tool.unit">Unit</label>
       <select id="a-unit" name="a-unit">
         <option value="g">g</option>
         <option value="kg">kg</option>
         <option value="ml">ml</option>
         <option value="L">L</option>
-        <option value="개">개</option>
+        <option value="ea" data-i18n="tool.unitEach">item</option>
       </select>
 
-      <label for="a-count">묶음 개수</label>
+      <label for="a-count" data-i18n="tool.packCount">Items per pack</label>
       <input type="number" inputmode="numeric" id="a-count" name="a-count" min="1" step="1" value="1">
     </fieldset>
 
     <fieldset class="product-fields">
-      <legend>상품 B</legend>
-      <label for="b-price">가격 (원)</label>
-      <input type="number" inputmode="decimal" id="b-price" name="b-price" min="0" step="1" placeholder="예: 1800">
+      <legend data-i18n="tool.legendB">Product B</legend>
+      <label for="b-price" data-i18n="tool.price">Price</label>
+      <input type="number" inputmode="decimal" id="b-price" name="b-price" min="0" step="1" placeholder="e.g. 1800" data-i18n-placeholder="tool.ph.priceB">
 
-      <label for="b-capacity">용량</label>
-      <input type="number" inputmode="decimal" id="b-capacity" name="b-capacity" min="0" step="any" placeholder="예: 1">
+      <label for="b-capacity" data-i18n="tool.amount">Amount</label>
+      <input type="number" inputmode="decimal" id="b-capacity" name="b-capacity" min="0" step="any" placeholder="e.g. 1" data-i18n-placeholder="tool.ph.amountB">
 
-      <label for="b-unit">단위</label>
+      <label for="b-unit" data-i18n="tool.unit">Unit</label>
       <select id="b-unit" name="b-unit">
         <option value="g">g</option>
         <option value="kg" selected>kg</option>
         <option value="ml">ml</option>
         <option value="L">L</option>
-        <option value="개">개</option>
+        <option value="ea" data-i18n="tool.unitEach">item</option>
       </select>
 
-      <label for="b-count">묶음 개수</label>
+      <label for="b-count" data-i18n="tool.packCount">Items per pack</label>
       <input type="number" inputmode="numeric" id="b-count" name="b-count" min="1" step="1" value="1">
     </fieldset>
 
-    <button type="button" class="btn" id="compare-btn">단위가격 비교하기</button>
+    <button type="button" class="btn" id="compare-btn" data-i18n="tool.compare">Compare unit price</button>
 
     <div class="result" id="result" hidden></div>
   </section>
@@ -170,33 +175,36 @@ ADSENSE:END -->
   <section id="related-tools" hidden></section>
 
   <section class="faq" id="faq">
-    <h2>자주 묻는 질문</h2>
-    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A -->
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Each summary/p carries data-i18n="faq.qN|faq.aN", filled for every language in locales.js. -->
     <details>
-      <summary>단위가격이란? (100g당 가격의 의미)</summary>
-      <p>단위가격이란 상품의 총가격을 총용량으로 나눈, g당·ml당·개당 가격을 뜻합니다. 이 <strong>단위가격 계산기</strong>는 g·ml 상품은 사람이 감을 잡기 쉽도록 <strong>100g당 가격</strong>·100ml당 가격으로 환산해 보여줍니다. 용량이 다른 두 상품도 단위가격만 맞추면 바로 비교할 수 있습니다.</p>
+      <summary data-i18n="faq.q1">What is unit price (price per 100g)?</summary>
+      <p data-i18n="faq.a1">Unit price is a product's total price divided by its total amount — the price per gram, per milliliter or per item. This unit price calculator converts weight and volume products to price per 100g and price per 100ml so they are easy to compare at a glance. Even two products with different sizes can be compared directly once their unit prices line up.</p>
     </details>
     <details>
-      <summary>kg과 g이 섞여 있어도 비교되나?</summary>
-      <p>네. 한쪽이 kg, 다른 쪽이 g이어도 자동으로 g 단위로 맞춰 계산하므로 <strong>g당 가격 계산</strong>이 정확합니다. 같은 방식으로 L과 ml도 ml로 정규화합니다. 다만 g(무게)과 ml(부피)처럼 서로 종류가 다른 단위, 혹은 '개'와 무게·부피 단위는 성격이 달라 <strong>단위가격 비교</strong>가 불가능하니 같은 종류의 단위끼리만 입력해 주세요.</p>
+      <summary data-i18n="faq.q2">Can it compare kg and g mixed together?</summary>
+      <p data-i18n="faq.a2">Yes. If one product is in kg and the other in g, the calculator automatically converts both to grams, so the price per unit is accurate. Volume works the same way — L and ml are normalized to ml. Just note that different types of units — weight (g), volume (ml) and count (item) — measure different things and cannot be compared, so enter units of the same type on both sides.</p>
     </details>
     <details>
-      <summary>묶음 상품(2+1 등)은 어떻게 입력하나?</summary>
-      <p>묶음 개수 칸에 낱개 수를 입력하면 됩니다. 예를 들어 500g짜리 상품을 3개 묶음으로 9,000원에 판다면 용량 500·단위 g·묶음 개수 3으로 입력하세요. 총용량(용량×묶음 개수) 기준으로 단위가격을 계산해 <strong>어느게 더 싼지</strong> 알려드립니다.</p>
+      <summary data-i18n="faq.q3">How do I enter a multipack (2+1 etc.)?</summary>
+      <p data-i18n="faq.a3">Enter the number of items in the items-per-pack field. For example, if a 500g product is sold as a pack of 3 for 9,000, enter amount 500, unit g and items per pack 3. The unit price is calculated from the total amount (amount × items per pack) to tell you which is cheaper.</p>
     </details>
     <details>
-      <summary>입력한 정보가 서버로 전송되나?</summary>
-      <p>아니오. 가격과 용량 등 입력값은 서버로 전송되지 않고 브라우저 안에서만 계산됩니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값만 이 브라우저의 localStorage에 저장되며, 다른 곳으로 전송되지 않습니다.</p>
+      <summary data-i18n="faq.q4">Is my data sent to a server?</summary>
+      <p data-i18n="faq.a4">No. The price, amount and other inputs are never sent to a server — everything is calculated inside your browser. Only your last inputs are saved in this browser's localStorage so you can pick up where you left off; nothing is transmitted anywhere else.</p>
     </details>
     <!-- FAQ:END -->
   </section>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html">개인정보처리방침</a> · <a href="https://tool-hub.me/">다른 도구 보기</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer">☕ 커피 한 잔 사주기</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
 <script src="js/app.js"></script>
 <script src="js/related.js"></script>
 </body>

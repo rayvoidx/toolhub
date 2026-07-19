@@ -89,7 +89,27 @@
 (function tool() {
   "use strict";
   // TOOLJS:START
-  var STORAGE_KEY = "char-count:last";
+  // char-count — 글자수/바이트/원고지 카운트 (spec: factory/state/char-count.yaml)
+  // 카운팅 로직 불변. 유저 노출 동적 문구는 window.I18N.t() 경유. 상태는 localStorage "<slug>:" prefix.
+  var cfg = window.APP_CONFIG || {};
+  var STORAGE_KEY = (cfg.slug || "char-count") + ":last";
+
+  /* ---- i18n 헬퍼 ---- */
+  function t(key) {
+    var s = window.I18N && window.I18N.t(key);
+    return s != null ? s : key;
+  }
+  function fill(s, params) {
+    return String(s).replace(/\{(\w+)\}/g, function (m, k) {
+      return params && params[k] != null ? String(params[k]) : m;
+    });
+  }
+  function nf(n) {
+    try {
+      var lang = window.I18N && window.I18N.lang();
+      return Number(n).toLocaleString(lang || undefined);
+    } catch (e) { return String(n); }
+  }
 
   var textEl   = document.getElementById("main-text");
   var goalEl   = document.getElementById("goal-count");
@@ -103,7 +123,7 @@
   var statUtf8   = document.querySelector("#sc-utf8    .stat-val");
   var statEuckr  = document.querySelector("#sc-euckr   .stat-val");
 
-  // ----- 계산 함수 -----
+  // ----- 계산 함수 (언어 무관 — 불변) -----
 
   /** 공백 포함 글자수 (코드포인트 기준) */
   function countWithSpace(text) {
@@ -143,11 +163,14 @@
     return total;
   }
 
-  // ----- DOM 갱신 -----
+  // 브라우저 밖(node) 단위 검증용 훅 — UI 상태 저장 용도 아님
+  window.__CC_TEST = {
+    countWithSpace: countWithSpace, countNoSpace: countNoSpace,
+    countWords: countWords, countManuscript: countManuscript,
+    countUtf8Bytes: countUtf8Bytes, countEuckrBytes: countEuckrBytes
+  };
 
-  function fmt(n) {
-    return n.toLocaleString("ko-KR");
-  }
+  // ----- DOM 갱신 -----
 
   function updateStats(text) {
     var withSp = countWithSpace(text);
@@ -157,12 +180,12 @@
     var utf8   = countUtf8Bytes(text);
     var euckr  = countEuckrBytes(text);
 
-    statWithSp.textContent = fmt(withSp);
-    statNoSp.textContent   = fmt(noSp);
-    statWords.textContent  = fmt(words);
-    statMs.textContent     = fmt(ms);
-    statUtf8.textContent   = fmt(utf8);
-    statEuckr.textContent  = fmt(euckr);
+    if (statWithSp) statWithSp.textContent = nf(withSp);
+    if (statNoSp)   statNoSp.textContent   = nf(noSp);
+    if (statWords)  statWords.textContent  = nf(words);
+    if (statMs)     statMs.textContent     = nf(ms);
+    if (statUtf8)   statUtf8.textContent   = nf(utf8);
+    if (statEuckr)  statEuckr.textContent  = nf(euckr);
 
     updateGoalBanner(withSp);
   }
@@ -171,7 +194,7 @@
     var raw  = goalEl ? goalEl.value.trim() : "";
     var goal = parseInt(raw, 10);
 
-    // 목표 0/음수/비숫자 → 배너 숨김
+    // 목표 0/음수/비숫자 → 배너 숨김 (조용한 실패 아님: 목표 미입력 = 기능 off 상태)
     if (!raw || isNaN(goal) || goal <= 0) {
       if (bannerEl) bannerEl.hidden = true;
       return;
@@ -181,12 +204,12 @@
     if (bannerEl) {
       bannerEl.hidden = false;
       if (remain >= 0) {
-        bannerEl.textContent = "잔여 " + fmt(remain) + "자";
+        bannerEl.textContent = fill(t("tool.v.remain"), { n: nf(remain) });
         bannerEl.style.background = "var(--surface)";
         bannerEl.style.border     = "1px solid var(--line)";
         bannerEl.style.color      = "var(--ink)";
       } else {
-        bannerEl.textContent = Math.abs(remain) + "자 초과";
+        bannerEl.textContent = fill(t("tool.v.over"), { n: nf(Math.abs(remain)) });
         bannerEl.style.background = "#fee2e2";
         bannerEl.style.border     = "1px solid #fca5a5";
         bannerEl.style.color      = "#b91c1c";
@@ -194,7 +217,7 @@
     }
   }
 
-  // ----- localStorage 복원/저장 -----
+  // ----- localStorage 복원/저장 ("<slug>:" prefix 전용) -----
 
   function saveText(text) {
     try {
@@ -207,7 +230,6 @@
       var saved = localStorage.getItem(STORAGE_KEY);
       if (typeof saved === "string" && saved.length > 0 && textEl) {
         textEl.value = saved;
-        updateStats(saved);
       }
     } catch (e) { /* 손상된 값 무시 */ }
   }
@@ -225,15 +247,17 @@
   if (goalEl) {
     goalEl.addEventListener("input", function () {
       var text = textEl ? textEl.value : "";
-      var withSp = countWithSpace(text);
-      updateGoalBanner(withSp);
+      updateGoalBanner(countWithSpace(text));
     });
   }
 
-  // 초기 렌더 (텍스트 없어도 0으로 표시)
+  // 언어 전환 시 숫자 포맷·배너 문구 재렌더 (라벨·단위는 i18n 엔진이 처리)
+  document.addEventListener("i18n:change", function () {
+    updateStats(textEl ? textEl.value : "");
+  });
+
+  // 초기 렌더 (저장값 복원 후, 텍스트 없어도 0으로 표시)
   restoreText();
-  if (textEl && textEl.value === "") {
-    updateStats("");
-  }
+  updateStats(textEl ? textEl.value : "");
   // TOOLJS:END
 })();
