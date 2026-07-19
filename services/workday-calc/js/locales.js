@@ -31,7 +31,7 @@ window.I18N_LOCALES = {
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
-    "meta.title": "Business Days Calculator — count working days",
+    "meta.title": "Business Days Calculator — count working days (US, UK & more)",
     "meta.description": "Count business (working) days between two dates with weekends and public holidays excluded. Your country is preselected from your region, with 13 holiday calendars built in (US, UK, Japan, Korea, Germany, France, Brazil, India and more), plus custom holidays, add or subtract business days to find a due date, and see which holidays were skipped. Free, private, ad-free.",
     "hero.lede": "Pick two dates. Weekends and public holidays are subtracted for you.",
     "tool.aria": "Business days calculator",
