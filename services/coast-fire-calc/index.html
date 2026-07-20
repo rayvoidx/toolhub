@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coast FIRE Calculator: Your Coast FIRE Number Today</title>
+<meta name="description" content="Free Coast FIRE calculator: enter your age, target retirement age, current invested savings, and FIRE target to see if your money will coast to your number with no further contributions — the Coast FIRE number today, your projected balance at retirement, and any surplus or shortfall. No login, no ads, computed in your browser.">
+<meta name="keywords" content="coast fire calculator, coast fire number calculator, coastfire calculator, when can I stop saving for retirement, 코스트 파이어 계산기, 코스트파이어, coast fi calculator">
+<link rel="canonical" href="https://tool-hub.me/coast-fire-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Coast FIRE Calculator: Your Coast FIRE Number Today">
+<meta property="og:description" content="Free Coast FIRE calculator: enter your age, target retirement age, current invested savings, and FIRE target to see if your money will coast to your number with no further contributions — the Coast FIRE number today, your projected balance at retirement, and any surplus or shortfall. No login, no ads, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/coast-fire-calc/">
+<meta property="og:image" content="https://tool-hub.me/coast-fire-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e7490">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Coast FIRE Calculator",
+  "description": "Free Coast FIRE calculator: enter your age, target retirement age, current invested savings, and FIRE target to see if your money will coast to your number with no further contributions — the Coast FIRE number today, your projected balance at retirement, and any surplus or shortfall. No login, no ads, computed in your browser.",
+  "url": "https://tool-hub.me/coast-fire-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Coast FIRE Calculator: Your Coast FIRE Number Today",
+      "item": "https://tool-hub.me/coast-fire-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Coast FIRE, and how is it different from full FIRE and Barista FIRE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Coast FIRE is the moment your invested savings are already large enough that, with no further contributions, compound growth alone will carry them to your retirement number by your target age. With full FIRE you keep saving until your portfolio can fully fund retirement today; with Barista FIRE you cover some expenses with part-time income while your investments coast. This coast fire calculator shows the Coast FIRE number you'd need today, so you can see whether you can ease off aggressive saving and let compounding do the rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Coast FIRE formula, with a worked example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The core formula is: Coast number = FIRE number ÷ (1 + real return)^years to retirement. It's just the present value of your FIRE number. Example: if your FIRE number is 1,000,000, you're 35 with retirement at 65 (30 years), and you assume a 5% real return, then (1.05)^30 ≈ 4.32, so the Coast FIRE number today is about 231,400. If your current invested savings meet or beat that figure, this coast fire number calculator marks you as already coasting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why use a real (after-inflation) return instead of a nominal one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because it keeps every figure in today's money. If you discounted a future FIRE number using a nominal return, the answer would ignore inflation eating into your spending power. By using a real return — your expected return minus inflation, often assumed around 4–7% for a stock-heavy portfolio — the FIRE number and the Coast FIRE number both stay in today's dollars, so the coastfire calculator result is directly comparable to what you have now."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the 4% rule turn annual spending into a FIRE number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 4% rule (a rule of thumb from retirement research) says you can withdraw about 4% of your portfolio in the first year and adjust for inflation after. So your FIRE number = annual spending ÷ withdrawal rate — at 4% that's your annual spending × 25. Spending 40,000 a year implies a 1,000,000 FIRE number; a more cautious 3.5% rate implies about 1,143,000. This tool lets you enter spending with a withdrawal rate, or type a FIRE number directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this investment advice, and is anything sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This is an arithmetic projection based on the numbers you type — it isn't investment advice, and real market returns vary and aren't guaranteed. Everything is computed in your browser; nothing is uploaded, there's no login, and your inputs never leave your device (they're only saved locally so the form remembers them). Use it to sanity-check whether you can stop saving for retirement, then confirm with a qualified advisor."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Coast FIRE Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Coast FIRE Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Coast FIRE is the point where your current investments will grow into your retirement number on their own — no more contributions needed. Enter your age, retirement age, current savings, and target to find out if you're already coasting, and how much you'd need today if you're not. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .fieldlabel { font-weight:600; font-size:14px; margin:14px 0 0; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .seg { display:inline-flex; border:1px solid var(--line); border-radius:8px; overflow:hidden; margin-top:8px; }
+      #tool .seg-btn { margin:0; padding:8px 16px; font-weight:600; font-size:14px; cursor:pointer; color:var(--muted); position:relative; }
+      #tool .seg-btn.is-active { background:var(--accent); color:#fff; }
+      #tool .seg-btn input { position:absolute; opacity:0; width:0; height:0; pointer-events:none; }
+      #tool .hint { font-size:13px; color:var(--muted); margin:4px 0 0; }
+      #tool .badge { display:inline-block; padding:4px 12px; border-radius:999px; font-weight:700; font-size:14px; }
+      #tool .badge.ok { background:rgba(16,185,129,.15); color:#059669; }
+      #tool .badge.no { background:rgba(217,119,6,.15); color:#d97706; }
+      #tool .todaytag { display:inline-block; margin-left:8px; padding:2px 9px; border-radius:999px; font-size:12px; font-weight:600;
+        background:rgba(14,116,144,.14); color:var(--accent); vertical-align:middle; }
+      #tool .coast-big { font-size:30px; font-weight:800; margin:8px 0 2px; line-height:1.1; }
+      #tool .primary-msg { margin:8px 0 2px; font-weight:600; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-val.pos { color:#059669; }
+      #tool .rcard .rc-val.neg { color:#d97706; }
+      #tool .bar { height:8px; border-radius:999px; background:var(--line); overflow:hidden; margin-top:12px; }
+      #tool .bar > span { display:block; height:100%; background:var(--accent); width:0; }
+      #tool .coast-age { margin:12px 0 0; padding:10px 12px; border-radius:8px; border:1px dashed var(--accent); }
+      #tool .coast-age .ca-label { font-size:13px; color:var(--muted); }
+      #tool .coast-age .ca-val { font-weight:700; margin-top:2px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .disclaimer { font-size:12px; color:var(--muted); margin:12px 0 0; padding-top:10px; border-top:1px solid var(--line); }
+    </style>
+
+    <div class="chips" style="gap:12px;">
+      <div style="flex:1 1 120px;">
+        <label for="age-input" data-i18n="tool.age.label">Current age</label>
+        <input type="number" id="age-input" inputmode="numeric" min="15" max="90" step="1"
+               placeholder="e.g. 35" data-i18n-placeholder="tool.age.ph" autocomplete="off">
+      </div>
+      <div style="flex:1 1 120px;">
+        <label for="retire-input" data-i18n="tool.retire.label">Target retirement age</label>
+        <input type="number" id="retire-input" inputmode="numeric" min="16" max="100" step="1"
+               placeholder="e.g. 60" data-i18n-placeholder="tool.retire.ph" autocomplete="off">
+      </div>
+    </div>
+
+    <label for="savings-input" data-i18n="tool.savings.label">Current invested savings</label>
+    <input type="text" id="savings-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 200,000" data-i18n-placeholder="tool.savings.ph">
+    <p class="hint" data-i18n="tool.savings.hint">The portfolio you already have invested and growing.</p>
+
+    <p class="fieldlabel" id="mode-label" data-i18n="tool.target.label">Your FIRE target</p>
+    <div class="seg" id="mode-seg" role="radiogroup" aria-labelledby="mode-label">
+      <label class="seg-btn is-active"><input type="radio" name="firemode" value="spending" checked><span data-i18n="tool.mode.spending">Annual spending</span></label>
+      <label class="seg-btn"><input type="radio" name="firemode" value="number"><span data-i18n="tool.mode.number">FIRE number</span></label>
+    </div>
+
+    <div id="spending-block">
+      <label for="spend-input" data-i18n="tool.spend.label">Annual spending in retirement</label>
+      <input type="text" id="spend-input" inputmode="numeric" autocomplete="off"
+             placeholder="e.g. 40,000" data-i18n-placeholder="tool.spend.ph">
+      <label for="wrate-input" data-i18n="tool.wrate.label">Withdrawal rate (%)</label>
+      <input type="number" id="wrate-input" inputmode="decimal" min="2" max="10" step="0.1"
+             placeholder="4" data-i18n-placeholder="tool.wrate.ph">
+      <div class="chips" id="wrate-chips" role="group" aria-label="Withdrawal rate presets" data-i18n-aria-label="tool.wrate.chipsAria">
+        <button type="button" class="chip" data-wrate="3">3%</button>
+        <button type="button" class="chip" data-wrate="3.5">3.5%</button>
+        <button type="button" class="chip" data-wrate="4">4%</button>
+      </div>
+      <p class="hint" data-i18n="tool.wrate.hint">At 4% your FIRE number is your annual spending × 25.</p>
+    </div>
+
+    <div id="number-block" hidden>
+      <label for="firenum-input" data-i18n="tool.firenum.label">FIRE number (target retirement balance)</label>
+      <input type="text" id="firenum-input" inputmode="numeric" autocomplete="off"
+             placeholder="e.g. 1,000,000" data-i18n-placeholder="tool.firenum.ph">
+    </div>
+
+    <label for="return-input" data-i18n="tool.return.label">Expected real return, after inflation (%)</label>
+    <input type="number" id="return-input" inputmode="decimal" min="0" max="15" step="0.1"
+           placeholder="5" data-i18n-placeholder="tool.return.ph">
+    <div class="chips" id="return-chips" role="group" aria-label="Real return presets" data-i18n-aria-label="tool.return.chipsAria">
+      <button type="button" class="chip" data-return="4">4%</button>
+      <button type="button" class="chip" data-return="5">5%</button>
+      <button type="button" class="chip" data-return="7">7%</button>
+    </div>
+    <p class="hint" data-i18n="tool.return.hint">An example only — future returns aren't guaranteed.</p>
+
+    <label for="monthly-input" data-i18n="tool.monthly.label">Monthly contribution (optional)</label>
+    <input type="text" id="monthly-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 0" data-i18n-placeholder="tool.monthly.ph">
+    <p class="hint" data-i18n="tool.monthly.hint">If you're not coasting yet, we'll estimate when you could stop contributing.</p>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Check Coast FIRE</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <span class="badge" id="r-badge"></span>
+        <p class="subtle" style="margin:12px 0 0;" data-i18n="tool.result.coastLabel">Coast FIRE number today</p>
+        <p class="coast-big"><span id="r-coast"></span><span class="todaytag" id="r-todaytag" data-i18n="tool.badge.today">in today's money</span></p>
+        <p class="subtle" id="r-sub" style="margin:0 0 4px;"></p>
+        <p class="primary-msg" id="r-msg"></p>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.projection">Projected balance at retirement</div><div class="rc-val" id="r-projection"></div></div>
+          <div class="rcard"><div class="rc-label" id="r-gaplabel"></div><div class="rc-val" id="r-gap"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.progress">Coast progress</div><div class="rc-val" id="r-progress"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.firenum">Your FIRE number</div><div class="rc-val" id="r-firenum"></div></div>
+        </div>
+        <div class="bar" aria-hidden="true"><span id="r-progressbar"></span></div>
+        <div class="coast-age" id="r-coastage" hidden>
+          <div class="ca-label" data-i18n="tool.coastAge.label">Coast FIRE age</div>
+          <div class="ca-val" id="r-coastage-val"></div>
+        </div>
+        <p class="subtle" id="r-negreturn" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.negReturn" hidden>Coast FIRE assumes growth; a real return of 0% or more was used.</p>
+        <p class="subtle" id="r-wrateclamp" style="margin:6px 0 0;color:#d97706;" data-i18n="tool.note.wrateClamp" hidden>The withdrawal rate was adjusted into the 2–10% range.</p>
+        <p class="subtle" id="r-clipped" style="margin:6px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;" data-i18n="tool.note.realReturn">A real (after-inflation) return keeps your FIRE number in today's money.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+        <p class="disclaimer" data-i18n="tool.disclaimer">This is an arithmetic projection, not investment advice; market returns vary and aren't guaranteed.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">What is Coast FIRE, and how is it different from full FIRE and Barista FIRE?</summary><p data-i18n="faq.a1">Coast FIRE is the moment your invested savings are already large enough that, with no further contributions, compound growth alone will carry them to your retirement number by your target age. With full FIRE you keep saving until your portfolio can fully fund retirement today; with Barista FIRE you cover some expenses with part-time income while your investments coast. This coast fire calculator shows the Coast FIRE number you'd need today, so you can see whether you can ease off aggressive saving and let compounding do the rest.</p></details>
+    <details><summary data-i18n="faq.q2">What is the Coast FIRE formula, with a worked example?</summary><p data-i18n="faq.a2">The core formula is: Coast number = FIRE number ÷ (1 + real return)^years to retirement. It's just the present value of your FIRE number. Example: if your FIRE number is 1,000,000, you're 35 with retirement at 65 (30 years), and you assume a 5% real return, then (1.05)^30 ≈ 4.32, so the Coast FIRE number today is about 231,400. If your current invested savings meet or beat that figure, this coast fire number calculator marks you as already coasting.</p></details>
+    <details><summary data-i18n="faq.q3">Why use a real (after-inflation) return instead of a nominal one?</summary><p data-i18n="faq.a3">Because it keeps every figure in today's money. If you discounted a future FIRE number using a nominal return, the answer would ignore inflation eating into your spending power. By using a real return — your expected return minus inflation, often assumed around 4–7% for a stock-heavy portfolio — the FIRE number and the Coast FIRE number both stay in today's dollars, so the coastfire calculator result is directly comparable to what you have now.</p></details>
+    <details><summary data-i18n="faq.q4">How does the 4% rule turn annual spending into a FIRE number?</summary><p data-i18n="faq.a4">The 4% rule (a rule of thumb from retirement research) says you can withdraw about 4% of your portfolio in the first year and adjust for inflation after. So your FIRE number = annual spending ÷ withdrawal rate — at 4% that's your annual spending × 25. Spending 40,000 a year implies a 1,000,000 FIRE number; a more cautious 3.5% rate implies about 1,143,000. This tool lets you enter spending with a withdrawal rate, or type a FIRE number directly.</p></details>
+    <details><summary data-i18n="faq.q5">Is this investment advice, and is anything sent to a server?</summary><p data-i18n="faq.a5">No. This is an arithmetic projection based on the numbers you type — it isn't investment advice, and real market returns vary and aren't guaranteed. Everything is computed in your browser; nothing is uploaded, there's no login, and your inputs never leave your device (they're only saved locally so the form remembers them). Use it to sanity-check whether you can stop saving for retirement, then confirm with a qualified advisor.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
