@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ad Copy Length Checker — Check every headline</title>
+<meta name="description" content="Free ad copy character counter for Google Ads, Microsoft Ads, Meta and Naver. Paste your whole RSA sheet to check every headline and description against the real limits — Korean, Japanese and Chinese characters counted as two, like Google does. Runs entirely in your browser.">
+<meta name="keywords" content="google ads character counter, ad copy length checker, rsa character limit, google ads headline 30 characters, naver search ad character limit, 광고 문구 글자수, 네이버 검색광고 글자수, 구글애즈 헤드라인 글자수">
+<link rel="canonical" href="https://tool-hub.me/ad-copy-limit-check/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ad Copy Length Checker — Check every headline">
+<meta property="og:description" content="Free ad copy character counter for Google Ads, Microsoft Ads, Meta and Naver. Paste your whole RSA sheet to check every headline and description against the real limits — Korean, Japanese and Chinese characters counted as two, like Google does. Runs entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/ad-copy-limit-check/">
+<meta property="og:image" content="https://tool-hub.me/ad-copy-limit-check/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#db2777">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ad Copy Length Checker",
+  "description": "Free ad copy character counter for Google Ads, Microsoft Ads, Meta and Naver. Paste your whole RSA sheet to check every headline and description against the real limits — Korean, Japanese and Chinese characters counted as two, like Google does. Runs entirely in your browser.",
+  "url": "https://tool-hub.me/ad-copy-limit-check/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is my Korean headline rejected at 15 characters?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because Google counts it as 30. Google Ads states that each character in a double-width language — Korean, Japanese or Chinese — counts as two characters. So a 30-character headline limit is really 15 Korean characters, a 90-character description is 45, and a 25-character callout is only 12 (Google spells that one out itself). Most ad copy length checkers use a plain string length and tell you 15 is fine, which is why the rejection only shows up at upload. This checker measures every character by its Unicode East Asian Width, so full-width characters — including full-width letters like Ａ — count as two, exactly the way the platform counts them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the Google Ads RSA character limits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a responsive search ad: headline 30, description 90, each display path 15, callout 25 and sitelink text 25 — in double-width languages, halve those (15 / 45 / 7 / 12 / 12). A responsive search ad also needs at least 3 headlines and 2 descriptions to run, so this tool flags rows that are short on either. Microsoft Ads uses the same 30 / 90 / 15 limits, and Performance Max splits headlines into short (30) and long (90)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are Naver and Kakao different?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Korean search platforms count Korean characters as one, not two — but they add a floor. Naver Powerlink allows a title of 15 characters and a description of 20 to 45, and a description under 20 characters is rejected at registration, so being short is a failure too, not just being long. Kakao keyword ads use 15 and 45. This tool shows those as \"below minimum\" in a separate colour from \"over the limit\", because they are two different rejection reasons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Meta: why \"will be truncated\" instead of \"over the limit\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because Meta will accept the ad either way. Primary text is recommended at 125 characters but accepts up to 500; a headline is recommended at 40 but accepts up to 255. Past the recommendation your copy is not rejected, it is cut off with an ellipsis on most placements. Flagging that in red like a hard limit would be a false alarm, so it is shown in orange as a truncation warning — and only a genuine hard limit is shown as an error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are spaces, emoji and keyword insertion counted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spaces and punctuation are counted, because the platforms count them. Emoji are counted as one grapheme each — including multi-codepoint ones — but Google Ads does not allow emoji in search ads at all, so they are flagged. Keyword insertion like {KeyWord:Running Shoes} is measured on the default text you supplied, since that is what shows when the keyword does not fit; the cell is badged so you know. If a placeholder has no default, the length genuinely varies at serving time and the tool says so rather than guessing. And none of this leaves your browser: the counting runs locally, your ad copy is never uploaded and never saved."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ad Copy Length Checker",
+      "item": "https://tool-hub.me/ad-copy-limit-check/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Ad Copy Length Checker</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Ad Copy Length Checker</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your headlines and descriptions — see every cell checked against the real platform limits.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool { --acl-over: #dc2626; --acl-under: #b45309; --acl-near: #ea580c; --acl-ok: #15803d; }
+      [data-theme="dark"] #tool { --acl-over: #f87171; --acl-under: #fbbf24; --acl-near: #fb923c; --acl-ok: #4ade80; }
+      @media (prefers-color-scheme: dark) {
+        [data-theme="auto"] #tool { --acl-over: #f87171; --acl-under: #fbbf24; --acl-near: #fb923c; --acl-ok: #4ade80; }
+      }
+      #tool label { margin-top: 0; }
+      #tool .acl-field { margin-bottom: 16px; }
+      #tool .acl-field label { margin: 0 0 6px; }
+
+      #tool .acl-tabs { display: flex; gap: 6px; border: 1px solid var(--line); border-radius: 10px; padding: 4px; margin-bottom: 18px; }
+      #tool .acl-tab { flex: 1 1 0; padding: 9px 8px; font-size: 14px; font-weight: 700; font-family: inherit;
+        border: none; border-radius: 7px; background: none; color: var(--muted); cursor: pointer; }
+      #tool .acl-tab.is-on { background: var(--accent); color: #fff; }
+
+      #tool .acl-drop { margin-top: 10px; border: 1px dashed var(--line); border-radius: 10px; padding: 14px;
+        text-align: center; color: var(--muted); font-size: 13.5px; }
+      #tool .acl-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+      #tool .acl-drop p { margin: 0 0 8px; }
+      #tool .acl-browse { padding: 7px 14px; font-size: 13px; font-weight: 700; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--accent); cursor: pointer; }
+      #tool .acl-browse:hover { border-color: var(--accent); }
+
+      #tool .acl-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+      #tool .acl-actions .btn { margin-top: 18px; }
+      #tool .acl-link { background: none; border: none; color: var(--muted); font-size: 13.5px; font-family: inherit;
+        font-weight: 600; cursor: pointer; text-decoration: underline; padding: 6px 2px; margin-top: 18px; }
+      #tool .acl-link:hover { color: var(--accent); }
+
+      #tool .acl-prog { display: flex; align-items: center; gap: 10px; margin-top: 14px; }
+      #tool .acl-prog-track { flex: 1 1 auto; height: 8px; border-radius: 4px; background: var(--line); overflow: hidden; }
+      #tool .acl-prog-bar { height: 100%; width: 0; background: var(--accent); transition: width .12s linear; }
+      #tool .acl-prog-t { flex: 0 0 auto; font-size: 12.5px; font-weight: 700; color: var(--muted); }
+
+      #tool .acl-big { font-size: clamp(34px, 9vw, 48px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.1; }
+      #tool .acl-big small { font-size: 0.45em; font-weight: 800; color: var(--muted); letter-spacing: 0; }
+      #tool .acl-state { font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; margin-top: 2px; }
+      #tool .acl-sub { font-size: 14px; color: var(--muted); margin-top: 4px; }
+      #tool .acl-hints { list-style: none; margin: 12px 0 0; padding: 0; }
+      #tool .acl-hints li { font-size: 13.5px; color: var(--muted); padding: 3px 0 3px 18px; position: relative; }
+      #tool .acl-hints li::before { content: "•"; position: absolute; inset-inline-start: 4px; }
+      #tool .acl-meter { height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; margin-top: 12px; }
+      #tool .acl-meter i { display: block; height: 100%; width: 0; background: var(--acl-ok); }
+
+      #tool .acl-sum { display: grid; grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); gap: 8px; margin: 4px 0 0; padding: 0; }
+      #tool .acl-sum > div { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 9px 11px; }
+      #tool .acl-sum dt { font-size: 11.5px; font-weight: 700; color: var(--muted); margin: 0 0 2px; text-transform: uppercase; letter-spacing: .03em; }
+      #tool .acl-sum dd { margin: 0; font-size: 19px; font-weight: 900; }
+      #tool .acl-notes { margin: 12px 0 0; padding: 0; list-style: none; }
+      #tool .acl-notes li { font-size: 13px; padding: 4px 0; color: var(--muted); }
+      #tool .acl-notes li b { color: var(--ink); }
+      #tool .acl-groups { margin: 12px 0 0; font-size: 13px; }
+      #tool .acl-groups table { width: 100%; border-collapse: collapse; }
+      #tool .acl-groups th { text-align: start; font-size: 11.5px; color: var(--muted); text-transform: uppercase;
+        letter-spacing: .03em; padding: 3px 6px; border-bottom: 1px solid var(--line); }
+      #tool .acl-groups td { padding: 5px 6px; border-bottom: 1px solid var(--line); font-weight: 600; }
+
+      #tool .acl-gridbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin: 20px 0 8px; }
+      #tool .acl-check2 { display: flex; align-items: center; gap: 8px; font-size: 13.5px; font-weight: 700; cursor: pointer; margin: 0; }
+      #tool .acl-check2 input { width: 17px; height: 17px; accent-color: var(--accent); cursor: pointer; }
+      #tool .acl-exports { display: flex; gap: 10px; }
+      #tool .acl-exports .acl-link { margin-top: 0; }
+
+      #tool .acl-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; }
+      #tool .acl-grid { border-collapse: collapse; font-size: 13px; width: 100%; }
+      #tool .acl-grid th, #tool .acl-grid td { border-inline-end: 1px solid var(--line); border-bottom: 1px solid var(--line);
+        padding: 6px 8px; vertical-align: top; text-align: start; }
+      #tool .acl-grid thead th { background: var(--bg); position: sticky; top: 0; }
+      #tool .acl-hname { font-size: 12px; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 180px; }
+      #tool .acl-map { width: 100%; min-width: 116px; margin-top: 4px; padding: 5px 6px; font-size: 12px; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 7px; background: var(--surface); color: var(--ink); }
+      #tool .acl-map.is-none { color: var(--muted); }
+      #tool .acl-grid td.acl-rn { font-weight: 800; color: var(--muted); white-space: nowrap; background: var(--bg); }
+      #tool .acl-badges { display: block; margin-top: 3px; }
+      #tool .acl-badge { display: inline-block; font-size: 10.5px; font-weight: 800; border-radius: 5px; padding: 1px 5px;
+        margin: 1px 2px 1px 0; white-space: nowrap; border: 1px solid currentColor; }
+      #tool .acl-cell { min-width: 132px; max-width: 260px; }
+      #tool .acl-txt { white-space: pre-wrap; overflow-wrap: anywhere; }
+      #tool .acl-n { display: inline-block; margin-top: 4px; font-size: 11.5px; font-weight: 900; letter-spacing: .01em; }
+      #tool .acl-flag { display: block; font-size: 10.5px; font-weight: 700; color: var(--muted); margin-top: 2px; }
+      #tool td.is-over { background: color-mix(in srgb, var(--acl-over) 13%, var(--surface)); }
+      #tool td.is-over .acl-n, #tool .acl-badge.is-over, #tool .acl-state.is-over { color: var(--acl-over); }
+      #tool td.is-under { background: color-mix(in srgb, var(--acl-under) 13%, var(--surface)); }
+      #tool td.is-under .acl-n, #tool .acl-badge.is-under, #tool .acl-state.is-under { color: var(--acl-under); }
+      #tool td.is-near, #tool td.is-truncate { background: color-mix(in srgb, var(--acl-near) 13%, var(--surface)); }
+      #tool td.is-near .acl-n, #tool td.is-truncate .acl-n, #tool .acl-badge.is-near,
+      #tool .acl-state.is-near, #tool .acl-state.is-truncate { color: var(--acl-near); }
+      #tool td.is-ok .acl-n, #tool .acl-state.is-ok { color: var(--acl-ok); }
+      #tool td.is-empty, #tool td.is-skip { color: var(--muted); }
+      #tool td.is-empty .acl-n, #tool td.is-skip .acl-n, #tool .acl-state.is-empty { color: var(--muted); }
+      #tool .acl-cap { font-size: 12.5px; color: var(--muted); margin: 8px 0 0; }
+      #tool .acl-privacy { font-size: 12.5px; color: var(--muted); margin: 18px 0 0; text-align: center; }
+
+      @media (max-width: 480px) {
+        #tool .acl-grid th, #tool .acl-grid td { padding: 5px 6px; }
+        #tool .acl-cell { min-width: 116px; }
+      }
+    </style>
+
+    <div class="acl-field">
+      <label for="acl-platform" data-i18n="tool.platform">Platform</label>
+      <select id="acl-platform"></select>
+    </div>
+
+    <div class="acl-tabs" role="tablist" data-i18n-aria-label="tool.mode" aria-label="Mode">
+      <button type="button" class="acl-tab is-on" id="acl-tab-single" role="tab" aria-selected="true"
+              aria-controls="acl-pane-single" data-i18n="tool.mode.single">One field</button>
+      <button type="button" class="acl-tab" id="acl-tab-batch" role="tab" aria-selected="false"
+              aria-controls="acl-pane-batch" data-i18n="tool.mode.batch">Whole sheet</button>
+    </div>
+
+    <div id="acl-pane-single" role="tabpanel" aria-labelledby="acl-tab-single">
+      <div class="acl-field">
+        <label for="acl-fieldtype" data-i18n="tool.fieldType">Field</label>
+        <select id="acl-fieldtype"></select>
+      </div>
+      <label for="acl-text" data-i18n="tool.copy">Ad copy</label>
+      <textarea id="acl-text" rows="3" spellcheck="false" data-i18n-placeholder="tool.copy.ph"
+                placeholder="Free shipping on every order"></textarea>
+      <div class="result" id="acl-single-result"></div>
+    </div>
+
+    <div id="acl-pane-batch" role="tabpanel" aria-labelledby="acl-tab-batch" hidden>
+      <label for="acl-paste" data-i18n="tool.paste">Paste your sheet (TSV or CSV)</label>
+      <textarea id="acl-paste" rows="6" spellcheck="false" data-i18n-placeholder="tool.paste.ph"
+                placeholder="Copy the cells straight out of Google Ads Editor or your spreadsheet and paste them here."></textarea>
+      <div class="acl-drop" id="acl-drop">
+        <p data-i18n="tool.drop">…or drop a CSV / TSV file here</p>
+        <button type="button" class="acl-browse" id="acl-browse" data-i18n="tool.browse">Choose a file</button>
+        <input type="file" id="acl-file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values,text/plain" hidden>
+      </div>
+      <div class="acl-actions">
+        <button type="button" class="btn" id="acl-check" data-i18n="tool.check">Check every cell</button>
+        <button type="button" class="acl-link" id="acl-sample" data-i18n="tool.sample">Load a sample sheet</button>
+      </div>
+      <div class="acl-prog" id="acl-prog" hidden>
+        <div class="acl-prog-track"><div class="acl-prog-bar" id="acl-prog-bar"></div></div>
+        <span class="acl-prog-t" id="acl-prog-t"></span>
+      </div>
+      <div class="result" id="acl-batch-result"></div>
+      <div id="acl-grid-wrap" hidden>
+        <div class="acl-gridbar">
+          <label class="acl-check2" for="acl-only">
+            <input type="checkbox" id="acl-only">
+            <span data-i18n="tool.onlyIssues">Only rows with issues</span>
+          </label>
+          <div class="acl-exports">
+            <button type="button" class="acl-link" id="acl-copy" data-i18n="tool.copyTsv">Copy as TSV</button>
+            <button type="button" class="acl-link" id="acl-csv" data-i18n="tool.downloadCsv">Download CSV</button>
+          </div>
+        </div>
+        <div class="acl-scroll"><table class="acl-grid" id="acl-grid"></table></div>
+        <p class="acl-cap" id="acl-cap" hidden></p>
+      </div>
+    </div>
+
+    <p class="acl-privacy" data-i18n="tool.privacy">Your ad copy is counted inside this browser. Nothing is uploaded, and the text itself is never saved — only your platform and column choices are remembered.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Why is my Korean headline rejected at 15 characters?</summary>
+      <p data-i18n="faq.a1">Because Google counts it as 30. Google Ads states that each character in a double-width language — Korean, Japanese or Chinese — counts as two characters. So a 30-character headline limit is really 15 Korean characters, a 90-character description is 45, and a 25-character callout is only 12 (Google spells that one out itself). Most ad copy length checkers use a plain string length and tell you 15 is fine, which is why the rejection only shows up at upload. This checker measures every character by its Unicode East Asian Width, so full-width characters — including full-width letters like Ａ — count as two, exactly the way the platform counts them.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What are the Google Ads RSA character limits?</summary>
+      <p data-i18n="faq.a2">For a responsive search ad: headline 30, description 90, each display path 15, callout 25 and sitelink text 25 — in double-width languages, halve those (15 / 45 / 7 / 12 / 12). A responsive search ad also needs at least 3 headlines and 2 descriptions to run, so this tool flags rows that are short on either. Microsoft Ads uses the same 30 / 90 / 15 limits, and Performance Max splits headlines into short (30) and long (90).</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why are Naver and Kakao different?</summary>
+      <p data-i18n="faq.a3">Korean search platforms count Korean characters as one, not two — but they add a floor. Naver Powerlink allows a title of 15 characters and a description of 20 to 45, and a description under 20 characters is rejected at registration, so being short is a failure too, not just being long. Kakao keyword ads use 15 and 45. This tool shows those as "below minimum" in a separate colour from "over the limit", because they are two different rejection reasons.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Meta: why "will be truncated" instead of "over the limit"?</summary>
+      <p data-i18n="faq.a4">Because Meta will accept the ad either way. Primary text is recommended at 125 characters but accepts up to 500; a headline is recommended at 40 but accepts up to 255. Past the recommendation your copy is not rejected, it is cut off with an ellipsis on most placements. Flagging that in red like a hard limit would be a false alarm, so it is shown in orange as a truncation warning — and only a genuine hard limit is shown as an error.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">How are spaces, emoji and keyword insertion counted?</summary>
+      <p data-i18n="faq.a5">Spaces and punctuation are counted, because the platforms count them. Emoji are counted as one grapheme each — including multi-codepoint ones — but Google Ads does not allow emoji in search ads at all, so they are flagged. Keyword insertion like {KeyWord:Running Shoes} is measured on the default text you supplied, since that is what shows when the keyword does not fit; the cell is badged so you know. If a placeholder has no default, the length genuinely varies at serving time and the tool says so rather than guessing. And none of this leaves your browser: the counting runs locally, your ad copy is never uploaded and never saved.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

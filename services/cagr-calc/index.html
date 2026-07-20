@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAGR Calculator — Compound Annual Growth Rate</title>
+<meta name="description" content="Free CAGR calculator: enter a beginning value, ending value, and period to get the compound annual growth rate, total return, absolute gain, and growth multiple — with a year-by-year growth schedule. No login, no ads, computed in your browser.">
+<meta name="keywords" content="cagr calculator, compound annual growth rate calculator, 연평균 성장률 계산기, annualized return calculator, investment growth rate calculator, average annual return, cagr formula calculator">
+<link rel="canonical" href="https://tool-hub.me/cagr-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CAGR Calculator — Compound Annual Growth Rate">
+<meta property="og:description" content="Free CAGR calculator: enter a beginning value, ending value, and period to get the compound annual growth rate, total return, absolute gain, and growth multiple — with a year-by-year growth schedule. No login, no ads, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/cagr-calc/">
+<meta property="og:image" content="https://tool-hub.me/cagr-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#065f46">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CAGR Calculator",
+  "description": "Free CAGR calculator: enter a beginning value, ending value, and period to get the compound annual growth rate, total return, absolute gain, and growth multiple — with a year-by-year growth schedule. No login, no ads, computed in your browser.",
+  "url": "https://tool-hub.me/cagr-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CAGR Calculator",
+      "item": "https://tool-hub.me/cagr-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is CAGR, and why does it beat total return or a simple average for comparing periods?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CAGR (compound annual growth rate) is the single, steady yearly rate that would grow your beginning value into your ending value over the whole period, compounding each year. A total return of 60% sounds the same whether it took two years or eight, so you can't compare investments with it; a simple average return ignores compounding and overstates the truth. This compound annual growth rate calculator standardizes every result to one annual figure, so a fund held 3 years and a stock held 7 become an apples-to-apples comparison. That is exactly what an annualized return calculator is for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the exact CAGR formula, with a worked example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula is CAGR = (Ending value ÷ Beginning value)^(1 ÷ years) − 1, then multiplied by 100 for a percentage. Worked example: 10,000 grows to 19,500 over 3 years. The ratio is 19,500 ÷ 10,000 = 1.95; raise it to the power 1 ÷ 3 to get about 1.2493; subtract 1 to get 0.2493, so the CAGR is about 24.93% per year. As a cagr calculator this tool also shows the 95% total return, the absolute gain of 9,500, and the growth multiple of 1.95× side by side, so you see the same result four ways."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Years or dates — how are fractional periods like 3.5 years and leap years handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can type the number of years directly (decimals allowed, so 3.5 works) or switch to the dates tab and enter a start and end date. In date mode this investment growth rate calculator counts the exact days between your dates and divides by 365.25 — the average length of a year including leap years — so a period that spans February 29 is measured correctly instead of being rounded to whole years. Because the exponent 1 ÷ years accepts any positive number, a half-year or a 7.3-year holding period is annualized just as precisely as a round number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can CAGR be negative, and why does an ending value of 0 show −100%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If your ending value is below your beginning value the CAGR is negative — a real loss annualized, shown in red alongside a negative total return. If the ending value is exactly 0 the ratio is 0, and 0 raised to any positive power is still 0, so CAGR = 0 − 1 = −100%: a total loss over the period. That is a correct answer, not an error, so the tool labels it clearly rather than hiding it. A beginning value of 0 or a negative ending value has no meaningful growth rate, so the 연평균 성장률 계산기 asks you to fix those inputs instead of returning a misleading number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the math currency-agnostic, is anything sent to a server, and is this investment advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CAGR is a percentage, so the growth rate itself is the same in any currency; only the absolute gain and the year-by-year schedule carry a currency, and those are formatted with your locale's grouping, symbol and decimal places through Intl — nothing is hard-coded. Every calculation runs entirely in your browser: no login, no account, and no prices fetched from any market feed — you type every value yourself, and your last entry is saved only in your browser's local storage. And this is an arithmetic calculation, not investment advice: it tells you the math of a growth rate, not whether to buy, hold or sell."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>CAGR Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>CAGR Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Bought at one value and sold at another? Enter your beginning and ending value and the period to get the compound annual growth rate (CAGR), total return, and growth multiple in seconds. Enter years or dates. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:6px 0 4px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .pl-pos { color:#059669; } #tool .pl-neg { color:#dc2626; }
+      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
+      #tool details.adv[open] { padding-bottom:12px; }
+      #tool table.sched { width:100%; border-collapse:collapse; margin-top:4px; font-size:14px; }
+      #tool table.sched th, #tool table.sched td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool table.sched th:first-child, #tool table.sched td:first-child { text-align:left; }
+      #tool table.sched th { color:var(--muted); font-weight:600; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="v0-input" data-i18n="tool.v0.label">Beginning value</label>
+        <input type="text" id="v0-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 10,000" data-i18n-placeholder="tool.v0.ph">
+      </div>
+      <div>
+        <label for="vn-input" data-i18n="tool.vn.label">Ending value</label>
+        <input type="text" id="vn-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 19,500" data-i18n-placeholder="tool.vn.ph">
+      </div>
+    </div>
+
+    <p id="period-label" style="font-weight:600;font-size:14px;margin:14px 0 0;" data-i18n="tool.period.label">Period</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="period-label">
+      <label><input type="radio" name="periodmode" value="years" checked><span data-i18n="tool.period.years">Years</span></label>
+      <label><input type="radio" name="periodmode" value="dates"><span data-i18n="tool.period.dates">Dates</span></label>
+    </div>
+
+    <div id="years-field">
+      <label for="years-input" data-i18n="tool.years.label">Number of years</label>
+      <input type="number" id="years-input" inputmode="decimal" min="0" step="any" autocomplete="off"
+             placeholder="e.g. 3" data-i18n-placeholder="tool.years.ph">
+      <div class="chips" id="year-chips" role="group" aria-label="Common periods in years" data-i18n-aria-label="tool.years.chipsAria">
+        <button type="button" class="chip" data-years="1">1</button>
+        <button type="button" class="chip" data-years="3">3</button>
+        <button type="button" class="chip" data-years="5">5</button>
+        <button type="button" class="chip" data-years="10">10</button>
+      </div>
+    </div>
+
+    <div id="dates-field" hidden>
+      <div class="field-row">
+        <div>
+          <label for="start-date" data-i18n="tool.startDate.label">Start date</label>
+          <input type="date" id="start-date" autocomplete="off">
+        </div>
+        <div>
+          <label for="end-date" data-i18n="tool.endDate.label">End date</label>
+          <input type="date" id="end-date" autocomplete="off">
+        </div>
+      </div>
+    </div>
+
+    <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+    <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <div class="result-cards">
+          <div class="rcard hero-card"><div class="rc-label" data-i18n="tool.result.cagr">CAGR (compound annual growth rate)</div><div class="rc-val" id="r-cagr"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.total">Total return</div><div class="rc-val" id="r-total"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.gain">Absolute gain</div><div class="rc-val" id="r-gain"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.mult">Growth multiple</div><div class="rc-val" id="r-mult"></div></div>
+        </div>
+        <p class="subtle" id="r-sub" style="margin:10px 0 0;"></p>
+        <p class="subtle" id="r-days" style="margin:4px 0 0;" hidden></p>
+        <p class="subtle" id="r-loss" style="margin:6px 0 0;font-weight:600;" hidden></p>
+
+        <details class="adv" id="sched-wrap">
+          <summary data-i18n="tool.sched.summary">Year-by-year growth schedule</summary>
+          <table class="sched">
+            <thead><tr><th data-i18n="tool.sched.year">Year</th><th data-i18n="tool.sched.value">Value</th></tr></thead>
+            <tbody id="sched-body"></tbody>
+          </table>
+          <p class="subtle" id="sched-trunc" style="margin:6px 0 0;" hidden></p>
+        </details>
+
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;font-weight:600;" data-i18n="tool.note.disclaimer">This is an arithmetic calculation, not investment advice.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">What is CAGR, and why does it beat total return or a simple average for comparing periods?</summary><p data-i18n="faq.a1">CAGR (compound annual growth rate) is the single, steady yearly rate that would grow your beginning value into your ending value over the whole period, compounding each year. A total return of 60% sounds the same whether it took two years or eight, so you can't compare investments with it; a simple average return ignores compounding and overstates the truth. This compound annual growth rate calculator standardizes every result to one annual figure, so a fund held 3 years and a stock held 7 become an apples-to-apples comparison. That is exactly what an annualized return calculator is for.</p></details>
+    <details><summary data-i18n="faq.q2">What is the exact CAGR formula, with a worked example?</summary><p data-i18n="faq.a2">The formula is CAGR = (Ending value ÷ Beginning value)^(1 ÷ years) − 1, then multiplied by 100 for a percentage. Worked example: 10,000 grows to 19,500 over 3 years. The ratio is 19,500 ÷ 10,000 = 1.95; raise it to the power 1 ÷ 3 to get about 1.2493; subtract 1 to get 0.2493, so the CAGR is about 24.93% per year. As a cagr calculator this tool also shows the 95% total return, the absolute gain of 9,500, and the growth multiple of 1.95× side by side, so you see the same result four ways.</p></details>
+    <details><summary data-i18n="faq.q3">Years or dates — how are fractional periods like 3.5 years and leap years handled?</summary><p data-i18n="faq.a3">You can type the number of years directly (decimals allowed, so 3.5 works) or switch to the dates tab and enter a start and end date. In date mode this investment growth rate calculator counts the exact days between your dates and divides by 365.25 — the average length of a year including leap years — so a period that spans February 29 is measured correctly instead of being rounded to whole years. Because the exponent 1 ÷ years accepts any positive number, a half-year or a 7.3-year holding period is annualized just as precisely as a round number.</p></details>
+    <details><summary data-i18n="faq.q4">Can CAGR be negative, and why does an ending value of 0 show −100%?</summary><p data-i18n="faq.a4">Yes. If your ending value is below your beginning value the CAGR is negative — a real loss annualized, shown in red alongside a negative total return. If the ending value is exactly 0 the ratio is 0, and 0 raised to any positive power is still 0, so CAGR = 0 − 1 = −100%: a total loss over the period. That is a correct answer, not an error, so the tool labels it clearly rather than hiding it. A beginning value of 0 or a negative ending value has no meaningful growth rate, so the 연평균 성장률 계산기 asks you to fix those inputs instead of returning a misleading number.</p></details>
+    <details><summary data-i18n="faq.q5">Is the math currency-agnostic, is anything sent to a server, and is this investment advice?</summary><p data-i18n="faq.a5">CAGR is a percentage, so the growth rate itself is the same in any currency; only the absolute gain and the year-by-year schedule carry a currency, and those are formatted with your locale's grouping, symbol and decimal places through Intl — nothing is hard-coded. Every calculation runs entirely in your browser: no login, no account, and no prices fetched from any market feed — you type every value yourself, and your last entry is saved only in your browser's local storage. And this is an arithmetic calculation, not investment advice: it tells you the math of a growth rate, not whether to buy, hold or sell.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
