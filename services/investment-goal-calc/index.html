@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investment Goal Calculator — How Much to Invest Monthly</title>
+<meta name="description" content="Free investment goal calculator: enter your target amount, time horizon, and expected return to see the monthly contribution you need to reach it — plus the one-time lump sum alternative, how much comes from your own money versus market growth, and your goal in today's money. No login, no ads, computed in your browser.">
+<meta name="keywords" content="investment goal calculator, how much to invest monthly, savings goal calculator, required monthly investment calculator, monthly investment to reach a target, 목표 금액 투자 계산기, 목돈 마련 계산기, 매달 얼마 투자">
+<link rel="canonical" href="https://tool-hub.me/investment-goal-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Investment Goal Calculator — How Much to Invest Monthly">
+<meta property="og:description" content="Free investment goal calculator: enter your target amount, time horizon, and expected return to see the monthly contribution you need to reach it — plus the one-time lump sum alternative, how much comes from your own money versus market growth, and your goal in today's money. No login, no ads, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/investment-goal-calc/">
+<meta property="og:image" content="https://tool-hub.me/investment-goal-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#134e4a">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Investment Goal Calculator",
+  "description": "Free investment goal calculator: enter your target amount, time horizon, and expected return to see the monthly contribution you need to reach it — plus the one-time lump sum alternative, how much comes from your own money versus market growth, and your goal in today's money. No login, no ads, computed in your browser.",
+  "url": "https://tool-hub.me/investment-goal-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Investment Goal Calculator",
+      "item": "https://tool-hub.me/investment-goal-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What formula tells me the required monthly investment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This investment goal calculator works backwards from your target. It first grows any starting amount forward — starting × growth, where growth = (1 + monthly rate) raised to the number of months. Whatever the goal is still short of is funded by your monthly contributions, invested at the start of each month (an annuity-due). The required monthly investment is (target − starting × growth) ÷ the annuity-due factor, where the factor = (1 + m) × (growth − 1) ÷ m and m is your annual return divided by 12. Worked example: to reach 100,000 in 20 years at 7%, growth ≈ 4.04, the factor ≈ 524, so with no starting amount you need about 191 a month. The tool rounds this figure up so a small rounding gap never leaves you short of the goal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I invest monthly or a single lump sum today?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There are two ways to reach the same goal, and this savings goal calculator shows both. The required monthly investment spreads the cost across every month until your deadline. The lump sum today is the single amount you could invest right now instead, computed as target ÷ growth minus any starting amount — because that one deposit has the full horizon to compound. The lump sum is almost always far smaller than the sum of all the monthly contributions, since it starts working immediately, but it requires the cash up front. Monthly investing (dollar-cost averaging) is what most people actually do because it matches a salary; the lump sum is the benchmark for money you already have sitting idle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are the 4%, 7% and 10% return presets illustrative only?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The expected return is an assumption you choose, not a rate anyone can promise. The presets are round reference points often cited for broad index funds — for example the S&P 500 has averaged roughly 7% a year after inflation and around 10% before inflation over long history, while 4% is a more cautious figure. Real markets do not deliver a smooth annual number: some years are strongly positive, others negative, and past averages never guarantee the future. A higher assumed return lowers the monthly investment the tool asks for, so it is tempting to be optimistic — but that also makes the plan more fragile. To stress-test a goal, run it again with a lower return and see how much more you would need to invest each month."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much of my goal comes from my money versus market growth?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool splits your goal into two parts. Total contributions is what you actually pay in — your starting amount plus every required monthly investment. Market growth is the rest of the goal, the compounding that lands on top of your money. The highlighted line — market growth covers X% of your goal — shows that split for your exact inputs. Over short horizons your own contributions do nearly all the work; over twenty, thirty or more years, market growth often becomes the larger slice, which is why starting early lets a smaller monthly amount reach the same target. Because the calculator makes market growth cover part of the goal, the monthly figure it asks for is smaller than simply dividing the target by the number of months."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I adjust my goal for inflation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A target set in today's terms will not buy the same thing decades from now, because inflation erodes purchasing power. Enter an annual inflation rate and this goal calculator shows your goal in today's money — the target divided by (1 + inflation) for each year of the horizon — so you can see what that future number is really worth now. If your goal is a real-world cost such as a house deposit or a child's education that itself rises with inflation, consider setting the target higher, or treat the today's-money figure as the honest yardstick. Leave inflation at 0 to work purely in nominal amounts. The required monthly investment is always calculated against the nominal target you enter."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Investment Goal Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Investment Goal Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Have a number in mind? Enter your goal, how long you have, and an expected return to find the monthly investment that gets you there — or the single lump sum you could invest today instead. See how much is your own money and how much is market growth. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .hint { font-size:12.5px; color:var(--muted); margin:6px 0 0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .badge { display:inline-block; margin-left:6px; padding:1px 7px; font-size:11px; font-weight:600;
+        border-radius:999px; background:var(--accent); color:#fff; vertical-align:middle; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .headline-amt { font-weight:800; font-size:30px; line-height:1.15; }
+      #tool .disclaimer { font-size:12.5px; color:var(--muted); font-style:italic; margin:12px 0 0;
+        padding-top:10px; border-top:1px solid var(--line); }
+    </style>
+
+    <label for="target-input" data-i18n="tool.target.label">Target amount</label>
+    <input type="text" id="target-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 100,000" data-i18n-placeholder="tool.target.ph">
+    <p class="hint" data-i18n="tool.target.hint">The future amount you want to have — in any currency.</p>
+
+    <label for="years-input" data-i18n="tool.years.label">Time horizon (years)</label>
+    <input type="number" id="years-input" inputmode="numeric" min="1" max="50" step="1"
+           placeholder="e.g. 20" data-i18n-placeholder="tool.years.ph">
+    <div class="chips" id="years-chips" role="group" aria-label="Quick horizon presets" data-i18n-aria-label="tool.years.chipsAria">
+      <button type="button" class="chip" data-years="5">5</button>
+      <button type="button" class="chip" data-years="10">10</button>
+      <button type="button" class="chip" data-years="20">20</button>
+      <button type="button" class="chip" data-years="30">30</button>
+    </div>
+
+    <label for="return-input" data-i18n="tool.return.label">Expected annual return (%)</label>
+    <input type="number" id="return-input" inputmode="decimal" min="0" max="30" step="0.01"
+           placeholder="e.g. 7" data-i18n-placeholder="tool.return.ph">
+    <div class="chips" id="return-chips" role="group" aria-label="Quick return presets" data-i18n-aria-label="tool.return.chipsAria">
+      <button type="button" class="chip" data-return="4">4%</button>
+      <button type="button" class="chip" data-return="7">7%</button>
+      <button type="button" class="chip" data-return="10">10%</button>
+    </div>
+    <p class="hint" data-i18n="tool.return.hint">Presets are illustrative examples only, not a guaranteed return.</p>
+
+    <label for="start-input" data-i18n="tool.start.label">Starting amount (optional)</label>
+    <input type="text" id="start-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 0" data-i18n-placeholder="tool.start.ph">
+    <p class="hint" data-i18n="tool.start.hint">Money you already have or have invested toward this goal.</p>
+
+    <label for="inflation-input" data-i18n="tool.inflation.label">Annual inflation (%) — optional</label>
+    <input type="number" id="inflation-input" inputmode="decimal" min="0" max="20" step="0.1"
+           placeholder="e.g. 0" data-i18n-placeholder="tool.inflation.ph">
+    <div class="chips" id="inflation-chips" role="group" aria-label="Inflation presets" data-i18n-aria-label="tool.inflation.chipsAria">
+      <button type="button" class="chip" data-infl="0">0%</button>
+      <button type="button" class="chip" data-infl="2">2%</button>
+      <button type="button" class="chip" data-infl="3">3%</button>
+    </div>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Show my monthly investment</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p class="subtle" style="margin:0;" data-i18n="tool.result.monthlyLabel">Required monthly investment</p>
+        <p style="margin:2px 0 2px;"><span class="headline-amt" id="r-monthly"></span></p>
+        <p class="subtle" id="r-sub" style="margin:0 0 10px;"></p>
+        <p id="r-share" style="margin:0 0 8px;font-weight:700;color:var(--accent);"></p>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.contrib">Total contributions</div><div class="rc-val" id="r-contrib"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.growth">Market growth</div><div class="rc-val" id="r-growth"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.lump">Lump sum today</div><div class="rc-val" id="r-lump"></div></div>
+          <div class="rcard"><div class="rc-label"><span data-i18n="tool.result.today">Goal in today's money</span><span class="badge" id="r-today-badge" data-i18n="tool.result.todayBadge" hidden>in today's money</span></div><div class="rc-val" id="r-today"></div></div>
+        </div>
+        <p class="subtle" id="r-goalmet" style="margin:12px 0 0;color:var(--accent);font-weight:600;" data-i18n="tool.note.goalMet" hidden>Your starting amount alone already reaches this goal — no monthly contribution needed.</p>
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:10px 0 0;" data-i18n="tool.note.assume">Contributions are assumed at the start of each month (annuity-due); returns compound monthly.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+        <p class="disclaimer" data-i18n="tool.note.disclaimer">This is an arithmetic projection, not investment advice; returns vary and are not guaranteed.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">What formula tells me the required monthly investment?</summary><p data-i18n="faq.a1">This investment goal calculator works backwards from your target. It first grows any starting amount forward — starting × growth, where growth = (1 + monthly rate) raised to the number of months. Whatever the goal is still short of is funded by your monthly contributions, invested at the start of each month (an annuity-due). The required monthly investment is (target − starting × growth) ÷ the annuity-due factor, where the factor = (1 + m) × (growth − 1) ÷ m and m is your annual return divided by 12. Worked example: to reach 100,000 in 20 years at 7%, growth ≈ 4.04, the factor ≈ 524, so with no starting amount you need about 191 a month. The tool rounds this figure up so a small rounding gap never leaves you short of the goal.</p></details>
+    <details><summary data-i18n="faq.q2">Should I invest monthly or a single lump sum today?</summary><p data-i18n="faq.a2">There are two ways to reach the same goal, and this savings goal calculator shows both. The required monthly investment spreads the cost across every month until your deadline. The lump sum today is the single amount you could invest right now instead, computed as target ÷ growth minus any starting amount — because that one deposit has the full horizon to compound. The lump sum is almost always far smaller than the sum of all the monthly contributions, since it starts working immediately, but it requires the cash up front. Monthly investing (dollar-cost averaging) is what most people actually do because it matches a salary; the lump sum is the benchmark for money you already have sitting idle.</p></details>
+    <details><summary data-i18n="faq.q3">Why are the 4%, 7% and 10% return presets illustrative only?</summary><p data-i18n="faq.a3">The expected return is an assumption you choose, not a rate anyone can promise. The presets are round reference points often cited for broad index funds — for example the S&P 500 has averaged roughly 7% a year after inflation and around 10% before inflation over long history, while 4% is a more cautious figure. Real markets do not deliver a smooth annual number: some years are strongly positive, others negative, and past averages never guarantee the future. A higher assumed return lowers the monthly investment the tool asks for, so it is tempting to be optimistic — but that also makes the plan more fragile. To stress-test a goal, run it again with a lower return and see how much more you would need to invest each month.</p></details>
+    <details><summary data-i18n="faq.q4">How much of my goal comes from my money versus market growth?</summary><p data-i18n="faq.a4">The tool splits your goal into two parts. Total contributions is what you actually pay in — your starting amount plus every required monthly investment. Market growth is the rest of the goal, the compounding that lands on top of your money. The highlighted line — market growth covers X% of your goal — shows that split for your exact inputs. Over short horizons your own contributions do nearly all the work; over twenty, thirty or more years, market growth often becomes the larger slice, which is why starting early lets a smaller monthly amount reach the same target. Because the calculator makes market growth cover part of the goal, the monthly figure it asks for is smaller than simply dividing the target by the number of months.</p></details>
+    <details><summary data-i18n="faq.q5">How do I adjust my goal for inflation?</summary><p data-i18n="faq.a5">A target set in today's terms will not buy the same thing decades from now, because inflation erodes purchasing power. Enter an annual inflation rate and this goal calculator shows your goal in today's money — the target divided by (1 + inflation) for each year of the horizon — so you can see what that future number is really worth now. If your goal is a real-world cost such as a house deposit or a child's education that itself rises with inflation, consider setting the target higher, or treat the today's-money figure as the honest yardstick. Leave inflation at 0 to work purely in nominal amounts. The required monthly investment is always calculated against the nominal target you enter.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

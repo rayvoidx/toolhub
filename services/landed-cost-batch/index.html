@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Landed Cost Batch Calculator — per-item import cost</title>
+<meta name="description" content="Free browser-only landed cost calculator for multi-item import invoices. Paste or drop a CSV, apportion freight, insurance and clearance fees by value, weight, CBM or quantity, then add duty and VAT per country (KR/JP/EU CIF basis, US FOB with MPF and HMF). Your invoice never leaves the browser.">
+<meta name="keywords" content="landed cost calculator, 수입원가 계산기, freight cost allocation, 운임 안분 계산, import duty and VAT calculator, 관부가세 계산 다품목, CIF FOB customs value">
+<link rel="canonical" href="https://tool-hub.me/landed-cost-batch/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Landed Cost Batch Calculator — per-item import cost">
+<meta property="og:description" content="Free browser-only landed cost calculator for multi-item import invoices. Paste or drop a CSV, apportion freight, insurance and clearance fees by value, weight, CBM or quantity, then add duty and VAT per country (KR/JP/EU CIF basis, US FOB with MPF and HMF). Your invoice never leaves the browser.">
+<meta property="og:url" content="https://tool-hub.me/landed-cost-batch/">
+<meta property="og:image" content="https://tool-hub.me/landed-cost-batch/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#075985">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Landed Cost Batch Calculator",
+  "description": "Free browser-only landed cost calculator for multi-item import invoices. Paste or drop a CSV, apportion freight, insurance and clearance fees by value, weight, CBM or quantity, then add duty and VAT per country (KR/JP/EU CIF basis, US FOB with MPF and HMF). Your invoice never leaves the browser.",
+  "url": "https://tool-hub.me/landed-cost-batch/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Advanced — excise, VAT handling, paper entry",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Individual consumption tax for this shipment Korea only, and only for goods that attract it. Apportioned across items by customs value, then folded into the VAT base — that cascade is what makes Korean import VAT higher than a flat 10% of the invoice. Include import VAT in landed cost Off by default: a VAT-registered importer reclaims import VAT as an input tax credit, so putting it in the cost overstates it. Turn this on only if you cannot deduct it (VAT-exempt business). Paper (manual) entry — add the $4.03 MPF surcharge"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should freight be apportioned by value, weight or CBM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the basis that actually drove the charge — which is why this landed cost calculator sets the basis per cost line rather than once for the whole shipment. Ocean freight is billed on volume, so apportion it by CBM. Air freight and terminal handling follow chargeable weight. Insurance is a percentage of value, so it splits by value. Customs brokerage is usually a flat fee per entry, and value is the conventional way to spread it. Splitting everything by value is the shortcut most spreadsheets take, and it quietly overcharges dense, cheap items and undercharges bulky, expensive ones. If a basis column is empty the tool refuses to guess: freight cost allocation stops and asks you to pick another basis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the US charge duty without freight, while Korea, the EU and Japan include it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the customs value basis is set by the destination country's law, not by your Incoterms. The United States assesses duty on the FOB value — the price of the goods alone, with international freight and insurance excluded. Korea, Japan and the EU assess on the CIF value, so freight and insurance are added to the goods value before the duty rate is applied. The same shipment therefore has two different dutiable bases depending on where it lands. Pick the import country and this tool switches the CIF/FOB customs value basis for you: for the US the \"dutiable\" checkbox on each cost line is disabled on purpose, because no amount of freight can enter a FOB base."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is VAT excluded from landed cost by default?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a VAT-registered importer gets it back. Import VAT is deductible as an input tax credit, so it is a cash-flow item, not a cost — booking it into inventory overstates your margin and misstates the product cost. Duty is different: it is never refundable, so it always belongs in landed cost. That is why this import duty and VAT calculator computes VAT for you, shows it in the tax summary, and still leaves it out of the landed cost column. If you cannot deduct it — a VAT-exempt business, for instance — switch on \"Include import VAT in landed cost\" under Advanced and every figure updates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are MPF and HMF, and why do they appear only for the US?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are US-specific customs user fees that sit alongside duty. The Merchandise Processing Fee (MPF) is 0.3464% of the value of the merchandise, but it is bracketed: for FY2026 it cannot fall below $33.58 nor exceed $651.50 per entry, so on small shipments it behaves like a flat minimum and on large ones like a cap. The Harbor Maintenance Fee (HMF) is 0.125% of the value and applies to ocean cargo only — air, truck and rail arrivals are exempt, so switching the transport mode to Air zeroes it out and says so. Both are charged per entry, so this calculator apportions them across your items by customs value. Note that the US has no import VAT, so that column disappears when you select the United States."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I have to type in the duty rate and exchange rate myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because looking them up would mean sending your invoice to a server, and this tool's whole point is that it never does. HS classification is a judgement call that decides the duty rate — the same product can sit under different headings depending on material, function and origin — and the customs exchange rate is a published weekly figure that only your customs authority can make official. Guessing either one would give you a confident number that is wrong. So you enter the duty rate per line and the applied exchange rate once, and the tool does the part that is genuinely mechanical: freight apportionment, the CIF/FOB split, the duty and VAT stack, and rounding reconciliation. Everything else — every price and supplier on that invoice — stays in your browser."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Landed Cost Batch Calculator",
+      "item": "https://tool-hub.me/landed-cost-batch/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Landed Cost Batch Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Landed Cost Batch Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Apportion freight across every line item and get per-unit landed cost — in your browser, nothing uploaded.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool h3 { font-size: 15px; font-weight: 800; letter-spacing: -0.01em; margin: 28px 0 8px; }
+      #tool h3.lcb-first { margin-top: 0; }
+      #tool .lcb-scope { margin: 0 0 4px; padding: 10px 12px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); font-size: 13px; line-height: 1.5; }
+      #tool .lcb-sub { margin: 6px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+      #tool .lcb-drop { border: 2px dashed var(--line); border-radius: 12px; padding: 12px; background: var(--bg); }
+      #tool .lcb-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--bg)); }
+      #tool .lcb-drop textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; resize: vertical; }
+      #tool .lcb-hint { margin: 8px 2px 0; color: var(--muted); font-size: 13px; }
+      #tool .lcb-link { background: none; border: none; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; cursor: pointer; }
+      #tool .lcb-btnrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+      #tool .lcb-btnrow .btn { margin-top: 0; padding: 9px 16px; font-size: 14px; }
+      #tool .btn.lcb-ghost { background: none; border: 1px solid var(--line); color: var(--ink); }
+      #tool .btn.lcb-ghost:hover { border-color: var(--accent); background: none; }
+      #tool .lcb-banner { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.5;
+        background: color-mix(in srgb, var(--accent) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); }
+      #tool .lcb-progress { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 13px; color: var(--muted); }
+      #tool .lcb-progress progress { flex: 1 1 auto; height: 8px; }
+      #tool .lcb-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0 14px; }
+      #tool .lcb-maps { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0 14px; }
+      #tool .lcb-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 10px; border: 1px solid var(--line); border-radius: 10px; }
+      #tool table.lcb-table { border-collapse: collapse; width: 100%; font-size: 13px; background: var(--surface); }
+      #tool table.lcb-table th, #tool table.lcb-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: end; white-space: nowrap; font-variant-numeric: tabular-nums; }
+      #tool table.lcb-table th { background: var(--bg); font-size: 12px; font-weight: 700; color: var(--muted); text-align: end; position: sticky; top: 0; }
+      #tool table.lcb-table th.lcb-tl, #tool table.lcb-table td.lcb-tl { text-align: start; white-space: normal; min-width: 120px; font-variant-numeric: normal; }
+      #tool table.lcb-table tbody tr:last-child td { border-bottom: none; }
+      #tool table.lcb-table tfoot td { font-weight: 800; border-top: 2px solid var(--line); background: var(--bg); }
+      #tool .lcb-badge { display: inline-block; margin-inline-start: 6px; padding: 1px 6px; border-radius: 999px; font-size: 10.5px; font-weight: 700; letter-spacing: 0; vertical-align: middle;
+        background: color-mix(in srgb, var(--accent) 16%, var(--surface)); color: var(--accent-strong); border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line)); }
+      [data-theme="dark"] #tool .lcb-badge { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .lcb-badge { color: var(--accent); } }
+      #tool .lcb-costs td { padding: 6px 6px; }
+      #tool .lcb-costs input[type="text"] { padding: 8px 10px; font-size: 14px; }
+      #tool .lcb-costs select { padding: 8px 10px; font-size: 14px; }
+      #tool .lcb-costs td.lcb-cell-amt { min-width: 110px; }
+      #tool .lcb-costs td.lcb-cell-basis { min-width: 108px; }
+      #tool .lcb-costs td.lcb-cell-lab { min-width: 150px; }
+      #tool .lcb-x { background: none; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); width: 30px; height: 30px; cursor: pointer; font-size: 15px; line-height: 1; }
+      #tool .lcb-x:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .lcb-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin-top: 14px; font-weight: 600; font-size: 14px; }
+      #tool .lcb-check input { width: auto; flex: 0 0 auto; }
+      #tool .lcb-check input:disabled + span { color: var(--muted); }
+      #tool .lcb-more { margin-top: 20px; }
+      #tool .lcb-more > summary { font-weight: 600; font-size: 14px; color: var(--muted); cursor: pointer; }
+      #tool .lcb-msg { margin: 0; color: var(--muted); }
+      #tool .lcb-msg.is-err { color: var(--accent-strong); font-weight: 700; }
+      [data-theme="dark"] #tool .lcb-msg.is-err { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .lcb-msg.is-err { color: var(--accent); } }
+      #tool .lcb-heroLabel { font-size: 13px; font-weight: 700; color: var(--muted); }
+      #tool .lcb-big { font-size: clamp(28px, 7vw, 42px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.15; color: var(--accent-strong); overflow-wrap: anywhere; }
+      [data-theme="dark"] #tool .lcb-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .lcb-big { color: var(--accent); } }
+      #tool .lcb-tabs { display: flex; gap: 6px; margin: 18px 0 0; flex-wrap: wrap; }
+      #tool .lcb-tab { background: none; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font: inherit; font-size: 13px; font-weight: 700; padding: 6px 14px; cursor: pointer; }
+      #tool .lcb-tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+      #tool .lcb-warn { margin: 14px 0 0; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.55;
+        background: color-mix(in srgb, var(--accent) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); }
+      #tool .lcb-warn p { margin: 0 0 6px; }
+      #tool .lcb-warn p:last-child { margin-bottom: 0; }
+      #tool .lcb-fixrow { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+      #tool .lcb-fix { background: var(--surface); border: 1px solid var(--accent); border-radius: 8px; color: var(--accent-strong); font: inherit; font-size: 12.5px; font-weight: 700; padding: 5px 10px; cursor: pointer; }
+      [data-theme="dark"] #tool .lcb-fix { color: var(--accent); }
+      #tool .lcb-dl { margin: 0; font-size: 13px; }
+      #tool .lcb-dl div { display: flex; justify-content: space-between; gap: 16px; padding: 7px 0; border-bottom: 1px solid var(--line); }
+      #tool .lcb-dl div:last-child { border-bottom: none; }
+      #tool .lcb-dl dt { color: var(--muted); margin: 0; }
+      #tool .lcb-dl dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; text-align: end; }
+      #tool .lcb-dl div.lcb-tot dt, #tool .lcb-dl div.lcb-tot dd { font-weight: 800; font-size: 15px; color: var(--ink); }
+      #tool .lcb-dl div.lcb-tot { border-top: 2px solid var(--line); }
+      #tool .lcb-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .lcb-status { color: var(--accent); }
+    </style>
+
+    <p class="lcb-scope" data-i18n="tool.scope">Nothing you paste is uploaded — every figure is computed in this browser. HS duty rates and official customs exchange rates are out of scope: enter them yourself.</p>
+
+    <h3 class="lcb-first" data-i18n="tool.step1">1. Invoice line items</h3>
+    <div class="lcb-drop" id="lcb-drop">
+      <textarea id="lcb-paste" rows="5" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.paste.ph" placeholder="Paste invoice rows here (copy straight from Excel), e.g.&#10;Item,HS Code,Qty,Unit Price,Weight (kg),CBM,Duty %&#10;Bluetooth speaker,8518.22,120,18.5,0.9,0.012,8"></textarea>
+      <p class="lcb-hint"><span data-i18n="tool.drop.hint">Or drop a CSV/TSV file here —</span> <button type="button" class="lcb-link" id="lcb-pick" data-i18n="tool.drop.pick">choose a file</button></p>
+      <input type="file" id="lcb-file" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+    </div>
+    <div class="lcb-btnrow">
+      <button type="button" class="btn lcb-ghost" id="lcb-sample" data-i18n="tool.sample">Load a sample invoice</button>
+      <button type="button" class="btn lcb-ghost" id="lcb-clear" data-i18n="tool.clear">Clear</button>
+    </div>
+    <p class="lcb-banner" id="lcb-enc" hidden>
+      <span id="lcb-enc-text" data-i18n="tool.enc.broken">This file does not look like UTF-8 — some characters may be garbled.</span>
+      <button type="button" class="lcb-fix" id="lcb-enc-btn" data-i18n="tool.enc.retry">Re-read as CP949 (EUC-KR)</button>
+    </p>
+    <div class="lcb-progress" id="lcb-progress" hidden>
+      <progress id="lcb-bar" max="100" value="0"></progress>
+      <span id="lcb-progress-text"></span>
+      <button type="button" class="lcb-fix" id="lcb-cancel" data-i18n="tool.cancel">Cancel</button>
+    </div>
+
+    <div id="lcb-map-wrap" hidden>
+      <h3 data-i18n="tool.step2">2. Match your columns</h3>
+      <label class="lcb-check" for="lcb-hasheader">
+        <input type="checkbox" id="lcb-hasheader" checked>
+        <span data-i18n="tool.map.hasHeader">First row is a header</span>
+      </label>
+      <div class="lcb-maps" id="lcb-maps"></div>
+      <p class="lcb-sub" data-i18n="tool.map.note">Quantity and unit price are required. Leave a column unset if your invoice does not have it — costs apportioned on a missing column cannot be split.</p>
+      <div class="lcb-scroll"><table class="lcb-table" id="lcb-preview"></table></div>
+    </div>
+
+    <h3 data-i18n="tool.step3">3. Shipment</h3>
+    <div class="lcb-grid">
+      <div>
+        <label for="lcb-country" data-i18n="tool.country.label">Import country</label>
+        <select id="lcb-country" autocomplete="off"></select>
+      </div>
+      <div>
+        <label for="lcb-cur" data-i18n="tool.cur.label">Invoice currency</label>
+        <select id="lcb-cur" autocomplete="off"></select>
+      </div>
+      <div>
+        <label for="lcb-fx" data-i18n="tool.fx.label">Applied exchange rate</label>
+        <input type="text" id="lcb-fx" inputmode="decimal" autocomplete="off">
+      </div>
+      <div>
+        <label for="lcb-mode" data-i18n="tool.mode.label">Transport mode</label>
+        <select id="lcb-mode" autocomplete="off">
+          <option value="sea" data-i18n="tool.mode.sea">Ocean</option>
+          <option value="air" data-i18n="tool.mode.air">Air</option>
+        </select>
+      </div>
+      <div id="lcb-vat-wrap">
+        <label for="lcb-vat" id="lcb-vat-label" data-i18n="tool.vat.label">Import VAT rate (%)</label>
+        <input type="text" id="lcb-vat" inputmode="decimal" autocomplete="off">
+      </div>
+    </div>
+    <p class="lcb-sub" id="lcb-fx-note"></p>
+    <p class="lcb-sub" id="lcb-basis-note"></p>
+
+    <details class="lcb-more" id="lcb-more">
+      <summary data-i18n="tool.adv.summary">Advanced — excise, VAT handling, paper entry</summary>
+      <div id="lcb-excise-wrap" hidden>
+        <label for="lcb-excise" id="lcb-excise-label" data-i18n="tool.excise.label">Individual consumption tax for this shipment</label>
+        <input type="text" id="lcb-excise" inputmode="decimal" autocomplete="off">
+        <p class="lcb-sub" data-i18n="tool.excise.hint">Korea only, and only for goods that attract it. Apportioned across items by customs value, then folded into the VAT base — that cascade is what makes Korean import VAT higher than a flat 10% of the invoice.</p>
+      </div>
+      <label class="lcb-check" for="lcb-incvat">
+        <input type="checkbox" id="lcb-incvat">
+        <span data-i18n="tool.incVat.label">Include import VAT in landed cost</span>
+      </label>
+      <p class="lcb-sub" data-i18n="tool.incVat.hint">Off by default: a VAT-registered importer reclaims import VAT as an input tax credit, so putting it in the cost overstates it. Turn this on only if you cannot deduct it (VAT-exempt business).</p>
+      <label class="lcb-check" for="lcb-mpfman" id="lcb-mpfman-wrap" hidden>
+        <input type="checkbox" id="lcb-mpfman">
+        <span data-i18n="tool.mpfManual.label">Paper (manual) entry — add the $4.03 MPF surcharge</span>
+      </label>
+    </details>
+
+    <h3 data-i18n="tool.step4">4. Shipment-level costs</h3>
+    <p class="lcb-sub" id="lcb-costs-note"></p>
+    <div class="lcb-scroll">
+      <table class="lcb-table lcb-costs" id="lcb-costs">
+        <thead>
+          <tr>
+            <th class="lcb-tl" data-i18n="tool.costs.th.label">Cost</th>
+            <th class="lcb-tl" data-i18n="tool.costs.th.amount">Amount</th>
+            <th class="lcb-tl" data-i18n="tool.costs.th.basis">Apportion by</th>
+            <th data-i18n="tool.costs.th.dutiable">Dutiable</th>
+            <th><span class="lcb-vh" aria-hidden="true"></span></th>
+          </tr>
+        </thead>
+        <tbody id="lcb-costs-body"></tbody>
+      </table>
+    </div>
+    <div class="lcb-btnrow">
+      <button type="button" class="btn lcb-ghost" id="lcb-addcost" data-i18n="tool.costs.add">+ Add a cost line</button>
+      <button type="button" class="btn lcb-ghost" id="lcb-resetcost" data-i18n="tool.costs.reset">Reset to presets</button>
+    </div>
+
+    <div class="result" id="lcb-result" aria-live="polite">
+      <p class="lcb-msg" id="lcb-msg" data-i18n="tool.n.empty">Paste your invoice rows above — or load the sample invoice — to see per-item landed cost.</p>
+      <div id="lcb-out" hidden>
+        <div class="lcb-heroLabel" data-i18n="tool.res.total">Total landed cost</div>
+        <div class="lcb-big" id="lcb-total">&mdash;</div>
+        <p class="lcb-sub" id="lcb-total-sub"></p>
+        <div id="lcb-warn"></div>
+        <div class="lcb-tabs" role="tablist">
+          <button type="button" class="lcb-tab" id="lcb-tab-items" role="tab" aria-selected="true" aria-controls="lcb-panel-items" data-tab="items" data-i18n="tool.tab.items">Per item</button>
+          <button type="button" class="lcb-tab" id="lcb-tab-summary" role="tab" aria-selected="false" aria-controls="lcb-panel-summary" data-tab="summary" data-i18n="tool.tab.summary">Tax summary</button>
+          <button type="button" class="lcb-tab" id="lcb-tab-excluded" role="tab" aria-selected="false" aria-controls="lcb-panel-excluded" data-tab="excluded" data-i18n="tool.tab.excluded">Excluded rows</button>
+        </div>
+        <div id="lcb-panel-items" role="tabpanel" aria-labelledby="lcb-tab-items">
+          <div class="lcb-scroll"><table class="lcb-table" id="lcb-items"></table></div>
+          <p class="lcb-sub" id="lcb-trunc" hidden></p>
+        </div>
+        <div id="lcb-panel-summary" role="tabpanel" aria-labelledby="lcb-tab-summary" hidden></div>
+        <div id="lcb-panel-excluded" role="tabpanel" aria-labelledby="lcb-tab-excluded" hidden></div>
+        <div class="lcb-btnrow">
+          <button type="button" class="btn" id="lcb-copy" data-i18n="tool.copy">Copy table</button>
+          <button type="button" class="btn lcb-ghost" id="lcb-csv" data-i18n="tool.download">Download CSV</button>
+          <span class="lcb-status" id="lcb-status" hidden></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">Should freight be apportioned by value, weight or CBM?</summary><p data-i18n="faq.a1">Use the basis that actually drove the charge — which is why this landed cost calculator sets the basis per cost line rather than once for the whole shipment. Ocean freight is billed on volume, so apportion it by CBM. Air freight and terminal handling follow chargeable weight. Insurance is a percentage of value, so it splits by value. Customs brokerage is usually a flat fee per entry, and value is the conventional way to spread it. Splitting everything by value is the shortcut most spreadsheets take, and it quietly overcharges dense, cheap items and undercharges bulky, expensive ones. If a basis column is empty the tool refuses to guess: freight cost allocation stops and asks you to pick another basis.</p></details>
+    <details><summary data-i18n="faq.q2">Why does the US charge duty without freight, while Korea, the EU and Japan include it?</summary><p data-i18n="faq.a2">Because the customs value basis is set by the destination country's law, not by your Incoterms. The United States assesses duty on the FOB value — the price of the goods alone, with international freight and insurance excluded. Korea, Japan and the EU assess on the CIF value, so freight and insurance are added to the goods value before the duty rate is applied. The same shipment therefore has two different dutiable bases depending on where it lands. Pick the import country and this tool switches the CIF/FOB customs value basis for you: for the US the "dutiable" checkbox on each cost line is disabled on purpose, because no amount of freight can enter a FOB base.</p></details>
+    <details><summary data-i18n="faq.q3">Why is VAT excluded from landed cost by default?</summary><p data-i18n="faq.a3">Because a VAT-registered importer gets it back. Import VAT is deductible as an input tax credit, so it is a cash-flow item, not a cost — booking it into inventory overstates your margin and misstates the product cost. Duty is different: it is never refundable, so it always belongs in landed cost. That is why this import duty and VAT calculator computes VAT for you, shows it in the tax summary, and still leaves it out of the landed cost column. If you cannot deduct it — a VAT-exempt business, for instance — switch on "Include import VAT in landed cost" under Advanced and every figure updates.</p></details>
+    <details><summary data-i18n="faq.q4">What are MPF and HMF, and why do they appear only for the US?</summary><p data-i18n="faq.a4">They are US-specific customs user fees that sit alongside duty. The Merchandise Processing Fee (MPF) is 0.3464% of the value of the merchandise, but it is bracketed: for FY2026 it cannot fall below $33.58 nor exceed $651.50 per entry, so on small shipments it behaves like a flat minimum and on large ones like a cap. The Harbor Maintenance Fee (HMF) is 0.125% of the value and applies to ocean cargo only — air, truck and rail arrivals are exempt, so switching the transport mode to Air zeroes it out and says so. Both are charged per entry, so this calculator apportions them across your items by customs value. Note that the US has no import VAT, so that column disappears when you select the United States.</p></details>
+    <details><summary data-i18n="faq.q5">Why do I have to type in the duty rate and exchange rate myself?</summary><p data-i18n="faq.a5">Because looking them up would mean sending your invoice to a server, and this tool's whole point is that it never does. HS classification is a judgement call that decides the duty rate — the same product can sit under different headings depending on material, function and origin — and the customs exchange rate is a published weekly figure that only your customs authority can make official. Guessing either one would give you a confident number that is wrong. So you enter the duty rate per line and the applied exchange rate once, and the tool does the part that is genuinely mechanical: freight apportionment, the CIF/FOB split, the duty and VAT stack, and rounding reconciliation. Everything else — every price and supplier on that invoice — stays in your browser.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

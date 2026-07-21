@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inventory Turnover & Dead Stock Finder — Drop your stock CSV</title>
+<meta name="description" content="Free browser-only inventory analyzer. Drop an ERP stock CSV to get per-SKU turnover, days on hand, and a ranked dead-stock list with the cash each SKU ties up. Adjustable thresholds, 365/360-day basis, COGS or sales denominator. Your data never leaves the browser.">
+<meta name="keywords" content="inventory turnover calculator, days on hand calculator, dead stock report, slow moving inventory analysis, 재고회전율 계산, 재고일수 계산, 악성재고 분석">
+<link rel="canonical" href="https://tool-hub.me/inventory-turnover/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Inventory Turnover & Dead Stock Finder — Drop your stock CSV">
+<meta property="og:description" content="Free browser-only inventory analyzer. Drop an ERP stock CSV to get per-SKU turnover, days on hand, and a ranked dead-stock list with the cash each SKU ties up. Adjustable thresholds, 365/360-day basis, COGS or sales denominator. Your data never leaves the browser.">
+<meta property="og:url" content="https://tool-hub.me/inventory-turnover/">
+<meta property="og:image" content="https://tool-hub.me/inventory-turnover/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Inventory Turnover & Dead Stock Finder",
+  "description": "Free browser-only inventory analyzer. Drop an ERP stock CSV to get per-SKU turnover, days on hand, and a ranked dead-stock list with the cash each SKU ties up. Adjustable thresholds, 365/360-day basis, COGS or sales denominator. Your data never leaves the browser.",
+  "url": "https://tool-hub.me/inventory-turnover/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Should inventory turnover use COGS or sales as the numerator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cost of goods sold is the correct numerator: inventory sits on the balance sheet at cost, so dividing COGS by average inventory value compares like with like. Sales revenue includes your margin, so a sales-based ratio is inflated by roughly one plus the margin — a shop with a 40% margin looks about 1.7× faster than it is. This inventory turnover calculator offers both because sales-based turnover is still common practice in wholesale and retail, but the sales option is badged \"reference only\". If you have no cost column at all, use the quantity basis: units shipped ÷ average units on hand is unit-consistent and never mixes money with pieces."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my export has no beginning stock column?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Average inventory is normally (beginning + ending) ÷ 2. If your ERP only exports the current on-hand quantity, this tool uses that single figure as the average and shows a banner saying so, because the result can drift from your books: if stock has been run down over the year, on-hand is lower than the true average, so turnover comes out too high and days on hand too low — dead stock can hide. The ranking of slow movers is usually still right, since the same bias applies to every SKU, but do not quote the absolute ratio to your accountant. Map a beginning stock column whenever your system can export one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do the 180-day and 90-day dead stock thresholds come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are the common working rules, not a law. Ageing practice in most warehouses treats 60–90 days of stock as normal, reviews an item at 90 days, stops reordering it around 180 days, and writes off or liquidates at 12 months. So this dead stock report flags a SKU when days on hand reaches 180 or when nothing has shipped for 90 days — whichever hits first. Both are sliders: fast fashion or fresh goods should be far stricter (30–60 days), while spare parts, tooling and safety stock legitimately sit for years and need a much longer setting. Deliberately no industry benchmark is built in, because a national or sector average would go stale — the distribution chart shows where each SKU sits inside your own data instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Days on hand: 365 or 360 days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Days on hand (also days inventory outstanding) is period days ÷ turnover, so the basis you divide by changes the answer by about 1.4%. Use 365 for management reporting and for anything you show to a Korean or US audience; 360 is the banking and commercial convention behind many German and European covenant calculations, and some credit teams still require it. This days on hand calculator lets you set the two separately: \"days covered by the outflow column\" is how long your export actually spans (365 for a full year, 90 for one quarter), while the annualisation basis is only used to scale the ratio to a yearly figure. Getting the first one wrong is the classic error — a quarter of shipments divided by average stock is not an annual turnover."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my inventory data uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There is no server, no account and no upload. The CSV is read with the browser's File API, parsed by JavaScript on this page, and every number stays in your tab's memory until you close it — the same is true for slow moving inventory analysis on large files, which is handled in a Web Worker inside the same browser. Only your settings (thresholds, basis, mode and column mapping) are kept in this browser's localStorage; item codes, quantities, unit costs and amounts are never stored or transmitted. That is the point of this tool: stock and cost data usually cannot leave the company, so the analysis comes to the data instead. You can confirm it by turning off your network and running the tool anyway."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Inventory Turnover & Dead Stock Finder",
+      "item": "https://tool-hub.me/inventory-turnover/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Inventory Turnover & Dead Stock Finder</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Inventory Turnover & Dead Stock Finder</h1>
+    <p class="lede" data-i18n="hero.lede">Per-SKU turnover, days on hand, and the money your slow movers are holding — computed in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Inventory turnover and dead stock analyzer" data-i18n-aria-label="tool.aria">
+
+    <!-- ── 1. 데이터 입력 ── 파일은 File API 로 브라우저 안에서만 읽는다 (업로드 없음) -->
+    <h2 style="font-size:15px;font-weight:700;margin:0 0 10px;letter-spacing:-0.01em;" data-i18n="tool.step1">1. Load your stock data</h2>
+
+    <div id="drop" style="border:2px dashed var(--line);border-radius:12px;padding:20px 16px;text-align:center;background:var(--bg);">
+      <p style="margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.5;" data-i18n="tool.drop.hint">Drop a CSV exported from your ERP here. It is read inside this browser — nothing is uploaded.</p>
+      <input type="file" id="file-input" accept=".csv,.tsv,.txt,text/csv,text/plain" style="display:none;">
+      <button class="btn" type="button" id="btn-browse" data-i18n="tool.drop.browse" style="margin-top:0;">Choose CSV file</button>
+      <button type="button" id="btn-sample" data-i18n="tool.sample" style="margin-inline-start:8px;padding:12px 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;">Try sample data</button>
+      <p id="file-note" hidden style="margin:12px 0 0;color:var(--muted);font-size:13px;"></p>
+    </div>
+
+    <label for="paste" data-i18n="tool.paste.label">…or paste rows copied from Excel</label>
+    <textarea id="paste" rows="4" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.paste.ph" placeholder="SKU,Item,On hand,Shipped (12m),Unit cost&#10;A-1001,Blue mug,120,340,4.50"></textarea>
+
+    <div id="enc-row" hidden style="display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;">
+      <div style="flex:1;min-width:190px;">
+        <label for="enc-select" data-i18n="tool.enc.label">File encoding</label>
+        <select id="enc-select">
+          <option value="auto" data-i18n="tool.enc.auto">Auto-detect</option>
+          <option value="utf-8" data-i18n="tool.enc.utf8">UTF-8</option>
+          <option value="euc-kr" data-i18n="tool.enc.euckr">EUC-KR / CP949 (Korean Excel)</option>
+        </select>
+      </div>
+      <p id="enc-note" style="flex:2;min-width:190px;margin:0 0 12px;color:var(--muted);font-size:13px;line-height:1.5;"></p>
+    </div>
+
+    <!-- ── 2. 컬럼 매핑 ── 헤더 자동 추정 → 드롭다운 확정 -->
+    <div id="map-card" hidden>
+      <h2 style="font-size:15px;font-weight:700;margin:26px 0 10px;letter-spacing:-0.01em;" data-i18n="tool.step2">2. Match your columns</h2>
+      <p id="parse-note" style="margin:0;color:var(--muted);font-size:13px;line-height:1.6;"></p>
+
+      <label style="display:flex;align-items:center;gap:8px;font-weight:500;cursor:pointer;">
+        <input type="checkbox" id="chk-header" checked style="width:auto;"> <span data-i18n="tool.hasHeader">First row is a header</span>
+      </label>
+
+      <div id="preview-wrap" style="margin-top:12px;overflow-x:auto;border:1px solid var(--line);border-radius:10px;">
+        <table id="preview" style="border-collapse:collapse;font-size:12.5px;width:100%;white-space:nowrap;"></table>
+      </div>
+      <p id="preview-note" style="margin:6px 0 0;color:var(--muted);font-size:12.5px;"></p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <label for="m-sku" data-i18n="tool.col.sku">SKU / item code *</label>
+          <select id="m-sku"></select>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <label for="m-name" data-i18n="tool.col.name">Item name</label>
+          <select id="m-name"></select>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <label for="m-end" data-i18n="tool.col.endStock">Ending / on-hand stock *</label>
+          <select id="m-end"></select>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <label for="m-begin" data-i18n="tool.col.beginStock">Beginning stock</label>
+          <select id="m-begin"></select>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <label for="m-out" data-i18n="tool.col.outflow">Outflow over the period *</label>
+          <select id="m-out"></select>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <label for="m-outunit" data-i18n="tool.col.outflowUnit">That column holds</label>
+          <select id="m-outunit">
+            <option value="qty" data-i18n="tool.opt.unitQty">Quantity shipped</option>
+            <option value="money" data-i18n="tool.opt.unitMoney">Amount (COGS or sales)</option>
+          </select>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <label for="m-cost" data-i18n="tool.col.unitCost">Unit cost</label>
+          <select id="m-cost"></select>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <label for="m-date" data-i18n="tool.col.lastOut">Last outflow date</label>
+          <select id="m-date"></select>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:200px;">
+          <label for="numfmt-select" data-i18n="tool.numfmt.label">Number format</label>
+          <select id="numfmt-select">
+            <option value="auto" data-i18n="tool.numfmt.auto">Auto-detect</option>
+            <option value="dot" data-i18n="tool.numfmt.dot">1,234.56 (dot decimal)</option>
+            <option value="comma" data-i18n="tool.numfmt.comma">1.234,56 (comma decimal)</option>
+          </select>
+          <p id="numfmt-note" style="margin:6px 0 0;color:var(--muted);font-size:12.5px;line-height:1.5;"></p>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <label for="date-select" data-i18n="tool.date.label">Date order</label>
+          <select id="date-select">
+            <option value="auto" data-i18n="tool.date.auto">Auto-detect</option>
+            <option value="ymd" data-i18n="tool.date.ymd">2026-03-04 (Y-M-D)</option>
+            <option value="dmy" data-i18n="tool.date.dmy">04/03/2026 (D/M/Y)</option>
+            <option value="mdy" data-i18n="tool.date.mdy">03/04/2026 (M/D/Y)</option>
+          </select>
+          <p id="date-note" style="margin:6px 0 0;color:var(--muted);font-size:12.5px;line-height:1.5;"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 3. 판정 기준 ── 기본값 내장, 사용자는 회계를 검색하지 않는다 -->
+    <h2 style="font-size:15px;font-weight:700;margin:26px 0 10px;letter-spacing:-0.01em;" data-i18n="tool.step3">3. Set the rules</h2>
+
+    <label for="s-mode" data-i18n="tool.mode.label">Turnover basis</label>
+    <select id="s-mode">
+      <option value="qty" data-i18n="tool.mode.qty">Quantity — units shipped ÷ average units</option>
+      <option value="cost" data-i18n="tool.mode.cost">Cost — COGS ÷ average inventory value (standard)</option>
+      <option value="sales" data-i18n="tool.mode.sales">Sales — revenue ÷ average inventory value (reference only)</option>
+    </select>
+    <p id="mode-note" style="margin:6px 0 0;color:var(--muted);font-size:12.5px;line-height:1.5;"></p>
+
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:170px;">
+        <label for="s-period" data-i18n="tool.period">Days covered by the outflow column</label>
+        <input type="number" id="s-period" min="1" max="3650" step="1" value="365" inputmode="numeric" autocomplete="off">
+      </div>
+      <div style="flex:1;min-width:170px;">
+        <label for="s-base" data-i18n="tool.baseDays">Annualisation basis</label>
+        <select id="s-base">
+          <option value="365" data-i18n="tool.baseDays.365">365 days</option>
+          <option value="360" data-i18n="tool.baseDays.360">360 days (banking convention)</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="s-doh"><span data-i18n="tool.thr.doh">Dead stock if days on hand ≥</span> <output id="s-doh-out" for="s-doh" style="color:var(--accent-strong);font-weight:800;">180</output></label>
+    <input type="range" id="s-doh" min="30" max="720" step="10" value="180" style="width:100%;padding:0;">
+
+    <label for="s-idle"><span data-i18n="tool.thr.idle">…or no outflow for ≥</span> <output id="s-idle-out" for="s-idle" style="color:var(--accent-strong);font-weight:800;">90</output></label>
+    <input type="range" id="s-idle" min="30" max="720" step="10" value="90" style="width:100%;padding:0;">
+
+    <details style="margin-top:16px;border:1px solid var(--line);border-radius:10px;padding:10px 14px;">
+      <summary style="font-weight:600;cursor:pointer;" data-i18n="tool.advanced">More options</summary>
+      <label for="s-fy" data-i18n="tool.fy.label">Fiscal year starts in</label>
+      <select id="s-fy"></select>
+      <p style="margin:6px 0 0;color:var(--muted);font-size:12.5px;line-height:1.5;" data-i18n="tool.fy.note">Only used to label the period in the report — it does not change any calculation.</p>
+    </details>
+
+    <button class="btn" type="button" id="btn-run" data-i18n="tool.analyze">Analyze</button>
+    <button type="button" id="btn-clear" data-i18n="tool.clear" style="margin-inline-start:8px;margin-top:18px;padding:12px 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;">Clear</button>
+
+    <div id="progress" hidden style="margin-top:14px;">
+      <div style="height:8px;background:var(--bg);border:1px solid var(--line);border-radius:99px;overflow:hidden;">
+        <div id="progress-bar" style="height:100%;width:0;background:var(--accent);transition:width .12s;"></div>
+      </div>
+      <p id="progress-note" style="margin:6px 0 0;color:var(--muted);font-size:12.5px;text-align:center;"></p>
+    </div>
+
+    <!-- ── 결과 ── 빈 입력·0·음수·극단값 안내가 전부 여기로 나온다 (조용한 실패 금지) -->
+    <div class="result" id="result" aria-live="polite"></div>
+
+    <div id="res-extra" hidden>
+      <div id="tabs" role="tablist" style="display:flex;gap:6px;margin-top:20px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:4px;">
+        <button class="tab-btn" id="tab-dead" type="button" role="tab" aria-selected="true" aria-controls="table-wrap" data-i18n="tool.tab.dead" style="flex:1;padding:10px 8px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-weight:700;font-family:inherit;font-size:14px;cursor:pointer;">Dead stock candidates</button>
+        <button class="tab-btn" id="tab-all" type="button" role="tab" aria-selected="false" aria-controls="table-wrap" data-i18n="tool.tab.all" style="flex:1;padding:10px 8px;border:none;border-radius:9px;background:transparent;color:var(--ink);font-weight:700;font-family:inherit;font-size:14px;cursor:pointer;">All SKUs</button>
+      </div>
+      <div id="table-wrap" role="tabpanel" style="margin-top:12px;overflow-x:auto;border:1px solid var(--line);border-radius:10px;">
+        <table id="table" style="border-collapse:collapse;font-size:13px;width:100%;white-space:nowrap;"></table>
+      </div>
+      <p id="table-note" style="margin:8px 0 0;color:var(--muted);font-size:12.5px;"></p>
+
+      <h2 id="chart-title" style="font-size:15px;font-weight:700;margin:26px 0 4px;letter-spacing:-0.01em;" data-i18n="tool.chart.title">Days on hand distribution</h2>
+      <p style="margin:0 0 10px;color:var(--muted);font-size:12.5px;line-height:1.5;" data-i18n="tool.chart.hint">Ageing bands from your own data — no industry benchmark is assumed.</p>
+      <div id="chart"></div>
+
+      <div style="margin-top:20px;">
+        <button class="btn" type="button" id="btn-csv" data-i18n="tool.dl.csv">Download report (CSV)</button>
+        <button type="button" id="btn-tsv" data-i18n="tool.dl.tsv" style="margin-inline-start:8px;margin-top:18px;padding:12px 18px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;">Copy for Excel</button>
+      </div>
+
+      <div id="excl-wrap" hidden style="margin-top:16px;">
+        <button type="button" id="btn-excl" data-i18n="tool.excl.download" style="padding:10px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:700;cursor:pointer;">Download excluded rows (CSV)</button>
+      </div>
+
+      <p id="lifo-note" hidden style="margin:18px 0 0;color:var(--muted);font-size:12.5px;line-height:1.6;" data-i18n="tool.note.lifo">If your books are on LIFO, inventory is carried at older, lower costs, so turnover looks faster than it really is — be careful when comparing against peers on FIFO or weighted average.</p>
+    </div>
+
+    <p style="color:var(--muted);font-size:12.5px;margin-top:18px;text-align:center;line-height:1.6;" data-i18n="tool.privacy">Your file is parsed by this page in your own browser. No stock data, cost or file is ever sent to a server — you can disconnect from the network and it still works.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Should inventory turnover use COGS or sales as the numerator?</summary>
+      <p data-i18n="faq.a1">Cost of goods sold is the correct numerator: inventory sits on the balance sheet at cost, so dividing COGS by average inventory value compares like with like. Sales revenue includes your margin, so a sales-based ratio is inflated by roughly one plus the margin — a shop with a 40% margin looks about 1.7× faster than it is. This inventory turnover calculator offers both because sales-based turnover is still common practice in wholesale and retail, but the sales option is badged "reference only". If you have no cost column at all, use the quantity basis: units shipped ÷ average units on hand is unit-consistent and never mixes money with pieces.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What if my export has no beginning stock column?</summary>
+      <p data-i18n="faq.a2">Average inventory is normally (beginning + ending) ÷ 2. If your ERP only exports the current on-hand quantity, this tool uses that single figure as the average and shows a banner saying so, because the result can drift from your books: if stock has been run down over the year, on-hand is lower than the true average, so turnover comes out too high and days on hand too low — dead stock can hide. The ranking of slow movers is usually still right, since the same bias applies to every SKU, but do not quote the absolute ratio to your accountant. Map a beginning stock column whenever your system can export one.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Where do the 180-day and 90-day dead stock thresholds come from?</summary>
+      <p data-i18n="faq.a3">They are the common working rules, not a law. Ageing practice in most warehouses treats 60–90 days of stock as normal, reviews an item at 90 days, stops reordering it around 180 days, and writes off or liquidates at 12 months. So this dead stock report flags a SKU when days on hand reaches 180 or when nothing has shipped for 90 days — whichever hits first. Both are sliders: fast fashion or fresh goods should be far stricter (30–60 days), while spare parts, tooling and safety stock legitimately sit for years and need a much longer setting. Deliberately no industry benchmark is built in, because a national or sector average would go stale — the distribution chart shows where each SKU sits inside your own data instead.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Days on hand: 365 or 360 days?</summary>
+      <p data-i18n="faq.a4">Days on hand (also days inventory outstanding) is period days ÷ turnover, so the basis you divide by changes the answer by about 1.4%. Use 365 for management reporting and for anything you show to a Korean or US audience; 360 is the banking and commercial convention behind many German and European covenant calculations, and some credit teams still require it. This days on hand calculator lets you set the two separately: "days covered by the outflow column" is how long your export actually spans (365 for a full year, 90 for one quarter), while the annualisation basis is only used to scale the ratio to a yearly figure. Getting the first one wrong is the classic error — a quarter of shipments divided by average stock is not an annual turnover.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my inventory data uploaded anywhere?</summary>
+      <p data-i18n="faq.a5">No. There is no server, no account and no upload. The CSV is read with the browser's File API, parsed by JavaScript on this page, and every number stays in your tab's memory until you close it — the same is true for slow moving inventory analysis on large files, which is handled in a Web Worker inside the same browser. Only your settings (thresholds, basis, mode and column mapping) are kept in this browser's localStorage; item codes, quantities, unit costs and amounts are never stored or transmitted. That is the point of this tool: stock and cost data usually cannot leave the company, so the analysis comes to the data instead. You can confirm it by turning off your network and running the tool anyway.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
