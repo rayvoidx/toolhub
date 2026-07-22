@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Period Calculator — Next Period, Ovulation & Fertile Window</title>
+<meta name="description" content="Enter your last period start date, average cycle length and period length to see your next 6 periods, plus estimated ovulation day and fertile window for each cycle. Free and calculated entirely in your browser.">
+<meta name="keywords" content="period calculator, menstrual cycle calculator, next period calculator, fertile window calculator, period tracker online, 생리 계산기">
+<link rel="canonical" href="https://tool-hub.me/period-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Period Calculator — Next Period, Ovulation & Fertile Window">
+<meta property="og:description" content="Enter your last period start date, average cycle length and period length to see your next 6 periods, plus estimated ovulation day and fertile window for each cycle. Free and calculated entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/period-calc/">
+<meta property="og:image" content="https://tool-hub.me/period-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9f1239">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Period Calculator",
+  "description": "Enter your last period start date, average cycle length and period length to see your next 6 periods, plus estimated ovulation day and fertile window for each cycle. Free and calculated entirely in your browser.",
+  "url": "https://tool-hub.me/period-calc/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Period Calculator",
+      "item": "https://tool-hub.me/period-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate my next 6 period dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This period calculator adds your average cycle length to the first day of your last period, then repeats that six times to project the start of your next 6 periods. Each period's end date is the start plus your period length minus one day. For example, a last period starting January 1 with a 28-day cycle and a 5-day period gives a next period from January 29 to February 2, then February 26 to March 2, and so on. The further out a projection is, the more small cycle variations can shift the real date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is my ovulation day and fertile window estimated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each cycle's ovulation day is estimated as that cycle's period start minus 14 days, using the standard luteal-phase method — the time from ovulation to the next period is the most stable part of the menstrual cycle at about 14 days, while the days before ovulation vary more. The fertile window then runs from 5 days before ovulation to 1 day after, a 7-day span, because sperm can survive a few days in fertile cervical mucus while the egg lives only about a day after release."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this period calculator instead of birth control?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This tool estimates dates from averages, and real cycles shift with stress, illness, travel, sleep and many other factors, so calendar-based predictions are not a reliable form of contraception — with typical use, calendar or rhythm methods fail for roughly 12–24 out of every 100 women in a year. Use it for planning and awareness only, and ask a doctor about a proven contraceptive method if you need one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my cycle length or period length isn't always the same?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the average of your last 3–6 cycles and treat every date below as a rough estimate rather than a guarantee. If your cycle length swings by more than a few days, falls outside 21–45 days, or your period length falls outside 2–10 days, these projections become less reliable — an ovulation test kit (LH strips), basal body temperature tracking, or a doctor's advice will serve you better than the calendar alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my period data stored or sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every date is calculated locally in your browser with JavaScript — your last period date, cycle length and period length are saved only in this browser's local storage so the form is ready next time, and \"Clear saved data\" removes them immediately. Nothing is uploaded, there's no account, and no one else can see what you enter."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Period Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Period Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">One cycle, three numbers — see your next 6 periods, ovulation day and fertile window.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool {
+        --pc-period: #9f1239;
+        --pc-fertile-bg: color-mix(in srgb, var(--accent) 15%, transparent);
+      }
+      [data-theme="dark"] #tool { --pc-period: #fb7185; }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool { --pc-period: #fb7185; } }
+
+      /* 셸 CSS 의 입력 위젯 규칙은 date 타입을 포함하지 않아 여기서만 맞춘다 */
+      #tool input[type="date"] {
+        width: 100%; padding: 12px 14px; font-size: 16px; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink);
+      }
+      #tool input[type="date"]:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+
+      #tool .pc-disclaim {
+        margin: 0 0 6px; padding: 12px 14px; font-size: 13.5px; line-height: 1.55;
+        border-radius: 10px; color: var(--ink);
+        border: 1px solid color-mix(in srgb, var(--pc-period) 38%, var(--line));
+        background: color-mix(in srgb, var(--pc-period) 8%, transparent);
+      }
+      #tool .pc-hint { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+      #tool .pc-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      @media (max-width: 420px) { #tool .pc-row { grid-template-columns: 1fr; gap: 0; } }
+      #tool .pc-actions { margin-top: 18px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool .pc-actions .btn { margin-top: 0; }
+      #tool .pc-ghost {
+        background: none; border: 1px solid var(--line); color: var(--muted);
+        padding: 11px 18px; font-size: 14px;
+      }
+      #tool .pc-ghost:hover { background: none; border-color: var(--pc-period); color: var(--pc-period); }
+      #tool .pc-status-line { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .pc-status-line { color: var(--accent); }
+
+      /* 결과 영역 */
+      #tool .pc-msg { margin: 0; color: var(--muted); }
+      #tool .pc-err { margin: 0; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .pc-err { color: var(--accent); }
+      #tool .pc-warn {
+        margin: 0 0 14px; padding: 10px 12px; font-size: 13px; line-height: 1.5;
+        border-radius: 8px; color: var(--ink);
+        border: 1px solid color-mix(in srgb, var(--pc-period) 30%, var(--line));
+        background: color-mix(in srgb, var(--pc-period) 7%, transparent);
+      }
+      #tool .pc-status {
+        margin: 0 0 14px; padding: 10px 12px; font-size: 14px; font-weight: 700;
+        border-radius: 8px; color: var(--accent-strong);
+        border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+        background: color-mix(in srgb, var(--accent) 8%, transparent);
+      }
+      [data-theme="dark"] #tool .pc-status { color: var(--accent); }
+      #tool .pc-cards { display: grid; gap: 12px; grid-template-columns: 1fr; }
+      @media (min-width: 560px) { #tool .pc-cards { grid-template-columns: repeat(3, 1fr); } }
+      #tool .pc-card {
+        padding: 14px; border-radius: 10px; text-align: center;
+        border: 1px solid var(--line); background: var(--surface);
+      }
+      #tool .pc-card.is-key { border-color: var(--pc-period); border-width: 2px; }
+      #tool .pc-card b { display: block; font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.01em; }
+      #tool .pc-card .pc-date {
+        display: block; margin-top: 6px; font-size: 17px; font-weight: 900;
+        letter-spacing: -0.02em; color: var(--accent-strong); font-variant-numeric: tabular-nums;
+      }
+      [data-theme="dark"] #tool .pc-card .pc-date { color: var(--accent); }
+      #tool .pc-card .pc-rel { display: block; margin-top: 4px; font-size: 12.5px; font-style: normal; color: var(--muted); }
+
+      /* 향후 6주기 표 */
+      #tool .pc-h3 { font-size: 15px; margin: 26px 0 10px; letter-spacing: -0.01em; }
+      #tool .pc-wrap { overflow-x: auto; }
+      #tool table.pc-tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+      #tool table.pc-tbl th, #tool table.pc-tbl td {
+        padding: 9px 8px; text-align: start; border-bottom: 1px solid var(--line); white-space: nowrap;
+      }
+      #tool table.pc-tbl th { font-size: 12px; font-weight: 700; color: var(--muted); }
+      #tool table.pc-tbl td { font-variant-numeric: tabular-nums; }
+      #tool table.pc-tbl tbody th { font-weight: 800; color: var(--ink); }
+      #tool .pc-privacy { margin: 20px 0 0; font-size: 12.5px; line-height: 1.55; color: var(--muted); }
+    </style>
+
+    <p class="pc-disclaim" role="note" data-i18n="tool.disclaimer">Estimates only, based on your average cycle — real cycles vary from month to month. This tool is not a method of contraception. For medical concerns, talk to a doctor or midwife.</p>
+
+    <label for="pc-start" data-i18n="tool.start.label">First day of your last period</label>
+    <input type="date" id="pc-start" autocomplete="off">
+    <p class="pc-hint" data-i18n="tool.start.hint">The first day of actual bleeding, not the day it ended.</p>
+
+    <div class="pc-row">
+      <div>
+        <label for="pc-cycle" data-i18n="tool.cycle.label">Average cycle length (days)</label>
+        <input type="number" id="pc-cycle" value="28" min="21" max="45" step="1" inputmode="numeric" autocomplete="off">
+        <p class="pc-hint" data-i18n="tool.cycle.hint">From the first day of one period to the first day of the next. Most cycles run 21–45 days; 28 is the default.</p>
+      </div>
+      <div>
+        <label for="pc-length" data-i18n="tool.length.label">Period length (days)</label>
+        <input type="number" id="pc-length" value="5" min="2" max="10" step="1" inputmode="numeric" autocomplete="off">
+        <p class="pc-hint" data-i18n="tool.length.hint">How many days your bleeding usually lasts. Most periods run 2–10 days; 5 is the default.</p>
+      </div>
+    </div>
+
+    <div class="pc-actions">
+      <button type="button" class="btn" id="pc-calc" data-i18n="tool.calc">Calculate</button>
+      <button type="button" class="btn pc-ghost" id="pc-clear" data-i18n="tool.clear">Clear saved data</button>
+      <span class="pc-status-line" id="pc-status" role="status"></span>
+    </div>
+
+    <div class="result" id="pc-result" aria-live="polite"></div>
+
+    <div id="pc-extra" hidden>
+      <h3 class="pc-h3" data-i18n="tool.tbl.heading">Next 6 cycles</h3>
+      <div class="pc-wrap"><table class="pc-tbl" id="pc-tbl"></table></div>
+    </div>
+
+    <p class="pc-privacy" data-i18n="tool.privacy">Calculated in your browser. Your dates stay on this device and are never sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">How do you calculate my next 6 period dates?</summary><p data-i18n="faq.a1">This period calculator adds your average cycle length to the first day of your last period, then repeats that six times to project the start of your next 6 periods. Each period's end date is the start plus your period length minus one day. For example, a last period starting January 1 with a 28-day cycle and a 5-day period gives a next period from January 29 to February 2, then February 26 to March 2, and so on. The further out a projection is, the more small cycle variations can shift the real date.</p></details>
+    <details><summary data-i18n="faq.q2">How is my ovulation day and fertile window estimated?</summary><p data-i18n="faq.a2">Each cycle's ovulation day is estimated as that cycle's period start minus 14 days, using the standard luteal-phase method — the time from ovulation to the next period is the most stable part of the menstrual cycle at about 14 days, while the days before ovulation vary more. The fertile window then runs from 5 days before ovulation to 1 day after, a 7-day span, because sperm can survive a few days in fertile cervical mucus while the egg lives only about a day after release.</p></details>
+    <details><summary data-i18n="faq.q3">Can I use this period calculator instead of birth control?</summary><p data-i18n="faq.a3">No. This tool estimates dates from averages, and real cycles shift with stress, illness, travel, sleep and many other factors, so calendar-based predictions are not a reliable form of contraception — with typical use, calendar or rhythm methods fail for roughly 12–24 out of every 100 women in a year. Use it for planning and awareness only, and ask a doctor about a proven contraceptive method if you need one.</p></details>
+    <details><summary data-i18n="faq.q4">What if my cycle length or period length isn't always the same?</summary><p data-i18n="faq.a4">Enter the average of your last 3–6 cycles and treat every date below as a rough estimate rather than a guarantee. If your cycle length swings by more than a few days, falls outside 21–45 days, or your period length falls outside 2–10 days, these projections become less reliable — an ovulation test kit (LH strips), basal body temperature tracking, or a doctor's advice will serve you better than the calendar alone.</p></details>
+    <details><summary data-i18n="faq.q5">Is my period data stored or sent anywhere?</summary><p data-i18n="faq.a5">No. Every date is calculated locally in your browser with JavaScript — your last period date, cycle length and period length are saved only in this browser's local storage so the form is ready next time, and "Clear saved data" removes them immediately. Nothing is uploaded, there's no account, and no one else can see what you enter.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

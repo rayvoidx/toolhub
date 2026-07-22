@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TDEE Calculator — How Many Calories You Burn Daily</title>
+<meta name="description" content="Free TDEE calculator: enter age, sex, height, weight (metric/imperial) and activity level for your TDEE, BMR, and cutting/bulking calorie targets.">
+<meta name="keywords" content="tdee calculator, total daily energy expenditure, maintenance calories calculator, calorie calculator, how many calories do I burn a day">
+<link rel="canonical" href="https://tool-hub.me/tdee-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TDEE Calculator — How Many Calories You Burn Daily">
+<meta property="og:description" content="Free TDEE calculator: enter age, sex, height, weight (metric/imperial) and activity level for your TDEE, BMR, and cutting/bulking calorie targets.">
+<meta property="og:url" content="https://tool-hub.me/tdee-calc/">
+<meta property="og:image" content="https://tool-hub.me/tdee-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b91c1c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "TDEE Calculator",
+  "description": "Free TDEE calculator: enter age, sex, height, weight (metric/imperial) and activity level for your TDEE, BMR, and cutting/bulking calorie targets.",
+  "url": "https://tool-hub.me/tdee-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "TDEE Calculator",
+      "item": "https://tool-hub.me/tdee-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many calories do I burn a day? What is TDEE?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Total daily energy expenditure (TDEE) is every calorie your body uses in a day — the energy burned at rest (BMR) plus digestion, daily movement, and exercise. It's the number to eat around if you want your weight to stay the same. This TDEE calculator multiplies your basal metabolic rate by an activity multiplier for how active you are, so it captures your real day, not just what your body needs lying still. Most adults burn between 1,600 and 3,200 kcal a day depending on body size, sex, and activity level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this TDEE calculator work — formula and worked example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It first estimates your basal metabolic rate with the Mifflin-St Jeor equation: 10 × weight(kg) + 6.25 × height(cm) − 5 × age, +5 for men or −161 for women. That BMR is then multiplied by an activity factor from 1.2 (sedentary) to 1.9 (extra active) to get your TDEE. Worked example: a 30-year-old man, 80 kg, 178 cm has a BMR of about 1,770 kcal; at moderately active (×1.55) his TDEE is roughly 2,740 kcal a day. Metric and imperial entries (ft/in, lb) are converted internally, so the result is identical either way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which activity level should I pick, and what happens if I overestimate it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sedentary means a desk job with little or no exercise; lightly active is 1-3 light workouts a week; moderately active is 3-5 workouts a week; very active is hard exercise 6-7 days a week; extra active covers physical jobs or twice-daily training. Most people overestimate their activity level and end up eating more than they actually burn — if your weight isn't moving toward your goal after 2-3 weeks, try the tier below the one you picked. Choosing sedentary when you're really lightly active can overstate your deficit by 150-250 kcal a day, enough to stall a cut."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Mild cut, standard cut or bulk — how many calories should I eat to lose or gain weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator shows a mild cut (10% below TDEE, roughly 0.25-0.3 kg a week) and a standard cut (20% below TDEE, roughly 0.5-0.6 kg a week) for weight loss, plus a bulk (15% above TDEE) for building muscle with a lean surplus. The weekly rate uses the common estimate that about 7,700 kcal equals 1 kg of body fat; individual results vary with water weight, sleep, and training. A mild cut is easier to sustain and preserves more muscle; a standard cut is faster but harder to stick to for long periods, so pick based on the deficit you can maintain consistently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my age, height and weight sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation in this TDEE calculator runs entirely in your browser; your age, sex, height, weight and activity level never leave your device. They are only saved to your browser's localStorage so the form is pre-filled on your next visit, and you can clear them anytime from your browser settings. This tool provides educational estimates only and is not medical, nutrition, or fitness advice."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>TDEE Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>TDEE Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How many calories do you burn in a day? Enter your age, sex, height, weight and activity level to get your TDEE, BMR, and daily calorie targets for maintaining, cutting or bulking.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): add a data-i18n hook to every user-visible string and
+       add the same key to ALL language blocks (14) in js/locales.js. For dynamic JS strings
+       use window.I18N.t("key"), and subscribe to the document "i18n:change" event when a
+       re-render is needed on language switch. -->
+  <section class="tool-card" id="tool" aria-live="polite" aria-label="TDEE calculator" data-i18n-aria-label="tool.aria">
+    <p id="sex-heading" style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.sex.label">Sex</p>
+    <div role="radiogroup" aria-labelledby="sex-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="male" checked>
+        <span data-i18n="tool.sex.male">Male</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="female">
+        <span data-i18n="tool.sex.female">Female</span>
+      </label>
+    </div>
+
+    <label for="age-input" data-i18n="tool.age.label">Age (years)</label>
+    <input type="number" id="age-input" inputmode="numeric" min="15" max="100" step="1"
+           placeholder="e.g. 30" data-i18n-placeholder="tool.age.ph">
+
+    <!-- Height + unit toggle -->
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:14px 0 6px;">
+      <label for="height-cm" style="margin:0;" data-i18n="tool.height.label">Height</label>
+      <span role="radiogroup" aria-label="Height unit" style="font-size:13px;white-space:nowrap;">
+        <label style="margin:0;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="hunit" value="cm" checked><span data-i18n="tool.unit.cm">cm</span>
+        </label>
+        <label style="margin:0 0 0 12px;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="hunit" value="ft"><span data-i18n="tool.unit.ft">ft / in</span>
+        </label>
+      </span>
+    </div>
+    <div id="height-cm-wrap">
+      <input type="number" id="height-cm" inputmode="decimal" min="100" max="250" step="0.1"
+             placeholder="e.g. 175" data-i18n-placeholder="tool.height.ph.cm" aria-label="Height in centimeters">
+    </div>
+    <div id="height-ft-wrap" hidden style="display:flex;gap:8px;">
+      <input type="number" id="height-ft" inputmode="numeric" min="3" max="8" step="1"
+             placeholder="ft" aria-label="Height, feet">
+      <input type="number" id="height-in" inputmode="decimal" min="0" max="11.9" step="0.1"
+             placeholder="in" aria-label="Height, inches">
+    </div>
+
+    <!-- Weight + unit toggle -->
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:14px 0 6px;">
+      <label for="weight-input" style="margin:0;" data-i18n="tool.weight.label">Weight</label>
+      <span role="radiogroup" aria-label="Weight unit" style="font-size:13px;white-space:nowrap;">
+        <label style="margin:0;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="wunit" value="kg" checked><span data-i18n="tool.unit.kg">kg</span>
+        </label>
+        <label style="margin:0 0 0 12px;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="wunit" value="lb"><span data-i18n="tool.unit.lb">lb</span>
+        </label>
+      </span>
+    </div>
+    <input type="number" id="weight-input" inputmode="decimal" min="20" max="300" step="0.1"
+           placeholder="e.g. 75" data-i18n-placeholder="tool.weight.ph" aria-label="Weight">
+
+    <label for="activity-select" data-i18n="tool.activity.label">Activity level</label>
+    <select id="activity-select">
+      <option value="1.2" data-i18n="tool.activity.sedentary">Sedentary (little or no exercise) — ×1.2</option>
+      <option value="1.375" data-i18n="tool.activity.light">Lightly active (exercise 1-3 days/week) — ×1.375</option>
+      <option value="1.55" selected data-i18n="tool.activity.moderate">Moderately active (exercise 3-5 days/week) — ×1.55</option>
+      <option value="1.725" data-i18n="tool.activity.active">Very active (exercise 6-7 days/week) — ×1.725</option>
+      <option value="1.9" data-i18n="tool.activity.veryactive">Extra active (hard exercise or physical job) — ×1.9</option>
+    </select>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate TDEE</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p id="result-warning" style="margin:0 0 12px;color:#d97706;font-weight:600;" data-i18n="tool.warn.extreme" hidden>These numbers look unusual. Please double-check your height and weight.</p>
+
+        <div style="text-align:center;margin-bottom:6px;">
+          <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.tdee">Your Total Daily Energy Expenditure (TDEE)</div>
+          <div style="font-weight:800;font-size:36px;line-height:1.15;color:var(--accent-strong);" id="r-tdee"></div>
+        </div>
+        <p id="r-sub" style="text-align:center;margin:0 0 16px;font-size:13.5px;color:var(--muted);"></p>
+
+        <p style="font-weight:600;font-size:14px;margin:0 0 8px;" data-i18n="tool.result.goals">Daily calorie targets</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;">
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.goal.standardCut">Standard cut (−20%)</div>
+            <div style="font-weight:700;font-size:18px;color:#3b82f6;" id="g-standardCut-kcal"></div>
+            <div style="font-size:12px;color:var(--muted);" id="g-standardCut-rate"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.goal.mildCut">Mild cut (−10%)</div>
+            <div style="font-weight:700;font-size:18px;color:#0ea5e9;" id="g-mildCut-kcal"></div>
+            <div style="font-size:12px;color:var(--muted);" id="g-mildCut-rate"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.goal.maintain">Maintenance</div>
+            <div style="font-weight:700;font-size:18px;color:#16a34a;" id="g-maintain-kcal"></div>
+            <div style="font-size:12px;color:var(--muted);" id="g-maintain-rate"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.goal.bulk">Bulk (+15%)</div>
+            <div style="font-weight:700;font-size:18px;color:#f97316;" id="g-bulk-kcal"></div>
+            <div style="font-size:12px;color:var(--muted);" id="g-bulk-rate"></div>
+          </div>
+        </div>
+
+        <p style="margin:14px 0 4px;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.disclaimer">Estimates based on the Mifflin-St Jeor formula; actual energy needs vary with body composition, health, and genetics. Educational information only — not medical, nutrition, or fitness advice.</p>
+        <p style="margin:0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.privacy">All calculations run in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Add data-i18n="faq.qN|faq.aN" to each summary/p and fill every language in locales.js. -->
+    <details>
+      <summary data-i18n="faq.q1">How many calories do I burn a day? What is TDEE?</summary>
+      <p data-i18n="faq.a1">Total daily energy expenditure (TDEE) is every calorie your body uses in a day — the energy burned at rest (BMR) plus digestion, daily movement, and exercise. It's the number to eat around if you want your weight to stay the same. This TDEE calculator multiplies your basal metabolic rate by an activity multiplier for how active you are, so it captures your real day, not just what your body needs lying still. Most adults burn between 1,600 and 3,200 kcal a day depending on body size, sex, and activity level.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How does this TDEE calculator work — formula and worked example?</summary>
+      <p data-i18n="faq.a2">It first estimates your basal metabolic rate with the Mifflin-St Jeor equation: 10 × weight(kg) + 6.25 × height(cm) − 5 × age, +5 for men or −161 for women. That BMR is then multiplied by an activity factor from 1.2 (sedentary) to 1.9 (extra active) to get your TDEE. Worked example: a 30-year-old man, 80 kg, 178 cm has a BMR of about 1,770 kcal; at moderately active (×1.55) his TDEE is roughly 2,740 kcal a day. Metric and imperial entries (ft/in, lb) are converted internally, so the result is identical either way.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Which activity level should I pick, and what happens if I overestimate it?</summary>
+      <p data-i18n="faq.a3">Sedentary means a desk job with little or no exercise; lightly active is 1-3 light workouts a week; moderately active is 3-5 workouts a week; very active is hard exercise 6-7 days a week; extra active covers physical jobs or twice-daily training. Most people overestimate their activity level and end up eating more than they actually burn — if your weight isn't moving toward your goal after 2-3 weeks, try the tier below the one you picked. Choosing sedentary when you're really lightly active can overstate your deficit by 150-250 kcal a day, enough to stall a cut.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Mild cut, standard cut or bulk — how many calories should I eat to lose or gain weight?</summary>
+      <p data-i18n="faq.a4">This calculator shows a mild cut (10% below TDEE, roughly 0.25-0.3 kg a week) and a standard cut (20% below TDEE, roughly 0.5-0.6 kg a week) for weight loss, plus a bulk (15% above TDEE) for building muscle with a lean surplus. The weekly rate uses the common estimate that about 7,700 kcal equals 1 kg of body fat; individual results vary with water weight, sleep, and training. A mild cut is easier to sustain and preserves more muscle; a standard cut is faster but harder to stick to for long periods, so pick based on the deficit you can maintain consistently.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my age, height and weight sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation in this TDEE calculator runs entirely in your browser; your age, sex, height, weight and activity level never leave your device. They are only saved to your browser's localStorage so the form is pre-filled on your next visit, and you can clear them anytime from your browser settings. This tool provides educational estimates only and is not medical, nutrition, or fitness advice.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

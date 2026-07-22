@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Morse Code Translator — Text to Morse Code Converter</title>
+<meta name="description" content="Translate text to Morse code or Morse back to text, live as you type. Play the audio and copy results instantly. Free, runs entirely in your browser.">
+<meta name="keywords" content="morse code translator, morse code converter, text to morse code, morse code alphabet, morse code audio, 모스부호 변환기">
+<link rel="canonical" href="https://tool-hub.me/morse-code-translator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Morse Code Translator — Text to Morse Code Converter">
+<meta property="og:description" content="Translate text to Morse code or Morse back to text, live as you type. Play the audio and copy results instantly. Free, runs entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/morse-code-translator/">
+<meta property="og:image" content="https://tool-hub.me/morse-code-translator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Morse Code Translator",
+  "description": "Translate text to Morse code or Morse back to text, live as you type. Play the audio and copy results instantly. Free, runs entirely in your browser.",
+  "url": "https://tool-hub.me/morse-code-translator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Morse Code Translator",
+      "item": "https://tool-hub.me/morse-code-translator/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does a Morse code translator work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Morse code represents each letter, digit and punctuation mark as a unique sequence of dots (short signals) and dashes (signals three times as long). This translator maps your text to those sequences using the international Morse code standard, and does the reverse for decoding. For example, the distress signal SOS becomes \"... --- ...\" — three dots, three dashes, three dots — one of the most recognizable patterns in the code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the spaces and the slash ( / ) mean in Morse code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A single space separates the Morse code for individual letters within a word, and a slash surrounded by spaces ( / ) marks the gap between whole words. So \"HI\" becomes \".... ..\" (two letters, one space between them), while \"HI THERE\" becomes \".... .. / - .... . .-. .\" with the slash showing where one word ends and the next begins. Typing an inconsistent gap is fine — this tool normalizes spacing automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I hear the Morse code, and how does the speed (WPM) setting work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — press Play to hear the Morse code as audio beeps generated directly in your browser, with a flashing light synced to each dot and dash. The speed slider sets words per minute (WPM) using the standard PARIS timing method, where a dot lasts 1.2 ÷ WPM seconds and a dash lasts three times as long. Slower speeds like 5–10 WPM suit beginners learning to read code by ear, while 20 WPM and above matches typical amateur radio operator speed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which characters and punctuation does this Morse code converter support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This converter supports the full international Morse code alphabet: all 26 letters A–Z, digits 0–9, and common punctuation including the period, comma, question mark, apostrophe, exclamation mark, slash, parentheses, ampersand, colon, semicolon, equals sign, plus sign, hyphen, underscore, quotation mark, dollar sign and at sign. Letters are not case-sensitive. Characters outside this set, such as accented letters, emoji or non-Latin scripts, have no official Morse representation and are skipped with a warning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text or Morse code sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This Morse code translator runs entirely in your browser — nothing you type, paste or play as audio is ever uploaded, logged or shared with a server. There's no sign-up and no tracking, so you can translate and practice Morse code with complete privacy. Your last input is saved only in this browser's local storage so it's there when you return."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Morse Code Translator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Morse Code Translator</h1>
+    <p class="lede" data-i18n="hero.lede">Type text or paste Morse code — the other field updates instantly. Play it back as audio or copy the result.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Morse code translator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .mct-field{ margin-top:18px; }
+      #tool .mct-field:first-of-type{ margin-top:6px; }
+      #tool textarea{ font-family:inherit; line-height:1.6; resize:vertical; }
+      #tool #morse-input{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.08em; font-size:16px; }
+      #tool .mct-actions{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+      #tool .mct-actions .btn{ margin-top:0; padding:9px 16px; font-size:14px; width:auto; }
+      #tool .mct-status{ margin:8px 0 0; font-size:13.5px; line-height:1.55; color:var(--muted); }
+      #tool .mct-status.is-warn{ color:var(--accent-strong); }
+      #tool .mct-status.is-error{ color:#b91c1c; }
+      #tool #copy-feedback{ margin:14px 0 0; font-weight:600; color:var(--accent); }
+      #tool .mct-audio{ margin-top:26px; padding-top:20px; border-top:1px solid var(--line); }
+      #tool .mct-audio h2{ font-size:15px; margin:0 0 12px; letter-spacing:-.01em; }
+      #tool .mct-audio-row{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+      #tool .mct-audio-row .btn{ margin-top:0; width:auto; flex:0 0 auto; }
+      #tool .mct-audio-row label{ margin:0; font-size:13.5px; font-weight:600; color:var(--muted); white-space:nowrap; }
+      #tool #wpm-range{ flex:1 1 140px; min-width:120px; width:auto; }
+      #tool .mct-flash{ width:20px; height:20px; border-radius:50%; background:var(--line); border:1px solid var(--line); transition:background-color .05s linear, box-shadow .05s linear; flex:0 0 auto; display:inline-block; }
+      #tool .mct-flash.on{ background:var(--accent); box-shadow:0 0 10px 2px color-mix(in srgb, var(--accent) 65%, transparent); }
+      #tool details{ margin-top:24px; border:1px solid var(--line); border-radius:10px; padding:14px 16px; background:var(--surface); }
+      #tool details summary{ font-weight:600; cursor:pointer; font-size:14.5px; }
+      #tool details p{ color:var(--muted); font-size:13.5px; margin:10px 0; }
+      #tool .mct-chart-wrap{ overflow-x:auto; margin-top:10px; }
+      #tool table{ border-collapse:collapse; width:100%; font-size:13.5px; }
+      #tool table th, #tool table td{ padding:6px 10px; border-bottom:1px solid var(--line); text-align:left; white-space:nowrap; }
+      #tool table td.code{ font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; letter-spacing:.08em; }
+      @media (max-width:420px) {
+        #tool .mct-audio-row{ gap:10px; }
+        #tool table{ font-size:12.5px; }
+      }
+    </style>
+
+    <p class="hint" data-i18n="tool.privacyHint">Everything runs locally in your browser — nothing you type is uploaded.</p>
+
+    <div class="mct-field">
+      <label for="text-input" data-i18n="tool.text.label">Text</label>
+      <textarea id="text-input" rows="4" dir="auto" autocomplete="off" spellcheck="false" placeholder="Type text here…" data-i18n-placeholder="tool.text.ph" autofocus></textarea>
+      <div class="mct-actions">
+        <button type="button" class="btn" id="text-copy-btn" data-i18n="tool.copy.text">Copy text</button>
+        <button type="button" class="btn" id="clear-btn" data-i18n="tool.clear">Clear</button>
+      </div>
+      <p id="text-status" class="mct-status" role="status" hidden></p>
+    </div>
+
+    <div class="mct-field">
+      <label for="morse-input" data-i18n="tool.morse.label">Morse code</label>
+      <textarea id="morse-input" rows="4" dir="ltr" autocomplete="off" spellcheck="false" placeholder="Type or paste Morse code here…" data-i18n-placeholder="tool.morse.ph"></textarea>
+      <p class="hint" data-i18n="tool.morse.hint">Separate letters with a space and words with a slash ( / ).</p>
+      <div class="mct-actions">
+        <button type="button" class="btn" id="morse-copy-btn" data-i18n="tool.copy.morse">Copy Morse code</button>
+      </div>
+      <p id="morse-status" class="mct-status" role="status" hidden></p>
+    </div>
+
+    <p id="copy-feedback" role="status" hidden></p>
+
+    <div class="mct-audio">
+      <h2 data-i18n="tool.audio.heading">Listen to the Morse code</h2>
+      <div class="mct-audio-row">
+        <button type="button" class="btn" id="play-btn" data-i18n="tool.audio.play">▶ Play</button>
+        <label for="wpm-range" id="wpm-label">Speed: 20 WPM</label>
+        <input type="range" id="wpm-range" min="5" max="40" step="1" value="20" aria-label="Speed in words per minute" data-i18n-aria-label="tool.audio.wpmAria">
+        <span id="flash-indicator" class="mct-flash" aria-hidden="true"></span>
+      </div>
+      <p id="audio-empty-hint" class="hint" data-i18n="tool.audio.empty" hidden>Type some text or Morse code above to enable playback.</p>
+      <p id="audio-live-status" class="sr-only" role="status"></p>
+    </div>
+
+    <details id="chart-details">
+      <summary data-i18n="tool.chart.summary">Morse code alphabet chart (letters, numbers &amp; punctuation)</summary>
+      <p data-i18n="tool.chart.note">The international Morse code standard used by every translator on this page.</p>
+      <div class="mct-chart-wrap">
+        <table id="chart-table">
+          <thead><tr><th data-i18n="tool.chart.colChar">Character</th><th data-i18n="tool.chart.colCode">Morse code</th></tr></thead>
+          <tbody id="chart-body"><!-- filled by js/app.js --></tbody>
+        </table>
+      </div>
+    </details>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does a Morse code translator work?</summary>
+      <p data-i18n="faq.a1">Morse code represents each letter, digit and punctuation mark as a unique sequence of dots (short signals) and dashes (signals three times as long). This translator maps your text to those sequences using the international Morse code standard, and does the reverse for decoding. For example, the distress signal SOS becomes "... --- ..." — three dots, three dashes, three dots — one of the most recognizable patterns in the code.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What do the spaces and the slash ( / ) mean in Morse code?</summary>
+      <p data-i18n="faq.a2">A single space separates the Morse code for individual letters within a word, and a slash surrounded by spaces ( / ) marks the gap between whole words. So "HI" becomes ".... .." (two letters, one space between them), while "HI THERE" becomes ".... .. / - .... . .-. ." with the slash showing where one word ends and the next begins. Typing an inconsistent gap is fine — this tool normalizes spacing automatically.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Can I hear the Morse code, and how does the speed (WPM) setting work?</summary>
+      <p data-i18n="faq.a3">Yes — press Play to hear the Morse code as audio beeps generated directly in your browser, with a flashing light synced to each dot and dash. The speed slider sets words per minute (WPM) using the standard PARIS timing method, where a dot lasts 1.2 ÷ WPM seconds and a dash lasts three times as long. Slower speeds like 5–10 WPM suit beginners learning to read code by ear, while 20 WPM and above matches typical amateur radio operator speed.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Which characters and punctuation does this Morse code converter support?</summary>
+      <p data-i18n="faq.a4">This converter supports the full international Morse code alphabet: all 26 letters A–Z, digits 0–9, and common punctuation including the period, comma, question mark, apostrophe, exclamation mark, slash, parentheses, ampersand, colon, semicolon, equals sign, plus sign, hyphen, underscore, quotation mark, dollar sign and at sign. Letters are not case-sensitive. Characters outside this set, such as accented letters, emoji or non-Latin scripts, have no official Morse representation and are skipped with a warning.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text or Morse code sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This Morse code translator runs entirely in your browser — nothing you type, paste or play as audio is ever uploaded, logged or shared with a server. There's no sign-up and no tracking, so you can translate and practice Morse code with complete privacy. Your last input is saved only in this browser's local storage so it's there when you return.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

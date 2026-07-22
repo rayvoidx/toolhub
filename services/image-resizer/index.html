@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Resizer — Resize Photos Online Free, No Upload</title>
+<meta name="description" content="Resize any JPG, PNG or WEBP image by exact pixel size or percentage, choose format and quality, then download — free and 100% processed in your browser.">
+<meta name="keywords" content="image resizer, resize image online, resize photo, change image size, image resize without losing quality, 이미지 크기 조정, 사진 리사이즈">
+<link rel="canonical" href="https://tool-hub.me/image-resizer/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Image Resizer — Resize Photos Online Free, No Upload">
+<meta property="og:description" content="Resize any JPG, PNG or WEBP image by exact pixel size or percentage, choose format and quality, then download — free and 100% processed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/image-resizer/">
+<meta property="og:image" content="https://tool-hub.me/image-resizer/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image Resizer",
+  "description": "Resize any JPG, PNG or WEBP image by exact pixel size or percentage, choose format and quality, then download — free and 100% processed in your browser.",
+  "url": "https://tool-hub.me/image-resizer/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I resize an image without losing quality?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start from the largest version of the photo you have — resizing down preserves far more detail than resizing up, which can only guess at new pixels and looks soft or blocky. Keep \"Lock aspect ratio\" on so people and objects don't stretch, and pick a format that matches the content: PNG for screenshots, logos or anything with flat colors and text, and JPEG or WEBP with a high quality setting (85–95) for photos. This tool draws your image onto a canvas at the exact size you choose and uses the browser's high-quality smoothing, so a same-size or downscaled JPEG or WEBP export usually looks visually identical to the original at a fraction of the file size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between resizing by dimensions and by percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Resizing by dimensions lets you type an exact target width or height in pixels — useful when a website, form or marketplace tells you it needs exactly 1200×630 or 800px wide. Resizing by percentage scales both sides by the same factor, so 50% turns a 4000×3000 photo into 2000×1500 without you doing the math, and it always keeps the original proportions. Use dimensions when you have a specific pixel requirement, and percentage when you just want a smaller or larger version of the same photo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is there an 8000px limit, and what if my image is bigger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Browsers decode and redraw images in memory, and an image far beyond 8000px on a side can use hundreds of megabytes of RAM and crash the tab on a phone or an older laptop — this image resizer caps input at 8000px per side to keep that reliable for everyone. If your original is bigger, most photo apps and phone camera apps can export or crop a smaller version first (a phone photo is very rarely above 8000px in the first place, so this mostly affects large scans, panoramas and stitched images), and then you can resize that copy here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my photo uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This resizer runs entirely in your browser using the HTML canvas element — the file you choose is read locally, drawn to a canvas at your chosen size, and encoded back into an image file, all on your own device. Nothing is sent to a server, there's no upload progress bar because there's no upload, and closing the tab leaves no trace beyond your last settings, which are kept only in your browser's local storage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which output format should I choose — JPEG, PNG or WEBP?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JPEG is the safest general choice for photos and is supported everywhere, with the quality slider trading file size for detail. PNG is lossless and supports transparency, so it's the right pick for screenshots, logos, icons and images with sharp text or flat colors — but it produces much larger files for photos. WEBP is a newer format that is now supported by essentially every modern browser and typically gives a smaller file than JPEG at the same visual quality, so it's a good default if you don't need maximum compatibility with very old software. \"Keep original format\" simply re-encodes at the new size without changing the format at all."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Image Resizer",
+      "item": "https://tool-hub.me/image-resizer/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Image Resizer</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Image Resizer</h1>
+    <p class="lede" data-i18n="hero.lede">Drop a JPG, PNG or WEBP — resize it by exact pixel size or percentage, pick the format and quality, and download the result. Nothing ever leaves your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Image resizer" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 0; }
+
+      #tool .ir-drop { margin-top: 4px; border: 1px dashed var(--line); border-radius: 12px; padding: 26px 16px; text-align: center; }
+      #tool .ir-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+      #tool .ir-drop p { margin: 0 0 10px; color: var(--muted); font-size: 14px; }
+      #tool .ir-drop-or { font-size: 12.5px; }
+      #tool .ir-browse { padding: 9px 18px; font-size: 14px; font-weight: 700; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--accent); cursor: pointer; }
+      #tool .ir-browse:hover { border-color: var(--accent); }
+      #tool .ir-hint { font-size: 12.5px !important; color: var(--muted); margin: 10px 0 0 !important; }
+
+      #tool .ir-error { color: #dc2626; font-weight: 700; font-size: 14px; margin: 14px 0; }
+      [data-theme="dark"] #tool .ir-error { color: #f87171; }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .ir-error { color: #f87171; } }
+
+      #tool .ir-empty { color: var(--muted); text-align: center; padding: 20px 0 4px; margin: 0; }
+
+      #tool #ir-workspace { margin-top: 8px; }
+      #tool .ir-orig { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin: 18px 0; }
+      #tool .ir-thumb { max-width: 110px; max-height: 110px; width: auto; height: auto; border-radius: 8px;
+        border: 1px solid var(--line); object-fit: contain; background: var(--bg); display: block; }
+      #tool .ir-orig-meta { display: flex; flex-direction: column; gap: 2px; font-size: 13.5px; color: var(--muted); min-width: 0; }
+      #tool .ir-orig-meta strong { color: var(--ink); font-size: 14px; }
+      #tool .ir-reset { margin-inline-start: auto; background: none; border: none; color: var(--muted);
+        text-decoration: underline; font-size: 13px; font-weight: 700; cursor: pointer; font-family: inherit; padding: 4px; }
+      #tool .ir-reset:hover { color: var(--accent); }
+
+      #tool .ir-tabs { display: flex; gap: 6px; border: 1px solid var(--line); border-radius: 10px; padding: 4px; margin-bottom: 18px; }
+      #tool .ir-tab { flex: 1 1 0; padding: 9px 8px; font-size: 14px; font-weight: 700; font-family: inherit;
+        border: none; border-radius: 7px; background: none; color: var(--muted); cursor: pointer; }
+      #tool .ir-tab.is-on { background: var(--accent); color: #fff; }
+
+      #tool .ir-row { display: flex; gap: 12px; flex-wrap: wrap; }
+      #tool .ir-field { flex: 1 1 130px; min-width: 0; margin-bottom: 14px; }
+      #tool .ir-field label { display: block; font-weight: 600; font-size: 14px; margin: 0 0 6px; }
+
+      #tool .ir-check { display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 14.5px;
+        cursor: pointer; margin: 2px 0 4px; }
+      #tool .ir-check input { width: auto; flex: 0 0 auto; accent-color: var(--accent); }
+
+      #tool .ir-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+      #tool .ir-chip { flex: 0 0 auto; padding: 8px 13px; border: none; border-radius: 10px; font-weight: 700;
+        font-size: 14px; cursor: pointer; background: var(--muted); color: #fff; font-family: inherit; }
+      #tool .ir-chip:hover { background: var(--accent); }
+
+      #tool .ir-quality-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool .ir-quality-row input[type="range"] { flex: 1 1 140px; width: auto; accent-color: var(--accent); }
+      #tool .ir-quality-value { flex: 0 0 auto; font-weight: 800; font-variant-numeric: tabular-nums; min-width: 34px; text-align: end; }
+
+      #tool #ir-result { margin-top: 22px; }
+      #tool .ir-result-body { display: flex; gap: 16px; align-items: flex-start; flex-wrap: wrap; }
+      #tool .ir-result-text { flex: 1 1 160px; min-width: 0; }
+      #tool .ir-result-text p { margin: 0 0 4px; font-size: 14px; }
+      #tool .ir-result-text .ir-hint-line { color: var(--muted); font-size: 13px; }
+      #tool #ir-result h3 { margin: 0 0 12px; font-size: 15px; }
+      #tool .ir-download-wrap { margin-top: 16px; }
+
+      #tool .ir-privacy { font-size: 12.5px; color: var(--muted); margin: 20px 0 0; text-align: center; }
+
+      @media (max-width: 420px) {
+        #tool .ir-orig { gap: 10px; }
+        #tool .ir-thumb { max-width: 84px; max-height: 84px; }
+        #tool .ir-reset { margin-inline-start: 0; flex: 1 1 100%; text-align: start; }
+      }
+    </style>
+
+    <div class="ir-drop" id="ir-drop">
+      <p data-i18n="tool.drop.title">Drag and drop an image here</p>
+      <p class="ir-drop-or" data-i18n="tool.drop.or">or</p>
+      <button type="button" class="ir-browse" id="ir-browse" data-i18n="tool.browse">Choose an image</button>
+      <input type="file" id="ir-file" accept="image/jpeg,image/png,image/webp" hidden>
+      <p class="ir-hint" data-i18n="tool.drop.hint">JPG, PNG or WEBP — up to 8000px per side and 40MB</p>
+    </div>
+
+    <p class="ir-error" id="ir-error" role="alert" hidden></p>
+
+    <p class="ir-empty" id="ir-empty" data-i18n="tool.empty">Select an image to get started — nothing is uploaded, everything happens in your browser.</p>
+
+    <div id="ir-workspace" hidden>
+      <div class="ir-orig">
+        <img class="ir-thumb" id="ir-orig-img" alt="">
+        <div class="ir-orig-meta">
+          <strong data-i18n="tool.orig.label">Original</strong>
+          <span id="ir-orig-dims"></span>
+          <span id="ir-orig-size"></span>
+        </div>
+        <button type="button" class="ir-reset" id="ir-reset" data-i18n="tool.reset.btn">Choose a different image</button>
+      </div>
+
+      <div class="ir-tabs" role="tablist" aria-label="Resize mode" data-i18n-aria-label="tool.mode.aria">
+        <button type="button" class="ir-tab is-on" id="ir-tab-dims" role="tab" aria-selected="true"
+                aria-controls="ir-pane-dims" data-i18n="tool.mode.dims">By dimensions</button>
+        <button type="button" class="ir-tab" id="ir-tab-pct" role="tab" aria-selected="false"
+                aria-controls="ir-pane-pct" data-i18n="tool.mode.pct">By percentage</button>
+      </div>
+
+      <div id="ir-pane-dims" role="tabpanel" aria-labelledby="ir-tab-dims">
+        <div class="ir-row">
+          <div class="ir-field">
+            <label for="ir-width" data-i18n="tool.width.label">Width (px)</label>
+            <input id="ir-width" type="number" inputmode="numeric" min="1" max="8000" step="1" autocomplete="off">
+          </div>
+          <div class="ir-field">
+            <label for="ir-height" data-i18n="tool.height.label">Height (px)</label>
+            <input id="ir-height" type="number" inputmode="numeric" min="1" max="8000" step="1" autocomplete="off">
+          </div>
+        </div>
+        <label class="ir-check" for="ir-lock">
+          <input type="checkbox" id="ir-lock" checked>
+          <span data-i18n="tool.lock.label">Lock aspect ratio</span>
+        </label>
+      </div>
+
+      <div id="ir-pane-pct" role="tabpanel" aria-labelledby="ir-tab-pct" hidden>
+        <div class="ir-field">
+          <label for="ir-pct" data-i18n="tool.pct.label">Scale (%)</label>
+          <input id="ir-pct" type="number" inputmode="numeric" min="1" max="500" step="1" value="100"
+                 placeholder="e.g. 50" data-i18n-placeholder="tool.pct.ph" autocomplete="off">
+        </div>
+        <div class="ir-chips" id="ir-pct-chips">
+          <button type="button" class="ir-chip" data-pct="25">25%</button>
+          <button type="button" class="ir-chip" data-pct="50">50%</button>
+          <button type="button" class="ir-chip" data-pct="75">75%</button>
+          <button type="button" class="ir-chip" data-pct="150">150%</button>
+          <button type="button" class="ir-chip" data-pct="200">200%</button>
+        </div>
+      </div>
+
+      <div class="ir-field">
+        <label for="ir-format" data-i18n="tool.format.label">Output format</label>
+        <select id="ir-format"></select>
+      </div>
+
+      <div class="ir-field" id="ir-quality-field">
+        <label for="ir-quality" data-i18n="tool.quality.label">Quality</label>
+        <div class="ir-quality-row">
+          <input id="ir-quality" type="range" min="1" max="100" step="1" value="90">
+          <span class="ir-quality-value" id="ir-quality-value">90</span>
+        </div>
+        <p id="ir-quality-png-note" data-i18n="tool.quality.png" hidden style="margin:8px 0 0;font-size:13px;color:var(--muted);">PNG is lossless — quality doesn't apply.</p>
+      </div>
+
+      <button type="button" class="btn" id="ir-resize" data-i18n="tool.resize.btn">Resize image</button>
+
+      <div class="result" id="ir-result" aria-live="polite" hidden>
+        <h3 data-i18n="tool.result.heading">Result</h3>
+        <div class="ir-result-body">
+          <img class="ir-thumb" id="ir-result-img" alt="">
+          <div class="ir-result-text">
+            <p id="ir-result-dims"></p>
+            <p id="ir-result-size"></p>
+            <p class="ir-hint-line" id="ir-result-hint"></p>
+          </div>
+        </div>
+        <div class="ir-download-wrap">
+          <a class="btn" id="ir-download" download data-i18n="tool.download.btn">Download image</a>
+        </div>
+      </div>
+    </div>
+
+    <p class="ir-privacy" data-i18n="tool.privacy">Every resize runs locally in your browser using canvas — your image is never uploaded to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I resize an image without losing quality?</summary>
+      <p data-i18n="faq.a1">Start from the largest version of the photo you have — resizing down preserves far more detail than resizing up, which can only guess at new pixels and looks soft or blocky. Keep "Lock aspect ratio" on so people and objects don't stretch, and pick a format that matches the content: PNG for screenshots, logos or anything with flat colors and text, and JPEG or WEBP with a high quality setting (85–95) for photos. This tool draws your image onto a canvas at the exact size you choose and uses the browser's high-quality smoothing, so a same-size or downscaled JPEG or WEBP export usually looks visually identical to the original at a fraction of the file size.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between resizing by dimensions and by percentage?</summary>
+      <p data-i18n="faq.a2">Resizing by dimensions lets you type an exact target width or height in pixels — useful when a website, form or marketplace tells you it needs exactly 1200×630 or 800px wide. Resizing by percentage scales both sides by the same factor, so 50% turns a 4000×3000 photo into 2000×1500 without you doing the math, and it always keeps the original proportions. Use dimensions when you have a specific pixel requirement, and percentage when you just want a smaller or larger version of the same photo.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why is there an 8000px limit, and what if my image is bigger?</summary>
+      <p data-i18n="faq.a3">Browsers decode and redraw images in memory, and an image far beyond 8000px on a side can use hundreds of megabytes of RAM and crash the tab on a phone or an older laptop — this image resizer caps input at 8000px per side to keep that reliable for everyone. If your original is bigger, most photo apps and phone camera apps can export or crop a smaller version first (a phone photo is very rarely above 8000px in the first place, so this mostly affects large scans, panoramas and stitched images), and then you can resize that copy here.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is my photo uploaded anywhere?</summary>
+      <p data-i18n="faq.a4">No. This resizer runs entirely in your browser using the HTML canvas element — the file you choose is read locally, drawn to a canvas at your chosen size, and encoded back into an image file, all on your own device. Nothing is sent to a server, there's no upload progress bar because there's no upload, and closing the tab leaves no trace beyond your last settings, which are kept only in your browser's local storage.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Which output format should I choose — JPEG, PNG or WEBP?</summary>
+      <p data-i18n="faq.a5">JPEG is the safest general choice for photos and is supported everywhere, with the quality slider trading file size for detail. PNG is lossless and supports transparency, so it's the right pick for screenshots, logos, icons and images with sharp text or flat colors — but it produces much larger files for photos. WEBP is a newer format that is now supported by essentially every modern browser and typically gives a smaller file than JPEG at the same visual quality, so it's a good default if you don't need maximum compatibility with very old software. "Keep original format" simply re-encodes at the new size without changing the format at all.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

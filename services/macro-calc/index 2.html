@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Macro Calculator — Daily Protein, Carbs & Fat in Grams</title>
+<meta name="description" content="Free macro calculator: enter your calories (or compute them) and get protein, carbs and fat grams per day and per meal, in any diet split. Runs in your browser.">
+<meta name="keywords" content="macro calculator, macros for weight loss, protein carbs fat calculator, iifym calculator, macro split calculator, 매크로 계산기">
+<link rel="canonical" href="https://tool-hub.me/macro-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Macro Calculator — Daily Protein, Carbs & Fat in Grams">
+<meta property="og:description" content="Free macro calculator: enter your calories (or compute them) and get protein, carbs and fat grams per day and per meal, in any diet split. Runs in your browser.">
+<meta property="og:url" content="https://tool-hub.me/macro-calc/">
+<meta property="og:image" content="https://tool-hub.me/macro-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b91c1c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Macro Calculator",
+  "description": "Free macro calculator: enter your calories (or compute them) and get protein, carbs and fat grams per day and per meal, in any diet split. Runs in your browser.",
+  "url": "https://tool-hub.me/macro-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Macro Calculator",
+      "item": "https://tool-hub.me/macro-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many calories are in a gram of protein, carbs, and fat, and why 4/4/9?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protein and carbohydrates each provide about 4 kilocalories per gram, while fat provides about 9 kilocalories per gram — these are the classic Atwater factors used on nutrition labels worldwide. That's why a diet split described in percentages, like 30% protein / 40% carbs / 30% fat, doesn't translate into equal grams: on a 2,000-kcal day, 30% protein is 600 kcal ÷ 4 = 150 g, but 30% fat is 600 kcal ÷ 9 = only 67 g. This macro calculator does that division automatically for every macro, so you get grams you can weigh on a food scale instead of percentages you'd have to convert yourself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is my daily calorie target calculated if I don't know it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Switch to the 'Calculate my calories' tab and enter your sex, age, height, and weight. The tool first estimates your basal metabolic rate (BMR) with the Mifflin-St Jeor equation — 10 × weight(kg) + 6.25 × height(cm) − 5 × age, +5 for men or −161 for women — then multiplies it by an activity factor from 1.2 (sedentary) to 1.9 (extra active) to get your total daily energy expenditure. Finally it applies your goal: about 80% of that number for weight loss, 100% to maintain, or roughly 110% for a lean muscle-gain surplus. The result feeds straight into the macro split below, so you never have to copy numbers between calculators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which diet split should I choose — balanced, low-carb, high-protein, keto, or custom?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Balanced (30% protein / 40% carbs / 30% fat) suits most general fitness and weight-management goals and is easy to sustain long-term. Low-carb (40/20/40) and keto (25/5/70) cut carbohydrates for people managing blood sugar or following a ketogenic approach, with keto going low enough to typically trigger ketosis. High-protein (40/40/20) favors muscle building or preservation during a calorie deficit, since protein has the highest satiety and helps protect lean mass. If none of the presets fit, choose Custom and drag the three sliders — they always rebalance to add up to 100%, so you can dial in exactly the ratio your coach or dietitian recommends."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does IIFYM mean, and does this calculator support flexible dieting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IIFYM stands for 'if it fits your macros' — a flexible-dieting approach where you can eat any food, as long as its protein, carbs, and fat add up to your daily targets. The Custom split mode is built for exactly this: set your own protein, carb, and fat percentages, for example based on a coach's recommendation, and this macro calculator turns them into grams you can track in any food-logging app. Keep in mind this tool computes calorie and macro targets only — it doesn't account for fiber, micronutrients, or food quality, so IIFYM works best alongside otherwise reasonably nutritious eating rather than as a substitute for it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this medical advice, and does my data leave my browser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No to both. Every calculation — the BMR estimate, the calorie target, and the macro split — runs entirely in your browser using the numbers you type; nothing is uploaded, logged in, or sent to any server, and your last inputs are saved only in your browser's local storage for next time. This calculator provides educational, formula-based estimates for general fitness and nutrition planning, not personalized medical, dietary, or clinical advice — if you have a health condition, are pregnant, or want a plan tailored to you, please consult a doctor or registered dietitian."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Macro Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Macro Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Know your daily calories, or calculate them from your stats — then choose balanced, low-carb, high-protein, keto, or a custom ratio to see exactly how many grams of protein, carbs, and fat to eat each day and at every meal.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite" aria-label="Macro calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .mode-row{display:flex;gap:18px;flex-wrap:wrap;margin:0 0 14px;}
+      #tool .mode-row label{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:14.5px;margin:0;cursor:pointer;}
+      #tool .sex-row{display:flex;gap:14px;flex-wrap:wrap;margin:6px 0 14px;}
+      #tool .sex-row label{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;}
+      #tool .unit-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:14px 0 6px;}
+      #tool .unit-row span[role="radiogroup"]{font-size:13px;white-space:nowrap;}
+      #tool .unit-row label{margin:0;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;}
+      #tool .unit-row label + label{margin-inline-start:12px;}
+      #tool .ht-ft-row{display:flex;gap:8px;}
+      #tool .ratio-row{display:flex;align-items:center;gap:10px;margin:12px 0 0;}
+      #tool .ratio-row label{flex:0 0 76px;margin:0;font-weight:600;font-size:14px;}
+      #tool .ratio-row input[type=range]{flex:1 1 auto;}
+      #tool .ratio-val{flex:0 0 42px;text-align:right;font-weight:700;font-variant-numeric:tabular-nums;}
+      #tool .macro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:12px;}
+      #tool .macro-card{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--surface);}
+      #tool .macro-card .mc-label{font-size:13px;color:var(--muted);font-weight:600;}
+      #tool .macro-card .mc-grams{font-weight:800;font-size:21px;color:var(--accent);font-variant-numeric:tabular-nums;margin-top:2px;}
+      #tool .macro-card .mc-sub{font-size:12px;color:var(--muted);margin-top:2px;}
+      @media(max-width:420px){ #tool .ht-ft-row{flex-wrap:wrap;} }
+    </style>
+
+    <p id="calmode-label" style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.mode.label">Daily calories</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="calmode-label">
+      <label><input type="radio" name="calmode" value="direct" checked style="accent-color:var(--accent);"><span data-i18n="tool.mode.direct">I know my calories</span></label>
+      <label><input type="radio" name="calmode" value="tdee" style="accent-color:var(--accent);"><span data-i18n="tool.mode.tdee">Calculate my calories</span></label>
+    </div>
+
+    <div id="panel-direct">
+      <label for="calories-input" data-i18n="tool.calories.label">Daily calorie target</label>
+      <input type="number" id="calories-input" inputmode="numeric" min="800" max="10000" step="1"
+             placeholder="e.g. 2000" data-i18n-placeholder="tool.calories.ph" autocomplete="off" autofocus>
+    </div>
+
+    <div id="panel-tdee" hidden>
+      <p id="sex-heading" style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.sex.label">Sex</p>
+      <div class="sex-row" role="radiogroup" aria-labelledby="sex-heading">
+        <label><input type="radio" name="sex" value="male" checked style="accent-color:var(--accent);"><span data-i18n="tool.sex.male">Male</span></label>
+        <label><input type="radio" name="sex" value="female" style="accent-color:var(--accent);"><span data-i18n="tool.sex.female">Female</span></label>
+      </div>
+
+      <label for="age-input" data-i18n="tool.age.label">Age (years)</label>
+      <input type="number" id="age-input" inputmode="numeric" min="15" max="100" step="1"
+             placeholder="e.g. 30" data-i18n-placeholder="tool.age.ph">
+
+      <div class="unit-row">
+        <label for="height-cm" style="margin:0;" data-i18n="tool.height.label">Height</label>
+        <span role="radiogroup" aria-label="Height unit">
+          <label><input type="radio" name="hunit" value="cm" checked style="accent-color:var(--accent);"><span data-i18n="tool.unit.cm">cm</span></label>
+          <label><input type="radio" name="hunit" value="ft" style="accent-color:var(--accent);"><span data-i18n="tool.unit.ft">ft / in</span></label>
+        </span>
+      </div>
+      <div id="height-cm-wrap">
+        <input type="number" id="height-cm" inputmode="decimal" min="100" max="250" step="0.1"
+               placeholder="e.g. 170" data-i18n-placeholder="tool.height.ph.cm" aria-label="Height in centimeters">
+      </div>
+      <div id="height-ft-wrap" class="ht-ft-row" hidden>
+        <input type="number" id="height-ft" inputmode="numeric" min="3" max="8" step="1" placeholder="ft" aria-label="Height, feet">
+        <input type="number" id="height-in" inputmode="decimal" min="0" max="11.9" step="0.1" placeholder="in" aria-label="Height, inches">
+      </div>
+
+      <div class="unit-row">
+        <label for="weight-input" style="margin:0;" data-i18n="tool.weight.label">Weight</label>
+        <span role="radiogroup" aria-label="Weight unit">
+          <label><input type="radio" name="wunit" value="kg" checked style="accent-color:var(--accent);"><span data-i18n="tool.unit.kg">kg</span></label>
+          <label><input type="radio" name="wunit" value="lb" style="accent-color:var(--accent);"><span data-i18n="tool.unit.lb">lb</span></label>
+        </span>
+      </div>
+      <input type="number" id="weight-input" inputmode="decimal" min="20" max="300" step="0.1"
+             placeholder="e.g. 65" data-i18n-placeholder="tool.weight.ph" aria-label="Weight">
+
+      <label for="activity-select" data-i18n="tool.activity.label">Activity level</label>
+      <select id="activity-select">
+        <option value="1.2" data-i18n="tool.activity.sedentary">Sedentary (little or no exercise) — ×1.2</option>
+        <option value="1.375" data-i18n="tool.activity.light">Lightly active (1-3 days/week) — ×1.375</option>
+        <option value="1.55" selected data-i18n="tool.activity.moderate">Moderately active (3-5 days/week) — ×1.55</option>
+        <option value="1.725" data-i18n="tool.activity.active">Very active (6-7 days/week) — ×1.725</option>
+        <option value="1.9" data-i18n="tool.activity.veryActive">Extra active (hard exercise + physical job) — ×1.9</option>
+      </select>
+
+      <label for="goal-select" data-i18n="tool.goal.label">Goal</label>
+      <select id="goal-select">
+        <option value="0.8" data-i18n="tool.goal.lose">Lose weight (−20% calories)</option>
+        <option value="1" selected data-i18n="tool.goal.maintain">Maintain weight</option>
+        <option value="1.1" data-i18n="tool.goal.gain">Gain muscle (+10% calories)</option>
+      </select>
+
+      <p id="tdee-note" role="status" style="margin:10px 0 0;font-size:13.5px;color:var(--muted);" hidden></p>
+    </div>
+
+    <label for="preset-select" style="margin-top:18px;" data-i18n="tool.preset.label">Diet split</label>
+    <select id="preset-select">
+      <option value="balanced" selected data-i18n="tool.preset.balanced">Balanced (30/40/30)</option>
+      <option value="lowcarb" data-i18n="tool.preset.lowcarb">Low-carb (40/20/40)</option>
+      <option value="highprotein" data-i18n="tool.preset.highprotein">High-protein (40/40/20)</option>
+      <option value="keto" data-i18n="tool.preset.keto">Keto (25/5/70)</option>
+      <option value="custom" data-i18n="tool.preset.custom">Custom</option>
+    </select>
+
+    <div id="custom-ratios" hidden style="margin-top:4px;">
+      <div class="ratio-row">
+        <label for="ratio-protein" data-i18n="tool.ratio.protein">Protein</label>
+        <input type="range" id="ratio-protein" min="0" max="100" step="1" value="30" style="accent-color:var(--accent);">
+        <span class="ratio-val" id="ratio-protein-val">30%</span>
+      </div>
+      <div class="ratio-row">
+        <label for="ratio-carbs" data-i18n="tool.ratio.carbs">Carbs</label>
+        <input type="range" id="ratio-carbs" min="0" max="100" step="1" value="40" style="accent-color:var(--accent);">
+        <span class="ratio-val" id="ratio-carbs-val">40%</span>
+      </div>
+      <div class="ratio-row">
+        <label for="ratio-fat" data-i18n="tool.ratio.fat">Fat</label>
+        <input type="range" id="ratio-fat" min="0" max="100" step="1" value="30" style="accent-color:var(--accent);">
+        <span class="ratio-val" id="ratio-fat-val">30%</span>
+      </div>
+      <p style="margin:8px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.custom.sumNote">Ratios always add up to 100% — move one slider and the others rebalance automatically.</p>
+    </div>
+
+    <label for="meals-input" style="margin-top:18px;" data-i18n="tool.meals.label">Meals per day</label>
+    <input type="number" id="meals-input" inputmode="numeric" min="1" max="8" step="1" value="3">
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter your daily calories to see your protein, carbs and fat</p>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p id="result-warning" role="status" style="margin:0 0 12px;color:#d97706;font-weight:600;" data-i18n="tool.warning.lowCalorie" hidden>This is a very low calorie target. Consider consulting a healthcare professional.</p>
+
+        <div style="text-align:center;margin-bottom:6px;">
+          <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.calories">Daily calories used</div>
+          <div style="font-weight:800;font-size:32px;color:var(--accent-strong);" id="r-calories"></div>
+        </div>
+
+        <div class="macro-grid">
+          <div class="macro-card">
+            <div class="mc-label" data-i18n="tool.result.protein">Protein</div>
+            <div class="mc-grams" id="mc-protein-g"></div>
+            <div class="mc-sub" id="mc-protein-sub"></div>
+          </div>
+          <div class="macro-card">
+            <div class="mc-label" data-i18n="tool.result.carbs">Carbs</div>
+            <div class="mc-grams" id="mc-carbs-g"></div>
+            <div class="mc-sub" id="mc-carbs-sub"></div>
+          </div>
+          <div class="macro-card">
+            <div class="mc-label" data-i18n="tool.result.fat">Fat</div>
+            <div class="mc-grams" id="mc-fat-g"></div>
+            <div class="mc-sub" id="mc-fat-sub"></div>
+          </div>
+        </div>
+
+        <p style="font-weight:600;font-size:14px;margin:16px 0 8px;" id="per-meal-heading"></p>
+        <div class="macro-grid">
+          <div class="macro-card">
+            <div class="mc-label" data-i18n="tool.result.protein">Protein</div>
+            <div class="mc-grams" id="mc-protein-meal"></div>
+          </div>
+          <div class="macro-card">
+            <div class="mc-label" data-i18n="tool.result.carbs">Carbs</div>
+            <div class="mc-grams" id="mc-carbs-meal"></div>
+          </div>
+          <div class="macro-card">
+            <div class="mc-label" data-i18n="tool.result.fat">Fat</div>
+            <div class="mc-grams" id="mc-fat-meal"></div>
+          </div>
+        </div>
+
+        <p style="margin:16px 0 4px;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.disclaimer">This tool provides educational estimates only — not medical, nutrition, or fitness advice.</p>
+        <p style="margin:0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How many calories are in a gram of protein, carbs, and fat, and why 4/4/9?</summary>
+      <p data-i18n="faq.a1">Protein and carbohydrates each provide about 4 kilocalories per gram, while fat provides about 9 kilocalories per gram — these are the classic Atwater factors used on nutrition labels worldwide. That's why a diet split described in percentages, like 30% protein / 40% carbs / 30% fat, doesn't translate into equal grams: on a 2,000-kcal day, 30% protein is 600 kcal ÷ 4 = 150 g, but 30% fat is 600 kcal ÷ 9 = only 67 g. This macro calculator does that division automatically for every macro, so you get grams you can weigh on a food scale instead of percentages you'd have to convert yourself.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How is my daily calorie target calculated if I don't know it?</summary>
+      <p data-i18n="faq.a2">Switch to the 'Calculate my calories' tab and enter your sex, age, height, and weight. The tool first estimates your basal metabolic rate (BMR) with the Mifflin-St Jeor equation — 10 × weight(kg) + 6.25 × height(cm) − 5 × age, +5 for men or −161 for women — then multiplies it by an activity factor from 1.2 (sedentary) to 1.9 (extra active) to get your total daily energy expenditure. Finally it applies your goal: about 80% of that number for weight loss, 100% to maintain, or roughly 110% for a lean muscle-gain surplus. The result feeds straight into the macro split below, so you never have to copy numbers between calculators.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Which diet split should I choose — balanced, low-carb, high-protein, keto, or custom?</summary>
+      <p data-i18n="faq.a3">Balanced (30% protein / 40% carbs / 30% fat) suits most general fitness and weight-management goals and is easy to sustain long-term. Low-carb (40/20/40) and keto (25/5/70) cut carbohydrates for people managing blood sugar or following a ketogenic approach, with keto going low enough to typically trigger ketosis. High-protein (40/40/20) favors muscle building or preservation during a calorie deficit, since protein has the highest satiety and helps protect lean mass. If none of the presets fit, choose Custom and drag the three sliders — they always rebalance to add up to 100%, so you can dial in exactly the ratio your coach or dietitian recommends.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What does IIFYM mean, and does this calculator support flexible dieting?</summary>
+      <p data-i18n="faq.a4">IIFYM stands for 'if it fits your macros' — a flexible-dieting approach where you can eat any food, as long as its protein, carbs, and fat add up to your daily targets. The Custom split mode is built for exactly this: set your own protein, carb, and fat percentages, for example based on a coach's recommendation, and this macro calculator turns them into grams you can track in any food-logging app. Keep in mind this tool computes calorie and macro targets only — it doesn't account for fiber, micronutrients, or food quality, so IIFYM works best alongside otherwise reasonably nutritious eating rather than as a substitute for it.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is this medical advice, and does my data leave my browser?</summary>
+      <p data-i18n="faq.a5">No to both. Every calculation — the BMR estimate, the calorie target, and the macro split — runs entirely in your browser using the numbers you type; nothing is uploaded, logged in, or sent to any server, and your last inputs are saved only in your browser's local storage for next time. This calculator provides educational, formula-based estimates for general fitness and nutrition planning, not personalized medical, dietary, or clinical advice — if you have a health condition, are pregnant, or want a plan tailored to you, please consult a doctor or registered dietitian.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

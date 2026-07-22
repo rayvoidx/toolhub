@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Calculator — Weighted Class Grade & Letter Grade</title>
+<meta name="description" content="Add each assignment's score and weight % to see your weighted class average and letter grade. Warns if weights don't total 100%. Free, computed in your browser.">
+<meta name="keywords" content="grade calculator, weighted grade calculator, class grade calculator, what is my grade, test grade calculator, 성적 계산기, weighted average calculator">
+<link rel="canonical" href="https://tool-hub.me/grade-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Grade Calculator — Weighted Class Grade & Letter Grade">
+<meta property="og:description" content="Add each assignment's score and weight % to see your weighted class average and letter grade. Warns if weights don't total 100%. Free, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/grade-calc/">
+<meta property="og:image" content="https://tool-hub.me/grade-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c2410c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Grade Calculator",
+  "description": "Add each assignment's score and weight % to see your weighted class average and letter grade. Warns if weights don't total 100%. Free, computed in your browser.",
+  "url": "https://tool-hub.me/grade-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Grade Calculator",
+      "item": "https://tool-hub.me/grade-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate a weighted grade?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply each assignment's score by its weight, add those products together, then divide by the total weight you've entered. For example, Homework at 20% with a 90, a Midterm at 30% with an 82, and a Final at 50% with an 88 gives (90×20 + 82×30 + 88×50) ÷ 100 = 8,660 ÷ 100 = 86.6%, which this calculator would show as a B. The tool does this automatically as you type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if my weights don't add up to 100%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator still works — it divides by whatever total weight you've entered, so the average always reflects the assignments you've actually graded so far. A banner warns you when the total isn't 100%, since that usually means a category is still missing (like a final exam that hasn't happened yet) or a weight was typed wrong. Once you add the remaining categories, the average updates to reflect your full course."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I enter a score as points earned out of points possible?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Type a fraction like 46/50 in the score field and the calculator converts it to a percentage (92%) automatically — you don't need to do the division yourself. You can also type a percentage directly, such as 92 or 92%. Scores above 100 are accepted for extra credit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What letter grade is 91%? Which grading scale does this calculator use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This grade calculator uses a common US 10-point scale: 97+ is A+, 93-96 is A, 90-92 is A-, and so on down through the B, C, D and F ranges in 3-4 point steps, so 91% shows as an A-. Many schools and instructors set their own cutoffs — some skip the +/- grades, some round differently, some pass at 65 instead of 60 — so treat the letter shown here as a reference and check your syllabus for the exact scale your class actually uses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same as a GPA calculator, and is my data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No to both. This tool finds your current average within one class from assignment scores and weights — for GPA across multiple courses using credit hours and 4.0-style grade points, use a dedicated GPA calculator instead. And no, nothing is sent anywhere: every calculation runs in your browser, your assignments are saved only in your device's local storage so they're there next time, and you can erase them anytime with \"Clear all\"."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Grade Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Grade Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Add each assignment's score and weight — see your current weighted class average and letter grade update instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 0; }
+
+      #tool .grade-head { display: flex; gap: 8px; align-items: center; padding: 0 2px 6px; font-size: 12px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+      #tool .grade-h-name { flex: 1 1 140px; }
+      #tool .grade-h-score { flex: 0 0 108px; }
+      #tool .grade-h-weight { flex: 0 0 92px; }
+      #tool .grade-h-rm { flex: 0 0 34px; }
+
+      #tool .grade-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+      #tool .grade-row input { padding: 9px 10px; font-size: 15px; }
+      #tool .grade-name { flex: 1 1 140px; min-width: 110px; width: auto; }
+      #tool .grade-score { flex: 0 0 108px; width: 108px; text-align: center; }
+      #tool .grade-weight { flex: 0 0 92px; width: 92px; text-align: center; }
+      #tool .grade-remove { flex: 0 0 34px; width: 34px; height: 38px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface); color: var(--muted); font-size: 20px; line-height: 1; cursor: pointer; padding: 0; }
+      #tool .grade-remove:hover { border-color: var(--accent); color: var(--accent); }
+
+      #tool .grade-add { margin-top: 4px; padding: 9px 16px; font-size: 14px; font-weight: 700; font-family: inherit; border: 1px dashed var(--line); border-radius: 10px; background: none; color: var(--accent); cursor: pointer; }
+      #tool .grade-add:hover { border-color: var(--accent); }
+
+      #tool .grade-hint { margin: 0; color: var(--muted); }
+      #tool .grade-note { margin: 0 0 10px; font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .grade-note { color: var(--accent); }
+      #tool .grade-heroLabel { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+      #tool .grade-hero-row { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+      #tool .grade-big { font-size: clamp(38px, 10vw, 56px); font-weight: 900; letter-spacing: -0.04em; line-height: 1.1; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .grade-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .grade-big { color: var(--accent); } }
+      #tool .grade-letter { font-size: clamp(26px, 6vw, 34px); font-weight: 900; padding: 2px 14px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); color: var(--ink); }
+      #tool .grade-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin: 16px 0 0; }
+      #tool .grade-cards > div { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+      #tool .grade-cards dt { font-size: 12.5px; font-weight: 700; color: var(--muted); margin: 0 0 4px; }
+      #tool .grade-cards dd { margin: 0; font-size: 18px; font-weight: 800; }
+      #tool .grade-cell-note { display: block; font-size: 12px; font-weight: 600; color: var(--muted); margin-top: 2px; }
+      #tool .grade-warn { margin: 12px 0 0; font-size: 13.5px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .grade-warn { color: var(--accent); }
+      #tool .grade-disclaimer { margin: 14px 0 0; font-size: 12.5px; color: var(--muted); }
+      #tool .grade-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 16px; }
+      #tool .grade-actions .btn { margin-top: 0; }
+      #tool .grade-clear { background: none; border: none; color: var(--muted); font-size: 13.5px; font-family: inherit; font-weight: 600; cursor: pointer; text-decoration: underline; padding: 6px 4px; }
+      #tool .grade-clear:hover { color: var(--accent); }
+      #tool .grade-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .grade-status { color: var(--accent); }
+
+      @media (max-width: 520px) {
+        #tool .grade-head { display: none; }
+        #tool .grade-row { flex-wrap: wrap; position: relative; border: 1px solid var(--line); border-radius: 10px; padding: 10px 44px 10px 10px; }
+        #tool .grade-name { flex: 1 1 100%; }
+        #tool .grade-score { flex: 1 1 90px; width: auto; }
+        #tool .grade-weight { flex: 1 1 74px; width: auto; }
+        #tool .grade-remove { position: absolute; top: 10px; right: 8px; height: 34px; }
+      }
+    </style>
+
+    <div class="grade-head" id="grade-head" aria-hidden="true">
+      <span class="grade-h-name" data-i18n="tool.col.name">Assignment</span>
+      <span class="grade-h-score" data-i18n="tool.col.score">Score</span>
+      <span class="grade-h-weight" data-i18n="tool.col.weight">Weight %</span>
+      <span class="grade-h-rm"></span>
+    </div>
+
+    <div id="grade-rows"></div>
+
+    <button type="button" class="grade-add" id="grade-add"><span data-i18n="tool.add">+ Add assignment</span></button>
+
+    <div class="result" id="grade-result" aria-live="polite">
+      <p class="grade-hint" data-i18n="tool.res.hint">Enter a score and a weight % for at least one assignment to see your grade.</p>
+    </div>
+
+    <div class="grade-actions">
+      <button type="button" class="btn" id="grade-copy" data-i18n="tool.copy">Copy result</button>
+      <button type="button" class="grade-clear" id="grade-clear" data-i18n="tool.clear">Clear all</button>
+      <span class="grade-status" id="grade-status" aria-live="polite"></span>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">How do you calculate a weighted grade?</summary><p data-i18n="faq.a1">Multiply each assignment's score by its weight, add those products together, then divide by the total weight you've entered. For example, Homework at 20% with a 90, a Midterm at 30% with an 82, and a Final at 50% with an 88 gives (90×20 + 82×30 + 88×50) ÷ 100 = 8,660 ÷ 100 = 86.6%, which this calculator would show as a B. The tool does this automatically as you type.</p></details>
+    <details><summary data-i18n="faq.q2">What happens if my weights don't add up to 100%?</summary><p data-i18n="faq.a2">The calculator still works — it divides by whatever total weight you've entered, so the average always reflects the assignments you've actually graded so far. A banner warns you when the total isn't 100%, since that usually means a category is still missing (like a final exam that hasn't happened yet) or a weight was typed wrong. Once you add the remaining categories, the average updates to reflect your full course.</p></details>
+    <details><summary data-i18n="faq.q3">Can I enter a score as points earned out of points possible?</summary><p data-i18n="faq.a3">Yes. Type a fraction like 46/50 in the score field and the calculator converts it to a percentage (92%) automatically — you don't need to do the division yourself. You can also type a percentage directly, such as 92 or 92%. Scores above 100 are accepted for extra credit.</p></details>
+    <details><summary data-i18n="faq.q4">What letter grade is 91%? Which grading scale does this calculator use?</summary><p data-i18n="faq.a4">This grade calculator uses a common US 10-point scale: 97+ is A+, 93-96 is A, 90-92 is A-, and so on down through the B, C, D and F ranges in 3-4 point steps, so 91% shows as an A-. Many schools and instructors set their own cutoffs — some skip the +/- grades, some round differently, some pass at 65 instead of 60 — so treat the letter shown here as a reference and check your syllabus for the exact scale your class actually uses.</p></details>
+    <details><summary data-i18n="faq.q5">Is this the same as a GPA calculator, and is my data sent to a server?</summary><p data-i18n="faq.a5">No to both. This tool finds your current average within one class from assignment scores and weights — for GPA across multiple courses using credit hours and 4.0-style grade points, use a dedicated GPA calculator instead. And no, nothing is sent anywhere: every calculation runs in your browser, your assignments are saved only in your device's local storage so they're there next time, and you can erase them anytime with "Clear all".</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

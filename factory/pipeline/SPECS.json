@@ -1,0 +1,1392 @@
+[
+ {
+  "slug": "mortgage-calc",
+  "name": "Mortgage Calculator",
+  "cat": "finance",
+  "emoji": "🏠",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Loan amount (or home price + down payment), annual interest rate, term in years -> monthly payment, total interest, total paid, and a collapsible full amortization schedule (principal/interest/balance per year with monthly detail optional). Optional extra monthly payment shows interest saved and payoff time cut. Currency-agnostic with currency select.",
+  "keywords": "mortgage calculator, mortgage payment calculator, home loan calculator, amortization calculator, house payment calculator"
+ },
+ {
+  "slug": "compound-interest-calc",
+  "name": "Compound Interest Calculator",
+  "cat": "finance",
+  "emoji": "📈",
+  "color": "#047857",
+  "colorStrong": "#036647",
+  "brief": "Principal, annual rate, years, compounding frequency (daily/monthly/quarterly/annual), optional recurring monthly contribution -> final balance, total contributions, total interest, year-by-year growth table. Show the compound interest formula in FAQ with a worked example.",
+  "keywords": "compound interest calculator, compound interest formula, daily compound interest, monthly compound interest, investment calculator"
+ },
+ {
+  "slug": "pregnancy-due-date-calc",
+  "name": "Pregnancy Due Date Calculator",
+  "cat": "health",
+  "emoji": "🤰",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "Estimate due date from last menstrual period (Naegele's rule, adjustable cycle length), conception date, or IVF transfer date (day-3/day-5). Output: due date, current gestational age in weeks+days, trimester milestones table. Prominent medical disclaimer: estimate only, confirm with healthcare provider.",
+  "keywords": "due date calculator, pregnancy calculator, pregnancy due date, gestational age calculator, when is my baby due"
+ },
+ {
+  "slug": "period-calc",
+  "name": "Period Calculator",
+  "cat": "health",
+  "emoji": "🩸",
+  "color": "#9f1239",
+  "colorStrong": "#820e2f",
+  "brief": "Last period start date, average cycle length, period length -> next 6 period dates, estimated ovulation day and fertile window per cycle. Nothing stored beyond localStorage. Medical disclaimer: cycles vary, not contraception guidance.",
+  "keywords": "period calculator, menstrual cycle calculator, next period calculator, fertile window calculator, period tracker online"
+ },
+ {
+  "slug": "tdee-calc",
+  "name": "TDEE Calculator",
+  "cat": "health",
+  "emoji": "🏃",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Age, sex, height, weight (metric/imperial toggle), activity level (5 tiers) -> TDEE via Mifflin-St Jeor BMR x activity multiplier; show BMR, maintenance, and calorie targets for mild/standard cut and bulk. FAQ explains formula and multipliers. Not medical advice.",
+  "keywords": "tdee calculator, total daily energy expenditure, maintenance calories calculator, calorie calculator, how many calories do I burn a day"
+ },
+ {
+  "slug": "hours-calc",
+  "name": "Hours Calculator",
+  "cat": "date",
+  "emoji": "🕗",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Start time and end time (12h/24h input tolerant) -> duration in hours:minutes and decimal hours; optional unpaid break minutes to subtract; overnight shifts (end before start) handled by rolling to next day. Also a second mode: add/subtract hours and minutes to a time.",
+  "keywords": "hours calculator, time duration calculator, work hours calculator, how many hours between two times, time card hours"
+ },
+ {
+  "slug": "height-conv",
+  "name": "Height Converter",
+  "cat": "units",
+  "emoji": "🧍",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "cm <-> feet+inches instant two-way conversion (type in any field), plus meters and inches-only; common heights quick table (150-200cm). Handles the feet'inches composite format (5'11\") parsing.",
+  "keywords": "cm to feet, height converter, feet to cm, 5 feet 11 in cm, convert height cm to feet and inches"
+ },
+ {
+  "slug": "calculator",
+  "name": "Scientific Calculator",
+  "cat": "utility",
+  "emoji": "🧮",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Full on-screen calculator: basic ops, percent, +/-, parentheses, sqrt, x^y, sin/cos/tan (deg/rad toggle), log/ln, pi/e, memory (M+/M-/MR/MC), keyboard input, calculation history list (last 20, localStorage). Safe expression evaluator written by hand (shunting-yard) - NO eval().",
+  "keywords": "calculator, online calculator, scientific calculator, free calculator online, math calculator"
+ },
+ {
+  "slug": "grade-calc",
+  "name": "Grade Calculator",
+  "cat": "life",
+  "emoji": "🎓",
+  "color": "#c2410c",
+  "colorStrong": "#9a3409",
+  "brief": "Add assignment rows (name, score or percent, weight %) -> current weighted average, letter grade (standard US scale, editable thresholds in FAQ note). Warn if weights don't sum to 100. Rows add/remove dynamically, saved in localStorage.",
+  "keywords": "grade calculator, weighted grade calculator, class grade calculator, what is my grade, test grade calculator"
+ },
+ {
+  "slug": "final-grade-calc",
+  "name": "Final Grade Calculator",
+  "cat": "life",
+  "emoji": "📝",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Current grade %, desired final grade %, final exam weight % -> required score on the final exam. Show interpretation (achievable / impossible >100 / already secured <=0) in friendly wording and a table of required scores for common targets (A/B/C).",
+  "keywords": "final grade calculator, final exam calculator, what do I need on my final, final exam grade needed"
+ },
+ {
+  "slug": "typing-test",
+  "name": "Typing Speed Test",
+  "cat": "life",
+  "emoji": "⌨️",
+  "color": "#7c3aed",
+  "colorStrong": "#6023c9",
+  "brief": "1-minute (selectable 30s/1m/3m) typing test with embedded common-English-word stream; live WPM, accuracy %, correct/wrong chars; per-test random word order; results summary with net WPM formula explained in FAQ. All words baked into JS (no fetch).",
+  "keywords": "typing test, typing speed test, wpm test, words per minute test, free typing test"
+ },
+ {
+  "slug": "image-resizer",
+  "name": "Image Resizer",
+  "cat": "utility",
+  "emoji": "🖼️",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Drop/select an image (jpg/png/webp) -> resize by pixel dimensions (lock aspect ratio toggle) or percentage, choose output format and quality, preview, download. 100% client-side canvas; file never uploaded - state that prominently. Cap input dimension ~8000px with clear message.",
+  "keywords": "image resizer, resize image online, resize photo, change image size, image resize without losing quality"
+ },
+ {
+  "slug": "regex-tester",
+  "name": "Regex Tester",
+  "cat": "dev",
+  "emoji": "🧪",
+  "color": "#6d28d9",
+  "colorStrong": "#5b21b6",
+  "brief": "Pattern input + flags checkboxes (g i m s u y), test string textarea -> live highlighted matches with index/groups list (named groups too), match count, replace preview with $1 substitutions. Clear regex syntax error display. Uses native JS RegExp; note dialect is ECMAScript.",
+  "keywords": "regex tester, regular expression tester, regex online, regex match tester, javascript regex"
+ },
+ {
+  "slug": "name-picker",
+  "name": "Random Name Picker",
+  "cat": "random",
+  "emoji": "🎡",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "Paste names (one per line) -> pick 1 or N random winners with animated suspense reveal; options: remove winner from list after pick, no-repeat rounds. Uses crypto.getRandomValues. Great for giveaways/classrooms - FAQ covers fairness.",
+  "keywords": "random name picker, name picker wheel, random winner generator, pick a random name, giveaway picker"
+ },
+ {
+  "slug": "morse-code-translator",
+  "name": "Morse Code Translator",
+  "cat": "text",
+  "emoji": "📡",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Two-way text <-> Morse (letters, digits, common punctuation), live as you type; play audio of the Morse (WebAudio beeps, adjustable WPM) and flash preview; copy button. Chart of full Morse alphabet in a collapsible section (great for SEO).",
+  "keywords": "morse code translator, morse code converter, text to morse code, morse code alphabet, morse code audio"
+ },
+ {
+  "slug": "image-compressor",
+  "name": "Image Compressor",
+  "cat": "utility",
+  "emoji": "🗜️",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Drop image(s) (jpg/png/webp, up to 10) -> compress via canvas re-encode with quality slider, optional max-dimension downscale; show before/after size and % saved per file; download each or all. 100% client-side, files never leave the browser.",
+  "keywords": "image compressor, compress image online, reduce image size, compress jpg, compress png"
+ },
+ {
+  "slug": "pace-calc",
+  "name": "Running Pace Calculator",
+  "cat": "health",
+  "emoji": "👟",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "Any two of distance (km/mi presets: 5K/10K/half/marathon), time, pace -> compute the third. Show pace in min/km and min/mi, speed km/h + mph, split table for the chosen race distance. Solid time-input parsing (hh:mm:ss).",
+  "keywords": "pace calculator, running pace calculator, marathon pace calculator, min per km to min per mile, race time predictor"
+ },
+ {
+  "slug": "macro-calc",
+  "name": "Macro Calculator",
+  "cat": "health",
+  "emoji": "🍗",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Daily calories (or compute from Mifflin-St Jeor + activity + goal), diet preset (balanced/low-carb/high-protein/keto, or custom ratio sliders summing 100%) -> grams of protein/carbs/fat per day and per meal count. FAQ: kcal per gram (4/4/9) and why. Not medical advice.",
+  "keywords": "macro calculator, macros for weight loss, protein carbs fat calculator, iifym calculator, macro split calculator"
+ },
+ {
+  "slug": "click-speed-test",
+  "name": "Click Speed Test (CPS)",
+  "cat": "life",
+  "emoji": "🖱️",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Click-as-fast-as-you-can test with selectable duration (1/5/10/30/60s, 5s default): live click count, timer, final CPS score with rank labels (turtle..cheetah); best score saved locally; jitter-click safe (counts all pointerdown). Mobile tap support.",
+  "keywords": "click speed test, cps test, clicks per second, click test, kohi click test"
+ },
+ {
+  "slug": "online-notepad",
+  "name": "Online Notepad",
+  "cat": "life",
+  "emoji": "🗒️",
+  "color": "#c2410c",
+  "colorStrong": "#9a3409",
+  "brief": "Distraction-free notepad that autosaves to localStorage as you type (debounced), live word/char count, download as .txt, copy all, clear with confirm, optional monospace toggle and font size. Multiple notes via simple tab list (up to 5). Emphasize: nothing uploaded, survives refresh.",
+  "keywords": "online notepad, free notepad online, quick notes online, text editor online, notepad no login"
+ },
+ {
+  "slug": "lorem-ipsum-gen",
+  "name": "Lorem Ipsum Generator",
+  "cat": "text",
+  "emoji": "📄",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "Generate N paragraphs / sentences / words of classic lorem ipsum (starts with 'Lorem ipsum dolor sit amet' toggle), optional HTML <p> wrapping, copy button, live length stats. Word bank baked in, seeded shuffle for variety.",
+  "keywords": "lorem ipsum generator, placeholder text generator, dummy text generator, lorem ipsum paragraphs, filler text"
+ },
+ {
+  "slug": "text-diff",
+  "name": "Text Diff Checker",
+  "cat": "text",
+  "emoji": "🔍",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Two textareas -> line-based diff (LCS algorithm, hand-written) with added/removed lines highlighted side-by-side stats (n added, n removed, n unchanged); word-level inline highlight within changed lines if feasible; ignore-case and ignore-trailing-space options. All client-side.",
+  "keywords": "text diff, diff checker, compare two texts, text compare online, find difference between two texts"
+ },
+ {
+  "slug": "average-calc",
+  "name": "Average Calculator",
+  "cat": "utility",
+  "emoji": "📊",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Paste or type numbers (comma/space/newline separated, tolerant parsing) -> mean, median, mode(s), range, min, max, sum, count, plus geometric mean. Explanation of mean vs median vs mode in FAQ with example.",
+  "keywords": "average calculator, mean median mode calculator, mean calculator, how to find the average, median calculator"
+ },
+ {
+  "slug": "ratio-calc",
+  "name": "Ratio Calculator",
+  "cat": "utility",
+  "emoji": "⚖️",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Solve proportions A:B = C:D given any three values; simplify a ratio to lowest terms (and 1:n form); scale a ratio by a factor. Three clear tabs. Worked examples in FAQ (recipes, maps, aspect ratios 16:9).",
+  "keywords": "ratio calculator, proportion calculator, ratio simplifier, solve for x proportion, equivalent ratios"
+ },
+ {
+  "slug": "inflation-calc",
+  "name": "Inflation Calculator",
+  "cat": "finance",
+  "emoji": "💸",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Amount, average annual inflation rate %, years -> future purchasing power (what today's money will be worth) and reverse mode (what past money equals today) using compound decay/growth; table per year. Generic rate-based (no CPI database) - FAQ explains how to find your country's rate and that this is rate-based math, not official CPI data.",
+  "keywords": "inflation calculator, purchasing power calculator, future value of money, what will money be worth, inflation rate calculator"
+ },
+ {
+  "slug": "sales-tax-calc",
+  "name": "Sales Tax Calculator",
+  "cat": "finance",
+  "emoji": "🛒",
+  "color": "#047857",
+  "colorStrong": "#036647",
+  "brief": "Price + sales tax rate % -> tax amount and total; reverse mode: total-with-tax -> pre-tax price (extract tax). Quick-pick common rates chips (5, 6, 7, 7.25, 8, 8.875, 10). Currency-agnostic. FAQ: add vs extract formulas with examples.",
+  "keywords": "sales tax calculator, sales tax calculator by price, reverse sales tax calculator, tax calculator, how much is tax"
+ },
+ {
+  "slug": "vat-calc",
+  "name": "VAT Calculator",
+  "cat": "finance",
+  "emoji": "🧾",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Add VAT to a net price or remove VAT from a gross price at any rate; quick chips for common rates (5, 7, 10, 15, 19, 20, 21, 25). Show net/VAT/gross breakdown clearly. FAQ: gross-to-net formula (divide by 1+rate, not subtract rate%) - the classic mistake.",
+  "keywords": "vat calculator, add vat, remove vat calculator, vat inclusive exclusive, reverse vat calculator"
+ },
+ {
+  "slug": "gst-calc",
+  "name": "GST Calculator",
+  "cat": "finance",
+  "emoji": "🧮",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Add or remove GST at any rate with quick chips for India slabs (5, 12, 18, 28) plus AU/NZ/SG (10, 15, 9); India mode shows CGST/SGST split (half each). Net/GST/gross breakdown. FAQ: inclusive vs exclusive formulas, CGST vs SGST vs IGST briefly.",
+  "keywords": "gst calculator, gst calculator india, add gst, remove gst, cgst sgst calculator, 18 percent gst"
+ },
+ {
+  "slug": "roi-calc",
+  "name": "ROI Calculator",
+  "cat": "finance",
+  "emoji": "💹",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Amount invested and amount returned (or gain) -> ROI %, net profit, and annualized ROI if holding period given (link concept to CAGR). Negative ROI handled and shown in red. FAQ: ROI formula, ROI vs annualized return with worked example.",
+  "keywords": "roi calculator, return on investment calculator, roi formula, investment return calculator, annualized roi"
+ },
+ {
+  "slug": "hourly-to-salary-calc",
+  "name": "Hourly to Salary Calculator",
+  "cat": "finance",
+  "emoji": "⏰",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "Hourly wage + hours/week + weeks/year (default 40, 52) -> weekly, monthly, annual gross pay; reverse tab: salary -> hourly rate. Currency-agnostic. FAQ: 2080-hour year convention, part-time math, gross vs net note.",
+  "keywords": "hourly to salary, salary to hourly calculator, hourly wage calculator, annual salary calculator, what is my salary hourly"
+ },
+ {
+  "slug": "date-add-calc",
+  "name": "Date Calculator (Add Days)",
+  "cat": "date",
+  "emoji": "➕",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Start date +/- N days/weeks/months/years -> resulting date with weekday; business-days-only toggle (skips weekends); shows intermediate summary sentence ('30 days from today is ...'). Defaults to today. Month-end edge cases (Jan 31 + 1 month) explained in FAQ.",
+  "keywords": "date calculator, days from today, add days to date, 30 days from today, what date is 90 days from now"
+ },
+ {
+  "slug": "timesheet-calc",
+  "name": "Time Card Calculator",
+  "cat": "date",
+  "emoji": "🗂️",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Weekly time card: 7 day rows with start, end, break minutes -> daily hours and weekly total (decimal + hh:mm); optional hourly rate -> gross pay with overtime rule (over 40h/week at 1.5x toggle). Print-friendly. Saves to localStorage.",
+  "keywords": "time card calculator, timesheet calculator, work hours calculator weekly, payroll hours calculator, timesheet with lunch break"
+ },
+ {
+  "slug": "alarm-clock",
+  "name": "Online Alarm Clock",
+  "cat": "date",
+  "emoji": "⏰",
+  "color": "#7c3aed",
+  "colorStrong": "#6023c9",
+  "brief": "Set alarm time (quick presets + custom), big live clock display; rings with WebAudio tone + optional browser Notification (request permission gracefully); snooze 5min; must state clearly the tab has to stay open. Multiple alarms (up to 5) saved locally.",
+  "keywords": "online alarm clock, alarm clock online free, set alarm, wake me up at, alarm for 7am"
+ },
+ {
+  "slug": "metronome",
+  "name": "Online Metronome",
+  "cat": "life",
+  "emoji": "🎵",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "BPM 30-260 with slider + tap-tempo button, time signatures (2/4 3/4 4/4 6/8) with accented downbeat, WebAudio precise scheduling (lookahead scheduler - not setInterval naive), visual beat indicator. Common tempo markings table (largo..presto) for SEO.",
+  "keywords": "metronome online, free metronome, metronome 120 bpm, tap tempo, online metronome with sound"
+ },
+ {
+  "slug": "subnet-calc",
+  "name": "IP Subnet Calculator",
+  "cat": "dev",
+  "emoji": "🌐",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "IPv4 address + CIDR prefix (or netmask) -> network address, broadcast, first/last usable host, usable host count, wildcard mask, binary visualization of the mask boundary. CIDR table /8../32 in collapsible. Handles /31 /32 special cases correctly.",
+  "keywords": "subnet calculator, ip subnet calculator, cidr calculator, subnet mask calculator, ipv4 calculator"
+ },
+ {
+  "slug": "jwt-decoder",
+  "name": "JWT Decoder",
+  "cat": "dev",
+  "emoji": "🔑",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "Paste a JWT -> decoded header and payload pretty-printed JSON, expiry check (exp/iat/nbf shown as local datetimes with expired/valid badge). Decode only - explicitly states signature is NOT verified and token never leaves the browser. Handles base64url + padding.",
+  "keywords": "jwt decoder, decode jwt, jwt debugger, jwt token decoder online, view jwt payload"
+ },
+ {
+  "slug": "standard-deviation-calc",
+  "name": "Standard Deviation Calculator",
+  "cat": "utility",
+  "emoji": "📉",
+  "color": "#6d28d9",
+  "colorStrong": "#5b21b6",
+  "brief": "Paste numbers -> sample and population standard deviation, variance, mean, n, sum of squares; step-by-step breakdown table (deviation, squared) collapsible; sample-vs-population difference (n-1 vs n) explained in FAQ.",
+  "keywords": "standard deviation calculator, sample standard deviation, population standard deviation, variance calculator, std dev"
+ },
+ {
+  "slug": "square-root-calc",
+  "name": "Square Root Calculator",
+  "cat": "utility",
+  "emoji": "√",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Number -> square root (exact if perfect square, else rounded with precision select), also cube root and nth root mode; simplify-radical output for integers (sqrt(72) = 6 sqrt(2)); perfect squares table 1-25 for SEO. Negative input -> friendly imaginary note.",
+  "keywords": "square root calculator, sqrt calculator, cube root calculator, simplify square roots, square root of 2"
+ },
+ {
+  "slug": "random-team-gen",
+  "name": "Random Team Generator",
+  "cat": "random",
+  "emoji": "👥",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Paste names -> split into N teams or teams of size K, fair random shuffle (Fisher-Yates, crypto random), re-shuffle button, optional team names, copy results. Uneven splits distribute extras evenly - explained.",
+  "keywords": "random team generator, team randomizer, group generator, split into teams, random group maker"
+ },
+ {
+  "slug": "dog-age-calc",
+  "name": "Dog Age Calculator",
+  "cat": "health",
+  "emoji": "🐕",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Dog age (+ months) and size class (small/medium/large/giant) -> human-year equivalent using modern vet size-based tables (NOT the 7x myth - debunk it in FAQ); life-stage label (puppy/adult/senior); reverse mode fun. Includes the 2020 epigenetic ln-formula as an alternative curve for adult dogs.",
+  "keywords": "dog age calculator, dog years to human years, how old is my dog in human years, dog age chart, 7 dog years myth"
+ },
+ {
+  "slug": "cat-age-calc",
+  "name": "Cat Age Calculator",
+  "cat": "health",
+  "emoji": "🐈",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "Cat age -> human years using vet convention (year1=15, year2=+9, each after=+4), indoor/outdoor note, life-stage label (kitten/junior/adult/mature/senior/geriatric per feline guidelines); reverse mode. Chart table for SEO.",
+  "keywords": "cat age calculator, cat years to human years, how old is my cat, cat age chart, cat years"
+ },
+ {
+  "slug": "heart-rate-zone-calc",
+  "name": "Heart Rate Zone Calculator",
+  "cat": "health",
+  "emoji": "❤️",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "Age (+ optional resting HR for Karvonen method) -> max HR (220-age default, Tanaka option) and 5 training zones table (Z1-Z5 with % ranges, bpm ranges, what each zone trains). FAQ: Karvonen vs simple %, fat-burn zone myth-busting. Not medical advice.",
+  "keywords": "heart rate zones, target heart rate calculator, max heart rate by age, zone 2 training heart rate, karvonen formula"
+ },
+ {
+  "slug": "one-rep-max-calc",
+  "name": "One Rep Max Calculator",
+  "cat": "health",
+  "emoji": "🏋️",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Weight lifted x reps (1-15) -> estimated 1RM via Epley, Brzycki, Lombardi, O'Conner side by side + average; percentage table (50-95% of 1RM with typical rep targets) for programming. kg/lb toggle. Safety note: estimates degrade past ~10 reps.",
+  "keywords": "one rep max calculator, 1rm calculator, bench press max calculator, epley formula, squat 1rm"
+ },
+ {
+  "slug": "protein-intake-calc",
+  "name": "Protein Intake Calculator",
+  "cat": "health",
+  "emoji": "🥩",
+  "color": "#9f1239",
+  "colorStrong": "#820e2f",
+  "brief": "Weight (kg/lb), activity/goal (sedentary/active/muscle gain/weight loss/endurance) -> daily protein range in grams (g/kg guidelines 0.8-2.2 by tier), per-meal split, food-equivalent examples (chicken breast, eggs, tofu). Sources: general sports-nutrition guidance; not medical advice.",
+  "keywords": "protein calculator, how much protein do I need, protein intake per day, protein per kg body weight, grams of protein"
+ },
+ {
+  "slug": "calorie-deficit-calc",
+  "name": "Calorie Deficit Calculator",
+  "cat": "health",
+  "emoji": "📉",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Stats -> TDEE (Mifflin-St Jeor), target weight loss rate (0.25/0.5/0.75/1 kg per week) -> daily calorie target and estimated timeline to goal weight; the 7700 kcal/kg (3500/lb) rule with its caveats honestly explained; floor warning below 1200/1500 kcal advising professional guidance. Not medical advice.",
+  "keywords": "calorie deficit calculator, weight loss calculator, how many calories to lose weight, calorie deficit for weight loss, deficit calculator"
+ },
+ {
+  "slug": "blood-sugar-conv",
+  "name": "Blood Sugar Converter",
+  "cat": "health",
+  "emoji": "🩸",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "mg/dL <-> mmol/L two-way instant conversion (factor 18.016), with reference range table (fasting/post-meal, normal/prediabetes/diabetes thresholds per common guidelines) clearly labeled educational-only. Quick common values chart for SEO.",
+  "keywords": "blood sugar converter, mg/dl to mmol/l, mmol to mg/dl, blood glucose conversion, 126 mg/dl in mmol"
+ },
+ {
+  "slug": "a1c-calc",
+  "name": "A1C to Average Blood Sugar",
+  "cat": "health",
+  "emoji": "💉",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "A1C % <-> estimated average glucose (eAG) both mg/dL and mmol/L (ADA formula eAG = 28.7 x A1C - 46.7), two-way; reference table A1C 5-12%; also A1C % <-> mmol/mol (IFCC). Educational only, strong medical disclaimer.",
+  "keywords": "a1c calculator, a1c to blood sugar, estimated average glucose, a1c conversion chart, what does a1c 7 mean"
+ },
+ {
+  "slug": "steps-to-miles-calc",
+  "name": "Steps to Miles Calculator",
+  "cat": "health",
+  "emoji": "🚶",
+  "color": "#047857",
+  "colorStrong": "#036647",
+  "brief": "Steps count + height (or custom stride length) -> distance in miles and km, estimated walking calories (MET-based rough), time at average pace; reverse: distance -> steps. 10,000 steps context in FAQ. Chart 1k-20k steps for SEO.",
+  "keywords": "steps to miles, 10000 steps in miles, steps to km, how many steps in a mile, steps calculator"
+ },
+ {
+  "slug": "blood-pressure-checker",
+  "name": "Blood Pressure Checker",
+  "cat": "health",
+  "emoji": "🫀",
+  "color": "#9f1239",
+  "colorStrong": "#820e2f",
+  "brief": "Systolic/diastolic input -> category per ACC/AHA (normal/elevated/stage1/stage2/crisis) with color-coded result and full category chart; crisis values show urgent-care warning. Educational only - not a diagnosis; measurement tips in FAQ.",
+  "keywords": "blood pressure chart, blood pressure calculator, is 130/85 high, normal blood pressure by age, blood pressure categories"
+ },
+ {
+  "slug": "waist-hip-ratio-calc",
+  "name": "Waist to Hip Ratio Calculator",
+  "cat": "health",
+  "emoji": "📏",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Waist and hip measurements (cm/in) -> WHR with WHO risk categories by sex (table), how-to-measure guidance with common mistakes, comparison vs BMI in FAQ. Educational only.",
+  "keywords": "waist to hip ratio, whr calculator, waist hip ratio chart, healthy waist to hip ratio, body shape calculator"
+ },
+ {
+  "slug": "week-number-check",
+  "name": "Week Number Today",
+  "cat": "date",
+  "emoji": "📆",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Shows current ISO 8601 week number prominently on load; date picker -> week number of any date; year overview table of all weeks with date ranges; ISO edge rules (week 1 = week with first Thursday; Dec 29-31 can be week 1) explained. Hand-write ISO week algorithm carefully.",
+  "keywords": "week number, what week is it, current week number, iso week, week number today"
+ },
+ {
+  "slug": "military-time-conv",
+  "name": "Military Time Converter",
+  "cat": "date",
+  "emoji": "🎖️",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "12h AM/PM <-> 24h military time two-way converter with tolerant parsing (0930, 21:45, 9.45pm); full 24-hour conversion chart (huge SEO win); how to say times aloud (oh-nine-hundred / 2130 hours) and midnight 0000 vs 2400 in FAQ.",
+  "keywords": "military time converter, military time chart, 24 hour clock converter, 1500 military time, what is 2130 in normal time"
+ },
+ {
+  "slug": "leap-year-checker",
+  "name": "Leap Year Checker",
+  "cat": "date",
+  "emoji": "📅",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Enter a year -> is it a leap year with the rule breakdown shown (div by 4, except 100, except 400); list of leap years in any range; next/previous leap year from today; Feb 29 birthday fun-facts FAQ.",
+  "keywords": "leap year checker, is 2028 a leap year, leap years list, when is the next leap year, leap year rules"
+ },
+ {
+  "slug": "zodiac-sign-calc",
+  "name": "Zodiac Sign Calculator",
+  "cat": "date",
+  "emoji": "♈",
+  "color": "#7c3aed",
+  "colorStrong": "#6023c9",
+  "brief": "Birth date -> Western zodiac sign with date-range table of all 12 signs, element (fire/earth/air/water), modality, brief neutral trait blurb per sign (entertainment framing); cusp dates note. Clearly labeled for-fun/entertainment.",
+  "keywords": "zodiac sign calculator, what is my zodiac sign, star sign by date of birth, zodiac dates, horoscope signs"
+ },
+ {
+  "slug": "chinese-zodiac-calc",
+  "name": "Chinese Zodiac Calculator",
+  "cat": "date",
+  "emoji": "🐉",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Birth year (and month/day for Lunar New Year boundary handling via lookup table 1930-2030 of LNY dates) -> animal + element (five-element cycle), years table of all 12 animals, compatibility-lite fun notes. Entertainment framing; LNY boundary caveat explained.",
+  "keywords": "chinese zodiac calculator, what is my chinese zodiac, year of the dragon, chinese zodiac years chart, chinese new year animal"
+ },
+ {
+  "slug": "moon-phase-calc",
+  "name": "Moon Phase Calculator",
+  "cat": "date",
+  "emoji": "🌙",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "Today's moon phase on load (synodic month algorithm from known new-moon epoch, ~1 day accuracy - state approximation honestly), any date lookup, illumination % estimate, next full/new moon dates, 8-phase visual glyphs (unicode moon emojis), phase-names explainer for SEO.",
+  "keywords": "moon phase today, current moon phase, full moon calendar, what phase is the moon in, next full moon"
+ },
+ {
+  "slug": "cooking-conv",
+  "name": "Cooking Measurement Converter",
+  "cat": "units",
+  "emoji": "🥄",
+  "color": "#c2410c",
+  "colorStrong": "#9a3409",
+  "brief": "Cups/tbsp/tsp/ml/l/fl-oz volume conversion PLUS volume<->weight for common ingredients (flour, sugar, butter, rice, milk, water... ~15 with baked density table); US vs metric cup note (240 vs 250ml); butter sticks. Chart of cups-to-grams for flour/sugar (top SEO query).",
+  "keywords": "cups to grams, cooking converter, tablespoon to ml, cups to ml, grams to cups flour, baking conversion chart"
+ },
+ {
+  "slug": "fuel-economy-conv",
+  "name": "Fuel Economy Converter",
+  "cat": "units",
+  "emoji": "⛽",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "MPG (US) <-> MPG (UK) <-> L/100km <-> km/L four-way instant conversion (type any field); note that L/100km is inverse (lower=better); comparison table of common values; formulas in FAQ.",
+  "keywords": "mpg to l/100km, fuel economy converter, km/l to mpg, l/100km to mpg, fuel consumption converter"
+ },
+ {
+  "slug": "pressure-conv",
+  "name": "Pressure Converter",
+  "cat": "units",
+  "emoji": "🔩",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Type once -> Pa, kPa, MPa, bar, psi, atm, mmHg(Torr), inHg all update instantly (same pattern as existing unit converters); common reference points (tire pressure, atmosphere, blood pressure) in FAQ.",
+  "keywords": "pressure converter, psi to bar, bar to psi, kpa to psi, mmhg to atm"
+ },
+ {
+  "slug": "energy-conv",
+  "name": "Energy Converter",
+  "cat": "units",
+  "emoji": "⚡",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Joule, kJ, calorie, kcal, Wh, kWh, BTU, ft-lb instant multi-field conversion; food-calorie (kcal) vs small calorie trap explained in FAQ; common examples (1 kWh in kJ, banana in kJ).",
+  "keywords": "energy converter, kj to calories, calories to joules, kwh to btu, joules to kcal"
+ },
+ {
+  "slug": "power-conv",
+  "name": "Power Converter",
+  "cat": "units",
+  "emoji": "🔌",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Watt, kW, MW, metric horsepower (PS), mechanical hp, BTU/h, ft-lb/s instant multi-field conversion; hp vs PS difference in FAQ (745.7 vs 735.5 W); car and appliance examples.",
+  "keywords": "power converter, hp to kw, kw to hp, watts to horsepower, ps to hp"
+ },
+ {
+  "slug": "shoe-size-conv",
+  "name": "Shoe Size Converter",
+  "cat": "units",
+  "emoji": "👟",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "US men / US women / UK / EU / cm(JP) / foot-length conversion with sex selector and full lookup tables (baked, adult men+women+kids); measure-your-foot guide; brand-variance caveat. Table-driven (not formula) for accuracy; big charts = SEO.",
+  "keywords": "shoe size converter, us to eu shoe size, uk to us shoe size, shoe size chart, cm to shoe size"
+ },
+ {
+  "slug": "ring-size-conv",
+  "name": "Ring Size Converter",
+  "cat": "units",
+  "emoji": "💍",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "US/CA <-> UK/AU letters <-> EU(ISO circumference mm) <-> JP <-> inside diameter mm conversion via baked lookup table; how-to-measure at home (string/existing ring) guide; half-sizes handled. Full chart displayed = SEO.",
+  "keywords": "ring size converter, ring size chart, us to eu ring size, measure ring size, ring size in mm"
+ },
+ {
+  "slug": "oven-temp-conv",
+  "name": "Oven Temperature Converter",
+  "cat": "units",
+  "emoji": "🍞",
+  "color": "#c2410c",
+  "colorStrong": "#9a3409",
+  "brief": "Fahrenheit <-> Celsius <-> Gas Mark <-> fan/convection oven adjustment (-20C convention) converter with full chart (gas 1/4 .. 10); descriptive labels (very slow..very hot); baking temp tips FAQ.",
+  "keywords": "oven temperature conversion, 180 c to f, gas mark to celsius, fan oven conversion, 350 f in celsius"
+ },
+ {
+  "slug": "angle-conv",
+  "name": "Angle Converter",
+  "cat": "units",
+  "emoji": "📐",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "Degrees <-> radians <-> gradians <-> turns instant multi-field; exact-form radian display for common angles (30deg = pi/6); unit-circle common-angles table; deg-min-sec input/output mode.",
+  "keywords": "degrees to radians, radians to degrees, angle converter, rad to deg, 45 degrees in radians"
+ },
+ {
+  "slug": "remove-line-breaks",
+  "name": "Remove Line Breaks",
+  "cat": "text",
+  "emoji": "↩️",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Paste text -> remove all line breaks (join with space or nothing - option), or smart mode: keep paragraph breaks (blank lines) but unwrap hard-wrapped lines (PDF copy-paste fix). Live output, copy button, before/after counts.",
+  "keywords": "remove line breaks, remove line breaks from text, line break remover, remove enter from text, pdf copy paste fix"
+ },
+ {
+  "slug": "remove-duplicate-lines",
+  "name": "Remove Duplicate Lines",
+  "cat": "text",
+  "emoji": "🧹",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Paste lines -> dedupe preserving first-occurrence order; options: case-insensitive, trim whitespace before compare, also-sort output, show-only-duplicates mode; stats (n removed / n unique). Copy button.",
+  "keywords": "remove duplicate lines, duplicate line remover, remove duplicates from list, dedupe text, unique lines"
+ },
+ {
+  "slug": "sort-lines",
+  "name": "Alphabetical Order Tool",
+  "cat": "text",
+  "emoji": "🔤",
+  "color": "#7c3aed",
+  "colorStrong": "#6023c9",
+  "brief": "Paste lines -> sort A-Z / Z-A / natural (numbers aware: item2 < item10) / by length / random shuffle / reverse current order; case-sensitivity toggle; ignore-articles (a/an/the) option for title sorting; copy. Uses localeCompare.",
+  "keywords": "alphabetical order, sort alphabetically, abc order, sort lines online, alphabetize list"
+ },
+ {
+  "slug": "reverse-text",
+  "name": "Reverse Text Generator",
+  "cat": "text",
+  "emoji": "🔁",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "Reverse characters / reverse word order / reverse letters within each word (three modes), live as you type, copy button. Unicode-safe reversal (Array.from for surrogate pairs so emoji don't break) - mention in FAQ.",
+  "keywords": "reverse text, backwards text generator, mirror text, reverse words, flip text backwards"
+ },
+ {
+  "slug": "find-replace-text",
+  "name": "Find and Replace Text",
+  "cat": "text",
+  "emoji": "🔎",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Textarea + find + replace fields -> replace all with options: case-sensitive, whole word, regex mode (with error display); live match count highlight preview before applying; undo one level; copy result.",
+  "keywords": "find and replace online, replace text online, find and replace tool, bulk replace text, search and replace"
+ },
+ {
+  "slug": "whitespace-remover",
+  "name": "Extra Space Remover",
+  "cat": "text",
+  "emoji": "✂️",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Clean text: collapse multiple spaces to one, trim line edges, remove tabs, remove blank lines, remove ALL whitespace (checkbox matrix of operations applied in order); handles non-breaking/zero-width spaces (mention!); before/after char counts; copy.",
+  "keywords": "remove extra spaces, whitespace remover, remove spaces from text, clean up text, remove double spaces"
+ },
+ {
+  "slug": "binary-text-conv",
+  "name": "Binary Translator",
+  "cat": "text",
+  "emoji": "💻",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Text <-> binary (UTF-8 bytes, space-separated bytes) two-way live; also text <-> hex and text <-> ASCII decimal codes as extra tabs; tolerant binary parsing (ignores whitespace, validates 8-bit groups); 'hello in binary' style examples chart for SEO.",
+  "keywords": "binary translator, text to binary, binary to text, binary code translator, hello in binary"
+ },
+ {
+  "slug": "upside-down-text",
+  "name": "Upside Down Text Generator",
+  "cat": "text",
+  "emoji": "🙃",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "Type text -> upside-down (flipped char map + reversed order), mirrored, and small-caps variants with one-click copy per card; note these are Unicode lookalike chars (may not render everywhere, screen-reader caveat - be honest in FAQ).",
+  "keywords": "upside down text, flip text, upside down text generator, flipped text copy paste, text flipper"
+ },
+ {
+  "slug": "random-word-gen",
+  "name": "Random Word Generator",
+  "cat": "text",
+  "emoji": "🎲",
+  "color": "#047857",
+  "colorStrong": "#036647",
+  "brief": "Generate N random words with filters: nouns/verbs/adjectives/any (baked categorized wordlist ~1200 common English words), starting letter, word length range; copy list; uses crypto random. Use cases (pictionary, passwords, brainstorming) in FAQ.",
+  "keywords": "random word generator, random noun generator, random words, word generator, pictionary word generator"
+ },
+ {
+  "slug": "text-to-speech",
+  "name": "Text to Speech",
+  "cat": "text",
+  "emoji": "🔊",
+  "color": "#6d28d9",
+  "colorStrong": "#5b21b6",
+  "brief": "Textarea -> speak via browser speechSynthesis: voice picker (grouped by language, populated from getVoices with async handling), rate/pitch sliders, play/pause/stop, word highlight if boundary events available. Honest caveats: voices vary by device/browser, no audio download (browser API limitation).",
+  "keywords": "text to speech, text to speech online free, tts online, read text aloud, text reader"
+ },
+ {
+  "slug": "html-entity-conv",
+  "name": "HTML Entity Encoder / Decoder",
+  "cat": "dev",
+  "emoji": "🔣",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Two-way: encode special chars to entities (named where they exist - &amp;, &lt;, &copy; - else numeric, 'encode all non-ASCII' toggle) and decode any entity soup back to text (via textarea DOM trick, safely). Live, copy buttons, common entities reference table for SEO.",
+  "keywords": "html entity encoder, html decode, html entities converter, escape html, &amp;amp; decode"
+ },
+ {
+  "slug": "css-minifier",
+  "name": "CSS Minifier",
+  "cat": "dev",
+  "emoji": "🧰",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "Paste CSS -> minified (strip comments/whitespace/last-semicolons, shorten 6-digit hex to 3 where safe, remove units on zero) with size before/after and % saved; also a beautify mode (re-indent). Careful string-aware tokenizing so url() and content:'' aren't mangled.",
+  "keywords": "css minifier, minify css, css compressor, css beautifier, unminify css"
+ },
+ {
+  "slug": "json-to-csv",
+  "name": "JSON to CSV Converter",
+  "cat": "dev",
+  "emoji": "📊",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Paste JSON array of objects -> CSV with union-of-keys headers, nested objects flattened with dot notation (1 level deep min), proper RFC4180 quoting/escaping; delimiter select (comma/semicolon/tab); download .csv + copy; clear error line reporting for invalid JSON.",
+  "keywords": "json to csv, json to csv converter, convert json to excel, json array to csv, json to spreadsheet"
+ },
+ {
+  "slug": "csv-to-json",
+  "name": "CSV to JSON Converter",
+  "cat": "dev",
+  "emoji": "📋",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Paste CSV (or open .csv file) -> JSON array of objects using header row (toggle: no header -> arrays), proper quoted-field parsing (hand-written RFC4180 state machine - commas/newlines/quotes inside quotes), delimiter auto-detect (comma/semicolon/tab), type inference toggle (numbers/booleans), pretty/minified output, download.",
+  "keywords": "csv to json, csv to json converter, convert csv to json online, csv parser, csv to json array"
+ },
+ {
+  "slug": "sql-formatter",
+  "name": "SQL Formatter",
+  "cat": "dev",
+  "emoji": "🗄️",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Paste SQL -> formatted with keyword-based line breaking and indentation (SELECT/FROM/WHERE/JOIN/GROUP BY/ORDER BY etc.), keyword case option (UPPER/lower/unchanged), string-literal and comment aware tokenizer (don't break inside quotes); minify mode too. Honest scope: formatter, not a validator/parser of every dialect.",
+  "keywords": "sql formatter, format sql online, sql beautifier, pretty print sql, sql query formatter"
+ },
+ {
+  "slug": "xml-formatter",
+  "name": "XML Formatter",
+  "cat": "dev",
+  "emoji": "📰",
+  "color": "#7c3aed",
+  "colorStrong": "#6023c9",
+  "brief": "Paste XML -> pretty-print with indent select (2/4/tab) using DOMParser + hand-written serializer (preserve CDATA/comments), validation errors surfaced from parsererror with line hint, minify mode, copy/download. ",
+  "keywords": "xml formatter, format xml online, xml beautifier, pretty print xml, xml validator"
+ },
+ {
+  "slug": "markdown-preview",
+  "name": "Markdown Preview",
+  "cat": "dev",
+  "emoji": "📝",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Split-pane live Markdown editor+preview. Hand-written mini renderer: headings, bold/italic/strikethrough, links, images, inline code, fenced code blocks, blockquotes, hr, ordered/unordered/nested lists, tables. XSS-safe (escape HTML first, render from tokens; no raw HTML passthrough - say so). Copy rendered HTML source button. Cheat-sheet table = SEO.",
+  "keywords": "markdown preview, markdown editor online, markdown to html, md preview, markdown cheat sheet"
+ },
+ {
+  "slug": "cron-parser",
+  "name": "Cron Expression Parser",
+  "cat": "dev",
+  "emoji": "⏲️",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "5-field cron expression -> plain-English description + next 5 run times (hand-written matcher iterating minutes, handles ranges/steps/lists/names like MON,JAN); common-expressions table (@hourly equivalents, every 5 min, weekdays 9am...); field-by-field breakdown UI; validation errors precise.",
+  "keywords": "cron expression, cron parser, crontab generator, cron every 5 minutes, cron syntax explained"
+ },
+ {
+  "slug": "chmod-calc",
+  "name": "Chmod Calculator",
+  "cat": "dev",
+  "emoji": "🔐",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Checkbox grid (owner/group/other x read/write/execute) <-> octal (755) <-> symbolic (rwxr-xr-x) all synced live; common permissions table (644, 755, 600, 777 with use cases and 777 warning); special bits (setuid/setgid/sticky) advanced toggle.",
+  "keywords": "chmod calculator, chmod 755, file permissions calculator, chmod generator, rwx to octal"
+ },
+ {
+  "slug": "color-contrast-checker",
+  "name": "Color Contrast Checker",
+  "cat": "dev",
+  "emoji": "♿",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Foreground + background color inputs (hex/rgb with color pickers) -> WCAG contrast ratio with pass/fail badges for AA/AAA normal/large text, live text preview at both sizes, one-click swap, suggestions (lighten/darken until pass shows nearest passing shade). Relative-luminance formula in FAQ.",
+  "keywords": "color contrast checker, wcag contrast checker, contrast ratio, accessibility color checker, aa aaa contrast"
+ },
+ {
+  "slug": "gradient-generator",
+  "name": "CSS Gradient Generator",
+  "cat": "dev",
+  "emoji": "🌈",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "Visual builder: 2-5 color stops with position sliders, linear (angle dial) / radial / conic types, live full-width preview, generated CSS (background-image with fallback color) with copy; random-gradient inspiration button; a few preset palettes.",
+  "keywords": "css gradient generator, gradient generator, linear gradient css, gradient background css, radial gradient"
+ },
+ {
+  "slug": "box-shadow-generator",
+  "name": "Box Shadow Generator",
+  "cat": "dev",
+  "emoji": "🔲",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "Sliders for x/y offset, blur, spread, color+alpha, inset toggle, multiple layered shadows (add/remove, up to 4) -> live preview card on adjustable background + copy CSS. Preset gallery (soft/material/neumorphic/hard).",
+  "keywords": "box shadow generator, css box shadow, box shadow css generator, shadow generator, css shadow examples"
+ },
+ {
+  "slug": "meta-tag-generator",
+  "name": "Meta Tag Generator",
+  "cat": "dev",
+  "emoji": "🏷️",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Form (title, description, canonical URL, og:image URL, twitter card type, robots) -> generated HTML meta/OG/Twitter tag block with copy; live Google-SERP-style and social-card-style preview boxes (pure CSS mock); char-count meters with recommended limits (title ~60, desc ~160).",
+  "keywords": "meta tag generator, og tag generator, open graph generator, seo meta tags, twitter card generator"
+ },
+ {
+  "slug": "number-base-conv",
+  "name": "Number Base Converter",
+  "cat": "dev",
+  "emoji": "🔢",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Binary <-> octal <-> decimal <-> hex four synced fields (type in any), plus custom base 2-36; BigInt support for huge integers; negative numbers note (two's complement toggle for 8/16/32-bit widths in advanced section); conversion steps explainer in FAQ.",
+  "keywords": "binary to decimal, hex to decimal, decimal to binary, number base converter, hex converter"
+ },
+ {
+  "slug": "margin-calc",
+  "name": "Margin Calculator",
+  "cat": "finance",
+  "emoji": "💹",
+  "color": "#047857",
+  "colorStrong": "#036647",
+  "brief": "Any two of cost, revenue(price), gross margin %, markup % -> solve the rest; clear margin-vs-markup distinction (the classic confusion - table comparing them at common values); profit shown. Currency-agnostic.",
+  "keywords": "margin calculator, gross margin calculator, profit margin calculator, margin vs markup, selling price calculator"
+ },
+ {
+  "slug": "markup-calc",
+  "name": "Markup Calculator",
+  "cat": "finance",
+  "emoji": "🏷️",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Cost + markup % -> selling price and profit; reverse: cost + price -> markup % and margin %; markup-to-margin conversion table (25/50/100% markup = 20/33/50% margin). Complements margin-calc, targets 'markup' search intent.",
+  "keywords": "markup calculator, markup percentage, cost plus markup, markup to margin, how to calculate markup"
+ },
+ {
+  "slug": "break-even-calc",
+  "name": "Break-Even Calculator",
+  "cat": "finance",
+  "emoji": "⚖️",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Fixed costs, price per unit, variable cost per unit -> break-even units and revenue, contribution margin (per unit and %); optional profit target -> units needed; sensitivity mini-table (price +/-10%). Guard: price <= variable cost -> clear 'never breaks even' message.",
+  "keywords": "break even calculator, break even point, break even analysis, contribution margin calculator, how many units to break even"
+ },
+ {
+  "slug": "overtime-pay-calc",
+  "name": "Overtime Pay Calculator",
+  "cat": "finance",
+  "emoji": "🕐",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "Base hourly rate, regular hours, OT hours at multiplier (1.5x default, editable; second tier 2x optional) -> OT rate, OT pay, total gross for the period; weekly/monthly context toggle. FAQ: time-and-a-half math, note that OT laws vary by country/state (educational).",
+  "keywords": "overtime calculator, time and a half calculator, overtime pay, 1.5x pay calculator, overtime rate"
+ },
+ {
+  "slug": "commission-calc",
+  "name": "Commission Calculator",
+  "cat": "finance",
+  "emoji": "🤝",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Sale amount x commission rate -> commission and net-to-seller; tiered mode: up to 3 brackets (e.g. 5% first 10k, 8% next...) computed marginally with breakdown table; split-commission option (%). Real-estate style example in FAQ.",
+  "keywords": "commission calculator, sales commission calculator, real estate commission calculator, tiered commission, commission rate"
+ },
+ {
+  "slug": "pay-raise-calc",
+  "name": "Pay Raise Calculator",
+  "cat": "finance",
+  "emoji": "📊",
+  "color": "#7c3aed",
+  "colorStrong": "#6023c9",
+  "brief": "Current salary + raise (% or amount, toggle) -> new salary, difference per year/month/paycheck (pay-frequency select); reverse: old and new salary -> raise %. Inflation-adjusted 'real raise' note in FAQ (link concept to inflation-calc).",
+  "keywords": "pay raise calculator, salary increase calculator, 5 percent raise, raise percentage calculator, new salary after raise"
+ },
+ {
+  "slug": "rule-of-72-calc",
+  "name": "Rule of 72 Calculator",
+  "cat": "finance",
+  "emoji": "🕰️",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Interest rate -> years to double (72/rate) alongside the exact answer (ln2/ln(1+r)) with accuracy comparison table across rates (shows where the rule drifts); reverse: years -> required rate; rule of 114 (triple) and 144 (quadruple) bonus section.",
+  "keywords": "rule of 72, rule of 72 calculator, how long to double money, doubling time formula, years to double investment"
+ },
+ {
+  "slug": "apy-calc",
+  "name": "APY Calculator",
+  "cat": "finance",
+  "emoji": "🏦",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "APR + compounding frequency -> APY (effective annual yield) and reverse APY -> APR; comparison table of same APR at different compounding frequencies; balance growth example with deposit amount. FAQ: APR vs APY vs EAR terminology.",
+  "keywords": "apy calculator, apr to apy, apy vs apr, effective annual rate, compound yield calculator"
+ },
+ {
+  "slug": "future-value-calc",
+  "name": "Future Value Calculator",
+  "cat": "finance",
+  "emoji": "🔮",
+  "color": "#6d28d9",
+  "colorStrong": "#5b21b6",
+  "brief": "Present value, rate, periods, optional recurring payment (ordinary annuity / due toggle) -> future value with FV formula breakdown (lump-sum part + annuity part), year table. Complements compound-interest-calc with finance-course framing (FV/PV/PMT terms).",
+  "keywords": "future value calculator, fv calculator, future value of annuity, future value formula, time value of money"
+ },
+ {
+  "slug": "present-value-calc",
+  "name": "Present Value Calculator",
+  "cat": "finance",
+  "emoji": "⏳",
+  "color": "#9f1239",
+  "colorStrong": "#820e2f",
+  "brief": "Future amount, discount rate, periods (+ optional payment stream) -> present value with discounting explained plainly ('what a future sum is worth today'); year-by-year discount table; discount-rate sensitivity row. FAQ: why money later is worth less, PV formula worked example.",
+  "keywords": "present value calculator, pv calculator, discounted value, present value of future money, npv basics"
+ },
+ {
+  "slug": "debt-payoff-calc",
+  "name": "Debt Payoff Calculator",
+  "cat": "finance",
+  "emoji": "💳",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Balance, APR, monthly payment -> months to payoff, total interest, payoff date, amortization table; or target-date mode -> required payment. Guard: payment <= monthly interest -> 'never pays off' with minimum viable payment shown. Extra-payment what-if row (pay +X -> save Y interest, Z months).",
+  "keywords": "debt payoff calculator, credit card payoff calculator, how long to pay off debt, loan payoff calculator, debt free date"
+ },
+ {
+  "slug": "credit-card-interest-calc",
+  "name": "Credit Card Interest Calculator",
+  "cat": "finance",
+  "emoji": "💳",
+  "color": "#c2410c",
+  "colorStrong": "#9a3409",
+  "brief": "Balance + APR -> daily rate and interest cost this month; minimum-payment trap simulator (min % of balance, floor amount) showing years + total interest vs fixed-payment comparison side by side - the eye-opener table. Educational, not advice.",
+  "keywords": "credit card interest calculator, credit card apr calculator, minimum payment calculator, how much interest am I paying, credit card payoff"
+ },
+ {
+  "slug": "savings-goal-calc",
+  "name": "Savings Goal Calculator",
+  "cat": "finance",
+  "emoji": "🎯",
+  "color": "#047857",
+  "colorStrong": "#036647",
+  "brief": "Goal amount, current savings, deadline (date or months), optional APY -> required monthly saving; or monthly amount -> date you'll reach the goal; progress bar visual; with-interest vs without comparison line.",
+  "keywords": "savings goal calculator, how much to save per month, saving for a house calculator, savings target, monthly savings calculator"
+ },
+ {
+  "slug": "retirement-calc",
+  "name": "Retirement Savings Calculator",
+  "cat": "finance",
+  "emoji": "🌴",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Current age, retirement age, current savings, monthly contribution, expected return, inflation toggle (real vs nominal) -> projected nest egg at retirement + safe-monthly-income estimate via 4% rule; year-by-year growth table; contribution-vs-growth stacked summary. Educational, not advice. Related: fire-calc, coast-fire-calc, barista-fire-calc.",
+  "keywords": "retirement calculator, retirement savings calculator, how much do I need to retire, 401k growth calculator, nest egg calculator"
+ },
+ {
+  "slug": "stock-average-calc",
+  "name": "Stock Average Calculator",
+  "cat": "finance",
+  "emoji": "📉",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Multiple buy rows (shares x price, add/remove rows) -> average cost per share, total shares, total invested; 'what if I buy more' row shows new average live (averaging down use case); break-even price with optional fee %. Not investment advice.",
+  "keywords": "stock average calculator, average down calculator, average cost basis, share average price, averaging down stocks"
+ },
+ {
+  "slug": "stock-profit-calc",
+  "name": "Stock Profit Calculator",
+  "cat": "finance",
+  "emoji": "💰",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Buy price, sell price, shares, buy/sell fees (flat or %), optional tax rate on gains -> net profit/loss, ROI %, break-even sell price including fees. Red/green result. Not investment/tax advice.",
+  "keywords": "stock profit calculator, stock calculator, stock return calculator, shares profit, break even stock price"
+ },
+ {
+  "slug": "electricity-cost-calc",
+  "name": "Electricity Cost Calculator",
+  "cat": "finance",
+  "emoji": "⚡",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Appliance watts (or kW), hours used per day, price per kWh -> cost per day/month/year and kWh consumed; multi-appliance table (add rows, common presets: fridge, AC, heater, TV, PC, LED bulb with typical wattages); standby-power FAQ.",
+  "keywords": "electricity cost calculator, kwh cost calculator, appliance energy cost, how much electricity does it cost, power consumption calculator"
+ },
+ {
+  "slug": "fire-calc",
+  "name": "FIRE Calculator",
+  "cat": "finance",
+  "emoji": "🔥",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "Annual expenses -> FIRE number (25x via 4% rule, adjustable SWR 3-5%); current savings + monthly investing + expected return -> years until FIRE and the date; lean/regular/fat FIRE tiers table. Complements existing coast-fire-calc and barista-fire-calc (cross-reference them). Not advice.",
+  "keywords": "fire calculator, financial independence calculator, 4 percent rule, fire number, early retirement calculator"
+ },
+ {
+  "slug": "gcf-lcm-calc",
+  "name": "GCF and LCM Calculator",
+  "cat": "utility",
+  "emoji": "➗",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "2-6 numbers -> GCF (GCD) and LCM with method shown: prime factorization breakdown per number + Euclidean algorithm steps for two numbers; relationship gcf*lcm = a*b noted. Student-friendly step display.",
+  "keywords": "gcf calculator, lcm calculator, greatest common factor, least common multiple, gcf and lcm"
+ },
+ {
+  "slug": "quadratic-solver",
+  "name": "Quadratic Equation Solver",
+  "cat": "utility",
+  "emoji": "✖️",
+  "color": "#7c3aed",
+  "colorStrong": "#6023c9",
+  "brief": "a, b, c -> roots via quadratic formula with discriminant analysis (two real / one repeated / two complex - complex shown as a+bi), step-by-step substitution display, vertex and axis of symmetry bonus; formula rendered clearly. a=0 -> linear-equation fallback message.",
+  "keywords": "quadratic formula calculator, quadratic equation solver, solve for x, discriminant calculator, roots of quadratic"
+ },
+ {
+  "slug": "pythagorean-calc",
+  "name": "Pythagorean Theorem Calculator",
+  "cat": "utility",
+  "emoji": "📐",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Any two sides of a right triangle (a, b, or hypotenuse c) -> the third via a²+b²=c², with steps; validates c > legs; area and perimeter bonus; common Pythagorean triples table (3-4-5, 5-12-13...) for SEO; simple SVG triangle diagram.",
+  "keywords": "pythagorean theorem calculator, hypotenuse calculator, a2+b2=c2, right triangle calculator, find missing side"
+ },
+ {
+  "slug": "circle-calc",
+  "name": "Circle Calculator",
+  "cat": "utility",
+  "emoji": "⭕",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Enter any one of radius, diameter, circumference, or area -> all the others computed with formulas shown; precision select; unit-agnostic (label passthrough); formulas reference section (C=2πr etc.) for SEO.",
+  "keywords": "circle calculator, circumference calculator, area of a circle, radius calculator, circumference to diameter"
+ },
+ {
+  "slug": "slope-calc",
+  "name": "Slope Calculator",
+  "cat": "utility",
+  "emoji": "📈",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "Two points (x1,y1),(x2,y2) -> slope m, y-intercept, line equation y=mx+b, distance between points, midpoint, angle of incline in degrees; vertical-line (undefined slope) handled gracefully; tiny SVG plot of the two points and line. Also slope-as-percent-grade mode (rise/run) for construction searches.",
+  "keywords": "slope calculator, slope formula, find slope from two points, y=mx+b calculator, percent grade calculator"
+ },
+ {
+  "slug": "permutation-combination-calc",
+  "name": "Permutation and Combination Calculator",
+  "cat": "utility",
+  "emoji": "🎰",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "n and r -> nPr and nCr with formulas and expanded factorial-cancellation steps; with/without repetition variants (4 formulas total, tabbed); BigInt so large n don't overflow; real-world examples (lottery odds, podium finishes) in FAQ.",
+  "keywords": "combination calculator, permutation calculator, ncr calculator, npr calculator, how many combinations"
+ },
+ {
+  "slug": "sig-fig-calc",
+  "name": "Sig Fig Calculator",
+  "cat": "utility",
+  "emoji": "🔬",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Number -> count of significant figures with per-digit color-coded explanation (leading zeros not sig, captive zeros sig, trailing depends on decimal point); rounding tool: round any number to N sig figs; sig-fig rules summary table (the SEO magnet); scientific-notation output toggle.",
+  "keywords": "sig fig calculator, significant figures calculator, sig fig counter, rounding sig figs, significant digits"
+ },
+ {
+  "slug": "paint-calc",
+  "name": "Paint Calculator",
+  "cat": "life",
+  "emoji": "🖌️",
+  "color": "#c2410c",
+  "colorStrong": "#9a3409",
+  "brief": "Room dimensions (or total wall area), doors/windows count (standard deductions), coats, paint coverage (default 10 m²/L or 350 sq ft/gal, editable) -> liters/gallons needed and cans to buy (round up by can size select); metric/imperial toggle; ceiling option. Coverage assumptions stated.",
+  "keywords": "paint calculator, how much paint do I need, paint coverage calculator, wall paint calculator, gallons of paint per room"
+ },
+ {
+  "slug": "tile-calc",
+  "name": "Tile Calculator",
+  "cat": "life",
+  "emoji": "🧱",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Area dimensions + tile size (common presets 30x30, 60x60cm, 12x12in...) + gap width + waste % (10% default, why explained) -> tiles needed, boxes to buy (tiles/box input), area summary; metric/imperial; grout estimate note.",
+  "keywords": "tile calculator, how many tiles do I need, floor tile calculator, tile per square meter, wall tile calculator"
+ },
+ {
+  "slug": "concrete-calc",
+  "name": "Concrete Calculator",
+  "cat": "life",
+  "emoji": "🏗️",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "Shapes: slab (LxWxD), footing, column (cylinder), stairs -> volume in cubic yards AND cubic meters with 5-10% waste toggle; bag mode: 40/50/60/80lb + 25/40kg bag counts (yields baked); multiple pours addable. Ready-mix vs bags guidance in FAQ.",
+  "keywords": "concrete calculator, concrete yards calculator, how much concrete do I need, concrete slab calculator, concrete bags calculator"
+ },
+ {
+  "slug": "mulch-calc",
+  "name": "Mulch Calculator",
+  "cat": "life",
+  "emoji": "🌳",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Bed area (rectangle/circle, multiple beds) + depth (2-4in presets / cm) -> cubic yards, cubic feet, cubic meters, and bags (2 cu ft standard, editable); depth recommendation by use in FAQ; soil/gravel note (same math, different densities don't matter for volume).",
+  "keywords": "mulch calculator, how much mulch do I need, cubic yards of mulch, mulch bags calculator, landscape calculator"
+ },
+ {
+  "slug": "reaction-time-test",
+  "name": "Reaction Time Test",
+  "cat": "life",
+  "emoji": "⚡",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Classic red->green click test: wait for random 2-5s delay, screen turns green, click fast; 5 rounds -> average ms with best/worst; too-early click penalty restart of round; percentile-ish context table (median human ~273ms); uses performance.now(). Keyboard + touch support.",
+  "keywords": "reaction time test, reaction speed test, human benchmark reaction, reflex test, average reaction time"
+ },
+ {
+  "slug": "drawing-board",
+  "name": "Online Drawing Board",
+  "cat": "life",
+  "emoji": "✏️",
+  "color": "#7c3aed",
+  "colorStrong": "#6023c9",
+  "brief": "Canvas whiteboard: pen/highlighter/eraser, color swatches + picker, stroke width slider, undo/redo (stroke stack), clear, download PNG (white background), touch+stylus support (pointer events, pressure optional), responsive canvas with proper DPR scaling.",
+  "keywords": "online drawing board, online whiteboard, drawing pad online, sketch online, doodle board"
+ },
+ {
+  "slug": "screen-resolution-check",
+  "name": "What Is My Screen Resolution",
+  "cat": "utility",
+  "emoji": "🖥️",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Instantly display: screen resolution, viewport size (live-updates on resize), device pixel ratio, effective CSS vs physical pixels, color depth, orientation, touch support; explanation of why viewport differs from screen; common resolutions table (SEO).",
+  "keywords": "what is my screen resolution, screen resolution checker, display resolution, viewport size, screen size test"
+ },
+ {
+  "slug": "keyboard-tester",
+  "name": "Keyboard Tester",
+  "cat": "utility",
+  "emoji": "⌨️",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "On-screen keyboard layout (ANSI-ish) lighting keys on keydown, history of pressed keys with event.code/key, detects stuck/chattering keys (double-fire timing), rollover test counter (how many keys register simultaneously). Note: some OS shortcuts can't be captured - be honest.",
+  "keywords": "keyboard tester, keyboard test online, key test, keyboard checker, test my keyboard keys"
+ },
+ {
+  "slug": "mic-test",
+  "name": "Microphone Test",
+  "cat": "utility",
+  "emoji": "🎤",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "getUserMedia mic check: live volume meter (canvas bars via AnalyserNode), device picker if multiple mics, sample rate display, record-and-playback a 5s clip (MediaRecorder, stays in memory); loud privacy statement: audio never leaves the device; graceful permission-denied guidance per browser.",
+  "keywords": "mic test, microphone test online, test my mic, is my microphone working, mic check"
+ },
+ {
+  "slug": "webcam-test",
+  "name": "Webcam Test",
+  "cat": "utility",
+  "emoji": "📷",
+  "color": "#4338ca",
+  "colorStrong": "#3730a3",
+  "brief": "getUserMedia camera check: live preview, device picker, resolution/fps readout from track settings, mirror toggle, snapshot to PNG download (canvas); loud privacy statement: video never leaves the device; permission-denied troubleshooting per browser in FAQ.",
+  "keywords": "webcam test, camera test online, test my webcam, is my camera working, webcam checker"
+ },
+ {
+  "slug": "image-format-conv",
+  "name": "Image Converter (JPG/PNG/WebP)",
+  "cat": "utility",
+  "emoji": "🔄",
+  "color": "#047857",
+  "colorStrong": "#036647",
+  "brief": "Drop image(s) -> convert between JPG/PNG/WebP via canvas (quality slider for lossy targets, background-fill color option when flattening transparent PNG->JPG), per-file download; batch up to 10. Client-side only, privacy stated. HEIC honestly unsupported (browser limitation) - say so in FAQ (common question).",
+  "keywords": "jpg to png, png to jpg, webp to jpg, image converter online, convert image format"
+ },
+ {
+  "slug": "image-color-picker",
+  "name": "Image Color Picker",
+  "cat": "utility",
+  "emoji": "🎯",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "Upload image -> click anywhere to get pixel color (magnifier loupe preview around cursor), HEX/RGB/HSL readouts with copy, palette of picked colors (history), auto-extracted dominant colors (simple quantization top-5). Canvas-based, client-side only.",
+  "keywords": "image color picker, get color from image, color picker from photo, hex color from image, eyedropper online"
+ },
+ {
+  "slug": "ohms-law-calc",
+  "name": "Ohm's Law Calculator",
+  "cat": "utility",
+  "emoji": "🔌",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Enter any two of voltage, current, resistance, power -> compute the other two with the formula used shown; V=IR and P=VI wheel diagram (SVG); unit prefixes handled (mA, kΩ, mW); worked example in FAQ.",
+  "keywords": "ohms law calculator, voltage current resistance, v=ir calculator, watts volts amps calculator, ohms law wheel"
+ },
+ {
+  "slug": "resistor-color-code-calc",
+  "name": "Resistor Color Code Calculator",
+  "cat": "utility",
+  "emoji": "🟫",
+  "color": "#b45309",
+  "colorStrong": "#8c4107",
+  "brief": "4/5/6-band selector with color dropdowns rendering a live SVG resistor -> resistance value + tolerance (+ temp coefficient for 6-band); reverse mode: type a resistance -> band colors; full color-code table (the SEO magnet); E12/E24 standard-values note.",
+  "keywords": "resistor color code, resistor calculator, 4 band resistor, resistor color chart, resistor value calculator"
+ },
+ {
+  "slug": "molar-mass-calc",
+  "name": "Molar Mass Calculator",
+  "cat": "utility",
+  "emoji": "⚗️",
+  "color": "#15803d",
+  "colorStrong": "#116631",
+  "brief": "Chemical formula parser (H2O, Ca(OH)2, CuSO4·5H2O with parentheses + hydrate dot) -> molar mass g/mol with per-element breakdown table (count x atomic mass, mass %); baked IUPAC atomic-mass table all 118 elements; formula syntax errors pinpointed; common compounds table for SEO.",
+  "keywords": "molar mass calculator, molecular weight calculator, molar mass of water, formula weight, g/mol calculator"
+ },
+ {
+  "slug": "speed-distance-time-calc",
+  "name": "Speed Distance Time Calculator",
+  "cat": "utility",
+  "emoji": "🚗",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Enter any two of speed, distance, time -> the third; mixed units (km/h, mph, m/s x km/mi/m x h/min/s) with sensible conversion; time input as hh:mm:ss or decimal; triangle formula diagram; travel-time examples in FAQ.",
+  "keywords": "speed distance time calculator, distance formula, how long will it take to drive, average speed calculator, time = distance/speed"
+ },
+ {
+  "slug": "wind-chill-calc",
+  "name": "Wind Chill Calculator",
+  "cat": "utility",
+  "emoji": "🥶",
+  "color": "#1d4ed8",
+  "colorStrong": "#1741b6",
+  "brief": "Air temperature + wind speed (C+km/h or F+mph toggle) -> feels-like wind chill via NWS 2001 formula, with validity bounds (T<=10C, wind>4.8km/h) enforced + explained; frostbite-time risk table; chart of common combos. Formula shown.",
+  "keywords": "wind chill calculator, wind chill chart, feels like temperature, wind chill formula, frostbite temperature"
+ },
+ {
+  "slug": "heat-index-calc",
+  "name": "Heat Index Calculator",
+  "cat": "utility",
+  "emoji": "🥵",
+  "color": "#c2410c",
+  "colorStrong": "#9a3409",
+  "brief": "Air temperature + relative humidity -> heat index (Rothfusz regression with NWS adjustments), C/F toggle, color-coded danger categories (caution..extreme danger) with safety table; validity note (T>=27C/80F); humidity's role explained in FAQ.",
+  "keywords": "heat index calculator, feels like temperature humidity, heat index chart, real feel temperature, humidity heat calculator"
+ },
+ {
+  "slug": "tire-size-calc",
+  "name": "Tire Size Calculator",
+  "cat": "utility",
+  "emoji": "🛞",
+  "color": "#0f766e",
+  "colorStrong": "#0b5c56",
+  "brief": "Parse tire code (e.g. 225/45R17) -> section width, sidewall height, overall diameter, circumference, revs per km/mile; compare two tire sizes side by side with diameter % difference and speedometer error at 100 km/h (60 mph); +/-3% guidance note. Code-format explainer diagram.",
+  "keywords": "tire size calculator, tire size comparison, 225/45r17 meaning, speedometer error calculator, tire diameter"
+ },
+ {
+  "slug": "mpg-calc",
+  "name": "MPG Calculator",
+  "cat": "utility",
+  "emoji": "⛽",
+  "color": "#047857",
+  "colorStrong": "#036647",
+  "brief": "Odometer start/end (or distance) + fuel added -> MPG (US/UK), L/100km, km/L all shown; cost per mile/km with fuel price; trip-log rows (multiple fill-ups averaged). Complements fuel-cost-calc (cost planning) and fuel-economy-conv (unit conversion) - this one computes YOUR real economy.",
+  "keywords": "mpg calculator, gas mileage calculator, fuel efficiency calculator, calculate mpg, miles per gallon"
+ },
+ {
+  "slug": "utm-builder",
+  "name": "UTM Link Builder",
+  "cat": "dev",
+  "emoji": "🔗",
+  "color": "#6d28d9",
+  "colorStrong": "#5b21b6",
+  "brief": "URL + utm_source/medium/campaign/term/content fields -> generated tagged URL live with copy; proper URL-encoding of values; existing-params preserved; lowercase-recommendation hints; common source/medium combo presets table (google/cpc, newsletter/email...); GA4 terminology in FAQ.",
+  "keywords": "utm builder, utm link generator, campaign url builder, utm parameters, google analytics utm"
+ },
+ {
+  "slug": "secret-santa-gen",
+  "name": "Secret Santa Generator",
+  "cat": "random",
+  "emoji": "🎅",
+  "color": "#b91c1c",
+  "colorStrong": "#991b1b",
+  "brief": "Enter participant names -> derangement assignment (nobody gets themselves; exclusion pairs option e.g. couples), reveal one-by-one mode (pass the device, each person taps to see only their giftee) or show-all mode; budget field for the summary; crypto random. No server - explain the pass-the-phone flow honestly.",
+  "keywords": "secret santa generator, secret santa picker, gift exchange generator, secret santa online free, name draw generator"
+ },
+ {
+  "slug": "username-gen",
+  "name": "Username Generator",
+  "cat": "random",
+  "emoji": "👤",
+  "color": "#0369a1",
+  "colorStrong": "#02537f",
+  "brief": "Generate username ideas: adjective+noun word banks (baked, ~200 each, safe-for-work), optional keyword to include, optional numbers/underscores, length cap, style toggles (lowercase/CamelCase); generate 10 at a time, click to copy each; availability disclaimer (we don't check platforms).",
+  "keywords": "username generator, username ideas, random username, gamertag generator, cool usernames"
+ },
+ {
+  "slug": "random-color-gen",
+  "name": "Random Color Generator",
+  "cat": "random",
+  "emoji": "🎨",
+  "color": "#a21caf",
+  "colorStrong": "#86178f",
+  "brief": "Generate random colors (1-10 swatches): true random, or constrained (pastel/dark/vivid via HSL ranges); each swatch shows hex/rgb/hsl with click-to-copy; lock a swatch and reroll others (mini palette builder); spacebar reroll. Links conceptually to color-picker tool.",
+  "keywords": "random color generator, random hex color, color generator, random color palette, hex code generator"
+ },
+ {
+  "slug": "love-calc",
+  "name": "Love Calculator",
+  "cat": "random",
+  "emoji": "💘",
+  "color": "#be123c",
+  "colorStrong": "#9f0f32",
+  "brief": "Two names -> love percentage with fun animated reveal and playful message tiers; deterministic hash of normalized names (same pair always same score - feels 'real', explain it's a game); share-result text copy. VERY clearly entertainment-only framing throughout (title tagline, FAQ).",
+  "keywords": "love calculator, love compatibility test, name compatibility, love percentage, love meter"
+ }
+]

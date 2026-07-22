@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Average Calculator — Mean, Median, Mode & More</title>
+<meta name="description" content="Paste or type a list of numbers to get the mean, median, mode, range, min, max, sum, count, and geometric mean instantly. Free, private, browser-only.">
+<meta name="keywords" content="average calculator, mean median mode calculator, mean calculator, how to find the average, median calculator, 평균 계산기">
+<link rel="canonical" href="https://tool-hub.me/average-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Average Calculator — Mean, Median, Mode & More">
+<meta property="og:description" content="Paste or type a list of numbers to get the mean, median, mode, range, min, max, sum, count, and geometric mean instantly. Free, private, browser-only.">
+<meta property="og:url" content="https://tool-hub.me/average-calc/">
+<meta property="og:image" content="https://tool-hub.me/average-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Average Calculator",
+  "description": "Paste or type a list of numbers to get the mean, median, mode, range, min, max, sum, count, and geometric mean instantly. Free, private, browser-only.",
+  "url": "https://tool-hub.me/average-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Average Calculator",
+      "item": "https://tool-hub.me/average-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate an average, with a worked example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The average (arithmetic mean) is the sum of all the numbers divided by how many numbers there are. Worked example: for 4, 8, 15, 16, 23, 42 the sum is 108 and the count is 6, so the average is 108 ÷ 6 = 18. This average calculator does that instantly as you type or paste your list, and also shows the sum and count it used so you can double-check the arithmetic yourself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between mean, median, and mode — and when should I use each?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mean is the sum divided by the count, so a single very large or very small number can pull it a long way from what feels typical — for 1, 2, 3, 4, 100 the mean is 22, skewed by the 100. The median is the middle value once the numbers are sorted (or the average of the two middle values for an even count), so for the same list it's 3 — a better read on a typical value when outliers are present. The mode is the most frequently repeated value or values, useful for categorical or repeating data like shoe sizes or survey ratings; a list with no repeats has no mode at all."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What input formats does this calculator accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type or paste numbers separated by commas, spaces, or new lines, in any mix — 1, 2, 3 and 1 2 3 and one number per line all work the same. Negative numbers and decimals are fine, and pasting a column straight from a spreadsheet or CSV file works too, since line breaks and stray spaces are treated the same as commas. Anything that isn't a valid number is skipped and the calculator tells you how many entries it ignored, so nothing fails silently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the geometric mean, and why does it sometimes show as a dash?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The geometric mean is the nth root of the product of n numbers — for 4 and 9 it's the square root of 36, which is 6. It's the right average for rates and ratios that multiply together, like consecutive growth rates or investment returns, because it accounts for compounding in a way the arithmetic mean does not. It's only defined when every number is positive, since the root of a product containing zero or a negative number isn't a meaningful real growth rate, so this calculator shows a dash and a short note instead of a misleading result whenever your list includes zero or a negative value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my list of numbers sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation in this average calculator runs entirely in your browser — nothing you type or paste is uploaded, logged, or shared with anyone. Your last entry is saved only in this browser's local storage so it's still here next time you open the page, and clearing your browser data removes it completely."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Average Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Average Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Paste or type a list of numbers — separated by commas, spaces, or new lines — and get the average (mean), median, mode, range, and more, instantly and privately in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Average calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool textarea { resize: vertical; line-height: 1.6; min-height: 120px; }
+      #tool .avg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .7rem; margin-top: 1.1rem; }
+      #tool .stat-card { text-align: start; cursor: pointer; font-family: inherit; background: var(--bg); border: 1px solid var(--line); border-radius: .6rem; padding: .7rem .9rem; color: var(--ink); }
+      #tool .stat-card .stat-label { display: block; font-size: .78rem; color: var(--muted); margin-bottom: .2rem; }
+      #tool .stat-card .stat-val { font-size: 1.35rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; display: block; }
+      @media (max-width: 420px) { #tool .avg-grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+    <label for="avg-input" data-i18n="tool.input.label">Numbers</label>
+    <textarea id="avg-input" rows="6" dir="auto" autocomplete="off" placeholder="e.g. 4, 8, 15, 16, 23, 42" data-i18n-placeholder="tool.input.ph"></textarea>
+    <p class="hint" data-i18n="tool.input.hint">Separate numbers with commas, spaces, or new lines. Pasting a column from a spreadsheet works too.</p>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter at least one number to see the average, median, mode, and more.</p>
+      <div id="avg-grid" class="avg-grid" hidden>
+        <button type="button" class="stat-card" data-copy="count"><span class="stat-label" data-i18n="tool.res.count">Count</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="sum"><span class="stat-label" data-i18n="tool.res.sum">Sum</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="mean"><span class="stat-label" data-i18n="tool.res.mean">Average (mean)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="median"><span class="stat-label" data-i18n="tool.res.median">Median</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="mode"><span class="stat-label" data-i18n="tool.res.mode">Mode</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="min"><span class="stat-label" data-i18n="tool.res.min">Minimum</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="max"><span class="stat-label" data-i18n="tool.res.max">Maximum</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="range"><span class="stat-label" data-i18n="tool.res.range">Range</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="gmean"><span class="stat-label" data-i18n="tool.res.gmean">Geometric mean</span><span class="stat-val">&mdash;</span></button>
+      </div>
+      <p id="avg-note" hidden style="margin:12px 0 0;font-size:13px;color:var(--muted);"></p>
+      <p id="copy-hint" hidden data-i18n="tool.copyHint" style="margin:12px 0 0;font-size:12.5px;color:var(--muted);text-align:center;">Tap a card to copy the number</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I calculate an average, with a worked example?</summary>
+      <p data-i18n="faq.a1">The average (arithmetic mean) is the sum of all the numbers divided by how many numbers there are. Worked example: for 4, 8, 15, 16, 23, 42 the sum is 108 and the count is 6, so the average is 108 ÷ 6 = 18. This average calculator does that instantly as you type or paste your list, and also shows the sum and count it used so you can double-check the arithmetic yourself.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between mean, median, and mode — and when should I use each?</summary>
+      <p data-i18n="faq.a2">The mean is the sum divided by the count, so a single very large or very small number can pull it a long way from what feels typical — for 1, 2, 3, 4, 100 the mean is 22, skewed by the 100. The median is the middle value once the numbers are sorted (or the average of the two middle values for an even count), so for the same list it's 3 — a better read on a typical value when outliers are present. The mode is the most frequently repeated value or values, useful for categorical or repeating data like shoe sizes or survey ratings; a list with no repeats has no mode at all.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What input formats does this calculator accept?</summary>
+      <p data-i18n="faq.a3">Type or paste numbers separated by commas, spaces, or new lines, in any mix — 1, 2, 3 and 1 2 3 and one number per line all work the same. Negative numbers and decimals are fine, and pasting a column straight from a spreadsheet or CSV file works too, since line breaks and stray spaces are treated the same as commas. Anything that isn't a valid number is skipped and the calculator tells you how many entries it ignored, so nothing fails silently.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What is the geometric mean, and why does it sometimes show as a dash?</summary>
+      <p data-i18n="faq.a4">The geometric mean is the nth root of the product of n numbers — for 4 and 9 it's the square root of 36, which is 6. It's the right average for rates and ratios that multiply together, like consecutive growth rates or investment returns, because it accounts for compounding in a way the arithmetic mean does not. It's only defined when every number is positive, since the root of a product containing zero or a negative number isn't a meaningful real growth rate, so this calculator shows a dash and a short note instead of a misleading result whenever your list includes zero or a negative value.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my list of numbers sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation in this average calculator runs entirely in your browser — nothing you type or paste is uploaded, logged, or shared with anyone. Your last entry is saved only in this browser's local storage so it's still here next time you open the page, and clearing your browser data removes it completely.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

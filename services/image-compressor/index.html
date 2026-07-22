@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Compressor — Reduce Photo File Size Free Online</title>
+<meta name="description" content="Compress JPG, PNG and WebP photos in your browser with a quality slider and optional resizing. See before/after size and % saved — free, no uploads.">
+<meta name="keywords" content="image compressor, compress image online, reduce image size, compress jpg, compress png, 이미지 압축, photo file size reducer">
+<link rel="canonical" href="https://tool-hub.me/image-compressor/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Image Compressor — Reduce Photo File Size Free Online">
+<meta property="og:description" content="Compress JPG, PNG and WebP photos in your browser with a quality slider and optional resizing. See before/after size and % saved — free, no uploads.">
+<meta property="og:url" content="https://tool-hub.me/image-compressor/">
+<meta property="og:image" content="https://tool-hub.me/image-compressor/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Image Compressor",
+  "description": "Compress JPG, PNG and WebP photos in your browser with a quality slider and optional resizing. See before/after size and % saved — free, no uploads.",
+  "url": "https://tool-hub.me/image-compressor/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Image Compressor", "item": "https://tool-hub.me/image-compressor/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does an image compressor make JPG, PNG, or WebP files smaller?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool draws each image onto an in-browser canvas and re-encodes it with a fresh quality setting — for JPEG and WebP, a lower quality percentage lets the encoder throw away less-visible detail in exchange for a much smaller file, often 50–80% smaller at quality 70–85 with little visible difference. PNG is a lossless format, so the quality slider doesn't apply to it, but re-encoding a PNG through canvas can still shrink it a little by rebuilding the compression stream. For the biggest savings on photos, also try the max dimension option: an image resized from 4000px down to 1920px wide before compression can end up a fraction of its original size, since fewer pixels means fewer bytes at any quality level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I compress as JPEG, WebP, or PNG — what's the difference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JPEG is the classic choice for photos: it compresses well at quality 70–85 but doesn't support transparency and can show blocky artifacts at very low quality. WebP is a newer format that typically produces 25–35% smaller files than JPEG at the same visual quality, and it does support transparency, which is why \"Keep original format\" defaults to WebP output for images that were already WebP. PNG is lossless and the right choice for screenshots, logos, and graphics with transparency or sharp edges — compressing a photo as PNG usually makes it larger, not smaller, so this tool lets you convert a PNG photo to JPEG or WebP for a real size reduction if it doesn't need transparency."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will resizing to a smaller max dimension blur my image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Choosing a max dimension like 1920px or 1280px permanently reduces the pixel width and height of images larger than that value, which is exactly what shrinks the file size further — a 6000×4000 photo scaled down to 1920×1280 has far fewer pixels to store. On a screen, browser, or social media post the result usually looks identical, since most displays can't show more detail than that anyway. But the resize can't be undone, and it will look soft if you print the file large or zoom in a lot afterward — keep \"No resize\" selected if you need to preserve the full original resolution and only want the quality slider to reduce file size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a limit on file size or how many images I can compress at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can compress up to 10 images in one batch; if you select more, the extra files are skipped and a message tells you so. There's no hard file-size limit enforced by the tool itself, but very large images (many megapixels) take longer to decode and re-encode because everything happens on your device's CPU rather than a server, and extremely large batches can use a noticeable amount of memory in the browser tab. If a particular image fails to process, it's flagged individually so the rest of your batch still completes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my photos uploaded anywhere, and why is a compressed file sometimes bigger than the original?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — every step, from reading the file to drawing it on a canvas to re-encoding it, happens locally in your browser tab; nothing is uploaded, and closing the tab clears everything. Occasionally a \"compressed\" file comes out larger than the original — this happens when the quality slider is set very high, when a small already-optimized image is re-encoded, or when converting a simple PNG graphic to JPEG adds overhead it didn't have before. Because this tool always shows the before-and-after size for every file, you can compare and simply skip downloading any result that isn't actually smaller, or lower the quality slider and try again."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Image Compressor</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Image Compressor</h1>
+    <p class="lede" data-i18n="hero.lede">Drop in your photos, pick a quality level, and get smaller JPG, PNG, or WebP files in seconds — every compression happens right in your browser, nothing is uploaded.</p>
+  </section>
+
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-label="Image compressor" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .ic-field { margin-bottom: 18px; }
+      #tool .ic-field label { margin-top: 0; }
+      #tool .ic-row { display: flex; align-items: center; gap: 12px; }
+      #tool .ic-row input[type="range"] { flex: 1 1 auto; min-width: 0; }
+      #tool .ic-qval { min-width: 46px; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
+      #tool .ic-hint { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); line-height: 1.5; }
+      #tool select { width: 100%; }
+      #tool .drop-zone { margin-top: 4px; border: 2px dashed var(--line); border-radius: 12px; padding: 28px 16px; text-align: center; cursor: pointer; transition: border-color .15s, background .15s; }
+      #tool .drop-zone:hover, #tool .drop-zone:focus-visible { border-color: var(--accent); }
+      #tool .drop-zone.drag-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+      #tool .drop-zone p { margin: 0; color: var(--muted); font-size: 14.5px; line-height: 1.5; }
+      #tool input[type="file"] { display: none; }
+      #tool .file-error { margin: 12px 0 0; padding: 10px 14px; border-radius: 10px; background: color-mix(in srgb, #dc2626 10%, var(--surface)); border: 1px solid color-mix(in srgb, #dc2626 30%, var(--line)); color: #b91c1c; font-size: 13.5px; line-height: 1.5; }
+      [data-theme="dark"] #tool .file-error, [data-theme="auto"] #tool .file-error { color: #fca5a5; }
+      #tool .batch-summary { margin: 16px 0 0; font-size: 13.5px; font-weight: 700; color: var(--ink); }
+      #tool .file-list { margin-top: 14px; display: flex; flex-direction: column; gap: 10px; }
+      #tool .img-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+      #tool .img-thumb { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; background: var(--bg); flex: 0 0 auto; }
+      #tool .img-info { flex: 1 1 160px; min-width: 0; }
+      #tool .img-name { font-weight: 600; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+      #tool .img-meta { font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+      #tool .img-meta-error { color: #dc2626; }
+      [data-theme="dark"] #tool .img-meta-error, [data-theme="auto"] #tool .img-meta-error { color: #fca5a5; }
+      #tool .img-actions { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+      #tool .img-btn { display: inline-flex; align-items: center; justify-content: center; padding: 8px 12px; font-size: 13px; font-weight: 700; font-family: inherit; border-radius: 8px; cursor: pointer; text-decoration: none; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+      #tool .img-btn:hover { border-color: var(--accent); text-decoration: none; }
+      #tool .img-btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+      #tool .img-btn-primary:hover { background: var(--accent-strong); border-color: var(--accent-strong); }
+      #tool .img-spinner { width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--accent); animation: ic-spin .8s linear infinite; flex: 0 0 auto; }
+      @keyframes ic-spin { to { transform: rotate(360deg); } }
+      #tool .batch-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+      @media (max-width: 420px) {
+        #tool .drop-zone { padding: 22px 12px; }
+        #tool .img-row { padding: 9px; }
+      }
+    </style>
+
+    <div class="ic-field">
+      <label for="quality" data-i18n="tool.quality.label">Quality</label>
+      <div class="ic-row">
+        <input type="range" id="quality" min="10" max="100" step="5" value="80">
+        <span id="quality-value" class="ic-qval">80%</span>
+      </div>
+      <p class="ic-hint" data-i18n="tool.quality.hint">Higher quality keeps more detail but produces a larger file. Applies to JPEG and WebP — PNG is lossless and ignores this setting.</p>
+    </div>
+
+    <div class="ic-field">
+      <label for="max-dim" data-i18n="tool.maxDim.label">Max dimension</label>
+      <select id="max-dim">
+        <option value="0" data-i18n="tool.maxDim.none">No resize (keep original size)</option>
+        <option value="3840" data-i18n="tool.maxDim.4k">3840px (4K)</option>
+        <option value="1920" selected data-i18n="tool.maxDim.1920">1920px (Full HD)</option>
+        <option value="1280" data-i18n="tool.maxDim.1280">1280px</option>
+        <option value="800" data-i18n="tool.maxDim.800">800px</option>
+      </select>
+      <p class="ic-hint" data-i18n="tool.maxDim.hint">Downscales the longest side of large images before compressing. Choose "No resize" to keep the original pixel dimensions.</p>
+    </div>
+
+    <div class="ic-field">
+      <label for="out-format" data-i18n="tool.format.label">Output format</label>
+      <select id="out-format">
+        <option value="same" selected data-i18n="tool.format.same">Keep original format</option>
+        <option value="image/jpeg" data-i18n="tool.format.jpeg">JPEG</option>
+        <option value="image/webp" data-i18n="tool.format.webp">WebP</option>
+        <option value="image/png" data-i18n="tool.format.png">PNG</option>
+      </select>
+    </div>
+
+    <div id="drop-zone" class="drop-zone" tabindex="0" role="button" aria-label="Drop images here or click to select files to compress" data-i18n-aria-label="tool.drop.aria">
+      <input type="file" id="file-input" accept="image/jpeg,image/png,image/webp" multiple>
+      <p data-i18n="tool.drop.text">Drop images here or click to browse — JPG, PNG or WebP, up to 10 files</p>
+    </div>
+
+    <p id="file-error" class="file-error" role="alert" hidden></p>
+    <p id="batch-summary" class="batch-summary" hidden></p>
+    <div id="file-list" class="file-list" hidden></div>
+
+    <div id="batch-actions" class="batch-actions" hidden>
+      <button type="button" id="download-all-btn" class="img-btn img-btn-primary" data-i18n="tool.downloadAll">Download all</button>
+      <button type="button" id="clear-all-btn" class="img-btn" data-i18n="tool.clearAll">Clear all</button>
+    </div>
+
+    <p class="hint" data-i18n="tool.privacyNote">All compression runs locally in your browser — your images are never uploaded or sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details>
+      <summary data-i18n="faq.q1">How does an image compressor make JPG, PNG, or WebP files smaller?</summary>
+      <p data-i18n="faq.a1">This tool draws each image onto an in-browser canvas and re-encodes it with a fresh quality setting — for JPEG and WebP, a lower quality percentage lets the encoder throw away less-visible detail in exchange for a much smaller file, often 50–80% smaller at quality 70–85 with little visible difference. PNG is a lossless format, so the quality slider doesn't apply to it, but re-encoding a PNG through canvas can still shrink it a little by rebuilding the compression stream. For the biggest savings on photos, also try the max dimension option: an image resized from 4000px down to 1920px wide before compression can end up a fraction of its original size, since fewer pixels means fewer bytes at any quality level.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Should I compress as JPEG, WebP, or PNG — what's the difference?</summary>
+      <p data-i18n="faq.a2">JPEG is the classic choice for photos: it compresses well at quality 70–85 but doesn't support transparency and can show blocky artifacts at very low quality. WebP is a newer format that typically produces 25–35% smaller files than JPEG at the same visual quality, and it does support transparency, which is why "Keep original format" defaults to WebP output for images that were already WebP. PNG is lossless and the right choice for screenshots, logos, and graphics with transparency or sharp edges — compressing a photo as PNG usually makes it larger, not smaller, so this tool lets you convert a PNG photo to JPEG or WebP for a real size reduction if it doesn't need transparency.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Will resizing to a smaller max dimension blur my image?</summary>
+      <p data-i18n="faq.a3">Choosing a max dimension like 1920px or 1280px permanently reduces the pixel width and height of images larger than that value, which is exactly what shrinks the file size further — a 6000×4000 photo scaled down to 1920×1280 has far fewer pixels to store. On a screen, browser, or social media post the result usually looks identical, since most displays can't show more detail than that anyway. But the resize can't be undone, and it will look soft if you print the file large or zoom in a lot afterward — keep "No resize" selected if you need to preserve the full original resolution and only want the quality slider to reduce file size.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is there a limit on file size or how many images I can compress at once?</summary>
+      <p data-i18n="faq.a4">You can compress up to 10 images in one batch; if you select more, the extra files are skipped and a message tells you so. There's no hard file-size limit enforced by the tool itself, but very large images (many megapixels) take longer to decode and re-encode because everything happens on your device's CPU rather than a server, and extremely large batches can use a noticeable amount of memory in the browser tab. If a particular image fails to process, it's flagged individually so the rest of your batch still completes.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Are my photos uploaded anywhere, and why is a compressed file sometimes bigger than the original?</summary>
+      <p data-i18n="faq.a5">No — every step, from reading the file to drawing it on a canvas to re-encoding it, happens locally in your browser tab; nothing is uploaded, and closing the tab clears everything. Occasionally a "compressed" file comes out larger than the original — this happens when the quality slider is set very high, when a small already-optimized image is re-encoded, or when converting a simple PNG graphic to JPEG adds overhead it didn't have before. Because this tool always shows the before-and-after size for every file, you can compare and simply skip downloading any result that isn't actually smaller, or lower the quality slider and try again.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

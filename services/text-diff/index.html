@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Diff Checker — Compare Two Texts Online, Line by Line</title>
+<meta name="description" content="Paste two texts and instantly see every added, removed and changed line or word. Ignore-case and whitespace options included — free, computed entirely in your browser.">
+<meta name="keywords" content="text diff, diff checker, compare two texts, text compare online, find difference between two texts, 텍스트 비교, diff 도구">
+<link rel="canonical" href="https://tool-hub.me/text-diff/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Text Diff Checker — Compare Two Texts Online, Line by Line">
+<meta property="og:description" content="Paste two texts and instantly see every added, removed and changed line or word. Ignore-case and whitespace options included — free, computed entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/text-diff/">
+<meta property="og:image" content="https://tool-hub.me/text-diff/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Text Diff Checker",
+  "description": "Paste two texts and instantly see every added, removed and changed line or word. Ignore-case and whitespace options included — free, computed entirely in your browser.",
+  "url": "https://tool-hub.me/text-diff/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Text Diff Checker",
+      "item": "https://tool-hub.me/text-diff/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does this text diff checker compare two pieces of text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool splits both texts into lines and finds the longest common subsequence (LCS) — the longest run of lines that appear in the same order in both versions. Everything outside that shared backbone is marked as removed from the original or added in the changed text. For example, changing 'The quick brown fox' to 'The quick red fox' on one line marks that single line as changed, with 'brown' struck through and 'red' inserted, while every unrelated line above and below stays marked unchanged."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the colors and the + and − symbols mean in the result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A red row with a leading − marks a line that only exists in the original text and was removed. A green row with a leading + marks a line that only exists in the changed text and was added. Rows with no symbol and no color are unchanged lines that appear in both versions. When a line is edited rather than fully removed or added, the specific words that differ inside it are struck through or underlined, so you can see exactly which words changed, not just that the line changed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do the ignore case and ignore trailing whitespace options work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ignore case treats 'Hello' and 'hello' as the same line or word, which is useful when comparing text that only differs in capitalization. Ignore trailing whitespace removes invisible spaces and tabs at the end of each line before comparing, which helps with code or exported text where an editor added trailing spaces that don't change the meaning. Both options only affect how lines are matched — the characters you actually typed are always shown in the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a limit to how much text I can compare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — each box supports up to about 2,000 lines or 200,000 characters, which covers most articles, emails, config files and short scripts. If either box goes over that limit the comparison is skipped and a warning appears instead of a result, so the page doesn't freeze on a very large paste. For anything longer, compare the text in smaller sections."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text uploaded to a server when I compare it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Both text boxes are compared entirely inside your browser using JavaScript — nothing you paste is uploaded, logged or sent to a server. The only thing saved is a local copy in your own browser's storage, so your text and options are still there if you come back to this tab, and you can remove it any time with the Clear button."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Text Diff Checker</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Text Diff Checker</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your original and changed text below to see exactly what was added, removed, and changed — line by line, word by word.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Text diff checker" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .td-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+      @media (max-width:640px) { #tool .td-grid { grid-template-columns:1fr; } }
+      #tool textarea.td-box { width:100%; min-height:160px; resize:vertical; line-height:1.5; font-size:14.5px; }
+      #tool .td-opts { display:flex; flex-wrap:wrap; gap:16px; margin-top:14px; }
+      #tool .td-opt { display:flex; align-items:center; gap:8px; font-weight:600; font-size:14px; cursor:pointer; margin:0; }
+      #tool .td-opt input { width:auto; margin:0; }
+      #tool .td-actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+      #tool .td-btn-secondary { padding:11px 18px; font-size:15px; font-weight:700; font-family:inherit; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .td-btn-secondary:hover { border-color:var(--accent); }
+      #tool .td-stats { display:flex; flex-wrap:wrap; gap:10px 20px; margin-top:18px; font-size:14.5px; }
+      #tool .td-stat strong { font-size:19px; margin-inline-end:5px; font-variant-numeric:tabular-nums; }
+      #tool .td-stat-added strong { color:#16a34a; }
+      #tool .td-stat-removed strong { color:#dc2626; }
+      #tool .td-stat-unchanged strong { color:var(--muted); }
+      #tool .td-output { margin-top:14px; border:1px solid var(--line); border-radius:10px; overflow:auto; max-height:520px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13.5px; line-height:1.65; }
+      #tool .td-row { display:flex; gap:10px; padding:2px 12px; }
+      #tool .td-marker { flex:0 0 1.4em; color:var(--muted); user-select:none; }
+      #tool .td-text { flex:1 1 auto; white-space:pre-wrap; overflow-wrap:anywhere; }
+      #tool .td-row.td-delete { background:color-mix(in srgb, #dc2626 10%, var(--surface)); }
+      #tool .td-row.td-delete .td-marker { color:#dc2626; }
+      #tool .td-row.td-insert { background:color-mix(in srgb, #16a34a 10%, var(--surface)); }
+      #tool .td-row.td-insert .td-marker { color:#16a34a; }
+      #tool .td-row.td-equal { color:var(--muted); }
+      #tool mark.td-chg, #tool del.td-chg, #tool ins.td-chg { text-decoration:none; border-radius:3px; padding:0 1px; }
+      #tool del.td-chg { background:color-mix(in srgb, #dc2626 28%, transparent); text-decoration:line-through; }
+      #tool ins.td-chg { background:color-mix(in srgb, #16a34a 28%, transparent); text-decoration:underline; }
+      #tool #td-empty, #tool #td-nodiff, #tool #td-error { margin:16px 0 0; }
+      #tool #td-error { color:#dc2626; font-weight:600; }
+      #tool #td-nodiff { color:#16a34a; font-weight:600; }
+    </style>
+
+    <div class="td-grid">
+      <div class="input-group" style="margin:0;">
+        <label for="td-original" data-i18n="tool.original.label">Original text</label>
+        <textarea id="td-original" class="td-box" dir="auto" autocomplete="off" spellcheck="false" placeholder="Paste the original text here…" data-i18n-placeholder="tool.original.ph"></textarea>
+      </div>
+      <div class="input-group" style="margin:0;">
+        <label for="td-changed" data-i18n="tool.changed.label">Changed text</label>
+        <textarea id="td-changed" class="td-box" dir="auto" autocomplete="off" spellcheck="false" placeholder="Paste the changed text here…" data-i18n-placeholder="tool.changed.ph"></textarea>
+      </div>
+    </div>
+
+    <div class="td-opts">
+      <label class="td-opt"><input type="checkbox" id="td-ignore-case"><span data-i18n="tool.opt.ignoreCase">Ignore case</span></label>
+      <label class="td-opt"><input type="checkbox" id="td-ignore-trailing"><span data-i18n="tool.opt.ignoreTrailingSpace">Ignore trailing whitespace</span></label>
+    </div>
+
+    <div class="td-actions">
+      <button type="button" class="btn" id="td-compare" style="margin-top:0;" data-i18n="tool.btn.compare">Compare</button>
+      <button type="button" class="td-btn-secondary" id="td-swap" data-i18n="tool.btn.swap">Swap</button>
+      <button type="button" class="td-btn-secondary" id="td-clear" data-i18n="tool.btn.clear">Clear</button>
+    </div>
+
+    <div id="td-result" aria-live="polite">
+      <p id="td-empty" data-i18n="tool.placeholder">Paste or type text in both boxes to see the differences.</p>
+      <p id="td-error" hidden data-i18n="tool.err.tooLarge">Text is too long to compare here. Keep each box under 2,000 lines and 200,000 characters.</p>
+      <p id="td-nodiff" hidden data-i18n="tool.noDiff">No differences — the two texts are identical.</p>
+      <div class="td-stats" id="td-stats" hidden>
+        <span class="td-stat td-stat-added"><strong id="td-stat-added">0</strong><span data-i18n="tool.stat.added">Added</span></span>
+        <span class="td-stat td-stat-removed"><strong id="td-stat-removed">0</strong><span data-i18n="tool.stat.removed">Removed</span></span>
+        <span class="td-stat td-stat-unchanged"><strong id="td-stat-unchanged">0</strong><span data-i18n="tool.stat.unchanged">Unchanged</span></span>
+      </div>
+      <div id="td-output" class="td-output" hidden></div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does this text diff checker compare two pieces of text?</summary>
+      <p data-i18n="faq.a1">This tool splits both texts into lines and finds the longest common subsequence (LCS) — the longest run of lines that appear in the same order in both versions. Everything outside that shared backbone is marked as removed from the original or added in the changed text. For example, changing 'The quick brown fox' to 'The quick red fox' on one line marks that single line as changed, with 'brown' struck through and 'red' inserted, while every unrelated line above and below stays marked unchanged.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What do the colors and the + and − symbols mean in the result?</summary>
+      <p data-i18n="faq.a2">A red row with a leading − marks a line that only exists in the original text and was removed. A green row with a leading + marks a line that only exists in the changed text and was added. Rows with no symbol and no color are unchanged lines that appear in both versions. When a line is edited rather than fully removed or added, the specific words that differ inside it are struck through or underlined, so you can see exactly which words changed, not just that the line changed.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do the ignore case and ignore trailing whitespace options work?</summary>
+      <p data-i18n="faq.a3">Ignore case treats 'Hello' and 'hello' as the same line or word, which is useful when comparing text that only differs in capitalization. Ignore trailing whitespace removes invisible spaces and tabs at the end of each line before comparing, which helps with code or exported text where an editor added trailing spaces that don't change the meaning. Both options only affect how lines are matched — the characters you actually typed are always shown in the result.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is there a limit to how much text I can compare?</summary>
+      <p data-i18n="faq.a4">Yes — each box supports up to about 2,000 lines or 200,000 characters, which covers most articles, emails, config files and short scripts. If either box goes over that limit the comparison is skipped and a warning appears instead of a result, so the page doesn't freeze on a very large paste. For anything longer, compare the text in smaller sections.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text uploaded to a server when I compare it?</summary>
+      <p data-i18n="faq.a5">No. Both text boxes are compared entirely inside your browser using JavaScript — nothing you paste is uploaded, logged or sent to a server. The only thing saved is a local copy in your own browser's storage, so your text and options are still there if you come back to this tab, and you can remove it any time with the Clear button.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

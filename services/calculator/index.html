@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scientific Calculator — Trig, Log, Memory & History</title>
+<meta name="description" content="Free scientific calculator: basic math, percent, parentheses, square root, powers, sin/cos/tan (deg/rad), log/ln, memory and history — all in your browser.">
+<meta name="keywords" content="calculator, online calculator, scientific calculator, free calculator online, math calculator, 계산기">
+<link rel="canonical" href="https://tool-hub.me/calculator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Scientific Calculator — Trig, Log, Memory & History">
+<meta property="og:description" content="Free scientific calculator: basic math, percent, parentheses, square root, powers, sin/cos/tan (deg/rad), log/ln, memory and history — all in your browser.">
+<meta property="og:url" content="https://tool-hub.me/calculator/">
+<meta property="og:image" content="https://tool-hub.me/calculator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Scientific Calculator",
+  "description": "Free scientific calculator: basic math, percent, parentheses, square root, powers, sin/cos/tan (deg/rad), log/ln, memory and history — all in your browser.",
+  "url": "https://tool-hub.me/calculator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Scientific Calculator", "item": "https://tool-hub.me/calculator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this scientific calculator free, and does it work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — this calculator is completely free, has no ads and needs no sign-up. It's also installable as a small offline app (PWA): once you've loaded the page, basic and scientific calculations keep working even without an internet connection, because every calculation runs locally in your browser rather than on a server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do sin, cos and tan work, and what's the difference between degree and radian mode?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tap the DEG/RAD button to choose how angles are measured before using sin, cos or tan. In degree mode, sin(30) = 0.5 and cos(60) = 0.5, matching what you'd get from a protractor. In radian mode the same functions expect angles in radians, so sin(π÷2) — entered using the π key — also equals 1. Mixing up the modes is the most common reason a trig result looks wrong, so the current mode is always shown on the DEG/RAD button."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator follow the order of operations, and can I use parentheses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Multiplication and division are always evaluated before addition and subtraction, powers (x^y) are evaluated before multiplication and division, and percent is applied directly to the number or group before it — the standard PEMDAS/BODMAS order. For example, 3 + 4 × 2 gives 11, not 14, and (3 + 4) × 2 gives 14 because the parentheses force the addition first. You can nest parentheses as deeply as you like; the tool tells you clearly if one is left unmatched."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the percent key do, and how do the memory keys (M+, M-, MR, MC) work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The % key divides whatever comes before it by 100, so 50% becomes 0.5 and (200+50)% becomes 2.5 — handy for discounts, tax and tips. The memory keys hold one separate number across calculations: M+ adds the current value to memory, M- subtracts it, MR recalls the stored value into your current entry, and MC clears memory back to zero. A small \"M\" indicator appears next to the display whenever memory holds a non-zero value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is any calculation sent to a server, and why doesn't this tool use eval()?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No calculation ever leaves your device — every operation, from basic addition to logarithms, runs entirely in your browser, and your calculation history is stored only in your browser's local storage. The math engine is a hand-written shunting-yard parser that converts your input into a safe sequence of operations rather than running your text through JavaScript's eval() or Function(), which is a well-known security risk for any tool that evaluates user-typed expressions."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Scientific Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Scientific Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Add, subtract, multiply and divide, or go scientific with trigonometry, logarithms, powers, parentheses and memory — a full calculator that works on any device, right in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Scientific calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .calc-display {
+        background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+        padding: 14px 16px; margin-bottom: 14px;
+      }
+      #tool .calc-prev {
+        min-height: 18px; font-size: 13px; color: var(--muted); text-align: right;
+        overflow-x: auto; white-space: nowrap; font-variant-numeric: tabular-nums;
+      }
+      #tool .calc-main {
+        font-size: clamp(28px, 8vw, 40px); font-weight: 800; text-align: right;
+        overflow-x: auto; white-space: nowrap; font-variant-numeric: tabular-nums;
+        letter-spacing: -0.01em;
+      }
+      #tool .calc-error {
+        margin-top: 6px; font-size: 13px; color: #dc2626; text-align: right; min-height: 16px;
+      }
+      #tool .calc-mem-badge {
+        display: inline-block; font-size: 11px; font-weight: 700; color: var(--accent);
+        border: 1px solid var(--accent); border-radius: 6px; padding: 1px 6px;
+        margin-right: 8px; vertical-align: middle;
+      }
+      #tool .calc-pad { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+      #tool .calc-pad button {
+        min-height: 50px; border: 1px solid var(--line); border-radius: 10px;
+        font-size: 16px; font-weight: 700; cursor: pointer; font-family: inherit;
+        background: var(--surface); color: var(--ink);
+      }
+      #tool .calc-pad button:active { transform: translateY(1px); }
+      #tool .calc-pad button.calc-mem { font-size: 13px; background: color-mix(in srgb, var(--accent) 6%, var(--surface)); }
+      #tool .calc-pad button.calc-fn { font-size: 15px; background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+      #tool .calc-pad button.calc-op { background: var(--accent); color: #fff; border-color: transparent; }
+      #tool .calc-pad button.calc-op:hover { background: var(--accent-strong); }
+      #tool .calc-pad button.calc-equals { background: var(--accent-strong); color: #fff; border-color: transparent; }
+      #tool .calc-pad button.calc-clear { background: #dc2626; color: #fff; border-color: transparent; }
+      #tool .calc-pad button[aria-pressed="true"] { outline: 2px solid var(--accent); outline-offset: 1px; }
+      #tool .calc-history { margin-top: 16px; }
+      #tool .calc-history summary { font-weight: 600; font-size: 14px; color: var(--muted); cursor: pointer; }
+      #tool .calc-hist-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; max-height: 260px; overflow-y: auto; }
+      #tool .calc-hist-row {
+        display: flex; justify-content: space-between; gap: 10px; width: 100%; text-align: left;
+        background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+        padding: 8px 10px; cursor: pointer; font-family: inherit; color: var(--ink);
+      }
+      #tool .calc-hist-expr { color: var(--muted); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      #tool .calc-hist-res { font-weight: 700; font-variant-numeric: tabular-nums; flex: 0 0 auto; }
+      #tool .calc-hist-empty { color: var(--muted); font-size: 13px; margin: 8px 0; }
+      #tool .calc-hist-clear {
+        margin-top: 10px; background: none; border: 1px solid var(--line); border-radius: 8px;
+        padding: 6px 12px; font-size: 13px; color: var(--muted); cursor: pointer;
+      }
+      #tool .calc-privacy-note { margin-top: 14px; font-size: 12.5px; color: var(--muted); text-align: center; }
+      @media (max-width: 420px) {
+        #tool .calc-pad button { min-height: 44px; font-size: 15px; }
+        #tool .calc-pad button.calc-mem, #tool .calc-pad button.calc-fn { font-size: 12.5px; }
+        #tool .calc-main { font-size: clamp(24px, 9vw, 32px); }
+      }
+    </style>
+
+    <div class="calc-display">
+      <div class="calc-prev" id="calc-prev" aria-hidden="true"></div>
+      <div class="calc-main" id="calc-main" aria-live="polite">0</div>
+      <div class="calc-error" id="calc-error" role="alert" hidden></div>
+    </div>
+
+    <div class="calc-pad" id="calc-pad">
+      <button type="button" id="calc-degrad" class="calc-mem" data-action="degrad" aria-pressed="true" aria-label="Switch between degrees and radians" data-i18n-aria-label="tool.key.degrad">DEG</button>
+      <button type="button" class="calc-mem" data-action="mem" data-value="mc" aria-label="Memory clear" data-i18n-aria-label="tool.key.mc">MC</button>
+      <button type="button" class="calc-mem" data-action="mem" data-value="mr" aria-label="Memory recall" data-i18n-aria-label="tool.key.mr">MR</button>
+      <button type="button" class="calc-mem" data-action="mem" data-value="m+" aria-label="Memory add" data-i18n-aria-label="tool.key.mplus">M+</button>
+
+      <button type="button" class="calc-mem" data-action="mem" data-value="m-" aria-label="Memory subtract" data-i18n-aria-label="tool.key.mminus">M-</button>
+      <button type="button" class="calc-fn" data-action="paren-open" aria-label="Open parenthesis" data-i18n-aria-label="tool.key.parenOpen">(</button>
+      <button type="button" class="calc-fn" data-action="paren-close" aria-label="Close parenthesis" data-i18n-aria-label="tool.key.parenClose">)</button>
+      <button type="button" class="calc-fn" data-action="percent" aria-label="Percent" data-i18n-aria-label="tool.key.percent">%</button>
+
+      <button type="button" class="calc-fn" data-action="func" data-value="sin" aria-label="Sine" data-i18n-aria-label="tool.key.sin">sin</button>
+      <button type="button" class="calc-fn" data-action="func" data-value="cos" aria-label="Cosine" data-i18n-aria-label="tool.key.cos">cos</button>
+      <button type="button" class="calc-fn" data-action="func" data-value="tan" aria-label="Tangent" data-i18n-aria-label="tool.key.tan">tan</button>
+      <button type="button" class="calc-fn" data-action="func" data-value="sqrt" aria-label="Square root" data-i18n-aria-label="tool.key.sqrt">√</button>
+
+      <button type="button" class="calc-fn" data-action="func" data-value="log" aria-label="Logarithm, base 10" data-i18n-aria-label="tool.key.log">log</button>
+      <button type="button" class="calc-fn" data-action="func" data-value="ln" aria-label="Natural logarithm" data-i18n-aria-label="tool.key.ln">ln</button>
+      <button type="button" class="calc-fn" data-action="const" data-value="pi" aria-label="Pi" data-i18n-aria-label="tool.key.pi">π</button>
+      <button type="button" class="calc-fn" data-action="const" data-value="e" aria-label="Euler's number" data-i18n-aria-label="tool.key.e">e</button>
+
+      <button type="button" class="calc-fn" data-action="op" data-value="^" aria-label="Power, x to the power of y" data-i18n-aria-label="tool.key.pow">x&#x02B8;</button>
+      <button type="button" class="calc-clear" data-action="clear" aria-label="All clear" data-i18n-aria-label="tool.key.ac">AC</button>
+      <button type="button" class="calc-clear" data-action="back" aria-label="Backspace" data-i18n-aria-label="tool.key.back">&#9003;</button>
+      <button type="button" class="calc-op" data-action="op" data-value="/" aria-label="Divide" data-i18n-aria-label="tool.key.divide">&divide;</button>
+
+      <button type="button" data-action="digit" data-value="7">7</button>
+      <button type="button" data-action="digit" data-value="8">8</button>
+      <button type="button" data-action="digit" data-value="9">9</button>
+      <button type="button" class="calc-op" data-action="op" data-value="*" aria-label="Multiply" data-i18n-aria-label="tool.key.multiply">&times;</button>
+
+      <button type="button" data-action="digit" data-value="4">4</button>
+      <button type="button" data-action="digit" data-value="5">5</button>
+      <button type="button" data-action="digit" data-value="6">6</button>
+      <button type="button" class="calc-op" data-action="op" data-value="-" aria-label="Subtract" data-i18n-aria-label="tool.key.subtract">&minus;</button>
+
+      <button type="button" data-action="digit" data-value="1">1</button>
+      <button type="button" data-action="digit" data-value="2">2</button>
+      <button type="button" data-action="digit" data-value="3">3</button>
+      <button type="button" class="calc-op" data-action="op" data-value="+" aria-label="Add" data-i18n-aria-label="tool.key.add">+</button>
+
+      <button type="button" class="calc-fn" data-action="sign" aria-label="Toggle sign, positive or negative" data-i18n-aria-label="tool.key.sign">&plusmn;</button>
+      <button type="button" data-action="digit" data-value="0">0</button>
+      <button type="button" data-action="decimal">.</button>
+      <button type="button" class="calc-equals" data-action="equals" aria-label="Equals" data-i18n-aria-label="tool.key.equals">=</button>
+    </div>
+
+    <details class="calc-history" id="calc-history">
+      <summary data-i18n="tool.history.summary">Calculation history</summary>
+      <div class="calc-hist-list" id="calc-history-list"></div>
+      <button type="button" class="calc-hist-clear" id="calc-history-clear" data-i18n="tool.history.clear">Clear history</button>
+    </details>
+
+    <p class="calc-privacy-note" data-i18n="tool.note.privacy">All calculations run in your browser — nothing is ever sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Is this scientific calculator free, and does it work offline?</summary>
+      <p data-i18n="faq.a1">Yes — this calculator is completely free, has no ads and needs no sign-up. It's also installable as a small offline app (PWA): once you've loaded the page, basic and scientific calculations keep working even without an internet connection, because every calculation runs locally in your browser rather than on a server.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do sin, cos and tan work, and what's the difference between degree and radian mode?</summary>
+      <p data-i18n="faq.a2">Tap the DEG/RAD button to choose how angles are measured before using sin, cos or tan. In degree mode, sin(30) = 0.5 and cos(60) = 0.5, matching what you'd get from a protractor. In radian mode the same functions expect angles in radians, so sin(π÷2) — entered using the π key — also equals 1. Mixing up the modes is the most common reason a trig result looks wrong, so the current mode is always shown on the DEG/RAD button.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Does this calculator follow the order of operations, and can I use parentheses?</summary>
+      <p data-i18n="faq.a3">Yes. Multiplication and division are always evaluated before addition and subtraction, powers (x^y) are evaluated before multiplication and division, and percent is applied directly to the number or group before it — the standard PEMDAS/BODMAS order. For example, 3 + 4 × 2 gives 11, not 14, and (3 + 4) × 2 gives 14 because the parentheses force the addition first. You can nest parentheses as deeply as you like; the tool tells you clearly if one is left unmatched.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What does the percent key do, and how do the memory keys (M+, M-, MR, MC) work?</summary>
+      <p data-i18n="faq.a4">The % key divides whatever comes before it by 100, so 50% becomes 0.5 and (200+50)% becomes 2.5 — handy for discounts, tax and tips. The memory keys hold one separate number across calculations: M+ adds the current value to memory, M- subtracts it, MR recalls the stored value into your current entry, and MC clears memory back to zero. A small "M" indicator appears next to the display whenever memory holds a non-zero value.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is any calculation sent to a server, and why doesn't this tool use eval()?</summary>
+      <p data-i18n="faq.a5">No calculation ever leaves your device — every operation, from basic addition to logarithms, runs entirely in your browser, and your calculation history is stored only in your browser's local storage. The math engine is a hand-written shunting-yard parser that converts your input into a safe sequence of operations rather than running your text through JavaScript's eval() or Function(), which is a well-known security risk for any tool that evaluates user-typed expressions.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

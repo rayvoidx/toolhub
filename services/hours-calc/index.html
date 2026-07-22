@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hours Calculator — Time Duration & Hours Between Two Times</title>
+<meta name="description" content="Enter a start and end time for the duration in hours:minutes and decimal hours, subtract an unpaid break, and handle overnight shifts. Free, computed in your browser.">
+<meta name="keywords" content="hours calculator, time duration calculator, work hours calculator, how many hours between two times, time card hours, 근무시간 계산기">
+<link rel="canonical" href="https://tool-hub.me/hours-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hours Calculator — Time Duration & Hours Between Two Times">
+<meta property="og:description" content="Enter a start and end time for the duration in hours:minutes and decimal hours, subtract an unpaid break, and handle overnight shifts. Free, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/hours-calc/">
+<meta property="og:image" content="https://tool-hub.me/hours-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Hours Calculator",
+  "description": "Enter a start and end time for the duration in hours:minutes and decimal hours, subtract an unpaid break, and handle overnight shifts. Free, computed in your browser.",
+  "url": "https://tool-hub.me/hours-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hours Calculator",
+      "item": "https://tool-hub.me/hours-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate hours between two times, including an overnight shift?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter your start time and end time in the \"Between two times\" tab — for example a shift starting at 22:00 (10:00 PM) and ending at 06:00 (6:00 AM). Because the end time is earlier on the clock than the start time, this hours calculator automatically treats the end time as happening the next day and adds 24 hours before subtracting, giving 8 hours 0 minutes (8.00 decimal hours) instead of a negative or nonsensical result. You don't need to manually add 24 hours or flag the shift as overnight — rolling the end time forward is the default whenever the end time is earlier than the start time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does an unpaid break get subtracted from my work hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type the number of unpaid break minutes — for example a 30-minute lunch — into the break field, and the calculator subtracts it from the gross time between your start and end time before showing the net duration. A shift from 09:00 to 17:30 is 8 hours 30 minutes gross; subtracting a 30-minute break gives a net duration of 8 hours 0 minutes (8.00 decimal hours), which is the number worth putting on a timesheet. If you enter a break longer than the shift itself, the tool caps the break at the shift length and shows a net duration of 0 rather than a negative number."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the decimal hours number different from the hours and minutes shown?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Timesheets and payroll systems usually want hours as a decimal rather than hours and minutes, because minutes don't divide evenly into 100. A duration of 7 hours 30 minutes is 7 hours plus 30 out of 60 minutes, or 7.5 decimal hours — not 7.30. This hours calculator shows both formats side by side, so you can read \"7h 30m\" for a schedule and copy \"7.5\" straight into a spreadsheet or payroll form that expects decimal hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I add or subtract hours and minutes from a time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Switch to the \"Add or subtract time\" tab, enter a starting time, choose Add or Subtract, and type how many hours and minutes to apply. For example, starting at 23:30 and adding 2 hours 45 minutes rolls past midnight to 02:15 the next day, and the tool notes the day change so you don't lose track of it. This mode is handy for working out shift end times, appointment reminders, or how many hours ago something happened, without doing the clock math by hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my time data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This hours calculator runs entirely in your browser — the times, break minutes, and any add/subtract values you enter never leave your device and nothing is uploaded or stored on a server. Your last inputs are saved only in your browser's local storage so the tool remembers them next time, and you can clear that at any time by clearing your browser data."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Hours Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Hours Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How many hours between two times? Enter a start and end time to get the duration in hours and minutes plus decimal hours — an overnight shift rolls to the next day automatically and an unpaid break gets subtracted. Need to add or subtract time instead? Switch tabs.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Hours calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .hc-tabs { display:flex; gap:6px; margin-bottom:20px; background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:4px; }
+      #tool .hc-tab { flex:1; padding:10px 8px; border:none; border-radius:9px; background:transparent; color:var(--ink); font-weight:700; font-family:inherit; font-size:14px; cursor:pointer; }
+      #tool .hc-tab.is-active { background:var(--accent); color:#fff; }
+      #tool .hc-row { display:flex; gap:12px; flex-wrap:wrap; }
+      #tool .hc-field { flex:1; min-width:140px; }
+      #tool .hc-op { display:flex; gap:8px; margin:6px 0 14px; }
+      #tool .hc-op-btn { flex:1; padding:9px 10px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font-weight:700; font-family:inherit; font-size:14px; cursor:pointer; }
+      #tool .hc-op-btn.is-active { background:var(--accent); border-color:var(--accent); color:#fff; }
+      #tool .hc-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .hc-card { display:block; width:100%; text-align:left; border:1px solid var(--line); border-radius:10px; padding:14px; background:var(--surface); font-family:inherit; color:var(--ink); cursor:pointer; }
+      #tool .hc-clabel { font-size:13px; color:var(--muted); font-weight:600; }
+      #tool .hc-cval { font-size:22px; font-weight:800; color:var(--accent); margin-top:4px; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+      #tool .hc-notice { font-size:13.5px; color:var(--muted); margin:10px 0 0; }
+      #tool .hc-notice.hc-warn { color:#b45309; font-weight:600; }
+      @media (max-width:420px) { #tool .hc-row { flex-direction:column; } }
+    </style>
+
+    <div class="hc-tabs" role="tablist">
+      <button class="hc-tab is-active" id="hc-tab-dur" type="button" role="tab" aria-selected="true" aria-controls="hc-panel-dur" data-i18n="tool.tab.duration">Between two times</button>
+      <button class="hc-tab" id="hc-tab-addsub" type="button" role="tab" aria-selected="false" aria-controls="hc-panel-addsub" data-i18n="tool.tab.addsub">Add or subtract time</button>
+    </div>
+
+    <!-- Panel 1: duration between two times -->
+    <div id="hc-panel-dur" role="tabpanel">
+      <div class="hc-row">
+        <div class="hc-field">
+          <label for="hc-start" data-i18n="tool.start.label">Start time</label>
+          <input type="time" id="hc-start" autocomplete="off">
+        </div>
+        <div class="hc-field">
+          <label for="hc-end" data-i18n="tool.end.label">End time</label>
+          <input type="time" id="hc-end" autocomplete="off">
+        </div>
+      </div>
+      <label for="hc-break" data-i18n="tool.break.label">Unpaid break (minutes)</label>
+      <input type="number" id="hc-break" min="0" step="1" inputmode="numeric" placeholder="e.g. 30" data-i18n-placeholder="tool.break.ph" autocomplete="off">
+
+      <div class="result" id="hc-dur-result" aria-live="polite">
+        <p id="hc-dur-empty" data-i18n="tool.dur.placeholder" style="margin:0;color:var(--muted);">Enter a start time and an end time</p>
+        <div id="hc-dur-body" hidden>
+          <div class="hc-cards">
+            <button type="button" class="hc-card" id="hc-dur-net-card" data-copy="net">
+              <div class="hc-clabel" data-i18n="tool.res.net">Net duration</div>
+              <div class="hc-cval" id="hc-dur-net">&mdash;</div>
+            </button>
+            <button type="button" class="hc-card" id="hc-dur-dec-card" data-copy="decimal">
+              <div class="hc-clabel" data-i18n="tool.res.decimal">Decimal hours</div>
+              <div class="hc-cval" id="hc-dur-decimal">&mdash;</div>
+            </button>
+          </div>
+          <p class="hc-notice" id="hc-dur-breakdown" hidden></p>
+          <p class="hc-notice" id="hc-dur-overnight" data-i18n="tool.note.overnight" hidden>End time is before start time, so it's counted as ending the next day (+24h).</p>
+          <p class="hc-notice" id="hc-dur-same" data-i18n="tool.note.same" hidden>Start and end time are the same, so the duration is 0h 0m.</p>
+          <p class="hc-notice hc-warn" id="hc-dur-clamped" hidden></p>
+          <p class="hc-notice" data-i18n="tool.copyHint">Tap a card to copy the number</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Panel 2: add / subtract hours and minutes -->
+    <div id="hc-panel-addsub" role="tabpanel" hidden>
+      <label for="hc-base" data-i18n="tool.base.label">Time</label>
+      <input type="time" id="hc-base" autocomplete="off">
+
+      <p id="hc-op-label" style="font-weight:600;font-size:14px;margin:14px 0 6px;" data-i18n="tool.op.label">Operation</p>
+      <div class="hc-op" role="group" aria-labelledby="hc-op-label">
+        <button type="button" class="hc-op-btn is-active" id="hc-op-add" data-op="add" aria-pressed="true" data-i18n="tool.op.add">Add</button>
+        <button type="button" class="hc-op-btn" id="hc-op-sub" data-op="subtract" aria-pressed="false" data-i18n="tool.op.subtract">Subtract</button>
+      </div>
+
+      <div class="hc-row">
+        <div class="hc-field">
+          <label for="hc-add-hours" data-i18n="tool.addHours.label">Hours</label>
+          <input type="number" id="hc-add-hours" min="0" step="1" inputmode="numeric" placeholder="e.g. 2" data-i18n-placeholder="tool.addHours.ph" autocomplete="off">
+        </div>
+        <div class="hc-field">
+          <label for="hc-add-minutes" data-i18n="tool.addMinutes.label">Minutes</label>
+          <input type="number" id="hc-add-minutes" min="0" step="1" inputmode="numeric" placeholder="e.g. 30" data-i18n-placeholder="tool.addMinutes.ph" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="result" id="hc-as-result" aria-live="polite">
+        <p id="hc-as-empty" data-i18n="tool.as.placeholder" style="margin:0;color:var(--muted);">Enter a time to start from</p>
+        <div id="hc-as-body" hidden>
+          <div class="hc-cards">
+            <button type="button" class="hc-card" id="hc-as-card" data-copy="result">
+              <div class="hc-clabel" data-i18n="tool.res.result">Resulting time</div>
+              <div class="hc-cval" id="hc-as-value">&mdash;</div>
+            </button>
+          </div>
+          <p class="hc-notice" id="hc-as-day"></p>
+          <p class="hc-notice" data-i18n="tool.copyHint">Tap a card to copy the number</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="hc-notice" data-i18n="tool.privacy" style="text-align:center;margin-top:18px;">Every calculation runs in your browser — nothing is sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I calculate hours between two times, including an overnight shift?</summary>
+      <p data-i18n="faq.a1">Enter your start time and end time in the "Between two times" tab — for example a shift starting at 22:00 (10:00 PM) and ending at 06:00 (6:00 AM). Because the end time is earlier on the clock than the start time, this hours calculator automatically treats the end time as happening the next day and adds 24 hours before subtracting, giving 8 hours 0 minutes (8.00 decimal hours) instead of a negative or nonsensical result. You don't need to manually add 24 hours or flag the shift as overnight — rolling the end time forward is the default whenever the end time is earlier than the start time.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How does an unpaid break get subtracted from my work hours?</summary>
+      <p data-i18n="faq.a2">Type the number of unpaid break minutes — for example a 30-minute lunch — into the break field, and the calculator subtracts it from the gross time between your start and end time before showing the net duration. A shift from 09:00 to 17:30 is 8 hours 30 minutes gross; subtracting a 30-minute break gives a net duration of 8 hours 0 minutes (8.00 decimal hours), which is the number worth putting on a timesheet. If you enter a break longer than the shift itself, the tool caps the break at the shift length and shows a net duration of 0 rather than a negative number.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why is the decimal hours number different from the hours and minutes shown?</summary>
+      <p data-i18n="faq.a3">Timesheets and payroll systems usually want hours as a decimal rather than hours and minutes, because minutes don't divide evenly into 100. A duration of 7 hours 30 minutes is 7 hours plus 30 out of 60 minutes, or 7.5 decimal hours — not 7.30. This hours calculator shows both formats side by side, so you can read "7h 30m" for a schedule and copy "7.5" straight into a spreadsheet or payroll form that expects decimal hours.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How do I add or subtract hours and minutes from a time?</summary>
+      <p data-i18n="faq.a4">Switch to the "Add or subtract time" tab, enter a starting time, choose Add or Subtract, and type how many hours and minutes to apply. For example, starting at 23:30 and adding 2 hours 45 minutes rolls past midnight to 02:15 the next day, and the tool notes the day change so you don't lose track of it. This mode is handy for working out shift end times, appointment reminders, or how many hours ago something happened, without doing the clock math by hand.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my time data sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This hours calculator runs entirely in your browser — the times, break minutes, and any add/subtract values you enter never leave your device and nothing is uploaded or stored on a server. Your last inputs are saved only in your browser's local storage so the tool remembers them next time, and you can clear that at any time by clearing your browser data.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

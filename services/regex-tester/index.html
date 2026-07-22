@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regex Tester — Match, Highlight & Replace Regex Live</title>
+<meta name="description" content="Test JavaScript regular expressions live: see highlighted matches, capture groups, a match count, and a replace preview — instantly, free, in your browser.">
+<meta name="keywords" content="regex tester, regular expression tester, regex online, regex match tester, javascript regex, 정규식 테스트, 정규식 검사기">
+<link rel="canonical" href="https://tool-hub.me/regex-tester/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Regex Tester — Match, Highlight & Replace Regex Live">
+<meta property="og:description" content="Test JavaScript regular expressions live: see highlighted matches, capture groups, a match count, and a replace preview — instantly, free, in your browser.">
+<meta property="og:url" content="https://tool-hub.me/regex-tester/">
+<meta property="og:image" content="https://tool-hub.me/regex-tester/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d28d9">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Regex Tester",
+  "description": "Test JavaScript regular expressions live: see highlighted matches, capture groups, a match count, and a replace preview — instantly, free, in your browser.",
+  "url": "https://tool-hub.me/regex-tester/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Regex Tester",
+      "item": "https://tool-hub.me/regex-tester/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I test a regular expression online for free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type or paste your pattern into the pattern field (without the surrounding slashes), tick the flags you need — g for global, i for case-insensitive, and so on — then paste your text into the test string box. This regex tester matches live as you type: every match is highlighted in the preview, listed with its start index and captured groups below, and the match count updates instantly. For example, entering the pattern \\b\\w+@\\w+\\.\\w+\\b against \"Contact us at hello@example.com or sales@example.org\" highlights both email addresses immediately, no submit button needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the regex flags g, i, m, s, u, and y mean in JavaScript?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "g (global) finds every match instead of stopping at the first; i (ignore case) makes A and a equivalent; m (multiline) makes ^ and $ match the start and end of each line instead of only the whole string; s (dotall) lets . match newline characters too; u (unicode) enables full Unicode code-point matching (needed for things like emoji or astral characters and for \\p{...} Unicode property escapes); and y (sticky) forces the match to start at exactly the current position (lastIndex) rather than scanning ahead. This tool lets you toggle each one and see the effect on your matches immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my regex only replace the first match?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In JavaScript, String.prototype.replace() only replaces every occurrence when the regular expression has the g (global) flag — without it, only the first match is replaced, which is standard ECMAScript behavior, not a bug. This regex tester mirrors that exact rule: the replace preview shows what your pattern and replacement actually produce with your current flags, and a hint appears reminding you to check g if you expected every match to change. Turn on g and the preview updates to show every match replaced."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do named capture groups like (?<year>\\d{4}) work in JavaScript regex?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wrapping part of a pattern in (?<name>...) creates a named capture group alongside the normal numbered groups — for example (?<year>\\d{4})-(?<month>\\d{2}) matched against \"2026-07\" captures group 1 / \"year\" as 2026 and group 2 / \"month\" as 07. Named groups can also be referenced in a replacement string as $<year>, which is often clearer than $1 in longer patterns. This tester lists both the numbered groups and the named groups for every match, so you can confirm the capture works before using it in real code."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my regex pattern or test string sent to a server, and does this match every regex dialect?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — everything runs locally using your browser's built-in RegExp engine; your pattern, test string, and replacement text are never uploaded or stored anywhere, and nothing is saved except your last input in your own browser's local storage for convenience. This tool tests the JavaScript (ECMAScript) regex dialect specifically, so a pattern that relies on PCRE-only or Python re-only features (like recursive patterns, atomic groups, or possessive quantifiers) may behave differently here than in those languages — check your target language's own documentation if you are writing regex for something other than JavaScript."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Regex Tester</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Regex Tester</h1>
+    <p class="lede" data-i18n="hero.lede">Enter a pattern and flags, paste your test string, and see matches highlighted live — with capture groups, a match count, and a replace preview. Runs entirely in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Regex tester" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .rt-pattern-row { display: flex; gap: 8px; align-items: center; }
+      #tool .rt-slash { color: var(--muted); font-weight: 700; font-size: 18px; flex: 0 0 auto; }
+      #tool #pattern { flex: 1 1 auto; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      #tool .rt-dialect-note { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); }
+      #tool .rt-flags { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 0; }
+      #tool .rt-flag-chip {
+        display: flex; align-items: center; gap: 6px; cursor: pointer; user-select: none;
+        padding: 7px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg);
+        font-size: 13.5px; font-weight: 600; color: var(--muted);
+      }
+      #tool .rt-flag-chip:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--surface)); color: var(--ink); }
+      #tool .rt-flag-chip input { width: auto; margin: 0; flex: 0 0 auto; }
+      #tool .rt-flag-letter { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-weight: 800; color: var(--accent); }
+      #tool .rt-presets { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 0; }
+      #tool .rt-preset-btn {
+        flex: 0 0 auto; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px;
+        background: var(--bg); color: var(--ink); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer;
+      }
+      #tool .rt-preset-btn:hover { border-color: var(--accent); }
+      #tool #test-string, #tool #replacement {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14.5px;
+      }
+      #tool #test-string { resize: vertical; min-height: 110px; }
+      #tool .rt-error {
+        margin-top: 12px; padding: 12px 14px; border-radius: 10px; font-size: 14.5px; line-height: 1.5;
+        background: color-mix(in srgb, #dc2626 10%, var(--surface)); border: 1px solid color-mix(in srgb, #dc2626 30%, var(--line)); color: #dc2626;
+        overflow-wrap: anywhere;
+      }
+      #tool .rt-summary { margin: 16px 0 8px; font-weight: 700; font-size: 15px; }
+      #tool .rt-preview {
+        margin: 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14px; line-height: 1.6;
+        white-space: pre-wrap; overflow-wrap: anywhere; max-height: 260px; overflow-y: auto;
+      }
+      #tool .rt-preview-empty { margin: 0; padding: 12px 14px; color: var(--muted); font-size: 14px; border: 1px dashed var(--line); border-radius: 10px; }
+      #tool mark.rt-mark { background: color-mix(in srgb, var(--accent) 35%, transparent); color: var(--ink); border-radius: 3px; padding: 0 1px; }
+      #tool .rt-section-label { font-weight: 700; font-size: 14px; margin: 18px 0 8px; color: var(--ink); }
+      #tool .rt-matches { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }
+      #tool .rt-match-item { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--surface); }
+      #tool .rt-match-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: baseline; }
+      #tool .rt-match-n { font-weight: 800; color: var(--accent); font-size: 13px; }
+      #tool .rt-match-at { color: var(--muted); font-size: 12.5px; }
+      #tool .rt-match-val { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; overflow-wrap: anywhere; background: var(--bg); padding: 1px 6px; border-radius: 6px; }
+      #tool .rt-groups { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+      #tool .rt-group-chip {
+        font-size: 12.5px; padding: 3px 8px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line);
+        color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; overflow-wrap: anywhere;
+      }
+      #tool .rt-group-named { border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); color: var(--ink); }
+      #tool .rt-trunc-note { margin: 8px 0 0; font-size: 12.5px; color: var(--muted); }
+      #tool .rt-replace-hint { margin: 8px 0 0; font-size: 12.5px; color: var(--accent-strong); }
+      #tool .rt-copy-row { display: flex; justify-content: flex-end; margin-top: 8px; }
+      #tool .rt-copy-btn {
+        padding: 7px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink);
+        font-family: inherit; font-size: 13px; font-weight: 700; cursor: pointer;
+      }
+      #tool .rt-copy-btn:hover { border-color: var(--accent); }
+      @media (max-width: 420px) {
+        #tool .rt-pattern-row { flex-wrap: wrap; }
+        #tool .rt-match-head { flex-direction: column; align-items: flex-start; gap: 4px; }
+      }
+    </style>
+
+    <div class="input-group">
+      <label for="pattern" data-i18n="tool.pattern.label">Regular expression pattern</label>
+      <div class="rt-pattern-row">
+        <span class="rt-slash" aria-hidden="true">/</span>
+        <input id="pattern" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+          placeholder="\d{3}-\d{4}" data-i18n-placeholder="tool.pattern.ph" aria-label="Regular expression pattern" data-i18n-aria-label="tool.pattern.label" autofocus>
+        <span class="rt-slash" aria-hidden="true">/</span>
+      </div>
+      <p class="rt-dialect-note" data-i18n="tool.dialect.note">Dialect: JavaScript (ECMAScript) RegExp — behavior may differ from PCRE, Python re, or other regex engines.</p>
+
+      <div class="rt-flags" role="group" aria-label="Regex flags" data-i18n-aria-label="tool.flags.legend">
+        <label class="rt-flag-chip" title="Find every match, not just the first." data-i18n-title="tool.flag.g.desc">
+          <input type="checkbox" class="rt-flag" data-flag="g" checked>
+          <span class="rt-flag-letter">g</span><span data-i18n="tool.flag.g">Global</span>
+        </label>
+        <label class="rt-flag-chip" title="Match letters regardless of case." data-i18n-title="tool.flag.i.desc">
+          <input type="checkbox" class="rt-flag" data-flag="i">
+          <span class="rt-flag-letter">i</span><span data-i18n="tool.flag.i">Ignore case</span>
+        </label>
+        <label class="rt-flag-chip" title="^ and $ match the start/end of each line." data-i18n-title="tool.flag.m.desc">
+          <input type="checkbox" class="rt-flag" data-flag="m">
+          <span class="rt-flag-letter">m</span><span data-i18n="tool.flag.m">Multiline</span>
+        </label>
+        <label class="rt-flag-chip" title="A dot also matches newline characters." data-i18n-title="tool.flag.s.desc">
+          <input type="checkbox" class="rt-flag" data-flag="s">
+          <span class="rt-flag-letter">s</span><span data-i18n="tool.flag.s">Dotall</span>
+        </label>
+        <label class="rt-flag-chip" title="Full Unicode code-point matching." data-i18n-title="tool.flag.u.desc">
+          <input type="checkbox" class="rt-flag" data-flag="u">
+          <span class="rt-flag-letter">u</span><span data-i18n="tool.flag.u">Unicode</span>
+        </label>
+        <label class="rt-flag-chip" title="Match only at the current position." data-i18n-title="tool.flag.y.desc">
+          <input type="checkbox" class="rt-flag" data-flag="y">
+          <span class="rt-flag-letter">y</span><span data-i18n="tool.flag.y">Sticky</span>
+        </label>
+      </div>
+
+      <div class="rt-presets" id="pattern-presets" role="group" aria-label="Quick patterns" data-i18n-aria-label="tool.presets.label">
+        <button type="button" class="rt-preset-btn" data-preset="email" data-i18n="tool.preset.email">Email</button>
+        <button type="button" class="rt-preset-btn" data-preset="url" data-i18n="tool.preset.url">URL</button>
+        <button type="button" class="rt-preset-btn" data-preset="ipv4" data-i18n="tool.preset.ipv4">IPv4 address</button>
+        <button type="button" class="rt-preset-btn" data-preset="digits" data-i18n="tool.preset.digits">Digits only</button>
+        <button type="button" class="rt-preset-btn" data-preset="whitespace" data-i18n="tool.preset.whitespace">Leading/trailing whitespace</button>
+      </div>
+    </div>
+
+    <p id="pattern-error" class="rt-error" role="alert" hidden></p>
+
+    <div class="input-group">
+      <label for="test-string" data-i18n="tool.test.label">Test string</label>
+      <textarea id="test-string" rows="6" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+        placeholder="Contact us at hello@example.com or call 555-1234." data-i18n-placeholder="tool.test.ph"></textarea>
+    </div>
+
+    <p class="rt-summary" id="match-summary" aria-live="polite" data-i18n="tool.summary.empty">Enter a pattern to start matching.</p>
+
+    <p class="rt-section-label" data-i18n="tool.preview.label">Highlighted matches</p>
+    <p class="rt-preview-empty" id="preview-empty" data-i18n="tool.preview.empty">Matches will be highlighted here once you enter a test string.</p>
+    <pre class="rt-preview" id="highlight-preview" aria-live="polite" hidden></pre>
+
+    <div id="matches-wrap" hidden>
+      <p class="rt-section-label" data-i18n="tool.matches.label">Match details</p>
+      <ul class="rt-matches" id="matches-list" aria-live="polite"></ul>
+      <p class="rt-trunc-note" id="matches-trunc" hidden></p>
+    </div>
+
+    <div id="replace-wrap" hidden>
+      <div class="input-group">
+        <label for="replacement" data-i18n="tool.replacement.label">Replacement</label>
+        <input id="replacement" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+          placeholder="$1-$2 or $<name>" data-i18n-placeholder="tool.replacement.ph">
+      </div>
+      <p class="rt-section-label" data-i18n="tool.replace.label">Replace preview</p>
+      <pre class="rt-preview" id="replace-preview"></pre>
+      <p class="rt-replace-hint" id="replace-hint" hidden data-i18n="tool.replace.hint">Only the first match is replaced — check the g flag to replace every match.</p>
+      <div class="rt-copy-row">
+        <button type="button" class="rt-copy-btn" id="copy-replace" data-i18n="tool.copy">Copy result</button>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I test a regular expression online for free?</summary>
+      <p data-i18n="faq.a1">Type or paste your pattern into the pattern field (without the surrounding slashes), tick the flags you need — g for global, i for case-insensitive, and so on — then paste your text into the test string box. This regex tester matches live as you type: every match is highlighted in the preview, listed with its start index and captured groups below, and the match count updates instantly. For example, entering the pattern \b\w+@\w+\.\w+\b against "Contact us at hello@example.com or sales@example.org" highlights both email addresses immediately, no submit button needed.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What do the regex flags g, i, m, s, u, and y mean in JavaScript?</summary>
+      <p data-i18n="faq.a2">g (global) finds every match instead of stopping at the first; i (ignore case) makes A and a equivalent; m (multiline) makes ^ and $ match the start and end of each line instead of only the whole string; s (dotall) lets . match newline characters too; u (unicode) enables full Unicode code-point matching (needed for things like emoji or astral characters and for \p{...} Unicode property escapes); and y (sticky) forces the match to start at exactly the current position (lastIndex) rather than scanning ahead. This tool lets you toggle each one and see the effect on your matches immediately.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why does my regex only replace the first match?</summary>
+      <p data-i18n="faq.a3">In JavaScript, String.prototype.replace() only replaces every occurrence when the regular expression has the g (global) flag — without it, only the first match is replaced, which is standard ECMAScript behavior, not a bug. This regex tester mirrors that exact rule: the replace preview shows what your pattern and replacement actually produce with your current flags, and a hint appears reminding you to check g if you expected every match to change. Turn on g and the preview updates to show every match replaced.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How do named capture groups like (?&lt;year&gt;\d{4}) work in JavaScript regex?</summary>
+      <p data-i18n="faq.a4">Wrapping part of a pattern in (?&lt;name&gt;...) creates a named capture group alongside the normal numbered groups — for example (?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2}) matched against "2026-07" captures group 1 / "year" as 2026 and group 2 / "month" as 07. Named groups can also be referenced in a replacement string as $&lt;year&gt;, which is often clearer than $1 in longer patterns. This tester lists both the numbered groups and the named groups for every match, so you can confirm the capture works before using it in real code.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my regex pattern or test string sent to a server, and does this match every regex dialect?</summary>
+      <p data-i18n="faq.a5">No — everything runs locally using your browser's built-in RegExp engine; your pattern, test string, and replacement text are never uploaded or stored anywhere, and nothing is saved except your last input in your own browser's local storage for convenience. This tool tests the JavaScript (ECMAScript) regex dialect specifically, so a pattern that relies on PCRE-only or Python re-only features (like recursive patterns, atomic groups, or possessive quantifiers) may behave differently here than in those languages — check your target language's own documentation if you are writing regex for something other than JavaScript.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

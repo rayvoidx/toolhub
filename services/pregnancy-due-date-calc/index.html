@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pregnancy Due Date Calculator — LMP, Conception & IVF Estimate</title>
+<meta name="description" content="Estimate your due date from your last period, conception date, or IVF transfer, plus gestational age and trimester milestones. Free, private, in your browser.">
+<meta name="keywords" content="due date calculator, pregnancy calculator, pregnancy due date, gestational age calculator, when is my baby due, IVF due date calculator, 출산예정일 계산기">
+<link rel="canonical" href="https://tool-hub.me/pregnancy-due-date-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pregnancy Due Date Calculator — LMP, Conception & IVF Estimate">
+<meta property="og:description" content="Estimate your due date from your last period, conception date, or IVF transfer, plus gestational age and trimester milestones. Free, private, in your browser.">
+<meta property="og:url" content="https://tool-hub.me/pregnancy-due-date-calc/">
+<meta property="og:image" content="https://tool-hub.me/pregnancy-due-date-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be123c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pregnancy Due Date Calculator",
+  "description": "Estimate your due date from your last period, conception date, or IVF transfer, plus gestational age and trimester milestones. Free, private, in your browser.",
+  "url": "https://tool-hub.me/pregnancy-due-date-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pregnancy Due Date Calculator",
+      "item": "https://tool-hub.me/pregnancy-due-date-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is my pregnancy due date calculated from my last period?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most due date calculators use Naegele's rule: count 280 days (40 weeks) from the first day of your last menstrual period (LMP), assuming a standard 28-day cycle where ovulation happens around day 14. For example, an LMP of January 1 gives an estimated due date around October 8. If your average cycle is longer or shorter than 28 days, this pregnancy calculator shifts the estimate by the difference — a 32-day cycle pushes ovulation, and the due date, about 4 days later; a 24-day cycle about 4 days earlier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is a due date, and how many babies are born on it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A due date is a statistical estimate, not a prediction of the exact day. Only around 1 in 20 babies are born on their estimated due date; most arrive within the two weeks before or after it, and a full-term pregnancy is considered anywhere from 37 to 42 weeks. First-trimester ultrasound dating is generally considered more accurate than a calculation from your last period alone, especially if your cycles are irregular, so treat this calculator's date as a helpful planning estimate rather than a guarantee."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does an IVF transfer date change the due date calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "IVF due dates are calculated from the embryo's known age at transfer rather than from a last period, which is why they tend to be more precise. For a day-3 (cleavage-stage) transfer, this calculator adds 263 days to the transfer date; for a day-5 (blastocyst) transfer, it adds 261 days. Both formulas assume the embryo reached day 3 or day 5 at the same pace a standard 28-day cycle would put ovulation on day 14, so the due date lands 40 weeks after that equivalent starting point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is gestational age, and why does it start before conception actually happens?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gestational age is the medical convention for how far along a pregnancy is, and by tradition it is counted from the first day of the last menstrual period — about two weeks before ovulation and conception typically occur. So in week 4 of a pregnancy, the embryo itself is usually only about 2 weeks old. This calculator reports gestational age in completed weeks and days using that same convention, whichever method (LMP, conception date, or IVF transfer) you use to estimate it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my due date or personal date information sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation in this pregnancy due date calculator runs locally in your browser using JavaScript. Your last period date, conception date, or transfer date is saved only in this browser's local storage so the form is ready next time you visit, and \"Clear saved dates\" removes it immediately. Nothing is uploaded, there is no account, and no one else can see what you entered."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Pregnancy Due Date Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Pregnancy Due Date Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your last period, conception date, or IVF transfer date to see your estimated due date, current gestational age, and trimester milestones.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool input[type="date"] {
+        width: 100%; padding: 12px 14px; font-size: 16px; font-family: inherit;
+        border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink);
+      }
+      #tool input[type="date"]:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+
+      #tool .pdd-disclaim {
+        margin: 0 0 18px; padding: 13px 15px; font-size: 13.5px; line-height: 1.55;
+        border-radius: 10px; color: var(--ink); font-weight: 600;
+        border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line));
+        background: color-mix(in srgb, var(--accent) 9%, transparent);
+      }
+
+      #tool .pdd-methods {
+        display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px;
+      }
+      #tool .pdd-method-opt {
+        display: flex; align-items: center; gap: 8px; flex: 1 1 auto;
+        padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px;
+        cursor: pointer; font-weight: 600; font-size: 13.5px; margin: 0;
+      }
+      #tool .pdd-method-opt:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, transparent); }
+      #tool .pdd-method-opt input { width: auto; flex: 0 0 auto; margin: 0; }
+
+      #tool .pdd-group { margin-top: 4px; }
+      #tool .pdd-hint { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+
+      #tool .pdd-actions { margin-top: 18px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool .pdd-actions .btn { margin-top: 0; }
+      #tool .pdd-ghost {
+        background: none; border: 1px solid var(--line); color: var(--muted);
+        padding: 11px 18px; font-size: 14px;
+      }
+      #tool .pdd-ghost:hover { background: none; border-color: var(--accent); color: var(--accent); }
+      #tool .pdd-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .pdd-status { color: var(--accent); }
+
+      #tool .pdd-msg { margin: 0; color: var(--muted); }
+      #tool .pdd-err { margin: 0; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .pdd-err { color: var(--accent); }
+      #tool .pdd-warn {
+        margin: 0 0 14px; padding: 10px 12px; font-size: 13px; line-height: 1.5;
+        border-radius: 8px; color: var(--ink);
+        border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+        background: color-mix(in srgb, var(--accent) 7%, transparent);
+      }
+      #tool .pdd-notyet { padding: 10px 0; }
+
+      #tool .pdd-cards { display: grid; gap: 12px; grid-template-columns: 1fr; }
+      @media (min-width: 560px) { #tool .pdd-cards { grid-template-columns: repeat(2, 1fr); } }
+      #tool .pdd-card {
+        padding: 14px; border-radius: 10px; text-align: center;
+        border: 1px solid var(--line); background: var(--surface);
+      }
+      #tool .pdd-card.is-key { border-color: var(--accent); border-width: 2px; }
+      #tool .pdd-card b { display: block; font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.01em; }
+      #tool .pdd-card .pdd-date {
+        display: block; margin-top: 6px; font-size: 18px; font-weight: 900;
+        letter-spacing: -0.02em; color: var(--accent-strong); font-variant-numeric: tabular-nums;
+      }
+      [data-theme="dark"] #tool .pdd-card .pdd-date { color: var(--accent); }
+      #tool .pdd-card .pdd-rel { display: block; margin-top: 4px; font-size: 12.5px; font-style: normal; color: var(--muted); }
+
+      #tool .pdd-h3 { font-size: 15px; margin: 26px 0 10px; letter-spacing: -0.01em; }
+      #tool .pdd-wrap { overflow-x: auto; }
+      #tool table.pdd-tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+      #tool table.pdd-tbl th, #tool table.pdd-tbl td {
+        padding: 9px 8px; text-align: start; border-bottom: 1px solid var(--line); white-space: nowrap;
+      }
+      #tool table.pdd-tbl th { font-size: 12px; font-weight: 700; color: var(--muted); }
+      #tool table.pdd-tbl td { font-variant-numeric: tabular-nums; }
+      #tool table.pdd-tbl tbody th { font-weight: 800; color: var(--ink); text-align: start; }
+      #tool .pdd-privacy { margin: 20px 0 0; font-size: 12.5px; line-height: 1.55; color: var(--muted); }
+
+      @media (max-width: 420px) {
+        #tool .pdd-methods { flex-direction: column; }
+      }
+    </style>
+
+    <p class="pdd-disclaim" role="note" data-i18n="tool.disclaimer">Estimate only — not medical advice. Every pregnancy is different; confirm your due date and care plan with a doctor or midwife.</p>
+
+    <div class="pdd-methods" role="radiogroup" aria-label="Estimate from" data-i18n-aria-label="tool.method.aria">
+      <label class="pdd-method-opt"><input type="radio" name="pdd-method" id="pdd-method-lmp" value="lmp" checked><span data-i18n="tool.method.lmp">Last period (LMP)</span></label>
+      <label class="pdd-method-opt"><input type="radio" name="pdd-method" id="pdd-method-conception" value="conception"><span data-i18n="tool.method.conception">Conception date</span></label>
+      <label class="pdd-method-opt"><input type="radio" name="pdd-method" id="pdd-method-ivf" value="ivf"><span data-i18n="tool.method.ivf">IVF transfer date</span></label>
+    </div>
+
+    <div id="pdd-group-lmp" class="pdd-group">
+      <label for="pdd-lmp" data-i18n="tool.lmp.label">First day of your last period</label>
+      <input type="date" id="pdd-lmp" autocomplete="off">
+      <p class="pdd-hint" data-i18n="tool.lmp.hint">The first day of bleeding, not the day it ended.</p>
+
+      <label for="pdd-cycle" data-i18n="tool.cycle.label">Average cycle length (days)</label>
+      <input type="number" id="pdd-cycle" value="28" min="21" max="45" step="1" inputmode="numeric" autocomplete="off">
+      <p class="pdd-hint" data-i18n="tool.cycle.hint">From the first day of one period to the first day of the next. 28 days is the default; most cycles run 21–45 days.</p>
+    </div>
+
+    <div id="pdd-group-conception" class="pdd-group" hidden>
+      <label for="pdd-conception" data-i18n="tool.conception.label">Conception date</label>
+      <input type="date" id="pdd-conception" autocomplete="off">
+      <p class="pdd-hint" data-i18n="tool.conception.hint">The estimated date of conception or ovulation, for example from an ovulation test or fertility tracking.</p>
+    </div>
+
+    <div id="pdd-group-ivf" class="pdd-group" hidden>
+      <label for="pdd-ivf-date" data-i18n="tool.ivf.date.label">Embryo transfer date</label>
+      <input type="date" id="pdd-ivf-date" autocomplete="off">
+      <p class="pdd-hint" data-i18n="tool.ivf.date.hint">The date of your embryo transfer — this can be a past or a scheduled future date.</p>
+
+      <label for="pdd-ivf-stage" data-i18n="tool.ivf.stage.label">Embryo stage at transfer</label>
+      <select id="pdd-ivf-stage">
+        <option value="3" data-i18n="tool.ivf.day3">Day 3 (cleavage-stage embryo)</option>
+        <option value="5" selected data-i18n="tool.ivf.day5">Day 5 (blastocyst)</option>
+      </select>
+    </div>
+
+    <div class="pdd-actions">
+      <button type="button" class="btn" id="pdd-calc" data-i18n="tool.calc">Calculate</button>
+      <button type="button" class="btn pdd-ghost" id="pdd-clear" data-i18n="tool.clear">Clear saved dates</button>
+      <span class="pdd-status" id="pdd-status" role="status"></span>
+    </div>
+
+    <div class="result" id="pdd-result" aria-live="polite"></div>
+
+    <div id="pdd-extra" hidden>
+      <h3 class="pdd-h3" data-i18n="tool.milestones.heading">Trimester milestones</h3>
+      <div class="pdd-wrap"><table class="pdd-tbl" id="pdd-tbl"></table></div>
+    </div>
+
+    <p class="pdd-privacy" data-i18n="tool.privacy">Calculated in your browser. Your dates stay on this device and are never sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">How is my pregnancy due date calculated from my last period?</summary><p data-i18n="faq.a1">Most due date calculators use Naegele's rule: count 280 days (40 weeks) from the first day of your last menstrual period (LMP), assuming a standard 28-day cycle where ovulation happens around day 14. For example, an LMP of January 1 gives an estimated due date around October 8. If your average cycle is longer or shorter than 28 days, this pregnancy calculator shifts the estimate by the difference — a 32-day cycle pushes ovulation, and the due date, about 4 days later; a 24-day cycle about 4 days earlier.</p></details>
+    <details><summary data-i18n="faq.q2">How accurate is a due date, and how many babies are born on it?</summary><p data-i18n="faq.a2">A due date is a statistical estimate, not a prediction of the exact day. Only around 1 in 20 babies are born on their estimated due date; most arrive within the two weeks before or after it, and a full-term pregnancy is considered anywhere from 37 to 42 weeks. First-trimester ultrasound dating is generally considered more accurate than a calculation from your last period alone, especially if your cycles are irregular, so treat this calculator's date as a helpful planning estimate rather than a guarantee.</p></details>
+    <details><summary data-i18n="faq.q3">How does an IVF transfer date change the due date calculation?</summary><p data-i18n="faq.a3">IVF due dates are calculated from the embryo's known age at transfer rather than from a last period, which is why they tend to be more precise. For a day-3 (cleavage-stage) transfer, this calculator adds 263 days to the transfer date; for a day-5 (blastocyst) transfer, it adds 261 days. Both formulas assume the embryo reached day 3 or day 5 at the same pace a standard 28-day cycle would put ovulation on day 14, so the due date lands 40 weeks after that equivalent starting point.</p></details>
+    <details><summary data-i18n="faq.q4">What is gestational age, and why does it start before conception actually happens?</summary><p data-i18n="faq.a4">Gestational age is the medical convention for how far along a pregnancy is, and by tradition it is counted from the first day of the last menstrual period — about two weeks before ovulation and conception typically occur. So in week 4 of a pregnancy, the embryo itself is usually only about 2 weeks old. This calculator reports gestational age in completed weeks and days using that same convention, whichever method (LMP, conception date, or IVF transfer) you use to estimate it.</p></details>
+    <details><summary data-i18n="faq.q5">Is my due date or personal date information sent to a server?</summary><p data-i18n="faq.a5">No. Every calculation in this pregnancy due date calculator runs locally in your browser using JavaScript. Your last period date, conception date, or transfer date is saved only in this browser's local storage so the form is ready next time you visit, and "Clear saved dates" removes it immediately. Nothing is uploaded, there is no account, and no one else can see what you entered.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

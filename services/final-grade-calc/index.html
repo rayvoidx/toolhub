@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Grade Calculator — What Score You Need on the Final</title>
+<meta name="description" content="Enter your current grade, target grade, and final exam weight to get the score you need on the final, plus scores needed for A, B, and C. Free, in your browser.">
+<meta name="keywords" content="final grade calculator, final exam calculator, what do I need on my final, final exam grade needed, grade needed on final exam calculator, 기말고사 성적 계산기">
+<link rel="canonical" href="https://tool-hub.me/final-grade-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Final Grade Calculator — What Score You Need on the Final">
+<meta property="og:description" content="Enter your current grade, target grade, and final exam weight to get the score you need on the final, plus scores needed for A, B, and C. Free, in your browser.">
+<meta property="og:url" content="https://tool-hub.me/final-grade-calc/">
+<meta property="og:image" content="https://tool-hub.me/final-grade-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Final Grade Calculator",
+  "description": "Enter your current grade, target grade, and final exam weight to get the score you need on the final, plus scores needed for A, B, and C. Free, in your browser.",
+  "url": "https://tool-hub.me/final-grade-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Final Grade Calculator",
+      "item": "https://tool-hub.me/final-grade-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate what score I need on my final exam?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator uses the standard weighted-average grading formula: desired grade = current grade × (1 − final exam weight) + final score × final exam weight. Solving for the final score gives final score = (desired grade − current grade × (1 − final exam weight)) ÷ final exam weight. For example, with a current grade of 78%, a target grade of 85%, and a final exam worth 50% of the class, the required score is (85 − 78×0.5) ÷ 0.5 = (85 − 39) ÷ 0.5 = 92% — that's the score you'd need on the final."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it mean if the calculator says I need more than 100%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A result over 100% means your target grade isn't reachable anymore with the current weighting, because no exam lets you score above a perfect 100%. For example, with a current grade of 70%, a target of 90%, and a final worth only 15% of the class, the required score works out to about 203% — mathematically impossible. In that situation, talk to your instructor about extra credit, dropped grades, or curved scoring, since those are the only ways to change the outcome at this point."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"already secured\" mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the required score is 0% or lower, you've already secured at least your target grade no matter what you score on the final — even a 0. For example, a current grade of 95%, a target of 80%, and a final worth 10% of the class gives a required score of −55%, meaning your target grade is locked in regardless of the final exam. This can happen when your current work is strong and the final carries relatively little weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my grade information sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation runs entirely in your browser — your current grade, target grade, and exam weight are never uploaded or sent anywhere. Your last entries are saved only in your browser's local storage so they're there when you come back, and this tool has no sign-up, no ads, and no tracking of what you type."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do the A, B, and C targets in the table come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The table uses common US-style letter grade cutoffs — A at 90%, B at 80%, and C at 70% — to quickly show the score you'd need on the final for each. Grading scales vary widely by school and country (for example, many universities outside the US use different letter cutoffs or a GPA-based scale), so treat the table as a quick reference and check your syllabus for your institution's exact scale."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Final Grade Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Final Grade Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">See exactly what score you need on your final exam to hit your target grade — plus a quick table for A, B, and C.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Final grade calculator" data-i18n-aria-label="tool.aria" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .fg-hero { display: flex; flex-direction: column; gap: 6px; margin: 6px 0 4px; }
+      #tool .fg-hero-label { font-size: 13px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+      #tool .fg-hero-value { font-size: clamp(34px, 9vw, 48px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.15; color: var(--accent-strong); overflow-wrap: anywhere; }
+      #tool .fg-hero-value.fg-ok { color: #059669; }
+      #tool .fg-hero-value.fg-bad { color: #dc2626; }
+      #tool .fg-hero-value.fg-secured { color: #0891b2; }
+      #tool .fg-note { margin: 8px 0 0; font-size: 14.5px; color: var(--muted); }
+      #tool .fg-chip { display: inline-block; width: fit-content; padding: 3px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 700; }
+      #tool .fg-chip-lg { font-size: 13px; padding: 4px 13px; }
+      #tool .fg-ok { background: rgba(5,150,105,.14); color: #059669; }
+      #tool .fg-bad { background: rgba(220,38,38,.14); color: #dc2626; }
+      #tool .fg-secured { background: rgba(8,145,178,.14); color: #0891b2; }
+      #tool #fg-error { color: #dc2626; font-weight: 600; margin: 0; }
+      #tool #fg-empty { color: var(--muted); margin: 0; }
+      #tool #fg-table-wrap { margin-top: 24px; }
+      #tool #fg-table-wrap h3 { font-size: 15px; margin: 0 0 10px; }
+      #tool .fg-table-scroll { overflow-x: auto; }
+      #tool table.fg-table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 360px; }
+      #tool table.fg-table th, #tool table.fg-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+      #tool table.fg-table th { color: var(--muted); font-weight: 700; font-size: 12px; text-transform: uppercase; letter-spacing: .02em; }
+      #tool .fg-note-sm { margin: 12px 0 0; font-size: 12.5px; color: var(--muted); }
+      @media (max-width: 420px) {
+        #tool table.fg-table { font-size: 13.5px; }
+        #tool table.fg-table th, #tool table.fg-table td { padding: 7px 6px; }
+      }
+    </style>
+
+    <div class="input-group">
+      <label for="fg-current" data-i18n="tool.current.label">Current grade in the class (%)</label>
+      <input id="fg-current" type="number" inputmode="decimal" min="0" max="100" step="any" placeholder="e.g. 82" data-i18n-placeholder="tool.current.ph" autocomplete="off" autofocus>
+    </div>
+
+    <div class="input-group">
+      <label for="fg-desired" data-i18n="tool.desired.label">Desired final grade (%)</label>
+      <input id="fg-desired" type="number" inputmode="decimal" min="0" max="100" step="any" placeholder="e.g. 90" data-i18n-placeholder="tool.desired.ph" autocomplete="off">
+    </div>
+
+    <div class="input-group">
+      <label for="fg-weight" data-i18n="tool.weight.label">Final exam weight (%)</label>
+      <input id="fg-weight" type="number" inputmode="decimal" min="0" max="100" step="any" placeholder="e.g. 30" data-i18n-placeholder="tool.weight.ph" autocomplete="off">
+    </div>
+
+    <div class="result" id="fg-result" aria-live="polite">
+      <p id="fg-empty" data-i18n="tool.placeholder">Enter your current grade, desired grade, and the final exam's weight.</p>
+      <p id="fg-error" hidden></p>
+      <div id="fg-main" hidden>
+        <div class="fg-hero">
+          <span class="fg-hero-label" data-i18n="tool.res.label">Score you need on the final</span>
+          <span class="fg-hero-value" id="fg-value">&mdash;</span>
+          <span class="fg-chip fg-chip-lg" id="fg-chip"></span>
+        </div>
+        <p class="fg-note" id="fg-note"></p>
+      </div>
+
+      <div id="fg-table-wrap" hidden>
+        <h3 data-i18n="tool.table.heading">Score needed for common targets</h3>
+        <div class="fg-table-scroll">
+          <table class="fg-table">
+            <thead>
+              <tr>
+                <th data-i18n="tool.table.col.target">Target grade</th>
+                <th data-i18n="tool.table.col.score">Score needed on final</th>
+                <th data-i18n="tool.table.col.status">Status</th>
+              </tr>
+            </thead>
+            <tbody id="fg-table-body"></tbody>
+          </table>
+        </div>
+        <p class="fg-note-sm" data-i18n="tool.table.note">Based on common letter-grade cutoffs (A ≥ 90%, B ≥ 80%, C ≥ 70%) — check your syllabus for your school's exact scale.</p>
+      </div>
+
+      <p class="fg-note-sm" id="fg-capped" hidden data-i18n="tool.note.capped">Some values were far outside a normal grading range and were capped for this calculation.</p>
+      <p class="fg-note-sm" data-i18n="tool.note.disclaimer">This is a simple weighted-average estimate — always check your course syllabus for your instructor's exact grading policy (drops, curves, extra credit, etc.).</p>
+      <p class="fg-note-sm" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I calculate what score I need on my final exam?</summary>
+      <p data-i18n="faq.a1">This calculator uses the standard weighted-average grading formula: desired grade = current grade × (1 − final exam weight) + final score × final exam weight. Solving for the final score gives final score = (desired grade − current grade × (1 − final exam weight)) ÷ final exam weight. For example, with a current grade of 78%, a target grade of 85%, and a final exam worth 50% of the class, the required score is (85 − 78×0.5) ÷ 0.5 = (85 − 39) ÷ 0.5 = 92% — that's the score you'd need on the final.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What does it mean if the calculator says I need more than 100%?</summary>
+      <p data-i18n="faq.a2">A result over 100% means your target grade isn't reachable anymore with the current weighting, because no exam lets you score above a perfect 100%. For example, with a current grade of 70%, a target of 90%, and a final worth only 15% of the class, the required score works out to about 203% — mathematically impossible. In that situation, talk to your instructor about extra credit, dropped grades, or curved scoring, since those are the only ways to change the outcome at this point.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What does "already secured" mean?</summary>
+      <p data-i18n="faq.a3">If the required score is 0% or lower, you've already secured at least your target grade no matter what you score on the final — even a 0. For example, a current grade of 95%, a target of 80%, and a final worth 10% of the class gives a required score of −55%, meaning your target grade is locked in regardless of the final exam. This can happen when your current work is strong and the final carries relatively little weight.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is my grade information sent to a server?</summary>
+      <p data-i18n="faq.a4">No. Every calculation runs entirely in your browser — your current grade, target grade, and exam weight are never uploaded or sent anywhere. Your last entries are saved only in your browser's local storage so they're there when you come back, and this tool has no sign-up, no ads, and no tracking of what you type.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Where do the A, B, and C targets in the table come from?</summary>
+      <p data-i18n="faq.a5">The table uses common US-style letter grade cutoffs — A at 90%, B at 80%, and C at 70% — to quickly show the score you'd need on the final for each. Grading scales vary widely by school and country (for example, many universities outside the US use different letter cutoffs or a GPA-based scale), so treat the table as a quick reference and check your syllabus for your institution's exact scale.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
