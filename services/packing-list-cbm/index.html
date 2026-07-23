@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Packing List CBM & Chargeable Weight Calculator</title>
+<meta name="description" content="Free browser-only batch calculator for freight packing lists. Paste carton rows straight from Excel or drop a CSV to get per-item CBM and volumetric weight, shipment chargeable weight (IATA 6,000 / courier 5,000 / road 3,000), ocean R/T (W/M), and how many 20ft, 40ft or 40HQ containers you need with loading efficiency. No account, no upload: your packing list never leaves the browser.">
+<meta name="keywords" content="cbm calculator, chargeable weight calculator, packing list cbm calculator, volumetric weight calculator, container load calculator, CBM 계산기, 부피중량 계산기, 운임톤 계산">
+<link rel="canonical" href="https://tool-hub.me/packing-list-cbm/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Packing List CBM & Chargeable Weight Calculator">
+<meta property="og:description" content="Free browser-only batch calculator for freight packing lists. Paste carton rows straight from Excel or drop a CSV to get per-item CBM and volumetric weight, shipment chargeable weight (IATA 6,000 / courier 5,000 / road 3,000), ocean R/T (W/M), and how many 20ft, 40ft or 40HQ containers you need with loading efficiency. No account, no upload: your packing list never leaves the browser.">
+<meta property="og:url" content="https://tool-hub.me/packing-list-cbm/">
+<meta property="og:image" content="https://tool-hub.me/packing-list-cbm/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Packing List CBM & Chargeable Weight Calculator",
+  "description": "Free browser-only batch calculator for freight packing lists. Paste carton rows straight from Excel or drop a CSV to get per-item CBM and volumetric weight, shipment chargeable weight (IATA 6,000 / courier 5,000 / road 3,000), ocean R/T (W/M), and how many 20ft, 40ft or 40HQ containers you need with loading efficiency. No account, no upload: your packing list never leaves the browser.",
+  "url": "https://tool-hub.me/packing-list-cbm/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you calculate CBM, and why show cubic feet too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CBM (cubic meters) = length × width × height ÷ 1,000,000 when the dimensions are in centimeters, multiplied by the number of cartons. This packing list CBM calculator runs that on every row and adds the rows up, so a 60 × 40 × 30 cm carton is 0.072 CBM and 120 of them are 8.64 CBM. Cubic feet sits next to it because 1 CBM = 35.3147 cu ft, and US and UK forwarders quote LCL and air freight in cubic feet while the rest of the trade quotes CBM — showing both means you can read your rate sheet without converting anything by hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Volumetric divisor 6,000 vs 5,000 vs 3,000 — which one do I pick?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick the one your carrier writes into the contract. 6,000 is the IATA standard for general air cargo (1 CBM = 166.67 kg). 5,000 is what the integrators — DHL, FedEx, UPS — use for express and courier shipments, which makes the same box about 20% heavier on paper (1 CBM = 200 kg). 3,000 is the common road and trucking divisor (1 CBM = 333.33 kg). Ocean LCL ignores divisors entirely and bills on revenue tons instead. Switching the mode in this volumetric weight calculator re-runs the whole packing list instantly, so you can see what each option costs you before you commit to a carrier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why isn't the chargeable weight just the sum of each row's chargeable weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because carriers bill the shipment, not the carton. The chargeable weight of your booking is max(total actual weight, total volumetric weight) across everything on the airway bill, rounded up to the next 0.5 kg — not the sum of each row's own max. Mixing a dense pallet with a light bulky one makes the two figures diverge, and adding per-row maxima always gives you the larger, wrong number. This chargeable weight calculator shows the billable shipment total as the headline and the per-row sum underneath, so you can see the gap before your forwarder does. Ocean LCL works the same way with R/T (revenue ton, called 운임톤 in Korea) — identical to W/M, freight ton or measurement ton: max(total CBM, total kg ÷ 1,000), with most consolidators applying a 1 R/T minimum."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can't I just divide total CBM by 33 to get the number of containers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if your cargo is light and perfectly stowable, which it never is. Two things break that shortcut. First, loading efficiency: a 20ft box holds 33.2 CBM on paper, but irregular cartons and dunnage mean a real stow lands nearer 85%, so plan against ~28 CBM. Second, the payload limit: tiles, fasteners, stone and liquids hit the 28,200 kg limit long before the box is full, so weight decides the count, not volume. This container load calculator works out both the volume-based and the weight-based count for 20ft, 40ft and 40HQ, takes whichever is higher, and tells you which constraint won — plus how full each container ends up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my packing list uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There is no server, no account and no upload — the parser, the CBM maths and the CSV export all run inside your browser tab, which is what makes this usable on supplier data with real item names and quantities. You can prove it in ten seconds: open DevTools (F12) → Network, clear the log, drop your file in and press Confirm. Zero requests. Better still, load the page once, switch your machine to airplane mode, and it keeps working — it is an installable offline app. The only things saved locally are your unit, mode and loading-factor preferences; the packing list itself is never written to disk."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Packing List CBM & Chargeable Weight Calculator",
+      "item": "https://tool-hub.me/packing-list-cbm/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Packing List CBM & Chargeable Weight Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Packing List CBM & Chargeable Weight Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Paste hundreds of carton rows. Get CBM, chargeable weight, R/T and container count — without an account or an upload.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 16px; }
+      #tool .plc-sec { margin-top: 26px; padding-top: 22px; border-top: 1px solid var(--line); }
+      #tool .plc-sec:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+      #tool .plc-legend { display: block; font-size: 12px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+      #tool .plc-drop textarea {
+        min-height: 132px; resize: vertical; white-space: pre; overflow-wrap: normal;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13px; line-height: 1.6; direction: ltr; text-align: start;
+      }
+      #tool .plc-drop.is-over textarea { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, var(--bg)); }
+      #tool .plc-hint { margin: 8px 0 0; font-size: 12.5px; line-height: 1.6; color: var(--muted); }
+      #tool .plc-btnrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+      #tool .plc-btnrow .btn { margin-top: 0; }
+      #tool .btn.plc-ghost {
+        background: var(--bg); color: var(--ink); border: 1px solid var(--line);
+        font-size: 14px; font-weight: 600; padding: 9px 14px;
+      }
+      #tool .btn.plc-ghost:hover { background: var(--bg); border-color: var(--accent); color: var(--accent-strong); }
+      [data-theme="dark"] #tool .btn.plc-ghost:hover { color: var(--accent); }
+      #tool .plc-inline { display: flex; flex-wrap: wrap; gap: 0 16px; }
+      #tool .plc-inline > div { flex: 1 1 150px; }
+      #tool .plc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0 14px; }
+      #tool .plc-check { display: flex; align-items: center; gap: 9px; cursor: pointer; font-weight: 600; font-size: 14.5px; margin-top: 16px; }
+      #tool .plc-check input { width: auto; flex: 0 0 auto; }
+      #tool .plc-badge {
+        display: inline-block; margin-inline-start: 6px; padding: 1px 8px; border-radius: 999px;
+        font-size: 11px; font-weight: 700; vertical-align: middle;
+        background: color-mix(in srgb, var(--accent) 15%, var(--surface)); color: var(--accent-strong);
+      }
+      [data-theme="dark"] #tool .plc-badge { color: var(--accent); }
+      #tool .plc-wrap { overflow: auto; max-height: 420px; margin-top: 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+      #tool table { border-collapse: collapse; width: 100%; font-size: 13px; }
+      #tool th, #tool td { padding: 7px 10px; text-align: end; white-space: nowrap; border-bottom: 1px solid var(--line); }
+      #tool th:first-child, #tool td:first-child { text-align: start; }
+      #tool thead th { position: sticky; top: 0; z-index: 1; background: var(--bg); font-size: 12px; font-weight: 700; color: var(--muted); }
+      #tool tbody td { font-variant-numeric: tabular-nums; }
+      #tool tbody tr:last-child td { border-bottom: none; }
+      #tool tr.plc-hdrrow td { color: var(--muted); font-weight: 700; background: color-mix(in srgb, var(--muted) 7%, var(--surface)); }
+      #tool .plc-mapsel { width: 100%; padding: 6px 8px; font-size: 12px; border-radius: 8px; }
+      #tool .plc-range { display: flex; align-items: center; gap: 12px; }
+      #tool .plc-range input[type="range"] { flex: 1 1 auto; width: auto; min-width: 0; accent-color: var(--accent); }
+      #tool .plc-range output { flex: 0 0 auto; min-width: 46px; font-weight: 800; font-variant-numeric: tabular-nums; }
+      #tool .plc-headline { margin: 0; }
+      #tool .plc-headline .plc-cap { display: block; font-size: 13.5px; font-weight: 700; color: var(--muted); }
+      #tool .plc-big { font-size: clamp(30px, 7.5vw, 44px); font-weight: 900; letter-spacing: -0.035em; line-height: 1.15; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .plc-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .plc-big { color: var(--accent); } }
+      #tool .plc-basis { margin: 6px 0 0; font-size: 13px; color: var(--muted); }
+      #tool .plc-cells { display: grid; grid-template-columns: repeat(auto-fit, minmax(132px, 1fr)); gap: 10px; margin: 18px 0 0; padding: 0; }
+      #tool .plc-cell { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 11px 13px; }
+      #tool .plc-cell dt { margin: 0 0 3px; font-size: 12.5px; font-weight: 700; color: var(--muted); }
+      #tool .plc-cell dd { margin: 0; font-size: 17px; font-weight: 800; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+      #tool .plc-cell dd .plc-sub { display: block; font-size: 12px; font-weight: 600; color: var(--muted); }
+      #tool .plc-conts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 12px 0 0; padding: 0; }
+      #tool .plc-cont { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; }
+      #tool .plc-cont.is-pick { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+      #tool .plc-cont h4 { margin: 0 0 4px; font-size: 12.5px; font-weight: 800; color: var(--muted); letter-spacing: .03em; }
+      #tool .plc-cont .plc-need { font-size: 20px; font-weight: 900; font-variant-numeric: tabular-nums; }
+      #tool .plc-cont p { margin: 2px 0 0; font-size: 12px; color: var(--muted); line-height: 1.5; }
+      #tool .plc-sub2 { margin: 20px 0 0; font-size: 14px; font-weight: 800; }
+      #tool .plc-flag { margin: 10px 0 0; padding: 9px 12px; border-radius: 9px; font-size: 13px; line-height: 1.6; background: color-mix(in srgb, var(--muted) 10%, var(--surface)); border: 1px solid var(--line); }
+      #tool .plc-flag.is-warn { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); color: var(--ink); }
+      #tool .plc-note { margin: 0; color: var(--muted); }
+      #tool .plc-foot { margin: 14px 0 0; font-size: 11.5px; line-height: 1.6; color: var(--muted); }
+      #tool .plc-exports { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 18px; }
+      #tool .plc-exports .btn { margin-top: 0; padding: 10px 16px; font-size: 14px; }
+      #tool .plc-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .plc-status { color: var(--accent); }
+      #tool .plc-fname { margin: 10px 0 0; font-size: 13px; font-weight: 600; }
+      #tool details.plc-excl { margin-top: 16px; }
+      #tool details.plc-excl > summary { font-weight: 700; font-size: 14px; cursor: pointer; }
+    </style>
+
+    <div class="plc-sec">
+      <span class="plc-legend" data-i18n="tool.step1">1 · Your packing list</span>
+      <label for="plc-paste" data-i18n="tool.paste.label">Paste the carton rows straight from Excel — or drop a CSV file here</label>
+      <div class="plc-drop" id="plc-drop">
+        <textarea id="plc-paste" rows="6" spellcheck="false" autocomplete="off" autocapitalize="off"
+          placeholder="Item&#9;Cartons&#9;L(cm)&#9;W(cm)&#9;H(cm)&#9;Weight(kg)&#10;Ceramic tile A&#9;120&#9;60&#9;40&#9;30&#9;22.5"
+          data-i18n-placeholder="tool.paste.ph"></textarea>
+      </div>
+      <p class="plc-hint" data-i18n="tool.drop.hint">Tab, comma or semicolon separated — quoted fields and line breaks inside a cell are handled. Nothing is uploaded: the file is parsed inside this browser.</p>
+      <div class="plc-btnrow">
+        <button type="button" class="btn plc-ghost" id="plc-pick" data-i18n="tool.file.btn">Choose a CSV file</button>
+        <button type="button" class="btn plc-ghost" id="plc-example" data-i18n="tool.example.btn">Fill an example packing list</button>
+        <button type="button" class="btn plc-ghost" id="plc-clear" data-i18n="tool.clear.btn">Clear</button>
+        <input type="file" id="plc-file" accept=".csv,.tsv,.txt,text/csv,text/plain,text/tab-separated-values" hidden>
+      </div>
+      <p class="plc-fname" id="plc-fname" hidden></p>
+    </div>
+
+    <div class="plc-sec" id="plc-mapsec" hidden>
+      <span class="plc-legend" data-i18n="tool.step2">2 · Check the columns</span>
+      <div class="plc-inline">
+        <div>
+          <label for="plc-delim" data-i18n="tool.delim.label">Separator</label>
+          <select id="plc-delim">
+            <option value="tab" data-i18n="tool.delim.tab">Tab (Excel paste)</option>
+            <option value="," data-i18n="tool.delim.comma">Comma</option>
+            <option value=";" data-i18n="tool.delim.semi">Semicolon</option>
+            <option value="|" data-i18n="tool.delim.pipe">Pipe</option>
+          </select>
+        </div>
+        <div id="plc-encwrap" hidden>
+          <label for="plc-enc" data-i18n="tool.enc.label">File encoding</label>
+          <select id="plc-enc">
+            <option value="utf-8">UTF-8</option>
+            <option value="euc-kr">EUC-KR / CP949</option>
+          </select>
+        </div>
+      </div>
+      <label class="plc-check" for="plc-hdr">
+        <input type="checkbox" id="plc-hdr" checked>
+        <span data-i18n="tool.hdr.label">The first row is a header</span>
+      </label>
+      <div class="plc-wrap"><table id="plc-preview"><thead></thead><tbody></tbody></table></div>
+      <p class="plc-hint" id="plc-maphint"></p>
+      <button type="button" class="btn" id="plc-confirm" data-i18n="tool.confirm">Confirm columns and calculate</button>
+    </div>
+
+    <div class="plc-sec">
+      <span class="plc-legend" data-i18n="tool.step3">3 · Units and freight mode</span>
+      <div class="plc-grid">
+        <div>
+          <label for="plc-dim">
+            <span data-i18n="tool.dim.label">Dimensions are in</span>
+            <span class="plc-badge" id="plc-dimbadge" data-i18n="tool.guessed">guessed</span>
+          </label>
+          <select id="plc-dim">
+            <option value="cm">cm</option>
+            <option value="mm">mm</option>
+            <option value="m">m</option>
+            <option value="in">in</option>
+          </select>
+        </div>
+        <div>
+          <label for="plc-wt">
+            <span data-i18n="tool.wt.label">Weights are in</span>
+            <span class="plc-badge" id="plc-wtbadge" data-i18n="tool.guessed">guessed</span>
+          </label>
+          <select id="plc-wt">
+            <option value="kg">kg</option>
+            <option value="lb">lb</option>
+          </select>
+        </div>
+      </div>
+      <label for="plc-mode" data-i18n="tool.mode.label">Freight mode (volumetric divisor)</label>
+      <select id="plc-mode">
+        <option value="air" data-i18n="tool.mode.air">Air freight — IATA (÷ 6,000)</option>
+        <option value="courier" data-i18n="tool.mode.courier">Courier — DHL / FedEx / UPS (÷ 5,000)</option>
+        <option value="road" data-i18n="tool.mode.road">Road freight (÷ 3,000)</option>
+        <option value="ocean" data-i18n="tool.mode.ocean">Ocean LCL — W/M (revenue ton)</option>
+      </select>
+      <label for="plc-shape" data-i18n="tool.shape.label">Default carton shape</label>
+      <select id="plc-shape">
+        <option value="cuboid" data-i18n="tool.shape.cuboid">Cuboid — L × W × H</option>
+        <option value="cylinder" data-i18n="tool.shape.cyl">Cylinder — Length column is the diameter</option>
+      </select>
+      <p class="plc-hint" id="plc-shapenote" hidden data-i18n="tool.shape.note">A Shape column is mapped: rows marked round, cylinder or drum use π × (diameter ÷ 2)² × height instead.</p>
+      <label for="plc-load" data-i18n="tool.load.label">Container loading factor</label>
+      <div class="plc-range">
+        <input type="range" id="plc-load" min="70" max="95" step="1" value="85">
+        <output id="plc-loadout" for="plc-load">85%</output>
+      </div>
+      <p class="plc-hint" data-i18n="tool.load.note">Cartons never fill a box to the brim — 85% of the cubic capacity is the usual planning assumption.</p>
+      <label class="plc-check" for="plc-minrt">
+        <input type="checkbox" id="plc-minrt" checked>
+        <span data-i18n="tool.minrt.label">Charge a minimum of 1 R/T (consolidator practice)</span>
+      </label>
+    </div>
+
+    <div class="result" id="plc-result" role="status" aria-live="polite"></div>
+    <p class="plc-hint" data-i18n="tool.privacy">Your packing list never leaves this browser: no upload, no account, no server. Open DevTools → Network and press Confirm — you will see zero requests.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do you calculate CBM, and why show cubic feet too?</summary>
+      <p data-i18n="faq.a1">CBM (cubic meters) = length × width × height ÷ 1,000,000 when the dimensions are in centimeters, multiplied by the number of cartons. This packing list CBM calculator runs that on every row and adds the rows up, so a 60 × 40 × 30 cm carton is 0.072 CBM and 120 of them are 8.64 CBM. Cubic feet sits next to it because 1 CBM = 35.3147 cu ft, and US and UK forwarders quote LCL and air freight in cubic feet while the rest of the trade quotes CBM — showing both means you can read your rate sheet without converting anything by hand.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Volumetric divisor 6,000 vs 5,000 vs 3,000 — which one do I pick?</summary>
+      <p data-i18n="faq.a2">Pick the one your carrier writes into the contract. 6,000 is the IATA standard for general air cargo (1 CBM = 166.67 kg). 5,000 is what the integrators — DHL, FedEx, UPS — use for express and courier shipments, which makes the same box about 20% heavier on paper (1 CBM = 200 kg). 3,000 is the common road and trucking divisor (1 CBM = 333.33 kg). Ocean LCL ignores divisors entirely and bills on revenue tons instead. Switching the mode in this volumetric weight calculator re-runs the whole packing list instantly, so you can see what each option costs you before you commit to a carrier.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why isn't the chargeable weight just the sum of each row's chargeable weight?</summary>
+      <p data-i18n="faq.a3">Because carriers bill the shipment, not the carton. The chargeable weight of your booking is max(total actual weight, total volumetric weight) across everything on the airway bill, rounded up to the next 0.5 kg — not the sum of each row's own max. Mixing a dense pallet with a light bulky one makes the two figures diverge, and adding per-row maxima always gives you the larger, wrong number. This chargeable weight calculator shows the billable shipment total as the headline and the per-row sum underneath, so you can see the gap before your forwarder does. Ocean LCL works the same way with R/T (revenue ton, called 운임톤 in Korea) — identical to W/M, freight ton or measurement ton: max(total CBM, total kg ÷ 1,000), with most consolidators applying a 1 R/T minimum.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can't I just divide total CBM by 33 to get the number of containers?</summary>
+      <p data-i18n="faq.a4">Only if your cargo is light and perfectly stowable, which it never is. Two things break that shortcut. First, loading efficiency: a 20ft box holds 33.2 CBM on paper, but irregular cartons and dunnage mean a real stow lands nearer 85%, so plan against ~28 CBM. Second, the payload limit: tiles, fasteners, stone and liquids hit the 28,200 kg limit long before the box is full, so weight decides the count, not volume. This container load calculator works out both the volume-based and the weight-based count for 20ft, 40ft and 40HQ, takes whichever is higher, and tells you which constraint won — plus how full each container ends up.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my packing list uploaded to a server?</summary>
+      <p data-i18n="faq.a5">No. There is no server, no account and no upload — the parser, the CBM maths and the CSV export all run inside your browser tab, which is what makes this usable on supplier data with real item names and quantities. You can prove it in ten seconds: open DevTools (F12) → Network, clear the log, drop your file in and press Confirm. Zero requests. Better still, load the page once, switch your machine to airplane mode, and it keeps working — it is an installable offline app. The only things saved locally are your unit, mode and loading-factor preferences; the packing list itself is never written to disk.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
