@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Ledger Builder & Count Reconciliation</title>
+<meta name="description" content="Free browser-only stock ledger builder and physical count reconciliation tool (재고수불부·재고실사 대사). Drop a CSV of stock in/out transactions to get per-SKU opening, in, out and closing balances, plus alerts for negative balances, duplicate vouchers, out-of-period dates and mixed units, and variance against your physical count. Your data never leaves the browser.">
+<meta name="keywords" content="stock ledger, inventory reconciliation, physical count variance, running balance, stock in out register, 재고수불부, 재고실사 대사, 수불부 엑셀, 재고 차이 원인">
+<link rel="canonical" href="https://tool-hub.me/stock-ledger-recon/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stock Ledger Builder & Count Reconciliation">
+<meta property="og:description" content="Free browser-only stock ledger builder and physical count reconciliation tool (재고수불부·재고실사 대사). Drop a CSV of stock in/out transactions to get per-SKU opening, in, out and closing balances, plus alerts for negative balances, duplicate vouchers, out-of-period dates and mixed units, and variance against your physical count. Your data never leaves the browser.">
+<meta property="og:url" content="https://tool-hub.me/stock-ledger-recon/">
+<meta property="og:image" content="https://tool-hub.me/stock-ledger-recon/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#115e59">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Stock Ledger Builder & Count Reconciliation",
+  "description": "Free browser-only stock ledger builder and physical count reconciliation tool (재고수불부·재고실사 대사). Drop a CSV of stock in/out transactions to get per-SKU opening, in, out and closing balances, plus alerts for negative balances, duplicate vouchers, out-of-period dates and mixed units, and variance against your physical count. Your data never leaves the browser.",
+  "url": "https://tool-hub.me/stock-ledger-recon/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens if I don't upload an opening stock file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The stock ledger still builds — it just tells you exactly what it assumed. For every SKU the opening balance is resolved in three steps: (1) if your opening stock CSV has a value for that SKU, it is used as-is and earlier transactions are not replayed, because they are already baked into that figure; (2) if not, every transaction dated before your start date is accumulated to back-calculate the opening balance; (3) if there are no earlier transactions either, the opening is 0 and an “Opening 0 assumed” badge stays pinned to the top of the results — it never collapses or hides. That badge matters: if your stock in out register only covers one month, a closing balance built on a zero opening is a movement total, not real stock on hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my closing balance negative?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A negative balance is arithmetic telling you the data is wrong, so the tool never quietly rounds it up to zero — hiding it would hide the cause. It reports the first moment the running balance crosses below zero, with the row number, the date and the balance at that instant, because everything after that point is already unreliable. The usual causes, in order of frequency: a receipt was never entered (goods arrived but the paperwork didn't), an issue was double-counted from a duplicate voucher, or a date was mistyped so an issue sorts ahead of the receipt that covers it. Start at that first negative row and walk backwards — the missing document is almost always within a few days of it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I read the physical count variance, and where does the variance amount come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Variance quantity = counted − book closing. A positive figure means you hold more than the ledger says (an unrecorded return, or an issue booked that never shipped); a negative figure means stock is missing (shrinkage, breakage, mis-picks, or a receipt booked to the wrong SKU). The variance amount is the variance quantity times the most recent purchase unit price found for that SKU — and if your file has no unit price column, the amount is left blank and labelled “no price” rather than shown as 0, because a fake zero would sort your biggest problem to the bottom of the list. Rows are ranked by absolute variance amount (falling back to absolute quantity) so the money follows the standard inventory reconciliation drill: reconcile, re-count the outliers, trace the cause, then post an adjustment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A date like 05/01/2026 is ambiguous — how does the tool read it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It scans the whole date column before deciding, instead of guessing per row. If any row has a first field above 12 (e.g. 25/01/2026), the column can only be DD/MM/YYYY; if any second field is above 12, it can only be MM/DD/YYYY. When a file is genuinely undecidable — every value is 12 or lower — it falls back to your browser's locale and, either way, prints “Reading dates as DD/MM/YYYY” in a banner above the results with a dropdown to override it. YYYY-MM-DD, YYYY.M.D, DD.MM.YYYY, YYYYMMDD and Excel serial numbers are all handled by explicit rules, never by the browser's own date parser, which silently reads the same string differently on different machines. The same column-wide scan decides whether 1.234,56 or 1,234.56 is your number format."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why doesn't it convert EA and BOX automatically, and does my data leave the browser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because guessing a conversion rate is how a stock ledger goes silently wrong. If one SKU arrives in BOX and ships in EA, only you know whether a box is 6, 12 or 24 — so the tool keeps a separate running balance per SKU + warehouse + unit and raises a “mixed units” alert instead of inventing a multiplier. Normalise the unit in your source data, or read the balances separately. On privacy: your file never leaves this tab. There is no upload, no server and no account — parsing, the running balance and the count reconciliation all run in your browser's own memory, which is why this works for item costs and volumes that your security team would never let you paste into an online 재고수불부 or 재고실사 대사 service. Only your column mapping, closing period and format preferences are remembered locally; the transactions and count results are never stored."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Stock Ledger Builder & Count Reconciliation",
+      "item": "https://tool-hub.me/stock-ledger-recon/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Stock Ledger Builder & Count Reconciliation</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Stock Ledger Builder & Count Reconciliation</h1>
+    <p class="lede" data-i18n="hero.lede">Build per-SKU opening → in → out → closing balances from your transaction log, and see exactly where the physical count disagrees — entirely in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* stock-ledger-recon 전용 스킨 — 셸 공통 css/style.css 는 손대지 않는다 (.slr-* 네임스페이스). */
+      .slr-h { font-size: 15px; font-weight: 800; letter-spacing: -.01em; margin: 26px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+      .slr-h:first-of-type { margin-top: 0; }
+      .slr-h small { font-weight: 600; color: var(--muted); font-size: 12.5px; margin-inline-start: 6px; }
+      .slr-drop { border: 2px dashed var(--line); border-radius: 12px; padding: 22px 16px; text-align: center; background: var(--bg); }
+      .slr-drop.slr-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, var(--bg)); }
+      .slr-drop > p { margin: 0 0 12px; color: var(--muted); font-size: 14px; }
+      .slr-row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+      .slr-row.slr-center { justify-content: center; }
+      .btn.slr-sm { padding: 9px 15px; font-size: 14px; margin-top: 0; width: auto; }
+      .btn.slr-ghost { background: var(--surface); color: var(--ink); border: 1px solid var(--line); }
+      .btn.slr-ghost:hover { background: var(--bg); }
+      .slr-note { font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+      .slr-banner { display: flex; gap: 10px 12px; align-items: center; flex-wrap: wrap; font-size: 13.5px; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--bg); margin-top: 12px; }
+      .slr-banner.slr-warn { border-color: #f59e0b; background: color-mix(in srgb, #f59e0b 13%, var(--surface)); }
+      .slr-banner select { width: auto; padding: 6px 8px; font-size: 13px; }
+      .slr-banner b { font-weight: 800; }
+      .slr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(152px, 1fr)); gap: 10px 12px; }
+      .slr-grid label { margin: 0 0 4px; font-size: 12.5px; }
+      .slr-grid select { padding: 8px 10px; font-size: 14px; }
+      .slr-req { color: var(--accent); font-weight: 800; }
+      .slr-badges { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 12px; }
+      .slr-badge { font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+      .slr-badge.slr-b-warn { border-color: #f59e0b; color: #b45309; background: color-mix(in srgb, #f59e0b 15%, var(--surface)); }
+      .slr-badge.slr-b-bad { border-color: #ef4444; color: #b91c1c; background: color-mix(in srgb, #ef4444 13%, var(--surface)); }
+      [data-theme="dark"] .slr-badge.slr-b-warn, [data-theme="dark"] .slr-badge.slr-b-bad { color: var(--ink); }
+      .slr-tabs { display: flex; gap: 2px; flex-wrap: wrap; border-bottom: 1px solid var(--line); }
+      .slr-tab { appearance: none; background: none; border: none; border-bottom: 2px solid transparent; color: var(--muted); font: inherit; font-size: 13.5px; font-weight: 700; padding: 9px 11px; cursor: pointer; margin: 0; }
+      .slr-tab[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+      .slr-vt-head { display: grid; font-size: 12px; font-weight: 800; color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 10px 10px 0 0; overflow-x: auto; scrollbar-width: none; }
+      .slr-vt { overflow: auto; max-height: 360px; border: 1px solid var(--line); border-top: none; border-radius: 0 0 10px 10px; background: var(--surface); }
+      .slr-vt-head > span, .slr-cell { padding: 8px 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      .slr-vt-row { display: grid; font-size: 13.5px; border-top: 1px solid var(--line); align-items: center; }
+      .slr-vt-row.slr-click { cursor: pointer; }
+      .slr-vt-row.slr-click:hover { background: var(--bg); }
+      .slr-num { text-align: end; font-variant-numeric: tabular-nums; }
+      .slr-neg { color: #b91c1c; font-weight: 700; }
+      [data-theme="dark"] .slr-neg { color: #fca5a5; }
+      .slr-empty { padding: 20px; text-align: center; color: var(--muted); font-size: 14px; }
+      .slr-prog { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; margin-top: 10px; }
+      .slr-prog > i { display: block; height: 100%; width: 0; background: var(--accent); }
+      @media (max-width: 480px) { .slr-grid { grid-template-columns: repeat(auto-fill, minmax(126px, 1fr)); } }
+    </style>
+
+    <!-- ===== 1 · 거래 로그 입력 ===== -->
+    <h2 class="slr-h" data-i18n="tool.step1">1 · Stock in/out log</h2>
+    <div class="slr-drop" id="slr-drop">
+      <p data-i18n="tool.dropHint">Drag &amp; drop a CSV/TSV file here — it is read inside your browser, never uploaded.</p>
+      <div class="slr-row slr-center">
+        <button type="button" class="btn slr-sm" id="slr-pick" data-i18n="tool.chooseFile">Choose file</button>
+        <button type="button" class="btn slr-sm slr-ghost" id="slr-sample" data-i18n="tool.sample">Load sample data</button>
+      </div>
+      <input type="file" id="slr-file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values,text/plain" hidden>
+    </div>
+
+    <label for="slr-paste" data-i18n="tool.pasteLabel">…or paste the log</label>
+    <textarea id="slr-paste" rows="5" dir="ltr" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off"
+      placeholder="date,sku,type,qty,unit,warehouse,voucher,unit price"
+      data-i18n-placeholder="tool.pastePlaceholder"
+      style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.85rem;"></textarea>
+
+    <div class="slr-banner" id="slr-enc-banner" hidden>
+      <span id="slr-enc-msg"></span>
+      <label for="slr-enc" style="margin:0;font-size:12.5px;" data-i18n="tool.encodingLabel">Encoding</label>
+      <select id="slr-enc">
+        <option value="auto" data-i18n="tool.auto">Auto-detect</option>
+        <option value="utf-8">UTF-8</option>
+        <option value="euc-kr">EUC-KR / CP949</option>
+        <option value="shift_jis">Shift_JIS</option>
+        <option value="windows-1252">Windows-1252</option>
+      </select>
+    </div>
+
+    <div class="slr-banner" id="slr-read-banner" hidden>
+      <span id="slr-read-msg"></span>
+      <label for="slr-datefmt" style="margin:0;font-size:12.5px;" data-i18n="tool.dateFmtLabel">Dates</label>
+      <select id="slr-datefmt">
+        <option value="auto" data-i18n="tool.auto">Auto</option>
+        <option value="dmy">DD/MM/YYYY</option>
+        <option value="mdy">MM/DD/YYYY</option>
+        <option value="iso">YYYY-MM-DD</option>
+        <option value="serial" data-i18n="tool.dateFmtSerial">Excel serial number</option>
+      </select>
+      <label for="slr-numfmt" style="margin:0;font-size:12.5px;" data-i18n="tool.numFmtLabel">Numbers</label>
+      <select id="slr-numfmt">
+        <option value="auto" data-i18n="tool.auto">Auto</option>
+        <option value="us">1,234.56</option>
+        <option value="de">1.234,56</option>
+      </select>
+    </div>
+
+    <!-- ===== 2 · 컬럼 매핑 ===== -->
+    <div id="slr-map-step" hidden>
+      <h2 class="slr-h" data-i18n="tool.step2">2 · Map your columns</h2>
+      <label style="display:flex;align-items:center;gap:.5rem;margin:0 0 12px;font-weight:400;cursor:pointer;font-size:13.5px;">
+        <input type="checkbox" id="slr-signed" style="width:auto;margin:0;">
+        <span data-i18n="tool.signedMode">One signed quantity column (+ = in, − = out)</span>
+      </label>
+      <div class="slr-grid" id="slr-map"></div>
+      <p class="slr-note" data-i18n="tool.previewLabel">First 5 rows, read with the settings above:</p>
+      <div class="slr-vt-head" id="slr-prev-head"></div>
+      <div class="slr-vt" id="slr-prev" style="max-height:none;"></div>
+    </div>
+
+    <!-- ===== 3 · 입고/출고 값 ===== -->
+    <div id="slr-type-step" hidden>
+      <h2 class="slr-h" data-i18n="tool.step3">3 · In / Out values</h2>
+      <p class="slr-note" style="margin-top:0" data-i18n="tool.typeHint">Nothing is guessed: any value we do not recognise stays out of the ledger until you say what it means.</p>
+      <div class="slr-grid" id="slr-typemap"></div>
+    </div>
+
+    <!-- ===== 4 · 마감 기간 ===== -->
+    <h2 class="slr-h" data-i18n="tool.step4">4 · Closing period</h2>
+    <div class="slr-row" style="gap:10px;">
+      <button type="button" class="btn slr-sm slr-ghost" data-preset="thisMonth" data-i18n="tool.presetThisMonth">This month</button>
+      <button type="button" class="btn slr-sm slr-ghost" data-preset="lastMonth" data-i18n="tool.presetLastMonth">Last month</button>
+      <button type="button" class="btn slr-sm slr-ghost" data-preset="quarter" data-i18n="tool.presetQuarter">This quarter</button>
+      <button type="button" class="btn slr-sm slr-ghost" data-preset="fy" data-i18n="tool.presetFY">Fiscal year</button>
+      <button type="button" class="btn slr-sm slr-ghost" data-preset="all" data-i18n="tool.presetAll">All dates</button>
+    </div>
+    <div class="slr-grid" style="margin-top:12px;">
+      <div><label for="slr-start" data-i18n="tool.from">From</label><input type="date" id="slr-start"></div>
+      <div><label for="slr-end" data-i18n="tool.to">To</label><input type="date" id="slr-end"></div>
+      <div><label for="slr-fy" data-i18n="tool.fyStart">Fiscal year starts</label><select id="slr-fy"></select></div>
+    </div>
+
+    <!-- ===== 5 · 선택 파일 ===== -->
+    <h2 class="slr-h" data-i18n="tool.step5">5 · Opening stock &amp; physical count <small data-i18n="tool.optional">optional</small></h2>
+    <div class="slr-grid">
+      <div>
+        <label for="slr-open-file" data-i18n="tool.openingLabel">Opening stock CSV (SKU, quantity)</label>
+        <div class="slr-row">
+          <button type="button" class="btn slr-sm slr-ghost" id="slr-open-pick" data-i18n="tool.chooseFile">Choose file</button>
+          <span id="slr-open-state" style="font-size:12.5px;color:var(--muted);"></span>
+        </div>
+        <input type="file" id="slr-open-file" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+      </div>
+      <div>
+        <label for="slr-count-file" data-i18n="tool.countLabel">Physical count CSV (SKU, counted qty)</label>
+        <div class="slr-row">
+          <button type="button" class="btn slr-sm slr-ghost" id="slr-count-pick" data-i18n="tool.chooseFile">Choose file</button>
+          <span id="slr-count-state" style="font-size:12.5px;color:var(--muted);"></span>
+        </div>
+        <input type="file" id="slr-count-file" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+      </div>
+    </div>
+
+    <!-- ===== 실행 ===== -->
+    <div class="slr-row" style="margin-top:18px;">
+      <button type="button" class="btn" id="slr-build" data-i18n="tool.build">Build ledger</button>
+      <button type="button" class="btn slr-ghost" id="slr-cancel" hidden data-i18n="tool.cancel">Cancel</button>
+      <button type="button" class="btn slr-ghost" id="slr-reset" data-i18n="tool.clear">Clear</button>
+    </div>
+    <div class="slr-prog" id="slr-prog" hidden><i id="slr-prog-bar"></i></div>
+
+    <!-- ===== 결과 ===== -->
+    <div class="result" id="slr-result" aria-live="polite" style="margin-top:20px;">
+      <div class="slr-badges" id="slr-badges" hidden></div>
+      <p id="slr-message" style="margin:0;line-height:1.55;font-size:15px;overflow-wrap:anywhere;" data-i18n="tool.emptyHint">Drop or paste your stock in/out log above, then press “Build ledger”. You will get per-SKU opening + in − out = closing, alerts for anything that does not add up, and the variance against your physical count.</p>
+
+      <div id="slr-panel" hidden style="margin-top:14px;">
+        <div class="slr-tabs" id="slr-tabs" role="tablist"></div>
+        <div class="slr-vt-head" id="slr-head"></div>
+        <div class="slr-vt" id="slr-body"></div>
+        <div class="slr-row" style="margin-top:12px;">
+          <button type="button" class="btn slr-sm slr-ghost" id="slr-back" hidden data-i18n="tool.back">← Back to ledger</button>
+          <button type="button" class="btn slr-sm slr-ghost" id="slr-dl" data-i18n="tool.download">Download this table (CSV)</button>
+          <span id="slr-feedback" aria-live="polite" hidden style="font-weight:700;color:var(--accent);font-size:13px;"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What happens if I don't upload an opening stock file?</summary>
+      <p data-i18n="faq.a1">The stock ledger still builds — it just tells you exactly what it assumed. For every SKU the opening balance is resolved in three steps: (1) if your opening stock CSV has a value for that SKU, it is used as-is and earlier transactions are not replayed, because they are already baked into that figure; (2) if not, every transaction dated before your start date is accumulated to back-calculate the opening balance; (3) if there are no earlier transactions either, the opening is 0 and an “Opening 0 assumed” badge stays pinned to the top of the results — it never collapses or hides. That badge matters: if your stock in out register only covers one month, a closing balance built on a zero opening is a movement total, not real stock on hand.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why is my closing balance negative?</summary>
+      <p data-i18n="faq.a2">A negative balance is arithmetic telling you the data is wrong, so the tool never quietly rounds it up to zero — hiding it would hide the cause. It reports the first moment the running balance crosses below zero, with the row number, the date and the balance at that instant, because everything after that point is already unreliable. The usual causes, in order of frequency: a receipt was never entered (goods arrived but the paperwork didn't), an issue was double-counted from a duplicate voucher, or a date was mistyped so an issue sorts ahead of the receipt that covers it. Start at that first negative row and walk backwards — the missing document is almost always within a few days of it.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I read the physical count variance, and where does the variance amount come from?</summary>
+      <p data-i18n="faq.a3">Variance quantity = counted − book closing. A positive figure means you hold more than the ledger says (an unrecorded return, or an issue booked that never shipped); a negative figure means stock is missing (shrinkage, breakage, mis-picks, or a receipt booked to the wrong SKU). The variance amount is the variance quantity times the most recent purchase unit price found for that SKU — and if your file has no unit price column, the amount is left blank and labelled “no price” rather than shown as 0, because a fake zero would sort your biggest problem to the bottom of the list. Rows are ranked by absolute variance amount (falling back to absolute quantity) so the money follows the standard inventory reconciliation drill: reconcile, re-count the outliers, trace the cause, then post an adjustment.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">A date like 05/01/2026 is ambiguous — how does the tool read it?</summary>
+      <p data-i18n="faq.a4">It scans the whole date column before deciding, instead of guessing per row. If any row has a first field above 12 (e.g. 25/01/2026), the column can only be DD/MM/YYYY; if any second field is above 12, it can only be MM/DD/YYYY. When a file is genuinely undecidable — every value is 12 or lower — it falls back to your browser's locale and, either way, prints “Reading dates as DD/MM/YYYY” in a banner above the results with a dropdown to override it. YYYY-MM-DD, YYYY.M.D, DD.MM.YYYY, YYYYMMDD and Excel serial numbers are all handled by explicit rules, never by the browser's own date parser, which silently reads the same string differently on different machines. The same column-wide scan decides whether 1.234,56 or 1,234.56 is your number format.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Why doesn't it convert EA and BOX automatically, and does my data leave the browser?</summary>
+      <p data-i18n="faq.a5">Because guessing a conversion rate is how a stock ledger goes silently wrong. If one SKU arrives in BOX and ships in EA, only you know whether a box is 6, 12 or 24 — so the tool keeps a separate running balance per SKU + warehouse + unit and raises a “mixed units” alert instead of inventing a multiplier. Normalise the unit in your source data, or read the balances separately. On privacy: your file never leaves this tab. There is no upload, no server and no account — parsing, the running balance and the count reconciliation all run in your browser's own memory, which is why this works for item costs and volumes that your security team would never let you paste into an online 재고수불부 or 재고실사 대사 service. Only your column mapping, closing period and format preferences are remembered locally; the transactions and count results are never stored.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
