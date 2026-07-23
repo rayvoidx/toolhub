@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DCA Investment Calculator — Monthly Growth Projector</title>
+<meta name="description" content="Free dollar-cost averaging (DCA/SIP) calculator: enter your monthly contribution, expected return, and time horizon to project your future portfolio — total invested vs market gains, after tax, and in today's money. No login, no ads, computed in your browser.">
+<meta name="keywords" content="dca calculator, dollar cost averaging calculator, SIP calculator, investment calculator, investment growth calculator, compound interest investment calculator, 적립식 투자 계산기, 월 적립 투자 계산기">
+<link rel="canonical" href="https://tool-hub.me/dca-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DCA Investment Calculator — Monthly Growth Projector">
+<meta property="og:description" content="Free dollar-cost averaging (DCA/SIP) calculator: enter your monthly contribution, expected return, and time horizon to project your future portfolio — total invested vs market gains, after tax, and in today's money. No login, no ads, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/dca-calc/">
+<meta property="og:image" content="https://tool-hub.me/dca-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#166534">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "DCA Investment Calculator",
+  "description": "Free dollar-cost averaging (DCA/SIP) calculator: enter your monthly contribution, expected return, and time horizon to project your future portfolio — total invested vs market gains, after tax, and in today's money. No login, no ads, computed in your browser.",
+  "url": "https://tool-hub.me/dca-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "DCA Investment Calculator",
+      "item": "https://tool-hub.me/dca-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does dollar-cost averaging (DCA/SIP) turn a monthly amount into a big number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dollar-cost averaging means investing a fixed amount every month instead of one lump sum. This DCA calculator treats each monthly contribution as its own deposit that then compounds at your expected annual return until the end of your horizon. Mathematically it is an annuity-due future value: contributions land at the start of each month, the monthly rate is your annual return divided by twelve, and money invested earlier compounds for more months. Add any one-off starting amount and you get the projected balance. Because early contributions have decades to grow, the final figure is usually far larger than the plain total you paid in — that gap is the compounding this SIP calculator makes visible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are the 4%, 7% and 10% return presets illustrative only?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The expected return is an assumption you choose, not a rate anyone can promise. The presets are round reference points often cited for broad index funds — for example the S&P 500 has averaged roughly 7% a year after inflation and around 10% before inflation over long history, and 4% is a more cautious figure. Real markets do not deliver a smooth annual number: some years are strongly positive, others negative, and past averages never guarantee the future. Treat every result here as one scenario. To stress-test a plan, run it again with a lower return and see how much the projection changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much of my final balance is my own money versus market gains?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is the core DCA/SIP question, so the tool answers it directly. Total invested is simply your starting amount plus every monthly contribution you will make. Market gains are the rest of the balance — what compounding added on top. Over short horizons your own contributions dominate the total; over twenty, thirty or forty years the market-gains slice usually grows to become the majority of the balance. The highlighted line — market gains make up X% of your final balance — shows that split for your exact inputs, which is often more motivating than the headline number alone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the 'value in today's money' lower than the headline number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A million in thirty years will not buy what a million buys today, because inflation erodes purchasing power. When you enter an annual inflation rate, this investment growth calculator discounts your after-tax future balance back to what it would be worth in today's money — dividing by (1 + inflation) for each year of the horizon. That real value is the more honest measure of how much your future portfolio can actually buy. Leave inflation at 0 to see the plain nominal amount, or try 2–3% to match typical long-run inflation and watch how much the real figure shrinks over long horizons."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is capital-gains tax handled, and why might my broker's figure differ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool applies your capital-gains tax rate only to the profit (market gains), not to the money you contributed, assuming a single sale at the end. The 15.4% preset reflects Korea's tax on financial income (14% income tax plus a 1.4% local surtax) as of 2025 — many countries and account types differ, and tax-advantaged accounts such as a 401(k), IRA or pension wrapper may defer or reduce tax entirely, so 0% is the default. Real brokers may tax each sale, use allowances, cost-basis rules or withholding, and rates change over time. Use this as an arithmetic estimate and confirm your own situation with a tax professional or official source."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>DCA Investment Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>DCA Investment Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Investing a fixed amount every month? Project your future portfolio in seconds — total invested, market gains, tax, and what it's really worth after inflation. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .hint { font-size:12.5px; color:var(--muted); margin:6px 0 0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .badge { display:inline-block; margin-left:6px; padding:1px 7px; font-size:11px; font-weight:600;
+        border-radius:999px; background:var(--accent); color:#fff; vertical-align:middle; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .headline-amt { font-weight:800; font-size:30px; line-height:1.15;
+        max-width:100%; overflow-wrap:anywhere; word-break:break-word; }
+      #tool .disclaimer { font-size:12.5px; color:var(--muted); font-style:italic; margin:12px 0 0;
+        padding-top:10px; border-top:1px solid var(--line); }
+    </style>
+
+    <label for="initial-input" data-i18n="tool.initial.label">Initial investment (optional)</label>
+    <input type="text" id="initial-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 0" data-i18n-placeholder="tool.initial.ph">
+
+    <label for="monthly-input" data-i18n="tool.monthly.label">Monthly investment</label>
+    <input type="text" id="monthly-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 500" data-i18n-placeholder="tool.monthly.ph">
+
+    <label for="return-input" data-i18n="tool.return.label">Expected annual return (%)</label>
+    <input type="number" id="return-input" inputmode="decimal" min="0" max="30" step="0.01"
+           placeholder="e.g. 7" data-i18n-placeholder="tool.return.ph">
+    <div class="chips" id="return-chips" role="group" aria-label="Quick return presets" data-i18n-aria-label="tool.return.chipsAria">
+      <button type="button" class="chip" data-return="4">4%</button>
+      <button type="button" class="chip" data-return="7">7%</button>
+      <button type="button" class="chip" data-return="10">10%</button>
+    </div>
+    <p class="hint" data-i18n="tool.return.hint">Presets are illustrative examples only, not a guaranteed return.</p>
+
+    <label for="years-input" data-i18n="tool.years.label">Time horizon (years)</label>
+    <input type="number" id="years-input" inputmode="numeric" min="1" max="50" step="1"
+           placeholder="e.g. 20" data-i18n-placeholder="tool.years.ph">
+    <div class="chips" id="years-chips" role="group" aria-label="Quick horizon presets" data-i18n-aria-label="tool.years.chipsAria">
+      <button type="button" class="chip" data-years="10">10</button>
+      <button type="button" class="chip" data-years="20">20</button>
+      <button type="button" class="chip" data-years="30">30</button>
+      <button type="button" class="chip" data-years="40">40</button>
+    </div>
+
+    <label for="inflation-input" data-i18n="tool.inflation.label">Annual inflation (%) — optional</label>
+    <input type="number" id="inflation-input" inputmode="decimal" min="0" max="20" step="0.1"
+           placeholder="e.g. 0" data-i18n-placeholder="tool.inflation.ph">
+    <div class="chips" id="inflation-chips" role="group" aria-label="Inflation presets" data-i18n-aria-label="tool.inflation.chipsAria">
+      <button type="button" class="chip" data-infl="0">0%</button>
+      <button type="button" class="chip" data-infl="2">2%</button>
+      <button type="button" class="chip" data-infl="3">3%</button>
+    </div>
+
+    <label for="tax-input" data-i18n="tool.tax.label">Capital-gains tax (%) — optional</label>
+    <input type="number" id="tax-input" inputmode="decimal" min="0" max="60" step="0.1"
+           placeholder="e.g. 0" data-i18n-placeholder="tool.tax.ph">
+    <div class="chips" id="tax-chips" role="group" aria-label="Capital-gains tax presets" data-i18n-aria-label="tool.tax.chipsAria">
+      <button type="button" class="chip" data-tax="0" data-i18n="tool.tax.chip0">0%</button>
+      <button type="button" class="chip" data-tax="15.4" data-i18n="tool.tax.chipKr">15.4% (Korea)</button>
+    </div>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Project my portfolio</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p class="subtle" style="margin:0;" data-i18n="tool.result.futureLabel">Future portfolio (after tax)</p>
+        <p style="margin:2px 0 2px;"><span class="headline-amt" id="r-future"></span></p>
+        <p class="subtle" id="r-sub" style="margin:0 0 10px;"></p>
+        <p id="r-share" style="margin:0 0 8px;font-weight:700;color:var(--accent);"></p>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.invested">Total invested</div><div class="rc-val" id="r-invested"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.gains">Market gains</div><div class="rc-val" id="r-gains"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.tax">Tax</div><div class="rc-val" id="r-tax"></div></div>
+          <div class="rcard"><div class="rc-label"><span data-i18n="tool.result.real">Value in today's money</span><span class="badge" id="r-real-badge" data-i18n="tool.result.realBadge" hidden>in today's money</span></div><div class="rc-val" id="r-real"></div></div>
+        </div>
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:10px 0 0;" data-i18n="tool.note.assume">Contributions are assumed at the start of each month (annuity-due); returns compound monthly.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+        <p class="disclaimer" data-i18n="tool.note.disclaimer">This is an arithmetic projection, not investment advice; returns vary and are not guaranteed.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">How does dollar-cost averaging (DCA/SIP) turn a monthly amount into a big number?</summary><p data-i18n="faq.a1">Dollar-cost averaging means investing a fixed amount every month instead of one lump sum. This DCA calculator treats each monthly contribution as its own deposit that then compounds at your expected annual return until the end of your horizon. Mathematically it is an annuity-due future value: contributions land at the start of each month, the monthly rate is your annual return divided by twelve, and money invested earlier compounds for more months. Add any one-off starting amount and you get the projected balance. Because early contributions have decades to grow, the final figure is usually far larger than the plain total you paid in — that gap is the compounding this SIP calculator makes visible.</p></details>
+    <details><summary data-i18n="faq.q2">Why are the 4%, 7% and 10% return presets illustrative only?</summary><p data-i18n="faq.a2">The expected return is an assumption you choose, not a rate anyone can promise. The presets are round reference points often cited for broad index funds — for example the S&P 500 has averaged roughly 7% a year after inflation and around 10% before inflation over long history, and 4% is a more cautious figure. Real markets do not deliver a smooth annual number: some years are strongly positive, others negative, and past averages never guarantee the future. Treat every result here as one scenario. To stress-test a plan, run it again with a lower return and see how much the projection changes.</p></details>
+    <details><summary data-i18n="faq.q3">How much of my final balance is my own money versus market gains?</summary><p data-i18n="faq.a3">This is the core DCA/SIP question, so the tool answers it directly. Total invested is simply your starting amount plus every monthly contribution you will make. Market gains are the rest of the balance — what compounding added on top. Over short horizons your own contributions dominate the total; over twenty, thirty or forty years the market-gains slice usually grows to become the majority of the balance. The highlighted line — market gains make up X% of your final balance — shows that split for your exact inputs, which is often more motivating than the headline number alone.</p></details>
+    <details><summary data-i18n="faq.q4">Why is the 'value in today's money' lower than the headline number?</summary><p data-i18n="faq.a4">A million in thirty years will not buy what a million buys today, because inflation erodes purchasing power. When you enter an annual inflation rate, this investment growth calculator discounts your after-tax future balance back to what it would be worth in today's money — dividing by (1 + inflation) for each year of the horizon. That real value is the more honest measure of how much your future portfolio can actually buy. Leave inflation at 0 to see the plain nominal amount, or try 2–3% to match typical long-run inflation and watch how much the real figure shrinks over long horizons.</p></details>
+    <details><summary data-i18n="faq.q5">How is capital-gains tax handled, and why might my broker's figure differ?</summary><p data-i18n="faq.a5">The tool applies your capital-gains tax rate only to the profit (market gains), not to the money you contributed, assuming a single sale at the end. The 15.4% preset reflects Korea's tax on financial income (14% income tax plus a 1.4% local surtax) as of 2025 — many countries and account types differ, and tax-advantaged accounts such as a 401(k), IRA or pension wrapper may defer or reduce tax entirely, so 0% is the default. Real brokers may tax each sale, use allowances, cost-basis rules or withholding, and rates change over time. Use this as an arithmetic estimate and confirm your own situation with a tax professional or official source.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

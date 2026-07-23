@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Man-Month Effort Calculator — Paste a WBS</title>
+<meta name="description" content="Free browser-only effort calculator for software and agency estimates. Paste a WBS or task list from Excel and convert man-hours and man-days into man-months (M/M), rolled up by role and by phase, with labor cost from your own rate table. Built-in conversion presets (Korea: KOSA 20.5 days per man-month; Japan: 160 hours) so you never look the constant up again. No account, no ads: your estimate never leaves the browser.">
+<meta name="keywords" content="man month calculator, man day effort estimate, man-month rollup by role, 공수 산정 계산기, 맨먼스 계산기, 인월 환산, 工数計算 人月">
+<link rel="canonical" href="https://tool-hub.me/manday-estimator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Man-Month Effort Calculator — Paste a WBS">
+<meta property="og:description" content="Free browser-only effort calculator for software and agency estimates. Paste a WBS or task list from Excel and convert man-hours and man-days into man-months (M/M), rolled up by role and by phase, with labor cost from your own rate table. Built-in conversion presets (Korea: KOSA 20.5 days per man-month; Japan: 160 hours) so you never look the constant up again. No account, no ads: your estimate never leaves the browser.">
+<meta property="og:url" content="https://tool-hub.me/manday-estimator/">
+<meta property="og:image" content="https://tool-hub.me/manday-estimator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e40af">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Man-Month Effort Calculator",
+  "description": "Free browser-only effort calculator for software and agency estimates. Paste a WBS or task list from Excel and convert man-hours and man-days into man-months (M/M), rolled up by role and by phase, with labor cost from your own rate table. Built-in conversion presets (Korea: KOSA 20.5 days per man-month; Japan: 160 hours) so you never look the constant up again. No account, no ads: your estimate never leaves the browser.",
+  "url": "https://tool-hub.me/manday-estimator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Advanced — man-month constant, rates, currency",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One man-month equals Korea · KOSA (2026 figures) — 20.5 days × 8 h = 164 h Korea · rule of thumb — 21 days × 8 h = 168 h Korea · rule of thumb — 22 days × 8 h = 176 h Japan · standard — 20 days × 8 h = 160 h Custom — set hours/day and days/month Hours per man-day Man-days per man-month Currency KRW ₩ JPY ¥ USD $ EUR € GBP £ INR ₹ CNY ¥ BRL R$ IDR Rp RUB ₽ Rates below are per Man-month Man-day Man-hour Rate per role Roles show up here after your list parses. Leave one blank and its cost stays “—” rather than a fake zero. Fill blanks with the KOSA average KOSA’s published 2026 average for a software engineer is ₩414,762 per man-day — already including bonuses, severance provision and the employer’s share of social insurance, so it is a loaded cost, not a take-home salary. It is a single all-roles average: for per-role figures, enter them from the KOSA survey. KOSA source Japan has no publicly published standard rate table equivalent to KOSA’s, so there is no preset to offer — enter your own contract rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many days is one man-month — 20.5, 21, 22, or 160 hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no universal answer, which is exactly why estimates disagree. In Korea, KOSA derives its published daily wage by dividing the monthly wage by 20.5 days for the 2026 figures, so 20.5 is the number consistent with the official rate table. The widely repeated “1 M/M = 21 days” is not a KOSA rule — it is a rounded rule of thumb, and 22 days is another common convention that simply counts weekdays. Japan instead defines the month by hours: 160 h (8 h × 20 days). Note that KOSA's divisor moves a little every year (20.8 in 2022, 20.6 in 2024, 20.5 in 2026), so a man month calculator that hard-codes one constant silently goes stale. This tool keeps all of them as presets with the source year on the label, and you can set a custom hours/day and days/month pair."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you convert man-hours to man-days and man-months?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everything normalises through hours: man-days = man-hours ÷ hours-per-day and man-months = man-hours ÷ (hours-per-day × days-per-month). With the KOSA 2026 preset (8 h/day, 20.5 days/month) one man-month is 164 h, so a 1,312-hour project is 1,312 ÷ 8 = 164 man-days = 1,312 ÷ 164 = 8 M/M. Switch to Japan's 160 h and the same 1,312 hours becomes 8.2 M/M — the work did not change, only the divisor did. Paste a whole WBS and this man day effort estimate runs that arithmetic per row, then rolls the totals up so you never rebuild the sheet by hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is included in the KOSA average wage, and when is it updated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "KOSA (Korea Software Industry Association) surveys software engineer wages and publishes the table each December for the following year — the 2026 figures were published in December 2025. Crucially it is a loaded cost, not take-home pay: it includes base pay, allowances, bonuses, the severance provision, and the employer's share of the four major insurances. That is why it looks high next to a salary, and why it is the right basis for a quote. Because it is published once a year, this tool keeps the constant in one table and only that number changes annually. The built-in figure is KOSA's single all-roles average; per-role numbers are yours to enter from the survey, since publishing role-level figures we cannot verify would be worse than asking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does Japan's 人月 settlement range (140–180 h) move a quote?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lot — and it is the most common source of argument in Japanese contracts. The same 1,600 man-hours is 11.43 M/M at a 140 h divisor, 10.0 M/M at 160 h, and 8.89 M/M at 180 h: a 29% swing in the headline number for identical work. When the Japan preset is selected, this calculator shows all three side by side so you can see how exposed the estimate is before you sign the settlement range. Calculating the actual over/under settlement payment (上下割 / 中間割) is deliberately out of scope: it needs recorded actual hours and per-person monthly contracts, which this planning-effort tool does not ask for and should not pretend to know."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do my task list and rates get sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — and you do not have to take our word for it. There is no server and no account: the parsing, the man-month rollup by role, and the cost maths all run in JavaScript in your tab. Verify it yourself: open DevTools (F12) → Network tab, paste your WBS and press Calculate — you will see zero requests, and you can disconnect from the internet entirely and the tool still works. Only your reusable settings (rate table, chosen constant, column mapping) are kept in this browser's localStorage; task names, effort and costs are never stored or transmitted. That is the point: quote cost data is usually the most sensitive thing a PM handles."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Man-Month Effort Calculator",
+      "item": "https://tool-hub.me/manday-estimator/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Man-Month Effort Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Man-Month Effort Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Paste the WBS. Man-hours, man-days and man-months roll up by role and phase — with cost.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Man-month effort calculator" data-i18n-aria-label="tool.aria">
+
+    <!-- ── 1. Task list — paste (primary path) / drop / file picker ────────── -->
+    <label for="in-data" data-i18n="tool.input.label">Task list — paste straight from Excel</label>
+    <textarea id="in-data" rows="8" spellcheck="false" autocomplete="off"
+      style="font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13.5px;line-height:1.65;resize:vertical;"
+      data-i18n-placeholder="tool.input.ph"
+      placeholder="Task&#9;Role&#9;Effort&#9;Phase&#10;Login screen&#9;UI designer&#9;24&#9;Design&#10;Auth API&#9;Backend dev&#9;40&#9;Build"></textarea>
+    <p style="color:var(--muted);font-size:13px;margin:8px 0 0;" data-i18n="tool.input.hint">Columns: task · role · effort · phase (optional) · unit (optional). You can also drop a .csv file onto the box.</p>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+      <button type="button" id="btn-file" style="padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;" data-i18n="tool.input.choose">Choose CSV file</button>
+      <button type="button" id="btn-sample" style="padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;" data-i18n="tool.input.sample">Fill 5 example rows</button>
+      <button type="button" id="btn-clear" style="padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;" data-i18n="tool.input.clear">Clear</button>
+      <input type="file" id="in-file" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+    </div>
+
+    <!-- Encoding rescue: Korean Excel writes CSV as EUC-KR, not UTF-8 -->
+    <p id="enc-banner" hidden style="margin:12px 0 0;padding:10px 12px;border-radius:10px;border:1px solid #f59e0b;background:color-mix(in srgb, #f59e0b 12%, var(--surface));font-size:13.5px;">
+      <span data-i18n="tool.enc.msg">Some characters arrived broken — this file is probably Korean Excel CSV (EUC-KR).</span>
+      <button type="button" id="btn-euckr" style="margin-inline-start:8px;padding:4px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:12.5px;font-weight:700;cursor:pointer;" data-i18n="tool.enc.btn">Re-read as EUC-KR</button>
+    </p>
+
+    <!-- ── 2. Effort unit of the pasted numbers ───────────────────────────── -->
+    <label for="in-unit" data-i18n="tool.unit.label">The effort numbers above are in</label>
+    <select id="in-unit">
+      <option value="h" data-i18n="tool.unit.h">Man-hours (M/H)</option>
+      <option value="d" data-i18n="tool.unit.d">Man-days (M/D)</option>
+      <option value="m" data-i18n="tool.unit.m">Man-months (M/M)</option>
+    </select>
+    <p style="color:var(--muted);font-size:12.5px;margin:8px 0 0;" data-i18n="tool.unit.hint">Map a “unit” column and each row overrides this.</p>
+
+    <!-- ── 3. Column mapping + preview (revealed once something parses) ───── -->
+    <div id="map-box" hidden style="margin-top:18px;padding:14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;">
+        <strong style="font-size:14px;" data-i18n="tool.map.heading">Column mapping</strong>
+        <label style="display:flex;align-items:center;gap:6px;font-weight:600;font-size:13px;margin:0;">
+          <input type="checkbox" id="in-header" style="width:auto;">
+          <span data-i18n="tool.map.header">First row is a header</span>
+        </label>
+      </div>
+      <p style="color:var(--muted);font-size:12.5px;margin:6px 0 0;" data-i18n="tool.map.note">Guessed from your column names — correct anything that landed wrong.</p>
+      <div id="map-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:10px;"></div>
+      <div id="preview-wrap" style="overflow-x:auto;margin-top:12px;"></div>
+    </div>
+
+    <!-- ── 4. Advanced: conversion constant, currency, rate table ─────────── -->
+    <details id="adv" style="margin-top:18px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--bg);">
+      <summary style="font-weight:700;cursor:pointer;font-size:14px;" data-i18n="tool.adv.summary">Advanced — man-month constant, rates, currency</summary>
+
+      <label for="in-conv" data-i18n="tool.conv.label">One man-month equals</label>
+      <select id="in-conv">
+        <option value="kr-kosa" data-i18n="tool.conv.krKosa">Korea · KOSA (2026 figures) — 20.5 days × 8 h = 164 h</option>
+        <option value="kr-21" data-i18n="tool.conv.kr21">Korea · rule of thumb — 21 days × 8 h = 168 h</option>
+        <option value="kr-22" data-i18n="tool.conv.kr22">Korea · rule of thumb — 22 days × 8 h = 176 h</option>
+        <option value="jp-160" data-i18n="tool.conv.jp160">Japan · standard — 20 days × 8 h = 160 h</option>
+        <option value="custom" data-i18n="tool.conv.custom">Custom — set hours/day and days/month</option>
+      </select>
+      <p id="conv-note" style="color:var(--muted);font-size:12.5px;margin:8px 0 0;"></p>
+      <div id="conv-custom" hidden>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <div>
+            <label for="in-hpd" data-i18n="tool.conv.hpd">Hours per man-day</label>
+            <input type="number" id="in-hpd" min="0.5" max="24" step="0.5" value="8" inputmode="decimal" autocomplete="off">
+          </div>
+          <div>
+            <label for="in-dpm" data-i18n="tool.conv.dpm">Man-days per man-month</label>
+            <input type="number" id="in-dpm" min="1" max="31" step="0.1" value="20.5" inputmode="decimal" autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <label for="in-currency" data-i18n="tool.cur.label">Currency</label>
+          <select id="in-currency">
+            <option value="KRW">KRW ₩</option>
+            <option value="JPY">JPY ¥</option>
+            <option value="USD">USD $</option>
+            <option value="EUR">EUR €</option>
+            <option value="GBP">GBP £</option>
+            <option value="INR">INR ₹</option>
+            <option value="CNY">CNY ¥</option>
+            <option value="BRL">BRL R$</option>
+            <option value="IDR">IDR Rp</option>
+            <option value="RUB">RUB ₽</option>
+          </select>
+        </div>
+        <div>
+          <label for="in-rate-unit" data-i18n="tool.rate.unitLabel">Rates below are per</label>
+          <select id="in-rate-unit">
+            <option value="m" data-i18n="tool.rate.month">Man-month</option>
+            <option value="d" data-i18n="tool.rate.day">Man-day</option>
+            <option value="h" data-i18n="tool.rate.hour">Man-hour</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;">
+        <strong style="font-size:14px;" data-i18n="tool.rate.heading">Rate per role</strong>
+        <p id="rate-note" style="color:var(--muted);font-size:12.5px;margin:6px 0 0;" data-i18n="tool.rate.note">Roles show up here after your list parses. Leave one blank and its cost stays “—” rather than a fake zero.</p>
+        <div id="rate-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:8px;"></div>
+        <div id="kosa-box" hidden style="margin-top:10px;">
+          <button type="button" id="btn-kosa" style="padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;" data-i18n="tool.rate.kosaBtn">Fill blanks with the KOSA average</button>
+          <p style="color:var(--muted);font-size:12.5px;margin:6px 0 0;">
+            <span data-i18n="tool.rate.kosaNote">KOSA’s published 2026 average for a software engineer is ₩414,762 per man-day — already including bonuses, severance provision and the employer’s share of social insurance, so it is a loaded cost, not a take-home salary. It is a single all-roles average: for per-role figures, enter them from the KOSA survey.</span>
+            <a href="https://www.sw.or.kr/site/sw/ex/board/List.do?cbIdx=305" target="_blank" rel="noopener noreferrer" data-i18n="tool.rate.kosaSrc">KOSA source</a>
+          </p>
+        </div>
+        <p id="jp-rate-note" hidden style="color:var(--muted);font-size:12.5px;margin:8px 0 0;" data-i18n="tool.rate.jpNote">Japan has no publicly published standard rate table equivalent to KOSA’s, so there is no preset to offer — enter your own contract rates.</p>
+      </div>
+    </details>
+
+    <button class="btn" id="btn-calc" data-i18n="tool.calc">Calculate man-months</button>
+
+    <div id="progress-wrap" hidden style="margin-top:12px;">
+      <div style="height:6px;border-radius:999px;background:var(--line);overflow:hidden;">
+        <div id="progress-bar" style="height:100%;width:0;background:var(--accent);"></div>
+      </div>
+      <p id="progress-txt" style="color:var(--muted);font-size:12.5px;margin:6px 0 0;"></p>
+    </div>
+
+    <div class="result" id="result" role="status" aria-live="polite">
+      <p style="margin:0;color:var(--muted);" data-i18n="tool.res.empty">Paste a task list and press Calculate — or press “Fill 5 example rows” to watch it work. Nothing is uploaded: every number stays in this browser tab.</p>
+    </div>
+
+    <div id="detail-out"></div>
+
+    <div id="exports" style="display:none;gap:8px;flex-wrap:wrap;margin-top:14px;">
+      <button type="button" id="btn-csv" style="padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;" data-i18n="tool.exp.csv">Download CSV</button>
+      <button type="button" id="btn-tsv" style="padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;" data-i18n="tool.exp.tsv">Copy for Excel</button>
+      <button type="button" id="btn-quote" style="padding:7px 13px;border:1px solid var(--line);border-radius:999px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:13.5px;font-weight:600;cursor:pointer;" data-i18n="tool.exp.quote">Download quote items CSV</button>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How many days is one man-month — 20.5, 21, 22, or 160 hours?</summary>
+      <p data-i18n="faq.a1">There is no universal answer, which is exactly why estimates disagree. In Korea, KOSA derives its published daily wage by dividing the monthly wage by 20.5 days for the 2026 figures, so 20.5 is the number consistent with the official rate table. The widely repeated “1 M/M = 21 days” is not a KOSA rule — it is a rounded rule of thumb, and 22 days is another common convention that simply counts weekdays. Japan instead defines the month by hours: 160 h (8 h × 20 days). Note that KOSA's divisor moves a little every year (20.8 in 2022, 20.6 in 2024, 20.5 in 2026), so a man month calculator that hard-codes one constant silently goes stale. This tool keeps all of them as presets with the source year on the label, and you can set a custom hours/day and days/month pair.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do you convert man-hours to man-days and man-months?</summary>
+      <p data-i18n="faq.a2">Everything normalises through hours: man-days = man-hours ÷ hours-per-day and man-months = man-hours ÷ (hours-per-day × days-per-month). With the KOSA 2026 preset (8 h/day, 20.5 days/month) one man-month is 164 h, so a 1,312-hour project is 1,312 ÷ 8 = 164 man-days = 1,312 ÷ 164 = 8 M/M. Switch to Japan's 160 h and the same 1,312 hours becomes 8.2 M/M — the work did not change, only the divisor did. Paste a whole WBS and this man day effort estimate runs that arithmetic per row, then rolls the totals up so you never rebuild the sheet by hand.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is included in the KOSA average wage, and when is it updated?</summary>
+      <p data-i18n="faq.a3">KOSA (Korea Software Industry Association) surveys software engineer wages and publishes the table each December for the following year — the 2026 figures were published in December 2025. Crucially it is a loaded cost, not take-home pay: it includes base pay, allowances, bonuses, the severance provision, and the employer's share of the four major insurances. That is why it looks high next to a salary, and why it is the right basis for a quote. Because it is published once a year, this tool keeps the constant in one table and only that number changes annually. The built-in figure is KOSA's single all-roles average; per-role numbers are yours to enter from the survey, since publishing role-level figures we cannot verify would be worse than asking.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How much does Japan's 人月 settlement range (140–180 h) move a quote?</summary>
+      <p data-i18n="faq.a4">A lot — and it is the most common source of argument in Japanese contracts. The same 1,600 man-hours is 11.43 M/M at a 140 h divisor, 10.0 M/M at 160 h, and 8.89 M/M at 180 h: a 29% swing in the headline number for identical work. When the Japan preset is selected, this calculator shows all three side by side so you can see how exposed the estimate is before you sign the settlement range. Calculating the actual over/under settlement payment (上下割 / 中間割) is deliberately out of scope: it needs recorded actual hours and per-person monthly contracts, which this planning-effort tool does not ask for and should not pretend to know.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Do my task list and rates get sent to a server?</summary>
+      <p data-i18n="faq.a5">No — and you do not have to take our word for it. There is no server and no account: the parsing, the man-month rollup by role, and the cost maths all run in JavaScript in your tab. Verify it yourself: open DevTools (F12) → Network tab, paste your WBS and press Calculate — you will see zero requests, and you can disconnect from the internet entirely and the tool still works. Only your reusable settings (rate table, chosen constant, column mapping) are kept in this browser's localStorage; task names, effort and costs are never stored or transmitted. That is the point: quote cost data is usually the most sensitive thing a PM handles.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
