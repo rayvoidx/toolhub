@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timesheet Batch Aggregator — per-employee, per-week hours</title>
+<meta name="description" content="Free browser-only timesheet aggregator. Drop a CSV of clock-in/out punches to get per-employee, per-week regular, overtime, night and holiday hours, with country premium rules (Korea daily 8h + 22:00-06:00 night, US FLSA weekly 40h, California daily 8h/12h, EU working-time flags). Dirty rows (missing clock-out, duplicate punches, overnight shifts) are surfaced, not silently dropped. No signup, no upload: your attendance data never leaves the browser.">
+<meta name="keywords" content="timesheet calculator, bulk timesheet aggregator, overtime hours calculator, time card calculator, night hours, holiday pay hours, 근태 집계, 연장 야간 근로시간 계산">
+<link rel="canonical" href="https://tool-hub.me/timesheet-batch-agg/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Timesheet Batch Aggregator — per-employee, per-week hours">
+<meta property="og:description" content="Free browser-only timesheet aggregator. Drop a CSV of clock-in/out punches to get per-employee, per-week regular, overtime, night and holiday hours, with country premium rules (Korea daily 8h + 22:00-06:00 night, US FLSA weekly 40h, California daily 8h/12h, EU working-time flags). Dirty rows (missing clock-out, duplicate punches, overnight shifts) are surfaced, not silently dropped. No signup, no upload: your attendance data never leaves the browser.">
+<meta property="og:url" content="https://tool-hub.me/timesheet-batch-agg/">
+<meta property="og:image" content="https://tool-hub.me/timesheet-batch-agg/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#312e81">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Timesheet Batch Aggregator",
+  "description": "Free browser-only timesheet aggregator. Drop a CSV of clock-in/out punches to get per-employee, per-week regular, overtime, night and holiday hours, with country premium rules (Korea daily 8h + 22:00-06:00 night, US FLSA weekly 40h, California daily 8h/12h, EU working-time flags). Dirty rows (missing clock-out, duplicate punches, overnight shifts) are surfaced, not silently dropped. No signup, no upload: your attendance data never leaves the browser.",
+  "url": "https://tool-hub.me/timesheet-batch-agg/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Timesheet Batch Aggregator",
+      "item": "https://tool-hub.me/timesheet-batch-agg/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How are regular, overtime, night and holiday hours each defined and calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For every punch this timesheet calculator computes worked minutes = (clock-out − clock-in) − break. It then splits the week into buckets. Overtime depends on the country: in Korea it is the daily hours over 8 (with weekly hours over 40 noted for reference); night hours are the overlap of the worked interval with 22:00–06:00; holiday hours are hours worked on a holiday, weighted 1.5× within 8h and 2× beyond. The \"converted hours\" column is a premium-weighted total (regular + overtime × factor + night × factor + holiday premium) — it is an hours figure, not a pay amount, because no wage is entered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do the overtime rules differ by country (Korea daily, US FLSA weekly, California, EU)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Overtime thresholds are statutory and differ by jurisdiction, so this overtime hours calculator branches on a country setting: Korea counts daily hours over 8; US federal FLSA counts weekly hours over 40; California counts daily hours over 8 (and over 12 as double-time, plus a 7th-consecutive-day rule); the EU applies no premium here but flags working-time compliance (weekly hours over 48, no weekly rest day, less than 11 hours rest between shifts). The premium factors and thresholds are static constants you pick from the country selector — defaulting from your browser locale and overridable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is an overnight shift that crosses midnight assigned to a day and week, and how are night hours caught?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the clock-out time is at or before the clock-in time, the shift is treated as ending the next day (+24h) and tagged \"overnight\" rather than dropped. The whole shift is attributed to the week of its clock-in date, so a Sunday-night-into-Monday shift stays in the earlier week. Night hours are the exact intersection of the worked interval with the 22:00–06:00 window, computed across the midnight boundary, so a 22:00–06:00 shift yields a full 8 night hours. Shifts longer than 16 hours are treated as unreasonable and excluded with a reason."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are dirty rows like a missing clock-out or a duplicate punch handled?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing is silently dropped. Rows with a missing employee ID, an unparseable date, a missing or unparseable clock-in/clock-out, a non-numeric or negative break, a break longer than the shift, or an unreasonable span are excluded and listed in an \"excluded rows\" report with a per-reason count. Exact duplicate punches (same employee, date, clock-in, clock-out and break) keep the first and exclude the rest as duplicates. That way your totals never quietly absorb a bad row."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is our attendance data sent to a server, and how can I verify it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. CSV parsing, encoding detection, the time and date parsers, sorting and the per-employee, per-week roll-up all run inside your browser tab, so employee IDs and clock times never reach any server, and there is no signup, email or upload. You can verify it yourself: open your browser's developer tools, go to the Network tab, then load your file and aggregate — you will see zero requests carrying your data. That is why security teams clear it where uploading attendance to a SaaS would be blocked."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Timesheet Batch Aggregator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Timesheet Batch Aggregator</h1>
+    <p class="lede" data-i18n="hero.lede">Turn a raw punch CSV into per-employee, per-week regular, overtime, night and holiday hours - computed entirely in your browser, never uploaded.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 16px; }
+      #tool .ts-priv {
+        margin: 0 0 14px; padding: 11px 14px; border-radius: 10px;
+        border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+        background: color-mix(in srgb, var(--accent) 9%, var(--surface));
+        font-size: 13px; line-height: 1.6; font-weight: 600; color: var(--ink);
+      }
+      #tool .ts-scope {
+        margin: 0 0 16px; padding: 10px 14px; border-inline-start: 3px solid var(--accent);
+        border-radius: 0 8px 8px 0; background: var(--bg);
+        font-size: 13px; line-height: 1.6; color: var(--muted);
+      }
+      #tool .ts-opts { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+      #tool .ts-opt { flex: 1 1 170px; }
+      #tool .ts-drop { border: 2px dashed var(--line); border-radius: 12px; padding: 12px; transition: border-color .15s ease, background .15s ease; }
+      #tool .ts-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+      #tool .ts-drop textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; line-height: 1.5; resize: vertical; min-height: 118px; }
+      #tool .ts-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; }
+      #tool .ts-mini { padding: 7px 12px; font-size: 13px; font-weight: 700; font-family: inherit; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); cursor: pointer; }
+      #tool .ts-mini:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .ts-hint { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+      #tool .ts-note { margin: 10px 0 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
+      #tool .ts-warn { color: var(--accent-strong); font-weight: 700; }
+      [data-theme="dark"] #tool .ts-warn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .ts-warn { color: var(--accent); } }
+      #tool .ts-err { color: #b91c1c; font-weight: 700; margin: 4px 0; }
+      [data-theme="dark"] #tool .ts-err { color: #fca5a5; }
+      #tool .ts-banner { margin: 10px 0 0; padding: 8px 12px; border-radius: 8px; background: var(--bg); border: 1px solid var(--line); font-size: 12.5px; color: var(--muted); }
+      #tool .ts-banner.ts-warn { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); color: var(--accent-strong); }
+      #tool .ts-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin-top: 16px; font-weight: 600; font-size: 14px; }
+      #tool .ts-check input { width: auto; flex: 0 0 auto; }
+      #tool .ts-h { font-size: 15px; margin: 26px 0 4px; letter-spacing: -0.01em; }
+      #tool .ts-progress { margin-top: 14px; }
+      #tool .ts-pbar { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+      #tool .ts-pbar > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .12s linear; }
+      #tool .ts-mapgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0 14px; }
+      #tool .ts-mapcell label { margin-top: 12px; }
+      #tool .ts-tablewrap { overflow-x: auto; margin-top: 12px; -webkit-overflow-scrolling: touch; }
+      #tool table { border-collapse: collapse; width: 100%; font-size: 13px; }
+      #tool th, #tool td { border: 1px solid var(--line); padding: 7px 9px; text-align: start; white-space: nowrap; }
+      #tool th { background: var(--bg); font-weight: 700; font-size: 12px; color: var(--muted); }
+      #tool td.num, #tool th.num { text-align: end; font-variant-numeric: tabular-nums; }
+      #tool .ts-badge { margin: 0 0 14px; padding: 9px 13px; border-radius: 8px; font-size: 13px; line-height: 1.55; font-weight: 700; border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line)); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+      #tool .ts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin-top: 4px; }
+      #tool .ts-metric { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--bg); }
+      #tool .ts-mlabel { font-size: 12.5px; font-weight: 700; color: var(--muted); }
+      #tool .ts-big { font-size: clamp(20px, 4.5vw, 26px); font-weight: 900; letter-spacing: -0.02em; line-height: 1.2; color: var(--accent-strong); margin-top: 4px; }
+      [data-theme="dark"] #tool .ts-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .ts-big { color: var(--accent); } }
+      #tool .ts-sub { color: var(--muted); font-size: 12.5px; margin-top: 8px; line-height: 1.55; }
+      #tool .ts-na { color: var(--muted); font-size: 12.5px; margin-top: 8px; line-height: 1.55; }
+      #tool .ts-dim { color: var(--muted); }
+      #tool .ts-flag { display: inline-block; font-size: 11px; font-weight: 800; color: #fff; background: var(--accent); border-radius: 5px; padding: 1px 6px; }
+      #tool .ts-excl { margin-top: 18px; border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; background: var(--bg); }
+      #tool .ts-excl > summary { font-weight: 700; font-size: 13.5px; cursor: pointer; color: var(--muted); }
+      #tool .ts-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 2px; }
+      #tool .ts-chip { font-size: 12px; font-weight: 600; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; }
+      #tool .ts-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 20px; }
+      #tool .ts-actions .btn { margin-top: 0; }
+    </style>
+
+    <p class="ts-priv" data-i18n="tool.privacy">Your attendance data never leaves this browser tab. Nothing is uploaded — open your browser's DevTools › Network tab and watch: aggregating the timesheet makes zero requests.</p>
+    <p class="ts-scope" data-i18n="tool.scope">This tool only aggregates hours. It does not judge legal violations or recompute pay — the 52-hour cap check and the ordinary-wage recalculation are separate tools that take this output as their input.</p>
+
+    <div class="ts-opts">
+      <div class="ts-opt">
+        <label for="ts-country" data-i18n="tool.country">Country rules</label>
+        <select id="ts-country">
+          <option value="KR" data-i18n="tool.country.kr">Korea — daily 8h + 22:00–06:00 night, holiday 1.5×/2×</option>
+          <option value="US-FLSA" data-i18n="tool.country.flsa">US (FLSA) — weekly over 40h</option>
+          <option value="US-CA" data-i18n="tool.country.ca">US California — daily 8h/12h + 7th day</option>
+          <option value="EU" data-i18n="tool.country.eu">EU — working-time compliance flags</option>
+        </select>
+      </div>
+      <div class="ts-opt">
+        <label for="ts-weekstart" data-i18n="tool.weekstart">Week starts on</label>
+        <select id="ts-weekstart">
+          <option value="1" data-i18n="tool.weekstart.mon">Monday</option>
+          <option value="0" data-i18n="tool.weekstart.sun">Sunday</option>
+        </select>
+      </div>
+    </div>
+    <label class="ts-check" for="ts-weekend">
+      <input type="checkbox" id="ts-weekend">
+      <span data-i18n="tool.weekend">Treat Saturdays and Sundays as holidays</span>
+    </label>
+    <label for="ts-holidays" data-i18n="tool.holidays">Holiday dates (optional)</label>
+    <textarea id="ts-holidays" rows="2" spellcheck="false" autocomplete="off"
+      placeholder="2024-01-01, 2024-02-09, 2024-03-01" data-i18n-placeholder="tool.holidays.ph"></textarea>
+    <p class="ts-hint" data-i18n="tool.holidays.hint">One date per line or comma-separated. Or map a "holiday" column below (any non-empty value marks a holiday).</p>
+
+    <label for="ts-paste" data-i18n="tool.src">Punch data — paste from Excel (TSV), or drop a CSV file</label>
+    <div class="ts-drop" id="ts-drop">
+      <textarea id="ts-paste" rows="6" spellcheck="false" autocomplete="off"
+        placeholder="Employee,Date,Clock in,Clock out,Break&#10;E001,2024-01-01,09:00,18:00,60&#10;E001,2024-01-02,09:00,20:30,60"
+        data-i18n-placeholder="tool.ph"></textarea>
+      <div class="ts-bar">
+        <button type="button" class="ts-mini" id="ts-pick" data-i18n="tool.file">Choose CSV file</button>
+        <button type="button" class="ts-mini" id="ts-sample" data-i18n="tool.sample">Load sample data</button>
+        <button type="button" class="ts-mini" id="ts-clear" data-i18n="tool.clear">Clear</button>
+        <span class="ts-hint" data-i18n="tool.drop">…or drop a .csv / .tsv file into this box</span>
+        <input type="file" id="ts-file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values" hidden>
+      </div>
+    </div>
+    <p class="ts-note" id="ts-srcnote" role="status" data-i18n="tool.empty">Nothing loaded yet. Paste your punches above, or load the sample data. Nothing is uploaded — every row is parsed inside this browser tab.</p>
+
+    <div class="ts-opts" id="ts-opts" hidden>
+      <div class="ts-opt">
+        <label for="ts-enc" data-i18n="tool.enc">File encoding</label>
+        <select id="ts-enc">
+          <option value="auto" data-i18n="tool.enc.auto">Auto-detect</option>
+          <option value="utf-8">UTF-8</option>
+          <option value="euc-kr">EUC-KR (CP949)</option>
+        </select>
+      </div>
+      <div class="ts-opt">
+        <label for="ts-delim" data-i18n="tool.delim">Delimiter</label>
+        <select id="ts-delim">
+          <option value="auto" data-i18n="tool.delim.auto">Auto-detect</option>
+          <option value="," data-i18n="tool.delim.comma">Comma ( , )</option>
+          <option value="tab" data-i18n="tool.delim.tab">Tab</option>
+          <option value=";" data-i18n="tool.delim.semi">Semicolon ( ; )</option>
+        </select>
+      </div>
+      <div class="ts-opt">
+        <label for="ts-datefmt" data-i18n="tool.datefmt">Date format</label>
+        <select id="ts-datefmt">
+          <option value="auto" data-i18n="tool.datefmt.auto">Auto-detect</option>
+          <option value="iso">YYYY-MM-DD</option>
+          <option value="mdy">MM/DD/YYYY</option>
+          <option value="dmy">DD/MM/YYYY</option>
+        </select>
+      </div>
+    </div>
+    <p class="ts-note ts-warn" id="ts-encwarn" hidden data-i18n="tool.enc.warn">Text looks garbled (�)? Switch the encoding to EUC-KR — Excel on Korean Windows saves CSV as CP949.</p>
+
+    <div class="ts-progress" id="ts-progress" hidden>
+      <div class="ts-pbar"><span id="ts-pfill"></span></div>
+      <div class="ts-bar">
+        <span class="ts-hint" id="ts-ptext" role="status"></span>
+        <button type="button" class="ts-mini" id="ts-cancel" data-i18n="tool.cancel">Cancel</button>
+      </div>
+    </div>
+
+    <div id="ts-setup" hidden>
+      <h3 class="ts-h" data-i18n="tool.map">Which column is which?</h3>
+      <p class="ts-hint" data-i18n="tool.map.hint">Guessed from your header row. Employee ID, Date, Clock in and Clock out are required; Break and Holiday are optional.</p>
+      <label class="ts-check" for="ts-header">
+        <input type="checkbox" id="ts-header" checked>
+        <span data-i18n="tool.header">First row is a header</span>
+      </label>
+      <div class="ts-mapgrid" id="ts-mapgrid"></div>
+      <p class="ts-banner" id="ts-datebanner" hidden></p>
+      <div class="ts-tablewrap"><table id="ts-preview"></table></div>
+      <p class="ts-hint" data-i18n="tool.preview">First 5 rows, exactly as parsed.</p>
+      <button type="button" class="btn" id="ts-calc" data-i18n="tool.calc">Aggregate hours</button>
+    </div>
+
+    <div class="result" id="ts-result" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details>
+      <summary data-i18n="faq.q1">How are regular, overtime, night and holiday hours each defined and calculated?</summary>
+      <p data-i18n="faq.a1">For every punch this timesheet calculator computes worked minutes = (clock-out − clock-in) − break. It then splits the week into buckets. Overtime depends on the country: in Korea it is the daily hours over 8 (with weekly hours over 40 noted for reference); night hours are the overlap of the worked interval with 22:00–06:00; holiday hours are hours worked on a holiday, weighted 1.5× within 8h and 2× beyond. The "converted hours" column is a premium-weighted total (regular + overtime × factor + night × factor + holiday premium) — it is an hours figure, not a pay amount, because no wage is entered.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why do the overtime rules differ by country (Korea daily, US FLSA weekly, California, EU)?</summary>
+      <p data-i18n="faq.a2">Overtime thresholds are statutory and differ by jurisdiction, so this overtime hours calculator branches on a country setting: Korea counts daily hours over 8; US federal FLSA counts weekly hours over 40; California counts daily hours over 8 (and over 12 as double-time, plus a 7th-consecutive-day rule); the EU applies no premium here but flags working-time compliance (weekly hours over 48, no weekly rest day, less than 11 hours rest between shifts). The premium factors and thresholds are static constants you pick from the country selector — defaulting from your browser locale and overridable.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How is an overnight shift that crosses midnight assigned to a day and week, and how are night hours caught?</summary>
+      <p data-i18n="faq.a3">When the clock-out time is at or before the clock-in time, the shift is treated as ending the next day (+24h) and tagged "overnight" rather than dropped. The whole shift is attributed to the week of its clock-in date, so a Sunday-night-into-Monday shift stays in the earlier week. Night hours are the exact intersection of the worked interval with the 22:00–06:00 window, computed across the midnight boundary, so a 22:00–06:00 shift yields a full 8 night hours. Shifts longer than 16 hours are treated as unreasonable and excluded with a reason.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How are dirty rows like a missing clock-out or a duplicate punch handled?</summary>
+      <p data-i18n="faq.a4">Nothing is silently dropped. Rows with a missing employee ID, an unparseable date, a missing or unparseable clock-in/clock-out, a non-numeric or negative break, a break longer than the shift, or an unreasonable span are excluded and listed in an "excluded rows" report with a per-reason count. Exact duplicate punches (same employee, date, clock-in, clock-out and break) keep the first and exclude the rest as duplicates. That way your totals never quietly absorb a bad row.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is our attendance data sent to a server, and how can I verify it?</summary>
+      <p data-i18n="faq.a5">No. CSV parsing, encoding detection, the time and date parsers, sorting and the per-employee, per-week roll-up all run inside your browser tab, so employee IDs and clock times never reach any server, and there is no signup, email or upload. You can verify it yourself: open your browser's developer tools, go to the Network tab, then load your file and aggregate — you will see zero requests carrying your data. That is why security teams clear it where uploading attendance to a SaaS would be blocked.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
