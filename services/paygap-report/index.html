@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gender Pay Gap Report Builder — mean, median, quartiles</title>
+<meta name="description" content="Free browser-only gender pay gap report builder. Drop a payroll CSV to get the six UK statutory figures (mean and median hourly pay gap, mean and median bonus gap, proportion receiving a bonus, and the male/female split across pay quartiles), plus EU Pay Transparency Directive category gaps with the 5% joint-pay-assessment flag and a Korea pre-check. No signup, no email, no upload: your payroll data never leaves the browser.">
+<meta name="keywords" content="gender pay gap calculator, gender pay gap report, mean median pay gap, pay quartiles calculator, bonus pay gap, EU pay transparency directive, 성별 임금격차 계산">
+<link rel="canonical" href="https://tool-hub.me/paygap-report/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gender Pay Gap Report Builder — mean, median, quartiles">
+<meta property="og:description" content="Free browser-only gender pay gap report builder. Drop a payroll CSV to get the six UK statutory figures (mean and median hourly pay gap, mean and median bonus gap, proportion receiving a bonus, and the male/female split across pay quartiles), plus EU Pay Transparency Directive category gaps with the 5% joint-pay-assessment flag and a Korea pre-check. No signup, no email, no upload: your payroll data never leaves the browser.">
+<meta property="og:url" content="https://tool-hub.me/paygap-report/">
+<meta property="og:image" content="https://tool-hub.me/paygap-report/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#5b21b6">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gender Pay Gap Report Builder",
+  "description": "Free browser-only gender pay gap report builder. Drop a payroll CSV to get the six UK statutory figures (mean and median hourly pay gap, mean and median bonus gap, proportion receiving a bonus, and the male/female split across pay quartiles), plus EU Pay Transparency Directive category gaps with the 5% joint-pay-assessment flag and a Korea pre-check. No signup, no email, no upload: your payroll data never leaves the browser.",
+  "url": "https://tool-hub.me/paygap-report/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Gender Pay Gap Report Builder",
+      "item": "https://tool-hub.me/paygap-report/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are the six UK statutory figures, and how is each one calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The six figures are: the mean hourly pay gap = (men's mean hourly pay − women's mean hourly pay) ÷ men's mean × 100; the median hourly pay gap, using the middle value of each gender (the average of the two middle values for an even sample); the mean and median bonus gap, calculated the same way but over bonus recipients only (anyone with a bonus above 0); the proportion of men and of women receiving a bonus, where the denominator is everyone of that gender (not just recipients — this is the trap); and the male/female split across the four pay quartiles. A positive gap means pay favours men."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is hourly pay derived from base pay and hours worked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your CSV already has an hourly-pay column, this gender pay gap calculator uses it directly. If not, it derives hourly pay as base pay ÷ hours worked for the relevant pay period, following the UK ordinary-pay methodology — you are responsible for preparing the ordinary-pay figure and the period hours; the tool only turns those into the mean and median pay gap. Rows where hours worked is zero or blank, or where pay is non-numeric or negative, are excluded and listed with a reason rather than silently dropped."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are pay quartiles split, and what happens when the boundary has equal pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every employee in the binary population is sorted by hourly pay in ascending order and divided into four equal groups — lower, lower middle, upper middle and upper. When the headcount does not divide by four, the remainder is added to the lower quartiles first. When several employees on a quartile boundary share exactly the same hourly pay, they are distributed so the gender ratio is spread as evenly as possible across the groups they straddle, following the official pay quartiles calculator guidance, and the number of straddling employees is shown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the EU Pay Transparency Directive (2023/970) 5% trigger and a joint pay assessment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Directive 2023/970 says that when the gender pay gap within a category of workers doing equal work exceeds 5% and cannot be justified by objective, gender-neutral criteria, the employer must carry out a joint pay assessment with worker representatives. In EU mode this tool builds a per-category mean hourly gap table from your grade/category column and flags any category above 5% as a review signal. That flag is a prompt to look closer — it is not a legal determination."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is our payroll data sent to a server, and how can I verify it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything — CSV parsing, encoding detection, sorting, quartiles and every gap — runs inside your browser tab, so raw payroll never reaches any server and there is no signup, email or upload. You can verify it yourself: open your browser's developer tools, go to the Network tab, then load your file and calculate. You will see zero requests carrying your data. That is why security teams clear it where uploading to a pay-equity vendor would be blocked."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Gender Pay Gap Report Builder</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Gender Pay Gap Report Builder</h1>
+    <p class="lede" data-i18n="hero.lede">Drop a payroll CSV and get the statutory mean/median pay gaps, bonus gaps and pay quartiles — computed entirely in your browser, never uploaded.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool label { margin-top: 16px; }
+      #tool .pg-priv {
+        margin: 0 0 16px; padding: 11px 14px; border-radius: 10px;
+        border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line));
+        background: color-mix(in srgb, var(--accent) 9%, var(--surface));
+        font-size: 13px; line-height: 1.6; font-weight: 600; color: var(--ink);
+      }
+      #tool .pg-scope {
+        margin: 0 0 16px; padding: 10px 14px; border-inline-start: 3px solid var(--accent);
+        border-radius: 0 8px 8px 0; background: var(--bg);
+        font-size: 13px; line-height: 1.6; color: var(--muted);
+      }
+      #tool .pg-drop { border: 2px dashed var(--line); border-radius: 12px; padding: 12px; transition: border-color .15s ease, background .15s ease; }
+      #tool .pg-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+      #tool .pg-drop textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; line-height: 1.5; resize: vertical; min-height: 120px; }
+      #tool .pg-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 10px; }
+      #tool .pg-mini { padding: 7px 12px; font-size: 13px; font-weight: 700; font-family: inherit; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); cursor: pointer; }
+      #tool .pg-mini:hover { border-color: var(--accent); color: var(--accent); }
+      #tool .pg-hint { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+      #tool .pg-note { margin: 10px 0 0; font-size: 13px; color: var(--muted); line-height: 1.6; }
+      #tool .pg-warn { color: var(--accent-strong); font-weight: 700; }
+      [data-theme="dark"] #tool .pg-warn, [data-theme="dark"] #tool .pg-favour { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .pg-warn, [data-theme="auto"] #tool .pg-favour { color: var(--accent); } }
+      #tool .pg-flag { color: var(--accent-strong); font-weight: 700; }
+      #tool .pg-err { color: #b91c1c; font-weight: 700; margin: 4px 0; }
+      [data-theme="dark"] #tool .pg-err { color: #fca5a5; }
+      #tool .pg-opts { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 8px; }
+      #tool .pg-opt { flex: 1 1 190px; }
+      #tool .pg-h { font-size: 15px; margin: 28px 0 4px; letter-spacing: -0.01em; }
+      #tool .pg-progress { margin-top: 14px; }
+      #tool .pg-pbar { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+      #tool .pg-pbar > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .12s linear; }
+      #tool .pg-mapgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(196px, 1fr)); gap: 0 14px; }
+      #tool .pg-mapcell label { margin-top: 12px; }
+      #tool .pg-tablewrap { overflow-x: auto; margin-top: 12px; -webkit-overflow-scrolling: touch; }
+      #tool table { border-collapse: collapse; width: 100%; font-size: 13px; }
+      #tool th, #tool td { border: 1px solid var(--line); padding: 7px 9px; text-align: start; white-space: nowrap; }
+      #tool th { background: var(--bg); font-weight: 700; font-size: 12px; color: var(--muted); }
+      #tool td.num, #tool th.num { text-align: end; font-variant-numeric: tabular-nums; }
+      #tool .pg-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin-top: 16px; font-weight: 600; font-size: 14px; }
+      #tool .pg-check input { width: auto; flex: 0 0 auto; }
+      #tool .pg-summary { font-size: 15px; }
+      #tool .pg-summary strong { font-size: 26px; }
+      #tool .pg-sub { color: var(--muted); font-size: 13px; margin-top: 2px; }
+      #tool .pg-badge { margin: 16px 0 4px; padding: 9px 13px; border-radius: 8px; font-size: 13px; line-height: 1.55; font-weight: 700; border: 1px solid color-mix(in srgb, var(--accent) 40%, var(--line)); background: color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+      #tool .pg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 10px; }
+      #tool .pg-metric { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--bg); }
+      #tool .pg-mlabel { font-size: 12.5px; font-weight: 700; color: var(--muted); }
+      #tool .pg-big { font-size: clamp(22px, 5vw, 28px); font-weight: 900; letter-spacing: -0.02em; line-height: 1.2; color: var(--accent-strong); margin-top: 4px; }
+      [data-theme="dark"] #tool .pg-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .pg-big { color: var(--accent); } }
+      #tool .pg-big2 { font-size: 15px; font-weight: 800; margin-top: 6px; }
+      #tool .pg-favour { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      #tool .pg-na { font-size: 13px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+      #tool .pg-sub { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+      #tool .pg-legend { display: flex; gap: 16px; margin-top: 6px; font-size: 12.5px; color: var(--muted); }
+      #tool .pg-lg { display: inline-flex; align-items: center; gap: 6px; }
+      #tool .pg-sw { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+      #tool .pg-sw-m { background: var(--accent); }
+      #tool .pg-sw-w { background: #a78bfa; }
+      #tool .pg-canvas { width: 100%; display: block; margin-top: 8px; }
+      #tool .pg-dim { color: var(--muted); }
+      #tool .pg-flagbadge { display: inline-block; min-width: 18px; text-align: center; font-weight: 900; color: #fff; background: var(--accent); border-radius: 5px; padding: 0 5px; }
+      #tool .pg-excl { margin-top: 16px; border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; background: var(--bg); }
+      #tool .pg-excl > summary { font-weight: 700; font-size: 13.5px; cursor: pointer; color: var(--muted); }
+      #tool .pg-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 20px; }
+      #tool .pg-actions .btn { margin-top: 0; }
+    </style>
+
+    <p class="pg-priv" data-i18n="tool.privacy">Your payroll data never leaves this browser tab. Nothing is uploaded — open your browser's DevTools › Network tab and watch: computing the report makes zero requests.</p>
+    <p class="pg-scope" data-i18n="tool.scope">Hourly pay is either read from an hourly-pay column, or derived as base pay ÷ hours worked for the relevant period — you prepare the ordinary-pay figures, this tool only computes the gaps. Gender is treated as the statutory men/women binary; anything else is counted separately, never forced or dropped.</p>
+
+    <label for="pg-country" data-i18n="tool.country">Reporting standard</label>
+    <select id="pg-country">
+      <option value="UK" data-i18n="tool.country.uk">UK — six statutory figures</option>
+      <option value="EU" data-i18n="tool.country.eu">EU — plus category gaps (Directive 2023/970)</option>
+      <option value="KR" data-i18n="tool.country.kr">Korea — pre-check</option>
+    </select>
+
+    <label for="pg-paste" data-i18n="tool.src">Payroll data — paste from Excel, or drop a CSV file</label>
+    <div class="pg-drop" id="pg-drop">
+      <textarea id="pg-paste" rows="6" spellcheck="false" autocomplete="off"
+        placeholder="Gender,Hourly pay,Bonus,Grade&#10;F,18.40,500,Analyst&#10;M,21.10,1500,Analyst"
+        data-i18n-placeholder="tool.ph"></textarea>
+      <div class="pg-bar">
+        <button type="button" class="pg-mini" id="pg-pick" data-i18n="tool.file">Choose CSV file</button>
+        <button type="button" class="pg-mini" id="pg-sample" data-i18n="tool.sample">Load sample data</button>
+        <button type="button" class="pg-mini" id="pg-clear" data-i18n="tool.clear">Clear</button>
+        <span class="pg-hint" data-i18n="tool.drop">…or drop a .csv / .tsv file into this box</span>
+        <input type="file" id="pg-file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values" hidden>
+      </div>
+    </div>
+    <p class="pg-note" id="pg-srcnote" role="status" data-i18n="tool.empty">Nothing loaded yet. Paste your payroll above, or load the sample data. Nothing is uploaded — every row is parsed inside this browser tab.</p>
+
+    <div class="pg-opts" id="pg-opts" hidden>
+      <div class="pg-opt">
+        <label for="pg-enc" data-i18n="tool.enc">File encoding</label>
+        <select id="pg-enc">
+          <option value="auto" data-i18n="tool.enc.auto">Auto-detect</option>
+          <option value="utf-8">UTF-8</option>
+          <option value="euc-kr">EUC-KR (CP949)</option>
+        </select>
+      </div>
+      <div class="pg-opt">
+        <label for="pg-delim" data-i18n="tool.delim">Delimiter</label>
+        <select id="pg-delim">
+          <option value="auto" data-i18n="tool.delim.auto">Auto-detect</option>
+          <option value="," data-i18n="tool.delim.comma">Comma ( , )</option>
+          <option value="tab" data-i18n="tool.delim.tab">Tab</option>
+          <option value=";" data-i18n="tool.delim.semi">Semicolon ( ; )</option>
+        </select>
+      </div>
+    </div>
+    <p class="pg-note pg-warn" id="pg-encwarn" hidden data-i18n="tool.enc.warn">Text looks garbled (�)? Switch the encoding to EUC-KR — Excel on Korean Windows saves CSV as CP949.</p>
+
+    <div class="pg-progress" id="pg-progress" hidden>
+      <div class="pg-pbar"><span id="pg-pfill"></span></div>
+      <div class="pg-bar">
+        <span class="pg-hint" id="pg-ptext" role="status"></span>
+        <button type="button" class="pg-mini" id="pg-cancel" data-i18n="tool.cancel">Cancel</button>
+      </div>
+    </div>
+
+    <div id="pg-setup" hidden>
+      <h3 class="pg-h" data-i18n="tool.map">Which column is which?</h3>
+      <p class="pg-hint" data-i18n="tool.map.hint">Guessed from your header row. Map Gender, and either an Hourly pay column or Base pay + Hours worked so hourly pay can be derived. Bonus and Grade are optional.</p>
+      <label class="pg-check" for="pg-header">
+        <input type="checkbox" id="pg-header" checked>
+        <span data-i18n="tool.header">First row is a header</span>
+      </label>
+      <div class="pg-mapgrid" id="pg-mapgrid"></div>
+      <div class="pg-tablewrap"><table id="pg-preview"></table></div>
+      <p class="pg-hint" data-i18n="tool.preview">First 5 rows, exactly as parsed.</p>
+      <button type="button" class="btn" id="pg-calc" data-i18n="tool.calc">Calculate pay gap</button>
+    </div>
+
+    <div class="result" id="pg-result" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details>
+      <summary data-i18n="faq.q1">What are the six UK statutory figures, and how is each one calculated?</summary>
+      <p data-i18n="faq.a1">The six figures are: the mean hourly pay gap = (men's mean hourly pay − women's mean hourly pay) ÷ men's mean × 100; the median hourly pay gap, using the middle value of each gender (the average of the two middle values for an even sample); the mean and median bonus gap, calculated the same way but over bonus recipients only (anyone with a bonus above 0); the proportion of men and of women receiving a bonus, where the denominator is everyone of that gender (not just recipients — this is the trap); and the male/female split across the four pay quartiles. A positive gap means pay favours men.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How is hourly pay derived from base pay and hours worked?</summary>
+      <p data-i18n="faq.a2">If your CSV already has an hourly-pay column, this gender pay gap calculator uses it directly. If not, it derives hourly pay as base pay ÷ hours worked for the relevant pay period, following the UK ordinary-pay methodology — you are responsible for preparing the ordinary-pay figure and the period hours; the tool only turns those into the mean and median pay gap. Rows where hours worked is zero or blank, or where pay is non-numeric or negative, are excluded and listed with a reason rather than silently dropped.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How are pay quartiles split, and what happens when the boundary has equal pay?</summary>
+      <p data-i18n="faq.a3">Every employee in the binary population is sorted by hourly pay in ascending order and divided into four equal groups — lower, lower middle, upper middle and upper. When the headcount does not divide by four, the remainder is added to the lower quartiles first. When several employees on a quartile boundary share exactly the same hourly pay, they are distributed so the gender ratio is spread as evenly as possible across the groups they straddle, following the official pay quartiles calculator guidance, and the number of straddling employees is shown.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What is the EU Pay Transparency Directive (2023/970) 5% trigger and a joint pay assessment?</summary>
+      <p data-i18n="faq.a4">Directive 2023/970 says that when the gender pay gap within a category of workers doing equal work exceeds 5% and cannot be justified by objective, gender-neutral criteria, the employer must carry out a joint pay assessment with worker representatives. In EU mode this tool builds a per-category mean hourly gap table from your grade/category column and flags any category above 5% as a review signal. That flag is a prompt to look closer — it is not a legal determination.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is our payroll data sent to a server, and how can I verify it?</summary>
+      <p data-i18n="faq.a5">No. Everything — CSV parsing, encoding detection, sorting, quartiles and every gap — runs inside your browser tab, so raw payroll never reaches any server and there is no signup, email or upload. You can verify it yourself: open your browser's developer tools, go to the Network tab, then load your file and calculate. You will see zero requests carrying your data. That is why security teams clear it where uploading to a pay-equity vendor would be blocked.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
