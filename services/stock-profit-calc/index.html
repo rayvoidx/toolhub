@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stock Profit Calculator — Net Profit & Break-Even</title>
+<meta name="description" content="Free stock profit calculator: enter your buy price, sell price, and quantity to get realized net profit, return %, and break-even sell price — with buy/sell fees, transaction tax, and capital gains tax broken out. No login, no ads, computed in your browser.">
+<meta name="keywords" content="stock profit calculator, stock trade profit calculator, 주식 수익 계산기, 주식 양도세 계산기, capital gains tax calculator, break even sell price calculator, after fee profit calculator">
+<link rel="canonical" href="https://tool-hub.me/stock-profit-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Stock Profit Calculator — Net Profit & Break-Even">
+<meta property="og:description" content="Free stock profit calculator: enter your buy price, sell price, and quantity to get realized net profit, return %, and break-even sell price — with buy/sell fees, transaction tax, and capital gains tax broken out. No login, no ads, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/stock-profit-calc/">
+<meta property="og:image" content="https://tool-hub.me/stock-profit-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#064e3b">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Stock Profit Calculator",
+  "description": "Free stock profit calculator: enter your buy price, sell price, and quantity to get realized net profit, return %, and break-even sell price — with buy/sell fees, transaction tax, and capital gains tax broken out. No login, no ads, computed in your browser.",
+  "url": "https://tool-hub.me/stock-profit-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Stock Profit Calculator",
+      "item": "https://tool-hub.me/stock-profit-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does \"net profit\" mean and what is the exact formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Net profit is what you actually keep after a round-trip trade: your sell proceeds minus every cost. This stock profit calculator works it out in steps — buy cost is your buy price × quantity × (1 + buy fee); sell proceeds are sell price × quantity, minus the sell fee and any transaction tax; the difference is your pre-tax gain. If that gain is positive, capital gains tax is applied to it (after any basic deduction), and net profit = pre-tax gain − capital gains tax. Return % is net profit ÷ buy cost × 100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the break-even sell price computed, and why do fees and transaction tax raise it but capital gains tax doesn't?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The break-even sell price is the price at which your proceeds after selling costs exactly cover your buy cost. This break even sell price calculator divides your total buy cost (buy fee included) by quantity × (1 − sell fee − transaction tax). Sell fees and transaction tax are money you never get back, so they push the break-even above your buy price. Capital gains tax does not raise break-even: tax only applies when there is a gain, and at break-even the gain is exactly zero, so there is nothing to tax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the Korea and US tax presets use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The presets fill the tax fields so you don't have to look them up, and every value stays editable. Korea domestic uses an approximate 0.20% securities transaction tax (KOSPI, special rural tax included; base year 2026, per Korea's Securities Transaction Tax Act) and 0% capital gains tax, since small shareholders of listed Korean shares are exempt. Korea overseas — the 주식 양도세 계산기 case — uses 22% capital gains tax (20% plus 2% local surtax) with a 2,500,000 KRW annual basic deduction. US uses a 15% long-term capital gains rate as a representative figure. Rates change and depend on your broker, exchange and situation, so treat the presets as a starting point and edit them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is this a simplified estimate, and how do I use my own rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This capital gains tax calculator applies a single flat rate to your whole gain after one basic deduction. Real tax can be more involved: progressive brackets, short vs long holding periods, the US 0/15/20% tiers plus the 3.8% net investment income tax, and loss carry-forward or offsetting against other trades. None of that is modelled here. If your rate differs, just type your own capital gains rate and deduction into the advanced fields and the after-tax number updates instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work in any currency, and is anything sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The math is currency-agnostic: pick any currency and amounts follow your locale's symbol, grouping and decimals (KRW and JPY show no decimals, USD and EUR show two) — nothing is hard-coded. Quantities accept up to four decimals, so fractional shares work like whole ones. Nothing is sent to a server and no prices are fetched from any market feed — you type every price yourself, and your last entry is saved only in your browser. This 주식 수익 계산기 is arithmetic, not investment or tax advice."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Stock Profit Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Stock Profit Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Sold a stock and want to know what you really made? Enter your buy price, sell price, and shares to see net profit, return %, and break-even in seconds — then add buy/sell fees, transaction tax, and capital gains tax for the after-tax number. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .field-row > div { min-width:0; }
+      #tool label { display:block; font-weight:600; font-size:14px; margin:12px 0 4px; }
+      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
+      #tool details.adv[open] { padding-bottom:12px; }
+      #tool details.adv label:first-of-type { margin-top:6px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .preset-label { font-weight:600; font-size:14px; margin:6px 0 2px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; color:var(--accent); }
+      #tool details.breakdown { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.breakdown > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:14px; color:var(--muted); }
+      #tool .bd-row { display:flex; justify-content:space-between; gap:12px; padding:7px 0; border-top:1px solid var(--line); font-size:14px; }
+      #tool .bd-row:first-of-type { border-top:none; }
+      #tool .bd-row .bd-k { color:var(--muted); }
+      #tool .bd-row .bd-v { font-weight:600; text-align:right; word-break:break-word; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .pl-pos { color:#059669; } #tool .pl-neg { color:#dc2626; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="buy-input" data-i18n="tool.buy.label">Buy price (per share)</label>
+        <input type="number" id="buy-input" inputmode="decimal" min="0" step="any" autocomplete="off"
+               placeholder="e.g. 100" data-i18n-placeholder="tool.buy.ph"
+               aria-label="Buy price per share" data-i18n-aria-label="tool.buy.aria">
+      </div>
+      <div>
+        <label for="sell-input" data-i18n="tool.sell.label">Sell price (per share)</label>
+        <input type="number" id="sell-input" inputmode="decimal" min="0" step="any" autocomplete="off"
+               placeholder="e.g. 150" data-i18n-placeholder="tool.sell.ph"
+               aria-label="Sell price per share" data-i18n-aria-label="tool.sell.aria">
+      </div>
+    </div>
+    <div class="field-row">
+      <div>
+        <label for="qty-input" data-i18n="tool.qty.label">Quantity (shares)</label>
+        <input type="number" id="qty-input" inputmode="decimal" min="0" step="any" autocomplete="off"
+               placeholder="e.g. 10" data-i18n-placeholder="tool.qty.ph"
+               aria-label="Quantity of shares" data-i18n-aria-label="tool.qty.aria">
+      </div>
+      <div>
+        <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+        <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+      </div>
+    </div>
+
+    <details class="adv" id="adv">
+      <summary data-i18n="tool.advanced.summary">Fees &amp; tax (optional)</summary>
+
+      <p class="preset-label" id="preset-label" data-i18n="tool.preset.label">Country preset (fills tax fields — editable)</p>
+      <div class="chips" id="preset-chips" role="group" aria-label="Country tax presets" data-i18n-aria-label="tool.presetAria">
+        <button type="button" class="chip" data-preset="none" data-tt="0" data-cgt="0" data-a="0" data-i18n="tool.preset.none">None</button>
+        <button type="button" class="chip" data-preset="krd" data-tt="0.2" data-cgt="0" data-a="0" data-i18n="tool.preset.krDomestic">Korea domestic</button>
+        <button type="button" class="chip" data-preset="kro" data-tt="0" data-cgt="22" data-a="2500000" data-i18n="tool.preset.krOverseas">Korea overseas</button>
+        <button type="button" class="chip" data-preset="us" data-tt="0" data-cgt="15" data-a="0" data-i18n="tool.preset.us">US</button>
+      </div>
+
+      <div class="field-row">
+        <div>
+          <label for="buyfee-input" data-i18n="tool.buyFee.label">Buy fee (%)</label>
+          <input type="number" id="buyfee-input" inputmode="decimal" min="0" max="100" step="0.001"
+                 placeholder="e.g. 0" data-i18n-placeholder="tool.buyFee.ph">
+        </div>
+        <div>
+          <label for="sellfee-input" data-i18n="tool.sellFee.label">Sell fee (%)</label>
+          <input type="number" id="sellfee-input" inputmode="decimal" min="0" max="100" step="0.001"
+                 placeholder="e.g. 0" data-i18n-placeholder="tool.sellFee.ph">
+        </div>
+      </div>
+      <div class="field-row">
+        <div>
+          <label for="selltax-input" data-i18n="tool.sellTax.label">Sell transaction tax (%)</label>
+          <input type="number" id="selltax-input" inputmode="decimal" min="0" max="100" step="0.001"
+                 placeholder="e.g. 0" data-i18n-placeholder="tool.sellTax.ph">
+        </div>
+        <div>
+          <label for="cgt-input" data-i18n="tool.cgt.label">Capital gains tax (%)</label>
+          <input type="number" id="cgt-input" inputmode="decimal" min="0" max="100" step="0.01"
+                 placeholder="e.g. 0" data-i18n-placeholder="tool.cgt.ph">
+        </div>
+      </div>
+      <label for="deduction-input" data-i18n="tool.deduction.label">Basic deduction (subtracted from gain before tax)</label>
+      <input type="number" id="deduction-input" inputmode="decimal" min="0" step="any"
+             placeholder="e.g. 0" data-i18n-placeholder="tool.deduction.ph">
+    </details>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <div class="result-cards">
+          <div class="rcard hero-card"><div class="rc-label" data-i18n="tool.result.netProfit">Net profit (after fees &amp; tax)</div><div class="rc-val" id="r-netprofit"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.returnPct">Return %</div><div class="rc-val" id="r-returnpct"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.breakEven">Break-even sell price</div><div class="rc-val" id="r-breakeven"></div></div>
+        </div>
+        <p class="subtle" id="r-sub" style="margin:10px 0 0;"></p>
+        <p class="subtle" id="r-pb-note" style="margin:8px 0 0;color:#d97706;font-weight:600;" hidden></p>
+
+        <details class="breakdown" id="breakdown">
+          <summary data-i18n="tool.result.breakdownSummary">Full breakdown</summary>
+          <div class="bd-row"><span class="bd-k" data-i18n="tool.result.buyCost">Buy cost (incl. buy fee)</span><span class="bd-v" id="r-buycost"></span></div>
+          <div class="bd-row"><span class="bd-k" data-i18n="tool.result.grossProceeds">Total sell amount</span><span class="bd-v" id="r-grossproceeds"></span></div>
+          <div class="bd-row"><span class="bd-k" data-i18n="tool.result.sellCosts">Sell fee + transaction tax</span><span class="bd-v" id="r-sellcosts"></span></div>
+          <div class="bd-row"><span class="bd-k" data-i18n="tool.result.gain">Pre-tax gain</span><span class="bd-v" id="r-gain"></span></div>
+          <div class="bd-row"><span class="bd-k" data-i18n="tool.result.cgtPaid">Capital gains tax</span><span class="bd-v" id="r-cgt"></span></div>
+          <div class="bd-row"><span class="bd-k" data-i18n="tool.result.netProfitRow">Net profit</span><span class="bd-v" id="r-netprofit2"></span></div>
+          <div class="bd-row"><span class="bd-k" data-i18n="tool.result.perShare">Net profit per share</span><span class="bd-v" id="r-pershare"></span></div>
+        </details>
+
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;font-weight:600;" data-i18n="tool.note.disclaimer">This is an arithmetic calculation, not investment advice.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What does "net profit" mean and what is the exact formula?</summary><p data-i18n="faq.a1">Net profit is what you actually keep after a round-trip trade: your sell proceeds minus every cost. This stock profit calculator works it out in steps — buy cost is your buy price × quantity × (1 + buy fee); sell proceeds are sell price × quantity, minus the sell fee and any transaction tax; the difference is your pre-tax gain. If that gain is positive, capital gains tax is applied to it (after any basic deduction), and net profit = pre-tax gain − capital gains tax. Return % is net profit ÷ buy cost × 100.</p></details>
+    <details><summary data-i18n="faq.q2">How is the break-even sell price computed, and why do fees and transaction tax raise it but capital gains tax doesn't?</summary><p data-i18n="faq.a2">The break-even sell price is the price at which your proceeds after selling costs exactly cover your buy cost. This break even sell price calculator divides your total buy cost (buy fee included) by quantity × (1 − sell fee − transaction tax). Sell fees and transaction tax are money you never get back, so they push the break-even above your buy price. Capital gains tax does not raise break-even: tax only applies when there is a gain, and at break-even the gain is exactly zero, so there is nothing to tax.</p></details>
+    <details><summary data-i18n="faq.q3">What do the Korea and US tax presets use?</summary><p data-i18n="faq.a3">The presets fill the tax fields so you don't have to look them up, and every value stays editable. Korea domestic uses an approximate 0.20% securities transaction tax (KOSPI, special rural tax included; base year 2026, per Korea's Securities Transaction Tax Act) and 0% capital gains tax, since small shareholders of listed Korean shares are exempt. Korea overseas — the 주식 양도세 계산기 case — uses 22% capital gains tax (20% plus 2% local surtax) with a 2,500,000 KRW annual basic deduction. US uses a 15% long-term capital gains rate as a representative figure. Rates change and depend on your broker, exchange and situation, so treat the presets as a starting point and edit them.</p></details>
+    <details><summary data-i18n="faq.q4">Why is this a simplified estimate, and how do I use my own rate?</summary><p data-i18n="faq.a4">This capital gains tax calculator applies a single flat rate to your whole gain after one basic deduction. Real tax can be more involved: progressive brackets, short vs long holding periods, the US 0/15/20% tiers plus the 3.8% net investment income tax, and loss carry-forward or offsetting against other trades. None of that is modelled here. If your rate differs, just type your own capital gains rate and deduction into the advanced fields and the after-tax number updates instantly.</p></details>
+    <details><summary data-i18n="faq.q5">Does it work in any currency, and is anything sent to a server?</summary><p data-i18n="faq.a5">The math is currency-agnostic: pick any currency and amounts follow your locale's symbol, grouping and decimals (KRW and JPY show no decimals, USD and EUR show two) — nothing is hard-coded. Quantities accept up to four decimals, so fractional shares work like whole ones. Nothing is sent to a server and no prices are fetched from any market feed — you type every price yourself, and your last entry is saved only in your browser. This 주식 수익 계산기 is arithmetic, not investment or tax advice.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
