@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Performance Rating Calibrator — Paste review scores</title>
+<meta name="description" content="Free browser-only performance review calibration tool. Paste or drop a CSV of review scores to normalize rater leniency bias with z-scores, apply a forced distribution, and export final ratings. Your employee data never leaves the browser.">
+<meta name="keywords" content="performance review calibration tool, forced distribution calculator, rater bias normalization, 인사평가 등급 배분, 상대평가 등급 산출">
+<link rel="canonical" href="https://tool-hub.me/perf-rating-calibrator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Performance Rating Calibrator — Paste review scores">
+<meta property="og:description" content="Free browser-only performance review calibration tool. Paste or drop a CSV of review scores to normalize rater leniency bias with z-scores, apply a forced distribution, and export final ratings. Your employee data never leaves the browser.">
+<meta property="og:url" content="https://tool-hub.me/perf-rating-calibrator/">
+<meta property="og:image" content="https://tool-hub.me/perf-rating-calibrator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9333ea">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Performance Rating Calibrator",
+  "description": "Free browser-only performance review calibration tool. Paste or drop a CSV of review scores to normalize rater leniency bias with z-scores, apply a forced distribution, and export final ratings. Your employee data never leaves the browser.",
+  "url": "https://tool-hub.me/perf-rating-calibrator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Review type weights",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only the types an employee actually has are used — the weights are re-scaled for each person. Set a weight to 0 to leave a type out."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is z-score normalization, and why correct each rater separately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two managers rarely mean the same thing by \"4 out of 5\". Research on appraisal calls this the hawk-dove problem: doves inflate, hawks deflate, and the employee's grade ends up depending on who happened to review them. Rater bias normalization fixes the scale before the ranking. This performance review calibration tool converts every score into Z = (X − μ) / σ, where μ and σ are that rater's own average and standard deviation. A 4.5 from a manager who gives everyone 4.6 becomes slightly negative; a 4.0 from a manager whose team averages 3.2 becomes strongly positive. Rank on the z-scores and you are comparing people, not their reviewers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the forced distribution differ between companies and countries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because it is a policy choice, not a statistic. GE made stack ranking famous and then dropped it in 2015, and much of the US now uses a soft 20 / 70 / 10 guideline or no grades at all. Many Korean and Japanese employers still run a firm relative curve — 인사평가 등급 배분 with S/A/B/C/D quotas per department. So this forced distribution calculator ships presets instead of a hard-coded curve: pick a 5-grade or 3-grade preset, or type your own labels and percentages. Nothing in the maths assumes a bell curve — the tool ranks and cuts wherever you tell it to (상대평가 등급 산출)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when people tie right on a grade boundary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everyone with the identical composite score is kept in the same grade, and the tie is resolved upward into the higher grade. That means the actual share can overshoot the target — the distribution tab shows both, for example \"target 10% / actual 12%\". We do this on purpose. Splitting identical scores to hit a quota produces a grade you cannot explain to the person who lost the coin flip, and in a calibration meeting explainability beats a tidy percentage. If a tie block is too large, that is a signal your scores lack resolution, not something the tool should hide."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I verify that our review data is never uploaded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check it yourself, do not take our word for it. Open DevTools (F12) → Network tab, clear it, then paste your scores and hit Calibrate: the request list stays empty, because the parsing, the z-scores and the grade assignment all run in JavaScript in this tab. You can also load the page, go offline (Network → Offline, or unplug), and calibrate — it still works, which is only possible if nothing leaves the browser. The page keeps your preset, column mapping and weights in localStorage; employee IDs, names and scores are never written to storage and never sent anywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we treat the normalized grades as final?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — this is preparation for a calibration session, not a verdict. Z-scores assume a rater's own ratees are a fair comparison group, which breaks down for very small teams, for a genuinely outstanding team, and for anyone rated only once. The tool flags those cases instead of hiding them: raters with a single ratee or zero score variance are left out of normalization, and every excluded row is listed with its line number. Bring the ranking, the rater bias report and the excluded rows to the meeting, let managers argue the edge cases with evidence, and record the human decision as the outcome."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Performance Rating Calibrator",
+      "item": "https://tool-hub.me/perf-rating-calibrator/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Performance Rating Calibrator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Performance Rating Calibrator</h1>
+    <p class="lede" data-i18n="hero.lede">Normalize lenient and strict raters, then apply your grade distribution — entirely in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Performance rating calibrator" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .sec { border-top: 1px solid var(--line); margin-top: 24px; padding-top: 20px; }
+      #tool .sec.first { border-top: 0; margin-top: 0; padding-top: 0; }
+      #tool .step { font-size: 15px; font-weight: 700; letter-spacing: -0.01em; margin: 0 0 10px; }
+      #tool .hint { color: var(--muted); font-size: 13.5px; line-height: 1.55; margin: 8px 0 0; }
+      #tool .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+      #tool label { margin-top: 0; }
+
+      #tool .drop { border: 1.5px dashed var(--line); border-radius: 12px; padding: 12px; }
+      #tool .drop.over { border-color: var(--accent); border-style: solid; }
+      #tool textarea#in-paste { min-height: 132px; resize: vertical; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; line-height: 1.5; white-space: pre; }
+      #tool .btn.ghost { background: var(--bg); color: var(--ink); border: 1px solid var(--line); font-weight: 600; font-size: 13.5px; padding: 9px 14px; margin-top: 0; }
+      #tool .btn.ghost:hover { border-color: var(--accent); background: var(--bg); }
+
+      #tool .chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 12px; }
+      #tool .chip { font-size: 12.5px; font-weight: 600; color: var(--muted); background: var(--bg); border: 1px solid var(--line); border-radius: 999px; padding: 3px 10px; }
+      #tool .chip b { color: var(--ink); font-weight: 700; }
+      #tool select.mini { width: auto; padding: 4px 8px; font-size: 12.5px; margin: 0; }
+
+      #tool .map-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px 12px; }
+      #tool .map-grid label { font-size: 13px; margin: 0 0 4px; }
+      #tool .map-grid select { margin: 0; padding: 9px 10px; font-size: 14px; }
+      #tool .req { color: var(--accent-strong); }
+      [data-theme="dark"] #tool .req, [data-theme="auto"] #tool .req { color: var(--accent); }
+
+      #tool .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 12px; }
+      #tool table { border-collapse: collapse; width: 100%; font-size: 13px; }
+      #tool th, #tool td { border-bottom: 1px solid var(--line); padding: 7px 9px; text-align: start; white-space: nowrap; }
+      #tool th { font-size: 11.5px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
+      #tool td.num { text-align: end; font-variant-numeric: tabular-nums; }
+      #tool tbody tr:hover td { background: var(--bg); }
+
+      #tool .grade-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; }
+      #tool .grade-row input { margin: 0; padding: 8px 10px; font-size: 14px; }
+      #tool .grade-row .g-label { flex: 1 1 100px; min-width: 70px; }
+      #tool .grade-row .g-pct { flex: 0 0 92px; }
+      #tool .grade-row .g-rm { flex: 0 0 34px; height: 34px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--muted); cursor: pointer; font-family: inherit; font-size: 15px; line-height: 1; padding: 0; }
+      #tool .grade-row .g-rm:hover { border-color: var(--accent); color: var(--ink); }
+      #tool .sum-line { font-size: 13px; font-weight: 700; margin-top: 6px; }
+      #tool .sum-line.bad { color: #dc2626; }
+      [data-theme="dark"] #tool .sum-line.bad, [data-theme="auto"] #tool .sum-line.bad { color: #f87171; }
+
+      #tool details.adv { border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; margin-top: 16px; }
+      #tool details.adv summary { font-weight: 600; cursor: pointer; font-size: 14px; }
+      #tool .w-row { display: flex; gap: 8px; align-items: center; margin-top: 10px; }
+      #tool .w-row .w-name { flex: 1 1 auto; font-size: 14px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      #tool .w-row input { flex: 0 0 92px; margin: 0; padding: 8px 10px; font-size: 14px; }
+
+      #tool .banner { border: 1px solid var(--line); border-inline-start: 3px solid var(--accent); border-radius: 8px; background: var(--bg); padding: 9px 12px; font-size: 13.5px; line-height: 1.55; margin-top: 8px; color: var(--ink); }
+      #tool .banner.warn { border-inline-start-color: #f59e0b; }
+      #tool .banner.err { border-inline-start-color: #dc2626; }
+
+      #tool .tabs { display: flex; gap: 6px; background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 4px; margin-top: 20px; overflow-x: auto; }
+      #tool .tab-btn { flex: 1 1 auto; white-space: nowrap; padding: 9px 8px; border: none; border-radius: 9px; background: transparent; color: var(--ink); font-weight: 700; font-family: inherit; font-size: 13.5px; cursor: pointer; }
+      #tool .tab-btn[aria-selected="true"] { background: var(--accent); color: #fff; }
+
+      #tool .bar-wrap { display: flex; align-items: center; gap: 8px; }
+      #tool .bar-track { flex: 1 1 auto; position: relative; height: 9px; background: var(--line); border-radius: 999px; min-width: 60px; }
+      #tool .bar-mid { position: absolute; inset-block: -3px; inset-inline-start: 50%; width: 1px; background: var(--muted); opacity: .55; }
+      #tool .bar-fill { position: absolute; inset-block: 0; height: 9px; border-radius: 999px; background: var(--accent); }
+      #tool .badge { display: inline-block; font-size: 11px; font-weight: 800; border-radius: 999px; padding: 1px 7px; border: 1px solid var(--line); color: var(--muted); }
+      #tool .badge.up { color: #047857; border-color: #6ee7b7; }
+      #tool .badge.down { color: #b45309; border-color: #fcd34d; }
+      [data-theme="dark"] #tool .badge.up, [data-theme="auto"] #tool .badge.up { color: #6ee7b7; border-color: #065f46; }
+      [data-theme="dark"] #tool .badge.down, [data-theme="auto"] #tool .badge.down { color: #fcd34d; border-color: #92400e; }
+
+      #tool progress { width: 100%; height: 8px; margin-top: 10px; }
+      #tool .privacy-note { color: var(--muted); font-size: 12.5px; line-height: 1.6; margin: 18px 0 0; text-align: center; }
+      @media (max-width: 480px) {
+        #tool .map-grid { grid-template-columns: 1fr 1fr; }
+      }
+    </style>
+
+    <!-- ── 1. 입력 ─────────────────────────────────────────────── -->
+    <div class="sec first">
+      <p class="step" data-i18n="tool.step1">1. Paste or drop your review scores</p>
+      <div class="drop" id="drop-zone">
+        <label for="in-paste" data-i18n="tool.pasteLabel">Paste straight from Excel or Google Sheets (Ctrl+V)</label>
+        <textarea id="in-paste" spellcheck="false" autocomplete="off"
+          placeholder="employee_id	name	rater_id	review_type	score&#10;E101	Dana Kim	M-01	Manager	4.5"
+          data-i18n-placeholder="tool.pastePlaceholder"></textarea>
+        <div class="row" style="margin-top:10px;">
+          <input type="file" id="in-file" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+          <button class="btn ghost" id="file-btn" type="button" data-i18n="tool.fileBtn">Choose a CSV file</button>
+          <button class="btn ghost" id="sample-btn" type="button" data-i18n="tool.sampleBtn">Try sample data</button>
+          <button class="btn ghost" id="clear-btn" type="button" data-i18n="tool.clearBtn">Clear</button>
+        </div>
+        <p class="hint" data-i18n="tool.dropHint">You can also drop a .csv or .tsv file anywhere on this box. Tab, comma and semicolon files are all detected automatically.</p>
+      </div>
+      <div class="chips" id="parse-chips" hidden>
+        <span class="chip" id="chip-rows"></span>
+        <span class="chip" id="chip-delim"></span>
+        <span class="chip" id="chip-enc"></span>
+        <select id="in-enc" class="mini" aria-label="Text encoding" data-i18n-aria-label="tool.encLabel">
+          <option value="auto" data-i18n="tool.enc.auto">Encoding: auto</option>
+          <option value="utf-8" data-i18n="tool.enc.utf8">Encoding: UTF-8</option>
+          <option value="euc-kr" data-i18n="tool.enc.euckr">Encoding: EUC-KR / CP949</option>
+        </select>
+      </div>
+      <div id="input-banners"></div>
+    </div>
+
+    <!-- ── 2. 컬럼 매핑 ────────────────────────────────────────── -->
+    <div class="sec" id="map-sec" hidden>
+      <p class="step" data-i18n="tool.step2">2. Match your columns</p>
+      <label class="row" style="gap:9px;font-weight:600;cursor:pointer;margin-bottom:12px;">
+        <input type="checkbox" id="in-header" checked style="width:18px;height:18px;flex:0 0 auto;accent-color:var(--accent);cursor:pointer;">
+        <span data-i18n="tool.hasHeader">First row is a header</span>
+      </label>
+      <div class="map-grid" id="map-grid"></div>
+      <div class="scroll" id="preview-wrap"></div>
+      <p class="hint" data-i18n="tool.previewHint">Preview of the first rows, exactly as the parser read them.</p>
+    </div>
+
+    <!-- ── 3. 설정 ─────────────────────────────────────────────── -->
+    <div class="sec" id="opt-sec" hidden>
+      <p class="step" data-i18n="tool.step3">3. Choose how to calibrate</p>
+      <label for="in-norm" data-i18n="tool.normLabel">Rater bias normalization</label>
+      <select id="in-norm">
+        <option value="z" data-i18n="tool.norm.z">Z-score per rater — recommended</option>
+        <option value="pct" data-i18n="tool.norm.pct">Percentile rank per rater</option>
+        <option value="none" data-i18n="tool.norm.none">None — use raw scores</option>
+      </select>
+      <p class="hint" id="norm-hint" data-i18n="tool.norm.hintZ">Each rater's scores are re-expressed as distance from that rater's own average, so a generous manager and a strict one land on the same scale.</p>
+
+      <label for="in-preset" style="margin-top:16px;" data-i18n="tool.presetLabel">Grade distribution</label>
+      <select id="in-preset">
+        <option value="kr5" data-i18n="tool.preset.kr5">5 grades — S 10 / A 20 / B 40 / C 20 / D 10</option>
+        <option value="us3" data-i18n="tool.preset.us3">3 grades — Top 20 / Core 70 / Low 10</option>
+        <option value="us4" data-i18n="tool.preset.us4">4 grades — Exceeds 20 / Meets 60 / Partially 15 / Below 5</option>
+        <option value="none" data-i18n="tool.preset.none">No grades — ranking only</option>
+        <option value="custom" data-i18n="tool.preset.custom">Custom…</option>
+      </select>
+      <div id="grades-editor" style="margin-top:12px;"></div>
+
+      <details class="adv" id="weights-wrap" hidden>
+        <summary data-i18n="tool.weightsTitle">Review type weights</summary>
+        <p class="hint" data-i18n="tool.weightsHint">Only the types an employee actually has are used — the weights are re-scaled for each person. Set a weight to 0 to leave a type out.</p>
+        <div id="weights-grid"></div>
+      </details>
+
+      <button class="btn" id="calc-btn" type="button" data-i18n="tool.calcBtn">Calibrate ratings</button>
+      <progress id="progress" max="100" value="0" hidden></progress>
+    </div>
+
+    <div class="result" id="result" aria-live="polite"></div>
+    <div id="notes"></div>
+
+    <!-- ── 4. 결과 ─────────────────────────────────────────────── -->
+    <div id="out-sec" hidden>
+      <div class="tabs" role="tablist">
+        <button class="tab-btn" id="tabbtn-emp" type="button" role="tab" aria-selected="true" aria-controls="panel-emp" data-i18n="tool.tab.emp">Employees</button>
+        <button class="tab-btn" id="tabbtn-rater" type="button" role="tab" aria-selected="false" aria-controls="panel-rater" data-i18n="tool.tab.rater">Rater bias</button>
+        <button class="tab-btn" id="tabbtn-dist" type="button" role="tab" aria-selected="false" aria-controls="panel-dist" data-i18n="tool.tab.dist">Distribution</button>
+        <button class="tab-btn" id="tabbtn-excl" type="button" role="tab" aria-selected="false" aria-controls="panel-excl" data-i18n="tool.tab.excl">Excluded rows</button>
+      </div>
+
+      <div id="panel-emp" role="tabpanel" aria-labelledby="tabbtn-emp">
+        <div class="scroll" id="emp-table-wrap"></div>
+        <p class="hint" id="emp-note"></p>
+        <div class="row" style="margin-top:14px;">
+          <button class="btn ghost" id="csv-btn" type="button" data-i18n="tool.exportCsv">Download CSV</button>
+          <button class="btn ghost" id="tsv-btn" type="button" data-i18n="tool.copyTsv">Copy for Excel</button>
+        </div>
+      </div>
+
+      <div id="panel-rater" role="tabpanel" aria-labelledby="tabbtn-rater" hidden>
+        <p class="hint" data-i18n="tool.raterHint">How far each rater's average sits from the overall average. A long bar to the right means that rater scored more generously than everyone else.</p>
+        <div class="scroll" id="rater-table-wrap"></div>
+      </div>
+
+      <div id="panel-dist" role="tabpanel" aria-labelledby="tabbtn-dist" hidden>
+        <canvas id="dist-canvas" height="220" role="img" aria-label="Grade distribution chart"></canvas>
+        <div class="scroll" id="dist-table-wrap"></div>
+        <p class="hint" data-i18n="tool.dist.tieHint">Employees on the same composite score always share a grade, so the actual share can differ from the target.</p>
+      </div>
+
+      <div id="panel-excl" role="tabpanel" aria-labelledby="tabbtn-excl" hidden>
+        <p class="hint" id="excl-note"></p>
+        <div class="scroll" id="excl-table-wrap"></div>
+      </div>
+    </div>
+
+    <p class="privacy-note" data-i18n="tool.privacyNote">Nothing is uploaded. Every score is parsed and calibrated inside this page — open DevTools → Network and you will see no request while you calibrate. Only your preset, column mapping and weights are kept in this browser.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is z-score normalization, and why correct each rater separately?</summary>
+      <p data-i18n="faq.a1">Two managers rarely mean the same thing by "4 out of 5". Research on appraisal calls this the hawk-dove problem: doves inflate, hawks deflate, and the employee's grade ends up depending on who happened to review them. Rater bias normalization fixes the scale before the ranking. This performance review calibration tool converts every score into Z = (X − μ) / σ, where μ and σ are that rater's own average and standard deviation. A 4.5 from a manager who gives everyone 4.6 becomes slightly negative; a 4.0 from a manager whose team averages 3.2 becomes strongly positive. Rank on the z-scores and you are comparing people, not their reviewers.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why does the forced distribution differ between companies and countries?</summary>
+      <p data-i18n="faq.a2">Because it is a policy choice, not a statistic. GE made stack ranking famous and then dropped it in 2015, and much of the US now uses a soft 20 / 70 / 10 guideline or no grades at all. Many Korean and Japanese employers still run a firm relative curve — 인사평가 등급 배분 with S/A/B/C/D quotas per department. So this forced distribution calculator ships presets instead of a hard-coded curve: pick a 5-grade or 3-grade preset, or type your own labels and percentages. Nothing in the maths assumes a bell curve — the tool ranks and cuts wherever you tell it to (상대평가 등급 산출).</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What happens when people tie right on a grade boundary?</summary>
+      <p data-i18n="faq.a3">Everyone with the identical composite score is kept in the same grade, and the tie is resolved upward into the higher grade. That means the actual share can overshoot the target — the distribution tab shows both, for example "target 10% / actual 12%". We do this on purpose. Splitting identical scores to hit a quota produces a grade you cannot explain to the person who lost the coin flip, and in a calibration meeting explainability beats a tidy percentage. If a tie block is too large, that is a signal your scores lack resolution, not something the tool should hide.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How do I verify that our review data is never uploaded?</summary>
+      <p data-i18n="faq.a4">Check it yourself, do not take our word for it. Open DevTools (F12) → Network tab, clear it, then paste your scores and hit Calibrate: the request list stays empty, because the parsing, the z-scores and the grade assignment all run in JavaScript in this tab. You can also load the page, go offline (Network → Offline, or unplug), and calibrate — it still works, which is only possible if nothing leaves the browser. The page keeps your preset, column mapping and weights in localStorage; employee IDs, names and scores are never written to storage and never sent anywhere.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can we treat the normalized grades as final?</summary>
+      <p data-i18n="faq.a5">No — this is preparation for a calibration session, not a verdict. Z-scores assume a rater's own ratees are a fair comparison group, which breaks down for very small teams, for a genuinely outstanding team, and for anyone rated only once. The tool flags those cases instead of hiding them: raters with a single ratee or zero score variance are left out of normalization, and every excluded row is listed with its line number. Bring the ranking, the rater bias report and the excluded rows to the meeting, let managers argue the edge cases with evidence, and record the human decision as the outcome.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
