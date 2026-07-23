@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safety Stock & Reorder Point Batch Calculator</title>
+<meta name="description" content="Free browser-only batch calculator for safety stock and reorder point across hundreds of SKUs. Drop an ERP or WMS sales history CSV and it derives average daily demand and demand standard deviation per SKU for you, then applies SS = Z x sqrt(LT x sigma_d^2 + d^2 x sigma_LT^2) and ROP = d x LT + SS at your chosen service level (90/95/97.5/99%). Optional periodic-review and EOQ. No signup, no email, no upload: your sales and on-hand data never leave the browser.">
+<meta name="keywords" content="safety stock calculator, reorder point calculator, safety stock formula multiple SKU, bulk reorder point by SKU, service level Z score, 안전재고 계산, 발주점 계산, SKU 일괄 안전재고">
+<link rel="canonical" href="https://tool-hub.me/safety-stock-batch/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Safety Stock & Reorder Point Batch Calculator">
+<meta property="og:description" content="Free browser-only batch calculator for safety stock and reorder point across hundreds of SKUs. Drop an ERP or WMS sales history CSV and it derives average daily demand and demand standard deviation per SKU for you, then applies SS = Z x sqrt(LT x sigma_d^2 + d^2 x sigma_LT^2) and ROP = d x LT + SS at your chosen service level (90/95/97.5/99%). Optional periodic-review and EOQ. No signup, no email, no upload: your sales and on-hand data never leave the browser.">
+<meta property="og:url" content="https://tool-hub.me/safety-stock-batch/">
+<meta property="og:image" content="https://tool-hub.me/safety-stock-batch/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1e3a8a">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Safety Stock & Reorder Point Batch Calculator",
+  "description": "Free browser-only batch calculator for safety stock and reorder point across hundreds of SKUs. Drop an ERP or WMS sales history CSV and it derives average daily demand and demand standard deviation per SKU for you, then applies SS = Z x sqrt(LT x sigma_d^2 + d^2 x sigma_LT^2) and ROP = d x LT + SS at your chosen service level (90/95/97.5/99%). Optional periodic-review and EOQ. No signup, no email, no upload: your sales and on-hand data never leave the browser.",
+  "url": "https://tool-hub.me/safety-stock-batch/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Lead time, σLT and on-hand stock per SKU (optional)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A second small table keyed by SKU. Give us an on-hand column and we flag what to order right now; give us a lead-time deviation column and it enters the formula. Choose file"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Limit to a specific period (optional)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By default each SKU is measured from its own first to its own last transaction. Set a period and every SKU shares it — rows outside are reported as excluded. From To"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Periodic review (optional)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If you only place orders on a cycle — month-end close, weekly run — the protection window is LT + R, not LT. Enter the review cycle R in calendar days (a monthly cycle is 30). Review cycle R (calendar days)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Economic order quantity (optional)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "EOQ = √(2 × D × S / H) with D = d̄ × 365. Both costs are required — without them the column stays hidden rather than showing a meaningless 0. Cost per order (S) Annual holding cost per unit (H)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to know the demand standard deviation (σd) already?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — that is the whole point of this safety stock calculator. Every other free reorder point calculator asks you to type in a σd you do not have. Here you paste the sales history your ERP or WMS already exports (date, SKU, quantity) and the tool rebuilds a daily demand series per SKU, then computes the average daily demand d̄ and the sample standard deviation σd (n−1, the same result as Excel's STDEV.S) using Welford's method, which stays accurate over hundreds of thousands of rows. You only supply the lead time and the service level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are days with no sales handled, and why does that change safety stock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An ERP export contains no row for a day on which nothing sold, so the raw file silently omits every zero. If you average only the selling days, d̄ comes out too high and σd too low — the safety stock formula then returns a number that looks precise and is wrong. By default we rebuild the full calendar between each SKU's first and last transaction and fill the missing days with 0, then report how many days were filled. You can switch to selling days only, and the result carries a badge saying so. Multiple rows for the same SKU on the same day are summed into one day of demand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which service level should I pick, and what is the Z-score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The service level is the share of replenishment cycles in which you do not want to run out; Z is the one-sided normal value that goes with it — 90% → 1.2816, 95% → 1.6449, 97.5% → 1.9600, 99% → 2.3263. They are built into the dropdown so you never look one up. Safety stock rises non-linearly: going from 95% to 99% costs roughly 40% more stock for four points of coverage. 95% is the common default; use 99% for A-class or safety-critical items and 90% for cheap, easily re-ordered C-class parts. The Z-score and the formula are the same in every country, so this tool has no country setting for them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I have no lead-time deviation (σLT)? How wrong is the answer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The full formula is SS = Z × √(LT × σd² + d̄² × σLT²). With no σLT column we set σLT = 0 and the reduced form SS = Z × √(LT) × σd is what you get, with a permanent badge on the result saying demand variability only — we never let that assumption go unstated. It understates safety stock whenever the supplier is unreliable, and the second term grows with d̄, so it bites hardest on your fastest movers: a fast item with a lead time that swings by a couple of days can need substantially more stock than the reduced form suggests. Add a lead-time deviation column in the optional per-SKU table and the full formula is used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my sales and inventory data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. There is no upload, no account, no email gate. The CSV is read with the browser's File API, parsed and aggregated in this tab (large files in a Web Worker), and the result table is rendered from memory — refresh the page and it is gone. Only your settings (service level, default lead time, column mapping) are kept, in this browser's localStorage. You do not have to take our word for it: press F12, open DevTools → Network, then drop your file and hit calculate. The request count stays at zero. That is what makes the file safe to run on an export you would never be allowed to upload."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Safety Stock & Reorder Point Batch Calculator",
+      "item": "https://tool-hub.me/safety-stock-batch/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Safety Stock & Reorder Point Batch Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Safety Stock & Reorder Point Batch Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Every SKU in one table. We compute the demand deviation from your history — you never look up a Z-score.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Safety stock and reorder point batch calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      /* TOOL-scoped only — the shared shell in css/style.css is untouched. */
+      #tool .ss-tabs { display:flex; gap:6px; margin-bottom:10px; background:var(--bg); border:1px solid var(--line); border-radius:12px; padding:4px; }
+      #tool .ss-tab { flex:1; padding:10px 8px; border:none; border-radius:9px; background:transparent; color:var(--ink); font-weight:700; font-family:inherit; font-size:14px; cursor:pointer; }
+      #tool .ss-tab.on { background:var(--accent); color:#fff; }
+      #tool .ss-hint { color:var(--muted); font-size:13px; line-height:1.55; margin:0 0 16px; }
+      #tool .ss-drop { border:2px dashed var(--line); border-radius:12px; padding:22px 16px; text-align:center; background:var(--bg); transition:border-color .15s; }
+      #tool .ss-drop.over { border-color:var(--accent); }
+      #tool .ss-drop p { margin:0 0 4px; font-weight:600; }
+      #tool .ss-drop .ss-cap { margin:0 0 10px; }
+      #tool .ss-cap { color:var(--muted); font-size:12.5px; line-height:1.5; margin:6px 0 0; }
+      #tool .ss-btn2 { margin-top:0; padding:9px 16px; font-size:14px; }
+      #tool .ss-row { display:flex; gap:12px; flex-wrap:wrap; }
+      #tool .ss-row > div { flex:1; min-width:150px; }
+      #tool .ss-check { display:flex; align-items:center; gap:8px; font-weight:600; font-size:14px; margin:14px 0 0; }
+      #tool .ss-check input { width:auto; }
+      #tool details.ss-more { margin-top:14px; border:1px solid var(--line); border-radius:10px; padding:10px 14px; background:var(--bg); }
+      #tool details.ss-more > summary { font-weight:600; cursor:pointer; font-size:14px; }
+      #tool .ss-mapfield label { margin-top:10px; }
+      #tool .ss-tablewrap { overflow-x:auto; margin-top:10px; border:1px solid var(--line); border-radius:10px; }
+      #tool table.ss-table { border-collapse:collapse; width:100%; font-size:13px; background:var(--surface); }
+      #tool table.ss-table th, #tool table.ss-table td { padding:7px 10px; border-bottom:1px solid var(--line); text-align:start; white-space:nowrap; }
+      #tool table.ss-table thead th { background:var(--bg); font-size:12px; font-weight:700; position:sticky; top:0; }
+      #tool table.ss-table th.ss-sort { cursor:pointer; user-select:none; }
+      #tool table.ss-table th.ss-sort:hover { color:var(--accent); }
+      #tool table.ss-table td.n { text-align:end; font-variant-numeric:tabular-nums; }
+      #tool table.ss-table td.ss-note { white-space:normal; color:var(--muted); font-size:12px; min-width:160px; }
+      #tool table.ss-table tr.ss-order td { background:color-mix(in srgb, var(--accent) 9%, var(--surface)); }
+      #tool table.ss-prev td { color:var(--muted); max-width:220px; overflow:hidden; text-overflow:ellipsis; }
+      #tool .ss-flag { display:inline-block; background:var(--accent); color:#fff; border-radius:999px; padding:1px 7px; font-size:11px; font-weight:700; }
+      #tool .ss-badge { display:inline-block; background:var(--bg); border:1px solid var(--line); border-radius:999px; padding:3px 10px; font-size:12px; color:var(--muted); }
+      #tool .ss-controls { display:flex; gap:12px; align-items:center; flex-wrap:wrap; margin-top:4px; }
+      #tool .ss-controls input[type="search"] { flex:1; min-width:140px; padding:8px 12px; font-size:14px; font-family:inherit; border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); }
+      #tool .ss-export { display:flex; align-items:center; flex-wrap:wrap; gap:8px; margin-top:14px; }
+      #tool details.ss-ex { margin-top:12px; border:1px solid var(--line); border-radius:10px; padding:8px 14px; background:var(--surface); }
+      #tool details.ss-ex summary { font-weight:600; cursor:pointer; font-size:13.5px; }
+      #tool details.ss-ex ul { margin:8px 0 4px; padding-inline-start:20px; color:var(--muted); font-size:13px; }
+      #tool .ss-prog { height:6px; border-radius:999px; background:var(--line); overflow:hidden; margin-top:10px; }
+      #tool .ss-prog i { display:block; height:100%; background:var(--accent); width:0; transition:width .12s linear; }
+      #tool .ss-actions { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+      #tool .ss-ghost { background:none; border:1px solid var(--line); color:var(--ink); border-radius:10px; padding:11px 18px; font-family:inherit; font-size:15px; font-weight:700; cursor:pointer; margin-top:18px; }
+      #tool .ss-ghost:hover { border-color:var(--accent); }
+      #tool h3 { font-size:15px; margin:22px 0 0; letter-spacing:-0.01em; }
+    </style>
+
+    <div class="ss-tabs" role="tablist">
+      <button type="button" class="ss-tab on" id="mode-history" role="tab" aria-selected="true" data-i18n="tool.mode.history">Sales history (date · SKU · qty)</button>
+      <button type="button" class="ss-tab" id="mode-agg" role="tab" aria-selected="false" data-i18n="tool.mode.agg">I already have d̄ and σd</button>
+    </div>
+    <p class="ss-hint" id="mode-hint">Straight from an ERP or WMS export: one row per transaction. We derive d̄ and σd for you.</p>
+
+    <div class="ss-drop" id="drop">
+      <p data-i18n="tool.drop.title">Drop your CSV here</p>
+      <p class="ss-cap" data-i18n="tool.drop.hint">Nothing is uploaded — the file is read inside this tab. UTF-8 and EUC-KR (CP949) exports both work.</p>
+      <button type="button" class="btn ss-btn2" id="pick-btn" data-i18n="tool.drop.btn">Choose file</button>
+      <input type="file" id="file-input" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+    </div>
+
+    <label for="in-paste" data-i18n="tool.paste.label">…or paste straight from Excel</label>
+    <textarea id="in-paste" rows="5" spellcheck="false" placeholder="Date,SKU,Qty&#10;2026-05-01,A-1001,12&#10;2026-05-02,A-1001,9" data-i18n-placeholder="tool.paste.ph"></textarea>
+    <div class="ss-actions">
+      <button type="button" class="ss-ghost" id="sample-btn" data-i18n="tool.sample">Fill with example data</button>
+      <button type="button" class="ss-ghost" id="clear-btn" data-i18n="tool.clear">Clear</button>
+    </div>
+    <p class="ss-cap" id="src-note" hidden></p>
+
+    <div class="ss-row" style="margin-top:6px;">
+      <div>
+        <label for="in-enc" data-i18n="tool.enc.label">Encoding</label>
+        <select id="in-enc">
+          <option value="auto" data-i18n="tool.enc.auto">Auto-detect</option>
+          <option value="utf-8">UTF-8</option>
+          <option value="euc-kr" data-i18n="tool.enc.euckr">EUC-KR / CP949 (Korean Excel)</option>
+          <option value="utf-16le">UTF-16 LE</option>
+        </select>
+      </div>
+      <div>
+        <label for="in-delim" data-i18n="tool.delim.label">Delimiter</label>
+        <select id="in-delim">
+          <option value="auto" data-i18n="tool.delim.auto">Auto-detect</option>
+          <option value="," data-i18n="tool.delim.comma">Comma ,</option>
+          <option value=";" data-i18n="tool.delim.semi">Semicolon ;</option>
+          <option value="tab" data-i18n="tool.delim.tab">Tab</option>
+        </select>
+      </div>
+    </div>
+    <label class="ss-check" for="in-header"><input type="checkbox" id="in-header" checked> <span data-i18n="tool.header">First row is a header</span></label>
+
+    <div id="map-wrap" hidden>
+      <h3 data-i18n="tool.map.title">Column mapping</h3>
+      <p class="ss-cap" data-i18n="tool.map.hint">We guessed from your header and the data below. Confirm before you trust the numbers.</p>
+      <div id="map-fields"></div>
+      <div id="datefmt-row" hidden>
+        <label for="in-datefmt" data-i18n="tool.dateFmt.label">Date format</label>
+        <select id="in-datefmt">
+          <option value="auto" data-i18n="tool.dateFmt.auto">Auto-detect</option>
+          <option value="dmy" data-i18n="tool.dateFmt.dmyOpt">Day first — DD/MM/YYYY</option>
+          <option value="mdy" data-i18n="tool.dateFmt.mdyOpt">Month first — MM/DD/YYYY</option>
+        </select>
+        <p class="ss-cap" id="datefmt-note" hidden></p>
+      </div>
+      <div id="preview-wrap"></div>
+    </div>
+
+    <h3 data-i18n="tool.set.title">Service level and lead time</h3>
+    <label for="in-svc" data-i18n="tool.svc.label">Service level (the Z-score is built in)</label>
+    <select id="in-svc">
+      <option value="90" data-i18n="tool.svc.o90">90% — Z 1.2816</option>
+      <option value="95" selected data-i18n="tool.svc.o95">95% — Z 1.6449</option>
+      <option value="97.5" data-i18n="tool.svc.o975">97.5% — Z 1.9600</option>
+      <option value="99" data-i18n="tool.svc.o99">99% — Z 2.3263</option>
+    </select>
+    <div class="ss-row">
+      <div>
+        <label for="in-lt" data-i18n="tool.lt.label">Default lead time</label>
+        <input type="number" id="in-lt" min="0" step="0.5" value="7" inputmode="decimal" autocomplete="off">
+      </div>
+      <div>
+        <label for="in-ltunit" data-i18n="tool.ltUnit.label">Lead time is in</label>
+        <select id="in-ltunit">
+          <option value="cal" data-i18n="tool.ltUnit.cal">Calendar days</option>
+          <option value="bus" data-i18n="tool.ltUnit.bus">Business days</option>
+        </select>
+      </div>
+    </div>
+    <p class="ss-cap" data-i18n="tool.lt.hint">Used for every SKU without its own lead time in the table below.</p>
+
+    <div id="bus-wrap" hidden>
+      <div class="ss-row">
+        <div>
+          <label for="in-country" data-i18n="tool.country.label">Public holidays</label>
+          <select id="in-country"></select>
+        </div>
+        <div>
+          <label for="in-weekend" data-i18n="tool.weekend.label">Weekend</label>
+          <select id="in-weekend">
+            <option value="satsun" data-i18n="tool.weekend.satsun">Saturday &amp; Sunday</option>
+            <option value="frisat" data-i18n="tool.weekend.frisat">Friday &amp; Saturday</option>
+          </select>
+        </div>
+      </div>
+      <p class="ss-cap" id="bus-note"></p>
+    </div>
+
+    <label class="ss-check" for="in-zero" id="zero-row"><input type="checkbox" id="in-zero" checked> <span data-i18n="tool.zero">Fill non-selling days with 0 (recommended)</span></label>
+    <p class="ss-cap" data-i18n="tool.zero.hint">An ERP export has no row for a day with no sale. Skip those zeros and d̄ comes out too high while σd comes out too low — safety stock quietly drifts.</p>
+
+    <label for="in-unit" data-i18n="tool.unit.label">Quantity unit label (display only, never converted)</label>
+    <input type="text" id="in-unit" value="EA" maxlength="12" autocomplete="off">
+
+    <details class="ss-more" id="sec-wrap">
+      <summary data-i18n="tool.sec.title">Lead time, σLT and on-hand stock per SKU (optional)</summary>
+      <p class="ss-cap" data-i18n="tool.sec.hint">A second small table keyed by SKU. Give us an on-hand column and we flag what to order right now; give us a lead-time deviation column and it enters the formula.</p>
+      <textarea id="in-sec" rows="4" spellcheck="false" placeholder="SKU,Lead time,LT deviation,On hand&#10;A-1001,7,1.5,120" data-i18n-placeholder="tool.sec.ph"></textarea>
+      <div class="ss-actions">
+        <button type="button" class="ss-ghost" id="sec-pick-btn" data-i18n="tool.sec.pick">Choose file</button>
+        <input type="file" id="sec-file" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+      </div>
+      <div id="sec-map"></div>
+      <p class="ss-cap" id="sec-note" hidden></p>
+    </details>
+
+    <details class="ss-more" id="period-wrap">
+      <summary data-i18n="tool.period.title">Limit to a specific period (optional)</summary>
+      <p class="ss-cap" data-i18n="tool.period.hint">By default each SKU is measured from its own first to its own last transaction. Set a period and every SKU shares it — rows outside are reported as excluded.</p>
+      <div class="ss-row">
+        <div><label for="in-perstart" data-i18n="tool.period.start">From</label><input type="date" id="in-perstart"></div>
+        <div><label for="in-perend" data-i18n="tool.period.end">To</label><input type="date" id="in-perend"></div>
+      </div>
+    </details>
+
+    <details class="ss-more" id="rev-wrap">
+      <summary data-i18n="tool.rev.title">Periodic review (optional)</summary>
+      <p class="ss-cap" data-i18n="tool.rev.hint">If you only place orders on a cycle — month-end close, weekly run — the protection window is LT + R, not LT. Enter the review cycle R in calendar days (a monthly cycle is 30).</p>
+      <label for="in-rev" data-i18n="tool.rev.label">Review cycle R (calendar days)</label>
+      <input type="number" id="in-rev" min="0" step="1" placeholder="0" inputmode="numeric" autocomplete="off">
+    </details>
+
+    <details class="ss-more" id="eoq-wrap">
+      <summary data-i18n="tool.eoq.title">Economic order quantity (optional)</summary>
+      <p class="ss-cap" data-i18n="tool.eoq.hint">EOQ = √(2 × D × S / H) with D = d̄ × 365. Both costs are required — without them the column stays hidden rather than showing a meaningless 0.</p>
+      <div class="ss-row">
+        <div><label for="in-eoq-s" data-i18n="tool.eoq.s">Cost per order (S)</label><input type="number" id="in-eoq-s" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
+        <div><label for="in-eoq-h" data-i18n="tool.eoq.h">Annual holding cost per unit (H)</label><input type="number" id="in-eoq-h" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
+      </div>
+    </details>
+
+    <div class="ss-actions">
+      <button type="button" class="btn" id="calc-btn" data-i18n="tool.calc">Calculate every SKU</button>
+      <button type="button" class="ss-ghost" id="cancel-btn" hidden data-i18n="tool.cancel">Cancel</button>
+    </div>
+    <div id="progress" hidden>
+      <div class="ss-prog"><i id="prog-bar"></i></div>
+      <p class="ss-cap" id="prog-txt"></p>
+    </div>
+
+    <div class="result" id="result" aria-live="polite"></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" hidden></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Do I need to know the demand standard deviation (σd) already?</summary>
+      <p data-i18n="faq.a1">No — that is the whole point of this safety stock calculator. Every other free reorder point calculator asks you to type in a σd you do not have. Here you paste the sales history your ERP or WMS already exports (date, SKU, quantity) and the tool rebuilds a daily demand series per SKU, then computes the average daily demand d̄ and the sample standard deviation σd (n−1, the same result as Excel's STDEV.S) using Welford's method, which stays accurate over hundreds of thousands of rows. You only supply the lead time and the service level.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How are days with no sales handled, and why does that change safety stock?</summary>
+      <p data-i18n="faq.a2">An ERP export contains no row for a day on which nothing sold, so the raw file silently omits every zero. If you average only the selling days, d̄ comes out too high and σd too low — the safety stock formula then returns a number that looks precise and is wrong. By default we rebuild the full calendar between each SKU's first and last transaction and fill the missing days with 0, then report how many days were filled. You can switch to selling days only, and the result carries a badge saying so. Multiple rows for the same SKU on the same day are summed into one day of demand.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Which service level should I pick, and what is the Z-score?</summary>
+      <p data-i18n="faq.a3">The service level is the share of replenishment cycles in which you do not want to run out; Z is the one-sided normal value that goes with it — 90% → 1.2816, 95% → 1.6449, 97.5% → 1.9600, 99% → 2.3263. They are built into the dropdown so you never look one up. Safety stock rises non-linearly: going from 95% to 99% costs roughly 40% more stock for four points of coverage. 95% is the common default; use 99% for A-class or safety-critical items and 90% for cheap, easily re-ordered C-class parts. The Z-score and the formula are the same in every country, so this tool has no country setting for them.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What if I have no lead-time deviation (σLT)? How wrong is the answer?</summary>
+      <p data-i18n="faq.a4">The full formula is SS = Z × √(LT × σd² + d̄² × σLT²). With no σLT column we set σLT = 0 and the reduced form SS = Z × √(LT) × σd is what you get, with a permanent badge on the result saying demand variability only — we never let that assumption go unstated. It understates safety stock whenever the supplier is unreliable, and the second term grows with d̄, so it bites hardest on your fastest movers: a fast item with a lead time that swings by a couple of days can need substantially more stock than the reduced form suggests. Add a lead-time deviation column in the optional per-SKU table and the full formula is used.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my sales and inventory data sent to a server?</summary>
+      <p data-i18n="faq.a5">No. There is no upload, no account, no email gate. The CSV is read with the browser's File API, parsed and aggregated in this tab (large files in a Web Worker), and the result table is rendered from memory — refresh the page and it is gone. Only your settings (service level, default lead time, column mapping) are kept, in this browser's localStorage. You do not have to take our word for it: press F12, open DevTools → Network, then drop your file and hit calculate. The request count stays at zero. That is what makes the file safe to run on an export you would never be allowed to upload.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
