@@ -1,3 +1,35 @@
+# ⭐ 최신 상태 (2026-07-24) — AdSense 콘텐츠 심화 작업
+
+**방향 전환**: 도구 대량 생산이 AdSense "가치 없는 콘텐츠(thin/복제)" 거부를 유발 → 도구 추가 중단,
+**각 도구 페이지에 고유 심화 콘텐츠 추가**로 전환(사용자 승인). 도구 수는 유지.
+
+## 진행
+- **1차 배포(커밋 2ca0f15)**: 대표 8종(loan·bmi·mortgage·compound-interest·percent·calorie·password-gen·discount) 영어 심화 + About 페이지(`about.html`) + metronome 등재.
+- **2차 배포(커밋 8679e9e)**: 34종 추가 심화 → **누적 42종 완료**.
+  - 영어 심화(500~1300단어 고유): CONTENT-GUIDE "작업 A" 방식, `<!-- CONTENT:START -->` 섹션을 TOOL:END 뒤·ad-slot 앞에 삽입, data-i18n 없이 영어 단일 언어(다국어 자동복제가 AdSense 복제 시그널이라 의도적).
+  - **한국어 레거시 3종(age-calc·dday-calc·salary-calc)**: i18n 파일 없는 하드코딩 한국어 도구 → **한국어로** 심화(영어 부적절). 완료.
+  - 미등록이던 ad-copy·barista·coast에 GTM/Consent 주입.
+
+## 남은 심화 대상 42종 (`factory/pipeline/deepen-remaining.txt`)
+gpa-calc ideal-weight-calc interest-calc json-formatter length-conv lorem-ipsum-gen macro-calc metronome
+morse-code-translator online-notepad ovulation-calc pace-calc period-calc pomodoro-timer pregnancy-due-date-calc
+prime-checker qr-gen random-number-gen regex-tester roman-numeral-conv savings-calc sleep-cycle-calc speed-conv
+split-bill-calc stopwatch tax-calc tdee-calc temp-conv text-diff time-zone-conv tip-calc typing-test unit-price
+unix-timestamp-conv url-encoder uuid-gen volume-conv water-intake-calc weight-conv word-counter workday-calc world-clock
+
+## 재개 방법
+1. 파이프라인은 `factory/pipeline/`에 보존: `CONTENT-GUIDE.md`(심화 계약 작업 A/B), `gate-check.js`(경량 모드 `GATE_NO_REGISTRY=1` 지원 — 심화 검증엔 이걸 씀).
+2. 배치(12종)로 general-purpose(sonnet) 에이전트 투입. 프롬프트: "CONTENT-GUIDE 작업 A + 대상 index.html 읽어 도구 성격 파악 + 고유 영어 심화 + `GATE_NO_REGISTRY=1 node <gate> <slug>` PASS까지". GTM 누락 시 tip-calc 블록 복사 예외 명시.
+3. **주의**: 남은 42종 중에도 한국어 레거시가 있으면(locales.js 없는 것) 한국어로 심화 + gate 대신 수동 검증(node --check·GTM·CONTENT·태그균형). `ovulation-calc`, `sleep-cycle-calc` 등 오래된 도구 언어 먼저 확인할 것.
+4. **gpa-calc**: 심화는 됐으나 기존 FAQPage JSON-LD가 6개 vs 화면 5개 불일치로 이번 배포에서 롤백함. 여분 JSON-LD 1개 제거 후 재심화 필요.
+5. 원격이 매우 활발(다른 세션들이 계속 커밋) → 배포 전 `git fetch`, 앞서 있으면 WIP 커밋 → `reset --hard origin/main` → 내 심화 index.html만 `git checkout WIP -- <경로>`로 복원(원격 미접촉 확인 후) → 커밋 → push.
+6. 심화는 도구 index.html 수정뿐이라 **merge-registry 불필요**(허브 등재는 이미 됨).
+
+## AdSense 재신청 (사용자 직접)
+누적 42/등재84 심화. 남은 42종까지 심화 완료 + 오리지널 아티클 몇 편(CONTENT-GUIDE 확장 필요) 후, AdSense 콘솔에서 검토 요청.
+
+---
+
 # Toolhub 도구 확장 인수인계 (200개 목표)
 
 **작성 2026-07-21 · 목표: 도구 총 200개 · 현재 완성 77개 (배포됨)**
