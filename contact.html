@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Toolhub — Bug Reports & Tool Suggestions</title>
+<meta name="description" content="Get in touch with Toolhub by email or GitHub. Report a bug, suggest a new tool, or ask a question — we usually reply within a few days.">
+<link rel="canonical" href="https://tool-hub.me/contact">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./"><img src="icons/icon.svg" alt="" width="28" height="28"><span>Toolhub</span></a>
+</header>
+<main>
+  <h1>Contact</h1>
+  <p>Effective date: 2026-07-24</p>
+
+  <section class="guide">
+    <p>Toolhub is run by an independent developer, and messages go straight to a
+    real person — there is no support ticket queue in between. Whether something is
+    broken, a result looks wrong, or you just have a question about how a tool
+    works, you are welcome to reach out.</p>
+
+    <h2>Email</h2>
+    <p>The most direct way to reach us is by email at
+    <a href="mailto:jhighllight@gmail.com">jhighllight@gmail.com</a>. If you are
+    reporting a bug, it helps to mention which tool you were using, what you
+    entered, what you expected, and what happened instead — and whether you were on
+    a phone or a computer. The more detail you include, the faster it can be fixed.</p>
+
+    <h2>GitHub</h2>
+    <p>The project lives on GitHub at
+    <a href="https://github.com/rayvoidx" rel="noopener" target="_blank">github.com/rayvoidx</a>,
+    maintained by rayv. If you are comfortable with GitHub, that is a great place to
+    file a detailed issue or follow what is being worked on.</p>
+
+    <h2>Bug reports and tool suggestions welcome</h2>
+    <p>Suggestions genuinely shape the roadmap. If there is a calculator or
+    converter you keep wishing existed, tell us — a good chunk of the tools on the
+    hub started as a request from someone who needed them. Bug reports are just as
+    valued: a small, clear report about an edge case often leads to a quick fix that
+    helps everyone.</p>
+
+    <h2>What to expect</h2>
+    <p>This is a solo, part-time project, so replies are not instant — but we do
+    read every message and usually respond within a few days. Thanks for taking the
+    time to get in touch.</p>
+  </section>
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="./">Back to tools</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/terms">Terms</a> · <a href="/privacy">Privacy Policy</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a></p>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
