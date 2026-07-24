@@ -211,6 +211,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Understanding the MET method behind this calculator</h2>
+    <p>Every "calories burned" number for an activity you didn't personally test in a lab is an estimate, and this calculator is no exception. What makes it useful rather than a guess is that it's built on the Metabolic Equivalent of Task (MET) system — a standardized scale researchers have measured across thousands of people doing hundreds of activities, published as the Compendium of Physical Activities. Instead of inventing a number for "jogging," this tool looks up the measured average intensity for that activity and scales it to your body weight and the time you spent doing it. That's the right tool when you want a quick, consistent way to compare a 30-minute swim against a 30-minute bike ride, or to sanity-check whether a workout "was worth it" relative to a snack.</p>
+
+    <h3>Reading the inputs correctly</h3>
+    <ol>
+      <li><strong>Activity</strong> — pick the entry that matches your actual effort, not just the sport's name. "Running" is listed at several paces because a slow jog and a 10 km/h tempo run burn very differently; the closer your selection matches your real pace, the closer the estimate.</li>
+      <li><strong>Duration</strong> — enter only the active minutes. If you took a 5-minute break in the middle of a 45-minute session, the honest input is 40 minutes; padding in rest time inflates the result.</li>
+      <li><strong>Body weight</strong> — heavier bodies spend more energy moving the same distance, so this figure changes the output directly and proportionally. Switch the kg/lb toggle to match how you know your weight; the tool converts internally either way.</li>
+    </ol>
+
+    <h3>The formula behind the number</h3>
+    <div class="example">
+      <p style="margin:0 0 8px;"><strong>kcal burned = MET × 3.5 × weight (kg) ÷ 200 × duration (minutes)</strong></p>
+      <p style="margin:0;">Where does 3.5 and 200 come from? One MET is defined as roughly 3.5 ml of oxygen consumed per kilogram of body weight per minute — that's your body's oxygen use at rest. Multiplying by weight converts that to total oxygen volume, and dividing by 1000 then multiplying by about 5 kcal per liter of oxygen (the average energy released when the body burns a mixed diet) collapses into the single ÷200 constant. The formula is really just "oxygen used → energy released," scaled by how much harder than resting you're working (the MET value) and for how long.</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p style="margin:0 0 6px;"><strong>Example 1 — Running at 8 km/h, 70 kg, 30 minutes</strong></p>
+      <p style="margin:0;">MET for this pace ≈ 8.3. Calculation: 8.3 × 3.5 = 29.05; 29.05 × 70 = 2,033.5; ÷ 200 = 10.17 kcal per minute; × 30 minutes ≈ <strong>305 kcal</strong>.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0 0 6px;"><strong>Example 2 — Brisk walking, 60 kg, 45 minutes</strong></p>
+      <p style="margin:0;">MET for a brisk walk ≈ 3.5. Calculation: 3.5 × 3.5 = 12.25; 12.25 × 60 = 735; ÷ 200 = 3.68 kcal per minute; × 45 minutes ≈ <strong>165 kcal</strong>.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0 0 6px;"><strong>Example 3 — Vigorous cycling, 85 kg, 20 minutes</strong></p>
+      <p style="margin:0;">MET for vigorous cycling ≈ 8.0. Calculation: 8.0 × 3.5 = 28; 28 × 85 = 2,380; ÷ 200 = 11.9 kcal per minute; × 20 minutes ≈ <strong>238 kcal</strong>.</p>
+    </div>
+
+    <h3>Reference MET values by activity</h3>
+    <table>
+      <thead><tr><th>Activity</th><th>Approx. MET</th><th>60 kg / 30 min</th></tr></thead>
+      <tbody>
+        <tr><td>Yoga, stretching</td><td>2.5</td><td>~75 kcal</td></tr>
+        <tr><td>Walking, slow (~4 km/h)</td><td>2.8</td><td>~84 kcal</td></tr>
+        <tr><td>Walking, brisk (~6 km/h)</td><td>3.5</td><td>~105 kcal</td></tr>
+        <tr><td>Weight training, general</td><td>3.5</td><td>~105 kcal</td></tr>
+        <tr><td>Cycling, moderate</td><td>6.8</td><td>~204 kcal</td></tr>
+        <tr><td>Swimming, moderate laps</td><td>5.8</td><td>~174 kcal</td></tr>
+        <tr><td>Elliptical trainer</td><td>5.0</td><td>~150 kcal</td></tr>
+        <tr><td>Running, 8 km/h</td><td>8.3</td><td>~249 kcal</td></tr>
+        <tr><td>Cycling, vigorous</td><td>8.0</td><td>~240 kcal</td></tr>
+        <tr><td>Jump rope</td><td>10.0</td><td>~300 kcal</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Calorie balance: burned is only half the picture</h3>
+    <p>Weight change depends on the gap between calories eaten and calories used, not on exercise alone. One kilogram of body fat stores roughly 7,700 kcal, so a single 300 kcal workout — however satisfying — offsets only about 4% of that. This tool is best used to see how a workout compares to food (a "300 kcal run" against a "300 kcal snack"), or to track relative effort across sessions, rather than as a countdown timer to a specific weight goal.</p>
+
+    <h3>Common mistakes and things to double-check</h3>
+    <ul>
+      <li><strong>Picking the wrong intensity tier.</strong> "Running" and "running fast" can differ by 3-4 MET — always match the pace option to how hard you actually worked.</li>
+      <li><strong>Forgetting the afterburn effect (EPOC).</strong> High-intensity intervals keep your metabolism elevated for a while after you stop; the MET formula only counts the active minutes, so very intense workouts are typically undercounted slightly by this and any MET-based tool.</li>
+      <li><strong>Treating the number as exact.</strong> MET values are population averages from lab studies. Your actual fitness level, muscle mass, terrain, and even the weather can shift your real burn by 15-25% in either direction.</li>
+      <li><strong>Mixing up kg and lb.</strong> Double-check the unit toggle before reading the result — entering 154 while the toggle is set to kg (instead of lb) will overstate the estimate dramatically.</li>
+    </ul>
+
+    <h3>What this calculator does not do</h3>
+    <p>It does not measure your heart rate, VO2, or actual metabolic rate, and it does not account for age, sex, body composition, or fitness level — all of which shift real energy expenditure. It is not a substitute for a fitness tracker's sensor data, a metabolic lab test, or professional medical or nutritional advice. If you're managing a medical condition, pregnancy, or a specific weight goal, use this estimate only as a rough planning reference and talk to a doctor or registered dietitian about numbers that matter for your health.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

@@ -16,6 +16,8 @@ window.I18N_LOCALES = {
   /* ---------------- English ---------------- */
   en: {
     "_label": "English",
+    "tool.metronome.name": "Online Metronome",
+    "tool.metronome.desc": "Free online metronome with a BPM slider, tap tempo, and time signatures (2/4, 3/4, 4/4, 6/8) using precise Web Audio scheduling.",
     "tool.ad-copy-limit-check.name": "Ad Copy Length Checker",
     "tool.ad-copy-limit-check.desc": "Free ad copy character counter for Google Ads, Microsoft Ads, Meta and Naver. Paste your whole RSA sheet to check every headline and description against the real limits — Korean, Japanese and Chinese characters counted as two, like Google does. Runs entirely in your browser.",
     "tool.average-calc.name": "Average Calculator",
@@ -232,6 +234,8 @@ window.I18N_LOCALES = {
   /* ---------------- 中文 (简体) ---------------- */
   zh: {
     "_label": "中文",
+    "tool.metronome.name": "在线节拍器",
+    "tool.metronome.desc": "免费在线节拍器，支持速度滑块、敲击定速和拍号（2/4、3/4、4/4、6/8），基于 Web Audio 精准调度。",
     "tool.ad-copy-limit-check.name": "广告文案字数检查器",
     "tool.ad-copy-limit-check.desc": "免费的广告文案字数统计工具，支持 Google Ads、Microsoft Ads、Meta 和 Naver。粘贴整张响应式搜索广告表格，一次核对每条标题和描述是否超出真实字数上限——中文、日文、韩文字符按两个字符计算，与 Google 的算法一致。全部在浏览器内运行。",
     "tool.average-calc.name": "平均值计算器",
@@ -448,6 +452,8 @@ window.I18N_LOCALES = {
   /* ---------------- हिन्दी ---------------- */
   hi: {
     "_label": "हिन्दी",
+    "tool.metronome.name": "ऑनलाइन मेट्रोनोम",
+    "tool.metronome.desc": "मुफ़्त ऑनलाइन मेट्रोनोम — BPM स्लाइडर, टैप टेम्पो और टाइम सिग्नेचर (2/4, 3/4, 4/4, 6/8), सटीक Web Audio शेड्यूलिंग के साथ।",
     "tool.ad-copy-limit-check.name": "विज्ञापन कॉपी लंबाई चेकर",
     "tool.ad-copy-limit-check.desc": "Google Ads, Microsoft Ads, Meta और Naver के लिए मुफ़्त विज्ञापन कॉपी कैरेक्टर काउंटर। पूरी RSA शीट पेस्ट करें और हर शीर्षक व विवरण को असली सीमाओं के विरुद्ध जाँचें — कोरियाई, जापानी और चीनी अक्षर दो के बराबर गिने जाते हैं, ठीक जैसे Google गिनता है। पूरी तरह आपके ब्राउज़र में चलता है।",
     "tool.average-calc.name": "औसत कैलकुलेटर",
@@ -664,6 +670,8 @@ window.I18N_LOCALES = {
   /* ---------------- Español ---------------- */
   es: {
     "_label": "Español",
+    "tool.metronome.name": "Metrónomo Online",
+    "tool.metronome.desc": "Metrónomo online gratuito con control de BPM, tap tempo y compases (2/4, 3/4, 4/4, 6/8) mediante una programación precisa con Web Audio.",
     "tool.ad-copy-limit-check.name": "Comprobador de longitud de anuncios",
     "tool.ad-copy-limit-check.desc": "Contador de caracteres gratuito para anuncios de Google Ads, Microsoft Ads, Meta y Naver. Pega tu hoja completa de anuncios adaptables y comprueba cada título y descripción frente a los límites reales: los caracteres coreanos, japoneses y chinos cuentan como dos, igual que en Google. Funciona por completo en tu navegador.",
     "tool.average-calc.name": "Calculadora de promedio",
@@ -880,6 +888,8 @@ window.I18N_LOCALES = {
   /* ---------------- العربية ---------------- */
   ar: {
     "_label": "العربية",
+    "tool.metronome.name": "مترونوم أونلاين",
+    "tool.metronome.desc": "مترونوم مجاني عبر الإنترنت مع شريط تمرير BPM وميزة النقر لتحديد السرعة وموازين إيقاعية (2/4، 3/4، 4/4، 6/8) بجدولة دقيقة عبر Web Audio.",
     "tool.ad-copy-limit-check.name": "أداة فحص طول النص الإعلاني",
     "tool.ad-copy-limit-check.desc": "عدّاد أحرف مجاني للنصوص الإعلانية على Google Ads وMicrosoft Ads وMeta وNaver. الصق جدول إعلاناتك المرنة كاملاً لفحص كل عنوان ووصف مقابل الحدود الفعلية — تُحتسب الأحرف الكورية واليابانية والصينية بحرفين، تماماً كما يفعل Google. يعمل بالكامل داخل متصفحك.",
     "tool.average-calc.name": "حاسبة المتوسط",
@@ -1096,6 +1106,8 @@ window.I18N_LOCALES = {
   /* ---------------- Français ---------------- */
   fr: {
     "_label": "Français",
+    "tool.metronome.name": "Métronome en ligne",
+    "tool.metronome.desc": "Métronome en ligne gratuit avec curseur de BPM, tap tempo et signatures rythmiques (2/4, 3/4, 4/4, 6/8), grâce à une planification précise via Web Audio.",
     "tool.ad-copy-limit-check.name": "Vérificateur de longueur d'annonces",
     "tool.ad-copy-limit-check.desc": "Compteur de caractères gratuit pour vos annonces Google Ads, Microsoft Ads, Meta et Naver. Collez toute votre feuille d'annonces responsives et contrôlez chaque titre et description face aux limites réelles : les caractères coréens, japonais et chinois comptent double, comme chez Google. Fonctionne entièrement dans votre navigateur.",
     "tool.average-calc.name": "Calculateur de moyenne",
@@ -1312,6 +1324,8 @@ window.I18N_LOCALES = {
   /* ---------------- বাংলা ---------------- */
   bn: {
     "_label": "বাংলা",
+    "tool.metronome.name": "অনলাইন মেট্রোনোম",
+    "tool.metronome.desc": "বিনামূল্যের অনলাইন মেট্রোনোম — BPM স্লাইডার, ট্যাপ টেম্পো এবং টাইম সিগনেচার (২/৪, ৩/৪, ৪/৪, ৬/৮), নির্ভুল Web Audio শিডিউলিং সহ।",
     "tool.ad-copy-limit-check.name": "বিজ্ঞাপন কপির দৈর্ঘ্য পরীক্ষক",
     "tool.ad-copy-limit-check.desc": "Google Ads, Microsoft Ads, Meta ও Naver-এর জন্য বিনামূল্যের বিজ্ঞাপন কপি ক্যারেক্টার কাউন্টার। পুরো RSA শিট পেস্ট করে প্রতিটি শিরোনাম ও বিবরণ আসল সীমার বিপরীতে যাচাই করুন — কোরিয়ান, জাপানি ও চীনা অক্ষর দুই হিসেবে গণনা হয়, ঠিক যেমন Google করে। পুরোটাই আপনার ব্রাউজারে চলে।",
     "tool.average-calc.name": "গড় ক্যালকুলেটর",
@@ -1528,6 +1542,8 @@ window.I18N_LOCALES = {
   /* ---------------- Português ---------------- */
   pt: {
     "_label": "Português",
+    "tool.metronome.name": "Metrônomo Online",
+    "tool.metronome.desc": "Metrônomo online gratuito com controle de BPM, tap tempo e fórmulas de compasso (2/4, 3/4, 4/4, 6/8) usando agendamento preciso via Web Audio.",
     "tool.ad-copy-limit-check.name": "Verificador de limite de caracteres de anúncios",
     "tool.ad-copy-limit-check.desc": "Contador de caracteres gratuito para textos de anúncios do Google Ads, Microsoft Ads, Meta e Naver. Cole a planilha inteira de anúncios responsivos e confira cada título e descrição frente aos limites reais — caracteres coreanos, japoneses e chineses contam como dois, igual ao Google. Roda inteiramente no seu navegador.",
     "tool.average-calc.name": "Calculadora de média",
@@ -1744,6 +1760,8 @@ window.I18N_LOCALES = {
   /* ---------------- Русский ---------------- */
   ru: {
     "_label": "Русский",
+    "tool.metronome.name": "Онлайн-метроном",
+    "tool.metronome.desc": "Бесплатный онлайн-метроном со слайдером BPM, функцией Tap Tempo и размерами такта (2/4, 3/4, 4/4, 6/8) на основе точного планирования Web Audio.",
     "tool.ad-copy-limit-check.name": "Проверка длины рекламных текстов",
     "tool.ad-copy-limit-check.desc": "Бесплатный счётчик символов для рекламных текстов Google Ads, Microsoft Ads, Meta и Naver. Вставьте всю таблицу адаптивных поисковых объявлений и проверьте каждый заголовок и описание по реальным лимитам — корейские, японские и китайские символы считаются за два, как в Google. Работает полностью в вашем браузере.",
     "tool.average-calc.name": "Калькулятор среднего значения",
@@ -1960,6 +1978,8 @@ window.I18N_LOCALES = {
   /* ---------------- اردو ---------------- */
   ur: {
     "_label": "اردو",
+    "tool.metronome.name": "آن لائن میٹرونوم",
+    "tool.metronome.desc": "مفت آن لائن میٹرونوم — BPM سلائیڈر، ٹیپ ٹیمپو اور ٹائم سگنیچر (2/4، 3/4، 4/4، 6/8)، درست Web Audio شیڈولنگ کے ساتھ۔",
     "tool.ad-copy-limit-check.name": "اشتہاری متن کی لمبائی چیک کرنے والا",
     "tool.ad-copy-limit-check.desc": "Google Ads، Microsoft Ads، Meta اور Naver کے لیے مفت اشتہاری متن کا کریکٹر کاؤنٹر۔ اپنی پوری RSA شیٹ پیسٹ کریں اور ہر سرخی اور تفصیل کو اصل حدود کے مقابلے میں جانچیں — کورین، جاپانی اور چینی حروف دو کے برابر گنے جاتے ہیں، بالکل جیسے Google گنتا ہے۔ سب کچھ آپ کے براؤزر ہی میں چلتا ہے۔",
     "tool.average-calc.name": "اوسط کیلکولیٹر",
@@ -2176,6 +2196,8 @@ window.I18N_LOCALES = {
   /* ---------------- Bahasa Indonesia ---------------- */
   id: {
     "_label": "Bahasa Indonesia",
+    "tool.metronome.name": "Metronom Online",
+    "tool.metronome.desc": "Metronom online gratis dengan penggeser BPM, tap tempo, dan birama (2/4, 3/4, 4/4, 6/8) memakai penjadwalan Web Audio yang presisi.",
     "tool.ad-copy-limit-check.name": "Pemeriksa Panjang Teks Iklan",
     "tool.ad-copy-limit-check.desc": "Penghitung karakter teks iklan gratis untuk Google Ads, Microsoft Ads, Meta, dan Naver. Tempel seluruh sheet iklan penelusuran responsif Anda untuk memeriksa setiap headline dan deskripsi terhadap batas yang sebenarnya — karakter Korea, Jepang, dan Tionghoa dihitung dua, sama seperti Google. Berjalan sepenuhnya di browser Anda.",
     "tool.average-calc.name": "Kalkulator Rata-rata",
@@ -2392,6 +2414,8 @@ window.I18N_LOCALES = {
   /* ---------------- Deutsch ---------------- */
   de: {
     "_label": "Deutsch",
+    "tool.metronome.name": "Online-Metronom",
+    "tool.metronome.desc": "Kostenloses Online-Metronom mit BPM-Regler, Tap Tempo und Taktarten (2/4, 3/4, 4/4, 6/8) durch präzise Web-Audio-Planung.",
     "tool.ad-copy-limit-check.name": "Anzeigentext-Längenprüfer",
     "tool.ad-copy-limit-check.desc": "Kostenloser Zeichenzähler für Anzeigentexte in Google Ads, Microsoft Ads, Meta und Naver. Fügen Sie Ihre komplette Tabelle mit responsiven Suchanzeigen ein und prüfen Sie jeden Anzeigentitel und jede Beschreibung gegen die echten Limits — koreanische, japanische und chinesische Zeichen zählen doppelt, genau wie bei Google. Läuft vollständig in Ihrem Browser.",
     "tool.average-calc.name": "Durchschnittsrechner",
@@ -2608,6 +2632,8 @@ window.I18N_LOCALES = {
   /* ---------------- 日本語 ---------------- */
   ja: {
     "_label": "日本語",
+    "tool.metronome.name": "オンラインメトロノーム",
+    "tool.metronome.desc": "BPMスライダー、タップテンポ、拍子（2/4・3/4・4/4・6/8）を備えた無料オンラインメトロノーム。正確なWeb Audioスケジューリングを使用。",
     "tool.ad-copy-limit-check.name": "広告文字数チェッカー",
     "tool.ad-copy-limit-check.desc": "Google 広告・Microsoft 広告・Meta・Naver に対応した無料の広告文字数カウンター。レスポンシブ検索広告の入稿シートをそのまま貼り付けるだけで、すべての見出しと説明文を実際の上限と照合します。日本語・韓国語・中国語は Google と同じく1文字2カウント。すべてブラウザ内で処理します。",
     "tool.average-calc.name": "平均計算機",
@@ -2824,6 +2850,8 @@ window.I18N_LOCALES = {
   /* ---------------- 한국어 ---------------- */
   ko: {
     "_label": "한국어",
+    "tool.metronome.name": "온라인 메트로놈",
+    "tool.metronome.desc": "BPM 슬라이더, 탭 템포, 박자표(2/4, 3/4, 4/4, 6/8)를 갖춘 무료 온라인 메트로놈. 정확한 Web Audio 스케줄링 사용.",
     "tool.ad-copy-limit-check.name": "광고 문구 글자수 검사기",
     "tool.ad-copy-limit-check.desc": "구글애즈·마이크로소프트 광고·메타·네이버 검색광고용 무료 광고 문구 글자수 counter. 반응형 검색광고 소재 표를 통째로 붙여넣으면 모든 제목과 설명을 실제 글자수 제한과 대조합니다. 한글·일본어·중국어는 구글과 동일하게 1자를 2자로 계산합니다. 모든 처리는 브라우저 안에서 끝납니다.",
     "tool.average-calc.name": "평균 계산기",

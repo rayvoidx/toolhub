@@ -226,6 +226,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>Percentages in everyday numbers</h2>
+    <p>A percentage is a ratio scaled to 100, and nearly every real-world question about percentages boils down to one of three shapes: what share does one number represent of another, how much does a value become after a percent change, and what percent connects two known values. This calculator's three tabs map directly onto those three shapes — but knowing which one to reach for, and how to run one of them in reverse, is what actually saves time on invoices, payslips, discounts, and reports.</p>
+
+    <h3>Which tab answers your question</h3>
+    <ul>
+      <li><strong>What % is A of B</strong> — use this when you know a part and a whole and want the share: a test score out of the maximum, a down payment out of a home price, or how much of a monthly budget goes to rent.</li>
+      <li><strong>% increase / decrease</strong> — use this when you know a starting value and a percent, and want the resulting number: a price after a markup, a salary after a raise, a population after a decline.</li>
+      <li><strong>Change rate</strong> — use this when you know both a before and an after value and want the percent that connects them: how much revenue grew year over year, or how far a stock has fallen from its peak.</li>
+    </ul>
+
+    <h3>The three formulas in plain words</h3>
+    <div class="example">
+      <p><strong>Ratio:</strong> percent = (A ÷ B) × 100</p>
+      <p><strong>Increase:</strong> result = A × (1 + X ÷ 100) &nbsp;·&nbsp; <strong>Decrease:</strong> result = A × (1 − X ÷ 100)</p>
+      <p><strong>Change rate:</strong> percent change = ((B − A) ÷ A) × 100 — positive means growth, negative means decline</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p><strong>Example 1 — grading a test.</strong> You answered 42 of 50 questions correctly. On the ratio tab: A = 42, B = 50, so 42 ÷ 50 × 100 = 84%, comfortably above an 80% cutoff.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a price after tax.</strong> An item costs $68 before an 8.25% sales tax. On the increase/decrease tab in increase mode: A = 68, X = 8.25, result = 68 × 1.0825 = $73.61. The tax itself is $73.61 − $68 = $5.61.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — reversing a discount.</strong> A jacket sells for $84 after a 30% markdown, and you want the original price. Since sale price = original × (1 − 0.30), the original is the sale price divided by the same 0.70 factor: 84 ÷ 0.70 = $120. This reverse direction — undoing a known percent change to recover the starting value — is the calculation people miss most often, because it needs division where the forward version needs multiplication.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 4 — measuring growth.</strong> Monthly visitors moved from 8,400 to 9,660. On the change-rate tab: A = 8400, B = 9660, so (9660 − 8400) ÷ 8400 × 100 = 15%. That 15% is the growth rate — not the same thing as the raw gain of 1,260 visitors.</p>
+    </div>
+
+    <h3>Quick reference</h3>
+    <table>
+      <tr><th>You want to find</th><th>Formula</th><th>Tab to use</th></tr>
+      <tr><td>Part as a % of a whole</td><td>(A ÷ B) × 100</td><td>What % is A of B</td></tr>
+      <tr><td>Value after +X% or −X%</td><td>A × (1 ± X/100)</td><td>% increase / decrease</td></tr>
+      <tr><td>% change between two values</td><td>((B − A) ÷ A) × 100</td><td>Change rate</td></tr>
+      <tr><td>Original value before a known % change</td><td>new value ÷ (1 ± X/100)</td><td>increase/decrease, run in reverse</td></tr>
+      <tr><td>Gap between two percentages</td><td>simple subtraction, in percentage points</td><td>manual — see below</td></tr>
+    </table>
+
+    <h3>Percentage points vs. percent — the mix-up that trips up most people</h3>
+    <p>If an interest rate rises from 5% to 7%, that is a 2 <strong>percentage-point</strong> increase, but a 40% <strong>relative</strong> increase (2 ÷ 5 × 100). News headlines and financial statements routinely blur the two, and swapping one for the other can make a small policy shift sound dramatic or a large one sound trivial. When comparing two percentages, decide first whether the number you need is the plain point difference or the relative percent change between them — they answer different questions and are not interchangeable.</p>
+
+    <h3>Other common mistakes</h3>
+    <ul>
+      <li>Assuming a decrease and the matching increase cancel out: a 50% drop followed by a 50% rise does not return the original value (100 → 50 → 75, not 100).</li>
+      <li>Using the wrong base in a change-rate calculation — percent change is always relative to the <em>starting</em> value, never the ending one.</li>
+      <li>Rounding intermediate results before the final step, which quietly compounds errors in multi-stage math like tax-then-tip or discount-then-tax.</li>
+    </ul>
+
+    <h3>What this tool does not do</h3>
+    <p>This calculator handles single-step percentage arithmetic: one ratio, one increase or decrease, or one change rate at a time. It does not automatically chain multiple percentage changes — for a discount followed by tax, run the increase/decrease tab twice, once per step — and it does not model compounding interest, loan amortization, or jurisdiction-specific tax and rounding rules. For financial or tax decisions, treat the result as a solid working estimate rather than a final figure.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

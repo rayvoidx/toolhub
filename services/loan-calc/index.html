@@ -262,6 +262,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How loan amortization actually works</h2>
+    <p>Every loan payment splits into two pieces: interest, which is the lender's charge on whatever balance you still owe, and principal, which is the part that actually pays the balance down. "Amortization" is just the schedule of how that split shifts over the life of the loan. Understanding it matters because two loans with the same rate and term can cost very different amounts in total interest depending on how the payment is structured — equal payment, equal principal, or interest-only. This calculator lets you build the full schedule for any of the three and see the real numbers instead of guessing.</p>
+
+    <h3>How to use the inputs</h3>
+    <ol>
+      <li><strong>Loan amount</strong> — the principal you're borrowing, digits only. The tool is currency-agnostic; just be consistent with whatever unit you're thinking in.</li>
+      <li><strong>Annual interest rate</strong> — the nominal annual rate quoted by the lender (not the APR — see below). Enter it as a percentage, e.g. 6.5, not 0.065.</li>
+      <li><strong>Loan term</strong> — the repayment length in years or months. A 30-year mortgage and a 360-month loan produce identical results; the unit only changes how you type the number.</li>
+      <li><strong>Repayment method</strong> — amortized (fixed payment), equal principal (fixed principal, declining payment), or interest-only (fixed interest, balloon principal at the end).</li>
+    </ol>
+
+    <h3>The formula behind the amortized payment</h3>
+    <div class="example">
+      <p>The calculator converts your annual rate to a monthly rate (r = annual ÷ 12 ÷ 100) and your term to a number of months (n). For the amortized method it solves for a fixed payment M that fully retires the balance in exactly n installments:</p>
+      <p><strong>M = P × r × (1 + r)ⁿ ÷ [(1 + r)ⁿ − 1]</strong></p>
+      <p>Each month, interest = current balance × r, and principal = M − interest. The balance shrinks by that principal amount, so next month's interest is a little smaller and a little more of the fixed payment goes to principal — the classic amortization curve.</p>
+    </div>
+
+    <h3>Worked example 1: a $300,000 loan at 6% for 30 years</h3>
+    <div class="example">
+      <p>r = 0.06 ÷ 12 = 0.005, n = 360 months, (1.005)³⁶⁰ ≈ 6.0226.</p>
+      <p>Amortized: M = 300,000 × 0.005 × 6.0226 ÷ 5.0226 ≈ <strong>$1,798.65/month</strong>. Over 360 payments that's $647,514 total repaid, so total interest ≈ <strong>$347,514</strong> — more than the principal itself.</p>
+      <p>Equal principal, same loan: the fixed principal share is 300,000 ÷ 360 = $833.33/month. The first payment (833.33 + 300,000 × 0.005) is <strong>$2,333.33</strong>; the last payment (833.33 + 833.33 × 0.005) is <strong>$837.50</strong>. Total interest works out to r × P × (n+1) ÷ 2 = 0.005 × 300,000 × 180.5 ≈ <strong>$270,750</strong> — about $76,764 less than the amortized method, because the balance (and thus the interest charged on it) falls faster.</p>
+      <p>Interest-only, same loan: every one of the 360 payments is just P × r = <strong>$1,500</strong>, with the full $300,000 principal due as a balloon on the last payment. Total interest = 1,500 × 360 = <strong>$540,000</strong> — the most expensive of the three, since the balance never decreases until the very end.</p>
+    </div>
+
+    <h3>Worked example 2: a smaller, shorter loan</h3>
+    <div class="example">
+      <p>$25,000 auto loan, 7% annual, 5 years (60 months), amortized. r = 0.07 ÷ 12 ≈ 0.0058333, (1.0058333)⁶⁰ ≈ 1.4176. M = 25,000 × 0.0058333 × 1.4176 ÷ 0.4176 ≈ <strong>$495.03/month</strong>. Total repaid ≈ $29,702, so total interest ≈ <strong>$4,702</strong> — a useful reminder that even a "small" loan carries real interest cost once you multiply a modest monthly figure by 60 payments.</p>
+    </div>
+
+    <h3>Total interest by method — the $300,000 / 6% / 30-year example</h3>
+    <table>
+      <thead><tr><th>Method</th><th>1st payment</th><th>Last payment</th><th>Total interest</th></tr></thead>
+      <tbody>
+        <tr><td>Amortized (equal payment)</td><td>$1,798.65</td><td>$1,798.65</td><td>$347,514</td></tr>
+        <tr><td>Equal principal (declining)</td><td>$2,333.33</td><td>$837.50</td><td>$270,750</td></tr>
+        <tr><td>Interest-only (balloon)</td><td>$1,500.00</td><td>$301,500.00</td><td>$540,000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>APR vs. interest rate</h3>
+    <p>The <em>interest rate</em> field here is the nominal rate used purely to compute interest on the outstanding balance — exactly what this calculator models. <em>APR</em> (annual percentage rate) is a broader, legally standardized figure that folds in origination fees, points, and certain closing costs, spread over the loan term, which is why APR is almost always slightly higher than the quoted interest rate. When comparing loan offers, compare APRs; when you want to know your literal monthly payment and interest breakdown, the plain interest rate — what you enter here — is the right input.</p>
+
+    <h3>Common mistakes and ways to cut total interest</h3>
+    <ul>
+      <li><strong>Comparing methods by monthly payment alone.</strong> Equal principal's declining payment often looks scarier upfront, but it saves real money in total interest — decide based on whether you can absorb the higher early payments, not just which number looks smaller today.</li>
+      <li><strong>Forgetting that a small rate gap compounds over decades.</strong> On a 30-year loan, half a percentage point can swing total interest by tens of thousands — always re-run the comparison before assuming a refinance offer is "close enough" to ignore.</li>
+      <li><strong>Assuming extra payments don't matter.</strong> This calculator shows the scheduled path only; any principal you pay above the required installment shortens the amortized curve and cuts total interest, since every dollar of early principal stops accruing interest for every remaining month.</li>
+      <li><strong>Confusing "total repayment" with "total interest."</strong> The first is everything you hand over; the second — repayment minus principal — is the true cost of borrowing, and it's the number worth minimizing.</li>
+    </ul>
+
+    <h3>What this calculator doesn't cover</h3>
+    <p>It models a single fixed rate applied with clean monthly compounding — it does not simulate variable/adjustable rates, extra or missed payments, origination fees, mortgage insurance, property tax and insurance escrow, or day-count conventions that some lenders use for daily interest accrual. Use it to understand the mechanics and to compare repayment structures fairly against each other, not as a substitute for your lender's official amortization statement or a binding loan estimate.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

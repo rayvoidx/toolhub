@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Toolhub</title>
+<meta name="description" content="Toolhub is a collection of free, browser-based tools built for speed and privacy. Learn how each tool is made, validated, and why nothing you type ever leaves your device.">
+<link rel="canonical" href="https://tool-hub.me/about.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About — Toolhub">
+<meta property="og:description" content="Toolhub is a collection of free, browser-based tools built for speed and privacy. Learn how each tool is made, validated, and why nothing you type ever leaves your device.">
+<meta property="og:url" content="https://tool-hub.me/about.html">
+<meta property="og:image" content="https://tool-hub.me/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./"><img src="icons/icon.svg" alt="" width="28" height="28"><span>Toolhub</span></a>
+</header>
+<main>
+  <h1>About Toolhub</h1>
+
+  <h2>What Toolhub is</h2>
+  <p>Toolhub is a growing collection of small, single-purpose web tools — calculators, converters, counters, and
+  checkers — built for the moment you need a quick answer and don't want to install an app, create an account, or
+  dig through a bloated page to get it. Each tool does one job, does it on the page you're already on, and gets out
+  of your way. The goal is simple: open the tool, get the number or result you came for, move on.</p>
+
+  <h2>How each tool is built and validated</h2>
+  <p>Every tool starts from a real, well-defined formula or rule set — the kind you'd find in a textbook, an official
+  guideline, or an established convention for that domain (finance, health, text, unit conversion, and so on). Before
+  a tool ships, its logic is checked against known reference values and edge cases: boundary inputs, rounding
+  behavior, and the scenarios most likely to trip up a naive implementation. When a tool's subject matter has real
+  nuance — tax rules, medical estimates, financial projections — the page says so plainly, so the result is read as
+  an estimate rather than professional advice.</p>
+
+  <h2>Privacy by design</h2>
+  <p>Every calculation runs locally in your browser using JavaScript. The numbers, dates, or text you type into a
+  Toolhub tool are never sent to a server, logged, or stored anywhere outside your own device. There are no accounts,
+  no forms to fill in, and no hidden network calls carrying your inputs elsewhere. The only things saved locally are
+  small preferences — like your chosen theme or language — kept in your browser's own storage so the site remembers
+  your settings on your next visit. Full details on data handling live on the <a href="privacy.html">Privacy
+  Policy</a> page.</p>
+
+  <h2>Keeping Toolhub free</h2>
+  <p>Toolhub has no subscription, no paywall, and no premium tier — every tool is free to use, with no limit on how
+  many times you use it. Running the site and building new tools still costs time and money, so Toolhub is
+  supported by advertising (Google AdSense) placed alongside the tools, and may display ads more broadly as the
+  project grows. Ads are kept out of the way of the actual tool interface, and nothing about how a tool calculates
+  its result depends on them. If you'd rather support the project directly, there's a link in the footer for that
+  too.</p>
+
+  <h2>Feedback and contact</h2>
+  <p>Toolhub is a small, ongoing project, and it improves from real usage — a formula that's slightly off, a unit
+  that's missing, a tool that would be genuinely useful to add. If you spot something wrong or have a suggestion,
+  the fastest way to reach the maintainer is by email at <a href="mailto:jhighllight@gmail.com">jhighllight@gmail.com</a>
+  or through <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer">GitHub</a>. Reports
+  that include the exact tool, the input you used, and what you expected are the easiest to act on quickly.</p>
+</main>
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="./">Back to tools</a></p>
+</footer>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
