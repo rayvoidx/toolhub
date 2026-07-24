@@ -237,6 +237,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>Measuring the exact gap between two calendar dates</h2>
+    <p>Two dates are easy to look at side by side, but turning that gap into a single, defensible number — the kind you'd put in a contract, a medical chart, or a court filing — is where people trip up. A notice period, a warranty window, a visa's permitted stay, or a child's exact age in days all hinge on how the boundary days are counted, not just on which calendar month happens to be bigger. This calculator answers the question underneath all of those situations: given a start date and an end date, how many days, weeks, months and years sit between them, counted the way you need them counted.</p>
+    <p>It matters most whenever a date span is compared against a threshold: a 90-day return window, a 14-day cooling-off period, a 180-day residency test, a 1000-day milestone. Each is only correct if the two boundaries are counted consistently — off-by-one differences are rarely dramatic on their own, but they turn into real disputes once a deadline is on the line.</p>
+
+    <h3>Reading the two date fields</h3>
+    <ol>
+      <li><strong>Start date / End date</strong> — the two boundaries of the span. The ⇄ button swaps them if they were entered backwards, since the tool always reports a positive span rather than a signed one.</li>
+      <li><strong>From today / Until today presets</strong> — snap one field to the current date, useful for tenure, countdown, or "days since" questions.</li>
+      <li><strong>Include both days</strong> — whether the start date counts as day one (inclusive) or is only the zero point the count begins from (exclusive). This single checkbox is behind almost every "why is your number one day off from mine" disagreement.</li>
+    </ol>
+
+    <h3>How the total day count is worked out</h3>
+    <div class="example">
+      <p>Both dates are converted to a single day number, and the exclusive count is simply: <strong>total days = end day number − start day number</strong> — the interval between the two dates, the way a stopwatch measures elapsed time rather than counting ticks. Checking "Include both days" adds 1, shifting from "how large is the gap" to "how many calendar days does this span touch, start and end included."</p>
+    </div>
+
+    <h3>How the years-months-weeks breakdown is walked</h3>
+    <p>A raw day count is exact but hard to read once it passes a few hundred, so the tool also produces a years/months/days breakdown by walking the real calendar instead of dividing by flat constants like 365 or 30. It adds whole years to the start date, then whole months — clamping to the last valid day when a shorter month is hit, so January 31 plus one month lands on February 28 or 29 — and whatever remains becomes the leftover days. The same total is re-expressed as complete weeks plus a remainder, so the two readings never disagree.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p><strong>Example 1 — counted two ways.</strong> Start May 2, 2016; end August 10, 2016. Exclusive count: 100 days. Tick "Include both days" and it becomes 101 — same two dates, one day different, purely from the boundary rule.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — job tenure as years, months, days.</strong> Hire date March 14, 2019; reference date November 2, 2024. Five full years walks to March 14, 2024; seven more full months reaches October 14, 2024; the remainder, October 14 to November 2, is 19 days. Result: 5 years, 7 months, 19 days — not the "5.6 years" a rough (end year − start year) estimate would give.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — crossing a leap day.</strong> Start December 1, 2023; end March 1, 2024. The count runs through January (31 days) and a 29-day February 2024, for a total of 91 days. Shift the same span one year earlier, into a non-leap year, and the answer drops to 90 — the leap day is the entire difference.</p>
+    </div>
+
+    <h3>Common reference periods</h3>
+    <table>
+      <tr><th>Period</th><th>Typical days</th><th>Shows up in</th></tr>
+      <tr><td>1 week</td><td>7</td><td>pay cycles, sprints</td></tr>
+      <tr><td>2 weeks</td><td>14</td><td>notice periods, cooling-off windows</td></tr>
+      <tr><td>1 month (avg)</td><td>~30.4</td><td>rough estimates only — real months run 28–31</td></tr>
+      <tr><td>1 quarter</td><td>~91</td><td>90-day return policies, financial reports</td></tr>
+      <tr><td>6 months</td><td>181–182</td><td>half-year reviews, visa stay limits</td></tr>
+      <tr><td>1 year</td><td>365–366</td><td>anniversaries, age in days</td></tr>
+      <tr><td>1,000 days</td><td>~2y 9m</td><td>relationship and baby milestones</td></tr>
+    </table>
+
+    <h3>Mistakes that throw off a manual count</h3>
+    <ul>
+      <li>Assuming every month is 30 days when estimating by hand — the tool walks the actual calendar, so a result near a month boundary can look "off" against a quick mental estimate.</li>
+      <li>Forgetting to fix inclusive vs. exclusive <em>before</em> comparing a result against a deadline, not after.</li>
+      <li>Reading the weeks output as total days ÷ 7 rounded off, rather than complete weeks plus the leftover-days count shown beside it.</li>
+      <li>Treating years/months/days as independently roundable — 5y 7m 19d is not "about 5.7 years"; the months figure already accounts for the varying month lengths it walked through.</li>
+    </ul>
+
+    <h3>What this calculator does not do</h3>
+    <p>This tool compares two calendar dates, not exact timestamps — there's no hour, minute, or time zone in the input, so a "days since" count for a specific moment can land one day off depending on what time that moment happened. It counts every day on the calendar and does not exclude weekends or public holidays, so it's the wrong tool for a working-days deadline — reach for a dedicated business-day calculator instead. Everything here also follows the modern Gregorian calendar back to the tool's 1900 floor, not other calendar systems or dates predating a region's Gregorian adoption.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

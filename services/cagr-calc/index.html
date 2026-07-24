@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CAGR Calculator — Compound Annual Growth Rate</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -233,6 +272,72 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>What CAGR Actually Measures</h2>
+    <p>Compound annual growth rate answers one narrow question: if your beginning value had grown at a single, unchanging annual rate all the way to your ending value, what would that rate have to be? It is a smoothing device — a way to compress a multi-year, bumpy growth path into one comparable number. That makes CAGR the right tool whenever you need to line up results that happened over different lengths of time: a 3-year stock holding against a 7-year one, a startup's first two years of revenue against its next five, or two properties bought and sold on different schedules.</p>
+    <p>CAGR is not the same question as "how much did this grow in total" (that's total return, which ignores how long it took), and it's not the same question as "if I invest today at a fixed rate, what will I have later" (that's a forward-looking compound-interest projection built from an assumed rate). CAGR runs the arithmetic backward: you already know the start and the end, and you're solving for the single rate that connects them.</p>
+
+    <h3>How to use this calculator</h3>
+    <ol>
+      <li>Enter the <strong>beginning value</strong> — what you started with (purchase price, opening revenue, initial balance).</li>
+      <li>Enter the <strong>ending value</strong> — what it became by the end of the period.</li>
+      <li>Choose how to express the period: type a <strong>number of years</strong> (decimals like 3.5 work), or switch to <strong>dates</strong> and pick a start and end date — the calculator converts the exact day count into years for you.</li>
+      <li>Pick a <strong>currency</strong> to format the gain and schedule figures — CAGR itself is a percentage and doesn't depend on currency.</li>
+      <li>Press <strong>Calculate</strong> to see the CAGR, total return, absolute gain, growth multiple, and an expandable year-by-year schedule showing what the value would look like at each step along a smooth compounding path.</li>
+    </ol>
+
+    <h3>The formula behind the number</h3>
+    <div class="example">
+      <strong>CAGR = (Ending value ÷ Beginning value)<sup>(1 ÷ years)</sup> − 1</strong>
+      <p style="margin:10px 0 0">Divide the ending value by the beginning value to get the growth multiple. Raise that multiple to the power of one divided by the number of years — this is the step that "un-compounds" the total growth back into a single annual rate. Subtract 1 and multiply by 100 to read it as a percentage.</p>
+    </div>
+
+    <h3>Three worked examples</h3>
+    <div class="example"><strong>Example 1 — a single stock position.</strong> You bought in at 5,000 and it's worth 12,000 four years later. Multiple = 12,000 ÷ 5,000 = 2.4×. CAGR = 2.4^(1/4) − 1 ≈ 24.47% per year. Total return over the whole four years is 140%, but the year-by-year growth rate is 24.47%.</div>
+    <div class="example"><strong>Example 2 — small business revenue.</strong> Revenue was 250,000 in year 0 and reached 410,000 by year 6. Multiple = 410,000 ÷ 250,000 = 1.64×. CAGR = 1.64^(1/6) − 1 ≈ 8.59% per year — a much steadier-sounding figure than the raw "revenue grew 64%" headline.</div>
+    <div class="example"><strong>Example 3 — comparing two funds with the same total return.</strong> Fund A goes from 8,000 to 14,000 in 2 years; Fund B goes from 8,000 to 14,000 in 5 years. Both have an identical 75% total return and a 1.75× multiple — but Fund A's CAGR is 1.75^(1/2) − 1 ≈ 32.29%, while Fund B's is 1.75^(1/5) − 1 ≈ 11.84%. Same total gain, very different pace — which is exactly what a total-return figure alone can't show you.</div>
+
+    <h3>Same total return, very different CAGR</h3>
+    <p>Because the exponent in the formula divides by the number of years, one fixed total return maps to a different CAGR at every holding period. The table below shows this for a total return of 100% (the value doubles) — the classic "doubling time" relationship, in reverse:</p>
+    <table>
+      <thead><tr><th>Holding period</th><th>Total return</th><th>Equivalent CAGR</th></tr></thead>
+      <tbody>
+        <tr><td>1 year</td><td>100%</td><td>100.00%</td></tr>
+        <tr><td>2 years</td><td>100%</td><td>41.42%</td></tr>
+        <tr><td>3 years</td><td>100%</td><td>25.99%</td></tr>
+        <tr><td>5 years</td><td>100%</td><td>14.87%</td></tr>
+        <tr><td>10 years</td><td>100%</td><td>7.18%</td></tr>
+        <tr><td>20 years</td><td>100%</td><td>3.53%</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Mistakes that quietly distort a CAGR</h3>
+    <ul>
+      <li><strong>Reading CAGR as an actual yearly return.</strong> It's a geometric average over the whole path, not what happened in any single year — the real year-by-year numbers could include down years even when CAGR is comfortably positive.</li>
+      <li><strong>Confusing it with the arithmetic mean.</strong> Averaging yearly percentage changes directly overstates true growth once returns swing up and down; CAGR (the geometric mean) corrects for that "volatility drag" and is always the more honest figure across multiple periods.</li>
+      <li><strong>Rounding the period.</strong> A holding period of 3 years and 4 months entered as "3" (or "3.5" instead of the actual 3.33) shifts the exponent and skews the result — use dates mode when the period isn't a clean whole number.</li>
+      <li><strong>Applying it when money was added or withdrawn mid-period.</strong> This two-point formula assumes one lump sum in and one lump sum out. If you contributed or withdrew funds partway through, you need a money-weighted measure (such as XIRR), not a plain CAGR.</li>
+      <li><strong>Extrapolating it forward.</strong> A calculated CAGR describes what already happened between two known points — it is not a projection or a guarantee of the rate going forward.</li>
+    </ul>
+
+    <h3>What CAGR leaves out</h3>
+    <p>Two investments can share an identical CAGR while one climbed in a straight line and the other fell by half twice before recovering — CAGR compresses the whole ride into one number and says nothing about volatility, drawdowns, or the risk you had to sit through to get there. It also says nothing about fees, taxes, or inflation unless you've already netted those out of your beginning and ending values yourself. Treat CAGR as a clean way to summarize and compare historical growth rates — not as investment advice, a forecast, or a substitute for looking at the full path a value took to get where it ended up.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

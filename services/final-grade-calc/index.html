@@ -247,6 +247,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Working backward from the grade you want</h2>
+    <p>Most grade calculators go forward: plug in a set of scores and get an average out. This one runs the arithmetic in reverse. You already know two things — where your grade sits right now, and where you need it to land after the final exam is graded — and the missing piece is the one number you can still control: your final exam score. That's a fundamentally different question from "what's my average," and it's the one students actually ask the night before a final, when every other grade in the course is already locked in.</p>
+    <p>This matters because a single-percentage average hides how much leverage the final actually has. A final worth 10% of the course can barely move a struggling grade; a final worth 50% can rescue it completely or sink it just as fast. Solving directly for the required score turns that vague anxiety ("do I need to cram?") into a concrete number you can compare against your own realistic ceiling.</p>
+
+    <h3>Reading the three inputs correctly</h3>
+    <ol>
+      <li><strong>Current grade in the class</strong> is your grade before the final is factored in — the number from your school's gradebook or portal right now, not just an average of quiz scores if other categories (homework, labs, participation) already feed into it.</li>
+      <li><strong>Desired final grade</strong> is the overall course percentage you want after the final is added in, not the score on the final itself.</li>
+      <li><strong>Final exam weight</strong> is the share of the total course grade the final controls, as a percentage. If your syllabus states it in points instead — say, "the final is worth 200 of 1,000 total points" — convert first: 200 ÷ 1,000 = 20%.</li>
+    </ol>
+
+    <h3>The reverse-engineering formula</h3>
+    <p>A course grade after the final is just a weighted blend of two pieces: everything before the final, and the final itself.</p>
+    <div class="example">
+      <p style="margin:0 0 8px"><strong>Final course grade = (current grade × non-final share) + (final score × final weight)</strong>, where non-final share = 1 − final weight.</p>
+      <p style="margin:0">Isolating the unknown gives the score this calculator reports:</p>
+      <p style="margin:8px 0 0"><strong>final score needed = (target grade − current grade × non-final share) ÷ final weight</strong></p>
+    </div>
+    <p>Three outcomes fall out of that one equation, and the calculator labels each of them:</p>
+    <ul>
+      <li><strong>Achievable</strong> — the required score lands between 0% and 100%. It's within reach, though it may still be a stretch.</li>
+      <li><strong>Not achievable</strong> — the required score comes out above 100%. No exam score can produce that outcome under the current weighting, since nothing scores higher than a perfect paper.</li>
+      <li><strong>Already secured</strong> — the required score is 0% or lower. Your target is locked in even with a blank final.</li>
+    </ul>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Achievable:</strong> current grade 74%, target 80%, final weight 40%.<br>
+      Non-final share = 60%. Required score = (80 − 74×0.6) ÷ 0.4 = (80 − 44.4) ÷ 0.4 = <strong>89%</strong> on the final.
+    </div>
+    <div class="example">
+      <strong>Not achievable:</strong> current grade 60%, target 85%, final weight only 20%.<br>
+      Required score = (85 − 60×0.8) ÷ 0.2 = (85 − 48) ÷ 0.2 = <strong>185%</strong>. Since a final can't exceed 100%, this target is out of reach under the current syllabus weighting — the only paths forward are extra credit, a dropped grade, or a curve.
+    </div>
+    <div class="example">
+      <strong>Already secured:</strong> current grade 93%, target 70%, final weight 15%.<br>
+      Required score = (70 − 93×0.85) ÷ 0.15 = (70 − 79.05) ÷ 0.15 = <strong>−60.3%</strong>. A negative result means the target is locked in regardless of final exam performance.
+    </div>
+
+    <h3>How the required score shifts with your target</h3>
+    <p>Holding current grade and final weight fixed shows how sensitive the required score is to what you're aiming for. Example below uses a current grade of 82% and a final weight of 30%:</p>
+    <table>
+      <thead><tr><th>Target grade</th><th>Score needed on final</th><th>Achievable?</th></tr></thead>
+      <tbody>
+        <tr><td>60%</td><td>8.7%</td><td>Yes — secured well above this</td></tr>
+        <tr><td>70%</td><td>42.0%</td><td>Yes</td></tr>
+        <tr><td>80%</td><td>75.3%</td><td>Yes</td></tr>
+        <tr><td>85%</td><td>92.0%</td><td>Yes, but tight</td></tr>
+        <tr><td>90%</td><td>108.7%</td><td>No — exceeds 100%</td></tr>
+      </tbody>
+    </table>
+    <p>Notice how the required score accelerates as the target climbs — each extra point of target grade costs more than a point on the final, because the final only counts for 30% of the total. The lower the final's weight, the steeper that curve gets.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Entering a raw exam average instead of the current course grade.</strong> If homework, labs, or participation already count toward your grade, use the blended percentage from your gradebook, not just your test average.</li>
+      <li><strong>Mixing up points and percentages for the weight.</strong> "The final is 25 questions" tells you nothing about weight — you need its share of total course points.</li>
+      <li><strong>Ignoring a syllabus curve or drop policy.</strong> This calculator assumes a straight weighted average; if your instructor drops the lowest quiz or curves the final, your real required score may differ from the raw math.</li>
+      <li><strong>Treating "not achievable" as final.</strong> It means not achievable under a plain average — extra credit, curves, or a professor's discretion can still change the outcome, so it's worth asking before assuming the grade is set in stone.</li>
+    </ul>
+
+    <h3>What this tool doesn't cover</h3>
+    <p>It handles exactly one remaining assessment. If you still have a final project and a final exam left, or multiple remaining quizzes with different weights, you'll need to combine those into a single effective "remaining weight" and "remaining target" first, or work through the weighted average manually for each piece. This tool also doesn't convert results into a letter grade or GPA — check your institution's own grading scale for that conversion.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

@@ -198,6 +198,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why One Average Rarely Tells the Whole Story</h2>
+    <p>People say "the average" and usually mean the arithmetic mean, but a single number can hide more than it reveals. A class average of 76 might mean everyone scored close to 76, or it might mean most students scored in the 80s and 90s while one zero dragged the number down. That's why this calculator returns nine figures at once — count, sum, mean, median, mode, minimum, maximum, range, and geometric mean — so you can see whether the "typical" value is being distorted before you use it in a report, a grade, or a decision.</p>
+    <p>This kind of check matters anywhere a summary number gets repeated without the underlying spread: exam scores, delivery times, customer ratings, or a sequence of investment returns. Each behaves differently, and the right summary statistic depends on which one you're holding.</p>
+
+    <h3>Reading the Numbers on This Page</h3>
+    <ol>
+      <li><strong>Count and sum</strong> — how many valid numbers were parsed, and their total. Use these to sanity-check that nothing was dropped by accident.</li>
+      <li><strong>Mean (average)</strong> — sum divided by count. Pulled toward extreme values.</li>
+      <li><strong>Median</strong> — the middle value once the list is sorted (or the average of the two middle values for an even-sized list). Barely moves when one number is unusual.</li>
+      <li><strong>Mode</strong> — the value(s) that repeat most often. Shows a dash when nothing repeats.</li>
+      <li><strong>Min, max, range</strong> — the smallest entry, largest entry, and the gap between them (max − min).</li>
+      <li><strong>Geometric mean</strong> — the nth root of the product of all n numbers. Meaningful only when every number is positive, since it's built for things that multiply rather than add.</li>
+    </ol>
+
+    <h3>Worked Example 1 — An Outlier Skews the Mean</h3>
+    <div class="example">
+      <p>Seven quiz scores: 92, 88, 95, 76, 91, 84, 12 (the last one is a missed makeup that was recorded as a zero-credit 12).</p>
+      <p>Sum = 538, count = 7, so the mean is 538 ÷ 7 ≈ <strong>76.9</strong>. Sorted, the list is 12, 76, 84, 88, 91, 92, 95 — the middle (4th) value gives a median of <strong>88</strong>. No score repeats, so the mode is a dash. Range = 95 − 12 = <strong>83</strong>.</p>
+      <p>The mean of 76.9 understates how the other six students did; the median of 88 isn't dragged down by that one low entry, so it's the fairer single number here.</p>
+    </div>
+
+    <h3>Worked Example 2 — Geometric Mean for Compounding Growth</h3>
+    <div class="example">
+      <p>A portfolio returns +10%, then −10%, then +20% over three years. Entered as growth multipliers (1.10, 0.90, 1.20) rather than raw percentages:</p>
+      <p>Sum = 3.20, mean = 3.20 ÷ 3 ≈ <strong>1.0667</strong>, which naively reads as "6.67% per year." The geometric mean is the cube root of 1.10 × 0.90 × 1.20 = 1.188, which is ≈ <strong>1.059</strong> — the true compound annual growth rate is closer to <strong>5.9%</strong>, not 6.67%. The arithmetic mean overstates compounding growth whenever returns fluctuate, which is exactly why this calculator surfaces both numbers side by side.</p>
+    </div>
+
+    <h3>Worked Example 3 — Mode for Repeated, Categorical-Style Data</h3>
+    <div class="example">
+      <p>Ten customer star ratings: 5, 4, 5, 3, 5, 4, 2, 4, 5, 3.</p>
+      <p>Sum = 40, count = 10, mean = <strong>4.0</strong>. Sorted (2,3,3,4,4,4,5,5,5,5), the two middle values are both 4, so the median is <strong>4</strong>. But the mode is <strong>5</strong>, since it appears four times — more than any other rating. Here the mode is arguably the most useful figure: it tells you the single most common review a customer leaves, which the mean and median (both 4) don't directly capture.</p>
+    </div>
+
+    <h3>Mean, Median, Mode, and Geometric Mean at a Glance</h3>
+    <table>
+      <tr><th>Statistic</th><th>How it's found</th><th>Best suited to</th><th>Outlier sensitivity</th></tr>
+      <tr><td>Mean</td><td>Sum ÷ count</td><td>Symmetric data without extremes</td><td>High</td></tr>
+      <tr><td>Median</td><td>Middle of the sorted list</td><td>Skewed data — incomes, wait times, home prices</td><td>Low</td></tr>
+      <tr><td>Mode</td><td>Most frequent value(s)</td><td>Repeated or categorical data — ratings, sizes, survey answers</td><td>None</td></tr>
+      <tr><td>Geometric mean</td><td>nth root of the product</td><td>Growth rates, ratios, anything that compounds</td><td>Low, but undefined at zero/negative</td></tr>
+    </table>
+
+    <h3>Common Mistakes</h3>
+    <ul>
+      <li><strong>Thousands separators break the list.</strong> Typing "1,200" is read as two numbers, 1 and 200, since commas double as delimiters. Use spaces or new lines if any number has a comma in it.</li>
+      <li><strong>Assuming the mean is always "the average" you want.</strong> With skewed data — a handful of very large or very small values — the median usually reflects "typical" better.</li>
+      <li><strong>Averaging percentage changes with the arithmetic mean.</strong> As Example 2 shows, rates compound, so the arithmetic mean overstates real average growth. Convert to multipliers and use the geometric mean instead.</li>
+      <li><strong>Expecting every list to have a mode.</strong> If no value repeats, there is no mode — that's correct, not a bug.</li>
+      <li><strong>Feeding negatives or a zero into a geometric-mean calculation.</strong> It's undefined there, so this calculator shows a dash instead of a misleading value.</li>
+    </ul>
+
+    <h3>What This Calculator Doesn't Do</h3>
+    <p>It reports spread only as range (max − min) — no standard deviation, variance, or percentiles, so it won't say how tightly clustered the numbers are around the mean. It also treats every entry as equally weighted, with no way to give one number more importance than another, which matters if you're averaging exam scores worth different points. Treat this tool as the fast first look at your data, not the final statistical word.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

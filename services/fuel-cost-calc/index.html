@@ -293,6 +293,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why bother working out trip fuel cost in advance</h2>
+    <p>A fuel cost calculator answers one very practical question before you leave: how much cash does this drive actually burn? That number changes how people plan. A weekend road trip might be worth taking the scenic route if the extra fuel is only a few dollars, or worth reconsidering if a rental car turns out to be much thirstier than your own. A carpool needs a fair number to split, not a guess. Someone comparing two cars before buying wants to know what a daily commute costs each of them over a year, not just which one has the "better" spec sheet number.</p>
+    <p>The tricky part is that fuel economy is reported in at least four different, mutually unhelpful units depending on where you live and what your dashboard shows, and gallons themselves come in two different sizes. This tool exists to remove that friction: pick your country, enter three numbers, and the unit conversion happens for you.</p>
+
+    <h2>How to use the three inputs</h2>
+    <ol>
+      <li><strong>Where are you driving</strong> — this sets the default distance unit, fuel-economy unit and currency to match local convention, so you're not stuck converting km to miles in your head before you even start.</li>
+      <li><strong>Trip distance</strong> — the length of the drive as you'd actually measure it (odometer, map route, or GPS trip). Enter it one-way; use the round-trip toggle below for the return leg instead of doubling it yourself.</li>
+      <li><strong>Fuel economy</strong> — read this straight off your car's spec sheet, window sticker, or trip computer, in whichever of km/L, L/100km, MPG (US) or MPG (UK) it's already shown. Don't convert it by hand; pick the matching unit from the dropdown instead.</li>
+      <li><strong>Fuel price</strong> — what you're actually paying at the pump, matched to a per-liter, per-US-gallon or per-UK-gallon price using the unit selector next to the field.</li>
+      <li><strong>Round trip and passengers</strong> (optional, under the details toggle) — tick round trip to double the distance automatically, and set a passenger count to see a fair per-person share of the total.</li>
+    </ol>
+
+    <h2>The math underneath</h2>
+    <div class="example">
+      <p><strong>fuel needed = distance ÷ fuel economy</strong> (converted to liters and kilometers internally, however you entered it)<br>
+      <strong>total cost = fuel needed × price per liter</strong> (or per gallon, matched to your price unit)<br>
+      <strong>cost per passenger = total cost ÷ number of passengers</strong></p>
+      <p>L/100km works backwards from km/L and MPG: it measures fuel used per fixed distance, so a <em>smaller</em> number means better economy — the opposite of km/L and MPG, where <em>bigger</em> is better. The calculator handles that inversion for you, but it's worth knowing which direction you're reading.</p>
+    </div>
+
+    <h3>Worked example 1 — a US road trip in MPG</h3>
+    <div class="example">
+      <p>600 miles, a sedan rated at 28 MPG (US), gas at $3.29 per US gallon, one-way, one driver.<br>
+      Fuel needed: 600 ÷ 28 ≈ <strong>21.43 gallons</strong>.<br>
+      Total cost: 21.43 × $3.29 ≈ <strong>$70.50</strong> — about 11.8¢ per mile.</p>
+    </div>
+
+    <h3>Worked example 2 — a European trip in L/100km, split three ways</h3>
+    <div class="example">
+      <p>425 km one-way (round trip ticked, so 850 km total), a hatchback rated at 6.5 L/100km, diesel at €1.75 per liter, 3 passengers.<br>
+      Fuel needed: 850 × 6.5 ÷ 100 = <strong>55.25 liters</strong>.<br>
+      Total cost: 55.25 × €1.75 ≈ <strong>€96.69</strong>.<br>
+      Per passenger: €96.69 ÷ 3 ≈ <strong>€32.23</strong> each.</p>
+    </div>
+
+    <h3>Worked example 3 — a daily commute in km/L</h3>
+    <div class="example">
+      <p>40 km one-way to work and back (round trip ticked → 80 km), a car rated at 13 km/L, gasoline at ₩1,650 per liter.<br>
+      Fuel needed: 80 ÷ 13 ≈ <strong>6.15 liters</strong> per day.<br>
+      Daily cost: 6.15 × ₩1,650 ≈ <strong>₩10,150</strong> — roughly ₩223,000 over a 22-workday month.</p>
+    </div>
+
+    <h2>Reference: rough real-world fuel economy by vehicle class</h2>
+    <p>Actual figures vary by model, engine, and driving style — use these only as a sanity check on whatever number you enter.</p>
+    <table>
+      <tr><th>Vehicle class</th><th>km/L</th><th>L/100km</th><th>MPG (US)</th></tr>
+      <tr><td>Hybrid compact</td><td>21</td><td>4.8</td><td>50</td></tr>
+      <tr><td>Compact car</td><td>16</td><td>6.3</td><td>38</td></tr>
+      <tr><td>Midsize sedan</td><td>13</td><td>7.7</td><td>31</td></tr>
+      <tr><td>Compact SUV</td><td>11.5</td><td>8.7</td><td>27</td></tr>
+      <tr><td>Full-size SUV</td><td>8.5</td><td>11.8</td><td>20</td></tr>
+      <tr><td>Pickup truck</td><td>7.5</td><td>13.3</td><td>18</td></tr>
+    </table>
+
+    <h2>Common mistakes worth avoiding</h2>
+    <ul>
+      <li><strong>Mixing up gallons.</strong> A US gallon is about 3.785 liters; a UK (imperial) gallon is about 4.546 liters — roughly 20% larger. Using the wrong one skews both the fuel-needed figure and the price you match it to.</li>
+      <li><strong>Reading L/100km the wrong way.</strong> A drop from 8.0 to 6.0 L/100km is a real improvement, even though the number went down — the opposite instinct from km/L or MPG.</li>
+      <li><strong>Forgetting the round-trip toggle.</strong> Entering the one-way distance but expecting a round-trip cost (or vice versa) is the single most common way this kind of estimate ends up half or double what actually gets spent.</li>
+      <li><strong>Using the sticker number instead of the observed one.</strong> Manufacturer combined ratings are measured under ideal conditions; city traffic, cold starts, air conditioning, hills, and a full trunk typically push real consumption 10–20% higher. If you know your car's actual average from past fill-ups, use that instead of the spec sheet.</li>
+      <li><strong>Mismatched price units.</strong> If your receipt shows a per-gallon price but the selector is set to per-liter (or the reverse), the total will be off by a factor of roughly 3.785 or 4.546 — always check the unit next to the price field matches how you actually pay.</li>
+    </ul>
+
+    <h2>What this calculator doesn't cover</h2>
+    <p>This is a fuel-cost estimate only — it doesn't add tolls, parking, wear-and-tear, or depreciation, and it assumes one constant fuel-economy figure for the whole trip, even though mountain roads, heavy traffic, and towing all use more fuel per kilometer than flat highway cruising. Fuel prices are also whatever you type in; there's no live price feed, so the result is only as current as the number you entered. Electric vehicles aren't covered either — their running cost is driven by electricity price and kWh per 100 km or miles per kWh, a different kind of math than liters and gallons.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

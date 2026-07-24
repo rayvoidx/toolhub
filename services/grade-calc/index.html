@@ -245,6 +245,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Finding your current grade in one class</h2>
+    <p>Every class that grades by category — homework, quizzes, labs, a midterm, a final — has an implicit formula sitting behind the syllabus: each category counts for some percentage of the final mark, and your grade is the sum of what you earned in each category, scaled by how much that category is worth. This tool exists for the moment you want that number <em>right now</em>, mid-semester, from whatever grades you already have — not your cumulative GPA across every course you've ever taken, and not a projection of what you'll need on a test you haven't sat yet. It answers one narrow question well: "given the categories I've entered, what is my grade in this class today?"</p>
+    <p>That's a different question from a GPA calculator, which combines final letter grades from several courses using credit hours, and from a reverse "what do I need on the final" calculator, which solves for an unknown future score. This one only works forward, from known scores and known weights, to a single weighted average — which is exactly what most instructors mean when a student asks "what's my grade right now?"</p>
+
+    <h3>How to enter your assignments</h3>
+    <ol>
+      <li>Add one row per graded category — not necessarily per assignment. If your syllabus lists "Homework: 20%" as one line covering eight assignments, either average those eight yourself first and enter one row, or enter each homework with a small slice of that 20% split between them (e.g., 2.5% each for eight items) — just don't enter all eight at 20% apiece, which would silently make homework worth 160% of the grade.</li>
+      <li>For the score field, type whatever you have: a percentage like <code>88</code>, or points earned over points possible like <code>44/50</code> — the calculator converts the fraction to a percentage for you, so you never have to do that division by hand.</li>
+      <li>For the weight field, type the percentage that category is worth toward the final grade, exactly as your syllabus states it (e.g., <code>30</code> for a midterm worth 30%).</li>
+      <li>Leave out categories that haven't happened yet. The calculator only uses the rows you've filled in, so it naturally shows your grade based on completed work — just watch the weight-total warning, described below, so you know how much of the course that partial picture actually covers.</li>
+    </ol>
+
+    <h3>The formula behind the number</h3>
+    <div class="example">
+      <p><strong>Weighted average</strong> = ( Σ (score × weight) ) ÷ ( Σ weight )</p>
+      <p>Each score is multiplied by its own weight, those products are added together, and the total is divided by the sum of the weights you entered — not always by 100. Dividing by the actual weight total (rather than a fixed 100) is what lets the calculator give a meaningful answer even when a final exam category is still empty, because it's scaling by the portion of the course you've actually completed.</p>
+    </div>
+
+    <h3>Worked example 1 — a complete course</h3>
+    <div class="example">
+      <p>Homework 20% at 90, Midterm 30% at 82, Final 50% at 88. Weight total: 20+30+50 = 100%.</p>
+      <p>(90 × 20) + (82 × 30) + (88 × 50) = 1,800 + 2,460 + 4,400 = 8,660</p>
+      <p>8,660 ÷ 100 = <strong>86.6%</strong> — a B on the default scale.</p>
+    </div>
+
+    <h3>Worked example 2 — mid-semester, weights don't total 100%</h3>
+    <div class="example">
+      <p>Quizzes 15% at 94, Labs 25% at 91. The final exam (50%) hasn't happened, so it's left blank. Weight total: 15+25 = 40%.</p>
+      <p>(94 × 15) + (91 × 25) = 1,410 + 2,275 = 3,685</p>
+      <p>3,685 ÷ 40 = <strong>92.1%</strong> — this is the average of the work graded so far, not a prediction of the course grade, since 60% of the weight is still outstanding.</p>
+    </div>
+
+    <h3>Worked example 3 — a typo in the weights</h3>
+    <div class="example">
+      <p>Homework 20% at 78, Midterm 35% at 85, Final 55% at 80 — weights add to 110% because the Final should have been 45%, not 55%.</p>
+      <p>(78 × 20) + (85 × 35) + (80 × 55) = 1,560 + 2,975 + 4,400 = 8,935</p>
+      <p>8,935 ÷ 110 = <strong>81.2%</strong> — still a number, but it's built on weights that overstate the course by 10 points, which is exactly what the weight-total warning is designed to catch before you trust the result.</p>
+    </div>
+
+    <h3>Letter grade boundaries used here</h3>
+    <table>
+      <tr><th>Percentage</th><th>Letter</th><th>Percentage</th><th>Letter</th></tr>
+      <tr><td>97 – 100</td><td>A+</td><td>77 – 79</td><td>C+</td></tr>
+      <tr><td>93 – 96</td><td>A</td><td>73 – 76</td><td>C</td></tr>
+      <tr><td>90 – 92</td><td>A-</td><td>70 – 72</td><td>C-</td></tr>
+      <tr><td>87 – 89</td><td>B+</td><td>67 – 69</td><td>D+</td></tr>
+      <tr><td>83 – 86</td><td>B</td><td>63 – 66</td><td>D</td></tr>
+      <tr><td>80 – 82</td><td>B-</td><td>60 – 62</td><td>D-</td></tr>
+      <tr><td colspan="2"></td><td>Below 60</td><td>F</td></tr>
+    </table>
+    <p>This 10-point US scale is common but not universal — plenty of instructors round to the nearest whole point, drop the +/- distinctions entirely, or set the passing line at 65 or 70 instead of 60. Treat the letter this tool shows as a reference point and confirm the actual cutoffs on your syllabus, since the underlying percentage (not the letter) is what the arithmetic above guarantees is correct.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Entering per-assignment weight instead of per-category weight.</strong> If "Homework" is 20% of the grade across 8 assignments, each individual homework is worth 2.5%, not 20%.</li>
+      <li><strong>Confusing points possible with weight.</strong> A quiz graded out of 50 points is not automatically "50%" of your grade — 50 is the denominator for the score, and the weight is whatever your syllabus assigns to the quiz category separately.</li>
+      <li><strong>Forgetting dropped or extra-credit categories.</strong> If your instructor drops your lowest quiz, only enter the quizzes that count; extra credit can be entered as its own low-weight row with a score above 100.</li>
+      <li><strong>Reading a partial average as a final prediction.</strong> With categories left blank, the number reflects only what's graded so far — it will move once the remaining weight is filled in, sometimes by a lot if the missing category (often the final exam) carries heavy weight.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>It won't combine grades from multiple classes into a GPA, apply credit-hour weighting, or tell you what score you need on a remaining exam to hit a target grade — those are different calculations built around different inputs. It also can't know your school's exact grading policy (rounding rules, drop-lowest rules, pass/fail thresholds), so use the percentage as your source of truth and treat the letter grade as a helpful approximation.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

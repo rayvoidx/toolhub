@@ -79,8 +79,9 @@ for (const slug of slugs) {
       const missing = [...new Set(hooks)].filter(k => !(k in L2.en));
       ok(missing.length === 0, "data-i18n keys not in locales.en: " + missing.slice(0, 6));
       ok(!/Tip Calculator/i.test(L2.en["meta.title"] || "") || slug === "tip-calc", "locales.js looks like tip-calc placeholder copy");
+      const decEnt = s => String(s).replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
       const title = (html.match(/<title>([^<]*)<\/title>/) || [])[1] || "";
-      ok((L2.en["meta.title"] || "") === title, "locales en meta.title != <title>");
+      ok(decEnt(L2.en["meta.title"] || "") === decEnt(title), "locales en meta.title != <title>");
     } catch (e) { errs.push("authenticity check fail: " + e.message); }
     ok(!/https?:\/\/(?!tool-hub\.me|www\.googletagmanager\.com|pagead2\.googlesyndication\.com|github\.com|ctee\.kr|fonts|schema\.org|www\.w3\.org)/.test(html.replace(/<!--[\s\S]*?-->/g, "")), "unexpected external URL in index.html");
 
@@ -98,21 +99,23 @@ for (const slug of slugs) {
       ok((c.match(/GTM-TFBT774X/g) || []).length === 2, f + " GTM count != 2");
     }
 
-    // 8. 레지스트리 JSON
-    const regPath = path.join(REGISTRY, slug + ".json");
-    if (!fs.existsSync(regPath)) errs.push("registry json missing");
-    else {
-      try {
-        const r = JSON.parse(fs.readFileSync(regPath, "utf8"));
-        ok(r.slug === slug, "registry slug mismatch");
-        ok(CATS.includes(r.cat), "registry cat invalid: " + r.cat);
-        ok(r.emoji && r.color && /^#[0-9a-f]{6}$/i.test(r.color), "registry emoji/color invalid");
-        ok(typeof r.dataName === "string" && r.dataName.length > 10, "registry dataName thin");
-        for (const l of LANGS) {
-          ok(r.names && typeof r.names[l] === "string" && r.names[l].length > 0, "registry names." + l + " missing");
-          ok(r.descs && typeof r.descs[l] === "string" && r.descs[l].length > 0, "registry descs." + l + " missing");
-        }
-      } catch (e) { errs.push("registry parse fail: " + e.message); }
+    // 8. 레지스트리 JSON (심화 검증 등 병합이 불필요한 경우 GATE_NO_REGISTRY=1 로 스킵)
+    if (!process.env.GATE_NO_REGISTRY) {
+      const regPath = path.join(REGISTRY, slug + ".json");
+      if (!fs.existsSync(regPath)) errs.push("registry json missing");
+      else {
+        try {
+          const r = JSON.parse(fs.readFileSync(regPath, "utf8"));
+          ok(r.slug === slug, "registry slug mismatch");
+          ok(CATS.includes(r.cat), "registry cat invalid: " + r.cat);
+          ok(r.emoji && r.color && /^#[0-9a-f]{6}$/i.test(r.color), "registry emoji/color invalid");
+          ok(typeof r.dataName === "string" && r.dataName.length > 10, "registry dataName thin");
+          for (const l of LANGS) {
+            ok(r.names && typeof r.names[l] === "string" && r.names[l].length > 0, "registry names." + l + " missing");
+            ok(r.descs && typeof r.descs[l] === "string" && r.descs[l].length > 0, "registry descs." + l + " missing");
+          }
+        } catch (e) { errs.push("registry parse fail: " + e.message); }
+      }
     }
   }
 

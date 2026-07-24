@@ -271,6 +271,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What a hash is actually doing</h2>
+    <p>Every time you hash something with this tool, you run it through a one-way mathematical function that turns any input — a single character, a whole novel, a 4&nbsp;GB video file — into an output of a fixed size. Change a single bit of the input and the output changes completely; feed the same input twice and you get the identical output every time. That combination — fixed size, deterministic, unpredictable on change — is what makes hashes useful for two very different jobs: proving a file wasn't corrupted or tampered with (integrity checking and checksums), and, in a far more hardened form, protecting stored passwords. This generator is built for the first job, not the second — more on why below.</p>
+
+    <h2>Using this generator</h2>
+    <ol>
+      <li><strong>Text tab</strong> — type or paste anything (a config string, a line from a log file, a short message) and all five digests update as you type.</li>
+      <li><strong>File tab</strong> — drop a downloaded file (installer, ISO, archive). The browser reads it with <code>FileReader</code> and hashes the raw bytes; nothing is uploaded anywhere.</li>
+      <li><strong>Output case</strong> — toggle lowercase/UPPERCASE hex. Some vendors publish checksums in uppercase, some in lowercase; the digest itself never changes, only how it's printed.</li>
+      <li><strong>Verify box</strong> — paste the checksum a project published (README, release notes, download page). The matching card lights up green. No match means the file is still downloading, corrupted, or was altered in transit.</li>
+    </ol>
+
+    <h2>How the five algorithms differ</h2>
+    <p>MD5 (1992) produces a 128-bit digest (32 hex characters) over 64 internal rounds; SHA-1 (1995) produces 160 bits (40 hex characters) over 80 rounds. Both compress the input through a Merkle–Damgård construction: the message is padded, split into fixed-size blocks, and each block updates a running internal state. SHA-256, SHA-384 and SHA-512 belong to the newer SHA-2 family — SHA-256 outputs 256 bits (64 hex characters), while SHA-384 and SHA-512 share a larger 512-bit internal state built around 64-bit words, one truncated to 384 bits (96 hex characters) and one left at the full 512 bits (128 hex characters). A longer digest and more mixing rounds mean a dramatically larger search space for anyone trying to engineer two inputs that hash the same.</p>
+
+    <div class="example">
+      <strong>Avalanche effect — one character changes everything (SHA-256):</strong><br>
+      "hello"&nbsp; → <code>2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824</code><br>
+      "Hello"&nbsp; → <code>185f8db32271fe25f561a6fc938b2e264306ec304eda518007d1764826381969</code><br>
+      "hello "&nbsp;→ <code>5e3235a8346e5a4585f8c58562f5052b8fe26a3bb122e1e96c76784964dfc461</code><br>
+      Capitalizing one letter, or adding a single trailing space, produces a completely unrelated digest — there is no partial match and no "close enough" in hashing.
+    </div>
+
+    <div class="example">
+      <strong>Same input, all five algorithms — "Toolhub":</strong><br>
+      MD5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>6bd64e35c120a07f269bbdc1360677ee</code><br>
+      SHA-1&nbsp;&nbsp;&nbsp;<code>ef5a4c13039259f6a56d24b5d870df2b4247732b</code><br>
+      SHA-256&nbsp;<code>22fbef37b03ffdfc6ad6bcbe4905059ee545de8c17664773783eef6c2f34391b</code><br>
+      SHA-384&nbsp;<code>195357237749786e7ae156ded6e303b7c3205f1aec6736ba0b0d6e6ff0c9e4c4ec25789d8e01f0401b3e7a52ae863f61</code><br>
+      SHA-512&nbsp;<code>ec383e5badb9f70c5da2deac794cbe34fd9797d434c46d44cdbbf4e41d793f5263ab8fe435b0ced89def56914531484e0a8718884b4f88fc82ca410f28e42e46</code><br>
+      The digest gets longer as you move down the list, but the input never changes — only the mixing function and internal state size differ.
+    </div>
+
+    <h2>At a glance</h2>
+    <table>
+      <tr><th>Algorithm</th><th>Digest size</th><th>Hex length</th><th>Year</th><th>Collisions found</th><th>Good for</th></tr>
+      <tr><td>MD5</td><td>128 bits</td><td>32 chars</td><td>1992</td><td>Yes, practical (2004)</td><td>Non-security checksums only</td></tr>
+      <tr><td>SHA-1</td><td>160 bits</td><td>40 chars</td><td>1995</td><td>Yes, practical (2017, "SHAttered")</td><td>Legacy checksums only</td></tr>
+      <tr><td>SHA-256</td><td>256 bits</td><td>64 chars</td><td>2001</td><td>None known</td><td>Signatures, certificates, general security</td></tr>
+      <tr><td>SHA-384</td><td>384 bits</td><td>96 chars</td><td>2001</td><td>None known</td><td>High-assurance integrity, TLS</td></tr>
+      <tr><td>SHA-512</td><td>512 bits</td><td>128 chars</td><td>2001</td><td>None known</td><td>Same as SHA-256, faster on 64-bit CPUs</td></tr>
+    </table>
+
+    <h2>Collisions, and why MD5 / SHA-1 are considered broken</h2>
+    <p>A collision is two different inputs that produce the same digest. Researchers demonstrated a practical MD5 collision in 2004 and a practical SHA-1 collision (the "SHAttered" attack) in 2017 — both were engineered deliberately, not found by accident, and that's exactly the risk: an attacker can craft a malicious file that hashes identically to a legitimate one. That's why MD5 and SHA-1 must never back a digital signature, a TLS certificate, or a software-update mechanism, even though they remain perfectly fine for catching accidental corruption — a truncated download, a bit-flipped copy, a partial upload.</p>
+
+    <h2>Hashing is not password storage</h2>
+    <p>A raw hash from this tool, using any of the five algorithms shown, is the wrong way to store passwords. SHA-256 is fast by design — which is exactly the problem: a modern GPU can attempt billions of SHA-256 guesses per second against a leaked password list. Real password storage needs a deliberately slow, memory-hard function such as bcrypt, scrypt, or Argon2, combined with a per-user random salt, so that two users who happen to share a password don't get the same stored value and brute-forcing a single guess stays expensive. If a login system stores plain <code>MD5(password)</code>, treat it as insecure.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li>Comparing a hash generated from pasted text against a checksum meant for a file's exact bytes — an extra trailing newline from copy-pasting changes the digest entirely.</li>
+      <li>Treating uppercase and lowercase hex as "different" hashes — they're the same digest, just printed differently; the case toggle here only changes formatting.</li>
+      <li>Hashing a password and storing the result as if it were secure — use a dedicated password hasher (bcrypt/Argon2), not this generator, for anything that authenticates a user.</li>
+      <li>Trusting an MD5 or SHA-1 match as proof of authenticity against a determined attacker — fine against accidental corruption, not against someone who deliberately engineered a collision.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>It doesn't compute HMAC (keyed hashes used for message authentication), it doesn't perform password hashing, and it can't reverse a digest back into the original input — hashing is one-way by design. For those needs, reach for a dedicated cryptography library or a password-hashing utility built for that purpose.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

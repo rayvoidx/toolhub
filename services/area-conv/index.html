@@ -268,6 +268,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why area conversion trips people up</h2>
+    <p>Area units don't scale the way people expect from everyday length conversions, because area is a squared quantity. A property listed in square feet, a farm plot measured in acres, and a Korean apartment quoted in pyeong (평) all describe the same kind of thing — surface area — but the units come from three unrelated systems (imperial, US survey/English land measure, and the traditional Korean unit still used in real estate). This converter exists for the moment you need to compare them: reading an overseas listing, sizing flooring or turf for a room, or checking whether a plot described in hectares matches what a broker quoted in pyeong.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Enter the number you have — for example the floor area on a listing, or the acreage on a deed.</li>
+      <li>Set <strong>From</strong> to the unit that number is already in, and <strong>To</strong> to the unit you want. The swap button (⇄) flips both at once.</li>
+      <li>Read the highlighted result, or scroll the table below to see the same value expressed in all ten units simultaneously.</li>
+    </ol>
+
+    <h3>The math: why you can't just square a length factor casually</h3>
+    <p>Every conversion here goes through square meters as the common base. A linear factor is squared to get the matching area factor — but you square the exact linear ratio, not a rounded one. A foot is defined as exactly 0.3048 m, so a square foot is 0.3048² = 0.09290304 m² exactly (not the rough 0.093 many people memorize). A yard is 3 ft, so a square yard is 9 × that factor, 0.83612736 m². Pyeong is defined as 400⁄121 m² (≈3.305785 m²), a ratio that comes from the historical conversion of the Japanese/Korean 尺貫法 (shakkanhō) unit "tsubo" into the metric system — it is not a round number in either direction, which is why hand-converting it by memory tends to drift over large areas.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. Reading a Korean apartment listing.</strong> A unit is listed as 84 m² (a very common Korean apartment size class). In pyeong: 84 ÷ (400⁄121) = 84 × 121⁄400 ≈ <strong>25.41 py</strong>. In US terms: 84 ÷ 0.09290304 ≈ <strong>904.17 ft²</strong>. This is why "84 m²" and "25-pyeong" and "roughly 900 sq ft" all refer to the same apartment.</div>
+    <div class="example"><strong>2. Buying flooring by the square meter.</strong> A room measures 12 ft × 10 ft = 120 ft², but the flooring is priced per square meter. 120 × 0.09290304 ≈ <strong>11.15 m²</strong>. Always add 5–10% for cuts and waste before ordering — the converter gives the exact area, not the material you should buy.</div>
+    <div class="example"><strong>3. Comparing farmland across unit systems.</strong> A 12-acre parcel: 12 × 4046.8564224 ≈ 48,562.28 m², which is <strong>4.856 hectares</strong> or <strong>0.0486 km²</strong>. Since 1 ha ≈ 2.471 ac, a quick sanity check is 12 ÷ 2.471 ≈ 4.86 ha — matches.</div>
+    <div class="example"><strong>4. A small land lot quoted in pyeong.</strong> 500 py × 3.305785 ≈ 1,652.89 m², which is only <strong>≈0.408 acres</strong> — a reminder that pyeong is a much smaller unit than the acre (1 acre ≈ 1,224 py), so a "500-pyeong lot" is modest by acreage standards even though the number 500 sounds large.</div>
+
+    <h3>Reference: exact conversion factors to 1 m²</h3>
+    <table>
+      <thead><tr><th>Unit</th><th>1 unit in m²</th><th>Typical use</th></tr></thead>
+      <tbody>
+        <tr><td>Square millimeter (mm²)</td><td>0.000001</td><td>Precision machining, PCB traces</td></tr>
+        <tr><td>Square centimeter (cm²)</td><td>0.0001</td><td>Small parts, fabric swatches</td></tr>
+        <tr><td>Square meter (m²)</td><td>1 (base)</td><td>Floor area, most of the world</td></tr>
+        <tr><td>Square kilometer (km²)</td><td>1,000,000</td><td>Cities, regions, watersheds</td></tr>
+        <tr><td>Hectare (ha)</td><td>10,000</td><td>Farmland, forestry (metric world)</td></tr>
+        <tr><td>Square inch (in²)</td><td>0.00064516</td><td>Screens, small US/UK parts</td></tr>
+        <tr><td>Square foot (ft²)</td><td>0.09290304</td><td>US/UK real estate, flooring</td></tr>
+        <tr><td>Square yard (yd²)</td><td>0.83612736</td><td>Carpet, turf, US construction</td></tr>
+        <tr><td>Acre (ac)</td><td>4046.8564224</td><td>Farmland, land deeds (US/UK)</td></tr>
+        <tr><td>Pyeong (평)</td><td>3.305785… (400⁄121)</td><td>Korean apartments &amp; land</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Squaring the wrong factor.</strong> Multiplying an area in ft² by the linear factor 0.3048 (instead of 0.09290304) undercounts by roughly a factor of 3.28 — a very common spreadsheet error.</li>
+      <li><strong>Rounding pyeong to "3.3 m²".</strong> Fine for a single room, but on a large plot the rounding error compounds — use the exact 400⁄121 ratio this tool applies.</li>
+      <li><strong>Treating acres and hectares as interchangeable.</strong> They're close in magnitude (1 ha ≈ 2.47 ac) but not equal — mixing them up on a land deed or purchase agreement is a real, expensive mistake.</li>
+      <li><strong>Confusing gross vs. exclusive floor area.</strong> Korean real estate distinguishes 전용면적 (exclusive/private area) from 공급면적 (supply area including shared space); this converter only converts the number you type, not which definition it represents — check which figure a listing is quoting before converting.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>This is a unit converter, not a geometry calculator — it doesn't compute area from a length × width you haven't multiplied yet, and it can't tell you which floor-area definition a listing used. For legal or contractual purposes (land deeds, permits, tax filings), always convert from the exact figure stated in the original document, and confirm the unit convention your jurisdiction expects.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

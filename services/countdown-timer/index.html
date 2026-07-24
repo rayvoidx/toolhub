@@ -214,6 +214,81 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why a countdown beats watching the clock</h2>
+    <p>A clock says what time it is; it says nothing about how much of a fixed window is left. Cooking, workouts, study blocks and speaking slots share the same shape: a task with a hard duration where overrunning has a real cost — burnt food, a missed rep count, a talk that runs long. A countdown turns "keep an eye on the time" into "work until it rings," which is why it lives in kitchens, gyms, exam halls and behind podiums.</p>
+    <p>This page is a single-purpose countdown: one duration, one run, one alarm — not a multi-timer or an interval looper (see limitations below).</p>
+
+    <h2>Setting a duration</h2>
+    <ol>
+      <li>Type hours (0–23), minutes (0–59), seconds (0–59), or tap a preset (1/3/5/10/30 min).</li>
+      <li>Press Start. Fields lock while running so a stray keystroke can't change a duration already counting down.</li>
+      <li>Pause freezes the remaining time; Resume continues from exactly there.</li>
+      <li>Reset clears the run and returns to your last confirmed duration.</li>
+      <li>Your last-used h/m/s is remembered for next time — but a run in progress is not. Closing or reloading the tab mid-run drops back to idle.</li>
+    </ol>
+
+    <h2>How it stays correct in the background</h2>
+    <p>A naive timer decrements a counter once a second with <code>setInterval</code>. That drifts, because browsers throttle timers in background or minimized tabs to save power — a "one second" tick can quietly become two or three seconds once a tab loses focus. Over a 25-minute run that adds up to real error.</p>
+    <p>This timer never trusts the tick count. Start computes one fixed value: <strong>end time = now + duration</strong>. Every tick just asks the clock "what time is it now?" and subtracts: <strong>remaining = end time − now</strong>. A throttled tab that fires once every few seconds still lands on the right answer the moment it fires, and a tab that slept past the end time sees a negative remainder on its next tick and rings immediately instead of catching up. Pause/Resume works the same way: pausing banks the remaining milliseconds, resuming recomputes a fresh end time from them.</p>
+
+    <h3>Worked example 1 — the reverse-timer trick for a talk</h3>
+    <div class="example">
+      You have a 12-minute speaking slot and want a silent cue exactly 2 minutes before you must stop, without mentally tracking elapsed time.<br>
+      Set the countdown for <strong>12 − 2 = 10 minutes</strong>, not 12, and start it with your slot. When it rings, exactly 2 minutes remain — wrap up and stop. One subtraction, done before you start talking, replaces mental math while you're talking.
+    </div>
+
+    <h3>Worked example 2 — a Pomodoro study block</h3>
+    <div class="example">
+      Classic pacing: 25 min focused work, 5 min break, repeated, with a longer break after four rounds.<br>
+      4 × 25 = 100 minutes of work, plus 3 short breaks between rounds = 3 × 5 = 15 minutes, plus one 20-minute long break after round four.<br>
+      Total for one full set: 100 + 15 + 20 = <strong>135 minutes (2 h 15 min)</strong>, of which 100 minutes is focused work. Set 25:00 for each work block and 5:00 (20:00 on the fourth) for each break.
+    </div>
+
+    <h3>Worked example 3 — boiling an egg, adjusted for altitude</h3>
+    <div class="example">
+      At sea level (water boiling at 100 °C), a large fridge-cold egg takes about 6:30 for soft, 8:00 for jammy, 11:00 for hard-boiled, timed from a rolling boil.<br>
+      Water boils cooler as elevation rises (roughly 1 °C per ~300 m), so eggs cook slower. Around 1,500 m, add about 1 minute to each: 7:30 / 9:00 / 12:00. Drop the egg in as you start the countdown so both begin together.
+    </div>
+
+    <h2>Reference durations</h2>
+    <table>
+      <tr><th>Duration</th><th>Common use</th><th>Why this length</th></tr>
+      <tr><td>1 min</td><td>Rest between exercise sets</td><td>Recovers breath without losing heart-rate elevation</td></tr>
+      <tr><td>3 min</td><td>Steeping tea, instant noodles</td><td>Matches most packaging instructions</td></tr>
+      <tr><td>5 min</td><td>Micro-break, stretch, Pomodoro short break</td><td>Resets focus without losing momentum</td></tr>
+      <tr><td>10 min</td><td>Reading sprint, warm-up</td><td>Long enough for real progress</td></tr>
+      <tr><td>25 min</td><td>Pomodoro focus block</td><td>The duration the technique is built around</td></tr>
+      <tr><td>30 min</td><td>Workout block, meeting time-box</td><td>Fits a full routine or agenda item</td></tr>
+    </table>
+
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Expecting sound before pressing Start.</strong> Browsers block audio until you interact with the page, so the sound engine only arms on the Start click — no separate "enable sound" step is possible.</li>
+      <li><strong>Closing the tab and expecting the run to resume.</strong> Only your last duration is remembered, not a run in progress. Keep the tab open and minimized instead, or install it as an app.</li>
+      <li><strong>Setting all three fields to zero.</strong> Start stays disabled with a short notice, by design, rather than silently doing nothing.</li>
+      <li><strong>Phone on silent.</strong> The hardware silent switch and system volume sit above any web page's control.</li>
+    </ul>
+
+    <h2>What this timer doesn't do</h2>
+    <p>It runs one countdown at a time — it won't chain a work interval into a rest interval and back (a Tabata- or HIIT-style looper), so interval training means restarting the duration by hand each round. It isn't tied to wall-clock time either: it counts down a duration, it won't ring at "3:00 PM" — that needs a scheduled alarm. And like any browser timer, it's accurate to whole seconds, not milliseconds — fine for cooking or study, not competition-grade split timing.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

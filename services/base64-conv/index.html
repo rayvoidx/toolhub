@@ -271,6 +271,87 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:.1em .35em;border-radius:4px}
+    </style>
+
+    <h2>What Base64 actually encodes, and why it exists</h2>
+    <p>Computers store everything as raw bytes, but many of the pipes data travels through — email bodies, JSON fields, URL query strings, HTML attributes — were built to carry printable text, not arbitrary binary, and can strip high-bit bytes or choke on reserved symbols. Base64 makes that irrelevant: it repackages any bytes into a string built only from 64 safe characters (<code>A–Z</code>, <code>a–z</code>, <code>0–9</code>, <code>+</code>, <code>/</code>), so the result can sit inside a JSON string, a JWT, an <code>&lt;img&gt;</code> <code>src="data:..."</code> attribute, or an email attachment without anything downstream misreading it.</p>
+    <p>It's a <em>transport encoding</em>, not compression and not encryption — the output is always larger than the input, and anyone can decode it back with no key. Its only job is making binary data survive text-only channels intact.</p>
+
+    <h2>Using this encoder / decoder</h2>
+    <ol>
+      <li><strong>Text tab:</strong> choose Encode or Decode, then type or paste into either the Text box or the Base64 box — the other box fills in live. Encoding reads your input as UTF-8 bytes first, so Korean, Japanese, Chinese and emoji encode and decode losslessly, not just plain ASCII.</li>
+      <li><strong>URL-safe checkbox:</strong> tick it before encoding for a URL, filename, or JWT segment. Decoding accepts either alphabet automatically, so you never need to untick it just to paste something in.</li>
+      <li><strong>Image tab:</strong> drop or choose a file for a ready-to-use <code>data:</code> URI plus the raw Base64 payload. To reverse it, paste a Base64 string or data URI into the decode box, preview, then download the reconstructed file.</li>
+    </ol>
+
+    <h2>The mechanics: 6-bit groups and padding</h2>
+    <p>Base64 works by regrouping bits, not bytes. Input bytes are 8 bits each, but the 64-symbol alphabet only needs 6 bits per character (2⁶ = 64). The encoder takes 3 input bytes (24 bits) at a time and re-slices those 24 bits into four 6-bit chunks, each mapped to one output character — a 3-bytes-in → 4-characters-out ratio, which is exactly why output is always about 33% larger than the source.</p>
+    <p>When the input length isn't a multiple of 3, the last group is short. The encoder pads the missing bits with zeros and appends <code>=</code> characters so the decoder knows how many trailing bits were real data. One leftover byte yields <code>==</code>; two leftover bytes yield a single <code>=</code>; a clean multiple of 3 needs no padding.</p>
+
+    <h2>Worked examples</h2>
+    <div class="example">
+      <strong>Example 1 — plain ASCII, no padding needed.</strong><br>
+      <code>Hi!</code> is 3 bytes: <code>H</code>=72, <code>i</code>=105, <code>!</code>=33, i.e. <code>01001000 01101001 00100001</code>. Re-sliced into four 6-bit groups — <code>010010 000110 100100 100001</code> — that's decimal 18, 6, 36, 33, which map to <code>S</code>, <code>G</code>, <code>k</code>, <code>h</code>. Result: <code>SGkh</code>. Because 3 bytes is a full group, there's no padding.
+    </div>
+    <div class="example">
+      <strong>Example 2 — a short input that needs padding.</strong><br>
+      <code>Hi</code> is only 2 bytes (16 bits). That's not a clean 3-byte group, so the encoder pads it out and produces 3 real characters plus one filler: <code>SGk=</code>. The lone <code>=</code> tells the decoder that the last character only carried 4 real data bits, not 6.
+    </div>
+    <div class="example">
+      <strong>Example 3 — UTF-8 multi-byte text.</strong><br>
+      <code>안녕</code> looks like 2 characters, but each Korean syllable is 3 bytes in UTF-8, so the real input is 6 bytes — a clean multiple of 3. Encoding those 6 bytes gives <code>7JWI64WV</code>, no padding at all. This tool converts text to UTF-8 bytes before encoding, so Korean, CJK and emoji round-trip exactly.
+    </div>
+
+    <h2>How much bigger does Base64 make things?</h2>
+    <p>Every 3 input bytes become 4 output characters, so output size is predictable — useful when deciding whether to embed an image as a data URI instead of linking to it as a file.</p>
+    <table>
+      <tr><th>Input size</th><th>Base64 output size</th><th>Overhead</th></tr>
+      <tr><td>2 bytes</td><td>4 characters</td><td>padded to a full group</td></tr>
+      <tr><td>100 bytes</td><td>136 characters</td><td>+36%</td></tr>
+      <tr><td>1 KB (1,024 B)</td><td>~1,368 characters</td><td>+33.6%</td></tr>
+      <tr><td>100 KB image</td><td>~133 KB of text</td><td>+33.3%</td></tr>
+      <tr><td>1 MB file</td><td>~1.33 MB of text</td><td>+33.3%</td></tr>
+    </table>
+    <p>The overhead converges to exactly 4/3 (≈33.3%) for larger inputs; small inputs look worse only because of the fixed padding on the last group.</p>
+
+    <h2>Standard vs. URL-safe Base64</h2>
+    <p>Two of the 64 alphabet characters — <code>+</code> and <code>/</code> — are meaningful symbols inside URLs and file paths, and <code>=</code> padding is reserved in query strings. RFC 4648 §5 defines a URL-safe variant that swaps those two characters and drops the padding, so the string needs no escaping inside a URL, filename, or JWT segment:</p>
+    <table>
+      <tr><th>Position</th><th>Standard Base64</th><th>URL-safe Base64</th></tr>
+      <tr><td>62nd symbol</td><td><code>+</code></td><td><code>-</code></td></tr>
+      <tr><td>63rd symbol</td><td><code>/</code></td><td><code>_</code></td></tr>
+      <tr><td>Padding</td><td><code>=</code> / <code>==</code></td><td>omitted</td></tr>
+    </table>
+    <p>For example, the 3 bytes <code>0x01 0x0f 0xfe</code> encode to <code>AQ/+</code> in standard Base64 but <code>AQ_-</code> in URL-safe form — same data, characters swapped, padding dropped. Tick the URL-safe box before encoding if the output is headed into a URL, a filename, or a JWT; leave it off for JSON payloads or anything else that doesn't care about those symbols.</p>
+
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Assuming Base64 is encryption.</strong> It has no key or secret — anyone can decode it instantly. Never use it to "hide" passwords or personal data; it only changes the character set, not the confidentiality.</li>
+      <li><strong>Encoding non-Latin1 text with a naive <code>btoa()</code> call.</strong> Plain <code>btoa()</code> only understands code points 0–255, so Korean, emoji, or most CJK text throws or corrupts. Convert to UTF-8 bytes first, which this tool does automatically.</li>
+      <li><strong>Mixing the two alphabets by hand.</strong> Swapping <code>+</code>/<code>/</code> for <code>-</code>/<code>_</code> without also handling the padding causes silent decode failures in stricter parsers.</li>
+      <li><strong>Forgetting the data URI prefix matters.</strong> An <code>&lt;img&gt;</code> tag or CSS <code>background-image</code> needs the full <code>data:image/png;base64,...</code> string, not just the raw payload — this tool gives you both, separately.</li>
+      <li><strong>Base64-encoding large files "to save space."</strong> It does the opposite, inflating size by roughly a third — use it for portability, not storage efficiency.</li>
+    </ul>
+
+    <h2>What this tool doesn't do</h2>
+    <p>This is encoding, not compression or encryption, and it doesn't validate that decoded image bytes form a well-formed file — if you paste corrupted or truncated Base64, the browser's image preview may simply fail to render. For genuinely sensitive data, encrypt first and Base64-encode the ciphertext only if you need it in a text-safe channel.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

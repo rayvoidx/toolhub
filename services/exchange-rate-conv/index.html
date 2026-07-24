@@ -237,6 +237,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why exchange rates aren't one single number</h2>
+    <p>Every currency pair actually has several different "rates" depending on who is quoting it and why. The number this converter shows is the mid-market rate — the fair, no-markup midpoint between what currency dealers buy and sell at, the same figure you'd see quoted on the news or in a central bank bulletin. It's the right number for planning a trip budget, sanity-checking an invoice, or judging whether a remittance quote is fair. It is not, however, the number your bank, card issuer, or an airport exchange counter will actually hand you, because each of them builds its own markup on top before you see a price.</p>
+
+    <h3>Reading and using the converter</h3>
+    <ol>
+      <li>Type the amount into the <strong>Amount</strong> field — digits only, with or without thousands separators.</li>
+      <li>Choose the currency you're converting <strong>From</strong> and the one you want <strong>To</strong> from the two dropdowns.</li>
+      <li>Use the ⇄ swap button to flip the pair instantly instead of reopening both dropdowns.</li>
+      <li>Tap a quick-pair chip (USD→EUR, GBP→USD, USD→JPY, USD→INR) to jump straight to a common route.</li>
+      <li>Check the small reference date printed under the result — it tells you exactly which day's rate table was used, so you know how fresh the number is before relying on it for anything time-sensitive.</li>
+    </ol>
+
+    <h3>The mid-market rate vs. the "매매기준율" you'll actually be quoted</h3>
+    <p>Banks and exchange counters don't quote one rate — they quote a buying rate and a selling rate straddling the mid-market figure, a gap known as the spread. Korean banks publish this as the 매매기준율 (base settlement rate) each morning, then add their own margin on either side: 현찰 살 때 (cash buying, what you pay to acquire foreign cash) sits above it, 현찰 팔 때 (cash selling, what you receive selling foreign cash back) sits below it. The wider the spread, the worse the deal regardless of how the headline rate looks.</p>
+
+    <h3>How the conversion is actually calculated</h3>
+    <div class="example">
+      <p>Rates for all 16 supported currencies are stored against a single anchor currency, USD. To convert between any two of them, the tool doesn't look up a direct pair — it bridges through that anchor:</p>
+      <p><strong>Result = Amount × (rate of "To" per 1 USD ÷ rate of "From" per 1 USD)</strong></p>
+      <p>This is the same method professional FX desks use to build "cross rates" for pairs that rarely trade directly against each other, such as KRW→JPY or INR→GBP.</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p><strong>Example 1 — direct pair.</strong> Converting 500 USD to EUR at a sample rate of 0.92 EUR per USD: 500 × 0.92 = <strong>460.00 EUR</strong>. No bridging needed since USD is the anchor currency itself.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — cross rate through the anchor.</strong> Converting 200,000 KRW to JPY, using sample rates of 1,380 KRW per USD and 155 JPY per USD: first 200,000 ÷ 1,380 = 144.93 USD, then 144.93 × 155 ≈ <strong>22,463 JPY</strong>. Neither KRW nor JPY was checked directly against the other — the USD bridge did the work invisibly.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — mid-market vs. what you'll actually pay.</strong> A traveler converts 1,000 USD to EUR here at 0.92 → 920 EUR. Their card issuer, applying roughly a 2% spread plus a 1% foreign-transaction fee, effectively converts at about 0.92 × 0.97 ≈ 0.892, delivering only about 892 EUR — a gap near 28 EUR that's invisible unless you first check the mid-market baseline.</p>
+    </div>
+
+    <h3>Typical spread and fee ranges by payment method</h3>
+    <table>
+      <tr><th>Method</th><th>Spread vs. mid-market</th><th>Extra fee</th></tr>
+      <tr><td>Airport / street cash kiosk</td><td>3% – 8%</td><td>Usually none, buried in the rate</td></tr>
+      <tr><td>Bank wire transfer</td><td>1% – 3%</td><td>Flat fee, roughly $15–$50</td></tr>
+      <tr><td>Credit / debit card abroad</td><td>0% – 1%</td><td>0% – 3% foreign transaction fee</td></tr>
+      <tr><td>Fintech transfer app</td><td>0.3% – 1%</td><td>Small % or flat, disclosed upfront</td></tr>
+      <tr><td>"Pay in home currency" (DCC)</td><td>3% – 7%</td><td>Hidden inside the offered rate</td></tr>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Treating this number as final.</strong> It's the fair baseline, not what any specific bank, card, or kiosk will charge you — always compare their quoted rate against it before accepting a deal.</li>
+      <li><strong>Ignoring the reference date.</strong> For a same-day purchase it barely matters; for a large transfer or an invoice negotiated days apart, relying on a stale rate can misstate the real cost.</li>
+      <li><strong>Accepting "Pay in [your home currency]" at a foreign card terminal.</strong> That Dynamic Currency Conversion option almost always embeds a worse rate than letting your own card network convert it — choose the local currency instead.</li>
+      <li><strong>Forgetting the fee sits on top of the spread.</strong> A "zero commission" exchange counter can still be expensive if its quoted buy/sell rate is already several percent off the mid-market figure.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>This is a reference calculator, not a trading terminal: as the FAQ notes, the rate table refreshes once a day from mid-market reference sources, not a tick-by-tick interbank feed, so it shouldn't be used to time an FX trade or a large, rate-sensitive transfer. It also has no visibility into any specific bank's actual spread or fee schedule — use the figure here as the honest, no-markup baseline, then ask your bank or transfer provider for their all-in rate and compare the two before you commit.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

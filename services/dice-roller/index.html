@@ -219,6 +219,79 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Dice notation, probability, and why a fair RNG matters</h2>
+    <p>Tabletop games settle disputes with dice because a die is cheap, physical, and (mostly) impartial — but a physical die can be shaved, warped, or dropped on a slope, and rolling eight six-sided dice for a fireball by hand is slow. A dice roller solves the mechanical half of that problem: it produces the same range of outcomes as the physical object, at any quantity, with a random source that doesn't degrade the way a worn plastic die does. That matters for anything scored by chance — a Dungeons &amp; Dragons attack roll, a Yahtzee turn, a board game that moves a token, or a classroom probability demonstration.</p>
+    <p>The shorthand that makes this practical is dice notation. It was popularized by tabletop RPGs in the 1970s as a compact way to write "roll some dice and add a number" inside a rulebook, and it has since become the default way games, apps, and even spreadsheet formulas describe a roll.</p>
+
+    <h3>Reading and entering dice notation</h3>
+    <ol>
+      <li>Notation is written as <strong>count</strong> "d" <strong>sides</strong>, optionally followed by <strong>+</strong> or <strong>−</strong> and a flat modifier — no spaces, no other symbols.</li>
+      <li>The count can be left out when it is 1: <code>d20</code> means the same thing as <code>1d20</code>.</li>
+      <li>The modifier is added once to the total after every die has been summed, never to each individual die.</li>
+      <li>Type it into the notation field and press Roll; the notation box overrides whatever die buttons and quantity are selected, so you don't need to also set them.</li>
+    </ol>
+
+    <h3>Why the total isn't flat like a single die</h3>
+    <p>A single die is uniform: every one of its faces has exactly the same chance, 1 in the number of sides. Add a second die and that stops being true, because the total is a sum, and sums have more ways to hit the middle than the edges. Roll one d6 and a 1 is as likely as a 6. Roll two d6 and a 7 is six times more likely than a 2, because only one combination (1+1) makes 2, while six combinations (1+6, 2+5, 3+4, 4+3, 5+2, 6+1) make 7. The more dice you pool, the more the total clusters around its average and the rarer the extreme rolls become — the same shape that shows up whenever independent random amounts are added together.</p>
+    <div class="example">
+      <strong>Two general formulas for N dice with S sides and modifier M</strong><br>
+      Minimum total = N × 1 + M · Maximum total = N × S + M · Average total = N × (S + 1) / 2 + M
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Damage roll — 2d6+3</strong><br>
+      Two six-sided dice, add 3. Range: 2×1+3 = 5 to 2×6+3 = 15. Average: 2 × 3.5 + 3 = 10. A result of 4 and 6 on the dice gives 4+6+3 = 13 total.
+    </div>
+    <div class="example">
+      <strong>Attack roll vs. armor class — d20+5 against AC 16</strong><br>
+      You hit if the total meets or beats 16, so the raw d20 must show at least 16 − 5 = 11. Eleven faces out of twenty (11 through 20) succeed, so the hit chance is 11/20 = 55%.
+    </div>
+    <div class="example">
+      <strong>Area damage — 8d6 (a classic fireball)</strong><br>
+      Eight six-sided dice, no modifier. Range: 8 to 48. Average: 8 × 3.5 = 28 — useful for judging whether a spell is "about average" before you even see the individual dice.
+    </div>
+
+    <h3>Sum probabilities for 2d6</h3>
+    <table>
+      <tr><th>Total</th><th>Ways to roll it</th><th>Probability</th></tr>
+      <tr><td>2 or 12</td><td>1 / 36</td><td>2.8%</td></tr>
+      <tr><td>3 or 11</td><td>2 / 36</td><td>5.6%</td></tr>
+      <tr><td>4 or 10</td><td>3 / 36</td><td>8.3%</td></tr>
+      <tr><td>5 or 9</td><td>4 / 36</td><td>11.1%</td></tr>
+      <tr><td>6 or 8</td><td>5 / 36</td><td>13.9%</td></tr>
+      <tr><td>7</td><td>6 / 36</td><td>16.7%</td></tr>
+    </table>
+    <p>By contrast, a d20 has no "middle bump" at all — every face from 1 to 20 sits at a flat 5%, which is exactly why d20 systems use a single die for pass/fail checks (any target number is easy to reason about) and reserve multi-die pools like 2d6 or 8d6 for damage and other quantities that should cluster near an average.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Applying the modifier per die instead of once.</strong> 2d6+3 is (die + die) + 3, not (die+3) + (die+3).</li>
+      <li><strong>Expecting a multi-die total to behave like a single die.</strong> After a string of low 2d6 rolls, a very high roll is not "due" — each roll is independent of the last (the gambler's fallacy).</li>
+      <li><strong>Typos in notation</strong> such as a stray space, a missing "d", or a percent sign — the field validates the pattern and flags anything it can't parse instead of guessing.</li>
+      <li><strong>Assuming a screen RNG needs auditing like a physical die.</strong> This roller draws from the browser's <code>crypto.getRandomValues</code> and discards out-of-range draws (rejection sampling) rather than using modulo, which is what a plain <code>Math.random() % sides</code> approach would do and which subtly favors low faces on many side counts.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>It rolls and sums independent dice — it does not implement house rules that change the math, such as dropping the lowest die, exploding dice that reroll on a max face, or rolling twice and keeping the higher result (advantage). Any of those can still be done manually: roll the pool once for a normal result, or roll it twice and compare the totals yourself for an advantage-style check. And while a cryptographic RNG is more than fair enough for games, quizzes, and giveaways, it is not a substitute for a hardware random source in contexts that need certified, audited randomness, such as lotteries or gambling regulation.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

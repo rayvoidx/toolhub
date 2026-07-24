@@ -233,6 +233,94 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>Why body fat percentage tells you more than the scale</h2>
+    <p>A bathroom scale only reports total mass — it can't tell you whether a change came from fat, muscle, or water. Two people can share the same height, weight, and even the same BMI, yet carry very different amounts of fat. The U.S. Navy circumference method used here estimates that split from a few tape measurements, so the result reflects how much of your weight is fat versus lean tissue (muscle, bone, organs, water), not one blended number.</p>
+    <p>It's most useful while actively reshaping your body: cutting calories while lifting to keep muscle, "bulking" and wanting to know how much of the gain was fat, or checking whether a normal-looking weight is hiding a higher fat percentage than expected (see example 3 below).</p>
+
+    <h2>How to take the measurements</h2>
+    <ol>
+      <li>Choose Male or Female first — the equation and inputs differ; only women enter a hip girth.</li>
+      <li>Enter height and weight accurately; both feed directly into the formula, not just for reference.</li>
+      <li>Wrap the tape around the neck just below the larynx, sloping slightly forward-down, snug but not compressing the skin.</li>
+      <li>Measure the waist at the navel (men) or the narrowest point of the torso (women).</li>
+      <li>Women also measure the hips at their widest point around the buttocks.</li>
+      <li>Press Calculate. A result far from your last reading usually means a twisted or slack tape — re-measure it.</li>
+    </ol>
+
+    <h2>The formula behind the number</h2>
+    <p>The calculator runs the classic U.S. Navy circumference equations, which relate body fat to the logarithm of your girths rather than a simple ratio:</p>
+    <div class="example">
+      <p><strong>Men:</strong> body fat % = 495 ÷ (1.0324 − 0.19077 × log10(waist − neck) + 0.15456 × log10(height)) − 450</p>
+      <p><strong>Women:</strong> body fat % = 495 ÷ (1.29579 − 0.35004 × log10(waist + hip − neck) + 0.22100 × log10(height)) − 450</p>
+      <p style="margin-top:8px">Girths are in centimeters. Fat mass = weight × body fat % ÷ 100; lean body mass = weight minus fat mass.</p>
+    </div>
+    <p>The waist (and hip, for women) term carries a far larger coefficient than the height term, so trunk girth dominates — a few centimeters at the waist move the result much more than the same change at the neck or in height.</p>
+
+    <h3>Worked example 1 — a lean, fitness-level man</h3>
+    <div class="example">
+      Height 175 cm, weight 78 kg, neck 38 cm, waist 84 cm.<br>
+      waist − neck = 46 → log10(46) = 1.6628, log10(175) = 2.2430.<br>
+      Denominator ≈ 1.0324 − (0.19077 × 1.6628) + (0.15456 × 2.2430) ≈ 1.0619.<br>
+      Body fat % = 495 ÷ 1.0619 − 450 ≈ <strong>16.2%</strong> — "Fitness" band (14-17%).<br>
+      Fat mass ≈ 78 × 0.162 ≈ 12.6 kg. Lean mass ≈ 65.4 kg.
+    </div>
+
+    <h3>Worked example 2 — a woman in the "average" range</h3>
+    <div class="example">
+      Height 162 cm, weight 60 kg, neck 31 cm, waist 72 cm, hip 96 cm.<br>
+      waist + hip − neck = 137 → log10(137) = 2.1367, log10(162) = 2.2095.<br>
+      Denominator ≈ 1.29579 − (0.35004 × 2.1367) + (0.221 × 2.2095) ≈ 1.0362.<br>
+      Body fat % = 495 ÷ 1.0362 − 450 ≈ <strong>27.7%</strong> — "Average" band (25-31%).<br>
+      Fat mass ≈ 60 × 0.277 ≈ 16.6 kg. Lean mass ≈ 43.4 kg.
+    </div>
+
+    <h3>Worked example 3 — normal weight, higher body fat</h3>
+    <div class="example">
+      Height 180 cm, weight 76 kg, neck 37 cm, waist 98 cm.<br>
+      BMI = 76 ÷ 1.80² ≈ 23.5 — inside the commonly cited 18.5-24.9 "normal weight" range.<br>
+      waist − neck = 61 → log10(61) = 1.7853. Denominator ≈ 1.0324 − (0.19077 × 1.7853) + (0.15456 × 2.2553) ≈ 1.0404.<br>
+      Body fat % = 495 ÷ 1.0404 − 450 ≈ <strong>25.8%</strong> — already the "Obese" band by fat percentage.<br>
+      Fat mass ≈ 19.6 kg, lean mass ≈ 56.4 kg. A larger waist relative to neck and height pushes fat percentage up long before a weight-based number reacts — the pattern people mean by "skinny fat."
+    </div>
+
+    <h2>Reference: the body-fat bands this calculator uses</h2>
+    <table>
+      <tr><th>Category</th><th>Men</th><th>Women</th></tr>
+      <tr><td>Essential fat</td><td>&lt; 6%</td><td>&lt; 14%</td></tr>
+      <tr><td>Athletes</td><td>6-13%</td><td>14-20%</td></tr>
+      <tr><td>Fitness</td><td>14-17%</td><td>21-24%</td></tr>
+      <tr><td>Average</td><td>18-24%</td><td>25-31%</td></tr>
+      <tr><td>Obese</td><td>25%+</td><td>32%+</td></tr>
+    </table>
+
+    <h2>Common measuring mistakes</h2>
+    <ul>
+      <li>Pulling the tape tight enough to compress skin — this shrinks the girth and inflates how lean the result looks. It should sit snug, not dig in.</li>
+      <li>Sucking in the stomach at the waist — measure standing relaxed after a normal exhale, not braced.</li>
+      <li>Measuring the waist above the navel or up at the ribs instead of at the correct spot — a few centimeters here swings the result because the waist term is so heavily weighted.</li>
+      <li>Comparing this number directly against a DEXA scan, skinfold calipers, or a smart scale's bioelectrical-impedance reading — every method carries its own bias, so track the trend within one method.</li>
+      <li>Measuring once and trusting it — take each girth twice and average; tape angle, not the formula, is the biggest source of error.</li>
+    </ul>
+
+    <h2>What this calculator can't tell you</h2>
+    <p>The Navy method estimates total body fat from trunk and neck girths; it can't see where that fat sits — visceral fat around the organs versus subcutaneous fat under the skin — even though location matters as much as the headline number for health risk. It also loses accuracy at the extremes: very lean athletes, bodybuilders, and people with very high body fat are better served by a DEXA scan, hydrostatic weighing, or a Bod Pod. Treat this tool as a fast, free, repeatable way to track your own trend, not a diagnostic or medical measurement, and not a substitute for guidance from a doctor, registered dietitian, or certified trainer.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

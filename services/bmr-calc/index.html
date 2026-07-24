@@ -235,6 +235,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What basal metabolic rate actually measures</h2>
+    <p>Basal metabolic rate is the energy your body spends doing nothing at all — no digestion, no walking, no thinking about anything in particular. It's the cost of keeping your heart beating, your lungs cycling air, your cells repairing themselves and your brain idling, measured under strict conditions: fully awake, lying still, in a thermally neutral room, at least 12 hours after your last meal. Clinicians and researchers use it as the fixed baseline underneath every other number in energy planning — it's the floor a diet should rarely go below, and it's the starting point this calculator multiplies by an activity factor to build your total daily energy expenditure (TDEE). A closely related term, resting metabolic rate (RMR), is measured under looser conditions and usually comes out 5-10% higher than true BMR; most home estimates, including this one, are technically closer to RMR even though "BMR" is the term everyone recognizes.</p>
+
+    <h3>Reading the inputs</h3>
+    <ol>
+      <li><strong>Sex</strong> — the two formulas below use a different constant for men and women because, on average, men carry more muscle mass at the same height and weight, and muscle is metabolically active tissue. This is the formula's only proxy for body composition.</li>
+      <li><strong>Age</strong> — both equations subtract a fixed amount per year. Metabolically active lean tissue is gradually replaced by fat with age even at a stable weight, so BMR falls even if the scale doesn't move.</li>
+      <li><strong>Height and weight</strong> — weight carries most of the calculation's weight (literally, via a coefficient near 10 kcal per kg), while height is a smaller correction for frame size. Enter your current, unrounded measurements — a 3 kg or 3 cm rounding error shifts the result by roughly 30 kcal.</li>
+      <li><strong>Activity level</strong> — this factor is applied only to convert your BMR into TDEE; it does not change the BMR figure itself, which reflects only what your body burns at rest regardless of how active the rest of your day is.</li>
+    </ol>
+
+    <h3>The two formulas side by side</h3>
+    <div class="example">
+      <p style="margin:0 0 8px;"><strong>Mifflin-St Jeor (1990)</strong></p>
+      <p style="margin:0 0 10px;">Men: 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5<br>Women: 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161</p>
+      <p style="margin:0 0 8px;"><strong>Harris-Benedict, revised 1984</strong></p>
+      <p style="margin:0;">Men: 88.362 + 13.397 × weight(kg) + 4.799 × height(cm) − 5.677 × age<br>Women: 447.593 + 9.247 × weight(kg) + 3.098 × height(cm) − 4.330 × age</p>
+    </div>
+    <p>Harris-Benedict was derived in 1919 from a small study group and revised in 1984; Mifflin-St Jeor was published in 1990 from a larger, more representative sample and has since tested closer to measured metabolic rates in most validation studies, which is why this calculator uses it for the TDEE and calorie-target figures while still showing Harris-Benedict for reference.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p style="margin:0 0 6px;"><strong>Example 1 — Man, 30, 175 cm, 75 kg</strong></p>
+      <p style="margin:0;">Mifflin-St Jeor: (10 × 75) + (6.25 × 175) − (5 × 30) + 5 = 750 + 1093.75 − 150 + 5 = <strong>≈1699 kcal</strong>. Harris-Benedict: 88.362 + (13.397 × 75) + (4.799 × 175) − (5.677 × 30) ≈ <strong>1763 kcal</strong>. At a moderately active ×1.55 multiplier, TDEE ≈ 1699 × 1.55 ≈ 2633 kcal.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0 0 6px;"><strong>Example 2 — Woman, 45, 160 cm, 60 kg</strong></p>
+      <p style="margin:0;">Mifflin-St Jeor: (10 × 60) + (6.25 × 160) − (5 × 45) − 161 = 600 + 1000 − 225 − 161 = <strong>≈1214 kcal</strong>. Harris-Benedict: 447.593 + (9.247 × 60) + (3.098 × 160) − (4.330 × 45) ≈ <strong>1303 kcal</strong> — about 89 kcal higher, a typical gap between the two formulas at this body size.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0 0 6px;"><strong>Example 3 — Same body, 35 years apart</strong></p>
+      <p style="margin:0;">A 175 cm, 80 kg man at age 30 has a Mifflin-St Jeor BMR of ≈1749 kcal; at age 65, with identical height and weight, the age term alone drags it down to ≈1574 kcal — a 175 kcal drop from aging that has nothing to do with the scale. This is why "eating the same as always" quietly becomes a surplus over the decades.</p>
+    </div>
+
+    <h3>Where those resting calories actually go</h3>
+    <table>
+      <thead><tr><th>Tissue / organ</th><th>Approx. share of BMR</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Liver</td><td>~27%</td><td>Continuous filtering, detoxification and metabolic processing</td></tr>
+        <tr><td>Brain</td><td>~19%</td><td>Constant electrical and chemical signaling, even at rest</td></tr>
+        <tr><td>Skeletal muscle</td><td>~18%</td><td>Low per-kg cost, but large total mass adds up</td></tr>
+        <tr><td>Kidneys</td><td>~10%</td><td>Nonstop blood filtration</td></tr>
+        <tr><td>Heart</td><td>~7%</td><td>Never stops contracting</td></tr>
+        <tr><td>Fat tissue</td><td>~4%</td><td>Metabolically quiet compared to lean tissue</td></tr>
+        <tr><td>Everything else</td><td>~15%</td><td>Skin, intestines, glands and other organs combined</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted);margin-top:-4px;">Figures are population averages compiled from organ-level metabolic studies (Elia's compartment model), not a personal breakdown — this calculator only outputs the total.</p>
+
+    <h3>Common mistakes with BMR numbers</h3>
+    <ul>
+      <li><strong>Eating your BMR as a "diet plan."</strong> BMR is the energy cost of being alive at rest, not a calorie target — it doesn't include digestion, walking or any daily movement. Use the TDEE figure below it (or a modest deficit from TDEE) for an actual eating plan.</li>
+      <li><strong>Assuming the number is exact.</strong> Both formulas are population regressions with a typical error margin of ±100-150 kcal even in validated populations; treat the result as a starting estimate to adjust from, based on how your real weight trend responds over 2-3 weeks.</li>
+      <li><strong>Ignoring body composition.</strong> Two people with the same height and weight but very different muscle-to-fat ratios have different real BMRs — muscle costs roughly 13 kcal/kg/day at rest versus about 4.5 kcal/kg/day for fat — but neither formula here can see that difference; only measurements based on lean body mass can.</li>
+      <li><strong>Forgetting the age term compounds.</strong> Because both formulas subtract a fixed amount per year, staying at the same weight without adjusting calorie intake over a decade or two will slowly build a surplus, as shown in example 3 above.</li>
+    </ul>
+
+    <h3>Related concepts and limits of this calculator</h3>
+    <p>A third widely used equation, the Katch-McArdle formula, replaces height and age entirely with your measured or estimated lean body mass, which makes it more accurate for very muscular or very lean individuals — but it requires a body-fat percentage this calculator doesn't collect, so it isn't included here. True BMR can only be measured directly with indirect calorimetry in a lab or clinic; every formula-based number, including both shown here, is a statistical estimate, not a diagnostic reading. Thyroid conditions, pregnancy, certain medications and significant recent weight change can all shift a person's real metabolic rate well outside what any formula predicts. This tool is for general planning and education only, not medical or clinical advice — talk to a doctor or registered dietitian before using it to manage a health condition.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

@@ -257,6 +257,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Where the mid-parental formula comes from</h2>
+    <p>Predicting adult height from the parents is not a modern invention. Francis Galton plotted parent and child heights in the 1880s and found the pattern this calculator relies on: taller-than-average parents tend to have taller-than-average children, and shorter parents the reverse, with a fairly tight statistical link between the two generations. Pediatric researchers James Tanner and Reginald Whitehouse later formalized that link into the averaging formula used today, as part of the 1970s UK growth studies that still underpin pediatric growth monitoring. Clinicians call the output the child's "target height" — a working estimate a pediatrician compares a child's own growth curve against, not a guarantee.</p>
+
+    <h3>Getting the inputs right</h3>
+    <ol>
+      <li>Use each parent's own adult standing height, measured barefoot against a flat wall, not a rounded guess — a 2–3 cm error in either parent shifts the estimate by 1–1.5 cm.</li>
+      <li>Enter biological parent heights specifically; the formula was built from biological-parent/biological-child pairs, so step-parent or donor heights won't track genetic potential the same way.</li>
+      <li>Select the child's sex, not either parent's — the sex toggle drives which direction the ±13 cm adjustment goes.</li>
+      <li>The child's current age or height is deliberately not asked for. This formula estimates final adult height from the parents alone, so it gives the same answer at age 2 or 15; tracking a child's own percentile curve over time is a different method entirely (see the table below).</li>
+    </ol>
+
+    <h3>The formula, step by step</h3>
+    <div class="example">
+      <strong>Boy:</strong> predicted height = (father's height + mother's height + 13 cm) ÷ 2<br>
+      <strong>Girl:</strong> predicted height = (father's height + mother's height − 13 cm) ÷ 2
+      <p style="margin-top:8px">Both children start from the same base — the average of the two parents' heights — and then the formula shifts that midpoint by half of the roughly 13 cm gap between average adult male and female height, in the direction that matches the child's own sex. That single shift is the entire mechanism behind the sex-adjusted mid-parental method; everything else this tool does is unit conversion and formatting.</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — a boy, metric inputs</strong><br>
+      Father 180 cm, mother 165 cm.<br>
+      (180 + 165 + 13) ÷ 2 = 358 ÷ 2 = <strong>179 cm</strong> (about 5 ft 10 in).<br>
+      Likely range: 170.5–187.5 cm (about 5 ft 7 in – 6 ft 2 in).
+    </div>
+    <div class="example">
+      <strong>Example 2 — a girl, metric inputs</strong><br>
+      Father 170 cm, mother 155 cm.<br>
+      (170 + 155 − 13) ÷ 2 = 312 ÷ 2 = <strong>156 cm</strong> (about 5 ft 1 in).<br>
+      Likely range: 147.5–164.5 cm (about 4 ft 10 in – 5 ft 5 in).
+    </div>
+    <div class="example">
+      <strong>Example 3 — a boy, imperial inputs</strong><br>
+      Father 5 ft 11 in (180.3 cm), mother 5 ft 4 in (162.6 cm).<br>
+      (180.3 + 162.6 + 13) ÷ 2 = 355.9 ÷ 2 = <strong>177.9 cm</strong> (about 5 ft 10 in) — this tool converts your ft/in entries to cm internally, runs the same formula, then converts the result back for display.
+    </div>
+
+    <h3>How this compares to other ways of predicting height</h3>
+    <table>
+      <tr><th>Method</th><th>What it needs</th><th>Typical use</th></tr>
+      <tr><td>Mid-parental (Tanner) formula</td><td>Both parents' heights, child's sex</td><td>Quick family-based estimate, works at any child age — what this tool does</td></tr>
+      <tr><td>Growth-chart percentile tracking</td><td>Repeated height/age measurements over years</td><td>Checking a child is following their own curve, catching growth problems early</td></tr>
+      <tr><td>Bone-age X-ray (Greulich-Pyle / TW method)</td><td>Hand-and-wrist X-ray read by a radiologist</td><td>Clinical workup when growth looks unusually fast, slow, or delayed</td></tr>
+      <tr><td>Polygenic height score</td><td>DNA genotyping across height-linked gene variants</td><td>Research settings; not part of routine pediatric care</td></tr>
+    </table>
+
+    <h3>Why very tall or very short parents get a wider miss</h3>
+    <p>Galton's data revealed a second pattern, which he called "regression toward mediocrity" — now known as regression to the mean. Children of unusually tall parents are taller than average but usually not as extreme as their parents; children of unusually short parents trend shorter than average but land closer to the middle than their parents did. Straight averaging captures the direction of this correctly but not the pull back toward the population mean, so the miss grows specifically when a parent's height sits far from average — exactly the case this tool flags with an on-screen warning.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Mixing centimeters and inches.</strong> Typing an inch value into a cm field (or vice versa) produces a wildly wrong result with no error — double-check the unit toggle before reading the output.</li>
+      <li><strong>Entering the child's own height by accident.</strong> Both height fields are for the parents; the child's current height plays no role in this formula.</li>
+      <li><strong>Forgetting to set the child's sex.</strong> Leaving it unset — or picking the wrong one — flips the ±13 cm adjustment in the wrong direction, which can shift the estimate by up to 13 cm.</li>
+      <li><strong>Reading the number as a guarantee.</strong> Treat the headline figure as the center of the likely range, not a precise forecast — puberty timing, nutrition, and health can still move an individual child within (and occasionally slightly outside) that band.</li>
+    </ul>
+
+    <h3>What this predictor cannot tell you</h3>
+    <p>The 13 cm sex adjustment was derived mainly from mid-20th-century UK and other Western growth studies, so the constant can run slightly off for populations with a different average height gap between men and women. The method also cannot detect medical conditions that override typical growth — growth hormone deficiency, precocious or delayed puberty, chromosomal conditions such as Turner syndrome, or skeletal dysplasias can all push a child's actual adult height well outside a mid-parental estimate. None of that is visible from two parent heights alone; it needs an in-person exam and sometimes bone-age imaging from a pediatrician. This calculator is a private, browser-only estimate for general interest — it is not a medical prediction, a diagnosis, or a substitute for pediatric care.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

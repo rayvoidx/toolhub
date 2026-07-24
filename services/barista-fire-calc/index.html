@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Barista FIRE Calculator: Your Barista FIRE Number</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -247,6 +286,77 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>What Barista FIRE Actually Solves</h2>
+    <p>Barista FIRE sits between two extremes: grinding through another decade at a full-time job until a portfolio funds 100% of your spending, or cutting off every paycheck cold. The idea is to leave the demanding career once part-time work — a coffee-shop shift, seasonal contracting, freelance hours, a few consulting days a month — can cover a meaningful slice of your annual spending. Because the portfolio only has to fund what's left over, the target you're saving toward shrinks, sometimes by hundreds of thousands, and the date you can step back moves much closer than a full-FIRE plan would suggest.</p>
+    <p>This calculator answers one narrow question: given how much part-time income you realistically expect and how much you plan to spend, what is the smaller Barista FIRE portfolio target, and can your current savings already coast to it without another dollar of new contributions?</p>
+
+    <h2>Reading the Inputs Correctly</h2>
+    <ol>
+      <li>Current age and target semi-retirement age set how many years your savings have left to compound before you lean on the smaller Barista FIRE number.</li>
+      <li>Current invested savings should be money actually working in the market — idle cash won't do the compounding the projection assumes.</li>
+      <li>Annual spending in retirement should reflect your realistic semi-retired budget, not your current working budget, which usually runs higher on commuting and work clothes.</li>
+      <li>Annual part-time income is the reliable floor you expect to earn — this figure does the heavy lifting, so err conservative rather than optimistic.</li>
+      <li>Withdrawal rate and expected real return set the multiplier and the growth rate; the real (after-inflation) return keeps every figure in today's money.</li>
+    </ol>
+
+    <h2>The Arithmetic Behind the Number</h2>
+    <div class="example">
+      <p><strong>Barista FIRE number</strong> = (Annual spending − Annual part-time income) ÷ Withdrawal rate<br>
+      <strong>Present-value coast target</strong> = Barista FIRE number ÷ (1 + real return) ^ years remaining<br>
+      <strong>Projected balance</strong> = Current savings × (1 + real return) ^ years remaining, plus any monthly contributions</p>
+      <p>Once the projected balance clears the present-value coast target, growth alone can carry you the rest of the way even if you never contribute another dollar.</p>
+    </div>
+
+    <h3>Three Worked Scenarios</h3>
+    <div class="example">
+      <p><strong>A — how much the reduction is worth.</strong> Spending $60,000/year, expecting $24,000/year part-time, 4% withdrawal rate. Full FIRE would need 60,000 ÷ 0.04 = $1,500,000. Barista FIRE only needs (60,000 − 24,000) ÷ 0.04 = $900,000 — a $600,000 smaller target purely because of the part-time income.</p>
+    </div>
+    <div class="example">
+      <p><strong>B — not coasting yet.</strong> Age 30 aiming for semi-retirement at 50 (20 years out), $150,000 already invested, $50,000 spending, $20,000 part-time income, 4% withdrawal, 6% real return. Barista number: (50,000 − 20,000) ÷ 0.04 = $750,000. Present-value target: 750,000 ÷ 1.06^20 ≈ $233,900. Projected balance with zero further contributions: 150,000 × 1.06^20 ≈ $481,100 — short of $750,000 by about $268,900, meaning this saver still needs to keep contributing or push the date out.</p>
+    </div>
+    <div class="example">
+      <p><strong>C — already coasting.</strong> Age 40 aiming for 45 (5 years out), $500,000 invested, $45,000 spending, $25,000 part-time income, 3.5% withdrawal, 5% real return. Barista number: (45,000 − 25,000) ÷ 0.035 ≈ $571,400. Present-value target: 571,400 ÷ 1.05^5 ≈ $447,700. Projected balance: 500,000 × 1.05^5 ≈ $638,100 — already about $66,700 above the target, so growth alone should carry this saver there without another contribution.</p>
+    </div>
+
+    <h3>Why the Reduction Scales With Income Share, Not the Withdrawal Rate</h3>
+    <p>Because both the full-FIRE number and the reduction share the same withdrawal rate in the denominator, the percentage cut to your number always equals the percentage of spending your part-time income covers — regardless of whether you use 3%, 4%, or 5%.</p>
+    <table>
+      <tr><th>Part-time income as % of spending</th><th>Cut to your FIRE number</th><th>$1,000,000 full-FIRE number becomes</th></tr>
+      <tr><td>10%</td><td>10%</td><td>$900,000</td></tr>
+      <tr><td>20%</td><td>20%</td><td>$800,000</td></tr>
+      <tr><td>30%</td><td>30%</td><td>$700,000</td></tr>
+      <tr><td>40%</td><td>40%</td><td>$600,000</td></tr>
+      <tr><td>50%</td><td>50%</td><td>$500,000</td></tr>
+    </table>
+
+    <h2>Mistakes That Skew the Result</h2>
+    <ul>
+      <li>Treating decades of part-time income as guaranteed — physically demanding or seasonal work often isn't sustainable into your 60s and 70s, and many plans quietly assume a pivot to lighter work later without adjusting the number.</li>
+      <li>Confusing Barista FIRE with Coast FIRE: Coast FIRE stops new contributions entirely and lets an already-adequate portfolio compound untouched toward full coverage; Barista FIRE keeps you earning indefinitely so the portfolio itself is smaller by design, not just further along the same path.</li>
+      <li>Sizing "annual spending" off a working-life budget instead of the semi-retired one — commuting shrinks, while healthcare and leisure spending often grow.</li>
+      <li>Ignoring healthcare costs, which for many households eat 10–20% of a Barista FIRE budget once employer coverage ends — fold a realistic premium estimate into spending rather than treating coverage as free.</li>
+      <li>Mixing a nominal return with the real, after-inflation return this tool expects — combining the two makes the projected balance and the Barista FIRE number impossible to compare honestly.</li>
+    </ul>
+
+    <h2>What This Tool Doesn't Cover</h2>
+    <p>It doesn't model taxes on part-time earnings or portfolio withdrawals, Social Security or pension income, irregular one-off expenses, or healthcare premiums directly — every result is a planning estimate built from the numbers you type, not a guarantee and not investment, tax, or insurance advice. All figures stay in today's money throughout, and every calculation runs locally in your browser with nothing sent to a server.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
