@@ -317,6 +317,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>A closer look at your mortgage</h2>
+    <p>A mortgage differs from a general loan in one key way: it's secured by the home, and lenders size it around loan-to-value (LTV) — how much you're borrowing against what the home is worth. This calculator covers what's identical across every fixed-rate mortgage: the principal-and-interest (P&I) payment, how it splits between interest and principal over time, and how a down payment or extra monthly payment changes the outcome. It's most useful while shopping for a home, comparing a 15-, 20-, or 30-year term, or deciding whether extra payments toward principal are worth it.</p>
+
+    <h3>Reading the inputs correctly</h3>
+    <ol>
+      <li>Pick "Loan amount" if you know the exact borrowed amount, or "Home price & down payment" to compare different down payment levels.</li>
+      <li>In price mode, type the down payment or use the 5% / 10% / 20% chips — the loan amount and percentage are computed automatically.</li>
+      <li>Enter the annual rate as quoted (e.g. 6.5), not the monthly rate — the calculator divides by 12 internally.</li>
+      <li>Set the term, or use the 15 / 20 / 30 chips for common fixed terms.</li>
+      <li>Optionally add an extra monthly payment under "More options" to see interest saved and the new payoff time.</li>
+    </ol>
+
+    <h3>The formula behind the monthly payment</h3>
+    <div class="example">
+      <p><strong>M = P × [r(1+r)ⁿ] / [(1+r)ⁿ − 1]</strong></p>
+      <p>P is the loan amount, r is the monthly rate (annual rate ÷ 12), n is the number of payments (years × 12). The payment is fixed, but its split shifts over time: each month, interest is charged on the remaining balance, and the rest reduces principal. Because the balance starts largest, early payments are mostly interest; as the balance shrinks, later payments are mostly principal — even though the payment itself never changes.</p>
+    </div>
+
+    <h3>Worked example: home price and down payment</h3>
+    <div class="example">
+      <p>A $450,000 home with 10% down ($45,000) leaves a $405,000 loan at 6.75% for 30 years. Monthly rate 0.5625%, n = 360, giving a P&I payment of about <strong>$2,626.82</strong>. Over 30 years that's roughly $945,656 total, of which about <strong>$540,656</strong> is interest — more than the home price. Raising the down payment to 20% ($90,000) instead shrinks the loan to $360,000 and the payment to about $2,335, showing how much leverage the down payment has over both figures.</p>
+    </div>
+
+    <h3>Worked example: choosing a term</h3>
+    <div class="example">
+      <p>On a $300,000 loan at 6.5%, 15 years costs about $2,613/month with about $170,398 total interest. Thirty years drops the payment to about $1,896/month but more than doubles total interest to about $382,633. Neither is "correct" — 15 years builds equity faster and costs less overall; 30 years frees up monthly cash flow. The table below lines up all three.</p>
+    </div>
+
+    <h3>Worked example: paying extra toward principal</h3>
+    <div class="example">
+      <p>Take that same $300,000 loan at 6.5% (base payment $1,896.20) and add $250 extra every month. The loan pays off in 262 months (21 years 10 months) instead of 360 — 98 months sooner — and total interest drops from about $382,633 to about $262,297, saving roughly <strong>$120,337</strong>. Extra payments save more the earlier they start, since they cut the balance while interest is still accruing on the largest amounts.</p>
+    </div>
+
+    <h3>Down payment, LTV, and PMI at a glance</h3>
+    <p>For that same $450,000 home, here's how down payment size changes LTV and whether private mortgage insurance (PMI) typically applies on a conventional loan:</p>
+    <table>
+      <thead><tr><th>Down payment</th><th>Amount</th><th>Loan amount</th><th>LTV</th><th>PMI usually required?</th></tr></thead>
+      <tbody>
+        <tr><td>5%</td><td>$22,500</td><td>$427,500</td><td>95%</td><td>Yes</td></tr>
+        <tr><td>10%</td><td>$45,000</td><td>$405,000</td><td>90%</td><td>Yes</td></tr>
+        <tr><td>20%</td><td>$90,000</td><td>$360,000</td><td>80%</td><td>Usually not</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted)">PMI rules vary by lender and program (FHA/VA have their own structures) — treat 80% LTV as a rule of thumb, not a guarantee.</p>
+
+    <h3>Term comparison at a glance</h3>
+    <table>
+      <thead><tr><th>Term</th><th>Monthly P&I</th><th>Total interest</th><th>Total paid</th></tr></thead>
+      <tbody>
+        <tr><td>15 years</td><td>$2,613.32</td><td>$170,398</td><td>$470,398</td></tr>
+        <tr><td>20 years</td><td>$2,236.72</td><td>$236,813</td><td>$536,813</td></tr>
+        <tr><td>30 years</td><td>$1,896.20</td><td>$382,633</td><td>$682,633</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted)">Figures assume a $300,000 loan at a fixed 6.5% rate with no extra payments.</p>
+
+    <h3>Common mistakes and things people overlook</h3>
+    <ul>
+      <li><strong>Confusing P&I with the full housing payment.</strong> The result here is principal and interest only. Real monthly cost (PITI) also includes property taxes, homeowners insurance, PMI, and HOA dues, which can add several hundred dollars a month.</li>
+      <li><strong>Judging a loan by payment alone.</strong> A lower payment from a longer term can still mean far more total interest, as the term table shows.</li>
+      <li><strong>Assuming extra payments apply automatically.</strong> With a real servicer, confirm extra payments are marked principal-only — otherwise they may just be credited as a future payment instead of reducing interest.</li>
+      <li><strong>Assuming PMI lasts forever.</strong> On conventional loans it can usually be removed near 78–80% LTV; the amortization schedule helps estimate that timing.</li>
+      <li><strong>Ignoring points and closing costs.</strong> A lower rate bought with discount points has an upfront cost this calculator doesn't include — compare it against the monthly savings separately.</li>
+    </ul>
+
+    <h3>What this calculator doesn't cover</h3>
+    <p>This tool assumes a fixed rate for the full term; it doesn't model adjustable-rate mortgages, rate resets, refinancing, points, or closing costs, and it doesn't estimate property taxes, insurance, PMI dollars, or HOA dues — all local and lender-specific. Treat the output as an educational estimate of the loan math, not a substitute for a lender's official loan estimate.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

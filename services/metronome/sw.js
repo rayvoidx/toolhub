@@ -1,5 +1,5 @@
 /* 오프라인 캐시 — 캐시 이름의 버전을 올리면 이전 캐시는 자동 정리된다. */
-var CACHE = "hub-v5";
+var CACHE = "metronome-v1";
 var ASSETS = [
   "./",
   "index.html",

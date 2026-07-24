@@ -198,6 +198,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>Why Password Strength Comes Down to Entropy</h2>
+    <p>A password isn't strong because it "looks complicated" to a human — it's strong because of how many guesses a brute-force attacker needs before landing on it by chance. That count is measured in bits of entropy, and every extra bit doubles the guesses required. This generator's two controls, length and character set, exist purely to maximize entropy for whatever length you pick.</p>
+
+    <h3>How to Use the Generator</h3>
+    <ol>
+      <li>Drag the length slider to at least 16 characters for anything stored in a password manager, or 20+ for a memorized master password.</li>
+      <li>Leave all four character-set boxes checked (uppercase, lowercase, numbers, symbols) unless a login form rejects symbols — a few legacy systems still do.</li>
+      <li>Click Generate, then Copy — the value goes to your clipboard only, nowhere else.</li>
+      <li>Paste it into the site's password field and into your password manager entry. Don't memorize it — that habit is what leads people back to weak, reused passwords.</li>
+    </ol>
+
+    <h3>The Entropy Formula</h3>
+    <div class="example">
+      <p><strong>Entropy (bits) = length × log₂(pool size).</strong> "Pool size" is how many distinct characters could appear at each position — checking another character-set box multiplies the combinations at every position, not just adds a few. That's why widening the character set is often more valuable, character for character, than typing extra letters.</p>
+    </div>
+
+    <table>
+      <tr><th>Character set enabled</th><th>Pool size</th><th>Bits added per character</th></tr>
+      <tr><td>Lowercase only (a–z)</td><td>26</td><td>4.70</td></tr>
+      <tr><td>+ Uppercase (A–Z)</td><td>52</td><td>5.70</td></tr>
+      <tr><td>+ Numbers (0–9)</td><td>62</td><td>5.95</td></tr>
+      <tr><td>+ Symbols (!@#$…)</td><td>94</td><td>6.55</td></tr>
+    </table>
+
+    <h3>Worked Examples</h3>
+    <div class="example">
+      <p><strong>Example 1 — 8 characters, lowercase only.</strong> Entropy = 8 × 4.70 ≈ 37.6 bits. Keyspace = 26⁸ ≈ 2.09 × 10¹¹. At 10 billion guesses/second (one GPU against a weakly-hashed leak), that's exhausted in about 21 seconds. Not a safe password today, however "random" it looks.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — 12 characters, all four sets enabled.</strong> Entropy = 12 × 6.55 ≈ 78.7 bits. Keyspace = 94¹² ≈ 4.76 × 10²³. At 10 billion guesses/second, full exhaustion takes roughly 1.5 million years; even a rented GPU cluster at 1 trillion guesses/second still needs about 15,000 years. A solid baseline for a regular account.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — 16 characters, all four sets enabled.</strong> Entropy = 16 × 6.55 ≈ 104.9 bits. Keyspace = 94¹⁶ ≈ 3.7 × 10³¹ — on the order of 10¹⁴ years to exhaust at 10 billion guesses/second, roughly 8,500 times the current age of the universe (≈1.38 × 10¹⁰ years). This is the range worth using for anything that gates other accounts, such as an email inbox or a password manager's own master password.</p>
+    </div>
+
+    <table>
+      <tr><th>Attack scenario</th><th>Guesses per second</th><th>Notes</th></tr>
+      <tr><td>Rate-limited login form</td><td>~10</td><td>Site locks or delays after failed attempts</td></tr>
+      <tr><td>Unthrottled login form</td><td>~1,000</td><td>No lockout or CAPTCHA in place</td></tr>
+      <tr><td>Leaked database, slow hash (bcrypt/Argon2)</td><td>~10,000</td><td>Properly salted and stretched</td></tr>
+      <tr><td>Leaked database, fast hash (unsalted MD5/SHA-1)</td><td>~10,000,000,000</td><td>Single consumer GPU</td></tr>
+      <tr><td>Rented GPU cluster / cloud instances</td><td>~1,000,000,000,000</td><td>Well-resourced attacker</td></tr>
+    </table>
+
+    <h3>Passphrases vs. Random Strings</h3>
+    <p>A memorable alternative is a passphrase — several unrelated words, in the style of "correct-horse-battery-staple." From a 7,776-word list (the Diceware standard), each word carries log₂(7776) ≈ 12.9 bits, so six random words give about 77.6 bits — comparable to Example 2's 12-character password, but far easier to type by hand. The words must come from an unbiased random draw (dice, or a generator), not be picked by a person; human-chosen "random" words are highly predictable and lose most of that entropy. For a secret you type by hand, a 5–6 word passphrase is a reasonable compromise; for everything else, a fully random string packs more entropy per character.</p>
+
+    <h3>Common Mistakes</h3>
+    <ul>
+      <li><strong>Reusing a password across sites</strong> — one breach exposes it everywhere via automated credential-stuffing attacks.</li>
+      <li><strong>Predictable substitutions</strong> like "a"→"@" or "e"→"3" — already built into every cracking dictionary, so they add almost no real entropy.</li>
+      <li><strong>Trusting length alone.</strong> "aaaaaaaaaaaaaaaa" is 16 characters but carries almost no entropy — pool size and unpredictability matter as much as raw length.</li>
+      <li><strong>Unchecking symbols "for simplicity"</strong> drops about 0.6 bits per character — roughly 10 bits over a 16-character password, meaningfully shortening worst-case cracking time.</li>
+    </ul>
+
+    <h3>What This Tool Does — and Does Not — Do</h3>
+    <p>Generation happens entirely in your browser via the Web Crypto API's <code>crypto.getRandomValues()</code> — cryptographically secure, unlike the predictable <code>Math.random()</code>. Nothing generated here is sent to a server, logged, or stored; refreshing the page clears it. This tool can't stop you from reusing a password elsewhere, remember it for you, or vouch for how a site stores it once submitted — and the crack-time estimates above assume typical hashing speeds, since you can't see what algorithm any given service actually uses. The one thing fully in your control: generate a long, unique, high-entropy password for every account and let a password manager carry the rest.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

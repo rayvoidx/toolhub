@@ -202,6 +202,90 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What "20% off" actually means</h2>
+    <p>A discount tag never describes the sale price directly — it describes a reduction applied to a reference price. That reference is usually the original tag price, but it can also be an MSRP, a "compare at" price, or an already-discounted clearance price. The discount calculator above works both directions: give it the original and sale price to find the rate, or give it the original price and a rate to find what you'll actually pay. The two tabs are mirror images of the same formula, so whichever number you're missing, you can solve for it.</p>
+    <p>This matters most when discounts don't happen once. A single 30%-off tag is easy to check by eye. But retail rarely stops there — a storewide sale on top of a clearance markdown, a coupon on top of a sale, a cashback offer on top of a coupon. Each layer needs its own pass through the formula, and skipping that step is the single most common source of "the receipt doesn't match what I expected."</p>
+
+    <h3>How to use the two modes</h3>
+    <ol>
+      <li><strong>Find discount %</strong> — enter the original price and the sale price you were quoted or charged. The tool returns the discount rate and the amount you saved in currency.</li>
+      <li><strong>Find sale price</strong> — enter the original price and a discount rate (for example, from a coupon code or a "30% OFF" sign). The tool returns the price you'll pay and the amount saved.</li>
+      <li>For a second, stacked reduction, take the result from one pass and feed it back in as the new "original price" for the next pass — see the stacking example below.</li>
+    </ol>
+
+    <h3>The formula</h3>
+    <div class="example">
+      <p style="margin:0 0 6px"><strong>Discount rate</strong> = (Original price − Sale price) ÷ Original price × 100</p>
+      <p style="margin:0 0 6px"><strong>Sale price</strong> = Original price × (1 − rate ÷ 100)</p>
+      <p style="margin:0"><strong>Savings</strong> = Original price − Sale price = Original price × (rate ÷ 100)</p>
+    </div>
+    <p>Every stacked or sequential discount is just this same formula applied more than once, using the previous output as the next input — never by adding percentages together.</p>
+
+    <h3>Worked example 1 — a single tag</h3>
+    <div class="example">
+      <p>A jacket is tagged at 50,000 with a 30% discount.</p>
+      <p>Sale price = 50,000 × (1 − 0.30) = 50,000 × 0.70 = <strong>35,000</strong></p>
+      <p>Savings = 50,000 − 35,000 = <strong>15,000</strong></p>
+    </div>
+
+    <h3>Worked example 2 — why stacked discounts don't add up</h3>
+    <div class="example">
+      <p>A store takes 25% off, then applies an extra 10% coupon at checkout on an item originally priced at 80,000. It's tempting to assume that's "35% off" — it isn't.</p>
+      <p>Pass 1 (25% off): 80,000 × 0.75 = <strong>60,000</strong></p>
+      <p>Pass 2 (extra 10% off the new price): 60,000 × 0.90 = <strong>54,000</strong></p>
+      <p>Total savings = 80,000 − 54,000 = 26,000, which is an <strong>effective rate of 32.5%</strong> — not 35%. The second discount applies to an already-reduced base, so it's worth less in absolute terms than the first one.</p>
+    </div>
+
+    <h3>Worked example 3 — reverse-engineering the rate, then adding tax</h3>
+    <div class="example">
+      <p>A receipt shows an item originally priced at 120 sold for 84, and then 8% sales tax was charged on top.</p>
+      <p>Discount rate = (120 − 84) ÷ 120 × 100 = <strong>30%</strong></p>
+      <p>Total paid with tax = 84 × 1.08 = <strong>90.72</strong></p>
+      <p>Notice the discount rate (30%) is calculated only from the pre-tax prices. Tax is a separate multiplier applied afterward — mixing it into the discount math will always overstate or understate the true markdown.</p>
+    </div>
+
+    <h3>Reference: sale price at common discount rates</h3>
+    <table>
+      <thead><tr><th>Discount rate</th><th>Sale price on 100</th><th>You save</th></tr></thead>
+      <tbody>
+        <tr><td>10%</td><td>90.00</td><td>10.00</td></tr>
+        <tr><td>20%</td><td>80.00</td><td>20.00</td></tr>
+        <tr><td>25%</td><td>75.00</td><td>25.00</td></tr>
+        <tr><td>30%</td><td>70.00</td><td>30.00</td></tr>
+        <tr><td>40%</td><td>60.00</td><td>40.00</td></tr>
+        <tr><td>50%</td><td>50.00</td><td>50.00</td></tr>
+        <tr><td>70%</td><td>30.00</td><td>70.00</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Adding stacked percentages.</strong> "20% + 10%" is not 30% off — see Example 2. The correct combined multiplier is (1 − 0.20) × (1 − 0.10) = 0.72, an effective 28% off, not 30%.</li>
+      <li><strong>Losing track of the baseline.</strong> An "extra 10% off clearance" coupon applies to the already-marked-down price, not the original tag price — always check which number a new discount is taken from.</li>
+      <li><strong>Mixing tax into the discount rate.</strong> Compute the discount from pre-tax prices only, then apply tax as its own step, as in Example 3.</li>
+      <li><strong>Trusting store-rounded percentages.</strong> Some receipts truncate or round the displayed rate, so recomputing from the actual original and sale prices can differ slightly from the tag.</li>
+    </ul>
+
+    <h3>What this calculator doesn't cover</h3>
+    <p>It computes price and rate relationships only — it does not model sales tax, shipping costs, store credit, or loyalty-point redemption, all of which change what you actually pay versus the sticker discount. For multi-item carts with different rates per item, run each item through the calculator separately rather than averaging discount rates, since averaging rates (rather than dollar amounts) across items of different prices gives a misleading blended figure.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

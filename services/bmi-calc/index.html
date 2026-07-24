@@ -204,6 +204,83 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What BMI actually measures</h2>
+    <p>Body mass index compresses two numbers — height and weight — into a single ratio that public-health researchers use to flag weight categories across large populations. It was never designed as a diagnostic tool for one individual; it was designed by the Belgian statistician Adolphe Quetelet in the 1830s to describe the "average man" for population statistics, decades before anyone used it clinically. Doctors, insurers, and health surveys later adopted it because it is cheap: no calipers, no scanner, no lab visit, just a scale and a tape measure. That is exactly why it is useful here — you get an instant, reproducible screening number, and this calculator layers on the two classification systems (WHO and Asia-Pacific) that most clinics actually reference, plus a healthy-weight range in your own height, so the number comes with context instead of standing alone.</p>
+
+    <h3>How to enter your numbers correctly</h3>
+    <ol>
+      <li>Pick your unit system first (metric cm·kg or imperial ft·in·lb) — switching afterward converts what you already typed, so pick whichever your bathroom scale and tape measure use to avoid rounding twice.</li>
+      <li>Enter height barefoot, standing fully upright against a wall — shoes add 1–3 cm and slouching can shave off more than that, both of which nudge the ratio.</li>
+      <li>Enter weight from a recent, ideally morning, reading — body weight can swing 1–2 kg through the day from food and fluid, which is usually not enough to change your category but can matter near a boundary like 25.0 or 30.0.</li>
+      <li>Press calculate to see your BMI plus both classification standards side by side.</li>
+    </ol>
+
+    <h3>The formula behind the result</h3>
+    <div class="example">
+      <strong>Metric:</strong> BMI = weight (kg) ÷ height (m)²<br>
+      <strong>Imperial:</strong> BMI = 703 × weight (lb) ÷ height (in)²
+      <p style="margin-top:8px">Height is squared because body mass roughly scales with the cube of linear size while a person's frame is treated as a fixed 2-D silhouette for this index — squaring, not cubing, is the historical convention Quetelet settled on, and it is why very tall people are systematically nudged toward a slightly higher BMI even at a proportionally healthy weight.</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — metric, same number, two verdicts</strong><br>
+      Height 165 cm (1.65 m), weight 66 kg.<br>
+      1.65² = 2.7225 m². BMI = 66 ÷ 2.7225 = <strong>24.24</strong>.<br>
+      WHO: "normal weight" (18.5–24.9). Asia-Pacific: "overweight / pre-obese" (23.0–24.9) — the exact same body, two different labels, purely because the reference population used to draw the line was different.
+    </div>
+    <div class="example">
+      <strong>Example 2 — imperial</strong><br>
+      Height 5 ft 9 in = 69 in, weight 190 lb.<br>
+      BMI = 703 × 190 ÷ 69² = 133,570 ÷ 4,761 = <strong>28.06</strong>.<br>
+      Both WHO and Asia-Pacific place this in an "overweight" band, though the Asia-Pacific table would already call an equivalent metric build "obese class I."
+    </div>
+    <div class="example">
+      <strong>Example 3 — healthy-range check</strong><br>
+      Height 178 cm (1.78 m). Solving BMI = 22 (mid-normal) for weight: weight = 22 × 1.78² = 22 × 3.1684 = <strong>69.7 kg</strong>.<br>
+      That is the kind of reverse calculation the tool's healthy-weight range performs automatically for any height you enter.
+    </div>
+
+    <h3>Classification reference</h3>
+    <table>
+      <tr><th>Category</th><th>WHO BMI (kg/m²)</th><th>Asia-Pacific BMI (kg/m²)</th></tr>
+      <tr><td>Underweight</td><td>&lt; 18.5</td><td>&lt; 18.5</td></tr>
+      <tr><td>Normal weight</td><td>18.5 – 24.9</td><td>18.5 – 22.9</td></tr>
+      <tr><td>Overweight / pre-obese</td><td>25.0 – 29.9</td><td>23.0 – 24.9</td></tr>
+      <tr><td>Obese class I</td><td>30.0 – 34.9</td><td>25.0 – 29.9</td></tr>
+      <tr><td>Obese class II</td><td>35.0 – 39.9</td><td>≥ 30.0</td></tr>
+      <tr><td>Obese class III</td><td>≥ 40.0</td><td>—</td></tr>
+    </table>
+    <p>The Asia-Pacific scale (adopted by bodies including the Korean Society for the Study of Obesity) shifts every boundary down by roughly 2 points because epidemiological studies in Asian populations found elevated cardiovascular and diabetes risk starting at lower BMI values than in the Western cohorts the original WHO thresholds were built from — at the same BMI, Asian populations on average carry a higher percentage of body fat for a given weight.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Measuring height with shoes on.</strong> A 2 cm error on a 170 cm frame shifts BMI by roughly 0.3 — small, but enough to cross a boundary.</li>
+      <li><strong>Comparing your number to the wrong standard.</strong> A BMI of 24 reads as "normal" under WHO but "overweight" under Asia-Pacific — always check which table a chart is using before comparing across sources.</li>
+      <li><strong>Treating BMI as a body-fat measurement.</strong> It is a weight-for-height ratio only; it cannot tell muscle from fat, so a lean, muscular person and a person with the same weight in body fat can post an identical score.</li>
+      <li><strong>Using a single reading to judge trend.</strong> Daily fluid shifts of 1–2 kg are normal; track BMI weekly at the same time of day rather than reacting to one measurement.</li>
+    </ul>
+
+    <h3>What BMI does not tell you</h3>
+    <p>BMI cannot distinguish muscle from fat, cannot see where fat is distributed (visceral abdominal fat carries more metabolic risk than fat elsewhere at the same total weight), and its standard categories were not built for children, pregnant women, or elderly adults with reduced muscle mass. Waist circumference, waist-to-hip ratio, and body-fat percentage from bioelectrical impedance or DEXA scanning all add information BMI structurally cannot provide. This calculator is a fast, private, browser-only screening reference — it is not a medical diagnosis, and it does not replace an assessment by a doctor or registered dietitian who can look at your specific health history.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

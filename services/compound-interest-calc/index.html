@@ -274,6 +274,95 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive content (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What This Calculator Is Actually Telling You</h2>
+    <p>People reach for a compound interest calculator to compare savings products with different compounding schedules, sanity-check a "your money doubles every X years" claim, or see how much a modest recurring deposit changes the outcome over a decade or three. It's arithmetic, not a forecast — the rate you enter stays fixed for the whole term, while a real account's rate, fees and taxes will move around. Use the result to understand the shape of compounding, then judge for yourself what rate is realistic ahead.</p>
+
+    <h3>Reading the Five Inputs</h3>
+    <ol>
+      <li><strong>Initial principal</strong> — the lump sum you start with. Set it to 0 to see what a recurring contribution builds alone.</li>
+      <li><strong>Annual interest rate</strong> — the nominal annual rate as a percentage (enter 6 for 6%, not 0.06), before any compounding adjustment.</li>
+      <li><strong>Number of years</strong> — how long the money stays untouched. The 5/10/20/30 chips cover the horizons compared most often.</li>
+      <li><strong>Compounding frequency</strong> — daily (365/yr), monthly (12/yr), quarterly (4/yr) or annually (1/yr): how often interest is folded back into the balance.</li>
+      <li><strong>Monthly contribution</strong> — an optional fixed amount added at the end of every month. Leave blank for a single lump sum.</li>
+    </ol>
+
+    <h2>The Formula Behind the Balance</h2>
+    <div class="example">
+      <p style="margin:0">The lump-sum portion uses <strong>A = P(1 + r/n)<sup>nt</sup></strong>: P is the principal, r the annual rate as a decimal, n the compounding periods per year, and t the number of years. Each contribution is added at the end of its own month, so it only compounds for whatever time is left in the term — a deposit in the final month barely earns anything, while one in month one compounds for nearly the whole span. "Total interest earned" is the final balance minus the principal minus every contribution.</p>
+    </div>
+
+    <h2>Three Worked Examples</h2>
+    <div class="example">
+      <p style="margin:0 0 4px"><strong>1. Lump sum only.</strong> $5,000 at a 4.5% annual rate, compounded quarterly, for 15 years, no further deposits.</p>
+      <p style="margin:0">A = 5,000 × (1 + 0.045/4)<sup>4×15</sup> ≈ <strong>$9,783.23</strong>. Interest ≈ $4,783.23 — the balance nearly doubled with no additional deposits, purely from compounding a moderate rate over 15 years.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0 0 4px"><strong>2. Adding a monthly contribution.</strong> Same $5,000 start at 4.5%, now compounded monthly, plus $150 deposited every month for 15 years (180 deposits).</p>
+      <p style="margin:0">Contributions alone total $27,000. The ending balance comes to about <strong>$48,269.98</strong> — roughly $16,269.98 of that is interest. Over 15 years, your own deposits are still doing most of the work.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0 0 4px"><strong>3. Same plan, twice the time.</strong> Identical $5,000 start, 4.5% monthly compounding and $150/month, run for 30 years (360 deposits) instead of 15.</p>
+      <p style="margin:0">Contributions total $54,000, yet the balance reaches about <strong>$133,146.41</strong> — interest earned (≈$74,146.41) now outweighs every dollar you contributed. Doubling the time horizon more than doubled the balance, because compounding has decades to work on the earliest deposits.</p>
+    </div>
+
+    <h2>Compounding Frequency, Side by Side</h2>
+    <p>A "5% APR" account isn't the same everywhere — compounding frequency changes the effective yield. Holding the nominal rate at 5% on a $10,000 lump sum, no further deposits:</p>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Compounding</th><th>Effective annual yield</th><th>$10,000 after 20 years</th></tr></thead>
+      <tbody>
+        <tr><td>Annually (n=1)</td><td>5.000%</td><td>$26,532.98</td></tr>
+        <tr><td>Quarterly (n=4)</td><td>5.095%</td><td>$27,014.85</td></tr>
+        <tr><td>Monthly (n=12)</td><td>5.116%</td><td>$27,126.40</td></tr>
+        <tr><td>Daily (n=365)</td><td>5.127%</td><td>$27,180.96</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Annual to daily compounding is worth about $648 here — noticeable, but far smaller than the effect of the rate itself or a few extra years. Don't let frequency distract from the two levers that actually move the outcome: rate and time.</p>
+
+    <h2>The Rule of 72, and Why Compounding Beats Simple Interest</h2>
+    <p>The Rule of 72 is a shortcut for "how long until this doubles?" — divide 72 by the annual rate. It approximates the exact doubling time, ln(2)/ln(1+r), and is most accurate between 6% and 10%:</p>
+    <table>
+      <thead><tr><th>Annual rate</th><th>Rule of 72 estimate</th><th>Actual years to double</th></tr></thead>
+      <tbody>
+        <tr><td>4%</td><td>18.0 years</td><td>17.67 years</td></tr>
+        <tr><td>6%</td><td>12.0 years</td><td>11.90 years</td></tr>
+        <tr><td>8%</td><td>9.0 years</td><td>9.01 years</td></tr>
+        <tr><td>9%</td><td>8.0 years</td><td>8.04 years</td></tr>
+        <tr><td>12%</td><td>6.0 years</td><td>6.12 years</td></tr>
+      </tbody>
+    </table>
+    <p>It's a handy gut check, but it only approximates annual compounding on a lump sum — use the full calculator above once contributions or a different frequency are involved. Compounding pulls ahead of simple interest because each period's interest becomes part of the next period's principal; simple interest keeps paying the same dollar amount on the original sum forever, so the gap widens every year, not just at the end.</p>
+
+    <h2>Common Mistakes and Practical Tips</h2>
+    <ul>
+      <li><strong>Entering the rate as a decimal.</strong> Type 6 for 6%, not 0.06 — the field expects a percentage.</li>
+      <li><strong>Confusing nominal rate with effective yield.</strong> A 6% rate compounded monthly actually yields about 6.17% annually.</li>
+      <li><strong>Underestimating contributions.</strong> As examples 2 and 3 show, a modest recurring deposit often adds more than interest does over shorter horizons.</li>
+      <li><strong>Missing the timing convention.</strong> Deposits are added at the end of each month (an "ordinary annuity"), matching most bank accounts; start-of-month deposits end up slightly higher.</li>
+      <li><strong>Treating a past average rate as guaranteed.</strong> A rate from the last 10 years isn't promised for the next 10 — try a few rates to see how sensitive your result is.</li>
+    </ul>
+
+    <h2>What This Tool Doesn't Do</h2>
+    <p>This calculator ignores taxes, account fees, inflation and any rate that changes over time — all of which affect what you actually take home. It also assumes contributions land with perfect regularity, which real saving rarely does. Treat every figure here as a clean, fee-free illustration of the math of compounding, not a projection of what any specific account, fund or investment will return. This is an educational tool, not financial, investment or tax advice.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
