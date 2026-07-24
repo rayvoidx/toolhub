@@ -229,6 +229,84 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why character limits catch people off guard</h2>
+    <p>Almost every text box you fill in online has a hidden ceiling: a tweet, a job-application field, a meta description, an SMS. The number on the label rarely tells you the whole story — "500 characters" can mean 500 Unicode characters, 500 bytes, or 500 characters excluding spaces, depending on who built the form. This counter gives you all six numbers at once (with-space count, no-space count, words, manuscript pages, UTF-8 bytes, and legacy 2-byte encoding) so you can match whichever definition the destination actually uses instead of guessing and getting truncated mid-sentence.</p>
+
+    <h3>How to read the six numbers</h3>
+    <ol>
+      <li>Paste or type your text into the box. Every stat updates as you type — nothing is sent anywhere, the count runs in your browser.</li>
+      <li><strong>Characters (with spaces)</strong> is the default most platforms and forms mean when they say "character limit." Use this first unless a field explicitly says otherwise.</li>
+      <li><strong>Characters (no spaces)</strong> matters for word-processing style limits and for a handful of essay platforms that historically excluded whitespace from the count.</li>
+      <li><strong>Words</strong> splits on whitespace — useful for résumé summaries or cover letters that cap word count instead of character count.</li>
+      <li><strong>Manuscript pages</strong> divides the with-spaces count by 200 and rounds up, matching the traditional 20×10 Korean manuscript grid (원고지) used in writing assignments and publishing submissions.</li>
+      <li><strong>Bytes (UTF-8)</strong> and <strong>Bytes (legacy 2-byte)</strong> matter when a backend — not a person — enforces the limit. Set an optional goal in the field above the stats to see a live over/under banner against any of these.</li>
+    </ol>
+
+    <h3>The byte math behind the two encodings</h3>
+    <p>A "character" and a "byte" are not the same unit, and the gap is where most truncation surprises happen. In UTF-8, the encoding almost every modern website and API uses, an ASCII character (English letters, digits, basic punctuation) costs 1 byte, while a Hangul, CJK, or most accented character costs 3 bytes. Older systems built around EUC-KR, Shift-JIS, or similar double-byte character sets instead spend a flat 2 bytes on any non-ASCII character. So the same sentence can be, say, 90 bytes on a modern API and 65 bytes on a legacy government or banking system — this tool reports both so you can check against whichever one applies.</p>
+
+    <div class="example">
+      <strong>Worked example 1 — Instagram bio (150-character limit)</strong>
+      <p>Text: "Digital marketer turned indie hacker. Building tools that save you five minutes a day. Coffee-powered. Always shipping."</p>
+      <p>With spaces: 119 characters · No spaces: 103 · Words: 17 · UTF-8 bytes: 119.<br>
+      119 is under Instagram's 150-character bio cap, so this fits with 31 characters to spare — set the goal field to 150 and the banner turns green once you paste it in.</p>
+    </div>
+
+    <div class="example">
+      <strong>Worked example 2 — Korean self-introduction field, byte-limited (1,000-byte cap)</strong>
+      <p>Text: "저는 5년차 백엔드 개발자로, 대용량 트래픽 처리와 데이터베이스 최적화 경험이 풍부합니다."</p>
+      <p>With spaces: 50 characters · No spaces: 40 · UTF-8 bytes: 124 · Legacy 2-byte: 87.<br>
+      Every Hangul syllable here costs 3 bytes in UTF-8 but only 2 in the legacy encoding — a 37-byte gap on just one sentence. Many older Korean corporate and government forms still document their limit in bytes under the legacy assumption; if you paste in a full self-introduction and the form silently cuts you off before you expected, check the legacy byte count, not the UTF-8 one.</p>
+    </div>
+
+    <div class="example">
+      <strong>Worked example 3 — Posting to X (280-character limit)</strong>
+      <p>Text: "Just shipped a new feature! Check it out and let me know what you think. 🚀"</p>
+      <p>With spaces: 74 characters · UTF-8 bytes: 77.<br>
+      The rocket emoji still counts as exactly one character in the with-spaces total — this tool counts by Unicode code point (via <code>Array.from</code>), matching how X and most platforms count, rather than by raw UTF-16 length, which would double-count it.</p>
+    </div>
+
+    <h3>Common limits worth knowing</h3>
+    <table>
+      <tr><th>Context</th><th>Typical limit</th><th>Counted as</th></tr>
+      <tr><td>X (Twitter) post</td><td>280</td><td>characters</td></tr>
+      <tr><td>Instagram bio</td><td>150</td><td>characters</td></tr>
+      <tr><td>Instagram caption</td><td>2,200</td><td>characters</td></tr>
+      <tr><td>YouTube video title</td><td>100</td><td>characters</td></tr>
+      <tr><td>SEO meta description</td><td>~155–160</td><td>characters (Google truncates by pixel width, so this is an approximation)</td></tr>
+      <tr><td>SEO title tag</td><td>~50–60</td><td>characters (same pixel-width caveat)</td></tr>
+      <tr><td>Single SMS segment</td><td>160 (or 70 with any emoji/non-Latin script)</td><td>characters</td></tr>
+      <tr><td>Korean manuscript page (원고지)</td><td>200</td><td>characters, spaces included</td></tr>
+    </table>
+
+    <h3>Mistakes that lead to truncated text</h3>
+    <ul>
+      <li><strong>Assuming "no note" means "without spaces."</strong> When a limit doesn't specify, it almost always includes spaces. Check the with-spaces number first.</li>
+      <li><strong>Reading the UTF-8 byte count for a legacy system, or vice versa.</strong> If a form was built years ago around a fixed byte budget, it may still expect the 2-byte-per-character legacy count even though the page itself is UTF-8 — this is the single most common silent-truncation cause in Korean-language forms.</li>
+      <li><strong>Forgetting that emoji and combining accents can inflate byte counts far more than character counts.</strong> An emoji is one character but can cost 4 bytes in UTF-8 — fine for a character-limited field, but it can eat into a byte-limited one fast.</li>
+      <li><strong>Confusing "manuscript pages" with printed pages.</strong> The 200-character page here is the traditional Korean writing-assignment unit (20 columns × 10 rows), not a word-processor page, which typically holds far more text.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>It measures raw counts, not visual width — Google's actual meta-description cutoff is based on rendered pixel width, so a title full of narrow letters ("iiiil") fits more characters on the results page than one full of wide letters ("WWWWW") at the same character count. Treat the SEO figures above as a safe planning target, not an exact pixel simulator. Nothing you type is uploaded: every count runs locally in your browser, and only your last draft is cached in this device's local storage so you can pick up where you left off.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

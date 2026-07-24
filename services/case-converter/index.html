@@ -243,6 +243,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why text case is not just cosmetic</h2>
+    <p>The same word can be a valid variable name, an invalid one, or a completely different identifier depending on how it is cased. <code>userName</code>, <code>UserName</code>, <code>user_name</code> and <code>user-name</code> all describe the same concept, but a JavaScript linter, a Python module, a URL router and a CSS class list each expect a different one of these four. Outside code, case carries meaning too: writing a product name in ALL CAPS reads as shouting in an email but as a legitimate brand style on packaging, and a headline in Title Case signals "heading" to a reader before they've read a single word. This tool exists because switching a block of text between all of these conventions by hand — retyping capitals, swapping every space for an underscore or a hyphen, deciding where word boundaries fall inside a mashed-together identifier — is slow and error-prone, especially across a whole file of variable names or a full paragraph of copy.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Paste or type any text into the box — a sentence, a heading, a single identifier, or a multi-line list.</li>
+      <li>All twelve results update as you type; nothing is calculated on a server, so long or sensitive text (API keys, internal field names) never leaves your browser.</li>
+      <li>Click any result card to copy just that case to your clipboard — the card briefly confirms the copy.</li>
+      <li>Leave "Save my text in this browser" ticked to have the box repopulate next time you open the page, or untick it to keep the session private and unsaved.</li>
+    </ol>
+
+    <h3>The two families of case, and how words are found</h3>
+    <p>The six general cases — UPPERCASE, lowercase, Title Case, Sentence case, aLtErNaTiNg and tOGGLE cASE — operate on your text character by character and never touch spacing or punctuation. Sentence case additionally looks for sentence-ending punctuation (<code>.</code>, <code>?</code>, <code>!</code>) so it knows where a new sentence — and therefore a new capital letter — begins.</p>
+    <p>The six programmer cases — camelCase, PascalCase, snake_case, CONSTANT_CASE, kebab-case and dot.case — work differently: the converter first has to split your input into discrete words, because programming identifiers carry no spaces of their own. It does this by (1) splitting on any existing separator — a space, underscore, hyphen or dot — and (2) inserting an extra boundary wherever a lowercase letter or digit is immediately followed by an uppercase letter, so an identifier like <code>orderTotal2Tax</code> is read as three words: <code>order</code>, <code>total2</code>, <code>tax</code>. A run of consecutive capitals is treated as one acronym rather than split letter-by-letter, so <code>parseHTTPResponse</code> becomes <code>parse</code>, <code>HTTP</code>, <code>response</code> — not <code>parse</code>, <code>h</code>, <code>t</code>, <code>t</code>, <code>p</code>. Once the words are found, each target case reassembles them with its own rule: camelCase lowercases the first word and capitalizes the rest with no separator; snake_case lowercases every word and joins with <code>_</code>; kebab-case does the same with <code>-</code>; CONSTANT_CASE uppercases every word and joins with <code>_</code>.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — a UI label:</strong> input <code>total order amount</code><br>
+      UPPERCASE: <code>TOTAL ORDER AMOUNT</code> · Title Case: <code>Total Order Amount</code> · camelCase: <code>totalOrderAmount</code> · snake_case: <code>total_order_amount</code> · kebab-case: <code>total-order-amount</code> · CONSTANT_CASE: <code>TOTAL_ORDER_AMOUNT</code>
+    </div>
+    <div class="example">
+      <strong>Example 2 — an existing identifier with an acronym:</strong> input <code>getUserIDFromJWT</code><br>
+      Tokenized as: <code>get</code>, <code>user</code>, <code>ID</code>, <code>from</code>, <code>JWT</code> → snake_case: <code>get_user_id_from_jwt</code> · kebab-case: <code>get-user-id-from-jwt</code> · PascalCase: <code>GetUserIdFromJwt</code> · dot.case: <code>get.user.id.from.jwt</code>
+    </div>
+    <div class="example">
+      <strong>Example 3 — a sentence, general cases only:</strong> input <code>please review this. it is urgent!</code><br>
+      Sentence case: <code>Please review this. It is urgent!</code> · Title Case: <code>Please Review This. It Is Urgent!</code> · tOGGLE cASE: <code>PLEASE review THIS. it IS urgent!</code>
+    </div>
+
+    <h3>Quick reference</h3>
+    <table>
+      <tr><th>Case</th><th>Sample</th><th>Typical home</th></tr>
+      <tr><td>camelCase</td><td>orderTotal</td><td>JavaScript / Java / C# variables and functions</td></tr>
+      <tr><td>PascalCase</td><td>OrderTotal</td><td>Class, type and component names</td></tr>
+      <tr><td>snake_case</td><td>order_total</td><td>Python, Ruby, SQL columns</td></tr>
+      <tr><td>CONSTANT_CASE</td><td>ORDER_TOTAL</td><td>Constants, environment variables</td></tr>
+      <tr><td>kebab-case</td><td>order-total</td><td>URLs, CSS classes, file and package names</td></tr>
+      <tr><td>dot.case</td><td>order.total</td><td>Config keys, i18n namespaces, packages</td></tr>
+    </table>
+
+    <h3>Mistakes worth avoiding</h3>
+    <ul>
+      <li>Mixing conventions inside one codebase (a <code>snake_case</code> function calling a <code>camelCase</code> one from the same file) is a common review comment — pick the convention the language community expects and convert everything to match, rather than guessing at each identifier by hand.</li>
+      <li>Renaming an existing identifier is a text transform only — this tool does not update every place that name is referenced in a project. Use it to generate the new name, then rename with your editor's "rename symbol" or a project-wide find-and-replace.</li>
+      <li>Case folding is not reversible in every language: Turkish "İ"/"I" and German "ß" behave differently under case changes than in English, so text mixing scripts or diacritics can produce results that look slightly off compared to a same-language reader's expectation.</li>
+      <li>Only Latin letters and digits form words for the six programmer cases — punctuation-only or non-Latin input (emoji, Korean, Arabic, Chinese) has no letter case, so it passes through the general cases unchanged and is dropped when building identifier cases.</li>
+    </ul>
+
+    <h3>What this tool does not do</h3>
+    <p>It does not validate that a resulting identifier is legal in a specific language (for instance, some languages disallow identifiers that start with a digit) and it does not check for reserved keywords. It also does not translate text between human languages — only the letter casing and word-joining style change, never the words themselves.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ad Copy Length Checker — Check every headline</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -288,6 +327,70 @@ ADSENSE:END -->
     <p class="acl-privacy" data-i18n="tool.privacy">Your ad copy is counted inside this browser. Nothing is uploaded, and the text itself is never saved — only your platform and column choices are remembered.</p>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why a plain character count gets this wrong</h2>
+    <p>Paste a Google Ads sheet into Excel's <code>LEN()</code> and every character reads as one unit. Google Ads does not count that way: it bills each Korean, Japanese or Chinese character as two units, so a headline that "measures" short in a spreadsheet can still be over the real limit. The headline "이번 주 무료배송 이벤트" is 13 characters by string length, but 23 units against Google's 30-unit headline ceiling — the gap that causes silent rejections on rows that "looked fine" locally.</p>
+    <p>It matters most at scale: a sheet of 40 ad groups with up to 15 headlines and 4 descriptions each is hundreds of cells, and Google, Microsoft, Meta, Naver and Kakao each enforce a different ceiling with a different counting rule. This tool runs that arithmetic once, consistently, on the whole sheet, before it reaches the platform's own uploader.</p>
+
+    <h3>Checking a sheet end to end</h3>
+    <ol>
+      <li>Pick a platform first — the limit and the counting rule both change per platform.</li>
+      <li>Switch to "Whole sheet" and paste from Ads Editor or a spreadsheet with the header row included, so columns auto-map to Headline 1, Description 2, Path 1, and so on.</li>
+      <li>Fix any wrong guess — a Callout read as a Headline, say — from the dropdown above that column. Only the mapping is remembered locally, never the ad text.</li>
+      <li>Read the colors: red is over the hard limit, amber is near the limit or (Meta only) will be truncated, darker amber is under the minimum, green is clear.</li>
+      <li>Filter to "Only rows with issues," fix them, then copy as TSV or download as CSV.</li>
+    </ol>
+
+    <h3>The rule behind the double-width count</h3>
+    <p>Every Unicode character carries an East Asian Width property, originally defined for East Asian typesetting. Two of its six categories render at roughly twice the width of a Latin letter — Wide (Hangul syllables, CJK ideographs, hiragana, katakana) and Fullwidth (full-width Latin letters/digits such as Ａ, plus CJK punctuation) — and ad platforms bill both as two characters. The other four — Halfwidth, Narrow, Ambiguous and Neutral, covering ASCII, half-width kana, and most symbols — bill as one. This checker sums that per-character weight rather than guessing from the sentence's language as a whole, so a Korean sentence with an embedded English brand name or a percent sign still counts every part correctly.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>Google Ads headline, passes:</strong> "이번 주 무료배송 이벤트" is 13 characters by string length — 10 Hangul plus 3 spaces. Weighted: (10 × 2) + (3 × 1) = 23, under the 30-unit ceiling with 7 to spare.</div>
+    <div class="example"><strong>Google Ads headline, fails despite looking short:</strong> "겨울 신상 20% 할인 무료배송 이벤트 진행중" is 25 characters by string length — comfortably under 30 in a plain counter. Weighted: 16 Hangul × 2, plus 3 ASCII in "20%", plus 6 spaces = 32 + 3 + 6 = 41 — 11 units over, exactly the row a <code>LEN()</code> formula would wave through.</div>
+    <div class="example"><strong>Meta primary text, truncated but not rejected:</strong> a 150-character line about a return policy is over Meta's 125-character recommendation but well under its 500-character hard cap. The tool marks it "will be truncated" in amber, not an error — the ad still runs, cut with an ellipsis on most placements.</div>
+    <div class="example"><strong>Naver Powerlink description, below the minimum:</strong> "지금 특가" is 5 characters (Naver counts Korean as one, not two). Naver requires 20 to 45 characters, so 5 falls below the floor and is rejected at registration despite reading as "short and safe."</div>
+
+    <h3>Unicode width categories this tool weighs</h3>
+    <table>
+      <thead><tr><th>Category</th><th>Examples</th><th>Weight</th></tr></thead>
+      <tbody>
+        <tr><td>Wide (W)</td><td>Hangul syllables, CJK ideographs, hiragana, katakana</td><td>2</td></tr>
+        <tr><td>Fullwidth (F)</td><td>Full-width Latin letters/digits (Ａ Ｂ Ｃ), CJK punctuation</td><td>2</td></tr>
+        <tr><td>Halfwidth (H)</td><td>Half-width katakana, half-width symbols</td><td>1</td></tr>
+        <tr><td>Narrow (Na)</td><td>Standard ASCII letters, digits, punctuation</td><td>1</td></tr>
+        <tr><td>Ambiguous (A)</td><td>Greek/Cyrillic letters, symbols such as ± § ©</td><td>1</td></tr>
+        <tr><td>Neutral (N)</td><td>Most other punctuation and symbols</td><td>1</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li>Trusting a spreadsheet's <code>LEN()</code>, which reports raw characters, not the doubled weight Google and Microsoft bill — a cell that looks fine at 25 characters can still be 41, as above.</li>
+      <li>Missing the minimum, not just the maximum: an RSA needs at least 3 headlines and 2 descriptions to serve, even if each is inside the limit. The per-group summary here counts how many of each a group has.</li>
+      <li>Assuming every platform rounds the same way — Naver's floor, where a short description is rejected rather than just discouraged, catches teams that only check for "too long."</li>
+      <li>Dismissing Meta's amber truncation warning because it isn't red — the ad still runs, but the sentence a user sees may end mid-thought.</li>
+      <li>Pasting text copy-edited in Word or a PDF first: smart quotes and non-breaking spaces count like any other character and can push a cell over its limit invisibly.</li>
+    </ul>
+
+    <h3>What this checker does not do</h3>
+    <p>It measures length only — not whether a headline uses a restricted term, whether a phrase might trigger a policy review, or how an ad performs once the platform's serving algorithm decides which headlines and descriptions to combine. A fully green sheet means the copy will not be rejected for length, not that it is otherwise compliant. All of this runs locally: nothing you paste is uploaded, and only your platform and column choices are remembered.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

@@ -240,6 +240,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why shrinking a photo's file size still matters</h2>
+    <p>A phone camera or screenshot routinely produces JPEG or PNG files in the 2–15 MB range, yet almost none of that data is needed to display the image on a screen, in an email, or on a web page. Large images slow down page loads, eat into email attachment limits (most inboxes cap total attachments around 20–25 MB), and quietly consume mobile data and device storage. Compressing an image trades invisible or barely-visible detail for a dramatically smaller file — the same photo that looks identical on a 1920×1080 screen can end up a tenth of the size once quality and dimensions are tuned for how it will actually be viewed, rather than for how it was captured.</p>
+
+    <h2>How the three controls work together</h2>
+    <ol>
+      <li><strong>Quality</strong> sets how aggressively JPEG and WebP throw away data during re-encoding; it has no effect on PNG, which is always lossless.</li>
+      <li><strong>Max dimension</strong> shrinks the pixel grid itself before compression runs — fewer pixels means fewer bytes at any quality setting, and it's the single biggest lever for photos taken at 12+ megapixels.</li>
+      <li><strong>Output format</strong> lets you convert between JPEG, PNG, and WebP; converting a photo-like PNG to JPEG or WebP is often where the single largest size drop comes from, because PNG's lossless method is a poor fit for photographic gradients and sensor noise.</li>
+      <li>Drop up to ten files at once, watch the before/after size and percentage saved appear per file, then download individually or as a batch — nothing leaves the browser tab at any point.</li>
+    </ol>
+
+    <h2>What "quality" is actually doing to the pixels</h2>
+    <div class="example">
+      <p>JPEG and WebP don't store a picture as a plain grid of pixel colors — they split the image into small blocks, transform each block's color pattern into a set of frequency components (roughly: how sharply color changes from one edge of the block to the other), and round those components to fewer values. Quality 100 rounds barely at all, so almost nothing is lost. Quality 60 rounds aggressively, discarding the subtle frequency components the eye is least sensitive to first — sharp edges and flat color survive; fine texture and soft gradients are what actually leave the file. That's why dropping from quality 100 to 80 barely changes what you see but can cut the file size by more than half, while dropping from 40 to 20 saves comparatively little extra and starts showing as blocky patches. PNG skips this transform entirely: it compresses losslessly with a dictionary-based method (similar in spirit to a zip file), which is exactly reversible but far less effective on photographic noise.</p>
+    </div>
+
+    <h2>Worked examples</h2>
+    <div class="example">
+      <p><strong>1. A 4032×3024 phone photo, 6.8 MB JPEG saved at quality ~95.</strong> Re-encoding at quality 80 with no resize typically lands around 1.1–1.4 MB — roughly 80% smaller — because the camera's original JPEG was saved at a much higher quality than most screens can distinguish from 80.</p>
+      <p><strong>2. The same photo, quality 80 plus a 1920px max dimension.</strong> Scaling 4032×3024 down to 1920×1440 cuts the pixel count to about 23% of the original (1920×1440 ÷ 4032×3024 ≈ 0.227), and file size roughly tracks pixel count at a fixed quality, so the 1.1–1.4 MB result from example 1 typically drops again to somewhere around 250–350 KB — under 5% of the starting 6.8 MB — with no visible loss on any normal screen.</p>
+      <p><strong>3. A 900 KB PNG screenshot with no transparency.</strong> Converting it to JPEG at quality 85 commonly produces a 120–180 KB file, an 80%+ reduction, because PNG's lossless compression can't exploit smooth gradients and photographic-style content the way JPEG's quantization can — but converting a PNG that relies on transparency to JPEG will flatten it onto a solid background, so check for transparency first.</p>
+    </div>
+
+    <h2>Choosing a quality setting</h2>
+    <table>
+      <thead><tr><th>Quality range</th><th>Typical use</th><th>What to expect</th></tr></thead>
+      <tbody>
+        <tr><td>90–100%</td><td>Archival copies, print-bound images</td><td>Minimal size reduction, no visible loss</td></tr>
+        <tr><td>75–85%</td><td>Website photos, social media uploads</td><td>50–80% smaller, visually identical on screen</td></tr>
+        <tr><td>55–70%</td><td>Thumbnails, image-heavy galleries</td><td>Noticeably smaller; very close inspection may show softness</td></tr>
+        <tr><td>Below 40%</td><td>Rarely worth it</td><td>Visible blocky artifacts around edges and text</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Mistakes that quietly undo the savings</h2>
+    <ul>
+      <li><strong>Re-compressing an already-compressed JPEG repeatedly.</strong> Each JPEG re-encode re-applies quantization on top of whatever was already discarded — a file saved at quality 80, then later re-opened and re-saved at quality 80 again, loses a little more each round (generation loss), even though the quality number never changed.</li>
+      <li><strong>Compressing a PNG that needs to stay a PNG.</strong> Logos, icons, and screenshots with sharp text or transparency usually get larger, not smaller, when forced through JPEG's photographic model — keep those as PNG, or convert to WebP, which supports transparency and still compresses well.</li>
+      <li><strong>Ignoring the max dimension option on modern camera photos.</strong> A 48-megapixel phone photo displayed at 1200px wide on a blog post is carrying roughly 30&times; more pixel data than the page will ever render — resizing first, then compressing, saves far more than compression alone.</li>
+      <li><strong>Not checking the before/after numbers.</strong> A handful of images — particularly small, already-optimized ones — come out larger after re-encoding; this tool shows the size for every file specifically so you can skip those instead of downloading a "compressed" file that isn't actually smaller.</li>
+    </ul>
+
+    <h2>What compression here doesn't do</h2>
+    <p>This tool re-encodes pixels through the browser's canvas — it doesn't run the specialized lossless optimizers dedicated command-line tools use (stripping unused PNG palette entries, rewriting Huffman tables byte-for-byte), so a PNG re-saved as PNG here will shrink only slightly. It also doesn't read or preserve EXIF metadata — camera model, GPS location, capture date, orientation tags — or embedded color profiles beyond what the canvas itself applies, which matters if you need those details kept intact. And it can't compress formats the browser can't decode natively, such as HEIC or RAW camera files; convert those to JPEG or PNG with another tool first, then compress here.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

@@ -279,6 +279,89 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Getting the most out of the scientific calculator</h2>
+    <p>A basic four-function calculator is fine for a grocery bill, but it breaks down the moment a problem needs an angle, a logarithm, or a number set aside in memory while you work out something else. This tool covers that in-between zone — homework mixing trigonometry with plain arithmetic, a check on a log-scale reading, or a multi-step calculation with an intermediate result to park. Because every keypress builds a real expression rather than a running two-number tally, you can type something as long as <code>(3+5)^2÷4-sin(30)</code> and get one correct answer in a single pass, parentheses and all.</p>
+
+    <h3>Entering an expression</h3>
+    <ol>
+      <li>Type digits and the decimal point as usual; use ± to flip the sign of the number you just entered.</li>
+      <li>Place an operator (+, −, ×, ÷, x^y) between two values, and use ( / ) to group parts of the expression — nesting is unlimited.</li>
+      <li>Tap a function key (sin, cos, tan, √, log, ln) and its opening parenthesis is inserted automatically; type the argument and close the bracket yourself with ). Pressing = with a bracket left open is refused with a clear error instead of a guess.</li>
+      <li>π and e insert the constants directly — no digits to type.</li>
+      <li>Press = to evaluate the whole expression using standard mathematical order of operations.</li>
+    </ol>
+
+    <h3>Order of operations, exactly as this engine applies it</h3>
+    <p>Every expression is converted from the order typed (infix) into Reverse Polish Notation via a shunting-yard algorithm, then evaluated on a stack — the same technique used in real programming-language parsers, and the reason this calculator never touches JavaScript's <code>eval()</code>. The practical effect is a strict precedence order:</p>
+    <table>
+      <tr><th>Precedence</th><th>Operators</th><th>Direction</th></tr>
+      <tr><td>Highest</td><td>x^y (power)</td><td>right to left</td></tr>
+      <tr><td>Middle</td><td>× and ÷</td><td>left to right</td></tr>
+      <tr><td>Lowest</td><td>+ and −</td><td>left to right</td></tr>
+    </table>
+    <p>The power operator's right-to-left direction is the detail that catches people out, because it differs from how power works in a typical spreadsheet formula. Typed left to right, <code>2^3^2</code> is not <code>(2^3)^2</code> — this engine groups it as <code>2^(3^2)</code>.</p>
+    <div class="example">
+      <strong>Worked example — right-associative powers</strong><br>
+      2^3^2 → the rightmost power binds first: 3^2 = 9, then 2^9 = <strong>512</strong> (not 64, which is what (2^3)^2 would give).
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Mixed operators and a group</strong><br>
+      5 + 2 × 3^2 − (4 − 1): first the power, 3^2 = 9; then the multiplication, 2 × 9 = 18; then the parenthesis, 4 − 1 = 3; then left to right, 5 + 18 − 3 = <strong>20</strong>.
+    </div>
+    <div class="example">
+      <strong>Degrees vs. radians</strong><br>
+      In DEG mode, cos(60) = 0.5, so cos(60) × 10 = <strong>5</strong> — the adjacent side of a right triangle with a 60° angle and a 10-unit hypotenuse. In RAD mode, cos(π÷3) gives the same 0.5. But type cos(60) while still in RAD mode and it treats 60 as 60 radians (about 9.5 full turns), returning roughly <strong>−0.952</strong> — a valid answer to a different question than intended.
+    </div>
+    <div class="example">
+      <strong>Logs and memory together</strong><br>
+      log(1000) = <strong>3</strong> (base 10); ln(1000) ≈ <strong>6.907755</strong> (natural log, base e). Press M+ to store the 3, clear the display with AC — which leaves memory untouched — compute ln(1000), press M+ again, and MR now recalls <strong>9.907755</strong>, the two results combined without writing anything down.
+    </div>
+
+    <h3>Function and memory key reference</h3>
+    <table>
+      <tr><th>Key</th><th>Computes</th><th>Notes</th></tr>
+      <tr><td>sin / cos / tan</td><td>Trig ratio of the argument</td><td>Uses whichever mode the DEG/RAD button currently shows</td></tr>
+      <tr><td>√</td><td>Square root</td><td>Negative input raises a math error</td></tr>
+      <tr><td>log</td><td>Base-10 logarithm</td><td>Argument must be greater than 0</td></tr>
+      <tr><td>ln</td><td>Natural logarithm, base e</td><td>Argument must be greater than 0</td></tr>
+      <tr><td>x^y</td><td>Power</td><td>Right-associative, see above</td></tr>
+      <tr><td>%</td><td>Divides the value or group before it by 100</td><td>(200+50)% = 2.5, not 50% of the whole line</td></tr>
+      <tr><td>M+ / M− / MR / MC</td><td>Add / subtract / recall / clear one memory slot</td><td>Survives AC; only MC resets it</td></tr>
+    </table>
+
+    <h3>Keyboard shortcuts</h3>
+    <p>The number row, decimal point, +, −, *, /, ^, %, ( and ) all work directly from the keyboard, along with Enter or = to evaluate, Backspace to delete the last entry, and Escape as an all-clear. Functions, π, e and the memory keys have no shortcut by design — they come up rarely enough mid-expression that a stray keystroke isn't worth the risk.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Forgetting the mode.</strong> sin/cos/tan don't error in the wrong mode — they quietly return a different, valid-looking number, which is why DEG/RAD is always shown on the button itself.</li>
+      <li><strong>Assuming % rewrites the whole line.</strong> It only divides the number or group directly to its left by 100, so 50 + 10% is 50 + 0.1 = 50.1, not 55.</li>
+      <li><strong>Leaving a function's parenthesis open.</strong> sin(, log( and the rest auto-open a bracket; if it isn't closed, = flags the expression instead of guessing.</li>
+      <li><strong>Expecting AC to reset memory too.</strong> All Clear only wipes the current expression; a value in memory (shown by the small M badge) needs an explicit MC.</li>
+    </ul>
+
+    <h3>Precision and limits</h3>
+    <p>Results are rounded to 12 significant digits before display, so ordinary floating-point noise — 0.1 + 0.2 showing as 0.30000000000000004 — doesn't appear here; you'll see a clean 0.3 instead. There's no inverse trig (asin/acos/atan), no factorial, and no complex-number support. Every calculation, trig and logarithms included, runs locally on this page — nothing is sent anywhere, and history is saved only in this browser.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

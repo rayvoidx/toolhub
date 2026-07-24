@@ -228,6 +228,82 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>How this calculator turns your drinks into a BAC estimate</h2>
+    <p>Blood alcohol content is normally only measured with a breathalyzer or a blood draw, but most people want a rough sense of where they stand well before either is on hand — at a party deciding whether to open one more beer, the morning after wondering if last night is still in their system, or a student working through the forensic-toxicology math behind drunk-driving law. This calculator answers that "roughly where am I" question using the Widmark formula, the model used in textbooks and expert testimony since the 1930s. Every number it produces is an educational estimate built from population averages, not a diagnostic reading — it cannot replace an actual test, and it should never decide whether you, or anyone else, is fit to drive.</p>
+
+    <h3>What each field actually changes</h3>
+    <ol>
+      <li><strong>Sex</strong> sets the Widmark distribution ratio, <em>r</em> — 0.68 for men and 0.55 for women. This factor stands in for the fraction of body weight that is water, which is where alcohol distributes; women have a lower average body-water fraction, so the same dose spreads through less volume and produces a higher BAC.</li>
+      <li><strong>Body weight</strong> is the tank size alcohol dilutes into. Doubling body weight roughly halves peak BAC for identical drinks — this is the single biggest reason two people at the same party can feel very differently after the same number of drinks.</li>
+      <li><strong>Drinks</strong> determine total grams of pure ethanol consumed. Each preset (beer, wine, soju, spirits) uses a realistic serving volume and ABV; choosing "Custom" lets you enter any volume and ABV, useful for craft beer, cocktails, or a poured-at-home measure that doesn't match a standard serving.</li>
+      <li><strong>Hours since you started drinking</strong> is how long your liver has had to metabolize alcohol at a fixed clearance rate. Longer elapsed time subtracts more from the peak figure, down to a floor of 0.00%.</li>
+    </ol>
+
+    <h3>The Widmark math, in plain terms</h3>
+    <div class="example">
+      <p style="margin:0 0 8px;"><strong>Step 1 — grams of alcohol per drink:</strong><br>grams = volume (mL) × (ABV ÷ 100) × 0.789 (ethanol's density in g/mL)</p>
+      <p style="margin:0 0 8px;"><strong>Step 2 — peak BAC:</strong><br>peak % = total grams ÷ (body weight in grams × r) × 100</p>
+      <p style="margin:0;"><strong>Step 3 — current BAC:</strong><br>current % = peak % − (0.015 × hours elapsed), floored at 0.00%</p>
+    </div>
+    <p>That last constant, 0.015% per hour, is the average rate a healthy liver oxidizes alcohol — roughly one standard drink's worth of ethanol every 60–90 minutes. It is treated as a straight line here for simplicity, which real elimination only approximates once your body has finished absorbing what you drank.</p>
+
+    <h3>Three worked examples</h3>
+    <div class="example">
+      <p style="margin:0;"><strong>Example 1 — a couple of beers, one hour in.</strong> Male, 80 kg, two 355 mL beers at 5% ABV, 1 hour since the first sip. Alcohol: 2 × (355 × 0.05 × 0.789) ≈ 28.0 g. Peak: 28.0 ÷ (80,000 × 0.68) × 100 ≈ 0.05%. Current: 0.05% − (0.015 × 1) ≈ 0.04% — inside the 0.03–0.079% band, roughly 26 minutes from dropping under 0.03% and about 2 hours 26 minutes from reading 0.00%.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0;"><strong>Example 2 — wine and soju right after the last pour.</strong> Female, 60 kg, one 150 mL glass of wine at 12% plus two 50 mL soju shots at 17%, 0 hours elapsed (peak reading). Alcohol: 14.2 g + 13.4 g ≈ 27.6 g. Peak = current: 27.6 ÷ (60,000 × 0.55) × 100 ≈ 0.08% — right at the U.S./U.K. legal threshold, about 15 minutes from dropping under it and roughly 5 hours 35 minutes from 0.00%.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0;"><strong>Example 3 — same drinks, most of a night's sleep later.</strong> Male, 75 kg, three 355 mL beers at 5%, 8 hours elapsed. Peak comes out to about 0.08% again, but 0.08% − (0.015 × 8) = 0.08% − 0.12% is negative, so the estimate floors at 0.00% — the model treats this person as fully metabolized, illustrating why "I only had three beers" says much less than "three beers, eight hours ago."</p>
+    </div>
+
+    <h3>Reference tables</h3>
+    <table>
+      <tr><th>Preset drink</th><th>Serving used</th><th>ABV</th><th>Pure alcohol</th></tr>
+      <tr><td>Beer</td><td>355 mL (~12 oz can)</td><td>5%</td><td>≈14.0 g</td></tr>
+      <tr><td>Wine</td><td>150 mL (~5 oz glass)</td><td>12%</td><td>≈14.2 g</td></tr>
+      <tr><td>Soju shot</td><td>50 mL</td><td>17%</td><td>≈6.7 g</td></tr>
+      <tr><td>Spirits shot</td><td>44 mL (~1.5 oz)</td><td>40%</td><td>≈13.9 g</td></tr>
+    </table>
+    <p style="font-size:13px;color:var(--muted);margin:-4px 0 12px;">A soju shot carries roughly half the pure alcohol of a beer, wine glass or spirits shot — one reason soju rounds feel deceptively light until several add up.</p>
+    <table>
+      <tr><th>Peak BAC</th><th>Approx. time back to ~0.00%</th></tr>
+      <tr><td>0.02%</td><td>~1 h 20 m</td></tr>
+      <tr><td>0.05%</td><td>~3 h 20 m</td></tr>
+      <tr><td>0.08%</td><td>~5 h 20 m</td></tr>
+      <tr><td>0.15%</td><td>~10 h 00 m</td></tr>
+      <tr><td>0.20%</td><td>~13 h 20 m</td></tr>
+      <tr><td>0.30%</td><td>~20 h 00 m</td></tr>
+    </table>
+
+    <h3>Mistakes that throw the estimate off</h3>
+    <ul>
+      <li><strong>Assuming coffee, cold water or a nap speeds things up.</strong> The 0.015%/hour clearance rate is fixed by liver enzyme activity — nothing you do afterward changes its slope.</li>
+      <li><strong>Comparing two people's totals directly.</strong> Because <em>r</em> and body weight sit in the denominator, identical drinks can land at very different BAC for a lighter person, a woman, or someone who ate nothing beforehand — food intake isn't part of this model at all.</li>
+      <li><strong>Entering "0" hours right after the last drink and treating that as a ceiling.</strong> Real absorption continues for 30–90 minutes past your last sip, so true peak BAC can run a little higher than a same-moment estimate, especially on an empty stomach.</li>
+      <li><strong>Trusting a rounded-down ABV or a "generous" home pour.</strong> A restaurant glass or a self-mixed spirit is often larger than the preset serving; switch to Custom and measure honestly instead of relying on a preset that undercounts.</li>
+    </ul>
+
+    <h3>What this model can't see</h3>
+    <p>The Widmark formula is a population-average model, not a personalized one. It does not account for food in your stomach (which slows absorption and lowers the peak), genetic differences in alcohol-dehydrogenase activity, medication interactions, chronic drinking history, illness, or the early absorption phase where BAC is still climbing. Two people who enter identical numbers can have a real BAC that differs by 20–30% either direction from this estimate. Use it to understand roughly how the math works and to get a ballpark sense of your evening — never as a green light to get behind the wheel. If there is any doubt, the only safe assumption is to wait, arrange another way home, and let more time pass than the number on screen suggests.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

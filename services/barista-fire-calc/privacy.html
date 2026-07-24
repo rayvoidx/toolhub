@@ -1,23 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Barista FIRE Calculator</title>
+<title>Privacy Policy — Tip Calculator</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
-  <a class="brand" href="./"><img src="icons/icon.svg" alt="" width="28" height="28"><span>Barista FIRE Calculator</span></a>
+  <a class="brand" href="./"><img src="icons/icon.svg" alt="" width="28" height="28"><span>Tip Calculator</span></a>
 </header>
 <main>
   <h1>Privacy Policy</h1>
-  <p>Effective date: 2026-07-18</p>
+  <p>Effective date: 2026-07-11</p>
 
   <h2>1. Information we collect</h2>
-  <p>Barista FIRE Calculator (the "Service") can be used without creating an account, and we do not store
+  <p>Tip Calculator (the "Service") can be used without creating an account, and we do not store
   personal information on any server. Data you enter is processed entirely inside your browser and
   is never transmitted elsewhere. Preferences such as theme and language are stored only in your
   browser's localStorage.</p>
@@ -28,11 +67,8 @@
   in <a href="https://adssettings.google.com" rel="noopener" target="_blank">Google Ads Settings</a>.</p>
 
   <h2>3. Analytics</h2>
-  <p>To improve the Service, we use Cloudflare Web Analytics, which is cookie-free and privacy-first.
-  It records page views only — the page visited, referrer, country, and device type. It does not use
-  cookies, does not fingerprint or identify you, and does not track you across other sites.
-  Nothing you type into the tool is ever included: as stated in section 1, the data you enter stays
-  in your browser and is never sent anywhere.</p>
+  <p>To improve the Service, we may use anonymized traffic analytics tools such as Google Analytics.
+  These do not identify individual users.</p>
 
   <h2>4. Contact</h2>
   <p>Privacy inquiries: <a href="mailto:jhighllight@gmail.com">jhighllight@gmail.com</a></p>

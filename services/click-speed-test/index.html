@@ -258,6 +258,80 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What click speed testing actually measures</h2>
+    <p>A click speed test isolates one narrow skill: how many times your finger can actuate a mouse button (or tap a touchscreen) in a fixed window, with no visual cue to wait for. That's a different thing from a reaction-time test, which measures how quickly you notice a stimulus and respond to it. Here there's nothing to react to — the clock starts the moment you press, so the score is pure repetitive-motion speed, not perception speed. That distinction matters for gamers: CPS tells you how fast your hardware and hand can fire, while reaction time tells you how fast your brain can decide to fire.</p>
+    <p>People reach for a CPS counter for a few concrete reasons: benchmarking a new mouse or keyboard switch before a purchase decision sticks, warming up hand muscles before a competitive session, settling a friendly argument about who clicks faster, or checking whether a clicking technique someone taught you actually works as advertised.</p>
+
+    <h2>Running the test correctly</h2>
+    <ol>
+      <li>Pick a duration chip. Short windows (1–5s) reward an explosive burst; long windows (30–60s) reward endurance and expose fatigue.</li>
+      <li>Rest your clicking finger on the box before you start — the countdown for most durations only begins on your first press, so a slow first tap doesn't cost you time.</li>
+      <li>Click or tap the box as many times as you can until the progress bar empties.</li>
+      <li>Read the result card: total clicks, CPS, rank, and your saved best for that specific duration.</li>
+      <li>Press "Try again" to re-run the same duration, or switch chips to test a different window — each duration keeps its own separate best score.</li>
+    </ol>
+
+    <h2>How the score is actually computed</h2>
+    <p>Under the hood the counter listens for the browser's <code>pointerdown</code> event rather than the higher-level <code>click</code> event. <code>click</code> only fires after a press-and-release pair completes, so at high speeds it can lag behind or coalesce presses; <code>pointerdown</code> fires the instant contact is registered, using the same high-resolution timestamp (<code>performance.now()</code>) the browser uses for animation timing. Once the window closes, CPS is simply:</p>
+    <div class="example">
+      <strong>CPS = total valid presses ÷ test duration in seconds</strong>, rounded to two decimal places.
+    </div>
+    <p>One hardware detail worth knowing: your actual ceiling isn't set by this page, it's set by your mouse's polling rate. An office mouse polling at 125 Hz reports its position and button state to the OS 125 times per second (roughly every 8 ms); a gaming mouse polling at 1000 Hz or higher can report changes far more often. Two presses landing closer together than your polling interval get merged into a single reported event, so a higher-polling-rate mouse can genuinely score higher CPS on identical hand technique.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — short burst.</strong> 1-second test, 9 presses land inside the window.<br>
+      CPS = 9 ÷ 1 = <strong>9.00</strong> → lands in the Tiger band (9–11 CPS).
+    </div>
+    <div class="example">
+      <strong>Example 2 — jitter clicking, mid-length test.</strong> 10-second test using jitter technique, 115 presses recorded.<br>
+      CPS = 115 ÷ 10 = <strong>11.50</strong> → clears the Cheetah threshold (11+ CPS).
+    </div>
+    <div class="example">
+      <strong>Example 3 — endurance test.</strong> 60-second test, ordinary index-finger tapping, 260 presses total.<br>
+      CPS = 260 ÷ 60 = <strong>4.33</strong> → Rabbit band — noticeably lower than a 1-second burst from the same person, because fatigue drags the average down over a full minute.
+    </div>
+
+    <h3>Clicking techniques compared</h3>
+    <p>Competitive players (Minecraft PvP in particular) developed several hand techniques specifically to push CPS past what a relaxed single tap allows. This tool counts every technique identically — it measures presses, not muscle mechanics — so the numbers below are typical ranges, not test settings.</p>
+    <table>
+      <thead><tr><th>Technique</th><th>Motion</th><th>Typical CPS</th><th>Trade-off</th></tr></thead>
+      <tbody>
+        <tr><td>Regular tapping</td><td>Single finger, full press-release</td><td>4–7</td><td>Most accurate, easiest to sustain</td></tr>
+        <tr><td>Jitter clicking</td><td>Forearm/wrist tension vibrates one finger against the button</td><td>8–14</td><td>High wrist strain over time</td></tr>
+        <tr><td>Butterfly clicking</td><td>Two fingers alternate rapidly on the same button</td><td>10–20</td><td>Fast but taps can miss if fingers desync</td></tr>
+        <tr><td>Drag clicking</td><td>Fingertip dragged across the button surface, exploiting switch bounce</td><td>20–30+</td><td>Depends entirely on a specific mouse switch; banned on many servers</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes and practical tips</h3>
+    <ul>
+      <li><strong>Testing on a trackpad or touchscreen and comparing to a mouse score.</strong> Touch surfaces debounce differently and usually cap out lower — compare scores only within the same input device.</li>
+      <li><strong>Comparing a 1-second score to a 60-second score.</strong> They measure different things (burst vs. endurance); this page tracks a separate personal best per duration for exactly that reason.</li>
+      <li><strong>Trusting your very first run.</strong> Adrenaline from a fresh attempt often inflates the first score — run three or four attempts at the same duration and treat the median as your real baseline.</li>
+      <li><strong>Assuming a technique is tournament-legal.</strong> Jitter, butterfly and drag clicking are treated differently across games and servers; some competitive rulesets restrict or ban them outright, so check before relying on one.</li>
+    </ul>
+
+    <h3>What this test doesn't tell you</h3>
+    <p>CPS is a motor-speed number, not a skill score. It says nothing about aim, reaction time, or game sense, and a high CPS on this page doesn't guarantee better in-game performance in a title that doesn't reward rapid clicking. It also can't reliably distinguish a human hand from autoclicker software — a suspiciously constant, machine-perfect interval between every single press is one visual tell to watch for on your own click-count trace, but this tool makes no such determination for you.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

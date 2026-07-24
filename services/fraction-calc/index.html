@@ -290,6 +290,73 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Working with fractions: the rules behind the calculator</h2>
+    <p>Fractions turn up anywhere a whole is split into equal parts: a recipe calling for 2 1/4 cups of flour, a carpenter marking a board at 5 3/8 inches, a grade sheet reporting 17/20 correct, or a spreadsheet formula that needs an exact ratio instead of a rounded decimal. Unlike a calculator that only handles decimals, working in fractions keeps the answer exact — 1/3 stays 1/3 instead of turning into a rounded 0.333. That matters whenever a measurement, a recipe, or a shared bill has to divide evenly, and it's why this tool keeps every result as a fraction first, with the decimal shown only as a secondary reference.</p>
+
+    <h3>How to enter a fraction</h3>
+    <ol>
+      <li>In the <strong>Calculate</strong> tab, fill in Fraction A: leave the "whole" box empty for a plain fraction like 3/4, or fill it in for a mixed number like 2 1/4 (whole = 2, numerator = 1, denominator = 4).</li>
+      <li>Pick an operation — add, subtract, multiply, or divide — then fill in Fraction B the same way.</li>
+      <li>The result panel shows the answer as a reduced fraction, as a mixed number if it's greater than one, and as a decimal, with a step-by-step breakdown available underneath.</li>
+      <li>Switch to the <strong>Simplify</strong> tab to reduce a single numerator/denominator pair to lowest terms without doing an operation.</li>
+      <li>Negative signs are accepted on the numerator or whole part (e.g. -3/4 or -1 1/2); denominators should stay positive.</li>
+    </ol>
+
+    <h3>The arithmetic behind each operation</h3>
+    <div class="example">
+      <p><strong>Add or subtract</strong> — the denominators must match first. Convert both fractions to a common denominator (the calculator uses the least common multiple of the two denominators so the numbers stay as small as possible), then add or subtract only the numerators:</p>
+      <p>a/b + c/d = (a·d + c·b) / (b·d), then reduced by dividing through by the greatest common divisor (GCD).</p>
+      <p><strong>Multiply</strong> — no common denominator needed. Multiply numerator by numerator and denominator by denominator: a/b × c/d = (a·c)/(b·d).</p>
+      <p><strong>Divide</strong> — flip (take the reciprocal of) the second fraction and multiply: a/b ÷ c/d = a/b × d/c = (a·d)/(b·c). A mixed number is first converted to an improper fraction (whole × denominator + numerator, over the same denominator) before any of these operations run.</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p><strong>1. Adding mixed numbers.</strong> 1 3/4 + 2 1/3 → convert to improper fractions: 7/4 and 7/3. LCD of 4 and 3 is 12: 7/4 = 21/12, 7/3 = 28/12. Sum: 49/12. As a mixed number that's 4 1/12, and as a decimal ≈ 4.0833.</p>
+      <p><strong>2. Subtracting with borrowing.</strong> 3 1/6 − 1 1/2 → improper form: 19/6 − 3/2. LCD of 6 and 2 is 6: 3/2 = 9/6. 19/6 − 9/6 = 10/6, which reduces (GCD 2) to 5/3, i.e. 1 2/3 or ≈ 1.6667.</p>
+      <p><strong>3. Multiplying then simplifying.</strong> 8/9 × 3/4 = 24/36. The GCD of 24 and 36 is 12, so 24/36 reduces to 2/3 ≈ 0.6667. Multiplying first and reducing afterward always gives the same reduced answer as canceling common factors before multiplying.</p>
+      <p><strong>4. Dividing fractions.</strong> 5/6 ÷ 2/3 = 5/6 × 3/2 = 15/12, which reduces (GCD 3) to 5/4, or the mixed number 1 1/4 (1.25).</p>
+    </div>
+
+    <h3>Quick reference: common fractions as decimals</h3>
+    <table>
+      <tr><th>Fraction</th><th>Decimal</th><th>Fraction</th><th>Decimal</th></tr>
+      <tr><td>1/2</td><td>0.5</td><td>1/8</td><td>0.125</td></tr>
+      <tr><td>1/3</td><td>0.333…</td><td>3/8</td><td>0.375</td></tr>
+      <tr><td>2/3</td><td>0.666…</td><td>5/8</td><td>0.625</td></tr>
+      <tr><td>1/4</td><td>0.25</td><td>7/8</td><td>0.875</td></tr>
+      <tr><td>3/4</td><td>0.75</td><td>1/6</td><td>0.1666…</td></tr>
+      <tr><td>1/5</td><td>0.2</td><td>5/6</td><td>0.8333…</td></tr>
+    </table>
+
+    <h3>Common mistakes to avoid</h3>
+    <ul>
+      <li><strong>Adding numerators and denominators straight across.</strong> 1/2 + 1/3 is not 2/5 — you must find a common denominator first (it's 5/6).</li>
+      <li><strong>Forgetting to convert a mixed number before dividing.</strong> 2 1/2 ÷ 1/4 needs 2 1/2 turned into 5/2 first; dividing the whole and fraction parts separately gives the wrong answer.</li>
+      <li><strong>Stopping before the fraction is fully reduced.</strong> 6/8 and 3/4 are the same value, but only 3/4 is in lowest terms — always divide by the full GCD, not just any common factor.</li>
+      <li><strong>Reading a repeating decimal as exact.</strong> 1/3 truncated to 0.33 loses precision; when exactness matters (splitting a bill, cutting a board), keep the fraction form rather than a rounded decimal.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>This calculator handles two fractions and one operation at a time (or one fraction to simplify) using exact integer arithmetic — it does not evaluate multi-step expressions with parentheses, nor does it work with fractions that have variables (algebraic fractions) or irrational denominators. For very large numerators or denominators the display switches to a compact layout so the exact value still fits on screen without rounding. If a calculation needs unit conversion (say, feet to inches before dividing), convert to the same unit first — the tool only performs the fraction arithmetic itself.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

@@ -333,6 +333,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Resizing by dimensions vs. by percentage — and why the distinction matters</h2>
+    <p>Most image tasks that involve "resizing" are really about hitting a specific pixel target that someone else defined — a form that only accepts 400×400 avatars, a marketplace listing capped at 1600px on the longest side, a blog theme that renders inline photos at 1200px wide, or a print template sized for a 300dpi 4×6in photo (1200×1800px). This tool exists to change the physical dimensions — width and height in pixels — of an image, not to shrink its file size for its own sake. Reducing file size is a side effect of having fewer pixels to encode, but the goal here is the shape and scale of the image, not squeezing bytes out of an unchanged canvas.</p>
+    <p>Because of that, the two modes above the width/height fields solve different problems. <strong>By dimensions</strong> is for when you know the exact pixel number you need — a platform's upload spec, a design grid, a print size. <strong>By percentage</strong> is for when you just want a smaller or larger version of the same photo without doing arithmetic — "half size" or "double size" — and it always keeps both sides scaled by the same factor, so there is no risk of accidentally distorting the image.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Drop in or choose a JPG, PNG or WEBP file (up to 8000px per side, 40MB).</li>
+      <li>Pick a mode. In <em>By dimensions</em>, type a width or a height — with "Lock aspect ratio" checked, the other side is computed for you automatically. In <em>By percentage</em>, type a scale factor from 1% to 500%, or tap one of the quick chips (25%, 50%, 75%, 150%, 200%).</li>
+      <li>Choose an output format — <em>Keep original format</em> re-encodes at the new size without converting — and, for JPEG/WEBP, set a quality level with the slider.</li>
+      <li>Resize, review the result dimensions and file size against the original, then download.</li>
+    </ol>
+
+    <h3>The math behind the resize</h3>
+    <p>With aspect ratio locked, the field you type into is the "driving" dimension: if you enter a width <var>w</var>, the matching height is <code>h = round(w × originalHeight ÷ originalWidth)</code>, which keeps the original ratio exact to the nearest pixel. Percentage mode applies the same scale factor to both sides at once: <code>newWidth = round(originalWidth × pct ÷ 100)</code> and <code>newHeight = round(originalHeight × pct ÷ 100)</code>. If you turn locking off, width and height become fully independent — which is the one path that lets you stretch or squash an image on purpose, and the one to avoid by accident.</p>
+
+    <div class="example">
+      <strong>Example 1 — hitting a blog's width requirement.</strong><br>
+      A phone photo is 4032×3024 (a 4:3 ratio). The site's content column only shows images at 1200px wide. With locking on, type <code>1200</code> into Width: height becomes <code>round(1200 × 3024 ÷ 4032) = 900</code>. Result: 1200×900, same proportions as the original, ready to drop into an article.
+    </div>
+
+    <div class="example">
+      <strong>Example 2 — an upscale request that hits the safety cap.</strong><br>
+      A 4000×3000 source is scaled by 300% for a large-format mockup. Percentage math gives 12000×9000, but this tool caps any side at 8000px to protect browser memory. Since both sides exceed the cap, the result is scaled back down proportionally: <code>scale = 8000 ÷ 12000 = 0.667</code>, giving a final 8000×6000 — the ratio is preserved, but you land at the cap rather than at the requested 300%.
+    </div>
+
+    <div class="example">
+      <strong>Example 3 — turning off locking to force a ratio (use with care).</strong><br>
+      A 1600×1200 (4:3) photo needs to fill a 16:9 video thumbnail template exactly, with no cropping allowed. Unlocking aspect ratio and setting Width 1600 / Height 900 will hit that box precisely, but every round or straight-edged object in the photo will look visibly squeezed vertically — this is a deliberate stretch, not a neutral resize, and it's usually better to crop to 16:9 first in an editor and resize the crop instead.
+    </div>
+
+    <h3>Why upscaling has a ceiling</h3>
+    <p>Downscaling throws away pixels and is essentially lossless for perceived sharpness — you're sampling detail that already exists. Upscaling works the opposite way: the canvas has to invent new pixel values between the ones that exist, using interpolation (smoothing based on neighboring pixels). A 500×500 icon resized up to 1000×1000 will display at double the size, but it will not gain any real detail — edges soften and fine texture looks blurred compared to a photo that was natively captured at 1000×1000. Percentage mode allows up to 500% specifically so you can stretch a small image to fit a layout slot, not to "enhance" its resolution.</p>
+
+    <h3>Common target sizes by use case</h3>
+    <table>
+      <tr><th>Use case</th><th>Target size</th><th>Suggested mode</th></tr>
+      <tr><td>Blog / article inline photo</td><td>1200px wide (auto height)</td><td>Dimensions, width only, lock on</td></tr>
+      <tr><td>Square social media post</td><td>1080×1080</td><td>Dimensions (crop to square beforehand)</td></tr>
+      <tr><td>Profile / avatar photo</td><td>400×400</td><td>Dimensions</td></tr>
+      <tr><td>Marketplace listing (longest side)</td><td>≤1600px</td><td>Percentage, scaled to fit</td></tr>
+      <tr><td>Email signature logo</td><td>300×90</td><td>Dimensions, lock off (fixed box)</td></tr>
+      <tr><td>Print photo at 300dpi, 4×6in</td><td>1200×1800</td><td>Dimensions</td></tr>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Unlocking aspect ratio out of habit.</strong> Leaving locking on is the safer default; only turn it off when a fixed box genuinely requires a different ratio than the source.</li>
+      <li><strong>Typing a huge percentage expecting more detail.</strong> Upscaling is a display-size change, not a quality upgrade — see the ceiling above.</li>
+      <li><strong>Forgetting which field is "driving" the calculation.</strong> With locking on, the last field you edited controls the other — if you meant to fix the height, click into the height field rather than leaving your cursor in width.</li>
+      <li><strong>Picking PNG for photos.</strong> PNG is lossless and great for screenshots or flat-color graphics, but a resized photo saved as PNG is typically several times larger than the same photo as a high-quality JPEG or WEBP, with no visible difference for a photographic subject.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>This resizer changes pixel dimensions and re-encodes the result — it doesn't crop, rotate, batch-process multiple files, or optimize an unchanged image purely to shrink its file size while keeping the same dimensions (that's a separate, dedicated job). It also can't add real detail beyond a photo's native resolution: the 8000px input cap and the 500% upscale ceiling exist because both very large canvases and extreme interpolation stop being useful — the first for browser stability, the second because the output stops looking sharp long before you reach it.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

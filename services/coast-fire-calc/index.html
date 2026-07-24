@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Coast FIRE Calculator: Your Coast FIRE Number Today</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -253,6 +292,77 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>The Moment You Stop Feeding the Portfolio</h2>
+    <p>Coast FIRE marks a single, specific milestone: the point at which the money you've already invested is on track to grow, on its own, into the balance you'll need at retirement — even if you never deposit another dollar. Nothing about your job has to change. You can keep working full-time, switch to something you enjoy more, or take a lower-paying role, because the only thing you still need your income for is covering today's cost of living. Retirement itself is already funded by compounding that's already in motion.</p>
+    <p>That distinction matters because most FIRE planning treats "years to retirement" and "savings rate" as levers you pull together for decades straight. This calculator isolates one question instead: has time and growth already done enough of the work that you could stop contributing right now and still land on target? For a lot of people who started saving aggressively in their 20s and 30s, the honest answer arrives years before they expected it.</p>
+
+    <h2>What Each Field Is Asking</h2>
+    <ol>
+      <li>Current age and target retirement age set how many years compounding has left to run — this gap is the exponent in the formula below, so a few extra years makes a large difference.</li>
+      <li>Current invested savings should be the balance actually sitting in the market (brokerage, index funds, retirement accounts) — cash reserves or home equity don't compound the way this projection assumes.</li>
+      <li>Your FIRE target can be entered as an annual spending figure plus a withdrawal rate, or typed directly as a lump-sum number if you already know it from other planning.</li>
+      <li>Expected real return should already be net of inflation — this keeps the FIRE number and the Coast FIRE number in the same, comparable units of today's money.</li>
+      <li>Monthly contribution is optional and only used to answer a second question: if you're not coasting yet, roughly when would ongoing contributions get you there?</li>
+    </ol>
+
+    <h2>The Coast Number Is Just a Present Value</h2>
+    <div class="example">
+      <p><strong>Coast FIRE number (today)</strong> = FIRE number ÷ (1 + real return) ^ years remaining<br>
+      <strong>Projected balance (at retirement)</strong> = Current savings × (1 + real return) ^ years remaining</p>
+      <p>You're already coasting the moment your current savings meet or exceed the Coast FIRE number — which is mathematically identical to saying your projected balance at retirement meets or exceeds your FIRE number. The calculator also walks forward month by month with your contribution added: it finds the first month where your growing balance clears the (shrinking) present-value target for whatever years are left at that point, and reports that as your Coast FIRE age — the birthday you could stop contributing for good.</p>
+    </div>
+
+    <h3>Three Worked Scenarios</h3>
+    <div class="example">
+      <p><strong>Not coasting yet.</strong> Alex is 27, plans to retire at 65 (38 years out), spends $50,000/year at a 4% withdrawal rate (FIRE number $1,250,000), assumes a 6% real return, and has $80,000 invested. Coast number today: 1,250,000 ÷ 1.06^38 ≈ $136,550. Alex's $80,000 covers about 59% of that, leaving a gap of roughly $56,550 — the projected balance at 65 with zero further contributions would land near $732,340, about $517,660 short of the $1,250,000 target. Alex isn't coasting yet, but is closer than "38 years of saving left" makes it feel.</p>
+    </div>
+    <div class="example">
+      <p><strong>Already coasting.</strong> Priya is 42, retiring at 60 (18 years out), spends $40,000/year at 4% (FIRE number $1,000,000), assumes a 5% real return, and has $420,000 invested. Coast number today: 1,000,000 ÷ 1.05^18 ≈ $415,520. Priya's $420,000 clears it by about $4,480 — a thin but real surplus. Left untouched, that balance projects to roughly $1,010,780 at 60, about $10,780 above the FIRE number. Priya could stop contributing today and still arrive on schedule.</p>
+    </div>
+    <div class="example">
+      <p><strong>Finding the Coast FIRE age.</strong> Sam is 30, retiring at 65 (35 years out), has $50,000 invested, a $1,500,000 FIRE number, assumes a 7% real return, and keeps contributing $1,000/month. Today's coast number is about $140,490 — Sam's $50,000 is well short. But stepping forward month by month, the $1,000/month contributions push the balance past the shrinking present-value target around month 122, roughly age 40. From that point on — about a decade from now — Sam could stop contributing entirely and let growth finish the job alone.</p>
+    </div>
+
+    <h3>How Much You Need Banked Today, by Years Left</h3>
+    <p>Because the coast number is a present value, the share of your FIRE number you need already invested falls fast as your time horizon stretches out — and rises fast at higher assumed returns, since more of the work gets left to compounding.</p>
+    <table>
+      <tr><th>Years to retirement</th><th>4% real return</th><th>5%</th><th>6%</th><th>7%</th></tr>
+      <tr><td>5</td><td>82%</td><td>78%</td><td>75%</td><td>71%</td></tr>
+      <tr><td>10</td><td>68%</td><td>61%</td><td>56%</td><td>51%</td></tr>
+      <tr><td>15</td><td>56%</td><td>48%</td><td>42%</td><td>36%</td></tr>
+      <tr><td>20</td><td>46%</td><td>38%</td><td>31%</td><td>26%</td></tr>
+      <tr><td>25</td><td>38%</td><td>30%</td><td>23%</td><td>18%</td></tr>
+      <tr><td>30</td><td>31%</td><td>23%</td><td>17%</td><td>13%</td></tr>
+    </table>
+
+    <h2>Where People Get Coast FIRE Wrong</h2>
+    <ul>
+      <li>Reading "coasting" as "quit working." It only means the retirement portfolio no longer needs new contributions — your income still has to cover today's rent, food, and bills until the actual retirement date.</li>
+      <li>Plugging in a nominal market return (often 9–10% for stocks) instead of a real one. That overstates growth by the inflation rate and makes the Coast FIRE number look artificially reachable.</li>
+      <li>Treating the FIRE number as fixed for decades. A move, a new dependent, or a change in expected healthcare costs changes annual spending — and therefore both the FIRE number and the coast number — so it's worth rechecking after any major life change, not just once.</li>
+      <li>Forgetting that this is a smooth average, not a market forecast. Real portfolios have down years; someone who reaches their coast number right before a downturn may dip below it again for a while, even though the long-run math still works out.</li>
+      <li>Confusing this with Barista FIRE. Barista FIRE deliberately shrinks the target because ongoing part-time income offsets some retirement spending forever. Coast FIRE leaves the target exactly where it was — you've simply already banked enough for compounding alone to reach it.</li>
+    </ul>
+
+    <h2>What This Calculator Doesn't Do</h2>
+    <p>It doesn't account for taxes on withdrawals or account type (taxable vs. tax-advantaged), sequence-of-returns risk from real market volatility, Social Security or pension income, or one-off expenses like a home purchase. Every figure — the coast number, the projected balance, and the Coast FIRE age — is a today's-money estimate built from a constant assumed return, not a forecast or investment advice. All of the math runs locally in your browser; nothing you type is uploaded or stored anywhere.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

@@ -210,6 +210,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 한국어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>2023년 만 나이 통일법, 왜 필요했을까</h2>
+    <p>오랫동안 한국 사회는 같은 사람의 나이를 상황에 따라 세 가지 다른 숫자로 불러왔습니다. 태어난 순간 1세로 시작해 매년 1월 1일마다 한 살씩 더하는 <strong>세는나이</strong>, 태어난 날을 0세로 두고 생일이 지날 때마다 한 살씩 늘어나는 <strong>만 나이</strong>, 그리고 생일과 무관하게 현재 연도에서 출생 연도만 빼는 <strong>연나이</strong>가 뒤섞여 쓰인 탓입니다. 병원 진료 기록, 계약서, 보험 약관마다 나이 기준이 달라 실무 혼란이 반복됐고, 세는나이로는 이미 다음 나이대인데 만 나이로는 아직 아닌 경우처럼 정년·연금 수급 시점을 둘러싼 다툼도 종종 벌어졌습니다.</p>
+    <p>이 문제를 해소하고자 2023년 6월 28일부터 시행된 만 나이 통일법(행정기본법·민법 개정)은 별도로 명시하지 않는 한 모든 법령·공문서·계약에서 만 나이를 공식 기준으로 삼도록 했습니다. 다만 일상 대화 속 세는나이 습관은 여전히 남아 있고, 병역법이나 학교 입학 기준처럼 일부 제도는 연나이를 그대로 쓰기 때문에 세 가지를 모두 구분해 둘 필요가 있습니다. 이 계산기는 생년월일 하나만 입력하면 세 나이를 동시에 보여주고, 다음 생일까지 남은 날짜(D-day)와 태어난 해의 띠까지 한 번에 확인할 수 있게 만들었습니다.</p>
+
+    <h2>입력 방법</h2>
+    <ol>
+      <li>생년월일 입력란에 태어난 날짜를 선택합니다.</li>
+      <li>기준일은 기본으로 오늘 날짜가 적용되며, 입사일·계약일 등 특정 시점의 나이를 확인하려면 원하는 날짜로 바꿀 수 있습니다.</li>
+      <li>계산하기 버튼을 누르면 만 나이·세는나이·연나이·다음 생일까지 남은 일수·띠가 한 번에 표시됩니다.</li>
+    </ol>
+
+    <h2>세 가지 나이, 계산 원리</h2>
+    <ul>
+      <li><strong>만 나이</strong> = 기준일 연도 − 출생 연도, 단 기준일의 (월, 일)이 생일의 (월, 일)보다 이르면 1을 뺍니다.</li>
+      <li><strong>세는나이</strong> = 기준일 연도 − 출생 연도 + 1 (생일 경과 여부와 무관하게, 태어난 순간을 1세로 계산)</li>
+      <li><strong>연나이</strong> = 기준일 연도 − 출생 연도 (생일 경과 여부와 무관하며, 세는나이보다 항상 1 적음)</li>
+    </ul>
+
+    <h3>워크드 예시 1 — 생일이 아직 지나지 않은 경우</h3>
+    <div class="example">
+      <p>1990년 12월 1일생을 2025년 7월 21일 기준으로 계산하면:</p>
+      <ul>
+        <li>만 나이: 2025 − 1990 = 35, 그런데 (7, 21)이 (12, 1)보다 이르므로 −1 → <strong>34세</strong></li>
+        <li>세는나이: 2025 − 1990 + 1 = <strong>36세</strong></li>
+        <li>연나이: 2025 − 1990 = <strong>35세</strong></li>
+      </ul>
+      <p>같은 사람의 나이가 34·35·36세로 세 가지가 나오는, 만 나이 통일법이 필요했던 이유를 보여주는 전형적인 사례입니다.</p>
+    </div>
+
+    <h3>워크드 예시 2 — 생일이 이미 지난 경우</h3>
+    <div class="example">
+      <p>2000년 3월 15일생을 2025년 7월 21일 기준으로 계산하면:</p>
+      <ul>
+        <li>만 나이: 2025 − 2000 = <strong>25세</strong> (기준일이 생일보다 늦으므로 그대로)</li>
+        <li>세는나이: 2025 − 2000 + 1 = <strong>26세</strong></li>
+        <li>연나이: 2025 − 2000 = <strong>25세</strong></li>
+      </ul>
+      <p>이 경우 만 나이와 연나이가 우연히 같은 값(25세)이 됩니다. 생일이 이미 지났을 때 나타나는 특징이며, 생일 전이라면 만 나이는 연나이보다 1살 적어집니다.</p>
+    </div>
+
+    <h2>띠(12간지) 표</h2>
+    <p>띠는 태어난 해의 양력 연도를 기준으로 정해지며, 아래 순서가 12년 주기로 반복됩니다. 예를 들어 1960·1972·1984·1996·2008·2020년생은 모두 쥐띠이고, 2032년은 다시 쥐띠로 돌아갑니다.</p>
+    <table>
+      <tr><th>연도</th><th>띠</th><th>연도</th><th>띠</th></tr>
+      <tr><td>2020</td><td>쥐띠</td><td>2026</td><td>말띠</td></tr>
+      <tr><td>2021</td><td>소띠</td><td>2027</td><td>양띠</td></tr>
+      <tr><td>2022</td><td>범(호랑이)띠</td><td>2028</td><td>원숭이띠</td></tr>
+      <tr><td>2023</td><td>토끼띠</td><td>2029</td><td>닭띠</td></tr>
+      <tr><td>2024</td><td>용띠</td><td>2030</td><td>개띠</td></tr>
+      <tr><td>2025</td><td>뱀띠</td><td>2031</td><td>돼지띠</td></tr>
+    </table>
+
+    <h2>흔한 오해와 실수</h2>
+    <ul>
+      <li>"세는나이로 30이니 만 나이로도 30이겠지"라는 생각은 틀리기 쉽습니다. 생일 전이라면 만 나이는 세는나이보다 1~2살 적습니다.</li>
+      <li>띠를 음력 기준으로 착각하는 경우가 많습니다. 이 계산기는 실무에서 널리 쓰이는 양력 1월 1일 기준으로 계산합니다. 전통적으로는 입춘(양력 2월 4일경)을 기준 삼는 사주 방식도 있어, 1~2월 초 출생자는 띠가 다르게 해석될 수 있습니다.</li>
+      <li>병역·정년·경로우대 등 특정 제도의 나이 기준은 법령마다 달라, 이 계산기의 결과는 참고용으로만 쓰고 최종 확인은 해당 기관에 문의해야 합니다.</li>
+    </ul>
+
+    <h2>이 계산기가 다루지 않는 것</h2>
+    <p>이 계산기는 양력 기준으로만 동작하며 음력 생일이나 윤달 계산은 지원하지 않습니다. 또한 사주·궁합처럼 태어난 시각까지 고려하는 전통 명리학 계산과는 무관합니다. 계약·소송·행정 처리 등 법적 나이 판단이 중요한 사안은 반드시 관련 법령 원문과 전문가 확인을 거치시기 바랍니다.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

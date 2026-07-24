@@ -309,6 +309,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why the same number of bytes shows two different sizes</h2>
+    <p>Every digital measurement starts from the bit — a single 0 or 1. Group eight bits and you get a byte, the unit computers use to address memory and files. The trouble starts one step up: once you scale a byte count into kilo-, mega-, giga- or larger units, there are two competing counting systems in everyday use, and they assign the same prefix to two different sizes. Drive makers, network providers and most marketing use the decimal (SI) system, where each step is ×1000. Operating systems reporting free space, and RAM specifications, use the binary (IEC) system, where each step is ×1024. A number without knowing which system produced it is not really a number yet — that ambiguity is the exact problem this converter is built to remove, by showing both readings for the same input at once.</p>
+
+    <h2>How to read the converter</h2>
+    <ol>
+      <li>Type the quantity into the Value field — any positive or fractional number.</li>
+      <li>Pick the unit you already have in From: the single Bit option, one of the six decimal SI units (B, kB, MB, GB, TB, PB), or one of the five binary IEC units (KiB, MiB, GiB, TiB, PiB).</li>
+      <li>Pick the unit you want in To, or skip it entirely and scan the "All units at once" table, which fills in every unit for the same input in one pass.</li>
+      <li>Use the ⇄ button to flip From and To without retyping the value.</li>
+      <li>The decimal-vs-binary comparison table lines kB against KiB, MB against MiB, GB against GiB and so on, so the gap between the two systems for your specific number is visible directly, not just as a rule of thumb.</li>
+    </ol>
+
+    <h2>The math behind the two systems</h2>
+    <div class="example">
+      <p><strong>Decimal (SI)</strong> steps by powers of 1000: 1 kB = 1000&sup1; B = 1,000 B · 1 MB = 1000&sup2; B = 1,000,000 B · 1 GB = 1000&sup3; B = 1,000,000,000 B.</p>
+      <p><strong>Binary (IEC)</strong> steps by powers of 1024: 1 KiB = 1024&sup1; B = 1,024 B · 1 MiB = 1024&sup2; B = 1,048,576 B · 1 GiB = 1024&sup3; B = 1,073,741,824 B.</p>
+      <p>At any given step n (kilo = 1, mega = 2, giga = 3 …), the binary unit is larger than the decimal unit by a factor of (1024/1000)<sup>n</sup>. At the giga step that factor is 1.0737, which is why 1 GB (decimal) equals 1 / 1.0737 &asymp; 0.9313 GiB (binary) — the two numbers describe the identical byte count, just measured in different-sized buckets.</p>
+    </div>
+
+    <h2>Worked examples</h2>
+    <div class="example">
+      <p><strong>1. A "4.7 GB" DVD image.</strong> The disc is labeled in decimal by the manufacturer: 4.7 GB = 4.7 &times; 1,000,000,000 B = 4,700,000,000 bytes. Your file manager reports size in binary, dividing by 1,073,741,824 (1024&sup3;): 4,700,000,000 &divide; 1,073,741,824 &asymp; 4.377 GiB, usually rounded and labeled "4.38 GB" or "4.4 GB" — the file did not shrink, it is the same bytes read through the binary ruler.</p>
+    </div>
+    <div class="example">
+      <p><strong>2. Downloading over a 200 Mbps connection.</strong> Internet speed is quoted in megabits per second; file size is in megabytes. Convert by dividing by 8: 200 Mbps &divide; 8 = 25 MB/s. A 2,000 MB update at that speed takes 2,000 &divide; 25 = 80 seconds under ideal conditions, before protocol overhead and real-world throughput losses.</p>
+    </div>
+    <div class="example">
+      <p><strong>3. "16 GB" of RAM showing as less in Task Manager.</strong> Memory modules are sized in binary: 16 GB of RAM is really 16 GiB = 16 &times; 1,073,741,824 = 17,179,869,184 bytes. Some tools display that same byte count using a decimal GB label (17.18 GB), and part of the address space is also reserved for firmware/system use — two separate reasons the number you see rarely matches "16" exactly.</p>
+    </div>
+
+    <h2>Reference table: decimal vs binary at every step</h2>
+    <table>
+      <thead><tr><th>Step</th><th>Decimal unit</th><th>Decimal bytes</th><th>Binary unit</th><th>Binary bytes</th><th>Binary &divide; decimal</th></tr></thead>
+      <tbody>
+        <tr><td>kilo / kibi</td><td>kB</td><td>1,000</td><td>KiB</td><td>1,024</td><td>1.024</td></tr>
+        <tr><td>mega / mebi</td><td>MB</td><td>1,000,000</td><td>MiB</td><td>1,048,576</td><td>1.049</td></tr>
+        <tr><td>giga / gibi</td><td>GB</td><td>1,000,000,000</td><td>GiB</td><td>1,073,741,824</td><td>1.074</td></tr>
+        <tr><td>tera / tebi</td><td>TB</td><td>1,000,000,000,000</td><td>TiB</td><td>1,099,511,627,776</td><td>1.100</td></tr>
+        <tr><td>peta / pebi</td><td>PB</td><td>1,000,000,000,000,000</td><td>PiB</td><td>1,125,899,906,842,624</td><td>1.126</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and label traps</h2>
+    <ul>
+      <li><strong>Treating a spec-sheet "GB" and an OS-reported "GB" as the same number.</strong> One is usually decimal (packaging, storage marketing); the other is often binary math wearing a decimal label (classic Windows Explorer behavior, some older macOS builds).</li>
+      <li><strong>Skipping the &divide;8 step between bits and bytes.</strong> Confusing megabits (Mb, network speed) with megabytes (MB, file size) is the single most common error in download-time estimates.</li>
+      <li><strong>Assuming the decimal/binary gap is constant.</strong> It grows with the exponent: about 2.4% at kilo, 4.9% at mega, 7.4% at giga, 10% at tera. That is why a "2 TB" drive appears to lose roughly 90 GB to the binary/decimal mismatch, while a "2 GB" file only loses about 49 MB — same root cause, very different visible impact.</li>
+      <li><strong>Reading lower-case "b" and upper-case "B" as interchangeable.</strong> They are not — b is bit, B is byte, an 8&times; difference. Use the dedicated Bit option in this converter rather than eyeballing the case.</li>
+    </ul>
+
+    <h2>What this tool does not cover</h2>
+    <p>This converter performs exact unit math for storage and data-transfer sizes. It does not model filesystem overhead (block size, metadata, journaling), compression ratios, or the capacity vendors reserve separately for SSD wear-leveling and drive formatting. The "free space" a real device reports will always run a little below the raw byte arithmetic shown here, because the filesystem itself consumes part of the underlying capacity.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

@@ -268,6 +268,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Turning a start and end time into payable hours</h2>
+    <p>Every timesheet, freelance invoice, and shift roster eventually reduces to the same small piece of arithmetic: how much time actually elapsed between a start and an end, minus whatever unpaid gap sat in the middle, expressed in a format a spreadsheet or payroll system can multiply by an hourly rate. That last part matters more than it looks — hours and minutes don't multiply cleanly (7 hours 30 minutes times $18 isn't "7.30 × 18"), so the duration has to be converted to a decimal before it's useful for pay.</p>
+    <p>This calculator covers both directions of that problem: measuring the gap between two clock times — including a shift that runs past midnight — and projecting a new clock time by adding or subtracting a duration. It's built for hourly employees closing out a shift, contractors billing by the hour, warehouse or hospital staff on overnight rotations, and anyone reconstructing "what time will it be six hours and fifteen minutes from now."</p>
+
+    <h3>Reading the inputs correctly</h3>
+    <ol>
+      <li>In the <strong>Between two times</strong> tab, set the start time and end time exactly as they appear on the schedule or clock-in system — no need to guess whether a shift crosses midnight, the tool detects that from the values alone.</li>
+      <li>Enter unpaid break minutes as a single number (e.g. a 30-minute lunch). If a shift has two breaks, add their minutes together before typing them in; the field subtracts one lump sum from the gross duration.</li>
+      <li>In the <strong>Add or subtract time</strong> tab, pick a base time, choose the operation, then enter hours and minutes separately — this is for projecting forward or backward from a known clock time rather than measuring a gap.</li>
+    </ol>
+
+    <h3>The arithmetic underneath</h3>
+    <div class="example">
+      <p style="margin:0 0 6px"><strong>Gross minutes</strong> = end time (as minutes since midnight) − start time (as minutes since midnight). If that number is negative, the tool adds 1440 (24 hours), which is the same as saying "the end time happened the next day."</p>
+      <p style="margin:0 0 6px"><strong>Net minutes</strong> = gross minutes − break minutes, floored at zero so a break longer than the shift never produces a negative duration.</p>
+      <p style="margin:0"><strong>Decimal hours</strong> = net minutes ÷ 60, rounded to two decimal places — the number payroll software actually multiplies by an hourly rate.</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p style="margin:0"><strong>Day shift with lunch:</strong> start 09:00, end 17:30, break 45 min. Gross = 1050 − 540 = 510 minutes (8h 30m). Net = 510 − 45 = 465 minutes = 7h 45m = <strong>7.75 decimal hours</strong>.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0"><strong>Overnight shift crossing midnight:</strong> start 23:15, end 07:00, break 20 min. End (420) is smaller than start (1395), so 1440 is added first: 420 + 1440 = 1860. Gross = 1860 − 1395 = 465 minutes (7h 45m). Net = 465 − 20 = 445 minutes = 7h 25m = <strong>7.42 decimal hours</strong>.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0"><strong>Projecting forward past midnight:</strong> base time 22:40, add 3h 50m. 22:40 is 1360 minutes; adding 230 minutes gives 1590, which is 150 minutes past 1440 (midnight) — so the result is <strong>02:30, next day</strong>.</p>
+    </div>
+
+    <h3>Minutes to decimal hours, at a glance</h3>
+    <table>
+      <thead><tr><th>Minutes</th><th>Decimal hours</th><th>Minutes</th><th>Decimal hours</th></tr></thead>
+      <tbody>
+        <tr><td>10</td><td>0.17</td><td>35</td><td>0.58</td></tr>
+        <tr><td>15</td><td>0.25</td><td>40</td><td>0.67</td></tr>
+        <tr><td>20</td><td>0.33</td><td>45</td><td>0.75</td></tr>
+        <tr><td>25</td><td>0.42</td><td>50</td><td>0.83</td></tr>
+        <tr><td>30</td><td>0.50</td><td>55</td><td>0.92</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes to avoid</h3>
+    <ul>
+      <li><strong>Split shifts:</strong> if a schedule has two separate work blocks (e.g. 09:00–13:00 and 15:00–19:00), calculate each block separately and add the results — entering the full 09:00–19:00 span with a single break understates the true unpaid gap.</li>
+      <li><strong>Reading decimal hours as minutes:</strong> 7.5 decimal hours is 7 hours 30 minutes, not 7 hours 5 minutes — the digits after the decimal point are a fraction of 60, not a minute count.</li>
+      <li><strong>Assuming any PM-to-AM entry rolls over:</strong> the midnight rollover only triggers when the end time is numerically earlier than the start time. A shift from 14:00 to 22:00 doesn't roll over even though it ends in the evening; only genuinely overnight spans (like 23:15 to 07:00) do.</li>
+      <li><strong>Applying employer rounding rules mentally first:</strong> some workplaces round clock times to the nearest 5 or 15 minutes before pay calculation. Enter the raw clock-in/clock-out times here, then apply your employer's rounding policy to the result — mixing the two produces a duration that matches neither.</li>
+    </ul>
+
+    <h3>What this tool doesn't cover</h3>
+    <p>This is a plain clock-arithmetic tool, not a payroll or compliance system. It doesn't apply overtime multipliers, doesn't know your employer's or jurisdiction's break requirements or rounding conventions, and doesn't account for daylight saving time transitions (a spring-forward or fall-back night is technically 23 or 25 hours long rather than 24). For pay disputes or compliance questions, treat the decimal-hours figure as a starting point and check it against your employer's timekeeping policy or local labor rules.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

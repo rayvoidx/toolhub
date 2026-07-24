@@ -288,6 +288,86 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:.1em .35em;border-radius:4px}
+    </style>
+
+    <h2>Five notations, one color</h2>
+    <p>Every color a screen or printer produces can be written in more than one way, and none of the notations is more "correct" than another — they're just different coordinate systems for the same point in color space. HEX and RGB describe how a monitor mixes red, green and blue light (additive color: stack all three at full strength and you get white). HSL and HSV re-describe that same light using hue, saturation and either lightness or value/brightness, which maps much closer to how people actually think about color ("a darker version of this blue"). CMYK flips the model entirely: it describes ink absorbing light off paper (subtractive color), so a designer preparing artwork for offset or digital print needs numbers in that space, not RGB.</p>
+    <p>Knowing which notation to reach for — and how to convert between them by hand — matters whenever a design tool, a CSS file, a print house and a client screenshot each hand you the same color in a different format.</p>
+
+    <h3>HEX — compact hexadecimal for CSS</h3>
+    <p><code>#RRGGBB</code> packs the red, green and blue channels into two hexadecimal digits each (base 16, digits <code>0–9</code> and <code>A–F</code>), so every channel runs from <code>00</code> (0) to <code>FF</code> (255). An optional fourth pair, <code>#RRGGBBAA</code>, adds alpha (transparency) the same way. It's the format CSS, design tools and version-controlled style sheets use by default because it's short, copy-pastable and unambiguous.</p>
+
+    <h3>RGB(A) — the channels a screen actually lights up</h3>
+    <p><code>rgb(r, g, b)</code> writes the same three channels in plain decimal, 0–255 each, with an optional fourth alpha value from 0 (fully transparent) to 1 (fully opaque) in <code>rgba()</code>. This is the literal voltage sent to a pixel's red, green and blue sub-elements, which is why image-processing code and canvas APIs work in RGB rather than hex strings.</p>
+
+    <h3>HSL vs. HSV/HSB — the same wheel, two different third axes</h3>
+    <p>Both start from <strong>hue</strong>, the angle around a color wheel from 0° to 360° (0/360 = red, 120 = green, 240 = blue), and <strong>saturation</strong>, how far the color sits from gray. They diverge on the third axis. HSL's <strong>lightness</strong> runs 0% (always black) to 100% (always white, regardless of hue), with pure, fully-saturated color sitting at 50% lightness. HSV/HSB's <strong>value</strong> (or "brightness") instead runs 0% (black) to 100% (the brightest, most vivid version of that hue) — at 100% value a fully saturated color stays fully saturated, it never fades toward white the way HSL does. That difference is exactly why most design-app color pickers use HSV (drag a big square for saturation × value, then pick a hue) while CSS gradients and "make it 20% lighter" tweaks read more naturally in HSL.</p>
+
+    <h3>CMYK — subtractive ink for print</h3>
+    <p><code>C</code>yan, <code>M</code>agenta, <code>Y</code>ellow and <code>K</code>ey (black), each 0–100%, describe how much of each ink a printer lays down. Light bounces off white paper and each ink layer absorbs (subtracts) part of the spectrum before it reaches your eye, which is the opposite process from a screen's additive RGB. Black ink (K) exists mainly because mixing 100% cyan+magenta+yellow gives a muddy dark brown rather than true black, and using pure black ink for text and shadows is both cheaper and sharper than three overlapping color inks.</p>
+
+    <h3>How the math converts one into another</h3>
+    <p>Every conversion starts by normalizing R, G, B from 0–255 to a 0–1 fraction (r′, g′, b′). From there:</p>
+    <ul>
+      <li><strong>To HSL:</strong> lightness L = (max + min) ÷ 2 of the three fractions. Saturation is the spread (max − min) rescaled against how close L already is to black or white. Hue comes from which channel is largest and how far the other two lag behind it, mapped onto the 360° wheel.</li>
+      <li><strong>To HSV:</strong> value V = max of r′, g′, b′ directly. Saturation is (max − min) ÷ max — a much simpler ratio than HSL's, which is part of why HSV is easier to build a slider UI around. Hue uses the same formula as HSL.</li>
+      <li><strong>To CMYK:</strong> black K = 1 − max(r′, g′, b′). Then each ink channel is (1 − channel′ − K) ÷ (1 − K), which effectively "factors out" the shared darkness into K before computing the pure color underneath.</li>
+    </ul>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — this tool's own default swatch, <code>#D946EF</code>.</strong><br>
+      R=217, G=70, B=239 → fractions 0.8510, 0.2745, 0.9373. Max is blue (0.9373), min is green (0.2745).<br>
+      HSL: L = (0.9373+0.2745)/2 = 0.606 → <strong>61%</strong>; S works out to <strong>84%</strong>; hue lands at <strong>292°</strong> → <code>hsl(292, 84%, 61%)</code>.<br>
+      HSV: V = 0.9373 → <strong>94%</strong>; S = (0.9373−0.2745)/0.9373 = <strong>71%</strong>; same hue, 292° → <code>hsv(292°, 71%, 94%)</code>.<br>
+      CMYK: K = 1−0.9373 = <strong>6%</strong>; C ≈ <strong>9%</strong>; M ≈ <strong>71%</strong>; Y = 0% (blue is the max channel, so yellow — blue's ink complement — drops to zero) → <code>cmyk(9%, 71%, 0%, 6%)</code>.
+    </div>
+    <div class="example">
+      <strong>Example 2 — pure red, <code>#FF0000</code>.</strong><br>
+      R=255, G=0, B=0. HSL comes out to a clean <code>hsl(0, 100%, 50%)</code> — 50% lightness is the textbook midpoint for any fully saturated hue. HSV is <code>hsv(0°, 100%, 100%)</code> — value sits at the top because red itself <em>is</em> the brightest state of that hue, unlike HSL's lightness. CMYK works out to <code>cmyk(0%, 100%, 100%, 0%)</code> — no black ink needed, full magenta and yellow, since red is what's left when you remove cyan (red's ink complement) entirely.
+    </div>
+    <div class="example">
+      <strong>Example 3 — a muted mid-tone, <code>#4682B4</code> ("steel blue").</strong><br>
+      R=70, G=130, B=180 → fractions 0.2745, 0.5098, 0.7059. This one shows what a desaturated color looks like across formats: <code>hsl(207°, 44%, 49%)</code>, <code>hsv(207°, 61%, 71%)</code>, and <code>cmyk(61%, 28%, 0%, 29%)</code>. Notice HSL's saturation (44%) and HSV's saturation (61%) disagree even though it's the exact same color — they're measuring "distance from gray" against a different reference axis (lightness vs. value), which is a common point of confusion when comparing values copied from two different apps.
+    </div>
+
+    <h3>Format quick-reference</h3>
+    <table>
+      <tr><th>Format</th><th>Example</th><th>Channel ranges</th><th>Typically used for</th></tr>
+      <tr><td>HEX</td><td><code>#D946EF</code></td><td>00–FF per channel (base 16)</td><td>CSS, design-tool swatches, hand-edited style sheets</td></tr>
+      <tr><td>RGB(A)</td><td><code>rgb(217, 70, 239)</code></td><td>0–255 per channel, alpha 0–1</td><td>Canvas/JS pixel math, image processing</td></tr>
+      <tr><td>HSL(A)</td><td><code>hsl(292, 84%, 61%)</code></td><td>hue 0–360°, sat/light 0–100%</td><td>CSS theming — lighten/darken/desaturate a hue predictably</td></tr>
+      <tr><td>HSV/HSB</td><td><code>hsv(292°, 71%, 94%)</code></td><td>hue 0–360°, sat/value 0–100%</td><td>Design-app color pickers (saturation × value square)</td></tr>
+      <tr><td>CMYK</td><td><code>cmyk(9%, 71%, 0%, 6%)</code></td><td>0–100% per ink</td><td>Offset/digital print production</td></tr>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Reading a screen's CMYK as press-ready.</strong> Any on-screen CMYK figure — including this tool's — is computed with a simple formula, not a specific press or paper ICC profile. It's a useful ballpark, but a print shop's calibrated separation can shift the actual ink percentages noticeably.</li>
+      <li><strong>Treating HSL lightness and HSV value as interchangeable.</strong> 100% lightness is always white no matter the hue; 100% value can still be a fully saturated, vivid color. Dragging a "lightness" slider to max and a "value" slider to max do very different things.</li>
+      <li><strong>Assuming 3-digit hex shorthand always exists.</strong> <code>#fff</code> only works when both digits of every channel repeat (<code>#RRGGBB</code> → <code>#RGB</code>); a color like <code>#D946EF</code> has no shorter form.</li>
+      <li><strong>Forgetting alpha isn't part of hue/saturation/lightness math.</strong> Opacity is a separate compositing step layered on top of any of these five models — converting formats doesn't change how transparent something looks.</li>
+    </ul>
+
+    <h3>What this tool doesn't cover</h3>
+    <p>All the math above assumes the sRGB color space, the default that web browsers and CSS use. Wide-gamut spaces such as Display P3 or Adobe RGB can represent some colors — deeply saturated reds and greens especially — that sRGB simply can't reach, so a P3 swatch sampled from a modern photo may shift slightly once expressed as sRGB hex or RGB. This tool also doesn't perform perceptual color-difference (ΔE) calculations or color-blindness simulation; its accessibility check is limited to the WCAG contrast ratio described in the FAQ below.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

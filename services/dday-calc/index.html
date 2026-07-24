@@ -190,6 +190,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 한국어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>D-day란 무엇이고 왜 따로 계산할까</h2>
+    <p>D-day는 원래 군사 작전이 실행되는 기준일을 가리키던 표현이지만, 한국에서는 수능·입시·결혼식·군 전역·프로젝트 마감처럼 "특정 날짜까지 남은 시간"을 셀 때 두루 쓰는 표기법으로 자리잡았다. 단순히 두 날짜의 차이 일수만 알면 되는 계산과 달리, D-day 표기는 방향성을 함께 담는다. 목표일이 아직 오지 않았으면 <strong>D-30</strong>처럼 앞으로 남은 날수를, 목표일이 이미 지났으면 <strong>D+5</strong>처럼 지나간 날수를 표시한다. 오늘 하루의 위치를 매일 되새기고 싶을 때, 달력을 넘겨보며 손으로 날짜를 세는 대신 이 계산기가 자동으로 갱신해 준다.</p>
+    <p>수능 디데이를 매일 확인하는 수험생, 결혼기념일이나 100일·200일을 챙기는 커플, 입대일과 전역일 사이를 세는 군인과 가족, 프로젝트 마감을 관리하는 직장인까지 — 쓰임새는 다르지만 "오늘부터 그날까지 며칠"이라는 질문은 같다. 이 계산기는 그 질문에 즉시 답하고, 최대 5개 날짜를 동시에 등록해 나란히 비교할 수 있게 해준다.</p>
+
+    <h2>사용법</h2>
+    <ol>
+      <li><strong>목표 날짜</strong> 입력란에서 기준이 될 날짜를 고른다. 미래 날짜면 카운트다운, 과거 날짜면 경과일 카운트로 자동 전환된다.</li>
+      <li><strong>이름</strong>(선택)에 "수능", "결혼기념일", "프로젝트 마감" 등 구분용 라벨을 20자 이내로 적는다. 비워두면 날짜만 표시된다.</li>
+      <li><strong>추가</strong> 버튼을 누르면 카드가 목록에 쌓인다. 최대 5개까지 등록 가능하며, 카드는 브라우저에 저장돼 다시 방문해도 유지된다.</li>
+      <li>자주 쓰는 날짜는 <strong>수능·크리스마스·새해</strong> 프리셋 버튼으로 한 번에 채울 수 있다. 수능은 매년 날짜가 바뀌므로 프리셋이 특히 유용하다.</li>
+    </ol>
+
+    <h2>당일 포함 여부와 D-day 계산 원리</h2>
+    <p>D-day 계산의 핵심 규칙은 "오늘과 목표일이 같으면 D-Day"라는 것이다. 즉 목표일 당일은 D-1도 D+1도 아니고 <strong>D-Day</strong>로 별도 표시된다. 목표일이 내일이면 D-1, 어제였으면 D+1이다. 계산은 두 날짜의 자정 기준 일수 차이를 구하는 방식이라, 시:분:초는 무시하고 달력상의 날짜만 비교한다. 그래서 "오늘 밤 11시 59분에 계산해도, 자정 1분 뒤 계산해도" 결과가 하루 단위로만 바뀐다.</p>
+    <div class="example">
+      <strong>예시 1 — 수능 디데이</strong><br>
+      오늘이 2026년 7월 24일이고 수능일이 2026년 11월 12일(목)이라면, 두 날짜 사이는 111일이다. 이 계산기는 <strong>D-111</strong>로 표시한다. 수능 당일 아침에는 자동으로 <strong>D-Day</strong>로 바뀌고, 시험이 끝난 다음 날부터는 D+1, D+2로 넘어간다.
+    </div>
+    <div class="example">
+      <strong>예시 2 — 사귄 지 며칠째(기념일 경과일)</strong><br>
+      2026년 1월 1일부터 사귀기 시작했고 오늘이 7월 24일이라면 경과일은 204일이다. 화면에는 <strong>D+204</strong>로 나타나며, 100일과 200일은 이미 지나간 것이므로 다음 기념일인 300일까지 남은 날수를 보려면 300일째 날짜(같은 해 10월 27일)를 새 카드로 추가해 D-day를 확인하면 된다.</div>
+    <div class="example">
+      <strong>예시 3 — 프로젝트 마감</strong><br>
+      오늘이 7월 24일, 마감이 8월 15일이면 남은 일수는 22일이므로 <strong>D-22</strong>. 만약 마감이 이미 7월 10일로 지나버렸다면 14일 경과한 것이므로 <strong>D+14</strong>로 표시되어, 얼마나 늦었는지도 한눈에 파악할 수 있다.
+    </div>
+
+    <h2>기념일·전역일 등 실전 활용</h2>
+    <table>
+      <tr><th>활용 예</th><th>기준 날짜</th><th>표기 방식</th></tr>
+      <tr><td>수능 디데이</td><td>11월 둘째 목요일(미래)</td><td>D-숫자, 당일 D-Day</td></tr>
+      <tr><td>커플 100일·200일·1000일</td><td>사귄 첫날(과거)</td><td>D+숫자로 경과일 확인</td></tr>
+      <tr><td>결혼기념일 카운트다운</td><td>다음 기념일(미래)</td><td>D-숫자로 며칠 남았는지</td></tr>
+      <tr><td>군 입대·전역일</td><td>전역 예정일(미래)</td><td>D-숫자로 전역까지 카운트다운</td></tr>
+      <tr><td>시험·자격증 접수 마감</td><td>마감 당일(미래 또는 과거)</td><td>D-숫자 또는 D+숫자</td></tr>
+    </table>
+    <p>여러 목표를 동시에 관리하고 싶다면 카드를 최대 5개까지 추가해 수능 D-day, 커플 기념일, 전역일을 한 화면에 나란히 두고 비교할 수 있다. 목록은 localStorage에 저장되므로 브라우저를 닫았다 열어도 다시 입력할 필요가 없다.</p>
+
+    <h2>흔한 실수</h2>
+    <ul>
+      <li><strong>당일을 D-1로 착각하는 경우</strong>: 목표일 당일은 D-1이 아니라 D-Day다. D-1은 "목표일 하루 전"을 뜻한다.</li>
+      <li><strong>경과일과 남은 일수를 혼동</strong>: 과거 날짜를 넣으면 D+숫자(경과), 미래 날짜를 넣으면 D-숫자(카운트다운)로 자동 전환되므로, 어떤 결과가 나왔는지 부호(-/+)를 먼저 확인해야 한다.</li>
+      <li><strong>수능 날짜를 직접 계산하려는 시도</strong>: 수능은 매년 11월 둘째 목요일로 날짜가 달라지므로 손으로 계산하지 말고 프리셋 버튼을 쓰는 편이 정확하다.</li>
+      <li><strong>비공개 브라우징에서 저장을 기대</strong>: Safari 개인정보 보호 모드 등 localStorage가 제한된 환경에서는 새로고침 시 카드가 사라질 수 있다.</li>
+    </ul>
+
+    <h2>관련 개념과 한계</h2>
+    <p>이 계산기는 그레고리력 기준의 날짜 차이만 계산하며, 음력 생일이나 윤달이 낀 명절처럼 음력 기준 기념일은 별도로 변환해야 한다. 또한 시간대(타임존)나 시:분 단위의 정밀한 차이가 필요하다면(예: 출국 시각까지 몇 시간 남았는지) 날짜 단위 계산인 이 도구보다 더 세분화된 계산이 필요하다. 두 특정 날짜 사이의 총 일수·주수·개월수를 폭넓게 비교하고 싶다면 날짜 차이 계산기를 함께 활용하는 것을 권장한다.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

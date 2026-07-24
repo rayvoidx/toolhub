@@ -92,14 +92,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "Rename the sides (Yes/No, Team A/B…)",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Heads side Tails side"
-      }
-    },
-    {
-      "@type": "Question",
       "name": "Is this coin flip really fair and random?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -263,6 +255,62 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>The probability behind a fair coin flip</h2>
+    <p>A coin flip is one of the oldest tools people use to make an unbiased choice, and it works because of a simple mathematical fact: two outcomes, each with an exact 50% chance, and no memory of what happened on the previous toss. This tool reproduces that guarantee digitally. Every tap generates one random bit from your browser's <code>crypto.getRandomValues()</code> — the same cryptographically secure source used for encryption keys and security tokens — instead of the general-purpose <code>Math.random()</code>, a fast pseudo-random generator that was never designed to resist bias or prediction. The practical result: heads and tails are exactly equally likely on every single flip, independent of every flip that came before it.</p>
+
+    <h3>Single flip vs. flip many</h3>
+    <p>Use <strong>Single flip</strong> when you need one clean decision right now — pizza or sushi, who goes first, yes or no. Use <strong>Flip many</strong> when you want to see the statistics: enter a count from 1 to 1000 and the tool tosses that many virtual coins in one batch, then reports the heads/tails split with percentages and the full sequence of results. That second mode is really a compressed version of tossing a physical coin over and over, minus the time and the wrist strain.</p>
+
+    <h3>Why the split rarely lands exactly 50/50 — and why that's expected</h3>
+    <p>Flipping n coins produces what statisticians call a binomial distribution: the expected number of heads is n/2, but the actual count will typically drift away from that midpoint by an amount governed by the standard deviation, 0.5 × √n. That one formula explains almost every "surprising" result people notice when they flip a batch of coins.</p>
+    <div class="example">
+      <strong>Worked example — 20 flips.</strong> Expected heads = 10. Standard deviation = 0.5 × √20 ≈ 2.24. A result of 13 heads / 7 tails (65% / 35%) sits only about 1.3 standard deviations from the midpoint — a common, unremarkable outcome, not a sign of a biased coin.
+    </div>
+    <div class="example">
+      <strong>Worked example — 500 flips.</strong> Expected heads = 250. Standard deviation = 0.5 × √500 ≈ 11.2. A result of 260 heads / 240 tails (52% / 48%) is under one standard deviation away — closer to 50/50 in percentage terms than the 20-flip example above, even though the raw gap between the heads and tails counts is larger in absolute numbers (20 vs. 6).
+    </div>
+    <p>That last comparison is the law of large numbers in a nutshell: as the number of flips grows, the <em>ratio</em> of heads to total flips converges toward 50%, even though the raw <em>difference</em> between the heads and tails counts can keep growing in absolute terms. Both facts are true at the same time, and mixing them up is the single most common misreading of coin-flip statistics.</p>
+
+    <h3>How the spread shrinks as you flip more</h3>
+    <table>
+      <tr><th>Flips (n)</th><th>Expected heads</th><th>Typical swing (±1 SD)</th><th>Swing as % of n</th></tr>
+      <tr><td>10</td><td>5</td><td>±1.6</td><td>16%</td></tr>
+      <tr><td>50</td><td>25</td><td>±3.5</td><td>7%</td></tr>
+      <tr><td>100</td><td>50</td><td>±5.0</td><td>5%</td></tr>
+      <tr><td>500</td><td>250</td><td>±11.2</td><td>2.2%</td></tr>
+      <tr><td>1000</td><td>500</td><td>±15.8</td><td>1.6%</td></tr>
+    </table>
+    <p>Notice the third column grows while the fourth shrinks — that is exactly what "the split gets closer to 50/50 the more you flip" means in practice.</p>
+
+    <h3>Common mistakes and misconceptions</h3>
+    <ul>
+      <li><strong>The gambler's fallacy:</strong> after seeing five heads in a row, many people expect tails is "due." It isn't — each flip is independent, so the next one is still exactly 50/50 no matter what came before it.</li>
+      <li><strong>Judging fairness from tiny samples:</strong> 3 heads out of 5 flips (60%) proves nothing about bias; with only 5 flips, a 3–2 or even a 4–1 split is well within normal variation.</li>
+      <li><strong>Treating percentage convergence as count convergence:</strong> as the table above shows, the heads-minus-tails gap does not shrink toward zero as you flip more — only the gap relative to the total does.</li>
+    </ul>
+
+    <h3>Using it for real decisions</h3>
+    <p>Rename the sides to whatever you're actually deciding between and the flip becomes a genuine tie-breaker: neither option gets a hidden edge, and — unlike asking a person to "just pick" — there's no unconscious bias toward the option mentioned first or the one you secretly prefer. For higher-stakes calls, some people flip three times and go with the majority result purely to make the decision feel more deliberate; mathematically a single flip is already unbiased, so best-of-three is a psychological comfort rather than a statistical improvement.</p>
+
+    <h3>What this tool doesn't model</h3>
+    <p>It represents an idealized, perfectly fair 50/50 coin — it can't reproduce the very slight physical biases of a real coin (a spinning coin, for instance, tends to land on its heavier side more often than 50% of the time), and it isn't built for weighted odds, where a 70/30 decision needs a different kind of generator. It's also not a substitute for a certified random-number source in contexts like regulated gambling or scientific sampling that require an auditable process — but for everyday decisions and for demonstrating probability concepts like the law of large numbers, a crypto-backed 50/50 flip is as fair as it gets.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

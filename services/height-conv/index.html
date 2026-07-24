@@ -251,6 +251,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why height gets its own converter</h2>
+    <p>A person's height is one of the few measurements that routinely crosses between two completely different notation systems in the same sentence: "he's 5'11"" and "she's 178 cm" can describe two people standing in the same room. Unlike converting a plank of wood or a hiking trail, height shows up on driver's licenses, passport applications, medical intake forms, dating profiles, sports rosters, and visa paperwork — usually with a strict expectation of which unit and format is acceptable. A generic length tool handles raw numbers fine, but it won't understand the composite "feet-inches" shorthand people actually type, and it won't ship with a height-specific quick-reference table.</p>
+    <p>Reach for this converter whenever you're moving between a metric height (cm or m) and the imperial feet-and-inches format used mainly in the United States: filling out a US form with a metric-country birth certificate, checking whether a written height matches an ID photo, or converting an athlete's listed height between league stat sheets that use different units.</p>
+
+    <h3>Reading the five fields</h3>
+    <ol>
+      <li><strong>Centimeters</strong> and <strong>Meters</strong> are the metric pair — editing one updates the other by a factor of 100, and both update every other field on the page.</li>
+      <li><strong>Feet</strong> accepts a plain number (5) or a full composite value pasted in one go (5'11", 5 ft 11 in) — the parser splits the composite into feet and inches automatically and rewrites the field in a clean form once you click away.</li>
+      <li><strong>Inches</strong> holds the leftover inches when Feet and Inches are used as a pair (0 to 11.9); it's ignored the moment you paste a composite value straight into Feet.</li>
+      <li><strong>Inches (total)</strong> is the whole height expressed as a single inches figure — the format some spreadsheets and older US medical charts store instead of a feet/inches pair.</li>
+    </ol>
+
+    <h3>The arithmetic underneath</h3>
+    <div class="example">
+      <p><strong>Centimeters to feet/inches:</strong> total inches = cm ÷ 2.54. Feet = the whole-number part of (total inches ÷ 12); inches = whatever is left over.</p>
+      <p><strong>Feet/inches to centimeters:</strong> total inches = (feet × 12) + inches; centimeters = total inches × 2.54.</p>
+      <p>One edge case handled automatically: if rounding pushes the leftover inches up to 12.0, the extra gets carried into a whole foot instead of showing an impossible reading like 6'12".</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p><strong>Example 1 — 165 cm to feet/inches.</strong> 165 ÷ 2.54 = 64.96 total inches. 64.96 ÷ 12 = 5 feet with 4.96 inches left over, so 165 cm rounds to 5'5.0".</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — 5 ft 9 in to centimeters.</strong> (5 × 12) + 9 = 69 total inches. 69 × 2.54 = 175.26 cm, which is 1.7526 m.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — 190 cm as inches only.</strong> 190 ÷ 2.54 = 74.8 total inches — the single number a spreadsheet column or older chart would store, with no split into feet and inches at all.</p>
+    </div>
+
+    <h3>How different regions actually record height</h3>
+    <table>
+      <thead><tr><th>Region</th><th>Everyday speech</th><th>Official / medical records</th></tr></thead>
+      <tbody>
+        <tr><td>United States</td><td>Feet & inches (5'9")</td><td>Feet & inches</td></tr>
+        <tr><td>United Kingdom, Ireland</td><td>Feet & inches</td><td>Centimeters (NHS-style charts)</td></tr>
+        <tr><td>Canada</td><td>Feet & inches among older speakers, cm increasingly common</td><td>Centimeters (health cards, licenses)</td></tr>
+        <tr><td>Australia, New Zealand</td><td>Mixed, trending metric</td><td>Centimeters</td></tr>
+        <tr><td>Continental Europe, Latin America, most of Asia & Africa</td><td>Centimeters</td><td>Centimeters</td></tr>
+        <tr><td>International sport (Olympics, FIFA, non-US basketball)</td><td>Centimeters, converted to feet/inches only for US broadcasts</td><td>Centimeters</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Mistakes worth avoiding</h3>
+    <ul>
+      <li><strong>Smart-quote autocorrect breaks pasted composites.</strong> Phones often turn a straight apostrophe (') and straight quote (") into curly typographic marks. The Feet field looks for the straight punctuation plus the words "ft"/"feet" or "in"/"inches" — if a paste doesn't register, retype it as "5 ft 11 in" instead of relying on the curly symbols.</li>
+      <li><strong>Rounding twice compounds the error.</strong> Round centimeters to a whole number first, then round the resulting inches again, and the final figure can drift by several millimeters from the true height — start from the most precise number you have and round only once, at the end.</li>
+      <li><strong>"5-11" isn't read as a composite.</strong> Sports rosters and some US intake forms write height as a bare hyphenated number like "5-11." Without a feet symbol/word or an inches symbol/word, that string is read as a plain number rather than feet-and-inches — spell it out as "5 ft 11 in" if that's your source format.</li>
+      <li><strong>cm and mm look alike in a hurry.</strong> A record reading "1750" is almost certainly millimeters (175.0 cm), not centimeters outright — confirm the source unit before typing a four-digit figure into the cm field.</li>
+    </ul>
+
+    <h3>What this tool doesn't cover</h3>
+    <p>This converter only translates between units of length — it doesn't track growth over time, account for the few millimeters people lose in height between morning and evening, or compute anything derived from height such as BMI or clothing size. For measurements outside the human-height range — furniture, travel distances, fabric, or figures in millimeters through miles — the Length Converter is the better fit.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
