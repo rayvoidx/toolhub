@@ -262,6 +262,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "Hourly to Salary Calculator",
       "tool.dog-age-calc.name": "Dog Age Calculator",
     "tool.one-rep-max-calc.name": "One Rep Max Calculator",
+      "tool.square-footage-calc.name": "Square Footage Calculator",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -513,6 +514,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "时薪年薪换算器",
       "tool.dog-age-calc.name": "狗狗年龄计算器",
     "tool.one-rep-max-calc.name": "1RM 计算器",
+      "tool.square-footage-calc.name": "面积计算器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -764,6 +766,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "प्रति घंटा से वार्षिक वेतन कैलकुलेटर",
       "tool.dog-age-calc.name": "डॉग एज कैलकुलेटर",
     "tool.one-rep-max-calc.name": "1RM कैलकुलेटर",
+      "tool.square-footage-calc.name": "क्षेत्रफल कैलकुलेटर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1015,6 +1018,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "Calculadora de sueldo por hora a anual",
       "tool.dog-age-calc.name": "Calculadora de edad canina",
     "tool.one-rep-max-calc.name": "Calculadora de 1RM",
+      "tool.square-footage-calc.name": "Calculadora de metros y pies cuadrados",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1266,6 +1270,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "حاسبة الأجر بالساعة إلى الراتب",
       "tool.dog-age-calc.name": "حاسبة عمر الكلب",
     "tool.one-rep-max-calc.name": "حاسبة الحد الأقصى لتكرار واحد (1RM)",
+      "tool.square-footage-calc.name": "حاسبة المساحة",
   },
 
   /* ---------------- Français ---------------- */
@@ -1517,6 +1522,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "Convertisseur taux horaire / salaire annuel",
       "tool.dog-age-calc.name": "Calculateur d'âge du chien",
     "tool.one-rep-max-calc.name": "Calculateur de 1RM",
+      "tool.square-footage-calc.name": "Calculateur de surface",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1768,6 +1774,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "ঘণ্টা থেকে বার্ষিক বেতন ক্যালকুলেটর",
       "tool.dog-age-calc.name": "কুকুরের বয়স ক্যালকুলেটর",
     "tool.one-rep-max-calc.name": "1RM ক্যালকুলেটর",
+      "tool.square-footage-calc.name": "আয়তন ক্যালকুলেটর",
   },
 
   /* ---------------- Português ---------------- */
@@ -2019,6 +2026,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "Calculadora de valor-hora para salário",
       "tool.dog-age-calc.name": "Calculadora de idade do cachorro",
     "tool.one-rep-max-calc.name": "Calculadora de 1RM",
+      "tool.square-footage-calc.name": "Calculadora de metros e pés quadrados",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2270,6 +2278,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "Калькулятор почасовой ставки в оклад",
       "tool.dog-age-calc.name": "Калькулятор возраста собаки",
     "tool.one-rep-max-calc.name": "Калькулятор 1ПМ",
+      "tool.square-footage-calc.name": "Калькулятор площади",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2521,6 +2530,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "فی گھنٹہ سے سالانہ تنخواہ کیلکولیٹر",
       "tool.dog-age-calc.name": "کتے کی عمر کیلکولیٹر",
     "tool.one-rep-max-calc.name": "1RM کیلکولیٹر",
+      "tool.square-footage-calc.name": "رقبہ کیلکولیٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2772,6 +2782,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "Kalkulator Upah per Jam ke Gaji",
       "tool.dog-age-calc.name": "Kalkulator Usia Anjing",
     "tool.one-rep-max-calc.name": "Kalkulator 1RM",
+      "tool.square-footage-calc.name": "Kalkulator Luas",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -3023,6 +3034,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "Stundenlohn-in-Gehalt-Rechner",
       "tool.dog-age-calc.name": "Hundealter-Rechner",
     "tool.one-rep-max-calc.name": "1RM-Rechner",
+      "tool.square-footage-calc.name": "Quadratmeter-Rechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3274,6 +3286,7 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "時給・年収 換算ツール",
       "tool.dog-age-calc.name": "犬の年齢計算ツール",
     "tool.one-rep-max-calc.name": "1RM計算ツール",
+      "tool.square-footage-calc.name": "面積計算ツール",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3525,5 +3538,6 @@ window.I18N_LOCALES = {
     "tool.hourly-to-salary.name": "시급 연봉 환산기",
       "tool.dog-age-calc.name": "강아지 나이 계산기",
     "tool.one-rep-max-calc.name": "1RM 계산기",
+      "tool.square-footage-calc.name": "면적 계산기",
   }
 };
