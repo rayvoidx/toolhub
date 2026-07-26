@@ -263,6 +263,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "Dog Age Calculator",
     "tool.one-rep-max-calc.name": "One Rep Max Calculator",
       "tool.square-footage-calc.name": "Square Footage Calculator",
+      "tool.number-base-conv.name": "Number Base Converter",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -515,6 +516,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "狗狗年龄计算器",
     "tool.one-rep-max-calc.name": "1RM 计算器",
       "tool.square-footage-calc.name": "面积计算器",
+      "tool.number-base-conv.name": "进制转换器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -767,6 +769,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "डॉग एज कैलकुलेटर",
     "tool.one-rep-max-calc.name": "1RM कैलकुलेटर",
       "tool.square-footage-calc.name": "क्षेत्रफल कैलकुलेटर",
+      "tool.number-base-conv.name": "संख्या आधार कन्वर्टर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1019,6 +1022,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "Calculadora de edad canina",
     "tool.one-rep-max-calc.name": "Calculadora de 1RM",
       "tool.square-footage-calc.name": "Calculadora de metros y pies cuadrados",
+      "tool.number-base-conv.name": "Conversor de bases numéricas",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1271,6 +1275,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "حاسبة عمر الكلب",
     "tool.one-rep-max-calc.name": "حاسبة الحد الأقصى لتكرار واحد (1RM)",
       "tool.square-footage-calc.name": "حاسبة المساحة",
+      "tool.number-base-conv.name": "محوّل الأنظمة العددية",
   },
 
   /* ---------------- Français ---------------- */
@@ -1523,6 +1528,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "Calculateur d'âge du chien",
     "tool.one-rep-max-calc.name": "Calculateur de 1RM",
       "tool.square-footage-calc.name": "Calculateur de surface",
+      "tool.number-base-conv.name": "Convertisseur de bases",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1775,6 +1781,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "কুকুরের বয়স ক্যালকুলেটর",
     "tool.one-rep-max-calc.name": "1RM ক্যালকুলেটর",
       "tool.square-footage-calc.name": "আয়তন ক্যালকুলেটর",
+      "tool.number-base-conv.name": "সংখ্যা ভিত্তি কনভার্টার",
   },
 
   /* ---------------- Português ---------------- */
@@ -2027,6 +2034,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "Calculadora de idade do cachorro",
     "tool.one-rep-max-calc.name": "Calculadora de 1RM",
       "tool.square-footage-calc.name": "Calculadora de metros e pés quadrados",
+      "tool.number-base-conv.name": "Conversor de bases numéricas",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2279,6 +2287,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "Калькулятор возраста собаки",
     "tool.one-rep-max-calc.name": "Калькулятор 1ПМ",
       "tool.square-footage-calc.name": "Калькулятор площади",
+      "tool.number-base-conv.name": "Конвертер систем счисления",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2531,6 +2540,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "کتے کی عمر کیلکولیٹر",
     "tool.one-rep-max-calc.name": "1RM کیلکولیٹر",
       "tool.square-footage-calc.name": "رقبہ کیلکولیٹر",
+      "tool.number-base-conv.name": "نمبر بیس کنورٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2783,6 +2793,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "Kalkulator Usia Anjing",
     "tool.one-rep-max-calc.name": "Kalkulator 1RM",
       "tool.square-footage-calc.name": "Kalkulator Luas",
+      "tool.number-base-conv.name": "Konverter Basis Bilangan",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -3035,6 +3046,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "Hundealter-Rechner",
     "tool.one-rep-max-calc.name": "1RM-Rechner",
       "tool.square-footage-calc.name": "Quadratmeter-Rechner",
+      "tool.number-base-conv.name": "Zahlensystem-Umrechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3287,6 +3299,7 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "犬の年齢計算ツール",
     "tool.one-rep-max-calc.name": "1RM計算ツール",
       "tool.square-footage-calc.name": "面積計算ツール",
+      "tool.number-base-conv.name": "基数変換ツール",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3539,5 +3552,6 @@ window.I18N_LOCALES = {
       "tool.dog-age-calc.name": "강아지 나이 계산기",
     "tool.one-rep-max-calc.name": "1RM 계산기",
       "tool.square-footage-calc.name": "면적 계산기",
+      "tool.number-base-conv.name": "진법 변환기",
   }
 };
