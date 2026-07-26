@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -271,14 +271,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Counting the days that actually count</h2>
+    <p>Deadlines, SLAs, payroll cut-offs, notice periods, and delivery estimates are almost never measured in calendar days — they are measured in <em>business days</em>, the days an office is actually open. Counting those by hand means crossing off weekends and every public holiday in between, which is error-prone and country-specific. This calculator does it for you: it counts business days between two dates, or adds and subtracts a number of business days to find a due date, with weekends and the right national holidays removed automatically.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li><strong>Days between dates:</strong> pick a start and end date to get the number of business days in that span.</li>
+      <li><strong>Add or subtract days:</strong> enter a start date and a number of business days, then choose After (a due date) or Before (work backwards to a start date).</li>
+      <li>Your country's public holidays are preselected from your browser region; the breakdown always splits the total into business, weekend, and holiday days so you can verify it.</li>
+    </ol>
+
+    <h3>What counts, and what is excluded</h3>
+    <p>A business day is any day that is not a weekend and not a public holiday. The weekend defaults to Saturday–Sunday, but visitors in Friday–Saturday regions (Saudi Arabia, Egypt, Bangladesh, Israel and others) get that weekend automatically, and you can override it under More options. Thirteen national holiday calendars are built in — the US, UK (England &amp; Wales), Canada, Australia, Germany, France, Spain, Brazil, Mexico, India, Russia, Japan and South Korea — including substitute ("observed") days. Company or regional days off are never assumed; add them under Custom holidays.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. A two-week span.</strong> From Mon 2025-06-02 to Fri 2025-06-13 is 12 calendar days. With both ends included and Sat–Sun removed, that is <strong>10 business days</strong> — the two weekend days (Jun 7–8) drop out. Add one public holiday inside the range and it becomes 9.</div>
+    <div class="example"><strong>2. A "within 10 business days" due date.</strong> An order placed Thu 2025-07-03 on the US calendar, moved 10 business days forward: Independence Day (Fri Jul 4) and both weekends are skipped, landing the due date on <strong>Fri 2025-07-18</strong> rather than the naive Jul 13 you would get by adding calendar days.</div>
+    <div class="example"><strong>3. Inclusive counting.</strong> Most contracts count both endpoints, so "3 business days" from a Monday is Mon–Wed. Turn off Include start date and the same request counts Tue–Thu instead — a one-day shift that changes real deadlines.</div>
+
+    <h3>Business, working, and calendar days compared</h3>
+    <table>
+      <thead><tr><th>Term</th><th>Counts weekends?</th><th>Counts holidays?</th><th>Used for</th></tr></thead>
+      <tbody>
+        <tr><td>Calendar days</td><td>Yes</td><td>Yes</td><td>Age, countdowns, interest periods</td></tr>
+        <tr><td>Business days</td><td>No</td><td>No</td><td>SLAs, shipping, payment terms</td></tr>
+        <tr><td>Working days</td><td>No</td><td>No</td><td>Same as business days (a synonym)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Forgetting the endpoints rule.</strong> Whether the start and end dates are included changes the total by a day or two — check the Include start / Include end toggles against how your contract defines the period.</li>
+      <li><strong>Assuming everyone shares your weekend.</strong> A deadline agreed with a Gulf partner may run on a Friday–Saturday weekend; set it explicitly rather than assuming Sat–Sun.</li>
+      <li><strong>Missing local or company holidays.</strong> The presets cover national public holidays only — a regional holiday or a company shutdown must be added as a custom holiday, or the count runs long.</li>
+    </ul>
+
+    <h3>Scope and accuracy</h3>
+    <p>The built-in calendars cover national public holidays; they do not include regional (state or province) holidays, company days off, or paid personal leave. Korean lunar holidays such as Seollal and Chuseok are fixed by decree each year, so Korea is covered for 2025–2027, while every other country is computed from its underlying rules and works for any year. Everything is calculated in your browser, and your dates never leave your device.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/world-clock/"><span class="related-ico" aria-hidden="true">🌍</span><span class="related-name">World Clock</span></a><a class="related-item" href="https://tool-hub.me/age-calc/"><span class="related-ico" aria-hidden="true">🎂</span><span class="related-name">Age Calculator</span></a><a class="related-item" href="https://tool-hub.me/countdown-timer/"><span class="related-ico" aria-hidden="true">⏲️</span><span class="related-name">Countdown Timer</span></a><a class="related-item" href="https://tool-hub.me/date-diff-calc/"><span class="related-ico" aria-hidden="true">🗓️</span><span class="related-name">Date Difference Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -306,7 +361,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

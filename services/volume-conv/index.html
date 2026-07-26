@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -273,14 +273,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>US, UK, and metric volume — one base, many names</h2>
+    <p>Volume is where measurement systems collide most often in daily life: a recipe in cups, fuel economy in gallons, an aquarium rated in liters, a shipping box in cubic meters. The trouble is that "gallon," "ounce," "cup," and "pint" all mean different amounts depending on whether they are US customary or UK imperial. This converter fixes every unit to its exact definition in liters and routes conversions through that single base, so a value typed once appears correctly in all eleven units at the same time.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Type the <strong>value</strong> you have.</li>
+      <li>Set <strong>From</strong> to its current unit and <strong>To</strong> to the target; the ⇄ button swaps them.</li>
+      <li>Read the highlighted result, or scan the full table to see teaspoons through gallons at once. Your last unit pair is remembered locally for next time.</li>
+    </ol>
+
+    <h3>The exact definitions (why "a pint" is ambiguous)</h3>
+    <p>Everything is anchored to the liter. The US gallon is defined as exactly 3.785411784 L, and the US system builds down from it: 1 gallon = 4 quarts = 8 pints = 128 fluid ounces, so a US fluid ounce is 29.5735 mL. The UK imperial gallon is a completely separate 4.54609 L — about 20% larger — and its pint (568 mL) and fluid ounce (28.4131 mL) differ too. This tool exposes the US units by default and offers the imperial gallon as a clearly labeled "Gallon UK," so the two systems never blur together.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. Scaling a recipe from metric.</strong> A cake calls for 250 mL of milk but your measuring cup is marked in US cups. 250 ÷ 236.588 = <strong>1.057 cups</strong>, or in spoons, 250 ÷ 14.7868 ≈ <strong>16.9 US tablespoons</strong>. Type 250 mL once and every kitchen unit appears together.</div>
+    <div class="example"><strong>2. US vs UK gallon at the pump.</strong> A car rated "40 miles per US gallon" is not 40 mpg in Britain. 40 mi ÷ 3.785411784 L = 10.57 mi/L; multiply by 4.54609 L and you get <strong>≈ 48.0 miles per imperial gallon</strong>. Ignoring which gallon is meant misstates fuel economy by ~20%.</div>
+    <div class="example"><strong>3. Sizing a water tank.</strong> A tank of 0.75 m³ holds 0.75 × 1000 = <strong>750 liters</strong>, which is 750 ÷ 3.785411784 ≈ <strong>198.1 US gallons</strong> or 750 ÷ 4.54609 ≈ <strong>165.0 UK gallons</strong> — the same water, two very different gallon counts.</div>
+
+    <h3>Reference: one unit in milliliters</h3>
+    <table>
+      <thead><tr><th>Unit</th><th>Exact value</th><th>System</th></tr></thead>
+      <tbody>
+        <tr><td>Teaspoon (tsp)</td><td>4.92892 mL</td><td>US customary</td></tr>
+        <tr><td>Tablespoon (tbsp)</td><td>14.7868 mL</td><td>US customary</td></tr>
+        <tr><td>Fluid ounce (fl oz)</td><td>29.5735 mL</td><td>US customary</td></tr>
+        <tr><td>Cup</td><td>236.588 mL</td><td>US customary</td></tr>
+        <tr><td>Pint (pt)</td><td>473.176 mL</td><td>US customary</td></tr>
+        <tr><td>Quart (qt)</td><td>946.353 mL</td><td>US customary</td></tr>
+        <tr><td>Gallon US</td><td>3,785.41 mL</td><td>US customary</td></tr>
+        <tr><td>Gallon UK</td><td>4,546.09 mL</td><td>UK imperial</td></tr>
+        <tr><td>Liter (L)</td><td>1,000 mL</td><td>Metric (base)</td></tr>
+        <tr><td>Cubic meter (m³)</td><td>1,000,000 mL</td><td>Metric</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Mixing US and UK gallons.</strong> The imperial gallon is ~20% bigger; a fuel or tank figure converted with the wrong one is off by that much.</li>
+      <li><strong>Assuming the fluid ounce is universal.</strong> A US fl oz is 29.57 mL but a UK fl oz is 28.41 mL — close enough to miss, far enough to spoil a scaled recipe.</li>
+      <li><strong>Confusing fluid ounces with weight ounces.</strong> A fluid ounce measures volume; an ounce of weight is mass. 1 fl oz of water happens to weigh about 1 oz, but 1 fl oz of honey weighs much more — use a weight converter for the latter.</li>
+      <li><strong>Dry vs liquid measure.</strong> US "dry pints" and "dry quarts" (for produce) are larger than the liquid ones shown here; this converter handles liquid volume only.</li>
+    </ul>
+
+    <h3>Precision and scope</h3>
+    <p>Results keep up to 10 significant figures and trim trailing zeros; extreme magnitudes switch to scientific notation so nothing rounds silently to zero. Volume alone does not tell you weight — converting flour or sugar between cups and grams depends on density, which a pure volume tool cannot know.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/weight-conv/"><span class="related-ico" aria-hidden="true">🏋️</span><span class="related-name">Weight Converter</span></a><a class="related-item" href="https://tool-hub.me/area-conv/"><span class="related-ico" aria-hidden="true">📐</span><span class="related-name">Area Converter</span></a><a class="related-item" href="https://tool-hub.me/data-size-conv/"><span class="related-ico" aria-hidden="true">💾</span><span class="related-name">Data Size Converter</span></a><a class="related-item" href="https://tool-hub.me/height-conv/"><span class="related-ico" aria-hidden="true">🧍</span><span class="related-name">Height Converter</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -308,7 +371,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

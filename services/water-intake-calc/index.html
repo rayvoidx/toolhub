@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -214,14 +214,65 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Estimating a daily water target (a starting point, not medical advice)</h2>
+    <p>Most people have no reliable intuition for how much water a day is "enough," and the popular eight-glasses rule ignores that a 55 kg person and a 95 kg person have very different needs. This calculator gives a personalized estimate from your body weight and activity level so you have a concrete number to aim at. It is general wellness guidance for healthy adults, not a medical prescription — if you are pregnant, or you manage a kidney, heart, or liver condition, follow the fluid targets your clinician sets, which may be deliberately higher or lower than a generic formula.</p>
+
+    <h3>How the estimate is built</h3>
+    <p>The base target uses <strong>33 mL of water per kilogram of body weight</strong>, the middle of the commonly cited 30–35 mL/kg range. Because roughly 20% of a typical person's water already comes from food — fruit, vegetables, soup — the figure here reflects that context rather than assuming you must drink every drop. On top of the base, an activity allowance is added: <strong>+0 mL</strong> for a mostly sedentary day, <strong>+350 mL</strong> for light-to-moderate exercise (1–3 times a week), and <strong>+700 mL</strong> for hard training or physical work (4+ times a week). The result is shown in liters, in ~240 mL cups, and in 500 mL bottles so it maps onto whatever you actually drink from.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. Sedentary 60 kg adult.</strong> 60 × 33 = 1,980 mL ≈ <strong>2.0 L</strong>. That is about 8 cups of 240 mL, or roughly 4 standard 500 mL bottles across the day.</div>
+    <div class="example"><strong>2. Moderately active 80 kg adult.</strong> Base 80 × 33 = 2,640 mL, plus the +350 mL moderate allowance = 2,990 mL ≈ <strong>3.0 L</strong> — about 12 cups or 6 bottles.</div>
+    <div class="example"><strong>3. Hard-training 90 kg adult.</strong> Base 90 × 33 = 2,970 mL, plus +700 mL = 3,670 mL ≈ <strong>3.7 L</strong>. On a hot day you may still sweat out more than this and need to top up beyond the estimate.</div>
+
+    <h3>Quick reference by weight (sedentary base, before activity)</h3>
+    <table>
+      <thead><tr><th>Body weight</th><th>Base target</th><th>≈ Cups (240 mL)</th><th>≈ Bottles (500 mL)</th></tr></thead>
+      <tbody>
+        <tr><td>50 kg</td><td>1.65 L</td><td>7</td><td>3.3</td></tr>
+        <tr><td>60 kg</td><td>1.98 L</td><td>8</td><td>4.0</td></tr>
+        <tr><td>70 kg</td><td>2.31 L</td><td>10</td><td>4.6</td></tr>
+        <tr><td>80 kg</td><td>2.64 L</td><td>11</td><td>5.3</td></tr>
+        <tr><td>90 kg</td><td>2.97 L</td><td>12</td><td>5.9</td></tr>
+        <tr><td>100 kg</td><td>3.30 L</td><td>14</td><td>6.6</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Reading the result sensibly</h3>
+    <ul>
+      <li><strong>Coffee and tea count.</strong> Caffeine is only a mild diuretic at normal intakes, so ordinary cups of coffee and tea contribute to your fluids on balance — you do not need to "make up" for them.</li>
+      <li><strong>Thirst and urine colour are better real-time signals</strong> than hitting an exact number. Pale-straw urine usually means you are well hydrated; dark yellow suggests you need more.</li>
+      <li><strong>More is not always better.</strong> Drinking a very large volume in a short time can dilute blood sodium and cause hyponatremia, which is dangerous. A practical ceiling is about 1 liter in any single hour — spread intake across the day.</li>
+    </ul>
+
+    <h3>What this tool cannot know</h3>
+    <p>The estimate does not account for climate, fever, breastfeeding, medications such as diuretics, altitude, or individual medical conditions, any of which can move your real requirement substantially. Treat the number as an informed default to build a habit around, and defer to a qualified professional for anything clinical. Your weight and activity choice stay in your browser and are never uploaded.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/blood-alcohol-calc/"><span class="related-ico" aria-hidden="true">🍺</span><span class="related-name">Blood Alcohol Calculator (BAC)</span></a><a class="related-item" href="https://tool-hub.me/bmi-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">BMI Calculator</span></a><a class="related-item" href="https://tool-hub.me/bmr-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">BMR Calculator</span></a><a class="related-item" href="https://tool-hub.me/body-fat-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Body Fat Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -249,7 +300,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

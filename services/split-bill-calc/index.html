@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -249,14 +249,69 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Splitting a bill fairly, down to the last coin</h2>
+    <p>Dividing a restaurant or group bill sounds like simple division, but three things make it fiddly in practice: the tip, rounding to a payable amount, and the leftover cents or won that never divide cleanly. This calculator handles all three so that everyone pays a clean number and the total still adds up.</p>
+
+    <h3>How each share is worked out</h3>
+    <p>The core formula is <em>share = total × (1 + tip%) ÷ people</em>. The tip is applied to the whole bill first, then the grand total is split. If you choose to round up each share, the tool rounds every person's amount to the next 1, 10, 100, or 1000 unit — which slightly overshoots the bill and leaves a small buffer rather than coming up short at the till.</p>
+
+    <div class="example">
+      <strong>Example 1 — clean split.</strong> An 84,500 bill among 4 people with no tip: 84,500 ÷ 4 = 21,125 each. Nothing to round, and the four shares sum exactly to the bill.
+    </div>
+    <div class="example">
+      <strong>Example 2 — tip and round up.</strong> The same 84,500 with an 18% tip: 84,500 × 1.18 = 99,710. Divided by 4 that is 24,927.50. Round each share up to the nearest 100 and everyone pays 25,000; you collect 100,000, a 290 buffer over the tab — handy for the change a card machine cannot give back.
+    </div>
+    <div class="example">
+      <strong>Example 3 — a dinner in dollars.</strong> A $120 tab, 3 people, 20% tip: 120 × 1.20 = 144, ÷ 3 = $48.00 each, exactly.
+    </div>
+
+    <h3>What rounding does to the total</h3>
+    <table>
+      <thead><tr><th>Round up to</th><th>Each pays</th><th>Collected (×4)</th><th>Buffer</th></tr></thead>
+      <tbody>
+        <tr><td>Exact</td><td>24,927.50</td><td>99,710</td><td>0</td></tr>
+        <tr><td>Nearest 100</td><td>25,000</td><td>100,000</td><td>290</td></tr>
+        <tr><td>Nearest 1,000</td><td>25,000</td><td>100,000</td><td>290</td></tr>
+      </tbody>
+    </table>
+    <p>In this example the 100 and 1000 steps happen to match, because 24,927.50 rounds up to 25,000 either way; with a larger remainder they would diverge.</p>
+
+    <h3>Who pays the leftover?</h3>
+    <p>When a share does not divide evenly, someone has to absorb the fraction. Rounding up spreads the cost so the group slightly overpays and the difference sits as a buffer — often enough to cover the coins a card reader will not dispense. If you would rather match the bill to the exact cent, keep the split on Exact and let one person cover the odd remainder, or ask the venue to split the payment across cards. Tipping norms differ by country too: around 15 to 20 percent is common in the United States, while many countries fold service into the price and round up only lightly.</p>
+
+    <h3>Common mistakes and what this tool does not do</h3>
+    <ul>
+      <li>Tipping on the wrong base: some people tip on the pre-tax amount, others on the total. This tool applies the percentage to whatever total you enter — decide which base you mean before typing it.</li>
+      <li>Rounding down: split a bill down and the group comes up short. Rounding up is the safe default for shared payment.</li>
+      <li>Uneven orders: this is an <em>even</em> split. If one person had the steak and another only a salad, an equal share is not fair — you would itemise instead.</li>
+    </ul>
+    <p>Everything is computed in your browser; no amounts are stored or sent anywhere.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/tax-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">VAT Calculator (Korea 10%)</span></a><a class="related-item" href="https://tool-hub.me/tip-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Tip Calculator</span></a><a class="related-item" href="https://tool-hub.me/unit-price/"><span class="related-ico" aria-hidden="true">₩</span><span class="related-name">Unit Price Calculator</span></a><a class="related-item" href="https://tool-hub.me/barista-fire-calc/"><span class="related-ico" aria-hidden="true">☕</span><span class="related-name">Barista FIRE Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -268,12 +323,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p data-i18n="faq.a2">Tip is optional: tap a preset (10 / 15 / 18 / 20%) or type your own, and it's added before the bill splitter divides. For tax, fold it into the total amount (or into the tip field), then split — one even share per person.</p>
     </details>
     <details>
-      <summary data-i18n="faq.q3">Even split (n빵) or itemized Dutch pay?</summary>
-      <p data-i18n="faq.a3">This tool does one thing fast: an even split where everyone pays the same share — exactly what people mean by n빵 계산기 or 회식비 정산. Itemized or weighted Dutch pay, where each person owes a different amount, is out of scope by design.</p>
+      <summary data-i18n="faq.q3">Even split or itemized Dutch pay?</summary>
+      <p data-i18n="faq.a3">This tool does one thing fast: an even split where everyone pays the same share. Itemized or weighted Dutch pay, where each person owes a different amount, is out of scope by design.</p>
     </details>
     <details>
       <summary data-i18n="faq.q4">Is my amount sent to a server?</summary>
-      <p data-i18n="faq.a4">No. Every calculation runs locally in your browser. Nothing you type is uploaded, saved, or shared — this 더치페이 계산기 has no account, no tracking, and works offline.</p>
+      <p data-i18n="faq.a4">No. Every calculation runs locally in your browser. Nothing you type is uploaded, saved, or shared — no account, no tracking, works offline.</p>
     </details>
     <details>
       <summary data-i18n="faq.q5">How do I use the copy button?</summary>
@@ -284,7 +339,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

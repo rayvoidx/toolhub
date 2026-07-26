@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -313,14 +313,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English enrichment (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Testing regular expressions in JavaScript</h2>
+    <p>A regular expression (regex) is a compact pattern for finding, validating, or replacing text. This tester runs your pattern with the browser's own RegExp engine and updates as you type: matches are highlighted, each is listed with its position and captured groups, and a live count shows how many were found. Because it uses the native engine, what you see here is exactly what the same pattern will do in JavaScript code.</p>
+    <p>Enter the pattern without the surrounding slashes, tick the flags you need, and paste your text into the test box. The dialect matters: this tool tests the JavaScript (ECMAScript) flavour, which differs from PCRE (used by PHP and many command-line tools) and from Python's re module. Features such as recursive patterns, atomic groups, and possessive quantifiers do not exist in JavaScript, so a pattern copied from another language may behave differently here.</p>
+
+    <h3>What the flags do</h3>
+    <table>
+      <thead><tr><th>Flag</th><th>Name</th><th>Effect</th></tr></thead>
+      <tbody>
+        <tr><td>g</td><td>Global</td><td>Find every match, not just the first</td></tr>
+        <tr><td>i</td><td>Ignore case</td><td>Treat A and a as the same</td></tr>
+        <tr><td>m</td><td>Multiline</td><td>^ and $ match each line's start and end</td></tr>
+        <tr><td>s</td><td>Dotall</td><td>The dot also matches newline characters</td></tr>
+        <tr><td>u</td><td>Unicode</td><td>Full code-point matching and \p{...} escapes</td></tr>
+        <tr><td>y</td><td>Sticky</td><td>Match only at the current position</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example">
+      <strong>Example 1 — Matching dates.</strong> The pattern \d{4}-\d{2}-\d{2} run against "Launch 2026-07-26, review 2026-08-10" finds both dates. With the g flag the match count reads 2; without g, only the first date is found.
+    </div>
+    <div class="example">
+      <strong>Example 2 — Named groups.</strong> The pattern (?&lt;year&gt;\d{4})-(?&lt;month&gt;\d{2}) run against "2026-07" captures group 1 (year) as 2026 and group 2 (month) as 07. The tester lists both the numbered and the named groups for every match.
+    </div>
+    <div class="example">
+      <strong>Example 3 — Replace order.</strong> Using that same pattern with the replacement $&lt;month&gt;/$&lt;year&gt; rewrites "2026-07" as "07/2026". Referring to groups by name is often clearer than $1 and $2 in longer patterns.
+    </div>
+
+    <h3>The most common surprise</h3>
+    <p>By far the most frequent confusion is a replace that changes only the first match. In JavaScript, replacing every occurrence requires the g flag — without it, only the first match is replaced, and that is the language rule, not a bug. The replace preview here mirrors that exactly, and a hint appears reminding you to add g whenever your pattern would otherwise stop after one substitution.</p>
+
+    <h3>Handy tokens and a privacy note</h3>
+    <ul>
+      <li><strong>\d \w \s</strong> match a digit, a word character, and whitespace; their uppercase forms (\D \W \S) match the opposite.</li>
+      <li><strong>^ and $</strong> anchor to the start and end of the input; add the m flag to anchor per line instead.</li>
+      <li><strong>Quantifiers</strong> like * + ? and {2,4} are greedy by default; add a trailing ? (for example .+?) to make them lazy.</li>
+      <li><strong>Character classes</strong> in square brackets match any one listed character — [aeiou] matches a single vowel, and a leading caret negates it, so [^0-9] matches anything that is not a digit.</li>
+      <li><strong>Alternation</strong> with the pipe tries each option in turn — cat|dog matches either word — and round brackets group a sub-pattern so a quantifier can apply to the whole group.</li>
+    </ul>
+    <p>Your pattern, test string, and replacement never leave your browser — nothing is uploaded, and only your last input is kept locally for convenience.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/unix-timestamp-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Unix Timestamp Converter</span></a><a class="related-item" href="https://tool-hub.me/url-encoder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/uuid-gen/"><span class="related-ico" aria-hidden="true">🆔</span><span class="related-name">UUID Generator</span></a><a class="related-item" href="https://tool-hub.me/base64-conv/"><span class="related-ico" aria-hidden="true">🔡</span><span class="related-name">Base64 Encoder / Decoder</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -348,7 +405,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

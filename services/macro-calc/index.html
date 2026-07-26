@@ -340,11 +340,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English in-depth guide (unique, no data-i18n). -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>From calories to grams on your plate</h2>
+    <p>A calorie target tells you how much to eat; macronutrients tell you <em>what</em> that energy is made of. Protein, carbohydrate, and fat are the three energy-providing nutrients, and this calculator splits a daily calorie figure into grams of each — then divides those grams across your meals, which is the number you actually use when planning food.</p>
+    <p>The split matters because the three macros do different jobs. Protein preserves muscle and keeps you full, carbohydrate fuels higher-intensity activity, and fat supports hormones and the absorption of certain vitamins. Shifting the ratio changes the feel of a diet without necessarily changing its calories.</p>
+
+    <h2>The two numbers behind every result</h2>
+    <p>First, energy density. Each gram of a macro carries a fixed amount of energy, established by early food-chemistry work and still printed on nutrition labels worldwide:</p>
+    <table>
+      <tr><th>Macronutrient</th><th>Calories per gram</th></tr>
+      <tr><td>Protein</td><td>4 kcal</td></tr>
+      <tr><td>Carbohydrate</td><td>4 kcal</td></tr>
+      <tr><td>Fat</td><td>9 kcal</td></tr>
+    </table>
+    <p>Fat is more than twice as energy-dense, which is why a "low-fat" and a "low-carb" plan of the same calories look so different on the plate. Second, if you don't know your calorie need, the tool estimates it with the Mifflin-St Jeor equation for resting metabolism, multiplied by an activity factor and adjusted for your goal.</p>
+
+    <h3>Worked example 1 — splitting 2,000 kcal</h3>
+    <div class="example">
+      <p>A balanced 30/40/30 split of 2,000 kcal:</p>
+      <ul>
+        <li>Protein: 30% &times; 2,000 = 600 kcal &divide; 4 = <strong>150 g</strong></li>
+        <li>Carbs: 40% &times; 2,000 = 800 kcal &divide; 4 = <strong>200 g</strong></li>
+        <li>Fat: 30% &times; 2,000 = 600 kcal &divide; 9 = <strong>67 g</strong></li>
+      </ul>
+      <p>Across 3 meals that is roughly 50 g protein, 67 g carbs, and 22 g fat per meal.</p>
+    </div>
+
+    <h3>Worked example 2 — estimating the calorie target</h3>
+    <div class="example">
+      <p>For a 30-year-old man, 178 cm, 75 kg, the Mifflin-St Jeor resting rate is (10 &times; 75) + (6.25 &times; 178) &minus; (5 &times; 30) + 5 = 750 + 1112.5 &minus; 150 + 5 = 1,717.5 kcal. Moderately active (&times;1.55) gives about 2,662 kcal to maintain, or 2,130 kcal at a 20% cut for weight loss.</p>
+    </div>
+
+    <h2>How the diet splits compare</h2>
+    <p>The same 2,000 kcal, divided by four common ratios, produces very different gram targets:</p>
+    <table>
+      <tr><th>Split (P/C/F)</th><th>Protein</th><th>Carbs</th><th>Fat</th></tr>
+      <tr><td>Balanced 30/40/30</td><td>150 g</td><td>200 g</td><td>67 g</td></tr>
+      <tr><td>Low-carb 40/20/40</td><td>200 g</td><td>100 g</td><td>89 g</td></tr>
+      <tr><td>High-protein 40/40/20</td><td>200 g</td><td>200 g</td><td>44 g</td></tr>
+      <tr><td>Keto 25/5/70</td><td>125 g</td><td>25 g</td><td>156 g</td></tr>
+    </table>
+
+    <h2>Reading it well</h2>
+    <ul>
+      <li>Percentages always total 100. In custom mode, moving one slider rebalances the others so the split stays valid.</li>
+      <li>Protein is often set by body weight rather than a flat percentage; many active people aim for 1.6&ndash;2.2 g per kilogram, which you can approximate by adjusting the ratio.</li>
+      <li>Grams are rounded for readability, so the three macro calories may not re-add to the exact target down to the last unit.</li>
+    </ul>
+
+    <h2>Not medical advice</h2>
+    <p>These are educational estimates from population formulas, not a personalised nutrition plan. Real needs depend on age, health conditions, training, and goals that a calculator cannot see, and very low targets can be unsafe. Consult a doctor or registered dietitian before making significant dietary changes, especially if you have a medical condition or are pregnant.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/ovulation-calc/"><span class="related-ico" aria-hidden="true">♀</span><span class="related-name">Ovulation Calculator</span></a><a class="related-item" href="https://tool-hub.me/pace-calc/"><span class="related-ico" aria-hidden="true">👟</span><span class="related-name">Running Pace Calculator</span></a><a class="related-item" href="https://tool-hub.me/period-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">Period Calculator</span></a><a class="related-item" href="https://tool-hub.me/pregnancy-due-date-calc/"><span class="related-ico" aria-hidden="true">🤰</span><span class="related-name">Pregnancy Due Date Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
     <h2 data-i18n="faq.heading">Frequently asked questions</h2>

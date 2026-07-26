@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -302,14 +302,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English enrichment (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Understanding your estimated due date</h2>
+    <p>A due date marks 40 completed weeks of pregnancy, yet a pregnancy that reaches its due date has actually been developing for about 38 weeks — the count starts roughly two weeks before conception. This estimated due date (EDD) gives you and your care team a shared reference for scheduling scans, screening tests, and routine appointments. It is a planning anchor, not a delivery appointment: births cluster around the date rather than land on it.</p>
+    <p>This calculator offers three starting points because different pregnancies are dated differently. If you know the first day of your last menstrual period (LMP), it uses the calendar method. If you tracked ovulation or know your conception date, it counts forward from there. If you conceived through IVF, it uses the known embryo age at transfer, usually the most precise of the three inputs.</p>
+
+    <h3>How each method is calculated</h3>
+    <p>The LMP method follows Naegele's rule: add 280 days (40 weeks) to the first day of your last period, assuming ovulation around day 14 of a 28-day cycle. If your typical cycle is longer or shorter, the calculator shifts the estimate by the difference from 28 days, because a longer cycle means later ovulation. The conception method adds 266 days to the date of ovulation. The IVF method adds 261 days for a day-5 blastocyst transfer, or 263 days for a day-3 cleavage-stage transfer.</p>
+
+    <div class="example">
+      <strong>Example 1 — Last period, average cycle.</strong> Your LMP was March 3 and your cycles run a standard 28 days. Adding 280 days lands on December 8, so your estimated due date is December 8 and you are considered to be in week 40 that day.
+    </div>
+    <div class="example">
+      <strong>Example 2 — Longer cycle adjustment.</strong> Same LMP of March 3, but your cycles average 32 days. Ovulation falls about four days later than the 28-day assumption, so the estimate moves four days forward to December 12.
+    </div>
+    <div class="example">
+      <strong>Example 3 — IVF blastocyst transfer.</strong> A day-5 embryo was transferred on April 10. Adding 261 days gives an estimated due date of December 27. Because the embryo's age is known exactly, this figure does not depend on cycle length at all.
+    </div>
+
+    <h3>Reading gestational age and trimesters</h3>
+    <p>Gestational age is reported in completed weeks and days from the LMP — "14 weeks 2 days" means 14 full weeks plus 2 days. Clinicians divide the roughly 40 weeks into three trimesters, though exact boundaries vary slightly between sources. The table shows the convention this tool uses.</p>
+    <table>
+      <thead><tr><th>Stage</th><th>Gestational weeks</th><th>Typical milestones</th></tr></thead>
+      <tbody>
+        <tr><th>First trimester</th><td>Weeks 1–13</td><td>Organs form; early ultrasound dating</td></tr>
+        <tr><th>Second trimester</th><td>Weeks 14–27</td><td>Anatomy scan; first movements felt</td></tr>
+        <tr><th>Third trimester</th><td>Weeks 28–40+</td><td>Rapid growth; term from week 37</td></tr>
+        <tr><th>Full term</th><td>Weeks 37–42</td><td>Normal delivery window</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common misunderstandings</h3>
+    <ul>
+      <li><strong>Only about 1 in 20 babies arrive on the due date.</strong> Most are born within the two weeks on either side, and anything from 37 to 42 weeks is full term.</li>
+      <li><strong>Week 4 does not mean a four-week-old embryo.</strong> Because dating starts at the LMP, the embryo is about two weeks younger than the gestational age suggests.</li>
+      <li><strong>Irregular cycles reduce LMP accuracy.</strong> If your cycles vary a lot, an early ultrasound is generally the more reliable way to date the pregnancy.</li>
+    </ul>
+
+    <h3>Limits — and a note on medical advice</h3>
+    <p>This tool is an estimate only and is not medical advice. It cannot account for early-ultrasound redating, multiple pregnancies, or individual health factors, and it does not diagnose anything or recommend care. Every pregnancy is different: use the date to plan and prepare, but confirm your dating and any decisions with a doctor or midwife who can assess your specific situation.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/tdee-calc/"><span class="related-ico" aria-hidden="true">🏃</span><span class="related-name">TDEE Calculator</span></a><a class="related-item" href="https://tool-hub.me/water-intake-calc/"><span class="related-ico" aria-hidden="true">💧</span><span class="related-name">Water Intake Calculator</span></a><a class="related-item" href="https://tool-hub.me/blood-alcohol-calc/"><span class="related-ico" aria-hidden="true">🍺</span><span class="related-name">Blood Alcohol Calculator (BAC)</span></a><a class="related-item" href="https://tool-hub.me/bmi-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">BMI Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details><summary data-i18n="faq.q1">How is my pregnancy due date calculated from my last period?</summary><p data-i18n="faq.a1">Most due date calculators use Naegele's rule: count 280 days (40 weeks) from the first day of your last menstrual period (LMP), assuming a standard 28-day cycle where ovulation happens around day 14. For example, an LMP of January 1 gives an estimated due date around October 8. If your average cycle is longer or shorter than 28 days, this pregnancy calculator shifts the estimate by the difference — a 32-day cycle pushes ovulation, and the due date, about 4 days later; a 24-day cycle about 4 days earlier.</p></details>
@@ -322,7 +378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

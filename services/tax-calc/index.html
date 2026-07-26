@@ -208,11 +208,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 한국어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>부가가치세(VAT) 계산기 사용 안내</h2>
+    <p>한국의 부가가치세는 재화·용역의 공급에 붙는 대표적인 간접세로, 표준세율은 <strong>10%</strong>입니다. 실무에서 가장 헷갈리는 지점이 바로 <strong>공급가액</strong>과 <strong>공급대가</strong>의 구분입니다. 공급가액은 부가세를 뺀 순수한 물건값(과세표준)이고, 공급대가는 여기에 부가세 10%를 더한, 소비자가 실제로 지불하는 총액입니다. 이 계산기는 어느 쪽을 입력해도 나머지 세 값(공급가액·세액·공급대가)을 한 번에 보여 줍니다.</p>
+
+    <h3>정방향과 역방향</h3>
+    <ol>
+      <li><strong>공급가 입력(정방향)</strong>: 세금계산서에 적을 순 물건값을 알 때. 부가세 = 공급가액 × 10%, 공급대가 = 공급가액 × 1.1.</li>
+      <li><strong>공급대가 입력(역방향)</strong>: 카드전표·영수증의 부가세 포함 총액에서 거꾸로 나눌 때. 공급가액 = 공급대가 ÷ 1.1, 세액 = 공급대가 − 공급가액.</li>
+    </ol>
+
+    <h3>계산 원리</h3>
+    <p>정방향은 10%를 더하기만 하면 되므로 직관적입니다. 실수가 잦은 쪽은 역방향인데, 부가세가 이미 포함된 총액에 그냥 10%를 곱하면 <em>틀립니다</em>. 포함 금액에서 세액을 뽑으려면 <em>공급대가 × 10 ÷ 110</em>(= ÷ 11)을 써야 합니다. 즉 총액을 1.1로 나눠 공급가액을 먼저 구하고, 그 차액이 세액입니다.</p>
+
+    <div class="example">
+      <strong>예시 1 — 공급가 입력.</strong> 공급가액 1,000,000원을 넣으면 부가세는 1,000,000 × 0.1 = 100,000원, 공급대가는 1,100,000원. 세금계산서에는 공급가액 1,000,000, 세액 100,000으로 칸을 나눠 적습니다.
+    </div>
+    <div class="example">
+      <strong>예시 2 — 공급대가 입력(역산).</strong> 부가세 포함 55,000원을 받았다면 공급가액 = 55,000 ÷ 1.1 = 50,000원, 세액 = 55,000 − 50,000 = 5,000원. 55,000 × 0.1 = 5,500원이 <em>아니라는</em> 점이 핵심입니다.
+    </div>
+    <div class="example">
+      <strong>예시 3 — 카드 결제.</strong> 카드 총액 33,000원(부가세 포함)이면 공급가액 30,000원, 부가세 3,000원. 간이영수증이 아니라 세금계산서·현금영수증에서 이 분리 기재가 필요합니다.
+    </div>
+
+    <h3>부가세 포함 금액 빠른 참조</h3>
+    <table>
+      <thead><tr><th>공급대가(총액)</th><th>공급가액</th><th>부가세(10%)</th></tr></thead>
+      <tbody>
+        <tr><td>11,000</td><td>10,000</td><td>1,000</td></tr>
+        <tr><td>55,000</td><td>50,000</td><td>5,000</td></tr>
+        <tr><td>110,000</td><td>100,000</td><td>10,000</td></tr>
+        <tr><td>330,000</td><td>300,000</td><td>30,000</td></tr>
+      </tbody>
+    </table>
+
+    <h3>세금계산서 실무와 흔한 실수</h3>
+    <ul>
+      <li>세금계산서에는 공급가액과 세액을 <strong>반드시 분리</strong> 기재합니다. 사업자의 납부세액은 대략 <em>매출세액 − 매입세액</em>으로 계산되므로, 매입 시 받은 세금계산서의 세액이 곧 공제 자료가 됩니다.</li>
+      <li>포함 금액에 ×0.1을 적용하는 오류: 앞서 본 대로 ÷11(또는 ×10/110)이 맞습니다.</li>
+      <li>신고 주기: 법인은 분기별(예정·확정), 개인 일반과세자는 반기별(1월·7월)로 신고하는 것이 기본입니다. 발급한 세금계산서의 공급가액·세액 합계가 신고서 매출의 기초가 됩니다.</li>
+      <li>영세율·면세: 수출 등 영세율(0%)이나 면세 대상은 10%가 적용되지 않습니다. 이 계산기는 표준세율 기준입니다.</li>
+      <li>원 단위 처리: 실무에서는 세액의 원 미만을 절사하기도 합니다. 이 도구는 선택 통화의 최소 단위로 반올림합니다.</li>
+    </ul>
+    <p>본 계산은 표준세율 10%를 전제로 한 참고용이며, 실제 신고·납부 세액은 과세유형(일반·간이), 업종, 매입세액 공제 여부에 따라 달라집니다. 세무 자문이 아니므로, 구체적인 신고는 세무 전문가나 국세청 안내를 확인하시기 바랍니다.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>관련 도구</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/tip-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">팁 계산기</span></a><a class="related-item" href="https://tool-hub.me/unit-price/"><span class="related-ico" aria-hidden="true">₩</span><span class="related-name">단위가격 계산기</span></a><a class="related-item" href="https://tool-hub.me/barista-fire-calc/"><span class="related-ico" aria-hidden="true">☕</span><span class="related-name">바리스타 파이어 계산기</span></a><a class="related-item" href="https://tool-hub.me/cagr-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">CAGR 계산기</span></a></div></section>
 
   <section class="faq" id="faq">
     <h2 data-i18n="faq.heading">자주 묻는 질문</h2>

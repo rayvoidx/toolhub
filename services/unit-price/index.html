@@ -207,11 +207,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Comparing prices when the sizes never match</h2>
+    <p>Shelf prices are designed to be hard to compare: one product is 500 g, the next is 1.2 kg, a third is a "3 for the price of 2" bundle. The only fair way to judge them is the <strong>unit price</strong> — the cost of a single, common amount such as 100 g or 100 ml. Once every option is expressed that way, the cheapest one is obvious at a glance, regardless of packaging. This calculator does that conversion for two products side by side.</p>
+
+    <h2>How to enter each product</h2>
+    <ol>
+      <li>Type the <strong>price</strong> exactly as marked on the shelf.</li>
+      <li>Type the <strong>amount</strong> and pick its <strong>unit</strong> — g, kg, ml, L, or item. You can mix units between the two products; the tool normalizes them.</li>
+      <li>Set <strong>items per pack</strong> for multipacks. The total amount used in the math is amount &times; items per pack.</li>
+    </ol>
+
+    <h2>The formula</h2>
+    <p>Unit price = total price &divide; total amount, then scaled to a per-100 figure. Weights are normalized to grams and volumes to millilitres before comparing, so kg vs g and L vs ml line up automatically:</p>
+    <table>
+      <thead><tr><th>Given</th><th>Equals</th></tr></thead>
+      <tbody>
+        <tr><td>1 kg</td><td>1,000 g</td></tr>
+        <tr><td>1 L</td><td>1,000 ml</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example">
+      <p><strong>Example 1 — weight, mixed units.</strong> Product A costs 1,000 for 500 g; Product B costs 1,800 for 1 kg. A per 100 g = 1,000 &divide; 500 &times; 100 = <strong>200</strong>. B per 100 g = 1,800 &divide; 1,000 &times; 100 = <strong>180</strong>. B is cheaper by 10% per 100 g, even though it costs more on the shelf.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — volume.</strong> Detergent A is 3.50 for 750 ml; detergent B is 5.00 for 1.5 L (1,500 ml). A per 100 ml = 3.50 &divide; 750 &times; 100 = <strong>0.467</strong>. B per 100 ml = 5.00 &divide; 1,500 &times; 100 = <strong>0.333</strong>. B wins clearly.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a multipack.</strong> A single 400 g can costs 1.20 (0.30 per 100 g). A 3-pack of the same 400 g cans costs 3.30, so its total amount is 1,200 g and its unit price is 3.30 &divide; 1,200 &times; 100 = <strong>0.275</strong> per 100 g — about 8% cheaper per gram.</p>
+    </div>
+
+    <h2>Reading the comparison</h2>
+    <table>
+      <thead><tr><th>Product</th><th>Price</th><th>Amount</th><th>Per 100 g</th></tr></thead>
+      <tbody>
+        <tr><td>A (single)</td><td>1,200</td><td>400 g &times; 1</td><td>300</td></tr>
+        <tr><td>B (3-pack)</td><td>3,300</td><td>400 g &times; 3</td><td>275</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and limits</h2>
+    <ul>
+      <li><strong>Different unit types are not comparable.</strong> Weight (g), volume (ml), and count (item) measure different things — enter the same type on both sides, or the "cheaper" answer is meaningless.</li>
+      <li><strong>Don't forget the pack count.</strong> A bundle looks expensive until you divide by how many items it contains.</li>
+      <li><strong>Bigger is not always cheaper.</strong> Family sizes sometimes carry a higher unit price than the medium pack — that is exactly what this tool exposes.</li>
+      <li><strong>Unit price is only one factor.</strong> It ignores quality, brand, and shelf life. The cheapest gram of something you throw away unused is not a saving — buy the size you will actually use.</li>
+      <li><strong>Cross-check the shelf label.</strong> Many countries require a printed unit price on the tag, but the reference amount can differ (per 100 g here, per kilogram there), so recompute to the same basis before you trust two labels against each other.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/barista-fire-calc/"><span class="related-ico" aria-hidden="true">☕</span><span class="related-name">Barista FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/cagr-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">CAGR Calculator</span></a><a class="related-item" href="https://tool-hub.me/coast-fire-calc/"><span class="related-ico" aria-hidden="true">🏖️</span><span class="related-name">Coast FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/compound-interest-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Compound Interest Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
     <h2 data-i18n="faq.heading">Frequently asked questions</h2>

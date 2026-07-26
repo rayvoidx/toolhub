@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -240,14 +240,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English in-depth guide (unique, no data-i18n). -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9em}
+    </style>
+
+    <h2>What "valid JSON" actually means</h2>
+    <p>JSON looks forgiving but its grammar is strict, and most "my JSON won't parse" problems come from habits carried over from JavaScript. A formatter can only pretty-print text that is already valid, so the first job of this tool is to tell you <em>exactly where</em> the syntax breaks — the line and column of the first character the parser could not accept — and then, once the text is valid, to re-indent or compress it.</p>
+    <p>JSON allows just a handful of value types: objects in curly braces, arrays in square brackets, double-quoted strings, numbers, and the three literals <code>true</code>, <code>false</code> and <code>null</code>. Anything else — a comment, a single quote, a trailing comma, an unquoted key — is a syntax error, not a warning.</p>
+
+    <h2>The rules people trip over</h2>
+    <table>
+      <tr><th>Allowed</th><th>Not allowed</th></tr>
+      <tr><td>Double quotes: <code>"name"</code></td><td>Single quotes: <code>'name'</code></td></tr>
+      <tr><td><code>{ "a": 1, "b": 2 }</code></td><td>Trailing comma: <code>{ "a": 1, }</code></td></tr>
+      <tr><td>Quoted keys: <code>"id"</code></td><td>Bare keys: <code>id</code></td></tr>
+      <tr><td>Numbers: <code>3.14, -2, 1e6</code></td><td>Leading zero, <code>+1</code>, <code>NaN</code></td></tr>
+      <tr><td>No comments</td><td><code>//</code> or <code>/* &hellip; */</code> comments</td></tr>
+    </table>
+
+    <h3>Worked example 1 — finding the error</h3>
+    <div class="example">
+      <p>This input fails: <code>{ "name": "Ada", "skills": ["math", "code",] }</code></p>
+      <p>The parser stops at the <code>]</code> because of the comma after <code>"code"</code> — a trailing comma. JSON has no trailing commas anywhere. Remove it and the object parses. The tool reports the column of the closing bracket, since that is the first token that is illegal given what came before.</p>
+    </div>
+
+    <h3>Worked example 2 — Format versus Minify</h3>
+    <div class="example">
+      <p>Take <code>{"id":7,"tags":["a","b"]}</code> (25 characters). <strong>Format</strong> with 2-space indent expands it into a readable multi-line block for editing. <strong>Minify</strong> strips every optional space and newline to produce the shortest equivalent — useful for shrinking a payload before sending it over a network. Both represent the identical data; only the whitespace differs.</p>
+    </div>
+
+    <h3>Worked example 3 — silent precision loss</h3>
+    <div class="example">
+      <p>Enter <code>{"big": 9007199254740993}</code> and format it: the value comes back as <code>9007199254740992</code>. JSON numbers are parsed as 64-bit floating point, which can represent integers exactly only up to 2<sup>53</sup> = 9,007,199,254,740,992. Larger IDs must be stored as strings to survive a round trip.</p>
+    </div>
+
+    <h2>Whitespace, key order and duplicates</h2>
+    <ul>
+      <li><strong>Indentation</strong> (2 spaces, 4 spaces, or a tab) changes only readability, never meaning. Choose what your project's style guide expects.</li>
+      <li><strong>Sort keys</strong> reorders object members alphabetically, which makes two objects easy to compare in a diff. Object key order is not significant in JSON, so sorting is safe.</li>
+      <li><strong>Duplicate keys</strong> are technically permitted by the grammar but most parsers keep only the last one, so <code>{"a":1,"a":2}</code> becomes <code>{"a":2}</code>. Avoid them.</li>
+    </ul>
+
+    <h2>Escaping special characters</h2>
+    <p>Certain characters cannot appear literally inside a JSON string and must be escaped with a backslash: a double quote becomes <code>\"</code>, a backslash becomes <code>\\</code>, and control characters use short codes such as <code>\n</code> for a newline and <code>\t</code> for a tab. Any Unicode character can also be written as <code>\u</code> followed by four hexadecimal digits, so <code>\u00e9</code> encodes the letter &eacute;. A stray unescaped quote or a lone backslash is one of the most common reasons a string fails to parse, so when the reported error points inside a quoted value, look first for a character that should have been escaped.</p>
+
+    <h2>Runs entirely in your browser</h2>
+    <p>All parsing and formatting happen locally with the browser's own JSON engine — nothing you paste is uploaded. That means you can safely check configuration files or API responses that contain sensitive values. The one thing to remember is that a formatter validates syntax, not meaning: it confirms your JSON is well-formed, but it cannot know whether the field names and values are the ones your application expects.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/regex-tester/"><span class="related-ico" aria-hidden="true">🧪</span><span class="related-name">Regex Tester</span></a><a class="related-item" href="https://tool-hub.me/unix-timestamp-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Unix Timestamp Converter</span></a><a class="related-item" href="https://tool-hub.me/url-encoder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/uuid-gen/"><span class="related-ico" aria-hidden="true">🆔</span><span class="related-name">UUID Generator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -275,7 +336,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>
