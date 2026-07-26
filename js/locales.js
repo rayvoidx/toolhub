@@ -260,6 +260,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "Aspect Ratio Calculator",
     "tool.cooking-conv.name": "Cups to Grams Converter",
     "tool.hourly-to-salary.name": "Hourly to Salary Calculator",
+      "tool.dog-age-calc.name": "Dog Age Calculator",
+    "tool.one-rep-max-calc.name": "One Rep Max Calculator",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -509,6 +511,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "宽高比计算器",
     "tool.cooking-conv.name": "杯换算克",
     "tool.hourly-to-salary.name": "时薪年薪换算器",
+      "tool.dog-age-calc.name": "狗狗年龄计算器",
+    "tool.one-rep-max-calc.name": "1RM 计算器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -758,6 +762,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "आस्पेक्ट रेशियो कैलकुलेटर",
     "tool.cooking-conv.name": "कप से ग्राम कन्वर्टर",
     "tool.hourly-to-salary.name": "प्रति घंटा से वार्षिक वेतन कैलकुलेटर",
+      "tool.dog-age-calc.name": "डॉग एज कैलकुलेटर",
+    "tool.one-rep-max-calc.name": "1RM कैलकुलेटर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1007,6 +1013,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "Calculadora de relación de aspecto",
     "tool.cooking-conv.name": "Convertidor de tazas a gramos",
     "tool.hourly-to-salary.name": "Calculadora de sueldo por hora a anual",
+      "tool.dog-age-calc.name": "Calculadora de edad canina",
+    "tool.one-rep-max-calc.name": "Calculadora de 1RM",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1256,6 +1264,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "حاسبة نسبة العرض إلى الارتفاع",
     "tool.cooking-conv.name": "محوّل الأكواب إلى الغرامات",
     "tool.hourly-to-salary.name": "حاسبة الأجر بالساعة إلى الراتب",
+      "tool.dog-age-calc.name": "حاسبة عمر الكلب",
+    "tool.one-rep-max-calc.name": "حاسبة الحد الأقصى لتكرار واحد (1RM)",
   },
 
   /* ---------------- Français ---------------- */
@@ -1505,6 +1515,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "Calculateur de format d'image",
     "tool.cooking-conv.name": "Convertisseur tasses en grammes",
     "tool.hourly-to-salary.name": "Convertisseur taux horaire / salaire annuel",
+      "tool.dog-age-calc.name": "Calculateur d'âge du chien",
+    "tool.one-rep-max-calc.name": "Calculateur de 1RM",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1754,6 +1766,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "অ্যাসপেক্ট রেশিও ক্যালকুলেটর",
     "tool.cooking-conv.name": "কাপ থেকে গ্রাম কনভার্টার",
     "tool.hourly-to-salary.name": "ঘণ্টা থেকে বার্ষিক বেতন ক্যালকুলেটর",
+      "tool.dog-age-calc.name": "কুকুরের বয়স ক্যালকুলেটর",
+    "tool.one-rep-max-calc.name": "1RM ক্যালকুলেটর",
   },
 
   /* ---------------- Português ---------------- */
@@ -2003,6 +2017,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "Calculadora de proporção de tela",
     "tool.cooking-conv.name": "Conversor de xícaras para gramas",
     "tool.hourly-to-salary.name": "Calculadora de valor-hora para salário",
+      "tool.dog-age-calc.name": "Calculadora de idade do cachorro",
+    "tool.one-rep-max-calc.name": "Calculadora de 1RM",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2252,6 +2268,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "Калькулятор соотношения сторон",
     "tool.cooking-conv.name": "Перевод чашек в граммы",
     "tool.hourly-to-salary.name": "Калькулятор почасовой ставки в оклад",
+      "tool.dog-age-calc.name": "Калькулятор возраста собаки",
+    "tool.one-rep-max-calc.name": "Калькулятор 1ПМ",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2501,6 +2519,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "ایسپیکٹ ریشو کیلکولیٹر",
     "tool.cooking-conv.name": "کپ سے گرام کنورٹر",
     "tool.hourly-to-salary.name": "فی گھنٹہ سے سالانہ تنخواہ کیلکولیٹر",
+      "tool.dog-age-calc.name": "کتے کی عمر کیلکولیٹر",
+    "tool.one-rep-max-calc.name": "1RM کیلکولیٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2750,6 +2770,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "Kalkulator Rasio Aspek",
     "tool.cooking-conv.name": "Konverter Cangkir ke Gram",
     "tool.hourly-to-salary.name": "Kalkulator Upah per Jam ke Gaji",
+      "tool.dog-age-calc.name": "Kalkulator Usia Anjing",
+    "tool.one-rep-max-calc.name": "Kalkulator 1RM",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -2999,6 +3021,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "Seitenverhältnis-Rechner",
     "tool.cooking-conv.name": "Cups-in-Gramm-Rechner",
     "tool.hourly-to-salary.name": "Stundenlohn-in-Gehalt-Rechner",
+      "tool.dog-age-calc.name": "Hundealter-Rechner",
+    "tool.one-rep-max-calc.name": "1RM-Rechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3248,6 +3272,8 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "アスペクト比計算ツール",
     "tool.cooking-conv.name": "カップ→グラム変換",
     "tool.hourly-to-salary.name": "時給・年収 換算ツール",
+      "tool.dog-age-calc.name": "犬の年齢計算ツール",
+    "tool.one-rep-max-calc.name": "1RM計算ツール",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3497,5 +3523,7 @@ window.I18N_LOCALES = {
       "tool.aspect-ratio-calc.name": "화면 비율 계산기",
     "tool.cooking-conv.name": "컵→그램 변환기",
     "tool.hourly-to-salary.name": "시급 연봉 환산기",
+      "tool.dog-age-calc.name": "강아지 나이 계산기",
+    "tool.one-rep-max-calc.name": "1RM 계산기",
   }
 };
