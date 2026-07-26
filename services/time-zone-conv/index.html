@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -195,14 +195,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why converting time zones is trickier than adding hours</h2>
+    <p>A time zone is not a fixed number. It is a rule: an offset from Coordinated Universal Time (UTC) that can change twice a year when a region starts or ends daylight saving time, and that different countries switch on different dates. Converting a moment from one place to another means looking up each region's offset <em>for that specific instant</em>, not applying a memorized number. That is exactly what trips people up when they schedule a call and land a colleague at 2 a.m. This converter reads offsets from the IANA time zone database built into your browser, so the daylight-saving rules are always current.</p>
+
+    <h2>How to use it</h2>
+    <ol>
+      <li>Set the <strong>base time</strong> — the date and time you already know — and the <strong>base time zone</strong> it belongs to. Press <em>Now</em> to start from the current moment.</li>
+      <li>Add one or more cities. Each card shows that city's local time for your base instant, its UTC offset badge, and a <em>+1 day</em> or <em>-1 day</em> badge when the result falls on a different calendar date.</li>
+      <li>A <em>DST</em> badge appears on any city that is currently observing daylight saving time for the instant you picked.</li>
+    </ol>
+
+    <h2>The offset arithmetic</h2>
+    <p>Every conversion routes through UTC. The base time is turned into a UTC instant, then each city's offset for that instant is applied. Two cities that show UTC+9:00 and UTC-4:00 are 13 hours apart, because 9 &minus; (&minus;4) = 13. Because offsets are computed in minutes, half-hour and quarter-hour zones such as India (UTC+5:30) and Nepal (UTC+5:45) come out exactly rather than being rounded to the nearest hour.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a 13-hour gap.</strong> You set 9:00 AM in Tokyo (UTC+9). That is 00:00 UTC. New York in summer is on EDT (UTC&minus;4), so it reads 8:00 PM — and because that is the evening <em>before</em>, the New York card shows a <em>-1 day</em> badge.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a half-hour zone.</strong> Base time 6:00 PM in London during winter (GMT, UTC+0) converts to 11:30 PM the same day in Kolkata (UTC+5:30). Add 30 minutes to a whole-hour assumption and you would have been wrong by exactly that half hour.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — scheduling across three cities.</strong> A 10:00 AM call in New York in January (EST, UTC&minus;5) is 3:00 PM in London (UTC+0, same day) and 2:00 AM the next day in Sydney (AEDT, UTC+11, <em>+1 day</em> badge). The badges make it obvious that Sydney is the one to reconsider.</p>
+    </div>
+
+    <h2>Standard offsets and daylight saving for common cities</h2>
+    <table>
+      <thead><tr><th>City</th><th>Standard offset</th><th>Daylight saving</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>London</td><td>UTC+0</td><td>Yes (&rarr; UTC+1)</td><td>Northern-hemisphere summer</td></tr>
+        <tr><td>New York</td><td>UTC&minus;5</td><td>Yes (&rarr; UTC&minus;4)</td><td>Switches on different dates than Europe</td></tr>
+        <tr><td>Tokyo</td><td>UTC+9</td><td>No</td><td>Fixed all year</td></tr>
+        <tr><td>Kolkata</td><td>UTC+5:30</td><td>No</td><td>Half-hour offset</td></tr>
+        <tr><td>Kathmandu</td><td>UTC+5:45</td><td>No</td><td>Quarter-hour offset</td></tr>
+        <tr><td>Sydney</td><td>UTC+10</td><td>Yes (&rarr; UTC+11)</td><td>Summer falls in Dec&ndash;Feb</td></tr>
+        <tr><td>Dubai</td><td>UTC+4</td><td>No</td><td>Fixed all year</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and limits</h2>
+    <ul>
+      <li>Do not memorize a fixed gap between two cities — it changes for several weeks each spring and autumn while one region has switched to daylight saving and the other has not.</li>
+      <li>Southern-hemisphere summer runs roughly December to February, so Sydney and London can be on daylight saving at opposite ends of the year.</li>
+      <li>Some regions never use daylight saving at all (Japan, most of India, the Gulf), so their offset is the same every day.</li>
+      <li>The tool converts a single instant. It does not know a person's working hours or public holidays, so a "reasonable" local time is still your judgment call.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/workday-calc/"><span class="related-ico" aria-hidden="true">💼</span><span class="related-name">Business Days Calculator</span></a><a class="related-item" href="https://tool-hub.me/world-clock/"><span class="related-ico" aria-hidden="true">🌍</span><span class="related-name">World Clock</span></a><a class="related-item" href="https://tool-hub.me/age-calc/"><span class="related-ico" aria-hidden="true">🎂</span><span class="related-name">Age Calculator</span></a><a class="related-item" href="https://tool-hub.me/countdown-timer/"><span class="related-ico" aria-hidden="true">⏲️</span><span class="related-name">Countdown Timer</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details><summary data-i18n="faq.q1">Does the converter handle daylight saving time (DST) automatically?</summary><p data-i18n="faq.a1">Yes. This time zone converter never stores fixed offsets. It reads each city's UTC offset for the exact instant you enter from your browser's built-in IANA time zone database, which already knows every country's daylight saving rules and the exact dates they switch. So if the moment you pick falls after a city has sprung forward, the result reflects that automatically — a "DST" badge appears on cities that are on daylight saving time, and no offset is ever hardcoded.</p></details>
@@ -215,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -214,14 +214,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English enrichment (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How the prime checker and factorizer work</h2>
+    <p>A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. Every other whole number above 1 is composite, meaning it can be built by multiplying smaller primes together. That single idea underlies cryptography, hashing, and much of number theory, which is why quickly deciding whether a number is prime — and, if not, what it factors into — is such a common task.</p>
+    <p>Testing small numbers is easy: to check whether n is prime you only need to try dividing by values up to the square root of n, because any factor larger than √n pairs with one smaller than it. For large numbers trial division becomes far too slow, so this tool switches to the Miller–Rabin primality test, which decides primality without finding factors. Below about 3.3 × 10²⁴ it uses a fixed set of witnesses and is deterministic; above that it becomes a strong probabilistic test and labels the answer a "probable prime."</p>
+
+    <h3>Reading a factorization</h3>
+    <p>Prime factorization rewrites a number as a product of primes, collapsing repeats into exponents. In 2³ × 3² × 5 the small raised digit is the exponent — how many times that prime is multiplied in. Once you have the factorization you can read off two useful quantities with no extra work:</p>
+    <ul>
+      <li><strong>Number of divisors:</strong> add 1 to each exponent, then multiply the results.</li>
+      <li><strong>Sum of divisors:</strong> for each prime, add up 1 + p + p² + … to its exponent, then multiply those totals.</li>
+    </ul>
+
+    <div class="example">
+      <strong>Example 1 — 360.</strong> The factorization is 2³ × 3² × 5. The number of divisors is (3+1)(2+1)(1+1) = 24, and the sum of divisors is (1+2+4+8)(1+3+9)(1+5) = 15 × 13 × 6 = 1170.
+    </div>
+    <div class="example">
+      <strong>Example 2 — 97.</strong> The square root of 97 is about 9.85, so it is enough to test the primes 2, 3, 5, and 7. None divides 97 evenly, so 97 is prime — no larger divisor needs checking.
+    </div>
+    <div class="example">
+      <strong>Example 3 — 561.</strong> This looks prime to some quick tests but is not: 561 = 3 × 11 × 17. It is a Carmichael number, a composite that fools the simple Fermat test — exactly why the tool relies on the stronger Miller–Rabin test to catch it.
+    </div>
+
+    <h3>Edge cases the tool handles</h3>
+    <table>
+      <thead><tr><th>Input</th><th>Result</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>Not prime</td><td>Divisible by every number; not greater than 1</td></tr>
+        <tr><td>1</td><td>Not prime</td><td>Has only one divisor, itself</td></tr>
+        <tr><td>2</td><td>Prime</td><td>The smallest prime and the only even one</td></tr>
+        <tr><td>−7</td><td>Rejected</td><td>Primality is defined for positive integers</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Practical notes and limits</h3>
+    <p>Because the engine uses arbitrary-precision BigInt arithmetic, you are not restricted to ordinary integer sizes — you can paste numbers with dozens of digits. The limiting step is factorization, not the primality test: a large number that is the product of two big primes can be genuinely slow to factor, and if the search passes its time budget the tool tells you instead of freezing. Note too that "probable prime" for very large inputs means the chance of error is astronomically small but not mathematically zero. For everyday use — checking a number, teaching factorization, or verifying a result — the deterministic range covers far more than you are likely to need.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/qr-gen/"><span class="related-ico" aria-hidden="true">▦</span><span class="related-name">QR Code Generator</span></a><a class="related-item" href="https://tool-hub.me/average-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Average Calculator</span></a><a class="related-item" href="https://tool-hub.me/calculator/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">Scientific Calculator</span></a><a class="related-item" href="https://tool-hub.me/fraction-calc/"><span class="related-ico" aria-hidden="true">½</span><span class="related-name">Fraction Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -249,7 +301,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

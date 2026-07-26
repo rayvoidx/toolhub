@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -207,14 +207,71 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Lap, split, and total time — what the stopwatch actually records</h2>
+    <p>A stopwatch looks trivial until you start taking laps, and then the numbers need care. This tool keeps three quantities straight: the <strong>total</strong> elapsed time since you pressed start, the <strong>split</strong> for each lap (how long that one segment took), and the running <strong>lap count</strong>. Understanding the difference is what makes the recorded times useful afterwards.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Press <strong>Start</strong> (or the Space bar) to begin. The display counts up in minutes, seconds, and hundredths.</li>
+      <li>Press <strong>Lap</strong> (or L) each time you complete a segment — a track lap, a workout set, a stage of a task.</li>
+      <li>Press <strong>Reset</strong> (or R) to clear everything and start fresh. Copy the lap table first if you want to keep it.</li>
+    </ol>
+
+    <h3>Split versus total</h3>
+    <p>Each row stores the total time at the moment you tapped Lap. The split for a lap is simply the difference between its total and the previous lap's total: <em>split(n) = total(n) − total(n−1)</em>. The timing is based on the browser's high-resolution monotonic clock, so it does not drift with the system clock and stays accurate even if the visual display is briefly throttled.</p>
+
+    <div class="example">
+      <strong>Example — four 400 m laps.</strong> Suppose the totals when you tap Lap are 1:02.50, 2:08.30, 3:15.40, and 4:20.10. The splits come from subtraction: lap 1 is 1:02.50, lap 2 is 2:08.30 − 1:02.50 = 1:05.80, lap 3 is 1:07.10, and lap 4 is 1:04.70. The slowest lap was the third; the whole run took 4:20.10.
+    </div>
+
+    <h3>Reading a lap table</h3>
+    <table>
+      <thead><tr><th>Lap</th><th>Split (this lap)</th><th>Total (cumulative)</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>1:02.50</td><td>1:02.50</td></tr>
+        <tr><td>2</td><td>1:05.80</td><td>2:08.30</td></tr>
+        <tr><td>3</td><td>1:07.10</td><td>3:15.40</td></tr>
+        <tr><td>4</td><td>1:04.70</td><td>4:20.10</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Where hundredth-second timing helps</h3>
+    <p>The lap and split breakdown is what turns a raw timer into a training or work log. Runners compare each 400 m split to spot where pace fades; swimmers check whether the back half of a set slows; presenters rehearse to a target and see which section runs long; cooks and lab users mark stages of a process without resetting the clock. Because every lap keeps both its own split and the cumulative total, you can copy the whole table afterwards and analyse the session at once. The keyboard shortcuts — Space to start or pause, L to lap, R to reset — keep your hands free during an activity, and the monotonic clock means a throttled or backgrounded tab will not corrupt the elapsed count.</p>
+
+    <h3>Common mistakes and tips</h3>
+    <ul>
+      <li>Confusing split with total: a reading of "2:08" is usually cumulative time, not a single lap that took over two minutes. Read the split column for per-segment pace.</li>
+      <li>Expecting an alarm: a stopwatch counts up with no target. If you need it to stop at a set time, that is a countdown timer instead.</li>
+      <li>Losing data on reset: reset wipes the laps. Use Copy results first to paste them into your notes.</li>
+      <li>Hundredths, not thousandths: the display resolves to 0.01 s, which is plenty for human timing; it is not a photo-finish instrument.</li>
+    </ul>
+    <p>Nothing is uploaded — the timer runs entirely in your browser.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/time-zone-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Time Zone Converter</span></a><a class="related-item" href="https://tool-hub.me/workday-calc/"><span class="related-ico" aria-hidden="true">💼</span><span class="related-name">Business Days Calculator</span></a><a class="related-item" href="https://tool-hub.me/world-clock/"><span class="related-ico" aria-hidden="true">🌍</span><span class="related-name">World Clock</span></a><a class="related-item" href="https://tool-hub.me/age-calc/"><span class="related-ico" aria-hidden="true">🎂</span><span class="related-name">Age Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -242,7 +299,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

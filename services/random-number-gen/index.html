@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -260,14 +260,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English enrichment (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How the random number generator picks numbers</h2>
+    <p>Every number this tool produces comes from your browser's cryptographic random source (crypto.getRandomValues), not the ordinary Math.random(). Math.random() is fast and fine for animations, but it is not designed to be unpredictable and its output can be slightly uneven. The cryptographic source is built to be both unpredictable and uniform, which matters whenever fairness counts — draws, giveaways, sampling, or splitting people into groups.</p>
+    <p>Uniformity hides a subtle trap called modulo bias. If you take a random byte (0–255) and simply reduce it to a range that does not divide evenly, some outcomes become more likely than others. To avoid this the tool uses rejection sampling: it discards the few values that would skew the range and draws again, so every number in your range ends up exactly equally likely.</p>
+
+    <div class="example">
+      <strong>Example 1 — Why bias happens.</strong> Mapping a byte (256 possible values) onto 1–6 with a plain remainder is uneven, because 256 ÷ 6 leaves a remainder of 4. Four of the six faces would come up slightly more often. Rejection sampling throws those leftover values away, restoring a fair 1-in-6 chance for each face.
+    </div>
+    <div class="example">
+      <strong>Example 2 — Unique picks.</strong> To put 20 people in a random order, set the range to 1–20, the count to 20, and turn <em>duplicates off</em>. Everyone gets a distinct number with none repeated — the same trick handles raffle order, seat assignments, or teams.
+    </div>
+    <div class="example">
+      <strong>Example 3 — Lottery odds.</strong> A quick pick does not improve your chances. Matching all five main Powerball numbers plus the Powerball is about 1 in 292,201,338 — the 11,238,513 ways to choose 5 of 69 multiplied by the 26 Powerball options. A generator only saves you time filling in the slip.
+    </div>
+
+    <h3>When to allow duplicates</h3>
+    <p>Leave duplicates <em>on</em> when each draw is independent and repeats are legitimate — rolling dice, flipping coins, or picking a random day several times. Turn them <em>off</em> when every result must be distinct, such as choosing winners, ordering a list, or dealing unique tickets. With duplicates off, the count cannot exceed the size of the range, because you cannot draw 30 unique numbers from a pool of 20.</p>
+
+    <h3>Built-in lottery presets</h3>
+    <p>The lottery tab fills in the official rules for four popular games so you do not have to look them up. Bonus balls are drawn from their own separate pool, exactly as the real machines do. These figures are accurate as of July 2026.</p>
+    <table>
+      <thead><tr><th>Game</th><th>Main pool</th><th>Bonus pool</th></tr></thead>
+      <tbody>
+        <tr><th>Powerball (USA)</th><td>5 of 1–69</td><td>1 of 1–26</td></tr>
+        <tr><th>Mega Millions (USA)</th><td>5 of 1–70</td><td>1 of 1–24</td></tr>
+        <tr><th>EuroMillions (Europe)</th><td>5 of 1–50</td><td>2 of 1–12</td></tr>
+        <tr><th>Lotto 6/45 (Korea)</th><td>6 of 1–45</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Privacy and repeatability</h3>
+    <p>Numbers are generated entirely inside your browser and are never sent anywhere; only your last settings are remembered so the form is ready next time. One consequence of a true random source is that results are not repeatable — there is no seed to type in that would reproduce a past draw. If you need an auditable sequence for a formal prize draw, record the output at the moment you generate it, because the same settings will produce fresh numbers every time.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/coin-flipper/"><span class="related-ico" aria-hidden="true">☯️</span><span class="related-name">Coin Flip</span></a><a class="related-item" href="https://tool-hub.me/dice-roller/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Dice Roller</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — 5 Q&As, keys faq.q1-5/a1-5 in js/locales.js (all 14 locales) -->
     <details>
       <summary data-i18n="faq.q1">How are the numbers generated?</summary>
@@ -294,7 +343,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

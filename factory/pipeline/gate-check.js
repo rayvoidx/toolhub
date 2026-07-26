@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const cp = require("child_process");
 
-const REPO = "/Users/jaehyun/Library/Mobile Documents/com~apple~CloudDocs/toolhub";
+const REPO = process.env.TOOLHUB_REPO || "/Users/jaehyun/Agent_Workflow/services/hub";
 const SCRATCH = path.dirname(__dirname);
 const REGISTRY = path.join(SCRATCH, "registry");
 const LANGS = ["en","zh","hi","es","ar","fr","bn","pt","ru","ur","id","de","ja","ko"];

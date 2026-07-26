@@ -274,11 +274,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What TDEE means and how this calculator finds it</h2>
+    <p>Total Daily Energy Expenditure (TDEE) is the number of calories your body burns across a full day — not just at rest, but including everything you do. It is the anchor for any nutrition plan: eat below it to lose weight, above it to gain, at it to maintain. This tool estimates TDEE in two steps: it first finds your Basal Metabolic Rate (BMR), then scales it by how active you are.</p>
+
+    <h3>The formula behind the number</h3>
+    <p>BMR here uses the Mifflin-St Jeor equation, the modern standard for population estimates:</p>
+    <ul>
+      <li>Men: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5</li>
+      <li>Women: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161</li>
+    </ul>
+    <p>TDEE is then BMR × an activity factor from 1.2 (sedentary) up to 1.9 (extra active). The calorie goals shift TDEE by a percentage; as a rough guide, about 7,700 kcal corresponds to 1 kg of body fat, so a 500 kcal daily deficit trends toward roughly 0.45 kg per week.</p>
+
+    <div class="example">
+      <strong>Example 1 — a 30-year-old man.</strong> 175 cm, 75 kg. BMR = 750 + 1093.75 − 150 + 5 = 1698.75, about 1699 kcal. Moderately active (×1.55) gives a TDEE near 2633 kcal. A standard cut at −20% is roughly 2106 kcal per day.
+    </div>
+    <div class="example">
+      <strong>Example 2 — a 28-year-old woman.</strong> 165 cm, 62 kg. BMR = 620 + 1031.25 − 140 − 161 = 1350.25, about 1350 kcal. Lightly active (×1.375) gives a TDEE near 1857 kcal; maintenance sits there, a mild cut around 1671.
+    </div>
+
+    <h3>Activity multipliers</h3>
+    <table>
+      <thead><tr><th>Level</th><th>Multiplier</th><th>Typical week</th></tr></thead>
+      <tbody>
+        <tr><td>Sedentary</td><td>×1.2</td><td>Desk job, little or no exercise</td></tr>
+        <tr><td>Lightly active</td><td>×1.375</td><td>Light exercise 1 to 3 days</td></tr>
+        <tr><td>Moderately active</td><td>×1.55</td><td>Moderate exercise 3 to 5 days</td></tr>
+        <tr><td>Very active</td><td>×1.725</td><td>Hard exercise 6 to 7 days</td></tr>
+        <tr><td>Extra active</td><td>×1.9</td><td>Physical job or twice-daily training</td></tr>
+      </tbody>
+    </table>
+
+    <h3>From TDEE to a weekly plan</h3>
+    <p>Once you have a TDEE, the goal columns are just percentage shifts of it. Take the 2633 kcal example: a mild cut at −10% is about 2370 kcal, a standard cut at −20% about 2106, and a lean bulk at +15% about 3028. The size of the gap sets the pace of change — roughly 7,700 kcal per kilogram of fat means a steady 300 to 500 kcal daily deficit trends toward a sustainable 0.3 to 0.5 kg per week. Larger deficits rarely help: they cost lean muscle and are harder to hold. Keeping protein around 1.6 to 2.2 g per kilogram of body weight helps preserve muscle while you cut.</p>
+
+    <h3>Common mistakes and honest limits</h3>
+    <ul>
+      <li>Over-rating activity: most people overestimate. If the scale is not moving as expected, drop one level rather than adding food.</li>
+      <li>Treating TDEE as fixed: it adapts. Eat in a deficit for weeks and expenditure drifts down (adaptive thermogenesis), so the estimate needs revisiting as your weight changes.</li>
+      <li>Ignoring body composition: Mifflin-St Jeor uses total weight, so it can under- or over-shoot for very muscular or very lean bodies, where a lean-mass formula fits better.</li>
+      <li>Chasing precision: these are population estimates. Use the number as a starting point, then adjust based on two to three weeks of real results.</li>
+    </ul>
+    <p>This is educational information only, not medical, nutrition, or fitness advice. Anyone with a health condition, or who is pregnant, should speak with a qualified professional before changing their diet.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/water-intake-calc/"><span class="related-ico" aria-hidden="true">💧</span><span class="related-name">Water Intake Calculator</span></a><a class="related-item" href="https://tool-hub.me/blood-alcohol-calc/"><span class="related-ico" aria-hidden="true">🍺</span><span class="related-name">Blood Alcohol Calculator (BAC)</span></a><a class="related-item" href="https://tool-hub.me/bmi-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">BMI Calculator</span></a><a class="related-item" href="https://tool-hub.me/bmr-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">BMR Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
     <h2 data-i18n="faq.heading">Frequently asked questions</h2>

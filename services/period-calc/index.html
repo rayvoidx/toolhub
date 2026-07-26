@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -284,14 +284,75 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Predicting your next periods</h2>
+    <p>A period calculator projects the start dates of your upcoming menstrual periods from a single recent cycle. Where an ovulation estimate zooms in on one fertile window, this tool looks further ahead — mapping the next several cycles so you can see, at a glance, which weeks a period is likely to land on. That is useful for planning travel and events, or simply for keeping enough supplies on hand.</p>
+
+    <h2>The three inputs</h2>
+    <ol>
+      <li><strong>First day of your last period</strong> — the first day of actual bleeding, which anchors every prediction that follows.</li>
+      <li><strong>Average cycle length</strong> — the number of days from the start of one period to the start of the next, usually between 21 and 45 days.</li>
+      <li><strong>Period length</strong> — how many days your bleeding typically lasts, most often between 2 and 10 days.</li>
+    </ol>
+
+    <h2>How the projection is built</h2>
+    <p>Each predicted period simply adds your average cycle length to the start of the one before it, repeated forward for several cycles. The last day of bleeding for any cycle is its start date plus the period length, minus one — because the first day already counts as day one.</p>
+    <div class="example">
+      <p><strong>Example 1 — mapping the next cycle.</strong> Last period started March 3, cycle length 30 days, period length 5 days. The next period starts March 3 + 30 = April 2 and runs April 2–6. The one after that starts May 2, then June 1, marching down the calendar.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — why predictions drift.</strong> Predictions stack, so any error in your average multiplies. If your true cycle is 28 days but you entered 30, each prediction is 2 days late, and by the sixth cycle the projected start is about 6 × 2 = 12 days off the real one.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — an irregular range.</strong> If your cycles swing between 26 and 32 days, a period predicted for a given day could realistically arrive anywhere across a roughly six-day span. The tool shows the average path; treat each date as the centre of a window, not a fixed appointment.</p>
+    </div>
+
+    <h2>How cycle length moves the dates</h2>
+    <table>
+      <thead><tr><th>Average cycle</th><th>2nd period</th><th>3rd period</th><th>4th period</th></tr></thead>
+      <tbody>
+        <tr><td>26 days</td><td>+26 days</td><td>+52 days</td><td>+78 days</td></tr>
+        <tr><td>28 days</td><td>+28 days</td><td>+56 days</td><td>+84 days</td></tr>
+        <tr><td>30 days</td><td>+30 days</td><td>+60 days</td><td>+90 days</td></tr>
+        <tr><td>32 days</td><td>+32 days</td><td>+64 days</td><td>+96 days</td></tr>
+      </tbody>
+    </table>
+    <p>Offsets are counted from the first day of the period you entered.</p>
+
+    <h2>Getting a sharper prediction</h2>
+    <ul>
+      <li><strong>Use a real average.</strong> Tracking three or four cycles and averaging their lengths beats guessing 28, especially if your cycles are naturally short or long.</li>
+      <li><strong>Re-anchor each month.</strong> Because errors accumulate, updating the "last period" date whenever a new period actually arrives keeps the next prediction accurate.</li>
+      <li><strong>Expect variation.</strong> Illness, stress, travel, and hormonal changes routinely shift a cycle by a few days; a calendar cannot account for them.</li>
+    </ul>
+
+    <h2>Important limits</h2>
+    <p>These are estimates based on your own averages, not a diagnosis and not a method of contraception. Real cycles vary, and a missed or very irregular period can have many causes. For contraception, for trying to conceive or to avoid pregnancy, or for any concern about changes in your cycle, talk to a doctor or midwife. Everything here is calculated on your device and never sent to a server.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/pregnancy-due-date-calc/"><span class="related-ico" aria-hidden="true">🤰</span><span class="related-name">Pregnancy Due Date Calculator</span></a><a class="related-item" href="https://tool-hub.me/tdee-calc/"><span class="related-ico" aria-hidden="true">🏃</span><span class="related-name">TDEE Calculator</span></a><a class="related-item" href="https://tool-hub.me/water-intake-calc/"><span class="related-ico" aria-hidden="true">💧</span><span class="related-name">Water Intake Calculator</span></a><a class="related-item" href="https://tool-hub.me/blood-alcohol-calc/"><span class="related-ico" aria-hidden="true">🍺</span><span class="related-name">Blood Alcohol Calculator (BAC)</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details><summary data-i18n="faq.q1">How do you calculate my next 6 period dates?</summary><p data-i18n="faq.a1">This period calculator adds your average cycle length to the first day of your last period, then repeats that six times to project the start of your next 6 periods. Each period's end date is the start plus your period length minus one day. For example, a last period starting January 1 with a 28-day cycle and a 5-day period gives a next period from January 29 to February 2, then February 26 to March 2, and so on. The further out a projection is, the more small cycle variations can shift the real date.</p></details>
@@ -304,7 +365,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

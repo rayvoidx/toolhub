@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -201,14 +201,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English enrichment (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Reading and writing Roman numerals</h2>
+    <p>Roman numerals build every number from seven letters, each with a fixed value: I = 1, V = 5, X = 10, L = 50, C = 100, D = 500, and M = 1000. You normally write them from largest to smallest and add the values up, so MMXV is 1000 + 1000 + 10 + 5 = 2015. The one twist is subtractive notation: when a smaller letter sits directly before a larger one, you subtract it instead. That is why 4 is IV (5 − 1) rather than IIII, and 9 is IX. This converter applies those rules in both directions and shows a step-by-step breakdown so you can see how each letter contributes.</p>
+
+    <h3>The rules that keep numerals valid</h3>
+    <p>Only six subtractive pairs are allowed, and a letter may repeat at most three times in a row. Those two constraints are what rule out forms like IIII or IC. The table lists everything you need to compose any standard numeral.</p>
+    <table>
+      <thead><tr><th>Symbol</th><th>Value</th><th>Subtractive pair</th><th>Means</th></tr></thead>
+      <tbody>
+        <tr><td>I</td><td>1</td><td>IV / IX</td><td>4 / 9</td></tr>
+        <tr><td>V</td><td>5</td><td>—</td><td>—</td></tr>
+        <tr><td>X</td><td>10</td><td>XL / XC</td><td>40 / 90</td></tr>
+        <tr><td>L</td><td>50</td><td>—</td><td>—</td></tr>
+        <tr><td>C</td><td>100</td><td>CD / CM</td><td>400 / 900</td></tr>
+        <tr><td>D</td><td>500</td><td>—</td><td>—</td></tr>
+        <tr><td>M</td><td>1000</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example">
+      <strong>Example 1 — A simple year.</strong> 2026 breaks into 1000 + 1000 + 10 + 10 + 5 + 1, which writes as MM XX V I = MMXXVI. No subtraction is needed because each part descends in value.
+    </div>
+    <div class="example">
+      <strong>Example 2 — Subtraction in action.</strong> 1994 is 1000 + 900 + 90 + 4 = M + CM + XC + IV = MCMXCIV. Three of its four pieces use subtractive pairs, which is why this year is a classic test of the rules.
+    </div>
+    <div class="example">
+      <strong>Example 3 — Beyond 3,999.</strong> Standard letters stop at 3,999 (MMMCMXCIX) because there is no symbol above M. To go further, a vinculum — an overline — multiplies a letter by 1,000, so 5,000 is written V̅ and 1,000,000 is M̅. This converter uses that notation to reach 3,999,999.
+    </div>
+
+    <h3>What the system cannot express</h3>
+    <p>The Roman system has no zero, no negative numbers, and no fractions of a unit, because it was designed for counting and tallying rather than place-value arithmetic. The smallest value you can convert is therefore 1. If you enter 0, a minus sign, or a decimal point, the tool tells you clearly rather than guessing at a meaning that does not exist.</p>
+    <p>Reading the other direction is just as strict. On the Roman → Number tab the converter accepts letters in either case and ignores stray spaces, but it still checks that the numeral is properly formed: a repeated letter beyond three in a row, or an invalid subtraction such as IL or VX, is reported as an error instead of being silently accepted. That way a malformed numeral copied from somewhere else is caught rather than turned into a misleading number.</p>
+
+    <h3>Where you still see them</h3>
+    <p>Roman numerals remain common on clock and watch faces, building cornerstones and dedication dates, book and chapter numbers, film and television copyright lines, monarch and pope names, and event editions such as the Super Bowl (Super Bowl LVIII is number 58). To write a year, convert it on the Number → Roman tab and copy the result; to read a numeral you have found, paste it on the Roman → Number tab and the tool decodes it and confirms whether it is validly formed.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/speed-conv/"><span class="related-ico" aria-hidden="true">💨</span><span class="related-name">Speed Converter</span></a><a class="related-item" href="https://tool-hub.me/temp-conv/"><span class="related-ico" aria-hidden="true">🌡️</span><span class="related-name">Temperature Converter</span></a><a class="related-item" href="https://tool-hub.me/volume-conv/"><span class="related-ico" aria-hidden="true">🧊</span><span class="related-name">Volume Converter</span></a><a class="related-item" href="https://tool-hub.me/weight-conv/"><span class="related-ico" aria-hidden="true">🏋️</span><span class="related-name">Weight Converter</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -236,7 +288,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

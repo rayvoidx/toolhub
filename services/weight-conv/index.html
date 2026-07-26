@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -265,14 +265,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Mass units across three traditions: metric, imperial, and Korean</h2>
+    <p>Weighing something sounds simple until the units come from different worlds: a bathroom scale in kilograms or pounds, a UK body weight in stone, a recipe in ounces, freight in tonnes, and — at a Korean market or jeweler — food in 근 (geun) and gold in 돈 (don). This converter defines every unit in terms of the gram and converts through that base, so one entry appears in all nine units at once, including the two Korean units most global tools leave out.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Enter the <strong>value</strong>.</li>
+      <li>Choose the <strong>From</strong> and <strong>To</strong> units; ⇄ swaps them, and the table below shows every unit simultaneously.</li>
+      <li>Your last unit pair is saved locally so the tool opens ready for the same conversion.</li>
+    </ol>
+
+    <h3>The exact factors (no rounded 2.2)</h3>
+    <p>The international avoirdupois pound is defined as exactly <strong>0.45359237 kg</strong>, so 1 kg = 2.2046226218 lb — not the schoolbook 2.2, which drifts noticeably over large weights. From the pound: 1 lb = 16 ounces (1 oz = 28.349523125 g) and 1 stone = 14 lb = 6.35029318 kg. The Korean units are metric by decree: 1 근 (geun) for food is <strong>600 g</strong>, and 1 돈 (don) is <strong>3.75 g</strong>, the standard for weighing gold and other precious metals.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. Body weight, pounds to kilograms.</strong> 150 lb × 0.45359237 = <strong>68.04 kg</strong>. Going the other way, 70 kg × 2.2046226218 = <strong>154.32 lb</strong>. The exact factor matters: using a flat 2.2 would give 154.0 lb, a 0.3 lb error that only grows with weight.</div>
+    <div class="example"><strong>2. A recipe in ounces.</strong> 8 oz of flour × 28.349523125 = <strong>226.8 g</strong>, and 1.5 lb of sugar = 1.5 × 453.59237 = <strong>680.4 g</strong>. Type the ounces once to read grams for a metric kitchen scale.</div>
+    <div class="example"><strong>3. Gold priced by the don.</strong> A "one-don" ring is 3.75 g, so five don of gold = 5 × 3.75 = <strong>18.75 g</strong> ≈ 0.603 troy ounces. Meanwhile 2 근 of beef at the market = 2 × 600 = <strong>1,200 g</strong> = 1.2 kg.</div>
+
+    <h3>Reference: one unit in grams</h3>
+    <table>
+      <thead><tr><th>Unit</th><th>Exact grams</th><th>Where it is used</th></tr></thead>
+      <tbody>
+        <tr><td>Milligram (mg)</td><td>0.001</td><td>Medicine, nutrition labels</td></tr>
+        <tr><td>Gram (g)</td><td>1 (base)</td><td>Cooking, science, most of the world</td></tr>
+        <tr><td>Kilogram (kg)</td><td>1,000</td><td>Body weight, groceries (metric)</td></tr>
+        <tr><td>Tonne (t)</td><td>1,000,000</td><td>Freight, vehicles, bulk goods</td></tr>
+        <tr><td>Ounce (oz)</td><td>28.349523125</td><td>US/UK cooking, postage</td></tr>
+        <tr><td>Pound (lb)</td><td>453.59237</td><td>US/UK body weight, groceries</td></tr>
+        <tr><td>Stone (st)</td><td>6,350.29318</td><td>UK &amp; Ireland body weight</td></tr>
+        <tr><td>Geun (근)</td><td>600</td><td>Korean food markets</td></tr>
+        <tr><td>Don (돈)</td><td>3.75</td><td>Korean gold &amp; precious metals</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Rounding the pound to 2.2.</strong> Fine for a rough guess, wrong for anything precise — use the exact 0.45359237 kg factor this tool applies.</li>
+      <li><strong>Confusing the avoirdupois ounce with the troy ounce.</strong> Precious metals are traded in troy ounces (31.1035 g), not the 28.35 g avoirdupois ounce here. For gold, the don is the relevant traditional unit; convert to grams first, then to troy ounces if you need them.</li>
+      <li><strong>Assuming one "geun."</strong> The food geun is 600 g, but a herbal-medicine geun is traditionally 375 g. This tool uses the everyday food value; specialist contexts may differ.</li>
+      <li><strong>Mass vs weight.</strong> Kilograms and pounds here measure mass. Your "weight" as a force changes with gravity; on the Moon your mass in kg is unchanged even though you feel lighter.</li>
+    </ul>
+
+    <h3>Precision and scope</h3>
+    <p>Every result keeps up to 10 significant figures and trims trailing zeros, switching to scientific notation for very large or very small magnitudes so nothing is lost to rounding. The converter handles mass only — it does not price gold or convert to troy ounces, and it cannot turn a volume like a cup of flour into grams, which depends on density.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/area-conv/"><span class="related-ico" aria-hidden="true">📐</span><span class="related-name">Area Converter</span></a><a class="related-item" href="https://tool-hub.me/data-size-conv/"><span class="related-ico" aria-hidden="true">💾</span><span class="related-name">Data Size Converter</span></a><a class="related-item" href="https://tool-hub.me/height-conv/"><span class="related-ico" aria-hidden="true">🧍</span><span class="related-name">Height Converter</span></a><a class="related-item" href="https://tool-hub.me/length-conv/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Length Converter</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -300,7 +362,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

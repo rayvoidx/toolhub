@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -319,14 +319,77 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What this calculator estimates</h2>
+    <p>This tool estimates the day you are most likely to ovulate, and the fertile window around it, from the calendar of your menstrual cycle. Ovulation is the point when an ovary releases an egg; conception is only possible in a short window around it. Knowing roughly when that window falls can help with planning a pregnancy and with understanding your own cycle — as long as you keep the important caveats below in mind.</p>
+
+    <h2>How to use it</h2>
+    <ol>
+      <li><strong>First day of your last period.</strong> Enter the first day of actual bleeding, which counts as day 1 of the cycle — not the day bleeding stopped.</li>
+      <li><strong>Average cycle length.</strong> Count from the first day of one period to the first day of the next. Most cycles run 21 to 45 days; 28 is a textbook average, not a rule.</li>
+    </ol>
+
+    <h2>The rule behind the estimate</h2>
+    <p>The calculation rests on one reasonably stable fact: the luteal phase — the stretch between ovulation and the next period — lasts close to 14 days for most people, even when the cycle as a whole is long or short. So ovulation is estimated by counting back 14 days from the expected next period, which is the same as cycle length minus 14, measured from the start of the cycle.</p>
+    <p>The fertile window is then the ovulation day plus the five days before it. That length is not arbitrary: sperm can survive in the reproductive tract for up to about five days, while the egg itself lives only 12 to 24 hours, so the days leading up to ovulation matter as much as the day itself.</p>
+    <div class="example">
+      <p><strong>Example 1 — a 28-day cycle.</strong> If your last period started on March 1 with a 28-day cycle, ovulation is estimated on day 28 − 14 = day 14, which is March 14. The fertile window runs day 10 to day 14 (March 10–14), and the next period is expected around March 29.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a longer cycle.</strong> With a last period of June 1 and a 32-day cycle, ovulation moves to day 32 − 14 = day 18, June 18, with a fertile window of June 14–18. Assuming "day 14" here would have been four days too early.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a short cycle.</strong> On a 24-day cycle, ovulation is estimated on day 24 − 14 = day 10 — far from the day 14 many people assume. That is why the same calendar date can be fertile for one person and not for another.</p>
+    </div>
+
+    <h2>Cycle length changes the ovulation day</h2>
+    <table>
+      <thead><tr><th>Cycle length</th><th>Estimated ovulation day</th><th>Fertile window (cycle days)</th></tr></thead>
+      <tbody>
+        <tr><td>21 days</td><td>Day 7</td><td>Days 3–7</td></tr>
+        <tr><td>24 days</td><td>Day 10</td><td>Days 6–10</td></tr>
+        <tr><td>26 days</td><td>Day 12</td><td>Days 8–12</td></tr>
+        <tr><td>28 days</td><td>Day 14</td><td>Days 10–14</td></tr>
+        <tr><td>30 days</td><td>Day 16</td><td>Days 12–16</td></tr>
+        <tr><td>32 days</td><td>Day 18</td><td>Days 14–18</td></tr>
+        <tr><td>35 days</td><td>Day 21</td><td>Days 17–21</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Where the estimate breaks down</h2>
+    <ul>
+      <li><strong>Irregular cycles.</strong> If your cycle length varies month to month, the ovulation day shifts with it, and a single calendar prediction can be off by several days.</li>
+      <li><strong>The day-14 myth.</strong> Ovulation on day 14 is typical only for a 28-day cycle. Assuming it for every cycle is the most common mistake.</li>
+      <li><strong>Life happens.</strong> Stress, illness, travel, and some medications can delay or suppress ovulation in a given month, and the calendar cannot see any of that.</li>
+    </ul>
+
+    <h2>Important limits</h2>
+    <p>This is a calendar estimate, not a medical test and not a form of contraception. Calendar-based methods have high real-world failure rates because ovulation timing genuinely varies. To confirm ovulation, to track a possible pregnancy, or for any decision about contraception or fertility, use ovulation tests or speak with a doctor or midwife. Your dates are calculated on your device and never leave it.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/pace-calc/"><span class="related-ico" aria-hidden="true">👟</span><span class="related-name">Running Pace Calculator</span></a><a class="related-item" href="https://tool-hub.me/period-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">Period Calculator</span></a><a class="related-item" href="https://tool-hub.me/pregnancy-due-date-calc/"><span class="related-ico" aria-hidden="true">🤰</span><span class="related-name">Pregnancy Due Date Calculator</span></a><a class="related-item" href="https://tool-hub.me/tdee-calc/"><span class="related-ico" aria-hidden="true">🏃</span><span class="related-name">TDEE Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details><summary data-i18n="faq.q1">How is the ovulation day calculated?</summary><p data-i18n="faq.a1">This ovulation calculator uses the standard luteal-phase method: your next period date (last period + cycle length) minus 14 days. The luteal phase — from ovulation to the next period — is the most stable part of the menstrual cycle at about 14 days, while the first half varies. So with a 28-day cycle ovulation lands near day 14, and with a 32-day cycle it is closer to day 18.</p></details>
@@ -339,7 +402,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -231,14 +231,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Counting words, characters, and time — and why the method matters</h2>
+    <p>A word count sounds trivial until you paste in Chinese text, face a "160-word minimum" on an assignment, or need a meta description under a character cap. Different limits measure different things: essays and articles cap words, tweets and SMS cap characters, and a presentation is really capped by time. This counter reports words, characters (with and without spaces), sentences, paragraphs, and estimated reading and speaking time together, updating live as you type, so you can check against whichever limit applies.</p>
+
+    <h3>How each number is counted</h3>
+    <p>For space-separated languages — English, Spanish, Korean and most others — text is split on whitespace, and a token counts as a word only if it contains at least one letter or number (so numbers count, but a lone dash or emoji does not). Chinese and Japanese are written without spaces, so each Han character and kana is counted individually rather than lumped into one giant "word." A sentence ends at a period, question mark, or exclamation mark, or their full-width CJK equivalents 。！？, with the final sentence counted even without closing punctuation. Any non-empty line is a paragraph.</p>
+
+    <h3>How reading and speaking time are estimated</h3>
+    <p>Reading time = word count ÷ reading speed, where you choose Slow (150), Normal (200), or Fast (250) words per minute; 200 wpm is a typical adult silent-reading pace. Speaking time uses about 130 wpm, a comfortable out-loud delivery rate for presentations and voice-overs. Both display as minutes:seconds.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. A blog post.</strong> An 800-word article at the Normal 200 wpm reads in 800 ÷ 200 = 4 minutes (<strong>4:00</strong>). Read aloud at 130 wpm it runs 800 ÷ 130 ≈ 6.15 min, i.e. <strong>6:09</strong> — useful for a narrated video script.</div>
+    <div class="example"><strong>2. A conference talk.</strong> You have a 20-minute slot. At 130 wpm that is 20 × 130 = <strong>2,600 words</strong> of script — paste your draft and watch the speaking-time card to see whether you are over or under.</div>
+    <div class="example"><strong>3. A social caption.</strong> The caption "New feature drops today 🎉" counts as <strong>4 words</strong> (the emoji is not a word) and <strong>25 characters</strong> including spaces — comfortably inside a platform's character cap.</div>
+
+    <h3>Common limits to check against</h3>
+    <table>
+      <thead><tr><th>Field</th><th>Typical limit</th><th>Measured in</th></tr></thead>
+      <tbody>
+        <tr><td>SEO title tag</td><td>~60 characters</td><td>Characters</td></tr>
+        <tr><td>Meta description</td><td>~155 characters</td><td>Characters</td></tr>
+        <tr><td>Tweet / X post</td><td>280 characters</td><td>Characters</td></tr>
+        <tr><td>SMS segment</td><td>160 characters</td><td>Characters</td></tr>
+        <tr><td>College application essay</td><td>500–650 words</td><td>Words</td></tr>
+        <tr><td>Journal abstract</td><td>150–250 words</td><td>Words</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Word count or character count?</h3>
+    <ul>
+      <li><strong>Use words</strong> when the brief is in words — essays, articles, blog posts, SEO body copy.</li>
+      <li><strong>Use characters</strong> when the field has a hard character cap — titles, meta descriptions, tweets, SMS, form fields. This tool shows both, plus a "no spaces" character total for limits that exclude whitespace.</li>
+      <li><strong>Watch CJK.</strong> A "300-word" essay in Chinese is counted by characters here, which is the correct behaviour, but confirm whether your instructor means characters (글자 / 字) or Western-style words.</li>
+    </ul>
+
+    <h3>Practical notes and limits</h3>
+    <p>The counter measures the plain text exactly as pasted: it does not strip Markdown or HTML, so a <code>**bold**</code> marker counts its asterisks, and it counts characters, not bytes, so a single emoji built from several code points can occupy more bytes than the character total suggests. Everything runs in your browser; your most recent text can optionally be saved to local storage and is never uploaded.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/ad-copy-limit-check/"><span class="related-ico" aria-hidden="true">📣</span><span class="related-name">Ad Copy Length Checker</span></a><a class="related-item" href="https://tool-hub.me/case-converter/"><span class="related-ico" aria-hidden="true">🔠</span><span class="related-name">Case Converter</span></a><a class="related-item" href="https://tool-hub.me/char-count/"><span class="related-ico" aria-hidden="true">字</span><span class="related-name">Character Counter</span></a><a class="related-item" href="https://tool-hub.me/lorem-ipsum-gen/"><span class="related-ico" aria-hidden="true">📄</span><span class="related-name">Lorem Ipsum Generator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -267,7 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

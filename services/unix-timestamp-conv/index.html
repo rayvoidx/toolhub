@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -265,14 +265,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What a Unix timestamp is, and why logs use it</h2>
+    <p>A Unix timestamp (also called epoch or POSIX time) is a single number: the count of seconds since 1970-01-01 00:00:00 UTC, the moment known as the epoch. Because it is one plain integer, it is trivial to store, sort, and subtract — which is why databases, log files, JWT tokens, and API responses record time this way instead of as a written-out date. The catch is that the same instant can appear in different units and always without a time zone, so reading one correctly takes a couple of rules. This converter handles both directions: a number to a readable date, and a date back to a number.</p>
+
+    <h2>Seconds, milliseconds, or microseconds?</h2>
+    <p>The unit is usually clear from the digit count for any timestamp in the current era. Panel A counts the digits, tells you which unit it detected, and lets you override the guess:</p>
+    <table>
+      <thead><tr><th>Digits</th><th>Unit</th><th>Example</th><th>Common source</th></tr></thead>
+      <tbody>
+        <tr><td>10</td><td>Seconds</td><td>1700000000</td><td>Python <code>time()</code>, PHP <code>time()</code>, <code>date +%s</code></td></tr>
+        <tr><td>13</td><td>Milliseconds</td><td>1700000000000</td><td>JavaScript <code>Date.now()</code>, Java <code>currentTimeMillis()</code></td></tr>
+        <tr><td>16</td><td>Microseconds</td><td>1700000000000000</td><td>PostgreSQL, Python <code>time_ns()</code> &divide; 1000</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example">
+      <p><strong>Example 1 — a number to a date.</strong> The 10-digit value <strong>1700000000</strong> is detected as seconds and converts to <strong>2023-11-14 22:13:20 UTC</strong>. It also shows your own local time beside the UTC reading and a relative phrase such as "N years ago."</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — the 1000&times; trap.</strong> The 13-digit value <strong>1700000000000</strong> is the exact same instant, but in milliseconds. Feed it to code that expects seconds and you get a date roughly in the year 55,891 — the classic off-by-1000 bug. The digit count is what saves you here.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a date to a number.</strong> In Panel B, pick 2024-01-01 00:00:00 and read it as UTC. The result is <strong>1704067200</strong> seconds (and <strong>1704067200000</strong> milliseconds). Switch the basis to "Local time" and the number shifts by your UTC offset.</p>
+    </div>
+
+    <h2>A timestamp carries no time zone</h2>
+    <p>The number counts from the UTC epoch, so it means the same instant everywhere on Earth; a time zone only appears when you display it. That is why 1700000000 reads as 22:13 in London and 07:13 the next morning in Tokyo, yet it is one moment. If a converted date looks a few hours off, the number is almost certainly right and you are comparing a UTC reading against a local one.</p>
+
+    <h2>Common mistakes and limits</h2>
+    <ul>
+      <li><strong>Seconds vs. milliseconds:</strong> the single most common error. Check the digit count before trusting a date, and use the Unit selector if your data is unusual.</li>
+      <li><strong>Reading local as UTC:</strong> when converting a date back to a timestamp, set the "Read this time as" basis to match how the value was originally recorded.</li>
+      <li><strong>Leap seconds:</strong> POSIX time deliberately ignores them, so it is a smooth count and not a perfect astronomical clock.</li>
+      <li><strong>The year 2038:</strong> systems that store the value in a signed 32-bit integer overflow at 03:14:07 UTC on 19 January 2038. This tool is not affected — the browser holds the value as a 64-bit number and flags anything genuinely out of range instead of showing a wrong date.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/url-encoder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/uuid-gen/"><span class="related-ico" aria-hidden="true">🆔</span><span class="related-name">UUID Generator</span></a><a class="related-item" href="https://tool-hub.me/base64-conv/"><span class="related-ico" aria-hidden="true">🔡</span><span class="related-name">Base64 Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/color-picker/"><span class="related-ico" aria-hidden="true">🎨</span><span class="related-name">Color Picker &amp; Converter</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details><summary data-i18n="faq.q1">What is a Unix timestamp?</summary><p data-i18n="faq.a1">A Unix timestamp (also called epoch time or POSIX time) is simply the number of seconds that have passed since 1970-01-01 00:00:00 UTC, the moment known as the epoch. Because it is one plain number, it is easy to store, sort and subtract, which is why logs, databases and API responses use it instead of a written-out date. The number 1720512345, for example, is roughly 54 years' worth of seconds after the epoch. Times before 1970 are written as negative numbers, and this Unix timestamp converter handles those too.</p></details>
@@ -285,7 +337,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

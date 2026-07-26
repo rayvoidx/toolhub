@@ -129,9 +129,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -212,14 +212,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Working out a tip without the awkward math</h2>
+    <p>A tip calculator removes two frictions at once: figuring out a fair percentage on an odd bill, and dividing the total cleanly among a group. Both are error-prone at the end of a meal, when you are tired, the light is low, and someone is waiting to collect cash. Enter the bill, choose a percentage, set how many people are sharing, and the four numbers you actually need — tip, grand total, per person, and tip per person — appear at once.</p>
+
+    <h2>How the numbers are calculated</h2>
+    <p>The math is short but easy to fumble in your head:</p>
+    <ul>
+      <li><strong>Tip</strong> = bill &times; (percentage &divide; 100)</li>
+      <li><strong>Grand total</strong> = bill + tip</li>
+      <li><strong>Per person</strong> = grand total &divide; number of people</li>
+      <li><strong>Tip per person</strong> = tip &divide; number of people</li>
+    </ul>
+    <p>Turning on <em>Round up per person</em> rounds each person's share up to a clean cash unit for the country you selected — a whole dollar or euro, &yen;100 in Japan, &#8361;1,000 in Korea — so nobody is fishing for coins. The small surplus that rounding creates is shown separately, so you can see it was added on purpose.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a restaurant bill for four.</strong> Bill $84.50, tip 18%, 4 people. Tip = 84.50 &times; 0.18 = <strong>$15.21</strong>. Grand total = <strong>$99.71</strong>. Per person = 99.71 &divide; 4 = <strong>$24.93</strong>. Tip per person = <strong>$3.80</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — splitting with round-up.</strong> Bill $53.20, tip 20%, 3 people. Tip = $10.64, total = $63.84, and 63.84 &divide; 3 = $21.28 each. With round-up to the nearest dollar, each person pays <strong>$22</strong>, so $66 is collected and the extra $2.16 comfortably covers the tip and the rounding.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a no-tip country.</strong> A &yen;6,000 dinner in Tokyo with the tip set to 0% gives a grand total of exactly <strong>&yen;6,000</strong>. In Japan and several other places the listed price is the full price, and staff may politely decline anything extra.</p>
+    </div>
+
+    <h2>Typical tipping by country</h2>
+    <p>Customs vary widely, so pick the country at the top to load a sensible default. As a rough reference:</p>
+    <table>
+      <thead><tr><th>Country / region</th><th>Restaurant</th><th>Taxi</th><th>Caf&eacute; / bar</th></tr></thead>
+      <tbody>
+        <tr><td>United States, Canada</td><td>15&ndash;20%</td><td>10&ndash;15%</td><td>Round up or ~15%</td></tr>
+        <tr><td>United Kingdom</td><td>10&ndash;15% if no service charge</td><td>Round up</td><td>Optional</td></tr>
+        <tr><td>Germany, France</td><td>Round up to 5&ndash;10%</td><td>Round up</td><td>Small change</td></tr>
+        <tr><td>Japan, South Korea</td><td>None expected</td><td>None</td><td>None</td></tr>
+        <tr><td>Brazil</td><td>~10%, often already on the bill</td><td>Round up</td><td>~10%</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and etiquette notes</h2>
+    <ul>
+      <li><strong>Tax vs. subtotal:</strong> etiquette figures the tip on the pre-tax subtotal, but many people tip on the total for simplicity. Enter the subtotal to be precise or the grand total for the easy route — the calculator applies your percentage to whatever you type.</li>
+      <li><strong>Service charge already included:</strong> large parties often have an 18&ndash;20% auto-gratuity added. If the bill says "service charge" or "gratuity included," the tip is already there; enter only the food-and-drink amount and skip the percentage unless you want to add more.</li>
+      <li><strong>Tipping where it is not customary:</strong> adding a tip in a no-tip culture can cause confusion rather than delight — the country default helps you avoid this.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/unit-price/"><span class="related-ico" aria-hidden="true">₩</span><span class="related-name">Unit Price Calculator</span></a><a class="related-item" href="https://tool-hub.me/barista-fire-calc/"><span class="related-ico" aria-hidden="true">☕</span><span class="related-name">Barista FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/cagr-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">CAGR Calculator</span></a><a class="related-item" href="https://tool-hub.me/coast-fire-calc/"><span class="related-ico" aria-hidden="true">🏖️</span><span class="related-name">Coast FIRE Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -247,7 +307,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

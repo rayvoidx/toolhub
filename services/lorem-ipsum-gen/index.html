@@ -238,11 +238,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English in-depth guide (unique, no data-i18n). -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Placeholder text with a 2,000-year-old source</h2>
+    <p>Lorem Ipsum is scrambled Latin used to fill a layout before the real words exist. Designers reach for it because human eyes are drawn to meaning: drop real sentences into a draft and everyone starts editing the copy instead of judging the typography. Nonsense text that still <em>looks</em> like natural language lets a reviewer assess spacing, line length, and rhythm without being distracted by what it says. Typesetters have called this "greeking" for centuries.</p>
+    <p>The passage is not truly random. It descends from a real work — Cicero's <em>De finibus bonorum et malorum</em>, written in 45 BC — with words clipped and shuffled so it reads as Latin-like but means nothing. The familiar opening, "Lorem ipsum dolor sit amet," is a fragment of a longer sentence about the pursuit of pleasure, cut mid-word at "dolorem."</p>
+
+    <h2>Choosing what to generate</h2>
+    <p>The generator produces text three ways, and the right one depends on the slot you are filling.</p>
+    <table>
+      <tr><th>Mode</th><th>Produces</th><th>Best for</th></tr>
+      <tr><td>Paragraphs</td><td>Full multi-sentence blocks</td><td>Article bodies, blog mockups</td></tr>
+      <tr><td>Sentences</td><td>A set number of sentences</td><td>Card descriptions, captions</td></tr>
+      <tr><td>Words</td><td>An exact word count</td><td>Headlines, labels, buttons</td></tr>
+    </table>
+
+    <h3>Worked example 1 — sizing a paragraph block</h3>
+    <div class="example">
+      <p>Ask for 3 paragraphs and you get roughly 3 blocks of 4&ndash;6 sentences each. A typical Lorem Ipsum sentence runs about 10&ndash;14 words, so 3 paragraphs land near 150&ndash;250 words — enough to fill an article preview and see how two or three stacked paragraphs breathe on the page.</p>
+    </div>
+
+    <h3>Worked example 2 — a headline of exact length</h3>
+    <div class="example">
+      <p>Testing whether a title wraps? Switch to Words mode and request 6 words: something like "Lorem ipsum dolor sit amet consectetur." Now you can check that a six-word headline fits your column at the chosen font size without pulling in a whole paragraph.</p>
+    </div>
+
+    <h3>Worked example 3 — ready-to-paste HTML</h3>
+    <div class="example">
+      <p>Enable "Wrap paragraphs in HTML &lt;p&gt; tags" and each block comes out as &lt;p&gt;Lorem ipsum&hellip;&lt;/p&gt;, so you can paste the output straight into a template and see real paragraph spacing from your stylesheet instead of one undivided lump of text.</p>
+    </div>
+
+    <h2>Practical tips</h2>
+    <ul>
+      <li>Keep the classic "Lorem ipsum dolor sit amet" opening when you want text everyone instantly recognises as placeholder; turn it off for a more varied sample.</li>
+      <li>Latin words average slightly shorter than English ones, so a block of Lorem Ipsum can look a touch denser than the English copy that will replace it — leave a little headroom.</li>
+      <li>The output stats (paragraphs, sentences, words, characters) let you match placeholder length to a real content budget, such as a 160-character meta description.</li>
+    </ul>
+
+    <h2>When not to use it</h2>
+    <p>Placeholder text is for layout, never for shipping. Leaving Lorem Ipsum in a published page hurts search relevance and occasionally escapes into production in embarrassing ways. It also cannot reveal problems that only real content exposes — a genuine headline may be far longer, and real data may include numbers, links, or names that stress the design differently. Use it to design the container, then replace every word before launch.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/morse-code-translator/"><span class="related-ico" aria-hidden="true">📡</span><span class="related-name">Morse Code Translator</span></a><a class="related-item" href="https://tool-hub.me/text-diff/"><span class="related-ico" aria-hidden="true">🔍</span><span class="related-name">Text Diff Checker</span></a><a class="related-item" href="https://tool-hub.me/word-counter/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Word Counter</span></a><a class="related-item" href="https://tool-hub.me/ad-copy-limit-check/"><span class="related-ico" aria-hidden="true">📣</span><span class="related-name">Ad Copy Length Checker</span></a></div></section>
 
   <section class="faq" id="faq">
     <h2 data-i18n="faq.heading">Frequently asked questions</h2>

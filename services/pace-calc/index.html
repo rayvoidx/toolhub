@@ -149,9 +149,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
-    <select id="lang-select" class="lang-select" aria-label="언어" data-i18n-aria-label="nav.language" title="언어" data-i18n-title="nav.language"></select>
-    <button id="theme-toggle" type="button" aria-label="테마 전환" data-i18n-aria-label="nav.theme" title="테마 전환" data-i18n-title="nav.theme">◐</button>
-    <button id="share-btn" type="button" aria-label="공유하기" data-i18n-aria-label="nav.share" title="공유하기" data-i18n-title="nav.share">↗</button>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
   </nav>
 </header>
 
@@ -280,14 +280,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Distance, time, and pace</h2>
+    <p>Running performance is fully described by three linked numbers: how far you went, how long it took, and your pace. Fix any two and the third is determined. Pace is the time to cover one unit of distance — minutes per kilometre or minutes per mile — while speed is the same relationship flipped around: distance covered per unit of time. This calculator lets you enter the two values you know and solves for the third, then shows the result as both pace and speed.</p>
+
+    <h2>How to use it</h2>
+    <ol>
+      <li><strong>Choose what to solve for</strong> — time, pace, or distance.</li>
+      <li><strong>Pick your unit</strong>, kilometres or miles, so the inputs and split table match the way you train.</li>
+      <li><strong>Enter the two values you know.</strong> Times accept hours:minutes:seconds, minutes:seconds, or plain minutes; paces accept minutes:seconds. The race presets fill in standard distances for you.</li>
+    </ol>
+
+    <h2>The formulas</h2>
+    <p>Pace is time divided by distance; speed is distance divided by time. To convert between units, one mile is 1.609344 kilometres, so a min/km pace multiplied by 1.609344 gives min/mi, and a speed in km/h divided by 1.609344 gives mph.</p>
+    <div class="example">
+      <p><strong>Example 1 — solving for pace and speed.</strong> Run 10 km in 50:00. Pace is 50 ÷ 10 = 5:00 per km. Speed is 10 km ÷ (50/60 h) = 12.0 km/h. Converting, the pace is 5:00 × 1.609344 ≈ 8:03 per mile, and the speed is 12.0 ÷ 1.609344 ≈ 7.46 mph.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — solving for time.</strong> To run a marathon (42.195 km) at 5:30 per km, multiply: 42.195 × 5.5 minutes = 232.07 minutes, which is 3 hours 52 minutes 4 seconds. That one line is the core of every goal-pace plan.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — solving for distance.</strong> If you ran for 45:00 at a 6:00 per km pace, distance is 45 ÷ 6 = 7.5 km. Halving the pace number is not the same as doubling the distance, so it pays to let the tool do the arithmetic.</p>
+    </div>
+
+    <h2>Pace, speed, and finish-time reference</h2>
+    <table>
+      <thead><tr><th>Pace (min/km)</th><th>Pace (min/mi)</th><th>Speed (km/h)</th><th>10K time</th><th>Marathon time</th></tr></thead>
+      <tbody>
+        <tr><td>4:00</td><td>6:26</td><td>15.0</td><td>40:00</td><td>2:48:47</td></tr>
+        <tr><td>4:30</td><td>7:15</td><td>13.3</td><td>45:00</td><td>3:09:53</td></tr>
+        <tr><td>5:00</td><td>8:03</td><td>12.0</td><td>50:00</td><td>3:30:59</td></tr>
+        <tr><td>5:30</td><td>8:51</td><td>10.9</td><td>55:00</td><td>3:52:04</td></tr>
+        <tr><td>6:00</td><td>9:39</td><td>10.0</td><td>1:00:00</td><td>4:13:10</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Reading your splits</h2>
+    <p>The split table breaks your target into per-kilometre or per-mile segments so you can check your watch against a plan mid-race. Running each split at nearly the same time is an "even" pace; deliberately running the second half slightly faster than the first is a "negative split," which many runners find produces their best finishing times because it holds energy back for when it is hardest to keep going.</p>
+
+    <h2>Common mistakes and limits</h2>
+    <ul>
+      <li><strong>Going out too fast.</strong> The most common way to miss a goal time is to bank time early and fade; the split table is there precisely to resist that urge.</li>
+      <li><strong>Trusting GPS to the second.</strong> Watches drift on tree-lined or twisty courses, often reading long, which makes your live pace look faster than it really is.</li>
+      <li><strong>Treadmill versus road.</strong> A treadmill's set belt speed and the lack of wind resistance make the same pace feel different from running outdoors.</li>
+    </ul>
+    <p>These are planning and training estimates, not a performance guarantee. Real race times depend on terrain, weather, altitude, and how you feel on the day, and nothing here is professional coaching advice.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/period-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">Period Calculator</span></a><a class="related-item" href="https://tool-hub.me/pregnancy-due-date-calc/"><span class="related-ico" aria-hidden="true">🤰</span><span class="related-name">Pregnancy Due Date Calculator</span></a><a class="related-item" href="https://tool-hub.me/tdee-calc/"><span class="related-ico" aria-hidden="true">🏃</span><span class="related-name">TDEE Calculator</span></a><a class="related-item" href="https://tool-hub.me/water-intake-calc/"><span class="related-ico" aria-hidden="true">💧</span><span class="related-name">Water Intake Calculator</span></a></div></section>
 
   <section class="faq" id="faq">
-    <h2 data-i18n="faq.heading">자주 묻는 질문</h2>
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
     <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
          각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
     <details>
@@ -315,7 +377,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </main>
 
 <footer class="site-footer">
-  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">개인정보처리방침</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">다른 도구 보기</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
 </footer>
 
 <script src="js/config.js"></script>

@@ -272,11 +272,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What a metronome does and when to use one</h2>
+    <p>A metronome plays a steady, evenly spaced click so you can practice, record, or perform at a fixed tempo. Tempo is measured in beats per minute (BPM): at 60 BPM you hear exactly one click every second, and at 120 BPM you hear two clicks every second. Playing against a reliable pulse is the fastest way to break the small, unconscious habit of rushing the easy bars and dragging through the hard ones. The click never gets tired, nervous, or excited, so it quietly exposes the exact spots where your timing slips.</p>
+    <p>Beyond solo practice, a click track keeps a group locked together, lets a home recording line up cleanly across several takes, and gives a dancer or a video editor a countable grid to work against.</p>
+
+    <h2>How to set it</h2>
+    <ol>
+      <li><strong>Set the tempo.</strong> Type a BPM value, use the minus and plus buttons for single-step changes, or drag the slider for a quick sweep.</li>
+      <li><strong>Or tap it in.</strong> If you know how a piece should feel but not its number, tap the Tap Tempo button in time with the beat; after a few taps it averages your spacing into a BPM.</li>
+      <li><strong>Choose a time signature.</strong> This sets how many clicks make one measure and which beat is accented, so you can hear where each bar begins.</li>
+      <li><strong>Press Start</strong> and play along, watching the highlighted beat to stay oriented.</li>
+    </ol>
+
+    <h2>The math behind the click</h2>
+    <p>Every tempo maps directly to a length of time. One beat lasts 60,000 divided by the BPM, in milliseconds, because there are 60,000 milliseconds in a minute. Multiply that by the number of beats in a bar to get the length of one full measure.</p>
+    <div class="example">
+      <p><strong>Example 1 — reading a tempo as real time.</strong> At 120 BPM in 4/4, each beat lasts 60,000 ÷ 120 = 500 ms. A full four-beat measure is 4 × 500 = 2,000 ms, exactly 2 seconds, so a 30-bar section at this tempo runs for 60 seconds.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — building up a fast passage.</strong> A run is marked 132 BPM but you can only play it cleanly at 96 BPM. Raise the tempo by 4 BPM after each accurate repetition: 96 → 100 → 104 → … → 132. That is (132 − 96) ÷ 4 = 9 steps, ten tempi in all, and your fingers learn the shape without ever rehearsing the mistakes.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — reading a tap.</strong> If you tap along to a song and the average gap between taps is 0.75 seconds, the tempo is 60 ÷ 0.75 = 80 BPM. Halve the gap to 0.375 s and you are tapping double-time at 160 BPM.</p>
+    </div>
+
+    <h2>Tempo-to-time reference</h2>
+    <table>
+      <thead><tr><th>Tempo (BPM)</th><th>Milliseconds per beat</th><th>One 4/4 measure</th></tr></thead>
+      <tbody>
+        <tr><td>60</td><td>1,000 ms</td><td>4.00 s</td></tr>
+        <tr><td>80</td><td>750 ms</td><td>3.00 s</td></tr>
+        <tr><td>90</td><td>667 ms</td><td>2.67 s</td></tr>
+        <tr><td>100</td><td>600 ms</td><td>2.40 s</td></tr>
+        <tr><td>120</td><td>500 ms</td><td>2.00 s</td></tr>
+        <tr><td>140</td><td>429 ms</td><td>1.71 s</td></tr>
+        <tr><td>160</td><td>375 ms</td><td>1.50 s</td></tr>
+        <tr><td>180</td><td>333 ms</td><td>1.33 s</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and practice tips</h2>
+    <ul>
+      <li><strong>Practicing too fast, too soon.</strong> If you can only hit a passage one time in five, slow down until it is clean every time, then climb by small steps.</li>
+      <li><strong>Not subdividing.</strong> At slow tempi, feel the beat divided into eighths or sixteenths (or read a compound signature like 6/8) so the gaps between clicks do not swallow your timing.</li>
+      <li><strong>Chasing the click.</strong> Aim to land exactly on the click, not just after it. If you always feel a hair late, you are reacting to the sound instead of anticipating the pulse.</li>
+      <li><strong>Only ever using 4/4.</strong> Practicing in 3/4 or 6/8 trains you to feel the downbeat in music that is not in common time.</li>
+    </ul>
+
+    <h2>Limits</h2>
+    <p>A metronome measures and enforces steady time; it does not judge whether steady time is musically right. Expressive playing often bends tempo on purpose — a held phrase, a pushed lead-in — and those choices live outside the grid. Use the click to build a dependable internal clock, then decide consciously when to leave it.</p>
+  </section>
+  <!-- CONTENT:END -->
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>
 
-  <section id="related-tools" hidden></section>
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/online-notepad/"><span class="related-ico" aria-hidden="true">🗒️</span><span class="related-name">Online Notepad</span></a><a class="related-item" href="https://tool-hub.me/sleep-cycle-calc/"><span class="related-ico" aria-hidden="true">😴</span><span class="related-name">Sleep Cycle Calculator</span></a><a class="related-item" href="https://tool-hub.me/typing-test/"><span class="related-ico" aria-hidden="true">⌨️</span><span class="related-name">Typing Speed Test</span></a><a class="related-item" href="https://tool-hub.me/click-speed-test/"><span class="related-ico" aria-hidden="true">🖱️</span><span class="related-name">Click Speed Test (CPS)</span></a></div></section>
 
   <section class="faq" id="faq">
     <h2 data-i18n="faq.heading">Frequently asked questions</h2>
