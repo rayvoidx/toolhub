@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hourly to Salary Calculator — Yearly, Monthly, Weekly Pay</title>
+<meta name="description" content="Convert an hourly wage into yearly, monthly, biweekly and weekly pay — or go the other way from salary to hourly. Set your own hours, weeks worked and unpaid time off.">
+<meta name="keywords" content="hourly to salary calculator, salary to hourly, annual income calculator, wage converter, yearly pay calculator, pay per hour">
+<link rel="canonical" href="https://tool-hub.me/hourly-to-salary/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hourly to Salary Calculator — Yearly, Monthly, Weekly Pay">
+<meta property="og:description" content="Convert an hourly wage into yearly, monthly, biweekly and weekly pay — or go the other way from salary to hourly. Set your own hours, weeks worked and unpaid time off.">
+<meta property="og:url" content="https://tool-hub.me/hourly-to-salary/">
+<meta property="og:image" content="https://tool-hub.me/hourly-to-salary/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Hourly to Salary Calculator",
+  "description": "Convert an hourly wage into yearly, monthly, biweekly and weekly pay — or go the other way from salary to hourly. Set your own hours, weeks worked and unpaid time off.",
+  "url": "https://tool-hub.me/hourly-to-salary/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Hourly to Salary Calculator",
+      "item": "https://tool-hub.me/hourly-to-salary/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert an hourly wage to a yearly salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the hourly rate by hours worked per week, then by paid weeks per year. At 25 per hour, 40 hours a week and 52 paid weeks, that is 25 x 40 x 52 = 52,000 a year. The common shortcut of doubling the hourly rate and adding three zeros is close but assumes exactly 2,000 hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use 52 weeks or fewer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use 52 if your holiday is paid, because you are paid for all 52 weeks. If you take unpaid time off, subtract those weeks — two unpaid weeks means 50. Contractors and hourly staff without paid leave usually land between 48 and 50."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the monthly figure not four times the weekly one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A year has 52 weeks but only 12 months, so a month averages 4.33 weeks. The tool divides the annual figure by 12 instead of multiplying the weekly figure by 4, which is why the monthly number looks slightly higher than you might expect."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Hourly to Salary Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Hourly to Salary Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Hourly rate in, full pay picture out — or start from a salary and get the hourly rate.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 12px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p id="mode-label" style="font-weight:600;font-size:14px;margin:0 0 2px;" data-i18n="tool.mode.label">What do you know?</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="mode-label">
+      <label><input type="radio" name="mode" value="hourly" checked><span data-i18n="tool.mode.hourly">Hourly rate</span></label>
+      <label><input type="radio" name="mode" value="salary"><span data-i18n="tool.mode.salary">Annual salary</span></label>
+    </div>
+
+    <div id="rate-field">
+      <label for="rate" data-i18n="tool.rate.label">Hourly rate</label>
+      <input type="text" id="rate" inputmode="decimal" autocomplete="off" placeholder="25">
+    </div>
+    <div id="salary-field" hidden>
+      <label for="salary" data-i18n="tool.salary.label">Annual salary</label>
+      <input type="text" id="salary" inputmode="decimal" autocomplete="off" placeholder="52,000">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="hours" data-i18n="tool.hours.label">Hours per week</label>
+        <input type="number" id="hours" inputmode="decimal" min="0" max="168" step="any" autocomplete="off" value="40">
+      </div>
+      <div>
+        <label for="weeks" data-i18n="tool.weeks.label">Paid weeks per year</label>
+        <input type="number" id="weeks" inputmode="decimal" min="0" max="53" step="any" autocomplete="off" value="52">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.weeks.hint">52 with paid holiday, or subtract any unpaid weeks off.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="hero-label" data-i18n="tool.r.year">Per year</div>
+          <div class="rc-val" id="r-hero">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.month">Per month</div><div class="rc-val" id="r-month">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.biweek">Every 2 weeks</div><div class="rc-val" id="r-biweek">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.week">Per week</div><div class="rc-val" id="r-week">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.day">Per 8-hour day</div><div class="rc-val" id="r-day">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.hour">Per hour</div><div class="rc-val" id="r-hour">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.gross" style="margin-top:12px;">These are gross figures before tax, insurance and pension deductions.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The arithmetic behind hourly and salaried pay</h2>
+    <p>Converting between an hourly rate and an annual salary is one multiplication, but the assumptions hidden inside it are where people trip up. Annual pay equals the hourly rate multiplied by hours worked each week multiplied by the number of weeks you are actually paid. Change any of those three and the answer moves, which is why two people on the same nominal rate can end the year thousands apart.</p>
+    <p>The familiar rule of thumb — double the hourly rate and add three zeros — assumes a 40-hour week and 50 working weeks, so 2,000 hours a year. It is a fine mental estimate in an interview. It is not accurate for a 37.5-hour contract, a 44-hour shift pattern, or anyone taking unpaid leave.</p>
+
+    <h3>Worked example 1: standard full-time</h3>
+    <p>25.00 per hour, 40 hours a week, paid holiday so all 52 weeks count. Annual = 25 x 40 x 52 = 52,000. Weekly = 1,000. Monthly = 52,000 / 12 = 4,333.33, not 4,000 — a month averages 4.33 weeks, not 4. Every two weeks = 2,000, which matches a biweekly pay cycle of 26 payments a year.</p>
+
+    <h3>Worked example 2: unpaid time off</h3>
+    <p>Same 25.00 per hour and 40 hours, but no paid holiday and three weeks off. Paid weeks = 49. Annual = 25 x 40 x 49 = 49,000, a 3,000 drop from the previous example for identical work. This is the most common reason a real payslip disappoints against a rate quoted in an offer, and it is why the weeks field is editable rather than fixed at 52.</p>
+
+    <h3>Worked example 3: salary back to an hourly rate</h3>
+    <p>A 60,000 salary at 45 hours a week for 52 weeks works out at 60,000 / (45 x 52) = 25.64 per hour. The same salary at a 37.5-hour week is 60,000 / 1,950 = 30.77 per hour. Comparing two offers only means something once both are expressed per hour, including the hours the job actually expects rather than the hours in the contract.</p>
+
+    <h2>Quick reference at 40 hours a week, 52 paid weeks</h2>
+    <table>
+      <thead><tr><th>Hourly</th><th>Weekly</th><th>Monthly</th><th>Annual</th></tr></thead>
+      <tbody>
+        <tr><td>15</td><td>600</td><td>2,600</td><td>31,200</td></tr>
+        <tr><td>20</td><td>800</td><td>3,467</td><td>41,600</td></tr>
+        <tr><td>25</td><td>1,000</td><td>4,333</td><td>52,000</td></tr>
+        <tr><td>30</td><td>1,200</td><td>5,200</td><td>62,400</td></tr>
+        <tr><td>40</td><td>1,600</td><td>6,933</td><td>83,200</td></tr>
+        <tr><td>50</td><td>2,000</td><td>8,667</td><td>104,000</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What these numbers do not include</h2>
+    <p>Everything here is gross pay. Income tax, national insurance or social security, pension contributions and health premiums all come out afterwards, and the size of that bite depends on where you live and how you file. Treat the annual figure as the number to compare offers with, not the number that lands in your account.</p>
+    <p>Overtime is also excluded. If your role regularly pays time-and-a-half beyond 40 hours, the effective annual figure is higher than a straight multiplication suggests; if unpaid overtime is the norm, the effective hourly rate is lower. The honest way to compare a salaried role against an hourly one is to divide the salary by the hours you genuinely expect to work, including the ones nobody logs.</p>
+    <p>Finally, watch the pay cycle. Biweekly means 26 payments a year, semi-monthly means 24, and they are not the same: 52,000 a year is 2,000 per biweekly payment but 2,166.67 twice a month. Budgeting on the wrong cycle is how two extra paycheques a year come as a surprise.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/interest-calc/"><span class="related-ico" aria-hidden="true">💵</span><span class="related-name">Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/investment-goal-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Investment Goal Calculator</span></a><a class="related-item" href="https://tool-hub.me/landed-cost-batch/"><span class="related-ico" aria-hidden="true">🚢</span><span class="related-name">Landed Cost Batch Calculator</span></a><a class="related-item" href="https://tool-hub.me/loan-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">Loan Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How do I convert an hourly wage to a yearly salary?</summary><p data-i18n="faq.a1">Multiply the hourly rate by hours worked per week, then by paid weeks per year. At 25 per hour, 40 hours a week and 52 paid weeks, that is 25 x 40 x 52 = 52,000 a year. The common shortcut of doubling the hourly rate and adding three zeros is close but assumes exactly 2,000 hours.</p></details>
+    <details><summary data-i18n="faq.q2">Should I use 52 weeks or fewer?</summary><p data-i18n="faq.a2">Use 52 if your holiday is paid, because you are paid for all 52 weeks. If you take unpaid time off, subtract those weeks — two unpaid weeks means 50. Contractors and hourly staff without paid leave usually land between 48 and 50.</p></details>
+    <details><summary data-i18n="faq.q3">Why is the monthly figure not four times the weekly one?</summary><p data-i18n="faq.a3">A year has 52 weeks but only 12 months, so a month averages 4.33 weeks. The tool divides the annual figure by 12 instead of multiplying the weekly figure by 4, which is why the monthly number looks slightly higher than you might expect.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

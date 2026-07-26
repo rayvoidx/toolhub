@@ -257,6 +257,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "Stock Ledger Builder & Count Reconciliation",
     "tool.stock-profit-calc.name": "Stock Profit Calculator",
     "tool.timesheet-batch-agg.name": "Timesheet Batch Aggregator",
+      "tool.aspect-ratio-calc.name": "Aspect Ratio Calculator",
+    "tool.cooking-conv.name": "Cups to Grams Converter",
+    "tool.hourly-to-salary.name": "Hourly to Salary Calculator",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -503,6 +506,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "库存收发存台账与盘点差异对账",
     "tool.stock-profit-calc.name": "股票收益计算器",
     "tool.timesheet-batch-agg.name": "批量考勤汇总器",
+      "tool.aspect-ratio-calc.name": "宽高比计算器",
+    "tool.cooking-conv.name": "杯换算克",
+    "tool.hourly-to-salary.name": "时薪年薪换算器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -749,6 +755,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "स्टॉक लेजर बिल्डर और गिनती मिलान",
     "tool.stock-profit-calc.name": "स्टॉक प्रॉफ़िट कैलकुलेटर",
     "tool.timesheet-batch-agg.name": "टाइमशीट बैच एग्रीगेटर",
+      "tool.aspect-ratio-calc.name": "आस्पेक्ट रेशियो कैलकुलेटर",
+    "tool.cooking-conv.name": "कप से ग्राम कन्वर्टर",
+    "tool.hourly-to-salary.name": "प्रति घंटा से वार्षिक वेतन कैलकुलेटर",
   },
 
   /* ---------------- Español ---------------- */
@@ -995,6 +1004,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "Kardex y conciliación de recuento",
     "tool.stock-profit-calc.name": "Calculadora de beneficio de acciones",
     "tool.timesheet-batch-agg.name": "Agregador de fichajes por lotes",
+      "tool.aspect-ratio-calc.name": "Calculadora de relación de aspecto",
+    "tool.cooking-conv.name": "Convertidor de tazas a gramos",
+    "tool.hourly-to-salary.name": "Calculadora de sueldo por hora a anual",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1241,6 +1253,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "منشئ سجل المخزون وتسوية الجرد",
     "tool.stock-profit-calc.name": "حاسبة أرباح الأسهم",
     "tool.timesheet-batch-agg.name": "مُجمِّع سجلات الدوام بالدُّفعات",
+      "tool.aspect-ratio-calc.name": "حاسبة نسبة العرض إلى الارتفاع",
+    "tool.cooking-conv.name": "محوّل الأكواب إلى الغرامات",
+    "tool.hourly-to-salary.name": "حاسبة الأجر بالساعة إلى الراتب",
   },
 
   /* ---------------- Français ---------------- */
@@ -1487,6 +1502,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "Registre des stocks et rapprochement d'inven",
     "tool.stock-profit-calc.name": "Calculateur de profit d'actions",
     "tool.timesheet-batch-agg.name": "Agrégateur de feuilles de temps",
+      "tool.aspect-ratio-calc.name": "Calculateur de format d'image",
+    "tool.cooking-conv.name": "Convertisseur tasses en grammes",
+    "tool.hourly-to-salary.name": "Convertisseur taux horaire / salaire annuel",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1733,6 +1751,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "স্টক লেজার নির্মাতা ও গণনা মিলকরণ",
     "tool.stock-profit-calc.name": "স্টক প্রফিট ক্যালকুলেটর",
     "tool.timesheet-batch-agg.name": "টাইমশিট ব্যাচ অ্যাগ্রিগেটর",
+      "tool.aspect-ratio-calc.name": "অ্যাসপেক্ট রেশিও ক্যালকুলেটর",
+    "tool.cooking-conv.name": "কাপ থেকে গ্রাম কনভার্টার",
+    "tool.hourly-to-salary.name": "ঘণ্টা থেকে বার্ষিক বেতন ক্যালকুলেটর",
   },
 
   /* ---------------- Português ---------------- */
@@ -1979,6 +2000,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "Ficha de estoque (Kardex) e conciliação de c",
     "tool.stock-profit-calc.name": "Calculadora de lucro de ações",
     "tool.timesheet-batch-agg.name": "Agregador de folhas de ponto",
+      "tool.aspect-ratio-calc.name": "Calculadora de proporção de tela",
+    "tool.cooking-conv.name": "Conversor de xícaras para gramas",
+    "tool.hourly-to-salary.name": "Calculadora de valor-hora para salário",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2225,6 +2249,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "Складская книга и сверка инвентаризации",
     "tool.stock-profit-calc.name": "Калькулятор прибыли по акциям",
     "tool.timesheet-batch-agg.name": "Пакетный агрегатор табелей",
+      "tool.aspect-ratio-calc.name": "Калькулятор соотношения сторон",
+    "tool.cooking-conv.name": "Перевод чашек в граммы",
+    "tool.hourly-to-salary.name": "Калькулятор почасовой ставки в оклад",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2471,6 +2498,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "اسٹاک لیجر بلڈر اور گنتی مصالحت",
     "tool.stock-profit-calc.name": "اسٹاک پرافٹ کیلکولیٹر",
     "tool.timesheet-batch-agg.name": "ٹائم شیٹ بیچ ایگریگیٹر",
+      "tool.aspect-ratio-calc.name": "ایسپیکٹ ریشو کیلکولیٹر",
+    "tool.cooking-conv.name": "کپ سے گرام کنورٹر",
+    "tool.hourly-to-salary.name": "فی گھنٹہ سے سالانہ تنخواہ کیلکولیٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2717,6 +2747,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "Pembuat Buku Besar Stok & Rekonsiliasi Stok",
     "tool.stock-profit-calc.name": "Kalkulator Laba Saham",
     "tool.timesheet-batch-agg.name": "Agregator absensi massal",
+      "tool.aspect-ratio-calc.name": "Kalkulator Rasio Aspek",
+    "tool.cooking-conv.name": "Konverter Cangkir ke Gram",
+    "tool.hourly-to-salary.name": "Kalkulator Upah per Jam ke Gaji",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -2963,6 +2996,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "Lagerbuch-Ersteller & Inventurabgleich",
     "tool.stock-profit-calc.name": "Aktien-Gewinnrechner",
     "tool.timesheet-batch-agg.name": "Stapel-Zeiterfassungs-Aggregator",
+      "tool.aspect-ratio-calc.name": "Seitenverhältnis-Rechner",
+    "tool.cooking-conv.name": "Cups-in-Gramm-Rechner",
+    "tool.hourly-to-salary.name": "Stundenlohn-in-Gehalt-Rechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3209,6 +3245,9 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "在庫受払簿ビルダー＆棚卸差異照合",
     "tool.stock-profit-calc.name": "株式利益計算機",
     "tool.timesheet-batch-agg.name": "タイムシート一括集計",
+      "tool.aspect-ratio-calc.name": "アスペクト比計算ツール",
+    "tool.cooking-conv.name": "カップ→グラム変換",
+    "tool.hourly-to-salary.name": "時給・年収 換算ツール",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3455,5 +3494,8 @@ window.I18N_LOCALES = {
     "tool.stock-ledger-recon.name": "재고수불부 작성 & 재고실사 대사",
     "tool.stock-profit-calc.name": "주식 수익 계산기",
     "tool.timesheet-batch-agg.name": "근태 일괄 집계",
+      "tool.aspect-ratio-calc.name": "화면 비율 계산기",
+    "tool.cooking-conv.name": "컵→그램 변환기",
+    "tool.hourly-to-salary.name": "시급 연봉 환산기",
   }
 };
