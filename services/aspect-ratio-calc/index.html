@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aspect Ratio Calculator — Resize Without Distortion</title>
+<meta name="description" content="Enter your original width and height, then one new dimension — get the other instantly, plus the simplified ratio (16:9, 4:3, 21:9). Free, works in your browser.">
+<meta name="keywords" content="aspect ratio calculator, ratio calculator, image resize calculator, 16:9 calculator, screen ratio, pixel dimensions">
+<link rel="canonical" href="https://tool-hub.me/aspect-ratio-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aspect Ratio Calculator — Resize Without Distortion">
+<meta property="og:description" content="Enter your original width and height, then one new dimension — get the other instantly, plus the simplified ratio (16:9, 4:3, 21:9). Free, works in your browser.">
+<meta property="og:url" content="https://tool-hub.me/aspect-ratio-calc/">
+<meta property="og:image" content="https://tool-hub.me/aspect-ratio-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Aspect Ratio Calculator",
+  "description": "Enter your original width and height, then one new dimension — get the other instantly, plus the simplified ratio (16:9, 4:3, 21:9). Free, works in your browser.",
+  "url": "https://tool-hub.me/aspect-ratio-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Aspect Ratio Calculator",
+      "item": "https://tool-hub.me/aspect-ratio-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I keep an image from stretching when I resize it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scale both sides by the same factor. If the original is 1920 x 1080 and you set the new width to 1280, the new height must be 1280 x (1080 / 1920) = 720. This calculator does that division for you and rounds to the nearest whole pixel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a ratio like 16:9 actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the width and height divided by their greatest common divisor. 1920 x 1080 both divide by 120, giving 16:9. Any size with the same ratio — 1280 x 720, 3840 x 2160 — fills the same frame shape."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my result a fraction of a pixel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the exact scaled value is not a whole number. The tool shows the rounded pixel size you can actually use and the exact decimal ratio, so you can decide whether to round up, round down, or crop by one pixel."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Aspect Ratio Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Aspect Ratio Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Keep the proportions. Type one new dimension and get the matching one.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 10px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="ow" data-i18n="tool.w.label">Original width</label>
+        <input type="number" id="ow" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1920">
+      </div>
+      <div>
+        <label for="oh" data-i18n="tool.h.label">Original height</label>
+        <input type="number" id="oh" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1080">
+      </div>
+    </div>
+
+    <p class="subtle" data-i18n="tool.presets" style="font-weight:600;margin:14px 0 0;">Common ratios</p>
+    <div class="chips" id="ratio-chips" role="group">
+      <button type="button" class="chip" data-w="16" data-h="9">16:9</button>
+      <button type="button" class="chip" data-w="4" data-h="3">4:3</button>
+      <button type="button" class="chip" data-w="21" data-h="9">21:9</button>
+      <button type="button" class="chip" data-w="1" data-h="1">1:1</button>
+      <button type="button" class="chip" data-w="9" data-h="16">9:16</button>
+      <button type="button" class="chip" data-w="3" data-h="2">3:2</button>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="nw" data-i18n="tool.nw.label">New width</label>
+        <input type="number" id="nw" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1280">
+      </div>
+      <div>
+        <label for="nh" data-i18n="tool.nh.label">New height</label>
+        <input type="number" id="nh" inputmode="decimal" min="0" step="any" autocomplete="off">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.hint">Fill both original values, then either new width or new height.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.result.size">New size</div>
+          <div class="rc-val" id="r-size">—</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.result.ratio">Aspect ratio</div>
+          <div class="rc-val" id="r-ratio">—</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.result.decimal">Ratio as decimal</div>
+          <div class="rc-val" id="r-dec">—</div>
+        </div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.privacy" style="margin-top:12px;">Everything is calculated in your browser. Nothing is uploaded.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How aspect ratio actually works</h2>
+    <p>An aspect ratio is width divided by height, written as two whole numbers with the common factors cleared out. A 1920 x 1080 frame divides evenly by 120 on both sides, which is why it is called 16:9. The ratio is what matters when a frame is resized: as long as both sides are multiplied by the same number, circles stay circular and faces keep their shape. The moment one side is scaled more than the other, everything inside stretches.</p>
+    <p>That is the whole reason this calculator exists. You know the original dimensions and you know one constraint — a 1200 px content column, a 1080 px tall banner, a 500 px thumbnail — and you need the second number to match. Dividing by hand is easy to get wrong, and being off by a few pixels is enough for a design tool to add letterbox bars or crop something important.</p>
+
+    <h3>Worked example 1: fitting a photo into a fixed column</h3>
+    <p>You shot a photo at 4032 x 3024 (a 4:3 phone camera) and your article template allows a maximum width of 1200 px. Scale factor = 1200 / 4032 = 0.2976. New height = 3024 x 0.2976 = 900. The image becomes 1200 x 900, still exactly 4:3. Enter 4032 and 3024 as the original values, put 1200 in the new width field, and the tool returns 900 with the simplified 4:3 label.</p>
+
+    <h3>Worked example 2: turning a landscape video into a vertical crop</h3>
+    <p>A 1920 x 1080 video needs a 9:16 vertical version for short-form platforms. You cannot simply squeeze it — 9:16 is a different shape, so something has to go. Start from the target height, 1920, and the tool returns 1080 for the 9:16 width. The practical read: keep the full height of the original frame, then crop the width from 1920 down to 1080, losing 420 px from each side if you crop centred. Anything important near the left or right edge has to be re-framed rather than trimmed.</p>
+
+    <h3>Worked example 3: a print size that is not a clean match</h3>
+    <p>An 8 x 10 inch print is a 4:5 ratio. A 6000 x 4000 camera file is 3:2. Feed 6000 and 4000 in as the original, then set the new width to 8 x 300 = 2400 px for a 300 DPI print. The tool returns 1600 px of height, but an 8 x 10 at 300 DPI needs 3000 px. The gap tells you exactly how much cropping the print will require — better to know now than at the print shop.</p>
+
+    <h2>Reference: ratios you will actually meet</h2>
+    <table>
+      <thead><tr><th>Ratio</th><th>Decimal</th><th>Typical sizes</th><th>Where it shows up</th></tr></thead>
+      <tbody>
+        <tr><td>16:9</td><td>1.778</td><td>1920 x 1080, 3840 x 2160</td><td>TVs, monitors, YouTube, most video</td></tr>
+        <tr><td>9:16</td><td>0.563</td><td>1080 x 1920</td><td>Vertical short-form video, phone wallpapers</td></tr>
+        <tr><td>4:3</td><td>1.333</td><td>2048 x 1536, 4032 x 3024</td><td>Tablets, phone stills, older broadcast</td></tr>
+        <tr><td>3:2</td><td>1.500</td><td>6000 x 4000</td><td>Full-frame and APS-C cameras, 4 x 6 prints</td></tr>
+        <tr><td>1:1</td><td>1.000</td><td>1080 x 1080</td><td>Profile pictures, square social posts</td></tr>
+        <tr><td>21:9</td><td>2.333</td><td>2560 x 1080, 3440 x 1440</td><td>Ultrawide monitors, cinematic crops</td></tr>
+        <tr><td>4:5</td><td>0.800</td><td>1080 x 1350</td><td>Portrait social posts, 8 x 10 prints</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Resize, crop, or pad — pick the right one</h2>
+    <p>If the target has the same ratio as the source, a plain resize is all you need and nothing is lost except resolution. If the ratio differs, there are three honest options. Cropping keeps the subject at full size but throws away edges. Padding (letterbox or pillarbox bars) keeps the whole frame but adds empty space that most platforms will leave in place. Stretching keeps everything and ruins the proportions; that is the one option worth avoiding, and it is exactly what happens when someone types a height that does not match the calculated one.</p>
+    <p>A quick way to decide: compare the decimal ratios. 1920 x 1080 is 1.778 and a 1080 x 1350 portrait post is 0.800 — far apart, so a crop removes a lot. 3:2 (1.500) against 4:3 (1.333) is much closer, and the crop will barely be noticed. The decimal figure in the results panel is there for exactly this comparison.</p>
+
+    <h2>Rounding, DPI and other practical notes</h2>
+    <p>Pixel dimensions must be whole numbers, so the tool shows a rounded size and keeps the exact decimal separate. A half-pixel difference is invisible, but if you are building a tiling layout or a sprite sheet, round in a consistent direction so the numbers keep adding up. For print, remember that the ratio says nothing about physical size: 1200 x 900 is a fine 4:3 image at 150 DPI for an 8 x 6 inch print, and the same file at 300 DPI is a crisp 4 x 3 inch print. Ratio controls shape; DPI controls how large that shape can be printed before it looks soft.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/base64-conv/"><span class="related-ico" aria-hidden="true">🔡</span><span class="related-name">Base64 Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/color-picker/"><span class="related-ico" aria-hidden="true">🎨</span><span class="related-name">Color Picker &amp; Converter</span></a><a class="related-item" href="https://tool-hub.me/hash-gen/"><span class="related-ico" aria-hidden="true">#️⃣</span><span class="related-name">Hash Generator</span></a><a class="related-item" href="https://tool-hub.me/json-formatter/"><span class="related-ico" aria-hidden="true">⚙️</span><span class="related-name">JSON Formatter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How do I keep an image from stretching when I resize it?</summary><p data-i18n="faq.a1">Scale both sides by the same factor. If the original is 1920 x 1080 and you set the new width to 1280, the new height must be 1280 x (1080 / 1920) = 720. This calculator does that division for you and rounds to the nearest whole pixel.</p></details>
+    <details><summary data-i18n="faq.q2">What does a ratio like 16:9 actually mean?</summary><p data-i18n="faq.a2">It is the width and height divided by their greatest common divisor. 1920 x 1080 both divide by 120, giving 16:9. Any size with the same ratio — 1280 x 720, 3840 x 2160 — fills the same frame shape.</p></details>
+    <details><summary data-i18n="faq.q3">Why is my result a fraction of a pixel?</summary><p data-i18n="faq.a3">Because the exact scaled value is not a whole number. The tool shows the rounded pixel size you can actually use and the exact decimal ratio, so you can decide whether to round up, round down, or crop by one pixel.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

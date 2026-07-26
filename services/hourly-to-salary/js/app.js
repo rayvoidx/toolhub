@@ -1,0 +1,144 @@
+/* ============================================================
+   앱 셸 공통 로직 — 원칙적으로 수정하지 않는다.
+   서비스 고유 로직은 아래 "TOOL MODULE" 영역에만 작성한다.
+   ============================================================ */
+(function shell() {
+  "use strict";
+  var cfg = window.APP_CONFIG || {};
+
+  // 연도
+  var yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+  // 테마 토글: auto → light → dark → auto
+  var themeBtn = document.getElementById("theme-toggle");
+  var root = document.documentElement;
+  var saved = null;
+  try { saved = localStorage.getItem(cfg.slug + ":theme"); } catch (e) { /* private mode */ }
+  if (saved) root.setAttribute("data-theme", saved);
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var order = ["auto", "light", "dark"];
+      var cur = root.getAttribute("data-theme") || "auto";
+      var next = order[(order.indexOf(cur) + 1) % order.length];
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem(cfg.slug + ":theme", next); } catch (e) { /* noop */ }
+    });
+  }
+
+  // 공유
+  var shareBtn = document.getElementById("share-btn");
+  if (shareBtn) {
+    shareBtn.addEventListener("click", function () {
+      var data = { title: document.title, url: location.href };
+      if (navigator.share) {
+        navigator.share(data).catch(function () { /* 사용자가 취소 */ });
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(location.href).then(function () {
+          shareBtn.textContent = "✓";
+          setTimeout(function () { shareBtn.textContent = "↗"; }, 1200);
+        });
+      }
+    });
+  }
+
+  // PWA 서비스워커
+  if ("serviceWorker" in navigator && location.protocol === "https:") {
+    navigator.serviceWorker.register("sw.js").catch(function () { /* 오프라인 미지원 환경 */ });
+  }
+
+  // AdSense — 게이트 통과 전에는 enabled=false 라 아무것도 하지 않는다
+  if (cfg.adsense && cfg.adsense.enabled && cfg.adsense.client && cfg.adsense.slot) {
+    var slotEl = document.getElementById("ad-slot");
+    if (slotEl) {
+      slotEl.hidden = false;
+      var ins = document.createElement("ins");
+      ins.className = "adsbygoogle";
+      ins.style.display = "block";
+      ins.setAttribute("data-ad-client", cfg.adsense.client);
+      ins.setAttribute("data-ad-slot", cfg.adsense.slot);
+      ins.setAttribute("data-ad-format", "auto");
+      ins.setAttribute("data-full-width-responsive", "true");
+      slotEl.appendChild(ins);
+      (window.adsbygoogle = window.adsbygoogle || []).push({});
+    }
+  }
+
+  // Cloudflare Web Analytics — 쿠키리스·페이지뷰만. 토큰 설정 시에만 로드.
+  // 실패해도 본 기능에 영향 없게 격리 (safeTrack 원칙 — 부가 기능은 본 기능과 격리, 철칙 5)
+  // 수집 범위는 privacy.html §3 과 일치해야 한다. 도구 입력값은 절대 실리지 않는다(§1 약속).
+  if (cfg.analytics && cfg.analytics.cfBeaconToken) {
+    try {
+      var s = document.createElement("script");
+      s.defer = true;
+      s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+      s.setAttribute("data-cf-beacon", JSON.stringify({ token: cfg.analytics.cfBeaconToken }));
+      document.head.appendChild(s);
+    } catch (e) { /* 분석 실패는 조용히 무시 — 본 기능에 영향 없음 */ }
+  }
+})();
+
+/* ============================================================
+   TOOL MODULE — 빌더 에이전트가 이 영역을 서비스 로직으로 교체한다.
+   규칙:
+   - 상태는 localStorage(키 prefix: cfg.slug + ":") 또는 URL 파라미터에만 저장
+   - 외부 API 호출 시 실패 UI(.result에 오류 문구) 필수
+   - 빈 입력/공집합도 명시적으로 처리 (조용한 실패 금지)
+   ============================================================ */
+(function tool() {
+  "use strict";
+  // TOOLJS:START
+  var $ = function (id) { return document.getElementById(id); };
+  var rate = $("rate"), salary = $("salary"), hours = $("hours"), weeks = $("weeks");
+  var result = $("result"), errEl = $("err");
+  if (!rate || !salary || !hours || !weeks) return;
+
+  var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
+  var num = function (el) { var v = parseFloat(String(el.value).replace(/[, ]/g, "")); return isFinite(v) ? v : NaN; };
+  var money = function (n) { return n.toLocaleString(undefined, { maximumFractionDigits: 2 }); };
+  var mode = function () { var r = document.querySelector('input[name="mode"]:checked'); return r ? r.value : "hourly"; };
+
+  function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
+
+  function calc() {
+    var h = num(hours), w = num(weeks);
+    var isHourly = mode() === "hourly";
+    var amount = isHourly ? num(rate) : num(salary);
+    if (isNaN(amount) || isNaN(h) || isNaN(w)) return fail("tool.err.empty");
+    if (amount <= 0 || h <= 0 || w <= 0) return fail("tool.err.positive");
+    if (h > 168) return fail("tool.err.hours");
+
+    var annual = isHourly ? amount * h * w : amount;
+    var perHour = annual / (h * w);
+    var perWeek = annual / w;
+
+    $("r-hero").textContent = money(isHourly ? annual : perHour);
+    $("hero-label").setAttribute("data-i18n", isHourly ? "tool.r.year" : "tool.r.hour");
+    $("hero-label").textContent = t(isHourly ? "tool.r.year" : "tool.r.hour");
+    $("r-month").textContent = money(annual / 12);
+    $("r-biweek").textContent = money(perWeek * 2);
+    $("r-week").textContent = money(perWeek);
+    $("r-day").textContent = money(perHour * 8);
+    $("r-hour").textContent = money(perHour);
+
+    errEl.hidden = true;
+    result.hidden = false;
+  }
+
+  function syncMode() {
+    var isHourly = mode() === "hourly";
+    $("rate-field").hidden = !isHourly;
+    $("salary-field").hidden = isHourly;
+    if (!result.hidden || !errEl.hidden) calc();
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="mode"]'), function (r) {
+    r.addEventListener("change", syncMode);
+  });
+  $("calc-btn").addEventListener("click", calc);
+  [rate, salary, hours, weeks].forEach(function (el) {
+    el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+  });
+  document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  // TOOLJS:END
+})();
