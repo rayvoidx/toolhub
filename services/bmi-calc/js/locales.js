@@ -25,7 +25,7 @@ window.I18N_LOCALES = {
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
-    "meta.title": "BMI Calculator — Height & Weight to Body Mass Index Instantly",
+    "meta.title": "BMI Calculator — Body Mass Index from Height & Weight",
     "meta.description": "Enter your height and weight to get your BMI instantly, classified by both the WHO and the stricter Asia-Pacific cut-offs, plus your healthy weight range. Free and ad-free.",
     "hero.lede": "Two numbers are all it takes. See your body mass index against both the WHO and the Asia-Pacific standards at once.",
     "tool.unitGroup": "Unit system",
