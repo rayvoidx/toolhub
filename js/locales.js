@@ -264,6 +264,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "One Rep Max Calculator",
       "tool.square-footage-calc.name": "Square Footage Calculator",
       "tool.number-base-conv.name": "Number Base Converter",
+      "tool.color-conv.name": "HEX to RGB Converter",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -517,6 +518,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "1RM 计算器",
       "tool.square-footage-calc.name": "面积计算器",
       "tool.number-base-conv.name": "进制转换器",
+      "tool.color-conv.name": "HEX 转 RGB",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -770,6 +772,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "1RM कैलकुलेटर",
       "tool.square-footage-calc.name": "क्षेत्रफल कैलकुलेटर",
       "tool.number-base-conv.name": "संख्या आधार कन्वर्टर",
+      "tool.color-conv.name": "HEX से RGB कन्वर्टर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1023,6 +1026,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "Calculadora de 1RM",
       "tool.square-footage-calc.name": "Calculadora de metros y pies cuadrados",
       "tool.number-base-conv.name": "Conversor de bases numéricas",
+      "tool.color-conv.name": "Conversor HEX a RGB",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1276,6 +1280,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "حاسبة الحد الأقصى لتكرار واحد (1RM)",
       "tool.square-footage-calc.name": "حاسبة المساحة",
       "tool.number-base-conv.name": "محوّل الأنظمة العددية",
+      "tool.color-conv.name": "محوّل HEX إلى RGB",
   },
 
   /* ---------------- Français ---------------- */
@@ -1529,6 +1534,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "Calculateur de 1RM",
       "tool.square-footage-calc.name": "Calculateur de surface",
       "tool.number-base-conv.name": "Convertisseur de bases",
+      "tool.color-conv.name": "Convertisseur HEX en RGB",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1782,6 +1788,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "1RM ক্যালকুলেটর",
       "tool.square-footage-calc.name": "আয়তন ক্যালকুলেটর",
       "tool.number-base-conv.name": "সংখ্যা ভিত্তি কনভার্টার",
+      "tool.color-conv.name": "HEX থেকে RGB কনভার্টার",
   },
 
   /* ---------------- Português ---------------- */
@@ -2035,6 +2042,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "Calculadora de 1RM",
       "tool.square-footage-calc.name": "Calculadora de metros e pés quadrados",
       "tool.number-base-conv.name": "Conversor de bases numéricas",
+      "tool.color-conv.name": "Conversor HEX para RGB",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2288,6 +2296,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "Калькулятор 1ПМ",
       "tool.square-footage-calc.name": "Калькулятор площади",
       "tool.number-base-conv.name": "Конвертер систем счисления",
+      "tool.color-conv.name": "Конвертер HEX в RGB",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2541,6 +2550,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "1RM کیلکولیٹر",
       "tool.square-footage-calc.name": "رقبہ کیلکولیٹر",
       "tool.number-base-conv.name": "نمبر بیس کنورٹر",
+      "tool.color-conv.name": "HEX سے RGB کنورٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2794,6 +2804,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "Kalkulator 1RM",
       "tool.square-footage-calc.name": "Kalkulator Luas",
       "tool.number-base-conv.name": "Konverter Basis Bilangan",
+      "tool.color-conv.name": "Konverter HEX ke RGB",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -3047,6 +3058,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "1RM-Rechner",
       "tool.square-footage-calc.name": "Quadratmeter-Rechner",
       "tool.number-base-conv.name": "Zahlensystem-Umrechner",
+      "tool.color-conv.name": "HEX-zu-RGB-Konverter",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3300,6 +3312,7 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "1RM計算ツール",
       "tool.square-footage-calc.name": "面積計算ツール",
       "tool.number-base-conv.name": "基数変換ツール",
+      "tool.color-conv.name": "HEX→RGB変換ツール",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3553,5 +3566,6 @@ window.I18N_LOCALES = {
     "tool.one-rep-max-calc.name": "1RM 계산기",
       "tool.square-footage-calc.name": "면적 계산기",
       "tool.number-base-conv.name": "진법 변환기",
+      "tool.color-conv.name": "HEX ↔ RGB 변환기",
   }
 };
