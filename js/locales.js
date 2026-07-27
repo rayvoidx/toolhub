@@ -266,6 +266,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "Number Base Converter",
       "tool.color-conv.name": "HEX to RGB Converter",
       "tool.jwt-decoder.name": "JWT Decoder",
+      "tool.wheel-spinner.name": "Random Wheel Spinner",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -521,6 +522,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "进制转换器",
       "tool.color-conv.name": "HEX 转 RGB",
       "tool.jwt-decoder.name": "JWT 解码器",
+      "tool.wheel-spinner.name": "随机转盘",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -776,6 +778,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "संख्या आधार कन्वर्टर",
       "tool.color-conv.name": "HEX से RGB कन्वर्टर",
       "tool.jwt-decoder.name": "JWT डिकोडर",
+      "tool.wheel-spinner.name": "रैंडम व्हील स्पिनर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1031,6 +1034,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "Conversor de bases numéricas",
       "tool.color-conv.name": "Conversor HEX a RGB",
       "tool.jwt-decoder.name": "Decodificador JWT",
+      "tool.wheel-spinner.name": "Ruleta aleatoria",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1286,6 +1290,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "محوّل الأنظمة العددية",
       "tool.color-conv.name": "محوّل HEX إلى RGB",
       "tool.jwt-decoder.name": "مفكّك JWT",
+      "tool.wheel-spinner.name": "عجلة عشوائية",
   },
 
   /* ---------------- Français ---------------- */
@@ -1541,6 +1546,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "Convertisseur de bases",
       "tool.color-conv.name": "Convertisseur HEX en RGB",
       "tool.jwt-decoder.name": "Décodeur JWT",
+      "tool.wheel-spinner.name": "Roue aléatoire",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1796,6 +1802,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "সংখ্যা ভিত্তি কনভার্টার",
       "tool.color-conv.name": "HEX থেকে RGB কনভার্টার",
       "tool.jwt-decoder.name": "JWT ডিকোডার",
+      "tool.wheel-spinner.name": "র‍্যান্ডম হুইল স্পিনার",
   },
 
   /* ---------------- Português ---------------- */
@@ -2051,6 +2058,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "Conversor de bases numéricas",
       "tool.color-conv.name": "Conversor HEX para RGB",
       "tool.jwt-decoder.name": "Decodificador JWT",
+      "tool.wheel-spinner.name": "Roleta aleatória",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2306,6 +2314,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "Конвертер систем счисления",
       "tool.color-conv.name": "Конвертер HEX в RGB",
       "tool.jwt-decoder.name": "Декодер JWT",
+      "tool.wheel-spinner.name": "Случайная рулетка",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2561,6 +2570,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "نمبر بیس کنورٹر",
       "tool.color-conv.name": "HEX سے RGB کنورٹر",
       "tool.jwt-decoder.name": "JWT ڈیکوڈر",
+      "tool.wheel-spinner.name": "رینڈم وہیل اسپنر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2816,6 +2826,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "Konverter Basis Bilangan",
       "tool.color-conv.name": "Konverter HEX ke RGB",
       "tool.jwt-decoder.name": "Decoder JWT",
+      "tool.wheel-spinner.name": "Roda Acak",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -3071,6 +3082,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "Zahlensystem-Umrechner",
       "tool.color-conv.name": "HEX-zu-RGB-Konverter",
       "tool.jwt-decoder.name": "JWT-Decoder",
+      "tool.wheel-spinner.name": "Zufallsrad",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3326,6 +3338,7 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "基数変換ツール",
       "tool.color-conv.name": "HEX→RGB変換ツール",
       "tool.jwt-decoder.name": "JWTデコーダー",
+      "tool.wheel-spinner.name": "ランダムルーレット",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3581,5 +3594,6 @@ window.I18N_LOCALES = {
       "tool.number-base-conv.name": "진법 변환기",
       "tool.color-conv.name": "HEX ↔ RGB 변환기",
       "tool.jwt-decoder.name": "JWT 디코더",
+      "tool.wheel-spinner.name": "랜덤 룰렛",
   }
 };
