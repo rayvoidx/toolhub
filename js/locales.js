@@ -265,6 +265,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "Square Footage Calculator",
       "tool.number-base-conv.name": "Number Base Converter",
       "tool.color-conv.name": "HEX to RGB Converter",
+      "tool.jwt-decoder.name": "JWT Decoder",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -519,6 +520,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "面积计算器",
       "tool.number-base-conv.name": "进制转换器",
       "tool.color-conv.name": "HEX 转 RGB",
+      "tool.jwt-decoder.name": "JWT 解码器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -773,6 +775,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "क्षेत्रफल कैलकुलेटर",
       "tool.number-base-conv.name": "संख्या आधार कन्वर्टर",
       "tool.color-conv.name": "HEX से RGB कन्वर्टर",
+      "tool.jwt-decoder.name": "JWT डिकोडर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1027,6 +1030,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "Calculadora de metros y pies cuadrados",
       "tool.number-base-conv.name": "Conversor de bases numéricas",
       "tool.color-conv.name": "Conversor HEX a RGB",
+      "tool.jwt-decoder.name": "Decodificador JWT",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1281,6 +1285,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "حاسبة المساحة",
       "tool.number-base-conv.name": "محوّل الأنظمة العددية",
       "tool.color-conv.name": "محوّل HEX إلى RGB",
+      "tool.jwt-decoder.name": "مفكّك JWT",
   },
 
   /* ---------------- Français ---------------- */
@@ -1535,6 +1540,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "Calculateur de surface",
       "tool.number-base-conv.name": "Convertisseur de bases",
       "tool.color-conv.name": "Convertisseur HEX en RGB",
+      "tool.jwt-decoder.name": "Décodeur JWT",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1789,6 +1795,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "আয়তন ক্যালকুলেটর",
       "tool.number-base-conv.name": "সংখ্যা ভিত্তি কনভার্টার",
       "tool.color-conv.name": "HEX থেকে RGB কনভার্টার",
+      "tool.jwt-decoder.name": "JWT ডিকোডার",
   },
 
   /* ---------------- Português ---------------- */
@@ -2043,6 +2050,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "Calculadora de metros e pés quadrados",
       "tool.number-base-conv.name": "Conversor de bases numéricas",
       "tool.color-conv.name": "Conversor HEX para RGB",
+      "tool.jwt-decoder.name": "Decodificador JWT",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2297,6 +2305,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "Калькулятор площади",
       "tool.number-base-conv.name": "Конвертер систем счисления",
       "tool.color-conv.name": "Конвертер HEX в RGB",
+      "tool.jwt-decoder.name": "Декодер JWT",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2551,6 +2560,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "رقبہ کیلکولیٹر",
       "tool.number-base-conv.name": "نمبر بیس کنورٹر",
       "tool.color-conv.name": "HEX سے RGB کنورٹر",
+      "tool.jwt-decoder.name": "JWT ڈیکوڈر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2805,6 +2815,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "Kalkulator Luas",
       "tool.number-base-conv.name": "Konverter Basis Bilangan",
       "tool.color-conv.name": "Konverter HEX ke RGB",
+      "tool.jwt-decoder.name": "Decoder JWT",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -3059,6 +3070,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "Quadratmeter-Rechner",
       "tool.number-base-conv.name": "Zahlensystem-Umrechner",
       "tool.color-conv.name": "HEX-zu-RGB-Konverter",
+      "tool.jwt-decoder.name": "JWT-Decoder",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3313,6 +3325,7 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "面積計算ツール",
       "tool.number-base-conv.name": "基数変換ツール",
       "tool.color-conv.name": "HEX→RGB変換ツール",
+      "tool.jwt-decoder.name": "JWTデコーダー",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3567,5 +3580,6 @@ window.I18N_LOCALES = {
       "tool.square-footage-calc.name": "면적 계산기",
       "tool.number-base-conv.name": "진법 변환기",
       "tool.color-conv.name": "HEX ↔ RGB 변환기",
+      "tool.jwt-decoder.name": "JWT 디코더",
   }
 };
