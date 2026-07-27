@@ -267,6 +267,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "HEX to RGB Converter",
       "tool.jwt-decoder.name": "JWT Decoder",
       "tool.wheel-spinner.name": "Random Wheel Spinner",
+      "tool.sales-tax-calc.name": "Sales Tax Calculator",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -523,6 +524,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "HEX 转 RGB",
       "tool.jwt-decoder.name": "JWT 解码器",
       "tool.wheel-spinner.name": "随机转盘",
+      "tool.sales-tax-calc.name": "美国销售税计算器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -779,6 +781,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "HEX से RGB कन्वर्टर",
       "tool.jwt-decoder.name": "JWT डिकोडर",
       "tool.wheel-spinner.name": "रैंडम व्हील स्पिनर",
+      "tool.sales-tax-calc.name": "अमेरिकी सेल्स टैक्स कैलकुलेटर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1035,6 +1038,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "Conversor HEX a RGB",
       "tool.jwt-decoder.name": "Decodificador JWT",
       "tool.wheel-spinner.name": "Ruleta aleatoria",
+      "tool.sales-tax-calc.name": "Calculadora de impuesto sobre ventas",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1291,6 +1295,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "محوّل HEX إلى RGB",
       "tool.jwt-decoder.name": "مفكّك JWT",
       "tool.wheel-spinner.name": "عجلة عشوائية",
+      "tool.sales-tax-calc.name": "حاسبة ضريبة المبيعات الأمريكية",
   },
 
   /* ---------------- Français ---------------- */
@@ -1547,6 +1552,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "Convertisseur HEX en RGB",
       "tool.jwt-decoder.name": "Décodeur JWT",
       "tool.wheel-spinner.name": "Roue aléatoire",
+      "tool.sales-tax-calc.name": "Calculateur de taxe de vente",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1803,6 +1809,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "HEX থেকে RGB কনভার্টার",
       "tool.jwt-decoder.name": "JWT ডিকোডার",
       "tool.wheel-spinner.name": "র‍্যান্ডম হুইল স্পিনার",
+      "tool.sales-tax-calc.name": "মার্কিন সেলস ট্যাক্স ক্যালকুলেটর",
   },
 
   /* ---------------- Português ---------------- */
@@ -2059,6 +2066,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "Conversor HEX para RGB",
       "tool.jwt-decoder.name": "Decodificador JWT",
       "tool.wheel-spinner.name": "Roleta aleatória",
+      "tool.sales-tax-calc.name": "Calculadora de sales tax",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2315,6 +2323,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "Конвертер HEX в RGB",
       "tool.jwt-decoder.name": "Декодер JWT",
       "tool.wheel-spinner.name": "Случайная рулетка",
+      "tool.sales-tax-calc.name": "Калькулятор налога с продаж США",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2571,6 +2580,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "HEX سے RGB کنورٹر",
       "tool.jwt-decoder.name": "JWT ڈیکوڈر",
       "tool.wheel-spinner.name": "رینڈم وہیل اسپنر",
+      "tool.sales-tax-calc.name": "امریکی سیلز ٹیکس کیلکولیٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2827,6 +2837,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "Konverter HEX ke RGB",
       "tool.jwt-decoder.name": "Decoder JWT",
       "tool.wheel-spinner.name": "Roda Acak",
+      "tool.sales-tax-calc.name": "Kalkulator Sales Tax AS",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -3083,6 +3094,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "HEX-zu-RGB-Konverter",
       "tool.jwt-decoder.name": "JWT-Decoder",
       "tool.wheel-spinner.name": "Zufallsrad",
+      "tool.sales-tax-calc.name": "US-Sales-Tax-Rechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3339,6 +3351,7 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "HEX→RGB変換ツール",
       "tool.jwt-decoder.name": "JWTデコーダー",
       "tool.wheel-spinner.name": "ランダムルーレット",
+      "tool.sales-tax-calc.name": "米国セールスタックス計算",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3595,5 +3608,6 @@ window.I18N_LOCALES = {
       "tool.color-conv.name": "HEX ↔ RGB 변환기",
       "tool.jwt-decoder.name": "JWT 디코더",
       "tool.wheel-spinner.name": "랜덤 룰렛",
+      "tool.sales-tax-calc.name": "미국 판매세 계산기",
   }
 };
