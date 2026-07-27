@@ -20,7 +20,7 @@ window.I18N_LOCALES = {
     "footer.more": "More tools",
     "footer.credit": "Created by rayv",
     "footer.coffee": "☕ Buy me a coffee",
-    "meta.title": "Discount Calculator — Find the Discount Percentage or Final Price, Both Ways",
+    "meta.title": "Discount Calculator — Sale Price and Percent Off",
     "meta.description": "Free two-way discount calculator: enter the original and sale price to get the discount percentage, or the original price and discount rate to get the final price.",
     "hero.lede": "Enter the original and sale price to get the discount rate — or go the other way. Both directions, instantly.",
     "tool.tablist": "Select calculation mode",
