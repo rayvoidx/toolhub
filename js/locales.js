@@ -268,6 +268,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "JWT Decoder",
       "tool.wheel-spinner.name": "Random Wheel Spinner",
       "tool.sales-tax-calc.name": "Sales Tax Calculator",
+      "tool.overtime-pay-calc.name": "Overtime Pay Calculator",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -525,6 +526,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "JWT 解码器",
       "tool.wheel-spinner.name": "随机转盘",
       "tool.sales-tax-calc.name": "美国销售税计算器",
+      "tool.overtime-pay-calc.name": "加班费计算器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -782,6 +784,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "JWT डिकोडर",
       "tool.wheel-spinner.name": "रैंडम व्हील स्पिनर",
       "tool.sales-tax-calc.name": "अमेरिकी सेल्स टैक्स कैलकुलेटर",
+      "tool.overtime-pay-calc.name": "ओवरटाइम पे कैलकुलेटर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1039,6 +1042,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "Decodificador JWT",
       "tool.wheel-spinner.name": "Ruleta aleatoria",
       "tool.sales-tax-calc.name": "Calculadora de impuesto sobre ventas",
+      "tool.overtime-pay-calc.name": "Calculadora de horas extra",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1296,6 +1300,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "مفكّك JWT",
       "tool.wheel-spinner.name": "عجلة عشوائية",
       "tool.sales-tax-calc.name": "حاسبة ضريبة المبيعات الأمريكية",
+      "tool.overtime-pay-calc.name": "حاسبة أجر العمل الإضافي",
   },
 
   /* ---------------- Français ---------------- */
@@ -1553,6 +1558,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "Décodeur JWT",
       "tool.wheel-spinner.name": "Roue aléatoire",
       "tool.sales-tax-calc.name": "Calculateur de taxe de vente",
+      "tool.overtime-pay-calc.name": "Calculateur d'heures supplémentaires",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1810,6 +1816,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "JWT ডিকোডার",
       "tool.wheel-spinner.name": "র‍্যান্ডম হুইল স্পিনার",
       "tool.sales-tax-calc.name": "মার্কিন সেলস ট্যাক্স ক্যালকুলেটর",
+      "tool.overtime-pay-calc.name": "ওভারটাইম বেতন ক্যালকুলেটর",
   },
 
   /* ---------------- Português ---------------- */
@@ -2067,6 +2074,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "Decodificador JWT",
       "tool.wheel-spinner.name": "Roleta aleatória",
       "tool.sales-tax-calc.name": "Calculadora de sales tax",
+      "tool.overtime-pay-calc.name": "Calculadora de hora extra",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2324,6 +2332,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "Декодер JWT",
       "tool.wheel-spinner.name": "Случайная рулетка",
       "tool.sales-tax-calc.name": "Калькулятор налога с продаж США",
+      "tool.overtime-pay-calc.name": "Калькулятор оплаты сверхурочных",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2581,6 +2590,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "JWT ڈیکوڈر",
       "tool.wheel-spinner.name": "رینڈم وہیل اسپنر",
       "tool.sales-tax-calc.name": "امریکی سیلز ٹیکس کیلکولیٹر",
+      "tool.overtime-pay-calc.name": "اوور ٹائم تنخواہ کیلکولیٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2838,6 +2848,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "Decoder JWT",
       "tool.wheel-spinner.name": "Roda Acak",
       "tool.sales-tax-calc.name": "Kalkulator Sales Tax AS",
+      "tool.overtime-pay-calc.name": "Kalkulator Upah Lembur",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -3095,6 +3106,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "JWT-Decoder",
       "tool.wheel-spinner.name": "Zufallsrad",
       "tool.sales-tax-calc.name": "US-Sales-Tax-Rechner",
+      "tool.overtime-pay-calc.name": "Überstunden-Rechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3352,6 +3364,7 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "JWTデコーダー",
       "tool.wheel-spinner.name": "ランダムルーレット",
       "tool.sales-tax-calc.name": "米国セールスタックス計算",
+      "tool.overtime-pay-calc.name": "残業代計算ツール",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3609,5 +3622,6 @@ window.I18N_LOCALES = {
       "tool.jwt-decoder.name": "JWT 디코더",
       "tool.wheel-spinner.name": "랜덤 룰렛",
       "tool.sales-tax-calc.name": "미국 판매세 계산기",
+      "tool.overtime-pay-calc.name": "초과근무 수당 계산기",
   }
 };
