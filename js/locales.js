@@ -270,6 +270,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "Sales Tax Calculator",
       "tool.overtime-pay-calc.name": "Overtime Pay Calculator",
       "tool.heart-rate-zone-calc.name": "Heart Rate Zone Calculator",
+      "tool.car-payment-calc.name": "Car Payment Calculator",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -529,6 +530,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "美国销售税计算器",
       "tool.overtime-pay-calc.name": "加班费计算器",
       "tool.heart-rate-zone-calc.name": "心率区间计算器",
+      "tool.car-payment-calc.name": "汽车贷款计算器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -788,6 +790,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "अमेरिकी सेल्स टैक्स कैलकुलेटर",
       "tool.overtime-pay-calc.name": "ओवरटाइम पे कैलकुलेटर",
       "tool.heart-rate-zone-calc.name": "हार्ट रेट ज़ोन कैलकुलेटर",
+      "tool.car-payment-calc.name": "कार लोन कैलकुलेटर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1047,6 +1050,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "Calculadora de impuesto sobre ventas",
       "tool.overtime-pay-calc.name": "Calculadora de horas extra",
       "tool.heart-rate-zone-calc.name": "Calculadora de zonas de frecuencia cardíaca",
+      "tool.car-payment-calc.name": "Calculadora de pago de coche",
   },
 
   /* ---------------- العربية ---------------- */
@@ -1306,6 +1310,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "حاسبة ضريبة المبيعات الأمريكية",
       "tool.overtime-pay-calc.name": "حاسبة أجر العمل الإضافي",
       "tool.heart-rate-zone-calc.name": "حاسبة مناطق معدل ضربات القلب",
+      "tool.car-payment-calc.name": "حاسبة قسط السيارة",
   },
 
   /* ---------------- Français ---------------- */
@@ -1565,6 +1570,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "Calculateur de taxe de vente",
       "tool.overtime-pay-calc.name": "Calculateur d'heures supplémentaires",
       "tool.heart-rate-zone-calc.name": "Calculateur de zones cardiaques",
+      "tool.car-payment-calc.name": "Calculateur de mensualité auto",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -1824,6 +1830,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "মার্কিন সেলস ট্যাক্স ক্যালকুলেটর",
       "tool.overtime-pay-calc.name": "ওভারটাইম বেতন ক্যালকুলেটর",
       "tool.heart-rate-zone-calc.name": "হার্ট রেট জোন ক্যালকুলেটর",
+      "tool.car-payment-calc.name": "গাড়ি ঋণ ক্যালকুলেটর",
   },
 
   /* ---------------- Português ---------------- */
@@ -2083,6 +2090,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "Calculadora de sales tax",
       "tool.overtime-pay-calc.name": "Calculadora de hora extra",
       "tool.heart-rate-zone-calc.name": "Calculadora de zonas de frequência cardíaca",
+      "tool.car-payment-calc.name": "Calculadora de financiamento de carro",
   },
 
   /* ---------------- Русский ---------------- */
@@ -2342,6 +2350,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "Калькулятор налога с продаж США",
       "tool.overtime-pay-calc.name": "Калькулятор оплаты сверхурочных",
       "tool.heart-rate-zone-calc.name": "Калькулятор пульсовых зон",
+      "tool.car-payment-calc.name": "Калькулятор автокредита",
   },
 
   /* ---------------- اردو ---------------- */
@@ -2601,6 +2610,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "امریکی سیلز ٹیکس کیلکولیٹر",
       "tool.overtime-pay-calc.name": "اوور ٹائم تنخواہ کیلکولیٹر",
       "tool.heart-rate-zone-calc.name": "ہارٹ ریٹ زون کیلکولیٹر",
+      "tool.car-payment-calc.name": "کار قرض کیلکولیٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -2860,6 +2870,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "Kalkulator Sales Tax AS",
       "tool.overtime-pay-calc.name": "Kalkulator Upah Lembur",
       "tool.heart-rate-zone-calc.name": "Kalkulator Zona Detak Jantung",
+      "tool.car-payment-calc.name": "Kalkulator Cicilan Mobil",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -3119,6 +3130,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "US-Sales-Tax-Rechner",
       "tool.overtime-pay-calc.name": "Überstunden-Rechner",
       "tool.heart-rate-zone-calc.name": "Herzfrequenz-Zonen-Rechner",
+      "tool.car-payment-calc.name": "Autokredit-Rechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -3378,6 +3390,7 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "米国セールスタックス計算",
       "tool.overtime-pay-calc.name": "残業代計算ツール",
       "tool.heart-rate-zone-calc.name": "心拍ゾーン計算ツール",
+      "tool.car-payment-calc.name": "自動車ローン計算ツール",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -3637,5 +3650,6 @@ window.I18N_LOCALES = {
       "tool.sales-tax-calc.name": "미국 판매세 계산기",
       "tool.overtime-pay-calc.name": "초과근무 수당 계산기",
       "tool.heart-rate-zone-calc.name": "심박존 계산기",
+      "tool.car-payment-calc.name": "자동차 할부 계산기",
   }
 };
