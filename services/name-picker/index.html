@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Name Picker — Pick 1 or Many Winners Fairly</title>
+<meta name="description" content="Paste names, pick how many winners to draw, and get a fair pick with animated suspense. Skip repeats across rounds. Free and private — runs in your browser.">
+<meta name="keywords" content="random name picker, name picker wheel, random winner generator, pick a random name, giveaway picker, 이름 뽑기">
+<link rel="canonical" href="https://tool-hub.me/name-picker/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Random Name Picker — Pick 1 or Many Winners Fairly">
+<meta property="og:description" content="Paste names, pick how many winners to draw, and get a fair pick with animated suspense. Skip repeats across rounds. Free and private — runs in your browser.">
+<meta property="og:url" content="https://tool-hub.me/name-picker/">
+<meta property="og:image" content="https://tool-hub.me/name-picker/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a21caf">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Random Name Picker",
+  "description": "Paste names, pick how many winners to draw, and get a fair pick with animated suspense. Skip repeats across rounds. Free and private — runs in your browser.",
+  "url": "https://tool-hub.me/name-picker/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Random Name Picker", "item": "https://tool-hub.me/name-picker/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I pick more than one winner at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set \"Number of winners\" to however many you need — 3 for a triple giveaway, 5 for a team draft — and click Pick. The tool draws that many distinct entries from your list in a single round, so nobody fills two slots unless you deliberately listed them more than once. Each winner still comes from an independent, unbiased draw against the remaining pool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between removing a winner and not repeating winners across rounds?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Remove winner(s) from the list\" permanently deletes the drawn names from the textarea, so later rounds draw from a shrinking list — ideal for a running order or handing out one prize per person. \"Don't repeat a winner across rounds\" keeps your full list untouched but silently skips anyone who already won in a previous round this session, which is handy when you want to keep the original list for reference but still guarantee no repeats. Turn both off if every round should be completely independent, like a daily coffee-run pick."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the winner selection actually random and fair?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The picker uses crypto.getRandomValues, the same cryptographically secure source browsers use for security tokens, and rejects any value that would bias the result toward the start of the list — a common flaw in naive modulo-based random pickers. Every eligible name has exactly the same probability of being drawn, whether you're picking 1 winner from 5 names or 10 winners from 500."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the same name win more than one slot in a single draw?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if you typed that name more than once — duplicate entries are treated as separate tickets, so listing \"Alice\" twice doubles her odds and, with multiple winners, could let her fill two slots in the same round. If you want each person to have exactly one chance, keep every name on its own unique line. This mirrors how a physical raffle works: more tickets in the box, more chances to win."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the names I paste in saved or sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything — your list, the winner count, and the draw history — stays in your browser's memory and localStorage and is never uploaded to a server. Your last list is restored automatically the next time you open the page from the same browser, but nothing about it is visible to us or anyone else; clearing site data removes it for good."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Random Name Picker</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Random Name Picker</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your list, choose how many winners you need, and let the built-in randomizer choose fairly — with a short suspense animation before the reveal.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Random name picker" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .opt-row { display:flex; flex-direction:column; gap:8px; margin-top:16px; }
+      #tool .opt-row label { display:flex; align-items:center; gap:9px; margin:0; font-size:14.5px; font-weight:600; cursor:pointer; }
+      #tool .opt-row input[type="checkbox"] { width:auto; flex:0 0 auto; }
+      #tool .count-group { max-width:180px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:14px; }
+      #tool .r-heading { margin:0 0 12px; font-weight:700; font-size:15px; color:var(--ink); }
+      #tool .winners-grid { display:flex; flex-wrap:wrap; gap:10px; }
+      #tool .win-slot { flex:1 1 110px; min-width:0; max-width:100%; padding:14px 10px; border:2px solid var(--line); border-radius:10px; background:var(--surface); text-align:center; display:flex; flex-direction:column; gap:4px; }
+      #tool .win-slot.rolling { border-color:var(--accent); opacity:.62; }
+      #tool .slot-no { font-size:11px; font-weight:700; color:var(--muted); letter-spacing:.02em; }
+      #tool .slot-name { font-size:18px; font-weight:800; line-height:1.3; word-break:break-word; overflow-wrap:anywhere; color:var(--accent-strong); }
+      [data-theme="dark"] #tool .slot-name, [data-theme="auto"] #tool .slot-name { color:var(--accent); }
+      #tool .meta-row { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-top:16px; font-size:13px; color:var(--muted); }
+      #tool .link-btn { background:none; border:none; padding:0; font:inherit; font-size:13px; color:var(--accent); cursor:pointer; text-decoration:underline; }
+      #tool .hist-heading { font-weight:600; font-size:13.5px; margin:14px 0 4px; }
+      #tool ol.history { margin:0; padding-left:20px; font-size:13.5px; line-height:1.7; color:var(--ink); }
+      #tool .note-fair { font-size:12.5px; color:var(--muted); margin-top:16px; }
+      @media (max-width:420px) {
+        #tool .win-slot { flex:1 1 90px; padding:12px 8px; }
+        #tool .slot-name { font-size:16px; }
+      }
+    </style>
+
+    <div class="input-group">
+      <label for="names" data-i18n="tool.names.label">Names (one per line)</label>
+      <textarea id="names" rows="7" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.names.ph" placeholder="Alice&#10;Bob&#10;Chen&#10;Dara&#10;Emeka&#10;Farid"></textarea>
+    </div>
+
+    <div class="input-group count-group">
+      <label for="winner-count" data-i18n="tool.count.label">Number of winners</label>
+      <input id="winner-count" type="number" inputmode="numeric" min="1" step="1" value="1" autocomplete="off">
+    </div>
+
+    <div class="opt-row">
+      <label><input type="checkbox" id="remove-winner"><span data-i18n="tool.remove.label">Remove winner(s) from the list after each draw</span></label>
+      <label><input type="checkbox" id="no-repeat"><span data-i18n="tool.norepeat.label">Don't repeat a winner across rounds</span></label>
+    </div>
+
+    <button type="button" id="calc-btn" class="btn" data-i18n="tool.btn.pick">Pick winner(s)</button>
+
+    <p class="err" id="err" hidden role="alert"></p>
+
+    <div class="result" id="result" hidden aria-live="polite">
+      <p class="r-heading" data-i18n="tool.r.heading">Winner(s)</p>
+      <div class="winners-grid" id="winners-grid"></div>
+      <div class="meta-row">
+        <span><span data-i18n="tool.r.count">Names remaining</span>: <strong id="r-count">0</strong></span>
+        <button type="button" class="link-btn" id="clear-history" data-i18n="tool.clear">Clear history</button>
+      </div>
+      <div id="history-wrap" hidden>
+        <p class="hist-heading" data-i18n="tool.r.history">Previous rounds</p>
+        <ol class="history" id="history"></ol>
+      </div>
+    </div>
+    <p class="note-fair" data-i18n="tool.note.fair">Picks use your browser's built-in cryptographic randomness (crypto.getRandomValues) with rejection sampling, so every eligible name has exactly the same chance.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>A fair way to draw one winner or a whole shortlist</h2>
+    <p>Picking a name out of a hat scales badly once the hat has more than a handful of names in it, and it scales even worse when you need three, five or ten winners instead of one. This picker replaces the hat: paste every name on its own line, say how many winners you need, and click once. The draw finishes in about a second, shows every winner at the same time, and never sends your list anywhere.</p>
+
+    <h2>How the draw stays unbiased</h2>
+    <p>Selecting a random item from a list sounds trivial, but the common shortcut — take a random 32-bit number and use the remainder after dividing by the list length — is subtly unfair. Since 2<sup>32</sup> rarely divides evenly by the number of names, the first few entries end up very slightly more likely to be picked. This tool avoids that by drawing from <code>crypto.getRandomValues</code> and discarding any value above the largest exact multiple, then trying again. For multiple winners, each slot is drawn one at a time from the shrinking pool of remaining names, so slot order never changes anyone's odds — only the display order is staggered for the reveal animation.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — three winners for a giveaway.</strong> You have 40 entries and need 3 winners for 3 different prizes. Set "Number of winners" to 3 and click Pick. The tool draws 3 distinct entries without replacement — nobody can fill two slots unless their name was listed more than once — and reveals all three with a short staggered animation.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a five-day presenter rota, no repeats.</strong> Ten teammates, one presenter picked per stand-up for a week. Turn on "Remove winner(s) from the list" and draw one winner each morning: each day's winner leaves the pool, so by day five everyone left has an equal shot and nobody has presented twice. By day ten, every teammate has presented exactly once.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — weekly raffle, list stays intact.</strong> A recurring 20-person raffle where you want to reuse the same roster every week but never repeat last week's winner. Leave the list untouched and turn on "Don't repeat a winner across rounds" instead of removing anyone — each week's winner is excluded from that week's draw only if you haven't cleared the history, and the full roster is still there to copy or edit for next time.</p>
+    </div>
+
+    <h2>Remove winner vs. no-repeat — which one do you want?</h2>
+    <table>
+      <thead><tr><th>Situation</th><th>Setting to use</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>Hand out 5 distinct prizes in one click</td><td>Number of winners = 5</td><td>One draw, five non-overlapping slots</td></tr>
+        <tr><td>Speaking order, team draft, seating rotation</td><td>Remove winner(s)</td><td>Every name appears exactly once, list shrinks each round</td></tr>
+        <tr><td>Keep the roster for next time, skip repeat winners this session</td><td>Don't repeat across rounds</td><td>List stays intact; already-won names sit out until you clear history</td></tr>
+        <tr><td>Classroom cold call, "who buys coffee today"</td><td>Neither</td><td>Every draw is fully independent — repeats are fine and expected</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Practical notes</h2>
+    <ul>
+      <li><strong>Blank lines and stray spaces</strong> are ignored automatically, so pasting a column straight out of a spreadsheet works without cleanup.</li>
+      <li><strong>Names are matched exactly, including case</strong> — "Bob" and "bob" are treated as two different entries. Keep capitalization consistent if you plan to use "don't repeat across rounds."</li>
+      <li><strong>Duplicate names act as extra tickets.</strong> Listing "Alice" twice doubles her odds; with multiple winners in one round, that could let her fill two of the slots. List each person once if every entry should have exactly one chance.</li>
+      <li><strong>Clearing history</strong> also resets which names count as "already won" for the no-repeat option, so use it to start a fresh cycle without retyping the list.</li>
+      <li><strong>Nothing leaves your browser.</strong> The list, results and history live only in this page and your browser's local storage — there is no server, account or upload involved.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/wheel-spinner/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Random Wheel Spinner</span></a><a class="related-item" href="https://tool-hub.me/dice-roller/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Dice Roller</span></a><a class="related-item" href="https://tool-hub.me/coin-flipper/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Coin Flip</span></a><a class="related-item" href="https://tool-hub.me/random-number-gen/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Random Number Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I pick more than one winner at once?</summary>
+      <p data-i18n="faq.a1">Set "Number of winners" to however many you need — 3 for a triple giveaway, 5 for a team draft — and click Pick. The tool draws that many distinct entries from your list in a single round, so nobody fills two slots unless you deliberately listed them more than once. Each winner still comes from an independent, unbiased draw against the remaining pool.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between removing a winner and not repeating winners across rounds?</summary>
+      <p data-i18n="faq.a2">"Remove winner(s) from the list" permanently deletes the drawn names from the textarea, so later rounds draw from a shrinking list — ideal for a running order or handing out one prize per person. "Don't repeat a winner across rounds" keeps your full list untouched but silently skips anyone who already won in a previous round this session, which is handy when you want to keep the original list for reference but still guarantee no repeats. Turn both off if every round should be completely independent, like a daily coffee-run pick.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Is the winner selection actually random and fair?</summary>
+      <p data-i18n="faq.a3">Yes. The picker uses crypto.getRandomValues, the same cryptographically secure source browsers use for security tokens, and rejects any value that would bias the result toward the start of the list — a common flaw in naive modulo-based random pickers. Every eligible name has exactly the same probability of being drawn, whether you're picking 1 winner from 5 names or 10 winners from 500.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can the same name win more than one slot in a single draw?</summary>
+      <p data-i18n="faq.a4">Only if you typed that name more than once — duplicate entries are treated as separate tickets, so listing "Alice" twice doubles her odds and, with multiple winners, could let her fill two slots in the same round. If you want each person to have exactly one chance, keep every name on its own unique line. This mirrors how a physical raffle works: more tickets in the box, more chances to win.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Are the names I paste in saved or sent anywhere?</summary>
+      <p data-i18n="faq.a5">No. Everything — your list, the winner count, and the draw history — stays in your browser's memory and localStorage and is never uploaded to a server. Your last list is restored automatically the next time you open the page from the same browser, but nothing about it is visible to us or anyone else; clearing site data removes it for good.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
