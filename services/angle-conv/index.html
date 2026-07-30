@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angle Converter — Degrees, Radians, Gradians and DMS</title>
+<meta name="description" content="Convert degrees, radians, gradians and turns instantly. See exact π fractions for common angles, a unit-circle table, and a DMS mode. Free and browser-only.">
+<meta name="keywords" content="degrees to radians, radians to degrees, angle converter, rad to deg, 45 degrees in radians, gradians to degrees, degrees minutes seconds converter, 각도 변환기, 라디안 변환">
+<link rel="canonical" href="https://tool-hub.me/angle-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Angle Converter — Degrees, Radians, Gradians and DMS">
+<meta property="og:description" content="Convert degrees, radians, gradians and turns instantly. See exact π fractions for common angles, a unit-circle table, and a DMS mode. Free and browser-only.">
+<meta property="og:url" content="https://tool-hub.me/angle-conv/">
+<meta property="og:image" content="https://tool-hub.me/angle-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Angle Converter",
+  "description": "Convert degrees, radians, gradians and turns instantly. See exact π fractions for common angles, a unit-circle table, and a DMS mode. Free and browser-only.",
+  "url": "https://tool-hub.me/angle-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Angle Converter", "item": "https://tool-hub.me/angle-conv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert degrees to radians?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the degree value by π/180 (about 0.0174533). For example 30° × π/180 = π/6 ≈ 0.5236 rad, and 90° × π/180 = π/2 ≈ 1.5708 rad. To go the other way, multiply radians by 180/π. This converter does the multiplication for you and also shows the exact π fraction — π/6, π/4, π/3 and so on — whenever the angle is a common one, instead of just a rounded decimal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a gradian and how does it relate to degrees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A gradian (also called a gon) divides a full circle into 400 equal parts instead of 360, so a right angle is exactly 100 gradians. The conversion is straightforward: 1 gradian = 0.9 degrees, and 1 degree = 10/9 ≈ 1.1111 gradians. Gradians were designed for decimal-friendly surveying and are still used in some civil engineering and land-surveying software, even though degrees and radians are far more common elsewhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do degrees, minutes and seconds (DMS) work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A degree splits into 60 minutes of arc, and each minute splits into 60 seconds of arc — the same base-60 structure as clock time. So 47.5° equals 47° 30′ 0″, because 0.5° × 60 = 30′. Switch on DMS mode in this converter to enter or read an angle as degrees, minutes and seconds directly; it stays perfectly in sync with the decimal-degree, radian, gradian and turn fields."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some angles show an exact π fraction and others don't?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Converting degrees to radians is always deg × π/180, so in principle every whole or simple decimal degree value has an exact fraction of π. This tool shows that exact fraction — like π/6 for 30° or 3π/4 for 135° — only when the fraction has a small, tidy denominator (up to 360). For arbitrary decimals such as 12.7° the exact fraction would have an ugly, meaningless denominator, so the tool shows only the decimal radian value instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my angle value sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This angle converter runs entirely in your browser — nothing you type is uploaded anywhere. The only thing saved is your last angle and whether DMS mode was on, kept in your browser's local storage so the tool is ready next time you open it."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Angle Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Angle Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type an angle once — see it in degrees, radians, gradians and turns instantly, with exact π fractions for common angles.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .ang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+      @media (max-width: 420px) { .ang-grid { grid-template-columns: 1fr; } }
+      .ang-grid label { margin: 14px 0 6px; }
+      .ang-grid > div:nth-child(-n+2) label { margin-top: 0; }
+      .ang-exact { margin: 10px 0 0; font-size: 13.5px; font-weight: 600; color: var(--accent-strong); }
+      [data-theme="dark"] .ang-exact { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .ang-exact { color: var(--accent); } }
+      .ang-toggle-row { display: flex; align-items: center; gap: 10px; margin-top: 20px; font-weight: 600; font-size: 14.5px; cursor: pointer; }
+      .ang-toggle-row input { width: auto; flex: 0 0 auto; }
+      .ang-dms-row { display: flex; gap: 10px; margin-top: 10px; }
+      .ang-dms-field { flex: 1 1 0; min-width: 0; }
+      .ang-dms-field label { display: block; font-size: 12px; color: var(--muted); font-weight: 600; margin: 0 0 6px; }
+      .ang-err { margin: 10px 0 0; font-size: 13.5px; font-weight: 600; color: #b91c1c; }
+      [data-theme="dark"] .ang-err { color: #f87171; }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .ang-err { color: #f87171; } }
+      .ang-tablewrap { margin-top: 26px; overflow-x: auto; }
+      .ang-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .ang-table { width: 100%; min-width: 420px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .ang-table th, .ang-table td { text-align: start; padding: 8px 10px; border-bottom: 1px solid var(--line); font-size: 14px; white-space: nowrap; }
+      .ang-table thead th { font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .ang-table td.ang-val { text-align: end; font-weight: 700; }
+      .ang-table tbody tr.ang-active { background: color-mix(in srgb, var(--accent) 10%, transparent); }
+    </style>
+
+    <div class="ang-grid">
+      <div id="ang-deg-wrap">
+        <label for="ang-degrees" data-i18n="tool.degrees.label">Degrees</label>
+        <input id="ang-degrees" type="number" inputmode="decimal" step="any" value="30" placeholder="e.g. 30" data-i18n-placeholder="tool.degrees.placeholder" autocomplete="off">
+      </div>
+      <div>
+        <label for="ang-radians" data-i18n="tool.radians.label">Radians</label>
+        <input id="ang-radians" type="number" inputmode="decimal" step="any" placeholder="e.g. 0.5236" data-i18n-placeholder="tool.radians.placeholder" autocomplete="off">
+      </div>
+      <div>
+        <label for="ang-gradians" data-i18n="tool.gradians.label">Gradians</label>
+        <input id="ang-gradians" type="number" inputmode="decimal" step="any" placeholder="e.g. 33.33" data-i18n-placeholder="tool.gradians.placeholder" autocomplete="off">
+      </div>
+      <div>
+        <label for="ang-turns" data-i18n="tool.turns.label">Turns</label>
+        <input id="ang-turns" type="number" inputmode="decimal" step="any" placeholder="e.g. 0.0833" data-i18n-placeholder="tool.turns.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <p class="ang-exact" id="ang-exact" hidden></p>
+    <p class="ang-err" id="ang-err" role="alert" hidden></p>
+
+    <label class="ang-toggle-row" for="ang-dms-toggle">
+      <input type="checkbox" id="ang-dms-toggle">
+      <span data-i18n="tool.dms.toggle">Use degrees-minutes-seconds (DMS)</span>
+    </label>
+    <div class="ang-dms-row" id="ang-dms-wrap" hidden>
+      <div class="ang-dms-field">
+        <label for="ang-dms-d" data-i18n="tool.dms.d.label">D°</label>
+        <input id="ang-dms-d" type="number" inputmode="numeric" step="1" autocomplete="off">
+      </div>
+      <div class="ang-dms-field">
+        <label for="ang-dms-m" data-i18n="tool.dms.m.label">M′</label>
+        <input id="ang-dms-m" type="number" inputmode="numeric" min="0" max="59" step="1" autocomplete="off">
+      </div>
+      <div class="ang-dms-field">
+        <label for="ang-dms-s" data-i18n="tool.dms.s.label">S″</label>
+        <input id="ang-dms-s" type="number" inputmode="decimal" min="0" max="59.999" step="any" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="ang-tablewrap">
+      <h2 data-i18n="tool.table.heading">Unit circle: common angles</h2>
+      <table class="ang-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.deg">Degrees</th>
+            <th class="ang-val" data-i18n="tool.table.col.rad">Radians (exact)</th>
+            <th class="ang-val" data-i18n="tool.table.col.grad">Gradians</th>
+            <th class="ang-val" data-i18n="tool.table.col.turn">Turns</th>
+          </tr>
+        </thead>
+        <tbody id="ang-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Four ways to measure the same angle</h2>
+    <p>An angle is a single geometric quantity, but four different unit systems describe it, each built for a different job. <strong>Degrees</strong> split a circle into 360 parts and are what most people learn in school and use in everyday life. <strong>Radians</strong> are the "natural" unit in mathematics — a full circle is 2π radians — and are what calculus, trigonometric derivatives, and virtually every programming language's <code>Math.sin()</code>/<code>Math.cos()</code> expect. <strong>Gradians</strong> (also called gons) split a circle into 400 parts so a right angle is a tidy 100 grad, a scheme designed for decimal-friendly surveying. <strong>Turns</strong> (or revolutions) simply count full rotations — 1 turn = 360° — and show up in navigation, motor RPM math, and animation timing. This converter keeps all four in sync as you type, plus a degrees-minutes-seconds (DMS) mode for the sexagesimal format used in navigation, astronomy and geographic coordinates.</p>
+
+    <h3>The conversion formulas</h3>
+    <table>
+      <thead><tr><th>From</th><th>To</th><th>Formula</th></tr></thead>
+      <tbody>
+        <tr><td>Degrees</td><td>Radians</td><td>rad = deg × π / 180</td></tr>
+        <tr><td>Radians</td><td>Degrees</td><td>deg = rad × 180 / π</td></tr>
+        <tr><td>Degrees</td><td>Gradians</td><td>grad = deg × 10 / 9</td></tr>
+        <tr><td>Degrees</td><td>Turns</td><td>turn = deg / 360</td></tr>
+        <tr><td>Degrees</td><td>DMS</td><td>D = ⌊deg⌋, M = ⌊(deg−D)×60⌋, S = ((deg−D)×60−M)×60</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. A 30° angle, the classic exact case.</strong> 30° × π/180 = π/6 ≈ 0.5236 rad. In gradians: 30 × 10/9 ≈ 33.33 grad. As a turn: 30/360 ≈ 0.0833 turn, or exactly 1/12 of a full rotation. Because 30 divides evenly into 180, the radian value has a small, exact π fraction — this converter shows "π/6" rather than just the decimal.</div>
+    <div class="example"><strong>2. Reading a survey bearing in DMS.</strong> A bearing given as 47° 30′ 15″ converts to decimal degrees as 47 + 30/60 + 15/3600 = 47.5042° — then multiply by π/180 to get ≈ 0.8291 rad if you need it for a trigonometric calculation. Switching on DMS mode lets you type the three components directly instead of doing this arithmetic by hand.</div>
+    <div class="example"><strong>3. A CSS or game-engine rotation.</strong> Design tools usually show rotation in degrees (e.g. "rotate(200deg)"), but a physics or WebGL calculation often wants radians. 200° × π/180 ≈ 3.4907 rad. Since 200/180 doesn't reduce to a small denominator, the exact-π-fraction feature intentionally stays quiet here and shows only the decimal — that absence is itself informative, telling you the angle isn't one of the "nice" textbook values.</div>
+
+    <h3>Why the exact π fraction only shows up sometimes</h3>
+    <p>Degree-to-radian conversion is always <em>deg × π/180</em>, so mathematically every rational degree value has some exact multiple of π. The catch is that for an arbitrary value like 12.7°, that exact fraction would be 127π/1800 — technically correct but useless to read. This tool only displays the fraction when its reduced denominator is 360 or smaller, which captures the angles people actually search for and memorize (multiples of 15°, plus finer ones like 22.5° = π/8) without cluttering the display with meaningless fractions for everything else.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Forgetting to switch calculator mode.</strong> Scientific calculators and spreadsheet functions like <code>SIN()</code> often default to radians; feeding them a raw degree value silently gives the wrong trig result. Always confirm the mode, or convert explicitly first.</li>
+      <li><strong>Mixing up gradians and grads-per-second units.</strong> "Gradian" (angle) and "gradient" (slope) are unrelated despite the similar spelling — this tool only handles the angular gradian (gon).</li>
+      <li><strong>Truncating instead of rounding seconds in DMS.</strong> 47° 29′ 60″ should carry over to 47° 30′ 0″; this converter normalizes overflowed minutes and seconds automatically so the output never shows an invalid "60″" or "60′".</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>This is a unit converter, not a trigonometry solver — it converts a given angle between representations but doesn't compute an angle from two sides of a triangle or from a slope. For angles outside the typical −360°…360° range (multi-turn rotations in animation or robotics, for instance), the degrees, radians, gradians and turns fields still convert correctly; only the unit-circle reference table below is limited to the standard 0°–360° set.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/area-conv/"><span class="related-ico" aria-hidden="true">📐</span><span class="related-name">Area Converter</span></a><a class="related-item" href="https://tool-hub.me/length-conv/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Length Converter</span></a><a class="related-item" href="https://tool-hub.me/speed-conv/"><span class="related-ico" aria-hidden="true">💨</span><span class="related-name">Speed Converter</span></a><a class="related-item" href="https://tool-hub.me/temp-conv/"><span class="related-ico" aria-hidden="true">🌡️</span><span class="related-name">Temperature Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I convert degrees to radians?</summary>
+      <p data-i18n="faq.a1">Multiply the degree value by π/180 (about 0.0174533). For example 30° × π/180 = π/6 ≈ 0.5236 rad, and 90° × π/180 = π/2 ≈ 1.5708 rad. To go the other way, multiply radians by 180/π. This converter does the multiplication for you and also shows the exact π fraction — π/6, π/4, π/3 and so on — whenever the angle is a common one, instead of just a rounded decimal.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What is a gradian and how does it relate to degrees?</summary>
+      <p data-i18n="faq.a2">A gradian (also called a gon) divides a full circle into 400 equal parts instead of 360, so a right angle is exactly 100 gradians. The conversion is straightforward: 1 gradian = 0.9 degrees, and 1 degree = 10/9 ≈ 1.1111 gradians. Gradians were designed for decimal-friendly surveying and are still used in some civil engineering and land-surveying software, even though degrees and radians are far more common elsewhere.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do degrees, minutes and seconds (DMS) work?</summary>
+      <p data-i18n="faq.a3">A degree splits into 60 minutes of arc, and each minute splits into 60 seconds of arc — the same base-60 structure as clock time. So 47.5° equals 47° 30′ 0″, because 0.5° × 60 = 30′. Switch on DMS mode in this converter to enter or read an angle as degrees, minutes and seconds directly; it stays perfectly in sync with the decimal-degree, radian, gradian and turn fields.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why do some angles show an exact π fraction and others don't?</summary>
+      <p data-i18n="faq.a4">Converting degrees to radians is always deg × π/180, so in principle every whole or simple decimal degree value has an exact fraction of π. This tool shows that exact fraction — like π/6 for 30° or 3π/4 for 135° — only when the fraction has a small, tidy denominator (up to 360). For arbitrary decimals such as 12.7° the exact fraction would have an ugly, meaningless denominator, so the tool shows only the decimal radian value instead.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my angle value sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This angle converter runs entirely in your browser — nothing you type is uploaded anywhere. The only thing saved is your last angle and whether DMS mode was on, kept in your browser's local storage so the tool is ready next time you open it.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
