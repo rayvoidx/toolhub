@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoe Size Converter — US, UK, EU & CM Size Chart</title>
+<meta name="description" content="Convert shoe sizes between US, UK, EU, and cm (Japan/Asia) for men, women, and kids with full size charts. Free, instant, computed entirely in your browser.">
+<meta name="keywords" content="shoe size converter, us to eu shoe size, uk to us shoe size, shoe size chart, cm to shoe size, 신발 사이즈 변환, 신발 사이즈표">
+<link rel="canonical" href="https://tool-hub.me/shoe-size-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shoe Size Converter — US, UK, EU & CM Size Chart">
+<meta property="og:description" content="Convert shoe sizes between US, UK, EU, and cm (Japan/Asia) for men, women, and kids with full size charts. Free, instant, computed entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/shoe-size-conv/">
+<meta property="og:image" content="https://tool-hub.me/shoe-size-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be123c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Shoe Size Converter",
+  "description": "Convert shoe sizes between US, UK, EU, and cm (Japan/Asia) for men, women, and kids with full size charts. Free, instant, computed entirely in your browser.",
+  "url": "https://tool-hub.me/shoe-size-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Shoe Size Converter", "item": "https://tool-hub.me/shoe-size-conv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert a US shoe size to UK, EU, or cm?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pick Men, Women, or Kids at the top of the converter, choose the size system you already know, and select or enter your size — the other three systems are read straight off a size chart, not calculated from a formula, so the numbers match the charts printed inside real shoes. For example, a men's US size 9 converts to UK 8.5, EU 42.5, and 27 cm. Because women's and kids' sizing use their own numbering, always pick the matching category first, or the converted sizes will be off by a size or two."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure my foot to find my cm (Japan/Asia) size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Stand on a sheet of paper with your heel against a wall, trace around your longest toe, then measure the straight-line distance from the wall to that mark in centimeters — that number is your foot length, and in Japan and much of Asia it is also literally your shoe size (a 25.5 cm foot wears a size 25.5). Measure both feet in the evening, when feet are slightly larger, and use the longer of the two. Enter that number into the cm field of this converter to see the matching US, UK, and EU sizes for men, women, or kids."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are men's and women's shoe sizes the same number for the same foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — for the same physical foot length, women's US sizing runs roughly one to one and a half sizes higher than men's US sizing, and the UK/EU conversions differ too. That's why this converter has separate Men and Women categories instead of one unisex scale: converting a women's US 8 with the men's chart would give the wrong UK, EU, or cm size. The exact offset varies slightly by brand, so a shoe's own size chart always overrides a general conversion tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use the kids' chart instead of the adult chart?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Switch to the Kids category once a child's foot reaches about US youth size 1 (roughly 19–20 cm, typically age 3–4 and up); the kids' table here covers youth sizes US 1 through 7, the range most school-age children fall into. Below that, toddler and infant shoes use a separate numbering system that isn't included here, so check the toddler chart printed on the shoebox instead. Once a child's US size passes about 7, most brands move them into adult sizing, so switch this tool to Men or Women instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why don't my converted sizes match a specific shoe brand exactly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Shoe sizing isn't governed by one single global standard — brands, and even individual models from the same brand, can run a half size or more narrower or wider than the general chart used here, especially between running shoes, boots, and dress shoes. This converter is a reliable starting point when shopping in a size system you don't normally use, but always check the brand's own size chart or fit reviews when it really matters. If you're between two sizes, sizing up is usually the safer choice for width and long-term comfort."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Shoe Size Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Shoe Size Converter</h1>
+    <p class="lede" data-i18n="hero.lede">What's my shoe size in another country? Pick US, UK, EU, or cm, enter your size, and see the exact match for men, women, and kids — instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .hint { margin-top:6px; }
+      #tool .error { color:#dc2626; font-weight:600; font-size:13.5px; margin-top:8px; }
+      #tool .badge { font-size:13px; font-weight:700; color:var(--accent-strong); margin:0 0 10px; }
+      [data-theme="dark"] #tool .badge, [data-theme="auto"] #tool .badge { color:var(--accent); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:10px; padding:12px 14px; background:var(--surface); }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); font-weight:600; }
+      #tool .rcard .rc-val { font-weight:800; font-size:22px; margin-top:4px; font-variant-numeric:tabular-nums; word-break:break-word; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin:10px 0 0; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="category-select" data-i18n="tool.category.label">Who is this for?</label>
+        <select id="category-select" data-i18n-aria-label="tool.category.label">
+          <option value="men" data-i18n="tool.category.men">Men</option>
+          <option value="women" data-i18n="tool.category.women">Women</option>
+          <option value="kids" data-i18n="tool.category.kids">Kids</option>
+        </select>
+      </div>
+      <div>
+        <label for="system-select" data-i18n="tool.system.label">I know my size in</label>
+        <select id="system-select" data-i18n-aria-label="tool.system.label">
+          <option value="us" data-i18n="tool.system.us">US</option>
+          <option value="uk" data-i18n="tool.system.uk">UK</option>
+          <option value="eu" data-i18n="tool.system.eu">EU</option>
+          <option value="cm" data-i18n="tool.system.cm">cm (Japan / Asia)</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="size-select" data-i18n="tool.value.label">Your size</label>
+    <select id="size-select" data-i18n-aria-label="tool.value.label" autocomplete="off"></select>
+    <input id="cm-input" type="number" inputmode="decimal" step="0.5" min="1" placeholder="e.g. 25.5" data-i18n-placeholder="tool.value.cmPh" data-i18n-aria-label="tool.value.label" autocomplete="off" hidden>
+    <p class="hint" id="cm-hint" data-i18n="tool.value.cmHint" hidden>Foot length in centimeters — see the measuring guide below.</p>
+    <p class="error" id="err-cm" role="alert" data-i18n="tool.err.invalidCm" hidden>Enter a positive number of centimeters, e.g. 25 or 25.5.</p>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.result.placeholder" style="margin:0;color:var(--muted);">Pick a size above to see the conversion</p>
+      <div id="result-grid" hidden>
+        <p class="badge" id="result-badge"></p>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.us">US</div><div class="rc-val" id="r-us"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.uk">UK</div><div class="rc-val" id="r-uk"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.eu">EU</div><div class="rc-val" id="r-eu"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.cm">cm (Japan / Asia)</div><div class="rc-val" id="r-cm"></div></div>
+        </div>
+        <p class="subtle" id="note-clamped" hidden></p>
+      </div>
+      <p class="subtle" data-i18n="tool.note.brandVariance">Sizes vary by brand and shoe style — treat this as a close estimate, not a guaranteed fit.</p>
+      <p class="subtle" data-i18n="tool.note.privacy">Every conversion runs in your browser — nothing you enter is sent to a server.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+      .guide-content th,.guide-content td{text-align:center;padding:6px 8px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content .twrap{overflow-x:auto;margin:12px 0}
+      .guide-content .twrap table{margin:0;min-width:360px}
+    </style>
+
+    <h2>Reading a shoe size chart without the guesswork</h2>
+    <p>Shoe sizing is one of the last places online shopping still gets confusing: the US, UK, EU, and Japan/Asia (cm) systems don't share a single formula, and brands print slightly different tables inside every box. This converter skips the guesswork by looking up your size directly in real published size charts — the same numbers you'd find printed on the inside tongue of a shoe — for men, women, and kids separately.</p>
+
+    <h2>How the size systems differ</h2>
+    <p>Each system counts differently, which is why a straight numeric comparison doesn't work:</p>
+    <ul>
+      <li><strong>US</strong> sizing uses separate scales for men, women, and kids, roughly a third of an inch (about 0.85 cm) apart per half size.</li>
+      <li><strong>UK</strong> sizing starts lower than US for the same foot and also differs between men's and women's scales.</li>
+      <li><strong>EU</strong> sizing (Paris point) is based on roughly two-thirds of a centimeter per size and is fairly consistent across men's and women's lines, though the starting points differ.</li>
+      <li><strong>cm (Japan/Asia)</strong> is the simplest of all: it's just your foot length in centimeters, rounded to the nearest half centimeter. A 26 cm foot wears a size 26 in Japan — there's no conversion table needed for that step, only for translating it to US, UK, or EU.</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Worked example.</strong> A men's US size 9 shoe is UK 8.5, EU 42.5, and 27 cm. A women's US size 8 is UK 5.5, EU 39, and 25 cm. A kids' US size 3 (youth) is UK 15.5, EU 35, and 22 cm — all four numbers describe the exact same physical shoe length, just counted differently.</p>
+    </div>
+
+    <h2>Full shoe size conversion charts</h2>
+    <p>These are the complete lookup tables this converter uses — the same values feed the interactive tool above, so switching category or size system there always matches a row below.</p>
+
+    <h3>Men's shoe size chart</h3>
+    <div class="twrap">
+    <table>
+      <thead><tr><th>US</th><th>UK</th><th>EU</th><th>cm</th></tr></thead>
+      <tbody>
+        <tr><td>6</td><td>5.5</td><td>38.5</td><td>24</td></tr>
+        <tr><td>6.5</td><td>6</td><td>39</td><td>24.5</td></tr>
+        <tr><td>7</td><td>6.5</td><td>40</td><td>25</td></tr>
+        <tr><td>7.5</td><td>7</td><td>40.5</td><td>25.5</td></tr>
+        <tr><td>8</td><td>7.5</td><td>41</td><td>26</td></tr>
+        <tr><td>8.5</td><td>8</td><td>42</td><td>26.5</td></tr>
+        <tr><td>9</td><td>8.5</td><td>42.5</td><td>27</td></tr>
+        <tr><td>9.5</td><td>9</td><td>43</td><td>27.5</td></tr>
+        <tr><td>10</td><td>9.5</td><td>44</td><td>28</td></tr>
+        <tr><td>10.5</td><td>10</td><td>44.5</td><td>28.5</td></tr>
+        <tr><td>11</td><td>10.5</td><td>45</td><td>29</td></tr>
+        <tr><td>11.5</td><td>11</td><td>45.5</td><td>29.5</td></tr>
+        <tr><td>12</td><td>11.5</td><td>46</td><td>30</td></tr>
+        <tr><td>13</td><td>12.5</td><td>47.5</td><td>31</td></tr>
+        <tr><td>14</td><td>13.5</td><td>48.5</td><td>32</td></tr>
+        <tr><td>15</td><td>14.5</td><td>49.5</td><td>33</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Women's shoe size chart</h3>
+    <div class="twrap">
+    <table>
+      <thead><tr><th>US</th><th>UK</th><th>EU</th><th>cm</th></tr></thead>
+      <tbody>
+        <tr><td>5</td><td>2.5</td><td>35.5</td><td>22</td></tr>
+        <tr><td>5.5</td><td>3</td><td>36</td><td>22.5</td></tr>
+        <tr><td>6</td><td>3.5</td><td>36.5</td><td>23</td></tr>
+        <tr><td>6.5</td><td>4</td><td>37.5</td><td>23.5</td></tr>
+        <tr><td>7</td><td>4.5</td><td>38</td><td>24</td></tr>
+        <tr><td>7.5</td><td>5</td><td>38.5</td><td>24.5</td></tr>
+        <tr><td>8</td><td>5.5</td><td>39</td><td>25</td></tr>
+        <tr><td>8.5</td><td>6</td><td>40</td><td>25.5</td></tr>
+        <tr><td>9</td><td>6.5</td><td>40.5</td><td>26</td></tr>
+        <tr><td>9.5</td><td>7</td><td>41</td><td>26.5</td></tr>
+        <tr><td>10</td><td>7.5</td><td>42</td><td>27</td></tr>
+        <tr><td>10.5</td><td>8</td><td>42.5</td><td>27.5</td></tr>
+        <tr><td>11</td><td>8.5</td><td>43</td><td>28</td></tr>
+        <tr><td>12</td><td>9.5</td><td>44</td><td>29</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Kids' shoe size chart (youth, US 1–7)</h3>
+    <div class="twrap">
+    <table>
+      <thead><tr><th>US</th><th>UK</th><th>EU</th><th>cm</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>13.5</td><td>32</td><td>20</td></tr>
+        <tr><td>1.5</td><td>14</td><td>33</td><td>20.5</td></tr>
+        <tr><td>2</td><td>14.5</td><td>33.5</td><td>21</td></tr>
+        <tr><td>2.5</td><td>15</td><td>34</td><td>21.5</td></tr>
+        <tr><td>3</td><td>15.5</td><td>35</td><td>22</td></tr>
+        <tr><td>3.5</td><td>16</td><td>35.5</td><td>22.5</td></tr>
+        <tr><td>4</td><td>16.5</td><td>36</td><td>23</td></tr>
+        <tr><td>4.5</td><td>17</td><td>36.5</td><td>23.5</td></tr>
+        <tr><td>5</td><td>17.5</td><td>37.5</td><td>24</td></tr>
+        <tr><td>5.5</td><td>18</td><td>38</td><td>24.5</td></tr>
+        <tr><td>6</td><td>18.5</td><td>38.5</td><td>25</td></tr>
+        <tr><td>6.5</td><td>19</td><td>39</td><td>25.5</td></tr>
+        <tr><td>7</td><td>19.5</td><td>40</td><td>26</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>This kids' chart covers youth/big-kid sizes, roughly ages 3 to 12. Toddler and infant shoes below US 1 use a separate numbering system that isn't included here — use the toddler chart printed on the shoebox instead.</p>
+
+    <h2>How to measure your foot at home</h2>
+    <ol>
+      <li>Place a sheet of paper on a hard floor against a wall.</li>
+      <li>Stand on the paper with your heel touching the wall and your weight evenly distributed.</li>
+      <li>Mark the tip of your longest toe (for most people this is the big toe, but not always).</li>
+      <li>Measure the straight-line distance from the wall to the mark, in centimeters.</li>
+      <li>Repeat for the other foot — measure both, since most people have one foot slightly longer, and always size for the larger one.</li>
+    </ol>
+    <p>Measure in the evening when your feet are at their largest, and if you'll wear thick socks or orthotics with the shoe, keep that in mind when deciding whether to round up.</p>
+
+    <h2>Why sizes vary between brands</h2>
+    <p>There is no single global body that enforces one exact shoe size standard the way there is for, say, the meter. Each brand — and often each shoe last within a brand — is designed around its own fit model, so a size 9 running shoe from one brand can measure differently from a size 9 dress shoe from another. Treat any general conversion chart, including this one, as a reliable starting point rather than a guarantee, and check brand-specific size guides or customer reviews mentioning fit whenever it really matters, such as for running shoes or boots worn all day.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/speed-conv/"><span class="related-ico" aria-hidden="true">💨</span><span class="related-name">Speed Converter</span></a><a class="related-item" href="https://tool-hub.me/square-footage-calc/"><span class="related-ico" aria-hidden="true">▧</span><span class="related-name">Square Footage Calculator</span></a><a class="related-item" href="https://tool-hub.me/temp-conv/"><span class="related-ico" aria-hidden="true">🌡️</span><span class="related-name">Temperature Converter</span></a><a class="related-item" href="https://tool-hub.me/volume-conv/"><span class="related-ico" aria-hidden="true">🧊</span><span class="related-name">Volume Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I convert a US shoe size to UK, EU, or cm?</summary>
+      <p data-i18n="faq.a1">Pick Men, Women, or Kids at the top of the converter, choose the size system you already know, and select or enter your size — the other three systems are read straight off a size chart, not calculated from a formula, so the numbers match the charts printed inside real shoes. For example, a men's US size 9 converts to UK 8.5, EU 42.5, and 27 cm. Because women's and kids' sizing use their own numbering, always pick the matching category first, or the converted sizes will be off by a size or two.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I measure my foot to find my cm (Japan/Asia) size?</summary>
+      <p data-i18n="faq.a2">Stand on a sheet of paper with your heel against a wall, trace around your longest toe, then measure the straight-line distance from the wall to that mark in centimeters — that number is your foot length, and in Japan and much of Asia it is also literally your shoe size (a 25.5 cm foot wears a size 25.5). Measure both feet in the evening, when feet are slightly larger, and use the longer of the two. Enter that number into the cm field of this converter to see the matching US, UK, and EU sizes for men, women, or kids.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Are men's and women's shoe sizes the same number for the same foot?</summary>
+      <p data-i18n="faq.a3">No — for the same physical foot length, women's US sizing runs roughly one to one and a half sizes higher than men's US sizing, and the UK/EU conversions differ too. That's why this converter has separate Men and Women categories instead of one unisex scale: converting a women's US 8 with the men's chart would give the wrong UK, EU, or cm size. The exact offset varies slightly by brand, so a shoe's own size chart always overrides a general conversion tool.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">When should I use the kids' chart instead of the adult chart?</summary>
+      <p data-i18n="faq.a4">Switch to the Kids category once a child's foot reaches about US youth size 1 (roughly 19–20 cm, typically age 3–4 and up); the kids' table here covers youth sizes US 1 through 7, the range most school-age children fall into. Below that, toddler and infant shoes use a separate numbering system that isn't included here, so check the toddler chart printed on the shoebox instead. Once a child's US size passes about 7, most brands move them into adult sizing, so switch this tool to Men or Women instead.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Why don't my converted sizes match a specific shoe brand exactly?</summary>
+      <p data-i18n="faq.a5">Shoe sizing isn't governed by one single global standard — brands, and even individual models from the same brand, can run a half size or more narrower or wider than the general chart used here, especially between running shoes, boots, and dress shoes. This converter is a reliable starting point when shopping in a size system you don't normally use, but always check the brand's own size chart or fit reviews when it really matters. If you're between two sizes, sizing up is usually the safer choice for width and long-term comfort.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

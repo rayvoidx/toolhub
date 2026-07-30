@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inflation Calculator — Future Value &amp; Purchasing Power</title>
+<meta name="description" content="Enter an amount, an inflation rate, and years to see future purchasing power or what a past amount is worth today. Free, no ads, computed in your browser.">
+<meta name="keywords" content="inflation calculator, purchasing power calculator, future value of money, what will money be worth, inflation rate calculator, 인플레이션 계산기">
+<link rel="canonical" href="https://tool-hub.me/inflation-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Inflation Calculator — Future Value &amp; Purchasing Power">
+<meta property="og:description" content="Enter an amount, an inflation rate, and years to see future purchasing power or what a past amount is worth today. Free, no ads, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/inflation-calc/">
+<meta property="og:image" content="https://tool-hub.me/inflation-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Inflation Calculator",
+  "description": "Enter an amount, an inflation rate, and years to see future purchasing power or what a past amount is worth today. Free, no ads, computed in your browser.",
+  "url": "https://tool-hub.me/inflation-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Inflation Calculator", "item": "https://tool-hub.me/inflation-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the future purchasing power of money?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the amount by (1 + inflation rate)^years. For example, $1,000 today at 3% average annual inflation will have the purchasing power of about $744 in 10 years — meaning in 10 years that same $1,000 will only buy what $744 buys today. Switch to Future value mode, enter the amount, rate, and years, and this calculator does the compounding for you, plus the nominal amount you'd need then just to match today's buying power."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the \"past value\" or \"what's it worth today\" mode work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Past value mode runs the compounding forward: multiply a past amount by (1 + inflation rate)^years elapsed. For example, if something cost $100 ten years ago and average annual inflation was 3%, its equivalent value today is about $134 — prices rose roughly 34% over that time. Enter the past amount, the rate, and how many years have passed, and switch to Past value mode to see today's equivalent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do I find my country's actual inflation rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator does not include a historical CPI database — you supply the average annual rate yourself, so results are only as accurate as the rate you enter. For real, published rates, check your country's statistics agency: the U.S. Bureau of Labor Statistics for CPI, Eurostat for the eurozone's HICP, or your national statistics office. Many publish both the current year-over-year rate and long-run historical averages you can plug into this tool."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this the same as an official CPI inflation calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Official CPI calculators, like the U.S. BLS calculator, use actual recorded prices for a basket of goods in specific years, so they capture real-world fluctuations year to year. This tool instead assumes one constant average annual rate compounding steadily over the whole period, which is useful for quick projections and \"what-if\" estimates but will not exactly match historical CPI figures — treat it as an estimate, not official data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a negative rate to model deflation, and is my data sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — entering a negative rate models deflation (falling prices), and the calculator handles it the same way, just compounding downward instead of upward. And no, nothing you enter is sent to a server: every calculation, including your last amount, rate, and years, runs and is stored entirely in your browser via localStorage."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Inflation Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Inflation Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">See how inflation changes what your money can buy. Enter an amount, an average annual inflation rate, and a number of years to get future purchasing power — or flip the direction to see what a past amount is worth today.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:6px 0 4px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; color:var(--accent-strong); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
+      #tool details.adv[open] { padding-bottom:12px; }
+      #tool table.sched { width:100%; border-collapse:collapse; margin-top:4px; font-size:14px; }
+      #tool table.sched th, #tool table.sched td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool table.sched th:first-child, #tool table.sched td:first-child { text-align:left; }
+      #tool table.sched th { color:var(--muted); font-weight:600; }
+      @media(max-width:420px){ #tool .result-cards { grid-template-columns:1fr 1fr; } }
+    </style>
+
+    <p id="mode-label" style="font-weight:600;font-size:14px;margin:0 0 4px;" data-i18n="tool.mode.label">Calculation direction</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="mode-label">
+      <label><input type="radio" name="calcmode" value="future" checked><span data-i18n="tool.mode.future">Future value</span></label>
+      <label><input type="radio" name="calcmode" value="past"><span data-i18n="tool.mode.past">Past value</span></label>
+    </div>
+
+    <label for="amount-input" data-i18n="tool.amount.label">Amount</label>
+    <input type="text" id="amount-input" inputmode="decimal" autocomplete="off"
+           placeholder="e.g. 1,000" data-i18n-placeholder="tool.amount.ph">
+    <p id="amount-note" class="subtle" style="margin:6px 0 0;"></p>
+
+    <label for="rate-input" data-i18n="tool.rate.label">Average annual inflation rate (%)</label>
+    <input type="number" id="rate-input" inputmode="decimal" step="any" autocomplete="off"
+           placeholder="e.g. 3" data-i18n-placeholder="tool.rate.ph">
+    <div class="chips" id="rate-chips" role="group" aria-label="Common inflation rates" data-i18n-aria-label="tool.rate.chipsAria">
+      <button type="button" class="chip" data-rate="2">2%</button>
+      <button type="button" class="chip" data-rate="3">3%</button>
+      <button type="button" class="chip" data-rate="5">5%</button>
+      <button type="button" class="chip" data-rate="8">8%</button>
+    </div>
+
+    <label for="years-input" data-i18n="tool.years.label">Number of years</label>
+    <input type="number" id="years-input" inputmode="numeric" min="1" step="1" autocomplete="off"
+           placeholder="e.g. 10" data-i18n-placeholder="tool.years.ph">
+    <div class="chips" id="year-chips" role="group" aria-label="Common periods in years" data-i18n-aria-label="tool.years.chipsAria">
+      <button type="button" class="chip" data-years="5">5</button>
+      <button type="button" class="chip" data-years="10">10</button>
+      <button type="button" class="chip" data-years="20">20</button>
+      <button type="button" class="chip" data-years="30">30</button>
+    </div>
+    <p id="years-note" class="subtle" style="margin:6px 0 0;"></p>
+
+    <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+    <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <div class="result-cards">
+          <div class="rcard hero-card"><div class="rc-label" id="r-hero-label"></div><div class="rc-val" id="r-hero"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.inflPct">Cumulative price change</div><div class="rc-val" id="r-inflpct"></div></div>
+          <div class="rcard" id="card-cost"><div class="rc-label" data-i18n="tool.result.cost">Equivalent cost then</div><div class="rc-val" id="r-cost"></div></div>
+        </div>
+        <p class="subtle" id="r-sub" style="margin:10px 0 0;"></p>
+
+        <details class="adv" id="sched-wrap">
+          <summary data-i18n="tool.sched.summary">Year-by-year table</summary>
+          <table class="sched">
+            <thead><tr><th data-i18n="tool.sched.year">Year</th><th id="sched-th-a"></th><th id="sched-th-b"></th></tr></thead>
+            <tbody id="sched-body"></tbody>
+          </table>
+          <p class="subtle" id="sched-trunc" style="margin:6px 0 0;" hidden></p>
+        </details>
+
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were outside the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;font-weight:600;" data-i18n="tool.note.disclaimer">This is an arithmetic estimate using the rate you entered — not official CPI data, financial, tax, or investment advice.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What an inflation calculator actually measures</h2>
+    <p>Inflation is the rate at which the general price level rises, which means the same unit of currency buys a little less each year. This calculator turns that abstract idea into two concrete answers. In <strong>Future value</strong> mode, you give it an amount you have today and it tells you what that money will feel like — its purchasing power — after a number of years of compounding inflation, plus the nominal cost you'd need to reach then to match today's buying power. In <strong>Past value</strong> mode, you flip the direction: give it an amount from some point in the past and it grows that figure forward to today's equivalent, which is the classic "what would this cost today?" question people ask about old prices, wages, or purchases.</p>
+
+    <h3>How to use this calculator</h3>
+    <ol>
+      <li>Choose a <strong>calculation direction</strong>: Future value (today → later) or Past value (earlier → today).</li>
+      <li>Enter the <strong>amount</strong> — today's money in Future value mode, or the historical amount in Past value mode.</li>
+      <li>Enter the <strong>average annual inflation rate</strong> you want to assume, or tap one of the quick presets. This is a single steady rate, not a year-by-year historical series.</li>
+      <li>Enter the <strong>number of years</strong>, or tap a preset. In Past value mode this is how many years ago the amount is from.</li>
+      <li>Pick a <strong>currency</strong> for formatting — the math itself is currency-agnostic.</li>
+      <li>Read the result cards and expand the <strong>year-by-year table</strong> to see how the figure moves one year at a time.</li>
+    </ol>
+
+    <h3>The formulas behind the numbers</h3>
+    <div class="example">
+      <strong>Future value mode:</strong> Purchasing power in N years = Amount ÷ (1 + rate)<sup>N</sup>. Equivalent cost in N years = Amount × (1 + rate)<sup>N</sup>.
+      <p style="margin:10px 0 0">The first formula shrinks today's amount into what it will really be able to buy later, expressed in today's money. The second grows today's amount into the bigger nominal figure you'd need later just to buy the same things — the two are reciprocals of the same compounding relationship.</p>
+    </div>
+    <div class="example">
+      <strong>Past value mode:</strong> Today's equivalent = Past amount × (1 + rate)<sup>N</sup>.
+      <p style="margin:10px 0 0">Prices were lower N years ago, so this formula compounds the historical amount forward by the same rate to land on what an equal amount of purchasing power costs today.</p>
+    </div>
+
+    <h3>Three worked examples</h3>
+    <div class="example"><strong>Example 1 — future purchasing power.</strong> $1,000 today, 3% average annual inflation, 10 years. Purchasing power = 1,000 ÷ 1.03<sup>10</sup> ≈ <strong>$744</strong>. Equivalent cost then = 1,000 × 1.03<sup>10</sup> ≈ <strong>$1,344</strong>. In other words, holding that $1,000 as cash for 10 years leaves you able to buy about three-quarters of what you can buy with it today.</div>
+    <div class="example"><strong>Example 2 — what a past price equals today.</strong> Something cost $100 back in 2005 (20 years ago from a 2025 reference point), and average annual inflation over that stretch was about 2.8%. Today's equivalent = 100 × 1.028<sup>20</sup> ≈ <strong>$174</strong> — prices roughly rose 74% over those two decades.</div>
+    <div class="example"><strong>Example 3 — a high-inflation scenario.</strong> ₩10,000,000 today at 8% average annual inflation for 5 years: purchasing power = 10,000,000 ÷ 1.08<sup>5</sup> ≈ <strong>₩6,806,000</strong> — a much sharper erosion than a typical 2–3% target rate, which is exactly why the rate you assume matters so much to the result.</div>
+
+    <h3>Where the numbers come from — and where they don't</h3>
+    <p>This tool does not ship a database of historical Consumer Price Index (CPI) figures. Real-world inflation is not a single constant rate — it moves up and down year to year, and it differs across product categories (housing and education have often risen faster than electronics, for example). What this calculator gives you is a clean compounding estimate based on one <em>average</em> annual rate that you choose. For an actual historical lookup — "what did $500 in 1990 really cost in 2024, using the real recorded CPI path" — use your country's official calculator (for example, the U.S. Bureau of Labor Statistics' CPI Inflation Calculator) or its statistics agency's published index. Use this tool instead for quick projections, planning conversations, and "what if inflation averages X% for Y years" scenarios, where a single assumed rate is exactly what you want to vary and test.</p>
+
+    <h3>Common mistakes when estimating inflation's effect</h3>
+    <ul>
+      <li><strong>Treating one year's headline rate as a decades-long average.</strong> A single year's inflation print (say, a spike to 8%) rarely holds for 20 or 30 years — long-run planning usually calls for a lower, smoothed average rate instead.</li>
+      <li><strong>Using simple (non-compounding) math.</strong> "3% a year for 10 years" is not a 30% total increase — compounding at 3% for 10 years is about 34.4%, and the gap widens with longer periods and higher rates.</li>
+      <li><strong>Forgetting the reciprocal relationship.</strong> A 20% cumulative price increase does not mean purchasing power falls by 20% — it falls by 20 ÷ 120 ≈ 16.7%, since the "cost" and "purchasing power" views use the increase differently as a base.</li>
+      <li><strong>Assuming one national average applies evenly.</strong> Your personal cost of living may rise faster or slower than the headline number depending on what you actually spend money on.</li>
+    </ul>
+
+    <h3>What this calculator doesn't do</h3>
+    <p>It is not a substitute for official CPI data, and it is not financial, tax, or investment advice — it only performs the arithmetic of compound growth and decay on the amount, rate, and years you supply. Every calculation runs locally in your browser; nothing you type is ever sent to, or stored on, a server.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/cagr-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">CAGR Calculator</span></a><a class="related-item" href="https://tool-hub.me/compound-interest-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Compound Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/savings-calc/"><span class="related-ico" aria-hidden="true">💰</span><span class="related-name">Savings Calculator</span></a><a class="related-item" href="https://tool-hub.me/investment-goal-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Investment Goal Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I calculate the future purchasing power of money?</summary>
+      <p data-i18n="faq.a1">Divide the amount by (1 + inflation rate)^years. For example, $1,000 today at 3% average annual inflation will have the purchasing power of about $744 in 10 years — meaning in 10 years that same $1,000 will only buy what $744 buys today. Switch to Future value mode, enter the amount, rate, and years, and this calculator does the compounding for you, plus the nominal amount you'd need then just to match today's buying power.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How does the "past value" or "what's it worth today" mode work?</summary>
+      <p data-i18n="faq.a2">Past value mode runs the compounding forward: multiply a past amount by (1 + inflation rate)^years elapsed. For example, if something cost $100 ten years ago and average annual inflation was 3%, its equivalent value today is about $134 — prices rose roughly 34% over that time. Enter the past amount, the rate, and how many years have passed, and switch to Past value mode to see today's equivalent.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Where do I find my country's actual inflation rate?</summary>
+      <p data-i18n="faq.a3">This calculator does not include a historical CPI database — you supply the average annual rate yourself, so results are only as accurate as the rate you enter. For real, published rates, check your country's statistics agency: the U.S. Bureau of Labor Statistics for CPI, Eurostat for the eurozone's HICP, or your national statistics office. Many publish both the current year-over-year rate and long-run historical averages you can plug into this tool.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is this the same as an official CPI inflation calculator?</summary>
+      <p data-i18n="faq.a4">No. Official CPI calculators, like the U.S. BLS calculator, use actual recorded prices for a basket of goods in specific years, so they capture real-world fluctuations year to year. This tool instead assumes one constant average annual rate compounding steadily over the whole period, which is useful for quick projections and "what-if" estimates but will not exactly match historical CPI figures — treat it as an estimate, not official data.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can I use a negative rate to model deflation, and is my data sent anywhere?</summary>
+      <p data-i18n="faq.a5">Yes — entering a negative rate models deflation (falling prices), and the calculator handles it the same way, just compounding downward instead of upward. And no, nothing you enter is sent to a server: every calculation, including your last amount, rate, and years, runs and is stored entirely in your browser via localStorage.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
