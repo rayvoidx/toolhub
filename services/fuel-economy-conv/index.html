@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuel Economy Converter — MPG, L/100km & km/L, instantly</title>
+<meta name="description" content="Convert fuel economy between MPG (US), MPG (UK), L/100km and km/L instantly — type any field. Note: lower L/100km means better efficiency. Free, browser-only.">
+<meta name="keywords" content="mpg to l/100km, fuel economy converter, km/l to mpg, l/100km to mpg, fuel consumption converter, 연비 변환기">
+<link rel="canonical" href="https://tool-hub.me/fuel-economy-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fuel Economy Converter — MPG, L/100km & km/L, instantly">
+<meta property="og:description" content="Convert fuel economy between MPG (US), MPG (UK), L/100km and km/L instantly — type any field. Note: lower L/100km means better efficiency. Free, browser-only.">
+<meta property="og:url" content="https://tool-hub.me/fuel-economy-conv/">
+<meta property="og:image" content="https://tool-hub.me/fuel-economy-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fuel Economy Converter",
+  "description": "Convert fuel economy between MPG (US), MPG (UK), L/100km and km/L instantly — type any field. Note: lower L/100km means better efficiency. Free, browser-only.",
+  "url": "https://tool-hub.me/fuel-economy-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Fuel Economy Converter", "item": "https://tool-hub.me/fuel-economy-conv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert MPG to L/100km?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide 235.215 by the MPG (US) figure to get L/100km — this constant comes from converting miles to kilometers and US gallons to liters, then inverting so a lower number means less fuel burned. For example, 30 MPG (US) gives 235.215 ÷ 30 = 7.84 L/100km. Type into the MPG (US) field and the L/100km field updates instantly using this exact formula."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a lower L/100km number mean better fuel economy, unlike MPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MPG and km/L measure distance per unit of fuel, so a bigger number is better — you are going further on the same amount of fuel. L/100km flips that: it measures fuel used over a fixed distance, so a smaller number means the car burns less fuel to cover the same 100 km. A car rated at 3.9 L/100km is far more efficient than one rated at 15.7 L/100km, even though 3.9 is the smaller number. Keep this inverse relationship in mind whenever you compare L/100km against MPG or km/L."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between MPG (US) and MPG (UK)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both measure miles traveled per gallon of fuel, but the gallon itself differs: a US gallon is 3.785411784 liters, while a UK (Imperial) gallon is 4.54609 liters — about 20% larger. Because the UK gallon holds more fuel, the same real-world efficiency produces a higher MPG (UK) number than MPG (US) — roughly MPG (UK) = MPG (US) × 1.201. For example, a car rated at 30 MPG (US) is the same car at 36.0 MPG (UK)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert km/L to MPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply km/L by 2.352 for MPG (US), or by 2.825 for MPG (UK) — these factors come from converting kilometers to miles and liters to the respective gallon size. For example, 12.75 km/L × 2.352 ≈ 30.0 MPG (US), and the same 12.75 km/L × 2.825 ≈ 36.0 MPG (UK). Type into the km/L field and every other unit, including L/100km, updates at the same time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my fuel economy data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This fuel economy converter runs entirely in your browser — every number you type stays on your device and is never uploaded anywhere. The only thing saved is your last value, kept in your browser's local storage so it's there next time you open the page; clearing your browser data removes it."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Fuel Economy Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Fuel Economy Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a fuel economy value into any field — MPG (US), MPG (UK), L/100km, or km/L — and the rest update instantly. Note: L/100km runs in reverse, where lower is better.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Fuel economy converter" data-i18n-aria-label="tool.aria" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .fc-row { display: flex; gap: 10px; }
+      .fc-row > div { flex: 1 1 0; min-width: 0; }
+      .fc-hint { margin: 6px 2px 0; font-size: 12.5px; color: var(--muted); }
+      .fc-result { margin-top: 22px; }
+      .fc-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+      .fc-eq { font-size: clamp(15px, 4.2vw, 19px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.4; }
+      [data-theme="dark"] .fc-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .fc-eq { color: var(--accent); } }
+      .fc-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .fc-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .fc-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .fc-copybtn { color: var(--accent); } }
+      .fc-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .fc-tablewrap { margin-top: 26px; overflow-x: auto; }
+      .fc-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .fc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .fc-table th, .fc-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; white-space: nowrap; }
+      .fc-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .fc-table td.fc-val { text-align: end; font-weight: 700; }
+      .fc-table tbody tr { cursor: pointer; }
+      .fc-table tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+      .fc-table tbody tr.fc-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+      @media (max-width: 420px) {
+        .fc-row { flex-wrap: wrap; }
+        .fc-row > div { flex: 1 1 45%; }
+      }
+    </style>
+
+    <div class="fc-row">
+      <div>
+        <label for="fc-mpgus" data-i18n="tool.mpgus.label">MPG (US)</label>
+        <input id="fc-mpgus" type="number" inputmode="decimal" step="any" min="0" placeholder="e.g. 30" data-i18n-placeholder="tool.mpgus.placeholder" autocomplete="off" autofocus>
+      </div>
+      <div>
+        <label for="fc-mpguk" data-i18n="tool.mpguk.label">MPG (UK)</label>
+        <input id="fc-mpguk" type="number" inputmode="decimal" step="any" min="0" placeholder="e.g. 36" data-i18n-placeholder="tool.mpguk.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="fc-row">
+      <div>
+        <label for="fc-l100km" data-i18n="tool.l100km.label">L/100km</label>
+        <input id="fc-l100km" type="number" inputmode="decimal" step="any" min="0" placeholder="e.g. 7.8" data-i18n-placeholder="tool.l100km.placeholder" autocomplete="off">
+      </div>
+      <div>
+        <label for="fc-kml" data-i18n="tool.kml.label">km/L</label>
+        <input id="fc-kml" type="number" inputmode="decimal" step="any" min="0" placeholder="e.g. 12.8" data-i18n-placeholder="tool.kml.placeholder" autocomplete="off">
+      </div>
+    </div>
+    <p class="fc-hint" id="fc-hint" data-i18n="tool.l100km.hint">Lower is better here — unlike MPG and km/L, where a higher number is more efficient.</p>
+
+    <div class="result fc-result" id="fc-result">
+      <div class="fc-primary">
+        <span class="fc-eq" id="fc-eq">—</span>
+        <button type="button" class="fc-copybtn" id="fc-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="fc-note" id="fc-note" data-i18n="tool.result.placeholder">Enter a fuel economy value in any field — every other unit updates instantly.</p>
+    </div>
+
+    <div class="fc-tablewrap">
+      <h2 data-i18n="tool.table.heading">Common fuel economy values</h2>
+      <table class="fc-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.mpgus">MPG (US)</th>
+            <th data-i18n="tool.table.col.mpguk">MPG (UK)</th>
+            <th class="fc-val" data-i18n="tool.table.col.l100km">L/100km</th>
+            <th class="fc-val" data-i18n="tool.table.col.kml">km/L</th>
+          </tr>
+        </thead>
+        <tbody id="fc-tbody"></tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why fuel economy needs a dedicated converter</h2>
+    <p>Fuel economy is reported in at least four different units depending on where you are and what you're reading: US window stickers and car reviews use MPG (miles per US gallon), UK and older Commonwealth sources use MPG (Imperial), most of Europe, Latin America and Asia use L/100km, and Japan, Korea, India and much of Southeast Asia use km/L. None of these convert with a simple multiplication the way, say, meters to feet do — MPG and km/L are "distance per fuel," while L/100km is "fuel per fixed distance," so it moves in the opposite direction. Comparing a European car's 6.5 L/100km spec sheet against a US car's 34 MPG rating by eye is genuinely hard to do in your head, and it's easy to get the direction backwards.</p>
+    <p>This converter keeps all four units visible and synced at once: type into any field and the other three update immediately, so you can sanity-check a number the instant you see it — while shopping for a car across markets, comparing a rental car's spec sheet, doing a road-trip fuel budget, or checking a textbook or exam question that mixes unit systems.</p>
+
+    <h2>How the numbers are calculated</h2>
+    <p>Every conversion here reduces to two defined constants: 1 mile = 1.609344 km, 1 US gallon = 3.785411784 liters, and 1 UK (Imperial) gallon = 4.54609 liters. From those:</p>
+    <ul>
+      <li><strong>MPG (US) → L/100km</strong>: L/100km = 235.215 ÷ MPG (US)</li>
+      <li><strong>MPG (UK) → L/100km</strong>: L/100km = 282.481 ÷ MPG (UK)</li>
+      <li><strong>km/L → L/100km</strong>: L/100km = 100 ÷ km/L (and the reverse: km/L = 100 ÷ L/100km)</li>
+      <li><strong>km/L → MPG (US)</strong>: MPG (US) = km/L × 2.352</li>
+      <li><strong>km/L → MPG (UK)</strong>: MPG (UK) = km/L × 2.825</li>
+      <li><strong>MPG (US) → MPG (UK)</strong>: MPG (UK) ≈ MPG (US) × 1.201 (because the Imperial gallon is about 20% larger)</li>
+    </ul>
+    <p>The 235.215 and 282.481 constants divide back into themselves, which is why the MPG-to-L/100km formula and the L/100km-to-MPG formula are the exact same division — a detail that trips people up because most unit conversions use a multiply-one-way, divide-the-other pair of factors instead.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a US car spec sheet.</strong> A car rated at 30 MPG (US): L/100km = 235.215 ÷ 30 = <strong>7.84</strong>, km/L = 100 ÷ 7.84 = <strong>12.75</strong>, and MPG (UK) = 12.75 × 2.825 = <strong>36.0</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a European spec sheet.</strong> A car rated at 6 L/100km: km/L = 100 ÷ 6 = <strong>16.67</strong>, MPG (US) = 16.67 × 2.352 = <strong>39.2</strong>, and MPG (UK) = 16.67 × 2.825 = <strong>47.1</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a Japanese or Korean spec sheet.</strong> A car rated at 20 km/L: L/100km = 100 ÷ 20 = <strong>5.00</strong>, MPG (US) = 20 × 2.352 = <strong>47.0</strong>, and MPG (UK) = 20 × 2.825 = <strong>56.5</strong>.</p>
+    </div>
+
+    <h2>Typical fuel economy by vehicle type</h2>
+    <p>These are rough real-world ranges, not official ratings, to help you sanity-check a number that seems off:</p>
+    <table>
+      <thead><tr><th>Vehicle type</th><th>MPG (US)</th><th>L/100km</th><th>km/L</th></tr></thead>
+      <tbody>
+        <tr><td>Large SUV / pickup truck</td><td>15–20</td><td>15.7–11.8</td><td>6.4–8.5</td></tr>
+        <tr><td>Midsize sedan</td><td>25–32</td><td>9.4–7.3</td><td>10.6–13.6</td></tr>
+        <tr><td>Compact car</td><td>32–40</td><td>7.3–5.9</td><td>13.6–17.0</td></tr>
+        <tr><td>Hybrid sedan</td><td>45–58</td><td>5.2–4.1</td><td>19.1–24.6</td></tr>
+        <tr><td>Small motorcycle / scooter</td><td>70–100+</td><td>3.4–2.4</td><td>29.8–42.5</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and things to double-check</h2>
+    <ul>
+      <li><strong>Mixing up MPG (US) and MPG (UK).</strong> A "40 MPG" claim can mean two different real efficiencies depending on which gallon was used — always check the source before comparing across markets. This converter shows both at once so the gap is visible immediately.</li>
+      <li><strong>Reading L/100km the wrong direction.</strong> Because MPG and km/L reward a bigger number, it's an easy habit to assume the same for L/100km — but a car advertised at "4.5 L/100km" is more efficient than one at "8 L/100km," not less. The tool's hint under the L/100km field is there as a standing reminder.</li>
+      <li><strong>Confusing official test-cycle figures with real-world driving.</strong> Window-sticker and homologation numbers (EPA, WLTP, JC08, etc.) are measured under standardized lab conditions and typically run 10–25% better than what drivers see with real traffic, cargo, and climate control. This tool only converts between units — it doesn't adjust for that gap.</li>
+      <li><strong>Zero or negative input.</strong> A fuel economy figure of exactly zero would mean "infinite fuel used" or "infinite distance for free," neither of which is meaningful, so the converter flags 0 and negative values as invalid rather than silently showing "Infinity."</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/speed-conv/"><span class="related-ico" aria-hidden="true">💨</span><span class="related-name">Speed Converter</span></a><a class="related-item" href="https://tool-hub.me/length-conv/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Length Converter</span></a><a class="related-item" href="https://tool-hub.me/volume-conv/"><span class="related-ico" aria-hidden="true">🧪</span><span class="related-name">Volume Converter</span></a><a class="related-item" href="https://tool-hub.me/car-payment-calc/"><span class="related-ico" aria-hidden="true">🚗</span><span class="related-name">Car Payment Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I convert MPG to L/100km?</summary>
+      <p data-i18n="faq.a1">Divide 235.215 by the MPG (US) figure to get L/100km — this constant comes from converting miles to kilometers and US gallons to liters, then inverting so a lower number means less fuel burned. For example, 30 MPG (US) gives 235.215 ÷ 30 = 7.84 L/100km. Type into the MPG (US) field and the L/100km field updates instantly using this exact formula.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why does a lower L/100km number mean better fuel economy, unlike MPG?</summary>
+      <p data-i18n="faq.a2">MPG and km/L measure distance per unit of fuel, so a bigger number is better — you are going further on the same amount of fuel. L/100km flips that: it measures fuel used over a fixed distance, so a smaller number means the car burns less fuel to cover the same 100 km. A car rated at 3.9 L/100km is far more efficient than one rated at 15.7 L/100km, even though 3.9 is the smaller number. Keep this inverse relationship in mind whenever you compare L/100km against MPG or km/L.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What's the difference between MPG (US) and MPG (UK)?</summary>
+      <p data-i18n="faq.a3">Both measure miles traveled per gallon of fuel, but the gallon itself differs: a US gallon is 3.785411784 liters, while a UK (Imperial) gallon is 4.54609 liters — about 20% larger. Because the UK gallon holds more fuel, the same real-world efficiency produces a higher MPG (UK) number than MPG (US) — roughly MPG (UK) = MPG (US) × 1.201. For example, a car rated at 30 MPG (US) is the same car at 36.0 MPG (UK).</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How do I convert km/L to MPG?</summary>
+      <p data-i18n="faq.a4">Multiply km/L by 2.352 for MPG (US), or by 2.825 for MPG (UK) — these factors come from converting kilometers to miles and liters to the respective gallon size. For example, 12.75 km/L × 2.352 ≈ 30.0 MPG (US), and the same 12.75 km/L × 2.825 ≈ 36.0 MPG (UK). Type into the km/L field and every other unit, including L/100km, updates at the same time.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my fuel economy data sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This fuel economy converter runs entirely in your browser — every number you type stays on your device and is never uploaded anywhere. The only thing saved is your last value, kept in your browser's local storage so it's there next time you open the page; clearing your browser data removes it.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
