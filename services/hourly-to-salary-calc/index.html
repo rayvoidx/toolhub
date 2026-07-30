@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hourly to Salary Calculator — Wage to Annual Pay &amp; Back</title>
+<meta name="description" content="Convert an hourly wage into weekly, monthly and annual salary, or work backward from salary to hourly rate. Set your hours and weeks — free, private, instant.">
+<meta name="keywords" content="hourly to salary, salary to hourly calculator, hourly wage calculator, annual salary calculator, what is my salary hourly, 시급 연봉 계산기">
+<link rel="canonical" href="https://tool-hub.me/hourly-to-salary-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hourly to Salary Calculator — Wage to Annual Pay & Back">
+<meta property="og:description" content="Convert an hourly wage into weekly, monthly and annual salary, or work backward from salary to hourly rate. Set your hours and weeks — free, private, instant.">
+<meta property="og:url" content="https://tool-hub.me/hourly-to-salary-calc/">
+<meta property="og:image" content="https://tool-hub.me/hourly-to-salary-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be123c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Hourly to Salary Calculator",
+  "description": "Convert an hourly wage into weekly, monthly and annual salary, or work backward from salary to hourly rate. Set your hours and weeks — free, private, instant.",
+  "url": "https://tool-hub.me/hourly-to-salary-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Hourly to Salary Calculator", "item": "https://tool-hub.me/hourly-to-salary-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the 2,080-hour work year, and where does that number come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Full-time work is commonly defined as 40 hours a week for 52 weeks a year, which multiplies out to 2,080 hours — the figure the IRS, most US employers and HR departments use to convert an annual salary into an hourly rate. It's a convention, not a literal count of hours worked, since it doesn't subtract public holidays or paid time off — those days are usually still paid, so they stay inside the 2,080 baseline. Change the hours-per-week or weeks-per-year fields above and this calculator recalculates the exact total instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert an hourly wage to an annual salary?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the hourly rate by the hours worked per week, then by the weeks worked per year: annual salary = hourly wage × hours per week × weeks per year. For example, $25 an hour at 40 hours a week for 52 weeks a year comes to 25 × 40 × 52 = $52,000 a year, about $4,333 a month and $1,000 a week. Switch to “I know my hourly wage” above, type 25, and the weekly, monthly and annual figures appear immediately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert an annual salary to an hourly rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the annual salary by the total hours worked in a year: hourly rate = annual salary ÷ (hours per week × weeks per year). A $60,000 salary at the standard 2,080-hour year works out to 60,000 ÷ 2,080 = $28.85 an hour, or roughly $1,154 a week. Switch to “I know my annual salary” above, enter 60000, and this calculator does the division for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does part-time work or unpaid time off change the numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Lower the hours-per-week or weeks-per-year field to match your real schedule and every result updates to match. A part-time role at 25 hours a week, 52 weeks a year and a $20 hourly wage comes to 20 × 25 × 52 = $26,000 a year, instead of the $41,600 a full-time 40-hour week would produce. If you take two unpaid weeks off, set weeks per year to 50 instead of 52 and the annual and monthly figures adjust downward automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this gross pay or my actual take-home pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every figure here is gross pay — the amount before income tax, social insurance, retirement contributions or any other withholding is subtracted. Take-home pay is always lower, and by how much depends on your country, tax bracket, filing status and any pre-tax deductions, so this calculator can't estimate net pay directly. Use the numbers here as a starting point before checking a paycheck or tax calculator built for your local rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my wage or salary information sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation happens locally in your browser using plain JavaScript — the numbers you type never leave your device, aren't uploaded anywhere and aren't stored on any server. There's no sign-up and nothing is tracked, so you can check your pay figures privately."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Hourly to Salary Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Hourly to Salary Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter an hourly wage or annual salary — see the weekly, monthly and annual numbers instantly, and flip the direction anytime.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section. -->
+  <section class="tool-card" id="tool" aria-label="Hourly to salary calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .mode-toggle { display:flex; gap:8px; margin:0 0 4px; }
+      #tool .mode-btn {
+        flex:1 1 0; padding:11px 10px; border:1px solid var(--line); border-radius:10px;
+        background:var(--bg); color:var(--ink); font-weight:700; font-size:14px;
+        cursor:pointer; font-family:inherit; line-height:1.3;
+      }
+      #tool .mode-btn[aria-pressed="true"] { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .grid2 .input-group { margin:0; }
+      @media (max-width:380px) {
+        #tool .mode-btn { font-size:12.5px; padding:10px 6px; }
+      }
+    </style>
+
+    <div class="mode-toggle" role="group" aria-label="Calculation direction">
+      <button type="button" id="mode-hourly" class="mode-btn" aria-pressed="true" data-i18n="tool.mode.hourly">I know my hourly wage</button>
+      <button type="button" id="mode-salary" class="mode-btn" aria-pressed="false" data-i18n="tool.mode.salary">I know my annual salary</button>
+    </div>
+
+    <div class="input-group" id="wage-field">
+      <label for="wage" data-i18n="tool.wage.label">Hourly wage</label>
+      <input id="wage" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 25" data-i18n-placeholder="tool.wage.ph" autocomplete="off" autofocus>
+    </div>
+
+    <div class="input-group" id="salary-field" hidden>
+      <label for="salary" data-i18n="tool.salary.label">Annual salary</label>
+      <input id="salary" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 52000" data-i18n-placeholder="tool.salary.ph" autocomplete="off">
+    </div>
+
+    <div class="input-group">
+      <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+      <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+    </div>
+
+    <div class="grid2">
+      <div class="input-group">
+        <label for="hours" data-i18n="tool.hours.label">Hours per week</label>
+        <input id="hours" type="number" inputmode="decimal" min="0.1" max="168" step="any" value="40" autocomplete="off">
+      </div>
+      <div class="input-group">
+        <label for="weeks" data-i18n="tool.weeks.label">Weeks worked per year</label>
+        <input id="weeks" type="number" inputmode="decimal" min="0.1" max="52" step="any" value="52" autocomplete="off">
+      </div>
+    </div>
+    <p id="hours-note" role="status" hidden style="margin:8px 0 0;font-size:13.5px;line-height:1.55;color:var(--muted);"></p>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter your hourly wage or annual salary above</p>
+      <div id="result-grid" hidden style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <button type="button" class="res-card" data-copy="hourly" style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.hourly" style="font-size:13px;color:var(--muted);font-weight:600;">Hourly rate</span>
+          <span class="rc-value" style="font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="weekly" style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.weekly" style="font-size:13px;color:var(--muted);font-weight:600;">Weekly pay</span>
+          <span class="rc-value" style="font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="monthly" style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.monthly" style="font-size:13px;color:var(--muted);font-weight:600;">Monthly pay</span>
+          <span class="rc-value" style="font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="annual" style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.annual" style="font-size:13px;color:var(--muted);font-weight:600;">Annual pay</span>
+          <span class="rc-value" style="font-size:22px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+      </div>
+      <p id="clamp-note" hidden style="margin:12px 0 0;font-size:13.5px;color:var(--muted);"></p>
+      <p id="copy-hint" hidden data-i18n="tool.copyHint" style="margin:12px 0 0;font-size:12.5px;color:var(--muted);text-align:center;">Tap a card to copy the number</p>
+      <p class="tool-disclaimer" data-i18n="tool.disclaimer" style="margin:14px 0 0;font-size:12.5px;line-height:1.6;color:var(--muted);">This is an estimate of gross pay before taxes and other deductions — not tax, legal or financial advice.</p>
+      <p class="tool-disclaimer" data-i18n="tool.privacyNote" style="margin:4px 0 0;font-size:12.5px;line-height:1.6;color:var(--muted);">All calculations run locally in your browser. Nothing you type is sent to a server or stored anywhere.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Turning an hourly wage into a full pay picture</h2>
+    <p>An hourly-to-salary calculator answers the question people ask right before accepting a job offer, comparing two postings, or budgeting a freelance rate: "what does this actually add up to?" A wage quoted per hour hides the weekly, monthly and yearly totals until someone does the multiplication — and a salary quoted per year hides what it works out to per hour, which matters when comparing it against contract or hourly work. This tool does both directions at once and updates the moment you change a number.</p>
+
+    <h2>How the numbers are calculated</h2>
+    <p>Everything flows from one relationship between pay and time:</p>
+    <ul>
+      <li><strong>Hours per year</strong> = hours per week &times; weeks worked per year</li>
+      <li><strong>Annual salary</strong> = hourly wage &times; hours per year <em>(hourly → salary direction)</em></li>
+      <li><strong>Hourly rate</strong> = annual salary &divide; hours per year <em>(salary → hourly direction)</em></li>
+      <li><strong>Weekly pay</strong> = hourly rate &times; hours per week</li>
+      <li><strong>Monthly pay</strong> = annual salary &divide; 12</li>
+    </ul>
+    <p>The default 40 hours per week and 52 weeks per year multiply to 2,080 hours — the standard full-time work-year convention used across payroll, HR and tax calculations in the US and widely elsewhere. Change either field to model a shorter week, a part-time schedule, or unpaid weeks off, and every result recalculates instantly.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — hourly to salary.</strong> A $32/hour rate at the standard 40-hour, 52-week year: 32 &times; 40 &times; 52 = <strong>$66,560 a year</strong>, which is <strong>$5,546.67 a month</strong> and <strong>$1,280 a week</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — salary to hourly.</strong> A $75,000 annual salary at 2,080 hours: 75,000 &divide; 2,080 = <strong>$36.06 an hour</strong>, or <strong>$1,442.31 a week</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — part-time schedule.</strong> $18/hour at 20 hours a week, 50 weeks a year (two weeks unpaid off): 18 &times; 20 &times; 50 = <strong>$18,000 a year</strong> — well under a full-time 40-hour total, which shows why comparing two job offers by hourly rate alone can be misleading.</p>
+    </div>
+
+    <h2>Full-time hours are not the same everywhere</h2>
+    <p>The 40-hour week is common but not universal, and the calculator's hours-per-week field lets you match your own country or contract instead of assuming the US default:</p>
+    <table>
+      <thead><tr><th>Country / region</th><th>Typical full-time week</th></tr></thead>
+      <tbody>
+        <tr><td>United States</td><td>40 hours</td></tr>
+        <tr><td>United Kingdom</td><td>37&ndash;40 hours</td></tr>
+        <tr><td>France (legal standard)</td><td>35 hours</td></tr>
+        <tr><td>Germany</td><td>36&ndash;40 hours</td></tr>
+        <tr><td>Japan</td><td>40 hours</td></tr>
+        <tr><td>Australia</td><td>38 hours</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Gross pay vs. what lands in your account</h2>
+    <p>Every figure this calculator produces is <strong>gross pay</strong> — the amount before income tax, social security, retirement contributions, health insurance premiums or any other withholding. Take-home pay is always smaller than gross, and the gap varies enormously by country, income level, filing status and benefits elected, so no single formula converts gross to net universally. Treat the numbers here as the starting point for a budget or offer comparison, then run them through a payroll or tax calculator built for your specific location before making financial decisions.</p>
+
+    <h2>Common mistakes when comparing pay</h2>
+    <ul>
+      <li><strong>Comparing an hourly contract rate to a salaried offer directly:</strong> contractor rates often need to cover self-employment tax, benefits and downtime between jobs that a salary already includes — the raw hourly-to-annual math is a starting point, not the full comparison.</li>
+      <li><strong>Assuming 2,080 hours everywhere:</strong> a 35-hour standard week, a 4-day work week, or unpaid overtime all change the real hours-per-year figure — always plug in your actual schedule.</li>
+      <li><strong>Forgetting paid time off is already included:</strong> the 2,080-hour convention doesn't subtract holidays or vacation because those days are usually still paid — only <em>unpaid</em> time off should reduce the weeks-per-year field.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/salary-calc/"><span class="related-ico" aria-hidden="true">💰</span><span class="related-name">Korean Salary Calculator</span></a><a class="related-item" href="https://tool-hub.me/overtime-pay-calc/"><span class="related-ico" aria-hidden="true">⏰</span><span class="related-name">Overtime Pay Calculator</span></a><a class="related-item" href="https://tool-hub.me/tax-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">VAT Calculator (Korea 10%)</span></a><a class="related-item" href="https://tool-hub.me/gst-calc/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">GST Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A. -->
+    <details>
+      <summary data-i18n="faq.q1">What is the 2,080-hour work year, and where does that number come from?</summary>
+      <p data-i18n="faq.a1">Full-time work is commonly defined as 40 hours a week for 52 weeks a year, which multiplies out to 2,080 hours — the figure the IRS, most US employers and HR departments use to convert an annual salary into an hourly rate. It's a convention, not a literal count of hours worked, since it doesn't subtract public holidays or paid time off — those days are usually still paid, so they stay inside the 2,080 baseline. Change the hours-per-week or weeks-per-year fields above and this calculator recalculates the exact total instantly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I convert an hourly wage to an annual salary?</summary>
+      <p data-i18n="faq.a2">Multiply the hourly rate by the hours worked per week, then by the weeks worked per year: annual salary = hourly wage × hours per week × weeks per year. For example, $25 an hour at 40 hours a week for 52 weeks a year comes to 25 × 40 × 52 = $52,000 a year, about $4,333 a month and $1,000 a week. Switch to “I know my hourly wage” above, type 25, and the weekly, monthly and annual figures appear immediately.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I convert an annual salary to an hourly rate?</summary>
+      <p data-i18n="faq.a3">Divide the annual salary by the total hours worked in a year: hourly rate = annual salary ÷ (hours per week × weeks per year). A $60,000 salary at the standard 2,080-hour year works out to 60,000 ÷ 2,080 = $28.85 an hour, or roughly $1,154 a week. Switch to “I know my annual salary” above, enter 60000, and this calculator does the division for you.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How does part-time work or unpaid time off change the numbers?</summary>
+      <p data-i18n="faq.a4">Lower the hours-per-week or weeks-per-year field to match your real schedule and every result updates to match. A part-time role at 25 hours a week, 52 weeks a year and a $20 hourly wage comes to 20 × 25 × 52 = $26,000 a year, instead of the $41,600 a full-time 40-hour week would produce. If you take two unpaid weeks off, set weeks per year to 50 instead of 52 and the annual and monthly figures adjust downward automatically.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is this gross pay or my actual take-home pay?</summary>
+      <p data-i18n="faq.a5">Every figure here is gross pay — the amount before income tax, social insurance, retirement contributions or any other withholding is subtracted. Take-home pay is always lower, and by how much depends on your country, tax bracket, filing status and any pre-tax deductions, so this calculator can't estimate net pay directly. Use the numbers here as a starting point before checking a paycheck or tax calculator built for your local rules.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q6">Is my wage or salary information sent to a server?</summary>
+      <p data-i18n="faq.a6">No. Every calculation happens locally in your browser using plain JavaScript — the numbers you type never leave your device, aren't uploaded anywhere and aren't stored on any server. There's no sign-up and nothing is tracked, so you can check your pay figures privately.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
