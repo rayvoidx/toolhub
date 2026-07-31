@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Entity Encoder / Decoder — Escape &amp; Unescape HTML Text</title>
+<meta name="description" content="Encode text into HTML entities, named where they exist and numeric otherwise, or decode any entity soup back to text. Free, two-way, runs entirely in your browser.">
+<meta name="keywords" content="html entity encoder, html decode, html entities converter, escape html, decode double-encoded ampersand, HTML 엔티티 변환기">
+<link rel="canonical" href="https://tool-hub.me/html-entity-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HTML Entity Encoder / Decoder — Escape &amp; Unescape HTML Text">
+<meta property="og:description" content="Encode text into HTML entities, named where they exist and numeric otherwise, or decode any entity soup back to text. Free, two-way, runs entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/html-entity-conv/">
+<meta property="og:image" content="https://tool-hub.me/html-entity-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "HTML Entity Encoder / Decoder",
+  "description": "Encode text into HTML entities, named where they exist and numeric otherwise, or decode any entity soup back to text. Free, two-way, runs entirely in your browser.",
+  "url": "https://tool-hub.me/html-entity-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "HTML Entity Encoder / Decoder", "item": "https://tool-hub.me/html-entity-conv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are HTML entities, and when do I need to encode text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "HTML entities are text sequences like &amp;, &lt; and &copy; that stand in for a character HTML would otherwise read as markup, or one with no keyboard key. Whenever text that a user typed — a comment, a search box, a form field — gets inserted into an HTML page, the characters & < > and the quote marks need to become entities first; otherwise a browser can misread part of that text as a tag or an attribute boundary instead of plain words. This is also the root cause of many cross-site scripting (XSS) bugs, so encoding untrusted text before it reaches the page is a basic security habit, not just a display fix."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which characters must always be escaped, and why does that matter for security?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five characters carry structural meaning in HTML: & begins an entity, < and > open and close a tag, and the double and single quote marks end an attribute value. This tool always converts those five to &amp;, &lt;, &gt;, &quot; and &#39; regardless of any toggle, because leaving even one of them raw is enough for a browser to treat user-supplied text as markup — the classic path to a stored or reflected XSS bug. Everything else is optional and depends on where the text is used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a named entity like &amp; and a numeric one like &#38;?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both refer to the exact same character — an ampersand — but a named entity uses a short mnemonic (amp, copy, euro) defined in the HTML specification, while a numeric entity spells out the character's Unicode code point in decimal (&#38;) or hexadecimal (&#x26;) form. Named entities are easier for a person reading raw HTML to recognize, but only a few hundred characters have one; anything without a name falls back to a numeric entity, which HTML understands for every Unicode character that exists. This tool always prefers the named form when one exists and only falls back to numeric &#NNNN; entities for characters that have no name."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will encoding mangle Korean, Chinese, Arabic or emoji text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, not by default. With Encode all non-ASCII characters turned off, this tool only touches the characters that are actually unsafe or have a well-known named entity, and leaves other-language text and emoji exactly as typed, since modern browsers render UTF-8 correctly without any encoding. Turning the toggle on instead converts every character above the ASCII range into a numeric entity — useful when you need output that only contains plain ASCII bytes, for example an old email template or a system that cannot declare UTF-8."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text sent to a server when I encode or decode it here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Encoding runs on a small built-in table of named entities plus a numeric fallback, and decoding uses the browser's own HTML parser through a hidden, never-inserted textarea element, so it understands every entity a real browser understands — without ever sending your text anywhere. Nothing is uploaded, there is no sign-up, and only your last input and toggle choice are kept in this browser's local storage for convenience."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>HTML Entity Encoder / Decoder</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>HTML Entity Encoder / Decoder</h1>
+    <p class="lede" data-i18n="hero.lede">Turn special characters into HTML entities — or turn any entity soup back into plain text. Reserved characters are always escaped safely, named entities are used where they exist, and everything runs instantly in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <!-- Direction -->
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.7rem;">
+      <button type="button" id="dir-encode" aria-pressed="true" data-i18n="tool.dir.encode"
+        style="flex:1;min-width:14rem;padding:.55rem;border:1px solid var(--accent);border-radius:.6rem;background:var(--accent);color:#fff;font-weight:600;font-family:inherit;cursor:pointer;">Encode (Text → HTML entities)</button>
+      <button type="button" id="dir-decode" aria-pressed="false" data-i18n="tool.dir.decode"
+        style="flex:1;min-width:14rem;padding:.55rem;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--ink);font-weight:600;font-family:inherit;cursor:pointer;">Decode (HTML entities → Text)</button>
+    </div>
+
+    <label style="display:flex;align-items:center;gap:.5rem;font-weight:400;cursor:pointer;margin:0 0 .3rem;">
+      <input type="checkbox" id="ec-ascii" style="width:auto;margin:0;">
+      <span data-i18n="tool.ascii.label">Encode all non-ASCII characters</span>
+    </label>
+    <p data-i18n="tool.ascii.hint" style="margin:0 0 .8rem;font-size:.78rem;color:var(--muted);line-height:1.5;">Off leaves other-language text and emoji untouched. On converts every character above ASCII into a numeric entity instead.</p>
+
+    <!-- Text -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem;">
+      <label for="ec-text" data-i18n="tool.textLabel">Text</label>
+      <button type="button" class="ec-copy" data-copy="ec-text" data-i18n="tool.copy"
+        style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;">Copy</button>
+    </div>
+    <textarea id="ec-text" rows="5" dir="auto" autocomplete="off" spellcheck="false"
+      placeholder="Type or paste text to encode…" data-i18n-placeholder="tool.textPlaceholder"
+      style="resize:vertical;line-height:1.5;"></textarea>
+
+    <!-- HTML-encoded -->
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:.5rem;">
+      <label for="ec-html" data-i18n="tool.htmlLabel">HTML-encoded</label>
+      <button type="button" class="ec-copy" data-copy="ec-html" data-i18n="tool.copy"
+        style="padding:.25rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--bg);color:var(--accent);cursor:pointer;font-family:inherit;margin:0;">Copy</button>
+    </div>
+    <textarea id="ec-html" rows="5" dir="ltr" autocomplete="off" spellcheck="false"
+      placeholder="Paste HTML entities to decode…" data-i18n-placeholder="tool.htmlPlaceholder"
+      style="resize:vertical;line-height:1.5;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.9rem;"></textarea>
+
+    <button type="button" class="btn" id="ec-clear" data-i18n="tool.clear"
+      style="background:var(--bg);color:var(--muted);border:1px solid var(--line);font-weight:600;">Clear</button>
+
+    <div class="result" id="text-result">
+      <p id="text-hint" style="margin:0" data-i18n="tool.hint">Type in either box — the other updates instantly. The ampersand, angle brackets and quote marks are always escaped; everything else keeps a named entity when one exists.</p>
+      <p id="ec-feedback" aria-live="polite" hidden style="margin:.45rem 0 0;font-weight:600;color:var(--accent);"></p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:color-mix(in srgb,var(--accent) 10%,var(--surface));padding:1px 5px;border-radius:4px;overflow-wrap:anywhere}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content .tbl-wrap{overflow-x:auto}
+    </style>
+
+    <h2>Why unescaped text breaks HTML</h2>
+    <p>HTML uses a handful of characters as its own syntax: &amp; starts a character reference, &lt; and &gt; open and close a tag, and the quote marks close an attribute value. If those characters appear raw inside text that ends up inside an HTML page — a username, a code comment, a search query — the browser's parser can misread them as markup instead of the words they were meant to be. Encoding text into HTML entities first sidesteps the problem entirely: the entity always renders back as the original character, and it can never be mistaken for a tag, an attribute boundary, or the start of another entity.</p>
+
+    <h2>Named vs. numeric entities — and why this tool prefers named</h2>
+    <p>An HTML entity comes in two flavors. A named entity is a short mnemonic defined in the HTML specification &mdash; <code>amp</code> for &amp;, <code>copy</code> for the copyright sign, <code>euro</code> for the currency sign &mdash; written as an ampersand, the name, and a semicolon. A numeric entity spells out the character's Unicode code point instead, in decimal or hexadecimal, and HTML understands one for every character that exists, named or not. This tool always uses the named form when a character has one, from a table of the 253 standard HTML4 named references, because it stays readable in raw HTML, and only falls back to a numeric entity for the rest &mdash; and only when <em>Encode all non-ASCII characters</em> is turned on.</p>
+
+    <div class="example">
+      <p><strong>Example 1 &mdash; escaping a snippet before it goes on the page.</strong> Typing <code>Tom &amp;amp; Jerry says &amp;quot;hi&amp;quot; &amp;lt;b&amp;gt;bold&amp;lt;/b&amp;gt;</code> into Text and pressing Encode produces <code>Tom &amp;amp;amp; Jerry says &amp;amp;quot;hi&amp;amp;quot; &amp;amp;lt;b&amp;amp;gt;bold&amp;amp;lt;/b&amp;amp;gt;</code> &mdash; every reserved character becomes its named entity, so a browser renders those exact words as plain text instead of trying to start a bold tag.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 &mdash; the non-ASCII toggle in action.</strong> Encoding <code>안녕 😀 hello</code> with the toggle off leaves it exactly as typed, since Korean and emoji have no named entity and modern browsers already handle UTF-8 correctly. Turn the toggle on and the same input becomes <code>&amp;#50504;&amp;#45397; &amp;#128512; hello</code> &mdash; useful only when the output must be plain ASCII, such as an old email template.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 &mdash; decoding removes one layer at a time.</strong> Pasting <code>&amp;amp;amp; and &amp;lt;br&amp;gt;</code> into HTML-encoded and pressing Decode gives <code>&amp;amp; and &lt;br&gt;</code> in Text &mdash; the double-encoded ampersand loses one layer and the tag entities become literal angle brackets. If text was accidentally encoded twice, press Decode twice.</p>
+    </div>
+
+    <h2>Common HTML entities reference</h2>
+    <p>These cover the characters that come up most often when writing HTML by hand or cleaning up scraped content:</p>
+    <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>Entity</th><th>Renders as</th><th>Character</th></tr></thead>
+      <tbody>
+        <tr><td><code>&amp;amp;</code></td><td>&amp;</td><td>Ampersand</td></tr>
+        <tr><td><code>&amp;lt;</code></td><td>&lt;</td><td>Less-than sign</td></tr>
+        <tr><td><code>&amp;gt;</code></td><td>&gt;</td><td>Greater-than sign</td></tr>
+        <tr><td><code>&amp;quot;</code></td><td>&quot;</td><td>Double quote</td></tr>
+        <tr><td><code>&amp;#39;</code></td><td>&#39;</td><td>Apostrophe</td></tr>
+        <tr><td><code>&amp;nbsp;</code></td><td>&nbsp;</td><td>Non-breaking space</td></tr>
+        <tr><td><code>&amp;copy;</code></td><td>&copy;</td><td>Copyright sign</td></tr>
+        <tr><td><code>&amp;reg;</code></td><td>&reg;</td><td>Registered trademark</td></tr>
+        <tr><td><code>&amp;trade;</code></td><td>&trade;</td><td>Trademark sign</td></tr>
+        <tr><td><code>&amp;euro;</code></td><td>&euro;</td><td>Euro sign</td></tr>
+        <tr><td><code>&amp;pound;</code></td><td>&pound;</td><td>Pound sterling</td></tr>
+        <tr><td><code>&amp;yen;</code></td><td>&yen;</td><td>Yen sign</td></tr>
+        <tr><td><code>&amp;cent;</code></td><td>&cent;</td><td>Cent sign</td></tr>
+        <tr><td><code>&amp;deg;</code></td><td>&deg;</td><td>Degree sign</td></tr>
+        <tr><td><code>&amp;plusmn;</code></td><td>&plusmn;</td><td>Plus-minus sign</td></tr>
+        <tr><td><code>&amp;times;</code></td><td>&times;</td><td>Multiplication sign</td></tr>
+        <tr><td><code>&amp;divide;</code></td><td>&divide;</td><td>Division sign</td></tr>
+        <tr><td><code>&amp;ndash;</code></td><td>&ndash;</td><td>En dash</td></tr>
+        <tr><td><code>&amp;mdash;</code></td><td>&mdash;</td><td>Em dash</td></tr>
+        <tr><td><code>&amp;hellip;</code></td><td>&hellip;</td><td>Horizontal ellipsis</td></tr>
+        <tr><td><code>&amp;lsquo;</code></td><td>&lsquo;</td><td>Left single quote</td></tr>
+        <tr><td><code>&amp;rsquo;</code></td><td>&rsquo;</td><td>Right single quote</td></tr>
+        <tr><td><code>&amp;ldquo;</code></td><td>&ldquo;</td><td>Left double quote</td></tr>
+        <tr><td><code>&amp;rdquo;</code></td><td>&rdquo;</td><td>Right double quote</td></tr>
+        <tr><td><code>&amp;bull;</code></td><td>&bull;</td><td>Bullet</td></tr>
+        <tr><td><code>&amp;sect;</code></td><td>&sect;</td><td>Section sign</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>This tool recognizes all 253 standard HTML4 named references when encoding — not just the ones listed above — and its decoder understands every named, decimal and hexadecimal entity a real browser understands, since decoding is delegated to the browser's own HTML parser.</p>
+
+    <h2>Entities and cross-site scripting (XSS)</h2>
+    <p>Escaping isn't only a display nicety. Most stored and reflected XSS vulnerabilities start the same way: text a user controls is written into an HTML page without escaping the five structural characters first, so a payload like <code>&amp;lt;img src=x onerror=alert(1)&amp;gt;</code> is parsed as a real tag instead of harmless text. Server-side templating engines almost always auto-escape by default for exactly this reason. This tool is for previewing, debugging and hand-authoring entity-encoded strings client-side — for production output, escape untrusted text on the server or through your framework's built-in escaping, and treat this page as a reference and a sandbox rather than the security boundary itself.</p>
+
+    <h2>Common mistakes and limits</h2>
+    <ul>
+      <li><strong>Double-encoding:</strong> encoding text that already contains entities turns <code>&amp;amp;amp;</code> into <code>&amp;amp;amp;amp;</code> — decode first if you're not sure whether the text is already encoded.</li>
+      <li><strong>Confusing this with URL encoding:</strong> HTML entities and percent-encoding (<code>%20</code>) solve different problems — entities are for text inside HTML documents, percent-encoding is for text inside a URL.</li>
+      <li><strong>Malformed entities:</strong> a stray <code>&amp;</code> not followed by a valid name or number, or a missing trailing semicolon, is simply left as-is by the decoder rather than causing an error, matching how real browsers recover from bad markup.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/url-encoder/"><span class="related-ico" aria-hidden="true">%</span><span class="related-name">URL Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/base64-conv/"><span class="related-ico" aria-hidden="true">⇄</span><span class="related-name">Base64 Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/json-formatter/"><span class="related-ico" aria-hidden="true">{}</span><span class="related-name">JSON Formatter</span></a><a class="related-item" href="https://tool-hub.me/jwt-decoder/"><span class="related-ico" aria-hidden="true">🔑</span><span class="related-name">JWT Decoder</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What are HTML entities, and when do I need to encode text?</summary>
+      <p data-i18n="faq.a1">HTML entities are text sequences like &amp;amp;, &amp;lt; and &amp;copy; that stand in for a character HTML would otherwise read as markup, or one with no keyboard key. Whenever text that a user typed &mdash; a comment, a search box, a form field &mdash; gets inserted into an HTML page, the characters &amp; &lt; &gt; and the quote marks need to become entities first; otherwise a browser can misread part of that text as a tag or an attribute boundary instead of plain words. This is also the root cause of many cross-site scripting (XSS) bugs, so encoding untrusted text before it reaches the page is a basic security habit, not just a display fix.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Which characters must always be escaped, and why does that matter for security?</summary>
+      <p data-i18n="faq.a2">Five characters carry structural meaning in HTML: &amp; begins an entity, &lt; and &gt; open and close a tag, and the double and single quote marks end an attribute value. This tool always converts those five to &amp;amp;, &amp;lt;, &amp;gt;, &amp;quot; and &amp;#39; regardless of any toggle, because leaving even one of them raw is enough for a browser to treat user-supplied text as markup &mdash; the classic path to a stored or reflected XSS bug. Everything else is optional and depends on where the text is used.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is the difference between a named entity like &amp;amp; and a numeric one like &amp;#38;?</summary>
+      <p data-i18n="faq.a3">Both refer to the exact same character &mdash; an ampersand &mdash; but a named entity uses a short mnemonic (amp, copy, euro) defined in the HTML specification, while a numeric entity spells out the character's Unicode code point in decimal (&amp;#38;) or hexadecimal (&amp;#x26;) form. Named entities are easier for a person reading raw HTML to recognize, but only a few hundred characters have one; anything without a name falls back to a numeric entity, which HTML understands for every Unicode character that exists. This tool always prefers the named form when one exists and only falls back to numeric &amp;#NNNN; entities for characters that have no name.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Will encoding mangle Korean, Chinese, Arabic or emoji text?</summary>
+      <p data-i18n="faq.a4">No, not by default. With Encode all non-ASCII characters turned off, this tool only touches the characters that are actually unsafe or have a well-known named entity, and leaves other-language text and emoji exactly as typed, since modern browsers render UTF-8 correctly without any encoding. Turning the toggle on instead converts every character above the ASCII range into a numeric entity — useful when you need output that only contains plain ASCII bytes, for example an old email template or a system that cannot declare UTF-8.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text sent to a server when I encode or decode it here?</summary>
+      <p data-i18n="faq.a5">No. Encoding runs on a small built-in table of named entities plus a numeric fallback, and decoding uses the browser's own HTML parser through a hidden, never-inserted textarea element, so it understands every entity a real browser understands — without ever sending your text anywhere. Nothing is uploaded, there is no sign-up, and only your last input and toggle choice are kept in this browser's local storage for convenience.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APY Calculator — Convert APR to APY (and Back)</title>
+<meta name="description" content="Convert APR to APY (or APY to APR) for any compounding frequency, compare rates side by side, and preview deposit growth. Free, computed in your browser.">
+<meta name="keywords" content="apy calculator, apr to apy, apy vs apr, effective annual rate, compound yield calculator, annual percentage yield calculator, APY 계산기">
+<link rel="canonical" href="https://tool-hub.me/apy-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="APY Calculator — Convert APR to APY (and Back)">
+<meta property="og:description" content="Convert APR to APY (or APY to APR) for any compounding frequency, compare rates side by side, and preview deposit growth. Free, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/apy-calc/">
+<meta property="og:image" content="https://tool-hub.me/apy-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "APY Calculator",
+  "description": "Convert APR to APY (or APY to APR) for any compounding frequency, compare rates side by side, and preview deposit growth. Free, computed in your browser.",
+  "url": "https://tool-hub.me/apy-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "APY Calculator", "item": "https://tool-hub.me/apy-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between APR and APY (or EAR)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "APR (annual percentage rate) is the nominal, stated yearly interest rate before compounding is taken into account. APY (annual percentage yield) — also called EAR (effective annual rate) — is what you actually earn or pay in a year once compounding is factored in, since interest starts earning its own interest. Whenever the rate is above 0% and compounding happens more than once a year, APY is always a little higher than APR; they're equal only when compounding is annual or the rate is 0%. That's why US banks are required to advertise APY on savings accounts and CDs so you can compare products fairly, while loans and credit cards are usually quoted in APR."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the exact APY formula, with a worked example?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formula is APY = (1 + APR/n)^n − 1, where APR is entered as a decimal and n is the number of compounding periods per year. Worked example: a 5% APR compounded monthly (n = 12) gives APY = (1 + 0.05/12)^12 − 1 ≈ 5.116%. The same 5% APR compounded daily (n = 365) gives about 5.127%, and compounded continuously — the mathematical limit as n approaches infinity, APY = e^APR − 1 — gives about 5.127% too, showing that beyond daily compounding, adding more compounding periods barely moves the result."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you convert the other way, from APY back to APR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Solve the same formula for APR: APR = n × ((1 + APY)^(1/n) − 1), or APR = ln(1 + APY) for continuous compounding. This matters because US savings accounts are usually advertised by APY alone, so if you want to compare that rate against a loan or another product quoted as a nominal APR, you need to convert it back. Example: an advertised 5% APY compounded monthly corresponds to a nominal APR of about 4.889% — noticeably lower than the headline number, because the APY already includes a year of monthly compounding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does compounding frequency matter, and when does it stop mattering?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "More frequent compounding means each bit of interest starts earning its own interest sooner, so for the exact same APR, APY rises as the compounding frequency increases: annual < semi-annual < quarterly < monthly < daily < continuous. The gap narrows quickly, though — the difference between daily and continuous compounding is usually a few thousandths of a percentage point, so once a rate compounds daily, a theoretically continuous rate makes almost no practical difference. The comparison table above this FAQ shows exactly how much (or how little) each step adds for the rate you entered."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my rate or deposit amount sent anywhere, and is this financial advice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation — the APR/APY conversion, the compounding comparison table, and the balance growth example — runs entirely in your browser using ordinary math; nothing you type is uploaded, logged, or sent to a server, and your last entry is only kept in your own browser's local storage so it's there next time you visit. This tool performs arithmetic only: it isn't financial, investment or tax advice, and real accounts can carry fees, minimum balances, tiered rates or promotional periods that this simple calculator doesn't model — always check an account's official disclosure before relying on any number here."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>APY Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>APY Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Convert APR to APY (or APY back to APR) for any compounding frequency, see how a deposit grows, and compare the same rate compounded annually, monthly, daily or continuously.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:6px 0 4px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:1fr; gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:14px 16px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:800; font-size:28px; margin-top:4px; color:var(--accent-strong); word-break:break-word; }
+      [data-theme="dark"] #tool .rcard .rc-val, [data-theme="auto"] #tool .rcard .rc-val { color:var(--accent); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .subtle.warn { color:#d97706; font-weight:600; }
+      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
+      #tool details.adv[open] { padding-bottom:12px; }
+      #tool table.cmp { width:100%; border-collapse:collapse; margin-top:4px; font-size:13.5px; }
+      #tool table.cmp th, #tool table.cmp td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool table.cmp th:first-child, #tool table.cmp td:first-child { text-align:left; }
+      #tool table.cmp th { color:var(--muted); font-weight:600; }
+      #tool table.cmp tr.is-active td { font-weight:700; color:var(--accent-strong); background:color-mix(in srgb, var(--accent) 8%, transparent); }
+      #tool details#tool-more { margin-top:16px; }
+      #tool details#tool-more summary { font-weight:600; font-size:14px; color:var(--muted); cursor:pointer; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p id="mode-label" style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.mode.label">Convert</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="mode-label">
+      <label><input type="radio" name="convmode" value="aprToApy" checked><span data-i18n="tool.mode.aprToApy">APR → APY</span></label>
+      <label><input type="radio" name="convmode" value="apyToApr"><span data-i18n="tool.mode.apyToApr">APY → APR</span></label>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="rate-input" id="rate-label" data-i18n="tool.rate.aprLabel">Annual interest rate (APR)</label>
+        <input type="number" id="rate-input" inputmode="decimal" min="0" step="any" placeholder="e.g. 5" data-i18n-placeholder="tool.rate.ph" autocomplete="off" autofocus>
+      </div>
+      <div>
+        <label for="freq-select" data-i18n="tool.freq.label">Compounding frequency</label>
+        <select id="freq-select" aria-label="Compounding frequency" data-i18n-aria-label="tool.freq.label">
+          <option value="1" data-i18n="tool.freq.annually">Annually (1×/year)</option>
+          <option value="2" data-i18n="tool.freq.semiannually">Semi-annually (2×/year)</option>
+          <option value="4" data-i18n="tool.freq.quarterly">Quarterly (4×/year)</option>
+          <option value="12" selected data-i18n="tool.freq.monthly">Monthly (12×/year)</option>
+          <option value="365" data-i18n="tool.freq.daily">Daily (365×/year)</option>
+          <option value="continuous" data-i18n="tool.freq.continuous">Continuously</option>
+        </select>
+      </div>
+    </div>
+
+    <details id="tool-more">
+      <summary data-i18n="tool.details.summary">Add a deposit amount (optional)</summary>
+      <div class="field-row" style="margin-top:12px;">
+        <div>
+          <label for="deposit-input" data-i18n="tool.deposit.label">Deposit amount</label>
+          <input type="text" id="deposit-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 10,000" data-i18n-placeholder="tool.deposit.ph">
+        </div>
+        <div>
+          <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+          <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+        </div>
+      </div>
+    </details>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" id="primary-label" data-i18n="tool.result.apy">APY (effective annual yield)</div><div class="rc-val" id="r-primary"></div></div>
+        </div>
+        <p class="subtle" id="r-sub" style="margin:10px 0 0;"></p>
+
+        <div id="growth-wrap" hidden style="margin-top:12px;">
+          <p class="subtle" id="r-growth" style="margin:0;"></p>
+        </div>
+
+        <details class="adv" id="cmp-wrap">
+          <summary data-i18n="tool.cmp.summary">Compare compounding frequencies</summary>
+          <table class="cmp">
+            <thead><tr><th data-i18n="tool.cmp.freq">Frequency</th><th data-i18n="tool.cmp.times">Times/year</th><th data-i18n="tool.cmp.apy">APY</th></tr></thead>
+            <tbody id="cmp-body"></tbody>
+          </table>
+        </details>
+
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>The rate or deposit was above the allowed range and was capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;font-weight:600;" data-i18n="tool.note.disclaimer">This is an arithmetic calculation, not financial, investment or tax advice.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why a 5% Rate Isn't Always a 5% Rate</h2>
+    <p>Banks and lenders can describe the exact same product using two different percentages, and the gap between them is entirely explained by compounding. <strong>APR</strong> (annual percentage rate) is the simple, nominal yearly rate — no compounding included. <strong>APY</strong> (annual percentage yield), sometimes called <strong>EAR</strong> (effective annual rate), is what actually happens to your money over a year once the compounding schedule is applied. A savings account paying "5% APR compounded monthly" doesn't earn exactly 5% in a year — it earns 5.116%, because each month's interest is added to the balance and starts earning interest of its own before the year is out.</p>
+
+    <h3>How to use this calculator</h3>
+    <ol>
+      <li>Choose a direction: <strong>APR → APY</strong> if you have a stated nominal rate and want the real effective yield, or <strong>APY → APR</strong> if a bank advertised an APY and you want the underlying nominal rate to compare elsewhere.</li>
+      <li>Enter the <strong>rate</strong> as a percentage (5 for 5%, not 0.05).</li>
+      <li>Pick the <strong>compounding frequency</strong> — annually, semi-annually, quarterly, monthly, daily, or continuously (the theoretical limit of compounding infinitely often).</li>
+      <li>Optionally enter a <strong>deposit amount</strong> and currency to see exactly what that money grows to in one year.</li>
+      <li>Open <strong>Compare compounding frequencies</strong> to see the same underlying APR turned into an APY at every compounding schedule side by side.</li>
+    </ol>
+
+    <h3>The formulas</h3>
+    <div class="example">
+      <strong>APR &rarr; APY: APY = (1 + APR/n)<sup>n</sup> &minus; 1</strong>
+      <p style="margin:10px 0 0">n is the number of times interest compounds per year (12 for monthly, 365 for daily). As n grows without bound, the formula converges to the continuous-compounding limit <strong>APY = e<sup>APR</sup> &minus; 1</strong>.</p>
+    </div>
+    <div class="example">
+      <strong>APY &rarr; APR: APR = n &times; ((1 + APY)<sup>1/n</sup> &minus; 1)</strong>
+      <p style="margin:10px 0 0">This is the same formula solved for the nominal rate. For continuous compounding, it simplifies to <strong>APR = ln(1 + APY)</strong>.</p>
+    </div>
+
+    <h3>Three worked examples</h3>
+    <div class="example"><strong>Example 1 — a savings account.</strong> A bank offers 5% APR compounded monthly. APY = (1 + 0.05/12)^12 &minus; 1 &asymp; <strong>5.116%</strong>. Deposit $10,000 and after one year you have <strong>$10,511.62</strong> — $511.62 more than the simple 5% would suggest.</div>
+    <div class="example"><strong>Example 2 — comparing two accounts.</strong> Account A pays 4.9% APR compounded daily; Account B pays 5.0% APR compounded annually (no intra-year compounding). Account A's APY is (1 + 0.049/365)^365 &minus; 1 &asymp; 5.022% — actually higher than Account B's APY of exactly 5.000%. The lower headline rate wins once compounding is factored in.</div>
+    <div class="example"><strong>Example 3 — going from APY to APR.</strong> An online bank advertises a 4.5% APY, compounded monthly. Its underlying nominal rate is APR = 12 &times; ((1.045)^(1/12) &minus; 1) &asymp; 4.410% — useful to know if you need to plug a nominal rate into a loan amortization tool or another calculator that expects APR rather than APY.</div>
+
+    <h3>Same 5% APR, six compounding schedules</h3>
+    <p>The table below shows how much a flat 5% APR turns into at each compounding frequency — exactly what the "Compare compounding frequencies" section of the calculator produces automatically for whatever rate you enter:</p>
+    <table>
+      <thead><tr><th>Compounding</th><th>Times per year</th><th>APY on a 5% APR</th></tr></thead>
+      <tbody>
+        <tr><td>Annually</td><td>1</td><td>5.00%</td></tr>
+        <tr><td>Semi-annually</td><td>2</td><td>5.06%</td></tr>
+        <tr><td>Quarterly</td><td>4</td><td>5.09%</td></tr>
+        <tr><td>Monthly</td><td>12</td><td>5.12%</td></tr>
+        <tr><td>Daily</td><td>365</td><td>5.13%</td></tr>
+        <tr><td>Continuously</td><td>&infin;</td><td>5.13%</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes with APR and APY</h3>
+    <ul>
+      <li><strong>Comparing a loan's APR to a savings account's APY directly.</strong> They're measured on different bases; convert one to match the other first — that's exactly what this calculator's APY &rarr; APR mode does.</li>
+      <li><strong>Assuming a higher APR always means more return.</strong> As Example 2 shows, a lower APR compounded more often can out-earn a higher APR compounded less often.</li>
+      <li><strong>Forgetting that APY already assumes a full year.</strong> If you withdraw early or a promotional rate only lasts a few months, the actual amount earned won't match the quoted APY.</li>
+      <li><strong>Typing the rate as a decimal instead of a percentage.</strong> Enter 5 for 5% — the calculator handles the &divide;100 conversion internally.</li>
+    </ul>
+
+    <h3>What this calculator doesn't cover</h3>
+    <p>This tool converts a stated rate into its effective yield (or back) and shows a plain one-year growth example — it doesn't model account fees, minimum-balance requirements, tiered interest rates that change with your balance, promotional "teaser" rates that expire, taxes on interest income, or deposit insurance limits. Always check a specific bank's official rate disclosure — usually printed right next to the word "APY" — before treating a number from any calculator as the rate you'll actually receive.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/compound-interest-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Compound Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/savings-calc/"><span class="related-ico" aria-hidden="true">🐷</span><span class="related-name">Savings Calculator</span></a><a class="related-item" href="https://tool-hub.me/interest-calc/"><span class="related-ico" aria-hidden="true">💵</span><span class="related-name">Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/cagr-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">CAGR Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What's the difference between APR and APY (or EAR)?</summary>
+      <p data-i18n="faq.a1">APR (annual percentage rate) is the nominal, stated yearly interest rate before compounding is taken into account. APY (annual percentage yield) — also called EAR (effective annual rate) — is what you actually earn or pay in a year once compounding is factored in, since interest starts earning its own interest. Whenever the rate is above 0% and compounding happens more than once a year, APY is always a little higher than APR; they're equal only when compounding is annual or the rate is 0%. That's why US banks are required to advertise APY on savings accounts and CDs so you can compare products fairly, while loans and credit cards are usually quoted in APR.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the exact APY formula, with a worked example?</summary>
+      <p data-i18n="faq.a2">The formula is APY = (1 + APR/n)^n − 1, where APR is entered as a decimal and n is the number of compounding periods per year. Worked example: a 5% APR compounded monthly (n = 12) gives APY = (1 + 0.05/12)^12 − 1 ≈ 5.116%. The same 5% APR compounded daily (n = 365) gives about 5.127%, and compounded continuously — the mathematical limit as n approaches infinity, APY = e^APR − 1 — gives about 5.127% too, showing that beyond daily compounding, adding more compounding periods barely moves the result.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do you convert the other way, from APY back to APR?</summary>
+      <p data-i18n="faq.a3">Solve the same formula for APR: APR = n × ((1 + APY)^(1/n) − 1), or APR = ln(1 + APY) for continuous compounding. This matters because US savings accounts are usually advertised by APY alone, so if you want to compare that rate against a loan or another product quoted as a nominal APR, you need to convert it back. Example: an advertised 5% APY compounded monthly corresponds to a nominal APR of about 4.889% — noticeably lower than the headline number, because the APY already includes a year of monthly compounding.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why does compounding frequency matter, and when does it stop mattering?</summary>
+      <p data-i18n="faq.a4">More frequent compounding means each bit of interest starts earning its own interest sooner, so for the exact same APR, APY rises as the compounding frequency increases: annual < semi-annual < quarterly < monthly < daily < continuous. The gap narrows quickly, though — the difference between daily and continuous compounding is usually a few thousandths of a percentage point, so once a rate compounds daily, a theoretically continuous rate makes almost no practical difference. The comparison table above this FAQ shows exactly how much (or how little) each step adds for the rate you entered.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my rate or deposit amount sent anywhere, and is this financial advice?</summary>
+      <p data-i18n="faq.a5">No. Every calculation — the APR/APY conversion, the compounding comparison table, and the balance growth example — runs entirely in your browser using ordinary math; nothing you type is uploaded, logged, or sent to a server, and your last entry is only kept in your own browser's local storage so it's there next time you visit. This tool performs arithmetic only: it isn't financial, investment or tax advice, and real accounts can carry fees, minimum balances, tiered rates or promotional periods that this simple calculator doesn't model — always check an account's official disclosure before relying on any number here.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

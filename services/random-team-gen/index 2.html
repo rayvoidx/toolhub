@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Team Generator — Split Names Into Fair Teams Instantly</title>
+<meta name="description" content="Paste names, split into fair teams by count or size using a crypto-random shuffle. Leftovers spread evenly. Reshuffle anytime — free and runs in your browser.">
+<meta name="keywords" content="random team generator, team randomizer, group generator, split into teams, random group maker, 팀 나누기">
+<link rel="canonical" href="https://tool-hub.me/random-team-gen/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Random Team Generator — Split Names Into Fair Teams Instantly">
+<meta property="og:description" content="Paste names, split into fair teams by count or size using a crypto-random shuffle. Leftovers spread evenly. Reshuffle anytime — free and runs in your browser.">
+<meta property="og:url" content="https://tool-hub.me/random-team-gen/">
+<meta property="og:image" content="https://tool-hub.me/random-team-gen/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Random Team Generator",
+  "description": "Paste names, split into fair teams by count or size using a crypto-random shuffle. Leftovers spread evenly. Reshuffle anytime — free and runs in your browser.",
+  "url": "https://tool-hub.me/random-team-gen/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Random Team Generator", "item": "https://tool-hub.me/random-team-gen/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the random team generator pick who goes on which team?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every name is shuffled with the Fisher–Yates algorithm powered by your browser's cryptographically secure random source (crypto.getRandomValues), then dealt into teams one at a time in round-robin order. This avoids the subtle bias of naive shuffles, so every name has exactly the same chance of landing on any team. The draw happens instantly and entirely on your device — nothing is sent to a server."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when the names don't divide evenly into teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If your list doesn't divide evenly — say 11 people into 3 teams — the leftover people are handed out one at a time to the first teams in round-robin order, rather than piled onto a single leftover group. With 11 people and 3 teams you'd get team sizes of 4, 4 and 3, so the gap between the largest and smallest team is never more than one person. The tool also shows a short note explaining exactly how many teams received the extra member."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I split by team size instead of choosing the number of teams?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — switch \"Split by\" to \"Team size\" and enter how many people you want per team; the tool works out how many teams that requires and distributes everyone evenly using the same round-robin shuffle. For example, entering a team size of 5 for 22 people creates 5 teams (22 divided by 5, rounded up) with sizes 5, 5, 4, 4 and 4, instead of four full teams of 5 and one team with just 2 people. This is handy for activities with a fixed group size, like board games or lab stations, where the number of teams depends on the total headcount."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use custom team names instead of Team 1, Team 2?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — type your own names in the optional \"Team names\" box, one per line, such as Red, Blue and Green for a sports day or Team Falcon and Team Otter for a classroom project. Each line is matched to a team in order, and any teams left over automatically fall back to \"Team 1\", \"Team 2\" and so on. Leave the box empty to use the default numbered names for every team."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my list of names uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The names, team names and settings you enter are processed entirely in your browser and saved only in your browser's localStorage so your list is there the next time you open the page. Nothing is uploaded to a server, there's no sign-up, and no one else can see your list — clearing your browser data removes it for good."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Random Team Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Random Team Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your list, choose how many teams (or how big each one should be), and get a fair, truly random split in one click.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Random team generator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .seg { display:flex; gap:8px; margin-top:6px; }
+      #tool .seg-btn { flex:1 1 0; min-width:0; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font-weight:700; font-size:14px; font-family:inherit; cursor:pointer; }
+      #tool .seg-btn[aria-pressed="true"] { background:var(--accent); border-color:var(--accent); color:#fff; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:14px; }
+      #tool .meta-row { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; font-size:13.5px; color:var(--muted); }
+      #tool .link-btn { background:none; border:none; padding:0; font:inherit; font-size:13px; color:var(--accent); cursor:pointer; text-decoration:underline; }
+      #tool .teams-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .team-card { text-align:left; border:1px solid var(--line); border-radius:10px; background:var(--surface); padding:12px 14px; cursor:pointer; font-family:inherit; color:var(--ink); display:flex; flex-direction:column; gap:6px; min-width:0; width:100%; }
+      #tool .team-card:hover { border-color:var(--accent); }
+      #tool .team-name { font-size:12.5px; font-weight:700; color:var(--accent-strong); text-transform:uppercase; letter-spacing:.03em; }
+      [data-theme="dark"] #tool .team-name, [data-theme="auto"] #tool .team-name { color:var(--accent); }
+      #tool .team-members { display:flex; flex-direction:column; gap:2px; font-size:15px; font-weight:600; color:var(--ink); }
+      #tool .team-members span { overflow-wrap:anywhere; }
+      #tool .split-note { margin:12px 0 0; font-size:13px; color:var(--muted); }
+      #tool .copy-hint { margin:12px 0 0; font-size:12.5px; color:var(--muted); text-align:center; }
+      @media (max-width:420px) {
+        #tool .teams-grid { grid-template-columns:repeat(auto-fill,minmax(128px,1fr)); }
+        #tool .seg-btn { font-size:13px; padding:9px 6px; }
+      }
+    </style>
+
+    <div class="input-group">
+      <label for="names" data-i18n="tool.names.label">Names (one per line)</label>
+      <textarea id="names" rows="8" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.names.ph" placeholder="Alice&#10;Bob&#10;Chen&#10;Dara&#10;Emeka&#10;Farid&#10;Grace&#10;Hiro"></textarea>
+    </div>
+
+    <div class="input-group">
+      <label data-i18n="tool.mode.label">Split by</label>
+      <div class="seg" role="group" aria-label="Split mode" data-i18n-aria-label="tool.mode.label">
+        <button type="button" class="seg-btn" id="mode-teams" data-mode="teams" aria-pressed="true" data-i18n="tool.mode.teams">Number of teams</button>
+        <button type="button" class="seg-btn" id="mode-size" data-mode="size" aria-pressed="false" data-i18n="tool.mode.size">Team size</button>
+      </div>
+    </div>
+
+    <div class="input-group">
+      <label for="split-value" id="split-value-label" data-i18n="tool.teams.label">Number of teams</label>
+      <input id="split-value" type="number" inputmode="numeric" min="1" step="1" value="2" autocomplete="off">
+    </div>
+
+    <div class="input-group">
+      <label for="team-names" data-i18n="tool.teamNames.label">Team names (optional, one per line)</label>
+      <textarea id="team-names" rows="3" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.teamNames.ph" placeholder="Red&#10;Blue"></textarea>
+    </div>
+
+    <button type="button" id="calc-btn" class="btn" data-i18n="tool.btn.shuffle">Shuffle teams</button>
+
+    <p class="err" id="err" hidden role="alert"></p>
+
+    <div class="result" id="result" hidden aria-live="polite">
+      <div class="meta-row">
+        <span id="r-summary"></span>
+        <button type="button" class="link-btn" id="copy-all" data-i18n="tool.copyAll">Copy all teams</button>
+      </div>
+      <div class="teams-grid" id="teams-grid"></div>
+      <p class="split-note" id="split-note" hidden></p>
+      <p class="copy-hint" id="copy-hint" hidden data-i18n="tool.copyHint">Tap a team to copy its roster</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Fair teams without the picking-order drama</h2>
+    <p>Picking teams by hand always ends the same way — a captain plays favorites, the same two people always end up together, or someone spends five minutes arguing about who counts as "even." A random team generator removes the social friction: paste the full list, decide how many teams you need (or how big each one should be), and the split is decided by an algorithm that has no opinion about anyone.</p>
+
+    <h2>How the shuffle actually works</h2>
+    <p>The tool runs the Fisher–Yates shuffle, the standard algorithm computer scientists use for an unbiased random ordering, seeded by your browser's <code>crypto.getRandomValues</code> — the same cryptographically secure random source used for security tokens, not the weaker <code>Math.random()</code> that many quick scripts rely on. Once the list is shuffled, names are dealt into teams one at a time in round-robin order (team 1, team 2, team 3, team 1, team 2…), which is what keeps any leftover people spread across teams instead of dumped on the last one.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — even split.</strong> 12 people, "Number of teams" set to 4. The list is shuffled, then dealt out one at a time: team 1 gets names 1, 5 and 9 from the shuffled order, team 2 gets 2, 6 and 10, and so on. Every team ends up with exactly 3 members, and the assignment is different every time you click Shuffle.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — uneven split, spread evenly.</strong> 11 people, 3 teams. 11 &divide; 3 leaves 2 left over, so two teams get 4 members and one team gets 3 — never a single team of 5 with two teams of 3. The result note tells you exactly which teams have the extra person.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — splitting by team size.</strong> 22 people, "Team size" set to 5. The tool computes 22 &divide; 5 rounded up = 5 teams, then spreads the 22 people across those 5 teams as evenly as possible: sizes 5, 5, 4, 4 and 4, rather than four teams of exactly 5 and a single team of 2 left stranded.</p>
+    </div>
+
+    <h2>Number of teams vs. team size — which should you use?</h2>
+    <table>
+      <thead><tr><th>Situation</th><th>Use</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>You already know you need exactly 4 groups</td><td>Number of teams</td><td>Directly sets the team count</td></tr>
+        <tr><td>Each table, court or station only fits 5 people</td><td>Team size</td><td>Team count is derived from the constraint, not guessed</td></tr>
+        <tr><td>Classroom project, 30 students, groups of about 4</td><td>Team size = 4</td><td>Yields 8 teams, sizes spread 4/4/4/4/4/4/4/2 &rarr; 4/4/4/4/4/4/3/3 evenly</td></tr>
+        <tr><td>Company off-site, want exactly 6 teams for 6 activities</td><td>Number of teams = 6</td><td>Matches a fixed number of stations regardless of headcount</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Practical notes</h2>
+    <ul>
+      <li><strong>Reshuffle anytime.</strong> Clicking the button again runs a brand-new shuffle from scratch — it doesn't reuse the previous split, so you can re-roll until the mix feels right.</li>
+      <li><strong>Duplicate names are treated as separate people.</strong> If two people share a name, list them both (e.g. "Alex" and "Alex 2") so each gets their own slot on the roster.</li>
+      <li><strong>Custom team names are optional.</strong> Leave the box empty for "Team 1", "Team 2"…, or supply your own — Red/Blue/Green, table numbers, or project names all work.</li>
+      <li><strong>Tap a team card to copy just that roster</strong>, or use "Copy all teams" to copy every team as one block of text for pasting into chat, a slide or a spreadsheet.</li>
+      <li><strong>Nothing leaves your browser.</strong> Your list and settings are saved only in local storage on your device — there's no account, no upload and no server involved.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/name-picker/"><span class="related-ico" aria-hidden="true">🎡</span><span class="related-name">Random Name Picker</span></a><a class="related-item" href="https://tool-hub.me/wheel-spinner/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Random Wheel Spinner</span></a><a class="related-item" href="https://tool-hub.me/dice-roller/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Dice Roller</span></a><a class="related-item" href="https://tool-hub.me/coin-flipper/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Coin Flip</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does the random team generator pick who goes on which team?</summary>
+      <p data-i18n="faq.a1">Every name is shuffled with the Fisher–Yates algorithm powered by your browser's cryptographically secure random source (crypto.getRandomValues), then dealt into teams one at a time in round-robin order. This avoids the subtle bias of naive shuffles, so every name has exactly the same chance of landing on any team. The draw happens instantly and entirely on your device — nothing is sent to a server.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What happens when the names don't divide evenly into teams?</summary>
+      <p data-i18n="faq.a2">If your list doesn't divide evenly — say 11 people into 3 teams — the leftover people are handed out one at a time to the first teams in round-robin order, rather than piled onto a single leftover group. With 11 people and 3 teams you'd get team sizes of 4, 4 and 3, so the gap between the largest and smallest team is never more than one person. The tool also shows a short note explaining exactly how many teams received the extra member.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Can I split by team size instead of choosing the number of teams?</summary>
+      <p data-i18n="faq.a3">Yes — switch "Split by" to "Team size" and enter how many people you want per team; the tool works out how many teams that requires and distributes everyone evenly using the same round-robin shuffle. For example, entering a team size of 5 for 22 people creates 5 teams (22 divided by 5, rounded up) with sizes 5, 5, 4, 4 and 4, instead of four full teams of 5 and one team with just 2 people. This is handy for activities with a fixed group size, like board games or lab stations, where the number of teams depends on the total headcount.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can I use custom team names instead of Team 1, Team 2?</summary>
+      <p data-i18n="faq.a4">Yes — type your own names in the optional "Team names" box, one per line, such as Red, Blue and Green for a sports day or Team Falcon and Team Otter for a classroom project. Each line is matched to a team in order, and any teams left over automatically fall back to "Team 1", "Team 2" and so on. Leave the box empty to use the default numbered names for every team.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my list of names uploaded anywhere?</summary>
+      <p data-i18n="faq.a5">No. The names, team names and settings you enter are processed entirely in your browser and saved only in your browser's localStorage so your list is there the next time you open the page. Nothing is uploaded to a server, there's no sign-up, and no one else can see your list — clearing your browser data removes it for good.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

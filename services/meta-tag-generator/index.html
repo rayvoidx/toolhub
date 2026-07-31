@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meta Tag Generator — Free SEO &amp; Open Graph Tag Builder</title>
+<meta name="description" content="Generate title, description, canonical, robots, Open Graph and Twitter Card tags from one form. Live search and social preview included. Free, in your browser.">
+<meta name="keywords" content="meta tag generator, og tag generator, open graph generator, seo meta tags, twitter card generator, 메타태그 생성기, 오픈그래프 생성기">
+<link rel="canonical" href="https://tool-hub.me/meta-tag-generator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Meta Tag Generator — Free SEO &amp; Open Graph Tag Builder">
+<meta property="og:description" content="Generate title, description, canonical, robots, Open Graph and Twitter Card tags from one form. Live search and social preview included. Free, in your browser.">
+<meta property="og:url" content="https://tool-hub.me/meta-tag-generator/">
+<meta property="og:image" content="https://tool-hub.me/meta-tag-generator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Meta Tag Generator",
+  "description": "Generate title, description, canonical, robots, Open Graph and Twitter Card tags from one form. Live search and social preview included. Free, in your browser.",
+  "url": "https://tool-hub.me/meta-tag-generator/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Meta Tag Generator", "item": "https://tool-hub.me/meta-tag-generator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What meta tags does this generator create, and where does each one appear?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool builds four groups of tags from one form: the page <title> and meta description, which Google displays in search results; the canonical link and robots directive, which control indexing and duplicate-URL signals; Open Graph tags (og:title, og:description, og:url, og:image, og:site_name), which Facebook, LinkedIn, Slack and Discord read to build a share card; and Twitter Card tags (twitter:card, twitter:title, twitter:description, twitter:image), which X (Twitter) reads first before falling back to your Open Graph tags. Fill in a title to see all four groups appear in the generated code, ready to paste into your page's <head>."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should my title and meta description be before they get cut off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google doesn't enforce a strict character limit — it truncates based on pixel width, which varies by character and device — but roughly 50 to 60 characters for a title and 150 to 160 characters for a description is a safe target that avoids an ellipsis on most desktop results. This tool's character meters turn amber as you approach those limits and red once you're over them, so you can trim before publishing rather than guessing how Google will cut your text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a canonical URL and why does every page need one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A canonical URL tells search engines which address is the \"real\" version of a page when the same content is reachable through more than one URL — with or without a trailing slash, with tracking parameters, through HTTP and HTTPS, or on both a mobile and desktop subdomain. Without it, search engines may split ranking signals across duplicates or index the wrong version. Enter your page's preferred, absolute URL and this tool generates the <link rel=\"canonical\"> tag and reuses the same URL for og:url."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do I need both Open Graph and Twitter Card tags — isn't one enough?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "X (Twitter) reads its own twitter:* tags first and only falls back to Open Graph tags if a twitter tag is missing, so relying on og:* alone can give you a broken or generic-looking card on X specifically. Every other major platform — Facebook, LinkedIn, Slack, Discord, iMessage — reads Open Graph tags and ignores twitter:* entirely. Generating both from the same title, description and image, as this tool does, is the only way to guarantee a consistent share card everywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this tool upload my title, description or image anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every tag is built with JavaScript running in your own browser, and nothing you type is sent to a server or saved anywhere outside your device's local storage, which only remembers your last inputs so you don't lose them on refresh. The one exception is the image URL: if you paste one into the OG image field, your browser requests that image directly from the address you provided so it can show a preview — that request goes straight to the image's own host, not through this site."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Meta Tag Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Meta Tag Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Fill in your page details and get ready-to-paste &lt;title&gt;, meta description, Open Graph and Twitter Card tags — with a live search and social preview.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Meta tag generator" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool { --mtg-ok: #15803d; --mtg-near: #b45309; --mtg-over: #dc2626; }
+      [data-theme="dark"] #tool { --mtg-ok: #4ade80; --mtg-near: #fbbf24; --mtg-over: #f87171; }
+      @media (prefers-color-scheme: dark) {
+        [data-theme="auto"] #tool { --mtg-ok: #4ade80; --mtg-near: #fbbf24; --mtg-over: #f87171; }
+      }
+
+      #tool .mtg-field { margin: 0 0 18px; }
+      #tool .mtg-field label { margin: 0 0 6px; }
+      #tool .mtg-row { display: flex; gap: 16px; flex-wrap: wrap; }
+      #tool .mtg-row .mtg-field { flex: 1 1 220px; min-width: 0; }
+
+      #tool .mtg-meterline { display: flex; align-items: center; gap: 10px; margin-top: 8px; }
+      #tool .mtg-track { flex: 1 1 auto; height: 6px; border-radius: 3px; background: var(--line); overflow: hidden; }
+      #tool .mtg-bar { display: block; height: 100%; width: 0; background: var(--muted); transition: width .12s linear; }
+      #tool .mtg-bar.is-ok { background: var(--mtg-ok); }
+      #tool .mtg-bar.is-near { background: var(--mtg-near); }
+      #tool .mtg-bar.is-over { background: var(--mtg-over); }
+      #tool .mtg-count { flex: 0 0 auto; font-size: 12px; font-weight: 700; color: var(--muted); white-space: nowrap; }
+      #tool .mtg-count.is-near { color: var(--mtg-near); }
+      #tool .mtg-count.is-over { color: var(--mtg-over); }
+
+      #tool .mtg-hint { margin: 8px 0 0; font-size: 12.5px; color: var(--mtg-over); }
+
+      #tool .mtg-preview { margin: 26px 0; }
+      #tool .mtg-preview h3 { font-size: 13px; font-weight: 700; color: var(--muted); margin: 0 0 10px; text-transform: uppercase; letter-spacing: .04em; }
+
+      #tool .mtg-serp { border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; background: var(--surface); font-family: arial, sans-serif; overflow: hidden; }
+      #tool .mtg-serp-url { font-size: 13px; color: var(--ink); opacity: .7; margin-bottom: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      #tool .mtg-serp-title { font-size: 19px; line-height: 1.3; color: #1a0dab; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+      [data-theme="dark"] #tool .mtg-serp-title { color: #8ab4f8; }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .mtg-serp-title { color: #8ab4f8; } }
+      #tool .mtg-serp-desc {
+        font-size: 14px; line-height: 1.5; color: var(--ink); opacity: .85; margin-top: 3px;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      }
+
+      #tool .mtg-social { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); }
+      #tool .mtg-social-imgwrap {
+        position: relative; width: 100%; aspect-ratio: 1200 / 630; background: var(--bg);
+        display: flex; align-items: center; justify-content: center;
+      }
+      #tool .mtg-social-imgwrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+      #tool .mtg-social-ph { font-size: 13px; color: var(--muted); text-align: center; padding: 0 16px; }
+      #tool .mtg-social-body { padding: 12px 14px; border-top: 1px solid var(--line); }
+      #tool .mtg-social-domain {
+        font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em;
+        margin-bottom: 3px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+      }
+      #tool .mtg-social-title {
+        font-size: 15.5px; font-weight: 700; color: var(--ink); line-height: 1.3;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      }
+      #tool .mtg-social-desc {
+        font-size: 13px; color: var(--muted); margin-top: 3px;
+        display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+      }
+
+      #tool .mtg-output-wrap { margin-top: 26px; }
+      #tool #mtg-output {
+        width: 100%; box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 12.5px; line-height: 1.5; padding: 12px; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink); resize: vertical;
+      }
+      #tool .mtg-actions { margin-top: 10px; }
+      #tool .mtg-toast { min-height: 1.2em; margin: 8px 0 0; font-size: 13px; font-weight: 600; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .mtg-toast, [data-theme="auto"] #tool .mtg-toast { color: var(--accent); }
+
+      #tool .mtg-privacy { margin: 18px 0 0; font-size: 12.5px; color: var(--muted); text-align: center; }
+
+      @media (max-width: 420px) {
+        #tool .mtg-row { flex-direction: column; }
+      }
+    </style>
+
+    <div class="mtg-field">
+      <label for="mtg-title" data-i18n="tool.title.label">Page title</label>
+      <input id="mtg-title" type="text" maxlength="300" placeholder="e.g. Best Coffee Shops in Seoul — 2026 Guide" data-i18n-placeholder="tool.title.ph" autocomplete="off" autofocus>
+      <div class="mtg-meterline">
+        <div class="mtg-track"><div class="mtg-bar" id="mtg-title-bar"></div></div>
+        <span class="mtg-count" id="mtg-title-count">0 / 60 characters</span>
+      </div>
+      <p class="mtg-hint" id="mtg-title-hint" hidden data-i18n="tool.title.hint">Titles over 60 characters may be cut off in Google search results.</p>
+    </div>
+
+    <div class="mtg-field">
+      <label for="mtg-desc" data-i18n="tool.desc.label">Meta description</label>
+      <textarea id="mtg-desc" rows="3" maxlength="500" placeholder="e.g. Discover the 10 best coffee shops in Seoul, from cozy hanok cafes to award-winning roasteries." data-i18n-placeholder="tool.desc.ph"></textarea>
+      <div class="mtg-meterline">
+        <div class="mtg-track"><div class="mtg-bar" id="mtg-desc-bar"></div></div>
+        <span class="mtg-count" id="mtg-desc-count">0 / 160 characters</span>
+      </div>
+      <p class="mtg-hint" id="mtg-desc-hint" hidden data-i18n="tool.desc.hint">Descriptions over 160 characters may be cut off in Google search results.</p>
+    </div>
+
+    <div class="mtg-field">
+      <label for="mtg-url" data-i18n="tool.url.label">Canonical URL</label>
+      <input id="mtg-url" type="text" inputmode="url" placeholder="https://tool-hub.me/your-page" data-i18n-placeholder="tool.url.ph" autocomplete="off">
+      <p class="mtg-hint" id="mtg-url-warn" hidden data-i18n="tool.url.warn">Use an absolute URL, e.g. https://tool-hub.me/your-page, so the canonical link and previews work correctly.</p>
+    </div>
+
+    <div class="mtg-row">
+      <div class="mtg-field">
+        <label for="mtg-sitename" data-i18n="tool.siteName.label">Site name (optional)</label>
+        <input id="mtg-sitename" type="text" placeholder="e.g. Toolhub" data-i18n-placeholder="tool.siteName.ph" autocomplete="off">
+      </div>
+      <div class="mtg-field">
+        <label for="mtg-image" data-i18n="tool.image.label">OG image URL (optional)</label>
+        <input id="mtg-image" type="text" inputmode="url" placeholder="https://tool-hub.me/og-image.png" data-i18n-placeholder="tool.image.ph" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="mtg-row">
+      <div class="mtg-field">
+        <label for="mtg-twcard" data-i18n="tool.twitterCard.label">Twitter card type</label>
+        <select id="mtg-twcard">
+          <option value="summary_large_image" data-i18n="tool.twitterCard.summaryLarge">Summary with large image</option>
+          <option value="summary" data-i18n="tool.twitterCard.summary">Summary</option>
+        </select>
+        <p class="mtg-hint" id="mtg-twcard-hint" hidden data-i18n="tool.twitterCard.noImageHint">Add an OG image URL above so the large image card displays properly.</p>
+      </div>
+      <div class="mtg-field">
+        <label for="mtg-robots" data-i18n="tool.robots.label">Robots directive</label>
+        <select id="mtg-robots">
+          <option value="index, follow" data-i18n="tool.robots.indexFollow">Index, follow (default)</option>
+          <option value="noindex, follow" data-i18n="tool.robots.noindexFollow">Noindex, follow</option>
+          <option value="index, nofollow" data-i18n="tool.robots.indexNofollow">Index, nofollow</option>
+          <option value="noindex, nofollow" data-i18n="tool.robots.noindexNofollow">Noindex, nofollow</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mtg-preview">
+      <h3 data-i18n="tool.preview.serpHeading">Google search preview</h3>
+      <div class="mtg-serp">
+        <div class="mtg-serp-url" id="mtg-serp-url">example.com › your-page</div>
+        <div class="mtg-serp-title" id="mtg-serp-title">Your page title will appear here</div>
+        <div class="mtg-serp-desc" id="mtg-serp-desc">Your meta description will appear here, summarizing the page for search results.</div>
+      </div>
+    </div>
+
+    <div class="mtg-preview">
+      <h3 data-i18n="tool.preview.socialHeading">Social share preview</h3>
+      <div class="mtg-social">
+        <div class="mtg-social-imgwrap">
+          <img id="mtg-social-img" alt="" aria-hidden="true" hidden>
+          <span id="mtg-social-ph" class="mtg-social-ph" data-i18n="tool.preview.noImage">1200 × 630 image preview</span>
+        </div>
+        <div class="mtg-social-body">
+          <div class="mtg-social-domain" id="mtg-social-domain">EXAMPLE.COM</div>
+          <div class="mtg-social-title" id="mtg-social-title">Your page title will appear here</div>
+          <div class="mtg-social-desc" id="mtg-social-desc">Your meta description will appear here, summarizing the page for search results.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mtg-output-wrap">
+      <label for="mtg-output" data-i18n="tool.output.label">Generated tags</label>
+      <textarea id="mtg-output" rows="10" readonly spellcheck="false"></textarea>
+      <div class="mtg-actions">
+        <button type="button" class="btn" id="mtg-copy" data-i18n="tool.copy">Copy tags</button>
+      </div>
+      <p class="mtg-toast" id="mtg-toast" role="status" aria-live="polite"></p>
+    </div>
+
+    <p class="mtg-privacy" data-i18n="tool.privacy">All fields are processed in your browser. Nothing you type is uploaded or stored on a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:0.92em;background:var(--bg);padding:1px 5px;border-radius:5px}
+    </style>
+
+    <h2>Why a handful of meta tags decide how your page is found and shared</h2>
+    <p>A browser tab never shows your beautifully designed page when someone shares a link in Slack, pastes it into iMessage, or scrolls past it in a Google result — it shows whatever your meta tags say. Get the &lt;title&gt; and description right and a listing reads like a clear, clickable answer to someone's search. Get Open Graph and Twitter Card tags right and a shared link turns into a card with an image, headline and summary instead of a bare, unstyled URL. This tool builds all of it from one form: type once, and the &lt;title&gt;, meta description, canonical link, robots directive, Open Graph tags and Twitter Card tags are generated together, correctly escaped, and ready to paste into your page's &lt;head&gt;.</p>
+
+    <h2>What each tag actually controls</h2>
+    <ul>
+      <li><strong>&lt;title&gt;</strong> — the blue, clickable headline in a Google result and the text shown in a browser tab. It is also the fallback title most platforms use if <code>og:title</code> is missing.</li>
+      <li><strong>Meta description</strong> — the gray summary line under a search result. Google sometimes rewrites it from on-page content if it thinks a better snippet exists, but a well-written description still wins the click more often than not.</li>
+      <li><strong>Canonical URL</strong> (<code>&lt;link rel="canonical"&gt;</code>) — declares the one true address for a page when it's reachable through several URLs (with or without a trailing slash, with tracking parameters, on <code>http</code> vs <code>https</code>). This prevents duplicate-content confusion from splitting your ranking signals.</li>
+      <li><strong>Robots directive</strong> — tells crawlers whether to index a page and whether to follow its links. <code>noindex</code> is the standard way to keep a thank-you page or internal search result out of Google entirely.</li>
+      <li><strong>Open Graph tags</strong> (<code>og:title</code>, <code>og:description</code>, <code>og:url</code>, <code>og:image</code>, <code>og:site_name</code>) — read by Facebook, LinkedIn, Slack, Discord and most link-preview bots to build the image-and-text card shown when a link is shared.</li>
+      <li><strong>Twitter Card tags</strong> (<code>twitter:card</code>, <code>twitter:title</code>, <code>twitter:description</code>, <code>twitter:image</code>) — read by X (Twitter) specifically. X checks these first and only falls back to your Open Graph tags if a twitter tag is absent.</li>
+    </ul>
+
+    <h2>Title and description length, without the guesswork</h2>
+    <p>Google truncates by pixel width, not character count, so the exact cutoff shifts with the letters you use — a title full of narrow lowercase letters fits more characters than one in capitals. As a practical target, keep titles to roughly 50–60 characters and descriptions to roughly 150–160 characters; past that, an ellipsis becomes likely on a typical desktop result. The character meters under each field here turn amber near that limit and red once you're over it, so you can trim the sentence before it gets cut mid-word instead of finding out after the page is live.</p>
+
+    <div class="example">
+      <p><strong>Example — a product page.</strong> Title: "Wireless Noise-Cancelling Headphones — FreeAir Pro" (52 characters, safely under 60). Description: "The FreeAir Pro blocks up to 35dB of noise, lasts 30 hours per charge, and folds flat for travel. Free shipping, 2-year warranty." (132 characters, comfortably under 160, with room to add a call to action if needed).</p>
+    </div>
+    <div class="example">
+      <p><strong>Example — a blog post with a long working title.</strong> "Everything We Learned About Sourdough Starters After 200 Failed Loaves (A Complete Beginner's Guide)" runs 103 characters — more than 40 over the safe range. Trimmed to "Sourdough Starters: A Complete Beginner's Guide" (48 characters), it keeps the core promise and fits with room to spare.</p>
+    </div>
+
+    <h2>Common mistakes this tool helps you avoid</h2>
+    <ul>
+      <li><strong>Forgetting <code>og:url</code>:</strong> without it, some platforms resolve the share card against the URL the crawler happened to fetch, which can be wrong behind redirects or tracking parameters. This tool reuses your canonical URL for <code>og:url</code> automatically.</li>
+      <li><strong>Only setting Open Graph tags:</strong> a card that looks perfect on Facebook can still show as a bare link on X if the <code>twitter:*</code> tags are missing — the two systems don't share fields.</li>
+      <li><strong>An <code>og:image</code> that's the wrong shape:</strong> most platforms crop to roughly a 1.91:1 ratio (1200×630 is the common recommendation); a square or portrait image gets cropped awkwardly. The social preview here mimics that crop so you can catch it before publishing.</li>
+      <li><strong>Unescaped quotes or ampersands:</strong> a title containing <code>&amp;</code> or <code>"</code> breaks the HTML if pasted in raw. This tool HTML-escapes every value automatically.</li>
+      <li><strong>Setting <code>noindex</code> by accident:</strong> a robots directive of <code>noindex</code> left over from a staging environment is one of the most common reasons a real page silently disappears from search. Double-check this dropdown before you copy the code.</li>
+    </ul>
+
+    <h2>What this tool does not do</h2>
+    <p>It generates tags from what you type — it does not crawl your live page, does not verify that the image URL you entered actually exists on your server long-term, and does not submit anything to Google or any indexing API. Paste the generated block into your page's &lt;head&gt;, then use each platform's own debugger (Facebook's Sharing Debugger, X's Card Validator) to confirm the live page renders the card as expected, since those tools also account for caching that this generator can't see.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/color-contrast-checker/"><span class="related-ico" aria-hidden="true">Aa</span><span class="related-name">Color Contrast Checker</span></a><a class="related-item" href="https://tool-hub.me/gradient-generator/"><span class="related-ico" aria-hidden="true">🌈</span><span class="related-name">CSS Gradient Generator</span></a><a class="related-item" href="https://tool-hub.me/css-minifier/"><span class="related-ico" aria-hidden="true">{;}</span><span class="related-name">CSS Minifier</span></a><a class="related-item" href="https://tool-hub.me/ad-copy-limit-check/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Ad Copy Length Checker</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What meta tags does this generator create, and where does each one appear?</summary>
+      <p data-i18n="faq.a1">This tool builds four groups of tags from one form: the page &lt;title&gt; and meta description, which Google displays in search results; the canonical link and robots directive, which control indexing and duplicate-URL signals; Open Graph tags (og:title, og:description, og:url, og:image, og:site_name), which Facebook, LinkedIn, Slack and Discord read to build a share card; and Twitter Card tags (twitter:card, twitter:title, twitter:description, twitter:image), which X (Twitter) reads first before falling back to your Open Graph tags. Fill in a title to see all four groups appear in the generated code, ready to paste into your page's &lt;head&gt;.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How long should my title and meta description be before they get cut off?</summary>
+      <p data-i18n="faq.a2">Google doesn't enforce a strict character limit — it truncates based on pixel width, which varies by character and device — but roughly 50 to 60 characters for a title and 150 to 160 characters for a description is a safe target that avoids an ellipsis on most desktop results. This tool's character meters turn amber as you approach those limits and red once you're over them, so you can trim before publishing rather than guessing how Google will cut your text.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is a canonical URL and why does every page need one?</summary>
+      <p data-i18n="faq.a3">A canonical URL tells search engines which address is the "real" version of a page when the same content is reachable through more than one URL — with or without a trailing slash, with tracking parameters, through HTTP and HTTPS, or on both a mobile and desktop subdomain. Without it, search engines may split ranking signals across duplicates or index the wrong version. Enter your page's preferred, absolute URL and this tool generates the &lt;link rel="canonical"&gt; tag and reuses the same URL for og:url.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why do I need both Open Graph and Twitter Card tags — isn't one enough?</summary>
+      <p data-i18n="faq.a4">X (Twitter) reads its own twitter:* tags first and only falls back to Open Graph tags if a twitter tag is missing, so relying on og:* alone can give you a broken or generic-looking card on X specifically. Every other major platform — Facebook, LinkedIn, Slack, Discord, iMessage — reads Open Graph tags and ignores twitter:* entirely. Generating both from the same title, description and image, as this tool does, is the only way to guarantee a consistent share card everywhere.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Does this tool upload my title, description or image anywhere?</summary>
+      <p data-i18n="faq.a5">No. Every tag is built with JavaScript running in your own browser, and nothing you type is sent to a server or saved anywhere outside your device's local storage, which only remembers your last inputs so you don't lose them on refresh. The one exception is the image URL: if you paste one into the OG image field, your browser requests that image directly from the address you provided so it can show a preview — that request goes straight to the image's own host, not through this site.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slope Calculator — Slope, Equation &amp; Angle from 2 Points</title>
+<meta name="description" content="Enter two points to find the slope, y-intercept, line equation y=mx+b, angle of incline, percent grade, distance, and midpoint — instantly, free, and computed entirely in your browser.">
+<meta name="keywords" content="slope calculator, slope formula, find slope from two points, y=mx+b calculator, percent grade calculator, 기울기 계산기">
+<link rel="canonical" href="https://tool-hub.me/slope-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Slope Calculator — Slope, Equation &amp; Angle from 2 Points">
+<meta property="og:description" content="Enter two points to find the slope, y-intercept, line equation y=mx+b, angle of incline, percent grade, distance, and midpoint — instantly, free, and computed entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/slope-calc/">
+<meta property="og:image" content="https://tool-hub.me/slope-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Slope Calculator",
+  "description": "Enter two points to find the slope, y-intercept, line equation y=mx+b, angle of incline, percent grade, distance, and midpoint — instantly, free, and computed entirely in your browser.",
+  "url": "https://tool-hub.me/slope-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Slope Calculator", "item": "https://tool-hub.me/slope-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find the slope between two points?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "To find the slope between two points (x₁, y₁) and (x₂, y₂), use the slope formula m = (y₂ − y₁) / (x₂ − x₁) — the change in y (rise) divided by the change in x (run). For example, with (1, 2) and (4, 8): m = (8 − 2) / (4 − 1) = 6 / 3 = 2, so the line rises 2 units for every 1 unit it moves right. Once you have the slope, you can find the full line equation y = mx + b by solving for b using either point: b = y − mx. This calculator does all of that automatically and also shows the angle of incline, percent grade, distance between the points, and their midpoint."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a negative, zero, or undefined slope mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A positive slope means the line rises from left to right; a negative slope means it falls from left to right — the larger the number (positive or negative), the steeper the incline. A slope of exactly zero means the line is perfectly horizontal, which happens whenever y₁ equals y₂. A slope is undefined — not zero — when the line is vertical, which happens whenever x₁ equals x₂, because the run (x₂ − x₁) becomes zero and division by zero has no defined result. This calculator detects the vertical case automatically and reports the slope as undefined instead of showing an error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is percent grade, and how is it different from slope?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percent grade is the slope expressed as a percentage instead of a ratio: percent grade = slope × 100, so a slope of 0.05 is a 5% grade. It's the standard way road signs, construction plans, and ramps describe steepness — a 5% grade means the surface rises 5 units of height for every 100 units of horizontal distance. A slope of 1 (a 45° angle) equals a 100% grade, which often surprises people who assume 100% means vertical — a truly vertical rise is an undefined slope, not a 100% grade. This calculator shows the percent grade alongside the slope so you can use whichever unit your project calls for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when the line between my two points is vertical?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When both points share the same x-coordinate (x₁ = x₂), the line connecting them is perfectly vertical, and its slope is mathematically undefined because the slope formula would require dividing by zero. Rather than showing an error, this calculator recognizes the vertical case, reports the slope as undefined, gives the line's equation as x = (the shared x-value), and shows the angle of incline as 90°. The distance between the points and their midpoint are still calculated normally in this case, since neither one depends on the slope."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the coordinate data I enter sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This slope calculator runs entirely in your browser — the coordinates you enter for both points never leave your device, and nothing is uploaded, logged, or stored on a server. There's no sign-up, account, or tracking involved, so you can use it freely for homework, geometry practice, construction grade checks, or engineering quick checks with full privacy."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Slope Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Slope Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter two points (x₁, y₁) and (x₂, y₂) to get the slope, line equation, angle of incline, percent grade, distance, and midpoint — instantly, right in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Slope calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .point-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .point-row label { font-size:13px; }
+      #tool #result-eq { margin:0 0 14px; font-size:22px; font-weight:800; color:var(--accent-strong); font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+      #tool .rc-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:10px; }
+      #tool .res-card { text-align:left; display:flex; flex-direction:column; gap:4px; padding:14px; border:1px solid var(--line); border-radius:10px; background:var(--surface); cursor:pointer; font-family:inherit; color:var(--ink); width:100%; }
+      #tool .res-card .rc-label { font-size:13px; color:var(--muted); font-weight:600; display:block; }
+      #tool .res-card .rc-value { font-size:18px; font-weight:800; color:var(--accent); font-variant-numeric:tabular-nums; overflow-wrap:anywhere; display:block; }
+      #tool .plot-wrap { margin-top:16px; border:1px solid var(--line); border-radius:10px; padding:12px; background:var(--bg); }
+      #tool .plot-wrap svg { width:100%; height:auto; display:block; }
+      #tool .plot-caption { margin:8px 0 0; font-size:12px; color:var(--muted); text-align:center; }
+      #tool details.adv { margin-top:18px; border:1px solid var(--line); border-radius:10px; padding:0 14px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:14px; color:var(--muted); }
+      #tool details.adv[open] { padding-bottom:14px; }
+      #tool .step-line { margin:8px 0 0; font-size:13.5px; line-height:1.6; color:var(--ink); font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+      #tool .step-line:first-child { margin-top:0; }
+      @media(max-width:420px){ #tool .point-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="point-row">
+      <div class="input-group">
+        <label for="x1-input" data-i18n="tool.x1.label">x₁</label>
+        <input id="x1-input" type="number" inputmode="decimal" step="any" placeholder="e.g. 1" data-i18n-placeholder="tool.x1.ph" autocomplete="off" autofocus>
+      </div>
+      <div class="input-group">
+        <label for="y1-input" data-i18n="tool.y1.label">y₁</label>
+        <input id="y1-input" type="number" inputmode="decimal" step="any" placeholder="e.g. 2" data-i18n-placeholder="tool.y1.ph" autocomplete="off">
+      </div>
+    </div>
+    <div class="point-row">
+      <div class="input-group">
+        <label for="x2-input" data-i18n="tool.x2.label">x₂</label>
+        <input id="x2-input" type="number" inputmode="decimal" step="any" placeholder="e.g. 4" data-i18n-placeholder="tool.x2.ph" autocomplete="off">
+      </div>
+      <div class="input-group">
+        <label for="y2-input" data-i18n="tool.y2.label">y₂</label>
+        <input id="y2-input" type="number" inputmode="decimal" step="any" placeholder="e.g. 8" data-i18n-placeholder="tool.y2.ph" autocomplete="off">
+      </div>
+    </div>
+
+    <p id="tool-err" role="alert" hidden style="margin:14px 0 0;font-size:13.5px;line-height:1.5;color:#b91c1c;"></p>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter both points above to calculate the slope</p>
+      <p id="result-notice" hidden style="margin:0 0 12px;font-size:13.5px;line-height:1.55;color:var(--muted);"></p>
+      <p id="result-eq" hidden></p>
+
+      <div id="result-grid" hidden class="rc-grid">
+        <button type="button" class="res-card" data-copy="slope">
+          <span class="rc-label" data-i18n="tool.res.slope">Slope (m)</span>
+          <span class="rc-value">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="angle">
+          <span class="rc-label" data-i18n="tool.res.angle">Angle of incline</span>
+          <span class="rc-value">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="grade">
+          <span class="rc-label" data-i18n="tool.res.grade">Percent grade</span>
+          <span class="rc-value">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="distance">
+          <span class="rc-label" data-i18n="tool.res.distance">Distance</span>
+          <span class="rc-value">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="midpoint">
+          <span class="rc-label" data-i18n="tool.res.midpoint">Midpoint</span>
+          <span class="rc-value">&mdash;</span>
+        </button>
+      </div>
+      <p id="copy-hint" hidden data-i18n="tool.copyHint" style="margin:12px 0 0;font-size:12.5px;color:var(--muted);text-align:center;">Tap a card to copy the number</p>
+
+      <div id="plot-wrap" hidden class="plot-wrap">
+        <svg id="plot-svg" viewBox="0 0 300 200" role="img" aria-label="Plot of the two points and the line through them" data-i18n-aria-label="tool.plot.aria"></svg>
+        <p class="plot-caption" data-i18n="tool.plot.caption">Both points and the line through them</p>
+      </div>
+    </div>
+
+    <details id="tool-more" class="adv" hidden>
+      <summary data-i18n="tool.details.summary">Show the slope formula step by step</summary>
+      <p id="step-formula" class="step-line" hidden></p>
+      <p id="step-substituted" class="step-line" hidden></p>
+      <p id="step-result" class="step-line" hidden></p>
+      <p id="step-intercept" class="step-line" hidden></p>
+    </details>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How to calculate the slope between two points</h2>
+    <p>The slope of a line through two points (x₁, y₁) and (x₂, y₂) measures how steeply it rises or falls: m = (y₂ − y₁) / (x₂ − x₁), the change in y (often called "rise") divided by the change in x ("run"). Enter your two points above and this calculator plugs them into the formula, shows the substitution step by step, and gives you the slope, the full line equation y = mx + b, the angle of incline, the percent grade, the distance between the points, and their midpoint — all at once.</p>
+
+    <h3>Worked example</h3>
+    <div class="example">
+      <p><strong>Points (1, 2) and (4, 8).</strong> m = (8 − 2) / (4 − 1) = 6 / 3 = 2. The line rises 2 units for every 1 unit it moves right. Using point (1, 2): b = y₁ − m·x₁ = 2 − 2·1 = 0, so the equation of the line is y = 2x. The distance between the points is √((4−1)² + (8−2)²) = √(9 + 36) = √45 ≈ 6.708, and their midpoint is ((1+4)/2, (2+8)/2) = (2.5, 5).</p>
+    </div>
+
+    <h2>Reading the slope value</h2>
+    <p>The sign and size of the slope tell you everything about the line's direction and steepness before you even look at a graph:</p>
+    <table>
+      <thead><tr><th>Slope</th><th>Meaning</th><th>Line direction</th></tr></thead>
+      <tbody>
+        <tr><td>m &gt; 0</td><td>Positive slope</td><td>Rises from left to right</td></tr>
+        <tr><td>m = 0</td><td>Zero slope</td><td>Perfectly horizontal (y₁ = y₂)</td></tr>
+        <tr><td>m &lt; 0</td><td>Negative slope</td><td>Falls from left to right</td></tr>
+        <tr><td>Undefined</td><td>Vertical line</td><td>Straight up and down (x₁ = x₂)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Slope as percent grade</h2>
+    <p>Percent grade is simply the slope written as a percentage instead of a ratio: percent grade = slope × 100. It's the everyday unit used on road signs, construction blueprints, wheelchair ramps, and hiking-trail markers.</p>
+    <div class="example">
+      <p><strong>Example — a 5% grade.</strong> A slope of 0.05 is a 5% grade: the road rises 5 units of height for every 100 units traveled horizontally. That corresponds to an angle of incline of about 2.86° — a gentle, everyday incline, not a steep one.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example — a 100% grade isn't vertical.</strong> A slope of 1 (a 45° angle) is a 100% grade — rise equals run. Many people assume 100% means straight up, but a truly vertical rise is an undefined slope (infinite grade), not 100%.</p>
+    </div>
+
+    <h2>The line equation: y = mx + b</h2>
+    <p>Once you know the slope m, you can find the y-intercept b — where the line crosses the y-axis — by substituting either point into y = mx + b and solving: b = y − mx. For the example above, b = 2 − 2(1) = 0, giving y = 2x. If the line is vertical (x₁ = x₂), it can't be written as y = mx + b at all; instead its equation is simply x = (the shared x-value), since every point on the line shares that same x-coordinate regardless of y.</p>
+
+    <h2>Common mistakes and quick tips</h2>
+    <ul>
+      <li><strong>Mixing up the order of subtraction:</strong> the formula is (y₂ − y₁) / (x₂ − x₁) — as long as you subtract in the same order (point 2 minus point 1) in both the numerator and denominator, the result is correct either way you label your points.</li>
+      <li><strong>Treating "undefined" as an error:</strong> a vertical line's slope isn't a mistake or a broken calculation — it's mathematically undefined because it would require dividing by zero. This calculator detects that case and reports it clearly instead of showing an error.</li>
+      <li><strong>Confusing 100% grade with vertical:</strong> 100% grade means a 45° angle (slope of 1), not straight up. A genuinely vertical surface has an undefined slope, not a 100% one.</li>
+      <li><strong>Forgetting that identical points define no line:</strong> if both points are exactly the same, there are infinitely many lines through that single point, so no unique slope exists — this is different from the vertical case.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/quadratic-solver/"><span class="related-ico" aria-hidden="true">✖️</span><span class="related-name">Quadratic Equation Solver</span></a><a class="related-item" href="https://tool-hub.me/square-root-calc/"><span class="related-ico" aria-hidden="true">√</span><span class="related-name">Square Root Calculator</span></a><a class="related-item" href="https://tool-hub.me/standard-deviation-calc/"><span class="related-ico" aria-hidden="true">📉</span><span class="related-name">Standard Deviation Calculator</span></a><a class="related-item" href="https://tool-hub.me/gcf-lcm-calc/"><span class="related-ico" aria-hidden="true">➗</span><span class="related-name">GCF and LCM Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I find the slope between two points?</summary>
+      <p data-i18n="faq.a1">To find the slope between two points (x₁, y₁) and (x₂, y₂), use the slope formula m = (y₂ − y₁) / (x₂ − x₁) — the change in y (rise) divided by the change in x (run). For example, with (1, 2) and (4, 8): m = (8 − 2) / (4 − 1) = 6 / 3 = 2, so the line rises 2 units for every 1 unit it moves right. Once you have the slope, you can find the full line equation y = mx + b by solving for b using either point: b = y − mx. This calculator does all of that automatically and also shows the angle of incline, percent grade, distance between the points, and their midpoint.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What does a negative, zero, or undefined slope mean?</summary>
+      <p data-i18n="faq.a2">A positive slope means the line rises from left to right; a negative slope means it falls from left to right — the larger the number (positive or negative), the steeper the incline. A slope of exactly zero means the line is perfectly horizontal, which happens whenever y₁ equals y₂. A slope is undefined — not zero — when the line is vertical, which happens whenever x₁ equals x₂, because the run (x₂ − x₁) becomes zero and division by zero has no defined result. This calculator detects the vertical case automatically and reports the slope as undefined instead of showing an error.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is percent grade, and how is it different from slope?</summary>
+      <p data-i18n="faq.a3">Percent grade is the slope expressed as a percentage instead of a ratio: percent grade = slope × 100, so a slope of 0.05 is a 5% grade. It's the standard way road signs, construction plans, and ramps describe steepness — a 5% grade means the surface rises 5 units of height for every 100 units of horizontal distance. A slope of 1 (a 45° angle) equals a 100% grade, which often surprises people who assume 100% means vertical — a truly vertical rise is an undefined slope, not a 100% grade. This calculator shows the percent grade alongside the slope so you can use whichever unit your project calls for.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What happens when the line between my two points is vertical?</summary>
+      <p data-i18n="faq.a4">When both points share the same x-coordinate (x₁ = x₂), the line connecting them is perfectly vertical, and its slope is mathematically undefined because the slope formula would require dividing by zero. Rather than showing an error, this calculator recognizes the vertical case, reports the slope as undefined, gives the line's equation as x = (the shared x-value), and shows the angle of incline as 90°. The distance between the points and their midpoint are still calculated normally in this case, since neither one depends on the slope.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is the coordinate data I enter sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This slope calculator runs entirely in your browser — the coordinates you enter for both points never leave your device, and nothing is uploaded, logged, or stored on a server. There's no sign-up, account, or tracking involved, so you can use it freely for homework, geometry practice, construction grade checks, or engineering quick checks with full privacy.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
