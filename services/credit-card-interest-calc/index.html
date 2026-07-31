@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Credit Card Interest Calculator — See the Minimum Payment Trap</title>
+<meta name="description" content="See exactly what your card balance costs in interest today, then simulate the minimum-payment trap: years and interest paid vs a fixed payment. Free and browser-only.">
+<meta name="keywords" content="credit card interest calculator, credit card apr calculator, minimum payment calculator, how much interest am I paying, credit card payoff, minimum payment trap, 신용카드 이자 계산기">
+<link rel="canonical" href="https://tool-hub.me/credit-card-interest-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Credit Card Interest Calculator — See the Minimum Payment Trap">
+<meta property="og:description" content="See exactly what your card balance costs in interest today, then simulate the minimum-payment trap: years and interest paid vs a fixed payment. Free and browser-only.">
+<meta property="og:url" content="https://tool-hub.me/credit-card-interest-calc/">
+<meta property="og:image" content="https://tool-hub.me/credit-card-interest-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c2410c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Credit Card Interest Calculator",
+  "description": "See exactly what your card balance costs in interest today, then simulate the minimum-payment trap: years and interest paid vs a fixed payment. Free and browser-only.",
+  "url": "https://tool-hub.me/credit-card-interest-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Credit Card Interest Calculator", "item": "https://tool-hub.me/credit-card-interest-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is credit card interest calculated day to day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Card issuers apply a daily periodic rate, which is your APR divided by 365, to your balance and add it up over the billing cycle (usually about 30 days) to get the finance charge on your statement. For example, a $5,000 balance at 24.99% APR has a daily rate of about 0.0685%; over a 30-day cycle that's roughly $5,000 × 0.0685% × 30 ≈ $102.70 in interest — charged even if you don't make a single new purchase. This calculator applies the same math instantly so you can see today's cost before your statement arrives."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does paying only the minimum take so long to pay off a balance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Many issuers set the minimum payment to the greater of a small percentage of your balance (often 1–3%) or a flat floor like $25. Because that percentage is recalculated against your balance every month, the required payment shrinks as the balance goes down — so less and less of each payment is left over to reduce principal after interest is covered, stretching payoff out for years or decades and multiplying the total interest paid. This minimum-payment trap simulator runs the exact month-by-month math so you can see how many years and how much interest that shrinking payment actually costs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if the minimum payment doesn't even cover the interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the percentage-of-balance or floor amount you enter produces a payment smaller than that month's interest charge, none of it reduces your principal — the uncovered interest gets added to the balance, so the debt can actually grow larger over time instead of shrinking. This is a real risk with high-APR cards and low minimum-payment percentages, and the simulator flags this case explicitly so you know whether your numbers are on a path to ever finishing or heading into a spiral."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much could I save by keeping my payment amount fixed instead of paying only the minimum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The simulator starts both paths from the exact same first-month payment: one lets the required minimum shrink every month as the balance drops (minimum payments only), and the other keeps paying that same starting amount every month until the balance reaches zero (fixed payment). Because a fixed payment doesn't shrink, more of it goes toward principal each month, so it consistently finishes years sooner and with far less total interest — the exact years and dollars saved depend on your balance, APR, and minimum-payment rule, and appear side by side once you calculate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my card balance or APR sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation, including the month-by-month minimum-payment simulation, runs entirely in your browser. Nothing you type is uploaded, logged, or stored anywhere else — your last entry is only saved in your own browser's local storage so it's there next time you open the tool. This calculator is for education only; it isn't financial, credit, or debt advice and doesn't connect to your actual card account."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Credit Card Interest Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Credit Card Interest Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your balance and APR to see exactly how much interest you're paying right now. Then run the minimum-payment trap simulator to compare how many years and how much interest it takes to pay off — with just the minimum payment versus keeping your payment fixed.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Credit card interest calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool details.more { margin-top:16px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.more > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:14px; color:var(--muted); }
+      #tool details.more[open] { padding-bottom:12px; }
+      #tool .hint { color:var(--muted); font-size:13px; margin:4px 0 0; }
+      #tool .tbl-wrap { overflow-x:auto; margin-top:12px; }
+      #tool table.cmp { width:100%; border-collapse:collapse; font-size:14px; min-width:340px; }
+      #tool table.cmp th, #tool table.cmp td { text-align:right; padding:8px; border-bottom:1px solid var(--line); vertical-align:top; }
+      #tool table.cmp th:first-child, #tool table.cmp td:first-child { text-align:left; color:var(--muted); font-weight:600; width:34%; }
+      #tool table.cmp th { font-weight:650; font-size:13px; color:var(--muted); }
+      #tool table.cmp td:nth-child(3), #tool table.cmp th:nth-child(3) { color:var(--accent-strong); }
+      #tool .quick-row { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:4px; }
+      #tool .quick-card { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .quick-card .qc-label { font-size:12.5px; color:var(--muted); }
+      #tool .quick-card .qc-val { font-weight:700; font-size:19px; margin-top:2px; }
+      #tool .warn-line { margin:8px 0 0; font-size:13px; font-weight:600; color:#d97706; }
+      #tool .savings-line { margin:14px 0 0; padding:12px 14px; border-radius:8px; font-size:14.5px; font-weight:600;
+        background:color-mix(in srgb, var(--accent) 10%, var(--surface)); color:var(--accent-strong); }
+      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
+      #tool details.adv[open] { padding-bottom:12px; }
+      #tool table.sched { width:100%; border-collapse:collapse; margin-top:4px; font-size:14px; }
+      #tool table.sched th, #tool table.sched td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool table.sched th:first-child, #tool table.sched td:first-child { text-align:left; }
+      #tool table.sched th { color:var(--muted); font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      @media(max-width:420px){ #tool .field-row, #tool .quick-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+    <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+
+    <div class="field-row">
+      <div>
+        <label for="balance-input" data-i18n="tool.balance.label">Credit card balance</label>
+        <input type="text" id="balance-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 5,000" data-i18n-placeholder="tool.balance.ph">
+      </div>
+      <div>
+        <label for="apr-input" data-i18n="tool.apr.label">APR (annual percentage rate, %)</label>
+        <input type="number" id="apr-input" inputmode="decimal" min="0" step="0.01" autocomplete="off"
+               placeholder="e.g. 19.99" data-i18n-placeholder="tool.apr.ph">
+      </div>
+    </div>
+
+    <p class="hint" data-i18n="tool.minRule.hint">Most issuers use whichever is greater — a small % of your balance, or a flat minimum amount.</p>
+    <div class="field-row">
+      <div>
+        <label for="minpct-input" data-i18n="tool.minpct.label">Minimum payment: % of balance</label>
+        <input type="number" id="minpct-input" inputmode="decimal" min="0" step="0.1" value="2" autocomplete="off"
+               placeholder="e.g. 2" data-i18n-placeholder="tool.minpct.ph">
+      </div>
+      <div>
+        <label for="minfloor-input" data-i18n="tool.minfloor.label">…or a flat floor (whichever is greater)</label>
+        <input type="text" id="minfloor-input" inputmode="decimal" value="25" autocomplete="off"
+               placeholder="e.g. 25" data-i18n-placeholder="tool.minfloor.ph">
+      </div>
+    </div>
+
+    <details class="more" id="tool-more">
+      <summary data-i18n="tool.details.summary">More options</summary>
+      <label for="cycledays-input" data-i18n="tool.cycledays.label">Days in this billing cycle</label>
+      <input type="number" id="cycledays-input" inputmode="numeric" min="1" max="31" step="1" value="30" autocomplete="off"
+             placeholder="e.g. 30" data-i18n-placeholder="tool.cycledays.ph">
+      <label for="fixed-input" data-i18n="tool.fixed.label">Compare against a fixed payment (optional)</label>
+      <input type="text" id="fixed-input" inputmode="decimal" autocomplete="off"
+             placeholder="Defaults to your first minimum payment" data-i18n-placeholder="tool.fixed.ph">
+    </details>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <div class="quick-row">
+          <div class="quick-card">
+            <div class="qc-label" data-i18n="tool.result.dailyRate">Daily periodic rate</div>
+            <div class="qc-val" id="r-daily-rate"></div>
+          </div>
+          <div class="quick-card">
+            <div class="qc-label" data-i18n="tool.result.cycleInterest">Interest this billing cycle</div>
+            <div class="qc-val" id="r-cycle-interest"></div>
+          </div>
+        </div>
+        <p class="subtle" id="r-cycle-days-note" style="margin:6px 0 0;"></p>
+
+        <div class="tbl-wrap">
+          <table class="cmp">
+            <thead>
+              <tr>
+                <th></th>
+                <th data-i18n="tool.result.colMin">Minimum payments only</th>
+                <th id="r-col-fixed-label" data-i18n="tool.result.colFixed">Fixed payment</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-i18n="tool.result.rowTime">Time to pay off</td>
+                <td id="r-min-time"></td>
+                <td id="r-fixed-time"></td>
+              </tr>
+              <tr>
+                <td data-i18n="tool.result.rowInterest">Total interest paid</td>
+                <td id="r-min-interest"></td>
+                <td id="r-fixed-interest"></td>
+              </tr>
+              <tr>
+                <td data-i18n="tool.result.rowPaid">Total amount paid</td>
+                <td id="r-min-paid"></td>
+                <td id="r-fixed-paid"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="warn-line" id="r-warn-min" hidden></p>
+        <p class="warn-line" id="r-warn-fixed" hidden></p>
+        <p class="savings-line" id="r-savings" hidden></p>
+
+        <details class="adv" id="sched-wrap">
+          <summary data-i18n="tool.sched.summary">Year-by-year balance (minimum payments only)</summary>
+          <table class="sched">
+            <thead><tr><th data-i18n="tool.sched.year">Year</th><th data-i18n="tool.sched.balance">Remaining balance</th></tr></thead>
+            <tbody id="sched-body"></tbody>
+          </table>
+          <p class="subtle" id="sched-trunc" style="margin:6px 0 0;" hidden></p>
+        </details>
+
+        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;font-weight:600;" data-i18n="tool.note.disclaimer">This is an educational estimate, not financial or credit advice.</p>
+        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How credit card interest actually accrues</h2>
+    <p>Credit cards charge interest using a daily periodic rate: your APR (annual percentage rate) divided by 365. Each day, that rate is applied to your balance, and the daily charges are added up over your billing cycle — typically around 30 days — to produce the finance charge on your next statement. That means interest keeps compounding on whatever you haven't paid off, even if you never swipe the card again. This calculator's top section does exactly that math instantly: enter your balance and APR and it shows the daily rate and the interest that cycle will cost.</p>
+
+    <h2>The minimum payment trap, explained</h2>
+    <p>The minimum payment printed on your statement usually isn't a fixed dollar amount — it's a formula, often "whichever is greater: a small percentage of your balance (commonly 1–3%), or a flat floor like $25." That formula recalculates every single month against your current balance. As the balance slowly drops, the required minimum drops right along with it, so the payment keeps shrinking. Meanwhile interest is still being charged on the balance that's left, and a shrinking payment means a shrinking share goes toward principal after interest is covered. The result is a debt that clears far more slowly than most people expect, with total interest that can dwarf the original balance.</p>
+
+    <div class="example">
+      <p><strong>Worked example.</strong> A $5,000 balance at 19.99% APR, with a minimum payment of 2% of the balance or $25 (whichever is greater): paying only the minimum takes about <strong>43 years 7 months</strong> and costs roughly <strong>$20,151</strong> in interest — four times the original balance. Keeping the very first payment amount (about $100) fixed every month instead of letting it shrink pays the same balance off in about <strong>9 years 1 month</strong> for roughly <strong>$5,830</strong> in interest: over 34 years sooner and about $14,321 less in interest, for the exact same monthly amount at the start.</p>
+    </div>
+
+    <h2>Three ways to escape the trap</h2>
+    <ul>
+      <li><strong>Keep your payment fixed.</strong> The single biggest lever, and the one this simulator quantifies: don't let your payment shrink just because the statement's minimum did. Pay the same dollar amount every month until the balance is gone.</li>
+      <li><strong>Pay more than the minimum whenever you can.</strong> Even a modest extra amount each month accelerates payoff, because in this kind of amortization every extra dollar goes straight to principal.</li>
+      <li><strong>Target the highest-APR balance first (if you carry more than one card).</strong> Interest is what's compounding against you, so paying down the balance charging the most interest first reduces the total interest across all your debt the fastest.</li>
+    </ul>
+
+    <h2>What if the minimum doesn't cover the interest?</h2>
+    <p>If your minimum-payment formula produces an amount that's smaller than the interest charged that month — which can happen with a high APR and a low minimum-payment percentage — none of the payment reduces the principal. The uncovered interest gets added to the balance instead, so the debt grows larger even though you're paying every month. This calculator detects that condition and reports it plainly rather than showing a payoff date that will never arrive.</p>
+
+    <h2>Common mistakes worth avoiding</h2>
+    <ul>
+      <li><strong>Assuming the minimum payment is designed to pay the balance off quickly.</strong> It isn't — it's designed to keep the account in good standing while maximizing the interest the issuer collects over time.</li>
+      <li><strong>Not noticing the payment amount shrinking.</strong> Because it happens gradually, a few dollars less each month, it's easy to miss just how much longer that adds to the payoff timeline.</li>
+      <li><strong>Ignoring the billing-cycle length.</strong> A 31-day cycle charges slightly more interest than a 28-day one at the same APR and balance — a small effect on any single statement, but worth knowing when comparing cards.</li>
+    </ul>
+
+    <h2>What this calculator doesn't do</h2>
+    <p>This tool simplifies real-world statements for clarity: it assumes a constant APR and a flat monthly balance (no new purchases), doesn't model promotional or variable rates that change over time, and doesn't include annual fees, late fees, or a card's specific compounding method. It's an educational estimate of how minimum-payment amortization works, not a substitute for your actual statement, a payoff plan across multiple debts, or financial, credit, or tax advice.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/loan-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">Loan Calculator</span></a><a class="related-item" href="https://tool-hub.me/mortgage-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Mortgage Calculator</span></a><a class="related-item" href="https://tool-hub.me/savings-calc/"><span class="related-ico" aria-hidden="true">🐷</span><span class="related-name">Savings Calculator</span></a><a class="related-item" href="https://tool-hub.me/interest-calc/"><span class="related-ico" aria-hidden="true">💵</span><span class="related-name">Interest Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How is credit card interest calculated day to day?</summary>
+      <p data-i18n="faq.a1">Card issuers apply a daily periodic rate, which is your APR divided by 365, to your balance and add it up over the billing cycle (usually about 30 days) to get the finance charge on your statement. For example, a $5,000 balance at 24.99% APR has a daily rate of about 0.0685%; over a 30-day cycle that's roughly $5,000 × 0.0685% × 30 ≈ $102.70 in interest — charged even if you don't make a single new purchase. This calculator applies the same math instantly so you can see today's cost before your statement arrives.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Why does paying only the minimum take so long to pay off a balance?</summary>
+      <p data-i18n="faq.a2">Many issuers set the minimum payment to the greater of a small percentage of your balance (often 1–3%) or a flat floor like $25. Because that percentage is recalculated against your balance every month, the required payment shrinks as the balance goes down — so less and less of each payment is left over to reduce principal after interest is covered, stretching payoff out for years or decades and multiplying the total interest paid. This minimum-payment trap simulator runs the exact month-by-month math so you can see how many years and how much interest that shrinking payment actually costs.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What happens if the minimum payment doesn't even cover the interest?</summary>
+      <p data-i18n="faq.a3">If the percentage-of-balance or floor amount you enter produces a payment smaller than that month's interest charge, none of it reduces your principal — the uncovered interest gets added to the balance, so the debt can actually grow larger over time instead of shrinking. This is a real risk with high-APR cards and low minimum-payment percentages, and the simulator flags this case explicitly so you know whether your numbers are on a path to ever finishing or heading into a spiral.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How much could I save by keeping my payment amount fixed instead of paying only the minimum?</summary>
+      <p data-i18n="faq.a4">The simulator starts both paths from the exact same first-month payment: one lets the required minimum shrink every month as the balance drops (minimum payments only), and the other keeps paying that same starting amount every month until the balance reaches zero (fixed payment). Because a fixed payment doesn't shrink, more of it goes toward principal each month, so it consistently finishes years sooner and with far less total interest — the exact years and dollars saved depend on your balance, APR, and minimum-payment rule, and appear side by side once you calculate.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my card balance or APR sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation, including the month-by-month minimum-payment simulation, runs entirely in your browser. Nothing you type is uploaded, logged, or stored anywhere else — your last entry is only saved in your own browser's local storage so it's there next time you open the tool. This calculator is for education only; it isn't financial, credit, or debt advice and doesn't connect to your actual card account.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

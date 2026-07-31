@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week Number Today — Current ISO 8601 Week + Date Lookup</title>
+<meta name="description" content="Instantly see this week's ISO 8601 number, look up any date's week, and browse a full year of week ranges. Free, no ads, runs entirely in your browser.">
+<meta name="keywords" content="week number, what week is it, current week number, iso week, week number today, 주차 계산기">
+<link rel="canonical" href="https://tool-hub.me/week-number-check/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Week Number Today — Current ISO 8601 Week + Date Lookup">
+<meta property="og:description" content="Instantly see this week's ISO 8601 number, look up any date's week, and browse a full year of week ranges. Free, no ads, runs entirely in your browser.">
+<meta property="og:url" content="https://tool-hub.me/week-number-check/">
+<meta property="og:image" content="https://tool-hub.me/week-number-check/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Week Number Today",
+  "description": "Instantly see this week's ISO 8601 number, look up any date's week, and browse a full year of week ranges. Free, no ads, runs entirely in your browser.",
+  "url": "https://tool-hub.me/week-number-check/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Week Number Today", "item": "https://tool-hub.me/week-number-check/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What week of the year is it today?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool shows today's ISO 8601 week number automatically the moment the page loads — no input needed. It reads your device's local date and applies the standard ISO rule: weeks run Monday through Sunday, and week 1 of each year is the week containing that year's first Thursday. The large number at the top of the page always reflects the current week, along with the exact Monday-to-Sunday date range, and it updates again whenever you come back on a new week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the ISO 8601 week number calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ISO 8601 weeks start on Monday and are numbered from 1. Week 1 of a year is defined as the week containing that year's first Thursday, which is equivalent to the week containing January 4th. To find a date's week number: move to the Thursday of its own week, note which year that Thursday falls in (the 'ISO week-year'), then count how many Monday-to-Sunday weeks fit between January 1st of that year and the date. For example, January 4, 2027 is a Monday, so week 1 of 2027 runs January 4-10; a date like July 30, 2026 lands in week 31 of 2026. Type any date into the checker above to see this worked out automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some years have 53 ISO weeks instead of 52?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A year has 365 or 366 days, but 52 weeks only cover 364 days, so the leftover day (or two, in a leap year) has to go somewhere. A calendar year gets a 53rd ISO week whenever January 1st falls on a Thursday, or when it falls on a Wednesday in a leap year — both push the year's first Thursday late enough that an extra full week is needed to reach December 31st. Recent examples include 2020, 2026, and 2032. The full-year table above shows the exact week count for any year you enter, so you never have to work it out by hand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can a date in late December or early January belong to a different ISO week-year than its calendar year?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because week 1 is anchored to the year's first Thursday rather than to January 1st, the two or three days right before or after New Year's Day can end up in the 'wrong' year's week count. December 29-31 sometimes fall in week 1 of the following year — for example, December 30-31, 2024 are both in ISO week 1 of 2025. Symmetrically, January 1-3 can fall in the last week of the previous year — January 1, 2023 is in ISO week 52 of 2022. The date checker above flags this automatically whenever a date's calendar year and ISO week-year don't match."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my date sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation in this week number checker — today's week, any date you type in, and the full year table — runs entirely in your browser using plain JavaScript date math. Nothing you enter is uploaded, logged, or stored anywhere except your own browser's local storage, which only remembers your last lookup so the page can restore it next time you visit."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Week Number Today</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Week Number Today</h1>
+    <p class="lede" data-i18n="hero.lede">What week is it? See this week's ISO 8601 number the instant the page loads, check the week for any date, or browse a full year of Monday–Sunday week ranges.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Week number calculator" data-i18n-aria-label="tool.aria" aria-live="polite">
+    <style>
+      #tool .wn-hero { text-align:center; padding:2px 0 18px; border-bottom:1px solid var(--line); margin-bottom:22px; }
+      #tool .wn-kicker { margin:0 0 6px; font-size:12.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:var(--muted); }
+      #tool .wn-week { margin:0; font-size:clamp(28px,8vw,42px); font-weight:800; color:var(--accent); letter-spacing:-0.02em; font-variant-numeric:tabular-nums; }
+      #tool .wn-sub { margin:6px 0 0; font-size:14.5px; color:var(--muted); }
+
+      #tool .wn-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; }
+      #tool .wn-card { padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+      #tool .wn-card .wn-label { display:block; font-size:12.5px; color:var(--muted); font-weight:600; margin-bottom:4px; }
+      #tool .wn-card .result-value { font-size:18px; font-weight:800; color:var(--accent); font-variant-numeric:tabular-nums; cursor:copy; overflow-wrap:anywhere; }
+
+      #tool .wn-note { margin:12px 0 0; font-size:13.5px; color:var(--muted); line-height:1.55; }
+      #tool .wn-err { color:#dc2626; font-size:13.5px; margin:6px 0 0; }
+
+      #tool .wn-yearhead { display:flex; align-items:flex-end; justify-content:space-between; gap:12px; flex-wrap:wrap; margin-top:28px; }
+      #tool .wn-yearctl { display:flex; align-items:center; gap:6px; }
+      #tool .wn-yearctl button { width:36px; height:36px; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); font-size:18px; font-weight:700; cursor:pointer; }
+      #tool #year-input { width:90px; text-align:center; font-variant-numeric:tabular-nums; }
+      #tool .wn-jump { margin-top:10px; padding:8px 14px; font-size:13.5px; font-weight:700; border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .wn-jump:hover, #tool .wn-yearctl button:hover { border-color:var(--accent); }
+
+      #tool .wn-tablewrap { overflow:auto; margin-top:12px; border:1px solid var(--line); border-radius:10px; max-height:420px; }
+      #tool table { width:100%; border-collapse:collapse; font-size:14px; }
+      #tool thead th { position:sticky; top:0; background:var(--surface); text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); color:var(--muted); font-weight:700; }
+      #tool tbody td { padding:7px 10px; border-bottom:1px solid var(--line); font-variant-numeric:tabular-nums; white-space:nowrap; }
+      #tool tr.wn-current td { background:color-mix(in srgb, var(--accent) 12%, transparent); font-weight:700; }
+      #tool .wn-badge { display:inline-block; margin-left:6px; padding:1px 7px; border-radius:999px; background:var(--accent); color:#fff; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.03em; vertical-align:middle; }
+
+      @media (max-width:420px) {
+        #tool table { font-size:12.5px; }
+        #tool thead th, #tool tbody td { padding:6px 6px; }
+      }
+    </style>
+
+    <!-- 오늘의 주차 — 로드 즉시, 입력 없이 표시 -->
+    <div class="wn-hero">
+      <p class="wn-kicker" data-i18n="tool.today.kicker">This week is</p>
+      <p class="wn-week" id="today-week">Week 31 of 2026</p>
+      <p class="wn-sub" id="today-range">Jul 27 – Aug 2, 2026</p>
+    </div>
+
+    <!-- 임의 날짜 조회 -->
+    <div class="input-group">
+      <label for="date-input" data-i18n="tool.date.label">Check the week number for any date</label>
+      <input id="date-input" type="date" autocomplete="off" aria-label="Date to check" data-i18n-aria-label="tool.date.aria">
+    </div>
+    <p id="date-err" class="wn-err" hidden data-i18n="tool.err.invalidDate">Enter a valid date.</p>
+    <div class="result" id="date-result" hidden>
+      <div class="wn-grid">
+        <div class="wn-card">
+          <span class="wn-label" data-i18n="tool.date.result.week">ISO week</span>
+          <span class="result-value" id="r-week">—</span>
+        </div>
+        <div class="wn-card">
+          <span class="wn-label" data-i18n="tool.date.result.year">Week-year</span>
+          <span class="result-value" id="r-year">—</span>
+        </div>
+        <div class="wn-card">
+          <span class="wn-label" data-i18n="tool.date.result.range">Week runs</span>
+          <span class="result-value" id="r-range">—</span>
+        </div>
+        <div class="wn-card">
+          <span class="wn-label" data-i18n="tool.date.result.day">Day of year</span>
+          <span class="result-value" id="r-doy">—</span>
+        </div>
+      </div>
+      <p id="date-note" class="wn-note" hidden></p>
+    </div>
+
+    <!-- 연간 주차 표 -->
+    <div class="wn-yearhead">
+      <div>
+        <label for="year-input" data-i18n="tool.year.label" style="margin:0 0 6px;">ISO week-year</label>
+        <div class="wn-yearctl">
+          <button type="button" id="year-prev" aria-label="Previous year" data-i18n-aria-label="tool.year.prev">&#8722;</button>
+          <input id="year-input" type="number" step="1" inputmode="numeric" min="1000" max="9999">
+          <button type="button" id="year-next" aria-label="Next year" data-i18n-aria-label="tool.year.next">+</button>
+        </div>
+      </div>
+      <button type="button" class="wn-jump" id="year-jump" data-i18n="tool.year.jumpToday">Jump to current week</button>
+    </div>
+    <p class="wn-note" data-i18n="tool.year.helper">Week 1 is always the week containing the year's first Thursday, so early January or late December rows can belong to the neighboring calendar year.</p>
+    <p class="wn-note" id="weeks-note" style="font-weight:600;"></p>
+    <div class="wn-tablewrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="tool.year.table.week">Week</th>
+            <th data-i18n="tool.year.table.start">Start (Mon)</th>
+            <th data-i18n="tool.year.table.end">End (Sun)</th>
+            <th data-i18n="tool.year.table.month">Month</th>
+          </tr>
+        </thead>
+        <tbody id="year-tbody"></tbody>
+      </table>
+    </div>
+
+    <p class="wn-note" data-i18n="tool.note.privacy">Every calculation runs in your browser — no dates are sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What an ISO 8601 week number actually is</h2>
+    <p>An ISO 8601 week number is a standardized way to count weeks within a year, defined by the international standard ISO 8601. Unlike calendars that simply divide the year into chunks of seven days starting January 1st, ISO weeks always run Monday through Sunday, and the numbering is anchored to whichever week contains the year's first Thursday. This single rule is what makes ISO week numbers consistent worldwide, and it is why the number you see on a European business calendar, a project sprint planner, or a manufacturing date code is usually the ISO week, not a naive day-count.</p>
+
+    <h2>How the week number is calculated, step by step</h2>
+    <p>Given any date, the ISO week number is found with three steps:</p>
+    <ol>
+      <li><strong>Find the Thursday of that date's own week.</strong> Since weeks run Monday–Sunday, every date has exactly one Thursday in its week.</li>
+      <li><strong>Read the year that Thursday falls in.</strong> This is the date's "ISO week-year" — it is usually the same as the calendar year, but not always (more on that below).</li>
+      <li><strong>Count Monday-to-Sunday weeks from January 1st of that year up to the date.</strong> The count you land on is the week number, from 1 to 52 or 53.</li>
+    </ol>
+    <div class="example">
+      <p><strong>Worked example.</strong> Take July 30, 2026. That date is a Thursday itself, so no adjustment is needed — it falls in the same week whose Thursday defines it. Counting Monday–Sunday weeks from January 1, 2026 (a Thursday) forward lands on <strong>week 31 of 2026</strong>, running Monday July 27 through Sunday August 2, 2026.</p>
+    </div>
+    <div class="example">
+      <p><strong>Worked example.</strong> January 4th is always in week 1 of its year by definition, because ISO 8601 explicitly anchors week 1 to the week containing January 4th (equivalent to the week containing the year's first Thursday). In 2027, January 4th is a Monday, so <strong>week 1 of 2027 runs January 4–10, 2027</strong> exactly.</p>
+    </div>
+
+    <h2>52 weeks or 53? Why the count changes</h2>
+    <p>Seven days times 52 weeks is 364 days — one short of a common year (365 days) and two short of a leap year (366 days). That leftover day has to belong to some week, so most years still show 52 complete ISO weeks with the stray day(s) folded into the neighboring year's week 1 or the previous year's final week. A year only grows a 53rd ISO week when its first Thursday lands late enough in the calendar that an extra full week is needed to reach December 31st — concretely, when January 1st falls on a Thursday, or, in a leap year, when January 1st falls on a Wednesday.</p>
+    <table>
+      <thead><tr><th>Year</th><th>Jan 1 weekday</th><th>Leap year?</th><th>ISO weeks</th></tr></thead>
+      <tbody>
+        <tr><td>2020</td><td>Wednesday</td><td>Yes</td><td>53</td></tr>
+        <tr><td>2023</td><td>Sunday</td><td>No</td><td>52</td></tr>
+        <tr><td>2026</td><td>Thursday</td><td>No</td><td>53</td></tr>
+        <tr><td>2032</td><td>Thursday</td><td>Yes</td><td>53</td></tr>
+      </tbody>
+    </table>
+    <p>Use the full-year table above for any year you're curious about — it lists every week's exact Monday-to-Sunday date range and tells you the total week count at a glance.</p>
+
+    <h3>The year-boundary edge case, explained with real dates</h3>
+    <p>Because week 1 is tied to the first Thursday rather than to January 1st, a handful of days right around New Year's can carry a week number that "belongs" to a different year than their calendar date suggests:</p>
+    <ul>
+      <li><strong>Late December into next year's week 1:</strong> December 30 and 31, 2024 both fall in <strong>ISO week 1 of 2025</strong>, even though the calendar still reads 2024.</li>
+      <li><strong>Early January into last year's final week:</strong> January 1, 2023 falls in <strong>ISO week 52 of 2022</strong>, even though the calendar has already turned to 2023.</li>
+    </ul>
+    <p>Neither case is an error — it is exactly how ISO 8601 is designed to behave, and it is the same reason a year can have 52 or 53 weeks in the first place. The date checker above automatically detects and explains this whenever it applies to the date you enter.</p>
+
+    <h2>Where ISO week numbers are actually used</h2>
+    <p>ISO week numbers show up more often than most people realize: agile teams plan "sprint week 31," manufacturers stamp week-based date codes on packaging and electronics (a code like "2631" often means week 31 of 2026), payroll and shift schedules in much of Europe are built around week numbers instead of month boundaries, and many desk calendars and calendar apps display a small week-number column down the side. Knowing your current ISO week — and being able to check any date's week in a couple of clicks — makes reading all of these systems straightforward instead of guesswork.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/date-diff-calc/"><span class="related-ico" aria-hidden="true">⇄</span><span class="related-name">Date Difference Calculator</span></a><a class="related-item" href="https://tool-hub.me/date-add-calc/"><span class="related-ico" aria-hidden="true">➕</span><span class="related-name">Date Calculator</span></a><a class="related-item" href="https://tool-hub.me/workday-calc/"><span class="related-ico" aria-hidden="true">W</span><span class="related-name">Business Days Calculator</span></a><a class="related-item" href="https://tool-hub.me/world-clock/"><span class="related-ico" aria-hidden="true">🌍</span><span class="related-name">World Clock</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What week of the year is it today?</summary>
+      <p data-i18n="faq.a1">This tool shows today's ISO 8601 week number automatically the moment the page loads — no input needed. It reads your device's local date and applies the standard ISO rule: weeks run Monday through Sunday, and week 1 of each year is the week containing that year's first Thursday. The large number at the top of the page always reflects the current week, along with the exact Monday-to-Sunday date range, and it updates again whenever you come back on a new week.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How is the ISO 8601 week number calculated?</summary>
+      <p data-i18n="faq.a2">ISO 8601 weeks start on Monday and are numbered from 1. Week 1 of a year is defined as the week containing that year's first Thursday, which is equivalent to the week containing January 4th. To find a date's week number: move to the Thursday of its own week, note which year that Thursday falls in (the 'ISO week-year'), then count how many Monday-to-Sunday weeks fit between January 1st of that year and the date. For example, January 4, 2027 is a Monday, so week 1 of 2027 runs January 4-10; a date like July 30, 2026 lands in week 31 of 2026. Type any date into the checker above to see this worked out automatically.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why do some years have 53 ISO weeks instead of 52?</summary>
+      <p data-i18n="faq.a3">A year has 365 or 366 days, but 52 weeks only cover 364 days, so the leftover day (or two, in a leap year) has to go somewhere. A calendar year gets a 53rd ISO week whenever January 1st falls on a Thursday, or when it falls on a Wednesday in a leap year — both push the year's first Thursday late enough that an extra full week is needed to reach December 31st. Recent examples include 2020, 2026, and 2032. The full-year table above shows the exact week count for any year you enter, so you never have to work it out by hand.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why can a date in late December or early January belong to a different ISO week-year than its calendar year?</summary>
+      <p data-i18n="faq.a4">Because week 1 is anchored to the year's first Thursday rather than to January 1st, the two or three days right before or after New Year's Day can end up in the 'wrong' year's week count. December 29-31 sometimes fall in week 1 of the following year — for example, December 30-31, 2024 are both in ISO week 1 of 2025. Symmetrically, January 1-3 can fall in the last week of the previous year — January 1, 2023 is in ISO week 52 of 2022. The date checker above flags this automatically whenever a date's calendar year and ISO week-year don't match.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my date sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation in this week number checker — today's week, any date you type in, and the full year table — runs entirely in your browser using plain JavaScript date math. Nothing you enter is uploaded, logged, or stored anywhere except your own browser's local storage, which only remembers your last lookup so the page can restore it next time you visit.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

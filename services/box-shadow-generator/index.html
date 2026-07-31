@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Box Shadow Generator — Design & Copy CSS Instantly</title>
+<meta name="description" content="Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 4 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.">
+<meta name="keywords" content="box shadow generator, css box shadow, box shadow css generator, shadow generator, css shadow examples, 박스 섀도우 생성기">
+<link rel="canonical" href="https://tool-hub.me/box-shadow-generator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Box Shadow Generator — Design & Copy CSS Instantly">
+<meta property="og:description" content="Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 4 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.">
+<meta property="og:url" content="https://tool-hub.me/box-shadow-generator/">
+<meta property="og:image" content="https://tool-hub.me/box-shadow-generator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Box Shadow Generator",
+  "description": "Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 4 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.",
+  "url": "https://tool-hub.me/box-shadow-generator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Box Shadow Generator", "item": "https://tool-hub.me/box-shadow-generator/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I create a CSS box-shadow with this generator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Drag the X and Y sliders to set how far the shadow falls, Blur to soften its edge, and Spread to grow or shrink it, then pick a color and opacity. Turn on Inset to flip it into a shadow that sits inside the element instead of outside it. For example, X 0, Y 4, Blur 6, Spread -1, black at 10% opacity produces box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1); — press Copy CSS to grab that line ready to paste into your stylesheet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the offset, blur and spread values in box-shadow actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A box-shadow value reads as horizontal offset, vertical offset, blur radius, spread radius, then color. Horizontal and vertical offset move the shadow left/right and up/down from the element; blur radius softens the edge into a fade, with 0 giving a hard edge; and spread radius grows the shadow outward in every direction when positive, or shrinks it when negative. Only the two offsets are required in plain CSS — blur and spread default to 0 if omitted, which is why this generator always writes all four numbers explicitly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an inset box-shadow and how is it different from a normal one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adding the inset keyword flips a shadow from casting outward beyond the element's edge to appearing inside it, as if the element were pressed into the page rather than raised above it. The Y value still moves the shadow down when positive and up when negative, but now it falls along the element's inner edge instead of outside it — commonly used for pressed buttons, recessed input fields, or the inner shading in a neumorphic design. This generator's Inset checkbox toggles the keyword per layer, so outward and inset shadows can be mixed in the same stack."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I stack multiple box-shadows for effects like Material Design or neumorphism?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSS lets box-shadow take a comma-separated list of shadows, painted in the order listed — the first shadow sits on top, closest to the element. Material Design's elevation effect layers two or three shadows with different blur and spread at low opacity to fake a soft, physically plausible drop shadow, while neumorphism pairs a dark shadow on one side with a light shadow on the opposite side of a surface that matches the background, creating a soft raised or pressed look. Use + Add shadow layer to stack up to 4 layers, or start from the Soft, Material, Neumorphic or Hard preset and fine-tune from there."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my shadow design sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every slider, color and layer in this box-shadow generator is computed and rendered locally in your browser with plain JavaScript and CSS — nothing is uploaded, logged or shared. Your last design is saved only in your own browser's local storage so the tool reopens where you left off, and no account or sign-up is required."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Box Shadow Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Box Shadow Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Drag the sliders to shape offset, blur, spread and color, stack multiple shadow layers, and copy the finished box-shadow CSS instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Box shadow generator" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .bx-field { margin: 14px 0; }
+      #tool .bx-preview-outer {
+        margin: 4px 0 20px; padding: 40px 20px; border-radius: 12px;
+        background: var(--bg); border: 1px solid var(--line);
+        display: flex; align-items: center; justify-content: center;
+      }
+      #tool .bx-preview {
+        width: 140px; height: 140px; border-radius: 12px; flex: 0 0 auto;
+        display: flex; align-items: center; justify-content: center;
+      }
+      #tool .bx-preview-label { font-size: 13px; font-weight: 600; color: #64748b; user-select: none; }
+      #tool .bx-bg-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+      #tool input[type="color"] {
+        width: 44px; height: 40px; padding: 2px; border: 1px solid var(--line);
+        border-radius: 8px; background: var(--bg); cursor: pointer;
+      }
+      #tool .bx-swatches { display: flex; gap: 8px; }
+      #tool .bx-swatch {
+        width: 32px; height: 32px; border-radius: 8px; border: 2px solid var(--line);
+        cursor: pointer; padding: 0;
+      }
+      #tool .bx-swatch[aria-pressed="true"] { border-color: var(--accent); }
+      #tool .bx-presets { display: flex; gap: 10px; margin-top: 6px; flex-wrap: wrap; }
+      #tool .bx-preset-btn {
+        width: 56px; height: 40px; border-radius: 8px; border: 1px solid var(--line); cursor: pointer; padding: 0;
+      }
+      #tool .bx-preset-btn:hover, #tool .bx-preset-btn:focus-visible { border-color: var(--accent); }
+      #tool .bx-layers { display: flex; flex-direction: column; gap: 12px; margin: 6px 0 14px; }
+      #tool .bx-layer {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px 6px;
+      }
+      #tool .bx-layer-head { display: flex; align-items: center; gap: 10px; margin-bottom: 4px; }
+      #tool .bx-layer-title { font-weight: 700; font-size: 14.5px; flex: 1 1 auto; }
+      #tool .bx-inset-toggle { display: flex; align-items: center; gap: 6px; font-weight: 600; font-size: 13.5px; cursor: pointer; margin: 0; }
+      #tool .bx-inset-toggle input { width: auto; flex: 0 0 auto; }
+      #tool .bx-layer-remove {
+        flex: 0 0 auto; width: 30px; height: 30px; border: 1px solid var(--line); border-radius: 8px;
+        background: var(--bg); color: var(--ink); cursor: pointer; font-size: 14px; line-height: 1;
+      }
+      #tool .bx-layer-remove:hover:not(:disabled) { border-color: #b91c1c; color: #b91c1c; }
+      #tool .bx-layer-remove:disabled { opacity: 0.4; cursor: not-allowed; }
+      #tool .bx-row { margin: 10px 0; }
+      #tool .bx-row label { display: flex; align-items: center; justify-content: space-between; margin: 0 0 6px; font-size: 13.5px; }
+      #tool .bx-val {
+        font-weight: 700; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px;
+      }
+      #tool input[type="range"] { width: 100%; accent-color: var(--accent); cursor: pointer; }
+      #tool .bx-color-row label { margin-bottom: 8px; font-weight: 600; }
+      #tool .bx-color-controls { display: flex; align-items: center; gap: 10px; }
+      #tool .bx-color-controls input[type="range"] { flex: 1 1 auto; }
+      #tool .bx-alpha-val { flex: 0 0 40px; text-align: right; }
+      #tool .bx-add { width: 100%; }
+      #tool .bx-max-hint { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); text-align: center; }
+      #tool .bx-output-wrap { margin-top: 20px; }
+      #tool #bx-css {
+        width: 100%; box-sizing: border-box; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13.5px; line-height: 1.5; padding: 12px; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink); resize: vertical;
+      }
+      #tool .bx-actions { display: flex; gap: 10px; margin-top: 14px; }
+      #tool .bx-actions .btn { flex: 1 1 auto; margin-top: 0; }
+      #tool .bx-toast { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; min-height: 1.2em; }
+      #tool .bx-toast.is-ok { color: var(--accent-strong); }
+      [data-theme="dark"] #tool .bx-toast.is-ok { color: var(--accent); }
+      [data-theme="dark"] #tool .bx-preview-label { color: #94a3b8; }
+      #tool .bx-toast.is-error { color: #b91c1c; }
+      @media (max-width: 420px) {
+        #tool .bx-preview-outer { padding: 28px 12px; }
+        #tool .bx-preview { width: 110px; height: 110px; }
+      }
+    </style>
+
+    <div class="bx-preview-outer">
+      <div class="bx-preview" id="bx-preview" role="img" aria-label="Live box-shadow preview" data-i18n-aria-label="tool.preview.aria">
+        <span class="bx-preview-label" data-i18n="tool.previewCard.label">Preview</span>
+      </div>
+    </div>
+
+    <div class="bx-field">
+      <label data-i18n="tool.bg.label">Preview background</label>
+      <div class="bx-bg-row">
+        <input type="color" id="bx-bg" value="#ffffff" aria-label="Preview background color" data-i18n-aria-label="tool.bg.aria">
+        <div class="bx-swatches" id="bx-swatches">
+          <button type="button" class="bx-swatch" data-color="#ffffff" style="background:#ffffff" aria-pressed="true" title="White" data-i18n-title="tool.bg.swatch.white" aria-label="White" data-i18n-aria-label="tool.bg.swatch.white"></button>
+          <button type="button" class="bx-swatch" data-color="#e2e8f0" style="background:#e2e8f0" aria-pressed="false" title="Light gray" data-i18n-title="tool.bg.swatch.lightgray" aria-label="Light gray" data-i18n-aria-label="tool.bg.swatch.lightgray"></button>
+          <button type="button" class="bx-swatch" data-color="#1e293b" style="background:#1e293b" aria-pressed="false" title="Dark slate" data-i18n-title="tool.bg.swatch.dark" aria-label="Dark slate" data-i18n-aria-label="tool.bg.swatch.dark"></button>
+          <button type="button" class="bx-swatch" data-color="#000000" style="background:#000000" aria-pressed="false" title="Black" data-i18n-title="tool.bg.swatch.black" aria-label="Black" data-i18n-aria-label="tool.bg.swatch.black"></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bx-field">
+      <label data-i18n="tool.presets.label">Presets</label>
+      <div class="bx-presets" id="bx-presets"></div>
+    </div>
+
+    <div class="bx-field" style="margin-bottom:6px;">
+      <label data-i18n="tool.layers.label">Shadow layers</label>
+    </div>
+    <div class="bx-layers" id="bx-layers"></div>
+    <button type="button" class="btn bx-add" id="bx-add" data-i18n="tool.add">+ Add shadow layer</button>
+    <p class="bx-max-hint" id="bx-max-hint" hidden data-i18n="tool.layers.maxHint">Maximum of 4 shadow layers</p>
+
+    <div class="bx-output-wrap">
+      <label for="bx-css" data-i18n="tool.css.label">Generated CSS</label>
+      <textarea id="bx-css" rows="5" readonly spellcheck="false"></textarea>
+    </div>
+
+    <div class="bx-actions">
+      <button type="button" class="btn" id="bx-copy" data-i18n="tool.copy">Copy CSS</button>
+    </div>
+
+    <p class="bx-toast" id="bx-toast" role="status" aria-live="polite"></p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:.1em .35em;border-radius:4px}
+    </style>
+
+    <h2>What CSS box-shadow actually does</h2>
+    <p>The <code>box-shadow</code> property draws one or more drop shadows around an element's border box without needing an image, a pseudo-element, or any extra markup. Because it's a computed effect rather than a downloaded asset, it scales cleanly to any element size, stays sharp at any screen density, and can be restyled in an instant by changing a few numbers. This generator builds valid <code>box-shadow</code> values from sliders for offset, blur, spread, color and opacity, so the syntax never has to be memorized or hand-typed.</p>
+
+    <h3>How to read a box-shadow value</h3>
+    <p>A single shadow layer is five values in a fixed order: <code>box-shadow: h-offset v-offset blur spread color;</code>. Optionally, the keyword <code>inset</code> can be added before or after those values to flip the shadow to the inside of the element.</p>
+    <table>
+      <thead><tr><th>Value</th><th>What it controls</th><th>Typical range</th></tr></thead>
+      <tbody>
+        <tr><td>Horizontal offset (X)</td><td>Moves the shadow right (positive) or left (negative)</td><td>-50px to 50px</td></tr>
+        <tr><td>Vertical offset (Y)</td><td>Moves the shadow down (positive) or up (negative)</td><td>-50px to 50px</td></tr>
+        <tr><td>Blur radius</td><td>Softens the edge into a fade; 0 gives a hard edge</td><td>0px to 100px</td></tr>
+        <tr><td>Spread radius</td><td>Grows the shadow outward (positive) or shrinks it (negative)</td><td>-50px to 50px</td></tr>
+        <tr><td>Color + opacity</td><td>The shadow's color, usually at partial opacity</td><td>rgba() with 5–25% alpha</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Stacking multiple shadows</h3>
+    <p><code>box-shadow</code> accepts a comma-separated list of shadow layers, and the browser paints them in the order they're listed — the first layer sits closest to the element, on top of the layers after it. This is how realistic, physically-plausible shadows are usually built: a tight, darker shadow close to the edge combined with a softer, lighter, more spread-out shadow further away, mimicking how real light sources cast both a sharp contact shadow and a diffuse ambient one. The + Add shadow layer button in this generator stacks up to 4 layers, each with its own offset, blur, spread, color and inset toggle.</p>
+
+    <h3>Outer vs. inset shadows</h3>
+    <p>By default a shadow is drawn outside the element's border box, appearing to lift the element above the page. Adding <code>inset</code> draws the same shadow inside the box instead, along its inner edge, which reads as the element being pressed into the surface rather than raised off it. Inset shadows are the standard technique for pressed buttons, recessed search fields, and the inward shading half of a neumorphic design — this tool's Inset checkbox toggles the keyword independently per layer.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a soft card shadow.</strong> X 0, Y 2, Blur 8, Spread 0, near-black at 8% opacity, plus a tighter X 0, Y 1, Blur 2, Spread 0 layer at 6% opacity, gives a subtle two-layer lift used for cards and panels — this is the Soft preset.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — Material Design elevation.</strong> Three stacked shadows with progressively larger blur and spread at low opacity (roughly 12–20%) approximate Google's Material Design elevation shadows, giving a believable sense of a surface floating a few pixels above the page — this is the Material preset.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a hard, flat shadow.</strong> X 6, Y 6, Blur 0, Spread 0, solid black at 100% opacity produces a crisp, offset block shadow with no fade at all — a popular "retro" or neubrutalist look, and the Hard preset in this generator.</p>
+    </div>
+
+    <h3>Neumorphism: light and dark shadows on a matching background</h3>
+    <p>Neumorphism (also called "soft UI") relies on two shadow layers of opposite sign on a surface whose color matches the page background: a darker shadow offset toward the bottom-right and a lighter shadow offset toward the top-left, both with a fairly large blur and no spread. Because the element's own background is the same color as the page, the shadows alone create the illusion of a shape gently raised from, or pressed into, a single continuous surface — swap to the Inset checkbox to flip it from "raised" to "pressed in."</p>
+
+    <table>
+      <thead><tr><th>Preset</th><th>Layers</th><th>Best for</th></tr></thead>
+      <tbody>
+        <tr><td>Soft</td><td>2 layers, low opacity, small blur</td><td>Cards, panels, subtle elevation</td></tr>
+        <tr><td>Material</td><td>3 layers, graduated blur/spread</td><td>Buttons, dialogs, Material Design UI</td></tr>
+        <tr><td>Neumorphic</td><td>2 layers, opposite offsets, matching background</td><td>Soft UI, skeuomorphic controls</td></tr>
+        <tr><td>Hard</td><td>1 layer, zero blur, full opacity</td><td>Retro, neubrutalist, comic-style UI</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Forgetting spread entirely.</strong> A shadow with only blur can look big and hazy; a small negative spread (like -1px to -4px) tightens it back up so it reads as intentional rather than smudged.</li>
+      <li><strong>Using a fully opaque shadow color.</strong> Real-world shadows are rarely solid black — most soft, natural-looking shadows sit at 5–25% opacity, which is why every layer in this generator has its own alpha slider.</li>
+      <li><strong>Confusing blur with spread.</strong> Blur fades the edge of the existing shadow shape; spread changes the size of that shape before the fade is applied. Increasing blur alone makes a shadow softer but not bigger; increasing spread makes it bigger but keeps its edge sharpness.</li>
+      <li><strong>Mismatched surface color in neumorphism.</strong> The neumorphic effect depends on the element and the page sharing the same background color — a white card on a gray page will not read as neumorphic no matter how the two shadow layers are tuned.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/gradient-generator/"><span class="related-ico" aria-hidden="true">🌈</span><span class="related-name">CSS Gradient Generator</span></a><a class="related-item" href="https://tool-hub.me/css-minifier/"><span class="related-ico" aria-hidden="true">{;}</span><span class="related-name">CSS Minifier</span></a><a class="related-item" href="https://tool-hub.me/color-picker/"><span class="related-ico" aria-hidden="true">🎨</span><span class="related-name">Color Picker &amp; Converter</span></a><a class="related-item" href="https://tool-hub.me/color-contrast-checker/"><span class="related-ico" aria-hidden="true">◐</span><span class="related-name">Color Contrast Checker</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I create a CSS box-shadow with this generator?</summary>
+      <p data-i18n="faq.a1">Drag the X and Y sliders to set how far the shadow falls, Blur to soften its edge, and Spread to grow or shrink it, then pick a color and opacity. Turn on Inset to flip it into a shadow that sits inside the element instead of outside it. For example, X 0, Y 4, Blur 6, Spread -1, black at 10% opacity produces box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1); — press Copy CSS to grab that line ready to paste into your stylesheet.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What do the offset, blur and spread values in box-shadow actually mean?</summary>
+      <p data-i18n="faq.a2">A box-shadow value reads as horizontal offset, vertical offset, blur radius, spread radius, then color. Horizontal and vertical offset move the shadow left/right and up/down from the element; blur radius softens the edge into a fade, with 0 giving a hard edge; and spread radius grows the shadow outward in every direction when positive, or shrinks it when negative. Only the two offsets are required in plain CSS — blur and spread default to 0 if omitted, which is why this generator always writes all four numbers explicitly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is an inset box-shadow and how is it different from a normal one?</summary>
+      <p data-i18n="faq.a3">Adding the inset keyword flips a shadow from casting outward beyond the element's edge to appearing inside it, as if the element were pressed into the page rather than raised above it. The Y value still moves the shadow down when positive and up when negative, but now it falls along the element's inner edge instead of outside it — commonly used for pressed buttons, recessed input fields, or the inner shading in a neumorphic design. This generator's Inset checkbox toggles the keyword per layer, so outward and inset shadows can be mixed in the same stack.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How do I stack multiple box-shadows for effects like Material Design or neumorphism?</summary>
+      <p data-i18n="faq.a4">CSS lets box-shadow take a comma-separated list of shadows, painted in the order listed — the first shadow sits on top, closest to the element. Material Design's elevation effect layers two or three shadows with different blur and spread at low opacity to fake a soft, physically plausible drop shadow, while neumorphism pairs a dark shadow on one side with a light shadow on the opposite side of a surface that matches the background, creating a soft raised or pressed look. Use + Add shadow layer to stack up to 4 layers, or start from the Soft, Material, Neumorphic or Hard preset and fine-tune from there.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my shadow design sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every slider, color and layer in this box-shadow generator is computed and rendered locally in your browser with plain JavaScript and CSS — nothing is uploaded, logged or shared. Your last design is saved only in your own browser's local storage so the tool reopens where you left off, and no account or sign-up is required.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

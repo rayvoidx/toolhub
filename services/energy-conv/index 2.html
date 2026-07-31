@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Converter — Joules, kcal, kWh & BTU in Seconds</title>
+<meta name="description" content="Free online energy converter. Type one number and see it instantly in joules, kJ, calories, kcal, Wh, kWh, BTU and foot-pounds — all in your browser, no ads.">
+<meta name="keywords" content="energy converter, kj to calories, calories to joules, kwh to btu, joules to kcal, 에너지 단위 변환기">
+<link rel="canonical" href="https://tool-hub.me/energy-conv/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Energy Converter — Joules, kcal, kWh & BTU in Seconds">
+<meta property="og:description" content="Free online energy converter. Type one number and see it instantly in joules, kJ, calories, kcal, Wh, kWh, BTU and foot-pounds — all in your browser, no ads.">
+<meta property="og:url" content="https://tool-hub.me/energy-conv/">
+<meta property="og:image" content="https://tool-hub.me/energy-conv/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Energy Converter",
+  "description": "Free online energy converter. Type one number and see it instantly in joules, kJ, calories, kcal, Wh, kWh, BTU and foot-pounds — all in your browser, no ads.",
+  "url": "https://tool-hub.me/energy-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Energy Converter", "item": "https://tool-hub.me/energy-conv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "kJ to calories — how do I convert kilojoules to kilocalories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the kilojoule value by 4.184 to get kilocalories (kcal), the unit nutrition labels usually call \"Calories\". For example, 100 kJ ÷ 4.184 ≈ 23.9 kcal. The reverse works too: multiply kcal by 4.184 to get kJ. This converter does the division for you instantly — just pick kJ as the From unit and kcal as the To unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a calorie (cal) and a food Calorie (kcal)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is the classic \"small calorie\" trap. A calorie (cal, lowercase) is the energy needed to raise 1 gram of water by 1°C — a tiny amount. Nutrition labels use the kilocalorie (kcal), written as \"Calorie\" with a capital C, which equals 1,000 small calories. So a snack labeled \"200 Calories\" actually contains 200,000 small calories. This converter treats cal and kcal as separate units at their correct 1:1000 ratio so you never mix them up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many kJ are in 1 kWh?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 kilowatt-hour (kWh) equals 3.6 megajoules, or exactly 3,600 kilojoules (kJ). This conversion matters when comparing an electricity bill (billed in kWh) with a food or fuel energy value (usually given in kJ or kcal) — for example, running a 1,500 W heater for one hour uses 1.5 kWh, the same energy as roughly 1,290 kcal of food."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many kilojoules are in a banana?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A medium banana has about 105 kcal of food energy. Multiply by 4.184 to convert: 105 kcal × 4.184 ≈ 439.3 kJ. That is roughly the same energy as 122 Wh of electricity — enough to run a 10 W LED bulb for about 12 hours. Try entering 105 in this converter with kcal as From and kJ as To to see the exact figure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my input sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This energy converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example kWh → kJ), kept in your browser's local storage so it is ready next time. The value itself is not stored."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Energy Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Energy Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type an energy value once — see it instantly in joules, calories, kWh, BTU and more, kJ to calories included.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .ec-row { display: flex; gap: 10px; align-items: flex-end; }
+      .ec-row > div { flex: 1 1 0; min-width: 0; }
+      .ec-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .ec-swap:hover { border-color: var(--accent); }
+      .tool-card label.ec-inline { margin-top: 0; }
+      .ec-result { margin-top: 22px; }
+      .ec-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .ec-eq { font-size: clamp(18px, 5vw, 24px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .ec-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .ec-eq { color: var(--accent); } }
+      .ec-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .ec-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .ec-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .ec-copybtn { color: var(--accent); } }
+      .ec-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .ec-tip { margin-top: 16px; padding: 12px 14px; border-radius: 10px; font-size: 13.5px; line-height: 1.55; color: var(--ink); background: color-mix(in srgb, var(--accent) 8%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--line)); }
+      .ec-tablewrap { margin-top: 24px; }
+      .ec-tablewrap h2 { font-size: 15px; margin: 0 0 4px; letter-spacing: -0.01em; }
+      .ec-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .ec-table th, .ec-table td { border-bottom: 1px solid var(--line); font-size: 14.5px; padding: 9px 10px; }
+      .ec-table td.ec-lbl { text-align: start; color: var(--muted); }
+      .ec-table td.ec-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .ec-table tr.ec-active td { background: color-mix(in srgb, var(--accent) 12%, transparent); }
+      @media (max-width: 420px) {
+        .ec-row { flex-wrap: wrap; }
+        .ec-row > div { flex: 1 1 100%; }
+        .ec-swap { align-self: center; }
+      }
+    </style>
+
+    <div class="ec-row">
+      <div>
+        <label for="ec-value" data-i18n="tool.value.label">Value</label>
+        <input id="ec-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="ec-row">
+      <div>
+        <label for="ec-from" class="ec-inline" data-i18n="tool.from.label">From</label>
+        <select id="ec-from">
+          <optgroup label="SI (joule-based)" data-goptlabel="tool.group.si">
+            <option value="J" data-i18n="tool.unit.J">Joule (J)</option>
+            <option value="kJ" data-i18n="tool.unit.kJ">Kilojoule (kJ)</option>
+          </optgroup>
+          <optgroup label="Heat (calorie-based)" data-goptlabel="tool.group.heat">
+            <option value="cal" data-i18n="tool.unit.cal">Calorie (cal)</option>
+            <option value="kcal" data-i18n="tool.unit.kcal">Kilocalorie / food Calorie (kcal)</option>
+          </optgroup>
+          <optgroup label="Electrical" data-goptlabel="tool.group.elec">
+            <option value="Wh" data-i18n="tool.unit.Wh">Watt-hour (Wh)</option>
+            <option value="kWh" selected data-i18n="tool.unit.kWh">Kilowatt-hour (kWh)</option>
+          </optgroup>
+          <optgroup label="Other" data-goptlabel="tool.group.other">
+            <option value="BTU" data-i18n="tool.unit.BTU">British thermal unit (BTU)</option>
+            <option value="ftlb" data-i18n="tool.unit.ftlb">Foot-pound (ft·lb)</option>
+          </optgroup>
+        </select>
+      </div>
+      <button type="button" class="ec-swap" id="ec-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="ec-to" class="ec-inline" data-i18n="tool.to.label">To</label>
+        <select id="ec-to">
+          <optgroup label="SI (joule-based)" data-goptlabel="tool.group.si">
+            <option value="J" data-i18n="tool.unit.J">Joule (J)</option>
+            <option value="kJ" selected data-i18n="tool.unit.kJ">Kilojoule (kJ)</option>
+          </optgroup>
+          <optgroup label="Heat (calorie-based)" data-goptlabel="tool.group.heat">
+            <option value="cal" data-i18n="tool.unit.cal">Calorie (cal)</option>
+            <option value="kcal" data-i18n="tool.unit.kcal">Kilocalorie / food Calorie (kcal)</option>
+          </optgroup>
+          <optgroup label="Electrical" data-goptlabel="tool.group.elec">
+            <option value="Wh" data-i18n="tool.unit.Wh">Watt-hour (Wh)</option>
+            <option value="kWh" data-i18n="tool.unit.kWh">Kilowatt-hour (kWh)</option>
+          </optgroup>
+          <optgroup label="Other" data-goptlabel="tool.group.other">
+            <option value="BTU" data-i18n="tool.unit.BTU">British thermal unit (BTU)</option>
+            <option value="ftlb" data-i18n="tool.unit.ftlb">Foot-pound (ft·lb)</option>
+          </optgroup>
+        </select>
+      </div>
+    </div>
+
+    <div class="result ec-result">
+      <div class="ec-primary">
+        <span class="ec-eq" id="ec-eq">—</span>
+        <button type="button" class="ec-copybtn" id="ec-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="ec-note" id="ec-note" data-i18n="tool.result.placeholder">Enter a number to see it in every energy unit.</p>
+    </div>
+
+    <p class="ec-tip" data-i18n="tool.kcalNote">Nutrition labels list food energy as "Calories" (capital C) — that is actually kilocalories (kcal), 1,000 times larger than a small calorie (cal). This converter always uses the standard 1 kcal = 1000 cal ratio.</p>
+
+    <div class="ec-tablewrap">
+      <h2 data-i18n="tool.table.heading">All units at once</h2>
+      <table class="ec-table">
+        <tbody id="ec-table-body">
+          <tr data-unit="J"><td class="ec-lbl" data-i18n="tool.unit.J">Joule (J)</td><td class="ec-val" id="ec-cell-J">—</td></tr>
+          <tr data-unit="kJ"><td class="ec-lbl" data-i18n="tool.unit.kJ">Kilojoule (kJ)</td><td class="ec-val" id="ec-cell-kJ">—</td></tr>
+          <tr data-unit="cal"><td class="ec-lbl" data-i18n="tool.unit.cal">Calorie (cal)</td><td class="ec-val" id="ec-cell-cal">—</td></tr>
+          <tr data-unit="kcal"><td class="ec-lbl" data-i18n="tool.unit.kcal">Kilocalorie / food Calorie (kcal)</td><td class="ec-val" id="ec-cell-kcal">—</td></tr>
+          <tr data-unit="Wh"><td class="ec-lbl" data-i18n="tool.unit.Wh">Watt-hour (Wh)</td><td class="ec-val" id="ec-cell-Wh">—</td></tr>
+          <tr data-unit="kWh"><td class="ec-lbl" data-i18n="tool.unit.kWh">Kilowatt-hour (kWh)</td><td class="ec-val" id="ec-cell-kWh">—</td></tr>
+          <tr data-unit="BTU"><td class="ec-lbl" data-i18n="tool.unit.BTU">British thermal unit (BTU)</td><td class="ec-val" id="ec-cell-BTU">—</td></tr>
+          <tr data-unit="ftlb"><td class="ec-lbl" data-i18n="tool.unit.ftlb">Foot-pound (ft·lb)</td><td class="ec-val" id="ec-cell-ftlb">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>One converter for every everyday energy unit</h2>
+    <p>Energy shows up in wildly different units depending on who is measuring it. Physicists and engineers use joules and kilojoules. Nutrition labels use calories and kilocalories. Electricity bills use kilowatt-hours. Air conditioners and furnaces in the US are rated in BTU. Mechanical work is sometimes given in foot-pounds. All of these measure the same physical quantity — energy — just scaled and named differently by the industry that adopted them. This converter keeps every unit on tap at once: type a number, pick where it starts and where it should end up, and the full table below fills in instantly so you can cross-check against any of the other seven units too.</p>
+
+    <h2>How the conversion works</h2>
+    <p>Every unit here converts through the joule (J), the SI base unit of energy, using a fixed multiplier:</p>
+    <table>
+      <thead><tr><th>Unit</th><th>Symbol</th><th>Value in joules</th></tr></thead>
+      <tbody>
+        <tr><td>Joule</td><td>J</td><td>1 (base unit)</td></tr>
+        <tr><td>Kilojoule</td><td>kJ</td><td>1,000 J</td></tr>
+        <tr><td>Calorie (small)</td><td>cal</td><td>4.184 J</td></tr>
+        <tr><td>Kilocalorie (food Calorie)</td><td>kcal</td><td>4,184 J</td></tr>
+        <tr><td>Watt-hour</td><td>Wh</td><td>3,600 J</td></tr>
+        <tr><td>Kilowatt-hour</td><td>kWh</td><td>3,600,000 J</td></tr>
+        <tr><td>British thermal unit</td><td>BTU</td><td>1,055.06 J</td></tr>
+        <tr><td>Foot-pound</td><td>ft·lb</td><td>1.356 J</td></tr>
+      </tbody>
+    </table>
+    <p>To convert any value, the tool multiplies by the From unit's joule value, then divides by the To unit's joule value. Under the hood that is exactly what you would do by hand — the converter just skips the two lookup steps and the arithmetic.</p>
+
+    <h2>Worked examples</h2>
+    <div class="example">
+      <p><strong>1. Electricity bill to food energy (1 kWh in kJ).</strong> 1 kWh = 3,600,000 J, and 1 kJ = 1,000 J, so 1 kWh = 3,600,000 ÷ 1,000 = <strong>3,600 kJ</strong>. That is also 3.6 megajoules — useful when a utility bill (kWh) needs to be compared against a food or fuel figure normally printed in kJ.</p>
+    </div>
+    <div class="example">
+      <p><strong>2. Nutrition label kJ to kcal.</strong> A cereal bar lists 620 kJ per serving. Divide by 4.184 to get the more familiar Calorie count: 620 ÷ 4.184 ≈ <strong>148.2 kcal</strong>. Many countries print both figures on packaging for exactly this reason.</p>
+    </div>
+    <div class="example">
+      <p><strong>3. A banana in kilojoules.</strong> A medium banana carries roughly 105 kcal of food energy. Multiply by 4.184: 105 × 4.184 ≈ <strong>439.3 kJ</strong>, which is also about 122 Wh — enough to run a small 10 W LED bulb for around 12 hours.</p>
+    </div>
+    <div class="example">
+      <p><strong>4. Air conditioner sizing.</strong> A room air conditioner rated at 12,000 BTU/h is a common "1-ton" unit. In SI terms that is 12,000 × 1,055.06 ≈ <strong>12.66 MJ per hour</strong>, or roughly 3.5 kW of cooling power — the BTU rating and the kW rating describe the same physical output, just in different unit systems.</p>
+    </div>
+
+    <h2>The calorie vs. Calorie trap</h2>
+    <p>This is the single most common mix-up in energy units. A calorie (cal, lowercase c) is a physics-textbook unit: the energy needed to raise 1 gram of water by 1°C. It is tiny — a single almond has roughly 7,000 of them. Nutrition science instead uses the kilocalorie (kcal), which food labels write as "Calorie" with a capital C, purely by convention. One kcal equals exactly 1,000 small calories. So when a label says "200 Calories," it really means 200 kcal, or 200,000 small calories. This converter always keeps cal and kcal as two separate, correctly-scaled units — pick the one you actually mean and the 1,000× difference is handled for you automatically.</p>
+
+    <h2>Where each unit is normally used</h2>
+    <ul>
+      <li><strong>Joule / kilojoule (J, kJ):</strong> the SI standard, used in physics, engineering, and on nutrition labels outside the US.</li>
+      <li><strong>Calorie / kilocalorie (cal, kcal):</strong> food energy and some chemistry contexts (small calorie only).</li>
+      <li><strong>Watt-hour / kilowatt-hour (Wh, kWh):</strong> electricity consumption — what your utility meter and bill actually track.</li>
+      <li><strong>British thermal unit (BTU):</strong> heating and cooling equipment ratings, mostly in the US.</li>
+      <li><strong>Foot-pound (ft·lb):</strong> mechanical work and torque figures in US customary engineering.</li>
+    </ul>
+
+    <h2>Precision and limits</h2>
+    <p>All conversions use standard reference values: the thermochemical calorie (4.184 J), the International Table BTU (1,055.05585262 J), and the foot-pound force (1.3558179483314004 J). Results are shown to up to 10 significant figures with trailing zeros trimmed, and switch to scientific notation for extremely large or small numbers so nothing gets silently rounded to zero.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/temp-conv/"><span class="related-ico" aria-hidden="true">🌡️</span><span class="related-name">Temperature Converter</span></a><a class="related-item" href="https://tool-hub.me/weight-conv/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">Weight Converter</span></a><a class="related-item" href="https://tool-hub.me/length-conv/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Length Converter</span></a><a class="related-item" href="https://tool-hub.me/volume-conv/"><span class="related-ico" aria-hidden="true">🧪</span><span class="related-name">Volume Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">kJ to calories — how do I convert kilojoules to kilocalories?</summary>
+      <p data-i18n="faq.a1">Divide the kilojoule value by 4.184 to get kilocalories (kcal), the unit nutrition labels usually call "Calories". For example, 100 kJ ÷ 4.184 ≈ 23.9 kcal. The reverse works too: multiply kcal by 4.184 to get kJ. This converter does the division for you instantly — just pick kJ as the From unit and kcal as the To unit.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What is the difference between a calorie (cal) and a food Calorie (kcal)?</summary>
+      <p data-i18n="faq.a2">This is the classic "small calorie" trap. A calorie (cal, lowercase) is the energy needed to raise 1 gram of water by 1°C — a tiny amount. Nutrition labels use the kilocalorie (kcal), written as "Calorie" with a capital C, which equals 1,000 small calories. So a snack labeled "200 Calories" actually contains 200,000 small calories. This converter treats cal and kcal as separate units at their correct 1:1000 ratio so you never mix them up.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How many kJ are in 1 kWh?</summary>
+      <p data-i18n="faq.a3">1 kilowatt-hour (kWh) equals 3.6 megajoules, or exactly 3,600 kilojoules (kJ). This conversion matters when comparing an electricity bill (billed in kWh) with a food or fuel energy value (usually given in kJ or kcal) — for example, running a 1,500 W heater for one hour uses 1.5 kWh, the same energy as roughly 1,290 kcal of food.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How many kilojoules are in a banana?</summary>
+      <p data-i18n="faq.a4">A medium banana has about 105 kcal of food energy. Multiply by 4.184 to convert: 105 kcal × 4.184 ≈ 439.3 kJ. That is roughly the same energy as 122 Wh of electricity — enough to run a 10 W LED bulb for about 12 hours. Try entering 105 in this converter with kcal as From and kJ as To to see the exact figure.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This energy converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example kWh → kJ), kept in your browser's local storage so it is ready next time. The value itself is not stored.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

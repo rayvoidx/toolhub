@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calorie Deficit Calculator — Daily Target &amp; Timeline</title>
+<meta name="description" content="Enter your stats and weekly pace to get your daily calorie deficit target and an estimated timeline to your goal weight. Free, browser-only, no ads.">
+<meta name="keywords" content="calorie deficit calculator, weight loss calculator, how many calories to lose weight, calorie deficit for weight loss, deficit calculator">
+<link rel="canonical" href="https://tool-hub.me/calorie-deficit-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calorie Deficit Calculator — Daily Target &amp; Timeline">
+<meta property="og:description" content="Enter your stats and weekly pace to get your daily calorie deficit target and an estimated timeline to your goal weight. Free, browser-only, no ads.">
+<meta property="og:url" content="https://tool-hub.me/calorie-deficit-calc/">
+<meta property="og:image" content="https://tool-hub.me/calorie-deficit-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calorie Deficit Calculator",
+  "description": "Enter your stats and weekly pace to get your daily calorie deficit target and an estimated timeline to your goal weight. Free, browser-only, no ads.",
+  "url": "https://tool-hub.me/calorie-deficit-calc/",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Calorie Deficit Calculator", "item": "https://tool-hub.me/calorie-deficit-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many calories should I eat to lose weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start from your maintenance calories (TDEE), which this calculator estimates from your sex, age, height, weight and activity level using the Mifflin-St Jeor formula. Eating below that maintenance number creates the calorie deficit needed for weight loss. For example, a moderately active 35-year-old woman, 165 cm and 70 kg, has a TDEE of roughly 2,160 kcal; choosing a 0.5 kg/week pace subtracts about 550 kcal/day, for a daily target near 1,610 kcal. Pick a pace you can sustain — small, steady deficits are easier to stick to than extreme ones."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 7,700 kcal per kilogram rule, and is it accurate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One kilogram of body fat stores roughly 7,700 kcal (about 3,500 kcal per pound), so this calculator divides your weekly pace by 7 to get a daily deficit target. It's a useful planning estimate, not a physical law: early weight loss includes water weight, the body's energy needs drop somewhat as you get lighter (metabolic adaptation), and muscle versus fat loss varies by person. Treat the timeline as a rough guide and re-check your numbers every few weeks as your weight changes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator warn me below 1,200 or 1,500 calories a day?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Widely cited guidance suggests adults generally should not eat below about 1,200 kcal/day (women) or 1,500 kcal/day (men) without medical supervision, since very low intakes raise the risk of nutrient deficiency, fatigue, and muscle loss. If your chosen pace pushes your target under that floor, this calculator shows a warning — the fix is usually to choose a smaller weekly pace (0.25 or 0.5 kg/week) or to talk to a doctor or registered dietitian before going lower."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my goal weight or pace doesn't make sense?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator requires a goal weight below your current weight, since it is built around a calorie deficit for weight loss — if you want to maintain or gain weight, try a maintenance or TDEE calculator instead. Extreme height/weight combinations trigger a \"double-check your numbers\" note, and very aggressive paces (like 1 kg/week) at a small body size often hit the low-calorie floor warning above, since there isn't enough of a maintenance budget to cut that much safely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my health information sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This calorie deficit calculator runs entirely in your browser — your sex, age, height, weight and goal never leave your device, and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can plan a weight-loss target privately."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Calorie Deficit Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Calorie Deficit Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How many calories should you eat to lose weight? Enter your stats and a weekly pace to get a daily calorie target and an estimated timeline to your goal weight.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): add a data-i18n hook to every user-visible string and
+       add the same key to ALL language blocks (14) in js/locales.js. For dynamic JS strings
+       use window.I18N.t("key"), and subscribe to the document "i18n:change" event when a
+       re-render is needed on language switch. -->
+  <section class="tool-card" id="tool" aria-live="polite" aria-label="Calorie deficit calculator" data-i18n-aria-label="tool.aria">
+    <p id="sex-heading" style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.sex.label">Sex</p>
+    <div role="radiogroup" aria-labelledby="sex-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="male" checked>
+        <span data-i18n="tool.sex.male">Male</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="female">
+        <span data-i18n="tool.sex.female">Female</span>
+      </label>
+    </div>
+
+    <label for="age-input" data-i18n="tool.age.label">Age (years)</label>
+    <input type="number" id="age-input" inputmode="numeric" min="15" max="100" step="1"
+           placeholder="e.g. 30" data-i18n-placeholder="tool.age.ph">
+
+    <!-- Height + unit toggle -->
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:14px 0 6px;">
+      <label for="height-cm" style="margin:0;" data-i18n="tool.height.label">Height</label>
+      <span role="radiogroup" aria-label="Height unit" style="font-size:13px;white-space:nowrap;">
+        <label style="margin:0;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="hunit" value="cm" checked><span data-i18n="tool.unit.cm">cm</span>
+        </label>
+        <label style="margin:0 0 0 12px;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="hunit" value="ft"><span data-i18n="tool.unit.ft">ft / in</span>
+        </label>
+      </span>
+    </div>
+    <div id="height-cm-wrap">
+      <input type="number" id="height-cm" inputmode="decimal" min="100" max="250" step="0.1"
+             placeholder="e.g. 175" data-i18n-placeholder="tool.height.ph.cm" aria-label="Height in centimeters">
+    </div>
+    <div id="height-ft-wrap" hidden style="display:flex;gap:8px;">
+      <input type="number" id="height-ft" inputmode="numeric" min="3" max="8" step="1"
+             placeholder="ft" aria-label="Height, feet">
+      <input type="number" id="height-in" inputmode="decimal" min="0" max="11.9" step="0.1"
+             placeholder="in" aria-label="Height, inches">
+    </div>
+
+    <!-- Weight + unit toggle -->
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin:14px 0 6px;">
+      <label for="weight-input" style="margin:0;" data-i18n="tool.weight.label">Current weight</label>
+      <span role="radiogroup" aria-label="Weight unit" style="font-size:13px;white-space:nowrap;">
+        <label style="margin:0;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="wunit" value="kg" checked><span data-i18n="tool.unit.kg">kg</span>
+        </label>
+        <label style="margin:0 0 0 12px;font-weight:600;cursor:pointer;display:inline-flex;gap:4px;align-items:center;">
+          <input type="radio" name="wunit" value="lb"><span data-i18n="tool.unit.lb">lb</span>
+        </label>
+      </span>
+    </div>
+    <input type="number" id="weight-input" inputmode="decimal" min="20" max="300" step="0.1"
+           placeholder="e.g. 90" data-i18n-placeholder="tool.weight.ph" aria-label="Current weight">
+
+    <label for="goal-weight-input" data-i18n="tool.goalweight.label">Goal weight</label>
+    <input type="number" id="goal-weight-input" inputmode="decimal" min="20" max="300" step="0.1"
+           placeholder="e.g. 80" data-i18n-placeholder="tool.goalweight.ph" aria-label="Goal weight">
+
+    <label for="activity-select" data-i18n="tool.activity.label">Activity level</label>
+    <select id="activity-select">
+      <option value="1.2" data-i18n="tool.activity.sedentary">Sedentary (little or no exercise) — ×1.2</option>
+      <option value="1.375" data-i18n="tool.activity.light">Lightly active (exercise 1-3 days/week) — ×1.375</option>
+      <option value="1.55" selected data-i18n="tool.activity.moderate">Moderately active (exercise 3-5 days/week) — ×1.55</option>
+      <option value="1.725" data-i18n="tool.activity.active">Very active (exercise 6-7 days/week) — ×1.725</option>
+      <option value="1.9" data-i18n="tool.activity.veryactive">Extra active (hard exercise or physical job) — ×1.9</option>
+    </select>
+
+    <label for="rate-select" data-i18n="tool.rate.label">Weekly pace</label>
+    <select id="rate-select">
+      <option value="0.25" data-i18n="tool.rate.opt1">0.25 kg/week — mild</option>
+      <option value="0.5" selected data-i18n="tool.rate.opt2">0.5 kg/week — moderate</option>
+      <option value="0.75" data-i18n="tool.rate.opt3">0.75 kg/week — strong</option>
+      <option value="1" data-i18n="tool.rate.opt4">1 kg/week — aggressive</option>
+    </select>
+    <p id="rate-helper" class="hint" style="margin-top:6px;"></p>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate calorie deficit</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p id="result-warning-extreme" style="margin:0 0 12px;color:#d97706;font-weight:600;" data-i18n="tool.warn.extreme" hidden>These numbers look unusual. Please double-check your height and weight.</p>
+
+        <div style="text-align:center;margin-bottom:6px;">
+          <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.target">Your daily calorie target</div>
+          <div style="font-weight:800;font-size:36px;line-height:1.15;color:var(--accent-strong);" id="r-target"></div>
+        </div>
+        <p id="r-sub" style="text-align:center;margin:0 0 16px;font-size:13.5px;color:var(--muted);"></p>
+
+        <p id="result-warning-floor" style="margin:0 0 16px;padding:12px 14px;border-radius:8px;background:color-mix(in srgb,#d97706 12%,var(--surface));color:#d97706;font-size:13.5px;font-weight:600;" hidden></p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;">
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.tolose">Weight to lose</div>
+            <div style="font-weight:700;font-size:18px;" id="r-tolose"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.timeline">Estimated timeline</div>
+            <div style="font-weight:700;font-size:18px;" id="r-timeline"></div>
+          </div>
+        </div>
+
+        <p style="margin:14px 0 4px;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.disclaimer">Estimates use the Mifflin-St Jeor formula and the common 7,700 kcal/kg rule of thumb; actual results vary with body composition, health, and genetics. Educational information only — not medical, nutrition, or fitness advice.</p>
+        <p style="margin:0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.privacy">All calculations run in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How a calorie deficit actually works</h2>
+    <p>Weight loss comes down to one relationship: eat fewer calories than your body burns in a day, and it draws on stored energy to cover the gap. This calculator finds your maintenance calories (TDEE) from your sex, age, height, weight and activity level using the Mifflin-St Jeor formula, then subtracts a deficit sized to the weekly pace you choose — mild, moderate, strong, or aggressive. The result is a single daily calorie number, plus an estimated timeline to your goal weight.</p>
+
+    <h2>The formula behind the numbers</h2>
+    <p>Basal metabolic rate (BMR) — the calories your body burns at complete rest — is estimated with the Mifflin-St Jeor equation:</p>
+    <ul>
+      <li>Men: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age + 5</li>
+      <li>Women: BMR = 10 × weight(kg) + 6.25 × height(cm) − 5 × age − 161</li>
+    </ul>
+    <p>BMR is then multiplied by an activity factor (1.2 sedentary to 1.9 extra active) to get TDEE — your true daily maintenance number. Your weekly pace is converted to a daily deficit using the common estimate that roughly 7,700 kcal equals 1 kg of body fat (about 3,500 kcal per pound), divided across 7 days. Subtracting that deficit from TDEE gives your daily calorie target.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a moderate cut.</strong> A moderately active 35-year-old woman, 165 cm and 70 kg, has a BMR near 1,393 kcal and a TDEE of roughly 2,160 kcal. Choosing a 0.5 kg/week pace subtracts about 550 kcal/day (0.5 × 7,700 ÷ 7), for a daily target near <strong>1,610 kcal</strong>. To lose 10 kg she'd need roughly 20 weeks (about 4.6 months) at that pace.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a mild, sustainable cut.</strong> A moderately active 40-year-old man, 178 cm and 90 kg, has a TDEE near 2,740 kcal. A mild 0.25 kg/week pace subtracts about 275 kcal/day, landing at roughly <strong>2,465 kcal</strong> — comfortably above the 1,500 kcal floor, and easier to stick to for months at a time than a steeper cut.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — hitting the low-calorie floor.</strong> A lightly active 28-year-old woman, 158 cm and 55 kg, has a TDEE near 1,690 kcal. An aggressive 1 kg/week pace would subtract about 1,100 kcal/day, pushing the target near 590 kcal — well under the 1,200 kcal floor. This calculator flags that with a warning: at a small body size, the safer fix is a smaller weekly pace, not a lower calorie floor.</p>
+    </div>
+
+    <h2>Choosing a weekly pace</h2>
+    <table>
+      <thead><tr><th>Pace</th><th>Daily deficit</th><th>Typical fit</th></tr></thead>
+      <tbody>
+        <tr><td>0.25 kg/week — mild</td><td>≈ 275 kcal</td><td>Small deficit, easiest to sustain long-term</td></tr>
+        <tr><td>0.5 kg/week — moderate</td><td>≈ 550 kcal</td><td>Common, evidence-backed default for most people</td></tr>
+        <tr><td>0.75 kg/week — strong</td><td>≈ 825 kcal</td><td>Faster progress, more discipline required</td></tr>
+        <tr><td>1 kg/week — aggressive</td><td>≈ 1,100 kcal</td><td>Only realistic for people with a larger maintenance budget</td></tr>
+      </tbody>
+    </table>
+    <p>Faster is not always better: very large deficits increase the risk of muscle loss, fatigue, and rebound weight regain, and they are harder to hold for more than a few weeks. Slower, steadier deficits tend to preserve more lean mass and are easier to keep up until you reach your goal.</p>
+
+    <h2>Why the 1,200 / 1,500 kcal floor warning matters</h2>
+    <p>Widely cited nutrition guidance suggests adults generally should not eat below about 1,200 kcal/day (women) or 1,500 kcal/day (men) without medical supervision. Diets below that floor raise the risk of nutrient shortfalls, fatigue, and muscle loss, and are difficult to sustain safely without professional guidance. If your chosen stats and pace produce a target under that floor, this calculator shows a warning rather than a silent number — the usual fix is picking a smaller weekly pace or speaking with a doctor or registered dietitian.</p>
+
+    <h2>Limits of this estimate</h2>
+    <ul>
+      <li><strong>It's a planning estimate, not a guarantee.</strong> Early weight loss often includes water weight, and the body's energy needs drift down somewhat as you lose weight (metabolic adaptation) — re-check your numbers every few weeks.</li>
+      <li><strong>Body composition isn't captured.</strong> Mifflin-St Jeor uses total body weight, so it can under- or overestimate for very muscular or very lean bodies.</li>
+      <li><strong>Activity level is self-reported.</strong> Most people overestimate how active they are; if progress stalls, try the tier below the one you picked rather than eating less.</li>
+      <li><strong>This is educational information only</strong> — not medical, nutrition, or fitness advice. Anyone with a health condition, an eating disorder history, or who is pregnant or breastfeeding should speak with a qualified professional before changing their diet.</li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/tdee-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">TDEE Calculator</span></a><a class="related-item" href="https://tool-hub.me/bmr-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">BMR Calculator</span></a><a class="related-item" href="https://tool-hub.me/macro-calc/"><span class="related-ico" aria-hidden="true">🍽️</span><span class="related-name">Macro Calculator</span></a><a class="related-item" href="https://tool-hub.me/ideal-weight-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">Ideal Weight Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Add data-i18n="faq.qN|faq.aN" to each summary/p and fill every language in locales.js. -->
+    <details>
+      <summary data-i18n="faq.q1">How many calories should I eat to lose weight?</summary>
+      <p data-i18n="faq.a1">Start from your maintenance calories (TDEE), which this calculator estimates from your sex, age, height, weight and activity level using the Mifflin-St Jeor formula. Eating below that maintenance number creates the calorie deficit needed for weight loss. For example, a moderately active 35-year-old woman, 165 cm and 70 kg, has a TDEE of roughly 2,160 kcal; choosing a 0.5 kg/week pace subtracts about 550 kcal/day, for a daily target near 1,610 kcal. Pick a pace you can sustain — small, steady deficits are easier to stick to than extreme ones.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What is the 7,700 kcal per kilogram rule, and is it accurate?</summary>
+      <p data-i18n="faq.a2">One kilogram of body fat stores roughly 7,700 kcal (about 3,500 kcal per pound), so this calculator divides your weekly pace by 7 to get a daily deficit target. It's a useful planning estimate, not a physical law: early weight loss includes water weight, the body's energy needs drop somewhat as you get lighter (metabolic adaptation), and muscle versus fat loss varies by person. Treat the timeline as a rough guide and re-check your numbers every few weeks as your weight changes.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why does the calculator warn me below 1,200 or 1,500 calories a day?</summary>
+      <p data-i18n="faq.a3">Widely cited guidance suggests adults generally should not eat below about 1,200 kcal/day (women) or 1,500 kcal/day (men) without medical supervision, since very low intakes raise the risk of nutrient deficiency, fatigue, and muscle loss. If your chosen pace pushes your target under that floor, this calculator shows a warning — the fix is usually to choose a smaller weekly pace (0.25 or 0.5 kg/week) or to talk to a doctor or registered dietitian before going lower.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What if my goal weight or pace doesn't make sense?</summary>
+      <p data-i18n="faq.a4">The calculator requires a goal weight below your current weight, since it is built around a calorie deficit for weight loss — if you want to maintain or gain weight, try a maintenance or TDEE calculator instead. Extreme height/weight combinations trigger a "double-check your numbers" note, and very aggressive paces (like 1 kg/week) at a small body size often hit the low-calorie floor warning above, since there isn't enough of a maintenance budget to cut that much safely.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my health information sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This calorie deficit calculator runs entirely in your browser — your sex, age, height, weight and goal never leave your device, and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can plan a weight-loss target privately.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
