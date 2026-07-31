@@ -214,15 +214,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
   <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
     <h2>Why the sticker price is never the loan amount</h2>
     <p>The number you finance is rarely the number on the windscreen. Sales tax, title, registration and dealer documentation fees push it up; your down payment and trade-in equity pull it down. Get any of those wrong and the monthly figure you budgeted for and the one on the contract will not match — usually by more than people expect.</p>
 
+    <h3>What each field means</h3>
+    <ol>
+      <li><strong>Vehicle price</strong> — the negotiated price after rebates, not the window sticker number.</li>
+      <li><strong>Down payment</strong> — cash on top of any trade-in; reduces the amount financed directly.</li>
+      <li><strong>Trade-in value</strong> — what the dealer credits your old car, before subtracting anything owed on it.</li>
+      <li><strong>Owed on trade-in</strong> — the payoff balance on your current loan. If higher than the trade-in value, the gap is negative equity and gets added to the new loan instead of subtracted.</li>
+      <li><strong>Sales tax %</strong> — your local rate. Most states tax the price after the trade-in credit; a handful tax the full price.</li>
+      <li><strong>Fees</strong> — title, registration and documentation charges bundled into the deal.</li>
+      <li><strong>Interest rate % (APR)</strong> — the rate quoted by the lender, not a flat add-on rate (see below).</li>
+      <li><strong>Term (months)</strong> — how many monthly payments the loan runs for.</li>
+    </ol>
+
+    <h3>The formula behind the payment</h3>
+    <div class="example">
+      <p><strong>Amount financed</strong> = price + sales tax + fees - down payment - (trade-in value - owed on trade-in)</p>
+      <p><strong>Monthly payment</strong> = amount financed x r / (1 - (1 + r)^-n), where r is the APR divided by 12 as a decimal and n is the term in months.</p>
+    </div>
+    <p>This is the same amortising-loan formula used for mortgages, only over a shorter term: every payment is identical in size, but the split between principal and interest shifts a little each month even though the payment itself does not.</p>
+
     <h3>Worked example: a typical deal</h3>
-    <p>A 32,000 car, 4,000 down, a trade-in worth 6,000 with nothing owed on it, 7 percent sales tax and 600 in fees, financed at 7 percent APR over 60 months. Tax applies to 32,000 - 6,000 = 26,000, so 1,820. Amount financed = 32,000 + 1,820 + 600 - 4,000 - 6,000 = 24,420. At 7 percent over 60 months that is 483.53 a month, 29,011.80 in total, and 4,591.80 of interest.</p>
+    <div class="example">
+      <p>A 32,000 car, 4,000 down, a trade-in worth 6,000 with nothing owed on it, 7 percent sales tax and 600 in fees, financed at 7 percent APR over 60 months. Tax applies to 32,000 - 6,000 = 26,000, so 1,820. Amount financed = 32,000 + 1,820 + 600 - 4,000 - 6,000 = 24,420. At 7 percent over 60 months that is 483.53 a month, 29,011.80 in total, and 4,591.80 of interest.</p>
+    </div>
 
     <h3>Worked example: rolling in negative equity</h3>
-    <p>Same deal, but the trade-in is worth 6,000 and you still owe 9,000 on it. Equity is now minus 3,000, so the financed amount climbs to 27,420 and the payment to 542.87. You are paying interest on a car you no longer own, which is the mechanism behind long chains of upside-down trades.</p>
+    <div class="example">
+      <p>Same deal, but the trade-in is worth 6,000 and you still owe 9,000 on it. Equity is now minus 3,000, so the financed amount climbs to 27,420 and the payment to 542.87. You are paying interest on a car you no longer own, which is the mechanism behind long chains of upside-down trades.</p>
+    </div>
+
+    <h3>Worked example: a state that taxes the full price</h3>
+    <div class="example">
+      <p>Same 32,000 deal as the first example, but this state taxes the full price instead of crediting the trade-in: 7 percent of 32,000 is 2,240 rather than 1,820. Amount financed rises to 24,840 — only 420 more — but spread over 60 months at 7 percent that pushes the payment to about 491.90 and adds roughly 82 of extra interest on top of the 420 itself, since the tax is financed and accrues interest like everything else.</p>
+    </div>
 
     <h2>How term length changes the picture</h2>
     <table>
@@ -236,10 +278,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </tbody>
     </table>
 
-    <h2>What to watch in the finance office</h2>
-    <p>Negotiate the price of the car, not the monthly payment. A dealer can hit almost any monthly target by stretching the term, and the table above shows what that costs: 84 months instead of 60 saves 115 a month and adds nearly 2,000 in interest, while leaving you owing more than the car is worth for most of the loan.</p>
-    <p>Check whether the APR quoted includes the finance charges, and whether extras — gap insurance, service plans, paint protection — have been folded into the amount financed. Those add to the principal and therefore accrue interest for the whole term. And confirm how your state treats trade-ins for tax: a few charge tax on the full price, which changes the arithmetic here by several hundred.</p>
+    <h2>Common mistakes and finance-office traps</h2>
+    <ul>
+      <li><strong>Negotiating the payment instead of the price.</strong> A dealer can hit almost any monthly target by stretching the term — the table above shows the cost: 84 months instead of 60 saves 115 a month but adds nearly 2,000 in interest, and leaves you owing more than the car is worth for most of the loan.</li>
+      <li><strong>APR versus an add-on or "buy" rate.</strong> Ask whether the quoted rate is already an APR or a flat add-on rate calculated on the original balance — add-on rates translate into a noticeably higher true APR than the headline number suggests.</li>
+      <li><strong>Extras folded into the loan.</strong> Gap insurance, service plans and paint protection pitched as "a few dollars a month" get added to the amount financed and accrue interest for the entire term.</li>
+      <li><strong>State trade-in tax rules.</strong> Confirm whether your state credits the trade-in before tax — the third example above shows it changes the arithmetic by hundreds of dollars on a modest deal.</li>
+    </ul>
+
+    <h2>What this calculator does not cover</h2>
+    <p>It models a standard fixed-rate, fully amortising purchase loan. It does not price a lease, which runs on depreciation and a money factor rather than this formula, nor a balloon or residual-payment loan. It also will not surface a dealer's rate markup ("reserve") above what you actually qualify for, or flag a prepayment penalty — rare on US auto loans but present on some subprime contracts, so check the note itself. Treat the result as a close estimate for comparing offers, not a replacement for the amortisation schedule your lender hands you at signing.</p>
   </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

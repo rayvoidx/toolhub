@@ -196,21 +196,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
   <section class="guide-content">
-    <h2>Where the "one dog year equals seven" idea came from</h2>
-    <p>The seven-to-one rule appears to have started as marketing arithmetic: humans lived to about 70, dogs to about 10, so someone divided. It is memorable and wrong in both directions. A one-year-old dog is sexually mature, fully grown in most breeds, and behaviourally something like a teenager — not a seven-year-old child. Meanwhile a 13-year-old small dog is old but not the 91-year-old the rule implies.</p>
-    <p>Modern veterinary charts split ageing into phases. The first year covers roughly 15 human years of development, the second adds about nine more, and every year after that adds a smaller amount that depends on adult body size. This calculator follows that shape, then shows a second estimate from the epigenetic clock as a cross-check.</p>
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
 
-    <h3>Worked example 1: a 7-year-old Labrador</h3>
-    <p>A Labrador is a large breed at roughly 30 kg. Years one and two contribute 24 human years. The remaining five years add 5.5 each: 5 x 5.5 = 27.5. Total is about 52 human years, and the dog is entering the mature-to-senior transition — the age at which most vets start recommending twice-yearly checks and bloodwork.</p>
+    <h2>Why "multiply by seven" gets your dog's age wrong</h2>
+    <p>The seven-to-one rule looks like it started as marketing arithmetic: humans lived to about 70, dogs to about 10, so someone divided the two and printed it on a flea-collar box. It is memorable and wrong at both ends of a dog's life. A one-year-old dog is already sexually mature and fully grown in most breeds, behaviourally closer to a teenager than a seven-year-old child. At the other end, a flat multiplier would put a 13-year-old small dog at 91 — older than almost any dog has ever lived — when in reality that small dog is often still an active senior with a couple of good years left.</p>
+    <p>What actually happens is front-loaded: the first year covers roughly 15 years of human development on its own, the second year adds about nine more, and only after that does ageing settle into a steady yearly increment — one that depends heavily on how big the dog is built to become. This calculator applies that phased curve based on the size class you pick, then shows a second, independent estimate from canine epigenetics as a sanity check on the first.</p>
 
-    <h3>Worked example 2: the same age, a small dog</h3>
-    <p>A 7-year-old Jack Russell at 7 kg also banks 24 years from the first two, but the remaining five add only 4 each: 20. Total is around 44 human years — solidly middle-aged with several good years ahead. Two dogs, identical birthdays, eight human years apart. That gap is why the size selector matters more than any other input.</p>
+    <h3>Getting an accurate reading</h3>
+    <ol>
+      <li>Enter the age in years, or switch the unit to months for a puppy under one year — the early months carry more developmental weight than any later year, so precision here matters most.</li>
+      <li>Pick the <strong>adult</strong> size class, not the dog's current size. A 4 kg golden retriever puppy is a future large dog, not a small one — sizing by projected adult weight is the single most common input mistake.</li>
+      <li>Press Convert to see the human-year estimate, a life-stage label (puppy through senior), and the epigenetic cross-check side by side.</li>
+    </ol>
 
-    <h3>Worked example 3: a Great Dane at 5</h3>
-    <p>Giant breeds compress everything. Five years for a Dane gives 24 + (3 x 6.5) = 43.5 human years, but the life-stage label already reads senior, because giant breeds typically enter their final third by age six. The human-year number and the life stage answer different questions: one is a rough comparison, the other is what actually drives care decisions.</p>
+    <h3>The two formulas behind the numbers</h3>
+    <div class="example">
+      <strong>Size-phase model:</strong> age 1 = 15 human years; age 2 adds 9 more (24 total); each year after that adds a size-dependent step — roughly 4/yr small, 4.5/yr medium, 5.5/yr large, 6.5/yr giant.<br><br>
+      <strong>Epigenetic model (2020 DNA-methylation study):</strong> human age = 16 &times; ln(dog age) + 31.
+    </div>
+    <p>The phase model mirrors how veterinary charts are actually built — piecewise, from clinical milestones. The epigenetic formula instead comes from comparing chemical markers on canine and human DNA directly, so it needs no phases or size brackets at all, but the logarithm overshoots badly under one year of age, which is why this tool leaves that estimate blank for puppies.</p>
 
-    <h2>Human-year equivalents by size</h2>
+    <h3>Worked examples</h3>
+    <div class="example"><strong>A 7-year-old Labrador (large, ~30 kg).</strong> Years one and two bank 24. The remaining five years add 5.5 each: 5 &times; 5.5 = 27.5. Total &approx; <strong>52 human years</strong> — entering the mature-to-senior transition where most vets add twice-yearly bloodwork.</div>
+    <div class="example"><strong>A 7-year-old Jack Russell (small, ~7 kg).</strong> Same first-two-year total of 24, but the remaining five add only 4 each: 20. Total &approx; <strong>44 human years</strong> — identical birthday to the Labrador above, eight human years younger, purely from adult size.</div>
+    <div class="example"><strong>A 5-year-old Great Dane (giant).</strong> 24 + (3 &times; 6.5) = <strong>43.5 human years</strong>, yet the life-stage label already reads senior, since giant breeds typically enter their final third of life by age six. The number and the stage label are answering different questions.</div>
+
+    <h3>Human-year equivalents by size</h3>
     <table>
       <thead><tr><th>Dog age</th><th>Small</th><th>Medium</th><th>Large</th><th>Giant</th></tr></thead>
       <tbody>
@@ -224,11 +248,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </tbody>
     </table>
 
-    <h2>The epigenetic clock, briefly</h2>
-    <p>In 2020 researchers compared DNA methylation patterns in Labrador retrievers and humans and derived a much cleaner mapping: human age = 16 x ln(dog age) + 31. It reproduces the rapid early ageing curve without needing separate phases, and it lines up with known milestones — puberty, average lifespan — better than the linear folk rule. Its weakness is the puppy end, where the logarithm overshoots, which is why this tool leaves it blank below one year.</p>
-    <p>Take both numbers as approximations. A dog's real biological age depends on breed predisposition, weight, dental health, exercise and luck. What the numbers are good for is context: knowing that a seven-year-old giant breed is already a senior citizen changes how you think about anaesthesia, joint supplements and how many good years are left to plan around.</p>
-    <p>If you want one practical takeaway, it is the screening schedule. Small dogs benefit from annual senior bloodwork from about nine; large dogs from about seven; giants from five or six. Catching kidney or thyroid changes early is worth far more than any conversion number.</p>
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Sizing by current weight, not adult weight.</strong> A large-breed puppy sized as "small" will understate every later year by roughly 1.5 human years per year of age.</li>
+      <li><strong>Reapplying "times seven" after year two.</strong> The steady per-year increment is 4 to 6.5, never seven — the flat rule only happens to be close during a narrow window in mid-adulthood for medium dogs.</li>
+      <li><strong>Reading the epigenetic number for a puppy.</strong> Below one year the logarithmic formula produces an inflated figure, which is why this tool intentionally leaves it blank rather than show a misleading number.</li>
+      <li><strong>Ignoring the life-stage label.</strong> Two dogs can share a human-year estimate yet sit in different life stages — the label, not the raw number, is what should drive vet-visit frequency.</li>
+    </ul>
+
+    <h3>What these numbers don't capture</h3>
+    <p>Both models are population averages. An individual dog's real biological age is shaped by breed-specific health predispositions, neuter status, diet, dental care, and exercise — factors no age-conversion formula can see. The practical use of a human-year estimate is context, not diagnosis: knowing a seven-year-old giant breed is already a senior citizen should change how you think about anaesthesia risk, joint supplements, and screening frequency. As a rough guide, annual senior bloodwork is worth starting around age nine for small dogs, seven for large dogs, and five to six for giants — a vet's hands-on assessment always outranks any number on this page.</p>
   </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

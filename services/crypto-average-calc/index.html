@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crypto Average Calculator — Cost & Break-Even</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -259,6 +298,115 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why your average buy price is not what your exchange app shows you</h2>
+    <p>Most exchange apps display a "cost basis" or "average price" number, but that figure often bundles in
+    realized sells, staking rewards, or transfers from another wallet — so it quietly drifts away from what you
+    actually paid for the coins currently sitting in your wallet. A crypto average calculator that only takes
+    your own buy amounts and prices gives you a cleaner number: the true amount-weighted average of what you
+    put in for what you still hold. That distinction matters most right before you decide whether to sell,
+    because selling above your real average is the only way to lock in a profit — selling above an inflated
+    app-reported average can still be a loss.</p>
+    <p>It also matters for tax reporting in jurisdictions that use average-cost or FIFO cost-basis methods,
+    and for deciding whether a "buy the dip" trade is actually pulling your position where you want it to go,
+    rather than just feeling like progress.</p>
+
+    <h2>How to enter your buys correctly</h2>
+    <ol>
+      <li><strong>One row per purchase.</strong> Add a row for every separate buy — not every day you held,
+      every time you bought. Two buys on the same day at different prices are two rows.</li>
+      <li><strong>Amount is coins, not cash.</strong> If you spent $500 on a coin at $50,000, the amount is
+      0.01, not 500. Entering cash in the amount field is the single most common mistake and silently produces
+      a meaningless average.</li>
+      <li><strong>Price is per coin, in the currency you select.</strong> Match the currency you actually paid
+      in — converting later introduces rounding drift that compounds across many small buys.</li>
+      <li><strong>Skip transfers and rewards.</strong> Coins that arrived via airdrop, staking, or a wallet
+      transfer from an exchange you already bought on are not new cost — leave them out, or your average will
+      understate what you actually spent per coin.</li>
+    </ol>
+
+    <h2>The formula behind the weighted average</h2>
+    <div class="example">
+      <p style="margin:0 0 6px;"><strong>Weighted average price</strong> = (Σ amount₁×price₁ + amount₂×price₂ + …) ÷ Σ amounts</p>
+      <p style="margin:0 0 6px;"><strong>Break-even price</strong> = (total buy cost × (1 + buy fee %)) ÷ (total coins × (1 − sell fee %))</p>
+      <p style="margin:0;"><strong>Unrealized P/L</strong> = total coins × (current price × (1 − sell fee %) − break-even price)</p>
+    </div>
+    <p>The average is deliberately weighted by <em>amount</em>, not by number of transactions. Ten small buys of
+    0.001 coin each barely move the number; one large buy of 1 coin dominates it. This is why "I bought the dip
+    five times" doesn't always mean your average dropped much — check the coin amounts, not the buy count.</p>
+
+    <h3>Worked example 1 — three buys, no fees</h3>
+    <div class="example">
+      <p style="margin:0 0 6px;">Buy 1: 0.5 BTC at $40,000 → cost $20,000</p>
+      <p style="margin:0 0 6px;">Buy 2: 0.3 BTC at $30,000 → cost $9,000</p>
+      <p style="margin:0 0 6px;">Buy 3: 0.2 BTC at $25,000 → cost $5,000</p>
+      <p style="margin:0 0 6px;">Total: 1.0 BTC, total cost $34,000</p>
+      <p style="margin:0;"><strong>Average price = $34,000 ÷ 1.0 = $34,000.</strong> Note this sits closer to the two
+      cheaper buys than a simple (40,000+30,000+25,000)/3 = $31,667 would suggest — because the largest buy was at
+      the highest price and it carries the most weight.</p>
+    </div>
+
+    <h3>Worked example 2 — break-even with fees</h3>
+    <div class="example">
+      <p style="margin:0 0 6px;">1.0 ETH bought at $2,500 (buy fee 0.1%) → cost paid $2,502.50</p>
+      <p style="margin:0 0 6px;">Sell fee set to 0.1%</p>
+      <p style="margin:0;">Break-even = $2,502.50 ÷ (1 × (1 − 0.001)) ≈ <strong>$2,505.00</strong>. Even though you
+      "bought at $2,500," you need ETH at roughly $2,505 just to walk away with $0 net — the two 0.1% fees together
+      cost about $5 per coin here, and that gap widens with every added lot.</p>
+    </div>
+
+    <h3>Worked example 3 — averaging down to a target</h3>
+    <div class="example">
+      <p style="margin:0 0 6px;">You hold 2 SOL at an average of $180. Current price is $120. Target average: $150.</p>
+      <p style="margin:0 0 6px;">Coins to buy = 2 × (180 − 150) ÷ (150 − 120) = 2 × 30 ÷ 30 = <strong>2 SOL</strong></p>
+      <p style="margin:0;">Buying 2 more SOL at $120 (cost $240) brings your total to 4 SOL for $600, a new average
+      of exactly $150 — confirming the planner's formula. Notice the amount needed grows quickly the closer your
+      target sits to your current average rather than to the live price.</p>
+    </div>
+
+    <h3>Typical spot exchange fee tiers</h3>
+    <table>
+      <tr><th>Tier</th><th>Typical taker fee</th><th>Effect on break-even (round-trip)</th></tr>
+      <tr><td>Fee-free / promotional</td><td>0%</td><td>Break-even = average price exactly</td></tr>
+      <tr><td>Standard retail spot</td><td>0.1%–0.25%</td><td>Break-even ≈ 0.2%–0.5% above average</td></tr>
+      <tr><td>Card / instant-buy convenience</td><td>1%–4%</td><td>Break-even can sit several % above average</td></tr>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Entering cash instead of coin amount</strong> — always double-check the amount column reads in
+      coins, not your local currency.</li>
+      <li><strong>Forgetting a small early buy.</strong> Even a tiny lot at a very different price shifts the
+      average noticeably once you're checking break-even to the cent.</li>
+      <li><strong>Ignoring fees entirely.</strong> Zero-fee assumptions make a position look profitable slightly
+      before it actually is — set both fee fields to match your exchange's real tier.</li>
+      <li><strong>Confusing "current average" with "target average" in the planner</strong> — the target must sit
+      strictly between your current price and your existing average, or there's no buy quantity that reaches it.</li>
+    </ul>
+
+    <h3>What this tool does not do</h3>
+    <p>It does not fetch live prices, does not account for realized gains from coins you already sold, and does
+    not calculate tax liability — cost-basis accounting rules (FIFO, LIFO, specific-ID, average-cost) vary by
+    jurisdiction and this tool only ever computes a simple amount-weighted average of the buys you enter. Treat
+    every result as arithmetic on the numbers you provided, not as financial or tax advice, and re-verify against
+    your exchange's transaction history before filing anything.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
