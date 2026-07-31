@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CSV Duplicate Remover — Remove Duplicate Rows</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -292,6 +331,124 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why "remove duplicates" needs a key, not just a click</h2>
+    <p>A spreadsheet duplicate is almost never a byte-for-byte copy of another row. A CRM export has the same
+    customer twice because one row came from a web form ("jane.doe@gmail.com ") and the other from a phone
+    call typed by an agent ("Jane.Doe@Gmail.com"). A product catalog has the same SKU twice because one file
+    used a full-width "１２３" from a Japanese POS system and the other used ASCII "123". Excel's built-in
+    Remove Duplicates treats these as different rows and leaves both in place — so the mailing list still
+    gets two emails, and the inventory count is still off by one. Deduplicating well means deciding, on
+    purpose, which columns identify a "real" record and how much spelling variation still counts as the
+    same value — then applying that rule consistently across every row, not eyeballing it.</p>
+
+    <h2>How to run a dedupe pass</h2>
+    <ol>
+      <li>Paste the table or drop a CSV/TSV file. The delimiter and header row are detected automatically —
+      override them if the guess is wrong (a file with addresses that contain commas often needs Semicolon
+      or Tab picked manually).</li>
+      <li>Tick the column(s) under "Which columns make a row a duplicate?" — this becomes the matching key.
+      One column (Email) gives the broadest match; several columns (First name + Last name + Company) give a
+      composite key that only collapses rows agreeing on all of them.</li>
+      <li>Choose which copy survives when rows collide: the first occurrence (usually the earliest import) or
+      the last (usually the most recently updated record).</li>
+      <li>Pick a country preset as a starting point, then fine-tune individual matching options — each one
+      changes only how keys are *compared*, never what is stored or exported.</li>
+      <li>Read the badge: "N rows → M kept, K duplicates removed." Check the "Removed duplicates" tab before
+      trusting the result, especially the first time you dedupe a given file.</li>
+    </ol>
+
+    <h2>The matching pipeline, in order</h2>
+    <p>Each ticked cell's raw text goes through a small pipeline before two rows are compared, and the order
+    matters: whitespace trimming happens first, then Unicode normalization (NFC or NFKC), then case folding,
+    then the optional accent/zero-stripping steps. Two values are "the same" only if every step produces an
+    identical string. The original spelling from your file is never touched — only the temporary comparison
+    key is transformed.</p>
+    <div class="example">
+      <strong>Why order matters:</strong> "ＡＢＣ" (fullwidth) run through NFKC becomes "ABC" first, and only
+      then does case-folding do anything meaningful. If case-folding ran before NFKC, a byte-for-byte
+      fullwidth-vs-halfwidth mismatch would still block the match even with "Ignore case" checked — because
+      the two strings simply aren't the same characters yet.
+    </div>
+
+    <h2>Three worked examples</h2>
+    <div class="example">
+      <strong>1. Mailing list, whitespace + case only.</strong><br>
+      Row A: <code>"  Jane.Doe@Gmail.com "</code> · Row B: <code>"jane.doe@gmail.com"</code><br>
+      With "Trim &amp; collapse spaces" and "Ignore upper/lower case" on, both keys reduce to
+      <code>jane.doe@gmail.com</code> → treated as a duplicate; Row B (the last one) is kept if "keep last"
+      is selected, so the cleaned file has one row and the removed-duplicates file has Row A.
+    </div>
+    <div class="example">
+      <strong>2. Turkish name field, default JS lowercase would break this.</strong><br>
+      Row A: <code>"İstanbul"</code> · Row B: <code>"istanbul"</code><br>
+      A plain JavaScript <code>.toLowerCase()</code> turns capital dotted İ into <code>i̇</code> (a lowercase
+      i plus a separate combining dot, U+0069 U+0307) — not into plain <code>i</code> — so Row A and Row B
+      would stay different even with case-insensitive matching on. Turning on the Türkiye preset ("Turkish-safe
+      case") maps İ→i and I→ı explicitly before comparing, so both rows collapse into one, exactly as a
+      human proofreader would expect.
+    </div>
+    <div class="example">
+      <strong>3. Employee IDs, leading zeros left alone on purpose.</strong><br>
+      Row A: <code>"00123"</code> · Row B: <code>"123"</code><br>
+      By default these stay two different rows — an HR export where "00123" and "123" are genuinely
+      different badge numbers must not be silently merged. Only if you explicitly check "Ignore leading
+      zeros" (useful for numeric IDs that were stored inconsistently, e.g. some exports zero-pad to 5 digits
+      and others don't) do the two rows collapse into one.
+    </div>
+
+    <h2>Matching options at a glance</h2>
+    <table>
+      <tr><th>Option</th><th>Example before</th><th>Example after (matches)</th><th>Typical use</th></tr>
+      <tr><td>Trim &amp; collapse spaces</td><td>"John  Smith " / "John Smith"</td><td>equal</td><td>Copy-pasted or form-entered names</td></tr>
+      <tr><td>Remove all spaces</td><td>"홍 길동" / "홍길동"</td><td>equal</td><td>Korean names with inconsistent spacing</td></tr>
+      <tr><td>Ignore upper/lower case</td><td>"ACME Inc" / "acme inc"</td><td>equal</td><td>Company or email fields</td></tr>
+      <tr><td>Unicode NFC</td><td>decomposed 한글 jamo / precomposed 한글</td><td>equal</td><td>Files mixing macOS-decomposed and Windows-composed Korean/Latin text</td></tr>
+      <tr><td>NFKC (fullwidth↔halfwidth)</td><td>"ＡＢＣ－１２３"</td><td>"ABC-123"</td><td>Japanese/Chinese POS or ERP exports</td></tr>
+      <tr><td>Ignore accents</td><td>"Café" / "Cafe"</td><td>equal</td><td>European name and address fields</td></tr>
+      <tr><td>Turkish-safe case</td><td>"İstanbul" / "istanbul"</td><td>equal</td><td>Turkish locale names (see example 2)</td></tr>
+      <tr><td>Ignore leading zeros</td><td>"00123" / "123"</td><td>equal</td><td>Inconsistently zero-padded numeric IDs</td></tr>
+    </table>
+
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Ticking too few columns.</strong> Matching on Email alone will also merge two different
+      people who share a shared household inbox. If that's not intended, add a second key column such as
+      Last name.</li>
+      <li><strong>Ticking too many columns.</strong> A composite key across five columns rarely collides,
+      even for records that are clearly the same customer, because one field (a phone number formatted
+      differently) breaks the match. Start narrow, check the "Removed duplicates" tab, then widen.</li>
+      <li><strong>Turning on every normalization option "to be safe."</strong> Stacking accent-stripping,
+      NFKC and leading-zero removal on an ID column can merge genuinely different records (postal codes,
+      SKUs). Turn on only the options your specific column needs.</li>
+      <li><strong>Trusting the row count without checking the removed tab.</strong> The badge tells you how
+      many rows were dropped, not which ones — always skim the "Removed duplicates" panel before you ship
+      the cleaned file, particularly the first time you dedupe a new source.</li>
+    </ul>
+
+    <h2>What this tool does not do</h2>
+    <p>It finds exact matches after normalization — it is not fuzzy matching. "Jon Smith" and "John Smith"
+    (a genuine misspelling, not a formatting difference) will not be merged, nor will "555-0142" match
+    "(555) 014-2" unless your columns already share a normalized format before you paste them in. For
+    approximate name matching, phonetic matching, or record linkage across misspelled fields, a dedicated
+    fuzzy-matching tool is a better fit than exact-key deduplication.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Investment Goal Calculator — How Much to Invest Monthly</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -210,6 +249,75 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Working backward from a number instead of forward from a habit</h2>
+    <p>Most savings tools start with what you can set aside and project where that habit leads. This one runs the opposite direction: you already know the number you need — a wedding, a down payment, a retirement balance, a child's tuition fund — and it solves for the monthly deposit that closes the gap between where you are and where you need to be, by your deadline. That reverse framing turns a vague intention ("save what's left over") into a fixed, checkable monthly number the moment a goal acquires both a date and a price tag.</p>
+
+    <h3>Reading the five inputs</h3>
+    <ol>
+      <li><strong>Target amount</strong> — the balance you want on the horizon's last day, in whatever currency you're planning in. Nominal, not adjusted for anything.</li>
+      <li><strong>Time horizon</strong> — whole years from today to the goal date. Round down if you're between years; a shorter horizon asks for a larger, safer monthly figure rather than an optimistic one.</li>
+      <li><strong>Expected annual return</strong> — the growth rate you're assuming, before fees. The input most likely to be wrong in hindsight, so treat it as a planning assumption, not a promise.</li>
+      <li><strong>Starting amount</strong> — money already set aside toward this goal. Zero just means the whole target has to come from future contributions plus growth.</li>
+      <li><strong>Annual inflation</strong> — optional, and it changes only the "goal in today's money" figure, not the required monthly investment. Use it to see what your nominal target is really worth once time erodes it.</li>
+    </ol>
+
+    <h2>How the monthly figure is actually solved</h2>
+    <p>The calculation happens in two stages. First, any starting amount is carried forward on its own, compounding monthly for the full horizon. Second, whatever the target is still missing after that is treated as a debt your monthly contributions must retire, with each contribution assumed to land at the start of its month (so it earns that month's growth too, unlike an ordinary end-of-month annuity). Dividing the remaining gap by a growth factor built from the monthly rate and the number of months gives the required contribution.</p>
+    <div class="example">
+      <strong>In plain terms:</strong> monthly investment = (target − starting balance grown to the goal date) ÷ (a factor measuring how much one unit invested every month, starting immediately, grows to by the deadline). A higher return or a longer horizon makes that factor larger — which is why both push the required monthly number down, sometimes dramatically.
+    </div>
+
+    <h2>Three worked examples across different horizons</h2>
+    <div class="example">
+      <strong>Short horizon, low return — an 18-month wedding fund.</strong> Target 15,000, horizon 1.5 years (18 months), expected return 2% (a cautious, near-cash assumption), no starting balance. The required contribution comes out to about 820 a month. Total contributions over 18 months are roughly 14,764 — growth contributes only about 236, under 2% of the goal. Short, low-return goals are funded almost entirely by your own deposits.
+    </div>
+    <div class="example">
+      <strong>Medium horizon — a 50,000 down payment in 5 years.</strong> Same zero starting balance, but a 5-year horizon and a 5% expected return. The required monthly investment drops to about 732. Contributions over 60 months total roughly 43,931, so growth supplies about 6,069 — close to 12% of the goal.
+    </div>
+    <div class="example">
+      <strong>Long horizon with a head start — a 1,000,000 retirement goal in 30 years.</strong> Starting balance 20,000, expected return 8%. That starting balance alone grows roughly eleven-fold by the deadline, so the required monthly contribution is only about 521 — a fraction of the ≈2,778 a naive "target ÷ months" calculation would suggest. Total contributions end up near 207,470, so growth supplies close to 793,000, about 79% of the entire goal — the clearest illustration of why starting early changes the math this much.
+    </div>
+
+    <h2>Reference: monthly investment needed per 10,000 of target</h2>
+    <p>To compare horizons and return assumptions at a glance, here is the required monthly contribution per 10,000 of target, with no starting balance — scale it to your own goal by multiplying (e.g. a 250,000 goal needs 25× the figure below).</p>
+    <table>
+      <tr><th>Horizon</th><th>4% return</th><th>7% return</th><th>10% return</th></tr>
+      <tr><td>5 years</td><td>150.33</td><td>138.87</td><td>128.07</td></tr>
+      <tr><td>10 years</td><td>67.69</td><td>57.44</td><td>48.41</td></tr>
+      <tr><td>20 years</td><td>27.17</td><td>19.09</td><td>13.06</td></tr>
+      <tr><td>30 years</td><td>14.36</td><td>8.15</td><td>4.39</td></tr>
+    </table>
+    <p>Notice how much more the return assumption matters at 30 years than at 5: at 5 years, moving from 4% to 10% trims the monthly figure by about 15%; at 30 years, the same jump cuts it by roughly 70%. Return assumptions matter most on the longest horizons — which is also where they're hardest to verify in advance.</p>
+
+    <h2>Common mistakes and practical tips</h2>
+    <ul>
+      <li><strong>Entering a monthly rate where an annual one belongs.</strong> The return field expects an annual percentage, converted to monthly internally; a rate that was already monthly inflates the projected growth enormously.</li>
+      <li><strong>Treating the return preset as a forecast.</strong> The 4/7/10% chips are round reference points, not predictions. Run the same goal twice — once at your expected return, once a few points lower — to see how sensitive the monthly figure is to being wrong.</li>
+      <li><strong>Confusing the two "today's money" ideas.</strong> Inflation does not change the required monthly investment; it only recomputes what your nominal target is worth today. If the real-world goal itself rises with inflation, raising the target is a separate decision you make yourself.</li>
+      <li><strong>Ignoring fees.</strong> Expense ratios and advisory fees reduce your realized return below the market's headline number — enter a return net of fees, not a raw market average.</li>
+      <li><strong>Forgetting the rounding direction.</strong> The tool rounds the required monthly figure up, so a small rounding gap never leaves the goal underfunded; the true "just enough" number is a touch below what's shown.</li>
+    </ul>
+
+    <h2>What this projection does not cover</h2>
+    <p>The math here is arithmetic compounding at a single, constant assumed rate — it cannot know how a real portfolio's returns will actually be sequenced year to year, and a market downturn late in the horizon has a very different effect than the same downturn early on ("sequence of returns" risk), even if the long-run average ends up identical. The tool also does not model taxes on investment gains, account contribution limits, or irregular windfalls such as bonuses — for those, treat a lump sum contribution as reducing the goal that still needs to be funded monthly, then recalculate. None of this is investment, tax, or financial advice; it is a transparent arithmetic projection meant to make a savings target concrete enough to check your progress against.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

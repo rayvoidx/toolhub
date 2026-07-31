@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Safety Stock & Reorder Point Batch Calculator</title>
@@ -35,38 +70,6 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Lead time, σLT and on-hand stock per SKU (optional)",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A second small table keyed by SKU. Give us an on-hand column and we flag what to order right now; give us a lead-time deviation column and it enters the formula. Choose file"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Limit to a specific period (optional)",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "By default each SKU is measured from its own first to its own last transaction. Set a period and every SKU shares it — rows outside are reported as excluded. From To"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Periodic review (optional)",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "If you only place orders on a cycle — month-end close, weekly run — the protection window is LT + R, not LT. Enter the review cycle R in calendar days (a monthly cycle is 30). Review cycle R (calendar days)"
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Economic order quantity (optional)",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "EOQ = √(2 × D × S / H) with D = d̄ × 365. Both costs are required — without them the column stays hidden rather than showing a meaningless 0. Cost per order (S) Annual holding cost per unit (H)"
-      }
-    },
     {
       "@type": "Question",
       "name": "Do I need to know the demand standard deviation (σd) already?",
@@ -135,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">

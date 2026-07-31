@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Landed Cost Batch Calculator — per-item import cost</title>
@@ -35,14 +70,6 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Advanced — excise, VAT handling, paper entry",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Individual consumption tax for this shipment Korea only, and only for goods that attract it. Apportioned across items by customs value, then folded into the VAT base — that cascade is what makes Korean import VAT higher than a flat 10% of the invoice. Include import VAT in landed cost Off by default: a VAT-registered importer reclaims import VAT as an input tax credit, so putting it in the cost overstates it. Turn this on only if you cannot deduct it (VAT-exempt business). Paper (manual) entry — add the $4.03 MPF surcharge"
-      }
-    },
     {
       "@type": "Question",
       "name": "Should freight be apportioned by value, weight or CBM?",
@@ -111,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -338,6 +369,69 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why landed cost has to be worked out per line, not per invoice</h2>
+    <p>An invoice gives you one FOB or ex-works price per item, but the number that actually matters for pricing and margin is what each unit costs once it clears customs — goods value plus its fair share of freight, insurance, duty and clearance fees. Spreading shipment-level charges evenly, or folding them into one flat "landed cost" percentage, misprices whichever items are unusually light, cheap, bulky or heavy. This calculator apportions each cost line on the basis that actually drove it — value, weight, cubic volume or quantity — then runs the correct duty and VAT stack for the destination country.</p>
+
+    <h2>Reading your invoice into the calculator</h2>
+    <ol>
+      <li><strong>Paste or drop the invoice rows.</strong> Copy straight out of Excel or drop a CSV/TSV file; it's parsed in memory in this tab, nothing is uploaded.</li>
+      <li><strong>Match your columns.</strong> Confirm which column is quantity, unit price, weight, CBM and HS code. Quantity and unit price are required; leave anything else unset rather than let the tool guess.</li>
+      <li><strong>Set the shipment.</strong> Import country decides the CIF/FOB customs value basis and VAT rules; transport mode toggles the US Harbor Maintenance Fee.</li>
+      <li><strong>Enter shipment-level costs.</strong> Freight, insurance, clearance and any other charge each get an apportionment basis and a "dutiable" flag — whether it's added to the customs value before duty applies.</li>
+    </ol>
+
+    <h2>How the apportionment and duty stack run</h2>
+    <p>Each item's share of a cost line is <code>cost &times; (item's basis quantity &divide; total basis quantity)</code> — value for insurance and most flat fees, weight for air freight, CBM for ocean freight, occasionally plain quantity for a flat per-carton charge. The dutiable value per item is invoice value plus whichever cost lines are marked dutiable — freight and insurance under CIF, nothing extra under FOB. Duty is dutiable value times the rate you enter; VAT, where it applies, is calculated on dutiable value plus duty; and landed cost is invoice value plus every apportioned cost plus duty, with VAT excluded unless you opt in.</p>
+
+    <h2>Worked examples</h2>
+    <div class="example">
+      <h3>Example 1 — Korea, CIF, freight apportioned by CBM</h3>
+      <p>Speakers: 120 units at $18.50 (value $2,220, 1.44 CBM). Phone cases: 500 units at $2.00 (value $1,000, 0.6 CBM). Ocean freight $600 splits by CBM into $423.53 and $176.47; insurance $16.10 (0.5% of value) splits by value into $11.10 and $5.00. CIF value: $2,654.63 and $1,181.47. At 8% duty the speakers owe $212.37; the cases are duty-free. Landed cost (VAT excluded): <strong>$2,922.16 for the speakers ($24.35/unit)</strong>, <strong>$1,206.31 for the cases ($2.41/unit)</strong>.</p>
+    </div>
+    <div class="example">
+      <h3>Example 2 — United States, FOB, MPF and HMF</h3>
+      <p>Mugs: 2,000 units at $3.20 (value $6,400, 1,000 kg). Tumblers: 800 units at $4.50 (value $3,600, 600 kg). Freight $2,400 splits by weight into $1,500 and $900, but never enters the FOB dutiable base. MPF (0.3464% of $10,000, inside the $33.58–$651.50 bracket) is $34.64, split by value into $22.17 and $12.47. HMF (0.125%, ocean only) is $12.50, split into $8.00 and $4.50. At 6% and 4% duty: $384.00 and $144.00. Landed cost (no US import VAT): <strong>$8,314.17 for the mugs ($4.16/unit)</strong>, <strong>$4,660.97 for the tumblers ($5.83/unit)</strong>.</p>
+    </div>
+
+    <h2>Customs value basis and fees by destination</h2>
+    <table>
+      <thead><tr><th>Country</th><th>Dutiable (customs) value</th><th>Import VAT</th><th>Country-specific fees</th></tr></thead>
+      <tbody>
+        <tr><td>Korea</td><td>CIF — goods + freight + insurance</td><td>10%, cascading over duty (+ excise where it applies)</td><td>Individual consumption tax on select goods</td></tr>
+        <tr><td>Japan</td><td>CIF</td><td>Consumption tax, standard or reduced rate</td><td>&mdash;</td></tr>
+        <tr><td>EU (per member state)</td><td>CIF</td><td>Member-state VAT rate, varies by country</td><td>&mdash;</td></tr>
+        <tr><td>United States</td><td>FOB — goods value only</td><td>None</td><td>MPF 0.3464% (min $33.58 / max $651.50); HMF 0.125%, ocean only</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and practical tips</h2>
+    <ul>
+      <li><strong>Apportioning everything by value.</strong> It's the shortcut most spreadsheets take, and it's wrong for anything billed on volume or weight — it overcharges dense, cheap items and undercharges bulky, expensive ones. Match the basis to what actually drove the charge.</li>
+      <li><strong>Leaving import VAT switched into landed cost by mistake.</strong> A VAT-registered importer reclaims it as an input tax credit, so including it overstates true product cost. Only VAT-exempt importers should turn that toggle on.</li>
+      <li><strong>Forgetting the manual-entry MPF surcharge.</strong> A US paper (non-electronic) entry adds a flat $4.03 on top of the percentage-based fee.</li>
+      <li><strong>Garbled characters after uploading a CSV.</strong> Older Korean or Japanese exports are sometimes CP949/EUC-KR or Shift-JIS, not UTF-8 — use the re-read option that appears rather than fixing text by hand.</li>
+    </ul>
+
+    <h2>What this tool doesn't do</h2>
+    <p>It doesn't classify goods under an HS code or look up a duty rate — that judgement call depends on material, function and origin, so you supply the rate. It doesn't fetch a live customs exchange rate either, since that would mean sending your invoice to a server; use your customs authority's officially published rate. It also doesn't apply free-trade-agreement preferential rates, anti-dumping duties or de minimis exemptions — fold those into the duty rate you enter if they apply. Confirm anything beyond straightforward apportionment with a licensed customs broker before filing.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

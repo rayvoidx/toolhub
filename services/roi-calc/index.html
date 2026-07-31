@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ROI Calculator — Return on Investment & Annualized ROI</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -234,6 +273,81 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>ROI, net profit, and return multiple — what each number tells you</h2>
+    <p>Return on investment collapses everything you put into a deal and everything you got out of it into a single ratio, so a $5 investment and a $5,000,000 investment can be compared on the same percentage scale. Net profit is the plain currency answer to "how much richer am I" — no ratio, just the money. Return multiple restates the same result as a multiplier of your original stake, which is often how investors and founders talk about a deal informally ("it returned 2.5x"). This calculator gives you all three from the same two inputs, then adds a fourth — annualized ROI — the moment you tell it how long the money was tied up.</p>
+
+    <h3>How to read the two required inputs</h3>
+    <ol>
+      <li><strong>Amount invested</strong> is everything the deal cost you, not just the sticker price — fold in commissions, closing costs, or fees you paid to get in, since they were still money you committed.</li>
+      <li><strong>Amount returned</strong> is everything you got back, net of any costs to get out — sale proceeds after selling fees, total revenue, or the current value if you're marking an open position to market.</li>
+      <li>Leave the holding period blank if you only need ROI, net profit, and the return multiple for a single completed transaction.</li>
+      <li>Fill in a holding period — as a number of years or as start/end dates — only when you want to compare this result against a different-length investment on a per-year basis.</li>
+      <li>Currency only changes how net profit and the year-by-year schedule are formatted; ROI itself is a dimensionless percentage.</li>
+    </ol>
+
+    <h3>The ROI formula</h3>
+    <div class="example">
+      <p><strong>ROI = (Amount returned − Amount invested) ÷ Amount invested × 100</strong></p>
+      <p>The numerator — amount returned minus amount invested — is your net profit in the same currency you entered. Dividing by the amount invested rescales that profit against your original stake, and multiplying by 100 turns the ratio into a percentage. Because it's a ratio of profit to cost, ROI carries no unit of time on its own — a 40% ROI could describe a trade that took three weeks or a project that took three years, which is exactly the gap annualized ROI closes.</p>
+    </div>
+
+    <h3>Worked example: a property flip, including costs</h3>
+    <div class="example">
+      <p>You buy a property for 200,000 and pay 8,000 in closing costs, so amount invested = 208,000. You sell it 2.5 years later for 260,000 after 6,000 in selling costs, so amount returned = 254,000. Net profit = 254,000 − 208,000 = 46,000. ROI = 46,000 ÷ 208,000 × 100 ≈ 22.12%, and the return multiple is 254,000 ÷ 208,000 ≈ 1.22×. Fed through the 2.5-year holding period, annualized ROI ≈ 8.32% per year — the number you'd actually compare against a savings rate or another investment's yearly pace.</p>
+    </div>
+
+    <h3>From ROI to annualized ROI</h3>
+    <div class="example">
+      <p><strong>Annualized ROI = (Amount returned ÷ Amount invested)^(1 ÷ years) − 1</strong></p>
+      <p>Amount returned ÷ amount invested is the same growth multiple shown in the results — 1.22× in the example above. Raising it to the power of 1 ÷ years spreads that multiple evenly across every year of the holding period instead of crediting it all to a single point in time; subtracting 1 and multiplying by 100 converts the result back into a percentage. In dates mode, "years" is the exact number of days between your two dates divided by 365.25, so a 2-year-and-7-month hold is annualized on its real length, not rounded to 2 or 3 years.</p>
+    </div>
+
+    <h3>How ROI's annualized figure differs from CAGR</h3>
+    <p>Annualized ROI and CAGR (compound annual growth rate) use the identical exponent formula — (end ÷ start)^(1/years) − 1 — so for the same two amounts and the same period, they will always agree to the last decimal. What differs is the entry point and the default output. A CAGR calculator is built around a beginning value and an ending value and always centers on the yearly rate, because it's typically used to track something you already held and watched over time — a stock position, a portfolio, a company's revenue. This ROI calculator starts from "amount invested" and "amount returned," language that fits a single completed transaction — a project, a flip, a one-off deal — where the period is optional because the first thing you usually want to know is simply "did this pay off, and by how much," not "at what yearly pace." Add the holding period here and you get the exact same annualized figure a CAGR calculator would give you; leave it out and you still get the plain ROI, net profit, and return multiple that a pure growth-rate tool doesn't surface by default.</p>
+
+    <h3>Same ROI, different annualized rate depending on holding period</h3>
+    <p>Because the exponent divides by the number of years, one fixed ROI maps to a very different annualized ROI depending on how long it took to earn. The table below holds a 200% ROI (the investment triples — return multiple 3×) constant and only changes the holding period:</p>
+    <table>
+      <thead><tr><th>Holding period</th><th>Total ROI</th><th>Return multiple</th><th>Annualized ROI</th></tr></thead>
+      <tbody>
+        <tr><td>1 year</td><td>200%</td><td>3.00×</td><td>200.00%</td></tr>
+        <tr><td>2 years</td><td>200%</td><td>3.00×</td><td>73.21%</td></tr>
+        <tr><td>3 years</td><td>200%</td><td>3.00×</td><td>44.22%</td></tr>
+        <tr><td>5 years</td><td>200%</td><td>3.00×</td><td>24.57%</td></tr>
+        <tr><td>10 years</td><td>200%</td><td>3.00×</td><td>11.61%</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--muted)">The 1-year row is the only case where plain ROI and annualized ROI match — beyond one year, annualized ROI is always lower than the total ROI it was derived from.</p>
+
+    <h3>Common mistakes and things people overlook</h3>
+    <ul>
+      <li><strong>Leaving out fees on either side.</strong> Commissions, closing costs, and taxes paid to enter or exit a deal are real cash outlays — fold them into amount invested or subtract them from amount returned so ROI reflects what you actually kept.</li>
+      <li><strong>Comparing raw ROI across different holding periods.</strong> A 60% ROI over six months and a 60% ROI over four years are not equally good — switch on the holding period and compare the annualized figures instead.</li>
+      <li><strong>Treating an amount returned of 0 as a bug.</strong> Losing the entire investment is a real, valid outcome and correctly shows −100% ROI — the calculator isn't wrong, the deal was.</li>
+      <li><strong>Feeding it a multi-cash-flow deal.</strong> This formula assumes one lump sum in and one lump sum out. If you added or withdrew money partway through — like periodic contributions to a portfolio — a two-point ROI or annualized ROI will misstate the real performance; that needs a money-weighted measure instead.</li>
+      <li><strong>Reading annualized ROI as a forecast.</strong> It summarizes a rate that already happened between two known points in the past — it doesn't promise the same pace will continue.</li>
+    </ul>
+
+    <h3>What this calculator doesn't cover</h3>
+    <p>ROI and annualized ROI here are computed exactly as entered — the tool doesn't automatically deduct taxes, inflation, or fees unless you've already folded them into amount invested or amount returned yourself, and it doesn't handle deals with more than one contribution or withdrawal date. It also doesn't account for risk: two deals can post the same ROI while one was a predictable, low-volatility arrangement and the other swung wildly before landing on the same number. Treat every result as an arithmetic summary of what already happened, not investment advice and not a projection of what will happen next.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

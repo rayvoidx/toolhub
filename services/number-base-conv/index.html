@@ -209,19 +209,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
   <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
     <h2>What a number base actually is</h2>
-    <p>A base is simply how many distinct digits a system uses before it rolls over into another column. Decimal has ten, so after 9 comes 10. Binary has two, so after 1 comes 10 — which is the number two, not ten. Each column is worth the base raised to its position, counting from zero on the right, and that single rule generates every base from 2 to 36.</p>
-    <p>Binary matters because circuits are switches: on or off, one or zero. Hexadecimal matters because it is a compact way of writing binary — one hex digit maps to exactly four bits, so any byte becomes two readable characters. Octal survives mainly in Unix file permissions, where three bits per group maps neatly onto read, write and execute.</p>
+    <p>A base is how many distinct digits a system uses before a column rolls over. Decimal has ten digits, so after 9 comes 10. Binary has two, so after 1 comes 10 — which is the number two, not ten. Each column is worth the base raised to its position, counting from zero on the right, and that one rule is enough to build every base from 2 up to 36.</p>
+    <p>The bases people actually use map onto real hardware and conventions. Binary matters because a transistor is a switch: on or off, one or zero, nothing in between. Hexadecimal packs binary tightly — one hex digit is exactly four bits, so a byte is always two hex characters, which is why memory addresses and colour codes are written in hex rather than long strings of ones and zeros. Octal survives mainly in Unix file permissions, where three bits per group line up neatly with read, write and execute.</p>
+
+    <h2>How to use this converter</h2>
+    <ol>
+      <li>Type the digits into <strong>Value</strong> exactly as written in the source — no 0x, 0b or 0o prefixes needed.</li>
+      <li>Set <strong>Input base</strong> to whatever that value is currently expressed in, or choose Custom for anything from 2 to 36.</li>
+      <li>For Custom, enter the base itself (12 for duodecimal, say) in the field that appears.</li>
+      <li>Press Convert. The panel fills in binary, octal, decimal and hex at once, plus the minimum bits the value needs.</li>
+    </ol>
 
     <h3>Worked example 1: binary to decimal</h3>
-    <p>Take 1011. Positions from the right are worth 1, 2, 4 and 8. Reading right to left the digits are 1, 1, 0, 1, so the value is 1 + 2 + 0 + 8 = 11. In hex that is B, and in octal 13. All four appear at once in the results panel, which is the fastest way to sanity check a value you have half-converted in your head.</p>
+    <div class="example">
+      <p>Take 1011. Positions from the right are worth 1, 2, 4 and 8. Reading right to left the digits are 1, 1, 0, 1, so the value is 1 + 2 + 0 + 8 = <strong>11</strong>. In hex that is <strong>B</strong>, and in octal <strong>13</strong>. Seeing all four at once is the fastest way to sanity-check a value you have half-converted in your head.</p>
+    </div>
 
     <h3>Worked example 2: hex to decimal, the colour case</h3>
-    <p>CSS colours are hex bytes. The red channel in #FF8800 is FF, which is 15 x 16 + 15 = 255 — the maximum for one byte. The green channel 88 is 8 x 16 + 8 = 136. Knowing that FF is 255 and 80 is 128 makes it easy to judge whether a colour is near-saturated or roughly half strength without opening a picker.</p>
+    <div class="example">
+      <p>CSS colours are hex byte triplets. The red channel in #FF8800 is FF, which is 15&times;16 + 15 = <strong>255</strong> — the maximum a byte can hold. The green channel 88 is 8&times;16 + 8 = <strong>136</strong>. The blue channel is 00, so this colour is pure orange with no blue at all. Knowing that FF is 255 and 80 is roughly 128 lets you judge whether a colour is near-saturated or about half strength without opening a picker.</p>
+    </div>
 
     <h3>Worked example 3: file permissions in octal</h3>
-    <p>chmod 755 means three octal digits, each holding three bits: 7 is 111 (read, write, execute), 5 is 101 (read, execute). Convert 755 with base 8 selected and the binary output reads 111101101 — exactly the nine permission bits in order. This is why octal, not hex, is the traditional notation for Unix modes.</p>
+    <div class="example">
+      <p><code>chmod 755</code> is three octal digits, each holding three bits: 7 is 111 (read, write, execute), 5 is 101 (read, execute, no write). Enter 755 with base 8 selected and the binary output reads <strong>111101101</strong> — exactly the nine permission bits, owner then group then everyone, in order. This is why Unix modes are written in octal rather than hex: three bits per digit is a perfect fit, four bits is not.</p>
+    </div>
 
     <h2>Common values across the four bases</h2>
     <table>
@@ -237,11 +265,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </tbody>
     </table>
 
-    <h2>Practical notes and limits</h2>
-    <p>This converter handles whole numbers up to 2^53, the largest integer JavaScript represents exactly. Beyond that, results would silently lose precision, so the tool refuses rather than printing a plausible wrong answer. Negative numbers are converted as magnitude with a minus sign, because two's complement representation depends on a chosen word width — an 8-bit and a 32-bit representation of -5 are different bit patterns, and guessing which one you meant would be worse than not guessing.</p>
-    <p>The digit check runs before conversion for the same reason. Typing 129 with base 8 selected is a mistake, not a value: standard parsing would quietly return 10 by stopping at the invalid 9. Flagging it keeps a typo from becoming a wrong number in your code.</p>
-    <p>Bases above 16 use letters through Z, giving base 36 as the practical maximum with the standard alphabet. Base 36 shows up in short identifiers and URL slugs precisely because it packs the most value per character while staying alphanumeric.</p>
+    <h2>Negative numbers: why this tool shows a sign, not two's complement</h2>
+    <p>This converter represents a negative value as a minus sign in front of the magnitude, in every base, rather than as two's complement. That is deliberate. Two's complement is how processors store signed integers in binary: to get -5 in an 8-bit word, write 5 as 00000101, flip every bit to get 11111010, then add 1 to get <strong>11111011</strong>. The same -5 in a 16-bit word is 1111111111111011 — a different bit pattern, because two's complement only makes sense once you fix a word width (8, 16, 32 or 64 bits). A converter that does not know your target width would have to guess it, and a wrong guess prints a bit pattern that looks valid but is the wrong number. If you need the two's-complement pattern for a chosen width, take the binary output for the positive magnitude, invert every bit, and add 1.</p>
+
+    <h2>Common mistakes and practical limits</h2>
+    <ul>
+      <li><strong>Digits that do not belong to the base.</strong> Typing 129 with base 8 selected is a mistake, not a value — octal only has digits 0-7. Standard parsers often stop at the first bad digit and silently return 12; this converter rejects the whole input instead.</li>
+      <li><strong>Letters beyond the base's range.</strong> In base 16, only A-F are valid; a G is usually a decimal digit typed in the wrong field.</li>
+      <li><strong>Precision above 2^53.</strong> That is the largest integer JavaScript represents exactly. Past it, results would silently lose precision, so the tool refuses rather than printing a plausible-looking wrong answer.</li>
+      <li><strong>Base 36 as the practical ceiling.</strong> Ten numerals plus 26 letters run out of symbols at 36 — why base 36 shows up in short URL slugs and identifiers, packing the most value per character while staying alphanumeric.</li>
+    </ul>
   </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

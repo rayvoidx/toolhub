@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Compare Two Lists — A-only, B-only & In Both</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -297,6 +336,89 @@ ADSENSE:END -->
     </div>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>Reading two lists as sets, not just text</h2>
+    <p>Comparing two lists sounds trivial until the lists are real: a 640-row event registration export against a 615-row payment log, or last month's CRM contact export against this month's. Manually scrolling for mismatches stops working past a few dozen rows, and copy-paste eyeballing tends to miss exactly the cases that matter — near-duplicate spellings, trailing whitespace, a header row accidentally counted as data. This tool treats each list as a mathematical set and computes the four relationships that answer almost every "did these two things line up" question: what is only in A, what is only in B, what is in both, and what the combined total looks like.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Paste or drop List A and List B — one item per line, or a raw CSV/TSV export.</li>
+      <li>If a file has more than one column, a preview and column picker appear; choose which column is the comparison key (for example "email" or "order ID") for each side independently.</li>
+      <li>Pick a country preset, or leave it on International, to switch on the text-normalization rules that fit your data.</li>
+      <li>Read the four result tabs — Only in A, Only in B, In both, Union — and copy or download any of them as CSV.</li>
+    </ol>
+
+    <h3>The set logic</h3>
+    <p>Let A and B be the two lists after normalization. The tool computes four values from them:</p>
+    <div class="example">
+      <p style="margin:0 0 6px"><strong>A − B</strong> (Only in A) — items in A with no match in B</p>
+      <p style="margin:0 0 6px"><strong>B − A</strong> (Only in B) — items in B with no match in A</p>
+      <p style="margin:0 0 6px"><strong>A ∩ B</strong> (In both) — items present in both lists</p>
+      <p style="margin:0"><strong>A ∪ B</strong> (Union) — every distinct item from either list, counted once</p>
+    </div>
+    <p>A useful sanity check on any run: |A − B| + |B − A| + |A ∩ B| should equal |A ∪ B|. If the counts don't add up, a duplicate <em>inside</em> one list — not between the two — is usually the cause; the union collapses it but the A-only/B-only counts don't.</p>
+
+    <h3>Worked example 1 — event check-in reconciliation</h3>
+    <div class="example">
+      <p style="margin:0 0 6px">List A (RSVPs, 6 names): Kim, Lee, Park, Choi, Jung, Han.<br>List B (checked in, 5 names): Lee, Park, Choi, Jung, Song.</p>
+      <p style="margin:0 0 6px"><strong>Only in A:</strong> Kim, Han — RSVP'd but never checked in.</p>
+      <p style="margin:0 0 6px"><strong>Only in B:</strong> Song — checked in without an RSVP (a walk-in).</p>
+      <p style="margin:0 0 6px"><strong>In both:</strong> Lee, Park, Choi, Jung.</p>
+      <p style="margin:0"><strong>Union:</strong> 7 people touched the event in some way — 2 + 1 + 4 = 7.</p>
+    </div>
+
+    <h3>Worked example 2 — SKU inventory audit</h3>
+    <div class="example">
+      <p style="margin:0 0 6px">The warehouse system lists 1,204 SKUs. The sales platform lists 1,187 SKUs.</p>
+      <p style="margin:0 0 6px">After comparing: 22 SKUs are only in the warehouse (discontinued but never delisted online), 5 SKUs are only on the sales platform (listed but never received), and 1,182 SKUs match.</p>
+      <p style="margin:0">Check: 22 + 5 + 1,182 = 1,209 = the union. The warehouse team now has an exact 22-item delist queue instead of a guess.</p>
+    </div>
+
+    <h3>Worked example 3 — a Korean name list with a hidden mismatch</h3>
+    <div class="example">
+      <p style="margin:0 0 6px">List A has "홍 길동" (with a space). List B has "홍길동" (no space). A plain text compare puts both in the "only in" columns even though they refer to the same person — the single most common false mismatch when reconciling Korean or Japanese name lists.</p>
+      <p style="margin:0">Turning on the Korea preset (which enables "Remove all spaces" plus NFC normalization) merges them into the intersection instead, without changing how the names are displayed or exported.</p>
+    </div>
+
+    <h3>Normalization options at a glance</h3>
+    <table>
+      <tr><th>Option</th><th>Fixes</th><th>Example</th></tr>
+      <tr><td>Trim &amp; collapse spaces</td><td>Leading/trailing/double spaces from Excel copies</td><td>"&nbsp;&nbsp;Kim&nbsp;" → "Kim"</td></tr>
+      <tr><td>Remove all spaces</td><td>Spaced vs. unspaced names</td><td>"홍 길동" = "홍길동"</td></tr>
+      <tr><td>Ignore case</td><td>Capitalization differences</td><td>"Alice" = "alice"</td></tr>
+      <tr><td>NFC</td><td>Decomposed vs. composed Hangul jamo</td><td>matches regardless of which IME typed it</td></tr>
+      <tr><td>NFKC</td><td>Fullwidth vs. halfwidth characters</td><td>"ＡＢＣ" = "ABC"</td></tr>
+      <tr><td>Ignore accents</td><td>Diacritic variants</td><td>"café" = "cafe"</td></tr>
+      <tr><td>Turkish-safe case</td><td>Dotless ı / dotted İ</td><td>"İstanbul" lowercased without corruption</td></tr>
+      <tr><td>Ignore leading zeros</td><td>Zero-padded IDs</td><td>"00123" = "123"</td></tr>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li>Assuming every mismatch is an error, when it is often a naming-convention gap — surname-first vs. given-name-first entries look identical to a human but not to a plain string compare.</li>
+      <li>Forgetting to tick "First row is a header," which lets a column title get compared as if it were real data.</li>
+      <li>Turning on every normalization option at once — over-normalizing can merge two genuinely different items, such as accent-folding "Peña" onto "Pena" when a dataset actually contains both as distinct people.</li>
+      <li>Comparing whole CSV rows instead of a single key column — one extra trailing field makes otherwise-identical rows look different.</li>
+    </ul>
+
+    <h3>Limitations</h3>
+    <p>The tool matches on text after normalization — it cannot infer that "Bob Smith" and "Robert Smith" are the same person, and it will not reorder "Gil-dong Hong" into "Hong Gil-dong" for you. For reordered names, split the name into separate columns and compare the surname column on its own. This is built for exact-after-normalization matching, not fuzzy or approximate matching, and it does not perform record linkage across differently structured datasets.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

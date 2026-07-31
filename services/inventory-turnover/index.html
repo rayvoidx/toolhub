@@ -1,6 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inventory Turnover & Dead Stock Finder — Drop your stock CSV</title>
@@ -103,6 +138,10 @@
 ADSENSE:END -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -316,6 +355,86 @@ ADSENSE:END -->
     <p style="color:var(--muted);font-size:12.5px;margin-top:18px;text-align:center;line-height:1.6;" data-i18n="tool.privacy">Your file is parsed by this page in your own browser. No stock data, cost or file is ever sent to a server — you can disconnect from the network and it still works.</p>
   </section>
   <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why turnover and days on hand matter more than the stock count alone</h2>
+    <p>A stock report on its own only tells you what is sitting in the warehouse right now. It cannot tell you whether that quantity is healthy or a warning sign, because the same 500 units could be three weeks of normal cover for a fast-moving SKU or eighteen months of dead capital for a slow one. Inventory turnover and days on hand convert a static count into a rate — how fast stock actually moves relative to how much of it you carry — which is what lets a buyer, planner or controller compare wildly different SKUs on one scale and decide where cash is genuinely stuck versus where it is doing its job.</p>
+    <p>The practical trigger for running this kind of check is usually one of three moments: a periodic stock review before reordering, a working-capital squeeze where finance is asking why cash is tied up, or a warehouse running out of space and needing to know what to discount or liquidate first. In all three cases the useful output is not one company-wide ratio but a ranked list of individual SKUs, because turnover always hides in an average — a warehouse can show a respectable overall number while a third of its SKUs are quietly rotting.</p>
+
+    <h3>Reading your own numbers correctly</h3>
+    <ol>
+      <li><strong>On-hand / beginning stock</strong> should be a quantity at a point in time, taken straight from the ERP, not a rolling average someone already computed — the tool builds the average itself from beginning and ending figures.</li>
+      <li><strong>Outflow over the period</strong> is the flow, not the stock: total units shipped or COGS consumed across the whole export window, never a single day's movement.</li>
+      <li>Set <strong>days covered by the outflow column</strong> to match the export exactly — a monthly extract is 28–31 days, a quarter is roughly 90, a full year is 365. Getting this wrong is the single most common source of a distorted ratio, because every downstream number scales off it.</li>
+      <li>Pick the <strong>turnover basis</strong> that matches the column you actually have: quantity when you only trust units, cost when you have COGS, sales only as a rough cross-check against a system that already reports it that way.</li>
+    </ol>
+
+    <h3>The arithmetic behind the ratio</h3>
+    <div class="example">
+      <p><strong>Average inventory</strong> = (Beginning stock + Ending stock) ÷ 2</p>
+      <p><strong>Inventory turnover</strong> = Outflow over the period ÷ Average inventory</p>
+      <p><strong>Days on hand</strong> = Days covered by the outflow ÷ Turnover</p>
+      <p>If your export only spans part of a year, annualised turnover = period turnover × (annualisation basis ÷ days covered). Turnover and days on hand are reciprocals of each other once both are expressed on the same yearly basis, so a rise in one is always a fall in the other — there is no scenario where both improve or both worsen at once.</p>
+    </div>
+
+    <h3>Three worked examples</h3>
+    <div class="example">
+      <p><strong>Example 1 — a normal mover, quantity basis.</strong> Beginning stock 200 units, ending stock 120 units, 1,000 units shipped over 365 days.<br>
+      Average inventory = (200 + 120) ÷ 2 = 160 units.<br>
+      Turnover = 1,000 ÷ 160 = 6.25×.<br>
+      Days on hand = 365 ÷ 6.25 ≈ <strong>58 days</strong> — comfortably below a 180-day dead-stock flag.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — cost basis from the general ledger.</strong> COGS for the year $45,000; beginning inventory value $9,000; ending inventory value $7,000.<br>
+      Average inventory value = ($9,000 + $7,000) ÷ 2 = $8,000.<br>
+      Turnover = $45,000 ÷ $8,000 = 5.625×.<br>
+      Days on hand = 365 ÷ 5.625 ≈ <strong>65 days</strong>, and the $8,000 tied up is available directly from the same two ledger figures.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a quarterly extract with no beginning-stock column.</strong> 300 units shipped in a 90-day quarter; on-hand at quarter end 500 units, used as the average because no beginning figure exists.<br>
+      Quarter turnover = 300 ÷ 500 = 0.6×.<br>
+      Annualised (365 ÷ 90 basis) = 0.6 × 4.06 ≈ 2.43×.<br>
+      Days on hand = 365 ÷ 2.43 ≈ <strong>150 days</strong> — close enough to the 180-day threshold that this SKU deserves a second look once a true beginning-stock figure is available, since the single-point average likely understates the real days on hand.</p>
+    </div>
+
+    <h3>Turnover as a quick mental map of days on hand</h3>
+    <p>Because the two figures are reciprocals, it helps to keep a few anchor points in mind rather than re-deriving them each time:</p>
+    <table>
+      <tr><th>Annual turnover</th><th>≈ Days on hand</th><th>What that pace means</th></tr>
+      <tr><td>1×</td><td>365</td><td>Stock turns over once a year — investigate unless it is intentional long-cycle stock</td></tr>
+      <tr><td>2×</td><td>183</td><td>Semi-annual cycle — typical for bulky or seasonal-once goods</td></tr>
+      <tr><td>4×</td><td>91</td><td>Quarterly cycle — common for planned, mid-velocity SKUs</td></tr>
+      <tr><td>6×</td><td>61</td><td>Bi-monthly cycle — healthy for most general retail lines</td></tr>
+      <tr><td>12×</td><td>30</td><td>Monthly cycle — typical of fast-moving consumer goods</td></tr>
+      <tr><td>24×</td><td>15</td><td>Twice-monthly — near the top end for physical retail stock</td></tr>
+    </table>
+
+    <h3>Mistakes that quietly wreck the ratio</h3>
+    <ul>
+      <li><strong>Mixing units and money.</strong> Averaging a unit count with a currency figure, or dividing COGS by an average expressed in units, produces a number with no real meaning even though it looks plausible.</li>
+      <li><strong>Wrong period length.</strong> Feeding a 90-day export while leaving the days field at 365 makes turnover read four times too low and days on hand four times too high.</li>
+      <li><strong>Negative or zero outflow from returns.</strong> Heavy returns can push net shipped quantity to zero or negative for a SKU; that is a data-quality flag to inspect, not a real turnover of zero.</li>
+      <li><strong>Treating one ratio as the whole verdict.</strong> A high turnover with thin margins can still lose money, and a slow turnover on a high-margin, low-volume specialty item can be entirely by design — velocity and profitability are different questions.</li>
+    </ul>
+
+    <h3>What this tool does not do</h3>
+    <p>It measures velocity, not profitability — it will not tell you whether a fast-moving SKU is actually a loss leader, which needs a margin-aware metric such as GMROI (gross margin ÷ average inventory cost). It also will not net stock across multiple warehouses, separate committed or in-transit inventory from what is physically on the shelf, or correct for strong seasonality baked into a single full-year average; a SKU that sells only in December can show misleading mid-range numbers when averaged over twelve months, and is better analysed on a season-by-season export. None of this is accounting or investment advice — for figures that will appear in financial statements, confirm the cost basis and averaging method with your controller.</p>
+  </section>
+  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
