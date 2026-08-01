@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does C1V1 = C2V2 work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diluting adds solvent but no extra solute, so the amount of solute stays constant. Concentration times volume equals that amount, which forces C1V1 to equal C2V2. Rearranged, V1 = C2 x V2 / C1 gives the stock volume, and whatever is left of the final volume is diluent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is a serial dilution better than one big step?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whenever the factor is large — roughly above 1:100. Measuring 10 uL into 990 uL carries the full error of that one tiny volume, and it compounds with incomplete mixing of a viscous stock. Three 1:10 steps reach 1:1000 with much better precision because every step pipettes a comfortable volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the formula work with percentages or mg/mL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. C1V1 = C2V2 is unit-agnostic as long as both concentrations use the same unit — molar, millimolar, % w/v, mg/mL or fold (X) all behave identically. The only rule is never to mix units inside the equation: convert 0.5 M to 500 mM before comparing it with a millimolar target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the order of addition matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most buffers it does not, but for concentrated acids it matters a great deal: always add acid to water, never water to acid, because the heat of mixing can boil and spatter. As a habit, measure the diluent first, add the stock into it, then top up to the final volume and mix."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

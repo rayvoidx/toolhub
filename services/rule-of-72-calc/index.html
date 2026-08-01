@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why 72 and not some other number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Doubling time under compound interest is ln(2) divided by ln(1 + r), and ln(2) is 0.693, so the true numerator at low rates is close to 69.3 when the rate is written as a percentage. Rounding up to 72 costs a sliver of accuracy and buys enormous convenience: 72 divides cleanly by 1, 2, 3, 4, 6, 8, 9 and 12, which are exactly the return rates people quote. You can do 72/9 in your head; 69.3/9 you cannot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the Rule of 72?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 8% it is almost perfect: 72/8 = 9 years against a true 9.01 years. Between roughly 6% and 10% the error stays under about a tenth of a year. Outside that band it drifts — at 2% the rule says 36 years while the truth is 35, and at 25% it says 2.9 against a true 3.1. Use 69.3 for continuous compounding and 72 for ordinary annual compounding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it for inflation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and that is the version households feel most. Divide 72 by the inflation rate and you get the years until your purchasing power halves. At 3% inflation money loses half its value in 24 years; at 6% that collapses to 12 years. It explains why a savings account paying less than inflation quietly loses real money even as the balance climbs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Rule of 72 apply to debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It works identically, just against you. A credit card at 22% APR doubles what you owe in roughly 72/22 = 3.3 years if you never pay. A 6% car loan balance would double in 12 years, and a 30% short-term rate in under two and a half. Running the number on your highest-rate debt usually settles the invest-versus-repay argument on the spot."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does key order matter in a JSON diff?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for objects. An object with a before b is the same object as b before a, so this tool reports no difference. Arrays are the opposite: order is part of the data, so [1,2] against [2,1] comes back as two changed items."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a moved array item shown as changed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The comparison is index-based: position 0 is compared with position 0, position 1 with position 1. Insert one item at the front and every later index shifts, so each one is reported as changed. That matches how parsers actually read the array, but when order is not meaningful you are usually better off comparing records by a stable id field."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my JSON uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Parsing and comparison both run in JavaScript inside this page, so nothing leaves your device. Load the page once, go offline, and it still works. That makes it safe for API responses or config files that contain customer data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How large can the two documents be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A few megabytes each is comfortable on a modern laptop, because the diff walks every node exactly once. What slows down first is the rendered list, so only the first 500 differences are drawn while the counters stay accurate. For files far bigger than that a command line diff is the better tool."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

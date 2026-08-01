@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between rem and em?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "rem is always relative to the root element's font size — usually 16px — so 1.5rem is 24px anywhere on the page. em is relative to the font size of its own parent, so nested elements compound: 0.9em inside 0.9em inside 0.9em lands near 0.73 of the original. That compounding trap is why rem is the safer default whenever you want a predictable size."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why use rem for font sizes instead of px?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A size in rem scales with whatever default font size the reader set in their browser, while a size in px ignores that preference completely. Someone who raised their default to 20px because 16px is hard to read gets no benefit from px-based type. WCAG 1.4.4 expects text to scale to 200% without breaking the layout, and rem-based type gets you most of the way there for free."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the 62.5% trick?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Setting html { font-size: 62.5% } makes the root 10px on a default browser, so 1rem = 10px and 2.4rem = 24px — the arithmetic becomes trivial. The cost is that you must reset body back to about 1.6rem or every unstyled element inherits 10px text, and any third-party CSS sized in rem shrinks by 37.5%. It still honours user zoom and user font-size settings, so it is a legitimate choice — just set the root field here to 10 to match."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is px still the right unit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Borders, box shadows, hairline rules and fixed raster artwork are usually better in px, because you want exactly one crisp rule rather than one that becomes 1.5px when someone scales their text. Media query breakpoints are a judgement call: em breakpoints react to the browser font size, px ones do not. The working rule is that anything tied to text should be rem, and anything tied to the device or a bitmap can stay px."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

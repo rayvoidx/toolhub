@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which end of the resistor do I start reading from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start at the end where the bands are bunched together. The tolerance band sits slightly apart and is usually gold or silver, so if one end carries a gold or silver band, that end is the tail and you read from the other side. When both ends look identical, decode it in both directions — only one of them gives a standard value such as 4.7 kΩ or 220 Ω."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a 4-band and a 5-band resistor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 4-band resistor uses two significant digits, a multiplier and a tolerance band, which is plenty for everyday 5% and 10% parts. A 5-band resistor adds a third significant digit before the multiplier, so it can express precision values like 4.99 kΩ that four bands simply cannot. In practice most 5-band parts are 1% metal-film resistors with a brown tolerance band."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is 4.7 kΩ everywhere but 5 kΩ almost never?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mass-produced resistors follow the E-series of preferred values. E12, used for 10% parts, is 10, 12, 15, 18, 22, 27, 33, 39, 47, 56, 68 and 82, while E24 fills the gaps for 5% parts — 4.7 is on both lists and 5.0 is on neither. The spacing is chosen so each value's tolerance band just meets the next, covering the whole range with the fewest distinct parts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "The resistor is burnt and I cannot read the colors. What now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Do not guess from a scorched body, because heat pushes brown towards red and darkens orange until it looks brown. Measure the part out of circuit with a multimeter on the resistance range, or recover the value from the schematic or an identical resistor elsewhere on the board. If it is charred, replace it and check what it feeds: a resistor that burnt usually did so because something downstream failed."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

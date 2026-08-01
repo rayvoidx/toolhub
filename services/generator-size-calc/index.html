@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between running watts and surge watts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Running watts are the steady draw once a device is up to speed. Surge (starting) watts are the brief inrush an electric motor pulls for a second or two at start-up, typically two to three times its running figure. A fridge that runs at 700 W can demand 2,200 W the moment the compressor kicks in, so the generator has to cover both numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why not size the generator for everything starting at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Motors almost never start in the same second, and the ones that might can be staggered by hand. This calculator adds the full running load plus the single largest surge, which is how electricians size a system with a transfer switch and prioritised circuits. Sizing for simultaneous starts would push a typical outage kit from 7.5 kW past 12 kW and burn extra fuel every hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Inverter generator or conventional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inverter units produce clean power, usually under 3% total harmonic distortion, and throttle the engine down to the load, so they are quieter and safer for laptops, TVs and modern furnace control boards. Conventional open-frame generators cost less per watt and scale bigger, which suits pumps, heaters and tools. Below about 5,000 W the inverter premium is worth it; above that many people pair a big conventional unit with a small inverter for electronics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does a portable stop making sense and a standby take over?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Around 10 kW. Below that, a portable plus an interlock kit or manual transfer switch covers the essentials for a few hundred dollars of gear. Above it you are refuelling every 8 to 10 hours in the dark, and a permanently installed standby on natural gas or propane that starts itself is the better answer — especially if central air conditioning or a well pump is on the list."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is ASCII the same as Unicode or UTF-8?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, but they line up at the start. ASCII defines 128 codes (0-127), and the first 128 Unicode code points are identical to them, which is why UTF-8 stores every ASCII character as the exact same single byte. Above 127 they part company: ASCII stops there, Unicode continues to 1,114,111."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are ASCII control characters used for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Codes 0-31 and 127 are commands, not glyphs. Line feed (10) and carriage return (13) still end lines today — Unix uses LF, Windows uses CRLF, and mixing them is the classic diff-noise bug. NUL (0) terminates strings in C, tab is 9, and escape (27) opens the colour sequences your terminal prints."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is A 65 and a 97?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The alphabet blocks were placed exactly 32 apart: uppercase at 65-90, lowercase at 97-122. That gap is a single bit, so flipping the value 32 switches case — 'A' | 32 gives 'a' and 'a' & ~32 gives 'A'. Digits sit at 48-57 for the same kind of reason: their low four bits are the digit value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do I need an HTML entity instead of the character?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only a few characters must be escaped in HTML: less-than (<), greater-than (>) and ampersand (&amp;), plus the double quote (\") and apostrophe (') inside attribute values. Everything else can be typed literally as long as the page is served as UTF-8. The numeric form &#65; works for any code point you cannot type."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this Secret Santa draw actually fair?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The tool shuffles with the browser's cryptographic random source and rejects any shuffle where someone draws their own name, so the result is a true derangement. Everyone gives exactly one gift and receives exactly one gift, and every valid arrangement is equally likely. There is no hidden weighting and no fixed order carried over from a previous draw."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can the organiser join in without seeing their own gift giver?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly. Draw the names, leave everything hidden, then pass the device around so each person reveals only their own row and looks away for the rest. That keeps the surprise in practice, but be honest about the limit: the assignments exist in the page, so a determined organiser could look. If true blindness matters, ask someone outside the group to run the draw, or use a service that emails each participant an individual link."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I stop couples or teammates drawing each other?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no per-person exclusion list here, deliberately — exclusion rules are where these tools become confusing and where impossible combinations creep in. The reciprocal-pairs option covers the most common complaint, which is two people simply swapping gifts. For a couple, the usual fix is to draw again, or to have the two of them swap their assigned recipients between themselves before anyone reveals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Someone dropped out after the draw. Do we start over?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If nobody has revealed a name yet, redrawing the whole list is cleanest — remove the person and press draw again. If names are already out, patch it instead: whoever was buying for the leaver takes on the leaver's recipient, which closes the chain without disturbing anyone else. Only redraw everything if two or more people leave, since patching repeatedly tends to create reciprocal pairs."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

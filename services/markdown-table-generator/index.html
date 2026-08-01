@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I set column alignment in a Markdown table?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alignment lives in the separator row, the line of dashes under the header. A colon on the left (:---) forces left alignment, colons on both sides (:---:) centers the column, and a colon on the right (---:) right-aligns it. Plain dashes (---) leave it to the renderer, which almost always means left. This generator writes those colons for you when you change the alignment dropdowns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I put a pipe character inside a cell?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Escape it with a backslash: \\| renders as a literal pipe instead of splitting the cell. An unescaped pipe silently creates an extra column and shifts everything after it. This tool escapes pipes in your text automatically, so you can type a|b and get the right output."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a Markdown table cell contain multiple lines?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not with real line breaks — a table row must stay on one line, so pressing Enter inside a cell ends the row. On GitHub, GitLab and most GFM renderers you can use a <br> tag inside a cell to force a visual line break. That is an HTML fallback, not core Markdown, so plain CommonMark parsers will show the tag as text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do Markdown tables actually render?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tables are not in the CommonMark core spec; they come from the GitHub Flavored Markdown extension. They render on GitHub, GitLab, Bitbucket, Obsidian, Notion pastes, Discord, VS Code preview and most static-site generators with GFM enabled. Reddit supports them in the newer editor, while plain-vanilla CommonMark parsers and some older forum engines will show the raw pipes."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {
