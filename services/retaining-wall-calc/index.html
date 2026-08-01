@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retaining Wall Calculator — Blocks, Base and Gravel</title>
+<meta name="description" content="Work out how many blocks a retaining wall needs, plus cap blocks, course count, base gravel and drainage backfill in cubic yards. Works in feet or metres.">
+<meta name="keywords" content="retaining wall calculator, retaining wall block calculator, how many blocks for retaining wall, wall block calculator, retaining wall cost estimate, retaining wall gravel calculator">
+<link rel="canonical" href="https://tool-hub.me/retaining-wall-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Retaining Wall Calculator — Blocks, Base and Gravel">
+<meta property="og:description" content="Work out how many blocks a retaining wall needs, plus cap blocks, course count, base gravel and drainage backfill in cubic yards. Works in feet or metres.">
+<meta property="og:url" content="https://tool-hub.me/retaining-wall-calc/">
+<meta property="og:image" content="https://tool-hub.me/retaining-wall-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#57534e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Retaining Wall Calculator",
+  "description": "Work out how many blocks a retaining wall needs, plus cap blocks, course count, base gravel and drainage backfill in cubic yards. Works in feet or metres.",
+  "url": "https://tool-hub.me/retaining-wall-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Retaining Wall Calculator",
+      "item": "https://tool-hub.me/retaining-wall-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Retaining Wall Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Retaining Wall Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Block count, the buried first course, and the drainage gravel that decides whether your wall is still straight in ten years.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .u { color:var(--muted); font-weight:400; }
+      #tool .check { display:flex; align-items:center; gap:8px; font-weight:600; font-size:14px; margin:16px 0 6px; cursor:pointer; }
+      #tool .check input { width:auto; margin:0; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:10px; }
+      #tool .warn { margin-top:12px; padding:10px 12px; border:1px solid #f59e0b; border-radius:8px; background:rgba(245,158,11,.12); color:#b45309; font-weight:600; font-size:14px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Measurement unit</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+      <option value="m" data-i18n="tool.unit.m">Metres</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="wall-l"><span data-i18n="tool.wall.length">Wall length</span> <span class="u" id="u-len">ft</span></label>
+        <input type="number" id="wall-l" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="20">
+      </div>
+      <div>
+        <label for="wall-h"><span data-i18n="tool.wall.height">Exposed wall height</span> <span class="u" id="u-hgt">ft</span></label>
+        <input type="number" id="wall-h" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.wall.hnote">Walls over 4 ft (1.2 m) of exposed height usually need an engineered design and a permit.</p>
+
+    <label for="block" data-i18n="tool.block.label">Block size (face)</label>
+    <select id="block">
+      <option value="std" data-i18n="tool.block.std">Standard — 12 x 4 in face</option>
+      <option value="big" data-i18n="tool.block.big">Large — 16 x 6 in face</option>
+      <option value="custom" data-i18n="tool.block.custom">Custom size (inches)</option>
+    </select>
+
+    <div class="field-row" id="custom-row" hidden>
+      <div>
+        <label for="block-w" data-i18n="tool.block.w">Block face width (in)</label>
+        <input type="number" id="block-w" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+      <div>
+        <label for="block-h" data-i18n="tool.block.h">Block face height (in)</label>
+        <input type="number" id="block-h" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="4">
+      </div>
+    </div>
+
+    <label class="check" for="use-cap"><input type="checkbox" id="use-cap" checked><span data-i18n="tool.cap.toggle">Add a cap row on top</span></label>
+    <label class="check" for="use-backfill"><input type="checkbox" id="use-backfill" checked><span data-i18n="tool.backfill.toggle">Include drainage gravel behind the wall (12 in zone)</span></label>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate blocks</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.blocks">Wall blocks</div>
+          <div class="rc-val" id="r-blocks">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.caps">Cap blocks</div><div class="rc-val" id="r-caps">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rows">Courses (buried one included)</div><div class="rc-val" id="r-rows">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.base">Base gravel</div><div class="rc-val" id="r-base">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.backfill">Drainage backfill</div><div class="rc-val" id="r-backfill">—</div></div>
+      </div>
+      <p class="warn" id="warn" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.buried">One extra course is added below grade: the first course is buried a full block height on 6 in of compacted gravel. It is already counted in the totals.</p>
+    <p class="subtle" data-i18n="tool.note.drain">Volumes are loose gravel before compaction. Add a perforated drain pipe at the bottom of the backfill and run it out to daylight — trapped water is what pushes block walls over.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a block retaining wall is estimated</h2>
+    <p>A segmental block wall is counted in two directions. Along the wall you divide the length by the block face width to get blocks per course; up the wall you divide the exposed height by the block face height to get the number of courses. Multiply the two and you have the wall. The step most online estimates miss is the buried course: every properly built block wall starts one full block below finished grade, so the real course count is always one higher than the height alone suggests.</p>
+    <p>The standard landscape block in the US has a 12 in wide by 4 in high face, which makes the arithmetic easy — one block per foot of length, three courses per foot of height. Larger blocks with a 16 x 6 in face cover more wall per unit, so they cut both the block count and the number of times you have to bend over.</p>
+
+    <h3>Worked example: a 20 ft wall with 3 ft showing</h3>
+    <p>Take a typical garden bed wall: 20 ft long, 3 ft of exposed height, standard 12 x 4 in blocks. Exposed height gives 3 x 12 / 4 = 9 courses, plus the buried course makes 10. Each course needs 20 x 12 / 12 = 20 blocks. The wall is therefore 10 x 20 = 200 blocks, plus 20 cap blocks glued on top, for 220 units in total.</p>
+    <p>Now the aggregate. The base trench is dug one block width plus about 8 in wide — 20 in here — and filled with 6 in of compacted crushed stone: 20 ft x 1.67 ft x 0.5 ft = 16.7 cubic feet, or 0.62 yd³. The drainage backfill is a 12 in wide column of clean gravel running the full height behind the blocks: 20 x 3 x 1 = 60 cubic feet, or 2.22 yd³. Gravel runs roughly 1.4 tons per cubic yard, so that is a little under a ton of base stone and around three tons of backfill. Order in half-ton increments and expect to have some left over; running short mid-build is far worse.</p>
+
+    <h3>The same wall in larger blocks</h3>
+    <p>Switch to a 16 x 6 in face and the count changes sharply: 3 x 12 / 6 = 6 courses plus the buried one is 7, and 240 / 16 = 15 blocks per course, giving 105 wall blocks and 15 caps. Fewer than half the pieces for the same wall. The base trench gets wider (24 in, so 0.74 yd³ of stone) and each block is much heavier, but the build is faster and there are fewer joints to line up.</p>
+
+    <h2>Drainage is what actually kills these walls</h2>
+    <p>Walk any neighbourhood and the leaning, bulging block walls all failed the same way. Soil that drains has a lateral earth pressure of roughly 30 to 40 pounds per square foot per foot of depth. Let it saturate and you add full hydrostatic pressure on top — around 62 pounds per square foot per foot of depth of water. A wall built tight against clay with no gravel and no pipe can end up holding back more than twice the load it was designed for, every time it rains hard.</p>
+    <p>The fix is cheap and non-negotiable: a 12 in column of clean, angular, washed stone directly behind the blocks, a perforated drain pipe sitting at the bottom of that column wrapped in filter fabric, and an outlet that daylights at the end of the wall or into a drain. Separate the gravel from the native soil with fabric so silt does not migrate in and clog it. Never backfill a retaining wall with the clay you dug out.</p>
+
+    <h2>Base preparation, in order</h2>
+    <p>Excavate a trench one block width plus 8 in, deep enough for 6 in of compacted stone plus a full buried block. Compact the subgrade before anything else goes in. Add the crushed stone in two lifts, compacting each with a plate compactor rather than a hand tamper. Screed the top dead level — the first course sets the accuracy of every course above it, and a quarter inch of error at the bottom becomes an inch of wandering by the top. Set the first course, check it front to back and end to end with a level, then sweep the block tops clean before stacking the next. Backfill the gravel as you go, course by course, rather than at the end.</p>
+
+    <h3>Curves, corners and cuts</h3>
+    <p>Curves eat blocks. Most systems allow a minimum radius somewhere between 3 and 6 ft, and a tight inside curve wastes material because blocks have to be trimmed to close the joints. Add 5 to 10 per cent to the count for a curved wall, and more if the design has 90-degree corners, since corner blocks are usually a separate product with their own price. A saw with a masonry blade, eye protection and a dust mask are cheaper than a second delivery.</p>
+
+    <h2>Limits of this estimate</h2>
+    <p>This calculator assumes a straight gravity wall of uniform blocks, a level top and bottom, no surcharge above, and no geogrid reinforcement. Sloped or stepped ground, terraced walls, walls carrying a driveway or structure, and anything over 4 ft of exposed height all change the design, not just the quantities. Above that height — 3 ft in some jurisdictions — you need an engineered design, a permit, and usually geogrid layers extending back into the soil. Use these numbers to price the job and size the delivery, then have the design checked before the first block goes down.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/roof-pitch-calc/"><span class="related-ico" aria-hidden="true">🏚️</span><span class="related-name">Roof Pitch Calculator</span></a><a class="related-item" href="https://tool-hub.me/sand-calc/"><span class="related-ico" aria-hidden="true">🏝️</span><span class="related-name">Sand Calculator</span></a><a class="related-item" href="https://tool-hub.me/shingle-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Shingle Calculator</span></a><a class="related-item" href="https://tool-hub.me/sleep-cycle-calc/"><span class="related-ico" aria-hidden="true">😴</span><span class="related-name">Sleep Cycle Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is the first course buried?</summary><p data-i18n="faq.a1">Burying the bottom course puts soil in front of the wall, so the toe cannot kick out under load — that buried block is doing leverage work, not decoration. It also drops the base below frost-heave depth in cold climates and stops erosion from undercutting the foundation. The rule of thumb is one full block height buried, or one-tenth of the wall height, whichever is more.</p></details>
+    <details><summary data-i18n="faq.q2">What is setback or batter, and why does it matter?</summary><p data-i18n="faq.a2">Most segmental blocks have a lip or pin that steps each course back about 3/4 to 1 1/4 inches, leaning the wall into the slope. That lean shifts the wall's centre of gravity backwards so soil pressure is resisted by weight rather than by the joints. A gravity wall relies on that batter entirely, which is why you should never stack blocks perfectly vertical to gain a few inches of usable space.</p></details>
+    <details><summary data-i18n="faq.q3">Do I really need gravel backfill and a drain?</summary><p data-i18n="faq.a3">Yes — drainage is what kills retaining walls, not block strength. Saturated soil can push with more than twice the force of drained soil, and a block wall built against bare clay is holding back hydrostatic pressure it was never designed for. A 12-inch column of clean, angular gravel behind the blocks plus a perforated pipe at the base that daylights out the end lets water leave instead of building up.</p></details>
+    <details><summary data-i18n="faq.q4">When does a retaining wall need an engineer?</summary><p data-i18n="faq.a4">In most of the US and UK, an exposed height over 4 ft (about 1.2 m) triggers a permit and a stamped design, and some jurisdictions set the line at 3 ft. You also need one below that height if there is a surcharge — a driveway, pool, structure or another slope above the wall — or if the ground slopes steeply away below it. Terracing two short walls only avoids engineering if they are far enough apart that neither loads the other.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
