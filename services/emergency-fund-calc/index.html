@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Fund Calculator — How Much to Save</title>
+<meta name="description" content="Work out how much emergency fund you need: 3, 6, 9 or 12 months of essential expenses, plus the gap left to save, your progress and the months to the goal.">
+<meta name="keywords" content="emergency fund calculator, how much emergency fund, 3 to 6 months expenses, emergency savings, emergency fund goal, rainy day fund calculator">
+<link rel="canonical" href="https://tool-hub.me/emergency-fund-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Emergency Fund Calculator — How Much to Save">
+<meta property="og:description" content="Work out how much emergency fund you need: 3, 6, 9 or 12 months of essential expenses, plus the gap left to save, your progress and the months to the goal.">
+<meta property="og:url" content="https://tool-hub.me/emergency-fund-calc/">
+<meta property="og:image" content="https://tool-hub.me/emergency-fund-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Emergency Fund Calculator",
+  "description": "Work out how much emergency fund you need: 3, 6, 9 or 12 months of essential expenses, plus the gap left to save, your progress and the months to the goal.",
+  "url": "https://tool-hub.me/emergency-fund-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Emergency Fund Calculator",
+      "item": "https://tool-hub.me/emergency-fund-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Emergency Fund Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Emergency Fund Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Three months or six? Size your safety net against essential expenses, not gross pay.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .hint { font-size:13px; color:var(--muted); margin:-4px 0 12px; }
+      #tool .gauge { height:10px; border-radius:6px; background:var(--line); overflow:hidden; margin:14px 0 4px; }
+      #tool .gauge span { display:block; height:100%; width:0; border-radius:6px; background:#b45309; transition:width .15s linear; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:10px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .risk { font-size:14px; margin-top:12px; padding:10px 12px; border:1px solid var(--line); border-left:3px solid #b45309; border-radius:6px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="exp" data-i18n="tool.exp.label">Essential monthly expenses</label>
+    <input type="number" id="exp" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3200">
+    <p class="hint" data-i18n="tool.exp.note">Needs only — rent or mortgage, utilities, food, insurance and minimum debt payments.</p>
+
+    <label for="months" data-i18n="tool.months.label">Months of cover you want</label>
+    <select id="months">
+      <option value="3" data-i18n="tool.months.3">3 months — lean, two stable incomes</option>
+      <option value="6" selected data-i18n="tool.months.6">6 months — standard</option>
+      <option value="9" data-i18n="tool.months.9">9 months — cautious</option>
+      <option value="12" data-i18n="tool.months.12">12 months — maximum</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="saved" data-i18n="tool.saved.label">Current emergency savings</label>
+        <input type="number" id="saved" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="4000">
+      </div>
+      <div>
+        <label for="save" data-i18n="tool.save.label">Amount you can save each month</label>
+        <input type="number" id="save" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="400">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="gauge" id="gauge" role="img" aria-label="Progress"><span id="gauge-fill"></span></div>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.target">Target emergency fund</div>
+          <div class="rc-val" id="r-target">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.gap">Still to save</div><div class="rc-val" id="r-gap">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.progress">Progress</div><div class="rc-val" id="r-progress">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.time">Time to goal</div><div class="rc-val" id="r-time">—</div></div>
+      </div>
+      <p class="risk" id="r-risk"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.same">Keep every field in the same currency. Estimates for planning, not financial advice.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much emergency fund do you actually need?</h2>
+    <p>The rule you have heard is "3 to 6 months of expenses". The part people get wrong is the word <em>expenses</em>. It does not mean your salary, and it does not mean your normal spending. It means the stripped-down number your household costs to run in a month when the income stops: rent or mortgage, utilities, groceries, insurance premiums, transport to interviews, childcare you cannot cancel, and the minimum payments on any debt. Restaurants, streaming tiers, holidays and the gym come out of that number, because in the month you need this fund those things stop.</p>
+    <p>That distinction usually cuts the target by 25 to 40 percent, which is exactly why so many people give up before they start. A household spending $4,600 a month often has essential expenses closer to $3,200 — and a six-month fund of 
+
+  9,200 rather than $27,600.</p>
+
+    <h3>Worked example: $3,200 a month, six months of cover</h3>
+    <p>Target = 3,200 x 6 = 
+
+  9,200. Say you already hold $4,000 in a savings account earmarked for emergencies. Your gap is 19,200 - 4,000 = 
+
+  5,200, and you are 21% of the way there. Saving $400 a month, ceil(15,200 / 400) = 38 months, a little over three years. That number is uncomfortable, and it should be — it is the honest one. Three levers shorten it: raise the monthly contribution, lower the essential expense figure, or drop the target from six months to three while you build momentum.</p>
+    <p>Try the same household at a 3-month target: 3,200 x 3 = $9,600, gap $5,600, 13 months at $400. Many planners suggest hitting the 3-month mark first, then continuing to 6 without changing anything except the target in this calculator. Windfalls change the shape too — a $2,500 tax refund cuts more than six months off the timeline at that contribution rate.</p>
+
+    <h2>The risk matrix: choosing 3, 6, 9 or 12 months</h2>
+    <p>The number of months is a proxy for one question: how long would it take to replace your income? Two salaried workers in the same household, different employers, no dependants, in a city with a deep job market — 3 months is defensible, because a single job loss only removes part of the income. One primary earner, a mortgage and children — 6 months, because the whole income can disappear at once and the fixed costs cannot flex.</p>
+    <p>Push to 9 or 12 months when income is lumpy or the job search is long: freelancers and contractors with irregular invoicing, commission or bonus-heavy pay, business owners, single-income families, anyone on a visa tied to employment, and specialists — a senior geologist or a niche academic may need six months just to find a posting that exists. Households with a chronic medical condition or an older home and an older car should also skew higher, because their "unexpected" costs arrive more often than average.</p>
+
+    <h3>Why a high-yield savings account, not investments</h3>
+    <p>Emergency money has one job: be there, in full, on the day you need it. That rules out anything that can be worth less than you put in. US savers should use an FDIC-insured high-yield savings or money market account; UK savers an FSCS-protected easy-access account. Rates on these accounts have run in the 3.5 to 5 percent range recently — not wealth-building, but enough that inflation does not quietly eat the fund.</p>
+    <p>The argument against investing it is not theoretical. Recessions cause both halves of the problem at once: the same conditions that trigger layoffs push equity markets down. Someone who kept a 
+
+  9,200 emergency fund in an index fund in 2008 would have been made redundant into a portfolio worth around 
+
+  2,000 — forced to sell at the bottom, crystallising the loss and losing the recovery. The 4 percent you might have earned in a good year is the premium you pay for the fund being intact in a bad one.</p>
+    <p>The opposite mistake is keeping it in your everyday current account. It is safe there but not separate, and money that shares a balance with your groceries gets spent by accident. Open a distinctly named account at a different institution, so a transfer takes a day and a deliberate decision.</p>
+
+    <h3>Automate it, then stop thinking about it</h3>
+    <p>Set a standing order for the day after payday. Whatever is left at the end of the month is never the same number twice, but a transfer that leaves before you see the balance is. Increase it with every raise before your spending adjusts, and route irregular money — tax refunds, bonuses, a side gig payment — straight in until the goal is hit. Once you reach the target, stop and redirect the same contribution to retirement or debt; an over-stuffed emergency fund is just an expensive habit.</p>
+
+    <h3>What this calculator does not model</h3>
+    <p>It assumes a flat monthly contribution and ignores interest earned on the balance, which is conservative — at 4 percent on a growing balance you will arrive a month or two early on a multi-year plan. It also ignores inflation on your expense figure, so revisit the number annually or after any change to rent, insurance or childcare. Finally, months of cover is a planning heuristic, not a guarantee: unemployment benefits, severance, a partner's income and a family safety net all change how long a fund lasts, and none of them are inputs here.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/exchange-rate-conv/"><span class="related-ico" aria-hidden="true">💱</span><span class="related-name">Currency Converter</span></a><a class="related-item" href="https://tool-hub.me/fire-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/freelance-rate-calc/"><span class="related-ico" aria-hidden="true">💼</span><span class="related-name">Freelance Rate Calculator</span></a><a class="related-item" href="https://tool-hub.me/gold-purity-calc/"><span class="related-ico" aria-hidden="true">🥇</span><span class="related-name">Gold Purity Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Should my emergency fund be 3, 6 or 12 months of expenses?</summary><p data-i18n="faq.a1">Match the months to how fast your income could be replaced. Two stable salaries in one household can sit at 3 months; a single earner, a mortgage or dependants points to 6. Freelancers, commission-based pay, one-income families and specialised roles that take half a year to re-hire should aim for 9 to 12 months.</p></details>
+    <details><summary data-i18n="faq.q2">Where should I keep my emergency fund?</summary><p data-i18n="faq.a2">A high-yield savings account or money market account at an FDIC-insured bank (FSCS-protected in the UK) is the standard home: same-day or next-day access, no market risk, and interest that keeps some pace with inflation. Do not invest it in stocks or funds — the month you get laid off is exactly the month markets tend to be down. Keeping it in your everyday checking account is the other mistake, because it quietly gets spent.</p></details>
+    <details><summary data-i18n="faq.q3">What actually counts as an emergency?</summary><p data-i18n="faq.a3">Three tests: unexpected, necessary and urgent. Job loss, a medical bill, an emergency vet visit, a broken boiler or transmission, and an insurance deductible after a storm all qualify. A holiday, a wedding, replacing a working phone or a Black Friday deal do not — those are planned expenses that belong in a separate sinking fund.</p></details>
+    <details><summary data-i18n="faq.q4">Should I build the fund or pay off debt first?</summary><p data-i18n="faq.a4">Sequence it. First save a starter buffer of about 1,000 to 2,000 so a flat tyre does not go straight onto a credit card. Then throw everything at debt above roughly 8% APR, because no savings account beats a 22% card. Once the expensive debt is gone, refill to the full 3 to 12 months while making normal payments on low-rate loans.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
