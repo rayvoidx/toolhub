@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markdown Table Generator — GFM Table Maker</title>
+<meta name="description" content="Build a Markdown table online: choose rows and columns, type your cells, set per-column alignment, then copy clean GitHub-flavored Markdown with aligned pipes.">
+<meta name="keywords" content="markdown table generator, markdown table, md table maker, github table generator, gfm table, markdown table alignment, markdown table formatter">
+<link rel="canonical" href="https://tool-hub.me/markdown-table-generator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Markdown Table Generator — GFM Table Maker">
+<meta property="og:description" content="Build a Markdown table online: choose rows and columns, type your cells, set per-column alignment, then copy clean GitHub-flavored Markdown with aligned pipes.">
+<meta property="og:url" content="https://tool-hub.me/markdown-table-generator/">
+<meta property="og:image" content="https://tool-hub.me/markdown-table-generator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#334155">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Markdown Table Generator",
+  "description": "Build a Markdown table online: choose rows and columns, type your cells, set per-column alignment, then copy clean GitHub-flavored Markdown with aligned pipes.",
+  "url": "https://tool-hub.me/markdown-table-generator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Markdown Table Generator",
+      "item": "https://tool-hub.me/markdown-table-generator/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Markdown Table Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Markdown Table Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Type in the grid, copy the pipes. Alignment colons and padding handled for you.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .grid { display:grid; grid-template-columns:repeat(var(--cols,3),minmax(0,1fr)); gap:6px; margin-top:6px; }
+      #tool .grid input, #tool .grid select { padding:9px 10px; font-size:15px; }
+      #tool .grid input.hdr { font-weight:700; background:color-mix(in srgb, var(--accent) 8%, var(--bg)); }
+      #tool .hint { font-size:13px; color:var(--muted); margin:6px 0 0; }
+      #tool .check { display:flex; align-items:center; gap:8px; margin-top:16px; font-size:14px; font-weight:600; }
+      #tool .check input { width:auto; }
+      #tool .result-cards { display:grid; gap:12px; margin-top:16px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rc-head { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+      #tool .rc-label { font-size:13px; color:var(--muted); }
+      #tool #md-out { margin-top:6px; font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:13px; white-space:pre; overflow-x:auto; }
+      #tool #copy-btn { padding:5px 12px; font-size:13px; font-weight:700; font-family:inherit; cursor:pointer;
+        border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); }
+      #tool .prev-wrap { overflow-x:auto; margin-top:8px; }
+      #tool .prev-wrap table { border-collapse:collapse; width:100%; font-size:14px; }
+      #tool .prev-wrap th, #tool .prev-wrap td { border:1px solid var(--line); padding:6px 10px; }
+      #tool .prev-wrap th { background:color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      @media(max-width:520px){ #tool .field-row { grid-template-columns:1fr; } #tool .grid input, #tool .grid select { font-size:13px; padding:7px 6px; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="rows" data-i18n="tool.rows.label">Rows (including header)</label>
+        <select id="rows">
+          <option>2</option><option selected>3</option><option>4</option><option>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+        </select>
+      </div>
+      <div>
+        <label for="cols" data-i18n="tool.cols.label">Columns</label>
+        <select id="cols">
+          <option>2</option><option selected>3</option><option>4</option>
+          <option>5</option><option>6</option><option>7</option><option>8</option>
+        </select>
+      </div>
+    </div>
+
+    <label data-i18n="tool.align.label">Column alignment</label>
+    <div class="grid" id="aligns" style="--cols:3">
+      <select id="a0" aria-label="Column 1 alignment"><option value="left" data-i18n="tool.align.left">Left</option><option value="center" data-i18n="tool.align.center">Center</option><option value="right" data-i18n="tool.align.right">Right</option></select>
+      <select id="a1" aria-label="Column 2 alignment"><option value="left" data-i18n="tool.align.left">Left</option><option value="center" data-i18n="tool.align.center">Center</option><option value="right" data-i18n="tool.align.right">Right</option></select>
+      <select id="a2" aria-label="Column 3 alignment"><option value="left" data-i18n="tool.align.left">Left</option><option value="center" data-i18n="tool.align.center">Center</option><option value="right" data-i18n="tool.align.right">Right</option></select>
+    </div>
+
+    <label data-i18n="tool.grid.label">Table content</label>
+    <div class="grid" id="grid" style="--cols:3">
+      <input type="text" id="r0c0" class="hdr" autocomplete="off" placeholder="Name" aria-label="Header 1">
+      <input type="text" id="r0c1" class="hdr" autocomplete="off" placeholder="Role" aria-label="Header 2">
+      <input type="text" id="r0c2" class="hdr" autocomplete="off" placeholder="Team" aria-label="Header 3">
+      <input type="text" id="r1c0" autocomplete="off" placeholder="Ada Lovelace" aria-label="Row 1 column 1">
+      <input type="text" id="r1c1" autocomplete="off" placeholder="Engineer" aria-label="Row 1 column 2">
+      <input type="text" id="r1c2" autocomplete="off" placeholder="Platform" aria-label="Row 1 column 3">
+      <input type="text" id="r2c0" autocomplete="off" placeholder="Grace Hopper" aria-label="Row 2 column 1">
+      <input type="text" id="r2c1" autocomplete="off" placeholder="Compiler lead" aria-label="Row 2 column 2">
+      <input type="text" id="r2c2" autocomplete="off" placeholder="Tooling" aria-label="Row 2 column 3">
+    </div>
+    <p class="hint" data-i18n="tool.grid.hint">Row 1 is the header row. Pipes you type are escaped automatically.</p>
+
+    <label class="check" for="pretty"><input type="checkbox" id="pretty" checked><span data-i18n="tool.pretty.label">Pad cells so the pipes line up</span></label>
+
+    <button type="button" id="calc-btn" class="btn primary" data-i18n="tool.calc">Generate Markdown</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-head">
+            <div class="rc-label" data-i18n="tool.r.md">Markdown</div>
+            <button type="button" id="copy-btn" data-i18n="tool.copy">Copy</button>
+          </div>
+          <textarea id="md-out" readonly rows="7" spellcheck="false" aria-label="Markdown output"></textarea>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.preview">Rendered preview</div>
+          <div class="prev-wrap" id="preview"></div>
+        </div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Everything runs in your browser — nothing you type is uploaded.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a Markdown table actually is</h2>
+    <p>A Markdown table is three kinds of line stacked together: a header row, a separator row made of dashes, and any number of body rows. Every row is a single line wrapped in pipe characters, and every line must have the same number of pipes. That is the whole format. The separator row is what turns the block into a table rather than a paragraph of pipes, and it is also where column alignment is declared.</p>
+    <p>Because rows are line-based, whitespace inside a row is cosmetic. <code>|Name|Role|</code> and <code>| Name | Role |</code> render identically. That freedom is why the "pad cells so the pipes line up" option exists: the rendered result never changes, but the raw file becomes readable in a code editor and diffs stay legible in pull requests.</p>
+
+    <h3>Worked example: a 3 x 3 table</h3>
+    <p>Type a header of Name, Role, Team, then two data rows, and the generator emits this:</p>
+    <pre><code>| Name         | Role          | Team     |
+| :----------- | :------------ | :------- |
+| Ada Lovelace | Engineer      | Platform |
+| Grace Hopper | Compiler lead | Tooling  |</code></pre>
+    <p>Column one is padded to 12 characters because "Ada Lovelace" is the longest value in it; column two to 13 for "Compiler lead". Turn padding off and the same table collapses to <code>| Name | Role | Team |</code> with a bare <code>| :--- | :--- | :--- |</code> underneath. Both render to exactly the same HTML table on GitHub. Padding is for humans reading the source.</p>
+
+    <h3>Alignment, demonstrated</h3>
+    <p>Alignment is carried by colons in the separator row and nothing else. Set column three to right and column two to center and the separator becomes:</p>
+    <pre><code>| Item     |   Qty    |  Price |
+| :------- | :------: | -----: |
+| Keyboard |    2     |  89.00 |
+| Cable    |   12     |   4.50 |</code></pre>
+    <p>The practical rule for US and UK writers is simple: text left, numbers right, short status labels center. Right-aligned numbers let a reader compare magnitudes by scanning the last digit column, which is why finance and inventory tables in READMEs almost always right-align money. A column with no colon at all is left-aligned by nearly every renderer, but writing <code>:---</code> makes the intent explicit and survives copy-paste into tools with different defaults.</p>
+
+    <h3>Escaping pipes and other awkward characters</h3>
+    <p>The one character that genuinely breaks a Markdown table is the pipe itself. An unescaped <code>|</code> inside a cell silently splits it, so a row that should have three cells suddenly has four and the renderer either drops the overflow or shifts everything sideways. The fix is a backslash: <code>a \| b</code>. This generator escapes pipes in your text automatically, so you can paste command lines like <code>ps aux | grep node</code> straight into a cell.</p>
+    <p>Backticks are safe and useful: wrapping a cell in code formatting stops Markdown from interpreting underscores and asterisks inside it. If you need a literal backslash before a pipe, write two. Angle brackets are passed through as HTML by GitHub, so <code>&lt;div&gt;</code> in a cell should be wrapped in backticks or escaped as <code>&amp;lt;div&amp;gt;</code>. And there is no way to include a real newline inside a cell — a row ends at the line break. Use a <code>&lt;br&gt;</code> tag when the renderer supports HTML, or split the content across two rows when it does not.</p>
+
+    <h2>Where these tables render, and where they do not</h2>
+    <p>Tables are not part of the CommonMark core specification. They arrived through GitHub Flavored Markdown and were adopted from there. In practice they work on GitHub (READMEs, issues, PR comments, wikis), GitLab, Bitbucket, Gitea, Obsidian, Joplin, Typora, VS Code's built-in preview, Discord messages, Reddit's newer fancy-pants editor, Slack canvases, and static site generators such as Jekyll with kramdown, Hugo with Goldmark, Docusaurus and MkDocs.</p>
+    <p>They do not work in a strict CommonMark parser with no extensions, in older forum software, in most plain-text email clients, and in some documentation pipelines that predate GFM. If you are writing for an unknown renderer, test one small table before committing to a document full of them. When tables fail, they fail loudly — the reader sees a wall of pipes — so it is usually obvious.</p>
+
+    <h3>Limitations worth knowing before you start</h3>
+    <p>Markdown tables have no merged cells, no row spans, no column spans, no nested tables and no captions. There is no way to set a column width; the renderer sizes columns from content. If you need any of that, hand-write an HTML table instead, since both GitHub and most static site generators will render raw HTML inside a Markdown document.</p>
+    <p>Two more practical notes. First, the pipe alignment in this tool counts characters, so columns containing CJK or emoji characters can look ragged in a monospace editor even though the raw file is correct — the rendered output is unaffected. Second, very wide tables are painful on phones; GitHub adds a horizontal scrollbar, but a table with eight columns of prose is usually better restructured as a list. Aim for a table that fits a laptop screen without scrolling, and reach for the column dropdown here to trim before you paste rather than after.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/meta-tag-generator/"><span class="related-ico" aria-hidden="true">🏷️</span><span class="related-name">Meta Tag Generator</span></a><a class="related-item" href="https://tool-hub.me/number-base-conv/"><span class="related-ico" aria-hidden="true">🔢</span><span class="related-name">Number Base Converter</span></a><a class="related-item" href="https://tool-hub.me/password-strength-checker/"><span class="related-ico" aria-hidden="true">🔒</span><span class="related-name">Password Strength Checker</span></a><a class="related-item" href="https://tool-hub.me/ppi-calc/"><span class="related-ico" aria-hidden="true">🖥️</span><span class="related-name">PPI Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How do I set column alignment in a Markdown table?</summary><p data-i18n="faq.a1">Alignment lives in the separator row, the line of dashes under the header. A colon on the left (:---) forces left alignment, colons on both sides (:---:) centers the column, and a colon on the right (---:) right-aligns it. Plain dashes (---) leave it to the renderer, which almost always means left. This generator writes those colons for you when you change the alignment dropdowns.</p></details>
+    <details><summary data-i18n="faq.q2">How do I put a pipe character inside a cell?</summary><p data-i18n="faq.a2">Escape it with a backslash: \| renders as a literal pipe instead of splitting the cell. An unescaped pipe silently creates an extra column and shifts everything after it. This tool escapes pipes in your text automatically, so you can type a|b and get the right output.</p></details>
+    <details><summary data-i18n="faq.q3">Can a Markdown table cell contain multiple lines?</summary><p data-i18n="faq.a3">Not with real line breaks — a table row must stay on one line, so pressing Enter inside a cell ends the row. On GitHub, GitLab and most GFM renderers you can use a &lt;br&gt; tag inside a cell to force a visual line break. That is an HTML fallback, not core Markdown, so plain CommonMark parsers will show the tag as text.</p></details>
+    <details><summary data-i18n="faq.q4">Where do Markdown tables actually render?</summary><p data-i18n="faq.a4">Tables are not in the CommonMark core spec; they come from the GitHub Flavored Markdown extension. They render on GitHub, GitLab, Bitbucket, Obsidian, Notion pastes, Discord, VS Code preview and most static-site generators with GFM enabled. Reddit supports them in the newer editor, while plain-vanilla CommonMark parsers and some older forum engines will show the raw pipes.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

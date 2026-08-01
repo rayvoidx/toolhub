@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insulation Calculator — How Much Insulation Do I Need</title>
+<meta name="description" content="Work out how much attic insulation you need: target R-value, inches of depth, and how many batt packs or blown-in bags to buy for your square footage.">
+<meta name="keywords" content="insulation calculator, how much insulation do i need, r value calculator, attic insulation calculator, blown in insulation calculator, insulation depth chart">
+<link rel="canonical" href="https://tool-hub.me/insulation-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Insulation Calculator — How Much Insulation Do I Need">
+<meta property="og:description" content="Work out how much attic insulation you need: target R-value, inches of depth, and how many batt packs or blown-in bags to buy for your square footage.">
+<meta property="og:url" content="https://tool-hub.me/insulation-calc/">
+<meta property="og:image" content="https://tool-hub.me/insulation-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Insulation Calculator",
+  "description": "Work out how much attic insulation you need: target R-value, inches of depth, and how many batt packs or blown-in bags to buy for your square footage.",
+  "url": "https://tool-hub.me/insulation-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Insulation Calculator",
+      "item": "https://tool-hub.me/insulation-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Insulation Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Insulation Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Target R-value in; inches of depth and bags or batt packs out — attic, walls or floors.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .u { color:var(--muted); font-weight:400; }
+      #tool .hint { font-size:12px; color:var(--muted); margin:-6px 0 10px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool #r-note { margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet and inches (US / UK)</option>
+          <option value="m" data-i18n="tool.unit.m">Metres and centimetres</option>
+        </select>
+      </div>
+      <div>
+        <label for="mode" data-i18n="tool.mode.label">Area entry</label>
+        <select id="mode">
+          <option value="dims" data-i18n="tool.mode.dims">Length x width</option>
+          <option value="area" data-i18n="tool.mode.area">Total area I already know</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row" id="row-dims">
+      <div>
+        <label for="len"><span data-i18n="tool.len.label">Length</span> <span class="u" id="u-len">ft</span></label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="40">
+      </div>
+      <div>
+        <label for="wid"><span data-i18n="tool.wid.label">Width</span> <span class="u" id="u-wid">ft</span></label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="30">
+      </div>
+    </div>
+
+    <div id="row-area" hidden>
+      <label for="area"><span data-i18n="tool.area.label">Area to cover</span> <span class="u" id="u-area">ft&sup2;</span></label>
+      <input type="number" id="area" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1200">
+    </div>
+
+    <label for="targetr" data-i18n="tool.target.label">Target R-value</label>
+    <select id="targetr">
+      <option value="13" data-i18n="tool.target.r13">R-13 — 2x4 walls, crawlspace</option>
+      <option value="21" data-i18n="tool.target.r21">R-21 — 2x6 walls</option>
+      <option value="30" data-i18n="tool.target.r30">R-30 — floors, mild-climate attic</option>
+      <option value="38" selected data-i18n="tool.target.r38">R-38 — attic, most US climates</option>
+      <option value="49" data-i18n="tool.target.r49">R-49 — attic, cold climates (zone 5 and up)</option>
+    </select>
+
+    <label for="existing" data-i18n="tool.existing.label">Insulation already there</label>
+    <select id="existing">
+      <option value="0" data-i18n="tool.existing.none">None — bare joists</option>
+      <option value="11" data-i18n="tool.existing.r11">About R-11 — old batts, roughly 3 in deep</option>
+      <option value="19" data-i18n="tool.existing.r19">About R-19 — roughly 6 in deep</option>
+    </select>
+
+    <label for="material" data-i18n="tool.material.label">Material to add</label>
+    <select id="material">
+      <option value="batt" data-i18n="tool.mat.batt">Fiberglass batts — R-3.2 per inch</option>
+      <option value="blownfg" data-i18n="tool.mat.blownfg">Blown fiberglass — R-2.5 per inch</option>
+      <option value="cellulose" data-i18n="tool.mat.cellulose">Blown cellulose — R-3.5 per inch</option>
+      <option value="foam" data-i18n="tool.mat.foam">Closed-cell spray foam — R-6.5 per inch</option>
+    </select>
+
+    <div id="row-cov">
+      <label for="coverage"><span data-i18n="tool.coverage.label">Coverage per batt pack</span> <span class="u" id="u-cov">ft&sup2;</span></label>
+      <input type="number" id="coverage" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="64">
+      <p class="hint" data-i18n="tool.coverage.hint">Printed on the pack label — the area one bundle covers.</p>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.needed">R-value to add</div>
+          <div class="rc-val" id="r-needed">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.depth">Depth to add</div><div class="rc-val" id="r-depth">—</div></div>
+        <div class="rcard"><div class="rc-label" id="r-qty-label">Batt packs</div><div class="rc-val" id="r-qty">—</div></div>
+      </div>
+      <p class="subtle" id="r-note"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.airseal" style="margin-top:12px;">Air-seal first. Gaps around can lights, ducts and the attic hatch leak more heat than the last few inches of R-value, and insulation stuffed into the eaves blocks soffit vents. Fit baffles before you blow.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much insulation do I actually need?</h2>
+    <p>Every insulation question comes down to three numbers: the R-value your climate calls for, the R-value already sitting on the attic floor, and the R-value per inch of whatever you plan to add. Subtract the second from the first and you know the gap. Divide the gap by the third and you know how deep the new layer has to be. Everything else — packs, bags, board feet — falls out of the area you are covering.</p>
+    <p>The US Department of Energy recommends R-38 to R-60 in attics for most of the country, R-49 and up in the cold northern zones, and R-30 in the mild south. Walls are limited by the studs: R-13 fits a 2x4 cavity, R-21 fits 2x6. UK lofts are quoted in millimetres instead, and the current 270 mm of mineral wool is roughly R-38 in US terms, so the same arithmetic works either way.</p>
+
+    <h3>Worked example: a 1,200 sq ft attic going from R-19 to R-38</h3>
+    <p>A typical 1970s house has about 6 inches of settled fiberglass between the joists — call it R-19. The target is R-38, so the gap is R-19. Using blown cellulose at R-3.5 per inch, the new layer needs to be 19 / 3.5 = 5.4 inches on top of what is there. With the simplified bag model this calculator uses (one bag covers about 110 sq ft at R-19), the job needs 1,200 x 19 / 2,090 = 10.9, so 11 bags. Most home centers lend the blower free with a 10 to 20 bag purchase, which puts the material cost of doubling that attic's performance in the region of 400 to 500 dollars.</p>
+    <p>Two things move that number in real life. Bag labels differ by brand and settled density, so check the coverage chart printed on the side — it lists square feet per bag at each target R-value, and it wins over any calculator. And the depth markers matter: staple a few rulers to the joists before you start so you can see when you have hit 5 to 6 inches rather than guessing from the hatch.</p>
+
+    <h3>The same attic in batts</h3>
+    <p>R-19 of unfaced fiberglass batt works out at 19 / 3.2 = 5.9 inches, which is why the R-19 batts on the shelf are sold at about 6.25 inches of loft. Lay them perpendicular across the joists so they cover the wood as well as the cavities. If a pack covers 64 sq ft, 1,200 / 64 = 18.75, so 19 packs. Batts cost a little more per R and take longer to fit around wiring, but they need no machine and no helper — worth it on a small, clean, walkable attic.</p>
+
+    <h2>R-value per inch, by material</h2>
+    <table>
+      <thead><tr><th>Material</th><th>R per inch</th><th>Inches for R-38</th><th>Best use</th></tr></thead>
+      <tbody>
+        <tr><td>Fiberglass batt</td><td>3.2</td><td>11.9</td><td>Open joists, regular spacing</td></tr>
+        <tr><td>Blown fiberglass</td><td>2.5</td><td>15.2</td><td>Cheap top-ups, deep attics</td></tr>
+        <tr><td>Blown cellulose</td><td>3.5</td><td>10.9</td><td>Retrofit attics, good air resistance</td></tr>
+        <tr><td>Closed-cell spray foam</td><td>6.5</td><td>5.8</td><td>Rim joists, cathedral ceilings, tight spaces</td></tr>
+      </tbody>
+    </table>
+    <p>Closed-cell foam is priced in board feet — one square foot at one inch thick. The 1,200 sq ft attic above at 2.9 inches of foam is about 3,500 board feet, which is a contractor job, not a weekend one. Foam earns its cost where depth is scarce (a 2x6 cathedral ceiling) or where it doubles as an air and vapor control layer, not where you have unlimited headroom over a flat ceiling.</p>
+
+    <h2>Air-seal first: where the money actually is</h2>
+    <p>Insulation slows conduction. It does nothing about air moving through holes, and a typical attic floor is full of them: recessed light cans, plumbing stacks, bath fan housings, the chase behind a chimney, the attic hatch itself. Energy audits routinely find that sealing those leaks with caulk, foam and rigid covers costs a few hundred dollars and delivers a bigger fuel saving than the second half of an insulation top-up. Blowing insulation over an unsealed ceiling also lets warm, humid indoor air keep rising into it, where it condenses and slowly ruins the R-value you just bought.</p>
+    <p>Practical order: seal the big holes, build a dam and an insulated cover for the hatch, box out any non-IC-rated light cans, then insulate. Diminishing returns are real — R-11 to R-19 saves roughly twice what R-38 to R-49 saves on the same ceiling — so spend the marginal dollar on air-sealing before you chase the last few R.</p>
+
+    <h2>Baffles, ventilation and the eaves</h2>
+    <p>Vented attics need a clear path from the soffit vents up to the ridge. If loose fill drifts into that gap, or a batt is stuffed against the roof deck at the eaves, the attic stops drying and you get frost in winter, mould, and eventually a rotten deck. Cardboard or foam baffles clipped between the rafters keep the channel open and take about a minute each to install. Fit them before you blow, not after.</p>
+
+    <h2>What this calculator does not know</h2>
+    <p>It assumes a flat, accessible attic floor and an even layer. It does not deduct the joists themselves (they cover roughly 7 to 10 percent of the area and are a thermal bridge), model settling of loose fill over time, or check that your framing can carry a deep layer. Bag and pack counts come from a simplified coverage model — the manufacturer's chart is authoritative, and you should add 5 to 10 percent for waste and awkward corners. For anything structural, for knob-and-tube wiring, or for converting a vented attic to a sealed one, get a professional to look at it first.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/laminate-flooring-calc/"><span class="related-ico" aria-hidden="true">🪵</span><span class="related-name">Laminate Flooring Calculator</span></a><a class="related-item" href="https://tool-hub.me/metronome/"><span class="related-ico" aria-hidden="true">🎵</span><span class="related-name">Online Metronome</span></a><a class="related-item" href="https://tool-hub.me/mpg-calc/"><span class="related-ico" aria-hidden="true">⛽</span><span class="related-name">MPG Calculator</span></a><a class="related-item" href="https://tool-hub.me/mulch-calc/"><span class="related-ico" aria-hidden="true">🌳</span><span class="related-name">Mulch Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What does R-value actually mean?</summary><p data-i18n="faq.a1">R-value measures resistance to heat flow, so a higher number blocks more heat. It is quoted per assembly, and layers add up: an existing R-19 plus R-19 blown on top gives R-38. The figures here are US R-values in ft2·F·h/BTU; UK and EU labels use RSI or U-values instead, where R-38 is about RSI 6.7.</p></details>
+    <details><summary data-i18n="faq.q2">Can you over-insulate an attic?</summary><p data-i18n="faq.a2">You hit diminishing returns rather than damage. Going from bare joists to R-19 blocks most of the loss, R-19 to R-38 saves roughly half as much again, and past R-49 the payback stretches beyond how long most people stay in the house. The real risk is physical: insulation pushed into the eaves blocks soffit ventilation, which traps moisture and can rot the roof deck.</p></details>
+    <details><summary data-i18n="faq.q3">Batts or blown-in for an attic?</summary><p data-i18n="faq.a3">Blown-in usually wins on an existing attic because it flows over wiring, around joists and into corners where batts leave gaps, and a rented blower turns a 1,200 sq ft attic into a one-day job. Batts suit open joists at regular 16 or 24 inch spacing with clear access. Never compress a batt to make it fit — a squashed R-38 batt performs closer to R-30.</p></details>
+    <details><summary data-i18n="faq.q4">Which way does the vapor barrier face?</summary><p data-i18n="faq.a4">The facing goes toward the warm-in-winter side: down toward the living space in a heated-climate attic, and against the interior drywall in walls. In hot, humid climates a vapor retarder is often omitted or placed toward the exterior instead, so check your local code. When topping up existing insulation, always add unfaced material — a second facing mid-stack traps moisture between the layers.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
