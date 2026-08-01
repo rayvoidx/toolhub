@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>URL Slug Generator — Title to SEO-Friendly URL</title>
+<meta name="description" content="Turn any title into a clean URL slug: lowercase, hyphens or underscores, accents stripped, optional stop-word removal and a live character count.">
+<meta name="keywords" content="slug generator, url slug, title to slug, seo friendly url, permalink generator, slugify text">
+<link rel="canonical" href="https://tool-hub.me/slug-generator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="URL Slug Generator — Title to SEO-Friendly URL">
+<meta property="og:description" content="Turn any title into a clean URL slug: lowercase, hyphens or underscores, accents stripped, optional stop-word removal and a live character count.">
+<meta property="og:url" content="https://tool-hub.me/slug-generator/">
+<meta property="og:image" content="https://tool-hub.me/slug-generator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3f6212">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "URL Slug Generator",
+  "description": "Turn any title into a clean URL slug: lowercase, hyphens or underscores, accents stripped, optional stop-word removal and a live character count.",
+  "url": "https://tool-hub.me/slug-generator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "URL Slug Generator",
+      "item": "https://tool-hub.me/slug-generator/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>URL Slug Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>URL Slug Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Paste a headline, get a tidy URL that both search engines and humans can read.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .opts { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:4px 18px; margin-top:14px; }
+      #tool label.opt { display:flex; align-items:center; gap:9px; font-weight:500; margin:8px 0 0; cursor:pointer; }
+      #tool label.opt input { width:auto; margin:0; }
+      #tool .out-head { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:18px; }
+      #tool .out-head label { margin:0; }
+      #tool .copy-btn { padding:6px 11px; font-size:12px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .copy-btn:hover { border-color:var(--accent); }
+      #tool input#slug { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:15px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .len-hint { font-size:13px; font-weight:600; margin-top:10px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="text" data-i18n="tool.text.label">Title or headline</label>
+    <input type="text" id="text" autocomplete="off" spellcheck="false" placeholder="How to Make French Press Coffee at Home">
+
+    <label for="sep" data-i18n="tool.sep.label">Word separator</label>
+    <select id="sep">
+      <option value="-" data-i18n="tool.sep.hyphen">Hyphen ( - ) — recommended</option>
+      <option value="_" data-i18n="tool.sep.underscore">Underscore ( _ )</option>
+    </select>
+
+    <div class="opts">
+      <label class="opt" for="lower"><input type="checkbox" id="lower" checked><span data-i18n="tool.lower.label">Convert to lowercase</span></label>
+      <label class="opt" for="stop"><input type="checkbox" id="stop"><span data-i18n="tool.stop.label">Remove stop words (a, the, of, to, and…)</span></label>
+    </div>
+
+    <button type="button" id="calc-btn" class="btn primary" data-i18n="tool.calc">Generate slug</button>
+
+    <div id="result" hidden>
+      <div class="out-head">
+        <label for="slug" data-i18n="tool.r.slug">Slug</label>
+        <button type="button" class="copy-btn" id="copy-btn" data-i18n="tool.copy">Copy</button>
+      </div>
+      <input type="text" id="slug" readonly spellcheck="false" value="">
+      <div class="result-cards">
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.chars">Characters</div><div class="rc-val" id="r-chars">—</div></div>
+      </div>
+      <p class="len-hint" id="len-hint"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.local" style="margin-top:12px;">Everything runs in your browser — nothing you type is uploaded or stored.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a URL slug is, and why it is worth ten seconds of thought</h2>
+    <p>The slug is the human-readable tail of a web address — the <code>how-to-make-french-press-coffee</code> part of <code>example.com/blog/how-to-make-french-press-coffee</code>. It is the one piece of a URL you fully control, it shows up in search results under the title, and it is what people see when a link is pasted into Slack or a text message. A clean slug tells a reader what is on the other side of the click before they take it; a slug like <code>?p=4127</code> tells them nothing.</p>
+
+    <h3>Worked example: a headline becomes a slug</h3>
+    <p>Start with the title <strong>How to Make French Press Coffee at Home</strong>. The generator does four things in order. First it trims the outside whitespace. Second it lowercases, because URLs are case-sensitive on most servers and a stray capital creates a second address for the same page. Third it folds accented Latin letters down to their base letters. Fourth it replaces every run of non-letter, non-digit characters with a single separator and trims any separator left at the ends.</p>
+    <p>The result is <code>how-to-make-french-press-coffee-at-home</code> — 39 characters, comfortably inside the 60-character range that displays in full on a search results page. Tick <em>Remove stop words</em> and <em>to</em> and <em>at</em> disappear, giving <code>how-make-french-press-coffee-home</code> at 33 characters. Shorter, keyword-dense, and slightly robotic to read. Both versions rank; pick the one you would be happy reading aloud on a podcast.</p>
+
+    <h3>Worked example: punctuation, accents and numbers</h3>
+    <p>Take <strong>Café Owner's Guide to Décor (2026 Edition)</strong>. The accented <em>é</em> characters fold to <em>e</em>, the apostrophe is deleted rather than turned into a separator — so <em>Owner's</em> becomes <em>owners</em>, not <em>owner-s</em> — and the brackets collapse into single hyphens instead of leaving a double hyphen behind. Out comes <code>cafe-owners-guide-to-decor-2026-edition</code>, 39 characters. Numbers survive because they carry meaning: model numbers, years and sizes are often exactly what people type into search.</p>
+
+    <h2>Five rules for slugs that hold up</h2>
+    <p><strong>Keep it under about 60 characters.</strong> Google truncates long URLs in the results snippet, and a truncated slug loses its persuasive value. Sixty characters is roughly six to eight words.</p>
+    <p><strong>Put the keyword near the front.</strong> Both crawlers and human eyes weight the left-hand side of a URL. <code>/french-press-coffee-guide</code> beats <code>/guide-to-brewing-various-methods-including-french-press</code>.</p>
+    <p><strong>Leave dates out.</strong> A slug like <code>/best-laptops-2025</code> looks stale the moment the calendar turns, and updating the article means either living with the wrong year or changing the URL. Use <code>/best-laptops</code> and put the year in the title tag, which you can edit freely.</p>
+    <p><strong>Do not stuff.</strong> Repeating the keyword — <code>/coffee-french-press-coffee-maker-coffee</code> — reads as spam to people and adds nothing for search engines.</p>
+    <p><strong>Match the site's existing pattern.</strong> If every other post uses hyphens and no stop words, a single underscore-and-stop-word slug is the odd one out. Consistency is easier to maintain than perfection.</p>
+
+    <h2>Diacritics: fold them or keep them?</h2>
+    <p>For Latin-script languages, folding is the safe default. <em>Café</em> becomes <em>cafe</em>, <em>Zürich</em> becomes <em>zurich</em>, <em>Łódź</em> becomes <em>lodz</em>. The address stays typeable on any keyboard and survives being copied into systems that mangle non-ASCII characters. The tool does this with Unicode NFD decomposition — splitting a letter into its base plus its accent mark — then dropping the marks and recomposing, which is why it handles letters it has never specifically been taught. A handful of letters do not decompose at all (ß, ø, æ, þ) and are mapped by hand: ß becomes ss, æ becomes ae.</p>
+    <p>Non-Latin scripts are left exactly as they are. Korean, Japanese, Chinese, Arabic, Cyrillic and Devanagari characters pass through untouched, because there is no single correct romanisation and guessing one would be worse than doing nothing. Percent-encoded UTF-8 slugs are fully supported by browsers and search engines; they simply look long and unreadable when copied into a plain-text field.</p>
+
+    <h2>Notes for common platforms</h2>
+    <p>WordPress generates a slug from the post title automatically and lets you edit it in the Permalink box — do it before publishing, because WordPress does not create a redirect when you change it later. Shopify keeps the old handle and issues a redirect for products, but only if you leave the "create a URL redirect" box ticked. Ghost and Webflow behave like WordPress. Static site generators such as Hugo, Astro and Next.js usually derive the slug from the file name, so renaming the file changes the URL and you have to add the redirect yourself in the host's config.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>This tool does not transliterate — it will not turn Москва into moskva, because a correct transliteration depends on the language and the standard you follow. It does not check whether the slug is already used on your site, so duplicates are still your responsibility; most CMSs will silently append <code>-2</code>. It also does not strip the stop words of any language other than English, since removing the wrong short word in German or Spanish can change the meaning entirely. Everything runs locally in the browser, so nothing you paste is transmitted anywhere.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/sql-formatter/"><span class="related-ico" aria-hidden="true">🗄️</span><span class="related-name">SQL Formatter</span></a><a class="related-item" href="https://tool-hub.me/subnet-calc/"><span class="related-ico" aria-hidden="true">🌐</span><span class="related-name">IP Subnet Calculator</span></a><a class="related-item" href="https://tool-hub.me/unix-timestamp-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Unix Timestamp Converter</span></a><a class="related-item" href="https://tool-hub.me/url-encoder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Encoder / Decoder</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Hyphens or underscores in a URL slug?</summary><p data-i18n="faq.a1">Hyphens. Google treats a hyphen as a word separator and an underscore as a word joiner, so /french-press-coffee reads as three words while /french_press_coffee can read as one. Underscores are still fine in code repositories and file names, but for public URLs hyphens win. If a live URL already uses underscores, leave it alone rather than breaking links for a small gain.</p></details>
+    <details><summary data-i18n="faq.q2">Should I remove stop words like the and of?</summary><p data-i18n="faq.a2">Either way ranks. Removing them shortens the slug and pushes keywords to the front; keeping them makes the URL read like a sentence, which can help click-through. The case to avoid is stripping a word that carries meaning, such as the it in how-to-do-it-yourself. Read the finished slug aloud before you publish.</p></details>
+    <details><summary data-i18n="faq.q3">What about titles that are not in English?</summary><p data-i18n="faq.a3">Two options both work: transliterate into Latin characters, or keep the native script. Browsers and search engines handle percent-encoded UTF-8 slugs fine, so a Korean or Russian slug ranks normally — it just looks messy when pasted into a plain-text email. This tool keeps non-Latin letters as they are and only folds Latin accents, so café becomes cafe while 커피 stays 커피.</p></details>
+    <details><summary data-i18n="faq.q4">Can I change a slug after publishing?</summary><p data-i18n="faq.a4">Only with a 301 redirect from the old URL to the new one. Without it the old address returns a 404 and you lose the links and rankings it had earned. Most platforms — WordPress, Ghost, Shopify, Webflow — can create that redirect for you. If the page is brand new and has no traffic or backlinks, change it freely.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

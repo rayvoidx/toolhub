@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTTP Status Code Lookup — What Every Code Means</title>
+<meta name="description" content="Look up any HTTP status code and read what it means in plain English, plus whether the fault is yours or the server's. Covers 100 to 511, 401 vs 403, 502.">
+<meta name="keywords" content="http status codes, http status code lookup, 403 vs 401, 502 bad gateway meaning, 404 not found, http error codes list">
+<link rel="canonical" href="https://tool-hub.me/http-status-lookup/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HTTP Status Code Lookup — What Every Code Means">
+<meta property="og:description" content="Look up any HTTP status code and read what it means in plain English, plus whether the fault is yours or the server's. Covers 100 to 511, 401 vs 403, 502.">
+<meta property="og:url" content="https://tool-hub.me/http-status-lookup/">
+<meta property="og:image" content="https://tool-hub.me/http-status-lookup/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#334155">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "HTTP Status Code Lookup",
+  "description": "Look up any HTTP status code and read what it means in plain English, plus whether the fault is yours or the server's. Covers 100 to 511, 401 vs 403, 502.",
+  "url": "https://tool-hub.me/http-status-lookup/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "HTTP Status Code Lookup",
+      "item": "https://tool-hub.me/http-status-lookup/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>HTTP Status Code Lookup</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>HTTP Status Code Lookup</h1>
+    <p class="lede" data-i18n="hero.lede">Type a code. Get the plain-English meaning and whether the problem sits on the client or the server.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .result-cards { display:grid; grid-template-columns:1fr; gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:26px; margin-top:2px; line-height:1.25; }
+      #tool .rc-text { margin:8px 0 0; font-size:14px; line-height:1.6; }
+      #tool .fault { display:inline-block; margin-top:10px; font-size:12px; font-weight:600;
+        border:1px solid var(--line); border-radius:999px; padding:3px 10px; color:var(--muted); }
+      #tool .browse { margin-top:18px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:6px; margin:8px 0 10px; }
+      #tool .chip { font:inherit; font-size:13px; cursor:pointer; background:transparent;
+        border:1px solid var(--line); border-radius:999px; padding:5px 11px; color:var(--muted); }
+      #tool .chip.on { border-color:var(--accent); color:var(--accent); font-weight:600; }
+      #tool .reflist { max-height:320px; overflow-y:auto; border:1px solid var(--line); border-radius:8px; }
+      #tool .ref-group { font-size:12px; font-weight:700; color:var(--muted); text-transform:uppercase;
+        letter-spacing:.04em; padding:8px 12px 4px; margin:0; }
+      #tool .ref-row { display:flex; gap:10px; width:100%; text-align:left; font:inherit; cursor:pointer;
+        background:transparent; border:0; border-top:1px solid var(--line); padding:7px 12px; color:inherit; }
+      #tool .ref-row:hover { background:var(--line); }
+      #tool .ref-code { font-variant-numeric:tabular-nums; font-weight:700; min-width:38px; }
+      #tool .ref-name { color:var(--muted); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="code" data-i18n="tool.code.label">Status code</label>
+    <input type="number" id="code" inputmode="numeric" min="100" max="599" step="1" autocomplete="off" placeholder="404">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.lookup">Look up</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-class">—</div>
+          <div class="rc-val" id="r-title">—</div>
+          <p class="rc-text" id="r-meaning"></p>
+          <p class="rc-text" id="r-extra" hidden></p>
+          <span class="fault" id="r-fault"></span>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.fix">Where to look</div>
+          <p class="rc-text" id="r-fix"></p>
+        </div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+
+    <div class="browse">
+      <div class="rc-label" data-i18n="tool.filter.label">Browse by class</div>
+      <div class="chips" id="chips">
+        <button type="button" class="chip on" data-cls="all" data-i18n="tool.chip.all">All</button>
+        <button type="button" class="chip" data-cls="1" data-i18n="tool.cls.1">1xx Informational</button>
+        <button type="button" class="chip" data-cls="2" data-i18n="tool.cls.2">2xx Success</button>
+        <button type="button" class="chip" data-cls="3" data-i18n="tool.cls.3">3xx Redirection</button>
+        <button type="button" class="chip" data-cls="4" data-i18n="tool.cls.4">4xx Client error</button>
+        <button type="button" class="chip" data-cls="5" data-i18n="tool.cls.5">5xx Server error</button>
+      </div>
+      <div class="reflist" id="reflist"></div>
+    </div>
+
+    <p class="subtle" data-i18n="tool.note.lang" style="margin-top:12px;">Code names and descriptions stay in English so they match the wording in the RFCs, your server logs and browser dev tools.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Read the first digit before you read anything else</h2>
+    <p>Every HTTP status code carries its diagnosis in the hundreds digit, and that single number decides who has to fix the problem. A 4xx means the request was wrong, so the browser, the mobile app or the curl command you typed owns the bug. A 5xx means the request was reasonable and the server failed to answer it, so the fix lives in application code, configuration or capacity. A 3xx means the resource lives somewhere else now, and a 2xx means it worked. That split saves hours: if you are staring at a 502 there is no point checking your JSON payload, and if you are staring at a 422 there is no point restarting the server.</p>
+    <p>The rule holds even for codes nobody documented. RFC 9110 requires clients to treat an unrecognised code as the generic x00 of its class, which is why a Cloudflare 521 can be reasoned about like a 500 and an nginx 499 like a 400 before you look anything up.</p>
+
+    <h3>The five codes you will actually meet</h3>
+    <p><strong>404 Not Found</strong> is the friendliest failure on the list. The URL resolved, a server answered, and nothing lives at that path. Check capitalisation and the trailing slash first, because Linux servers are case sensitive and many routers treat /reports and /reports/ as different addresses. If the URL is correct, either the resource moved without a redirect or the route was never registered in the framework.</p>
+    <p><strong>403 Forbidden</strong> means identity is not the problem, permission is. On shared hosting a 403 on a directory usually means there is no index.html and directory listing is switched off; in an application it means the logged-in user lacks a role. Sending the credentials again changes nothing, which is exactly what separates it from 401.</p>
+    <p><strong>500 Internal Server Error</strong> is deliberately vague, because leaking a stack trace to the public is a security problem. The useful information is in the server log, and roughly nine times in ten it is an uncaught exception, a missing environment variable or a failed database connection that appeared right after a deployment.</p>
+    <p><strong>503 Service Unavailable</strong> is a promise that the outage is temporary: overloaded workers, an exhausted connection pool, or a maintenance flag someone forgot to switch off. It is the only 5xx that is polite enough to be worth retrying automatically, especially when it arrives with a Retry-After header.</p>
+    <p><strong>301 Moved Permanently</strong> is not an error at all, but it causes more lasting damage than any of the above when it is aimed at the wrong target. Browsers cache 301s hard, sometimes until the profile is cleared, so a redirect shipped to the wrong URL keeps sending returning visitors to the wrong place long after the server is fixed.</p>
+
+    <h3>Worked example: a redirect chain that leaks ranking</h3>
+    <p>Suppose an old page at http://example.com/old-guide is moved. Requesting it returns 301 to https://example.com/old-guide, which returns 301 to https://www.example.com/old-guide, which finally returns 302 to https://www.example.com/guides/new. That is three hops for every visitor and every crawler. The first two are the usual HTTP-to-HTTPS and non-www-to-www rules, and the last one is temporary, so the final destination never fully inherits the original page authority. Collapsing the chain to one 301 straight from the original URL to the final destination removes two round trips of latency and lets search engines consolidate the signals in one step. If the endpoint accepts POST, use 308 instead so the method survives the hop.</p>
+
+    <h3>Retries, backoff and Retry-After</h3>
+    <p>Only some failures are worth repeating. A 429 or a 503 usually includes a Retry-After header giving either a number of seconds or an HTTP date, and honouring it is the difference between a well-behaved client and one that gets blocked. A 408 or a 504 can be retried too, because the request may simply have been unlucky, but each retry should wait longer than the last: one second, then two, then four, with a small random jitter so that a thousand clients do not all return at the same instant. Codes such as 400, 401, 403, 404 and 422 will produce exactly the same answer no matter how many times you resend them, so retrying those only burns quota. For anything that is not idempotent, such as a POST that charges a card, add an idempotency key before you retry at all.</p>
+
+    <h3>What a status code cannot tell you</h3>
+    <p>The code describes the outcome of one HTTP exchange, not the health of the system. Plenty of APIs return 200 with an error object in the body, which hides failures from monitoring that only watches status codes. A CDN can return a cached 200 while the origin behind it is down, and a captive portal on hotel Wi-Fi can return 200 with a login page instead of the JSON you asked for. Treat the code as the first clue, then confirm with the response headers and body before concluding anything.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/json-diff/"><span class="related-ico" aria-hidden="true">🔍</span><span class="related-name">JSON Diff</span></a><a class="related-item" href="https://tool-hub.me/json-formatter/"><span class="related-ico" aria-hidden="true">⚙️</span><span class="related-name">JSON Formatter</span></a><a class="related-item" href="https://tool-hub.me/json-to-csv/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">JSON to CSV Converter</span></a><a class="related-item" href="https://tool-hub.me/json-to-yaml/"><span class="related-ico" aria-hidden="true">📜</span><span class="related-name">JSON to YAML Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between 401 and 403?</summary><p data-i18n="faq.a1">401 Unauthorized means the server does not know who you are: credentials are missing, expired or wrong, and it should send a WWW-Authenticate header explaining how to log in. 403 Forbidden means it knows exactly who you are and still refuses, so retrying with the same credentials is pointless. In short, 401 is failed authentication and 403 is failed authorisation. A logged-in user hitting 403 needs a permission change, not a new login.</p></details>
+    <details><summary data-i18n="faq.q2">301 or 302 — which redirect is better for SEO?</summary><p data-i18n="faq.a2">Use 301 when the move is permanent. Search engines consolidate the old URL's link equity into the new one and browsers cache the redirect hard, so the change sticks. A 302 says the original URL is still canonical, so ranking signals stay on the old address and crawlers keep requesting it. If the request method must survive the redirect too, 308 is the permanent equivalent and 307 the temporary one.</p></details>
+    <details><summary data-i18n="faq.q3">502 vs 503 vs 504 — what is actually broken?</summary><p data-i18n="faq.a3">All three come from a proxy or load balancer sitting in front of your application. 502 Bad Gateway means the upstream returned something invalid or nothing at all, usually because the app crashed or is not listening on the expected port. 503 Service Unavailable means the server is reachable but cannot cope right now, whether overloaded or in maintenance, and it is meant to be temporary. 504 Gateway Timeout means the upstream answered too slowly, so look for a hanging query or a slow third-party call.</p></details>
+    <details><summary data-i18n="faq.q4">Are codes like 418 or 499 real?</summary><p data-i18n="faq.a4">418 I'm a Teapot is genuinely registered: it began as a 1998 April Fools' joke and servers still return it, sometimes to bots they want to turn away. Codes such as 499 (nginx, client closed the connection) and 520 to 527 (Cloudflare) are vendor inventions that never entered the IANA registry. The class digit still applies to all of them, because any unrecognised 4xx must be handled like a 400 and any unrecognised 5xx like a 500. That rule lets you reason about an unknown code even with no documentation.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
