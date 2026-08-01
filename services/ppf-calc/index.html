@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PPF Calculator — Maturity, Interest &amp; Returns</title>
+<meta name="description" content="Calculate your PPF maturity value, total investment and interest earned over 15, 20 or 25 years at the current rate. Yearly compounding, tax-free EEE returns.">
+<meta name="keywords" content="ppf calculator, ppf interest calculator, ppf maturity calculator, public provident fund, ppf return calculator, ppf 15 year calculator">
+<link rel="canonical" href="https://tool-hub.me/ppf-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PPF Calculator — Maturity, Interest &amp; Returns">
+<meta property="og:description" content="Calculate your PPF maturity value, total investment and interest earned over 15, 20 or 25 years at the current rate. Yearly compounding, tax-free EEE returns.">
+<meta property="og:url" content="https://tool-hub.me/ppf-calc/">
+<meta property="og:image" content="https://tool-hub.me/ppf-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#065f46">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PPF Calculator",
+  "description": "Calculate your PPF maturity value, total investment and interest earned over 15, 20 or 25 years at the current rate. Yearly compounding, tax-free EEE returns.",
+  "url": "https://tool-hub.me/ppf-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "PPF Calculator",
+      "item": "https://tool-hub.me/ppf-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>PPF Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>PPF Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Fifteen years, tax-free at every stage. See what a yearly deposit really grows into.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .hint { font-size:12px; color:var(--muted); margin:4px 0 0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-sub { font-size:12px; color:var(--muted); margin-top:4px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:28px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+      #tool th, #tool td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool th { font-size:12px; color:var(--muted); font-weight:600; }
+      #tool td.num { text-align:right; font-variant-numeric:tabular-nums; }
+      #tool th.num { text-align:right; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="amount" data-i18n="tool.amount.label">Yearly investment (₹)</label>
+        <input type="number" id="amount" inputmode="decimal" min="500" max="150000" step="any" autocomplete="off" placeholder="150000">
+      </div>
+      <div>
+        <label for="rate" data-i18n="tool.rate.label">Current interest rate (%)</label>
+        <input type="number" id="rate" inputmode="decimal" min="0.1" max="20" step="any" autocomplete="off" placeholder="7.1">
+      </div>
+    </div>
+    <p class="hint" data-i18n="tool.amount.note">Maximum ₹1,50,000 per financial year, minimum ₹500. Assumed deposited at the start of each year.</p>
+
+    <label for="period" data-i18n="tool.period.label">Investment period</label>
+    <select id="period">
+      <option value="15" data-i18n="tool.period.p15">15 years — statutory maturity</option>
+      <option value="20" data-i18n="tool.period.p20">20 years — one 5-year extension</option>
+      <option value="25" data-i18n="tool.period.p25">25 years — two 5-year extensions</option>
+    </select>
+    <p class="hint" data-i18n="tool.rate.note">The government revises the PPF rate every quarter — 7.1% as of 2026. Check the latest notification before relying on the figure.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate maturity</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.maturity">Maturity value</div>
+          <div class="rc-val" id="r-maturity">—</div>
+          <div class="rc-sub" id="r-words"></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.invested">Total invested</div>
+          <div class="rc-val" id="r-invested">—</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.interest">Interest earned</div>
+          <div class="rc-val" id="r-interest">—</div>
+          <div class="rc-sub" id="r-share"></div>
+        </div>
+        <div class="rcard wide">
+          <div class="rc-label" data-i18n="tool.r.table">Closing balance by year</div>
+          <table>
+            <thead>
+              <tr>
+                <th data-i18n="tool.th.year">Year</th>
+                <th class="num" data-i18n="tool.th.invested">Invested so far</th>
+                <th class="num" data-i18n="tool.th.balance">Closing balance</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+          <p class="hint" data-i18n="tool.table.note">Showing the last three years. Each year follows the same rule: last year's balance plus this year's deposit, then interest on the whole amount.</p>
+        </div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disclaimer" style="margin-top:12px;">An estimate using yearly compounding on deposits made at the start of each year. Real PPF interest is computed monthly on the lowest balance between the 5th and month end, and the rate changes quarterly.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How PPF actually grows your money</h2>
+    <p>The Public Provident Fund is a 15-year government-backed savings account. You deposit anything from ₹500 to ₹1,50,000 in a financial year, the government credits interest once a year, and that interest joins the principal — so next year's interest is earned on a bigger base. Nothing is taxed on the way in, on the way through, or on the way out. That combination is what people mean when they call PPF an EEE product, and it is the reason a modest yearly deposit ends up looking impressive after fifteen years.</p>
+    <p>This calculator assumes the deposit lands at the start of each year and compounds annually. In formula terms, each year's closing balance is (previous balance + deposit) x (1 + rate). Simple, and close enough to reality for planning — with the caveat covered further down about how the real monthly rule works.</p>
+
+    <h3>Worked example: ₹1.5 lakh a year at 7.1% for 15 years</h3>
+    <p>Take the maximum contribution and the rate applicable in 2026. Year one: you deposit ₹1,50,000, and the balance grows to ₹1,50,000 x 1.071 = ₹1,60,650. Year two: you add another ₹1,50,000 to give ₹3,10,650, which grows to ₹3,10,650 x 1.071 = ₹3,32,706. Two years in, you have put in ₹3,00,000 and earned ₹32,706 in interest, all of it tax-free.</p>
+    <p>Continue that for fifteen years and the maturity value lands at roughly ₹40,68,000 on a total investment of ₹22,50,000. Interest is about ₹18,18,000 — around 45% of the final corpus. That share is the whole story of compounding: in year one interest was 4% of the balance, by year fifteen it is nearly half.</p>
+
+    <h3>Why the tax status matters more than the headline rate</h3>
+    <p>A 7.1% tax-free return is not comparable to a 7.1% fixed deposit. Interest on a bank FD is added to your income and taxed at your slab rate. For someone in the 30% bracket, an FD needs to pay about 10.1% before tax to match PPF's 7.1% after tax. Very few AAA-rated instruments do that with zero credit risk, which is why PPF remains the default debt allocation for salaried investors in India even in years when the rate looks unexciting.</p>
+    <p>Against ELSS mutual funds the comparison flips in a different direction. ELSS carries a three-year lock-in rather than fifteen, and historically higher returns, but with equity volatility and 12.5% long-term capital gains tax above the annual exemption. The usual advice is not to pick one — PPF anchors the debt side of an 80C allocation while ELSS supplies the growth side.</p>
+    <p>One planning note for the new tax regime: Section 80C deductions are not available there, so the deduction argument for PPF disappears. The tax-free interest and tax-free maturity remain, which still makes PPF competitive with taxable debt products even without the upfront deduction.</p>
+    <h2>The rate is not fixed for 15 years</h2>
+    <p>This is the most common misunderstanding. The PPF rate is notified quarterly by the Ministry of Finance and applies to everyone's balance, old and new. It has been as high as 12% in the 1980s, sat at 8% for much of the 2000s, was 8% as recently as 2018-19, and has held at 7.1% since April 2020 — the longest unchanged stretch in the scheme's history. Any calculator, including this one, projects a single rate forward because nobody knows the future schedule. Treat the maturity figure as a scenario, not a promise, and rerun it at 6.5% and 7.5% to see the range you are actually living in.</p>
+    <p>On the same ₹1.5 lakh yearly deposit over 15 years, 6.5% gives about ₹38.6 lakh and 7.5% about ₹42.1 lakh. A one-point spread in the rate moves the outcome by roughly ₹3.5 lakh, which is worth knowing before you build a goal around the exact number.</p>
+
+    <h3>Deposit timing changes the result too</h3>
+    <p>Real PPF interest is calculated each month on the lowest balance between the 5th and the last day of that month. Deposit before the 5th of April and the money earns interest for all twelve months; deposit on the 31st of March and it earns almost nothing that year. Over fifteen years, depositing on 1 April rather than 31 March is worth well over ₹1 lakh on a full contribution. This calculator assumes the good habit — deposit early in the financial year.</p>
+
+    <h3>Extensions: the underrated part of the scheme</h3>
+    <p>At maturity you have three choices. Withdraw everything, extend for five years with contributions, or extend for five years without contributions. The default if you do nothing is extension without contributions — the balance keeps earning the notified rate and you may withdraw any amount once per year, but you cannot deposit again, and a deposit made by mistake earns no interest.</p>
+    <p>Extending with contributions requires Form 4 within one year of maturity and keeps the ₹1.5 lakh limit and the 80C benefit alive. During such an extension you can withdraw up to 60% of the balance held at the start of the five-year block, spread over the block. Extending twice takes a 15-year account to 25 years, and that is where the arithmetic gets dramatic: the same ₹1.5 lakh yearly deposit reaches around ₹40.7 lakh at 15 years, ₹66.6 lakh at 20 years and roughly ₹1.03 crore at 25 years. The final ten years add more than the first fifteen did.</p>
+
+    <h2>Limitations worth knowing before you commit</h2>
+    <p>The lock-in is genuine. Partial withdrawals only start in the seventh year, capped at 50% of an older balance, and premature closure after five years costs 1% of all interest credited. A loan is available in years three to six at one point above the PPF rate, which is cheap, but capped at 25% of a two-year-old balance. If you might need the money within a decade, PPF is the wrong container for it.</p>
+    <p>The ₹1.5 lakh cap is per person and shared across all your 80C investments, and you may hold only one PPF account. Accounts opened for a minor child count against the guardian's limit. NRIs cannot open new accounts, though an account opened while resident can run to maturity. And the numbers here are estimates: your bank or post office statement is the authority, and nothing on this page is investment or tax advice.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/rd-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">RD Calculator</span></a><a class="related-item" href="https://tool-hub.me/rent-affordability-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Rent Affordability Calculator</span></a><a class="related-item" href="https://tool-hub.me/rent-split-calc/"><span class="related-ico" aria-hidden="true">🚪</span><span class="related-name">Rent Split Calculator</span></a><a class="related-item" href="https://tool-hub.me/retirement-calc/"><span class="related-ico" aria-hidden="true">🌴</span><span class="related-name">Retirement Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is PPF really completely tax-free?</summary><p data-i18n="faq.a1">Yes — PPF sits in the rare EEE category. Deposits up to ₹1.5 lakh qualify for a deduction under Section 80C in the old tax regime, the interest credited each year is exempt, and the maturity amount is paid out tax-free. Note that the 80C deduction is not available if you have opted for the new regime, but the interest and maturity exemption still applies.</p></details>
+    <details><summary data-i18n="faq.q2">Can I withdraw money before 15 years?</summary><p data-i18n="faq.a2">Only partially. From the seventh financial year you may withdraw once a year, up to 50% of the balance at the end of the fourth preceding year or the previous year, whichever is lower. Full closure before maturity is allowed after five years only for specified reasons such as serious illness or higher education, and it costs you 1% of the interest already credited.</p></details>
+    <details><summary data-i18n="faq.q3">Can I take a loan against my PPF account?</summary><p data-i18n="faq.a3">Yes, between the third and sixth financial year, before partial withdrawals become available. You can borrow up to 25% of the balance at the end of the second preceding year, repayable within 36 months. Interest on the loan is 1% above the prevailing PPF rate, dropping to the standard rate once repaid on time.</p></details>
+    <details><summary data-i18n="faq.q4">What happens after the 15 years are over?</summary><p data-i18n="faq.a4">You can withdraw the whole balance, or extend in blocks of five years. Extending with contributions keeps the ₹1.5 lakh limit and the 80C benefit; extending without contributions lets the balance keep earning interest while you withdraw any amount once a year. The form for extension with contributions must be submitted within one year of maturity, otherwise the account is treated as extended without contributions.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

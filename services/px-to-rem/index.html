@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PX to REM Converter — CSS rem Calculator</title>
+<meta name="description" content="Convert px to rem or rem to px with any root font size. Live results, a copy-ready CSS line and a reference table of the sizes front-end work uses most.">
+<meta name="keywords" content="px to rem, px to rem converter, rem to px, css rem calculator, rem converter, pixel to rem">
+<link rel="canonical" href="https://tool-hub.me/px-to-rem/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PX to REM Converter — CSS rem Calculator">
+<meta property="og:description" content="Convert px to rem or rem to px with any root font size. Live results, a copy-ready CSS line and a reference table of the sizes front-end work uses most.">
+<meta property="og:url" content="https://tool-hub.me/px-to-rem/">
+<meta property="og:image" content="https://tool-hub.me/px-to-rem/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9333ea">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "PX to REM Converter",
+  "description": "Convert px to rem or rem to px with any root font size. Live results, a copy-ready CSS line and a reference table of the sizes front-end work uses most.",
+  "url": "https://tool-hub.me/px-to-rem/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "PX to REM Converter",
+      "item": "https://tool-hub.me/px-to-rem/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>PX to REM Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>PX to REM Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a pixel value, get the rem — plus the CSS line to paste.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:28px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+      #tool .out-row { display:flex; align-items:center; gap:8px; margin-top:12px; }
+      #tool .out-row label { flex:0 0 110px; font-size:13px; color:var(--muted); margin:0; }
+      #tool .out-row input { flex:1; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+      #tool .copy-btn { flex:0 0 auto; padding:8px 12px; font-size:13px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .copy-btn:hover { border-color:var(--accent); }
+      #tool table { width:100%; border-collapse:collapse; margin-top:8px; font-size:14px; }
+      #tool th, #tool td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool th { font-size:13px; color:var(--muted); font-weight:600; }
+      #tool td { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:520px){ #tool .field-row { grid-template-columns:1fr; } #tool .out-row label { flex-basis:80px; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="value" data-i18n="tool.value.label">Value</label>
+        <input type="number" id="value" inputmode="decimal" step="any" autocomplete="off" placeholder="24">
+      </div>
+      <div>
+        <label for="direction" data-i18n="tool.dir.label">Direction</label>
+        <select id="direction">
+          <option value="px2rem" data-i18n="tool.dir.px2rem">px → rem</option>
+          <option value="rem2px" data-i18n="tool.dir.rem2px">rem → px</option>
+        </select>
+      </div>
+      <div>
+        <label for="root" data-i18n="tool.root.label">Root font size (px)</label>
+        <input type="number" id="root" inputmode="decimal" min="1" step="any" autocomplete="off" value="16" placeholder="16">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Convert</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.out">Converted value</div>
+          <div class="rc-val" id="r-out">—</div>
+        </div>
+      </div>
+      <div class="out-row">
+        <label for="r-css" data-i18n="tool.r.css">CSS snippet</label>
+        <input type="text" id="r-css" readonly>
+        <button type="button" class="copy-btn" data-copy="r-css" data-i18n="tool.copy">Copy</button>
+      </div>
+      <p class="subtle" data-i18n="tool.table.title" style="margin-top:16px;">Common sizes at this root</p>
+      <table>
+        <thead><tr><th data-i18n="tool.table.px">Pixels</th><th data-i18n="tool.table.rem">rem</th></tr></thead>
+        <tbody id="ref-body"></tbody>
+      </table>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.root.note" style="margin-top:12px;">Browsers use 16px unless html { font-size } sets something else.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How px and rem relate</h2>
+    <p>One rem equals the computed font size of the root element — the <code>&lt;html&gt;</code> tag. Every browser ships with that root at 16px unless the user changed their default or your stylesheet overrode it, so the everyday conversion is simply value divided by 16 going one way and value multiplied by 16 coming back. The unit is not a different kind of pixel; it is a multiplier that resolves to pixels at render time, and that late resolution is the entire point.</p>
+    <p>Because the multiplier resolves against a value the reader controls, a layout written in rem quietly adapts to somebody who reads at 20px while a layout written in px stays frozen at whatever the designer picked. That is the practical difference behind every "should I use px or rem" argument.</p>
+
+    <h3>Worked example: the 24px heading</h3>
+    <p>A designer hands you a heading at 24px. With the default root of 16px, 24 / 16 = 1.5, so the CSS is <code>font-size: 1.5rem;</code>. Check it backwards: 1.5 x 16 = 24. Now suppose the reader has set their browser default to 20px. Your heading renders at 1.5 x 20 = 30px, keeping the same visual ratio to body text that the design intended. Had you written 24px, that reader would get a 24px heading sitting on 20px body copy — a hierarchy that has quietly collapsed from 1.5x down to 1.2x.</p>
+    <p>The same arithmetic covers the rest of a typical scale: 12px is 0.75rem, 14px is 0.875rem, 18px is 1.125rem, 32px is 2rem, 48px is 3rem. The reference table in the tool prints exactly these for whatever root you enter, which is faster than doing twelve divisions by hand every time a design system changes its base size.</p>
+
+    <h3>Reverse direction: reading rem back to px</h3>
+    <p>Inspecting somebody else's stylesheet, you find <code>padding: 1.25rem 2.5rem;</code>. At a 16px root that is 20px vertical and 40px horizontal — numbers you can compare against a Figma frame. Switch the tool to rem to px, and the arithmetic is 1.25 x 16 = 20. If the project uses the 62.5% trick and its root is 10px, the exact same declaration means 12.5px and 25px instead. Always check the root before trusting a conversion; it is the single most common source of "the numbers don't match the design" confusion.</p>
+
+    <h2>Why accessibility guidance keeps pointing at rem</h2>
+    <p>WCAG success criterion 1.4.4 (Resize Text) requires that text can be scaled up to 200% without loss of content or functionality. Full-page browser zoom passes that criterion regardless of unit, which is why some developers conclude px is fine. The gap is the browser's own default-font-size setting, used heavily by readers with low vision who prefer larger text without magnifying every image and border. Chrome, Firefox, Safari and Edge all expose it; text sized in px ignores it completely. Sizing type in rem, and container padding around type in rem, means one settings change does the right thing across the whole page.</p>
+    <p>There is a second, less discussed benefit: consistency. Because every rem points at one number, changing the root font size in a single media query rescales an entire type system. Bumping the root from 16px to 17px on wide screens is a one-line change; doing the same in px means touching every declaration.</p>
+
+    <h3>The 62.5% trick, honestly</h3>
+    <p>Writing <code>html { font-size: 62.5%; }</code> makes the root 10px on a default browser, so 1.8rem is 18px and mental conversion disappears. The upsides are real: no calculator, no odd decimals like 0.875rem, and user zoom and user font-size settings still work because 62.5% is relative, not absolute. The downsides are equally real. You must explicitly set <code>body { font-size: 1.6rem; }</code> or the whole document inherits 10px text, any component you paste in from a library sized in rem shrinks to 62.5% of its intended size, and every new developer on the project has to learn the local rule. On a greenfield codebase it is a defensible convention; on a shared design system it tends to cause more support questions than it saves keystrokes. If you use it, set the root field in this converter to 10 and the table becomes your project's real scale.</p>
+
+    <h2>Migrating a px codebase to rem</h2>
+    <p>Do not attempt a global find and replace. Convert in passes, starting where the payoff is highest. Pass one is type: every <code>font-size</code> and <code>line-height</code>. Pass two is the spacing that surrounds type — padding and margins inside text blocks — so that generous type does not get cramped by fixed gutters. Pass three is anything you deliberately keep in px: borders, shadow offsets, hairline dividers, sprite coordinates and image dimensions.</p>
+    <p>A useful shortcut for pass one is to search your stylesheet for <code>font-size:</code> and convert only the numbers you find, checking each against the table here. Most projects have fewer than forty distinct type sizes, and half of them collapse into a shared scale once you can see them side by side. Media query breakpoints are a separate decision: em breakpoints respond to the browser font size, px breakpoints do not, and mixing the two in one file is a debugging trap worth avoiding.</p>
+
+    <h3>Limitations of this converter</h3>
+    <p>It assumes a static root font size, which is what the overwhelming majority of stylesheets use. If your root is set with <code>clamp()</code> or a viewport unit, the rendered rem value changes as the window resizes, and a single number cannot describe it — convert against the smallest and largest root your clamp allows to get the range. Results are rounded to four decimal places, far beyond what any rendering engine distinguishes, and the tool does not touch <code>em</code>, which needs the parent's computed size rather than the root's and therefore cannot be answered by a two-field form.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/regex-tester/"><span class="related-ico" aria-hidden="true">🧪</span><span class="related-name">Regex Tester</span></a><a class="related-item" href="https://tool-hub.me/resistor-color-code/"><span class="related-ico" aria-hidden="true">🎛️</span><span class="related-name">Resistor Color Code Calculator</span></a><a class="related-item" href="https://tool-hub.me/robots-txt-generator/"><span class="related-ico" aria-hidden="true">🤖</span><span class="related-name">Robots.txt Generator</span></a><a class="related-item" href="https://tool-hub.me/slug-generator/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Slug Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between rem and em?</summary><p data-i18n="faq.a1">rem is always relative to the root element's font size — usually 16px — so 1.5rem is 24px anywhere on the page. em is relative to the font size of its own parent, so nested elements compound: 0.9em inside 0.9em inside 0.9em lands near 0.73 of the original. That compounding trap is why rem is the safer default whenever you want a predictable size.</p></details>
+    <details><summary data-i18n="faq.q2">Why use rem for font sizes instead of px?</summary><p data-i18n="faq.a2">A size in rem scales with whatever default font size the reader set in their browser, while a size in px ignores that preference completely. Someone who raised their default to 20px because 16px is hard to read gets no benefit from px-based type. WCAG 1.4.4 expects text to scale to 200% without breaking the layout, and rem-based type gets you most of the way there for free.</p></details>
+    <details><summary data-i18n="faq.q3">What is the 62.5% trick?</summary><p data-i18n="faq.a3">Setting html { font-size: 62.5% } makes the root 10px on a default browser, so 1rem = 10px and 2.4rem = 24px — the arithmetic becomes trivial. The cost is that you must reset body back to about 1.6rem or every unstyled element inherits 10px text, and any third-party CSS sized in rem shrinks by 37.5%. It still honours user zoom and user font-size settings, so it is a legitimate choice — just set the root field here to 10 to match.</p></details>
+    <details><summary data-i18n="faq.q4">When is px still the right unit?</summary><p data-i18n="faq.a4">Borders, box shadows, hairline rules and fixed raster artwork are usually better in px, because you want exactly one crisp rule rather than one that becomes 1.5px when someone scales their text. Media query breakpoints are a judgement call: em breakpoints react to the browser font size, px ones do not. The working rule is that anything tied to text should be rem, and anything tied to the device or a bitmap can stay px.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
