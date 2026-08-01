@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marks Percentage Calculator — Exam Marks to Percent</title>
+<meta name="description" content="Calculate your marks percentage from up to six subjects. Enter marks obtained and total marks for the overall exam percentage, subject split and grade band.">
+<meta name="keywords" content="marks percentage calculator, percentage of marks, exam percentage calculator, total marks percentage, how to calculate percentage of marks, marks to percentage">
+<link rel="canonical" href="https://tool-hub.me/marks-percentage-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marks Percentage Calculator — Exam Marks to Percent">
+<meta property="og:description" content="Calculate your marks percentage from up to six subjects. Enter marks obtained and total marks for the overall exam percentage, subject split and grade band.">
+<meta property="og:url" content="https://tool-hub.me/marks-percentage-calc/">
+<meta property="og:image" content="https://tool-hub.me/marks-percentage-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Marks Percentage Calculator",
+  "description": "Calculate your marks percentage from up to six subjects. Enter marks obtained and total marks for the overall exam percentage, subject split and grade band.",
+  "url": "https://tool-hub.me/marks-percentage-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Marks Percentage Calculator",
+      "item": "https://tool-hub.me/marks-percentage-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Marks Percentage Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Marks Percentage Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Add each subject's marks and its maximum. You get the overall percentage to two decimals, a per-subject split and a grade band.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .srow { display:grid; grid-template-columns:96px 1fr 1fr; gap:8px; align-items:center; margin-bottom:8px; }
+      #tool .srow input { margin:0; }
+      #tool .srow.head { font-size:12px; color:var(--muted); margin-bottom:4px; line-height:1.25; }
+      #tool .rlabel { font-size:13px; color:var(--muted); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .listtitle { font-size:13px; color:var(--muted); margin:14px 0 6px; }
+      #tool ul.breaklist { list-style:none; padding:0; margin:0; }
+      #tool ul.breaklist li { font-size:14px; padding:4px 0; border-bottom:1px solid var(--line); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:480px){ #tool .srow { grid-template-columns:64px 1fr 1fr; gap:6px; } #tool .srow.head { font-size:11px; } }
+    </style>
+
+    <p class="subtle" data-i18n="tool.hint" style="margin:0 0 10px;">Fill in the subjects you have — blank rows are skipped.</p>
+
+    <div class="srow head">
+      <div></div>
+      <div data-i18n="tool.h.obtained">Marks obtained</div>
+      <div data-i18n="tool.h.total">Out of</div>
+    </div>
+
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 1</div>
+      <input type="number" id="o1" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="78" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m1" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 2</div>
+      <input type="number" id="o2" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="85" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m2" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 3</div>
+      <input type="number" id="o3" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="62" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m3" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 4</div>
+      <input type="number" id="o4" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m4" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 5</div>
+      <input type="number" id="o5" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m5" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow">
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 6</div>
+      <input type="number" id="o6" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m6" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate percentage</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.pct">Overall percentage</div>
+          <div class="rc-val" id="r-pct">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.obtained">Total obtained</div><div class="rc-val" id="r-obtained">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.max">Total maximum</div><div class="rc-val" id="r-max">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.count">Subjects counted</div><div class="rc-val" id="r-count">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.grade">Grade band</div><div class="rc-val" id="r-grade">—</div></div>
+      </div>
+      <p class="listtitle" data-i18n="tool.r.breakdown">Per-subject breakdown</p>
+      <ul class="breaklist" id="r-breaklist"></ul>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.scale" style="margin-top:12px;">Grade bands follow the common Indian school scale. Boards, universities and schools set their own cut-offs — always check your own rules.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How to calculate a marks percentage</h2>
+    <p>The formula never changes, however many subjects you sat: add up every mark you obtained, add up every maximum mark available, divide the first by the second and multiply by 100. Written out, percentage = (total marks obtained ÷ total maximum marks) x 100. The reason people get it wrong is not the arithmetic but the totals: averaging the individual subject percentages only gives the same answer when every paper is out of the same maximum.</p>
+
+    <h3>Worked example: three subjects</h3>
+    <p>Say you scored 78 in Maths, 85 in English and 62 in Science, each paper out of 100. Total obtained is 78 + 85 + 62 = 225. Total maximum is 100 + 100 + 100 = 300. So the percentage is 225 ÷ 300 x 100 = 75.00%. On the common Indian school scale that lands in the B band, and it would also clear a 40% or 50% university cut-off comfortably.</p>
+    <p>Now change one paper: suppose Science was a practical worth only 50 marks and you scored 31 of them. Total obtained is 78 + 85 + 31 = 194 out of 100 + 100 + 50 = 250, which is 77.60%. Note what happened — averaging the three subject percentages (78%, 85%, 62%) would have given 75.00% again, but the weighted total says 77.60%, because the paper you did worst in carried half the weight of the others. That gap is exactly why this calculator sums marks rather than averaging percentages.</p>
+
+    <h3>Worked example: a six-subject board result</h3>
+    <p>A typical board result sheet might read 92, 88, 76, 81, 69 and 74, all out of 100. The total is 480 out of 600, giving 80.00% — the bottom edge of the A band. If your board reports a best-of-five percentage, drop the 69: the total becomes 411 out of 500, which is 82.20%. Same student, same exams, two legitimate numbers. Always check which rule your result sheet used before quoting a figure on an application form.</p>
+
+    <h2>Percentage is not percentile</h2>
+    <p>This trips up more candidates than any calculation error. A percentage measures you against the paper; a percentile measures you against everyone else who sat it. If 200,000 people take an entrance test and you finish ahead of 190,000 of them, you are at the 95th percentile — regardless of whether you scored 62% or 88%. In a brutally hard paper a 62% can be a 95th percentile score, and in an easy qualifying test a 90% can sit near the 60th percentile.</p>
+    <p>Competitive exams publish percentiles precisely because paper difficulty swings between sessions, and normalisation across shifts would be impossible with raw percentages. School boards publish percentages because they are measuring mastery of a syllabus, not rank. A calculator can give you the first; only the exam body, holding every candidate's score, can give you the second.</p>
+
+    <h2>Grade bands differ by board and country</h2>
+    <p>The bands shown here — 90 and above for A+, then 80, 70, 60 and 50 stepping down — reflect the scale most familiar to Indian school students. They are not universal. UK GCSE results run on 9-to-1 numbered grades with subject-specific boundaries that move each year after awarding. A US high school class usually treats 90 as an A, 80 a B and 70 a C, but with a 60% pass floor rather than 33%. Many universities publish their own conversion for international applicants, and it rarely matches the school scale.</p>
+    <p>Pass marks vary just as widely. Indian school boards commonly set 33% per subject, often requiring a separate pass in theory and practical components. Undergraduate programmes typically want 40% to 50%. Professional and postgraduate courses can demand 55% or 60% along with minimum subject-wise scores. Treat the grade band this tool shows as a quick descriptive label, never as a pass or fail verdict.</p>
+
+    <h2>Using the number to plan improvement</h2>
+    <p>Once you have the percentage, the useful question is what would move it. Because the calculation is weighted by maximum marks, gaining ten marks on a 100-mark paper lifts a 600-mark total by 1.67 percentage points, while ten marks on a 50-mark practical lifts it by the same 1.67 — the maximum in the denominator is what counts, not how hard the individual paper felt. Run the numbers twice in this calculator, once with your current marks and once with a realistic target, and you will see exactly how many marks each grade band actually costs.</p>
+    <p>The per-subject breakdown is there for the same reason. A subject sitting 20 points below your overall percentage is dragging the aggregate down more than the same gap in a half-weight paper, and it is usually the cheapest place to find marks. Students often chase their strongest subject from 88 to 92 when moving the weakest from 55 to 70 would do three times as much for the total.</p>
+
+    <h2>Limits of this calculator</h2>
+    <p>It assumes every mark you enter counts at face value. It does not apply subject weightings, internal-assessment ratios, moderation, grace marks, scaling between exam shifts or credit-hour weighting from a university transcript. If your institution weights a paper at 1.5x, enter the weighted marks and the weighted maximum yourself. And because the tool runs entirely in your browser, nothing you type is uploaded or stored anywhere.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/molar-mass-calc/"><span class="related-ico" aria-hidden="true">⚗️</span><span class="related-name">Molar Mass Calculator</span></a><a class="related-item" href="https://tool-hub.me/ohms-law-calc/"><span class="related-ico" aria-hidden="true">🔌</span><span class="related-name">Ohm's Law Calculator</span></a><a class="related-item" href="https://tool-hub.me/sig-fig-calc/"><span class="related-ico" aria-hidden="true">🔬</span><span class="related-name">Sig Fig Calculator</span></a><a class="related-item" href="https://tool-hub.me/attendance-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">Attendance Percentage Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between percentage and percentile?</summary><p data-i18n="faq.a1">A percentage is absolute: 225 out of 300 is 75%, whatever anyone else scored. A percentile is relative: being in the 75th percentile means you beat 75% of the candidates who sat the same exam. In a hard paper a 62% can be a 95th percentile, and in an easy one a 90% can sit near the 60th percentile. This tool gives percentage only, because percentile needs the whole cohort's marks.</p></details>
+    <details><summary data-i18n="faq.q2">My board drops my weakest subject. How do I enter that?</summary><p data-i18n="faq.a2">Enter only the subjects that count. Many boards compute the reported percentage on a best-of rule — best five of six, or the four scoring subjects plus the language. Leave the dropped subject's row blank and the calculator skips it entirely, so the total maximum falls with it. Compare both versions if you are unsure which rule your result sheet used.</p></details>
+    <details><summary data-i18n="faq.q3">How do I convert this percentage to CGPA?</summary><p data-i18n="faq.a3">The CBSE convention is the reverse of the CGPA formula: percentage = CGPA x 9.5, so CGPA = percentage / 9.5. A 75% works out to a CGPA of about 7.9. That 9.5 multiplier is a CBSE-specific convention and does not apply to universities on a 4.0 or 10.0 GPA scale, which use their own grade-point tables.</p></details>
+    <details><summary data-i18n="faq.q4">What counts as a pass?</summary><p data-i18n="faq.a4">Most Indian school boards set 33% as the pass mark per subject, and many also require a pass in each paper separately rather than only on the aggregate. Universities typically sit higher, at 40% to 50%, and professional courses can ask for more. The grade band shown here is descriptive, not a pass or fail decision — your institution's rule book decides that.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

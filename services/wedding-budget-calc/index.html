@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Budget Calculator — Cost Breakdown by Category</title>
+<meta name="description" content="Split a wedding budget across venue, catering, photography, attire, flowers and music using industry percentages, and see your real cost per guest.">
+<meta name="keywords" content="wedding budget calculator, wedding cost breakdown, how much does a wedding cost, wedding budget percentages, cost per wedding guest, wedding budget planner">
+<link rel="canonical" href="https://tool-hub.me/wedding-budget-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wedding Budget Calculator — Cost Breakdown by Category">
+<meta property="og:description" content="Split a wedding budget across venue, catering, photography, attire, flowers and music using industry percentages, and see your real cost per guest.">
+<meta property="og:url" content="https://tool-hub.me/wedding-budget-calc/">
+<meta property="og:image" content="https://tool-hub.me/wedding-budget-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be185d">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Wedding Budget Calculator",
+  "description": "Split a wedding budget across venue, catering, photography, attire, flowers and music using industry percentages, and see your real cost per guest.",
+  "url": "https://tool-hub.me/wedding-budget-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Wedding Budget Calculator",
+      "item": "https://tool-hub.me/wedding-budget-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Wedding Budget Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Wedding Budget Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter a total and a guest count. Get the line-item split planners actually use.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:28px; }
+      #tool .rcard .rc-note { font-size:13px; color:var(--muted); margin-top:4px; }
+      #tool table.split { width:100%; border-collapse:collapse; margin-top:14px; font-size:14px; }
+      #tool table.split th, #tool table.split td { text-align:left; padding:8px; border-bottom:1px solid var(--line); }
+      #tool table.split th { color:var(--muted); font-weight:600; }
+      #tool table.split td.num { text-align:right; white-space:nowrap; }
+      #tool table.split td.amt { text-align:right; font-weight:700; white-space:nowrap; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:480px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="budget" data-i18n="tool.budget.label">Total wedding budget</label>
+        <input type="number" id="budget" inputmode="decimal" min="1" max="10000000" step="any" autocomplete="off" placeholder="25000">
+      </div>
+      <div>
+        <label for="guests" data-i18n="tool.guests.label">Guest count</label>
+        <input type="number" id="guests" inputmode="numeric" min="1" max="2000" step="1" autocomplete="off" placeholder="100">
+      </div>
+    </div>
+
+    <label for="priority" data-i18n="tool.priority.label">Spending priority</label>
+    <select id="priority">
+      <option value="balanced" data-i18n="tool.priority.balanced">Balanced — standard breakdown</option>
+      <option value="venue" data-i18n="tool.priority.venue">Food &amp; venue first</option>
+      <option value="photo" data-i18n="tool.priority.photo">Photos &amp; video first</option>
+      <option value="party" data-i18n="tool.priority.party">Party &amp; music first</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Build my budget</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.perguest">Cost per guest</div>
+          <div class="rc-val" id="r-perguest">—</div>
+          <div class="rc-note" id="r-badge"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.top">Largest line item</div><div class="rc-val" id="r-top">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.buffer">Buffer held back</div><div class="rc-val" id="r-buffer">—</div></div>
+      </div>
+      <table class="split">
+        <thead><tr>
+          <th data-i18n="tool.th.cat">Category</th>
+          <th class="num" data-i18n="tool.th.pct">Share</th>
+          <th class="amt" data-i18n="tool.th.amt">Amount</th>
+        </tr></thead>
+        <tbody id="split-body"></tbody>
+      </table>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.est" style="margin-top:12px;">Currency-neutral: enter dollars, pounds or euros and the split holds. Percentages follow US and UK vendor averages — real quotes swing with city, season and day of week.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a wedding budget actually splits up</h2>
+    <p>Almost every published wedding budget breakdown agrees on the shape, if not the decimals: food and the room it is served in eat close to half the money, photography is the next serious line, and everything else fights over what is left. The percentages in this calculator follow that consensus — venue and catering 45%, photography and video 12%, flowers and decor 10%, attire and beauty 9%, music 8%, then transport, rings, stationery, cake and a deliberate 5% buffer. They add to exactly 100, so shifting a priority moves points between categories instead of quietly inflating your total.</p>
+
+    <h3>Worked example: 25,000 dollars, 100 guests</h3>
+    <p>Run the balanced preset on a 25,000 budget and you get venue and catering 11,250; photography and video 3,000; flowers and decor 2,500; attire and beauty 2,250; music 2,000; transport and lodging 750; rings 750; stationery 750; cake 500; and a buffer of 1,250. Per guest that is 250 — the bottom edge of what US couples typically report, and a number most caterers in a mid-size metro can work with if you keep the bar simple and skip a plated four-course service.</p>
+    <p>Switch to "food and venue first" and the venue line goes to 53% — 13,250 — funded by trimming flowers to 7%, attire to 7%, music to 6% and stationery to 2%. Choose "photos and video first" and photography doubles to 20% (5,000), paid for mostly out of the venue line dropping to 40%. The party preset pushes music and entertainment to 15%, which is roughly what a good eight-piece band costs before travel.</p>
+
+    <h3>The per-guest number is the one that matters</h3>
+    <p>Total budget divided by head count is the single most useful figure on this page, because it is the number your venue quotes against. US averages land somewhere around 250 to 350 per guest once catering, bar, rentals, cake, stationery and favours are counted. Below 150 a head you are in DIY, brunch, backyard or dry-bar territory; above 350 you are buying either a premium market or a premium level of service.</p>
+    <p>This is also why guest count is the strongest lever anyone has. A 25,000 budget across 100 guests gives 250 each. The same 25,000 across 75 guests gives 333 — you just bought yourself a full service tier without finding another dollar. Cutting 25 guests typically saves 3,000 to 5,000 in direct catering and bar costs alone, before rentals and stationery.</p>
+
+    <h2>Three cuts that actually move the number</h2>
+    <p><strong>1. Move the day.</strong> A Friday or Sunday date commonly saves 10 to 20% on the venue line, and an off-season month (January through March in most of the US, November in much of the UK) can save more. On a 25,000 budget with an 11,250 venue line, that is 1,100 to 2,200 back.</p>
+    <p><strong>2. Change the bar model.</strong> Full open bar with spirits runs 40 to 70 per head in many markets. Beer, wine and one signature cocktail runs 20 to 30. Across 100 guests that swap is 2,000 to 4,000 — comparable to cutting the entire flower budget, and far fewer people will notice.</p>
+    <p><strong>3. Shorten the photography package.</strong> Ten hours with two shooters and an album is a different product from eight hours with one shooter and digital files. The gap is often 1,500 to 2,500, and most couples' favourite images come from the ceremony and the first hour of the reception anyway.</p>
+
+    <h2>Why the buffer line exists</h2>
+    <p>Weddings run over. Dress alterations arrive as three separate invoices, the caterer's final count comes in four people higher than your RSVP list, the venue adds an overtime hour at 500, tips run 15 to 20% for hair, makeup and drivers, and the marriage licence, postage and welcome bags all show up unbudgeted. Holding 5% back is not padding — it is the difference between finishing on plan and putting the last 1,200 on a credit card.</p>
+
+    <h3>Limitations worth knowing</h3>
+    <p>These percentages are averages of a very wide distribution. A city hall ceremony with a restaurant dinner inverts them entirely, since there is no venue rental and catering is per plate. Heavy DIY shifts money from labour to materials but adds time cost. Cultural traditions change the weighting completely — a South Asian multi-day celebration or a Korean pyebaek carries costs this ten-line model simply does not have. Treat the output as a starting frame you adjust against two or three real local quotes, not a fixed allocation.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/wind-chill-calc/"><span class="related-ico" aria-hidden="true">🥶</span><span class="related-name">Wind Chill Calculator</span></a><a class="related-item" href="https://tool-hub.me/board-foot-calc/"><span class="related-ico" aria-hidden="true">🪵</span><span class="related-name">Board Foot Calculator</span></a><a class="related-item" href="https://tool-hub.me/bra-size-calc/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Bra Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/btu-calc/"><span class="related-ico" aria-hidden="true">❄️</span><span class="related-name">BTU Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the biggest lever for cutting a wedding budget?</summary><p data-i18n="faq.a1">Guest count, by a wide margin. Catering, bar, rentals, cake, invitations and favours all scale per head, which is roughly 55 to 60 percent of a typical budget. Cutting 100 guests to 75 saves more than switching photographers ever will, and it usually improves the day rather than shrinking it.</p></details>
+    <details><summary data-i18n="faq.q2">How much does the average US wedding cost?</summary><p data-i18n="faq.a2">National surveys put the average around 30,000 to 35,000 dollars for roughly 100 guests, but the spread is enormous. Manhattan, Chicago and coastal California routinely run 50,000 and up, while much of the Midwest and South lands closer to 20,000. Use your own metro's numbers, not the national headline.</p></details>
+    <details><summary data-i18n="faq.q3">What costs do couples forget to budget for?</summary><p data-i18n="faq.a3">The classic misses are dress alterations, vendor tips, the marriage licence, day-of meals for the photographer and band, postage, welcome bags, overtime fees and the trial hair and makeup run. Together they often total 5 to 8 percent of the budget, which is exactly what the buffer line in this tool is holding.</p></details>
+    <details><summary data-i18n="faq.q4">When are wedding payments actually due?</summary><p data-i18n="faq.a4">Most vendors take a deposit of 25 to 50 percent at booking, 9 to 14 months out, with the balance due 2 to 4 weeks before the date. Venues and caterers usually want a final headcount 10 to 14 days ahead, and that number is what you pay for. Plan cash flow around two spikes: booking season and the final month.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
