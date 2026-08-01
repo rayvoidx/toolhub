@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Binary Translator — Text to Binary and Back</title>
+<meta name="description" content="Convert text to binary and translate binary code back to readable text in one click. UTF-8 safe, 8-bit byte groups, with live character and byte counts.">
+<meta name="keywords" content="binary translator, text to binary, binary to text, binary code translator, binary converter, ascii to binary">
+<link rel="canonical" href="https://tool-hub.me/binary-translator/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Binary Translator — Text to Binary and Back">
+<meta property="og:description" content="Convert text to binary and translate binary code back to readable text in one click. UTF-8 safe, 8-bit byte groups, with live character and byte counts.">
+<meta property="og:url" content="https://tool-hub.me/binary-translator/">
+<meta property="og:image" content="https://tool-hub.me/binary-translator/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Binary Translator",
+  "description": "Convert text to binary and translate binary code back to readable text in one click. UTF-8 safe, 8-bit byte groups, with live character and byte counts.",
+  "url": "https://tool-hub.me/binary-translator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Binary Translator",
+      "item": "https://tool-hub.me/binary-translator/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Binary Translator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Binary Translator</h1>
+    <p class="lede" data-i18n="hero.lede">Type a sentence, get its bytes. Paste 8-bit groups, get the sentence back.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool textarea { width:100%; min-height:110px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+        font-size:13px; line-height:1.6; }
+      #tool textarea#out { background:var(--bg); word-break:break-all; }
+      #tool .out-head { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:14px; }
+      #tool .out-head label { margin:0; }
+      #tool .copy-btn { padding:6px 11px; font-size:12px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .copy-btn:hover { border-color:var(--accent); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="direction" data-i18n="tool.dir.label">Direction</label>
+    <select id="direction">
+      <option value="t2b" data-i18n="tool.dir.t2b">Text to binary</option>
+      <option value="b2t" data-i18n="tool.dir.b2t">Binary to text</option>
+    </select>
+
+    <label for="src" data-i18n="tool.input.label">Text or binary code</label>
+    <textarea id="src" spellcheck="false" autocomplete="off" placeholder="Hello"></textarea>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Translate</button>
+
+    <div id="result" hidden>
+      <div class="out-head">
+        <label for="out" data-i18n="tool.r.out">Output</label>
+        <button type="button" class="copy-btn" id="copy-btn" data-i18n="tool.copy">Copy</button>
+      </div>
+      <textarea id="out" readonly spellcheck="false"></textarea>
+      <div class="result-cards">
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.chars">Characters</div><div class="rc-val" id="r-chars">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.bytes">Bytes</div><div class="rc-val" id="r-bytes">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.bits">Binary digits</div><div class="rc-val" id="r-bits">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.local" style="margin-top:12px;">Everything is translated in your browser — nothing you type is uploaded.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How text becomes binary</h2>
+    <p>Computers do not store letters. They store numbers, and every number is a row of switches that are either off (0) or on (1). Translating text to binary is therefore a two-step job: first look up the number assigned to each character, then write that number in base 2 and pad it to a fixed width of eight digits. Eight is not arbitrary — eight bits make one byte, the smallest chunk of memory a processor addresses directly, so every group here lines up with one real byte in a real file.</p>
+
+    <h3>Worked example: "Hello" byte by byte</h3>
+    <p>ASCII assigns H = 72, e = 101, l = 108, l = 108, o = 111. Convert 72 to base 2 and you get 1001000, which is only seven digits, so a leading zero pads it to 01001000. Repeat for each letter and you get the full translation:</p>
+    <table>
+      <thead><tr><th>Character</th><th>Decimal</th><th>Hex</th><th>Binary (8 bit)</th></tr></thead>
+      <tbody>
+        <tr><td>H</td><td>72</td><td>48</td><td>01001000</td></tr>
+        <tr><td>e</td><td>101</td><td>65</td><td>01100101</td></tr>
+        <tr><td>l</td><td>108</td><td>6C</td><td>01101100</td></tr>
+        <tr><td>l</td><td>108</td><td>6C</td><td>01101100</td></tr>
+        <tr><td>o</td><td>111</td><td>6F</td><td>01101111</td></tr>
+      </tbody>
+    </table>
+    <p>So "Hello" is <strong>01001000 01100101 01101100 01101100 01101111</strong> — five characters, five bytes, 40 binary digits. Check one by hand if you like: 01001000 reads as 64 + 8, which is 72, which is capital H. Paste that string back into the tool with the direction set to binary to text and the word comes straight back out.</p>
+
+    <h3>Reading a byte without a calculator</h3>
+    <p>The eight positions carry the values 128, 64, 32, 16, 8, 4, 2 and 1, left to right. Add up the values sitting under a 1 and you have the byte. For 01100101 that is 64 + 32 + 4 + 1 = 101, the letter e. This is the whole trick behind every "decode the binary" puzzle in a homework sheet or an escape room, and it is worth doing once by hand before you trust a converter.</p>
+    <p>You may also notice that every ASCII letter starts with 0. Original ASCII only defined 128 characters, which fit in seven bits, so the eighth bit was spare. That spare bit turned out to be the hook that made Unicode possible.</p>
+
+    <h2>Beyond ASCII: what UTF-8 changes</h2>
+    <p>English text is the easy case. The moment you type café, Москва, 東京 or an emoji, one character stops equalling one byte. UTF-8 solves this by making the length variable and using that spare high bit as a flag: a byte starting with 0 is a standalone ASCII character, a byte starting with 110 opens a two-byte sequence, 1110 opens three bytes, and 11110 opens four. Continuation bytes always start with 10, which is what lets a decoder resynchronise in the middle of a stream.</p>
+    <p>Concretely, é is U+00E9 and encodes as two bytes, 11000011 10101001. A grinning face emoji is U+1F600 and encodes as four bytes, 11110000 10011111 10011000 10000000 — 32 binary digits for a single character. That is why this translator shows a character count and a byte count separately: for plain English they match, and for anything else the gap is the point. If you decode a stray pair of bytes that does not follow those rules, the tool refuses rather than printing a replacement diamond, because a silent U+FFFD hides the actual problem.</p>
+
+    <h2>What people actually use this for</h2>
+    <p>Three uses dominate. Students working through a computer science unit convert their name to binary and back to prove they understand place value and character encoding. Developers debugging a protocol want to see the exact bit pattern of a header byte, especially when a flag lives in a single bit. And hobbyists building novelty projects — binary clocks, cross-stitch patterns, engraved jewellery, geocaching puzzles — need a clean string of 0s and 1s that they can trust.</p>
+    <p>For all three, the reverse direction matters as much as the forward one. Paste in the groups you were handed, drop the spaces if you like — the parser strips all whitespace before decoding — and read the message. If a digit is wrong you get told which position broke the rule instead of a blank screen.</p>
+
+    <h3>Limitations worth knowing</h3>
+    <p>Binary is not encryption. Anyone can decode it in seconds, so it hides nothing; treat it as a display format, not a secret. It is also bulky: eight characters of output for every byte, which is why hexadecimal (two characters per byte) is standard in hex dumps and colour codes. Finally, this tool assumes UTF-8, today's default on the web. Text saved as UTF-16 or a legacy code page such as Windows-1252 will produce different bytes, and pasting those bytes here may fail validation — correctly, because they are not valid UTF-8.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/box-shadow-generator/"><span class="related-ico" aria-hidden="true">🔲</span><span class="related-name">Box Shadow Generator</span></a><a class="related-item" href="https://tool-hub.me/chmod-calc/"><span class="related-ico" aria-hidden="true">🔐</span><span class="related-name">Chmod Calculator</span></a><a class="related-item" href="https://tool-hub.me/color-contrast-checker/"><span class="related-ico" aria-hidden="true">♿</span><span class="related-name">Color Contrast Checker</span></a><a class="related-item" href="https://tool-hub.me/color-conv/"><span class="related-ico" aria-hidden="true">◐</span><span class="related-name">HEX to RGB Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is each character eight bits?</summary><p data-i18n="faq.a1">Eight bits make one byte, and computers address memory a byte at a time. Plain ASCII only needs seven bits, so the eighth is a leading zero — that is why every letter here starts with a 0. UTF-8 uses that spare bit as a flag to chain extra bytes for characters beyond ASCII.</p></details>
+    <details><summary data-i18n="faq.q2">Do the spaces between groups matter?</summary><p data-i18n="faq.a2">No. The spaces are there so humans can read the output; the translator strips all whitespace, including line breaks, before decoding. You can paste one unbroken string of 0s and 1s and it will still work, as long as the total count divides evenly by eight.</p></details>
+    <details><summary data-i18n="faq.q3">Why does one emoji produce four groups?</summary><p data-i18n="faq.a3">UTF-8 is variable width: ASCII characters take one byte, accented Latin and Greek take two, most CJK characters take three, and emoji take four. A smiley is therefore 32 binary digits, not 8. The character and byte counters show the difference side by side.</p></details>
+    <details><summary data-i18n="faq.q4">Binary or hexadecimal — which should I use?</summary><p data-i18n="faq.a4">They describe the same bytes at different zoom levels. Hex packs one byte into two digits, so "Hello" is 48 65 6C 6C 6F instead of 40 binary digits. Binary is better for teaching bit patterns and masks; hex is better for dumps, colours and anything you have to read at length.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

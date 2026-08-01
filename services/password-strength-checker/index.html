@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Strength Checker — Entropy &amp; Crack Time</title>
+<meta name="description" content="Check how strong your password is right in the browser: entropy in bits, offline and online crack times, and warnings for common patterns. Nothing is sent.">
+<meta name="keywords" content="password strength checker, how strong is my password, password checker, password entropy, password crack time, check password security">
+<link rel="canonical" href="https://tool-hub.me/password-strength-checker/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Password Strength Checker — Entropy &amp; Crack Time">
+<meta property="og:description" content="Check how strong your password is right in the browser: entropy in bits, offline and online crack times, and warnings for common patterns. Nothing is sent.">
+<meta property="og:url" content="https://tool-hub.me/password-strength-checker/">
+<meta property="og:image" content="https://tool-hub.me/password-strength-checker/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Password Strength Checker",
+  "description": "Check how strong your password is right in the browser: entropy in bits, offline and online crack times, and warnings for common patterns. Nothing is sent.",
+  "url": "https://tool-hub.me/password-strength-checker/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Password Strength Checker",
+      "item": "https://tool-hub.me/password-strength-checker/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Password Strength Checker</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Password Strength Checker</h1>
+    <p class="lede" data-i18n="hero.lede">How many bits of entropy does your password really have — and how long would a real attack take?</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .gauge { height:10px; border-radius:6px; background:var(--line); overflow:hidden; margin:14px 0 4px; }
+      #tool .gauge span { display:block; height:100%; width:0; border-radius:6px; background:#dc2626; transition:width .15s linear; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:10px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+      #tool .chips .flag { font-size:13px; border:1px solid var(--line); border-radius:999px; padding:4px 10px; }
+      #tool .chips .flag.bad { border-color:#f59e0b; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      #tool input#pw { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+    </style>
+
+    <label for="pw" data-i18n="tool.pw.label">Password to test</label>
+    <input type="text" id="pw" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="MyP@ssw0rd2026">
+
+    <div id="result" hidden>
+      <div class="gauge" id="gauge" role="img" aria-label="Strength"><span id="gauge-fill"></span></div>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.strength">Strength</div>
+          <div class="rc-val" id="r-band">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.entropy">Entropy</div><div class="rc-val" id="r-bits">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.offline">Offline cracking (10 billion guesses/sec)</div><div class="rc-val" id="r-offline">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.online">Online attack (10,000 guesses/sec)</div><div class="rc-val" id="r-online">—</div></div>
+      </div>
+      <div class="chips" id="flags"></div>
+    </div>
+
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" id="hint" data-i18n="tool.hint.empty">Type or paste a password to see its entropy, strength band and crack time.</p>
+    <p class="subtle" data-i18n="tool.pw.note">Everything runs in your browser — nothing is sent, saved or logged. Even so, test a password of the same shape rather than the one you actually use.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What "strong" actually means</h2>
+    <p>A password is strong when guessing it costs more than it is worth. That cost is measured in entropy: the base-2 logarithm of how many passwords an attacker would have to try. The formula this page uses is the standard one — entropy = length x log2(pool size) — where the pool is the set of characters your password draws from. Lowercase adds 26 possibilities per position, uppercase another 26, digits 10, and printable symbols about 33. Use all four and the pool is 95.</p>
+    <p>The crucial part is that length is an exponent and the pool is only the base. Every extra character multiplies the total number of candidates by the pool size, so an eight-character password from the full 95-character pool has 95^8 combinations, roughly 6.6 quadrillion, which is 52 bits. That sounds enormous until you price it: a rig of consumer GPUs attacking a fast hash does about 10 billion guesses per second, so it needs around four days on average. Sixteen characters from the same pool gives 105 bits and would take longer than the age of the universe on the same hardware.</p>
+
+    <h3>Worked example: eight characters versus sixteen</h3>
+    <p>Take "Tr0ub4dor" style thinking. "Xk7#pQ2z" is eight characters, all four classes, so entropy is 8 x log2(95) = 52.6 bits. Average offline crack time at 10 billion guesses per second: 2^51.6 / 10^10 seconds, which is about four days. Now take "Xk7#pQ2zLm9$Rt4W" — the same style at sixteen characters. Entropy doubles to 105 bits, and the same attack needs about 2^104 / 10^10 seconds, or roughly 6.4 x 10^13 years. Nothing changed except length, and the answer moved from a weekend to longer than the sun will burn.</p>
+
+    <h3>Worked example: the four-word passphrase</h3>
+    <p>Now compare a passphrase drawn from a 7,776-word list, the standard Diceware set. Each word contributes log2(7776) = 12.9 bits, so four random words give 51.7 bits and six words give 77.5 bits. Four words are already level with that eight-character symbol soup — and a six-word phrase like "cargo ripple maple fondue verdict spiral" is around 77 bits, which at 10 billion guesses per second averages about 300 million years. The catch is that the words must be chosen randomly, by dice or software. A phrase you invented yourself, such as a song lyric, is worth a fraction of that because attackers seed their dictionaries with lyrics, film titles and sports chants.</p>
+
+    <h2>Why this tool subtracts points</h2>
+    <p>Raw entropy assumes every character was picked at random. Real passwords are not random, and cracking software knows it: John the Ripper and hashcat run rule-based attacks that append years, capitalise the first letter, substitute 3 for e and 0 for o, and walk keyboard rows. So the checker looks for those shapes and reduces the estimate accordingly. A common base word cuts the result hardest, because a dictionary attack tries all of them within the first few thousand guesses. Sequences (abc, 321), triple characters, keyboard runs (qwerty, asdfg) and four-digit years each shave a further slice.</p>
+    <p>That is why "P@ssw0rd2026" scores far worse than its twelve characters suggest. The pool is 95 and the raw figure is around 79 bits, but the leetspeak reverses to a top-ten dictionary word and the year is one of about 130 plausible options, so the realistic search space is tiny. The colour band you see reflects the reduced figure, not the flattering one.</p>
+
+    <h2>Breach reality, and what this tool cannot see</h2>
+    <p>Most accounts are not lost to brute force at all. They are lost because a password was reused on a site that got breached, and credential-stuffing bots replayed it everywhere else. Billions of username and password pairs circulate in combolists, and no amount of entropy protects a password that already appears in one. This checker works fully offline, so it cannot tell you whether your password has been exposed in a breach — it only measures structure. For that, use a service that checks with k-anonymity hashing, or better, let a password manager flag reused and breached entries for you.</p>
+    <p>Two more limits worth stating plainly. First, crack-time numbers depend entirely on the hash the site chose: 10 billion guesses per second is realistic for unsalted MD5 or SHA-1, while bcrypt at a sensible cost factor drops attackers to a few thousand per second, making even mediocre passwords survive. You do not control that choice, so plan for the fast case. Second, entropy says nothing about phishing, keyloggers or a leaked session token. Turn on two-factor authentication — an app or hardware key, not SMS if you can avoid it — and a compromised password stops being a compromised account.</p>
+    <p>Practical targets for 2026: 12 characters minimum for anything routine, 16 or more for email and banking, since email is the reset path for everything else, and unique everywhere. Aim for 60 bits and up on this gauge for accounts that matter, and treat anything under 36 bits as a placeholder you should replace today.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/regex-tester/"><span class="related-ico" aria-hidden="true">🧪</span><span class="related-name">Regex Tester</span></a><a class="related-item" href="https://tool-hub.me/sql-formatter/"><span class="related-ico" aria-hidden="true">🗄️</span><span class="related-name">SQL Formatter</span></a><a class="related-item" href="https://tool-hub.me/subnet-calc/"><span class="related-ico" aria-hidden="true">🌐</span><span class="related-name">IP Subnet Calculator</span></a><a class="related-item" href="https://tool-hub.me/unix-timestamp-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Unix Timestamp Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What does password entropy in bits mean?</summary><p data-i18n="faq.a1">Entropy counts how many guesses an attacker needs, on a log scale: every extra bit doubles the work. Forty bits is about a trillion guesses, and 80 bits is a trillion times harder than that. This tool estimates entropy as length x log2(character pool), then trims it when it spots a predictable pattern.</p></details>
+    <details><summary data-i18n="faq.q2">Is length or complexity more important?</summary><p data-i18n="faq.a2">Length wins, and it is not close. Each extra lowercase letter multiplies the search space by 26, while adding one symbol to a short password multiplies it just once. Four random common words carry roughly 44 bits and beat P@ss1! at every attack rate, while being far easier to remember.</p></details>
+    <details><summary data-i18n="faq.q3">Is it safe to type my password into a checker?</summary><p data-i18n="faq.a3">As a rule, no — most online checkers post the text to a server, where it can be logged. This one does all of its maths in your browser with no network request, and nothing is stored. Even so, the safe habit is to test a password of the same shape rather than your live one.</p></details>
+    <details><summary data-i18n="faq.q4">Should I just use a password manager?</summary><p data-i18n="faq.a4">For almost every account, yes. A manager generates 20 or more random characters per site, which is well past 120 bits, so you never reuse a password and never have to memorise one. Keep a single long passphrase as the master key and let the manager carry the rest.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
