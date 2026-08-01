@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wheelchair Ramp Calculator — ADA Slope &amp; Length</title>
+<meta name="description" content="Work out ramp length, slope ratio, degrees and landings from your total rise. ADA 1:12 public access plus steeper residential and loading limits.">
+<meta name="keywords" content="ramp slope calculator, wheelchair ramp calculator, ada ramp slope, ramp length calculator, 1:12 ramp slope, ramp landing requirements">
+<link rel="canonical" href="https://tool-hub.me/ramp-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wheelchair Ramp Calculator — ADA Slope &amp; Length">
+<meta property="og:description" content="Work out ramp length, slope ratio, degrees and landings from your total rise. ADA 1:12 public access plus steeper residential and loading limits.">
+<meta property="og:url" content="https://tool-hub.me/ramp-calc/">
+<meta property="og:image" content="https://tool-hub.me/ramp-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Wheelchair Ramp Calculator",
+  "description": "Work out ramp length, slope ratio, degrees and landings from your total rise. ADA 1:12 public access plus steeper residential and loading limits.",
+  "url": "https://tool-hub.me/ramp-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Wheelchair Ramp Calculator",
+      "item": "https://tool-hub.me/ramp-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Wheelchair Ramp Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Wheelchair Ramp Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter the rise. Get the ramp run, slope in degrees, landings and the handrail rule.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .notes { margin-top:12px; display:grid; gap:6px; }
+      #tool .notes p { margin:0; font-size:13px; color:var(--muted); }
+      #tool .notes p.warn { color:#b45309; font-weight:600; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="rise" data-i18n="tool.rise.label">Total rise — ground to top of the deck</label>
+        <input type="number" id="rise" inputmode="decimal" min="0" max="620" step="any" autocomplete="off" placeholder="24">
+      </div>
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement unit</label>
+        <select id="unit">
+          <option value="in" data-i18n="tool.unit.in">Inches</option>
+          <option value="cm" data-i18n="tool.unit.cm">Centimetres</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="app" data-i18n="tool.app.label">Application</label>
+    <select id="app">
+      <option value="ada" data-i18n="tool.app.ada">ADA public access — 1:12 maximum</option>
+      <option value="res" data-i18n="tool.app.res">Residential, occupied — 1:8 maximum (assisted)</option>
+      <option value="unocc" data-i18n="tool.app.unocc">Unoccupied loading — 1:6 maximum</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate ramp</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.length">Ramp run</div>
+          <div class="rc-val" id="r-length">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.slope">Slope</div><div class="rc-val" id="r-slope">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.landings">Landings needed</div><div class="rc-val" id="r-landings">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.handrail">Handrails</div><div class="rc-val" id="r-handrail">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.footprint">Total space incl. landings</div><div class="rc-val" id="r-footprint">—</div></div>
+      </div>
+      <div class="notes" id="notes"></div>
+    </div>
+    <p class="err" id="err" hidden></p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Total rise is the only measurement that matters at the start</h2>
+    <p>Every ramp question — how long, how many landings, what it will cost — comes out of one number: the total rise. That is the vertical distance from the finished ground surface where the ramp will land to the top of the deck, porch or threshold you are trying to reach. Measure it with a level laid across the top surface and a tape dropped to the ground at the point where the ramp will actually end, not at the base of the step. On a sloped yard those two points can differ by several inches, and that error carries straight through to the ramp length.</p>
+    <p>Count the threshold. If the door sill sits three-quarters of an inch above the deck, that is part of the rise. Under the ADA a change in level over half an inch has to be ramped or bevelled, so a "flush" doorway often is not.</p>
+
+    <h3>Worked example: a 24-inch porch at 1:12</h3>
+    <p>A typical American porch with two steps sits about 24 inches above grade. At the ADA slope of 1:12 the ramp run is 24 x 12 = 288 inches, which is 24 feet, or 7.32 metres. Because 24 inches is under the 30-inch-per-run limit, no intermediate landing is needed — but you still need a level landing at the bottom and one at the top, each at least 60 by 60 inches. Add those and the ramp occupies roughly 34 feet of straight yard. That is why most 24-inch ramps get built as an L or a switchback: a 34-foot straight shot rarely fits between a house and a driveway.</p>
+
+    <h3>Worked example: 36 inches, where landings kick in</h3>
+    <p>Raise the deck to 36 inches and the arithmetic changes shape. The run becomes 36 x 12 = 432 inches, or 36 feet, and now the rise exceeds the 30-inch maximum per run, so one intermediate landing is required. The ramp is built as two runs — say 18 inches of rise each, 18 feet apiece — with a 5-foot level platform between them. Total footprint: 36 feet of ramp plus 15 feet of landings, about 51 feet. A switchback turns that into roughly 26 feet of length in each direction, which is usually the only version that fits a suburban lot.</p>
+
+    <h2>Slope ratios, and what each one actually feels like</h2>
+    <table>
+      <thead><tr><th>Slope</th><th>Angle</th><th>Grade</th><th>Run per 12 in of rise</th><th>Use</th></tr></thead>
+      <tbody>
+        <tr><td>1:20</td><td>2.9°</td><td>5.0%</td><td>20 ft</td><td>Walkway, no handrails required</td></tr>
+        <tr><td>1:12</td><td>4.8°</td><td>8.3%</td><td>12 ft</td><td>ADA maximum for public access</td></tr>
+        <tr><td>1:10</td><td>5.7°</td><td>10.0%</td><td>10 ft</td><td>Residential, occupied, assisted</td></tr>
+        <tr><td>1:8</td><td>7.1°</td><td>12.5%</td><td>8 ft</td><td>Residential ceiling, assistant required</td></tr>
+        <tr><td>1:6</td><td>9.5°</td><td>16.7%</td><td>6 ft</td><td>Unoccupied loading only</td></tr>
+      </tbody>
+    </table>
+    <p>The jump from 1:12 to 1:8 sounds small and is not. Pushing a chair up 1:8 takes roughly half again the force of 1:12, and on the way down an unassisted user has to brake with their hands on the rims for the whole descent. If the person using the ramp travels alone, treat 1:12 as the ceiling regardless of what your local code permits.</p>
+
+    <h3>Portable, modular or built in place</h3>
+    <p>Under about 12 inches of rise, a portable aluminium ramp — a folding suitcase ramp or a threshold wedge — often solves the problem for a couple of hundred dollars and can go in a car boot. Between 12 and 30 inches, modular aluminium systems are the sweet spot in the US and UK: they bolt together, need no footings in most jurisdictions, come with code-compliant handrails, and can be resold or rented when they are no longer needed. Above 30 inches, or where the ramp must last a decade and match the house, site-built timber or concrete usually wins on cost per foot even though it needs footings and inspection.</p>
+
+    <h2>Surface, edges and handrails</h2>
+    <p>The running surface must be firm, stable and slip-resistant, and it has to shed water — a ramp that ices over is worse than the steps it replaced. Grooved decking, broom-finished concrete or expanded metal all work; smooth painted plywood does not. Edge protection is mandatory: a curb at least 2 inches high, an extended surface, or a rail low enough that a caster cannot drop off the side. Handrails are required on both sides whenever the rise exceeds 6 inches, mounted 34 to 38 inches above the surface, graspable around their full circumference, and extended 12 inches horizontally past the top and bottom of each run so a user can hold on while transitioning to level ground.</p>
+
+    <h2>What this calculator cannot decide for you</h2>
+    <p>These numbers are the geometry, not the permit. Local building codes, homeowners' association rules, historic-district review and setback limits all sit on top of the ADA and IBC figures, and some are stricter. The ADA itself governs public accommodations and commercial facilities; a private single-family home is normally exempt, which is exactly why the residential exceptions exist. Where a permit is required, the inspector's reading of your local code is final — bring this calculation as a starting drawing, not as an argument.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/rebar-calc/"><span class="related-ico" aria-hidden="true">🔩</span><span class="related-name">Rebar Calculator</span></a><a class="related-item" href="https://tool-hub.me/recipe-scaler/"><span class="related-ico" aria-hidden="true">🍲</span><span class="related-name">Recipe Scaler</span></a><a class="related-item" href="https://tool-hub.me/retaining-wall-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Retaining Wall Calculator</span></a><a class="related-item" href="https://tool-hub.me/roof-pitch-calc/"><span class="related-ico" aria-hidden="true">🏚️</span><span class="related-name">Roof Pitch Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is 1:12 the ADA ramp slope?</summary><p data-i18n="faq.a1">Research on manual wheelchair use found that most people can propel themselves up a 1:12 grade — one inch of rise per twelve inches of run, about 4.8 degrees — without help or dangerous strain. Anything steeper pushes the effort past what an average user can sustain, and makes the descent hard to control. ADA also caps each run at 30 inches of rise so nobody faces one endless climb.</p></details>
+    <details><summary data-i18n="faq.q2">Can I build a steeper ramp at my own house?</summary><p data-i18n="faq.a2">Often yes: many residential codes allow up to 1:8 for an occupied wheelchair when space is genuinely limited, and 1:6 for unoccupied loading such as pushing an empty chair into a van. Be honest about what that means — 1:8 is 7.1 degrees and needs a fit assistant pushing and braking. If the person will use the ramp alone, build to 1:12 even at home.</p></details>
+    <details><summary data-i18n="faq.q3">Where do landings go and how big must they be?</summary><p data-i18n="faq.a3">You need a level landing at the bottom and at the top of every ramp, at each intermediate break, and wherever the ramp changes direction. Each must be at least 60 by 60 inches clear, and at least as wide as the ramp it serves. A landing at a door needs extra manoeuvring space on the latch side so the door can be opened from a seated position.</p></details>
+    <details><summary data-i18n="faq.q4">How wide does a wheelchair ramp need to be?</summary><p data-i18n="faq.a4">ADA requires 36 inches of clear width measured between the handrails, not between the outside edges of the framing. Build the deck about 48 inches wide to leave room for rails and edge protection. Add curbs or a raised edge at least 2 inches high so a caster cannot drop off the side.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

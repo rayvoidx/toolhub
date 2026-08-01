@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wavelength Calculator — Frequency to Wavelength</title>
+<meta name="description" content="Convert frequency to wavelength with lambda = c/f, or wavelength back to frequency. Shows photon energy in joules and eV, the period and the spectrum band.">
+<meta name="keywords" content="wavelength calculator, frequency to wavelength, wavelength formula, c lambda f, wavelength to frequency, photon energy calculator">
+<link rel="canonical" href="https://tool-hub.me/wavelength-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Wavelength Calculator — Frequency to Wavelength">
+<meta property="og:description" content="Convert frequency to wavelength with lambda = c/f, or wavelength back to frequency. Shows photon energy in joules and eV, the period and the spectrum band.">
+<meta property="og:url" content="https://tool-hub.me/wavelength-calc/">
+<meta property="og:image" content="https://tool-hub.me/wavelength-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d28d9">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Wavelength Calculator",
+  "description": "Convert frequency to wavelength with lambda = c/f, or wavelength back to frequency. Shows photon energy in joules and eV, the period and the spectrum band.",
+  "url": "https://tool-hub.me/wavelength-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Wavelength Calculator",
+      "item": "https://tool-hub.me/wavelength-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Wavelength Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Wavelength Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">One value in, the whole picture out: wavelength, frequency, photon energy and where it sits on the spectrum.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:2fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard .rc-sub { font-size:12px; color:var(--muted); margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.band-card { grid-column:1 / -1; display:flex; align-items:center; gap:10px; }
+      #tool .band-dot { width:18px; height:18px; border-radius:50%; border:1px solid var(--line); background:var(--muted); flex:none; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="solve" data-i18n="tool.solve.label">Solve for</label>
+    <select id="solve">
+      <option value="wl" data-i18n="tool.solve.wl">Wavelength from frequency</option>
+      <option value="fr" data-i18n="tool.solve.fr">Frequency from wavelength</option>
+      <option value="pe" data-i18n="tool.solve.pe">Photon energy from either</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="value" data-i18n="tool.value.label">Value</label>
+        <input type="number" id="value" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="98.5">
+      </div>
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Unit</label>
+        <select id="unit">
+          <option value="Hz">Hz</option>
+          <option value="kHz">kHz</option>
+          <option value="MHz" selected>MHz</option>
+          <option value="GHz">GHz</option>
+          <option value="THz">THz</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-main-label" data-i18n="tool.r.wavelength">Wavelength</div>
+          <div class="rc-val" id="r-main">—</div>
+          <div class="rc-sub" id="r-main-sub"></div>
+        </div>
+        <div class="rcard band-card">
+          <span class="band-dot" id="band-dot"></span>
+          <div>
+            <div class="rc-label" data-i18n="tool.r.band">Spectrum band</div>
+            <div class="rc-val" id="r-band">—</div>
+          </div>
+        </div>
+        <div class="rcard" id="c-wl"><div class="rc-label" data-i18n="tool.r.wavelength">Wavelength</div><div class="rc-val" id="r-wl">—</div></div>
+        <div class="rcard" id="c-freq"><div class="rc-label" data-i18n="tool.r.frequency">Frequency</div><div class="rc-val" id="r-freq">—</div></div>
+        <div class="rcard" id="c-energy"><div class="rc-label" data-i18n="tool.r.energy">Photon energy</div><div class="rc-val" id="r-ev">—</div><div class="rc-sub" id="r-joule">—</div></div>
+        <div class="rcard" id="c-period"><div class="rc-label" data-i18n="tool.r.period">Period (1 / f)</div><div class="rc-val" id="r-period">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.medium" style="margin-top:12px;">Uses the vacuum speed of light, c = 299,792,458 m/s exactly. Inside a medium the frequency stays the same but the wavelength shrinks — divide it by the refractive index n (water 1.33, glass about 1.5).</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The one formula behind every answer here</h2>
+    <p>Every electromagnetic wave obeys the same relationship: the speed of light equals frequency times wavelength, or c = f &times; &lambda;. Rearranged, that gives the two things people actually search for — wavelength from frequency (&lambda; = c / f) and frequency from wavelength (f = c / &lambda;). Because c is fixed at 299,792,458 metres per second in a vacuum, the two quantities are locked together: double the frequency and the wavelength halves. There is no third variable to guess at.</p>
+    <p>The calculator adds two things a bare formula does not give you. The first is photon energy, E = h &times; f, using Planck's constant h = 6.62607015 &times; 10<sup>-34</sup> J&middot;s, reported both in joules and in electronvolts. The second is a band label, so you immediately know whether you are looking at a radio wave, a microwave, infrared, visible light, ultraviolet, X-rays or gamma rays.</p>
+
+    <h3>Worked example: your FM station</h3>
+    <p>Take an FM broadcast at 98.5 MHz. That is 98,500,000 Hz, so &lambda; = 299,792,458 / 98,500,000 = 3.044 m. The period is 1 / f = 10.15 nanoseconds, and the photon energy is a minuscule 6.53 &times; 10<sup>-26</sup> J, or 0.41 microelectronvolts. This is why radio is treated as a smooth wave and never as individual photons: a single FM photon carries almost nothing. The 3 m figure also explains antenna hardware. A quarter-wave whip for that band is about 76 cm, which is exactly the length of the telescopic aerial on an old hi-fi tuner, and a dipole is around 1.5 m tip to tip.</p>
+
+    <h3>A tour of the spectrum with everyday anchors</h3>
+    <p>Start at the long end. AM radio near 1000 kHz has a 300 m wavelength — longer than a city block, which is why AM bends around hills and buildings. FM sits at 3 m. Wi-Fi at 2.4 GHz gives 12.5 cm, roughly the width of your hand, and 5 GHz gives 6 cm; shorter waves carry more data but get stopped by walls more easily. A microwave oven runs at 2.45 GHz, the same 12 cm ballpark, which is why the metal mesh in the door — with holes a couple of millimetres across — blocks the microwaves while letting visible light through.</p>
+    <p>Keep going and wavelengths collapse. A TV remote emits at about 940 nm in the near infrared. Green light sits near 530 nm, right where the human eye is most sensitive, at a frequency of 566 THz and a photon energy of 2.34 eV. Red is about 700 nm and 1.77 eV; violet is about 400 nm and 3.10 eV. That energy jump is the whole story of sunburn and photochemistry: UVB photons at 300 nm carry 4.13 eV, enough to break chemical bonds in DNA, while a red photon simply cannot. Below 10 nm you are in X-ray territory (keV energies, used precisely because they pass through soft tissue), and below 10 picometres, gamma rays.</p>
+
+    <h3>Photon energy intuition</h3>
+    <p>A useful shortcut for optics work: E (in eV) &asymp; 1240 / &lambda; (in nm). Plug in 620 nm and you get 2.0 eV; plug in 1240 nm and you get 1.0 eV. That single constant lets you sanity-check any laser, LED or solar-cell number in your head. A silicon solar cell has a band gap of 1.12 eV, which corresponds to 1107 nm — light with a longer wavelength than that passes straight through and generates no current, which caps silicon's theoretical efficiency.</p>
+
+    <h3>Electromagnetic waves versus sound</h3>
+    <p>The relationship v = f &lambda; holds for any wave, but only electromagnetic waves travel at c. Sound is a mechanical pressure wave needing a medium, moving at roughly 343 m/s in air at 20 &deg;C, 1480 m/s in water and 5100 m/s in steel. A 440 Hz concert A is therefore 0.78 m long in air, not the 681 km you would get by wrongly using the speed of light. If you are calculating room modes, speaker spacing or ultrasound, substitute the correct speed for the medium instead of using this tool.</p>
+
+    <h3>Limitations worth knowing</h3>
+    <p>Results assume a vacuum. In glass, water or fibre, light slows to c / n and the wavelength shrinks by the same factor while the frequency stays constant — a 1550 nm telecom laser is about 1063 nm inside a fibre with n = 1.4585. Band boundaries are conventions, not physical walls: sources differ on whether visible light stops at 700 nm or 780 nm, and the microwave/infrared border is drawn at 1 mm here. Finally, for waveguides and antennas, the guided wavelength differs from the free-space value, so use this figure as the starting point rather than the final dimension.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/z-score-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Z-Score Calculator</span></a><a class="related-item" href="https://tool-hub.me/attendance-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">Attendance Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/cgpa-to-percentage/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">CGPA to Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/density-calc/"><span class="related-ico" aria-hidden="true">🧊</span><span class="related-name">Density Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the wavelength of an FM station at 98.5 MHz?</summary><p data-i18n="faq.a1">Divide the speed of light by the frequency: 299,792,458 / 98,500,000 = 3.04 m. Every FM broadcast wavelength lands near 3 metres, which is why a quarter-wave FM antenna element is about 75 cm long. Enter 98.5 with MHz selected to see the full breakdown.</p></details>
+    <details><summary data-i18n="faq.q2">Why is the speed of light an exact number?</summary><p data-i18n="faq.a2">Since 1983 the metre has been defined as the distance light travels in 1/299,792,458 of a second. That makes c exactly 299,792,458 m/s by definition, with no measurement uncertainty left in it. Any error in your answer now comes from the frequency you typed, not from c.</p></details>
+    <details><summary data-i18n="faq.q3">Which wavelengths count as visible light?</summary><p data-i18n="faq.a3">Roughly 380 nm to 750 nm. Violet sits near 380-450 nm, blue 450-495, green 495-570, yellow 570-590, orange 590-620 and red 620-750 nm. Below 380 nm you are into ultraviolet, and above 750 nm it is infrared — real eyes fade out gradually rather than stopping at a hard edge.</p></details>
+    <details><summary data-i18n="faq.q4">Does this calculator work for sound waves?</summary><p data-i18n="faq.a4">No. It uses c, the speed of light, so it only applies to electromagnetic waves. Sound is a mechanical wave travelling at about 343 m/s in 20 °C air, so a 440 Hz A note is 343/440 = 0.78 m long. For sound use v = f x lambda with the speed of sound in your medium.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
