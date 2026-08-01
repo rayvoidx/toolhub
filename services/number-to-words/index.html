@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number to Words Converter — Spell Out Numbers</title>
+<meta name="description" content="Convert numbers to words in plain English and in check-writing format. Type 1234.56 and get one thousand two hundred thirty-four and 56/100 in one click.">
+<meta name="keywords" content="number to words, numbers in words, spell out numbers, number to words for check, write numbers in words, check amount in words">
+<link rel="canonical" href="https://tool-hub.me/number-to-words/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Number to Words Converter — Spell Out Numbers">
+<meta property="og:description" content="Convert numbers to words in plain English and in check-writing format. Type 1234.56 and get one thousand two hundred thirty-four and 56/100 in one click.">
+<meta property="og:url" content="https://tool-hub.me/number-to-words/">
+<meta property="og:image" content="https://tool-hub.me/number-to-words/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#92400e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Number to Words Converter",
+  "description": "Convert numbers to words in plain English and in check-writing format. Type 1234.56 and get one thousand two hundred thirty-four and 56/100 in one click.",
+  "url": "https://tool-hub.me/number-to-words/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Number to Words Converter",
+      "item": "https://tool-hub.me/number-to-words/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is a billion the same number everywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool uses the short scale, where a billion is a thousand million (1,000,000,000). The UK, the US and most of the English-speaking world settled on the short scale decades ago, so it is the safe default. A few European languages still use the long scale, where a billion means a million million — if you are translating a figure, check which scale the source used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How should I write the amount on a check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start the words at the far left of the amount line so nobody can add a word in front of them, and capitalize the first letter. Write the cents as a fraction over 100, such as \"and 56/100\", then draw a horizontal line through any empty space to the end. The written amount is what legally controls if it disagrees with the box of digits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do numbers written as words take a hyphen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hyphenate the compound numbers twenty-one through ninety-nine, so \"thirty-four\" and \"seventy-eight\" are correct. Do not hyphenate around hundred, thousand or million: it is \"two hundred thirty-four\", not \"two-hundred-thirty-four\". Fractions written out are also hyphenated, as in two-thirds."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do British and American English spell numbers differently?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The words are the same, but British usage inserts \"and\" before the last part: one hundred and twenty-three, where American usage writes one hundred twenty-three. Both are accepted on cheques and in contracts on either side of the Atlantic. This converter outputs the American form, and you can simply type \"and\" in yourself if you prefer the British style."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Number to Words Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Number to Words Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number, get the words — including the exact wording a bank expects on a check.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .result-cards { display:grid; grid-template-columns:1fr; gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; line-height:1.45; overflow-wrap:break-word; }
+      #tool .rcard.hero-card .rc-val { font-size:22px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="num" data-i18n="tool.num.label">Number</label>
+    <input type="text" id="num" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="1234.56">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Convert</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.check">Check-writing style</div>
+          <div class="rc-val" id="r-check">—</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.words">In words</div>
+          <div class="rc-val" id="r-words">—</div>
+        </div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.en" style="margin-top:12px;">The words are always English, US short scale — that is the form banks and legal documents expect.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Two correct ways to spell out the same number</h2>
+    <p>Ask a bank teller and an English teacher to write 1234.56 in words and you get two different answers, both right. The teacher writes <strong>one thousand two hundred thirty-four point five six</strong>, reading the decimal digit by digit the way a maths textbook does. The teller writes <strong>one thousand two hundred thirty-four and 56/100</strong>, because on a cheque the fractional part is money, not a decimal, and it belongs over a denominator of 100. This converter shows both at once so you can copy whichever the document in front of you needs.</p>
+
+    <h3>Worked example: 1234.56</h3>
+    <p>Split the digits into groups of three from the right: 1 | 234. The first group, 1, is followed by the scale word thousand, giving "one thousand". The second group, 234, becomes "two hundred thirty-four" — hundreds first, then the compound number thirty-four with its hyphen. Join them and you have the integer: one thousand two hundred thirty-four. For the plain reading, add "point five six". For the cheque line, add "and 56/100". The word dollars is already printed on the cheque, so you do not write it.</p>
+
+    <h3>Worked example: 1000000.05</h3>
+    <p>Groups of three give 1 | 000 | 000. Empty groups are skipped entirely, so you never write "one million zero thousand" — the result is simply "one million". The cents need care: five hundredths is 05, not 5, so the cheque line reads one million and 05/100. Dropping the leading zero is one of the most common cheque errors, and it is exactly the gap a fraudster needs.</p>
+
+    <h2>Why the words on a cheque matter</h2>
+    <p>In the United States, the Uniform Commercial Code says that when the written amount and the numeric amount on a negotiable instrument disagree, the written amount wins. UK cheque clearing rules follow the same principle. That single rule is why the amount line exists at all: digits can be altered with a pen stroke, turning 100 into 1,900 or adding a zero, but rewriting "one hundred" into "one thousand nine hundred" in someone else's handwriting is much harder.</p>
+    <p>Three habits close the remaining gaps. Start the words hard against the left edge of the line so nothing can be inserted in front of them. Fill any leftover space with a horizontal line running to the printed word "dollars" or the end of the field. And keep the cents as a fraction over 100 rather than words, because "fifty-six" written out can be extended, while 56/100 sitting against a drawn line cannot.</p>
+
+    <h2>US and UK style differences</h2>
+    <p>The vocabulary is shared, the joining word is not. British English inserts "and" before the final tens-and-units part: one hundred and twenty-three, two thousand and five. American English omits it: one hundred twenty-three, two thousand five. Neither will get a cheque rejected on either side of the Atlantic; banks look for a legible amount, not a style guide. This tool outputs the American form because it is the shorter, unambiguous one, and adding "and" yourself takes a second if your solicitor or accountant prefers it.</p>
+    <p>The other difference used to be the scale. Until the 1970s British usage held that a billion meant a million million. Government and press adopted the American short scale, in which a billion is a thousand million, and the change is now complete in English. If you are converting a figure from a French, German, Spanish or Portuguese source, do check: those languages still use the long scale, so a French "billion" is an English trillion.</p>
+
+    <h2>Hyphens, commas and other small rules</h2>
+    <p>Hyphenate every compound number from twenty-one to ninety-nine: forty-two, seventy-eight. Never hyphenate across a scale word, so it is two hundred thirty-four, not two-hundred-thirty-four. Formal prose sometimes places commas between scale groups — one million, two hundred thirty-four thousand, five hundred — and that is fine in a contract; a cheque does not need them. Numbers that begin a sentence are always spelled out, which is a large part of why editors reach for a converter like this one.</p>
+
+    <h2>Limits of this converter</h2>
+    <p>Output is English only, in the short scale, up to 999 trillion — fifteen digits before the decimal point. Very large numbers are handled as exact digit strings rather than floating-point values, so a fifteen-digit figure will not drift the way a naive script does. Amounts with more than two decimal places are rounded to the nearest cent for the cheque line, with any carry applied to the whole part, while the plain-words reading keeps every digit you typed. Negative values are prefixed with "negative", which is useful for accounting entries and never appears on a cheque.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/random-word-gen/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Random Word Generator</span></a><a class="related-item" href="https://tool-hub.me/readability-checker/"><span class="related-ico" aria-hidden="true">📖</span><span class="related-name">Readability Checker</span></a><a class="related-item" href="https://tool-hub.me/remove-duplicate-lines/"><span class="related-ico" aria-hidden="true">🧹</span><span class="related-name">Remove Duplicate Lines</span></a><a class="related-item" href="https://tool-hub.me/remove-line-breaks/"><span class="related-ico" aria-hidden="true">↩️</span><span class="related-name">Remove Line Breaks</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is a billion the same number everywhere?</summary><p data-i18n="faq.a1">This tool uses the short scale, where a billion is a thousand million (1,000,000,000). The UK, the US and most of the English-speaking world settled on the short scale decades ago, so it is the safe default. A few European languages still use the long scale, where a billion means a million million — if you are translating a figure, check which scale the source used.</p></details>
+    <details><summary data-i18n="faq.q2">How should I write the amount on a check?</summary><p data-i18n="faq.a2">Start the words at the far left of the amount line so nobody can add a word in front of them, and capitalize the first letter. Write the cents as a fraction over 100, such as "and 56/100", then draw a horizontal line through any empty space to the end. The written amount is what legally controls if it disagrees with the box of digits.</p></details>
+    <details><summary data-i18n="faq.q3">When do numbers written as words take a hyphen?</summary><p data-i18n="faq.a3">Hyphenate the compound numbers twenty-one through ninety-nine, so "thirty-four" and "seventy-eight" are correct. Do not hyphenate around hundred, thousand or million: it is "two hundred thirty-four", not "two-hundred-thirty-four". Fractions written out are also hyphenated, as in two-thirds.</p></details>
+    <details><summary data-i18n="faq.q4">Do British and American English spell numbers differently?</summary><p data-i18n="faq.a4">The words are the same, but British usage inserts "and" before the last part: one hundred and twenty-three, where American usage writes one hundred twenty-three. Both are accepted on cheques and in contracts on either side of the Atlantic. This converter outputs the American form, and you can simply type "and" in yourself if you prefer the British style.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
