@@ -424,6 +424,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "Company Vehicle Log Aggregator (Korea)",
     "tool.wbs-progress-rollup.name": "WBS Weighted Progress & EVM Rollup",
     "tool.workback-schedule.name": "Workback Schedule Builder",
+      "tool.binary-translator.name": "Binary Translator",
+    "tool.home-affordability-calc.name": "Home Affordability Calculator",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "Password Strength Checker",
+    "tool.paycheck-calc.name": "Paycheck Calculator",
+    "tool.zakat-calc.name": "Zakat Calculator",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -837,6 +843,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "韩国公务用车行驶记录汇总器",
     "tool.wbs-progress-rollup.name": "WBS 加权进度与挣值(EVM)汇总",
     "tool.workback-schedule.name": "倒排计划生成器",
+      "tool.binary-translator.name": "二进制翻译器",
+    "tool.home-affordability-calc.name": "购房能力计算器",
+    "tool.json-diff.name": "JSON 对比工具",
+    "tool.password-strength-checker.name": "密码强度检测器",
+    "tool.paycheck-calc.name": "美国工资计算器",
+    "tool.zakat-calc.name": "天课计算器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -1250,6 +1262,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "कंपनी वाहन लॉग एग्रीगेटर (कोरिया)",
     "tool.wbs-progress-rollup.name": "WBS भारित प्रगति और EVM रोलअप",
     "tool.workback-schedule.name": "वर्कबैक शेड्यूल बिल्डर",
+      "tool.binary-translator.name": "बाइनरी ट्रांसलेटर",
+    "tool.home-affordability-calc.name": "होम अफोर्डेबिलिटी कैलकुलेटर",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "पासवर्ड स्ट्रेंथ चेकर",
+    "tool.paycheck-calc.name": "US पेचेक कैलकुलेटर",
+    "tool.zakat-calc.name": "ज़कात कैलकुलेटर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1663,6 +1681,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "Agregador de libros de registro de vehículos",
     "tool.wbs-progress-rollup.name": "Avance ponderado de la EDT y resumen EVM",
     "tool.workback-schedule.name": "Generador de cronograma inverso",
+      "tool.binary-translator.name": "Traductor binario",
+    "tool.home-affordability-calc.name": "Calculadora de capacidad de compra de vivien",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "Comprobador de contraseñas",
+    "tool.paycheck-calc.name": "Calculadora de sueldo neto en EE. UU. tras i",
+    "tool.zakat-calc.name": "Calculadora de zakat",
   },
 
   /* ---------------- العربية ---------------- */
@@ -2076,6 +2100,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "مُجمِّع سجلات مركبات الشركة (كوريا)",
     "tool.wbs-progress-rollup.name": "التقدم الموزون لهيكل تجزئة العمل (WBS) وتجمي",
     "tool.workback-schedule.name": "أداة إنشاء الجدول العكسي",
+      "tool.binary-translator.name": "مترجم ثنائي",
+    "tool.home-affordability-calc.name": "حاسبة القدرة على شراء منزل",
+    "tool.json-diff.name": "أداة مقارنة JSON",
+    "tool.password-strength-checker.name": "فاحص قوة كلمة المرور",
+    "tool.paycheck-calc.name": "حاسبة الراتب الصافي في أمريكا بعد الضرائب",
+    "tool.zakat-calc.name": "حاسبة الزكاة",
   },
 
   /* ---------------- Français ---------------- */
@@ -2489,6 +2519,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "Agrégateur de carnets de bord de véhicules d",
     "tool.wbs-progress-rollup.name": "Avancement pondéré du WBS et consolidation E",
     "tool.workback-schedule.name": "Générateur de rétroplanning",
+      "tool.binary-translator.name": "Traducteur binaire",
+    "tool.home-affordability-calc.name": "Calculateur de capacité d'achat immobilier",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "Testeur de mot de passe",
+    "tool.paycheck-calc.name": "Calculateur de salaire net aux États-Unis ap",
+    "tool.zakat-calc.name": "Calculateur de zakat",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -2902,6 +2938,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "কোম্পানি গাড়ির লগ সমষ্টিকারক (কোরিয়া)",
     "tool.wbs-progress-rollup.name": "WBS ভারযুক্ত অগ্রগতি ও EVM রোলআপ",
     "tool.workback-schedule.name": "ওয়ার্কব্যাক শিডিউল বিল্ডার",
+      "tool.binary-translator.name": "বাইনারি ট্রান্সলেটর",
+    "tool.home-affordability-calc.name": "বাড়ি কেনার সামর্থ্য ক্যালকুলেটর",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "পাসওয়ার্ড শক্তি পরীক্ষক",
+    "tool.paycheck-calc.name": "US পেচেক ক্যালকুলেটর",
+    "tool.zakat-calc.name": "যাকাত ক্যালকুলেটর",
   },
 
   /* ---------------- Português ---------------- */
@@ -3315,6 +3357,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "Agregador de livros de registro de veículos",
     "tool.wbs-progress-rollup.name": "Progresso ponderado da EAP e consolidação EV",
     "tool.workback-schedule.name": "Gerador de cronograma reverso",
+      "tool.binary-translator.name": "Tradutor binário",
+    "tool.home-affordability-calc.name": "Calculadora de quanto imóvel você pode compr",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "Verificador de senha",
+    "tool.paycheck-calc.name": "Calculadora de salário líquido nos EUA após",
+    "tool.zakat-calc.name": "Calculadora de zakat",
   },
 
   /* ---------------- Русский ---------------- */
@@ -3728,6 +3776,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "Агрегатор путевых журналов служебных автомоб",
     "tool.wbs-progress-rollup.name": "Взвешенный прогресс по СДР и сводка EVM",
     "tool.workback-schedule.name": "Конструктор обратного графика",
+      "tool.binary-translator.name": "Двоичный переводчик",
+    "tool.home-affordability-calc.name": "Калькулятор доступности жилья",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "Проверка надёжности пароля",
+    "tool.paycheck-calc.name": "Калькулятор зарплаты в США",
+    "tool.zakat-calc.name": "Калькулятор закята",
   },
 
   /* ---------------- اردو ---------------- */
@@ -4141,6 +4195,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "کمپنی وہیکل لاگ ایگریگیٹر (کوریا)",
     "tool.wbs-progress-rollup.name": "WBS وزنی پیش رفت اور EVM رول اپ",
     "tool.workback-schedule.name": "ورک بیک شیڈول بلڈر",
+      "tool.binary-translator.name": "بائنری ٹرانسلیٹر",
+    "tool.home-affordability-calc.name": "گھر خریدنے کی استطاعت کیلکولیٹر",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "پاس ورڈ اسٹرینتھ چیکر",
+    "tool.paycheck-calc.name": "امریکی تنخواہ کیلکولیٹر",
+    "tool.zakat-calc.name": "زکوٰۃ کیلکولیٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -4554,6 +4614,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "Agregator Buku Catatan Perjalanan Kendaraan",
     "tool.wbs-progress-rollup.name": "Progres Berbobot WBS & Rekap EVM",
     "tool.workback-schedule.name": "Pembuat Jadwal Mundur",
+      "tool.binary-translator.name": "Penerjemah Biner",
+    "tool.home-affordability-calc.name": "Kalkulator Kemampuan Beli Rumah",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "Pemeriksa Kekuatan Kata Sandi",
+    "tool.paycheck-calc.name": "Kalkulator Gaji Bersih AS",
+    "tool.zakat-calc.name": "Kalkulator Zakat",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -4967,6 +5033,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "Fahrtenbuch-Auswertung für Firmenwagen (Kore",
     "tool.wbs-progress-rollup.name": "PSP-Fortschritt gewichtet & EVM-Rollup",
     "tool.workback-schedule.name": "Rückwärtsterminierung erstellen",
+      "tool.binary-translator.name": "Binär-Übersetzer",
+    "tool.home-affordability-calc.name": "Hausbudget-Rechner",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "Passwort-Stärke prüfen",
+    "tool.paycheck-calc.name": "US-Nettolohn-Rechner",
+    "tool.zakat-calc.name": "Zakat-Rechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -5380,6 +5452,12 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "社用車 運行記録簿 集計ツール（韓国）",
     "tool.wbs-progress-rollup.name": "WBS 加重進捗率・EVM 集計ツール",
     "tool.workback-schedule.name": "逆算スケジュール作成ツール",
+      "tool.binary-translator.name": "2進数変換ツール",
+    "tool.home-affordability-calc.name": "住宅購入可能額シミュレーター",
+    "tool.json-diff.name": "JSON差分ツール",
+    "tool.password-strength-checker.name": "パスワード強度チェッカー",
+    "tool.paycheck-calc.name": "米国給与手取り計算ツール",
+    "tool.zakat-calc.name": "ザカート計算機",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -5793,5 +5871,11 @@ window.I18N_LOCALES = {
     "tool.vehicle-log-agg.name": "업무용승용차 운행기록부 집계기",
     "tool.wbs-progress-rollup.name": "WBS 가중 진척률",
     "tool.workback-schedule.name": "역산 스케줄 빌더",
+      "tool.binary-translator.name": "2진수 변환기",
+    "tool.home-affordability-calc.name": "주택 구매력 계산기",
+    "tool.json-diff.name": "JSON Diff",
+    "tool.password-strength-checker.name": "비밀번호 강도 검사기",
+    "tool.paycheck-calc.name": "미국 실수령액 계산기",
+    "tool.zakat-calc.name": "자카트 계산기",
   }
 };
