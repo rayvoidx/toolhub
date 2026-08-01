@@ -454,6 +454,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "Stair Calculator",
     "tool.tank-volume-calc.name": "Tank Volume Calculator",
     "tool.words-to-pages.name": "Words to Pages Converter",
+      "tool.drywall-calc.name": "Drywall Calculator",
+    "tool.pregnancy-weight-gain-calc.name": "Pregnancy Weight Gain Calculator",
+    "tool.roof-pitch-calc.name": "Roof Pitch Calculator",
+    "tool.rule-of-72-calc.name": "Rule of 72 Calculator",
+    "tool.sand-calc.name": "Sand Calculator",
+    "tool.topsoil-calc.name": "Topsoil Calculator",
+    "tool.wallpaper-calc.name": "Wallpaper Calculator",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -897,6 +904,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "楼梯计算器",
     "tool.tank-volume-calc.name": "储罐容积计算器",
     "tool.words-to-pages.name": "字数转页数计算器",
+      "tool.drywall-calc.name": "石膏板计算器",
+    "tool.pregnancy-weight-gain-calc.name": "孕期体重增长计算器",
+    "tool.roof-pitch-calc.name": "屋顶坡度计算器",
+    "tool.rule-of-72-calc.name": "72法则计算器",
+    "tool.sand-calc.name": "沙子计算器",
+    "tool.topsoil-calc.name": "表土用量计算器",
+    "tool.wallpaper-calc.name": "墙纸计算器",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -1340,6 +1354,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "सीढ़ी कैलकुलेटर",
     "tool.tank-volume-calc.name": "टैंक वॉल्यूम कैलकुलेटर",
     "tool.words-to-pages.name": "वर्ड्स टू पेजेस",
+      "tool.drywall-calc.name": "ड्राईवॉल कैलकुलेटर",
+    "tool.pregnancy-weight-gain-calc.name": "प्रेग्नेंसी वेट गेन कैलकुलेटर",
+    "tool.roof-pitch-calc.name": "रूफ पिच कैलकुलेटर",
+    "tool.rule-of-72-calc.name": "रूल ऑफ 72 कैलकुलेटर",
+    "tool.sand-calc.name": "सैंड कैलकुलेटर",
+    "tool.topsoil-calc.name": "टॉपसॉइल कैलकुलेटर",
+    "tool.wallpaper-calc.name": "वॉलपेपर कैलकुलेटर",
   },
 
   /* ---------------- Español ---------------- */
@@ -1783,6 +1804,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "Calculadora de escaleras",
     "tool.tank-volume-calc.name": "Calculadora de volumen de tanques",
     "tool.words-to-pages.name": "Convertidor de palabras a páginas",
+      "tool.drywall-calc.name": "Calculadora de pladur",
+    "tool.pregnancy-weight-gain-calc.name": "Calculadora de aumento de peso en el embaraz",
+    "tool.roof-pitch-calc.name": "Calculadora de pendiente de tejado",
+    "tool.rule-of-72-calc.name": "Calculadora de la regla del 72",
+    "tool.sand-calc.name": "Calculadora de arena",
+    "tool.topsoil-calc.name": "Calculadora de tierra vegetal",
+    "tool.wallpaper-calc.name": "Calculadora de papel pintado",
   },
 
   /* ---------------- العربية ---------------- */
@@ -2226,6 +2254,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "حاسبة الدرج",
     "tool.tank-volume-calc.name": "حاسبة حجم الخزان",
     "tool.words-to-pages.name": "تحويل عدد الكلمات إلى صفحات",
+      "tool.drywall-calc.name": "حاسبة الجبس بورد",
+    "tool.pregnancy-weight-gain-calc.name": "حاسبة زيادة الوزن أثناء الحمل",
+    "tool.roof-pitch-calc.name": "حاسبة ميل السقف",
+    "tool.rule-of-72-calc.name": "حاسبة قاعدة 72",
+    "tool.sand-calc.name": "حاسبة الرمل",
+    "tool.topsoil-calc.name": "حاسبة التربة السطحية",
+    "tool.wallpaper-calc.name": "حاسبة ورق الجدران",
   },
 
   /* ---------------- Français ---------------- */
@@ -2669,6 +2704,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "Calculateur d'escalier",
     "tool.tank-volume-calc.name": "Calculateur de volume de cuve",
     "tool.words-to-pages.name": "Convertisseur mots en pages",
+      "tool.drywall-calc.name": "Calculateur placo",
+    "tool.pregnancy-weight-gain-calc.name": "Calculateur de prise de poids grossesse (IOM",
+    "tool.roof-pitch-calc.name": "Calculateur de pente de toit",
+    "tool.rule-of-72-calc.name": "Calculateur règle de 72",
+    "tool.sand-calc.name": "Calculateur de sable",
+    "tool.topsoil-calc.name": "Calculateur de terre végétale",
+    "tool.wallpaper-calc.name": "Calculateur de papier peint",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -3112,6 +3154,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "সিঁড়ি ক্যালকুলেটর",
     "tool.tank-volume-calc.name": "ট্যাংক ভলিউম ক্যালকুলেটর",
     "tool.words-to-pages.name": "শব্দ থেকে পৃষ্ঠা কনভার্টার",
+      "tool.drywall-calc.name": "ড্রাইওয়াল ক্যালকুলেটর",
+    "tool.pregnancy-weight-gain-calc.name": "গর্ভাবস্থায় ওজন বৃদ্ধি ক্যালকুলেটর",
+    "tool.roof-pitch-calc.name": "রুফ পিচ ক্যালকুলেটর",
+    "tool.rule-of-72-calc.name": "রুল অব ৭২ ক্যালকুলেটর",
+    "tool.sand-calc.name": "বালু ক্যালকুলেটর",
+    "tool.topsoil-calc.name": "টপসয়েল ক্যালকুলেটর",
+    "tool.wallpaper-calc.name": "ওয়ালপেপার ক্যালকুলেটর",
   },
 
   /* ---------------- Português ---------------- */
@@ -3555,6 +3604,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "Calculadora de escada",
     "tool.tank-volume-calc.name": "Calculadora de volume de tanque",
     "tool.words-to-pages.name": "Conversor de palavras em páginas",
+      "tool.drywall-calc.name": "Calculadora de drywall",
+    "tool.pregnancy-weight-gain-calc.name": "Calculadora de ganho de peso na gravidez (IO",
+    "tool.roof-pitch-calc.name": "Calculadora de inclinação de telhado",
+    "tool.rule-of-72-calc.name": "Calculadora da regra de 72",
+    "tool.sand-calc.name": "Calculadora de areia",
+    "tool.topsoil-calc.name": "Calculadora de terra vegetal",
+    "tool.wallpaper-calc.name": "Calculadora de papel de parede",
   },
 
   /* ---------------- Русский ---------------- */
@@ -3998,6 +4054,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "Калькулятор лестницы",
     "tool.tank-volume-calc.name": "Калькулятор объёма ёмкости",
     "tool.words-to-pages.name": "Слова в страницы",
+      "tool.drywall-calc.name": "Калькулятор гипсокартона",
+    "tool.pregnancy-weight-gain-calc.name": "Калькулятор набора веса при беременности (IO",
+    "tool.roof-pitch-calc.name": "Калькулятор уклона крыши",
+    "tool.rule-of-72-calc.name": "Правило 72",
+    "tool.sand-calc.name": "Калькулятор песка",
+    "tool.topsoil-calc.name": "Калькулятор плодородного грунта",
+    "tool.wallpaper-calc.name": "Калькулятор обоев",
   },
 
   /* ---------------- اردو ---------------- */
@@ -4441,6 +4504,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "سیڑھی کیلکولیٹر",
     "tool.tank-volume-calc.name": "ٹینک والیوم کیلکولیٹر",
     "tool.words-to-pages.name": "الفاظ سے صفحات کیلکولیٹر",
+      "tool.drywall-calc.name": "ڈرائی وال کیلکولیٹر",
+    "tool.pregnancy-weight-gain-calc.name": "حمل میں وزن بڑھنے کا کیلکولیٹر",
+    "tool.roof-pitch-calc.name": "چھت کی ڈھلوان کیلکولیٹر",
+    "tool.rule-of-72-calc.name": "رول آف 72 کیلکولیٹر",
+    "tool.sand-calc.name": "ریت کیلکولیٹر",
+    "tool.topsoil-calc.name": "ٹاپ سوائل کیلکولیٹر",
+    "tool.wallpaper-calc.name": "وال پیپر کیلکولیٹر",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -4884,6 +4954,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "Kalkulator Tangga",
     "tool.tank-volume-calc.name": "Kalkulator Volume Tangki",
     "tool.words-to-pages.name": "Konverter Kata ke Halaman",
+      "tool.drywall-calc.name": "Kalkulator Drywall",
+    "tool.pregnancy-weight-gain-calc.name": "Kalkulator Kenaikan Berat Badan Hamil (IOM)",
+    "tool.roof-pitch-calc.name": "Kalkulator Kemiringan Atap",
+    "tool.rule-of-72-calc.name": "Kalkulator Rule of 72",
+    "tool.sand-calc.name": "Kalkulator Pasir",
+    "tool.topsoil-calc.name": "Kalkulator Tanah Lapisan Atas",
+    "tool.wallpaper-calc.name": "Kalkulator Wallpaper",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -5327,6 +5404,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "Treppenrechner",
     "tool.tank-volume-calc.name": "Tankvolumen-Rechner",
     "tool.words-to-pages.name": "Wörter in Seiten umrechnen",
+      "tool.drywall-calc.name": "Trockenbau-Rechner",
+    "tool.pregnancy-weight-gain-calc.name": "Gewichtszunahme Schwangerschaft Rechner (IOM",
+    "tool.roof-pitch-calc.name": "Dachneigung berechnen",
+    "tool.rule-of-72-calc.name": "72er-Regel Rechner",
+    "tool.sand-calc.name": "Sand-Rechner",
+    "tool.topsoil-calc.name": "Mutterboden-Rechner",
+    "tool.wallpaper-calc.name": "Tapetenrechner",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -5770,6 +5854,13 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "階段計算ツール",
     "tool.tank-volume-calc.name": "タンク容量計算ツール",
     "tool.words-to-pages.name": "文字数・単語数からページ数を計算",
+      "tool.drywall-calc.name": "石膏ボード計算ツール",
+    "tool.pregnancy-weight-gain-calc.name": "妊娠中の体重増加計算ツール",
+    "tool.roof-pitch-calc.name": "屋根勾配計算ツール",
+    "tool.rule-of-72-calc.name": "72の法則 計算ツール",
+    "tool.sand-calc.name": "砂の計算ツール",
+    "tool.topsoil-calc.name": "土（表土）計算ツール",
+    "tool.wallpaper-calc.name": "壁紙計算ツール",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -6213,5 +6304,12 @@ window.I18N_LOCALES = {
     "tool.stair-calc.name": "계단 계산기",
     "tool.tank-volume-calc.name": "탱크 용량 계산기",
     "tool.words-to-pages.name": "단어 수 페이지 변환기",
+      "tool.drywall-calc.name": "석고보드 계산기",
+    "tool.pregnancy-weight-gain-calc.name": "임신 체중 증가 계산기",
+    "tool.roof-pitch-calc.name": "지붕 물매 계산기",
+    "tool.rule-of-72-calc.name": "72 법칙 계산기",
+    "tool.sand-calc.name": "모래 계산기",
+    "tool.topsoil-calc.name": "흙(표토) 소요량 계산기",
+    "tool.wallpaper-calc.name": "벽지 계산기",
   }
 };
