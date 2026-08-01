@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cholesterol Ratio Calculator — TC/HDL, LDL/HDL, Non-HDL</title>
+<meta name="description" content="Work out your TC/HDL, LDL/HDL and triglyceride/HDL ratios plus non-HDL cholesterol from one lipid panel, in mg/dL or mmol/L, and see what each band means.">
+<meta name="keywords" content="cholesterol ratio calculator, tc hdl ratio, ldl hdl ratio, non hdl cholesterol, triglyceride hdl ratio, cholesterol ratio chart">
+<link rel="canonical" href="https://tool-hub.me/cholesterol-ratio-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cholesterol Ratio Calculator — TC/HDL, LDL/HDL, Non-HDL">
+<meta property="og:description" content="Work out your TC/HDL, LDL/HDL and triglyceride/HDL ratios plus non-HDL cholesterol from one lipid panel, in mg/dL or mmol/L, and see what each band means.">
+<meta property="og:url" content="https://tool-hub.me/cholesterol-ratio-calc/">
+<meta property="og:image" content="https://tool-hub.me/cholesterol-ratio-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be123c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Cholesterol Ratio Calculator",
+  "description": "Work out your TC/HDL, LDL/HDL and triglyceride/HDL ratios plus non-HDL cholesterol from one lipid panel, in mg/dL or mmol/L, and see what each band means.",
+  "url": "https://tool-hub.me/cholesterol-ratio-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Cholesterol Ratio Calculator",
+      "item": "https://tool-hub.me/cholesterol-ratio-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Cholesterol Ratio Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Cholesterol Ratio Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">One lipid panel, four numbers. Ratios put your HDL back into the picture — lower is better for all of them.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:30px; }
+      #tool .badge { display:inline-block; margin-left:8px; padding:2px 9px; border-radius:999px; font-size:13px; font-weight:700; vertical-align:middle; }
+      #tool .badge.b-good { background:#dcfce7; color:#166534; }
+      #tool .badge.b-mid { background:#fef3c7; color:#92400e; }
+      #tool .badge.b-bad { background:#fee2e2; color:#991b1b; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Units</label>
+    <select id="unit">
+      <option value="mg" data-i18n="tool.unit.mg">mg/dL</option>
+      <option value="mmol" data-i18n="tool.unit.mmol">mmol/L</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="tc" data-i18n="tool.tc.label">Total cholesterol</label>
+        <input type="number" id="tc" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="190">
+      </div>
+      <div>
+        <label for="hdl" data-i18n="tool.hdl.label">HDL cholesterol</label>
+        <input type="number" id="hdl" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="55">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="ldl" data-i18n="tool.ldl.label">LDL cholesterol (optional)</label>
+        <input type="number" id="ldl" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="110">
+      </div>
+      <div>
+        <label for="trig" data-i18n="tool.trig.label">Triglycerides (optional)</label>
+        <input type="number" id="trig" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="120">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate ratios</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.tchdl">Total cholesterol / HDL</div>
+          <div class="rc-val"><span id="r-tchdl">—</span><span class="badge" id="r-band"></span></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.nonhdl">Non-HDL cholesterol</div><div class="rc-val" id="r-nonhdl">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ldlhdl">LDL / HDL</div><div class="rc-val" id="r-ldlhdl">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.trighdl">Triglycerides / HDL</div><div class="rc-val" id="r-trighdl">—</div></div>
+      </div>
+      <p class="subtle" id="note-emerging" hidden data-i18n="tool.note.emerging">The triglyceride/HDL ratio is an emerging research marker, not a guideline target.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.med">Not medical advice. Ratios are supplementary — treatment decisions rest on your absolute LDL and non-HDL, your overall risk score and your doctor's reading of the full panel.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a cholesterol ratio actually tells you</h2>
+    <p>A lipid panel hands you four raw numbers and no context. Total cholesterol counts everything your blood is carrying, including the HDL fraction that ferries cholesterol back to the liver for disposal. That is the awkward part: a chunk of your "total" is the helpful kind. Ratios fix the accounting by dividing the whole burden by the protective share, so one figure carries both halves of the story. Every ratio on this page follows the same rule — lower is better.</p>
+
+    <h3>Worked example: total 190, HDL 55, LDL 110, triglycerides 120 mg/dL</h3>
+    <p>Start with the headline ratio. Total cholesterol divided by HDL is 190 / 55 = 3.45, which the tool displays as 3.5 and bands as average — the ideal range stops just below it, so this panel sits right on the line. Next, LDL divided by HDL is 110 / 55 = 2.0, comfortably inside the good band under 2.5. Non-HDL cholesterol is simple subtraction: 190 − 55 = 135 mg/dL, a shade above the widely used general target of 130. Finally the triglyceride/HDL ratio is 120 / 55 = 2.2, just past the 2.0 mark often quoted in insulin-sensitivity research.</p>
+    <p>Read together, that is an unremarkable panel with one soft flag. Nothing screams emergency, but non-HDL is nudging the target and the triglyceride ratio suggests carbohydrate load is worth a look. Now change one input: keep everything else and drop HDL to 35. The TC/HDL ratio jumps to 5.4 (elevated), LDL/HDL becomes 3.1 (borderline), non-HDL rises to 155, and triglyceride/HDL hits 3.4. Same total cholesterol, a completely different picture — which is exactly why the single number on the top line of your report is a poor summary on its own.</p>
+
+    <h3>Reference bands used here</h3>
+    <table>
+      <thead><tr><th>Ratio</th><th>Better</th><th>Middle</th><th>Elevated</th></tr></thead>
+      <tbody>
+        <tr><td>Total / HDL</td><td>under 3.5</td><td>3.5 to 5.0</td><td>above 5.0</td></tr>
+        <tr><td>LDL / HDL</td><td>under 2.5</td><td>2.5 to 3.5</td><td>above 3.5</td></tr>
+        <tr><td>Non-HDL (mg/dL)</td><td>under 130</td><td>130 to 190</td><td>above 190</td></tr>
+        <tr><td>Triglycerides / HDL</td><td>under 2.0</td><td>2.0 to 3.0</td><td>above 3.0</td></tr>
+      </tbody>
+    </table>
+    <p>If your report is in mmol/L, switch the unit selector and the tool converts internally at 38.67 for cholesterol and 88.57 for triglycerides before applying these cutoffs. That conversion matters most for the triglyceride ratio, whose thresholds were derived from mg/dL data and are meaningless if applied directly to mmol/L figures — a common mistake in UK forums.</p>
+
+    <h2>Ratios versus absolute numbers: an honest history</h2>
+    <p>Through the 1990s and 2000s the TC/HDL ratio was a headline metric in cardiovascular risk discussion, partly because the Framingham risk equations used it directly. Guidelines have since moved on. The 2018 ACC/AHA cholesterol guideline in the US and NICE guidance in the UK now lead with absolute LDL cholesterol and non-HDL cholesterol, plugged into a whole-person risk calculator — ASCVD in the States, QRISK3 in Britain — that also weighs age, sex, blood pressure, smoking status, diabetes and family history.</p>
+    <p>Why the shift? Because therapy targets a quantity, not a proportion. Statins, ezetimibe and PCSK9 inhibitors lower LDL by a measurable amount, and trial benefit tracks the absolute drop in LDL particles. A ratio can improve while your LDL stays exactly where it was, simply because HDL rose — and the large HDL-raising drug trials failed to produce the heart-attack reduction that observational data predicted. That is the honest caveat: high HDL is a marker of lower risk, but raising it pharmacologically has not proven to be a lever.</p>
+    <p>Ratios still earn their place as context. They are quick, they resist the panic that a lone total cholesterol number causes, and non-HDL in particular is now a formal secondary target in both US and UK guidance because it captures every atherogenic particle in one subtraction.</p>
+
+    <h2>Levers that move the numbers, ranked by evidence</h2>
+    <p>Strongest first: eliminate industrial trans fats, which raise LDL and lower HDL simultaneously. Replace saturated fat with unsaturated fat rather than with refined starch — swapping butter for olive oil moves LDL, swapping butter for white bread mostly moves triglycerides upward. Cut refined carbohydrate and alcohol if your triglyceride ratio is high, since both feed hepatic triglyceride production. Add 150 minutes a week of moderate aerobic activity, which lifts HDL modestly and lowers triglycerides more. Lose excess weight; roughly every 10 lb lost is worth a few points of LDL. Stop smoking — cessation alone can raise HDL by around 5 mg/dL within a year. Soluble fibre from oats, beans and psyllium contributes a further small LDL reduction.</p>
+
+    <h2>When to see a doctor</h2>
+    <p>Book an appointment if your TC/HDL ratio is above 5, your non-HDL is above 190 mg/dL, your triglycerides exceed 500 mg/dL (a pancreatitis concern rather than a heart concern), or you have a family history of heart attack before 55 in men and 65 in women, which can point to familial hypercholesterolaemia. Bring the whole panel, not the ratios.</p>
+    <p>This calculator is arithmetic, not diagnosis. It cannot see your blood pressure, your HbA1c, your Lp(a), your medication list or the trend across your last three panels — all of which change what any single ratio means. Interpreting a lipid panel is a clinician's job, and this page exists to help you arrive at that conversation already knowing what the numbers say.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/heart-rate-zone-calc/"><span class="related-ico" aria-hidden="true">❤</span><span class="related-name">Heart Rate Zone Calculator</span></a><a class="related-item" href="https://tool-hub.me/ideal-weight-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Ideal Weight Calculator</span></a><a class="related-item" href="https://tool-hub.me/macro-calc/"><span class="related-ico" aria-hidden="true">🍗</span><span class="related-name">Macro Calculator</span></a><a class="related-item" href="https://tool-hub.me/nap-calc/"><span class="related-ico" aria-hidden="true">😴</span><span class="related-name">Nap Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why use a cholesterol ratio instead of the single numbers?</summary><p data-i18n="faq.a1">A total cholesterol of 240 mg/dL means something very different with an HDL of 40 than with an HDL of 90. The ratio divides the whole burden by the protective fraction, so one number carries both halves of the story. It is a quick sanity check on whether a scary-looking total is being offset by high HDL.</p></details>
+    <details><summary data-i18n="faq.q2">Which cholesterol number matters most?</summary><p data-i18n="faq.a2">Current US and UK guidelines lead with absolute LDL and non-HDL cholesterol, combined with a full risk score such as ASCVD or QRISK that also weighs age, blood pressure, smoking and diabetes. Ratios are supplementary context, not the deciding figure. Treat the TC/HDL number here as a conversation starter with your clinician, not a verdict.</p></details>
+    <details><summary data-i18n="faq.q3">How do I improve the ratio?</summary><p data-i18n="faq.a3">The evidence-ranked levers are: cut trans fats and cut refined carbohydrate load, replace saturated fat with unsaturated fat, get 150 minutes a week of moderate aerobic exercise, lose excess weight, and stop smoking — smoking cessation alone can lift HDL by several points. Statins and other medicines move LDL far more than lifestyle does, and that decision belongs to your doctor.</p></details>
+    <details><summary data-i18n="faq.q4">Do I need to fast before the blood test?</summary><p data-i18n="faq.a4">For triglycerides, classically yes — a 9 to 12 hour fast. Non-fasting panels are now accepted for routine screening in both US and UK practice because total, HDL and non-HDL barely shift, but triglycerides can read noticeably higher after a meal. If your triglyceride/HDL ratio looks high on a non-fasting sample, a fasting repeat is the usual next step.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

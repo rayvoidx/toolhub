@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HRA Exemption Calculator — House Rent Allowance</title>
+<meta name="description" content="Work out your HRA exemption under Section 10(13A) with the three-limb rule: actual HRA received, rent paid minus 10% of basic pay, and 50% or 40% of basic.">
+<meta name="keywords" content="hra calculator, hra exemption calculator, house rent allowance, hra tax exemption, section 10 13a, hra calculation">
+<link rel="canonical" href="https://tool-hub.me/hra-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HRA Exemption Calculator — House Rent Allowance">
+<meta property="og:description" content="Work out your HRA exemption under Section 10(13A) with the three-limb rule: actual HRA received, rent paid minus 10% of basic pay, and 50% or 40% of basic.">
+<meta property="og:url" content="https://tool-hub.me/hra-calc/">
+<meta property="og:image" content="https://tool-hub.me/hra-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c2d12">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "HRA Exemption Calculator",
+  "description": "Work out your HRA exemption under Section 10(13A) with the three-limb rule: actual HRA received, rent paid minus 10% of basic pay, and 50% or 40% of basic.",
+  "url": "https://tool-hub.me/hra-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "HRA Exemption Calculator",
+      "item": "https://tool-hub.me/hra-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>HRA Exemption Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>HRA Exemption Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Your exemption is the smallest of three limbs. This shows which one caps it.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard .rc-sub { font-size:13px; color:var(--muted); margin-top:2px; }
+      #tool table.limbs { width:100%; border-collapse:collapse; margin-top:14px; font-size:14px; }
+      #tool table.limbs th, #tool table.limbs td { text-align:left; padding:8px; border-bottom:1px solid var(--line); }
+      #tool table.limbs th { color:var(--muted); font-weight:600; }
+      #tool table.limbs td.num { text-align:right; white-space:nowrap; }
+      #tool table.limbs tr.bind td { font-weight:700; background:color-mix(in srgb, var(--accent) 12%, transparent); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:480px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="basic" data-i18n="tool.basic.label">Basic salary + DA (per month)</label>
+        <input type="number" id="basic" inputmode="numeric" min="0" max="10000000" step="500" autocomplete="off" placeholder="50000">
+      </div>
+      <div>
+        <label for="hra" data-i18n="tool.hra.label">HRA received (per month)</label>
+        <input type="number" id="hra" inputmode="numeric" min="0" max="10000000" step="500" autocomplete="off" placeholder="20000">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="rent" data-i18n="tool.rent.label">Rent paid (per month)</label>
+        <input type="number" id="rent" inputmode="numeric" min="0" max="10000000" step="500" autocomplete="off" placeholder="18000">
+      </div>
+      <div>
+        <label for="city" data-i18n="tool.city.label">City type</label>
+        <select id="city">
+          <option value="nonmetro" data-i18n="tool.city.nonmetro">Non-metro — any other city (40%)</option>
+          <option value="metro" data-i18n="tool.city.metro">Metro — Delhi, Mumbai, Kolkata, Chennai (50%)</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate exemption</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.exempt">Exempt HRA (per year)</div>
+          <div class="rc-val" id="r-exempt">—</div>
+          <div class="rc-sub" id="r-exempt-m"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.taxable">Taxable HRA (per year)</div><div class="rc-val" id="r-taxable">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.binding">Limb that caps it</div><div class="rc-val" id="r-binding">—</div></div>
+      </div>
+      <table class="limbs">
+        <thead><tr>
+          <th data-i18n="tool.th.limb">Exemption limb</th>
+          <th data-i18n="tool.th.monthly">Monthly</th>
+          <th data-i18n="tool.th.annual">Annual</th>
+        </tr></thead>
+        <tbody id="limb-body"></tbody>
+      </table>
+      <p class="subtle" id="zero-note" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.regime" style="margin-top:12px;">HRA exemption exists only in the old tax regime. Under the new regime — the default since FY 2023-24 — the whole allowance is taxable.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How the HRA exemption is actually calculated</h2>
+    <p>House rent allowance is a normal part of your salary and is taxable by default. Section 10(13A) of the Income Tax Act carves out an exemption, but only up to the <em>smallest</em> of three limbs. Missing that word is the single most common mistake: people assume the whole allowance is tax free, or that the exemption equals the rent they pay. It is neither. The three limbs are the HRA actually received, the rent paid minus 10% of basic salary plus dearness allowance, and 50% of basic + DA if you live in Delhi, Mumbai, Kolkata or Chennai (40% everywhere else).</p>
+    <p>Everything is computed on the salary and rent for the period you actually paid rent. This calculator works monthly and then annualises, which is what payroll teams do when your rent or city changes mid-year. If you moved from Pune to Mumbai in October, run the tool twice — once for each block of months — and add the two exempt figures.</p>
+
+    <h3>Worked example: ₹50,000 basic, ₹20,000 HRA, ₹18,000 rent in Pune</h3>
+    <p>Pune is not one of the four metros, so the third limb uses 40%. Limb one is the HRA received: ₹20,000 a month. Limb two is rent minus 10% of basic + DA: ₹18,000 − ₹5,000 = ₹13,000. Limb three is 40% of ₹50,000 = ₹20,000. The smallest is ₹13,000, so ₹13,000 a month is exempt — ₹1,56,000 for the year. The taxable slice is ₹20,000 − ₹13,000 = ₹7,000 a month, or ₹84,000 a year, which gets added to your salary income.</p>
+    <p>Move the same person to Mumbai and the third limb becomes 50% of ₹50,000 = ₹25,000, but the rent limb is still ₹13,000, so nothing changes. The metro percentage only matters when it is the binding limb — usually when rent is high relative to basic pay.</p>
+
+    <h3>Reading the binding limb</h3>
+    <p>The limb that binds tells you what to do about it. If the <strong>rent limb</strong> binds, your exemption rises rupee for rupee with rent, so a genuine rent increase or a correctly documented rent to a parent directly increases the exemption. If the <strong>50%/40% limb</strong> binds, extra rent buys you nothing more — your basic pay is the constraint, and only a salary restructure (a higher basic component) would help. If the <strong>actual HRA limb</strong> binds, you are being paid less allowance than the law would let you exempt; ask HR whether HRA can be a larger share of the same CTC.</p>
+
+    <h3>When the exemption comes out as zero</h3>
+    <p>If your rent is not more than 10% of basic + DA, the second limb is zero or negative and no HRA is exempt at all. At ₹50,000 basic that threshold is ₹5,000 a month: paying ₹4,500 rent produces exactly nothing. The same happens if you receive no HRA component — the law cannot exempt an allowance you were never paid. In that situation, salaried people with no HRA can look at Section 80GG instead, which allows a much smaller deduction subject to its own conditions.</p>
+
+    <h2>Rent-to-parents compliance checklist</h2>
+    <p>Paying rent to a parent is legal and routinely accepted, but it is also one of the most audited claims. Keep five things: (1) your parents genuinely own the property, ideally shown on a tax receipt or ownership document; (2) a written rent agreement in your name; (3) monthly bank transfers, never cash and never a lump sum in March; (4) rent receipts; and (5) your parents declaring the rent as income from house property in their own return, where a 30% standard deduction and their own slab apply. If a parent is in a lower slab or below the exemption limit, the family pays less tax overall — that is the legitimate benefit. Rent paid to a spouse is a different matter and is generally rejected.</p>
+    <p>Above ₹1,00,000 of rent in a financial year, roughly ₹8,334 a month, you must give your employer the landlord's PAN in Form 12BB. Very high rent can also trigger TDS obligations on you as the tenant under Section 194-IB — currently where monthly rent exceeds ₹50,000.</p>
+
+    <h2>Old regime or new regime?</h2>
+    <p>Since FY 2023-24 the new tax regime is the default, and it disallows HRA exemption completely along with 80C, 80D and most other deductions. The trade is lower slab rates plus a standard deduction. For a metro renter whose exemption runs into lakhs, the old regime frequently still wins; for someone with modest rent and few investments, the new regime usually wins. Salaried taxpayers can switch each year while filing, so compute both before you lock the declaration your employer uses for TDS.</p>
+
+    <h2>Limits of this calculator</h2>
+    <p>This tool models the standard Section 10(13A) computation for a single continuous period at one salary and one city type. It does not handle mid-year changes automatically, perquisites, arrears, or the interaction between HRA and a home loan claim (which is allowed in specific fact patterns, such as your own house being let out or in another city). It is an estimate for planning and for checking your payroll figure — not tax advice. For anything unusual, a chartered accountant should see your Form 16 and rent documents.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/inflation-calc/"><span class="related-ico" aria-hidden="true">💸</span><span class="related-name">Inflation Calculator</span></a><a class="related-item" href="https://tool-hub.me/interest-calc/"><span class="related-ico" aria-hidden="true">💵</span><span class="related-name">Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/investment-goal-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Investment Goal Calculator</span></a><a class="related-item" href="https://tool-hub.me/landed-cost-batch/"><span class="related-ico" aria-hidden="true">🚢</span><span class="related-name">Landed Cost Batch Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Can I claim HRA exemption in the new tax regime?</summary><p data-i18n="faq.a1">No. Section 10(13A) exemption is available only if you opt for the old tax regime. The new regime, which is the default from FY 2023-24, taxes the entire house rent allowance and instead gives lower slab rates plus a standard deduction. Compare both outcomes before choosing: high rent in a metro often keeps the old regime cheaper.</p></details>
+    <details><summary data-i18n="faq.q2">Can I pay rent to my parents and claim HRA?</summary><p data-i18n="faq.a2">Yes, if the arrangement is genuine. Your parents must actually own the home, you need a rent agreement, and rent should move by bank transfer every month rather than cash. Your parents then declare that rent as house property income in their own return, where a 30% standard deduction applies. Paying rent to a spouse is routinely disallowed.</p></details>
+    <details><summary data-i18n="faq.q3">Do I need my landlord's PAN?</summary><p data-i18n="faq.a3">Yes, once your rent crosses ₹1,00,000 in a financial year — roughly ₹8,334 a month. You report the landlord's PAN in the Form 12BB you give your employer. If the landlord refuses, you need a signed declaration from them with their address and the reason, and your employer may still decline the exemption at source.</p></details>
+    <details><summary data-i18n="faq.q4">Is Bengaluru or Hyderabad counted as a metro for HRA?</summary><p data-i18n="faq.a4">No. For HRA purposes the Income Tax Act recognises only four metros: Delhi, Mumbai, Kolkata and Chennai. Bengaluru, Hyderabad, Pune, Gurugram and Noida all take the 40% limb even though rents there can match Mumbai. The city that matters is where you live and pay rent, not where the office is.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
