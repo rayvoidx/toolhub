@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGPA to Percentage Calculator — CBSE 9.5 Formula</title>
+<meta name="description" content="Convert CGPA to percentage with the CBSE 9.5 rule, or the 10 and 9.0 factors other universities use. Reverse it too, with a 6.0 to 10.0 reference table.">
+<meta name="keywords" content="cgpa to percentage, cgpa to percentage calculator, convert cgpa to percentage, cgpa calculator, percentage to cgpa, cbse 9.5 formula">
+<link rel="canonical" href="https://tool-hub.me/cgpa-to-percentage/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CGPA to Percentage Calculator — CBSE 9.5 Formula">
+<meta property="og:description" content="Convert CGPA to percentage with the CBSE 9.5 rule, or the 10 and 9.0 factors other universities use. Reverse it too, with a 6.0 to 10.0 reference table.">
+<meta property="og:url" content="https://tool-hub.me/cgpa-to-percentage/">
+<meta property="og:image" content="https://tool-hub.me/cgpa-to-percentage/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c2d12">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CGPA to Percentage Converter",
+  "description": "Convert CGPA to percentage with the CBSE 9.5 rule, or the 10 and 9.0 factors other universities use. Reverse it too, with a 6.0 to 10.0 reference table.",
+  "url": "https://tool-hub.me/cgpa-to-percentage/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CGPA to Percentage Calculator",
+      "item": "https://tool-hub.me/cgpa-to-percentage/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>CGPA to Percentage Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>CGPA to Percentage Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Multiply by 9.5 is one board's rule, not a universal law. Pick the factor your own institution publishes.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .ref-title { font-size:14px; margin:16px 0 6px; }
+      #tool table.ref { width:100%; border-collapse:collapse; font-size:14px; }
+      #tool table.ref th, #tool table.ref td { border-bottom:1px solid var(--line); padding:6px 8px; text-align:left; }
+      #tool table.ref th { color:var(--muted); font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="dir" data-i18n="tool.dir.label">Direction</label>
+        <select id="dir">
+          <option value="c2p" data-i18n="tool.dir.c2p">CGPA → Percentage</option>
+          <option value="p2c" data-i18n="tool.dir.p2c">Percentage → CGPA</option>
+        </select>
+      </div>
+      <div>
+        <label for="value" id="value-label" data-i18n="tool.value.cgpa">CGPA (0 to 10)</label>
+        <input type="number" id="value" inputmode="decimal" min="0" max="10" step="any" autocomplete="off" placeholder="8.2">
+      </div>
+    </div>
+
+    <label for="factor" data-i18n="tool.formula.label">Conversion factor</label>
+    <select id="factor">
+      <option value="9.5" data-i18n="tool.formula.f95">× 9.5 — CBSE standard, most common</option>
+      <option value="10" data-i18n="tool.formula.f10">× 10 — used by some universities</option>
+      <option value="9" data-i18n="tool.formula.f90">× 9.0 — used by a few institutions</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Convert</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-main-label" data-i18n="tool.r.pct">Percentage</div>
+          <div class="rc-val" id="r-main">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.formula">Formula used</div><div class="rc-val" id="r-formula">—</div></div>
+      </div>
+      <h3 class="ref-title" data-i18n="tool.r.table">Quick reference</h3>
+      <table class="ref">
+        <thead><tr><th data-i18n="tool.th.cgpa">CGPA</th><th data-i18n="tool.th.pct">Percentage</th></tr></thead>
+        <tbody id="r-tbody"></tbody>
+      </table>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.formula.note" style="margin-top:12px;">Factors differ by board and university. Check YOUR institution's official conversion rule before putting a number on an application.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How CGPA converts to a percentage</h2>
+    <p>A CGPA on the 10-point scale is a weighted average of grade points, not a score out of 100. To quote it as a percentage you multiply by a conversion factor that your board or university has published. The arithmetic is trivial; the hard part is knowing which factor you are entitled to use, because the answer changes by several points depending on the choice.</p>
+    <p>The default here is 9.5, the factor the Central Board of Secondary Education uses for Class 10 and Class 12 results. Some universities publish 10 instead, which is really just "move the decimal point", and a smaller number use 9.0 or a band-based table where each grade letter maps to a fixed percentage range. All three appear in real transcripts, which is why this tool lets you pick rather than pretending one is universal.</p>
+
+    <h3>Worked example: a CGPA of 8.2</h3>
+    <p>With the CBSE factor, 8.2 x 9.5 = 77.9%. With a 10x rule the same student reports 82%. With a 9.0 rule it is 73.8%. That is an 8.2-point spread from one identical transcript. If you are filling in an application box that says "percentage of marks", the number you write should be the one your own institution's rule produces — and if you are asked in an interview how you got it, you should be able to name the rule.</p>
+    <p>Going the other way works the same. A recruiter's cut-off of 75% under the 9.5 rule means 75 / 9.5 = 7.89 CGPA, so a candidate at 7.9 clears it and one at 7.85 does not. Note the ceiling: with 9.5 the highest reachable percentage is 95%, because a perfect 10.0 CGPA maps to 95. Anyone quoting 98% from a 10-point CGPA is using a different factor, and this calculator will tell you so instead of silently returning an impossible CGPA above 10.</p>
+
+    <h3>Where the 9.5 came from</h3>
+    <p>CBSE did not invent 9.5 as a round number. The board analysed several years of results, took the average marks scored by high-performing candidates across five main subjects, and compared those marks with the grade points those students received. Dividing marks by grade point produced a ratio hovering near 9.5, so the board adopted it as the official conversion for its own certificates. That history matters for two reasons: it is an empirical fit to one board's mark distribution, and it was calibrated on the upper end of that distribution. Applied to a different university's grading policy, or to a much lower CGPA, it is an approximation rather than a translation.</p>
+
+    <h2>Which number belongs on your application</h2>
+    <p>For jobs and higher study inside India, the university's own conversion certificate is the document that settles arguments. Most institutions will issue one on request from the examination section, and many print the formula on the reverse of the consolidated marksheet. Employers running automated shortlists usually accept whatever percentage the certificate states, and a mismatch between your claimed figure and your transcript is a far bigger problem than a couple of decimal points.</p>
+    <p>For applications to the US, UK, Canada or Australia, do not convert at all if you can avoid it. Universities there generally want the original transcript plus, in many cases, an evaluation from a credential service such as WES, ECE or NARIC. Those services do not multiply your CGPA by anything: they map each individual course grade onto their own scale and recompute an average, which is why their output can differ noticeably from a quick 9.5 conversion. Sending a self-calculated percentage where an official evaluation is required is a common reason applications stall.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>This converter is deliberately simple: one multiplication, three published factors, no invented precision. It cannot know your institution's rounding policy, whether your programme excludes certain subjects from the aggregate, or whether your grading system uses absolute marks or relative grading. It also cannot map a 10-point CGPA onto the American 4.0 GPA scale, because those are different systems with different grade bands rather than two units of the same quantity.</p>
+    <p>Use the result as a working figure, keep two decimal places, and label it with the factor you applied. When the number is going somewhere official, take five minutes to check the rule your institution actually publishes.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/density-calc/"><span class="related-ico" aria-hidden="true">🧊</span><span class="related-name">Density Calculator</span></a><a class="related-item" href="https://tool-hub.me/half-life-calc/"><span class="related-ico" aria-hidden="true">☢️</span><span class="related-name">Half-Life Calculator</span></a><a class="related-item" href="https://tool-hub.me/marks-percentage-calc/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Marks Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/molar-mass-calc/"><span class="related-ico" aria-hidden="true">⚗️</span><span class="related-name">Molar Mass Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is CGPA multiplied by 9.5?</summary><p data-i18n="faq.a1">CBSE derived 9.5 from its own results: it averaged the marks of high scorers in five main subjects over several years and found that dividing those marks by the grade point landed near 9.5. The factor is a statistical fit to one board's data, not a mathematical constant. It works well for CBSE Class 10 and 12 results and only approximately anywhere else.</p></details>
+    <details><summary data-i18n="faq.q2">Which factor should I use — 9.5, 10 or 9.0?</summary><p data-i18n="faq.a2">Whatever your own institution publishes wins, every time. Many universities issue a conversion certificate or print the formula on the back of the transcript, and that document is what employers and foreign admissions offices accept. Use 9.5 only as a default when nothing official exists, and always state which formula you used when you quote a percentage.</p></details>
+    <details><summary data-i18n="faq.q3">Can I convert CGPA to a 4-point GPA the same way?</summary><p data-i18n="faq.a3">No. The US 4.0 scale is a different system with its own grade bands, so multiplying or dividing by a single constant is not valid. Credential evaluators such as WES convert each course grade individually and then recompute a GPA, which is why their result rarely matches any quick formula. For admissions, send the transcript and let the evaluator do the conversion.</p></details>
+    <details><summary data-i18n="faq.q4">Does rounding change my percentage?</summary><p data-i18n="faq.a4">Slightly, and it can matter at a cut-off. A CGPA of 8.24 rounded to 8.2 gives 77.9% instead of 78.28%, which is enough to fall on the wrong side of a 78% shortlist. Keep two decimal places and follow your institution's stated rounding rule rather than rounding up on your own.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
