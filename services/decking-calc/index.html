@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decking Calculator — Boards, Screws &amp; Joists</title>
+<meta name="description" content="Work out how many deck boards you need from deck size, board width and gap spacing, plus deck screws, joists at 16 in on centre and total square footage.">
+<meta name="keywords" content="decking calculator, deck board calculator, how many deck boards, composite decking calculator, deck material calculator, deck screw calculator">
+<link rel="canonical" href="https://tool-hub.me/decking-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Decking Calculator — Boards, Screws &amp; Joists">
+<meta property="og:description" content="Work out how many deck boards you need from deck size, board width and gap spacing, plus deck screws, joists at 16 in on centre and total square footage.">
+<meta property="og:url" content="https://tool-hub.me/decking-calc/">
+<meta property="og:image" content="https://tool-hub.me/decking-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c2d12">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Decking Calculator",
+  "description": "Work out how many deck boards you need from deck size, board width and gap spacing, plus deck screws, joists at 16 in on centre and total square footage.",
+  "url": "https://tool-hub.me/decking-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Decking Calculator",
+      "item": "https://tool-hub.me/decking-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Decking Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Decking Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Deck size in, board count out — with the gap, waste and fastener numbers a lumber order actually needs.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Measurement unit</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+      <option value="m" data-i18n="tool.unit.m">Metres</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="dlen" data-i18n="tool.len.label">Deck length (along the boards)</label>
+        <input type="number" id="dlen" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="16">
+      </div>
+      <div>
+        <label for="dwid" data-i18n="tool.wid.label">Deck width (across the boards)</label>
+        <input type="number" id="dwid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+    </div>
+
+    <label for="board" data-i18n="tool.board.label">Deck board</label>
+    <select id="board">
+      <option value="w55x12" data-i18n="tool.board.w55x12">Wood 2x6 — 5.5 in wide x 12 ft</option>
+      <option value="w55x16" data-i18n="tool.board.w55x16">Wood 2x6 — 5.5 in wide x 16 ft</option>
+      <option value="w35x12" data-i18n="tool.board.w35x12">Wood 2x4 — 3.5 in wide x 12 ft</option>
+      <option value="w35x16" data-i18n="tool.board.w35x16">Wood 2x4 — 3.5 in wide x 16 ft</option>
+      <option value="c55x16" data-i18n="tool.board.c55x16">Composite — 5.5 in wide x 16 ft</option>
+      <option value="c55x20" data-i18n="tool.board.c55x20">Composite — 5.5 in wide x 20 ft</option>
+      <option value="custom" data-i18n="tool.board.custom">Custom board size</option>
+    </select>
+
+    <div class="field-row" id="custom-row" hidden>
+      <div>
+        <label for="cw" data-i18n="tool.cw.label">Board width (in)</label>
+        <input type="number" id="cw" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="5.5">
+      </div>
+      <div>
+        <label for="cl" data-i18n="tool.cl.label">Board length (ft)</label>
+        <input type="number" id="cl" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="20">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="gap" data-i18n="tool.gap.label">Gap between boards</label>
+        <select id="gap">
+          <option value="0.25" data-i18n="tool.gap.quarter">1/4 in (6 mm) — wet pressure-treated</option>
+          <option value="0.125" data-i18n="tool.gap.eighth">1/8 in (3 mm) — dry lumber or composite</option>
+        </select>
+      </div>
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+        <select id="waste">
+          <option value="10" data-i18n="tool.waste.10">10% — straight boards, simple rectangle</option>
+          <option value="15" data-i18n="tool.waste.15">15% — diagonal or picture-frame layout</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.boards">Deck boards to buy</div>
+          <div class="rc-val" id="r-boards">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.screws">Deck screws (approx.)</div><div class="rc-val" id="r-screws">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.joists">Joists at 16 in on centre</div><div class="rc-val" id="r-joists">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Deck area</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rows">Rows x boards per row</div><div class="rc-val" id="r-rows">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Estimates for a shopping list. Check joist spans and fastener spacing against your local building code before you order.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How a decking calculator counts boards</h2>
+    <p>Board count is a coverage problem, not an area problem. Each board covers its own face width plus the gap you leave beside it, so the deck width divided by that combined figure gives the number of rows. The deck length divided by the board length gives how many boards make up one row. Multiply the two, add waste, and you have an order quantity. Square footage alone will always under-count, because it ignores the gaps and the offcut at the end of every run.</p>
+
+    <h3>Worked example: a 16 ft x 12 ft deck</h3>
+    <p>Take a rectangular deck 16 ft long with boards running the long way, 12 ft across, built from 5.5 in wide pressure-treated 2x6 boards at 12 ft, with a 1/4 in gap and 10% waste.</p>
+    <p>Deck width in inches: 12 x 12 = 144 in. Each board occupies 5.5 + 0.25 = 5.75 in. Rows = 144 / 5.75 = 25.04, rounded up to 26 rows. Boards per row = 16 ft of run / 12 ft boards = 1.33, rounded up to 2. Base count = 26 x 2 = 52 boards. Add 10% waste: 52 x 1.1 = 57.2, so buy 58 boards.</p>
+    <p>Now the rest of the order. Deck area is 16 x 12 = 192 sq ft, so face screws at 350 per 100 sq ft come to 672, rounded up to 680 — buy a 5 lb box, which typically holds around 350 screws, so two boxes. Joists at 16 in on centre run perpendicular to the boards, spaced along the 16 ft length: 192 in / 16 in = 12 bays, plus one for the closing joist, which is 13 joists at 12 ft each.</p>
+
+    <h3>Why 58 boards and not 52</h3>
+    <p>Look at that second row calculation again: a 16 ft run built from 12 ft boards means each row is one full board plus a 4 ft piece, and the 8 ft leftover from the second board is only useful if another row needs a piece 8 ft or shorter. In practice some of those offcuts land in the skip. Switching to 16 ft boards makes each row a single board — 26 boards plus waste instead of 52 — and removes every butt joint from the deck surface. Run the calculator both ways before ordering; the longer board is usually cheaper per square foot once waste is counted.</p>
+
+    <h2>Layout planning: start with a full board</h2>
+    <p>The rounding up on rows means the last row is almost never a full board. A 144 in width covered by 5.75 in rows leaves 0.04 of a row, which is a sliver about a quarter of an inch wide — impossible to fasten and ugly at the edge. Three ways out: widen the gap slightly across all rows to absorb the remainder, rip the first and last board to equal widths so the sliver is shared between both edges, or plan a picture-frame border that swallows the difference. Deciding this before you order matters, because a ripped border row can change how many boards you need.</p>
+
+    <h3>Fastener schedule</h3>
+    <p>Two screws per board at every joist crossing is the standard, which is where the 350 per 100 sq ft figure comes from. Screws must be rated for the treatment chemicals in the lumber — plain zinc corrodes fast in modern copper-based treatments, so stainless or coated deck screws are the norm. Hidden fasteners give a clean face with no visible heads but cost more and are sold by coverage area, typically 100 or 175 sq ft per box, so buy by the coverage figure on the label. Composite boards almost always want the manufacturer's own clip system.</p>
+
+    <h3>Gaps and seasonal movement</h3>
+    <p>Wet pressure-treated lumber leaves the yard saturated and shrinks as it dries, so a 1/8 in gap can open to 1/4 in within a season. That is why 1/8 in is the usual spacing for wet stock — the board does the work for you. Kiln-dried lumber and composite have already stabilised, so those are laid with the gap you want to keep, commonly 1/4 in for drainage and debris clearance. Composite also expands lengthwise in heat, which is why manufacturers specify a butt-end gap that changes with the temperature on installation day.</p>
+
+    <h2>Limitations</h2>
+    <p>This calculator assumes a rectangle with boards running in one direction. Octagons, curves, wrap-around stairs and multi-level decks need to be broken into rectangles and added up. It also assumes a single board size across the whole deck, so a picture-frame border in a contrasting colour should be priced separately. Joist counts here are a spacing estimate only, not a span table: joist size, spacing and beam positions depend on span, load and your local building code, and that is a plans-review question rather than an arithmetic one.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/dog-age-calc/"><span class="related-ico" aria-hidden="true">🐕</span><span class="related-name">Dog Age Calculator</span></a><a class="related-item" href="https://tool-hub.me/drywall-calc/"><span class="related-ico" aria-hidden="true">🛠️</span><span class="related-name">Drywall Calculator</span></a><a class="related-item" href="https://tool-hub.me/ev-charging-calc/"><span class="related-ico" aria-hidden="true">🔋</span><span class="related-name">EV Charging Time Calculator</span></a><a class="related-item" href="https://tool-hub.me/fence-calc/"><span class="related-ico" aria-hidden="true">🚧</span><span class="related-name">Fence Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Do composite boards change the board count?</summary><p data-i18n="faq.a1">Not the count itself — a 5.5 in composite board covers the same width as a 5.5 in wood board, so the rows work out the same. What changes is the spacing rule: most composite makers specify a fixed side gap and a butt-end gap that grows in cold weather, and ignoring it voids the warranty. Set the gap in this calculator to whatever your manufacturer's install sheet says.</p></details>
+    <details><summary data-i18n="faq.q2">How much waste should I add for diagonal decking?</summary><p data-i18n="faq.a2">Use 15% instead of the usual 10%. Running boards at 45 degrees means every board meets the rim at an angle, so both ends become offcuts and each row is longer than the deck itself. Picture-frame borders and any deck with angled corners or a curved edge should also use 15%, and stair treads are worth counting separately.</p></details>
+    <details><summary data-i18n="faq.q3">How many screws or hidden fasteners will I need?</summary><p data-i18n="faq.a3">Face-screwing takes about 350 deck screws per 100 sq ft — two screws per board at every joist crossing, at 16 in on centre. Hidden fastener clips run roughly the same count, one clip per board per joist, but they are sold per 100 or 175 sq ft of coverage, so buy by the coverage figure on the box rather than by piece count.</p></details>
+    <details><summary data-i18n="faq.q4">Which direction should the deck boards run?</summary><p data-i18n="faq.a4">Boards must run perpendicular to the joists, so the joist direction decides the board direction. In this calculator the length is the dimension the boards run along and the width is what they cross. If you flip which side is which, the row count and the joist count swap too — worth calculating both ways to see which uses fewer boards.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

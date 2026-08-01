@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CD Calculator — Certificate of Deposit Interest</title>
+<meta name="description" content="Work out what a certificate of deposit pays at maturity: enter your deposit, APY and term to see interest earned, monthly equivalent and early-withdrawal cost.">
+<meta name="keywords" content="cd calculator, cd interest calculator, certificate of deposit calculator, cd rates calculator, cd maturity calculator, early withdrawal penalty calculator">
+<link rel="canonical" href="https://tool-hub.me/cd-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CD Calculator — Certificate of Deposit Interest">
+<meta property="og:description" content="Work out what a certificate of deposit pays at maturity: enter your deposit, APY and term to see interest earned, monthly equivalent and early-withdrawal cost.">
+<meta property="og:url" content="https://tool-hub.me/cd-calc/">
+<meta property="og:image" content="https://tool-hub.me/cd-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#065f46">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CD Calculator",
+  "description": "Work out what a certificate of deposit pays at maturity: enter your deposit, APY and term to see interest earned, monthly equivalent and early-withdrawal cost.",
+  "url": "https://tool-hub.me/cd-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CD Calculator",
+      "item": "https://tool-hub.me/cd-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>CD Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>CD Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">CDs quote APY, so the compounding is already in the rate. Here is what that turns into in dollars.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard .rc-sub { font-size:13px; color:var(--muted); margin-top:4px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="deposit" data-i18n="tool.deposit.label">Deposit amount</label>
+        <input type="number" id="deposit" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10000">
+      </div>
+      <div>
+        <label for="apy" data-i18n="tool.apy.label">APY %</label>
+        <input type="number" id="apy" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="4.5">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.apy.note">CDs quote APY — compounding is already baked in, so there is no frequency to choose.</p>
+
+    <div class="field-row">
+      <div>
+        <label for="term" data-i18n="tool.term.label">Term</label>
+        <select id="term">
+          <option value="6" data-i18n="tool.term.6">6 months</option>
+          <option value="12" selected data-i18n="tool.term.12">12 months (1 year)</option>
+          <option value="18" data-i18n="tool.term.18">18 months</option>
+          <option value="24" data-i18n="tool.term.24">24 months (2 years)</option>
+          <option value="36" data-i18n="tool.term.36">36 months (3 years)</option>
+          <option value="60" data-i18n="tool.term.60">60 months (5 years)</option>
+          <option value="custom" data-i18n="tool.term.custom">Custom term</option>
+        </select>
+      </div>
+      <div>
+        <label for="penalty" data-i18n="tool.penalty.label">Early-withdrawal penalty</label>
+        <select id="penalty">
+          <option value="3" data-i18n="tool.penalty.3">3 months of interest</option>
+          <option value="6" selected data-i18n="tool.penalty.6">6 months of interest</option>
+          <option value="12" data-i18n="tool.penalty.12">12 months of interest</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="months-row" hidden>
+      <label for="months" data-i18n="tool.months.label">Term in months</label>
+      <input type="number" id="months" inputmode="numeric" min="1" max="600" step="1" autocomplete="off" placeholder="12">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.maturity">Value at maturity</div>
+          <div class="rc-val" id="r-maturity">—</div>
+          <div class="rc-sub" id="r-sub">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.interest">Interest earned</div><div class="rc-val" id="r-interest">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.monthly">Effective monthly interest</div><div class="rc-val" id="r-monthly">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.penalty">Early-withdrawal penalty</div><div class="rc-val" id="r-penalty">—</div></div>
+      </div>
+      <p class="subtle" id="note-break" style="margin-top:10px;"></p>
+      <p class="subtle" id="note-principal" hidden></p>
+      <p class="subtle" id="note-apy" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.basis" style="margin-top:12px;">APY basis: the rate is raised to term ÷ 12, because APY already contains the bank's compounding. The penalty and the 4% savings comparison are illustrations, not an offer.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a CD actually pays, and why APY is the only number you need</h2>
+    <p>A certificate of deposit is a deal: you promise not to touch the money for a fixed term, and the bank promises a fixed rate. Because the Truth in Savings Act requires deposit products to be advertised in APY — annual percentage yield — the rate you see already includes whatever compounding schedule the bank uses internally. That is why this calculator has no "compounded monthly / daily" dropdown. Applying monthly compounding on top of an APY would double-count it and overstate your return.</p>
+    <p>The formula is therefore short: <strong>maturity value = deposit × (1 + APY)^(months ÷ 12)</strong>. The exponent handles part-years cleanly, so an 18-month term is simply the rate raised to 1.5.</p>
+
+    <h3>Worked example: 
+
+  0,000 at 4.50% APY for 12 months</h3>
+    <p>10,000 × 1.045^1 = <strong>
+
+  0,450.00</strong> at maturity. Interest earned is $450.00, which works out to $37.50 a month of effective interest. That monthly line is the useful one for comparison shopping, because it puts a 6-month CD and a 5-year CD on the same footing before you think about reinvestment risk.</p>
+
+    <h3>Worked example: the same money for 5 years</h3>
+    <p>10,000 × 1.045^5 = <strong>
+
+  2,461.82</strong>, so $2,461.82 of interest, or $41.03 a month. The monthly figure beats the one-year CD by $3.53 not because the rate is different but because compounding has more room to work. Locking up money for five years at 4.5% is a bet that rates will not be meaningfully higher a year from now — that is the real question a CD asks, and no calculator can answer it for you.</p>
+
+    <h3>Worked example: what the early-withdrawal penalty costs</h3>
+    <p>Penalties are quoted in months of interest, calculated at the CD's rate on the amount withdrawn, not on what you have actually accrued. On 
+
+  0,000 at 4.50%, a six-month penalty is 10,000 × 0.045 × (6 ÷ 12) = <strong>$225</strong>. Your accrued interest only reaches $225 at month 7 — before that, the penalty comes out of your principal and you withdraw less than you deposited. That is legal in the United States and it surprises people every year.</p>
+    <p>The breakeven line in the result goes one step further and compares against leaving the money in a high-yield savings account at a flat 4%. On the 12-month CD above there is no month where an early exit beats the savings account: the $225 penalty is simply larger than the 0.5-point rate advantage can produce in a year. On the 5-year version the CD pulls ahead at <strong>month 48</strong> — cash out before then and the savings account would have been the better home for the money. Both figures assume the savings rate holds at 4% the whole time, which it will not; treat them as an illustration of the shape, not a forecast.</p>
+
+    <h2>Building a CD ladder</h2>
+    <p>A ladder is the standard fix for the lock-up problem. Split $25,000 into five $5,000 rungs at 1, 2, 3, 4 and 5 years. At 4.5% those rungs mature at $5,225.00, $5,460.12, $5,705.83, $5,962.59 and $6,230.91. Each year one rung comes due: spend it if you need cash, or roll it into a new 5-year CD. After four years every rung is a 5-year CD — the highest-paying tenor on most rate sheets — yet you still have one maturing every twelve months.</p>
+    <p>The ladder trades a small amount of yield for two real things: penalty-free annual access, and averaging across the rate cycle so you are never fully committed at the bottom. A variant, the barbell, puts money only at the short and long ends and skips the middle; it makes sense when you have a specific view on where rates go, and the plain ladder makes sense when you do not.</p>
+
+    <h2>CD or high-yield savings?</h2>
+    <p>Compare the CD's APY against the savings rate you can actually get today, then ask three questions. How likely is it you need this money before maturity — if the answer is anything above "very unlikely", the penalty maths above usually wins the argument for savings. How far above the savings rate is the CD; under about half a point, the lock-up rarely pays. And where are rates heading; savings rates move within weeks of a central bank decision, while your CD rate is frozen until maturity, which is exactly what you want when rates fall and exactly what you do not want when they rise.</p>
+
+    <h2>Limits of this calculator</h2>
+    <p>It models one deposit at one fixed rate with no additions and no withdrawals, which is how nearly all CDs work. It does not deduct tax — CD interest is ordinary income and is taxable in the year it is credited, even inside a multi-year term. It does not model bump-up, step-up, no-penalty or callable CDs, and it assumes the balance stays inside deposit insurance limits. Most importantly, it says nothing about renewal: many CDs roll over automatically at whatever rate the bank happens to be offering that week, which is often well below the rate you originally signed up for. Diarise your maturity date.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/coast-fire-calc/"><span class="related-ico" aria-hidden="true">🏖️</span><span class="related-name">Coast FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/compound-interest-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Compound Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/credit-card-interest-calc/"><span class="related-ico" aria-hidden="true">💳</span><span class="related-name">Credit Card Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/crypto-average-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Crypto Average Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between APY and APR on a CD?</summary><p data-i18n="faq.a1">APY is the effective annual yield after the bank's own compounding; APR is the nominal rate before it. Banks must advertise CDs in APY, which is why APY numbers are directly comparable between institutions and APR numbers are not. This calculator takes APY and raises it to the term in years, so no compounding frequency is needed.</p></details>
+    <details><summary data-i18n="faq.q2">How does an early withdrawal penalty actually work?</summary><p data-i18n="faq.a2">Most banks charge a set number of months of interest on the amount withdrawn — commonly three months on short terms and six to twelve on longer ones. The charge is based on the CD's rate rather than on what you actually earned, so cashing out in the first months can dip into your principal. Some banks cap the penalty at interest earned, but they are not required to.</p></details>
+    <details><summary data-i18n="faq.q3">What is a CD ladder and why use one?</summary><p data-i18n="faq.a3">A ladder splits your money across several terms — say five equal rungs from one to five years — so one CD matures every year and is reinvested at the long end. You keep annual access to cash without paying penalties while most of the balance still earns the higher long-term rate. It is the standard answer to not knowing where rates go next.</p></details>
+    <details><summary data-i18n="faq.q4">Are brokered CDs different from bank CDs?</summary><p data-i18n="faq.a4">Brokered CDs are bought through a brokerage and trade on a secondary market, so instead of paying a penalty you sell the CD at whatever price it fetches. If rates have risen since you bought it, that price is below face value and the loss is real. Bank CDs carry a known penalty; brokered CDs carry unknown market risk in exchange for a slightly higher headline rate.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

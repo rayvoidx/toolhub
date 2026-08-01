@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VO2 Max Calculator — Cooper Test &amp; Heart Rate</title>
+<meta name="description" content="Estimate your VO2 max from a Cooper 12-minute run, a 1.5-mile time trial or your resting heart rate, then see how the score rates for your age and sex.">
+<meta name="keywords" content="vo2 max calculator, vo2max, cooper test calculator, estimate vo2 max, 1.5 mile run test, aerobic fitness rating">
+<link rel="canonical" href="https://tool-hub.me/vo2max-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VO2 Max Calculator — Cooper Test &amp; Heart Rate">
+<meta property="og:description" content="Estimate your VO2 max from a Cooper 12-minute run, a 1.5-mile time trial or your resting heart rate, then see how the score rates for your age and sex.">
+<meta property="og:url" content="https://tool-hub.me/vo2max-calc/">
+<meta property="og:image" content="https://tool-hub.me/vo2max-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be123c">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "VO2 Max Calculator",
+  "description": "Estimate your VO2 max from a Cooper 12-minute run, a 1.5-mile time trial or your resting heart rate, then see how the score rates for your age and sex.",
+  "url": "https://tool-hub.me/vo2max-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "VO2 Max Calculator",
+      "item": "https://tool-hub.me/vo2max-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>VO2 Max Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>VO2 Max Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Three field tests, one aerobic ceiling — and an honest read on how yours compares.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 12px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool [hidden] { display:none; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:30px; }
+      #tool .rate-excellent { color:#047857; }
+      #tool .rate-good { color:#0d9488; }
+      #tool .rate-average { color:#b45309; }
+      #tool .rate-below { color:#be123c; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="method" data-i18n="tool.method.label">Estimation method</label>
+    <select id="method">
+      <option value="cooper" data-i18n="tool.method.cooper">Cooper 12-minute run</option>
+      <option value="rhr" data-i18n="tool.method.rhr">Resting heart rate formula</option>
+      <option value="run15" data-i18n="tool.method.run15">1.5-mile run time</option>
+    </select>
+
+    <div id="cooper-wrap" class="field-row">
+      <div>
+        <label for="dist" data-i18n="tool.dist.label">Distance covered in 12 minutes</label>
+        <input type="text" id="dist" inputmode="decimal" autocomplete="off" placeholder="2400">
+      </div>
+      <div>
+        <label for="dunit" data-i18n="tool.unit.label">Unit</label>
+        <select id="dunit">
+          <option value="m" data-i18n="tool.unit.m">Meters</option>
+          <option value="mi" data-i18n="tool.unit.mi">Miles</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="rhr-wrap" hidden>
+      <label for="rhr" data-i18n="tool.rhr.label">Resting heart rate (bpm)</label>
+      <input type="text" id="rhr" inputmode="numeric" autocomplete="off" placeholder="60">
+    </div>
+
+    <div id="run-wrap" class="field-row" hidden>
+      <div>
+        <label for="mm" data-i18n="tool.mm.label">Minutes</label>
+        <input type="text" id="mm" inputmode="numeric" autocomplete="off" placeholder="12">
+      </div>
+      <div>
+        <label for="ss" data-i18n="tool.ss.label">Seconds</label>
+        <input type="text" id="ss" inputmode="numeric" autocomplete="off" placeholder="30">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="age" data-i18n="tool.age.label">Age</label>
+        <input type="text" id="age" inputmode="numeric" autocomplete="off" placeholder="30">
+      </div>
+      <div>
+        <p id="sex-label" style="font-weight:600;font-size:14px;margin:10px 0 2px;" data-i18n="tool.sex.label">Sex (rating table)</p>
+        <div class="mode-row" role="radiogroup" aria-labelledby="sex-label">
+          <label><input type="radio" name="sex" value="male" checked><span data-i18n="tool.sex.male">Male</span></label>
+          <label><input type="radio" name="sex" value="female"><span data-i18n="tool.sex.female">Female</span></label>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate VO2 max</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.vo2">VO2 max (ml/kg/min)</div>
+          <div class="rc-val" id="r-vo2">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rating">Fitness rating</div><div class="rc-val" id="r-rating">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.mets">METs</div><div class="rc-val" id="r-mets">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.target">Excellent starts at</div><div class="rc-val" id="r-target">—</div></div>
+      </div>
+      <p class="subtle" id="r-note" style="margin-top:12px;"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disclaimer" style="margin-top:12px;">Field estimates, not a lab test. Re-test the same way each time and read the trend, not the decimal.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What the number means before you chase it</h2>
+    <p>VO2 max is the maximum volume of oxygen your body can take in and use per minute, divided by your body weight, which is why it is written in millilitres per kilogram per minute. A sedentary 40-year-old man often lands near 32; a recreational runner in the same age group sits in the low 40s; elite endurance athletes clear 70 and cross-country skiers have recorded above 90. It is the ceiling of your aerobic engine, and everything else in endurance — pacing, running economy, lactate threshold — decides how much of that ceiling you can actually use on race day.</p>
+
+    <h3>Worked example: the Cooper 12-minute run</h3>
+    <p>Kenneth Cooper designed his test for the US Air Force in 1968: run as far as you can in 12 minutes on a flat track, then convert. The formula is VO2 max = (distance in metres − 504.9) ÷ 44.73. Say you cover 2,400 m, which is six laps of a standard 400 m track. Subtract 504.9 to get 1,895.1, divide by 44.73, and you have 42.4 ml/kg/min. For a 30-year-old man the excellent band starts at 50 and the good band at 43, so 42.4 lands at the top of average — respectable, one solid training block away from good. The same 42.4 for a 30-year-old woman clears the good threshold of 37 comfortably, because the female norms sit roughly 6 to 8 points lower at every age thanks to differences in haemoglobin mass and heart size.</p>
+    <p>Two practical notes. Pace it evenly: people who sprint the first lap almost always finish 100 to 200 m short of their real capacity, which costs 2 to 4 points on the result. And keep the surface constant — grass, trail and wind can each cost you a lap's worth of distance, which makes a real gain look like a plateau.</p>
+
+    <h3>Which of the three methods should you trust?</h3>
+    <p>Ranked honestly, from best to worst: a laboratory graded exercise test with a mask and a metabolic cart is the gold standard, with a measurement error of only 2 to 3 percent. Next comes a maximal field test — the Cooper run or a 1.5-mile time trial — which typically lands within 10 to 15 percent of lab values as long as you truly ran to exhaustion. Last comes the resting heart rate method, VO2 max = 15.3 × (max HR ÷ resting HR), published by Uth and colleagues in 2004. It requires no running at all, which is exactly why its error is wide: it can miss by 15 to 20 percent for individuals, because the maximum heart rate is itself estimated from age (this tool uses Tanaka's 208 − 0.7 × age, which is more accurate than the old 220 − age) and because resting heart rate is influenced by caffeine, sleep, stress and hydration. Use the resting method as a starting point, then re-test with a run once you can run for 12 minutes without stopping.</p>
+    <p>The 1.5-mile test, VO2 max = 3.5 + 483 ÷ time in minutes, is the one most US readers meet through military and public safety fitness standards. A 12:30 finish gives 3.5 + 483 ÷ 12.5 = 42.1 ml/kg/min — near enough identical to the 2,400 m Cooper example above, which is a decent sanity check that both formulas describe the same runner.</p>
+
+    <h2>The training that actually moves it: 4x4 intervals</h2>
+    <p>The most studied protocol comes out of Norway: after a 10-minute warm-up, run four minutes at roughly 90 to 95 percent of maximum heart rate — hard enough that talking is limited to a couple of words — then jog three minutes easy, and repeat until you have completed four hard efforts. Total session time is around 40 minutes. Trials in previously untrained adults, cardiac rehabilitation patients and trained runners have consistently produced improvements of 3 to 8 percent within six to twelve weeks, with the larger gains going to those who started lowest. Two of these sessions a week, layered on top of easy aerobic running, is usually the ceiling of what most people recover from.</p>
+    <p>Long slow distance still matters — it builds the capillary and mitochondrial density that lets your muscles extract oxygen — but on a per-hour basis, intervals raise the ceiling faster. If you have only three hours a week, one 4x4 session, one steady 40-minute run and one longer easy effort is a sensible split.</p>
+
+    <h2>Why cardiologists care about this number</h2>
+    <p>Cardiorespiratory fitness is the single strongest predictor of all-cause mortality that we can measure — stronger than smoking status, blood pressure, cholesterol or diabetes. In a 2018 JAMA Network Open study of over 122,000 treadmill tests, each step up in fitness category was associated with meaningfully lower long-term mortality, with the difference between the bottom fifth and the elite group being larger than that seen with any single traditional risk factor. The steepest part of the curve is at the bottom: moving from "below average" to "average" buys more life expectancy than moving from "good" to "excellent". That is unusually encouraging news for anyone whose result on this page came back low.</p>
+
+    <h2>Limitations worth naming</h2>
+    <p>Every number on this page is an estimate produced from a population regression, not a measurement of your oxygen uptake. The rating bands come from Cooper Institute norms for adults and are applied here from age 10 upward, so teenagers should treat the classification loosely. Altitude, heat, illness, a poor night's sleep, a bad pacing decision and cheap shoes can each move a field test result more than a month of training does. Re-test the same route, the same time of day, the same way, and compare the trend rather than the decimal place. And if you are over 40, sedentary, or have any cardiac history, get clearance before running an all-out maximal test — that advice is not boilerplate, it is the reason the resting heart rate option exists on this page at all.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/waist-hip-ratio-calc/"><span class="related-ico" aria-hidden="true">📐</span><span class="related-name">Waist to Hip Ratio Calculator</span></a><a class="related-item" href="https://tool-hub.me/water-intake-calc/"><span class="related-ico" aria-hidden="true">💧</span><span class="related-name">Water Intake Calculator</span></a><a class="related-item" href="https://tool-hub.me/a1c-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">A1C Calculator</span></a><a class="related-item" href="https://tool-hub.me/blood-alcohol-calc/"><span class="related-ico" aria-hidden="true">🍺</span><span class="related-name">Blood Alcohol Calculator (BAC)</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What does VO2 max actually measure?</summary><p data-i18n="faq.a1">It is the ceiling on how much oxygen your body can take in and burn per minute, scaled to body weight in ml/kg/min. Two things set it: how much blood your heart pumps per beat and how much oxygen your muscles can pull out of that blood, which depends on capillary and mitochondrial density. Everything else in endurance — pacing, running economy, lactate threshold — plays out underneath that ceiling.</p></details>
+    <details><summary data-i18n="faq.q2">How accurate is the VO2 max my watch shows?</summary><p data-i18n="faq.a2">Watches work backwards from your heart rate at a given pace, so they follow the direction of change well but rarely nail the absolute number. Typical error against lab testing is roughly 5 to 10 percent, and it widens if your max heart rate setting is wrong or you train mostly on hills. Treat it like a bathroom scale: useful week to week, not a verdict. A metabolic cart with a mask remains the gold standard.</p></details>
+    <details><summary data-i18n="faq.q3">Can you actually improve VO2 max?</summary><p data-i18n="faq.a3">Yes, and faster than most fitness markers move. Untrained adults typically gain 3 to 8 percent in six to twelve weeks of structured training, and high-intensity intervals such as the 4x4 protocol — four minutes hard, three minutes easy, repeated four times — produce the largest gain per hour invested. Progress slows near your genetic ceiling, where well-trained athletes fight for 1 to 2 percent a year.</p></details>
+    <details><summary data-i18n="faq.q4">How fast does VO2 max decline with age?</summary><p data-i18n="faq.a4">About 10 percent per decade after roughly age 30 in sedentary adults, driven mainly by a falling maximum heart rate and lost muscle mass. People who keep training hard lose around half that, near 5 percent per decade. An untrained 60-year-old who starts interval work can recover a decade's worth: age lowers the ceiling slowly, inactivity lowers it much faster.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
