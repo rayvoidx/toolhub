@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Which is bigger, a newton metre or a pound-foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A pound-foot is bigger. One lb-ft equals 1.355818 Nm, so 100 Nm is about 73.8 lb-ft. Because the number shrinks going from Nm to lb-ft, a spec that looks low in lb-ft can still be exactly the same tightness."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My torque wrench reads lb-ft but the manual says Nm. What now?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Convert it, never estimate it. Divide the Nm figure by 1.356 to get lb-ft: 110 Nm becomes 81 lb-ft. Guessing in this range is how wheel studs get stretched or snapped, and an under-torqued wheel can work loose on the road."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do older Japanese manuals use kg-m?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "kg-m (kgf-m) is the metric gravitational unit that was standard before SI took over, and 1 kg-m equals 9.80665 Nm. Older Japanese and European service manuals, plus many beam wrenches, are still marked this way. A 10.5 kg-m spec is 103 Nm, or 76 lb-ft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does torque relate to horsepower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Torque is twisting force; power is that torque multiplied by rotational speed (P = T × ω). An engine making 400 Nm at 3,000 rpm puts out roughly 126 kW, about 169 hp. Converting torque units never changes the power — it is the same twist written differently."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

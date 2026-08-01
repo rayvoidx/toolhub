@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Hyphens or underscores in a URL slug?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hyphens. Google treats a hyphen as a word separator and an underscore as a word joiner, so /french-press-coffee reads as three words while /french_press_coffee can read as one. Underscores are still fine in code repositories and file names, but for public URLs hyphens win. If a live URL already uses underscores, leave it alone rather than breaking links for a small gain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I remove stop words like the and of?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Either way ranks. Removing them shortens the slug and pushes keywords to the front; keeping them makes the URL read like a sentence, which can help click-through. The case to avoid is stripping a word that carries meaning, such as the it in how-to-do-it-yourself. Read the finished slug aloud before you publish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about titles that are not in English?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two options both work: transliterate into Latin characters, or keep the native script. Browsers and search engines handle percent-encoded UTF-8 slugs fine, so a Korean or Russian slug ranks normally — it just looks messy when pasted into a plain-text email. This tool keeps non-Latin letters as they are and only folds Latin accents, so café becomes cafe while 커피 stays 커피."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I change a slug after publishing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only with a 301 redirect from the old URL to the new one. Without it the old address returns a 404 and you lose the links and rankings it had earned. Most platforms — WordPress, Ghost, Shopify, Webflow — can create that redirect for you. If the page is brand new and has no traffic or backlinks, change it freely."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does a z-score actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A z-score says how many standard deviations a value sits above or below the mean. A z of 2 means the value is two standard deviations above average; a z of -0.5 is half a standard deviation below. Because the units cancel out, a z-score lets you compare numbers measured on completely different scales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When should I use a t-score instead of a z-score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use z when you know the population standard deviation, or when the sample is large (commonly n of 30 or more). With a small sample and an estimated standard deviation, the t distribution has fatter tails and gives wider, more honest intervals. The two converge as the sample grows, so for large n the difference is negligible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does the 68-95-99.7 rule relate to z-scores?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a normal distribution about 68% of values fall within z = ±1, 95% within z = ±2 and 99.7% within z = ±3. So a z of 1 lands near the 84th percentile and a z of 2 near the 97.7th. It is a fast sanity check on any percentile this calculator returns."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a negative z-score mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It simply means the value is below the mean — nothing is wrong with the number. The normal curve is symmetric, so a z of -1.5 has the same tail probability as +1.5, only on the left side. A z of -1.5 sits at about the 6.7th percentile while +1.5 sits near the 93.3rd."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

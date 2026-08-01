@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Combination or permutation — which one do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ask whether reordering the same items creates a different result. A 4-digit lock code is a permutation because 1234 and 4321 open different locks. Three pizza toppings are a combination because mushroom-pepper-onion is the same pizza in any order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the combination formula divide by r!?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Permutations count every ordering separately, so each group of r items is counted r! times — once for each way of shuffling it. Dividing by r! collapses those duplicates into a single group. That is why nCr is always nPr divided by r!, and why nCr is never larger than nPr."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 'with repetition' change?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It lets the same item be picked again, which matches dice, PIN codes and passwords. Permutations with repetition become n^r — a 4-digit PIN from 10 digits is 10^4 = 10,000. Combinations with repetition use C(n+r-1, r), the right model for things like three scoops chosen from five ice cream flavours: C(7, 3) = 35."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the odds of winning a 6/49 lottery?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Order does not matter on a lottery ticket, so it is C(49, 6) = 13,983,816 possible tickets. One ticket therefore has a 1 in 13,983,816 chance of matching all six numbers. Buying ten tickets makes it 10 in 13,983,816 — still about 1 in 1.4 million."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

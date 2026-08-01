@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do people only charge to 80%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two reasons: battery life and time. Lithium-ion cells age faster when they sit at high voltage, so keeping daily charging near 80% is the cheapest thing you can do for long-term capacity. On a DC rapid charger the current also drops sharply past 80%, and the last fifth can take as long as the first three fifths."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does AC charging waste more energy than DC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AC power goes through the car's onboard charger, which converts it to DC and gives off heat. Typically 8-12% of what your meter records never reaches the battery. DC rapid chargers do that conversion in the roadside cabinet and feed the pack directly, so losses at the car are smaller, usually 3-6%. That is why the default here is about 90% for home AC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my EV actually use a 350 kW charger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if the car can take it. The real rate is the lower of what the charger supplies and what the vehicle accepts, and most EVs peak somewhere between 50 and 250 kW — briefly, in a narrow window of state of charge and temperature. Plugging a 120 kW car into a 350 kW post gets you 120 kW at best, so enter your car's maximum intake in the custom field."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does cold weather slow charging down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lot. Below roughly 10 °C the battery management system limits current to protect the cells, and a cold pack on a DC charger may accept half its usual peak until it warms up. Preconditioning — the car heating the battery while you navigate to a charger — recovers most of that. Cold also cuts range by 15-30%, so you charge slower and need more kWh."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

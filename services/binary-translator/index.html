@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is each character eight bits?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eight bits make one byte, and computers address memory a byte at a time. Plain ASCII only needs seven bits, so the eighth is a leading zero — that is why every letter here starts with a 0. UTF-8 uses that spare bit as a flag to chain extra bytes for characters beyond ASCII."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the spaces between groups matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The spaces are there so humans can read the output; the translator strips all whitespace, including line breaks, before decoding. You can paste one unbroken string of 0s and 1s and it will still work, as long as the total count divides evenly by eight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does one emoji produce four groups?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "UTF-8 is variable width: ASCII characters take one byte, accented Latin and Greek take two, most CJK characters take three, and emoji take four. A smiley is therefore 32 binary digits, not 8. The character and byte counters show the difference side by side."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Binary or hexadecimal — which should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They describe the same bytes at different zoom levels. Hex packs one byte into two digits, so \"Hello\" is 48 65 6C 6C 6F instead of 40 binary digits. Binary is better for teaching bit patterns and masks; hex is better for dumps, colours and anything you have to read at length."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a URL and a URI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every URL is a URI, but not every URI is a URL. A URI is any identifier string; a URL is the subset that also says how to locate the thing, which means it carries a scheme such as https and usually a host. In day-to-day work the words are used interchangeably, and the WHATWG URL standard that browsers implement — the same parser behind this tool — simply calls all of them URLs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do some characters have to be percent-encoded?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Characters like ?, &, =, # and / carry structural meaning inside a URL, so a literal one inside your data would be read as a delimiter. Percent-encoding replaces the byte with % plus its hex value: a space becomes %20, & becomes %26, and non-ASCII text is UTF-8 encoded first, so é becomes %C3%A9. Turn on raw values to see exactly what travels over the wire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when the same query key appears twice?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The URL standard allows it, and this parser lists each occurrence as its own row, in order. What the server does is up to its framework: PHP keeps the last value unless the key ends in [], Express and Rails build an array, and ASP.NET joins them with commas. If the value matters, do not rely on duplicates — send one key or an explicit array syntax."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the fragment after # sent to the server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The browser strips the fragment before the request goes out, so server logs and server-side analytics never see it. JavaScript can still read it through location.hash, which is why single-page apps and client-side trackers use it. That also makes it the wrong place to put anything the server must act on."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

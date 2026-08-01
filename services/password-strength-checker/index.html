@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does password entropy in bits mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Entropy counts how many guesses an attacker needs, on a log scale: every extra bit doubles the work. Forty bits is about a trillion guesses, and 80 bits is a trillion times harder than that. This tool estimates entropy as length x log2(character pool), then trims it when it spots a predictable pattern."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is length or complexity more important?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Length wins, and it is not close. Each extra lowercase letter multiplies the search space by 26, while adding one symbol to a short password multiplies it just once. Four random common words carry roughly 44 bits and beat P@ss1! at every attack rate, while being far easier to remember."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to type my password into a checker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As a rule, no — most online checkers post the text to a server, where it can be logged. This one does all of its maths in your browser with no network request, and nothing is stored. Even so, the safe habit is to test a password of the same shape rather than your live one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I just use a password manager?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For almost every account, yes. A manager generates 20 or more random characters per site, which is well past 120 bits, so you never reuse a password and never have to memorise one. Keep a single long passphrase as the master key and let the manager carry the rest."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

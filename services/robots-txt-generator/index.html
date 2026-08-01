@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does robots.txt stop a page from being indexed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It controls crawling, not indexing. A blocked URL can still appear in search results if other sites link to it, usually with no description under the title. To keep a page out of the index, allow crawling and add a noindex meta tag, or put the page behind a login."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the robots.txt file go?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At the root of the host and nowhere else: https://example.com/robots.txt. Crawlers never look in subfolders, so /blog/robots.txt is ignored. Every subdomain and every protocol needs its own file, because www and non-www, http and https count as separate hosts."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does blocking AI crawlers in robots.txt actually work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only for the bots that choose to obey it. GPTBot, ClaudeBot, Google-Extended, CCBot, PerplexityBot and Bytespider all publish a user-agent token and state that they honour robots.txt, so a Disallow line stops those. Compliance is voluntary, so scrapers that ignore the file or spoof their user agent need server-side or firewall blocking instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Crawl-delay supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only by some engines. Google ignores Crawl-delay completely and asks you to manage crawl rate in Search Console. Bing and Yandex do honour it, and Bing accepts values of roughly 1 to 30 seconds. Adding the line does no harm, but it will not reduce load from Googlebot."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

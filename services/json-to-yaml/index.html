@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does the converter put quotes around no and on?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "YAML 1.1 parsers read y, n, yes, no, on and off as booleans, so an unquoted no silently becomes false. The classic casualty is Norway, whose country code NO turns into false in a list of country codes. Quoting every string that looks like a boolean keeps the value a string in both YAML 1.1 and 1.2 parsers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I keep comments when converting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JSON has no comment syntax, so there is nothing to carry over — anything you wrote as a fake comment key is converted as a normal key. Add YAML comments with # after converting. If your source file had JavaScript-style comments it was JSONC, not JSON, and you need to strip them before pasting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this also convert YAML back to JSON?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and that is deliberate. Parsing arbitrary YAML safely is a much larger job than emitting it: anchors, aliases, merge keys, tags and multiple documents all have to be handled, and careless YAML loaders have caused real security incidents. This tool only goes one way, JSON to YAML."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are anchors and aliases created for repeated blocks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Repeated objects are written out in full every time, because JSON has no concept of a shared reference. If you want &anchor and *alias to deduplicate a Kubernetes or docker-compose file, add them by hand after conversion. The output stays a plain expanded tree, which is what most tools expect anyway."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

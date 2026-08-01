@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Percent error, percent difference or percent change — which one do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percent error compares a measurement with a known accepted value: |measured - accepted| / |accepted| x 100. Percent difference compares two measurements when neither is the reference and divides by their average: |a - b| / ((a + b) / 2) x 100. Percent change tracks one quantity over time and keeps its sign: (new - old) / old x 100. Reading gravity as 9.5 against 9.81 is 3.16% error; two students reading 9.5 and 9.7 differ by 2.08%; a price moving from 9.50 to 9.81 is a 3.26% change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the percent error formula use absolute value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The absolute value turns the answer into a size rather than a direction, so two students who miss by the same amount in opposite directions report the same error. Accuracy is a question of magnitude. Direction still matters for diagnosing what went wrong, which is why this calculator states it separately in plain words instead of burying it in a minus sign."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many significant figures should I report for percent error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One or two is the norm. An error estimate is itself uncertain, so 3.16% is usually written as 3.2% and extra digits are false precision. Never report the error to more precision than your least precise measurement supports, and keep the raw absolute error alongside it if your write-up needs the units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between systematic and random error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Systematic error pushes every reading the same way: a balance reading 2 g heavy, a stopwatch started late, air resistance in a free-fall drop. It shows as a consistent direction in your percent error and averaging more trials will not remove it. Random error scatters readings around the true value through reaction time, vibration or last-digit estimation, and it does shrink as you average more trials."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

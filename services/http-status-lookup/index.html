@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between 401 and 403?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "401 Unauthorized means the server does not know who you are: credentials are missing, expired or wrong, and it should send a WWW-Authenticate header explaining how to log in. 403 Forbidden means it knows exactly who you are and still refuses, so retrying with the same credentials is pointless. In short, 401 is failed authentication and 403 is failed authorisation. A logged-in user hitting 403 needs a permission change, not a new login."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "301 or 302 — which redirect is better for SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use 301 when the move is permanent. Search engines consolidate the old URL's link equity into the new one and browsers cache the redirect hard, so the change sticks. A 302 says the original URL is still canonical, so ranking signals stay on the old address and crawlers keep requesting it. If the request method must survive the redirect too, 308 is the permanent equivalent and 307 the temporary one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "502 vs 503 vs 504 — what is actually broken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All three come from a proxy or load balancer sitting in front of your application. 502 Bad Gateway means the upstream returned something invalid or nothing at all, usually because the app crashed or is not listening on the expected port. 503 Service Unavailable means the server is reachable but cannot cope right now, whether overloaded or in maintenance, and it is meant to be temporary. 504 Gateway Timeout means the upstream answered too slowly, so look for a hanging query or a slow third-party call."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are codes like 418 or 499 real?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "418 I'm a Teapot is genuinely registered: it began as a 1998 April Fools' joke and servers still return it, sometimes to bots they want to turn away. Codes such as 499 (nginx, client closed the connection) and 520 to 527 (Cloudflare) are vendor inventions that never entered the IANA registry. The class digit still applies to all of them, because any unrecognised 4xx must be handled like a 400 and any unrecognised 5xx like a 500. That rule lets you reason about an unknown code even with no documentation."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

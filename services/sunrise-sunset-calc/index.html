@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do these times differ from my weather app by a few minutes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard sunrise formulas put the sun's upper edge 0.833 degrees below the horizon, a figure that bundles average atmospheric refraction with the sun's apparent radius. Your weather app may assume a different refraction value, use your city centre instead of your exact coordinates, or account for elevation. A spread of two to four minutes between reputable sources is normal, and a hill or building on your horizon can move the visible sunrise much more than that."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between civil, nautical and astronomical twilight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Civil twilight lasts until the sun is 6 degrees below the horizon — you can still read outdoors and the brightest planets appear. Nautical twilight ends at 12 degrees, the point where the sea horizon becomes too faint for sextant sights. Astronomical twilight ends at 18 degrees, when the sky is dark enough for deep-sky observation. This calculator shows the civil pair, the one that matters for driving lights, photography and prayer times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does day length change fastest around the equinox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The sun's declination sweeps through the celestial equator fastest in March and September, so its rising point slides furthest along the horizon each day. New York gains roughly 2 to 3 minutes of daylight per day in late March but only seconds per day in the week around the June solstice. The higher the latitude, the bigger the equinox swing: London gains close to 4 minutes a day in March."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is golden hour and blue hour?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Golden hour is roughly the first hour after sunrise and the last hour before sunset, while the sun sits below about 6 degrees of elevation and the light stays warm and low. Blue hour is the civil twilight window shown here — between sunset and civil dusk, and between civil dawn and sunrise. Near the equator both can be under 25 minutes; above 55 degrees latitude in summer they stretch for hours."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

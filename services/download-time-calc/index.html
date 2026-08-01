@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Mbps and MB/s?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mbps means megabits per second, and eight bits make one byte, so a 100 Mbps line moves at most 12.5 MB/s. ISPs advertise in bits because the number looks eight times bigger, while your operating system reports file sizes and download progress in bytes. Divide the advertised speed by eight before comparing it with anything Windows or macOS shows you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my real download slower than this estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protocol overhead — TCP/IP headers, TLS handshakes, retransmissions — eats roughly 5 to 10% before any file data moves, which is why the realistic setting exists. Beyond that, the server may cap each connection, Wi-Fi and older routers rarely deliver the full line rate, and evening congestion shares the pipe with your neighbours. The calculator gives the ceiling; reality sits under it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does upload speed matter for downloads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only indirectly. Most home connections are asymmetric — a 500/50 Mbps plan gives 500 down and 50 up — so downloads use the fast direction. Uploads still carry the acknowledgements that keep a download flowing, so a saturated upload such as a cloud backup or a video call can throttle a download noticeably even though the download tier is untouched."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a 100 GB game take to download?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 100 Mbps with 10% overhead a 100 GB console or Steam title needs about 2 hours 28 minutes. At 500 Mbps it drops to roughly 30 minutes and at 1 Gbps to about 15. On a 25 Mbps connection the same download runs close to 10 hours, which is why big patch days are an overnight job on slower lines."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

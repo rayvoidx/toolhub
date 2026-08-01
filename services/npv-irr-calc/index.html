@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "NPV and IRR disagree — which one do I follow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For mutually exclusive projects, follow NPV. IRR is a percentage, so it ignores scale: a 60% return on $10,000 creates less value than a 20% return on $500,000. IRR also assumes interim cash flows are reinvested at the IRR itself, which is rarely realistic, while NPV assumes reinvestment at your discount rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What discount rate should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most companies use their weighted average cost of capital, or a hurdle rate set above it for riskier work. For a personal investment, use the return you would earn on the next best alternative. NPV is sensitive to this input, so run the numbers at two or three rates and check whether the decision flips."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can a project have more than one IRR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Descartes' rule of signs means a series can have as many IRRs as it has sign changes, so a project with a big clean-up cost at the end may have two. This calculator brackets the rate between -99% and 1000% and returns the first root it finds, so when the signs flip more than once treat IRR as indicative and decide on NPV."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is payback period not enough on its own?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Payback ignores the time value of money and everything after the break-even point. A project that repays in three years then stops beats nothing, but one that repays in four and earns for another decade is worth far more. Use payback as a liquidity check next to NPV, never as the deciding number."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {

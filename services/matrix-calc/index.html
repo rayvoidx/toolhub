@@ -68,6 +68,46 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is matrix multiplication done row by column?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a matrix is a recipe for transforming vectors, and multiplying two of them means doing one transformation after the other. Entry (i, j) of the product asks what row i of A does to column j of B, so you pair them term by term and add. That is also why A × B and B × A are usually different: applying a rotation then a stretch is not the same as stretching then rotating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does a matrix have no inverse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exactly when its determinant is 0. Geometrically the matrix squashes space flat — a 2x2 with det 0 maps the whole plane onto a single line, and a 3x3 maps space onto a plane or a line. Once that information is lost there is no way to undo the map, so no inverse exists. This tool reports that case as a result rather than an input error, because the matrix is perfectly valid — it just is not invertible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the determinant actually measure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the factor by which the matrix scales area (2x2) or volume (3x3). A determinant of 3 means every shape comes out three times bigger; a determinant of 0.5 halves it. A negative determinant means the transformation also flips orientation, like reflecting in a mirror, and the absolute value is still the scale factor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this to solve a system of equations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for small systems. Write the coefficients as matrix A and the constants as a column, then multiply the inverse of A by that column to get the solution. Compute the inverse here, then use the multiply mode with your constants in the first column of B. For anything bigger than 3x3, or when the determinant is near 0, Gaussian elimination is more accurate than inverting."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
     {
