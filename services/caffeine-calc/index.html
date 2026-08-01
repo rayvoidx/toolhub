@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caffeine Calculator — Daily Intake vs 400 mg Limit</title>
+<meta name="description" content="Add up the caffeine in your coffee, tea, cola and energy drinks, compare the total with the FDA 400 mg daily limit, and see how much is still active at bedtime.">
+<meta name="keywords" content="caffeine calculator, how much caffeine, caffeine intake, caffeine limit, caffeine in coffee mg, caffeine half life calculator, daily caffeine limit">
+<link rel="canonical" href="https://tool-hub.me/caffeine-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Caffeine Calculator — Daily Intake vs 400 mg Limit">
+<meta property="og:description" content="Add up the caffeine in your coffee, tea, cola and energy drinks, compare the total with the FDA 400 mg daily limit, and see how much is still active at bedtime.">
+<meta property="og:url" content="https://tool-hub.me/caffeine-calc/">
+<meta property="og:image" content="https://tool-hub.me/caffeine-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#78350f">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Caffeine Calculator",
+  "description": "Add up the caffeine in your coffee, tea, cola and energy drinks, compare the total with the FDA 400 mg daily limit, and see how much is still active at bedtime.",
+  "url": "https://tool-hub.me/caffeine-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Caffeine Calculator",
+      "item": "https://tool-hub.me/caffeine-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Caffeine Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Caffeine Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Total today's caffeine, check it against the 400 mg limit, and see what is still in your system when you go to bed.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .group-label { font-weight:600; margin:0 0 2px; }
+      #tool .drinks { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:6px 18px; margin:6px 0 4px; }
+      #tool .drow { display:flex; align-items:center; gap:10px; }
+      #tool .drow label { flex:1; margin:0; font-size:14px; }
+      #tool .drow input { width:76px; margin:0; }
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-sub { font-size:12px; color:var(--muted); margin-top:3px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:28px; }
+      #tool .gauge { position:relative; height:16px; border-radius:8px; background:var(--line); overflow:hidden; margin-top:12px; }
+      #tool .gfill { height:100%; width:0; border-radius:8px; background:#15803d; transition:width .25s; }
+      #tool .gticks { position:relative; height:8px; }
+      #tool .gticks span { position:absolute; top:-16px; width:2px; height:16px; background:var(--fg); opacity:.45; }
+      #tool .gticks .t-preg { left:33.33%; }
+      #tool .gticks .t-lim { left:66.67%; }
+      #tool .glegend { position:relative; height:18px; font-size:12px; color:var(--muted); }
+      #tool .glegend span { position:absolute; transform:translateX(-50%); white-space:nowrap; }
+      #tool .glegend .l-preg { left:33.33%; }
+      #tool .glegend .l-lim { left:66.67%; }
+      #tool .brk { margin-top:14px; }
+      #tool .brk h3 { font-size:14px; margin:0 0 6px; }
+      #tool .brk ul { list-style:none; margin:0; padding:0; }
+      #tool .brk li { display:flex; justify-content:space-between; gap:12px; padding:5px 0; border-bottom:1px solid var(--line); font-size:14px; }
+      #tool .brk li .b-name { flex:1; }
+      #tool .brk li .b-qty { color:var(--muted); }
+      #tool .brk li .b-mg { font-weight:600; white-space:nowrap; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p class="group-label" data-i18n="tool.drinks.label">What you drank today</p>
+    <p class="subtle" data-i18n="tool.hint.counts">Enter how many of each. Leave anything you skipped at zero.</p>
+
+    <div class="drinks">
+      <div class="drow"><label for="d-drip" data-i18n="tool.d.drip">Drip coffee (8 oz) — 95 mg</label><input type="number" id="d-drip" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="2"></div>
+      <div class="drow"><label for="d-espresso" data-i18n="tool.d.espresso">Espresso shot — 63 mg</label><input type="number" id="d-espresso" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="1"></div>
+      <div class="drow"><label for="d-coldbrew" data-i18n="tool.d.coldbrew">Cold brew (12 oz) — 155 mg</label><input type="number" id="d-coldbrew" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="0"></div>
+      <div class="drow"><label for="d-blacktea" data-i18n="tool.d.blacktea">Black tea (8 oz) — 47 mg</label><input type="number" id="d-blacktea" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="0"></div>
+      <div class="drow"><label for="d-greentea" data-i18n="tool.d.greentea">Green tea (8 oz) — 28 mg</label><input type="number" id="d-greentea" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="0"></div>
+      <div class="drow"><label for="d-cola" data-i18n="tool.d.cola">Cola (12 oz) — 34 mg</label><input type="number" id="d-cola" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="0"></div>
+      <div class="drow"><label for="d-energy" data-i18n="tool.d.energy">Energy drink (8 oz) — 80 mg</label><input type="number" id="d-energy" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="0"></div>
+      <div class="drow"><label for="d-shot" data-i18n="tool.d.shot">Energy shot (2 oz) — 200 mg</label><input type="number" id="d-shot" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="0"></div>
+      <div class="drow"><label for="d-preworkout" data-i18n="tool.d.preworkout">Pre-workout scoop — 200 mg</label><input type="number" id="d-preworkout" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="0"></div>
+      <div class="drow"><label for="d-choc" data-i18n="tool.d.chocolate">Dark chocolate (1 oz) — 12 mg</label><input type="number" id="d-choc" inputmode="numeric" min="0" max="40" step="1" autocomplete="off" placeholder="0"></div>
+      <div class="drow"><label for="d-custom" data-i18n="tool.custom.label">Anything else, in mg</label><input type="number" id="d-custom" inputmode="numeric" min="0" max="3000" step="1" autocomplete="off" placeholder="0"></div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="last-time" data-i18n="tool.time.label">Time of your last caffeine</label>
+        <input type="time" id="last-time" value="14:00">
+      </div>
+      <div>
+        <label for="bedtime" data-i18n="tool.bed.label">Bedtime</label>
+        <input type="time" id="bedtime" value="23:00">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.total">Total caffeine today</div>
+          <div class="rc-val" id="r-total">—</div>
+          <div class="rc-sub" id="r-pct"></div>
+          <div class="gauge" id="gauge" role="img" aria-label="Caffeine gauge"><div class="gfill" id="gfill"></div></div>
+          <div class="gticks"><span class="t-preg"></span><span class="t-lim"></span></div>
+          <div class="glegend"><span class="l-preg" data-i18n="tool.gauge.preg">200 mg pregnancy</span><span class="l-lim" data-i18n="tool.gauge.limit">400 mg limit</span></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.bed">Still active at bedtime</div>
+          <div class="rc-val" id="r-bed">—</div>
+          <div class="rc-sub" id="r-bedsub"></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.status">Where you stand</div>
+          <div class="rc-val" id="r-status" style="font-size:15px;">—</div>
+        </div>
+      </div>
+      <div class="brk">
+        <h3 data-i18n="tool.break.label">Breakdown</h3>
+        <ul id="brk-list"></ul>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.med" style="margin-top:12px;">Estimates based on typical serving averages, not medical advice. Caffeine sensitivity varies widely between people.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a normal caffeine day actually adds up to</h2>
+    <p>Most people underestimate their intake because they count cups, not milligrams. An 8 oz mug of drip coffee averages about 95 mg, but almost nobody drinks 8 oz. A 16 oz Starbucks grande brewed coffee runs closer to 310 mg on its own, a 12 oz cold brew sits near 155 mg, and a 16 oz energy drink is typically 160 mg. Tea is gentler but not trivial: a strong mug of English breakfast lands around 47 mg, green tea about 28 mg. Dark chocolate, cola and some painkillers quietly add another 30 to 100 mg on a bad day.</p>
+    <p>The reference point everyone quotes is 400 mg a day for healthy adults, the figure the US FDA and the European Food Safety Authority both settled on. In pregnancy the guidance drops to 200 mg, which is one large coffee shop americano and nothing else. Those are population thresholds, so treat them as a lane marking rather than a cliff edge.</p>
+
+    <h3>Worked example: the ordinary two-coffee day</h3>
+    <p>Say you have a drip coffee at 7:30 am, another at 10:00 am, an espresso after lunch at 2:00 pm, and a Diet Coke at 4:00 pm. That is 95 + 95 + 63 + 34 = 287 mg, or 72% of the 400 mg limit. Nothing alarming — until you look at when the last dose lands. With the Diet Coke at 4:00 pm and lights out at 11:00 pm, seven hours pass. Using a five-hour half-life, the fraction remaining is 0.5^(7/5) = 0.379, so roughly 109 mg of that day's caffeine is still circulating as you try to fall asleep. That is about the dose that has been shown to measurably reduce deep sleep in controlled trials.</p>
+    <p>Swap the 4:00 pm cola for sparkling water and the last caffeine becomes the 2:00 pm espresso. Now nine hours pass: 0.5^(9/5) = 0.287, and the residue drops to about 82 mg. Move the espresso to noon and eleven hours give 0.5^(11/5) = 0.217, leaving roughly 62 mg. Same drinks, same total, meaningfully different nights.</p>
+
+    <h3>How the decay curve behaves</h3>
+    <p>Caffeine follows first-order kinetics at ordinary doses, which is a formal way of saying a fixed <em>fraction</em> leaves per hour rather than a fixed amount. After one half-life you have 50% left, after two 25%, after three 12.5%. Peak blood levels arrive 30 to 60 minutes after you drink it, so the curve rises fast and then tails off slowly. The tail is the part that ruins sleep: 300 mg at 3:00 pm still leaves about 75 mg at 11:00 pm, which is why "it doesn't keep me awake" and "I sleep badly" are not contradictory statements.</p>
+    <p>Five hours is the textbook half-life, but the honest range is 3 to 7 hours. Smokers clear caffeine roughly twice as fast. Oral contraceptives can double the half-life. In the third trimester of pregnancy it can exceed 10 hours, which is part of why the guidance is halved. Some antibiotics, antifungals and liver conditions slow it further. This calculator uses five hours, so read the bedtime number as a middle estimate, not a measurement.</p>
+
+    <h2>Deriving your own cutoff time</h2>
+    <p>Pick a target residue — 50 mg is a reasonable ceiling for most sleepers, 25 mg if you are sensitive. Then solve for hours: hours = 5 x log2(total / target). For a 300 mg day and a 50 mg target that is 5 x log2(6) = 5 x 2.58 = about 13 hours, meaning an 11:00 pm bedtime wants your last caffeine before 10:00 am. For a 200 mg day and the same target it is 5 x 2 = 10 hours. The widely repeated "no caffeine after 2:00 pm" rule is really this calculation done once for a moderate intake and an eleven o'clock bedtime.</p>
+
+    <h2>Tolerance and dependence, without the sugar-coating</h2>
+    <p>Regular use builds tolerance to the alertness effect within days, mostly through adenosine receptor upregulation. Tolerance to sleep disruption is far less complete: habitual drinkers still show fragmented sleep architecture on evening doses. That combination is the trap — the boost fades while the cost stays. Withdrawal is a recognised clinical syndrome: headache, fatigue, irritability and difficulty concentrating starting 12 to 24 hours after your last dose, peaking around day one or two and usually resolving within nine days. Cutting by about 25% every three days avoids most of it.</p>
+
+    <h2>What this tool cannot tell you</h2>
+    <p>Serving values are averages. Real coffee varies with bean, grind, brew time and cup size, and two identically labelled energy drinks can differ by 40 mg. The bedtime figure assumes the whole day's caffeine was taken at the time of your last drink, which makes it a deliberate upper bound rather than a precise blood level. It cannot model your CYP1A2 genotype, medication, pregnancy or heart condition. If you get palpitations, anxiety or persistent insomnia, that is a conversation with a clinician, not a calculator.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/calorie-calc/"><span class="related-ico" aria-hidden="true">🍎</span><span class="related-name">Calories Burned Calculator</span></a><a class="related-item" href="https://tool-hub.me/calorie-deficit-calc/"><span class="related-ico" aria-hidden="true">📉</span><span class="related-name">Calorie Deficit Calculator</span></a><a class="related-item" href="https://tool-hub.me/cat-age-calc/"><span class="related-ico" aria-hidden="true">🐈</span><span class="related-name">Cat Age Calculator</span></a><a class="related-item" href="https://tool-hub.me/child-height-predictor/"><span class="related-ico" aria-hidden="true">🧒</span><span class="related-name">Child Height Predictor</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Where does the 400 mg daily limit come from?</summary><p data-i18n="faq.a1">The US FDA and EFSA both reviewed the evidence and landed on about 400 mg a day for healthy adults — roughly four 8 oz cups of drip coffee — as an amount not generally linked to negative effects. It is a population average, not a personal safety line. People who carry the slow variant of the CYP1A2 gene clear caffeine far more slowly and can feel jittery or sleepless at half that dose.</p></details>
+    <details><summary data-i18n="faq.q2">How long does caffeine stay in your body?</summary><p data-i18n="faq.a2">The half-life is usually quoted as 5 hours, but the real range is about 3 to 7 hours in healthy adults. Smoking roughly halves it, pregnancy can stretch it past 10 hours, and oral contraceptives, some antibiotics and liver conditions all slow it down. After one half-life, half the dose is still circulating; after two, a quarter.</p></details>
+    <details><summary data-i18n="faq.q3">How much caffeine at bedtime actually hurts sleep?</summary><p data-i18n="faq.a3">Controlled studies have found measurable losses of deep sleep from doses as small as around 100 mg taken in the evening, and one trial saw 400 mg taken six hours before bed cut total sleep by more than an hour. Many people sleep through it and still wake up unrefreshed. A practical rule is to keep your last caffeine at least eight hours before bed, or aim for under 50 mg still active at bedtime.</p></details>
+    <details><summary data-i18n="faq.q4">What happens if I cut back suddenly?</summary><p data-i18n="faq.a4">Withdrawal is real and well documented: headache, fatigue, low mood and poor concentration, typically starting 12 to 24 hours after your last dose and peaking on day one or two. It usually clears within two to nine days. Tapering by about 25% every few days avoids most of it, and swapping one coffee at a time for a half-caf or tea works better than quitting cold.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
