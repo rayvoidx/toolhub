@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSV Diff — Compare Two Files by Key — Drop two CSVs, pick a key column, and see exactly which rows were added, removed and changed</title>
+<meta name="description" content="Free browser-only tool to compare two CSV files or pasted spreadsheets by a key column (ID, email, SKU). Get added, removed, changed and unchanged rows with the changed cells highlighted old to new, plus per-tab CSV export. A key-join diff (not a text-line diff), so it stays accurate even when row and column order differ. Locale-aware compare (dates, thousands separators, leading zeros) removes false changes. Your files never leave the browser.">
+<meta name="keywords" content="compare two csv files, csv diff online, compare csv by key, find changed rows between two csv, CSV 비교, diff two spreadsheets by id">
+<link rel="canonical" href="https://tool-hub.me/csv-diff/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CSV Diff — Compare Two Files by Key — Drop two CSVs, pick a key column, and see exactly which rows were added, removed and changed">
+<meta property="og:description" content="Free browser-only tool to compare two CSV files or pasted spreadsheets by a key column (ID, email, SKU). Get added, removed, changed and unchanged rows with the changed cells highlighted old to new, plus per-tab CSV export. A key-join diff (not a text-line diff), so it stays accurate even when row and column order differ. Locale-aware compare (dates, thousands separators, leading zeros) removes false changes. Your files never leave the browser.">
+<meta property="og:url" content="https://tool-hub.me/csv-diff/">
+<meta property="og:image" content="https://tool-hub.me/csv-diff/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#164e63">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CSV Diff — Compare Two Files by Key",
+  "description": "Free browser-only tool to compare two CSV files or pasted spreadsheets by a key column (ID, email, SKU). Get added, removed, changed and unchanged rows with the changed cells highlighted old to new, plus per-tab CSV export. A key-join diff (not a text-line diff), so it stays accurate even when row and column order differ. Locale-aware compare (dates, thousands separators, leading zeros) removes false changes. Your files never leave the browser.",
+  "url": "https://tool-hub.me/csv-diff/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Are my files sent to a server, and why can I use this without security approval?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This CSV diff tool runs 100% in your browser — the two files you paste or drop are parsed, normalized, joined and compared with JavaScript on your own machine, and nothing is uploaded, logged or stored on any server. There is no account and no network request that carries your data. That is exactly why inventory, accounting, HR and procurement teams can reconcile payroll files, customer lists or supplier tables here even when an upload-based diff SaaS would fail a security review: the data never leaves the tab. Close the tab and the tables are gone; only your compare options and the key/column choices are remembered in this browser's local storage — never the row data itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it still compare two CSVs when the rows and columns are in a different order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — that is the main difference from a plain text or line diff. Instead of comparing line 1 to line 1, this tool joins the two files by a key column you choose (an ID, email or SKU), the way a database or VLOOKUP would. Each row is matched to the row in the other file that shares the same key, so it stays accurate even when rows are sorted differently or columns are reordered or renamed. Pick the column that uniquely identifies a row; if no single column is unique, tick several columns to build a composite key (for example region + SKU). The tool auto-suggests a key that is unique in every row and warns you if none is."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does an identical value show up as changed, and how do I stop false changes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By default the compare is exact text, which is deliberate: a leading zero in an employee or tax ID (\"00123\" vs \"123\") must not be silently treated as the same number, and dates and thousands separators are read differently around the world. When a cell looks changed but is really the same value, turn on the matching option that fits: \"Compare as numbers\" makes 1.234,56 (German) equal 1,234.56 (US) and 1,000 equal 1000; \"Normalize dates before compare\" reads 01/02/2026, 2026.1.5 and Excel serial numbers into one calendar date, using the country preset to resolve whether 01/02 means January 2 (US) or February 1 (EU/KR); and \"Ignore leading zeros\" folds 00123 into 123. These are off by default so nothing is changed silently."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do added, removed, changed and unchanged mean, and which tab should I look at?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After joining by key, every key falls into exactly one bucket. Added is a key present only in the New file — a new hire, a new SKU, a payment with no prior record. Removed is a key present only in the Old file — someone who left, a discontinued item, an order that disappeared. Changed is a key present in both where at least one mapped value cell differs; the Changed tab lists each differing column with its old value next to the new value so you see precisely what moved. Unchanged is a key present in both with every value identical. For a reconciliation you usually watch Changed (what moved) and Added/Removed (what appeared or vanished); the summary line adds them up — +A −R ~C =U across N keys — as a quick sanity check."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I compare two CSVs with different headers, and how large a file can it handle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the two files use different column names, the tool shows a \"Match columns\" panel where you map each New column to its Old counterpart with a dropdown; columns that exist on only one side are labelled New-only or Old-only and are skipped when detecting changes. Tick \"First row is a header\" so the header is not compared as data. On size: a few tens of thousands of rows compare in milliseconds on the main thread, so there is no overkill machinery for small files. When the two files together exceed about 50,000 rows the parsing and join run in cancelable chunks with a progress bar, and very large inputs (beyond 200,000 rows per side or a 20 MB file) prompt you before processing instead of crashing or silently truncating — and any capping is always shown as a badge, never hidden."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CSV Diff",
+      "item": "https://tool-hub.me/csv-diff/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>CSV Diff — Compare Two Files by Key</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>CSV Diff by Key</h1>
+    <p class="lede" data-i18n="hero.lede">See what was added, removed and changed between two CSVs — in your browser, nothing uploaded.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool h3 { font-size: 15px; font-weight: 800; letter-spacing: -0.01em; margin: 26px 0 8px; }
+      #tool h3.cd-first { margin-top: 0; }
+      #tool .cd-scope { margin: 0 0 6px; padding: 10px 12px; border-radius: 10px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); font-size: 13px; line-height: 1.5; }
+      #tool .cd-sub { margin: 6px 0 0; color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+      #tool .cd-sub.is-warn { color: var(--accent-strong); font-weight: 600; }
+      [data-theme="dark"] #tool .cd-sub.is-warn { color: var(--accent); }
+      #tool .cd-inputs { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+      @media (max-width: 620px) { #tool .cd-inputs { grid-template-columns: 1fr; } }
+      #tool .cd-side h3 { margin-top: 0; }
+      #tool .cd-tag { display: inline-block; margin-inline-start: 7px; padding: 1px 7px; border-radius: 999px; font-size: 11px; font-weight: 700; vertical-align: middle; color: var(--muted); background: var(--bg); border: 1px solid var(--line); }
+      #tool .cd-drop { border: 2px dashed var(--line); border-radius: 12px; padding: 12px; background: var(--bg); }
+      #tool .cd-drop.is-over { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 8%, var(--bg)); }
+      #tool .cd-drop textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; resize: vertical; width: 100%; box-sizing: border-box; }
+      #tool .cd-hint { margin: 8px 2px 0; color: var(--muted); font-size: 13px; }
+      #tool .cd-link { background: none; border: none; padding: 0; font: inherit; color: var(--accent); text-decoration: underline; cursor: pointer; }
+      #tool .cd-btnrow { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+      #tool .cd-btnrow .btn { margin-top: 0; padding: 9px 16px; font-size: 14px; }
+      #tool .btn.cd-ghost { background: none; border: 1px solid var(--line); color: var(--ink); }
+      #tool .btn.cd-ghost:hover { border-color: var(--accent); background: none; }
+      #tool .cd-banner { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 10px 0 0; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.5;
+        background: color-mix(in srgb, var(--accent) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); }
+      #tool .cd-config { margin-top: 18px; padding: 12px 14px; border-radius: 12px; background: var(--bg); border: 1px solid var(--line); }
+      #tool .cd-config h3 { margin-top: 0; }
+      #tool .cd-key-body { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 4px; }
+      #tool .cd-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin: 6px 0 0; font-weight: 600; font-size: 14px; }
+      #tool .cd-check input { width: auto; flex: 0 0 auto; }
+      #tool .cd-maprow { display: flex; align-items: center; gap: 8px; margin-top: 6px; flex-wrap: wrap; }
+      #tool .cd-mapnew { font-weight: 700; font-size: 13px; min-width: 90px; }
+      #tool .cd-maparrow { color: var(--muted); }
+      #tool .cd-mapsel { width: auto; min-width: 130px; }
+      #tool .cd-progress { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 13px; color: var(--muted); }
+      #tool .cd-progress progress { flex: 1 1 auto; height: 8px; }
+      #tool .cd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0 14px; }
+      #tool .cd-opts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2px 16px; margin-top: 6px; }
+      #tool .cd-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 10px; border: 1px solid var(--line); border-radius: 10px; }
+      #tool table.cd-table { border-collapse: collapse; width: 100%; font-size: 13px; background: var(--surface); }
+      #tool table.cd-table th, #tool table.cd-table td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: start; white-space: nowrap; }
+      #tool table.cd-table th { background: var(--bg); font-size: 12px; font-weight: 700; color: var(--muted); position: sticky; top: 0; }
+      #tool table.cd-table td.cd-num { text-align: end; color: var(--muted); font-variant-numeric: tabular-nums; width: 1%; }
+      #tool table.cd-table td.cd-empty { color: var(--muted); text-align: center; padding: 18px; }
+      #tool table.cd-table td.cd-old { color: #b91c1c; }
+      #tool table.cd-table td.cd-new { color: #15803d; font-weight: 600; }
+      [data-theme="dark"] #tool table.cd-table td.cd-old { color: #f87171; }
+      [data-theme="dark"] #tool table.cd-table td.cd-new { color: #4ade80; }
+      #tool table.cd-table tbody tr:last-child td { border-bottom: none; }
+      #tool .cd-msg { margin: 0; color: var(--muted); }
+      #tool .cd-msg.is-err { color: var(--accent-strong); font-weight: 700; }
+      [data-theme="dark"] #tool .cd-msg.is-err { color: var(--accent); }
+      #tool .cd-warn { margin: 0 0 12px; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.55;
+        background: color-mix(in srgb, var(--accent) 10%, var(--surface)); border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); }
+      #tool .cd-warn p { margin: 0 0 6px; } #tool .cd-warn p:last-child { margin-bottom: 0; }
+      #tool .cd-summary { margin: 4px 0 10px; font-size: 14px; font-weight: 700; color: var(--ink); }
+      #tool .cd-tabs { display: flex; gap: 6px; margin: 4px 0 0; flex-wrap: wrap; }
+      #tool .cd-tab { background: none; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font: inherit; font-size: 13px; font-weight: 700; padding: 6px 13px; cursor: pointer; }
+      #tool .cd-tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+      #tool .cd-tab .cd-cnt { font-variant-numeric: tabular-nums; }
+      #tool .cd-panelhead { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+      #tool .cd-panelhead .cd-btnrow { margin-top: 0; }
+      #tool .cd-panelhead .btn { margin-top: 0; padding: 8px 14px; font-size: 13px; }
+      #tool .cd-count { font-size: 14px; font-weight: 800; color: var(--ink); }
+      #tool .cd-status { font-size: 13px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .cd-status { color: var(--accent); }
+      #tool .cd-fix { background: var(--surface); border: 1px solid var(--accent); border-radius: 8px; color: var(--accent-strong); font: inherit; font-size: 12.5px; font-weight: 700; padding: 5px 10px; cursor: pointer; }
+      [data-theme="dark"] #tool .cd-fix { color: var(--accent); }
+    </style>
+
+    <p class="cd-scope" data-i18n="tool.scope">Nothing you paste or drop is uploaded — the two files are compared entirely in this browser, so it can be used without a security review.</p>
+
+    <div class="cd-inputs">
+      <div class="cd-side">
+        <h3 class="cd-first"><span data-i18n="tool.old">Old (baseline)</span><span class="cd-tag" data-i18n="tool.old.tag">left</span></h3>
+        <div class="cd-drop" id="cd-drop-old">
+          <textarea id="cd-paste-old" rows="7" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.paste.ph" placeholder="Paste a CSV here, or a range copied from Excel (tab-separated)."></textarea>
+          <p class="cd-hint"><span data-i18n="tool.drop.hint">Or drop a CSV/TSV file —</span> <button type="button" class="cd-link" id="cd-pick-old" data-i18n="tool.drop.pick">choose a file</button></p>
+          <input type="file" id="cd-file-old" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+        </div>
+        <p class="cd-banner" id="cd-enc-old" hidden>
+          <span id="cd-enc-old-text" data-i18n="tool.enc.broken">This file does not look like UTF-8 — some characters may be garbled.</span>
+          <button type="button" class="cd-fix" id="cd-enc-old-btn" data-i18n="tool.enc.retry">Re-read as CP949 (EUC-KR)</button>
+        </p>
+        <label class="cd-check" for="cd-header-old"><input type="checkbox" id="cd-header-old"><span data-i18n="tool.map.header">First row is a header</span></label>
+        <p class="cd-sub" id="cd-stat-old"></p>
+      </div>
+      <div class="cd-side">
+        <h3 class="cd-first"><span data-i18n="tool.new">New (target)</span><span class="cd-tag" data-i18n="tool.new.tag">right</span></h3>
+        <div class="cd-drop" id="cd-drop-new">
+          <textarea id="cd-paste-new" rows="7" spellcheck="false" autocomplete="off" data-i18n-placeholder="tool.paste.ph" placeholder="Paste a CSV here, or a range copied from Excel (tab-separated)."></textarea>
+          <p class="cd-hint"><span data-i18n="tool.drop.hint">Or drop a CSV/TSV file —</span> <button type="button" class="cd-link" id="cd-pick-new" data-i18n="tool.drop.pick">choose a file</button></p>
+          <input type="file" id="cd-file-new" accept=".csv,.tsv,.txt,text/csv,text/plain" hidden>
+        </div>
+        <p class="cd-banner" id="cd-enc-new" hidden>
+          <span id="cd-enc-new-text" data-i18n="tool.enc.broken">This file does not look like UTF-8 — some characters may be garbled.</span>
+          <button type="button" class="cd-fix" id="cd-enc-new-btn" data-i18n="tool.enc.retry">Re-read as CP949 (EUC-KR)</button>
+        </p>
+        <label class="cd-check" for="cd-header-new"><input type="checkbox" id="cd-header-new"><span data-i18n="tool.map.header">First row is a header</span></label>
+        <p class="cd-sub" id="cd-stat-new"></p>
+      </div>
+    </div>
+
+    <div class="cd-config" id="cd-map" hidden>
+      <h3 class="cd-first" data-i18n="tool.mapTitle">Match columns</h3>
+      <p class="cd-sub" data-i18n="tool.mapHint">The two files have different columns. Map each New column to its Old counterpart.</p>
+      <div id="cd-map-body"></div>
+    </div>
+
+    <div class="cd-config" id="cd-keys" hidden>
+      <h3 class="cd-first" data-i18n="tool.keyTitle">Key column(s)</h3>
+      <div class="cd-key-body" id="cd-key-body"></div>
+      <p class="cd-sub" id="cd-key-note" data-i18n="tool.keyHint">Pick the column(s) that identify a row (ID, email, SKU). Rows are matched by this key.</p>
+    </div>
+
+    <div class="cd-btnrow">
+      <button type="button" class="btn cd-ghost" id="cd-sample" data-i18n="tool.sample">Load sample</button>
+      <button type="button" class="btn cd-ghost" id="cd-swap" data-i18n="tool.swap">Swap Old &#8644; New</button>
+      <button type="button" class="btn cd-ghost" id="cd-clear" data-i18n="tool.clear">Clear</button>
+    </div>
+
+    <h3 data-i18n="tool.optsTitle">Compare options</h3>
+    <div class="cd-grid">
+      <div>
+        <label for="cd-preset" data-i18n="tool.preset.label">Country preset</label>
+        <select id="cd-preset" autocomplete="off">
+          <option value="EN" data-i18n="tool.preset.en">International / English</option>
+          <option value="KR" data-i18n="tool.preset.kr">Korea</option>
+          <option value="JP" data-i18n="tool.preset.jp">Japan / China — fullwidth</option>
+          <option value="EU" data-i18n="tool.preset.eu">Europe — accents</option>
+          <option value="TR" data-i18n="tool.preset.tr">T&#252;rkiye — i / &#304;</option>
+        </select>
+      </div>
+    </div>
+    <div class="cd-opts">
+      <label class="cd-check" for="cd-o-trim"><input type="checkbox" id="cd-o-trim"><span data-i18n="tool.opt.trim">Trim &amp; collapse spaces</span></label>
+      <label class="cd-check" for="cd-o-space"><input type="checkbox" id="cd-o-space"><span data-i18n="tool.opt.space">Remove all spaces (홍 길동 = 홍길동)</span></label>
+      <label class="cd-check" for="cd-o-case"><input type="checkbox" id="cd-o-case"><span data-i18n="tool.opt.case">Ignore upper / lower case</span></label>
+      <label class="cd-check" for="cd-o-nfc"><input type="checkbox" id="cd-o-nfc"><span data-i18n="tool.opt.nfc">Unicode NFC (Korean jamo)</span></label>
+      <label class="cd-check" for="cd-o-nfkc"><input type="checkbox" id="cd-o-nfkc"><span data-i18n="tool.opt.nfkc">Fullwidth &#8596; halfwidth (NFKC)</span></label>
+      <label class="cd-check" for="cd-o-accent"><input type="checkbox" id="cd-o-accent"><span data-i18n="tool.opt.accent">Ignore accents (caf&#233; = cafe)</span></label>
+      <label class="cd-check" for="cd-o-tr"><input type="checkbox" id="cd-o-tr"><span data-i18n="tool.opt.tr">Turkish-safe case (i / &#304;)</span></label>
+      <label class="cd-check" for="cd-o-zeros"><input type="checkbox" id="cd-o-zeros"><span data-i18n="tool.opt.zeros">Ignore leading zeros (00123 = 123)</span></label>
+      <label class="cd-check" for="cd-o-numeric"><input type="checkbox" id="cd-o-numeric"><span data-i18n="tool.opt.numeric">Compare as numbers (1.234,56 = 1,234.56)</span></label>
+      <label class="cd-check" for="cd-o-dates"><input type="checkbox" id="cd-o-dates"><span data-i18n="tool.opt.dates">Normalize dates before compare</span></label>
+    </div>
+    <p class="cd-sub" data-i18n="tool.opt.note">Options change comparison only — the original cells are always kept for display and export.</p>
+
+    <div class="cd-progress" id="cd-progress" hidden>
+      <progress id="cd-bar" max="100" value="0"></progress>
+      <span id="cd-progress-text"></span>
+      <button type="button" class="cd-fix" id="cd-cancel" data-i18n="tool.cancel">Cancel</button>
+    </div>
+
+    <div class="result" id="cd-result" aria-live="polite">
+      <p class="cd-msg" id="cd-msg" data-i18n="tool.n.empty">Paste or drop an Old and a New CSV above — or load the sample — to see which rows were added, removed and changed.</p>
+      <div id="cd-out" hidden>
+        <div id="cd-warn"></div>
+        <p class="cd-summary" id="cd-summary"></p>
+        <div class="cd-tabs" role="tablist">
+          <button type="button" class="cd-tab" id="cd-tab-changed" role="tab" aria-selected="true" aria-controls="cd-panel" data-tab="changed"><span data-i18n="tool.tab.changed">Changed</span> <span class="cd-cnt" id="cd-cnt-changed"></span></button>
+          <button type="button" class="cd-tab" id="cd-tab-added" role="tab" aria-selected="false" aria-controls="cd-panel" data-tab="added"><span data-i18n="tool.tab.added">Added</span> <span class="cd-cnt" id="cd-cnt-added"></span></button>
+          <button type="button" class="cd-tab" id="cd-tab-removed" role="tab" aria-selected="false" aria-controls="cd-panel" data-tab="removed"><span data-i18n="tool.tab.removed">Removed</span> <span class="cd-cnt" id="cd-cnt-removed"></span></button>
+          <button type="button" class="cd-tab" id="cd-tab-unchanged" role="tab" aria-selected="false" aria-controls="cd-panel" data-tab="unchanged"><span data-i18n="tool.tab.unchanged">Unchanged</span> <span class="cd-cnt" id="cd-cnt-unchanged"></span></button>
+        </div>
+        <div id="cd-panel" role="tabpanel">
+          <div class="cd-panelhead">
+            <span class="cd-count" id="cd-panel-count"></span>
+            <div class="cd-btnrow">
+              <button type="button" class="btn" id="cd-copy" data-i18n="tool.copy">Copy</button>
+              <button type="button" class="btn cd-ghost" id="cd-csv" data-i18n="tool.download">Download CSV</button>
+              <button type="button" class="btn cd-ghost" id="cd-csv-all" data-i18n="tool.downloadAll">Combined CSV</button>
+              <span class="cd-status" id="cd-status" hidden></span>
+            </div>
+          </div>
+          <div class="cd-scroll"><table class="cd-table" id="cd-tbl"></table></div>
+          <p class="cd-sub" id="cd-trunc" hidden></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/find-replace-text/"><span class="related-ico" aria-hidden="true">🔎</span><span class="related-name">Find and Replace Text</span></a><a class="related-item" href="https://tool-hub.me/list-compare/"><span class="related-ico" aria-hidden="true">🔀</span><span class="related-name">Compare Two Lists</span></a><a class="related-item" href="https://tool-hub.me/lorem-ipsum-gen/"><span class="related-ico" aria-hidden="true">📄</span><span class="related-name">Lorem Ipsum Generator</span></a><a class="related-item" href="https://tool-hub.me/morse-code-translator/"><span class="related-ico" aria-hidden="true">📡</span><span class="related-name">Morse Code Translator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">Are my files sent to a server, and why can I use this without security approval?</summary><p data-i18n="faq.a1">No. This CSV diff tool runs 100% in your browser — the two files you paste or drop are parsed, normalized, joined and compared with JavaScript on your own machine, and nothing is uploaded, logged or stored on any server. There is no account and no network request that carries your data. That is exactly why inventory, accounting, HR and procurement teams can reconcile payroll files, customer lists or supplier tables here even when an upload-based diff SaaS would fail a security review: the data never leaves the tab. Close the tab and the tables are gone; only your compare options and the key/column choices are remembered in this browser's local storage — never the row data itself.</p></details>
+    <details><summary data-i18n="faq.q2">Can it still compare two CSVs when the rows and columns are in a different order?</summary><p data-i18n="faq.a2">Yes — that is the main difference from a plain text or line diff. Instead of comparing line 1 to line 1, this tool joins the two files by a key column you choose (an ID, email or SKU), the way a database or VLOOKUP would. Each row is matched to the row in the other file that shares the same key, so it stays accurate even when rows are sorted differently or columns are reordered or renamed. Pick the column that uniquely identifies a row; if no single column is unique, tick several columns to build a composite key (for example region + SKU). The tool auto-suggests a key that is unique in every row and warns you if none is.</p></details>
+    <details><summary data-i18n="faq.q3">Why does an identical value show up as changed, and how do I stop false changes?</summary><p data-i18n="faq.a3">By default the compare is exact text, which is deliberate: a leading zero in an employee or tax ID ("00123" vs "123") must not be silently treated as the same number, and dates and thousands separators are read differently around the world. When a cell looks changed but is really the same value, turn on the matching option that fits: "Compare as numbers" makes 1.234,56 (German) equal 1,234.56 (US) and 1,000 equal 1000; "Normalize dates before compare" reads 01/02/2026, 2026.1.5 and Excel serial numbers into one calendar date, using the country preset to resolve whether 01/02 means January 2 (US) or February 1 (EU/KR); and "Ignore leading zeros" folds 00123 into 123. These are off by default so nothing is changed silently.</p></details>
+    <details><summary data-i18n="faq.q4">What do added, removed, changed and unchanged mean, and which tab should I look at?</summary><p data-i18n="faq.a4">After joining by key, every key falls into exactly one bucket. Added is a key present only in the New file — a new hire, a new SKU, a payment with no prior record. Removed is a key present only in the Old file — someone who left, a discontinued item, an order that disappeared. Changed is a key present in both where at least one mapped value cell differs; the Changed tab lists each differing column with its old value next to the new value so you see precisely what moved. Unchanged is a key present in both with every value identical. For a reconciliation you usually watch Changed (what moved) and Added/Removed (what appeared or vanished); the summary line adds them up — +A −R ~C =U across N keys — as a quick sanity check.</p></details>
+    <details><summary data-i18n="faq.q5">How do I compare two CSVs with different headers, and how large a file can it handle?</summary><p data-i18n="faq.a5">If the two files use different column names, the tool shows a "Match columns" panel where you map each New column to its Old counterpart with a dropdown; columns that exist on only one side are labelled New-only or Old-only and are skipped when detecting changes. Tick "First row is a header" so the header is not compared as data. On size: a few tens of thousands of rows compare in milliseconds on the main thread, so there is no overkill machinery for small files. When the two files together exceed about 50,000 rows the parsing and join run in cancelable chunks with a progress bar, and very large inputs (beyond 200,000 rows per side or a 20 MB file) prompt you before processing instead of crashing or silently truncating — and any capping is always shown as a badge, never hidden.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

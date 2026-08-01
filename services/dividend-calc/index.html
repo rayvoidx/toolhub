@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dividend & DRIP Calculator — Yield, Income & Reinvestment</title>
+<meta name="description" content="Free dividend and DRIP calculator: enter your shares, price, and dividend to get dividend yield and annual income instantly — then project how reinvesting (dividend reinvestment plan) compounds your portfolio, with dividend growth, tax, and yield on cost. No login, no ads, computed in your browser.">
+<meta name="keywords" content="dividend calculator, dividend yield calculator, DRIP calculator, dividend reinvestment calculator, dividend income calculator, yield on cost calculator, 배당금 계산기, 배당 수익률 계산기, 배당 재투자 계산기">
+<link rel="canonical" href="https://tool-hub.me/dividend-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dividend & DRIP Calculator — Yield, Income & Reinvestment">
+<meta property="og:description" content="Free dividend and DRIP calculator: enter your shares, price, and dividend to get dividend yield and annual income instantly — then project how reinvesting (dividend reinvestment plan) compounds your portfolio, with dividend growth, tax, and yield on cost. No login, no ads, computed in your browser.">
+<meta property="og:url" content="https://tool-hub.me/dividend-calc/">
+<meta property="og:image" content="https://tool-hub.me/dividend-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#14532d">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dividend & DRIP Calculator",
+  "description": "Free dividend and DRIP calculator: enter your shares, price, and dividend to get dividend yield and annual income instantly — then project how reinvesting (dividend reinvestment plan) compounds your portfolio, with dividend growth, tax, and yield on cost. No login, no ads, computed in your browser.",
+  "url": "https://tool-hub.me/dividend-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Growth, tax & reinvestment (optional)",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Holding period (years) 5 10 20 30 Dividend frequency Annual Quarterly Monthly Annual dividend growth (%) 0% 5% 8% Annual share-price growth (%) 0% 4% 7% Country tax preset (fills the tax field — editable) None Korea 15.4% US 15% Dividend tax (%) Annual inflation (%) — optional 0% 2% 3% Reinvest dividends (DRIP)"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the exact formulas — dividend yield, annual income, and how DRIP is simulated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This dividend calculator starts with two simple formulas: dividend yield = annual dividend per share ÷ share price × 100, and annual dividend income = shares owned × annual dividend per share. So 100 shares paying a 2 dividend on a 50 price yield 4% and 200 a year. The DRIP calculator part is a period-by-period simulation, not a closed formula: for each pay period (annual, quarterly or monthly) it pays shares × per-period dividend, subtracts tax, and — with reinvestment on — buys new shares at the current price, so the next period pays on a slightly larger position. Dividend growth and share-price growth are applied every period too. That compounding loop is what makes a dividend reinvestment calculator different from a flat savings projection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the \"DRIP advantage\" number mean, and why does reinvesting compound?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The DRIP advantage is the difference between two runs of the same inputs: reinvesting every dividend (a dividend reinvestment plan) versus taking each dividend as cash. With DRIP on, each net dividend buys more shares, which pay more dividends next period, which buy still more shares — a compounding snowball. Taking dividends as cash leaves your share count fixed, so your final value is your shares at the ending price plus the cash you collected. This dividend reinvestment calculator shows both totals and the gap between them, so you can see exactly how much reinvesting adds over your holding period. The longer the horizon and the higher the yield, the larger the advantage tends to be."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is yield on cost, and how does dividend growth lift it above the current yield?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yield on cost measures your annual dividend income against what you originally paid, not against today's price. This dividend yield calculator computes it as the projected end-of-period annual dividend divided by your original cost (shares × price) × 100. If the dividend never grew and you took the cash, yield on cost would just equal your starting yield. But when you enter an annual dividend growth rate, the per-share dividend rises every year, so the income measured against your fixed original cost climbs well above the current yield over time — and reinvesting adds even more shares on top. That is why long-term holders of dividend-growth stocks often quote a yield on cost far higher than the headline yield a new buyer sees."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do the Korea and US dividend tax presets use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The presets fill the dividend tax field so you don't have to look it up, and the value stays editable. Korea uses 15.4% — the 14% dividend income tax plus a 1.4% local surtax — withheld on most dividends for the 배당금 계산기 case; note that once your annual financial income tops 20 million KRW you may fall under 금융소득종합과세 (comprehensive taxation) at higher progressive rates, which this single flat rate does not model. US uses 15% as a representative qualified-dividend rate; qualified dividends are taxed at 0/15/20% by income, while ordinary (non-qualified) dividends are taxed as regular income, and a 3.8% net investment income tax can apply. These are base-year 2026 reference figures — your actual rate depends on your bracket and account, so treat them as a starting point and edit them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is this a projection rather than advice, and is anything sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every number here is an assumption you type — the share price, the dividend, the growth rates — and this DRIP calculator simply does the arithmetic on them. Real dividends can be cut, frozen or suspended, and share prices fall as well as rise; the tool deliberately does not model dividend cuts or price drops, so treat the output as one optimistic scenario, not a forecast or investment advice. Tax is applied as a single flat rate on each dividend, which is a simplification. Nothing is sent to a server and no live prices are fetched — you enter every value yourself, and your last entry is saved only in your own browser."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Dividend & DRIP Calculator",
+      "item": "https://tool-hub.me/dividend-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Dividend & DRIP Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Dividend & DRIP Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Own a dividend stock or ETF? Enter your shares, price, and dividend to see your yield and annual income in seconds — then turn on reinvestment to project how a DRIP compounds your portfolio over the years, after tax and inflation. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .field-row > div { min-width:0; }
+      #tool label { display:block; font-weight:600; font-size:14px; margin:12px 0 4px; }
+      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
+      #tool details.adv[open] { padding-bottom:12px; }
+      #tool details.adv label:first-of-type { margin-top:6px; }
+      #tool .mode-label, #tool .preset-label { font-weight:600; font-size:14px; margin:12px 0 2px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin:4px 0 8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .reinvest-row { display:flex; align-items:center; gap:9px; font-weight:600; font-size:14px; margin:14px 0 2px; cursor:pointer; }
+      #tool .reinvest-row input { width:18px; height:18px; accent-color:var(--accent); cursor:pointer; margin:0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:12px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .headline-amt { font-weight:800; font-size:30px; line-height:1.15; word-break:break-word; }
+      #tool .badge { display:inline-block; margin-left:6px; padding:1px 7px; font-size:11px; font-weight:600;
+        border-radius:999px; background:var(--accent); color:#fff; vertical-align:middle; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .disclaimer { font-size:12.5px; color:var(--muted); font-style:italic; margin:12px 0 0;
+        padding-top:10px; border-top:1px solid var(--line); }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="shares-input" data-i18n="tool.shares.label">Shares owned</label>
+        <input type="text" id="shares-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 100" data-i18n-placeholder="tool.shares.ph"
+               aria-label="Number of shares owned" data-i18n-aria-label="tool.shares.aria">
+      </div>
+      <div>
+        <label for="price-input" data-i18n="tool.price.label">Share price</label>
+        <input type="text" id="price-input" inputmode="decimal" autocomplete="off"
+               placeholder="e.g. 50" data-i18n-placeholder="tool.price.ph"
+               aria-label="Price per share" data-i18n-aria-label="tool.price.aria">
+      </div>
+    </div>
+
+    <p class="mode-label" data-i18n="tool.mode.label">Dividend input</p>
+    <div class="chips" id="mode-chips" role="group" aria-label="Dividend input mode" data-i18n-aria-label="tool.modeAria">
+      <button type="button" class="chip is-active" data-mode="amount" data-i18n="tool.mode.amount">Per-share dividend</button>
+      <button type="button" class="chip" data-mode="yield" data-i18n="tool.mode.yield">Dividend yield %</button>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="dividend-input" id="dividend-label" data-i18n="tool.div.labelAmount">Annual dividend (per share)</label>
+        <input type="number" id="dividend-input" inputmode="decimal" min="0" step="any" autocomplete="off"
+               placeholder="e.g. 2" data-i18n-placeholder="tool.div.phAmount"
+               aria-label="Annual dividend or yield" data-i18n-aria-label="tool.div.aria">
+      </div>
+      <div>
+        <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+        <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+      </div>
+    </div>
+
+    <details class="adv" id="adv">
+      <summary data-i18n="tool.advanced.summary">Growth, tax &amp; reinvestment (optional)</summary>
+
+      <label for="years-input" data-i18n="tool.years.label">Holding period (years)</label>
+      <input type="number" id="years-input" inputmode="numeric" min="0" max="50" step="1"
+             placeholder="e.g. 20" data-i18n-placeholder="tool.years.ph">
+      <div class="chips" id="years-chips" role="group" aria-label="Holding period presets" data-i18n-aria-label="tool.years.chipsAria">
+        <button type="button" class="chip" data-years="5">5</button>
+        <button type="button" class="chip" data-years="10">10</button>
+        <button type="button" class="chip" data-years="20">20</button>
+        <button type="button" class="chip" data-years="30">30</button>
+      </div>
+
+      <p class="mode-label" data-i18n="tool.freq.label">Dividend frequency</p>
+      <div class="chips" id="freq-chips" role="group" aria-label="Dividend payment frequency" data-i18n-aria-label="tool.freqAria">
+        <button type="button" class="chip" data-freq="1" data-i18n="tool.freq.annual">Annual</button>
+        <button type="button" class="chip is-active" data-freq="4" data-i18n="tool.freq.quarterly">Quarterly</button>
+        <button type="button" class="chip" data-freq="12" data-i18n="tool.freq.monthly">Monthly</button>
+      </div>
+
+      <div class="field-row">
+        <div>
+          <label for="divgrowth-input" data-i18n="tool.divGrowth.label">Annual dividend growth (%)</label>
+          <input type="number" id="divgrowth-input" inputmode="decimal" min="0" max="20" step="0.1"
+                 placeholder="e.g. 0" data-i18n-placeholder="tool.divGrowth.ph">
+          <div class="chips" id="divgrowth-chips" role="group" aria-label="Dividend growth presets" data-i18n-aria-label="tool.divGrowth.chipsAria">
+            <button type="button" class="chip" data-dg="0">0%</button>
+            <button type="button" class="chip" data-dg="5">5%</button>
+            <button type="button" class="chip" data-dg="8">8%</button>
+          </div>
+        </div>
+        <div>
+          <label for="pricegrowth-input" data-i18n="tool.priceGrowth.label">Annual share-price growth (%)</label>
+          <input type="number" id="pricegrowth-input" inputmode="decimal" min="0" max="20" step="0.1"
+                 placeholder="e.g. 0" data-i18n-placeholder="tool.priceGrowth.ph">
+          <div class="chips" id="pricegrowth-chips" role="group" aria-label="Share price growth presets" data-i18n-aria-label="tool.priceGrowth.chipsAria">
+            <button type="button" class="chip" data-pg="0">0%</button>
+            <button type="button" class="chip" data-pg="4">4%</button>
+            <button type="button" class="chip" data-pg="7">7%</button>
+          </div>
+        </div>
+      </div>
+
+      <p class="preset-label" data-i18n="tool.preset.label">Country tax preset (fills the tax field — editable)</p>
+      <div class="chips" id="preset-chips" role="group" aria-label="Country dividend tax presets" data-i18n-aria-label="tool.presetAria">
+        <button type="button" class="chip" data-tax="0" data-i18n="tool.preset.none">None</button>
+        <button type="button" class="chip" data-tax="15.4" data-i18n="tool.preset.kr">Korea 15.4%</button>
+        <button type="button" class="chip" data-tax="15" data-i18n="tool.preset.us">US 15%</button>
+      </div>
+      <label for="tax-input" data-i18n="tool.tax.label">Dividend tax (%)</label>
+      <input type="number" id="tax-input" inputmode="decimal" min="0" max="60" step="0.1"
+             placeholder="e.g. 0" data-i18n-placeholder="tool.tax.ph">
+
+      <label for="inflation-input" data-i18n="tool.infl.label">Annual inflation (%) — optional</label>
+      <input type="number" id="inflation-input" inputmode="decimal" min="0" max="20" step="0.1"
+             placeholder="e.g. 0" data-i18n-placeholder="tool.infl.ph">
+      <div class="chips" id="inflation-chips" role="group" aria-label="Inflation presets" data-i18n-aria-label="tool.infl.chipsAria">
+        <button type="button" class="chip" data-infl="0">0%</button>
+        <button type="button" class="chip" data-infl="2">2%</button>
+        <button type="button" class="chip" data-infl="3">3%</button>
+      </div>
+
+      <label class="reinvest-row" for="reinvest-toggle">
+        <input type="checkbox" id="reinvest-toggle" checked>
+        <span data-i18n="tool.reinvest.label">Reinvest dividends (DRIP)</span>
+      </label>
+    </details>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p class="subtle" id="r-headline-label" style="margin:0;"></p>
+        <p style="margin:2px 0 2px;"><span class="headline-amt" id="r-headline-val"></span></p>
+        <p class="subtle" id="r-sub" style="margin:0 0 8px;"></p>
+        <p id="r-drip-line" style="margin:0 0 8px;font-weight:700;color:var(--accent);" hidden></p>
+
+        <div class="result-cards" id="immediate-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.income">Annual dividend income</div><div class="rc-val" id="r-income"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.yield">Dividend yield</div><div class="rc-val" id="r-yield"></div></div>
+          <div class="rcard" id="aftertax-card" hidden><div class="rc-label" data-i18n="tool.result.afterTax">After-tax annual income</div><div class="rc-val" id="r-aftertax"></div></div>
+        </div>
+
+        <div class="result-cards" id="projection-cards" hidden>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.totalDiv">Total dividends received</div><div class="rc-val" id="r-totaldiv"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.dripAdv">DRIP advantage</div><div class="rc-val" id="r-dripadv"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.yieldOnCost">Yield on cost</div><div class="rc-val" id="r-yieldoncost"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.real">Value in today's money<span class="badge" id="r-real-badge" data-i18n="tool.result.realBadge" hidden>in today's money</span></div><div class="rc-val" id="r-real"></div></div>
+        </div>
+
+        <p class="subtle" id="r-pnote" style="margin:12px 0 0;color:#d97706;font-weight:600;" hidden></p>
+        <p class="subtle" id="r-dnote" style="margin:8px 0 0;" hidden></p>
+        <p class="subtle" id="r-clipped" style="margin:8px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were outside the allowed range and were adjusted for this calculation.</p>
+        <p class="subtle" style="margin:10px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+        <p class="disclaimer" data-i18n="tool.note.disclaimer">This is an arithmetic projection, not investment advice; dividends and share prices are assumptions and can be cut.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/electricity-cost-calc/"><span class="related-ico" aria-hidden="true">⚡</span><span class="related-name">Electricity Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/exchange-rate-conv/"><span class="related-ico" aria-hidden="true">💱</span><span class="related-name">Currency Converter</span></a><a class="related-item" href="https://tool-hub.me/fire-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">FIRE Calculator</span></a><a class="related-item" href="https://tool-hub.me/gst-calc/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">GST Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">What are the exact formulas — dividend yield, annual income, and how DRIP is simulated?</summary><p data-i18n="faq.a1">This dividend calculator starts with two simple formulas: dividend yield = annual dividend per share ÷ share price × 100, and annual dividend income = shares owned × annual dividend per share. So 100 shares paying a 2 dividend on a 50 price yield 4% and 200 a year. The DRIP calculator part is a period-by-period simulation, not a closed formula: for each pay period (annual, quarterly or monthly) it pays shares × per-period dividend, subtracts tax, and — with reinvestment on — buys new shares at the current price, so the next period pays on a slightly larger position. Dividend growth and share-price growth are applied every period too. That compounding loop is what makes a dividend reinvestment calculator different from a flat savings projection.</p></details>
+    <details><summary data-i18n="faq.q2">What does the "DRIP advantage" number mean, and why does reinvesting compound?</summary><p data-i18n="faq.a2">The DRIP advantage is the difference between two runs of the same inputs: reinvesting every dividend (a dividend reinvestment plan) versus taking each dividend as cash. With DRIP on, each net dividend buys more shares, which pay more dividends next period, which buy still more shares — a compounding snowball. Taking dividends as cash leaves your share count fixed, so your final value is your shares at the ending price plus the cash you collected. This dividend reinvestment calculator shows both totals and the gap between them, so you can see exactly how much reinvesting adds over your holding period. The longer the horizon and the higher the yield, the larger the advantage tends to be.</p></details>
+    <details><summary data-i18n="faq.q3">What is yield on cost, and how does dividend growth lift it above the current yield?</summary><p data-i18n="faq.a3">Yield on cost measures your annual dividend income against what you originally paid, not against today's price. This dividend yield calculator computes it as the projected end-of-period annual dividend divided by your original cost (shares × price) × 100. If the dividend never grew and you took the cash, yield on cost would just equal your starting yield. But when you enter an annual dividend growth rate, the per-share dividend rises every year, so the income measured against your fixed original cost climbs well above the current yield over time — and reinvesting adds even more shares on top. That is why long-term holders of dividend-growth stocks often quote a yield on cost far higher than the headline yield a new buyer sees.</p></details>
+    <details><summary data-i18n="faq.q4">What do the Korea and US dividend tax presets use?</summary><p data-i18n="faq.a4">The presets fill the dividend tax field so you don't have to look it up, and the value stays editable. Korea uses 15.4% — the 14% dividend income tax plus a 1.4% local surtax — withheld on most dividends for the 배당금 계산기 case; note that once your annual financial income tops 20 million KRW you may fall under 금융소득종합과세 (comprehensive taxation) at higher progressive rates, which this single flat rate does not model. US uses 15% as a representative qualified-dividend rate; qualified dividends are taxed at 0/15/20% by income, while ordinary (non-qualified) dividends are taxed as regular income, and a 3.8% net investment income tax can apply. These are base-year 2026 reference figures — your actual rate depends on your bracket and account, so treat them as a starting point and edit them.</p></details>
+    <details><summary data-i18n="faq.q5">Why is this a projection rather than advice, and is anything sent to a server?</summary><p data-i18n="faq.a5">Every number here is an assumption you type — the share price, the dividend, the growth rates — and this DRIP calculator simply does the arithmetic on them. Real dividends can be cut, frozen or suspended, and share prices fall as well as rise; the tool deliberately does not model dividend cuts or price drops, so treat the output as one optimistic scenario, not a forecast or investment advice. Tax is applied as a single flat rate on each dividend, which is a simplification. Nothing is sent to a server and no live prices are fetched — you enter every value yourself, and your last entry is saved only in your own browser.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

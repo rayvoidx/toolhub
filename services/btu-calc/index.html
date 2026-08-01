@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BTU Calculator — What Size Air Conditioner Do I Need?</title>
+<meta name="description" content="Work out what size air conditioner a room needs. Enter dimensions, sun exposure and occupants to get the BTU rating, tonnage and the right type of unit.">
+<meta name="keywords" content="btu calculator, what size air conditioner do i need, ac btu calculator, air conditioner room size, ac tonnage calculator, air conditioner sizing">
+<link rel="canonical" href="https://tool-hub.me/btu-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BTU Calculator — What Size Air Conditioner Do I Need?">
+<meta property="og:description" content="Work out what size air conditioner a room needs. Enter dimensions, sun exposure and occupants to get the BTU rating, tonnage and the right type of unit.">
+<meta property="og:url" content="https://tool-hub.me/btu-calc/">
+<meta property="og:image" content="https://tool-hub.me/btu-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2563eb">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "BTU Calculator",
+  "description": "Work out what size air conditioner a room needs. Enter dimensions, sun exposure and occupants to get the BTU rating, tonnage and the right type of unit.",
+  "url": "https://tool-hub.me/btu-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "BTU Calculator",
+      "item": "https://tool-hub.me/btu-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What happens if the air conditioner is too big?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An oversized unit cools the air quickly, reaches the thermostat setpoint and shuts off before it has pulled much moisture out. The room ends up cold and clammy, and the short cycling wears the compressor while wasting electricity. Undersized is the opposite failure: it runs non-stop, never quite reaches setpoint on the hottest afternoons and still costs you comfort. Staying within about 10 percent of the calculated figure avoids both."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between BTU and tons?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They measure the same thing on different scales. One ton of cooling equals 12,000 BTU per hour, a leftover from how much heat melting a ton of ice absorbs in a day. Window and portable units are advertised in BTU, while central systems and heat pumps are sold in tons. A 24,000 BTU mini-split and a 2-ton system have identical capacity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does my climate zone change the BTU I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and this calculator deliberately simplifies that. The 20 BTU per square foot baseline suits a reasonably insulated home in a temperate climate. In hot, humid regions such as the US Gulf Coast, Texas or Arizona, add 10 to 20 percent; in cool northern climates or a well-sealed new build you can often take 10 percent off. Insulation, window area and which way the glass faces matter as much as the postcode."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do heat pumps use the same sizing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For cooling, yes: a 12,000 BTU heat pump removes exactly as much heat as a 12,000 BTU air conditioner, so this result applies directly. Heating is a separate calculation, because the winter heat loss of the same room is usually larger than its summer heat gain and capacity drops as the outdoor temperature falls. Size on the larger of the two loads, or pick an inverter model with a wide modulation range."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>BTU Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>BTU Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Floor area sets the number; sun, ceiling height and people move it. Oversizing leaves a room cold and clammy.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .check { display:flex; align-items:flex-end; }
+      #tool .check label { display:flex; align-items:center; gap:8px; font-weight:400; margin:0 0 8px; }
+      #tool .check input { width:auto; margin:0; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement unit</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Metres</option>
+        </select>
+      </div>
+      <div>
+        <label for="height" data-i18n="tool.height.label">Ceiling height</label>
+        <input type="number" id="height" inputmode="decimal" min="1" max="25" step="any" autocomplete="off" placeholder="8">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="len" data-i18n="tool.len.label">Room length</label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="15">
+      </div>
+      <div>
+        <label for="wid" data-i18n="tool.wid.label">Room width</label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+    </div>
+
+    <label for="sun" data-i18n="tool.sun.label">Sun exposure</label>
+    <select id="sun">
+      <option value="0.9" data-i18n="tool.sun.shaded">Heavily shaded (-10%)</option>
+      <option value="1" selected data-i18n="tool.sun.average">Average (no change)</option>
+      <option value="1.1" data-i18n="tool.sun.sunny">Very sunny (+10%)</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="occ" data-i18n="tool.occ.label">People in the room</label>
+        <input type="number" id="occ" inputmode="numeric" min="1" max="20" step="1" autocomplete="off" value="2" placeholder="2">
+      </div>
+      <div class="check">
+        <label for="kitchen"><input type="checkbox" id="kitchen"><span data-i18n="tool.kitchen.label">This room is a kitchen (+4,000 BTU)</span></label>
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.occ.note">Two people are already in the baseline; each extra person adds 600 BTU.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate BTU</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.btu">Recommended cooling capacity</div>
+          <div class="rc-val" id="r-btu">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.tons">Tonnage</div><div class="rc-val" id="r-tons">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Floor area</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.system">System type</div><div class="rc-val" id="r-system">—</div></div>
+      </div>
+      <p class="subtle" id="r-note" style="margin-top:10px;"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.rule" style="margin-top:12px;">A rule-of-thumb estimate for one room. Whole-home systems need a Manual J load calculation from an installer.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How air conditioner sizing actually works</h2>
+    <p>Cooling capacity is measured in BTU per hour — the amount of heat the unit can move out of a room every hour. The industry rule of thumb is 20 BTU per square foot of floor area, which assumes an eight-foot ceiling, average insulation and a temperate climate. Everything else on this page is an adjustment to that baseline: taller ceilings mean more air volume to cool, direct sun loads the room through the glass, people give off heat continuously, and a kitchen adds appliances that dump several thousand BTU into the space every time someone cooks.</p>
+    <p>The calculator applies those factors in the order a contractor would: area times 20, scaled by ceiling height relative to eight feet, multiplied by the sun factor, then 600 BTU added for each person beyond two and a flat 4,000 BTU if the room is a kitchen. The final figure is rounded to the nearest 500 BTU because that is the granularity units are actually sold in.</p>
+
+    <h3>Worked example: a 15 by 12 ft living room</h3>
+    <p>Floor area is 180 sq ft, so the baseline is 3,600 BTU. With a standard 8 ft ceiling, average sun and two occupants, nothing changes — the answer is 3,600, rounded to 3,500 BTU. In practice the smallest window units on the market are 5,000 BTU, so that is what you would buy. Now raise the ceiling to 9 ft (multiplier 1.125, giving 4,050), make the room very sunny (+10 percent, 4,455) and seat four people (+1,200), and the requirement climbs to 5,655 — call it 5,500 to 6,000 BTU. Same room, and the answer moved by more than half again.</p>
+
+    <h3>Worked example: a 12 by 10 ft kitchen</h3>
+    <p>120 sq ft gives 2,400 BTU on area alone, which sounds trivially small. Add the 4,000 BTU kitchen allowance and the requirement is 6,400, rounded to 6,500. That is not a fudge factor: an electric oven at full tilt puts out roughly 2,000 to 4,000 BTU per hour into the room, a hob adds more, and a refrigerator rejects its own condenser heat all day. Kitchens are the one room where the floor-area rule fails badly if you skip the appliance load.</p>
+
+    <h3>Worked example: a 5.5 by 4 m bedroom, metric</h3>
+    <p>Switch the unit selector to metres and the tool converts internally. 5.5 x 4 m is 18.04 x 13.12 ft, or about 237 sq ft, giving 4,734 BTU. A 2.4 m ceiling is 7.87 ft, slightly under the 8 ft reference, so the figure drops to about 4,660. A heavily shaded north-facing room takes another 10 percent off, landing near 4,194 — rounded to 4,000 BTU, or 0.33 tons. A single small split handles it comfortably.</p>
+
+    <h2>Why bigger is not better</h2>
+    <p>The most common mistake in residential cooling is buying two sizes up "to be safe". An air conditioner removes moisture only while it is running; a unit that satisfies the thermostat in six minutes never runs long enough for the coil to condense much water. The result is the classic cold, clammy room where 22 °C feels worse than 24 °C would in a properly sized system. Short cycling also hammers the compressor, since start-up is the hardest thing it ever does, and it drags down real-world efficiency well below the sticker rating. Undersizing has an honest failure mode — the room stays a degree or two warm on the hottest days — but oversizing fails in ways people blame on the building instead of the equipment.</p>
+
+    <h2>Adjustments this calculator does not make</h2>
+    <p>Insulation is the big one. A 1920s house with single glazing and no wall insulation can need 20 to 30 percent more capacity than the rule of thumb suggests; a well-sealed new build with double glazing and a decent air-tightness result can need 10 to 20 percent less. Large west-facing windows deserve their own allowance beyond the sun setting here — afternoon sun through unshaded glass is the single largest load in many rooms. A top-floor room under an uninsulated roof also runs hot, and a room with a door permanently open to a hotter space is effectively larger than its own floor area.</p>
+
+    <h2>Efficiency ratings and running cost</h2>
+    <p>Capacity tells you whether the room gets cool; EER, SEER and SEER2 in the US, or SEER and the A-to-G energy label in the UK and EU, tell you what it costs to keep it that way. Two 12,000 BTU units can differ by 40 percent in electricity use. Inverter models modulate their output instead of cycling on and off, which is why they hold humidity and temperature steadier and why the sizing penalty for being slightly oversized is smaller with an inverter than with a fixed-speed unit.</p>
+
+    <h2>Where the rule of thumb stops working</h2>
+    <p>This is a single-room estimate. For a whole-house system, ducted or multi-zone, a proper Manual J load calculation is the right tool: it accounts for wall assemblies, window U-values and shading coefficients, infiltration rate, duct losses and local design temperatures. Contractors who size by square footage alone routinely oversize by 30 to 50 percent. Use this calculator to sanity-check a quote or to pick a window unit or single split, and get a load calculation before committing to anything ducted.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/click-speed-test/"><span class="related-ico" aria-hidden="true">🖱️</span><span class="related-name">Click Speed Test (CPS)</span></a><a class="related-item" href="https://tool-hub.me/concrete-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Concrete Calculator</span></a><a class="related-item" href="https://tool-hub.me/cooking-conv/"><span class="related-ico" aria-hidden="true">🥄</span><span class="related-name">Cups to Grams Converter</span></a><a class="related-item" href="https://tool-hub.me/dog-age-calc/"><span class="related-ico" aria-hidden="true">🐕</span><span class="related-name">Dog Age Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What happens if the air conditioner is too big?</summary><p data-i18n="faq.a1">An oversized unit cools the air quickly, reaches the thermostat setpoint and shuts off before it has pulled much moisture out. The room ends up cold and clammy, and the short cycling wears the compressor while wasting electricity. Undersized is the opposite failure: it runs non-stop, never quite reaches setpoint on the hottest afternoons and still costs you comfort. Staying within about 10 percent of the calculated figure avoids both.</p></details>
+    <details><summary data-i18n="faq.q2">What is the difference between BTU and tons?</summary><p data-i18n="faq.a2">They measure the same thing on different scales. One ton of cooling equals 12,000 BTU per hour, a leftover from how much heat melting a ton of ice absorbs in a day. Window and portable units are advertised in BTU, while central systems and heat pumps are sold in tons. A 24,000 BTU mini-split and a 2-ton system have identical capacity.</p></details>
+    <details><summary data-i18n="faq.q3">Does my climate zone change the BTU I need?</summary><p data-i18n="faq.a3">Yes, and this calculator deliberately simplifies that. The 20 BTU per square foot baseline suits a reasonably insulated home in a temperate climate. In hot, humid regions such as the US Gulf Coast, Texas or Arizona, add 10 to 20 percent; in cool northern climates or a well-sealed new build you can often take 10 percent off. Insulation, window area and which way the glass faces matter as much as the postcode.</p></details>
+    <details><summary data-i18n="faq.q4">Do heat pumps use the same sizing?</summary><p data-i18n="faq.a4">For cooling, yes: a 12,000 BTU heat pump removes exactly as much heat as a 12,000 BTU air conditioner, so this result applies directly. Heating is a separate calculation, because the winter heat loss of the same room is usually larger than its summer heat gain and capacity drops as the outdoor temperature falls. Size on the larger of the two loads, or pick an inverter model with a wide modulation range.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
