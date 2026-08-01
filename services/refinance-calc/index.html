@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refinance Calculator — Break-Even and Savings</title>
+<meta name="description" content="See if refinancing pays off: monthly savings, the break-even month on your closing costs, and honest lifetime interest for both the old and the new loan.">
+<meta name="keywords" content="refinance calculator, mortgage refinance calculator, refinance break even, should i refinance, refinance savings calculator, refinance closing costs">
+<link rel="canonical" href="https://tool-hub.me/refinance-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Refinance Calculator — Break-Even and Savings">
+<meta property="og:description" content="See if refinancing pays off: monthly savings, the break-even month on your closing costs, and honest lifetime interest for both the old and the new loan.">
+<meta property="og:url" content="https://tool-hub.me/refinance-calc/">
+<meta property="og:image" content="https://tool-hub.me/refinance-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0c4a6e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Refinance Calculator",
+  "description": "See if refinancing pays off: monthly savings, the break-even month on your closing costs, and honest lifetime interest for both the old and the new loan.",
+  "url": "https://tool-hub.me/refinance-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Refinance Calculator",
+      "item": "https://tool-hub.me/refinance-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Refinance Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Refinance Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">A lower payment is not the same as a lower cost. Break-even month and lifetime interest, side by side.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .flag { display:inline-block; margin-top:6px; font-size:12px; font-weight:600; border-radius:999px; padding:3px 9px; }
+      #tool .flag.warn { background:#fef2f2; color:#b91c1c; }
+      #tool .flag.good { background:#ecfdf5; color:#047857; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .hint { font-size:12px; color:var(--muted); margin:4px 0 0; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="balance" data-i18n="tool.balance.label">Current loan balance</label>
+    <input type="text" id="balance" inputmode="decimal" autocomplete="off" placeholder="280000">
+
+    <div class="field-row">
+      <div>
+        <label for="rate" data-i18n="tool.rate.label">Current rate %</label>
+        <input type="number" id="rate" inputmode="decimal" min="0" max="25" step="any" autocomplete="off" placeholder="7.2">
+      </div>
+      <div>
+        <label for="remaining" data-i18n="tool.remaining.label">Years remaining</label>
+        <input type="number" id="remaining" inputmode="decimal" min="0" max="40" step="any" autocomplete="off" placeholder="27">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="newrate" data-i18n="tool.newrate.label">New rate %</label>
+        <input type="number" id="newrate" inputmode="decimal" min="0" max="25" step="any" autocomplete="off" placeholder="6.0">
+      </div>
+      <div>
+        <label for="newterm" data-i18n="tool.newterm.label">New loan term</label>
+        <select id="newterm">
+          <option value="30" data-i18n="tool.newterm.30">30 years</option>
+          <option value="20" data-i18n="tool.newterm.20">20 years</option>
+          <option value="15" data-i18n="tool.newterm.15">15 years</option>
+          <option value="match" data-i18n="tool.newterm.match">Match years remaining</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="costs" data-i18n="tool.costs.label">Closing costs</label>
+    <input type="text" id="costs" inputmode="decimal" autocomplete="off" placeholder="6000">
+    <p class="hint" data-i18n="tool.costs.hint">2-5% of the balance is typical.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate break-even</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.breakeven">Break-even</div>
+          <div class="rc-val" id="r-breakeven">—</div>
+          <div class="subtle" id="r-note" hidden></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.savings">Monthly savings</div><div class="rc-val" id="r-savings">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.newpay">New payment</div><div class="rc-val" id="r-newpay">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.oldpay">Current payment</div><div class="rc-val" id="r-oldpay">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.oldint">Interest left, current loan</div><div class="rc-val" id="r-oldint">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.newint">Interest, new loan</div><div class="rc-val" id="r-newint">—</div></div>
+        <div class="rcard wide">
+          <div class="rc-label" data-i18n="tool.r.lifetime">Lifetime difference incl. costs</div>
+          <div class="rc-val" id="r-lifetime">—</div>
+          <span class="flag" id="r-flag" hidden></span>
+        </div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.est" style="margin-top:12px;">An estimate. Escrow, mortgage insurance and points are not included — compare official Loan Estimates before deciding.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The only two questions that matter</h2>
+    <p>Every refinance decision comes down to two numbers. How many months does it take for the lower payment to repay the closing costs, and does the new loan actually cost less over its life? Lenders quote the first number happily because it is usually flattering. The second one is the one that decides whether the deal is good, and it is the one that gets left out of the sales pitch.</p>
+
+    <h3>Worked example: 280,000 at 7.2% refinanced to 6.0%</h3>
+    <p>Say you owe 280,000 with 27 years left at 7.2%. That payment is 1,962.53 a month in principal and interest, and if you ride it to the end you will pay 355,861 in interest. Refinance the same balance into a fresh 30-year loan at 6.0% and the payment drops to 1,678.74 — a saving of 283.79 a month. With 6,000 in closing costs the break-even is 6,000 divided by 283.79, which is 21.14, so month 22 is the first month you are ahead.</p>
+    <p>Now check the lifetime side. Interest on the new 30-year loan totals 324,347, plus the 6,000 in costs, against 355,861 on the current path. You come out roughly 25,500 ahead over the full run. This is a genuinely good refinance: it wins on both the monthly and the lifetime test, because a 1.2-point rate drop is big enough to absorb the three extra years of payments.</p>
+
+    <h3>The term-reset trap, with real numbers</h3>
+    <p>Change one input and the picture flips. Same 280,000 and 27 years left at 7.2%, but the best new rate you can get is 6.8% on a 30-year term. The payment falls to 1,825.39, a saving of 137.14 a month, and the break-even is a respectable 44 months. Looks fine. But interest on the new loan totals 377,141 — about 21,300 more than the 355,861 you were on track to pay, and 27,300 more once you add the closing costs.</p>
+    <p>You did not save money. You rented a lower payment for 30 years and paid a premium for it. The fix is to choose "match years remaining": at 6.8% over 27 years the payment is 1,889.52 (still 73 a month lower than now) and total interest drops to 332,206 — a real saving of about 17,700 after costs. That is why the term selector here changes the answer more than most people expect, and why the calculator flags the total when the new path costs more.</p>
+
+    <h3>Term comparison on the same balance</h3>
+    <table>
+      <thead><tr><th>New loan at 6.0%</th><th>Payment</th><th>Total interest</th></tr></thead>
+      <tbody>
+        <tr><td>Keep current loan (7.2%, 27 yr left)</td><td>1,962.53</td><td>355,861</td></tr>
+        <tr><td>30 years</td><td>1,678.74</td><td>324,347</td></tr>
+        <tr><td>27 years (match)</td><td>1,747.16</td><td>286,080</td></tr>
+        <tr><td>20 years</td><td>2,006.01</td><td>201,442</td></tr>
+        <tr><td>15 years</td><td>2,362.80</td><td>145,304</td></tr>
+      </tbody>
+    </table>
+    <p>Note the 20-year row: the payment is 43 a month higher than the loan you already have, so the break-even test says no, but the lifetime interest is 154,000 lower. Whether that is a good trade depends entirely on your cash flow, not on arithmetic. The calculator gives you both facts and lets you decide which constraint binds.</p>
+
+    <h2>Cash-out refinancing is a different animal</h2>
+    <p>If you are taking equity out, the maths here does not apply cleanly. You are borrowing new money at the new rate, so comparing the two payments tells you nothing about whether the borrowing was worthwhile — that depends on what the cash is for. Use this tool for the rate-and-term portion, then treat the cash-out amount as a separate loan with its own justification. Rates on cash-out refinances also run a quarter to half a point higher than rate-and-term, and the loan-to-value limits are stricter.</p>
+
+    <h2>Shopping the rate without wrecking your credit</h2>
+    <p>Multiple mortgage enquiries inside a short window count as a single hard pull for scoring purposes — 14 days on older FICO models, up to 45 on newer ones. Cluster your applications rather than spreading them over months, and get every quote as an official Loan Estimate rather than a verbal rate. Page two of that form lists the actual costs, which is the input this calculator needs. A rate that is 0.125 lower but carries 3,000 more in fees is frequently the worse deal.</p>
+    <p>Watch for points. A quoted rate that assumes you buy one or two discount points is not comparable to a par rate, and the points belong in the closing-cost box here. Watch, too, for costs rolled into the balance: that keeps cash in your pocket at signing but means you pay interest on the fees for the whole term, and it makes the break-even longer than the headline suggests.</p>
+
+    <h2>Limitations</h2>
+    <p>This calculator covers principal and interest only. Escrowed taxes and insurance do not change with a refinance, so leaving them out keeps the comparison clean, but it means the payment shown will be lower than your full monthly bill. Private mortgage insurance is not modelled either — if a refinance removes PMI because your equity crossed 20%, add that monthly amount to your savings by hand, and the break-even will shorten sharply. Adjustable-rate loans, interest-only periods, prepayment penalties and biweekly schedules are all outside the model. And the honest caveat behind every result: it assumes you keep both loans to term, which most borrowers do not.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/rent-affordability-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Rent Affordability Calculator</span></a><a class="related-item" href="https://tool-hub.me/rent-split-calc/"><span class="related-ico" aria-hidden="true">🚪</span><span class="related-name">Rent Split Calculator</span></a><a class="related-item" href="https://tool-hub.me/retirement-calc/"><span class="related-ico" aria-hidden="true">🌴</span><span class="related-name">Retirement Calculator</span></a><a class="related-item" href="https://tool-hub.me/roi-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">ROI Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is the 1% rule a good test for refinancing?</summary><p data-i18n="faq.a1">It is a rough filter from an era of higher balances and fixed fee structures, not a decision rule. A 1% drop on a 500,000 balance is worth far more than the same drop on an 80,000 balance, yet the closing costs are similar. Run the break-even instead: costs divided by monthly savings tells you exactly how long you must stay.</p></details>
+    <details><summary data-i18n="faq.q2">Does a lower monthly payment always mean I save money?</summary><p data-i18n="faq.a2">No, and this is the trap. If you have 27 years left and refinance into a fresh 30-year loan, you add three years of interest payments even at a lower rate. The payment falls, the lifetime interest can rise. This calculator shows both totals so the trade-off is visible instead of hidden.</p></details>
+    <details><summary data-i18n="faq.q3">What about a no-closing-cost refinance?</summary><p data-i18n="faq.a3">The costs are still there; they are paid through a higher rate or added to the balance. That makes the break-even instant but the monthly saving smaller, which is a good deal only if you expect to move or refinance again soon. Compare both quotes here: enter the lender-paid rate with zero costs, then the lower rate with real costs.</p></details>
+    <details><summary data-i18n="faq.q4">When should I not refinance?</summary><p data-i18n="faq.a4">If you might sell or move before the break-even month, the closing costs are simply lost. The same applies when the balance is small enough that a rate drop moves the payment by only a few tens per month, or when you are in the last years of a loan where nearly every payment is principal. Cash-out refinancing is a different decision entirely.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
