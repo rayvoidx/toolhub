@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percent Error Calculator — Formula and Steps</title>
+<meta name="description" content="Find percent error from a measured and an accepted value. Shows the absolute error, whether your reading came out high or low, and how good that accuracy is.">
+<meta name="keywords" content="percent error calculator, percentage error, percent error formula, experimental error, absolute error calculator, percent error vs percent difference">
+<link rel="canonical" href="https://tool-hub.me/percent-error-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Percent Error Calculator — Formula and Steps">
+<meta property="og:description" content="Find percent error from a measured and an accepted value. Shows the absolute error, whether your reading came out high or low, and how good that accuracy is.">
+<meta property="og:url" content="https://tool-hub.me/percent-error-calc/">
+<meta property="og:image" content="https://tool-hub.me/percent-error-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d28d9">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Percent Error Calculator",
+  "description": "Find percent error from a measured and an accepted value. Shows the absolute error, whether your reading came out high or low, and how good that accuracy is.",
+  "url": "https://tool-hub.me/percent-error-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Percent Error Calculator",
+      "item": "https://tool-hub.me/percent-error-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Percent Error Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Percent Error Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How far your measurement sits from the accepted value — as a percentage, with direction.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .rcard.wide .rc-val { font-weight:600; font-size:15px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="measured" data-i18n="tool.measured.label">Measured (experimental) value</label>
+        <input type="number" id="measured" inputmode="decimal" step="any" autocomplete="off" placeholder="9.5">
+      </div>
+      <div>
+        <label for="accepted" data-i18n="tool.accepted.label">Accepted (true) value</label>
+        <input type="number" id="accepted" inputmode="decimal" step="any" autocomplete="off" placeholder="9.81">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.percent">Percent error</div>
+          <div class="rc-val" id="r-pct">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.abs">Absolute error</div><div class="rc-val" id="r-abs">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.quality">Accuracy</div><div class="rc-val" id="r-quality">—</div></div>
+        <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.direction">Direction</div><div class="rc-val" id="r-dir">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.conv" style="margin-top:12px;">Accuracy bands follow the usual classroom convention; your lab or instructor may set a tighter tolerance.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The percent error formula, and what it is actually asking</h2>
+    <p>Percent error answers one narrow question: how big is the gap between what you measured and the value everyone agrees is correct, expressed as a share of that correct value? The formula is <strong>percent error = |measured − accepted| / |accepted| × 100</strong>. The vertical bars mean absolute value, so the answer is always positive. It is a statement about accuracy — closeness to the truth — not about precision, which is how tightly your repeated trials cluster together. A rifle that puts every shot in the same spot two inches left of the bullseye is precise and inaccurate, and only percent error notices.</p>
+
+    <h3>Worked example: measuring gravity in a first-year lab</h3>
+    <p>You drop a steel ball down a 1.2 m tube, time the fall with a photogate, and calculate g = 9.5 m/s². The accepted value at sea level is 9.81 m/s². Step one: subtract, 9.5 − 9.81 = −0.31. Step two: take the absolute value, 0.31 m/s² — that is your absolute error, and it keeps the units. Step three: divide by the accepted value, 0.31 / 9.81 = 0.0316. Step four: multiply by 100 for 3.16%, which you would write up as 3.2%.</p>
+    <p>Now read it. Your result is 3.2% off, and it is <em>low</em>, not high. That direction is the interesting part: air resistance, a photogate that triggers slightly late at the top, and a ball released with a small downward nudge all push the measured g in a specific direction. A 3.2% error that is consistently low across ten trials points at a systematic problem in the apparatus, not at bad luck.</p>
+
+    <h2>Percent error vs percent difference vs percent change</h2>
+    <p>Three formulas, three different questions, and marks lost every term for grabbing the wrong one. The dividing line is what sits in the denominator and whether one of your two numbers is authoritative.</p>
+    <table>
+      <thead><tr><th>Formula</th><th>Use when</th><th>Denominator</th><th>Example (9.5 and 9.81)</th></tr></thead>
+      <tbody>
+        <tr><td>Percent error</td><td>One value is a known, accepted reference</td><td>|accepted|</td><td>3.16%</td></tr>
+        <tr><td>Percent difference</td><td>Two measurements, neither is the reference</td><td>average of the two</td><td>3.21%</td></tr>
+        <tr><td>Percent change</td><td>One quantity measured before and after</td><td>the old value</td><td>+3.26%</td></tr>
+      </tbody>
+    </table>
+    <p>Notice the three answers are close but not equal, and only percent change carries a sign. If two lab partners get 9.5 and 9.7 with no textbook value in play, that is a percent difference of |9.5 − 9.7| / 9.6 × 100 = 2.08%. If a share price moves from 9.50 to 9.81, that is a percent change of +3.26%. Same raw numbers, different denominators, different meanings.</p>
+
+    <h2>Where the error came from: a working taxonomy</h2>
+    <h3>Systematic error (bias)</h3>
+    <p>Every reading is shifted the same way by the same cause. A balance never re-zeroed reads 2 g heavy on all fifty samples. A ruler with a worn end adds a consistent millimetre. A thermometer calibrated at the wrong pressure reads 1.5 °C high all afternoon. Averaging more trials does not help — the bias is baked into every one of them. The fingerprint is a percent error whose direction never flips.</p>
+    <h3>Random error (scatter)</h3>
+    <p>Reaction time on a hand-held stopwatch, bench vibration, judging the last digit between two scale marks, small draughts across a balance pan. These push readings both directions with no pattern, so the mean of many trials converges toward the true value while the spread tells you the precision. If your percent error is small but your trials scatter widely, random error dominates.</p>
+    <h3>Gross error (mistakes)</h3>
+    <p>A transposed digit, a unit left in grams instead of kilograms, a formula entered with the wrong bracket. A percent error above 50% is almost never subtle physics — check arithmetic and units first. The classic is a factor-of-10 slip that shows up as roughly 900% error.</p>
+
+    <h2>Reporting it well</h2>
+    <p>Give one or two significant figures: 3.2%, not 3.1600407747%. An uncertainty estimate carrying ten digits is a claim you cannot support. Quote the absolute error alongside the percentage when units carry meaning — 0.31 m/s² tells a reader something 3.2% alone does not. Phrase results in full sentences: "The measured value of 9.5 m/s² was 3.2% below the accepted 9.81 m/s², consistent with air resistance and late photogate triggering." That single sentence names the number, the direction and a plausible cause, which is what most rubrics reward.</p>
+    <p>On the accuracy bands this calculator shows: under 1% excellent, 1–5% good, 5–10% acceptable for an introductory lab, above 10% worth rechecking the method. Those are teaching conventions, not physics. An analytical chemistry titration may demand under 0.5%, while a rough estimate of a building's height by shadow length is fine at 15%. Match the standard to the experiment.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>Percent error is undefined when the accepted value is zero, because the division has no meaning — report the absolute error instead, which is why this tool refuses to invent a number there. It also inflates dramatically for accepted values near zero: measuring a 0.01 °C reference as 0.02 °C is a 100% error but a 0.01 °C miss. And it says nothing about repeatability; a single lucky trial can land at 0.4% while the underlying method is unreliable. Pair percent error with the spread of your repeated trials before claiming a good measurement.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/permutation-combination-calc/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Combination Calculator</span></a><a class="related-item" href="https://tool-hub.me/sig-fig-calc/"><span class="related-ico" aria-hidden="true">🔬</span><span class="related-name">Sig Fig Calculator</span></a><a class="related-item" href="https://tool-hub.me/z-score-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Z-Score Calculator</span></a><a class="related-item" href="https://tool-hub.me/attendance-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">Attendance Percentage Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Percent error, percent difference or percent change — which one do I need?</summary><p data-i18n="faq.a1">Percent error compares a measurement with a known accepted value: |measured - accepted| / |accepted| x 100. Percent difference compares two measurements when neither is the reference and divides by their average: |a - b| / ((a + b) / 2) x 100. Percent change tracks one quantity over time and keeps its sign: (new - old) / old x 100. Reading gravity as 9.5 against 9.81 is 3.16% error; two students reading 9.5 and 9.7 differ by 2.08%; a price moving from 9.50 to 9.81 is a 3.26% change.</p></details>
+    <details><summary data-i18n="faq.q2">Why does the percent error formula use absolute value?</summary><p data-i18n="faq.a2">The absolute value turns the answer into a size rather than a direction, so two students who miss by the same amount in opposite directions report the same error. Accuracy is a question of magnitude. Direction still matters for diagnosing what went wrong, which is why this calculator states it separately in plain words instead of burying it in a minus sign.</p></details>
+    <details><summary data-i18n="faq.q3">How many significant figures should I report for percent error?</summary><p data-i18n="faq.a3">One or two is the norm. An error estimate is itself uncertain, so 3.16% is usually written as 3.2% and extra digits are false precision. Never report the error to more precision than your least precise measurement supports, and keep the raw absolute error alongside it if your write-up needs the units.</p></details>
+    <details><summary data-i18n="faq.q4">What is the difference between systematic and random error?</summary><p data-i18n="faq.a4">Systematic error pushes every reading the same way: a balance reading 2 g heavy, a stopwatch started late, air resistance in a free-fall drop. It shows as a consistent direction in your percent error and averaging more trials will not remove it. Random error scatters readings around the true value through reaction time, vibration or last-digit estimation, and it does shrink as you average more trials.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
