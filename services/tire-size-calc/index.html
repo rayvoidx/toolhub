@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tire Size Calculator — Compare Two Tire Sizes</title>
+<meta name="description" content="Compare two tire sizes side by side: overall diameter, sidewall height, revs per mile, ride height change and the speedometer error a new size creates.">
+<meta name="keywords" content="tire size calculator, tire size comparison, 225 45r17 meaning, speedometer error tire, plus sizing calculator, tire diameter calculator">
+<link rel="canonical" href="https://tool-hub.me/tire-size-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tire Size Calculator — Compare Two Tire Sizes">
+<meta property="og:description" content="Compare two tire sizes side by side: overall diameter, sidewall height, revs per mile, ride height change and the speedometer error a new size creates.">
+<meta property="og:url" content="https://tool-hub.me/tire-size-calc/">
+<meta property="og:image" content="https://tool-hub.me/tire-size-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#171717">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Tire Size Calculator",
+  "description": "Compare two tire sizes side by side: overall diameter, sidewall height, revs per mile, ride height change and the speedometer error a new size creates.",
+  "url": "https://tool-hub.me/tire-size-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tire Size Calculator",
+      "item": "https://tool-hub.me/tire-size-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Tire Size Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Tire Size Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter 225/45R17 and 235/40R18. See the diameter gap, the speedometer error and whether the swap clears the 3% rule.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .tire-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+      #tool .tire-col > h3 { font-size:14px; margin:0 0 6px; }
+      #tool .size-row { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:8px; }
+      #tool .size-row label { font-size:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:28px; }
+      #tool .rcard.spec-card .rc-val { font-size:16px; }
+      #tool #r-speedo { font-size:15px; line-height:1.45; }
+      #tool .badge { display:inline-block; margin-top:6px; font-size:12px; font-weight:600; border-radius:999px; padding:3px 10px; }
+      #tool .badge.ok { background:#dcfce7; color:#166534; }
+      #tool .badge.bad { background:#fee2e2; color:#b91c1c; }
+      #tool .specrow { display:flex; justify-content:space-between; gap:10px; font-size:13px; margin-top:5px; }
+      #tool .specrow span { color:var(--muted); }
+      #tool .warn { color:#b91c1c; font-size:13px; font-weight:600; margin-top:10px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:520px){ #tool .tire-grid { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="tire-grid">
+      <div class="tire-col">
+        <h3 data-i18n="tool.current.legend">Current tire</h3>
+        <div class="size-row">
+          <div>
+            <label for="w1" data-i18n="tool.width.label">Width (mm)</label>
+            <input type="number" id="w1" inputmode="numeric" min="100" max="500" step="any" autocomplete="off" placeholder="225">
+          </div>
+          <div>
+            <label for="a1" data-i18n="tool.aspect.label">Aspect ratio (%)</label>
+            <input type="number" id="a1" inputmode="numeric" min="10" max="95" step="any" autocomplete="off" placeholder="45">
+          </div>
+          <div>
+            <label for="d1" data-i18n="tool.wheel.label">Wheel (in)</label>
+            <input type="number" id="d1" inputmode="numeric" min="8" max="30" step="any" autocomplete="off" placeholder="17">
+          </div>
+        </div>
+      </div>
+      <div class="tire-col">
+        <h3 data-i18n="tool.new.legend">New tire</h3>
+        <div class="size-row">
+          <div>
+            <label for="w2" data-i18n="tool.width.label">Width (mm)</label>
+            <input type="number" id="w2" inputmode="numeric" min="100" max="500" step="any" autocomplete="off" placeholder="235">
+          </div>
+          <div>
+            <label for="a2" data-i18n="tool.aspect.label">Aspect ratio (%)</label>
+            <input type="number" id="a2" inputmode="numeric" min="10" max="95" step="any" autocomplete="off" placeholder="40">
+          </div>
+          <div>
+            <label for="d2" data-i18n="tool.wheel.label">Wheel (in)</label>
+            <input type="number" id="d2" inputmode="numeric" min="8" max="30" step="any" autocomplete="off" placeholder="18">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Compare sizes</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.delta">Overall diameter change</div>
+          <div class="rc-val" id="r-delta">—</div>
+          <span class="badge" id="r-badge"></span>
+        </div>
+        <div class="rcard spec-card">
+          <div class="rc-label" data-i18n="tool.current.legend">Current tire</div>
+          <div class="rc-val" id="r-cur-size">—</div>
+          <div class="specrow"><span data-i18n="tool.r.sidewall">Sidewall</span><b id="r-cur-side">—</b></div>
+          <div class="specrow"><span data-i18n="tool.r.diameter">Overall diameter</span><b id="r-cur-dia">—</b></div>
+          <div class="specrow"><span data-i18n="tool.r.circ">Circumference</span><b id="r-cur-circ">—</b></div>
+          <div class="specrow"><span data-i18n="tool.r.revs">Revs per mile</span><b id="r-cur-revs">—</b></div>
+        </div>
+        <div class="rcard spec-card">
+          <div class="rc-label" data-i18n="tool.new.legend">New tire</div>
+          <div class="rc-val" id="r-new-size">—</div>
+          <div class="specrow"><span data-i18n="tool.r.sidewall">Sidewall</span><b id="r-new-side">—</b></div>
+          <div class="specrow"><span data-i18n="tool.r.diameter">Overall diameter</span><b id="r-new-dia">—</b></div>
+          <div class="specrow"><span data-i18n="tool.r.circ">Circumference</span><b id="r-new-circ">—</b></div>
+          <div class="specrow"><span data-i18n="tool.r.revs">Revs per mile</span><b id="r-new-revs">—</b></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.speedo">Speedometer error</div><div class="rc-val" id="r-speedo">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.height">Ride height change</div><div class="rc-val" id="r-height">—</div></div>
+      </div>
+      <p class="warn" id="r-warn" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Section width is nominal and shifts with rim width and brand. Match or exceed the original load index and speed rating.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How to read a tire size like 225/45R17</h2>
+    <p>Every metric tire size is three measurements glued together. In 225/45R17 the 225 is the section width in millimetres, measured across the widest part of the inflated tire. The 45 is the aspect ratio: the sidewall height is 45% of the section width, so 225 x 0.45 = 101.3 mm. The R means radial construction, and 17 is the wheel diameter in inches. Nothing in the code tells you the overall diameter directly — you have to build it: 17 x 25.4 = 431.8 mm of wheel, plus a sidewall at the top and another at the bottom, so 431.8 + 2 x 101.3 = 634.3 mm, or 24.97 inches. That number is the one that matters for everything else on this page.</p>
+
+    <h3>Worked example: 225/45R17 to 235/40R18</h3>
+    <p>This is the most common upgrade on a Golf, a 3 Series or an Accord, so run it end to end. The current tire: sidewall 225 x 0.45 = 101.3 mm, overall diameter 634.3 mm, circumference pi x 634.3 = 1,992.7 mm, and revolutions per mile 1,609,344 / 1,992.7 = 807.6. The new tire: sidewall 235 x 0.40 = 94.0 mm, overall diameter 457.2 + 188.0 = 645.2 mm, circumference 2,026.9 mm, revs per mile 794.0.</p>
+    <p>The diameter difference is (645.2 - 634.3) / 634.3 = +1.72%. That is comfortably inside the 3% window, so the speedometer, ABS and shift points stay within the tolerance the manufacturer designed for. Ride height rises by half the diameter change, 5.5 mm — barely visible, but enough to eat into the fender gap on a lowered car. The speedometer now under-reads: at a true 60 mph the needle shows 60 x 634.3 / 645.2 = 59.0 mph. You are going 1 mph faster than the dash claims, which also means your odometer accumulates miles slightly slower than reality.</p>
+
+    <h3>Why 3% is the line everyone quotes</h3>
+    <p>Your car has no idea how big its tires are. It counts wheel revolutions and multiplies by a diameter stored in software. Change the diameter and every derived value drifts by the same percentage: indicated speed, trip odometer, ABS wheel-slip comparisons, traction control intervention thresholds, and on some cars the transmission's shift map. UK and EU rules require that a speedometer never reads below true speed and never more than 10% plus 6.25 mph above it, so factories deliberately set the needle to read a few percent high. A tire that is 3% taller eats most of that built-in cushion; one that is 5% taller can push the indicated speed below true speed, which is the direction that gets you a ticket.</p>
+
+    <h3>Speedometer error at a glance</h3>
+    <p>The relationship is linear, so the arithmetic is easy to carry in your head: indicated speed = true speed x (old diameter / new diameter). A 2% taller tire at a true 70 mph indicates about 68.6 mph. A 5% taller tire indicates 66.7 mph — over 3 mph optimistic in the wrong direction. Go the other way with a shorter tire and the needle over-reads by the same proportion, which is harmless legally but makes the odometer log miles you never drove, and that quietly shortens warranty and service intervals.</p>
+
+    <h2>Plus sizing without changing rolling diameter</h2>
+    <p>Plus sizing is the trick behind almost every wheel upgrade: add an inch of wheel, subtract enough sidewall to keep the overall diameter the same. One inch of wheel diameter adds 25.4 mm overall, which means each sidewall has to shrink by about 12.7 mm. On a 225-section tire that is roughly 5 to 6 points of aspect ratio, which is why 45 becomes 40 when 17 becomes 18. Widening the section at the same time, 225 to 235, adds a little height back, and that is where the extra 1.7% in the example came from.</p>
+    <p>What you gain is a stiffer sidewall that resists rolling under cornering load, quicker steering response, and clearance for larger brake calipers. What you pay is comfort — less air means less cushion — plus wheel damage risk on broken pavement, higher tire prices, and often more road noise. Beyond plus-two on a road car, most people find the trade goes negative.</p>
+
+    <h3>Load index, speed rating and the things this calculator cannot see</h3>
+    <p>Diameter maths is only half the fitment question. The load index and speed rating stamped after the size, such as 91W, must meet or exceed the placard values on your door jamb, especially on anything that tows or carries weight. A wider tire also needs a rim within the manufacturer's approved width range, and it needs somewhere to live: check clearance to the strut, the inner fender liner and the fender edge at full lock and full suspension compression, not just sitting still in the driveway. Cars with direct TPMS sensors keep working after a size change, but the system's pressure targets still come from the placard, and a different size may want a different pressure to carry the same load. Finally, the calculator uses nominal figures — real measured widths and diameters vary by a few millimetres between brands and rim widths, so treat anything inside about 0.5% as a tie.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/topsoil-calc/"><span class="related-ico" aria-hidden="true">🌱</span><span class="related-name">Topsoil Calculator</span></a><a class="related-item" href="https://tool-hub.me/typing-test/"><span class="related-ico" aria-hidden="true">⌨️</span><span class="related-name">Typing Speed Test</span></a><a class="related-item" href="https://tool-hub.me/wallpaper-calc/"><span class="related-ico" aria-hidden="true">🖼️</span><span class="related-name">Wallpaper Calculator</span></a><a class="related-item" href="https://tool-hub.me/wind-chill-calc/"><span class="related-ico" aria-hidden="true">🥶</span><span class="related-name">Wind Chill Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What does 225/45R17 mean?</summary><p data-i18n="faq.a1">225 is the section width in millimetres and 45 is the aspect ratio, so the sidewall is 45% of 225 mm, about 101 mm tall. R means radial construction and 17 is the wheel diameter in inches. Overall diameter works out at 17 x 25.4 + 2 x 101 = 634 mm, roughly 25 inches. The code after it, such as 91W, is the load index and speed rating.</p></details>
+    <details><summary data-i18n="faq.q2">What is the 3% rule for changing tire size?</summary><p data-i18n="faq.a2">Your speedometer, ABS, traction control and transmission shift points are all calibrated to the factory tire's rolling diameter. Keeping the new size within 3% of the old overall diameter holds the error inside the tolerance those systems were designed around, and inside most legal speedometer limits. Beyond 3% the speedo reads noticeably wrong and stability systems start acting on bad wheel-speed data.</p></details>
+    <details><summary data-i18n="faq.q3">What is plus sizing?</summary><p data-i18n="faq.a3">Plus sizing means going up an inch in wheel diameter while dropping the aspect ratio so the overall diameter barely changes. 225/45R17 to 235/40R18 is a textbook plus-one at only 1.7% taller. You get sharper turn-in and room for bigger brakes, and you pay with ride comfort and a higher risk of pothole damage.</p></details>
+    <details><summary data-i18n="faq.q4">Do taller tires lower engine RPM?</summary><p data-i18n="faq.a4">Yes. A taller tire covers more ground per revolution, so at a given road speed the wheels, driveshaft and engine all turn more slowly, much like fitting a taller final drive. Cruising RPM falls by roughly the same percentage as the diameter increase, but acceleration and towing get worse and the speedometer reads low until it is recalibrated.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
