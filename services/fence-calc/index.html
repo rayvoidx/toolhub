@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fence Calculator — Posts, Rails, Pickets, Cost</title>
+<meta name="description" content="Fence calculator for posts, rails and pickets: enter fence length, post spacing and gate widths for a full material list and estimated cost in feet or metres.">
+<meta name="keywords" content="fence calculator, fence post calculator, how much fence do i need, fence cost estimator, fence material calculator, picket fence calculator">
+<link rel="canonical" href="https://tool-hub.me/fence-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fence Calculator — Posts, Rails, Pickets, Cost">
+<meta property="og:description" content="Fence calculator for posts, rails and pickets: enter fence length, post spacing and gate widths for a full material list and estimated cost in feet or metres.">
+<meta property="og:url" content="https://tool-hub.me/fence-calc/">
+<meta property="og:image" content="https://tool-hub.me/fence-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#854d0e">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Fence Calculator",
+  "description": "Fence calculator for posts, rails and pickets: enter fence length, post spacing and gate widths for a full material list and estimated cost in feet or metres.",
+  "url": "https://tool-hub.me/fence-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Fence Calculator",
+      "item": "https://tool-hub.me/fence-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Fence Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Fence Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Measure the fence line once and get the whole bill of materials — posts, rails, pickets and cost.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .field-row.three { grid-template-columns:repeat(3,1fr); }
+      #tool .u { color:var(--muted); font-weight:400; }
+      #tool .check { display:flex; align-items:center; gap:8px; font-weight:600; font-size:14px; margin:16px 0 6px; cursor:pointer; }
+      #tool .check input { width:auto; margin:0; }
+      #tool .legend { font-weight:700; font-size:14px; margin:18px 0 6px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      /* .field-row 가 display:grid 라 hidden 속성만으로는 안 숨는다 — 명시 규칙 필요 */
+      #tool .field-row[hidden], #tool .rcard[hidden] { display:none; }
+      @media(max-width:480px){ #tool .field-row, #tool .field-row.three { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Metres</option>
+        </select>
+      </div>
+      <div>
+        <label for="length"><span data-i18n="tool.length.label">Total fence length</span> <span class="u" id="u-len">ft</span></label>
+        <input type="number" id="length" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="150">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="spacing" data-i18n="tool.spacing.label">Post spacing</label>
+        <select id="spacing">
+          <option value="6" data-i18n="tool.spacing.6">6 ft (1.8 m)</option>
+          <option value="8" selected data-i18n="tool.spacing.8">8 ft (2.4 m) — standard</option>
+        </select>
+      </div>
+      <div>
+        <label for="rails" data-i18n="tool.rails.label">Rails per section</label>
+        <select id="rails">
+          <option value="2" selected data-i18n="tool.rails.2">2 rails</option>
+          <option value="3" data-i18n="tool.rails.3">3 rails</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="gates" data-i18n="tool.gates.label">Number of gates</label>
+        <input type="number" id="gates" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="1">
+      </div>
+      <div>
+        <label for="gate-width"><span data-i18n="tool.gatew.label">Width per gate</span> <span class="u" id="u-gate">ft</span></label>
+        <input type="number" id="gate-width" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="4">
+      </div>
+    </div>
+
+    <label class="check" for="use-pickets"><input type="checkbox" id="use-pickets" checked><span data-i18n="tool.pickets.toggle">Include pickets or boards</span></label>
+
+    <div class="field-row" id="picket-fields">
+      <div>
+        <label for="picket-width"><span data-i18n="tool.pw.label">Picket width</span> <span class="u" id="u-pw">in</span></label>
+        <input type="number" id="picket-width" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="5.5">
+      </div>
+      <div>
+        <label for="picket-gap"><span data-i18n="tool.gap.label">Gap between pickets</span> <span class="u" id="u-gap">in</span></label>
+        <input type="number" id="picket-gap" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0.5">
+      </div>
+    </div>
+
+    <p class="legend" data-i18n="tool.cost.legend">Unit costs (optional)</p>
+    <div class="field-row three">
+      <div>
+        <label for="cost-post" data-i18n="tool.cost.post">Price per post</label>
+        <input type="number" id="cost-post" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="18">
+      </div>
+      <div>
+        <label for="cost-rail" data-i18n="tool.cost.rail">Price per rail</label>
+        <input type="number" id="cost-rail" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="9">
+      </div>
+      <div>
+        <label for="cost-picket" data-i18n="tool.cost.picket">Price per picket</label>
+        <input type="number" id="cost-picket" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="4">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate materials</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.posts">Posts needed</div>
+          <div class="rc-val" id="r-posts">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rails">Rails</div><div class="rc-val" id="r-rails">—</div></div>
+        <div class="rcard" id="picket-card"><div class="rc-label" data-i18n="tool.r.pickets">Pickets</div><div class="rc-val" id="r-pickets">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sections">Sections</div><div class="rc-val" id="r-sections">—</div></div>
+        <div class="rcard" id="cost-card"><div class="rc-label" data-i18n="tool.r.cost">Estimated material cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.assume" style="margin-top:12px;">Counts assume a straight run with a post at each end. Add one post per corner, allow about 10% extra pickets for waste, and enter all prices in the same currency.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How the fence material count is built</h2>
+    <p>Every fence estimate comes down to four numbers, and each one falls out of the one before it. First you take the total length of the fence line and subtract the gate openings, because a gate is a hole in the fence, not a section of it. Second you divide that net run by the post spacing and round up — that gives the number of sections, or bays. Third you add one post, because a run of sections always needs a post on both ends: five sections need six posts. Fourth you add two more posts for every gate, since a gate hangs between its own dedicated hinge post and latch post.</p>
+    <p>Rails and pickets then follow directly. Rails are simply sections multiplied by the number of rails per section — two for most 4-foot picket fences, three for 6-foot privacy fences where the extra middle rail stops boards from cupping. Pickets are the net run converted to inches and divided by the repeat distance, which is the picket width plus the gap you want between boards.</p>
+
+    <h3>Worked example: a 150-foot backyard fence</h3>
+    <p>Say you are fencing 150 feet of back yard with one 4-foot walk gate, 8-foot post spacing, two rails per section, and standard 5.5-inch dog-ear pickets set with a 0.5-inch gap.</p>
+    <p>The net run is 150 - 4 = <strong>146 feet</strong>. Divided by 8-foot spacing that is 18.25, which rounds up to <strong>19 sections</strong>. Posts are 19 + 1 = 20 line and end posts, plus 2 gate posts, for <strong>22 posts</strong> total. Rails are 19 x 2 = <strong>38 rails</strong>, and since rails are sold in 8-foot lengths at this spacing you buy 38 of them with no cutting. Pickets are 146 x 12 = 1,752 inches of run divided by 6 inches of repeat (5.5 + 0.5), which is <strong>292 pickets</strong>.</p>
+    <p>Put 2026-era US prices on it — say 
+
+  8 per treated 4x4 post, $9 per 2x4 rail and $4 per picket — and the material cost lands at 22 x 18 + 38 x 9 + 292 x 4 = <strong>
+
+  ,906</strong> before concrete, fasteners, gate hardware and the cost of the gate itself. That last part is worth repeating: the calculator prices the fence, not the gate. A pre-hung wood gate kit runs $80 to $200, hinges and a latch another $30 to $60, and two bags of concrete per post adds roughly 
+
+  50 across the whole job.</p>
+
+    <h3>Same fence, tighter spacing</h3>
+    <p>Switch to 6-foot spacing and the numbers move in a way worth understanding before you commit. The 146-foot net run becomes 24.33, rounding up to <strong>25 sections</strong>, so posts go from 22 to 28 and rails from 38 to 50. Picket count does not change at all — 292 either way, because the boards cover the same linear distance regardless of how many posts hold them up. At the prices above, tightening the spacing costs about $216 extra, plus a dozen more bags of concrete and six more holes to dig. What you get is a fence that resists wind loading and warping far better, which is why 6-foot spacing is standard on tall privacy fences and on exposed sites.</p>
+
+    <h3>Gate framing and why gates need their own posts</h3>
+    <p>A gate post carries a cantilevered load that swings, slams and sags. That is why the count adds two posts per gate rather than borrowing line posts, and why serious builders oversize them: 6x6 posts instead of 4x4, set 6 to 12 inches deeper than the line posts, often with a diagonal brace or a steel anti-sag kit inside the gate frame. Leave a 1/2-inch gap on the hinge side and 3/8-inch on the latch side, so a 4-foot opening is framed at roughly 4 feet 1 inch between posts. If you are planning a double drive gate for a car, size the opening at 10 to 12 feet and treat it as two gates in the calculator.</p>
+
+    <h3>Slopes: stepping versus racking</h3>
+    <p>Ground is rarely flat, and the two standard answers change your material list differently. <strong>Stepping</strong> keeps every panel level and drops each one down at the post, producing a staircase profile along the top. It is the cleaner look for pre-built panels, but each post must be tall enough for the step, and the triangular gaps under each panel need a kickboard if you have a dog. <strong>Racking</strong> lets the rails follow the grade while the pickets stay plumb, which means attaching boards one at a time rather than hanging panels. Racking uses essentially the same picket count this calculator gives you; stepping generates offcuts, so buy 10 to 15% more.</p>
+
+    <h2>Post depth, concrete and the parts this tool leaves out</h2>
+    <p>Post depth is not part of the material count but it decides whether the fence is still standing in five years. The working rule is one third of the exposed height goes underground, plus 6 inches of gravel at the bottom of the hole for drainage — a 6-foot fence wants a 30-inch hole and 9-foot posts. Anywhere with freezing winters, the hole must also go below the frost line, which is 36 to 48 inches across much of the northern US and Canada. Concrete runs about two 50 lb bags per 4x4 post in a 10-inch hole, three to four for a 12-inch gate post hole.</p>
+    <p>Also outside the count: fasteners (roughly two to three exterior screws per picket per rail, so plan on 8 to 12 pounds of screws for a 150-foot fence), post caps, gravel, stain or sealer, and the extra post at every corner or change of direction. Layouts are rarely one straight line, so run the calculator once per straight leg and add a post per corner — a rectangular yard fenced on three sides needs two corner posts beyond what a single run predicts.</p>
+    <p>Finally, check the boring stuff before you buy: local codes commonly cap front-yard fences at 4 feet and rear fences at 6, many jurisdictions require a permit above that, and utility locate services are free and mandatory in most US states. Call 811 in the US or use LinesearchbeforeUdig in the UK several working days before you dig your first hole. A material list is easy to redo; a severed gas line is not.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/final-grade-calc/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Final Grade Calculator</span></a><a class="related-item" href="https://tool-hub.me/fuel-cost-calc/"><span class="related-ico" aria-hidden="true">⛽</span><span class="related-name">Fuel Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/golf-handicap-calc/"><span class="related-ico" aria-hidden="true">⛳</span><span class="related-name">Golf Handicap Calculator</span></a><a class="related-item" href="https://tool-hub.me/gpa-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">GPA Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Should fence posts be 6 or 8 feet apart?</summary><p data-i18n="faq.a1">Eight feet is the standard in the US because rails and panels are sold in 8-foot lengths, so nothing gets cut. Drop to 6 feet for tall privacy fences, windy or exposed sites, heavy pickets, or sloping ground where shorter sections follow the grade more neatly. Six-foot spacing costs roughly a third more posts and concrete but produces a noticeably stiffer fence.</p></details>
+    <details><summary data-i18n="faq.q2">How deep do fence posts need to be?</summary><p data-i18n="faq.a2">The rule of thumb is one third of the post above ground goes below it, plus about 6 inches of gravel for drainage. A 6-foot fence therefore needs a post hole around 30 inches deep, which means buying 9-foot posts. In cold climates the hole must also reach below the local frost line — 36 to 48 inches across the northern US and Canada — or frost heave will lift the posts over a winter or two.</p></details>
+    <details><summary data-i18n="faq.q3">How much concrete does each fence post need?</summary><p data-i18n="faq.a3">For a typical 4x4 post in a 10-inch hole 30 inches deep, budget two 50 lb bags of fast-setting concrete mix per post. A 12-inch hole for a 6x6 or a gate post takes three to four bags. Multiply by the post count from this calculator, then add a couple of spare bags — running short in the middle of setting a line is worse than having one bag left over.</p></details>
+    <details><summary data-i18n="faq.q4">Does the calculator handle corners and slopes?</summary><p data-i18n="faq.a4">It sizes a straight run, so add one post for every corner or direction change in your layout. On a slope you can either step the panels down in level sections, which needs slightly taller posts at each step, or rack them to follow the grade, which needs pickets attached individually. Racked fences use about the same picket count; stepped fences add offcuts, so buy 10 to 15% extra.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

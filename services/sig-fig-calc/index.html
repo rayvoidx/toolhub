@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sig Fig Calculator — Count and Round Sig Figs</title>
+<meta name="description" content="Count the significant figures in any number, then round to a set number of sig figs. Handles leading zeros, trailing zeros, decimals and scientific notation.">
+<meta name="keywords" content="sig fig calculator, significant figures calculator, sig figs, rounding sig figs, how many significant figures, significant digits calculator">
+<link rel="canonical" href="https://tool-hub.me/sig-fig-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sig Fig Calculator — Count and Round Sig Figs">
+<meta property="og:description" content="Count the significant figures in any number, then round to a set number of sig figs. Handles leading zeros, trailing zeros, decimals and scientific notation.">
+<meta property="og:url" content="https://tool-hub.me/sig-fig-calc/">
+<meta property="og:image" content="https://tool-hub.me/sig-fig-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3730a3">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sig Fig Calculator",
+  "description": "Count the significant figures in any number, then round to a set number of sig figs. Handles leading zeros, trailing zeros, decimals and scientific notation.",
+  "url": "https://tool-hub.me/sig-fig-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sig Fig Calculator",
+      "item": "https://tool-hub.me/sig-fig-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Sig Fig Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Sig Fig Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">See exactly which digits count, and round to any number of significant figures.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:2fr 1fr; gap:12px; }
+      #tool .hint { font-size:12px; color:var(--muted); margin:4px 0 0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-all; }
+      #tool .rcard.hero-card, #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:30px; }
+      #tool .strip { font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:24px; letter-spacing:1px; }
+      #tool .strip .sig { color:var(--accent); border-bottom:3px solid var(--accent); }
+      #tool .strip .insig { color:var(--muted); opacity:.6; }
+      #tool .legend { margin-top:8px; font-size:12px; color:var(--muted); display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+      #tool .sw { width:11px; height:11px; border-radius:3px; display:inline-block; }
+      #tool .sw.sig { background:var(--accent); }
+      #tool .sw.insig { background:var(--muted); opacity:.5; }
+      #tool .sw.insig + span { margin-right:0; }
+      #tool .sci sup { font-size:.7em; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="num" data-i18n="tool.num.label">Number</label>
+        <input type="text" id="num" inputmode="decimal" autocomplete="off" spellcheck="false" placeholder="0.004560">
+        <p class="hint" data-i18n="tool.num.hint">Decimals and e notation both work — try 0.004560 or 4.56e-3.</p>
+      </div>
+      <div>
+        <label for="figs" data-i18n="tool.round.label">Round to (sig figs)</label>
+        <input type="number" id="figs" inputmode="numeric" min="1" max="15" step="1" autocomplete="off" placeholder="3">
+        <p class="hint" data-i18n="tool.round.hint">Optional. Leave blank to only count.</p>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.count">Significant figures</div>
+          <div class="rc-val" id="r-count">—</div>
+        </div>
+        <div class="rcard wide">
+          <div class="rc-label" data-i18n="tool.r.digits">Which digits count</div>
+          <div class="rc-val strip" id="r-digits">—</div>
+          <div class="legend">
+            <span class="sw sig"></span><span data-i18n="tool.legend.sig">Significant</span>
+            <span class="sw insig"></span><span data-i18n="tool.legend.insig">Not significant</span>
+          </div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rounded">Rounded value</div><div class="rc-val" id="r-rounded">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sci">Scientific notation</div><div class="rc-val sci" id="r-sci">—</div></div>
+      </div>
+      <p class="subtle" id="r-note" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The rules, applied to 0.004560</h2>
+    <p>Significant figures are the digits in a measurement that were actually determined by the instrument. Everything else is bookkeeping. Four rules cover almost every case, and the number 0.004560 exercises all of them at once.</p>
+    <p><strong>Rule 1 — every non-zero digit is significant.</strong> The 4, the 5 and the 6 all count. That gives three straight away.</p>
+    <p><strong>Rule 2 — zeros between significant digits are significant.</strong> These are called captive zeros. In 4056 the zero sits between measured digits, so it counts and the number has four sig figs. In 0.004560 there is no captive zero, but the rule is what stops you from throwing away interior zeros in numbers like 20.08.</p>
+    <p><strong>Rule 3 — leading zeros are never significant.</strong> The 0 before the decimal point and the two zeros after it are placeholders. They only tell you where the decimal point sits, and they vanish the moment you rewrite the value as 4.560 x 10<sup>-3</sup>. They add nothing to precision.</p>
+    <p><strong>Rule 4 — trailing zeros count only when there is a decimal point.</strong> The final 0 in 0.004560 is deliberate: the person who wrote it is claiming they measured that digit as zero rather than 1 through 9. So 0.004560 has <strong>four</strong> significant figures — 4, 5, 6 and the trailing 0 — and its scientific form is 4.560 x 10<sup>-3</sup>. Drop the last zero and you have made a different, less precise claim.</p>
+
+    <h3>The 1200 problem</h3>
+    <p>Plain 1200 breaks the system. Did someone measure to the nearest unit, or round a bus timetable to the nearest hundred? Written that way you cannot tell, so the standard reading — the one this calculator uses — is two significant figures. Scientific notation removes the doubt entirely: 1.2 x 10<sup>3</sup> is two sig figs, 1.20 x 10<sup>3</sup> is three, and 1.200 x 10<sup>3</sup> is four. A trailing decimal point (1200.) is a shorter convention for "all four are real", but it is easy to miss on a printed page, so lab reports usually prefer the exponent form.</p>
+
+    <h2>Sig figs in arithmetic</h2>
+    <p>Counting digits is only half the job; the other half is carrying the right precision through a calculation. Two different rules apply, and mixing them up is the single most common source of lost marks.</p>
+    <h3>Addition and subtraction: match decimal places</h3>
+    <p>Line the numbers up at the decimal point and keep as many decimal places as the least precise term. 12.11 + 0.3 = 12.41 on a calculator, but 0.3 is only known to one decimal place, so the answer is 12.4. Note that the result has three sig figs even though one input had only one — with addition it is decimal places, not sig figs, that carry over.</p>
+    <h3>Multiplication and division: match significant figures</h3>
+    <p>Here the answer takes the sig-fig count of the least precise factor. 4.56 x 1.4 = 6.384 exactly, but 1.4 has only two sig figs, so report 6.4. Density is the classic worked example: 25.3 g divided by 12.0 mL gives 2.108333... and both inputs have three sig figs, so the honest result is 2.11 g/mL.</p>
+    <p>One practical rule beats all of this: round once, at the end. Rounding after every intermediate step lets small errors compound, which is why chemists carry a guard digit or two through the working and apply the sig-fig rule only to the final reported value.</p>
+
+    <h2>What the digits actually mean</h2>
+    <p>Writing 2.11 g/mL is a claim about your equipment. It says the true value lies roughly between 2.105 and 2.115 — that you trust the hundredths place but not the thousandths. Writing 2.108333 claims a balance and a graduated cylinder a thousand times better than the ones on the bench. That is why sig figs are graded so strictly in first-year chemistry and physics: the digits are a statement about uncertainty, not a formatting preference.</p>
+
+    <h3>Limits of this tool</h3>
+    <p>It analyses one number at a time as you typed it, so the ambiguity of a bare whole number is reported, not guessed away. Rounding uses standard IEEE 754 double arithmetic, which occasionally rounds a value like 1.005 down because the stored binary is a hair under the decimal you typed — every spreadsheet and pocket calculator behaves the same way. For that reason it is limited to 15 significant figures, roughly the point where a double stops being exact. Exact quantities such as counted objects or defined conversion factors have unlimited significant figures and should never be entered as the limiting term.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/density-calc/"><span class="related-ico" aria-hidden="true">🧊</span><span class="related-name">Density Calculator</span></a><a class="related-item" href="https://tool-hub.me/half-life-calc/"><span class="related-ico" aria-hidden="true">☢️</span><span class="related-name">Half-Life Calculator</span></a><a class="related-item" href="https://tool-hub.me/molar-mass-calc/"><span class="related-ico" aria-hidden="true">⚗️</span><span class="related-name">Molar Mass Calculator</span></a><a class="related-item" href="https://tool-hub.me/ohms-law-calc/"><span class="related-ico" aria-hidden="true">🔌</span><span class="related-name">Ohm's Law Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How many sig figs does 1200 have?</summary><p data-i18n="faq.a1">Written plainly it is ambiguous, and this calculator assumes 2. Trailing zeros in a whole number with no decimal point may just be placeholders. Write 1.2 x 10^3 for two, 1.20 x 10^3 for three, 1.200 x 10^3 for four, or add a decimal point (1200.) to show all four are measured.</p></details>
+    <details><summary data-i18n="faq.q2">Do exact and counted numbers have significant figures?</summary><p data-i18n="faq.a2">No. Counted items (12 test tubes) and defined conversions (1 inch = 2.54 cm exactly, 60 s in a minute) are exact, so they have infinite significant figures. They never limit the precision of a result — only measured values do. Enter only your measurements here.</p></details>
+    <details><summary data-i18n="faq.q3">Are the rules the same for adding and multiplying?</summary><p data-i18n="faq.a3">No, and this is the most common mistake. Addition and subtraction keep the fewest decimal places: 12.11 + 0.3 = 12.4, not 12.41. Multiplication and division keep the fewest significant figures: 4.56 x 1.4 = 6.4. Round once at the end, not after every step.</p></details>
+    <details><summary data-i18n="faq.q4">Why does my calculator show so many digits?</summary><p data-i18n="faq.a4">A calculator does not know how precise your measurements were, so it prints every digit its hardware holds. Dividing 2.0 by 3.0 gives 0.666666667 on screen but the honest answer is 0.67 — two sig figs, because both inputs had two. Reporting the extra digits claims precision your instrument never had.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>

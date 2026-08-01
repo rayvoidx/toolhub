@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ohm's Law Calculator — Volts, Amps, Ohms, Watts</title>
+<meta name="description" content="Enter any two of voltage, current, resistance or power and this Ohm's law calculator solves the other two instantly, showing the exact formulas it used.">
+<meta name="keywords" content="ohms law calculator, voltage current resistance calculator, ohms law, watts calculator, volts amps ohms, power formula calculator">
+<link rel="canonical" href="https://tool-hub.me/ohms-law-calc/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ohm's Law Calculator — Volts, Amps, Ohms, Watts">
+<meta property="og:description" content="Enter any two of voltage, current, resistance or power and this Ohm's law calculator solves the other two instantly, showing the exact formulas it used.">
+<meta property="og:url" content="https://tool-hub.me/ohms-law-calc/">
+<meta property="og:image" content="https://tool-hub.me/ohms-law-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Ohm's Law Calculator",
+  "description": "Enter any two of voltage, current, resistance or power and this Ohm's law calculator solves the other two instantly, showing the exact formulas it used.",
+  "url": "https://tool-hub.me/ohms-law-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ohm's Law Calculator",
+      "item": "https://tool-hub.me/ohms-law-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="icons/icon.svg" alt="" width="28" height="28">
+    <span>Ohm's Law Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Ohm's Law Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Fill in any two boxes. The other two are algebra, and the tool shows its working.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .hint { font-size:14px; color:var(--muted); margin:0 0 12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard.solved { border-color:var(--accent); background:color-mix(in srgb, var(--accent) 8%, transparent); }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:20px; margin-top:2px; }
+      #tool .rcard .rc-tag { font-size:11px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); margin-top:4px; }
+      #tool .rcard.solved .rc-tag { color:var(--accent); font-weight:700; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool #formulas { margin-top:12px; font-size:14px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p class="hint" data-i18n="tool.hint">Enter exactly two values. Leave the other two blank and they will be calculated.</p>
+
+    <div class="field-row">
+      <div>
+        <label for="volts" data-i18n="tool.in.v">Voltage — volts (V)</label>
+        <input type="number" id="volts" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+      <div>
+        <label for="amps" data-i18n="tool.in.i">Current — amps (A)</label>
+        <input type="number" id="amps" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="2">
+      </div>
+      <div>
+        <label for="ohms" data-i18n="tool.in.r">Resistance — ohms (Ω)</label>
+        <input type="number" id="ohms" inputmode="decimal" min="0" step="any" autocomplete="off">
+      </div>
+      <div>
+        <label for="watts" data-i18n="tool.in.p">Power — watts (W)</label>
+        <input type="number" id="watts" inputmode="decimal" min="0" step="any" autocomplete="off">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Solve</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard" id="c-v">
+          <div class="rc-label" data-i18n="tool.out.v">Voltage</div>
+          <div class="rc-val" id="r-v">—</div>
+          <div class="rc-tag" id="t-v"></div>
+        </div>
+        <div class="rcard" id="c-i">
+          <div class="rc-label" data-i18n="tool.out.i">Current</div>
+          <div class="rc-val" id="r-i">—</div>
+          <div class="rc-tag" id="t-i"></div>
+        </div>
+        <div class="rcard" id="c-r">
+          <div class="rc-label" data-i18n="tool.out.r">Resistance</div>
+          <div class="rc-val" id="r-r">—</div>
+          <div class="rc-tag" id="t-r"></div>
+        </div>
+        <div class="rcard" id="c-p">
+          <div class="rc-label" data-i18n="tool.out.p">Power</div>
+          <div class="rc-val" id="r-p">—</div>
+          <div class="rc-tag" id="t-p"></div>
+        </div>
+      </div>
+      <p class="subtle" id="formulas"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Applies to DC and to purely resistive AC loads. Reactive AC circuits need impedance and power factor.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Ohm's law in one line, and the three that follow from it</h2>
+    <p>Ohm's law says voltage equals current times resistance: V = I × R. Pair it with the power equation P = V × I and you have four quantities linked by two equations, which means any two known values pin down the other two. That is the whole trick behind this calculator. You type two numbers, it picks the algebra that fits, and it prints the formulas it used so the result is checkable rather than magic.</p>
+    <p>The units are volts (V) for electrical pressure, amps (A) for the rate of charge flow, ohms (Ω) for opposition to that flow, and watts (W) for the rate energy is converted to heat, light or motion. Keep them consistent: 20 milliamps is 0.02 A, and 4.7 kilohms is 4700 Ω. Mixing milliamps with plain amps is the single most common source of answers that are off by a factor of a thousand.</p>
+
+    <h3>Worked example: 12 volts across a 2 amp load</h3>
+    <p>Enter 12 in the voltage box and 2 in the current box. Resistance is V ÷ I = 12 ÷ 2 = 6 Ω. Power is V × I = 12 × 2 = 24 W. Now check the same circuit from another direction: if you had instead entered 12 V and 6 Ω, the tool returns I = V ÷ R = 2 A and P = V² ÷ R = 144 ÷ 6 = 24 W. Enter 24 W and 6 Ω and you get V = √(P × R) = √144 = 12 V and I = √(P ÷ R) = √4 = 2 A. Every route lands on the same circuit, which is a useful sanity check whenever a result looks surprising.</p>
+
+    <h3>The formula wheel, unrolled</h3>
+    <table>
+      <thead><tr><th>You know</th><th>Third value</th><th>Fourth value</th></tr></thead>
+      <tbody>
+        <tr><td>V and I</td><td>R = V ÷ I</td><td>P = V × I</td></tr>
+        <tr><td>V and R</td><td>I = V ÷ R</td><td>P = V² ÷ R</td></tr>
+        <tr><td>V and P</td><td>I = P ÷ V</td><td>R = V² ÷ P</td></tr>
+        <tr><td>I and R</td><td>V = I × R</td><td>P = I² × R</td></tr>
+        <tr><td>I and P</td><td>V = P ÷ I</td><td>R = P ÷ I²</td></tr>
+        <tr><td>R and P</td><td>V = √(P × R)</td><td>I = √(P ÷ R)</td></tr>
+      </tbody>
+    </table>
+    <p>Printed versions of this table are usually drawn as a wheel with V, I, R and P in the middle and three formulas in each quadrant. The wheel is a memory aid, not extra physics — every entry is one of those two equations rearranged.</p>
+
+    <h3>Practical example: a series resistor for an LED</h3>
+    <p>An LED is not a resistor, so you never apply Ohm's law to the LED itself. You apply it to the resistor in series with it. Say you want a red LED with a 2 V forward drop running at 20 mA from a 5 V supply. The resistor has to absorb 5 − 2 = 3 V at 0.02 A. Enter 3 volts and 0.02 amps: R = 150 Ω and P = 0.06 W. The nearest standard values are 150 Ω or, to be safe, 180 Ω, and a common quarter-watt resistor dissipates 0.06 W without warming up. Do the same sum for a blue LED with a 3.2 V drop and the resistor becomes (5 − 3.2) ÷ 0.02 = 90 Ω.</p>
+
+    <h3>Practical example: will that appliance trip the breaker?</h3>
+    <p>A 1500 W space heater on a US 120 V circuit draws I = P ÷ V = 1500 ÷ 120 = 12.5 A. On a 15 A branch circuit the rule of thumb is to stay under 80 percent continuous load, which is 12 A — so that heater alone is already at the limit and nothing else should share the circuit. Run the same heater on a UK 230 V supply and it draws only 6.5 A, which is why the same wattage feels less demanding on 230 V wiring. Enter 1500 watts with 120 volts, then with 230 volts, and compare.</p>
+
+    <h2>Where the simple law stops working</h2>
+    <p>Ohm's law describes ohmic materials, where resistance stays constant as voltage changes. Plenty of real components are not ohmic. Diodes and LEDs have an exponential curve, incandescent filaments increase resistance sharply when hot (a 60 W bulb measures a fraction of its running resistance when cold), thermistors are designed to change with temperature, and semiconductors do their own thing entirely. For these, a single resistance value only describes one operating point.</p>
+    <p>Alternating current adds a second caveat. With a purely resistive AC load — a kettle, a toaster, a filament lamp — you can use RMS volts and amps in these formulas directly. Add motors, transformers or switch-mode supplies and current no longer stays in step with voltage. Resistance becomes impedance (Z), apparent power in volt-amps is no longer the same as real power in watts, and the ratio between them is the power factor. In that case V = I × Z still holds in magnitude, but P = V × I × PF is what your electricity meter records.</p>
+    <p>Finally, a safety note. Calculations are a design tool, not a substitute for competence around mains electricity. Working circuits at 120 V or 230 V can kill, and conductor sizing, breaker ratings and insulation are governed by wiring regulations rather than by arithmetic alone. Use this calculator freely for low-voltage electronics, battery projects, car wiring and homework, and hand mains work to a qualified electrician.</p>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/sig-fig-calc/"><span class="related-ico" aria-hidden="true">🔬</span><span class="related-name">Sig Fig Calculator</span></a><a class="related-item" href="https://tool-hub.me/density-calc/"><span class="related-ico" aria-hidden="true">🧊</span><span class="related-name">Density Calculator</span></a><a class="related-item" href="https://tool-hub.me/half-life-calc/"><span class="related-ico" aria-hidden="true">☢️</span><span class="related-name">Half-Life Calculator</span></a><a class="related-item" href="https://tool-hub.me/molar-mass-calc/"><span class="related-ico" aria-hidden="true">⚗️</span><span class="related-name">Molar Mass Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the Ohm's law formula wheel?</summary><p data-i18n="faq.a1">The wheel arranges every rearrangement of V = I × R and P = V × I so you can read off the one that fits the two values you already have. Know voltage and current? R = V ÷ I and P = V × I. Know power and resistance? V = √(P × R) and I = √(P ÷ R). This calculator picks the right pair for you and prints them under the results.</p></details>
+    <details><summary data-i18n="faq.q2">Does Ohm's law work for AC circuits?</summary><p data-i18n="faq.a2">Directly, only for purely resistive AC loads such as heaters and filament bulbs, using RMS volts and amps. Once capacitance or inductance is involved, resistance becomes impedance (Z), current lags or leads the voltage, and real power is V × I × power factor. Treat this tool as a DC and resistive-AC calculator.</p></details>
+    <details><summary data-i18n="faq.q3">How do I size a resistor for an LED?</summary><p data-i18n="faq.a3">Subtract the LED forward voltage from the supply, then divide by the current you want. A red LED at 2 V drawing 20 mA from a 5 V rail needs (5 − 2) ÷ 0.02 = 150 Ω. Check the power too: 3 V × 0.02 A = 0.06 W, so a standard 0.25 W resistor is comfortable. Enter 3 volts and 0.02 amps above to see both numbers.</p></details>
+    <details><summary data-i18n="faq.q4">How do resistors add in series and parallel?</summary><p data-i18n="faq.a4">In series they simply add: 100 Ω + 220 Ω = 320 Ω, and the same current flows through each. In parallel the reciprocals add, so 1/R = 1/R1 + 1/R2 and two equal resistors give half the value. Work out the combined resistance first, then enter it here with your supply voltage.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/locales.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+<script src="js/ux.js"></script>
+<script src="js/related.js"></script>
+</body>
+</html>
