@@ -190,6 +190,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
+    <div class="field-row">
+      <div>
+        <label for="utils" data-i18n="tool.utils.label">Monthly utilities estimate (optional)</label>
+        <input type="text" id="utils" inputmode="decimal" autocomplete="off" placeholder="150">
+      </div>
+    </div>
+
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate rent budget</button>
 
     <div id="result" hidden>
@@ -200,9 +207,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.cons">Conservative — 25% of gross</div><div class="rc-val" id="r-cons">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.ceiling">Landlord ceiling — 40x rule</div><div class="rc-val" id="r-ceiling">—</div></div>
+        <div class="rcard" id="card-rentnet" hidden><div class="rc-label" data-i18n="tool.r.rentnet">Rent after utilities — recommended</div><div class="rc-val" id="r-rentnet">—</div></div>
+        <div class="rcard" id="card-consnet" hidden><div class="rc-label" data-i18n="tool.r.consnet">Rent after utilities — conservative</div><div class="rc-val" id="r-consnet">—</div></div>
         <div class="rcard" id="card-split" hidden><div class="rc-label" data-i18n="tool.r.split">Whole place if shared</div><div class="rc-val" id="r-split">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.left">Left after rent and debts</div><div class="rc-val" id="r-left">—</div></div>
       </div>
+      <p class="err" id="warn-utils" hidden data-i18n="tool.warn.utils">Your utilities estimate meets or exceeds the budget.</p>
+      <p class="subtle" id="note-utils" hidden data-i18n="tool.note.utils">The budget does not change — utilities come out of it.</p>
       <p class="subtle" id="note-debtcut" hidden data-i18n="tool.note.debtcut">Your debt payments pulled the ceiling below 30%.</p>
       <p class="subtle" id="note-same" hidden data-i18n="tool.note.same">With no other debts the 30% rule and the 40x rule land on the same number.</p>
       <p class="subtle" id="note-split" hidden data-i18n="tool.note.split">The shared figure assumes everyone pays an equal share.</p>

@@ -90,8 +90,9 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), len = $("len"), wid = $("wid"), depth = $("depth"), type = $("type");
+  var density = $("density"), densityRow = $("density-row");
   var result = $("result"), errEl = $("err"), liftNote = $("lift-note");
-  if (!unit || !len || !wid || !depth || !type) return;
+  if (!unit || !len || !wid || !depth || !type || !density) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -116,6 +117,14 @@
 
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
 
+  // 종류 select 의 value 가 곧 밀도(lb/yd³). "custom" 일 때만 직접 입력값을 쓴다.
+  function syncType() { densityRow.hidden = type.value !== "custom"; }
+  function densityLb() {
+    if (type.value !== "custom") return parseFloat(type.value);
+    var v = num(density);
+    return (isFinite(v) && v >= 1500 && v <= 4500) ? v : NaN;
+  }
+
   function calc() {
     var l = num(len), w = num(wid), d = num(depth);
     if (!isFinite(l) || !isFinite(w) || !isFinite(d)) return fail("tool.err.empty");
@@ -127,10 +136,13 @@
     var dIn = metric ? d * IN_PER_CM : d;
     if (lFt > 5000 || wFt > 5000 || dIn > 60) return fail("tool.err.range");
 
+    var lbPerYd3 = densityLb();
+    if (!isFinite(lbPerYd3)) return fail("tool.err.density");
+
     // 부피는 전부 피트로 맞춘 뒤 27로 나눠 세제곱야드로 — 업계 견적 단위가 yd³ 라서.
     var areaFt2 = lFt * wFt;
     var yd3 = areaFt2 * (dIn / 12) / 27;
-    var tons = yd3 * parseFloat(type.value) / 2000;
+    var tons = yd3 * lbPerYd3 / 2000;
 
     $("r-yards").textContent = fmt(yd3) + " yd³";
     $("r-tons").textContent = fmt(tons) + " " + t("tool.u.tons");
@@ -144,12 +156,14 @@
   }
 
   setUnits();
+  syncType();
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, depth].forEach(function (el) {
+  [len, wid, depth, density].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   unit.addEventListener("change", function () { setUnits(); if (!result.hidden || !errEl.hidden) calc(); });
-  type.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  type.addEventListener("change", function () { syncType(); if (!result.hidden || !errEl.hidden) calc(); });
+  density.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
   document.addEventListener("i18n:change", function () { setUnits(); if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

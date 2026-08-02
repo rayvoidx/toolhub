@@ -68,6 +68,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Zakat Calculator",
+      "item": "https://tool-hub.me/zakat-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
@@ -99,28 +119,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "What about money people owe me, and money I owe?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A debt you expect back — a loan to a reliable friend, an invoice a solid client will settle — counts as your wealth, so add it to cash. A debt unlikely to be repaid is left out until it actually arrives. On the other side, subtract only what is due now: this month's rent, an overdue bill, the current instalment of a mortgage, not the whole outstanding balance of a 25-year loan."
+        "text": "A debt you expect back — a loan to a reliable friend, an invoice a solid client will settle — counts as your wealth, so enter it in the money-owed-to-you field. A debt unlikely to be repaid is left out until it actually arrives. On the other side, subtract only what is due now: this month's rent, an overdue bill, the current instalment of a mortgage, not the whole outstanding balance of a 25-year loan."
       }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Zakat Calculator",
-      "item": "https://tool-hub.me/zakat-calc/"
     }
   ]
 }
@@ -190,10 +190,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <input type="number" id="inventory" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
       </div>
       <div>
+        <label for="receivable" data-i18n="tool.receivable.label">Money owed to you (expected back)</label>
+        <input type="number" id="receivable" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+      </div>
+      <div>
         <label for="debts" data-i18n="tool.debts.label">Debts due now</label>
         <input type="number" id="debts" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1000">
       </div>
     </div>
+    <p class="subtle" data-i18n="tool.receivable.hint" style="margin-top:6px;">Only loans and invoices you genuinely expect to be repaid. Leave bad debt out until the money actually arrives.</p>
 
     <p class="ghead" data-i18n="tool.h.prices">Metal prices today</p>
     <div class="field-row">
@@ -264,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <details><summary data-i18n="faq.q1">Should I use the gold nisab or the silver nisab?</summary><p data-i18n="faq.a1">Most zakat councils and the Hanafi school use silver, because 595 g of silver is worth far less than 85 g of gold, so more people owe zakat and more of the poor receive it. Some scholars prefer gold, arguing silver has lost the purchasing power it had in the Prophet's time. This tool shows both values and applies the lower one, which is the cautious position.</p></details>
     <details><summary data-i18n="faq.q2">What is hawl — does my money have to sit for a year?</summary><p data-i18n="faq.a2">Hawl is one lunar year, about 354 days, of continuous ownership. Your zakatable wealth must be above the nisab at the start and at the end of that year; dips in between do not reset the clock. Pick an anniversary date, such as 1 Ramadan, and pay on it every year. Assets picked up mid-year fall under the same anniversary rather than each starting a clock of its own.</p></details>
     <details><summary data-i18n="faq.q3">Do I pay zakat on a 401(k), IRA or workplace pension?</summary><p data-i18n="faq.a3">Scholars differ here. The most common view is that you owe zakat on what you could actually access today — the vested balance minus early-withdrawal penalty and tax — because wealth you cannot reach is not fully in your possession. Others say pay on the full balance each year, and a minority defer until withdrawal. Enter whichever figure your own scholar supports in the investments field.</p></details>
-    <details><summary data-i18n="faq.q4">What about money people owe me, and money I owe?</summary><p data-i18n="faq.a4">A debt you expect back — a loan to a reliable friend, an invoice a solid client will settle — counts as your wealth, so add it to cash. A debt unlikely to be repaid is left out until it actually arrives. On the other side, subtract only what is due now: this month's rent, an overdue bill, the current instalment of a mortgage, not the whole outstanding balance of a 25-year loan.</p></details>
+    <details><summary data-i18n="faq.q4">What about money people owe me, and money I owe?</summary><p data-i18n="faq.a4">A debt you expect back — a loan to a reliable friend, an invoice a solid client will settle — counts as your wealth, so enter it in the money-owed-to-you field. A debt unlikely to be repaid is left out until it actually arrives. On the other side, subtract only what is due now: this month's rent, an overdue bill, the current instalment of a mortgage, not the whole outstanding balance of a 25-year loan.</p></details>
     <!-- FAQ:END -->
   </section>
 </main>

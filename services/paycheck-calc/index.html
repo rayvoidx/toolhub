@@ -68,6 +68,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Paycheck Calculator",
+      "item": "https://tool-hub.me/paycheck-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
@@ -101,26 +121,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "@type": "Answer",
         "text": "No — it is only withheld at a higher rate. Employers commonly withhold supplemental wages at a flat 22% federal rate, which looks brutal on the stub if your normal bracket is 12%. Your actual tax owed is calculated on total annual income at filing time, so any over-withholding comes back as a refund."
       }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Paycheck Calculator",
-      "item": "https://tool-hub.me/paycheck-calc/"
     }
   ]
 }
@@ -200,6 +200,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="subtle" data-i18n="tool.k401.hint">Traditional pre-tax 401(k). Enter 0 if you don't contribute.</p>
     <p class="subtle" data-i18n="tool.state.hint">Varies 0–13% by state — enter yours, or 0 for no-income-tax states like Texas and Florida.</p>
 
+    <label for="pretax" data-i18n="tool.pretax.label">Other pre-tax deductions, per month</label>
+    <input type="number" id="pretax" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+    <p class="subtle" data-i18n="tool.pretax.hint">Health, dental and vision premiums, HSA or commuter benefits taken out before tax. Leave 0 if you have none.</p>
+
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
 
     <div id="result" hidden>
@@ -214,10 +218,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.fica">FICA — Social Security + Medicare, per year</div><div class="rc-val" id="r-fica">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.state">State income tax, per year</div><div class="rc-val" id="r-state">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.401k">401(k) contributions, per year</div><div class="rc-val" id="r-401k">—</div></div>
+        <div class="rcard" id="card-pretax" hidden><div class="rc-label" data-i18n="tool.r.pretax">Other pre-tax deductions, per year</div><div class="rc-val" id="r-pretax">—</div></div>
       </div>
     </div>
     <p class="err" id="err" hidden></p>
-    <p class="subtle" data-i18n="tool.note.assume" style="margin-top:12px;">2025 federal tax year. Standard deduction only — no tax credits, local or city taxes, or pre-tax health premiums.</p>
+    <p class="subtle" data-i18n="tool.note.assume" style="margin-top:12px;">2025 federal tax year. Standard deduction only — no tax credits, and no local or city taxes.</p>
+    <p class="subtle" data-i18n="tool.note.fica">Other pre-tax deductions are subtracted from federal and state taxable income only. Many Section 125 plans also lower FICA wages, so your real Social Security and Medicare tax may be a little lower than shown.</p>
   </section>
   <!-- TOOL:END -->
 
@@ -283,7 +289,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   ,065.60 weekly across 52 checks, $2,131.19 biweekly across 26, $2,308.79 semi-monthly across 24, and $4,617.58 monthly across 12. Biweekly and semi-monthly sound identical and are not: biweekly gives you 26 payments, so twice a year you receive three checks in a calendar month. Budgeting on a "two checks a month" assumption quietly leaves those two extra checks as a bonus — or, if you budget on 26 and get 24, a shortfall every month.</p>
 
     <h2>What this calculator leaves out</h2>
-    <p>Several real deductions are missing by design because they depend on your employer. Health, dental and vision premiums, HSA and FSA contributions, group life insurance, commuter benefits and union dues all come off a real stub. Most medical premiums are pre-tax, which lowers taxable income further; Roth 401(k) contributions are post-tax and do not lower it at all.</p>
+    <p>Employer-specific lines can't be guessed, so the tool asks instead: the optional "other pre-tax deductions" field takes your monthly total for health, dental and vision premiums, HSA or FSA money, and commuter benefits. It multiplies that by 12 and removes it from federal and state taxable income, exactly like the 401(k). One honest caveat: most of those benefits run through a Section 125 cafeteria plan, which also exempts them from Social Security and Medicare — this tool leaves FICA on full gross wages, so it slightly overstates FICA if your plan qualifies. Group life insurance above $50,000 and union dues are usually post-tax and don't belong in that box, and Roth 401(k) contributions never lower taxable income.</p>
     <p>On the tax side, this model applies only the standard deduction. If you itemize, claim the Child Tax Credit, have dependents, work multiple jobs, or file as head of household, your real liability will differ. Local income taxes — New York City, Philadelphia, much of Ohio — are not included, and some states use progressive brackets rather than the flat rate entered here. Married filers should also note that employer withholding of the 0.9% additional Medicare tax starts at $200,000 of wages per employer regardless of filing status, which is what this tool models.</p>
     <p>Finally, this is annual tax liability spread evenly across paychecks, not an exact replica of IRS withholding tables and Form W-4 settings. Real withholding is an estimate your employer makes on the IRS's behalf, which is precisely why refunds and balances due exist. Use this to sanity-check an offer, compare states, or see what raising your 401(k) percentage really costs — then check the actual stub when it arrives.</p>
   </section>

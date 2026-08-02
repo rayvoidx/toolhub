@@ -238,6 +238,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="perbox" data-i18n="tool.perbox.label">Tiles per box (optional)</label>
         <input type="number" id="perbox" inputmode="numeric" min="1" step="1" autocomplete="off" placeholder="8">
       </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Price per box (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="45">
+      </div>
     </div>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
@@ -250,6 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.boxes">Boxes to buy</div><div class="rc-val" id="r-boxes">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Area covered (waste included)</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard" id="r-cost-card" hidden><div class="rc-label" data-i18n="tool.r.cost">Estimated cost</div><div class="rc-val" id="r-cost">—</div></div>
       </div>
     </div>
     <p class="err" id="err" hidden></p>

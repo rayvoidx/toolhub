@@ -89,9 +89,9 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var salary = $("salary"), freq = $("freq"), filing = $("filing"), k401 = $("k401"), stateEl = $("state");
+  var salary = $("salary"), freq = $("freq"), filing = $("filing"), k401 = $("k401"), stateEl = $("state"), pretaxEl = $("pretax");
   var result = $("result"), errEl = $("err");
-  if (!salary || !freq || !filing || !k401 || !stateEl) return;
+  if (!salary || !freq || !filing || !k401 || !stateEl || !pretaxEl) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var num = function (el, dflt) {
@@ -144,12 +144,17 @@
     var periods = parseFloat(freq.value) || 26;
 
     var contrib = gross * pct401 / 100;
-    var taxable = Math.max(0, gross - contrib - STD_DEDUCTION[status]);
+    // 기타 세전 공제는 월 단위 입력 → 연 환산. 연방·주 과세소득만 줄이고 FICA 임금은 그대로.
+    var preMonthly = num(pretaxEl, 0);
+    var preAnnual = preMonthly * 12;
+    if (isNaN(preAnnual) || preAnnual < 0 || contrib + preAnnual > gross) return fail("tool.err.pretax");
+
+    var taxable = Math.max(0, gross - contrib - preAnnual - STD_DEDUCTION[status]);
     var fed = federalTax(taxable, status);
     var fica = ficaTax(gross);
     var st = taxable * pctState / 100;
     var totalTax = fed + fica + st;
-    var netAnnual = gross - totalTax - contrib;
+    var netAnnual = gross - totalTax - contrib - preAnnual;
 
     $("r-net").textContent = money(netAnnual / periods, 2);
     $("r-annual").textContent = money(netAnnual, 0);
@@ -158,13 +163,15 @@
     $("r-fica").textContent = money(fica, 0);
     $("r-state").textContent = money(st, 0);
     $("r-401k").textContent = money(contrib, 0);
+    $("r-pretax").textContent = money(preAnnual, 0);
+    $("card-pretax").hidden = !(preAnnual > 0);
 
     errEl.hidden = true;
     result.hidden = false;
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [salary, k401, stateEl].forEach(function (el) {
+  [salary, k401, stateEl, pretaxEl].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   [freq, filing].forEach(function (el) {

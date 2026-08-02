@@ -91,7 +91,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var unitEl = $("unit"), coatsEl = $("coats");
   var lenEl = $("room-length"), widEl = $("room-width"), hgtEl = $("wall-height");
-  var doorsEl = $("doors"), winsEl = $("windows"), ceilEl = $("ceiling");
+  var doorsEl = $("doors"), winsEl = $("windows"), ceilEl = $("ceiling"), covEl = $("coverage");
   var result = $("result"), errEl = $("err");
   if (!unitEl || !lenEl || !widEl || !hgtEl) return;
 
@@ -99,6 +99,7 @@
 
   var SQFT_PER_M2 = 10.76391, L_PER_GAL = 3.785412;
   var COVER = 350;              // 1갤런 1회 도장 — 이미 도장된 매끈한 면 기준(라벨의 400은 이상 조건)
+  var COVER_MIN = 150, COVER_MAX = 600;
   var DOOR = 21, WINDOW = 15;   // 표준 개구부 면적 ft² (문 3×7, 창 3×5)
   var MAX_DIM = { ft: 330, m: 100 };
 
@@ -130,6 +131,13 @@
     if (doors < 0 || wins < 0) return fail("tool.err.count");
     doors = Math.round(doors); wins = Math.round(wins);
 
+    // 커버리지 직접 입력(ft²/gal) — 비우면 기본 350. 캔 라벨 값이 다르면 여기서 덮어쓴다.
+    var cover = COVER;
+    if (covEl && String(covEl.value).trim() !== "") {
+      cover = num(covEl);
+      if (!isFinite(cover) || cover < COVER_MIN || cover > COVER_MAX) return fail("tool.err.coverage");
+    }
+
     // 커버리지·개구부 상수가 전부 ft² 기준이라 내부 계산은 ft² 하나로 통일한다.
     var k = metric ? SQFT_PER_M2 : 1;
     var wall = 2 * (l + w) * h * k;
@@ -139,7 +147,7 @@
     var area = wall - openings + (ceilEl && ceilEl.checked ? l * w * k : 0);
     var coats = parseInt(coatsEl.value, 10) || 1;
     var total = area * coats;
-    var gal = total / COVER;
+    var gal = total / cover;
     var areaUnit = metric ? t("tool.u.sqm") : t("tool.u.sqft");
 
     $("r-gallons").textContent = gal.toFixed(1) + " " + t("tool.u.gal");
@@ -153,7 +161,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [lenEl, widEl, hgtEl, doorsEl, winsEl].forEach(function (el) {
+  [lenEl, widEl, hgtEl, doorsEl, winsEl, covEl].forEach(function (el) {
     if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   [unitEl, coatsEl, ceilEl].forEach(function (el) {

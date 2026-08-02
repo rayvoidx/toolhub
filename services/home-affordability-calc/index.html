@@ -68,6 +68,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Home Affordability Calculator",
+      "item": "https://tool-hub.me/home-affordability-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
@@ -101,26 +121,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         "@type": "Answer",
         "text": "More than almost any other input. On a $95,000 income with $500 of debts, a move from 6.5% to 7.5% drops the maximum price from about $319,500 to $292,700 — roughly $27,000 of buying power for one percentage point. Rerun the numbers whenever your rate lock changes."
       }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Home Affordability Calculator",
-      "item": "https://tool-hub.me/home-affordability-calc/"
     }
   ]
 }
@@ -201,6 +201,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
+    <div class="field-row">
+      <div>
+        <label for="hoa" data-i18n="tool.hoa.label">HOA / condo fees (monthly)</label>
+        <input type="text" id="hoa" inputmode="decimal" autocomplete="off" placeholder="0">
+      </div>
+      <div></div>
+    </div>
+
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
 
     <div id="result" hidden>
@@ -222,7 +230,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="guide-content">
     <h2>How much house you can afford, in one rule</h2>
     <p>Almost every US mortgage conversation still starts at the same place: the 28/36 rule. Your housing payment — principal, interest, property taxes and homeowners insurance, the four items lenders call PITI — should stay under 28% of gross monthly income. All of your debt payments together, housing plus car loans, student loans, credit card minimums and child support, should stay under 36%. UK lenders phrase it differently, as an income multiple around 4.5 times salary plus an affordability stress test, but the arithmetic lands in a similar place.</p>
-    <p>The calculator above applies both ceilings and keeps the lower one, then works backwards. It strips out your tax and insurance estimate to find how much is left for principal and interest, converts that payment into a loan balance, and adds your down payment to get a purchase price.</p>
+    <p>The calculator above applies both ceilings and keeps the lower one, then works backwards. It strips out your tax and insurance estimate, plus any HOA or condo fee, to find how much is left for principal and interest, converts that payment into a loan balance, and adds your down payment to get a purchase price.</p>
 
     <h3>Worked example: $95,000 income</h3>
     <p>Take a household earning $95,000 a year with $500 a month of car and student loan payments, $40,000 saved, a 6.5% rate on a 30-year loan, and $450 a month for taxes and insurance.</p>
@@ -264,7 +272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   00,000 of interest. Neither is right or wrong; they are different trades between price today and cost over time.</p>
 
     <h2>Where this estimate stops</h2>
-    <p>It is a budget ceiling, not a pre-approval. Lenders also price your credit score, verify two years of income history, require cash reserves after closing, and count HOA or condo fees inside the housing ratio — a $350 HOA fee lowers the maximum price by around $55,000. Property tax rates vary from under 0.5% of value in Hawaii to over 2% in New Jersey, so the escrow figure deserves a real quote for the area you are shopping in rather than a round guess. Closing costs of 2% to 5% come out of the same savings as the down payment. Run the number, then run it again with the actual tax bill of a specific listing before you make an offer.</p>
+    <p>It is a budget ceiling, not a pre-approval. Lenders also price your credit score, verify two years of income history, and require cash reserves after closing. HOA and condo fees count inside the housing ratio exactly the way the field above treats them — a $350 monthly HOA fee lowers the maximum price by around $55,000, so use the real figure from the listing rather than leaving the field at zero. Property tax rates vary from under 0.5% of value in Hawaii to over 2% in New Jersey, so the escrow figure deserves a real quote for the area you are shopping in rather than a round guess. Closing costs of 2% to 5% come out of the same savings as the down payment. Run the number, then run it again with the actual tax bill of a specific listing before you make an offer.</p>
   </section>
 
   <section class="ad-slot" id="ad-slot" hidden>

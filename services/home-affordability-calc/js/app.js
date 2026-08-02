@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var income = $("income"), debts = $("debts"), down = $("down");
-  var rate = $("rate"), term = $("term"), taxins = $("taxins");
+  var rate = $("rate"), term = $("term"), taxins = $("taxins"), hoa = $("hoa");
   var result = $("result"), errEl = $("err");
   if (!income || !rate || !term) return;
 
@@ -113,21 +113,22 @@
     if (inc <= 0) return fail("tool.err.income");
     if (r < 0 || r > 25) return fail("tool.err.rate");
 
-    var d = or0(debts), dp = or0(down), ti = or0(taxins);
-    if (d < 0 || dp < 0 || ti < 0) return fail("tool.err.negative");
+    var d = or0(debts), dp = or0(down), ti = or0(taxins), hf = or0(hoa);
+    if (d < 0 || dp < 0 || ti < 0 || hf < 0) return fail("tool.err.negative");
 
     var mi = inc / 12;
     // 28/36 규칙: 주거비는 총소득의 28%, 기존 부채를 포함한 총부채는 36% 이내. 둘 중 낮은 쪽이 한도.
+    // 관리비(HOA)는 세금·보험과 함께 주거비 한도에서 먼저 빠진다 — 심사도 PITI+HOA 로 본다.
     var housing = Math.min(0.28 * mi, 0.36 * mi - d);
-    var pi = housing - ti;
-    if (pi <= 0) return fail("tool.err.debt");
+    var pi = housing - ti - hf;
+    if (pi <= 0) return fail(hf > 0 ? "tool.err.hoa" : "tool.err.debt");
 
     var mr = r / 100 / 12;
     var n = parseInt(term.value, 10) || 360;
     var principal = loanFor(pi, mr, n);
 
     // 보수적 기준: 대출 심사가 아니라 생활 여유 기준인 25% 선. 36% 한도는 여전히 적용된다.
-    var pi25 = Math.min(0.25 * mi, 0.36 * mi - d) - ti;
+    var pi25 = Math.min(0.25 * mi, 0.36 * mi - d) - ti - hf;
     var comfort = pi25 > 0 ? loanFor(pi25, mr, n) + dp : dp;
 
     $("r-price").textContent = money0(principal + dp);
@@ -140,7 +141,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [income, debts, down, rate, taxins].forEach(function (el) {
+  [income, debts, down, rate, taxins, hoa].forEach(function (el) {
     if (!el) return;
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
