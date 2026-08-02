@@ -193,7 +193,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option value="2600" data-i18n="tool.type.pea">Pea gravel — 2,600 lb/yd³</option>
       <option value="2700" data-i18n="tool.type.river">River rock — 2,700 lb/yd³</option>
       <option value="3000" data-i18n="tool.type.dg">Decomposed granite — 3,000 lb/yd³</option>
+      <option value="custom" data-i18n="tool.type.custom">Custom density (enter your own)</option>
     </select>
+
+    <div id="density-row" hidden>
+      <label for="density" data-i18n="tool.density.label">Custom density (lb/yd³)</label>
+      <input type="number" id="density" inputmode="decimal" min="1500" max="4500" step="any" autocomplete="off" placeholder="2800">
+    </div>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate gravel</button>
 

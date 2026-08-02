@@ -553,6 +553,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "Wheelchair Ramp Calculator",
     "tool.self-employment-tax-calc.name": "Self-Employment Tax Calculator",
     "tool.wavelength-calc.name": "Wavelength Calculator",
+      "cat.science": "Math & Science",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -1095,6 +1096,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "轮椅坡道计算器",
     "tool.self-employment-tax-calc.name": "自雇税计算器",
     "tool.wavelength-calc.name": "波长计算器",
+      "cat.science": "数学与科学",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -1637,6 +1639,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "व्हीलचेयर रैंप कैलकुलेटर",
     "tool.self-employment-tax-calc.name": "सेल्फ-एम्प्लॉयमेंट टैक्स कैलकुलेटर",
     "tool.wavelength-calc.name": "वेवलेंथ कैलकुलेटर",
+      "cat.science": "गणित और विज्ञान",
   },
 
   /* ---------------- Español ---------------- */
@@ -2179,6 +2182,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "Calculadora de rampa para silla de ruedas (A",
     "tool.self-employment-tax-calc.name": "Calculadora de impuesto por trabajo autónomo",
     "tool.wavelength-calc.name": "Calculadora de longitud de onda y frecuencia",
+      "cat.science": "Matemáticas y ciencia",
   },
 
   /* ---------------- العربية ---------------- */
@@ -2721,6 +2725,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "حاسبة منحدر الكرسي المتحرك",
     "tool.self-employment-tax-calc.name": "حاسبة ضريبة العمل الحر",
     "tool.wavelength-calc.name": "حاسبة الطول الموجي",
+      "cat.science": "الرياضيات والعلوم",
   },
 
   /* ---------------- Français ---------------- */
@@ -3263,6 +3268,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "Calculateur de rampe d'accès PMR",
     "tool.self-employment-tax-calc.name": "Calculateur de self-employment tax",
     "tool.wavelength-calc.name": "Calculateur de longueur d'onde et de fréquen",
+      "cat.science": "Maths et sciences",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -3805,6 +3811,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "হুইলচেয়ার র‌্যাম্প ক্যালকুলেটর",
     "tool.self-employment-tax-calc.name": "সেলফ-এমপ্লয়মেন্ট ট্যাক্স ক্যালকুলেটর",
     "tool.wavelength-calc.name": "তরঙ্গদৈর্ঘ্য ক্যালকুলেটর",
+      "cat.science": "গণিত ও বিজ্ঞান",
   },
 
   /* ---------------- Português ---------------- */
@@ -4347,6 +4354,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "Calculadora de rampa para cadeira de rodas (",
     "tool.self-employment-tax-calc.name": "Calculadora de self-employment tax",
     "tool.wavelength-calc.name": "Calculadora de comprimento de onda e frequên",
+      "cat.science": "Matemática e ciência",
   },
 
   /* ---------------- Русский ---------------- */
@@ -4889,6 +4897,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "Калькулятор пандуса для коляски",
     "tool.self-employment-tax-calc.name": "Калькулятор налога на самозанятость (SE tax)",
     "tool.wavelength-calc.name": "Калькулятор длины волны и частоты",
+      "cat.science": "Математика и наука",
   },
 
   /* ---------------- اردو ---------------- */
@@ -5431,6 +5440,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "وہیل چیئر ریمپ کیلکولیٹر",
     "tool.self-employment-tax-calc.name": "سیلف ایمپلائمنٹ ٹیکس کیلکولیٹر",
     "tool.wavelength-calc.name": "ویو لینتھ کیلکولیٹر",
+      "cat.science": "ریاضی اور سائنس",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -5973,6 +5983,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "Kalkulator Ramp Kursi Roda",
     "tool.self-employment-tax-calc.name": "Kalkulator Pajak Wiraswasta AS",
     "tool.wavelength-calc.name": "Kalkulator Panjang Gelombang dan Frekuensi",
+      "cat.science": "Matematika & Sains",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -6515,6 +6526,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "Rollstuhlrampen-Rechner",
     "tool.self-employment-tax-calc.name": "Self-Employment-Tax-Rechner",
     "tool.wavelength-calc.name": "Wellenlängen-Rechner",
+      "cat.science": "Mathe & Wissenschaft",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -7057,6 +7069,7 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "車いすスロープ計算",
     "tool.self-employment-tax-calc.name": "自営業税（SEタックス）計算ツール",
     "tool.wavelength-calc.name": "波長計算ツール",
+      "cat.science": "数学・理科",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -7599,5 +7612,6 @@ window.I18N_LOCALES = {
     "tool.ramp-calc.name": "휠체어 경사로 계산기",
     "tool.self-employment-tax-calc.name": "자영업세(SE tax) 계산기",
     "tool.wavelength-calc.name": "파장 계산기",
+      "cat.science": "수학·과학",
   }
 };

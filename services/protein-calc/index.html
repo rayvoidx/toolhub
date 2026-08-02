@@ -193,9 +193,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <label for="meals" data-i18n="tool.meals.label">Meals per day</label>
     <select id="meals">
-      <option value="3" data-i18n="tool.meals.3">3 meals</option>
+      <option value="1" data-i18n="tool.meals.1">1 meal (OMAD)</option>
+      <option value="2" data-i18n="tool.meals.2">2 meals</option>
+      <option value="3" data-i18n="tool.meals.3" selected>3 meals</option>
       <option value="4" data-i18n="tool.meals.4">4 meals</option>
       <option value="5" data-i18n="tool.meals.5">5 meals</option>
+      <option value="6" data-i18n="tool.meals.6">6 meals</option>
     </select>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate protein</button>
@@ -211,6 +214,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.food">Roughly equals</div><div class="rc-val" id="r-food">—</div></div>
       </div>
       <p class="subtle" id="r-note" style="margin-top:10px;"></p>
+      <p class="subtle" id="r-omad" style="margin-top:6px;" hidden></p>
     </div>
     <p class="err" id="err" hidden></p>
     <p class="subtle" data-i18n="tool.note.disc" style="margin-top:12px;">General guidance for healthy adults. With kidney or liver disease, or in pregnancy, ask your doctor or a dietitian first.</p>

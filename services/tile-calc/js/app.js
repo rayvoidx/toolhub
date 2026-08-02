@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var unit = $("unit"), mode = $("mode"), tilesize = $("tilesize"), waste = $("waste"), perbox = $("perbox");
+  var unit = $("unit"), mode = $("mode"), tilesize = $("tilesize"), waste = $("waste"), perbox = $("perbox"), price = $("price");
   var result = $("result"), errEl = $("err");
   if (!unit || !mode || !tilesize || !waste) return;
 
@@ -143,12 +143,31 @@
     var tiles = Math.max(1, Math.ceil(sqWithWaste / tileArea));
 
     var boxRaw = perbox ? String(perbox.value).trim() : "";
+    var boxes = null;
     if (boxRaw === "") {
       $("r-boxes").textContent = t("tool.r.boxesnone");
     } else {
       var per = Math.floor(num("perbox"));
       if (!(per >= 1)) return fail("tool.err.box");
-      $("r-boxes").textContent = String(Math.ceil(tiles / per));
+      boxes = Math.ceil(tiles / per);
+      $("r-boxes").textContent = String(boxes);
+    }
+
+    // 비용은 박스 단위로만 의미가 있다 — 박스당 장수가 없으면 박스 수를 모르므로 카드를 숨긴다.
+    var priceRaw = price ? String(price.value).trim() : "";
+    var costCard = $("r-cost-card");
+    if (priceRaw === "") {
+      costCard.hidden = true;
+    } else {
+      var pp = num("price");
+      if (!(pp > 0)) return fail("tool.err.positive");
+      if (pp > 1e9) return fail("tool.err.range");
+      if (boxes === null) {
+        costCard.hidden = true;
+      } else {
+        costCard.hidden = false;
+        $("r-cost").textContent = (boxes * pp).toFixed(2);
+      }
     }
 
     $("r-tiles").textContent = String(tiles);
@@ -168,12 +187,12 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  ["len", "wid", "area", "tilew", "tileh", "perbox"].forEach(function (id) {
+  ["len", "wid", "area", "tilew", "tileh", "perbox", "price"].forEach(function (id) {
     var el = $(id);
     if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   [unit, mode, tilesize].forEach(function (el) { el.addEventListener("change", sync); });
-  [waste, perbox].forEach(function (el) {
+  [waste, perbox, price].forEach(function (el) {
     if (el) el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", sync);

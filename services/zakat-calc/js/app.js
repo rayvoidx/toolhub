@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var IDS = ["cash", "gold", "silver", "invest", "inventory", "debts", "goldp", "silverp"];
+  var IDS = ["cash", "gold", "silver", "invest", "inventory", "receivable", "debts", "goldp", "silverp"];
   var els = {}, i;
   for (i = 0; i < IDS.length; i++) {
     els[IDS[i]] = $(IDS[i]);
@@ -124,7 +124,7 @@
       if (v[IDS[k]] < 0) return fail("tool.err.negative");
     }
 
-    var assets = ["cash", "gold", "silver", "invest", "inventory"];
+    var assets = ["cash", "gold", "silver", "invest", "inventory", "receivable"];
     var anyAsset = false;
     for (k = 0; k < assets.length; k++) if (filled(els[assets[k]]) && v[assets[k]] > 0) anyAsset = true;
     if (!anyAsset) return fail("tool.err.empty");
@@ -134,7 +134,8 @@
     if (v.silver > 0 && !(v.silverp > 0)) return fail("tool.err.metalprice");
     if (!(v.goldp > 0) && !(v.silverp > 0)) return fail("tool.err.metalprice");
 
-    var zakatable = v.cash + v.gold * v.goldp + v.silver * v.silverp + v.invest + v.inventory - v.debts;
+    // 회수 예상 채권(receivable)은 내 재산이므로 더한다 — FAQ4 의 다수설.
+    var zakatable = v.cash + v.gold * v.goldp + v.silver * v.silverp + v.invest + v.inventory + v.receivable - v.debts;
 
     var goldNisab = v.goldp > 0 ? GOLD_NISAB_G * v.goldp : null;
     var silverNisab = v.silverp > 0 ? SILVER_NISAB_G * v.silverp : null;

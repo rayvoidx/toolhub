@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var income = $("income"), period = $("period"), debts = $("debts"), people = $("people");
+  var income = $("income"), period = $("period"), debts = $("debts"), people = $("people"), utils = $("utils");
   var result = $("result"), errEl = $("err");
   if (!income || !period || !people) return;
 
@@ -113,6 +113,10 @@
     if (isNaN(p) || p < 1) return fail("tool.err.people");
     p = Math.floor(p);
 
+    // 공과금은 선택 입력 — 비우면 0, 글자가 들어있는데 못 읽으면 조용히 넘기지 않는다.
+    var u = utils && !blank(utils) ? num(utils) : 0;
+    if (isNaN(u) || u < 0) return fail("tool.err.utils");
+
     var monthly = period.value === "month" ? inc : inc / 12;
     var annual = monthly * 12;
 
@@ -131,6 +135,21 @@
     $("r-left").textContent = money(left);
     $("r-split").textContent = money(rent * p);
 
+    // 예산 자체는 그대로 두고, 공과금을 뺀 "월세로 쓸 수 있는 몫"만 따로 보여준다.
+    // 공과금이 예산 이상이면 음수 대신 대시 + 경고 문구.
+    var netCell = function (id, base) {
+      var v = base - u;
+      var ok = v >= 1;
+      $(id).textContent = ok ? money(v) : "—";
+      return ok;
+    };
+    var showU = u > 0;
+    var netOk = netCell("r-rentnet", rent) && netCell("r-consnet", cons);
+    $("card-rentnet").hidden = !showU;
+    $("card-consnet").hidden = !showU;
+    $("note-utils").hidden = !showU;
+    $("warn-utils").hidden = !(showU && !netOk);
+
     $("card-split").hidden = p <= 1;
     $("note-split").hidden = p <= 1;
     $("note-debtcut").hidden = !(monthly * 0.30 > cap);
@@ -141,7 +160,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [income, debts, people].forEach(function (el) {
+  [income, debts, people, utils].forEach(function (el) {
     if (!el) return;
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });

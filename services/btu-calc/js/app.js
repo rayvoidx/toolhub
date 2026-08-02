@@ -89,9 +89,9 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var unit = $("unit"), sun = $("sun"), occ = $("occ"), kitchen = $("kitchen");
+  var unit = $("unit"), sun = $("sun"), climate = $("climate"), occ = $("occ"), kitchen = $("kitchen");
   var result = $("result"), errEl = $("err");
-  if (!unit || !sun || !occ || !kitchen) return;
+  if (!unit || !sun || !climate || !occ || !kitchen) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var num = function (id) { var v = parseFloat(String($(id).value).replace(/,/g, "")); return isFinite(v) ? v : NaN; };
@@ -119,6 +119,10 @@
     var btu = areaFt * 20 * (hFt / 8) * (parseFloat(sun.value) || 1);
     btu += Math.max(0, people - 2) * 600;
     if (kitchen.checked) btu += 4000;
+    // 기후 보정은 모든 가산이 끝난 뒤 전체에 곱한다 — 500 BTU 반올림 직전.
+    var cf = parseFloat(climate.value);
+    if (!isFinite(cf) || cf <= 0) cf = 1;
+    btu *= cf;
     var rec = Math.round(btu / 500) * 500;
 
     var sysKey = rec < 10000 ? "tool.sys.window" : (rec <= 24000 ? "tool.sys.mini" : "tool.sys.central");
@@ -129,7 +133,9 @@
     $("r-tons").textContent = (rec / 12000).toFixed(2);
     $("r-area").textContent = Math.round(areaFt) + " sq ft / " + (Math.round(areaFt * 0.09290304 * 10) / 10) + " m²";
     $("r-system").textContent = t(sysKey);
-    $("r-note").textContent = t(noteKey);
+    var note = t(noteKey);
+    if (cf !== 1) note += " " + t("tool.climate.note").replace("{pct}", "+" + Math.round((cf - 1) * 100) + "%");
+    $("r-note").textContent = note;
 
     errEl.hidden = true;
     result.hidden = false;
@@ -145,7 +151,7 @@
 
   $("calc-btn").addEventListener("click", calc);
   unit.addEventListener("change", syncUnit);
-  [sun, kitchen].forEach(function (el) {
+  [sun, climate, kitchen].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   ["len", "wid", "height", "occ"].forEach(function (id) {

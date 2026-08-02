@@ -78,6 +78,8 @@ window.I18N_LOCALES = {
     "faq.a3": "Exactly one, because a 12 by 12 inch tile is one square foot. A 100 sq ft floor therefore needs 100 tiles plus waste, or 110 at the standard 10 percent allowance. Other common sizes: 12 x 24 is half a tile per square foot, 24 x 24 is a quarter, 18 x 18 is about 0.44, and 3 x 6 subway tile is eight per square foot.",
     "faq.q4": "Should I buy full boxes or loose tiles?",
     "faq.a4": "Most tile is sold by the box, and the box count is what actually sets your spend — which is why this calculator rounds up to whole boxes once you enter tiles per box. Buy the full quantity in a single order so the dye lot matches, and check the return window before you open every carton: many retailers take unopened boxes back but not partial ones.",
+      "tool.price.label": "Price per box (optional)",
+    "tool.r.cost": "Estimated cost",
   },
   zh: {
     "_label": "中文",
@@ -140,6 +142,8 @@ window.I18N_LOCALES = {
     "faq.a3": "正好一块，因为12×12英寸就是1平方英尺。所以100平方英尺的地面需要100块砖，再按10%损耗计就是110块。其他常见规格：12×24每平方英尺0.5块，24×24是0.25块，18×18约0.44块，3×6地铁砖是8块。",
     "faq.q4": "该按箱买还是散买？",
     "faq.a4": "多数瓷砖只按箱出售，真正决定花费的也是箱数，所以填入每箱片数后本工具会按整箱向上取整。为了色号一致，请一次下单买齐；拆箱前先确认退货期限——很多商家只接受未拆封整箱退货，拆开的不收。",
+      "tool.price.label": "每箱价格（可选）",
+    "tool.r.cost": "预计花费",
   },
   hi: {
     "_label": "हिन्दी",
@@ -202,6 +206,8 @@ window.I18N_LOCALES = {
     "faq.a3": "ग्यारह, क्योंकि एक टाइल 0.09 वर्ग मीटर ढकती है और 1 ÷ 0.09 = 11.1 होता है। इंच में 12 × 12 की टाइल ठीक एक वर्ग फुट होती है, यानी प्रति वर्ग फुट एक। अन्य आकार प्रति वर्ग मीटर: 30 × 60 सेमी लगभग 6, 60 × 60 सेमी लगभग 2.8 और 7.5 × 15 सेमी सबवे लगभग 89।",
     "faq.q4": "पूरा बॉक्स लें या खुली टाइलें?",
     "faq.a4": "ज़्यादातर टाइलें बॉक्स में ही बिकती हैं और असली खर्च बॉक्स की संख्या से तय होता है — इसीलिए प्रति बॉक्स संख्या भरते ही यह कैलकुलेटर पूरे बॉक्स तक ऊपर गिनता है। एक ही ऑर्डर में पूरी मात्रा लें ताकि रंग का बैच मिलता रहे, और सब बॉक्स खोलने से पहले वापसी की अवधि देख लें: कई दुकानें बंद बॉक्स लौटा लेती हैं, खुले नहीं।",
+      "tool.price.label": "प्रति बॉक्स कीमत (वैकल्पिक)",
+    "tool.r.cost": "अनुमानित लागत",
   },
   es: {
     "_label": "Español",
@@ -264,6 +270,8 @@ window.I18N_LOCALES = {
     "faq.a3": "Exactamente una, porque una pieza de 12 por 12 pulgadas es un pie cuadrado. Un suelo de 100 pies cuadrados necesita 100 piezas más el margen: 110 con el 10% habitual. Otros formatos: 12 × 24 es media pieza por pie cuadrado, 24 × 24 es un cuarto, 18 × 18 ronda 0,44 y el metro de 3 × 6 son ocho por pie cuadrado.",
     "faq.q4": "¿Conviene comprar cajas completas o piezas sueltas?",
     "faq.a4": "Casi todo el material se vende por caja, y son las cajas las que determinan el gasto real; por eso esta calculadora redondea a cajas enteras cuando indicas las piezas que trae cada una. Haz un único pedido para que el lote de tono coincida y consulta el plazo de devolución antes de abrirlas todas: muchas tiendas admiten cajas cerradas pero no abiertas.",
+      "tool.price.label": "Precio por caja (opcional)",
+    "tool.r.cost": "Coste estimado",
   },
   ar: {
     "_label": "العربية",
@@ -326,6 +334,8 @@ window.I18N_LOCALES = {
     "faq.a3": "إحدى عشرة بلاطة، لأن البلاطة تغطي 0.09 متر مربع و1 ÷ 0.09 = 11.1. وبالنظام البوصي فإن بلاطة 12 × 12 بوصة تساوي قدمًا مربعة واحدة بالضبط. مقاسات أخرى لكل متر مربع: 30 × 60 سم نحو 6 بلاطات، و60 × 60 سم نحو 2.8، وسبواي 7.5 × 15 سم نحو 89.",
     "faq.q4": "هل أشتري صناديق كاملة أم بلاطًا مفردًا؟",
     "faq.a4": "يُباع معظم البلاط بالصندوق، وعدد الصناديق هو ما يحدد التكلفة فعليًا، ولذلك تقرّب هذه الحاسبة إلى صندوق كامل بمجرد إدخال سعة الصندوق. اطلب الكمية كاملة دفعة واحدة ليتطابق لون الدفعة، وتحقق من مهلة الإرجاع قبل فتح كل الصناديق: كثير من المتاجر يقبل الصناديق المغلقة فقط.",
+      "tool.price.label": "سعر الصندوق (اختياري)",
+    "tool.r.cost": "التكلفة التقديرية",
   },
   fr: {
     "_label": "Français",
@@ -388,6 +398,8 @@ window.I18N_LOCALES = {
     "faq.a3": "Exactement un, puisqu'un carreau de 12 sur 12 pouces vaut un pied carré. Un sol de 100 pieds carrés demande donc 100 carreaux plus la marge, soit 110 avec les 10% habituels. Autres formats : le 12 × 24 compte pour un demi-carreau par pied carré, le 24 × 24 pour un quart, le 18 × 18 pour environ 0,44 et le métro 3 × 6 pour huit.",
     "faq.q4": "Faut-il acheter des boîtes entières ou des carreaux à l'unité ?",
     "faq.a4": "Le carrelage se vend presque toujours par boîte, et c'est le nombre de boîtes qui fixe le budget réel : c'est pourquoi cet outil arrondit à la boîte entière dès que vous saisissez le conditionnement. Passez une seule commande pour rester sur le même bain de teinte et vérifiez le délai de retour avant d'ouvrir toutes les boîtes, car beaucoup d'enseignes reprennent les boîtes scellées mais pas les boîtes entamées.",
+      "tool.price.label": "Prix par boîte (facultatif)",
+    "tool.r.cost": "Coût estimé",
   },
   bn: {
     "_label": "বাংলা",
@@ -450,6 +462,8 @@ window.I18N_LOCALES = {
     "faq.a3": "এগারোটি, কারণ একটি টাইল ০.০৯ বর্গমিটার ঢাকে এবং ১ ÷ ০.০৯ = ১১.১। ইঞ্চির হিসাবে ১২ × ১২ টাইল ঠিক এক বর্গফুট, অর্থাৎ প্রতি বর্গফুটে একটি। অন্য মাপ প্রতি বর্গমিটারে: ৩০ × ৬০ সেমি প্রায় ৬টি, ৬০ × ৬০ সেমি প্রায় ২.৮টি এবং ৭.৫ × ১৫ সেমি সাবওয়ে প্রায় ৮৯টি।",
     "faq.q4": "পুরো বাক্স কিনব না খুচরা টাইল?",
     "faq.a4": "বেশিরভাগ টাইল বাক্স হিসেবেই বিক্রি হয় এবং খরচ ঠিক করে বাক্সের সংখ্যাই — তাই প্রতি বাক্সের সংখ্যা দিলে এই ক্যালকুলেটর পূর্ণ বাক্সে গোল করে দেখায়। রঙের ব্যাচ মেলাতে পুরো পরিমাণ একবারেই অর্ডার করুন, আর সব বাক্স খোলার আগে ফেরতের সময়সীমা দেখে নিন: অনেক দোকান না-খোলা বাক্স ফেরত নেয়, খোলা বাক্স নয়।",
+      "tool.price.label": "প্রতি বাক্সের দাম (ঐচ্ছিক)",
+    "tool.r.cost": "আনুমানিক খরচ",
   },
   pt: {
     "_label": "Português",
@@ -512,6 +526,8 @@ window.I18N_LOCALES = {
     "faq.a3": "Exatamente uma, porque 12 por 12 polegadas é um pé quadrado. Um piso de 100 pés quadrados pede 100 peças mais a folga, ou 110 com os 10% habituais. Em metros: uma peça de 60 × 60 cm cobre 0,36 m², então cada metro quadrado leva cerca de 2,8 peças, e a de 30 × 30 cm leva 11.",
     "faq.q4": "Comprar caixas fechadas ou peças avulsas?",
     "faq.a4": "A maior parte do material é vendida por caixa, e é o número de caixas que define o gasto real — por isso esta calculadora arredonda para cima em caixas inteiras quando você informa quantas peças vêm em cada uma. Faça um pedido único para manter o mesmo lote de tonalidade e confira o prazo de troca antes de abrir tudo: muitas lojas aceitam caixas lacradas de volta, mas não as abertas.",
+      "tool.price.label": "Preço por caixa (opcional)",
+    "tool.r.cost": "Custo estimado",
   },
   ru: {
     "_label": "Русский",
@@ -574,6 +590,8 @@ window.I18N_LOCALES = {
     "faq.a3": "Одиннадцать: плитка 30 × 30 см закрывает 0,09 м², то есть 1 ÷ 0,09 = 11,1. В дюймовой системе плитка 12 × 12 равна ровно одному квадратному футу. Другие форматы на квадратный метр: 30 × 60 см — около 6 штук, 60 × 60 см — около 2,8, «кабанчик» 7,5 × 15 см — примерно 89.",
     "faq.q4": "Покупать коробками или поштучно?",
     "faq.a4": "Плитку почти всегда продают коробками, и именно число коробок определяет реальные расходы — поэтому калькулятор округляет вверх до целых коробок, как только вы укажете их вместимость. Заказывайте весь объём одним заказом, чтобы совпала партия, и уточните срок возврата до того, как вскроете все коробки: невскрытые магазины принимают, а начатые обычно нет.",
+      "tool.price.label": "Цена за коробку (необязательно)",
+    "tool.r.cost": "Ориентировочная стоимость",
   },
   ur: {
     "_label": "اردو",
@@ -636,6 +654,8 @@ window.I18N_LOCALES = {
     "faq.a3": "گیارہ، کیونکہ ایک ٹائل 0.09 مربع میٹر ڈھانپتی ہے اور 1 ÷ 0.09 = 11.1 بنتا ہے۔ انچ کے حساب سے 12 × 12 کی ٹائل بالکل ایک مربع فٹ ہوتی ہے، یعنی فی مربع فٹ ایک۔ دیگر سائز فی مربع میٹر: 30 × 60 تقریباً 6، 60 × 60 تقریباً 2.8 اور 7.5 × 15 سب وے تقریباً 89۔",
     "faq.q4": "پورا ڈبہ لیں یا کھلی ٹائلیں؟",
     "faq.a4": "زیادہ تر ٹائل ڈبے کے حساب سے ہی بکتی ہے اور اصل خرچ ڈبوں کی تعداد طے کرتی ہے — اسی لیے فی ڈبہ تعداد درج کرتے ہی یہ کیلکولیٹر پورے ڈبوں تک گنتی بڑھا دیتا ہے۔ رنگ کا بیچ ملانے کے لیے پوری مقدار ایک ہی آرڈر میں لیں، اور سب ڈبے کھولنے سے پہلے واپسی کی مدت دیکھ لیں: بہت سی دکانیں بند ڈبے واپس لیتی ہیں، کھلے نہیں۔",
+      "tool.price.label": "فی ڈبہ قیمت (اختیاری)",
+    "tool.r.cost": "تخمینی لاگت",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -698,6 +718,8 @@ window.I18N_LOCALES = {
     "faq.a3": "Sebelas keping, karena satu keping menutup 0,09 m² dan 1 ÷ 0,09 = 11,1. Dalam satuan inci, keramik 12 × 12 persis satu kaki persegi, jadi satu keping per sq ft. Ukuran lain per meter persegi: 30 × 60 cm sekitar 6 keping, 60 × 60 cm sekitar 2,8, dan subway 7,5 × 15 cm sekitar 89.",
     "faq.q4": "Beli per dus atau eceran?",
     "faq.a4": "Sebagian besar keramik hanya dijual per dus, dan jumlah duslah yang menentukan biaya sebenarnya — karena itu kalkulator ini membulatkan ke atas ke dus utuh begitu Anda mengisi isi per dus. Pesan seluruh kebutuhan sekali jalan agar batch warnanya sama, dan cek batas waktu retur sebelum membuka semua dus: banyak toko menerima dus tersegel, tetapi tidak yang sudah dibuka.",
+      "tool.price.label": "Harga per dus (opsional)",
+    "tool.r.cost": "Perkiraan biaya",
   },
   de: {
     "_label": "Deutsch",
@@ -760,6 +782,8 @@ window.I18N_LOCALES = {
     "faq.a3": "Elf Stück, denn eine 30 × 30 cm Fliese deckt 0,09 m² ab: 1 geteilt durch 0,09 ergibt 11,1. In Zoll gerechnet ist eine 12 × 12 Fliese genau ein Quadratfuß, also eine pro sq ft. Weitere Formate pro Quadratmeter: 30 × 60 cm knapp 6 Stück, 60 × 60 cm rund 2,8 und die Metrofliese 7,5 × 15 cm etwa 89.",
     "faq.q4": "Ganze Pakete oder einzelne Fliesen kaufen?",
     "faq.a4": "Fliesen werden fast nur paketweise verkauft, und die Paketzahl bestimmt die tatsächlichen Kosten — deshalb rundet dieser Rechner auf ganze Pakete auf, sobald Sie den Paketinhalt angeben. Bestellen Sie die Gesamtmenge in einem Zug, damit die Charge stimmt, und prüfen Sie die Rückgabefrist, bevor Sie alle Pakete öffnen: Ungeöffnete Pakete nehmen viele Händler zurück, angebrochene nicht.",
+      "tool.price.label": "Preis pro Paket (optional)",
+    "tool.r.cost": "Geschätzte Kosten",
   },
   ja: {
     "_label": "日本語",
@@ -822,6 +846,8 @@ window.I18N_LOCALES = {
     "faq.a3": "ちょうど1枚です。12×12インチが1平方フィートそのものだからです。したがって100平方フィートの床には100枚、ロス10%を加えて110枚が必要になります。他のサイズは12×24が1平方フィートあたり0.5枚、24×24が0.25枚、18×18が約0.44枚、3×6のサブウェイタイルが8枚です。",
     "faq.q4": "箱単位で買うべきですか、バラで買えますか？",
     "faq.a4": "タイルの多くは箱単位でのみ販売され、支出を決めるのも箱数です。だからこのツールは1箱の枚数を入力すると箱単位で切り上げて表示します。色ロットをそろえるため必要量は一度に注文し、開封前に返品期限を確認してください。未開封の箱は返品できても、開封済みは受け付けない店が少なくありません。",
+      "tool.price.label": "1箱あたりの価格（任意）",
+    "tool.r.cost": "概算費用",
   },
   ko: {
     "_label": "한국어",
@@ -884,5 +910,7 @@ window.I18N_LOCALES = {
     "faq.a3": "정확히 한 장입니다. 12×12인치가 곧 1제곱피트이기 때문입니다. 따라서 100제곱피트 바닥은 타일 100장에 여유분을 더해 10% 기준 110장이 필요합니다. 다른 규격은 12×24가 제곱피트당 0.5장, 24×24가 0.25장, 18×18이 약 0.44장, 3×6 서브웨이가 8장입니다.",
     "faq.q4": "박스 단위로 사야 하나요, 낱장으로 사도 되나요?",
     "faq.a4": "대부분의 타일은 박스 단위로만 판매되며 실제 지출을 결정하는 것도 박스 수입니다. 그래서 박스당 장수를 입력하면 이 계산기가 박스 단위로 올림해 알려줍니다. 색상 로트를 맞추려면 필요한 수량을 한 번에 주문하고, 개봉 전에 반품 기한을 확인하세요. 미개봉 박스는 반품되지만 개봉한 박스는 받아주지 않는 매장이 많습니다.",
+      "tool.price.label": "박스당 가격(선택)",
+    "tool.r.cost": "예상 비용",
   }
 };

@@ -124,7 +124,8 @@
 
     var tier = TIERS[goal.value] || TIERS.active;
     var lo = kg * tier[0], hi = kg * tier[1];
-    var m = parseInt(meals.value, 10) || 3;
+    var m = parseInt(meals.value, 10);
+    if (!(m >= 1 && m <= 6)) m = 3; // 1끼(OMAD)~6끼, 값이 깨지면 3끼로
     var g = t("tool.g");
 
     $("r-daily").textContent = rng(lo, hi) + " " + g;
@@ -136,6 +137,9 @@
       .replace("{a}", rng(lo / CHICKEN_G, hi / CHICKEN_G))
       .replace("{b}", rng(lo / EGG_G, hi / EGG_G));
     $("r-note").textContent = t("tool.note." + goal.value);
+    var omad = $("r-omad");
+    omad.textContent = m === 1 ? t("tool.note.omad") : "";
+    omad.hidden = m !== 1;
 
     errEl.hidden = true;
     result.hidden = false;

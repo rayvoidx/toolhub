@@ -201,7 +201,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <div class="field-row">
+    <div class="field-row three">
       <div>
         <label for="doors" data-i18n="tool.doors.label">Doors</label>
         <input type="number" id="doors" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="1">
@@ -210,7 +210,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="windows" data-i18n="tool.windows.label">Windows</label>
         <input type="number" id="windows" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="2">
       </div>
+      <div>
+        <label for="coverage" data-i18n="tool.coverage.label">Coverage per gallon (optional)</label>
+        <input type="number" id="coverage" inputmode="decimal" min="150" max="600" step="any" autocomplete="off" placeholder="350">
+      </div>
     </div>
+    <p class="subtle" data-i18n="tool.coverage.hint">Square feet per gallon per coat, as printed on the tin. Leave blank for the default 350; allowed range 150–600.</p>
 
     <label class="check" for="ceiling"><input type="checkbox" id="ceiling"><span data-i18n="tool.ceiling.label">Paint the ceiling too</span></label>
 
