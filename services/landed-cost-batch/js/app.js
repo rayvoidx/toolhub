@@ -669,11 +669,12 @@
       var opts = BASES.map(function (b) {
         return '<option value="' + b + '"' + (c.basis === b ? " selected" : "") + ">" + esc(t("tool.basis." + b)) + "</option>";
       }).join("");
+      // 동적 행 입력은 <label> 을 못 가지므로 헤더 키를 aria-label 로 재사용한다 (2026-08-02 접근성 패스).
       tr.innerHTML =
-        '<td class="lcb-tl lcb-cell-lab"><input type="text" class="lcb-c-label" data-i="' + i + '" value="' + esc(costLabel(c)) + '"></td>' +
-        '<td class="lcb-cell-amt"><input type="text" class="lcb-c-amt" inputmode="decimal" data-i="' + i + '" value="' + esc(c.amount) + '" placeholder="0"></td>' +
-        '<td class="lcb-cell-basis"><select class="lcb-c-basis" data-i="' + i + '">' + opts + "</select></td>" +
-        '<td><input type="checkbox" class="lcb-c-duty" data-i="' + i + '"' + (c.dutiable && !fob ? " checked" : "") +
+        '<td class="lcb-tl lcb-cell-lab"><input type="text" class="lcb-c-label" data-i="' + i + '" aria-label="' + esc(t("tool.costs.th.label")) + '" value="' + esc(costLabel(c)) + '"></td>' +
+        '<td class="lcb-cell-amt"><input type="text" class="lcb-c-amt" inputmode="decimal" data-i="' + i + '" aria-label="' + esc(t("tool.costs.th.amount")) + '" value="' + esc(c.amount) + '" placeholder="0"></td>' +
+        '<td class="lcb-cell-basis"><select class="lcb-c-basis" data-i="' + i + '" aria-label="' + esc(t("tool.costs.th.basis")) + '">' + opts + "</select></td>" +
+        '<td><input type="checkbox" class="lcb-c-duty" data-i="' + i + '" aria-label="' + esc(t("tool.costs.th.dutiable")) + '"' + (c.dutiable && !fob ? " checked" : "") +
         (fob ? ' disabled title="' + esc(t("tool.dutiable.fobOff")) + '"' : "") + "></td>" +
         '<td><button type="button" class="lcb-x" data-i="' + i + '" aria-label="' + esc(t("tool.costs.remove")) + '" title="' + esc(t("tool.costs.remove")) + '">&times;</button></td>';
       body.appendChild(tr);
