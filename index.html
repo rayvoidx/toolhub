@@ -164,6 +164,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 data-i18n="tools.heading">All tools</h2>
     <label for="tool-search" data-i18n="tools.searchLabel">Search tools</label>
     <input type="text" id="tool-search" name="tool-search" placeholder="Search by tool name (e.g. unit price)" data-i18n-placeholder="tools.searchPlaceholder" autocomplete="off">
+    <div id="recent-tools" hidden style="margin:14px 0 0"></div>
+    <script>/* ux-recent (2026-08-02) — 최근 사용 도구 줄 (localStorage, 서버 미전송) */
+    (function(){try{var rec=JSON.parse(localStorage.getItem("ux:recent")||"[]");if(!rec.length)return;
+    var box=document.getElementById("recent-tools");if(!box)return;
+    var h=document.createElement("div");h.style.cssText="font-size:13px;color:var(--muted);margin-bottom:6px";
+    var t=(window.I18N&&window.I18N.t)?window.I18N.t("tools.recent"):null;h.textContent=(t&&t!=="tools.recent")?t:"Recently used";
+    box.appendChild(h);var row=document.createElement("div");row.style.cssText="display:flex;flex-wrap:wrap;gap:8px";
+    rec.slice(0,8).forEach(function(r){if(!r||!r.s)return;var a=document.createElement("a");a.href="/"+encodeURIComponent(r.s)+"/";
+    a.textContent=r.n||r.s;a.style.cssText="border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:14px;text-decoration:none;color:inherit";
+    row.appendChild(a);});box.appendChild(row);box.hidden=false;}catch(e){}})();</script>
+
 
     <!-- MAINTAIN:CARDS-START — ontology/services.yaml 의 status:launched 서비스 카드 목록.
          새 도구가 launched 되면 /maintain 이 이 블록 안에 카드를 추가·갱신한다. 각 카드는
