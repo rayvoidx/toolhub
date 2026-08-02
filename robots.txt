@@ -21,3 +21,17 @@ Disallow: /*?*amount=
 Disallow: /*?*salary=
 
 Sitemap: https://tool-hub.me/sitemap.xml
+
+# ── AI 검색/인용 크롤러 명시 허용 (2026-08-02) ──
+# 검색·답변 인용 봇은 트래픽을 되돌려준다. 학습봇도 현재는 허용(브랜드 노출 우선 방침).
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
