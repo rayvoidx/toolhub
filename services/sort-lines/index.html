@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -198,6 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <option value="za" data-i18n="tool.mode.za">Z → A (reverse alphabetical)</option>
         <option value="natural" data-i18n="tool.mode.natural">Natural order (item2 before item10)</option>
         <option value="length" data-i18n="tool.mode.length">By length (shortest first)</option>
+        <option value="lengthDesc" data-i18n="tool.mode.lengthDesc">By length (longest first)</option>
         <option value="shuffle" data-i18n="tool.mode.shuffle">Random shuffle</option>
         <option value="reverse" data-i18n="tool.mode.reverse">Reverse current order</option>
       </select>
@@ -207,6 +218,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <label class="sl-check" for="sl-case"><input type="checkbox" id="sl-case"><span data-i18n="tool.opt.case">Case-sensitive</span></label>
       <label class="sl-check" for="sl-articles"><input type="checkbox" id="sl-articles"><span data-i18n="tool.opt.articles">Ignore leading "a / an / the" (title sort)</span></label>
       <label class="sl-check" for="sl-blank"><input type="checkbox" id="sl-blank" checked><span data-i18n="tool.opt.blank">Remove blank lines</span></label>
+      <label class="sl-check" for="sl-dedupe"><input type="checkbox" id="sl-dedupe"><span data-i18n="tool.opt.dedupe">Remove duplicate lines</span></label>
+      <label class="sl-check" for="sl-trim"><input type="checkbox" id="sl-trim"><span data-i18n="tool.opt.trim">Trim spaces at line start/end</span></label>
     </div>
 
     <div class="sl-btnrow">

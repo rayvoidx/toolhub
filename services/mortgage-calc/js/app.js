@@ -320,6 +320,8 @@
   var rateInput = $("rate-input"), termInput = $("term-input"), termChipsWrap = $("term-chips");
   var curSel = $("currency-select");
   var extraInput = $("extra-input");
+  var taxInput = $("tax-input"), insInput = $("ins-input");
+  var pitiCard = $("piti-card"), rPiti = $("r-piti");
   var calcBtn = $("calc-btn");
   var box = $("result-box"), errEl = $("result-error"), bodyEl = $("result-body");
   var rMonthly = $("r-monthly"), rLoan = $("r-loan"), rInterest = $("r-interest"),
@@ -368,7 +370,7 @@
       .replace("{pct}", pct1(pct))
       .replace("{loan}", money(Math.max(price - down, 0), cur));
     downHintEl.hidden = false;
-    syncChipActive(downChipsWrap, "data-downpct", Math.round(pct));
+    syncChipActive(downChipsWrap, "data-downpct", Math.round(pct * 10) / 10);
   }
 
   /* ---- 칩(프리셋) 활성 표시 ---- */
@@ -441,6 +443,14 @@
     if (!(term > 0)) return showNotice("tool.err.term", "Loan term must be greater than 0 years.");
     if (extra < 0) return showNotice("tool.err.extra", "Extra payment can't be negative.");
 
+    // 선택 입력: 연간 재산세·주택보험(+관리비) → 월 총 납부액(PITI). 비우면 기존 동작 그대로.
+    var taxYr = parseAmount(taxInput), insYr = parseAmount(insInput);
+    if ((taxYr != null && taxYr < 0) || (insYr != null && insYr < 0)) {
+      return showNotice("tool.err.piti", "Property tax and insurance can't be negative.");
+    }
+    var escrowYr = (taxYr || 0) + (insYr || 0);
+    if (escrowYr > LIM.value) escrowYr = LIM.value;
+
     var r = computeSchedule(loan, rate, term, extra);
     lastResult = r;
     errEl.hidden = true; bodyEl.hidden = false; box.hidden = false;
@@ -455,6 +465,12 @@
       .replace("{rate}", fmt(r.rate, 3))
       .replace("{years}", fmt(r.years, 0));
     rClipped.hidden = !r.clipped;
+
+    if (pitiCard && rPiti) {
+      var showPiti = escrowYr > 0 && isFinite(escrowYr);
+      pitiCard.hidden = !showPiti;
+      if (showPiti) rPiti.textContent = money(r.payment + escrowYr / 12, cur);
+    }
 
     extraResultEl.hidden = !r.hasExtra;
     if (r.hasExtra) {
@@ -472,6 +488,7 @@
       localStorage.setItem(LS_KEY, JSON.stringify({
         mode: mode, loan: loanInput.value, price: priceInput.value, down: downInput.value,
         rate: rateInput.value, term: termInput.value, extra: extraInput.value, currency: cur,
+        tax: taxInput ? taxInput.value : "", ins: insInput ? insInput.value : "",
         schedMonthly: !!(schedToggle && schedToggle.checked)
       }));
     } catch (e) { /* private mode — 저장 실패 무시 */ }
@@ -490,6 +507,8 @@
       if (saved.rate) rateInput.value = saved.rate;
       if (saved.term) termInput.value = saved.term;
       if (saved.extra) extraInput.value = saved.extra;
+      if (saved.tax && taxInput) taxInput.value = saved.tax;
+      if (saved.ins && insInput) insInput.value = saved.ins;
       if (saved.schedMonthly && schedToggle) schedToggle.checked = true;
     }
     syncModeFields();
@@ -505,6 +524,8 @@
   priceInput.addEventListener("input", onAmountInput);
   downInput.addEventListener("input", onAmountInput);
   extraInput.addEventListener("input", onAmountInput);
+  if (taxInput) taxInput.addEventListener("input", onAmountInput);
+  if (insInput) insInput.addEventListener("input", onAmountInput);
   rateInput.addEventListener("input", calculate);
   termInput.addEventListener("input", calculate);
   curSel.addEventListener("change", calculate);

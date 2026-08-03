@@ -113,7 +113,8 @@
   var CONTAINERS = [
     { id: "20ft", cbm: 33.2, payload: 28200 },
     { id: "40ft", cbm: 67.7, payload: 26700 },
-    { id: "40hq", cbm: 76.3, payload: 26500 }
+    { id: "40hq", cbm: 76.3, payload: 26500 },
+    { id: "45hq", cbm: 85.7, payload: 27600 }
   ];
   var MAX_ROWS = 200000;   // 초과분은 잘라내고 명시적으로 경고 (조용한 절단 금지)
   var PREVIEW_ROWS = 5;
@@ -561,7 +562,7 @@
   var els = {};
   var ids = ["paste", "drop", "file", "pick", "example", "clear", "fname", "mapsec", "delim",
     "encwrap", "enc", "hdr", "preview", "maphint", "confirm", "dim", "dimbadge", "wt", "wtbadge",
-    "mode", "shape", "shapenote", "load", "loadout", "minrt", "result"];
+    "mode", "divwrap", "div", "shape", "shapenote", "load", "loadout", "minrt", "result"];
   for (var q = 0; q < ids.length; q++) els[ids[q]] = document.getElementById("plc-" + ids[q]);
   if (!els.paste || !els.result) return;
 
@@ -612,7 +613,7 @@
     try {
       localStorage.setItem(PREFS_KEY, JSON.stringify({
         dim: els.dim.value, wt: els.wt.value, mode: els.mode.value, shape: els.shape.value,
-        load: +els.load.value, minrt: !!els.minrt.checked, guessed: S.unitGuessed
+        load: +els.load.value, div: +els.div.value, minrt: !!els.minrt.checked, guessed: S.unitGuessed
       }));
     } catch (e) { /* private mode — 저장만 안 될 뿐 기능은 그대로 */ }
   }
@@ -644,10 +645,19 @@
     if (els.wtbadge) els.wtbadge.hidden = !S.unitGuessed;
   }
 
+  /* 사용자 지정 제수 — 범위 밖/빈 값이면 null 을 돌려주고 render 가 명시적으로 안내한다 */
+  function customDivisor() {
+    var v = parseFloat(els.div.value);
+    return (isFinite(v) && v >= 1000 && v <= 20000) ? v : null;
+  }
+  function syncModeUI() {
+    if (els.divwrap) els.divwrap.hidden = els.mode.value !== "custom";
+  }
+
   function currentOpts() {
     return {
       dimUnit: els.dim.value, wtUnit: els.wt.value,
-      divisor: DIVISOR[els.mode.value] || null,
+      divisor: els.mode.value === "custom" ? customDivisor() : (DIVISOR[els.mode.value] || null),
       shape: els.shape.value, loadFactor: (+els.load.value || 85) / 100,
       minRT: !!els.minrt.checked
     };
@@ -869,6 +879,10 @@
     if (S.busy) return;
     if (!S.src || (!S.headers && !S.preview.length)) {
       els.result.innerHTML = "<p class=\"plc-note\">" + esc(t("tool.res.empty")) + "</p>";
+      return;
+    }
+    if (els.mode.value === "custom" && customDivisor() == null) {
+      els.result.innerHTML = "<p class=\"plc-note\">" + esc(t("tool.err.divisor")) + "</p>";
       return;
     }
     if (!S.confirmed || !S.res) {
@@ -1145,7 +1159,9 @@
   }
   els.dim.addEventListener("change", onOpt(true));
   els.wt.addEventListener("change", onOpt(true));
+  els.mode.addEventListener("change", function () { syncModeUI(); });
   els.mode.addEventListener("change", onOpt(false));
+  els.div.addEventListener("change", onOpt(false));
   els.shape.addEventListener("change", onOpt(false));
   els.minrt.addEventListener("change", onOpt(false));
   els.load.addEventListener("input", function () {
@@ -1166,9 +1182,10 @@
     if (p) {
       if (CM_PER[p.dim]) els.dim.value = p.dim;
       if (KG_PER[p.wt]) els.wt.value = p.wt;
-      if (DIVISOR.hasOwnProperty(p.mode)) els.mode.value = p.mode;
+      if (DIVISOR.hasOwnProperty(p.mode) || p.mode === "custom") els.mode.value = p.mode;
+      if (p.div >= 1000 && p.div <= 20000) els.div.value = p.div;
       if (p.shape === "cuboid" || p.shape === "cylinder") els.shape.value = p.shape;
-      if (p.load >= 70 && p.load <= 95) els.load.value = p.load;
+      if (p.load >= 50 && p.load <= 100) els.load.value = p.load;
       els.minrt.checked = p.minrt !== false;
       S.unitGuessed = p.guessed !== false;
       if (S.unitGuessed) { els.dim.value = g.dim; els.wt.value = g.wt; }
@@ -1176,6 +1193,7 @@
       els.dim.value = g.dim; els.wt.value = g.wt;
     }
     els.loadout.value = els.load.value + "%";
+    syncModeUI();
     setUnitBadges();
     render();
   })();

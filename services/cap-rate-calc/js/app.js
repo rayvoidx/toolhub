@@ -90,6 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var mode = $("mode"), price = $("price"), rent = $("rent"), expenses = $("expenses"), target = $("target");
+  var rentper = $("rentper");
   var result = $("result"), errEl = $("err"), warnEl = $("warn"), tierEl = $("tier"), badgeEl = $("onepct");
   if (!mode || !price || !rent || !expenses || !target || !result) return;
 
@@ -98,6 +99,12 @@
   var num = function (el) {
     var v = parseFloat(String(el.value).replace(/[^0-9.\-]/g, ""));
     return isFinite(v) ? v : NaN;
+  };
+  // 미국 매물은 월세로 표기되는 경우가 많다 — 입력 단위 선택에 따라 연간으로 환산.
+  var rentVal = function () {
+    var v = num(rent);
+    var mult = (rentper && rentper.value === "12") ? 12 : 1;
+    return isNaN(v) ? NaN : v * mult;
   };
   var money = function (n) { return n.toLocaleString(undefined, { maximumFractionDigits: 0 }); };
   var pct = function (n) { return n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + "%"; };
@@ -135,14 +142,14 @@
 
     var p, r, noi, cap, tg;
     if (m === "cap") {
-      p = num(price); r = num(rent);
+      p = num(price); r = rentVal();
       if (isNaN(p) || isNaN(r)) return fail("tool.err.empty");
       if (p <= 0) return fail("tool.err.price");
       if (r <= 0) return fail("tool.err.rent");
       noi = r - exp;
       cap = noi / p * 100;
     } else if (m === "price") {
-      r = num(rent); tg = num(target);
+      r = rentVal(); tg = num(target);
       if (isNaN(r) || isNaN(tg)) return fail("tool.err.empty");
       if (r <= 0) return fail("tool.err.rent");
       if (tg < 0.1 || tg > 30) return fail("tool.err.target");
@@ -196,7 +203,7 @@
     syncFields();
     if (!result.hidden || !errEl.hidden) calc();
   });
-  [price, rent, expenses, target].forEach(function (el) {
+  [price, rent, expenses, target, rentper].forEach(function (el) {
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });

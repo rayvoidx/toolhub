@@ -92,7 +92,9 @@
   var TEXT_KEY     = "word-counter:last";
   var REMEMBER_KEY = "word-counter:remember";
   var WPM_KEY      = "word-counter:wpm";
-  var SPEAK_WPM    = 130; // 말하기 속도(고정) — 발표·내레이션 기준
+  var CUSTOM_WPM_KEY = "word-counter:wpm-custom";
+  var SPEAK_WPM_KEY = "word-counter:speak-wpm";
+  var SPEAK_WPM    = 130; // 말하기 속도 기본값 — 발표·내레이션 기준 (사용자 재정의 가능)
 
   // CJK(한자·가나·CJK호환): 공백 없이 이어 쓰므로 글자 단위로 셈
   // U+4E00–9FFF 한자 · U+3400–4DBF 확장A · U+3040–30FF 히라가나+가타카나 · U+F900–FAFF 호환한자
@@ -100,6 +102,8 @@
 
   var textEl     = document.getElementById("wc-text");
   var speedEl    = document.getElementById("wc-speed");
+  var wpmEl      = document.getElementById("wc-wpm");
+  var speakWpmEl = document.getElementById("wc-speak-wpm");
   var rememberEl = document.getElementById("wc-remember");
   var feedbackEl = document.getElementById("wc-feedback");
 
@@ -188,12 +192,46 @@
     out.sentences.textContent  = fmt(countSentences(text));
     out.paragraphs.textContent = fmt(countParagraphs(text));
     out.read.textContent       = fmtTime(words / wpm);
-    out.speak.textContent      = fmtTime(words / SPEAK_WPM);
+    out.speak.textContent      = fmtTime(words / getSpeakWpm());
   }
 
   function getWpm() {
+    if (speedEl && speedEl.value === "custom") {
+      var c = wpmEl ? parseInt(wpmEl.value, 10) : NaN;
+      if (isNaN(c) || c < 50 || c > 1000) return 200; // 빈 값·범위 밖 → 기본 200 (안내는 syncCustom)
+      return c;
+    }
     var v = speedEl ? parseInt(speedEl.value, 10) : 200;
     return (!v || isNaN(v) || v <= 0) ? 200 : v; // 안전장치 — 0/음수/비정상 → 기본 200
+  }
+
+  /** 말하기 속도 — 빈 값이면 기본 130, 범위 밖이면 기본값으로 폴백 */
+  function getSpeakWpm() {
+    if (!speakWpmEl) return SPEAK_WPM;
+    var raw = speakWpmEl.value.trim();
+    if (raw === "") return SPEAK_WPM;
+    var v = parseInt(raw, 10);
+    if (isNaN(v) || v < 50 || v > 300) return SPEAK_WPM; // 안내는 syncSpeak
+    return v;
+  }
+
+  function syncSpeak(notify) {
+    if (!speakWpmEl) return;
+    var raw = speakWpmEl.value.trim();
+    if (raw === "") return; // 선택 입력 — 비어 있어도 정상(기본값 사용)
+    var v = parseInt(raw, 10);
+    if (isNaN(v) || v < 50 || v > 300) { if (notify) showFeedback(t("tool.speakRange"), true); }
+  }
+
+  /** 커스텀 wpm 입력 표시/검증 */
+  function syncCustom(notify) {
+    var custom = !!speedEl && speedEl.value === "custom";
+    if (wpmEl) wpmEl.hidden = !custom;
+    if (!custom || !wpmEl) return;
+    var raw = wpmEl.value.trim();
+    if (raw === "") { if (notify) showFeedback(t("tool.speedEmpty"), true); return; }
+    var c = parseInt(raw, 10);
+    if (isNaN(c) || c < 50 || c > 1000) { if (notify) showFeedback(t("tool.speedRange"), true); }
   }
 
   // ----- 복사 -----
@@ -271,6 +309,18 @@
         }
       }
     } catch (e) { /* noop */ }
+    // 커스텀 읽기 속도 값
+    try {
+      var cw = localStorage.getItem(CUSTOM_WPM_KEY);
+      if (cw && wpmEl) wpmEl.value = cw;
+    } catch (e) { /* noop */ }
+    // 말하기 속도
+    try {
+      var sw = localStorage.getItem(SPEAK_WPM_KEY);
+      if (sw && speakWpmEl) speakWpmEl.value = sw;
+    } catch (e) { /* noop */ }
+    syncCustom(false);
+    syncSpeak(false);
     // 마지막 텍스트
     if (shouldRemember()) {
       try {
@@ -291,8 +341,25 @@
 
   if (speedEl) {
     speedEl.addEventListener("change", function () {
+      syncCustom(true);
       render();
       try { localStorage.setItem(WPM_KEY, speedEl.value); } catch (e) { /* noop */ }
+    });
+  }
+
+  if (wpmEl) {
+    wpmEl.addEventListener("input", function () {
+      syncCustom(true);
+      render();
+      try { localStorage.setItem(CUSTOM_WPM_KEY, wpmEl.value); } catch (e) { /* noop */ }
+    });
+  }
+
+  if (speakWpmEl) {
+    speakWpmEl.addEventListener("input", function () {
+      syncSpeak(true);
+      render();
+      try { localStorage.setItem(SPEAK_WPM_KEY, speakWpmEl.value.trim()); } catch (e) { /* noop */ }
     });
   }
 

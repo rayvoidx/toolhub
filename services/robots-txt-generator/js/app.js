@@ -89,9 +89,9 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var preset = $("preset"), sitemap = $("sitemap"), out = $("out");
+  var preset = $("preset"), sitemap = $("sitemap"), delay = $("delay"), out = $("out");
   var result = $("result"), errEl = $("err");
-  if (!preset || !sitemap || !out) return;
+  if (!preset || !sitemap || !delay || !out) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -142,7 +142,7 @@
     var notes = [], skipped = 0, i, j;
     var groups = presetGroups(preset.value);
 
-    for (i = 1; i <= 3; i++) {
+    for (i = 1; i <= 6; i++) {
       var ua = String($("ua" + i).value).trim();
       var d = normPath($("dis" + i).value);
       var a = normPath($("alw" + i).value);
@@ -151,6 +151,13 @@
     }
 
     if (!groups.length) return fail("tool.err.norule");
+
+    // Crawl-delay 는 선택 입력. 빈 칸이면 줄 자체를 넣지 않는다(기존 동작 유지).
+    var dRaw = String(delay.value).trim(), dVal = 0;
+    if (dRaw) {
+      dVal = Number(dRaw);
+      if (!isFinite(dVal) || dVal < 1 || dVal > 30 || dVal !== Math.round(dVal)) return fail("tool.err.delay");
+    }
 
     var lines = [], rules = 0;
     for (i = 0; i < groups.length; i++) {
@@ -162,6 +169,8 @@
       // 빈 Disallow 는 "Disallow:" 로만 쓴다 — 뒤에 공백을 남기면 파일이 지저분해진다.
       for (j = 0; j < dis.length; j++) { lines.push(dis[j] ? "Disallow: " + dis[j] : "Disallow:"); rules++; }
       for (j = 0; j < alw.length; j++) { lines.push("Allow: " + alw[j]); rules++; }
+      // Crawl-delay 는 첫 그룹(대개 User-agent: *)에만 — 그룹마다 반복하면 파일만 길어진다.
+      if (dVal && i === 0) { lines.push("Crawl-delay: " + dVal); rules++; }
     }
 
     var sm = String(sitemap.value).trim();
@@ -174,8 +183,10 @@
     out.value = text;
 
     if (preset.value === "blockai") notes.push(t("tool.note.ai"));
+    if (dVal) notes.push(t("tool.note.delay"));
     if (fixedPaths.length) notes.push(t("tool.note.slash") + " " + fixedPaths.join(", "));
-    if (skipped) notes.push(skipped + " " + t("tool.note.skipped"));
+    // 빈 줄 안내는 실제로 규칙을 쓴 사람에게만 의미가 있다 — 프리셋만 쓴 경우엔 소음.
+    if (skipped && skipped < 6) notes.push(skipped + " " + t("tool.note.skipped"));
     if (!notes.length) notes.push(t("tool.note.ok"));
 
     $("r-groups").textContent = String(groups.length);
@@ -187,8 +198,8 @@
     result.hidden = false;
   }
 
-  var inputs = [sitemap];
-  for (var n = 1; n <= 3; n++) inputs.push($("ua" + n), $("dis" + n), $("alw" + n));
+  var inputs = [sitemap, delay];
+  for (var n = 1; n <= 6; n++) inputs.push($("ua" + n), $("dis" + n), $("alw" + n));
 
   $("calc-btn").addEventListener("click", calc);
   inputs.forEach(function (el) {

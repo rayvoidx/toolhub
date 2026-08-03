@@ -96,7 +96,7 @@
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   // SI 기준: 파일 1 GB = 1000 MB. 회선은 비트 단위라 8로 나눠야 MB/s 가 된다.
-  var SIZE_MB = { mb: 1, gb: 1000, tb: 1000000 };
+  var SIZE_MB = { mb: 1, gb: 1000, tb: 1000000, gib: 1073.741824 };
   var SPD_MBPS = { mbps: 0.125, mbyte: 1, gbps: 125 };
   var TIERS = [25, 100, 500, 1000];
 

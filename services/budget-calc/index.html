@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="50/30/20 Budget Calculator — Monthly Breakdown">
 <meta property="og:description" content="Split your monthly take-home pay with the 50/30/20 budget rule and see needs, wants and savings as real amounts. Includes 60/30/10 and custom splits.">
 <meta property="og:url" content="https://tool-hub.me/budget-calc/">
-<meta property="og:image" content="https://tool-hub.me/budget-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/budget-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#065f46">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "50/30/20 Budget Calculator",
+      "item": "https://tool-hub.me/budget-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "50/30/20 Budget Calculator",
-      "item": "https://tool-hub.me/budget-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -171,8 +181,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       @media(max-width:520px){ #tool .split-row, #tool .result-cards { grid-template-columns:1fr; } }
     </style>
 
-    <label for="income" data-i18n="tool.income.label">Monthly take-home pay (after tax)</label>
+    <label for="income" data-i18n="tool.income.label">Take-home pay (after tax)</label>
     <input type="number" id="income" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="4500">
+
+    <label for="freq" data-i18n="tool.freq.label">Pay frequency</label>
+    <select id="freq">
+      <option value="month" data-i18n="tool.freq.month">Monthly</option>
+      <option value="week" data-i18n="tool.freq.week">Weekly</option>
+      <option value="biweek" data-i18n="tool.freq.biweek">Every 2 weeks</option>
+      <option value="semi" data-i18n="tool.freq.semi">Twice a month</option>
+      <option value="year" data-i18n="tool.freq.year">Yearly</option>
+    </select>
 
     <label for="rule" data-i18n="tool.rule.label">Budget rule</label>
     <select id="rule">

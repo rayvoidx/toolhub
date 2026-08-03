@@ -146,7 +146,10 @@
     else if (sh === "footing") ft3 = v[0] * (v[1] / 12) * (v[2] / 12);
     else ft3 = Math.PI * Math.pow(v[0] / 24, 2) * v[1] * v[2];
 
-    if (waste && waste.checked) ft3 = ft3 * 1.1;
+    // 로스율은 선택값(0~20%) — 잘못된 값이면 기본 10%로 되돌린다.
+    var wp = waste ? parseFloat(waste.value) : 10;
+    if (!isFinite(wp) || wp < 0 || wp > 100) wp = 10;
+    ft3 = ft3 * (1 + wp / 100);
     var yd3 = ft3 / 27;
 
     $("r-yards").textContent = (yd3 < 0.05 ? yd3.toFixed(3) : yd3.toFixed(2)) + " yd³";

@@ -278,7 +278,12 @@
       var scale = o.progressScale === 100 ? 100 : 1;
       var onProgress = typeof o.onProgress === "function" ? o.onProgress : null;
 
-      var weightSource = map.weight != null ? "weight" : (map.effort != null ? "effort" : "equal");
+      var autoWeight = map.weight != null ? "weight" : (map.effort != null ? "effort" : "equal");
+      var wb = o.weightBasis;
+      var weightSource = wb === "equal" ? "equal"
+        : (wb === "weight" && map.weight != null) ? "weight"
+        : (wb === "effort" && map.effort != null) ? "effort"
+        : autoWeight;
       var valueSource = map.planCost != null ? "planCost" : (map.effort != null ? "effort" : "none");
       var hasPlanDates = map.start != null && map.end != null;
 
@@ -612,7 +617,7 @@
 
   var dropBtn = $("wbs-drop"), fileIn = $("wbs-file"), dateIn = $("wbs-date");
   var runBtn = $("wbs-run"), sampleBtn = $("wbs-sample"), clearBtn = $("wbs-clear");
-  var numSel = $("wbs-numfmt"), dateSel = $("wbs-datefmt"), fiscalSel = $("wbs-fiscal"), tabSel = $("wbs-deftab");
+  var numSel = $("wbs-numfmt"), dateSel = $("wbs-datefmt"), fiscalSel = $("wbs-fiscal"), tabSel = $("wbs-deftab"), wbasisSel = $("wbs-wbasis");
   var mapPanel = $("wbs-map"), headerChk = $("wbs-header"), mapGrid = $("wbs-map-grid");
   var previewBox = $("wbs-preview"), result = $("wbs-result");
 
@@ -909,6 +914,7 @@
       dateOrder: dateSel.value,
       dataDay: dataDay(),
       progressScale: state.scale,
+      weightBasis: wbasisSel.value,
       localeDateOrder: curLang() === "en" ? "mdy" : "dmy"
     };
   }
@@ -1533,6 +1539,7 @@
 
   numSel.addEventListener("change", function () { lsSet("numfmt", numSel.value); runAnalyze(); });
   dateSel.addEventListener("change", function () { lsSet("datefmt", dateSel.value); runAnalyze(); });
+  wbasisSel.addEventListener("change", function () { lsSet("wbasis", wbasisSel.value); runAnalyze(); });
   fiscalSel.addEventListener("change", function () { lsSet("fiscal", fiscalSel.value); if (state.res) render(); });
   tabSel.addEventListener("change", function () { state.tabPref = tabSel.value; lsSet("tab", tabSel.value); if (state.res) render(); });
 
@@ -1572,6 +1579,8 @@
     fillFiscal();
     var n = lsGet("numfmt"); if (n === "dot" || n === "comma" || n === "auto") numSel.value = n;
     var d = lsGet("datefmt"); if (d === "mdy" || d === "dmy" || d === "auto") dateSel.value = d;
+    var wbv = lsGet("wbasis");
+    if (wbv === "auto" || wbv === "weight" || wbv === "effort" || wbv === "equal") wbasisSel.value = wbv;
     var tb = lsGet("tab"); if (tb === "weighted" || tb === "evm" || tb === "auto") state.tabPref = tb;
     tabSel.value = state.tabPref;
     showEmpty();

@@ -153,7 +153,12 @@
     var url = String(d.url || "").trim();
     var siteName = String(d.siteName || "").trim();
     var image = String(d.image || "").trim();
+    var imageAlt = String(d.imageAlt || "").trim();
+    // @handle 정규화: 앞의 @ 유무·공백 무관하게 하나의 @ 로. 사용 불가 문자는 버린다.
+    var twSite = String(d.twSite || "").trim().replace(/^@+/, "").replace(/[^A-Za-z0-9_]/g, "");
     var twcard = d.twcard === "summary" ? "summary" : "summary_large_image";
+    var OG_TYPES = ["website", "article", "product", "profile", "video.other"];
+    var ogType = OG_TYPES.indexOf(d.ogType) >= 0 ? d.ogType : "website";
     var robots = d.robots || "index, follow";
     var hasUrl = isHttpUrl(url);
     var lines = [];
@@ -163,17 +168,20 @@
     if (hasUrl) lines.push('<link rel="canonical" href="' + escapeHtml(url) + '">');
     lines.push('<meta name="robots" content="' + escapeHtml(robots) + '">');
 
-    lines.push('<meta property="og:type" content="website">');
+    lines.push('<meta property="og:type" content="' + escapeHtml(ogType) + '">');
     if (hasUrl) lines.push('<meta property="og:url" content="' + escapeHtml(url) + '">');
     lines.push('<meta property="og:title" content="' + escapeHtml(title) + '">');
     if (desc) lines.push('<meta property="og:description" content="' + escapeHtml(desc) + '">');
     if (siteName) lines.push('<meta property="og:site_name" content="' + escapeHtml(siteName) + '">');
     if (image) lines.push('<meta property="og:image" content="' + escapeHtml(image) + '">');
+    if (image && imageAlt) lines.push('<meta property="og:image:alt" content="' + escapeHtml(imageAlt) + '">');
 
     lines.push('<meta name="twitter:card" content="' + escapeHtml(twcard) + '">');
+    if (twSite) lines.push('<meta name="twitter:site" content="@' + escapeHtml(twSite) + '">');
     lines.push('<meta name="twitter:title" content="' + escapeHtml(title) + '">');
     if (desc) lines.push('<meta name="twitter:description" content="' + escapeHtml(desc) + '">');
     if (image) lines.push('<meta name="twitter:image" content="' + escapeHtml(image) + '">');
+    if (image && imageAlt) lines.push('<meta name="twitter:image:alt" content="' + escapeHtml(imageAlt) + '">');
 
     return lines.join("\n");
   }
@@ -204,7 +212,9 @@
       descBarEl = $("mtg-desc-bar"), descHintEl = $("mtg-desc-hint");
   var urlEl = $("mtg-url"), urlWarnEl = $("mtg-url-warn");
   var siteNameEl = $("mtg-sitename"), imageEl = $("mtg-image");
+  var imageAltEl = $("mtg-imagealt"), twSiteEl = $("mtg-twsite");
   var twcardEl = $("mtg-twcard"), twcardHintEl = $("mtg-twcard-hint");
+  var ogTypeEl = $("mtg-ogtype");
   var robotsEl = $("mtg-robots");
   var outputEl = $("mtg-output"), copyBtn = $("mtg-copy"), toastEl = $("mtg-toast");
   var serpUrlEl = $("mtg-serp-url"), serpTitleEl = $("mtg-serp-title"), serpDescEl = $("mtg-serp-desc");
@@ -222,7 +232,9 @@
       localStorage.setItem(SKEY, JSON.stringify({
         title: titleEl.value, desc: descEl.value, url: urlEl.value,
         siteName: siteNameEl.value, image: imageEl.value,
-        twcard: twcardEl.value, robots: robotsEl.value
+        imageAlt: imageAltEl ? imageAltEl.value : "", twSite: twSiteEl ? twSiteEl.value : "",
+        twcard: twcardEl.value, robots: robotsEl.value,
+        ogType: ogTypeEl ? ogTypeEl.value : "website"
       }));
     } catch (e) { /* private mode — 저장만 실패, 편집은 계속 가능 */ }
   }
@@ -237,8 +249,15 @@
       if (typeof s.url === "string") urlEl.value = s.url;
       if (typeof s.siteName === "string") siteNameEl.value = s.siteName;
       if (typeof s.image === "string") imageEl.value = s.image;
+      if (imageAltEl && typeof s.imageAlt === "string") imageAltEl.value = s.imageAlt;
+      if (twSiteEl && typeof s.twSite === "string") twSiteEl.value = s.twSite;
       if (s.twcard === "summary" || s.twcard === "summary_large_image") twcardEl.value = s.twcard;
       if (typeof s.robots === "string") robotsEl.value = s.robots;
+      if (ogTypeEl && typeof s.ogType === "string") {
+        // 알 수 없는 값이면 select 가 무시하므로 기본값(website) 유지
+        ogTypeEl.value = s.ogType;
+        if (!ogTypeEl.value) ogTypeEl.value = "website";
+      }
     } catch (e) { /* 손상된 저장값 — 기본값 유지 */ }
   }
 
@@ -286,7 +305,9 @@
     var data = {
       title: titleEl.value, desc: descEl.value, url: urlEl.value,
       siteName: siteNameEl.value, image: imageEl.value,
-      twcard: twcardEl.value, robots: robotsEl.value
+      imageAlt: imageAltEl ? imageAltEl.value : "", twSite: twSiteEl ? twSiteEl.value : "",
+      twcard: twcardEl.value, robots: robotsEl.value,
+      ogType: ogTypeEl ? ogTypeEl.value : "website"
     };
     var titleLen = charLen(data.title), descLen = charLen(data.desc);
 
@@ -315,6 +336,7 @@
     if (socialDomainEl) socialDomainEl.textContent = (host || t("tool.preview.urlPh", "example.com")).toUpperCase();
     if (socialTitleEl) socialTitleEl.textContent = data.title.trim() || t("tool.preview.titlePh", "Your page title will appear here");
     if (socialDescEl) socialDescEl.textContent = data.desc.trim() || t("tool.preview.descPh", "Your meta description will appear here, summarizing the page for search results.");
+    if (socialImgEl) socialImgEl.alt = String(data.imageAlt || "").trim();
     updateSocialImage(data.image.trim());
 
     save();
@@ -352,10 +374,10 @@
   }
 
   /* ---- 이벤트 ---- */
-  [titleEl, descEl, urlEl, siteNameEl, imageEl].forEach(function (el) {
+  [titleEl, descEl, urlEl, siteNameEl, imageEl, imageAltEl, twSiteEl].filter(Boolean).forEach(function (el) {
     el.addEventListener("input", render);
   });
-  [twcardEl, robotsEl].forEach(function (el) {
+  [twcardEl, robotsEl, ogTypeEl].filter(Boolean).forEach(function (el) {
     el.addEventListener("change", render);
   });
   document.addEventListener("i18n:change", render);

@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-31",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -189,6 +199,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tool .pay-section { margin-top:22px; }
       #tool .pay-row { display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; }
       #tool .pay-row > div { flex:1 1 140px; }
+      #tool .pay-row[hidden] { display:none; }
       #tool .ot-row { display:flex; align-items:center; gap:8px; margin-top:12px; font-weight:600; font-size:14px; }
       #tool .ot-row input { width:auto; flex:0 0 auto; }
       #tool .pay-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; }
@@ -256,8 +267,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <label class="ot-row">
         <input type="checkbox" id="ot-toggle" checked>
-        <span data-i18n="tool.ot.label">Apply overtime (1.5× pay over 40 h/week)</span>
+        <span data-i18n="tool.ot.label">Apply overtime pay</span>
       </label>
+      <div class="pay-row" id="ot-opts" style="margin-top:10px;">
+        <div>
+          <label for="ot-threshold" data-i18n="tool.ot.threshold">Overtime after (hours/week)</label>
+          <input type="number" id="ot-threshold" min="1" max="168" step="any" inputmode="decimal" placeholder="40" autocomplete="off">
+        </div>
+        <div>
+          <label for="ot-mult" data-i18n="tool.ot.mult">Overtime rate multiplier</label>
+          <input type="number" id="ot-mult" min="1" max="5" step="any" inputmode="decimal" placeholder="1.5" autocomplete="off">
+        </div>
+      </div>
 
       <p id="pay-empty" data-i18n="tool.pay.enterRate" style="margin:14px 0 0;color:var(--muted);">Enter an hourly rate above to see your pay estimate.</p>
       <div id="pay-body" hidden aria-live="polite">

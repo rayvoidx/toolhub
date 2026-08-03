@@ -154,7 +154,11 @@
     url: { pattern: "https?:\\/\\/[^\\s]+", flags: "g" },
     ipv4: { pattern: "\\b(?:\\d{1,3}\\.){3}\\d{1,3}\\b", flags: "g" },
     digits: { pattern: "\\d+", flags: "g" },
-    whitespace: { pattern: "^\\s+|\\s+$", flags: "gm" }
+    whitespace: { pattern: "^\\s+|\\s+$", flags: "gm" },
+    // 국제 전화 표기 폭넓게: 선택적 +국가코드, 구분자는 공백/하이픈/점/괄호
+    phone: { pattern: "\\+?\\d{1,3}[\\s.-]?\\(?\\d{2,4}\\)?[\\s.-]?\\d{3,4}[\\s.-]?\\d{3,4}", flags: "g" },
+    date: { pattern: "\\b\\d{4}-(?:0[1-9]|1[0-2])-(?:0[1-9]|[12]\\d|3[01])\\b", flags: "g" },
+    hex: { pattern: "#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{6})\\b", flags: "g" }
   };
 
   // node 검증용 노출 — 브라우저에는 module 이 없어 건너뛴다
@@ -294,6 +298,18 @@
       errBox.hidden = true;
       summaryEl.textContent = tr("tool.summary.empty", "Enter a pattern to start matching.");
       renderHighlight(text, []);
+      renderList([], false);
+      replaceWrap.hidden = true;
+      return;
+    }
+
+    // 상한 초과 텍스트는 조용히 멈추지 않고 명시적으로 안내 (탭 프리즈 방지)
+    if (text.length > LIM.textLen) {
+      errBox.hidden = false;
+      errBox.textContent = tr("tool.err.toolong", "Test string is too long ({n} characters). Shorten it to {max} characters or less to keep matching fast.")
+        .replace("{n}", fmtInt(text.length)).replace("{max}", fmtInt(LIM.textLen));
+      summaryEl.textContent = "";
+      renderHighlight("", []);
       renderList([], false);
       replaceWrap.hidden = true;
       return;

@@ -95,12 +95,13 @@
   var STORE_KEY = (cfg.slug || "ovulation-calc") + ":last";
 
   /* ---- 상수 (spec 고정값) ---- */
-  var LUTEAL = 14;         // 황체기: 다음 생리 예정일 − 14일 = 배란 예정일
+  var LUTEAL = 14;         // 황체기 기본값: 다음 생리 예정일 − 14일 = 배란 예정일 (입력으로 덮어쓸 수 있다)
+  var LUTEAL_MIN = 9, LUTEAL_MAX = 17;
   var FERTILE_BEFORE = 5;  // 가임기 시작: 배란 −5일 (정자 생존)
   var FERTILE_AFTER = 1;   // 가임기 끝:  배란 +1일 (난자 생존)
   var ROLL_AFTER = 60;     // 60일 이상 과거면 다가오는 주기로 순방향 롤
   var OLD_DAYS = 365;      // 1년 이상 과거면 경고 (계산은 수행)
-  var CYCLE_MIN = 21, CYCLE_MAX = 45;
+  var CYCLE_MIN = 21, CYCLE_MAX = 60;
   var CYCLES = 3;          // 향후 3주기
 
   /* ---- i18n 헬퍼 ---- */
@@ -158,7 +159,8 @@
 
   /** 핵심 계산. lmp(마지막 생리 시작일), cycle(주기 일수), today → 향후 CYCLES 주기.
    *  lmp 가 ROLL_AFTER 일 이상 과거면 다음 생리 예정일이 오늘 이후가 될 때까지 주기를 순방향으로 굴린다. */
-  function computeCycles(lmp, cycle, today) {
+  function computeCycles(lmp, cycle, today, luteal) {
+    var lut = (luteal == null) ? LUTEAL : luteal;
     var anchor = lmp, rolled = false;
     if (dayDiff(lmp, today) >= ROLL_AFTER) {
       var guard = 0;
@@ -172,7 +174,7 @@
     var list = [];
     for (var k = 1; k <= CYCLES; k++) {
       var period = addDays(anchor, cycle * k);
-      var ovul = addDays(period, -LUTEAL);
+      var ovul = addDays(period, -lut);
       list.push({
         index: k,
         period: period,
@@ -229,6 +231,7 @@
   var els = {
     lmp: document.getElementById("ov-lmp"),
     cycle: document.getElementById("ov-cycle"),
+    luteal: document.getElementById("ov-luteal"),
     calc: document.getElementById("ov-calc"),
     clear: document.getElementById("ov-clear"),
     status: document.getElementById("ov-status"),
@@ -248,7 +251,7 @@
   /* ---- 상태 저장/복원: localStorage 만 (URL 파라미터에는 담지 않는다 — 민감 정보 링크 유출 방지) ---- */
   function saveState() {
     try {
-      localStorage.setItem(STORE_KEY, JSON.stringify({ lmp: els.lmp.value, cycle: els.cycle.value }));
+      localStorage.setItem(STORE_KEY, JSON.stringify({ lmp: els.lmp.value, cycle: els.cycle.value, luteal: els.luteal ? els.luteal.value : "" }));
     } catch (e) { /* private mode — 저장만 실패, 계산은 계속된다 */ }
   }
   function loadState() {
@@ -258,6 +261,7 @@
       var o = JSON.parse(raw);
       if (o && typeof o.lmp === "string" && parseISO(o.lmp)) els.lmp.value = o.lmp;
       if (o && o.cycle != null && String(o.cycle) !== "") els.cycle.value = String(o.cycle);
+      if (o && o.luteal != null && String(o.luteal) !== "" && els.luteal) els.luteal.value = String(o.luteal);
     } catch (e) { /* 손상된 값은 무시하고 기본값으로 시작 */ }
   }
 
@@ -294,8 +298,21 @@
     if (Math.floor(cycle) !== cycle) { showMsg(t("tool.err.cycleInt"), true); return; }
     if (cycle < CYCLE_MIN || cycle > CYCLE_MAX) { showMsg(t("tool.err.cycleRange"), true); return; }
 
+    // 2-b) 황체기(선택) — 비우면 기본 14일
+    var luteal = LUTEAL;
+    if (els.luteal) {
+      var lutRaw = String(els.luteal.value).trim();
+      if (lutRaw !== "") {
+        luteal = Number(lutRaw);
+        if (!isFinite(luteal) || Math.floor(luteal) !== luteal ||
+            luteal < LUTEAL_MIN || luteal > LUTEAL_MAX) {
+          showMsg(t("tool.err.lutealRange"), true); return;
+        }
+      }
+    }
+
     // 3) 계산
-    var res = computeCycles(lmp, cycle, today);
+    var res = computeCycles(lmp, cycle, today, luteal);
     lastResult = res;
     var c1 = res.cycles[0];
 
@@ -407,12 +424,14 @@
   els.lmp.max = isoOf(startOfToday());   // 브라우저 피커에서도 미래 날짜를 막는다 (JS 검증은 별도 유지)
   els.lmp.addEventListener("input", function () { render(true); saveState(); });
   els.cycle.addEventListener("input", function () { render(true); saveState(); });
+  if (els.luteal) els.luteal.addEventListener("input", function () { render(true); saveState(); });
   if (els.calc) els.calc.addEventListener("click", function () { render(true); saveState(); });
   if (els.clear) {
     els.clear.addEventListener("click", function () {
       try { localStorage.removeItem(STORE_KEY); } catch (e) { /* noop */ }
       els.lmp.value = "";
       els.cycle.value = "28";
+      if (els.luteal) els.luteal.value = "14";
       calOffset = 0;
       render(true);
       flash(t("tool.cleared"));

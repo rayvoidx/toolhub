@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="JSON Diff — Compare Two JSON Files Online">
 <meta property="og:description" content="Compare two JSON files and see every added, removed and changed value with its exact path. A deep recursive diff that runs entirely in your browser.">
 <meta property="og:url" content="https://tool-hub.me/json-diff/">
-<meta property="og:image" content="https://tool-hub.me/json-diff/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/json-diff/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#9333ea">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSON Diff",
+      "item": "https://tool-hub.me/json-diff/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,30 +130,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "JSON Diff",
-      "item": "https://tool-hub.me/json-diff/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
-<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
 #tool, #tool * { min-width: 0; }
 #tool { max-width: 100%; }
 #tool table { display: block; max-width: 100%; overflow-x: auto; }
@@ -141,6 +141,7 @@ ADSENSE:END -->
 #tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
 .guide-content table { display: block; max-width: 100%; overflow-x: auto; }
 main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
 </style>
 </head>
 <body>
@@ -204,6 +205,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="json-b" data-i18n="tool.b.label">Changed JSON</label>
         <textarea id="json-b" spellcheck="false" autocomplete="off" placeholder='{"name":"Ada","role":"editor","tags":["a","c"],"active":true}'></textarea>
       </div>
+    </div>
+
+    <div style="margin-top:12px;max-width:220px;">
+      <label for="row-limit" data-i18n="tool.rows.label">Show in list</label>
+      <select id="row-limit">
+        <option value="100">100</option>
+        <option value="500" selected>500</option>
+        <option value="2000">2000</option>
+        <option value="all" data-i18n="tool.rows.all">All</option>
+      </select>
     </div>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Compare</button>

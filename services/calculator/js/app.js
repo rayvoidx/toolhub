@@ -205,6 +205,10 @@
         if (tok.v === "sin") r2 = Math.sin(toRadInternal(x));
         else if (tok.v === "cos") r2 = Math.cos(toRadInternal(x));
         else if (tok.v === "tan") r2 = Math.tan(toRadInternal(x));
+        else if (tok.v === "asin") { if (x < -1 || x > 1) throw new CalcError("domain"); r2 = fromRadInternal(Math.asin(x)); }
+        else if (tok.v === "acos") { if (x < -1 || x > 1) throw new CalcError("domain"); r2 = fromRadInternal(Math.acos(x)); }
+        else if (tok.v === "atan") r2 = fromRadInternal(Math.atan(x));
+        else if (tok.v === "sqr") r2 = x * x;
         else if (tok.v === "sqrt") { if (x < 0) throw new CalcError("negsqrt"); r2 = Math.sqrt(x); }
         else if (tok.v === "log") { if (x <= 0) throw new CalcError("nonpositive"); r2 = Math.log(x) / Math.LN10; }
         else if (tok.v === "ln") { if (x <= 0) throw new CalcError("nonpositive"); r2 = Math.log(x); }
@@ -218,6 +222,8 @@
   }
   // deg/rad 모드는 DOM 영역의 가변 상태이므로 함수 참조만 여기 두고 아래에서 재정의한다.
   var toRadInternal = function (x) { return x; };
+  // 역삼각함수 결과(라디안)를 현재 각도 모드로 되돌린다 — DEG 모드면 도 단위로.
+  var fromRadInternal = function (x) { return x; };
 
   // 완결성(닫힌 괄호·완결된 마지막 토큰) 검사 후 평가 — 순수 함수, DOM 비의존
   function evaluateTokens(toks) {
@@ -275,6 +281,7 @@
     negsqrt: "tool.err.negsqrt",
     nonpositive: "tool.err.nonpositive",
     infinite: "tool.err.infinite",
+    domain: "tool.err.domain",
     malformed: "tool.err.malformed"
   };
 
@@ -291,7 +298,8 @@
   }
 
   var OP_DISPLAY = { "+": " + ", "-": " − ", "*": " × ", "/": " ÷ ", "^": "^" };
-  var FUNC_DISPLAY = { sin: "sin", cos: "cos", tan: "tan", sqrt: "√", log: "log", ln: "ln" };
+  var FUNC_DISPLAY = { sin: "sin", cos: "cos", tan: "tan", sqrt: "√", log: "log", ln: "ln",
+    asin: "sin⁻¹", acos: "cos⁻¹", atan: "tan⁻¹", sqr: "sqr" };
   function tokenDisplay(tok) {
     if (tok.t === "num") {
       if (tok.const) return (tok.neg ? "-" : "") + (tok.const === "pi" ? "π" : "e");
@@ -320,6 +328,7 @@
   var errorMsg = "";
 
   toRadInternal = function (x) { return degMode ? (x * Math.PI / 180) : x; };
+  fromRadInternal = function (x) { return degMode ? (x * 180 / Math.PI) : x; };
 
   /* ---- 영속화 ---- */
   function loadState() {

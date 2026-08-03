@@ -94,7 +94,7 @@
   if (!c0El || !rateEl || !body || !result) return;
 
   var cfEls = [];
-  for (var i = 1; i <= 6; i++) { var el = $("cf" + i); if (el) cfEls.push(el); }
+  for (var i = 1; i <= 10; i++) { var el = $("cf" + i); if (el) cfEls.push(el); }
   if (!cfEls.length) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
@@ -147,6 +147,18 @@
     return null;
   }
 
+  // 할인 회수기간 — 누적 현재가치가 0을 넘는 시점. 유입이 0 이하인 해에서는 보간하지 않는다.
+  function dpaybackOf(r, c0, flows) {
+    var cum = -c0;
+    for (var i = 0; i < flows.length; i++) {
+      var pv = flows[i] / Math.pow(1 + r, i + 1);
+      if (!isFinite(pv)) return null;
+      if (cum + pv >= 0) return pv > 0 ? i + (-cum) / pv : i + 1;
+      cum += pv;
+    }
+    return null;
+  }
+
   function row(cells, cls) {
     var tr = document.createElement("tr");
     for (var i = 0; i < cells.length; i++) {
@@ -193,6 +205,8 @@
     $("r-verdict").textContent = t(npv >= 0 ? "tool.verdict.accept" : "tool.verdict.reject");
     $("r-irr").textContent = irr === null ? t("tool.r.irr.none") : (irr * 100).toFixed(2) + "%";
     $("r-payback").textContent = pb === null ? t("tool.r.payback.none") : pb.toFixed(2) + " " + t("tool.r.years");
+    var dpb = dpaybackOf(r, c0, flows);
+    $("r-dpayback").textContent = dpb === null ? t("tool.r.payback.none") : dpb.toFixed(2) + " " + t("tool.r.years");
     $("r-pi").textContent = pi.toFixed(3);
 
     while (body.firstChild) body.removeChild(body.firstChild);

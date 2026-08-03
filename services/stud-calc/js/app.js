@@ -91,6 +91,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var unitEl = $("unit"), lenEl = $("length"), spacingEl = $("spacing");
   var cornersEl = $("corners"), doorsEl = $("doors"), windowsEl = $("windows");
+  var wasteEl = $("waste"), plateLenEl = $("plate-len");
   var result = $("result"), errEl = $("err");
   if (!unitEl || !lenEl || !spacingEl) return;
 
@@ -98,9 +99,9 @@
 
   var FT_PER_M = 3.280839895;
   var MAX_FT = 500;
-  var WASTE = 1.10;
+  var WASTE_PCT = 10;            // 기본 로스율 — 입력이 비면 이 값
   var PLATE_RUNS = 3;            // 하부 1 + 상부 2 (더블 톱 플레이트)
-  var STICK_FT = 8;              // 플레이트용 표준 8ft 자재
+  var STICK_FT = 8;              // 플레이트 자재 기본 길이(ft)
   var EPS = 1e-9;                // 288/16 = 18.0000000001 로 칸이 하나 늘지 않게
 
   var PER_CORNER = 3, PER_DOOR = 4, PER_WINDOW = 6;
@@ -147,14 +148,21 @@
     var corners = count(cornersEl), doors = count(doorsEl), windows = count(windowsEl);
     if (isNaN(corners) || isNaN(doors) || isNaN(windows)) return fail("tool.err.count");
 
+    var waste = WASTE_PCT;
+    if (wasteEl && !blank(wasteEl)) {
+      waste = num(wasteEl);
+      if (!isFinite(waste) || waste < 0 || waste > 50) return fail("tool.err.waste");
+    }
+    var stickFt = plateLenEl ? (parseFloat(plateLenEl.value) || STICK_FT) : STICK_FT;
+
     var spacing = parseFloat(spacingEl.value) || 16;
     // 간격이 만드는 것은 칸 수 — 양 끝을 막으려면 스터드가 하나 더 필요하다
     var base = Math.ceil(lenFt * 12 / spacing - EPS) + 1;
     var extra = corners * PER_CORNER + doors * PER_DOOR + windows * PER_WINDOW;
-    var studs = Math.ceil((base + extra) * WASTE - EPS);
+    var studs = Math.ceil((base + extra) * (1 + waste / 100) - EPS);
 
     var plateFt = PLATE_RUNS * lenFt;
-    var sticks = Math.ceil(plateFt / STICK_FT - EPS);
+    var sticks = Math.ceil(plateFt / stickFt - EPS);
 
     $("r-base").textContent = fmt(base);
     $("r-extra").textContent = fmt(extra);
@@ -163,7 +171,7 @@
     // 미터 입력이면 피트 값 옆에 원 단위도 같이 — 8ft 자재 규격은 그대로 유지
     if (metric) plateTxt += " (" + fmt(plateFt / FT_PER_M, 1) + " " + t("tool.u.m") + ")";
     $("r-plate").textContent = plateTxt;
-    $("r-sticks").textContent = fmt(sticks);
+    $("r-sticks").textContent = fmt(sticks) + " \u00d7 " + stickFt + " " + t("tool.u.ft");
     $("r-total").textContent = fmt(studs + sticks);
 
     errEl.hidden = true;
@@ -171,10 +179,10 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [lenEl, cornersEl, doorsEl, windowsEl].forEach(function (el) {
+  [lenEl, cornersEl, doorsEl, windowsEl, wasteEl].forEach(function (el) {
     if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [unitEl, spacingEl].forEach(function (el) {
+  [unitEl, spacingEl, plateLenEl].forEach(function (el) {
     if (el) el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   unitEl.addEventListener("change", syncUnits);

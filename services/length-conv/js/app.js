@@ -93,8 +93,8 @@
   var LS_KEY = (cfg.slug || "length-conv") + ":units";
 
   // calc-core:start — 순수 계산 코어 (node 단위검증 대상, 미터 기준 환산 계수)
-  var FACTOR = { mm: 0.001, cm: 0.01, m: 1, km: 1000, in: 0.0254, ft: 0.3048, yd: 0.9144, mi: 1609.344 };
-  var UNITS = ["mm", "cm", "m", "km", "in", "ft", "yd", "mi"];
+  var FACTOR = { um: 0.000001, mm: 0.001, cm: 0.01, m: 1, km: 1000, in: 0.0254, ft: 0.3048, yd: 0.9144, mi: 1609.344, nmi: 1852 };
+  var UNITS = ["um", "mm", "cm", "m", "km", "in", "ft", "yd", "mi", "nmi"];
 
   // value(from 단위) → to 단위 : 미터를 매개로 환산
   function convert(value, from, to) {
@@ -143,7 +143,7 @@
   var noteEl = $("lc-note");
   if (!valEl || !fromEl || !toEl || !eqEl || !noteEl) return;
 
-  var ABBR = { mm: "mm", cm: "cm", m: "m", km: "km", in: "in", ft: "ft", yd: "yd", mi: "mi" };
+  var ABBR = { um: "\u00b5m", mm: "mm", cm: "cm", m: "m", km: "km", in: "in", ft: "ft", yd: "yd", mi: "mi", nmi: "nmi" };
 
   function t(key, fb) {
     var v = (window.I18N && window.I18N.t) ? window.I18N.t(key) : null;

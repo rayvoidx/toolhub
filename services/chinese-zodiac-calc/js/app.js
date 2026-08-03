@@ -253,7 +253,8 @@
   if (!yearEl2 || !cardEl || !yearsBody) return;
 
   // 미래 연도(아직 태어나지 않은 연도) 방지 — 셸의 연도 표기와 동일한 로컬 연도 기준
-  var MAX_YEAR = new Date().getFullYear();
+  // 출산 예정 등 가까운 미래 연도도 조회 가능 — 음력설 표가 있는 2030년까지 허용
+  var MAX_YEAR = Math.max(new Date().getFullYear(), LNY_MAX_YEAR);
   yearEl2.max = String(MAX_YEAR);
 
   /* ---- 월 셀렉트 옵션 (Intl 로 현지화된 월 이름 — 번역 카탈로그에 12개월 키를 두지 않는다) ---- */
@@ -297,6 +298,11 @@
     cardEl.hidden = true; emptyEl.hidden = true; errEl.hidden = false;
     errEl.textContent = tr("tool.err.year", "Enter a valid birth year, e.g. between 1901 and {max}.").replace("{max}", String(MAX_YEAR));
   }
+  function showDayErr(maxDay) {
+    cardEl.hidden = true; emptyEl.hidden = true; errEl.hidden = false;
+    errEl.textContent = tr("tool.err.day", "That day doesn't exist in the month you picked — enter a day between 1 and {max}.").replace("{max}", String(maxDay));
+  }
+  function daysInMonth(year, month) { return new Date(Date.UTC(year, month, 0)).getUTCDate(); }
   function parseIntOrNull(raw) {
     if (raw == null || String(raw).trim() === "") return null;
     var n = parseInt(raw, 10);
@@ -309,6 +315,11 @@
 
     var month = parseIntOrNull(monthEl.value);
     var day = parseIntOrNull(dayEl.value);
+    // 잘못된 날짜(2월 30일, 45일 등)는 조용히 무시하지 않고 명시적으로 안내한다
+    if (day != null) {
+      var dmax = month != null ? daysInMonth(year, month) : 31;
+      if (day < 1 || day > dmax) { showDayErr(dmax); return; }
+    }
     var z = computeZodiac(year, month, day);
 
     symbolEl.textContent = z.symbol;

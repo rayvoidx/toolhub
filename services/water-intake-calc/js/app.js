@@ -99,7 +99,8 @@
   var ACT = {                  // 활동량 보정(mL) — select value 로 사용
     "0":   { key: "tool.activity.low",      fallback: "Low — mostly sitting (+0 mL)" },
     "350": { key: "tool.activity.moderate", fallback: "Moderate — exercise 1–3×/week (+350 mL)" },
-    "700": { key: "tool.activity.high",     fallback: "High — exercise 4+×/week or physical work (+700 mL)" }
+    "700": { key: "tool.activity.high",     fallback: "High — exercise 4+×/week or physical work (+700 mL)" },
+    "1050": { key: "tool.activity.veryhigh",  fallback: "Very high — twice-daily training or hot outdoor work (+1050 mL)" }
   };
 
   function $(id) { return document.getElementById(id); }
@@ -114,6 +115,7 @@
   var outDetail = $("r-detail");
   var outCups = $("r-cups");
   var outBottles = $("r-bottles");
+  var bottleEl = $("bottle-select");
   var hypoEl = $("r-hypo");
   if (!weightEl || !activityEl || !calcBtn || !box) return;
 
@@ -131,7 +133,8 @@
   function toKg(weight, unit) {
     return unit === "lb" ? weight / LB_PER_KG : weight;
   }
-  function computeIntake(weightKg, adjustMl) {
+  function computeIntake(weightKg, adjustMl, bottleMl) {
+    var bottle = (bottleMl > 0) ? bottleMl : 500;   // 병 용량 (기본 500 mL)
     var base = weightKg * ML_PER_KG;         // 기본 권장량
     var total = base + adjustMl;             // + 활동량 보정
     return {
@@ -140,7 +143,8 @@
       liters: total / 1000,
       floz: total / 29.5735,                 // US fluid ounce
       cups: total / 236.6,                   // US 8 fl oz 컵
-      bottles: total / 500,                  // 500 mL 생수병
+      bottles: total / bottle,               // 사용자가 고른 병 용량
+      bottleMl: bottle,
       extreme: weightKg >= EXTREME_KG,       // 이상값 경고 (bmi-calc 패턴)
       hypo: total > HYPO_ML                  // 과다 섭취 주의
     };
@@ -185,7 +189,8 @@
     outDetail.textContent = fill(t("tool.result.detail", "{ml} mL · {oz} fl oz"),
       { ml: group(Math.round(r.ml)), oz: group(Math.round(r.floz)) });
     outCups.textContent = fill(t("tool.result.cups", "≈ {n} cups (8 fl oz)"), { n: d1(r.cups) });
-    outBottles.textContent = fill(t("tool.result.bottles", "≈ {n} bottles (500 mL)"), { n: d1(r.bottles) });
+    outBottles.textContent = fill(t("tool.result.bottles", "≈ {n} bottles ({size} mL)"),
+      { n: d1(r.bottles), size: group(r.bottleMl) });
   }
 
   function calculate() {
@@ -208,12 +213,14 @@
     }
 
     var factorStr = ACT[activityEl.value] ? activityEl.value : "0";
-    var r = computeIntake(toKg(weight, unit), Number(factorStr));
+    var bottleMl = bottleEl ? Number(bottleEl.value) : 500;
+    if (!(bottleMl > 0)) bottleMl = 500;
+    var r = computeIntake(toKg(weight, unit), Number(factorStr), bottleMl);
     render(r, factorStr);
 
     try {
       localStorage.setItem(LS_KEY, JSON.stringify({
-        weight: weight, unit: unit, activity: factorStr
+        weight: weight, unit: unit, activity: factorStr, bottle: bottleMl
       }));
     } catch (e) { /* private mode — 저장 실패는 무시 */ }
   }
@@ -227,6 +234,7 @@
         if (p.unit === "kg" || p.unit === "lb") setRadio("unit", p.unit);
         if (p.weight != null && p.weight !== "") weightEl.value = p.weight;
         if (ACT[p.activity]) activityEl.value = p.activity;
+        if (bottleEl && p.bottle && bottleEl.querySelector('option[value="' + p.bottle + '"]')) bottleEl.value = p.bottle;
       }
     } catch (e) { /* 접근 불가·파싱 실패 — 빈 폼으로 시작 */ }
     applyUnitBounds();

@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Marks Percentage Calculator — Exam Marks to Percent">
 <meta property="og:description" content="Calculate your marks percentage from up to six subjects. Enter marks obtained and total marks for the overall exam percentage, subject split and grade band.">
 <meta property="og:url" content="https://tool-hub.me/marks-percentage-calc/">
-<meta property="og:image" content="https://tool-hub.me/marks-percentage-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/marks-percentage-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b45309">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Marks Percentage Calculator",
+      "item": "https://tool-hub.me/marks-percentage-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Marks Percentage Calculator",
-      "item": "https://tool-hub.me/marks-percentage-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -173,6 +183,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tool ul.breaklist li { font-size:14px; padding:4px 0; border-bottom:1px solid var(--line); }
       #tool .subtle { font-size:13px; color:var(--muted); }
       #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      #tool .srow[hidden] { display:none; }
+      #tool button.addrow { background:none; border:1px dashed var(--line); color:var(--muted); border-radius:8px; padding:8px 12px; font-size:13px; cursor:pointer; margin:4px 0 10px; width:100%; }
+      #tool button.addrow:hover { color:var(--accent); border-color:var(--accent); }
       @media(max-width:480px){ #tool .srow { grid-template-columns:64px 1fr 1fr; gap:6px; } #tool .srow.head { font-size:11px; } }
     </style>
 
@@ -214,6 +227,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="number" id="o6" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
       <input type="number" id="m6" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
     </div>
+    <div class="srow" data-extra hidden>
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 7</div>
+      <input type="number" id="o7" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m7" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow" data-extra hidden>
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 8</div>
+      <input type="number" id="o8" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m8" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow" data-extra hidden>
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 9</div>
+      <input type="number" id="o9" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m9" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow" data-extra hidden>
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 10</div>
+      <input type="number" id="o10" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m10" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow" data-extra hidden>
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 11</div>
+      <input type="number" id="o11" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m11" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+    <div class="srow" data-extra hidden>
+      <div class="rlabel"><span data-i18n="tool.h.subject">Subject</span> 12</div>
+      <input type="number" id="o12" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.obtained" aria-label="Marks obtained">
+      <input type="number" id="m12" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.h.total" aria-label="Out of">
+    </div>
+
+    <button type="button" id="add-row" class="addrow" data-i18n="tool.addrow">+ Add subject</button>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate percentage</button>
 
@@ -227,6 +272,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.max">Total maximum</div><div class="rc-val" id="r-max">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.count">Subjects counted</div><div class="rc-val" id="r-count">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.grade">Grade band</div><div class="rc-val" id="r-grade">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cgpa">CGPA (CBSE, ÷ 9.5)</div><div class="rc-val" id="r-cgpa">—</div></div>
       </div>
       <p class="listtitle" data-i18n="tool.r.breakdown">Per-subject breakdown</p>
       <ul class="breaklist" id="r-breaklist"></ul>

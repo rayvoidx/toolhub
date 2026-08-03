@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var hres = $("hres"), vres = $("vres"), diag = $("diag");
-  var result = $("result"), errEl = $("err");
+  var result = $("result"), errEl = $("err"), unit = $("diag-unit");
   if (!hres || !vres || !diag) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
@@ -112,6 +112,7 @@
 
   function calc() {
     var w = num(hres), h = num(vres), d = num(diag);
+    if (unit && unit.value === "cm" && isFinite(d)) d = d / 2.54;
     if (isNaN(w) || isNaN(h) || isNaN(d)) return fail("tool.err.empty");
     if (w <= 0 || h <= 0 || d <= 0) return fail("tool.err.positive");
     if (w > 30000 || h > 30000) return fail("tool.err.res");
@@ -132,6 +133,11 @@
     $("r-dist").textContent = distIn.toFixed(1) + " in / " + (distIn * 2.54).toFixed(0) + " cm";
     $("r-class").textContent = t(densityKey(ppi));
 
+    var hyp = Math.sqrt(w * w + h * h);
+    var wIn = d * w / hyp, hIn = d * h / hyp;
+    $("r-size").textContent = wIn.toFixed(1) + " x " + hIn.toFixed(1) + " in / " +
+      (wIn * 2.54).toFixed(1) + " x " + (hIn * 2.54).toFixed(1) + " cm";
+
     errEl.hidden = true;
     result.hidden = false;
   }
@@ -142,11 +148,21 @@
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
 
+  if (unit) {
+    unit.addEventListener("change", function () {
+      diag.max = unit.value === "cm" ? "305" : "120";
+      var v = num(diag);
+      if (isFinite(v) && v > 0) diag.value = String(Math.round((unit.value === "cm" ? v * 2.54 : v / 2.54) * 10) / 10);
+      if (!result.hidden || !errEl.hidden) calc();
+    });
+  }
+
   var chips = $("screen-chips");
   if (chips) {
     chips.addEventListener("click", function (e) {
       var b = e.target.closest ? e.target.closest(".chip") : null;
       if (!b) return;
+      if (unit) { unit.value = "in"; diag.max = "120"; }
       hres.value = b.getAttribute("data-w");
       vres.value = b.getAttribute("data-h");
       diag.value = b.getAttribute("data-d");

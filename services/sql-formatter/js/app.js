@@ -274,9 +274,10 @@
 
   function repeatStr(s, cnt) { var r = ""; for (var i = 0; i < cnt; i++) r += s; return r; }
   function indentUnitFor(indent) {
-    if (indent === "4") return "    ";
     if (indent === "tab") return "\t";
-    return "  ";
+    var n = parseInt(indent, 10);
+    if (!(n >= 1 && n <= 8)) n = 2;
+    return repeatStr(" ", n);
   }
   function applyCase(word, mode) {
     if (mode === "upper") return word.toUpperCase();
@@ -470,7 +471,25 @@
     var prevTok = null;
     for (var i = 0; i < tokens.length; i++) {
       var tok = tokens[i];
-      if (tok.type === "linecomment" || tok.type === "blockcomment") continue;
+      if (tok.type === "linecomment" || tok.type === "blockcomment") {
+        // 기본은 주석 제거. keepComments 면 한 줄 출력이 깨지지 않도록 블록 주석으로 변환해 보존한다
+        if (!opts.keepComments) continue;
+        var text;
+        if (tok.type === "blockcomment") {
+          // 옵티마이저 힌트(/*+ ... */)가 깨지지 않도록 원문 그대로, 줄바꿈만 공백으로
+          text = tok.text.replace(/\s+/g, " ").trim();
+          if (text.slice(-2) !== "*/") text += " */";
+          if (text === "/* */") continue;
+        } else {
+          var body = tok.text.replace(/^(--|#)\s?/, "").replace(/\*\//g, "* /").trim();
+          if (!body) continue;
+          text = "/* " + body + " */";
+        }
+        var ctok = { type: "punct", text: text };
+        out += (out === "" ? "" : " ") + ctok.text;
+        prevTok = ctok;
+        continue;
+      }
       var displayTok = tok;
       if (tok.type === "keyword") displayTok = { type: "keyword", text: applyCase(tok.text, caseMode) };
       if (out === "") out += displayTok.text;
@@ -512,6 +531,7 @@
   var INDENT_KEY   = "sql-formatter:indent";
   var CASE_KEY     = "sql-formatter:case";
   var REMEMBER_KEY = "sql-formatter:remember";
+  var COMMENTS_KEY = "sql-formatter:keepComments";
   var MODE_KEY     = "sql-formatter:mode";
   var SCAN_MAX     = 2000000; // 이 길이를 넘으면 성능을 위해 즉시 실행 대신 버튼 실행으로 안내
   var DEBOUNCE_MS  = 300;
@@ -520,8 +540,10 @@
   var outputEl   = document.getElementById("sf-output");
   var indentBox  = document.getElementById("sf-indent");
   var indentRow  = document.getElementById("sf-indent-row");
+  var customIndentEl = document.getElementById("sf-indent-custom");
   var caseBox    = document.getElementById("sf-case");
   var rememberEl = document.getElementById("sf-remember");
+  var keepCommentsEl = document.getElementById("sf-keep-comments");
   var badgeEl    = document.getElementById("sf-badge");
   var statsEl    = document.getElementById("sf-stats");
   var messageEl  = document.getElementById("sf-message");
@@ -584,7 +606,12 @@
     paint(formatBtn, mode === "format");
     paint(minifyBtn, mode === "minify");
     var ib = indentButtons();
-    for (var i = 0; i < ib.length; i++) paint(ib[i], ib[i].getAttribute("data-indent") === indent);
+    var custom = isCustomIndent();
+    for (var i = 0; i < ib.length; i++) {
+      var v = ib[i].getAttribute("data-indent");
+      paint(ib[i], v === "custom" ? custom : (!custom && v === indent));
+    }
+    if (customIndentEl) customIndentEl.hidden = !custom;
     var cb = caseButtons();
     for (var j = 0; j < cb.length; j++) paint(cb[j], cb[j].getAttribute("data-case") === caseMode);
     // 압축 모드에서 들여쓰기는 의미가 없다 → 감춘다
@@ -626,7 +653,7 @@
 
     var tk = tokenize(raw);
     var merged = mergeKeywords(tk.tokens);
-    var opts = { indent: indent, caseMode: caseMode };
+    var opts = { indent: indent, caseMode: caseMode, keepComments: !!(keepCommentsEl && keepCommentsEl.checked) };
     var warn = tk.unterminated;
     var out, statsText;
 
@@ -669,8 +696,19 @@
     try { localStorage.setItem(MODE_KEY, mode); } catch (e) { /* private mode */ }
     run(explicit);
   }
+  function isCustomIndent() {
+    return indent !== "2" && indent !== "4" && indent !== "tab";
+  }
+  // 1-8칸 사이로 정규화 — 빈칸·문자·범위 밖 값은 3칸으로 되돌린다
+  function clampCustomIndent() {
+    var n = parseInt(customIndentEl ? customIndentEl.value : "", 10);
+    if (!(n >= 1 && n <= 8)) n = 3;
+    if (customIndentEl && String(n) !== customIndentEl.value) customIndentEl.value = String(n);
+    return String(n);
+  }
   function setIndent(next) {
-    indent = (next === "4" || next === "tab") ? next : "2";
+    if (next === "custom") indent = clampCustomIndent();
+    else indent = (next === "4" || next === "tab") ? next : "2";
     paintToggles();
     savePrefs();
     run(false);
@@ -691,6 +729,7 @@
     try {
       localStorage.setItem(INDENT_KEY, indent);
       localStorage.setItem(CASE_KEY, caseMode);
+      if (keepCommentsEl) localStorage.setItem(COMMENTS_KEY, keepCommentsEl.checked ? "1" : "0");
     } catch (e) { /* noop */ }
   }
   function loadPrefs() {
@@ -700,11 +739,15 @@
     } catch (e) { /* noop */ }
     try {
       var ind = localStorage.getItem(INDENT_KEY);
-      if (ind === "2" || ind === "4" || ind === "tab") indent = ind;
+      if (ind === "tab" || /^[1-8]$/.test(ind || "")) {
+        indent = ind;
+        if (customIndentEl && isCustomIndent()) customIndentEl.value = indent;
+      }
       var md = localStorage.getItem(MODE_KEY);
       if (md === "format" || md === "minify") mode = md;
       var cs = localStorage.getItem(CASE_KEY);
       if (cs === "upper" || cs === "lower" || cs === "unchanged") caseMode = cs;
+      if (keepCommentsEl) keepCommentsEl.checked = (localStorage.getItem(COMMENTS_KEY) === "1");
     } catch (e) { /* noop */ }
     if (shouldRemember()) {
       try {
@@ -771,6 +814,13 @@
   for (var bi = 0; bi < indentBtns.length; bi++) {
     (function (btn) { btn.addEventListener("click", function () { setIndent(btn.getAttribute("data-indent")); }); })(indentBtns[bi]);
   }
+  if (customIndentEl) {
+    // 타이핑 중에는 유효한 값일 때만 반영, 포커스를 벗어날 때 범위 밖 값을 되돌린다
+    customIndentEl.addEventListener("input", function () {
+      if (/^[1-8]$/.test(customIndentEl.value)) setIndent("custom");
+    });
+    customIndentEl.addEventListener("change", function () { setIndent("custom"); });
+  }
   var caseBtns = caseButtons();
   for (var bc = 0; bc < caseBtns.length; bc++) {
     (function (btn) { btn.addEventListener("click", function () { setCaseMode(btn.getAttribute("data-case")); }); })(caseBtns[bc]);
@@ -783,6 +833,9 @@
       run(false);
       try { if (shouldRemember()) localStorage.removeItem(LAST_KEY); } catch (e) { /* noop */ }
     });
+  }
+  if (keepCommentsEl) {
+    keepCommentsEl.addEventListener("change", function () { savePrefs(); run(false); });
   }
   if (rememberEl) {
     rememberEl.addEventListener("change", function () {

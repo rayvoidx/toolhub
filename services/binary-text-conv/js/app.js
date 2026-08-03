@@ -135,11 +135,24 @@
   /* ---- 문자열 표현 → 바이트 배열 (관용적 파싱: 공백/개행 무시, 형식만 검증) ----
      실패 시 throw — 호출부가 오류 문구를 붙인다 (조용한 실패 금지). */
   function parseBinary(raw) {
-    var s = String(raw == null ? "" : raw).replace(/\s+/g, "");
-    if (s === "") return new Uint8Array(0);
-    if (!/^[01]+$/.test(s) || s.length % 8 !== 0) throw new Error("invalidBinary");
-    var out = [];
-    for (var i = 0; i < s.length; i += 8) out.push(parseInt(s.substr(i, 8), 2));
+    var trimmed = String(raw == null ? "" : raw).trim();
+    if (trimmed === "") return new Uint8Array(0);
+    var groups = trimmed.split(/[\s,]+/).filter(function (x) { return x.length > 0; });
+    var out = [], i, g;
+    // 구분된 그룹이 여럿이면 그룹당 1바이트로 읽는다 (7비트 ASCII 붙여넣기 대응)
+    if (groups.length > 1) {
+      for (i = 0; i < groups.length; i++) {
+        g = groups[i];
+        if (!/^[01]{1,8}$/.test(g)) throw new Error("invalidBinary");
+        out.push(parseInt(g, 2));
+      }
+      return new Uint8Array(out);
+    }
+    g = groups[0];
+    if (!/^[01]+$/.test(g)) throw new Error("invalidBinary");
+    if (g.length <= 8) return new Uint8Array([parseInt(g, 2)]);
+    if (g.length % 8 !== 0) throw new Error("invalidBinary");
+    for (i = 0; i < g.length; i += 8) out.push(parseInt(g.substr(i, 8), 2));
     return new Uint8Array(out);
   }
   function parseHex(raw) {

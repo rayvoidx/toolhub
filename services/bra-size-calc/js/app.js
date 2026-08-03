@@ -127,7 +127,7 @@
     $("r-us").textContent = us;
     $("r-uk").textContent = band + CUP_UK[i] + over;
     $("r-eu").textContent = euBand + CUP_EU[i] + over;
-    $("r-diff").textContent = diff.toFixed(1) + " in";
+    $("r-diff").textContent = diff.toFixed(1) + " in / " + (diff * 2.54).toFixed(1) + " cm";
 
     // 시스터 사이즈: 컵 용량은 그대로 두고 밴드만 ±2 — 표 경계를 넘는 쪽은 뺀다.
     var sis = [];

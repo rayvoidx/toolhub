@@ -259,10 +259,11 @@
 
   /* ---- [beautify] 재-들여쓰기. { 뒤 줄바꿈+들여쓰기, ; 뒤 줄바꿈, } 는 들여쓰기 감소 후 단독 줄.
      문자열/url 은 원문 그대로 현재 줄에 이어붙이고, 주석은 독립된 줄로 보존한다. ---- */
-  function beautifyCSS(css) {
+  function beautifyCSS(css, indentUnit) {
+    var unit = typeof indentUnit === "string" && indentUnit !== "" ? indentUnit : "  ";
     var tokens = tokenize(css);
     var out = [], indent = 0, line = "";
-    function ind() { var s = ""; for (var i = 0; i < indent; i++) s += "  "; return s; }
+    function ind() { var s = ""; for (var i = 0; i < indent; i++) s += unit; return s; }
     function pushLine() {
       var t = line.replace(/\s+$/, "");
       if (t !== "") out.push(ind() + t);
@@ -373,6 +374,15 @@
   var tabMin = $("mode-minify"), tabBeau = $("mode-beautify");
   var optsWrap = $("minify-opts");
   var optComments = $("opt-comments"), optHex = $("opt-hex"), optZero = $("opt-zero");
+  var beautyWrap = $("beautify-opts"), optIndent = $("opt-indent");
+  // 들여쓰기 선택값 → 실제 문자열. 알 수 없는 값은 기본 2칸.
+  function indentUnit() {
+    var v = optIndent ? optIndent.value : "2";
+    if (v === "tab") return "\t";
+    var n = parseInt(v, 10);
+    if (!isFinite(n) || n < 1 || n > 8) return "  ";
+    return new Array(n + 1).join(" ");
+  }
   var inputEl = $("css-input"), runBtn = $("css-run"), sampleBtn = $("css-sample"), clearBtn = $("css-clear");
   var errEl = $("css-err");
   var resultEl = $("result"), emptyEl = $("result-empty"), bodyEl = $("result-body");
@@ -410,6 +420,7 @@
         comments: optComments.checked,
         hex: optHex.checked,
         zero: optZero.checked,
+        indent: optIndent ? optIndent.value : "2",
         input: inputEl.value
       }));
     } catch (e) { /* private mode — 저장만 실패, 동작은 정상 */ }
@@ -424,6 +435,7 @@
     tabMin.setAttribute("aria-selected", isMin ? "true" : "false");
     tabBeau.setAttribute("aria-selected", !isMin ? "true" : "false");
     optsWrap.hidden = !isMin;
+    if (beautyWrap) beautyWrap.hidden = isMin;
     runBtn.textContent = tr(isMin ? "tool.run.minify" : "tool.run.beautify");
     render();
     saveState();
@@ -453,7 +465,7 @@
     try {
       out = mode === "minify"
         ? minifyCSS(src, { stripComments: optComments.checked, shortenHex: optHex.checked, stripZero: optZero.checked })
-        : beautifyCSS(src);
+        : beautifyCSS(src, indentUnit());
     } catch (e) {
       errEl.textContent = tr("tool.err.parse");
       errEl.hidden = false;
@@ -540,7 +552,7 @@
     renderTimer = setTimeout(render, 150);
   }
   inputEl.addEventListener("input", scheduleRender);
-  [optComments, optHex, optZero].forEach(function (el) {
+  [optComments, optHex, optZero, optIndent].forEach(function (el) {
     if (el) el.addEventListener("change", render);
   });
   if (runBtn) runBtn.addEventListener("click", render);
@@ -574,6 +586,7 @@
       if (typeof st.comments === "boolean") optComments.checked = st.comments;
       if (typeof st.hex === "boolean") optHex.checked = st.hex;
       if (typeof st.zero === "boolean") optZero.checked = st.zero;
+      if (optIndent && typeof st.indent === "string" && /^(2|3|4|8|tab)$/.test(st.indent)) optIndent.value = st.indent;
       if (typeof st.input === "string") inputEl.value = st.input;
     }
     setMode(mode);

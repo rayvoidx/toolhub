@@ -284,6 +284,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var inputEl = $("cj-input"), dropEl = $("cj-drop"), browseBtn = $("cj-browse"), fileEl = $("cj-file");
   var headerEl = $("cj-header"), typesEl = $("cj-types"), delimEl = $("cj-delim");
+  var delimCustomEl = $("cj-delim-custom");
   var prettyBtn = $("cj-style-pretty"), minBtn = $("cj-style-min");
   var emptyEl = $("cj-empty"), outWrap = $("cj-out-wrap"), statsEl = $("cj-stats");
   var outputEl = $("cj-output"), copyBtn = $("cj-copy"), downloadBtn = $("cj-download"), sampleBtn = $("cj-sample");
@@ -295,7 +296,7 @@
   var lastSourceName = null;
 
   /* ---- 옵션 저장/복원 — 원문 CSV 는 저장하지 않는다(민감정보 배제, ad-copy-limit-check 와 동일 원칙) ---- */
-  var opts = { header: true, types: true, delim: "auto", style: "pretty" };
+  var opts = { header: true, types: true, delim: "auto", custom: "", style: "pretty" };
   try {
     var rawOpts = localStorage.getItem(OPTS_KEY);
     if (rawOpts) {
@@ -303,7 +304,8 @@
       if (p && typeof p === "object") {
         if (typeof p.header === "boolean") opts.header = p.header;
         if (typeof p.types === "boolean") opts.types = p.types;
-        if (p.delim === "auto" || p.delim === "," || p.delim === ";" || p.delim === "\t") opts.delim = p.delim;
+        if (p.delim === "auto" || p.delim === "," || p.delim === ";" || p.delim === "\t" || p.delim === "|" || p.delim === "custom") opts.delim = p.delim;
+        if (typeof p.custom === "string") opts.custom = p.custom.slice(0, 1);
         if (p.style === "pretty" || p.style === "minified") opts.style = p.style;
       }
     }
@@ -312,11 +314,14 @@
   headerEl.checked = opts.header;
   typesEl.checked = opts.types;
   delimEl.value = opts.delim;
+  if (delimEl.value !== opts.delim) { delimEl.value = "auto"; opts.delim = "auto"; } // 저장값이 옵션에 없을 때
+  if (delimCustomEl) { delimCustomEl.value = opts.custom; delimCustomEl.hidden = delimEl.value !== "custom"; }
 
   function saveOpts() {
     try {
       localStorage.setItem(OPTS_KEY, JSON.stringify({
-        header: headerEl.checked, types: typesEl.checked, delim: delimEl.value, style: style
+        header: headerEl.checked, types: typesEl.checked, delim: delimEl.value,
+        custom: delimCustomEl ? delimCustomEl.value.slice(0, 1) : "", style: style
       }));
     } catch (e) { /* noop */ }
   }
@@ -360,7 +365,15 @@
       return;
     }
     var clean = text.replace(/^﻿/, "");
-    var delim = delimEl.value === "auto" ? detectDelimiter(clean) : delimEl.value;
+    var delim;
+    if (delimEl.value === "custom") {
+      var cd = delimCustomEl ? delimCustomEl.value.slice(0, 1) : "";
+      // 한 글자여야 하고, 따옴표·개행은 파서 문법과 충돌해 구분자로 쓸 수 없다
+      if (cd === "" || cd === '"' || cd === "\n" || cd === "\r") { showError("tool.err.delimBad"); return; }
+      delim = cd;
+    } else {
+      delim = delimEl.value === "auto" ? detectDelimiter(clean) : delimEl.value;
+    }
     var rows = parseCSV(clean, delim);
     var built = buildResult(rows, headerEl.checked, typesEl.checked);
     lastResult = {
@@ -547,7 +560,14 @@
   });
   headerEl.addEventListener("change", function () { saveOpts(); convert(); });
   typesEl.addEventListener("change", function () { saveOpts(); convert(); });
-  delimEl.addEventListener("change", function () { saveOpts(); convert(); });
+  delimEl.addEventListener("change", function () {
+    if (delimCustomEl) {
+      delimCustomEl.hidden = delimEl.value !== "custom";
+      if (delimEl.value === "custom") delimCustomEl.focus();
+    }
+    saveOpts(); convert();
+  });
+  if (delimCustomEl) delimCustomEl.addEventListener("input", function () { saveOpts(); convert(); });
   prettyBtn.addEventListener("click", function () { setStyle("pretty"); });
   minBtn.addEventListener("click", function () { setStyle("minified"); });
 

@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Lean Body Mass Calculator — LBM &amp; Fat-Free Mass">
 <meta property="og:description" content="Work out your lean body mass from height, weight and sex with the Boer, James and Hume formulas, or directly from a known body fat percentage.">
 <meta property="og:url" content="https://tool-hub.me/lbm-calc/">
-<meta property="og:image" content="https://tool-hub.me/lbm-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/lbm-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#9f1239">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lean Body Mass Calculator",
+      "item": "https://tool-hub.me/lbm-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Lean Body Mass Calculator",
-      "item": "https://tool-hub.me/lbm-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -183,11 +193,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="height" data-i18n="tool.height.label">Height</label>
         <input type="number" id="height" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="175">
       </div>
+      <div id="h2-wrap" hidden>
+        <label for="height2" data-i18n="tool.hunit.in">inches</label>
+        <input type="number" id="height2" inputmode="decimal" min="0" max="11" step="any" autocomplete="off" placeholder="9">
+      </div>
       <div>
         <label for="hunit" data-i18n="tool.hunit.cm">cm</label>
         <select id="hunit">
           <option value="cm" data-i18n="tool.hunit.cm">cm</option>
           <option value="in" data-i18n="tool.hunit.in">inches</option>
+          <option value="ftin" data-i18n="tool.hunit.ftin">ft + in</option>
         </select>
       </div>
     </div>
@@ -197,11 +212,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="weight" data-i18n="tool.weight.label">Weight</label>
         <input type="number" id="weight" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="80">
       </div>
+      <div id="w2-wrap" hidden>
+        <label for="weight2" data-i18n="tool.wunit.lb">pounds</label>
+        <input type="number" id="weight2" inputmode="decimal" min="0" max="13" step="any" autocomplete="off" placeholder="5">
+      </div>
       <div>
         <label for="wunit" data-i18n="tool.wunit.kg">kg</label>
         <select id="wunit">
           <option value="kg" data-i18n="tool.wunit.kg">kg</option>
           <option value="lb" data-i18n="tool.wunit.lb">pounds</option>
+          <option value="stlb" data-i18n="tool.wunit.stlb">stone + lb</option>
         </select>
       </div>
     </div>

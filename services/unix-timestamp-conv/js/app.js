@@ -93,7 +93,8 @@
   var UNIT_NAME = {            // 감지 단위 표시용 (셀렉트 라벨과 달리 자릿수 힌트 없는 짧은 이름)
     s: ["tool.nameS", "Seconds"],
     ms: ["tool.nameMs", "Milliseconds"],
-    us: ["tool.nameUs", "Microseconds"]
+    us: ["tool.nameUs", "Microseconds"],
+    ns: ["tool.nameNs", "Nanoseconds"]
   };
 
   /* ============================================================
@@ -112,19 +113,31 @@
     return intPart.length;
   }
 
-  // 자릿수 자동 인식: ≤11=초, 12~14=밀리초, 15~17=마이크로초, 18+ = 판단 보류
+  // 자릿수 자동 인식: ≤11=초, 12~14=밀리초, 15~17=마이크로초, 18~19=나노초, 20+ = 판단 보류
   function detectUnit(clean) {
     var n = digitCount(clean);
     if (n <= 11) return "s";
     if (n <= 14) return "ms";
     if (n <= 17) return "us";
+    if (n <= 19) return "ns";
     return null;
   }
 
   function toMillis(value, unit) {
     if (unit === "s") return Math.round(value * 1000);
     if (unit === "us") return Math.round(value / 1000);
+    if (unit === "ns") return Math.round(value / 1e6);
     return Math.round(value);
+  }
+
+  // epoch(ms) → 더 작은 단위 문자열. 정수 ms 에 0 을 붙이는 방식이라 2^53 초과에서도 정확하다.
+  function scaleMsString(ms, zeros) {
+    if (!isFinite(ms)) return null;
+    var n = Math.trunc(ms);
+    if (n === 0) return "0";
+    var s = String(Math.abs(n));
+    while (zeros-- > 0) s += "0";
+    return (n < 0 ? "-" : "") + s;
   }
 
   // raw 문자열 → { ok, ms, unit, digits } | { ok:false, error:"empty|nan|digits|range" }
@@ -194,6 +207,7 @@
       digitCount: digitCount,
       detectUnit: detectUnit,
       toMillis: toMillis,
+      scaleMsString: scaleMsString,
       parseTimestamp: parseTimestamp,
       formatDateTime: formatDateTime,
       relativeParts: relativeParts,
@@ -235,6 +249,7 @@
   var dtInput = $("uts-datetime"), basisSel = $("uts-basis");
   var bHint = $("uts-b-hint"), bErr = $("uts-b-error"), bOut = $("uts-b-out");
   var outS = $("uts-out-s"), outMs = $("uts-out-ms");
+  var outUs = $("uts-out-us"), outNs = $("uts-out-ns");
   var copyErr = $("uts-copy-error");
   if (!tsInput || !dtInput || !nowEl) return;   // 마크업 불일치 시 조용히 오동작하지 않는다
 
@@ -305,7 +320,7 @@
   /* ---- 패널 A: 타임스탬프 → 날짜 ---- */
   var ERR_KEY = {
     nan: ["tool.errNaN", "Numbers only — remove any letters or symbols."],
-    digits: ["tool.errDigits", "That is more than 17 digits, which is too long for a Unix timestamp. Choose the unit manually if you know it."],
+    digits: ["tool.errDigits", "That is more than 19 digits, which is too long for a Unix timestamp. Choose the unit manually if you know it."],
     range: ["tool.errRange", "That value is outside the range this converter can show (about 275,760 BC – AD 275,760)."]
   };
   function renderA() {
@@ -355,6 +370,8 @@
     bOut.hidden = false;
     outS.textContent = String(Math.floor(ms / 1000));
     outMs.textContent = String(ms);
+    if (outUs) outUs.textContent = scaleMsString(ms, 3);
+    if (outNs) outNs.textContent = scaleMsString(ms, 6);
   }
 
   function initDateTime() {

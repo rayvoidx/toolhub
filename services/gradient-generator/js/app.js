@@ -95,7 +95,7 @@
   var cfg = window.APP_CONFIG || {};
   var SLUG = cfg.slug || "gradient-generator";
   var SKEY = SLUG + ":state";
-  var MAX_STOPS = 5;
+  var MAX_STOPS = 8;
   var MIN_STOPS = 2;
 
   function t(key, fallback) {
@@ -384,7 +384,7 @@
   function randomGradient() {
     var types = ["linear", "linear", "linear", "radial", "conic"]; // linear 가중치를 높게
     var type = types[Math.floor(Math.random() * types.length)];
-    var count = 2 + Math.floor(Math.random() * (MAX_STOPS - 1)); // 2~5
+    var count = 2 + Math.floor(Math.random() * 4); // 2~5 (랜덤은 읽기 좋은 범위 유지)
     var baseHue = Math.floor(Math.random() * 360);
     var spreadHue = 40 + Math.floor(Math.random() * 180); // 유사색~보색까지 폭넓게
     var stops = [];

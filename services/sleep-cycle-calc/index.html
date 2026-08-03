@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -192,12 +202,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <label for="scc-latency" data-i18n="tool.latencyLabel">Time it takes you to fall asleep (minutes)</label>
-    <input type="number" id="scc-latency" min="0" max="60" step="1" value="15" inputmode="numeric" autocomplete="off">
+    <input type="number" id="scc-latency" min="0" max="120" step="1" value="15" inputmode="numeric" autocomplete="off">
 
     <details style="margin-top:14px;">
       <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--muted);" data-i18n="tool.advanced">Advanced: sleep cycle length</summary>
       <label for="scc-cycle" data-i18n="tool.cycleLabel">Average sleep cycle length (minutes)</label>
-      <input type="number" id="scc-cycle" min="80" max="120" step="1" value="90" inputmode="numeric" autocomplete="off">
+      <input type="number" id="scc-cycle" min="70" max="120" step="1" value="90" inputmode="numeric" autocomplete="off">
       <p style="color:var(--muted);font-size:13px;margin:6px 0 0;" data-i18n="tool.cycleHint">Most people average about 90 minutes. Leave it at 90 unless you know yours is different.</p>
     </details>
 

@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Roof Pitch Calculator — Rise Over Run to Angle">
 <meta property="og:description" content="Convert roof pitch between rise over run, degrees and slope percent. Get pitch in x/12, roof angle, rafter length multiplier and material limits.">
 <meta property="og:url" content="https://tool-hub.me/roof-pitch-calc/">
-<meta property="og:image" content="https://tool-hub.me/roof-pitch-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/roof-pitch-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#7f1d1d">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Roof Pitch Calculator",
+      "item": "https://tool-hub.me/roof-pitch-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Roof Pitch Calculator",
-      "item": "https://tool-hub.me/roof-pitch-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -167,6 +177,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tool .rcard.hero-card .rc-val { font-size:28px; }
       #tool .rcard.wide { grid-column:1 / -1; }
       #tool .rc-note { font-size:13px; color:var(--muted); margin-top:6px; line-height:1.5; }
+      #tool .span-row { display:flex; gap:8px; align-items:center; }
+      #tool .span-row input { flex:1 1 auto; }
+      #tool .span-row select { flex:0 0 auto; width:auto; }
       #tool .subtle { font-size:13px; color:var(--muted); margin-top:10px; }
       #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
       @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
@@ -200,6 +213,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="number" id="pitch" inputmode="decimal" min="0" max="48" step="any" autocomplete="off" placeholder="6">
     </div>
 
+    <div>
+      <label for="span" data-i18n="tool.span.label">Building span — optional</label>
+      <div class="span-row">
+        <input type="number" id="span" inputmode="decimal" min="0.3" max="200" step="any" autocomplete="off" placeholder="24">
+        <select id="span-unit" data-i18n-aria-label="tool.span.label" aria-label="Building span unit">
+          <option value="ft">ft</option>
+          <option value="m">m</option>
+        </select>
+      </div>
+    </div>
+
     <p class="subtle" data-i18n="tool.units.note">Use the same unit for rise and run. US framing measures the rise over a 12-inch run, which is where x/12 comes from.</p>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate pitch</button>
@@ -213,7 +237,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.angle">Roof angle</div><div class="rc-val" id="r-angle">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.slope">Slope</div><div class="rc-val" id="r-slope">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.mult">Rafter multiplier</div><div class="rc-val" id="r-mult">—</div></div>
-        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rafter">Rafter for a 24 ft span</div><div class="rc-val" id="r-rafter">—</div></div>
+        <div class="rcard"><div class="rc-label" id="r-rafter-label">Rafter for a 24 ft span</div><div class="rc-val" id="r-rafter">—</div></div>
         <div class="rcard wide">
           <div class="rc-label" data-i18n="tool.r.category">Category</div>
           <div class="rc-val" id="r-cat">—</div>

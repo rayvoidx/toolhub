@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -222,7 +232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
       <label for="rng-count" data-i18n="tool.range.countLabel">How many</label>
-      <input type="number" id="rng-count" value="1" min="1" max="100" step="1" inputmode="numeric">
+      <input type="number" id="rng-count" value="1" min="1" max="500" step="1" inputmode="numeric">
       <label class="rng-check"><input type="checkbox" id="rng-dup" checked>
         <span data-i18n="tool.range.dupLabel">Allow duplicates</span></label>
       <label class="rng-check"><input type="checkbox" id="rng-sort">
@@ -246,10 +256,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <option value="powerball" data-i18n="tool.lottery.preset.powerball">Powerball (USA)</option>
         <option value="mega" data-i18n="tool.lottery.preset.mega">Mega Millions (USA)</option>
         <option value="euro" data-i18n="tool.lottery.preset.euro">EuroMillions (Europe)</option>
+        <option value="uk" data-i18n="tool.lottery.preset.uk">Lotto 6/59 (UK)</option>
         <option value="lotto645" data-i18n="tool.lottery.preset.lotto645">Lotto 6/45 (Korea)</option>
       </select>
       <label for="lot-plays" data-i18n="tool.lottery.playsLabel">Number of plays</label>
-      <input type="number" id="lot-plays" value="1" min="1" max="5" step="1" inputmode="numeric">
+      <input type="number" id="lot-plays" value="1" min="1" max="10" step="1" inputmode="numeric">
       <button id="lot-pick" class="btn" type="button" data-i18n="tool.lottery.pick">Pick numbers</button>
 
       <div class="result" id="lot-result">
@@ -298,13 +309,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Leave duplicates <em>on</em> when each draw is independent and repeats are legitimate — rolling dice, flipping coins, or picking a random day several times. Turn them <em>off</em> when every result must be distinct, such as choosing winners, ordering a list, or dealing unique tickets. With duplicates off, the count cannot exceed the size of the range, because you cannot draw 30 unique numbers from a pool of 20.</p>
 
     <h3>Built-in lottery presets</h3>
-    <p>The lottery tab fills in the official rules for four popular games so you do not have to look them up. Bonus balls are drawn from their own separate pool, exactly as the real machines do. These figures are accurate as of July 2026.</p>
+    <p>The lottery tab fills in the official rules for five popular games so you do not have to look them up. Bonus balls are drawn from their own separate pool, exactly as the real machines do. These figures are accurate as of July 2026.</p>
     <table>
       <thead><tr><th>Game</th><th>Main pool</th><th>Bonus pool</th></tr></thead>
       <tbody>
         <tr><th>Powerball (USA)</th><td>5 of 1–69</td><td>1 of 1–26</td></tr>
         <tr><th>Mega Millions (USA)</th><td>5 of 1–70</td><td>1 of 1–24</td></tr>
         <tr><th>EuroMillions (Europe)</th><td>5 of 1–50</td><td>2 of 1–12</td></tr>
+        <tr><th>Lotto 6/59 (UK)</th><td>6 of 1–59</td><td>—</td></tr>
         <tr><th>Lotto 6/45 (Korea)</th><td>6 of 1–45</td><td>—</td></tr>
       </tbody>
     </table>

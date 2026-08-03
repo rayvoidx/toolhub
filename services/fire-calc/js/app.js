@@ -110,6 +110,7 @@
   var badgeEl = $("r-badge"), firenumEl = $("r-firenum"), subEl = $("r-sub"), msgEl = $("r-msg");
   var progEl = $("r-progress"), progBar = $("r-progressbar"), gapLabelEl = $("r-gaplabel"), gapEl = $("r-gap");
   var dateEl = $("r-date"), projEl = $("r-projection"), tiersBody = $("tiers-body");
+  var ageEl = $("age-input"), ageCard = $("r-agecard"), ageValEl = $("r-age");
   var negReturnNote = $("r-negreturn"), wrateNote = $("r-wrateclamp"), clipNote = $("r-clipped");
   if (!expensesEl || !savingsEl || !monthlyEl || !returnEl || !calcBtn || !box) return;
 
@@ -278,6 +279,19 @@
       gapEl.className = "rc-val neg";
     }
 
+    // FIRE 시점 나이 (나이 입력 시에만)
+    if (ageCard) {
+      if (state.age == null) {
+        ageCard.hidden = true;
+        ageValEl.textContent = "";
+      } else {
+        ageCard.hidden = false;
+        if (tgt.kind === "already") ageValEl.textContent = numFmt(state.age, 0);
+        else if (tgt.kind === "normal") ageValEl.textContent = numFmt(state.age + Math.floor(Math.round(tgt.months) / 12), 0);
+        else ageValEl.textContent = dash;
+      }
+    }
+
     renderTiers(state.tiers);
 
     negReturnNote.hidden = !state.negReturn;
@@ -352,6 +366,19 @@
     if (returnNum < 0) { returnNum = 0; negReturn = true; }
     if (returnNum > LIM.returnMax) { returnNum = LIM.returnMax; clipped = true; }
 
+    // 5) 현재 나이 (선택) — 18-99 정수만, 벗어나면 명시 오류
+    var ageNum = null;
+    if (ageEl) {
+      var ageRaw = ageEl.value.trim();
+      if (ageRaw !== "") {
+        ageNum = Number(ageRaw);
+        if (!isFinite(ageNum) || Math.floor(ageNum) !== ageNum || ageNum < 18 || ageNum > 99) {
+          showError("tool.err.age", "Enter a current age between 18 and 99, or leave it blank.");
+          return;
+        }
+      }
+    }
+
     var fire = fireNumber(expensesNum, wrateNum);
     var capMonths = LIM.yearsCap * 12;
     var target = computeTarget(savingsNum, monthlyNum, returnNum, fire, capMonths);
@@ -368,12 +395,12 @@
     render({
       fire: fire, expensesNum: expensesNum, wrateNum: wrateNum, target: target,
       progress: fire > 0 ? (savingsNum / fire) * 100 : 0, gap: savingsNum - fire,
-      tiers: tierRows, negReturn: negReturn, wrateClamped: wrateClamped, clipped: clipped
+      age: ageNum, tiers: tierRows, negReturn: negReturn, wrateClamped: wrateClamped, clipped: clipped
     });
 
     try {
       localStorage.setItem(LS_KEY, JSON.stringify({
-        expenses: expensesNum, wrate: wrateNum, savings: savingsNum, monthly: monthlyNum, ret: returnNum
+        expenses: expensesNum, wrate: wrateNum, savings: savingsNum, monthly: monthlyNum, ret: returnNum, age: ageNum
       }));
     } catch (e) { /* private mode — 저장 실패 무시 */ }
 
@@ -386,6 +413,7 @@
   monthlyEl.addEventListener("input", function () { formatAmount(monthlyEl); calculate(); });
   wrateEl.addEventListener("input", calculate);
   returnEl.addEventListener("input", calculate);
+  if (ageEl) ageEl.addEventListener("input", calculate);
   calcBtn.addEventListener("click", calculate);
 
   var wrateChipEls = document.querySelectorAll("#wrate-chips .chip");
@@ -398,8 +426,8 @@
   }
 
   function onEnter(e) { if (e.key === "Enter") calculate(); }
-  var enterEls = [expensesEl, wrateEl, savingsEl, monthlyEl, returnEl];
-  for (var ei = 0; ei < enterEls.length; ei++) enterEls[ei].addEventListener("keydown", onEnter);
+  var enterEls = [expensesEl, wrateEl, savingsEl, monthlyEl, returnEl, ageEl];
+  for (var ei = 0; ei < enterEls.length; ei++) { if (enterEls[ei]) enterEls[ei].addEventListener("keydown", onEnter); }
 
   // 마지막 입력값 복원 (localStorage — 서버 미전송)
   (function restore() {
@@ -412,6 +440,7 @@
       if (p.savings != null && p.savings > 0) savingsEl.value = groupInput(p.savings);
       if (p.monthly != null && p.monthly > 0) monthlyEl.value = groupInput(p.monthly);
       if (p.ret != null) returnEl.value = p.ret;
+      if (p.age != null && ageEl) ageEl.value = p.age;
       updateChips();
       if (p.expenses != null && p.ret != null) calculate();
     } catch (e) { updateChips(); /* 접근 불가·파싱 실패 — 빈 폼으로 시작 */ }

@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -166,6 +176,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tool .mode-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
       #tool .mode-tab{flex:1 1 auto;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--muted);font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer;text-align:center;}
       #tool .mode-tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff;}
+      #tool .age-row{display:flex;gap:8px;align-items:center;}
+      #tool .age-row input{flex:1 1 auto;min-width:0;}
+      #tool .age-row select{flex:0 0 auto;width:auto;}
       #tool .lifestyle-group{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px;}
       #tool .lifestyle-opt{flex:1 1 160px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;font-size:14px;font-weight:600;}
       #tool .lifestyle-opt input{width:auto;flex:0 0 auto;}
@@ -191,8 +204,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div id="panel-forward">
       <div class="input-group">
-        <label for="cat-age" data-i18n="tool.catAge.label">Cat's age (years)</label>
-        <input id="cat-age" type="number" inputmode="decimal" min="0" max="30" step="0.1" placeholder="e.g. 2.5" data-i18n-placeholder="tool.catAge.ph" autocomplete="off" autofocus>
+        <label for="cat-age" data-i18n="tool.catAge.label">Cat's age</label>
+        <div class="age-row">
+          <input id="cat-age" type="number" inputmode="decimal" min="0" max="30" step="0.1" placeholder="e.g. 2.5" data-i18n-placeholder="tool.catAge.ph" autocomplete="off" autofocus>
+          <select id="cat-age-unit" aria-label="Age unit" data-i18n-aria-label="tool.unit.label">
+            <option value="years" data-i18n="tool.unit.years">Years</option>
+            <option value="months" data-i18n="tool.unit.months">Months</option>
+          </select>
+        </div>
       </div>
       <div class="input-group">
         <label data-i18n="tool.lifestyle.label">Lifestyle</label>

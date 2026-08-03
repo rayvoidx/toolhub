@@ -115,7 +115,10 @@
   // never what is actually rendered (the raw line text is always displayed).
   function normLineKey(line, opts) {
     var s = line;
-    if (opts.ignoreTrailingSpace) s = s.replace(/[ \t]+$/, "");
+    // ignoreAllSpace subsumes ignoreTrailingSpace: collapse every whitespace run
+    // to a single space and trim, so indentation/spacing changes stop counting.
+    if (opts.ignoreAllSpace) s = s.replace(/\s+/g, " ").replace(/^ | $/g, "");
+    else if (opts.ignoreTrailingSpace) s = s.replace(/[ \t]+$/, "");
     if (opts.ignoreCase) s = s.toLowerCase();
     return s;
   }
@@ -190,6 +193,7 @@
   function $(id) { return document.getElementById(id); }
   var aEl = $("td-original"), bEl = $("td-changed");
   var ignoreCaseEl = $("td-ignore-case"), ignoreTrailingEl = $("td-ignore-trailing");
+  var ignoreAllSpaceEl = $("td-ignore-allspace"), ignoreBlankEl = $("td-ignore-blank");
   var compareBtn = $("td-compare"), swapBtn = $("td-swap"), clearBtn = $("td-clear");
   var statsEl = $("td-stats");
   var statAddedEl = $("td-stat-added"), statRemovedEl = $("td-stat-removed"), statUnchangedEl = $("td-stat-unchanged");
@@ -201,7 +205,8 @@
     try {
       localStorage.setItem(SKEY, JSON.stringify({
         a: aEl.value, b: bEl.value,
-        ic: !!ignoreCaseEl.checked, it: !!ignoreTrailingEl.checked
+        ic: !!ignoreCaseEl.checked, it: !!ignoreTrailingEl.checked,
+        ia: !!ignoreAllSpaceEl.checked, ib: !!ignoreBlankEl.checked
       }));
     } catch (e) { /* noop */ }
   }
@@ -214,6 +219,8 @@
       if (typeof st.b === "string") bEl.value = st.b;
       if (typeof st.ic === "boolean") ignoreCaseEl.checked = st.ic;
       if (typeof st.it === "boolean") ignoreTrailingEl.checked = st.it;
+      if (typeof st.ia === "boolean") ignoreAllSpaceEl.checked = st.ia;
+      if (typeof st.ib === "boolean") ignoreBlankEl.checked = st.ib;
     } catch (e) { /* corrupt/unavailable — start fresh, not a crash */ }
   }
 
@@ -239,9 +246,10 @@
   function computeWordDiff(aLine, bLine, opts) {
     if (aLine.length > WORD_DIFF_MAX_LINE_LEN || bLine.length > WORD_DIFF_MAX_LINE_LEN) return null;
     var ta = toTokens(aLine), tb = toTokens(bLine);
-    var keyFn = opts.ignoreCase
-      ? function (t) { return t.toLowerCase(); }
-      : function (t) { return t; };
+    var keyFn = function (t) {
+      var s = opts.ignoreAllSpace && /^\s+$/.test(t) ? " " : t;
+      return opts.ignoreCase ? s.toLowerCase() : s;
+    };
     return { ops: lcsDiff(ta, tb, keyFn), ta: ta, tb: tb };
   }
 
@@ -347,12 +355,21 @@
       return;
     }
     var aLines = toLines(aText), bLines = toLines(bText);
+    if (ignoreBlankEl.checked) {
+      var notBlank = function (l) { return l.trim() !== ""; };
+      aLines = aLines.filter(notBlank);
+      bLines = bLines.filter(notBlank);
+    }
     if (aLines.length > MAX_LINES || bLines.length > MAX_LINES) {
       showPanel("error");
       save();
       return;
     }
-    var opts = { ignoreCase: !!ignoreCaseEl.checked, ignoreTrailingSpace: !!ignoreTrailingEl.checked };
+    var opts = {
+      ignoreCase: !!ignoreCaseEl.checked,
+      ignoreTrailingSpace: !!ignoreTrailingEl.checked,
+      ignoreAllSpace: !!ignoreAllSpaceEl.checked
+    };
     var keyFn = function (line) { return normLineKey(line, opts); };
     var ops = lcsDiff(aLines, bLines, keyFn);
     var stats = renderDiff(ops, aLines, bLines, opts);
@@ -378,6 +395,8 @@
   bEl.addEventListener("input", scheduleCompute);
   ignoreCaseEl.addEventListener("change", computeNow);
   ignoreTrailingEl.addEventListener("change", computeNow);
+  ignoreAllSpaceEl.addEventListener("change", computeNow);
+  ignoreBlankEl.addEventListener("change", computeNow);
   if (compareBtn) compareBtn.addEventListener("click", computeNow);
   if (swapBtn) swapBtn.addEventListener("click", function () {
     var tmp = aEl.value; aEl.value = bEl.value; bEl.value = tmp;

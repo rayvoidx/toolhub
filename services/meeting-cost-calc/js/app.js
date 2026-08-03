@@ -102,7 +102,8 @@
     return n.toLocaleString(undefined, { maximumFractionDigits: n >= 1000 ? 0 : 2 });
   };
 
-  var HOURS_PER_YEAR = 2080, LOAD = 1.3, WEEKS = 52, WORKDAYS = 250;
+  var HOURS_PER_YEAR = 2080, LOAD = 1.3, WORKDAYS = 250;
+  var PER_YEAR = { weekly: 52, biweekly: 26, monthly: 12, daily: WORKDAYS };
 
   function syncCustom() { customField.hidden = minutes.value !== "custom"; }
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
@@ -128,7 +129,7 @@
     var loadedRate = perHour * (loaded.checked ? LOAD : 1);
     var cost = heads * loadedRate * mins / 60;
     if (!isFinite(cost)) return fail("tool.err.pay");
-    var mult = recur.value === "weekly" ? WEEKS : recur.value === "daily" ? WORKDAYS : 0;
+    var mult = PER_YEAR[recur.value] || 0;
 
     $("r-cost").textContent = money(cost);
     $("r-burn").textContent = money(cost / mins);

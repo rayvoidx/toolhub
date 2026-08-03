@@ -91,7 +91,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var capacity = $("capacity"), socNow = $("soc-now"), socTarget = $("soc-target");
   var powerSel = $("power-sel"), powerCustom = $("power-custom"), customRow = $("custom-row");
-  var eff = $("eff"), price = $("price");
+  var eff = $("eff"), price = $("price"), rate = $("rate");
   var result = $("result"), errEl = $("err"), costCard = $("cost-card"), taperNote = $("taper-note");
   if (!capacity || !socNow || !socTarget || !powerSel || !eff) return;
 
@@ -133,7 +133,12 @@
 
     $("r-time").textContent = fmtTime(hours);
     $("r-energy").textContent = fromWall.toFixed(1) + " kWh";
-    $("r-range").textContent = Math.round(toBattery * 3.5) + " mi / " + Math.round(toBattery * 5.6) + " km";
+    // 전비는 차종별 편차가 크다 (픽업 2, 소형 5) — 미입력은 기존 기본값 3.5 mi/kWh 유지.
+    var miPerKwh = blank(rate) ? 3.5 : num(rate);
+    if (!isFinite(miPerKwh) || miPerKwh < 0.5 || miPerKwh > 20) return fail("tool.err.rate");
+
+    $("r-range").textContent = Math.round(toBattery * miPerKwh) + " mi / " + Math.round(toBattery * miPerKwh * 1.609) + " km";
+    if ($("range-note")) $("range-note").hidden = !blank(rate);
 
     if (blank(price)) {
       costCard.hidden = true;
@@ -156,14 +161,14 @@
   syncCustom();
 
   $("calc-btn").addEventListener("click", calc);
-  [capacity, socNow, socTarget, powerCustom, eff, price].forEach(function (el) {
+  [capacity, socNow, socTarget, powerCustom, eff, price, rate].forEach(function (el) {
     if (el) el.addEventListener("keydown", function (ev) { if (ev.key === "Enter") calc(); });
   });
   powerSel.addEventListener("change", function () {
     syncCustom();
     if (!result.hidden || !errEl.hidden) calc();
   });
-  [capacity, socNow, socTarget, powerCustom, eff, price].forEach(function (el) {
+  [capacity, socNow, socTarget, powerCustom, eff, price, rate].forEach(function (el) {
     if (el) el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

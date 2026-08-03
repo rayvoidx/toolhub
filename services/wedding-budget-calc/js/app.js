@@ -89,9 +89,9 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var budget = $("budget"), guests = $("guests"), priority = $("priority");
+  var budget = $("budget"), guests = $("guests"), priority = $("priority"), buffer = $("buffer");
   var result = $("result"), errEl = $("err");
-  if (!budget || !guests || !priority) return;
+  if (!budget || !guests || !priority || !buffer) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var money = function (n) { return Math.round(n).toLocaleString(undefined, { maximumFractionDigits: 0 }); };
@@ -122,28 +122,46 @@
     if (!isFinite(g) || g < 1 || g > 2000) return fail("tool.err.guests");
     g = Math.round(g);
 
-    var pct = PRESETS[priority.value] || PRESETS.balanced;
+    var bufRaw = String(buffer.value).trim();
+    var buf = bufRaw === "" ? 5 : parseFloat(bufRaw.replace(/,/g, ""));
+    if (!isFinite(buf) || buf < 0 || buf > 30) return fail("tool.err.buffer");
+
+    // 예비비 비율을 바꾸면 나머지 항목을 비례 조정 — 합은 항상 정확히 100.
+    var base = PRESETS[priority.value] || PRESETS.balanced;
+    var scale = (100 - buf) / (100 - base[base.length - 1]);
+    var pct = [];
+    for (var p = 0; p < base.length; p++) {
+      pct.push(p === base.length - 1 ? buf : base[p] * scale);
+    }
     var perGuest = b / g;
     $("r-perguest").textContent = money(perGuest);
     $("r-badge").textContent = t(badgeKey(perGuest));
 
-    // 반올림 오차는 마지막 항목(예비비)이 흡수한다 — 표 합계가 총예산과 정확히 맞는다.
+    // 반올림 오차는 최대 항목(예식장)이 흡수한다 — 표 합계가 총예산과 정확히 맞는다.
     var body = $("split-body");
     body.textContent = "";
-    var allocated = 0, topIdx = 0;
+    var topIdx = 0;
     for (var i = 0; i < pct.length; i++) if (pct[i] > pct[topIdx]) topIdx = i;
 
+    var amts = [], rest = 0;
+    for (var k = 0; k < pct.length; k++) {
+      amts.push(k === 0 ? 0 : Math.round((b * pct[k]) / 100));
+      if (k > 0) rest += amts[k];
+    }
+    amts[0] = b - rest;
+    $("r-percater").textContent = money(amts[0] / g);
+    var pctText = function (v) { return (Math.round(v * 10) / 10) + "%"; };
+
     for (var j = 0; j < CATS.length; j++) {
-      var amt = (j === CATS.length - 1) ? (b - allocated) : Math.round((b * pct[j]) / 100);
-      allocated += amt;
+      var amt = amts[j];
       var tr = document.createElement("tr");
       var c1 = document.createElement("td"); c1.textContent = t(CATS[j]);
-      var c2 = document.createElement("td"); c2.className = "num"; c2.textContent = pct[j] + "%";
+      var c2 = document.createElement("td"); c2.className = "num"; c2.textContent = pctText(pct[j]);
       var c3 = document.createElement("td"); c3.className = "amt"; c3.textContent = money(amt);
       tr.appendChild(c1); tr.appendChild(c2); tr.appendChild(c3);
       body.appendChild(tr);
       if (j === topIdx) $("r-top").textContent = t(CATS[j]) + " · " + money(amt);
-      if (j === CATS.length - 1) $("r-buffer").textContent = money(amt) + " (" + pct[j] + "%)";
+      if (j === CATS.length - 1) $("r-buffer").textContent = money(amt) + " (" + pctText(pct[j]) + ")";
     }
 
     errEl.hidden = true;
@@ -151,7 +169,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [budget, guests].forEach(function (el) {
+  [budget, guests, buffer].forEach(function (el) {
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });

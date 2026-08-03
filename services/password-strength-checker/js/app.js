@@ -90,7 +90,8 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var pw = $("pw"), result = $("result"), errEl = $("err"), hint = $("hint");
-  var gauge = $("gauge"), fill = $("gauge-fill"), flags = $("flags");
+  var gauge = $("gauge"), fill = $("gauge-fill"), flags = $("flags"), rate = $("rate");
+  var custom = $("rate-custom"), customWrap = $("rate-custom-wrap");
   if (!pw) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
@@ -217,6 +218,19 @@
     errEl.hidden = false; errEl.textContent = t(key);
   }
 
+  // 프리셋 3종 밖의 하드웨어(대여 GPU 클러스터, 고비용 Argon2)를 쓰는 사람을 위한 직접 입력.
+  // null = 잘못된 값 → 호출부에서 오류 문구로 보낸다.
+  function offlineRate() {
+    if (!rate) return 1e10;
+    if (rate.value !== "custom") {
+      var preset = parseFloat(rate.value);
+      return (isFinite(preset) && preset > 0) ? preset : 1e10;
+    }
+    var v = parseFloat(custom && custom.value);
+    if (!isFinite(v) || v < 1 || v > 1e15) return null;
+    return v;
+  }
+
   function render() {
     var v = pw.value;
     // 빈 입력은 오류가 아니다 — 초기 상태로 되돌리고 안내만 남긴다.
@@ -228,7 +242,10 @@
 
     $("r-band").textContent = t(band[1]);
     $("r-bits").textContent = fmt("tool.bits", Math.round(bits));
-    $("r-offline").textContent = humanize(crackSeconds(bits, 1e10));
+    // 사이트가 어떤 해시로 저장하는지에 따라 오프라인 공격 속도가 몇 자릿수씩 달라진다.
+    var offRate = offlineRate();
+    if (offRate === null) return fail("tool.err.rate");
+    $("r-offline").textContent = humanize(crackSeconds(bits, offRate));
     $("r-online").textContent = humanize(crackSeconds(bits, 1e4));
 
     fill.style.width = Math.max(2, Math.min(100, bits / 128 * 100)) + "%";
@@ -243,6 +260,11 @@
   }
 
   pw.addEventListener("input", render);
+  if (rate) rate.addEventListener("change", function () {
+    if (customWrap) customWrap.hidden = rate.value !== "custom";
+    render();
+  });
+  if (custom) custom.addEventListener("input", render);
   pw.addEventListener("keydown", function (e) { if (e.key === "Enter") render(); });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) render(); });
   // TOOLJS:END

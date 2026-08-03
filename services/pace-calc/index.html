@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-22",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -231,8 +231,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <label for="distance-input" data-i18n="tool.distance.label">Distance</label>
       <input type="text" id="distance-input" inputmode="decimal" autocomplete="off" placeholder="e.g. 10" data-i18n-placeholder="tool.distance.ph">
       <div class="chips" id="distance-presets" role="group" aria-label="Race distance presets" data-i18n-aria-label="tool.distance.presetsAria">
+        <button type="button" class="chip" data-preset="1609.344" data-i18n="tool.preset.mile">1 mile</button>
         <button type="button" class="chip" data-preset="5000" data-i18n="tool.preset.5k">5K</button>
         <button type="button" class="chip" data-preset="10000" data-i18n="tool.preset.10k">10K</button>
+        <button type="button" class="chip" data-preset="16093.44" data-i18n="tool.preset.10mi">10 miles</button>
         <button type="button" class="chip" data-preset="21097.5" data-i18n="tool.preset.half">Half marathon</button>
         <button type="button" class="chip" data-preset="42195" data-i18n="tool.preset.marathon">Marathon</button>
       </div>
@@ -270,6 +272,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div id="splits-section">
           <h3 class="splits-heading" id="splits-heading">Splits</h3>
+          <label for="split-interval" data-i18n="tool.splits.interval">Split interval</label>
+          <select id="split-interval" style="max-width:260px;">
+            <option value="0.5"></option>
+            <option value="1" selected></option>
+            <option value="2"></option>
+            <option value="5"></option>
+          </select>
           <div class="splits-wrap">
             <table class="splits-table" id="splits-table">
               <thead>

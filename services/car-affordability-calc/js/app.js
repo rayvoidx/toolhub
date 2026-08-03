@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var income = $("income"), rule = $("rule"), down = $("down"), rate = $("rate"), debts = $("debts");
+  var income = $("income"), rule = $("rule"), down = $("down"), rate = $("rate"), debts = $("debts"), termSel = $("term");
   var result = $("result"), errEl = $("err"), warnEl = $("warn-down"), cmpBody = $("cmp-body");
   if (!income || !rule || !rate) return;
 
@@ -108,11 +108,12 @@
   // 규칙별 예산. budget(월 여유액)이 0 이하면 납입금 기반 규칙은 성립하지 않아 null 을 돌려준다.
   function byRule(id, ctx) {
     if (id === "rgross") {
+      var gt = ctx.term || 60;
       var price = 0.35 * ctx.income;
       var loan = Math.max(0, price - ctx.down);
-      return { price: price, loan: loan, payment: paymentFrom(loan, ctx.i, 60), term: 60 };
+      return { price: price, loan: loan, payment: paymentFrom(loan, ctx.i, gt), term: gt };
     }
-    var term = id === "r20410" ? 48 : 60;
+    var term = ctx.term || (id === "r20410" ? 48 : 60);
     if (ctx.budget <= 0) return null;
     var l = loanFrom(ctx.budget, ctx.i, term);
     return { price: l + ctx.down, loan: l, payment: ctx.budget, term: term };
@@ -142,7 +143,8 @@
     var d = or0(down), ex = or0(debts);
     if (d < 0 || ex < 0) return fail("tool.err.negative");
 
-    var ctx = { income: inc, down: d, i: r / 100 / 12, budget: inc / 12 * 0.10 - ex };
+    var chosen = termSel ? parseInt(termSel.value, 10) : NaN;
+    var ctx = { income: inc, down: d, i: r / 100 / 12, budget: inc / 12 * 0.10 - ex, term: isFinite(chosen) ? chosen : 0 };
     var id = rule.value;
     var sel = byRule(id, ctx);
     if (!sel) return fail("tool.err.debts");
@@ -166,6 +168,16 @@
     result.hidden = false;
   }
 
+  // 개월 수 옵션 라벨은 언어별 "개월" 단어와 함께 런타임에 채운다(키 폭증 방지).
+  function fillTerms() {
+    if (!termSel) return;
+    for (var k = 0; k < termSel.options.length; k++) {
+      var o = termSel.options[k];
+      if (o.value) o.textContent = o.value + " " + t("tool.r.months");
+    }
+  }
+  fillTerms();
+
   $("calc-btn").addEventListener("click", calc);
   [income, down, rate, debts].forEach(function (el) {
     if (!el) return;
@@ -173,6 +185,7 @@
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   rule.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
-  document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  if (termSel) termSel.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  document.addEventListener("i18n:change", function () { fillTerms(); if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

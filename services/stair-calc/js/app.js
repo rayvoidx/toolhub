@@ -91,6 +91,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), rise = $("rise"), tread = $("tread"), target = $("target");
   var result = $("result"), errEl = $("err");
+  var customWrap = $("custom-wrap"), customRiser = $("custom-riser");
   if (!unit || !rise || !tread || !target) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
@@ -102,6 +103,15 @@
 
   function num(el) { var v = parseFloat(String(el.value).replace(/,/g, "")); return isFinite(v) ? v : NaN; }
   function fmt(v) { return String(Math.round(v * 100) / 100); }
+  // 인치 모드에서는 줄자 눈금(1/16")으로도 같이 보여준다 — 목수는 소수 인치로 자르지 않는다.
+  function frac16(inches) {
+    var sixteenths = Math.round(inches * 16);
+    var whole = Math.floor(sixteenths / 16), rem = sixteenths % 16;
+    if (rem === 0) return whole + "\"";
+    var den = 16;
+    while (rem % 2 === 0) { rem /= 2; den /= 2; }
+    return (whole ? whole + "-" : "") + rem + "/" + den + "\"";
+  }
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
   function setBadge(el, ok, okKey, badKey) {
     el.className = "badge " + (ok ? "pass" : "warn");
@@ -109,10 +119,10 @@
   }
 
   function calc() {
-    var cm = unit.value === "cm";
-    var f = cm ? 1 / IN_PER_CM : 1;             // 화면 단위 → 인치
-    var u = cm ? " cm" : " in";
-    var toUnit = function (inches) { return fmt(cm ? inches * IN_PER_CM : inches) + u; };
+    var perIn = unit.value === "cm" ? IN_PER_CM : (unit.value === "mm" ? IN_PER_CM * 10 : 1);
+    var f = 1 / perIn;                          // 화면 단위 → 인치
+    var u = unit.value === "in" ? " in" : " " + unit.value;
+    var toUnit = function (inches) { return fmt(inches * perIn) + u; };
 
     var riseRaw = num(rise);
     if (isNaN(riseRaw)) return fail("tool.err.rise");
@@ -124,7 +134,17 @@
     var treadIn = treadRaw * f;
     if (treadIn <= 0 || treadIn < 6 || treadIn > 20) return fail("tool.err.treadrange");
 
-    var steps = Math.round(riseIn / parseFloat(target.value));
+    var targetIn;
+    if (target.value === "custom") {
+      var cRaw = num(customRiser);
+      if (isNaN(cRaw)) return fail("tool.err.riser");
+      targetIn = cRaw * f;
+      if (!(targetIn >= 4 && targetIn <= 8.25)) return fail("tool.err.riser");
+    } else {
+      targetIn = parseFloat(target.value);
+    }
+
+    var steps = Math.round(riseIn / targetIn);
     if (steps < 1) steps = 1;
     var riserIn = riseIn / steps;
     // 4~8.25in 밖이면 이 단 수로는 못 쓴다 — 조용히 이상한 값을 내지 않고 안내한다.
@@ -135,11 +155,12 @@
     var stringerIn = Math.sqrt(riseIn * riseIn + runIn * runIn);
     var comfortIn = 2 * riserIn + treadIn;
 
-    $("r-risers").textContent = steps + " × " + toUnit(riserIn);
+    $("r-risers").textContent = steps + " × " + toUnit(riserIn) + (unit.value === "in" ? " (" + frac16(riserIn) + ")" : "");
     $("r-treads").textContent = String(treads);
     $("r-run").textContent = toUnit(runIn);
     $("r-stringer").textContent = toUnit(stringerIn);
     $("r-comfort").textContent = toUnit(comfortIn);
+    $("r-angle").textContent = fmt(Math.atan(riserIn / treadIn) * 180 / Math.PI) + "°";
 
     setBadge($("b-riser"), riserIn <= MAX_RISER + 1e-9, "tool.badge.riserok", "tool.badge.riserover");
     setBadge($("b-tread"), treadIn >= MIN_TREAD - 1e-9, "tool.badge.treadok", "tool.badge.treadunder");
@@ -150,11 +171,14 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [rise, tread].forEach(function (el) {
+  function syncCustom() { customWrap.hidden = target.value !== "custom"; }
+  syncCustom();
+
+  [rise, tread, customRiser].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   [unit, target].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+    el.addEventListener("change", function () { syncCustom(); if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END

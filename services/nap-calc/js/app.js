@@ -131,7 +131,8 @@
     var dur = duration();
     if (!isFinite(dur) || dur < 5 || dur > 180) return fail("tool.err.custom");
 
-    var buf = parseInt(buffer.value, 10) || 10;
+    var buf = parseInt(buffer.value, 10);
+    if (!isFinite(buf) || buf < 0) buf = 10;   // 0분 선택도 유효한 값이다
     var startMin = h * 60 + mi;
     var asleep = startMin + buf;   // 눕자마자 자는 게 아니다 — 알람은 잠든 시각 기준
 
@@ -144,7 +145,9 @@
 
     while (alts.firstChild) alts.removeChild(alts.firstChild);
     var picked = styleSel.value === "custom" ? dur : parseInt(styleSel.value, 10);
-    ALTS.forEach(function (n) {
+    // 직접 입력한 길이도 목록에 넣는다 — 안 그러면 "선택한 옵션" 표시가 아예 안 나온다
+    var rows = ALTS.indexOf(picked) >= 0 ? ALTS : ALTS.concat([picked]).sort(function (a, b) { return a - b; });
+    rows.forEach(function (n) {
       var li = document.createElement("li");
       var cls = n === 60 ? "warn" : "";
       if (n === picked) cls = cls ? cls + " picked" : "picked";

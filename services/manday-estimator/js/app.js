@@ -106,6 +106,7 @@
     "kr-21":   { hpd: 8, dpm: 21 },     // 관행 (KOSA 산식 아님)
     "kr-22":   { hpd: 8, dpm: 22 },     // 관행 (평일 수 근사)
     "jp-160":  { hpd: 8, dpm: 20 },     // JP 표준 160h/월
+    "us-174":  { hpd: 8, dpm: 21.75 },  // US/UK 관행: 2,088h/년 ÷ 12 = 174h/월
     "custom":  { hpd: 8, dpm: 20.5 }
   };
 
@@ -567,7 +568,9 @@
   function activeConv() {
     if (elConv.value === "custom") {
       var h = parseNum(elHpd.value), d = parseNum(elDpm.value);
-      return { hpd: isNaN(h) || h <= 0 ? 8 : h, dpm: isNaN(d) || d <= 0 ? 20.5 : d };
+      var hpd = isNaN(h) || h <= 0 ? 8 : Math.min(h, 24);
+      var dpm = isNaN(d) || d <= 0 ? 20.5 : Math.min(d, 31);
+      return { hpd: hpd, dpm: dpm };
     }
     return CONV[elConv.value] || CONV["kr-kosa"];
   }

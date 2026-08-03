@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var income = $("income"), rule = $("rule"), customRow = $("custom-row");
+  var income = $("income"), rule = $("rule"), customRow = $("custom-row"), freq = $("freq");
   var pNeeds = $("p-needs"), pWants = $("p-wants"), pSave = $("p-save");
   var result = $("result"), errEl = $("err");
   if (!income || !rule || !customRow) return;
@@ -99,6 +99,8 @@
   // 프리셋은 [필수, 여유, 저축] 순서 — 세 카드 역할이 고정이라 순서 자체가 계약이다.
   var RULES = { classic: [50, 30, 20], hcol: [60, 30, 10], saver: [50, 20, 30] };
   var MAX_INCOME = 10000000;
+  // 급여 주기 -> 월 환산 계수. 주급 52회·격주 26회를 12로 나눈다(4주/2주 근사 금지).
+  var FREQ = { month: 1, week: 52 / 12, biweek: 26 / 12, semi: 2, year: 1 / 12 };
 
   function num(el) { return parseFloat(String(el.value).replace(/,/g, "")); }
   function money(n) {
@@ -123,8 +125,9 @@
   }
 
   function calc() {
-    var inc = num(income);
-    if (!isFinite(inc) || inc <= 0) return fail("tool.err.income");
+    var raw = num(income);
+    if (!isFinite(raw) || raw <= 0) return fail("tool.err.income");
+    var inc = raw * (FREQ[freq && freq.value] || 1);
     if (inc > MAX_INCOME) return fail("tool.err.range");
 
     var s = splitFor(rule.value);
@@ -153,6 +156,7 @@
     el.addEventListener("input", live);
   });
   rule.addEventListener("change", function () { syncCustom(); live(); });
+  if (freq) freq.addEventListener("change", live);
   document.addEventListener("i18n:change", live);
   // TOOLJS:END
 })();

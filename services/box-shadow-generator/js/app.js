@@ -96,7 +96,7 @@
   var cfg = window.APP_CONFIG || {};
   var SLUG = cfg.slug || "box-shadow-generator";
   var SKEY = SLUG + ":state";
-  var MAX_LAYERS = 4;
+  var MAX_LAYERS = 6;
   var MIN_LAYERS = 1;
 
   function t(key, fallback) {
@@ -341,10 +341,14 @@
           row.className = "bx-row";
           var lab = document.createElement("label");
           var labText = document.createElement("span");
-          labText.textContent = t(labelKey, labelFallback);
-          var valText = document.createElement("span");
-          valText.className = "bx-val";
-          valText.textContent = layer[field] + unit;
+          labText.textContent = t(labelKey, labelFallback) + (unit ? " (" + unit + ")" : "");
+          // 정확한 값 입력용 숫자 필드 (슬라이더 범위를 벗어난 값은 min/max 로 클램프)
+          var valText = document.createElement("input");
+          valText.type = "number";
+          valText.className = "bx-val bx-num";
+          valText.min = String(min); valText.max = String(max); valText.step = "1";
+          valText.value = String(layer[field]);
+          valText.setAttribute("aria-label", t(ariaKey, ariaFallback).replace("{n}", String(n)));
           lab.appendChild(labText);
           lab.appendChild(valText);
           row.appendChild(lab);
@@ -356,8 +360,19 @@
           input.setAttribute("aria-label", t(ariaKey, ariaFallback).replace("{n}", String(n)));
           input.addEventListener("input", function () {
             layer[field] = clamp(parseInt(input.value, 10) || 0, min, max);
-            valText.textContent = layer[field] + unit;
+            valText.value = String(layer[field]);
             renderPreview(); renderCss(); persist();
+          });
+          // 숫자 입력: 빈 값/비숫자는 상태를 바꾸지 않고, blur 시 마지막 유효값으로 되돌린다
+          valText.addEventListener("input", function () {
+            var v = parseInt(valText.value, 10);
+            if (!isFinite(v)) return;
+            layer[field] = clamp(v, min, max);
+            input.value = String(layer[field]);
+            renderPreview(); renderCss(); persist();
+          });
+          valText.addEventListener("change", function () {
+            valText.value = String(layer[field]);
           });
           row.appendChild(input);
           return row;

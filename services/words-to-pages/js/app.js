@@ -89,15 +89,15 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var words = $("words"), font = $("font"), spacing = $("spacing");
+  var words = $("words"), font = $("font"), spacing = $("spacing"), size = $("size"), margin = $("margin");
   var result = $("result"), errEl = $("err");
-  if (!words || !font || !spacing) return;
+  if (!words || !font || !spacing || !size || !margin) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var fill = function (k, n) { return t(k).replace("{n}", n); };
 
   // 12pt 본문 기준 싱글 행간 페이지당 단어 수 (여백 1인치). 행간은 그대로 나눗셈으로 들어간다.
-  var WPP = { times: 550, arial: 500, verdana: 460 };
+  var WPP = { times: 550, arial: 500, verdana: 460, calibri: 620 };
   var SPACE = { double: 2, onehalf: 1.5, single: 1 };
   var READ_WPM = 200, SPEAK_WPM = 130;
 
@@ -115,7 +115,13 @@
     // 0·음수·비현실적 대용량은 조용히 넘기지 않고 명시적으로 막는다.
     if (n <= 0 || n > 200000) return fail("tool.err.range");
 
-    var perPage = (WPP[font.value] || WPP.times) / (SPACE[spacing.value] || 1);
+    var pt = parseFloat(size.value) || 12;
+    // 글자 크기는 면적 기준 — 12pt 대비 (12/pt)^2 로 페이지당 단어 수가 늘고 준다.
+    // 여백은 본문 면적 비율로 반영 — 레터 8.5x11in, 1인치 여백(6.5x9in)이 기준값 1.0.
+    var m = parseFloat(margin.value);
+    if (!isFinite(m) || m < 0 || m > 3) m = 1;
+    var areaFactor = ((8.5 - 2 * m) * (11 - 2 * m)) / (6.5 * 9);
+    var perPage = (WPP[font.value] || WPP.times) * Math.pow(12 / pt, 2) * areaFactor / (SPACE[spacing.value] || 1);
     var pages = n / perPage;
 
     $("r-pages").textContent = fill("tool.r.pagesfmt", pages.toFixed(1));
@@ -129,7 +135,7 @@
 
   $("calc-btn").addEventListener("click", calc);
   words.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
-  [font, spacing].forEach(function (el) {
+  [font, spacing, size, margin].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

@@ -90,8 +90,8 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var thick = $("thick"), thickIn = $("thick-in"), thickWrap = $("thick-in-wrap");
-  var width = $("width"), length = $("length"), pieces = $("pieces"), price = $("price");
-  var result = $("result"), errEl = $("err"), costCard = $("cost-card");
+  var width = $("width"), length = $("length"), pieces = $("pieces"), price = $("price"), waste = $("waste");
+  var result = $("result"), errEl = $("err"), costCard = $("cost-card"), orderCard = $("order-card");
   if (!thick || !width || !length || !pieces) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
@@ -119,12 +119,24 @@
     $("r-total").textContent = fmt(total) + unit;
     $("r-each").textContent = fmt(per) + unit;
 
+    // 손실률(선택) — 비우면 기존 동작 그대로.
+    var hasWaste = waste && String(waste.value).trim() !== "";
+    var order = total;
+    if (hasWaste) {
+      var Wp = num(waste);
+      if (!isFinite(Wp)) return fail("tool.err.empty");
+      if (Wp < 0 || Wp > 100) return fail("tool.err.waste");
+      order = total * (1 + Wp / 100);
+      $("r-order").textContent = fmt(order) + unit;
+    }
+    orderCard.hidden = !hasWaste;
+
     var hasPrice = price && String(price.value).trim() !== "";
     var P = hasPrice ? num(price) : NaN;
     if (hasPrice) {
       if (!isFinite(P)) return fail("tool.err.empty");
       if (P < 0) return fail("tool.err.price");
-      $("r-cost").textContent = fmt(total * P);
+      $("r-cost").textContent = fmt(order * P);
     }
     costCard.hidden = !hasPrice;
 
@@ -138,7 +150,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [thickIn, width, length, pieces, price].forEach(function (el) {
+  [thickIn, width, length, pieces, price, waste].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });

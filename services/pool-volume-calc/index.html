@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Pool Volume Calculator — How Many Gallons Is My Pool">
 <meta property="og:description" content="Find out how many gallons are in your pool. Rectangular, round or oval, flat or sloped bottom — get gallons, litres and cubic feet for chemical dosing.">
 <meta property="og:url" content="https://tool-hub.me/pool-volume-calc/">
-<meta property="og:image" content="https://tool-hub.me/pool-volume-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/pool-volume-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0284c7">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pool Volume Calculator",
+      "item": "https://tool-hub.me/pool-volume-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Pool Volume Calculator",
-      "item": "https://tool-hub.me/pool-volume-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -185,6 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="rect" data-i18n="tool.shape.rect">Rectangular — length x width</option>
           <option value="round" data-i18n="tool.shape.round">Round — diameter</option>
           <option value="oval" data-i18n="tool.shape.oval">Oval — length x width</option>
+          <option value="free" data-i18n="tool.shape.free">Freeform / kidney — approx. length x width</option>
         </select>
       </div>
     </div>
@@ -205,6 +216,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="g-dia" hidden>
       <label for="dia"><span data-i18n="tool.dia">Diameter</span> (<span class="u">ft</span>)</label>
       <input type="number" id="dia" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="24">
+    </div>
+
+    <div id="g-factor" hidden>
+      <label for="freefactor" data-i18n="tool.free.factor">Shape allowance (% of the rectangle)</label>
+      <input type="number" id="freefactor" inputmode="decimal" min="50" max="100" step="any" autocomplete="off" value="90">
     </div>
 
     <label for="depthmode" data-i18n="tool.depth.label">Depth profile</label>

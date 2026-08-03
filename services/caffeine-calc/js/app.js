@@ -113,7 +113,7 @@
     { id: "d-preworkout", key: "tool.d.preworkout", mg: 200 },
     { id: "d-choc", key: "tool.d.chocolate", mg: 12 }
   ];
-  var LIMIT = 400, PREG = 200, HALF_LIFE = 5, GAUGE_MAX = 600, MAX_TOTAL = 3000;
+  var LIMIT = 400, PREG = 200, HALF_LIFE = 5, HL_MIN = 2, HL_MAX = 12, GAUGE_MAX = 600, MAX_TOTAL = 3000;
 
   function num(el) {
     if (!el) return 0;
@@ -154,9 +154,14 @@
     if (custom < 0) negative = true;
     if (custom > 0) { total += custom; parts.push({ key: "tool.break.custom", n: 0, mg: custom }); }
 
+    // 반감기는 개인차가 커서(흡연 3h ~ 임신 10h) 사용자가 덮어쓸 수 있다. 빈 값이면 기본 5시간.
+    var hlEl = $("half-life");
+    var hl = (hlEl && String(hlEl.value).trim()) ? num(hlEl) : HALF_LIFE;
+
     if (negative) return fail("tool.err.neg");
     if (total <= 0) return fail("tool.err.none");
     if (total > MAX_TOTAL) return fail("tool.err.big");
+    if (!(hl >= HL_MIN && hl <= HL_MAX)) return fail("tool.err.hl");
 
     var mg = t("tool.unit.mg");
     $("r-total").textContent = Math.round(total) + " " + mg;
@@ -174,9 +179,9 @@
 
     // 반감기 감쇠는 하루치 전부를 마지막 섭취 시각에 마신 것으로 본다 — 취침 잔량의 상한선.
     var hours = ((minutes(bedtime) - minutes(lastTime)) + 1440) % 1440 / 60;
-    var left = total * Math.pow(0.5, hours / HALF_LIFE);
+    var left = total * Math.pow(0.5, hours / hl);
     $("r-bed").textContent = Math.round(left) + " " + mg;
-    $("r-bedsub").textContent = fmt("tool.r.bedsub", { n: Math.round(hours * 10) / 10 });
+    $("r-bedsub").textContent = fmt("tool.r.bedsub", { n: Math.round(hours * 10) / 10, h: Math.round(hl * 10) / 10 });
 
     while (brkList.firstChild) brkList.removeChild(brkList.firstChild);
     for (var j = 0; j < parts.length; j++) {
@@ -189,7 +194,7 @@
   }
 
   calcBtn.addEventListener("click", calc);
-  var fields = [lastTime, bedtime, $("d-custom")];
+  var fields = [lastTime, bedtime, $("d-custom"), $("half-life")];
   for (var k = 0; k < DRINKS.length; k++) fields.push($(DRINKS[k].id));
   fields.forEach(function (el) {
     if (!el) return;

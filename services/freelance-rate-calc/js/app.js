@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var income = $("income"), expenses = $("expenses"), tax = $("tax"), hours = $("hours"), off = $("off");
+  var income = $("income"), expenses = $("expenses"), tax = $("tax"), hours = $("hours"), off = $("off"), hpd = $("hpd");
   var result = $("result"), errEl = $("err"), warnEl = $("warn");
   if (!income || !hours || !off) return;
 
@@ -112,6 +112,9 @@
     if (exp < 0) return fail("tool.err.expenses");
     var taxPct = or0(tax);
     if (taxPct < 0 || taxPct > 90) return fail("tool.err.tax");
+    // 하루 근무 시간: 비우면 관행값 8시간.
+    var dayH = String(hpd.value).trim() === "" ? 8 : num(hpd);
+    if (isNaN(dayH) || dayH < 1 || dayH > 24) return fail("tool.err.hpd");
 
     var weeks = 52 - wOff;
     var billable = weeks * h;
@@ -121,7 +124,8 @@
     var hourly = Math.ceil(gross / billable);
 
     $("r-hourly").textContent = money(hourly);
-    $("r-day").textContent = money(hourly * 8);
+    $("r-day").textContent = money(Math.round(hourly * dayH));
+    $("r-day-label").textContent = t("tool.r.dayn").replace("{h}", String(dayH));
     // 리테이너는 월 160시간 기준에 선불·물량 할인 15% 를 반영한 관행값.
     $("r-retainer").textContent = money(Math.round(hourly * 160 * 0.85));
     $("r-gross").textContent = money(Math.round(gross));
@@ -134,7 +138,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [income, expenses, tax, hours, off].forEach(function (el) {
+  [income, expenses, tax, hours, off, hpd].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });

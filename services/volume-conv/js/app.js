@@ -96,11 +96,13 @@
   // US 관례가 기본, UK 갤런은 별도 단위. 계수는 각 단위의 정확한 리터 정의값.
   var FACTOR = {
     ml: 0.001, l: 1, m3: 1000,
+    in3: 0.016387064, ft3: 28.316846592, // 세제곱인치·세제곱피트 (정확한 정의값)
     tsp: 0.00492892159375, tbsp: 0.01478676478125, floz: 0.0295735295625,
     cup: 0.2365882365, pt: 0.473176473, qt: 0.946352946,
-    galus: 3.785411784, galuk: 4.54609
+    galus: 3.785411784, galuk: 4.54609,
+    flozuk: 0.0284130625, ptuk: 0.56826125 // 영국 임페리얼: 갤런/160, 갤런/8
   };
-  var UNITS = ["ml", "l", "m3", "tsp", "tbsp", "floz", "cup", "pt", "qt", "galus", "galuk"];
+  var UNITS = ["ml", "l", "m3", "in3", "ft3", "tsp", "tbsp", "floz", "cup", "pt", "qt", "galus", "galuk", "flozuk", "ptuk"];
 
   // value(from 단위) → to 단위 : 리터를 매개로 환산
   function convert(value, from, to) {
@@ -151,10 +153,11 @@
 
   // 결과 등식에 쓰는 단위 기호 (US/UK 병기로 갤런·fl oz 혼동 방지)
   var ABBR = {
-    ml: "mL", l: "L", m3: "m³",
+    ml: "mL", l: "L", m3: "m³", in3: "in³", ft3: "ft³",
     tsp: "tsp (US)", tbsp: "tbsp (US)", floz: "fl oz (US)",
     cup: "cup (US)", pt: "pt (US)", qt: "qt (US)",
-    galus: "gal (US)", galuk: "gal (UK)"
+    galus: "gal (US)", galuk: "gal (UK)",
+    flozuk: "fl oz (UK)", ptuk: "pt (UK)"
   };
 
   function t(key, fb) {

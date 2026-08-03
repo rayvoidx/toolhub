@@ -367,7 +367,7 @@
 
   /* ---- 상태 (표 원본은 세션 메모리에만 — 저장하지 않는다) ---- */
   var S = {
-    table: [], width: 1, delimChoice: "auto", detectedDelim: null,
+    table: [], width: 1, delimChoice: "auto", customDelim: "", detectedDelim: null,
     hasHeader: false, keyCols: [0], keepPolicy: "first",
     bytes: null, enc: "utf-8"
   };
@@ -416,7 +416,14 @@
     save(K_OPTS, { preset: preset, opts: opts });
   }
   function saveCfg() {
-    save(K_CFG, { delimChoice: S.delimChoice, hasHeader: S.hasHeader, keepPolicy: S.keepPolicy });
+    save(K_CFG, { delimChoice: S.delimChoice, customDelim: S.customDelim, hasHeader: S.hasHeader, keepPolicy: S.keepPolicy });
+  }
+  /** 실제 파싱에 쓸 구분자 선택값. "custom" 인데 입력이 비었/부적합하면 null(=오류). */
+  function effectiveDelim() {
+    if (S.delimChoice !== "custom") return S.delimChoice;
+    var c = S.customDelim;
+    if (!c || c.length !== 1 || c === '"' || c === "\r" || c === "\n") return null;
+    return c;
   }
   function headerSig() { return S.table.length ? S.table[0].join("") : ""; }
   function saveMap() { save(K_MAP, { sig: headerSig(), keyCols: S.keyCols }); }
@@ -425,6 +432,8 @@
   function renderControls() {
     var multi = S.width >= 2;
     $("cd-delim").value = S.delimChoice;
+    $("cd-delim-custom-wrap").hidden = S.delimChoice !== "custom";
+    $("cd-delim-custom").value = S.customDelim;
     $("cd-header").checked = S.hasHeader;
     $("cd-header-wrap").hidden = !S.table.length;
 
@@ -471,7 +480,14 @@
 
   /* ---- 표 세팅 ---- */
   function setTableText(text, fromBytes) {
-    var parsed = parseTable(text, S.delimChoice);
+    var choice = effectiveDelim();
+    if (choice === null) { // 사용자 지정 구분자 미입력/부적합 — 조용히 넘어가지 않는다
+      S.table = []; S.width = 1; S.detectedDelim = null;
+      renderControls();
+      setMsg(esc(t("tool.delim.customErr")), true);
+      return;
+    }
+    var parsed = parseTable(text, choice);
     // 마지막 빈 줄 제거
     var table = parsed.table.filter(function (r, i) {
       return !(r.length === 1 && r[0].trim() === "" && i === parsed.table.length - 1);
@@ -819,6 +835,12 @@
   /* ---- 컨트롤 이벤트 ---- */
   $("cd-delim").addEventListener("change", function () {
     S.delimChoice = $("cd-delim").value; saveCfg();
+    $("cd-delim-custom-wrap").hidden = S.delimChoice !== "custom";
+    if (S.delimChoice === "custom") $("cd-delim-custom").focus();
+    setTableText(pasteEl.value, !!S.bytes);
+  });
+  $("cd-delim-custom").addEventListener("input", function () {
+    S.customDelim = $("cd-delim-custom").value.slice(0, 1); saveCfg();
     setTableText(pasteEl.value, !!S.bytes);
   });
   $("cd-header").addEventListener("change", function () {
@@ -869,9 +891,12 @@
     var savedCfg = load(K_CFG, null);
     if (savedCfg) {
       if (savedCfg.delimChoice) S.delimChoice = savedCfg.delimChoice;
+      if (typeof savedCfg.customDelim === "string") S.customDelim = savedCfg.customDelim.slice(0, 1);
       if (savedCfg.keepPolicy === "last" || savedCfg.keepPolicy === "first") S.keepPolicy = savedCfg.keepPolicy;
     }
     $("cd-delim").value = S.delimChoice;
+    $("cd-delim-custom").value = S.customDelim;
+    $("cd-delim-custom-wrap").hidden = S.delimChoice !== "custom";
     $("cd-keep-" + S.keepPolicy).checked = true;
   })();
 

@@ -519,7 +519,7 @@
     run(explicit);
   }
   function setIndent(next) {
-    indent = (next === "4" || next === "tab") ? next : "2";
+    indent = (next === "1" || next === "3" || next === "4" || next === "8" || next === "tab") ? next : "2";
     paintToggles();
     savePrefs();
     run(false);
@@ -597,7 +597,7 @@
     } catch (e) { /* noop */ }
     try {
       var ind = localStorage.getItem(INDENT_KEY);
-      if (ind === "2" || ind === "4" || ind === "tab") indent = ind;
+      if (ind === "1" || ind === "2" || ind === "3" || ind === "4" || ind === "8" || ind === "tab") indent = ind;
       var md = localStorage.getItem(MODE_KEY);
       if (md === "format" || md === "minify") mode = md;
     } catch (e) { /* noop */ }

@@ -38,17 +38,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Electricity Cost Calculator — Appliance kWh & Bill Cost</title>
-<meta name="description" content="Enter appliance watts, hours/day, and price per kWh for cost per day, month and year plus kWh used. Add appliances with quick presets. Free, browser-based.">
-<meta name="keywords" content="electricity cost calculator, kwh cost calculator, appliance energy cost, how much electricity does it cost, power consumption calculator, 전기요금 계산기">
+<title>Electricity Cost Calculator — Appliance Running Cost</title>
+<meta name="description" content="Find out what any appliance costs to run. Enter its wattage, hours per day and your price per kWh to get the cost per day, month and year plus monthly kWh use.">
+<meta name="keywords" content="electricity cost calculator, appliance electricity cost, kwh calculator, how much does electricity cost, watts to kwh, energy cost calculator">
 <link rel="canonical" href="https://tool-hub.me/electricity-cost-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Electricity Cost Calculator — Appliance kWh & Bill Cost">
-<meta property="og:description" content="Enter appliance watts, hours/day, and price per kWh for cost per day, month and year plus kWh used. Add appliances with quick presets. Free, browser-based.">
+<meta property="og:title" content="Electricity Cost Calculator — Appliance Running Cost">
+<meta property="og:description" content="Find out what any appliance costs to run. Enter its wattage, hours per day and your price per kWh to get the cost per day, month and year plus monthly kWh use.">
 <meta property="og:url" content="https://tool-hub.me/electricity-cost-calc/">
-<meta property="og:image" content="https://tool-hub.me/electricity-cost-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/electricity-cost-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#b45309">
+<meta name="theme-color" content="#d97706">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Electricity Cost Calculator",
-  "description": "Enter appliance watts, hours/day, and price per kWh for cost per day, month and year plus kWh used. Add appliances with quick presets. Free, browser-based.",
+  "description": "Find out what any appliance costs to run. Enter its wattage, hours per day and your price per kWh to get the cost per day, month and year plus monthly kWh use.",
   "url": "https://tool-hub.me/electricity-cost-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-31",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -75,8 +75,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
-    { "@type": "ListItem", "position": 2, "name": "Electricity Cost Calculator", "item": "https://tool-hub.me/electricity-cost-calc/" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Electricity Cost Calculator",
+      "item": "https://tool-hub.me/electricity-cost-calc/"
+    }
   ]
 }
 </script>
@@ -87,56 +97,56 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "How do I calculate the electricity cost of an appliance?",
+      "name": "What is the difference between watts and kWh?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Multiply the appliance's power in watts by the hours it runs per day, divide by 1,000 to get kilowatt-hours (kWh), then multiply by your price per kWh. For example, a 150W fridge running 24 hours a day uses 150 × 24 ÷ 1,000 = 3.6 kWh per day. At $0.15 per kWh that's 3.6 × 0.15 = $0.54 a day, about $16.43 a month (using an average of 30.44 days per month), and $197.10 a year. This electricity cost calculator does that math for you and adds up every appliance you enter."
+        "text": "Watts measure how fast an appliance draws power at this moment; a kilowatt-hour is the energy used when 1000 watts run for one hour. Your supplier bills kilowatt-hours, never watts. That is why a 1500 W heater for two hours and a 100 W TV for thirty hours cost exactly the same — both come to 3 kWh."
       }
     },
     {
       "@type": "Question",
-      "name": "What's the difference between W and kW, and does it matter which I pick?",
+      "name": "Why is my bill higher than this calculator says?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Watts (W) and kilowatts (kW) both measure power — 1 kW equals 1,000 W. Small appliances like a bulb or a phone charger are usually rated in watts, while larger ones like an oven, water heater, or central air conditioner are often listed in kilowatts on the nameplate or spec sheet. Pick whichever unit matches the number on your appliance's label; the calculator converts internally so the kWh and cost results are identical either way."
+        "text": "Three things usually explain the gap. Almost every tariff adds a fixed daily standing charge plus taxes that no per-appliance figure captures; standby draw from everything left plugged in creates a constant baseline; and motors, compressors and heating elements can pull more than their nameplate rating at start-up or on maximum settings. If you are on a tiered or time-of-use plan, the marginal price of extra usage is also higher than the average rate you entered."
       }
     },
     {
       "@type": "Question",
-      "name": "How much electricity do common appliances like a fridge, AC, or TV use?",
+      "name": "Is standby or vampire power worth worrying about?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The quick-add presets are typical average figures — a refrigerator around 150W running continuously, an air conditioner around 1,500W for about 8 hours, a space heater around 1,500W for 5 hours, a TV around 100W for 5 hours, a desktop PC around 200W for 6 hours, and an LED bulb around 9W for 5 hours. Real appliances vary by size, age, and efficiency rating, so check the nameplate or manual for your exact model and adjust the watts and hours after adding a preset."
+        "text": "Standby loads are typically 5 to 10 percent of a household's electricity — real money, but not the biggest prize. A set-top box, games console or AV receiver left idle can each draw 10 to 20 W around the clock, which is 90 to 175 kWh a year apiece. Switch off or smart-plug those few heavy standby devices and ignore the phone chargers, which draw a fraction of a watt when nothing is attached."
       }
     },
     {
       "@type": "Question",
-      "name": "Why doesn't my calculated cost match my actual electricity bill?",
+      "name": "How do I find an appliance's real wattage?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This calculator gives a close estimate based on the numbers you enter, but real bills include things this tool can't see: tiered or time-of-use rates that charge more per kWh above a threshold or during peak hours, fixed monthly service fees, taxes, and standby ('phantom') power drawn by devices that are plugged in but off. If your bill runs higher than expected, those extras — plus any appliances you didn't enter — are usually why."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my data sent anywhere when I use this calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Every calculation happens locally in your browser — the wattage, hours, price, and currency you enter are never uploaded or sent to a server. Your latest inputs are saved only in your browser's local storage so they're there next time you open the page, and you can clear them anytime by clearing your browser data."
+        "text": "Start with the rating label on the back, the underside or inside the door. It gives watts directly, or volts and amps that you multiply together — 230 V x 6.5 A is roughly 1500 W. Manuals and manufacturer spec sheets are the next best source. For anything that cycles, a plug-in energy monitor left in place for a week measures actual kilowatt-hours and beats nameplate arithmetic every time."
       }
     }
   ]
 }
 </script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -153,156 +163,130 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
   <section class="hero">
     <h1>Electricity Cost Calculator</h1>
-    <p class="lede" data-i18n="hero.lede">How much does it cost to run this? Enter an appliance's power, hours of use, and your price per kWh to see the cost per day, month and year — add more appliances anytime.</p>
+    <p class="lede" data-i18n="hero.lede">Watts times hours divided by 1000, priced by the kilowatt-hour. See what each appliance really adds to the bill.</p>
   </section>
-
-  <!-- TOOL:START — builder agent replaces everything inside this section.
-       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
-         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
-         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
-         document 의 "i18n:change" 이벤트를 구독한다. -->
-  <section class="tool-card" id="tool" aria-label="Electricity cost calculator" data-i18n-aria-label="tool.aria">
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
     <style>
-      #tool .ecc-price-row { display:flex; gap:8px; align-items:stretch; }
-      #tool .ecc-price-row select#ecc-currency { flex:0 0 96px; width:96px; padding-left:10px; padding-right:6px; }
-      #tool .ecc-price-row input#ecc-price { flex:1 1 auto; }
-      #tool .ecc-block-label { display:block; font-weight:600; font-size:14px; margin:16px 0 6px; }
-      #tool .ecc-presets { display:flex; flex-wrap:wrap; gap:8px; }
-      #tool .ecc-presets .chip { padding:7px 12px; font-size:13.5px; font-weight:600; font-family:inherit;
-        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer;
-        display:inline-flex; align-items:center; gap:5px; }
-      #tool .ecc-presets .chip:hover { border-color:var(--accent); }
-      #tool .ecc-rows { display:flex; flex-direction:column; gap:12px; margin-top:12px; }
-      #tool .ecc-row { border:1px solid var(--line); border-radius:10px; padding:12px; background:var(--bg); }
-      #tool .ecc-row-head { display:flex; gap:8px; align-items:center; }
-      #tool .ecc-r-name { flex:1 1 auto; min-width:0; padding:9px 11px; font-size:15px; font-family:inherit;
-        border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); }
-      #tool .ecc-r-name:focus { outline:2px solid var(--accent); outline-offset:-1px; border-color:transparent; }
-      #tool .ecc-r-remove { flex:0 0 32px; width:32px; height:32px; border:1px solid var(--line); border-radius:8px;
-        background:var(--surface); color:var(--muted); font-size:18px; line-height:1; cursor:pointer; }
-      #tool .ecc-r-remove:hover { border-color:#dc2626; color:#dc2626; }
-      #tool .ecc-row-grid { display:grid; grid-template-columns:1.3fr .8fr 1fr; gap:8px; margin-top:10px; }
-      #tool .ecc-row-grid label { display:block; font-weight:600; font-size:12.5px; color:var(--muted); margin:0 0 4px; }
-      #tool .ecc-row-grid input { width:100%; padding:9px 10px; font-size:15px; font-family:inherit;
-        border:1px solid var(--line); border-radius:8px; background:var(--surface); color:var(--ink); }
-      #tool .ecc-row-grid input:focus { outline:2px solid var(--accent); outline-offset:-1px; border-color:transparent; }
-      #tool .ecc-pwr { display:flex; }
-      #tool .ecc-pwr input.ecc-r-watts { border-top-right-radius:0; border-bottom-right-radius:0; flex:1 1 auto; min-width:0; }
-      #tool .ecc-r-unit { flex:0 0 56px; width:56px; border-top-left-radius:0; border-bottom-left-radius:0;
-        border-left:none; padding:9px 2px; font-size:12.5px; background:var(--surface); color:var(--ink); border:1px solid var(--line); }
-      #tool .ecc-row-out { margin:8px 0 0; font-size:13.5px; font-weight:600; color:var(--accent-strong); min-height:1.1em; }
-      [data-theme="dark"] #tool .ecc-row-out, [data-theme="auto"] #tool .ecc-row-out { color:var(--accent); }
-      #tool .ecc-row-warn { margin:4px 0 0; font-size:12.5px; color:#b45309; }
-      #tool .ecc-add-btn { margin-top:14px; width:100%; padding:11px; font-size:14.5px; font-weight:700;
-        font-family:inherit; border:1px dashed var(--line); border-radius:10px; background:transparent;
-        color:var(--muted); cursor:pointer; }
-      #tool .ecc-add-btn:hover { border-color:var(--accent); color:var(--accent); }
-      #tool .ecc-result-table { width:100%; border-collapse:collapse; margin-top:4px; font-size:14.5px; }
-      #tool .ecc-result-table th, #tool .ecc-result-table td { text-align:right; padding:7px 6px; border-bottom:1px solid var(--line); }
-      #tool .ecc-result-table th:first-child, #tool .ecc-result-table td:first-child { text-align:left; color:var(--muted); font-weight:600; }
-      #tool .ecc-result-table thead th { color:var(--muted); font-weight:650; font-size:13px; }
-      #tool .ecc-result-table td { font-variant-numeric:tabular-nums; font-weight:700; }
-      #tool .ecc-foot-note { font-size:12.5px; color:var(--muted); margin:10px 0 0; }
-      @media(max-width:420px){
-        #tool .ecc-row-grid { grid-template-columns:1fr 1fr; }
-        #tool .ecc-row-grid > label:first-child { grid-column:1 / -1; }
-      }
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-unit { font-size:12px; color:var(--muted); margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
     </style>
 
-    <div class="input-group">
-      <label for="ecc-price" data-i18n="tool.price.label">Price per kWh</label>
-      <div class="ecc-price-row">
-        <select id="ecc-currency" aria-label="Currency" data-i18n-aria-label="tool.currency.label"></select>
-        <input id="ecc-price" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 0.15" data-i18n-placeholder="tool.price.ph" autocomplete="off">
+    <label for="preset" data-i18n="tool.preset.label">Appliance</label>
+    <select id="preset">
+      <option value="" data-i18n="tool.preset.custom">Custom — enter watts below</option>
+      <option value="150" data-i18n="tool.preset.fridge">Refrigerator — 150 W</option>
+      <option value="100" data-i18n="tool.preset.freezer">Chest freezer — 100 W</option>
+      <option value="100" data-i18n="tool.preset.tv">TV, 55-inch LED — 100 W</option>
+      <option value="200" data-i18n="tool.preset.desktop">Desktop PC — 200 W</option>
+      <option value="450" data-i18n="tool.preset.gaming">Gaming PC — 450 W</option>
+      <option value="60" data-i18n="tool.preset.laptop">Laptop — 60 W</option>
+      <option value="1500" data-i18n="tool.preset.heater">Space heater — 1500 W</option>
+      <option value="1000" data-i18n="tool.preset.ac">Window air conditioner — 1000 W</option>
+      <option value="500" data-i18n="tool.preset.washer">Washing machine — 500 W</option>
+      <option value="3000" data-i18n="tool.preset.dryer">Clothes dryer — 3000 W</option>
+      <option value="1800" data-i18n="tool.preset.dishwasher">Dishwasher — 1800 W</option>
+      <option value="10" data-i18n="tool.preset.bulb">LED bulb — 10 W</option>
+      <option value="7200" data-i18n="tool.preset.ev">EV charger, Level 2 — 7200 W</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="watts" data-i18n="tool.watts.label">Power (watts)</label>
+        <input type="number" id="watts" inputmode="decimal" min="1" max="30000" step="any" autocomplete="off" placeholder="1500">
+      </div>
+      <div>
+        <label for="hours" data-i18n="tool.hours.label">Hours used per day</label>
+        <input type="number" id="hours" inputmode="decimal" min="0" max="24" step="any" autocomplete="off" placeholder="4">
       </div>
     </div>
 
-    <span class="ecc-block-label" data-i18n="tool.presets.label">Quick-add a common appliance</span>
-    <div id="ecc-presets" class="ecc-presets" role="group" aria-label="Quick-add a common appliance" data-i18n-aria-label="tool.presets.label"></div>
-
-    <span class="ecc-block-label" data-i18n="tool.rows.label">Appliances</span>
-    <div id="ecc-rows" class="ecc-rows"></div>
-    <button type="button" id="ecc-add" class="ecc-add-btn" data-i18n="tool.add">+ Add appliance</button>
-
-    <div class="result" id="result" aria-live="polite">
-      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Add an appliance above to see the cost</p>
-      <div id="result-body" hidden>
-        <table class="ecc-result-table">
-          <thead><tr><th></th><th data-i18n="tool.res.colKwh">kWh</th><th data-i18n="tool.res.colCost">Cost</th></tr></thead>
-          <tbody>
-            <tr><th data-i18n="tool.res.rowDay">Day</th><td id="r-kwh-day">—</td><td id="r-cost-day">—</td></tr>
-            <tr><th data-i18n="tool.res.rowMonth">Month</th><td id="r-kwh-month">—</td><td id="r-cost-month">—</td></tr>
-            <tr><th data-i18n="tool.res.rowYear">Year</th><td id="r-kwh-year">—</td><td id="r-cost-year">—</td></tr>
-          </tbody>
-        </table>
-        <p id="rate-hint" hidden data-i18n="tool.rateHint" style="margin:10px 0 0;font-size:13px;color:var(--muted);">Enter a price per kWh above to see the estimated cost.</p>
+    <div class="field-row">
+      <div>
+        <label for="days" data-i18n="tool.days.label">Days per week</label>
+        <select id="days">
+          <option value="7" selected data-i18n="tool.days.7">7 — every day</option>
+          <option value="6" data-i18n="tool.days.6">6 days</option>
+          <option value="5" data-i18n="tool.days.5">5 days</option>
+          <option value="4" data-i18n="tool.days.4">4 days</option>
+          <option value="3" data-i18n="tool.days.3">3 days</option>
+          <option value="2" data-i18n="tool.days.2">2 days</option>
+          <option value="1" data-i18n="tool.days.1">1 day</option>
+        </select>
+      </div>
+      <div>
+        <label for="rate" data-i18n="tool.rate.label">Price per kWh</label>
+        <input type="number" id="rate" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0.17">
       </div>
     </div>
-    <p class="ecc-foot-note" data-i18n="tool.note.disclaimer">Estimates only, for informational purposes — not professional financial or tax advice. Actual bills vary with taxes, fees, and tiered utility rates.</p>
-    <p class="ecc-foot-note" data-i18n="tool.note.privacy">All calculations run in your browser — nothing is sent to a server.</p>
+    <p class="subtle" data-i18n="tool.rate.note">US average is about $0.17 per kWh, the UK about £0.27 — check your bill and enter the rate in your own currency.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate cost</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.month">Cost per month</div>
+          <div class="rc-val" id="r-month">—</div>
+          <div class="rc-unit" data-i18n="tool.r.cur">in your currency</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.day">Cost per day of use</div>
+          <div class="rc-val" id="r-day">—</div>
+          <div class="rc-unit" data-i18n="tool.r.cur">in your currency</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.year">Cost per year</div>
+          <div class="rc-val" id="r-year">—</div>
+          <div class="rc-unit" data-i18n="tool.r.cur">in your currency</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.kwh">Energy per month (kWh)</div>
+          <div class="rc-val" id="r-kwh">—</div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.kwhyear">Energy per year (kWh)</div>
+          <div class="rc-val" id="r-kwhyear">—</div>
+        </div>
+      </div>
+      <p class="subtle" id="norate" data-i18n="tool.note.norate" hidden style="margin-top:10px;">No rate entered, so only energy use is shown. Add your price per kWh to see the cost.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.est" style="margin-top:12px;">An estimate for steady running. Anything that cycles on and off — fridges, freezers, air conditioners — uses less than its rated watts.</p>
   </section>
   <!-- TOOL:END -->
 
-  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
   <section class="guide-content">
-    <style>
-      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
-      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
-      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
-      .guide-content p{margin:0 0 12px;color:var(--ink)}
-      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
-      .guide-content li{margin:4px 0}
-      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
-      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
-      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
-      .guide-content th{color:var(--muted);font-weight:650}
-    </style>
+    <h2>How an electricity bill is actually built</h2>
+    <p>Every appliance costs money the same way: power multiplied by time, priced by the kilowatt-hour. Take the wattage from the rating label, multiply by the hours it runs, divide by 1000, and you have kilowatt-hours. Multiply that by your tariff and you have money. A 1500 W space heater running for one hour uses 1.5 kWh; at the US average of roughly 17 cents that is about 25 cents an hour. Everything else this calculator does is scaling that number to a month (30.44 days, the average) and a year (365.25 days), adjusted for how many days a week the thing actually runs.</p>
 
-    <h2>Figuring out what an appliance really costs to run</h2>
-    <p>Utility bills lump every device in the house into one number, so it's hard to tell whether the AC, the old fridge, or a space heater is the real culprit. This electricity cost calculator isolates one appliance at a time: enter its wattage, how many hours a day it runs, and your price per kWh, and it turns that into a cost per day, month, and year — plus the raw kWh consumed, in case your utility bills you in usage tiers rather than a flat rate.</p>
+    <h3>Worked example: the space heater that doubles a winter bill</h3>
+    <p>A 1500 W plug-in heater in a cold bedroom, eight hours a night, every night. Daily energy is 1500 x 8 / 1000 = 12 kWh. At 0.17 per kWh that is 2.04 a day, about 62 a month and 745 over a full year of that habit. In the UK at 0.27 per kWh the same heater costs 3.24 a day, close to 99 a month. This is the single most common cause of winter bill shock. Resistance heating turns one unit of electricity into exactly one unit of heat, while a heat pump moves three or four — which is why running one portable heater in an unused room is often more expensive than heating the whole house better.</p>
 
-    <h2>The formula behind the numbers</h2>
-    <p>Three steps, done automatically for every appliance you add:</p>
-    <ul>
-      <li><strong>kWh per day</strong> = (watts &times; hours used per day) &divide; 1,000</li>
-      <li><strong>Cost per day</strong> = kWh per day &times; price per kWh</li>
-      <li><strong>Monthly and yearly cost</strong> = daily cost &times; 30.44 (the average days per month) or &times; 365</li>
-    </ul>
-    <p>If your appliance's nameplate lists kilowatts (kW) instead of watts, switch the unit next to the number field — the calculator converts internally, so the result is identical either way. Quantity lets you model several identical devices (a bank of LED bulbs, for example) without adding separate rows.</p>
+    <h3>Worked example: the fridge and the duty cycle</h3>
+    <p>A modern fridge-freezer has a compressor rated at perhaps 150 W, but it never runs continuously — the thermostat cuts it in and out. Over 24 hours the compressor is typically working around a third of the time, so instead of 150 x 24 / 1000 = 3.6 kWh a day, the real figure lands closer to 1.1 to 1.3 kWh, which lines up with the 400 to 500 kWh a year printed on most energy labels. For anything thermostatic — fridge, freezer, air conditioner, heat pump, electric radiator with a stat — enter equivalent full-power hours rather than wall-clock hours. Eight hours of window AC at 1000 W with the compressor cycling half the time behaves like four hours of full-power use.</p>
 
-    <div class="example">
-      <p><strong>Example 1 — a refrigerator.</strong> 150W, running 24 hours a day, at $0.15/kWh: 150 &times; 24 &divide; 1,000 = <strong>3.6 kWh/day</strong>. Cost: 3.6 &times; 0.15 = <strong>$0.54/day</strong>, about <strong>$16.43/month</strong>, and <strong>$197.10/year</strong>.</p>
-    </div>
-    <div class="example">
-      <p><strong>Example 2 — a window AC unit.</strong> 1,500W for 8 hours a day at $0.15/kWh: 1,500 &times; 8 &divide; 1,000 = <strong>12 kWh/day</strong>, or <strong>$1.80/day</strong> — about <strong>$54.75/month</strong> just for that one appliance during cooling season.</p>
-    </div>
-    <div class="example">
-      <p><strong>Example 3 — two LED bulbs.</strong> 9W each, quantity 2, 5 hours a day: (9 &times; 2) &times; 5 &divide; 1,000 = <strong>0.09 kWh/day</strong> — under a cent a day at typical rates, which is why swapping incandescent bulbs for LEDs barely shows up on the bill.</p>
-    </div>
+    <h3>Worked example: charging an electric car</h3>
+    <p>A Level 2 charger drawing 7200 W for four hours adds 28.8 kWh, roughly 100 miles of range in a typical EV. At 0.17 per kWh that is 4.90, or about 5 cents a mile — close to a third of the fuel cost of a 30 mpg petrol car at 4.50 a gallon. Charging is also the biggest load most households can deliberately shift into an off-peak window, which is where a time-of-use tariff finally pays for the hassle of watching the clock.</p>
 
-    <h2>Typical wattage for common appliances</h2>
-    <p>Use the quick-add presets as a starting point, then adjust for your exact model:</p>
-    <table>
-      <thead><tr><th>Appliance</th><th>Typical power</th><th>Typical daily use</th></tr></thead>
-      <tbody>
-        <tr><td>Refrigerator</td><td>~150 W</td><td>24 hours (cycles on/off)</td></tr>
-        <tr><td>Air conditioner (window/split)</td><td>~1,500 W</td><td>~8 hours</td></tr>
-        <tr><td>Space heater</td><td>~1,500 W</td><td>~5 hours</td></tr>
-        <tr><td>TV</td><td>~100 W</td><td>~5 hours</td></tr>
-        <tr><td>Desktop PC</td><td>~200 W</td><td>~6 hours</td></tr>
-        <tr><td>LED bulb</td><td>~9 W</td><td>~5 hours</td></tr>
-      </tbody>
-    </table>
+    <h2>Reading the preset list</h2>
+    <p>The presets are typical mid-range figures, not promises. Notice the shape of the list: the things people worry about (LED bulbs at 10 W, laptops at 60 W) sit at the bottom, and the things nobody thinks about (dryer at 3000 W, dishwasher at 1800 W, EV charger at 7200 W) sit at the top. Anything that makes heat or moves heat is a kilowatt-class load. Anything that only pushes electrons around a circuit board is a tens-of-watts load. That single distinction predicts most of a bill.</p>
 
-    <h2>Why this won't match your bill to the cent</h2>
-    <ul>
-      <li><strong>Tiered / time-of-use rates:</strong> many utilities charge more per kWh once you cross a monthly threshold, or charge peak vs. off-peak prices. This tool assumes one flat rate.</li>
-      <li><strong>Fixed fees and taxes:</strong> a base service charge and local taxes appear on the bill regardless of usage, and aren't part of a per-appliance estimate.</li>
-      <li><strong>Standby ("phantom") power:</strong> devices left plugged in but switched off — chargers, game consoles, set-top boxes — draw a small trickle of power around the clock that adds up across a household.</li>
-      <li><strong>Appliances not entered:</strong> the total only reflects what you've added — a whole-house bill also includes lighting, small electronics, and anything you forgot to list.</li>
-    </ul>
+    <h2>Where the savings actually are, ranked</h2>
+    <p>In rough order of impact: space heating and cooling first, because they draw kilowatts for hours at a time; then water heating and the tumble dryer; then cooking; then everything else. Three dryer loads a week at 3 kWh each is about 39 kWh a month — more than many fridges use. By contrast, swapping ten 60 W incandescent bulbs for 10 W LEDs saves 500 W while they are lit, or roughly 60 kWh a month at four hours a day: worthwhile, but it took ten devices to get there. Unplugging phone chargers achieves nothing measurable. If you want a shorter bill, work top-down from the heat.</p>
+
+    <h2>Limits of this estimate</h2>
+    <p>The calculator assumes one flat rate, and many bills are not flat. Tiered rates raise your marginal price once you pass a monthly threshold; time-of-use plans can charge two or three times more at peak; and nearly every supplier adds a fixed daily standing charge you pay regardless of use. It also assumes nameplate wattage equals actual draw, which is a ceiling rather than an average for anything with a motor, a compressor or a variable heat setting. For a device you genuinely care about, leave a plug-in energy meter on it for a week, read the measured kilowatt-hours, then come back here and price them against your tariff.</p>
   </section>
-  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
@@ -312,28 +296,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="faq" id="faq">
     <h2 data-i18n="faq.heading">Frequently asked questions</h2>
-    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
-         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
-    <details>
-      <summary data-i18n="faq.q1">How do I calculate the electricity cost of an appliance?</summary>
-      <p data-i18n="faq.a1">Multiply the appliance's power in watts by the hours it runs per day, divide by 1,000 to get kilowatt-hours (kWh), then multiply by your price per kWh. For example, a 150W fridge running 24 hours a day uses 150 × 24 ÷ 1,000 = 3.6 kWh per day. At $0.15 per kWh that's 3.6 × 0.15 = $0.54 a day, about $16.43 a month (using an average of 30.44 days per month), and $197.10 a year. This electricity cost calculator does that math for you and adds up every appliance you enter.</p>
-    </details>
-    <details>
-      <summary data-i18n="faq.q2">What's the difference between W and kW, and does it matter which I pick?</summary>
-      <p data-i18n="faq.a2">Watts (W) and kilowatts (kW) both measure power — 1 kW equals 1,000 W. Small appliances like a bulb or a phone charger are usually rated in watts, while larger ones like an oven, water heater, or central air conditioner are often listed in kilowatts on the nameplate or spec sheet. Pick whichever unit matches the number on your appliance's label; the calculator converts internally so the kWh and cost results are identical either way.</p>
-    </details>
-    <details>
-      <summary data-i18n="faq.q3">How much electricity do common appliances like a fridge, AC, or TV use?</summary>
-      <p data-i18n="faq.a3">The quick-add presets are typical average figures — a refrigerator around 150W running continuously, an air conditioner around 1,500W for about 8 hours, a space heater around 1,500W for 5 hours, a TV around 100W for 5 hours, a desktop PC around 200W for 6 hours, and an LED bulb around 9W for 5 hours. Real appliances vary by size, age, and efficiency rating, so check the nameplate or manual for your exact model and adjust the watts and hours after adding a preset.</p>
-    </details>
-    <details>
-      <summary data-i18n="faq.q4">Why doesn't my calculated cost match my actual electricity bill?</summary>
-      <p data-i18n="faq.a4">This calculator gives a close estimate based on the numbers you enter, but real bills include things this tool can't see: tiered or time-of-use rates that charge more per kWh above a threshold or during peak hours, fixed monthly service fees, taxes, and standby ('phantom') power drawn by devices that are plugged in but off. If your bill runs higher than expected, those extras — plus any appliances you didn't enter — are usually why.</p>
-    </details>
-    <details>
-      <summary data-i18n="faq.q5">Is my data sent anywhere when I use this calculator?</summary>
-      <p data-i18n="faq.a5">No. Every calculation happens locally in your browser — the wattage, hours, price, and currency you enter are never uploaded or sent to a server. Your latest inputs are saved only in your browser's local storage so they're there next time you open the page, and you can clear them anytime by clearing your browser data.</p>
-    </details>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between watts and kWh?</summary><p data-i18n="faq.a1">Watts measure how fast an appliance draws power at this moment; a kilowatt-hour is the energy used when 1000 watts run for one hour. Your supplier bills kilowatt-hours, never watts. That is why a 1500 W heater for two hours and a 100 W TV for thirty hours cost exactly the same — both come to 3 kWh.</p></details>
+    <details><summary data-i18n="faq.q2">Why is my bill higher than this calculator says?</summary><p data-i18n="faq.a2">Three things usually explain the gap. Almost every tariff adds a fixed daily standing charge plus taxes that no per-appliance figure captures; standby draw from everything left plugged in creates a constant baseline; and motors, compressors and heating elements can pull more than their nameplate rating at start-up or on maximum settings. If you are on a tiered or time-of-use plan, the marginal price of extra usage is also higher than the average rate you entered.</p></details>
+    <details><summary data-i18n="faq.q3">Is standby or vampire power worth worrying about?</summary><p data-i18n="faq.a3">Standby loads are typically 5 to 10 percent of a household's electricity — real money, but not the biggest prize. A set-top box, games console or AV receiver left idle can each draw 10 to 20 W around the clock, which is 90 to 175 kWh a year apiece. Switch off or smart-plug those few heavy standby devices and ignore the phone chargers, which draw a fraction of a watt when nothing is attached.</p></details>
+    <details><summary data-i18n="faq.q4">How do I find an appliance's real wattage?</summary><p data-i18n="faq.a4">Start with the rating label on the back, the underside or inside the door. It gives watts directly, or volts and amps that you multiply together — 230 V x 6.5 A is roughly 1500 W. Manuals and manufacturer spec sheets are the next best source. For anything that cycles, a plug-in energy monitor left in place for a week measures actual kilowatt-hours and beats nameplate arithmetic every time.</p></details>
     <!-- FAQ:END -->
   </section>
 </main>

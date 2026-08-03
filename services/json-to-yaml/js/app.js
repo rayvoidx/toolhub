@@ -230,7 +230,8 @@
     var data;
     try { data = JSON.parse(raw); }
     catch (e) { return fail("tool.err.parse", (e && e.message) || ""); }
-    STEP = parseInt(indent.value, 10) === 4 ? 4 : 2;
+    var st = parseInt(indent.value, 10);
+    STEP = (st >= 1 && st <= 4) ? st : 2;
     var yaml;
     // 아주 깊게 중첩된 문서는 재귀가 스택을 넘길 수 있다 — 조용히 죽지 않고 문구로 알린다.
     try { yaml = toYaml(data); }

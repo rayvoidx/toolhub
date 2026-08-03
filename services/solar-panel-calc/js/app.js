@@ -90,9 +90,9 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var usage = $("usage"), sun = $("sun"), sunc = $("sunc"), sunWrap = $("sun-custom-wrap");
-  var panelw = $("panelw"), losses = $("losses");
+  var panelw = $("panelw"), panelc = $("panelc"), panelWrap = $("panel-custom-wrap"), losses = $("losses");
   var result = $("result"), errEl = $("err"), warnEl = $("r-warn");
-  if (!usage || !sun || !sunc || !panelw || !losses) return;
+  if (!usage || !sun || !sunc || !panelw || !panelc || !losses) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var num = function (el) { return parseFloat(String(el.value).replace(/,/g, "")); };
@@ -101,7 +101,10 @@
   // 패널 1장이 차지하는 지붕 면적 — 프레임·간격 포함한 업계 관행값(약 21 sq ft ≈ 1.95 m²).
   var SQFT_PER_PANEL = 21;
 
-  function toggleCustom() { sunWrap.hidden = sun.value !== "custom"; }
+  function toggleCustom() {
+    sunWrap.hidden = sun.value !== "custom";
+    panelWrap.hidden = panelw.value !== "custom";
+  }
 
   function fail(key) {
     result.hidden = true;
@@ -124,7 +127,8 @@
     var derate = 1 - lossPct / 100;
     var dailyKwh = kwhMonth / 30;
     var neededKw = dailyKwh / (sunHours * derate);
-    var watts = parseFloat(panelw.value);
+    var watts = panelw.value === "custom" ? num(panelc) : parseFloat(panelw.value);
+    if (!isFinite(watts) || watts < 50 || watts > 800) return fail("tool.err.panel");
     var panels = Math.ceil((neededKw * 1000) / watts);
     // 패널은 장 단위로만 살 수 있으므로 실제 설치 용량은 올림한 장수 기준이다.
     var installedKw = (panels * watts) / 1000;
@@ -148,11 +152,11 @@
 
   toggleCustom();
   $("calc-btn").addEventListener("click", calc);
-  [usage, sunc, losses].forEach(function (el) {
+  [usage, sunc, panelc, losses].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  sun.addEventListener("change", toggleCustom);
-  [sun, sunc, panelw, losses].forEach(function (el) {
+  [sun, panelw].forEach(function (el) { el.addEventListener("change", toggleCustom); });
+  [sun, sunc, panelw, panelc, losses].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

@@ -113,6 +113,23 @@
     return d.toLocaleString();
   }
 
+  // exp 까지 남은 시간을 현지어로. Intl 미지원 브라우저는 조용히 "—".
+  function relTime(sec) {
+    if (typeof sec !== "number" || !isFinite(sec)) return null;
+    var diff = sec * 1000 - Date.now();
+    if (!isFinite(diff)) return null;
+    var units = [["day", 86400000], ["hour", 3600000], ["minute", 60000], ["second", 1000]];
+    var lang = document.documentElement.lang || "en";
+    try {
+      var rtf = new Intl.RelativeTimeFormat(lang, { numeric: "auto" });
+      for (var i = 0; i < units.length; i++) {
+        var v = diff / units[i][1];
+        if (Math.abs(v) >= 1 || i === units.length - 1) return rtf.format(Math.round(v), units[i][0]);
+      }
+    } catch (e) { return null; }
+    return null;
+  }
+
   function calc() {
     var raw = String(input.value).trim().replace(/^Bearer\s+/i, "");
     if (!raw) return fail("tool.err.empty");
@@ -132,10 +149,13 @@
     var exp = payload && payload.exp, iat = payload && payload.iat;
     $("r-exp").textContent = fmtTime(exp) || "—";
     $("r-iat").textContent = fmtTime(iat) || "—";
+    $("r-ttl").textContent = relTime(exp) || "—";
 
+    var nbf = payload && payload.nbf;
     var st = $("r-status");
     if (typeof exp !== "number") { st.textContent = t("tool.status.noexp"); st.className = "rc-val"; }
     else if (exp * 1000 < Date.now()) { st.textContent = t("tool.status.expired"); st.className = "rc-val bad"; }
+    else if (typeof nbf === "number" && isFinite(nbf) && nbf * 1000 > Date.now()) { st.textContent = t("tool.status.notyet"); st.className = "rc-val bad"; }
     else { st.textContent = t("tool.status.valid"); st.className = "rc-val ok"; }
 
     errEl.hidden = true;

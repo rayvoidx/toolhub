@@ -117,6 +117,14 @@
     return n;
   }
 
+  // 시급 파서: 빈값/비숫자/음수는 null(=급여 카드 숨김). 상한은 비현실적 값 방지용
+  function parseRate(raw) {
+    if (raw == null || String(raw).trim() === "") return null;
+    var n = parseFloat(String(raw).replace(/,/g, "").trim());
+    if (!isFinite(n) || n < 0 || n > 1e6) return null;
+    return n;
+  }
+
   // 부동소수 오차 제거 후 소수 둘째 자리 반올림
   function round2(n) {
     return Math.round((n + Number.EPSILON) * 100) / 100;
@@ -167,7 +175,7 @@
   // node 검증용 노출 — 브라우저에는 module 이 없어 건너뛴다
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
-      parseTimeValue: parseTimeValue, clampInt: clampInt, round2: round2,
+      parseTimeValue: parseTimeValue, clampInt: clampInt, round2: round2, parseRate: parseRate,
       computeDuration: computeDuration, minutesToParts: minutesToParts,
       decimalHours: decimalHours, addSubtract: addSubtract
     };
@@ -232,6 +240,8 @@
   var durEmpty = $("hc-dur-empty"), durBody = $("hc-dur-body");
   var netCard = $("hc-dur-net-card"), decCard = $("hc-dur-dec-card");
   var netEl = $("hc-dur-net"), decEl = $("hc-dur-decimal");
+  var payCard = $("hc-dur-pay-card"), payEl = $("hc-dur-pay");
+  var rateEl = $("hc-rate");
   var breakdownEl = $("hc-dur-breakdown");
   var overnightEl = $("hc-dur-overnight"), sameEl = $("hc-dur-same"), clampedEl = $("hc-dur-clamped");
 
@@ -299,6 +309,18 @@
     if (decEl) decEl.textContent = fmt(tr("tool.fmt.decimal", "{n} h"), { n: nf(decimalHours(r.net)) });
     if (netCard) netCard.setAttribute("data-value", netEl ? netEl.textContent : "");
     if (decCard) decCard.setAttribute("data-value", decEl ? decEl.textContent : "");
+
+    if (payCard && payEl) {
+      var rate = parseRate(rateEl ? rateEl.value : "");
+      if (rate == null) {
+        payCard.hidden = true;
+      } else {
+        var pay = round2(decimalHours(r.net) * rate);
+        payEl.textContent = nf(pay);
+        payCard.setAttribute("data-value", payEl.textContent);
+        payCard.hidden = false;
+      }
+    }
 
     if (breakdownEl) {
       if (r.usedBreak > 0) {
@@ -404,13 +426,13 @@
       legacyCopy(raw, done);
     }
   }
-  [netCard, decCard, asCard].forEach(function (card) {
+  [netCard, decCard, payCard, asCard].forEach(function (card) {
     if (card) card.addEventListener("click", function () { copyCard(card); });
   });
 
   /* ---- 이벤트 ---- */
   function onDurChange() {
-    saveState({ start: startEl.value, end: endEl.value, brk: breakEl ? breakEl.value : "" });
+    saveState({ start: startEl.value, end: endEl.value, brk: breakEl ? breakEl.value : "", rate: rateEl ? rateEl.value : "" });
     renderDuration();
   }
   function onAsChange() {
@@ -420,12 +442,13 @@
   startEl.addEventListener("input", onDurChange);
   endEl.addEventListener("input", onDurChange);
   if (breakEl) breakEl.addEventListener("input", onDurChange);
+  if (rateEl) rateEl.addEventListener("input", onDurChange);
   baseEl.addEventListener("input", onAsChange);
   if (addHoursEl) addHoursEl.addEventListener("input", onAsChange);
   if (addMinutesEl) addMinutesEl.addEventListener("input", onAsChange);
 
   // Enter 키로 즉시 반영(숫자 입력 중 blur 유도) — 값 자체는 이미 input 이벤트로 실시간 반영됨
-  [breakEl, addHoursEl, addMinutesEl].forEach(function (el) {
+  [breakEl, rateEl, addHoursEl, addMinutesEl].forEach(function (el) {
     if (!el) return;
     el.addEventListener("keydown", function (ev) {
       if (ev.key === "Enter") { ev.preventDefault(); el.blur(); }
@@ -445,6 +468,7 @@
     if (st.start && parseTimeValue(st.start) != null) startEl.value = st.start;
     if (st.end && parseTimeValue(st.end) != null) endEl.value = st.end;
     if (breakEl && st.brk != null) breakEl.value = st.brk;
+    if (rateEl && st.rate != null) rateEl.value = st.rate;
     if (st.base && parseTimeValue(st.base) != null) baseEl.value = st.base;
     if (addHoursEl && st.addH != null) addHoursEl.value = st.addH;
     if (addMinutesEl && st.addM != null) addMinutesEl.value = st.addM;

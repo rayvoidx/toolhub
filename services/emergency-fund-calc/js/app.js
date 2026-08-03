@@ -91,7 +91,8 @@
   var $ = function (id) { return document.getElementById(id); };
   var exp = $("exp"), monthsSel = $("months"), saved = $("saved"), save = $("save");
   var result = $("result"), errEl = $("err");
-  if (!exp || !monthsSel || !saved || !save) return;
+  var customWrap = $("custom-wrap"), customMonths = $("custom-months");
+  if (!exp || !monthsSel || !saved || !save || !customWrap || !customMonths) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var num = function (el) { var v = parseFloat(String(el.value).replace(/[$,\s]/g, "")); return isFinite(v) ? v : NaN; };
@@ -116,7 +117,15 @@
     if (!isFinite(per) || per < 0) return fail("tool.err.save");
     if (have > MAX_AMT || per > MAX_AMT) return fail("tool.err.range");
 
-    var months = parseInt(monthsSel.value, 10) || 6;
+    var months;
+    if (monthsSel.value === "custom") {
+      months = parseFloat(String(customMonths.value).replace(/\s/g, ""));
+      // 직접 입력은 1~60 개월만 — 0·음수·빈칸은 조용히 6 으로 대체하지 않고 문구로 돌려보낸다.
+      if (!isFinite(months) || months < 1 || months > 60) return fail("tool.err.months");
+      months = Math.round(months);
+    } else {
+      months = parseInt(monthsSel.value, 10) || 6;
+    }
     var target = e * months;
     var gap = Math.max(0, target - have);
     var pct = Math.min(100, Math.round(have / target * 100));
@@ -151,7 +160,12 @@
     el.addEventListener("keydown", function (ev) { if (ev.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
-  monthsSel.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  monthsSel.addEventListener("change", function () {
+    customWrap.hidden = monthsSel.value !== "custom";
+    if (!result.hidden || !errEl.hidden) calc();
+  });
+  customMonths.addEventListener("keydown", function (ev) { if (ev.key === "Enter") calc(); });
+  customMonths.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

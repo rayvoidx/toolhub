@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Hourly to Salary Calculator — Yearly, Monthly, Weekly Pay">
 <meta property="og:description" content="Convert an hourly wage into yearly, monthly, biweekly and weekly pay — or go the other way from salary to hourly. Set your own hours, weeks worked and unpaid time off.">
 <meta property="og:url" content="https://tool-hub.me/hourly-to-salary/">
-<meta property="og:image" content="https://tool-hub.me/hourly-to-salary/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/hourly-to-salary/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f766e">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-26",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -125,6 +125,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -201,6 +211,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.month">Per month</div><div class="rc-val" id="r-month">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.biweek">Every 2 weeks</div><div class="rc-val" id="r-biweek">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.semi">Twice a month</div><div class="rc-val" id="r-semi">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.week">Per week</div><div class="rc-val" id="r-week">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.day">Per 8-hour day</div><div class="rc-val" id="r-day">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.hour">Per hour</div><div class="rc-val" id="r-hour">—</div></div>
@@ -211,41 +222,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </section>
   <!-- TOOL:END -->
 
-  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
   <section class="guide-content">
-    <style>
-      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
-      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
-      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
-      .guide-content p{margin:0 0 12px;color:var(--ink)}
-      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
-      .guide-content li{margin:4px 0}
-      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
-      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
-      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
-      .guide-content th{color:var(--muted);font-weight:650}
-    </style>
     <h2>The arithmetic behind hourly and salaried pay</h2>
     <p>Converting between an hourly rate and an annual salary is one multiplication, but the assumptions hidden inside it are where people trip up. Annual pay equals the hourly rate multiplied by hours worked each week multiplied by the number of weeks you are actually paid. Change any of those three and the answer moves, which is why two people on the same nominal rate can end the year thousands apart.</p>
     <p>The familiar rule of thumb — double the hourly rate and add three zeros — assumes a 40-hour week and 50 working weeks, so 2,000 hours a year. It is a fine mental estimate in an interview. It is not accurate for a 37.5-hour contract, a 44-hour shift pattern, or anyone taking unpaid leave.</p>
 
-    <h3>How to use this calculator</h3>
-    <ol>
-      <li>Choose what you already know: the "Hourly rate" mode if you have a wage figure, or "Annual salary" if you're converting the other direction, from a job offer back to a per-hour number.</li>
-      <li>Enter that number on its own — commas and currency symbols aren't needed, just the digits.</li>
-      <li>Set hours per week. Full-time defaults to 40, but part-time, shift work and compressed schedules vary — use the figure on your contract or timesheet, not a rounded guess.</li>
-      <li>Set paid weeks per year. Leave it at 52 if your holiday is paid; subtract any unpaid weeks off, as explained below the field.</li>
-      <li>Press Calculate to see the full pay picture at once: yearly, monthly, biweekly, weekly, per-8-hour-day and hourly figures side by side.</li>
-    </ol>
-
     <h3>Worked example 1: standard full-time</h3>
-    <div class="example">25.00 per hour, 40 hours a week, paid holiday so all 52 weeks count. Annual = 25 x 40 x 52 = 52,000. Weekly = 1,000. Monthly = 52,000 / 12 = 4,333.33, not 4,000 — a month averages 4.33 weeks, not 4. Every two weeks = 2,000, which matches a biweekly pay cycle of 26 payments a year.</div>
+    <p>25.00 per hour, 40 hours a week, paid holiday so all 52 weeks count. Annual = 25 x 40 x 52 = 52,000. Weekly = 1,000. Monthly = 52,000 / 12 = 4,333.33, not 4,000 — a month averages 4.33 weeks, not 4. Every two weeks = 2,000, which matches a biweekly pay cycle of 26 payments a year.</p>
 
     <h3>Worked example 2: unpaid time off</h3>
-    <div class="example">Same 25.00 per hour and 40 hours, but no paid holiday and three weeks off. Paid weeks = 49. Annual = 25 x 40 x 49 = 49,000, a 3,000 drop from the previous example for identical work. This is the most common reason a real payslip disappoints against a rate quoted in an offer, and it is why the weeks field is editable rather than fixed at 52.</div>
+    <p>Same 25.00 per hour and 40 hours, but no paid holiday and three weeks off. Paid weeks = 49. Annual = 25 x 40 x 49 = 49,000, a 3,000 drop from the previous example for identical work. This is the most common reason a real payslip disappoints against a rate quoted in an offer, and it is why the weeks field is editable rather than fixed at 52.</p>
 
     <h3>Worked example 3: salary back to an hourly rate</h3>
-    <div class="example">A 60,000 salary at 45 hours a week for 52 weeks works out at 60,000 / (45 x 52) = 25.64 per hour. The same salary at a 37.5-hour week is 60,000 / 1,950 = 30.77 per hour. Comparing two offers only means something once both are expressed per hour, including the hours the job actually expects rather than the hours in the contract.</div>
+    <p>A 60,000 salary at 45 hours a week for 52 weeks works out at 60,000 / (45 x 52) = 25.64 per hour. The same salary at a 37.5-hour week is 60,000 / 1,950 = 30.77 per hour. Comparing two offers only means something once both are expressed per hour, including the hours the job actually expects rather than the hours in the contract.</p>
 
     <h2>Quick reference at 40 hours a week, 52 paid weeks</h2>
     <table>
@@ -260,20 +249,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </tbody>
     </table>
 
-    <h3>Common mistakes to avoid</h3>
-    <ul>
-      <li><strong>Forgetting unpaid leave.</strong> If your employer doesn't pay for holidays or sick days, leaving the weeks field at 52 overstates your real annual income — use the actual number of paid weeks instead.</li>
-      <li><strong>Multiplying weekly pay by 4 for a monthly figure.</strong> A month is 4.33 weeks on average, not 4 — divide the annual number by 12 instead, which is what this tool does.</li>
-      <li><strong>Comparing a salaried offer to an hourly one without normalizing hours.</strong> A 60,000 salary means very different things at a 37.5-hour week versus a 45-hour week, as example 3 shows.</li>
-      <li><strong>Ignoring overtime, tips or bonuses.</strong> This tool converts a flat rate; variable pay on top needs to be added or averaged in separately, not folded into the base rate.</li>
-    </ul>
-
     <h2>What these numbers do not include</h2>
     <p>Everything here is gross pay. Income tax, national insurance or social security, pension contributions and health premiums all come out afterwards, and the size of that bite depends on where you live and how you file. Treat the annual figure as the number to compare offers with, not the number that lands in your account.</p>
     <p>Overtime is also excluded. If your role regularly pays time-and-a-half beyond 40 hours, the effective annual figure is higher than a straight multiplication suggests; if unpaid overtime is the norm, the effective hourly rate is lower. The honest way to compare a salaried role against an hourly one is to divide the salary by the hours you genuinely expect to work, including the ones nobody logs.</p>
     <p>Finally, watch the pay cycle. Biweekly means 26 payments a year, semi-monthly means 24, and they are not the same: 52,000 a year is 2,000 per biweekly payment but 2,166.67 twice a month. Budgeting on the wrong cycle is how two extra paycheques a year come as a surprise.</p>
   </section>
-  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

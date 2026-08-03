@@ -95,6 +95,7 @@
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
+  var toggleBtn = $("toggle-rows"), showAll = false;
   var MIN = 500, CAP = 150000; // 회계연도당 법정 상한 1.5 lakh
 
   // 인도식 자릿수(마지막 3자리 뒤로 2자리씩): 4068209 -> 40,68,209
@@ -142,7 +143,8 @@
     $("r-share").textContent = Math.round((interest / last.balance) * 100) + "%";
 
     while (tbody.firstChild) tbody.removeChild(tbody.firstChild);
-    rows.slice(-3).forEach(function (row) {
+    if (toggleBtn) toggleBtn.textContent = t(showAll ? "tool.table.less" : "tool.table.all");
+    (showAll ? rows : rows.slice(-3)).forEach(function (row) {
       var tr = document.createElement("tr");
       var c1 = document.createElement("td"); c1.textContent = String(row.year);
       var c2 = document.createElement("td"); c2.className = "num"; c2.textContent = inr(row.invested);
@@ -156,6 +158,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
+  if (toggleBtn) toggleBtn.addEventListener("click", function () { showAll = !showAll; calc(); });
   [amount, rate].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });

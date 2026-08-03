@@ -100,14 +100,17 @@
   //  ftlbs : 피트파운드/초 = 1 ft·lbf/s = 1.3558179483314004 W
   var FACTOR = {
     w: 1,                      // 기준
+    milliw: 0.001,             // 밀리와트 (mW)
     kw: 1000,
     mw: 1000000,
     hp: 745.6998715822702,     // 기계식 마력 (영·미, "hp")
     ps: 735.49875,             // 미터법 마력 (PS, cv, hp(M))
     btuh: 0.29307107017222222, // BTU/h (IT)
-    ftlbs: 1.3558179483314004  // ft·lb/s
+    ftlbs: 1.3558179483314004, // ft·lb/s
+    gw: 1000000000,            // GW
+    rt: 3516.8528420666665     // 냉동톤 = 12000 BTU/h (IT)
   };
-  var UNITS = ["w", "kw", "mw", "hp", "ps", "btuh", "ftlbs"];
+  var UNITS = ["w", "milliw", "kw", "mw", "hp", "ps", "btuh", "ftlbs", "gw", "rt"];
 
   // value(from 단위) → to 단위 : 와트(W)를 매개로 환산
   function convert(value, from, to) {
@@ -164,7 +167,8 @@
 
   // 결과 대형 텍스트용 축약 기호
   var ABBR = {
-    w: "W", kw: "kW", mw: "MW", hp: "hp", ps: "PS", btuh: "BTU/h", ftlbs: "ft·lb/s"
+    w: "W", milliw: "mW", kw: "kW", mw: "MW", hp: "hp", ps: "PS", btuh: "BTU/h", ftlbs: "ft·lb/s",
+    gw: "GW", rt: "RT"
   };
 
   function t(key, fb) {

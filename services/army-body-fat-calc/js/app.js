@@ -133,6 +133,12 @@
     st.className = "rc-val " + (pass ? "ok" : "bad");
     $("r-max").textContent = max + "%";
     $("r-margin").textContent = Math.abs(max - bf).toFixed(1) + " " + t(pass ? "tool.margin.under" : "tool.margin.over");
+    // 기준선(max%)에 정확히 닿는 복부 둘레 — 선형식 역산, 입력 단위로 표시.
+    var targetIn = sex === "female"
+      ? (max + 0.156 * hIn + 9.15) / 1.51
+      : (max + 0.12 * hIn + 41.5) / 1.99;
+    var targetOut = wunit.value === "cm" ? targetIn * 2.54 : targetIn;
+    $("r-target").textContent = targetOut.toFixed(1) + " " + t(wunit.value === "cm" ? "tool.unit.cm" : "tool.unit.in");
 
     errEl.hidden = true;
     result.hidden = false;

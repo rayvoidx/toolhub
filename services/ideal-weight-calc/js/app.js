@@ -99,6 +99,7 @@
   var hFtEl = $("height-ft");
   var hInEl = $("height-in");
   var wEl = $("weight-input");
+  var frameEl = $("frame-select");
   var cmWrap = $("height-cm-wrap");
   var ftWrap = $("height-ft-wrap");
   var calcBtn = $("calc-btn");
@@ -124,15 +125,20 @@
   }
 
   // ---- calc-core:start — pure functions (node unit-test target) ----
-  function computeIdeal(sex, heightCm) {
+  // frame: "small" -10%, "medium" 0, "large" +10% (Hamwi's frame-size rule)
+  function frameFactor(frame) {
+    return frame === "small" ? 0.9 : frame === "large" ? 1.1 : 1;
+  }
+  function computeIdeal(sex, heightCm, frame) {
     var hIn = heightCm / 2.54;
     var over = hIn - 60;                 // inches over 5 ft
     var m = sex === "male";
+    var f = frameFactor(frame);
     return {
-      devine:   (m ? 50   : 45.5) + (m ? 2.3  : 2.3)  * over,
-      robinson: (m ? 52   : 49)   + (m ? 1.9  : 1.7)  * over,
-      miller:   (m ? 56.2 : 53.1) + (m ? 1.41 : 1.36) * over,
-      hamwi:    (m ? 48   : 45.5) + (m ? 2.7  : 2.2)  * over
+      devine:   ((m ? 50   : 45.5) + (m ? 2.3  : 2.3)  * over) * f,
+      robinson: ((m ? 52   : 49)   + (m ? 1.9  : 1.7)  * over) * f,
+      miller:   ((m ? 56.2 : 53.1) + (m ? 1.41 : 1.36) * over) * f,
+      hamwi:    ((m ? 48   : 45.5) + (m ? 2.7  : 2.2)  * over) * f
     };
   }
   function healthyRange(heightCm) {
@@ -180,7 +186,7 @@
     bodyEl.hidden = false;
     box.hidden = false;
 
-    var ideal = computeIdeal(st.sex, st.heightCm);
+    var ideal = computeIdeal(st.sex, st.heightCm, st.frame);
     var range = healthyRange(st.heightCm);
     var forceWarn = { v: false };
 
@@ -259,7 +265,7 @@
       currentKg = unit === "lb" ? w / LB_PER_KG : w;
     }
 
-    render({ sex: sex, heightCm: heightCm, currentKg: currentKg });
+    render({ sex: sex, heightCm: heightCm, currentKg: currentKg, frame: frameEl ? frameEl.value : "medium" });
     persist();
   }
 
@@ -272,6 +278,7 @@
         ft: hFtEl.value,
         inch: hInEl.value,
         wunit: radioVal("wunit"),
+        frame: frameEl ? frameEl.value : "medium",
         weight: wEl.value
       }));
     } catch (e) { /* private mode — ignore */ }
@@ -296,6 +303,7 @@
       if (p.inch) hInEl.value = p.inch;
       if (p.wunit === "kg" || p.wunit === "lb") setRadio("wunit", p.wunit);
       if (p.weight) wEl.value = p.weight;
+      if (frameEl && (p.frame === "small" || p.frame === "medium" || p.frame === "large")) frameEl.value = p.frame;
     } catch (e) { /* unreadable/parse fail — start with empty form */ }
     applyHeightUnit();
   })();

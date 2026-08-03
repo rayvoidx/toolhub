@@ -95,7 +95,7 @@
   // calc-core:start — 순수 계산 코어 (node 단위검증 대상, byte 기준 환산 계수)
   // bit + 십진(SI, 1000배) + 이진(IEC, 1024배)
   var FACTOR = {
-    bit: 0.125,
+    bit: 0.125, kbit: 125, Mbit: 125e3, Gbit: 125e6, Tbit: 125e9,
     B: 1, kB: 1e3, MB: 1e6, GB: 1e9, TB: 1e12, PB: 1e15,
     KiB: 1024, MiB: 1048576, GiB: 1073741824, TiB: 1099511627776, PiB: 1125899906842624
   };

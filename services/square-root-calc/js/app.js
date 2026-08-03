@@ -96,7 +96,7 @@
 
   var MAX_INPUT = 1e15;      // 입력 상한 — Number.MAX_SAFE_INTEGER 근방에서 부동소수 정밀도가 무너지기 전 안전선
   var SIMPLIFY_MAX = 1e12;   // 소인수분해로 근호 간소화를 시도하는 상한(시행 나눗셈 성능 안전선, sqrt(1e12)=1e6회)
-  var MIN_DEGREE = 2, MAX_DEGREE = 12;
+  var MIN_DEGREE = 2, MAX_DEGREE = 100;
 
   /* ---- 순수 계산 (node 단위 검증 대상) ---- */
 

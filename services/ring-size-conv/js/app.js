@@ -106,6 +106,10 @@
      jp : 일본·한국 호수(号) — 한국의 "반지 호수"도 이 척도와 동일
      mm : 반지 내경(안지름, mm) — 이미 맞는 반지를 갖고 있을 때 재는 값 */
   var TABLE = [
+    /* 저연령·핑키(새끼손가락)·미디 링 수요 — 시중 브랜드가 판매하는 US 2 까지 확장.
+       내경 0.4mm 간격, UK 는 D/E, EU 는 내경×π 원둘레, 号는 2/3. */
+    { us: 2,    uk: "D",  eu: 41.7, jp: 2,  mm: 13.3 },
+    { us: 2.5,  uk: "E",  eu: 42.9, jp: 3,  mm: 13.7 },
     { us: 3,    uk: "F",  eu: 44.0, jp: 4,  mm: 14.1 },
     { us: 3.5,  uk: "G",  eu: 45.5, jp: 5,  mm: 14.5 },
     { us: 4,    uk: "H",  eu: 46.8, jp: 7,  mm: 14.9 },
@@ -126,7 +130,15 @@
     { us: 11.5, uk: "W½", eu: 65.9, jp: 26, mm: 20.9 },
     { us: 12,   uk: "X½", eu: 67.2, jp: 27, mm: 21.3 },
     { us: 12.5, uk: "Y½", eu: 68.5, jp: 28, mm: 21.7 },
-    { us: 13,   uk: "Z½", eu: 69.7, jp: 29, mm: 22.2 }
+    { us: 13,   uk: "Z½", eu: 69.7, jp: 29, mm: 22.2 },
+    /* 남성용 대형 사이즈 — 시중 브랜드가 실제로 판매하는 US 16까지 확장.
+       UK 는 Z 이후 Z+1…Z+6 표기, 내경 0.4mm 간격, EU 는 내경×π 원둘레. */
+    { us: 13.5, uk: "Z+1", eu: 71.0, jp: 30, mm: 22.6 },
+    { us: 14,   uk: "Z+2", eu: 72.3, jp: 31, mm: 23.0 },
+    { us: 14.5, uk: "Z+3", eu: 73.5, jp: 32, mm: 23.4 },
+    { us: 15,   uk: "Z+4", eu: 74.8, jp: 33, mm: 23.8 },
+    { us: 15.5, uk: "Z+5", eu: 76.0, jp: 35, mm: 24.2 },
+    { us: 16,   uk: "Z+6", eu: 77.3, jp: 36, mm: 24.6 }
   ];
   var DEFAULT_US = 7; // 흔히 쓰이는 중간값 — 검색 없이도 그럴듯한 결과가 바로 보이게
   var SYSTEMS = ["us", "uk", "eu", "jp", "mm"];
@@ -171,7 +183,8 @@
 
   /* ---- i18n 헬퍼 ---- */
   var CFG = window.APP_CONFIG || {};
-  var SKEY = (CFG.slug || "ring-size-conv") + ":state";
+  // v2: 표 앞쪽에 US 2~2.5 를 추가해 rowIndex 의미가 바뀌었다 — 옛 키는 버리고 기본값으로 시작
+  var SKEY = (CFG.slug || "ring-size-conv") + ":state2";
   function tr(key, fallback) {
     var v = (window.I18N && window.I18N.t) ? window.I18N.t(key) : null;
     return v == null ? (fallback == null ? key : fallback) : v;

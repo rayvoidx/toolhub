@@ -39,12 +39,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Box Shadow Generator — Design & Copy CSS Instantly</title>
-<meta name="description" content="Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 4 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.">
+<meta name="description" content="Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 6 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.">
 <meta name="keywords" content="box shadow generator, css box shadow, box shadow css generator, shadow generator, css shadow examples, 박스 섀도우 생성기">
 <link rel="canonical" href="https://tool-hub.me/box-shadow-generator/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Box Shadow Generator — Design & Copy CSS Instantly">
-<meta property="og:description" content="Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 4 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.">
+<meta property="og:description" content="Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 6 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.">
 <meta property="og:url" content="https://tool-hub.me/box-shadow-generator/">
 <meta property="og:image" content="https://tool-hub.me/box-shadow-generator/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "Box Shadow Generator",
-  "description": "Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 4 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.",
+  "description": "Adjust x/y offset, blur, spread, color and opacity with sliders, stack up to 6 shadow layers, and copy the finished box-shadow CSS. Free, browser-only, no ads.",
   "url": "https://tool-hub.me/box-shadow-generator/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-31",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -114,7 +114,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "How do I stack multiple box-shadows for effects like Material Design or neumorphism?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "CSS lets box-shadow take a comma-separated list of shadows, painted in the order listed — the first shadow sits on top, closest to the element. Material Design's elevation effect layers two or three shadows with different blur and spread at low opacity to fake a soft, physically plausible drop shadow, while neumorphism pairs a dark shadow on one side with a light shadow on the opposite side of a surface that matches the background, creating a soft raised or pressed look. Use + Add shadow layer to stack up to 4 layers, or start from the Soft, Material, Neumorphic or Hard preset and fine-tune from there."
+        "text": "CSS lets box-shadow take a comma-separated list of shadows, painted in the order listed — the first shadow sits on top, closest to the element. Material Design's elevation effect layers two or three shadows with different blur and spread at low opacity to fake a soft, physically plausible drop shadow, while neumorphism pairs a dark shadow on one side with a light shadow on the opposite side of a surface that matches the background, creating a soft raised or pressed look. Use + Add shadow layer to stack up to 6 layers, or start from the Soft, Material, Neumorphic or Hard preset and fine-tune from there."
       }
     },
     {
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -210,6 +220,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tool .bx-val {
         font-weight: 700; color: var(--muted); font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px;
       }
+      #tool input[type="number"].bx-num {
+        width: 68px; flex: 0 0 auto; padding: 3px 6px; text-align: right;
+        border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--muted);
+      }
       #tool input[type="range"] { width: 100%; accent-color: var(--accent); cursor: pointer; }
       #tool .bx-color-row label { margin-bottom: 8px; font-weight: 600; }
       #tool .bx-color-controls { display: flex; align-items: center; gap: 10px; }
@@ -265,7 +279,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="bx-layers" id="bx-layers"></div>
     <button type="button" class="btn bx-add" id="bx-add" data-i18n="tool.add">+ Add shadow layer</button>
-    <p class="bx-max-hint" id="bx-max-hint" hidden data-i18n="tool.layers.maxHint">Maximum of 4 shadow layers</p>
+    <p class="bx-max-hint" id="bx-max-hint" hidden data-i18n="tool.layers.maxHint">Maximum of 6 shadow layers</p>
 
     <div class="bx-output-wrap">
       <label for="bx-css" data-i18n="tool.css.label">Generated CSS</label>
@@ -313,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </table>
 
     <h3>Stacking multiple shadows</h3>
-    <p><code>box-shadow</code> accepts a comma-separated list of shadow layers, and the browser paints them in the order they're listed — the first layer sits closest to the element, on top of the layers after it. This is how realistic, physically-plausible shadows are usually built: a tight, darker shadow close to the edge combined with a softer, lighter, more spread-out shadow further away, mimicking how real light sources cast both a sharp contact shadow and a diffuse ambient one. The + Add shadow layer button in this generator stacks up to 4 layers, each with its own offset, blur, spread, color and inset toggle.</p>
+    <p><code>box-shadow</code> accepts a comma-separated list of shadow layers, and the browser paints them in the order they're listed — the first layer sits closest to the element, on top of the layers after it. This is how realistic, physically-plausible shadows are usually built: a tight, darker shadow close to the edge combined with a softer, lighter, more spread-out shadow further away, mimicking how real light sources cast both a sharp contact shadow and a diffuse ambient one. The + Add shadow layer button in this generator stacks up to 6 layers, each with its own offset, blur, spread, color and inset toggle.</p>
 
     <h3>Outer vs. inset shadows</h3>
     <p>By default a shadow is drawn outside the element's border box, appearing to lift the element above the page. Adding <code>inset</code> draws the same shadow inside the box instead, along its inner edge, which reads as the element being pressed into the surface rather than raised off it. Inset shadows are the standard technique for pressed buttons, recessed search fields, and the inward shading half of a neumorphic design — this tool's Inset checkbox toggles the keyword independently per layer.</p>
@@ -375,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </details>
     <details>
       <summary data-i18n="faq.q4">How do I stack multiple box-shadows for effects like Material Design or neumorphism?</summary>
-      <p data-i18n="faq.a4">CSS lets box-shadow take a comma-separated list of shadows, painted in the order listed — the first shadow sits on top, closest to the element. Material Design's elevation effect layers two or three shadows with different blur and spread at low opacity to fake a soft, physically plausible drop shadow, while neumorphism pairs a dark shadow on one side with a light shadow on the opposite side of a surface that matches the background, creating a soft raised or pressed look. Use + Add shadow layer to stack up to 4 layers, or start from the Soft, Material, Neumorphic or Hard preset and fine-tune from there.</p>
+      <p data-i18n="faq.a4">CSS lets box-shadow take a comma-separated list of shadows, painted in the order listed — the first shadow sits on top, closest to the element. Material Design's elevation effect layers two or three shadows with different blur and spread at low opacity to fake a soft, physically plausible drop shadow, while neumorphism pairs a dark shadow on one side with a light shadow on the opposite side of a surface that matches the background, creating a soft raised or pressed look. Use + Add shadow layer to stack up to 6 layers, or start from the Soft, Material, Neumorphic or Hard preset and fine-tune from there.</p>
     </details>
     <details>
       <summary data-i18n="faq.q5">Is my shadow design sent to a server?</summary>

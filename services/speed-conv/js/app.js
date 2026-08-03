@@ -104,9 +104,16 @@
   };
   var UNITS = ["mps", "kmh", "mph", "fps", "knot", "mach"];
 
+  var SOS_DEFAULT = 340.29, SOS_MIN = 100, SOS_MAX = 500;
+
+  // 단위 환산 계수 (m/s). Mach 만 사용자 지정 음속(sos)을 반영한다.
+  function factorOf(u, sos) {
+    return u === "mach" ? (sos || SOS_DEFAULT) : FACTOR[u];
+  }
+
   // value(from 단위) → to 단위 : m/s 를 매개로 환산
-  function convert(value, from, to) {
-    return value * FACTOR[from] / FACTOR[to];
+  function convert(value, from, to, sos) {
+    return value * factorOf(from, sos) / factorOf(to, sos);
   }
 
   // 지수 표기 없는 십진 문자열 (유효숫자 반올림된 값 가정) — 후행 0 제거
@@ -139,6 +146,17 @@
     if (a >= 1e15 || a < 1e-9) return rounded.toExponential();
     return plain(rounded);
   }
+
+  // 페이스(러닝) 표시: m/s → 거리 1단위당 분:초. 0·비유한·비현실적 저속은 "—".
+  function pace(mps, meters) {
+    if (!isFinite(mps) || mps <= 0) return "—";
+    var totalSec = meters / mps;
+    if (!isFinite(totalSec) || totalSec >= 360000) return "—"; // 100시간 이상 = 무의미
+    var m = Math.floor(totalSec / 60);
+    var s = Math.round(totalSec - m * 60);
+    if (s === 60) { m += 1; s = 0; }
+    return m + ":" + (s < 10 ? "0" : "") + s;
+  }
   // calc-core:end
 
   function $(id) { return document.getElementById(id); }
@@ -149,6 +167,7 @@
   var eqEl = $("sc-eq");
   var copyEl = $("sc-copy");
   var noteEl = $("sc-note");
+  var sosEl = $("sc-sos");
   if (!valEl || !fromEl || !toEl || !eqEl || !noteEl) return;
 
   var ABBR = { mps: "m/s", kmh: "km/h", mph: "mph", fps: "ft/s", knot: "kn", mach: "Mach" };
@@ -179,6 +198,9 @@
       var c = $("cell-" + UNITS[i]);
       if (c) c.textContent = "—";
     }
+    var pk = $("cell-pacekm"), pm = $("cell-pacemi");
+    if (pk) pk.textContent = "—";
+    if (pm) pm.textContent = "—";
   }
 
   function showEmpty() {
@@ -189,11 +211,11 @@
     clearTable();
   }
 
-  function showError() {
+  function showError(key, fb) {
     eqEl.textContent = "—";
     if (copyEl) copyEl.hidden = true;
     noteEl.hidden = false;
-    noteEl.textContent = t("tool.err.negative", "Enter a value of 0 or more.");
+    noteEl.textContent = t(key || "tool.err.negative", fb || "Enter a value of 0 or more.");
     clearTable();
   }
 
@@ -203,21 +225,39 @@
     if (raw === "") { state = { kind: "empty" }; showEmpty(); return; }
     var num = Number(raw);
     if (isNaN(num) || !isFinite(num)) { state = { kind: "empty" }; showEmpty(); return; }
-    if (num < 0) { state = { kind: "error" }; showError(); return; }
+    if (num < 0) { state = { kind: "error", key: "tool.err.negative", fb: "Enter a value of 0 or more." }; showError(); return; }
+
+    // 선택 입력: Mach 기준 음속 (빈칸이면 해수면 15°C 표준값)
+    var sos = SOS_DEFAULT;
+    if (sosEl) {
+      var sraw = sosEl.value.trim();
+      if (sraw !== "") {
+        var sn = Number(sraw);
+        if (isNaN(sn) || !isFinite(sn) || sn < SOS_MIN || sn > SOS_MAX) {
+          state = { kind: "error", key: "tool.err.sos", fb: "Speed of sound must be between 100 and 500 m/s." };
+          showError(state.key, state.fb);
+          return;
+        }
+        sos = sn;
+      }
+    }
 
     // 정상 계산
     state = { kind: "ok" };
     var from = fromEl.value, to = toEl.value;
-    eqEl.textContent = fmt(num) + " " + ABBR[from] + " = " + fmt(convert(num, from, to)) + " " + ABBR[to];
+    eqEl.textContent = fmt(num) + " " + ABBR[from] + " = " + fmt(convert(num, from, to, sos)) + " " + ABBR[to];
     if (copyEl) copyEl.hidden = false;
     noteEl.hidden = true;
 
-    var mps = num * FACTOR[from]; // 입력값을 m/s 로 환산 후 전 단위 동시 표시
+    var mps = num * factorOf(from, sos); // 입력값을 m/s 로 환산 후 전 단위 동시 표시
     for (var i = 0; i < UNITS.length; i++) {
       var u = UNITS[i];
       var c = $("cell-" + u);
-      if (c) c.textContent = fmt(mps / FACTOR[u]);
+      if (c) c.textContent = fmt(mps / factorOf(u, sos));
     }
+    var pk = $("cell-pacekm"), pm = $("cell-pacemi");
+    if (pk) pk.textContent = pace(mps, 1000);
+    if (pm) pm.textContent = pace(mps, 1609.344);
   }
 
   // 클립보드 실패 시 텍스트 선택 폴백
@@ -248,6 +288,7 @@
   }
 
   valEl.addEventListener("input", render);
+  if (sosEl) sosEl.addEventListener("input", render);
   fromEl.addEventListener("change", function () { saveUnits(); render(); });
   toEl.addEventListener("change", function () { saveUnits(); render(); });
   if (swapEl) {
@@ -263,7 +304,7 @@
   // 언어 전환 시 동적 문구(안내·오류·복사 라벨) 재적용 — 단위명·정적 라벨은 엔진이 처리
   document.addEventListener("i18n:change", function () {
     if (state.kind === "empty") showEmpty();
-    else if (state.kind === "error") showError();
+    else if (state.kind === "error") showError(state.key, state.fb);
     else if (state.kind === "ok" && copyEl) copyEl.textContent = t("tool.copy", "Copy");
   });
 

@@ -291,8 +291,12 @@
     var html = '<p class="dac-summary">' + escHtml(summary) + "</p>";
     if (business) {
       html += '<p class="dac-note">' + escHtml(fmtStr(t("tool.business.detail"), { days: nf(r.spanDays) })) + "</p>";
-    } else if (r.clamped) {
-      html += '<p class="dac-note">' + escHtml(t("tool.clamp.note")) + "</p>";
+    } else {
+      if (r.clamped) html += '<p class="dac-note">' + escHtml(t("tool.clamp.note")) + "</p>";
+      // 주/월/년 단위에서도 총 며칠인지 알려준다 (일 단위는 자명하므로 생략)
+      if (unit !== "days" && n > 0) {
+        html += '<p class="dac-note">' + escHtml(fmtStr(t("tool.span.note"), { days: nf(r.spanDays) })) + "</p>";
+      }
     }
     lastCopy = summary;
     html += '<div class="dac-copyrow">' +

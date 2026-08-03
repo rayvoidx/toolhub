@@ -161,8 +161,30 @@
     [511,"Network Authentication Required","You have to log in to the network itself, not to the site. Captive portals on hotel, airport and cafe Wi-Fi generate this.","Not the website fault. Open a browser, complete the network login and try the request again."],
   ];
 
+  // 벤더 전용 코드(IANA 미등록). 브라우즈 목록에는 넣지 않고 조회 시에만 설명한다.
+  var VENDOR = [
+    [444,"No Response (nginx)","Not in the IANA registry: nginx invented this. The server closes the connection without sending any response at all, which is what the return 444 directive does to unwanted requests.","Deliberate on the server. Someone configured nginx to drop this request, usually a bot filter or a block on an unknown Host header."],
+    [494,"Request Header Too Large (nginx)","Not in the IANA registry: an nginx-specific variant of 431. The request headers exceed large_client_header_buffers.","Clear cookies for the domain and trim custom headers, or raise large_client_header_buffers on the server."],
+    [495,"SSL Certificate Error (nginx)","Not in the IANA registry: nginx uses it when a client certificate is present but invalid during a mutual TLS handshake.","Client side: check the client certificate is the right one, not expired and issued by a CA the server trusts."],
+    [496,"SSL Certificate Required (nginx)","Not in the IANA registry: nginx uses it when the server demands a client certificate and the client sent none.","Client side: install and present the client certificate the server requires."],
+    [497,"HTTP Request Sent to HTTPS Port (nginx)","Not in the IANA registry: a plain HTTP request arrived on a port configured for TLS.","Client side: use the https:// scheme. On the server, a redirect to HTTPS is friendlier than this error."],
+    [499,"Client Closed Request (nginx)","Not in the IANA registry: nginx logs it when the client gave up and closed the connection before the server finished answering. It is a log entry, not something the visitor ever sees.","Usually a slow upstream: the user or an impatient client timeout walked away first. Look at the response time of the backend, not at the client."],
+    [460,"Client Closed Connection (AWS ELB)","Not in the IANA registry: an AWS load balancer records it when the client closed the connection before the balancer could respond.","Same cause as an nginx 499. Check backend latency and any client-side timeout that fires earlier than the load balancer."],
+    [463,"Too Many X-Forwarded-For IPs (AWS ELB)","Not in the IANA registry: the request arrived at an AWS load balancer with more than 30 addresses in the X-Forwarded-For header.","Client or proxy side: too many proxies are chained in front of the balancer, each appending an address."],
+    [520,"Unknown Error (Cloudflare)","Not in the IANA registry: Cloudflare returns it when the origin server sent something it could not understand, such as an empty or malformed response, or dropped the connection mid-answer.","Origin side: check the web server error log and any crash or memory limit at the exact time of the request."],
+    [521,"Web Server Is Down (Cloudflare)","Not in the IANA registry: Cloudflare could not open a connection to the origin at all, because the server is off or is refusing the connection.","Origin side: confirm the web server is running and that the firewall allows the Cloudflare IP ranges on ports 80 and 443."],
+    [522,"Connection Timed Out (Cloudflare)","Not in the IANA registry: the TCP handshake with the origin never completed within Cloudflare's limit.","Origin side: an overloaded server, a firewall silently dropping packets, or a wrong origin IP in the DNS record."],
+    [523,"Origin Is Unreachable (Cloudflare)","Not in the IANA registry: Cloudflare could not route to the origin at all, so the address itself looks wrong or dead.","Check that the DNS record points at the correct origin IP and that the host is reachable from outside your network."],
+    [524,"A Timeout Occurred (Cloudflare)","Not in the IANA registry: the connection to the origin succeeded but no complete response arrived within 100 seconds.","Origin side: a long query, a slow external call or a job that should be asynchronous. Move work longer than 100 seconds off the request path."],
+    [525,"SSL Handshake Failed (Cloudflare)","Not in the IANA registry: the TLS handshake between Cloudflare and the origin failed.","Origin side: install a valid certificate matching the hostname and check the cipher suites match what Cloudflare offers."],
+    [526,"Invalid SSL Certificate (Cloudflare)","Not in the IANA registry: the origin certificate could not be validated, usually because it is expired or self-signed while Full (strict) mode is on.","Origin side: renew the certificate, or switch the Cloudflare SSL mode to Full if the certificate really is self-signed."],
+    [527,"Railgun Error (Cloudflare)","Not in the IANA registry: a legacy code for a failed connection between Cloudflare and a Railgun listener. Railgun is retired, so it is rare today.","Origin side: this is infrastructure between Cloudflare and the host, so the hosting provider has to look at it."],
+  ];
+
   var BY_CODE = {}, i;
   for (i = 0; i < CODES.length; i++) BY_CODE[CODES[i][0]] = CODES[i];
+  var BY_VENDOR = {};
+  for (i = 0; i < VENDOR.length; i++) BY_VENDOR[VENDOR[i][0]] = VENDOR[i];
   var filter = "all";
 
   function faultKey(cls) {
@@ -179,6 +201,7 @@
 
   function show(code) {
     var cls = Math.floor(code / 100), row = BY_CODE[code], extra = $("r-extra");
+    if (!row) row = BY_VENDOR[code];
     if (row) {
       $("r-title").textContent = code + " " + row[1];
       $("r-meaning").textContent = row[2];

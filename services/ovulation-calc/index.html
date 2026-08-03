@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-18",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -290,8 +300,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="ov-hint" data-i18n="tool.lmp.hint">The first day of actual bleeding — not the day it ended.</p>
 
     <label for="ov-cycle" data-i18n="tool.cycle.label">Average cycle length (days)</label>
-    <input type="number" id="ov-cycle" value="28" min="21" max="45" step="1" inputmode="numeric" autocomplete="off">
+    <input type="number" id="ov-cycle" value="28" min="21" max="60" step="1" inputmode="numeric" autocomplete="off">
     <p class="ov-hint" data-i18n="tool.cycle.hint">From the first day of one period to the first day of the next. Most cycles run 21–45 days; 28 is the default.</p>
+
+    <label for="ov-luteal" data-i18n="tool.luteal.label">Luteal phase length (days) — optional</label>
+    <input type="number" id="ov-luteal" value="14" min="9" max="17" step="1" inputmode="numeric" autocomplete="off">
+    <p class="ov-hint" data-i18n="tool.luteal.hint">Days from ovulation to your next period. Leave at 14 unless an ovulation test or your doctor told you otherwise; 9–17 accepted.</p>
 
     <div class="ov-actions">
       <button type="button" class="btn" id="ov-calc" data-i18n="tool.calc">Calculate</button>

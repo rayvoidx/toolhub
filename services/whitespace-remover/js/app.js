@@ -109,8 +109,17 @@
     return s;
   }
 
-  // 탭 → 공백 1칸으로 치환(완전 삭제하면 "word1\tword2" 가 "word1word2" 로 붙어버리는 사고 방지).
-  function removeTabs(text) { return text.replace(/\t/g, " "); }
+  // 탭 → 공백 n칸으로 치환(기본 1칸 — 완전 삭제하면 "word1\tword2" 가 붙어버리는 사고 방지).
+  // 코드·스프레드시트 붙여넣기는 2/4칸을 기대하므로 0~8 범위로 조절 가능(0 = 탭 완전 삭제).
+  function tabWidth(n) {
+    n = Math.floor(Number(n));
+    if (!isFinite(n) || n < 0) return 1;   // 빈 값/NaN/음수 → 기본값 1
+    return n > 8 ? 8 : n;
+  }
+  function removeTabs(text, spaces) {
+    var w = tabWidth(spaces == null ? 1 : spaces);
+    return text.replace(/\t/g, w === 0 ? "" : new Array(w + 1).join(" "));
+  }
 
   // 일반 공백(스페이스) 2개 이상 연속 → 1개. 줄바꿈은 건드리지 않는다.
   function collapseSpaces(text) { return text.replace(/ {2,}/g, " "); }
@@ -120,6 +129,11 @@
     return text.split("\n").map(function (line) {
       return line.replace(/^[ \t]+|[ \t]+$/g, "");
     }).join("\n");
+  }
+
+  // 연속된 빈 줄(공백만 있는 줄 포함)을 빈 줄 1개로 축약 — 문단 구분은 살리고 과한 여백만 정리.
+  function collapseBlankLines(text) {
+    return text.replace(/\n[ \t]*(?:\n[ \t]*)+/g, "\n\n");
   }
 
   // 공백만 있는(또는 완전히 빈) 줄을 제거 — trimLineEdges 체크 여부와 무관하게 자체 판정.
@@ -138,7 +152,8 @@
     var s = normalizeInvisible(raw);
     if (opts.collapse) s = collapseSpaces(s);
     if (opts.trimLines) s = trimLineEdges(s);
-    if (opts.noTabs) s = removeTabs(s);
+    if (opts.noTabs) s = removeTabs(s, opts.tabWidth);
+    if (opts.collapseBlank) s = collapseBlankLines(s);
     if (opts.noBlank) s = removeBlankLines(s);
     if (opts.allWs) s = removeAllWhitespace(s);
     return s;
@@ -149,7 +164,8 @@
     module.exports = {
       normalizeInvisible: normalizeInvisible, removeTabs: removeTabs,
       collapseSpaces: collapseSpaces, trimLineEdges: trimLineEdges,
-      removeBlankLines: removeBlankLines, removeAllWhitespace: removeAllWhitespace,
+      collapseBlankLines: collapseBlankLines, removeBlankLines: removeBlankLines, removeAllWhitespace: removeAllWhitespace,
+      tabWidth: tabWidth,
       cleanText: cleanText
     };
     return;
@@ -164,6 +180,9 @@
   var collapseEl = $("wsr-collapse");
   var trimLinesEl = $("wsr-trimlines");
   var noTabsEl = $("wsr-notabs");
+  var tabWidthEl = $("wsr-tabwidth");
+  var tabWidthRowEl = $("wsr-tabwidth-row");
+  var collapseBlankEl = $("wsr-collapseblank");
   var noBlankEl = $("wsr-noblank");
   var allWsEl = $("wsr-allws");
   var runBtn = $("wsr-run");
@@ -205,6 +224,8 @@
       collapse: !!(collapseEl && collapseEl.checked),
       trimLines: !!(trimLinesEl && trimLinesEl.checked),
       noTabs: !!(noTabsEl && noTabsEl.checked),
+      tabWidth: tabWidthEl ? tabWidth(tabWidthEl.value === "" ? 1 : tabWidthEl.value) : 1,
+      collapseBlank: !!(collapseBlankEl && collapseBlankEl.checked),
       noBlank: !!(noBlankEl && noBlankEl.checked),
       allWs: !!(allWsEl && allWsEl.checked)
     };
@@ -220,6 +241,8 @@
 
   function updateOverrideNote(opts) {
     if (overrideNoteEl) overrideNoteEl.hidden = !opts.allWs;
+    // 탭 폭 입력은 "탭 제거"가 켜져 있고 전체 공백 제거가 아닐 때만 의미가 있다
+    if (tabWidthRowEl) tabWidthRowEl.hidden = !(opts.noTabs && !opts.allWs);
   }
 
   function showEmptyState() {
@@ -310,6 +333,8 @@
         collapse: !!(collapseEl && collapseEl.checked),
         trimLines: !!(trimLinesEl && trimLinesEl.checked),
         noTabs: !!(noTabsEl && noTabsEl.checked),
+        tabWidth: tabWidthEl ? tabWidth(tabWidthEl.value === "" ? 1 : tabWidthEl.value) : 1,
+        collapseBlank: !!(collapseBlankEl && collapseBlankEl.checked),
         noBlank: !!(noBlankEl && noBlankEl.checked),
         allWs: !!(allWsEl && allWsEl.checked)
       }));
@@ -327,6 +352,8 @@
     if (collapseEl) collapseEl.checked = !!s.collapse;
     if (trimLinesEl) trimLinesEl.checked = !!s.trimLines;
     if (noTabsEl) noTabsEl.checked = !!s.noTabs;
+    if (tabWidthEl && s.tabWidth != null) tabWidthEl.value = String(tabWidth(s.tabWidth));
+    if (collapseBlankEl) collapseBlankEl.checked = !!s.collapseBlank;
     if (noBlankEl) noBlankEl.checked = !!s.noBlank;
     if (allWsEl) allWsEl.checked = !!s.allWs;
   }
@@ -371,7 +398,15 @@
     });
   }
 
-  [collapseEl, trimLinesEl, noTabsEl, noBlankEl, allWsEl].forEach(function (el) {
+  if (tabWidthEl) {
+    // 범위 밖 값은 조용히 무시하지 않고 입력칸을 0~8 로 되돌려 보여준다
+    tabWidthEl.addEventListener("blur", function () {
+      tabWidthEl.value = String(tabWidth(tabWidthEl.value === "" ? 1 : tabWidthEl.value));
+      if (hasRun) process(); else saveState();
+    });
+  }
+
+  [collapseEl, trimLinesEl, noTabsEl, collapseBlankEl, noBlankEl, allWsEl, tabWidthEl].forEach(function (el) {
     if (!el) return;
     el.addEventListener("change", function () {
       updateOverrideNote(readOpts());

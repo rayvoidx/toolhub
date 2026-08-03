@@ -112,7 +112,7 @@
   if (!sharesEl || !priceEl || !divEl || !curSel || !calcBtn || !box) return;
 
   var mode = "amount";  // 'amount' (per-share dividend) | 'yield' (dividend yield %)
-  var freq = 4;         // 1 | 4 | 12
+  var freq = 4;         // 1 | 2 | 4 | 12
   var lastRun = false;
 
   function t(key, fallback) {
@@ -447,7 +447,7 @@
     fillCurrencies((saved && saved.currency) || detectCurrency());
     if (saved) {
       if (saved.mode === "yield" || saved.mode === "amount") mode = saved.mode;
-      if (saved.freq === 1 || saved.freq === 4 || saved.freq === 12) freq = saved.freq;
+      if (saved.freq === 1 || saved.freq === 2 || saved.freq === 4 || saved.freq === 12) freq = saved.freq;
       if (saved.shares) sharesEl.value = groupDecimalInput(saved.shares);
       if (saved.price) priceEl.value = groupDecimalInput(saved.price);
       if (saved.dividend) divEl.value = saved.dividend;

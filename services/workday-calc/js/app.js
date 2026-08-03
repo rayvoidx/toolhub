@@ -364,7 +364,14 @@
     try { return new Intl.DateTimeFormat(curLang(), { year: "numeric", month: "short", day: "numeric" }).format(d); }
     catch (e) { return toKey(d); }
   }
-  function weekendSet(def) { return def === "frisat" ? { 5: 1, 6: 1 } : { 0: 1, 6: 1 }; }
+  function weekendSet(def) {
+    if (def === "frisat") return { 5: 1, 6: 1 };
+    if (def === "sunonly") return { 0: 1 };
+    if (def === "satonly") return { 6: 1 };
+    if (def === "frisatsun") return { 5: 1, 6: 1, 0: 1 };
+    if (def === "noweekend") return {};
+    return { 0: 1, 6: 1 };
+  }
 
   /* ---- 규칙 → 날짜 ---- */
   function nthDow(y, m, w, i) { var d = new Date(y, m - 1, 1), shift = (w - d.getDay() + 7) % 7; return new Date(y, m - 1, 1 + shift + (i - 1) * 7); }

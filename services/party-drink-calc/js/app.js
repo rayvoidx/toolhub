@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var guests = $("guests"), drinkers = $("drinkers"), hours = $("hours"), crowd = $("crowd");
-  var mixBeer = $("mix-beer"), mixWine = $("mix-wine"), mixSpirits = $("mix-spirits");
+  var mixBeer = $("mix-beer"), mixWine = $("mix-wine"), mixSpirits = $("mix-spirits"), pour = $("pour"), shot = $("shot");
   var result = $("result"), errEl = $("err"), listEl = $("list");
   if (!guests || !drinkers || !hours || !crowd || !mixBeer) return;
 
@@ -98,8 +98,6 @@
 
   // 업계 통념: 첫 시간 2잔 + 이후 시간당 1잔. 성향 계수는 그 위에 곱한다.
   var CROWD = { light: 0.75, standard: 1, heavy: 1.25 };
-  var WINE_PER_BOTTLE = 5;    // 750ml / 5oz 잔
-  var SHOTS_PER_BOTTLE = 17;  // 750ml / 1.5oz 샷
   var COCKTAILS_PER_LITER = 3; // 믹서 1L 당 칵테일 3잔
   var ICE_LB_PER_GUEST = 1.5;
 
@@ -124,6 +122,11 @@
     var sum = b + w + s;
     if (sum !== 100) return fail("tool.err.mix", " " + sum + "%.");
 
+    var pourMl = parseFloat(pour && pour.value) || 150;
+    var winePerBottle = 750 / pourMl;   // 선택한 잔 용량 기준 병당 잔 수
+    var shotMl = parseFloat(shot && shot.value) || 44;   // 기본 1.5oz 미국 샷
+    var shotsPerBottle = 750 / shotMl;
+
     var drinkerCount = Math.round(g * pct / 100);
     if (drinkerCount < 1) drinkerCount = 1;
     var total = drinkerCount * (h + 1) * CROWD[crowd.value];
@@ -131,8 +134,8 @@
     var vals = {
       "r-total": Math.round(total),
       "r-beer": Math.ceil(total * b / 100),
-      "r-wine": Math.ceil(total * w / 100 / WINE_PER_BOTTLE),
-      "r-spirits": Math.ceil(total * s / 100 / SHOTS_PER_BOTTLE),
+      "r-wine": Math.ceil(total * w / 100 / winePerBottle),
+      "r-spirits": Math.ceil(total * s / 100 / shotsPerBottle),
       "r-mixers": Math.ceil(total * s / 100 / COCKTAILS_PER_LITER),
       "r-ice": Math.ceil(g * ICE_LB_PER_GUEST),
       "r-soda": Math.ceil(Math.max(0, g - drinkerCount) * 2),
@@ -160,7 +163,7 @@
   [guests, drinkers, hours].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [crowd, mixBeer, mixWine, mixSpirits].forEach(function (el) {
+  [crowd, mixBeer, mixWine, mixSpirits, pour, shot].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

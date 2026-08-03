@@ -89,9 +89,9 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var mode = $("mode"), xEl = $("x"), meanEl = $("mean"), sdEl = $("sd"), zEl = $("zin");
+  var mode = $("mode"), xEl = $("x"), meanEl = $("mean"), sdEl = $("sd"), zEl = $("zin"), nEl = $("n");
   var result = $("result"), errEl = $("err");
-  if (!mode || !xEl || !meanEl || !sdEl || !zEl) return;
+  if (!mode || !xEl || !meanEl || !sdEl || !zEl || !nEl) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var num = function (el) {
@@ -125,7 +125,7 @@
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
 
   function calc() {
-    var m = mode.value, z, x = null, mu = null, sd = null;
+    var m = mode.value, z, x = null, mu = null, sd = null, se = null;
 
     if (m !== "pct") {
       mu = num(meanEl);
@@ -133,16 +133,21 @@
       sd = num(sdEl);
       // 산포가 0이면 (x - 평균)/0 이 되어 z 가 정의되지 않는다 — 조용히 Infinity 를 내보내지 않는다.
       if (sd === null || sd <= 0) return fail("tool.err.sd");
+      // 표본 크기는 선택 입력. 비우면 n = 1 (단일 관측치) — 기존 동작 그대로.
+      var n = (nEl && String(nEl.value).trim() !== "") ? num(nEl) : 1;
+      if (n === null || n < 1 || n > 1e9) return fail("tool.err.n");
+      se = sd / Math.sqrt(n);
+      if (!isFinite(se) || se <= 0) return fail("tool.err.sd");
     }
     if (m === "z") {
       x = num(xEl);
       if (x === null) return fail("tool.err.x");
-      z = (x - mu) / sd;
+      z = (x - mu) / se;
     } else {
       z = num(zEl);
       if (z === null) return fail("tool.err.z");
       if (Math.abs(z) > 20) return fail("tool.err.range");
-      if (m === "x") x = mu + z * sd;
+      if (m === "x") x = mu + z * se;
     }
     if (!isFinite(z)) return fail("tool.err.range");
 
@@ -154,6 +159,7 @@
     $("r-pct").textContent = fmt(p, 4) + "%";
     $("r-better").textContent = t("tool.r.better").replace("{p}", fmt(p, 2));
     $("r-two").textContent = fmt(two, 4) + "%";
+    $("r-up").textContent = fmt(100 - p, 4) + "%";   // 오른쪽 꼬리 = 1 - CDF
     $("r-mid").textContent = fmt(mid, 4) + "%";
     $("r-x").textContent = x === null ? "—" : fmt(x, 4);
 
@@ -170,7 +176,7 @@
 
   sync();
   $("calc-btn").addEventListener("click", calc);
-  [xEl, meanEl, sdEl, zEl].forEach(function (el) {
+  [xEl, meanEl, sdEl, zEl, nEl].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("input", function () { if (!result.hidden) calc(); });
   });

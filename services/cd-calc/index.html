@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="CD Calculator — Certificate of Deposit Interest">
 <meta property="og:description" content="Work out what a certificate of deposit pays at maturity: enter your deposit, APY and term to see interest earned, monthly equivalent and early-withdrawal cost.">
 <meta property="og:url" content="https://tool-hub.me/cd-calc/">
-<meta property="og:image" content="https://tool-hub.me/cd-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/cd-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#065f46">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "CD Calculator",
+      "item": "https://tool-hub.me/cd-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "CD Calculator",
-      "item": "https://tool-hub.me/cd-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -187,11 +197,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="term" data-i18n="tool.term.label">Term</label>
         <select id="term">
+          <option value="3" data-i18n="tool.term.3">3 months</option>
           <option value="6" data-i18n="tool.term.6">6 months</option>
+          <option value="9" data-i18n="tool.term.9">9 months</option>
           <option value="12" selected data-i18n="tool.term.12">12 months (1 year)</option>
           <option value="18" data-i18n="tool.term.18">18 months</option>
           <option value="24" data-i18n="tool.term.24">24 months (2 years)</option>
           <option value="36" data-i18n="tool.term.36">36 months (3 years)</option>
+          <option value="48" data-i18n="tool.term.48">48 months (4 years)</option>
           <option value="60" data-i18n="tool.term.60">60 months (5 years)</option>
           <option value="custom" data-i18n="tool.term.custom">Custom term</option>
         </select>
@@ -199,9 +212,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="penalty" data-i18n="tool.penalty.label">Early-withdrawal penalty</label>
         <select id="penalty">
+          <option value="0" data-i18n="tool.penalty.0">No penalty (no-penalty CD)</option>
+          <option value="1" data-i18n="tool.penalty.1">1 month of interest</option>
           <option value="3" data-i18n="tool.penalty.3">3 months of interest</option>
           <option value="6" selected data-i18n="tool.penalty.6">6 months of interest</option>
           <option value="12" data-i18n="tool.penalty.12">12 months of interest</option>
+          <option value="18" data-i18n="tool.penalty.18">18 months of interest</option>
         </select>
       </div>
     </div>

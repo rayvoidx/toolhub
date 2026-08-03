@@ -449,7 +449,8 @@
     return function () {
       if (state === "done") dismiss();
       if (state !== "idle") return; // running/paused 에서는 버튼이 비활성이라 도달 불가 (방어)
-      writeParts({ h: 0, m: min, s: 0 });
+      // 60분 이상 프리셋은 시:분으로 환산 (분 입력칸은 0-59 clamp)
+      writeParts({ h: Math.floor(min / 60), m: min % 60, s: 0 });
       updateIdleView();
     };
   }

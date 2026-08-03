@@ -313,12 +313,13 @@
 
   function updateChips() {
     var chips = document.querySelectorAll("#preset-chips .chip");
-    var raws = [selltaxEl.value.trim(), cgtEl.value.trim(), deductionEl.value.trim()];
+    var raws = [buyfeeEl.value.trim(), selltaxEl.value.trim(), cgtEl.value.trim(), deductionEl.value.trim()];
     var allEmpty = raws.every(function (s) { return s === ""; });
-    var cur = { tt: clampPct(num(selltaxEl)), cgt: clampPct(num(cgtEl)), a: clampAmt(num(deductionEl)) };
+    var cur = { bf: clampPct(num(buyfeeEl)), tt: clampPct(num(selltaxEl)), cgt: clampPct(num(cgtEl)), a: clampAmt(num(deductionEl)) };
     for (var i = 0; i < chips.length; i++) {
       var c = chips[i];
       var match = !allEmpty
+        && (Number(c.getAttribute("data-bf") || 0) === 0 || Number(c.getAttribute("data-bf")) === cur.bf)
         && Number(c.getAttribute("data-tt")) === cur.tt
         && Number(c.getAttribute("data-cgt")) === cur.cgt
         && Number(c.getAttribute("data-a")) === cur.a;
@@ -327,6 +328,8 @@
   }
 
   function applyPreset(chip) {
+    var bf = Number(chip.getAttribute("data-bf") || 0);
+    if (bf > 0) buyfeeEl.value = String(bf); // 매수측 비용이 있는 프리셋(UK 인지세)만 덮어씀
     selltaxEl.value = chip.getAttribute("data-tt");
     cgtEl.value = chip.getAttribute("data-cgt");
     deductionEl.value = chip.getAttribute("data-a");

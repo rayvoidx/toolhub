@@ -101,7 +101,11 @@
 
   // 변 길이 파싱: 빈값/유효하지 않음/0 이하/범위초과를 구분해 호출부가 각각 다른 문구를 고르게 한다
   function parseSide(raw) {
-    var s = String(raw == null ? "" : raw).replace(/,/g, "").trim();
+    var s = String(raw == null ? "" : raw).trim();
+    // 콤마 처리: "1,234" 는 천단위 구분자, "3,5" 는 소수 구분자(de/fr/es 등)로 읽는다.
+    // 콤마 하나 + 뒤가 3자리 숫자가 아니면 소수점으로 간주 — 그 외에는 모두 제거.
+    if (/^-?\d+,\d+$/.test(s) && !/,\d{3}$/.test(s)) s = s.replace(",", ".");
+    else s = s.replace(/,/g, "");
     if (s === "") return { empty: true };
     var n = Number(s);
     if (!isFinite(n)) return { error: "invalid" };
@@ -117,6 +121,9 @@
     var bump = n >= 0 ? Number.EPSILON : -Number.EPSILON;
     return Math.round((n + bump) * m) / m;
   }
+
+  // 다리 a 의 대각(A) — 직각삼각형이므로 B = 90 − A. 두 다리는 항상 양수라 NaN 없음.
+  function angleDeg(a, b) { return round(Math.atan2(a, b) * 180 / Math.PI, 2); }
 
   /* a, b, c 는 각각 숫자 또는 null(미입력).
      known=2  → 나머지 한 변을 구한다("solve"). c 를 구할 땐 항상 유효하지만,
@@ -137,6 +144,8 @@
       if (valid) {
         out.area = round(0.5 * aIn * bIn, 6);
         out.perimeter = round(aIn + bIn + cIn, 6);
+        out.angleA = angleDeg(aIn, bIn);
+        out.angleB = round(90 - out.angleA, 2);
       }
       return out;
     }
@@ -156,7 +165,8 @@
     }
     return {
       mode: "solve", missing: missing, a: a, b: b, c: c,
-      area: round(0.5 * a * b, 6), perimeter: round(a + b + c, 6)
+      area: round(0.5 * a * b, 6), perimeter: round(a + b + c, 6),
+      angleA: angleDeg(a, b), angleB: round(90 - angleDeg(a, b), 2)
     };
   }
 
@@ -198,6 +208,7 @@
   var sideCard = gridEl ? gridEl.querySelector('[data-copy="side"]') : null;
   var areaCard = gridEl ? gridEl.querySelector('[data-copy="area"]') : null;
   var perimCard = gridEl ? gridEl.querySelector('[data-copy="perimeter"]') : null;
+  var anglesCard = gridEl ? gridEl.querySelector('[data-copy="angles"]') : null;
   var diagramWrap = $("tool-diagram"), captionEl = $("diagram-caption");
   var shapeEl = $("pyth-shape"), angleEl = $("pyth-angle");
   var labelAEl = $("pyth-label-a"), labelBEl = $("pyth-label-b"), labelCEl = $("pyth-label-c");
@@ -244,6 +255,13 @@
     if (valEl) valEl.textContent = value;
     card.setAttribute("data-value", value);
     card.hidden = false;
+  }
+
+  // 예각 A·B (C는 항상 90°) — 카드 한 장에 함께 표시
+  function setAnglesCard(r) {
+    if (!anglesCard || r.angleA == null) return;
+    setCard(anglesCard, tr("tool.res.angles", "Acute angles (A / B)"),
+      "A " + numFmt(r.angleA, 2) + "\u00B0 / B " + numFmt(r.angleB, 2) + "\u00B0");
   }
 
   /* ---- 풀이 과정 문구 ---- */
@@ -301,6 +319,7 @@
     if (sideCard) sideCard.hidden = true;
     if (areaCard) areaCard.hidden = true;
     if (perimCard) perimCard.hidden = true;
+    if (anglesCard) anglesCard.hidden = true;
     if (diagramWrap) diagramWrap.hidden = true;
     detailsEl.hidden = true;
     stepMainEl.hidden = true; stepAreaEl.hidden = true; stepPerimEl.hidden = true;
@@ -336,6 +355,7 @@
       setCard(sideCard, tr("tool." + r.missing + ".label", r.missing), numFmt(r[r.missing]));
       setCard(areaCard, tr("tool.res.area", "Area"), numFmt(r.area));
       setCard(perimCard, tr("tool.res.perimeter", "Perimeter"), numFmt(r.perimeter));
+      setAnglesCard(r);
       gridEl.hidden = false;
       copyHintEl.hidden = false;
       renderDiagram(r.a, r.b, r.c);
@@ -356,6 +376,7 @@
     if (r.valid) {
       setCard(areaCard, tr("tool.res.area", "Area"), numFmt(r.area));
       setCard(perimCard, tr("tool.res.perimeter", "Perimeter"), numFmt(r.perimeter));
+      setAnglesCard(r);
       gridEl.hidden = false;
       copyHintEl.hidden = false;
       renderDiagram(r.a, r.b, r.c);
@@ -401,7 +422,7 @@
       legacyCopy(raw, done);
     }
   }
-  [sideCard, areaCard, perimCard].forEach(function (card) {
+  [sideCard, areaCard, perimCard, anglesCard].forEach(function (card) {
     if (card) card.addEventListener("click", function () { copyCard(card); });
   });
 

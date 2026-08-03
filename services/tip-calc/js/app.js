@@ -100,8 +100,8 @@
      sample : 플레이스홀더 예시 금액 (그 나라 한 끼 정도)
      note==="roundUp" 인 나라는 "올림"이 곧 관습이라 올림 토글이 기본 ON.  */
   var COUNTRIES = {
-    US: { cur: "USD", unit: 1,    presets: [15, 18, 20],   def: 15, note: "expected",        range: [15, 20],   sample: 50,     name: "United States" },
-    CA: { cur: "CAD", unit: 1,    presets: [15, 18, 20],   def: 15, note: "expected",        range: [15, 20],   sample: 50,     name: "Canada" },
+    US: { cur: "USD", unit: 1,    presets: [15, 18, 20, 25], def: 15, note: "expected",      range: [15, 20],   sample: 50,     name: "United States" },
+    CA: { cur: "CAD", unit: 1,    presets: [15, 18, 20, 25], def: 15, note: "expected",      range: [15, 20],   sample: 50,     name: "Canada" },
     MX: { cur: "MXN", unit: 5,    presets: [10, 15, 20],   def: 15, note: "expected",        range: [10, 15],   sample: 500,    name: "Mexico" },
     BR: { cur: "BRL", unit: 1,    presets: [0, 10, 15],    def: 10, note: "serviceIncluded", range: [10, 10],   sample: 100,    name: "Brazil" },
     GB: { cur: "GBP", unit: 1,    presets: [0, 10, 12.5],  def: 12.5, note: "serviceIncluded", range: [10, 12.5], sample: 40,   name: "United Kingdom" },

@@ -101,11 +101,19 @@
 
   /* ---- 순수 계산 (node 단위 검증 대상) ---- */
   // 줄바꿈 단위 파싱: 빈 줄 제거, trim. 중복 이름은 그대로 둔다(별개 인원으로 취급).
+  // 줄이 하나뿐인데 쉼표가 있으면 쉼표 목록으로 붙여넣은 것으로 보고 쉼표로 나눈다.
+  // (여러 줄일 때는 나누지 않는다 — "Doe, John" 같은 성-이름 표기를 깨지 않기 위해)
   function parseNames(raw) {
-    return String(raw == null ? "" : raw)
+    var lines = String(raw == null ? "" : raw)
       .split("\n")
       .map(function (s) { return s.trim(); })
       .filter(function (s) { return s.length > 0; });
+    if (lines.length === 1 && lines[0].indexOf(",") >= 0) {
+      lines = lines[0].split(",")
+        .map(function (s) { return s.trim(); })
+        .filter(function (s) { return s.length > 0; });
+    }
+    return lines;
   }
   // 팀 이름도 동일한 줄바꿈 파싱 규칙 사용 (빈 줄은 무시)
   function parseTeamNames(raw) {

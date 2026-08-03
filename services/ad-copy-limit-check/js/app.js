@@ -97,7 +97,9 @@
   var BIG_BYTES = 5 * 1024 * 1024;       // 이 이상은 경고 후 진행
   var WORKER_CELLS = 20000;              // 이 이상만 Worker (그 아래는 메인스레드가 더 빠르다)
   var RENDER_ROWS = 200;                 // DOM 폭발 방지 — 나머지는 CSV 로 내보낸다
-  var TXT_CLIP = 160;                    // 그리드 셀 표시 길이
+  var CUSTOM_ID = "__custom";            // 단건 모드 전용 직접 한도
+  var CUSTOM_MAX = 10000;
+  var TXT_CLIP = 160;                   // 그리드 셀 표시 길이
 
   function t(key, vars) {
     var s = (window.I18N && window.I18N.t) ? window.I18N.t(key) : null;
@@ -455,6 +457,7 @@
      ============================================================ */
   var $ = function (id) { return document.getElementById(id); };
   var elPlatform = $("acl-platform"), elFieldType = $("acl-fieldtype"), elText = $("acl-text"),
+      elCustomWrap = $("acl-custom-wrap"), elCustom = $("acl-custom"),
       elSingleRes = $("acl-single-result"), elPaste = $("acl-paste"), elDrop = $("acl-drop"),
       elBrowse = $("acl-browse"), elFile = $("acl-file"), elCheck = $("acl-check"), elSample = $("acl-sample"),
       elProg = $("acl-prog"), elProgBar = $("acl-prog-bar"), elProgT = $("acl-prog-t"),
@@ -514,7 +517,22 @@
       o.textContent = t(f.labelKey) + " — " + limitLabel(f);
       elFieldType.appendChild(o);
     }
-    elFieldType.value = fieldById(pf, keep) ? keep : pf.fields[0].id;
+    // 목록에 없는 지면(X, LinkedIn, 메일 제목 등)을 위한 직접 입력 한도
+    var oc = document.createElement("option");
+    oc.value = CUSTOM_ID;
+    oc.textContent = t("tool.f.custom");
+    elFieldType.appendChild(oc);
+    elFieldType.value = (keep === CUSTOM_ID || fieldById(pf, keep)) ? keep : pf.fields[0].id;
+    syncCustom();
+  }
+  function syncCustom() {
+    if (elCustomWrap) elCustomWrap.hidden = elFieldType.value !== CUSTOM_ID;
+  }
+  // 유효하면 임시 필드 규격, 아니면 null (조용한 실패 금지 — 호출부가 안내 문구를 띄운다)
+  function customField() {
+    var n = parseInt(elCustom ? elCustom.value : "", 10);
+    if (!isFinite(n) || n < 1 || n > CUSTOM_MAX) return null;
+    return { id: CUSTOM_ID, labelKey: "tool.f.custom", max: n, match: [] };
   }
   function limitLabel(f) {
     if (f.min) return t("tool.limit.range", { min: f.min, max: f.max });
@@ -524,7 +542,17 @@
 
   /* ---------- 모드 (a) 단건 — oninput 즉답 ---------- */
   function renderSingle() {
-    var pf = currentPf(), f = fieldById(pf, elFieldType.value) || pf.fields[0];
+    var pf = currentPf(), f;
+    if (elFieldType.value === CUSTOM_ID) {
+      f = customField();
+      if (!f) {
+        elSingleRes.innerHTML = '<p class="acl-sub" style="margin:0">' +
+          esc(t("tool.msg.badCustom", { max: CUSTOM_MAX })) + "</p>";
+        return;
+      }
+    } else {
+      f = fieldById(pf, elFieldType.value) || pf.fields[0];
+    }
     var text = elText.value;
     if (text === "") {
       elSingleRes.innerHTML = '<p class="acl-sub" style="margin:0">' + esc(t("tool.msg.emptySingle")) + "</p>";
@@ -1034,7 +1062,8 @@
       runCheck();
     }
   });
-  elFieldType.addEventListener("change", renderSingle);
+  elFieldType.addEventListener("change", function () { syncCustom(); renderSingle(); });
+  if (elCustom) elCustom.addEventListener("input", renderSingle);
   elText.addEventListener("input", renderSingle);
 
   elCheck.addEventListener("click", function () { loadText(elPaste.value, []); });

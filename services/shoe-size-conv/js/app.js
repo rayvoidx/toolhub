@@ -64,18 +64,17 @@
     }
   }
 
-  // GA4 — 설정 시에만 로드, 실패해도 본 기능에 영향 없게 격리 (safeTrack 원칙)
-  if (cfg.analytics && cfg.analytics.ga4) {
+  // Cloudflare Web Analytics — 쿠키리스·페이지뷰만. 토큰 설정 시에만 로드.
+  // 실패해도 본 기능에 영향 없게 격리 (safeTrack 원칙 — 부가 기능은 본 기능과 격리, 철칙 5)
+  // 수집 범위는 privacy.html §3 과 일치해야 한다. 도구 입력값은 절대 실리지 않는다(§1 약속).
+  if (cfg.analytics && cfg.analytics.cfBeaconToken) {
     try {
       var s = document.createElement("script");
-      s.async = true;
-      s.src = "https://www.googletagmanager.com/gtag/js?id=" + cfg.analytics.ga4;
+      s.defer = true;
+      s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+      s.setAttribute("data-cf-beacon", JSON.stringify({ token: cfg.analytics.cfBeaconToken }));
       document.head.appendChild(s);
-      window.dataLayer = window.dataLayer || [];
-      window.gtag = function () { window.dataLayer.push(arguments); };
-      window.gtag("js", new Date());
-      window.gtag("config", cfg.analytics.ga4);
-    } catch (e) { /* 분석 실패는 조용히 무시 */ }
+    } catch (e) { /* 분석 실패는 조용히 무시 — 본 기능에 영향 없음 */ }
   }
 })();
 
@@ -89,280 +88,99 @@
 (function tool() {
   "use strict";
   // TOOLJS:START
-  /* Shoe Size Converter — US / UK / EU / cm(Japan·Asia) 상호 변환.
-     공식(선형 회귀)이 아니라 실제 판매 사이즈표를 그대로 박은 테이블 조회 방식이라
-     브랜드가 신발 박스에 인쇄하는 숫자와 어긋나지 않는다. 남성/여성/아동 3개 표를 분리한
-     이유: 같은 물리적 발 길이라도 남성·여성 US 표기가 서로 다르고, 아동은 별도 유소년 표를
-     쓴다. cm 입력은 임의의 소수(발 길이 실측값)를 허용하고 표에서 가장 가까운 행을 찾는다
-     (동률이면 더 큰 쪽 = 여유 있게 안전한 쪽으로 반올림). 외부 API 없음, 모든 계산은 로컬. */
+  var $ = function (id) { return document.getElementById(id); };
+  var cat = $("category"), sys = $("system"), size = $("size");
+  var result = $("result"), errEl = $("err"), betweenEl = $("between"), kidsHint = $("kids-hint");
+  if (!cat || !sys || !size) return;
 
-  /* ---- 사이즈표 (정적 데이터 — 브랜드마다 0.5 사이즈 안팎 편차가 있는 것이 정상이라
-     "공식"이 아니라 "표"를 쓴다. 각 행: us/uk/eu/cm 모두 같은 물리적 발 크기를 가리킨다.) ---- */
-  var TABLES = {
+  var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
+
+  // [US, UK, EU, 발 길이 cm] — 소매 표준 차트. cm 열이 유일한 물리량이고 나머지는 라벨이다.
+  var CHART = {
     men: [
-      { us: 6,    uk: 5.5,  eu: 38.5, cm: 24 },
-      { us: 6.5,  uk: 6,    eu: 39,   cm: 24.5 },
-      { us: 7,    uk: 6.5,  eu: 40,   cm: 25 },
-      { us: 7.5,  uk: 7,    eu: 40.5, cm: 25.5 },
-      { us: 8,    uk: 7.5,  eu: 41,   cm: 26 },
-      { us: 8.5,  uk: 8,    eu: 42,   cm: 26.5 },
-      { us: 9,    uk: 8.5,  eu: 42.5, cm: 27 },
-      { us: 9.5,  uk: 9,    eu: 43,   cm: 27.5 },
-      { us: 10,   uk: 9.5,  eu: 44,   cm: 28 },
-      { us: 10.5, uk: 10,   eu: 44.5, cm: 28.5 },
-      { us: 11,   uk: 10.5, eu: 45,   cm: 29 },
-      { us: 11.5, uk: 11,   eu: 45.5, cm: 29.5 },
-      { us: 12,   uk: 11.5, eu: 46,   cm: 30 },
-      { us: 13,   uk: 12.5, eu: 47.5, cm: 31 },
-      { us: 14,   uk: 13.5, eu: 48.5, cm: 32 },
-      { us: 15,   uk: 14.5, eu: 49.5, cm: 33 }
+      [6, 5, 38.5, 24.0], [6.5, 5.5, 39, 24.5], [7, 6, 40, 25.0], [7.5, 6.5, 40.5, 25.5],
+      [8, 7, 41, 26.0], [8.5, 7.5, 41.5, 26.5], [9, 8, 42, 27.0], [9.5, 8.5, 42.5, 27.5],
+      [10, 9, 43, 28.0], [10.5, 9.5, 44, 28.5], [11, 10, 44.5, 29.0], [11.5, 10.5, 45, 29.5],
+      [12, 11, 46, 30.0], [12.5, 11.5, 46.5, 30.5], [13, 12, 47, 31.0], [14, 13, 48, 32.0],
+      [15, 14, 49, 33.0], [16, 15, 50, 34.0], [17, 16, 51, 35.0], [18, 17, 52, 36.0]
     ],
     women: [
-      { us: 5,    uk: 2.5,  eu: 35.5, cm: 22 },
-      { us: 5.5,  uk: 3,    eu: 36,   cm: 22.5 },
-      { us: 6,    uk: 3.5,  eu: 36.5, cm: 23 },
-      { us: 6.5,  uk: 4,    eu: 37.5, cm: 23.5 },
-      { us: 7,    uk: 4.5,  eu: 38,   cm: 24 },
-      { us: 7.5,  uk: 5,    eu: 38.5, cm: 24.5 },
-      { us: 8,    uk: 5.5,  eu: 39,   cm: 25 },
-      { us: 8.5,  uk: 6,    eu: 40,   cm: 25.5 },
-      { us: 9,    uk: 6.5,  eu: 40.5, cm: 26 },
-      { us: 9.5,  uk: 7,    eu: 41,   cm: 26.5 },
-      { us: 10,   uk: 7.5,  eu: 42,   cm: 27 },
-      { us: 10.5, uk: 8,    eu: 42.5, cm: 27.5 },
-      { us: 11,   uk: 8.5,  eu: 43,   cm: 28 },
-      { us: 12,   uk: 9.5,  eu: 44,   cm: 29 }
+      [4, 2, 34.5, 21.2], [4.5, 2.5, 35, 21.6], [5, 3, 35.5, 22.0], [5.5, 3.5, 36, 22.4], [6, 4, 36.5, 22.9], [6.5, 4.5, 37, 23.3],
+      [7, 5, 37.5, 23.8], [7.5, 5.5, 38, 24.2], [8, 6, 38.5, 24.6], [8.5, 6.5, 39, 25.0],
+      [9, 7, 40, 25.4], [9.5, 7.5, 40.5, 25.8], [10, 8, 41, 26.2], [10.5, 8.5, 41.5, 26.7],
+      [11, 9, 42, 27.1], [11.5, 9.5, 42.5, 27.5], [12, 10, 43, 27.9],
+      [12.5, 10.5, 43.5, 28.3], [13, 11, 44, 28.8]
     ],
-    // 유소년(youth/big-kid) US 1~7 — 약 만 3~12세. 그 아래(유아/토들러) 사이즈 체계는
-    // 별도라 신발 박스에 인쇄된 토들러 표를 대신 참고하도록 FAQ 에서 안내한다.
+    // 아동 US/UK 열은 13.5C 다음 1Y 로 되감긴다 — 그래서 단조 증가가 아니고, 탐색은 인접 행끼리만 한다.
     kids: [
-      { us: 1,    uk: 13.5, eu: 32,   cm: 20 },
-      { us: 1.5,  uk: 14,   eu: 33,   cm: 20.5 },
-      { us: 2,    uk: 14.5, eu: 33.5, cm: 21 },
-      { us: 2.5,  uk: 15,   eu: 34,   cm: 21.5 },
-      { us: 3,    uk: 15.5, eu: 35,   cm: 22 },
-      { us: 3.5,  uk: 16,   eu: 35.5, cm: 22.5 },
-      { us: 4,    uk: 16.5, eu: 36,   cm: 23 },
-      { us: 4.5,  uk: 17,   eu: 36.5, cm: 23.5 },
-      { us: 5,    uk: 17.5, eu: 37.5, cm: 24 },
-      { us: 5.5,  uk: 18,   eu: 38,   cm: 24.5 },
-      { us: 6,    uk: 18.5, eu: 38.5, cm: 25 },
-      { us: 6.5,  uk: 19,   eu: 39,   cm: 25.5 },
-      { us: 7,    uk: 19.5, eu: 40,   cm: 26 }
+      ["10.5C", 10, 28, 17.1], ["11C", 10.5, 28.5, 17.5], ["11.5C", 11, 29, 17.9],
+      ["12C", 11.5, 30, 18.3], ["12.5C", 12, 30.5, 18.8], ["13C", 12.5, 31, 19.2],
+      ["13.5C", 13, 31.5, 19.6], ["1Y", 13.5, 32, 20.0], ["1.5Y", 1, 32.5, 20.4],
+      ["2Y", 1.5, 33.5, 20.8], ["2.5Y", 2, 34, 21.2], ["3Y", 2.5, 34.5, 21.6],
+      ["3.5Y", 3, 35, 22.1], ["4Y", 3.5, 35.5, 22.5], ["4.5Y", 4, 36, 22.9],
+      ["5Y", 4.5, 37, 23.3], ["5.5Y", 5, 37.5, 23.7], ["6Y", 5.5, 38, 24.1]
     ]
   };
-  // 카테고리 전환 시 되돌아갈 기본 행(US 기준) — 검색 없이도 그럴듯한 값이 바로 보이게
-  var DEFAULT_US = { men: 9, women: 8, kids: 3 };
-  var CATEGORIES = ["men", "women", "kids"];
-  var SYSTEMS = ["us", "uk", "eu", "cm"];
+  var COL = { us: 0, uk: 1, eu: 2, cm: 3 };
+  // 행 간격이 0.4~0.5cm 이므로 이 값을 넘으면 어느 사이즈에도 얹히지 않는다는 뜻.
+  var BETWEEN_CM = 0.15;
 
-  /* ---- 순수 계산 (node 단위 검증 대상) ---- */
-  function defaultIndex(category) {
-    var rows = TABLES[category], target = DEFAULT_US[category];
-    for (var i = 0; i < rows.length; i++) if (rows[i].us === target) return i;
-    return Math.floor(rows.length / 2);
-  }
-  // cm 입력 파싱: 콤마 제거, 숫자 아니면 NaN 그대로 반환(호출부가 유효성 판단)
-  function parseCm(raw) {
-    if (raw == null) return NaN;
-    var n = parseFloat(String(raw).replace(/,/g, "").trim());
-    return n;
-  }
-  // 표에서 cm 값이 가장 가까운 행 탐색. 동률이면 더 큰(넉넉한) 쪽 채택 — 꽉 끼는 것보다
-  // 여유 있는 신발이 안전하다는 통념을 반영. 표 범위를 벗어나면 clamped=true 로 알린다.
-  function findNearestRow(rows, cm) {
-    var best = rows[0], bestDiff = Math.abs(rows[0].cm - cm);
-    for (var i = 1; i < rows.length; i++) {
-      var diff = Math.abs(rows[i].cm - cm);
-      if (diff < bestDiff - 1e-9 || (Math.abs(diff - bestDiff) <= 1e-9 && rows[i].cm > best.cm)) {
-        best = rows[i]; bestDiff = diff;
-      }
+  function num(row, c) { return parseFloat(row[c]); }
+
+  // 입력값을 cm 로 옮긴다. 정확히 맞는 행이 없으면 인접한 두 행 사이를 선형 보간한다.
+  function toCm(rows, c, v) {
+    var i, a, b;
+    for (i = 0; i < rows.length; i++) if (Math.abs(num(rows[i], c) - v) < 1e-9) return rows[i][3];
+    for (i = 0; i < rows.length - 1; i++) {
+      a = num(rows[i], c); b = num(rows[i + 1], c);
+      if (v > a && v < b) return rows[i][3] + (rows[i + 1][3] - rows[i][3]) * (v - a) / (b - a);
     }
-    var clamped = cm < rows[0].cm || cm > rows[rows.length - 1].cm;
-    return { row: best, clamped: clamped };
+    return null; // 차트 밖 (아동 되감김 구간 포함)
   }
-  function normCategory(v) { return CATEGORIES.indexOf(v) === -1 ? null : v; }
-  function normSystem(v) { return SYSTEMS.indexOf(v) === -1 ? null : v; }
-
-  // node 검증용 노출 — 브라우저에는 module 이 없어 건너뛴다
-  if (typeof module !== "undefined" && module.exports) {
-    module.exports = {
-      TABLES: TABLES, DEFAULT_US: DEFAULT_US,
-      defaultIndex: defaultIndex, parseCm: parseCm, findNearestRow: findNearestRow,
-      normCategory: normCategory, normSystem: normSystem
-    };
-    return;
-  }
-
-  /* ---- i18n 헬퍼 ---- */
-  var CFG = window.APP_CONFIG || {};
-  var SKEY = (CFG.slug || "shoe-size-conv") + ":state";
-  function tr(key, fallback) {
-    var v = (window.I18N && window.I18N.t) ? window.I18N.t(key) : null;
-    return v == null ? (fallback == null ? key : fallback) : v;
-  }
-  function uiLang() {
-    return (window.I18N && window.I18N.lang && window.I18N.lang()) ||
-      document.documentElement.getAttribute("lang") || "en";
-  }
-  function fmtSize(n) {
-    try { return Number(n).toLocaleString(uiLang(), { minimumFractionDigits: 0, maximumFractionDigits: 1 }); }
-    catch (e) { return String(n); }
-  }
-
-  /* ---- DOM ---- */
-  function $(id) { return document.getElementById(id); }
-  var categoryEl = $("category-select"), systemEl = $("system-select");
-  var sizeSelectEl = $("size-select"), cmInputEl = $("cm-input"), cmHintEl = $("cm-hint");
-  var errCmEl = $("err-cm");
-  var emptyEl = $("result-empty"), gridEl = $("result-grid"), badgeEl = $("result-badge");
-  var rUs = $("r-us"), rUk = $("r-uk"), rEu = $("r-eu"), rCm = $("r-cm");
-  var noteClampedEl = $("note-clamped");
-  if (!categoryEl || !systemEl || !sizeSelectEl || !cmInputEl || !gridEl) return;
-
-  /* ---- 상태 (localStorage 복원 → 유효성 검증 → 기본값) ---- */
-  function loadState() {
-    var s = null;
-    try {
-      var raw = localStorage.getItem(SKEY);
-      if (raw) s = JSON.parse(raw);
-    } catch (e) { s = null; } // private mode / 손상된 값 — 기본값으로 진행
-    var category = (s && normCategory(s.category)) || "men";
-    var system = (s && normSystem(s.system)) || "us";
-    var rowIndex = defaultIndex(category);
-    if (s && typeof s.rowIndex === "number" && s.rowIndex >= 0 && s.rowIndex < TABLES[category].length) {
-      rowIndex = s.rowIndex;
+  function nearest(rows, cm) {
+    var best = rows[0], d = Math.abs(rows[0][3] - cm), i, dd;
+    for (i = 1; i < rows.length; i++) {
+      dd = Math.abs(rows[i][3] - cm);
+      if (dd < d) { d = dd; best = rows[i]; }
     }
-    var cm = (s && typeof s.cm === "string") ? s.cm : String(TABLES[category][rowIndex].cm);
-    return { category: category, system: system, rowIndex: rowIndex, cm: cm };
-  }
-  var state = loadState();
-  function saveState() {
-    try { localStorage.setItem(SKEY, JSON.stringify(state)); } catch (e) { /* noop */ }
+    return best;
   }
 
-  /* ---- 사이즈 선택 select 채우기 (표 순서 = 옵션 인덱스, 언어별 숫자 표기 반영) ---- */
-  function populateSizeSelect() {
-    var rows = TABLES[state.category];
-    sizeSelectEl.textContent = "";
-    for (var i = 0; i < rows.length; i++) {
-      var opt = document.createElement("option");
-      opt.value = String(i);
-      opt.textContent = fmtSize(rows[i][state.system]);
-      sizeSelectEl.appendChild(opt);
-    }
-    if (state.rowIndex >= rows.length) state.rowIndex = defaultIndex(state.category);
-    sizeSelectEl.value = String(state.rowIndex);
+  function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
+
+  function calc() {
+    var raw = parseFloat(String(size.value).replace(/,/g, ""));
+    if (!isFinite(raw)) return fail("tool.err.empty");
+
+    var rows = CHART[cat.value] || CHART.men;
+    // 인치로 잰 발 길이는 cm 로 옮겨 같은 열을 쓴다.
+    var svs = sys.value === "in" ? "cm" : sys.value;
+    var val = sys.value === "in" ? raw * 2.54 : raw;
+    var cm = val > 0 ? toCm(rows, COL[svs], val) : null;
+    if (cm === null) return fail("tool.err.range." + cat.value);
+
+    var row = nearest(rows, cm);
+    $("r-us").textContent = String(row[0]);
+    $("r-uk").textContent = String(row[1]);
+    $("r-eu").textContent = String(row[2]);
+    $("r-len").textContent = row[3].toFixed(1) + " cm / " + (row[3] / 2.54).toFixed(1) + " in";
+    betweenEl.hidden = Math.abs(row[3] - cm) <= BETWEEN_CM;
+
+    errEl.hidden = true;
+    result.hidden = false;
   }
 
-  /* ---- system/category 변경에 따른 필드 표시 전환 ---- */
-  function syncFieldVisibility() {
-    var isCm = state.system === "cm";
-    sizeSelectEl.hidden = isCm;
-    cmInputEl.hidden = !isCm;
-    cmHintEl.hidden = !isCm;
-    if (isCm) {
-      cmInputEl.value = state.cm;
-    } else {
-      populateSizeSelect();
-    }
-  }
+  function syncHint() { kidsHint.hidden = cat.value !== "kids"; }
 
-  /* ---- 렌더 ---- */
-  function render() {
-    var rows = TABLES[state.category];
-    var row, clamped = false;
-
-    if (state.system === "cm") {
-      var raw = cmInputEl.value;
-      if (raw.trim() === "") {
-        emptyEl.hidden = false; gridEl.hidden = true; errCmEl.hidden = true;
-        return;
-      }
-      var v = parseCm(raw);
-      if (!(isFinite(v) && v > 0)) {
-        emptyEl.hidden = true; gridEl.hidden = true; errCmEl.hidden = false;
-        return;
-      }
-      var res = findNearestRow(rows, v);
-      row = res.row; clamped = res.clamped;
-    } else {
-      row = rows[state.rowIndex] || rows[defaultIndex(state.category)];
-    }
-
-    errCmEl.hidden = true;
-    emptyEl.hidden = true;
-    gridEl.hidden = false;
-    rUs.textContent = fmtSize(row.us);
-    rUk.textContent = fmtSize(row.uk);
-    rEu.textContent = fmtSize(row.eu);
-    rCm.textContent = fmtSize(row.cm) + " cm";
-    badgeEl.textContent = tr("tool.result.badge." + state.category);
-
-    if (clamped) {
-      noteClampedEl.textContent = tr("tool.note.clamped", "That's outside the standard chart — showing the closest size instead ({size} cm).")
-        .replace("{size}", fmtSize(row.cm));
-      noteClampedEl.hidden = false;
-    } else {
-      noteClampedEl.hidden = true;
-    }
-  }
-
-  /* ---- 이벤트 ---- */
-  categoryEl.addEventListener("change", function () {
-    var c = normCategory(categoryEl.value);
-    if (!c) { categoryEl.value = state.category; return; }
-    state.category = c;
-    state.rowIndex = defaultIndex(c);
-    if (state.system === "cm") state.cm = String(TABLES[c][state.rowIndex].cm);
-    syncFieldVisibility();
-    saveState();
-    render();
+  $("calc-btn").addEventListener("click", calc);
+  size.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+  [cat, sys].forEach(function (el) {
+    el.addEventListener("change", function () {
+      syncHint();
+      if (!result.hidden || !errEl.hidden) calc();
+    });
   });
-
-  systemEl.addEventListener("change", function () {
-    var s = normSystem(systemEl.value);
-    if (!s) { systemEl.value = state.system; return; }
-    if (s === "cm" && state.system !== "cm") {
-      // us/uk/eu → cm: 지금 고른 행의 cm 값을 그대로 입력칸에 채워, 같은 발 크기를 유지
-      state.cm = String(TABLES[state.category][state.rowIndex].cm);
-    } else if (s !== "cm" && state.system === "cm") {
-      // cm → us/uk/eu: 입력한 cm 과 가장 가까운 행을 찾아 그 행을 새 기준으로 삼는다
-      var v = parseCm(cmInputEl.value);
-      if (isFinite(v) && v > 0) {
-        var res = findNearestRow(TABLES[state.category], v);
-        state.rowIndex = TABLES[state.category].indexOf(res.row);
-      }
-    }
-    state.system = s;
-    syncFieldVisibility();
-    saveState();
-    render();
-  });
-
-  sizeSelectEl.addEventListener("change", function () {
-    var idx = parseInt(sizeSelectEl.value, 10);
-    if (isFinite(idx)) state.rowIndex = idx;
-    saveState();
-    render();
-  });
-
-  cmInputEl.addEventListener("input", function () {
-    state.cm = cmInputEl.value;
-    saveState();
-    render();
-  });
-  cmInputEl.addEventListener("keydown", function (e) {
-    if (e.key === "Enter") { e.preventDefault(); this.blur(); render(); }
-  });
-
-  // 언어 전환 시 옵션 문구·숫자 표기·배지 문구 재적용
-  document.addEventListener("i18n:change", function () {
-    if (state.system !== "cm") populateSizeSelect();
-    render();
-  });
-
-  syncFieldVisibility();
-  render();
+  document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  syncHint();
   // TOOLJS:END
 })();

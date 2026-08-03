@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Shingle Calculator — Bundles, Squares and Nails">
 <meta property="og:description" content="Find out how many shingle bundles your roof needs. Enter the footprint, pitch and overhang to get roofing squares, underlayment rolls, ridge cap and nails.">
 <meta property="og:url" content="https://tool-hub.me/shingle-calc/">
-<meta property="og:image" content="https://tool-hub.me/shingle-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/shingle-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#7f1d1d">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Shingle Calculator",
+      "item": "https://tool-hub.me/shingle-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Shingle Calculator",
-      "item": "https://tool-hub.me/shingle-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -197,17 +207,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <label for="pitch" data-i18n="tool.pitch.label">Roof pitch</label>
     <select id="pitch">
+      <option value="1.031" data-i18n="tool.pitch.p3">3 in 12 — low slope, walkable (x1.031)</option>
       <option value="1.054" selected data-i18n="tool.pitch.p4">4 in 12 — low slope, walkable (x1.054)</option>
+      <option value="1.083" data-i18n="tool.pitch.p5">5 in 12 — low slope, walkable (x1.083)</option>
       <option value="1.118" data-i18n="tool.pitch.p6">6 in 12 — most common (x1.118)</option>
+      <option value="1.158" data-i18n="tool.pitch.p7">7 in 12 — steep (x1.158)</option>
       <option value="1.202" data-i18n="tool.pitch.p8">8 in 12 — steep (x1.202)</option>
+      <option value="1.250" data-i18n="tool.pitch.p9">9 in 12 — steep (x1.250)</option>
       <option value="1.302" data-i18n="tool.pitch.p10">10 in 12 — very steep (x1.302)</option>
       <option value="1.414" data-i18n="tool.pitch.p12">12 in 12 — 45 degrees (x1.414)</option>
+    </select>
+
+    <label for="cover" data-i18n="tool.cover.label">Shingle coverage</label>
+    <select id="cover">
+      <option value="3" selected data-i18n="tool.cover.b3">3 bundles per square — standard architectural</option>
+      <option value="4" data-i18n="tool.cover.b4">4 bundles per square — designer / heavyweight</option>
+      <option value="5" data-i18n="tool.cover.b5">5 bundles per square — luxury / premium</option>
     </select>
 
     <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
     <select id="waste">
       <option value="10" selected data-i18n="tool.waste.w10">10% — simple gable roof</option>
       <option value="15" data-i18n="tool.waste.w15">15% — hips, valleys or dormers</option>
+      <option value="20" data-i18n="tool.waste.w20">20% — complex roof with many cut-ups</option>
     </select>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate shingles</button>

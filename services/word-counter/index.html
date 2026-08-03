@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -183,7 +193,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <option value="150" data-i18n="tool.speed.slow">Slow — 150 wpm</option>
         <option value="200" selected data-i18n="tool.speed.normal">Normal — 200 wpm</option>
         <option value="250" data-i18n="tool.speed.fast">Fast — 250 wpm</option>
+        <option value="custom" data-i18n="tool.speed.custom">Custom…</option>
       </select>
+      <input type="number" id="wc-wpm" min="50" max="1000" step="10" inputmode="numeric" hidden
+        placeholder="wpm" data-i18n-placeholder="tool.speed.customPlaceholder"
+        style="width:auto;max-width:8rem;margin:0;">
+    </div>
+
+    <div style="display:flex;align-items:center;gap:.6rem;margin-top:.6rem;flex-wrap:wrap;">
+      <label for="wc-speak-wpm" style="margin:0;white-space:nowrap;" data-i18n="tool.speakLabel">Speaking speed</label>
+      <input type="number" id="wc-speak-wpm" min="50" max="300" step="5" inputmode="numeric"
+        placeholder="130" style="width:auto;max-width:8rem;margin:0;">
     </div>
 
     <div id="wc-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:.7rem;margin-top:1.1rem;">

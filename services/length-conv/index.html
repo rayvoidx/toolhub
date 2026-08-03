@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -209,6 +219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="lc-from" class="lc-inline" data-i18n="tool.from.label">From</label>
         <select id="lc-from">
+          <option value="um" data-i18n="tool.unit.um">Micrometer (µm)</option>
           <option value="mm" data-i18n="tool.unit.mm">Millimeter (mm)</option>
           <option value="cm" data-i18n="tool.unit.cm">Centimeter (cm)</option>
           <option value="m" data-i18n="tool.unit.m">Meter (m)</option>
@@ -217,12 +228,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="ft" data-i18n="tool.unit.ft">Foot (ft)</option>
           <option value="yd" data-i18n="tool.unit.yd">Yard (yd)</option>
           <option value="mi" data-i18n="tool.unit.mi">Mile (mi)</option>
+          <option value="nmi" data-i18n="tool.unit.nmi">Nautical mile (nmi)</option>
         </select>
       </div>
       <button type="button" class="lc-swap" id="lc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
       <div>
         <label for="lc-to" class="lc-inline" data-i18n="tool.to.label">To</label>
         <select id="lc-to">
+          <option value="um" data-i18n="tool.unit.um">Micrometer (µm)</option>
           <option value="mm" data-i18n="tool.unit.mm">Millimeter (mm)</option>
           <option value="cm" selected data-i18n="tool.unit.cm">Centimeter (cm)</option>
           <option value="m" data-i18n="tool.unit.m">Meter (m)</option>
@@ -231,6 +244,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="ft" data-i18n="tool.unit.ft">Foot (ft)</option>
           <option value="yd" data-i18n="tool.unit.yd">Yard (yd)</option>
           <option value="mi" data-i18n="tool.unit.mi">Mile (mi)</option>
+          <option value="nmi" data-i18n="tool.unit.nmi">Nautical mile (nmi)</option>
         </select>
       </div>
     </div>
@@ -253,6 +267,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </tr>
         </thead>
         <tbody id="lc-tbody">
+          <tr data-unit="um"><td data-i18n="tool.unit.um">Micrometer (µm)</td><td class="lc-val" id="cell-um">—</td></tr>
           <tr data-unit="mm"><td data-i18n="tool.unit.mm">Millimeter (mm)</td><td class="lc-val" id="cell-mm">—</td></tr>
           <tr data-unit="cm"><td data-i18n="tool.unit.cm">Centimeter (cm)</td><td class="lc-val" id="cell-cm">—</td></tr>
           <tr data-unit="m"><td data-i18n="tool.unit.m">Meter (m)</td><td class="lc-val" id="cell-m">—</td></tr>
@@ -261,6 +276,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <tr data-unit="ft"><td data-i18n="tool.unit.ft">Foot (ft)</td><td class="lc-val" id="cell-ft">—</td></tr>
           <tr data-unit="yd"><td data-i18n="tool.unit.yd">Yard (yd)</td><td class="lc-val" id="cell-yd">—</td></tr>
           <tr data-unit="mi"><td data-i18n="tool.unit.mi">Mile (mi)</td><td class="lc-val" id="cell-mi">—</td></tr>
+          <tr data-unit="nmi"><td data-i18n="tool.unit.nmi">Nautical mile (nmi)</td><td class="lc-val" id="cell-nmi">—</td></tr>
         </tbody>
       </table>
     </div>

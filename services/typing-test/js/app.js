@@ -97,7 +97,7 @@
   var SLUG = cfg.slug || "typing-test";
   var LS_STATE = SLUG + ":state"; // 상태 저장은 "<slug>:" prefix 만 사용 (선택한 테스트 시간만 영속화)
 
-  var ALLOWED_DUR = [30, 60, 180];
+  var ALLOWED_DUR = [15, 30, 60, 120, 180, 300];
   var DEFAULT_DUR = 60;
   var INITIAL_WORDS = 80;       // 첫 렌더 시 미리 채우는 단어 수
   var BUFFER_LOOKAHEAD = 15;    // 남은 미입력 단어가 이 수 이하로 줄면 버퍼 확장
@@ -151,7 +151,7 @@
   ];
 
   /* ---- 순수 계산 (node 단위 검증 대상) ---- */
-  // 저장된/URL 시간값을 허용 목록(30/60/180)으로 정규화, 그 외는 기본값
+  // 저장된/URL 시간값을 허용 목록(15/30/60/120/180)으로 정규화, 그 외는 기본값
   function clampDuration(raw) {
     var n = parseInt(raw, 10);
     return ALLOWED_DUR.indexOf(n) !== -1 ? n : DEFAULT_DUR;
@@ -178,11 +178,12 @@
     var totalChars = correctChars + incorrectChars;
     var minutes = elapsedMs > 0 ? elapsedMs / 60000 : 0;
     var accuracy = totalChars > 0 ? Math.round((correctChars / totalChars) * 100) : 100;
-    if (minutes <= 0) return { grossWpm: 0, netWpm: 0, accuracy: accuracy, totalChars: totalChars };
+    if (minutes <= 0) return { grossWpm: 0, netWpm: 0, cpm: 0, accuracy: accuracy, totalChars: totalChars };
     var grossWpm = Math.round((totalChars / 5) / minutes);
     var netWpmRaw = ((correctChars / 5) - incorrectChars) / minutes;
     var netWpm = Math.max(0, Math.round(netWpmRaw));
-    return { grossWpm: grossWpm, netWpm: netWpm, accuracy: accuracy, totalChars: totalChars };
+    var cpm = Math.round(totalChars / minutes); // 분당 타수 — 총 입력 글자 기준
+    return { grossWpm: grossWpm, netWpm: netWpm, cpm: cpm, accuracy: accuracy, totalChars: totalChars };
   }
   // 단어 풀에서 count개를 무작위 복원추출 (rng 주입 가능 — 노드 테스트용)
   function pickWords(pool, count, rng) {
@@ -213,7 +214,7 @@
   var wordsBoxEl = $("tt-words");
   var inputEl = $("tt-input"), hintEl = $("tt-hint"), restartBtn = $("tt-restart");
   var resultEl = $("tt-result");
-  var netEl = $("tt-r-net"), grossEl = $("tt-r-gross"), accEl = $("tt-r-acc");
+  var netEl = $("tt-r-net"), grossEl = $("tt-r-gross"), accEl = $("tt-r-acc"), cpmEl = $("tt-r-cpm");
   var wordsCountEl = $("tt-r-words"), correctEl = $("tt-r-correct"), wrongEl = $("tt-r-wrong");
   if (!inputEl || !wordsBoxEl || !timerEl || !restartBtn || !resultEl) return;
 
@@ -373,6 +374,7 @@
   function showResult(st) {
     netEl.textContent = fmtNum(st.netWpm);
     grossEl.textContent = fmtNum(st.grossWpm);
+    if (cpmEl) cpmEl.textContent = fmtNum(st.cpm);
     accEl.textContent = fmtPct(st.accuracy);
     wordsCountEl.textContent = fmtNum(wordsCompleted);
     correctEl.textContent = fmtNum(correctChars);

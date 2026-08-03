@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Molar Mass Calculator — Molecular Weight of Any Formula">
 <meta property="og:description" content="Calculate the molar mass and percent composition of any chemical formula. Parentheses, hydrates and all 118 IUPAC atomic weights, instantly in g/mol.">
 <meta property="og:url" content="https://tool-hub.me/molar-mass-calc/">
-<meta property="og:image" content="https://tool-hub.me/molar-mass-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/molar-mass-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0f766e">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Molar Mass Calculator",
+      "item": "https://tool-hub.me/molar-mass-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Molar Mass Calculator",
-      "item": "https://tool-hub.me/molar-mass-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -168,6 +178,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tool table { width:100%; border-collapse:collapse; margin-top:14px; font-size:14px; }
       #tool th, #tool td { border-bottom:1px solid var(--line); padding:7px 6px; text-align:right; }
       #tool th:first-child, #tool td:first-child { text-align:left; font-weight:600; }
+      #tool .sample-row { display:flex; gap:8px; align-items:center; }
+      #tool .sample-row input { flex:2 1 0; min-width:0; }
+      #tool .sample-row select { flex:1 1 0; min-width:0; }
       #tool .subtle { font-size:13px; color:var(--muted); }
       #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
     </style>
@@ -175,6 +188,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <label for="formula" data-i18n="tool.formula.label">Chemical formula</label>
     <input type="text" id="formula" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="H2O">
     <p class="subtle" data-i18n="tool.formula.hint" style="margin-top:6px;">Case-sensitive: Co is cobalt, CO is carbon monoxide. Parentheses and hydrate dots are supported.</p>
+
+    <label for="sample" data-i18n="tool.sample.label" style="margin-top:12px;">Sample amount (optional)</label>
+    <div class="sample-row">
+      <input type="number" id="sample" min="0" step="any" inputmode="decimal" placeholder="25">
+      <select id="sample-unit">
+        <option value="g" data-i18n="tool.sample.unit.g">grams (g)</option>
+        <option value="mol" data-i18n="tool.sample.unit.mol">moles (mol)</option>
+      </select>
+    </div>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
 
@@ -186,6 +208,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.elements">Distinct elements</div><div class="rc-val" id="r-elements">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.atoms">Total atoms</div><div class="rc-val" id="r-atoms">—</div></div>
+        <div class="rcard" id="moles-card" hidden><div class="rc-label" id="moles-label" data-i18n="tool.r.moles">Moles in your sample</div><div class="rc-val" id="r-moles">—</div></div>
       </div>
       <table>
         <thead>

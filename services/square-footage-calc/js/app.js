@@ -123,10 +123,29 @@
       }
     }
 
-    var pct = parseFloat(waste.value) || 0;
+    var pct;
+    if (waste.value === "custom") {
+      pct = num("waste-custom");
+      if (isNaN(pct)) return fail("tool.err.empty");
+      if (pct < 0 || pct > 100) return fail("tool.err.waste");
+    } else {
+      pct = parseFloat(waste.value) || 0;
+    }
+    var order = Math.ceil(areaFt * (1 + pct / 100));
     $("r-area").textContent = round(areaFt) + " sq ft";
     $("r-sqm").textContent = round(areaFt * 0.09290304) + " m2";
-    $("r-order").textContent = Math.ceil(areaFt * (1 + pct / 100)) + " sq ft";
+    $("r-sqyd").textContent = round(areaFt / 9) + " sq yd";
+    $("r-order").textContent = order + " sq ft";
+
+    // 선택 입력 — 비워두면 카드를 숨긴다. 값이 있는데 0 이하면 조용히 넘기지 않고 에러.
+    var cov = $("cov").value.trim() === "" ? null : num("cov");
+    var price = $("price").value.trim() === "" ? null : num("price");
+    if (cov !== null && (isNaN(cov) || cov <= 0)) return fail("tool.err.positive");
+    if (price !== null && (isNaN(price) || price <= 0)) return fail("tool.err.positive");
+    $("c-boxes").hidden = cov === null;
+    if (cov !== null) $("r-boxes").textContent = Math.ceil(order / cov);
+    $("c-cost").hidden = price === null;
+    if (price !== null) $("r-cost").textContent = round(order * price);
 
     errEl.hidden = true;
     result.hidden = false;
@@ -141,10 +160,13 @@
   }
 
   shape.addEventListener("change", syncShape);
-  [unit, waste].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  waste.addEventListener("change", function () {
+    $("waste-custom-wrap").hidden = waste.value !== "custom";
+    if (waste.value === "custom" && $("waste-custom").value.trim() === "") { $("waste-custom").focus(); return; }
+    if (!result.hidden || !errEl.hidden) calc();
   });
-  ["len", "wid", "len2", "wid2", "dia"].forEach(function (id) {
+  unit.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  ["len", "wid", "len2", "wid2", "dia", "cov", "price", "waste-custom"].forEach(function (id) {
     var el = $(id);
     if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });

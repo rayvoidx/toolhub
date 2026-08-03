@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-31",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -277,12 +287,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="mtg-row">
       <div class="mtg-field">
+        <label for="mtg-imagealt" data-i18n="tool.imageAlt.label">OG image alt text (optional)</label>
+        <input id="mtg-imagealt" type="text" maxlength="200" placeholder="e.g. Coffee shop interior" data-i18n-placeholder="tool.imageAlt.ph" autocomplete="off">
+      </div>
+      <div class="mtg-field">
+        <label for="mtg-twsite" data-i18n="tool.twSite.label">Twitter @username (optional)</label>
+        <input id="mtg-twsite" type="text" maxlength="20" placeholder="@toolhub" data-i18n-placeholder="tool.twSite.ph" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="mtg-row">
+      <div class="mtg-field">
         <label for="mtg-twcard" data-i18n="tool.twitterCard.label">Twitter card type</label>
         <select id="mtg-twcard">
           <option value="summary_large_image" data-i18n="tool.twitterCard.summaryLarge">Summary with large image</option>
           <option value="summary" data-i18n="tool.twitterCard.summary">Summary</option>
         </select>
         <p class="mtg-hint" id="mtg-twcard-hint" hidden data-i18n="tool.twitterCard.noImageHint">Add an OG image URL above so the large image card displays properly.</p>
+      </div>
+      <div class="mtg-field">
+        <label for="mtg-ogtype" data-i18n="tool.ogType.label">Open Graph type</label>
+        <select id="mtg-ogtype">
+          <option value="website" data-i18n="tool.ogType.website">Website (default)</option>
+          <option value="article" data-i18n="tool.ogType.article">Article / blog post</option>
+          <option value="product" data-i18n="tool.ogType.product">Product</option>
+          <option value="profile" data-i18n="tool.ogType.profile">Profile</option>
+          <option value="video.other" data-i18n="tool.ogType.video">Video</option>
+        </select>
       </div>
       <div class="mtg-field">
         <label for="mtg-robots" data-i18n="tool.robots.label">Robots directive</label>

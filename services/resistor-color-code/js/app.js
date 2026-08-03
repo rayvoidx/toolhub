@@ -103,17 +103,19 @@
     red:    { d: 2, m: 100,  ml: "100",  hex: "#dc2626", tv: 2 },
     orange: { d: 3, m: 1e3,  ml: "1k",   hex: "#ea580c" },
     yellow: { d: 4, m: 1e4,  ml: "10k",  hex: "#facc15", light: 1 },
-    green:  { d: 5, m: 1e5,  ml: "100k", hex: "#16a34a" },
-    blue:   { d: 6, m: 1e6,  ml: "1M",   hex: "#2563eb" },
-    violet: { d: 7, m: 1e7,  ml: "10M",  hex: "#7c3aed" },
-    grey:   { d: 8, m: 1e8,  ml: "100M", hex: "#9ca3af", light: 1 },
+    green:  { d: 5, m: 1e5,  ml: "100k", hex: "#16a34a", tv: 0.5 },
+    blue:   { d: 6, m: 1e6,  ml: "1M",   hex: "#2563eb", tv: 0.25 },
+    violet: { d: 7, m: 1e7,  ml: "10M",  hex: "#7c3aed", tv: 0.1 },
+    grey:   { d: 8, m: 1e8,  ml: "100M", hex: "#9ca3af", light: 1, tv: 0.05 },
     white:  { d: 9, m: 1e9,  ml: "1G",   hex: "#f8fafc", light: 1 },
     gold:   { m: 0.1,  ml: "0.1",  hex: "#c9a227", tv: 5,  light: 1 },
-    silver: { m: 0.01, ml: "0.01", hex: "#c0c4c8", tv: 10, light: 1 }
+    silver: { m: 0.01, ml: "0.01", hex: "#c0c4c8", tv: 10, light: 1 },
+    // 3밴드 저항: 오차 밴드가 없으면 ±20% (IEC 60062)
+    none:   { tv: 20, hex: "#e9d8b4", light: 1, noBand: 1 }
   };
   var DIGITS = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"];
   var MULTS = DIGITS.concat(["gold", "silver"]);
-  var TOLS = ["brown", "red", "gold", "silver"];
+  var TOLS = ["brown", "red", "green", "blue", "violet", "grey", "gold", "silver", "none"];
 
   function label(name, kind) {
     var c = C[name], s = t("tool.c." + name);
@@ -180,7 +182,7 @@
     strip.textContent = "";
     var seq = names.concat([mult.value]);
     for (i = 0; i < seq.length; i++) strip.appendChild(band(seq[i]));
-    strip.appendChild(band(tol.value, "band tol"));
+    if (!p.noBand) strip.appendChild(band(tol.value, "band tol"));
     $("r-reading").textContent = seq.concat([tol.value]).map(function (n) { return t("tool.c." + n); }).join(" · ");
 
     errEl.hidden = true;

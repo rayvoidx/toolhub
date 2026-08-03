@@ -326,6 +326,7 @@
     } else if (pl) {
       plBlock.hidden = false;
       var plEl = $("r-pl"), pctEl = $("r-plpct");
+      $("r-mktval").textContent = money(C * pos.Q, cur);
       if (pos.bePossible) {
         plEl.textContent = money(pl.netPL, cur);
         plEl.className = "rc-val " + (pl.netPL >= 0 ? "pl-pos" : "pl-neg");

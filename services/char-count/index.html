@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -191,6 +201,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         data-i18n-placeholder="tool.goalPh"
         style="width:9rem;padding:.45rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--surface);color:var(--ink);font-size:.95rem;"
       >
+      <label for="page-size" data-i18n="tool.pageSizeLabel" style="color:var(--muted);font-size:.9rem;white-space:nowrap;">Characters per page</label>
+      <input
+        type="number"
+        id="page-size"
+        min="1"
+        max="100000"
+        step="1"
+        value="200"
+        style="width:7rem;padding:.45rem .6rem;border:1px solid var(--line);border-radius:.4rem;background:var(--surface);color:var(--ink);font-size:.95rem;"
+      >
     </div>
 
     <div id="goal-banner" hidden
@@ -216,7 +236,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="stat-card" id="sc-ms" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
         <div data-i18n="tool.k.manuscript" style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">Manuscript pages</div>
         <div class="stat-val" style="font-size:1.5rem;font-weight:700;color:var(--accent);">0</div>
-        <div data-i18n="tool.u.pages" style="font-size:.75rem;color:var(--muted);">pages (200 chars)</div>
+        <div id="ms-unit" style="font-size:.75rem;color:var(--muted);">pages (200 chars)</div>
       </div>
       <div class="stat-card" id="sc-utf8" style="background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;">
         <div data-i18n="tool.k.utf8" style="font-size:.78rem;color:var(--muted);margin-bottom:.25rem;">Bytes (UTF-8)</div>

@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="PPI Calculator — Screen Pixel Density and Dot Pitch">
 <meta property="og:description" content="Calculate screen PPI from resolution and diagonal size. Get pixel density, dot pitch in mm, megapixels, aspect ratio and the distance where pixels vanish.">
 <meta property="og:url" content="https://tool-hub.me/ppi-calc/">
-<meta property="og:image" content="https://tool-hub.me/ppi-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/ppi-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#4338ca">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "PPI Calculator",
+      "item": "https://tool-hub.me/ppi-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "PPI Calculator",
-      "item": "https://tool-hub.me/ppi-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -187,7 +197,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <label for="diag" data-i18n="tool.diag.label">Diagonal size (inches)</label>
-        <input type="number" id="diag" inputmode="decimal" min="0.5" max="120" step="any" autocomplete="off" placeholder="27">
+        <div style="display:flex;gap:6px;">
+          <input type="number" id="diag" inputmode="decimal" min="0.5" max="120" step="any" autocomplete="off" placeholder="27" style="flex:1;min-width:0;">
+          <select id="diag-unit" style="flex:0 0 auto;">
+            <option value="in" data-i18n="tool.unit.in">inches</option>
+            <option value="cm" data-i18n="tool.unit.cm">cm</option>
+          </select>
+        </div>
       </div>
     </div>
 
@@ -197,6 +213,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <button type="button" class="chip" data-w="2560" data-h="1440" data-d="27">1440p 27"</button>
       <button type="button" class="chip" data-w="3840" data-h="2160" data-d="27">4K 27"</button>
       <button type="button" class="chip" data-w="3840" data-h="2160" data-d="32">4K 32"</button>
+      <button type="button" class="chip" data-w="1920" data-h="1080" data-d="15.6">Laptop 15.6"</button>
+      <button type="button" class="chip" data-w="3840" data-h="2160" data-d="55">TV 55"</button>
       <button type="button" class="chip" data-w="2556" data-h="1179" data-d="6.1">Phone 6.1"</button>
     </div>
 
@@ -212,6 +230,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.mp">Total pixels</div><div class="rc-val" id="r-mp">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.aspect">Aspect ratio</div><div class="rc-val" id="r-aspect">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.dist">Pixels vanish beyond</div><div class="rc-val" id="r-dist">—</div></div>
+        <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.size">Screen size (W x H)</div><div class="rc-val" id="r-size">—</div></div>
         <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.density">Density class</div><div class="rc-val" id="r-class">—</div></div>
       </div>
     </div>

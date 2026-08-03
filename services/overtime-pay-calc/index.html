@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Overtime Pay Calculator — Time and a Half, Double Time">
 <meta property="og:description" content="Enter your hourly rate and hours worked to split regular, time-and-a-half and double-time pay, with the weekly total. Set your own overtime threshold and multipliers.">
 <meta property="og:url" content="https://tool-hub.me/overtime-pay-calc/">
-<meta property="og:image" content="https://tool-hub.me/overtime-pay-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/overtime-pay-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0e7490">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-28",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -125,6 +125,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -184,8 +194,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <label for="dt-threshold" data-i18n="tool.dt.label">Double-time starts after</label>
-    <input type="number" id="dt-threshold" inputmode="decimal" min="0" max="168" step="any" autocomplete="off" value="60">
+    <div class="field-row">
+      <div>
+        <label for="dt-threshold" data-i18n="tool.dt.label">Double-time starts after</label>
+        <input type="number" id="dt-threshold" inputmode="decimal" min="0" max="168" step="any" autocomplete="off" value="60">
+      </div>
+      <div>
+        <label for="dt-mult" data-i18n="tool.dtmult.label">Double-time multiplier</label>
+        <input type="number" id="dt-mult" inputmode="decimal" min="1" max="5" step="0.05" autocomplete="off" value="2">
+      </div>
+    </div>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
 
@@ -199,6 +217,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.ot">Overtime pay</div><div class="rc-val" id="r-ot">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.dt">Double-time pay</div><div class="rc-val" id="r-dt">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.othours">Overtime hours</div><div class="rc-val" id="r-oth">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.effective">Effective hourly rate</div><div class="rc-val" id="r-eff">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.premium">Overtime premium</div><div class="rc-val" id="r-prem">—</div></div>
       </div>
     </div>
     <p class="err" id="err" hidden></p>

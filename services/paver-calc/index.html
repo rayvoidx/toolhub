@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Paver Calculator — How Many Pavers Do I Need">
 <meta property="og:description" content="Work out how many pavers your patio needs, plus the gravel base and bedding sand in cubic yards. Pick a paver size, add waste for cuts, and price the job.">
 <meta property="og:url" content="https://tool-hub.me/paver-calc/">
-<meta property="og:image" content="https://tool-hub.me/paver-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/paver-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#78350f">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Paver Calculator",
+      "item": "https://tool-hub.me/paver-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Paver Calculator",
-      "item": "https://tool-hub.me/paver-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -209,11 +219,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
+    <label for="depth" data-i18n="tool.depth.label">Base depth</label>
+    <select id="depth">
+      <option value="4" selected data-i18n="tool.depth.4">4 in (10 cm) — patio or walkway</option>
+      <option value="6" data-i18n="tool.depth.6">6 in (15 cm) — light vehicle driveway</option>
+      <option value="8" data-i18n="tool.depth.8">8 in (20 cm) — heavy use or clay subsoil</option>
+      <option value="12" data-i18n="tool.depth.12">12 in (30 cm) — deep frost or heavy truck traffic</option>
+    </select>
+
     <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
     <select id="waste">
       <option value="5" data-i18n="tool.waste.5">5% — running bond, square patio</option>
       <option value="10" selected data-i18n="tool.waste.10">10% — standard, a few cuts</option>
       <option value="15" data-i18n="tool.waste.15">15% — herringbone or curved edges</option>
+      <option value="20" data-i18n="tool.waste.20">20% — circular, fan or diagonal layouts</option>
     </select>
 
     <label for="price" data-i18n="tool.price.label">Price per paver (optional)</label>
@@ -228,7 +247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="rc-val" id="r-pavers">—</div>
         </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Patio area</div><div class="rc-val" id="r-area">—</div></div>
-        <div class="rcard"><div class="rc-label" data-i18n="tool.r.gravel">Gravel base (4 in / 10 cm)</div><div class="rc-val" id="r-gravel">—</div></div>
+        <div class="rcard"><div class="rc-label" id="r-gravel-label">Gravel base (4 in)</div><div class="rc-val" id="r-gravel">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.sand">Bedding sand (1 in / 2.5 cm)</div><div class="rc-val" id="r-sand">—</div></div>
         <div class="rcard" id="cost-card" hidden><div class="rc-label" data-i18n="tool.r.cost">Estimated paver cost</div><div class="rc-val" id="r-cost">—</div></div>
       </div>

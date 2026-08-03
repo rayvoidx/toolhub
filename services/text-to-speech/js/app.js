@@ -161,9 +161,25 @@
     if (statusEl) statusEl.textContent = msg || "";
   }
 
-  /* ---- 글자 수 ---- */
+  /* ---- 글자 수 + 예상 재생 시간 ---- */
+  var etaWrapEl = $("eta-wrap"), etaValEl = $("eta-val"), limitNoteEl = $("limit-note");
+  var WPM = 165; // rate 1.0 기준 일반적인 TTS 낭독 속도
+  function wordCount(t) { var m = t.match(/\S+/g); return m ? m.length : 0; }
+  function fmtDuration(sec) {
+    sec = Math.max(1, Math.round(sec));
+    var h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = sec % 60;
+    var mm = (h && m < 10 ? "0" : "") + m;
+    return (h ? h + ":" : "") + mm + ":" + (s < 10 ? "0" : "") + s;
+  }
   function updateCharCount() {
-    if (charCountEl) charCountEl.textContent = String(textEl.value.length);
+    var t = textEl.value;
+    if (charCountEl) charCountEl.textContent = String(t.length);
+    if (limitNoteEl) limitNoteEl.hidden = !(textEl.maxLength > 0 && t.length >= textEl.maxLength);
+    if (!etaWrapEl || !etaValEl) return;
+    var w = wordCount(t);
+    if (!w) { etaWrapEl.hidden = true; return; }
+    etaWrapEl.hidden = false;
+    etaValEl.textContent = fmtDuration(w / (WPM * clampRate(rateEl ? rateEl.value : 1)) * 60);
   }
 
   /* ---- 음성 목록 (언어별 그룹) ---- */
@@ -347,11 +363,13 @@
   function setState(s) { state = s; updateButtons(); }
 
   /* ---- 숫자 클램프 (슬라이더는 HTML min/max 로 막히지만 방어적으로 한 번 더) ---- */
-  function clampRate(n) { n = parseFloat(n); if (!isFinite(n)) n = 1; return Math.min(2, Math.max(0.5, n)); }
+  function clampRate(n) { n = parseFloat(n); if (!isFinite(n)) n = 1; return Math.min(3, Math.max(0.25, n)); }
+  // 0.25 같은 세밀한 값도 보이도록 소수 2자리 후 불필요한 0만 제거 (1.00 → 1.0)
+  function fmtRate(n) { return n.toFixed(2).replace(/0$/, ""); }
   function clampPitch(n) { n = parseFloat(n); if (!isFinite(n)) n = 1; return Math.min(2, Math.max(0, n)); }
 
   function updateSliderLabels() {
-    if (rateValEl) rateValEl.textContent = clampRate(rateEl.value).toFixed(1) + "×";
+    if (rateValEl) rateValEl.textContent = fmtRate(clampRate(rateEl.value)) + "×";
     if (pitchValEl) pitchValEl.textContent = clampPitch(pitchEl.value).toFixed(1);
   }
 
@@ -413,7 +431,7 @@
   });
 
   textEl.addEventListener("input", function () { updateCharCount(); hideError(); saveState(); });
-  rateEl.addEventListener("input", function () { updateSliderLabels(); saveState(); });
+  rateEl.addEventListener("input", function () { updateSliderLabels(); updateCharCount(); saveState(); });
   pitchEl.addEventListener("input", function () { updateSliderLabels(); saveState(); });
   voiceEl.addEventListener("change", function () { updateVoiceNote(); saveState(); });
 

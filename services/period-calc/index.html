@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-22",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -262,8 +272,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="pc-row">
       <div>
         <label for="pc-cycle" data-i18n="tool.cycle.label">Average cycle length (days)</label>
-        <input type="number" id="pc-cycle" value="28" min="21" max="45" step="1" inputmode="numeric" autocomplete="off">
-        <p class="pc-hint" data-i18n="tool.cycle.hint">From the first day of one period to the first day of the next. Most cycles run 21–45 days; 28 is the default.</p>
+        <input type="number" id="pc-cycle" value="28" min="21" max="60" step="1" inputmode="numeric" autocomplete="off">
+        <p class="pc-hint" data-i18n="tool.cycle.hint">From the first day of one period to the first day of the next. Most cycles run 21–35 days, but longer ones up to 60 are accepted; 28 is the default.</p>
       </div>
       <div>
         <label for="pc-length" data-i18n="tool.length.label">Period length (days)</label>
@@ -271,6 +281,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="pc-hint" data-i18n="tool.length.hint">How many days your bleeding usually lasts. Most periods run 2–10 days; 5 is the default.</p>
       </div>
     </div>
+
+    <label for="pc-luteal" data-i18n="tool.luteal.label">Luteal phase length (days, optional)</label>
+    <input type="number" id="pc-luteal" value="14" min="9" max="16" step="1" inputmode="numeric" autocomplete="off">
+    <p class="pc-hint" data-i18n="tool.luteal.hint">Days from ovulation to the next period. Most people are 12–14; leave 14 unless a doctor or a basal-temperature chart told you otherwise.</p>
+
+    <label for="pc-count" data-i18n="tool.count.label">Cycles to show</label>
+    <select id="pc-count">
+      <option value="3">3</option>
+      <option value="6" selected>6</option>
+      <option value="12">12</option>
+      <option value="24">24</option>
+    </select>
 
     <div class="pc-actions">
       <button type="button" class="btn" id="pc-calc" data-i18n="tool.calc">Calculate</button>

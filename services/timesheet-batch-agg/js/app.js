@@ -234,10 +234,12 @@
   }
 
   // 근로구간 [inMin, outMin) 과 야간창 [22:00, 익일06:00) 의 교집합 분.
-  function tsNightOverlap(inMin, outMin) {
+  function tsNightOverlap(inMin, outMin, ns, ne) {
     var total = 0;
+    // 야간 구간은 사용자가 고를 수 있다(법정 22:00–06:00 이 기본, 사내 교대수당 규정은 다를 수 있음).
+    if (!(typeof ns === "number" && typeof ne === "number" && ne > ns && ns >= 0 && ne <= DAY * 2)) { ns = NIGHT_START; ne = NIGHT_END; }
     for (var k = -1; k <= 1; k++) {
-      var s = NIGHT_START + DAY * k, e = NIGHT_END + DAY * k;
+      var s = ns + DAY * k, e = ne + DAY * k;
       var lo = inMin > s ? inMin : s, hi = outMin < e ? outMin : e;
       if (hi > lo) total += hi - lo;
     }
@@ -331,6 +333,10 @@
     var reasons = { noempid: 0, baddate: 0, badin: 0, badout: 0, badbreak: 0, nowork: 0, unreasonable: 0, dup: 0 };
     var seen = {};
     var holidaySet = opts.holidaySet || {}, weekendHoliday = !!opts.weekendHoliday, mode = opts.dateMode || "iso";
+    // 교대 상한은 사용자가 조정 가능(24h 당직·간호·경비). 미지정·비정상값이면 기본 16h.
+    var maxSpan = (typeof opts.maxSpan === "number" && opts.maxSpan >= 60 && opts.maxSpan <= DAY) ? opts.maxSpan : MAX_SPAN;
+    var nightStart = (typeof opts.nightStart === "number" && opts.nightStart >= 0 && opts.nightStart < DAY) ? opts.nightStart : NIGHT_START;
+    var nightEnd = (typeof opts.nightEnd === "number" && opts.nightEnd > nightStart && opts.nightEnd <= DAY * 2) ? opts.nightEnd : NIGHT_END;
     function drop(n, reason, val) {
       reasons[reason]++; excludedCount++;
       if (excluded.length < MAX_EXCLUDED) excluded.push({ n: n, reason: reason, val: val || "" });
@@ -354,7 +360,7 @@
       var overnight = false;
       if (outMin <= inMin) { outMin += DAY; overnight = true; }
       var span = outMin - inMin;
-      if (span > MAX_SPAN) { drop(n, "unreasonable", (Math.round(span / 6) / 10) + "h"); continue; }
+      if (span > maxSpan) { drop(n, "unreasonable", (Math.round(span / 6) / 10) + "h"); continue; }
       var workMin = span - brk;
       if (workMin <= 0) { drop(n, "nowork", icell + "-" + ocell + " / break " + bcell); continue; }
       if (overnight) overnightCount++;
@@ -363,7 +369,7 @@
         (map.holiday >= 0 && tsTruthy(tsCell(f, map.holiday)));
       if (rows.length < MAX_ROWS) {
         rows.push({ emp: emp, day: day, dow: dow, inAbs: day * DAY + inMin, outAbs: day * DAY + outMin,
-          work: workMin, night: tsNightOverlap(inMin, outMin), holiday: isHoliday, overnight: overnight });
+          work: workMin, night: tsNightOverlap(inMin, outMin, nightStart, nightEnd), holiday: isHoliday, overnight: overnight });
       }
     }
     return { rows: rows, excluded: excluded, excludedCount: excludedCount, reasons: reasons, read: read, overnightCount: overnightCount };
@@ -511,6 +517,7 @@
   var state = {
     src: null, srcName: "", parsed: null, hasHeader: true, truncated: false,
     country: "KR", weekStart: 1, weekendHoliday: false, holidayText: "", dateScan: null,
+    nightStart: NIGHT_START, nightEnd: NIGHT_END,
     map: { empid: -1, date: -1, "in": -1, out: -1, "break": -1, holiday: -1 },
     parsing: false, cancelParse: false, computing: false, worker: null, last: null, pgTimer: null
   };
@@ -756,13 +763,32 @@
     return set;
   }
 
+  // 야간 구간 프리셋 검증/적용 — 셀렉트에 실제로 있는 값만 허용한다.
+  function nightOption(v) {
+    var sel = $("ts-night");
+    if (!sel) return false;
+    for (var i = 0; i < sel.options.length; i++) if (sel.options[i].value === v) return true;
+    return false;
+  }
+  function setNight(v) {
+    var parts = String(v).split("-");
+    var a = parseInt(parts[0], 10), b = parseInt(parts[1], 10);
+    if (!(a >= 0 && a < DAY && b > a && b <= DAY * 2)) { a = NIGHT_START; b = NIGHT_END; }
+    state.nightStart = a; state.nightEnd = b;
+  }
+  function nightLabel() {
+    function hhmm(m) { m = m % DAY; return (m / 60 < 10 ? "0" : "") + Math.floor(m / 60) + ":" + (m % 60 < 10 ? "0" : "") + (m % 60); }
+    return hhmm(state.nightStart) + "\u2013" + hhmm(state.nightEnd);
+  }
+
   /* ---------- 계산 ---------- */
   function calculate() {
     if (!state.parsed || !state.parsed.records.length) { showTopError("tool.err.empty"); return; }
     var m = state.map;
     if (m.empid < 0 || m.date < 0 || m["in"] < 0 || m.out < 0) { showTopError("tool.err.needcols"); return; }
     var skip = state.hasHeader ? 1 : 0;
-    var opts = { dateMode: dateMode(), weekendHoliday: state.weekendHoliday, holidaySet: holidaySet() };
+    var opts = { dateMode: dateMode(), weekendHoliday: state.weekendHoliday, holidaySet: holidaySet(), maxSpan: state.maxSpan,
+      nightStart: state.nightStart, nightEnd: state.nightEnd };
     var approx = state.parsed.records.length - skip;
     if (approx > WORKER_ROWS && canWorker()) runWorker(skip, m, opts);
     else { try { renderResult(tsCompute(state.parsed.records, skip, m, opts, state.country, state.weekStart)); } catch (e) { showTopError("tool.err.compute"); } }
@@ -867,7 +893,7 @@
 
     // 환산시간·야간 정의 안내
     r.appendChild(el("p", "ts-na", t("tool.res.convnote")));
-    r.appendChild(el("p", "ts-na", t("tool.res.nightnote")));
+    r.appendChild(el("p", "ts-na", t("tool.res.nightnote", { win: nightLabel() })));
 
     appendExclusions(r, res);
 
@@ -991,6 +1017,13 @@
     $("ts-weekstart").value = String(state.weekStart);
     state.weekendHoliday = !!loadPref("weekendHoliday", false);
     $("ts-weekend").checked = state.weekendHoliday;
+    var savedSpan = parseInt(loadPref("maxSpan", MAX_SPAN), 10);
+    state.maxSpan = (savedSpan >= 60 && savedSpan <= DAY) ? savedSpan : MAX_SPAN;
+    $("ts-maxspan").value = String(state.maxSpan);
+    var savedNight = String(loadPref("night", "") || "");
+    if (!nightOption(savedNight)) savedNight = NIGHT_START + "-" + NIGHT_END;
+    $("ts-night").value = savedNight;
+    setNight(savedNight);
     state.holidayText = loadPref("holidays", "") || "";
     $("ts-holidays").value = state.holidayText;
   }
@@ -1020,6 +1053,16 @@
       recompute();
     });
     $("ts-weekstart").addEventListener("change", function () { state.weekStart = parseInt(this.value, 10); savePref("weekStart", state.weekStart); recompute(); });
+    $("ts-maxspan").addEventListener("change", function () {
+      var v = parseInt(this.value, 10);
+      state.maxSpan = (v >= 60 && v <= DAY) ? v : MAX_SPAN;
+      this.value = String(state.maxSpan);
+      savePref("maxSpan", state.maxSpan); recompute();
+    });
+    $("ts-night").addEventListener("change", function () {
+      if (!nightOption(this.value)) this.value = NIGHT_START + "-" + NIGHT_END;
+      setNight(this.value); savePref("night", this.value); recompute();
+    });
     $("ts-weekend").addEventListener("change", function () { state.weekendHoliday = this.checked; savePref("weekendHoliday", this.checked); recompute(); });
     $("ts-holidays").addEventListener("input", function () { state.holidayText = this.value; savePref("holidays", this.value); });
     $("ts-holidays").addEventListener("change", function () { recompute(); });

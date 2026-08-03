@@ -122,8 +122,11 @@
     var v = (window.I18N && window.I18N.t) ? window.I18N.t(key) : null;
     return v == null ? fallback : v;
   }
+  function one(n) { return (Math.round(n * 10) / 10).toFixed(1); }
   function kg(n) {
-    return t("tool.kg", "{n} kg").replace("{n}", (Math.round(n * 10) / 10).toFixed(1));
+    // 미·영 사용자용 파운드 병기 (1 kg = 2.20462 lb)
+    return t("tool.kg", "{n} kg").replace("{n}", one(n)) +
+           " (" + t("tool.lb", "{n} lb").replace("{n}", one(n * 2.20462)) + ")";
   }
 
   // calc-core:start — 순수 계산 코어 (node 단위검증 대상)

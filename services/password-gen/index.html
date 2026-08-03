@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -183,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section class="tool-card" id="tool" aria-live="polite">
     <div class="tool-row">
       <label for="pw-length"><span data-i18n="tool.lengthLabel">Password length</span>: <strong id="pw-length-val">16</strong></label>
-      <input type="range" id="pw-length" min="8" max="64" value="16" step="1">
+      <input type="range" id="pw-length" min="4" max="128" value="16" step="1">
     </div>
     <div class="tool-row charset-opts">
       <label class="checkbox-label">
@@ -198,6 +198,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <label class="checkbox-label">
         <input type="checkbox" id="opt-symbol" checked> <span data-i18n="tool.symbol">Symbols (!@#$%^&amp;*)</span>
       </label>
+      <label class="checkbox-label">
+        <input type="checkbox" id="opt-no-ambiguous"> <span data-i18n="tool.noAmbiguous">Exclude look-alikes (0 O l I 1)</span>
+      </label>
     </div>
     <div class="tool-row btn-row">
       <button class="btn" id="btn-generate" type="button" data-i18n="tool.generate">Generate</button>
@@ -207,6 +210,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="pw-strength-wrap" hidden>
       <div id="pw-strength-bar" style="height:6px;border-radius:3px;margin-top:8px;transition:width .3s,background .3s;width:0"></div>
       <p id="pw-strength-label" style="font-size:.85rem;margin-top:4px;"></p>
+      <p id="pw-entropy-label" style="font-size:.8rem;margin-top:2px;opacity:.75;"></p>
     </div>
     <div id="pw-toast" role="alert" aria-live="assertive" style="display:none;font-size:.85rem;color:var(--accent,#6366f1);margin-top:6px;"></div>
   </section>

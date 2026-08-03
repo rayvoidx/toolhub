@@ -208,7 +208,19 @@
 
   function updateCount(len) {
     if (!countEl) return;
-    countEl.textContent = t("tool.count").replace("{n}", String(len)).replace("{max}", String(MAX_LEN));
+    var txt = t("tool.count").replace("{n}", String(len)).replace("{max}", String(MAX_LEN));
+    // 상한에 닿으면 잘렸다는 사실을 명시한다(브라우저 maxlength 가 붙여넣기를 조용히 자르는 문제)
+    if (len >= MAX_LEN) {
+      countEl.textContent = txt + " · " + t("tool.limitHit").replace("{max}", String(MAX_LEN));
+      countEl.style.color = "#b91c1c";
+      countEl.removeAttribute("aria-hidden");
+      countEl.setAttribute("role", "status");
+    } else {
+      countEl.textContent = txt;
+      countEl.style.color = "";
+      countEl.setAttribute("aria-hidden", "true");
+      countEl.removeAttribute("role");
+    }
   }
 
   function render() {

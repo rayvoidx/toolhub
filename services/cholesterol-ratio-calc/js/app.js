@@ -142,9 +142,11 @@
     else badge($("r-band"), "tool.b.high", "b-bad");
 
     var nonhdl = round(tc - hdl, 0);
-    var shown = mmol ? fmt(nonhdl / CHOL, 2) : fmt(nonhdl, 0);
-    var unitLabel = t(mmol ? "tool.unit.mmol" : "tool.unit.mg");
-    setCard("r-nonhdl", shown + " " + unitLabel + " · " + t(nonhdl < 130 ? "tool.b.attarget" : "tool.b.abovetarget"));
+    var primary = mmol ? fmt(nonhdl / CHOL, 2) + " " + t("tool.unit.mmol") : fmt(nonhdl, 0) + " " + t("tool.unit.mg");
+    var twin = mmol ? fmt(nonhdl, 0) + " " + t("tool.unit.mg") : fmt(nonhdl / CHOL, 2) + " " + t("tool.unit.mmol");
+    // 가이드 표와 동일한 3구간 — 130 미만 / 130~190 / 190 초과.
+    var nhBand = nonhdl < 130 ? "tool.b.attarget" : (nonhdl <= 190 ? "tool.b.borderline" : "tool.b.high");
+    setCard("r-nonhdl", primary + " (" + twin + ") · " + t(nhBand));
 
     if (ldl !== null) {
       var lh = round(ldl / hdl, 1);

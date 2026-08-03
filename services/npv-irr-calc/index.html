@@ -39,14 +39,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NPV Calculator — IRR, Payback and Net Present Value</title>
-<meta name="description" content="Calculate net present value and internal rate of return from up to six years of cash flows. Get payback period, profitability index and a full discounted table.">
+<meta name="description" content="Calculate net present value and internal rate of return from up to ten years of cash flows. Get payback period, profitability index and a full discounted table.">
 <meta name="keywords" content="npv calculator, irr calculator, net present value calculator, internal rate of return, discounted cash flow calculator, payback period calculator, profitability index">
 <link rel="canonical" href="https://tool-hub.me/npv-irr-calc/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="NPV Calculator — IRR, Payback and Net Present Value">
-<meta property="og:description" content="Calculate net present value and internal rate of return from up to six years of cash flows. Get payback period, profitability index and a full discounted table.">
+<meta property="og:description" content="Calculate net present value and internal rate of return from up to ten years of cash flows. Get payback period, profitability index and a full discounted table.">
 <meta property="og:url" content="https://tool-hub.me/npv-irr-calc/">
-<meta property="og:image" content="https://tool-hub.me/npv-irr-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/npv-irr-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1e3a8a">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "NPV and IRR Calculator",
-  "description": "Calculate net present value and internal rate of return from up to six years of cash flows. Get payback period, profitability index and a full discounted table.",
+  "description": "Calculate net present value and internal rate of return from up to ten years of cash flows. Get payback period, profitability index and a full discounted table.",
   "url": "https://tool-hub.me/npv-irr-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "NPV Calculator",
+      "item": "https://tool-hub.me/npv-irr-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,30 +130,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "NPV Calculator",
-      "item": "https://tool-hub.me/npv-irr-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
-<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
 #tool, #tool * { min-width: 0; }
 #tool { max-width: 100%; }
 #tool table { display: block; max-width: 100%; overflow-x: auto; }
@@ -141,6 +141,7 @@ ADSENSE:END -->
 #tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
 .guide-content table { display: block; max-width: 100%; overflow-x: auto; }
 main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
 </style>
 </head>
 <body>
@@ -210,6 +211,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div><label for="cf4" id="lab-cf4">Year 4</label><input type="number" id="cf4" inputmode="decimal" step="any" autocomplete="off" placeholder="30000"></div>
       <div><label for="cf5" id="lab-cf5">Year 5</label><input type="number" id="cf5" inputmode="decimal" step="any" autocomplete="off" placeholder="25000"></div>
       <div><label for="cf6" id="lab-cf6">Year 6</label><input type="number" id="cf6" inputmode="decimal" step="any" autocomplete="off"></div>
+      <div><label for="cf7" id="lab-cf7">Year 7</label><input type="number" id="cf7" inputmode="decimal" step="any" autocomplete="off"></div>
+      <div><label for="cf8" id="lab-cf8">Year 8</label><input type="number" id="cf8" inputmode="decimal" step="any" autocomplete="off"></div>
+      <div><label for="cf9" id="lab-cf9">Year 9</label><input type="number" id="cf9" inputmode="decimal" step="any" autocomplete="off"></div>
+      <div><label for="cf10" id="lab-cf10">Year 10</label><input type="number" id="cf10" inputmode="decimal" step="any" autocomplete="off"></div>
     </div>
     <p class="subtle" data-i18n="tool.cf.blank">Leave a year blank to end the series — later years are ignored.</p>
 
@@ -224,6 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.irr">Internal rate of return</div><div class="rc-val" id="r-irr">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.payback">Payback period</div><div class="rc-val" id="r-payback">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dpayback">Discounted payback</div><div class="rc-val" id="r-dpayback">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.pi">Profitability index</div><div class="rc-val" id="r-pi">—</div></div>
       </div>
       <div class="pv-wrap">

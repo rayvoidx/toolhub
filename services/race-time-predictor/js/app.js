@@ -91,15 +91,19 @@
   var $ = function (id) { return document.getElementById(id); };
   var dist = $("dist"), cust = $("cust"), custUnit = $("cust-unit");
   var hh = $("hh"), mm = $("mm"), ss = $("ss");
-  var target = $("target"), tcust = $("tcust"), tcustUnit = $("tcust-unit");
+  var target = $("target"), tcust = $("tcust"), tcustUnit = $("tcust-unit"), expSel = $("exp");
   var result = $("result"), errEl = $("err"), noteEl = $("r-note"), body = $("splits-body");
   if (!dist || !target || !hh || !body) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
-  var KM = { "5k": 5, "10k": 10, half: 21.0975, full: 42.195 };
+  var KM = { mile: 1.609344, "5k": 5, "10k": 10, "15k": 15, "10mi": 16.09344, half: 21.0975, full: 42.195 };
   var MI = 1.609344;      // 1 mile in km
-  var EXP = 1.06;         // Riegel fatigue exponent — the standard value
+  var EXP = 1.06;         // Riegel fatigue exponent — standard value, overridable in the select
+  function exponent() {
+    var e = expSel ? parseFloat(expSel.value) : NaN;
+    return isFinite(e) && e >= 1 && e <= 1.2 ? e : EXP;
+  }
 
   function fmt(sec) {
     sec = Math.round(sec);
@@ -149,7 +153,7 @@
     var d1 = km(dist, cust, custUnit), d2 = km(target, tcust, tcustUnit);
     if (!isFinite(d1) || !isFinite(d2)) return fail("tool.err.dist");
 
-    var t2 = t1 * Math.pow(d2 / d1, EXP);
+    var t2 = t1 * Math.pow(d2 / d1, exponent());
     $("r-time").textContent = fmt(t2);
     $("r-pacekm").textContent = fmt(t2 / d2);
     $("r-pacemi").textContent = fmt(t2 / d2 * MI);
@@ -173,7 +177,7 @@
   [hh, mm, ss, cust, tcust].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [dist, target].forEach(function (el) {
+  [dist, target, expSel].forEach(function (el) {
     el.addEventListener("change", function () { toggleCustom(); if (!result.hidden || !errEl.hidden) calc(); });
   });
   [custUnit, tcustUnit, cust, tcust].forEach(function (el) {

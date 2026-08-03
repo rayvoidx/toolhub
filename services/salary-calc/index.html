@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -181,6 +191,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <button type="button" class="salary-preset" data-salary="4000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">4,000만원</button>
         <button type="button" class="salary-preset" data-salary="5000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">5,000만원</button>
         <button type="button" class="salary-preset" data-salary="6000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">6,000만원</button>
+        <button type="button" class="salary-preset" data-salary="7000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">7,000만원</button>
+        <button type="button" class="salary-preset" data-salary="8000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">8,000만원</button>
+        <button type="button" class="salary-preset" data-salary="10000" aria-pressed="false" style="flex:0 0 auto;padding:8px 13px;border:1px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;">1억원</button>
       </div>
     </div>
 
@@ -202,7 +215,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <select id="non-taxable-preset">
         <option value="0">없음 — 전액 과세</option>
         <option value="100000" selected>10만원 — 일반적인 식대</option>
-        <option value="200000">20만원 — 식대 비과세 한도(최대)</option>
+        <option value="200000">20만원 — 식대 비과세 한도</option>
+        <option value="300000">30만원 — 식대 20만 + 자가운전보조금 10만</option>
+        <option value="400000">40만원 — 식대 20만 + 자가운전보조금 20만(한도)</option>
         <option value="custom">직접 입력</option>
       </select>
       <input type="number" id="non-taxable" value="100000" min="0" step="10000" inputmode="numeric"

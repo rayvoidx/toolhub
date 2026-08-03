@@ -275,6 +275,7 @@
     if (cost <= 0) return showError(pEmpty, pErr, pGrid, t("tool.err.cost", "Cost must be greater than 0."));
     if (cost > LIM.amount) cost = LIM.amount;
     if (mkInput < LIM.markupMin) return showError(pEmpty, pErr, pGrid, t("tool.err.markupRange", "Markup % can't be less than -100% (that would mean a negative price)."));
+    if (mkInput > LIM.markupMax) return showError(pEmpty, pErr, pGrid, t("tool.err.markupMax", "Markup % can't be higher than 100,000%. Enter a smaller value."));
 
     var r = markupFromCost(cost, mkInput);
     showGrid(pEmpty, pErr, pGrid);

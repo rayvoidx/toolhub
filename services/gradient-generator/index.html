@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -106,7 +106,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       "name": "How many color stops can a gradient have, and what happens at the edges?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "This tool supports 2 to 5 color stops, enough for the vast majority of real gradients while keeping the editor simple — CSS itself allows more, but extra stops rarely add visual value and make the control list unwieldy. Each stop's position can be set anywhere from 0% to 100%, and stops don't have to be added in order — the generated CSS always lists them by position so the gradient renders correctly. If two stops share the same position, you get a hard color edge instead of a smooth blend, which is a common trick for stripes."
+        "text": "This tool supports 2 to 8 color stops, enough for the vast majority of real gradients while keeping the editor simple — CSS itself allows more, but extra stops rarely add visual value and make the control list unwieldy. Each stop's position can be set anywhere from 0% to 100%, and stops don't have to be added in order — the generated CSS always lists them by position so the gradient renders correctly. If two stops share the same position, you get a hard color edge instead of a smooth blend, which is a common trick for stripes."
       }
     },
     {
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -251,7 +261,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="gg-stops" id="gg-stops"></div>
     <button type="button" class="btn gg-add" id="gg-add" data-i18n="tool.add">+ Add color stop</button>
-    <p class="gg-max-hint" id="gg-max-hint" hidden data-i18n="tool.stops.maxHint">Maximum of 5 color stops</p>
+    <p class="gg-max-hint" id="gg-max-hint" hidden data-i18n="tool.stops.maxHint">Maximum of 8 color stops</p>
 
     <div class="gg-output-wrap">
       <label for="gg-css" data-i18n="tool.css.label">Generated CSS</label>
@@ -355,7 +365,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </details>
     <details>
       <summary data-i18n="faq.q3">How many color stops can a gradient have, and what happens at the edges?</summary>
-      <p data-i18n="faq.a3">This tool supports 2 to 5 color stops, enough for the vast majority of real gradients while keeping the editor simple — CSS itself allows more, but extra stops rarely add visual value and make the control list unwieldy. Each stop's position can be set anywhere from 0% to 100%, and stops don't have to be added in order — the generated CSS always lists them by position so the gradient renders correctly. If two stops share the same position, you get a hard color edge instead of a smooth blend, which is a common trick for stripes.</p>
+      <p data-i18n="faq.a3">This tool supports 2 to 8 color stops, enough for the vast majority of real gradients while keeping the editor simple — CSS itself allows more, but extra stops rarely add visual value and make the control list unwieldy. Each stop's position can be set anywhere from 0% to 100%, and stops don't have to be added in order — the generated CSS always lists them by position so the gradient renders correctly. If two stops share the same position, you get a hard color edge instead of a smooth blend, which is a common trick for stripes.</p>
     </details>
     <details>
       <summary data-i18n="faq.q4">Why does the generated CSS include a background-color as well as background-image?</summary>

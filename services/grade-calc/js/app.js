@@ -180,13 +180,21 @@
   }
 
   // 표준 US 10점 스케일(+/- 3~4점 간격). 학교/강사마다 컷오프가 다르므로 FAQ 에서 참고용임을 안내.
-  var THRESHOLDS = [
-    [97, "A+"], [93, "A"], [90, "A-"], [87, "B+"], [83, "B"], [80, "B-"],
-    [77, "C+"], [73, "C"], [70, "C-"], [67, "D+"], [63, "D"], [60, "D-"]
-  ];
-  function letterGrade(avg) {
+  var SCALES = {
+    // 기본값(기존 동작 유지)
+    pm: [
+      [97, "A+"], [93, "A"], [90, "A-"], [87, "B+"], [83, "B"], [80, "B-"],
+      [77, "C+"], [73, "C"], [70, "C-"], [67, "D+"], [63, "D"], [60, "D-"]
+    ],
+    // +/- 없는 학교용
+    plain: [[90, "A"], [80, "B"], [70, "C"], [60, "D"]],
+    // 7점 스케일(많은 고교·간호 프로그램)
+    seven: [[93, "A"], [85, "B"], [77, "C"], [70, "D"]]
+  };
+  function letterGrade(avg, scale) {
     if (avg == null || !isFinite(avg)) return null;
-    for (var i = 0; i < THRESHOLDS.length; i++) if (avg >= THRESHOLDS[i][0]) return THRESHOLDS[i][1];
+    var th = SCALES[scale] || SCALES.pm;
+    for (var i = 0; i < th.length; i++) if (avg >= th[i][0]) return th[i][1];
     return "F";
   }
 
@@ -194,7 +202,7 @@
   if (typeof window !== "undefined") {
     window.__GRADE_TEST = {
       parseScoreField: parseScoreField, parseWeightField: parseWeightField,
-      computeGrade: computeGrade, letterGrade: letterGrade, round2: round2
+      computeGrade: computeGrade, letterGrade: letterGrade, round2: round2, SCALES: SCALES
     };
   }
 
@@ -213,6 +221,7 @@
   var copyBtn = document.getElementById("grade-copy");
   var clearBtn = document.getElementById("grade-clear");
   var statusEl = document.getElementById("grade-status");
+  var scaleEl = document.getElementById("grade-scale");
   if (!rowsEl || !resultEl) return;
 
   var LS_KEY = (cfg.slug || "grade-calc") + ":state";
@@ -302,7 +311,7 @@
       var rows = gatherRows().map(function (r) {
         return { name: r.name, score: r.scoreRaw, weight: r.weightRaw };
       });
-      localStorage.setItem(LS_KEY, JSON.stringify({ rows: rows }));
+      localStorage.setItem(LS_KEY, JSON.stringify({ rows: rows, scale: scaleEl ? scaleEl.value : "pm" }));
     } catch (e) { /* private mode */ }
   }
   function loadState() {
@@ -342,7 +351,7 @@
     }
 
     var avg = res.average;
-    var letter = letterGrade(avg);
+    var letter = letterGrade(avg, scaleEl ? scaleEl.value : "pm");
     var html = noticeHtml;
 
     html += '<div class="grade-heroLabel">' + escHtml(t("tool.res.avgLabel")) + '</div>';
@@ -393,6 +402,7 @@
   }
 
   /* ---- 이벤트 ---- */
+  if (scaleEl) scaleEl.addEventListener("change", onChange);
   if (addBtn) addBtn.addEventListener("click", function () { addRow({}); onChange(); });
   if (copyBtn) copyBtn.addEventListener("click", function () { copyText(lastSummary); });
   if (clearBtn) clearBtn.addEventListener("click", function () {
@@ -406,6 +416,7 @@
 
   /* ---- 초기화 ---- */
   var st = loadState();
+  if (st && st.scale && scaleEl && SCALES[st.scale]) scaleEl.value = st.scale;
   if (st && st.rows && st.rows.length) {
     for (var i = 0; i < st.rows.length; i++) addRow(st.rows[i]);
   } else {

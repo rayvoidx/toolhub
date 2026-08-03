@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var num = $("num"), figs = $("figs");
+  var num = $("num"), figs = $("figs"), tz = $("tz");
   var result = $("result"), errEl = $("err"), noteEl = $("r-note");
   if (!num || !figs) return;
 
@@ -100,7 +100,7 @@
 
   /* 규칙: 0이 아닌 숫자는 항상 유효, 유효숫자 사이에 낀 0도 유효, 앞자리 0은 절대 유효하지 않고,
      끝자리 0은 소수점이나 지수 표기가 있을 때만 유효하다. 지수 표기의 가수는 전부 유효로 본다. */
-  function analyze(raw) {
+  function analyze(raw, trailingSig) {
     var s = String(raw).replace(/[\s,_]/g, "");
     if (!s) return { err: "tool.err.empty" };
     if (!NUM_RE.test(s)) return { err: "tool.err.invalid" };
@@ -126,6 +126,8 @@
       last = first;
     } else if (hasDot || eAt >= 0) {
       last = idx[idx.length - 1];
+    } else if (trailingSig) {
+      last = idx[idx.length - 1];
     } else {
       for (i = idx.length - 1; i >= 0; i--) { if (mant.charAt(idx[i]) !== "0") { last = idx[i]; break; } }
       if (last !== idx[idx.length - 1]) ambiguous = true;
@@ -137,8 +139,11 @@
     }
     // 최상위 유효숫자를 1의 자리로 옮길 때 필요한 10의 거듭제곱
     var exp = (first < dotPos ? dotPos - first - 1 : dotPos - first) + expVal;
+    // 덧셈·뺄셈 규칙에서 쓰는 소수점 아래 자릿수 (지수 표기는 펼친 기준)
+    var frac = hasDot ? mant.length - dotPos - 1 : 0;
+    var dp = Math.max(0, frac - expVal);
     return { mant: mant, expStr: expStr, sig: sig, count: count, digits: digits,
-      ambiguous: ambiguous, zero: zero, exp: exp, value: v };
+      ambiguous: ambiguous, zero: zero, exp: exp, dp: dp, value: v };
   }
 
   /* toExponential 이 반올림을 맡고, 자릿수를 되돌려 고정소수 표기를 만든다.
@@ -187,7 +192,7 @@
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
 
   function calc() {
-    var a = analyze(num.value);
+    var a = analyze(num.value, !!(tz && tz.checked));
     if (a.err) return fail(a.err);
 
     var nRaw = String(figs.value).replace(/\s/g, "");
@@ -204,9 +209,11 @@
       var r = roundTo(a.value, n);
       $("r-rounded").textContent = r.fixed !== null ? r.fixed : r.mant + "e" + r.exp;
       renderSci($("r-sci"), r.mant, r.exp);
+      $("r-dp").textContent = String(Math.max(0, n - 1 - r.exp));
     } else {
       $("r-rounded").textContent = "—";
       renderSci($("r-sci"), a.zero ? "0" : mantOf(a.digits), a.zero ? 0 : a.exp);
+      $("r-dp").textContent = String(a.dp);
     }
 
     var noteKey = a.zero ? "tool.note.zero" : (a.ambiguous ? "tool.note.ambig" : "");
@@ -218,6 +225,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
+  if (tz) tz.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   [num, figs].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });

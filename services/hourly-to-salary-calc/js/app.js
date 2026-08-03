@@ -91,7 +91,7 @@
   // TOOLJS:START
   /* Hourly to Salary Calculator — 시급 <-> 연봉 양방향 환산.
      입력: 시급 또는 연봉(모드로 전환) + 주당 근무시간(기본 40) + 연간 근무 주 수(기본 52).
-     출력: 시급 · 주급 · 월급 · 연봉 4장. 통화는 표시용 선택(환율 변환 없음 — currency-agnostic).
+     출력: 시급 · 주급 · 격주급 · 반월급 · 월급 · 연봉 6장. 통화는 표시용 선택(환율 변환 없음 — currency-agnostic).
      상태: localStorage "<slug>:state" 만. 외부 API 없음, 모든 계산은 로컬. */
 
   var cfg = window.APP_CONFIG || {};
@@ -142,6 +142,8 @@
     return {
       hourly: round2(hourly),
       weekly: round2(weekly),
+      biweekly: round2(weekly * 2),
+      semimonthly: round2(annual / 24),
       monthly: round2(monthly),
       annual: round2(annual),
       hoursPerYear: round2(hoursPerYear)
@@ -297,6 +299,8 @@
     var r = computePay(mode, wage, salary, hoursR.value, weeksR.value);
     setCard("hourly", r.hourly, cur);
     setCard("weekly", r.weekly, cur);
+    setCard("biweekly", r.biweekly, cur);
+    setCard("semimonthly", r.semimonthly, cur);
     setCard("monthly", r.monthly, cur);
     setCard("annual", r.annual, cur);
 

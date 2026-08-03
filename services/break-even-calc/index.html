@@ -38,17 +38,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Break-Even Calculator — Units, Revenue & Margin in Seconds</title>
-<meta name="description" content="Enter fixed costs, price, and variable cost per unit for break-even units, revenue, contribution margin, and a price sensitivity table. Free, browser-only.">
-<meta name="keywords" content="break even calculator, break even point, break even analysis, contribution margin calculator, how many units to break even, 손익분기점 계산기">
+<title>Break-Even Point Calculator — Units &amp; Revenue</title>
+<meta name="description" content="Work out how many units you must sell to cover costs. Get break-even units, break-even revenue, contribution margin per unit and volume for a target profit.">
+<meta name="keywords" content="break even calculator, break even point calculator, contribution margin calculator, break even analysis, break even formula, units to break even">
 <link rel="canonical" href="https://tool-hub.me/break-even-calc/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Break-Even Calculator — Units, Revenue & Margin in Seconds">
-<meta property="og:description" content="Enter fixed costs, price, and variable cost per unit for break-even units, revenue, contribution margin, and a price sensitivity table. Free, browser-only.">
+<meta property="og:title" content="Break-Even Point Calculator — Units &amp; Revenue">
+<meta property="og:description" content="Work out how many units you must sell to cover costs. Get break-even units, break-even revenue, contribution margin per unit and volume for a target profit.">
 <meta property="og:url" content="https://tool-hub.me/break-even-calc/">
-<meta property="og:image" content="https://tool-hub.me/break-even-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/break-even-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#1d4ed8">
+<meta name="theme-color" content="#4f46e5">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
@@ -57,8 +57,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  "name": "Break-Even Calculator",
-  "description": "Enter fixed costs, price, and variable cost per unit for break-even units, revenue, contribution margin, and a price sensitivity table. Free, browser-only.",
+  "name": "Break-Even Point Calculator",
+  "description": "Work out how many units you must sell to cover costs. Get break-even units, break-even revenue, contribution margin per unit and volume for a target profit.",
   "url": "https://tool-hub.me/break-even-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-31",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -75,8 +75,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
-    { "@type": "ListItem", "position": 2, "name": "Break-Even Calculator", "item": "https://tool-hub.me/break-even-calc/" }
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Break-Even Point Calculator",
+      "item": "https://tool-hub.me/break-even-calc/"
+    }
   ]
 }
 </script>
@@ -87,60 +97,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the break-even point, and how is it calculated?",
+      "name": "What counts as a fixed cost and what is variable?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The break-even point is the number of units you must sell for total revenue to exactly equal total costs — the point where profit is zero. The formula is Break-even units = Fixed costs ÷ (Price per unit − Variable cost per unit); the denominator is called the contribution margin. For example, with $5,000 in fixed costs, a $25 price, and a $10 variable cost, the margin is $15 per unit, so you need 5,000 ÷ 15 ≈ 333.33 units — rounded up to 334, since you can't sell a third of a unit. Break-even revenue is Fixed costs ÷ contribution margin ratio (60% here) ≈ $8,333.33."
+        "text": "Fixed costs stay the same whether you sell one unit or a thousand: rent, insurance, salaried staff, software subscriptions, loan payments. Variable costs only appear when a sale happens — materials, packaging, card processing fees, piece-rate labour, outbound shipping. If the bill arrives whether or not you open the doors, it is fixed. Semi-variable items such as electricity are usually split: the standing charge into fixed, the usage-driven part into variable."
       }
     },
     {
       "@type": "Question",
-      "name": "What is contribution margin, and why does it matter?",
+      "name": "What does contribution margin mean?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Contribution margin is what's left from each unit's price after covering its variable cost — the amount that \"contributes\" toward paying off fixed costs and, once those are covered, toward profit. It's shown both per unit (price minus variable cost) and as a ratio (margin divided by price), which tells you what percentage of every dollar of revenue is available to cover overhead. A higher contribution margin means fewer units are needed to break even and each additional sale adds more to profit; a thin margin means volume has to be much higher before the business turns a profit."
+        "text": "Contribution margin is what one sale leaves behind after its own variable costs: price minus variable cost per unit. Every unit contributes that amount towards fixed costs, and once fixed costs are covered the same amount drops straight into profit. The ratio version — margin divided by price — tells you what share of each dollar of revenue is available for overhead and profit."
       }
     },
     {
       "@type": "Question",
-      "name": "What happens if my price is lower than my variable cost per unit?",
+      "name": "How do I lower my break-even point?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "If the price per unit is less than or equal to the variable cost per unit, the contribution margin is zero or negative — every unit you sell loses money before fixed costs are even considered, so there is no volume of sales that reaches break-even. This calculator detects that case and shows a clear warning instead of a misleading number. The fix isn't more volume; it's raising the price, cutting the variable cost per unit (materials, packaging, shipping, payment fees), or both, until price exceeds variable cost."
+        "text": "There are only three levers: raise the price, cut the variable cost per unit, or cut fixed costs. Price moves it fastest because it lifts margin without touching the cost base — with 12,000 fixed and 8.50 variable, going from 24 to 26 drops break-even from 775 units to 686. Cutting fixed costs moves it proportionally, so 10 percent off overhead is 10 percent off the volume. Discounting works in reverse and is brutal: a 10 percent price cut here pushes break-even up to 917 units."
       }
     },
     {
       "@type": "Question",
-      "name": "How do I calculate the units needed to hit a specific profit target, not just break even?",
+      "name": "Does this include taxes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Open the profit target field and enter the profit you want for the period; the calculator adds it to your fixed costs before dividing by the contribution margin: Units needed = (Fixed costs + Target profit) ÷ Contribution margin per unit. This is the same break-even formula with a profit cushion added to the costs side, which is why break-even is really just the special case of a target profit of zero. The tool also shows the revenue needed to reach that target so you can sanity-check it against realistic sales volume."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is my cost and pricing data sent to a server?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Every number you enter — fixed costs, price, variable cost, and profit target — is calculated entirely in your browser and only saved to your own device's local storage so your last entry is there next time. Nothing is uploaded, logged, or shared, so you can model real pricing and cost figures without exposing them. This tool is for educational, arithmetic purposes only and isn't financial, investment, or tax advice — always check your numbers against your actual accounting records."
+        "text": "No, this is a pre-tax operating calculation. Sales tax or VAT you collect is not your revenue, so enter prices net of it, and income tax applies only to profit earned above the break-even point. If your target profit is an after-tax figure, gross it up first: divide it by one minus your tax rate, so a 5,000 after-tax goal at a 25 percent rate becomes 6,667 before tax."
       }
     }
   ]
 }
 </script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
-    <span>Break-Even Calculator</span>
+    <span>Break-Even Point Calculator</span>
   </a>
   <nav class="header-actions">
     <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
@@ -152,177 +162,99 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <main>
   <section class="hero">
-    <h1>Break-Even Calculator</h1>
-    <p class="lede" data-i18n="hero.lede">How many units do you need to sell to stop losing money? Enter fixed costs, price, and variable cost per unit to get your break-even point, revenue, and contribution margin instantly.</p>
+    <h1>Break-Even Point Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Costs stop winning at one exact number of units. Enter three figures and find it.</p>
   </section>
-
-  <!-- TOOL:START — builder agent replaces everything inside this section.
-       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
-         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
-         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
-         document 의 "i18n:change" 이벤트를 구독한다. -->
-  <section class="tool-card" id="tool" aria-label="Break-even calculator" data-i18n-aria-label="tool.aria">
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
     <style>
       #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
       #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
       #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
-      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
       #tool .rcard.hero-card { grid-column:1 / -1; }
       #tool .rcard.hero-card .rc-val { font-size:26px; }
       #tool .subtle { font-size:13px; color:var(--muted); }
-      #tool .warn-box { margin-top:16px; padding:14px 16px; border-radius:10px; font-size:15px; font-weight:600;
-        background:color-mix(in srgb, #dc2626 10%, var(--surface)); border:1px solid color-mix(in srgb, #dc2626 35%, var(--line)); color:#dc2626; }
-      #tool details.adv { margin-top:14px; border:1px solid var(--line); border-radius:8px; padding:0 12px; }
-      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:15px; }
-      #tool details.adv[open] { padding-bottom:12px; }
-      #tool table.sens { width:100%; border-collapse:collapse; margin-top:4px; font-size:13.5px; }
-      #tool table.sens th, #tool table.sens td { text-align:right; padding:6px 8px; border-bottom:1px solid var(--line); }
-      #tool table.sens th:first-child, #tool table.sens td:first-child { text-align:left; }
-      #tool table.sens th { color:var(--muted); font-weight:600; }
-      #tool table.sens tr.is-base td { font-weight:700; color:var(--accent-strong); }
-      #tool table.sens tr.is-never td { color:var(--muted); font-style:italic; }
-      #tool .target-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      #tool [hidden] { display:none; }
       @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
     </style>
 
     <div class="field-row">
       <div>
-        <label for="fixed-input" data-i18n="tool.fixed.label">Fixed costs (per period)</label>
-        <input type="text" id="fixed-input" inputmode="decimal" autocomplete="off"
-               placeholder="e.g. 5,000" data-i18n-placeholder="tool.fixed.ph">
+        <label for="price" data-i18n="tool.price.label">Selling price per unit</label>
+        <input type="text" id="price" inputmode="decimal" autocomplete="off" placeholder="24">
       </div>
       <div>
-        <label for="price-input" data-i18n="tool.price.label">Price per unit</label>
-        <input type="text" id="price-input" inputmode="decimal" autocomplete="off"
-               placeholder="e.g. 25" data-i18n-placeholder="tool.price.ph">
+        <label for="vcost" data-i18n="tool.vcost.label">Variable cost per unit</label>
+        <input type="text" id="vcost" inputmode="decimal" autocomplete="off" placeholder="8.50">
       </div>
     </div>
+
     <div class="field-row">
       <div>
-        <label for="variable-input" data-i18n="tool.variable.label">Variable cost per unit</label>
-        <input type="text" id="variable-input" inputmode="decimal" autocomplete="off"
-               placeholder="e.g. 10" data-i18n-placeholder="tool.variable.ph">
+        <label for="fixed" data-i18n="tool.fixed.label">Fixed costs per period</label>
+        <input type="text" id="fixed" inputmode="decimal" autocomplete="off" placeholder="12000">
       </div>
       <div>
-        <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
-        <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+        <label for="target" data-i18n="tool.target.label">Target profit (optional)</label>
+        <input type="text" id="target" inputmode="decimal" autocomplete="off" placeholder="5000">
       </div>
     </div>
 
-    <details class="adv" id="target-wrap">
-      <summary data-i18n="tool.details.summary">Profit target (optional)</summary>
-      <label for="target-input" data-i18n="tool.target.label">Target profit (per period)</label>
-      <input type="text" id="target-input" inputmode="decimal" autocomplete="off"
-             placeholder="e.g. 2,000" data-i18n-placeholder="tool.target.ph">
-    </details>
+    <div>
+      <label for="sales" data-i18n="tool.sales.label">Current unit sales per period (optional)</label>
+      <input type="text" id="sales" inputmode="decimal" autocomplete="off" placeholder="1200">
+    </div>
 
-    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate break-even</button>
 
-    <div class="result" id="result-box" hidden>
-      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
-      <div id="result-body" hidden>
-        <div class="result-cards">
-          <div class="rcard hero-card"><div class="rc-label" data-i18n="tool.result.units">Break-even units</div><div class="rc-val" id="r-units"></div></div>
-          <div class="rcard"><div class="rc-label" data-i18n="tool.result.revenue">Break-even revenue</div><div class="rc-val" id="r-revenue"></div></div>
-          <div class="rcard"><div class="rc-label" data-i18n="tool.result.margin">Contribution margin per unit</div><div class="rc-val" id="r-margin"></div></div>
-          <div class="rcard"><div class="rc-label" data-i18n="tool.result.marginRatio">Contribution margin ratio</div><div class="rc-val" id="r-margin-ratio"></div></div>
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.units">Break-even units</div>
+          <div class="rc-val" id="r-units">—</div>
         </div>
-        <p class="subtle" id="r-units-sub" style="margin:10px 0 0;"></p>
-        <p class="subtle" id="r-zero-fixed" style="margin:6px 0 0;font-weight:600;" hidden data-i18n="tool.result.zeroFixed">Fixed costs are 0, so you break even immediately — every unit sold at this margin is pure profit.</p>
-
-        <div id="target-result" hidden style="margin-top:16px;padding-top:14px;border-top:1px solid var(--line);">
-          <p class="subtle" id="r-target-heading" style="margin:0 0 8px;font-weight:700;color:var(--ink);"></p>
-          <div class="target-cards">
-            <div class="rcard"><div class="rc-label" data-i18n="tool.target.units">Units needed</div><div class="rc-val" id="r-target-units"></div></div>
-            <div class="rcard"><div class="rc-label" data-i18n="tool.target.revenue">Revenue needed</div><div class="rc-val" id="r-target-revenue"></div></div>
-          </div>
-        </div>
-
-        <details class="adv" id="sens-wrap" style="margin-top:16px;">
-          <summary data-i18n="tool.sens.summary">Sensitivity: how price changes shift the break-even point</summary>
-          <table class="sens">
-            <thead><tr>
-              <th data-i18n="tool.sens.change">Price change</th>
-              <th data-i18n="tool.sens.price">Price</th>
-              <th data-i18n="tool.sens.margin">Margin/unit</th>
-              <th data-i18n="tool.sens.units">Break-even units</th>
-              <th data-i18n="tool.sens.revenue">Break-even revenue</th>
-            </tr></thead>
-            <tbody id="sens-body"></tbody>
-          </table>
-        </details>
-
-        <p class="subtle" id="r-clipped" style="margin:12px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
-        <p class="subtle" style="margin:12px 0 0;font-weight:600;" data-i18n="tool.note.disclaimer">This is an educational, arithmetic calculation, not financial, investment, or tax advice.</p>
-        <p class="subtle" style="margin:4px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.revenue">Break-even revenue</div><div class="rc-val" id="r-revenue">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cm">Contribution margin per unit</div><div class="rc-val" id="r-cm">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cmratio">Margin ratio</div><div class="rc-val" id="r-cmratio">—</div></div>
+        <div class="rcard" id="card-mos" hidden><div class="rc-label" data-i18n="tool.r.mos">Margin of safety</div><div class="rc-val" id="r-mos">—</div></div>
+        <div class="rcard" id="card-target" hidden><div class="rc-label" data-i18n="tool.r.target">Units for target profit</div><div class="rc-val" id="r-target">—</div></div>
       </div>
     </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.est" style="margin-top:12px;">Use one currency throughout, and set the target profit over the same period as the fixed costs.</p>
   </section>
   <!-- TOOL:END -->
 
-  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
   <section class="guide-content">
-    <style>
-      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
-      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
-      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
-      .guide-content p{margin:0 0 12px;color:var(--ink)}
-      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
-      .guide-content li{margin:4px 0}
-      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
-      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
-      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
-      .guide-content th{color:var(--muted);font-weight:650}
-    </style>
+    <h2>What the break-even point actually tells you</h2>
+    <p>Break-even is the sales volume at which total revenue exactly equals total cost. Below it you are funding the business out of savings or credit; above it every additional sale adds real profit. The arithmetic is short — break-even units = fixed costs / (price - variable cost per unit) — but the discipline it forces is not. To use it you have to decide, line by line, which of your costs follow sales and which arrive regardless.</p>
+    <p>That denominator, price minus variable cost, is the contribution margin. It is the single most useful number in small-business accounting: it tells you what each sale contributes towards keeping the lights on, and after the lights are paid for, what each sale is worth to you.</p>
 
-    <h2>Why the break-even point is the first number a new price needs</h2>
-    <p>Every price, cost, or fixed-expense decision eventually reduces to one question: how many units do we have to sell before this stops costing us money? A break-even calculator answers that directly instead of leaving it buried in a spreadsheet. Enter your fixed costs for the period, the price you charge per unit, and the variable cost of producing or delivering one unit, and the tool returns the break-even point in both units and revenue, the contribution margin that drives the whole calculation, and — if you have one — the extra volume needed to hit a specific profit target.</p>
+    <h3>Worked example: a small coffee roastery</h3>
+    <p>You roast and sell 12 oz bags of single-origin coffee. Green beans, bags, labels, shipping and card fees come to 8.50 a bag. Rent on the roasting space, the roaster lease, insurance, your salaried assistant and software add up to 12,000 a month. You sell each bag for 24.</p>
+    <p>Contribution margin is 24 - 8.50 = 15.50 a bag, a margin ratio of 64.6 percent. Break-even is 12,000 / 15.50 = 774.2, which rounds up to 775 bags a month — about 26 bags a day, and roughly 18,600 in monthly revenue. Under 775 bags you are losing money no matter how busy the roastery feels.</p>
 
-    <h2>How the numbers are calculated</h2>
-    <p>Everything here comes from one core relationship:</p>
-    <ul>
-      <li><strong>Contribution margin per unit</strong> = Price per unit &minus; Variable cost per unit</li>
-      <li><strong>Contribution margin ratio</strong> = Contribution margin &divide; Price per unit</li>
-      <li><strong>Break-even units</strong> = Fixed costs &divide; Contribution margin per unit</li>
-      <li><strong>Break-even revenue</strong> = Break-even units &times; Price per unit</li>
-      <li><strong>Units for a profit target</strong> = (Fixed costs + Target profit) &divide; Contribution margin per unit</li>
-    </ul>
-    <p>Because you can't sell a fraction of a physical unit, the headline "break-even units" figure is rounded up to the next whole unit — the exact (fractional) figure is shown alongside it, since it's still useful for planning production runs or batch sizes.</p>
+    <h3>Adding a profit target</h3>
+    <p>Break-even keeps you alive; it does not pay you. Say you want 5,000 of monthly profit. Add it to fixed costs: (12,000 + 5,000) / 15.50 = 1,096.8, so 1,097 bags. That is 322 more bags than break-even, about 11 extra a day. Framed that way, a profit goal becomes a daily operational target rather than an abstraction — and if 11 extra bags a day looks impossible with your current foot traffic, you have learned something before you signed the lease renewal.</p>
 
-    <div class="example">
-      <p><strong>Example 1 — a small product line.</strong> Fixed costs $5,000/month, price $25, variable cost $10. Contribution margin = $15 per unit (a 60% margin ratio). Break-even units = 5,000 &divide; 15 = 333.33, rounded up to <strong>334 units</strong> since partial units can't be sold. Break-even revenue = fixed costs &divide; margin ratio = 5,000 &divide; 60% = <strong>$8,333.33</strong>.</p>
-    </div>
-    <div class="example">
-      <p><strong>Example 2 — adding a profit target.</strong> Same numbers as above, but you want $3,000 profit for the month. Units needed = (5,000 + 3,000) &divide; 15 = 533.33, rounded up to <strong>534 units</strong>, requiring about <strong>$13,333.33</strong> in revenue — $5,000 more than plain break-even, which matches the $3,000 target divided by the 60% margin ratio exactly.</p>
-    </div>
-    <div class="example">
-      <p><strong>Example 3 — a price that can never break even.</strong> Price $8, variable cost $9. Contribution margin is &minus;$1: every unit sold loses a dollar before a cent of fixed cost is covered, so no sales volume, however large, reaches break-even. The calculator flags this immediately instead of returning a technically-correct but meaningless negative "units" figure.</p>
-    </div>
+    <h3>Margin of safety</h3>
+    <p>If you currently sell 1,200 bags a month, your margin of safety is (1,200 - 775) / 1,200 = 35 percent. Sales could fall by a third before you dipped into losses. Below about 20 percent the business is fragile — one lost wholesale account or one slow quarter puts you underwater. Margin of safety is the number to watch when deciding whether you can afford a new hire or a bigger space.</p>
 
-    <h2>Reading the price sensitivity table</h2>
-    <p>Price is usually the input a business has the most control over, and it's also the most sensitive one — because it moves both the numerator and denominator of the "units needed" question at once. Raising price grows the contribution margin per unit, which shrinks the number of units needed to break even; cutting price does the reverse, often sharply, since a small price cut can shrink an already-thin margin by a large percentage. The built-in sensitivity table recalculates the break-even point at five price points from &minus;10% to +10% around your entered price, holding variable cost and fixed costs constant, so you can see at a glance how much a discount or a price increase would move your required sales volume.</p>
+    <h3>A per-cup café example</h3>
+    <p>The same maths works on any unit. A café selling a 4.75 latte with 1.35 of milk, beans, cup and card fee has a 3.40 contribution margin. Against 9,000 of monthly fixed costs, break-even is 2,648 cups a month: about 88 a day open every day, or 102 a day if you close on Sundays. Note how much thinner the margin ratio is here — 72 percent looks healthy, but the low absolute margin per cup means volume has to be high.</p>
 
-    <h2>Contribution margin vs. gross margin vs. net margin</h2>
-    <table>
-      <thead><tr><th>Metric</th><th>What it subtracts from price/revenue</th><th>What it's used for</th></tr></thead>
-      <tbody>
-        <tr><td>Contribution margin</td><td>Variable costs only</td><td>Break-even and target-profit volume</td></tr>
-        <tr><td>Gross margin</td><td>Cost of goods sold (variable + some fixed production cost)</td><td>Production and pricing efficiency</td></tr>
-        <tr><td>Net margin</td><td>All costs, including overhead, interest, and tax</td><td>Overall profitability of the business</td></tr>
-      </tbody>
-    </table>
-    <p>Break-even analysis specifically needs the contribution margin, not gross or net margin, because it's built on separating costs into fixed (don't change with volume, like rent or salaries) and variable (change with each unit sold, like materials or a per-order shipping fee) rather than by accounting category.</p>
+    <h2>Using it for pricing decisions</h2>
+    <p>Break-even analysis is at its most useful when someone asks for a discount. Take 10 percent off the 24 bag and the price is 21.60, but the margin falls from 15.50 to 13.10 — a 15 percent cut in contribution. To end the month with the same total contribution you would need 15.5 / 13.1 = 18 percent more volume. Discounts almost never generate that, which is why price cuts are the fastest way to move a break-even point in the wrong direction.</p>
+    <p>The reverse holds too. A modest 8 percent price rise on the same product takes the margin to 17.42 and drops break-even to 689 bags, buying you an 86-bag cushion without touching a single cost line. Run both scenarios before you negotiate.</p>
 
-    <h2>Limitations worth knowing before you rely on the number</h2>
-    <ul>
-      <li><strong>Costs are treated as perfectly linear.</strong> In reality, large volume changes can shift fixed costs in steps (a second shift, more warehouse space) or change variable cost per unit (bulk discounts, rush-shipping surcharges) — the calculator assumes today's cost structure holds across the range you're testing.</li>
-      <li><strong>One product at a time.</strong> The math here is per product or per SKU; a business selling several products needs either a blended average contribution margin or a separate break-even run for each product line.</li>
-      <li><strong>Demand isn't part of the model.</strong> Break-even tells you the volume required to stop losing money — it says nothing about whether the market will actually buy that many units at that price.</li>
-      <li><strong>It's a planning tool, not accounting output.</strong> Treat the result as a planning estimate rather than a substitute for a full costing exercise done with an accountant.</li>
-    </ul>
+    <h2>Where the model breaks down</h2>
+    <p>Fixed costs are only fixed within a range. Sell 3,000 bags a month and you need a second roaster, another member of staff and more space — the fixed-cost line steps up and the break-even point jumps with it. Model each capacity band separately rather than extrapolating one line forever.</p>
+    <p>Multi-product businesses need a weighted approach. Either run this calculator on a representative average unit, or work in revenue terms: break-even revenue = fixed costs / contribution margin ratio, using your blended ratio across the product mix. The blended answer only stays valid while the mix stays roughly the same, so revisit it whenever a product takes off.</p>
+    <p>Finally, break-even is a profit concept, not a cash one. Inventory bought in advance, customers paying on 60-day terms and loan principal repayments all consume cash without appearing here. A business can pass its break-even point on paper and still run out of money, so pair this with a simple cash-flow forecast before making big commitments.</p>
   </section>
-  <!-- CONTENT:END -->
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
@@ -332,28 +264,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="faq" id="faq">
     <h2 data-i18n="faq.heading">Frequently asked questions</h2>
-    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
-         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
-    <details>
-      <summary data-i18n="faq.q1">What is the break-even point, and how is it calculated?</summary>
-      <p data-i18n="faq.a1">The break-even point is the number of units you must sell for total revenue to exactly equal total costs — the point where profit is zero. The formula is Break-even units = Fixed costs ÷ (Price per unit − Variable cost per unit); the denominator is called the contribution margin. For example, with $5,000 in fixed costs, a $25 price, and a $10 variable cost, the margin is $15 per unit, so you need 5,000 ÷ 15 ≈ 333.33 units — rounded up to 334, since you can't sell a third of a unit. Break-even revenue is Fixed costs ÷ contribution margin ratio (60% here) ≈ $8,333.33.</p>
-    </details>
-    <details>
-      <summary data-i18n="faq.q2">What is contribution margin, and why does it matter?</summary>
-      <p data-i18n="faq.a2">Contribution margin is what's left from each unit's price after covering its variable cost — the amount that "contributes" toward paying off fixed costs and, once those are covered, toward profit. It's shown both per unit (price minus variable cost) and as a ratio (margin divided by price), which tells you what percentage of every dollar of revenue is available to cover overhead. A higher contribution margin means fewer units are needed to break even and each additional sale adds more to profit; a thin margin means volume has to be much higher before the business turns a profit.</p>
-    </details>
-    <details>
-      <summary data-i18n="faq.q3">What happens if my price is lower than my variable cost per unit?</summary>
-      <p data-i18n="faq.a3">If the price per unit is less than or equal to the variable cost per unit, the contribution margin is zero or negative — every unit you sell loses money before fixed costs are even considered, so there is no volume of sales that reaches break-even. This calculator detects that case and shows a clear warning instead of a misleading number. The fix isn't more volume; it's raising the price, cutting the variable cost per unit (materials, packaging, shipping, payment fees), or both, until price exceeds variable cost.</p>
-    </details>
-    <details>
-      <summary data-i18n="faq.q4">How do I calculate the units needed to hit a specific profit target, not just break even?</summary>
-      <p data-i18n="faq.a4">Open the profit target field and enter the profit you want for the period; the calculator adds it to your fixed costs before dividing by the contribution margin: Units needed = (Fixed costs + Target profit) ÷ Contribution margin per unit. This is the same break-even formula with a profit cushion added to the costs side, which is why break-even is really just the special case of a target profit of zero. The tool also shows the revenue needed to reach that target so you can sanity-check it against realistic sales volume.</p>
-    </details>
-    <details>
-      <summary data-i18n="faq.q5">Is my cost and pricing data sent to a server?</summary>
-      <p data-i18n="faq.a5">No. Every number you enter — fixed costs, price, variable cost, and profit target — is calculated entirely in your browser and only saved to your own device's local storage so your last entry is there next time. Nothing is uploaded, logged, or shared, so you can model real pricing and cost figures without exposing them. This tool is for educational, arithmetic purposes only and isn't financial, investment, or tax advice — always check your numbers against your actual accounting records.</p>
-    </details>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What counts as a fixed cost and what is variable?</summary><p data-i18n="faq.a1">Fixed costs stay the same whether you sell one unit or a thousand: rent, insurance, salaried staff, software subscriptions, loan payments. Variable costs only appear when a sale happens — materials, packaging, card processing fees, piece-rate labour, outbound shipping. If the bill arrives whether or not you open the doors, it is fixed. Semi-variable items such as electricity are usually split: the standing charge into fixed, the usage-driven part into variable.</p></details>
+    <details><summary data-i18n="faq.q2">What does contribution margin mean?</summary><p data-i18n="faq.a2">Contribution margin is what one sale leaves behind after its own variable costs: price minus variable cost per unit. Every unit contributes that amount towards fixed costs, and once fixed costs are covered the same amount drops straight into profit. The ratio version — margin divided by price — tells you what share of each dollar of revenue is available for overhead and profit.</p></details>
+    <details><summary data-i18n="faq.q3">How do I lower my break-even point?</summary><p data-i18n="faq.a3">There are only three levers: raise the price, cut the variable cost per unit, or cut fixed costs. Price moves it fastest because it lifts margin without touching the cost base — with 12,000 fixed and 8.50 variable, going from 24 to 26 drops break-even from 775 units to 686. Cutting fixed costs moves it proportionally, so 10 percent off overhead is 10 percent off the volume. Discounting works in reverse and is brutal: a 10 percent price cut here pushes break-even up to 917 units.</p></details>
+    <details><summary data-i18n="faq.q4">Does this include taxes?</summary><p data-i18n="faq.a4">No, this is a pre-tax operating calculation. Sales tax or VAT you collect is not your revenue, so enter prices net of it, and income tax applies only to profit earned above the break-even point. If your target profit is an after-tax figure, gross it up first: divide it by one minus your tax rate, so a 5,000 after-tax goal at a 25 percent rate becomes 6,667 before tax.</p></details>
     <!-- FAQ:END -->
   </section>
 </main>

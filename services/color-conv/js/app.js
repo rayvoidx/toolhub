@@ -99,9 +99,12 @@
   function parseColor(raw) {
     var s = String(raw).trim().toLowerCase();
     if (!s) return null;
-    var m = s.match(/^#?([0-9a-f]{3}|[0-9a-f]{6})$/);
+    // 3/4/6/8자리 hex — 알파(4·8자리)는 대비비 계산이 불가능하므로 버린다
+    var m = s.match(/^#?([0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/);
     if (m) {
       var h = m[1];
+      if (h.length === 4) h = h.slice(0, 3);
+      if (h.length === 8) h = h.slice(0, 6);
       if (h.length === 3) h = h[0] + h[0] + h[1] + h[1] + h[2] + h[2];
       return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
     }
@@ -112,6 +115,16 @@
     }
     m = s.match(/^hsla?\(\s*([0-9.]+)\s*(?:deg)?[,\s]+([0-9.]+)%?[,\s]+([0-9.]+)%?/);
     if (m) return hslToRgb(parseFloat(m[1]), parseFloat(m[2]), parseFloat(m[3]));
+    // CSS 색 이름(tomato, rebeccapurple…) — 브라우저가 inline style 을 rgb() 로 정규화해준다
+    if (/^[a-z]+$/.test(s)) {
+      var probe = document.createElement("span");
+      probe.style.color = s;
+      var norm = probe.style.color;
+      if (norm) {
+        var n = norm.match(/(\d+)[,\s]+(\d+)[,\s]+(\d+)/);
+        if (n) return [+n[1], +n[2], +n[3]];
+      }
+    }
     return null;
   }
 

@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -191,7 +201,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <button type="button" class="grp-btn" data-indent="2" aria-pressed="true" data-i18n="tool.indent2" style="background:var(--accent);color:#fff;font-weight:700;">2 spaces</button>
           <button type="button" class="grp-btn" data-indent="4" aria-pressed="false" data-i18n="tool.indent4">4 spaces</button>
           <button type="button" class="grp-btn" data-indent="tab" aria-pressed="false" data-i18n="tool.indentTab">Tab</button>
+          <button type="button" class="grp-btn" data-indent="custom" aria-pressed="false" data-i18n="tool.indentCustom">Custom</button>
         </div>
+        <input type="number" id="sf-indent-custom" min="1" max="8" step="1" value="3" hidden
+          aria-label="Custom indent width in spaces" data-i18n-aria-label="tool.indentCustomLabel"
+          style="width:4.2rem;padding:.4rem .5rem;font-size:.85rem;border:1px solid var(--line);border-radius:.6rem;background:var(--bg);color:var(--ink);">
       </div>
 
       <button type="button" id="sf-clear" data-i18n="tool.clear"
@@ -213,6 +227,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
           <input type="checkbox" id="sf-remember" checked style="width:auto;margin:0;">
           <span data-i18n="tool.remember">Save my SQL in this browser</span>
+        </label>
+        <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+          <input type="checkbox" id="sf-keep-comments" style="width:auto;margin:0;">
+          <span data-i18n="tool.keepComments">Keep comments when minifying</span>
         </label>
       </div>
     </details>

@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -153,7 +163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
   <section class="hero">
     <h1>Pressure Converter</h1>
-    <p class="lede" data-i18n="hero.lede">Type a number once — see it in all 8 pressure units instantly.</p>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in all 10 pressure units instantly.</p>
   </section>
 
   <!-- TOOL:START — builder agent replaces everything inside this section.
@@ -211,6 +221,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="atm" data-i18n="tool.unit.atm">Standard atmosphere (atm)</option>
           <option value="mmhg" data-i18n="tool.unit.mmhg">Millimeter of mercury (mmHg)</option>
           <option value="inhg" data-i18n="tool.unit.inhg">Inch of mercury (inHg)</option>
+          <option value="hpa" data-i18n="tool.unit.hpa">Hectopascal / millibar (hPa, mbar)</option>
+          <option value="kgfcm2" data-i18n="tool.unit.kgfcm2">Kilogram-force per square centimeter (kgf/cm²)</option>
+          <option value="inh2o" data-i18n="tool.unit.inh2o">Inch of water column (inH2O)</option>
+          <option value="cmh2o" data-i18n="tool.unit.cmh2o">Centimeter of water column (cmH2O)</option>
         </select>
       </div>
       <button type="button" class="pc-swap" id="pc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
@@ -225,6 +239,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="atm" data-i18n="tool.unit.atm">Standard atmosphere (atm)</option>
           <option value="mmhg" data-i18n="tool.unit.mmhg">Millimeter of mercury (mmHg)</option>
           <option value="inhg" data-i18n="tool.unit.inhg">Inch of mercury (inHg)</option>
+          <option value="hpa" data-i18n="tool.unit.hpa">Hectopascal / millibar (hPa, mbar)</option>
+          <option value="kgfcm2" data-i18n="tool.unit.kgfcm2">Kilogram-force per square centimeter (kgf/cm²)</option>
+          <option value="inh2o" data-i18n="tool.unit.inh2o">Inch of water column (inH2O)</option>
+          <option value="cmh2o" data-i18n="tool.unit.cmh2o">Centimeter of water column (cmH2O)</option>
         </select>
       </div>
     </div>
@@ -255,6 +273,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <tr data-unit="atm"><td data-i18n="tool.unit.atm">Standard atmosphere (atm)</td><td class="pc-val" id="cell-atm">—</td></tr>
           <tr data-unit="mmhg"><td data-i18n="tool.unit.mmhg">Millimeter of mercury (mmHg)</td><td class="pc-val" id="cell-mmhg">—</td></tr>
           <tr data-unit="inhg"><td data-i18n="tool.unit.inhg">Inch of mercury (inHg)</td><td class="pc-val" id="cell-inhg">—</td></tr>
+          <tr data-unit="hpa"><td data-i18n="tool.unit.hpa">Hectopascal / millibar (hPa, mbar)</td><td class="pc-val" id="cell-hpa">—</td></tr>
+          <tr data-unit="kgfcm2"><td data-i18n="tool.unit.kgfcm2">Kilogram-force per square centimeter (kgf/cm²)</td><td class="pc-val" id="cell-kgfcm2">—</td></tr>
+          <tr data-unit="inh2o"><td data-i18n="tool.unit.inh2o">Inch of water column (inH2O)</td><td class="pc-val" id="cell-inh2o">—</td></tr>
+          <tr data-unit="cmh2o"><td data-i18n="tool.unit.cmh2o">Centimeter of water column (cmH2O)</td><td class="pc-val" id="cell-cmh2o">—</td></tr>
         </tbody>
       </table>
     </div>

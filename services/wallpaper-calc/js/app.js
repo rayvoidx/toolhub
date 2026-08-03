@@ -91,7 +91,8 @@
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), width = $("width"), height = $("height");
   var rollw = $("rollw"), rolll = $("rolll"), repeatEl = $("repeat");
-  var doors = $("doors"), windows = $("windows");
+  var doors = $("doors"), windows = $("windows"), priceEl = $("price");
+  var rollwC = $("rollw-custom"), rolllC = $("rolll-custom");
   var result = $("result"), errEl = $("err"), warnEl = $("warn");
   if (!unit || !width || !height || !rollw || !rolll) return;
 
@@ -122,11 +123,18 @@
 
     var repIn = num(repeatEl, 0) * (isM ? 0.3937008 : 1);
     var doorsN = num(doors, 0), winsN = num(windows, 0);
-    if (repIn < 0 || repIn > 240 || doorsN < 0 || winsN < 0) return fail("tool.err.range");
+    if (repIn < 0 || repIn > 240 || doorsN < 0 || winsN < 0 || num(priceEl, 0) < 0) return fail("tool.err.range");
     doorsN = Math.floor(doorsN); winsN = Math.floor(winsN);
 
-    var rollW = parseFloat(rollw.value);
-    var rollL = parseFloat(rolll.value) * 12;
+    // 프리셋 밖 규격(필앤스틱 등)은 직접 입력 — 폭은 in/cm, 길이는 ft/m 단위로 받는다.
+    var rollW = rollw.value === "custom"
+      ? num(rollwC, NaN) * (isM ? 0.3937008 : 1)
+      : parseFloat(rollw.value);
+    var rollL = rolll.value === "custom"
+      ? num(rolllC, NaN) * toIn
+      : parseFloat(rolll.value) * 12;
+    if (!isFinite(rollW) || !isFinite(rollL)) return fail("tool.err.empty");
+    if (rollW < 4 || rollW > 120 || rollL < 12 || rollL > 2400) return fail("tool.err.range");
 
     // 리피트가 있으면 한 폭 길이를 다음 리피트 배수까지 올림한다 — 이게 무늬 손실의 정체다.
     var dropH = hIn + TRIM;
@@ -153,6 +161,19 @@
     $("r-perroll").textContent = String(perRoll);
     $("r-waste").textContent = wastePct + "% · " + wasteLen;
 
+    // 롤당 가격을 넣었을 때만 총액을 보여준다 — 통화는 사용자가 넣은 값 그대로.
+    var price = num(priceEl, 0);
+    var costCard = $("cost-card");
+    if (costCard) {
+      if (isFinite(price) && price > 0) {
+        costCard.hidden = false;
+        $("r-cost").textContent = (rolls * price).toLocaleString(undefined, { maximumFractionDigits: 2 });
+      } else {
+        costCard.hidden = true;
+        $("r-cost").textContent = "—";
+      }
+    }
+
     if (repIn > 36) { warnEl.hidden = false; warnEl.textContent = t("tool.warn.repeat"); }
     else { warnEl.hidden = true; warnEl.textContent = ""; }
 
@@ -161,13 +182,23 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [width, height, repeatEl, doors, windows].forEach(function (el) {
+  [width, height, repeatEl, doors, windows, priceEl].forEach(function (el) {
     if (!el) return;
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
+  function syncCustom() {
+    if (rollwC) rollwC.hidden = rollw.value !== "custom";
+    if (rolllC) rolllC.hidden = rolll.value !== "custom";
+  }
+  syncCustom();
   [unit, rollw, rolll].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+    el.addEventListener("change", function () { syncCustom(); if (!result.hidden || !errEl.hidden) calc(); });
+  });
+  [rollwC, rolllC].forEach(function (el) {
+    if (!el) return;
+    el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+    el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END

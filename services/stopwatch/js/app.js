@@ -100,6 +100,7 @@
   var LABEL_START = "Start", LABEL_RESUME = "Resume", LABEL_PAUSE = "Pause";
   var LABEL_LAP = "Lap", LABEL_RESET = "Reset";
   var LABEL_COPY = "Copy results", LABEL_COPIED = "Copied!";
+  var LABEL_AVG = "Average lap";
   var MSG_MAX = "Lap limit reached (99). Reset to record more laps.";
   var MSG_NO_STORAGE = "Times can't be saved (private browsing) — they'll last for this session only.";
   var MSG_COPY_FAIL = "Couldn't copy automatically — the results are shown below; select and copy them manually.";
@@ -143,11 +144,19 @@
     }
     return { min: minI, max: maxI };
   }
+  // 평균 구간 = 마지막 누적 / 랩 수 (랩 0개면 -1 = 표시 안 함)
+  function averageSplit(laps) {
+    if (!laps.length) return -1;
+    var last = laps[laps.length - 1];
+    if (!isFinite(last) || last < 0) return -1;
+    return last / laps.length;
+  }
   // node 검증용 노출 — 브라우저에는 module 이 없어 건너뛴다
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
       formatTime: formatTime, computeElapsed: computeElapsed,
-      computeSplits: computeSplits, extremeSplitIdx: extremeSplitIdx
+      computeSplits: computeSplits, extremeSplitIdx: extremeSplitIdx,
+      averageSplit: averageSplit
     };
   }
 
@@ -159,6 +168,7 @@
   var msgEl = $("sw-msg");
   var lapCountEl = $("sw-lap-count");
   var lapsEmpty = $("sw-laps-empty"), lapsTable = $("sw-laps-table"), lapsBody = $("sw-laps-body");
+  var lapAvgEl = $("sw-lap-avg");
   if (!display || !startPauseBtn || !lapResetBtn) return;
 
   /* ---- 상태 (running·accumulated·startEpochMs·laps 만 진실, 나머지는 파생) ---- */
@@ -272,6 +282,7 @@
       if (lapsTable) lapsTable.hidden = true;
       lapsBody.innerHTML = "";
       if (copyArea) { copyArea.hidden = true; copyArea.value = ""; }
+      if (lapAvgEl) { lapAvgEl.hidden = true; lapAvgEl.textContent = ""; }
       return;
     }
     if (lapsEmpty) lapsEmpty.hidden = true;
@@ -290,6 +301,13 @@
         "</tr>";
     }
     lapsBody.innerHTML = html;
+    if (lapAvgEl) {
+      var avg = averageSplit(laps);
+      if (n >= 2 && avg >= 0) {
+        lapAvgEl.textContent = tr("tool.avgLap", LABEL_AVG) + ": " + formatTime(avg);
+        lapAvgEl.hidden = false;
+      } else { lapAvgEl.hidden = true; lapAvgEl.textContent = ""; }
+    }
   }
 
   function renderAll() { renderDisplay(); updateButtons(); renderLaps(); }
@@ -415,6 +433,7 @@
   document.addEventListener("i18n:change", function () {
     renderNotices();
     updateButtons();
+    renderLaps();
     if (copyBtn && !copyBtn.hidden) copyBtn.textContent = tr("tool.copy", LABEL_COPY);
   });
 

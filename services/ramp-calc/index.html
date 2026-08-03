@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Wheelchair Ramp Calculator — ADA Slope &amp; Length">
 <meta property="og:description" content="Work out ramp length, slope ratio, degrees and landings from your total rise. ADA 1:12 public access plus steeper residential and loading limits.">
 <meta property="og:url" content="https://tool-hub.me/ramp-calc/">
-<meta property="og:image" content="https://tool-hub.me/ramp-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/ramp-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0369a1">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Wheelchair Ramp Calculator",
+      "item": "https://tool-hub.me/ramp-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Wheelchair Ramp Calculator",
-      "item": "https://tool-hub.me/ramp-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -190,8 +200,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <select id="app">
       <option value="ada" data-i18n="tool.app.ada">ADA public access — 1:12 maximum</option>
       <option value="res" data-i18n="tool.app.res">Residential, occupied — 1:8 maximum (assisted)</option>
+      <option value="res10" data-i18n="tool.app.res10">Residential, occupied — 1:10 (assisted)</option>
       <option value="unocc" data-i18n="tool.app.unocc">Unoccupied loading — 1:6 maximum</option>
+      <option value="uk15" data-i18n="tool.app.uk15">UK Part M / gentle public ramp — 1:15</option>
+      <option value="walk" data-i18n="tool.app.walk">Gentle walkway — 1:20 (no handrails required)</option>
+      <option value="custom" data-i18n="tool.app.custom">Custom slope — set your own ratio</option>
     </select>
+
+    <div id="custom-wrap" hidden>
+      <label for="custom-ratio" data-i18n="tool.custom.label">Custom ratio — 1 unit of rise per</label>
+      <input type="number" id="custom-ratio" inputmode="decimal" min="4" max="20" step="0.5" autocomplete="off" placeholder="14">
+    </div>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate ramp</button>
 

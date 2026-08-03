@@ -184,6 +184,16 @@
     if (body.length < 9) return "incomplete";
     return parseSymbolic(s) ? "valid" : "invalid";
   }
+  // 상태 → chmod 심볼릭 인자 ("u=rwx,g=rx,o=rx", 특수 비트는 s/s/t 로 붙는다)
+  function stateToSymbolicArg(state) {
+    function seg(prefix, p, special, ch) {
+      var v = (p.r ? "r" : "") + (p.w ? "w" : "") + (p.x ? "x" : "") + (special ? ch : "");
+      return prefix + "=" + v;
+    }
+    return seg("u", state.owner, state.special.setuid, "s") + "," +
+      seg("g", state.group, state.special.setgid, "s") + "," +
+      seg("o", state.other, state.special.sticky, "t");
+  }
   // 위험한 777(everyone rwx) 여부 — 특수 비트와 무관하게 owner/group/other가 전부 7일 때
   function isDangerous777(state) {
     return permToDigit(state.owner) === 7 && permToDigit(state.group) === 7 && permToDigit(state.other) === 7;
@@ -194,7 +204,7 @@
     module.exports = {
       digitToPerm: digitToPerm, permToDigit: permToDigit, defaultState: defaultState,
       stateToOctal: stateToOctal, parseOctal: parseOctal, classifyOctal: classifyOctal,
-      stateToSymbolic: stateToSymbolic, parseSymbolic: parseSymbolic, classifySymbolic: classifySymbolic,
+      stateToSymbolic: stateToSymbolic, stateToSymbolicArg: stateToSymbolicArg, parseSymbolic: parseSymbolic, classifySymbolic: classifySymbolic,
       isDangerous777: isDangerous777
     };
     return;
@@ -227,6 +237,7 @@
   var setuidEl = $("setuid"), setgidEl = $("setgid"), stickyEl = $("sticky");
   var targetEl = $("target-name"), recursiveEl = $("recursive");
   var commandEl = $("command-preview"), copyHintEl = $("command-copy-hint");
+  var symCommandEl = $("symbolic-command"), symCopyHintEl = $("symbolic-command-copy-hint");
   var warnEl = $("perm-warning");
   var presetsWrap = $("perm-presets");
   if (missingCb || !octalEl || !symbolicEl || !commandEl) return;
@@ -285,6 +296,7 @@
     var target = (targetEl && targetEl.value.trim()) || tr("tool.target.default", "example.txt");
     var flag = recursiveEl && recursiveEl.checked ? " -R" : "";
     commandEl.textContent = "chmod" + flag + " " + stateToOctal(state) + " " + target;
+    if (symCommandEl) symCommandEl.textContent = "chmod" + flag + " " + stateToSymbolicArg(state) + " " + target;
 
     if (warnEl) warnEl.hidden = !isDangerous777(state);
 
@@ -385,6 +397,20 @@
       }
     } catch (e) { if (legacyCopy(text)) done(); }
   });
+
+  if (symCommandEl) {
+    symCommandEl.addEventListener("click", function () {
+      var text = symCommandEl.textContent;
+      var done = function () { fmtCopied(symCopyHintEl, "tool.command"); };
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, function () { if (legacyCopy(text)) done(); });
+        } else if (legacyCopy(text)) {
+          done();
+        }
+      } catch (e) { if (legacyCopy(text)) done(); }
+    });
+  }
 
   // 언어 전환 시 동적 문구(명령 미리보기·에러·복사힌트) 재적용
   document.addEventListener("i18n:change", function () { render(); });

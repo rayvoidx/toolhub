@@ -3,8 +3,8 @@
    구조/컴포넌트 스타일은 아래 공통부이며 원칙적으로 수정하지 않는다.
    ============================================================ */
 :root {
-  --accent: #1d4ed8;
-  --accent-strong: #1741b6;
+  --accent: #4f46e5;
+  --accent-strong: #3b34ab;
   --bg: #f8fafc;
   --surface: #ffffff;
   --ink: #1f2937;
@@ -188,10 +188,3 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
 }
 .hint { color: var(--muted); font-size: 14px; margin-top: 8px; }
-
-/* ux-print (2026-08-02) — 인쇄 시 도구·결과만 남긴다 */
-@media print {
-  .site-header, .site-footer, .related, .ad-slot, .faq, .guide-content, #ux-share, #ux-example, .header-actions { display: none !important; }
-  body { background: #fff; }
-  .hero { padding: 8px 0; }
-}

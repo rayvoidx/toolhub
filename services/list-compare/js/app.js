@@ -121,13 +121,13 @@
      removeSpace 는 '홍 길동' vs '홍길동' 오판을 없애려 CJK 프리셋(KR/JP)에서 기본 ON
      (spec 결정 2026-07-18). 라틴권(EN/EU/TR)은 'Anna Lee' vs 'Ann Alee' 오탐 위험이 커 OFF. */
   var PRESETS = {
-    EN: { trim: 1, removeSpace: 0, caseless: 1, nfc: 1, nfkc: 0, accent: 0, turkish: 0, zeros: 0 },
-    KR: { trim: 1, removeSpace: 1, caseless: 1, nfc: 1, nfkc: 0, accent: 0, turkish: 0, zeros: 0 },
-    JP: { trim: 1, removeSpace: 1, caseless: 1, nfc: 1, nfkc: 1, accent: 0, turkish: 0, zeros: 0 },
-    EU: { trim: 1, removeSpace: 0, caseless: 1, nfc: 1, nfkc: 0, accent: 1, turkish: 0, zeros: 0 },
-    TR: { trim: 1, removeSpace: 0, caseless: 1, nfc: 1, nfkc: 0, accent: 0, turkish: 1, zeros: 0 }
+    EN: { trim: 1, removeSpace: 0, caseless: 1, nfc: 1, nfkc: 0, accent: 0, turkish: 0, zeros: 0, punct: 0 },
+    KR: { trim: 1, removeSpace: 1, caseless: 1, nfc: 1, nfkc: 0, accent: 0, turkish: 0, zeros: 0, punct: 0 },
+    JP: { trim: 1, removeSpace: 1, caseless: 1, nfc: 1, nfkc: 1, accent: 0, turkish: 0, zeros: 0, punct: 0 },
+    EU: { trim: 1, removeSpace: 0, caseless: 1, nfc: 1, nfkc: 0, accent: 1, turkish: 0, zeros: 0, punct: 0 },
+    TR: { trim: 1, removeSpace: 0, caseless: 1, nfc: 1, nfkc: 0, accent: 0, turkish: 1, zeros: 0, punct: 0 }
   };
-  var OPT_KEYS = ["trim", "removeSpace", "caseless", "nfc", "nfkc", "accent", "turkish", "zeros"];
+  var OPT_KEYS = ["trim", "removeSpace", "caseless", "nfc", "nfkc", "accent", "turkish", "zeros", "punct"];
   // 지원 14개 언어(+주요 무역 언어)에서 어떤 프리셋이 자연스러운가
   var LANG_PRESET = { ko: "KR", ja: "JP", zh: "JP", de: "EU", fr: "EU", es: "EU", pt: "EU", tr: "TR" };
 
@@ -145,6 +145,9 @@
       try { k = k.normalize("NFD").replace(/[\u0300-\u036f]/g, "").normalize("NFC"); }
       catch (e) { /* noop */ }
     }
+    // 2.5. 구두점/기호 제거 (기본 OFF): 'ABC-123' = 'ABC 123' = 'ABC123' — 주문번호·SKU·전화번호용.
+    //      공백은 건드리지 않고(아래 공백 단계가 처리) 문자·숫자만 남긴다.
+    if (o.punct) k = k.replace(/[-_.·,;:!?'"“”‘’`()\[\]{}<>\/\\|#*+~^@&%$€£¥₩–—]/g, "");
     // 3. 공백: trim+연속축약, 그 다음 '모든 공백 제거'(CJK). \s 는 U+3000(전각 스페이스)·NBSP 포함
     if (o.trim) k = k.replace(/^\s+|\s+$/g, "").replace(/\s+/g, " ");
     if (o.removeSpace) k = k.replace(/\s+/g, "");
@@ -352,7 +355,7 @@
   /* ---- 옵션 UI 연동 ---- */
   var OPT_EL = {
     trim: "lc-o-trim", removeSpace: "lc-o-space", caseless: "lc-o-case", nfc: "lc-o-nfc",
-    nfkc: "lc-o-nfkc", accent: "lc-o-accent", turkish: "lc-o-tr", zeros: "lc-o-zeros"
+    nfkc: "lc-o-nfkc", accent: "lc-o-accent", turkish: "lc-o-tr", zeros: "lc-o-zeros", punct: "lc-o-punct"
   };
   function readOpts() {
     var o = {};

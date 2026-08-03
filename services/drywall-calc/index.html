@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Drywall Calculator — Sheets, Compound, Tape, Screws">
 <meta property="og:description" content="Work out how much drywall you need: sheet count for 4x8, 4x10 or 4x12 sheetrock plus joint compound, tape and screws, with 10% waste already included.">
 <meta property="og:url" content="https://tool-hub.me/drywall-calc/">
-<meta property="og:image" content="https://tool-hub.me/drywall-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/drywall-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#6b7280">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Drywall Calculator",
+      "item": "https://tool-hub.me/drywall-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Drywall Calculator",
-      "item": "https://tool-hub.me/drywall-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -173,7 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       @media(max-width:480px){ #tool .field-row, #tool .field-row.three { grid-template-columns:1fr; } }
     </style>
 
-    <div class="field-row">
+    <div class="field-row three">
       <div>
         <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
         <select id="unit">
@@ -187,6 +197,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="32" selected data-i18n="tool.sheet.48">4 x 8 ft — 32 sq ft (standard)</option>
           <option value="40" data-i18n="tool.sheet.410">4 x 10 ft — 40 sq ft</option>
           <option value="48" data-i18n="tool.sheet.412">4 x 12 ft — 48 sq ft</option>
+        </select>
+      </div>
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+        <select id="waste">
+          <option value="0">0%</option>
+          <option value="5">5%</option>
+          <option value="10" selected>10%</option>
+          <option value="15">15%</option>
+          <option value="20">20%</option>
         </select>
       </div>
     </div>
@@ -234,7 +254,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <p class="err" id="err" hidden></p>
-    <p class="subtle" data-i18n="tool.note.rates" style="margin-top:12px;">Rates used: 10% waste on sheets, 21 sq ft deducted per door and 15 sq ft per window, 1 gallon of ready-mixed compound per 100 sq ft, 0.4 ft of tape per sq ft (500 ft rolls) and 1 lb of screws per 300 sq ft.</p>
+    <p class="subtle" id="rates-note" data-i18n="tool.note.rates" style="margin-top:12px;">Rates used: 10% waste on sheets, 21 sq ft deducted per door and 15 sq ft per window, 1 gallon of ready-mixed compound per 100 sq ft, 0.4 ft of tape per sq ft (500 ft rolls) and 1 lb of screws per 300 sq ft.</p>
   </section>
   <!-- TOOL:END -->
 

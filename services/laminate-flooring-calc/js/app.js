@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), len = $("len"), wid = $("wid"), boxcov = $("boxcov");
-  var waste = $("waste"), pad = $("pad"), doors = $("doors"), price = $("price");
+  var waste = $("waste"), pad = $("pad"), doors = $("doors"), price = $("price"), roll = $("roll");
   var result = $("result"), errEl = $("err");
   if (!unit || !len || !wid || !boxcov || !waste) return;
 
@@ -117,6 +117,13 @@
     var p = pRaw === "" ? NaN : parseFloat(pRaw);
     if (pRaw !== "" && (!isFinite(p) || p < 0)) return fail("tool.err.price");
 
+    var rRaw = roll ? String(roll.value).replace(/,/g, "").trim() : "";
+    var rollSqft = ROLL_SQFT;
+    if (rRaw !== "") {
+      rollSqft = parseFloat(rRaw);
+      if (!isFinite(rollSqft) || rollSqft < 10 || rollSqft > 1000) return fail("tool.err.roll");
+    }
+
     // 박스 라벨은 어느 나라 제품이든 sq ft 로 통일해 입력받는다 — 미터 입력이면 면적만 환산.
     var area = unit.value === "m" ? l * w * SQFT_PER_SQM : l * w;
     var total = area * (1 + parseFloat(waste.value) / 100);
@@ -127,7 +134,7 @@
     $("r-area").textContent = fmt(area) + " " + sqft;
     $("r-total").textContent = fmt(total) + " " + sqft;
     // 언더레이는 재단 손실이 거의 없어 실면적 기준. 일체형 패드 제품이면 아예 불필요.
-    $("r-rolls").textContent = (pad && pad.checked) ? t("tool.r.rolls.none") : String(Math.ceil(area / ROLL_SQFT));
+    $("r-rolls").textContent = (pad && pad.checked) ? t("tool.r.rolls.none") : String(Math.ceil(area / rollSqft));
     $("r-strips").textContent = String(Math.round(d));
     $("r-cost").textContent = isFinite(p) ? (boxes * p).toFixed(2) : "—";
 
@@ -136,8 +143,8 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, boxcov, doors, price].forEach(function (el) {
-    el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+  [len, wid, boxcov, doors, price, roll].forEach(function (el) {
+    if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   [unit, waste, pad].forEach(function (el) {
     if (el) el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });

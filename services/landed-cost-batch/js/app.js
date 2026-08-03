@@ -130,6 +130,8 @@
     KR: { cur: "KRW", basis: "CIF", tax: "kr", vat: 10,   name: "South Korea" },
     JP: { cur: "JPY", basis: "CIF", tax: "jp", vat: 10,   name: "Japan" },
     US: { cur: "USD", basis: "FOB", tax: "us", vat: 0,    name: "United States" },
+    // 영국은 브렉시트 이후 EU 밖이지만 세금 스택은 동일(CIF 과세가격 + 관세 → VAT 20%)
+    GB: { cur: "GBP", basis: "CIF", tax: "eu", vat: 20,   name: "United Kingdom" },
     AT: { cur: "EUR", basis: "CIF", tax: "eu", vat: 20,   name: "Austria" },
     BE: { cur: "EUR", basis: "CIF", tax: "eu", vat: 21,   name: "Belgium" },
     BG: { cur: "EUR", basis: "CIF", tax: "eu", vat: 20,   name: "Bulgaria" },

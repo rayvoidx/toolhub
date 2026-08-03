@@ -90,6 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var account = $("account"), risk = $("risk"), entry = $("entry"), stop = $("stop");
+  var riskCustom = $("risk-custom"), riskWrap = $("risk-custom-wrap"), frac = $("frac");
   var result = $("result"), errEl = $("err"), warnEl = $("warn-margin");
   if (!account || !risk || !entry || !stop) return;
 
@@ -115,14 +116,23 @@
     // 진입가 = 손절가면 주당 리스크가 0 — 나눗셈이 Infinity 가 되므로 계산 전에 막는다.
     if (e === s) return fail("tool.err.same");
 
-    var budget = acct * (parseFloat(risk.value) || 1) / 100;
+    var pct;
+    if (risk.value === "custom") {
+      pct = num(riskCustom);
+      // 0.01~100% 밖이면 리스크 예산이 무의미해진다 — 조용히 기본값으로 되돌리지 않고 안내한다.
+      if (!isFinite(pct) || pct < 0.01 || pct > 100) return fail("tool.err.risk");
+    } else {
+      pct = parseFloat(risk.value) || 1;
+    }
+    var budget = acct * pct / 100;
     var perShare = Math.abs(e - s);
-    // 부분 체결이 아닌 정수 주식 기준 — 리스크 한도를 넘지 않도록 항상 내림한다.
-    var shares = Math.floor(budget / perShare);
-    if (shares < 1) return fail("tool.err.budget");
+    // 리스크 한도를 넘지 않도록 항상 내림한다. 소수점 주식 허용 시 0.0001주 단위.
+    var step = (frac && frac.checked) ? 10000 : 1;
+    var shares = Math.floor(budget / perShare * step) / step;
+    if (shares <= 0) return fail("tool.err.budget");
 
     var value = shares * e;
-    $("r-shares").textContent = whole(shares);
+    $("r-shares").textContent = (step === 1) ? whole(shares) : shares.toLocaleString(undefined, { maximumFractionDigits: 4 });
     // 손절가가 진입가 위면 숏 — 수식은 절대값이라 같고, 방향만 라벨로 알린다.
     $("r-dir").textContent = t(s < e ? "tool.dir.long" : "tool.dir.short");
     $("r-risk").textContent = money(shares * perShare);
@@ -135,11 +145,16 @@
     result.hidden = false;
   }
 
+  risk.addEventListener("change", function () {
+    riskWrap.hidden = risk.value !== "custom";
+    if (!riskWrap.hidden) riskCustom.focus();
+  });
+
   $("calc-btn").addEventListener("click", calc);
-  [account, entry, stop].forEach(function (el) {
+  [account, entry, stop, riskCustom].forEach(function (el) {
     el.addEventListener("keydown", function (ev) { if (ev.key === "Enter") calc(); });
   });
-  [account, risk, entry, stop].forEach(function (el) {
+  [account, risk, entry, stop, riskCustom, frac].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

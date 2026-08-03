@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var ROWS = 5;
+  var ROWS = 8;
   var result = $("result"), errEl = $("err"), diffList = $("r-difflist");
   if (!$("s1") || !result || !diffList) return;
 
@@ -127,9 +127,14 @@
     if (got.err) return fail(got.err);
     var rows = got.rows, n = rows.length;
     var sorted = rows.slice().sort(function (a, b) { return a.d - b.d; });
-    // 20라운드 미만 축소표: 1~3개는 최저 -2.0, 4개는 최저 -1.0, 5개는 최저 그대로.
-    var adj = n <= 3 ? 2 : (n === 4 ? 1 : 0);
-    var idx = Math.round((sorted[0].d - adj) * 10) / 10;
+    // 20라운드 미만 축소표: 1~3개 최저-2.0, 4개 최저-1.0, 5개 최저,
+    // 6개 최저2개 평균-1.0, 7~8개 최저2개 평균.
+    var adj = n <= 3 ? 2 : (n === 4 || n === 6 ? 1 : 0);
+    var take = n <= 5 ? 1 : 2;
+    var base = 0, k;
+    for (k = 0; k < take; k++) base += sorted[k].d;
+    base = base / take;
+    var idx = Math.round((base - adj) * 10) / 10;
     if (idx > 54) idx = 54; // WHS 최대 핸디캡 인덱스
 
     $("r-index").textContent = fmt(idx);

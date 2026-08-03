@@ -263,6 +263,10 @@
     // 요약 카드: 팁 포함 총액 · 걷힌 금액 · 라운딩 잉여
     var surplusText = (Math.abs(r.surplus) < 0.005) ? t("tool.v.evenly") : nf(r.surplus);
     html += '<dl class="sbc-cards">';
+    if (r.tip > 0) {
+      html += '<div class="sbc-cell" data-copy="' + escHtml(nf(r.tip)) + '"><dt>' +
+        escHtml(t("tool.k.tip")) + "</dt><dd>" + escHtml(nf(r.tip)) + "</dd></div>";
+    }
     html += '<div class="sbc-cell" data-copy="' + escHtml(nf(r.grand)) + '"><dt>' +
       escHtml(t("tool.k.grand")) + "</dt><dd>" + escHtml(nf(r.grand)) + "</dd></div>";
     html += '<div class="sbc-cell" data-copy="' + escHtml(nf(r.collected)) + '"><dt>' +

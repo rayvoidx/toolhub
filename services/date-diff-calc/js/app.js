@@ -173,6 +173,31 @@
     };
   }
 
+  /** [a,b] 양끝 포함 구간의 평일(월~금) 수 */
+  function weekdaysInclusive(a, b) {
+    var total = diffDays(a, b) + 1;
+    if (total <= 0) return 0;
+    var weeks = Math.floor(total / 7);
+    var n = weeks * 5;
+    var rest = total - weeks * 7;
+    var dow = a.getDay();
+    for (var i = 0; i < rest; i++) {
+      var d = (dow + weeks * 7 + i) % 7;
+      if (d !== 0 && d !== 6) n += 1;
+    }
+    return n;
+  }
+
+  /** 총 일수(total)와 같은 날짜 집합의 평일 수. 당일 미포함이면 (start, end] */
+  function businessDays(start, end, includeEnd) {
+    var n = weekdaysInclusive(start, end);
+    if (!includeEnd) {
+      var sd = start.getDay();
+      if (sd !== 0 && sd !== 6) n -= 1;
+    }
+    return Math.max(0, n);
+  }
+
   /**
    * 전체 계산. end < start 면 자동 스왑(swapped=true, 에러 아님).
    * includeEnd(당일 포함)는 총 일수(total)에만 +1 — 분해 값은 구간(interval) 기준 유지.
@@ -198,14 +223,17 @@
       weekDays: interval % 7,
       totalMonths: cal.totalMonths,
       hours: interval * 24,
-      minutes: interval * 1440
+      minutes: interval * 1440,
+      business: businessDays(start, end, !!includeEnd),
+      weekend: (includeEnd ? interval + 1 : interval) - businessDays(start, end, !!includeEnd)
     };
   }
 
   // 브라우저 밖(node) 단위 검증용 훅 — UI 상태 저장 용도 아님
   window.__DDC_TEST = {
     parseDate: parseDate, toStr: toStr, diffDays: diffDays,
-    addMonthsClamped: addMonthsClamped, calendarDiff: calendarDiff, compute: compute
+    addMonthsClamped: addMonthsClamped, calendarDiff: calendarDiff, compute: compute,
+    businessDays: businessDays
   };
 
   /* ---- 상태 저장 (localStorage, "<slug>:" prefix 전용) ---- */
@@ -273,6 +301,8 @@
       escHtml(fmt(t("tool.v.months"), { n: nf(r.totalMonths) })) + " · " +
       escHtml(fmt(t("tool.v.hours"), { n: nf(r.hours) })) + " · " +
       escHtml(fmt(t("tool.v.minutes"), { n: nf(r.minutes) })) + "</dd></div>";
+    html += '<div class="ddc-cell"><dt>' + escHtml(t("tool.k.biz")) + "</dt><dd>" +
+      escHtml(fmt(t("tool.v.biz"), { n: nf(r.business), w: nf(r.weekend) })) + "</dd></div>";
     html += "</dl>";
 
     // 복사: "2024-01-01 ~ 2026-07-10 = 921일" (+ 당일 포함 시 일차 병기)

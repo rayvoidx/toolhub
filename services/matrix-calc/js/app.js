@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var sizeEl = $("size"), opEl = $("op"), matA = $("mat-a"), matB = $("mat-b"), bWrap = $("b-wrap");
+  var sizeEl = $("size"), opEl = $("op"), dpEl = $("dp"), matA = $("mat-a"), matB = $("mat-b"), bWrap = $("b-wrap");
   var result = $("result"), errEl = $("err");
   if (!sizeEl || !opEl || !matA || !matB) return;
 
@@ -100,7 +100,9 @@
   // 표시는 4자리 반올림 — 역행렬의 1/det 나눗셈에서 0.30000000000000004 같은 잡음을 걷어낸다.
   function fmt(x) {
     if (typeof x !== "number" || !isFinite(x)) return "—";
-    var r = Math.round(x * 1e4) / 1e4;
+    var dp = dpEl ? parseInt(dpEl.value, 10) : 4;
+    if (!(dp >= 0 && dp <= 8)) dp = 4;
+    var p = Math.pow(10, dp), r = Math.round(x * p) / p;
     if (r === 0) r = 0;
     return String(r);
   }
@@ -239,7 +241,7 @@
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
-  [sizeEl, opEl].forEach(function (el) {
+  [sizeEl, opEl, dpEl].filter(Boolean).forEach(function (el) {
     el.addEventListener("change", function () { sync(); if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

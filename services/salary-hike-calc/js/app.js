@@ -89,7 +89,8 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var mode = $("mode"), oldEl = $("old-salary"), newEl = $("new-salary"), hikeEl = $("hike-pct");
+  var mode = $("mode"), oldEl = $("old-salary"), newEl = $("new-salary"), hikeEl = $("hike-pct"), inflEl = $("infl-pct");
+  var period = $("period");
   var newField = $("new-field"), hikeField = $("hike-field");
   var result = $("result"), errEl = $("err"), cutEl = $("cut-note"), heroLabel = $("r-hero-label");
   if (!mode || !oldEl || !newEl || !hikeEl) return;
@@ -115,20 +116,34 @@
     errEl.textContent = t(key);
   }
 
+  // 월급만 아는 사용자를 위해 입력 단위를 고를 수 있게 한다. 기본값은 기존과 같은 연 단위.
+  function perMonth() { return !!period && period.value === "month"; }
+
+  function setLabel(forId, key) {
+    var el = document.querySelector('label[for="' + forId + '"]');
+    if (!el) return;
+    el.setAttribute("data-i18n", key);
+    el.textContent = t(key);
+  }
+
   function syncFields() {
     var byPct = mode.value === "pct";
     newField.hidden = !byPct;
     hikeField.hidden = byPct;
+    var m = perMonth();
+    setLabel("old-salary", m ? "tool.old.label.m" : "tool.old.label");
+    setLabel("new-salary", m ? "tool.new.label.m" : "tool.new.label");
   }
 
   function calc() {
-    var oldSal = num(oldEl);
+    var unit = perMonth() ? 12 : 1;
+    var oldSal = num(oldEl) * unit;
     if (!isFinite(oldSal) || oldSal <= 0) return fail("tool.err.old");
     if (oldSal > MAX) return fail("tool.err.range");
 
     var newSal, hikePct;
     if (mode.value === "pct") {
-      newSal = num(newEl);
+      newSal = num(newEl) * unit;
       if (!isFinite(newSal) || newSal < 0) return fail("tool.err.new");
       if (newSal > MAX) return fail("tool.err.range");
       hikePct = (newSal - oldSal) / oldSal * 100;
@@ -148,6 +163,19 @@
     $("r-monthly").textContent = fmt(increase / 12);
     $("r-newmonthly").textContent = fmt(newSal / 12);
 
+    // 물가 반영은 선택 입력 — 비워두면 기존 동작 그대로다.
+    var inflRaw = inflEl ? String(inflEl.value).trim() : "";
+    var realCard = $("real-card");
+    if (inflRaw === "") {
+      realCard.hidden = true;
+    } else {
+      var infl = num(inflEl);
+      if (!isFinite(infl) || infl <= -100 || infl > 1000) return fail("tool.err.infl");
+      var real = ((1 + hikePct / 100) / (1 + infl / 100) - 1) * 100;
+      $("r-real").textContent = pct(real);
+      realCard.hidden = false;
+    }
+
     // 삭감도 계산은 그대로 하고 해석만 바꿔 붙인다 — 조용히 음수만 보여주지 않는다.
     cutEl.hidden = increase >= 0;
     cutEl.textContent = increase < 0 ? t("tool.cut") : "";
@@ -158,14 +186,20 @@
 
   syncFields();
   $("calc-btn").addEventListener("click", calc);
-  [oldEl, newEl, hikeEl].forEach(function (el) {
+  [oldEl, newEl, hikeEl, inflEl].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
-  mode.addEventListener("change", function () {
+  [mode, period].forEach(function (el) {
+    if (!el) return;
+    el.addEventListener("change", function () {
+      syncFields();
+      if (!result.hidden || !errEl.hidden) calc();
+    });
+  });
+  document.addEventListener("i18n:change", function () {
     syncFields();
     if (!result.hidden || !errEl.hidden) calc();
   });
-  document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -283,7 +293,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option value="95" selected data-i18n="tool.svc.o95">95% — Z 1.6449</option>
       <option value="97.5" data-i18n="tool.svc.o975">97.5% — Z 1.9600</option>
       <option value="99" data-i18n="tool.svc.o99">99% — Z 2.3263</option>
+      <option value="custom" data-i18n="tool.svc.oCustom">Custom service level…</option>
     </select>
+    <div id="svc-custom-row" hidden>
+      <label for="in-svccustom" data-i18n="tool.svc.customLabel">Your service level (%)</label>
+      <input type="number" id="in-svccustom" min="50" max="99.99" step="0.01" value="98" inputmode="decimal" autocomplete="off">
+      <p class="ss-cap" id="svc-custom-note"></p>
+    </div>
     <div class="ss-row">
       <div>
         <label for="in-lt" data-i18n="tool.lt.label">Default lead time</label>
@@ -356,6 +372,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="ss-row">
         <div><label for="in-eoq-s" data-i18n="tool.eoq.s">Cost per order (S)</label><input type="number" id="in-eoq-s" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
         <div><label for="in-eoq-h" data-i18n="tool.eoq.h">Annual holding cost per unit (H)</label><input type="number" id="in-eoq-h" min="0" step="any" inputmode="decimal" autocomplete="off"></div>
+        <div><label for="in-eoq-days" data-i18n="tool.eoq.days">Operating days per year</label><input type="number" id="in-eoq-days" min="1" max="366" step="1" placeholder="365" inputmode="numeric" autocomplete="off"></div>
       </div>
     </details>
 

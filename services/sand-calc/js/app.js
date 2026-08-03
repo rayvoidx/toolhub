@@ -89,9 +89,10 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var unit = $("unit"), preset = $("preset"), len = $("len"), wid = $("wid"), depth = $("depth"), stype = $("stype");
+  var unit = $("unit"), preset = $("preset"), len = $("len"), wid = $("wid"), depth = $("depth"), stype = $("stype"), bagsize = $("bagsize");
+  var dens = $("dens"), densWrap = $("dens-wrap");
   var result = $("result"), errEl = $("err"), notes = $("notes");
-  if (!unit || !preset || !len || !wid || !depth || !stype) return;
+  if (!unit || !preset || !len || !wid || !depth || !stype || !bagsize) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -140,8 +141,17 @@
 
     var cuft = lft * wft * (din / 12);
     var yd3 = cuft / 27;
-    var lbs = yd3 * DENSITY[stype.value];
-    var bags = Math.ceil(lbs / 50);
+    // 모래는 산지·습도에 따라 단위중량이 다르다 — 공급사 수치를 그대로 넣을 수 있게 직접 입력을 둔다.
+    var pcy = DENSITY[stype.value];
+    if (stype.value === "custom") {
+      pcy = parseFloat(dens.value);
+      if (!isFinite(pcy) || pcy < 500 || pcy > 4000) return fail("tool.err.dens");
+    }
+    var lbs = yd3 * pcy;
+    // 포대 규격은 시장마다 다르다(미국 50/100lb, 유럽·아시아 25/20kg). 값은 lb 환산치.
+    var bagLb = parseFloat(bagsize.value);
+    if (!isFinite(bagLb) || bagLb <= 0) bagLb = 50;
+    var bags = Math.ceil(lbs / bagLb);
     var areaft = lft * wft;
 
     $("r-vol").textContent = fmt(yd3, yd3 < 10 ? 2 : 1) + " yd³";
@@ -149,6 +159,9 @@
     $("r-tons").textContent = fmt(lbs / 2000, 2);
     $("r-kg").textContent = fmt(lbs, 0) + " lb · " + fmt(lbs * 0.45359237, 0) + " kg";
     $("r-bags").textContent = fmt(bags, 0);
+    $("r-bags-sub").textContent = t("tool.r.plus10") + " " + fmt(Math.ceil(lbs * 1.1 / bagLb), 0);
+    var opt = bagsize.options[bagsize.selectedIndex];
+    if (opt) $("r-bags-label").textContent = opt.textContent;
     $("r-area").textContent = fmt(areaft, areaft < 100 ? 1 : 0) + " ft²";
     $("r-area-sub").textContent = fmt(areaft * 0.09290304, 1) + " m²";
 
@@ -161,11 +174,15 @@
     result.hidden = false;
   }
 
+  function densVisible() { if (densWrap) densWrap.hidden = stype.value !== "custom"; }
+
   unitLabels();
   applyPreset();
+  densVisible();
 
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, depth].forEach(function (el) {
+  [len, wid, depth, dens].forEach(function (el) {
+    if (!el) return;
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   preset.addEventListener("change", function () {
@@ -177,7 +194,9 @@
     applyPreset();
     if (!result.hidden || !errEl.hidden) calc();
   });
-  stype.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  stype.addEventListener("change", function () { densVisible(); if (!result.hidden || !errEl.hidden) calc(); });
+  if (dens) dens.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  bagsize.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

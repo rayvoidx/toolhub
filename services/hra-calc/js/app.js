@@ -89,9 +89,17 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var basic = $("basic"), hraIn = $("hra"), rent = $("rent"), city = $("city");
+  var basic = $("basic"), hraIn = $("hra"), rent = $("rent"), city = $("city"), months = $("months");
   var result = $("result"), errEl = $("err"), zeroNote = $("zero-note");
-  if (!basic || !hraIn || !rent || !city) return;
+  if (!basic || !hraIn || !rent || !city || !months) return;
+
+  // 연중 일부 기간만 임차한 경우를 위해 연산 개월 수를 고른다. 기본 12개월 = 기존 동작.
+  for (var mi = 1; mi <= 12; mi++) {
+    var opt = document.createElement("option");
+    opt.value = String(mi); opt.textContent = String(mi);
+    if (mi === 12) opt.selected = true;
+    months.appendChild(opt);
+  }
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var inr = function (n) { return "₹" + Math.round(n).toLocaleString("en-IN"); };
@@ -130,9 +138,12 @@
     for (var i = 1; i < rows.length; i++) if (rows[i].value < rows[bind].value) bind = i;
     var exempt = rows[bind].value;
 
-    $("r-exempt").textContent = inr(exempt * 12);
+    var m = parseInt(months.value, 10);
+    if (!(m >= 1 && m <= 12)) m = 12;
+
+    $("r-exempt").textContent = inr(exempt * m);
     $("r-exempt-m").textContent = t("tool.r.permonth").replace("{v}", inr(exempt));
-    $("r-taxable").textContent = inr(Math.max(0, h - exempt) * 12);
+    $("r-taxable").textContent = inr(Math.max(0, h - exempt) * m);
     $("r-binding").textContent = t(rows[bind].key);
 
     var body = $("limb-body");
@@ -142,7 +153,7 @@
       if (i === bind) tr.className = "bind";
       tr.appendChild(cell(t(row.key)));
       tr.appendChild(cell(inr(row.value), "num"));
-      tr.appendChild(cell(inr(row.value * 12), "num"));
+      tr.appendChild(cell(inr(row.value * m), "num"));
       body.appendChild(tr);
     });
 
@@ -163,7 +174,9 @@
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  city.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  [city, months].forEach(function (el) {
+    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

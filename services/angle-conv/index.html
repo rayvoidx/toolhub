@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -171,6 +181,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       .ang-exact { margin: 10px 0 0; font-size: 13.5px; font-weight: 600; color: var(--accent-strong); }
       [data-theme="dark"] .ang-exact { color: var(--accent); }
       @media (prefers-color-scheme: dark) { [data-theme="auto"] .ang-exact { color: var(--accent); } }
+      .ang-coterm { color: var(--muted); font-weight: 600; margin-top: 6px; }
+      [data-theme="dark"] .ang-coterm { color: var(--muted); }
       .ang-toggle-row { display: flex; align-items: center; gap: 10px; margin-top: 20px; font-weight: 600; font-size: 14.5px; cursor: pointer; }
       .ang-toggle-row input { width: auto; flex: 0 0 auto; }
       .ang-dms-row { display: flex; gap: 10px; margin-top: 10px; }
@@ -208,6 +220,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <p class="ang-exact" id="ang-exact" hidden></p>
+    <p class="ang-exact ang-coterm" id="ang-coterm" hidden></p>
     <p class="ang-err" id="ang-err" role="alert" hidden></p>
 
     <label class="ang-toggle-row" for="ang-dms-toggle">

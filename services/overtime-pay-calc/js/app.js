@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var rate = $("rate"), hours = $("hours"), threshold = $("threshold"), otMult = $("ot-mult"), dtThreshold = $("dt-threshold");
+  var rate = $("rate"), hours = $("hours"), threshold = $("threshold"), otMult = $("ot-mult"), dtThreshold = $("dt-threshold"), dtMult = $("dt-mult");
   var result = $("result"), errEl = $("err");
   if (!rate || !hours) return;
 
@@ -115,20 +115,26 @@
     var otH = Math.max(0, Math.min(h, dtAt) - otAt);
     var dtH = Math.max(0, h - Math.max(otAt, dtAt));
 
-    var regPay = regH * r, otPay = otH * r * mult, dtPay = dtH * r * 2;
+    var dMult = num(dtMult); if (!isFinite(dMult) || dMult < 1) dMult = 2;
+
+    var regPay = regH * r, otPay = otH * r * mult, dtPay = dtH * r * dMult;
 
     $("r-reg").textContent = money(regPay);
     $("r-ot").textContent = money(otPay);
     $("r-dt").textContent = money(dtPay);
     $("r-oth").textContent = (Math.round((otH + dtH) * 100) / 100) + " h";
-    $("r-total").textContent = money(regPay + otPay + dtPay);
+    var total = regPay + otPay + dtPay;
+    $("r-total").textContent = money(total);
+    $("r-eff").textContent = money(total / h);
+    // 할증분 = 총액 - 전 시간을 기본 시급으로 계산했을 때의 금액
+    $("r-prem").textContent = money(total - h * r);
 
     errEl.hidden = true;
     result.hidden = false;
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [rate, hours, threshold, otMult, dtThreshold].forEach(function (el) {
+  [rate, hours, threshold, otMult, dtThreshold, dtMult].forEach(function (el) {
     if (!el) return;
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });

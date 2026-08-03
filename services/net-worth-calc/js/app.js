@@ -92,6 +92,8 @@
   var A = ["a-cash", "a-invest", "a-home", "a-vehicles", "a-other"];
   var LI = ["l-mortgage", "l-car", "l-student", "l-cards", "l-other"];
   var fields = A.concat(LI).map(function (id) { return $(id); });
+  var rateEl = $("a-taxrate");
+  if (rateEl) fields.push(rateEl);
   var result = $("result"), errEl = $("err"), negEl = $("r-neg");
   for (var f = 0; f < fields.length; f++) { if (!fields[f]) return; }
   if (!result || !errEl) return;
@@ -131,7 +133,35 @@
     // 자산이 0이면 비율은 정의되지 않는다 (Infinity 노출 금지).
     $("r-ratio").textContent = assets > 0 ? (Math.round((liab / assets) * 1000) / 10) + "%" : "—";
 
-    var liquid = amount("a-cash") + amount("a-invest");
+    // 집·주담대를 입력한 사람만 보는 "투자 가능 순자산" 관점.
+    var home = amount("a-home"), mtg = amount("l-mortgage");
+    var hasHome = home > 0 || mtg > 0;
+    $("c-equity").hidden = !hasHome;
+    $("c-exhome").hidden = !hasHome;
+    if (hasHome) {
+      var eq = home - mtg, exh = net - eq;
+      $("r-equity").textContent = money(eq);
+      $("r-equity").className = eq < 0 ? "rc-val negative" : "rc-val";
+      $("r-exhome").textContent = money(exh);
+      $("r-exhome").className = exh < 0 ? "rc-val negative" : "rc-val";
+    }
+
+    // 선택 입력: 세전 은퇴계좌에 적용할 인출 세율. 비우면 기존 동작(액면가) 그대로.
+    var invest = amount("a-invest"), rateRaw = rateEl ? String(rateEl.value).replace(/[,\s%]/g, "") : "";
+    var showTax = false, rate = 0;
+    if (rateRaw !== "") {
+      rate = parseFloat(rateRaw);
+      if (!isFinite(rate) || rate < 0 || rate > 60) return fail("tool.err.rate");
+      showTax = rate > 0 && invest > 0;
+    }
+    $("c-aftertax").hidden = !showTax;
+    if (showTax) {
+      var afterTax = net - invest * (rate / 100);
+      $("r-aftertax").textContent = money(afterTax);
+      $("r-aftertax").className = afterTax < 0 ? "rc-val negative" : "rc-val";
+    }
+
+    var liquid = amount("a-cash") + invest;
     var illiquid = assets - liquid;
     $("r-split").textContent = assets > 0
       ? t("tool.r.liquid") + " " + money(liquid) + " (" + Math.round((liquid / assets) * 100) + "%)  ·  " +

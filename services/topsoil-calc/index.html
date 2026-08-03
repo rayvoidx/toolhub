@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Topsoil Calculator — How Much Topsoil Do I Need?">
 <meta property="og:description" content="Work out how much topsoil you need in cubic yards, cubic feet, 40 lb bags and tons. Enter a rectangle, a circle or square footage, then pick a depth.">
 <meta property="og:url" content="https://tool-hub.me/topsoil-calc/">
-<meta property="og:image" content="https://tool-hub.me/topsoil-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/topsoil-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#451a03">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Topsoil Calculator",
+      "item": "https://tool-hub.me/topsoil-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Topsoil Calculator",
-      "item": "https://tool-hub.me/topsoil-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -212,9 +222,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <label for="depth" data-i18n="tool.depth.label">Depth of topsoil</label>
     <select id="depth">
+      <option value="0.5" data-i18n="tool.depth.d05">0.5 in / 1 cm — topdressing a lawn</option>
       <option value="2" data-i18n="tool.depth.d2">2 in / 5 cm — topdressing a bed</option>
       <option value="4" selected data-i18n="tool.depth.d4">4 in / 10 cm — new planting bed</option>
       <option value="6" data-i18n="tool.depth.d6">6 in / 15 cm — raised bed or new lawn</option>
+      <option value="12" data-i18n="tool.depth.d12">12 in / 30 cm — filling a raised bed frame</option>
       <option value="custom" data-i18n="tool.depth.custom">Custom depth</option>
     </select>
 
@@ -222,6 +234,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <label for="dcustom"><span data-i18n="tool.depth.customlabel">Custom depth</span> <span class="u" id="u-depth">in</span></label>
       <input type="number" id="dcustom" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3">
     </div>
+
+    <label for="bag" data-i18n="tool.bag.label">Bag size (bagged topsoil)</label>
+    <select id="bag">
+      <option value="0.75" selected>0.75 cu ft (40 lb)</option>
+      <option value="1">1 cu ft</option>
+      <option value="1.5">1.5 cu ft</option>
+      <option value="2">2 cu ft</option>
+      <option value="1.41259">40 L</option>
+      <option value="1.76573">50 L</option>
+    </select>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate topsoil</button>
 

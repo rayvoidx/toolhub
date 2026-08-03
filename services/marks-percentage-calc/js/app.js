@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var ROWS = 6;
+  var ROWS = 12;
   var result = $("result"), errEl = $("err"), breakList = $("r-breaklist");
   if (!$("o1") || !result || !breakList) return;
 
@@ -145,6 +145,8 @@
     $("r-max").textContent = fmt(sumM);
     $("r-count").textContent = String(rows.length);
     $("r-grade").textContent = t(gradeKey(pct));
+    // CBSE 관례: 백분율 = CGPA x 9.5 — FAQ에서 설명하던 값을 화면에도 낸다.
+    $("r-cgpa").textContent = (pct / 9.5).toFixed(2);
 
     while (breakList.firstChild) breakList.removeChild(breakList.firstChild);
     rows.forEach(function (r) {
@@ -156,6 +158,21 @@
 
     errEl.hidden = true;
     result.hidden = false;
+  }
+
+  // 7~12번 과목 행은 기본 숨김. 6과목이 넘는 성적표(보드 시험 등)에서만 한 줄씩 펼친다.
+  var extras = [].slice.call(document.querySelectorAll("#tool .srow[data-extra]"));
+  var addBtn = $("add-row");
+  if (addBtn) {
+    addBtn.addEventListener("click", function () {
+      var next = extras.filter(function (r) { return r.hidden; })[0];
+      if (next) {
+        next.hidden = false;
+        var inp = next.querySelector("input");
+        if (inp) inp.focus();
+      }
+      if (!extras.some(function (r) { return r.hidden; })) addBtn.hidden = true;
+    });
   }
 
   $("calc-btn").addEventListener("click", calc);

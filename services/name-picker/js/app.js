@@ -111,10 +111,12 @@
       .map(function (s) { return s.trim(); })
       .filter(function (s) { return s.length > 0; });
   }
-  // 당첨자 수: 정수가 아니거나 1 미만이면 조용히 1로 정규화 (tip-calc 의 인원수 파싱과 동일한 원칙)
+  // 당첨자 수: 1 이상의 정수만 유효. 빈칸·0·음수·소수·문자는 null 을 돌려주고 호출부가 안내 문구를 띄운다.
   function parseWinnerCount(raw) {
-    var n = parseInt(String(raw == null ? "" : raw).trim(), 10);
-    if (!isFinite(n) || isNaN(n) || n < 1) return 1;
+    var s = String(raw == null ? "" : raw).trim();
+    if (!/^\d+$/.test(s)) return null;
+    var n = parseInt(s, 10);
+    if (!isFinite(n) || n < 1) return null;
     return n;
   }
   // 편향 없는 정수 난수 — crypto.getRandomValues + 기각 표집(rejection sampling).
@@ -301,6 +303,7 @@
     if (items.length === 0) { fail("tool.err.empty"); return; }
 
     var requested = parseWinnerCount(countEl.value);
+    if (requested === null) { fail("tool.err.count", { max: MAX_WINNERS }); return; }
     if (requested > MAX_WINNERS) { fail("tool.err.tooMany", { max: MAX_WINNERS }); return; }
 
     var noRepeat = !!(noRepeatEl && noRepeatEl.checked);

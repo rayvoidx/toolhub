@@ -114,12 +114,14 @@
   var GAS_RANGE_MAX = 280;  // margin above Gas 10 (260C)
   var ABS_ZERO_C = -273.15;
   var CAP_C = 5000;         // absurd input guard — ovens don't get this hot, just keep the math finite
-  var FAN_OFFSET_C = 20;    // the "-20C convention" for fan/convection adjustment
+  var FAN_OFFSET_C = 20;    // default "-20C convention"; manufacturers vary (15-25C) — user-selectable
+  var FAN_OFFSETS = [10, 15, 20, 25, 30];
+  function normOffset(v) { return FAN_OFFSETS.indexOf(Number(v)) >= 0 ? Number(v) : FAN_OFFSET_C; }
 
   function cToF(c) { return c * 9 / 5 + 32; }
   function fToC(f) { return (f - 32) * 5 / 9; }
-  function fanFromStatic(c) { return c - FAN_OFFSET_C; }
-  function staticFromFan(c) { return c + FAN_OFFSET_C; }
+  function fanFromStatic(c, off) { return c - normOffset(off); }
+  function staticFromFan(c, off) { return c + normOffset(off); }
 
   // 극단값 처리: 절대영도 미만은 계산상 절대영도로 접어 올리고 플래그, 과도한 상한은 캡
   function sanitizeC(c) {
@@ -158,7 +160,7 @@
     module.exports = {
       cToF: cToF, fToC: fToC, fanFromStatic: fanFromStatic, staticFromFan: staticFromFan,
       sanitizeC: sanitizeC, nearestGasMark: nearestGasMark, gasMarkEntry: gasMarkEntry,
-      gmLabel: gmLabel, GAS_MARKS: GAS_MARKS, GAS_RANGE_MIN: GAS_RANGE_MIN, GAS_RANGE_MAX: GAS_RANGE_MAX
+      gmLabel: gmLabel, normOffset: normOffset, GAS_MARKS: GAS_MARKS, GAS_RANGE_MIN: GAS_RANGE_MIN, GAS_RANGE_MAX: GAS_RANGE_MAX
     };
     return;
   }
@@ -167,7 +169,7 @@
   /* ---- DOM ---- */
   function $(id) { return document.getElementById(id); }
   var cInput = $("c-input"), fInput = $("f-input"), gmSelect = $("gm-select");
-  var fanToggle = $("fan-toggle");
+  var fanToggle = $("fan-toggle"), fanOffsetSel = $("fan-offset");
   var placeholderEl = $("ot-placeholder"), summaryEl = $("ot-summary");
   var gmNoteEl = $("ot-gmnote"), equivEl = $("ot-equiv"), warnEl = $("ot-warn");
   var chartBody = $("ot-chart-body");
@@ -178,6 +180,7 @@
   var CFG = window.APP_CONFIG || {};
   var STATE_KEY = (CFG.slug || "oven-temp-conv") + ":state";
   var MAXLEN = 12;
+  var fanOffset = FAN_OFFSET_C;
   var ovenType = "static"; // "static" | "fan" — which representation the c/f fields show
   var last = { kind: "empty" };
   var copyTimer = null;
@@ -212,19 +215,21 @@
     try {
       localStorage.setItem(STATE_KEY, JSON.stringify({
         cStatic: last.kind === "ok" ? last.cStatic : null,
-        ovenType: ovenType
+        ovenType: ovenType,
+        fanOffset: fanOffset
       }));
     } catch (e) { /* private mode — 저장만 실패, 계산은 정상 */ }
   }
   function loadState() {
     var raw = null;
     try { raw = localStorage.getItem(STATE_KEY); } catch (e) { /* noop */ }
-    var out = { cStatic: null, ovenType: "static" };
+    var out = { cStatic: null, ovenType: "static", fanOffset: FAN_OFFSET_C };
     if (!raw) return out;
     try {
       var obj = JSON.parse(raw);
       if (obj && (obj.ovenType === "fan" || obj.ovenType === "static")) out.ovenType = obj.ovenType;
       if (obj && typeof obj.cStatic === "number" && isFinite(obj.cStatic)) out.cStatic = obj.cStatic;
+      if (obj) out.fanOffset = normOffset(obj.fanOffset);
     } catch (e) { /* 손상된 저장값 — 기본값으로 계속 */ }
     return out;
   }
@@ -261,7 +266,7 @@
         gmLabel(e.gm),
         fmtLoc(e.c) + "°C",
         fmtLoc(e.f) + "°F",
-        "≈ " + fmtLoc(fanFromStatic(e.c)) + "°C",
+        "≈ " + fmtLoc(fanFromStatic(e.c, fanOffset)) + "°C",
         t("tool.band." + e.band, e.band)
       ];
       for (var j = 0; j < tds.length; j++) {
@@ -336,7 +341,7 @@
     if (sane == null) { last = { kind: "bad" }; renderResult(); saveState(); return; }
     cStatic = sane.c;
     var fStatic = cToF(cStatic);
-    var fanC = fanFromStatic(cStatic), fanF = cToF(fanC);
+    var fanC = fanFromStatic(cStatic, fanOffset), fanF = cToF(fanC);
     var primaryC = ovenType === "fan" ? fanC : cStatic;
     var primaryF = ovenType === "fan" ? fanF : fStatic;
     if (sourceField !== "c") cInput.value = fmt(primaryC);
@@ -366,7 +371,7 @@
     if (trimmed === "") { clearAll(); return; }
     var v = Number(trimmed);
     if (!isFinite(v)) { last = { kind: "bad" }; renderResult(); return; }
-    var cStatic = ovenType === "fan" ? staticFromFan(v) : v;
+    var cStatic = ovenType === "fan" ? staticFromFan(v, fanOffset) : v;
     setFromCStatic(cStatic, "c");
   }
   function onFInput() {
@@ -378,7 +383,7 @@
     var v = Number(trimmed);
     if (!isFinite(v)) { last = { kind: "bad" }; renderResult(); return; }
     var primaryC = fToC(v);
-    var cStatic = ovenType === "fan" ? staticFromFan(primaryC) : primaryC;
+    var cStatic = ovenType === "fan" ? staticFromFan(primaryC, fanOffset) : primaryC;
     setFromCStatic(cStatic, "f");
   }
   function onGmChange() {
@@ -387,6 +392,13 @@
     var entry = gasMarkEntry(parseFloat(v));
     if (!entry) { last = { kind: "bad" }; renderResult(); return; }
     setFromCStatic(entry.c, "gm");
+  }
+  function onFanOffsetChange() {
+    fanOffset = normOffset(fanOffsetSel.value);
+    fanOffsetSel.value = String(fanOffset);
+    if (last.kind === "ok") setFromCStatic(last.cStatic, null);
+    renderChart();
+    saveState();
   }
   function onFanToggle() {
     ovenType = fanToggle.checked ? "fan" : "static";
@@ -430,6 +442,7 @@
   fInput.addEventListener("input", onFInput);
   gmSelect.addEventListener("change", onGmChange);
   if (fanToggle) fanToggle.addEventListener("change", onFanToggle);
+  if (fanOffsetSel) fanOffsetSel.addEventListener("change", onFanOffsetChange);
   for (var ci = 0; ci < copyBtns.length; ci++) {
     copyBtns[ci].addEventListener("click", function () { copyValue(this.getAttribute("data-target")); });
   }
@@ -442,7 +455,9 @@
   /* ---- 초기화 ---- */
   var restored = loadState();
   ovenType = restored.ovenType;
+  fanOffset = restored.fanOffset;
   if (fanToggle) fanToggle.checked = ovenType === "fan";
+  if (fanOffsetSel) fanOffsetSel.value = String(fanOffset);
   renderGmOptions();
   renderChart();
   if (restored.cStatic != null) setFromCStatic(restored.cStatic, null);

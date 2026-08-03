@@ -90,6 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var cigs = $("cigs"), price = $("price"), packsize = $("packsize"), years = $("years");
+  var psCustom = $("packsize-custom"), rate = $("rate"), invRate = $("inv-rate");
   var result = $("result"), errEl = $("err"), nolife = $("nolife");
   if (!cigs || !price || !packsize || !years) return;
 
@@ -118,11 +119,24 @@
     var y = yRaw === "" ? 0 : num(years);
     if (isNaN(y) || y < 0 || y > 80) return fail("tool.err.years");
 
-    var ps = parseFloat(packsize.value) || 20;
+    // 갑당 개비 수: 프리셋 밖 시장(10·30개비, 낱개 포장)을 위해 직접 입력 허용.
+    var ps;
+    if (packsize.value === "custom") {
+      ps = num(psCustom);
+      if (isNaN(ps) || ps < 1 || ps > 100) return fail("tool.err.packsize");
+    } else {
+      ps = parseFloat(packsize.value) || 20;
+    }
+    // 투자 수익률은 선택 입력 — 비우면 기본 7%.
+    var rRaw = rate ? String(rate.value).trim() : "";
+    var rPct = rRaw === "" ? RETURN_RATE * 100 : num(rate);
+    if (isNaN(rPct) || rPct < 0 || rPct > 30) return fail("tool.err.rate");
+
     var daily = c / ps * p;
     var yearly = daily * 365.25;
     // 매년 1년치 담뱃값을 연말에 넣었을 때의 미래가치(연금 종가) — 일시불이 아니다.
-    var invested = yearly * (Math.pow(1 + RETURN_RATE, HORIZON) - 1) / RETURN_RATE;
+    var r = rPct / 100;
+    var invested = r === 0 ? yearly * HORIZON : yearly * (Math.pow(1 + r, HORIZON) - 1) / r;
     var daysPerYear = c * 365.25 * MIN_PER_CIG / 1440;
 
     $("r-year").textContent = money(yearly);
@@ -130,6 +144,7 @@
     $("r-week").textContent = money(daily * 7);
     $("r-ten").textContent = money0(yearly * HORIZON);
     $("r-invested").textContent = money0(invested);
+    if (invRate) invRate.textContent = rPct.toLocaleString(undefined, { maximumFractionDigits: 2 }) + "%";
     $("r-life").textContent = y > 0 ? money0(yearly * y) : "—";
     $("r-time").textContent = daysPerYear.toLocaleString(undefined, { maximumFractionDigits: daysPerYear < 10 ? 1 : 0 });
     if (nolife) nolife.hidden = y > 0;
@@ -141,11 +156,15 @@
   var live = function () { if (!result.hidden || !errEl.hidden) calc(); };
 
   $("calc-btn").addEventListener("click", calc);
-  [cigs, price, years].forEach(function (el) {
+  [cigs, price, years, psCustom, rate].forEach(function (el) {
+    if (!el) return;
     el.addEventListener("input", live);
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  packsize.addEventListener("change", live);
+  packsize.addEventListener("change", function () {
+    if (psCustom) psCustom.hidden = packsize.value !== "custom";
+    live();
+  });
   document.addEventListener("i18n:change", live);
   // TOOLJS:END
 })();

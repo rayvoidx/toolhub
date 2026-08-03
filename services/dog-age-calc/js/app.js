@@ -117,7 +117,7 @@
   function calc() {
     var raw = parseFloat(String(age.value).replace(/,/g, ""));
     if (!isFinite(raw)) return fail("tool.err.empty");
-    var years = ageunit.value === "months" ? raw / 12 : raw;
+    var years = ageunit.value === "months" ? raw / 12 : (ageunit.value === "weeks" ? raw / 52.1775 : raw);
     if (years <= 0 || years > 30) return fail("tool.err.range");
 
     var sz = size.value;

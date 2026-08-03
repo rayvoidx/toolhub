@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var method = $("method"), solve = $("solve"), amount = $("amount"), custom = $("custom"), strength = $("strength");
+  var method = $("method"), solve = $("solve"), amount = $("amount"), custom = $("custom"), strength = $("strength"), cupml = $("cupml");
   var result = $("result"), errEl = $("err"), amountLabel = $("amount-label"), mainLabel = $("r-main-label");
   if (!method || !solve || !amount || !custom || !strength) return;
 
@@ -128,13 +128,23 @@
     }
     var ratio = Math.max(MIN_RATIO, base + parseFloat(strength.value));
 
+    // 잔 크기는 비워두면 240ml 기본값, 값이 들어왔으면 범위 검사 후 사용
+    var cup = CUP_ML;
+    if (cupml && String(cupml.value).trim() !== "") {
+      var cv = num(cupml);
+      if (!isFinite(cv) || cv < 30 || cv > 2000) return fail("tool.err.cup");
+      cup = cv;
+    }
+    var cupsLabel = $("r-cups-label");
+    if (cupsLabel) cupsLabel.textContent = t("tool.r.cups").replace("240", String(cup));
+
     var toWater = solve.value === "water";
     var coffee = toWater ? raw : raw / ratio;
     var water = toWater ? raw * ratio : raw;
 
     $("r-main").textContent = (toWater ? water : coffee).toFixed(1) + " g";
     $("r-ratio").textContent = "1:" + ratio.toFixed(1).replace(/\.0$/, "");
-    $("r-cups").textContent = (water / CUP_ML).toFixed(1);
+    $("r-cups").textContent = (water / cup).toFixed(1);
     $("r-tbsp").textContent = (coffee / TBSP_G).toFixed(1);
 
     errEl.hidden = true;
@@ -144,10 +154,10 @@
   var live = function () { return !result.hidden || !errEl.hidden; };
 
   $("calc-btn").addEventListener("click", calc);
-  [amount, custom].forEach(function (el) {
+  [amount, custom, cupml].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [method, solve, strength, custom].forEach(function (el) {
+  [method, solve, strength, custom, cupml].forEach(function (el) {
     el.addEventListener("change", function () { syncLabels(); if (live()) calc(); });
   });
   document.addEventListener("i18n:change", function () { syncLabels(); if (live()) calc(); });

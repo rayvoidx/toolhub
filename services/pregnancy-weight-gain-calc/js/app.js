@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var weight = $("weight"), wunit = $("wunit"), hunit = $("hunit");
-  var ftEl = $("ft"), inEl = $("in"), cmEl = $("cm"), week = $("week"), twins = $("twins");
+  var ftEl = $("ft"), inEl = $("in"), cmEl = $("cm"), week = $("week"), twins = $("twins"), current = $("current");
   var impWrap = $("imperial-wrap"), metWrap = $("metric-wrap");
   var result = $("result"), errEl = $("err"), noteEl = $("r-note");
   if (!weight || !wunit || !hunit || !week || !twins || !impWrap || !metWrap) return;
@@ -114,6 +114,12 @@
     var loKg = loLb / LB_PER_KG, hiKg = hiLb / LB_PER_KG;
     var lb = fmt(loLb, lbDec) + "\u2013" + fmt(hiLb, lbDec) + " lb";
     var kg = fmt(loKg, kgDec) + "\u2013" + fmt(hiKg, kgDec) + " kg";
+    return wunit.value === "kg" ? kg + " (" + lb + ")" : lb + " (" + kg + ")";
+  }
+
+  // 단일 값도 범위와 같은 이중 단위 표기를 쓴다.
+  function one(vLb, lbDec, kgDec) {
+    var lb = fmt(vLb, lbDec) + " lb", kg = fmt(vLb / LB_PER_KG, kgDec) + " kg";
     return wunit.value === "kg" ? kg + " (" + lb + ")" : lb + " (" + kg + ")";
   }
 
@@ -155,6 +161,15 @@
     if (!isFinite(wk)) return fail("tool.err.week");
     if (wk < 4 || wk > 42) return fail("tool.err.wkrange");
 
+    // 현재 체중은 선택 입력. 넣었다면 임신 전 체중과 같은 범위 검증을 통과해야 한다.
+    var curLb = null;
+    if (current && String(current.value).trim() !== "") {
+      var c = num(current);
+      if (!isFinite(c) || c <= 0) return fail("tool.err.wrange");
+      curLb = wunit.value === "kg" ? c * LB_PER_KG : c;
+      if (curLb < 60 || curLb > 500) return fail("tool.err.wrange");
+    }
+
     var m = cm / 100;
     var bmi = (lb / LB_PER_KG) / (m * m);
     var cat = category(bmi);
@@ -182,6 +197,20 @@
     $("r-rate").textContent = range(rateLo, rateHi, 1, 2) + " " + t("tool.unit.perweek");
     $("r-bmi").textContent = fmt(bmi, 1) + " \u2014 " + t("tool.cat." + cat);
 
+    var actCard = $("r-actual-card");
+    if (curLb !== null) {
+      var gain = curLb - lb;
+      var status = gain < expLo ? "below" : (gain > expHi ? "above" : "within");
+      $("r-actual").textContent = one(gain, 1, 1) + " \u2014 " + t("tool.status." + status);
+      actCard.hidden = false;
+      // 만삭까지 남은 권장 증가량. 이미 총 범위를 넘었으면 0으로 바닥을 둔다.
+      $("r-remain").textContent = range(Math.max(0, total[0] - gain), Math.max(0, total[1] - gain), 1, 1);
+      $("r-remain-card").hidden = false;
+    } else {
+      actCard.hidden = true;
+      $("r-remain-card").hidden = true;
+    }
+
     if (isTwin) {
       noteEl.hidden = false;
       noteEl.textContent = cat === "under" ? t("tool.note.twinsunder") : t("tool.note.twins");
@@ -196,7 +225,7 @@
 
   syncUnits();
   $("calc-btn").addEventListener("click", calc);
-  [weight, ftEl, inEl, cmEl, week].forEach(function (el) {
+  [weight, ftEl, inEl, cmEl, week, current].forEach(function (el) {
     if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   hunit.addEventListener("change", function () { syncUnits(); if (!result.hidden || !errEl.hidden) calc(); });

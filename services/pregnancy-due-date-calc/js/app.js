@@ -99,9 +99,11 @@
   /* ---- 상수 (spec 고정값 — 임상 관행 기준) ---- */
   var DUE_DAYS = 280;           // Naegele's rule: LMP 상당일 + 280일(40주) = 예정일
   var CONCEPTION_OFFSET = 14;   // 표준 28일 주기에서 배란/수정은 LMP + 14일 부근
-  var IVF_DAY3_OFFSET = 17;     // 3일차 이식배아 나이 ≈ LMP 상당일 + 17일 (배란+3일)
-  var IVF_DAY5_OFFSET = 19;     // 5일차(포배) 이식배아 나이 ≈ LMP 상당일 + 19일 (배란+5일)
-  var CYCLE_MIN = 21, CYCLE_MAX = 45, CYCLE_DEFAULT = 28;
+  var IVF_STAGE_MIN = 2, IVF_STAGE_MAX = 6, IVF_STAGE_DEFAULT = 5;
+  // 이식일 배아 나이 offset = 배란(LMP+14) + 배아 일수 → day3=17, day5=19 (기존 값 그대로)
+  var IVF_DAY3_OFFSET = CONCEPTION_OFFSET + 3;
+  var IVF_DAY5_OFFSET = CONCEPTION_OFFSET + 5;
+  var CYCLE_MIN = 20, CYCLE_MAX = 60, CYCLE_DEFAULT = 28;
   var TOO_OLD_DAYS = 320;       // 45주 초과 — 현재 임신으로 보기 어려운 값(연도 오타 등) → 오류
   var POSTTERM_DAYS = 294;      // 42주 초과 — 오류는 아니지만 경고
   var IVF_FUTURE_CAP_DAYS = 300; // 이식 예정일이 과도하게 먼 미래인 경우 상한
@@ -178,8 +180,9 @@
     return addDays(conception, -CONCEPTION_OFFSET);
   }
   function anchorFromIVF(transferDate, stage) {
-    var offset = (Number(stage) === 3) ? IVF_DAY3_OFFSET : IVF_DAY5_OFFSET;
-    return addDays(transferDate, -offset);
+    var day = Math.round(Number(stage));
+    if (!isFinite(day) || day < IVF_STAGE_MIN || day > IVF_STAGE_MAX) day = IVF_STAGE_DEFAULT;
+    return addDays(transferDate, -(CONCEPTION_OFFSET + day));
   }
   function computeDueDate(anchor) {
     return addDays(anchor, DUE_DAYS);
@@ -284,7 +287,7 @@
       if (o.cycle != null && String(o.cycle) !== "") els.cycle.value = String(o.cycle);
       if (typeof o.conception === "string" && parseISO(o.conception)) els.conception.value = o.conception;
       if (typeof o.ivfDate === "string" && parseISO(o.ivfDate)) els.ivfDate.value = o.ivfDate;
-      if (o.ivfStage === "3" || o.ivfStage === "5") els.ivfStage.value = o.ivfStage;
+      if (/^[23456]$/.test(String(o.ivfStage))) els.ivfStage.value = String(o.ivfStage);
     } catch (e) { /* 손상된 값은 무시하고 기본값으로 시작 */ }
   }
 

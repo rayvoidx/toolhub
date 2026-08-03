@@ -102,7 +102,13 @@
   function fmt(n) {
     /* 통화 기호는 붙이지 않는다 (숫자 중심) — 자리수 구분만 현재 언어 로케일로 */
     var lang = (window.I18N && window.I18N.lang && window.I18N.lang()) || "en";
-    try { return n.toLocaleString(lang); } catch (e) { return n.toLocaleString(); }
+    var opt = { maximumFractionDigits: 2 };
+    try { return n.toLocaleString(lang, opt); } catch (e) { return n.toLocaleString(undefined, opt); }
+  }
+
+  function money(n) {
+    /* 화폐 단위 소수 2자리까지 유지 (19.99 같은 미·영 가격표) */
+    return Math.round(n * 100) / 100;
   }
 
   function showResult(el, html, isError) {
@@ -122,7 +128,7 @@
     if (!original || isNaN(original) || original <= 0) {
       return { error: t("tool.err.original") };
     }
-    if (!sale || isNaN(sale) || sale < 0) {
+    if (isNaN(sale) || sale < 0) {
       return { error: t("tool.err.sale") };
     }
     if (sale > original) {
@@ -130,7 +136,7 @@
     }
     var discountAmt = original - sale;
     var rate = Math.round((discountAmt / original) * 1000) / 10; /* 소수점 1자리 */
-    return { rate: rate, discountAmt: Math.round(discountAmt) };
+    return { rate: rate, discountAmt: money(discountAmt) };
   }
 
   function calcPrice(original, rate) {
@@ -146,7 +152,7 @@
     }
     var discountAmt = original * (rate / 100);
     var finalPrice = original - discountAmt;
-    return { finalPrice: Math.round(finalPrice), discountAmt: Math.round(discountAmt) };
+    return { finalPrice: money(finalPrice), discountAmt: money(discountAmt) };
   }
 
   /* ── DOM 참조 ── */

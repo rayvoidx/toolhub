@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), thick = $("thick");
-  var len = $("len"), wid = $("wid"), tcustom = $("tcustom"), density = $("density"), price = $("price");
+  var len = $("len"), wid = $("wid"), tcustom = $("tcustom"), density = $("density"), price = $("price"), waste = $("waste");
   var result = $("result"), errEl = $("err"), warnEl = $("warn"), coverEl = $("r-cover");
   if (!unit || !thick || !len || !wid) return;
 
@@ -157,6 +157,13 @@
       if (!isFinite(p) || p < 0) return fail("tool.err.price");
     }
 
+    // 노트에서 "5~10% 더하라"고 안내만 하고 계산은 안 해주던 부분 — 발주량은 여유율 포함이 실제 주문 단위다.
+    var wpct = 0;
+    if (!blank(waste)) {
+      wpct = num(waste);
+      if (!isFinite(wpct) || wpct < 0 || wpct > 50) return fail("tool.err.waste");
+    }
+
     var area = l * w, vol, tons, volTxt, areaTxt, coverTxt;
     if (ft) {
       vol = area * (tv / 12);                    // cu ft
@@ -177,10 +184,18 @@
     $("r-area").textContent = areaTxt;
     coverEl.textContent = coverTxt;
 
+    var orderTons = tons * (1 + wpct / 100);
+    if (wpct > 0) {
+      $("c-order").hidden = false;
+      $("r-order").textContent = fmt(orderTons, 1) + " " + t(ft ? "tool.u.tons" : "tool.u.tonnes");
+    } else {
+      $("c-order").hidden = true; $("r-order").textContent = "—";
+    }
+
     if (p === null) {
       $("c-cost").hidden = true; $("r-cost").textContent = "—";
     } else {
-      $("c-cost").hidden = false; $("r-cost").textContent = fmt(tons * p, 2);
+      $("c-cost").hidden = false; $("r-cost").textContent = fmt(orderTons * p, 2);
     }
 
     var inches = ft ? tv : tv / 2.54;
@@ -195,7 +210,7 @@
 
   sync();
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, tcustom, density, price].forEach(function (el) {
+  [len, wid, tcustom, density, price, waste].forEach(function (el) {
     if (!el) return;
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("input", recalc);

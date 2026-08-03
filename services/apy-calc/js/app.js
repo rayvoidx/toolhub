@@ -111,6 +111,8 @@
     { key: "semiannually", n: 2 },
     { key: "quarterly", n: 4 },
     { key: "monthly", n: 12 },
+    { key: "biweekly", n: 26 },
+    { key: "weekly", n: 52 },
     { key: "daily", n: 365 },
     { key: "continuous", n: Infinity }
   ];

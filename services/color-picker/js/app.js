@@ -328,7 +328,13 @@
   }
 
   function renderContrast() {
-    var lum = relLuminance(model.r, model.g, model.b);
+    // 알파가 있으면 미리보기와 동일하게 흰 배경 위에 합성한 실제 색으로 대비를 계산한다
+    // (합성하지 않으면 반투명 색이 불투명 색의 대비비로 잘못 보고된다)
+    var a = clamp(model.a, 0, 1);
+    var er = model.r * a + 255 * (1 - a);
+    var eg = model.g * a + 255 * (1 - a);
+    var eb = model.b * a + 255 * (1 - a);
+    var lum = relLuminance(er, eg, eb);
     var vsBlack = contrastRatio(lum, 0);        // 검정 텍스트
     var vsWhite = contrastRatio(lum, 1);        // 흰색 텍스트
     var cells = [

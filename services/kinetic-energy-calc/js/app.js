@@ -95,10 +95,11 @@
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
-  var MU = { kg: 1, lb: 0.45359237, g: 0.001 };          // → kg
-  var VU = { ms: 1, kmh: 1 / 3.6, mph: 0.44704 };        // → m/s
-  var EU = { j: 1, kj: 1000, kwh: 3600000 };             // → J
-  var ULAB = { kg: "kg", lb: "lb", g: "g", ms: "m/s", kmh: "km/h", mph: "mph" };
+  var FTLB_J = 1.3558179483314004;                       // 1 ft·lbf → J
+  var MU = { kg: 1, lb: 0.45359237, g: 0.001, t: 1000, gr: 0.00006479891 };   // → kg
+  var VU = { ms: 1, kmh: 1 / 3.6, mph: 0.44704, fps: 0.3048, kn: 0.514444 };  // → m/s
+  var EU = { j: 1, kj: 1000, kwh: 3600000, ftlb: FTLB_J };                    // → J
+  var ULAB = { kg: "kg", lb: "lb", g: "g", t: "t", gr: "gr", ms: "m/s", kmh: "km/h", mph: "mph", fps: "ft/s", kn: "kn" };
   // 1 g TNT = 4184 J = 1 food Calorie — 두 환산의 분모가 같은 건 우연이 아니라 정의(열화학 칼로리) 때문이다.
   var TNT_J = 4184;
   var ANCHORS = [
@@ -179,7 +180,7 @@
     else $("r-main").textContent = sig(ms / VU[vunit.value]) + " " + ULAB[vunit.value];
     $("r-sub").textContent = sub;
 
-    $("r-joules").textContent = sig(j) + " J";
+    $("r-joules").textContent = sig(j) + " J \u00b7 " + sig(j / FTLB_J) + " ft\u00b7lb";
     $("r-kwh").textContent = sig(j / 3600000) + " kWh";
     $("r-cal").textContent = sig(j / TNT_J) + " kcal";
     $("r-tnt").textContent = j >= TNT_J * 1000

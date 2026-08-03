@@ -95,7 +95,13 @@
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   // 목록만 잘라 그린다 — 카운터는 항상 전체 기준이다.
-  var MAX_ROWS = 500;
+  var limitEl = $("row-limit");
+  function maxRows() {
+    var v = limitEl ? limitEl.value : "500";
+    if (v === "all") return Infinity;
+    var n = parseInt(v, 10);
+    return (isFinite(n) && n > 0) ? n : 500;
+  }
 
   function fail(key, extra) {
     result.hidden = true;
@@ -188,12 +194,13 @@
     $("r-changed").textContent = String(counts.changed);
 
     while (dlist.firstChild) dlist.removeChild(dlist.firstChild);
-    var shown = Math.min(diffs.length, MAX_ROWS);
+    var cap = maxRows();
+    var shown = Math.min(diffs.length, cap);
     for (i = 0; i < shown; i++) dlist.appendChild(row(diffs[i]));
-    if (diffs.length > MAX_ROWS) {
+    if (diffs.length > shown) {
       var more = document.createElement("div");
       more.className = "drow";
-      more.textContent = t("tool.r.more") + " " + (diffs.length - MAX_ROWS);
+      more.textContent = t("tool.r.more") + " " + (diffs.length - shown);
       dlist.appendChild(more);
     }
     dlist.hidden = diffs.length === 0;
@@ -204,6 +211,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
+  if (limitEl) limitEl.addEventListener("change", function () { if (!result.hidden) calc(); });
   [aEl, bEl].forEach(function (el) {
     // 텍스트에어리어에서 맨 Enter 는 줄바꿈이어야 하므로 Ctrl/Cmd+Enter 로 실행한다.
     el.addEventListener("keydown", function (e) { if (e.key === "Enter" && (e.ctrlKey || e.metaKey)) { e.preventDefault(); calc(); } });

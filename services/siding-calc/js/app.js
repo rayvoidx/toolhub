@@ -90,10 +90,10 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var IDS = ["perim", "wallh", "gables", "gw", "gh", "doors", "windows", "corners"];
-  var unit = $("unit"), waste = $("waste"), result = $("result"), errEl = $("err");
+  var unit = $("unit"), waste = $("waste"), boxcov = $("boxcov"), result = $("result"), errEl = $("err");
   var els = {};
   for (var i = 0; i < IDS.length; i++) { els[IDS[i]] = $(IDS[i]); if (!els[IDS[i]]) return; }
-  if (!unit || !waste || !result || !errEl) return;
+  if (!unit || !waste || !boxcov || !result || !errEl) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -115,6 +115,14 @@
     if (v.gables < 0 || v.doors < 0 || v.windows < 0 || v.corners < 0 || v.gw < 0 || v.gh < 0) return fail("tool.err.neg");
     if (v.perim <= 0 || v.wallh <= 0) return fail("tool.err.zero");
 
+    // 빈칸이면 기존 기본값(스퀘어당 2박스 = 박스당 50ft²)을 그대로 쓴다.
+    var covRaw = String(boxcov.value).replace(/,/g, "").trim();
+    var cov = 50;
+    if (covRaw !== "") {
+      cov = parseFloat(covRaw);
+      if (!isFinite(cov) || cov <= 0 || cov > 1000) return fail("tool.err.boxcov");
+    }
+
     var f = unit.value === "m" ? M_TO_FT : 1;
     var perim = v.perim * f, wallh = v.wallh * f, gw = v.gw * f, gh = v.gh * f;
     var gables = Math.round(v.gables), doors = Math.round(v.doors);
@@ -133,7 +141,10 @@
     var rake = gables > 0 ? 2 * Math.sqrt((gw / 2) * (gw / 2) + gh * gh) * gables : 0;
 
     $("r-squares").textContent = squares.toFixed(1);
-    $("r-boxes").textContent = String(Math.ceil(squares * 2));
+    // 순 벽면적: 미터 입력이면 ㎡도 같이 보여준다.
+    $("r-area").textContent = Math.round(net).toLocaleString() + " sq ft" +
+      (unit.value === "m" ? " (" + (net / 10.7639).toFixed(1) + " m²)" : "");
+    $("r-boxes").textContent = String(Math.ceil(squares * 100 / cov));
     $("r-starter").textContent = String(Math.ceil(perim));
     $("r-jchannel").textContent = String(Math.ceil(doors * J_DOOR + windows * J_WIN + rake));
     $("r-posts").textContent = String(corners * Math.ceil(wallh / 10));
@@ -150,6 +161,8 @@
   }
   unit.addEventListener("change", live);
   waste.addEventListener("change", live);
+  boxcov.addEventListener("change", live);
+  boxcov.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   document.addEventListener("i18n:change", live);
   // TOOLJS:END
 })();

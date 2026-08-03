@@ -139,18 +139,31 @@
     return Math.round((min / 60) * 100) / 100;
   }
   // 주간 합계 + 급여. rate<=0 이면 pay 관련 값은 전부 0(placeholder UI가 처리).
-  function computePay(totalMin, rate, otEnabled) {
+  // thresholdH(주 기준시간)·mult(배수)는 선택 — 빈값/범위밖이면 기본값(40h, 1.5×)으로 클램프.
+  function normThresholdMin(thresholdH) {
+    var h = parseFloat(thresholdH);
+    if (!isFinite(h) || h <= 0) return OT_THRESHOLD_MIN;
+    return Math.min(Math.max(h, 1), 168) * 60;
+  }
+  function normMult(mult) {
+    var m = parseFloat(mult);
+    if (!isFinite(m) || m <= 0) return OT_MULT;
+    return Math.min(Math.max(m, 1), 5);
+  }
+  function computePay(totalMin, rate, otEnabled, thresholdH, mult) {
     rate = isFinite(rate) && rate > 0 ? Math.min(rate, MAX_RATE) : 0;
+    var thrMin = normThresholdMin(thresholdH);
+    var otMult = normMult(mult);
     var regMin, otMin;
-    if (otEnabled && totalMin > OT_THRESHOLD_MIN) {
-      regMin = OT_THRESHOLD_MIN;
-      otMin = totalMin - OT_THRESHOLD_MIN;
+    if (otEnabled && totalMin > thrMin) {
+      regMin = thrMin;
+      otMin = totalMin - thrMin;
     } else {
       regMin = totalMin;
       otMin = 0;
     }
     var regPay = (regMin / 60) * rate;
-    var otPay = (otMin / 60) * rate * OT_MULT;
+    var otPay = (otMin / 60) * rate * otMult;
     return {
       regMin: regMin, otMin: otMin,
       regPay: regPay, otPay: otPay, grossPay: regPay + otPay,
@@ -226,6 +239,7 @@
   var totalDecEl = $("total-dec"), totalHmEl = $("total-hm");
   var placeholderEl = $("tool-placeholder"), summaryEl = $("tool-summary");
   var rateEl = $("rate-input"), curSel = $("currency-select"), otToggle = $("ot-toggle");
+  var otThrEl = $("ot-threshold"), otMultEl = $("ot-mult"), otOptsEl = $("ot-opts");
   var payEmptyEl = $("pay-empty"), payBodyEl = $("pay-body");
   var regHoursEl = $("pay-reg-hours"), otHoursEl = $("pay-ot-hours");
   var regPayEl = $("pay-reg-pay"), otPayEl = $("pay-ot-pay"), grossPayEl = $("pay-gross");
@@ -374,8 +388,11 @@
 
   function renderPay(totalMin) {
     var rateVal = rateEl ? parseFloat(String(rateEl.value).replace(/,/g, "")) : NaN;
-    var r = computePay(totalMin, rateVal, !!(otToggle && otToggle.checked));
+    var otOn = !!(otToggle && otToggle.checked);
+    var r = computePay(totalMin, rateVal, otOn,
+      otThrEl ? otThrEl.value : "", otMultEl ? otMultEl.value : "");
     var cur = curSel ? curSel.value : "USD";
+    if (otOptsEl) otOptsEl.hidden = !otOn;
     if (!r.hasRate || !hadAnyEntry) {
       payEmptyEl.hidden = false;
       payBodyEl.hidden = true;
@@ -416,7 +433,9 @@
         days: days,
         rate: rateEl ? rateEl.value : "",
         currency: curSel ? curSel.value : "",
-        ot: !!(otToggle && otToggle.checked)
+        ot: !!(otToggle && otToggle.checked),
+        otThr: otThrEl ? otThrEl.value : "",
+        otMult: otMultEl ? otMultEl.value : ""
       }));
     } catch (e) { /* private mode — 저장 실패는 계산에 영향 없음 */ }
   }
@@ -438,6 +457,8 @@
     }
     if (rateEl && saved.rate) rateEl.value = saved.rate;
     if (otToggle) otToggle.checked = !!saved.ot;
+    if (otThrEl && saved.otThr) otThrEl.value = saved.otThr;
+    if (otMultEl && saved.otMult) otMultEl.value = saved.otMult;
   }
 
   /* ---- 지우기 ---- */
@@ -451,6 +472,8 @@
     if (weekStartEl) weekStartEl.value = "";
     if (rateEl) rateEl.value = "";
     if (otToggle) otToggle.checked = true;
+    if (otThrEl) otThrEl.value = "";
+    if (otMultEl) otMultEl.value = "";
     persist();
     render();
   }
@@ -465,6 +488,9 @@
   if (rateEl) rateEl.addEventListener("input", function () { persist(); render(); });
   if (curSel) curSel.addEventListener("change", function () { persist(); render(); });
   if (otToggle) otToggle.addEventListener("change", function () { persist(); render(); });
+  [otThrEl, otMultEl].forEach(function (el) {
+    if (el) el.addEventListener("input", function () { persist(); render(); });
+  });
   if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
   if (clearBtn) clearBtn.addEventListener("click", clearWeek);
 

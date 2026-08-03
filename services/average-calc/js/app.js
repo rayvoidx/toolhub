@@ -162,8 +162,17 @@
       gmean = Math.exp(logSum / count);
     }
 
+    // 표본표준편차(n-1). 값이 1개면 정의되지 않음 → null(호출부가 안내 문구 표시).
+    var sd = null;
+    if (count > 1) {
+      var sq = 0;
+      for (i = 0; i < count; i++) { var d = values[i] - mean; sq += d * d; }
+      sd = Math.sqrt(sq / (count - 1));
+      if (!isFinite(sd)) sd = null;
+    }
+
     return {
-      count: count, sum: sum, mean: mean, median: median,
+      count: count, sum: sum, mean: mean, median: median, sd: sd,
       min: min, max: max, range: range,
       modeVals: modeVals, noMode: noMode, gmean: gmean
     };
@@ -237,6 +246,7 @@
       ? tr("tool.mode.none", "No mode (every value is unique)")
       : stats.modeVals.map(function (v) { return fmt(v); }).join(", "));
     setCard("gmean", stats.gmean == null ? "—" : fmt(stats.gmean));
+    setCard("sd", stats.sd == null ? "—" : fmt(stats.sd));
 
     emptyEl.hidden = true;
     gridEl.hidden = false;
@@ -251,6 +261,9 @@
     }
     if (parsed.clipped) {
       notes.push(tr("tool.clipped", "Some values were capped at ±{max} to prevent overflow").replace("{max}", fmt(MAX_ABS, 0)));
+    }
+    if (stats.sd == null) {
+      notes.push(tr("tool.sd.na", "Standard deviation needs at least two numbers"));
     }
     if (stats.gmean == null) {
       notes.push(tr("tool.gmean.na", "Geometric mean needs every number to be positive"));

@@ -89,9 +89,9 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var htype = $("htype"), hh = $("hh"), gw = $("gw");
+  var htype = $("htype"), hh = $("hh"), gw = $("gw"), gwc = $("gwc"), slen = $("slen");
   var result = $("result"), errEl = $("err");
-  if (!htype || !hh || !gw || !result) return;
+  if (!htype || !hh || !gw || !slen || !result) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -108,20 +108,39 @@
   var HH_FIXTURES = { a: 1, b: 2, c: 3 };        // 인원별 전형적 동시 사용 기구 수
 
   function fmt1(n) { return (Math.round(n * 10) / 10).toFixed(1); }
+  function fmtG(n) { return String(Math.round(n * 10) / 10); }
   function tankless() { return htype.value === "tankless"; }
+  // 샤워 시간은 탱크 사용량의 최대 변수다. 1.25 gal/분(혼합 온수) x 시간 — 기본 8분이 기존 10갤런과 같다.
+  var SHOWER_GAL_PER_MIN = 1.25;
+  function showerMin() { var v = parseInt(slen.value, 10); return isFinite(v) && v > 0 ? v : 8; }
+  function galOf(u) { return u.id === "shower" ? SHOWER_GAL_PER_MIN * showerMin() : u.gal; }
+  // 프리셋 3개로는 실제 지역 수온을 다 못 덮는다 — 직접 입력을 허용하되 목표 105F 아래로 묶는다.
+  function inletF() {
+    if (gw.value !== "custom") return parseFloat(gw.value);
+    var raw = String(gwc.value).trim();
+    var v = parseFloat(raw);
+    if (!/^-?\d+(\.\d+)?$/.test(raw) || !isFinite(v) || v < 33 || v > 95) return null;
+    return v;
+  }
+  function syncGw() { gwc.hidden = !(tankless() && gw.value === "custom"); }
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
 
   // 종류를 바꾸면 라벨과 단위 표기가 통째로 바뀐다 — 마크업이 아니라 여기서 한 번에 맞춘다.
   function syncType() {
     var tl = tankless(), headKey = tl ? "tool.use.tankless" : "tool.use.tank";
     $("gw-row").hidden = !tl;
+    $("sl-row").hidden = tl;   // 순간식은 유량 기준이라 샤워 길이가 용량을 바꾸지 않는다
+    syncGw();
+    for (var i = 0; i < slen.options.length; i++) {
+      slen.options[i].textContent = slen.options[i].value + " " + t("tool.unit.min");
+    }
     var head = $("uses-head");
     head.setAttribute("data-i18n", headKey);
     head.textContent = t(headKey);
     USES.forEach(function (u) {
       $("rate-" + u.id).textContent = tl
         ? fmt1(u.gpm) + " " + t("tool.unit.gpm")
-        : u.gal + " " + t("tool.unit.gal");
+        : fmtG(galOf(u)) + " " + t("tool.unit.gal");
     });
   }
 
@@ -133,7 +152,7 @@
       var raw = String($("n-" + u.id).value).trim();
       var n = parseInt(raw, 10);
       if (!/^\d+$/.test(raw) || !isFinite(n) || n < 1 || n > 9) { bad = true; return; }
-      var amount = n * (tl ? u.gpm : u.gal);
+      var amount = n * (tl ? u.gpm : galOf(u));
       total += amount;
       picked.push({ key: u.key, n: n, amount: amount });
     });
@@ -142,16 +161,18 @@
 
     var rise = 0, sizeText, clsKey, l2Key, v2Text;
     if (tl) {
-      rise = TARGET_F - parseFloat(gw.value);
+      var inlet = inletF();
+      if (inlet === null) return fail("tool.err.gw");
+      rise = Math.round(TARGET_F - inlet);
       sizeText = fmt1(total) + " " + t("tool.unit.gpm") + " @ " + rise + "\u00B0F";
       clsKey = total <= 3.5 ? "tool.cls.k1" : total <= 5 ? "tool.cls.k2" : total <= 7 ? "tool.cls.k3" : "tool.cls.k4";
       l2Key = "tool.r.gpm";
       v2Text = fmt1(total) + " " + t("tool.unit.gpm");
     } else {
       // FHR 구간 → 실제로 파는 탱크 계단. 75 초과는 단일 탱크로 덮기 어려워 2대 옵션을 같이 낸다.
-      var rec = total <= 45 ? 40 : total <= 60 ? 50 : total <= 75 ? 65 : 0;
+      var rec = total <= 30 ? 30 : total <= 45 ? 40 : total <= 60 ? 50 : total <= 75 ? 65 : 0;
       sizeText = (rec ? String(rec) : "75-80") + " " + t("tool.unit.gal");
-      clsKey = rec === 40 ? "tool.cls.t40" : rec === 50 ? "tool.cls.t50" : rec === 65 ? "tool.cls.t65" : "tool.cls.t80";
+      clsKey = rec === 30 ? "tool.cls.t30" : rec === 40 ? "tool.cls.t40" : rec === 50 ? "tool.cls.t50" : rec === 65 ? "tool.cls.t65" : "tool.cls.t80";
       l2Key = "tool.r.fhr";
       v2Text = Math.round(total) + " " + t("tool.unit.gal");
     }
@@ -174,7 +195,7 @@
       var val = document.createElement("span");
       val.textContent = tl
         ? fmt1(p.amount) + " " + t("tool.unit.gpm")
-        : p.amount + " " + t("tool.unit.gal");
+        : fmtG(p.amount) + " " + t("tool.unit.gal");
       li.appendChild(name);
       li.appendChild(val);
       list.appendChild(li);
@@ -196,7 +217,10 @@
 
   $("calc-btn").addEventListener("click", calc);
   htype.addEventListener("change", function () { syncType(); if (live()) calc(); });
-  [hh, gw].forEach(function (el) { el.addEventListener("change", function () { if (live()) calc(); }); });
+  slen.addEventListener("change", function () { syncType(); if (live()) calc(); });
+  [hh, gw].forEach(function (el) { el.addEventListener("change", function () { syncGw(); if (live()) calc(); }); });
+  gwc.addEventListener("input", function () { if (live()) calc(); });
+  gwc.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   USES.forEach(function (u) {
     $("c-" + u.id).addEventListener("change", function () { if (live()) calc(); });
     var q = $("n-" + u.id);

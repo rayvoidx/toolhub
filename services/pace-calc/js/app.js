@@ -157,8 +157,9 @@
   }
 
   // Constant-pace split table. unit meters per split, capped at MAX_SPLIT_ROWS.
-  function buildSplits(distM, timeS, unit, maxRows) {
-    var uM = unitMeters(unit);
+  function buildSplits(distM, timeS, unit, maxRows, interval) {
+    var mult = (typeof interval === "number" && isFinite(interval) && interval > 0) ? interval : 1;
+    var uM = unitMeters(unit) * mult;
     var totalUnits = distM / uM;
     var paceSecPerUnit = timeS / totalUnits;
     var fullUnits = Math.floor(totalUnits + 1e-9);
@@ -224,6 +225,23 @@
   var clippedEl = $("r-clipped");
   var splitsHeadingEl = $("splits-heading"), splitsBody = $("splits-body"), splitsTruncEl = $("splits-truncated");
   var splitsSection = $("splits-section");
+  var intervalSelect = $("split-interval");
+
+  function currentInterval() {
+    var v = intervalSelect ? parseFloat(intervalSelect.value) : 1;
+    return (isFinite(v) && v > 0) ? v : 1;
+  }
+  function syncIntervalLabels() {
+    if (!intervalSelect) return;
+    var unit = currentUnit();
+    for (var i = 0; i < intervalSelect.options.length; i++) {
+      var o = intervalSelect.options[i];
+      var n = parseFloat(o.value);
+      o.textContent = t("tool.splits.every", "Every {n} {u}")
+        .replace("{n}", fmtNum(n, n === Math.round(n) ? 0 : 1))
+        .replace("{u}", unit);
+    }
+  }
 
   if (!modeSeg || !unitSelect || !distanceInput || !timeInput || !paceInput || !calcBtn || !box) return;
 
@@ -341,9 +359,15 @@
     clippedEl.hidden = !state.clipped;
 
     // 스플릿 테이블
-    var sp = buildSplits(distM, timeS, unit, MAX_SPLIT_ROWS);
+    var interval = currentInterval();
+    syncIntervalLabels();
+    var sp = buildSplits(distM, timeS, unit, MAX_SPLIT_ROWS, interval);
     splitsHeadingEl.textContent = t("tool.splits.heading", "Splits") + " — " +
-      t("tool.splits.unit." + unit, unit === "mi" ? "per mi" : "per km");
+      (interval === 1
+        ? t("tool.splits.unit." + unit, unit === "mi" ? "per mi" : "per km")
+        : t("tool.splits.every", "Every {n} {u}")
+            .replace("{n}", fmtNum(interval, interval === Math.round(interval) ? 0 : 1))
+            .replace("{u}", unit));
     splitsBody.textContent = "";
     for (var i = 0; i < sp.rows.length; i++) {
       var r = sp.rows[i];
@@ -432,7 +456,8 @@
 
     try {
       localStorage.setItem(LS_KEY, JSON.stringify({
-        mode: mode, unit: unit, distance: distRaw, time: timeRaw, pace: paceRaw
+        mode: mode, unit: unit, distance: distRaw, time: timeRaw, pace: paceRaw,
+        interval: currentInterval()
       }));
     } catch (e) { /* private mode — 저장 실패 무시 */ }
   }
@@ -443,6 +468,8 @@
   paceInput.addEventListener("input", calculate);
   calcBtn.addEventListener("click", calculate);
   unitSelect.addEventListener("change", onUnitChange);
+  unitSelect.addEventListener("change", syncIntervalLabels);
+  if (intervalSelect) intervalSelect.addEventListener("change", calculate);
 
   var modeRadios = document.querySelectorAll('input[name="solvemode"]');
   for (var mi = 0; mi < modeRadios.length; mi++) {
@@ -455,6 +482,7 @@
   renderPresets();
   syncModeUI();
   syncPaceLabel();
+  syncIntervalLabels();
 
   // 마지막 입력값 복원
   (function restore() {
@@ -466,6 +494,12 @@
       if (p.mode === "time" || p.mode === "pace" || p.mode === "distance") {
         var r = document.querySelector('input[name="solvemode"][value="' + p.mode + '"]');
         if (r) r.checked = true;
+      }
+      if (intervalSelect && p.interval) {
+        var iv = String(p.interval);
+        for (var oi = 0; oi < intervalSelect.options.length; oi++) {
+          if (intervalSelect.options[oi].value === iv) { intervalSelect.value = iv; break; }
+        }
       }
       if (p.distance) distanceInput.value = p.distance;
       if (p.time) timeInput.value = p.time;
@@ -479,6 +513,7 @@
   // 언어 전환 시 동적 문구(라벨·결과·오류·스플릿) 재렌더
   document.addEventListener("i18n:change", function () {
     syncPaceLabel();
+    syncIntervalLabels();
     if (!last) return;
     if (last.kind === "error") showError(last.key, last.fallback);
     else render(last.state);

@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Rent Split Calculator — Split Rent by Room Size">
 <meta property="og:description" content="Split rent between roommates evenly, by room size in square feet, or by income. Handles uneven bedrooms and the 70/30 hybrid split most house shares use.">
 <meta property="og:url" content="https://tool-hub.me/rent-split-calc/">
-<meta property="og:image" content="https://tool-hub.me/rent-split-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/rent-split-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0284c7">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Rent Split Calculator",
+      "item": "https://tool-hub.me/rent-split-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Rent Split Calculator",
-      "item": "https://tool-hub.me/rent-split-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -197,6 +207,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <select id="mode">
           <option value="basic" data-i18n="tool.mode.basic">Basic — full rent split proportionally</option>
           <option value="hybrid" data-i18n="tool.mode.hybrid">Hybrid — 70% proportional, 30% equal</option>
+          <option value="hybrid80" data-i18n="tool.mode.hybrid80">Hybrid — 80% proportional, 20% equal</option>
+          <option value="hybrid50" data-i18n="tool.mode.hybrid50">Hybrid — 50% proportional, 50% equal</option>
         </select>
       </div>
     </div>
@@ -218,6 +230,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="srow">
       <input type="text" id="n4" maxlength="24" autocomplete="off" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
       <input type="number" id="v4" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
+    </div>
+    <div class="srow">
+      <input type="text" id="n5" maxlength="24" autocomplete="off" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
+      <input type="number" id="v5" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
+    </div>
+    <div class="srow">
+      <input type="text" id="n6" maxlength="24" autocomplete="off" data-i18n-aria-label="tool.a.name" aria-label="Roommate name">
+      <input type="number" id="v6" inputmode="decimal" min="0" step="any" autocomplete="off" data-i18n-aria-label="tool.a.value" aria-label="Room size or income for this roommate">
     </div>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Split the rent</button>

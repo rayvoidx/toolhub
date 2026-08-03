@@ -93,6 +93,7 @@
   var SLUG = cfg.slug || "time-zone-conv";
   var LS_CITIES = SLUG + ":cities";   // 상태 저장은 "<slug>:" prefix 만
   var LS_BASE = SLUG + ":base";       // 기준 시간대
+  var LS_CLOCK = SLUG + ":clock";     // 12/24시간 표시 (auto|12|24)
   var MAX_CITIES = 12;
   var DEFAULT_CITIES = [
     "America/New_York", "America/Los_Angeles", "Europe/London", "Europe/Paris",
@@ -131,6 +132,22 @@
   ];
   var BY_TZ = {};
   for (var ci = 0; ci < CITIES.length; ci++) BY_TZ[CITIES[ci].tz] = CITIES[ci];
+
+  // 프리셋에 없는 도시를 위한 전체 IANA 목록 (브라우저 내장, 외부 호출 0건)
+  function allTzList() {
+    try {
+      if (typeof Intl.supportedValuesOf === "function") {
+        return Intl.supportedValuesOf("timeZone") || [];
+      }
+    } catch (e) { /* 미지원 엔진 → 프리셋만 */ }
+    return [];
+  }
+  function validTz(tz) {
+    if (!tz || typeof tz !== "string") return false;
+    if (BY_TZ[tz]) return true;
+    try { new Intl.DateTimeFormat("en-US", { timeZone: tz }); return true; }
+    catch (e) { return false; }
+  }
 
   /* ============================================================
      순수 계산 (node 단위 검증 대상 — 브라우저 IANA DB로 DST 자동 반영)
@@ -221,7 +238,11 @@
     try { if (window.I18N && window.I18N.lang()) return window.I18N.lang(); } catch (e) { /* noop */ }
     return undefined;
   }
-  function cityName(tz) { return BY_TZ[tz] ? BY_TZ[tz].name : tz.replace(/_/g, " "); }
+  function cityName(tz) {
+    if (BY_TZ[tz]) return BY_TZ[tz].name;
+    var seg = String(tz).split("/").pop();
+    return seg.replace(/_/g, " ");
+  }
 
   /* ---- Intl timeZone 지원 감지 (조용한 실패 금지) ---- */
   var HOME_TZ, intlOk = true;
@@ -233,7 +254,7 @@
   /* ---- DOM ---- */
   function $(id) { return document.getElementById(id); }
   var dtInput = $("tzc-datetime"), nowBtn = $("tzc-now");
-  var baseSel = $("tzc-basezone"), addSel = $("tzc-addcity");
+  var baseSel = $("tzc-basezone"), addSel = $("tzc-addcity"), clockSel = $("tzc-clock");
   var noticeEl = $("tzc-notice"), gridEl = $("tzc-grid"), emptyEl = $("tzc-empty");
   var toastEl = $("tzc-toast");
   if (!dtInput || !baseSel || !gridEl) return; // node/구형 환경 — 안전 종료
@@ -247,6 +268,7 @@
     }
     dtInput.disabled = true; if (nowBtn) nowBtn.disabled = true;
     baseSel.disabled = true; if (addSel) addSel.disabled = true;
+    if (clockSel) clockSel.disabled = true;
     return;
   }
 
@@ -258,6 +280,7 @@
   /* ---- 상태 ---- */
   var cities = loadCities();     // tz id 배열
   var baseTz = loadBase();       // 기준 시간대
+  var clockPref = loadClock();   // "auto" | "12" | "24"
   var cards = [];                // { tz, nameEl, timeEl, dateEl, offEl, dayEl, dstEl, copyBtn }
   var lastEpoch = null, lastValid = false;
 
@@ -269,7 +292,7 @@
         if (Object.prototype.toString.call(arr) === "[object Array]") {
           var clean = [];
           for (var i = 0; i < arr.length; i++) {
-            if (BY_TZ[arr[i]] && clean.indexOf(arr[i]) === -1) clean.push(arr[i]);
+            if (validTz(arr[i]) && clean.indexOf(arr[i]) === -1) clean.push(arr[i]);
           }
           return clean.slice(0, MAX_CITIES); // 사용자가 전부 지운 빈 배열도 존중
         }
@@ -280,20 +303,30 @@
   }
   function loadBase() {
     var raw = lsGet(LS_BASE);
-    if (raw && (BY_TZ[raw] || raw === HOME_TZ)) return raw;
+    if (raw && validTz(raw)) return raw;
     return HOME_TZ;
   }
+  function loadClock() {
+    var raw = lsGet(LS_CLOCK);
+    return (raw === "12" || raw === "24") ? raw : "auto"; // 기본값 = 브라우저 언어 관습
+  }
+  function saveClock() { lsSet(LS_CLOCK, clockPref); }
   function saveCities() { lsSet(LS_CITIES, JSON.stringify(cities)); }
   function saveBase() { lsSet(LS_BASE, baseTz); }
 
   /* ---- 표시 포맷 (로케일·DST 반영) ---- */
   function fmtTime(tz, date) {
+    var opts = { timeZone: tz, hour: "numeric", minute: "2-digit" };
+    if (clockPref === "24") { opts.hour12 = false; opts.hourCycle = "h23"; }
+    else if (clockPref === "12") { opts.hour12 = true; }
     try {
-      return new Intl.DateTimeFormat(uiLang(), {
-        timeZone: tz, hour: "numeric", minute: "2-digit"
-      }).format(date);
+      return new Intl.DateTimeFormat(uiLang(), opts).format(date);
     } catch (e) {
       var p = numParts(makeNumFmt(tz), date);
+      if (clockPref === "12") {
+        var h12 = p.hour % 12; if (h12 === 0) h12 = 12;
+        return h12 + ":" + pad2(p.minute) + (p.hour < 12 ? " AM" : " PM");
+      }
       return pad2(p.hour) + ":" + pad2(p.minute);
     }
   }
@@ -361,8 +394,28 @@
       o.textContent = cityName(CITIES[i].tz) + " (UTC" +
         formatOffset(zoneOffsetMinutes(new Date(), CITIES[i].tz)) + ")";
       baseSel.appendChild(o);
+      seen[CITIES[i].tz] = 1;
+    }
+    var all = allTzList();
+    if (all.length) {
+      var g = document.createElement("optgroup");
+      g.label = tr("tool.groupAll", "All time zones");
+      for (var j = 0; j < all.length; j++) {
+        if (seen[all[j]]) continue;
+        var oa = document.createElement("option");
+        oa.value = all[j];
+        oa.textContent = all[j].replace(/_/g, " ");
+        g.appendChild(oa);
+      }
+      baseSel.appendChild(g);
     }
     baseSel.value = baseTz;
+    if (baseSel.value !== baseTz) { // 목록에 없는 감지 존 폴백
+      var ox = document.createElement("option");
+      ox.value = baseTz; ox.textContent = baseTz.replace(/_/g, " ");
+      baseSel.insertBefore(ox, baseSel.firstChild);
+      baseSel.value = baseTz;
+    }
   }
   function buildAddSelect() {
     if (!addSel) return;
@@ -371,12 +424,28 @@
     ph.value = "";
     ph.textContent = tr("tool.addCityOption", "Add a city…");
     addSel.appendChild(ph);
+    var gp = document.createElement("optgroup");
+    gp.label = tr("tool.groupPopular", "Popular cities");
     for (var i = 0; i < CITIES.length; i++) {
       if (cities.indexOf(CITIES[i].tz) !== -1) continue; // 이미 추가된 도시 제외
       var o = document.createElement("option");
       o.value = CITIES[i].tz;
       o.textContent = cityName(CITIES[i].tz);
-      addSel.appendChild(o);
+      gp.appendChild(o);
+    }
+    if (gp.childNodes.length) addSel.appendChild(gp);
+    var all = allTzList();
+    if (all.length) {
+      var g = document.createElement("optgroup");
+      g.label = tr("tool.groupAll", "All time zones");
+      for (var j = 0; j < all.length; j++) {
+        if (BY_TZ[all[j]] || cities.indexOf(all[j]) !== -1) continue;
+        var oa = document.createElement("option");
+        oa.value = all[j];
+        oa.textContent = all[j].replace(/_/g, " ");
+        g.appendChild(oa);
+      }
+      addSel.appendChild(g);
     }
     addSel.value = "";
   }
@@ -515,7 +584,7 @@
 
   /* ---- 도시 추가/삭제 ---- */
   function addCity(tz) {
-    if (!BY_TZ[tz]) return;
+    if (!validTz(tz)) return;
     if (cities.indexOf(tz) !== -1) { toast("tool.duplicate", "That city is already in your list."); return; }
     if (cities.length >= MAX_CITIES) { toast("tool.max", "You can convert up to 12 cities at once."); return; }
     cities.push(tz);
@@ -547,6 +616,15 @@
     dtInput.value = p.year + "-" + pad2(p.month) + "-" + pad2(p.day) + "T" + pad2(p.hour) + ":" + pad2(p.minute);
     render();
   });
+  if (clockSel) {
+    clockSel.value = clockPref;
+    clockSel.addEventListener("change", function () {
+      var v = clockSel.value;
+      clockPref = (v === "12" || v === "24") ? v : "auto";
+      saveClock();
+      render();
+    });
+  }
   if (addSel) addSel.addEventListener("change", function () {
     if (addSel.value) addCity(addSel.value);
     addSel.value = "";

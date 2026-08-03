@@ -92,6 +92,7 @@
   var LAST_KEY = "url-encoder:last";  // 마지막 Text 입력
   var MODE_KEY = "url-encoder:mode";  // "component" | "full"
   var FORM_KEY = "url-encoder:form";  // "1" | "0"
+  var STRICT_KEY = "url-encoder:strict"; // "1" | "0" — RFC 3986 여분 문자(!'()*)까지 인코딩
 
   function t(key) {
     var v = (window.I18N && typeof window.I18N.t === "function") ? window.I18N.t(key) : null;
@@ -104,6 +105,7 @@
   var modeCompEl= document.getElementById("mode-component");
   var modeFullEl= document.getElementById("mode-full");
   var formEl    = document.getElementById("ue-form");
+  var strictEl  = document.getElementById("ue-strict");
   var encodeBtn = document.getElementById("dir-encode");
   var decodeBtn = document.getElementById("dir-decode");
   var clearBtn  = document.getElementById("ue-clear");
@@ -124,6 +126,10 @@
   function encode(str) {
     if (str === "") return "";
     var out = mode() === "full" ? encodeURI(str) : encodeURIComponent(str);
+    // encodeURIComponent 가 남기는 !'()* 를 RFC 3986 대로 퍼센트 인코딩 (기본 꺼짐)
+    if (strictEl && strictEl.checked && mode() !== "full") {
+      out = out.replace(/[!'()*]/g, function (c) { return "%" + c.charCodeAt(0).toString(16).toUpperCase(); });
+    }
     if (formEl && formEl.checked) out = out.replace(/%20/g, "+");
     return out;
   }
@@ -237,6 +243,7 @@
     try { localStorage.setItem(LAST_KEY, textEl.value); } catch (e) { /* private mode */ }
     try { localStorage.setItem(MODE_KEY, mode()); } catch (e) { /* noop */ }
     try { localStorage.setItem(FORM_KEY, (formEl && formEl.checked) ? "1" : "0"); } catch (e) { /* noop */ }
+    try { localStorage.setItem(STRICT_KEY, (strictEl && strictEl.checked) ? "1" : "0"); } catch (e) { /* noop */ }
   }
 
   /* ---------- 메시지 & 복사 ---------- */
@@ -305,6 +312,7 @@
   if (modeCompEl) modeCompEl.addEventListener("change", onOption);
   if (modeFullEl) modeFullEl.addEventListener("change", onOption);
   if (formEl)     formEl.addEventListener("change", onOption);
+  if (strictEl)   strictEl.addEventListener("change", onOption);
   if (clearBtn) clearBtn.addEventListener("click", function () {
     textEl.value = "";
     urlEl.value = "";
@@ -341,6 +349,10 @@
     try {
       var f = localStorage.getItem(FORM_KEY);
       if (f === "1" && formEl) formEl.checked = true;
+    } catch (e) { /* noop */ }
+    try {
+      var st = localStorage.getItem(STRICT_KEY);
+      if (st === "1" && strictEl) strictEl.checked = true;
     } catch (e) { /* noop */ }
     try {
       var last = localStorage.getItem(LAST_KEY);

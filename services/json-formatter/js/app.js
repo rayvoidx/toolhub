@@ -120,7 +120,7 @@
   var downloadBtn= document.getElementById("jf-download");
 
   var mode   = "format"; // "format" | "minify" — 즉시 출력의 형태
-  var indent = "2";      // "2" | "4" | "tab"
+  var indent = "2";      // "2" | "3" | "4" | "tab"
   var lastDiag = null;   // 마지막 오류 진단 (Jump 버튼용)
 
   // ----- i18n 헬퍼 (없거나 키 미존재 시 키 문자열로 폴백) -----
@@ -156,7 +156,7 @@
     return v;
   }
 
-  /** 들여쓰기 인자: '2'|'4' → 숫자, 'tab' → '\t' */
+  /** 들여쓰기 인자: '2'|'3'|'4' → 숫자, 'tab' → '\t' */
   function currentIndent() {
     if (indent === "tab") return "\t";
     var n = parseInt(indent, 10);
@@ -668,7 +668,7 @@
   }
 
   function setIndent(next) {
-    indent = (next === "4" || next === "tab") ? next : "2";
+    indent = (next === "3" || next === "4" || next === "tab") ? next : "2";
     paintToggles();
     savePrefs();
     run(false);
@@ -764,7 +764,7 @@
     } catch (e) { /* noop */ }
     try {
       var ind = localStorage.getItem(INDENT_KEY);
-      if (ind === "2" || ind === "4" || ind === "tab") indent = ind;
+      if (ind === "2" || ind === "3" || ind === "4" || ind === "tab") indent = ind;
       var md = localStorage.getItem(MODE_KEY);
       if (md === "format" || md === "minify") mode = md;
       var srt = localStorage.getItem(SORT_KEY);

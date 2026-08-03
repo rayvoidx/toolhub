@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Tank Volume Calculator — Gallons, Liters, Fill Level">
 <meta property="og:description" content="Find tank capacity in US gallons, liters and cubic feet for horizontal, vertical or rectangular tanks, plus the volume held at any measured fill depth.">
 <meta property="og:url" content="https://tool-hub.me/tank-volume-calc/">
-<meta property="og:image" content="https://tool-hub.me/tank-volume-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/tank-volume-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#075985">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tank Volume Calculator",
+      "item": "https://tool-hub.me/tank-volume-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Tank Volume Calculator",
-      "item": "https://tool-hub.me/tank-volume-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -177,6 +187,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <select id="unit">
           <option value="in" data-i18n="tool.unit.in">Inches</option>
           <option value="cm" data-i18n="tool.unit.cm">Centimeters</option>
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Meters</option>
         </select>
       </div>
       <div>
@@ -219,6 +231,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <input type="number" id="fill" inputmode="decimal" min="0" max="5000" step="any" autocomplete="off" placeholder="20">
     <p class="subtle" data-i18n="tool.fill.hint" style="margin:6px 0 0;">Leave blank for full capacity. Measure from the inside bottom of the tank.</p>
 
+    <label for="liquid" data-i18n="tool.liquid.label" style="margin-top:12px;">Liquid</label>
+    <select id="liquid">
+      <option value="8.34" data-i18n="tool.liquid.water">Fresh water</option>
+      <option value="8.55" data-i18n="tool.liquid.salt">Salt water</option>
+      <option value="7.1" data-i18n="tool.liquid.diesel">Diesel</option>
+      <option value="6.1" data-i18n="tool.liquid.gas">Gasoline</option>
+    </select>
+
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate volume</button>
 
     <div id="result" hidden>
@@ -227,6 +247,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="rc-label" data-i18n="tool.r.gal">US gallons</div>
           <div class="rc-val" id="r-gal">—</div>
         </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.impgal">Imperial gallons (UK)</div><div class="rc-val" id="r-impgal">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.liters">Liters</div><div class="rc-val" id="r-liters">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.ft3">Cubic feet</div><div class="rc-val" id="r-ft3">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.weight">Water weight (lb)</div><div class="rc-val" id="r-weight">—</div></div>
@@ -235,7 +256,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <p class="err" id="err" hidden></p>
-    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Measure inside dimensions for true capacity; outside measurements overstate it by the wall thickness. Weight assumes fresh water at 8.34 lb per US gallon.</p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Measure inside dimensions for true capacity; outside measurements overstate it by the wall thickness. Weight uses the density of the liquid you pick.</p>
   </section>
   <!-- TOOL:END -->
 

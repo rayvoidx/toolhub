@@ -90,12 +90,17 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var weight = $("weight"), reps = $("reps"), unit = $("unit"), formula = $("formula");
-  var result = $("result"), errEl = $("err");
+  var rounding = $("rounding"), result = $("result"), errEl = $("err");
   if (!weight || !reps || !unit || !formula) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var num = function (el) { var v = parseFloat(String(el.value).replace(/,/g, "")); return isFinite(v) ? v : NaN; };
   var round = function (n) { return Math.round(n * 10) / 10; };
+  // 체육관에서 실제로 끼울 수 있는 원판 단위로 훈련 중량을 맞춘다 (0 = 반올림 안 함).
+  var step = function (n) {
+    var s = rounding ? parseFloat(rounding.value) : 0;
+    return (isFinite(s) && s > 0) ? Math.round(n / s) * s : round(n);
+  };
 
   // 반복이 늘수록 공식 간 차이가 벌어진다 — 하나만 쓰지 않고 범위를 함께 보여준다.
   var FORMULAS = {
@@ -119,14 +124,16 @@
     var all = Object.keys(FORMULAS).map(function (k) { return FORMULAS[k](w, r); });
     var max = FORMULAS[formula.value](w, r);
 
-    $("r-max").textContent = round(max) + " " + u;
+    // 체육관 원판이 kg/lb 로 갈리므로 반대 단위 환산을 함께 보여준다.
+    var twin = u === "kg" ? round(max * 2.20462) + " lb" : round(max / 2.20462) + " kg";
+    $("r-max").textContent = round(max) + " " + u + " (" + twin + ")";
     $("r-spread").textContent = round(Math.min.apply(null, all)) + "-" + round(Math.max.apply(null, all)) + " " + u;
 
     var body = $("pct-body");
     body.textContent = "";
     PCTS.forEach(function (row) {
       var tr = document.createElement("tr");
-      [row[0] + "%", round(max * row[0] / 100) + " " + u, row[1]].forEach(function (v) {
+      [row[0] + "%", step(max * row[0] / 100) + " " + u, row[1]].forEach(function (v) {
         var td = document.createElement("td"); td.textContent = v; tr.appendChild(td);
       });
       body.appendChild(tr);
@@ -140,7 +147,7 @@
   [weight, reps].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [unit, formula].forEach(function (el) {
+  [unit, formula, rounding].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!errEl.hidden) calc(); });

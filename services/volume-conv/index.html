@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -213,6 +223,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="ml" data-i18n="tool.unit.ml">Milliliter (mL)</option>
           <option value="l" data-i18n="tool.unit.l">Liter (L)</option>
           <option value="m3" data-i18n="tool.unit.m3">Cubic meter (m³)</option>
+          <option value="in3" data-i18n="tool.unit.in3">Cubic inch (in³)</option>
+          <option value="ft3" data-i18n="tool.unit.ft3">Cubic foot (ft³)</option>
           <option value="tsp" data-i18n="tool.unit.tsp">Teaspoon US (tsp)</option>
           <option value="tbsp" data-i18n="tool.unit.tbsp">Tablespoon US (tbsp)</option>
           <option value="floz" data-i18n="tool.unit.floz">Fluid ounce US (fl oz)</option>
@@ -221,6 +233,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="qt" data-i18n="tool.unit.qt">Quart US (qt)</option>
           <option value="galus" selected data-i18n="tool.unit.galus">Gallon US (gal)</option>
           <option value="galuk" data-i18n="tool.unit.galuk">Gallon UK (imperial)</option>
+          <option value="flozuk" data-i18n="tool.unit.flozuk">Fluid ounce UK (imperial)</option>
+          <option value="ptuk" data-i18n="tool.unit.ptuk">Pint UK (imperial)</option>
         </select>
       </div>
       <button type="button" class="vc-swap" id="vc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
@@ -230,6 +244,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="ml" data-i18n="tool.unit.ml">Milliliter (mL)</option>
           <option value="l" selected data-i18n="tool.unit.l">Liter (L)</option>
           <option value="m3" data-i18n="tool.unit.m3">Cubic meter (m³)</option>
+          <option value="in3" data-i18n="tool.unit.in3">Cubic inch (in³)</option>
+          <option value="ft3" data-i18n="tool.unit.ft3">Cubic foot (ft³)</option>
           <option value="tsp" data-i18n="tool.unit.tsp">Teaspoon US (tsp)</option>
           <option value="tbsp" data-i18n="tool.unit.tbsp">Tablespoon US (tbsp)</option>
           <option value="floz" data-i18n="tool.unit.floz">Fluid ounce US (fl oz)</option>
@@ -238,6 +254,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="qt" data-i18n="tool.unit.qt">Quart US (qt)</option>
           <option value="galus" data-i18n="tool.unit.galus">Gallon US (gal)</option>
           <option value="galuk" data-i18n="tool.unit.galuk">Gallon UK (imperial)</option>
+          <option value="flozuk" data-i18n="tool.unit.flozuk">Fluid ounce UK (imperial)</option>
+          <option value="ptuk" data-i18n="tool.unit.ptuk">Pint UK (imperial)</option>
         </select>
       </div>
     </div>
@@ -263,6 +281,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <tr data-unit="ml"><td data-i18n="tool.unit.ml">Milliliter (mL)</td><td class="vc-val" id="cell-ml">—</td></tr>
           <tr data-unit="l"><td data-i18n="tool.unit.l">Liter (L)</td><td class="vc-val" id="cell-l">—</td></tr>
           <tr data-unit="m3"><td data-i18n="tool.unit.m3">Cubic meter (m³)</td><td class="vc-val" id="cell-m3">—</td></tr>
+          <tr data-unit="in3"><td data-i18n="tool.unit.in3">Cubic inch (in³)</td><td class="vc-val" id="cell-in3">—</td></tr>
+          <tr data-unit="ft3"><td data-i18n="tool.unit.ft3">Cubic foot (ft³)</td><td class="vc-val" id="cell-ft3">—</td></tr>
           <tr data-unit="tsp"><td data-i18n="tool.unit.tsp">Teaspoon US (tsp)</td><td class="vc-val" id="cell-tsp">—</td></tr>
           <tr data-unit="tbsp"><td data-i18n="tool.unit.tbsp">Tablespoon US (tbsp)</td><td class="vc-val" id="cell-tbsp">—</td></tr>
           <tr data-unit="floz"><td data-i18n="tool.unit.floz">Fluid ounce US (fl oz)</td><td class="vc-val" id="cell-floz">—</td></tr>
@@ -271,6 +291,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <tr data-unit="qt"><td data-i18n="tool.unit.qt">Quart US (qt)</td><td class="vc-val" id="cell-qt">—</td></tr>
           <tr data-unit="galus"><td data-i18n="tool.unit.galus">Gallon US (gal)</td><td class="vc-val" id="cell-galus">—</td></tr>
           <tr data-unit="galuk"><td data-i18n="tool.unit.galuk">Gallon UK (imperial)</td><td class="vc-val" id="cell-galuk">—</td></tr>
+          <tr data-unit="flozuk"><td data-i18n="tool.unit.flozuk">Fluid ounce UK (imperial)</td><td class="vc-val" id="cell-flozuk">—</td></tr>
+          <tr data-unit="ptuk"><td data-i18n="tool.unit.ptuk">Pint UK (imperial)</td><td class="vc-val" id="cell-ptuk">—</td></tr>
         </tbody>
       </table>
       <p class="vc-hint" data-i18n="tool.note">Cups, pints, quarts, gallons, teaspoons and tablespoons are US customary units (1 US gallon = 3.785 L). Gallon UK is the larger imperial gallon (4.546 L).</p>

@@ -269,6 +269,26 @@
     return r;
   }
 
+  // 이웃 소수: n 미만 최대 소수 / n 초과 최소 소수. 못 찾으면(하한 없음·시간초과) null.
+  // ponytail: 선형 스캔 — 소수 간격은 ~ln n 이라 30자리에서도 수십 회면 끝난다.
+  function prevPrime(n, deadline) {
+    var c = n - 1n;
+    while (c >= 2n) {
+      if (isProbablePrime(c)) return c;
+      c -= 1n;
+      if (Date.now() > deadline) return null;
+    }
+    return null;
+  }
+  function nextPrime(n, deadline) {
+    var c = n + 1n;
+    while (true) {
+      if (isProbablePrime(c)) return c;
+      c += 1n;
+      if (Date.now() > deadline) return null;
+    }
+  }
+
   /* ===================== 표시 유틸 ===================== */
   var SUP = { "0":"⁰","1":"¹","2":"²","3":"³","4":"⁴","5":"⁵","6":"⁶","7":"⁷","8":"⁸","9":"⁹" };
   function toSuper(numStr) {
@@ -311,6 +331,7 @@
   var factorNote= document.getElementById("pc-factor-note");
   var divCountEl= document.getElementById("pc-divcount");
   var divSumEl  = document.getElementById("pc-divsum");
+  var nearestEl = document.getElementById("pc-nearest");
   var copyBtn   = document.getElementById("pc-copy-factor");
   var feedbackEl= document.getElementById("pc-feedback");
 
@@ -468,6 +489,15 @@
     } else {
       divCountEl.textContent = "—";
       divSumEl.textContent   = "—";
+    }
+
+    // 이웃 소수 (|n| 기준) — 시간 가드 내에서만
+    if (nearestEl) {
+      var nd = Date.now() + 1500;
+      var pv = prevPrime(n, nd), nx = nextPrime(n, nd);
+      nearestEl.textContent =
+        (pv == null ? "—" : groupDigits(pv.toString())) + " / " +
+        (nx == null ? "—" : groupDigits(nx.toString()));
     }
 
     detailEl.hidden = false;

@@ -98,14 +98,16 @@
   var FACTOR = {
     J: 1,
     kJ: 1e3,
+    MJ: 1e6,
     cal: 4.184,
     kcal: 4184,
     Wh: 3600,
     kWh: 3.6e6,
     BTU: 1055.05585262,
-    ftlb: 1.3558179483314004
+    ftlb: 1.3558179483314004,
+    therm: 105505585.262 // US therm = 100,000 BTU(IT) — 가스 요금 고지서 단위
   };
-  var UNITS = ["J", "kJ", "cal", "kcal", "Wh", "kWh", "BTU", "ftlb"];
+  var UNITS = ["J", "kJ", "MJ", "cal", "kcal", "Wh", "kWh", "BTU", "ftlb", "therm"];
 
   // value(from 단위) → to 단위 : joule 을 매개로 환산
   function convert(value, from, to) {

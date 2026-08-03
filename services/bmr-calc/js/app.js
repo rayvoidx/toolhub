@@ -99,6 +99,7 @@
     "1.725": { key: "tool.activity.active",     fallback: "적극적 활동 (주 6~7회 운동) — ×1.725" },
     "1.9":   { key: "tool.activity.veryactive", fallback: "매우 적극적 (고강도 운동·육체노동) — ×1.9" }
   };
+  var RATES = [250, 500, 750, 1000]; // 하루 칼로리 적자/흑자 선택지 (기본 500)
 
   function $(id) { return document.getElementById(id); }
   var ageEl = $("age-input");
@@ -118,6 +119,9 @@
   var outMaintain = $("r-maintain");
   var outBulk = $("r-bulk");
   var belowEl = $("r-belowbmr");
+  var rateEl = $("rate-select");
+  var cutLabelEl = $("r-cut-label");
+  var bulkLabelEl = $("r-bulk-label");
   if (!ageEl || !heightEl || !weightEl || !activityEl || !calcBtn || !box) return;
 
   function t(key, fallback) {
@@ -137,11 +141,12 @@
       : 447.593 + 9.247 * weight + 3.098 * height - 4.330 * age;
     return { mifflin: mifflin, harris: harris };
   }
-  function computePlan(gender, age, height, weight, factor) {
+  function computePlan(gender, age, height, weight, factor, rate) {
     var raw = computeBMR(gender, age, height, weight);
     if (raw.mifflin <= 0 || raw.harris <= 0) return null; // 공식 결과 ≤ 0 → 입력 오류
+    rate = RATES.indexOf(Number(rate)) >= 0 ? Number(rate) : 500; // 허용 값 밖 → 기본 500
     var tdee = Math.round(raw.mifflin * factor); // TDEE 는 미플린 기준
-    var cut = tdee - 500;
+    var cut = tdee - rate;
     var bmi = weight / Math.pow(height / 100, 2);
     var plan = {
       mifflin: Math.round(raw.mifflin),
@@ -149,7 +154,8 @@
       tdee: tdee,
       cut: cut < 0 ? 0 : cut,
       maintain: tdee,
-      bulk: tdee + 500,
+      bulk: tdee + rate,
+      rate: rate,
       extreme: bmi < 10 || bmi > 60           // 극단 조합 경고 (bmi-calc 패턴)
     };
     plan.belowBmr = plan.cut < plan.mifflin;  // 감량 목표 < BMR → 주의 문구
@@ -186,6 +192,8 @@
     var act = ACT[factorStr] || ACT["1.55"];
     outActivity.textContent = t(act.key, act.fallback);
     outTdee.textContent = kcal(plan.tdee);
+    if (cutLabelEl) cutLabelEl.textContent = t("tool.result.cut", "감량 (−{n} kcal)").replace("{n}", group(plan.rate));
+    if (bulkLabelEl) bulkLabelEl.textContent = t("tool.result.bulk", "증량 (+{n} kcal)").replace("{n}", group(plan.rate));
     outCut.textContent = kcal(plan.cut);
     outMaintain.textContent = kcal(plan.maintain);
     outBulk.textContent = kcal(plan.bulk);
@@ -221,7 +229,8 @@
     }
 
     var factorStr = ACT[activityEl.value] ? activityEl.value : "1.55";
-    var plan = computePlan(gender, age, height, weight, Number(factorStr));
+    var rate = rateEl && RATES.indexOf(Number(rateEl.value)) >= 0 ? Number(rateEl.value) : 500;
+    var plan = computePlan(gender, age, height, weight, Number(factorStr), rate);
     if (!plan) {
       // 공식 결과 ≤ 0 (고령 + 저체중 등 극단 조합)
       showError("tool.err.invalid", "입력값을 확인해 주세요. 공식 결과가 유효하지 않습니다.");
@@ -231,10 +240,25 @@
 
     try {
       localStorage.setItem(LS_KEY, JSON.stringify({
-        gender: gender, age: age, height: height, weight: weight, activity: factorStr
+        gender: gender, age: age, height: height, weight: weight, activity: factorStr, rate: rate
       }));
     } catch (e) { /* private mode — 저장 실패는 무시 */ }
   }
+
+  // 적자/흑자 선택지 생성 (라벨은 현재 언어로 — i18n:change 시 재생성)
+  function buildRateOptions() {
+    if (!rateEl) return;
+    var keep = RATES.indexOf(Number(rateEl.value)) >= 0 ? rateEl.value : "500";
+    rateEl.innerHTML = "";
+    for (var i = 0; i < RATES.length; i++) {
+      var o = document.createElement("option");
+      o.value = String(RATES[i]);
+      o.textContent = t("tool.rate.option", "±{n} kcal/일").replace("{n}", group(RATES[i]));
+      rateEl.appendChild(o);
+    }
+    rateEl.value = keep;
+  }
+  buildRateOptions();
 
   // 저장된 마지막 입력값 복원 (localStorage — 서버 미전송)
   (function restoreLast() {
@@ -247,6 +271,7 @@
       if (p.height != null && p.height !== "") heightEl.value = p.height;
       if (p.weight != null && p.weight !== "") weightEl.value = p.weight;
       if (ACT[p.activity]) activityEl.value = p.activity;
+      if (rateEl && RATES.indexOf(Number(p.rate)) >= 0) rateEl.value = String(Number(p.rate));
     } catch (e) { /* 접근 불가·파싱 실패 — 빈 폼으로 시작 */ }
   })();
 
@@ -258,6 +283,7 @@
 
   // 언어 전환 시 동적 문구(숫자 단위·오류·활동 라벨) 재렌더
   document.addEventListener("i18n:change", function () {
+    buildRateOptions();
     if (!last) return;
     if (last.kind === "error") showError(last.key, last.fallback);
     else render(last.plan, last.factorStr);

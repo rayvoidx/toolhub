@@ -89,16 +89,16 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var miles = $("miles"), period = $("period"), rate = $("rate"), custom = $("custom-rate");
+  var miles = $("miles"), period = $("period"), rate = $("rate"), custom = $("custom-rate"), taxRate = $("tax-rate");
   var customRow = $("custom-row"), result = $("result"), errEl = $("err"), sanity = $("sanity");
-  if (!miles || !period || !rate || !custom) return;
+  if (!miles || !period || !rate || !custom || !taxRate) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   // 2025 IRS standard mileage rates (Notice 2025-05). 회사 자체 요율은 custom 으로 받는다.
   var RATES = { irs: 0.70, medical: 0.21, charity: 0.14 };
-  var MULT = { month: 12, quarter: 4, year: 1 };
-  var MONTHS = { month: 1, quarter: 3, year: 12 };
+  var MULT = { week: 52, month: 12, quarter: 4, year: 1 };
+  var MONTHS = { week: 12 / 52, month: 1, quarter: 3, year: 12 };
 
   function money(n) {
     var s = Math.abs(n).toFixed(2).split(".");
@@ -125,6 +125,10 @@
       r = RATES[rate.value];
     }
 
+    var tx = parseFloat(String(taxRate.value).replace(/%/g, ""));
+    if (String(taxRate.value).trim() === "") tx = 22;
+    if (!isFinite(tx) || tx < 0 || tx > 60) return fail("tool.err.tax");
+
     var p = MULT[period.value] ? period.value : "month";
     var total = m * r;
 
@@ -133,7 +137,8 @@
     $("r-annual").textContent = money(total * MULT[p]);
     $("r-annual-sub").textContent = t("tool.annual." + p);
     // 22% 구간은 예시 — 공제 가능 여부와 실제 세율은 사람마다 다르다(문구로 명시).
-    $("r-tax").textContent = money(total * 0.22);
+    $("r-tax").textContent = money(total * tx / 100);
+    $("r-tax-sub").textContent = "@ " + (Math.round(tx * 10) / 10) + "%";
 
     var perMonth = m / MONTHS[p];
     if (perMonth > 20000) {
@@ -150,10 +155,10 @@
   function syncCustom() { customRow.hidden = rate.value !== "custom"; }
 
   $("calc-btn").addEventListener("click", calc);
-  [miles, custom].forEach(function (el) {
+  [miles, custom, taxRate].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [period, rate, custom].forEach(function (el) {
+  [period, rate, custom, taxRate].forEach(function (el) {
     el.addEventListener("change", function () {
       syncCustom();
       if (!result.hidden || !errEl.hidden) calc();
