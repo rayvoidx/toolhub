@@ -101,9 +101,9 @@
   var MINSEP = { left: 4, center: 5, right: 4 };  // ":---", ":---:", "---:"
   // 자리표시자 = 유효한 샘플 값(QA 자동입력이 이 값을 그대로 쓴다)
   var PH = [
-    ["Name", "Role", "Team", "Status", "Owner", "Priority", "Due", "Notes"],
-    ["Ada Lovelace", "Engineer", "Platform", "Active", "A. Turing", "High", "2026-08-01", "First pass"],
-    ["Grace Hopper", "Compiler lead", "Tooling", "Active", "J. Backus", "Medium", "2026-08-15", "Needs review"]
+    ["Name", "Role", "Team", "Status", "Owner", "Priority", "Due", "Notes", "Region", "Cost", "Hours", "Tag"],
+    ["Ada Lovelace", "Engineer", "Platform", "Active", "A. Turing", "High", "2026-08-01", "First pass", "US", "1200", "8", "core"],
+    ["Grace Hopper", "Compiler lead", "Tooling", "Active", "J. Backus", "Medium", "2026-08-15", "Needs review", "UK", "950", "6", "infra"]
   ];
 
   function dims() {

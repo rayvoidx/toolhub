@@ -212,6 +212,7 @@
   var slopeCard = gridEl.querySelector('[data-copy="slope"]');
   var angleCard = gridEl.querySelector('[data-copy="angle"]');
   var gradeCard = gridEl.querySelector('[data-copy="grade"]');
+  var ratioCard = gridEl.querySelector('[data-copy="ratio"]');
   var distCard = gridEl.querySelector('[data-copy="distance"]');
   var midCard = gridEl.querySelector('[data-copy="midpoint"]');
 
@@ -355,14 +356,19 @@
       setCard(slopeCard, numFmt(round(r.m, 6), 6));
       setCard(angleCard, numFmt(round(r.angleDeg, 2), 2) + "°");
       setCard(gradeCard, numFmt(round(r.gradePct, 2), 2) + "%");
+      // 경사비 1:N (램프·지붕·도로에서 쓰는 표기) — m=0은 수평
+      setCard(ratioCard, r.m === 0 ? tr("tool.val.level", "0 (level)")
+        : "1 : " + numFmt(round(Math.abs(1 / r.m), 2), 2));
     } else if (r.kind === "vertical") {
       setCard(slopeCard, undefVertical);
       setCard(angleCard, numFmt(90, 0) + "°");
       setCard(gradeCard, undefVertical);
+      setCard(ratioCard, undefVertical);
     } else { // same
       setCard(slopeCard, undefSame);
       setCard(angleCard, undefSame);
       setCard(gradeCard, undefSame);
+      setCard(ratioCard, undefSame);
     }
     setCard(distCard, numFmt(round(r.distance, 4), 4));
     setCard(midCard, "(" + numFmt(round(r.midX, 6), 6) + ", " + numFmt(round(r.midY, 6), 6) + ")");
@@ -435,7 +441,7 @@
       legacyCopy(raw, done);
     }
   }
-  [slopeCard, angleCard, gradeCard, distCard, midCard].forEach(function (card) {
+  [slopeCard, angleCard, gradeCard, ratioCard, distCard, midCard].forEach(function (card) {
     if (card) card.addEventListener("click", function () { copyCard(card); });
   });
 

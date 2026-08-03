@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var dir = $("dir"), rate = $("rate"), freq = $("freq");
+  var dir = $("dir"), rate = $("rate"), freq = $("freq"), bal = $("bal");
   var result = $("result"), errEl = $("err"), noteAnnual = $("note-annual");
   if (!dir || !rate || !freq) return;
 
@@ -104,6 +104,11 @@
     if (!isFinite(r)) return fail("tool.err.empty");
     // 0 이하·100 초과는 실효이율 공식이 의미를 잃는 구간 — 조용히 넘기지 않는다.
     if (r <= 0 || r > 100) return fail("tool.err.range");
+
+    // 잔액은 비워두면 기존 기본값 $10,000 유지. 0·음수·과대값은 조용히 넘기지 않는다.
+    var bstr = bal ? String(bal.value).replace(/[$,\s]/g, "") : "";
+    var b = bstr === "" ? 10000 : parseFloat(bstr);
+    if (!isFinite(b) || b <= 0 || b > 1e9) return fail("tool.err.bal");
 
     var cont = freq.value === "cont";
     var n = cont ? 0 : parseFloat(freq.value);
@@ -120,8 +125,8 @@
     $("r-rate").textContent = pct((dir.value === "apr2apy" ? apy : apr) * 100);
     $("r-sub").textContent = "APR " + pct(apr * 100) + " → APY " + pct(apy * 100);
     $("r-diff").textContent = ((apy - apr) * 100).toFixed(3) + " " + t("tool.unit.pp");
-    $("r-nominal").textContent = money(10000 * apr);
-    $("r-effective").textContent = money(10000 * apy);
+    $("r-nominal").textContent = money(b * apr);
+    $("r-effective").textContent = money(b * apy);
     // 연 1회 복리면 두 값이 같다 — 결과가 "고장난 것처럼" 보이지 않게 이유를 밝힌다.
     noteAnnual.hidden = freq.value !== "1";
 
@@ -130,7 +135,9 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  rate.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  [rate, bal].forEach(function (el) {
+    if (el) el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  });
   rate.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   [dir, freq].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });

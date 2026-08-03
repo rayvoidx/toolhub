@@ -131,17 +131,26 @@
     var s = String(raw).trim();
     if (!s) return null;
     var digits = s.replace(/[:.\s]/g, "");
-    if (!/^\d{3,4}$/.test(digits)) return { error: true };
-    if (digits.length === 3) digits = "0" + digits;
+    // 6자리는 초까지 붙은 타임스탬프로 본다: "140509" → 14:05:09. 5자리는 해석이 모호해 오류.
+    if (!/^(\d{1,4}|\d{6})$/.test(digits)) return { error: true };
+    var sec = null;
+    if (digits.length === 6) {
+      sec = parseInt(digits.slice(4, 6), 10);
+      digits = digits.slice(0, 4);
+      if (sec > 59) return { error: true };
+    }
+    // 1-2자리는 "시"만 입력한 것으로 본다: "9" → 0900, "14" → 1400, "0" → 0000
+    if (digits.length <= 2) digits = pad2(parseInt(digits, 10)) + "00";
+    else if (digits.length === 3) digits = "0" + digits;
     var h = parseInt(digits.slice(0, 2), 10);
     var m = parseInt(digits.slice(2, 4), 10);
     if (m > 59) return { error: true };
     if (h === 24) {
-      if (m !== 0) return { error: true };
-      return { h: 24, m: 0, isEndOfDay: true };
+      if (m !== 0 || sec) return { error: true };
+      return { h: 24, m: 0, s: sec, isEndOfDay: true };
     }
     if (h > 23) return { error: true };
-    return { h: h, m: m };
+    return { h: h, m: m, s: sec };
   }
 
   /** "9:45 PM" / "9.45pm" / "930pm" / "9pm" / "12:00 AM" → {h,m} in 0-23. AM/PM 표기만 허용. */
@@ -150,20 +159,21 @@
     var s = String(raw).trim().toLowerCase();
     if (!s) return null;
     s = s.replace(/\./g, "").replace(/\s+/g, "");
-    var m = s.match(/^(\d{1,2})(?:[:h]?(\d{2}))?(am|pm|a|p)$/);
+    var m = s.match(/^(\d{1,2})(?:[:h]?(\d{2})(?::?(\d{2}))?)?(am|pm|a|p)$/);
     if (!m) return { error: true };
     var hh = parseInt(m[1], 10);
     var mm = m[2] ? parseInt(m[2], 10) : 0;
-    if (hh < 1 || hh > 12 || mm > 59) return { error: true };
-    var mer = m[3].charAt(0);
+    var ss = m[3] != null ? parseInt(m[3], 10) : null;
+    if (hh < 1 || hh > 12 || mm > 59 || (ss != null && ss > 59)) return { error: true };
+    var mer = m[4].charAt(0);
     var h24 = hh % 12;
     if (mer === "p") h24 += 12;
-    return { h: h24, m: mm };
+    return { h: h24, m: mm, s: ss };
   }
 
   /** {h,m} (0-23) → "HHMM" 4자리 군대시간 문자열. */
-  function toMilitaryLabel(h, m) {
-    return pad2(h) + pad2(m);
+  function toMilitaryLabel(h, m, s) {
+    return pad2(h) + pad2(m) + (s != null ? ":" + pad2(s) : "");
   }
 
   /** {h,m} (0-23) → "H:MM AM/PM" 12시간 문자열. */
@@ -270,8 +280,8 @@
       if (!pm || pm.error) { showError(t("tool.err.mil")); return; }
       var effH = pm.h === 24 ? 0 : pm.h;
       var sp = toStandardParts(effH, pm.m);
-      var stdLabel = sp.h12 + ":" + pad2(sp.m) + " " + t(sp.period === "am" ? "tool.meridiem.am" : "tool.meridiem.pm");
-      var milLabel = toMilitaryLabel(pm.h === 24 ? 24 : pm.h, pm.m);
+      var stdLabel = sp.h12 + ":" + pad2(sp.m) + (pm.s != null ? ":" + pad2(pm.s) : "") + " " + t(sp.period === "am" ? "tool.meridiem.am" : "tool.meridiem.pm");
+      var milLabel = toMilitaryLabel(pm.h === 24 ? 24 : pm.h, pm.m, pm.s);
       var summary = fmtStr(t("tool.summary.milToStd"), { mil: milLabel, std: stdLabel });
       var html = '<p class="mtc-summary">' + escHtml(summary) + "</p>";
       html += '<p class="mtc-spoken">' + escHtml(t("tool.spoken.label")) + ": <span lang=\"en\">" +
@@ -283,9 +293,9 @@
     } else {
       var ps = parseStandardInput(raw);
       if (!ps || ps.error) { showError(t("tool.err.std")); return; }
-      var milLabel2 = toMilitaryLabel(ps.h, ps.m);
+      var milLabel2 = toMilitaryLabel(ps.h, ps.m, ps.s);
       var sp2 = toStandardParts(ps.h, ps.m);
-      var stdLabel2 = sp2.h12 + ":" + pad2(sp2.m) + " " + t(sp2.period === "am" ? "tool.meridiem.am" : "tool.meridiem.pm");
+      var stdLabel2 = sp2.h12 + ":" + pad2(sp2.m) + (ps.s != null ? ":" + pad2(ps.s) : "") + " " + t(sp2.period === "am" ? "tool.meridiem.am" : "tool.meridiem.pm");
       var summary2 = fmtStr(t("tool.summary.stdToMil"), { std: stdLabel2, mil: milLabel2 });
       var html2 = '<p class="mtc-summary">' + escHtml(summary2) + "</p>";
       html2 += '<p class="mtc-spoken">' + escHtml(t("tool.spoken.label")) + ": <span lang=\"en\">" +

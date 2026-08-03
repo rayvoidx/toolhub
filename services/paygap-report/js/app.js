@@ -92,7 +92,7 @@
   // 급여 원본은 최고 민감 데이터라 "브라우저를 떠나지 않음"이 기능이 아니라 채택 조건이다.
   var SLUG = (window.APP_CONFIG && window.APP_CONFIG.slug) || "paygap-report";
 
-  var EU_TRIGGER = 5;        // 지침 2023/970: 범주별 격차 5% 초과 → 공동임금평가 검토 신호(법적 확정 아님)
+  var EU_TRIGGER = 5;        // 기본값 — 사용자가 pg-trigger 로 덮어쓸 수 있다(0.1~100). 지침 2023/970: 범주별 격차 5% 초과 → 공동임금평가 검토 신호(법적 확정 아님)
   var UK_THRESHOLD = 250;    // 250인+ 법정 보고 대상
   var WORKER_ROWS = 5000;    // 이 초과에서만 Worker 가동(backlog bulk_strategy · 통계는 O(n log n) 이라 과잉설계 금지)
   var MAX_ROWS = 200000;     // 상한 — 초과분은 조용히 버리지 않고 truncated 로 알린다
@@ -301,7 +301,8 @@
   }
 
   // 모집단 → 법정 지표. 무거운 정렬은 여기(>5천이면 Worker 안에서).
-  function pgStats(ext, country) {
+  function pgStats(ext, country, minCat) {
+    var minN = minCat > 0 ? minCat : 0;   // 범주 최소 인원 — 소규모 범주는 표시하되 플래그하지 않는다
     var pop = ext.pop, i, p;
     var maleH = [], femaleH = [], maleB = [], femaleB = [];
     var maleN = 0, femaleN = 0, maleRec = 0, femaleRec = 0;
@@ -347,9 +348,10 @@
         var cobj = byCat[order[o]];
         var cmM = cobj.mH.length ? pgMean(cobj.mH) : null, cmF = cobj.fH.length ? pgMean(cobj.fH) : null;
         var gap = null, flag = false, comparable = cobj.mH.length > 0 && cobj.fH.length > 0;
-        if (comparable && cmM !== 0) { gap = (cmM - cmF) / cmM * 100; flag = Math.abs(gap) > EU_TRIGGER; }
+        var cn = cobj.mH.length + cobj.fH.length, small = cn < minN;
+        if (comparable && cmM !== 0) { gap = (cmM - cmF) / cmM * 100; flag = Math.abs(gap) > EU_TRIGGER && !small; }
         categories.push({ name: cobj.name, meanM: cmM, meanF: cmF, gap: gap,
-                          n: cobj.mH.length + cobj.fH.length, flag: flag, comparable: comparable });
+                          n: cn, flag: flag, comparable: comparable, small: small });
       }
     }
 
@@ -363,11 +365,11 @@
       meanHourly: hourlyGap(meanHM, meanHF), medianHourly: hourlyGap(medHM, medHF),
       meanBonus: bonusGap(meanBM, meanBF), medianBonus: bonusGap(medBM, medBF),
       propM: maleN ? maleRec / maleN * 100 : null, propF: femaleN ? femaleRec / femaleN * 100 : null,
-      quartiles: quart.quartiles, straddle: quart.straddle, categories: categories
+      quartiles: quart.quartiles, straddle: quart.straddle, categories: categories, minCat: minN
     };
   }
 
-  function pgCompute(records, skip, map, country) { return pgStats(pgExtract(records, skip, map), country); }
+  function pgCompute(records, skip, map, country, minCat) { return pgStats(pgExtract(records, skip, map), country, minCat); }
 
   var PG_SYN = {
     gender: ["gender", "sex", "성별", "성", "남녀", "geschlecht", "sexe", "sexo", "genre", "性別", "lingg"],
@@ -433,7 +435,8 @@
       for (i = 0; i < st.categories.length; i++) {
         var c = st.categories[i];
         rows.push(["Category: " + c.name, c.comparable && c.gap != null ? pct(c.gap) : "",
-                   num(c.meanM), num(c.meanF), (c.flag ? ">5% review signal" : (c.comparable ? "" : "one gender only"))]);
+                   num(c.meanM), num(c.meanF), (c.flag ? ">" + EU_TRIGGER + "% review signal" : (!c.comparable ? "one gender only"
+                     : (c.small ? "below minimum headcount (" + st.minCat + ") — not flagged" : "")))]);
       }
     }
     rows.push(["Binary (statutory) population", String(st.binaryN), String(st.maleN), String(st.femaleN), ""]);
@@ -454,7 +457,7 @@
       var m = e.data || {};
       if (m.cmd === "stats") {
         scope.postMessage({ type: "progress", pct: 15 });
-        var st = pgStats(m.ext, m.country);
+        var st = pgStats(m.ext, m.country, m.minCat);
         scope.postMessage({ type: "progress", pct: 100 });
         scope.postMessage({ type: "result", stats: st });
       }
@@ -480,7 +483,7 @@
 
   var state = {
     src: null, srcName: "", parsed: null, hasHeader: true, truncated: false,
-    country: "UK", map: { gender: -1, hourly: -1, base: -1, bonus: -1, hours: -1, grade: -1 },
+    country: "UK", minCat: 0, map: { gender: -1, hourly: -1, base: -1, bonus: -1, hours: -1, grade: -1 },
     parsing: false, cancelParse: false, computing: false, worker: null, lastStats: null, pgTimer: null
   };
 
@@ -786,9 +789,9 @@
     if (state.map.hourly < 0 && !(state.map.base >= 0 && state.map.hours >= 0)) { showTopError("tool.err.hourly"); return; }
     var skip = state.hasHeader ? 1 : 0;
     var ext = pgExtract(state.parsed.records, skip, state.map);
-    if (ext.pop.length === 0) { renderResult(pgStats(ext, state.country)); return; }   // 전부 별도분류/제외여도 사유는 보여준다
+    if (ext.pop.length === 0) { renderResult(pgStats(ext, state.country, state.minCat)); return; }   // 전부 별도분류/제외여도 사유는 보여준다
     if (ext.pop.length > WORKER_ROWS && canWorker()) runWorkerStats(ext);
-    else renderResult(pgStats(ext, state.country));
+    else renderResult(pgStats(ext, state.country, state.minCat));
   }
 
   function showTopError(key) {
@@ -818,18 +821,18 @@
     try {
       url = URL.createObjectURL(new Blob([statsWorkerSource()], { type: "text/javascript" }));
       w = new Worker(url);
-    } catch (e) { finishCompute(url, w); renderResult(pgStats(ext, state.country)); return; }
+    } catch (e) { finishCompute(url, w); renderResult(pgStats(ext, state.country, state.minCat)); return; }
     state.worker = w;
     var timer = setTimeout(function () {   // 1.5초 안에 응답 없으면 메인으로 폴백
-      if (state.computing) { try { w.terminate(); } catch (e2) {} finishCompute(url, w); renderResult(pgStats(ext, state.country)); }
+      if (state.computing) { try { w.terminate(); } catch (e2) {} finishCompute(url, w); renderResult(pgStats(ext, state.country, state.minCat)); }
     }, 1500 + Math.min(4000, ext.pop.length / 50));
     w.onmessage = function (e) {
       var m = e.data || {};
       if (m.type === "progress") { $("pg-pfill").style.width = m.pct + "%"; return; }
       if (m.type === "result") { clearTimeout(timer); finishCompute(url, w); renderResult(m.stats); }
     };
-    w.onerror = function () { clearTimeout(timer); try { w.terminate(); } catch (e3) {} finishCompute(url, w); renderResult(pgStats(ext, state.country)); };
-    w.postMessage({ cmd: "stats", ext: ext, country: state.country });
+    w.onerror = function () { clearTimeout(timer); try { w.terminate(); } catch (e3) {} finishCompute(url, w); renderResult(pgStats(ext, state.country, state.minCat)); };
+    w.postMessage({ cmd: "stats", ext: ext, country: state.country, minCat: state.minCat });
   }
   function finishCompute(url, w) {
     state.computing = false; state.worker = null;
@@ -971,6 +974,7 @@
         var g = gapText({ ok: true, value: c.gap });
         td.appendChild(document.createTextNode(g.text + (g.v !== 0 ? " " + g.favour : "")));
         if (c.flag) { var b = el("span", "pg-flagbadge", "!"); td.appendChild(document.createTextNode(" ")); td.appendChild(b); }
+        else if (c.small) { td.appendChild(document.createTextNode(" ")); td.appendChild(el("span", "pg-dim", t("tool.cat.small"))); }
       }
       tr.appendChild(td);
       tbody.appendChild(tr);
@@ -981,6 +985,7 @@
     var flagged = false;
     for (i = 0; i < st.categories.length; i++) if (st.categories[i].flag) flagged = true;
     if (flagged) r.appendChild(el("p", "pg-note pg-flag", t("tool.cat.flag", { pct: EU_TRIGGER })));
+    if (st.minCat > 0) r.appendChild(el("p", "pg-note", t("tool.cat.minnote", { n: fmtN(st.minCat) })));
   }
 
   function appendExclusions(r, st) {
@@ -1099,6 +1104,35 @@
     $("pg-country").value = guess;
   }
 
+  function syncMinVisibility() { $("pg-minwrap").hidden = state.country !== "EU"; }
+  function syncMinCustom() { $("pg-mincustwrap").hidden = $("pg-mincat").value !== "custom"; }
+
+  // 빈 값·NaN·음수·과대값은 조용히 죽지 않고 경계로 보정한 뒤 입력칸에 되쓴다(철칙 5).
+  function clampInput(id, min, max, fallback, integer) {
+    var inp = $(id), v = integer ? parseInt(inp.value, 10) : parseFloat(inp.value);
+    if (isNaN(v)) v = fallback;
+    if (v < min) v = min;
+    if (v > max) v = max;
+    if (integer) v = Math.round(v);
+    inp.value = String(v);
+    return v;
+  }
+  function applyMinCat() {
+    if ($("pg-mincat").value === "custom") {
+      state.minCat = clampInput("pg-mincust", 0, 100000, 0, true);
+      savePref("minCatCustom", state.minCat);
+      savePref("minCat", "custom");
+    } else {
+      var v = parseInt($("pg-mincat").value, 10);
+      state.minCat = isNaN(v) || v < 0 ? 0 : v;
+      savePref("minCat", state.minCat);
+    }
+  }
+  function applyTrigger() {
+    EU_TRIGGER = clampInput("pg-trigger", 0.1, 100, 5, false);
+    savePref("trigger", EU_TRIGGER);
+  }
+
   function bind() {
     var drop = $("pg-drop"), fileInput = $("pg-file");
     $("pg-paste").addEventListener("input", function () { useText(this.value, ""); });
@@ -1133,7 +1167,21 @@
     });
     $("pg-country").addEventListener("change", function () {
       state.country = this.value; savePref("country", this.value);
+      syncMinVisibility();
       if (state.lastStats) { state.lastStats.country = this.value; calculate(); }
+    });
+    $("pg-mincat").addEventListener("change", function () {
+      syncMinCustom();
+      applyMinCat();
+      if (state.lastStats) calculate();
+    });
+    $("pg-mincust").addEventListener("change", function () {
+      applyMinCat();
+      if (state.lastStats) calculate();
+    });
+    $("pg-trigger").addEventListener("change", function () {
+      applyTrigger();
+      if (state.lastStats) calculate();
     });
     $("pg-calc").addEventListener("click", calculate);
     document.addEventListener("i18n:change", function () {
@@ -1147,6 +1195,22 @@
   function boot() {
     if (!$("pg-country")) return;   // TOOL 마크업이 없으면 초기화하지 않음
     initCountry();
+    var rawMin = loadPref("minCat", 0);
+    if (rawMin === "custom") {
+      $("pg-mincat").value = "custom";
+      var savedCust = parseInt(loadPref("minCatCustom", 25), 10);
+      $("pg-mincust").value = String(isNaN(savedCust) || savedCust < 0 ? 25 : savedCust);
+    } else {
+      var savedMin = parseInt(rawMin, 10);
+      $("pg-mincat").value = String(isNaN(savedMin) || savedMin < 0 ? 0 : savedMin);
+      if ($("pg-mincat").selectedIndex < 0) $("pg-mincat").value = "0";
+    }
+    syncMinCustom();
+    applyMinCat();
+    var savedTrig = parseFloat(loadPref("trigger", 5));
+    $("pg-trigger").value = String(isNaN(savedTrig) ? 5 : savedTrig);
+    applyTrigger();
+    syncMinVisibility();
     bind();
     setSrcNote("tool.empty", false);
   }

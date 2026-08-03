@@ -139,16 +139,29 @@
     return a;
   }
   // 비율 두 항을 최대공약수로 약분. 소수는 두 항의 소수 자리수 중 큰 쪽으로 스케일업 후 정수로 약분.
-  function simplifyRatio(rawA, rawB) {
-    var a = parseNum(rawA), b = parseNum(rawB);
-    if (a == null || b == null) return { ok: false, reason: "empty" };
-    if (a < 0 || b < 0) return { ok: false, reason: "negative" };
-    if (a === 0 && b === 0) return { ok: false, reason: "bothZero" };
-    var scale = Math.pow(10, Math.max(decimalPlaces(rawA), decimalPlaces(rawB)));
-    var ai = Math.round(a * scale), bi = Math.round(b * scale);
-    var g = gcd(ai, bi) || 1;
-    var sa = ai / g, sb = bi / g;
-    return { ok: true, a: a, b: b, sa: sa, sb: sb };
+  // 세 번째 항(rawC)은 선택 — 비우면 기존 2항 동작 그대로.
+  function simplifyRatio(rawA, rawB, rawC) {
+    var raws = [rawA, rawB];
+    var hasC = rawC != null && String(rawC).trim() !== "";
+    if (hasC) raws.push(rawC);
+    var vals = [], dec = 0, i;
+    for (i = 0; i < raws.length; i++) {
+      var n = parseNum(raws[i]);
+      if (n == null) return { ok: false, reason: "empty" };
+      if (n < 0) return { ok: false, reason: "negative" };
+      vals.push(n);
+      dec = Math.max(dec, decimalPlaces(raws[i]));
+    }
+    var allZero = true;
+    for (i = 0; i < vals.length; i++) if (vals[i] !== 0) allZero = false;
+    if (allZero) return { ok: false, reason: "bothZero" };
+    var scale = Math.pow(10, dec);
+    var ints = [], g = 0;
+    for (i = 0; i < vals.length; i++) { ints.push(Math.round(vals[i] * scale)); g = gcd(g, ints[i]); }
+    g = g || 1;
+    var simp = [];
+    for (i = 0; i < ints.length; i++) simp.push(ints[i] / g);
+    return { ok: true, vals: vals, simp: simp, a: vals[0], b: vals[1], sa: simp[0], sb: simp[1] };
   }
   // 비례식 A:B = C:D 교차곱: A*D = B*C. solveFor 로 지정된 하나를 나머지 셋으로 구한다.
   function solveProportion(a, b, c, d, solveFor) {
@@ -324,9 +337,10 @@
   }
 
   /* ══════════════ Tab 2: Simplify ratio ══════════════ */
-  var simpA = $("simp-a"), simpB = $("simp-b"), simpCalcBtn = $("simp-calc-btn");
+  var simpA = $("simp-a"), simpB = $("simp-b"), simpC = $("simp-c"), simpCalcBtn = $("simp-calc-btn");
   var simpErr = $("simp-err"), simpResult = $("simp-result");
-  var simpSimplified = $("simp-result-simplified"), simpOneToN = $("simp-result-oneToN"), simpDecimal = $("simp-result-decimal");
+  var simpSimplified = $("simp-result-simplified"), simpOneToN = $("simp-result-oneToN"), simpDecimal = $("simp-result-decimal")
+  var simpPercent = $("simp-result-percent");
   var simpOneToNNote = $("simp-oneToN-note");
   var simpLastRun = false;
 
@@ -337,7 +351,7 @@
   }
   function calcSimplify() {
     simpLastRun = true;
-    var r = simplifyRatio(simpA.value, simpB.value);
+    var r = simplifyRatio(simpA.value, simpB.value, simpC ? simpC.value : "");
     if (!r.ok) {
       if (r.reason === "empty") return simpShowErr("tool.simplify.err.empty", "Enter both terms of the ratio.");
       if (r.reason === "negative") return simpShowErr("tool.simplify.err.negative", "Ratio terms must be zero or greater.");
@@ -345,29 +359,50 @@
       return simpShowErr("tool.simplify.err.empty", "Enter both terms of the ratio.");
     }
     simpErr.hidden = true; simpResult.hidden = false;
-    var simplifiedStr = numFmt(r.sa, 0) + " : " + numFmt(r.sb, 0);
+    var i;
+    var parts = [];
+    for (i = 0; i < r.simp.length; i++) parts.push(numFmt(r.simp[i], 0));
+    var simplifiedStr = parts.join(" : ");
     simpSimplified.textContent = simplifiedStr;
     simpSimplified.closest(".res-card").setAttribute("data-value", simplifiedStr);
 
-    if (r.sa === 0) {
+    if (r.simp[0] === 0) {
       simpOneToN.textContent = "—";
       simpOneToN.closest(".res-card").setAttribute("data-value", "");
       simpOneToNNote.hidden = false;
     } else {
-      var n = r.sb / r.sa;
-      var oneToNStr = "1 : " + numFmt(n, 6);
+      var oneParts = ["1"];
+      for (i = 1; i < r.simp.length; i++) oneParts.push(numFmt(r.simp[i] / r.simp[0], 6));
+      var oneToNStr = oneParts.join(" : ");
       simpOneToN.textContent = oneToNStr;
       simpOneToN.closest(".res-card").setAttribute("data-value", oneToNStr);
       simpOneToNNote.hidden = true;
     }
 
-    var decStr = (r.a === 0 && r.b === 0) ? "—" : (r.b === 0 ? "∞" : numFmt(r.a / r.b, 6));
-    simpDecimal.textContent = decStr;
-    simpDecimal.closest(".res-card").setAttribute("data-value", decStr === "∞" ? "" : decStr);
+    // 소수(a/b) 는 두 항일 때만 뜻이 있다 — 3항이면 카드를 숨긴다
+    var decCard = simpDecimal.closest(".res-card");
+    if (r.vals.length > 2) {
+      decCard.hidden = true;
+      decCard.setAttribute("data-value", "");
+    } else {
+      decCard.hidden = false;
+      var decStr = (r.a === 0 && r.b === 0) ? "—" : (r.b === 0 ? "∞" : numFmt(r.a / r.b, 6));
+      simpDecimal.textContent = decStr;
+      decCard.setAttribute("data-value", decStr === "∞" ? "" : decStr);
+    }
+
+    // 백분율 배분 — 합 > 0 은 bothZero 검증으로 보장된다 (0 나눗셈 없음)
+    var tot = 0;
+    for (i = 0; i < r.vals.length; i++) tot += r.vals[i];
+    var pcts = [];
+    for (i = 0; i < r.vals.length; i++) pcts.push(numFmt(r.vals[i] / tot * 100, 1) + "%");
+    var pctStr = pcts.join(" : ");
+    simpPercent.textContent = pctStr;
+    simpPercent.closest(".res-card").setAttribute("data-value", pctStr);
     persist();
   }
   simpCalcBtn.addEventListener("click", calcSimplify);
-  [simpA, simpB].forEach(function (el) { el.addEventListener("keydown", function (e) { if (e.key === "Enter") calcSimplify(); }); });
+  [simpA, simpB, simpC].forEach(function (el) { if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calcSimplify(); }); });
 
   /* ══════════════ Tab 3: Scale ratio ══════════════ */
   var scaleA = $("scale-a"), scaleB = $("scale-b"), scaleFactor = $("scale-factor"), scaleCalcBtn = $("scale-calc-btn");
@@ -414,7 +449,7 @@
       localStorage.setItem(LS_KEY, JSON.stringify({
         tab: state.tab,
         prop: { a: propA.value, b: propB.value, c: propC.value, d: propD.value, solveFor: solveFor },
-        simp: { a: simpA.value, b: simpB.value },
+        simp: { a: simpA.value, b: simpB.value, c: simpC ? simpC.value : "" },
         scale: { a: scaleA.value, b: scaleB.value, factor: scaleFactor.value }
       }));
     } catch (e) { /* private mode — 저장 실패 무시 */ }
@@ -433,6 +468,7 @@
       if (data.simp) {
         if (data.simp.a) simpA.value = data.simp.a;
         if (data.simp.b) simpB.value = data.simp.b;
+        if (data.simp.c && simpC) simpC.value = data.simp.c;
       }
       if (data.scale) {
         if (data.scale.a) scaleA.value = data.scale.a;

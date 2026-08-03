@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="BSA Calculator — Body Surface Area in m²">
 <meta property="og:description" content="Calculate body surface area from height and weight with the Mosteller, Du Bois and Haycock formulas. Results in m² for mg/m² dosing, cardiac index and burns.">
 <meta property="og:url" content="https://tool-hub.me/bsa-calc/">
-<meta property="og:image" content="https://tool-hub.me/bsa-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/bsa-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#075985">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "BSA Calculator",
+      "item": "https://tool-hub.me/bsa-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "BSA Calculator",
-      "item": "https://tool-hub.me/bsa-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -180,8 +190,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <select id="hunit">
           <option value="cm" data-i18n="tool.hunit.cm">cm</option>
           <option value="in" data-i18n="tool.hunit.in">inches</option>
+          <option value="ftin" data-i18n="tool.hunit.ftin">ft + in</option>
         </select>
       </div>
+    </div>
+
+    <div class="field-row" id="hin-row" hidden>
+      <div>
+        <label for="hin" data-i18n="tool.height.inpart">Inches</label>
+        <input type="number" id="hin" inputmode="decimal" min="0" max="11.99" step="any" autocomplete="off" placeholder="7">
+      </div>
+      <div></div>
     </div>
 
     <div class="field-row">

@@ -89,9 +89,9 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var monthly = $("monthly"), ret = $("ret"), years = $("years"), stepup = $("stepup");
+  var monthly = $("monthly"), ret = $("ret"), years = $("years"), stepup = $("stepup"), infl = $("infl"), lump = $("lump");
   var result = $("result"), errEl = $("err"), warnEl = $("warn");
-  if (!monthly || !ret || !years || !stepup) return;
+  if (!monthly || !ret || !years || !stepup || !infl || !lump) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var num = function (el) { return parseFloat(String(el.value).replace(/,/g, "")); };
@@ -111,15 +111,20 @@
   function calc() {
     var p0 = num(monthly), r = num(ret), y = num(years);
     var st = String(stepup.value).trim() === "" ? 0 : num(stepup);
+    var inf = String(infl.value).trim() === "" ? 0 : num(infl);
+    var lp = String(lump.value).trim() === "" ? 0 : num(lump);
     if (!isFinite(p0) || p0 <= 0) return fail("tool.err.monthly");
     if (!isFinite(r) || r < 0 || r > 60) return fail("tool.err.return");
     if (!isFinite(y) || y < 1 || y > 50) return fail("tool.err.years");
     if (!isFinite(st) || st < 0 || st > 50) return fail("tool.err.stepup");
+    if (!isFinite(inf) || inf < 0 || inf > 30) return fail("tool.err.infl");
+    if (!isFinite(lp) || lp < 0) return fail("tool.err.lump");
 
     // 월 실효 이율: r/12 가 아니라 (1+r)^(1/12)-1 — 입력한 연 수익률이 그대로 전체 XIRR 이 된다.
     var i = Math.pow(1 + r / 100, 1 / 12) - 1;
     var n = Math.round(y * 12);
-    var fv = 0, p = p0, invested = 0, last = p0;
+    // 기존 목돈은 0개월차부터 함께 복리 — 기본값 0 이면 종전 결과와 동일하다.
+    var fv = lp, p = p0, invested = lp, last = p0;
     for (var m = 0; m < n; m++) {
       fv = (fv + p) * (1 + i);            // 월초 납입 = annuity-due
       invested += p;
@@ -132,6 +137,9 @@
     $("r-invested").textContent = fmt(invested);
     $("r-gain").textContent = fmt(fv - invested);
     $("r-final").textContent = fmt(last);
+    // 실질 가치는 만기 시점 물가로 할인 — 납입 개월 수(n)를 그대로 써 기간과 일치시킨다.
+    $("real-card").hidden = inf <= 0;
+    if (inf > 0) $("r-real").textContent = fmt(fv / Math.pow(1 + inf / 100, n / 12));
 
     warnEl.textContent = r > 30 ? t("tool.warn.high") : "";
     warnEl.hidden = r <= 30;
@@ -140,7 +148,7 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [monthly, ret, years, stepup].forEach(function (el) {
+  [monthly, ret, years, stepup, infl, lump].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });

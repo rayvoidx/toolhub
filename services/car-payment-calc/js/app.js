@@ -107,10 +107,11 @@
     if (p <= 0 || n <= 0) return fail("tool.err.positive");
     if (r < 0 || r > 40) return fail("tool.err.rate");
 
-    var tradeVal = or0(trade), owedVal = or0(owed);
+    var tradeVal = or0(trade), owedVal = or0(owed), taxPct = or0(tax);
+    if (or0(down) < 0 || tradeVal < 0 || owedVal < 0 || or0(fees) < 0 || taxPct < 0 || taxPct > 20) return fail("tool.err.range");
     // 대부분의 주는 트레이드인을 뺀 금액에 과세한다 — 세금은 그 기준으로 계산.
     var taxable = Math.max(0, p - tradeVal);
-    var taxAmt = taxable * or0(tax) / 100;
+    var taxAmt = taxable * taxPct / 100;
     // 잔여 대출이 평가액보다 크면 그 차액(마이너스 자산)이 새 대출에 얹힌다.
     var equity = tradeVal - owedVal;
     var financed = p + taxAmt + or0(fees) - or0(down) - equity;

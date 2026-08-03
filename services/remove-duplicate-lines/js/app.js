@@ -109,6 +109,11 @@
     return arr;
   }
 
+  // 빈 줄(공백만 있는 줄 포함) 제거 — 기본값 off, 켰을 때만 동작한다.
+  function dropBlankLines(lines) {
+    return lines.filter(function (l) { return l.replace(/^\s+|\s+$/g, "") !== ""; });
+  }
+
   // 비교 키: trim → 대소문자 순으로 정규화. 원본 줄 텍스트는 절대 바꾸지 않는다.
   function compareKey(line, opts) {
     var s = opts.trim ? line.replace(/^\s+|\s+$/g, "") : line;
@@ -134,6 +139,7 @@
       }
     }
     return {
+      counts: counts,
       unique: uniqueList,
       duplicates: duplicateList,
       uniqueCount: uniqueList.length,
@@ -155,7 +161,7 @@
 
   // node 검증용 노출 — 브라우저에는 module 이 없어 건너뛴다
   if (typeof module !== "undefined" && module.exports) {
-    module.exports = { splitLines: splitLines, compareKey: compareKey, dedupeLines: dedupeLines, sortLines: sortLines };
+    module.exports = { splitLines: splitLines, dropBlankLines: dropBlankLines, compareKey: compareKey, dedupeLines: dedupeLines, sortLines: sortLines };
     return;
   }
 
@@ -166,6 +172,8 @@
   var trimEl = $("rdl-trim");
   var sortEl = $("rdl-sort");
   var onlyDupsEl = $("rdl-onlydups");
+  var countsEl = $("rdl-counts");
+  var blankEl = $("rdl-blank");
   var runBtn = $("rdl-run");
   var sampleBtn = $("rdl-sample");
   var clearBtn = $("rdl-clear");
@@ -203,8 +211,10 @@
     return {
       caseInsensitive: !!(caseEl && caseEl.checked),
       trim: !!(trimEl && trimEl.checked),
+      dropBlank: !!(blankEl && blankEl.checked),
       sortOutput: !!(sortEl && sortEl.checked),
-      onlyDups: !!(onlyDupsEl && onlyDupsEl.checked)
+      onlyDups: !!(onlyDupsEl && onlyDupsEl.checked),
+      showCounts: !!(countsEl && countsEl.checked)
     };
   }
 
@@ -241,11 +251,24 @@
     }
 
     var opts = readOpts();
+    if (opts.dropBlank) lines = dropBlankLines(lines);
+    if (lines.length === 0) {
+      showEmptyState();
+      saveState();
+      return;
+    }
     var result = dedupeLines(lines, opts);
     lastStats = result;
 
     var outList = opts.onlyDups ? result.duplicates : result.unique;
     if (opts.sortOutput) outList = sortLines(outList, opts.caseInsensitive);
+    // 중복만 보기 + 횟수 표시: 원본 줄 뒤에 등장 횟수를 덧붙인다 (기본 off — 기존 출력 유지)
+    if (opts.onlyDups && opts.showCounts) {
+      outList = outList.map(function (line) {
+        var n = result.counts[compareKey(line, opts)] || 1;
+        return line + " (\u00d7" + fmtNum(n) + ")";
+      });
+    }
 
     if (msgEmptyEl) msgEmptyEl.hidden = true;
 
@@ -319,8 +342,10 @@
         input: inputEl.value,
         caseInsensitive: !!(caseEl && caseEl.checked),
         trim: !!(trimEl && trimEl.checked),
+        dropBlank: !!(blankEl && blankEl.checked),
         sortOutput: !!(sortEl && sortEl.checked),
-        onlyDups: !!(onlyDupsEl && onlyDupsEl.checked)
+        onlyDups: !!(onlyDupsEl && onlyDupsEl.checked),
+      showCounts: !!(countsEl && countsEl.checked)
       }));
     } catch (e) { /* private mode — 세션 메모리만 유지 */ }
   }
@@ -335,8 +360,10 @@
     if (typeof s.input === "string") inputEl.value = s.input;
     if (caseEl) caseEl.checked = !!s.caseInsensitive;
     if (trimEl) trimEl.checked = !!s.trim;
+    if (blankEl) blankEl.checked = !!s.dropBlank;
     if (sortEl) sortEl.checked = !!s.sortOutput;
     if (onlyDupsEl) onlyDupsEl.checked = !!s.onlyDups;
+    if (countsEl) countsEl.checked = !!s.showCounts;
   }
 
   // ----- 샘플 데이터 (정확 중복 + 대소문자 변형 + 공백 변형을 모두 보여준다) -----
@@ -374,7 +401,7 @@
     });
   }
 
-  [caseEl, trimEl, sortEl, onlyDupsEl].forEach(function (el) {
+  [caseEl, trimEl, blankEl, sortEl, onlyDupsEl, countsEl].forEach(function (el) {
     if (!el) return;
     el.addEventListener("change", function () {
       if (hasRun || inputEl.value.trim() !== "") process();

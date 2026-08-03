@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Sod Calculator — How Much Sod Do I Need?">
 <meta property="og:description" content="Work out how much sod you need in rolls, slabs or pallets from your lawn size, with a waste allowance for cuts and curves plus an instant cost estimate.">
 <meta property="og:url" content="https://tool-hub.me/sod-calc/">
-<meta property="og:image" content="https://tool-hub.me/sod-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/sod-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#15803d">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sod Calculator",
+      "item": "https://tool-hub.me/sod-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Sod Calculator",
-      "item": "https://tool-hub.me/sod-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -213,8 +223,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
         <select id="waste">
+          <option value="0" data-i18n="tool.waste.0">0% — area already includes my margin</option>
           <option value="5" data-i18n="tool.waste.5">5% — straight edges, few cuts</option>
           <option value="10" selected data-i18n="tool.waste.10">10% — curves, beds and obstacles</option>
+          <option value="15" data-i18n="tool.waste.15">15% — slopes, tree rings, heavy cutting</option>
+          <option value="20" data-i18n="tool.waste.20">20% — very irregular plot, many obstacles</option>
         </select>
       </div>
       <div>
@@ -236,6 +249,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="price" data-i18n="tool.price.label">Price per unit (optional)</label>
         <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="6.50">
+      </div>
+      <div>
+        <label for="pallet" data-i18n="tool.pallet.label">Pallet coverage (sq ft, optional)</label>
+        <input type="number" id="pallet" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="450">
       </div>
     </div>
 

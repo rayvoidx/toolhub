@@ -103,9 +103,10 @@
     ft2: 0.09290304,     // 1 ft² = 0.3048² m² (정확값)
     yd2: 0.83612736,     // 1 yd² = 0.9144² m²
     ac: 4046.8564224,    // 1 에이커 = 4840 yd²
+    mi2: 2589988.110336, // 1 mi² = 640 ac
     py: 400 / 121        // 1 평 = 400/121 ≈ 3.3058 m² (한국 부동산 단위)
   };
-  var UNITS = ["mm2", "cm2", "m2", "km2", "ha", "in2", "ft2", "yd2", "ac", "py"];
+  var UNITS = ["mm2", "cm2", "m2", "km2", "ha", "in2", "ft2", "yd2", "ac", "mi2", "py"];
 
   // value(from 단위) → to 단위 : m² 를 매개로 환산
   function convert(value, from, to) {
@@ -157,7 +158,7 @@
   // 결과 대형 텍스트용 축약 기호 (평은 비한국어 사용자를 위해 로마자 병기)
   var ABBR = {
     mm2: "mm²", cm2: "cm²", m2: "m²", km2: "km²", ha: "ha",
-    in2: "in²", ft2: "ft²", yd2: "yd²", ac: "ac", py: "평 (pyeong)"
+    in2: "in²", ft2: "ft²", yd2: "yd²", ac: "ac", mi2: "mi²", py: "평 (pyeong)"
   };
 
   function t(key, fb) {

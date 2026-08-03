@@ -91,6 +91,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var msrp = $("msrp"), price = $("price"), residual = $("residual"), mf = $("mf");
   var term = $("term"), down = $("down"), tax = $("tax");
+  var termMonths = $("term-months"), termWrap = $("term-custom-wrap");
   var result = $("result"), errEl = $("err"), warnEl = $("warn");
   if (!msrp || !price || !residual || !mf || !term) return;
 
@@ -117,7 +118,9 @@
     // 선택 입력: 비우면 0 (무선납·무과세 리스는 실제로 존재한다). 값이 있으면 범위를 검사한다.
     var vDown = down.value.trim() === "" ? 0 : num(down);
     var vTax = tax.value.trim() === "" ? 0 : num(tax);
-    var months = parseInt(term.value, 10) || 36;
+    // 24/36/48 밖의 계약(27·39·60개월 등)은 흔하다 — "기타"를 고르면 개월수를 직접 받는다.
+    var isCustom = term.value === "custom";
+    var months = isCustom ? Math.round(num(termMonths)) : (parseInt(term.value, 10) || 36);
 
     if (!isFinite(vMsrp) || vMsrp <= 0) return fail("tool.err.msrp");
     if (!isFinite(vPrice) || vPrice <= 0) return fail("tool.err.price");
@@ -125,6 +128,7 @@
     if (!isFinite(vMf) || vMf < 0 || vMf > 0.05) return fail("tool.err.mf");
     if (!isFinite(vDown) || vDown < 0 || vDown >= vPrice) return fail("tool.err.down");
     if (!isFinite(vTax) || vTax < 0 || vTax > 30) return fail("tool.err.tax");
+    if (!isFinite(months) || months < 12 || months > 72) return fail("tool.err.term");
 
     var cap = vPrice - vDown;                    // 캡코스트 = 협상가 - 선납금
     var resVal = vMsrp * vRes / 100;             // 잔존가치는 협상가가 아니라 MSRP 기준
@@ -149,11 +153,15 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [msrp, price, residual, mf, down, tax].forEach(function (el) {
+  [msrp, price, residual, mf, down, tax, termMonths].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
-  term.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  term.addEventListener("change", function () {
+    termWrap.hidden = term.value !== "custom";
+    if (term.value === "custom" && termMonths.value.trim() === "") { termMonths.focus(); return; }
+    if (!result.hidden || !errEl.hidden) calc();
+  });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

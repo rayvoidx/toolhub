@@ -107,6 +107,7 @@
     if (isNaN(amount) || isNaN(h) || isNaN(w)) return fail("tool.err.empty");
     if (amount <= 0 || h <= 0 || w <= 0) return fail("tool.err.positive");
     if (h > 168) return fail("tool.err.hours");
+    if (w > 53) return fail("tool.err.weeks");
 
     var annual = isHourly ? amount * h * w : amount;
     var perHour = annual / (h * w);
@@ -117,6 +118,7 @@
     $("hero-label").textContent = t(isHourly ? "tool.r.year" : "tool.r.hour");
     $("r-month").textContent = money(annual / 12);
     $("r-biweek").textContent = money(perWeek * 2);
+    $("r-semi").textContent = money(annual / 24);
     $("r-week").textContent = money(perWeek);
     $("r-day").textContent = money(perHour * 8);
     $("r-hour").textContent = money(perHour);

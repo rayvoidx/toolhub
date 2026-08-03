@@ -107,6 +107,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "KRW per year",
     "tool.cost.depHint": "For a rental, enter 70% of the rental fee as depreciation; for a lease, the fee minus insurance, auto tax and maintenance. Leave a field blank if you do not have the figure — blank is not ₩0.",
     "tool.cost.bad": "Some cost entries are not valid numbers",
+    "tool.cost.held": "Months held this year (blank = full year)",
+    "tool.cost.heldBad": "Enter a whole number of months between 1 and 12, or leave blank.",
 
     "tool.insured": "Covered by business-only auto insurance (업무전용자동차보험)",
     "tool.insuredHint": "Untick this and every related expense for this vehicle is disallowed in full, whatever the ratio says. The 50% transitional relief ended with fiscal 2025.",
@@ -114,6 +116,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "Fiscal year length (months)",
     "tool.months.note": "Both the 15,000,000 KRW no-log allowance and the 8,000,000 KRW depreciation cap are pro-rated by months ÷ 12 when the fiscal year is shorter than a year (Corporate Tax Act §50-2).",
     "tool.months.bad": "Enter a whole number of months between 1 and 12.",
+    "tool.entity.label": "Taxpayer type",
+    "tool.entity.general": "General corporation / sole proprietor (15M / 8M KRW)",
+    "tool.entity.special": "Specified small corporation, e.g. property rental (5M / 4M KRW)",
+    "tool.entity.note": "A specified small corporation (부동산임대업 주업 등 특정법인) gets a 5,000,000 KRW no-log allowance and a 4,000,000 KRW depreciation cap instead of the usual 15/8 million (Corporate Tax Act Enforcement Decree §50-2).",
 
     "tool.res.hlDeduct": "Deductible expense (with the log)",
     "tool.res.hlRatio": "Business-use ratio",
@@ -257,6 +263,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "韩元／年",
     "tool.cost.depHint": "租车请按租金的 70% 填入折旧费；融资租赁请填入租赁费减去保险费、汽车税与维修费后的金额。没有数据就留空 — 空白不等于 ₩0。",
     "tool.cost.bad": "部分费用不是有效数字",
+    "tool.cost.held": "本年度持有月数（留空＝全年）",
+    "tool.cost.heldBad": "请输入 1 到 12 之间的整数月数，或留空。",
 
     "tool.insured": "已投保业务专用汽车保险（업무전용자동차보험）",
     "tool.insuredHint": "取消勾选后，无论比例多高，该车的相关费用将全额不得扣除。50% 的过渡性减免已于 2025 事业年度结束。",
@@ -264,6 +272,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "事业年度月数",
     "tool.months.note": "事业年度不满一年时，1,500万韩元的免记录额度和800万韩元的折旧限额都按 月数 ÷ 12 折算（法人税法第50条之2）。",
     "tool.months.bad": "请输入 1 到 12 之间的整数月数。",
+    "tool.entity.label": "纳税人类型",
+    "tool.entity.general": "一般法人／个人事业者（1,500万／800万韩元）",
+    "tool.entity.special": "特定小规模法人，如以不动产租赁为主业（500万／400万韩元）",
+    "tool.entity.note": "特定法人（以不动产租赁为主业等）的免记录额度为500万韩元、折旧限额为400万韩元，而非通常的1,500万／800万韩元（法人税法施行令第50条之2）。",
 
     "tool.res.hlDeduct": "可扣除金额（编制记录簿时）",
     "tool.res.hlRatio": "业务使用比例",
@@ -407,6 +419,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "वॉन प्रति वर्ष",
     "tool.cost.depHint": "रेंटल के लिए किराए का 70% मूल्यह्रास में भरें; लीज़ के लिए किराया घटा बीमा, वाहन कर और रखरखाव। आँकड़ा न हो तो फ़ील्ड खाली छोड़ दें — खाली का मतलब ₩0 नहीं है।",
     "tool.cost.bad": "कुछ लागत प्रविष्टियाँ वैध संख्याएँ नहीं हैं",
+    "tool.cost.held": "इस वर्ष रखे गए महीने (खाली = पूरा वर्ष)",
+    "tool.cost.heldBad": "1 से 12 के बीच पूर्ण संख्या में महीने दर्ज करें, या खाली छोड़ दें।",
 
     "tool.insured": "व्यवसाय-मात्र वाहन बीमा (업무전용자동차보험) है",
     "tool.insuredHint": "इसे हटा दें तो अनुपात चाहे जो कहे, इस वाहन का हर संबंधित व्यय पूरी तरह अस्वीकार्य हो जाता है। 50% की संक्रमणकालीन छूट वित्त वर्ष 2025 के साथ समाप्त हो चुकी है।",
@@ -414,6 +428,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "वित्तीय वर्ष की लंबाई (महीने)",
     "tool.months.note": "वित्तीय वर्ष एक साल से छोटा हो तो 1.5 करोड़ वॉन की बिना-लॉग छूट और 80 लाख वॉन की मूल्यह्रास सीमा, दोनों महीने ÷ 12 के अनुपात में घटाई जाती हैं (निगम कर अधिनियम §50-2)।",
     "tool.months.bad": "1 से 12 के बीच पूर्ण संख्या में महीने दर्ज करें।",
+    "tool.entity.label": "करदाता का प्रकार",
+    "tool.entity.general": "सामान्य निगम / एकल स्वामी (1.5 करोड़ / 80 लाख वॉन)",
+    "tool.entity.special": "निर्दिष्ट छोटा निगम, जैसे संपत्ति किराया (50 लाख / 40 लाख वॉन)",
+    "tool.entity.note": "निर्दिष्ट छोटे निगम (मुख्यतः संपत्ति किराया वाले) के लिए बिना-लॉग छूट 50 लाख वॉन और मूल्यह्रास सीमा 40 लाख वॉन होती है, सामान्य 1.5 करोड़/80 लाख की जगह (निगम कर अधिनियम कार्यान्वयन आदेश §50-2)।",
 
     "tool.res.hlDeduct": "कटौती योग्य व्यय (लॉग के साथ)",
     "tool.res.hlRatio": "व्यावसायिक उपयोग अनुपात",
@@ -557,6 +575,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "KRW al año",
     "tool.cost.depHint": "En un renting, introduce el 70% de la cuota como amortización; en un leasing, la cuota menos seguro, impuesto de circulación y mantenimiento. Deja el campo vacío si no tienes el dato: vacío no es ₩0.",
     "tool.cost.bad": "Algunos importes no son números válidos",
+    "tool.cost.held": "Meses en propiedad este ejercicio (vacío = año completo)",
+    "tool.cost.heldBad": "Introduce un número entero de meses entre 1 y 12, o déjalo vacío.",
 
     "tool.insured": "Tiene seguro de automóvil exclusivo para uso empresarial (업무전용자동차보험)",
     "tool.insuredHint": "Si lo desmarcas, todos los gastos relacionados de este vehículo son no deducibles en su totalidad, diga lo que diga el porcentaje. La reducción transitoria del 50% terminó con el ejercicio 2025.",
@@ -564,6 +584,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "Duración del ejercicio (meses)",
     "tool.months.note": "Cuando el ejercicio dura menos de un año, tanto la franquicia de 15.000.000 KRW sin registro como el límite de amortización de 8.000.000 KRW se prorratean por meses ÷ 12 (Ley del Impuesto sobre Sociedades §50-2).",
     "tool.months.bad": "Introduce un número entero de meses entre 1 y 12.",
+    "tool.entity.label": "Tipo de contribuyente",
+    "tool.entity.general": "Sociedad general / autónomo (15M / 8M KRW)",
+    "tool.entity.special": "Sociedad pequeña específica, p. ej. arrendamiento inmobiliario (5M / 4M KRW)",
+    "tool.entity.note": "Una sociedad pequeña específica (dedicada sobre todo al arrendamiento inmobiliario) tiene una franquicia sin registro de 5.000.000 KRW y un tope de amortización de 4.000.000 KRW, en lugar de los 15/8 millones habituales (Reglamento del Impuesto de Sociedades §50-2).",
 
     "tool.res.hlDeduct": "Gasto deducible (con registro)",
     "tool.res.hlRatio": "Porcentaje de uso empresarial",
@@ -707,6 +731,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "وون سنوياً",
     "tool.cost.depHint": "في التأجير اليومي أدخل ٧٠٪ من قيمة الإيجار كإهلاك؛ وفي التأجير التمويلي أدخل القسط مطروحاً منه التأمين وضريبة السيارة والصيانة. اترك الحقل فارغاً إن لم يتوفر لديك الرقم — الفراغ ليس ‏₩0.",
     "tool.cost.bad": "بعض قيم التكلفة ليست أرقاماً صحيحة",
+    "tool.cost.held": "أشهر الحيازة في هذه السنة (فارغ = سنة كاملة)",
+    "tool.cost.heldBad": "أدخل عدداً صحيحاً من الأشهر بين ١ و١٢، أو اترك الحقل فارغاً.",
 
     "tool.insured": "مشمولة بتأمين السيارات المخصّص للأعمال (업무전용자동차보험)",
     "tool.insuredHint": "بإلغاء التحديد تصبح كل المصروفات المتعلقة بهذه المركبة غير قابلة للخصم بالكامل، مهما كانت النسبة. الإعفاء الانتقالي البالغ ٥٠٪ انتهى مع السنة المالية ٢٠٢٥.",
@@ -714,6 +740,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "طول السنة المالية (بالأشهر)",
     "tool.months.note": "عندما تكون السنة المالية أقل من سنة، تُوزَّع كل من عتبة ١٥٬٠٠٠٬٠٠٠ وون بدون سجل وحد الإهلاك البالغ ٨٬٠٠٠٬٠٠٠ وون بنسبة الأشهر ÷ ١٢ (قانون ضريبة الشركات §50-2).",
     "tool.months.bad": "أدخل عدداً صحيحاً من الأشهر بين ١ و١٢.",
+    "tool.entity.label": "نوع المكلَّف",
+    "tool.entity.general": "شركة عامة / صاحب عمل فردي (15 مليون / 8 ملايين وون)",
+    "tool.entity.special": "شركة صغيرة محدَّدة، مثل تأجير العقارات (5 ملايين / 4 ملايين وون)",
+    "tool.entity.note": "الشركة الصغيرة المحدَّدة (التي نشاطها الرئيسي تأجير العقارات مثلاً) لها إعفاء بدون سجل قدره 5,000,000 وون وسقف إهلاك قدره 4,000,000 وون بدلاً من 15/8 مليون المعتادة (اللائحة التنفيذية لقانون ضريبة الشركات §50-2).",
 
     "tool.res.hlDeduct": "المصروف القابل للخصم (مع السجل)",
     "tool.res.hlRatio": "نسبة الاستخدام للأعمال",
@@ -857,6 +887,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "KRW par an",
     "tool.cost.depHint": "Pour une location, saisissez 70 % du loyer en amortissement ; pour un crédit-bail, le loyer moins l'assurance, la taxe sur les véhicules et l'entretien. Laissez le champ vide si vous n'avez pas le chiffre — vide ne vaut pas ₩0.",
     "tool.cost.bad": "Certains montants ne sont pas des nombres valides",
+    "tool.cost.held": "Mois de détention sur l'exercice (vide = année entière)",
+    "tool.cost.heldBad": "Saisissez un nombre entier de mois entre 1 et 12, ou laissez vide.",
 
     "tool.insured": "Couvert par une assurance auto à usage exclusivement professionnel (업무전용자동차보험)",
     "tool.insuredHint": "Décochez cette case et toutes les charges liées à ce véhicule deviennent intégralement non déductibles, quel que soit le taux. L'abattement transitoire de 50 % a pris fin avec l'exercice 2025.",
@@ -864,6 +896,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "Durée de l'exercice (mois)",
     "tool.months.note": "Lorsque l'exercice dure moins d'un an, la franchise de 15 000 000 KRW sans carnet et le plafond d'amortissement de 8 000 000 KRW sont tous deux calculés au prorata mois ÷ 12 (loi relative à l'impôt sur les sociétés §50-2).",
     "tool.months.bad": "Saisissez un nombre entier de mois entre 1 et 12.",
+    "tool.entity.label": "Type de contribuable",
+    "tool.entity.general": "Société ordinaire / entrepreneur individuel (15M / 8M KRW)",
+    "tool.entity.special": "Petite société visée, ex. location immobilière (5M / 4M KRW)",
+    "tool.entity.note": "Une petite société visée (activité principale de location immobilière, etc.) bénéficie d’une franchise sans carnet de 5 000 000 KRW et d’un plafond d’amortissement de 4 000 000 KRW, au lieu des 15/8 millions habituels (décret d’application de l’impôt sur les sociétés §50-2).",
 
     "tool.res.hlDeduct": "Charge déductible (avec carnet)",
     "tool.res.hlRatio": "Taux d'utilisation professionnelle",
@@ -1007,6 +1043,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "ওন / বছর",
     "tool.cost.depHint": "ভাড়ার ক্ষেত্রে ভাড়ার ৭০% অবচয় হিসেবে দিন; লিজের ক্ষেত্রে কিস্তি থেকে বিমা, গাড়ি কর ও রক্ষণাবেক্ষণ বাদ দিয়ে দিন। তথ্য না থাকলে ঘর ফাঁকা রাখুন — ফাঁকা মানে ₩0 নয়।",
     "tool.cost.bad": "কিছু খরচের মান বৈধ সংখ্যা নয়",
+    "tool.cost.held": "এ বছর গাড়ি রাখার মাস সংখ্যা (খালি = পুরো বছর)",
+    "tool.cost.heldBad": "১ থেকে ১২-এর মধ্যে পূর্ণ সংখ্যায় মাস লিখুন, অথবা খালি রাখুন।",
 
     "tool.insured": "ব্যবসা-নির্দিষ্ট গাড়ি বিমা (업무전용자동차보험) আছে",
     "tool.insuredHint": "এটি তুলে দিলে অনুপাত যাই বলুক, এই গাড়ির সব সংশ্লিষ্ট ব্যয় পুরোপুরি অগ্রাহ্য হবে। ৫০% অন্তর্বর্তী ছাড় ২০২৫ অর্থবছরেই শেষ হয়েছে।",
@@ -1014,6 +1052,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "অর্থবছরের দৈর্ঘ্য (মাস)",
     "tool.months.note": "অর্থবছর এক বছরের কম হলে লগ ছাড়া ১,৫০,০০,০০০ ওনের ছাড় এবং ৮০,০০,০০০ ওনের অবচয় সীমা — দুটিই মাস ÷ ১২ অনুপাতে কমে (কর্পোরেট কর আইন §50-2)।",
     "tool.months.bad": "১ থেকে ১২-এর মধ্যে পূর্ণ সংখ্যায় মাস লিখুন।",
+    "tool.entity.label": "করদাতার ধরন",
+    "tool.entity.general": "সাধারণ কোম্পানি / একক ব্যবসায়ী (১.৫ কোটি / ৮০ লক্ষ ওন)",
+    "tool.entity.special": "নির্দিষ্ট ছোট কোম্পানি, যেমন সম্পত্তি ভাড়া (৫০ লক্ষ / ৪০ লক্ষ ওন)",
+    "tool.entity.note": "নির্দিষ্ট ছোট কোম্পানির (মূলত সম্পত্তি ভাড়া ব্যবসা) ক্ষেত্রে লগ ছাড়া ছাড় ৫,০০০,০০০ ওন এবং অবচয়ের সীমা ৪,০০০,০০০ ওন, স্বাভাবিক ১.৫ কোটি/৮০ লক্ষের বদলে (কর্পোরেট কর আইন প্রয়োগ বিধি §50-2)।",
 
     "tool.res.hlDeduct": "কর্তনযোগ্য ব্যয় (লগসহ)",
     "tool.res.hlRatio": "ব্যবসায়িক ব্যবহারের অনুপাত",
@@ -1157,6 +1199,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "KRW por ano",
     "tool.cost.depHint": "Em uma locação, informe 70% do valor do aluguel como depreciação; em um leasing, a parcela menos seguro, imposto sobre veículos e manutenção. Deixe o campo vazio se não tiver o número — vazio não é ₩0.",
     "tool.cost.bad": "Alguns valores de custo não são números válidos",
+    "tool.cost.held": "Meses de posse neste exercício (em branco = ano inteiro)",
+    "tool.cost.heldBad": "Introduza um número inteiro de meses entre 1 e 12, ou deixe em branco.",
 
     "tool.insured": "Coberto por seguro de automóvel exclusivo para uso empresarial (업무전용자동차보험)",
     "tool.insuredHint": "Desmarque e todas as despesas relacionadas a este veículo tornam-se integralmente indedutíveis, não importa o que diga o percentual. O alívio transitório de 50% terminou com o exercício de 2025.",
@@ -1164,6 +1208,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "Duração do exercício (meses)",
     "tool.months.note": "Quando o exercício dura menos de um ano, tanto a franquia de 15.000.000 KRW sem registro quanto o teto de depreciação de 8.000.000 KRW são rateados por meses ÷ 12 (Lei do Imposto sobre a Renda das Pessoas Jurídicas §50-2).",
     "tool.months.bad": "Informe um número inteiro de meses entre 1 e 12.",
+    "tool.entity.label": "Tipo de contribuinte",
+    "tool.entity.general": "Sociedade geral / empresário individual (15M / 8M KRW)",
+    "tool.entity.special": "Pequena sociedade específica, ex. locação imobiliária (5M / 4M KRW)",
+    "tool.entity.note": "Uma pequena sociedade específica (atividade principal de locação imobiliária, etc.) tem franquia sem registro de 5.000.000 KRW e teto de depreciação de 4.000.000 KRW, em vez dos habituais 15/8 milhões (Regulamento do Imposto sobre Sociedades §50-2).",
 
     "tool.res.hlDeduct": "Despesa dedutível (com registro)",
     "tool.res.hlRatio": "Percentual de uso empresarial",
@@ -1307,6 +1355,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "вон в год",
     "tool.cost.depHint": "При аренде укажите в амортизации 70% арендной платы; при лизинге — платёж за вычетом страхования, транспортного налога и обслуживания. Если данных нет, оставьте поле пустым — пусто не равно ₩0.",
     "tool.cost.bad": "Некоторые суммы расходов не являются корректными числами",
+    "tool.cost.held": "Месяцев владения в этом году (пусто — весь год)",
+    "tool.cost.heldBad": "Введите целое число месяцев от 1 до 12 или оставьте поле пустым.",
 
     "tool.insured": "Есть автострахование исключительно для служебного использования (업무전용자동차보험)",
     "tool.insuredHint": "Снимите галочку — и все связанные расходы по этому автомобилю становятся полностью невычитаемыми, какой бы ни была доля. Переходная льгота в 50% закончилась с 2025 финансовым годом.",
@@ -1314,6 +1364,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "Длительность финансового года (месяцев)",
     "tool.months.note": "Если финансовый год короче года, и льгота 15 000 000 вон без журнала, и лимит амортизации 8 000 000 вон пересчитываются пропорционально: месяцы ÷ 12 (Закон о налоге на прибыль организаций §50-2).",
     "tool.months.bad": "Введите целое число месяцев от 1 до 12.",
+    "tool.entity.label": "Тип налогоплательщика",
+    "tool.entity.general": "Обычная компания / ИП (15 млн / 8 млн вон)",
+    "tool.entity.special": "Особая малая компания, напр. аренда недвижимости (5 млн / 4 млн вон)",
+    "tool.entity.note": "Для особой малой компании (основная деятельность — аренда недвижимости и т. п.) лимит без журнала составляет 5 000 000 вон, а предел амортизации — 4 000 000 вон вместо обычных 15/8 млн (постановление о налоге на прибыль §50-2).",
 
     "tool.res.hlDeduct": "Вычитаемые расходы (с журналом)",
     "tool.res.hlRatio": "Доля служебного использования",
@@ -1457,6 +1511,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "وون فی سال",
     "tool.cost.depHint": "کرائے کی صورت میں کرائے کا 70% فرسودگی میں لکھیں؛ لیز کی صورت میں قسط میں سے بیمہ، گاڑی ٹیکس اور دیکھ بھال منہا کریں۔ اگر عدد دستیاب نہ ہو تو خانہ خالی چھوڑ دیں — خالی کا مطلب ₩0 نہیں۔",
     "tool.cost.bad": "کچھ لاگت کی اقدار درست اعداد نہیں ہیں",
+    "tool.cost.held": "اس سال ملکیت کے مہینے (خالی = پورا سال)",
+    "tool.cost.heldBad": "1 سے 12 کے درمیان مکمل عدد میں مہینے درج کریں، یا خالی چھوڑ دیں۔",
 
     "tool.insured": "کاروبار کے لیے مخصوص گاڑی بیمہ (업무전용자동차보험) موجود ہے",
     "tool.insuredHint": "اس کا نشان ہٹا دیں تو تناسب کچھ بھی کہے، اس گاڑی کے تمام متعلقہ اخراجات مکمل طور پر ناقابلِ کٹوتی ہو جاتے ہیں۔ 50% کی عبوری رعایت مالی سال 2025 کے ساتھ ختم ہو چکی ہے۔",
@@ -1464,6 +1520,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "مالی سال کی طوالت (مہینے)",
     "tool.months.note": "جب مالی سال ایک سال سے کم ہو تو بغیر لاگ 15,000,000 وون کی رعایت اور 8,000,000 وون کی فرسودگی حد، دونوں مہینے ÷ 12 کے تناسب سے کم ہو جاتی ہیں (کارپوریٹ ٹیکس ایکٹ §50-2)۔",
     "tool.months.bad": "1 سے 12 کے درمیان مکمل عدد میں مہینے درج کریں۔",
+    "tool.entity.label": "ٹیکس دہندہ کی قسم",
+    "tool.entity.general": "عام کمپنی / انفرادی کاروبار (1.5 کروڑ / 80 لاکھ وون)",
+    "tool.entity.special": "مخصوص چھوٹی کمپنی، مثلاً جائیداد کرایہ (50 لاکھ / 40 لاکھ وون)",
+    "tool.entity.note": "مخصوص چھوٹی کمپنی (بنیادی طور پر جائیداد کرایہ وغیرہ) کے لیے بغیر لاگ رعایت 5,000,000 وون اور فرسودگی کی حد 4,000,000 وون ہے، معمول کے 1.5 کروڑ/80 لاکھ کے بجائے (کارپوریٹ ٹیکس ایکٹ نفاذی حکم §50-2)۔",
 
     "tool.res.hlDeduct": "قابلِ کٹوتی خرچ (لاگ کے ساتھ)",
     "tool.res.hlRatio": "کاروباری استعمال کا تناسب",
@@ -1607,6 +1667,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "KRW per tahun",
     "tool.cost.depHint": "Untuk sewa harian, isikan 70% dari biaya sewa sebagai penyusutan; untuk leasing, isikan cicilan dikurangi asuransi, pajak kendaraan, dan perawatan. Kosongkan kolom jika Anda tidak punya angkanya — kosong bukan ₩0.",
     "tool.cost.bad": "Beberapa nilai biaya bukan angka yang valid",
+    "tool.cost.held": "Bulan kepemilikan tahun ini (kosong = setahun penuh)",
+    "tool.cost.heldBad": "Masukkan jumlah bulan berupa bilangan bulat antara 1 dan 12, atau biarkan kosong.",
 
     "tool.insured": "Ditanggung asuransi mobil khusus bisnis (업무전용자동차보험)",
     "tool.insuredHint": "Hapus centang ini dan seluruh biaya terkait kendaraan ini menjadi tidak dapat dikurangkan sepenuhnya, berapa pun rasionya. Keringanan transisi 50% telah berakhir pada tahun buku 2025.",
@@ -1614,6 +1676,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "Panjang tahun buku (bulan)",
     "tool.months.note": "Bila tahun buku kurang dari satu tahun, baik keringanan 15.000.000 KRW tanpa catatan maupun batas penyusutan 8.000.000 KRW diprorata dengan bulan ÷ 12 (Undang-Undang Pajak Penghasilan Badan §50-2).",
     "tool.months.bad": "Masukkan jumlah bulan berupa bilangan bulat antara 1 dan 12.",
+    "tool.entity.label": "Jenis wajib pajak",
+    "tool.entity.general": "Perseroan umum / pengusaha perorangan (15 juta / 8 juta KRW)",
+    "tool.entity.special": "Perseroan kecil tertentu, mis. persewaan properti (5 juta / 4 juta KRW)",
+    "tool.entity.note": "Perseroan kecil tertentu (usaha utamanya persewaan properti, dsb.) mendapat batas tanpa catatan 5.000.000 KRW dan batas penyusutan 4.000.000 KRW, bukan 15/8 juta seperti biasa (Peraturan Pelaksanaan Pajak Badan §50-2).",
 
     "tool.res.hlDeduct": "Biaya yang dapat dikurangkan (dengan catatan)",
     "tool.res.hlRatio": "Rasio penggunaan bisnis",
@@ -1757,6 +1823,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "KRW pro Jahr",
     "tool.cost.depHint": "Bei Miete tragen Sie 70 % der Mietgebühr als Abschreibung ein; beim Leasing die Rate abzüglich Versicherung, Kfz-Steuer und Wartung. Lassen Sie das Feld leer, wenn Ihnen die Zahl fehlt — leer ist nicht ₩0.",
     "tool.cost.bad": "Einige Kostenangaben sind keine gültigen Zahlen",
+    "tool.cost.held": "Haltemonate im Geschäftsjahr (leer = ganzes Jahr)",
+    "tool.cost.heldBad": "Geben Sie eine ganze Monatszahl zwischen 1 und 12 ein oder lassen Sie das Feld leer.",
 
     "tool.insured": "Durch eine rein betriebliche Kfz-Versicherung gedeckt (업무전용자동차보험)",
     "tool.insuredHint": "Wenn Sie das Häkchen entfernen, sind sämtliche zugehörigen Kosten dieses Fahrzeugs vollständig nicht abzugsfähig — unabhängig vom Nutzungsanteil. Die 50-%-Übergangsregelung endete mit dem Geschäftsjahr 2025.",
@@ -1764,6 +1832,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "Länge des Geschäftsjahres (Monate)",
     "tool.months.note": "Ist das Geschäftsjahr kürzer als ein Jahr, werden sowohl der Freibetrag von 15.000.000 KRW ohne Fahrtenbuch als auch die Abschreibungsobergrenze von 8.000.000 KRW zeitanteilig mit Monate ÷ 12 gekürzt (Körperschaftsteuergesetz §50-2).",
     "tool.months.bad": "Geben Sie eine ganze Monatszahl zwischen 1 und 12 ein.",
+    "tool.entity.label": "Steuerpflichtigen-Typ",
+    "tool.entity.general": "Normale Gesellschaft / Einzelunternehmer (15 Mio. / 8 Mio. KRW)",
+    "tool.entity.special": "Bestimmte kleine Gesellschaft, z. B. Immobilienvermietung (5 Mio. / 4 Mio. KRW)",
+    "tool.entity.note": "Eine bestimmte kleine Gesellschaft (Haupttätigkeit z. B. Immobilienvermietung) hat einen Freibetrag ohne Fahrtenbuch von 5.000.000 KRW und eine Abschreibungsgrenze von 4.000.000 KRW statt der üblichen 15/8 Mio. (Körperschaftsteuer-Durchführungsverordnung §50-2).",
 
     "tool.res.hlDeduct": "Abzugsfähige Kosten (mit Fahrtenbuch)",
     "tool.res.hlRatio": "Betrieblicher Nutzungsanteil",
@@ -1907,6 +1979,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "ウォン／年",
     "tool.cost.depHint": "レンタルの場合はレンタル料の70%を減価償却費として入力し、リースの場合はリース料から保険料・自動車税・整備費を差し引いた額を入力します。数値が分からない項目は空欄のままで — 空欄は₩0ではありません。",
     "tool.cost.bad": "一部の費用が有効な数値ではありません",
+    "tool.cost.held": "当期の保有月数（空欄＝通年）",
+    "tool.cost.heldBad": "1〜12 の整数で月数を入力するか、空欄のままにしてください。",
 
     "tool.insured": "業務専用自動車保険（업무전용자동차보험）に加入済み",
     "tool.insuredHint": "チェックを外すと、業務使用比率にかかわらずこの車両の関連費用は全額損金不算入になります。50%の経過措置は2025事業年度をもって終了しました。",
@@ -1914,6 +1988,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "事業年度の月数",
     "tool.months.note": "事業年度が1年未満の場合、記録簿なしの1,500万ウォンの枠と減価償却費の800万ウォン限度額は、いずれも 月数 ÷ 12 で月割りされます（法人税法第50条の2）。",
     "tool.months.bad": "1〜12の整数で月数を入力してください。",
+    "tool.entity.label": "納税者の区分",
+    "tool.entity.general": "一般法人・個人事業者（1,500万／800万ウォン）",
+    "tool.entity.special": "特定小規模法人（不動産賃貸業が主業など。500万／400万ウォン）",
+    "tool.entity.note": "特定法人（不動産賃貸業を主業とする小規模法人など）は、通常の1,500万／800万ウォンではなく、運行記録なしの限度が500万ウォン、減価償却費の限度が400万ウォンになります（法人税法施行令第50条の2）。",
 
     "tool.res.hlDeduct": "損金算入額（記録簿あり）",
     "tool.res.hlRatio": "業務使用比率",
@@ -2057,6 +2135,8 @@ window.I18N_LOCALES = {
     "tool.cost.ph": "원 / 년",
     "tool.cost.depHint": "렌트는 렌트료의 70% 를 감가상각비로, 리스는 리스료에서 보험료·자동차세·수선비를 뺀 금액을 넣으세요. 모르는 항목은 비워두세요 — 빈칸은 ₩0 이 아닙니다.",
     "tool.cost.bad": "일부 비용이 올바른 숫자가 아닙니다",
+    "tool.cost.held": "사업연도 중 보유월수 (비우면 12개월)",
+    "tool.cost.heldBad": "1~12 사이의 정수 월수를 입력하거나 비워 두세요.",
 
     "tool.insured": "업무전용자동차보험 가입",
     "tool.insuredHint": "체크를 해제하면 비율과 무관하게 이 차량의 관련비용 전액이 손금불산입됩니다. 50% 경과조치는 2025 사업연도로 끝났습니다.",
@@ -2064,6 +2144,10 @@ window.I18N_LOCALES = {
     "tool.months.label": "사업연도 월수",
     "tool.months.note": "사업연도가 1년 미만이면 기록부 미작성 시의 1,500만원 한도와 감가상각비 800만원 한도 모두 월수 ÷ 12 로 월할 계산합니다(법인세법 제50조의2).",
     "tool.months.bad": "1에서 12 사이의 정수로 월수를 입력하세요.",
+    "tool.entity.label": "납세자 유형",
+    "tool.entity.general": "일반 법인·개인사업자 (1,500만 / 800만 원)",
+    "tool.entity.special": "특정법인 (부동산임대업 주업 등, 500만 / 400만 원)",
+    "tool.entity.note": "부동산임대업을 주업으로 하는 소규모 법인 등 특정법인은 기록부 미작성 한도가 500만 원, 감가상각비 한도가 400만 원으로 일반 1,500만/800만 원 대신 적용됩니다 (법인세법 시행령 §50조의2).",
 
     "tool.res.hlDeduct": "손금산입액(기록부 작성 시)",
     "tool.res.hlRatio": "업무사용비율",

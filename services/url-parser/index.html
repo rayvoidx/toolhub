@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="URL Parser — Break a Link Into Its Parts">
 <meta property="og:description" content="Paste a URL and see the protocol, host, port, path segments, every query parameter and the fragment. Percent-encoding is decoded and duplicate keys stay apart.">
 <meta property="og:url" content="https://tool-hub.me/url-parser/">
-<meta property="og:image" content="https://tool-hub.me/url-parser/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/url-parser/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#7c3aed">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "URL Parser",
+      "item": "https://tool-hub.me/url-parser/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,30 +130,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "URL Parser",
-      "item": "https://tool-hub.me/url-parser/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
-<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
 #tool, #tool * { min-width: 0; }
 #tool { max-width: 100%; }
 #tool table { display: block; max-width: 100%; overflow-x: auto; }
@@ -141,6 +141,7 @@ ADSENSE:END -->
 #tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
 .guide-content table { display: block; max-width: 100%; overflow-x: auto; }
 main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
 </style>
 </head>
 <body>
@@ -210,11 +211,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="rc-label" data-i18n="tool.r.origin">Origin</div>
           <div class="rc-val" id="r-origin">—</div>
         </div>
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.href">Normalized URL</div>
+          <div class="rc-val" id="r-href">—</div>
+        </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.protocol">Protocol</div><div class="rc-val" id="r-protocol">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.host">Host</div><div class="rc-val" id="r-host">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.port">Port</div><div class="rc-val" id="r-port">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.path">Path</div><div class="rc-val" id="r-path">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.hash">Fragment</div><div class="rc-val" id="r-hash">—</div></div>
+        <div class="rcard" id="userinfo-card" hidden><div class="rc-label" data-i18n="tool.r.userinfo">User info</div><div class="rc-val" id="r-userinfo">—</div></div>
       </div>
 
       <h3 class="list-title" data-i18n="tool.r.params">Query parameters</h3>

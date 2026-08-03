@@ -215,19 +215,21 @@
   function $(id) { return document.getElementById(id); }
   var dateEl = $("birth-date");
   var emptyEl = $("result-empty"), cardEl = $("result-card"), errEl = $("result-err");
+  var futureEl = $("result-future");
   var symbolEl = $("res-symbol"), nameEl = $("res-name"), rangeEl = $("res-range");
   var elementEl = $("res-element"), modalityEl = $("res-modality"), traitEl = $("res-trait");
   var cuspEl = $("res-cusp");
   var tableBody = $("sign-table-body");
   if (!dateEl || !cardEl || !tableBody) return;
 
-  // 미래 날짜(아직 태어나지 않은 날짜) 방지
-  (function capMaxDate() {
+  // 미래 날짜(아직 태어나지 않은 날짜) 방지 — input[max] 는 힌트일 뿐이라 render() 에서도 막는다
+  function todayISO() {
     var today = new Date();
     var mm = String(today.getMonth() + 1); if (mm.length < 2) mm = "0" + mm;
     var dd = String(today.getDate()); if (dd.length < 2) dd = "0" + dd;
-    dateEl.max = today.getFullYear() + "-" + mm + "-" + dd;
-  })();
+    return today.getFullYear() + "-" + mm + "-" + dd;
+  }
+  dateEl.max = todayISO();
 
   /* ---- 전체 12 별자리 표 (참조 테이블 — SEO/롱테일 대응) ---- */
   function renderTable() {
@@ -260,16 +262,27 @@
   function showEmpty() {
     cardEl.hidden = true;
     errEl.hidden = true;
+    if (futureEl) futureEl.hidden = true;
     emptyEl.hidden = false;
   }
   function showErr() {
     cardEl.hidden = true;
     emptyEl.hidden = true;
+    if (futureEl) futureEl.hidden = true;
     errEl.hidden = false;
+  }
+  function showFuture() {
+    cardEl.hidden = true;
+    emptyEl.hidden = true;
+    errEl.hidden = true;
+    if (futureEl) futureEl.hidden = false;
   }
   function render() {
     var raw = dateEl.value;
     if (!raw) { showEmpty(); return; }
+
+    if (!parseISODate(raw)) { showErr(); return; }
+    if (raw > todayISO()) { showFuture(); return; } // ISO 문자열은 사전순 = 시간순
 
     var result = computeZodiac(raw);
     if (!result) { showErr(); return; }
@@ -295,6 +308,7 @@
 
     emptyEl.hidden = true;
     errEl.hidden = true;
+    if (futureEl) futureEl.hidden = true;
     cardEl.hidden = false;
 
     try { localStorage.setItem(SKEY, raw); } catch (e) { /* private mode */ }
@@ -304,7 +318,7 @@
   function restore() {
     var stored = null;
     try { stored = localStorage.getItem(SKEY); } catch (e) { /* noop */ }
-    if (stored && parseISODate(stored)) dateEl.value = stored;
+    if (stored && parseISODate(stored) && stored <= todayISO()) dateEl.value = stored;
   }
 
   /* ---- 이벤트 ---- */

@@ -135,6 +135,9 @@
     9674:"loz",9824:"spades",9827:"clubs",9829:"hearts",9830:"diams"
   };
 
+  // 항상 이스케이프되는 예약 문자: " & ' < >
+  var RESERVED_CP = { 34:1, 38:1, 39:1, 60:1, 62:1 };
+
   /* ---- 순수 변환 로직 (node 검증 대상) ---- */
 
   // 서로게이트 쌍을 인식해 완전한 코드포인트 배열로 분해 (이모지 등 astral 지원)
@@ -165,14 +168,23 @@
 
   // Text → HTML 엔티티. & < > " ' 는 항상 이스케이프, 그 외 명명 엔티티가 있는 문자는
   // 항상 이름형으로, 이름이 없는 비 ASCII 문자는 allNonAscii 가 true 일 때만 숫자형으로.
-  function encodeEntities(str, allNonAscii) {
+  // style: "named"(기본) | "numeric"(이름 대신 &#NNN;) | "minimal"(예약 문자만).
+  // 예약 문자 & < > " ' 는 어떤 style 에서도 반드시 이스케이프된다.
+  function encodeEntities(str, allNonAscii, style) {
     if (str === "") return "";
+    if (style !== "numeric" && style !== "minimal") style = "named";
     var cps = codePointsOf(str);
     var out = "";
     for (var i = 0; i < cps.length; i++) {
       var cp = cps[i];
+      var reserved = RESERVED_CP[cp];
       var name = NAMED_BY_CP[cp];
-      if (name) { out += "&" + name + ";"; continue; }
+      if (reserved) {
+        out += (style === "numeric") ? ("&#" + cp + ";") : ("&" + name + ";");
+        continue;
+      }
+      if (name && style === "named")   { out += "&" + name + ";"; continue; }
+      if (name && style === "numeric") { out += "&#" + cp + ";"; continue; }
       if (cp < 128) { out += cpToChar(cp); continue; }
       out += allNonAscii ? ("&#" + cp + ";") : cpToChar(cp);
     }
@@ -209,6 +221,7 @@
   var textEl    = document.getElementById("ec-text");
   var htmlEl    = document.getElementById("ec-html");
   var asciiEl   = document.getElementById("ec-ascii");
+  var styleEl   = document.getElementById("ec-style");
   var encodeBtn = document.getElementById("dir-encode");
   var decodeBtn = document.getElementById("dir-decode");
   var clearBtn  = document.getElementById("ec-clear");
@@ -218,6 +231,7 @@
 
   var LAST_KEY = (window.APP_CONFIG && window.APP_CONFIG.slug ? window.APP_CONFIG.slug : "html-entity-conv") + ":last";
   var ASCII_KEY = (window.APP_CONFIG && window.APP_CONFIG.slug ? window.APP_CONFIG.slug : "html-entity-conv") + ":allNonAscii";
+  var STYLE_KEY = (window.APP_CONFIG && window.APP_CONFIG.slug ? window.APP_CONFIG.slug : "html-entity-conv") + ":style";
   var dir = "encode"; // "encode" | "decode"
 
   /* ---- 방향 버튼 표시 ---- */
@@ -238,7 +252,7 @@
   /* ---- 변환 실행 ---- */
   function convert() {
     if (dir === "encode") {
-      htmlEl.value = encodeEntities(textEl.value, !!(asciiEl && asciiEl.checked));
+      htmlEl.value = encodeEntities(textEl.value, !!(asciiEl && asciiEl.checked), styleEl ? styleEl.value : "named");
     } else {
       textEl.value = decodeEntities(htmlEl.value);
     }
@@ -247,6 +261,7 @@
   function saveState() {
     try { localStorage.setItem(LAST_KEY, textEl.value); } catch (e) { /* private mode */ }
     try { localStorage.setItem(ASCII_KEY, (asciiEl && asciiEl.checked) ? "1" : "0"); } catch (e) { /* noop */ }
+    try { if (styleEl) localStorage.setItem(STYLE_KEY, styleEl.value); } catch (e) { /* noop */ }
   }
 
   /* ---- 피드백 메시지 ---- */
@@ -300,6 +315,7 @@
   });
   if (encodeBtn) encodeBtn.addEventListener("click", function () { setDir("encode"); convert(); saveState(); });
   if (decodeBtn) decodeBtn.addEventListener("click", function () { setDir("decode"); convert(); });
+  if (styleEl) styleEl.addEventListener("change", function () { if (dir === "encode") convert(); saveState(); });
   if (asciiEl) asciiEl.addEventListener("change", function () { if (dir === "encode") convert(); saveState(); });
   if (clearBtn) clearBtn.addEventListener("click", function () {
     textEl.value = "";
@@ -324,6 +340,10 @@
     try {
       var a = localStorage.getItem(ASCII_KEY);
       if (a === "1" && asciiEl) asciiEl.checked = true;
+    } catch (e) { /* noop */ }
+    try {
+      var st = localStorage.getItem(STYLE_KEY);
+      if (styleEl && (st === "named" || st === "numeric" || st === "minimal")) styleEl.value = st;
     } catch (e) { /* noop */ }
     try {
       var last = localStorage.getItem(LAST_KEY);

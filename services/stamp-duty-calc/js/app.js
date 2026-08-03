@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var price = $("price"), buyer = $("buyer");
+  var price = $("price"), buyer = $("buyer"), nonres = $("nonres");
   var result = $("result"), errEl = $("err"), ftbNote = $("ftb-note");
   if (!price || !buyer) return;
 
@@ -113,11 +113,13 @@
   var FTB_CAP = 500000;
   var SURCHARGE = 0.05;      // 추가 주택 할증 (2024-10-31 이후)
   var SURCHARGE_FLOOR = 40000; // £40,000 미만 거래에는 할증이 붙지 않는다
+  var NONRES = 0.02;         // 비거주자 할증 (2021-04-01 이후), 다른 할증 위에 얹힌다
 
-  function bandRows(p, kind) {
+  function bandRows(p, kind, nr) {
     var useFtb = kind === "ftb" && p <= FTB_CAP;
     var bands = useFtb ? BANDS_FTB : BANDS_STD;
     var sur = (kind === "additional" && p >= SURCHARGE_FLOOR) ? SURCHARGE : 0;
+    if (nr && p >= SURCHARGE_FLOOR) sur += NONRES;
     var rows = [], lower = 0;
     for (var i = 0; i < bands.length; i++) {
       var upper = Math.min(bands[i].upTo, p);
@@ -147,12 +149,13 @@
     if (p <= 0 || p > 50000000) return fail("tool.err.range");
 
     var kind = buyer.value;
-    var rows = bandRows(p, kind);
+    var rows = bandRows(p, kind, !!(nonres && nonres.checked));
     var total = 0;
     for (var i = 0; i < rows.length; i++) total += rows[i].tax;
 
     $("r-duty").textContent = gbp(total);
     $("r-rate").textContent = (total / p * 100).toFixed(2) + "%";
+    $("r-total").textContent = gbp(p + total);
 
     var body = $("band-body");
     body.textContent = "";
@@ -182,6 +185,7 @@
   price.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
   price.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   buyer.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  if (nonres) nonres.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

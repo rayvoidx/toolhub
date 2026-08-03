@@ -417,9 +417,11 @@
   }
 
   // 차량 1대의 최종 판정. cost 가 null 이면 비율만 산출한다(0원으로 위장하지 않는다).
-  function vlaVehicleResult(v, cost, months) {
+  // limits: {noLog, dep} — 특정법인(부동산임대업 주업 등)은 500만/400만. 생략 시 일반 한도.
+  function vlaVehicleResult(v, cost, months, limits) {
     var mf = Math.min(Math.max(months, 1), 12) / 12;   // 사업연도 1년 미만 → 두 한도 모두 월할
-    var noLogLimit = LIMIT_NO_LOG * mf, depCap = LIMIT_DEPRECIATION * mf;
+    var L = limits || { noLog: LIMIT_NO_LOG, dep: LIMIT_DEPRECIATION };
+    var noLogLimit = L.noLog * mf, depCap = L.dep * mf;
     var ratio = v.totalKm > 0 ? v.bizKm / v.totalKm : null;   // 0 나눗셈 금지
     var out = { ratio: ratio, cost: null, dep: 0, gated: !!(cost && cost.insured === false),
                 withLog: null, noLog: null, underLimit: false, noLogRatio: null,
@@ -581,7 +583,7 @@
   var state = {
     src: null, srcName: "", parsed: null, hasHeader: true, agg: null,
     map: { vehicle: -1, date: -1, user: -1, start: -1, end: -1, dist: -1, purpose: -1 },
-    purposeMap: {}, costs: {}, months: 12, token: 0, parsing: false, results: null, pgTimer: null
+    purposeMap: {}, costs: {}, months: 12, entity: "general", token: 0, parsing: false, results: null, pgTimer: null
   };
 
   function t(key, vars) {
@@ -761,6 +763,8 @@
     state.costs = loadPref("vehicles", {}) || {};
     state.months = loadPref("months", 12) || 12;
     $("vla-months").value = String(state.months);
+    state.entity = loadPref("entity", "general") === "special" ? "special" : "general";
+    $("vla-entity").value = state.entity;
     $("vla-setup").hidden = false;
     renderMap();
     renderPreview();
@@ -901,7 +905,14 @@
 
   // 입력 문자열 → 판정용 숫자 묶음. 빈칸은 0 이 아니라 '없음'이다.
   function costNumbers(c) {
-    var out = { has: false, insured: c.insured !== false, bad: false };
+    var out = { has: false, insured: c.insured !== false, bad: false, held: null };
+    // 사업연도 중 취득·임차한 차량 → 두 한도를 보유월수로 월할 (법인세법 §50-2, 보유기간 월할)
+    var rawHeld = String(c.held == null ? "" : c.held).trim();
+    if (rawHeld !== "") {
+      var hv = vlaNum(rawHeld);
+      if (isNaN(hv) || hv < 1 || hv > 12 || Math.floor(hv) !== hv) out.bad = true;
+      else out.held = hv;
+    }
     for (var i = 0; i < COST_FIELDS.length; i++) {
       var raw = String(c[COST_FIELDS[i]] == null ? "" : c[COST_FIELDS[i]]).trim();
       if (raw === "") { out[COST_FIELDS[i]] = 0; continue; }
@@ -950,6 +961,34 @@
             grid.appendChild(wrap);
           })(COST_FIELDS[f]);
         }
+        // 보유월수 — 사업연도 중 취득·처분한 차량은 한도를 보유월수로 월할한다
+        (function () {
+          var wrap = el("div");
+          var hid = "vla-h-" + i;
+          var lab = el("label", null, t("tool.cost.held"));
+          lab.setAttribute("for", hid);
+          var inp = el("input");
+          inp.type = "text";
+          inp.id = hid;
+          inp.inputMode = "numeric";
+          inp.autocomplete = "off";
+          inp.value = c.held == null ? "" : c.held;
+          var err = el("p", "vla-hint vla-warn", t("tool.cost.heldBad"));
+          err.hidden = true;
+          function syncHeld() {
+            var raw = inp.value.trim(), n = vlaNum(raw);
+            err.hidden = !(raw !== "" && (isNaN(n) || n < 1 || n > 12 || Math.floor(n) !== n));
+          }
+          inp.addEventListener("input", function () {
+            c.held = inp.value;
+            syncHeld();
+            savePref("vehicles", state.costs);
+            renderResult();
+          });
+          syncHeld();
+          wrap.appendChild(lab); wrap.appendChild(inp); wrap.appendChild(err);
+          grid.appendChild(wrap);
+        })();
         d.appendChild(grid);
         d.appendChild(el("p", "vla-hint", t("tool.cost.depHint")));
         var chk = el("label", "vla-check");
@@ -983,17 +1022,28 @@
     return v;
   }
 
+  // 납세자 유형별 한도. 특정법인은 500만/400만 (법인세법 시행령 §50조의2).
+  function readLimits() {
+    var v = $("vla-entity").value === "special" ? "special" : "general";
+    state.entity = v;
+    savePref("entity", v);
+    return v === "special" ? { noLog: 5000000, dep: 4000000 }
+                           : { noLog: LIMIT_NO_LOG, dep: LIMIT_DEPRECIATION };
+  }
+
   function renderResult() {
     var res = $("vla-result");
     if (!state.agg) return;
     var months = readMonths();
+    var limits = readLimits();
     var vs = state.agg.vehicles;
     var rows = [], i;
     var sum = { totalKm: 0, bizKm: 0, cost: 0, deduct: 0, disallow: 0, carry: 0, noLog: 0, hasCost: false, gated: 0 };
     var anyComputable = false;
     for (i = 0; i < vs.length; i++) {
       var c = costNumbers(costOf(vs[i].id));
-      var r = vlaVehicleResult(vs[i], c.has ? c : { has: false, insured: c.insured }, months);
+      var vMonths = c.held == null ? months : Math.min(c.held, months);
+      var r = vlaVehicleResult(vs[i], c.has ? c : { has: false, insured: c.insured }, vMonths, limits);
       rows.push({ v: vs[i], r: r, bad: c.bad });
       sum.totalKm += vs[i].totalKm;
       sum.bizKm += vs[i].bizKm;
@@ -1313,6 +1363,7 @@
   });
   $("vla-delim").addEventListener("change", function () { if (state.src) startParse(); });
   $("vla-months").addEventListener("input", function () { if (state.agg) renderResult(); });
+  $("vla-entity").addEventListener("change", function () { if (state.agg) renderResult(); });
 
   var drop = $("vla-drop");
   ["dragenter", "dragover"].forEach(function (ev) {

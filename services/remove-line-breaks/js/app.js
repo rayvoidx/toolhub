@@ -140,10 +140,22 @@
     return paragraphs.join("\n\n");
   }
 
-  function transform(raw, mode) {
+  // "사용자 지정 구분자로 결합": space 모드와 동일하되 이어붙이는 문자열만 교체(쉼표 목록 등).
+  function joinWithSeparator(norm, sep) {
+    var parts = norm.split(/\n+/);
+    var out = [];
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i].trim();
+      if (p.length) out.push(p);
+    }
+    return out.join(String(sep == null ? "" : sep));
+  }
+
+  function transform(raw, mode, sep) {
     var norm = normalizeNewlines(raw);
     if (mode === "none") return joinWithNothing(norm);
     if (mode === "smart") return smartUnwrap(norm);
+    if (mode === "custom") return joinWithSeparator(norm, sep);
     return joinWithSpace(norm); // 기본값 "space"
   }
 
@@ -151,7 +163,8 @@
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
       normalizeNewlines: normalizeNewlines, joinWithSpace: joinWithSpace,
-      joinWithNothing: joinWithNothing, smartUnwrap: smartUnwrap, transform: transform
+      joinWithNothing: joinWithNothing, smartUnwrap: smartUnwrap,
+      joinWithSeparator: joinWithSeparator, transform: transform
     };
     return;
   }
@@ -175,6 +188,8 @@
   var inputEl = $("rlb-input");
   var modeRadios = document.getElementsByName("rlb-mode");
   var modeHintEl = $("rlb-mode-hint");
+  var sepWrapEl = $("rlb-sep-wrap");
+  var sepEl = $("rlb-sep");
   var clearEl = $("rlb-clear");
   var rememberEl = $("rlb-remember");
   var emptyEl = $("rlb-empty");
@@ -199,7 +214,9 @@
   }
   function updateModeHint() {
     if (modeHintEl) modeHintEl.textContent = tr("tool.mode.hint." + getMode(), "");
+    if (sepWrapEl) sepWrapEl.hidden = (getMode() !== "custom");
   }
+  function getSep() { return sepEl ? sepEl.value : ", "; }
 
   /* ---- localStorage 저장/복원 (저장 거부 시 세션 메모리만 유지) ---- */
   function shouldRemember() { return !rememberEl || rememberEl.checked; }
@@ -207,7 +224,7 @@
   function saveState() {
     if (!shouldRemember()) return;
     try {
-      localStorage.setItem(STATE_KEY, JSON.stringify({ text: inputEl.value, mode: getMode() }));
+      localStorage.setItem(STATE_KEY, JSON.stringify({ text: inputEl.value, mode: getMode(), sep: getSep() }));
     } catch (e) { /* private mode */ }
   }
   function loadState() {
@@ -226,6 +243,7 @@
       if (st) {
         if (typeof st.text === "string") inputEl.value = st.text;
         if (typeof st.mode === "string") setMode(st.mode);
+        if (typeof st.sep === "string" && sepEl) sepEl.value = st.sep.slice(0, 20);
       }
     }
   }
@@ -240,7 +258,7 @@
     }
     var mode = getMode();
     var norm = normalizeNewlines(raw);
-    var out = transform(raw, mode);
+    var out = transform(raw, mode, getSep());
     outputEl.value = out;
 
     var breaksBefore = (norm.match(/\n/g) || []).length;
@@ -306,6 +324,10 @@
     render();
     saveState();
   });
+
+  if (sepEl) {
+    sepEl.addEventListener("input", function () { render(); saveState(); });
+  }
 
   for (var i = 0; i < modeRadios.length; i++) {
     modeRadios[i].addEventListener("change", function () {

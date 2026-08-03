@@ -89,12 +89,12 @@
 (function tool() {
   "use strict";
   // TOOLJS:START
-  /* Click Speed Test (CPS) — 선택한 시간(1/5/10/30/60초) 동안 클릭 버튼을 최대한 빠르게 눌러
+  /* Click Speed Test (CPS) — 선택한 시간(1/2/5/10/15/30/60/100초) 동안 클릭 버튼을 최대한 빠르게 눌러
      CPS(초당 클릭 수)를 측정한다. pointerdown 이벤트를 세어(click 이벤트보다 지연이 적어
      지터·버터플라이 클릭처럼 빠른 연타도 누락 없이 집계) 마우스·터치 모두 지원한다.
      상태: localStorage "<slug>:state" (마지막 선택 시간 + 시간별 최고 기록)만. 외부 API 없음. */
 
-  var DURATIONS = [1, 5, 10, 30, 60];
+  var DURATIONS = [1, 2, 5, 10, 15, 30, 60, 100];
   var DEFAULT_DURATION = 5;
   // 등급 경계 — CPS 오름차순, 마지막 항목은 상한 없음(Infinity)
   var RANKS = [

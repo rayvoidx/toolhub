@@ -119,12 +119,25 @@
   function analyze(text) {
     var tokens = text.split(/\s+/).filter(function (w) { return /[a-z0-9]/i.test(w); });
     // 종결부호가 하나도 없는 한 줄 입력도 문장 1개로 센다 — 0 나누기 방지.
-    var sents = text.split(/[.!?\u2026]+/).filter(function (s) { return /[a-z0-9]/i.test(s); }).length || 1;
-    var syl = 0;
-    for (var i = 0; i < tokens.length; i++) syl += syllables(tokens[i]);
+    var parts = text.split(/[.!?\u2026]+/).filter(function (s) { return /[a-z0-9]/i.test(s); });
+    var sents = parts.length || 1;
+    // 가장 긴 문장은 고칠 곳을 바로 짚어준다 — 문장 구분이 없으면 전체가 한 문장.
+    var longest = 0;
+    for (var p = 0; p < parts.length; p++) {
+      var n2 = parts[p].split(/\s+/).filter(function (w) { return /[a-z0-9]/i.test(w); }).length;
+      if (n2 > longest) longest = n2;
+    }
+    var syl = 0, complex = 0;
+    for (var i = 0; i < tokens.length; i++) {
+      var n = syllables(tokens[i]);
+      syl += n;
+      if (n >= 3) complex++;    // Gunning Fog 의 "복잡한 단어" 기준
+    }
     var w = tokens.length, wps = w / sents, spw = syl / w;
     return {
       words: w, sentences: sents, syllables: syl, wps: wps, spw: spw,
+      longest: longest || w,
+      fog: 0.4 * (wps + 100 * complex / w),
       ease: 206.835 - 1.015 * wps - 84.6 * spw,
       grade: 0.39 * wps + 11.8 * spw - 15.59
     };
@@ -160,6 +173,10 @@
     $("r-syllables").textContent = String(a.syllables);
     $("r-wps").textContent = a.wps.toFixed(1);
     $("r-spw").textContent = a.spw.toFixed(2);
+    $("r-fog").textContent = a.fog.toFixed(1);
+    $("r-longest").textContent = t("tool.fmt.words").replace("{n}", String(a.longest));
+    // 성인 묵독 평균 ~230 wpm. 10단어 최소 표본이라 항상 1분 이상으로 반올림.
+    $("r-time").textContent = t("tool.fmt.min").replace("{n}", String(Math.max(1, Math.round(a.words / 230))));
 
     errEl.hidden = true;
     result.hidden = false;

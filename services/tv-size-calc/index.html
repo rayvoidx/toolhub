@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="TV Size Calculator — Viewing Distance to Screen Size">
 <meta property="og:description" content="Work out what size TV to get for your viewing distance, or how far to sit from the TV you already own. THX and SMPTE viewing-angle math, in feet or metres.">
 <meta property="og:url" content="https://tool-hub.me/tv-size-calc/">
-<meta property="og:image" content="https://tool-hub.me/tv-size-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/tv-size-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1d4ed8">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "TV Size Calculator",
+      "item": "https://tool-hub.me/tv-size-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "TV Size Calculator",
-      "item": "https://tool-hub.me/tv-size-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -206,7 +216,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option value="cine" data-i18n="tool.content.cine">4K movies — most immersive (THX, about 40°)</option>
       <option value="mixed" data-i18n="tool.content.mixed">Mixed 4K TV and streaming (about 30°)</option>
       <option value="hd" data-i18n="tool.content.hd">1080p, cable and sports (about 20°)</option>
+      <option value="custom" data-i18n="tool.content.custom">Custom viewing angle</option>
     </select>
+
+    <div id="angle-field" hidden>
+      <label for="angle" data-i18n="tool.angle.label">Viewing angle (degrees)</label>
+      <input type="number" id="angle" inputmode="decimal" min="10" max="60" step="any" autocomplete="off" placeholder="30">
+    </div>
 
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
 
@@ -219,6 +235,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.angle">Viewing angle</div><div class="rc-val" id="r-angle">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.range">Comfortable range</div><div class="rc-val" id="r-range">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.closest">Closest common sizes</div><div class="rc-val" id="r-closest">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dims">Screen width x height</div><div class="rc-val" id="r-dims">—</div></div>
         <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.4k">4K vs 1080p at this distance</div><div class="rc-note" id="r-4k">—</div></div>
       </div>
       <p class="subtle chips-label" data-i18n="tool.chips.label">Common screen sizes</p>

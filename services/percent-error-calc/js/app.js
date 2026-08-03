@@ -117,9 +117,15 @@
     if (m === null || a === null) return fail("tool.err.empty");
     if (isNaN(m) || isNaN(a)) return fail("tool.err.num");
 
+    var tolEl = $("tol");
+    var tol = tolEl ? num(tolEl.value) : null;   // null = 미입력(선택 항목)
+    if (tol !== null && (isNaN(tol) || tol <= 0)) return fail("tool.err.tol");
+
     var diff = m - a;
     var absErr = Math.abs(diff);
     $("r-abs").textContent = trim(absErr);
+    var tolCard = $("tol-card");
+    if (tolCard) tolCard.hidden = true;
 
     if (a === 0) {
       // 참값이 0이면 상대오차는 0으로 나누기 — 값을 지어내지 않고 정의되지 않음을 밝힌다.
@@ -127,11 +133,20 @@
       $("r-quality").textContent = "—";
       $("r-dir").textContent = t("tool.note.zero");
     } else {
+      var dpEl = $("dp");
+      var dp = dpEl ? parseInt(dpEl.value, 10) : 2;
+      if (!(dp >= 0 && dp <= 4)) dp = 2;
       var pct = absErr / Math.abs(a) * 100;
-      $("r-pct").textContent = pct.toFixed(2) + "%";
+      var pctStr = pct.toFixed(dp);
+      $("r-pct").textContent = pctStr + "%";
       $("r-quality").textContent = t(qualityKey(pct));
       var dirKey = diff === 0 ? "tool.dir.exact" : (diff > 0 ? "tool.dir.above" : "tool.dir.below");
-      $("r-dir").textContent = t(dirKey).replace("{p}", pct.toFixed(2));
+      $("r-dir").textContent = t(dirKey).replace("{p}", pctStr);
+      if (tol !== null && tolCard) {
+        var tolStr = trim(tol);
+        $("r-tol").textContent = t(pct <= tol ? "tool.tol.pass" : "tool.tol.fail").replace("{t}", tolStr);
+        tolCard.hidden = false;
+      }
     }
 
     errEl.hidden = true;
@@ -139,7 +154,8 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [measured, accepted].forEach(function (el) {
+  if ($("dp")) $("dp").addEventListener("change", function () { if (!result.hidden) calc(); });
+  [measured, accepted, $("tol")].filter(Boolean).forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });

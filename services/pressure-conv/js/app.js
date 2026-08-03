@@ -102,9 +102,13 @@
     psi: 6894.757293168,
     atm: 101325,
     mmhg: 133.322387415,
-    inhg: 3386.389
+    inhg: 3386.389,
+    hpa: 100,
+    kgfcm2: 98066.5,
+    inh2o: 249.0889,
+    cmh2o: 98.0665
   };
-  var UNITS = ["pa", "kpa", "mpa", "bar", "psi", "atm", "mmhg", "inhg"];
+  var UNITS = ["pa", "kpa", "mpa", "bar", "psi", "atm", "mmhg", "inhg", "hpa", "kgfcm2", "inh2o", "cmh2o"];
 
   // value(from 단위) → to 단위 : 파스칼을 매개로 환산
   function convert(value, from, to) {
@@ -153,7 +157,7 @@
   var noteEl = $("pc-note");
   if (!valEl || !fromEl || !toEl || !eqEl || !noteEl) return;
 
-  var ABBR = { pa: "Pa", kpa: "kPa", mpa: "MPa", bar: "bar", psi: "psi", atm: "atm", mmhg: "mmHg", inhg: "inHg" };
+  var ABBR = { pa: "Pa", kpa: "kPa", mpa: "MPa", bar: "bar", psi: "psi", atm: "atm", mmhg: "mmHg", inhg: "inHg", hpa: "hPa", kgfcm2: "kgf/cm²", inh2o: "inH2O", cmh2o: "cmH2O" };
 
   function t(key, fb) {
     var v = (window.I18N && window.I18N.t) ? window.I18N.t(key) : null;

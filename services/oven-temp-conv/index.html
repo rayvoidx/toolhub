@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -190,6 +190,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       .ot-fan-row input { width: auto; flex: 0 0 auto; }
       .ot-fan-row span { font-weight: 600; font-size: 14.5px; }
       .ot-fan-hint { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); }
+      .ot-offset-field { margin-top: 14px; }
       .ot-copymsg { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; color: var(--accent-strong); }
       .ot-placeholder { margin: 0; color: var(--muted); }
       .ot-summary { margin: 0; font-size: 20px; font-weight: 800; color: var(--accent-strong); word-break: break-word; letter-spacing: -0.01em; }
@@ -241,6 +242,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span data-i18n="tool.fan.toggle">This is a fan / convection oven temperature</span>
     </label>
     <p class="ot-fan-hint" data-i18n="tool.fan.hint">Turn this on if your recipe already gives a fan-oven temperature — off means a conventional (static) oven.</p>
+
+    <div class="ot-field ot-offset-field">
+      <label for="fan-offset" data-i18n="tool.fan.offset.label">Fan oven reduction</label>
+      <select id="fan-offset">
+        <option value="10">−10 °C (−18 °F)</option>
+        <option value="15">−15 °C (−27 °F)</option>
+        <option value="20" selected>−20 °C (−36 °F)</option>
+        <option value="25">−25 °C (−45 °F)</option>
+        <option value="30">−30 °C (−54 °F)</option>
+      </select>
+    </div>
 
     <p class="ot-copymsg" id="ot-copymsg" role="status" aria-live="polite" hidden></p>
 

@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Tire Size Calculator — Compare Two Tire Sizes">
 <meta property="og:description" content="Compare two tire sizes side by side: overall diameter, sidewall height, revs per mile, ride height change and the speedometer error a new size creates.">
 <meta property="og:url" content="https://tool-hub.me/tire-size-calc/">
-<meta property="og:image" content="https://tool-hub.me/tire-size-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/tire-size-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#171717">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tire Size Calculator",
+      "item": "https://tool-hub.me/tire-size-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Tire Size Calculator",
-      "item": "https://tool-hub.me/tire-size-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -162,6 +172,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tool .tire-col > h3 { font-size:14px; margin:0 0 6px; }
       #tool .size-row { display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:8px; }
       #tool .size-row label { font-size:12px; }
+      #tool .speed-row { margin-top:12px; max-width:220px; }
+      #tool .speed-row label { font-size:12px; }
       #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
       #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
       #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
@@ -218,6 +230,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
+    <div class="speed-row">
+      <label for="spd" data-i18n="tool.speed.label">Check speed (mph)</label>
+      <input type="number" id="spd" inputmode="numeric" min="5" max="250" step="any" autocomplete="off" placeholder="60">
+    </div>
+
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Compare sizes</button>
 
     <div id="result" hidden>
@@ -234,6 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="specrow"><span data-i18n="tool.r.diameter">Overall diameter</span><b id="r-cur-dia">—</b></div>
           <div class="specrow"><span data-i18n="tool.r.circ">Circumference</span><b id="r-cur-circ">—</b></div>
           <div class="specrow"><span data-i18n="tool.r.revs">Revs per mile</span><b id="r-cur-revs">—</b></div>
+          <div class="specrow"><span data-i18n="tool.r.revskm">Revs per km</span><b id="r-cur-revskm">—</b></div>
         </div>
         <div class="rcard spec-card">
           <div class="rc-label" data-i18n="tool.new.legend">New tire</div>
@@ -242,8 +260,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="specrow"><span data-i18n="tool.r.diameter">Overall diameter</span><b id="r-new-dia">—</b></div>
           <div class="specrow"><span data-i18n="tool.r.circ">Circumference</span><b id="r-new-circ">—</b></div>
           <div class="specrow"><span data-i18n="tool.r.revs">Revs per mile</span><b id="r-new-revs">—</b></div>
+          <div class="specrow"><span data-i18n="tool.r.revskm">Revs per km</span><b id="r-new-revskm">—</b></div>
         </div>
-        <div class="rcard"><div class="rc-label" data-i18n="tool.r.speedo">Speedometer error</div><div class="rc-val" id="r-speedo">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.speedo">Speedometer error</div><div class="rc-val" id="r-speedo">—</div><div class="subtle" id="r-speedo-kmh"></div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.height">Ride height change</div><div class="rc-val" id="r-height">—</div></div>
       </div>
       <p class="warn" id="r-warn" hidden></p>

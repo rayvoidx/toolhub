@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Stud Calculator — How Many Studs for a Wall">
 <meta property="og:description" content="Work out how many studs a wall needs: enter wall length, 16 or 24 inch on-centre spacing, corners and openings for a full 2x4 count with plates and waste.">
 <meta property="og:url" content="https://tool-hub.me/stud-calc/">
-<meta property="og:image" content="https://tool-hub.me/stud-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/stud-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#713f12">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Stud Calculator",
+      "item": "https://tool-hub.me/stud-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Stud Calculator",
-      "item": "https://tool-hub.me/stud-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -191,8 +201,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <select id="spacing">
       <option value="16" selected data-i18n="tool.spacing.16">16 in on centre — standard</option>
       <option value="24" data-i18n="tool.spacing.24">24 in on centre — advanced framing</option>
+      <option value="19.2" data-i18n="tool.spacing.19">19.2 in on centre — engineered layout</option>
       <option value="12" data-i18n="tool.spacing.12">12 in on centre — heavy load</option>
     </select>
+
+    <div class="field-row">
+      <div>
+        <label for="plate-len" data-i18n="tool.plate.label">Plate board length</label>
+        <select id="plate-len">
+          <option value="8" selected>8 ft</option>
+          <option value="10">10 ft</option>
+          <option value="12">12 ft</option>
+          <option value="14">14 ft</option>
+          <option value="16">16 ft</option>
+        </select>
+      </div>
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance %</label>
+        <input type="number" id="waste" inputmode="decimal" min="0" max="50" step="1" autocomplete="off" placeholder="10">
+      </div>
+    </div>
 
     <div class="field-row three">
       <div>
@@ -214,13 +242,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div id="result" hidden>
       <div class="result-cards">
         <div class="rcard hero-card">
-          <div class="rc-label" data-i18n="tool.r.studs">Studs to buy (10% waste)</div>
+          <div class="rc-label" data-i18n="tool.r.studs">Studs to buy (waste included)</div>
           <div class="rc-val" id="r-studs">—</div>
         </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.base">Field studs at spacing</div><div class="rc-val" id="r-base">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.extra">Extra studs — corners and openings</div><div class="rc-val" id="r-extra">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.plate">Plate lumber (3 runs)</div><div class="rc-val" id="r-plate">—</div></div>
-        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sticks">8 ft plate boards</div><div class="rc-val" id="r-sticks">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.sticks">Plate boards</div><div class="rc-val" id="r-sticks">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total 2x4s to buy</div><div class="rc-val" id="r-total">—</div></div>
       </div>
     </div>

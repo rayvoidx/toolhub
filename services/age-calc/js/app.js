@@ -162,6 +162,10 @@
     var d = parseInt(parts[2], 10);
     if (isNaN(y) || isNaN(m) || isNaN(d)) return null;
     if (m < 1 || m > 12 || d < 1 || d > 31) return null;
+    if (y < 1 || y > 9999) return null;
+    // 존재하지 않는 날짜(2월 30일 등) 차단
+    var probe = new Date(y, m - 1, d);
+    if (probe.getFullYear() !== y || probe.getMonth() !== m - 1 || probe.getDate() !== d) return null;
     return { year: y, month: m, day: d };
   }
 
@@ -278,8 +282,8 @@
     var birthInput = document.getElementById("birth-date");
 
     // 입력 max 값 오늘로 제한
+    // 기준일은 미래도 허용 — "○년 뒤 내 나이" 조회 수요
     if (baseInput) {
-      baseInput.max = today;
       baseInput.value = today;
     }
     if (birthInput) {

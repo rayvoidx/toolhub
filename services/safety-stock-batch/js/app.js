@@ -103,6 +103,27 @@
   var SNIFF_BYTES = 256 * 1024;            // head slice used for encoding/delimiter/header/date sniffing
   var MAX_RENDER = 100;                    // DOM cap — the full set goes to the CSV/TSV export
   var Z_TABLE = { "90": 1.2816, "95": 1.6449, "97.5": 1.9600, "99": 2.3263 };
+  /* Inverse standard normal CDF (Acklam rational approximation, |err| < 1.2e-9)
+     — only needed for the custom service level; the presets stay table-exact. */
+  function probit(p) {
+    if (!(p > 0 && p < 1)) return null;
+    var a = [-3.969683028665376e+01, 2.209460984245205e+02, -2.759285104469687e+02, 1.383577518672690e+02, -3.066479806614716e+01, 2.506628277459239e+00],
+        b = [-5.447609879822406e+01, 1.615858368580409e+02, -1.556989798598866e+02, 6.680131188771972e+01, -1.328068155288572e+01],
+        c = [-7.784894002430293e-03, -3.223964580411365e-01, -2.400758277161838e+00, -2.549732539343734e+00, 4.374664141464968e+00, 2.938163982698783e+00],
+        d = [7.784695709041462e-03, 3.224671290700398e-01, 2.445134137142996e+00, 3.754408661907416e+00];
+    var pl = 0.02425, q, r, x;
+    if (p < pl) {
+      q = Math.sqrt(-2 * Math.log(p));
+      x = (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1);
+    } else if (p <= 1 - pl) {
+      q = p - 0.5; r = q * q;
+      x = (((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * q / (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1);
+    } else {
+      q = Math.sqrt(-2 * Math.log(1 - p));
+      x = -(((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1);
+    }
+    return isFinite(x) ? x : null;
+  }
 
   /* =========================================================================
      CORE — serialised with Function.prototype.toString() so that the Worker and
@@ -754,13 +775,21 @@
   var encEl = $("in-enc"), delimEl = $("in-delim"), headerEl = $("in-header");
   var mapWrap = $("map-wrap"), mapFields = $("map-fields"), previewWrap = $("preview-wrap");
   var dateFmtRow = $("datefmt-row"), dateFmtEl = $("in-datefmt"), dateFmtNote = $("datefmt-note");
-  var svcEl = $("in-svc"), ltEl = $("in-lt"), ltUnitEl = $("in-ltunit");
+  var svcEl = $("in-svc"), svcCustomEl = $("in-svccustom"), svcCustomRow = $("svc-custom-row"), svcCustomNote = $("svc-custom-note");
+  var ltEl = $("in-lt"), ltUnitEl = $("in-ltunit");
+  /* custom service level → {pct, z} or null when unusable */
+  function customSvc() {
+    var v = CORE.parseNum(svcCustomEl.value);
+    if (v == null || !isFinite(v) || v < 50 || v > 99.99) return null;
+    var z = probit(v / 100);
+    return z == null ? null : { pct: String(v), z: z };
+  }
   var busWrap = $("bus-wrap"), countryEl = $("in-country"), weekendEl = $("in-weekend"), busNote = $("bus-note");
   var zeroEl = $("in-zero"), unitEl = $("in-unit");
   var perStartEl = $("in-perstart"), perEndEl = $("in-perend");
   var secPasteEl = $("in-sec"), secMapWrap = $("sec-map"), secNote = $("sec-note");
   var secFileInput = $("sec-file"), secPickBtn = $("sec-pick-btn");
-  var revEl = $("in-rev"), eoqSEl = $("in-eoq-s"), eoqHEl = $("in-eoq-h");
+  var revEl = $("in-rev"), eoqSEl = $("in-eoq-s"), eoqHEl = $("in-eoq-h"), eoqDaysEl = $("in-eoq-days");
   var calcBtn = $("calc-btn"), cancelBtn = $("cancel-btn"), progWrap = $("progress"), progBar = $("prog-bar"), progTxt = $("prog-txt");
   var resultEl = $("result");
 
@@ -1077,15 +1106,22 @@
      ========================================================================= */
   function settings() {
     var z = Z_TABLE[svcEl.value] != null ? Z_TABLE[svcEl.value] : Z_TABLE["95"];
+    var svcLabel = Z_TABLE[svcEl.value] != null ? svcEl.value : "95";
+    if (svcEl.value === "custom") {
+      var cs = customSvc();
+      if (cs) { z = cs.z; svcLabel = cs.pct; }
+    }
     var defLT = CORE.parseNum(ltEl.value);
     var R = CORE.parseNum(revEl.value);
     var S = CORE.parseNum(eoqSEl.value);
     var H = CORE.parseNum(eoqHEl.value);
+    var yd = CORE.parseNum(eoqDaysEl.value);
     return {
-      z: z, svc: svcEl.value, defLT: isFinite(defLT) ? defLT : null,
+      z: z, svc: svcLabel, defLT: isFinite(defLT) ? defLT : null,
       busMode: ltUnitEl.value === "bus", country: countryEl.value, weekend: weekendEl.value,
       R: isFinite(R) && R > 0 ? R : 0,
       S: isFinite(S) && S > 0 ? S : null, H: isFinite(H) && H > 0 ? H : null,
+      yearDays: isFinite(yd) && yd >= 1 && yd <= 366 ? yd : 365,
       unit: (unitEl.value || "").trim()
     };
   }
@@ -1115,7 +1151,7 @@
       o.ss = s.z * Math.sqrt(protect * r.sigmad * r.sigmad + r.dbar * r.dbar * sLT * sLT);
       o.rop = r.dbar * protect + o.ss;
       if (s.S != null && s.H != null) {
-        var D = r.dbar * 365;
+        var D = r.dbar * s.yearDays;
         o.eoq = D > 0 ? Math.sqrt(2 * D * s.S / s.H) : 0;
       }
     }
@@ -1144,6 +1180,15 @@
     var ps = dayOf(perStartEl.value), pe = dayOf(perEndEl.value);
     if (ps != null && pe != null && pe < ps) return { key: "tool.err.period", def: "The period end is before the period start." };
     if (ps != null && pe != null && pe - ps > 40000) return { key: "tool.err.periodLong", def: "That period spans more than 100 years — check the dates." };
+    if (svcEl.value === "custom" && !customSvc()) {
+      return { key: "tool.err.svc", def: "Enter a service level between 50 and 99.99% — 100% is impossible and below 50% needs no safety stock." };
+    }
+    if (String(eoqDaysEl.value).trim() !== "") {
+      var ydv = CORE.parseNum(eoqDaysEl.value);
+      if (!isFinite(ydv) || ydv < 1 || ydv > 366) {
+        return { key: "tool.err.eoqDays", def: "Operating days per year must be between 1 and 366 — leave it blank to use 365." };
+      }
+    }
     var s = settings();
     if (s.defLT == null || s.defLT <= 0) {
       var anyLT = false;
@@ -1669,13 +1714,23 @@
   perEndEl.addEventListener("change", autoRun);
 
   function onSetting() {
-    prefs.svc = svcEl.value; prefs.lt = ltEl.value; prefs.ltUnit = ltUnitEl.value;
+    prefs.svc = svcEl.value; prefs.svcCustom = svcCustomEl.value; prefs.lt = ltEl.value; prefs.ltUnit = ltUnitEl.value;
     prefs.country = countryEl.value; prefs.weekend = weekendEl.value; prefs.unit = unitEl.value;
     savePrefs();
     busWrap.hidden = ltUnitEl.value !== "bus";
+    syncSvcCustom();
     if (lastAgg) { var e = validate(); if (e) { showError(e); return; } render(); }
   }
-  [svcEl, ltEl, ltUnitEl, countryEl, weekendEl, unitEl, revEl, eoqSEl, eoqHEl].forEach(function (el) {
+  function syncSvcCustom() {
+    var on = svcEl.value === "custom";
+    svcCustomRow.hidden = !on;
+    if (!on) { svcCustomNote.textContent = ""; return; }
+    var cs = customSvc();
+    svcCustomNote.textContent = cs
+      ? fmt(tr("tool.svc.customNote", "Z = {z} (from the normal distribution)"), { z: cs.z.toFixed(4) })
+      : tr("tool.svc.customBad", "Enter a value between 50 and 99.99.");
+  }
+  [svcEl, svcCustomEl, ltEl, ltUnitEl, countryEl, weekendEl, unitEl, revEl, eoqSEl, eoqHEl, eoqDaysEl].forEach(function (el) {
     el.addEventListener("change", onSetting);
     el.addEventListener("input", onSetting);
   });
@@ -1685,6 +1740,7 @@
   /* language switch: numbers, badges and column headers are language-dependent */
   document.addEventListener("i18n:change", function () {
     buildCountrySelect();
+    syncSvcCustom();
     modeHint.textContent = mode === "history"
       ? tr("tool.mode.historyHint", "Straight from an ERP or WMS export: one row per transaction. We derive d̄ and σd for you.")
       : tr("tool.mode.aggHint", "For planners who already keep d̄ and σd per SKU in a sheet.");
@@ -1715,7 +1771,9 @@
      Boot — restore preferences only. No history, no on-hand data is persisted.
      ========================================================================= */
   (function boot() {
-    if (prefs.svc && Z_TABLE[prefs.svc] != null) svcEl.value = prefs.svc;
+    if (prefs.svc && (Z_TABLE[prefs.svc] != null || prefs.svc === "custom")) svcEl.value = prefs.svc;
+    if (prefs.svcCustom != null && prefs.svcCustom !== "") svcCustomEl.value = prefs.svcCustom;
+    syncSvcCustom();
     if (prefs.lt != null && prefs.lt !== "") ltEl.value = prefs.lt;
     if (prefs.ltUnit) ltUnitEl.value = prefs.ltUnit;
     if (prefs.enc) encEl.value = prefs.enc;

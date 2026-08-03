@@ -90,6 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var mode = $("mode"), dist = $("dist"), distunit = $("distunit"), size = $("size"), content = $("content");
+  var angle = $("angle"), angleField = $("angle-field");
   var distField = $("dist-field"), sizeField = $("size-field"), chips = $("chips");
   var result = $("result"), errEl = $("err");
   if (!mode || !dist || !size || !content) return;
@@ -98,7 +99,7 @@
 
   // 거리 ÷ 계수 = 대각선(인치). 계수는 THX/SMPTE 시야각 목표를 인치 경험칙으로 바꾼 값이다.
   var FACTOR = { cine: 1.2, mixed: 1.6, hd: 2.5 };
-  var COMMON = [43, 50, 55, 65, 75, 85];
+  var COMMON = [32, 40, 43, 50, 55, 65, 75, 85, 98];
   var W_RATIO = 16 / Math.sqrt(337);  // 16:9 화면 폭 ÷ 대각선 = 0.8716
   var H_RATIO = 9 / Math.sqrt(337);   // 16:9 화면 높이 ÷ 대각선 = 0.4903
   var ARCMIN = Math.PI / (180 * 60);  // 1분각 — 시력 1.0 의 해상 한계
@@ -137,11 +138,20 @@
     var isSize = mode.value === "size";
     distField.hidden = !isSize;
     sizeField.hidden = isSize;
+    angleField.hidden = content.value !== "custom";
   }
 
   function calc() {
     var isSize = mode.value === "size";
-    var f = FACTOR[content.value] || 1.6;
+    var f;
+    if (content.value === "custom") {
+      var a = parseFloat(String(angle.value).replace(/,/g, ""));
+      if (!isFinite(a) || a < 10 || a > 60) return fail("tool.err.anglerange");
+      // 시야각 → 거리계수: 폭/2 = 거리 * tan(각/2)
+      f = W_RATIO / (2 * Math.tan(a * Math.PI / 360));
+    } else {
+      f = FACTOR[content.value] || 1.6;
+    }
     var distIn, diag;
 
     if (isSize) {
@@ -172,6 +182,8 @@
       ? Math.round(distIn / FACTOR.hd) + "–" + Math.round(distIn / FACTOR.cine) + " " + t("tool.u.in")
       : lenNum(diag * FACTOR.cine) + "–" + lenNum(diag * FACTOR.hd) + " " + lenUnit();
     $("r-closest").textContent = picks[0] + " / " + picks[1] + " " + t("tool.u.in");
+    $("r-dims").textContent = (diag * W_RATIO).toFixed(1) + " x " + (diag * H_RATIO).toFixed(1) + " " + t("tool.u.in")
+      + " (" + Math.round(diag * W_RATIO * 2.54) + " x " + Math.round(diag * H_RATIO * 2.54) + " " + t("tool.u.cm") + ")";
 
     var d4k = fullDetailDist(shown, 2160), d1080 = fullDetailDist(shown, 1080);
     $("r-4k").textContent = t(distIn <= d4k ? "tool.msg.4kfull" : distIn <= d1080 ? "tool.msg.4kpart" : "tool.msg.4knone");
@@ -183,15 +195,16 @@
 
   syncMode();
   $("calc-btn").addEventListener("click", calc);
-  [dist, size].forEach(function (el) {
+  [dist, size, angle].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
+  angle.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   mode.addEventListener("change", function () {
     syncMode();
     if (!result.hidden || !errEl.hidden) calc();
   });
   [distunit, content].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+    el.addEventListener("change", function () { syncMode(); if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END

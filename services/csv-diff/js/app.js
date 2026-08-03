@@ -221,15 +221,24 @@
     return iso(year, mon, day);
   }
 
-  /** 값 셀 동일성 — 텍스트(정규화) → (옵션 시) 숫자 → (옵션 시) 날짜 순서로 비교. */
+  /** 숫자 비교 허용 오차. o.tol(>0)은 절대값(abs) 또는 큰 쪽 대비 %(pct).
+      tol 이 없거나 비정상이면 기존 동작(부동소수 오차만 흡수)으로 폴백한다. */
+  function numberEpsilon(na, nb, o) {
+    var base = 1e-9 * Math.max(1, Math.abs(na), Math.abs(nb));
+    var tol = Number(o && o.tol);
+    if (!isFinite(tol) || tol <= 0) return base;
+    var extra = o.tolMode === "pct" ? Math.max(Math.abs(na), Math.abs(nb)) * tol / 100 : tol;
+    return isFinite(extra) && extra > 0 ? extra + base : base;   // base 는 부동소수 여유분
+  }
+
+  /** 값 셀 동일성— 텍스트(정규화) → (옵션 시) 숫자 → (옵션 시) 날짜 순서로 비교. */
   function valueEqual(a, b, o) {
     var sa = a == null ? "" : String(a), sb = b == null ? "" : String(b);
     if (sa === sb) return true;
     if (normalizeKey(sa, o) === normalizeKey(sb, o)) return true;
     if (o.numeric) {
       var na = parseLooseNumber(sa), nb = parseLooseNumber(sb);
-      if (na != null && nb != null &&
-        Math.abs(na - nb) <= 1e-9 * Math.max(1, Math.abs(na), Math.abs(nb))) return true;
+      if (na != null && nb != null && Math.abs(na - nb) <= numberEpsilon(na, nb, o)) return true;
     }
     if (o.dates) {
       var da = parseLooseDate(sa, o.dateOrder), db = parseLooseDate(sb, o.dateOrder);
@@ -466,6 +475,20 @@
   function readOpts() {
     var o = { dateOrder: PRESETS[preset] ? PRESETS[preset].dateOrder : "MDY" };
     ALL_OPT_KEYS.forEach(function (k) { o[k] = $(OPT_EL[k]).checked ? 1 : 0; });
+    var raw = String($("cd-tol").value || "").trim();
+    var tol = raw === "" ? 0 : Number(raw.replace(",", "."));
+    var bad = raw !== "" && (!isFinite(tol) || tol < 0);
+    o.tol = bad ? 0 : tol;
+    o.tolMode = $("cd-tol-mode").value === "pct" ? "pct" : "abs";
+    var msg = $("cd-tol-msg");
+    msg.textContent = (bad ? t("tool.tol.bad") : t("tool.tol.hint")) ||
+      (bad ? "Enter 0 or a positive number — the tolerance was ignored."
+           : "0 means exact match. Use it to absorb rounding (e.g. 0.01).");
+    msg.classList.toggle("is-warn", bad);
+    var dord = $("cd-dord").value;
+    if (dord === "MDY" || dord === "DMY") o.dateOrder = dord;
+    $("cd-tol-wrap").hidden = !o.numeric;
+    $("cd-dord-wrap").hidden = !o.dates;
     return o;
   }
   function writeOpts(o) { ALL_OPT_KEYS.forEach(function (k) { $(OPT_EL[k]).checked = !!o[k]; }); }
@@ -475,6 +498,7 @@
     OPT_KEYS.forEach(function (k) { opts[k] = PRESETS[preset][k]; });
     VAL_KEYS.forEach(function (k) { opts[k] = 0; }); // 숫자/날짜는 프리셋 무관 기본 OFF
     writeOpts(opts);
+    opts = readOpts();   // 허용오차·날짜순서 입력값 반영 + 조건부 표시 동기화
     $("cd-preset").value = preset;
     save(K_OPTS, { preset: preset, opts: opts });
   }
@@ -1097,6 +1121,13 @@
 
   /* ---- 옵션·프리셋·버튼 이벤트 ---- */
   $("cd-preset").addEventListener("change", function () { applyPreset($("cd-preset").value); recommendKey(); renderConfig(); run(); });
+  ["cd-tol", "cd-tol-mode", "cd-dord"].forEach(function (id) {
+    $(id).addEventListener("input", function () {
+      opts = readOpts();
+      save(K_OPTS, { preset: preset, opts: opts });
+      run();
+    });
+  });
   ALL_OPT_KEYS.forEach(function (k) {
     $(OPT_EL[k]).addEventListener("change", function () {
       opts = readOpts();

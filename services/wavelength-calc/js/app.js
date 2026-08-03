@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var solve = $("solve"), val = $("value"), unit = $("unit");
+  var solve = $("solve"), val = $("value"), unit = $("unit"), nidx = $("nidx");
   var result = $("result"), errEl = $("err");
   if (!solve || !val || !unit) return;
 
@@ -99,8 +99,8 @@
   var H = 6.62607015e-34;     // 플랑크 상수 (2019 SI 재정의로 정확값)
   var EV = 1.602176634e-19;   // 1 eV = 이 만큼의 줄
 
-  var FREQ_UNITS = [["Hz", 1], ["kHz", 1e3], ["MHz", 1e6], ["GHz", 1e9], ["THz", 1e12]];
-  var WL_UNITS = [["m", 1], ["cm", 1e-2], ["mm", 1e-3], ["\u00b5m", 1e-6], ["nm", 1e-9]];
+  var FREQ_UNITS = [["Hz", 1], ["kHz", 1e3], ["MHz", 1e6], ["GHz", 1e9], ["THz", 1e12], ["PHz", 1e15], ["EHz", 1e18]];
+  var WL_UNITS = [["km", 1e3], ["m", 1], ["cm", 1e-2], ["mm", 1e-3], ["\u00b5m", 1e-6], ["nm", 1e-9], ["pm", 1e-12]];
 
   // 표시용 사다리 — 큰 단위부터. cm 는 SI 접두어 계단을 벗어나지만 12.5 cm(와이파이) 같은
   // 일상 감각을 살리려고 일부러 넣었다.
@@ -170,15 +170,22 @@
     if (!isFinite(raw)) return fail("tool.err.empty");
     if (raw <= 0) return fail("tool.err.zero");
 
+    // 굴절률 — 비우면 진공(n=1). 매질 안에서는 주파수는 그대로, 속도와 파장만 c/n 로 줄어든다.
+    var nTxt = nidx ? String(nidx.value).trim() : "";
+    var n = nTxt === "" ? 1 : parseFloat(nTxt.replace(/,/g, ""));
+    if (!isFinite(n) || n < 0.1 || n > 10) return fail("tool.err.n");
+    var v = C / n;
+
     var u = unit.value, f = 0, lam = 0, isFreq = null, i;
     for (i = 0; i < FREQ_UNITS.length; i++) if (FREQ_UNITS[i][0] === u) { isFreq = true; f = raw * FREQ_UNITS[i][1]; }
     for (i = 0; i < WL_UNITS.length; i++) if (WL_UNITS[i][0] === u) { isFreq = false; lam = raw * WL_UNITS[i][1]; }
     if (isFreq === null) return fail("tool.err.range");
-    if (isFreq) lam = C / f; else f = C / lam;
+    if (isFreq) lam = v / f; else f = v / lam;
     // 오버플로/언더플로는 조용히 넘기지 않고 범위 안내로 돌린다.
     if (!isFinite(f) || f <= 0 || !isFinite(lam) || lam <= 0) return fail("tool.err.range");
 
-    var joule = H * f, ev = joule / EV, b = band(lam), mode = solve.value;
+    // 스펙트럼 대역은 주파수로 정해지므로 진공 파장 기준으로 판정한다.
+    var joule = H * f, ev = joule / EV, b = band(C / f), mode = solve.value;
     var mainKey = mode === "fr" ? "tool.r.frequency" : (mode === "pe" ? "tool.r.energy" : "tool.r.wavelength");
     var lbl = $("r-main-label");
     lbl.setAttribute("data-i18n", mainKey);
@@ -209,6 +216,10 @@
   val.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   solve.addEventListener("change", function () { setUnits(); if (live()) calc(); });
   unit.addEventListener("change", function () { if (live()) calc(); });
+  if (nidx) {
+    nidx.addEventListener("input", function () { if (live()) calc(); });
+    nidx.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+  }
   document.addEventListener("i18n:change", function () { if (live()) calc(); });
   setUnits();
   // TOOLJS:END

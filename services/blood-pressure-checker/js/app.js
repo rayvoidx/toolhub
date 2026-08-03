@@ -154,6 +154,7 @@
   var sysEl = $("systolic"), diaEl = $("diastolic");
   var emptyEl = $("result-empty"), errorEl = $("result-error"), bodyEl = $("result-body");
   var readingEl = $("r-reading"), badgeEl = $("r-badge");
+  var ppEl = $("r-pulse-pressure");
   var crisisEl = $("r-crisis"), lowEl = $("r-low"), backEl = $("r-backwards"), extEl = $("r-extreme");
   var rows = document.querySelectorAll("#chart-table tbody tr");
   if (!sysEl || !diaEl || !bodyEl) return;
@@ -208,6 +209,16 @@
     readingEl.textContent = fmtInt(sys) + "/" + fmtInt(dia) + " " + tr("tool.unit", "mmHg");
     setBadge(cat);
     highlightRow(cat);
+    // 맥압 = 수축기 - 이완기. 값이 뒤집힌 입력에서는 음수/0 이 되므로 줄 자체를 숨긴다.
+    if (ppEl && ppEl.parentNode) {
+      var pp = sys - dia;
+      if (pp > 0) {
+        ppEl.textContent = fmtInt(pp) + " " + tr("tool.unit", "mmHg");
+        ppEl.parentNode.hidden = false;
+      } else {
+        ppEl.parentNode.hidden = true;
+      }
+    }
 
     crisisEl.hidden = cat !== "crisis";
     // 저혈압 안내는 카테고리가 이미 Normal 로 판정된 경우에만 보충 정보로 노출

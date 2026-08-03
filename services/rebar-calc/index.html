@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Rebar Calculator — Slab Grid, Spacing and Sticks">
 <meta property="og:description" content="Work out how much rebar a concrete slab needs: grid bar counts by spacing, total linear feet, 20 ft sticks to buy, tie points and chair supports.">
 <meta property="og:url" content="https://tool-hub.me/rebar-calc/">
-<meta property="og:image" content="https://tool-hub.me/rebar-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/rebar-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#52525b">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Rebar Calculator",
+      "item": "https://tool-hub.me/rebar-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Rebar Calculator",
-      "item": "https://tool-hub.me/rebar-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -193,12 +203,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option value="16" data-i18n="tool.spacing.16">16 in — 400 mm</option>
       <option value="18" selected data-i18n="tool.spacing.18">18 in — 450 mm (typical driveway)</option>
       <option value="24" data-i18n="tool.spacing.24">24 in — 600 mm (light patio)</option>
+      <option value="custom" data-i18n="tool.spacing.custom">Custom spacing…</option>
     </select>
+
+    <div id="custom-wrap" hidden>
+      <label for="spacing-custom" data-i18n="tool.spacing.customlabel">Custom spacing (inches)</label>
+      <input type="number" id="spacing-custom" inputmode="decimal" min="2" max="48" step="any" autocomplete="off" placeholder="10">
+    </div>
 
     <div class="field-row">
       <div>
         <label for="stick" data-i18n="tool.stick.label">Rebar stick length</label>
         <select id="stick">
+          <option value="10" data-i18n="tool.stick.10">10 ft stock length</option>
           <option value="20" selected data-i18n="tool.stick.20">20 ft stock length</option>
           <option value="40" data-i18n="tool.stick.40">40 ft stock length</option>
         </select>
@@ -206,6 +223,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="clear" data-i18n="tool.clear.label">Edge clearance (inches)</label>
         <input type="number" id="clear" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="size" data-i18n="tool.size.label">Bar size</label>
+        <select id="size">
+          <option value="0.376" data-i18n="tool.size.3">#3 — 3/8 in (10 mm)</option>
+          <option value="0.668" selected data-i18n="tool.size.4">#4 — 1/2 in (13 mm)</option>
+          <option value="1.043" data-i18n="tool.size.5">#5 — 5/8 in (16 mm)</option>
+          <option value="1.502" data-i18n="tool.size.6">#6 — 3/4 in (19 mm)</option>
+        </select>
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Price per stick (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
       </div>
     </div>
 
@@ -222,6 +255,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.barsW">Bars running widthwise</div><div class="rc-val" id="r-barsW">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.ties">Tie points (intersections)</div><div class="rc-val" id="r-ties">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.chairs">Chairs / supports</div><div class="rc-val" id="r-chairs">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.weight">Estimated steel weight</div><div class="rc-val" id="r-weight">—</div></div>
+        <div class="rcard" id="cost-card" hidden><div class="rc-label" data-i18n="tool.r.cost">Estimated steel cost</div><div class="rc-val" id="r-cost">—</div></div>
       </div>
       <p class="subtle" id="note-min" hidden data-i18n="tool.note.minbars">Your spacing is wider than the slab, so the grid falls back to the two-bar minimum per direction.</p>
       <p class="subtle" data-i18n="tool.note.lap">Stick count adds 5% for lap splices and offcuts. Rebar is sold in whole sticks, so round up at the yard.</p>

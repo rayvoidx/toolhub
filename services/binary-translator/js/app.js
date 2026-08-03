@@ -111,11 +111,20 @@
     return n;
   }
 
-  function show(text, chars, byteCount) {
+  // 같은 바이트열의 16진수 표기 — 덤프·색상값에 그대로 붙여 쓸 수 있게 함께 보여준다.
+  function toHex(bytes) {
+    var h = [];
+    for (var i = 0; i < bytes.length; i++) h.push(("0" + bytes[i].toString(16).toUpperCase()).slice(-2));
+    return h.join(" ");
+  }
+
+  function show(text, chars, bytes) {
+    var byteCount = bytes.length;
     out.value = text;
     $("r-chars").textContent = String(chars);
     $("r-bytes").textContent = String(byteCount);
     $("r-bits").textContent = String(byteCount * 8);
+    $("r-hex").textContent = byteCount ? toHex(bytes) : "—";
     errEl.hidden = true;
     result.hidden = false;
   }
@@ -124,7 +133,7 @@
     var bytes = new TextEncoder().encode(text);
     var parts = [];
     for (var i = 0; i < bytes.length; i++) parts.push(bits(bytes[i]));
-    show(parts.join(" "), cpCount(text), bytes.length);
+    show(parts.join(" "), cpCount(text), bytes);
   }
 
   function binaryToText(raw) {
@@ -146,7 +155,7 @@
     // fatal:true — 깨진 바이트열을 U+FFFD 로 얼버무리지 않고 명시적 실패로 만든다.
     try { text = new TextDecoder("utf-8", { fatal: true }).decode(bytes); }
     catch (e) { return fail("tool.err.decode"); }
-    show(text, cpCount(text), bytes.length);
+    show(text, cpCount(text), bytes);
   }
 
   function calc() {

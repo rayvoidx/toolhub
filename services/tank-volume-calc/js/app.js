@@ -97,9 +97,10 @@
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   var IN3_PER_GAL = 231;        // 1 US 갤런 = 231 in³ (정의값)
+  var IN3_PER_IMPGAL = 277.4194327916;   // 1 영국 갤런 = 4.54609 L
   var LITER_PER_IN3 = 0.016387064;
   var IN3_PER_FT3 = 1728;
-  var LB_PER_GAL = 8.34;        // 담수 기준
+  var UNIT_TO_IN = { in: 1, cm: 1 / 2.54, ft: 12, m: 39.3700787401575 };
 
   function num(el) {
     var v = parseFloat(String(el.value).replace(/,/g, ""));
@@ -139,7 +140,7 @@
     for (i = 0; i < dims.length; i++) if (isNaN(dims[i])) return fail("tool.err.empty");
     for (i = 0; i < dims.length; i++) if (dims[i] <= 0) return fail("tool.err.zero");
 
-    var k = unit.value === "cm" ? 1 / 2.54 : 1;   // 내부 계산은 전부 인치³
+    var k = UNIT_TO_IN[unit.value] || 1;   // 내부 계산은 전부 인치³
     for (i = 0; i < dims.length; i++) {
       dims[i] = dims[i] * k;
       if (dims[i] > 5000) return fail("tool.err.range");
@@ -171,9 +172,12 @@
     var v = partial === null ? full : partial;
     var gal = v / IN3_PER_GAL;
     $("r-gal").textContent = fmt(gal, 1);
+    $("r-impgal").textContent = fmt(v / IN3_PER_IMPGAL, 1);
     $("r-liters").textContent = fmt(v * LITER_PER_IN3, 1);
     $("r-ft3").textContent = fmt(v / IN3_PER_FT3, 2);
-    $("r-weight").textContent = fmt(gal * LB_PER_GAL, 0);
+    var lbPerGal = parseFloat($("liquid").value);
+    if (!isFinite(lbPerGal) || lbPerGal <= 0) lbPerGal = 8.34;
+    $("r-weight").textContent = fmt(gal * lbPerGal, 0);
 
     $("c-pct").hidden = partial === null;
     $("c-cap").hidden = partial === null;
@@ -194,6 +198,7 @@
     el.addEventListener("change", live);
   });
   unit.addEventListener("change", live);
+  $("liquid").addEventListener("change", live);
   shape.addEventListener("change", function () { sync(); live(); });
   document.addEventListener("i18n:change", function () { sync(); live(); });
   sync();

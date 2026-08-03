@@ -124,6 +124,8 @@
     $("r-ratio").textContent = Math.round(w / g) + ":" + Math.round(h / g);
     $("r-dec").textContent = (w / h).toFixed(4);
     $("r-size").textContent = fmt(outW) + " x " + fmt(outH);
+    var scale = outW / w;
+    $("r-scale").textContent = (scale * 100).toFixed(scale >= 1 ? 1 : 2) + "% (x" + scale.toFixed(4).replace(/0+$/, "").replace(/.$/, "") + ")";
     if (base === "w") { nh.value = fmt(outH); } else { nw.value = fmt(outW); }
 
     errEl.hidden = true;

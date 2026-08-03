@@ -97,7 +97,7 @@
   var TICK_MS = 250;                    // 틱 주기 — 렌더는 초가 바뀔 때만
   var FREQ_FOCUS_END = 880;             // 집중 종료 비프 (높은 음)
   var FREQ_BREAK_END = 660;             // 휴식 종료 비프 (낮은 음)
-  var DEFAULTS = { focus: 25, short: 5, long: 15, interval: 4, auto: false };
+  var DEFAULTS = { focus: 25, short: 5, long: 15, interval: 4, auto: false, sound: true };
 
   // en baked fallback (i18n 카탈로그가 우선 — tr() 참조)
   var MSG = {
@@ -134,7 +134,8 @@
       short: clampInt(src.short, 1, 30, DEFAULTS.short),
       long: clampInt(src.long, 1, 60, DEFAULTS.long),
       interval: clampInt(src.interval, 2, 8, DEFAULTS.interval),
-      auto: src.auto === true
+      auto: src.auto === true,
+      sound: src.sound !== false // 저장본에 없으면 기본 on
     };
   }
   // {date, count} — 날짜가 다르면(자정 넘김 포함) 카운트 0 으로 리셋
@@ -183,9 +184,9 @@
   var cycleEl = $("pomo-cycle"), todayEl = $("pomo-today"), msgEl = $("pomo-msg");
   var startBtn = $("pomo-start"), resetBtn = $("pomo-reset"), skipBtn = $("pomo-skip");
   var inFocus = $("set-focus"), inShort = $("set-short"), inLong = $("set-long");
-  var inInterval = $("set-interval"), inAuto = $("set-auto");
+  var inInterval = $("set-interval"), inAuto = $("set-auto"), inSound = $("set-sound");
   if (!display || !modeEl || !cycleEl || !todayEl || !startBtn || !resetBtn || !skipBtn ||
-      !inFocus || !inShort || !inLong || !inInterval || !inAuto) return;
+      !inFocus || !inShort || !inLong || !inInterval || !inAuto || !inSound) return;
   var bakedTitle = document.title;
 
   /* ---- 상태 (실행 중 세션은 저장하지 않음 — 새로고침 시 대기 상태 복귀) ---- */
@@ -291,7 +292,7 @@
   /* ---- 알림음: Web Audio 합성 (오디오 파일·CDN 없음) ---- */
   // AudioContext 는 시작 클릭(사용자 제스처)에 생성·resume — 자동재생 정책 회피
   function ensureAudio() {
-    if (audioOk === false) return;
+    if (audioOk === false || !settings.sound) return;
     try {
       var AC = window.AudioContext || window.webkitAudioContext;
       if (!AC) throw new Error("Web Audio unsupported");
@@ -308,6 +309,7 @@
     }
   }
   function beep(freq) { // OscillatorNode 비프 3회 — 집중 종료 880Hz / 휴식 종료 660Hz
+    if (!settings.sound) return; // 사용자가 알림음을 끔 — 시각 알림만
     if (audioOk !== true || !audioCtx) {
       addNotice("tool.msg.noAudio", MSG.noAudio, null);
       return;
@@ -493,11 +495,12 @@
     inLong.value = String(settings.long);
     inInterval.value = String(settings.interval);
     inAuto.checked = settings.auto;
+    inSound.checked = settings.sound;
   }
   function onSettingsChange() { // clamp 후 저장 — 실행 중 세션에는 다음 세션부터 반영
     settings = sanitizeSettings({
       focus: inFocus.value, short: inShort.value, long: inLong.value,
-      interval: inInterval.value, auto: inAuto.checked
+      interval: inInterval.value, auto: inAuto.checked, sound: inSound.checked
     });
     writeSettingsInputs(); // clamp 결과를 입력칸에 반영
     saveSettings();
@@ -531,6 +534,11 @@
     numInputs[ni].addEventListener("keydown", blockNonDigitKeys);
   }
   inAuto.addEventListener("change", onSettingsChange);
+  inSound.addEventListener("change", function () {
+    onSettingsChange();
+    if (settings.sound) { removeNotice("tool.msg.noAudio"); ensureAudio(); }
+    else removeNotice("tool.msg.noAudio"); // 끈 상태에서 오디오 불가 안내는 무의미
+  });
 
   // 백그라운드 복귀 시 즉시 재계산 — 종료 시각이 지났으면 그 자리에서 종료 처리
   document.addEventListener("visibilitychange", function () {

@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="JSON to YAML Converter — Convert JSON Online">
 <meta property="og:description" content="Convert JSON to YAML online in your browser. Paste any JSON object, choose 2 or 4 space indent, and copy clean YAML with safe 1.2 style quoting.">
 <meta property="og:url" content="https://tool-hub.me/json-to-yaml/">
-<meta property="og:image" content="https://tool-hub.me/json-to-yaml/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/json-to-yaml/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#854d0e">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSON to YAML Converter",
+      "item": "https://tool-hub.me/json-to-yaml/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,30 +130,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "JSON to YAML Converter",
-      "item": "https://tool-hub.me/json-to-yaml/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
-<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
 #tool, #tool * { min-width: 0; }
 #tool { max-width: 100%; }
 #tool table { display: block; max-width: 100%; overflow-x: auto; }
@@ -141,6 +141,7 @@ ADSENSE:END -->
 #tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
 .guide-content table { display: block; max-width: 100%; overflow-x: auto; }
 main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
 </style>
 </head>
 <body>
@@ -188,7 +189,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <label for="indent" data-i18n="tool.indent.label">Indent size</label>
     <select id="indent">
-      <option value="2" data-i18n="tool.indent.2">2 spaces</option>
+      <option value="1" data-i18n="tool.indent.1">1 space</option>
+      <option value="2" data-i18n="tool.indent.2" selected>2 spaces</option>
+      <option value="3" data-i18n="tool.indent.3">3 spaces</option>
       <option value="4" data-i18n="tool.indent.4">4 spaces</option>
     </select>
 

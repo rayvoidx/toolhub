@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -172,6 +182,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       #tool .wsr-opts { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
       #tool .wsr-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin: 0; font-weight: 600; font-size: 14.5px; }
       #tool .wsr-check input { width: auto; flex: 0 0 auto; margin: 0; }
+      #tool .wsr-sub { display: flex; align-items: center; gap: 9px; margin: -2px 0 0 27px; font-size: 13.5px; color: var(--muted); font-weight: 600; }
+      #tool .wsr-sub input { width: 5.5em; flex: 0 0 auto; margin: 0; padding: 6px 8px; }
       #tool .wsr-note { margin: 10px 2px 0; font-size: 12.5px; line-height: 1.55; color: var(--muted); }
       #tool .wsr-btnrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
       #tool .wsr-btnrow .btn { margin-top: 0; padding: 11px 20px; }
@@ -202,7 +214,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="wsr-opts">
       <label class="wsr-check" for="wsr-collapse"><input type="checkbox" id="wsr-collapse" checked><span data-i18n="tool.opt.collapse">Collapse multiple spaces into one</span></label>
       <label class="wsr-check" for="wsr-trimlines"><input type="checkbox" id="wsr-trimlines" checked><span data-i18n="tool.opt.trimLines">Trim spaces at the start and end of every line</span></label>
-      <label class="wsr-check" for="wsr-notabs"><input type="checkbox" id="wsr-notabs"><span data-i18n="tool.opt.noTabs">Remove tabs (replaced with a single space)</span></label>
+      <label class="wsr-check" for="wsr-notabs"><input type="checkbox" id="wsr-notabs"><span data-i18n="tool.opt.noTabs">Remove tabs (replace each tab with spaces)</span></label>
+      <label class="wsr-sub" for="wsr-tabwidth" id="wsr-tabwidth-row" hidden><span data-i18n="tool.opt.tabWidth">Spaces per tab (0–8)</span><input type="number" id="wsr-tabwidth" min="0" max="8" step="1" value="1" inputmode="numeric"></label>
+      <label class="wsr-check" for="wsr-collapseblank"><input type="checkbox" id="wsr-collapseblank"><span data-i18n="tool.opt.collapseBlank">Collapse multiple blank lines into one</span></label>
       <label class="wsr-check" for="wsr-noblank"><input type="checkbox" id="wsr-noblank"><span data-i18n="tool.opt.noBlank">Remove blank lines</span></label>
       <label class="wsr-check" for="wsr-allws"><input type="checkbox" id="wsr-allws"><span data-i18n="tool.opt.allWs">Remove ALL whitespace (spaces, tabs, line breaks — everything)</span></label>
     </div>

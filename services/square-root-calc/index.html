@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -175,8 +185,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="input-group" id="degree-group" hidden>
       <label for="degree-input" data-i18n="tool.degree.label">Root degree (n)</label>
-      <input id="degree-input" type="number" inputmode="numeric" min="2" max="12" step="1" value="4" placeholder="e.g. 4" data-i18n-placeholder="tool.degree.ph" autocomplete="off">
-      <p id="degree-hint" data-i18n="tool.degree.hint" style="margin:6px 0 0;font-size:13px;color:var(--muted);">Whole number from 2 to 12</p>
+      <input id="degree-input" type="number" inputmode="numeric" min="2" max="100" step="1" value="4" placeholder="e.g. 4" data-i18n-placeholder="tool.degree.ph" autocomplete="off">
+      <p id="degree-hint" data-i18n="tool.degree.hint" style="margin:6px 0 0;font-size:13px;color:var(--muted);">Whole number from 2 to 100</p>
     </div>
 
     <details id="tool-more" style="margin-top:18px;">
@@ -184,10 +194,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div style="margin-top:12px;max-width:160px;">
         <label for="precision-select" data-i18n="tool.precision.label" style="margin:0 0 6px;">Decimal places</label>
         <select id="precision-select">
+          <option value="0">0</option>
+          <option value="1">1</option>
           <option value="2">2</option>
+          <option value="3">3</option>
           <option value="4" selected>4</option>
+          <option value="5">5</option>
           <option value="6">6</option>
           <option value="8">8</option>
+          <option value="10">10</option>
+          <option value="12">12</option>
         </select>
       </div>
     </details>
@@ -236,7 +252,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <ul>
       <li><strong>Square root (√x)</strong> — the value y such that y × y = x. Written with degree 2.</li>
       <li><strong>Cube root (∛x)</strong> — the value y such that y × y × y = x. Unlike square roots, cube roots of negative numbers are real (∛-8 = -2).</li>
-      <li><strong>Nth root</strong> — the value y such that y raised to the power n equals x, for any whole-number degree from 2 to 12.</li>
+      <li><strong>Nth root</strong> — the value y such that y raised to the power n equals x, for any whole-number degree from 2 to 100.</li>
     </ul>
     <p>To simplify a radical, the calculator factors the number under the root into primes, then pulls out every group of "degree" matching primes as a whole number in front of the root sign. For √72: 72 = 2³ × 3², which regroups as (2 × 3)² × 2 = 6² × 2, so √72 = 6√2. The same factoring works for cube roots and any nth root — it just looks for groups of 3, 4, or however many primes the degree calls for instead of groups of 2.</p>
 

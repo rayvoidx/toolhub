@@ -99,6 +99,8 @@
   var MMOL = 18.016;
   function eagFromA1c(a) { return 28.7 * a - 46.7; }
   function a1cFromEag(mg) { return (mg + 46.7) / 28.7; }
+  // IFCC 단위(mmol/mol) — 영국·EU 검사지 표기. 기호 표기가 만국 공통이라 번역 키 불필요.
+  function fmtA1c(a) { return a.toFixed(1) + "% (" + Math.round((a - 2.15) * 10.929) + " mmol/mol)"; }
   function fmtMg(mg) { return Math.round(mg) + " mg/dL"; }
   function fmtMmol(mg) { return (mg / MMOL).toFixed(1) + " mmol/L"; }
   function fmtG(mg, u) { return u === "mmol" ? fmtMmol(mg) : fmtMg(mg); }
@@ -148,9 +150,9 @@
 
     setLabel($("r-main-label"), toG ? "tool.r.eag" : "tool.r.a1c");
     setLabel($("r-alt-label"), toG ? "tool.r.a1c" : "tool.r.eag");
-    $("r-main").textContent = toG ? fmtG(mg, u) : (a1c.toFixed(1) + "%");
+    $("r-main").textContent = toG ? fmtG(mg, u) : fmtA1c(a1c);
     $("r-sub").textContent = toG ? (u === "mmol" ? fmtMg(mg) : fmtMmol(mg)) : "";
-    $("r-alt").textContent = toG ? (a1c.toFixed(1) + "%") : fmtG(mg, u);
+    $("r-alt").textContent = toG ? fmtA1c(a1c) : fmtG(mg, u);
 
     var badge = $("r-cat");
     badge.className = "badge " + catClass(a1c);

@@ -96,7 +96,7 @@
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   // 프런트엔드에서 실제로 반복되는 px 값들 — 루트가 바뀔 때마다 다시 그린다.
-  var COMMON_PX = [4, 8, 12, 14, 16, 18, 20, 24, 32, 40, 48, 64];
+  var COMMON_PX = [1, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 24, 28, 32, 40, 48, 56, 64, 72, 80, 96, 128];
 
   // 소수 4자리에서 끊고 꼬리 0 을 지운다. 0.1+0.2 류 부동소수 찌꺼기도 여기서 사라진다.
   function fmt(n) {
@@ -137,7 +137,9 @@
     var unit = toRem ? "rem" : "px";
 
     $("r-out").textContent = fmt(out) + unit;
-    $("r-css").value = "font-size: " + fmt(out) + unit + ";";
+    var propEl = $("prop");
+    var prop = (propEl && propEl.value) ? propEl.value : "font-size";
+    $("r-css").value = prop + ": " + fmt(out) + unit + ";";
     renderTable(r);
 
     errEl.hidden = true;
@@ -150,6 +152,7 @@
   root.addEventListener("input", live);
   root.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   direction.addEventListener("change", live);
+  if ($("prop")) $("prop").addEventListener("change", live);
   $("calc-btn").addEventListener("click", calc);
 
   Array.prototype.forEach.call(document.querySelectorAll(".copy-btn"), function (btn) {

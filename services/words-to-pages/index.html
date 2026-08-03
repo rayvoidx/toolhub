@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Words to Pages Converter — Word Count to Pages">
 <meta property="og:description" content="Convert word count to pages for Times New Roman, Arial or Verdana at single, 1.5 or double spacing. See how many pages 1,000 or 1,500 words fill.">
 <meta property="og:url" content="https://tool-hub.me/words-to-pages/">
-<meta property="og:image" content="https://tool-hub.me/words-to-pages/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/words-to-pages/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#57534e">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Words to Pages Converter",
+      "item": "https://tool-hub.me/words-to-pages/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Words to Pages Converter",
-      "item": "https://tool-hub.me/words-to-pages/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -158,7 +168,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- TOOL:START -->
   <section class="tool-card" id="tool" aria-live="polite">
     <style>
-      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .field-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; }
       #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
       #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
       #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
@@ -178,9 +188,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="font" data-i18n="tool.font.label">Font and size</label>
         <select id="font">
-          <option value="times" data-i18n="tool.font.times">Times New Roman, 12 pt</option>
-          <option value="arial" data-i18n="tool.font.arial">Arial, 12 pt</option>
-          <option value="verdana" data-i18n="tool.font.verdana">Verdana, 12 pt</option>
+          <option value="times" data-i18n="tool.font.times">Times New Roman</option>
+          <option value="arial" data-i18n="tool.font.arial">Arial</option>
+          <option value="verdana" data-i18n="tool.font.verdana">Verdana</option>
+          <option value="calibri" data-i18n="tool.font.calibri">Calibri</option>
+        </select>
+      </div>
+      <div>
+        <label for="size" data-i18n="tool.size.label">Font size</label>
+        <select id="size">
+          <option value="10">10 pt</option>
+          <option value="11">11 pt</option>
+          <option value="12" selected>12 pt</option>
+          <option value="13">13 pt</option>
+          <option value="14">14 pt</option>
+          <option value="16">16 pt</option>
         </select>
       </div>
       <div>
@@ -189,6 +211,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="double" data-i18n="tool.spacing.double">Double spaced</option>
           <option value="onehalf" data-i18n="tool.spacing.onehalf">1.5 spaced</option>
           <option value="single" data-i18n="tool.spacing.single">Single spaced</option>
+        </select>
+      </div>
+      <div>
+        <label for="margin" data-i18n="tool.margin.label">Margins</label>
+        <select id="margin">
+          <option value="0.5">0.5 in / 1.3 cm</option>
+          <option value="0.75">0.75 in / 1.9 cm</option>
+          <option value="1" selected>1 in / 2.5 cm</option>
+          <option value="1.25">1.25 in / 3.2 cm</option>
+          <option value="1.5">1.5 in / 3.8 cm</option>
         </select>
       </div>
     </div>

@@ -163,7 +163,7 @@
   function $(id) { return document.getElementById(id); }
   var modeForwardBtn = $("mode-forward"), modeReverseBtn = $("mode-reverse");
   var panelForward = $("panel-forward"), panelReverse = $("panel-reverse");
-  var catAgeEl = $("cat-age"), humanAgeEl = $("human-age");
+  var catAgeEl = $("cat-age"), catUnitEl = $("cat-age-unit"), humanAgeEl = $("human-age");
   var lifestyleIndoorEl = $("lifestyle-indoor"), lifestyleOutdoorEl = $("lifestyle-outdoor");
   var emptyEl = $("result-empty"), bodyEl = $("result-body");
   var rhLabelEl = $("rh-label"), rhValueEl = $("rh-value"), rhSubEl = $("rh-sub");
@@ -179,6 +179,7 @@
       localStorage.setItem(SKEY, JSON.stringify({
         mode: mode,
         catAge: catAgeEl.value,
+        catUnit: (catUnitEl && catUnitEl.value === "months") ? "months" : "years",
         humanAge: humanAgeEl.value,
         lifestyle: (lifestyleOutdoorEl && lifestyleOutdoorEl.checked) ? "outdoor" : "indoor"
       }));
@@ -193,8 +194,17 @@
     if (!s) return;
     if (s.mode === "reverse") mode = "reverse";
     if (typeof s.catAge === "string") catAgeEl.value = s.catAge;
+    if (s.catUnit === "months" && catUnitEl) catUnitEl.value = "months";
     if (typeof s.humanAge === "string") humanAgeEl.value = s.humanAge;
     if (s.lifestyle === "outdoor" && lifestyleOutdoorEl) lifestyleOutdoorEl.checked = true;
+  }
+
+  // 단위 전환: 입력값은 그대로 두고(고른 단위로 재해석) 상한·스텝만 맞춘다
+  function applyUnitBounds() {
+    if (!catUnitEl) return;
+    var months = catUnitEl.value === "months";
+    catAgeEl.max = String(months ? CAT_MAX * 12 : CAT_MAX);
+    catAgeEl.step = months ? "1" : "0.1";
   }
 
   /* ---- 모드 전환 ---- */
@@ -240,13 +250,14 @@
       return;
     }
 
-    var max = fwd ? CAT_MAX : HUMAN_MAX;
+    var inMonths = fwd && !!(catUnitEl && catUnitEl.value === "months");
+    var max = fwd ? (inMonths ? CAT_MAX * 12 : CAT_MAX) : HUMAN_MAX;
     var clipped = n > max;
     var clamped = clipped ? max : n;
 
     var catAge, humanAge;
     if (fwd) {
-      catAge = clamped;
+      catAge = inMonths ? clamped / 12 : clamped;
       humanAge = computeHumanAge(catAge);
     } else {
       humanAge = clamped;
@@ -287,6 +298,7 @@
   if (modeForwardBtn) modeForwardBtn.addEventListener("click", function () { setMode("forward"); });
   if (modeReverseBtn) modeReverseBtn.addEventListener("click", function () { setMode("reverse"); });
   catAgeEl.addEventListener("input", function () { saveState(); render(); });
+  if (catUnitEl) catUnitEl.addEventListener("change", function () { applyUnitBounds(); saveState(); render(); });
   humanAgeEl.addEventListener("input", function () { saveState(); render(); });
   if (lifestyleIndoorEl) lifestyleIndoorEl.addEventListener("change", function () { saveState(); render(); });
   if (lifestyleOutdoorEl) lifestyleOutdoorEl.addEventListener("change", function () { saveState(); render(); });
@@ -301,6 +313,7 @@
   });
 
   restoreState();
+  applyUnitBounds();
   applyModeUI();
   render();
   // TOOLJS:END

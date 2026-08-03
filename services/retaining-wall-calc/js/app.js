@@ -92,6 +92,8 @@
   var unit = $("unit"), wallL = $("wall-l"), wallH = $("wall-h"), block = $("block");
   var blockW = $("block-w"), blockH = $("block-h"), customRow = $("custom-row");
   var useCap = $("use-cap"), useBack = $("use-backfill");
+  var backW = $("back-w"), backRow = $("backfill-row");
+  var waste = $("waste"), price = $("price"), costCard = $("cost-card");
   var result = $("result"), errEl = $("err"), warnEl = $("warn");
   if (!unit || !wallL || !wallH || !block) return;
 
@@ -101,7 +103,7 @@
   var YD3_TO_M3 = 0.764554858;
   // 블록 전면 치수(인치). 12x4 는 북미 조경용 표준, 16x6 은 대형 블록.
   var BLOCKS = { std: [12, 4], big: [16, 6] };
-  var BACKFILL_FT = 1;   // 벽 뒤 배수 자갈 폭 12in
+  var BACKFILL_FT = 1;   // 벽 뒤 배수 자갈 기본 폭 12in (사용자 재정의 가능)
   var BASE_EXTRA_IN = 8; // 기초 자갈 폭 = 블록 폭 + 8in (앞뒤 4in 여유)
   var BASE_DEPTH_FT = 0.5;
 
@@ -120,6 +122,7 @@
   }
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
   function syncCustom() { customRow.hidden = block.value !== "custom"; }
+  function syncBackfill() { if (backRow) backRow.hidden = !(useBack && useBack.checked); }
   function syncUnits() {
     var u = unit.value === "m" ? "m" : "ft";
     $("u-len").textContent = u;
@@ -149,8 +152,35 @@
     var wallBlocks = rows * perRow;
     var caps = useCap && useCap.checked ? perRow : 0;
 
+    // 여유율: 곡선·절단·파손분. 기본 0% 라 기존 결과는 그대로.
+    var wpct = waste ? parseFloat(waste.value) || 0 : 0;
+    // 부동소수 오차로 200*1.1 이 221 이 되는 것을 막는다.
+    var up = function (n) { return Math.ceil(n * (1 + wpct / 100) - 1e-9); };
+    if (wpct > 0) {
+      wallBlocks = up(wallBlocks);
+      if (caps) caps = up(caps);
+    }
+
+    // 블록 단가(선택). 비워두면 카드 자체를 숨긴다 — 통화는 사용자 것 그대로.
+    var costCell = costCard;
+    var pv = price ? num(price) : NaN;
+    if (price && String(price.value).trim() !== "") {
+      if (!isFinite(pv) || pv < 0) return fail("tool.err.price");
+      $("r-cost").textContent = fmt((wallBlocks + caps) * pv, 2);
+      if (costCell) costCell.hidden = false;
+    } else if (costCell) {
+      costCell.hidden = true;
+    }
+
     var baseYd3 = (lenFt * ((dims[0] + BASE_EXTRA_IN) / 12) * BASE_DEPTH_FT) / 27;
-    var backYd3 = (lenFt * hgtFt * BACKFILL_FT) / 27;
+    // 배수 구간 폭: 기본 12in. 비워두면 기본값 그대로라 기존 결과는 변하지 않는다.
+    var backFt = BACKFILL_FT;
+    if (backW && String(backW.value).trim() !== "") {
+      var bw = num(backW);
+      if (!isFinite(bw) || bw < 4 || bw > 48) return fail("tool.err.width");
+      backFt = bw / 12;
+    }
+    var backYd3 = (lenFt * hgtFt * backFt) / 27;
 
     $("r-blocks").textContent = fmt(wallBlocks, 0);
     $("r-caps").textContent = caps ? fmt(caps, 0) : t("tool.r.none");
@@ -169,14 +199,16 @@
 
   var live = function () { if (!result.hidden || !errEl.hidden) calc(); };
   syncCustom();
+  syncBackfill();
   syncUnits();
   $("calc-btn").addEventListener("click", calc);
-  [wallL, wallH, blockW, blockH].forEach(function (el) {
+  [wallL, wallH, blockW, blockH, price, backW].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   block.addEventListener("change", function () { syncCustom(); live(); });
   unit.addEventListener("change", function () { syncUnits(); live(); });
-  [useCap, useBack].forEach(function (el) { el.addEventListener("change", live); });
+  [useCap, useBack, waste, backW].forEach(function (el) { el.addEventListener("change", live); });
+  useBack.addEventListener("change", syncBackfill);
   document.addEventListener("i18n:change", live);
   // TOOLJS:END
 })();

@@ -264,7 +264,8 @@
   var actionsEl = $("jtc-actions"), copyBtn = $("jtc-copy"), downloadBtn = $("jtc-download"), feedbackEl = $("jtc-feedback");
   if (!inputEl || !outputEl || !delimEl) return;
 
-  var DELIM_MAP = { comma: ",", semicolon: ";", tab: "\t" };
+  var customEl = $("jtc-custom"), customWrap = $("jtc-custom-wrap");
+  var DELIM_MAP = { comma: ",", semicolon: ";", tab: "\t", pipe: "|" };
   var lastCSV = null;
 
   /* ---- 상태 저장/복원 ---- */
@@ -275,7 +276,11 @@
     } catch (e) { return null; }
   }
   function saveState() {
-    try { localStorage.setItem(SKEY, JSON.stringify({ input: inputEl.value, delim: delimEl.value })); }
+    try {
+      localStorage.setItem(SKEY, JSON.stringify({
+        input: inputEl.value, delim: delimEl.value, custom: customEl ? customEl.value : ""
+      }));
+    }
     catch (e) { /* private mode */ }
   }
 
@@ -343,8 +348,34 @@
       .replace("{rows}", fmt(result.rowCount)).replace("{cols}", fmt(result.colCount));
   }
 
+  // 사용자 지정 구분자: 정확히 1글자, 따옴표·개행은 CSV 인용 규칙과 충돌하므로 금지
+  function resolveDelim() {
+    if (delimEl.value !== "custom") return DELIM_MAP[delimEl.value] || ",";
+    var v = customEl ? customEl.value : "";
+    if (v.length !== 1 || v === '"' || v === "\n" || v === "\r") return null;
+    return v;
+  }
+
+  function setBadDelim() {
+    lastCSV = null;
+    outputEl.value = "";
+    statsEl.textContent = "";
+    actionsEl.hidden = true;
+    errorBox.hidden = true;
+    messageEl.classList.add("jtc-msg-error");
+    messageEl.textContent = tr("tool.err.badDelim",
+      "Enter a single custom delimiter character (it can't be a quote or a line break).");
+  }
+
   function render() {
-    var delim = DELIM_MAP[delimEl.value] || ",";
+    if (customWrap) customWrap.hidden = (delimEl.value !== "custom");
+    var delim = resolveDelim();
+    if (delim === null) {
+      if (inputEl.value.replace(/^\s+|\s+$/g, "") === "") setEmpty();
+      else setBadDelim();
+      saveState();
+      return;
+    }
     var result = convert(inputEl.value, delim);
     if (result.state === "empty") setEmpty();
     else if (result.state === "error") setError(result.error);
@@ -400,7 +431,11 @@
 
   /* ---- 이벤트 ---- */
   inputEl.addEventListener("input", render);
-  delimEl.addEventListener("change", render);
+  delimEl.addEventListener("change", function () {
+    render();
+    if (delimEl.value === "custom" && customEl) customEl.focus();
+  });
+  if (customEl) customEl.addEventListener("input", render);
   if (clearBtn) {
     clearBtn.addEventListener("click", function () {
       inputEl.value = "";
@@ -428,7 +463,8 @@
   var st = loadState();
   if (st) {
     if (typeof st.input === "string") inputEl.value = st.input;
-    if (st.delim && Object.prototype.hasOwnProperty.call(DELIM_MAP, st.delim)) delimEl.value = st.delim;
+    if (st.delim && (Object.prototype.hasOwnProperty.call(DELIM_MAP, st.delim) || st.delim === "custom")) delimEl.value = st.delim;
+    if (customEl && typeof st.custom === "string") customEl.value = st.custom.slice(0, 1);
   }
   render();
   // TOOLJS:END

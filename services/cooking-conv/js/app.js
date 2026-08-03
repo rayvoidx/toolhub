@@ -91,7 +91,11 @@
   var $ = function (id) { return document.getElementById(id); };
   var amount = $("amount"), unit = $("unit"), ing = $("ingredient");
   var result = $("result"), errEl = $("err");
+  var density = $("density"), densityRow = $("density-row");
   if (!amount || !unit || !ing) return;
+
+  function syncDensity() { densityRow.hidden = ing.value !== "custom"; }
+  syncDensity();
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -115,8 +119,16 @@
     if (isNaN(qty)) return fail("tool.err.empty");
     if (qty <= 0) return fail("tool.err.positive");
 
+    var d;
+    if (ing.value === "custom") {
+      d = parseAmount(density.value);
+      if (isNaN(d) || d <= 0 || d > 5) return fail("tool.err.density");
+    } else {
+      d = parseFloat(ing.value);
+    }
+
     var ml = qty * parseFloat(unit.value);
-    var grams = ml * parseFloat(ing.value);
+    var grams = ml * d;
 
     $("r-g").textContent = round(grams) + " g";
     $("r-oz").textContent = round(grams / 28.3495) + " oz";
@@ -129,8 +141,9 @@
 
   $("calc-btn").addEventListener("click", calc);
   amount.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+  density.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   [unit, ing].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+    el.addEventListener("change", function () { syncDensity(); if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!errEl.hidden) calc(); });
   // TOOLJS:END

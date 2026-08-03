@@ -107,7 +107,15 @@
     var h = num(height), w = num(weight);
     if (!isFinite(h) || !isFinite(w)) return fail("tool.err.empty");
 
-    var cm = hunit.value === "in" ? h * 2.54 : h;
+    var cm = h;
+    if (hunit.value === "in") cm = h * 2.54;
+    else if (hunit.value === "ftin") {
+      // 피트 칸이 h, 인치 칸은 선택 입력(빈 칸 = 0인치).
+      var inPart = parseFloat(String($("hin").value).replace(/,/g, ""));
+      if (!isFinite(inPart)) inPart = 0;
+      if (inPart < 0) return fail("tool.err.height");
+      cm = (h * 12 + inPart) * 2.54;
+    }
     var kg = wunit.value === "lb" ? w * 0.45359237 : w;
     if (cm < 50 || cm > 250) return fail("tool.err.height");
     if (kg < 10 || kg > 300) return fail("tool.err.weight");
@@ -123,8 +131,16 @@
     result.hidden = false;
   }
 
+  function syncHeightUnit() {
+    var ft = hunit.value === "ftin";
+    $("hin-row").hidden = !ft;
+    height.placeholder = ft ? "5" : (hunit.value === "in" ? "67" : "170");
+  }
+  syncHeightUnit();
+  hunit.addEventListener("change", syncHeightUnit);
+
   $("calc-btn").addEventListener("click", calc);
-  [height, weight].forEach(function (el) {
+  [height, weight, $("hin")].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   [hunit, wunit].forEach(function (el) {

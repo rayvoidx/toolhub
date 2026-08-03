@@ -92,7 +92,7 @@
   var cfg = window.APP_CONFIG || {};
   var SLUG = cfg.slug || "dday-calc";
   var STORAGE_KEY = SLUG + ":list";
-  var MAX_CARDS = 5;
+  var MAX_CARDS = 10;
 
   /* ---- 날짜 유틸 ---- */
 
@@ -249,6 +249,8 @@
       html += '<div style="font-weight:700;font-size:14px;color:var(--muted);margin-bottom:4px;">' + escHtml(card.name) + '</div>';
       html += '<div style="font-size:clamp(32px,8vw,52px);font-weight:900;color:' + accentColor + ';letter-spacing:-0.04em;line-height:1.1;">' + escHtml(label) + '</div>';
       html += '<div style="font-size:13px;color:var(--muted);margin-top:4px;">' + formatDateKo(card.date) + '</div>';
+      var wk = weeksLabel(diff);
+      if (wk) html += '<div style="font-size:13px;color:var(--muted);margin-top:2px;">' + wk + '</div>';
       html += '</div>';
       html += '<button type="button" data-idx="' + idx + '" class="dday-remove-btn" aria-label="' + escHtml(card.name) + ' 삭제" style="background:none;border:1px solid var(--line);border-radius:8px;color:var(--muted);font-size:18px;width:32px;height:32px;cursor:pointer;line-height:1;flex-shrink:0;">×</button>';
       html += '</div>';
@@ -280,7 +282,18 @@
 
   function formatDateKo(str) {
     var parts = str.split("-");
-    return parts[0] + "년 " + Number(parts[1]) + "월 " + Number(parts[2]) + "일";
+    var dow = "일월화수목금토".charAt(parseDate(str).getDay());
+    return parts[0] + "년 " + Number(parts[1]) + "월 " + Number(parts[2]) + "일 (" + dow + ")";
+  }
+
+  /** 남은/지난 일수를 주 단위로 환산한 보조 문구 */
+  function weeksLabel(diff) {
+    var n = Math.abs(diff);
+    if (n < 7) return "";
+    var w = Math.floor(n / 7);
+    var d = n % 7;
+    var span = w + "주" + (d ? " " + d + "일" : "");
+    return diff > 0 ? span + " 남음" : span + " 지남";
   }
 
   /* ---- 입력 이벤트 ---- */
@@ -315,7 +328,7 @@
       }
       var cards = loadCards();
       if (cards.length >= MAX_CARDS) {
-        showToast("최대 5개까지 추가 가능합니다.");
+        showToast("최대 " + MAX_CARDS + "개까지 추가 가능합니다.");
         return;
       }
       var name = (nameInput && nameInput.value.trim()) || "D-day";

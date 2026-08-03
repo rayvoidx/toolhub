@@ -94,11 +94,12 @@
 
   // calc-core:start — 순수 계산 코어 (node 단위검증 대상, 킬로그램 기준 환산 계수)
   var FACTOR = {
-    mg: 0.000001, g: 0.001, kg: 1, t: 1000,
+    mcg: 0.000000001, mg: 0.000001, g: 0.001, kg: 1, t: 1000, ton: 907.18474,
     oz: 0.028349523125, lb: 0.45359237, st: 6.35029318,
-    geun: 0.6, don: 0.00375
+    geun: 0.6, don: 0.00375,
+    ozt: 0.0311034768, ct: 0.0002
   };
-  var UNITS = ["mg", "g", "kg", "t", "oz", "lb", "st", "geun", "don"];
+  var UNITS = ["mcg", "mg", "g", "kg", "t", "ton", "oz", "lb", "st", "geun", "don", "ozt", "ct"];
 
   // value(from 단위) → to 단위 : 킬로그램을 매개로 환산
   function convert(value, from, to) {
@@ -148,7 +149,7 @@
   if (!valEl || !fromEl || !toEl || !eqEl || !noteEl) return;
 
   // 결과식·테이블에 쓰는 단위 약어 (근/돈은 비한국어 사용자도 식별 가능하게 로마자 병기)
-  var ABBR = { mg: "mg", g: "g", kg: "kg", t: "t", oz: "oz", lb: "lb", st: "st", geun: "geun", don: "don" };
+  var ABBR = { mcg: "mcg", mg: "mg", g: "g", kg: "kg", t: "t", ton: "US ton", oz: "oz", lb: "lb", st: "st", geun: "geun", don: "don", ozt: "ozt", ct: "ct" };
 
   function t(key, fb) {
     var v = (window.I18N && window.I18N.t) ? window.I18N.t(key) : null;

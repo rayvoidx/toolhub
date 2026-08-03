@@ -181,11 +181,21 @@
   /* ---- DOM ---- */
   function $(id) { return document.getElementById(id); }
   var qualityEl = $("quality"), qualityValueEl = $("quality-value");
-  var maxDimEl = $("max-dim"), formatEl = $("out-format");
+  var maxDimEl = $("max-dim"), maxDimCustomEl = $("max-dim-custom"), formatEl = $("out-format");
   var dropZone = $("drop-zone"), fileInput = $("file-input");
   var fileErrorEl = $("file-error"), summaryEl = $("batch-summary"), listEl = $("file-list");
   var batchActionsEl = $("batch-actions"), downloadAllBtn = $("download-all-btn"), clearAllBtn = $("clear-all-btn");
   if (!dropZone || !fileInput || !listEl || !qualityEl || !maxDimEl || !formatEl) return;
+
+  // 선택된 최대 크기(px). "custom" 이면 직접 입력값, 유효하지 않으면 -1 (호출부에서 에러 처리).
+  function currentMaxDim() {
+    if (maxDimEl.value !== "custom") return parseInt(maxDimEl.value, 10) || 0;
+    var v = parseInt(maxDimCustomEl && maxDimCustomEl.value, 10);
+    return isFinite(v) && v >= 32 && v <= MAX_SOURCE_DIM ? v : -1;
+  }
+  function syncCustomVisibility() {
+    if (maxDimCustomEl) maxDimCustomEl.hidden = maxDimEl.value !== "custom";
+  }
 
   /* ---- 설정 저장/복원 (파일 자체는 저장하지 않는다 — 오직 슬라이더/셀렉트 값만) ---- */
   function loadSettings() {
@@ -197,16 +207,19 @@
   function saveSettings() {
     try {
       localStorage.setItem(SKEY, JSON.stringify({
-        quality: qualityEl.value, maxDim: maxDimEl.value, format: formatEl.value
+        quality: qualityEl.value, maxDim: maxDimEl.value, format: formatEl.value,
+        maxDimCustom: maxDimCustomEl ? maxDimCustomEl.value : ""
       }));
     } catch (e) { /* private mode — 저장만 실패, 계산은 정상 */ }
   }
   (function restoreSettings() {
     var s = loadSettings();
-    if (!s) return;
+    if (!s) { syncCustomVisibility(); return; }
     if (s.quality && Number(s.quality) >= 10 && Number(s.quality) <= 100) qualityEl.value = s.quality;
     if (s.maxDim != null && $("max-dim").querySelector('option[value="' + s.maxDim + '"]')) maxDimEl.value = s.maxDim;
     if (s.format && formatEl.querySelector('option[value="' + s.format + '"]')) formatEl.value = s.format;
+    if (maxDimCustomEl && s.maxDimCustom && Number(s.maxDimCustom) >= 32 && Number(s.maxDimCustom) <= MAX_SOURCE_DIM) maxDimCustomEl.value = s.maxDimCustom;
+    syncCustomVisibility();
   })();
   qualityValueEl.textContent = qualityEl.value + "%";
 
@@ -305,7 +318,14 @@
     loadBitmap(it.file).then(function (bmp) {
       var w = bmp.width || bmp.naturalWidth || 1;
       var h = bmp.height || bmp.naturalHeight || 1;
-      var maxDim = parseInt(maxDimEl.value, 10) || 0;
+      var maxDim = currentMaxDim();
+      if (maxDim < 0) {
+        it.status = "error";
+        it.error = tr("tool.err.customDim", "{name}: enter a custom max dimension between 32 and 8000 px.").replace("{name}", it.name);
+        if (typeof bmp.close === "function") bmp.close();
+        renderList();
+        return;
+      }
       var target = computeTargetSize(w, h, maxDim);
       var canvas = document.createElement("canvas");
       canvas.width = target.width;
@@ -463,7 +483,8 @@
     qualityValueEl.textContent = qualityEl.value + "%";
     saveSettings();
   });
-  maxDimEl.addEventListener("change", saveSettings);
+  maxDimEl.addEventListener("change", function () { syncCustomVisibility(); saveSettings(); });
+  if (maxDimCustomEl) maxDimCustomEl.addEventListener("input", saveSettings);
   formatEl.addEventListener("change", saveSettings);
 
   dropZone.addEventListener("click", function () { fileInput.click(); });

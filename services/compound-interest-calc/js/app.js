@@ -309,7 +309,9 @@
     $("r-contrib").textContent = money(r.totalContributed, cur);
     $("r-interest").textContent = money(r.totalInterest, cur);
 
-    var freqKey = freq === 365 ? "tool.freq.daily" : freq === 4 ? "tool.freq.quarterly" : freq === 1 ? "tool.freq.annually" : "tool.freq.monthly";
+    var FREQ_KEYS = { 365: "tool.freq.daily", 52: "tool.freq.weekly", 12: "tool.freq.monthly",
+      4: "tool.freq.quarterly", 2: "tool.freq.semiannually", 1: "tool.freq.annually" };
+    var freqKey = FREQ_KEYS[freq] || "tool.freq.monthly";
     $("r-sub").textContent = t("tool.result.sub", "From {principal} over {years} years at {rate}% annual interest, compounded {freq}.")
       .replace("{principal}", money(r.principal, cur))
       .replace("{years}", numFmt(r.years, 2))

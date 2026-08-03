@@ -101,6 +101,8 @@
   var caseEl = document.getElementById("sl-case");
   var articlesEl = document.getElementById("sl-articles");
   var blankEl = document.getElementById("sl-blank");
+  var dedupeEl = document.getElementById("sl-dedupe");
+  var trimEl = document.getElementById("sl-trim");
   var sortBtn = document.getElementById("sl-sort");
   var sampleBtn = document.getElementById("sl-sample");
   var clearBtn = document.getElementById("sl-clear");
@@ -156,6 +158,17 @@
     });
   }
 
+  // 첫 등장만 남긴다. 대소문자 구분 옵션이 꺼져 있으면 대소문자 무시 비교.
+  function dedupeLines(lines, caseSensitive) {
+    var seen = Object.create(null);
+    return lines.filter(function (l) {
+      var k = "k" + (caseSensitive ? l : l.toLowerCase());
+      if (seen[k]) return false;
+      seen[k] = true;
+      return true;
+    });
+  }
+
   function shuffleArray(arr) {
     var a = arr.slice();
     for (var i = a.length - 1; i > 0; i--) {
@@ -169,9 +182,10 @@
     if (!lines.length) return [];
     if (mode === "shuffle") return shuffleArray(lines);
     if (mode === "reverse") return lines.slice().reverse();
-    if (mode === "length") {
+    if (mode === "length" || mode === "lengthDesc") {
+      var sign = mode === "lengthDesc" ? -1 : 1;
       return lines.slice().sort(function (a, b) {
-        var d = a.length - b.length;
+        var d = (a.length - b.length) * sign;
         if (d !== 0) return d;
         return alphaCompare(a, b, { numeric: false, caseSensitive: opts.caseSensitive, articles: opts.articles });
       });
@@ -197,9 +211,13 @@
   function currentLines() {
     var raw = inputEl.value;
     var lines = splitLines(raw);
+    if (trimEl && trimEl.checked) {
+      lines = lines.map(function (l) { return l.trim(); });
+    }
     if (blankEl && blankEl.checked) {
       lines = lines.filter(function (l) { return l.trim() !== ""; });
     }
+    if (dedupeEl && dedupeEl.checked) lines = dedupeLines(lines, !!(caseEl && caseEl.checked));
     return { raw: raw, lines: lines };
   }
 
@@ -301,7 +319,9 @@
         mode: modeEl.value,
         caseSensitive: !!(caseEl && caseEl.checked),
         articles: !!(articlesEl && articlesEl.checked),
-        blank: blankEl ? !!blankEl.checked : true
+        blank: blankEl ? !!blankEl.checked : true,
+        dedupe: !!(dedupeEl && dedupeEl.checked),
+        trim: !!(trimEl && trimEl.checked)
       }));
     } catch (e) { /* private mode — 세션 메모리만 유지 */ }
   }
@@ -318,6 +338,8 @@
     if (caseEl) caseEl.checked = !!s.caseSensitive;
     if (articlesEl) articlesEl.checked = !!s.articles;
     if (blankEl) blankEl.checked = s.blank !== false;
+    if (dedupeEl) dedupeEl.checked = !!s.dedupe;
+    if (trimEl) trimEl.checked = !!s.trim;
   }
 
   // ----- 샘플 데이터 -----
@@ -357,7 +379,7 @@
     });
   }
 
-  [modeEl, caseEl, articlesEl, blankEl].forEach(function (el) {
+  [modeEl, caseEl, articlesEl, blankEl, dedupeEl, trimEl].forEach(function (el) {
     if (!el) return;
     el.addEventListener("change", function () {
       updateInputCount();

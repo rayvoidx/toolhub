@@ -113,6 +113,12 @@
     return (desired - current * (1 - w)) / w;
   }
   // achievable(0<x<=100) / impossible(>100, 만점도 부족) / secured(<=0, 0점이어도 목표 이상)
+  // 기말 100점/0점일 때의 최종 성적 범위 — 필요 점수와 짝이 되는 값
+  function gradeRange(current, weightPct) {
+    var w = weightPct / 100;
+    var base = current * (1 - w);
+    return { min: base, max: base + 100 * w };
+  }
   function classify(score) {
     if (score > 100) return "impossible";
     if (score <= 0) return "secured";
@@ -120,7 +126,7 @@
   }
   // node 검증용 노출 — 브라우저에는 module 이 없어 건너뛴다
   if (typeof module !== "undefined" && module.exports) {
-    module.exports = { requiredScore: requiredScore, classify: classify, TARGETS: TARGETS };
+    module.exports = { requiredScore: requiredScore, classify: classify, gradeRange: gradeRange, TARGETS: TARGETS };
     return;
   }
 
@@ -150,6 +156,7 @@
   var currentEl = $("fg-current"), desiredEl = $("fg-desired"), weightEl = $("fg-weight");
   var emptyEl = $("fg-empty"), errorEl = $("fg-error"), mainEl = $("fg-main");
   var chipEl = $("fg-chip"), valueEl = $("fg-value"), noteEl = $("fg-note");
+  var rangeEl = $("fg-range");
   var tableWrap = $("fg-table-wrap"), tableBody = $("fg-table-body"), cappedEl = $("fg-capped");
   if (!currentEl || !desiredEl || !weightEl || !mainEl) return;
 
@@ -244,6 +251,13 @@
     noteEl.textContent = tr(noteKey, noteFallback)
       .replace("{score}", fmtPct(required, 1))
       .replace("{desired}", fmtPct(d.value, 1));
+
+    var rng = gradeRange(c.value, w.value);
+    if (rangeEl) {
+      rangeEl.textContent = tr("tool.note.range", "With a perfect 100% on the final your course grade would be {max}; with a 0% it would be {min}.")
+        .replace("{max}", fmtPct(rng.max, 1))
+        .replace("{min}", fmtPct(rng.min, 1));
+    }
 
     renderTable(c.value, w.value);
     showState("main");

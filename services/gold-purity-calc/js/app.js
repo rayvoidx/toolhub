@@ -90,7 +90,8 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var karat = $("karat"), karatC = $("karat-custom"), customWrap = $("custom-wrap");
-  var weight = $("weight"), price = $("price");
+  var weight = $("weight"), price = $("price"), wunit = $("wunit");
+  var G_PER = { g: 1, ozt: 31.1034768, dwt: 1.55517384 };
   var result = $("result"), errEl = $("err");
   if (!karat || !weight || !price) return;
 
@@ -122,6 +123,7 @@
     var w = num(weight);
     if (!isFinite(w)) return fail("tool.err.weight");
     if (w <= 0) return fail("tool.err.weightpos");
+    w = w * (G_PER[wunit && wunit.value] || 1);
 
     var hasPrice = String(price.value).trim() !== "";
     var p = hasPrice ? num(price) : 0;
@@ -146,6 +148,7 @@
   [weight, price, karatC].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
+  if (wunit) wunit.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   karat.addEventListener("change", function () {
     syncCustom();
     if (karat.value === "custom" && !String(karatC.value).trim()) { return; }

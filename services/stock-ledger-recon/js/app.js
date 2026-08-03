@@ -704,7 +704,7 @@
   function decodeBuffer(buf, forced) {
     var bytes = new Uint8Array(buf);
     var hasBom = bytes.length > 2 && bytes[0] === 0xef && bytes[1] === 0xbb && bytes[2] === 0xbf;
-    var cands = forced && forced !== "auto" ? [forced] : (hasBom ? ["utf-8"] : ["utf-8", "euc-kr", "shift_jis", "windows-1252"]);
+    var cands = forced && forced !== "auto" ? [forced] : (hasBom ? ["utf-8"] : ["utf-8", "euc-kr", "shift_jis", "gb18030", "big5", "windows-1252"]);
     var best = null, i;
     for (i = 0; i < cands.length; i++) {
       var text;
@@ -990,13 +990,15 @@
     } else if (kind === "lastMonth") {
       e = slrDaysFromCivil(y, m, 1) - 1;
       var lm = slrCivilFromDays(e); s = slrDaysFromCivil(lm.y, lm.m, 1);
-    } else if (kind === "quarter") {
-      var qs = Math.floor((m - 1) / 3) * 3 + 1;
-      s = slrDaysFromCivil(y, qs, 1);
-      e = slrDaysFromCivil(qs + 3 > 12 ? y + 1 : y, qs + 3 > 12 ? qs + 3 - 12 : qs + 3, 1) - 1;
-    } else if (kind === "fy") {
+    } else if (kind === "quarter" || kind === "lastQuarter") {
+      var qs = Math.floor((m - 1) / 3) * 3 + 1, qy = y;
+      if (kind === "lastQuarter") { qs -= 3; if (qs < 1) { qs += 12; qy -= 1; } }
+      s = slrDaysFromCivil(qy, qs, 1);
+      e = slrDaysFromCivil(qs + 3 > 12 ? qy + 1 : qy, qs + 3 > 12 ? qs + 3 - 12 : qs + 3, 1) - 1;
+    } else if (kind === "fy" || kind === "lastFY") {
       var f = fyStart();
       var sy = m >= f ? y : y - 1;
+      if (kind === "lastFY") sy -= 1;
       s = slrDaysFromCivil(sy, f, 1);
       e = slrDaysFromCivil(sy + 1, f, 1) - 1;
     } else {   // all — 데이터에 있는 전 기간
@@ -1166,6 +1168,7 @@
     if (st.map.sku < 0) { setStatus(tf("tool.needCol", { col: t("tool.col_sku") }), "bad"); return; }
     if (st.map.qty < 0) { setStatus(tf("tool.needCol", { col: t("tool.col_qty") }), "bad"); return; }
     if (!st.signed && st.map.type < 0) { setStatus(t("tool.needType"), "bad"); return; }
+    if (els.start.value && els.end.value && els.start.value > els.end.value) { setStatus(t("tool.badPeriod"), "bad"); return; }
 
     var rows = estimateRows();
     if (rows > HUGE_ROWS && !window.confirm(tf("tool.hugeConfirm", { n: num(rows) }))) return;

@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Furnace Size Calculator — What Size Furnace Do I Need">
 <meta property="og:description" content="Work out what size furnace you need in BTU. Enter square footage, US climate zone, insulation and ceiling height to get your heating load and furnace size.">
 <meta property="og:url" content="https://tool-hub.me/furnace-size-calc/">
-<meta property="og:image" content="https://tool-hub.me/furnace-size-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/furnace-size-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#c2410c">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Furnace Size Calculator",
+      "item": "https://tool-hub.me/furnace-size-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Furnace Size Calculator",
-      "item": "https://tool-hub.me/furnace-size-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -207,6 +217,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option value="1.12" data-i18n="tool.ceil.10">10 ft or vaulted (+12%)</option>
     </select>
 
+    <label for="afue" data-i18n="tool.afue.label">Furnace efficiency (AFUE)</label>
+    <select id="afue">
+      <option value="0.8" data-i18n="tool.afue.80">80% — older non-condensing</option>
+      <option value="0.9" data-i18n="tool.afue.90">90% — mid efficiency</option>
+      <option value="0.95" selected data-i18n="tool.afue.95">95% — condensing (standard today)</option>
+      <option value="0.98" data-i18n="tool.afue.98">98% — high-efficiency condensing</option>
+    </select>
+
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate furnace size</button>
 
     <div id="result" hidden>
@@ -215,7 +233,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="rc-label" data-i18n="tool.r.load">Heating load (heat delivered)</div>
           <div class="rc-val" id="r-load">—</div>
         </div>
-        <div class="rcard"><div class="rc-label" data-i18n="tool.r.input">Furnace input needed at 95% AFUE</div><div class="rc-val" id="r-input">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.input">Furnace input needed</div><div class="rc-val" id="r-input">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.size">Nearest common furnace size</div><div class="rc-val" id="r-size">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.factor">Effective factor used</div><div class="rc-val" id="r-factor">—</div></div>
       </div>

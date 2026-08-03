@@ -99,6 +99,8 @@
   }
   var LEVEL_KEY = { weak: "tool.strengthWeak", medium: "tool.strengthFair", strong: "tool.strengthStrong" };
   var lastLevel = null;   // remembered so the strength label can re-render on language switch
+  var lastBits  = null;   // entropy bits of the current password (re-rendered on language switch)
+  var AMBIGUOUS = "0OoIl1|`'\"";
 
   var CHARSETS = {
     upper:  "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -114,12 +116,14 @@
   var optLower   = document.getElementById("opt-lower");
   var optDigit   = document.getElementById("opt-digit");
   var optSymbol  = document.getElementById("opt-symbol");
+  var optNoAmb   = document.getElementById("opt-no-ambiguous");
   var btnGen     = document.getElementById("btn-generate");
   var btnCopy    = document.getElementById("btn-copy");
   var resultEl   = document.getElementById("pw-result");
   var strengthWrap  = document.getElementById("pw-strength-wrap");
   var strengthBar   = document.getElementById("pw-strength-bar");
   var strengthLabel = document.getElementById("pw-strength-label");
+  var entropyLabel  = document.getElementById("pw-entropy-label");
   var toastEl    = document.getElementById("pw-toast");
 
   // Restore length from localStorage
@@ -127,7 +131,7 @@
     try {
       var savedLen = localStorage.getItem(SLUG + ":length");
       if (savedLen) {
-        var n = Math.min(64, Math.max(8, parseInt(savedLen, 10)));
+        var n = Math.min(128, Math.max(4, parseInt(savedLen, 10)));
         sliderEl.value = n;
         lengthVal.textContent = String(n);
       }
@@ -139,6 +143,8 @@
       if (savedLower  !== null) optLower.checked  = savedLower  === "1";
       if (savedDigit  !== null) optDigit.checked  = savedDigit  === "1";
       if (savedSymbol !== null) optSymbol.checked = savedSymbol === "1";
+      var savedNoAmb = localStorage.getItem(SLUG + ":noAmbiguous");
+      if (savedNoAmb !== null) optNoAmb.checked = savedNoAmb === "1";
     } catch (e) { /* private mode — noop */ }
   })();
 
@@ -159,6 +165,9 @@
     if (optLower.checked)  pool += CHARSETS.lower;
     if (optDigit.checked)  pool += CHARSETS.digit;
     if (optSymbol.checked) pool += CHARSETS.symbol;
+    if (optNoAmb.checked) {
+      pool = pool.split("").filter(function (c) { return AMBIGUOUS.indexOf(c) === -1; }).join("");
+    }
     return pool;
   }
 
@@ -173,6 +182,11 @@
   function renderStrengthLabel() {
     if (!lastLevel) return;
     strengthLabel.textContent = t("tool.strength") + ": " + t(LEVEL_KEY[lastLevel]);
+    if (lastBits != null && isFinite(lastBits)) {
+      entropyLabel.textContent = t("tool.entropy").replace("{n}", String(lastBits));
+    } else {
+      entropyLabel.textContent = "";
+    }
   }
 
   function showToast(msg, durationMs) {
@@ -185,7 +199,7 @@
   }
 
   function generate() {
-    var len = Math.min(64, Math.max(8, parseInt(sliderEl.value, 10)));
+    var len = Math.min(128, Math.max(4, parseInt(sliderEl.value, 10)));
     sliderEl.value = len;
     lengthVal.textContent = String(len);
 
@@ -217,6 +231,7 @@
     strengthBar.style.width  = rating.pct + "%";
     strengthBar.style.background = rating.color;
     lastLevel = rating.level;
+    lastBits  = Math.round(len * Math.log2(pool.length));
     renderStrengthLabel();
 
     // Persist preferences
@@ -226,6 +241,7 @@
       localStorage.setItem(SLUG + ":lower",  optLower.checked  ? "1" : "0");
       localStorage.setItem(SLUG + ":digit",  optDigit.checked  ? "1" : "0");
       localStorage.setItem(SLUG + ":symbol", optSymbol.checked ? "1" : "0");
+      localStorage.setItem(SLUG + ":noAmbiguous", optNoAmb.checked ? "1" : "0");
     } catch (e) { /* noop */ }
   }
 
@@ -265,7 +281,7 @@
 
   // Slider live update
   sliderEl.addEventListener("input", function () {
-    var n = Math.min(64, Math.max(8, parseInt(sliderEl.value, 10)));
+    var n = Math.min(128, Math.max(4, parseInt(sliderEl.value, 10)));
     sliderEl.value = n;
     lengthVal.textContent = String(n);
   });

@@ -89,10 +89,10 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var method = $("method"), dist = $("dist"), dunit = $("dunit"), rhr = $("rhr");
+  var method = $("method"), dist = $("dist"), dunit = $("dunit"), rhr = $("rhr"), mhr = $("mhr");
   var mm = $("mm"), ss = $("ss"), age = $("age");
   var result = $("result"), errEl = $("err");
-  if (!method || !dist || !rhr || !mm || !ss || !age) return;
+  if (!method || !dist || !rhr || !mhr || !mm || !ss || !age) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -143,8 +143,16 @@
       var hr = num(rhr);
       if (isNaN(hr)) return fail("tool.err.empty");
       if (hr < 30 || hr > 120) return fail("tool.err.hr");
-      vo2 = 15.3 * ((208 - 0.7 * a) / hr); // Tanaka 최대심박 × Uth–Sørensen
+      var maxHr = 208 - 0.7 * a; // Tanaka 추정
       noteKey = "tool.note.rhr";
+      if (String(mhr.value).trim() !== "") {
+        var mv = num(mhr);
+        if (isNaN(mv) || mv < 100 || mv > 230) return fail("tool.err.mhr");
+        if (mv <= hr) return fail("tool.err.mhrOrder");
+        maxHr = mv;
+        noteKey = "tool.note.rhrCustom";
+      }
+      vo2 = 15.3 * (maxHr / hr); // Uth–Sørensen
     } else if (m === "run15") {
       var mins = num(mm);
       var secRaw = String(ss.value).replace(/[,\s]/g, "");
@@ -158,7 +166,7 @@
     } else {
       var d = num(dist);
       if (isNaN(d)) return fail("tool.err.empty");
-      var meters = dunit.value === "mi" ? d * 1609.344 : d;
+      var meters = dunit.value === "mi" ? d * 1609.344 : (dunit.value === "km" ? d * 1000 : d);
       if (meters < 700 || meters > 7500) return fail("tool.err.dist");
       vo2 = (meters - 504.9) / 44.73;
       noteKey = "tool.note.cooper";
@@ -182,7 +190,7 @@
 
   syncFields();
   $("calc-btn").addEventListener("click", calc);
-  [dist, rhr, mm, ss, age].forEach(function (el) {
+  [dist, rhr, mhr, mm, ss, age].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   method.addEventListener("change", function () { syncFields(); live(); });

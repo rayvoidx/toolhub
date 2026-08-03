@@ -95,14 +95,16 @@
   var STORE_KEY = (cfg.slug || "period-calc") + ":state";
 
   /* ---- 상수 ---- */
-  var LUTEAL = 14;          // 황체기: 다음 생리 예정일 − 14일 = 배란 예정일
+  var LUTEAL = 14;          // 황체기 기본값: 다음 생리 예정일 − 14일 = 배란 예정일
+  var LUTEAL_MIN = 9, LUTEAL_MAX = 16;  // 사용자 재정의 허용 범위
   var FERTILE_BEFORE = 5;   // 가임기 시작: 배란 −5일 (정자 생존)
   var FERTILE_AFTER = 1;    // 가임기 끝:  배란 +1일 (난자 생존)
   var ROLL_AFTER = 60;      // 60일 이상 과거면 다가오는 주기로 순방향 롤
   var OLD_DAYS = 365;       // 1년 이상 과거면 경고 (계산은 수행)
-  var CYCLE_MIN = 21, CYCLE_MAX = 45;
+  var CYCLE_MIN = 21, CYCLE_MAX = 60;
   var LENGTH_MIN = 2, LENGTH_MAX = 10;
-  var CYCLES = 6;           // 향후 6주기
+  var CYCLES = 6;           // 향후 표시 주기 기본값
+  var COUNTS = [3, 6, 12, 24];  // 선택 가능한 표시 주기 수
 
   /* ---- i18n 헬퍼 ---- */
   function t(key) {
@@ -158,7 +160,9 @@
   /** 핵심 계산. start(마지막 생리 시작일), cycleLen(평균 주기), periodLen(생리 기간), today
    *  → 향후 CYCLES(6)주기의 생리 시작/종료일·배란일·가임기.
    *  start 가 ROLL_AFTER 일 이상 과거면 다음 생리 예정일이 오늘 이후가 될 때까지 주기를 순방향으로 굴린다. */
-  function computeCycles(start, cycleLen, periodLen, today) {
+  function computeCycles(start, cycleLen, periodLen, today, count, luteal) {
+    var lut = (typeof luteal === "number" && isFinite(luteal)) ? luteal : LUTEAL;
+    var n = (COUNTS.indexOf(count) >= 0) ? count : CYCLES;
     var anchor = start, rolled = false;
     if (dayDiff(start, today) >= ROLL_AFTER) {
       var guard = 0;
@@ -169,10 +173,10 @@
       }
     }
     var list = [];
-    for (var k = 1; k <= CYCLES; k++) {
+    for (var k = 1; k <= n; k++) {
       var pStart = addDays(anchor, cycleLen * k);
       var pEnd = addDays(pStart, periodLen - 1);
-      var ovul = addDays(pStart, -LUTEAL);
+      var ovul = addDays(pStart, -lut);
       list.push({
         index: k,
         periodStart: pStart,
@@ -187,14 +191,15 @@
 
   /** 오늘이 속한 주기를 찾아 현재 단계(period/ovulation/fertile/regular)를 판정한다.
    *  computeCycles 의 60일 롤과 무관하게, "오늘을 포함하는 주기"를 직접 역산한다. */
-  function currentPhase(start, cycleLen, periodLen, today) {
+  function currentPhase(start, cycleLen, periodLen, today, luteal) {
+    var lut = (typeof luteal === "number" && isFinite(luteal)) ? luteal : LUTEAL;
     var diff = dayDiff(start, today);
     if (diff < 0) return null;
     var elapsed = Math.floor(diff / cycleLen);
     var curStart = addDays(start, cycleLen * elapsed);
     var curEnd = addDays(curStart, periodLen - 1);
     var nextStart = addDays(curStart, cycleLen);
-    var ovul = addDays(nextStart, -LUTEAL);
+    var ovul = addDays(nextStart, -lut);
     var fStart = addDays(ovul, -FERTILE_BEFORE);
     var fEnd = addDays(ovul, FERTILE_AFTER);
 
@@ -246,6 +251,8 @@
     start: document.getElementById("pc-start"),
     cycle: document.getElementById("pc-cycle"),
     length: document.getElementById("pc-length"),
+    luteal: document.getElementById("pc-luteal"),
+    count: document.getElementById("pc-count"),
     calc: document.getElementById("pc-calc"),
     clear: document.getElementById("pc-clear"),
     status: document.getElementById("pc-status"),
@@ -259,7 +266,9 @@
   function saveState() {
     try {
       localStorage.setItem(STORE_KEY, JSON.stringify({
-        start: els.start.value, cycle: els.cycle.value, length: els.length.value
+        start: els.start.value, cycle: els.cycle.value, length: els.length.value,
+        luteal: els.luteal ? els.luteal.value : "",
+        count: els.count ? els.count.value : ""
       }));
     } catch (e) { /* private mode — 저장만 실패, 계산은 계속된다 */ }
   }
@@ -271,6 +280,8 @@
       if (o && typeof o.start === "string" && parseISO(o.start)) els.start.value = o.start;
       if (o && o.cycle != null && String(o.cycle) !== "") els.cycle.value = String(o.cycle);
       if (o && o.length != null && String(o.length) !== "") els.length.value = String(o.length);
+      if (els.luteal && o && o.luteal != null && String(o.luteal) !== "") els.luteal.value = String(o.luteal);
+      if (els.count && o && COUNTS.indexOf(Number(o.count)) >= 0) els.count.value = String(Number(o.count));
     } catch (e) { /* 손상된 값은 무시하고 기본값으로 시작 */ }
   }
 
@@ -319,9 +330,25 @@
     if (length < LENGTH_MIN || length > LENGTH_MAX) { showMsg(t("tool.err.lengthRange"), true); return; }
     if (length >= cycle) { showMsg(t("tool.err.lengthVsCycle"), true); return; }
 
+    // 3-b) 황체기 — 비워두면 기본 14일, 값이 있으면 정수·9~16 범위 검증
+    var luteal = LUTEAL;
+    if (els.luteal) {
+      var lutRaw = String(els.luteal.value).trim();
+      if (lutRaw !== "") {
+        var lutNum = Number(lutRaw);
+        if (!isFinite(lutNum) || Math.floor(lutNum) !== lutNum ||
+            lutNum < LUTEAL_MIN || lutNum > LUTEAL_MAX) {
+          showMsg(t("tool.err.lutealRange"), true); return;
+        }
+        luteal = lutNum;
+      }
+    }
+
     // 4) 계산
-    var res = computeCycles(start, cycle, length, today);
-    var ph = currentPhase(start, cycle, length, today);
+    var count = els.count ? Number(els.count.value) : CYCLES;
+    if (COUNTS.indexOf(count) < 0) count = CYCLES;
+    var res = computeCycles(start, cycle, length, today, count, luteal);
+    var ph = currentPhase(start, cycle, length, today, luteal);
     var c1 = res.cycles[0];
 
     // 5) 경고 배너 (계산은 수행하되 신뢰도를 알린다)
@@ -348,6 +375,8 @@
     els.result.innerHTML = html;
 
     els.extra.hidden = false;
+    var head = document.querySelector("#pc-extra .pc-h3");
+    if (head) { head.textContent = fmt(t("tool.tbl.headingN"), { n: count }); head.removeAttribute("data-i18n"); }
     drawTable(res.cycles);
   }
 
@@ -385,6 +414,7 @@
   els.start.addEventListener("input", function () { render(); saveState(); });
   els.cycle.addEventListener("input", function () { render(); saveState(); });
   els.length.addEventListener("input", function () { render(); saveState(); });
+  if (els.luteal) els.luteal.addEventListener("input", function () { render(); saveState(); });
   if (els.calc) els.calc.addEventListener("click", function () { render(); saveState(); });
   if (els.clear) {
     els.clear.addEventListener("click", function () {
@@ -392,12 +422,16 @@
       els.start.value = "";
       els.cycle.value = "28";
       els.length.value = "5";
+      if (els.luteal) els.luteal.value = "14";
+      if (els.count) els.count.value = "6";
       render();
       flash(t("tool.cleared"));
     });
   }
   // Enter 키로 계산 실행
-  [els.start, els.cycle, els.length].forEach(function (el) {
+  if (els.count) els.count.addEventListener("change", function () { render(); saveState(); });
+  [els.start, els.cycle, els.length, els.luteal].forEach(function (el) {
+    if (!el) return;
     el.addEventListener("keydown", function (e) {
       if (e.key === "Enter") { render(); saveState(); }
     });

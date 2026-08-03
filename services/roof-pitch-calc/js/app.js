@@ -89,9 +89,13 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var mode = $("mode"), rise = $("rise"), run = $("run"), angle = $("angle"), pitch = $("pitch");
+  var mode = $("mode"), rise = $("rise"), run = $("run"), angle = $("angle"), pitch = $("pitch"), span = $("span"), spanUnit = $("span-unit");
   var result = $("result"), errEl = $("err");
-  if (!mode || !rise || !run || !angle || !pitch) return;
+  if (!mode || !rise || !run || !angle || !pitch || !span || !spanUnit) return;
+  var SPAN_DEFAULT = 24;            // ft — 기본 단위/기본값은 종전과 동일
+  var SPAN_DEFAULT_M = 7.2;         // m 선택 시의 기본 스팬(약 24ft)
+  // 단위별 허용 범위 — 종전 ft 범위(1~200)를 그대로 두고 m 범위만 환산해 추가.
+  var SPAN_RANGE = { ft: [1, 200], m: [0.3, 60] };
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var num = function (el) {
@@ -117,6 +121,20 @@
   }
 
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
+
+  function unit() { return spanUnit.value === "m" ? "m" : "ft"; }
+  // 스팬은 선택 입력 — 비우면 기본값(ft 24 / m 7.2).
+  function spanVal() {
+    var u = unit();
+    if (String(span.value).trim() === "") return u === "m" ? SPAN_DEFAULT_M : SPAN_DEFAULT;
+    var v = num(span), r = SPAN_RANGE[u];
+    if (v === null || v < r[0] || v > r[1]) return null;
+    return v;
+  }
+  function syncRafterLabel(s) {
+    var el = $("r-rafter-label");
+    if (el) el.textContent = t("tool.r.rafter").replace("{span}", fmt(s, 2)).replace("{unit}", unit());
+  }
 
   // 세 입력 모드는 결국 하나의 비(rise/run)로 수렴한다. 그 뒤 계산은 공통.
   function ratioOf(m) {
@@ -149,6 +167,8 @@
   function calc() {
     var got = ratioOf(mode.value);
     if (got.err) return fail(got.err);
+    var sp = spanVal();
+    if (sp === null) return fail("tool.err.span");
 
     var ratio = got.r;
     var p12 = ratio * 12;
@@ -159,7 +179,9 @@
     $("r-angle").textContent = fmt(deg, 2) + "\u00B0";
     $("r-slope").textContent = fmt(ratio * 100, 1) + "%";
     $("r-mult").textContent = "\u00D7 " + fmt(mult, 4);
-    $("r-rafter").textContent = ftIn(12 * mult);   // 24ft 스팬 → 수평 run 은 절반인 12ft
+    syncRafterLabel(sp);
+    var raft = sp / 2 * mult;   // 스팬의 절반이 수평 run
+    $("r-rafter").textContent = unit() === "m" ? fmt(raft, 3) + " m" : ftIn(raft);
 
     var cat = category(p12);
     $("r-cat").textContent = t(cat[0]);
@@ -169,15 +191,31 @@
     result.hidden = false;
   }
 
+  function refreshLabel() {
+    var s = spanVal();
+    syncRafterLabel(s === null ? (unit() === "m" ? SPAN_DEFAULT_M : SPAN_DEFAULT) : s);
+  }
+
   syncRows();
+  refreshLabel();
   $("calc-btn").addEventListener("click", calc);
-  [rise, run, angle, pitch].forEach(function (el) {
+  [rise, run, angle, pitch, span].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   mode.addEventListener("change", function () {
     syncRows();
     if (!result.hidden || !errEl.hidden) calc();
   });
-  document.addEventListener("i18n:change", function () { if (!result.hidden) calc(); });
+  spanUnit.addEventListener("change", function () {
+    var r = SPAN_RANGE[unit()];
+    span.min = r[0]; span.max = r[1];
+    span.placeholder = unit() === "m" ? "7.2" : "24";
+    refreshLabel();
+    if (!result.hidden || !errEl.hidden) calc();
+  });
+  document.addEventListener("i18n:change", function () {
+    refreshLabel();
+    if (!result.hidden) calc();
+  });
   // TOOLJS:END
 })();

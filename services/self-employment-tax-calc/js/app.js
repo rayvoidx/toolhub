@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var net = $("net"), w2 = $("w2");
+  var net = $("net"), w2 = $("w2"), filing = $("filing"), taxyear = $("taxyear");
   var result = $("result"), errEl = $("err"), warnEl = $("warn"), noteEl = $("note");
   if (!net || !w2) return;
 
@@ -100,7 +100,12 @@
   // 2025 federal figures.
   var SE_FACTOR = 0.9235;   // 고용주 몫 7.65% 상당을 먼저 덜어낸 뒤 과세 — 직장인과의 형평.
   var SS_RATE = 0.124, MED_RATE = 0.029, ADDL_MED_RATE = 0.009;
-  var SS_WAGE_BASE = 176100, ADDL_MED_THRESHOLD = 200000, FILING_FLOOR = 400;
+  var FILING_FLOOR = 400;
+  // 사회보장 과세 상한만 연도마다 다르다 (세율·추가 메디케어 기준선은 동일). 기본값은 기존 동작(2025).
+  var WAGE_BASES = { "2025": 176100, "2024": 168600, "2023": 160200 };
+  function yearVal() { return (taxyear && WAGE_BASES[taxyear.value]) ? taxyear.value : "2025"; }
+  // 추가 메디케어세 기준선은 신고 지위마다 다르다 — 기본값은 기존 동작(독신 200,000).
+  var ADDL_THRESHOLDS = { single: 200000, mfj: 250000, mfs: 125000 };
 
   function fail(key) {
     result.hidden = true; warnEl.hidden = true; noteEl.hidden = true;
@@ -109,7 +114,14 @@
 
   function show(id, txt) { $(id).textContent = txt; }
 
+  // 연도 표시줄은 선택한 과세연도를 따라간다 (번역문의 2025 를 치환).
+  function syncYearTag() {
+    var tag = document.querySelector("#tool .year-tag");
+    if (tag) tag.textContent = t("tool.year").replace(/2025/, yearVal());
+  }
+
   function calc() {
+    syncYearTag();
     var profit = num(net);
     if (isNaN(profit)) return fail("tool.err.empty");
     if (profit <= 0) return fail("tool.err.positive");
@@ -139,12 +151,14 @@
     }
 
     // W-2 급여가 사회보장 과세 상한을 먼저 소진한다 — 남은 여유분에만 12.4%.
-    var ssRoom = Math.max(0, SS_WAGE_BASE - wages);
+    var year = yearVal(), wageBase = WAGE_BASES[year];
+    var ssRoom = Math.max(0, wageBase - wages);
     var ssTaxable = Math.min(base, ssRoom);
     var ss = ssTaxable * SS_RATE;
     var medicare = base * MED_RATE;
     var seTax = ss + medicare;
-    var addl = Math.max(0, (base + wages) - ADDL_MED_THRESHOLD) * ADDL_MED_RATE;
+    var threshold = ADDL_THRESHOLDS[filing && filing.value] || ADDL_THRESHOLDS.single;
+    var addl = Math.max(0, (base + wages) - threshold) * ADDL_MED_RATE;
 
     show("r-setax", money(Math.round(seTax)));
     show("r-ss", money(Math.round(ss)));
@@ -155,8 +169,13 @@
     show("r-rate", (seTax / profit * 100).toFixed(2) + "%");
 
     var msgs = [];
-    if (addl > 0) msgs.push(t("tool.warn.addl") + " " + money(Math.round(addl)));
-    if (base > ssRoom) msgs.push(t("tool.warn.cap"));
+    if (addl > 0) {
+      // 번역문에 박힌 200,000 을 선택한 신고 지위의 기준선으로 바꿔 준다.
+      var addlMsg = t("tool.warn.addl").replace(/200[.,\u00a0\u202f ]?000/, money(threshold));
+      msgs.push(addlMsg + " " + money(Math.round(addl)));
+    }
+    // 번역문에 박힌 2025 상한(176,100)을 선택한 연도의 상한으로 교체.
+    if (base > ssRoom) msgs.push(t("tool.warn.cap").replace(/176[.,\u00a0\u202f ]?100/, money(wageBase)));
     warnEl.textContent = msgs.join(" ");
     warnEl.hidden = msgs.length === 0;
 
@@ -167,10 +186,12 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
+  if (filing) filing.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  if (taxyear) taxyear.addEventListener("change", function () { syncYearTag(); if (!result.hidden || !errEl.hidden) calc(); });
   [net, w2].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
-  document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  document.addEventListener("i18n:change", function () { syncYearTag(); if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

@@ -99,7 +99,9 @@
   var SKEY_ALARMS = SLUG + ":alarms";
   var SKEY_STATE = SLUG + ":state";
   var MAX_ALARMS = 5;
-  var SNOOZE_MS = 5 * 60 * 1000;
+  var SKEY_SNOOZE = SLUG + ":snoozeMin";
+  var SNOOZE_CHOICES = [1, 5, 10, 15, 20, 30];
+  var SNOOZE_DEFAULT = 5;
   var RING_CYCLE_MS = 1500;   // 비프 1사이클 간격
   var RING_MAX_CYCLES = 200;  // 약 5분 후 소리만 자동 정지 — 배너·탭 깜빡임은 Stop 전까지 유지
 
@@ -145,7 +147,7 @@
   var presetsWrap = $("ac-presets");
   var testSoundBtn = $("ac-test-sound"), notifBtn = $("ac-notif-btn"), notifStatusEl = $("ac-notif-status");
   var emptyEl = $("ac-empty"), listEl = $("ac-list"), maxNoteEl = $("ac-max-note");
-  var toastEl = $("ac-toast");
+  var toastEl = $("ac-toast"), snoozeSel = $("ac-snooze-len");
   if (!timeEl || !timeInput || !addBtn || !listEl) return;
 
   /* ---- 상태 ---- */
@@ -180,6 +182,29 @@
   function saveState() {
     try { localStorage.setItem(SKEY_STATE, JSON.stringify({ time: timeInput.value, label: labelInput.value })); }
     catch (e) { /* noop */ }
+  }
+
+  /* ---- 스누즈 길이 (기본 5분, 사용자가 1~30분에서 선택) ---- */
+  function snoozeMinutes() {
+    var v = snoozeSel ? parseInt(snoozeSel.value, 10) : NaN;
+    return SNOOZE_CHOICES.indexOf(v) === -1 ? SNOOZE_DEFAULT : v;
+  }
+  function renderSnoozeSelect() {
+    if (!snoozeSel) return;
+    var cur = snoozeSel.options.length ? snoozeMinutes() : loadSnoozePref();
+    snoozeSel.textContent = "";
+    SNOOZE_CHOICES.forEach(function (m) {
+      var o = document.createElement("option");
+      o.value = String(m);
+      o.textContent = tr("tool.snooze.opt", "{n} min").replace("{n}", String(m));
+      if (m === cur) o.selected = true;
+      snoozeSel.appendChild(o);
+    });
+  }
+  function loadSnoozePref() {
+    var v;
+    try { v = parseInt(localStorage.getItem(SKEY_SNOOZE), 10); } catch (e) { v = NaN; }
+    return SNOOZE_CHOICES.indexOf(v) === -1 ? SNOOZE_DEFAULT : v;
   }
 
   /* ---- 실시간 시계 ---- */
@@ -333,7 +358,7 @@
       var snoozeBtn = document.createElement("button");
       snoozeBtn.type = "button";
       snoozeBtn.className = "ac-ring-btn ac-ring-snooze";
-      snoozeBtn.textContent = tr("tool.ring.snooze", "Snooze 5 min");
+      snoozeBtn.textContent = tr("tool.ring.snooze", "Snooze {n} min").replace("{n}", String(snoozeMinutes()));
       snoozeBtn.addEventListener("click", function () { snoozeAlarm(item.id); });
 
       var stopBtn = document.createElement("button");
@@ -363,7 +388,7 @@
     ringingQueue.forEach(function (r) { if (r.id === id) item = r; });
     dismissRinging(id);
     if (!item) return;
-    snoozeMap[id] = Date.now() + SNOOZE_MS;
+    snoozeMap[id] = Date.now() + snoozeMinutes() * 60000;
     var until = new Date(snoozeMap[id]);
     showToast(tr("tool.toast.snoozed", "Snoozed until {time}.")
       .replace("{time}", fmtAlarmTime(pad2(until.getHours()) + ":" + pad2(until.getMinutes()))));
@@ -515,7 +540,15 @@
   if (ringStopAllBtn) ringStopAllBtn.addEventListener("click", dismissAllRinging);
 
   // 언어 전환 시 동적으로 그려진 문구(목록·배너·상태) 재적용
+  if (snoozeSel) {
+    snoozeSel.addEventListener("change", function () {
+      try { localStorage.setItem(SKEY_SNOOZE, String(snoozeMinutes())); } catch (e) { /* private mode */ }
+      renderRinging(); // 울리는 중이면 버튼 문구를 새 길이로 갱신
+    });
+  }
+
   document.addEventListener("i18n:change", function () {
+    renderSnoozeSelect();
     renderList();
     renderRinging();
     renderNotifStatus();
@@ -527,6 +560,7 @@
     if (savedState.time && isValidTime(savedState.time)) timeInput.value = savedState.time;
     if (savedState.label) labelInput.value = String(savedState.label).slice(0, 40);
   }
+  renderSnoozeSelect();
   renderList();
   renderNotifStatus();
   var initNow = new Date();

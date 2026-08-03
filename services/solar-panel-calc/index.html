@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Solar Panel Calculator — How Many Panels Do I Need?">
 <meta property="og:description" content="Work out how many solar panels you need from your monthly kWh usage, peak sun hours and panel wattage. Get system size in kW, roof area and annual output.">
 <meta property="og:url" content="https://tool-hub.me/solar-panel-calc/">
-<meta property="og:image" content="https://tool-hub.me/solar-panel-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/solar-panel-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#ca8a04">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solar Panel Calculator",
+      "item": "https://tool-hub.me/solar-panel-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Solar Panel Calculator",
-      "item": "https://tool-hub.me/solar-panel-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -179,7 +189,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="sun" data-i18n="tool.sun.label">Peak sun hours per day</label>
         <select id="sun">
-          <option value="3.5" data-i18n="tool.sun.low">3.5 — northern or cloudy (Seattle, UK, Michigan)</option>
+          <option value="2.8" data-i18n="tool.sun.uk">2.8 — UK and northern Europe</option>
+          <option value="3.5" data-i18n="tool.sun.low">3.5 — northern or cloudy (Seattle, Michigan)</option>
           <option value="4.5" selected data-i18n="tool.sun.avg">4.5 — US average</option>
           <option value="5.5" data-i18n="tool.sun.high">5.5 — sunbelt (Arizona, Nevada, west Texas)</option>
           <option value="custom" data-i18n="tool.sun.custom">Custom value</option>
@@ -191,12 +202,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <option value="350" data-i18n="tool.panel.p350">350 W — older or budget panels</option>
           <option value="400" selected data-i18n="tool.panel.p400">400 W — typical residential today</option>
           <option value="450" data-i18n="tool.panel.p450">450 W — premium high-efficiency</option>
+          <option value="500" data-i18n="tool.panel.p500">500 W — large-format panels</option>
+          <option value="custom" data-i18n="tool.panel.custom">Custom value</option>
         </select>
       </div>
     </div>
     <div id="sun-custom-wrap" hidden>
       <label for="sunc" data-i18n="tool.sun.customlabel">Your peak sun hours</label>
       <input type="number" id="sunc" inputmode="decimal" min="1" max="9" step="any" autocomplete="off" placeholder="4.5">
+    </div>
+    <div id="panel-custom-wrap" hidden>
+      <label for="panelc" data-i18n="tool.panel.customlabel">Your panel wattage (W)</label>
+      <input type="number" id="panelc" inputmode="decimal" min="50" max="800" step="any" autocomplete="off" placeholder="400">
     </div>
     <p class="subtle" data-i18n="tool.sun.note">Peak sun hours come from NREL insolation maps — pick the zone you actually live in, not your number of daylight hours.</p>
 

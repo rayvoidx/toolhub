@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Decking Calculator — Boards, Screws &amp; Joists">
 <meta property="og:description" content="Work out how many deck boards you need from deck size, board width and gap spacing, plus deck screws, joists at 16 in on centre and total square footage.">
 <meta property="og:url" content="https://tool-hub.me/decking-calc/">
-<meta property="og:image" content="https://tool-hub.me/decking-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/decking-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#7c2d12">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Decking Calculator",
+      "item": "https://tool-hub.me/decking-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Decking Calculator",
-      "item": "https://tool-hub.me/decking-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -214,6 +224,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="gap" data-i18n="tool.gap.label">Gap between boards</label>
         <select id="gap">
           <option value="0.25" data-i18n="tool.gap.quarter">1/4 in (6 mm) — wet pressure-treated</option>
+          <option value="0.1875" data-i18n="tool.gap.sixteenth">3/16 in (5 mm) — many composite brands</option>
           <option value="0.125" data-i18n="tool.gap.eighth">1/8 in (3 mm) — dry lumber or composite</option>
         </select>
       </div>
@@ -226,6 +237,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
+    <label for="jspace" data-i18n="tool.jspace.label">Joist spacing (on centre)</label>
+    <select id="jspace">
+      <option value="12">12 in / 300 mm</option>
+      <option value="16" selected>16 in / 400 mm</option>
+      <option value="24">24 in / 600 mm</option>
+    </select>
+
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
 
     <div id="result" hidden>
@@ -235,7 +253,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="rc-val" id="r-boards">—</div>
         </div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.screws">Deck screws (approx.)</div><div class="rc-val" id="r-screws">—</div></div>
-        <div class="rcard"><div class="rc-label" data-i18n="tool.r.joists">Joists at 16 in on centre</div><div class="rc-val" id="r-joists">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.joists">Joists needed</div><div class="rc-val" id="r-joists">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Deck area</div><div class="rc-val" id="r-area">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.rows">Rows x boards per row</div><div class="rc-val" id="r-rows">—</div></div>
       </div>

@@ -181,11 +181,24 @@
     return out + " = 0";
   }
 
+  /* 실근일 때의 인수분해 형태: a(x − x₁)(x − x₂). a=1이면 계수 생략, a=−1이면 "−".
+     근이 0이면 (x), 음수면 (x + |r|). 복소근/1차식에는 쓰지 않는다. */
+  function factoredForm(a, roots, numFmt) {
+    var lead = a === 1 ? "" : (a === -1 ? "−" : numFmt(a));
+    var out = lead;
+    for (var i = 0; i < roots.length; i++) {
+      var r = roots[i];
+      out += r === 0 ? "(x)" : "(x " + (r > 0 ? "− " : "+ ") + numFmt(Math.abs(r)) + ")";
+    }
+    return out;
+  }
+
   // node 검증용 노출 — 브라우저에는 module이 없어 건너뛴다
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
       parseCoef: parseCoef, solveQuadratic: solveQuadratic,
       round: round, safeNum: safeNum, formatEquation: formatEquation,
+      factoredForm: factoredForm,
       MAX_COEF: MAX_COEF
     };
     return;
@@ -221,7 +234,7 @@
   var detailsEl = $("tool-more");
   var formulaLine = $("step-formula"), substLine = $("step-substituted"), discLine = $("step-discriminant");
   var finalLine = $("step-final"), linearLine = $("step-linear");
-  var vertexLine = $("step-vertex"), axisLine = $("step-axis");
+  var factoredLine = $("step-factored"), vertexLine = $("step-vertex"), axisLine = $("step-axis");
   if (!aEl || !bEl || !cEl || !gridEl) return;
   var card1 = gridEl.querySelector('[data-copy="x1"]');
   var card2 = gridEl.querySelector('[data-copy="x2"]');
@@ -237,7 +250,7 @@
   }
 
   function hideAllSteps() {
-    [formulaLine, substLine, discLine, finalLine, linearLine, vertexLine, axisLine].forEach(function (el) {
+    [formulaLine, substLine, discLine, finalLine, linearLine, factoredLine, vertexLine, axisLine].forEach(function (el) {
       if (el) el.hidden = true;
     });
   }
@@ -316,6 +329,9 @@
       finalLine.textContent = fmt(tr("tool.steps.finalTwoReal", "x = (−({b}) ± √{d}) / {twoA} → x₁ = {x1}, x₂ = {x2}"),
         { b: numFmt(b, 6), d: numFmt(r.d, 6), twoA: numFmt(2 * a, 6), x1: numFmt(r.x1, 8), x2: numFmt(r.x2, 8) });
       finalLine.hidden = false;
+      factoredLine.textContent = fmt(tr("tool.factored.value", "Factored form: {expr} = 0"),
+        { expr: factoredForm(a, [r.x1, r.x2], function (n) { return numFmt(n, 8); }) });
+      factoredLine.hidden = false;
     } else if (r.kind === "repeated") {
       badgeEl.textContent = tr("tool.badge.repeated", "One repeated root (double root)");
       setCard(card1, tr("tool.res.x", "x"), numFmt(r.x, 8));
@@ -327,6 +343,9 @@
       finalLine.textContent = fmt(tr("tool.steps.finalRepeated", "x = −({b}) / {twoA} = {x} (double root)"),
         { b: numFmt(b, 6), twoA: numFmt(2 * a, 6), x: numFmt(r.x, 8) });
       finalLine.hidden = false;
+      factoredLine.textContent = fmt(tr("tool.factored.value", "Factored form: {expr} = 0"),
+        { expr: factoredForm(a, [r.x, r.x], function (n) { return numFmt(n, 8); }) });
+      factoredLine.hidden = false;
     } else { // complex
       badgeEl.textContent = tr("tool.badge.complex", "Two complex roots");
       var reTxt = numFmt(r.re, 6), imTxt = numFmt(r.im, 6);

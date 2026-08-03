@@ -114,6 +114,16 @@
   var textEl   = document.getElementById("main-text");
   var goalEl   = document.getElementById("goal-count");
   var bannerEl = document.getElementById("goal-banner");
+  var pageSizeEl = document.getElementById("page-size");
+  var msUnitEl = document.getElementById("ms-unit");
+
+  /** 페이지당 글자수 — 빈 값/0/음수/초과값은 기본 200 으로 폴백 */
+  function pageSize() {
+    if (!pageSizeEl) return 200;
+    var v = parseInt(String(pageSizeEl.value).trim(), 10);
+    if (isNaN(v) || v < 1 || v > 100000) return 200;
+    return v;
+  }
 
   // stat-card 내부 값 DOM 참조
   var statWithSp = document.querySelector("#sc-with-sp  .stat-val");
@@ -142,10 +152,12 @@
     return trimmed.split(/\s+/).filter(Boolean).length;
   }
 
-  /** 원고지 매수 (200자 원고지, 공백 포함 기준) */
-  function countManuscript(withSpLen) {
+  /** 원고지 매수 (기본 200자/장, 공백 포함 기준) */
+  function countManuscript(withSpLen, perPage) {
+    var size = (perPage == null) ? 200 : perPage;
+    if (!isFinite(size) || size < 1) size = 200;
     if (withSpLen === 0) return 0;
-    return Math.ceil(withSpLen / 200);
+    return Math.ceil(withSpLen / size);
   }
 
   /** UTF-8 바이트 수 (TextEncoder 실측) */
@@ -176,7 +188,9 @@
     var withSp = countWithSpace(text);
     var noSp   = countNoSpace(text);
     var words  = countWords(text);
-    var ms     = countManuscript(withSp);
+    var size   = pageSize();
+    var ms     = countManuscript(withSp, size);
+    if (msUnitEl) msUnitEl.textContent = fill(t("tool.u.pages"), { n: nf(size) });
     var utf8   = countUtf8Bytes(text);
     var euckr  = countEuckrBytes(text);
 
@@ -248,6 +262,12 @@
     goalEl.addEventListener("input", function () {
       var text = textEl ? textEl.value : "";
       updateGoalBanner(countWithSpace(text));
+    });
+  }
+
+  if (pageSizeEl) {
+    pageSizeEl.addEventListener("input", function () {
+      updateStats(textEl ? textEl.value : "");
     });
   }
 

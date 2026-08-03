@@ -102,6 +102,11 @@
   var SYNODIC_DAYS = 29.530588853;
   var DAY_MS = 86400000;
   var EPOCH_MS = Date.UTC(2000, 0, 6, 18, 14, 0); // 기준 신월(New Moon)
+  /* 지원 범위: 평균 삭망월 근사는 기준점에서 멀어질수록 오차가 누적되어(장기 조석 가속 등)
+     1900~2100 밖에서는 ±1일 고지를 지킬 수 없다. 범위 밖은 조용히 계산하지 않고 안내한다. */
+  var MIN_MS = Date.UTC(1900, 0, 1, 12, 0, 0);
+  var MAX_MS = Date.UTC(2100, 11, 31, 12, 0, 0);
+  function inRange(ms) { return ms >= MIN_MS && ms <= MAX_MS; }
 
   // 8단계 위상 id (순서 고정) + 참조용 유니코드 글리프
   var PHASE_IDS = ["new", "waxingCrescent", "firstQuarter", "waxingGibbous",
@@ -175,7 +180,8 @@
       SYNODIC_DAYS: SYNODIC_DAYS, EPOCH_MS: EPOCH_MS, PHASE_IDS: PHASE_IDS,
       moonAgeDays: moonAgeDays, phaseIndex: phaseIndex, illumination: illumination,
       nextNewMoonMs: nextNewMoonMs, nextFullMoonMs: nextFullMoonMs,
-      parseISODate: parseISODate, isoFromMs: isoFromMs, computeMoon: computeMoon
+      parseISODate: parseISODate, isoFromMs: isoFromMs, computeMoon: computeMoon,
+      inRange: inRange
     };
     return;
   }
@@ -217,6 +223,7 @@
   function $(id) { return document.getElementById(id); }
   var dateEl = $("moon-date"), todayBtn = $("today-btn");
   var emptyEl = $("result-empty"), errEl = $("result-err"), cardEl = $("result-card");
+  var rangeEl = $("result-range");
   var glyphEl = $("res-glyph"), nameEl = $("res-name");
   var illumEl = $("res-illum"), ageEl = $("res-age"), nextFullEl = $("res-nextfull"), nextNewEl = $("res-nextnew");
   var stripEl = $("phase-strip");
@@ -251,8 +258,14 @@
   }
 
   /* ---- 결과 렌더 ---- */
-  function showEmpty() { cardEl.hidden = true; errEl.hidden = true; emptyEl.hidden = false; renderStrip(-1); }
-  function showErr() { cardEl.hidden = true; emptyEl.hidden = true; errEl.hidden = false; renderStrip(-1); }
+  function hideAll() {
+    cardEl.hidden = true; errEl.hidden = true; emptyEl.hidden = true;
+    if (rangeEl) rangeEl.hidden = true;
+  }
+  function showEmpty() { hideAll(); emptyEl.hidden = false; renderStrip(-1); }
+  function showErr() { hideAll(); errEl.hidden = false; renderStrip(-1); }
+  // 지원 범위 밖(1900~2100): 입력창 min/max 는 직접 타이핑을 막지 못하므로 여기서 안내한다
+  function showRange() { hideAll(); (rangeEl || errEl).hidden = false; renderStrip(-1); }
 
   function fmtRelDate(targetMs, nowMs) {
     var days = Math.round((targetMs - nowMs) / DAY_MS);
@@ -266,6 +279,7 @@
 
     var r = computeMoon(raw);
     if (!r) { showErr(); return; }
+    if (!inRange(r.ms)) { showRange(); return; }
 
     glyphEl.textContent = PHASE_GLYPHS[r.phaseIdx];
     nameEl.textContent = phaseName(PHASE_IDS[r.phaseIdx]);

@@ -396,6 +396,16 @@
     showStatus._t = setTimeout(function () { if (statusEl) statusEl.textContent = ""; }, 1800);
   }
 
+  /** 이전 학기 입력 상태: {ok, invalid, gpa, credits} — 빈칸 둘 다면 ok/invalid 모두 false */
+  function checkPrior(scaleMax) {
+    if (!priorCreditsEl || !priorGpaEl) return { ok: false, invalid: false };
+    var cRaw = priorCreditsEl.value.trim(), gRaw = priorGpaEl.value.trim();
+    if (cRaw === "" && gRaw === "") return { ok: false, invalid: false };
+    var pc = parseNum(cRaw), pg = parseNum(gRaw);
+    var ok = !isNaN(pc) && pc > 0 && pc <= MAXV && !isNaN(pg) && pg >= 0 && pg <= scaleMax;
+    return { ok: ok, invalid: !ok, gpa: pg, credits: pc };
+  }
+
   function render() {
     if (!resultEl) return;
     var scaleKey = scaleEl.value;
@@ -405,6 +415,12 @@
 
     var noticeHtml = (res && res.ignored > 0)
       ? '<p class="gpa-note">ⓘ ' + escHtml(fmt(t("tool.note.ignored"), { n: res.ignored })) + '</p>' : "";
+
+    // 이전 학기 입력 검증 — 일부만 채웠거나 스케일 범위를 벗어나면 조용히 무시하지 않고 안내
+    var priorState = checkPrior(scale.max);
+    if (priorState.invalid) {
+      noticeHtml += '<p class="gpa-note">ⓘ ' + escHtml(fmt(t("tool.note.prior"), { max: fx1(scale.max) })) + '</p>';
+    }
 
     if (!res || res.counted === 0) {
       lastSummary = "";
@@ -438,13 +454,10 @@
 
     // 누적 GPA
     var cum = null, cumTotalCredits = null;
-    if (priorCreditsEl && priorGpaEl) {
-      var pc = parseNum(priorCreditsEl.value);
-      var pg = parseNum(priorGpaEl.value);
-      var hasPrior = priorCreditsEl.value.trim() !== "" && !isNaN(pc) && pc > 0 && !isNaN(pg) && pg >= 0;
-      if (hasPrior) {
-        cum = computeCumulative(res.sumQP, res.sumCredits, pg, pc);
-        cumTotalCredits = round2(res.sumCredits + pc);
+    if (priorState.ok) {
+      {
+        cum = computeCumulative(res.sumQP, res.sumCredits, priorState.gpa, priorState.credits);
+        cumTotalCredits = round2(res.sumCredits + priorState.credits);
         if (cum != null && isFinite(cum)) {
           html += cell(t("tool.res.cumulative"),
             escHtml(fx2(cum)) + '<span class="gpa-cell-note">' +

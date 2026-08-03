@@ -161,6 +161,10 @@
     setVal("r-down", money(down), down < 0);
     // CLTV 카드는 2순위가 있을 때만 의미가 있다 — 없으면 LTV와 같은 값이라 숨긴다.
     $("cltv-card").hidden = !(sec > 0);
+    // 80% 선을 넘었을 때 PMI를 벗어나려면 얼마를 더 갚아야 하는지 — 티어 문구의 실제 금액.
+    var gap = loanV + sec - v * 0.8;
+    $("to80-card").hidden = !(gap > 0);
+    if (gap > 0) setVal("r-to80", money(gap), false);
 
     var tierKey = cltv > 100 ? "tool.tier.underwater"
       : ltv > 95 ? "tool.tier.high"

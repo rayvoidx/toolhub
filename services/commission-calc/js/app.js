@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var sale = $("sale"), structure = $("structure"), rate = $("rate");
-  var tier1 = $("tier1"), thresh = $("thresh"), tier2 = $("tier2"), base = $("base");
+  var tier1 = $("tier1"), thresh = $("thresh"), tier2 = $("tier2"), base = $("base"), split = $("split");
   var grpRate = $("grp-rate"), grpTier = $("grp-tier"), grpBase = $("grp-base");
   var result = $("result"), errEl = $("err"), warnEl = $("warn-tier"), bdBody = $("bd-body");
   if (!sale || !structure || !rate) return;
@@ -157,12 +157,21 @@
       }
     }
 
+    // 분배율은 선택 입력 — 비워두면 기존 동작 그대로(전액 본인 몫).
+    var sp = split && String(split.value).trim() !== "" ? num(split) : NaN;
+    if (split && String(split.value).trim() !== "") {
+      if (isNaN(sp) || sp < 0 || sp > 100) return fail("tool.err.rate");
+    }
+
     $("r-commission").textContent = money(commission);
     $("r-effective").textContent = pct(commission / s * 100);
     $("r-net").textContent = money(s - commission);
 
     while (bdBody.firstChild) bdBody.removeChild(bdBody.firstChild);
     rows.forEach(function (r) { bdBody.appendChild(row(r[0], r[1], r[2])); });
+
+    $("card-yours").hidden = isNaN(sp);
+    if (!isNaN(sp)) $("r-yours").textContent = money(commission * sp / 100);
 
     warnEl.hidden = !warn;
     if (warn) warnEl.textContent = t("tool.warn.tier");
@@ -172,7 +181,7 @@
 
   syncMode();
   $("calc-btn").addEventListener("click", calc);
-  [sale, rate, tier1, thresh, tier2, base].forEach(function (el) {
+  [sale, rate, tier1, thresh, tier2, base, split].forEach(function (el) {
     if (!el) return;
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });

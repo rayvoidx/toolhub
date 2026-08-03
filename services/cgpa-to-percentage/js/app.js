@@ -136,9 +136,22 @@
     }
   }
 
+  // 기관마다 9.5/10/9.0 밖의 계수(9.75 등)를 공표한다 — custom 선택 시 직접 입력.
+  var customWrap = $("custom-wrap"), customEl = $("custom-factor");
+  function syncCustom() {
+    if (customWrap) customWrap.hidden = facEl.value !== "custom";
+  }
+
   function calc() {
     syncLabels();
-    var factor = parseFloat(facEl.value);
+    syncCustom();
+    var factor;
+    if (facEl.value === "custom") {
+      factor = parseFloat(String(customEl.value).replace(/,/g, ""));
+      if (!isFinite(factor) || factor < 1 || factor > 20) return fail("tool.err.factor");
+    } else {
+      factor = parseFloat(facEl.value);
+    }
     var raw = parseFloat(String(valEl.value).replace(/,/g, ""));
     if (!isFinite(raw)) return fail("tool.err.empty");
 
@@ -164,10 +177,12 @@
   }
 
   syncLabels();
+  syncCustom();
   $("calc-btn").addEventListener("click", calc);
   valEl.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+  if (customEl) customEl.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   [dirEl, facEl].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); else syncLabels(); });
+    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); else { syncLabels(); syncCustom(); } });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); else syncLabels(); });
   // TOOLJS:END

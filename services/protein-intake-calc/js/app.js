@@ -109,6 +109,8 @@
     weight_loss: { lo: 1.8, hi: 2.2 },
     endurance: { lo: 1.2, hi: 1.7 }
   };
+  // "custom" tier: user-supplied single g/kg value, bounded to a physiologically sane window
+  var CUSTOM_MIN = 0.5, CUSTOM_MAX = 3.0;
 
   // Protein grams per food unit — rough, commonly-cited values for a quick equivalence.
   var FOOD = { chicken: 31, eggs: 6, tofu: 8 }; // per 100g cooked chicken / 1 large egg / 100g firm tofu
@@ -192,6 +194,7 @@
   var weightInput = $("weight-input");
   var goalSelect = $("goal-select");
   var mealsInput = $("meals-input");
+  var customRow = $("custom-row"), customInput = $("custom-input");
   var resultEmptyEl = $("result-empty"), resultErrorEl = $("result-error"), resultBodyEl = $("result-body");
   var badgeEl = $("r-badge");
   var rangeValEl = $("r-range-val");
@@ -221,14 +224,33 @@
     return { state: "ok", kg: kg };
   }
 
-  function currentTier() {
-    var g = goalSelect.value;
-    return Object.prototype.hasOwnProperty.call(TIERS, g) ? TIERS[g] : TIERS.active;
+  // returns {state:"ok",tier} or {state:"error",...} — custom needs a valid g/kg value
+  function readTier() {
+    if (goalSelect.value !== "custom") {
+      var g = goalSelect.value;
+      return { state: "ok", tier: Object.prototype.hasOwnProperty.call(TIERS, g) ? TIERS[g] : TIERS.active };
+    }
+    var n = customInput ? Number(customInput.value.trim()) : NaN;
+    if (!customInput || customInput.value.trim() === "" || !isFinite(n) || n < CUSTOM_MIN || n > CUSTOM_MAX) {
+      return {
+        state: "error", key: "tool.err.custom.range",
+        vars: { min: CUSTOM_MIN.toFixed(1), max: CUSTOM_MAX.toFixed(1) }
+      };
+    }
+    return { state: "ok", tier: { lo: n, hi: n } };
+  }
+  function syncCustomRow() {
+    if (customRow) customRow.hidden = goalSelect.value !== "custom";
   }
 
   /* ---- render ---- */
   function render() {
+    syncCustomRow();
     var res = readWeightKg();
+    if (res.state === "ok") {
+      var t = readTier();
+      if (t.state !== "ok") res = t; else res.tier = t.tier;
+    }
 
     if (res.state === "empty") {
       resultEmptyEl.hidden = false;
@@ -250,7 +272,8 @@
     resultErrorEl.hidden = true;
     resultBodyEl.hidden = false;
 
-    var tier = currentTier();
+    var tier = res.tier;
+    var single = tier.lo === tier.hi;
     var range = proteinRangeG(res.kg, tier);
     var meals = clampMeals(mealsInput.value);
     var perMeal = perMealRange(range, meals);
@@ -262,25 +285,29 @@
       sedentary: "tool.badge.sedentary", active: "tool.badge.active",
       muscle_gain: "tool.badge.muscle", weight_loss: "tool.badge.loss", endurance: "tool.badge.endurance"
     };
-    if (badgeEl) badgeEl.textContent = tr(badgeKeyMap[goalKey], goalKey);
+    if (badgeEl) {
+      badgeEl.textContent = goalSelect.value === "custom"
+        ? tr("tool.badge.custom", "Custom")
+        : tr(badgeKeyMap[goalKey], goalKey);
+    }
 
     if (rangeValEl) {
-      rangeValEl.textContent = fill(tr("tool.result.dayValue", "{lo}–{hi} g / day"), {
-        lo: fmtG(range.lo), hi: fmtG(range.hi)
-      });
+      rangeValEl.textContent = single
+        ? fill(tr("tool.result.dayValueSingle", "{n} g / day"), { n: fmtG(range.lo) })
+        : fill(tr("tool.result.dayValue", "{lo}–{hi} g / day"), { lo: fmtG(range.lo), hi: fmtG(range.hi) });
     }
     if (perkgValEl) {
-      perkgValEl.textContent = fill(tr("tool.result.perkg", "{lo}–{hi} g per kg body weight"), {
-        lo: tier.lo.toFixed(1), hi: tier.hi.toFixed(1)
-      });
+      perkgValEl.textContent = single
+        ? fill(tr("tool.result.perkgSingle", "{n} g per kg body weight"), { n: tier.lo.toFixed(1) })
+        : fill(tr("tool.result.perkg", "{lo}–{hi} g per kg body weight"), { lo: tier.lo.toFixed(1), hi: tier.hi.toFixed(1) });
     }
     if (permealHeadingEl) {
       permealHeadingEl.textContent = fill(tr("tool.result.permealHeading", "Per meal ({n}/day)"), { n: String(meals) });
     }
     if (permealValEl) {
-      permealValEl.textContent = fill(tr("tool.result.permealValue", "{lo}–{hi} g per meal"), {
-        lo: fmtG(perMeal.lo), hi: fmtG(perMeal.hi)
-      });
+      permealValEl.textContent = single
+        ? fill(tr("tool.result.permealValueSingle", "{n} g per meal"), { n: fmtG(perMeal.lo) })
+        : fill(tr("tool.result.permealValue", "{lo}–{hi} g per meal"), { lo: fmtG(perMeal.lo), hi: fmtG(perMeal.hi) });
     }
     if (foodChickenEl) foodChickenEl.textContent = fill(tr("tool.food.chickenLine", "{n} × chicken breast (100 g cooked)"), { n: fmtServing(food.chicken) });
     if (foodEggsEl) foodEggsEl.textContent = fill(tr("tool.food.eggsLine", "{n} × large egg"), { n: fmtWhole(food.eggs) });
@@ -292,7 +319,8 @@
     try {
       localStorage.setItem(LS_KEY, JSON.stringify({
         weight: weightInput.value, wunit: radioVal("wunit"),
-        goal: goalSelect.value, meals: mealsInput.value
+        goal: goalSelect.value, meals: mealsInput.value,
+        custom: customInput ? customInput.value : ""
       }));
     } catch (e) { /* private mode — 저장만 실패, 계산은 정상 */ }
   }
@@ -305,8 +333,9 @@
     if (!st || typeof st !== "object") return;
     if (st.weight != null) weightInput.value = st.weight;
     if (st.wunit) setRadio("wunit", st.wunit);
-    if (st.goal && Object.prototype.hasOwnProperty.call(TIERS, st.goal)) goalSelect.value = st.goal;
+    if (st.goal && (st.goal === "custom" || Object.prototype.hasOwnProperty.call(TIERS, st.goal))) goalSelect.value = st.goal;
     if (st.meals != null) mealsInput.value = st.meals;
+    if (st.custom != null && customInput) customInput.value = st.custom;
   }
 
   /* ---- events ---- */
@@ -314,7 +343,8 @@
   for (var i = 0; i < wunitRadios.length; i++) {
     wunitRadios[i].addEventListener("change", function () { render(); persist(); });
   }
-  [weightInput, mealsInput].forEach(function (el) {
+  [weightInput, mealsInput, customInput].forEach(function (el) {
+    if (!el) return;
     el.addEventListener("input", function () { render(); persist(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") { render(); el.blur(); } });
   });

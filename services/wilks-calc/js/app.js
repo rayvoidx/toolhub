@@ -102,10 +102,16 @@
     male: [-307.75076, 24.0900756, -0.1918759221, 0.0007391293, -0.000001093],
     female: [-57.96288, 13.6175032, -0.1126655495, 0.0005158568, -0.0000010706]
   };
+  var WILKS1 = {
+    male: [-216.0475144, 16.2606339, -0.002388645, -0.00113732, 7.01863e-06, -1.291e-08],
+    female: [594.31747775582, -27.23842536447, 0.82112226871, -0.00930733913, 4.731582e-05, -9.054e-08]
+  };
   var WILKS2 = {
     male: [47.46178854, 8.472061379, 0.07369410346, -0.001395833811, 7.07665973e-06, -1.208043365e-08],
     female: [-125.4255398, 13.71219419, -0.03307250631, -0.001050400051, 9.38773881e-06, -2.33346139e-08]
   };
+  // IPF GL(2020) 클래식(로우) 3종목 파라미터 — 계수 = 100 / (A - B*exp(-C*bw))
+  var GL = { male: [1199.72839, 1025.18162, 0.00921], female: [610.32796, 1045.59282, 0.03048] };
   function poly(c, x) {
     var s = 0, p = 1;
     for (var i = 0; i < c.length; i++) { s += c[i] * p; p *= x; }
@@ -133,11 +139,16 @@
     var sex = (document.querySelector('input[name="sex"]:checked') || {}).value === "female" ? "female" : "male";
     var dots = totKg * 500 / poly(DOTS[sex], kg);
     var wilks = totKg * 600 / poly(WILKS2[sex], kg);
+    var wilks1 = totKg * 500 / poly(WILKS1[sex], kg);
+    var g = GL[sex], gden = g[0] - g[1] * Math.exp(-g[2] * kg);
+    var gl = gden > 0 ? totKg * 100 / gden : NaN;
     // 다항식 분모가 0 근처로 가면 점수가 무한·음수가 된다 — 숫자를 그대로 뱉지 않고 범위 안내로 돌린다.
-    if (!isFinite(dots) || dots <= 0 || !isFinite(wilks) || wilks <= 0) return fail("tool.err.bw");
+    if (!isFinite(dots) || dots <= 0 || !isFinite(wilks) || wilks <= 0 || !isFinite(wilks1) || wilks1 <= 0 || !isFinite(gl) || gl <= 0) return fail("tool.err.bw");
 
     $("r-dots").textContent = dots.toFixed(2);
     $("r-wilks").textContent = wilks.toFixed(2);
+    $("r-wilks1").textContent = wilks1.toFixed(2);
+    $("r-gl").textContent = gl.toFixed(2);
     $("r-level").textContent = t(band(dots));
     $("r-echo").textContent = kgLb(kg) + " · " + kgLb(totKg);
 

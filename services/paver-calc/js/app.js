@@ -90,14 +90,16 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), len = $("len"), wid = $("wid"), paver = $("paver");
-  var pw = $("pw"), pl = $("pl"), waste = $("waste"), price = $("price");
+  var pw = $("pw"), pl = $("pl"), waste = $("waste"), price = $("price"), depth = $("depth");
   var result = $("result"), errEl = $("err"), customRow = $("custom-row"), costCard = $("cost-card");
-  if (!unit || !len || !wid || !paver || !waste || !price) return;
+  if (!unit || !len || !wid || !paver || !waste || !price || !depth) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   var FT_PER_M = 3.280839895, IN_PER_CM = 0.3937007874, M3_PER_YD3 = 0.764554858;
-  var GRAVEL_IN = 4, SAND_IN = 1;
+  var SAND_IN = 1;
+  var DEPTH_CM = { "4": 10, "6": 15, "8": 20, "12": 30 };
+  function gravelIn() { var d = parseFloat(depth.value); return isFinite(d) && DEPTH_CM[depth.value] ? d : 4; }
 
   function num(el) { return parseFloat(String(el.value).replace(/,/g, "")); }
   function grp(s) { var p = s.split("."); p[0] = p[0].replace(/\B(?=(\d{3})+(?!\d))/g, ","); return p.join("."); }
@@ -115,6 +117,9 @@
     $("u-wid").textContent = t(m ? "tool.u.m" : "tool.u.ft");
     $("u-pw").textContent = t(m ? "tool.u.cm" : "tool.u.in");
     $("u-pl").textContent = t(m ? "tool.u.cm" : "tool.u.in");
+    var d = gravelIn();
+    $("r-gravel-label").textContent = t("tool.r.gravel") + " (" +
+      (m ? DEPTH_CM[String(d)] + " " + t("tool.u.cm") : d + " " + t("tool.u.in")) + ")";
   }
   function syncCustom() { customRow.hidden = paver.value !== "custom"; }
 
@@ -149,7 +154,7 @@
     var areaFt2 = lFt * wFt;
     var wasteMul = 1 + parseFloat(waste.value) / 100;
     var pavers = Math.max(1, Math.ceil(areaFt2 * 144 / (pwIn * plIn) * wasteMul));
-    var gravelYd3 = areaFt2 * (GRAVEL_IN / 12) / 27;
+    var gravelYd3 = areaFt2 * (gravelIn() / 12) / 27;
     var sandYd3 = areaFt2 * (SAND_IN / 12) / 27;
 
     var vol = function (yd3) {
@@ -175,6 +180,7 @@
   unit.addEventListener("change", function () { setUnits(); if (!result.hidden || !errEl.hidden) calc(); });
   paver.addEventListener("change", function () { syncCustom(); if (!result.hidden || !errEl.hidden) calc(); });
   waste.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  depth.addEventListener("change", function () { setUnits(); if (!result.hidden || !errEl.hidden) calc(); });
   document.addEventListener("i18n:change", function () { setUnits(); if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

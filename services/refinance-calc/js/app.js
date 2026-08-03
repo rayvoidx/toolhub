@@ -91,6 +91,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var balance = $("balance"), rate = $("rate"), remaining = $("remaining");
   var newrate = $("newrate"), newterm = $("newterm"), costs = $("costs");
+  var customterm = $("customterm"), customWrap = $("customterm-wrap");
   var result = $("result"), errEl = $("err");
   if (!balance || !rate || !remaining || !newrate || !newterm) return;
 
@@ -117,7 +118,16 @@
     if (cc < 0) return fail("tool.err.costs");
 
     var oldN = Math.max(1, Math.round(yrs * 12));
-    var newN = newterm.value === "match" ? oldN : Math.round(parseFloat(newterm.value) * 12);
+    var newN;
+    if (newterm.value === "match") {
+      newN = oldN;
+    } else if (newterm.value === "custom") {
+      var cy = num(customterm);
+      if (isNaN(cy) || cy < 1 || cy > 40) return fail("tool.err.customterm");
+      newN = Math.max(1, Math.round(cy * 12));
+    } else {
+      newN = Math.round(parseFloat(newterm.value) * 12);
+    }
     var oldPay = payment(P, r, oldN), newPay = payment(P, nr, newN);
     var save = oldPay - newPay;
     var oldInt = oldPay * oldN - P, newInt = newPay * newN - P;
@@ -153,12 +163,15 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [balance, rate, remaining, newrate, costs].forEach(function (el) {
+  [balance, rate, remaining, newrate, costs, customterm].forEach(function (el) {
     if (!el) return;
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  newterm.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  newterm.addEventListener("change", function () {
+    customWrap.hidden = newterm.value !== "custom";
+    if (!result.hidden || !errEl.hidden) calc();
+  });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

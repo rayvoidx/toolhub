@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -202,6 +212,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
       #tool .ccc-suggest { margin-top:20px; }
       #tool .ccc-suggest-heading { font-weight:700; font-size:14px; margin:0 0 8px; }
+      #tool .ccc-target { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:0 0 10px; }
+      #tool .ccc-target label { font-size:13px; font-weight:600; color:var(--muted); }
+      #tool .ccc-target select { flex:0 1 auto; }
       #tool #suggest-none { margin:0 0 8px; font-size:13.5px; color:var(--muted); }
       #tool .ccc-suggest-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
       #tool .ccc-suggest-item { display:flex; align-items:center; gap:10px; padding:10px; border:1px solid var(--line); border-radius:10px; background:var(--surface); cursor:pointer; font-family:inherit; text-align:left; }
@@ -283,7 +296,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="ccc-suggest" id="suggest-wrap">
       <p class="ccc-suggest-heading" data-i18n="tool.suggest.heading">Suggested accessible shades</p>
-      <p id="suggest-none" hidden data-i18n="tool.suggest.none">Already passes AA for normal text — no adjustment needed.</p>
+      <div class="ccc-target">
+        <label for="target-level" data-i18n="tool.suggest.target">Suggestion target</label>
+        <select id="target-level">
+          <option value="4.5" data-i18n="tool.badge.aaNormal">AA · Normal text</option>
+          <option value="7" data-i18n="tool.badge.aaaNormal">AAA · Normal text</option>
+          <option value="3" data-i18n="tool.badge.aaLarge">AA · Large text</option>
+        </select>
+      </div>
+      <p id="suggest-none" hidden>Already passes AA · Normal text — no adjustment needed.</p>
       <div class="ccc-suggest-grid">
         <button type="button" class="ccc-suggest-item" id="suggest-lighter" aria-label="Use this color" data-i18n-aria-label="tool.suggest.applyAria" hidden>
           <span class="ccc-suggest-swatch"></span>

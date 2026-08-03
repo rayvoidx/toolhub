@@ -91,6 +91,8 @@
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), len = $("len"), wid = $("wid");
   var spacing = $("spacing"), stick = $("stick"), clr = $("clear");
+  var spCustom = $("spacing-custom"), spWrap = $("custom-wrap");
+  var size = $("size"), price = $("price"), costCard = $("cost-card");
   var result = $("result"), errEl = $("err"), noteMin = $("note-min");
   if (!unit || !len || !wid || !spacing || !stick || !clr) return;
 
@@ -115,7 +117,8 @@
     var effL = lf - 2 * cf, effW = wf - 2 * cf;
     if (effL <= 0 || effW <= 0) return fail("tool.err.clear");
 
-    var sp = parseFloat(spacing.value);
+    var sp = spacing.value === "custom" ? num(spCustom) : parseFloat(spacing.value);
+    if (!isFinite(sp) || sp < 2 || sp > 48) return fail("tool.err.spacing");
     // 길이 방향 철근은 너비를 가로질러 배치된다 — 개수는 반대편 유효 치수로 정해진다.
     // 1e-9 은 미터→피트 환산 오차 보정 — 간격의 정확한 배수에서 칸이 하나 사라지는 것을 막는다.
     var nL = Math.floor(effW * 12 / sp + 1e-9) + 1;
@@ -138,18 +141,45 @@
     $("r-barsW").textContent = nW + " × " + fmt(effW * k) + " " + u;
     $("r-ties").textContent = String(ties);
     $("r-chairs").textContent = String(chairs);
+
+    // 중량·비용은 실제로 사는 물량(정척 개수 × 정척 길이) 기준 — 잔재까지 값을 치르기 때문
+    var bought = sticks * sl;
+    var lbft = size ? parseFloat(size.value) : 0.668;
+    if (!isFinite(lbft)) lbft = 0.668;
+    var lb = bought * lbft;
+    $("r-weight").textContent = metric ? fmt(lb * 0.45359237) + " kg" : fmt(lb) + " lb";
+
+    var pv = price ? String(price.value).trim() : "";
+    if (pv === "") { if (costCard) costCard.hidden = true; }
+    else {
+      var p = num(price);
+      if (!isFinite(p) || p < 0) return fail("tool.err.price");
+      var cost = sticks * p;
+      $("r-cost").textContent = cost >= 1000 ? String(Math.round(cost)) : String(Math.round(cost * 100) / 100);
+      if (costCard) costCard.hidden = false;
+    }
+
     if (noteMin) noteMin.hidden = !minned;
 
     errEl.hidden = true;
     result.hidden = false;
   }
 
+  function syncCustom() { if (spWrap) spWrap.hidden = spacing.value !== "custom"; }
+  syncCustom();
+  spacing.addEventListener("change", syncCustom);
+
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, clr].forEach(function (el) {
+  [len, wid, clr, spCustom, price].forEach(function (el) {
+    if (!el) return;
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [unit, spacing, stick].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  [unit, spacing, stick, size].forEach(function (el) {
+    el.addEventListener("change", function () {
+      // 커스텀으로 막 바꾼 직후 값이 비어 있으면 조용히 기다린다 — 입력 전 에러를 띄우지 않는다
+      if (spacing.value === "custom" && spCustom && String(spCustom.value).trim() === "") return;
+      if (!result.hidden || !errEl.hidden) calc();
+    });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END

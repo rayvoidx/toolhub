@@ -89,9 +89,17 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var rent = $("rent"), movein = $("movein"), method = $("method");
+  var rent = $("rent"), movein = $("movein"), method = $("method"), period = $("period");
   var result = $("result"), errEl = $("err");
-  if (!rent || !movein || !method) return;
+  if (!rent || !movein || !method || !period) return;
+
+  // 날짜 라벨은 청구 기간에 따라 입주일/퇴거일로 바뀐다.
+  function syncDateLabel() {
+    var lab = document.querySelector('label[for="movein"]');
+    if (!lab) return;
+    lab.setAttribute("data-i18n", period.value === "out" ? "tool.date.label.out" : "tool.date.label");
+    lab.textContent = t(lab.getAttribute("data-i18n"));
+  }
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   var money = function (n) { return n.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
@@ -120,7 +128,7 @@
   function calc() {
     var monthly = parseFloat(String(rent.value).replace(/,/g, ""));
     if (!isFinite(monthly) || monthly <= 0) return fail("tool.err.rent");
-    if (monthly >= 1000000) return fail("tool.err.max");
+    if (monthly >= 100000000) return fail("tool.err.max");
 
     var parts = /^(\d{4})-(\d{2})-(\d{2})$/.exec(movein.value || "");
     if (!parts) return fail("tool.err.date");
@@ -129,7 +137,8 @@
     var daysInMonth = new Date(y, mo, 0).getDate();
     if (d > daysInMonth) return fail("tool.err.date");
 
-    var daysOccupied = daysInMonth - d + 1;
+    // 입주는 그날부터 월말까지, 퇴거는 1일부터 그날까지 — 양쪽 다 해당일 포함.
+    var daysOccupied = period.value === "out" ? d : daysInMonth - d + 1;
     var chosen = dailyRate(method.value, monthly, daysInMonth);
 
     $("r-prorated").textContent = money(chosen * daysOccupied);
@@ -158,9 +167,10 @@
   [rent, movein].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [movein, method].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  [movein, method, period].forEach(function (el) {
+    el.addEventListener("change", function () { syncDateLabel(); if (!result.hidden || !errEl.hidden) calc(); });
   });
-  document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  document.addEventListener("i18n:change", function () { syncDateLabel(); if (!result.hidden || !errEl.hidden) calc(); });
+  syncDateLabel();
   // TOOLJS:END
 })();

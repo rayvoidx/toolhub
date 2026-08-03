@@ -305,6 +305,9 @@
       var dec = decimalString(n, d);
       html += '<p class="fc-line"><b>' + escHtml(t("tool.r.decimal")) + "</b><span>" +
         (dec.exact ? "= " : "≈ ") + escHtml(dec.text) + "</span></p>";
+      var pct = decimalString(n * 100n, d);
+      html += '<p class="fc-line"><b>' + escHtml(t("tool.r.percent")) + "</b><span>" +
+        (pct.exact ? "= " : "≈ ") + escHtml(pct.text) + "%</span></p>";
     }
     if (opts.showGcd) {
       html += '<p class="fc-line"><b>' + escHtml(t("tool.r.gcd")) + "</b><span>" +

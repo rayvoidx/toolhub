@@ -125,8 +125,8 @@
   // Allowed range per mode (caps keep the DOM/textarea from choking on extreme input)
   var MODE_LIMITS = {
     paragraphs: { min: 1, max: 50, def: 3 },
-    sentences: { min: 1, max: 150, def: 5 },
-    words: { min: 1, max: 1000, def: 50 }
+    sentences: { min: 1, max: 300, def: 5 },
+    words: { min: 1, max: 2000, def: 50 }
   };
 
   /* ---- 순수 계산 (node 단위 검증 대상) ---- */

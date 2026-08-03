@@ -109,7 +109,7 @@
   function $(id) { return document.getElementById(id); }
   var costEl = $("cost-input"), retEl = $("ret-input"), yearsEl = $("years-input");
   var startEl = $("start-date"), endEl = $("end-date"), curSel = $("currency-select");
-  var calcBtn = $("calc-btn");
+  var calcBtn = $("calc-btn"), unitEl = $("unit-select");
   var yearsField = $("years-field"), datesField = $("dates-field");
   var box = $("result-box"), errEl = $("result-error"), bodyEl = $("result-body");
   if (!costEl || !retEl || !curSel || !calcBtn || !box) return;
@@ -243,7 +243,8 @@
       var yv = num(yearsEl);
       if (yv == null) return { status: "empty", msgKey: "tool.result.noPeriod", msgFallback: "Add a holding period to see annualized ROI." };
       if (yv <= 0) return { status: "invalid", msgKey: "tool.err.period", msgFallback: "Enter a holding period greater than 0 for annualized ROI." };
-      return { status: "ok", n: yv, days: null };
+      // 단위 선택: months 면 12로 나눠 연수로 환산 (기본값 years — 기존 동작 유지)
+      return { status: "ok", n: (unitEl && unitEl.value === "months") ? yv / 12 : yv, days: null };
     }
     if (!startEl.value || !endEl.value) return { status: "empty", msgKey: "tool.result.noPeriod", msgFallback: "Add a holding period to see annualized ROI." };
     var pr = periodFromDates(startEl.value, endEl.value);
@@ -387,9 +388,18 @@
     try {
       localStorage.setItem(LS_KEY, JSON.stringify({
         cost: costEl.value, ret: retEl.value, mode: radioVal("periodmode"),
-        years: yearsEl.value, d0: startEl.value, d1: endEl.value, currency: cur
+        years: yearsEl.value, unit: (unitEl ? unitEl.value : "years"),
+        d0: startEl.value, d1: endEl.value, currency: cur
       }));
     } catch (e) { /* private mode — 저장 실패 무시 */ }
+  }
+
+  function syncUnitLabel() {
+    var lab = $("years-label");
+    if (!lab || !unitEl) return;
+    var months = unitEl.value === "months";
+    lab.setAttribute("data-i18n", months ? "tool.months.label" : "tool.years.label");
+    lab.textContent = months ? t("tool.months.label", "Number of months") : t("tool.years.label", "Number of years");
   }
 
   function syncPeriodFields() {
@@ -411,8 +421,10 @@
       if (saved.d0) startEl.value = saved.d0;
       if (saved.d1) endEl.value = saved.d1;
       if (saved.mode === "dates" || saved.mode === "years") setRadio("periodmode", saved.mode);
+      if (unitEl && (saved.unit === "months" || saved.unit === "years")) unitEl.value = saved.unit;
     }
     syncPeriodFields();
+    syncUnitLabel();
     var ready = parseAmount(costEl) != null && parseAmount(retEl) != null;
     if (ready) calculate(); else updateChips(num(yearsEl));
   })();
@@ -425,6 +437,7 @@
   startEl.addEventListener("input", calculate);
   endEl.addEventListener("input", calculate);
   curSel.addEventListener("change", calculate);
+  if (unitEl) unitEl.addEventListener("change", function () { syncUnitLabel(); calculate(); });
   var modeRadios = document.querySelectorAll('input[name="periodmode"]');
   for (var mr = 0; mr < modeRadios.length; mr++) modeRadios[mr].addEventListener("change", function () { syncPeriodFields(); calculate(); });
   var yearChips = document.querySelectorAll("#year-chips .chip");
@@ -438,6 +451,7 @@
   // ── 언어 전환: 통화기호·동적 문구·Intl 포맷을 새 로케일로 재렌더 ──
   document.addEventListener("i18n:change", function () {
     fillCurrencies(curSel.value);
+    syncUnitLabel();
     if (lastRun && !box.hidden) calculate();
   });
   // TOOLJS:END

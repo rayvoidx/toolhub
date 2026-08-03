@@ -187,13 +187,30 @@
     };
   }
 
+  // 입력한 IP 가 어떤 주소 대역에 속하는지 분류 (RFC 1918 사설 / 루프백 / 링크로컬 /
+  // 멀티캐스트 / 예약·문서용 / 그 외 공인). 문구 키만 돌려주고 번역은 호출부가 한다.
+  function classifyAddress(ipInt) {
+    function inNet(a, b, c, d, prefix) {
+      var m = maskFromPrefix(prefix);
+      return ((ipInt & m) >>> 0) === ((octetsToInt([a, b, c, d]) & m) >>> 0);
+    }
+    if (inNet(127, 0, 0, 0, 8)) return "loopback";
+    if (inNet(10, 0, 0, 0, 8) || inNet(172, 16, 0, 0, 12) || inNet(192, 168, 0, 0, 16)) return "private";
+    if (inNet(169, 254, 0, 0, 16)) return "linklocal";
+    if (inNet(224, 0, 0, 0, 4)) return "multicast";
+    if (inNet(0, 0, 0, 0, 8) || inNet(100, 64, 0, 0, 10) || inNet(192, 0, 0, 0, 24) ||
+        inNet(192, 0, 2, 0, 24) || inNet(198, 18, 0, 0, 15) || inNet(198, 51, 100, 0, 24) ||
+        inNet(203, 0, 113, 0, 24) || inNet(240, 0, 0, 0, 4)) return "reserved";
+    return "public";
+  }
+
   // node 검증용 노출 — 브라우저에는 module 이 없어 건너뛴다
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
       parseIPv4: parseIPv4, octetsToInt: octetsToInt, intToIp: intToIp,
       maskFromPrefix: maskFromPrefix, wildcardFromMask: wildcardFromMask,
       maskToPrefix: maskToPrefix, parsePrefixOrMask: parsePrefixOrMask,
-      computeSubnet: computeSubnet
+      computeSubnet: computeSubnet, classifyAddress: classifyAddress
     };
     return;
   }
@@ -286,7 +303,7 @@
   function buildTable() {
     if (!tableBody) return;
     tableBody.textContent = "";
-    for (var p = 8; p <= 32; p++) {
+    for (var p = 0; p <= 32; p++) {
       var mask = maskFromPrefix(p);
       var wildcard = wildcardFromMask(mask);
       var total = Math.pow(2, 32 - p);
@@ -316,6 +333,13 @@
 
   /* ---- 메인 계산 + 렌더 ---- */
   function computeAndRender() {
+    // "192.168.1.10/24" 처럼 CIDR 통째로 붙여넣은 경우 두 필드로 갈라 넣는다 (붙여넣기 실패 방지)
+    var pasted = ipEl.value.indexOf("/");
+    if (pasted > -1) {
+      var suffix = ipEl.value.slice(pasted + 1).trim();
+      ipEl.value = ipEl.value.slice(0, pasted).trim();
+      if (suffix !== "") prefixEl.value = suffix;
+    }
     var ipTrim = ipEl.value.trim();
     var prefixTrim = prefixEl.value.trim();
 
@@ -348,6 +372,8 @@
     setCard("usable", fmt(r.usable));
     setCard("wildcard", intToIp(r.wildcard));
     setCard("total", fmt(r.total));
+    var kind = classifyAddress(ipInt);
+    setCard("type", tr("tool.type." + kind, kind));
 
     renderBits(binIpEl, ipInt, r.prefix);
     renderBits(binMaskEl, r.mask, r.prefix);

@@ -91,9 +91,10 @@
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), shape = $("shape"), depth = $("depth"), beds = $("beds");
   var len = $("len"), wid = $("wid"), dia = $("dia");
+  var depthCustom = $("depth-custom"), depthCustomBox = $("depth-custom-field");
   var rectBox = $("rect-fields"), circleBox = $("circle-fields");
   var result = $("result"), errEl = $("err"), warnEl = $("warn-deep");
-  if (!unit || !shape || !depth || !beds || !len || !wid || !dia) return;
+  if (!unit || !shape || !depth || !beds || !len || !wid || !dia || !depthCustom || !depthCustomBox) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -138,7 +139,14 @@
     var totalFt2 = (unit.value === "m" ? area * M2_TO_FT2 : area) * n;
     if (totalFt2 > 5000000) return fail("tool.err.range");
 
-    var inches = parseFloat(depth.value);
+    var inches;
+    if (depth.value === "custom") {
+      inches = num(depthCustom);
+      if (isNaN(inches)) return fail("tool.err.empty");
+      if (inches < 0.5 || inches > 12) return fail("tool.err.depth");
+    } else {
+      inches = parseFloat(depth.value);
+    }
     var cuft = totalFt2 * (inches / 12);
     var yd3 = cuft / CUFT_PER_YD3;
 
@@ -154,14 +162,17 @@
     result.hidden = false;
   }
 
+  function syncDepth() { depthCustomBox.hidden = depth.value !== "custom"; }
+
   syncShape();
+  syncDepth();
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, dia, beds].forEach(function (el) {
+  [len, wid, dia, beds, depthCustom].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   shape.addEventListener("change", function () { syncShape(); if (!result.hidden || !errEl.hidden) calc(); });
-  [unit, depth].forEach(function (el) {
-    el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  [unit, depth, depthCustom].forEach(function (el) {
+    el.addEventListener("change", function () { syncDepth(); if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END

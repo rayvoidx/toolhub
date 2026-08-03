@@ -91,7 +91,7 @@
   var $ = function (id) { return document.getElementById(id); };
   var unitEl = $("unit"), sheetEl = $("sheet");
   var lenEl = $("room-length"), widEl = $("room-width"), hgtEl = $("wall-height");
-  var doorsEl = $("doors"), winsEl = $("windows"), ceilEl = $("ceiling");
+  var doorsEl = $("doors"), winsEl = $("windows"), ceilEl = $("ceiling"), wasteEl = $("waste");
   var result = $("result"), errEl = $("err");
   if (!unitEl || !sheetEl || !lenEl || !widEl || !hgtEl) return;
 
@@ -99,11 +99,20 @@
 
   var SQFT_PER_M2 = 10.76391, L_PER_GAL = 3.785412, KG_PER_LB = 0.453592, M_PER_FT = 0.3048;
   var DOOR = 21, WINDOW = 15;        // 표준 개구부 면적 ft² (문 3×7, 창 3×5)
-  var WASTE = 1.10;                  // 단순 직사각형 방 기준 자투리 — 복잡한 방은 FAQ 에서 15% 안내
+  // 자투리 여유는 사용자가 0~20%에서 고르고 기본값은 종전과 같은 10%
   var COMPOUND_SQFT_PER_GAL = 100;   // 레디믹스 컴파운드: 100 ft²당 1갤런(테이프+3회 도포)
   var TAPE_FT_PER_SQFT = 0.4, ROLL_FT = 500;
   var SCREW_SQFT_PER_LB = 300;       // 1-5/8인치 나사 1파운드 ≈ 300 ft² 시공분
   var MAX_DIM = { ft: 330, m: 100 };
+
+  // 안내 문구의 "10%" 자리에 선택한 여유율을 끼워 넣는다(각 언어 표기 대응).
+  function syncNote() {
+    var el = $("rates-note");
+    if (!el) return;
+    var pct = wasteEl ? parseFloat(wasteEl.value) : 10;
+    if (!isFinite(pct) || pct < 0) pct = 10;
+    el.textContent = t("tool.note.rates").replace(/(?:10|\u0661\u0660|\u09E7\u09E6)(\s*)(%|\uFF05|\u066A|\u0641\u06CC\u0635\u062F)/, pct + "$1$2");
+  }
 
   function num(el) { return parseFloat(String(el.value).replace(/,/g, "")); }
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
@@ -131,7 +140,11 @@
     var area = wall - openings + (ceilEl && ceilEl.checked ? l * w * k : 0);
     var sheetArea = parseFloat(sheetEl.value) || 32;
 
-    var sheets = Math.ceil(area / sheetArea * WASTE);
+    var wastePct = wasteEl ? parseFloat(wasteEl.value) : 10;
+    if (!isFinite(wastePct) || wastePct < 0) wastePct = 10;
+    var waste = 1 + wastePct / 100;
+
+    var sheets = Math.ceil(area / sheetArea * waste);
     var tapeFt = Math.ceil(area * TAPE_FT_PER_SQFT);
     var rolls = Math.ceil(tapeFt / ROLL_FT);
 
@@ -154,9 +167,10 @@
   [lenEl, widEl, hgtEl, doorsEl, winsEl].forEach(function (el) {
     if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [unitEl, sheetEl, ceilEl].forEach(function (el) {
-    if (el) el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  [unitEl, sheetEl, ceilEl, wasteEl].forEach(function (el) {
+    if (el) el.addEventListener("change", function () { syncNote(); if (!result.hidden || !errEl.hidden) calc(); });
   });
-  document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  document.addEventListener("i18n:change", function () { syncNote(); if (!result.hidden || !errEl.hidden) calc(); });
+  syncNote();
   // TOOLJS:END
 })();

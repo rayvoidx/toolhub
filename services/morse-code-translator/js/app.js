@@ -199,15 +199,25 @@
   var clearBtn = $("clear-btn"), textCopyBtn = $("text-copy-btn"), morseCopyBtn = $("morse-copy-btn");
   var copyFeedbackEl = $("copy-feedback");
   var playBtn = $("play-btn"), wpmRange = $("wpm-range"), wpmLabelEl = $("wpm-label");
+  var toneEl = $("tone-hz");
   var flashEl = $("flash-indicator"), audioEmptyEl = $("audio-empty-hint"), audioLiveEl = $("audio-live-status");
   var chartBody = $("chart-body");
   if (!textEl || !morseEl || !playBtn || !wpmRange) return;
+
+  /* ---- 톤 주파수(사용자 조절, 기본 600Hz) ---- */
+  var DEFAULT_HZ = 600;
+  function toneHz() {
+    if (!toneEl) return DEFAULT_HZ;
+    var v = Number(toneEl.value);
+    if (!isFinite(v) || v <= 0) return DEFAULT_HZ;
+    return Math.min(1200, Math.max(300, Math.round(v)));
+  }
 
   /* ---- 상태 저장/복원 ---- */
   function saveState() {
     try {
       localStorage.setItem(STATE_KEY, JSON.stringify({
-        text: textEl.value, morse: morseEl.value, wpm: Number(wpmRange.value)
+        text: textEl.value, morse: morseEl.value, wpm: Number(wpmRange.value), hz: toneHz()
       }));
     } catch (e) { /* private mode */ }
   }
@@ -218,7 +228,8 @@
       var data = JSON.parse(raw);
       if (data && typeof data.text === "string") textEl.value = data.text;
       if (data && typeof data.morse === "string") morseEl.value = data.morse;
-      if (data && data.wpm > 0) wpmRange.value = String(Math.min(40, Math.max(5, Math.round(data.wpm))));
+      if (data && data.wpm > 0) wpmRange.value = String(Math.min(60, Math.max(5, Math.round(data.wpm))));
+      if (toneEl && data && data.hz > 0) toneEl.value = String(Math.min(1200, Math.max(300, Math.round(data.hz))));
     } catch (e) { /* 손상된 값 무시 */ }
   }
 
@@ -325,13 +336,13 @@
     }
     return audioCtx;
   }
-  function beep(ctx, durationMs) {
+  function beep(ctx, durationMs, hz) {
     if (!ctx) return;
     try {
       var osc = ctx.createOscillator();
       var gain = ctx.createGain();
       osc.type = "sine";
-      osc.frequency.value = 600;
+      osc.frequency.value = (isFinite(hz) && hz > 0) ? hz : DEFAULT_HZ;
       osc.connect(gain);
       gain.connect(ctx.destination);
       var now = ctx.currentTime;
@@ -371,11 +382,12 @@
     updatePlayButton();
     announceAudio(true);
     var i = 0;
+    var hz = toneHz();
     function step() {
       if (!playing) return;
       if (i >= seq.length) { stopPlayback(); return; }
       var seg = seq[i++];
-      if (seg.tone) { beep(ctx, seg.dur); setFlash(true); } else { setFlash(false); }
+      if (seg.tone) { beep(ctx, seg.dur, hz); setFlash(true); } else { setFlash(false); }
       playTimer = setTimeout(step, seg.dur);
     }
     step();
@@ -436,6 +448,18 @@
     renderWpmLabel();
     saveState();
   });
+  if (toneEl) {
+    toneEl.addEventListener("change", function () {
+      stopPlayback();
+      var raw = Number(toneEl.value);
+      var hz = toneHz();
+      if (toneEl.value.trim() === "" || !isFinite(raw) || raw !== hz) {
+        toneEl.value = String(hz);
+        showFeedback(tr("tool.audio.toneClamped", "Tone pitch must be between 300 and 1200 Hz — set to {hz} Hz.").replace("{hz}", String(hz)), true);
+      }
+      saveState();
+    });
+  }
   playBtn.addEventListener("click", function () {
     if (playing) stopPlayback(); else startPlayback();
   });

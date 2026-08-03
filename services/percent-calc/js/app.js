@@ -98,8 +98,19 @@
   }
 
   /* ── 유틸 ── */
+  var DECIMALS_KEY = "percent-calc:decimals";
+  var decimalsEl = document.getElementById("decimals");
+  var savedDecimals = null;
+  try { savedDecimals = localStorage.getItem(DECIMALS_KEY); } catch (e) { savedDecimals = null; }
+  if (decimalsEl && savedDecimals !== null && /^[0-6]$/.test(savedDecimals)) decimalsEl.value = savedDecimals;
+
+  function decimals() {
+    var d = decimalsEl ? parseInt(decimalsEl.value, 10) : 2;
+    return isFinite(d) && d >= 0 && d <= 6 ? d : 2;
+  }
+
   function fmt(n) {
-    return n.toFixed(2);
+    return n.toFixed(decimals());
   }
 
   function showResult(el, html, type) {
@@ -177,7 +188,7 @@
     }
     var numA = parseFloat(a);
     var numB = parseFloat(b);
-    if (isNaN(numA) || isNaN(numB)) {
+    if (!isFinite(numA) || !isFinite(numB)) {
       showError(ratioResult, t("tool.errNaN"));
       return;
     }
@@ -186,6 +197,7 @@
       return;
     }
     var result = (numA / numB) * 100;
+    if (!isFinite(result)) { showError(ratioResult, t("tool.errNaN")); return; }
     showResult(ratioResult, fmt(result) + " %", "value");
   }
 
@@ -223,7 +235,7 @@
     }
     var numA = parseFloat(a);
     var numX = parseFloat(x);
-    if (isNaN(numA) || isNaN(numX)) {
+    if (!isFinite(numA) || !isFinite(numX)) {
       showError(changeResult, t("tool.errNaN"));
       return;
     }
@@ -241,6 +253,7 @@
       delta = result - numA;
       sign = delta >= 0 ? "+" : "−";
     }
+    if (!isFinite(result)) { showError(changeResult, t("tool.errNaN")); return; }
 
     var warningHtml = "";
     if (currentChangeMode === "decrease" && numX > 100) {
@@ -277,7 +290,7 @@
     }
     var numA = parseFloat(a);
     var numB = parseFloat(b);
-    if (isNaN(numA) || isNaN(numB)) {
+    if (!isFinite(numA) || !isFinite(numB)) {
       showError(rateResult, t("tool.errNaN"));
       return;
     }
@@ -286,10 +299,11 @@
       return;
     }
     if (numA === numB) {
-      showResult(rateResult, "0.00 % <small>(" + t("tool.rate.noChange") + ")</small>", "neutral");
+      showResult(rateResult, fmt(0) + " % <small>(" + t("tool.rate.noChange") + ")</small>", "neutral");
       return;
     }
     var rate = ((numB - numA) / numA) * 100;
+    if (!isFinite(rate)) { showError(rateResult, t("tool.errNaN")); return; }
     var sign = rate >= 0 ? "+" : "−";
     var displayRate = Math.abs(rate);
     showResult(
@@ -302,6 +316,16 @@
   if (rateCalcBtn) rateCalcBtn.addEventListener("click", calcRate);
   if (rateA) rateA.addEventListener("input", calcRate);
   if (rateB) rateB.addEventListener("input", calcRate);
+
+  /* ── 소수점 자릿수 변경: 저장 + 표시 중인 결과 재계산 ── */
+  if (decimalsEl) {
+    decimalsEl.addEventListener("change", function () {
+      try { localStorage.setItem(DECIMALS_KEY, String(decimals())); } catch (e) { /* 저장 불가 환경 무시 */ }
+      if (ratioResult && ratioResult.innerHTML.trim()) calcRatio();
+      if (changeResult && changeResult.innerHTML.trim()) calcChange();
+      if (rateResult && rateResult.innerHTML.trim()) calcRate();
+    });
+  }
 
   /* ── 언어 전환 시 이미 표시된 결과만 새 언어로 다시 렌더 ── */
   document.addEventListener("i18n:change", function () {

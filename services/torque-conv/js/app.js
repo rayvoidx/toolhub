@@ -96,9 +96,9 @@
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   // 모든 단위를 Nm 기준으로 모았다가 되돌린다 — 쌍별 계수를 두면 반올림이 단위마다 어긋난다.
-  var TO_NM = { nm: 1, lbft: 1.355818, lbin: 0.1129848, kgm: 9.80665 };
-  var SYM = { nm: "Nm", lbft: "lb-ft", lbin: "lb-in", kgm: "kg-m" };
-  var UNITS = ["nm", "lbft", "lbin", "kgm"];
+  var TO_NM = { nm: 1, lbft: 1.355818, lbin: 0.1129848, kgm: 9.80665, kgfcm: 0.0980665, ncm: 0.01, ozin: 0.007061552 };
+  var SYM = { nm: "Nm", lbft: "lb-ft", lbin: "lb-in", kgm: "kg-m", kgfcm: "kgf-cm", ncm: "N-cm", ozin: "oz-in" };
+  var UNITS = ["nm", "lbft", "lbin", "kgm", "kgfcm", "ncm", "ozin"];
   var LIMIT = 1e7;
 
   function fmt(v) {
@@ -120,7 +120,8 @@
 
     var unit = fromEl.value;
     var nm = raw * (TO_NM[unit] || 1);
-    var out = { nm: nm, lbft: nm / TO_NM.lbft, lbin: nm / TO_NM.lbin, kgm: nm / TO_NM.kgm };
+    var out = {};
+    UNITS.forEach(function (k) { out[k] = nm / TO_NM[k]; });
 
     UNITS.forEach(function (k) {
       $("r-" + k).textContent = fmt(out[k]) + " " + SYM[k];

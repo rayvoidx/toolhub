@@ -89,8 +89,8 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var unit = $("unit"), len = $("len"), wid = $("wid"), spacing = $("spacing");
-  var pattern = $("pattern"), edge = $("edge");
+  var unit = $("unit"), len = $("len"), wid = $("wid"), spacing = $("spacing"), rowsp = $("rowsp");
+  var pattern = $("pattern"), edge = $("edge"), price = $("price");
   var result = $("result"), errEl = $("err"), noteTri = $("note-tri"), noteTight = $("note-tight");
   if (!unit || !len || !wid || !spacing || !pattern || !edge) return;
 
@@ -119,7 +119,7 @@
     var m = unit.value === "m";
     var bed = m ? "tool.abbr.m" : "tool.abbr.ft";
     var sp = m ? "tool.abbr.cm" : "tool.abbr.in";
-    [["len-unit", bed], ["wid-unit", bed], ["sp-unit", sp]].forEach(function (pair) {
+    [["len-unit", bed], ["wid-unit", bed], ["sp-unit", sp], ["rs-unit", sp]].forEach(function (pair) {
       var el = $(pair[0]);
       if (!el) return;
       el.setAttribute("data-i18n", pair[1]);
@@ -139,21 +139,35 @@
     if (l <= 0 || w <= 0 || s <= 0) return fail("tool.err.positive");
     if (l > 10000 || w > 10000 || s > 10000) return fail("tool.err.range");
 
+    // 줄 간격은 선택 입력 — 비우면 지금까지처럼 식재 간격에서 유도한다.
+    var rsRaw = String(rowsp && rowsp.value || "").trim();
+    var rs = rsRaw === "" ? NaN : num(rowsp);
+    if (rsRaw !== "" && (!isFinite(rs) || rs <= 0)) return fail("tool.err.rowsp");
+    if (isFinite(rs) && rs > 10000) return fail("tool.err.range");
+
+    // 포기당 가격도 선택 입력 — 비우면 비용 카드를 아예 감춘다.
+    var prRaw = String(price && price.value || "").trim();
+    var pr = prRaw === "" ? NaN : num(price);
+    if (prRaw !== "" && (!isFinite(pr) || pr < 0 || pr > 1e9)) return fail("tool.err.price");
+
     var u = unit.value === "m" ? "m" : "ft";
     var lIn = l * IN_PER_UNIT[u], wIn = w * IN_PER_UNIT[u];
     var sIn = s * IN_PER_SP[u];
+    var rsIn = isFinite(rs) ? rs * IN_PER_SP[u] : 0;
     if (lIn / sIn > 20000 || wIn / sIn > 20000) return fail("tool.err.range");
+    if (rsIn > 0 && wIn / rsIn > 20000) return fail("tool.err.range");
 
     var gap = edge.checked, tri = pattern.value === "tri";
     var total, layout, rows, cols;
 
     if (!tri) {
+      var sqRowStep = rsIn > 0 ? rsIn : sIn;
       cols = fit(lIn, sIn, gap);
-      rows = fit(wIn, sIn, gap);
+      rows = fit(wIn, sqRowStep, gap);
       total = cols * rows;
       layout = sub("tool.layout.sq", { c: cols, r: rows });
     } else {
-      var rowStep = sIn * TRI;
+      var rowStep = rsIn > 0 ? rsIn : sIn * TRI;
       rows = fit(wIn, rowStep, gap);
       var usableL = lIn - (gap ? sIn : 0);
       cols = fit(lIn, sIn, gap);                                        // 홀수 줄
@@ -164,7 +178,7 @@
         : sub("tool.layout.tri", { r: rows, a: cols, b: off });
       noteTri.textContent = sub("tool.note.tri", { v: r2(rowStep) + " " + t("tool.abbr.in") + " · " + r2(rowStep * 2.54) + " " + t("tool.abbr.cm") });
     }
-    noteTri.hidden = !tri;
+    noteTri.hidden = !(tri && rsIn <= 0);
 
     var sqft = u === "ft" ? l * w : l * w * 10.7639;
     var sqm = u === "m" ? l * w : l * w * 0.092903;
@@ -172,11 +186,24 @@
     $("r-plants").textContent = String(total).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     $("r-layout").textContent = layout;
     $("r-density").textContent = r2(total / sqft) + " " + t("tool.dens.sqft") + " · " + r2(total / sqm) + " " + t("tool.dens.sqm");
-    $("r-spacing").textContent = r2(sIn) + " " + t("tool.abbr.in") + " · " + r2(sIn * 2.54) + " " + t("tool.abbr.cm");
+    var spTxt = r2(sIn) + " " + t("tool.abbr.in") + " · " + r2(sIn * 2.54) + " " + t("tool.abbr.cm");
+    if (rsIn > 0) spTxt += " / " + r2(rsIn) + " " + t("tool.abbr.in") + " · " + r2(rsIn * 2.54) + " " + t("tool.abbr.cm");
+    $("r-spacing").textContent = spTxt;
+
+    var costCard = $("cost-card");
+    if (costCard) {
+      if (isFinite(pr)) {
+        $("r-cost").textContent = (Math.round(total * pr * 100) / 100)
+          .toFixed(2).replace(/\B(?=(\d{3})+(?!\d)\.)/g, ",");
+        costCard.hidden = false;
+      } else {
+        costCard.hidden = true;
+      }
+    }
 
     // 간격이 화단보다 넓으면 그 방향은 한 포기로 끝난다 — 조용히 넘기지 않고 알려준다.
     noteTight.textContent = t("tool.note.tight");
-    noteTight.hidden = !(sIn > lIn || sIn > wIn);
+    noteTight.hidden = !(sIn > lIn || (rsIn > 0 ? rsIn : sIn) > wIn);
 
     errEl.hidden = true;
     result.hidden = false;
@@ -184,7 +211,8 @@
 
   labelUnits();
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, spacing].forEach(function (el) {
+  [len, wid, spacing, rowsp, price].forEach(function (el) {
+    if (!el) return;
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   [unit, pattern, edge].forEach(function (el) {

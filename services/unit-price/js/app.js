@@ -130,16 +130,20 @@
 
   // g/kg는 무게, ml/L는 부피, ea(개)는 개수 — 서로 다른 종류는 비교 불가
   function unitCategory(unit) {
-    if (unit === "g" || unit === "kg") return "weight";
-    if (unit === "ml" || unit === "L") return "volume";
+    if (unit === "g" || unit === "kg" || unit === "oz" || unit === "lb") return "weight";
+    if (unit === "ml" || unit === "L" || unit === "floz" || unit === "pt" || unit === "qt" || unit === "gal") return "volume";
     if (unit === "ea") return "count";
     return null;
   }
 
   // kg→g, L→ml 로 정규화 (g/ml/ea는 그대로)
+  var UNIT_FACTOR = {
+    g: 1, kg: 1000, oz: 28.349523125, lb: 453.59237,
+    ml: 1, L: 1000, floz: 29.5735295625, pt: 473.176473, qt: 946.352946, gal: 3785.411784,
+    ea: 1
+  };
   function normalizedCapacity(capacity, unit) {
-    if (unit === "kg" || unit === "L") return capacity * 1000;
-    return capacity;
+    return capacity * (UNIT_FACTOR[unit] || 1);
   }
 
   // 결과에 붙는 "per 100 g / per 100 ml / per item" 라벨 (언어별)

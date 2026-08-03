@@ -67,6 +67,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook and Instagram",
 
     "tool.f.headline": "Headline",
+    "tool.f.custom": "Custom limit",
+    "tool.msg.badCustom": "Enter a character limit between 1 and {max}.",
     "tool.f.description": "Description",
     "tool.f.path": "Display path",
     "tool.f.callout": "Callout",
@@ -211,6 +213,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook 与 Instagram",
 
     "tool.f.headline": "广告标题",
+    "tool.f.custom": "自定义字数上限",
+    "tool.msg.badCustom": "请输入 1 到 {max} 之间的字数上限。",
     "tool.f.description": "广告内容",
     "tool.f.path": "显示路径",
     "tool.f.callout": "附加宣传信息",
@@ -355,6 +359,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook और Instagram",
 
     "tool.f.headline": "शीर्षक",
+    "tool.f.custom": "कस्टम सीमा",
+    "tool.msg.badCustom": "1 से {max} के बीच वर्ण सीमा दर्ज करें।",
     "tool.f.description": "विवरण",
     "tool.f.path": "डिस्प्ले पाथ",
     "tool.f.callout": "कॉलआउट",
@@ -499,6 +505,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook e Instagram",
 
     "tool.f.headline": "Título",
+    "tool.f.custom": "Límite personalizado",
+    "tool.msg.badCustom": "Introduce un límite de caracteres entre 1 y {max}.",
     "tool.f.description": "Descripción",
     "tool.f.path": "Ruta visible",
     "tool.f.callout": "Texto destacado",
@@ -643,6 +651,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — فيسبوك وإنستغرام",
 
     "tool.f.headline": "العنوان",
+    "tool.f.custom": "حد مخصص",
+    "tool.msg.badCustom": "أدخل حدًا لعدد الأحرف بين 1 و{max}.",
     "tool.f.description": "الوصف",
     "tool.f.path": "مسار العرض",
     "tool.f.callout": "وسيلة الشرح",
@@ -787,6 +797,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook et Instagram",
 
     "tool.f.headline": "Titre",
+    "tool.f.custom": "Limite personnalisée",
+    "tool.msg.badCustom": "Saisissez une limite de caractères comprise entre 1 et {max}.",
     "tool.f.description": "Description",
     "tool.f.path": "Chemin d'affichage",
     "tool.f.callout": "Accroche",
@@ -931,6 +943,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook ও Instagram",
 
     "tool.f.headline": "শিরোনাম",
+    "tool.f.custom": "কাস্টম সীমা",
+    "tool.msg.badCustom": "১ থেকে {max}-এর মধ্যে একটি অক্ষরসীমা লিখুন।",
     "tool.f.description": "বিবরণ",
     "tool.f.path": "ডিসপ্লে পাথ",
     "tool.f.callout": "কলআউট",
@@ -1075,6 +1089,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook e Instagram",
 
     "tool.f.headline": "Título",
+    "tool.f.custom": "Limite personalizado",
+    "tool.msg.badCustom": "Informe um limite de caracteres entre 1 e {max}.",
     "tool.f.description": "Descrição",
     "tool.f.path": "Caminho de exibição",
     "tool.f.callout": "Frase de destaque",
@@ -1219,6 +1235,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook и Instagram",
 
     "tool.f.headline": "Заголовок",
+    "tool.f.custom": "Свой лимит",
+    "tool.msg.badCustom": "Укажите лимит символов от 1 до {max}.",
     "tool.f.description": "Описание",
     "tool.f.path": "Отображаемый путь",
     "tool.f.callout": "Уточнение",
@@ -1363,6 +1381,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — فیس بک اور انسٹاگرام",
 
     "tool.f.headline": "سرخی",
+    "tool.f.custom": "اپنی مرضی کی حد",
+    "tool.msg.badCustom": "1 اور {max} کے درمیان حروف کی حد درج کریں۔",
     "tool.f.description": "تفصیل",
     "tool.f.path": "ڈسپلے پاتھ",
     "tool.f.callout": "کال آؤٹ",
@@ -1507,6 +1527,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook dan Instagram",
 
     "tool.f.headline": "Headline",
+    "tool.f.custom": "Batas kustom",
+    "tool.msg.badCustom": "Masukkan batas karakter antara 1 dan {max}.",
     "tool.f.description": "Deskripsi",
     "tool.f.path": "Jalur tampilan",
     "tool.f.callout": "Callout",
@@ -1651,6 +1673,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook und Instagram",
 
     "tool.f.headline": "Anzeigentitel",
+    "tool.f.custom": "Eigenes Limit",
+    "tool.msg.badCustom": "Geben Sie ein Zeichenlimit zwischen 1 und {max} ein.",
     "tool.f.description": "Beschreibung",
     "tool.f.path": "Anzeigepfad",
     "tool.f.callout": "Zusatzinformation",
@@ -1795,6 +1819,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "Meta — Facebook・Instagram",
 
     "tool.f.headline": "見出し",
+    "tool.f.custom": "カスタム上限",
+    "tool.msg.badCustom": "1〜{max} の範囲で文字数の上限を入力してください。",
     "tool.f.description": "説明文",
     "tool.f.path": "表示パス",
     "tool.f.callout": "コールアウト",
@@ -1939,6 +1965,8 @@ window.I18N_LOCALES = {
     "tool.pf.meta": "메타 — 페이스북·인스타그램",
 
     "tool.f.headline": "광고 제목",
+    "tool.f.custom": "직접 입력한 한도",
+    "tool.msg.badCustom": "1~{max} 사이의 글자수 한도를 입력하세요.",
     "tool.f.description": "설명",
     "tool.f.path": "표시 경로",
     "tool.f.callout": "콜아웃",

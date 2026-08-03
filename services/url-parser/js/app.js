@@ -145,11 +145,23 @@
     schemeNote.hidden = !got.fixed;
 
     $("r-origin").textContent = (u.origin && u.origin !== "null") ? u.origin : t("tool.val.none");
+    // href 는 WHATWG 정규화 결과(호스트 소문자·퓨니코드·기본 포트 제거) — 원문과 비교할 기준값이다.
+    $("r-href").textContent = showRaw ? u.href : dec(u.href, false);
     $("r-protocol").textContent = u.protocol;
     $("r-host").textContent = u.hostname || t("tool.val.none");
     $("r-port").textContent = u.port || (u.host ? t("tool.val.defaultport") : t("tool.val.none"));
     $("r-path").textContent = showRaw ? (u.pathname || "/") : dec(u.pathname || "/", false);
     $("r-hash").textContent = u.hash ? (showRaw ? u.hash : dec(u.hash, false)) : t("tool.val.none");
+
+    // user:pass@host 는 표준 URL 필드지만 화면 어디에도 안 나오면 존재 자체가 안 보인다.
+    var uiCard = $("userinfo-card"), un = u.username || "", pw = u.password || "";
+    if (un || pw) {
+      $("r-userinfo").textContent = (showRaw ? un : dec(un, false)) +
+        (pw ? ":" + (showRaw ? pw : dec(pw, false)) : "");
+      uiCard.hidden = false;
+    } else {
+      uiCard.hidden = true;
+    }
 
     var rows = rowsOf(u.search.slice(1), showRaw), tr;
     while (pbody.firstChild) pbody.removeChild(pbody.firstChild);

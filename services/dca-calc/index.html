@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -214,10 +224,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <input type="number" id="years-input" inputmode="numeric" min="1" max="50" step="1"
            placeholder="e.g. 20" data-i18n-placeholder="tool.years.ph">
     <div class="chips" id="years-chips" role="group" aria-label="Quick horizon presets" data-i18n-aria-label="tool.years.chipsAria">
+      <button type="button" class="chip" data-years="5">5</button>
       <button type="button" class="chip" data-years="10">10</button>
       <button type="button" class="chip" data-years="20">20</button>
       <button type="button" class="chip" data-years="30">30</button>
       <button type="button" class="chip" data-years="40">40</button>
+      <button type="button" class="chip" data-years="50">50</button>
     </div>
 
     <label for="inflation-input" data-i18n="tool.inflation.label">Annual inflation (%) — optional</label>
@@ -234,6 +246,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
            placeholder="e.g. 0" data-i18n-placeholder="tool.tax.ph">
     <div class="chips" id="tax-chips" role="group" aria-label="Capital-gains tax presets" data-i18n-aria-label="tool.tax.chipsAria">
       <button type="button" class="chip" data-tax="0" data-i18n="tool.tax.chip0">0%</button>
+      <button type="button" class="chip" data-tax="15">15%</button>
+      <button type="button" class="chip" data-tax="20">20%</button>
       <button type="button" class="chip" data-tax="15.4" data-i18n="tool.tax.chipKr">15.4% (Korea)</button>
     </div>
 

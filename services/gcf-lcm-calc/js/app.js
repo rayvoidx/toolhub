@@ -96,7 +96,7 @@
      저장. 외부 API 없음, 전부 로컬 계산(BigInt로 정밀 연산). */
 
   var MIN_COUNT = 2;                 // 최소 입력 개수
-  var MAX_COUNT = 6;                 // 최대 입력 개수
+  var MAX_COUNT = 10;                // 최대 입력 개수
   var MAX_VALUE = 1000000000;        // 숫자 상한 (10억) — 소인수분해가 항상 빠르게 끝나도록
   var MAX_VALUE_BIG = 1000000000n;
   var SCAN_LIMIT = 500;              // 극단적으로 큰 붙여넣기 방지 — 이후 토큰은 무시
@@ -291,7 +291,7 @@
     }
     if (parsed.valid.length > MAX_COUNT) {
       hideResultBlocks();
-      resultError.textContent = tpl(tr("tool.err.tooMany", "Enter at most 6 numbers — you entered {n}. Remove {extra} to continue."), {
+      resultError.textContent = tpl(tr("tool.err.tooMany", "Enter at most 10 numbers — you entered {n}. Remove {extra} to continue."), {
         n: String(parsed.valid.length), extra: String(parsed.valid.length - MAX_COUNT)
       });
       resultError.hidden = false;

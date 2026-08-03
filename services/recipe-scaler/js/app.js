@@ -104,6 +104,24 @@
   var RANGE = /^\s*(?:-|–|—|to\b)\s*/;   // "2-3 cloves", "1 to 2 tsp"
   var EGG = /\beggs?\b/i;
 
+  // 스푼/컵은 tsp 기준으로 환산해, 12 tbsp 같은 결과에 "= ¾ cup" 을 덧붙인다.
+  var UNITS = [
+    { re: /^\s*(?:tsp|teaspoons?)\b/i, tsp: 1, name: "tsp" },
+    { re: /^\s*(?:tbsp|tbs|tablespoons?)\b/i, tsp: 3, name: "tbsp" },
+    { re: /^\s*(?:cups?)\b/i, tsp: 48, name: "cup" }
+  ];
+
+  function altUnit(value, rest) {
+    var i, u = null, m;
+    for (i = 0; i < UNITS.length; i++) { m = UNITS[i].re.exec(rest); if (m) { u = UNITS[i]; break; } }
+    if (!u || !isFinite(value) || value <= 0) return "";
+    var tsp = value * u.tsp;
+    var target = tsp >= 24 ? UNITS[2] : (tsp >= 3 ? UNITS[1] : UNITS[0]);
+    if (target === u) return "";
+    var n = tsp / target.tsp;
+    return "= " + fmtQty(n) + " " + target.name + (target.name === "cup" && n >= 2 ? "s" : "");
+  }
+
   function parseQty(str) {
     var m = QTY.exec(str), v;
     if (!m) return null;
@@ -175,6 +193,7 @@
         rest: p.rest,
         text: "",
         note: (EGG.test(p.rest) && isFractional(p.value * factor)) ? "tool.egg" : "",
+        alt: p.value2 ? "" : altUnit(p.value * factor, p.rest),
         pass: false
       });
     }
@@ -200,6 +219,12 @@
         n.className = "note";
         n.textContent = "· " + t(r.note);
         card.appendChild(n);
+      }
+      if (r.alt) {
+        var a = document.createElement("span");
+        a.className = "note";
+        a.textContent = "· " + r.alt;
+        card.appendChild(a);
       }
       rowsEl.appendChild(card);
     });
@@ -228,7 +253,9 @@
   function listText() {
     return rows.map(function (r) {
       var s = r.pass ? r.text : r.qty + r.rest;
-      return r.note ? s + " (" + t(r.note) + ")" : s;
+      if (r.note) s += " (" + t(r.note) + ")";
+      if (r.alt) s += " (" + r.alt + ")";
+      return s;
     }).join("\n");
   }
 

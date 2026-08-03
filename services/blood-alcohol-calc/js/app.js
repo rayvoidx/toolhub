@@ -144,6 +144,7 @@
   var badgeEl = $("r-badge");
   var extremeEl = $("r-extreme");
   var peakEl = $("r-peak");
+  var glEl = $("r-gl");
   var row003 = $("r-time-003");
   var row008 = $("r-time-008");
   var row000 = $("r-time-000");
@@ -328,6 +329,7 @@
     box.hidden = false;
 
     outBac.textContent = fmtPct(res.current);
+    if (glEl) glEl.textContent = msg("tool.result.gl", "≈ {v} g/L (metric scale)", { v: (res.current * 10).toFixed(2) });
     metabEl.hidden = !res.metabolized;
 
     var b = BADGE[res.badge] || BADGE.below;
@@ -379,6 +381,10 @@
 
     var weightKg = unit === "lb" ? weight * LB_TO_KG : weight;
     var res = computeBAC({ sex: sex, weightKg: weightKg, drinks: readDrinks(), hours: hours });
+    if (!(res.grams > 0)) {
+      showError("tool.err.nodrinkdata", "Enter a volume above 0 mL, an ABV above 0% and a quantity of at least 1 for your drinks.");
+      return;
+    }
     render(res);
     persist();
   }

@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var unitEl = $("unit"), ovEl = $("overhang"), lenEl = $("length"), widEl = $("width");
-  var pitchEl = $("pitch"), wasteEl = $("waste");
+  var pitchEl = $("pitch"), wasteEl = $("waste"), coverEl = $("cover");
   var result = $("result"), errEl = $("err");
   if (!unitEl || !lenEl || !widEl || !pitchEl || !wasteEl) return;
 
@@ -130,7 +130,10 @@
     var areaFt2 = (lFt + 2 * ovFt) * (wFt + 2 * ovFt) * pitch;
     var squares = areaFt2 / SQFT_PER_SQUARE;
 
-    var bundles = Math.ceil(squares * BUNDLES_PER_SQUARE * (1 + wastePct / 100));
+    var perSq = coverEl ? parseFloat(coverEl.value) : BUNDLES_PER_SQUARE;
+    if (!isFinite(perSq) || perSq <= 0) perSq = BUNDLES_PER_SQUARE;
+
+    var bundles = Math.ceil(squares * perSq * (1 + wastePct / 100));
     var rolls = Math.ceil(squares / UNDERLAY_SQ_PER_ROLL);
     var ridge = Math.ceil(lFt / RIDGE_FT_PER_BUNDLE);
     var nailsLb = Math.ceil(squares * NAIL_LB_PER_SQUARE);
@@ -154,7 +157,7 @@
   [lenEl, widEl, ovEl].forEach(function (el) {
     if (el) el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [unitEl, pitchEl, wasteEl].forEach(function (el) {
+  [unitEl, pitchEl, wasteEl, coverEl].forEach(function (el) {
     if (el) el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

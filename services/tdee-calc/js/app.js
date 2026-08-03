@@ -148,6 +148,7 @@
   var cmWrap = $("height-cm-wrap"), ftWrap = $("height-ft-wrap");
   var wEl = $("weight-input");
   var activityEl = $("activity-select");
+  var actCustomEl = $("activity-custom"), actCustomWrap = $("activity-custom-wrap");
   var calcBtn = $("calc-btn");
   var box = $("result-box"), errEl = $("result-error"), bodyEl = $("result-body");
   var warnEl = $("result-warning");
@@ -256,7 +257,12 @@
     var age = ageRaw === "" ? NaN : Number(ageRaw);
     var heightCm = readHeightCm();
     var weightKg = readWeightKg();
-    var activity = Number(activityEl.value);
+    var isCustomAct = activityEl.value === "custom";
+    var actRaw = isCustomAct && actCustomEl ? actCustomEl.value.trim() : "";
+    var activity = isCustomAct ? (actRaw === "" ? NaN : Number(actRaw)) : Number(activityEl.value);
+    if (isCustomAct && !(activity >= 1 && activity <= 2.5)) {
+      showError("tool.err.activity", "Enter an activity multiplier between 1.0 and 2.5."); return;
+    }
 
     // 빈 입력 → 명시적 안내 (조용한 실패 금지)
     if (!sex || isNaN(age) || isNaN(heightCm) || isNaN(weightKg)) {
@@ -272,7 +278,7 @@
     if (weightKg < LIM.wKgMin || weightKg > LIM.wKgMax) {
       showError("tool.err.weight", "Enter a weight between 20 and 300 kg (about 44 to 660 lb)."); return;
     }
-    if (!(activity >= 1.2 && activity <= 1.9)) activity = 1.55;
+    if (!isCustomAct && !(activity >= 1.2 && activity <= 1.9)) activity = 1.55;
 
     render({
       sex: sex, age: age, heightCm: heightCm, weightKg: weightKg, activity: activity,
@@ -287,9 +293,14 @@
         sex: radioVal("sex"), age: ageEl.value,
         hunit: radioVal("hunit"), cm: hCmEl.value, ft: hFtEl.value, inch: hInEl.value,
         wunit: radioVal("wunit"), weight: wEl.value,
-        activity: activityEl.value
+        activity: activityEl.value,
+        activityCustom: actCustomEl ? actCustomEl.value : ""
       }));
     } catch (e) { /* private mode — ignore */ }
+  }
+
+  function applyActivityMode() {
+    if (actCustomWrap) actCustomWrap.hidden = activityEl.value !== "custom";
   }
 
   function applyHeightUnit() {
@@ -313,7 +324,9 @@
       if (p.wunit === "kg" || p.wunit === "lb") setRadio("wunit", p.wunit);
       if (p.weight) wEl.value = p.weight;
       if (p.activity) activityEl.value = p.activity;
+      if (p.activityCustom && actCustomEl) actCustomEl.value = p.activityCustom;
     } catch (e) { /* 접근 불가·파싱 실패 — 빈 폼으로 시작 */ }
+    applyActivityMode();
     applyHeightUnit();
   })();
 
@@ -336,6 +349,8 @@
   if (hFtEl) hFtEl.addEventListener("keydown", onEnter);
   if (hInEl) hInEl.addEventListener("keydown", onEnter);
   wEl.addEventListener("keydown", onEnter);
+  activityEl.addEventListener("change", applyActivityMode);
+  if (actCustomEl) actCustomEl.addEventListener("keydown", onEnter);
 
   // 언어 전환 시 동적 문구(단위·오류·결과 라벨) 재렌더
   document.addEventListener("i18n:change", function () {

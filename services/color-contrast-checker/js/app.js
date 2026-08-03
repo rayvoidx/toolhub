@@ -257,6 +257,13 @@
   var previewNormal = $("preview-normal"), previewLarge = $("preview-large");
   var suggestWrap = $("suggest-wrap"), suggestNone = $("suggest-none");
   var suggestLighter = $("suggest-lighter"), suggestDarker = $("suggest-darker");
+  var targetSel = $("target-level");
+  var TARGET_LABEL_KEY = { "4.5": "tool.badge.aaNormal", "7": "tool.badge.aaaNormal", "3": "tool.badge.aaLarge" };
+  // 선택된 제안 목표 명암비. 값이 없거나 이상하면 기존 기본값(AA·일반 4.5) 유지.
+  function targetRatio() {
+    var v = targetSel ? parseFloat(targetSel.value) : NaN;
+    return isFinite(v) && v > 1 ? v : SUGGEST_TARGET;
+  }
   var badgeEls = {
     aaNormal: $("badge-aa-normal"), aaaNormal: $("badge-aaa-normal"),
     aaLarge: $("badge-aa-large"), aaaLarge: $("badge-aaa-large")
@@ -274,7 +281,11 @@
     return null;
   }
   function saveState(fg, bg) {
-    try { localStorage.setItem(SKEY, JSON.stringify({ fg: fg, bg: bg })); } catch (e) { /* noop */ }
+    try {
+      localStorage.setItem(SKEY, JSON.stringify({
+        fg: fg, bg: bg, target: targetSel ? targetSel.value : undefined
+      }));
+    } catch (e) { /* noop */ }
   }
 
   /* ---- 배지 렌더 ---- */
@@ -346,16 +357,31 @@
       box.style.background = toHex(bgRgb);
     });
 
-    // 제안: AA·일반(4.5) 미달일 때만
-    if (ratio >= SUGGEST_TARGET) {
-      if (suggestNone) suggestNone.hidden = false;
+    // 제안: 선택한 목표(기본 AA·일반 4.5) 미달일 때만
+    var target = targetRatio();
+    if (ratio >= target) {
+      if (suggestNone) {
+        var tKey = targetSel ? TARGET_LABEL_KEY[targetSel.value] : null;
+        var tName = tKey ? tr(tKey, "AA · Normal text") : "AA · Normal text";
+        suggestNone.textContent = tr("tool.suggest.noneFor", "Already passes {target} — no adjustment needed.")
+          .replace("{target}", tName);
+        suggestNone.hidden = false;
+      }
       if (suggestLighter) suggestLighter.hidden = true;
       if (suggestDarker) suggestDarker.hidden = true;
     } else {
       if (suggestNone) suggestNone.hidden = true;
-      var shades = suggestShades(fgRgb, bgRgb, SUGGEST_TARGET);
+      var shades = suggestShades(fgRgb, bgRgb, target);
       renderSuggestion(suggestLighter, shades.lighter, "tool.suggest.lighter", "Lighter");
       renderSuggestion(suggestDarker, shades.darker, "tool.suggest.darker", "Darker");
+      // 높은 목표(AAA 등) + 중간 밝기 배경이면 어느 명도로도 도달 불가 — 조용히 비우지 않는다
+      if (!shades.lighter && !shades.darker && suggestNone) {
+        var nKey = targetSel ? TARGET_LABEL_KEY[targetSel.value] : null;
+        suggestNone.textContent = tr("tool.suggest.impossible",
+          "No shade of this text color reaches {target} on this background — change the background too.")
+          .replace("{target}", nKey ? tr(nKey, "AA · Normal text") : "AA · Normal text");
+        suggestNone.hidden = false;
+      }
     }
   }
 
@@ -364,6 +390,8 @@
   bgHex.addEventListener("input", render);
   fgPicker.addEventListener("input", function () { fgHex.value = fgPicker.value; render(); });
   bgPicker.addEventListener("input", function () { bgHex.value = bgPicker.value; render(); });
+
+  if (targetSel) targetSel.addEventListener("change", render);
 
   if (swapBtn) {
     swapBtn.addEventListener("click", function () {
@@ -392,6 +420,7 @@
   var initial = loadState();
   fgHex.value = (initial && initial.fg) || DEFAULT_FG;
   bgHex.value = (initial && initial.bg) || DEFAULT_BG;
+  if (targetSel && initial && TARGET_LABEL_KEY[initial.target]) targetSel.value = initial.target;
   render();
   // TOOLJS:END
 })();

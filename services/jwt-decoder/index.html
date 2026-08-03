@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="JWT Decoder — Read Header and Payload Locally">
 <meta property="og:description" content="Paste a JSON Web Token to decode its header and payload, see expiry and issued-at times in readable form, and check whether the token has expired. Nothing leaves your browser.">
 <meta property="og:url" content="https://tool-hub.me/jwt-decoder/">
-<meta property="og:image" content="https://tool-hub.me/jwt-decoder/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/jwt-decoder/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#7c2d12">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-28",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -125,7 +125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
-<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
 #tool, #tool * { min-width: 0; }
 #tool { max-width: 100%; }
 #tool table { display: block; max-width: 100%; overflow-x: auto; }
@@ -133,6 +133,7 @@ ADSENSE:END -->
 #tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
 .guide-content table { display: block; max-width: 100%; overflow-x: auto; }
 main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
 </style>
 </head>
 <body>
@@ -187,6 +188,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.status">Token status</div><div class="rc-val" id="r-status">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.expires">Expires</div><div class="rc-val" id="r-exp">—</div></div>
         <div class="rcard"><div class="rc-label" data-i18n="tool.r.issued">Issued at</div><div class="rc-val" id="r-iat">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ttl">Time left</div><div class="rc-val" id="r-ttl">—</div></div>
       </div>
       <div class="seg">
         <div class="seg-head">
@@ -226,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <table>
       <thead><tr><th>Claim</th><th>Meaning</th><th>Typical value</th></tr></thead>
       <tbody>
-        <tr><td>iss</td><td>Issuer — who minted the token</td><td>auth.example.com</td></tr>
+        <tr><td>iss</td><td>Issuer — who minted the token</td><td>https://auth.example.com</td></tr>
         <tr><td>sub</td><td>Subject — usually the user id</td><td>1234567890</td></tr>
         <tr><td>aud</td><td>Audience — who it is meant for</td><td>api.example.com</td></tr>
         <tr><td>exp</td><td>Expiry, Unix seconds</td><td>1767229200</td></tr>

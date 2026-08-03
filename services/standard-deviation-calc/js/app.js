@@ -141,8 +141,16 @@
     var popStdDev = Math.sqrt(popVariance);
     var sampleVariance = n > 1 ? ss / (n - 1) : null;
     var sampleStdDev = sampleVariance == null ? null : Math.sqrt(sampleVariance);
+    var sorted = values.slice().sort(function (a, b) { return a - b; });
+    var mid = Math.floor(n / 2);
+    var median = n % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+    var range = sorted[n - 1] - sorted[0];
+    // SEM = s/√n (표본 표준편차 기반 — n=1 이면 null). CV = s/|mean| (평균 0 이면 정의 불가 → null)
+    var sem = sampleStdDev == null ? null : sampleStdDev / Math.sqrt(n);
+    var cv = (sampleStdDev == null || mean === 0) ? null : sampleStdDev / Math.abs(mean);
     return {
-      n: n, sum: sum, mean: mean, ss: ss,
+      sem: sem, cv: cv,
+      n: n, sum: sum, mean: mean, ss: ss, median: median, range: range,
       popVariance: popVariance, popStdDev: popStdDev,
       sampleVariance: sampleVariance, sampleStdDev: sampleStdDev,
       deviations: deviations, squared: squared, values: values
@@ -244,6 +252,10 @@
     setCard("sampleVariance", stats.sampleVariance == null ? "—" : fmt(stats.sampleVariance));
     setCard("popVariance", fmt(stats.popVariance));
     setCard("ss", fmt(stats.ss));
+    setCard("median", fmt(stats.median));
+    setCard("range", fmt(stats.range));
+    setCard("sem", stats.sem == null ? "—" : fmt(stats.sem));
+    setCard("cv", stats.cv == null ? "—" : fmt(stats.cv * 100, 2) + "%");
 
     emptyEl.hidden = true;
     gridEl.hidden = false;

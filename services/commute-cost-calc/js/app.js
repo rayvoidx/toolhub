@@ -92,6 +92,7 @@
   var dist = $("dist"), units = $("units"), days = $("days"), method = $("method");
   var mpg = $("mpg"), gasprice = $("gasprice"), rate = $("rate");
   var parking = $("parking"), tolls = $("tolls"), transit = $("transit"), minutes = $("minutes");
+  var parkbasis = $("parkbasis"), rateLabel = $("rate-label");
   var result = $("result"), errEl = $("err"), gasRow = $("gas-row"), rateRow = $("rate-row");
   var cardTransit = $("card-transit"), cardHours = $("card-hours"), noteIrs = $("note-irs");
   if (!dist || !days || !method || !parking || !tolls) return;
@@ -114,6 +115,13 @@
     rateRow.hidden = method.value !== "custom";
   }
 
+  // 거리를 km 로 입력하면 직접 요율도 km 기준으로 받는다 — 손으로 환산하게 두지 않는다.
+  function syncRateLabel() {
+    var key = units.value === "km" ? "tool.rate.label.km" : "tool.rate.label";
+    rateLabel.setAttribute("data-i18n", key);
+    rateLabel.textContent = t(key);
+  }
+
   function calc() {
     var d = num(dist);
     if (isNaN(d)) return fail("tool.err.dist");
@@ -133,7 +141,7 @@
     } else if (method.value === "custom") {
       var r = num(rate);
       if (isNaN(r) || r <= 0) return fail("tool.err.rate");
-      perMile = r;
+      perMile = units.value === "km" ? r * KM_PER_MI : r;
     } else {
       perMile = IRS_RATE;
     }
@@ -147,7 +155,9 @@
 
     var distPerWeek = d * 2 * wd;                                             // 입력 단위 그대로 (표시용)
     var milesPerWeek = units.value === "km" ? distPerWeek / KM_PER_MI : distPerWeek; // 요율은 마일 기준
-    var weekly = milesPerWeek * perMile + wd * (pk + tl);
+    // 월정액 주차권은 출근 일수와 무관하게 매달 같은 금액이 나간다 — 주 단위로만 환산한다.
+    var parkWeekly = parkbasis.value === "month" ? pk / WEEKS_PER_MONTH : pk * wd;
+    var weekly = milesPerWeek * perMile + parkWeekly + wd * tl;
     var monthly = weekly * WEEKS_PER_MONTH;
 
     $("r-month").textContent = money(monthly);
@@ -174,14 +184,16 @@
   var live = function () { if (!result.hidden || !errEl.hidden) calc(); };
 
   syncMethod();
+  syncRateLabel();
   $("calc-btn").addEventListener("click", calc);
   [dist, days, mpg, gasprice, rate, parking, tolls, transit, minutes].forEach(function (el) {
     if (!el) return;
     el.addEventListener("input", live);
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  units.addEventListener("change", live);
+  units.addEventListener("change", function () { syncRateLabel(); live(); });
+  parkbasis.addEventListener("change", live);
   method.addEventListener("change", function () { syncMethod(); live(); });
-  document.addEventListener("i18n:change", live);
+  document.addEventListener("i18n:change", function () { syncRateLabel(); live(); });
   // TOOLJS:END
 })();

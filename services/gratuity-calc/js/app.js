@@ -133,7 +133,7 @@
     // 5년 미만은 오류가 아니라 자격 안내 — 금액은 자격 충족 시 받을 액수로 그대로 보여준다.
     $("b-elig").textContent = yrs < 5 ? t("tool.banner.ineligible") : t("tool.banner.ok");
     var cap = $("b-cap");
-    cap.textContent = t("tool.banner.cap");
+    cap.textContent = t("tool.banner.cap") + " " + t("tool.banner.capExcess").replace("{a}", inr(Math.max(0, amount - CAP)));
     cap.hidden = amount <= CAP;
 
     errEl.hidden = true;

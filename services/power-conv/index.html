@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -224,12 +224,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="pc-from" class="pc-inline" data-i18n="tool.from.label">From</label>
         <select id="pc-from">
           <option value="w" data-i18n="tool.unit.w">Watt (W)</option>
+          <option value="milliw" data-i18n="tool.unit.milliw">Milliwatt (mW)</option>
           <option value="kw" data-i18n="tool.unit.kw">Kilowatt (kW)</option>
           <option value="mw" data-i18n="tool.unit.mw">Megawatt (MW)</option>
           <option value="hp" selected data-i18n="tool.unit.hp">Horsepower (hp)</option>
           <option value="ps" data-i18n="tool.unit.ps">Metric horsepower (PS)</option>
           <option value="btuh" data-i18n="tool.unit.btuh">BTU per hour (BTU/h)</option>
           <option value="ftlbs" data-i18n="tool.unit.ftlbs">Foot-pound per second (ft·lb/s)</option>
+          <option value="gw" data-i18n="tool.unit.gw">Gigawatt (GW)</option>
+          <option value="rt" data-i18n="tool.unit.rt">Ton of refrigeration (RT)</option>
         </select>
       </div>
       <button type="button" class="pc-swap" id="pc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
@@ -237,12 +240,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <label for="pc-to" class="pc-inline" data-i18n="tool.to.label">To</label>
         <select id="pc-to">
           <option value="w" data-i18n="tool.unit.w">Watt (W)</option>
+          <option value="milliw" data-i18n="tool.unit.milliw">Milliwatt (mW)</option>
           <option value="kw" selected data-i18n="tool.unit.kw">Kilowatt (kW)</option>
           <option value="mw" data-i18n="tool.unit.mw">Megawatt (MW)</option>
           <option value="hp" data-i18n="tool.unit.hp">Horsepower (hp)</option>
           <option value="ps" data-i18n="tool.unit.ps">Metric horsepower (PS)</option>
           <option value="btuh" data-i18n="tool.unit.btuh">BTU per hour (BTU/h)</option>
           <option value="ftlbs" data-i18n="tool.unit.ftlbs">Foot-pound per second (ft·lb/s)</option>
+          <option value="gw" data-i18n="tool.unit.gw">Gigawatt (GW)</option>
+          <option value="rt" data-i18n="tool.unit.rt">Ton of refrigeration (RT)</option>
         </select>
       </div>
     </div>
@@ -266,12 +272,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </thead>
         <tbody id="pc-tbody">
           <tr data-unit="w"><td data-i18n="tool.unit.w">Watt (W)</td><td class="pc-val" id="cell-w">—</td></tr>
+          <tr data-unit="milliw"><td data-i18n="tool.unit.milliw">Milliwatt (mW)</td><td class="pc-val" id="cell-milliw">—</td></tr>
           <tr data-unit="kw"><td data-i18n="tool.unit.kw">Kilowatt (kW)</td><td class="pc-val" id="cell-kw">—</td></tr>
           <tr data-unit="mw"><td data-i18n="tool.unit.mw">Megawatt (MW)</td><td class="pc-val" id="cell-mw">—</td></tr>
           <tr data-unit="hp"><td data-i18n="tool.unit.hp">Horsepower (hp)</td><td class="pc-val" id="cell-hp">—</td></tr>
           <tr data-unit="ps"><td data-i18n="tool.unit.ps">Metric horsepower (PS)</td><td class="pc-val" id="cell-ps">—</td></tr>
           <tr data-unit="btuh"><td data-i18n="tool.unit.btuh">BTU per hour (BTU/h)</td><td class="pc-val" id="cell-btuh">—</td></tr>
           <tr data-unit="ftlbs"><td data-i18n="tool.unit.ftlbs">Foot-pound per second (ft·lb/s)</td><td class="pc-val" id="cell-ftlbs">—</td></tr>
+          <tr data-unit="gw"><td data-i18n="tool.unit.gw">Gigawatt (GW)</td><td class="pc-val" id="cell-gw">—</td></tr>
+          <tr data-unit="rt"><td data-i18n="tool.unit.rt">Ton of refrigeration (RT)</td><td class="pc-val" id="cell-rt">—</td></tr>
         </tbody>
       </table>
     </div>

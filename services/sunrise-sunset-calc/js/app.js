@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var lat = $("lat"), lng = $("lng"), dateEl = $("date"), tz = $("tz");
+  var lat = $("lat"), lng = $("lng"), dateEl = $("date"), tz = $("tz"), elev = $("elev"), twEl = $("tw");
   var result = $("result"), errEl = $("err"), deltaEl = $("delta"), polarEl = $("polar");
   if (!lat || !lng || !dateEl || !tz) return;
 
@@ -168,9 +168,18 @@
     var off = num(tz);
     if (!isFinite(off) || off < -14 || off > 14) return fail("tool.err.tz");
 
+    // 고도는 선택 입력 — 비우면 해수면(0 m)이라는 기존 기본값 그대로.
+    var ev = String(elev && elev.value || "").trim() === "" ? 0 : num(elev);
+    if (!isFinite(ev) || ev < 0 || ev > 9000) return fail("tool.err.elev");
+    // 수평선 내려감(dip) ≈ 2.076' × √h(m) → 도 단위. 굴절 기준각 90.833도에 더한다.
+    var zen = 90.833 + 0.0346 * Math.sqrt(ev);
+
     var doy = dayOfYear(y, mo, da);
-    var sr = event(doy, la, lo, 90.833, true), ss = event(doy, la, lo, 90.833, false);
-    var dawn = event(doy, la, lo, 96, true), dusk = event(doy, la, lo, 96, false);
+    var sr = event(doy, la, lo, zen, true), ss = event(doy, la, lo, zen, false);
+    // 박명 기준각: 시민 96 / 항해 102 / 천문 108 (기본값은 기존과 같은 시민박명)
+    var twZen = parseFloat(twEl && twEl.value);
+    if (twZen !== 96 && twZen !== 102 && twZen !== 108) twZen = 96;
+    var dawn = event(doy, la, lo, twZen, true), dusk = event(doy, la, lo, twZen, false);
 
     errEl.hidden = true;
     result.hidden = false;
@@ -195,7 +204,7 @@
 
     var nd = new Date(Date.UTC(y, mo - 1, da + 1));
     var doy2 = dayOfYear(nd.getUTCFullYear(), nd.getUTCMonth() + 1, nd.getUTCDate());
-    var sr2 = event(doy2, la, lo, 90.833, true), ss2 = event(doy2, la, lo, 90.833, false);
+    var sr2 = event(doy2, la, lo, zen, true), ss2 = event(doy2, la, lo, zen, false);
     if (sr2.state === "ok" && ss2.state === "ok") {
       var diff = Math.round((ss2.min - sr2.min) - (ss.min - sr.min));
       var txt = Math.abs(diff) + " " + t("tool.unit.min");
@@ -221,10 +230,10 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [lat, lng, tz].forEach(function (el) {
+  [lat, lng, tz, elev].filter(Boolean).forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [lat, lng, dateEl, tz].forEach(function (el) {
+  [lat, lng, dateEl, tz, elev, twEl].filter(Boolean).forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

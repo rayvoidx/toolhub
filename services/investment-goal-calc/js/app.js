@@ -134,7 +134,7 @@
   // 필요월납입 = ceil((목표 − 시작금×growth) / factor)  (목표 미달 방지 위해 올림)
   function computeGoal(o) {
     var m = o.annualReturn / 1200;           // 월 수익률
-    var n = o.years * 12;                     // 개월
+    var n = Math.round(o.years * 12);         // 개월 (부동소수 오차 방지)
     var growth = m === 0 ? 1 : Math.pow(1 + m, n); // dca-calc futureValue 성장항 재사용
     var startProjection = o.start * growth;   // 시작금 투영
     var goalMetByStart = startProjection >= o.target; // 시작금 단독 도달
@@ -225,8 +225,9 @@
       return;
     }
     // 기간 필수 — 빈값/0/음수 차단
-    var yearsNum = Math.floor(Number(yearsRaw));
-    if (yearsRaw === "" || isNaN(Number(yearsRaw)) || yearsNum < 1) {
+    // 반년 단위까지 허용 — 개월로 반올림 (단기 목표: 6개월 뒤 결혼자금 등)
+    var yearsNum = Math.round(Number(yearsRaw) * 12) / 12;
+    if (yearsRaw === "" || isNaN(Number(yearsRaw)) || yearsNum < 0.5) {
       showError("tool.err.years", "Enter a time horizon of 1 to 50 years.");
       return;
     }

@@ -90,13 +90,14 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var rise = $("rise"), unit = $("unit"), app = $("app");
+  var custom = $("custom-ratio"), customWrap = $("custom-wrap");
   var result = $("result"), errEl = $("err"), notes = $("notes");
   if (!rise || !unit || !app) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   // 기울기 분모: ADA 공공 1:12, 주거 탑승 1:8, 비탑승 하역 1:6.
-  var RATIO = { ada: 12, res: 8, unocc: 6 };
+  var RATIO = { walk: 20, uk15: 15, ada: 12, res10: 10, res: 8, unocc: 6 };
   var MAX_RUN_RISE = 30;   // 한 구간(run)당 최대 높이 30in — ADA 405.6
   var LANDING = 60;        // 참 한 곳의 길이 60in (5ft)
   var HANDRAIL_AT = 6;     // 높이 6in 초과면 양쪽 핸드레일 — ADA 405.8
@@ -130,22 +131,31 @@
     if (riseIn <= 0) return fail("tool.err.zero");
     if (riseIn > 240) return fail("tool.err.range");
 
-    var ratio = RATIO[app.value] || 12;
+    var ratio;
+    if (app.value === "custom") {
+      ratio = parseFloat(String(custom.value).replace(/,/g, ""));
+      if (!isFinite(ratio) || ratio < 4 || ratio > 20) return fail("tool.err.slope");
+    } else {
+      ratio = RATIO[app.value] || 12;
+    }
     var run = riseIn * ratio;
-    var mid = Math.max(0, Math.ceil(riseIn / MAX_RUN_RISE) - 1);
+    // 1:20 이하는 ADA상 '경사로'가 아닌 보행로 — 구간 분할·핸드레일 의무 없음.
+    var isWalkway = ratio >= 20;
+    var needsRail = !isWalkway && riseIn > HANDRAIL_AT;
+    var mid = isWalkway ? 0 : Math.max(0, Math.ceil(riseIn / MAX_RUN_RISE) - 1);
     var deg = Math.atan(1 / ratio) * 180 / Math.PI;
 
     $("r-length").textContent = fmtLen(run);
-    $("r-slope").textContent = "1:" + ratio + " · " + deg.toFixed(1) + "° · " + (100 / ratio).toFixed(1) + "%";
+    $("r-slope").textContent = "1:" + (Math.round(ratio * 10) / 10) + " · " + deg.toFixed(1) + "° · " + (100 / ratio).toFixed(1) + "%";
     $("r-landings").textContent = String(mid + 2);
-    $("r-handrail").textContent = t(riseIn > HANDRAIL_AT ? "tool.v.hr.yes" : "tool.v.hr.no");
+    $("r-handrail").textContent = t(needsRail ? "tool.v.hr.yes" : "tool.v.hr.no");
     $("r-footprint").textContent = fmtLen(run + mid * LANDING + 2 * LANDING);
 
     while (notes.firstChild) notes.removeChild(notes.firstChild);
-    if (app.value !== "ada") note("tool.note.caution", "warn");
+    if (ratio < 12) note("tool.note.caution", "warn");
     if (riseIn > 60) note("tool.note.lift", "warn");
     if (mid > 0) note("tool.note.mid", "", mid);
-    if (riseIn > HANDRAIL_AT) note("tool.note.handrail");
+    if (needsRail) note("tool.note.handrail");
     note("tool.note.landing");
     note("tool.note.width");
 
@@ -155,7 +165,9 @@
 
   $("calc-btn").addEventListener("click", calc);
   rise.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
-  [unit, app].forEach(function (el) {
+  app.addEventListener("change", function () { customWrap.hidden = app.value !== "custom"; });
+  custom.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
+  [unit, app, custom].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

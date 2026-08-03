@@ -95,8 +95,8 @@
   var SLUG = cfg.slug || "leap-year-checker";
   var STATE_KEY = SLUG + ":state";
   var YEAR_MIN = 1, YEAR_MAX = 9999;
-  var RANGE_MAX_SPAN = 500;   // 범위 목록 상한 (극단값 방어)
-  var RANGE_LIST_CAP = 500;   // 화면에 그리는 칩 개수 상한 (span과 동일해 사실상 전부 렌더)
+  var RANGE_MAX_SPAN = 2000;  // 범위 목록 상한 (극단값 방어) — 2000년 구간의 윤년은 최대 ~485개
+  var RANGE_LIST_CAP = 600;   // 화면에 그리는 칩 개수 상한 (span 상한의 윤년 수보다 커서 사실상 전부 렌더)
 
   /* ---- i18n 헬퍼 ---- */
   function t(key) {
@@ -185,7 +185,7 @@
   var resultEl = $("lyc-result");
   var badgeEl = $("lyc-badge");
   var ruleDiv4 = $("lyc-rule-div4"), ruleDiv100 = $("lyc-rule-div100"), ruleDiv400 = $("lyc-rule-div400");
-  var explainEl = $("lyc-explain");
+  var explainEl = $("lyc-explain"), nearestEl = $("lyc-nearest");
   var febValEl = $("lyc-feb-val"), daysValEl = $("lyc-days-val");
 
   var fromEl = $("lyc-range-from"), toEl = $("lyc-range-to");
@@ -251,6 +251,17 @@
     if (explainEl) {
       var explainKey = "tool.explain." + kase;
       explainEl.textContent = fmtStr(t(explainKey), { year: year });
+    }
+
+    if (nearestEl) {
+      // 입력 연도 기준 앞뒤 가장 가까운 윤년. 둘 다 유효 범위(1~9999) 안일 때만 표시한다.
+      var pv = prevLeapYear(year), nx = nextLeapYear(year);
+      if (pv >= YEAR_MIN && nx <= YEAR_MAX) {
+        nearestEl.hidden = false;
+        nearestEl.textContent = fmtStr(t("tool.check.nearest"), { prev: pv, next: nx });
+      } else {
+        nearestEl.hidden = true;
+      }
     }
 
     if (febValEl) febValEl.textContent = leap ? "29" : "28";

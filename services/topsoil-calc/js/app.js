@@ -97,8 +97,9 @@
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   // 프리셋 깊이는 단위계마다 현장에서 쓰는 숫자가 다르다 — 2in 을 5.08cm 로 보여주면 아무도 안 쓴다.
-  var PRESET = { "2": { inch: 2, cm: 5 }, "4": { inch: 4, cm: 10 }, "6": { inch: 6, cm: 15 } };
-  var BAG_CUFT = 0.75;        // 40 lb 자루 1개 ≈ 0.75 cu ft
+  var PRESET = { "0.5": { inch: 0.5, cm: 1 }, "2": { inch: 2, cm: 5 }, "4": { inch: 4, cm: 10 }, "6": { inch: 6, cm: 15 }, "12": { inch: 12, cm: 30 } };
+  var bag = $("bag");
+  function bagCuft() { var v = bag ? parseFloat(bag.value) : NaN; return isFinite(v) && v > 0 ? v : 0.75; }
   var TON_PER_YD3 = 1.35;     // 체 친 마른 양토. 습도에 따라 1.0~1.7 (문구로 고지)
   var SQFT_PER_SQM = 10.7639104, FT_PER_M = 3.280839895;
 
@@ -152,7 +153,9 @@
       if (!isFinite(dv) || dv <= 0) return fail("tool.err.depth");
       if (dv > (ft ? 60 : 150)) return fail("tool.err.range");
     } else {
-      dv = ft ? PRESET[depth.value].inch : PRESET[depth.value].cm;
+      var pr = PRESET[depth.value];
+      if (!pr) return fail("tool.err.depth");
+      dv = ft ? pr.inch : pr.cm;
     }
 
     var areaFt = ft ? a : a * SQFT_PER_SQM;
@@ -163,7 +166,7 @@
     $("r-yards").textContent = fmt(yd3, 1) + " " + t("tool.u.yd3");
     $("r-cuft").textContent = fmt(cuft, 1) + " " + t("tool.u.cuft");
     // 자루는 쪼개 살 수 없다 — 항상 올림.
-    $("r-bags").textContent = fmt(Math.ceil(cuft / BAG_CUFT), 0) + " " + t("tool.u.bags");
+    $("r-bags").textContent = fmt(Math.ceil(cuft / bagCuft()), 0) + " " + t("tool.u.bags");
     $("r-tons").textContent = fmt(yd3 * TON_PER_YD3, 2) + " " + t("tool.u.tons");
     $("r-area").textContent = ft ? fmt(a, 0) + " " + t("tool.u.sqft") : fmt(a, 1) + " " + t("tool.u.sqm");
 
@@ -183,8 +186,8 @@
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("input", recalc);
   });
-  [unit, mode, depth].forEach(function (el) {
-    el.addEventListener("change", function () { sync(); recalc(); });
+  [unit, mode, depth, bag].forEach(function (el) {
+    if (el) el.addEventListener("change", function () { sync(); recalc(); });
   });
   document.addEventListener("i18n:change", function () { sync(); recalc(); });
   // TOOLJS:END

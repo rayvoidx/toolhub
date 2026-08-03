@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -313,6 +323,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="number" id="vla-months" min="1" max="12" step="1" value="12" inputmode="numeric" autocomplete="off">
       <p class="vla-hint" data-i18n="tool.months.note">Both the 15,000,000 KRW no-log allowance and the 8,000,000 KRW depreciation cap are pro-rated by months ÷ 12 when the fiscal year is shorter than a year (Corporate Tax Act §50-2).</p>
       <p class="vla-note vla-warn" id="vla-monthserr" hidden data-i18n="tool.months.bad">Enter a whole number of months between 1 and 12.</p>
+
+      <label for="vla-entity" data-i18n="tool.entity.label">Taxpayer type</label>
+      <select id="vla-entity">
+        <option value="general" data-i18n="tool.entity.general">General corporation / sole proprietor (15M / 8M KRW)</option>
+        <option value="special" data-i18n="tool.entity.special">Specified small corporation, e.g. property rental (5M / 4M KRW)</option>
+      </select>
+      <p class="vla-hint" data-i18n="tool.entity.note">A specified small corporation (부동산임대업 주업 등 특정법인) gets a 5,000,000 KRW no-log allowance and a 4,000,000 KRW depreciation cap instead of the usual 15/8 million (Corporate Tax Act Enforcement Decree §50-2).</p>
     </div>
 
     <div class="result" id="vla-result" hidden></div>

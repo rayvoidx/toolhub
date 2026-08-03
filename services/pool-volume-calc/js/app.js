@@ -92,6 +92,7 @@
   var unit = $("unit"), shape = $("shape"), depthmode = $("depthmode");
   var len = $("len"), wid = $("wid"), dia = $("dia");
   var depth = $("depth"), shallow = $("shallow"), deep = $("deep");
+  var freefactor = $("freefactor");
   var result = $("result"), errEl = $("err");
   if (!unit || !shape || !depthmode || !len) return;
 
@@ -111,6 +112,7 @@
     var isRound = shape.value === "round";
     $("g-lw").hidden = isRound;
     $("g-dia").hidden = !isRound;
+    $("g-factor").hidden = shape.value !== "free";
     var sloped = depthmode.value === "slope";
     $("g-const").hidden = sloped;
     $("g-slope").hidden = !sloped;
@@ -133,12 +135,22 @@
     if (sloped && d2 < d1) return fail("tool.err.deep");
     var limit = unit.value === "m" ? 150 : 500;
     if (a > limit || b > limit || d1 > limit || d2 > limit) return fail("tool.err.range");
+    // 자유형은 외접 직사각형 대비 잔여 비율을 직접 조정할 수 있다(기본 90%).
+    var factor = 0.9;
+    if (shape.value === "free") {
+      var fp = num(freefactor);
+      if (!isFinite(fp) || fp < 50 || fp > 100) return fail("tool.err.factor");
+      factor = fp / 100;
+    }
 
     // 일정 경사 바닥은 평균 수심이 정확값이다(깊은 쪽에서 늘어난 쐐기 = 얕은 쪽에서 줄어든 쐐기).
     var avgD = (d1 + d2) / 2;
     // 수면 면적: 직사각형은 L×W, 원형·타원형은 π/4 × 장축 × 단축(원은 두 축이 지름으로 동일).
+    // 자유형·콩팥형은 외접 직사각형에서 10% 뺀 현장 추정치(가이드 본문과 동일 규칙).
     var aFt = a * toFt, bFt = b * toFt;
-    var areaFt2 = shape.value === "rect" ? aFt * bFt : Math.PI / 4 * aFt * bFt;
+    var areaFt2 = shape.value === "rect" ? aFt * bFt
+      : shape.value === "free" ? aFt * bFt * factor
+      : Math.PI / 4 * aFt * bFt;
     var ft3 = areaFt2 * avgD * toFt;
 
     $("r-gal").textContent = fmt(Math.round(ft3 * GAL_PER_FT3), 0);
@@ -156,7 +168,7 @@
   var live = function () { if (!result.hidden || !errEl.hidden) calc(); };
 
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, dia, depth, shallow, deep].forEach(function (el) {
+  [len, wid, dia, depth, shallow, deep, freefactor].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   [unit, shape, depthmode].forEach(function (el) {

@@ -95,6 +95,9 @@
 
   var input = document.getElementById("qr-text");
   var sizeSel = document.getElementById("qr-size");
+  var customRow = document.getElementById("qr-custom-row");
+  var customSize = document.getElementById("qr-custom-size");
+  var MIN_PX = 64, MAX_PX = 4096;
   var ecSel = document.getElementById("qr-ec");
   var msgEl = document.getElementById("qr-message");
   var wrapEl = document.getElementById("qr-preview-wrap");
@@ -112,7 +115,8 @@
     "tool.overflow": "Input is too long — shorten the text or lower the error correction level.",
     "tool.engineError": "The QR engine failed to load. Please refresh the page.",
     "tool.downloadError": "Could not create the PNG file. Please try a different browser.",
-    "tool.stats": "Version {version} · {modules}×{modules} modules · {bytes} bytes"
+    "tool.stats": "Version {version} · {modules}×{modules} modules · {bytes} bytes",
+    "tool.sizeRange": "Enter a custom size between 64 and 4096 px."
   };
   function t(key) {
     var v = (window.I18N && typeof window.I18N.t === "function") ? window.I18N.t(key) : null;
@@ -139,12 +143,16 @@
       var raw = localStorage.getItem(OPTS_KEY);
       if (!raw) return;
       var o = JSON.parse(raw);
-      if (o && (o.size === "256" || o.size === "512" || o.size === "1024")) sizeSel.value = o.size;
+      if (o && ["128", "256", "512", "1024", "2048", "custom"].indexOf(o.size) !== -1) sizeSel.value = o.size;
+      if (o && customSize) {
+        var cp = parseInt(o.customSize, 10);
+        if (isFinite(cp) && cp >= MIN_PX && cp <= MAX_PX) customSize.value = String(cp);
+      }
       if (o && (o.ec === "L" || o.ec === "M" || o.ec === "Q" || o.ec === "H")) ecSel.value = o.ec;
     } catch (e) { /* 손상된 저장값·프라이빗 모드 — 기본값 유지 */ }
   }
   function saveOpts() {
-    try { localStorage.setItem(OPTS_KEY, JSON.stringify({ size: sizeSel.value, ec: ecSel.value })); }
+    try { localStorage.setItem(OPTS_KEY, JSON.stringify({ size: sizeSel.value, ec: ecSel.value, customSize: customSize ? customSize.value : "" })); }
     catch (e) { /* 프라이빗 모드 — 저장 생략, 기능에는 영향 없음 */ }
   }
 
@@ -156,16 +164,31 @@
       .replace(/\{bytes\}/g, String(lastQR.byteLength));
   }
 
+  // 선택 크기 → 픽셀. "custom" 이면 사용자 입력을 검증(64~4096) — 범위 밖·빈 값은 null
+  function requestedPx() {
+    if (sizeSel.value !== "custom") return parseInt(sizeSel.value, 10) || 512;
+    var v = parseInt(customSize && customSize.value, 10);
+    if (!isFinite(v) || v < MIN_PX || v > MAX_PX) return null;
+    return v;
+  }
+
+  function syncCustomRow() {
+    if (customRow) customRow.hidden = (sizeSel.value !== "custom");
+  }
+
   function draw() {
     if (!lastQR) return;
-    var px = parseInt(sizeSel.value, 10) || 512;
+    var px = requestedPx();
+    if (px === null) { setMessage("tool.sizeRange", true); return; }  // 조용한 실패 금지
+    msgEl.hidden = true;
+    var n = lastQR.size;
+    var scale = Math.max(1, Math.floor(px / (n + 8)));   // 모듈당 정수 픽셀 + quiet zone 4모듈 × 양쪽
+    px = Math.max(px, n * scale + 8 * scale);        // 작은 크기 선택 + 큰 QR: 잘리지 않게 최소 크기 보장
     canvas.width = px;                               // 선택 크기 그대로 = 다운로드 파일 크기
     canvas.height = px;
     var ctx = canvas.getContext("2d");
     ctx.fillStyle = "#ffffff";                       // 흰 배경 (스캔 대비 확보)
     ctx.fillRect(0, 0, px, px);
-    var n = lastQR.size;
-    var scale = Math.max(1, Math.floor(px / (n + 8)));   // 모듈당 정수 픽셀 + quiet zone 4모듈 × 양쪽
     var offset = Math.floor((px - n * scale) / 2);       // 중앙 정렬 → 여백 ≥ 4모듈 보장
     ctx.fillStyle = "#000000";
     for (var r = 0; r < n; r++) {
@@ -216,12 +239,13 @@
     if (timer) clearTimeout(timer);
     timer = setTimeout(generate, DEBOUNCE_MS);
   });
-  sizeSel.addEventListener("change", function () { saveOpts(); if (lastQR) draw(); });
+  sizeSel.addEventListener("change", function () { syncCustomRow(); saveOpts(); if (lastQR) draw(); });
+  if (customSize) customSize.addEventListener("input", function () { saveOpts(); if (lastQR) draw(); });
   ecSel.addEventListener("change", function () { saveOpts(); generate(); });
   dlBtn.addEventListener("click", download);
   document.addEventListener("i18n:change", updateStats); // 언어 전환 시 동적 문구 갱신
 
-  loadOpts();   // localStorage "qr-gen:opts" 에서 크기·레벨 복원
+  loadOpts();   syncCustomRow();  // localStorage "qr-gen:opts" 에서 크기·레벨 복원
   generate();   // 초기 상태를 명시적으로 표시 (빈 입력 안내 또는 엔진 오류 안내)
   // TOOLJS:END
 })();

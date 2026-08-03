@@ -95,8 +95,13 @@
   var cfg = window.APP_CONFIG || {};
   var SLUG = cfg.slug || "exchange-rate-conv";
 
-  var CODES = ["USD","EUR","JPY","GBP","CNY","INR","AUD","CAD","CHF","KRW","BRL","RUB","IDR","HKD","SGD","MXN"];
-  var ZERO_DEC = { JPY: 1, KRW: 1, IDR: 1 };   // 소수 0자리 통화
+  // 주요 16종 + 자주 요청되는 통화 (라이브 API 는 전부 제공; 소스에 없으면 "missing" 안내 경로)
+  var CODES = [
+    "USD","EUR","JPY","GBP","CNY","INR","AUD","CAD","CHF","KRW","BRL","RUB","IDR","HKD","SGD","MXN",
+    "AED","ARS","CLP","COP","CZK","DKK","EGP","HUF","ILS","MYR","NGN","NOK","NZD","PHP","PKR","PLN",
+    "RON","SAR","SEK","THB","TRY","TWD","VND","ZAR"
+  ];
+  var ZERO_DEC = { JPY: 1, KRW: 1, IDR: 1, VND: 1, CLP: 1, COP: 1 };   // 소수 0자리 통화
   var MAX = 1e12;                               // 상한: 1조
   var CACHE_MS = 24 * 60 * 60 * 1000;           // 캐시 유효 24h
   var FETCH_TIMEOUT = 6000;
@@ -106,7 +111,13 @@
     USD:"US Dollar", EUR:"Euro", JPY:"Japanese Yen", GBP:"British Pound", CNY:"Chinese Yuan",
     INR:"Indian Rupee", AUD:"Australian Dollar", CAD:"Canadian Dollar", CHF:"Swiss Franc",
     KRW:"South Korean Won", BRL:"Brazilian Real", RUB:"Russian Ruble", IDR:"Indonesian Rupiah",
-    HKD:"Hong Kong Dollar", SGD:"Singapore Dollar", MXN:"Mexican Peso"
+    HKD:"Hong Kong Dollar", SGD:"Singapore Dollar", MXN:"Mexican Peso",
+    AED:"UAE Dirham", ARS:"Argentine Peso", CLP:"Chilean Peso", COP:"Colombian Peso",
+    CZK:"Czech Koruna", DKK:"Danish Krone", EGP:"Egyptian Pound", HUF:"Hungarian Forint",
+    ILS:"Israeli Shekel", MYR:"Malaysian Ringgit", NGN:"Nigerian Naira", NOK:"Norwegian Krone",
+    NZD:"New Zealand Dollar", PHP:"Philippine Peso", PKR:"Pakistani Rupee", PLN:"Polish Zloty",
+    RON:"Romanian Leu", SAR:"Saudi Riyal", SEK:"Swedish Krona", THB:"Thai Baht",
+    TRY:"Turkish Lira", TWD:"New Taiwan Dollar", VND:"Vietnamese Dong", ZAR:"South African Rand"
   };
 
   // 빌드 시점 고정 번들 스냅샷 (오프라인·API 전멸 최종 폴백). USD 기준. 2026-07-11 open.er-api.com.
@@ -115,7 +126,11 @@
     rates: {
       USD:1, EUR:0.875572, JPY:161.768905, GBP:0.745953, CNY:6.784818, INR:95.439158,
       AUD:1.438725, CAD:1.415327, CHF:0.80792, KRW:1502.980229, BRL:5.114592, RUB:76.398282,
-      IDR:18097.745145, HKD:7.839827, SGD:1.291439, MXN:17.496301
+      IDR:18097.745145, HKD:7.839827, SGD:1.291439, MXN:17.496301,
+      // 확장 통화: 오프라인 최종 폴백용 근사값(같은 시점 기준). 라이브 성공 시 즉시 대체된다.
+      AED:3.6725, ARS:1180, CLP:935, COP:4020, CZK:21.6, DKK:6.533, EGP:48.5, HUF:346,
+      ILS:3.52, MYR:4.22, NGN:1540, NOK:10.15, NZD:1.62, PHP:56.8, PKR:284, PLN:3.73,
+      RON:4.35, SAR:3.75, SEK:9.58, THB:33.2, TRY:45.6, TWD:30.4, VND:26100, ZAR:17.9
     }
   };
 

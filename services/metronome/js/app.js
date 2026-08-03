@@ -93,7 +93,7 @@
      tap tempo, time signatures with accented downbeat, tempo-marking table for SEO.
      State: localStorage "<slug>:state" only (bpm, time signature). No external API. */
 
-  var MIN_BPM = 30, MAX_BPM = 260, DEFAULT_BPM = 120, DEFAULT_SIG = "4/4";
+  var MIN_BPM = 30, MAX_BPM = 300, DEFAULT_BPM = 120, DEFAULT_SIG = "4/4", DEFAULT_VOL = 100;
   var SCHEDULE_AHEAD = 0.1;    // seconds scheduled into the future on every scheduler tick
   var LOOKAHEAD_MS = 25;       // scheduler tick interval — small vs. SCHEDULE_AHEAD, per spec
   var NOTE_LEN = 0.06;         // click envelope length in seconds
@@ -104,10 +104,20 @@
   // downbeat sound. 6/8 is compound (two dotted-quarter pulses of three eighths each), so it
   // clicks every eighth note and accents beats 1 and 4 to keep the two main pulses audible.
   var TIME_SIGS = {
+    "1/4": { beats: 1, accents: [] },       // 균일 클릭 (악센트 없음) — 단순 박자 연습용
     "2/4": { beats: 2, accents: [0] },
+    "2/2": { beats: 2, accents: [0] },       // cut time — 2박(half-note pulse)
+    "6/4": { beats: 6, accents: [0, 3] },
+    "7/4": { beats: 7, accents: [0, 4] },    // 4+3 grouping
+    "3/8": { beats: 3, accents: [0] },
+    "5/8": { beats: 5, accents: [0, 3] },    // 3+2
     "3/4": { beats: 3, accents: [0] },
     "4/4": { beats: 4, accents: [0] },
-    "6/8": { beats: 6, accents: [0, 3] }
+    "5/4": { beats: 5, accents: [0, 3] },   // 3+2 grouping (the common feel)
+    "6/8": { beats: 6, accents: [0, 3] },
+    "7/8": { beats: 7, accents: [0, 2, 4] },  // 2+2+3
+    "9/8": { beats: 9, accents: [0, 3, 6] },
+    "12/8": { beats: 12, accents: [0, 3, 6, 9] }
   };
 
   // Classical tempo markings (Italian, universal) mapped to an inclusive upper BPM bound —
@@ -143,6 +153,13 @@
     return "presto";
   }
   function secPerBeat(bpm) { return 60.0 / bpm; }
+  // 볼륨: 0~100 정수. 숫자가 아니면 기본값(100 = 기존 동작 유지)
+  function clampVol(raw) {
+    var n = parseFloat(String(raw == null ? "" : raw).trim());
+    if (!isFinite(n)) return DEFAULT_VOL;
+    n = Math.round(n);
+    return n < 0 ? 0 : (n > 100 ? 100 : n);
+  }
   // 탭 템포: 연속된 탭 간격의 평균 → BPM. 탭이 2개 미만이면 아직 계산 불가(null).
   function tapBpm(taps) {
     if (!taps || taps.length < 2) return null;
@@ -157,7 +174,7 @@
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
       clampBpm: clampBpm, normSig: normSig, markingFor: markingFor, secPerBeat: secPerBeat,
-      tapBpm: tapBpm, TIME_SIGS: TIME_SIGS, TEMPO_MARKS: TEMPO_MARKS,
+      tapBpm: tapBpm, clampVol: clampVol, TIME_SIGS: TIME_SIGS, TEMPO_MARKS: TEMPO_MARKS,
       MIN_BPM: MIN_BPM, MAX_BPM: MAX_BPM
     };
     return;
@@ -178,6 +195,7 @@
   var tempoNameEl = $("tempo-name"), bpmHintEl = $("bpm-hint");
   var playBtn = $("play-btn"), tapBtn = $("tap-btn");
   var sigSelect = $("timesig");
+  var volInput = $("volume"), volValEl = $("volume-val");
   var beatsWrap = $("beat-dots");
   var statusEl = $("metro-status");
   var tableRows = document.querySelectorAll(".tempo-row");
@@ -186,6 +204,7 @@
   /* ---- 상태 ---- */
   var bpm = DEFAULT_BPM;
   var sig = DEFAULT_SIG;
+  var vol = DEFAULT_VOL;
   var isPlaying = false;
   var audioCtx = null;
   var schedulerId = null;
@@ -204,10 +223,11 @@
       var obj = JSON.parse(raw);
       bpm = clampBpm(obj && obj.bpm, DEFAULT_BPM);
       sig = normSig(obj && obj.sig);
+      if (obj && obj.vol != null) vol = clampVol(obj.vol);
     } catch (e) { /* 손상된 저장값 — 기본값 유지 */ }
   }
   function saveState() {
-    try { localStorage.setItem(SKEY, JSON.stringify({ bpm: bpm, sig: sig })); }
+    try { localStorage.setItem(SKEY, JSON.stringify({ bpm: bpm, sig: sig, vol: vol })); }
     catch (e) { /* noop */ }
   }
 
@@ -266,12 +286,15 @@
   }
   function scheduleClick(beatNum, time) {
     var accented = TIME_SIGS[sig].accents.indexOf(beatNum) !== -1;
+    var peak = (accented ? 1 : 0.5) * (vol / 100);
+    // 볼륨 0 = 무음 연습 모드: 소리는 내지 않고 비트 표시만 유지 (지수 램프는 0 을 못 씀)
+    if (!(peak > 0.001)) { notesInQueue.push({ beat: beatNum, time: time }); return; }
     var osc = audioCtx.createOscillator();
     var gain = audioCtx.createGain();
     osc.type = "square";
     osc.frequency.value = accented ? 1500 : 1000;
     gain.gain.setValueAtTime(0.0001, time);
-    gain.gain.exponentialRampToValueAtTime(accented ? 1 : 0.5, time + 0.001);
+    gain.gain.exponentialRampToValueAtTime(peak, time + 0.001);
     gain.gain.exponentialRampToValueAtTime(0.0001, time + NOTE_LEN);
     osc.connect(gain);
     gain.connect(audioCtx.destination);
@@ -414,8 +437,22 @@
   });
 
   /* ---- 초기화 ---- */
+  function renderVol() {
+    if (!volInput) return;
+    volInput.value = String(vol);
+    if (volValEl) volValEl.textContent = vol + "%";
+  }
+  if (volInput) {
+    volInput.addEventListener("input", function () {
+      vol = clampVol(volInput.value);
+      renderVol();
+      saveState();
+    });
+  }
+
   loadState();
   sigSelect.value = sig;
+  renderVol();
   renderBeatsDom();
   renderBpm();
   setPlayLabel();

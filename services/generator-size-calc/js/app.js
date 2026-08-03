@@ -135,7 +135,10 @@
 
     // 모터는 하나씩 기동한다고 본다 — 전체 상시 부하 + 가장 큰 서지 증분 하나.
     var peak = running + maxDelta;
-    var need = peak * 1.10;
+    var hEl = $("headroom");
+    var hPct = hEl ? parseFloat(hEl.value) : 10;
+    if (!isFinite(hPct) || hPct < 0 || hPct > 100) hPct = 10;
+    var need = peak * (1 + hPct / 100);
     var size = 0;
     for (var i = 0; i < SIZES.length; i++) { if (SIZES[i] >= need) { size = SIZES[i]; break; } }
     var over = size === 0;
@@ -155,6 +158,8 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
+  var headroomEl = $("headroom");
+  if (headroomEl) headroomEl.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   custom.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   custom.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   ITEMS.forEach(function (it) {

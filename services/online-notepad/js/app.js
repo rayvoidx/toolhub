@@ -89,7 +89,7 @@
 (function tool() {
   "use strict";
   // TOOLJS:START
-  /* Online Notepad — 브라우저에만 저장되는 다중(최대 5개) 노트 메모장.
+  /* Online Notepad — 브라우저에만 저장되는 다중(최대 10개) 노트 메모장.
      상태: localStorage "<slug>:notes"(JSON 배열) / ":active"(인덱스) /
      ":mono" / ":fontsize". 외부 API 없음, 서버 전송 없음. */
 
@@ -100,7 +100,7 @@
   var K_MONO = SLUG + ":mono";
   var K_FONTSIZE = SLUG + ":fontsize";
 
-  var MAX_NOTES = 5;
+  var MAX_NOTES = 10;
   var MAX_LEN = 300000; // 극단값 캡 — 노트 1개당 약 300,000자 (일반 사용량 대비 충분히 넉넉함)
   var SAVE_DEBOUNCE = 500; // ms
   var DEFAULT_FONTSIZE = 16;
@@ -127,6 +127,7 @@
     return han + restWords;
   }
   function countChars(text) { return Array.from(text).length; }
+  function countLines(text) { return text === "" ? 0 : text.split(/\r\n|\r|\n/).length; }
 
   /* ---- 상태 로드/검증 (손상된 localStorage 값에도 안전하게 폴백) ---- */
   function loadNotes() {
@@ -166,6 +167,7 @@
   var fontsizeValEl = $("np-fontsize-val");
   var wordsEl = $("np-words");
   var charsEl = $("np-chars");
+  var linesEl = $("np-lines");
   var savedStateEl = $("np-savedstate");
   var copyBtn = $("np-copy");
   var downloadBtn = $("np-download");
@@ -276,7 +278,7 @@
     var canAdd = notes.length < MAX_NOTES;
     addBtn.disabled = !canAdd;
     addBtn.setAttribute("aria-label", t("tool.tab.add", "Add a new note"));
-    addBtn.title = canAdd ? t("tool.tab.add", "Add a new note") : t("tool.tab.addMax", "5-note limit reached — close a tab to add another");
+    addBtn.title = canAdd ? t("tool.tab.add", "Add a new note") : t("tool.tab.addMax", "10-note limit reached — close a tab to add another");
     addBtn.addEventListener("click", addTab);
     tabbarEl.appendChild(addBtn);
   }
@@ -322,6 +324,7 @@
     var text = textEl.value;
     if (wordsEl) wordsEl.textContent = fmt(countWords(text));
     if (charsEl) charsEl.textContent = fmt(countChars(text));
+    if (linesEl) linesEl.textContent = fmt(countLines(text));
   }
   function fmt(n) {
     try {
@@ -358,7 +361,7 @@
     var n = DEFAULT_FONTSIZE;
     try {
       var v = parseInt(localStorage.getItem(K_FONTSIZE), 10);
-      if (isFinite(v) && v >= 13 && v <= 24) n = v;
+      if (isFinite(v) && v >= 12 && v <= 32) n = v;
     } catch (e) { /* noop */ }
     return n;
   }
@@ -470,7 +473,10 @@
 
   /* ---- 지우기 ---- */
   function requestClear() {
-    if (!(notes[active] || "").trim()) return; // 빈 노트는 확인 없이 아무것도 하지 않음
+    if (!(notes[active] || "").trim()) { // 빈 노트 — 조용히 끝내지 않고 이유를 알린다
+      showMsg(t("tool.msg.clearEmpty", "Nothing to clear — this note is already empty."));
+      return;
+    }
     openConfirm(t("tool.confirm.clear", "Clear this note? This can't be undone."), doClear);
   }
   function doClear() {

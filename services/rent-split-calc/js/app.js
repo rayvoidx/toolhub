@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var ROWS = 4;
+  var ROWS = 6;
   var rent = $("rent"), method = $("method"), mode = $("mode");
   var result = $("result"), errEl = $("err"), list = $("r-list"), headV = $("h-value");
   if (!rent || !method || !mode || !result || !list || !headV) return;
@@ -129,13 +129,17 @@
     return { rows: rows };
   }
 
+  // 비례 비중: 기본 100%, 하이브리드 70/80/50%. 모르는 값은 기본(100%)으로 떨어뜨린다.
+  var SHARES = { hybrid: 0.7, hybrid80: 0.8, hybrid50: 0.5 };
+  function propShare() { return SHARES[mode.value] || 1; }
+
   // 가중치 합은 항상 1. 하이브리드는 비례 70% + 균등 30% — 공용 공간은 똑같이 쓰기 때문.
   function weights(rows) {
     var n = rows.length, i, sum = 0, w = [], p;
     if (method.value === "equal") { for (i = 0; i < n; i++) w.push(1 / n); return w; }
     for (i = 0; i < n; i++) sum += rows[i].v;
     if (!(sum > 0)) return null;
-    p = mode.value === "hybrid" ? 0.7 : 1;
+    p = propShare();
     for (i = 0; i < n; i++) w.push(p * rows[i].v / sum + (1 - p) / n);
     return w;
   }
@@ -155,11 +159,15 @@
     return out;
   }
 
-  function noteKey(n) {
-    if (n === 1) return "tool.note.single";
-    if (method.value === "equal") return "tool.note.equal";
-    if (method.value === "size") return mode.value === "hybrid" ? "tool.note.sizeHybrid" : "tool.note.sizeBasic";
-    return mode.value === "hybrid" ? "tool.note.incomeHybrid" : "tool.note.incomeBasic";
+  function noteText(n) {
+    if (n === 1) return t("tool.note.single");
+    if (method.value === "equal") return t("tool.note.equal");
+    var p = propShare(), size = method.value === "size";
+    if (p === 1) return t(size ? "tool.note.sizeBasic" : "tool.note.incomeBasic");
+    if (p === 0.7) return t(size ? "tool.note.sizeHybrid" : "tool.note.incomeHybrid");
+    return t(size ? "tool.note.sizeHybridP" : "tool.note.incomeHybridP")
+      .replace("{p}", String(Math.round(p * 100)))
+      .replace("{q}", String(Math.round((1 - p) * 100)));
   }
 
   function calc() {
@@ -202,7 +210,7 @@
       div.appendChild(nm); div.appendChild(amt); div.appendChild(pct);
       list.appendChild(div);
     });
-    $("r-note").textContent = t(noteKey(n));
+    $("r-note").textContent = noteText(n);
 
     errEl.hidden = true;
     result.hidden = false;

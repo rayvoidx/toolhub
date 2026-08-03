@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -141,6 +141,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -205,6 +215,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option value="1.9" data-i18n="tool.activity.veryactive">Extra active (hard exercise or physical job) — ×1.9</option>
     </select>
 
+    <label for="rate-select" data-i18n="tool.rate.label">Calorie deficit / surplus per day</label>
+    <select id="rate-select"></select>
+
     <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate BMR</button>
 
     <div class="result" id="result-box" hidden>
@@ -221,7 +234,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p style="font-weight:600;font-size:14px;margin:0 0 6px;" data-i18n="tool.result.guide">Daily calorie guide</p>
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;">
           <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
-            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.cut">Cutting (−500 kcal)</div>
+            <div style="font-size:13px;color:var(--muted);" id="r-cut-label">Cutting (−500 kcal)</div>
             <div style="font-weight:700;color:#3b82f6;" id="r-cut"></div>
           </div>
           <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
@@ -229,7 +242,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div style="font-weight:700;color:#16a34a;" id="r-maintain"></div>
           </div>
           <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
-            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.bulk">Bulking (+500 kcal)</div>
+            <div style="font-size:13px;color:var(--muted);" id="r-bulk-label">Bulking (+500 kcal)</div>
             <div style="font-weight:700;color:#f97316;" id="r-bulk"></div>
           </div>
         </div>

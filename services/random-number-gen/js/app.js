@@ -102,6 +102,7 @@
     powerball: { main: { count: 5, min: 1, max: 69 }, bonus: { count: 1, min: 1, max: 26, color: "#dc2626", fg: "#fff", star: false } },
     mega:      { main: { count: 5, min: 1, max: 70 }, bonus: { count: 1, min: 1, max: 24, color: "#f59e0b", fg: "#1f2937", star: false } },
     euro:      { main: { count: 5, min: 1, max: 50 }, bonus: { count: 2, min: 1, max: 12, color: "#eab308", fg: "#3a2e00", star: true } },
+    uk:        { main: { count: 6, min: 1, max: 59 }, bonus: null },
     lotto645:  { main: { count: 6, min: 1, max: 45, korean: true }, bonus: null }
   };
 
@@ -166,7 +167,7 @@
       }
       return out;
     }
-    var seen = {}, res = [];                            // Set rejection (large range, k ≤ 100)
+    var seen = {}, res = [];                            // Set rejection (large range, k ≤ 500)
     while (res.length < k) {
       var v = randInRange(min, max);
       if (!seen[v]) { seen[v] = 1; res.push(v); }
@@ -200,7 +201,7 @@
     if (min > max) { var tmp = min; min = max; max = tmp; notices.push({ key: "tool.notice.swap" }); }
 
     if (count < 1) { count = 1; notices.push({ key: "tool.notice.countLow" }); }
-    if (count > 100) { count = 100; notices.push({ key: "tool.notice.countHigh" }); }
+    if (count > 500) { count = 500; notices.push({ key: "tool.notice.countHigh" }); }
 
     var allowDup = dupEl.checked;
     var size = max - min + 1;
@@ -249,7 +250,7 @@
     var preset = PRESETS[key] || PRESETS.powerball;
     var plays = parseInt(playsEl.value, 10);
     if (!isFinite(plays) || plays < 1) plays = 1;
-    if (plays > 5) plays = 5;
+    if (plays > 10) plays = 10;
     playsEl.value = plays;
 
     var rows = [];

@@ -207,12 +207,22 @@
     var out = den === 1 ? String(num) : num + "/" + den;
     return neg ? "-" + out : out;
   }
+  // 0°~360° 범위로 접은 동일 위치각(coterminal). 이미 범위 안이면 null (표시할 게 없다).
+  function coterminalDeg(deg) {
+    if (!isFinite(deg)) return null;
+    if (deg >= 0 && deg < 360) return null;
+    var r = deg % 360;
+    if (r < 0) r += 360;
+    return Number(r.toPrecision(12));
+  }
+
   // node 검증용 노출 — 브라우저에는 module 이 없어 건너뛴다
   if (typeof module !== "undefined" && module.exports) {
     module.exports = {
       DEG_PER: DEG_PER, toDegrees: toDegrees, fromDegrees: fromDegrees,
       gcd: gcd, degToPiFraction: degToPiFraction, formatPiFraction: formatPiFraction,
-      decomposeDMS: decomposeDMS, composeDMS: composeDMS, fmt: fmt, turnFraction: turnFraction
+      decomposeDMS: decomposeDMS, composeDMS: composeDMS, fmt: fmt, turnFraction: turnFraction,
+      coterminalDeg: coterminalDeg
     };
     return;
   }
@@ -222,7 +232,7 @@
   var degEl = $("ang-degrees"), radEl = $("ang-radians"), gradEl = $("ang-gradians"), turnEl = $("ang-turns");
   var dmsToggle = $("ang-dms-toggle"), dmsWrap = $("ang-dms-wrap"), degWrap = $("ang-deg-wrap");
   var dDEl = $("ang-dms-d"), dMEl = $("ang-dms-m"), dSEl = $("ang-dms-s");
-  var exactEl = $("ang-exact"), errEl = $("ang-err");
+  var exactEl = $("ang-exact"), cotermEl = $("ang-coterm"), errEl = $("ang-err");
   var tbody = $("ang-tbody");
   if (!degEl || !radEl || !gradEl || !turnEl || !tbody) return;
 
@@ -262,6 +272,16 @@
     exactEl.textContent = t("tool.exact", "Exact: {x} rad").replace("{x}", piStr);
   }
 
+  // 360°를 넘거나 음수인 각에만 0~360° 등가각을 덧붙인다 (기본 30° 등에서는 숨김)
+  function renderCoterminal() {
+    if (!cotermEl) return;
+    var c = coterminalDeg(current);
+    var s = c == null ? null : fmt(c);
+    if (s == null) { cotermEl.hidden = true; return; }
+    cotermEl.hidden = false;
+    cotermEl.textContent = t("tool.coterminal", "Same direction as {x}° (0–360° range)").replace("{x}", s);
+  }
+
   function renderTableHighlight() {
     var rows = tbody.querySelectorAll("tr");
     for (var i = 0; i < rows.length; i++) {
@@ -292,6 +312,7 @@
     if (skip !== "turn") setTurnView();
     if (skip !== "dms") setDmsView();
     renderExact();
+    renderCoterminal();
     renderTableHighlight();
   }
 
@@ -373,6 +394,7 @@
   // 언어 전환 시 동적 문구(정확분수·오류) 재적용 — 정적 라벨은 i18n 엔진이 처리
   document.addEventListener("i18n:change", function () {
     renderExact();
+    renderCoterminal();
     if (errEl && !errEl.hidden) showError(true);
   });
 

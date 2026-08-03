@@ -198,6 +198,23 @@
     $("r-elements").textContent = String(syms.length);
     $("r-atoms").textContent = String(atoms);
 
+    // 선택 입력: 시료 질량(g) → 몰수. 비우면 카드를 숨긴다.
+    var sample = $("sample"), sRaw = sample ? String(sample.value).replace(/^\s+|\s+$/g, "") : "";
+    var card = $("moles-card");
+    if (sRaw === "") { card.hidden = true; }
+    else {
+      var unitSel = $("sample-unit"), inMol = unitSel && unitSel.value === "mol";
+      var v = Number(sRaw);
+      if (!isFinite(v) || v < 0) { card.hidden = true; return fail(inMol ? "tool.err.moles" : "tool.err.sample"); }
+      // g -> mol 은 나누고, mol -> g 는 곱한다. 라벨도 함께 바꾼다.
+      var outVal = inMol ? v * total : v / total;
+      var lblKey = inMol ? "tool.r.grams" : "tool.r.moles", lbl = $("moles-label");
+      lbl.setAttribute("data-i18n", lblKey);
+      lbl.textContent = t(lblKey);
+      $("r-moles").textContent = (outVal === 0 || outVal >= 0.001 ? outVal.toFixed(4) : outVal.toExponential(3)) + (inMol ? " g" : " mol");
+      card.hidden = false;
+    }
+
     while (body.firstChild) body.removeChild(body.firstChild);
     for (i = 0; i < syms.length; i++) {
       var s = syms[i], mass = counts[s] * W[s];
@@ -216,6 +233,9 @@
   $("calc-btn").addEventListener("click", calc);
   formula.addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); calc(); } });
   formula.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  $("sample").addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  $("sample-unit").addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  $("sample").addEventListener("keydown", function (e) { if (e.key === "Enter") { e.preventDefault(); calc(); } });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-22",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -242,9 +242,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="text" id="down-input" inputmode="numeric" autocomplete="off"
              placeholder="e.g. 76,000" data-i18n-placeholder="tool.down.ph">
       <div class="chips" id="down-chips" role="group" aria-label="Down payment percentage presets" data-i18n-aria-label="tool.down.chipsAria">
+        <button type="button" class="chip" data-downpct="3.5">3.5%</button>
         <button type="button" class="chip" data-downpct="5">5%</button>
         <button type="button" class="chip" data-downpct="10">10%</button>
+        <button type="button" class="chip" data-downpct="15">15%</button>
         <button type="button" class="chip" data-downpct="20">20%</button>
+        <button type="button" class="chip" data-downpct="25">25%</button>
       </div>
       <p class="hint" id="down-hint"></p>
     </div>
@@ -262,9 +265,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="chips" id="term-chips" role="group" aria-label="Loan term presets" data-i18n-aria-label="tool.term.chipsAria">
+      <button type="button" class="chip" data-term="10">10</button>
       <button type="button" class="chip" data-term="15">15</button>
       <button type="button" class="chip" data-term="20">20</button>
+      <button type="button" class="chip" data-term="25">25</button>
       <button type="button" class="chip" data-term="30">30</button>
+      <button type="button" class="chip" data-term="40">40</button>
     </div>
 
     <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
@@ -276,6 +282,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="text" id="extra-input" inputmode="numeric" autocomplete="off"
              placeholder="e.g. 200" data-i18n-placeholder="tool.extra.ph">
       <p class="hint" data-i18n="tool.extra.hint">Added to principal every month — pay off sooner and save on interest.</p>
+      <div class="row2" style="margin-top:12px;">
+        <div>
+          <label for="tax-input" data-i18n="tool.tax.label">Property tax (per year, optional)</label>
+          <input type="text" id="tax-input" inputmode="numeric" autocomplete="off" placeholder="e.g. 3,600">
+        </div>
+        <div>
+          <label for="ins-input" data-i18n="tool.ins.label">Home insurance + HOA (per year, optional)</label>
+          <input type="text" id="ins-input" inputmode="numeric" autocomplete="off" placeholder="e.g. 1,800">
+        </div>
+      </div>
     </details>
 
     <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
@@ -289,6 +305,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="rcard"><div class="rc-label" data-i18n="tool.result.totalInterest">Total interest</div><div class="rc-val" id="r-interest"></div></div>
           <div class="rcard"><div class="rc-label" data-i18n="tool.result.totalPaid">Total paid (principal + interest)</div><div class="rc-val" id="r-total"></div></div>
           <div class="rcard"><div class="rc-label" data-i18n="tool.result.payoffTime">Payoff time</div><div class="rc-val" id="r-payoff"></div></div>
+          <div class="rcard" id="piti-card" hidden><div class="rc-label" data-i18n="tool.result.piti">Total monthly payment (with taxes &amp; insurance)</div><div class="rc-val" id="r-piti"></div></div>
         </div>
         <p class="subtle" id="r-sub"></p>
         <p class="subtle" id="r-clipped" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>

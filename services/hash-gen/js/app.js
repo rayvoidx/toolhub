@@ -307,8 +307,24 @@
     }
   }
 
+  // 체크섬 붙여넣기 정규화: ".sha256 파일" 한 줄("<hex>  file.iso"),
+  // BSD 형식("SHA256 (file) = <hex>"), 공백/개행 섞인 hex 를 모두 받아준다.
+  var HEX_LENS = { 32: 1, 40: 1, 64: 1, 96: 1, 128: 1 };
+  function normalizeChecksum(raw) {
+    var s = (raw || "").trim().toLowerCase();
+    if (!s) return "";
+    var tokens = s.split(/[^0-9a-f]+/);
+    for (var i = 0; i < tokens.length; i++) {
+      if (HEX_LENS[tokens[i].length]) return tokens[i];
+    }
+    // 공백만 섞인 hex (예: "ab cd ef …") 도 허용
+    var joined = s.replace(/\s+/g, "");
+    if (/^[0-9a-f]+$/.test(joined) && HEX_LENS[joined.length]) return joined;
+    return s;
+  }
+
   function applyVerify() {
-    var val = (verifyEl.value || "").trim().toLowerCase();
+    var val = normalizeChecksum(verifyEl.value);
     var anyMatch = false, anyHex = false;
     ALGOS.forEach(function (a) {
       var hv = currentHex[a.id];

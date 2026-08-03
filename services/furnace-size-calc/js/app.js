@@ -89,14 +89,14 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var area = $("area"), unit = $("unit"), zone = $("zone"), insul = $("insul"), ceilSel = $("ceil");
+  var area = $("area"), unit = $("unit"), zone = $("zone"), insul = $("insul"), ceilSel = $("ceil"), afueSel = $("afue");
   var result = $("result"), errEl = $("err"), noteBig = $("note-big");
-  if (!area || !unit || !zone || !insul || !ceilSel) return;
+  if (!area || !unit || !zone || !insul || !ceilSel || !afueSel) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
   var SQFT_PER_SQM = 10.7639;
-  var AFUE = 0.95;                       // 응축식 기준. 제품 라벨은 입력 BTU 라서 output 을 이 값으로 나눈다.
+  // 제품 라벨은 입력 BTU 라서 output 을 AFUE 로 나눈다. 기본 0.95(응축식), 사용자가 바꿀 수 있다.
   var COMMON = [40000, 60000, 80000, 100000, 120000];
   var MAX_SQFT = 20000, MANUAL_J_SQFT = 6000;
 
@@ -111,7 +111,9 @@
 
     var factor = parseFloat(zone.value) * parseFloat(insul.value) * parseFloat(ceilSel.value);
     var load = sqft * factor;            // 실내로 실제 공급돼야 하는 열량(output)
-    var input = load / AFUE;             // 그걸 내려면 태워야 하는 열량(input, 카탈로그 표기값)
+    var afue = parseFloat(afueSel.value);
+    if (!isFinite(afue) || afue <= 0) afue = 0.95;
+    var input = load / afue;             //그걸 내려면 태워야 하는 열량(input, 카탈로그 표기값)
 
     // 표준 용량은 부하보다 작으면 안 되므로 올림으로 고른다. 120k 를 넘으면 단일기로 커버 불가.
     var size = null;
@@ -130,7 +132,7 @@
 
   $("calc-btn").addEventListener("click", calc);
   area.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
-  [unit, zone, insul, ceilSel].forEach(function (el) {
+  [unit, zone, insul, ceilSel, afueSel].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

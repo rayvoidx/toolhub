@@ -189,6 +189,7 @@
   var decodeBtn = document.getElementById("dir-decode");
   var clearBtn  = document.getElementById("b64-clear");
   var textErr   = document.getElementById("text-error");
+  var textStats = document.getElementById("text-stats");
   var textFb    = document.getElementById("text-feedback");
 
   var dir = "encode"; // "encode" | "decode"
@@ -206,13 +207,26 @@
     styleDirBtn(decodeBtn, dir === "decode");
   }
 
+  // 입력 바이트 수 / Base64 길이 / 증가율 표시. 빈 입력이면 숨김.
+  function updateStats() {
+    if (!textStats) return;
+    var b64 = (b64El.value || "").replace(/\s+/g, "");
+    var bytes = textEl.value ? new TextEncoder().encode(textEl.value).length : 0;
+    if (bytes <= 0 || b64.length <= 0) { textStats.hidden = true; textStats.textContent = ""; return; }
+    var pct = Math.round((b64.length - bytes) / bytes * 100);
+    textStats.textContent = t("tool.sizeStats")
+      .replace("{a}", String(bytes)).replace("{b}", String(b64.length)).replace("{c}", String(pct));
+    textStats.style.color = "var(--muted)";
+    textStats.hidden = false;
+  }
+
   // 현재 방향으로 변환 실행. 빈 입력은 조용히 통과(에러 아님), 디코드 실패는 명시적 안내.
   function convert() {
     hide(textErr);
     if (dir === "encode") {
       b64El.value = encodeText(textEl.value, urlSafeEl.checked);
     } else {
-      if (b64El.value.trim() === "") { textEl.value = ""; return; }
+      if (b64El.value.trim() === "") { textEl.value = ""; updateStats(); return; }
       try {
         textEl.value = decodeText(b64El.value);
       } catch (e) {
@@ -220,6 +234,7 @@
         showMsg(textErr, t("tool.msg.invalidB64"), "err");
       }
     }
+    updateStats();
   }
 
   function saveState() {
@@ -253,6 +268,7 @@
     b64El.value = "";
     hide(textErr);
     setDir("encode");
+    updateStats();
     try { localStorage.removeItem(LAST_KEY); } catch (e) { /* noop */ }
     if (textEl.focus) textEl.focus();
   });
@@ -379,6 +395,7 @@
   /* ---------- 언어 전환 시 인라인 에러 문구 재적용 ---------- */
   document.addEventListener("i18n:change", function () {
     if (!textErr.hidden && dir === "decode") showMsg(textErr, t("tool.msg.invalidB64"), "err");
+    updateStats();
   });
 
   /* ============================ 초기화 ============================ */

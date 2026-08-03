@@ -93,7 +93,7 @@
      최소상환금(잔액의 %, 최소 정액 중 큰 값)만 낼 때와 같은 금액을 고정 상환할 때를 나란히
      시뮬레이션한다("최소상환 함정"). 상태: localStorage "<slug>:state" 만. 외부 API 없음. */
 
-  var LIM = { balance: 1e12, apr: 500, months: 600 }; // 50년 상한 — 무한루프·비현실 입력값 방어
+  var LIM = { balance: 1e12, apr: 500, months: 600, cycleDays: 31 }; // 50년 상한 — 무한루프·비현실 입력값 방어
 
   // calc-core:start — 순수 계산 코어 (node 단위검증 대상, Math 외 DOM 의존 없음)
   // 유한화 가드 — Infinity/NaN 을 안전한 유한값으로 (지수표기 방지·조용한 실패 방지)
@@ -320,6 +320,7 @@
     if (days == null || days <= 0) days = 30;
 
     var clipped = false;
+    if (days > LIM.cycleDays) { days = LIM.cycleDays; clipped = true; } // 결제주기는 최장 31일
     if (balance > LIM.balance) { balance = LIM.balance; clipped = true; }
     if (apr > LIM.apr) { apr = LIM.apr; clipped = true; }
 

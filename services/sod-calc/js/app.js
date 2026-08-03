@@ -91,10 +91,10 @@
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), shape = $("shape"), waste = $("waste"), sold = $("sold");
   var len = $("len"), wid = $("wid"), dia = $("dia"), area = $("area");
-  var cover = $("cover"), price = $("price");
+  var cover = $("cover"), price = $("price"), pallet = $("pallet");
   var rectBox = $("rect-fields"), circleBox = $("circle-fields"), directBox = $("direct-fields"), coverBox = $("cover-field");
   var result = $("result"), errEl = $("err");
-  if (!unit || !shape || !waste || !sold || !len || !wid || !dia || !area || !cover || !price) return;
+  if (!unit || !shape || !waste || !sold || !len || !wid || !dia || !area || !cover || !price || !pallet) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -159,9 +159,16 @@
       if (!isFinite(p) || p < 0) return fail("tool.err.price");
     }
 
+    // 팔레트 면적은 400~500으로 지역·공급업체마다 다르다. 비우면 450 기준.
+    var palFt2 = PALLET_FT2, palraw = raw(pallet);
+    if (palraw !== "") {
+      palFt2 = parseFloat(palraw);
+      if (!isFinite(palFt2) || palFt2 <= 0) return fail("tool.err.pallet");
+    }
+
     var withWaste = ft2 * (1 + parseFloat(waste.value) / 100);
     var units = ceilUnits(withWaste / per);
-    var pallets = ceilUnits(withWaste / PALLET_FT2);
+    var pallets = ceilUnits(withWaste / palFt2);
 
     $("r-units").textContent = units.toLocaleString() + " " + t(NOUN[sold.value] || "tool.n.units");
     $("r-area").textContent = unit.value === "m"
@@ -177,7 +184,7 @@
   syncShape();
   syncSold();
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, dia, area, cover, price].forEach(function (el) {
+  [len, wid, dia, area, cover, price, pallet].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   shape.addEventListener("change", function () { syncShape(); if (!result.hidden || !errEl.hidden) calc(); });

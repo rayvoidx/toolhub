@@ -264,6 +264,7 @@
   var box = $("result-box"), emptyEl = $("result-empty"), errEl = $("result-error"), bodyEl = $("result-body");
   var labelEl = $("r-label"), bigEl = $("r-big"), summaryEl = $("r-summary"), strideUsedEl = $("r-stride-used");
   var milesEl = $("r-miles"), kmEl = $("r-km"), timeEl = $("r-time"), caloriesEl = $("r-calories");
+  var perDistEl = $("r-per-dist");
   var clippedEl = $("r-clipped"), calorieHintEl = $("calorie-hint");
 
   if (!stepsInput || !distanceInput || !calcBtn || !box) return;
@@ -419,6 +420,13 @@
     milesEl.textContent = fmtNum(distM / MI_M, 2) + " mi";
     kmEl.textContent = fmtNum(distM / 1000, 2) + " km";
     timeEl.textContent = formatClock(state.timeSec);
+    if (perDistEl) {
+      // 보폭(cm) 기준 1마일/1km 환산 걸음수 — 이 도구의 대표 질문("몇 걸음이 1마일인가")에 직접 답
+      var stepM = state.strideCm / 100;
+      perDistEl.textContent = stepM > 0
+        ? fmtInt(MI_M / stepM) + " / mi · " + fmtInt(1000 / stepM) + " / km"
+        : "—";
+    }
     if (state.calories != null) {
       caloriesEl.textContent = fmtInt(state.calories) + " kcal";
       calorieHintEl.hidden = true;

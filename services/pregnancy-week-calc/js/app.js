@@ -94,8 +94,8 @@
 
   var TERM_DAYS = 280;      // 40 weeks — Naegele's rule
   var BASE_CYCLE = 28;      // reference cycle the 280-day rule assumes
-  var CYCLE_MIN = 21;
-  var CYCLE_MAX = 40;
+  var CYCLE_MIN = 20;
+  var CYCLE_MAX = 60;   // irregular/PCOS cycles routinely run past 45 days
   var OVER_TERM_DAYS = 294; // 42 weeks — beyond this we warn
 
   function $(id) { return document.getElementById(id); }
@@ -276,7 +276,7 @@
       if (r.reason === "lmp") {
         showMsg("tool.empty", "Select the first day of your last period to get started.", false);
       } else if (r.reason === "cycle") {
-        showMsg("tool.err.cycle", "Enter an average cycle length between 21 and 40 whole days.", true);
+        showMsg("tool.err.cycle", "Enter an average cycle length between 20 and 60 whole days.", true);
       } else if (r.reason === "ref") {
         showMsg("tool.err.ref", "Pick a date to calculate for, or tap Today.", true);
       } else {

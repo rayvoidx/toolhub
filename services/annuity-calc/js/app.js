@@ -164,6 +164,8 @@
       $("r-interest").textContent = money(total - P);
       $("r-note").textContent = t("tool.note.depletes");
     }
+    // 원금을 건드리지 않는 월 인출 한도 = P x 월이율 (r=0 이면 존재하지 않는다).
+    $("r-safe").textContent = r > 0 ? money(P * r) + " " + t("tool.unit.permonth") : "—";
 
     errEl.hidden = true;
     result.hidden = false;

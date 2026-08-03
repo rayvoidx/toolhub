@@ -1,41 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="auto">
 <head>
-<!-- Google Consent Mode v2 default (must run before the Google tag) -->
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-
-  // Regulated regions (EEA + UK + Switzerland): deny by default until the
-  // Google-certified CMP updates consent. wait_for_update lets the async CMP
-  // respond before tags fire.
-  gtag('consent', 'default', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied',
-    'ad_personalization': 'denied',
-    'analytics_storage': 'denied',
-    'wait_for_update': 500,
-    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
-  });
-  // Every other region: granted by default.
-  gtag('consent', 'default', {
-    'ad_storage': 'granted',
-    'ad_user_data': 'granted',
-    'ad_personalization': 'granted',
-    'analytics_storage': 'granted'
-  });
-  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
-  // and pass ad-click / session IDs through URLs when cookies are unavailable.
-  gtag('set', 'ads_data_redaction', true);
-  gtag('set', 'url_passthrough', true);
-</script>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
-<!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Man-Month Effort Calculator — Paste a WBS</title>
@@ -67,7 +32,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-24",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -75,6 +40,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Advanced — man-month constant, rates, currency",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One man-month equals Korea · KOSA (2026 figures) — 20.5 days × 8 h = 164 h Korea · rule of thumb — 21 days × 8 h = 168 h Korea · rule of thumb — 22 days × 8 h = 176 h Japan · standard — 20 days × 8 h = 160 h Custom — set hours/day and days/month Hours per man-day Man-days per man-month Currency KRW ₩ JPY ¥ USD $ EUR € GBP £ INR ₹ CNY ¥ BRL R$ IDR Rp RUB ₽ Rates below are per Man-month Man-day Man-hour Rate per role Roles show up here after your list parses. Leave one blank and its cost stays “—” rather than a fake zero. Fill blanks with the KOSA average KOSA’s published 2026 average for a software engineer is ₩414,762 per man-day — already including bonuses, severance provision and the employer’s share of social insurance, so it is a loaded cost, not a take-home salary. It is a single all-roles average: for per-role figures, enter them from the KOSA survey. KOSA source Japan has no publicly published standard rate table equivalent to KOSA’s, so there is no preset to offer — enter your own contract rates."
+      }
+    },
     {
       "@type": "Question",
       "name": "How many days is one man-month — 20.5, 21, 22, or 160 hours?",
@@ -141,12 +114,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 <header class="site-header">
   <a class="brand" href="./">
     <img src="icons/icon.svg" alt="" width="28" height="28">
@@ -227,6 +206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <option value="kr-21" data-i18n="tool.conv.kr21">Korea · rule of thumb — 21 days × 8 h = 168 h</option>
         <option value="kr-22" data-i18n="tool.conv.kr22">Korea · rule of thumb — 22 days × 8 h = 176 h</option>
         <option value="jp-160" data-i18n="tool.conv.jp160">Japan · standard — 20 days × 8 h = 160 h</option>
+        <option value="us-174" data-i18n="tool.conv.us174">US/UK · standard — 21.75 days × 8 h = 174 h</option>
         <option value="custom" data-i18n="tool.conv.custom">Custom — set hours/day and days/month</option>
       </select>
       <p id="conv-note" style="color:var(--muted);font-size:12.5px;margin:8px 0 0;"></p>

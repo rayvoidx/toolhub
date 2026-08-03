@@ -89,9 +89,11 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var mode = $("mode"), miles = $("miles"), gallons = $("gallons"), price = $("price");
+  var mode = $("mode"), miles = $("miles"), gallons = $("gallons"), price = $("price"), unit = $("unit");
   var result = $("result"), errEl = $("err");
-  if (!mode || !miles || !gallons || !price || !result) return;
+  if (!mode || !miles || !gallons || !price || !unit || !result) return;
+  // 입력 단위를 미국 갤런으로 환산하는 계수. 기본은 미국 갤런(1)이라 기존 동작 그대로다.
+  var TO_USGAL = { us: 1, imp: 1.200950, l: 0.264172 };
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
   // 통화기호·천단위 구분이 섞여 들어와도 숫자만 남긴다.
@@ -103,17 +105,23 @@
 
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
 
-  function syncFields() { $("price-wrap").hidden = mode.value !== "cost"; }
+  function syncFields() {
+    $("price-wrap").hidden = mode.value !== "cost";
+    var u = t("tool.unit." + unit.value + "1");
+    $("price-label").textContent = t("tool.price.per").replace("{u}", u);
+  }
 
   function calc() {
     var withCost = mode.value === "cost";
-    var mi = num(miles), gal = num(gallons), ppg = num(price);
-    if (isNaN(mi) || isNaN(gal) || (withCost && isNaN(ppg))) return fail("tool.err.empty");
+    var mi = num(miles), qty = num(gallons), ppg = num(price);
+    var f = TO_USGAL[unit.value] || 1;
+    var gal = qty * f;
+    if (isNaN(mi) || isNaN(qty) || (withCost && isNaN(ppg))) return fail("tool.err.empty");
     if (mi <= 0) return fail("tool.err.zeromiles");
-    if (gal <= 0) return fail("tool.err.zerogal");
+    if (qty <= 0) return fail("tool.err.zerogal");
     if (withCost && ppg <= 0) return fail("tool.err.zeroprice");
     // 한 번 주유로 나올 수 없는 값이면 오타로 본다 — 조용히 계산하지 않는다.
-    if (mi > 100000 || gal > 10000 || ppg > 1000) return fail("tool.err.range");
+    if (mi > 100000 || qty > 10000 || ppg > 1000) return fail("tool.err.range");
 
     var mpg = mi / gal;
     $("r-mpg").textContent = fx(mpg, 1);
@@ -124,8 +132,10 @@
     $("costmile-card").hidden = !withCost;
     $("trip-card").hidden = !withCost;
     if (withCost) {
-      $("r-costmile").textContent = fx(ppg / mpg, 3);
-      $("r-trip").textContent = fx(gal * ppg, 2);
+      // 단가는 사용자가 고른 단위 기준이므로 입력 수량 그대로 곱한다.
+      var tripCost = qty * ppg;
+      $("r-costmile").textContent = fx(tripCost / mi, 3);
+      $("r-trip").textContent = fx(tripCost, 2);
     }
 
     errEl.hidden = true;
@@ -137,10 +147,15 @@
   [miles, gallons, price].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  mode.addEventListener("change", function () {
+  [mode, unit].forEach(function (el) {
+    el.addEventListener("change", function () {
+      syncFields();
+      if (!result.hidden || !errEl.hidden) calc();
+    });
+  });
+  document.addEventListener("i18n:change", function () {
     syncFields();
     if (!result.hidden || !errEl.hidden) calc();
   });
-  document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

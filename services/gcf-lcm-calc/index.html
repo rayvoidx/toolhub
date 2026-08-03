@@ -39,12 +39,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GCF and LCM Calculator — Steps, Factors &amp; Euclidean Algorithm</title>
-<meta name="description" content="Find the GCF and LCM of 2 to 6 whole numbers, with prime factorization and Euclidean algorithm steps shown for every calculation. Free, runs in your browser.">
+<meta name="description" content="Find the GCF and LCM of 2 to 10 whole numbers, with prime factorization and Euclidean algorithm steps shown for every calculation. Free, runs in your browser.">
 <meta name="keywords" content="gcf calculator, lcm calculator, greatest common factor, least common multiple, gcf and lcm, prime factorization calculator, euclidean algorithm calculator, 최대공약수 최소공배수 계산기">
 <link rel="canonical" href="https://tool-hub.me/gcf-lcm-calc/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="GCF and LCM Calculator — Steps, Factors &amp; Euclidean Algorithm">
-<meta property="og:description" content="Find the GCF and LCM of 2 to 6 whole numbers, with prime factorization and Euclidean algorithm steps shown for every calculation. Free, runs in your browser.">
+<meta property="og:description" content="Find the GCF and LCM of 2 to 10 whole numbers, with prime factorization and Euclidean algorithm steps shown for every calculation. Free, runs in your browser.">
 <meta property="og:url" content="https://tool-hub.me/gcf-lcm-calc/">
 <meta property="og:image" content="https://tool-hub.me/gcf-lcm-calc/og-image.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -58,7 +58,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "@context": "https://schema.org",
   "@type": "WebApplication",
   "name": "GCF and LCM Calculator",
-  "description": "Find the GCF and LCM of 2 to 6 whole numbers, with prime factorization and Euclidean algorithm steps shown for every calculation. Free, runs in your browser.",
+  "description": "Find the GCF and LCM of 2 to 10 whole numbers, with prime factorization and Euclidean algorithm steps shown for every calculation. Free, runs in your browser.",
   "url": "https://tool-hub.me/gcf-lcm-calc/",
   "applicationCategory": "UtilityApplication",
   "operatingSystem": "Any",
@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -131,6 +131,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -153,7 +163,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <main>
   <section class="hero">
     <h1>GCF and LCM Calculator</h1>
-    <p class="lede" data-i18n="hero.lede">Enter 2 to 6 whole numbers to find their greatest common factor and least common multiple — with prime factorization and Euclidean algorithm steps shown for every calculation.</p>
+    <p class="lede" data-i18n="hero.lede">Enter 2 to 10 whole numbers to find their greatest common factor and least common multiple — with prime factorization and Euclidean algorithm steps shown for every calculation.</p>
   </section>
 
   <!-- TOOL:START — builder agent replaces everything inside this section.
@@ -184,12 +194,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       @media (max-width: 420px) { #tool .gl-grid { grid-template-columns: repeat(2, 1fr); } }
     </style>
 
-    <label for="numbers-input" data-i18n="tool.input.label">Numbers (2 to 6)</label>
+    <label for="numbers-input" data-i18n="tool.input.label">Numbers (2 to 10)</label>
     <input id="numbers-input" type="text" inputmode="numeric" dir="auto" autocomplete="off" placeholder="e.g. 12, 18, 30" data-i18n-placeholder="tool.input.ph" autofocus>
-    <p class="hint" data-i18n="tool.input.hint">Separate whole numbers with commas or spaces — enter between 2 and 6 positive integers, each from 1 to 1,000,000,000.</p>
+    <p class="hint" data-i18n="tool.input.hint">Separate whole numbers with commas or spaces — enter between 2 and 10 positive integers, each from 1 to 1,000,000,000.</p>
 
     <div class="result" id="result" aria-live="polite">
-      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter 2 to 6 whole numbers to see the GCF, LCM, and the steps behind them.</p>
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter 2 to 10 whole numbers to see the GCF, LCM, and the steps behind them.</p>
       <p id="result-error" role="alert" hidden style="margin:0;color:var(--accent-strong);font-weight:600;"></p>
 
       <div id="gl-grid" class="gl-grid" hidden>
@@ -241,7 +251,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h3>How to use this calculator</h3>
     <ol>
-      <li>Type <strong>2 to 6 whole numbers</strong> into the box, separated by commas or spaces (e.g. <code>12, 18, 30</code>).</li>
+      <li>Type <strong>2 to 10 whole numbers</strong> into the box, separated by commas or spaces (e.g. <code>12, 18, 30</code>).</li>
       <li>The <strong>GCF</strong> and <strong>LCM</strong> appear instantly — tap either card to copy the number.</li>
       <li>Open <strong>Prime factorization</strong> to see each number broken into its prime factors.</li>
       <li>Open <strong>Euclidean algorithm steps</strong> to see the exact division-and-remainder steps used to find the GCF.</li>

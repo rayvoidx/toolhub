@@ -46,7 +46,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta property="og:title" content="Mileage Reimbursement Calculator — IRS Rate 2025">
 <meta property="og:description" content="Work out business mileage reimbursement at the 2025 IRS rate of $0.70 a mile, or any employer rate. See the annual projection and what the deduction saves.">
 <meta property="og:url" content="https://tool-hub.me/mileage-reimbursement-calc/">
-<meta property="og:image" content="https://tool-hub.me/mileage-reimbursement-calc/og-image.jpg">
+<meta property="og:image" content="https://tool-hub.me/mileage-reimbursement-calc/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0e7490">
 <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
@@ -67,7 +67,27 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-08-01",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mileage Reimbursement Calculator",
+      "item": "https://tool-hub.me/mileage-reimbursement-calc/"
+    }
+  ]
 }
 </script>
 <script type="application/ld+json">
@@ -110,29 +130,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   ]
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Toolhub",
-      "item": "https://tool-hub.me/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Mileage Reimbursement Calculator",
-      "item": "https://tool-hub.me/mileage-reimbursement-calc/"
-    }
-  ]
-}
-</script>
 <!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
 ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
@@ -180,7 +190,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <label for="period" data-i18n="tool.period.label">Period</label>
         <select id="period">
-          <option value="month" data-i18n="tool.period.month">This month</option>
+          <option value="week" data-i18n="tool.period.week">This week</option>
+          <option value="month" data-i18n="tool.period.month" selected>This month</option>
           <option value="quarter" data-i18n="tool.period.quarter">This quarter</option>
           <option value="year" data-i18n="tool.period.year">This year</option>
         </select>
@@ -200,6 +211,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <input type="number" id="custom-rate" inputmode="decimal" min="0" step="0.01" autocomplete="off" placeholder="0.58">
     </div>
 
+    <div>
+      <label for="tax-rate" data-i18n="tool.tax.label">Your marginal tax rate (%)</label>
+      <input type="number" id="tax-rate" inputmode="decimal" min="0" max="60" step="1" autocomplete="off" value="22">
+    </div>
+
     <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
 
     <div id="result" hidden>
@@ -214,7 +230,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div class="rc-val" id="r-annual">—</div>
           <div class="rc-sub" id="r-annual-sub"></div>
         </div>
-        <div class="rcard"><div class="rc-label" data-i18n="tool.r.tax">Tax value at 22%</div><div class="rc-val" id="r-tax">—</div></div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.tax">Tax value</div>
+          <div class="rc-val" id="r-tax">—</div>
+          <div class="rc-sub" id="r-tax-sub"></div>
+        </div>
       </div>
       <p class="warn" id="sanity" hidden></p>
       <p class="subtle" id="note-log" data-i18n="tool.note.log" style="margin-top:10px;">Keep a contemporaneous log — date, destination, purpose and miles for every trip. An app or a glovebox notebook both work.</p>

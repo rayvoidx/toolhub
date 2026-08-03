@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-13",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -197,9 +197,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="result" id="tzc-notice" hidden aria-live="polite" style="font-size:14px;"></div>
 
-    <div style="margin-top:4px;">
-      <label for="tzc-addcity" data-i18n="tool.addCity">Add a city</label>
-      <select id="tzc-addcity" style="margin:0;"></select>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:4px;">
+      <div style="flex:2;min-width:220px;">
+        <label for="tzc-addcity" data-i18n="tool.addCity">Add a city</label>
+        <select id="tzc-addcity" style="margin:0;"></select>
+      </div>
+      <div style="flex:1;min-width:160px;">
+        <label for="tzc-clock" data-i18n="tool.clock">Clock format</label>
+        <select id="tzc-clock" style="margin:0;">
+          <option value="auto" data-i18n="tool.clockAuto">Auto (your language)</option>
+          <option value="24" data-i18n="tool.clock24">24-hour (13:00)</option>
+          <option value="12" data-i18n="tool.clock12">12-hour (1:00 PM)</option>
+        </select>
+      </div>
     </div>
 
     <div id="tzc-grid" aria-live="polite" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px;margin-top:18px;"></div>

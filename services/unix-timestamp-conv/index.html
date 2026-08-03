@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-17",
-  "dateModified": "2026-08-02"
+  "dateModified": "2026-08-03"
 }
 </script>
 <script type="application/ld+json">
@@ -205,6 +205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <option value="s" data-i18n="tool.unitS">Seconds (10 digits)</option>
       <option value="ms" data-i18n="tool.unitMs">Milliseconds (13 digits)</option>
       <option value="us" data-i18n="tool.unitUs">Microseconds (16 digits)</option>
+      <option value="ns" data-i18n="tool.unitNs">Nanoseconds (19 digits)</option>
     </select>
 
     <div class="result" id="uts-a-result" aria-live="polite">
@@ -271,6 +272,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <strong id="uts-out-ms" style="font-variant-numeric:tabular-nums;">—</strong>
           </div>
           <button type="button" class="btn" data-copy="uts-out-ms" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.unitUs">Microseconds (16 digits)</div>
+            <strong id="uts-out-us" style="font-variant-numeric:tabular-nums;">—</strong>
+          </div>
+          <button type="button" class="btn" data-copy="uts-out-us" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.unitNs">Nanoseconds (19 digits)</div>
+            <strong id="uts-out-ns" style="font-variant-numeric:tabular-nums;">—</strong>
+          </div>
+          <button type="button" class="btn" data-copy="uts-out-ns" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
         </div>
       </div>
     </div>

@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var temp = $("temp"), tempunit = $("tempunit"), wind = $("wind"), windunit = $("windunit");
+  var temp = $("temp"), tempunit = $("tempunit"), wind = $("wind"), windunit = $("windunit"), ownspeed = $("ownspeed");
   var result = $("result"), errEl = $("err"), noteRange = $("note-range");
   if (!temp || !tempunit || !wind || !windunit) return;
 
@@ -130,10 +130,16 @@
     var rawV = parseFloat(String(wind.value).replace(/,/g, ""));
     if (!isFinite(rawT) || !isFinite(rawV)) return fail("tool.err.empty");
     if (rawV < 0) return fail("tool.err.wind");
+    // 자전거·스키처럼 스스로 움직이면 그 속도가 그대로 바람에 더해진다. 비우면 기존 동작 그대로.
+    var rawOwn = ownspeed ? parseFloat(String(ownspeed.value).replace(/,/g, "")) : 0;
+    if (!isFinite(rawOwn)) rawOwn = 0;
+    if (rawOwn < 0) return fail("tool.err.wind");
+    rawV = rawV + rawOwn;
 
     var tF = tempunit.value === "c" ? rawT * 9 / 5 + 32 : rawT;
     if (tF < -148 || tF > 158) return fail("tool.err.temp");
-    var vMph = windunit.value === "kmh" ? rawV / 1.609344 : rawV;
+    var TO_MPH = { kmh: 1 / 1.609344, ms: 2.2369362920544, kt: 1.150779448 };
+    var vMph = rawV * (TO_MPH[windunit.value] || 1);
 
     // 유효 구간 밖에서는 공식이 정의되지 않는다 — 조용히 외삽하지 않고 실제 기온을 그대로 보여준다.
     var inRange = tF <= 50 && vMph >= 3;
@@ -155,10 +161,10 @@
   }
 
   $("calc-btn").addEventListener("click", calc);
-  [temp, wind].forEach(function (el) {
+  [temp, wind, ownspeed].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  [temp, wind, tempunit, windunit].forEach(function (el) {
+  [temp, wind, ownspeed, tempunit, windunit].forEach(function (el) {
     el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

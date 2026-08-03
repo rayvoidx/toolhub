@@ -90,6 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var height = $("height"), hunit = $("hunit"), weight = $("weight"), wunit = $("wunit"), bodyfat = $("bodyfat");
+  var height2 = $("height2"), weight2 = $("weight2"), h2wrap = $("h2-wrap"), w2wrap = $("w2-wrap");
   var result = $("result"), errEl = $("err");
   if (!height || !hunit || !weight || !wunit || !bodyfat) return;
 
@@ -115,12 +116,38 @@
   }
   function fail(key) { result.hidden = true; errEl.hidden = false; errEl.textContent = t(key); }
 
+  // 빈칸은 0으로 보되, 값이 있으면 자릿수 범위를 검사한다 (9피트 30인치 같은 입력 차단).
+  function part(el, max) {
+    var raw = el ? String(el.value).replace(/,/g, "").trim() : "";
+    if (raw === "") return 0;
+    var v = parseFloat(raw);
+    return (isFinite(v) && v >= 0 && v < max) ? v : NaN;
+  }
+
+  function syncUnits() {
+    if (h2wrap) h2wrap.hidden = hunit.value !== "ftin";
+    if (w2wrap) w2wrap.hidden = wunit.value !== "stlb";
+  }
+
   function calc() {
     var h = num(height), w = num(weight);
     if (!isFinite(h) || !isFinite(w)) return fail("tool.err.empty");
 
-    var cm = hunit.value === "in" ? h * 2.54 : h;
-    var kg = wunit.value === "lb" ? w * LB : w;
+    var cm, kg;
+    if (hunit.value === "ftin") {
+      var inPart = part(height2, 12);
+      if (!isFinite(inPart)) return fail("tool.err.hin");
+      cm = (h * 12 + inPart) * 2.54;
+    } else {
+      cm = hunit.value === "in" ? h * 2.54 : h;
+    }
+    if (wunit.value === "stlb") {
+      var lbPart = part(weight2, 14);
+      if (!isFinite(lbPart)) return fail("tool.err.wlb");
+      kg = (w * 14 + lbPart) * LB;
+    } else {
+      kg = wunit.value === "lb" ? w * LB : w;
+    }
     if (cm < 100 || cm > 250) return fail("tool.err.height");
     if (kg < 20 || kg > 300) return fail("tool.err.weight");
 
@@ -147,11 +174,13 @@
 
   var recalc = function () { if (!result.hidden || !errEl.hidden) calc(); };
   $("calc-btn").addEventListener("click", calc);
-  [height, weight, bodyfat].forEach(function (el) {
+  [height, height2, weight, weight2, bodyfat].forEach(function (el) {
+    if (!el) return;
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
     el.addEventListener("input", recalc);
   });
-  [hunit, wunit].forEach(function (el) { el.addEventListener("change", recalc); });
+  [hunit, wunit].forEach(function (el) { el.addEventListener("change", function () { syncUnits(); recalc(); }); });
+  syncUnits();
   Array.prototype.forEach.call(document.querySelectorAll('input[name="sex"]'), function (r) {
     r.addEventListener("change", recalc);
   });

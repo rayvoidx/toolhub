@@ -90,8 +90,8 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), mode = $("mode"), len = $("len"), wid = $("wid"), area = $("area");
-  var project = $("project"), grass = $("grass"), result = $("result"), errEl = $("err");
-  if (!unit || !mode || !len || !wid || !area || !project || !grass) return;
+  var project = $("project"), grass = $("grass"), rate = $("rate"), result = $("result"), errEl = $("err");
+  if (!unit || !mode || !len || !wid || !area || !project || !grass || !rate) return;
 
   var t = function (k) { return (window.I18N && window.I18N.t) ? window.I18N.t(k) : k; };
 
@@ -120,6 +120,8 @@
     $("direct-row").hidden = byDims;
   }
 
+  function syncGrass() { $("rate-row").hidden = grass.value !== "custom"; }
+
   function calc() {
     var raw;
     if (mode.value === "dims") {
@@ -136,8 +138,15 @@
     var sqft = unit.value === "m" ? raw * SQFT_PER_M2 : raw;
     if (sqft > 1000000) return fail("tool.err.range");
 
-    var rate = RATE[grass.value] * (project.value === "over" ? 0.5 : 1);
-    var lbs = sqft / 1000 * rate;
+    var base;
+    if (grass.value === "custom") {
+      base = num(rate);
+      if (isNaN(base) || base < 0.1 || base > 50) return fail("tool.err.rate");
+    } else {
+      base = RATE[grass.value];
+    }
+    var seedRate = base * (project.value === "over" ? 0.5 : 1);
+    var lbs = sqft / 1000 * seedRate;
     var lbUnit = t("tool.u.lb"), sqftUnit = t("tool.u.sqft");
 
     var counts = bagMix(lbs), parts = [], bagLbs = 0, i;
@@ -150,9 +159,9 @@
     $("r-seed").textContent = fmt(lbs, lbs < 10 ? 2 : 1) + " " + lbUnit +
       " (" + fmt(lbs * LB_PER_KG, lbs < 10 ? 2 : 1) + " " + t("tool.u.kg") + ")";
     $("r-area").textContent = fmt(sqft, 0) + " " + sqftUnit + " · " + fmt(sqft / SQFT_PER_M2, 1) + " m²";
-    $("r-rate").textContent = fmt(rate, rate % 1 === 0 ? 0 : 1) + " " + lbUnit + " " + t("tool.u.per1000");
+    $("r-rate").textContent = fmt(seedRate, seedRate % 1 === 0 ? 0 : 1) + " " + lbUnit + " " + t("tool.u.per1000");
     $("r-bags").textContent = parts.join(" + ");
-    $("r-covers").textContent = fmt(bagLbs / rate * 1000, 0) + " " + sqftUnit;
+    $("r-covers").textContent = fmt(bagLbs / seedRate * 1000, 0) + " " + sqftUnit;
 
     errEl.hidden = true;
     result.hidden = false;
@@ -161,12 +170,14 @@
   function recalc() { if (!result.hidden || !errEl.hidden) calc(); }
 
   $("calc-btn").addEventListener("click", calc);
-  [len, wid, area].forEach(function (el) {
+  [len, wid, area, rate].forEach(function (el) {
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
   mode.addEventListener("change", function () { syncMode(); recalc(); });
-  [unit, project, grass].forEach(function (el) { el.addEventListener("change", recalc); });
+  grass.addEventListener("change", function () { syncGrass(); recalc(); });
+  [unit, project].forEach(function (el) { el.addEventListener("change", recalc); });
   document.addEventListener("i18n:change", recalc);
   syncMode();
+  syncGrass();
   // TOOLJS:END
 })();

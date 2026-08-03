@@ -89,7 +89,7 @@
   "use strict";
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
-  var age = $("age"), rest = $("rest"), maxhr = $("maxhr"), method = $("method");
+  var age = $("age"), rest = $("rest"), maxhr = $("maxhr"), method = $("method"), formula = $("formula");
   var result = $("result"), errEl = $("err");
   if (!age || !rest || !method) return;
 
@@ -112,9 +112,12 @@
     if (a < 10 || a > 100) return fail("tool.err.age");
     if (r < 30 || r > 120) return fail("tool.err.rest");
 
-    // 실측 최대심박이 있으면 그 값을 쓴다 — 220-나이는 표준편차 10~12회짜리 거친 추정이다.
+    // 실측 최대심박이 있으면 그 값을 쓴다 — 추정식은 표준편차 10~12회짜리 거친 값이다.
+    var raw = String(maxhr.value).trim();
     var known = num(maxhr);
-    var hrMax = (isFinite(known) && known > r) ? known : Math.round(220 - a);
+    if (raw !== "" && (!isFinite(known) || known < 100 || known > 230 || known <= r)) return fail("tool.err.max");
+    var est = (formula && formula.value === "tanaka") ? 208 - 0.7 * a : 220 - a;
+    var hrMax = raw !== "" ? Math.round(known) : Math.round(est);
     var reserve = hrMax - r;
     if (reserve <= 0) return fail("tool.err.rest");
 
@@ -144,7 +147,9 @@
     el.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
     el.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   });
-  method.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  [method, formula].forEach(function (el) {
+    if (el) el.addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
+  });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   // TOOLJS:END
 })();

@@ -459,6 +459,12 @@
   var inputEl = $("cron-input"), errEl = $("err"), emptyEl = $("cp-empty"), resultEl = $("cp-result");
   var descEl = $("cp-desc"), nextListEl = $("cp-next-list"), fieldsBodyEl = $("cp-fields-body");
   var commonListEl = $("cp-common-list");
+  var countEl = $("cp-count"), nextHeadingEl = $("cp-next-heading");
+  var COUNTS = [5, 10, 20, 50];
+  function runCount() {
+    var n = countEl ? parseInt(countEl.value, 10) : 5;
+    return COUNTS.indexOf(n) === -1 ? 5 : n;
+  }
   if (!inputEl || !resultEl) return;
 
   var FIELD_ORDER = ["minute", "hour", "dom", "month", "dow"];
@@ -477,15 +483,15 @@
   ];
 
   function saveState(expr) {
-    try { localStorage.setItem(SKEY, JSON.stringify({ expr: expr })); } catch (e) { /* noop */ }
+    try { localStorage.setItem(SKEY, JSON.stringify({ expr: expr, count: runCount() })); } catch (e) { /* noop */ }
   }
   function loadState() {
     try {
       var raw = localStorage.getItem(SKEY);
-      if (!raw) return "";
+      if (!raw) return null;
       var obj = JSON.parse(raw);
-      return (obj && typeof obj.expr === "string") ? obj.expr : "";
-    } catch (e) { return ""; }
+      return obj && typeof obj === "object" ? obj : null;
+    } catch (e) { return null; }
   }
 
   function fmtRunTime(d) {
@@ -548,7 +554,9 @@
   function renderNextRuns(parsed) {
     if (!nextListEl) return;
     nextListEl.textContent = "";
-    var runs = nextRuns(parsed, new Date(), 5);
+    var count = runCount();
+    if (nextHeadingEl) nextHeadingEl.textContent = t("tool.next.label", { n: count });
+    var runs = nextRuns(parsed, new Date(), count);
     for (var i = 0; i < runs.length; i++) {
       var li = document.createElement("li");
       li.className = "cp-next-item result-value";
@@ -616,9 +624,14 @@
     }
   });
 
+  if (countEl) countEl.addEventListener("change", render);
+
   renderCommonList();
   var restored = loadState();
-  if (restored) inputEl.value = restored;
+  if (restored) {
+    if (typeof restored.expr === "string") inputEl.value = restored.expr;
+    if (countEl && COUNTS.indexOf(restored.count) !== -1) countEl.value = String(restored.count);
+  }
   render();
   // TOOLJS:END
 })();

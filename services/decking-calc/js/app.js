@@ -90,7 +90,7 @@
   // TOOLJS:START
   var $ = function (id) { return document.getElementById(id); };
   var unit = $("unit"), dlen = $("dlen"), dwid = $("dwid"), board = $("board");
-  var cw = $("cw"), cl = $("cl"), customRow = $("custom-row"), gap = $("gap"), waste = $("waste");
+  var cw = $("cw"), cl = $("cl"), customRow = $("custom-row"), gap = $("gap"), waste = $("waste"), jspace = $("jspace");
   var result = $("result"), errEl = $("err");
   if (!unit || !dlen || !dwid || !board || !gap || !waste) return;
 
@@ -139,9 +139,10 @@
     var total = Math.ceil(rows * perRow * (1 + wastePct / 100));
 
     var areaFt = lenFt * widFt;
-    // 면판 시공 기준 100 sq ft 당 350개(장선 교차마다 보드 1장에 2개) — 10개 단위로 올림.
-    var screws = Math.ceil((areaFt * 3.5) / 10) * 10;
-    var joists = Math.ceil((lenFt * 12) / 16) + 1;
+    var sp = (jspace && parseFloat(jspace.value)) || 16;
+    // 16in OC 면판 시공 기준 100 sq ft 당 350개(장선 교차마다 보드 1장에 2개). 간격이 좁으면 교차가 늘어 비례 증가.
+    var screws = Math.ceil((areaFt * 3.5 * (16 / sp)) / 10) * 10;
+    var joists = Math.ceil((lenFt * 12) / sp) + 1;
 
     $("r-boards").textContent = String(total);
     $("r-screws").textContent = String(screws);
@@ -165,7 +166,7 @@
     el.addEventListener("input", live);
   });
   board.addEventListener("change", function () { syncCustom(); live(); });
-  [unit, gap, waste].forEach(function (el) { el.addEventListener("change", live); });
+  [unit, gap, waste, jspace].forEach(function (el) { if (el) el.addEventListener("change", live); });
   document.addEventListener("i18n:change", live);
   // TOOLJS:END
 })();

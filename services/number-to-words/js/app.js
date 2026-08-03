@@ -99,25 +99,30 @@
   var TENS = ["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
   var SCALE = ["", " thousand", " million", " billion", " trillion"];
 
-  function under1000(n) {
+  function under1000(n, uk) {
     var out = "";
-    if (n >= 100) { out = ONES[Math.floor(n / 100)] + " hundred"; n = n % 100; if (n) out += " "; }
+    if (n >= 100) { out = ONES[Math.floor(n / 100)] + " hundred"; n = n % 100; if (n) out += (uk ? " and " : " "); }
     if (n >= 20) { out += TENS[Math.floor(n / 10)]; if (n % 10) out += "-" + ONES[n % 10]; }
     else if (n > 0) { out += ONES[n]; }
     return out;
   }
 
   // 문자열 자릿수 그대로 3자리씩 끊는다 — parseFloat 로 바꾸면 15자리에서 정밀도가 흔들린다.
-  function intWords(digits) {
+  function intWords(digits, uk) {
     if (/^0*$/.test(digits)) return "zero";
     var groups = [], s = digits;
     while (s.length > 3) { groups.unshift(s.slice(-3)); s = s.slice(0, -3); }
     groups.unshift(s);
-    var parts = [];
+    var parts = [], lastVal = 0;
     for (var i = 0; i < groups.length; i++) {
       var v = parseInt(groups[i], 10);
       if (!v) continue;
-      parts.push(under1000(v) + SCALE[groups.length - 1 - i]);
+      lastVal = v;
+      parts.push(under1000(v, uk) + SCALE[groups.length - 1 - i]);
+    }
+    // 영국식: 마지막 묶음이 100 미만이고 앞에 다른 묶음이 있으면 그 앞에 and (two thousand and five).
+    if (uk && parts.length > 1 && lastVal < 100) {
+      return parts.slice(0, -1).join(" ") + " and " + parts[parts.length - 1];
     }
     return parts.join(" ");
   }
@@ -160,19 +165,23 @@
     var checkInt = cc.carry ? incStr(intPart) : intPart;
     if (checkInt.length > 15) return fail("tool.err.range");
 
-    var words = sign + intWords(intPart);
+    var uk = !!($("uk") && $("uk").checked);
+    var words = sign + intWords(intPart, uk);
     if (frac) {
       words += " point";
       for (var i = 0; i < frac.length; i++) words += " " + ONES[parseInt(frac.charAt(i), 10)];
     }
 
-    $("r-check").textContent = sign + intWords(checkInt) + " and " + cc.c + "/100";
+    $("r-check").textContent = sign + intWords(checkInt, uk) + " and " + cc.c + "/100";
     $("r-words").textContent = words;
+    // 수표 숫자란: 단어와 같은 반올림 값을 쓴다 (두 칸이 어긋나면 은행이 반려).
+    $("r-figures").textContent = (sign ? "-" : "") + checkInt.replace(/\B(?=(\d{3})+$)/g, ",") + "." + cc.c;
     errEl.hidden = true;
     result.hidden = false;
   }
 
   $("calc-btn").addEventListener("click", calc);
+  if ($("uk")) $("uk").addEventListener("change", function () { if (!result.hidden || !errEl.hidden) calc(); });
   num.addEventListener("keydown", function (e) { if (e.key === "Enter") calc(); });
   num.addEventListener("input", function () { if (!result.hidden || !errEl.hidden) calc(); });
   document.addEventListener("i18n:change", function () { if (!result.hidden || !errEl.hidden) calc(); });

@@ -236,7 +236,7 @@
     "mechanical", "electrical", "digital", "analog", "virtual", "physical", "mental", "zesty",
     "zealous", "quaint", "quirky"];
 
-  var COUNT_MIN = 1, COUNT_MAX = 50, COUNT_DEF = 10;
+  var COUNT_MIN = 1, COUNT_MAX = 500, COUNT_DEF = 10;
   var LEN_MIN = 1, LEN_MAX = 20;
 
   /* ---- 순수 계산 (node 단위 검증 대상) ---- */

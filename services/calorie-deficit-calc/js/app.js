@@ -171,6 +171,7 @@
   var activityEl = $("activity-select");
   var rateEl = $("rate-select");
   var rateHelperEl = $("rate-helper");
+  var rateCustomEl = $("rate-custom");
   var calcBtn = $("calc-btn");
   var box = $("result-box"), errEl = $("result-error"), bodyEl = $("result-body");
   var extremeEl = $("result-warning-extreme"), floorEl = $("result-warning-floor");
@@ -198,9 +199,31 @@
     errEl.textContent = t(key, fallback);
   }
 
+  // 선택된 페이스를 kg/주 로 반환. custom 이면 현재 체중 단위로 입력받아 환산, 잘못되면 NaN.
+  var RATE_KG_MIN = 0.05, RATE_KG_MAX = 1.5;
+  function readRateKg() {
+    if (rateEl.value !== "custom") {
+      var preset = Number(rateEl.value);
+      return RATE_VALUES.indexOf(preset) === -1 ? 0.5 : preset;
+    }
+    if (!rateCustomEl) return 0.5;
+    var raw = rateCustomEl.value.trim();
+    if (raw === "") return NaN;
+    var v = Number(raw);
+    if (isNaN(v) || !isFinite(v)) return NaN;
+    var kg = wUnit() === "lb" ? v / LB_PER_KG : v;
+    if (kg < RATE_KG_MIN || kg > RATE_KG_MAX) return NaN;
+    return kg;
+  }
+  function applyRateMode() {
+    if (!rateCustomEl) return;
+    rateCustomEl.hidden = rateEl.value !== "custom";
+  }
+
   function updateRateHelper() {
     if (!rateHelperEl) return;
-    var rateKg = Number(rateEl.value) || 0.5;
+    var rateKg = readRateKg();
+    if (isNaN(rateKg)) { rateHelperEl.textContent = ""; return; }
     var deficit = dailyDeficitForRate(rateKg);
     var lb = rateKg * LB_PER_KG;
     var tmpl = t("tool.rate.helper", "≈ {lb} lb/week · about {kcal} kcal/day deficit");
@@ -282,8 +305,10 @@
     var weightKg = readWeightKg(wEl);
     var goalWeightKg = readWeightKg(goalEl);
     var activity = Number(activityEl.value);
-    var rateKg = Number(rateEl.value);
-    if (RATE_VALUES.indexOf(rateKg) === -1) rateKg = 0.5;
+    var rateKg = readRateKg();
+    if (isNaN(rateKg)) {
+      showError("tool.err.rate", "Enter a custom weekly pace between 0.05 and 1.5 kg (about 0.1 to 3.3 lb)."); return;
+    }
 
     // 빈 입력 → 명시적 안내 (조용한 실패 금지)
     if (!sex || isNaN(age) || isNaN(heightCm) || isNaN(weightKg) || isNaN(goalWeightKg)) {
@@ -320,7 +345,8 @@
         sex: radioVal("sex"), age: ageEl.value,
         hunit: radioVal("hunit"), cm: hCmEl.value, ft: hFtEl.value, inch: hInEl.value,
         wunit: radioVal("wunit"), weight: wEl.value, goal: goalEl.value,
-        activity: activityEl.value, rate: rateEl.value
+        activity: activityEl.value, rate: rateEl.value,
+        rateCustom: rateCustomEl ? rateCustomEl.value : ""
       }));
     } catch (e) { /* private mode — ignore */ }
   }
@@ -348,8 +374,10 @@
       if (p.goal) goalEl.value = p.goal;
       if (p.activity) activityEl.value = p.activity;
       if (p.rate) rateEl.value = p.rate;
+      if (p.rateCustom && rateCustomEl) rateCustomEl.value = p.rateCustom;
     } catch (e) { /* 접근 불가·파싱 실패 — 빈 폼으로 시작 */ }
     applyHeightUnit();
+    applyRateMode();
   })();
 
   // 신장 단위 토글 → 표시 필드 전환
@@ -365,7 +393,8 @@
     });
   }
 
-  rateEl.addEventListener("change", updateRateHelper);
+  rateEl.addEventListener("change", function () { applyRateMode(); updateRateHelper(); });
+  if (rateCustomEl) rateCustomEl.addEventListener("input", updateRateHelper);
   updateRateHelper();
 
   calcBtn.addEventListener("click", calculate);

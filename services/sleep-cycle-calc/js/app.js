@@ -93,8 +93,8 @@
   var SLUG = cfg.slug || "sleep-cycle-calc";
   var LS_LAST = SLUG + ":last";           // 상태 저장은 "<slug>:" prefix 만 사용
 
-  var CYCLE_DEFAULT = 90, CYCLE_MIN = 80, CYCLE_MAX = 120;
-  var LAT_DEFAULT = 15, LAT_MIN = 0, LAT_MAX = 60;
+  var CYCLE_DEFAULT = 90, CYCLE_MIN = 70, CYCLE_MAX = 120;
+  var LAT_DEFAULT = 15, LAT_MIN = 0, LAT_MAX = 120;
 
   /* ---- 순수 계산 (node 단위 검증 대상) ---- */
   // 숫자 외 문자 제거 후 min..max clamp, 비면 dflt
@@ -121,7 +121,8 @@
   //   bed   모드: 취침 anchor 에서 n∈{3,4,5,6} 기상시각 = anchor + latency + n*cycle
   //   clockMin = 하루 분(mod 1440), dayOffset = 자정 넘김 (음수=전날, 양수=다음날)
   function sleepOptions(mode, anchorMin, latency, cycle) {
-    var ns = mode === "wake" ? [6, 5, 4, 3] : [3, 4, 5, 6];
+    // 1-2 사이클(낮잠·초단기 수면)까지 확장 — 밤을 통째로 못 자는 경우가 흔하다
+    var ns = mode === "wake" ? [6, 5, 4, 3, 2, 1] : [1, 2, 3, 4, 5, 6];
     var out = [];
     for (var i = 0; i < ns.length; i++) {
       var n = ns[i];
