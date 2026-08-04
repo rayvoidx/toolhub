@@ -105,7 +105,7 @@
 
   /* 7. 공유 버튼 — 모바일 네이티브 공유, 데스크톱 링크 복사 */
   var actions = document.querySelector(".header-actions");
-  if (actions && !document.getElementById("ux-share")) {
+  if (actions && !document.getElementById("ux-share") && !document.getElementById("share-btn")) {
     var sb = document.createElement("button");
     sb.id = "ux-share"; sb.type = "button"; sb.textContent = "↗";
     var shareLabel = t("ux.share", "Share this tool");
