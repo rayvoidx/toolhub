@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Are 0 and 1 prime? Is 2 prime?",
     "faq.a4": "No — 0 and 1 are not prime, because a prime must be greater than 1 and have exactly two divisors. 1 has only one divisor (itself), and 0 is divisible by everything. 2 is the smallest prime and the only even prime; every other even number is divisible by 2. This checker handles all of these edge cases explicitly instead of erroring out.",
     "faq.q5": "Is my number sent to a server?",
-    "faq.a5": "No. Every calculation — the primality test and the prime factorization — runs entirely in your browser with local JavaScript. Nothing you type is uploaded, logged or stored on a server, and there are no ads or sign-up. Your last input is saved only in your own browser (localStorage) so it's still there when you come back."
+    "faq.a5": "No. Every calculation — the primality test and the prime factorization — runs entirely in your browser with local JavaScript. Nothing you type is uploaded, logged or stored on a server, and there are no ads or sign-up. Your last input is saved only in your own browser (localStorage) so it's still there when you come back.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -111,7 +116,12 @@ window.I18N_LOCALES = {
     "faq.q4": "0 和 1 是质数吗？2 是质数吗？",
     "faq.a4": "不是——0 和 1 都不是质数，因为质数必须大于 1 且恰好有两个因数。1 只有一个因数（它自己），而 0 能被任何数整除。2 是最小的质数，也是唯一的偶质数；其他所有偶数都能被 2 整除。本判断器会明确处理这些边界情况，而不会报错。",
     "faq.q5": "我输入的数字会被发送到服务器吗？",
-    "faq.a5": "不会。所有计算——素性测试和质因数分解——都完全在你的浏览器中用本地 JavaScript 完成。你输入的内容不会被上传、记录或存储到服务器，也没有广告或注册。你的上一次输入只保存在你自己的浏览器里（localStorage），下次回来时仍然还在。"
+    "faq.a5": "不会。所有计算——素性测试和质因数分解——都完全在你的浏览器中用本地 JavaScript 完成。你输入的内容不会被上传、记录或存储到服务器，也没有广告或注册。你的上一次输入只保存在你自己的浏览器里（localStorage），下次回来时仍然还在。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -159,7 +169,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या 0 और 1 अभाज्य हैं? क्या 2 अभाज्य है?",
     "faq.a4": "नहीं — 0 और 1 अभाज्य नहीं हैं, क्योंकि अभाज्य संख्या 1 से बड़ी होनी चाहिए और उसके ठीक दो भाजक होने चाहिए। 1 का केवल एक भाजक है (वह स्वयं), और 0 हर संख्या से विभाज्य है। 2 सबसे छोटी अभाज्य संख्या है और एकमात्र सम अभाज्य; बाकी सभी सम संख्याएँ 2 से विभाज्य हैं। यह जाँचक इन सभी विशेष स्थितियों को त्रुटि दिए बिना स्पष्ट रूप से संभालता है।",
     "faq.q5": "क्या मेरी संख्या किसी सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। हर गणना — अभाज्यता परीक्षण और अभाज्य गुणनखंडन — पूरी तरह आपके ब्राउज़र में लोकल JavaScript से होती है। आपने जो लिखा वह न अपलोड होता है, न लॉग, न सर्वर पर संग्रहीत; कोई विज्ञापन या साइन-अप भी नहीं। आपका पिछला इनपुट केवल आपके अपने ब्राउज़र (localStorage) में सहेजा जाता है, ताकि लौटने पर वह वहीं मिले।"
+    "faq.a5": "नहीं। हर गणना — अभाज्यता परीक्षण और अभाज्य गुणनखंडन — पूरी तरह आपके ब्राउज़र में लोकल JavaScript से होती है। आपने जो लिखा वह न अपलोड होता है, न लॉग, न सर्वर पर संग्रहीत; कोई विज्ञापन या साइन-अप भी नहीं। आपका पिछला इनपुट केवल आपके अपने ब्राउज़र (localStorage) में सहेजा जाता है, ताकि लौटने पर वह वहीं मिले।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -207,7 +222,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Son primos el 0 y el 1? ¿Es primo el 2?",
     "faq.a4": "No: el 0 y el 1 no son primos, porque un primo debe ser mayor que 1 y tener exactamente dos divisores. El 1 tiene un solo divisor (él mismo) y el 0 es divisible por todo. El 2 es el primo más pequeño y el único primo par; los demás pares son divisibles entre 2. Este comprobador trata todos estos casos especiales de forma explícita, sin dar error.",
     "faq.q5": "¿Se envía mi número a un servidor?",
-    "faq.a5": "No. Todo el cálculo —el test de primalidad y la factorización— se ejecuta por completo en tu navegador con JavaScript local. Nada de lo que escribes se sube, registra ni almacena en un servidor, y no hay anuncios ni registro. Tu última entrada solo se guarda en tu propio navegador (localStorage), para que siga ahí cuando vuelvas."
+    "faq.a5": "No. Todo el cálculo —el test de primalidad y la factorización— se ejecuta por completo en tu navegador con JavaScript local. Nada de lo que escribes se sube, registra ni almacena en un servidor, y no hay anuncios ni registro. Tu última entrada solo se guarda en tu propio navegador (localStorage), para que siga ahí cuando vuelvas.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -255,7 +275,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل 0 و1 أوليان؟ وهل 2 أولي؟",
     "faq.a4": "لا — 0 و1 ليسا أوليين، لأن العدد الأولي يجب أن يكون أكبر من 1 وله قاسمان بالضبط. للواحد قاسم واحد فقط (نفسه)، والصفر يقبل القسمة على كل عدد. أما 2 فهو أصغر عدد أولي والوحيد الزوجي؛ وكل عدد زوجي آخر يقبل القسمة على 2. يعالج هذا الفاحص كل هذه الحالات الخاصة صراحةً دون إظهار خطأ.",
     "faq.q5": "هل يُرسَل عددي إلى خادم؟",
-    "faq.a5": "لا. كل العمليات — اختبار الأولية والتحليل إلى عوامل — تجري بالكامل في متصفحك بواسطة JavaScript محلي. لا يُرفع ما تكتبه ولا يُسجَّل ولا يُخزَّن على خادم، ولا توجد إعلانات ولا تسجيل. يُحفظ إدخالك الأخير في متصفحك وحده (localStorage) ليبقى موجودًا عند عودتك."
+    "faq.a5": "لا. كل العمليات — اختبار الأولية والتحليل إلى عوامل — تجري بالكامل في متصفحك بواسطة JavaScript محلي. لا يُرفع ما تكتبه ولا يُسجَّل ولا يُخزَّن على خادم، ولا توجد إعلانات ولا تسجيل. يُحفظ إدخالك الأخير في متصفحك وحده (localStorage) ليبقى موجودًا عند عودتك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -303,7 +328,12 @@ window.I18N_LOCALES = {
     "faq.q4": "0 et 1 sont-ils premiers ? 2 est-il premier ?",
     "faq.a4": "Non — 0 et 1 ne sont pas premiers, car un nombre premier doit être supérieur à 1 et avoir exactement deux diviseurs. 1 n'a qu'un diviseur (lui-même) et 0 est divisible par tout. 2 est le plus petit nombre premier et le seul premier pair ; tous les autres nombres pairs sont divisibles par 2. Ce testeur traite explicitement tous ces cas particuliers au lieu de renvoyer une erreur.",
     "faq.q5": "Mon nombre est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Tous les calculs — le test de primalité et la factorisation — s'exécutent entièrement dans votre navigateur en JavaScript local. Rien de ce que vous tapez n'est envoyé, journalisé ni stocké sur un serveur, et il n'y a ni pub ni inscription. Votre dernière saisie n'est enregistrée que dans votre propre navigateur (localStorage), pour la retrouver à votre retour."
+    "faq.a5": "Non. Tous les calculs — le test de primalité et la factorisation — s'exécutent entièrement dans votre navigateur en JavaScript local. Rien de ce que vous tapez n'est envoyé, journalisé ni stocké sur un serveur, et il n'y a ni pub ni inscription. Votre dernière saisie n'est enregistrée que dans votre propre navigateur (localStorage), pour la retrouver à votre retour.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -351,7 +381,12 @@ window.I18N_LOCALES = {
     "faq.q4": "0 আর 1 কি মৌলিক? 2 কি মৌলিক?",
     "faq.a4": "না — 0 আর 1 মৌলিক নয়, কারণ মৌলিক সংখ্যাকে 1-এর চেয়ে বড় হতে হবে এবং ঠিক দুটি উৎপাদক থাকতে হবে। 1-এর একটিমাত্র উৎপাদক (নিজে), আর 0 প্রতিটি সংখ্যা দিয়ে বিভাজ্য। 2 হলো ক্ষুদ্রতম মৌলিক এবং একমাত্র জোড় মৌলিক; বাকি সব জোড় সংখ্যা 2 দিয়ে বিভাজ্য। এই যাচাইকারী এই সব বিশেষ ক্ষেত্র ত্রুটি না দিয়ে স্পষ্টভাবে সামলায়।",
     "faq.q5": "আমার সংখ্যা কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। প্রতিটি হিসাব — মৌলিকত্ব পরীক্ষা ও উৎপাদক বিশ্লেষণ — পুরোপুরি আপনার ব্রাউজারে লোকাল JavaScript দিয়ে হয়। আপনি যা লেখেন তা আপলোড, লগ বা সার্ভারে সংরক্ষণ হয় না, কোনো বিজ্ঞাপন বা সাইন-আপও নেই। আপনার শেষ ইনপুট কেবল আপনার নিজের ব্রাউজারে (localStorage) সংরক্ষিত থাকে, যাতে ফিরে এলে তা থেকে যায়।"
+    "faq.a5": "না। প্রতিটি হিসাব — মৌলিকত্ব পরীক্ষা ও উৎপাদক বিশ্লেষণ — পুরোপুরি আপনার ব্রাউজারে লোকাল JavaScript দিয়ে হয়। আপনি যা লেখেন তা আপলোড, লগ বা সার্ভারে সংরক্ষণ হয় না, কোনো বিজ্ঞাপন বা সাইন-আপও নেই। আপনার শেষ ইনপুট কেবল আপনার নিজের ব্রাউজারে (localStorage) সংরক্ষিত থাকে, যাতে ফিরে এলে তা থেকে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -399,7 +434,12 @@ window.I18N_LOCALES = {
     "faq.q4": "0 e 1 são primos? O 2 é primo?",
     "faq.a4": "Não — 0 e 1 não são primos, porque um primo precisa ser maior que 1 e ter exatamente dois divisores. O 1 tem só um divisor (ele mesmo) e o 0 é divisível por tudo. O 2 é o menor primo e o único primo par; todos os outros pares são divisíveis por 2. Este verificador trata explicitamente todos esses casos especiais, sem dar erro.",
     "faq.q5": "Meu número é enviado a um servidor?",
-    "faq.a5": "Não. Todo o cálculo — o teste de primalidade e a fatoração — roda inteiramente no seu navegador com JavaScript local. Nada do que você digita é enviado, registrado ou armazenado em servidor, e não há anúncios nem cadastro. Sua última entrada fica salva apenas no seu próprio navegador (localStorage), para continuar lá quando você voltar."
+    "faq.a5": "Não. Todo o cálculo — o teste de primalidade e a fatoração — roda inteiramente no seu navegador com JavaScript local. Nada do que você digita é enviado, registrado ou armazenado em servidor, e não há anúncios nem cadastro. Sua última entrada fica salva apenas no seu próprio navegador (localStorage), para continuar lá quando você voltar.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -447,7 +487,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Являются ли 0 и 1 простыми? А 2 — простое?",
     "faq.a4": "Нет — 0 и 1 не простые, потому что простое число должно быть больше 1 и иметь ровно два делителя. У 1 только один делитель (оно само), а 0 делится на всё. 2 — наименьшее простое и единственное чётное простое; все остальные чётные делятся на 2. Этот инструмент явно обрабатывает все такие особые случаи, а не выдаёт ошибку.",
     "faq.q5": "Отправляется ли моё число на сервер?",
-    "faq.a5": "Нет. Все вычисления — тест на простоту и разложение на множители — выполняются целиком в вашем браузере на локальном JavaScript. Ничего из введённого не загружается, не логируется и не хранится на сервере, а рекламы и регистрации нет. Ваш последний ввод сохраняется только в вашем браузере (localStorage), чтобы остаться на месте, когда вы вернётесь."
+    "faq.a5": "Нет. Все вычисления — тест на простоту и разложение на множители — выполняются целиком в вашем браузере на локальном JavaScript. Ничего из введённого не загружается, не логируется и не хранится на сервере, а рекламы и регистрации нет. Ваш последний ввод сохраняется только в вашем браузере (localStorage), чтобы остаться на месте, когда вы вернётесь.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -495,7 +540,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا 0 اور 1 مفرد ہیں؟ کیا 2 مفرد ہے؟",
     "faq.a4": "نہیں — 0 اور 1 مفرد نہیں، کیونکہ مفرد عدد کا 1 سے بڑا ہونا اور بالکل دو قواسم رکھنا ضروری ہے۔ 1 کا صرف ایک قاسم (خود) ہے، اور 0 ہر عدد پر تقسیم ہوتا ہے۔ 2 سب سے چھوٹا مفرد اور واحد جفت مفرد ہے؛ باقی سب جفت اعداد 2 پر تقسیم ہوتے ہیں۔ یہ چیکر ان تمام خاص صورتوں کو خامی دیے بغیر واضح طور پر سنبھالتا ہے۔",
     "faq.q5": "کیا میرا عدد کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر حساب — مفرد ہونے کی جانچ اور تحلیلِ عوامل — مکمل طور پر آپ کے براؤزر میں لوکل JavaScript سے ہوتا ہے۔ جو آپ لکھتے ہیں وہ نہ اپ لوڈ ہوتا ہے، نہ لاگ، نہ سرور پر محفوظ؛ کوئی اشتہار یا سائن اپ بھی نہیں۔ آپ کا آخری اندراج صرف آپ کے اپنے براؤزر (localStorage) میں محفوظ ہوتا ہے تاکہ واپسی پر موجود رہے۔"
+    "faq.a5": "نہیں۔ ہر حساب — مفرد ہونے کی جانچ اور تحلیلِ عوامل — مکمل طور پر آپ کے براؤزر میں لوکل JavaScript سے ہوتا ہے۔ جو آپ لکھتے ہیں وہ نہ اپ لوڈ ہوتا ہے، نہ لاگ، نہ سرور پر محفوظ؛ کوئی اشتہار یا سائن اپ بھی نہیں۔ آپ کا آخری اندراج صرف آپ کے اپنے براؤزر (localStorage) میں محفوظ ہوتا ہے تاکہ واپسی پر موجود رہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -543,7 +593,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah 0 dan 1 prima? Apakah 2 prima?",
     "faq.a4": "Tidak — 0 dan 1 bukan prima, karena bilangan prima harus lebih dari 1 dan punya tepat dua pembagi. 1 hanya punya satu pembagi (dirinya), dan 0 habis dibagi oleh semua bilangan. 2 adalah prima terkecil dan satu-satunya prima genap; semua bilangan genap lain habis dibagi 2. Pemeriksa ini menangani semua kasus khusus itu secara eksplisit, bukan memunculkan error.",
     "faq.q5": "Apakah bilangan saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan — uji keprimaan dan faktorisasi — berjalan sepenuhnya di peramban Anda dengan JavaScript lokal. Apa pun yang Anda ketik tidak diunggah, dicatat, atau disimpan di server, dan tidak ada iklan maupun pendaftaran. Masukan terakhir Anda hanya disimpan di peramban Anda sendiri (localStorage) agar tetap ada saat Anda kembali."
+    "faq.a5": "Tidak. Semua perhitungan — uji keprimaan dan faktorisasi — berjalan sepenuhnya di peramban Anda dengan JavaScript lokal. Apa pun yang Anda ketik tidak diunggah, dicatat, atau disimpan di server, dan tidak ada iklan maupun pendaftaran. Masukan terakhir Anda hanya disimpan di peramban Anda sendiri (localStorage) agar tetap ada saat Anda kembali.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -591,7 +646,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Sind 0 und 1 prim? Ist 2 prim?",
     "faq.a4": "Nein — 0 und 1 sind nicht prim, denn eine Primzahl muss größer als 1 sein und genau zwei Teiler haben. 1 hat nur einen Teiler (sich selbst), und 0 ist durch alles teilbar. 2 ist die kleinste Primzahl und die einzige gerade Primzahl; alle anderen geraden Zahlen sind durch 2 teilbar. Dieser Prüfer behandelt all diese Sonderfälle ausdrücklich, statt einen Fehler zu melden.",
     "faq.q5": "Wird meine Zahl an einen Server gesendet?",
-    "faq.a5": "Nein. Jede Berechnung — der Primzahltest und die Faktorisierung — läuft vollständig in deinem Browser mit lokalem JavaScript. Nichts, was du eingibst, wird hochgeladen, protokolliert oder auf einem Server gespeichert, und es gibt weder Werbung noch Anmeldung. Deine letzte Eingabe wird nur in deinem eigenen Browser (localStorage) gespeichert, damit sie bei deiner Rückkehr noch da ist."
+    "faq.a5": "Nein. Jede Berechnung — der Primzahltest und die Faktorisierung — läuft vollständig in deinem Browser mit lokalem JavaScript. Nichts, was du eingibst, wird hochgeladen, protokolliert oder auf einem Server gespeichert, und es gibt weder Werbung noch Anmeldung. Deine letzte Eingabe wird nur in deinem eigenen Browser (localStorage) gespeichert, damit sie bei deiner Rückkehr noch da ist.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -639,7 +699,12 @@ window.I18N_LOCALES = {
     "faq.q4": "0 と 1 は素数ですか。2 は素数ですか?",
     "faq.a4": "いいえ — 0 と 1 は素数ではありません。素数は 1 より大きく、約数がちょうど 2 個でなければならないからです。1 の約数は 1 個(自分自身)だけで、0 はあらゆる数で割り切れます。2 は最小の素数で、唯一の偶数の素数です。ほかの偶数はすべて 2 で割り切れます。このツールはこれらの特殊なケースをエラーにせず、明示的に処理します。",
     "faq.q5": "入力した数はサーバーに送信されますか?",
-    "faq.a5": "いいえ。素数判定も素因数分解も、すべてローカルの JavaScript でブラウザ内だけで実行されます。入力した内容がアップロード・記録・サーバー保存されることはなく、広告も登録もありません。直近の入力はあなたのブラウザ内(localStorage)にのみ保存され、再訪時にも残っています。"
+    "faq.a5": "いいえ。素数判定も素因数分解も、すべてローカルの JavaScript でブラウザ内だけで実行されます。入力した内容がアップロード・記録・サーバー保存されることはなく、広告も登録もありません。直近の入力はあなたのブラウザ内(localStorage)にのみ保存され、再訪時にも残っています。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -687,6 +752,11 @@ window.I18N_LOCALES = {
     "faq.q4": "0과 1은 소수인가요? 2는 소수인가요?",
     "faq.a4": "아닙니다 — 0과 1은 소수가 아닙니다. 소수는 1보다 크고 약수가 정확히 두 개여야 하기 때문입니다. 1은 약수가 하나(자기 자신)뿐이고, 0은 모든 수로 나누어집니다. 2는 가장 작은 소수이자 유일한 짝수 소수이며, 다른 모든 짝수는 2로 나누어집니다. 이 판별기는 이런 특수한 경우를 오류 없이 명시적으로 처리합니다.",
     "faq.q5": "입력한 숫자가 서버로 전송되나요?",
-    "faq.a5": "아닙니다. 소수 판정과 소인수분해 등 모든 계산은 로컬 자바스크립트로 브라우저 안에서만 실행됩니다. 입력한 내용은 업로드·기록·서버 저장되지 않으며 광고나 가입도 없습니다. 마지막 입력값은 오직 본인 브라우저(localStorage)에만 저장되어 다시 방문해도 그대로 남아 있습니다."
+    "faq.a5": "아닙니다. 소수 판정과 소인수분해 등 모든 계산은 로컬 자바스크립트로 브라우저 안에서만 실행됩니다. 입력한 내용은 업로드·기록·서버 저장되지 않으며 광고나 가입도 없습니다. 마지막 입력값은 오직 본인 브라우저(localStorage)에만 저장되어 다시 방문해도 그대로 남아 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

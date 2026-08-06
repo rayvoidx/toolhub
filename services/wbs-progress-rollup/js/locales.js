@@ -163,7 +163,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why do SPI and CPI show a dash instead of a number?",
     "faq.a4": "Because dividing by zero isn't a schedule index. SPI is EV / PV, so if PV is zero — no plan dates mapped, or nothing was scheduled to start by your data date — SPI is undefined and shows an em dash. CPI is EV / AC and EAC is BAC / CPI, so both go blank when there is no actual cost column, or when the actual cost so far is zero. Filling those cells with 0 or 1 would put a made-up number in your weekly report, so the dash stays until the input exists.",
     "faq.q5": "Does my cost and schedule data get uploaded anywhere?",
-    "faq.a5": "No. The parsing, the WBS weighted progress rollup and the EVM math all run in JavaScript inside this tab — there is no server to send a project plan to, and no account to create. You can verify it instead of trusting it: open your browser's developer tools (F12), select the Network tab, then paste your WBS and roll it up. No request appears. Turn on airplane mode and it still works, and only your column mapping and format settings are kept in this browser's local storage — never the tasks, costs or dates."
+    "faq.a5": "No. The parsing, the WBS weighted progress rollup and the EVM math all run in JavaScript inside this tab — there is no server to send a project plan to, and no account to create. You can verify it instead of trusting it: open your browser's developer tools (F12), select the Network tab, then paste your WBS and roll it up. No request appears. Turn on airplane mode and it still works, and only your column mapping and format settings are kept in this browser's local storage — never the tasks, costs or dates.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -311,7 +316,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么 SPI 和 CPI 显示为破折号而不是数字?",
     "faq.a4": "因为除以零得不到进度指数。SPI 是 EV / PV,所以当 PV 为零时 — 没有映射计划日期,或截至数据日期没有任务计划开工 — SPI 无定义,显示为破折号。CPI 是 EV / AC,EAC 是 BAC / CPI,所以在没有实际成本列、或迄今实际成本为零时,两者都会留空。把这些格子填成 0 或 1 会让编造的数字进入您的周报,所以在有输入之前保持破折号。",
     "faq.q5": "我的成本和进度数据会被上传到什么地方吗?",
-    "faq.a5": "不会。解析、WBS 加权进度汇总和挣值计算全部在此标签页内的 JavaScript 中运行 — 没有服务器可以接收项目计划,也没有账号需要注册。您可以验证而不必信任:打开浏览器开发者工具(F12),切到网络标签页,然后粘贴 WBS 并汇总。不会出现任何请求。开启飞行模式它照样工作,而且此浏览器的本地存储只保留您的列映射和格式设置 — 从不保存任务、成本或日期。"
+    "faq.a5": "不会。解析、WBS 加权进度汇总和挣值计算全部在此标签页内的 JavaScript 中运行 — 没有服务器可以接收项目计划,也没有账号需要注册。您可以验证而不必信任:打开浏览器开发者工具(F12),切到网络标签页,然后粘贴 WBS 并汇总。不会出现任何请求。开启飞行模式它照样工作,而且此浏览器的本地存储只保留您的列映射和格式设置 — 从不保存任务、成本或日期。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -459,7 +469,12 @@ window.I18N_LOCALES = {
     "faq.q4": "SPI और CPI संख्या के बजाय डैश क्यों दिखाते हैं?",
     "faq.a4": "क्योंकि शून्य से भाग देना समय-सारणी सूचकांक नहीं है। SPI = EV / PV है, इसलिए यदि PV शून्य है — कोई नियोजित तिथि मैप नहीं हुई, या आपकी डेटा तिथि तक कुछ भी आरंभ होना नियत नहीं था — तो SPI अपरिभाषित है और डैश दिखाता है। CPI = EV / AC और EAC = BAC / CPI है, इसलिए जब वास्तविक लागत कॉलम न हो, या अब तक की वास्तविक लागत शून्य हो, तो दोनों खाली रहते हैं। इन कोष्ठों को 0 या 1 से भरना आपकी साप्ताहिक रिपोर्ट में गढ़ी हुई संख्या डाल देगा, इसलिए जब तक इनपुट न हो, डैश ही रहता है।",
     "faq.q5": "क्या मेरी लागत और समय-सारणी का डेटा कहीं अपलोड होता है?",
-    "faq.a5": "नहीं। पार्सिंग, WBS भारित प्रगति रोलअप और EVM की सारी गणित इसी टैब के भीतर JavaScript में चलती है — परियोजना योजना भेजने के लिए कोई सर्वर नहीं है, और बनाने के लिए कोई खाता नहीं है। भरोसा करने के बजाय आप जाँच सकते हैं: ब्राउज़र के डेवलपर टूल (F12) खोलें, Network टैब चुनें, फिर अपना WBS पेस्ट करके रोलअप करें। एक भी अनुरोध नहीं दिखेगा। हवाई जहाज़ मोड चालू कर दें तो भी यह काम करता है, और इस ब्राउज़र के लोकल स्टोरेज में सिर्फ़ आपकी कॉलम मैपिंग और प्रारूप सेटिंग्स रहती हैं — कार्य, लागत या तिथियाँ कभी नहीं।"
+    "faq.a5": "नहीं। पार्सिंग, WBS भारित प्रगति रोलअप और EVM की सारी गणित इसी टैब के भीतर JavaScript में चलती है — परियोजना योजना भेजने के लिए कोई सर्वर नहीं है, और बनाने के लिए कोई खाता नहीं है। भरोसा करने के बजाय आप जाँच सकते हैं: ब्राउज़र के डेवलपर टूल (F12) खोलें, Network टैब चुनें, फिर अपना WBS पेस्ट करके रोलअप करें। एक भी अनुरोध नहीं दिखेगा। हवाई जहाज़ मोड चालू कर दें तो भी यह काम करता है, और इस ब्राउज़र के लोकल स्टोरेज में सिर्फ़ आपकी कॉलम मैपिंग और प्रारूप सेटिंग्स रहती हैं — कार्य, लागत या तिथियाँ कभी नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -607,7 +622,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué SPI y CPI muestran un guion en vez de un número?",
     "faq.a4": "Porque dividir por cero no es un índice de cronograma. El SPI es EV / PV, así que si el PV es cero —no se asignaron fechas de plan, o no había nada previsto para empezar a tu fecha de corte— el SPI queda indefinido y muestra una raya. El CPI es EV / AC y el EAC es BAC / CPI, así que ambos quedan en blanco cuando no hay columna de coste real o cuando el coste real hasta la fecha es cero. Rellenar esas celdas con 0 o 1 metería un número inventado en tu informe semanal, así que la raya se queda hasta que exista el dato.",
     "faq.q5": "¿Se suben a algún sitio mis datos de coste y cronograma?",
-    "faq.a5": "No. El análisis del texto, la consolidación del avance ponderado de la EDT y las cuentas del EVM se ejecutan en JavaScript dentro de esta pestaña: no hay servidor al que enviar un plan de proyecto ni cuenta que crear. Puedes comprobarlo en vez de fiarte: abre las herramientas de desarrollo del navegador (F12), ve a la pestaña Red, pega tu EDT y consolídala. No aparece ninguna petición. Activa el modo avión y seguirá funcionando; en el almacenamiento local de este navegador solo se guardan tu asignación de columnas y tus preferencias de formato, nunca las tareas, los costes ni las fechas."
+    "faq.a5": "No. El análisis del texto, la consolidación del avance ponderado de la EDT y las cuentas del EVM se ejecutan en JavaScript dentro de esta pestaña: no hay servidor al que enviar un plan de proyecto ni cuenta que crear. Puedes comprobarlo en vez de fiarte: abre las herramientas de desarrollo del navegador (F12), ve a la pestaña Red, pega tu EDT y consolídala. No aparece ninguna petición. Activa el modo avión y seguirá funcionando; en el almacenamiento local de este navegador solo se guardan tu asignación de columnas y tus preferencias de formato, nunca las tareas, los costes ni las fechas.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -755,7 +775,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا يظهر SPI وCPI بشرطة بدل رقم؟",
     "faq.a4": "لأن القسمة على صفر ليست مؤشر جدول زمني. فـ SPI هو EV / PV، فإذا كان PV صفرًا — لعدم مطابقة تواريخ مخططة، أو لعدم وجود ما كان مقررًا أن يبدأ حتى تاريخ بياناتك — يصبح SPI غير معرَّف ويظهر بشرطة. وCPI هو EV / AC وEAC هو BAC / CPI، لذا يبقى كلاهما فارغًا عند غياب عمود التكلفة الفعلية، أو حين تكون التكلفة الفعلية حتى الآن صفرًا. وملء تلك الخلايا بـ 0 أو 1 يضع رقمًا مُختلَقًا في تقريرك الأسبوعي، لذا تبقى الشرطة حتى تتوفر البيانات.",
     "faq.q5": "هل تُرفع بيانات التكلفة والجدول الزمني إلى أي مكان؟",
-    "faq.a5": "لا. التحليل، وتجميع التقدم الموزون لهيكل العمل، وحسابات EVM كلها تعمل بلغة JavaScript داخل هذه التبويبة — لا يوجد خادم تُرسَل إليه خطة المشروع، ولا حساب يلزم إنشاؤه. ويمكنك التحقق بدل الثقة: افتح أدوات المطوّر في المتصفح (F12)، واختر تبويبة الشبكة، ثم الصق هيكل عملك وجمّعه. لن يظهر أي طلب. شغّل وضع الطيران وسيظل يعمل، ولا يُحفظ في التخزين المحلي لهذا المتصفح سوى مطابقة الأعمدة وإعدادات التنسيق — ولا تُحفظ أبدًا المهام أو التكاليف أو التواريخ."
+    "faq.a5": "لا. التحليل، وتجميع التقدم الموزون لهيكل العمل، وحسابات EVM كلها تعمل بلغة JavaScript داخل هذه التبويبة — لا يوجد خادم تُرسَل إليه خطة المشروع، ولا حساب يلزم إنشاؤه. ويمكنك التحقق بدل الثقة: افتح أدوات المطوّر في المتصفح (F12)، واختر تبويبة الشبكة، ثم الصق هيكل عملك وجمّعه. لن يظهر أي طلب. شغّل وضع الطيران وسيظل يعمل، ولا يُحفظ في التخزين المحلي لهذا المتصفح سوى مطابقة الأعمدة وإعدادات التنسيق — ولا تُحفظ أبدًا المهام أو التكاليف أو التواريخ.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -903,7 +928,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi le SPI et le CPI affichent-ils un tiret au lieu d'un nombre ?",
     "faq.a4": "Parce qu'une division par zéro n'est pas un indice de planning. Le SPI vaut EV / PV : si la PV est nulle — aucune date prévue n'a été associée, ou rien ne devait démarrer à votre date d'état — le SPI est indéfini et affiche un tiret cadratin. Le CPI vaut EV / AC et l'EAC vaut BAC / CPI : tous deux restent vides sans colonne de coût réel, ou lorsque le coût réel à ce jour est nul. Remplir ces cellules avec 0 ou 1 mettrait un chiffre inventé dans votre rapport hebdomadaire : le tiret reste donc tant que la donnée n'existe pas.",
     "faq.q5": "Mes données de coûts et de planning sont-elles envoyées quelque part ?",
-    "faq.a5": "Non. L'analyse du texte, la consolidation de l'avancement pondéré du WBS et les calculs EVM s'exécutent tous en JavaScript dans cet onglet : il n'y a aucun serveur à qui envoyer un plan de projet, ni aucun compte à créer. Vous pouvez le vérifier plutôt que de nous croire : ouvrez les outils de développement du navigateur (F12), allez dans l'onglet Réseau, puis collez votre WBS et consolidez-le. Aucune requête n'apparaît. Activez le mode avion et cela fonctionne encore ; seuls votre correspondance de colonnes et vos réglages de format sont conservés dans le stockage local de ce navigateur — jamais les tâches, les coûts ni les dates."
+    "faq.a5": "Non. L'analyse du texte, la consolidation de l'avancement pondéré du WBS et les calculs EVM s'exécutent tous en JavaScript dans cet onglet : il n'y a aucun serveur à qui envoyer un plan de projet, ni aucun compte à créer. Vous pouvez le vérifier plutôt que de nous croire : ouvrez les outils de développement du navigateur (F12), allez dans l'onglet Réseau, puis collez votre WBS et consolidez-le. Aucune requête n'apparaît. Activez le mode avion et cela fonctionne encore ; seuls votre correspondance de colonnes et vos réglages de format sont conservés dans le stockage local de ce navigateur — jamais les tâches, les coûts ni les dates.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -1051,7 +1081,12 @@ window.I18N_LOCALES = {
     "faq.q4": "SPI আর CPI সংখ্যার বদলে ড্যাশ দেখায় কেন?",
     "faq.a4": "কারণ শূন্য দিয়ে ভাগ করলে তা সময়সূচির সূচক হয় না। SPI = EV / PV, তাই PV শূন্য হলে — কোনো পরিকল্পিত তারিখ ম্যাপ করা হয়নি, বা আপনার ডেটা তারিখ পর্যন্ত কিছু শুরু হওয়ার কথা ছিল না — SPI অসংজ্ঞায়িত থাকে এবং ড্যাশ দেখায়। CPI = EV / AC এবং EAC = BAC / CPI, তাই প্রকৃত ব্যয়ের কলাম না থাকলে বা এ পর্যন্ত প্রকৃত ব্যয় শূন্য হলে দুটোই ফাঁকা থাকে। ওই ঘরগুলো 0 বা 1 দিয়ে ভরলে আপনার সাপ্তাহিক রিপোর্টে বানানো সংখ্যা ঢুকে যাবে, তাই তথ্য না আসা পর্যন্ত ড্যাশই থাকে।",
     "faq.q5": "আমার খরচ ও সময়সূচির তথ্য কি কোথাও আপলোড হয়?",
-    "faq.a5": "না। পার্সিং, WBS ভারযুক্ত অগ্রগতির রোলআপ এবং EVM-এর সব গণিত এই ট্যাবের ভেতরে JavaScript-এ চলে — প্রকল্প পরিকল্পনা পাঠানোর মতো কোনো সার্ভার নেই, খোলার মতো কোনো অ্যাকাউন্টও নেই। বিশ্বাস করার বদলে যাচাই করতে পারেন: ব্রাউজারের ডেভেলপার টুল (F12) খুলুন, Network ট্যাব বাছুন, তারপর আপনার WBS পেস্ট করে রোলআপ করুন। একটিও রিকোয়েস্ট দেখা যাবে না। এয়ারপ্লেন মোড চালু করলেও এটি কাজ করে, আর এই ব্রাউজারের লোকাল স্টোরেজে শুধু আপনার কলাম ম্যাপিং ও বিন্যাসের সেটিংস থাকে — কাজ, খরচ বা তারিখ কখনোই নয়।"
+    "faq.a5": "না। পার্সিং, WBS ভারযুক্ত অগ্রগতির রোলআপ এবং EVM-এর সব গণিত এই ট্যাবের ভেতরে JavaScript-এ চলে — প্রকল্প পরিকল্পনা পাঠানোর মতো কোনো সার্ভার নেই, খোলার মতো কোনো অ্যাকাউন্টও নেই। বিশ্বাস করার বদলে যাচাই করতে পারেন: ব্রাউজারের ডেভেলপার টুল (F12) খুলুন, Network ট্যাব বাছুন, তারপর আপনার WBS পেস্ট করে রোলআপ করুন। একটিও রিকোয়েস্ট দেখা যাবে না। এয়ারপ্লেন মোড চালু করলেও এটি কাজ করে, আর এই ব্রাউজারের লোকাল স্টোরেজে শুধু আপনার কলাম ম্যাপিং ও বিন্যাসের সেটিংস থাকে — কাজ, খরচ বা তারিখ কখনোই নয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1199,7 +1234,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que SPI e CPI mostram um traço em vez de um número?",
     "faq.a4": "Porque dividir por zero não é um índice de cronograma. O SPI é EV / PV, então, se o PV for zero — nenhuma data planejada mapeada, ou nada previsto para começar até a sua data de status — o SPI fica indefinido e mostra um travessão. O CPI é EV / AC e o EAC é BAC / CPI, então ambos ficam em branco quando não há coluna de custo real ou quando o custo real até agora é zero. Preencher essas células com 0 ou 1 colocaria um número inventado no seu relatório semanal, então o traço permanece até o dado existir.",
     "faq.q5": "Meus dados de custo e cronograma são enviados para algum lugar?",
-    "faq.a5": "Não. A leitura do texto, a consolidação do progresso ponderado da EAP e as contas do EVM rodam todas em JavaScript dentro desta aba — não há servidor para onde mandar um plano de projeto, nem conta a criar. Você pode verificar em vez de confiar: abra as ferramentas de desenvolvedor do navegador (F12), escolha a aba Rede, cole a sua EAP e consolide. Nenhuma requisição aparece. Ligue o modo avião e continua funcionando; no armazenamento local deste navegador ficam apenas o seu mapeamento de colunas e as preferências de formato — nunca as tarefas, os custos ou as datas."
+    "faq.a5": "Não. A leitura do texto, a consolidação do progresso ponderado da EAP e as contas do EVM rodam todas em JavaScript dentro desta aba — não há servidor para onde mandar um plano de projeto, nem conta a criar. Você pode verificar em vez de confiar: abra as ferramentas de desenvolvedor do navegador (F12), escolha a aba Rede, cole a sua EAP e consolide. Nenhuma requisição aparece. Ligue o modo avião e continua funcionando; no armazenamento local deste navegador ficam apenas o seu mapeamento de colunas e as preferências de formato — nunca as tarefas, os custos ou as datas.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1347,7 +1387,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему SPI и CPI показывают прочерк вместо числа?",
     "faq.a4": "Потому что деление на ноль — это не индекс сроков. SPI равен EV / PV, поэтому, если PV равен нулю (плановые даты не сопоставлены или к отчётной дате ничего не должно было начаться), SPI не определён и показывается прочерком. CPI равен EV / AC, а EAC — BAC / CPI, поэтому оба остаются пустыми, если нет столбца фактических затрат или фактические затраты пока равны нулю. Заполнить эти ячейки нулём или единицей значило бы вписать выдуманное число в ваш еженедельный отчёт, поэтому прочерк остаётся, пока не появятся исходные данные.",
     "faq.q5": "Загружаются ли мои данные о затратах и сроках куда-либо?",
-    "faq.a5": "Нет. Разбор текста, свёртка взвешенного прогресса по СДР и вся математика EVM выполняются на JavaScript внутри этой вкладки — нет сервера, куда можно было бы отправить план проекта, и нет аккаунта, который нужно создавать. Это можно проверить, а не принимать на веру: откройте инструменты разработчика (F12), перейдите на вкладку «Сеть», затем вставьте свою СДР и сверните её. Не появится ни одного запроса. Включите режим полёта — всё продолжит работать, а в локальном хранилище браузера сохраняются только сопоставление столбцов и настройки формата, но никогда не задачи, затраты или даты."
+    "faq.a5": "Нет. Разбор текста, свёртка взвешенного прогресса по СДР и вся математика EVM выполняются на JavaScript внутри этой вкладки — нет сервера, куда можно было бы отправить план проекта, и нет аккаунта, который нужно создавать. Это можно проверить, а не принимать на веру: откройте инструменты разработчика (F12), перейдите на вкладку «Сеть», затем вставьте свою СДР и сверните её. Не появится ни одного запроса. Включите режим полёта — всё продолжит работать, а в локальном хранилище браузера сохраняются только сопоставление столбцов и настройки формата, но никогда не задачи, затраты или даты.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1495,7 +1540,12 @@ window.I18N_LOCALES = {
     "faq.q4": "SPI اور CPI عدد کے بجائے ڈیش کیوں دکھاتے ہیں؟",
     "faq.a4": "کیونکہ صفر پر تقسیم کوئی شیڈول اشاریہ نہیں۔ SPI = EV / PV ہے، لہٰذا اگر PV صفر ہو — کوئی منصوبہ بند تاریخ منسلک نہ ہو، یا آپ کی ڈیٹا تاریخ تک کچھ شروع ہونا طے نہ ہو — تو SPI غیر متعین رہتا ہے اور ڈیش دکھاتا ہے۔ CPI = EV / AC اور EAC = BAC / CPI ہے، چنانچہ جب اصل لاگت کا کالم نہ ہو، یا اب تک اصل لاگت صفر ہو، تو دونوں خالی رہتے ہیں۔ ان خانوں کو 0 یا 1 سے بھرنا آپ کی ہفتہ وار رپورٹ میں گھڑا ہوا عدد ڈال دے گا، اس لیے جب تک ڈیٹا نہ ہو، ڈیش ہی رہتا ہے۔",
     "faq.q5": "کیا میرے لاگت اور شیڈول کے اعداد و شمار کہیں اپ لوڈ ہوتے ہیں؟",
-    "faq.a5": "نہیں۔ پارسنگ، WBS وزنی پیش رفت کا رول اپ اور EVM کا سارا حساب اسی ٹیب کے اندر JavaScript میں چلتا ہے — منصوبے کا پلان بھیجنے کے لیے کوئی سرور نہیں، اور بنانے کے لیے کوئی اکاؤنٹ نہیں۔ بھروسا کرنے کے بجائے آپ جانچ سکتے ہیں: براؤزر کے ڈیولپر ٹولز (F12) کھولیں، Network ٹیب چنیں، پھر اپنا WBS پیسٹ کر کے رول اپ کریں۔ ایک بھی درخواست ظاہر نہیں ہوگی۔ ہوائی جہاز موڈ آن کر دیں تب بھی یہ کام کرتا ہے، اور اس براؤزر کے لوکل اسٹوریج میں صرف آپ کی کالم مطابقت اور وضع کی ترتیبات رہتی ہیں — ٹاسک، لاگت یا تاریخیں کبھی نہیں۔"
+    "faq.a5": "نہیں۔ پارسنگ، WBS وزنی پیش رفت کا رول اپ اور EVM کا سارا حساب اسی ٹیب کے اندر JavaScript میں چلتا ہے — منصوبے کا پلان بھیجنے کے لیے کوئی سرور نہیں، اور بنانے کے لیے کوئی اکاؤنٹ نہیں۔ بھروسا کرنے کے بجائے آپ جانچ سکتے ہیں: براؤزر کے ڈیولپر ٹولز (F12) کھولیں، Network ٹیب چنیں، پھر اپنا WBS پیسٹ کر کے رول اپ کریں۔ ایک بھی درخواست ظاہر نہیں ہوگی۔ ہوائی جہاز موڈ آن کر دیں تب بھی یہ کام کرتا ہے، اور اس براؤزر کے لوکل اسٹوریج میں صرف آپ کی کالم مطابقت اور وضع کی ترتیبات رہتی ہیں — ٹاسک، لاگت یا تاریخیں کبھی نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1643,7 +1693,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa SPI dan CPI menampilkan tanda hubung, bukan angka?",
     "faq.a4": "Karena pembagian dengan nol bukanlah indeks jadwal. SPI adalah EV / PV, jadi kalau PV nol — tidak ada tanggal rencana yang dipetakan, atau tidak ada yang dijadwalkan mulai sampai tanggal data Anda — SPI tidak terdefinisi dan ditampilkan sebagai tanda pisah. CPI adalah EV / AC dan EAC adalah BAC / CPI, jadi keduanya kosong bila tidak ada kolom biaya aktual, atau bila biaya aktual sejauh ini nol. Mengisi sel itu dengan 0 atau 1 akan menaruh angka karangan di laporan mingguan Anda, jadi tanda hubungnya bertahan sampai datanya ada.",
     "faq.q5": "Apakah data biaya dan jadwal saya diunggah ke suatu tempat?",
-    "faq.a5": "Tidak. Penguraian teks, rekap progres berbobot WBS, dan seluruh hitungan EVM berjalan di JavaScript di dalam tab ini — tidak ada server tujuan pengiriman rencana proyek, dan tidak ada akun yang perlu dibuat. Anda bisa membuktikannya alih-alih percaya begitu saja: buka alat pengembang peramban (F12), pilih tab Network, lalu tempel WBS Anda dan rekap. Tidak ada permintaan yang muncul. Nyalakan mode pesawat dan ini tetap bekerja, dan hanya pemetaan kolom serta pengaturan format Anda yang disimpan di penyimpanan lokal peramban ini — tidak pernah tugas, biaya, atau tanggalnya."
+    "faq.a5": "Tidak. Penguraian teks, rekap progres berbobot WBS, dan seluruh hitungan EVM berjalan di JavaScript di dalam tab ini — tidak ada server tujuan pengiriman rencana proyek, dan tidak ada akun yang perlu dibuat. Anda bisa membuktikannya alih-alih percaya begitu saja: buka alat pengembang peramban (F12), pilih tab Network, lalu tempel WBS Anda dan rekap. Tidak ada permintaan yang muncul. Nyalakan mode pesawat dan ini tetap bekerja, dan hanya pemetaan kolom serta pengaturan format Anda yang disimpan di penyimpanan lokal peramban ini — tidak pernah tugas, biaya, atau tanggalnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1791,7 +1846,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum zeigen SPI und CPI einen Strich statt einer Zahl?",
     "faq.a4": "Weil eine Division durch null kein Terminindex ist. SPI ist EV / PV — ist PV also null, weil keine Plantermine zugeordnet sind oder bis zu Ihrem Stichtag nichts starten sollte, ist SPI undefiniert und zeigt einen Gedankenstrich. CPI ist EV / AC und EAC ist BAC / CPI, beide bleiben also leer, wenn es keine Ist-Kosten-Spalte gibt oder die bisherigen Ist-Kosten null sind. Diese Zellen mit 0 oder 1 zu füllen hieße, eine erfundene Zahl in Ihren Wochenbericht zu schreiben — deshalb bleibt der Strich, bis die Eingabe existiert.",
     "faq.q5": "Werden meine Kosten- und Termindaten irgendwohin hochgeladen?",
-    "faq.a5": "Nein. Das Parsen, das gewichtete PSP-Fortschritts-Rollup und die EVM-Rechnung laufen alle in JavaScript in diesem Tab — es gibt keinen Server, an den ein Projektplan ginge, und kein Konto anzulegen. Sie können es prüfen, statt zu vertrauen: Öffnen Sie die Entwicklertools (F12), wählen Sie den Tab „Netzwerk“, fügen Sie dann Ihren PSP ein und rechnen Sie hoch. Es erscheint keine einzige Anfrage. Im Flugmodus funktioniert es weiterhin, und im lokalen Speicher dieses Browsers liegen nur Ihre Spaltenzuordnung und Formateinstellungen — nie die Vorgänge, Kosten oder Termine."
+    "faq.a5": "Nein. Das Parsen, das gewichtete PSP-Fortschritts-Rollup und die EVM-Rechnung laufen alle in JavaScript in diesem Tab — es gibt keinen Server, an den ein Projektplan ginge, und kein Konto anzulegen. Sie können es prüfen, statt zu vertrauen: Öffnen Sie die Entwicklertools (F12), wählen Sie den Tab „Netzwerk“, fügen Sie dann Ihren PSP ein und rechnen Sie hoch. Es erscheint keine einzige Anfrage. Im Flugmodus funktioniert es weiterhin, und im lokalen Speicher dieses Browsers liegen nur Ihre Spaltenzuordnung und Formateinstellungen — nie die Vorgänge, Kosten oder Termine.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1939,7 +1999,12 @@ window.I18N_LOCALES = {
     "faq.q4": "SPIとCPIが数値ではなくダッシュで表示されるのはなぜ?",
     "faq.a4": "0で割った値はスケジュール指数ではないからです。SPIはEV / PVなので、PVが0のとき — 計画日付が割り当てられていない、または基準日までに着手予定のタスクがない場合 — SPIは定義されず、ダッシュで表示されます。CPIはEV / AC、EACはBAC / CPIなので、実績原価の列がない場合や現時点の実績原価が0の場合は両方とも空欄になります。これらを0や1で埋めると週次報告に作り話の数字が入ってしまうため、入力が揃うまでダッシュのままにします。",
     "faq.q5": "原価や工程のデータはどこかにアップロードされますか?",
-    "faq.a5": "いいえ。パース処理も、WBS加重進捗率の集計も、EVMの計算も、すべてこのタブ内のJavaScriptで動いています — プロジェクト計画を送るサーバーも、作成するアカウントもありません。信じる代わりに確認できます。ブラウザの開発者ツール(F12)を開いてネットワークタブを選び、WBSを貼り付けて集計してみてください。リクエストは一つも出ません。機内モードでも動作し、このブラウザのローカルストレージに保存されるのは列の割り当てと形式設定だけです — タスク・原価・日付は決して保存しません。"
+    "faq.a5": "いいえ。パース処理も、WBS加重進捗率の集計も、EVMの計算も、すべてこのタブ内のJavaScriptで動いています — プロジェクト計画を送るサーバーも、作成するアカウントもありません。信じる代わりに確認できます。ブラウザの開発者ツール(F12)を開いてネットワークタブを選び、WBSを貼り付けて集計してみてください。リクエストは一つも出ません。機内モードでも動作し、このブラウザのローカルストレージに保存されるのは列の割り当てと形式設定だけです — タスク・原価・日付は決して保存しません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -2087,6 +2152,11 @@ window.I18N_LOCALES = {
     "faq.q4": "SPI와 CPI가 숫자 대신 대시로 나오는 이유는?",
     "faq.a4": "0으로 나눈 값은 일정 지수가 아니기 때문입니다. SPI는 EV / PV이므로 PV가 0이면 — 계획 일자가 매핑되지 않았거나, 기준일까지 착수 예정인 작업이 없으면 — SPI는 정의되지 않아 대시로 표시됩니다. CPI는 EV / AC, EAC는 BAC / CPI이므로 실적원가 열이 없거나 지금까지의 실적원가가 0이면 둘 다 비워집니다. 이 칸을 0이나 1로 채우면 주간보고서에 지어낸 숫자가 들어가므로, 입력이 생길 때까지 대시를 유지합니다.",
     "faq.q5": "원가와 일정 데이터가 어딘가로 업로드되나요?",
-    "faq.a5": "아니요. 파싱, WBS 가중 진척률 집계, EVM 계산 모두 이 탭 안의 자바스크립트에서 돌아갑니다 — 프로젝트 계획을 보낼 서버도, 만들 계정도 없습니다. 믿는 대신 직접 확인할 수 있습니다. 브라우저 개발자 도구(F12)를 열고 네트워크 탭을 선택한 뒤 WBS를 붙여넣고 집계해 보세요. 아무 요청도 뜨지 않습니다. 비행기 모드에서도 동작하며, 이 브라우저의 로컬 스토리지에는 열 매핑과 형식 설정만 저장됩니다 — 작업·원가·일자는 절대 저장하지 않습니다."
+    "faq.a5": "아니요. 파싱, WBS 가중 진척률 집계, EVM 계산 모두 이 탭 안의 자바스크립트에서 돌아갑니다 — 프로젝트 계획을 보낼 서버도, 만들 계정도 없습니다. 믿는 대신 직접 확인할 수 있습니다. 브라우저 개발자 도구(F12)를 열고 네트워크 탭을 선택한 뒤 WBS를 붙여넣고 집계해 보세요. 아무 요청도 뜨지 않습니다. 비행기 모드에서도 동작하며, 이 브라우저의 로컬 스토리지에는 열 매핑과 형식 설정만 저장됩니다 — 작업·원가·일자는 절대 저장하지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

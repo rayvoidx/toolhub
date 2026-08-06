@@ -55,7 +55,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What does the WCAG AA / AAA contrast badge tell me?",
     "faq.a4": "It measures how legible text would be on the color you picked. The tool computes the WCAG contrast ratio (from 1:1 up to 21:1) for both black and white text and marks the more readable one as “Best”. As a rule of thumb, normal body text needs a ratio of at least 4.5:1 to pass WCAG AA and 7:1 to reach the stricter AAA, while large or bold text can pass AA at 3:1. If both black and white read “Fail”, the color is a poor background for text and you should darken or lighten it. This lets designers check accessibility while they choose a color, not afterward.",
     "faq.q5": "Is my color data sent anywhere?",
-    "faq.a5": "No. Every conversion — HEX to RGB, RGB to HEX, HSL, HSV, CMYK, the contrast check and the eyedropper — runs entirely in your browser with plain JavaScript. Nothing is uploaded, logged or shared, so it is safe to use with brand or client colors. Your last color is remembered only in your own browser’s local storage so the tool reopens where you left off, and the page URL also carries the color so you can bookmark or share an exact shade."
+    "faq.a5": "No. Every conversion — HEX to RGB, RGB to HEX, HSL, HSV, CMYK, the contrast check and the eyedropper — runs entirely in your browser with plain JavaScript. Nothing is uploaded, logged or shared, so it is safe to use with brand or client colors. Your last color is remembered only in your own browser’s local storage so the tool reopens where you left off, and the page URL also carries the color so you can bookmark or share an exact shade.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -104,7 +109,12 @@ window.I18N_LOCALES = {
     "faq.q4": "WCAG AA / AAA 对比度徽章告诉我什么？",
     "faq.a4": "它衡量文字在你所选颜色上的可读性。工具会为黑色和白色文字分别计算 WCAG 对比度（从 1:1 到 21:1），并把更易读的一个标为“最佳”。一般来说，正常正文文字需要至少 4.5:1 才能通过 WCAG AA，7:1 才能达到更严格的 AAA，而大号或粗体文字在 3:1 即可通过 AA。如果黑白都显示“不合格”，说明该颜色不适合作文字背景，你应把它调暗或调亮。这让设计师在选色时就能检查无障碍性，而不是事后再补。",
     "faq.q5": "我的颜色数据会被发送到某处吗？",
-    "faq.a5": "不会。每一次转换 — HEX 转 RGB、RGB 转 HEX、HSL、HSV、CMYK、对比度检查和取色器 — 都完全用纯 JavaScript 在你的浏览器中运行。没有任何内容被上传、记录或共享，所以用于品牌色或客户色都很安全。你上次使用的颜色只保存在你自己浏览器的本地存储中，以便重新打开时接着用；页面网址也带有该颜色，方便你收藏或分享某个精确色值。"
+    "faq.a5": "不会。每一次转换 — HEX 转 RGB、RGB 转 HEX、HSL、HSV、CMYK、对比度检查和取色器 — 都完全用纯 JavaScript 在你的浏览器中运行。没有任何内容被上传、记录或共享，所以用于品牌色或客户色都很安全。你上次使用的颜色只保存在你自己浏览器的本地存储中，以便重新打开时接着用；页面网址也带有该颜色，方便你收藏或分享某个精确色值。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -153,7 +163,12 @@ window.I18N_LOCALES = {
     "faq.q4": "WCAG AA / AAA कंट्रास्ट बैज मुझे क्या बताता है?",
     "faq.a4": "यह मापता है कि आपके चुने रंग पर टेक्स्ट कितना पठनीय होगा। टूल काले और सफ़ेद दोनों टेक्स्ट के लिए WCAG कंट्रास्ट अनुपात (1:1 से 21:1 तक) की गणना करता है और अधिक पठनीय को “सर्वोत्तम” चिह्नित करता है। मोटे तौर पर, सामान्य बॉडी टेक्स्ट को WCAG AA पास करने के लिए कम-से-कम 4.5:1 और सख़्त AAA तक पहुँचने के लिए 7:1 चाहिए, जबकि बड़ा या बोल्ड टेक्स्ट 3:1 पर AA पास कर सकता है। यदि काला और सफ़ेद दोनों “विफल” दिखाते हैं, तो वह रंग टेक्स्ट के लिए ख़राब पृष्ठभूमि है और आपको उसे गहरा या हल्का करना चाहिए। इससे डिज़ाइनर रंग चुनते समय ही सुलभता जाँच लेते हैं, बाद में नहीं।",
     "faq.q5": "क्या मेरा रंग डेटा कहीं भेजा जाता है?",
-    "faq.a5": "नहीं। हर रूपांतरण — HEX से RGB, RGB से HEX, HSL, HSV, CMYK, कंट्रास्ट जाँच और आईड्रॉपर — पूरी तरह सादे JavaScript के साथ आपके ब्राउज़र में चलता है। कुछ भी अपलोड, लॉग या साझा नहीं होता, इसलिए ब्रांड या क्लाइंट रंगों के साथ उपयोग सुरक्षित है। आपका अंतिम रंग केवल आपके अपने ब्राउज़र के लोकल स्टोरेज में याद रखा जाता है ताकि टूल वहीं से फिर खुले जहाँ आपने छोड़ा था, और पेज का URL भी रंग साथ रखता है ताकि आप किसी सटीक शेड को बुकमार्क या साझा कर सकें।"
+    "faq.a5": "नहीं। हर रूपांतरण — HEX से RGB, RGB से HEX, HSL, HSV, CMYK, कंट्रास्ट जाँच और आईड्रॉपर — पूरी तरह सादे JavaScript के साथ आपके ब्राउज़र में चलता है। कुछ भी अपलोड, लॉग या साझा नहीं होता, इसलिए ब्रांड या क्लाइंट रंगों के साथ उपयोग सुरक्षित है। आपका अंतिम रंग केवल आपके अपने ब्राउज़र के लोकल स्टोरेज में याद रखा जाता है ताकि टूल वहीं से फिर खुले जहाँ आपने छोड़ा था, और पेज का URL भी रंग साथ रखता है ताकि आप किसी सटीक शेड को बुकमार्क या साझा कर सकें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -202,7 +217,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué me indica la insignia de contraste WCAG AA / AAA?",
     "faq.a4": "Mide qué tan legible sería el texto sobre el color que elegiste. La herramienta calcula la relación de contraste WCAG (de 1:1 hasta 21:1) tanto para texto negro como blanco y marca el más legible como «Mejor». Como regla general, el texto normal necesita al menos 4.5:1 para pasar WCAG AA y 7:1 para alcanzar el más estricto AAA, mientras que el texto grande o en negrita puede pasar AA con 3:1. Si tanto el negro como el blanco marcan «No pasa», el color es un mal fondo para texto y deberías oscurecerlo o aclararlo. Así los diseñadores comprueban la accesibilidad al elegir el color, no después.",
     "faq.q5": "¿Se envían mis datos de color a algún sitio?",
-    "faq.a5": "No. Cada conversión —HEX a RGB, RGB a HEX, HSL, HSV, CMYK, la comprobación de contraste y el cuentagotas— se ejecuta por completo en tu navegador con JavaScript puro. Nada se sube, registra ni comparte, así que es seguro con colores de marca o de cliente. Tu último color se recuerda solo en el almacenamiento local de tu propio navegador para que la herramienta se reabra donde la dejaste, y la URL de la página también lleva el color para que puedas guardar o compartir un tono exacto."
+    "faq.a5": "No. Cada conversión —HEX a RGB, RGB a HEX, HSL, HSV, CMYK, la comprobación de contraste y el cuentagotas— se ejecuta por completo en tu navegador con JavaScript puro. Nada se sube, registra ni comparte, así que es seguro con colores de marca o de cliente. Tu último color se recuerda solo en el almacenamiento local de tu propio navegador para que la herramienta se reabra donde la dejaste, y la URL de la página también lleva el color para que puedas guardar o compartir un tono exacto.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -251,7 +271,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ماذا تخبرني شارة تباين WCAG AA / AAA؟",
     "faq.a4": "تقيس مدى وضوح النص فوق اللون الذي اخترته. تحسب الأداة نسبة تباين WCAG (من 1:1 حتى 21:1) للنص الأسود والأبيض معًا، وتضع علامة «الأفضل» على الأوضح. كقاعدة عامة، يحتاج نص المتن العادي إلى 4.5:1 على الأقل لاجتياز WCAG AA، و7:1 لبلوغ AAA الأكثر صرامة، بينما يمكن للنص الكبير أو العريض اجتياز AA عند 3:1. وإذا ظهر «غير مطابق» للأسود والأبيض معًا، فاللون خلفية سيئة للنص وعليك تغميقه أو تفتيحه. هذا يتيح للمصممين فحص إمكانية الوصول أثناء اختيار اللون لا بعده.",
     "faq.q5": "هل تُرسَل بيانات ألواني إلى أي مكان؟",
-    "faq.a5": "لا. كل تحويل — HEX إلى RGB، و RGB إلى HEX، و HSL و HSV و CMYK، وفحص التباين والقطّارة — يعمل بالكامل داخل متصفحك بلغة JavaScript خالصة. لا يُرفع أو يُسجّل أو يُشارَك أي شيء، لذا فهو آمن مع ألوان العلامات التجارية أو العملاء. يُحفَظ آخر لون لديك في التخزين المحلي لمتصفحك وحده لتُفتح الأداة من حيث توقفت، ويحمل رابط الصفحة اللون أيضًا لتتمكن من حفظ أو مشاركة درجة دقيقة."
+    "faq.a5": "لا. كل تحويل — HEX إلى RGB، و RGB إلى HEX، و HSL و HSV و CMYK، وفحص التباين والقطّارة — يعمل بالكامل داخل متصفحك بلغة JavaScript خالصة. لا يُرفع أو يُسجّل أو يُشارَك أي شيء، لذا فهو آمن مع ألوان العلامات التجارية أو العملاء. يُحفَظ آخر لون لديك في التخزين المحلي لمتصفحك وحده لتُفتح الأداة من حيث توقفت، ويحمل رابط الصفحة اللون أيضًا لتتمكن من حفظ أو مشاركة درجة دقيقة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -300,7 +325,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que m'indique le badge de contraste WCAG AA / AAA ?",
     "faq.a4": "Il mesure la lisibilité d'un texte sur la couleur choisie. L'outil calcule le rapport de contraste WCAG (de 1:1 à 21:1) pour le texte noir et le texte blanc, et marque le plus lisible comme « Meilleur ». En règle générale, un texte courant doit atteindre au moins 4,5:1 pour valider WCAG AA et 7:1 pour le plus strict AAA, tandis qu'un texte grand ou gras peut valider AA à 3:1. Si le noir et le blanc affichent tous deux « Échec », la couleur est un mauvais fond pour du texte et il faut l'assombrir ou l'éclaircir. Les designers vérifient ainsi l'accessibilité au moment de choisir la couleur, et non après.",
     "faq.q5": "Mes données de couleur sont-elles envoyées quelque part ?",
-    "faq.a5": "Non. Chaque conversion — HEX vers RGB, RGB vers HEX, HSL, HSV, CMYK, la vérification du contraste et la pipette — s'exécute entièrement dans votre navigateur en JavaScript pur. Rien n'est envoyé, journalisé ni partagé : c'est donc sûr avec des couleurs de marque ou de client. Votre dernière couleur n'est mémorisée que dans le stockage local de votre propre navigateur, pour que l'outil rouvre là où vous vous étiez arrêté ; l'URL de la page contient aussi la couleur, afin de mettre en favori ou de partager une teinte exacte."
+    "faq.a5": "Non. Chaque conversion — HEX vers RGB, RGB vers HEX, HSL, HSV, CMYK, la vérification du contraste et la pipette — s'exécute entièrement dans votre navigateur en JavaScript pur. Rien n'est envoyé, journalisé ni partagé : c'est donc sûr avec des couleurs de marque ou de client. Votre dernière couleur n'est mémorisée que dans le stockage local de votre propre navigateur, pour que l'outil rouvre là où vous vous étiez arrêté ; l'URL de la page contient aussi la couleur, afin de mettre en favori ou de partager une teinte exacte.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -349,7 +379,12 @@ window.I18N_LOCALES = {
     "faq.q4": "WCAG AA / AAA কনট্রাস্ট ব্যাজ আমাকে কী জানায়?",
     "faq.a4": "আপনার বাছা রঙের ওপর টেক্সট কতটা পাঠযোগ্য হবে তা এটি মাপে। টুলটি কালো ও সাদা দুই টেক্সটের জন্যই WCAG কনট্রাস্ট অনুপাত (১:১ থেকে ২১:১) হিসাব করে এবং বেশি পাঠযোগ্যটিকে “সেরা” চিহ্নিত করে। সাধারণত, স্বাভাবিক বডি টেক্সটের WCAG AA পাসের জন্য অন্তত ৪.৫:১ এবং কঠোরতর AAA-এর জন্য ৭:১ দরকার, আর বড় বা বোল্ড টেক্সট ৩:১-এ AA পাস করতে পারে। কালো ও সাদা দুটোই “ব্যর্থ” দেখালে রংটি টেক্সটের জন্য খারাপ পটভূমি, তখন এটিকে গাঢ় বা হালকা করা উচিত। এতে ডিজাইনাররা রং বাছার সময়েই অ্যাক্সেসিবিলিটি যাচাই করেন, পরে নয়।",
     "faq.q5": "আমার রঙের ডেটা কি কোথাও পাঠানো হয়?",
-    "faq.a5": "না। প্রতিটি রূপান্তর — HEX থেকে RGB, RGB থেকে HEX, HSL, HSV, CMYK, কনট্রাস্ট যাচাই ও আইড্রপার — সম্পূর্ণ সাধারণ JavaScript দিয়ে আপনার ব্রাউজারে চলে। কিছুই আপলোড, লগ বা শেয়ার হয় না, তাই ব্র্যান্ড বা ক্লায়েন্ট রঙের সাথে ব্যবহার নিরাপদ। আপনার শেষ রং কেবল আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে মনে রাখা হয় যাতে টুল যেখানে রেখেছিলেন সেখান থেকেই খোলে, আর পেজের URL-ও রংটি বহন করে যাতে আপনি কোনো নির্দিষ্ট শেড বুকমার্ক বা শেয়ার করতে পারেন।"
+    "faq.a5": "না। প্রতিটি রূপান্তর — HEX থেকে RGB, RGB থেকে HEX, HSL, HSV, CMYK, কনট্রাস্ট যাচাই ও আইড্রপার — সম্পূর্ণ সাধারণ JavaScript দিয়ে আপনার ব্রাউজারে চলে। কিছুই আপলোড, লগ বা শেয়ার হয় না, তাই ব্র্যান্ড বা ক্লায়েন্ট রঙের সাথে ব্যবহার নিরাপদ। আপনার শেষ রং কেবল আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে মনে রাখা হয় যাতে টুল যেখানে রেখেছিলেন সেখান থেকেই খোলে, আর পেজের URL-ও রংটি বহন করে যাতে আপনি কোনো নির্দিষ্ট শেড বুকমার্ক বা শেয়ার করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -398,7 +433,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que o selo de contraste WCAG AA / AAA me diz?",
     "faq.a4": "Ele mede o quão legível um texto ficaria sobre a cor escolhida. A ferramenta calcula a razão de contraste WCAG (de 1:1 até 21:1) para texto preto e branco e marca o mais legível como “Melhor”. Como regra geral, o texto normal precisa de pelo menos 4,5:1 para passar no WCAG AA e 7:1 para alcançar o mais rígido AAA, enquanto texto grande ou em negrito pode passar no AA com 3:1. Se preto e branco marcarem “Reprova”, a cor é um fundo ruim para texto e você deve escurecê-la ou clareá-la. Assim os designers verificam a acessibilidade ao escolher a cor, e não depois.",
     "faq.q5": "Meus dados de cor são enviados para algum lugar?",
-    "faq.a5": "Não. Cada conversão — HEX para RGB, RGB para HEX, HSL, HSV, CMYK, a verificação de contraste e o conta-gotas — roda inteiramente no seu navegador com JavaScript puro. Nada é enviado, registrado ou compartilhado, então é seguro usar com cores de marca ou de cliente. Sua última cor é lembrada apenas no armazenamento local do seu próprio navegador, para a ferramenta reabrir onde você parou, e a URL da página também leva a cor, para você salvar ou compartilhar um tom exato."
+    "faq.a5": "Não. Cada conversão — HEX para RGB, RGB para HEX, HSL, HSV, CMYK, a verificação de contraste e o conta-gotas — roda inteiramente no seu navegador com JavaScript puro. Nada é enviado, registrado ou compartilhado, então é seguro usar com cores de marca ou de cliente. Sua última cor é lembrada apenas no armazenamento local do seu próprio navegador, para a ferramenta reabrir onde você parou, e a URL da página também leva a cor, para você salvar ou compartilhar um tom exato.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -447,7 +487,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что показывает значок контраста WCAG AA / AAA?",
     "faq.a4": "Он оценивает, насколько читабелен текст на выбранном цвете. Инструмент вычисляет коэффициент контраста WCAG (от 1:1 до 21:1) для чёрного и белого текста и отмечает более читабельный как «Лучший». Как правило, обычному тексту нужно не менее 4,5:1, чтобы пройти WCAG AA, и 7:1 для более строгого AAA, а крупный или жирный текст может пройти AA при 3:1. Если и чёрный, и белый показывают «Не проходит», цвет плохо подходит как фон для текста — его стоит затемнить или осветлить. Так дизайнеры проверяют доступность прямо при выборе цвета, а не после.",
     "faq.q5": "Отправляются ли мои данные о цвете куда-либо?",
-    "faq.a5": "Нет. Каждое преобразование — HEX в RGB, RGB в HEX, HSL, HSV, CMYK, проверка контраста и пипетка — выполняется полностью в вашем браузере на чистом JavaScript. Ничего не загружается, не логируется и не передаётся, поэтому это безопасно для фирменных или клиентских цветов. Последний цвет запоминается только в локальном хранилище вашего браузера, чтобы инструмент открылся там, где вы остановились, а URL страницы тоже содержит цвет, чтобы вы могли сохранить в закладки или поделиться точным оттенком."
+    "faq.a5": "Нет. Каждое преобразование — HEX в RGB, RGB в HEX, HSL, HSV, CMYK, проверка контраста и пипетка — выполняется полностью в вашем браузере на чистом JavaScript. Ничего не загружается, не логируется и не передаётся, поэтому это безопасно для фирменных или клиентских цветов. Последний цвет запоминается только в локальном хранилище вашего браузера, чтобы инструмент открылся там, где вы остановились, а URL страницы тоже содержит цвет, чтобы вы могли сохранить в закладки или поделиться точным оттенком.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -496,7 +541,12 @@ window.I18N_LOCALES = {
     "faq.q4": "WCAG AA / AAA کنٹراسٹ بیج مجھے کیا بتاتا ہے؟",
     "faq.a4": "یہ ناپتا ہے کہ آپ کے منتخب کردہ رنگ پر متن کتنا پڑھنے کے قابل ہوگا۔ ٹول کالے اور سفید دونوں متن کے لیے WCAG کنٹراسٹ تناسب (1:1 سے 21:1 تک) شمار کرتا ہے اور زیادہ پڑھنے کے قابل کو «بہترین» نشان زد کرتا ہے۔ عام اصول کے طور پر، عام باڈی متن کو WCAG AA پاس کرنے کے لیے کم از کم 4.5:1 اور سخت تر AAA تک پہنچنے کے لیے 7:1 چاہیے، جبکہ بڑا یا بولڈ متن 3:1 پر AA پاس کر سکتا ہے۔ اگر کالا اور سفید دونوں «ناکام» دکھائیں تو وہ رنگ متن کے لیے خراب پس منظر ہے اور آپ کو اسے گہرا یا ہلکا کرنا چاہیے۔ یوں ڈیزائنر رنگ منتخب کرتے وقت ہی رسائی کی جانچ کر لیتے ہیں، بعد میں نہیں۔",
     "faq.q5": "کیا میرا رنگ ڈیٹا کہیں بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر تبدیلی — HEX سے RGB، RGB سے HEX، HSL، HSV، CMYK، کنٹراسٹ جانچ اور آئی ڈراپر — مکمل طور پر سادہ JavaScript کے ساتھ آپ کے براؤزر میں چلتی ہے۔ کچھ بھی اپ لوڈ، لاگ یا شیئر نہیں ہوتا، اس لیے برانڈ یا کلائنٹ کے رنگوں کے ساتھ استعمال محفوظ ہے۔ آپ کا آخری رنگ صرف آپ کے اپنے براؤزر کے لوکل اسٹوریج میں محفوظ رہتا ہے تاکہ ٹول وہیں سے کھلے جہاں آپ نے چھوڑا تھا، اور صفحے کا URL بھی رنگ ساتھ رکھتا ہے تاکہ آپ کسی درست شیڈ کو بک مارک یا شیئر کر سکیں۔"
+    "faq.a5": "نہیں۔ ہر تبدیلی — HEX سے RGB، RGB سے HEX، HSL، HSV، CMYK، کنٹراسٹ جانچ اور آئی ڈراپر — مکمل طور پر سادہ JavaScript کے ساتھ آپ کے براؤزر میں چلتی ہے۔ کچھ بھی اپ لوڈ، لاگ یا شیئر نہیں ہوتا، اس لیے برانڈ یا کلائنٹ کے رنگوں کے ساتھ استعمال محفوظ ہے۔ آپ کا آخری رنگ صرف آپ کے اپنے براؤزر کے لوکل اسٹوریج میں محفوظ رہتا ہے تاکہ ٹول وہیں سے کھلے جہاں آپ نے چھوڑا تھا، اور صفحے کا URL بھی رنگ ساتھ رکھتا ہے تاکہ آپ کسی درست شیڈ کو بک مارک یا شیئر کر سکیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -545,7 +595,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa arti lencana kontras WCAG AA / AAA?",
     "faq.a4": "Ia mengukur seberapa terbaca teks di atas warna yang Anda pilih. Alat ini menghitung rasio kontras WCAG (dari 1:1 hingga 21:1) untuk teks hitam dan putih, lalu menandai yang lebih terbaca sebagai “Terbaik”. Sebagai patokan, teks isi normal butuh minimal 4,5:1 untuk lolos WCAG AA dan 7:1 untuk AAA yang lebih ketat, sedangkan teks besar atau tebal bisa lolos AA pada 3:1. Jika hitam dan putih sama-sama “Gagal”, warna itu latar yang buruk untuk teks dan sebaiknya digelapkan atau diterangkan. Dengan begitu desainer memeriksa aksesibilitas saat memilih warna, bukan sesudahnya.",
     "faq.q5": "Apakah data warna saya dikirim ke mana pun?",
-    "faq.a5": "Tidak. Setiap konversi — HEX ke RGB, RGB ke HEX, HSL, HSV, CMYK, pemeriksaan kontras, dan pipet — berjalan sepenuhnya di browser Anda dengan JavaScript murni. Tidak ada yang diunggah, dicatat, atau dibagikan, jadi aman dipakai dengan warna merek atau klien. Warna terakhir Anda hanya diingat di penyimpanan lokal browser Anda sendiri agar alat terbuka lagi di tempat Anda berhenti, dan URL halaman juga membawa warnanya sehingga Anda bisa menandai atau membagikan nuansa yang persis."
+    "faq.a5": "Tidak. Setiap konversi — HEX ke RGB, RGB ke HEX, HSL, HSV, CMYK, pemeriksaan kontras, dan pipet — berjalan sepenuhnya di browser Anda dengan JavaScript murni. Tidak ada yang diunggah, dicatat, atau dibagikan, jadi aman dipakai dengan warna merek atau klien. Warna terakhir Anda hanya diingat di penyimpanan lokal browser Anda sendiri agar alat terbuka lagi di tempat Anda berhenti, dan URL halaman juga membawa warnanya sehingga Anda bisa menandai atau membagikan nuansa yang persis.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -594,7 +649,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was sagt mir das WCAG-AA/AAA-Kontrastabzeichen?",
     "faq.a4": "Es misst, wie lesbar Text auf der gewählten Farbe wäre. Das Tool berechnet das WCAG-Kontrastverhältnis (von 1:1 bis 21:1) für schwarzen und weißen Text und markiert den lesbareren als „Beste“. Als Faustregel braucht normaler Fließtext mindestens 4,5:1 für WCAG AA und 7:1 für das strengere AAA, während großer oder fetter Text AA schon bei 3:1 besteht. Zeigen Schwarz und Weiß beide „Nicht bestanden“, ist die Farbe ein schlechter Texthintergrund und sollte abgedunkelt oder aufgehellt werden. So prüfen Designer die Barrierefreiheit schon bei der Farbwahl und nicht erst danach.",
     "faq.q5": "Werden meine Farbdaten irgendwohin gesendet?",
-    "faq.a5": "Nein. Jede Umrechnung — HEX zu RGB, RGB zu HEX, HSL, HSV, CMYK, die Kontrastprüfung und die Pipette — läuft vollständig in deinem Browser mit reinem JavaScript. Nichts wird hochgeladen, protokolliert oder geteilt, daher ist es sicher für Marken- oder Kundenfarben. Deine letzte Farbe wird nur im lokalen Speicher deines eigenen Browsers gemerkt, damit das Tool dort wieder öffnet, wo du aufgehört hast, und die Seiten-URL trägt die Farbe ebenfalls, sodass du einen exakten Ton als Lesezeichen speichern oder teilen kannst."
+    "faq.a5": "Nein. Jede Umrechnung — HEX zu RGB, RGB zu HEX, HSL, HSV, CMYK, die Kontrastprüfung und die Pipette — läuft vollständig in deinem Browser mit reinem JavaScript. Nichts wird hochgeladen, protokolliert oder geteilt, daher ist es sicher für Marken- oder Kundenfarben. Deine letzte Farbe wird nur im lokalen Speicher deines eigenen Browsers gemerkt, damit das Tool dort wieder öffnet, wo du aufgehört hast, und die Seiten-URL trägt die Farbe ebenfalls, sodass du einen exakten Ton als Lesezeichen speichern oder teilen kannst.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -643,7 +703,12 @@ window.I18N_LOCALES = {
     "faq.q4": "WCAG AA / AAA コントラストバッジは何を示す？",
     "faq.a4": "選んだ色の上で文字がどれだけ読みやすいかを示します。ツールは黒文字と白文字の両方について WCAG コントラスト比（1:1〜21:1）を計算し、読みやすい方を「最適」と表示します。目安として、通常の本文は WCAG AA に 4.5:1 以上、より厳しい AAA に 7:1 以上が必要で、大きい文字や太字は 3:1 で AA を満たせます。黒・白とも「不合格」なら、その色は文字の背景に不向きなので、暗くするか明るくしましょう。これにより、デザイナーは色を選ぶその場でアクセシビリティを確認できます。",
     "faq.q5": "私の色データはどこかに送信されますか？",
-    "faq.a5": "いいえ。HEX から RGB、RGB から HEX、HSL、HSV、CMYK、コントラスト判定、スポイトといったすべての変換は、素の JavaScript ですべてブラウザ内で動きます。アップロード・記録・共有は一切ないため、ブランドや顧客の色でも安心して使えます。最後に使った色はあなた自身のブラウザのローカルストレージにのみ保存され、次回は続きから開けます。ページの URL にも色が含まれるので、正確な色合いをブックマークしたり共有したりできます。"
+    "faq.a5": "いいえ。HEX から RGB、RGB から HEX、HSL、HSV、CMYK、コントラスト判定、スポイトといったすべての変換は、素の JavaScript ですべてブラウザ内で動きます。アップロード・記録・共有は一切ないため、ブランドや顧客の色でも安心して使えます。最後に使った色はあなた自身のブラウザのローカルストレージにのみ保存され、次回は続きから開けます。ページの URL にも色が含まれるので、正確な色合いをブックマークしたり共有したりできます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -692,6 +757,11 @@ window.I18N_LOCALES = {
     "faq.q4": "WCAG AA / AAA 대비 배지는 무엇을 알려 주나요?",
     "faq.a4": "고른 색 위에서 글자가 얼마나 잘 읽히는지를 나타냅니다. 이 도구는 검은 글자와 흰 글자 각각에 대해 WCAG 대비비(1:1부터 21:1까지)를 계산하고, 더 잘 읽히는 쪽을 ‘최적’으로 표시합니다. 대체로 일반 본문 글자는 WCAG AA를 통과하려면 최소 4.5:1, 더 엄격한 AAA에 도달하려면 7:1이 필요하며, 큰 글자나 굵은 글자는 3:1에서도 AA를 통과할 수 있습니다. 검정과 흰색 모두 ‘미흡’이면 그 색은 글자 배경으로 부적합하니 더 어둡게 또는 밝게 조정하세요. 덕분에 디자이너는 색을 고르는 그 순간에 접근성을 확인할 수 있습니다.",
     "faq.q5": "제 색상 데이터가 어딘가로 전송되나요?",
-    "faq.a5": "아니요. HEX→RGB, RGB→HEX, HSL, HSV, CMYK, 대비 검사, 스포이드까지 모든 변환은 순수 JavaScript로 전적으로 브라우저 안에서 실행됩니다. 무엇도 업로드·기록·공유되지 않으므로 브랜드나 클라이언트 색상에도 안전합니다. 마지막 색은 오직 본인 브라우저의 로컬 저장소에만 기억되어 다음에 이어서 열 수 있고, 페이지 URL에도 색이 담겨 정확한 색조를 북마크하거나 공유할 수 있습니다."
+    "faq.a5": "아니요. HEX→RGB, RGB→HEX, HSL, HSV, CMYK, 대비 검사, 스포이드까지 모든 변환은 순수 JavaScript로 전적으로 브라우저 안에서 실행됩니다. 무엇도 업로드·기록·공유되지 않으므로 브랜드나 클라이언트 색상에도 안전합니다. 마지막 색은 오직 본인 브라우저의 로컬 저장소에만 기억되어 다음에 이어서 열 수 있고, 페이지 URL에도 색이 담겨 정확한 색조를 북마크하거나 공유할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

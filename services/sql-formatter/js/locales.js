@@ -75,7 +75,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What is Minify mode for, and is it safe to use on a real query?",
     "faq.a4": "Minify strips every comment and collapses the query onto a single line with only the whitespace SQL actually requires between tokens, which is handy for pasting a query into application code, a log line, or a URL parameter without wasting characters. It runs through the same string/identifier/comment-aware tokenizer as formatting, so quoted text and escaped quotes inside strings are preserved byte-for-byte — only the surrounding whitespace and comments are removed, never the query's logic or literal values.",
     "faq.q5": "Is my SQL query uploaded anywhere, and does this tool support every database dialect?",
-    "faq.a5": "No — every keystroke is tokenized and reformatted entirely inside your browser with plain JavaScript; nothing is sent to a server, logged, or stored anywhere except optionally your own browser's local storage so your last query is there when you come back. This is honestly a formatter, not a full SQL parser or validator for every dialect: it recognizes common MySQL, PostgreSQL, SQL Server and SQLite syntax (including their different identifier-quoting styles) well enough to indent it cleanly, but it doesn't check whether your query is semantically valid or catch every dialect-specific keyword."
+    "faq.a5": "No — every keystroke is tokenized and reformatted entirely inside your browser with plain JavaScript; nothing is sent to a server, logged, or stored anywhere except optionally your own browser's local storage so your last query is there when you come back. This is honestly a formatter, not a full SQL parser or validator for every dialect: it recognizes common MySQL, PostgreSQL, SQL Server and SQLite syntax (including their different identifier-quoting styles) well enough to indent it cleanly, but it doesn't check whether your query is semantically valid or catch every dialect-specific keyword.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -145,7 +150,12 @@ window.I18N_LOCALES = {
     "faq.q4": "压缩模式是做什么用的？用在正式查询上安全吗？",
     "faq.a4": "压缩会移除所有注释，并把查询合并成一行，只保留 SQL 语法所必需的空白字符——非常适合把查询粘贴进应用代码、日志行或 URL 参数中，避免浪费字符。压缩使用的是与格式化相同、能识别字符串/标识符/注释的词法分析器，因此引号内的文本和转义的引号都会被原样保留——只有周围的空白和注释会被移除，查询的逻辑和字面值不会受到任何影响。",
     "faq.q5": "我的 SQL 查询会被上传到什么地方吗？这个工具支持所有数据库方言吗？",
-    "faq.a5": "不会——每一次按键都完全在你的浏览器里用纯 JavaScript 完成词法分析和重新格式化，不会发送到任何服务器，也不会被记录或存储，唯一的例外是你可以选择把最近一次的查询保存在浏览器自身的本地存储中，方便下次打开时继续使用。诚实地说，这只是一个以可读性为目标的格式化工具，而不是面向所有方言的完整 SQL 解析器或校验器：它能较好地识别 MySQL、PostgreSQL、SQL Server 和 SQLite 等常见语法（包括各自不同的标识符引用方式）并整齐地缩进，但不会检查查询在语义上是否正确，也无法覆盖每种方言的所有关键字。"
+    "faq.a5": "不会——每一次按键都完全在你的浏览器里用纯 JavaScript 完成词法分析和重新格式化，不会发送到任何服务器，也不会被记录或存储，唯一的例外是你可以选择把最近一次的查询保存在浏览器自身的本地存储中，方便下次打开时继续使用。诚实地说，这只是一个以可读性为目标的格式化工具，而不是面向所有方言的完整 SQL 解析器或校验器：它能较好地识别 MySQL、PostgreSQL、SQL Server 和 SQLite 等常见语法（包括各自不同的标识符引用方式）并整齐地缩进，但不会检查查询在语义上是否正确，也无法覆盖每种方言的所有关键字。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -215,7 +225,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मिनिफ़ाई मोड किसलिए है, और क्या इसे असली क्वेरी पर इस्तेमाल करना सुरक्षित है?",
     "faq.a4": "मिनिफ़ाई सभी कमेंट हटा देता है और क्वेरी को एक ही लाइन में समेट देता है, सिर्फ़ उतनी ही खाली जगह रखते हुए जितनी SQL को टोकन के बीच वाक़ई चाहिए — यह क्वेरी को ऐप कोड, लॉग लाइन या URL पैरामीटर में पेस्ट करने के लिए बढ़िया है ताकि अतिरिक्त कैरेक्टर बर्बाद न हों। यह फ़ॉर्मेटिंग जैसे ही स्ट्रिंग/आइडेंटिफ़ायर/कमेंट पहचानने वाले टोकनाइज़र से गुज़रता है, इसलिए कोट किए गए टेक्स्ट और स्ट्रिंग के अंदर एस्केप किए कोट्स बिल्कुल वैसे ही सुरक्षित रहते हैं — सिर्फ़ आसपास की खाली जगह और कमेंट हटाए जाते हैं, क्वेरी का लॉजिक या लिटरल वैल्यू कभी नहीं।",
     "faq.q5": "क्या मेरी SQL क्वेरी कहीं अपलोड होती है, और क्या यह टूल हर डेटाबेस डायलेक्ट को सपोर्ट करता है?",
-    "faq.a5": "नहीं — हर कीस्ट्रोक पूरी तरह आपके ब्राउज़र के अंदर सादे JavaScript से टोकनाइज़ और रीफ़ॉर्मेट होता है; कुछ भी सर्वर पर नहीं भेजा जाता, लॉग नहीं होता या कहीं स्टोर नहीं होता, सिवाय इसके कि आप चाहें तो अपनी आख़िरी क्वेरी को अपने ब्राउज़र के लोकल स्टोरेज में सहेज सकते हैं ताकि वापस आने पर वह वहीं मिले। ईमानदारी से कहें तो यह एक फ़ॉर्मेटर है, हर डायलेक्ट के लिए पूरा SQL पार्सर या वैलिडेटर नहीं: यह MySQL, PostgreSQL, SQL Server और SQLite के सामान्य सिंटैक्स (उनके अलग-अलग आइडेंटिफ़ायर-कोटिंग स्टाइल सहित) को इतना अच्छी तरह पहचान लेता है कि साफ़-सुथरा इंडेंट कर सके, लेकिन यह जाँच नहीं करता कि आपकी क्वेरी सिमेंटिकली सही है या हर डायलेक्ट-विशेष कीवर्ड को पकड़ नहीं पाता।"
+    "faq.a5": "नहीं — हर कीस्ट्रोक पूरी तरह आपके ब्राउज़र के अंदर सादे JavaScript से टोकनाइज़ और रीफ़ॉर्मेट होता है; कुछ भी सर्वर पर नहीं भेजा जाता, लॉग नहीं होता या कहीं स्टोर नहीं होता, सिवाय इसके कि आप चाहें तो अपनी आख़िरी क्वेरी को अपने ब्राउज़र के लोकल स्टोरेज में सहेज सकते हैं ताकि वापस आने पर वह वहीं मिले। ईमानदारी से कहें तो यह एक फ़ॉर्मेटर है, हर डायलेक्ट के लिए पूरा SQL पार्सर या वैलिडेटर नहीं: यह MySQL, PostgreSQL, SQL Server और SQLite के सामान्य सिंटैक्स (उनके अलग-अलग आइडेंटिफ़ायर-कोटिंग स्टाइल सहित) को इतना अच्छी तरह पहचान लेता है कि साफ़-सुथरा इंडेंट कर सके, लेकिन यह जाँच नहीं करता कि आपकी क्वेरी सिमेंटिकली सही है या हर डायलेक्ट-विशेष कीवर्ड को पकड़ नहीं पाता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -285,7 +300,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Para qué sirve el modo Minificar, y es seguro usarlo en una consulta real?",
     "faq.a4": "Minificar elimina todos los comentarios y colapsa la consulta en una sola línea con solo el espacio en blanco que SQL realmente necesita entre tokens, lo cual es útil para pegar una consulta en código de aplicación, una línea de registro o un parámetro de URL sin desperdiciar caracteres. Pasa por el mismo tokenizador consciente de cadenas/identificadores/comentarios que el formateo, así que el texto entrecomillado y las comillas escapadas dentro de las cadenas se conservan byte a byte — solo se elimina el espacio en blanco circundante y los comentarios, nunca la lógica ni los valores literales de la consulta.",
     "faq.q5": "¿Se sube mi consulta SQL a algún sitio, y esta herramienta admite todos los dialectos de bases de datos?",
-    "faq.a5": "No — cada pulsación de tecla se tokeniza y reformatea por completo dentro de tu navegador con JavaScript puro; nada se envía a un servidor, se registra ni se almacena en ningún sitio, salvo que opcionalmente puedes guardar tu última consulta en el almacenamiento local de tu propio navegador para que esté ahí cuando vuelvas. Siendo honestos, esto es un formateador, no un analizador o validador de SQL completo para todos los dialectos: reconoce la sintaxis común de MySQL, PostgreSQL, SQL Server y SQLite (incluidos sus distintos estilos de entrecomillado de identificadores) lo bastante bien como para indentarla con claridad, pero no comprueba si tu consulta es semánticamente válida ni cubre todas las palabras clave específicas de cada dialecto."
+    "faq.a5": "No — cada pulsación de tecla se tokeniza y reformatea por completo dentro de tu navegador con JavaScript puro; nada se envía a un servidor, se registra ni se almacena en ningún sitio, salvo que opcionalmente puedes guardar tu última consulta en el almacenamiento local de tu propio navegador para que esté ahí cuando vuelvas. Siendo honestos, esto es un formateador, no un analizador o validador de SQL completo para todos los dialectos: reconoce la sintaxis común de MySQL, PostgreSQL, SQL Server y SQLite (incluidos sus distintos estilos de entrecomillado de identificadores) lo bastante bien como para indentarla con claridad, pero no comprueba si tu consulta es semánticamente válida ni cubre todas las palabras clave específicas de cada dialecto.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -355,7 +375,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما فائدة وضع التصغير، وهل استخدامه آمن على استعلام حقيقي؟",
     "faq.a4": "يزيل التصغير كل التعليقات ويضغط الاستعلام في سطر واحد، مع إبقاء المسافات البيضاء التي تحتاجها SQL فعليًا بين الرموز فقط — وهذا مفيد للصق الاستعلام داخل كود التطبيق أو سطر سجل أو معامل رابط دون هدر أحرف. يمر التصغير عبر نفس محلّل الرموز المُدرك للسلاسل النصية والمعرّفات والتعليقات المستخدَم في التنسيق، لذا يُحفَظ النص المقتبس وعلامات الاقتباس المهروبة داخل السلاسل حرفيًا — تُحذف المسافات البيضاء والتعليقات المحيطة فقط، ولا تتأثر منطق الاستعلام أو قيمه الحرفية أبدًا.",
     "faq.q5": "هل يُرفع استعلام SQL الخاص بي إلى أي مكان، وهل تدعم هذه الأداة كل لهجات قواعد البيانات؟",
-    "faq.a5": "لا — يتم تحليل كل ضغطة مفتاح وإعادة تنسيقها بالكامل داخل متصفحك بلغة JavaScript خالصة؛ لا يُرسَل شيء إلى خادم ولا يُسجَّل ولا يُخزَّن في أي مكان، باستثناء أنه يمكنك اختياريًا حفظ آخر استعلام في التخزين المحلي لمتصفحك نفسه ليكون جاهزًا عند عودتك. وبصراحة، هذه أداة تنسيق وليست محلل أو مدقق SQL كامل لكل لهجة: فهي تتعرّف جيدًا على صياغة MySQL وPostgreSQL وSQL Server وSQLite الشائعة (بما في ذلك أساليبها المختلفة في وضع المعرّفات بين علامات اقتباس) بما يكفي لترتيبها بوضوح، لكنها لا تتحقق مما إذا كان استعلامك صحيحًا من الناحية الدلالية ولا تغطي كل كلمة مفتاحية خاصة بكل لهجة."
+    "faq.a5": "لا — يتم تحليل كل ضغطة مفتاح وإعادة تنسيقها بالكامل داخل متصفحك بلغة JavaScript خالصة؛ لا يُرسَل شيء إلى خادم ولا يُسجَّل ولا يُخزَّن في أي مكان، باستثناء أنه يمكنك اختياريًا حفظ آخر استعلام في التخزين المحلي لمتصفحك نفسه ليكون جاهزًا عند عودتك. وبصراحة، هذه أداة تنسيق وليست محلل أو مدقق SQL كامل لكل لهجة: فهي تتعرّف جيدًا على صياغة MySQL وPostgreSQL وSQL Server وSQLite الشائعة (بما في ذلك أساليبها المختلفة في وضع المعرّفات بين علامات اقتباس) بما يكفي لترتيبها بوضوح، لكنها لا تتحقق مما إذا كان استعلامك صحيحًا من الناحية الدلالية ولا تغطي كل كلمة مفتاحية خاصة بكل لهجة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -425,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "À quoi sert le mode Minifier, et est-il sûr de l'utiliser sur une vraie requête ?",
     "faq.a4": "Minifier supprime tous les commentaires et réduit la requête à une seule ligne en ne conservant que les espaces réellement nécessaires entre les tokens SQL, ce qui est pratique pour coller une requête dans du code applicatif, une ligne de log ou un paramètre d'URL sans gaspiller de caractères. Il passe par le même tokeniseur, sensible aux chaînes, identifiants et commentaires, que le formatage, donc le texte entre guillemets et les guillemets échappés à l'intérieur des chaînes sont préservés à l'octet près — seuls les espaces environnants et les commentaires sont supprimés, jamais la logique ni les valeurs littérales de la requête.",
     "faq.q5": "Ma requête SQL est-elle envoyée quelque part, et cet outil prend-il en charge tous les dialectes de base de données ?",
-    "faq.a5": "Non — chaque frappe est tokenisée et reformatée entièrement dans votre navigateur en JavaScript pur ; rien n'est envoyé à un serveur, journalisé ou stocké nulle part, sauf si vous choisissez d'enregistrer votre dernière requête dans le stockage local de votre propre navigateur pour la retrouver à votre retour. En toute honnêteté, il s'agit d'un formateur, pas d'un analyseur ou validateur SQL complet pour tous les dialectes : il reconnaît suffisamment bien la syntaxe courante de MySQL, PostgreSQL, SQL Server et SQLite (y compris leurs différents styles de guillemets d'identifiants) pour l'indenter proprement, mais il ne vérifie pas si votre requête est sémantiquement valide et ne couvre pas tous les mots-clés propres à chaque dialecte."
+    "faq.a5": "Non — chaque frappe est tokenisée et reformatée entièrement dans votre navigateur en JavaScript pur ; rien n'est envoyé à un serveur, journalisé ou stocké nulle part, sauf si vous choisissez d'enregistrer votre dernière requête dans le stockage local de votre propre navigateur pour la retrouver à votre retour. En toute honnêteté, il s'agit d'un formateur, pas d'un analyseur ou validateur SQL complet pour tous les dialectes : il reconnaît suffisamment bien la syntaxe courante de MySQL, PostgreSQL, SQL Server et SQLite (y compris leurs différents styles de guillemets d'identifiants) pour l'indenter proprement, mais il ne vérifie pas si votre requête est sémantiquement valide et ne couvre pas tous les mots-clés propres à chaque dialecte.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -495,7 +525,12 @@ window.I18N_LOCALES = {
     "faq.q4": "মিনিফাই মোড কীসের জন্য, আর সত্যিকারের কোয়েরিতে এটি ব্যবহার করা কি নিরাপদ?",
     "faq.a4": "মিনিফাই সব কমেন্ট সরিয়ে দেয় এবং কোয়েরিকে এক লাইনে সংকুচিত করে, শুধু টোকেনগুলোর মধ্যে SQL-এর সত্যিকারের প্রয়োজনীয় ফাঁকা জায়গা রেখে — এটি অ্যাপ কোড, লগ লাইন বা URL প্যারামিটারে কোয়েরি পেস্ট করার জন্য সুবিধাজনক, অক্ষর নষ্ট না করেই। এটি ফরম্যাটিংয়ের মতোই স্ট্রিং/আইডেন্টিফায়ার/কমেন্ট সচেতন টোকেনাইজারের মধ্য দিয়ে চলে, তাই কোটেড টেক্সট এবং স্ট্রিংয়ের ভেতরের এসকেপ করা কোট বাইট-বাই-বাইট অক্ষুণ্ণ থাকে — শুধু চারপাশের ফাঁকা জায়গা ও কমেন্ট সরানো হয়, কোয়েরির লজিক বা লিটারেল মান কখনো নয়।",
     "faq.q5": "আমার SQL কোয়েরি কি কোথাও আপলোড হয়, আর এই টুল কি প্রতিটি ডেটাবেস ডায়ালেক্ট সমর্থন করে?",
-    "faq.a5": "না — প্রতিটি কিস্ট্রোক সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরে সাধারণ JavaScript দিয়ে টোকেনাইজ ও পুনরায় ফরম্যাট হয়; কিছুই সার্ভারে পাঠানো, লগ করা বা কোথাও সংরক্ষণ করা হয় না, শুধু আপনি চাইলে আপনার সর্বশেষ কোয়েরি নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষণ করতে পারেন যাতে পরে ফিরে এলে সেটি পাওয়া যায়। সততার সাথেই বলা যায়, এটি একটি ফরম্যাটার, প্রতিটি ডায়ালেক্টের জন্য সম্পূর্ণ SQL পার্সার বা ভ্যালিডেটর নয়: এটি MySQL, PostgreSQL, SQL Server ও SQLite-এর সাধারণ সিনট্যাক্স (তাদের ভিন্ন ভিন্ন আইডেন্টিফায়ার-কোটিং শৈলীসহ) যথেষ্ট ভালোভাবে চেনে যাতে পরিষ্কারভাবে ইনডেন্ট করতে পারে, কিন্তু এটি যাচাই করে না আপনার কোয়েরি অর্থগতভাবে সঠিক কিনা বা প্রতিটি ডায়ালেক্ট-নির্দিষ্ট কীওয়ার্ড ধরতে পারে না।"
+    "faq.a5": "না — প্রতিটি কিস্ট্রোক সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরে সাধারণ JavaScript দিয়ে টোকেনাইজ ও পুনরায় ফরম্যাট হয়; কিছুই সার্ভারে পাঠানো, লগ করা বা কোথাও সংরক্ষণ করা হয় না, শুধু আপনি চাইলে আপনার সর্বশেষ কোয়েরি নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষণ করতে পারেন যাতে পরে ফিরে এলে সেটি পাওয়া যায়। সততার সাথেই বলা যায়, এটি একটি ফরম্যাটার, প্রতিটি ডায়ালেক্টের জন্য সম্পূর্ণ SQL পার্সার বা ভ্যালিডেটর নয়: এটি MySQL, PostgreSQL, SQL Server ও SQLite-এর সাধারণ সিনট্যাক্স (তাদের ভিন্ন ভিন্ন আইডেন্টিফায়ার-কোটিং শৈলীসহ) যথেষ্ট ভালোভাবে চেনে যাতে পরিষ্কারভাবে ইনডেন্ট করতে পারে, কিন্তু এটি যাচাই করে না আপনার কোয়েরি অর্থগতভাবে সঠিক কিনা বা প্রতিটি ডায়ালেক্ট-নির্দিষ্ট কীওয়ার্ড ধরতে পারে না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -565,7 +600,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Para que serve o modo Minificar, e é seguro usá-lo em uma consulta real?",
     "faq.a4": "Minificar remove todos os comentários e reduz a consulta a uma única linha, mantendo apenas os espaços em branco que o SQL realmente exige entre os tokens, o que é útil para colar uma consulta em código de aplicação, uma linha de log ou um parâmetro de URL sem desperdiçar caracteres. Ele passa pelo mesmo tokenizador consciente de strings/identificadores/comentários usado na formatação, então textos entre aspas e aspas escapadas dentro de strings são preservados byte a byte — apenas os espaços em branco ao redor e os comentários são removidos, nunca a lógica ou os valores literais da consulta.",
     "faq.q5": "Minha consulta SQL é enviada para algum lugar, e esta ferramenta suporta todos os dialetos de banco de dados?",
-    "faq.a5": "Não — cada tecla digitada é tokenizada e reformatada inteiramente dentro do seu navegador com JavaScript puro; nada é enviado a um servidor, registrado ou armazenado em nenhum lugar, exceto que você pode opcionalmente salvar sua última consulta no armazenamento local do próprio navegador para que esteja lá quando você voltar. Sendo honesto, isto é um formatador, não um analisador ou validador de SQL completo para todos os dialetos: ele reconhece a sintaxe comum de MySQL, PostgreSQL, SQL Server e SQLite (incluindo seus diferentes estilos de aspas para identificadores) bem o suficiente para indentá-la com clareza, mas não verifica se sua consulta é semanticamente válida nem cobre cada palavra-chave específica de cada dialeto."
+    "faq.a5": "Não — cada tecla digitada é tokenizada e reformatada inteiramente dentro do seu navegador com JavaScript puro; nada é enviado a um servidor, registrado ou armazenado em nenhum lugar, exceto que você pode opcionalmente salvar sua última consulta no armazenamento local do próprio navegador para que esteja lá quando você voltar. Sendo honesto, isto é um formatador, não um analisador ou validador de SQL completo para todos os dialetos: ele reconhece a sintaxe comum de MySQL, PostgreSQL, SQL Server e SQLite (incluindo seus diferentes estilos de aspas para identificadores) bem o suficiente para indentá-la com clareza, mas não verifica se sua consulta é semanticamente válida nem cobre cada palavra-chave específica de cada dialeto.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -635,7 +675,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Для чего нужен режим минификации и безопасно ли использовать его на реальном запросе?",
     "faq.a4": "Минификация удаляет все комментарии и сжимает запрос в одну строку, оставляя только те пробелы, которые SQL действительно требует между токенами — это удобно для вставки запроса в код приложения, строку лога или параметр URL без лишних символов. Минификация проходит через тот же токенизатор, учитывающий строки, идентификаторы и комментарии, что и форматирование, поэтому текст в кавычках и экранированные кавычки внутри строк сохраняются побайтово — удаляются только окружающие пробелы и комментарии, но никогда не логика или литеральные значения запроса.",
     "faq.q5": "Загружается ли мой SQL-запрос куда-либо, и поддерживает ли этот инструмент все диалекты баз данных?",
-    "faq.a5": "Нет — каждое нажатие клавиши токенизируется и переформатируется полностью в вашем браузере на чистом JavaScript; ничего не отправляется на сервер, не логируется и нигде не хранится, за исключением того, что вы можете по желанию сохранить последний запрос в локальном хранилище вашего собственного браузера, чтобы найти его при следующем визите. Честно говоря, это форматировщик, а не полноценный парсер или валидатор SQL для всех диалектов: он достаточно хорошо распознаёт распространённый синтаксис MySQL, PostgreSQL, SQL Server и SQLite (включая их разные стили кавычек для идентификаторов), чтобы аккуратно расставить отступы, но не проверяет семантическую корректность запроса и не охватывает все специфичные для каждого диалекта ключевые слова."
+    "faq.a5": "Нет — каждое нажатие клавиши токенизируется и переформатируется полностью в вашем браузере на чистом JavaScript; ничего не отправляется на сервер, не логируется и нигде не хранится, за исключением того, что вы можете по желанию сохранить последний запрос в локальном хранилище вашего собственного браузера, чтобы найти его при следующем визите. Честно говоря, это форматировщик, а не полноценный парсер или валидатор SQL для всех диалектов: он достаточно хорошо распознаёт распространённый синтаксис MySQL, PostgreSQL, SQL Server и SQLite (включая их разные стили кавычек для идентификаторов), чтобы аккуратно расставить отступы, но не проверяет семантическую корректность запроса и не охватывает все специфичные для каждого диалекта ключевые слова.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -705,7 +750,12 @@ window.I18N_LOCALES = {
     "faq.q4": "منی فائی موڈ کس کام آتا ہے، اور کیا اسے حقیقی کوئری پر استعمال کرنا محفوظ ہے؟",
     "faq.a4": "منی فائی تمام تبصرے ہٹا دیتا ہے اور کوئری کو ایک لائن میں سمیٹ دیتا ہے، صرف اتنی خالی جگہ رکھتے ہوئے جتنی SQL کو ٹوکنز کے درمیان واقعی درکار ہے — یہ کوئری کو ایپ کوڈ، لاگ لائن یا URL پیرامیٹر میں پیسٹ کرنے کے لیے مفید ہے، بغیر حروف ضائع کیے۔ یہ فارمیٹنگ جیسے ہی اسٹرنگ/آئیڈینٹیفائر/تبصرہ پہچاننے والے ٹوکنائزر سے گزرتا ہے، اس لیے کوٹ شدہ متن اور اسٹرنگز کے اندر ایسکیپ شدہ کوٹس بالکل ویسے ہی محفوظ رہتے ہیں — صرف ارد گرد کی خالی جگہ اور تبصرے ہٹائے جاتے ہیں، کوئری کا منطق یا لٹرل ویلیوز کبھی نہیں۔",
     "faq.q5": "کیا میری SQL کوئری کہیں اپ لوڈ ہوتی ہے، اور کیا یہ ٹول ہر ڈیٹابیس ڈائلیکٹ کو سپورٹ کرتا ہے؟",
-    "faq.a5": "نہیں — ہر کی اسٹروک مکمل طور پر آپ کے براؤزر کے اندر خالص JavaScript سے ٹوکنائز اور دوبارہ فارمیٹ ہوتا ہے؛ کچھ بھی سرور کو نہیں بھیجا جاتا، لاگ نہیں ہوتا یا کہیں محفوظ نہیں ہوتا، سوائے اس کے کہ آپ چاہیں تو اپنی آخری کوئری کو اپنے براؤزر کے لوکل اسٹوریج میں محفوظ کر سکتے ہیں تاکہ واپس آنے پر وہ وہیں ملے۔ ایمانداری سے کہیں تو یہ ایک فارمیٹر ہے، ہر ڈائلیکٹ کے لیے مکمل SQL پارسر یا ویلیڈیٹر نہیں: یہ MySQL، PostgreSQL، SQL Server اور SQLite کے عام سنٹیکس (بشمول ان کے مختلف آئیڈینٹیفائر کوٹنگ اسٹائلز) کو اتنی اچھی طرح پہچان لیتا ہے کہ صاف ستھرا انڈینٹ کر سکے، لیکن یہ چیک نہیں کرتا کہ آپ کی کوئری معنوی طور پر درست ہے یا ہر ڈائلیکٹ کے مخصوص کی ورڈز کو نہیں پکڑتا۔"
+    "faq.a5": "نہیں — ہر کی اسٹروک مکمل طور پر آپ کے براؤزر کے اندر خالص JavaScript سے ٹوکنائز اور دوبارہ فارمیٹ ہوتا ہے؛ کچھ بھی سرور کو نہیں بھیجا جاتا، لاگ نہیں ہوتا یا کہیں محفوظ نہیں ہوتا، سوائے اس کے کہ آپ چاہیں تو اپنی آخری کوئری کو اپنے براؤزر کے لوکل اسٹوریج میں محفوظ کر سکتے ہیں تاکہ واپس آنے پر وہ وہیں ملے۔ ایمانداری سے کہیں تو یہ ایک فارمیٹر ہے، ہر ڈائلیکٹ کے لیے مکمل SQL پارسر یا ویلیڈیٹر نہیں: یہ MySQL، PostgreSQL، SQL Server اور SQLite کے عام سنٹیکس (بشمول ان کے مختلف آئیڈینٹیفائر کوٹنگ اسٹائلز) کو اتنی اچھی طرح پہچان لیتا ہے کہ صاف ستھرا انڈینٹ کر سکے، لیکن یہ چیک نہیں کرتا کہ آپ کی کوئری معنوی طور پر درست ہے یا ہر ڈائلیکٹ کے مخصوص کی ورڈز کو نہیں پکڑتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -775,7 +825,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Untuk apa mode Minify, dan amankah digunakan pada query yang sesungguhnya?",
     "faq.a4": "Minify menghapus semua komentar dan memadatkan query menjadi satu baris, hanya menyisakan spasi kosong yang benar-benar dibutuhkan SQL di antara token — berguna untuk menempelkan query ke dalam kode aplikasi, baris log, atau parameter URL tanpa membuang-buang karakter. Proses ini melewati tokenizer yang sama, yang sadar akan string/identifier/komentar, seperti pemformatan, sehingga teks berkutip dan kutip yang di-escape di dalam string tetap terjaga byte demi byte — hanya spasi kosong di sekitarnya dan komentar yang dihapus, tidak pernah logika atau nilai literal query.",
     "faq.q5": "Apakah query SQL saya diunggah ke suatu tempat, dan apakah alat ini mendukung setiap dialek basis data?",
-    "faq.a5": "Tidak — setiap ketukan tombol di-tokenisasi dan diformat ulang sepenuhnya di dalam browser Anda dengan JavaScript murni; tidak ada yang dikirim ke server, dicatat, atau disimpan di mana pun, kecuali Anda memilih untuk menyimpan query terakhir Anda di penyimpanan lokal browser Anda sendiri agar tersedia saat Anda kembali. Sejujurnya, ini adalah formatter, bukan parser atau validator SQL lengkap untuk setiap dialek: alat ini cukup baik mengenali sintaks umum MySQL, PostgreSQL, SQL Server, dan SQLite (termasuk gaya pengutipan identifier mereka yang berbeda-beda) untuk mengindentasinya dengan rapi, tetapi tidak memeriksa apakah query Anda valid secara semantik atau mencakup setiap kata kunci khusus tiap dialek."
+    "faq.a5": "Tidak — setiap ketukan tombol di-tokenisasi dan diformat ulang sepenuhnya di dalam browser Anda dengan JavaScript murni; tidak ada yang dikirim ke server, dicatat, atau disimpan di mana pun, kecuali Anda memilih untuk menyimpan query terakhir Anda di penyimpanan lokal browser Anda sendiri agar tersedia saat Anda kembali. Sejujurnya, ini adalah formatter, bukan parser atau validator SQL lengkap untuk setiap dialek: alat ini cukup baik mengenali sintaks umum MySQL, PostgreSQL, SQL Server, dan SQLite (termasuk gaya pengutipan identifier mereka yang berbeda-beda) untuk mengindentasinya dengan rapi, tetapi tidak memeriksa apakah query Anda valid secara semantik atau mencakup setiap kata kunci khusus tiap dialek.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -845,7 +900,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wofür ist der Minifizieren-Modus da, und ist er für eine echte Abfrage sicher?",
     "faq.a4": "Minifizieren entfernt alle Kommentare und reduziert die Abfrage auf eine einzige Zeile mit nur so viel Leerraum zwischen den Tokens, wie SQL tatsächlich benötigt — praktisch, um eine Abfrage in Anwendungscode, eine Logzeile oder einen URL-Parameter einzufügen, ohne Zeichen zu verschwenden. Dabei durchläuft die Abfrage denselben Tokenizer, der Zeichenketten, Bezeichner und Kommentare erkennt, wie beim Formatieren, sodass angeführter Text und maskierte Anführungszeichen innerhalb von Zeichenketten byte-genau erhalten bleiben — entfernt werden nur der umgebende Leerraum und die Kommentare, niemals die Logik oder die literalen Werte der Abfrage.",
     "faq.q5": "Wird meine SQL-Abfrage irgendwohin hochgeladen, und unterstützt dieses Tool jeden Datenbank-Dialekt?",
-    "faq.a5": "Nein — jeder Tastendruck wird vollständig in Ihrem Browser mit reinem JavaScript tokenisiert und neu formatiert; nichts wird an einen Server gesendet, protokolliert oder irgendwo gespeichert, außer Sie speichern Ihre letzte Abfrage optional im lokalen Speicher Ihres eigenen Browsers, damit sie bei Ihrer Rückkehr noch da ist. Ehrlich gesagt ist dies ein Formatierer und kein vollständiger SQL-Parser oder -Validator für jeden Dialekt: Er erkennt die gängige Syntax von MySQL, PostgreSQL, SQL Server und SQLite (einschließlich ihrer unterschiedlichen Stile für Bezeichner in Anführungszeichen) gut genug, um sie sauber einzurücken, prüft aber nicht, ob Ihre Abfrage semantisch korrekt ist, und deckt nicht jedes dialektspezifische Schlüsselwort ab."
+    "faq.a5": "Nein — jeder Tastendruck wird vollständig in Ihrem Browser mit reinem JavaScript tokenisiert und neu formatiert; nichts wird an einen Server gesendet, protokolliert oder irgendwo gespeichert, außer Sie speichern Ihre letzte Abfrage optional im lokalen Speicher Ihres eigenen Browsers, damit sie bei Ihrer Rückkehr noch da ist. Ehrlich gesagt ist dies ein Formatierer und kein vollständiger SQL-Parser oder -Validator für jeden Dialekt: Er erkennt die gängige Syntax von MySQL, PostgreSQL, SQL Server und SQLite (einschließlich ihrer unterschiedlichen Stile für Bezeichner in Anführungszeichen) gut genug, um sie sauber einzurücken, prüft aber nicht, ob Ihre Abfrage semantisch korrekt ist, und deckt nicht jedes dialektspezifische Schlüsselwort ab.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -915,7 +975,12 @@ window.I18N_LOCALES = {
     "faq.q4": "圧縮（Minify）モードは何のためにあり、実際のクエリに使っても安全ですか？",
     "faq.a4": "圧縮モードはすべてのコメントを取り除き、トークン間にSQLが本当に必要とする最小限の空白だけを残してクエリを1行にまとめます。アプリケーションのコードやログの1行、URLパラメータなどに文字数を無駄にせずクエリを埋め込みたいときに便利です。整形と同じ、文字列・識別子・コメントを認識するトークナイザーを通るため、クォートで囲まれたテキストや文字列内のエスケープされたクォートはバイト単位でそのまま保持されます — 削除されるのは周囲の空白とコメントだけで、クエリのロジックやリテラル値が変わることは決してありません。",
     "faq.q5": "私のSQLクエリはどこかにアップロードされますか？また、このツールはすべてのデータベース方言に対応していますか？",
-    "faq.a5": "いいえ — すべてのキー入力は純粋なJavaScriptによってブラウザの中だけでトークン化・再整形されます。サーバーへの送信、ログの記録、どこかへの保存は一切行われません。唯一の例外は、最後に入力したクエリをご自身のブラウザのローカルストレージに任意で保存できる機能で、次回訪れたときにそこから復元されるだけです。正直に言うと、これはあくまで読みやすさのための整形ツールであり、あらゆる方言に対応した完全なSQLパーサーやバリデーターではありません。MySQL、PostgreSQL、SQL Server、SQLiteなどでよく使われる構文（識別子のクォートスタイルの違いを含む）はきれいにインデントできる程度には認識しますが、クエリが意味的に正しいかどうかの検証や、各方言固有のすべてのキーワードの網羅までは行いません。"
+    "faq.a5": "いいえ — すべてのキー入力は純粋なJavaScriptによってブラウザの中だけでトークン化・再整形されます。サーバーへの送信、ログの記録、どこかへの保存は一切行われません。唯一の例外は、最後に入力したクエリをご自身のブラウザのローカルストレージに任意で保存できる機能で、次回訪れたときにそこから復元されるだけです。正直に言うと、これはあくまで読みやすさのための整形ツールであり、あらゆる方言に対応した完全なSQLパーサーやバリデーターではありません。MySQL、PostgreSQL、SQL Server、SQLiteなどでよく使われる構文（識別子のクォートスタイルの違いを含む）はきれいにインデントできる程度には認識しますが、クエリが意味的に正しいかどうかの検証や、各方言固有のすべてのキーワードの網羅までは行いません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -985,6 +1050,11 @@ window.I18N_LOCALES = {
     "faq.q4": "압축(Minify) 모드는 무엇을 위한 것이고, 실제 쿼리에 사용해도 안전한가요?",
     "faq.a4": "압축 모드는 모든 주석을 제거하고 토큰 사이에 SQL이 실제로 필요로 하는 최소한의 공백만 남긴 채 쿼리를 한 줄로 압축합니다. 애플리케이션 코드, 로그 한 줄, URL 파라미터 등에 문자 낭비 없이 쿼리를 붙여넣을 때 유용합니다. 정렬과 동일하게 문자열·식별자·주석을 인식하는 토크나이저를 거치기 때문에 따옴표로 감싼 텍스트와 문자열 안의 이스케이프된 따옴표는 그대로 보존됩니다 — 제거되는 것은 주변 공백과 주석뿐이며, 쿼리의 로직이나 리터럴 값은 절대 바뀌지 않습니다.",
     "faq.q5": "제 SQL 쿼리가 어딘가로 업로드되나요? 이 도구는 모든 데이터베이스 방언을 지원하나요?",
-    "faq.a5": "아니요 — 모든 입력은 순수 자바스크립트로 브라우저 안에서만 토큰화되고 다시 정렬됩니다. 서버로 전송되거나 기록되거나 저장되는 일은 전혀 없으며, 유일한 예외는 원할 경우 마지막 쿼리를 브라우저 자체의 로컬 저장소에 저장해 다시 방문했을 때 불러오는 기능뿐입니다. 솔직히 말하면 이 도구는 가독성을 위한 포맷터일 뿐, 모든 방언을 아우르는 완전한 SQL 파서나 검증기는 아닙니다. MySQL, PostgreSQL, SQL Server, SQLite의 흔한 문법(서로 다른 식별자 인용 스타일 포함)은 깔끔하게 들여쓸 수 있을 만큼 인식하지만, 쿼리가 의미적으로 올바른지 검증하거나 각 방언 고유의 모든 키워드를 다루지는 않습니다."
+    "faq.a5": "아니요 — 모든 입력은 순수 자바스크립트로 브라우저 안에서만 토큰화되고 다시 정렬됩니다. 서버로 전송되거나 기록되거나 저장되는 일은 전혀 없으며, 유일한 예외는 원할 경우 마지막 쿼리를 브라우저 자체의 로컬 저장소에 저장해 다시 방문했을 때 불러오는 기능뿐입니다. 솔직히 말하면 이 도구는 가독성을 위한 포맷터일 뿐, 모든 방언을 아우르는 완전한 SQL 파서나 검증기는 아닙니다. MySQL, PostgreSQL, SQL Server, SQLite의 흔한 문법(서로 다른 식별자 인용 스타일 포함)은 깔끔하게 들여쓸 수 있을 만큼 인식하지만, 쿼리가 의미적으로 올바른지 검증하거나 각 방언 고유의 모든 키워드를 다루지는 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

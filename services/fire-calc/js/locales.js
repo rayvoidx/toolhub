@@ -86,7 +86,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What are Lean, Regular, and Fat FIRE, and how does the tiers table work?",
     "faq.a4": "These are informal tiers describing how much someone plans to spend in retirement, not fixed dollar amounts. Lean FIRE means a stripped-down budget well below your current lifestyle; Regular FIRE keeps roughly the lifestyle you entered; Fat FIRE means spending significantly more, for a more comfortable or flexible retirement. Because \"more\" or \"less\" depends entirely on your own numbers, the tiers table takes the annual expenses you typed and shows the FIRE number and years-to-reach at half that amount (Lean), the amount as entered (Regular), and double that amount (Fat) — using the same savings, monthly investing, and return you set above.",
     "faq.q5": "Is this financial advice, and is any of my data sent to a server?",
-    "faq.a5": "No. This is an educational, arithmetic projection based on the numbers you type — real markets don't grow at a constant rate every year, and this isn't investment, tax, or retirement advice. Everything runs locally in your browser; nothing is uploaded, there's no login, and your inputs are only saved to your device's local storage so the form remembers them next time. Use it to sanity-check your FIRE timeline, then talk to a qualified financial advisor for your actual plan."
+    "faq.a5": "No. This is an educational, arithmetic projection based on the numbers you type — real markets don't grow at a constant rate every year, and this isn't investment, tax, or retirement advice. Everything runs locally in your browser; nothing is uploaded, there's no login, and your inputs are only saved to your device's local storage so the form remembers them next time. Use it to sanity-check your FIRE timeline, then talk to a qualified financial advisor for your actual plan.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -170,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "什么是精简、常规、富足 FIRE？档位表是怎么算的？",
     "faq.a4": "这些只是描述退休后花销水平的非正式档位，并非固定金额。精简 FIRE 指远低于你目前生活水平的极简预算；常规 FIRE 大致维持你输入的生活水平；富足 FIRE 则意味着花销明显更高，换取更舒适或更有弹性的退休生活。由于“多”或“少”完全取决于你自己的数字，档位表会拿你输入的年支出，分别按其一半（精简）、原值（常规）、两倍（富足）重新计算 FIRE 数字与所需时间——都使用你在上方设置的同一组储蓄、每月投资额和回报率。",
     "faq.q5": "这是财务建议吗？我的数据会发送到服务器吗？",
-    "faq.a5": "不会。这只是基于你输入的数字做出的教育性算术推算——真实市场不会每年都以恒定速率增长，这也不是投资、税务或退休方面的建议。所有计算都在你的浏览器本地完成；不会上传任何内容，无需登录，你的输入只会保存在设备本地存储中，方便下次打开时自动填回。可以用它来大致判断你的 FIRE 时间线，之后再向有资质的财务顾问咨询你的实际方案。"
+    "faq.a5": "不会。这只是基于你输入的数字做出的教育性算术推算——真实市场不会每年都以恒定速率增长，这也不是投资、税务或退休方面的建议。所有计算都在你的浏览器本地完成；不会上传任何内容，无需登录，你的输入只会保存在设备本地存储中，方便下次打开时自动填回。可以用它来大致判断你的 FIRE 时间线，之后再向有资质的财务顾问咨询你的实际方案。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -254,7 +264,12 @@ window.I18N_LOCALES = {
     "faq.q4": "लीन, रेगुलर और फैट FIRE क्या हैं, और स्तर तालिका कैसे काम करती है?",
     "faq.a4": "ये अनौपचारिक स्तर हैं जो बताते हैं कि कोई व्यक्ति रिटायरमेंट में कितना खर्च करने की योजना बना रहा है, न कि कोई तय राशि। लीन FIRE का मतलब है आपकी मौजूदा जीवनशैली से काफ़ी कम, बेहद सीमित बजट; रेगुलर FIRE लगभग वही जीवनशैली बनाए रखता है जो आपने दर्ज की; फैट FIRE का मतलब है काफ़ी ज़्यादा खर्च, यानी ज़्यादा आरामदायक या लचीला रिटायरमेंट। चूँकि \"ज़्यादा\" या \"कम\" पूरी तरह आपके अपने आँकड़ों पर निर्भर करता है, स्तर तालिका आपके दर्ज किए गए सालाना खर्च को लेकर उसका आधा (लीन), जितना दर्ज किया वही (रेगुलर), और दोगुना (फैट) — पर FIRE नंबर और पहुँचने में लगने वाला समय दिखाती है, वही बचत, मासिक निवेश और रिटर्न इस्तेमाल करते हुए जो आपने ऊपर सेट किए।",
     "faq.q5": "क्या यह वित्तीय सलाह है, और क्या मेरा कोई डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह आपके दर्ज किए गए आँकड़ों पर आधारित एक शैक्षिक, अंकगणितीय अनुमान है — असली बाज़ार हर साल एक समान दर से नहीं बढ़ते, और यह निवेश, टैक्स या रिटायरमेंट की सलाह नहीं है। सब कुछ आपके ब्राउज़र में स्थानीय रूप से चलता है; कुछ भी अपलोड नहीं होता, कोई लॉगिन नहीं है, और आपके इनपुट सिर्फ़ आपकी डिवाइस के लोकल स्टोरेज में सेव होते हैं ताकि फ़ॉर्म उन्हें अगली बार याद रख सके। इसका इस्तेमाल अपनी FIRE समयसीमा को परखने के लिए करें, फिर अपनी असली योजना के लिए किसी योग्य वित्तीय सलाहकार से बात करें।"
+    "faq.a5": "नहीं। यह आपके दर्ज किए गए आँकड़ों पर आधारित एक शैक्षिक, अंकगणितीय अनुमान है — असली बाज़ार हर साल एक समान दर से नहीं बढ़ते, और यह निवेश, टैक्स या रिटायरमेंट की सलाह नहीं है। सब कुछ आपके ब्राउज़र में स्थानीय रूप से चलता है; कुछ भी अपलोड नहीं होता, कोई लॉगिन नहीं है, और आपके इनपुट सिर्फ़ आपकी डिवाइस के लोकल स्टोरेज में सेव होते हैं ताकि फ़ॉर्म उन्हें अगली बार याद रख सके। इसका इस्तेमाल अपनी FIRE समयसीमा को परखने के लिए करें, फिर अपनी असली योजना के लिए किसी योग्य वित्तीय सलाहकार से बात करें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -338,7 +353,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué son Lean, Regular y Fat FIRE, y cómo funciona la tabla de niveles?",
     "faq.a4": "Son niveles informales que describen cuánto planea gastar alguien en la jubilación, no cifras fijas. Lean FIRE implica un presupuesto muy reducido, bastante por debajo de tu estilo de vida actual; Regular FIRE mantiene aproximadamente el estilo de vida que ingresaste; Fat FIRE implica gastar bastante más, para una jubilación más cómoda o flexible. Como \"más\" o \"menos\" depende por completo de tus propios números, la tabla de niveles toma los gastos anuales que escribiste y muestra el número FIRE y los años para lograrlo con la mitad de esa cifra (Lean), la cifra tal cual (Regular), y el doble de esa cifra (Fat) — usando el mismo ahorro, inversión mensual y rentabilidad que fijaste arriba.",
     "faq.q5": "¿Es esto asesoría financiera, y se envía algún dato mío a un servidor?",
-    "faq.a5": "No. Esto es una proyección educativa y aritmética basada en los números que escribes — los mercados reales no crecen a una tasa constante todos los años, y esto no es asesoría de inversión, fiscal ni de jubilación. Todo se ejecuta localmente en tu navegador; no se sube nada, no hay inicio de sesión, y tus datos solo se guardan en el almacenamiento local de tu dispositivo para que el formulario los recuerde la próxima vez. Úsalo para verificar a grandes rasgos tu plazo FIRE, y luego consulta a un asesor financiero cualificado para tu plan real."
+    "faq.a5": "No. Esto es una proyección educativa y aritmética basada en los números que escribes — los mercados reales no crecen a una tasa constante todos los años, y esto no es asesoría de inversión, fiscal ni de jubilación. Todo se ejecuta localmente en tu navegador; no se sube nada, no hay inicio de sesión, y tus datos solo se guardan en el almacenamiento local de tu dispositivo para que el formulario los recuerde la próxima vez. Úsalo para verificar a grandes rasgos tu plazo FIRE, y luego consulta a un asesor financiero cualificado para tu plan real.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -422,7 +442,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هي مستويات Lean وRegular وFat FIRE، وكيف يعمل جدول المستويات؟",
     "faq.a4": "هذه مستويات غير رسمية تصف مقدار ما ينوي شخص ما إنفاقه في التقاعد، وليست مبالغ ثابتة. تعني Lean FIRE ميزانية مقلَّصة أقل بكثير من أسلوب حياتك الحالي؛ وتحافظ Regular FIRE تقريبًا على أسلوب الحياة الذي أدخلته؛ بينما تعني Fat FIRE إنفاقًا أكبر بكثير، من أجل تقاعد أكثر راحة أو مرونة. ولأن \"الأكثر\" أو \"الأقل\" يعتمد بالكامل على أرقامك الخاصة، يأخذ جدول المستويات المصروفات السنوية التي أدخلتها ويعرض رقم FIRE وسنوات الوصول عند نصف ذلك المبلغ (Lean)، والمبلغ كما أُدخل (Regular)، وضعف ذلك المبلغ (Fat) — باستخدام نفس المدخرات والاستثمار الشهري والعائد الذي حددته أعلاه.",
     "faq.q5": "هل هذه استشارة مالية، وهل تُرسل أي بيانات إلى خادم؟",
-    "faq.a5": "لا. هذا تقدير تعليمي حسابي بناءً على الأرقام التي تكتبها — الأسواق الحقيقية لا تنمو بمعدل ثابت كل عام، وهذه ليست استشارة استثمارية أو ضريبية أو تقاعدية. كل شيء يعمل محليًا داخل متصفحك؛ لا يُرفع شيء، ولا يوجد تسجيل دخول، ومدخلاتك تُحفظ فقط في التخزين المحلي لجهازك ليتذكرها النموذج في المرة القادمة. استخدمها للتحقق التقريبي من جدولك الزمني نحو FIRE، ثم تحدث مع مستشار مالي مؤهل لخطتك الفعلية."
+    "faq.a5": "لا. هذا تقدير تعليمي حسابي بناءً على الأرقام التي تكتبها — الأسواق الحقيقية لا تنمو بمعدل ثابت كل عام، وهذه ليست استشارة استثمارية أو ضريبية أو تقاعدية. كل شيء يعمل محليًا داخل متصفحك؛ لا يُرفع شيء، ولا يوجد تسجيل دخول، ومدخلاتك تُحفظ فقط في التخزين المحلي لجهازك ليتذكرها النموذج في المرة القادمة. استخدمها للتحقق التقريبي من جدولك الزمني نحو FIRE، ثم تحدث مع مستشار مالي مؤهل لخطتك الفعلية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -506,7 +531,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que sont Lean, Regular et Fat FIRE, et comment fonctionne le tableau des niveaux ?",
     "faq.a4": "Ce sont des niveaux informels décrivant combien quelqu'un prévoit de dépenser à la retraite, pas des montants fixes. Lean FIRE signifie un budget très resserré, bien en dessous de votre mode de vie actuel ; Regular FIRE conserve à peu près le mode de vie que vous avez saisi ; Fat FIRE signifie dépenser nettement plus, pour une retraite plus confortable ou plus flexible. Comme « plus » ou « moins » dépend entièrement de vos propres chiffres, le tableau des niveaux reprend les dépenses annuelles que vous avez saisies et affiche le chiffre FIRE et les années pour l'atteindre à la moitié de ce montant (Lean), au montant tel quel (Regular), et au double de ce montant (Fat) — en utilisant la même épargne, le même investissement mensuel et le même rendement que ceux définis ci-dessus.",
     "faq.q5": "Est-ce un conseil financier, et mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Il s'agit d'une projection arithmétique à visée pédagogique, basée sur les chiffres que vous saisissez — les marchés réels ne croissent pas à un taux constant chaque année, et ceci n'est pas un conseil en investissement, fiscal ou de retraite. Tout s'exécute localement dans votre navigateur ; rien n'est téléversé, il n'y a pas de connexion, et vos saisies ne sont enregistrées que dans le stockage local de votre appareil pour que le formulaire s'en souvienne la prochaine fois. Utilisez-le pour vérifier grossièrement votre échéance FIRE, puis consultez un conseiller financier qualifié pour votre plan réel."
+    "faq.a5": "Non. Il s'agit d'une projection arithmétique à visée pédagogique, basée sur les chiffres que vous saisissez — les marchés réels ne croissent pas à un taux constant chaque année, et ceci n'est pas un conseil en investissement, fiscal ou de retraite. Tout s'exécute localement dans votre navigateur ; rien n'est téléversé, il n'y a pas de connexion, et vos saisies ne sont enregistrées que dans le stockage local de votre appareil pour que le formulaire s'en souvienne la prochaine fois. Utilisez-le pour vérifier grossièrement votre échéance FIRE, puis consultez un conseiller financier qualifié pour votre plan réel.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -590,7 +620,12 @@ window.I18N_LOCALES = {
     "faq.q4": "লিন, রেগুলার ও ফ্যাট FIRE কী, এবং স্তর সারণি কীভাবে কাজ করে?",
     "faq.a4": "এগুলো অনানুষ্ঠানিক স্তর যা বর্ণনা করে কেউ অবসরে কত খরচ করার পরিকল্পনা করছেন, নির্দিষ্ট কোনো অঙ্ক নয়। লিন FIRE মানে আপনার বর্তমান জীবনযাত্রার চেয়ে অনেক কম, খুবই সীমিত বাজেট; রেগুলার FIRE প্রায় সেই জীবনযাত্রা বজায় রাখে যা আপনি লিখেছেন; ফ্যাট FIRE মানে উল্লেখযোগ্যভাবে বেশি খরচ, আরও আরামদায়ক বা নমনীয় অবসরের জন্য। যেহেতু \"বেশি\" বা \"কম\" সম্পূর্ণভাবে আপনার নিজের সংখ্যার উপর নির্ভর করে, স্তর সারণি আপনার লেখা বার্ষিক খরচ নিয়ে তার অর্ধেক (লিন), যেমন লেখা হয়েছে তেমন (রেগুলার), এবং দ্বিগুণ (ফ্যাট) পরিমাণে FIRE নম্বর এবং পৌঁছাতে সময় দেখায় — উপরে নির্ধারিত একই সঞ্চয়, মাসিক বিনিয়োগ ও রিটার্ন ব্যবহার করে।",
     "faq.q5": "এটি কি আর্থিক পরামর্শ, এবং আমার কোনো তথ্য কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এটি আপনার লেখা সংখ্যার উপর ভিত্তি করে একটি শিক্ষামূলক, গাণিতিক প্রক্ষেপণ মাত্র — প্রকৃত বাজার প্রতি বছর স্থির হারে বাড়ে না, এবং এটি বিনিয়োগ, কর, বা অবসর সংক্রান্ত পরামর্শ নয়। সবকিছু আপনার ব্রাউজারে স্থানীয়ভাবে চলে; কিছুই আপলোড করা হয় না, কোনো লগইন নেই, এবং আপনার ইনপুট শুধু আপনার ডিভাইসের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে ফর্মটি পরের বার মনে রাখতে পারে। আপনার FIRE সময়সীমা মোটামুটি যাচাই করতে এটি ব্যবহার করুন, তারপর আপনার প্রকৃত পরিকল্পনার জন্য একজন যোগ্য আর্থিক পরামর্শদাতার সাথে কথা বলুন।"
+    "faq.a5": "না। এটি আপনার লেখা সংখ্যার উপর ভিত্তি করে একটি শিক্ষামূলক, গাণিতিক প্রক্ষেপণ মাত্র — প্রকৃত বাজার প্রতি বছর স্থির হারে বাড়ে না, এবং এটি বিনিয়োগ, কর, বা অবসর সংক্রান্ত পরামর্শ নয়। সবকিছু আপনার ব্রাউজারে স্থানীয়ভাবে চলে; কিছুই আপলোড করা হয় না, কোনো লগইন নেই, এবং আপনার ইনপুট শুধু আপনার ডিভাইসের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে ফর্মটি পরের বার মনে রাখতে পারে। আপনার FIRE সময়সীমা মোটামুটি যাচাই করতে এটি ব্যবহার করুন, তারপর আপনার প্রকৃত পরিকল্পনার জন্য একজন যোগ্য আর্থিক পরামর্শদাতার সাথে কথা বলুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -674,7 +709,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que são Lean, Regular e Fat FIRE, e como funciona a tabela de níveis?",
     "faq.a4": "São níveis informais que descrevem quanto alguém planeja gastar na aposentadoria, não valores fixos. Lean FIRE significa um orçamento bem enxuto, bem abaixo do seu estilo de vida atual; Regular FIRE mantém aproximadamente o estilo de vida que você inseriu; Fat FIRE significa gastar bem mais, para uma aposentadoria mais confortável ou flexível. Como \"mais\" ou \"menos\" depende inteiramente dos seus próprios números, a tabela de níveis pega as despesas anuais que você digitou e mostra o número FIRE e os anos para alcançá-lo com metade desse valor (Lean), o valor tal como inserido (Regular), e o dobro desse valor (Fat) — usando a mesma poupança, investimento mensal e retorno definidos acima.",
     "faq.q5": "Isto é consultoria financeira, e algum dos meus dados é enviado a um servidor?",
-    "faq.a5": "Não. Isto é uma projeção aritmética educativa baseada nos números que você digita — mercados reais não crescem a uma taxa constante todo ano, e isto não é consultoria de investimento, fiscal ou de aposentadoria. Tudo roda localmente no seu navegador; nada é enviado, não há login, e suas entradas só são salvas no armazenamento local do seu dispositivo para que o formulário se lembre delas na próxima vez. Use-o para checar aproximadamente seu prazo FIRE, e depois converse com um consultor financeiro qualificado para o seu plano real."
+    "faq.a5": "Não. Isto é uma projeção aritmética educativa baseada nos números que você digita — mercados reais não crescem a uma taxa constante todo ano, e isto não é consultoria de investimento, fiscal ou de aposentadoria. Tudo roda localmente no seu navegador; nada é enviado, não há login, e suas entradas só são salvas no armazenamento local do seu dispositivo para que o formulário se lembre delas na próxima vez. Use-o para checar aproximadamente seu prazo FIRE, e depois converse com um consultor financeiro qualificado para o seu plano real.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -758,7 +798,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что такое Lean, Regular и Fat FIRE, и как работает таблица уровней?",
     "faq.a4": "Это неформальные уровни, описывающие, сколько человек планирует тратить на пенсии, а не фиксированные суммы. Lean FIRE означает урезанный бюджет, значительно ниже вашего текущего уровня жизни; Regular FIRE примерно сохраняет введённый вами уровень жизни; Fat FIRE означает заметно большие траты — ради более комфортной или гибкой пенсии. Поскольку «больше» или «меньше» полностью зависит от ваших собственных цифр, таблица уровней берёт введённые вами годовые расходы и показывает число FIRE и годы до его достижения при половине этой суммы (Lean), при введённой сумме как есть (Regular) и при удвоенной сумме (Fat) — используя те же накопления, ежемесячные инвестиции и доходность, что указаны выше.",
     "faq.q5": "Это финансовая консультация, и отправляются ли какие-то мои данные на сервер?",
-    "faq.a5": "Нет. Это образовательный арифметический прогноз на основе введённых вами чисел — реальные рынки не растут с постоянной ставкой каждый год, и это не инвестиционная, налоговая или пенсионная консультация. Всё выполняется локально в вашем браузере; ничего не загружается, входа в систему нет, а ваши данные сохраняются только в локальном хранилище устройства, чтобы форма запомнила их в следующий раз. Используйте это, чтобы примерно проверить свой срок до FIRE, а затем обратитесь к квалифицированному финансовому консультанту за реальным планом."
+    "faq.a5": "Нет. Это образовательный арифметический прогноз на основе введённых вами чисел — реальные рынки не растут с постоянной ставкой каждый год, и это не инвестиционная, налоговая или пенсионная консультация. Всё выполняется локально в вашем браузере; ничего не загружается, входа в систему нет, а ваши данные сохраняются только в локальном хранилище устройства, чтобы форма запомнила их в следующий раз. Используйте это, чтобы примерно проверить свой срок до FIRE, а затем обратитесь к квалифицированному финансовому консультанту за реальным планом.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -842,7 +887,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لین، ریگولر اور فیٹ FIRE کیا ہیں، اور درجوں کی جدول کیسے کام کرتی ہے؟",
     "faq.a4": "یہ غیر رسمی درجے ہیں جو بتاتے ہیں کہ کوئی شخص ریٹائرمنٹ میں کتنا خرچ کرنے کا ارادہ رکھتا ہے، کوئی مقررہ رقم نہیں۔ لین FIRE کا مطلب ہے آپ کے موجودہ طرزِ زندگی سے کافی کم، انتہائی محدود بجٹ؛ ریگولر FIRE تقریباً وہی طرزِ زندگی برقرار رکھتا ہے جو آپ نے درج کیا؛ فیٹ FIRE کا مطلب ہے نمایاں طور پر زیادہ خرچ، زیادہ آرام دہ یا لچکدار ریٹائرمنٹ کے لیے۔ چونکہ \"زیادہ\" یا \"کم\" مکمل طور پر آپ کے اپنے اعداد پر منحصر ہے، درجوں کی جدول آپ کے درج کردہ سالانہ اخراجات لیتی ہے اور اس کے آدھے (لین)، جتنا درج کیا گیا ویسے ہی (ریگولر)، اور دوگنا (فیٹ) پر FIRE نمبر اور پہنچنے میں لگنے والا وقت دکھاتی ہے — وہی بچت، ماہانہ سرمایہ کاری اور ریٹرن استعمال کرتے ہوئے جو آپ نے اوپر مقرر کیا۔",
     "faq.q5": "کیا یہ مالی مشورہ ہے، اور کیا میرا کوئی ڈیٹا سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ آپ کے درج کردہ اعداد پر مبنی ایک تعلیمی، ریاضیاتی اندازہ ہے — حقیقی منڈیاں ہر سال ایک مستقل شرح سے نہیں بڑھتیں، اور یہ سرمایہ کاری، ٹیکس، یا ریٹائرمنٹ کا مشورہ نہیں۔ سب کچھ آپ کے براؤزر میں مقامی طور پر چلتا ہے؛ کچھ بھی اپ لوڈ نہیں ہوتا، کوئی لاگ ان نہیں، اور آپ کا ان پٹ صرف آپ کے آلے کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ فارم اگلی بار اسے یاد رکھے۔ اسے اپنی FIRE ٹائم لائن کا اندازہ لگانے کے لیے استعمال کریں، پھر اپنے اصل منصوبے کے لیے کسی مستند مالی مشیر سے بات کریں۔"
+    "faq.a5": "نہیں۔ یہ آپ کے درج کردہ اعداد پر مبنی ایک تعلیمی، ریاضیاتی اندازہ ہے — حقیقی منڈیاں ہر سال ایک مستقل شرح سے نہیں بڑھتیں، اور یہ سرمایہ کاری، ٹیکس، یا ریٹائرمنٹ کا مشورہ نہیں۔ سب کچھ آپ کے براؤزر میں مقامی طور پر چلتا ہے؛ کچھ بھی اپ لوڈ نہیں ہوتا، کوئی لاگ ان نہیں، اور آپ کا ان پٹ صرف آپ کے آلے کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ فارم اگلی بار اسے یاد رکھے۔ اسے اپنی FIRE ٹائم لائن کا اندازہ لگانے کے لیے استعمال کریں، پھر اپنے اصل منصوبے کے لیے کسی مستند مالی مشیر سے بات کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -926,7 +976,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa itu Lean, Regular, dan Fat FIRE, dan bagaimana cara kerja tabel tingkatnya?",
     "faq.a4": "Ini adalah tingkat informal yang menggambarkan seberapa banyak seseorang berencana membelanjakan uang saat pensiun, bukan jumlah tetap. Lean FIRE berarti anggaran yang sangat dipangkas, jauh di bawah gaya hidup Anda saat ini; Regular FIRE mempertahankan kira-kira gaya hidup yang Anda masukkan; Fat FIRE berarti pengeluaran yang jauh lebih besar, untuk masa pensiun yang lebih nyaman atau fleksibel. Karena \"lebih banyak\" atau \"lebih sedikit\" sepenuhnya bergantung pada angka Anda sendiri, tabel tingkat mengambil pengeluaran tahunan yang Anda masukkan dan menampilkan angka FIRE serta tahun untuk mencapainya pada setengah jumlah itu (Lean), jumlah sebagaimana dimasukkan (Regular), dan dua kali jumlah itu (Fat) — menggunakan tabungan, investasi bulanan, dan imbal hasil yang sama seperti yang Anda tetapkan di atas.",
     "faq.q5": "Apakah ini nasihat keuangan, dan apakah data saya dikirim ke server?",
-    "faq.a5": "Tidak. Ini adalah proyeksi aritmetika edukatif berdasarkan angka yang Anda masukkan — pasar sungguhan tidak tumbuh dengan tingkat konstan setiap tahun, dan ini bukan nasihat investasi, pajak, atau pensiun. Semuanya berjalan secara lokal di browser Anda; tidak ada yang diunggah, tidak ada login, dan input Anda hanya disimpan di penyimpanan lokal perangkat Anda agar formulir mengingatnya lain kali. Gunakan ini untuk memeriksa perkiraan kasar linimasa FIRE Anda, lalu bicarakan dengan penasihat keuangan yang berkualifikasi untuk rencana sebenarnya."
+    "faq.a5": "Tidak. Ini adalah proyeksi aritmetika edukatif berdasarkan angka yang Anda masukkan — pasar sungguhan tidak tumbuh dengan tingkat konstan setiap tahun, dan ini bukan nasihat investasi, pajak, atau pensiun. Semuanya berjalan secara lokal di browser Anda; tidak ada yang diunggah, tidak ada login, dan input Anda hanya disimpan di penyimpanan lokal perangkat Anda agar formulir mengingatnya lain kali. Gunakan ini untuk memeriksa perkiraan kasar linimasa FIRE Anda, lalu bicarakan dengan penasihat keuangan yang berkualifikasi untuk rencana sebenarnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1010,7 +1065,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was sind Lean, Regular und Fat FIRE, und wie funktioniert die Stufentabelle?",
     "faq.a4": "Das sind informelle Stufen, die beschreiben, wie viel jemand im Ruhestand ausgeben möchte, keine festen Beträge. Lean FIRE bedeutet ein stark reduziertes Budget, deutlich unter Ihrem aktuellen Lebensstil; Regular FIRE behält in etwa den von Ihnen eingegebenen Lebensstil bei; Fat FIRE bedeutet deutlich höhere Ausgaben, für einen komfortableren oder flexibleren Ruhestand. Da „mehr\" oder „weniger\" ganz von Ihren eigenen Zahlen abhängt, nimmt die Stufentabelle die von Ihnen eingegebenen Jahresausgaben und zeigt die FIRE-Zahl sowie die Jahre bis zum Erreichen bei der Hälfte dieses Betrags (Lean), dem Betrag wie eingegeben (Regular) und dem Doppelten dieses Betrags (Fat) — mit denselben Ersparnissen, monatlichem Investieren und derselben Rendite, die Sie oben festgelegt haben.",
     "faq.q5": "Ist das Finanzberatung, und werden meine Daten an einen Server gesendet?",
-    "faq.a5": "Nein. Dies ist eine pädagogische, arithmetische Projektion auf Basis der von Ihnen eingegebenen Zahlen — echte Märkte wachsen nicht jedes Jahr mit einer konstanten Rate, und dies ist keine Anlage-, Steuer- oder Ruhestandsberatung. Alles läuft lokal in Ihrem Browser; nichts wird hochgeladen, es gibt kein Login, und Ihre Eingaben werden nur im lokalen Speicher Ihres Geräts gespeichert, damit sich das Formular sie beim nächsten Mal merkt. Nutzen Sie es, um Ihren FIRE-Zeitplan grob zu prüfen, und sprechen Sie dann für Ihren tatsächlichen Plan mit einer qualifizierten Finanzberaterin oder einem Finanzberater."
+    "faq.a5": "Nein. Dies ist eine pädagogische, arithmetische Projektion auf Basis der von Ihnen eingegebenen Zahlen — echte Märkte wachsen nicht jedes Jahr mit einer konstanten Rate, und dies ist keine Anlage-, Steuer- oder Ruhestandsberatung. Alles läuft lokal in Ihrem Browser; nichts wird hochgeladen, es gibt kein Login, und Ihre Eingaben werden nur im lokalen Speicher Ihres Geräts gespeichert, damit sich das Formular sie beim nächsten Mal merkt. Nutzen Sie es, um Ihren FIRE-Zeitplan grob zu prüfen, und sprechen Sie dann für Ihren tatsächlichen Plan mit einer qualifizierten Finanzberaterin oder einem Finanzberater.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1094,7 +1154,12 @@ window.I18N_LOCALES = {
     "faq.q4": "リーン、レギュラー、ファットFIREとは何ですか?レベル表はどう機能しますか?",
     "faq.a4": "これらは退職後にどれくらい使う予定かを表す非公式なレベルであり、固定の金額ではありません。リーンFIREは現在の生活水準よりかなり切り詰めた予算を意味し、レギュラーFIREは入力した生活水準をおおむね維持し、ファットFIREはより快適または柔軟な退職生活のために、かなり多く使うことを意味します。「多い」「少ない」は完全に自分自身の数字次第なので、レベル表は入力した年間支出を基に、その半分(リーン)、入力どおり(レギュラー)、2倍(ファット)の金額でFIREナンバーと到達までの年数を表示します — 上で設定したのと同じ資産・毎月の積立投資額・リターンを使用します。",
     "faq.q5": "これは金融アドバイスですか?データはサーバーに送信されますか?",
-    "faq.a5": "いいえ。これは入力した数値に基づく教育目的の算術的な試算であり、実際の市場は毎年一定の率で成長するわけではなく、投資・税務・退職に関する助言でもありません。すべての計算はブラウザ内でローカルに実行され、何もアップロードされず、ログインも不要です。入力内容は次回フォームが思い出せるよう、お使いの端末のローカルストレージにのみ保存されます。おおまかにFIREまでの見通しを確認する用途に使い、実際の計画については資格を持つファイナンシャルアドバイザーに相談してください。"
+    "faq.a5": "いいえ。これは入力した数値に基づく教育目的の算術的な試算であり、実際の市場は毎年一定の率で成長するわけではなく、投資・税務・退職に関する助言でもありません。すべての計算はブラウザ内でローカルに実行され、何もアップロードされず、ログインも不要です。入力内容は次回フォームが思い出せるよう、お使いの端末のローカルストレージにのみ保存されます。おおまかにFIREまでの見通しを確認する用途に使い、実際の計画については資格を持つファイナンシャルアドバイザーに相談してください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1178,6 +1243,11 @@ window.I18N_LOCALES = {
     "faq.q4": "린, 레귤러, 팻 FIRE란 무엇이고 단계 표는 어떻게 작동하나요?",
     "faq.a4": "이는 은퇴 후 얼마를 쓸 계획인지를 나타내는 비공식 단계일 뿐, 고정된 금액이 아닙니다. 린 FIRE는 현재 생활 수준보다 훨씬 낮춘 최소 예산을 뜻하고, 레귤러 FIRE는 입력한 생활 수준을 대체로 유지하며, 팻 FIRE는 더 편안하거나 유연한 은퇴를 위해 훨씬 많이 쓴다는 뜻입니다. \"더 많이\"나 \"더 적게\"는 전적으로 각자의 숫자에 달려 있으므로, 단계 표는 입력한 연 지출을 기준으로 그 절반(린), 입력한 그대로(레귤러), 두 배(팻)에 대해 FIRE 넘버와 도달까지 걸리는 시간을 보여 줍니다 — 위에서 설정한 것과 같은 저축, 월 투자액, 수익률을 그대로 사용합니다.",
     "faq.q5": "이것은 금융 조언인가요? 제 데이터가 서버로 전송되나요?",
-    "faq.a5": "아닙니다. 이는 입력한 숫자를 바탕으로 한 교육용 산술 예측일 뿐이며, 실제 시장은 매년 일정한 비율로 성장하지 않고, 투자·세무·은퇴 관련 조언도 아닙니다. 모든 계산은 브라우저 안에서 로컬로 실행되며, 업로드되는 것도 로그인도 없고, 입력값은 다음에도 양식이 기억할 수 있도록 기기의 로컬 저장소에만 저장됩니다. 대략적인 FIRE 도달 시점을 확인하는 용도로 쓰고, 실제 계획은 자격을 갖춘 재무 상담가와 상의하세요."
+    "faq.a5": "아닙니다. 이는 입력한 숫자를 바탕으로 한 교육용 산술 예측일 뿐이며, 실제 시장은 매년 일정한 비율로 성장하지 않고, 투자·세무·은퇴 관련 조언도 아닙니다. 모든 계산은 브라우저 안에서 로컬로 실행되며, 업로드되는 것도 로그인도 없고, 입력값은 다음에도 양식이 기억할 수 있도록 기기의 로컬 저장소에만 저장됩니다. 대략적인 FIRE 도달 시점을 확인하는 용도로 쓰고, 실제 계획은 자격을 갖춘 재무 상담가와 상의하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

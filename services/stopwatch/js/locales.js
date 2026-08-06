@@ -59,7 +59,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What are the keyboard shortcuts?",
     "faq.a4": "Space starts and pauses, L records a lap, and R resets. The shortcuts read physical key positions, so they work the same on any keyboard layout or input method, and they're ignored while you're typing in a field — so they never get in the way.",
     "faq.q5": "How do I paste my lap times into Excel or Google Sheets?",
-    "faq.a5": "Press Copy results and the laps are copied as tab-separated text — lap number, split and total per line. Paste into Excel, Google Sheets or Numbers and each value lands in its own cell automatically. If the browser blocks the clipboard, the results appear on screen so you can select and copy them by hand."
+    "faq.a5": "Press Copy results and the laps are copied as tab-separated text — lap number, split and total per line. Paste into Excel, Google Sheets or Numbers and each value lands in its own cell automatically. If the browser blocks the clipboard, the results appear on screen so you can select and copy them by hand.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -103,7 +108,12 @@ window.I18N_LOCALES = {
     "faq.q4": "有哪些键盘快捷键？",
     "faq.a4": "空格开始/暂停，L 记录单圈，R 重置。快捷键读取的是物理按键位置，因此在任何键盘布局或输入法下都一致；在输入框中打字时会被忽略，绝不碍事。",
     "faq.q5": "如何把单圈时间粘贴到 Excel 或 Google 表格？",
-    "faq.a5": "按“复制结果”，单圈会以制表符分隔的文本复制 — 每行包含圈号、单圈和累计。粘贴到 Excel、Google 表格或 Numbers，每个数值都会自动落入各自的单元格。若浏览器阻止剪贴板，结果会显示在屏幕上，供你手动选择并复制。"
+    "faq.a5": "按“复制结果”，单圈会以制表符分隔的文本复制 — 每行包含圈号、单圈和累计。粘贴到 Excel、Google 表格或 Numbers，每个数值都会自动落入各自的单元格。若浏览器阻止剪贴板，结果会显示在屏幕上，供你手动选择并复制。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -147,7 +157,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कीबोर्ड शॉर्टकट क्या हैं?",
     "faq.a4": "Space शुरू और रोकता है, L एक लैप दर्ज करता है, और R रीसेट करता है। शॉर्टकट भौतिक कुंजी स्थिति पढ़ते हैं, इसलिए किसी भी कीबोर्ड लेआउट या इनपुट विधि पर एक जैसे चलते हैं, और किसी फ़ील्ड में टाइप करते समय अनदेखा हो जाते हैं — कभी बाधा नहीं बनते।",
     "faq.q5": "अपनी लैप टाइम को Excel या Google Sheets में कैसे पेस्ट करूँ?",
-    "faq.a5": "“नतीजे कॉपी करें” दबाएँ — लैप टैब-सेपरेटेड टेक्स्ट के रूप में कॉपी होती हैं: हर पंक्ति में लैप नंबर, स्प्लिट और कुल। Excel, Google Sheets या Numbers में पेस्ट करें और हर मान अपने-आप अलग सेल में चला जाता है। अगर ब्राउज़र क्लिपबोर्ड रोक दे, तो नतीजे स्क्रीन पर दिखते हैं ताकि आप उन्हें चुनकर हाथ से कॉपी कर सकें।"
+    "faq.a5": "“नतीजे कॉपी करें” दबाएँ — लैप टैब-सेपरेटेड टेक्स्ट के रूप में कॉपी होती हैं: हर पंक्ति में लैप नंबर, स्प्लिट और कुल। Excel, Google Sheets या Numbers में पेस्ट करें और हर मान अपने-आप अलग सेल में चला जाता है। अगर ब्राउज़र क्लिपबोर्ड रोक दे, तो नतीजे स्क्रीन पर दिखते हैं ताकि आप उन्हें चुनकर हाथ से कॉपी कर सकें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -191,7 +206,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuáles son los atajos de teclado?",
     "faq.a4": "Espacio inicia y pausa, L registra una vuelta y R reinicia. Los atajos leen la posición física de las teclas, así que funcionan igual en cualquier distribución de teclado o método de entrada, y se ignoran mientras escribes en un campo, para no estorbar nunca.",
     "faq.q5": "¿Cómo pego mis tiempos por vuelta en Excel o Google Sheets?",
-    "faq.a5": "Pulsa Copiar resultados y las vueltas se copian como texto separado por tabuladores: número de vuelta, parcial y total por línea. Pégalos en Excel, Google Sheets o Numbers y cada valor cae en su propia celda automáticamente. Si el navegador bloquea el portapapeles, los resultados aparecen en pantalla para que los selecciones y copies a mano."
+    "faq.a5": "Pulsa Copiar resultados y las vueltas se copian como texto separado por tabuladores: número de vuelta, parcial y total por línea. Pégalos en Excel, Google Sheets o Numbers y cada valor cae en su propia celda automáticamente. Si el navegador bloquea el portapapeles, los resultados aparecen en pantalla para que los selecciones y copies a mano.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -235,7 +255,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما اختصارات لوحة المفاتيح؟",
     "faq.a4": "المسافة تبدأ وتوقف مؤقتًا، وL تسجّل لفّة، وR يعيد الضبط. تقرأ الاختصارات مواضع المفاتيح الفعلية، فتعمل بالطريقة نفسها على أي تخطيط للوحة المفاتيح أو أسلوب إدخال، وتُتجاهَل أثناء الكتابة في حقل، فلا تعترض طريقك أبدًا.",
     "faq.q5": "كيف ألصق أزمنة اللفّات في Excel أو Google Sheets؟",
-    "faq.a5": "اضغط نسخ النتائج فتُنسَخ اللفّات كنص مفصول بعلامات جدولة — رقم اللفّة والجزء والإجمالي في كل سطر. الصقها في Excel أو Google Sheets أو Numbers فتستقر كل قيمة في خليتها تلقائيًا. وإن منع المتصفح الحافظة، تظهر النتائج على الشاشة لتحديدها ونسخها يدويًا."
+    "faq.a5": "اضغط نسخ النتائج فتُنسَخ اللفّات كنص مفصول بعلامات جدولة — رقم اللفّة والجزء والإجمالي في كل سطر. الصقها في Excel أو Google Sheets أو Numbers فتستقر كل قيمة في خليتها تلقائيًا. وإن منع المتصفح الحافظة، تظهر النتائج على الشاشة لتحديدها ونسخها يدويًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -279,7 +304,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quels sont les raccourcis clavier ?",
     "faq.a4": "Espace démarre et met en pause, L enregistre un tour et R réinitialise. Les raccourcis lisent la position physique des touches : ils fonctionnent donc à l'identique sur n'importe quelle disposition de clavier ou méthode de saisie, et sont ignorés pendant que vous tapez dans un champ, pour ne jamais gêner.",
     "faq.q5": "Comment coller mes temps au tour dans Excel ou Google Sheets ?",
-    "faq.a5": "Appuyez sur Copier les résultats : les tours sont copiés en texte séparé par des tabulations — numéro de tour, intervalle et total par ligne. Collez dans Excel, Google Sheets ou Numbers et chaque valeur tombe automatiquement dans sa propre cellule. Si le navigateur bloque le presse-papiers, les résultats s'affichent à l'écran pour que vous les sélectionniez et copiez à la main."
+    "faq.a5": "Appuyez sur Copier les résultats : les tours sont copiés en texte séparé par des tabulations — numéro de tour, intervalle et total par ligne. Collez dans Excel, Google Sheets ou Numbers et chaque valeur tombe automatiquement dans sa propre cellule. Si le navigateur bloque le presse-papiers, les résultats s'affichent à l'écran pour que vous les sélectionniez et copiez à la main.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -323,7 +353,12 @@ window.I18N_LOCALES = {
     "faq.q4": "কীবোর্ড শর্টকাট কী কী?",
     "faq.a4": "Space শুরু ও বিরতি দেয়, L একটি ল্যাপ রেকর্ড করে, আর R রিসেট করে। শর্টকাট ভৌত কী-এর অবস্থান পড়ে, তাই যেকোনো কীবোর্ড লেআউট বা ইনপুট পদ্ধতিতে একইভাবে কাজ করে, আর কোনো ফিল্ডে টাইপ করার সময় উপেক্ষিত হয় — কখনো বাধা দেয় না।",
     "faq.q5": "ল্যাপ টাইম কীভাবে Excel বা Google Sheets-এ পেস্ট করব?",
-    "faq.a5": "“ফলাফল কপি করুন” চাপুন — ল্যাপগুলো ট্যাব-সেপারেটেড টেক্সট হিসেবে কপি হয়: প্রতি লাইনে ল্যাপ নম্বর, স্প্লিট ও মোট। Excel, Google Sheets বা Numbers-এ পেস্ট করলে প্রতিটি মান নিজে থেকে আলাদা সেলে বসে। ব্রাউজার ক্লিপবোর্ড আটকালে ফলাফল স্ক্রিনে দেখা যায়, যাতে নির্বাচন করে হাতে কপি করা যায়।"
+    "faq.a5": "“ফলাফল কপি করুন” চাপুন — ল্যাপগুলো ট্যাব-সেপারেটেড টেক্সট হিসেবে কপি হয়: প্রতি লাইনে ল্যাপ নম্বর, স্প্লিট ও মোট। Excel, Google Sheets বা Numbers-এ পেস্ট করলে প্রতিটি মান নিজে থেকে আলাদা সেলে বসে। ব্রাউজার ক্লিপবোর্ড আটকালে ফলাফল স্ক্রিনে দেখা যায়, যাতে নির্বাচন করে হাতে কপি করা যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -367,7 +402,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quais são os atalhos de teclado?",
     "faq.a4": "Espaço inicia e pausa, L registra uma volta e R redefine. Os atalhos leem a posição física das teclas, então funcionam igual em qualquer layout de teclado ou método de entrada, e são ignorados enquanto você digita em um campo — nunca atrapalham.",
     "faq.q5": "Como colo meus tempos por volta no Excel ou Google Sheets?",
-    "faq.a5": "Toque em Copiar resultados e as voltas são copiadas como texto separado por tabulações — número da volta, parcial e total por linha. Cole no Excel, Google Sheets ou Numbers e cada valor cai automaticamente na própria célula. Se o navegador bloquear a área de transferência, os resultados aparecem na tela para você selecionar e copiar à mão."
+    "faq.a5": "Toque em Copiar resultados e as voltas são copiadas como texto separado por tabulações — número da volta, parcial e total por linha. Cole no Excel, Google Sheets ou Numbers e cada valor cai automaticamente na própria célula. Se o navegador bloquear a área de transferência, os resultados aparecem na tela para você selecionar e copiar à mão.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -411,7 +451,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Какие есть горячие клавиши?",
     "faq.a4": "Пробел запускает и ставит на паузу, L записывает круг, R сбрасывает. Клавиши считывают физическое положение кнопок, поэтому работают одинаково при любой раскладке или методе ввода, и игнорируются, пока вы печатаете в поле, — никогда не мешают.",
     "faq.q5": "Как вставить время кругов в Excel или Google Таблицы?",
-    "faq.a5": "Нажмите «Копировать результаты» — круги копируются как текст с табуляцией: номер круга, отрезок и общее время в каждой строке. Вставьте в Excel, Google Таблицы или Numbers, и каждое значение автоматически попадёт в свою ячейку. Если браузер блокирует буфер обмена, результаты появляются на экране, чтобы выделить и скопировать вручную."
+    "faq.a5": "Нажмите «Копировать результаты» — круги копируются как текст с табуляцией: номер круга, отрезок и общее время в каждой строке. Вставьте в Excel, Google Таблицы или Numbers, и каждое значение автоматически попадёт в свою ячейку. Если браузер блокирует буфер обмена, результаты появляются на экране, чтобы выделить и скопировать вручную.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -455,7 +500,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کی بورڈ شارٹ کٹ کیا ہیں؟",
     "faq.a4": "Space شروع اور وقفہ کرتا ہے، L ایک لیپ ریکارڈ کرتا ہے، اور R ری سیٹ کرتا ہے۔ شارٹ کٹ کیز کی طبعی جگہ پڑھتے ہیں، اس لیے کسی بھی کی بورڈ لے آؤٹ یا اندراج طریقے پر یکساں چلتے ہیں، اور کسی فیلڈ میں ٹائپ کرتے وقت نظرانداز ہو جاتے ہیں — کبھی رکاوٹ نہیں بنتے۔",
     "faq.q5": "اپنے لیپ ٹائم Excel یا Google Sheets میں کیسے پیسٹ کروں؟",
-    "faq.a5": "«نتائج کاپی کریں» دبائیں تو لیپ ٹیب سے جدا شدہ متن کے طور پر کاپی ہوتی ہیں — ہر سطر میں لیپ نمبر، اسپلٹ اور کل۔ Excel، Google Sheets یا Numbers میں پیسٹ کریں تو ہر قدر خودبخود اپنے خانے میں چلی جاتی ہے۔ اگر براؤزر کلپ بورڈ روک دے تو نتائج اسکرین پر دکھتے ہیں تاکہ انہیں منتخب کر کے ہاتھ سے کاپی کیا جا سکے۔"
+    "faq.a5": "«نتائج کاپی کریں» دبائیں تو لیپ ٹیب سے جدا شدہ متن کے طور پر کاپی ہوتی ہیں — ہر سطر میں لیپ نمبر، اسپلٹ اور کل۔ Excel، Google Sheets یا Numbers میں پیسٹ کریں تو ہر قدر خودبخود اپنے خانے میں چلی جاتی ہے۔ اگر براؤزر کلپ بورڈ روک دے تو نتائج اسکرین پر دکھتے ہیں تاکہ انہیں منتخب کر کے ہاتھ سے کاپی کیا جا سکے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -499,7 +549,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa saja pintasan keyboard-nya?",
     "faq.a4": "Spasi memulai dan menjeda, L mencatat lap, dan R mereset. Pintasan membaca posisi tombol fisik, jadi bekerja sama di tata letak keyboard atau metode input apa pun, dan diabaikan saat Anda mengetik di kolom — jadi tak pernah mengganggu.",
     "faq.q5": "Bagaimana menempelkan waktu lap ke Excel atau Google Sheets?",
-    "faq.a5": "Tekan Salin hasil dan lap disalin sebagai teks berpemisah tab — nomor lap, selang, dan total per baris. Tempel ke Excel, Google Sheets, atau Numbers dan setiap nilai otomatis masuk ke selnya sendiri. Jika browser memblokir papan klip, hasil muncul di layar agar bisa Anda pilih dan salin secara manual."
+    "faq.a5": "Tekan Salin hasil dan lap disalin sebagai teks berpemisah tab — nomor lap, selang, dan total per baris. Tempel ke Excel, Google Sheets, atau Numbers dan setiap nilai otomatis masuk ke selnya sendiri. Jika browser memblokir papan klip, hasil muncul di layar agar bisa Anda pilih dan salin secara manual.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -543,7 +598,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Welche Tastenkürzel gibt es?",
     "faq.a4": "Leertaste startet und pausiert, L nimmt eine Runde auf, R setzt zurück. Die Kürzel lesen die physische Tastenposition, funktionieren also bei jedem Tastaturlayout und jeder Eingabemethode gleich, und werden ignoriert, während du in ein Feld tippst — so stören sie nie.",
     "faq.q5": "Wie füge ich meine Rundenzeiten in Excel oder Google Sheets ein?",
-    "faq.a5": "Drücke Ergebnisse kopieren, und die Runden werden als tabulatorgetrennter Text kopiert — Rundennummer, Abschnitt und Gesamt pro Zeile. Füge sie in Excel, Google Sheets oder Numbers ein, und jeder Wert landet automatisch in seiner eigenen Zelle. Blockiert der Browser die Zwischenablage, erscheinen die Ergebnisse auf dem Bildschirm, damit du sie von Hand markieren und kopieren kannst."
+    "faq.a5": "Drücke Ergebnisse kopieren, und die Runden werden als tabulatorgetrennter Text kopiert — Rundennummer, Abschnitt und Gesamt pro Zeile. Füge sie in Excel, Google Sheets oder Numbers ein, und jeder Wert landet automatisch in seiner eigenen Zelle. Blockiert der Browser die Zwischenablage, erscheinen die Ergebnisse auf dem Bildschirm, damit du sie von Hand markieren und kopieren kannst.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -587,7 +647,12 @@ window.I18N_LOCALES = {
     "faq.q4": "キーボードショートカットは?",
     "faq.a4": "スペースで開始と一時停止、Lでラップ記録、Rでリセットです。ショートカットは物理キーの位置を読むため、どのキーボード配列や入力方式でも同じように動作し、入力欄で文字を打っている間は無視されるので、邪魔になりません。",
     "faq.q5": "ラップタイムをExcelやGoogleスプレッドシートに貼り付けるには?",
-    "faq.a5": "「結果をコピー」を押すと、ラップがタブ区切りテキストでコピーされます — 1行にラップ番号・区間・累計。Excel・Googleスプレッドシート・Numbersに貼り付けると、各値が自動でそれぞれのセルに入ります。ブラウザがクリップボードをブロックする場合は結果を画面に表示するので、選択して手動でコピーできます。"
+    "faq.a5": "「結果をコピー」を押すと、ラップがタブ区切りテキストでコピーされます — 1行にラップ番号・区間・累計。Excel・Googleスプレッドシート・Numbersに貼り付けると、各値が自動でそれぞれのセルに入ります。ブラウザがクリップボードをブロックする場合は結果を画面に表示するので、選択して手動でコピーできます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -631,6 +696,11 @@ window.I18N_LOCALES = {
     "faq.q4": "키보드 단축키는 무엇인가요?",
     "faq.a4": "Space는 시작·일시정지, L은 랩 기록, R은 초기화입니다. 단축키는 물리적 키 위치를 읽어 어떤 키보드 배열이나 입력기에서도 동일하게 동작하고, 입력란에 타이핑하는 동안에는 무시되어 방해가 되지 않습니다.",
     "faq.q5": "랩타임을 엑셀이나 구글 시트에 붙여넣으려면?",
-    "faq.a5": "결과 복사를 누르면 랩이 탭 구분 텍스트로 복사됩니다 — 한 줄에 랩 번호·구간·누적. 엑셀, 구글 시트, Numbers에 붙여넣으면 각 값이 자동으로 각 셀에 들어갑니다. 브라우저가 클립보드를 막으면 결과가 화면에 표시되어 직접 선택해 복사할 수 있습니다."
+    "faq.a5": "결과 복사를 누르면 랩이 탭 구분 텍스트로 복사됩니다 — 한 줄에 랩 번호·구간·누적. 엑셀, 구글 시트, Numbers에 붙여넣으면 각 값이 자동으로 각 셀에 들어갑니다. 브라우저가 클립보드를 막으면 결과가 화면에 표시되어 직접 선택해 복사할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

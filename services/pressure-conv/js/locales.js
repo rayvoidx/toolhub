@@ -55,7 +55,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What is the difference between mmHg and Torr, and how does this relate to a 120/80 blood pressure reading?",
     "faq.a4": "mmHg (millimeter of mercury) and Torr are nearly identical — 1 Torr is defined as 1/760 of a standard atmosphere (about 133.3224 Pa), while conventional mmHg is about 133.3224 Pa too, differing by less than 0.001%. A blood pressure reading of \"120/80 mmHg\" simply expresses two pressures in this unit: about 16.0 kPa (systolic) and 10.7 kPa (diastolic). This converter treats mmHg and Torr as equivalent for everyday use; it is a unit conversion tool only, not medical guidance.",
     "faq.q5": "Is my input sent to a server?",
-    "faq.a5": "No. This pressure converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example psi → bar), kept in your browser's local storage so it is ready next time. The value itself is not stored."
+    "faq.a5": "No. This pressure converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example psi → bar), kept in your browser's local storage so it is ready next time. The value itself is not stored.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -104,7 +109,12 @@ window.I18N_LOCALES = {
     "faq.q4": "mmHg 和 Torr 有什么区别？这与 120/80 的血压读数有什么关系？",
     "faq.a4": "mmHg（毫米汞柱）和 Torr 几乎相同 —— 1 Torr 被定义为标准大气压的 1/760（约 133.3224 Pa），而常规 mmHg 也约为 133.3224 Pa，两者相差不到 0.001%。血压读数“120/80 mmHg”只是用这个单位表示两个压力值：收缩压约 16.0 kPa，舒张压约 10.7 kPa。本换算器在日常使用中将 mmHg 与 Torr 视为等值；它只是一个单位换算工具，不构成医疗建议。",
     "faq.q5": "我输入的数据会被发送到服务器吗？",
-    "faq.a5": "不会。这款压力换算器完全在您的浏览器中运行 —— 您输入的数字不会被上传到任何地方。唯一被保存的是您上次选择的单位组合（例如 psi → bar），保存在浏览器本地存储中以便下次使用。数值本身不会被保存。"
+    "faq.a5": "不会。这款压力换算器完全在您的浏览器中运行 —— 您输入的数字不会被上传到任何地方。唯一被保存的是您上次选择的单位组合（例如 psi → bar），保存在浏览器本地存储中以便下次使用。数值本身不会被保存。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -153,7 +163,12 @@ window.I18N_LOCALES = {
     "faq.q4": "mmHg और Torr में क्या अंतर है, और इसका 120/80 रक्तचाप रीडिंग से क्या संबंध है?",
     "faq.a4": "mmHg (मिलीमीटर पारा) और Torr लगभग समान हैं — 1 Torr को मानक वायुमंडल के 1/760 के रूप में परिभाषित किया गया है (लगभग 133.3224 Pa), जबकि पारंपरिक mmHg भी लगभग 133.3224 Pa है, दोनों में 0.001% से भी कम अंतर है। \"120/80 mmHg\" रक्तचाप रीडिंग बस इसी इकाई में दो दाब दिखाती है: लगभग 16.0 kPa (सिस्टोलिक) और 10.7 kPa (डायस्टोलिक)। यह कनवर्टर रोज़मर्रा के उपयोग के लिए mmHg और Torr को समान मानता है; यह केवल एक इकाई कनवर्टर है, चिकित्सीय सलाह नहीं।",
     "faq.q5": "क्या मेरा इनपुट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह दबाव कनवर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं भी अपलोड नहीं होती। केवल आपकी आख़िरी चुनी हुई इकाई जोड़ी (जैसे psi → bar) सेव होती है, जो आपके ब्राउज़र के लोकल स्टोरेज में रहती है ताकि अगली बार तैयार रहे। मान स्वयं सेव नहीं होता।"
+    "faq.a5": "नहीं। यह दबाव कनवर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं भी अपलोड नहीं होती। केवल आपकी आख़िरी चुनी हुई इकाई जोड़ी (जैसे psi → bar) सेव होती है, जो आपके ब्राउज़र के लोकल स्टोरेज में रहती है ताकि अगली बार तैयार रहे। मान स्वयं सेव नहीं होता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -202,7 +217,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuál es la diferencia entre mmHg y Torr, y cómo se relaciona con una lectura de presión arterial de 120/80?",
     "faq.a4": "mmHg (milímetro de mercurio) y Torr son casi idénticos — 1 Torr se define como 1/760 de una atmósfera estándar (unos 133.3224 Pa), mientras que el mmHg convencional también es de unos 133.3224 Pa, con una diferencia inferior al 0.001%. Una lectura de presión arterial de \"120/80 mmHg\" simplemente expresa dos presiones en esta unidad: unos 16.0 kPa (sistólica) y 10.7 kPa (diastólica). Este conversor trata mmHg y Torr como equivalentes para uso cotidiano; es solo una herramienta de conversión de unidades, no asesoramiento médico.",
     "faq.q5": "¿Se envía mi entrada a un servidor?",
-    "faq.a5": "No. Este conversor de presión funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es tu último par de unidades elegido (por ejemplo psi → bar), almacenado en el almacenamiento local de tu navegador para tenerlo listo la próxima vez. El valor en sí no se guarda."
+    "faq.a5": "No. Este conversor de presión funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es tu último par de unidades elegido (por ejemplo psi → bar), almacenado en el almacenamiento local de tu navegador para tenerlo listo la próxima vez. El valor en sí no se guarda.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -251,7 +271,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الفرق بين mmHg وTorr، وما علاقته بقراءة ضغط دم 120/80؟",
     "faq.a4": "وحدتا mmHg (ملم زئبق) وTorr متطابقتان تقريبًا — يُعرَّف الـ Torr بأنه 1/760 من الضغط الجوي القياسي (نحو 133.3224 Pa)، بينما الـ mmHg التقليدي يبلغ أيضًا نحو 133.3224 Pa، بفارق أقل من 0.001%. قراءة ضغط الدم \"120/80 mmHg\" تعبّر ببساطة عن ضغطين بهذه الوحدة: نحو 16.0 kPa (الانقباضي) و10.7 kPa (الانبساطي). يعامل هذا المحول وحدتي mmHg وTorr كمتكافئتين للاستخدام اليومي؛ وهو أداة تحويل وحدات فقط وليس إرشادًا طبيًا.",
     "faq.q5": "هل تُرسَل مدخلاتي إلى خادم؟",
-    "faq.a5": "لا. يعمل محول الضغط هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفَع إلى أي مكان إطلاقًا. الشيء الوحيد الذي يُحفظ هو زوج الوحدات الأخير الذي اخترته (مثل psi → bar)، ويُحفظ في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة. القيمة نفسها لا تُحفظ."
+    "faq.a5": "لا. يعمل محول الضغط هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفَع إلى أي مكان إطلاقًا. الشيء الوحيد الذي يُحفظ هو زوج الوحدات الأخير الذي اخترته (مثل psi → bar)، ويُحفظ في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة. القيمة نفسها لا تُحفظ.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -300,7 +325,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la différence entre mmHg et Torr, et quel est le rapport avec une tension artérielle de 120/80 ?",
     "faq.a4": "Le mmHg (millimètre de mercure) et le Torr sont presque identiques — 1 Torr est défini comme 1/760 d'une atmosphère standard (environ 133,3224 Pa), tandis que le mmHg conventionnel vaut aussi environ 133,3224 Pa, avec un écart inférieur à 0,001 %. Une tension artérielle de « 120/80 mmHg » exprime simplement deux pressions dans cette unité : environ 16,0 kPa (systolique) et 10,7 kPa (diastolique). Ce convertisseur traite mmHg et Torr comme équivalents pour un usage courant ; c'est uniquement un outil de conversion d'unités, pas un avis médical.",
     "faq.q5": "Mes données saisies sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur de pression fonctionne entièrement dans votre navigateur — le nombre que vous tapez n'est jamais envoyé nulle part. La seule chose enregistrée est votre dernière paire d'unités choisie (par exemple psi → bar), conservée dans le stockage local de votre navigateur pour être prête la prochaine fois. La valeur elle-même n'est pas enregistrée."
+    "faq.a5": "Non. Ce convertisseur de pression fonctionne entièrement dans votre navigateur — le nombre que vous tapez n'est jamais envoyé nulle part. La seule chose enregistrée est votre dernière paire d'unités choisie (par exemple psi → bar), conservée dans le stockage local de votre navigateur pour être prête la prochaine fois. La valeur elle-même n'est pas enregistrée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -349,7 +379,12 @@ window.I18N_LOCALES = {
     "faq.q4": "mmHg এবং Torr-এর মধ্যে পার্থক্য কী, এবং এটি ১২০/৮০ রক্তচাপ রিডিংয়ের সাথে কীভাবে সম্পর্কিত?",
     "faq.a4": "mmHg (মিলিমিটার পারদ) এবং Torr প্রায় একই — 1 Torr সংজ্ঞায়িত হয় আদর্শ বায়ুমণ্ডলের ১/৭৬০ অংশ হিসেবে (প্রায় ১৩৩.৩২২৪ Pa), আর প্রচলিত mmHg-ও প্রায় ১৩৩.৩২২৪ Pa, পার্থক্য ০.০০১%-এরও কম। \"১২০/৮০ mmHg\" রক্তচাপ রিডিং এই এককে কেবল দুটি চাপ প্রকাশ করে: প্রায় ১৬.০ kPa (সিস্টোলিক) এবং ১০.৭ kPa (ডায়াস্টোলিক)। এই কনভার্টার দৈনন্দিন ব্যবহারের জন্য mmHg ও Torr-কে সমতুল্য হিসেবে বিবেচনা করে; এটি শুধুমাত্র একটি একক রূপান্তর টুল, চিকিৎসা পরামর্শ নয়।",
     "faq.q5": "আমার ইনপুট কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই চাপ কনভার্টারটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যাটি লেখেন তা কখনোই কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ নির্বাচিত এককের জোড়া (যেমন psi → bar) সংরক্ষিত হয়, যা আপনার ব্রাউজারের লোকাল স্টোরেজে থাকে যাতে পরের বার প্রস্তুত থাকে। মান নিজে সংরক্ষিত হয় না।"
+    "faq.a5": "না। এই চাপ কনভার্টারটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যাটি লেখেন তা কখনোই কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ নির্বাচিত এককের জোড়া (যেমন psi → bar) সংরক্ষিত হয়, যা আপনার ব্রাউজারের লোকাল স্টোরেজে থাকে যাতে পরের বার প্রস্তুত থাকে। মান নিজে সংরক্ষিত হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -398,7 +433,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a diferença entre mmHg e Torr, e como isso se relaciona com uma leitura de pressão arterial de 120/80?",
     "faq.a4": "mmHg (milímetro de mercúrio) e Torr são quase idênticos — 1 Torr é definido como 1/760 de uma atmosfera padrão (cerca de 133,3224 Pa), enquanto o mmHg convencional também é de cerca de 133,3224 Pa, com diferença inferior a 0,001%. Uma leitura de pressão arterial de \"120/80 mmHg\" simplesmente expressa duas pressões nessa unidade: cerca de 16,0 kPa (sistólica) e 10,7 kPa (diastólica). Este conversor trata mmHg e Torr como equivalentes para uso cotidiano; é apenas uma ferramenta de conversão de unidades, não um conselho médico.",
     "faq.q5": "Minha entrada é enviada para um servidor?",
-    "faq.a5": "Não. Este conversor de pressão funciona inteiramente no seu navegador — o número que você digita nunca é enviado a lugar nenhum. A única coisa salva é o último par de unidades escolhido (por exemplo psi → bar), guardado no armazenamento local do seu navegador para ficar pronto na próxima vez. O valor em si não é armazenado."
+    "faq.a5": "Não. Este conversor de pressão funciona inteiramente no seu navegador — o número que você digita nunca é enviado a lugar nenhum. A única coisa salva é o último par de unidades escolhido (por exemplo psi → bar), guardado no armazenamento local do seu navegador para ficar pronto na próxima vez. O valor em si não é armazenado.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -447,7 +487,12 @@ window.I18N_LOCALES = {
     "faq.q4": "В чём разница между mmHg и Torr и как это связано с показателем давления крови 120/80?",
     "faq.a4": "mmHg (миллиметр ртутного столба) и Torr почти идентичны — 1 Torr определяется как 1/760 стандартной атмосферы (около 133,3224 Pa), при этом обычный mmHg также составляет около 133,3224 Pa, разница меньше 0,001%. Показатель артериального давления «120/80 mmHg» просто выражает два давления в этой единице: около 16,0 kPa (систолическое) и 10,7 kPa (диастолическое). Этот конвертер считает mmHg и Torr эквивалентными для повседневного использования; это лишь инструмент перевода единиц, а не медицинская рекомендация.",
     "faq.q5": "Отправляются ли мои данные на сервер?",
-    "faq.a5": "Нет. Этот конвертер давления работает полностью в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, psi → bar) в локальном хранилище браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется."
+    "faq.a5": "Нет. Этот конвертер давления работает полностью в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, psi → bar) в локальном хранилище браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -496,7 +541,12 @@ window.I18N_LOCALES = {
     "faq.q4": "mmHg اور Torr میں کیا فرق ہے، اور اس کا 120/80 بلڈ پریشر ریڈنگ سے کیا تعلق ہے؟",
     "faq.a4": "mmHg (ملی میٹر پارہ) اور Torr تقریباً ایک جیسے ہیں — 1 Torr کو معیاری فضا کے 1/760 کے طور پر متعین کیا گیا ہے (تقریباً 133.3224 Pa)، جبکہ روایتی mmHg بھی تقریباً 133.3224 Pa ہے، فرق 0.001% سے بھی کم ہے۔ \"120/80 mmHg\" بلڈ پریشر ریڈنگ محض اس یونٹ میں دو دباؤ ظاہر کرتی ہے: تقریباً 16.0 kPa (سسٹولک) اور 10.7 kPa (ڈائیسٹولک)۔ یہ کنورٹر روزمرہ استعمال کے لیے mmHg اور Torr کو برابر سمجھتا ہے؛ یہ محض ایک یونٹ کنورژن ٹول ہے، طبی مشورہ نہیں۔",
     "faq.q5": "کیا میرا ان پٹ سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ پریشر کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — جو نمبر آپ لکھتے ہیں وہ کہیں بھی اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری منتخب کردہ یونٹ جوڑا (مثلاً psi → bar) محفوظ ہوتا ہے، جو آپ کے براؤزر کے لوکل اسٹوریج میں رہتا ہے تاکہ اگلی بار تیار ہو۔ قدر خود محفوظ نہیں ہوتی۔"
+    "faq.a5": "نہیں۔ یہ پریشر کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — جو نمبر آپ لکھتے ہیں وہ کہیں بھی اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری منتخب کردہ یونٹ جوڑا (مثلاً psi → bar) محفوظ ہوتا ہے، جو آپ کے براؤزر کے لوکل اسٹوریج میں رہتا ہے تاکہ اگلی بار تیار ہو۔ قدر خود محفوظ نہیں ہوتی۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -545,7 +595,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa perbedaan antara mmHg dan Torr, dan bagaimana kaitannya dengan pembacaan tekanan darah 120/80?",
     "faq.a4": "mmHg (milimeter air raksa) dan Torr hampir identik — 1 Torr didefinisikan sebagai 1/760 dari satu atmosfer standar (sekitar 133,3224 Pa), sementara mmHg konvensional juga sekitar 133,3224 Pa, dengan selisih kurang dari 0,001%. Pembacaan tekanan darah \"120/80 mmHg\" hanya menyatakan dua tekanan dalam satuan ini: sekitar 16,0 kPa (sistolik) dan 10,7 kPa (diastolik). Konverter ini menganggap mmHg dan Torr setara untuk penggunaan sehari-hari; ini hanyalah alat konversi satuan, bukan saran medis.",
     "faq.q5": "Apakah input saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter tekanan ini sepenuhnya berjalan di browser Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya psi → bar), disimpan di penyimpanan lokal browser Anda agar siap untuk kunjungan berikutnya. Nilainya sendiri tidak disimpan."
+    "faq.a5": "Tidak. Konverter tekanan ini sepenuhnya berjalan di browser Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya psi → bar), disimpan di penyimpanan lokal browser Anda agar siap untuk kunjungan berikutnya. Nilainya sendiri tidak disimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -594,7 +649,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist der Unterschied zwischen mmHg und Torr, und wie hängt das mit einem Blutdruckwert von 120/80 zusammen?",
     "faq.a4": "mmHg (Millimeter Quecksilbersäule) und Torr sind fast identisch — 1 Torr ist definiert als 1/760 einer Standardatmosphäre (etwa 133,3224 Pa), während das konventionelle mmHg ebenfalls etwa 133,3224 Pa beträgt, mit einer Abweichung von weniger als 0,001 %. Ein Blutdruckwert von „120/80 mmHg“ drückt einfach zwei Druckwerte in dieser Einheit aus: etwa 16,0 kPa (systolisch) und 10,7 kPa (diastolisch). Dieser Umrechner behandelt mmHg und Torr für den Alltagsgebrauch als gleichwertig; es handelt sich lediglich um ein Einheiten-Umrechnungswerkzeug, nicht um medizinischen Rat.",
     "faq.q5": "Werden meine Eingaben an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Druckumrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwo hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (zum Beispiel psi → bar) im lokalen Speicher Ihres Browsers, damit es beim nächsten Mal bereitsteht. Der Wert selbst wird nicht gespeichert."
+    "faq.a5": "Nein. Dieser Druckumrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwo hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (zum Beispiel psi → bar) im lokalen Speicher Ihres Browsers, damit es beim nächsten Mal bereitsteht. Der Wert selbst wird nicht gespeichert.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -643,7 +703,12 @@ window.I18N_LOCALES = {
     "faq.q4": "mmHgとTorrの違いは?120/80の血圧値とどう関係する?",
     "faq.a4": "mmHg(水銀柱ミリメートル)とTorrはほぼ同じ単位です — 1 Torrは標準大気圧の1/760(約133.3224 Pa)と定義され、慣用的なmmHgも約133.3224 Paで、その差は0.001%未満です。「120/80 mmHg」という血圧値は、この単位で2つの圧力を表しているだけです:収縮期血圧が約16.0 kPa、拡張期血圧が約10.7 kPaです。本ツールは日常利用のためmmHgとTorrを同等として扱います。あくまで単位変換ツールであり、医学的な助言ではありません。",
     "faq.q5": "入力内容はサーバーに送信されますか?",
-    "faq.a5": "いいえ。この圧力変換ツールはすべてブラウザ内で完結し、入力した数値がどこかにアップロードされることはありません。保存されるのは最後に選んだ単位の組み合わせ(例: psi → bar)だけで、次回すぐ使えるようブラウザのローカルストレージに保存されます。数値そのものは保存されません。"
+    "faq.a5": "いいえ。この圧力変換ツールはすべてブラウザ内で完結し、入力した数値がどこかにアップロードされることはありません。保存されるのは最後に選んだ単位の組み合わせ(例: psi → bar)だけで、次回すぐ使えるようブラウザのローカルストレージに保存されます。数値そのものは保存されません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -692,6 +757,11 @@ window.I18N_LOCALES = {
     "faq.q4": "mmHg와 Torr의 차이는 무엇이며, 120/80 혈압 수치와 어떤 관련이 있나요?",
     "faq.a4": "mmHg(수은주 밀리미터)와 Torr는 거의 동일합니다 — 1 Torr는 표준 대기압의 1/760(약 133.3224 Pa)로 정의되며, 관용적인 mmHg 역시 약 133.3224 Pa로 두 값의 차이는 0.001% 미만입니다. \"120/80 mmHg\" 혈압 수치는 이 단위로 두 압력을 나타낸 것일 뿐입니다: 수축기 약 16.0 kPa, 이완기 약 10.7 kPa입니다. 이 변환기는 일상적인 사용을 위해 mmHg와 Torr를 동일하게 취급하며, 단위 변환 도구일 뿐 의학적 조언이 아닙니다.",
     "faq.q5": "입력한 값이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 압력 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 숫자는 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 조합(예: psi → bar)뿐이며, 다음 방문 시 바로 쓸 수 있도록 브라우저의 로컬 저장소에 보관됩니다. 값 자체는 저장되지 않습니다."
+    "faq.a5": "아니요. 이 압력 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 숫자는 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 조합(예: psi → bar)뿐이며, 다음 방문 시 바로 쓸 수 있도록 브라우저의 로컬 저장소에 보관됩니다. 값 자체는 저장되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

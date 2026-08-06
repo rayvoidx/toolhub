@@ -72,7 +72,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Which characters and punctuation does this Morse code converter support?",
     "faq.a4": "This converter supports the full international Morse code alphabet: all 26 letters A–Z, digits 0–9, and common punctuation including the period, comma, question mark, apostrophe, exclamation mark, slash, parentheses, ampersand, colon, semicolon, equals sign, plus sign, hyphen, underscore, quotation mark, dollar sign and at sign. Letters are not case-sensitive. Characters outside this set, such as accented letters, emoji or non-Latin scripts, have no official Morse representation and are skipped with a warning.",
     "faq.q5": "Is my text or Morse code sent to a server?",
-    "faq.a5": "No. This Morse code translator runs entirely in your browser — nothing you type, paste or play as audio is ever uploaded, logged or shared with a server. There's no sign-up and no tracking, so you can translate and practice Morse code with complete privacy. Your last input is saved only in this browser's local storage so it's there when you return."
+    "faq.a5": "No. This Morse code translator runs entirely in your browser — nothing you type, paste or play as audio is ever uploaded, logged or shared with a server. There's no sign-up and no tracking, so you can translate and practice Morse code with complete privacy. Your last input is saved only in this browser's local storage so it's there when you return.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -130,7 +135,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这款摩尔斯电码转换器支持哪些字符和标点符号？",
     "faq.a4": "本转换器支持完整的国际摩尔斯电码字母表：全部 26 个字母 A–Z、数字 0–9，以及常见标点符号，包括句号、逗号、问号、撇号、感叹号、斜杠、括号、和号、冒号、分号、等号、加号、连字符、下划线、引号、美元符号和 @ 符号。字母不区分大小写。带重音符号的字母、表情符号或非拉丁文字等不在此范围内的字符，没有官方的摩尔斯电码表示，会被跳过并提示警告。",
     "faq.q5": "我输入的文本或摩尔斯电码会被发送到服务器吗？",
-    "faq.a5": "不会。这款摩尔斯电码翻译器完全在您的浏览器中运行——您输入、粘贴或播放的任何内容都不会被上传、记录或与服务器共享。无需注册，也没有任何追踪，您可以完全放心地翻译和练习摩尔斯电码。您最近一次输入的内容仅保存在本浏览器的本地存储中，方便您下次访问时继续使用。"
+    "faq.a5": "不会。这款摩尔斯电码翻译器完全在您的浏览器中运行——您输入、粘贴或播放的任何内容都不会被上传、记录或与服务器共享。无需注册，也没有任何追踪，您可以完全放心地翻译和练习摩尔斯电码。您最近一次输入的内容仅保存在本浏览器的本地存储中，方便您下次访问时继续使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -188,7 +198,12 @@ window.I18N_LOCALES = {
     "faq.q4": "यह मोर्स कोड कन्वर्टर किन अक्षरों और विराम चिह्नों का समर्थन करता है?",
     "faq.a4": "यह कन्वर्टर पूरे अंतरराष्ट्रीय मोर्स कोड वर्णमाला का समर्थन करता है: सभी 26 अक्षर A–Z, अंक 0–9, और सामान्य विराम चिह्न जैसे पूर्ण विराम, अल्पविराम, प्रश्न चिह्न, एपॉस्ट्रफ़ी, विस्मयादिबोधक चिह्न, स्लैश, कोष्ठक, एम्परसेंड, कोलन, सेमीकोलन, बराबर का चिह्न, प्लस चिह्न, हाइफ़न, अंडरस्कोर, उद्धरण चिह्न, डॉलर चिह्न और एट (@) चिह्न। अक्षरों में केस (बड़े-छोटे) का फ़र्क़ नहीं पड़ता। इस सूची से बाहर के अक्षर, जैसे उच्चारण-चिह्न वाले अक्षर, इमोजी या ग़ैर-लैटिन लिपियाँ, मोर्स में आधिकारिक रूप से मौजूद नहीं हैं और उन्हें चेतावनी के साथ छोड़ दिया जाता है।",
     "faq.q5": "क्या मेरा टेक्स्ट या मोर्स कोड सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह मोर्स कोड ट्रांसलेटर पूरी तरह आपके ब्राउज़र में चलता है — आप जो कुछ भी टाइप, पेस्ट या ऑडियो के रूप में चलाते हैं, वह कभी अपलोड, लॉग या किसी सर्वर के साथ साझा नहीं होता। न कोई साइन-अप है, न कोई ट्रैकिंग, इसलिए आप पूरी निजता के साथ मोर्स कोड का अनुवाद और अभ्यास कर सकते हैं। आपकी आख़िरी एंट्री केवल इसी ब्राउज़र के लोकल स्टोरेज में सेव होती है, ताकि लौटने पर वह वहीं मिले।"
+    "faq.a5": "नहीं। यह मोर्स कोड ट्रांसलेटर पूरी तरह आपके ब्राउज़र में चलता है — आप जो कुछ भी टाइप, पेस्ट या ऑडियो के रूप में चलाते हैं, वह कभी अपलोड, लॉग या किसी सर्वर के साथ साझा नहीं होता। न कोई साइन-अप है, न कोई ट्रैकिंग, इसलिए आप पूरी निजता के साथ मोर्स कोड का अनुवाद और अभ्यास कर सकते हैं। आपकी आख़िरी एंट्री केवल इसी ब्राउज़र के लोकल स्टोरेज में सेव होती है, ताकि लौटने पर वह वहीं मिले।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -246,7 +261,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué caracteres y signos de puntuación admite este convertidor de código Morse?",
     "faq.a4": "Este convertidor admite el alfabeto Morse internacional completo: las 26 letras de la A a la Z, los dígitos del 0 al 9, y signos de puntuación comunes como el punto, la coma, el signo de interrogación, el apóstrofo, el signo de exclamación, la barra, los paréntesis, el ampersand, los dos puntos, el punto y coma, el signo igual, el signo más, el guion, el guion bajo, las comillas, el signo de dólar y la arroba. Las letras no distinguen mayúsculas de minúsculas. Los caracteres fuera de este conjunto, como letras acentuadas, emojis o escrituras no latinas, no tienen representación oficial en Morse y se omiten con un aviso.",
     "faq.q5": "¿Se envía mi texto o mi código Morse a un servidor?",
-    "faq.a5": "No. Este traductor de código Morse funciona por completo en tu navegador — nada de lo que escribes, pegas o reproduces como audio se sube, se registra ni se comparte con ningún servidor. No hace falta registrarse y no hay ningún rastreo, así que puedes traducir y practicar código Morse con total privacidad. Tu última entrada se guarda solo en el almacenamiento local de este navegador, para que siga ahí cuando vuelvas."
+    "faq.a5": "No. Este traductor de código Morse funciona por completo en tu navegador — nada de lo que escribes, pegas o reproduces como audio se sube, se registra ni se comparte con ningún servidor. No hace falta registrarse y no hay ningún rastreo, así que puedes traducir y practicar código Morse con total privacidad. Tu última entrada se guarda solo en el almacenamiento local de este navegador, para que siga ahí cuando vuelvas.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -304,7 +324,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الأحرف وعلامات الترقيم التي يدعمها محول شفرة مورس هذا؟",
     "faq.a4": "يدعم هذا المحوّل أبجدية شفرة مورس الدولية بالكامل: جميع الحروف الـ26 من A إلى Z، والأرقام من 0 إلى 9، وعلامات الترقيم الشائعة مثل النقطة والفاصلة وعلامة الاستفهام والفاصلة العليا وعلامة التعجب والشرطة المائلة والأقواس وعلامة العطف والنقطتين الرأسيتين والفاصلة المنقوطة وعلامة يساوي وعلامة الجمع والشرطة والشرطة السفلية وعلامة التنصيص وعلامة الدولار وعلامة @. لا تُميّز الحروف بين الكبيرة والصغيرة. أما الأحرف خارج هذه المجموعة، مثل الحروف المُشكَّلة أو الرموز التعبيرية أو الأبجديات غير اللاتينية، فليس لها تمثيل رسمي في مورس ويتم تخطّيها مع تنبيه.",
     "faq.q5": "هل يُرسَل نصي أو شفرة مورس الخاصة بي إلى خادم؟",
-    "faq.a5": "لا. يعمل مترجم شفرة مورس هذا بالكامل داخل متصفحك — لا شيء مما تكتبه أو تلصقه أو تُشغّله كصوت يُرفَع أو يُسجَّل أو يُشارَك مع أي خادم أبدًا. لا حاجة للتسجيل ولا يوجد أي تتبّع، لذا يمكنك ترجمة شفرة مورس والتدرّب عليها بخصوصية تامة. يُحفَظ آخر إدخال لك فقط في التخزين المحلي لهذا المتصفح ليكون بانتظارك عند عودتك."
+    "faq.a5": "لا. يعمل مترجم شفرة مورس هذا بالكامل داخل متصفحك — لا شيء مما تكتبه أو تلصقه أو تُشغّله كصوت يُرفَع أو يُسجَّل أو يُشارَك مع أي خادم أبدًا. لا حاجة للتسجيل ولا يوجد أي تتبّع، لذا يمكنك ترجمة شفرة مورس والتدرّب عليها بخصوصية تامة. يُحفَظ آخر إدخال لك فقط في التخزين المحلي لهذا المتصفح ليكون بانتظارك عند عودتك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -362,7 +387,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quels caractères et signes de ponctuation ce convertisseur de code Morse prend-il en charge ?",
     "faq.a4": "Ce convertisseur prend en charge l'alphabet Morse international complet : les 26 lettres de A à Z, les chiffres de 0 à 9, et la ponctuation courante, notamment le point, la virgule, le point d'interrogation, l'apostrophe, le point d'exclamation, la barre oblique, les parenthèses, l'esperluette, les deux-points, le point-virgule, le signe égal, le signe plus, le trait d'union, le tiret bas, les guillemets, le signe dollar et l'arobase. Les lettres ne sont pas sensibles à la casse. Les caractères hors de cet ensemble, comme les lettres accentuées, les emojis ou les écritures non latines, n'ont pas de représentation Morse officielle et sont ignorés avec un avertissement.",
     "faq.q5": "Mon texte ou mon code Morse est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Ce traducteur de code Morse fonctionne entièrement dans votre navigateur — rien de ce que vous tapez, collez ou lisez en audio n'est jamais envoyé, enregistré ou partagé avec un serveur. Aucune inscription n'est requise et il n'y a aucun suivi, vous pouvez donc traduire et vous entraîner au code Morse en toute confidentialité. Votre dernière saisie est enregistrée uniquement dans le stockage local de ce navigateur afin d'être disponible à votre retour."
+    "faq.a5": "Non. Ce traducteur de code Morse fonctionne entièrement dans votre navigateur — rien de ce que vous tapez, collez ou lisez en audio n'est jamais envoyé, enregistré ou partagé avec un serveur. Aucune inscription n'est requise et il n'y a aucun suivi, vous pouvez donc traduire et vous entraîner au code Morse en toute confidentialité. Votre dernière saisie est enregistrée uniquement dans le stockage local de ce navigateur afin d'être disponible à votre retour.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -420,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এই মোর্স কোড কনভার্টার কোন কোন অক্ষর ও যতিচিহ্ন সমর্থন করে?",
     "faq.a4": "এই কনভার্টার সম্পূর্ণ আন্তর্জাতিক মোর্স কোড বর্ণমালা সমর্থন করে: সবগুলো ২৬টি অক্ষর A–Z, সংখ্যা 0–9, এবং সাধারণ যতিচিহ্ন যেমন দাঁড়ি, কমা, প্রশ্নবোধক চিহ্ন, অ্যাপোস্ট্রফি, বিস্ময়সূচক চিহ্ন, স্ল্যাশ, বন্ধনী, অ্যাম্পারস্যান্ড, কোলন, সেমিকোলন, সমান চিহ্ন, যোগ চিহ্ন, হাইফেন, আন্ডারস্কোর, উদ্ধৃতি চিহ্ন, ডলার চিহ্ন এবং @ চিহ্ন। অক্ষরে বড়হাতের-ছোটহাতের কোনো পার্থক্য নেই। এই তালিকার বাইরের অক্ষর, যেমন উচ্চারণ-চিহ্নযুক্ত অক্ষর, ইমোজি বা অ-ল্যাটিন লিপি, মোর্সে কোনো আনুষ্ঠানিক রূপ নেই এবং সতর্কবার্তাসহ বাদ দেওয়া হয়।",
     "faq.q5": "আমার টেক্সট বা মোর্স কোড কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই মোর্স কোড ট্রান্সলেটর সম্পূর্ণভাবে আপনার ব্রাউজারেই চলে — আপনি যা টাইপ করেন, পেস্ট করেন বা অডিও হিসেবে চালান তার কিছুই কখনো আপলোড, লগ বা কোনো সার্ভারের সাথে শেয়ার করা হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি সম্পূর্ণ গোপনীয়তার সাথে মোর্স কোড অনুবাদ ও অনুশীলন করতে পারেন। আপনার সর্বশেষ ইনপুট শুধু এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে ফিরে এলে সেটি পান।"
+    "faq.a5": "না। এই মোর্স কোড ট্রান্সলেটর সম্পূর্ণভাবে আপনার ব্রাউজারেই চলে — আপনি যা টাইপ করেন, পেস্ট করেন বা অডিও হিসেবে চালান তার কিছুই কখনো আপলোড, লগ বা কোনো সার্ভারের সাথে শেয়ার করা হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি সম্পূর্ণ গোপনীয়তার সাথে মোর্স কোড অনুবাদ ও অনুশীলন করতে পারেন। আপনার সর্বশেষ ইনপুট শুধু এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে ফিরে এলে সেটি পান।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -478,7 +513,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quais caracteres e sinais de pontuação este conversor de código Morse suporta?",
     "faq.a4": "Este conversor suporta o alfabeto Morse internacional completo: as 26 letras de A a Z, os dígitos de 0 a 9, e pontuações comuns, incluindo ponto final, vírgula, ponto de interrogação, apóstrofo, ponto de exclamação, barra, parênteses, e comercial, dois-pontos, ponto e vírgula, sinal de igual, sinal de mais, hífen, sublinhado, aspas, cifrão e arroba. As letras não diferenciam maiúsculas de minúsculas. Caracteres fora desse conjunto, como letras acentuadas, emojis ou escritas não latinas, não têm representação oficial em Morse e são ignorados com um aviso.",
     "faq.q5": "Meu texto ou código Morse é enviado a um servidor?",
-    "faq.a5": "Não. Este tradutor de código Morse funciona totalmente no seu navegador — nada do que você digita, cola ou reproduz como áudio é enviado, registrado ou compartilhado com um servidor. Não é preciso se cadastrar e não há rastreamento, então você pode traduzir e praticar código Morse com total privacidade. Sua última entrada é salva apenas no armazenamento local deste navegador, para estar lá quando você voltar."
+    "faq.a5": "Não. Este tradutor de código Morse funciona totalmente no seu navegador — nada do que você digita, cola ou reproduz como áudio é enviado, registrado ou compartilhado com um servidor. Não é preciso se cadastrar e não há rastreamento, então você pode traduzir e praticar código Morse com total privacidade. Sua última entrada é salva apenas no armazenamento local deste navegador, para estar lá quando você voltar.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -536,7 +576,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Какие символы и знаки препинания поддерживает этот конвертер кода Морзе?",
     "faq.a4": "Этот конвертер поддерживает полный международный алфавит азбуки Морзе: все 26 букв от A до Z, цифры от 0 до 9, а также распространённые знаки препинания — точку, запятую, вопросительный знак, апостроф, восклицательный знак, косую черту, скобки, амперсанд, двоеточие, точку с запятой, знак равенства, знак плюс, дефис, нижнее подчёркивание, кавычки, знак доллара и собаку (@). Регистр букв не имеет значения. Символы за пределами этого набора, такие как буквы с диакритикой, эмодзи или нелатинские алфавиты, не имеют официального представления в азбуке Морзе и пропускаются с предупреждением.",
     "faq.q5": "Отправляется ли мой текст или код Морзе на сервер?",
-    "faq.a5": "Нет. Этот переводчик азбуки Морзе работает полностью в вашем браузере — ничего из того, что вы вводите, вставляете или воспроизводите как звук, никогда не отправляется, не логируется и не передаётся на сервер. Регистрация не требуется, отслеживания нет, поэтому вы можете переводить и практиковать азбуку Морзе в полной приватности. Ваш последний ввод сохраняется только в локальном хранилище этого браузера, чтобы быть под рукой при следующем визите."
+    "faq.a5": "Нет. Этот переводчик азбуки Морзе работает полностью в вашем браузере — ничего из того, что вы вводите, вставляете или воспроизводите как звук, никогда не отправляется, не логируется и не передаётся на сервер. Регистрация не требуется, отслеживания нет, поэтому вы можете переводить и практиковать азбуку Морзе в полной приватности. Ваш последний ввод сохраняется только в локальном хранилище этого браузера, чтобы быть под рукой при следующем визите.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -594,7 +639,12 @@ window.I18N_LOCALES = {
     "faq.q4": "یہ مورس کوڈ کنورٹر کن حروف اور رموزِ اوقاف کو سپورٹ کرتا ہے؟",
     "faq.a4": "یہ کنورٹر مکمل بین الاقوامی مورس کوڈ حروفِ تہجی سپورٹ کرتا ہے: تمام 26 حروف A–Z، ہندسے 0–9، اور عام رموزِ اوقاف جیسے فل اسٹاپ، کاما، سوالیہ نشان، اپاسٹروفی، فجائیہ نشان، سلیش، قوسین، اینڈ سائن، دو نقطے، سیمی کولن، مساوی نشان، جمع نشان، ہائفن، انڈر اسکور، حوالہ جاتی نشان، ڈالر نشان اور ایٹ (@) نشان۔ حروف میں بڑے یا چھوٹے ہونے کا فرق نہیں پڑتا۔ اس فہرست سے باہر کے حروف، جیسے تلفظی نشانات والے حروف، ایموجی یا غیر لاطینی رسم الخط، مورس میں کوئی سرکاری نمائندگی نہیں رکھتے اور انہیں انتباہ کے ساتھ نظر انداز کر دیا جاتا ہے۔",
     "faq.q5": "کیا میرا ٹیکسٹ یا مورس کوڈ کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ مورس کوڈ ٹرانسلیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو کچھ بھی ٹائپ، پیسٹ یا آڈیو کے طور پر چلاتے ہیں وہ کبھی اپ لوڈ، لاگ یا کسی سرور کے ساتھ شیئر نہیں ہوتا۔ نہ کوئی سائن اپ درکار ہے نہ کوئی ٹریکنگ، اس لیے آپ مکمل رازداری کے ساتھ مورس کوڈ کا ترجمہ اور مشق کر سکتے ہیں۔ آپ کا آخری ان پٹ صرف اسی براؤزر کے مقامی اسٹوریج میں محفوظ ہوتا ہے تاکہ واپسی پر وہ موجود ہو۔"
+    "faq.a5": "نہیں۔ یہ مورس کوڈ ٹرانسلیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو کچھ بھی ٹائپ، پیسٹ یا آڈیو کے طور پر چلاتے ہیں وہ کبھی اپ لوڈ، لاگ یا کسی سرور کے ساتھ شیئر نہیں ہوتا۔ نہ کوئی سائن اپ درکار ہے نہ کوئی ٹریکنگ، اس لیے آپ مکمل رازداری کے ساتھ مورس کوڈ کا ترجمہ اور مشق کر سکتے ہیں۔ آپ کا آخری ان پٹ صرف اسی براؤزر کے مقامی اسٹوریج میں محفوظ ہوتا ہے تاکہ واپسی پر وہ موجود ہو۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -652,7 +702,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Karakter dan tanda baca apa saja yang didukung konverter kode Morse ini?",
     "faq.a4": "Konverter ini mendukung alfabet kode Morse internasional lengkap: semua 26 huruf A–Z, angka 0–9, dan tanda baca umum termasuk titik, koma, tanda tanya, apostrof, tanda seru, garis miring, tanda kurung, tanda &, titik dua, titik koma, tanda sama dengan, tanda tambah, tanda hubung, garis bawah, tanda kutip, tanda dolar, dan tanda @. Huruf tidak membedakan besar-kecil. Karakter di luar kumpulan ini, seperti huruf beraksen, emoji, atau aksara non-Latin, tidak memiliki representasi Morse resmi dan akan dilewati disertai peringatan.",
     "faq.q5": "Apakah teks atau kode Morse saya dikirim ke server?",
-    "faq.a5": "Tidak. Penerjemah kode Morse ini berjalan sepenuhnya di browser Anda — tidak ada yang Anda ketik, tempel, atau putar sebagai audio yang pernah diunggah, dicatat, atau dibagikan ke server. Tidak perlu mendaftar dan tidak ada pelacakan, jadi Anda bisa menerjemahkan dan berlatih kode Morse dengan privasi penuh. Input terakhir Anda hanya disimpan di penyimpanan lokal browser ini agar tetap ada saat Anda kembali."
+    "faq.a5": "Tidak. Penerjemah kode Morse ini berjalan sepenuhnya di browser Anda — tidak ada yang Anda ketik, tempel, atau putar sebagai audio yang pernah diunggah, dicatat, atau dibagikan ke server. Tidak perlu mendaftar dan tidak ada pelacakan, jadi Anda bisa menerjemahkan dan berlatih kode Morse dengan privasi penuh. Input terakhir Anda hanya disimpan di penyimpanan lokal browser ini agar tetap ada saat Anda kembali.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -710,7 +765,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Welche Zeichen und Satzzeichen unterstützt dieser Morsecode-Konverter?",
     "faq.a4": "Dieser Konverter unterstützt das vollständige internationale Morsealphabet: alle 26 Buchstaben A–Z, die Ziffern 0–9 sowie gängige Satzzeichen wie Punkt, Komma, Fragezeichen, Apostroph, Ausrufezeichen, Schrägstrich, Klammern, Und-Zeichen, Doppelpunkt, Semikolon, Gleichheitszeichen, Pluszeichen, Bindestrich, Unterstrich, Anführungszeichen, Dollarzeichen und At-Zeichen. Groß- und Kleinschreibung spielt bei Buchstaben keine Rolle. Zeichen außerhalb dieses Umfangs, wie Buchstaben mit Akzenten, Emojis oder nicht-lateinische Schriften, haben keine offizielle Morsecode-Darstellung und werden mit einer Warnung übersprungen.",
     "faq.q5": "Werden mein Text oder mein Morsecode an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Morsecode-Übersetzer läuft vollständig in Ihrem Browser — nichts, was Sie eingeben, einfügen oder als Audio abspielen, wird jemals hochgeladen, protokolliert oder mit einem Server geteilt. Es ist keine Anmeldung nötig und es findet kein Tracking statt, sodass Sie Morsecode mit vollständiger Privatsphäre übersetzen und üben können. Ihre letzte Eingabe wird nur im lokalen Speicher dieses Browsers gespeichert, damit sie bei Ihrer Rückkehr noch da ist."
+    "faq.a5": "Nein. Dieser Morsecode-Übersetzer läuft vollständig in Ihrem Browser — nichts, was Sie eingeben, einfügen oder als Audio abspielen, wird jemals hochgeladen, protokolliert oder mit einem Server geteilt. Es ist keine Anmeldung nötig und es findet kein Tracking statt, sodass Sie Morsecode mit vollständiger Privatsphäre übersetzen und üben können. Ihre letzte Eingabe wird nur im lokalen Speicher dieses Browsers gespeichert, damit sie bei Ihrer Rückkehr noch da ist.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -768,7 +828,12 @@ window.I18N_LOCALES = {
     "faq.q4": "このモールス信号変換ツールはどの文字や記号に対応していますか?",
     "faq.a4": "この変換ツールは国際モールス信号アルファベットの全体に対応しています。A〜Zの26文字すべて、0〜9の数字、そしてピリオド、カンマ、疑問符、アポストロフィ、感嘆符、スラッシュ、括弧、アンパサンド、コロン、セミコロン、等号、プラス記号、ハイフン、アンダースコア、引用符、ドル記号、アットマークといった一般的な記号です。文字の大文字・小文字は区別されません。アクセント記号付きの文字、絵文字、非ラテン文字などこの範囲外の文字は、モールス信号として正式な表現がないため、警告とともにスキップされます。",
     "faq.q5": "入力したテキストやモールス信号はサーバーに送信されますか?",
-    "faq.a5": "いいえ。このモールス信号翻訳ツールはすべてブラウザ内で完結しており、入力・貼り付け・音声再生した内容がサーバーにアップロードされたり、記録されたり、共有されたりすることは一切ありません。登録も追跡も不要なので、完全なプライバシーの下でモールス信号の翻訳や練習ができます。最後に入力した内容はこのブラウザのローカルストレージにのみ保存され、次回訪れたときにそのまま残っています。"
+    "faq.a5": "いいえ。このモールス信号翻訳ツールはすべてブラウザ内で完結しており、入力・貼り付け・音声再生した内容がサーバーにアップロードされたり、記録されたり、共有されたりすることは一切ありません。登録も追跡も不要なので、完全なプライバシーの下でモールス信号の翻訳や練習ができます。最後に入力した内容はこのブラウザのローカルストレージにのみ保存され、次回訪れたときにそのまま残っています。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -826,6 +891,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 모스부호 변환기는 어떤 문자와 문장부호를 지원하나요?",
     "faq.a4": "이 변환기는 국제 모스부호 알파벳 전체를 지원합니다: A부터 Z까지 26개 문자, 0부터 9까지 숫자, 그리고 마침표, 쉼표, 물음표, 아포스트로피, 느낌표, 슬래시, 괄호, 앤드 기호(&), 콜론, 세미콜론, 등호, 더하기 기호, 하이픈, 밑줄, 따옴표, 달러 기호, 골뱅이(@) 같은 일반적인 문장부호입니다. 문자는 대소문자를 구분하지 않습니다. 악센트 부호가 있는 문자, 이모지, 비라틴 문자 등 이 범위를 벗어나는 문자는 공식 모스부호 표현이 없어 경고와 함께 건너뜁니다.",
     "faq.q5": "제 텍스트나 모스부호가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 모스부호 변환기는 전적으로 브라우저 안에서 실행됩니다 — 입력하거나 붙여넣거나 오디오로 재생한 내용은 서버로 업로드되거나 기록되거나 공유되지 않습니다. 회원가입도 추적도 필요 없으므로 완전한 프라이버시 속에서 모스부호를 변환하고 연습할 수 있습니다. 마지막으로 입력한 내용은 이 브라우저의 로컬 저장소에만 저장되어 다시 방문했을 때도 그대로 남아 있습니다."
+    "faq.a5": "아니요. 이 모스부호 변환기는 전적으로 브라우저 안에서 실행됩니다 — 입력하거나 붙여넣거나 오디오로 재생한 내용은 서버로 업로드되거나 기록되거나 공유되지 않습니다. 회원가입도 추적도 필요 없으므로 완전한 프라이버시 속에서 모스부호를 변환하고 연습할 수 있습니다. 마지막으로 입력한 내용은 이 브라우저의 로컬 저장소에만 저장되어 다시 방문했을 때도 그대로 남아 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

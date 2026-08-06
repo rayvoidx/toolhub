@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How often do leap years occur, and when is the next one?",
     "faq.a4": "Leap years occur about once every 4 years, but not exactly — the century rule removes 3 leap years every 400 years, so the true average is 97 leap years per 400 years rather than 100. This checker's \"Next & previous leap year\" panel reads your device's clock and always shows the correct next and previous leap year relative to today, so you don't need to count by hand.",
     "faq.q5": "Fun facts about people born on February 29 (leaplings)",
-    "faq.a5": "People born on February 29 are sometimes called \"leaplings\" or \"leap day babies,\" and the odds of any given birthday landing on that date are roughly 1 in 1,461. In years without a February 29, leaplings typically celebrate on February 28 or March 1, and which one is treated as the \"legal\" birthday for things like driving age can actually vary by country. Famous leaplings include figures from entertainment and sports, and some leapling communities hold real February 29 parties only once every four years."
+    "faq.a5": "People born on February 29 are sometimes called \"leaplings\" or \"leap day babies,\" and the odds of any given birthday landing on that date are roughly 1 in 1,461. In years without a February 29, leaplings typically celebrate on February 28 or March 1, and which one is treated as the \"legal\" birthday for things like driving age can actually vary by country. Famous leaplings include figures from entertainment and sports, and some leapling communities hold real February 29 parties only once every four years.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -121,7 +126,12 @@ window.I18N_LOCALES = {
     "faq.q4": "闰年多久出现一次？下一个闰年是什么时候？",
     "faq.a4": "闰年大约每 4 年出现一次，但并不精确——世纪年例外规则会在每 400 年中减少 3 个闰年，所以真实的平均值是每 400 年出现 97 个闰年，而不是 100 个。本工具的“下一个与上一个闰年”面板会读取你设备的当前日期，始终显示相对于今天最近的下一个和上一个闰年，无需手动计算。",
     "faq.q5": "关于2月29日出生的人（“闰日宝宝”）的趣闻",
-    "faq.a5": "出生在 2 月 29 日的人有时被称为“闰日宝宝”，任何一个生日恰好落在这一天的概率大约是 1/1461。在没有 2 月 29 日的年份里，闰日宝宝通常会在 2 月 28 日或 3 月 1 日庆祝生日，而在某些国家，哪一天才算“法定”生日（比如用于计算合法驾驶年龄）其实各不相同。一些名人也是闰日宝宝，还有一些闰日宝宝社群只在每四年真正的 2 月 29 日举办一次庆祝聚会。"
+    "faq.a5": "出生在 2 月 29 日的人有时被称为“闰日宝宝”，任何一个生日恰好落在这一天的概率大约是 1/1461。在没有 2 月 29 日的年份里，闰日宝宝通常会在 2 月 28 日或 3 月 1 日庆祝生日，而在某些国家，哪一天才算“法定”生日（比如用于计算合法驾驶年龄）其实各不相同。一些名人也是闰日宝宝，还有一些闰日宝宝社群只在每四年真正的 2 月 29 日举办一次庆祝聚会。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -179,7 +189,12 @@ window.I18N_LOCALES = {
     "faq.q4": "लीप वर्ष कितनी बार आते हैं, और अगला कब है?",
     "faq.a4": "लीप वर्ष लगभग हर 4 वर्ष में आते हैं, पर ठीक-ठीक नहीं — सदी नियम हर 400 वर्षों में से 3 लीप वर्ष हटा देता है, इसलिए वास्तविक औसत हर 400 वर्षों में 100 नहीं बल्कि 97 लीप वर्ष होता है। यह टूल का “अगला और पिछला लीप वर्ष” पैनल आपके डिवाइस की तारीख पढ़कर हमेशा आज के सापेक्ष सही अगला और पिछला लीप वर्ष दिखाता है, ताकि आपको हाथ से गिनने की ज़रूरत न पड़े।",
     "faq.q5": "29 फ़रवरी को जन्मे लोगों (“लीप बेबी”) के बारे में मज़ेदार तथ्य",
-    "faq.a5": "29 फ़रवरी को जन्मे लोगों को कभी-कभी “लीपलिंग” या “लीप डे बेबी” कहा जाता है, और किसी भी जन्मदिन के इसी तारीख़ पर पड़ने की संभावना लगभग 1,461 में 1 होती है। जिन वर्षों में 29 फ़रवरी नहीं होती, वहाँ ऐसे लोग आमतौर पर 28 फ़रवरी या 1 मार्च को जन्मदिन मनाते हैं, और ड्राइविंग की उम्र जैसी चीज़ों के लिए कौन-सी तारीख़ “कानूनी” जन्मदिन मानी जाए, यह देश के हिसाब से अलग-अलग हो सकता है। कुछ मशहूर हस्तियाँ भी लीप डे बेबी हैं, और कुछ समुदाय असली 29 फ़रवरी की पार्टी हर चार साल में एक बार ही मनाते हैं।"
+    "faq.a5": "29 फ़रवरी को जन्मे लोगों को कभी-कभी “लीपलिंग” या “लीप डे बेबी” कहा जाता है, और किसी भी जन्मदिन के इसी तारीख़ पर पड़ने की संभावना लगभग 1,461 में 1 होती है। जिन वर्षों में 29 फ़रवरी नहीं होती, वहाँ ऐसे लोग आमतौर पर 28 फ़रवरी या 1 मार्च को जन्मदिन मनाते हैं, और ड्राइविंग की उम्र जैसी चीज़ों के लिए कौन-सी तारीख़ “कानूनी” जन्मदिन मानी जाए, यह देश के हिसाब से अलग-अलग हो सकता है। कुछ मशहूर हस्तियाँ भी लीप डे बेबी हैं, और कुछ समुदाय असली 29 फ़रवरी की पार्टी हर चार साल में एक बार ही मनाते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -237,7 +252,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Con qué frecuencia ocurren los años bisiestos, y cuándo es el próximo?",
     "faq.a4": "Los años bisiestos ocurren aproximadamente cada 4 años, pero no exactamente: la regla del siglo elimina 3 años bisiestos cada 400 años, así que el promedio real es de 97 años bisiestos cada 400 años, no 100. El panel “Próximo y anterior año bisiesto” de esta herramienta lee la fecha de tu dispositivo y siempre muestra el año bisiesto correcto anterior y posterior a hoy, sin que tengas que contar a mano.",
     "faq.q5": "Datos curiosos sobre las personas nacidas el 29 de febrero",
-    "faq.a5": "A las personas nacidas el 29 de febrero a veces se las llama “leaplings” o “bebés del día bisiesto”, y la probabilidad de que un cumpleaños caiga en esa fecha es de aproximadamente 1 entre 1461. En los años sin 29 de febrero, suelen celebrar su cumpleaños el 28 de febrero o el 1 de marzo, y qué fecha se considera “legal” para cosas como la edad para conducir puede variar según el país. Entre los leaplings famosos hay personajes del mundo del espectáculo y el deporte, y algunas comunidades de nacidos en día bisiesto solo celebran una fiesta de verdadero 29 de febrero cada cuatro años."
+    "faq.a5": "A las personas nacidas el 29 de febrero a veces se las llama “leaplings” o “bebés del día bisiesto”, y la probabilidad de que un cumpleaños caiga en esa fecha es de aproximadamente 1 entre 1461. En los años sin 29 de febrero, suelen celebrar su cumpleaños el 28 de febrero o el 1 de marzo, y qué fecha se considera “legal” para cosas como la edad para conducir puede variar según el país. Entre los leaplings famosos hay personajes del mundo del espectáculo y el deporte, y algunas comunidades de nacidos en día bisiesto solo celebran una fiesta de verdadero 29 de febrero cada cuatro años.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -295,7 +315,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كم مرة تحدث السنوات الكبيسة، ومتى تأتي السنة الكبيسة القادمة؟",
     "faq.a4": "تحدث السنوات الكبيسة كل 4 سنوات تقريبًا، لكن ليس بدقة تامة — فقاعدة القرن تحذف 3 سنوات كبيسة من كل 400 سنة، لذا المعدل الحقيقي هو 97 سنة كبيسة كل 400 سنة وليس 100. لوحة “السنة الكبيسة القادمة والسابقة” في هذه الأداة تقرأ تاريخ جهازك وتعرض دائمًا السنة الكبيسة القادمة والسابقة الصحيحتين بالنسبة لليوم، دون الحاجة لحساب ذلك يدويًا.",
     "faq.q5": "حقائق طريفة عن مواليد 29 فبراير",
-    "faq.a5": "يُطلق أحيانًا على مواليد 29 فبراير اسم “أطفال السنة الكبيسة”، واحتمال أن يقع أي عيد ميلاد في هذا التاريخ هو تقريبًا 1 من كل 1,461. وفي السنوات التي لا تحتوي على 29 فبراير، يحتفل هؤلاء عادةً بعيد ميلادهم في 28 فبراير أو 1 مارس، وقد يختلف من دولة إلى أخرى أيّ تاريخ يُعتمد “قانونيًا” كعيد ميلاد لأمور مثل سن قيادة السيارة. ومن بين مواليد 29 فبراير المشهورين شخصيات من عالمَي الترفيه والرياضة، وبعض مجتمعات مواليد هذا اليوم لا يقيمون احتفالًا حقيقيًا بـ29 فبراير إلا مرة كل أربع سنوات."
+    "faq.a5": "يُطلق أحيانًا على مواليد 29 فبراير اسم “أطفال السنة الكبيسة”، واحتمال أن يقع أي عيد ميلاد في هذا التاريخ هو تقريبًا 1 من كل 1,461. وفي السنوات التي لا تحتوي على 29 فبراير، يحتفل هؤلاء عادةً بعيد ميلادهم في 28 فبراير أو 1 مارس، وقد يختلف من دولة إلى أخرى أيّ تاريخ يُعتمد “قانونيًا” كعيد ميلاد لأمور مثل سن قيادة السيارة. ومن بين مواليد 29 فبراير المشهورين شخصيات من عالمَي الترفيه والرياضة، وبعض مجتمعات مواليد هذا اليوم لا يقيمون احتفالًا حقيقيًا بـ29 فبراير إلا مرة كل أربع سنوات.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -353,7 +378,12 @@ window.I18N_LOCALES = {
     "faq.q4": "À quelle fréquence surviennent les années bissextiles, et quelle est la prochaine ?",
     "faq.a4": "Les années bissextiles surviennent environ tous les 4 ans, mais pas exactement — la règle du siècle en retire 3 tous les 400 ans, donc la moyenne réelle est de 97 années bissextiles tous les 400 ans, et non 100. Le panneau « Prochaine et précédente année bissextile » de cet outil lit la date de votre appareil et affiche toujours la bonne année bissextile suivante et précédente par rapport à aujourd'hui, sans que vous ayez à compter à la main.",
     "faq.q5": "Anecdotes sur les personnes nées un 29 février",
-    "faq.a5": "Les personnes nées le 29 février sont parfois appelées « leaplings » ou « bébés du jour bissextile », et la probabilité qu'un anniversaire tombe sur cette date est d'environ 1 sur 1 461. Les années sans 29 février, elles fêtent généralement leur anniversaire le 28 février ou le 1er mars, et la date considérée comme « légale » pour des questions comme l'âge du permis de conduire peut varier selon le pays. Plusieurs personnalités du monde du spectacle et du sport sont nées un 29 février, et certaines communautés de leaplings n'organisent une véritable fête du 29 février qu'une fois tous les quatre ans."
+    "faq.a5": "Les personnes nées le 29 février sont parfois appelées « leaplings » ou « bébés du jour bissextile », et la probabilité qu'un anniversaire tombe sur cette date est d'environ 1 sur 1 461. Les années sans 29 février, elles fêtent généralement leur anniversaire le 28 février ou le 1er mars, et la date considérée comme « légale » pour des questions comme l'âge du permis de conduire peut varier selon le pays. Plusieurs personnalités du monde du spectacle et du sport sont nées un 29 février, et certaines communautés de leaplings n'organisent une véritable fête du 29 février qu'une fois tous les quatre ans.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -411,7 +441,12 @@ window.I18N_LOCALES = {
     "faq.q4": "অধিবর্ষ কত ঘন ঘন আসে, এবং পরবর্তীটি কবে?",
     "faq.a4": "অধিবর্ষ প্রায় প্রতি ৪ বছরে একবার আসে, তবে ঠিক তা নয় — শতাব্দী নিয়ম প্রতি ৪০০ বছরে ৩টি অধিবর্ষ বাদ দেয়, তাই প্রকৃত গড় হলো প্রতি ৪০০ বছরে ১০০টি নয়, ৯৭টি অধিবর্ষ। এই টুলের “পরবর্তী ও আগের অধিবর্ষ” প্যানেল আপনার ডিভাইসের তারিখ পড়ে সবসময় আজকের সাপেক্ষে সঠিক পরবর্তী ও আগের অধিবর্ষ দেখায়, হাতে গোনার প্রয়োজন নেই।",
     "faq.q5": "২৯ ফেব্রুয়ারিতে জন্মানো মানুষদের সম্পর্কে মজার তথ্য",
-    "faq.a5": "২৯ ফেব্রুয়ারিতে জন্মানো মানুষদের কখনো কখনো “লিপলিং” বা “লিপ ডে বেবি” বলা হয়, এবং কোনো জন্মদিন ঠিক এই তারিখেই পড়ার সম্ভাবনা প্রায় ১,৪৬১-এর মধ্যে ১টি। যেসব বছরে ২৯ ফেব্রুয়ারি থাকে না, সেসব বছরে তারা সাধারণত ২৮ ফেব্রুয়ারি বা ১ মার্চ জন্মদিন পালন করেন, আর গাড়ি চালানোর বয়সের মতো বিষয়ে কোনটি “আইনি” জন্মদিন ধরা হবে তা দেশভেদে ভিন্ন হতে পারে। বিনোদন ও খেলাধুলা জগতের বেশ কিছু বিখ্যাত ব্যক্তিও লিপ ডে বেবি, আর কিছু কিছু সম্প্রদায় প্রতি চার বছরে মাত্র একবার আসল ২৯ ফেব্রুয়ারির পার্টি করে থাকে।"
+    "faq.a5": "২৯ ফেব্রুয়ারিতে জন্মানো মানুষদের কখনো কখনো “লিপলিং” বা “লিপ ডে বেবি” বলা হয়, এবং কোনো জন্মদিন ঠিক এই তারিখেই পড়ার সম্ভাবনা প্রায় ১,৪৬১-এর মধ্যে ১টি। যেসব বছরে ২৯ ফেব্রুয়ারি থাকে না, সেসব বছরে তারা সাধারণত ২৮ ফেব্রুয়ারি বা ১ মার্চ জন্মদিন পালন করেন, আর গাড়ি চালানোর বয়সের মতো বিষয়ে কোনটি “আইনি” জন্মদিন ধরা হবে তা দেশভেদে ভিন্ন হতে পারে। বিনোদন ও খেলাধুলা জগতের বেশ কিছু বিখ্যাত ব্যক্তিও লিপ ডে বেবি, আর কিছু কিছু সম্প্রদায় প্রতি চার বছরে মাত্র একবার আসল ২৯ ফেব্রুয়ারির পার্টি করে থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -469,7 +504,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Com que frequência os anos bissextos ocorrem, e quando é o próximo?",
     "faq.a4": "Anos bissextos ocorrem cerca de a cada 4 anos, mas não exatamente — a regra do século remove 3 anos bissextos a cada 400 anos, então a média real é de 97 anos bissextos a cada 400 anos, não 100. O painel “Próximo e anterior ano bissexto” desta ferramenta lê a data do seu dispositivo e sempre mostra o ano bissexto correto, anterior e posterior a hoje, sem que você precise contar manualmente.",
     "faq.q5": "Curiosidades sobre pessoas nascidas em 29 de fevereiro",
-    "faq.a5": "Pessoas nascidas em 29 de fevereiro às vezes são chamadas de “leaplings” ou “bebês do dia bissexto”, e a chance de um aniversário cair exatamente nessa data é de cerca de 1 em 1.461. Em anos sem 29 de fevereiro, elas costumam comemorar em 28 de fevereiro ou 1º de março, e qual data é considerada “oficial” para coisas como a idade mínima para dirigir pode variar de país para país. Vários famosos do entretenimento e do esporte também são leaplings, e algumas comunidades só fazem uma festa de verdadeiro 29 de fevereiro uma vez a cada quatro anos."
+    "faq.a5": "Pessoas nascidas em 29 de fevereiro às vezes são chamadas de “leaplings” ou “bebês do dia bissexto”, e a chance de um aniversário cair exatamente nessa data é de cerca de 1 em 1.461. Em anos sem 29 de fevereiro, elas costumam comemorar em 28 de fevereiro ou 1º de março, e qual data é considerada “oficial” para coisas como a idade mínima para dirigir pode variar de país para país. Vários famosos do entretenimento e do esporte também são leaplings, e algumas comunidades só fazem uma festa de verdadeiro 29 de fevereiro uma vez a cada quatro anos.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -527,7 +567,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как часто бывают високосные годы и когда следующий?",
     "faq.a4": "Високосные годы случаются примерно раз в 4 года, но не точно так — вековое правило убирает 3 високосных года из каждых 400 лет, поэтому реальное среднее значение — 97 високосных лет на 400 лет, а не 100. Панель «Следующий и предыдущий високосный год» в этом инструменте считывает дату вашего устройства и всегда показывает верный следующий и предыдущий високосный год относительно сегодняшнего дня — считать вручную не нужно.",
     "faq.q5": "Забавные факты о людях, родившихся 29 февраля",
-    "faq.a5": "Людей, родившихся 29 февраля, иногда называют «leaplings» или «детьми високосного дня», а вероятность того, что чей-то день рождения выпадет именно на эту дату, составляет примерно 1 к 1461. В годы без 29 февраля они обычно отмечают день рождения 28 февраля или 1 марта, а какая дата считается «официальной» для таких вещей, как возраст получения водительских прав, может отличаться в разных странах. Среди знаменитых leaplings есть звёзды шоу-бизнеса и спорта, а некоторые сообщества таких людей устраивают настоящий праздник 29 февраля лишь раз в четыре года."
+    "faq.a5": "Людей, родившихся 29 февраля, иногда называют «leaplings» или «детьми високосного дня», а вероятность того, что чей-то день рождения выпадет именно на эту дату, составляет примерно 1 к 1461. В годы без 29 февраля они обычно отмечают день рождения 28 февраля или 1 марта, а какая дата считается «официальной» для таких вещей, как возраст получения водительских прав, может отличаться в разных странах. Среди знаменитых leaplings есть звёзды шоу-бизнеса и спорта, а некоторые сообщества таких людей устраивают настоящий праздник 29 февраля лишь раз в четыре года.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -585,7 +630,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لیپ سال کتنی بار آتے ہیں، اور اگلا کب ہے؟",
     "faq.a4": "لیپ سال تقریباً ہر 4 سال بعد آتے ہیں، مگر بالکل نہیں — صدی کا اصول ہر 400 سالوں میں سے 3 لیپ سال ہٹا دیتا ہے، اس لیے حقیقی اوسط ہر 400 سالوں میں 100 نہیں بلکہ 97 لیپ سال ہے۔ اس ٹول کا “اگلا اور پچھلا لیپ سال” پینل آپ کے آلے کی تاریخ پڑھتا ہے اور ہمیشہ آج کے حساب سے درست اگلا اور پچھلا لیپ سال دکھاتا ہے، ہاتھ سے گننے کی ضرورت نہیں۔",
     "faq.q5": "29 فروری کو پیدا ہونے والوں (“لیپ بچوں”) کے بارے میں دلچسپ حقائق",
-    "faq.a5": "29 فروری کو پیدا ہونے والوں کو کبھی کبھار “لیپلنگ” یا “لیپ ڈے بے بی” کہا جاتا ہے، اور کسی بھی سالگرہ کے اسی تاریخ پر آنے کا امکان تقریباً 1,461 میں 1 ہوتا ہے۔ جن سالوں میں 29 فروری نہیں ہوتی، وہاں یہ لوگ عام طور پر 28 فروری یا یکم مارچ کو سالگرہ مناتے ہیں، اور ڈرائیونگ کی عمر جیسی چیزوں کے لیے کون سی تاریخ “قانونی” سالگرہ مانی جائے یہ ملک کے لحاظ سے مختلف ہو سکتا ہے۔ کچھ مشہور شخصیات بھی لیپ ڈے بے بی ہیں، اور کچھ کمیونٹیز صرف ہر چار سال بعد اصل 29 فروری کی پارٹی مناتی ہیں۔"
+    "faq.a5": "29 فروری کو پیدا ہونے والوں کو کبھی کبھار “لیپلنگ” یا “لیپ ڈے بے بی” کہا جاتا ہے، اور کسی بھی سالگرہ کے اسی تاریخ پر آنے کا امکان تقریباً 1,461 میں 1 ہوتا ہے۔ جن سالوں میں 29 فروری نہیں ہوتی، وہاں یہ لوگ عام طور پر 28 فروری یا یکم مارچ کو سالگرہ مناتے ہیں، اور ڈرائیونگ کی عمر جیسی چیزوں کے لیے کون سی تاریخ “قانونی” سالگرہ مانی جائے یہ ملک کے لحاظ سے مختلف ہو سکتا ہے۔ کچھ مشہور شخصیات بھی لیپ ڈے بے بی ہیں، اور کچھ کمیونٹیز صرف ہر چار سال بعد اصل 29 فروری کی پارٹی مناتی ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -643,7 +693,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Seberapa sering tahun kabisat terjadi, dan kapan yang berikutnya?",
     "faq.a4": "Tahun kabisat terjadi sekitar setiap 4 tahun, tetapi tidak persis — aturan abad menghilangkan 3 tahun kabisat setiap 400 tahun, sehingga rata-rata sebenarnya adalah 97 tahun kabisat per 400 tahun, bukan 100. Panel “Tahun kabisat berikutnya & sebelumnya” pada alat ini membaca tanggal perangkat Anda dan selalu menampilkan tahun kabisat berikutnya dan sebelumnya yang benar relatif terhadap hari ini, jadi Anda tidak perlu menghitung sendiri.",
     "faq.q5": "Fakta menarik tentang orang yang lahir pada 29 Februari",
-    "faq.a5": "Orang yang lahir pada 29 Februari terkadang disebut “leapling” atau “bayi hari kabisat”, dan peluang ulang tahun seseorang jatuh tepat pada tanggal itu sekitar 1 berbanding 1.461. Pada tahun tanpa 29 Februari, mereka biasanya merayakan ulang tahun pada 28 Februari atau 1 Maret, dan tanggal mana yang dianggap “resmi” untuk hal seperti usia mengemudi bisa berbeda antarnegara. Beberapa tokoh terkenal di dunia hiburan dan olahraga juga adalah leapling, dan beberapa komunitas leapling hanya mengadakan pesta 29 Februari yang sesungguhnya sekali setiap empat tahun."
+    "faq.a5": "Orang yang lahir pada 29 Februari terkadang disebut “leapling” atau “bayi hari kabisat”, dan peluang ulang tahun seseorang jatuh tepat pada tanggal itu sekitar 1 berbanding 1.461. Pada tahun tanpa 29 Februari, mereka biasanya merayakan ulang tahun pada 28 Februari atau 1 Maret, dan tanggal mana yang dianggap “resmi” untuk hal seperti usia mengemudi bisa berbeda antarnegara. Beberapa tokoh terkenal di dunia hiburan dan olahraga juga adalah leapling, dan beberapa komunitas leapling hanya mengadakan pesta 29 Februari yang sesungguhnya sekali setiap empat tahun.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -701,7 +756,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie oft treten Schaltjahre auf, und wann ist das nächste?",
     "faq.a4": "Schaltjahre treten etwa alle 4 Jahre auf, aber nicht exakt — die Jahrhundertregel entfernt 3 Schaltjahre pro 400 Jahre, sodass der tatsächliche Durchschnitt bei 97 Schaltjahren pro 400 Jahre liegt, nicht bei 100. Das Feld “Nächstes & vorheriges Schaltjahr” dieses Tools liest das Datum deines Geräts aus und zeigt immer das korrekte nächste und vorherige Schaltjahr relativ zu heute an, ganz ohne Kopfrechnen.",
     "faq.q5": "Kuriose Fakten über Menschen, die am 29. Februar geboren wurden",
-    "faq.a5": "Menschen, die am 29. Februar geboren wurden, werden manchmal “Leaplings” oder “Schalttagskinder” genannt, und die Wahrscheinlichkeit, dass ein Geburtstag genau auf dieses Datum fällt, liegt bei etwa 1 zu 1.461. In Jahren ohne 29. Februar feiern sie ihren Geburtstag meist am 28. Februar oder 1. März, und welches Datum für Dinge wie das Mindestalter für den Führerschein als “offiziell” gilt, kann von Land zu Land unterschiedlich sein. Zu den bekannten Leaplings zählen Persönlichkeiten aus Unterhaltung und Sport, und manche Leapling-Communitys feiern eine echte 29.-Februar-Party nur alle vier Jahre."
+    "faq.a5": "Menschen, die am 29. Februar geboren wurden, werden manchmal “Leaplings” oder “Schalttagskinder” genannt, und die Wahrscheinlichkeit, dass ein Geburtstag genau auf dieses Datum fällt, liegt bei etwa 1 zu 1.461. In Jahren ohne 29. Februar feiern sie ihren Geburtstag meist am 28. Februar oder 1. März, und welches Datum für Dinge wie das Mindestalter für den Führerschein als “offiziell” gilt, kann von Land zu Land unterschiedlich sein. Zu den bekannten Leaplings zählen Persönlichkeiten aus Unterhaltung und Sport, und manche Leapling-Communitys feiern eine echte 29.-Februar-Party nur alle vier Jahre.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -759,7 +819,12 @@ window.I18N_LOCALES = {
     "faq.q4": "うるう年はどのくらいの頻度で来ますか？次のうるう年はいつですか？",
     "faq.a4": "うるう年はおよそ4年に一度ですが、正確にはそうではありません。100年ルールにより400年ごとに3回分のうるう年が除かれるため、実際の平均は400年につき100回ではなく97回になります。このツールの「次と前のうるう年」欄は、お使いの端末の日付を読み取り、今日を基準にした正しい次・前のうるう年を常に表示するので、手計算の必要はありません。",
     "faq.q5": "2月29日生まれの人（うるう日ベビー）にまつわる豆知識",
-    "faq.a5": "2月29日生まれの人は「リープリング」や「うるう日ベビー」と呼ばれることがあり、誕生日がちょうどこの日にあたる確率はおよそ1,461分の1です。2月29日がない年には、通常2月28日または3月1日に誕生日を祝いますが、運転免許を取得できる年齢のように「法律上」どちらを誕生日とみなすかは国によって異なる場合があります。芸能界やスポーツ界にもうるう日生まれの著名人がおり、本物の2月29日パーティーを4年に一度しか開かないというコミュニティも存在します。"
+    "faq.a5": "2月29日生まれの人は「リープリング」や「うるう日ベビー」と呼ばれることがあり、誕生日がちょうどこの日にあたる確率はおよそ1,461分の1です。2月29日がない年には、通常2月28日または3月1日に誕生日を祝いますが、運転免許を取得できる年齢のように「法律上」どちらを誕生日とみなすかは国によって異なる場合があります。芸能界やスポーツ界にもうるう日生まれの著名人がおり、本物の2月29日パーティーを4年に一度しか開かないというコミュニティも存在します。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -817,6 +882,11 @@ window.I18N_LOCALES = {
     "faq.q4": "윤년은 얼마나 자주 오고, 다음 윤년은 언제인가요?",
     "faq.a4": "윤년은 대략 4년마다 한 번씩 오지만 정확히 그런 것은 아닙니다 — 세기 규칙이 400년마다 윤년 3개를 제외하므로, 실제 평균은 400년당 100개가 아니라 97개의 윤년입니다. 이 도구의 “다음·이전 윤년” 패널은 기기의 현재 날짜를 읽어 오늘을 기준으로 정확한 다음·이전 윤년을 항상 보여주므로 직접 계산할 필요가 없습니다.",
     "faq.q5": "2월 29일에 태어난 사람들(“윤년둥이”)에 관한 재미있는 사실",
-    "faq.a5": "2월 29일에 태어난 사람은 종종 “리플링(leapling)” 또는 “윤년둥이”라고 불리며, 생일이 정확히 이 날짜에 해당할 확률은 약 1,461분의 1입니다. 2월 29일이 없는 해에는 보통 2월 28일이나 3월 1일에 생일을 챙기며, 운전면허 취득 나이처럼 “법적” 생일로 어느 날짜를 인정할지는 나라마다 다를 수 있습니다. 연예계와 스포츠계에도 윤년둥이 유명인이 여럿 있으며, 일부 윤년둥이 커뮤니티는 진짜 2월 29일 파티를 4년에 한 번만 엽니다."
+    "faq.a5": "2월 29일에 태어난 사람은 종종 “리플링(leapling)” 또는 “윤년둥이”라고 불리며, 생일이 정확히 이 날짜에 해당할 확률은 약 1,461분의 1입니다. 2월 29일이 없는 해에는 보통 2월 28일이나 3월 1일에 생일을 챙기며, 운전면허 취득 나이처럼 “법적” 생일로 어느 날짜를 인정할지는 나라마다 다를 수 있습니다. 연예계와 스포츠계에도 윤년둥이 유명인이 여럿 있으며, 일부 윤년둥이 커뮤니티는 진짜 2월 29일 파티를 4년에 한 번만 엽니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

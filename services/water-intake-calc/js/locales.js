@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How much extra water do I need on workout days?",
     "faq.a4": "This water intake calculator adds a fixed activity allowance on top of the base amount: +0 mL for a mostly sedentary day, +350 mL for light-to-moderate exercise (1–3 times a week) and +700 mL for hard training or physical work (4+ times a week). On intense or hot days you may need more to replace sweat, so drink to thirst and check that your urine stays pale.",
     "faq.q5": "Is my weight sent to a server?",
-    "faq.a5": "No. This water intake calculator runs entirely in your browser — your weight and activity level are never uploaded to any server. Your last entry is saved only in your browser's localStorage so the form is ready next time, and you can clear it anytime."
+    "faq.a5": "No. This water intake calculator runs entirely in your browser — your weight and activity level are never uploaded to any server. Your last entry is saved only in your browser's localStorage so the form is ready next time, and you can clear it anytime.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -111,7 +116,12 @@ window.I18N_LOCALES = {
     "faq.q4": "运动日需要多喝多少水?",
     "faq.a4": "本计算器会在基础量之上加一个固定的活动补充:久坐为主的一天+0 mL,轻到中度运动(每周1~3次)+350 mL,高强度训练或体力劳动(每周4次以上)+700 mL。在剧烈运动或炎热的日子,你可能需要更多来补充出汗流失的水分,所以按口渴喝水,并留意尿液是否保持浅色。",
     "faq.q5": "我的体重会被发送到服务器吗?",
-    "faq.a5": "不会。本喝水量计算器完全在你的浏览器中运行——体重和活动量绝不会上传到任何服务器。你上次的输入仅保存在浏览器的localStorage中,方便下次填写,你可以随时清除。"
+    "faq.a5": "不会。本喝水量计算器完全在你的浏览器中运行——体重和活动量绝不会上传到任何服务器。你上次的输入仅保存在浏览器的localStorage中,方便下次填写,你可以随时清除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -159,7 +169,12 @@ window.I18N_LOCALES = {
     "faq.q4": "व्यायाम वाले दिन कितना अतिरिक्त पानी चाहिए?",
     "faq.a4": "यह कैलकुलेटर आधार मात्रा के ऊपर एक निश्चित गतिविधि भत्ता जोड़ता है: ज़्यादातर बैठे दिन के लिए +0 mL, हल्के-से-मध्यम व्यायाम (हफ़्ते में 1–3 बार) के लिए +350 mL, और कठोर प्रशिक्षण या शारीरिक श्रम (हफ़्ते में 4+ बार) के लिए +700 mL। तीव्र या गर्म दिनों में पसीने की भरपाई के लिए अधिक चाहिए, इसलिए प्यास के अनुसार पिएँ और देखें कि मूत्र हल्के रंग का रहे।",
     "faq.q5": "क्या मेरा वज़न सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपका वज़न और गतिविधि स्तर कभी किसी सर्वर पर अपलोड नहीं होते। आपकी पिछली प्रविष्टि केवल ब्राउज़र के localStorage में सहेजी जाती है ताकि अगली बार फ़ॉर्म तैयार रहे, और आप इसे कभी भी हटा सकते हैं।"
+    "faq.a5": "नहीं। यह कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपका वज़न और गतिविधि स्तर कभी किसी सर्वर पर अपलोड नहीं होते। आपकी पिछली प्रविष्टि केवल ब्राउज़र के localStorage में सहेजी जाती है ताकि अगली बार फ़ॉर्म तैयार रहे, और आप इसे कभी भी हटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -207,7 +222,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuánta agua extra necesito los días de ejercicio?",
     "faq.a4": "Esta calculadora añade una cantidad fija de actividad sobre la base: +0 mL para un día mayormente sedentario, +350 mL para ejercicio ligero-moderado (1–3 veces por semana) y +700 mL para entrenamiento intenso o trabajo físico (4+ veces por semana). En días intensos o calurosos puedes necesitar más para reponer el sudor, así que bebe según la sed y comprueba que tu orina se mantenga clara.",
     "faq.q5": "¿Se envía mi peso a un servidor?",
-    "faq.a5": "No. Esta calculadora de consumo de agua funciona por completo en tu navegador — tu peso y nivel de actividad nunca se suben a ningún servidor. Tu última entrada se guarda solo en el localStorage del navegador para tener el formulario listo la próxima vez, y puedes borrarla cuando quieras."
+    "faq.a5": "No. Esta calculadora de consumo de agua funciona por completo en tu navegador — tu peso y nivel de actividad nunca se suben a ningún servidor. Tu última entrada se guarda solo en el localStorage del navegador para tener el formulario listo la próxima vez, y puedes borrarla cuando quieras.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -255,7 +275,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كم ماءً إضافيًا أحتاج في أيام التمرين؟",
     "faq.a4": "تضيف هذه الحاسبة مقدارًا ثابتًا للنشاط فوق الكمية الأساسية: +0 mL ليوم جلوس غالبًا، +350 mL لتمرين خفيف إلى متوسط (1–3 مرات أسبوعيًا)، و+700 mL لتدريب شاق أو عمل بدني (4 مرات فأكثر أسبوعيًا). في الأيام الشاقة أو الحارة قد تحتاج أكثر لتعويض العرق، فاشرب حسب العطش وتأكد أن بولك يبقى فاتح اللون.",
     "faq.q5": "هل يُرسل وزني إلى خادم؟",
-    "faq.a5": "لا. تعمل هذه الحاسبة بالكامل داخل متصفحك — لا يُرفع وزنك ومستوى نشاطك إلى أي خادم أبدًا. يُحفظ إدخالك الأخير فقط في localStorage بالمتصفح ليكون النموذج جاهزًا في المرة القادمة، ويمكنك مسحه في أي وقت."
+    "faq.a5": "لا. تعمل هذه الحاسبة بالكامل داخل متصفحك — لا يُرفع وزنك ومستوى نشاطك إلى أي خادم أبدًا. يُحفظ إدخالك الأخير فقط في localStorage بالمتصفح ليكون النموذج جاهزًا في المرة القادمة، ويمكنك مسحه في أي وقت.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -303,7 +328,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Combien d'eau en plus les jours d'entraînement ?",
     "faq.a4": "Ce calculateur ajoute une allocation d'activité fixe au montant de base : +0 mL pour une journée surtout sédentaire, +350 mL pour un exercice léger à modéré (1–3 fois par semaine) et +700 mL pour un entraînement intense ou un travail physique (4+ fois par semaine). Les jours intenses ou chauds, il en faut plus pour compenser la transpiration : buvez selon la soif et vérifiez que vos urines restent claires.",
     "faq.q5": "Mon poids est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Ce calculateur fonctionne entièrement dans votre navigateur — votre poids et votre niveau d'activité ne sont jamais envoyés à un serveur. Votre dernière saisie est enregistrée uniquement dans le localStorage du navigateur pour préremplir le formulaire, et vous pouvez l'effacer à tout moment."
+    "faq.a5": "Non. Ce calculateur fonctionne entièrement dans votre navigateur — votre poids et votre niveau d'activité ne sont jamais envoyés à un serveur. Votre dernière saisie est enregistrée uniquement dans le localStorage du navigateur pour préremplir le formulaire, et vous pouvez l'effacer à tout moment.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -351,7 +381,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ব্যায়ামের দিনে কত বাড়তি পানি লাগে?",
     "faq.a4": "এই ক্যালকুলেটর মূল পরিমাণের ওপর একটি নির্দিষ্ট কার্যকলাপ ভাতা যোগ করে: বেশিরভাগ বসে থাকা দিনে +0 mL, হালকা-থেকে-মাঝারি ব্যায়ামে (সপ্তাহে 1–3 বার) +350 mL, এবং কঠোর প্রশিক্ষণ বা শারীরিক কাজে (সপ্তাহে 4+ বার) +700 mL। তীব্র বা গরম দিনে ঘাম পূরণে বেশি লাগতে পারে, তাই তৃষ্ণা অনুযায়ী পান করুন ও দেখুন প্রস্রাব হালকা রঙের থাকছে কি না।",
     "faq.q5": "আমার ওজন কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই ক্যালকুলেটর পুরোপুরি আপনার ব্রাউজারে চলে — আপনার ওজন ও কার্যকলাপের মাত্রা কখনো কোনো সার্ভারে আপলোড হয় না। আপনার শেষ এন্ট্রি কেবল ব্রাউজারের localStorage-এ থাকে যাতে পরের বার ফর্ম প্রস্তুত থাকে, এবং যেকোনো সময় মুছে ফেলতে পারেন।"
+    "faq.a5": "না। এই ক্যালকুলেটর পুরোপুরি আপনার ব্রাউজারে চলে — আপনার ওজন ও কার্যকলাপের মাত্রা কখনো কোনো সার্ভারে আপলোড হয় না। আপনার শেষ এন্ট্রি কেবল ব্রাউজারের localStorage-এ থাকে যাতে পরের বার ফর্ম প্রস্তুত থাকে, এবং যেকোনো সময় মুছে ফেলতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -399,7 +434,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quanta água extra preciso nos dias de treino?",
     "faq.a4": "Esta calculadora adiciona um acréscimo fixo de atividade sobre a base: +0 mL para um dia principalmente sedentário, +350 mL para exercício leve a moderado (1–3 vezes por semana) e +700 mL para treino pesado ou trabalho físico (4+ vezes por semana). Em dias intensos ou quentes, você pode precisar de mais para repor o suor, então beba conforme a sede e verifique se a urina permanece clara.",
     "faq.q5": "Meu peso é enviado a um servidor?",
-    "faq.a5": "Não. Esta calculadora roda inteiramente no seu navegador — seu peso e nível de atividade nunca são enviados a nenhum servidor. Sua última entrada fica salva apenas no localStorage do navegador para deixar o formulário pronto na próxima vez, e você pode apagá-la quando quiser."
+    "faq.a5": "Não. Esta calculadora roda inteiramente no seu navegador — seu peso e nível de atividade nunca são enviados a nenhum servidor. Sua última entrada fica salva apenas no localStorage do navegador para deixar o formulário pronto na próxima vez, e você pode apagá-la quando quiser.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -447,7 +487,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Сколько дополнительной воды нужно в дни тренировок?",
     "faq.a4": "Калькулятор добавляет фиксированную надбавку за активность к базовому объёму: +0 mL для преимущественно сидячего дня, +350 mL для лёгких-умеренных тренировок (1–3 раза в неделю) и +700 mL для тяжёлых тренировок или физического труда (4+ раза в неделю). В интенсивные или жаркие дни может понадобиться больше, чтобы восполнить пот, поэтому пейте по жажде и следите, чтобы моча оставалась светлой.",
     "faq.q5": "Отправляется ли мой вес на сервер?",
-    "faq.a5": "Нет. Этот калькулятор работает полностью в вашем браузере — вес и уровень активности никогда не загружаются на сервер. Последний ввод сохраняется только в localStorage браузера, чтобы форма была готова в следующий раз, и вы можете удалить его в любой момент."
+    "faq.a5": "Нет. Этот калькулятор работает полностью в вашем браузере — вес и уровень активности никогда не загружаются на сервер. Последний ввод сохраняется только в localStorage браузера, чтобы форма была готова в следующий раз, и вы можете удалить его в любой момент.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -495,7 +540,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ورزش والے دن کتنا اضافی پانی چاہیے؟",
     "faq.a4": "یہ کیلکولیٹر بنیادی مقدار کے اوپر ایک مقررہ سرگرمی رقم جوڑتا ہے: زیادہ تر بیٹھے دن کے لیے +0 mL، ہلکی سے درمیانی ورزش (ہفتے میں 1–3 بار) کے لیے +350 mL، اور سخت تربیت یا جسمانی کام (ہفتے میں 4+ بار) کے لیے +700 mL۔ شدید یا گرم دنوں میں پسینے کی تلافی کے لیے زیادہ درکار ہو سکتا ہے، اس لیے پیاس کے مطابق پئیں اور دیکھیں کہ پیشاب ہلکے رنگ کا رہے۔",
     "faq.q5": "کیا میرا وزن سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا وزن اور سرگرمی کی سطح کبھی کسی سرور پر اپ لوڈ نہیں ہوتی۔ آپ کا آخری اندراج صرف براؤزر کے localStorage میں محفوظ ہوتا ہے تاکہ اگلی بار فارم تیار ہو، اور آپ اسے کسی بھی وقت مٹا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا وزن اور سرگرمی کی سطح کبھی کسی سرور پر اپ لوڈ نہیں ہوتی۔ آپ کا آخری اندراج صرف براؤزر کے localStorage میں محفوظ ہوتا ہے تاکہ اگلی بار فارم تیار ہو، اور آپ اسے کسی بھی وقت مٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -543,7 +593,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Berapa air tambahan yang saya butuhkan di hari olahraga?",
     "faq.a4": "Kalkulator ini menambahkan jatah aktivitas tetap di atas jumlah dasar: +0 mL untuk hari yang kebanyakan duduk, +350 mL untuk olahraga ringan-sedang (1–3 kali seminggu), dan +700 mL untuk latihan berat atau kerja fisik (4+ kali seminggu). Pada hari yang berat atau panas, Anda mungkin butuh lebih untuk mengganti keringat, jadi minumlah sesuai rasa haus dan pastikan urine tetap berwarna terang.",
     "faq.q5": "Apakah berat badan saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator ini berjalan sepenuhnya di browser Anda — berat badan dan tingkat aktivitas tidak pernah diunggah ke server mana pun. Entri terakhir Anda hanya disimpan di localStorage browser agar formulir siap di kunjungan berikutnya, dan bisa Anda hapus kapan saja."
+    "faq.a5": "Tidak. Kalkulator ini berjalan sepenuhnya di browser Anda — berat badan dan tingkat aktivitas tidak pernah diunggah ke server mana pun. Entri terakhir Anda hanya disimpan di localStorage browser agar formulir siap di kunjungan berikutnya, dan bisa Anda hapus kapan saja.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -591,7 +646,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie viel zusätzliches Wasser brauche ich an Trainingstagen?",
     "faq.a4": "Dieser Rechner addiert einen festen Aktivitätszuschlag zur Grundmenge: +0 mL für einen überwiegend sitzenden Tag, +350 mL für leichten bis mäßigen Sport (1–3 Mal pro Woche) und +700 mL für hartes Training oder körperliche Arbeit (4+ Mal pro Woche). An intensiven oder heißen Tagen brauchst du mehr, um Schweiß auszugleichen — trinke nach Durst und achte darauf, dass dein Urin hell bleibt.",
     "faq.q5": "Werden meine Gewichtsdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Rechner läuft vollständig in deinem Browser — Gewicht und Aktivitätslevel werden nie auf einen Server hochgeladen. Deine letzte Eingabe wird nur im localStorage des Browsers gespeichert, damit das Formular beim nächsten Mal bereit ist, und du kannst sie jederzeit löschen."
+    "faq.a5": "Nein. Dieser Rechner läuft vollständig in deinem Browser — Gewicht und Aktivitätslevel werden nie auf einen Server hochgeladen. Deine letzte Eingabe wird nur im localStorage des Browsers gespeichert, damit das Formular beim nächsten Mal bereit ist, und du kannst sie jederzeit löschen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -639,7 +699,12 @@ window.I18N_LOCALES = {
     "faq.q4": "運動した日はどれくらい水を増やすべきですか?",
     "faq.a4": "この計算機は基本量に一定の活動量を上乗せします:ほぼ座位の日は+0 mL、軽〜中程度の運動(週1〜3回)は+350 mL、激しいトレーニングや肉体労働(週4回以上)は+700 mLです。激しい日や暑い日は発汗を補うためさらに必要になることがあるので、のどの渇きに応じて飲み、尿が薄い色を保つか確認しましょう。",
     "faq.q5": "入力した体重はサーバーに送信されますか?",
-    "faq.a5": "いいえ。この計算機はすべてブラウザ内で動作し、体重と活動量がサーバーに送信されることはありません。前回の入力は次回フォームをすぐ使えるようブラウザのlocalStorageにのみ保存され、いつでも削除できます。"
+    "faq.a5": "いいえ。この計算機はすべてブラウザ内で動作し、体重と活動量がサーバーに送信されることはありません。前回の入力は次回フォームをすぐ使えるようブラウザのlocalStorageにのみ保存され、いつでも削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -687,6 +752,11 @@ window.I18N_LOCALES = {
     "faq.q4": "운동한 날에는 물을 얼마나 더 마셔야 하나요?",
     "faq.a4": "이 계산기는 기본량에 고정된 활동 보정을 더합니다: 주로 앉아 있는 날은 +0 mL, 가벼운~보통 운동(주 1~3회)은 +350 mL, 고강도 운동이나 육체노동(주 4회 이상)은 +700 mL입니다. 격렬하거나 더운 날에는 땀으로 잃은 만큼 더 필요할 수 있으니 갈증에 따라 마시고 소변이 옅은 색을 유지하는지 확인하세요.",
     "faq.q5": "입력한 몸무게가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 물 섭취량 계산기는 전부 브라우저 안에서 동작하며 몸무게와 활동량은 어떤 서버로도 전송되지 않습니다. 마지막 입력값은 다음 방문 때 양식을 바로 쓸 수 있도록 브라우저 localStorage에만 저장되며 언제든 삭제할 수 있습니다."
+    "faq.a5": "아니요. 이 물 섭취량 계산기는 전부 브라우저 안에서 동작하며 몸무게와 활동량은 어떤 서버로도 전송되지 않습니다. 마지막 입력값은 다음 방문 때 양식을 바로 쓸 수 있도록 브라우저 localStorage에만 저장되며 언제든 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

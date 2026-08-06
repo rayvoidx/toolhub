@@ -61,7 +61,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I see only the lines that were duplicates, instead of the deduplicated list?",
     "faq.a4": "Yes. Turn on \"Show only the duplicate lines\" to flip the output from the cleaned, unique list to a report of just the values that appeared more than once — each one listed a single time. This is useful when you want to audit what was repeated in a list, like finding which email addresses or SKUs show up twice, rather than just getting a cleaned copy. The unique-count and removed-count stats above the result stay accurate either way.",
     "faq.q5": "Is my pasted list uploaded to a server?",
-    "faq.a5": "No. This tool runs entirely in your browser using plain JavaScript — the list you paste, the options you choose, and the result are never sent to a server or logged anywhere. Your last input and settings are optionally kept in this browser's local storage only, so they're still there next time you open the tool; clearing your browser data removes them. There's no sign-up, no upload, and no size limit beyond what your own device can comfortably handle."
+    "faq.a5": "No. This tool runs entirely in your browser using plain JavaScript — the list you paste, the options you choose, and the result are never sent to a server or logged anywhere. Your last input and settings are optionally kept in this browser's local storage only, so they're still there next time you open the tool; clearing your browser data removes them. There's no sign-up, no upload, and no size limit beyond what your own device can comfortably handle.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -107,7 +112,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我能只看重复的行，而不是去重后的列表吗？",
     "faq.a4": "可以。打开“仅显示重复的行”后，输出会从去重后的唯一列表切换为仅列出出现过不止一次的值的报告，每个值只列出一次。当你想审查列表中哪些内容被重复了（比如找出哪些邮箱或商品编号出现了两次），而不只是想要一份干净的副本时，这个功能很有用。无论切换与否，结果上方的唯一行数/已删除数统计始终准确。",
     "faq.q5": "我粘贴的列表会被上传到服务器吗？",
-    "faq.a5": "不会。这个工具完全使用纯 JavaScript 在你的浏览器中运行——你粘贴的列表、选择的选项以及结果都不会被发送到服务器或记录在任何地方。你上次输入的内容和设置可以选择性地仅保存在此浏览器的本地存储中，方便你下次打开工具时依然存在；清除浏览器数据即可删除它们。无需注册、无需上传，除了你设备本身能舒适处理的规模外，没有其他大小限制。"
+    "faq.a5": "不会。这个工具完全使用纯 JavaScript 在你的浏览器中运行——你粘贴的列表、选择的选项以及结果都不会被发送到服务器或记录在任何地方。你上次输入的内容和设置可以选择性地仅保存在此浏览器的本地存储中，方便你下次打开工具时依然存在；清除浏览器数据即可删除它们。无需注册、无需上传，除了你设备本身能舒适处理的规模外，没有其他大小限制。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -153,7 +163,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मैं डिड्यूप की गई सूची की बजाय केवल डुप्लिकेट रही लाइनें देख सकता हूँ?",
     "faq.a4": "हाँ। \"सिर्फ़ डुप्लिकेट लाइनें दिखाएँ\" चालू करने पर आउटपुट साफ़ की गई यूनीक सूची की जगह सिर्फ़ उन मानों की एक छोटी रिपोर्ट दिखाता है जो एक से ज़्यादा बार आए थे, हर एक को सिर्फ़ एक बार सूचीबद्ध करके। यह तब उपयोगी है जब आप यह जाँचना चाहते हैं कि सूची में क्या दोहराया गया — जैसे यह पता लगाना कि कौन-से ईमेल पते या SKU दो बार दिखे — बजाय सिर्फ़ एक साफ़ प्रति पाने के। परिणाम के ऊपर दिखने वाले यूनीक-गिनती और हटाए-गए-गिनती के आँकड़े हर हाल में सटीक रहते हैं।",
     "faq.q5": "क्या मेरी पेस्ट की गई सूची सर्वर पर अपलोड होती है?",
-    "faq.a5": "नहीं। यह टूल पूरी तरह से सामान्य JavaScript का उपयोग करके आपके ब्राउज़र में चलता है — आपके द्वारा पेस्ट की गई सूची, चुने गए विकल्प और परिणाम कभी भी सर्वर पर नहीं भेजे जाते या कहीं दर्ज नहीं किए जाते। आपका पिछला इनपुट और सेटिंग्स वैकल्पिक रूप से सिर्फ़ इस ब्राउज़र के लोकल स्टोरेज में रखी जा सकती हैं, ताकि अगली बार टूल खोलने पर वे मौजूद रहें; ब्राउज़र डेटा साफ़ करने पर वे हट जाती हैं। न कोई साइन-अप है, न अपलोड, और आपके अपने डिवाइस की क्षमता के अलावा कोई आकार सीमा नहीं है।"
+    "faq.a5": "नहीं। यह टूल पूरी तरह से सामान्य JavaScript का उपयोग करके आपके ब्राउज़र में चलता है — आपके द्वारा पेस्ट की गई सूची, चुने गए विकल्प और परिणाम कभी भी सर्वर पर नहीं भेजे जाते या कहीं दर्ज नहीं किए जाते। आपका पिछला इनपुट और सेटिंग्स वैकल्पिक रूप से सिर्फ़ इस ब्राउज़र के लोकल स्टोरेज में रखी जा सकती हैं, ताकि अगली बार टूल खोलने पर वे मौजूद रहें; ब्राउज़र डेटा साफ़ करने पर वे हट जाती हैं। न कोई साइन-अप है, न अपलोड, और आपके अपने डिवाइस की क्षमता के अलावा कोई आकार सीमा नहीं है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -199,7 +214,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo ver solo las líneas que eran duplicadas, en lugar de la lista depurada?",
     "faq.a4": "Sí. Activa \"Mostrar solo las líneas duplicadas\" para que el resultado pase de la lista depurada y única a un informe con solo los valores que aparecieron más de una vez, cada uno listado una sola vez. Es útil cuando quieres auditar qué se repitió en una lista —por ejemplo, averiguar qué direcciones de correo o referencias aparecen dos veces— en lugar de obtener solo una copia limpia. Las estadísticas de líneas únicas y duplicados eliminados que aparecen sobre el resultado se mantienen precisas en ambos casos.",
     "faq.q5": "¿Se sube mi lista pegada a un servidor?",
-    "faq.a5": "No. Esta herramienta funciona por completo en tu navegador con JavaScript sencillo: la lista que pegas, las opciones que eliges y el resultado nunca se envían a un servidor ni se registran en ningún sitio. Tu última entrada y tus ajustes se guardan, de forma opcional, solo en el almacenamiento local de este navegador, así siguen ahí la próxima vez que abras la herramienta; al borrar los datos del navegador se eliminan. No hay registro, no hay subida de archivos y no hay más límite de tamaño que el que tu propio dispositivo pueda manejar cómodamente."
+    "faq.a5": "No. Esta herramienta funciona por completo en tu navegador con JavaScript sencillo: la lista que pegas, las opciones que eliges y el resultado nunca se envían a un servidor ni se registran en ningún sitio. Tu última entrada y tus ajustes se guardan, de forma opcional, solo en el almacenamiento local de este navegador, así siguen ahí la próxima vez que abras la herramienta; al borrar los datos del navegador se eliminan. No hay registro, no hay subida de archivos y no hay más límite de tamaño que el que tu propio dispositivo pueda manejar cómodamente.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -245,7 +265,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني رؤية الأسطر المكررة فقط بدلاً من القائمة بعد إزالة التكرار؟",
     "faq.a4": "نعم. فعّل \"عرض الأسطر المكررة فقط\" لتحويل الناتج من القائمة النظيفة والفريدة إلى تقرير يضم فقط القيم التي ظهرت أكثر من مرة، مع إدراج كل منها مرة واحدة فقط. هذا مفيد عندما تريد مراجعة ما تكرر في القائمة — مثل معرفة عناوين البريد الإلكتروني أو رموز المنتجات التي ظهرت مرتين — بدلاً من الحصول على نسخة نظيفة فقط. تظل إحصاءات عدد الأسطر الفريدة وعدد التكرارات المُزالة أعلى النتيجة دقيقة في الحالتين.",
     "faq.q5": "هل تُرفع قائمتي الملصوقة إلى خادم؟",
-    "faq.a5": "لا. تعمل هذه الأداة بالكامل داخل متصفحك باستخدام جافاسكريبت عادية — لا تُرسل القائمة التي تلصقها ولا الخيارات التي تختارها ولا النتيجة إلى أي خادم ولا تُسجَّل في أي مكان. يمكن الاحتفاظ باختيارك الأخير وإعداداتك اختياريًا في وحدة التخزين المحلية لهذا المتصفح فقط، لتبقى موجودة في المرة القادمة التي تفتح فيها الأداة؛ ومسح بيانات المتصفح يزيلها. لا يوجد تسجيل ولا رفع ملفات ولا حد لحجم القائمة سوى ما يستطيع جهازك التعامل معه بارتياح."
+    "faq.a5": "لا. تعمل هذه الأداة بالكامل داخل متصفحك باستخدام جافاسكريبت عادية — لا تُرسل القائمة التي تلصقها ولا الخيارات التي تختارها ولا النتيجة إلى أي خادم ولا تُسجَّل في أي مكان. يمكن الاحتفاظ باختيارك الأخير وإعداداتك اختياريًا في وحدة التخزين المحلية لهذا المتصفح فقط، لتبقى موجودة في المرة القادمة التي تفتح فيها الأداة؛ ومسح بيانات المتصفح يزيلها. لا يوجد تسجيل ولا رفع ملفات ولا حد لحجم القائمة سوى ما يستطيع جهازك التعامل معه بارتياح.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -291,7 +316,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je voir uniquement les lignes qui étaient en double, plutôt que la liste dédupliquée ?",
     "faq.a4": "Oui. Activez « Afficher uniquement les lignes en double » pour que le résultat passe de la liste nettoyée et unique à un rapport ne listant que les valeurs apparues plus d'une fois, chacune une seule fois. C'est utile pour vérifier ce qui a été répété dans une liste — par exemple retrouver quelles adresses e-mail ou références apparaissent deux fois — plutôt que d'obtenir simplement une copie nettoyée. Les statistiques du nombre de lignes uniques et de doublons supprimés au-dessus du résultat restent exactes dans les deux cas.",
     "faq.q5": "Ma liste collée est-elle envoyée à un serveur ?",
-    "faq.a5": "Non. Cet outil fonctionne entièrement dans votre navigateur en JavaScript classique — la liste que vous collez, les options choisies et le résultat ne sont jamais envoyés à un serveur ni enregistrés où que ce soit. Votre dernière saisie et vos réglages sont éventuellement conservés uniquement dans le stockage local de ce navigateur, afin qu'ils soient toujours là la prochaine fois que vous ouvrez l'outil ; effacer les données du navigateur les supprime. Pas d'inscription, pas d'envoi de fichier, et aucune limite de taille au-delà de ce que votre propre appareil peut gérer confortablement."
+    "faq.a5": "Non. Cet outil fonctionne entièrement dans votre navigateur en JavaScript classique — la liste que vous collez, les options choisies et le résultat ne sont jamais envoyés à un serveur ni enregistrés où que ce soit. Votre dernière saisie et vos réglages sont éventuellement conservés uniquement dans le stockage local de ce navigateur, afin qu'ils soient toujours là la prochaine fois que vous ouvrez l'outil ; effacer les données du navigateur les supprime. Pas d'inscription, pas d'envoi de fichier, et aucune limite de taille au-delà de ce que votre propre appareil peut gérer confortablement.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -337,7 +367,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ডিডুপ করা তালিকার বদলে কি আমি শুধু ডুপ্লিকেট থাকা লাইনগুলো দেখতে পারি?",
     "faq.a4": "হ্যাঁ। \"শুধু ডুপ্লিকেট লাইন দেখান\" চালু করলে আউটপুট পরিষ্কার, ইউনিক তালিকার বদলে শুধু একাধিকবার এসেছে এমন মানগুলোর একটি সংক্ষিপ্ত রিপোর্টে পরিণত হয়, প্রতিটি একবার করে তালিকাভুক্ত হয়। শুধু একটি পরিষ্কার কপি পাওয়ার বদলে তালিকায় কী পুনরাবৃত্তি হয়েছে তা যাচাই করতে চাইলে — যেমন কোন ইমেইল ঠিকানা বা SKU দুবার এসেছে তা খুঁজে বের করতে — এটি কাজে লাগে। ফলাফলের ওপরে ইউনিক-সংখ্যা ও অপসারিত-সংখ্যার পরিসংখ্যান উভয় ক্ষেত্রেই সঠিক থাকে।",
     "faq.q5": "আমার পেস্ট করা তালিকা কি সার্ভারে আপলোড হয়?",
-    "faq.a5": "না। এই টুলটি সম্পূর্ণভাবে সাধারণ জাভাস্ক্রিপ্ট ব্যবহার করে আপনার ব্রাউজারে চলে — আপনি যে তালিকা পেস্ট করেন, যে অপশন বেছে নেন এবং ফলাফল কখনও সার্ভারে পাঠানো হয় না বা কোথাও লগ করা হয় না। আপনার সর্বশেষ ইনপুট ও সেটিংস ঐচ্ছিকভাবে শুধু এই ব্রাউজারের লোকাল স্টোরেজে রাখা হতে পারে, যাতে পরের বার টুলটি খুললে সেগুলো থেকে যায়; ব্রাউজার ডেটা মুছে ফেললে সেগুলোও মুছে যায়। কোনো সাইন-আপ নেই, আপলোড নেই, এবং আপনার নিজের ডিভাইস স্বচ্ছন্দে সামলাতে পারে তার বাইরে কোনো আকার সীমা নেই।"
+    "faq.a5": "না। এই টুলটি সম্পূর্ণভাবে সাধারণ জাভাস্ক্রিপ্ট ব্যবহার করে আপনার ব্রাউজারে চলে — আপনি যে তালিকা পেস্ট করেন, যে অপশন বেছে নেন এবং ফলাফল কখনও সার্ভারে পাঠানো হয় না বা কোথাও লগ করা হয় না। আপনার সর্বশেষ ইনপুট ও সেটিংস ঐচ্ছিকভাবে শুধু এই ব্রাউজারের লোকাল স্টোরেজে রাখা হতে পারে, যাতে পরের বার টুলটি খুললে সেগুলো থেকে যায়; ব্রাউজার ডেটা মুছে ফেললে সেগুলোও মুছে যায়। কোনো সাইন-আপ নেই, আপলোড নেই, এবং আপনার নিজের ডিভাইস স্বচ্ছন্দে সামলাতে পারে তার বাইরে কোনো আকার সীমা নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -383,7 +418,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Posso ver apenas as linhas que eram duplicatas, em vez da lista sem duplicatas?",
     "faq.a4": "Sim. Ative \"Mostrar apenas as linhas duplicadas\" para que o resultado passe da lista limpa e única para um relatório com apenas os valores que apareceram mais de uma vez, cada um listado uma única vez. Isso é útil quando você quer auditar o que foi repetido em uma lista — como descobrir quais e-mails ou códigos de produto aparecem duas vezes — em vez de apenas obter uma cópia limpa. As estatísticas de linhas únicas e duplicatas removidas acima do resultado continuam precisas nos dois casos.",
     "faq.q5": "Minha lista colada é enviada para um servidor?",
-    "faq.a5": "Não. Esta ferramenta funciona inteiramente no seu navegador usando JavaScript simples — a lista que você cola, as opções que escolhe e o resultado nunca são enviados a um servidor nem registrados em lugar nenhum. Sua última entrada e configurações podem, opcionalmente, ficar guardadas apenas no armazenamento local deste navegador, para que continuem lá na próxima vez que você abrir a ferramenta; limpar os dados do navegador as remove. Não há cadastro, não há upload e não há limite de tamanho além do que o seu próprio dispositivo conseguir processar com folga."
+    "faq.a5": "Não. Esta ferramenta funciona inteiramente no seu navegador usando JavaScript simples — a lista que você cola, as opções que escolhe e o resultado nunca são enviados a um servidor nem registrados em lugar nenhum. Sua última entrada e configurações podem, opcionalmente, ficar guardadas apenas no armazenamento local deste navegador, para que continuem lá na próxima vez que você abrir a ferramenta; limpar os dados do navegador as remove. Não há cadastro, não há upload e não há limite de tamanho além do que o seu próprio dispositivo conseguir processar com folga.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -429,7 +469,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Могу ли я увидеть только повторяющиеся строки, а не список после дедупликации?",
     "faq.a4": "Да. Включите «Показать только повторяющиеся строки», чтобы результат превратился из очищенного уникального списка в короткий отчёт только со значениями, которые встретились более одного раза, каждое из которых указано один раз. Это полезно, когда нужно проверить, что именно повторялось в списке — например, найти, какие email-адреса или артикулы встречаются дважды, — а не просто получить очищенную копию. Статистика уникальных строк и удалённых дублей над результатом остаётся точной в обоих режимах.",
     "faq.q5": "Отправляется ли мой вставленный список на сервер?",
-    "faq.a5": "Нет. Этот инструмент полностью работает в вашем браузере на обычном JavaScript — список, который вы вставляете, выбранные параметры и результат никогда не отправляются на сервер и нигде не журналируются. Последний введённый текст и настройки могут по желанию сохраняться только в локальном хранилище этого браузера, чтобы быть на месте при следующем открытии инструмента; очистка данных браузера удаляет их. Регистрация не требуется, загрузка файлов не производится, а ограничение по размеру определяется только возможностями вашего устройства."
+    "faq.a5": "Нет. Этот инструмент полностью работает в вашем браузере на обычном JavaScript — список, который вы вставляете, выбранные параметры и результат никогда не отправляются на сервер и нигде не журналируются. Последний введённый текст и настройки могут по желанию сохраняться только в локальном хранилище этого браузера, чтобы быть на месте при следующем открытии инструмента; очистка данных браузера удаляет их. Регистрация не требуется, загрузка файлов не производится, а ограничение по размеру определяется только возможностями вашего устройства.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -475,7 +520,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میں ڈی ڈپلیکیٹ شدہ فہرست کی بجائے صرف ڈپلیکیٹ لائنیں دیکھ سکتا ہوں؟",
     "faq.a4": "جی ہاں۔ \"صرف ڈپلیکیٹ لائنیں دکھائیں\" آن کرنے پر آؤٹ پٹ صاف، منفرد فہرست کی بجائے صرف ان اقدار کی مختصر رپورٹ بن جاتا ہے جو ایک سے زیادہ بار آئیں، ہر ایک کو صرف ایک بار درج کیا جاتا ہے۔ یہ اس وقت مفید ہے جب آپ صرف صاف کاپی حاصل کرنے کی بجائے یہ جانچنا چاہتے ہیں کہ فہرست میں کیا دہرایا گیا — جیسے یہ معلوم کرنا کہ کون سے ای میل پتے یا SKU دو بار آئے۔ نتیجے کے اوپر منفرد اور حذف شدہ لائنوں کے اعداد و شمار دونوں صورتوں میں درست رہتے ہیں۔",
     "faq.q5": "کیا میری پیسٹ کردہ فہرست سرور پر اپ لوڈ ہوتی ہے؟",
-    "faq.a5": "نہیں۔ یہ ٹول مکمل طور پر عام جاوا اسکرپٹ استعمال کرتے ہوئے آپ کے براؤزر میں چلتا ہے — آپ کی پیسٹ کردہ فہرست، منتخب کردہ آپشنز اور نتیجہ کبھی بھی سرور پر نہیں بھیجے جاتے اور نہ ہی کہیں محفوظ کیے جاتے ہیں۔ آپ کا آخری ان پٹ اور ترتیبات اختیاری طور پر صرف اسی براؤزر کے لوکل اسٹوریج میں رکھی جا سکتی ہیں، تاکہ اگلی بار ٹول کھولنے پر وہ موجود ہوں؛ براؤزر ڈیٹا صاف کرنے سے وہ ہٹ جاتی ہیں۔ نہ کوئی سائن اپ ہے، نہ اپ لوڈ، اور آپ کے اپنے ڈیوائس کی گنجائش کے سوا کوئی سائز کی حد نہیں۔"
+    "faq.a5": "نہیں۔ یہ ٹول مکمل طور پر عام جاوا اسکرپٹ استعمال کرتے ہوئے آپ کے براؤزر میں چلتا ہے — آپ کی پیسٹ کردہ فہرست، منتخب کردہ آپشنز اور نتیجہ کبھی بھی سرور پر نہیں بھیجے جاتے اور نہ ہی کہیں محفوظ کیے جاتے ہیں۔ آپ کا آخری ان پٹ اور ترتیبات اختیاری طور پر صرف اسی براؤزر کے لوکل اسٹوریج میں رکھی جا سکتی ہیں، تاکہ اگلی بار ٹول کھولنے پر وہ موجود ہوں؛ براؤزر ڈیٹا صاف کرنے سے وہ ہٹ جاتی ہیں۔ نہ کوئی سائن اپ ہے، نہ اپ لوڈ، اور آپ کے اپنے ڈیوائس کی گنجائش کے سوا کوئی سائز کی حد نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -521,7 +571,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah saya melihat hanya baris yang duplikat, bukan daftar yang sudah dideduplikasi?",
     "faq.a4": "Bisa. Aktifkan \"Tampilkan hanya baris duplikat\" agar hasilnya berubah dari daftar unik yang bersih menjadi laporan berisi hanya nilai yang muncul lebih dari sekali, masing-masing dicantumkan satu kali. Ini berguna saat Anda ingin memeriksa apa yang berulang dalam daftar — misalnya menemukan alamat email atau SKU mana yang muncul dua kali — alih-alih hanya mendapatkan salinan yang bersih. Statistik jumlah baris unik dan duplikat yang dihapus di atas hasil tetap akurat dalam kedua mode.",
     "faq.q5": "Apakah daftar yang saya tempel diunggah ke server?",
-    "faq.a5": "Tidak. Alat ini berjalan sepenuhnya di browser Anda menggunakan JavaScript biasa — daftar yang Anda tempel, opsi yang Anda pilih, dan hasilnya tidak pernah dikirim ke server atau dicatat di mana pun. Input dan pengaturan terakhir Anda secara opsional hanya disimpan di penyimpanan lokal browser ini, sehingga tetap ada saat Anda membuka alat ini lagi; menghapus data browser akan menghapusnya. Tidak ada pendaftaran, tidak ada unggahan, dan tidak ada batas ukuran selain yang dapat ditangani perangkat Anda sendiri dengan nyaman."
+    "faq.a5": "Tidak. Alat ini berjalan sepenuhnya di browser Anda menggunakan JavaScript biasa — daftar yang Anda tempel, opsi yang Anda pilih, dan hasilnya tidak pernah dikirim ke server atau dicatat di mana pun. Input dan pengaturan terakhir Anda secara opsional hanya disimpan di penyimpanan lokal browser ini, sehingga tetap ada saat Anda membuka alat ini lagi; menghapus data browser akan menghapusnya. Tidak ada pendaftaran, tidak ada unggahan, dan tidak ada batas ukuran selain yang dapat ditangani perangkat Anda sendiri dengan nyaman.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -567,7 +622,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich nur die doppelten Zeilen sehen, statt der bereinigten Liste?",
     "faq.a4": "Ja. Aktivieren Sie „Nur doppelte Zeilen anzeigen\", damit das Ergebnis statt der bereinigten, eindeutigen Liste einen kurzen Bericht mit nur den Werten zeigt, die mehr als einmal vorkamen — jeder davon einmal aufgeführt. Das ist nützlich, wenn Sie prüfen möchten, was in einer Liste wiederholt wurde — etwa herausfinden, welche E-Mail-Adressen oder SKUs zweimal vorkommen —, statt nur eine bereinigte Kopie zu erhalten. Die Statistik zu eindeutigen Zeilen und entfernten Duplikaten über dem Ergebnis bleibt in beiden Modi korrekt.",
     "faq.q5": "Wird meine eingefügte Liste auf einen Server hochgeladen?",
-    "faq.a5": "Nein. Dieses Tool läuft vollständig in Ihrem Browser mit reinem JavaScript — die Liste, die Sie einfügen, die gewählten Optionen und das Ergebnis werden niemals an einen Server gesendet oder irgendwo protokolliert. Ihre letzte Eingabe und Einstellungen werden optional nur im lokalen Speicher dieses Browsers abgelegt, damit sie beim nächsten Öffnen des Tools noch da sind; das Löschen der Browserdaten entfernt sie. Es gibt keine Registrierung, keinen Upload und keine Größenbeschränkung außer dem, was Ihr eigenes Gerät bequem verarbeiten kann."
+    "faq.a5": "Nein. Dieses Tool läuft vollständig in Ihrem Browser mit reinem JavaScript — die Liste, die Sie einfügen, die gewählten Optionen und das Ergebnis werden niemals an einen Server gesendet oder irgendwo protokolliert. Ihre letzte Eingabe und Einstellungen werden optional nur im lokalen Speicher dieses Browsers abgelegt, damit sie beim nächsten Öffnen des Tools noch da sind; das Löschen der Browserdaten entfernt sie. Es gibt keine Registrierung, keinen Upload und keine Größenbeschränkung außer dem, was Ihr eigenes Gerät bequem verarbeiten kann.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -613,7 +673,12 @@ window.I18N_LOCALES = {
     "faq.q4": "重複削除後のリストではなく、重複していた行だけを見ることはできますか？",
     "faq.a4": "はい。「重複した行だけを表示」を有効にすると、出力は整理されたユニークなリストではなく、2回以上出現した値だけをそれぞれ1回ずつ記載した簡易レポートに切り替わります。整理済みのコピーを得るだけでなく、リストの中で何が繰り返されていたか（たとえばどのメールアドレスやSKUが2回出現したか）を確認したい場合に便利です。結果の上に表示されるユニーク行数と削除件数の統計は、どちらのモードでも正確です。",
     "faq.q5": "貼り付けたリストはサーバーにアップロードされますか？",
-    "faq.a5": "いいえ。このツールは通常のJavaScriptのみを使ってブラウザ内で完結して動作します。貼り付けたリスト、選択したオプション、結果がサーバーに送信されたり、どこかに記録されたりすることはありません。直前の入力内容と設定は、任意でこのブラウザのローカルストレージにのみ保存されるため、次回ツールを開いたときにも残っていますが、ブラウザのデータを消去すると削除されます。登録の必要はなく、アップロードもなく、お使いの端末が快適に処理できる範囲を超えるサイズ制限もありません。"
+    "faq.a5": "いいえ。このツールは通常のJavaScriptのみを使ってブラウザ内で完結して動作します。貼り付けたリスト、選択したオプション、結果がサーバーに送信されたり、どこかに記録されたりすることはありません。直前の入力内容と設定は、任意でこのブラウザのローカルストレージにのみ保存されるため、次回ツールを開いたときにも残っていますが、ブラウザのデータを消去すると削除されます。登録の必要はなく、アップロードもなく、お使いの端末が快適に処理できる範囲を超えるサイズ制限もありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -659,6 +724,11 @@ window.I18N_LOCALES = {
     "faq.q4": "중복 제거된 목록 대신 중복이었던 줄만 볼 수 있나요?",
     "faq.a4": "네. \"중복된 줄만 표시\"를 켜면 결과가 정리된 고유 목록 대신, 두 번 이상 등장한 값만 한 번씩 나열한 간단한 리포트로 바뀝니다. 정리된 사본만 얻는 대신, 목록에서 무엇이 반복됐는지 — 예를 들어 어떤 이메일 주소나 SKU가 두 번 등장했는지 — 확인하고 싶을 때 유용합니다. 결과 위에 표시되는 고유 줄 수와 제거된 줄 수 통계는 두 모드 모두에서 정확하게 유지됩니다.",
     "faq.q5": "붙여넣은 목록이 서버로 업로드되나요?",
-    "faq.a5": "아니요. 이 도구는 순수 자바스크립트만으로 브라우저 안에서 전부 실행됩니다 — 붙여넣은 목록, 선택한 옵션, 결과 모두 서버로 전송되거나 어디에도 기록되지 않습니다. 마지막 입력값과 설정은 선택적으로 이 브라우저의 로컬 스토리지에만 저장되어 다음에 도구를 열 때도 남아 있으며, 브라우저 데이터를 지우면 함께 삭제됩니다. 가입도, 업로드도 없고, 사용자의 기기가 무리 없이 처리할 수 있는 범위를 넘는 크기 제한도 없습니다."
+    "faq.a5": "아니요. 이 도구는 순수 자바스크립트만으로 브라우저 안에서 전부 실행됩니다 — 붙여넣은 목록, 선택한 옵션, 결과 모두 서버로 전송되거나 어디에도 기록되지 않습니다. 마지막 입력값과 설정은 선택적으로 이 브라우저의 로컬 스토리지에만 저장되어 다음에 도구를 열 때도 남아 있으며, 브라우저 데이터를 지우면 함께 삭제됩니다. 가입도, 업로드도 없고, 사용자의 기기가 무리 없이 처리할 수 있는 범위를 넘는 크기 제한도 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

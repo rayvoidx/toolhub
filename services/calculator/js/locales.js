@@ -89,7 +89,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What does the percent key do, and how do the memory keys (M+, M-, MR, MC) work?",
     "faq.a4": "The % key divides whatever comes before it by 100, so 50% becomes 0.5 and (200+50)% becomes 2.5 — handy for discounts, tax and tips. The memory keys hold one separate number across calculations: M+ adds the current value to memory, M- subtracts it, MR recalls the stored value into your current entry, and MC clears memory back to zero. A small \"M\" indicator appears next to the display whenever memory holds a non-zero value.",
     "faq.q5": "Is any calculation sent to a server, and why doesn't this tool use eval()?",
-    "faq.a5": "No calculation ever leaves your device — every operation, from basic addition to logarithms, runs entirely in your browser, and your calculation history is stored only in your browser's local storage. The math engine is a hand-written shunting-yard parser that converts your input into a safe sequence of operations rather than running your text through JavaScript's eval() or Function(), which is a well-known security risk for any tool that evaluates user-typed expressions."
+    "faq.a5": "No calculation ever leaves your device — every operation, from basic addition to logarithms, runs entirely in your browser, and your calculation history is stored only in your browser's local storage. The math engine is a hand-written shunting-yard parser that converts your input into a safe sequence of operations rather than running your text through JavaScript's eval() or Function(), which is a well-known security risk for any tool that evaluates user-typed expressions.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -159,7 +164,12 @@ window.I18N_LOCALES = {
     "faq.q4": "百分号键是做什么的？内存键（M+、M-、MR、MC）怎么用？",
     "faq.a4": "百分号键会把它前面的数值除以 100，例如 50% 变为 0.5，(200+50)% 变为 2.5，非常适合计算折扣、税费和小费。内存键在多次计算之间保存一个独立的数值：M+ 把当前值加到内存中，M- 把当前值从内存中减去，MR 把已保存的值调入当前算式，MC 把内存清零。当内存中有非零数值时，显示屏旁边会出现一个小小的\"M\"标记。",
     "faq.q5": "计算内容会发送到服务器吗？这款工具为什么不使用 eval()？",
-    "faq.a5": "任何计算都不会离开您的设备——从基础加法到对数运算，所有操作都完全在浏览器中完成，计算历史记录也只保存在浏览器的本地存储中。这款工具的运算引擎是手写的 shunting-yard（调度场）解析器，会把您的输入转换成一系列安全的运算步骤，而不是把文本交给 JavaScript 的 eval() 或 Function() 执行——对任何需要解析用户输入算式的工具来说，这是众所周知的安全隐患。"
+    "faq.a5": "任何计算都不会离开您的设备——从基础加法到对数运算，所有操作都完全在浏览器中完成，计算历史记录也只保存在浏览器的本地存储中。这款工具的运算引擎是手写的 shunting-yard（调度场）解析器，会把您的输入转换成一系列安全的运算步骤，而不是把文本交给 JavaScript 的 eval() 或 Function() 执行——对任何需要解析用户输入算式的工具来说，这是众所周知的安全隐患。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -229,7 +239,12 @@ window.I18N_LOCALES = {
     "faq.q4": "प्रतिशत बटन क्या करता है, और मेमोरी बटन (M+, M-, MR, MC) कैसे काम करते हैं?",
     "faq.a4": "% बटन अपने पहले वाली संख्या को 100 से भाग देता है, इसलिए 50% का मतलब 0.5 और (200+50)% का मतलब 2.5 होता है — छूट, टैक्स और टिप के लिए उपयोगी। मेमोरी बटन गणनाओं के बीच एक अलग संख्या को संग्रहीत रखते हैं: M+ वर्तमान मान को मेमोरी में जोड़ता है, M- उसे घटाता है, MR संग्रहीत मान को वर्तमान प्रविष्टि में वापस लाता है, और MC मेमोरी को शून्य कर देता है। जब भी मेमोरी में शून्य से भिन्न मान होता है, डिस्प्ले के पास एक छोटा \"M\" संकेतक दिखता है।",
     "faq.q5": "क्या कोई गणना सर्वर पर भेजी जाती है, और यह टूल eval() का उपयोग क्यों नहीं करता?",
-    "faq.a5": "कोई भी गणना कभी आपके डिवाइस से बाहर नहीं जाती — बुनियादी जोड़ से लेकर लघुगणक तक, हर संक्रिया पूरी तरह आपके ब्राउज़र में होती है, और आपका गणना इतिहास केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है। इसका गणना इंजन एक हाथ से लिखा गया shunting-yard पार्सर है, जो आपके इनपुट को संक्रियाओं के एक सुरक्षित क्रम में बदलता है, बजाय इसके कि आपका टेक्स्ट JavaScript के eval() या Function() से चलाया जाए — जो कि उपयोगकर्ता द्वारा टाइप की गई अभिव्यक्तियों का मूल्यांकन करने वाले किसी भी टूल के लिए एक जाना-पहचाना सुरक्षा जोखिम है।"
+    "faq.a5": "कोई भी गणना कभी आपके डिवाइस से बाहर नहीं जाती — बुनियादी जोड़ से लेकर लघुगणक तक, हर संक्रिया पूरी तरह आपके ब्राउज़र में होती है, और आपका गणना इतिहास केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है। इसका गणना इंजन एक हाथ से लिखा गया shunting-yard पार्सर है, जो आपके इनपुट को संक्रियाओं के एक सुरक्षित क्रम में बदलता है, बजाय इसके कि आपका टेक्स्ट JavaScript के eval() या Function() से चलाया जाए — जो कि उपयोगकर्ता द्वारा टाइप की गई अभिव्यक्तियों का मूल्यांकन करने वाले किसी भी टूल के लिए एक जाना-पहचाना सुरक्षा जोखिम है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -299,7 +314,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué hace la tecla de porcentaje, y cómo funcionan las teclas de memoria (M+, M-, MR, MC)?",
     "faq.a4": "La tecla % divide entre 100 lo que la precede, así que 50% se convierte en 0.5 y (200+50)% en 2.5 — muy útil para descuentos, impuestos y propinas. Las teclas de memoria guardan un número aparte entre cálculos: M+ suma el valor actual a la memoria, M- lo resta, MR recupera el valor guardado en tu entrada actual, y MC pone la memoria a cero. Aparece un pequeño indicador \"M\" junto a la pantalla siempre que la memoria contenga un valor distinto de cero.",
     "faq.q5": "¿Se envía algún cálculo a un servidor, y por qué esta herramienta no usa eval()?",
-    "faq.a5": "Ningún cálculo sale de tu dispositivo — desde una suma básica hasta un logaritmo, cada operación se ejecuta enteramente en tu navegador, y tu historial de cálculos se guarda solo en el almacenamiento local de tu navegador. El motor matemático es un analizador shunting-yard escrito a mano que convierte tu entrada en una secuencia segura de operaciones, en lugar de pasar tu texto por eval() o Function() de JavaScript, un riesgo de seguridad bien conocido para cualquier herramienta que evalúe expresiones escritas por el usuario."
+    "faq.a5": "Ningún cálculo sale de tu dispositivo — desde una suma básica hasta un logaritmo, cada operación se ejecuta enteramente en tu navegador, y tu historial de cálculos se guarda solo en el almacenamiento local de tu navegador. El motor matemático es un analizador shunting-yard escrito a mano que convierte tu entrada en una secuencia segura de operaciones, en lugar de pasar tu texto por eval() o Function() de JavaScript, un riesgo de seguridad bien conocido para cualquier herramienta que evalúe expresiones escritas por el usuario.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -369,7 +389,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما وظيفة مفتاح النسبة المئوية، وكيف تعمل مفاتيح الذاكرة (M+، M-، MR، MC)؟",
     "faq.a4": "يقسم مفتاح % الرقم الذي يسبقه على 100، لذا فإن 50% تصبح 0.5، و(200+50)% تصبح 2.5 — مفيد للخصومات والضرائب والإكراميات. تحتفظ مفاتيح الذاكرة برقم واحد منفصل عبر عمليات الحساب: يضيف M+ القيمة الحالية إلى الذاكرة، ويطرحها M-، ويسترجع MR القيمة المخزنة إلى إدخالك الحالي، ويمسح MC الذاكرة إلى صفر. يظهر مؤشر صغير \"M\" بجانب الشاشة كلما كانت الذاكرة تحتوي على قيمة غير صفرية.",
     "faq.q5": "هل تُرسل أي عملية حسابية إلى خادم، ولماذا لا تستخدم هذه الأداة دالة eval()؟",
-    "faq.a5": "لا تغادر أي عملية حسابية جهازك أبدًا — من الجمع الأساسي إلى اللوغاريتمات، تُنفَّذ كل عملية بالكامل داخل متصفحك، ويُخزَّن سجل حساباتك فقط في التخزين المحلي لمتصفحك. محرك الحساب هو محلّل shunting-yard مكتوب يدويًا يحوّل مُدخلاتك إلى سلسلة آمنة من العمليات، بدلاً من تمرير النص عبر eval() أو Function() في جافاسكريبت، وهو مخاطرة أمنية معروفة جيدًا لأي أداة تُقيّم تعبيرات يكتبها المستخدم."
+    "faq.a5": "لا تغادر أي عملية حسابية جهازك أبدًا — من الجمع الأساسي إلى اللوغاريتمات، تُنفَّذ كل عملية بالكامل داخل متصفحك، ويُخزَّن سجل حساباتك فقط في التخزين المحلي لمتصفحك. محرك الحساب هو محلّل shunting-yard مكتوب يدويًا يحوّل مُدخلاتك إلى سلسلة آمنة من العمليات، بدلاً من تمرير النص عبر eval() أو Function() في جافاسكريبت، وهو مخاطرة أمنية معروفة جيدًا لأي أداة تُقيّم تعبيرات يكتبها المستخدم.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -439,7 +464,12 @@ window.I18N_LOCALES = {
     "faq.q4": "À quoi sert la touche pourcentage, et comment fonctionnent les touches mémoire (M+, M-, MR, MC) ?",
     "faq.a4": "La touche % divise par 100 ce qui la précède, donc 50 % devient 0,5 et (200+50) % devient 2,5 — pratique pour les remises, les taxes et les pourboires. Les touches mémoire conservent un nombre distinct entre les calculs : M+ ajoute la valeur actuelle à la mémoire, M- la soustrait, MR rappelle la valeur enregistrée dans votre saisie actuelle, et MC remet la mémoire à zéro. Un petit indicateur « M » apparaît à côté de l'écran dès que la mémoire contient une valeur non nulle.",
     "faq.q5": "Un calcul est-il envoyé à un serveur, et pourquoi cet outil n'utilise-t-il pas eval() ?",
-    "faq.a5": "Aucun calcul ne quitte jamais votre appareil — de l'addition de base aux logarithmes, chaque opération s'exécute entièrement dans votre navigateur, et votre historique de calculs n'est stocké que dans le stockage local de votre navigateur. Le moteur de calcul est un analyseur shunting-yard écrit à la main qui convertit votre saisie en une séquence sûre d'opérations, plutôt que de faire passer votre texte par eval() ou Function() de JavaScript — un risque de sécurité bien connu pour tout outil évaluant des expressions saisies par l'utilisateur."
+    "faq.a5": "Aucun calcul ne quitte jamais votre appareil — de l'addition de base aux logarithmes, chaque opération s'exécute entièrement dans votre navigateur, et votre historique de calculs n'est stocké que dans le stockage local de votre navigateur. Le moteur de calcul est un analyseur shunting-yard écrit à la main qui convertit votre saisie en une séquence sûre d'opérations, plutôt que de faire passer votre texte par eval() ou Function() de JavaScript — un risque de sécurité bien connu pour tout outil évaluant des expressions saisies par l'utilisateur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -509,7 +539,12 @@ window.I18N_LOCALES = {
     "faq.q4": "শতাংশ বোতামটি কী করে, এবং মেমরি বোতাম (M+, M-, MR, MC) কীভাবে কাজ করে?",
     "faq.a4": "% বোতাম এর আগের সংখ্যাটিকে ১০০ দিয়ে ভাগ করে, তাই 50% হয়ে যায় 0.5, আর (200+50)% হয়ে যায় 2.5 — ছাড়, কর ও টিপ হিসাবের জন্য উপযোগী। মেমরি বোতামগুলো হিসাবের মধ্যে একটি আলাদা সংখ্যা ধরে রাখে: M+ বর্তমান মান মেমরিতে যোগ করে, M- তা থেকে বিয়োগ করে, MR সংরক্ষিত মানটি বর্তমান এন্ট্রিতে ফিরিয়ে আনে, এবং MC মেমরি শূন্য করে দেয়। মেমরিতে শূন্য নয় এমন মান থাকলেই ডিসপ্লের পাশে একটি ছোট \"M\" নির্দেশক দেখা যায়।",
     "faq.q5": "কোনো হিসাব কি সার্ভারে পাঠানো হয়, এবং এই টুলটি কেন eval() ব্যবহার করে না?",
-    "faq.a5": "কোনো হিসাবই কখনো আপনার ডিভাইস ছেড়ে যায় না — মৌলিক যোগ থেকে লগারিদম পর্যন্ত, প্রতিটি অপারেশন সম্পূর্ণভাবে আপনার ব্রাউজারে সম্পন্ন হয়, এবং আপনার হিসাবের ইতিহাস কেবল আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে। এর গণনা ইঞ্জিনটি হাতে লেখা একটি shunting-yard পার্সার, যা আপনার ইনপুটকে নিরাপদ ধারাবাহিক অপারেশনে রূপান্তর করে, জাভাস্ক্রিপ্টের eval() বা Function() দিয়ে আপনার টেক্সট চালানোর পরিবর্তে — যা ব্যবহারকারীর টাইপ করা এক্সপ্রেশন মূল্যায়ন করা যেকোনো টুলের জন্য সুপরিচিত একটি নিরাপত্তা ঝুঁকি।"
+    "faq.a5": "কোনো হিসাবই কখনো আপনার ডিভাইস ছেড়ে যায় না — মৌলিক যোগ থেকে লগারিদম পর্যন্ত, প্রতিটি অপারেশন সম্পূর্ণভাবে আপনার ব্রাউজারে সম্পন্ন হয়, এবং আপনার হিসাবের ইতিহাস কেবল আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে। এর গণনা ইঞ্জিনটি হাতে লেখা একটি shunting-yard পার্সার, যা আপনার ইনপুটকে নিরাপদ ধারাবাহিক অপারেশনে রূপান্তর করে, জাভাস্ক্রিপ্টের eval() বা Function() দিয়ে আপনার টেক্সট চালানোর পরিবর্তে — যা ব্যবহারকারীর টাইপ করা এক্সপ্রেশন মূল্যায়ন করা যেকোনো টুলের জন্য সুপরিচিত একটি নিরাপত্তা ঝুঁকি।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -579,7 +614,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que a tecla de porcentagem faz, e como funcionam as teclas de memória (M+, M-, MR, MC)?",
     "faq.a4": "A tecla % divide por 100 o que vem antes dela, então 50% vira 0,5 e (200+50)% vira 2,5 — útil para descontos, impostos e gorjetas. As teclas de memória guardam um número separado entre cálculos: M+ soma o valor atual à memória, M- o subtrai, MR recupera o valor salvo para a entrada atual, e MC zera a memória. Um pequeno indicador \"M\" aparece ao lado do visor sempre que a memória tiver um valor diferente de zero.",
     "faq.q5": "Algum cálculo é enviado a um servidor, e por que essa ferramenta não usa eval()?",
-    "faq.a5": "Nenhum cálculo sai do seu dispositivo — da soma básica aos logaritmos, cada operação é executada inteiramente no seu navegador, e seu histórico de cálculos é salvo apenas no armazenamento local do navegador. O mecanismo de cálculo é um analisador shunting-yard escrito à mão, que converte sua entrada em uma sequência segura de operações, em vez de passar seu texto pelo eval() ou Function() do JavaScript — um risco de segurança bem conhecido para qualquer ferramenta que avalia expressões digitadas pelo usuário."
+    "faq.a5": "Nenhum cálculo sai do seu dispositivo — da soma básica aos logaritmos, cada operação é executada inteiramente no seu navegador, e seu histórico de cálculos é salvo apenas no armazenamento local do navegador. O mecanismo de cálculo é um analisador shunting-yard escrito à mão, que converte sua entrada em uma sequência segura de operações, em vez de passar seu texto pelo eval() ou Function() do JavaScript — um risco de segurança bem conhecido para qualquer ferramenta que avalia expressões digitadas pelo usuário.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -649,7 +689,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что делает клавиша процента, и как работают клавиши памяти (M+, M-, MR, MC)?",
     "faq.a4": "Клавиша % делит стоящее перед ней число на 100, поэтому 50% превращается в 0.5, а (200+50)% — в 2.5 — удобно для скидок, налогов и чаевых. Клавиши памяти хранят одно отдельное число между вычислениями: M+ прибавляет текущее значение к памяти, M- вычитает его, MR возвращает сохранённое значение в текущий ввод, а MC обнуляет память. Небольшой индикатор «M» появляется рядом с дисплеем, когда в памяти хранится ненулевое значение.",
     "faq.q5": "Отправляется ли какое-либо вычисление на сервер, и почему этот инструмент не использует eval()?",
-    "faq.a5": "Ни одно вычисление никогда не покидает ваше устройство — от простого сложения до логарифмов, каждая операция полностью выполняется в вашем браузере, а история вычислений хранится только в локальном хранилище браузера. Вычислительный механизм — это написанный вручную парсер по алгоритму сортировочной станции (shunting-yard), который преобразует ваш ввод в безопасную последовательность операций, вместо того чтобы пропускать текст через eval() или Function() в JavaScript — что является хорошо известным риском безопасности для любого инструмента, вычисляющего введённые пользователем выражения."
+    "faq.a5": "Ни одно вычисление никогда не покидает ваше устройство — от простого сложения до логарифмов, каждая операция полностью выполняется в вашем браузере, а история вычислений хранится только в локальном хранилище браузера. Вычислительный механизм — это написанный вручную парсер по алгоритму сортировочной станции (shunting-yard), который преобразует ваш ввод в безопасную последовательность операций, вместо того чтобы пропускать текст через eval() или Function() в JavaScript — что является хорошо известным риском безопасности для любого инструмента, вычисляющего введённые пользователем выражения.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -719,7 +764,12 @@ window.I18N_LOCALES = {
     "faq.q4": "فیصد بٹن کیا کرتا ہے، اور میموری بٹن (M+, M-, MR, MC) کیسے کام کرتے ہیں؟",
     "faq.a4": "% بٹن اپنے سے پہلے والے عدد کو 100 سے تقسیم کرتا ہے، اس لیے 50% کا مطلب 0.5 اور (200+50)% کا مطلب 2.5 ہوتا ہے — رعایت، ٹیکس اور ٹپ کے حساب کے لیے مفید۔ میموری بٹن حسابات کے درمیان ایک الگ عدد محفوظ رکھتے ہیں: M+ موجودہ قدر کو میموری میں جمع کرتا ہے، M- اسے گھٹاتا ہے، MR محفوظ شدہ قدر کو موجودہ اندراج میں واپس لاتا ہے، اور MC میموری کو صفر کر دیتا ہے۔ جب بھی میموری میں صفر کے علاوہ کوئی قدر ہو، ڈسپلے کے پاس ایک چھوٹا سا \"M\" نشان ظاہر ہوتا ہے۔",
     "faq.q5": "کیا کوئی حساب سرور کو بھیجا جاتا ہے، اور یہ ٹول eval() کیوں استعمال نہیں کرتا؟",
-    "faq.a5": "کوئی بھی حساب کبھی آپ کی ڈیوائس سے باہر نہیں جاتا — بنیادی جمع سے لے کر لاگرتھم تک، ہر آپریشن مکمل طور پر آپ کے براؤزر میں ہوتا ہے، اور آپ کی حسابی تاریخ صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہے۔ اس کا حسابی انجن ہاتھ سے لکھا گیا ایک shunting-yard پارسر ہے، جو آپ کے ان پٹ کو محفوظ ترتیب کے آپریشنز میں تبدیل کرتا ہے، بجائے اس کے کہ آپ کا متن جاوا اسکرپٹ کے eval() یا ()Function سے چلایا جائے — جو کہ صارف کے لکھے ہوئے اظہارات کا جائزہ لینے والے کسی بھی ٹول کے لیے ایک معروف حفاظتی خطرہ ہے۔"
+    "faq.a5": "کوئی بھی حساب کبھی آپ کی ڈیوائس سے باہر نہیں جاتا — بنیادی جمع سے لے کر لاگرتھم تک، ہر آپریشن مکمل طور پر آپ کے براؤزر میں ہوتا ہے، اور آپ کی حسابی تاریخ صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہے۔ اس کا حسابی انجن ہاتھ سے لکھا گیا ایک shunting-yard پارسر ہے، جو آپ کے ان پٹ کو محفوظ ترتیب کے آپریشنز میں تبدیل کرتا ہے، بجائے اس کے کہ آپ کا متن جاوا اسکرپٹ کے eval() یا ()Function سے چلایا جائے — جو کہ صارف کے لکھے ہوئے اظہارات کا جائزہ لینے والے کسی بھی ٹول کے لیے ایک معروف حفاظتی خطرہ ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -789,7 +839,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa fungsi tombol persen, dan bagaimana cara kerja tombol memori (M+, M-, MR, MC)?",
     "faq.a4": "Tombol % membagi angka sebelumnya dengan 100, jadi 50% menjadi 0.5 dan (200+50)% menjadi 2.5 — berguna untuk diskon, pajak, dan tip. Tombol memori menyimpan satu angka terpisah di antara perhitungan: M+ menambahkan nilai saat ini ke memori, M- menguranginya, MR memanggil kembali nilai tersimpan ke entri Anda saat ini, dan MC mengosongkan memori ke nol. Indikator kecil \"M\" muncul di samping layar setiap kali memori berisi nilai bukan nol.",
     "faq.q5": "Apakah ada perhitungan yang dikirim ke server, dan mengapa alat ini tidak menggunakan eval()?",
-    "faq.a5": "Tidak ada perhitungan yang pernah meninggalkan perangkat Anda — dari penjumlahan dasar hingga logaritma, setiap operasi berjalan sepenuhnya di browser Anda, dan riwayat perhitungan Anda hanya disimpan di local storage browser. Mesin perhitungannya adalah parser shunting-yard yang ditulis manual, yang mengubah input Anda menjadi urutan operasi yang aman, alih-alih menjalankan teks Anda melalui eval() atau Function() JavaScript — risiko keamanan yang sudah dikenal luas untuk alat apa pun yang mengevaluasi ekspresi yang diketik pengguna."
+    "faq.a5": "Tidak ada perhitungan yang pernah meninggalkan perangkat Anda — dari penjumlahan dasar hingga logaritma, setiap operasi berjalan sepenuhnya di browser Anda, dan riwayat perhitungan Anda hanya disimpan di local storage browser. Mesin perhitungannya adalah parser shunting-yard yang ditulis manual, yang mengubah input Anda menjadi urutan operasi yang aman, alih-alih menjalankan teks Anda melalui eval() atau Function() JavaScript — risiko keamanan yang sudah dikenal luas untuk alat apa pun yang mengevaluasi ekspresi yang diketik pengguna.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -859,7 +914,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was macht die Prozenttaste, und wie funktionieren die Speichertasten (M+, M-, MR, MC)?",
     "faq.a4": "Die %-Taste teilt die davorstehende Zahl durch 100, sodass aus 50 % der Wert 0,5 und aus (200+50) % der Wert 2,5 wird — praktisch für Rabatte, Steuern und Trinkgeld. Die Speichertasten halten eine separate Zahl über mehrere Berechnungen hinweg: M+ addiert den aktuellen Wert zum Speicher, M- subtrahiert ihn, MR ruft den gespeicherten Wert in Ihre aktuelle Eingabe ab, und MC setzt den Speicher auf null zurück. Neben der Anzeige erscheint ein kleines „M“, sobald der Speicher einen Wert ungleich null enthält.",
     "faq.q5": "Wird eine Berechnung an einen Server gesendet, und warum verwendet dieses Tool kein eval()?",
-    "faq.a5": "Keine Berechnung verlässt jemals Ihr Gerät — von der einfachen Addition bis zum Logarithmus läuft jede Operation vollständig in Ihrem Browser, und Ihr Berechnungsverlauf wird nur im lokalen Speicher Ihres Browsers abgelegt. Die Rechen-Engine ist ein von Hand geschriebener Shunting-Yard-Parser, der Ihre Eingabe in eine sichere Abfolge von Operationen umwandelt, statt Ihren Text durch eval() oder Function() von JavaScript laufen zu lassen — ein bekanntes Sicherheitsrisiko für jedes Tool, das vom Benutzer eingegebene Ausdrücke auswertet."
+    "faq.a5": "Keine Berechnung verlässt jemals Ihr Gerät — von der einfachen Addition bis zum Logarithmus läuft jede Operation vollständig in Ihrem Browser, und Ihr Berechnungsverlauf wird nur im lokalen Speicher Ihres Browsers abgelegt. Die Rechen-Engine ist ein von Hand geschriebener Shunting-Yard-Parser, der Ihre Eingabe in eine sichere Abfolge von Operationen umwandelt, statt Ihren Text durch eval() oder Function() von JavaScript laufen zu lassen — ein bekanntes Sicherheitsrisiko für jedes Tool, das vom Benutzer eingegebene Ausdrücke auswertet.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -929,7 +989,12 @@ window.I18N_LOCALES = {
     "faq.q4": "パーセントキーは何をしますか？メモリーキー（M+、M-、MR、MC）はどう使いますか？",
     "faq.a4": "%キーは直前の数値を100で割るので、50%は0.5に、(200+50)%は2.5になります — 割引・税金・チップの計算に便利です。メモリーキーは計算をまたいで1つの数値を保持します。M+は現在の値をメモリーに加算し、M-は減算し、MRは保存された値を現在の入力欄に呼び出し、MCはメモリーをゼロに戻します。メモリーに0以外の値がある間は、表示欄の横に小さな「M」表示が現れます。",
     "faq.q5": "計算内容はサーバーに送信されますか？なぜこのツールはeval()を使わないのですか？",
-    "faq.a5": "どの計算もお使いの端末から外に出ることはありません — 基本的な足し算から対数計算まで、すべての処理はブラウザ内だけで完結し、計算履歴もブラウザのローカルストレージにのみ保存されます。計算エンジンは手書きのshunting-yard（操車場アルゴリズム）パーサーで、入力を安全な演算列に変換します。JavaScriptのeval()やFunction()にテキストをそのまま渡すことはありません — ユーザーが入力した式を評価するツールにとって、それはよく知られたセキュリティリスクだからです。"
+    "faq.a5": "どの計算もお使いの端末から外に出ることはありません — 基本的な足し算から対数計算まで、すべての処理はブラウザ内だけで完結し、計算履歴もブラウザのローカルストレージにのみ保存されます。計算エンジンは手書きのshunting-yard（操車場アルゴリズム）パーサーで、入力を安全な演算列に変換します。JavaScriptのeval()やFunction()にテキストをそのまま渡すことはありません — ユーザーが入力した式を評価するツールにとって、それはよく知られたセキュリティリスクだからです。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -999,6 +1064,11 @@ window.I18N_LOCALES = {
     "faq.q4": "퍼센트 키는 무슨 역할을 하나요? 메모리 키(M+, M-, MR, MC)는 어떻게 쓰나요?",
     "faq.a4": "% 키는 바로 앞의 숫자를 100으로 나누므로, 50%는 0.5가 되고 (200+50)%는 2.5가 됩니다 — 할인, 세금, 팁 계산에 유용합니다. 메모리 키는 계산 사이사이에 별도의 숫자 하나를 저장합니다: M+는 현재 값을 메모리에 더하고, M-는 현재 값을 메모리에서 빼고, MR은 저장된 값을 현재 입력으로 불러오며, MC는 메모리를 0으로 초기화합니다. 메모리에 0이 아닌 값이 있으면 화면 옆에 작은 \"M\" 표시가 나타납니다.",
     "faq.q5": "계산 내용이 서버로 전송되나요? 이 도구는 왜 eval()을 사용하지 않나요?",
-    "faq.a5": "어떤 계산도 기기 밖으로 나가지 않습니다 — 기본 덧셈부터 로그 계산까지 모든 연산은 전적으로 브라우저 안에서 실행되며, 계산 기록도 브라우저의 로컬 저장소에만 저장됩니다. 이 도구의 계산 엔진은 직접 작성한 shunting-yard(조차장) 파서로, 입력값을 안전한 연산 순서로 변환합니다. 사용자가 입력한 식을 자바스크립트의 eval()이나 Function()에 그대로 넘기지 않는데, 이는 사용자 입력 수식을 평가하는 모든 도구에 잘 알려진 보안 위험이기 때문입니다."
+    "faq.a5": "어떤 계산도 기기 밖으로 나가지 않습니다 — 기본 덧셈부터 로그 계산까지 모든 연산은 전적으로 브라우저 안에서 실행되며, 계산 기록도 브라우저의 로컬 저장소에만 저장됩니다. 이 도구의 계산 엔진은 직접 작성한 shunting-yard(조차장) 파서로, 입력값을 안전한 연산 순서로 변환합니다. 사용자가 입력한 식을 자바스크립트의 eval()이나 Function()에 그대로 넘기지 않는데, 이는 사용자 입력 수식을 평가하는 모든 도구에 잘 알려진 보안 위험이기 때문입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

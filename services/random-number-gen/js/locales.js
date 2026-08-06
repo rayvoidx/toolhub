@@ -64,7 +64,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Which lottery rules are used, and are they current?",
     "faq.a4": "The four presets are accurate as of July 2026: Powerball draws 5 numbers from 1–69 plus 1 Powerball from 1–26; Mega Millions draws 5 from 1–70 plus 1 Mega Ball from 1–24 (the April 2025 revision); EuroMillions draws 5 from 1–50 plus 2 Lucky Stars from 1–12; and Korea's Lotto 6/45 draws 6 from 1–45. Bonus balls are drawn from their own separate pool, exactly like the official machines.",
     "faq.q5": "When should I turn duplicates off?",
-    "faq.a5": "Turn duplicates off whenever each result must be unique — drawing raffle or giveaway winners, assigning seats or turn order, or splitting people into teams — so no number can repeat. Leave duplicates on for things like dice rolls or independent picks, where the same number can legitimately come up again."
+    "faq.a5": "Turn duplicates off whenever each result must be unique — drawing raffle or giveaway winners, assigning seats or turn order, or splitting people into teams — so no number can repeat. Leave duplicates on for things like dice rolls or independent picks, where the same number can legitimately come up again.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -122,7 +127,12 @@ window.I18N_LOCALES = {
     "faq.q4": "使用的是哪些彩票规则，是否为最新？",
     "faq.a4": "四种预设截至 2026 年 7 月均为最新：Powerball 从 1–69 选 5 个，另加 1–26 中的 1 个 Powerball；Mega Millions 从 1–70 选 5 个，另加 1–24 中的 1 个 Mega Ball（2025 年 4 月改版）；EuroMillions 从 1–50 选 5 个，另加 1–12 中的 2 个 Lucky Stars；韩国 Lotto 6/45 从 1–45 选 6 个。特别号从各自独立的号池中抽取，与官方摇奖机完全一致。",
     "faq.q5": "什么时候该关闭重复？",
-    "faq.a5": "当每个结果都必须唯一时就关闭重复 — 抽取抽奖或赠品得主、安排座位或出场顺序、分组等 — 这样号码就不会重复。掷骰子或彼此独立的抽取则可保留重复，因为同一个数字可以合理地再次出现。"
+    "faq.a5": "当每个结果都必须唯一时就关闭重复 — 抽取抽奖或赠品得主、安排座位或出场顺序、分组等 — 这样号码就不会重复。掷骰子或彼此独立的抽取则可保留重复，因为同一个数字可以合理地再次出现。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -180,7 +190,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कौन-से लॉटरी नियम उपयोग होते हैं, और क्या वे मौजूदा हैं?",
     "faq.a4": "चारों प्रीसेट जुलाई 2026 तक सही हैं: Powerball 1–69 में से 5 नंबर और 1–26 में से 1 Powerball; Mega Millions 1–70 में से 5 और 1–24 में से 1 Mega Ball (अप्रैल 2025 संशोधन); EuroMillions 1–50 में से 5 और 1–12 में से 2 Lucky Stars; और कोरिया का Lotto 6/45 में 1–45 में से 6। बोनस गेंदें अलग पूल से निकाली जाती हैं, ठीक आधिकारिक मशीनों की तरह।",
     "faq.q5": "डुप्लिकेट कब बंद करें?",
-    "faq.a5": "जब हर परिणाम अद्वितीय होना ज़रूरी हो तब डुप्लिकेट बंद करें — रैफ़ल या गिववे विजेता निकालना, सीट या बारी तय करना, या टीमों में बाँटना — ताकि कोई नंबर न दोहराए। पासा फेंकने या स्वतंत्र चयन जैसी चीज़ों में डुप्लिकेट चालू रखें, जहाँ वही नंबर फिर आ सकता है।"
+    "faq.a5": "जब हर परिणाम अद्वितीय होना ज़रूरी हो तब डुप्लिकेट बंद करें — रैफ़ल या गिववे विजेता निकालना, सीट या बारी तय करना, या टीमों में बाँटना — ताकि कोई नंबर न दोहराए। पासा फेंकने या स्वतंत्र चयन जैसी चीज़ों में डुप्लिकेट चालू रखें, जहाँ वही नंबर फिर आ सकता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -238,7 +253,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué reglas de lotería se usan y están actualizadas?",
     "faq.a4": "Los cuatro ajustes son correctos a julio de 2026: Powerball saca 5 números del 1 al 69 más 1 Powerball del 1 al 26; Mega Millions saca 5 del 1 al 70 más 1 Mega Ball del 1 al 24 (la revisión de abril de 2025); EuroMillions saca 5 del 1 al 50 más 2 Lucky Stars del 1 al 12; y el Lotto 6/45 de Corea saca 6 del 1 al 45. Las bolas extra se sacan de su propio bombo, igual que en las máquinas oficiales.",
     "faq.q5": "¿Cuándo debo desactivar los repetidos?",
-    "faq.a5": "Desactiva los repetidos siempre que cada resultado deba ser único — sortear ganadores de rifas o regalos, asignar asientos o el orden de turnos, o repartir equipos — para que ningún número se repita. Deja los repetidos activados para cosas como tiradas de dados o elecciones independientes, donde el mismo número puede salir de nuevo."
+    "faq.a5": "Desactiva los repetidos siempre que cada resultado deba ser único — sortear ganadores de rifas o regalos, asignar asientos o el orden de turnos, o repartir equipos — para que ningún número se repita. Deja los repetidos activados para cosas como tiradas de dados o elecciones independientes, donde el mismo número puede salir de nuevo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -296,7 +316,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما قواعد اليانصيب المستخدمة، وهل هي حديثة؟",
     "faq.a4": "الإعدادات الأربعة صحيحة حتى يوليو 2026: Powerball يسحب 5 أرقام من 1–69 مع 1 Powerball من 1–26؛ وMega Millions يسحب 5 من 1–70 مع 1 Mega Ball من 1–24 (تعديل أبريل 2025)؛ وEuroMillions يسحب 5 من 1–50 مع 2 Lucky Stars من 1–12؛ وLotto 6/45 الكوري يسحب 6 من 1–45. تُسحَب الكرات الإضافية من وعاء منفصل خاص بها، تمامًا كالآلات الرسمية.",
     "faq.q5": "متى ينبغي إيقاف التكرار؟",
-    "faq.a5": "أوقف التكرار كلما وجب أن تكون كل نتيجة فريدة — سحب الفائزين في القرعات أو الهدايا، أو توزيع المقاعد أو ترتيب الأدوار، أو تقسيم الفرق — كي لا يتكرر أي رقم. أبقِ التكرار مفعّلًا لأمور مثل رمي النرد أو الاختيارات المستقلة، حيث يمكن أن يظهر الرقم نفسه ثانية."
+    "faq.a5": "أوقف التكرار كلما وجب أن تكون كل نتيجة فريدة — سحب الفائزين في القرعات أو الهدايا، أو توزيع المقاعد أو ترتيب الأدوار، أو تقسيم الفرق — كي لا يتكرر أي رقم. أبقِ التكرار مفعّلًا لأمور مثل رمي النرد أو الاختيارات المستقلة، حيث يمكن أن يظهر الرقم نفسه ثانية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -354,7 +379,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelles règles de loterie sont utilisées, et sont-elles à jour ?",
     "faq.a4": "Les quatre préréglages sont exacts en juillet 2026 : Powerball tire 5 numéros de 1 à 69 plus 1 Powerball de 1 à 26 ; Mega Millions tire 5 de 1 à 70 plus 1 Mega Ball de 1 à 24 (révision d'avril 2025) ; EuroMillions tire 5 de 1 à 50 plus 2 Lucky Stars de 1 à 12 ; et le Lotto 6/45 coréen tire 6 de 1 à 45. Les boules bonus sont tirées de leur propre urne, exactement comme les machines officielles.",
     "faq.q5": "Quand faut-il désactiver les doublons ?",
-    "faq.a5": "Désactivez les doublons chaque fois que chaque résultat doit être unique — tirer des gagnants de tombola ou de concours, attribuer des places ou l'ordre de passage, ou répartir des équipes — pour qu'aucun numéro ne se répète. Laissez les doublons activés pour des lancers de dés ou des choix indépendants, où le même nombre peut légitimement ressortir."
+    "faq.a5": "Désactivez les doublons chaque fois que chaque résultat doit être unique — tirer des gagnants de tombola ou de concours, attribuer des places ou l'ordre de passage, ou répartir des équipes — pour qu'aucun numéro ne se répète. Laissez les doublons activés pour des lancers de dés ou des choix indépendants, où le même nombre peut légitimement ressortir.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -412,7 +442,12 @@ window.I18N_LOCALES = {
     "faq.q4": "কোন লটারির নিয়ম ব্যবহৃত হয়, আর সেগুলো কি হালনাগাদ?",
     "faq.a4": "চারটি প্রিসেট জুলাই ২০২৬ পর্যন্ত সঠিক: Powerball ১–৬৯ থেকে ৫টি নম্বর ও ১–২৬ থেকে ১টি Powerball; Mega Millions ১–৭০ থেকে ৫টি ও ১–২৪ থেকে ১টি Mega Ball (এপ্রিল ২০২৫ সংশোধন); EuroMillions ১–৫০ থেকে ৫টি ও ১–১২ থেকে ২টি Lucky Stars; এবং কোরিয়ার Lotto 6/45 ১–৪৫ থেকে ৬টি। বোনাস বল আলাদা পুল থেকে টানা হয়, ঠিক অফিসিয়াল মেশিনের মতো।",
     "faq.q5": "ডুপ্লিকেট কখন বন্ধ করা উচিত?",
-    "faq.a5": "যখন প্রতিটি ফলাফল অনন্য হওয়া দরকার তখন ডুপ্লিকেট বন্ধ করুন — র‍্যাফল বা গিভঅ্যাওয়ে বিজয়ী বাছাই, আসন বা পালা নির্ধারণ, কিংবা দল ভাগ করা — যাতে কোনো নম্বর পুনরাবৃত্ত না হয়। ডাইস রোল বা স্বাধীন বাছাইয়ের মতো ক্ষেত্রে ডুপ্লিকেট চালু রাখুন, যেখানে একই নম্বর আবার আসতে পারে।"
+    "faq.a5": "যখন প্রতিটি ফলাফল অনন্য হওয়া দরকার তখন ডুপ্লিকেট বন্ধ করুন — র‍্যাফল বা গিভঅ্যাওয়ে বিজয়ী বাছাই, আসন বা পালা নির্ধারণ, কিংবা দল ভাগ করা — যাতে কোনো নম্বর পুনরাবৃত্ত না হয়। ডাইস রোল বা স্বাধীন বাছাইয়ের মতো ক্ষেত্রে ডুপ্লিকেট চালু রাখুন, যেখানে একই নম্বর আবার আসতে পারে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -470,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quais regras de loteria são usadas e estão atualizadas?",
     "faq.a4": "As quatro predefinições estão corretas em julho de 2026: a Powerball sorteia 5 números de 1 a 69 mais 1 Powerball de 1 a 26; a Mega Millions sorteia 5 de 1 a 70 mais 1 Mega Ball de 1 a 24 (a revisão de abril de 2025); a EuroMillions sorteia 5 de 1 a 50 mais 2 Lucky Stars de 1 a 12; e a Lotto 6/45 da Coreia sorteia 6 de 1 a 45. As bolas bônus saem de um globo próprio, igual às máquinas oficiais.",
     "faq.q5": "Quando devo desativar os repetidos?",
-    "faq.a5": "Desative os repetidos sempre que cada resultado precisar ser único — sortear ganhadores de rifas ou brindes, definir lugares ou ordem de vez, ou dividir times — para que nenhum número se repita. Deixe os repetidos ativados para coisas como lançar dados ou escolhas independentes, onde o mesmo número pode sair de novo."
+    "faq.a5": "Desative os repetidos sempre que cada resultado precisar ser único — sortear ganhadores de rifas ou brindes, definir lugares ou ordem de vez, ou dividir times — para que nenhum número se repita. Deixe os repetidos ativados para coisas como lançar dados ou escolhas independentes, onde o mesmo número pode sair de novo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -528,7 +568,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Какие правила лотерей используются и актуальны ли они?",
     "faq.a4": "Четыре пресета верны на июль 2026 года: Powerball — 5 чисел из 1–69 плюс 1 Powerball из 1–26; Mega Millions — 5 из 1–70 плюс 1 Mega Ball из 1–24 (редакция апреля 2025); EuroMillions — 5 из 1–50 плюс 2 Lucky Stars из 1–12; корейская Lotto 6/45 — 6 из 1–45. Бонусные шары берутся из отдельного барабана, ровно как в официальных лототронах.",
     "faq.q5": "Когда стоит отключать повторы?",
-    "faq.a5": "Отключайте повторы, когда каждый результат должен быть уникальным — розыгрыш призов, распределение мест или очерёдности, деление на команды — чтобы ни одно число не повторялось. Оставляйте повторы для бросков кубика или независимых выборов, где одно и то же число может законно выпасть снова."
+    "faq.a5": "Отключайте повторы, когда каждый результат должен быть уникальным — розыгрыш призов, распределение мест или очерёдности, деление на команды — чтобы ни одно число не повторялось. Оставляйте повторы для бросков кубика или независимых выборов, где одно и то же число может законно выпасть снова.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -586,7 +631,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کون سے لاٹری قواعد استعمال ہوتے ہیں، اور کیا وہ موجودہ ہیں؟",
     "faq.a4": "چاروں پری سیٹ جولائی 2026 تک درست ہیں: Powerball 1–69 میں سے 5 نمبر اور 1–26 میں سے 1 Powerball؛ Mega Millions 1–70 میں سے 5 اور 1–24 میں سے 1 Mega Ball (اپریل 2025 کی نظرثانی)؛ EuroMillions 1–50 میں سے 5 اور 1–12 میں سے 2 Lucky Stars؛ اور کوریا کا Lotto 6/45 میں 1–45 میں سے 6۔ بونس گیندیں الگ پول سے نکالی جاتی ہیں، بالکل سرکاری مشینوں کی طرح۔",
     "faq.q5": "تکرار کب بند کرنی چاہیے؟",
-    "faq.a5": "جب ہر نتیجہ منفرد ہونا ضروری ہو تو تکرار بند کریں — ریفل یا گفٹ کے فاتحین نکالنا، نشستیں یا باری طے کرنا، یا ٹیمیں بانٹنا — تاکہ کوئی نمبر نہ دہرائے۔ پانسہ پھینکنے یا آزاد انتخاب جیسے کاموں میں تکرار آن رکھیں، جہاں وہی نمبر دوبارہ آ سکتا ہے۔"
+    "faq.a5": "جب ہر نتیجہ منفرد ہونا ضروری ہو تو تکرار بند کریں — ریفل یا گفٹ کے فاتحین نکالنا، نشستیں یا باری طے کرنا، یا ٹیمیں بانٹنا — تاکہ کوئی نمبر نہ دہرائے۔ پانسہ پھینکنے یا آزاد انتخاب جیسے کاموں میں تکرار آن رکھیں، جہاں وہی نمبر دوبارہ آ سکتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -644,7 +694,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Aturan lotre mana yang dipakai, dan apakah masih berlaku?",
     "faq.a4": "Keempat preset akurat per Juli 2026: Powerball mengambil 5 angka dari 1–69 plus 1 Powerball dari 1–26; Mega Millions mengambil 5 dari 1–70 plus 1 Mega Ball dari 1–24 (revisi April 2025); EuroMillions mengambil 5 dari 1–50 plus 2 Lucky Stars dari 1–12; dan Lotto 6/45 Korea mengambil 6 dari 1–45. Bola bonus diambil dari wadah tersendiri, persis seperti mesin resmi.",
     "faq.q5": "Kapan sebaiknya mematikan duplikat?",
-    "faq.a5": "Matikan duplikat kapan pun tiap hasil harus unik — mengundi pemenang giveaway atau doorprize, menetapkan kursi atau urutan giliran, atau membagi tim — agar tidak ada angka yang berulang. Biarkan duplikat menyala untuk hal seperti lempar dadu atau pilihan independen, di mana angka yang sama boleh muncul lagi."
+    "faq.a5": "Matikan duplikat kapan pun tiap hasil harus unik — mengundi pemenang giveaway atau doorprize, menetapkan kursi atau urutan giliran, atau membagi tim — agar tidak ada angka yang berulang. Biarkan duplikat menyala untuk hal seperti lempar dadu atau pilihan independen, di mana angka yang sama boleh muncul lagi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -702,7 +757,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Welche Lotterieregeln werden verwendet, und sind sie aktuell?",
     "faq.a4": "Die vier Voreinstellungen sind mit Stand Juli 2026 korrekt: Powerball zieht 5 Zahlen aus 1–69 plus 1 Powerball aus 1–26; Mega Millions zieht 5 aus 1–70 plus 1 Mega Ball aus 1–24 (die Überarbeitung vom April 2025); EuroMillions zieht 5 aus 1–50 plus 2 Lucky Stars aus 1–12; und Koreas Lotto 6/45 zieht 6 aus 1–45. Bonuskugeln werden aus einem eigenen Topf gezogen, genau wie bei den offiziellen Maschinen.",
     "faq.q5": "Wann sollte ich Wiederholungen ausschalten?",
-    "faq.a5": "Schalte Wiederholungen aus, wann immer jedes Ergebnis eindeutig sein muss — Gewinner von Verlosungen oder Gewinnspielen ziehen, Sitzplätze oder Reihenfolgen zuweisen oder Teams aufteilen — damit sich keine Zahl wiederholt. Lass Wiederholungen an für Dinge wie Würfelwürfe oder unabhängige Ziehungen, bei denen dieselbe Zahl legitim erneut kommen darf."
+    "faq.a5": "Schalte Wiederholungen aus, wann immer jedes Ergebnis eindeutig sein muss — Gewinner von Verlosungen oder Gewinnspielen ziehen, Sitzplätze oder Reihenfolgen zuweisen oder Teams aufteilen — damit sich keine Zahl wiederholt. Lass Wiederholungen an für Dinge wie Würfelwürfe oder unabhängige Ziehungen, bei denen dieselbe Zahl legitim erneut kommen darf.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -760,7 +820,12 @@ window.I18N_LOCALES = {
     "faq.q4": "どの宝くじルールが使われ、最新ですか？",
     "faq.a4": "4つのプリセットは2026年7月時点で正確です。Powerball は1〜69から5個と1〜26から Powerball を1個、Mega Millions は1〜70から5個と1〜24から Mega Ball を1個（2025年4月改定）、EuroMillions は1〜50から5個と1〜12から Lucky Stars を2個、韓国のロト6/45 は1〜45から6個を抽選します。ボーナス球は専用の別プールから、公式の抽選機と同じ方式で抽出されます。",
     "faq.q5": "重複はいつオフにすべきですか？",
-    "faq.a5": "結果が一意でなければならないときは重複をオフにします — 抽選やプレゼント当選者の決定、座席や順番の割り当て、チーム分けなど — 同じ番号が繰り返されません。サイコロや独立した抽出のように同じ番号が再び出てよい場合は、重複をオンのままにします。"
+    "faq.a5": "結果が一意でなければならないときは重複をオフにします — 抽選やプレゼント当選者の決定、座席や順番の割り当て、チーム分けなど — 同じ番号が繰り返されません。サイコロや独立した抽出のように同じ番号が再び出てよい場合は、重複をオンのままにします。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -818,6 +883,11 @@ window.I18N_LOCALES = {
     "faq.q4": "어떤 복권 규칙을 쓰며, 최신인가요?",
     "faq.a4": "네 가지 프리셋은 2026년 7월 기준으로 정확합니다. Powerball은 1–69에서 5개와 1–26에서 Powerball 1개, Mega Millions는 1–70에서 5개와 1–24에서 Mega Ball 1개(2025년 4월 개정), EuroMillions는 1–50에서 5개와 1–12에서 Lucky Stars 2개, 한국 로또 6/45는 1–45에서 6개를 뽑습니다. 보너스 볼은 실제 추첨기와 똑같이 별도 풀에서 뽑습니다.",
     "faq.q5": "중복은 언제 꺼야 하나요?",
-    "faq.a5": "각 결과가 유일해야 할 때 중복을 끄세요 — 추첨·경품 당첨자 뽑기, 좌석이나 순서 배정, 팀 나누기 등 — 같은 숫자가 반복되지 않습니다. 주사위 굴리기처럼 같은 숫자가 다시 나와도 되는 독립 추출에서는 중복을 켜 두세요."
+    "faq.a5": "각 결과가 유일해야 할 때 중복을 끄세요 — 추첨·경품 당첨자 뽑기, 좌석이나 순서 배정, 팀 나누기 등 — 같은 숫자가 반복되지 않습니다. 주사위 굴리기처럼 같은 숫자가 다시 나와도 되는 독립 추출에서는 중복을 켜 두세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

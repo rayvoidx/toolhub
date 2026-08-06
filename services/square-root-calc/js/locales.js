@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How is a cube root different from a square root?",
     "faq.a4": "A cube root asks which number, multiplied by itself three times, gives the original number — and unlike square roots, cube roots of negative numbers are real. For example, the cube root of -8 is -2, because -2 × -2 × -2 = -8. Even-degree roots (square, 4th, 6th …) of negative numbers have no real answer, but odd-degree roots (cube, 5th, 7th …) always do, which is why this calculator only shows a \"no real root\" note for even root degrees.",
     "faq.q5": "Is the number I enter sent to a server?",
-    "faq.a5": "No. This square root calculator runs entirely in your browser — the number, root type, and precision you choose never leave your device, and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can use it as often as you like, including for homework or quick checks, with your input staying completely private."
+    "faq.a5": "No. This square root calculator runs entirely in your browser — the number, root type, and precision you choose never leave your device, and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can use it as often as you like, including for homework or quick checks, with your input staying completely private.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -111,7 +116,12 @@ window.I18N_LOCALES = {
     "faq.q4": "立方根和平方根有什么不同？",
     "faq.a4": "立方根求的是自身相乘三次后等于原数的那个值 —— 与平方根不同，负数的立方根是实数。例如 -8 的立方根是 -2，因为 -2 × -2 × -2 = -8。偶数次方根（平方、4 次方、6 次方……）对负数没有实数解，而奇数次方根（立方、5 次方、7 次方……）总有实数解，这也是本计算器只在偶数次方根时显示“无实数根”提示的原因。",
     "faq.q5": "我输入的数字会被发送到服务器吗？",
-    "faq.a5": "不会。本平方根计算器完全在你的浏览器中运行 —— 你输入的数字、选择的根类型和小数位数都不会离开你的设备，也不会被上传或存储到任何服务器。无需注册、没有追踪，你可以随时使用它来做作业或快速验算，输入内容完全保密。"
+    "faq.a5": "不会。本平方根计算器完全在你的浏览器中运行 —— 你输入的数字、选择的根类型和小数位数都不会离开你的设备，也不会被上传或存储到任何服务器。无需注册、没有追踪，你可以随时使用它来做作业或快速验算，输入内容完全保密。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -159,7 +169,12 @@ window.I18N_LOCALES = {
     "faq.q4": "घनमूल, वर्गमूल से कैसे अलग है?",
     "faq.a4": "घनमूल वह संख्या ढूँढता है जिसे स्वयं से तीन बार गुणा करने पर मूल संख्या प्राप्त होती है — वर्गमूल के विपरीत, ऋणात्मक संख्याओं के घनमूल वास्तविक होते हैं। उदाहरण के लिए, -8 का घनमूल -2 है, क्योंकि -2 × -2 × -2 = -8। ऋणात्मक संख्याओं के सम घात मूल (वर्ग, चतुर्थ, षष्ठ …) का कोई वास्तविक हल नहीं होता, लेकिन विषम घात मूल (घन, पंचम, सप्तम …) का हमेशा होता है, इसीलिए यह कैलकुलेटर केवल सम मूल घातों के लिए “कोई वास्तविक मूल नहीं” संदेश दिखाता है।",
     "faq.q5": "क्या मेरे द्वारा डाली गई संख्या सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। यह वर्गमूल कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा चुनी गई संख्या, मूल का प्रकार और परिशुद्धता कभी भी आपकी डिवाइस से बाहर नहीं जाती, और किसी सर्वर पर कुछ भी अपलोड या संग्रहीत नहीं होता। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, इसलिए आप इसे होमवर्क या त्वरित जाँच के लिए जितनी बार चाहें उपयोग कर सकते हैं, और आपका इनपुट पूरी तरह निजी रहता है।"
+    "faq.a5": "नहीं। यह वर्गमूल कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा चुनी गई संख्या, मूल का प्रकार और परिशुद्धता कभी भी आपकी डिवाइस से बाहर नहीं जाती, और किसी सर्वर पर कुछ भी अपलोड या संग्रहीत नहीं होता। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, इसलिए आप इसे होमवर्क या त्वरित जाँच के लिए जितनी बार चाहें उपयोग कर सकते हैं, और आपका इनपुट पूरी तरह निजी रहता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -207,7 +222,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿En qué se diferencia una raíz cúbica de una raíz cuadrada?",
     "faq.a4": "Una raíz cúbica busca el número que, multiplicado por sí mismo tres veces, da el número original; a diferencia de las raíces cuadradas, las raíces cúbicas de números negativos sí son reales. Por ejemplo, la raíz cúbica de -8 es -2, porque -2 × -2 × -2 = -8. Las raíces de grado par (cuadrada, 4.ª, 6.ª…) de números negativos no tienen solución real, pero las de grado impar (cúbica, 5.ª, 7.ª…) siempre la tienen, por eso esta calculadora solo muestra el aviso de “sin raíz real” en grados pares.",
     "faq.q5": "¿El número que introduzco se envía a un servidor?",
-    "faq.a5": "No. Esta calculadora de raíz cuadrada funciona totalmente en tu navegador: el número, el tipo de raíz y la precisión que elijas nunca salen de tu dispositivo, y no se sube ni se guarda nada en ningún servidor. No requiere registro ni rastreo, así que puedes usarla tantas veces como quieras, también para tareas escolares o comprobaciones rápidas, con tus datos totalmente privados."
+    "faq.a5": "No. Esta calculadora de raíz cuadrada funciona totalmente en tu navegador: el número, el tipo de raíz y la precisión que elijas nunca salen de tu dispositivo, y no se sube ni se guarda nada en ningún servidor. No requiere registro ni rastreo, así que puedes usarla tantas veces como quieras, también para tareas escolares o comprobaciones rápidas, con tus datos totalmente privados.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -255,7 +275,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الفرق بين الجذر التكعيبي والجذر التربيعي؟",
     "faq.a4": "يبحث الجذر التكعيبي عن العدد الذي إذا ضُرب في نفسه ثلاث مرات أعطى العدد الأصلي — وخلافًا للجذور التربيعية، فإن الجذور التكعيبية للأعداد السالبة حقيقية. فمثلًا، الجذر التكعيبي لـ-8 هو -2، لأن -2 × -2 × -2 = -8. الجذور ذات الدرجة الزوجية (تربيعي، رابع، سادس …) للأعداد السالبة ليس لها حل حقيقي، أما الجذور ذات الدرجة الفردية (تكعيبي، خامس، سابع …) فلها دائمًا حل حقيقي، ولهذا تعرض هذه الحاسبة ملاحظة «لا يوجد جذر حقيقي» فقط عند الدرجات الزوجية.",
     "faq.q5": "هل يُرسَل الرقم الذي أدخله إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة الجذر التربيعي هذه بالكامل داخل متصفحك — فالرقم ونوع الجذر والدقة التي تختارها لا تغادر جهازك أبدًا، ولا يُرفَع أو يُخزَّن أي شيء على أي خادم. لا حاجة للتسجيل ولا وجود لأي تتبع، لذا يمكنك استخدامها بقدر ما تشاء، بما في ذلك للواجبات المدرسية أو التحقق السريع، مع بقاء إدخالك خاصًا تمامًا."
+    "faq.a5": "لا. تعمل حاسبة الجذر التربيعي هذه بالكامل داخل متصفحك — فالرقم ونوع الجذر والدقة التي تختارها لا تغادر جهازك أبدًا، ولا يُرفَع أو يُخزَّن أي شيء على أي خادم. لا حاجة للتسجيل ولا وجود لأي تتبع، لذا يمكنك استخدامها بقدر ما تشاء، بما في ذلك للواجبات المدرسية أو التحقق السريع، مع بقاء إدخالك خاصًا تمامًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -303,7 +328,12 @@ window.I18N_LOCALES = {
     "faq.q4": "En quoi une racine cubique diffère-t-elle d'une racine carrée ?",
     "faq.a4": "Une racine cubique cherche le nombre qui, multiplié par lui-même trois fois, donne le nombre d'origine — contrairement aux racines carrées, les racines cubiques de nombres négatifs sont réelles. Par exemple, la racine cubique de -8 est -2, car -2 × -2 × -2 = -8. Les racines de degré pair (carrée, 4e, 6e…) de nombres négatifs n'ont pas de solution réelle, mais celles de degré impair (cubique, 5e, 7e…) en ont toujours une, c'est pourquoi cette calculatrice n'affiche la mention « pas de racine réelle » que pour les degrés pairs.",
     "faq.q5": "Le nombre que je saisis est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Cette calculatrice de racine carrée fonctionne entièrement dans votre navigateur — le nombre, le type de racine et la précision choisis ne quittent jamais votre appareil, et rien n'est envoyé ni stocké sur un serveur. Aucune inscription, aucun suivi : vous pouvez l'utiliser aussi souvent que vous le souhaitez, y compris pour des devoirs ou des vérifications rapides, en toute confidentialité."
+    "faq.a5": "Non. Cette calculatrice de racine carrée fonctionne entièrement dans votre navigateur — le nombre, le type de racine et la précision choisis ne quittent jamais votre appareil, et rien n'est envoyé ni stocké sur un serveur. Aucune inscription, aucun suivi : vous pouvez l'utiliser aussi souvent que vous le souhaitez, y compris pour des devoirs ou des vérifications rapides, en toute confidentialité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -351,7 +381,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ঘনমূল বর্গমূল থেকে কীভাবে আলাদা?",
     "faq.a4": "ঘনমূল সেই সংখ্যা খোঁজে, যাকে নিজের সাথে তিনবার গুণ করলে মূল সংখ্যাটি পাওয়া যায় — বর্গমূলের বিপরীতে, ঋণাত্মক সংখ্যার ঘনমূল বাস্তব হয়। উদাহরণস্বরূপ, -8-এর ঘনমূল -2, কারণ -2 × -2 × -2 = -8। ঋণাত্মক সংখ্যার জোড় ঘাতের মূলের (বর্গ, চতুর্থ, ষষ্ঠ …) কোনো বাস্তব সমাধান নেই, তবে বিজোড় ঘাতের মূলের (ঘন, পঞ্চম, সপ্তম …) সবসময় থাকে, তাই এই ক্যালকুলেটর শুধু জোড় মূল ঘাতের জন্য “কোনো বাস্তব মূল নেই” নোট দেখায়।",
     "faq.q5": "আমি যে সংখ্যা লিখি তা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই বর্গমূল ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার লেখা সংখ্যা, মূলের ধরন এবং নির্ভুলতা কখনো আপনার ডিভাইস ছেড়ে যায় না, এবং কোনো সার্ভারে কিছু আপলোড বা সংরক্ষণ করা হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি এটি হোমওয়ার্ক বা দ্রুত যাচাইয়ের জন্য যতবার ইচ্ছা ব্যবহার করতে পারেন, আপনার ইনপুট সম্পূর্ণ ব্যক্তিগত থাকে।"
+    "faq.a5": "না। এই বর্গমূল ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার লেখা সংখ্যা, মূলের ধরন এবং নির্ভুলতা কখনো আপনার ডিভাইস ছেড়ে যায় না, এবং কোনো সার্ভারে কিছু আপলোড বা সংরক্ষণ করা হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি এটি হোমওয়ার্ক বা দ্রুত যাচাইয়ের জন্য যতবার ইচ্ছা ব্যবহার করতে পারেন, আপনার ইনপুট সম্পূর্ণ ব্যক্তিগত থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -399,7 +434,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual a diferença entre raiz cúbica e raiz quadrada?",
     "faq.a4": "Uma raiz cúbica busca o número que, multiplicado por si mesmo três vezes, resulta no número original — diferente das raízes quadradas, raízes cúbicas de números negativos são reais. Por exemplo, a raiz cúbica de -8 é -2, porque -2 × -2 × -2 = -8. Raízes de grau par (quadrada, 4ª, 6ª…) de números negativos não têm solução real, mas raízes de grau ímpar (cúbica, 5ª, 7ª…) sempre têm, por isso esta calculadora só mostra o aviso de “sem raiz real” para graus pares.",
     "faq.q5": "O número que eu digito é enviado a um servidor?",
-    "faq.a5": "Não. Esta calculadora de raiz quadrada roda inteiramente no seu navegador — o número, o tipo de raiz e a precisão escolhida nunca saem do seu dispositivo, e nada é enviado ou armazenado em servidor algum. Não há cadastro nem rastreamento, então você pode usá-la quantas vezes quiser, inclusive para tarefas escolares ou conferências rápidas, com seus dados totalmente privados."
+    "faq.a5": "Não. Esta calculadora de raiz quadrada roda inteiramente no seu navegador — o número, o tipo de raiz e a precisão escolhida nunca saem do seu dispositivo, e nada é enviado ou armazenado em servidor algum. Não há cadastro nem rastreamento, então você pode usá-la quantas vezes quiser, inclusive para tarefas escolares ou conferências rápidas, com seus dados totalmente privados.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -447,7 +487,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Чем кубический корень отличается от квадратного?",
     "faq.a4": "Кубический корень — это число, которое при умножении само на себя трижды даёт исходное число, и, в отличие от квадратных корней, кубические корни отрицательных чисел являются действительными. Например, кубический корень из -8 равен -2, потому что -2 × -2 × -2 = -8. Корни чётной степени (квадратный, 4-й, 6-й …) из отрицательных чисел не имеют действительного решения, а корни нечётной степени (кубический, 5-й, 7-й …) — всегда имеют, поэтому этот калькулятор показывает пометку «нет действительного корня» только для чётных степеней.",
     "faq.q5": "Отправляется ли введённое число на сервер?",
-    "faq.a5": "Нет. Этот калькулятор квадратного корня полностью работает в вашем браузере — число, тип корня и выбранная точность никогда не покидают ваше устройство и не загружаются и не сохраняются ни на каком сервере. Регистрация и отслеживание не требуются, поэтому вы можете пользоваться им сколько угодно, в том числе для домашних заданий или быстрой проверки, а введённые данные остаются полностью приватными."
+    "faq.a5": "Нет. Этот калькулятор квадратного корня полностью работает в вашем браузере — число, тип корня и выбранная точность никогда не покидают ваше устройство и не загружаются и не сохраняются ни на каком сервере. Регистрация и отслеживание не требуются, поэтому вы можете пользоваться им сколько угодно, в том числе для домашних заданий или быстрой проверки, а введённые данные остаются полностью приватными.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -495,7 +540,12 @@ window.I18N_LOCALES = {
     "faq.q4": "مکعب جذر، جذر تربیعی سے کیسے مختلف ہے؟",
     "faq.a4": "مکعب جذر وہ عدد تلاش کرتا ہے جسے خود سے تین بار ضرب دینے پر اصل عدد حاصل ہوتا ہے — جذر تربیعی کے برعکس، منفی اعداد کے مکعب جذر حقیقی ہوتے ہیں۔ مثال کے طور پر، -8 کا مکعب جذر -2 ہے، کیونکہ -2 × -2 × -2 = -8۔ جفت ڈگری کے جذور (تربیعی، چوتھا، چھٹا …) منفی اعداد کا کوئی حقیقی حل نہیں رکھتے، لیکن طاق ڈگری کے جذور (مکعب، پانچواں، ساتواں …) ہمیشہ رکھتے ہیں، اسی لیے یہ کیلکولیٹر صرف جفت ڈگریوں کے لیے “کوئی حقیقی جذر نہیں” کا نوٹ دکھاتا ہے۔",
     "faq.q5": "کیا میرا درج کردہ عدد سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ جذر تربیعی کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا درج کردہ عدد، جذر کی قسم، اور منتخب کردہ درستگی کبھی بھی آپ کے آلے سے باہر نہیں جاتی، اور کسی سرور پر کچھ بھی اپ لوڈ یا محفوظ نہیں کیا جاتا۔ نہ کوئی رجسٹریشن، نہ کوئی ٹریکنگ، اس لیے آپ اسے ہوم ورک یا فوری جانچ کے لیے جتنی بار چاہیں استعمال کر سکتے ہیں، آپ کا ان پٹ مکمل طور پر نجی رہتا ہے۔"
+    "faq.a5": "نہیں۔ یہ جذر تربیعی کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا درج کردہ عدد، جذر کی قسم، اور منتخب کردہ درستگی کبھی بھی آپ کے آلے سے باہر نہیں جاتی، اور کسی سرور پر کچھ بھی اپ لوڈ یا محفوظ نہیں کیا جاتا۔ نہ کوئی رجسٹریشن، نہ کوئی ٹریکنگ، اس لیے آپ اسے ہوم ورک یا فوری جانچ کے لیے جتنی بار چاہیں استعمال کر سکتے ہیں، آپ کا ان پٹ مکمل طور پر نجی رہتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -543,7 +593,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa bedanya akar pangkat tiga dengan akar kuadrat?",
     "faq.a4": "Akar pangkat tiga mencari bilangan yang, jika dikalikan dengan dirinya sendiri tiga kali, menghasilkan bilangan asal — berbeda dengan akar kuadrat, akar pangkat tiga dari bilangan negatif adalah bilangan real. Misalnya, akar pangkat tiga dari -8 adalah -2, karena -2 × -2 × -2 = -8. Akar berderajat genap (kuadrat, ke-4, ke-6 …) dari bilangan negatif tidak memiliki solusi real, tetapi akar berderajat ganjil (pangkat tiga, ke-5, ke-7 …) selalu memilikinya, itulah sebabnya kalkulator ini hanya menampilkan catatan “tidak ada akar real” untuk derajat genap.",
     "faq.q5": "Apakah angka yang saya masukkan dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator akar kuadrat ini sepenuhnya berjalan di browser Anda — angka, jenis akar, dan presisi yang Anda pilih tidak pernah meninggalkan perangkat Anda, dan tidak ada yang diunggah atau disimpan di server mana pun. Tidak perlu mendaftar dan tidak ada pelacakan, jadi Anda bisa menggunakannya sesering mungkin, termasuk untuk PR atau pengecekan cepat, dengan input yang sepenuhnya privat."
+    "faq.a5": "Tidak. Kalkulator akar kuadrat ini sepenuhnya berjalan di browser Anda — angka, jenis akar, dan presisi yang Anda pilih tidak pernah meninggalkan perangkat Anda, dan tidak ada yang diunggah atau disimpan di server mana pun. Tidak perlu mendaftar dan tidak ada pelacakan, jadi Anda bisa menggunakannya sesering mungkin, termasuk untuk PR atau pengecekan cepat, dengan input yang sepenuhnya privat.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -591,7 +646,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie unterscheidet sich eine Kubikwurzel von einer Quadratwurzel?",
     "faq.a4": "Eine Kubikwurzel fragt nach der Zahl, die dreifach mit sich selbst multipliziert die Ausgangszahl ergibt — anders als bei Quadratwurzeln sind Kubikwurzeln negativer Zahlen reell. Zum Beispiel ist die Kubikwurzel von -8 gleich -2, weil -2 × -2 × -2 = -8. Wurzeln mit geradem Grad (Quadrat-, 4., 6. …) negativer Zahlen haben keine reelle Lösung, Wurzeln mit ungeradem Grad (Kubik-, 5., 7. …) dagegen immer, weshalb dieser Rechner den Hinweis „keine reelle Wurzel“ nur bei geradem Wurzelgrad zeigt.",
     "faq.q5": "Wird die eingegebene Zahl an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Quadratwurzel-Rechner läuft vollständig in Ihrem Browser — die Zahl, die Wurzelart und die gewählte Genauigkeit verlassen niemals Ihr Gerät und werden auf keinem Server hochgeladen oder gespeichert. Es gibt keine Anmeldung und kein Tracking, sodass Sie ihn beliebig oft nutzen können, auch für Hausaufgaben oder schnelle Kontrollen, bei vollständig privaten Eingaben."
+    "faq.a5": "Nein. Dieser Quadratwurzel-Rechner läuft vollständig in Ihrem Browser — die Zahl, die Wurzelart und die gewählte Genauigkeit verlassen niemals Ihr Gerät und werden auf keinem Server hochgeladen oder gespeichert. Es gibt keine Anmeldung und kein Tracking, sodass Sie ihn beliebig oft nutzen können, auch für Hausaufgaben oder schnelle Kontrollen, bei vollständig privaten Eingaben.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -639,7 +699,12 @@ window.I18N_LOCALES = {
     "faq.q4": "立方根は平方根とどう違いますか？",
     "faq.a4": "立方根は、自分自身を3回掛けると元の数になる値を求めます — 平方根と異なり、負の数の立方根は実数です。例えば-8の立方根は-2です。-2 × -2 × -2 = -8だからです。偶数次の根（平方、4乗根、6乗根…）は負の数に対して実数解を持ちませんが、奇数次の根（立方根、5乗根、7乗根…）は常に実数解を持ちます。そのためこの計算機は偶数次の場合のみ「実数の根なし」という注記を表示します。",
     "faq.q5": "入力した数値はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この平方根計算機はすべてブラウザ内で動作します — 入力した数値、選択した根の種類、精度はデバイスの外に出ることはなく、サーバーへのアップロードや保存も行われません。登録や追跡は一切不要なので、宿題や簡単な確認など、何度でも自由に使用でき、入力内容は完全にプライベートに保たれます。"
+    "faq.a5": "いいえ。この平方根計算機はすべてブラウザ内で動作します — 入力した数値、選択した根の種類、精度はデバイスの外に出ることはなく、サーバーへのアップロードや保存も行われません。登録や追跡は一切不要なので、宿題や簡単な確認など、何度でも自由に使用でき、入力内容は完全にプライベートに保たれます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -687,6 +752,11 @@ window.I18N_LOCALES = {
     "faq.q4": "세제곱근은 제곱근과 어떻게 다른가요?",
     "faq.a4": "세제곱근은 자기 자신을 세 번 곱했을 때 원래 숫자가 되는 값을 구합니다 — 제곱근과 달리 음수의 세제곱근은 실수입니다. 예를 들어 -8의 세제곱근은 -2인데, -2 × -2 × -2 = -8이기 때문입니다. 짝수 차수의 근(제곱, 4제곱근, 6제곱근 …)은 음수에 대해 실수 해가 없지만, 홀수 차수의 근(세제곱, 5제곱근, 7제곱근 …)은 항상 실수 해를 가지므로, 이 계산기는 짝수 차수일 때만 “실수 근 없음” 안내를 표시합니다.",
     "faq.q5": "제가 입력한 숫자가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 제곱근 계산기는 전적으로 브라우저 안에서 동작합니다 — 입력한 숫자, 선택한 근의 종류, 정밀도는 기기 밖으로 나가지 않으며 어떤 서버에도 업로드되거나 저장되지 않습니다. 회원가입도 추적도 없으므로 숙제나 빠른 검산을 위해 얼마든지 자유롭게 사용할 수 있고, 입력 내용은 완전히 비공개로 유지됩니다."
+    "faq.a5": "아니요. 이 제곱근 계산기는 전적으로 브라우저 안에서 동작합니다 — 입력한 숫자, 선택한 근의 종류, 정밀도는 기기 밖으로 나가지 않으며 어떤 서버에도 업로드되거나 저장되지 않습니다. 회원가입도 추적도 없으므로 숙제나 빠른 검산을 위해 얼마든지 자유롭게 사용할 수 있고, 입력 내용은 완전히 비공개로 유지됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

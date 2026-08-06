@@ -54,7 +54,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I use custom team names instead of Team 1, Team 2?",
     "faq.a4": "Yes — type your own names in the optional \"Team names\" box, one per line, such as Red, Blue and Green for a sports day or Team Falcon and Team Otter for a classroom project. Each line is matched to a team in order, and any teams left over automatically fall back to \"Team 1\", \"Team 2\" and so on. Leave the box empty to use the default numbered names for every team.",
     "faq.q5": "Is my list of names uploaded anywhere?",
-    "faq.a5": "No. The names, team names and settings you enter are processed entirely in your browser and saved only in your browser's localStorage so your list is there the next time you open the page. Nothing is uploaded to a server, there's no sign-up, and no one else can see your list — clearing your browser data removes it for good."
+    "faq.a5": "No. The names, team names and settings you enter are processed entirely in your browser and saved only in your browser's localStorage so your list is there the next time you open the page. Nothing is uploaded to a server, there's no sign-up, and no one else can see your list — clearing your browser data removes it for good.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -102,7 +107,12 @@ window.I18N_LOCALES = {
     "faq.q4": "可以自定义小组名称，而不用“第 1 组”“第 2 组”吗？",
     "faq.a4": "可以——在“小组名称”这个可选框里每行输入一个名字，比如运动会用“红队”“蓝队”“绿队”，或者班级项目用“猎鹰队”“水獭队”。每一行会按顺序对应一个小组，如果名称数量不够，剩下的小组会自动使用“第 1 组”“第 2 组”这样的默认名称。留空则所有小组都使用默认编号名称。",
     "faq.q5": "我输入的姓名会被上传吗？",
-    "faq.a5": "不会。你输入的姓名、小组名称和设置全部在浏览器本地处理，只保存在浏览器的 localStorage 中，方便你下次打开页面时恢复。不会上传到任何服务器，无需注册，也没有人能看到你的名单——清除浏览器数据即可彻底删除。"
+    "faq.a5": "不会。你输入的姓名、小组名称和设置全部在浏览器本地处理，只保存在浏览器的 localStorage 中，方便你下次打开页面时恢复。不会上传到任何服务器，无需注册，也没有人能看到你的名单——清除浏览器数据即可彻底删除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -150,7 +160,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मैं टीम 1, टीम 2 की जगह अपने नाम रख सकता हूँ?",
     "faq.a4": "हाँ — वैकल्पिक \"टीम के नाम\" बॉक्स में हर लाइन में एक नाम लिखें, जैसे स्पोर्ट्स डे के लिए लाल, नीला और हरा, या क्लास प्रोजेक्ट के लिए फ़ाल्कन टीम और ऑटर टीम। हर लाइन क्रम से एक टीम से जुड़ जाती है, और बची हुई टीमों के लिए अपने आप \"टीम 1\", \"टीम 2\" जैसे डिफ़ॉल्ट नाम इस्तेमाल हो जाते हैं। बॉक्स खाली छोड़ने पर सभी टीमों के लिए डिफ़ॉल्ट नंबर वाले नाम इस्तेमाल होंगे।",
     "faq.q5": "क्या मेरी नामों की सूची कहीं अपलोड होती है?",
-    "faq.a5": "नहीं। आपके द्वारा दर्ज किए गए नाम, टीम के नाम और सेटिंग्स पूरी तरह आपके ब्राउज़र में ही प्रोसेस होते हैं और केवल आपके ब्राउज़र के localStorage में सेव होते हैं, ताकि अगली बार पेज खोलने पर आपकी सूची वहीं मिले। कुछ भी सर्वर पर अपलोड नहीं होता, साइन-अप की ज़रूरत नहीं है, और कोई और आपकी सूची नहीं देख सकता — ब्राउज़र डेटा साफ़ करने पर यह हमेशा के लिए मिट जाती है।"
+    "faq.a5": "नहीं। आपके द्वारा दर्ज किए गए नाम, टीम के नाम और सेटिंग्स पूरी तरह आपके ब्राउज़र में ही प्रोसेस होते हैं और केवल आपके ब्राउज़र के localStorage में सेव होते हैं, ताकि अगली बार पेज खोलने पर आपकी सूची वहीं मिले। कुछ भी सर्वर पर अपलोड नहीं होता, साइन-अप की ज़रूरत नहीं है, और कोई और आपकी सूची नहीं देख सकता — ब्राउज़र डेटा साफ़ करने पर यह हमेशा के लिए मिट जाती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -198,7 +213,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo usar nombres de equipo personalizados en lugar de Equipo 1, Equipo 2?",
     "faq.a4": "Sí — escribe tus propios nombres en el campo opcional \"Nombres de los equipos\", uno por línea, como Rojo, Azul y Verde para un día deportivo, o Equipo Halcón y Equipo Nutria para un proyecto escolar. Cada línea se asigna a un equipo en orden, y los equipos que sobren usarán automáticamente \"Equipo 1\", \"Equipo 2\", etc. Deja el campo vacío para usar los nombres numerados por defecto en todos los equipos.",
     "faq.q5": "¿Se sube a algún lugar la lista de nombres que ingreso?",
-    "faq.a5": "No. Los nombres, los nombres de los equipos y la configuración que ingresas se procesan totalmente en tu navegador y solo se guardan en el localStorage de tu navegador, así que tu lista sigue ahí la próxima vez que abras la página. No se sube nada a un servidor, no hace falta registrarse y nadie más puede ver tu lista — al borrar los datos del navegador se elimina por completo."
+    "faq.a5": "No. Los nombres, los nombres de los equipos y la configuración que ingresas se procesan totalmente en tu navegador y solo se guardan en el localStorage de tu navegador, así que tu lista sigue ahí la próxima vez que abras la página. No se sube nada a un servidor, no hace falta registrarse y nadie más puede ver tu lista — al borrar los datos del navegador se elimina por completo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -246,7 +266,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني استخدام أسماء فرق مخصصة بدلًا من الفريق 1، الفريق 2؟",
     "faq.a4": "نعم — اكتب أسماءك الخاصة في حقل \"أسماء الفرق\" الاختياري، اسمًا في كل سطر، مثل الأحمر والأزرق والأخضر ليوم رياضي، أو فريق الصقر وفريق القندس لمشروع صفّي. يُطابَق كل سطر مع فريق بالترتيب، وتحصل الفرق المتبقية تلقائيًا على الأسماء الافتراضية \"الفريق 1\"، \"الفريق 2\" وهكذا. اترك الحقل فارغًا لاستخدام الأسماء المرقّمة الافتراضية لجميع الفرق.",
     "faq.q5": "هل تُرفَع قائمة الأسماء الخاصة بي إلى أي مكان؟",
-    "faq.a5": "لا. تتم معالجة الأسماء وأسماء الفرق والإعدادات التي تُدخلها بالكامل داخل متصفحك، وتُحفظ فقط في localStorage الخاص بالمتصفح، بحيث تبقى قائمتك موجودة في المرة القادمة التي تفتح فيها الصفحة. لا يُرفَع أي شيء إلى خادم، ولا حاجة للتسجيل، ولا يمكن لأي شخص آخر رؤية قائمتك — ومسح بيانات المتصفح يحذفها نهائيًا."
+    "faq.a5": "لا. تتم معالجة الأسماء وأسماء الفرق والإعدادات التي تُدخلها بالكامل داخل متصفحك، وتُحفظ فقط في localStorage الخاص بالمتصفح، بحيث تبقى قائمتك موجودة في المرة القادمة التي تفتح فيها الصفحة. لا يُرفَع أي شيء إلى خادم، ولا حاجة للتسجيل، ولا يمكن لأي شخص آخر رؤية قائمتك — ومسح بيانات المتصفح يحذفها نهائيًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -294,7 +319,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je utiliser des noms d'équipe personnalisés au lieu d'Équipe 1, Équipe 2 ?",
     "faq.a4": "Oui — saisissez vos propres noms dans le champ facultatif \"Noms des équipes\", un par ligne, comme Rouge, Bleu et Vert pour une journée sportive, ou Équipe Faucon et Équipe Loutre pour un projet de classe. Chaque ligne est associée à une équipe dans l'ordre, et les équipes restantes reprennent automatiquement les noms par défaut \"Équipe 1\", \"Équipe 2\", etc. Laissez le champ vide pour utiliser les noms numérotés par défaut pour toutes les équipes.",
     "faq.q5": "Ma liste de noms est-elle envoyée quelque part ?",
-    "faq.a5": "Non. Les noms, les noms d'équipe et les paramètres que vous saisissez sont traités entièrement dans votre navigateur et enregistrés uniquement dans le localStorage de votre navigateur, afin que votre liste soit toujours là la prochaine fois que vous ouvrez la page. Rien n'est envoyé à un serveur, aucune inscription n'est nécessaire, et personne d'autre ne peut voir votre liste — effacer les données de votre navigateur la supprime définitivement."
+    "faq.a5": "Non. Les noms, les noms d'équipe et les paramètres que vous saisissez sont traités entièrement dans votre navigateur et enregistrés uniquement dans le localStorage de votre navigateur, afin que votre liste soit toujours là la prochaine fois que vous ouvrez la page. Rien n'est envoyé à un serveur, aucune inscription n'est nécessaire, et personne d'autre ne peut voir votre liste — effacer les données de votre navigateur la supprime définitivement.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -342,7 +372,12 @@ window.I18N_LOCALES = {
     "faq.q4": "টিম ১, টিম ২ এর বদলে কি নিজের পছন্দমতো টিমের নাম দেওয়া যায়?",
     "faq.a4": "হ্যাঁ — ঐচ্ছিক \"টিমের নাম\" বক্সে প্রতি লাইনে একটি করে নিজের নাম লিখুন, যেমন স্পোর্টস ডে-র জন্য লাল, নীল ও সবুজ, অথবা ক্লাস প্রজেক্টের জন্য ফ্যালকন টিম ও অটার টিম। প্রতিটি লাইন ক্রমানুসারে একটি টিমের সঙ্গে মিলে যায়, আর বাকি টিমগুলো এমনিতেই \"টিম ১\", \"টিম ২\" এর মতো ডিফল্ট নাম পায়। বক্সটি খালি রাখলে সব টিমেই ডিফল্ট নম্বরযুক্ত নাম ব্যবহার হবে।",
     "faq.q5": "আমার নামের তালিকা কি কোথাও আপলোড হয়?",
-    "faq.a5": "না। আপনার দেওয়া নাম, টিমের নাম ও সেটিংস সম্পূর্ণভাবে আপনার ব্রাউজারেই প্রসেস হয় এবং শুধু ব্রাউজারের localStorage-এ সংরক্ষিত থাকে, তাই পরের বার পেজ খুললে আপনার তালিকা সেখানেই থাকবে। কোনো কিছু সার্ভারে আপলোড হয় না, সাইন-আপের দরকার নেই, আর অন্য কেউ আপনার তালিকা দেখতে পারবে না — ব্রাউজারের ডেটা মুছে ফেললে তা চিরতরে মুছে যায়।"
+    "faq.a5": "না। আপনার দেওয়া নাম, টিমের নাম ও সেটিংস সম্পূর্ণভাবে আপনার ব্রাউজারেই প্রসেস হয় এবং শুধু ব্রাউজারের localStorage-এ সংরক্ষিত থাকে, তাই পরের বার পেজ খুললে আপনার তালিকা সেখানেই থাকবে। কোনো কিছু সার্ভারে আপলোড হয় না, সাইন-আপের দরকার নেই, আর অন্য কেউ আপনার তালিকা দেখতে পারবে না — ব্রাউজারের ডেটা মুছে ফেললে তা চিরতরে মুছে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -390,7 +425,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Posso usar nomes de time personalizados em vez de Time 1, Time 2?",
     "faq.a4": "Sim — digite seus próprios nomes no campo opcional \"Nomes dos times\", um por linha, como Vermelho, Azul e Verde para um dia esportivo, ou Time Falcão e Time Lontra para um projeto escolar. Cada linha é associada a um time em ordem, e os times restantes usam automaticamente os nomes padrão \"Time 1\", \"Time 2\" e assim por diante. Deixe o campo vazio para usar os nomes numerados padrão em todos os times.",
     "faq.q5": "Minha lista de nomes é enviada para algum lugar?",
-    "faq.a5": "Não. Os nomes, os nomes dos times e as configurações que você insere são processados inteiramente no seu navegador e salvos apenas no localStorage do seu navegador, para que sua lista continue lá na próxima vez que você abrir a página. Nada é enviado a um servidor, não é necessário cadastro e ninguém mais consegue ver sua lista — limpar os dados do navegador remove tudo definitivamente."
+    "faq.a5": "Não. Os nomes, os nomes dos times e as configurações que você insere são processados inteiramente no seu navegador e salvos apenas no localStorage do seu navegador, para que sua lista continue lá na próxima vez que você abrir a página. Nada é enviado a um servidor, não é necessário cadastro e ninguém mais consegue ver sua lista — limpar os dados do navegador remove tudo definitivamente.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -438,7 +478,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Можно ли задать свои названия команд вместо «Команда 1», «Команда 2»?",
     "faq.a4": "Да — впишите свои названия в необязательное поле «Названия команд», по одному в строке, например Красные, Синие и Зелёные для спортивного дня или Команда Соколов и Команда Выдр для школьного проекта. Каждая строка последовательно закрепляется за командой, а для оставшихся команд автоматически используются названия по умолчанию «Команда 1», «Команда 2» и так далее. Оставьте поле пустым, чтобы все команды получили стандартные пронумерованные названия.",
     "faq.q5": "Загружается ли куда-то мой список имён?",
-    "faq.a5": "Нет. Введённые имена, названия команд и настройки полностью обрабатываются в вашем браузере и сохраняются только в localStorage браузера, поэтому список остаётся на месте при следующем открытии страницы. Ничего не отправляется на сервер, регистрация не требуется, и никто другой не увидит ваш список — очистка данных браузера полностью его удаляет."
+    "faq.a5": "Нет. Введённые имена, названия команд и настройки полностью обрабатываются в вашем браузере и сохраняются только в localStorage браузера, поэтому список остаётся на месте при следующем открытии страницы. Ничего не отправляется на сервер, регистрация не требуется, и никто другой не увидит ваш список — очистка данных браузера полностью его удаляет.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -486,7 +531,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میں ٹیم 1، ٹیم 2 کی بجائے اپنی مرضی کے ٹیم نام استعمال کر سکتا ہوں؟",
     "faq.a4": "جی ہاں — اختیاری \"ٹیم کے نام\" باکس میں ہر لائن میں ایک نام لکھیں، جیسے اسپورٹس ڈے کے لیے لال، نیلا اور سبز، یا کلاس پروجیکٹ کے لیے فالکن ٹیم اور اوٹر ٹیم۔ ہر لائن ترتیب سے ایک ٹیم کے ساتھ منسلک ہو جاتی ہے، اور بچ جانے والی ٹیموں کو خودکار طور پر \"ٹیم 1\"، \"ٹیم 2\" جیسے ڈیفالٹ نام مل جاتے ہیں۔ باکس خالی چھوڑنے پر تمام ٹیموں کے لیے ڈیفالٹ نمبر والے نام استعمال ہوں گے۔",
     "faq.q5": "کیا میری ناموں کی فہرست کہیں اپ لوڈ ہوتی ہے؟",
-    "faq.a5": "نہیں۔ آپ کے درج کردہ نام، ٹیم کے نام اور ترتیبات مکمل طور پر آپ کے براؤزر میں ہی پروسیس ہوتی ہیں اور صرف آپ کے براؤزر کے localStorage میں محفوظ ہوتی ہیں، تاکہ اگلی بار پیج کھولنے پر آپ کی فہرست وہیں موجود ہو۔ کچھ بھی سرور پر اپ لوڈ نہیں ہوتا، سائن اپ کی ضرورت نہیں، اور کوئی اور آپ کی فہرست نہیں دیکھ سکتا — براؤزر ڈیٹا صاف کرنے پر یہ ہمیشہ کے لیے مٹ جاتی ہے۔"
+    "faq.a5": "نہیں۔ آپ کے درج کردہ نام، ٹیم کے نام اور ترتیبات مکمل طور پر آپ کے براؤزر میں ہی پروسیس ہوتی ہیں اور صرف آپ کے براؤزر کے localStorage میں محفوظ ہوتی ہیں، تاکہ اگلی بار پیج کھولنے پر آپ کی فہرست وہیں موجود ہو۔ کچھ بھی سرور پر اپ لوڈ نہیں ہوتا، سائن اپ کی ضرورت نہیں، اور کوئی اور آپ کی فہرست نہیں دیکھ سکتا — براؤزر ڈیٹا صاف کرنے پر یہ ہمیشہ کے لیے مٹ جاتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -534,7 +584,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah saya memakai nama tim sendiri, bukan Tim 1, Tim 2?",
     "faq.a4": "Bisa — ketik nama pilihan Anda di kolom opsional \"Nama tim\", satu per baris, misalnya Merah, Biru, dan Hijau untuk hari olahraga, atau Tim Elang dan Tim Berang-berang untuk proyek kelas. Setiap baris dipasangkan dengan satu tim secara berurutan, dan tim yang tersisa otomatis memakai nama default \"Tim 1\", \"Tim 2\", dan seterusnya. Biarkan kolom kosong untuk memakai nama bernomor default pada semua tim.",
     "faq.q5": "Apakah daftar nama saya diunggah ke suatu tempat?",
-    "faq.a5": "Tidak. Nama, nama tim, dan pengaturan yang Anda masukkan diproses sepenuhnya di browser Anda dan hanya disimpan di localStorage browser, sehingga daftar Anda tetap ada saat membuka halaman ini lagi. Tidak ada yang diunggah ke server, tidak perlu mendaftar, dan tidak ada orang lain yang bisa melihat daftar Anda — menghapus data browser akan menghapusnya secara permanen."
+    "faq.a5": "Tidak. Nama, nama tim, dan pengaturan yang Anda masukkan diproses sepenuhnya di browser Anda dan hanya disimpan di localStorage browser, sehingga daftar Anda tetap ada saat membuka halaman ini lagi. Tidak ada yang diunggah ke server, tidak perlu mendaftar, dan tidak ada orang lain yang bisa melihat daftar Anda — menghapus data browser akan menghapusnya secara permanen.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -582,7 +637,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich eigene Teamnamen statt Team 1, Team 2 verwenden?",
     "faq.a4": "Ja — trage im optionalen Feld \"Teamnamen\" eigene Namen ein, einen pro Zeile, etwa Rot, Blau und Grün für einen Sporttag oder Team Falke und Team Otter für ein Klassenprojekt. Jede Zeile wird der Reihe nach einem Team zugeordnet, und übrige Teams erhalten automatisch die Standardnamen \"Team 1\", \"Team 2\" usw. Lass das Feld leer, um für alle Teams die nummerierten Standardnamen zu verwenden.",
     "faq.q5": "Wird meine Namensliste irgendwohin hochgeladen?",
-    "faq.a5": "Nein. Die Namen, Teamnamen und Einstellungen, die du eingibst, werden vollständig in deinem Browser verarbeitet und nur im localStorage deines Browsers gespeichert, sodass deine Liste beim nächsten Öffnen der Seite noch vorhanden ist. Es wird nichts an einen Server hochgeladen, keine Registrierung ist nötig, und niemand sonst kann deine Liste sehen — das Löschen deiner Browserdaten entfernt sie endgültig."
+    "faq.a5": "Nein. Die Namen, Teamnamen und Einstellungen, die du eingibst, werden vollständig in deinem Browser verarbeitet und nur im localStorage deines Browsers gespeichert, sodass deine Liste beim nächsten Öffnen der Seite noch vorhanden ist. Es wird nichts an einen Server hochgeladen, keine Registrierung ist nötig, und niemand sonst kann deine Liste sehen — das Löschen deiner Browserdaten entfernt sie endgültig.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -630,7 +690,12 @@ window.I18N_LOCALES = {
     "faq.q4": "「チーム1」「チーム2」ではなく好きなチーム名を付けられますか？",
     "faq.a4": "はい——任意項目の「チーム名」欄に1行に1つずつ名前を入力してください。運動会ならレッド・ブルー・グリーン、クラスのプロジェクトならファルコンチーム・オッターチームのように自由に決められます。各行は順番にチームへ割り当てられ、名前が足りないチームは自動的に「チーム1」「チーム2」といった既定の名前になります。空欄のままにすると、すべてのチームが既定の番号名になります。",
     "faq.q5": "入力した名前はどこかにアップロードされますか？",
-    "faq.a5": "いいえ。入力した名前・チーム名・設定はすべてブラウザ内だけで処理され、ブラウザのlocalStorageにのみ保存されるため、次回このページを開いたときに復元されます。サーバーへのアップロードや会員登録は一切不要で、他の誰にもリストは見えません——ブラウザのデータを消去すれば完全に削除されます。"
+    "faq.a5": "いいえ。入力した名前・チーム名・設定はすべてブラウザ内だけで処理され、ブラウザのlocalStorageにのみ保存されるため、次回このページを開いたときに復元されます。サーバーへのアップロードや会員登録は一切不要で、他の誰にもリストは見えません——ブラウザのデータを消去すれば完全に削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -678,6 +743,11 @@ window.I18N_LOCALES = {
     "faq.q4": "\"1팀\", \"2팀\" 대신 원하는 팀 이름을 쓸 수 있나요?",
     "faq.a4": "네 — 선택 항목인 \"팀 이름\" 칸에 한 줄에 하나씩 원하는 이름을 입력하면 됩니다. 운동회라면 레드팀, 블루팀, 그린팀처럼, 학급 프로젝트라면 독수리팀, 수달팀처럼 자유롭게 지을 수 있습니다. 각 줄은 순서대로 팀에 매칭되며, 이름이 부족한 팀은 자동으로 \"1팀\", \"2팀\" 같은 기본 이름으로 채워집니다. 칸을 비워두면 모든 팀이 기본 번호 이름을 사용합니다.",
     "faq.q5": "입력한 이름 목록이 어딘가로 업로드되나요?",
-    "faq.a5": "아니요. 입력한 이름, 팀 이름, 설정값은 전부 브라우저 안에서만 처리되며 브라우저의 localStorage에만 저장되어 다음에 페이지를 열 때 그대로 복원됩니다. 서버로 업로드되지 않고 회원가입도 필요 없으며, 다른 누구도 목록을 볼 수 없습니다 — 브라우저 데이터를 지우면 완전히 삭제됩니다."
+    "faq.a5": "아니요. 입력한 이름, 팀 이름, 설정값은 전부 브라우저 안에서만 처리되며 브라우저의 localStorage에만 저장되어 다음에 페이지를 열 때 그대로 복원됩니다. 서버로 업로드되지 않고 회원가입도 필요 없으며, 다른 누구도 목록을 볼 수 없습니다 — 브라우저 데이터를 지우면 완전히 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

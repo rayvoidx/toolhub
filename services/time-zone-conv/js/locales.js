@@ -67,7 +67,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I read the +1 day / -1 day badge when scheduling a meeting across time zones?",
     "faq.a4": "The badge tells you whether a city lands on a different calendar day from your base time. Say you set 4:00 PM in Los Angeles for a call: Tokyo may show the next morning with a +1 day badge, while it is still the same day for London. Checking these badges before you send an invite is the easiest way to avoid booking someone for 9 a.m. when it is really 2 a.m. the following night for them.",
     "faq.q5": "What time does the New York Stock Exchange open in my time zone?",
-    "faq.a5": "The NYSE opens at 9:30 AM Eastern Time and closes at 4:00 PM Eastern. To see that in your own time, set the base time zone to New York, enter 9:30 AM, then add your own city as a card — the converter shows the exact local time and whether it falls on the same day. Because it follows daylight saving automatically, the answer stays correct whether New York is on EST in winter or EDT in summer."
+    "faq.a5": "The NYSE opens at 9:30 AM Eastern Time and closes at 4:00 PM Eastern. To see that in your own time, set the base time zone to New York, enter 9:30 AM, then add your own city as a card — the converter shows the exact local time and whether it falls on the same day. Because it follows daylight saving automatically, the answer stays correct whether New York is on EST in winter or EDT in summer.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -119,7 +124,12 @@ window.I18N_LOCALES = {
     "faq.q4": "跨时区安排会议时，如何看懂 +1 天 / -1 天 标签？",
     "faq.a4": "该标签告诉你某城市相对你的基准时间是否落在不同的日历日。比如你把通话定在洛杉矶下午 4:00：东京可能显示次日清晨并带 +1 天标签，而伦敦仍是同一天。发出邀请前先看看这些标签，是避免把别人约在“上午 9 点”其实是他们次日凌晨 2 点的最简单方法。",
     "faq.q5": "纽约证券交易所在我的时区几点开盘？",
-    "faq.a5": "纽约证券交易所（NYSE）于东部时间上午 9:30 开盘、下午 4:00 收盘。要换算成你自己的时间，把基准时区设为纽约、输入 9:30 AM，再把你所在的城市添加为卡片——转换器会显示确切的本地时间以及是否在同一天。由于它自动跟随夏令时，无论纽约处于冬季 EST 还是夏季 EDT，结果都保持正确。"
+    "faq.a5": "纽约证券交易所（NYSE）于东部时间上午 9:30 开盘、下午 4:00 收盘。要换算成你自己的时间，把基准时区设为纽约、输入 9:30 AM，再把你所在的城市添加为卡片——转换器会显示确切的本地时间以及是否在同一天。由于它自动跟随夏令时，无论纽约处于冬季 EST 还是夏季 EDT，结果都保持正确。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -171,7 +181,12 @@ window.I18N_LOCALES = {
     "faq.q4": "टाइम ज़ोन के पार मीटिंग तय करते समय +1 दिन / -1 दिन बैज कैसे पढ़ें?",
     "faq.a4": "बैज बताता है कि कोई शहर आपके आधार समय से अलग कैलेंडर दिन पर है या नहीं। मान लीजिए आपने कॉल के लिए लॉस एंजिल्स में शाम 4:00 तय किया: टोक्यो अगली सुबह +1 दिन बैज के साथ दिख सकता है, जबकि लंदन में वही दिन है। निमंत्रण भेजने से पहले इन बैज को देख लेना, किसी को “सुबह 9 बजे” बुलाने से बचने का सबसे आसान तरीका है, जबकि उनके यहाँ असल में अगली रात के 2 बजे हों।",
     "faq.q5": "न्यूयॉर्क स्टॉक एक्सचेंज मेरे टाइम ज़ोन में कितने बजे खुलता है?",
-    "faq.a5": "NYSE पूर्वी समय के अनुसार सुबह 9:30 बजे खुलता और शाम 4:00 बजे बंद होता है। इसे अपने समय में देखने के लिए आधार टाइम ज़ोन को न्यूयॉर्क करें, 9:30 AM डालें, फिर अपने शहर को कार्ड के रूप में जोड़ें — कन्वर्टर सटीक स्थानीय समय और वही दिन है या नहीं, दोनों दिखाता है। चूँकि यह डेलाइट सेविंग अपने-आप निभाता है, न्यूयॉर्क सर्दियों में EST हो या गर्मियों में EDT, नतीजा सही रहता है।"
+    "faq.a5": "NYSE पूर्वी समय के अनुसार सुबह 9:30 बजे खुलता और शाम 4:00 बजे बंद होता है। इसे अपने समय में देखने के लिए आधार टाइम ज़ोन को न्यूयॉर्क करें, 9:30 AM डालें, फिर अपने शहर को कार्ड के रूप में जोड़ें — कन्वर्टर सटीक स्थानीय समय और वही दिन है या नहीं, दोनों दिखाता है। चूँकि यह डेलाइट सेविंग अपने-आप निभाता है, न्यूयॉर्क सर्दियों में EST हो या गर्मियों में EDT, नतीजा सही रहता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -223,7 +238,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo leo la etiqueta +1 día / -1 día al programar una reunión entre zonas horarias?",
     "faq.a4": "La etiqueta te dice si una ciudad cae en un día de calendario distinto al de tu hora base. Imagina que fijas una llamada a las 16:00 en Los Ángeles: Tokio puede mostrar la mañana siguiente con una etiqueta +1 día, mientras que en Londres sigue siendo el mismo día. Revisar estas etiquetas antes de enviar la invitación es la forma más fácil de no citar a alguien a las 9 de la mañana cuando en realidad son las 2 de la madrugada del día siguiente para esa persona.",
     "faq.q5": "¿A qué hora abre la Bolsa de Nueva York en mi zona horaria?",
-    "faq.a5": "La NYSE abre a las 9:30 de la mañana hora del Este y cierra a las 16:00 hora del Este. Para verlo en tu propia hora, pon la zona horaria base en Nueva York, introduce 9:30 AM y añade tu ciudad como tarjeta: el conversor muestra la hora local exacta y si cae el mismo día. Como sigue el horario de verano automáticamente, la respuesta es correcta tanto si Nueva York está en EST en invierno como en EDT en verano."
+    "faq.a5": "La NYSE abre a las 9:30 de la mañana hora del Este y cierra a las 16:00 hora del Este. Para verlo en tu propia hora, pon la zona horaria base en Nueva York, introduce 9:30 AM y añade tu ciudad como tarjeta: el conversor muestra la hora local exacta y si cae el mismo día. Como sigue el horario de verano automáticamente, la respuesta es correcta tanto si Nueva York está en EST en invierno como en EDT en verano.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -275,7 +295,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أقرأ علامة +1 يوم / -1 يوم عند تحديد اجتماع عبر المناطق الزمنية؟",
     "faq.a4": "تخبرك العلامة إن كانت مدينة تقع في يوم تقويمي مختلف عن وقتك الأساسي. لنفترض أنك حدّدت مكالمة الساعة 4:00 مساءً في لوس أنجلوس: قد تظهر طوكيو صباح اليوم التالي بعلامة +1 يوم، بينما تبقى لندن في اليوم نفسه. مراجعة هذه العلامات قبل إرسال الدعوة أسهل طريقة لتجنّب تحديد موعد لأحدهم الساعة 9 صباحًا بينما هي في الحقيقة الثانية فجرًا من اليوم التالي عنده.",
     "faq.q5": "متى تفتح بورصة نيويورك بتوقيت منطقتي الزمنية؟",
-    "faq.a5": "تفتح بورصة نيويورك (NYSE) الساعة 9:30 صباحًا بالتوقيت الشرقي وتُغلق الساعة 4:00 مساءً بالتوقيت الشرقي. لرؤية ذلك بوقتك، اجعل المنطقة الزمنية الأساسية نيويورك، وأدخل 9:30 صباحًا، ثم أضف مدينتك كبطاقة — يعرض المحوّل الوقت المحلي الدقيق وهل يقع في اليوم نفسه. ولأنه يتبع التوقيت الصيفي تلقائيًا، تبقى النتيجة صحيحة سواء كانت نيويورك على EST شتاءً أو EDT صيفًا."
+    "faq.a5": "تفتح بورصة نيويورك (NYSE) الساعة 9:30 صباحًا بالتوقيت الشرقي وتُغلق الساعة 4:00 مساءً بالتوقيت الشرقي. لرؤية ذلك بوقتك، اجعل المنطقة الزمنية الأساسية نيويورك، وأدخل 9:30 صباحًا، ثم أضف مدينتك كبطاقة — يعرض المحوّل الوقت المحلي الدقيق وهل يقع في اليوم نفسه. ولأنه يتبع التوقيت الصيفي تلقائيًا، تبقى النتيجة صحيحة سواء كانت نيويورك على EST شتاءً أو EDT صيفًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -327,7 +352,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment lire l'étiquette +1 jour / -1 jour pour planifier une réunion entre fuseaux horaires ?",
     "faq.a4": "L'étiquette indique si une ville tombe un jour de calendrier différent de votre heure de référence. Supposons que vous fixiez un appel à 16 h à Los Angeles : Tokyo peut afficher le lendemain matin avec une étiquette +1 jour, alors qu'à Londres c'est encore le même jour. Vérifier ces étiquettes avant d'envoyer l'invitation est le moyen le plus simple d'éviter de convier quelqu'un à 9 h alors qu'il est en réalité 2 h du matin le lendemain chez lui.",
     "faq.q5": "À quelle heure la Bourse de New York ouvre-t-elle dans mon fuseau horaire ?",
-    "faq.a5": "La NYSE ouvre à 9 h 30 heure de l'Est et ferme à 16 h heure de l'Est. Pour le voir à votre heure, réglez le fuseau de référence sur New York, saisissez 9 h 30, puis ajoutez votre ville en carte : le convertisseur affiche l'heure locale exacte et indique si c'est le même jour. Comme il suit l'heure d'été automatiquement, la réponse reste correcte que New York soit à l'heure EST en hiver ou EDT en été."
+    "faq.a5": "La NYSE ouvre à 9 h 30 heure de l'Est et ferme à 16 h heure de l'Est. Pour le voir à votre heure, réglez le fuseau de référence sur New York, saisissez 9 h 30, puis ajoutez votre ville en carte : le convertisseur affiche l'heure locale exacte et indique si c'est le même jour. Comme il suit l'heure d'été automatiquement, la réponse reste correcte que New York soit à l'heure EST en hiver ou EDT en été.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -379,7 +409,12 @@ window.I18N_LOCALES = {
     "faq.q4": "টাইম জোন পেরিয়ে মিটিং ঠিক করার সময় +1 দিন / -1 দিন ব্যাজ কীভাবে পড়ব?",
     "faq.a4": "ব্যাজটি জানায় কোনো শহর আপনার মূল সময় থেকে আলাদা ক্যালেন্ডার দিনে পড়ছে কি না। ধরুন লস অ্যাঞ্জেলেসে বিকেল 4:00-এ কল ঠিক করলেন: টোকিও পরদিন সকালে +1 দিন ব্যাজসহ দেখাতে পারে, অথচ লন্ডনে তখনও একই দিন। আমন্ত্রণ পাঠানোর আগে এই ব্যাজগুলো দেখা নেওয়াই কাউকে “সকাল 9টা”-য় ডাকা এড়ানোর সবচেয়ে সহজ উপায়, যখন তার ওখানে আসলে পরদিন রাত 2টা।",
     "faq.q5": "নিউ ইয়র্ক স্টক এক্সচেঞ্জ আমার টাইম জোনে কখন খোলে?",
-    "faq.a5": "NYSE ইস্টার্ন টাইমে সকাল 9:30-এ খোলে ও বিকেল 4:00-এ বন্ধ হয়। এটি আপনার সময়ে দেখতে মূল টাইম জোন নিউ ইয়র্ক করুন, 9:30 AM দিন, তারপর আপনার শহরকে কার্ড হিসেবে যোগ করুন — কনভার্টার সঠিক স্থানীয় সময় এবং একই দিন কি না দুটোই দেখায়। যেহেতু এটি ডেলাইট সেভিং নিজে থেকেই মানে, নিউ ইয়র্ক শীতে EST হোক বা গ্রীষ্মে EDT, ফলাফল সঠিক থাকে।"
+    "faq.a5": "NYSE ইস্টার্ন টাইমে সকাল 9:30-এ খোলে ও বিকেল 4:00-এ বন্ধ হয়। এটি আপনার সময়ে দেখতে মূল টাইম জোন নিউ ইয়র্ক করুন, 9:30 AM দিন, তারপর আপনার শহরকে কার্ড হিসেবে যোগ করুন — কনভার্টার সঠিক স্থানীয় সময় এবং একই দিন কি না দুটোই দেখায়। যেহেতু এটি ডেলাইট সেভিং নিজে থেকেই মানে, নিউ ইয়র্ক শীতে EST হোক বা গ্রীষ্মে EDT, ফলাফল সঠিক থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -431,7 +466,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como leio a etiqueta +1 dia / -1 dia ao agendar uma reunião entre fusos horários?",
     "faq.a4": "A etiqueta diz se uma cidade cai em um dia de calendário diferente do seu horário base. Digamos que você marque uma chamada às 16h em Los Angeles: Tóquio pode mostrar a manhã seguinte com uma etiqueta +1 dia, enquanto em Londres ainda é o mesmo dia. Conferir essas etiquetas antes de enviar o convite é a forma mais fácil de não marcar alguém para as 9h quando, na verdade, são 2h da madrugada do dia seguinte para essa pessoa.",
     "faq.q5": "A que horas a Bolsa de Nova York abre no meu fuso horário?",
-    "faq.a5": "A NYSE abre às 9h30 no horário do Leste e fecha às 16h no horário do Leste. Para ver isso no seu horário, defina o fuso base como Nova York, digite 9h30 e adicione sua cidade como cartão — o conversor mostra o horário local exato e se cai no mesmo dia. Como segue o horário de verão automaticamente, a resposta continua correta esteja Nova York em EST no inverno ou EDT no verão."
+    "faq.a5": "A NYSE abre às 9h30 no horário do Leste e fecha às 16h no horário do Leste. Para ver isso no seu horário, defina o fuso base como Nova York, digite 9h30 e adicione sua cidade como cartão — o conversor mostra o horário local exato e se cai no mesmo dia. Como segue o horário de verão automaticamente, a resposta continua correta esteja Nova York em EST no inverno ou EDT no verão.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -483,7 +523,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как читать метку +1 день / -1 день при планировании встречи между часовыми поясами?",
     "faq.a4": "Метка показывает, попадает ли город на другой календарный день относительно вашего базового времени. Допустим, вы назначили звонок на 16:00 в Лос-Анджелесе: Токио может показывать следующее утро с меткой +1 день, тогда как в Лондоне ещё тот же день. Проверить эти метки перед отправкой приглашения — самый простой способ не назначить кому-то «9 утра», когда у него на самом деле 2 часа ночи следующего дня.",
     "faq.q5": "Во сколько открывается Нью-Йоркская фондовая биржа в моём часовом поясе?",
-    "faq.a5": "NYSE открывается в 9:30 по восточному времени и закрывается в 16:00 по восточному времени. Чтобы увидеть это в своём времени, задайте базовый пояс Нью-Йорк, введите 9:30, затем добавьте свой город карточкой — конвертер покажет точное местное время и попадает ли оно на тот же день. Поскольку он следует за летним временем автоматически, ответ остаётся верным, находится ли Нью-Йорк на EST зимой или на EDT летом."
+    "faq.a5": "NYSE открывается в 9:30 по восточному времени и закрывается в 16:00 по восточному времени. Чтобы увидеть это в своём времени, задайте базовый пояс Нью-Йорк, введите 9:30, затем добавьте свой город карточкой — конвертер покажет точное местное время и попадает ли оно на тот же день. Поскольку он следует за летним временем автоматически, ответ остаётся верным, находится ли Нью-Йорк на EST зимой или на EDT летом.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -535,7 +580,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ٹائم زونز کے پار میٹنگ طے کرتے وقت +1 دن / -1 دن بیج کیسے پڑھیں؟",
     "faq.a4": "بیج بتاتا ہے کہ کوئی شہر آپ کے بنیادی وقت سے مختلف کیلنڈر دن پر ہے یا نہیں۔ فرض کریں آپ نے لاس اینجلس میں شام 4:00 بجے کال طے کی: ٹوکیو اگلی صبح +1 دن بیج کے ساتھ دکھ سکتا ہے، جبکہ لندن میں وہی دن ہے۔ دعوت بھیجنے سے پہلے ان بیجز کو دیکھ لینا کسی کو “صبح 9 بجے” بلانے سے بچنے کا سب سے آسان طریقہ ہے، جبکہ اس کے ہاں دراصل اگلی رات کے 2 بج رہے ہوں۔",
     "faq.q5": "نیویارک اسٹاک ایکسچینج میرے ٹائم زون میں کتنے بجے کھلتا ہے؟",
-    "faq.a5": "NYSE مشرقی وقت کے مطابق صبح 9:30 بجے کھلتا اور شام 4:00 بجے بند ہوتا ہے۔ اسے اپنے وقت میں دیکھنے کے لیے بنیادی ٹائم زون کو نیویارک کریں، 9:30 AM درج کریں، پھر اپنے شہر کو کارڈ کے طور پر شامل کریں — کنورٹر درست مقامی وقت اور یہ کہ وہی دن ہے یا نہیں، دونوں دکھاتا ہے۔ چونکہ یہ ڈے لائٹ سیونگ خود بخود مانتا ہے، نیویارک سردیوں میں EST ہو یا گرمیوں میں EDT، نتیجہ درست رہتا ہے۔"
+    "faq.a5": "NYSE مشرقی وقت کے مطابق صبح 9:30 بجے کھلتا اور شام 4:00 بجے بند ہوتا ہے۔ اسے اپنے وقت میں دیکھنے کے لیے بنیادی ٹائم زون کو نیویارک کریں، 9:30 AM درج کریں، پھر اپنے شہر کو کارڈ کے طور پر شامل کریں — کنورٹر درست مقامی وقت اور یہ کہ وہی دن ہے یا نہیں، دونوں دکھاتا ہے۔ چونکہ یہ ڈے لائٹ سیونگ خود بخود مانتا ہے، نیویارک سردیوں میں EST ہو یا گرمیوں میں EDT، نتیجہ درست رہتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -587,7 +637,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana membaca label +1 hari / -1 hari saat menjadwalkan rapat lintas zona waktu?",
     "faq.a4": "Label ini memberi tahu apakah sebuah kota jatuh di hari kalender yang berbeda dari waktu dasar Anda. Misalnya Anda menetapkan panggilan pukul 16.00 di Los Angeles: Tokyo bisa menampilkan pagi hari berikutnya dengan label +1 hari, sementara di London masih hari yang sama. Memeriksa label ini sebelum mengirim undangan adalah cara termudah agar tidak mengundang seseorang pukul 9 pagi padahal sebenarnya pukul 2 dini hari keesokan harinya bagi dia.",
     "faq.q5": "Pukul berapa Bursa Efek New York buka di zona waktu saya?",
-    "faq.a5": "NYSE buka pukul 9.30 pagi Waktu Bagian Timur dan tutup pukul 16.00 Waktu Bagian Timur. Untuk melihatnya dalam waktu Anda, setel zona waktu dasar ke New York, masukkan 9.30 AM, lalu tambahkan kota Anda sebagai kartu — konverter menampilkan waktu lokal persis dan apakah jatuh di hari yang sama. Karena mengikuti waktu musim panas otomatis, jawabannya tetap benar baik New York sedang EST di musim dingin maupun EDT di musim panas."
+    "faq.a5": "NYSE buka pukul 9.30 pagi Waktu Bagian Timur dan tutup pukul 16.00 Waktu Bagian Timur. Untuk melihatnya dalam waktu Anda, setel zona waktu dasar ke New York, masukkan 9.30 AM, lalu tambahkan kota Anda sebagai kartu — konverter menampilkan waktu lokal persis dan apakah jatuh di hari yang sama. Karena mengikuti waktu musim panas otomatis, jawabannya tetap benar baik New York sedang EST di musim dingin maupun EDT di musim panas.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -639,7 +694,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie lese ich das +1-Tag- / -1-Tag-Label beim Planen eines Meetings über Zeitzonen hinweg?",
     "faq.a4": "Das Label zeigt, ob eine Stadt auf einen anderen Kalendertag als deine Basiszeit fällt. Angenommen, du legst einen Anruf auf 16:00 Uhr in Los Angeles: Tokio kann den nächsten Morgen mit einem +1-Tag-Label anzeigen, während es in London noch derselbe Tag ist. Diese Labels vor dem Versenden der Einladung zu prüfen, ist der einfachste Weg, niemanden für 9 Uhr morgens einzuladen, wenn es bei ihm in Wirklichkeit 2 Uhr nachts am Folgetag ist.",
     "faq.q5": "Wann öffnet die New Yorker Börse in meiner Zeitzone?",
-    "faq.a5": "Die NYSE öffnet um 9:30 Uhr Ostküstenzeit und schließt um 16:00 Uhr Ostküstenzeit. Um das in deiner Zeit zu sehen, stelle die Basis-Zeitzone auf New York, gib 9:30 Uhr ein und füge deine Stadt als Karte hinzu — der Umrechner zeigt die genaue Ortszeit und ob es derselbe Tag ist. Da er der Sommerzeit automatisch folgt, bleibt die Antwort korrekt, egal ob New York im Winter auf EST oder im Sommer auf EDT ist."
+    "faq.a5": "Die NYSE öffnet um 9:30 Uhr Ostküstenzeit und schließt um 16:00 Uhr Ostküstenzeit. Um das in deiner Zeit zu sehen, stelle die Basis-Zeitzone auf New York, gib 9:30 Uhr ein und füge deine Stadt als Karte hinzu — der Umrechner zeigt die genaue Ortszeit und ob es derselbe Tag ist. Da er der Sommerzeit automatisch folgt, bleibt die Antwort korrekt, egal ob New York im Winter auf EST oder im Sommer auf EDT ist.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -691,7 +751,12 @@ window.I18N_LOCALES = {
     "faq.q4": "タイムゾーンをまたいで会議を設定するとき、+1日／-1日バッジはどう読みますか？",
     "faq.a4": "バッジは、その都市が基準時刻と別の暦日になるかどうかを示します。たとえばロサンゼルスの午後4:00に通話を設定すると、東京は翌朝で+1日バッジが付く一方、ロンドンはまだ同じ日、ということがあります。招待を送る前にこのバッジを確認しておけば、相手にとっては実は翌日の午前2時なのに「午前9時」で予定を入れてしまう失敗を、いちばん簡単に防げます。",
     "faq.q5": "ニューヨーク証券取引所は私のタイムゾーンで何時に開きますか？",
-    "faq.a5": "NYSEは米東部時間の午前9:30に開き、午後4:00に閉まります。自分の時刻で見るには、基準タイムゾーンをニューヨークにして9:30 AMを入力し、自分の都市をカードとして追加してください。変換ツールが正確な現地時刻と同じ日かどうかを表示します。サマータイムに自動追従するので、ニューヨークが冬のESTでも夏のEDTでも答えは正しいままです。"
+    "faq.a5": "NYSEは米東部時間の午前9:30に開き、午後4:00に閉まります。自分の時刻で見るには、基準タイムゾーンをニューヨークにして9:30 AMを入力し、自分の都市をカードとして追加してください。変換ツールが正確な現地時刻と同じ日かどうかを表示します。サマータイムに自動追従するので、ニューヨークが冬のESTでも夏のEDTでも答えは正しいままです。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -743,6 +808,11 @@ window.I18N_LOCALES = {
     "faq.q4": "시간대를 넘나들며 회의를 잡을 때 +1일 / -1일 배지는 어떻게 읽나요?",
     "faq.a4": "배지는 그 도시가 기준 시각과 다른 날짜에 놓이는지 알려 줍니다. 예를 들어 로스앤젤레스 기준 오후 4:00에 통화를 잡으면, 도쿄는 다음 날 아침으로 +1일 배지가 붙고 런던은 아직 같은 날일 수 있습니다. 초대를 보내기 전에 이 배지를 확인하는 것이, 상대에게는 사실 다음 날 새벽 2시인데 ‘오전 9시’로 잡아 버리는 실수를 막는 가장 쉬운 방법입니다.",
     "faq.q5": "뉴욕 증권거래소는 제 시간대로 몇 시에 개장하나요?",
-    "faq.a5": "뉴욕 증권거래소(NYSE)는 동부 시간 오전 9:30에 개장하고 오후 4:00에 마감합니다. 이를 내 시간으로 보려면 기준 시간대를 뉴욕으로 두고 9:30 AM을 입력한 뒤, 내 도시를 카드로 추가하세요. 변환기가 정확한 현지 시각과 같은 날 여부를 함께 보여 줍니다. 서머타임을 자동으로 따르므로 뉴욕이 겨울철 EST든 여름철 EDT든 결과는 항상 정확합니다."
+    "faq.a5": "뉴욕 증권거래소(NYSE)는 동부 시간 오전 9:30에 개장하고 오후 4:00에 마감합니다. 이를 내 시간으로 보려면 기준 시간대를 뉴욕으로 두고 9:30 AM을 입력한 뒤, 내 도시를 카드로 추가하세요. 변환기가 정확한 현지 시각과 같은 날 여부를 함께 보여 줍니다. 서머타임을 자동으로 따르므로 뉴욕이 겨울철 EST든 여름철 EDT든 결과는 항상 정확합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

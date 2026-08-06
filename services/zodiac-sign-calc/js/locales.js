@@ -73,7 +73,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is this based on science, or is it just for fun?",
     "faq.a4": "This is a for-fun entertainment tool, not a scientific or astronomical instrument. Zodiac signs and their personality traits are part of Western astrology, a cultural and entertainment tradition — they are not supported by scientific evidence and shouldn't be used to make real decisions about health, relationships, finances, or career. Think of the trait blurb here as a lighthearted icebreaker, not a personality assessment.",
     "faq.q5": "Is my birth date sent to a server or saved anywhere?",
-    "faq.a5": "No. This zodiac sign calculator runs entirely in your browser — your date of birth is only used locally to compute your sign and is never uploaded or sent to any server. The only thing saved is the last date you entered, kept in your browser's local storage, purely so it's still there if you come back to the page."
+    "faq.a5": "No. This zodiac sign calculator runs entirely in your browser — your date of birth is only used locally to compute your sign and is never uploaded or sent to any server. The only thing saved is the last date you entered, kept in your browser's local storage, purely so it's still there if you come back to the page.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -144,7 +149,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这是有科学依据的，还是纯粹娱乐？",
     "faq.a4": "这只是一款娱乐工具，并非科学或天文学仪器。星座及其性格特质属于西方占星文化传统，并没有科学证据支持，不应据此对健康、感情、财务或职业做出真实决策。请把这里的性格小评语当作轻松的破冰话题，而非真正的性格测评。",
     "faq.q5": "我的出生日期会被发送到服务器或保存起来吗？",
-    "faq.a5": "不会。这款星座计算器完全在你的浏览器中运行——你的出生日期只用于本地计算星座，绝不会上传或发送到任何服务器。唯一被保存的是你上次输入的日期，保存在浏览器本地存储中，仅为了你再次访问时仍能看到。"
+    "faq.a5": "不会。这款星座计算器完全在你的浏览器中运行——你的出生日期只用于本地计算星座，绝不会上传或发送到任何服务器。唯一被保存的是你上次输入的日期，保存在浏览器本地存储中，仅为了你再次访问时仍能看到。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -215,7 +225,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या यह विज्ञान पर आधारित है, या केवल मनोरंजन के लिए है?",
     "faq.a4": "यह केवल मनोरंजन के लिए बना एक टूल है, कोई वैज्ञानिक या खगोलीय उपकरण नहीं। राशियाँ और उनके व्यक्तित्व गुण पश्चिमी ज्योतिष की सांस्कृतिक-मनोरंजक परंपरा का हिस्सा हैं — इन्हें वैज्ञानिक प्रमाण का समर्थन नहीं है, और इनके आधार पर स्वास्थ्य, रिश्तों, वित्त या करियर के बारे में वास्तविक निर्णय नहीं लेने चाहिए। यहाँ दिए गुण-विवरण को एक हल्की-फुल्की बातचीत की शुरुआत समझें, न कि वास्तविक व्यक्तित्व मूल्यांकन।",
     "faq.q5": "क्या मेरी जन्मतिथि सर्वर पर भेजी या कहीं सहेजी जाती है?",
-    "faq.a5": "नहीं। यह राशि कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपकी जन्मतिथि केवल स्थानीय रूप से आपकी राशि निकालने के लिए उपयोग होती है और कभी किसी सर्वर पर अपलोड या भेजी नहीं जाती। केवल आपकी आख़िरी डाली गई तारीख सहेजी जाती है, जो आपके ब्राउज़र के लोकल स्टोरेज में रहती है, ताकि दोबारा आने पर वह वहीं मिले।"
+    "faq.a5": "नहीं। यह राशि कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपकी जन्मतिथि केवल स्थानीय रूप से आपकी राशि निकालने के लिए उपयोग होती है और कभी किसी सर्वर पर अपलोड या भेजी नहीं जाती। केवल आपकी आख़िरी डाली गई तारीख सहेजी जाती है, जो आपके ब्राउज़र के लोकल स्टोरेज में रहती है, ताकि दोबारा आने पर वह वहीं मिले।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -286,7 +301,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Esto se basa en la ciencia, o es solo por diversión?",
     "faq.a4": "Esta es una herramienta de entretenimiento, no un instrumento científico ni astronómico. Los signos zodiacales y sus rasgos de personalidad forman parte de la astrología occidental, una tradición cultural y de entretenimiento sin respaldo científico, y no deberían usarse para tomar decisiones reales sobre salud, relaciones, finanzas o carrera. Piensa en la breve descripción de rasgos como un tema de conversación ligero, no una evaluación real de personalidad.",
     "faq.q5": "¿Se envía o se guarda mi fecha de nacimiento en algún servidor?",
-    "faq.a5": "No. Esta calculadora de signo zodiacal se ejecuta por completo en tu navegador: tu fecha de nacimiento solo se usa localmente para calcular tu signo y nunca se sube ni se envía a ningún servidor. Lo único que se guarda es la última fecha que introdujiste, almacenada en el almacenamiento local de tu navegador, solo para que siga ahí si vuelves a la página."
+    "faq.a5": "No. Esta calculadora de signo zodiacal se ejecuta por completo en tu navegador: tu fecha de nacimiento solo se usa localmente para calcular tu signo y nunca se sube ni se envía a ningún servidor. Lo único que se guarda es la última fecha que introdujiste, almacenada en el almacenamiento local de tu navegador, solo para que siga ahí si vuelves a la página.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -357,7 +377,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل هذا مبني على العلم، أم هو للترفيه فقط؟",
     "faq.a4": "هذه أداة للترفيه فقط، وليست أداة علمية أو فلكية. الأبراج وسماتها الشخصية جزء من تقليد التنجيم الغربي الثقافي والترفيهي، ولا يدعمها دليل علمي، ولا ينبغي الاعتماد عليها لاتخاذ قرارات حقيقية بشأن الصحة أو العلاقات أو المال أو المسار المهني. اعتبر وصف السمات هنا موضوعًا خفيفًا لكسر الجليد، لا تقييمًا حقيقيًا للشخصية.",
     "faq.q5": "هل يُرسَل تاريخ ميلادي إلى خادم أو يُحفَظ في مكان ما؟",
-    "faq.a5": "لا. تعمل حاسبة الأبراج هذه بالكامل داخل متصفحك — يُستخدم تاريخ ميلادك محليًا فقط لحساب برجك ولا يُرفَع أو يُرسَل أبدًا إلى أي خادم. الشيء الوحيد الذي يُحفَظ هو آخر تاريخ أدخلته، ويبقى في التخزين المحلي لمتصفحك، فقط ليكون موجودًا إذا عدت إلى الصفحة."
+    "faq.a5": "لا. تعمل حاسبة الأبراج هذه بالكامل داخل متصفحك — يُستخدم تاريخ ميلادك محليًا فقط لحساب برجك ولا يُرفَع أو يُرسَل أبدًا إلى أي خادم. الشيء الوحيد الذي يُحفَظ هو آخر تاريخ أدخلته، ويبقى في التخزين المحلي لمتصفحك، فقط ليكون موجودًا إذا عدت إلى الصفحة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -428,7 +453,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Est-ce basé sur la science, ou est-ce juste pour le plaisir ?",
     "faq.a4": "Cet outil est purement récréatif, ce n'est ni un instrument scientifique ni astronomique. Les signes astrologiques et leurs traits de personnalité font partie de l'astrologie occidentale, une tradition culturelle et de divertissement, sans fondement scientifique, et ne doivent pas servir à prendre de vraies décisions concernant la santé, les relations, les finances ou la carrière. Considérez la courte description de traits comme un sujet de conversation léger, pas une véritable évaluation de personnalité.",
     "faq.q5": "Ma date de naissance est-elle envoyée à un serveur ou enregistrée quelque part ?",
-    "faq.a5": "Non. Ce calculateur de signe astrologique fonctionne entièrement dans votre navigateur : votre date de naissance sert uniquement, localement, à calculer votre signe et n'est jamais téléchargée ni envoyée à un serveur. La seule chose enregistrée est la dernière date que vous avez saisie, conservée dans le stockage local de votre navigateur, simplement pour qu'elle soit toujours là si vous revenez sur la page."
+    "faq.a5": "Non. Ce calculateur de signe astrologique fonctionne entièrement dans votre navigateur : votre date de naissance sert uniquement, localement, à calculer votre signe et n'est jamais téléchargée ni envoyée à un serveur. La seule chose enregistrée est la dernière date que vous avez saisie, conservée dans le stockage local de votre navigateur, simplement pour qu'elle soit toujours là si vous revenez sur la page.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -499,7 +529,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এটা কি বিজ্ঞানভিত্তিক, নাকি শুধুই বিনোদনের জন্য?",
     "faq.a4": "এটি একটি নিছক বিনোদনমূলক টুল, কোনো বৈজ্ঞানিক বা জ্যোতির্বৈজ্ঞানিক যন্ত্র নয়। রাশি ও তাদের ব্যক্তিত্ব বৈশিষ্ট্য পশ্চিমা জ্যোতিষশাস্ত্রের সাংস্কৃতিক ও বিনোদনমূলক ঐতিহ্যের অংশ — এগুলোর কোনো বৈজ্ঞানিক প্রমাণ নেই, এবং স্বাস্থ্য, সম্পর্ক, অর্থ বা কর্মজীবন সম্পর্কে প্রকৃত সিদ্ধান্ত নিতে এগুলো ব্যবহার করা উচিত নয়। এখানকার সংক্ষিপ্ত বৈশিষ্ট্য বিবরণকে একটি হালকা আড্ডার বিষয় হিসেবে ধরুন, প্রকৃত ব্যক্তিত্ব মূল্যায়ন হিসেবে নয়।",
     "faq.q5": "আমার জন্মতারিখ কি কোনো সার্ভারে পাঠানো হয় বা কোথাও সংরক্ষিত থাকে?",
-    "faq.a5": "না। এই রাশি ক্যালকুলেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার জন্মতারিখ শুধু স্থানীয়ভাবে আপনার রাশি হিসাব করতে ব্যবহৃত হয় এবং কখনো কোনো সার্ভারে আপলোড বা পাঠানো হয় না। শুধুমাত্র আপনার সবশেষ দেওয়া তারিখটি সংরক্ষিত থাকে, যা আপনার ব্রাউজারের লোকাল স্টোরেজে থাকে, যাতে আপনি পাতায় ফিরে এলে সেটি থেকে যায়।"
+    "faq.a5": "না। এই রাশি ক্যালকুলেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার জন্মতারিখ শুধু স্থানীয়ভাবে আপনার রাশি হিসাব করতে ব্যবহৃত হয় এবং কখনো কোনো সার্ভারে আপলোড বা পাঠানো হয় না। শুধুমাত্র আপনার সবশেষ দেওয়া তারিখটি সংরক্ষিত থাকে, যা আপনার ব্রাউজারের লোকাল স্টোরেজে থাকে, যাতে আপনি পাতায় ফিরে এলে সেটি থেকে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -570,7 +605,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Isso é baseado em ciência, ou é só por diversão?",
     "faq.a4": "Esta é uma ferramenta de entretenimento, não um instrumento científico ou astronômico. Os signos do zodíaco e seus traços de personalidade fazem parte da astrologia ocidental, uma tradição cultural e de entretenimento sem respaldo científico, e não devem ser usados para tomar decisões reais sobre saúde, relacionamentos, finanças ou carreira. Pense na breve descrição de traços como um assunto leve para quebrar o gelo, não uma avaliação real de personalidade.",
     "faq.q5": "Minha data de nascimento é enviada a um servidor ou salva em algum lugar?",
-    "faq.a5": "Não. Esta calculadora de signo do zodíaco roda inteiramente no seu navegador — sua data de nascimento é usada apenas localmente para calcular seu signo e nunca é enviada a nenhum servidor. A única coisa salva é a última data que você digitou, mantida no armazenamento local do seu navegador, só para que ela ainda esteja lá se você voltar à página."
+    "faq.a5": "Não. Esta calculadora de signo do zodíaco roda inteiramente no seu navegador — sua data de nascimento é usada apenas localmente para calcular seu signo e nunca é enviada a nenhum servidor. A única coisa salva é a última data que você digitou, mantida no armazenamento local do seu navegador, só para que ela ainda esteja lá se você voltar à página.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -641,7 +681,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Это основано на науке или просто для развлечения?",
     "faq.a4": "Это инструмент исключительно для развлечения, а не научный или астрономический прибор. Знаки зодиака и их черты характера — часть культурной и развлекательной традиции западной астрологии, не подкреплённой научными доказательствами, и их не стоит использовать для реальных решений о здоровье, отношениях, финансах или карьере. Считайте краткое описание черт лёгкой темой для разговора, а не настоящей оценкой личности.",
     "faq.q5": "Отправляется ли моя дата рождения на сервер или сохраняется где-то?",
-    "faq.a5": "Нет. Этот калькулятор знака зодиака полностью работает в вашем браузере — дата рождения используется только локально для вычисления знака и никогда не загружается и не отправляется на сервер. Единственное, что сохраняется, — это последняя введённая дата, которая хранится в локальном хранилище вашего браузера, просто чтобы она осталась там, если вы вернётесь на страницу."
+    "faq.a5": "Нет. Этот калькулятор знака зодиака полностью работает в вашем браузере — дата рождения используется только локально для вычисления знака и никогда не загружается и не отправляется на сервер. Единственное, что сохраняется, — это последняя введённая дата, которая хранится в локальном хранилище вашего браузера, просто чтобы она осталась там, если вы вернётесь на страницу.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -712,7 +757,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ سائنس پر مبنی ہے، یا محض تفریح کے لیے ہے؟",
     "faq.a4": "یہ محض تفریحی آلہ ہے، کوئی سائنسی یا فلکیاتی آلہ نہیں۔ برج اور ان کی شخصیت کی خصوصیات مغربی نجوم کی ثقافتی و تفریحی روایت کا حصہ ہیں — انہیں کسی سائنسی ثبوت کی حمایت حاصل نہیں، اور صحت، تعلقات، مالیات یا کیریئر کے بارے میں حقیقی فیصلوں کے لیے انہیں استعمال نہیں کرنا چاہیے۔ یہاں دی گئی خاصیت کی مختصر تفصیل کو ایک ہلکی پھلکی گفتگو کا موضوع سمجھیں، حقیقی شخصیتی جانچ نہیں۔",
     "faq.q5": "کیا میری تاریخ پیدائش کسی سرور کو بھیجی یا کہیں محفوظ کی جاتی ہے؟",
-    "faq.a5": "نہیں۔ یہ زائچہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی تاریخ پیدائش صرف مقامی طور پر آپ کا برج شمار کرنے کے لیے استعمال ہوتی ہے اور کبھی کسی سرور کو اپ لوڈ یا نہیں بھیجی جاتی۔ صرف آپ کی آخری درج کردہ تاریخ محفوظ کی جاتی ہے، جو آپ کے براؤزر کے لوکل سٹوریج میں رہتی ہے، محض اس لیے کہ اگر آپ صفحے پر واپس آئیں تو وہ موجود ہو۔"
+    "faq.a5": "نہیں۔ یہ زائچہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی تاریخ پیدائش صرف مقامی طور پر آپ کا برج شمار کرنے کے لیے استعمال ہوتی ہے اور کبھی کسی سرور کو اپ لوڈ یا نہیں بھیجی جاتی۔ صرف آپ کی آخری درج کردہ تاریخ محفوظ کی جاتی ہے، جو آپ کے براؤزر کے لوکل سٹوریج میں رہتی ہے، محض اس لیے کہ اگر آپ صفحے پر واپس آئیں تو وہ موجود ہو۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -783,7 +833,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah ini berdasarkan sains, atau hanya untuk hiburan?",
     "faq.a4": "Ini adalah alat hiburan semata, bukan instrumen ilmiah atau astronomi. Zodiak dan sifat kepribadiannya adalah bagian dari tradisi budaya dan hiburan astrologi Barat — tidak didukung bukti ilmiah, dan tidak boleh digunakan untuk mengambil keputusan nyata tentang kesehatan, hubungan, keuangan, atau karier. Anggap deskripsi sifat singkat di sini sebagai topik obrolan ringan, bukan penilaian kepribadian yang sesungguhnya.",
     "faq.q5": "Apakah tanggal lahir saya dikirim ke server atau disimpan di suatu tempat?",
-    "faq.a5": "Tidak. Kalkulator zodiak ini sepenuhnya berjalan di browser Anda — tanggal lahir Anda hanya digunakan secara lokal untuk menghitung zodiak Anda dan tidak pernah diunggah atau dikirim ke server mana pun. Satu-satunya yang disimpan adalah tanggal terakhir yang Anda masukkan, disimpan di penyimpanan lokal browser Anda, hanya agar tetap ada jika Anda kembali ke halaman ini."
+    "faq.a5": "Tidak. Kalkulator zodiak ini sepenuhnya berjalan di browser Anda — tanggal lahir Anda hanya digunakan secara lokal untuk menghitung zodiak Anda dan tidak pernah diunggah atau dikirim ke server mana pun. Satu-satunya yang disimpan adalah tanggal terakhir yang Anda masukkan, disimpan di penyimpanan lokal browser Anda, hanya agar tetap ada jika Anda kembali ke halaman ini.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -854,7 +909,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Basiert das auf Wissenschaft, oder ist es nur zum Spaß?",
     "faq.a4": "Dies ist ein reines Unterhaltungstool, kein wissenschaftliches oder astronomisches Instrument. Sternzeichen und ihre Persönlichkeitsmerkmale sind Teil der westlichen Astrologie, einer kulturellen Unterhaltungstradition ohne wissenschaftlichen Nachweis, und sollten nicht für echte Entscheidungen zu Gesundheit, Beziehungen, Finanzen oder Karriere genutzt werden. Betrachten Sie die kurze Charakterbeschreibung hier als lockeren Gesprächseinstieg, nicht als echte Persönlichkeitsbewertung.",
     "faq.q5": "Wird mein Geburtsdatum an einen Server gesendet oder irgendwo gespeichert?",
-    "faq.a5": "Nein. Dieser Sternzeichen-Rechner läuft vollständig in Ihrem Browser — Ihr Geburtsdatum wird nur lokal zur Berechnung Ihres Zeichens verwendet und niemals hochgeladen oder an einen Server gesendet. Das Einzige, was gespeichert wird, ist das zuletzt eingegebene Datum, das im lokalen Speicher Ihres Browsers verbleibt, damit es noch da ist, wenn Sie zur Seite zurückkehren."
+    "faq.a5": "Nein. Dieser Sternzeichen-Rechner läuft vollständig in Ihrem Browser — Ihr Geburtsdatum wird nur lokal zur Berechnung Ihres Zeichens verwendet und niemals hochgeladen oder an einen Server gesendet. Das Einzige, was gespeichert wird, ist das zuletzt eingegebene Datum, das im lokalen Speicher Ihres Browsers verbleibt, damit es noch da ist, wenn Sie zur Seite zurückkehren.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -925,7 +985,12 @@ window.I18N_LOCALES = {
     "faq.q4": "これは科学的な根拠があるのですか、それとも単なる娯楽ですか？",
     "faq.a4": "これは純粋に娯楽目的のツールであり、科学的・天文学的な機器ではありません。星座やその性格的特徴は西洋占星術という文化的・娯楽的な伝統の一部であり、科学的根拠に裏付けられたものではないため、健康・人間関係・お金・キャリアなど実際の意思決定に使うべきではありません。ここで表示される特徴の説明は、軽い会話のきっかけ程度に受け止めてください。本格的な性格診断ではありません。",
     "faq.q5": "誕生日はサーバーに送信されたり、どこかに保存されたりしますか？",
-    "faq.a5": "いいえ。この星座計算機はすべてブラウザ内だけで動作します。誕生日は星座を計算するためだけにローカルで使われ、サーバーにアップロードされたり送信されたりすることはありません。保存されるのは最後に入力した日付だけで、ブラウザのローカルストレージに保持され、ページに戻ってきたときにまた表示されるようにするためのものです。"
+    "faq.a5": "いいえ。この星座計算機はすべてブラウザ内だけで動作します。誕生日は星座を計算するためだけにローカルで使われ、サーバーにアップロードされたり送信されたりすることはありません。保存されるのは最後に入力した日付だけで、ブラウザのローカルストレージに保持され、ページに戻ってきたときにまた表示されるようにするためのものです。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -996,6 +1061,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이것은 과학적 근거가 있나요, 아니면 그냥 재미인가요?",
     "faq.a4": "이 도구는 순수하게 재미를 위한 것이며, 과학적이거나 천문학적인 도구가 아닙니다. 별자리와 그 성격 특성은 서양 점성술이라는 문화적·오락적 전통의 일부로, 과학적 근거가 뒷받침되지 않으며 건강, 인간관계, 재정, 커리어에 대한 실제 결정을 내리는 데 사용해서는 안 됩니다. 여기 나오는 짧은 성격 소개는 가벼운 대화 소재로 받아들이시고, 실제 성격 진단으로 여기지 마세요.",
     "faq.q5": "내 생년월일이 서버로 전송되거나 어딘가에 저장되나요?",
-    "faq.a5": "아니요. 이 별자리 계산기는 전적으로 브라우저 안에서만 작동합니다 — 생년월일은 별자리를 계산하는 데에만 로컬로 사용되며 서버로 업로드되거나 전송되지 않습니다. 저장되는 것은 마지막으로 입력한 날짜뿐이며, 브라우저의 로컬 저장소에 보관되어 페이지에 다시 방문했을 때 남아 있도록 하기 위한 것입니다."
+    "faq.a5": "아니요. 이 별자리 계산기는 전적으로 브라우저 안에서만 작동합니다 — 생년월일은 별자리를 계산하는 데에만 로컬로 사용되며 서버로 업로드되거나 전송되지 않습니다. 저장되는 것은 마지막으로 입력한 날짜뿐이며, 브라우저의 로컬 저장소에 보관되어 페이지에 다시 방문했을 때 남아 있도록 하기 위한 것입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

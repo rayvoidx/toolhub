@@ -75,7 +75,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I stack multiple box-shadows for effects like Material Design or neumorphism?",
     "faq.a4": "CSS lets box-shadow take a comma-separated list of shadows, painted in the order listed — the first shadow sits on top, closest to the element. Material Design's elevation effect layers two or three shadows with different blur and spread at low opacity to fake a soft, physically plausible drop shadow, while neumorphism pairs a dark shadow on one side with a light shadow on the opposite side of a surface that matches the background, creating a soft raised or pressed look. Use + Add shadow layer to stack up to 6 layers, or start from the Soft, Material, Neumorphic or Hard preset and fine-tune from there.",
     "faq.q5": "Is my shadow design sent to a server?",
-    "faq.a5": "No. Every slider, color and layer in this box-shadow generator is computed and rendered locally in your browser with plain JavaScript and CSS — nothing is uploaded, logged or shared. Your last design is saved only in your own browser's local storage so the tool reopens where you left off, and no account or sign-up is required."
+    "faq.a5": "No. Every slider, color and layer in this box-shadow generator is computed and rendered locally in your browser with plain JavaScript and CSS — nothing is uploaded, logged or shared. Your last design is saved only in your own browser's local storage so the tool reopens where you left off, and no account or sign-up is required.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -135,7 +140,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如何叠加多层 box-shadow，实现 Material Design 或新拟态风格的效果？",
     "faq.a4": "CSS 允许 box-shadow 接受一个用逗号分隔的阴影列表，按列出的顺序绘制——第一个阴影位于最上层，离元素最近。Material Design 的层级效果会以低不透明度叠加两三层不同模糊和扩散的阴影，模拟出柔和、符合物理规律的投影；而新拟态则在与背景同色的表面一侧放置深色阴影，另一侧放置浅色阴影，营造出柔和的凸起或凹陷观感。使用「+ 添加阴影层」最多可叠加 6 层，或者直接从「柔和」「Material」「新拟态」「硬朗」预设开始，再进一步微调。",
     "faq.q5": "我的阴影设计会被发送到服务器吗？",
-    "faq.a5": "不会。这个 box-shadow 生成器中的每一个滑块、颜色和图层都完全在你的浏览器本地用纯 JavaScript 和 CSS 计算和渲染——不上传、不记录、不分享任何数据。你的最新设计只保存在你自己浏览器的本地存储中，方便下次打开时继续编辑，无需注册或登录账号。"
+    "faq.a5": "不会。这个 box-shadow 生成器中的每一个滑块、颜色和图层都完全在你的浏览器本地用纯 JavaScript 和 CSS 计算和渲染——不上传、不记录、不分享任何数据。你的最新设计只保存在你自己浏览器的本地存储中，方便下次打开时继续编辑，无需注册或登录账号。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -195,7 +205,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Material Design या न्यूमॉर्फिज़्म जैसे इफ़ेक्ट के लिए कई box-shadow कैसे स्टैक करें?",
     "faq.a4": "CSS में box-shadow कॉमा से अलग किए गए शैडो की एक लिस्ट ले सकता है, जिन्हें उसी क्रम में पेंट किया जाता है — पहला शैडो सबसे ऊपर, एलिमेंट के सबसे नज़दीक होता है। Material Design का एलिवेशन इफ़ेक्ट कम ओपैसिटी पर अलग-अलग ब्लर और स्प्रेड वाले दो-तीन शैडो को लेयर करके एक नरम, भौतिक रूप से विश्वसनीय ड्रॉप शैडो जैसा असर बनाता है, जबकि न्यूमॉर्फिज़्म बैकग्राउंड से मेल खाती सतह के एक तरफ़ गहरा शैडो और दूसरी तरफ़ हल्का शैडो जोड़कर एक नरम उभरा या दबा हुआ लुक बनाता है। 6 लेयर तक स्टैक करने के लिए + Add shadow layer इस्तेमाल करें, या Soft, Material, Neumorphic या Hard प्रीसेट से शुरू करके उसे बारीकी से एडजस्ट करें।",
     "faq.q5": "क्या मेरा शैडो डिज़ाइन सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। इस box-shadow जेनरेटर का हर स्लाइडर, रंग और लेयर सादे JavaScript और CSS से आपके ब्राउज़र में ही स्थानीय रूप से कैलकुलेट और रेंडर होता है — कुछ भी अपलोड, लॉग या शेयर नहीं किया जाता। आपका आख़िरी डिज़ाइन सिर्फ़ आपके अपने ब्राउज़र के लोकल स्टोरेज में सेव होता है ताकि टूल वहीं से दोबारा खुले जहां आपने छोड़ा था, और किसी अकाउंट या साइन-अप की ज़रूरत नहीं है।"
+    "faq.a5": "नहीं। इस box-shadow जेनरेटर का हर स्लाइडर, रंग और लेयर सादे JavaScript और CSS से आपके ब्राउज़र में ही स्थानीय रूप से कैलकुलेट और रेंडर होता है — कुछ भी अपलोड, लॉग या शेयर नहीं किया जाता। आपका आख़िरी डिज़ाइन सिर्फ़ आपके अपने ब्राउज़र के लोकल स्टोरेज में सेव होता है ताकि टूल वहीं से दोबारा खुले जहां आपने छोड़ा था, और किसी अकाउंट या साइन-अप की ज़रूरत नहीं है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -255,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo apilo varios box-shadow para conseguir efectos como Material Design o neumorfismo?",
     "faq.a4": "CSS permite que box-shadow reciba una lista de sombras separadas por comas, pintadas en el orden indicado — la primera sombra queda encima, más cerca del elemento. El efecto de elevación de Material Design apila dos o tres sombras con distinto desenfoque y extensión a baja opacidad para simular una sombra suave y físicamente creíble, mientras que el neumorfismo combina una sombra oscura en un lado con una sombra clara en el lado opuesto de una superficie que coincide con el fondo, creando un aspecto suave de relieve o de hundimiento. Usa + Añadir capa de sombra para apilar hasta 6 capas, o parte de los preajustes Suave, Material, Neumórfico o Dura y ajusta desde ahí.",
     "faq.q5": "¿Se envía mi diseño de sombra a un servidor?",
-    "faq.a5": "No. Cada control deslizante, color y capa de este generador de box-shadow se calcula y renderiza localmente en tu navegador con JavaScript y CSS puros — nada se sube, se registra ni se comparte. Tu último diseño se guarda solo en el almacenamiento local de tu propio navegador para que el tool se reabra donde lo dejaste, y no se requiere cuenta ni registro."
+    "faq.a5": "No. Cada control deslizante, color y capa de este generador de box-shadow se calcula y renderiza localmente en tu navegador con JavaScript y CSS puros — nada se sube, se registra ni se comparte. Tu último diseño se guarda solo en el almacenamiento local de tu propio navegador para que el tool se reabra donde lo dejaste, y no se requiere cuenta ni registro.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -315,7 +335,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أُكدّس عدة ظلال box-shadow لتأثيرات مثل Material Design أو النيومورفيك؟",
     "faq.a4": "تسمح CSS لخاصية box-shadow بأخذ قائمة ظلال مفصولة بفواصل، تُرسم بالترتيب المذكور — الظل الأول يقع في الأعلى، أقرب إلى العنصر. يُكدّس تأثير الارتفاع في Material Design ظلين أو ثلاثة بتمويه وانتشار مختلفين وبشفافية منخفضة لمحاكاة ظل ساقط ناعم وواقعي فيزيائيًا، بينما يجمع النيومورفيك بين ظل داكن على جانب وظل فاتح على الجانب المقابل لسطح يطابق لون الخلفية، ما يخلق مظهرًا ناعمًا مرتفعًا أو مضغوطًا. استخدم + إضافة طبقة ظل لتكديس حتى 6 طبقات، أو ابدأ من الإعدادات الجاهزة ناعم أو Material أو نيومورفيك أو حاد ثم اضبطها بدقة.",
     "faq.q5": "هل يتم إرسال تصميم الظل الخاص بي إلى خادم؟",
-    "faq.a5": "لا. تُحسب وتُعرض كل عناصر التحكم والألوان والطبقات في مولّد الظل هذا محليًا داخل متصفحك باستخدام JavaScript وCSS فقط — لا يتم رفع أو تسجيل أو مشاركة أي شيء. يُحفظ تصميمك الأخير فقط في التخزين المحلي لمتصفحك الخاص حتى تُفتح الأداة من حيث توقفت، ولا حاجة لأي حساب أو تسجيل."
+    "faq.a5": "لا. تُحسب وتُعرض كل عناصر التحكم والألوان والطبقات في مولّد الظل هذا محليًا داخل متصفحك باستخدام JavaScript وCSS فقط — لا يتم رفع أو تسجيل أو مشاركة أي شيء. يُحفظ تصميمك الأخير فقط في التخزين المحلي لمتصفحك الخاص حتى تُفتح الأداة من حيث توقفت، ولا حاجة لأي حساب أو تسجيل.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -375,7 +400,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment empiler plusieurs box-shadow pour des effets comme Material Design ou le néomorphisme ?",
     "faq.a4": "CSS permet à box-shadow d'accepter une liste d'ombres séparées par des virgules, peintes dans l'ordre indiqué — la première ombre se trouve au-dessus, le plus près de l'élément. L'effet d'élévation de Material Design superpose deux ou trois ombres avec un flou et une étendue différents à faible opacité pour simuler une ombre portée douce et physiquement plausible, tandis que le néomorphisme associe une ombre sombre d'un côté à une ombre claire de l'autre côté d'une surface qui correspond à l'arrière-plan, créant un aspect surélevé ou enfoncé tout en douceur. Utilisez + Ajouter une couche d'ombre pour empiler jusqu'à 6 couches, ou partez du préréglage Douce, Material, Néomorphique ou Dure et affinez ensuite.",
     "faq.q5": "Mon design d'ombre est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Chaque curseur, couleur et couche de ce générateur de box-shadow est calculé et rendu localement dans votre navigateur avec du JavaScript et du CSS purs — rien n'est envoyé, enregistré ou partagé. Votre dernier design est enregistré uniquement dans le stockage local de votre propre navigateur, afin que l'outil rouvre là où vous l'avez laissé, sans compte ni inscription requis."
+    "faq.a5": "Non. Chaque curseur, couleur et couche de ce générateur de box-shadow est calculé et rendu localement dans votre navigateur avec du JavaScript et du CSS purs — rien n'est envoyé, enregistré ou partagé. Votre dernier design est enregistré uniquement dans le stockage local de votre propre navigateur, afin que l'outil rouvre là où vous l'avez laissé, sans compte ni inscription requis.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -435,7 +465,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Material Design বা নিউমরফিজমের মতো ইফেক্টের জন্য কীভাবে একাধিক box-shadow স্ট্যাক করব?",
     "faq.a4": "CSS-এ box-shadow কমা দিয়ে আলাদা করা একটি শ্যাডো তালিকা নিতে পারে, যা তালিকাভুক্ত ক্রমে আঁকা হয় — প্রথম শ্যাডোটি সবচেয়ে উপরে, এলিমেন্টের সবচেয়ে কাছে থাকে। Material Design-এর এলিভেশন ইফেক্ট কম অপাসিটিতে ভিন্ন ব্লার ও স্প্রেড সহ দুই-তিনটি শ্যাডো লেয়ার করে একটি নরম, বাস্তবসম্মত ড্রপ শ্যাডোর মতো অনুভূতি তৈরি করে, অন্যদিকে নিউমরফিজম ব্যাকগ্রাউন্ডের সাথে মিলে যাওয়া সারফেসের এক পাশে গাঢ় শ্যাডো ও অন্য পাশে হালকা শ্যাডো জুড়ে একটি নরম উঁচু বা চাপা লুক তৈরি করে। ৬টি পর্যন্ত লেয়ার স্ট্যাক করতে + Add shadow layer ব্যবহার করুন, অথবা Soft, Material, Neumorphic বা Hard প্রিসেট থেকে শুরু করে সূক্ষ্মভাবে অ্যাডজাস্ট করুন।",
     "faq.q5": "আমার শ্যাডো ডিজাইন কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই box-shadow জেনারেটরের প্রতিটি স্লাইডার, রং ও লেয়ার শুধুমাত্র সাধারণ JavaScript ও CSS দিয়ে আপনার ব্রাউজারে স্থানীয়ভাবে হিসাব ও রেন্ডার হয় — কিছুই আপলোড, লগ বা শেয়ার করা হয় না। আপনার সবশেষ ডিজাইন শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে টুলটি আপনি যেখানে রেখেছিলেন সেখান থেকেই আবার খোলে, এবং কোনো অ্যাকাউন্ট বা সাইন-আপের প্রয়োজন নেই।"
+    "faq.a5": "না। এই box-shadow জেনারেটরের প্রতিটি স্লাইডার, রং ও লেয়ার শুধুমাত্র সাধারণ JavaScript ও CSS দিয়ে আপনার ব্রাউজারে স্থানীয়ভাবে হিসাব ও রেন্ডার হয় — কিছুই আপলোড, লগ বা শেয়ার করা হয় না। আপনার সবশেষ ডিজাইন শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে টুলটি আপনি যেখানে রেখেছিলেন সেখান থেকেই আবার খোলে, এবং কোনো অ্যাকাউন্ট বা সাইন-আপের প্রয়োজন নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -495,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como empilho vários box-shadow para efeitos como Material Design ou neumorfismo?",
     "faq.a4": "O CSS permite que box-shadow receba uma lista de sombras separadas por vírgulas, pintadas na ordem listada — a primeira sombra fica por cima, mais próxima do elemento. O efeito de elevação do Material Design empilha duas ou três sombras com desfoque e expansão diferentes em baixa opacidade para simular uma sombra suave e fisicamente plausível, enquanto o neumorfismo combina uma sombra escura de um lado com uma sombra clara do lado oposto de uma superfície que corresponde ao fundo, criando uma aparência suave de elevação ou de afundamento. Use + Adicionar camada de sombra para empilhar até 6 camadas, ou comece pela predefinição Suave, Material, Neumórfico ou Forte e ajuste a partir daí.",
     "faq.q5": "Meu design de sombra é enviado para um servidor?",
-    "faq.a5": "Não. Cada controle deslizante, cor e camada deste gerador de box-shadow é calculado e renderizado localmente no seu navegador com JavaScript e CSS puros — nada é enviado, registrado ou compartilhado. Seu último design é salvo apenas no armazenamento local do seu próprio navegador, para que a ferramenta reabra de onde você parou, e nenhuma conta ou cadastro é necessário."
+    "faq.a5": "Não. Cada controle deslizante, cor e camada deste gerador de box-shadow é calculado e renderizado localmente no seu navegador com JavaScript e CSS puros — nada é enviado, registrado ou compartilhado. Seu último design é salvo apenas no armazenamento local do seu próprio navegador, para que a ferramenta reabra de onde você parou, e nenhuma conta ou cadastro é necessário.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -555,7 +595,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как наложить несколько box-shadow для эффектов вроде Material Design или неоморфизма?",
     "faq.a4": "CSS позволяет box-shadow принимать список теней через запятую, отрисовываемых в указанном порядке — первая тень оказывается сверху, ближе всего к элементу. Эффект приподнятости Material Design накладывает две-три тени с разным размытием и растяжением при низкой прозрачности, имитируя мягкую, физически правдоподобную отбрасываемую тень, а неоморфизм сочетает тёмную тень с одной стороны со светлой тенью с противоположной стороны поверхности, совпадающей по цвету с фоном, создавая мягкий приподнятый или вдавленный вид. Используйте «+ Добавить слой тени», чтобы наложить до 6 слоёв, или начните с пресета «Мягкая», «Material», «Неоморфизм» или «Жёсткая» и настройте дальше.",
     "faq.q5": "Отправляется ли мой дизайн тени на сервер?",
-    "faq.a5": "Нет. Каждый ползунок, цвет и слой в этом генераторе box-shadow вычисляется и отображается локально в вашем браузере на чистом JavaScript и CSS — ничего не загружается, не логируется и не передаётся. Ваш последний дизайн сохраняется только в локальном хранилище вашего собственного браузера, чтобы инструмент открывался на том же месте, где вы остановились, и не требует ни аккаунта, ни регистрации."
+    "faq.a5": "Нет. Каждый ползунок, цвет и слой в этом генераторе box-shadow вычисляется и отображается локально в вашем браузере на чистом JavaScript и CSS — ничего не загружается, не логируется и не передаётся. Ваш последний дизайн сохраняется только в локальном хранилище вашего собственного браузера, чтобы инструмент открывался на том же месте, где вы остановились, и не требует ни аккаунта, ни регистрации.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -615,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Material Design یا نیومورفزم جیسے اثرات کے لیے متعدد box-shadow کیسے اسٹیک کریں؟",
     "faq.a4": "CSS box-shadow کو کاما سے الگ کی گئی شیڈوز کی فہرست لینے دیتا ہے، جو درج کردہ ترتیب میں پینٹ کی جاتی ہیں — پہلی شیڈو سب سے اوپر، ایلیمنٹ کے سب سے قریب ہوتی ہے۔ Material Design کا ایلیویشن اثر کم شفافیت پر مختلف بلر اور اسپریڈ کے ساتھ دو یا تین شیڈوز کو تہہ در تہہ لگا کر ایک نرم، طبعی طور پر قابلِ یقین ڈراپ شیڈو کا تاثر دیتا ہے، جبکہ نیومورفزم بیک گراؤنڈ سے مماثل سطح کے ایک طرف گہرا شیڈو اور دوسری طرف ہلکا شیڈو رکھ کر ایک نرم ابھرا یا دبا ہوا لُک بناتا ہے۔ 6 لیئرز تک اسٹیک کرنے کے لیے + Add shadow layer استعمال کریں، یا Soft، Material، Neumorphic یا Hard پری سیٹ سے شروع کر کے باریک بینی سے ایڈجسٹ کریں۔",
     "faq.q5": "کیا میرا شیڈو ڈیزائن کسی سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ اس box-shadow جنریٹر کا ہر سلائیڈر، رنگ اور لیئر صرف سادہ JavaScript اور CSS کے ذریعے آپ کے براؤزر میں مقامی طور پر شمار اور رینڈر ہوتا ہے — کچھ بھی اپ لوڈ، لاگ یا شیئر نہیں کیا جاتا۔ آپ کا آخری ڈیزائن صرف آپ کے اپنے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ ٹول وہیں سے دوبارہ کھلے جہاں آپ نے چھوڑا تھا، اور کسی اکاؤنٹ یا سائن اپ کی ضرورت نہیں۔"
+    "faq.a5": "نہیں۔ اس box-shadow جنریٹر کا ہر سلائیڈر، رنگ اور لیئر صرف سادہ JavaScript اور CSS کے ذریعے آپ کے براؤزر میں مقامی طور پر شمار اور رینڈر ہوتا ہے — کچھ بھی اپ لوڈ، لاگ یا شیئر نہیں کیا جاتا۔ آپ کا آخری ڈیزائن صرف آپ کے اپنے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ ٹول وہیں سے دوبارہ کھلے جہاں آپ نے چھوڑا تھا، اور کسی اکاؤنٹ یا سائن اپ کی ضرورت نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -675,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara menumpuk beberapa box-shadow untuk efek seperti Material Design atau neumorphism?",
     "faq.a4": "CSS memungkinkan box-shadow menerima daftar bayangan yang dipisahkan koma, digambar sesuai urutan yang tercantum — bayangan pertama berada paling atas, paling dekat dengan elemen. Efek elevasi Material Design menumpuk dua atau tiga bayangan dengan blur dan spread berbeda pada opasitas rendah untuk meniru bayangan jatuh yang lembut dan masuk akal secara fisik, sementara neumorphism memasangkan bayangan gelap di satu sisi dengan bayangan terang di sisi berlawanan dari permukaan yang warnanya sama dengan latar belakang, menciptakan tampilan terangkat atau tertekan yang lembut. Gunakan + Tambah lapisan bayangan untuk menumpuk hingga 6 lapisan, atau mulai dari preset Lembut, Material, Neumorfik, atau Keras lalu sesuaikan dari sana.",
     "faq.q5": "Apakah desain bayangan saya dikirim ke server?",
-    "faq.a5": "Tidak. Setiap slider, warna, dan lapisan pada generator box-shadow ini dihitung dan dirender secara lokal di browser Anda dengan JavaScript dan CSS biasa — tidak ada yang diunggah, dicatat, atau dibagikan. Desain terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri sehingga alat ini terbuka kembali di tempat Anda meninggalkannya, dan tidak diperlukan akun atau pendaftaran."
+    "faq.a5": "Tidak. Setiap slider, warna, dan lapisan pada generator box-shadow ini dihitung dan dirender secara lokal di browser Anda dengan JavaScript dan CSS biasa — tidak ada yang diunggah, dicatat, atau dibagikan. Desain terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri sehingga alat ini terbuka kembali di tempat Anda meninggalkannya, dan tidak diperlukan akun atau pendaftaran.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -735,7 +790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie stapele ich mehrere box-shadow für Effekte wie Material Design oder Neumorphismus?",
     "faq.a4": "CSS erlaubt es box-shadow, eine durch Kommas getrennte Liste von Schatten zu erhalten, die in der angegebenen Reihenfolge gezeichnet werden — der erste Schatten liegt obenauf, am nächsten am Element. Der Erhebungseffekt von Material Design stapelt zwei oder drei Schatten mit unterschiedlicher Unschärfe und Ausbreitung bei niedriger Deckkraft, um einen weichen, physikalisch plausiblen Schlagschatten vorzutäuschen, während der Neumorphismus einen dunklen Schatten auf einer Seite mit einem hellen Schatten auf der gegenüberliegenden Seite einer Oberfläche kombiniert, die dem Hintergrund entspricht, und so einen weich erhabenen oder eingedrückten Look erzeugt. Nutzen Sie + Schattenebene hinzufügen, um bis zu 6 Ebenen zu stapeln, oder starten Sie mit der Voreinstellung Weich, Material, Neumorph oder Hart und feintunen Sie von dort aus.",
     "faq.q5": "Wird mein Schattendesign an einen Server gesendet?",
-    "faq.a5": "Nein. Jeder Regler, jede Farbe und jede Ebene in diesem box-shadow-Generator wird lokal in Ihrem Browser mit reinem JavaScript und CSS berechnet und gerendert — nichts wird hochgeladen, protokolliert oder geteilt. Ihr letztes Design wird nur im lokalen Speicher Ihres eigenen Browsers gespeichert, damit das Tool dort wieder öffnet, wo Sie aufgehört haben, und es ist weder ein Konto noch eine Anmeldung erforderlich."
+    "faq.a5": "Nein. Jeder Regler, jede Farbe und jede Ebene in diesem box-shadow-Generator wird lokal in Ihrem Browser mit reinem JavaScript und CSS berechnet und gerendert — nichts wird hochgeladen, protokolliert oder geteilt. Ihr letztes Design wird nur im lokalen Speicher Ihres eigenen Browsers gespeichert, damit das Tool dort wieder öffnet, wo Sie aufgehört haben, und es ist weder ein Konto noch eine Anmeldung erforderlich.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -795,7 +855,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Material Designやニューモーフィズムのような効果のために複数のbox-shadowを重ねるには？",
     "faq.a4": "CSSではbox-shadowにカンマ区切りの影のリストを指定でき、記載順に描画されます — 最初の影が最も上に、要素に最も近い位置に来ます。Material Designの立体感（elevation）は、異なるぼかしと広がりを持つ2〜3の影を低い不透明度で重ねることで、柔らかく物理的に自然なドロップシャドウを再現します。一方ニューモーフィズムは、背景と同じ色の面の片側に暗い影、反対側に明るい影を配置することで、柔らかく浮き上がった、または押し込まれた見た目を作り出します。「+ 影レイヤーを追加」で最大6層まで重ねられるほか、Soft・Material・Neumorphic・Hardのプリセットから始めて微調整することもできます。",
     "faq.q5": "私の影のデザインはサーバーに送信されますか？",
-    "faq.a5": "いいえ。このbox-shadowジェネレーターのすべてのスライダー・色・レイヤーは、純粋なJavaScriptとCSSであなたのブラウザ内でローカルに計算・描画されます — アップロードも記録も共有も一切行われません。最後のデザインはあなた自身のブラウザのローカルストレージにのみ保存されるため、ツールを開き直すと続きから再開でき、アカウント登録も不要です。"
+    "faq.a5": "いいえ。このbox-shadowジェネレーターのすべてのスライダー・色・レイヤーは、純粋なJavaScriptとCSSであなたのブラウザ内でローカルに計算・描画されます — アップロードも記録も共有も一切行われません。最後のデザインはあなた自身のブラウザのローカルストレージにのみ保存されるため、ツールを開き直すと続きから再開でき、アカウント登録も不要です。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -855,6 +920,11 @@ window.I18N_LOCALES = {
     "faq.q4": "Material Design이나 뉴모피즘 같은 효과를 위해 여러 box-shadow는 어떻게 쌓나요?",
     "faq.a4": "CSS는 box-shadow에 쉼표로 구분된 그림자 목록을 받을 수 있으며, 나열된 순서대로 그려집니다 — 첫 번째 그림자가 가장 위, 요소에 가장 가깝게 위치합니다. Material Design의 입체감 효과는 서로 다른 블러와 스프레드를 가진 그림자 두세 개를 낮은 투명도로 겹쳐 물리적으로 그럴듯한 부드러운 낙하 그림자를 흉내 내고, 뉴모피즘은 배경과 같은 색의 표면 한쪽에 어두운 그림자, 반대쪽에 밝은 그림자를 배치해 부드럽게 솟아오르거나 눌린 듯한 느낌을 만듭니다. + 그림자 레이어 추가로 최대 6개까지 쌓거나, Soft·Material·Neumorphic·Hard 프리셋에서 시작해 세부 조정을 해보세요.",
     "faq.q5": "제 그림자 디자인이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 box-shadow 생성기의 모든 슬라이더, 색상, 레이어는 순수 JavaScript와 CSS로 브라우저 안에서만 계산되고 렌더링됩니다 — 아무것도 업로드되거나 기록되거나 공유되지 않습니다. 마지막 디자인은 사용자 브라우저의 로컬 저장소에만 저장되어 다음에 열었을 때 이어서 작업할 수 있으며, 계정이나 가입이 전혀 필요하지 않습니다."
+    "faq.a5": "아니요. 이 box-shadow 생성기의 모든 슬라이더, 색상, 레이어는 순수 JavaScript와 CSS로 브라우저 안에서만 계산되고 렌더링됩니다 — 아무것도 업로드되거나 기록되거나 공유되지 않습니다. 마지막 디자인은 사용자 브라우저의 로컬 저장소에만 저장되어 다음에 열었을 때 이어서 작업할 수 있으며, 계정이나 가입이 전혀 필요하지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

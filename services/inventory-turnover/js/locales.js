@@ -192,7 +192,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "Download failed — please try again.",
     "tool.err.clipboard": "Could not copy — select the table and copy manually.",
     "tool.excl.rowNo": "Row #",
-    "tool.excl.reasonCol": "Reason"
+    "tool.excl.reasonCol": "Reason",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -369,7 +374,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "下载失败——请重试。",
     "tool.err.clipboard": "无法复制——请选中表格并手动复制。",
     "tool.excl.rowNo": "行号",
-    "tool.excl.reasonCol": "原因"
+    "tool.excl.reasonCol": "原因",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -546,7 +556,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "डाउनलोड विफल — कृपया पुनः प्रयास करें।",
     "tool.err.clipboard": "कॉपी नहीं हो सका — तालिका चुनकर मैन्युअली कॉपी करें।",
     "tool.excl.rowNo": "पंक्ति #",
-    "tool.excl.reasonCol": "कारण"
+    "tool.excl.reasonCol": "कारण",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -723,7 +738,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "Fallo en la descarga — inténtalo de nuevo.",
     "tool.err.clipboard": "No se pudo copiar — selecciona la tabla y cópiala manualmente.",
     "tool.excl.rowNo": "Fila n.º",
-    "tool.excl.reasonCol": "Motivo"
+    "tool.excl.reasonCol": "Motivo",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -900,7 +920,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "فشل التنزيل — حاول مرة أخرى.",
     "tool.err.clipboard": "تعذّر النسخ — حدّد الجدول وانسخه يدوياً.",
     "tool.excl.rowNo": "رقم الصف",
-    "tool.excl.reasonCol": "السبب"
+    "tool.excl.reasonCol": "السبب",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -1077,7 +1102,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "Échec du téléchargement — veuillez réessayer.",
     "tool.err.clipboard": "Copie impossible — sélectionnez le tableau et copiez manuellement.",
     "tool.excl.rowNo": "Ligne n°",
-    "tool.excl.reasonCol": "Motif"
+    "tool.excl.reasonCol": "Motif",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -1254,7 +1284,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "ডাউনলোড ব্যর্থ — আবার চেষ্টা করুন।",
     "tool.err.clipboard": "কপি করা যায়নি — টেবিল নির্বাচন করে ম্যানুয়ালি কপি করুন।",
     "tool.excl.rowNo": "সারি #",
-    "tool.excl.reasonCol": "কারণ"
+    "tool.excl.reasonCol": "কারণ",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1431,7 +1466,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "Falha no download — tente novamente.",
     "tool.err.clipboard": "Não foi possível copiar — selecione a tabela e copie manualmente.",
     "tool.excl.rowNo": "Linha nº",
-    "tool.excl.reasonCol": "Motivo"
+    "tool.excl.reasonCol": "Motivo",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1608,7 +1648,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "Скачивание не удалось — попробуйте снова.",
     "tool.err.clipboard": "Не удалось скопировать — выделите таблицу и скопируйте вручную.",
     "tool.excl.rowNo": "Строка №",
-    "tool.excl.reasonCol": "Причина"
+    "tool.excl.reasonCol": "Причина",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1785,7 +1830,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "ڈاؤن لوڈ ناکام — دوبارہ کوشش کریں۔",
     "tool.err.clipboard": "کاپی نہ ہو سکا — ٹیبل منتخب کر کے دستی طور پر کاپی کریں۔",
     "tool.excl.rowNo": "قطار #",
-    "tool.excl.reasonCol": "وجہ"
+    "tool.excl.reasonCol": "وجہ",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1962,7 +2012,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "Unduhan gagal — silakan coba lagi.",
     "tool.err.clipboard": "Tidak dapat menyalin — pilih tabel dan salin secara manual.",
     "tool.excl.rowNo": "Baris #",
-    "tool.excl.reasonCol": "Alasan"
+    "tool.excl.reasonCol": "Alasan",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -2139,7 +2194,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "Download fehlgeschlagen — bitte erneut versuchen.",
     "tool.err.clipboard": "Kopieren fehlgeschlagen — Tabelle markieren und manuell kopieren.",
     "tool.excl.rowNo": "Zeile Nr.",
-    "tool.excl.reasonCol": "Grund"
+    "tool.excl.reasonCol": "Grund",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -2316,7 +2376,12 @@ window.I18N_LOCALES = {
     "tool.err.download": "ダウンロードに失敗しました — もう一度お試しください。",
     "tool.err.clipboard": "コピーできませんでした — 表を選択して手動でコピーしてください。",
     "tool.excl.rowNo": "行番号",
-    "tool.excl.reasonCol": "理由"
+    "tool.excl.reasonCol": "理由",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -2493,6 +2558,11 @@ window.I18N_LOCALES = {
     "tool.err.download": "다운로드 실패 — 다시 시도해 주세요.",
     "tool.err.clipboard": "복사하지 못했습니다 — 표를 선택해 직접 복사하세요.",
     "tool.excl.rowNo": "행 번호",
-    "tool.excl.reasonCol": "사유"
+    "tool.excl.reasonCol": "사유",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

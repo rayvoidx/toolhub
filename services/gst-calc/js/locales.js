@@ -67,7 +67,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why does removing GST use division instead of just subtracting the percentage?",
     "faq.a4": "Because the tax rate was applied to the smaller net amount, not to the larger total you're holding. Subtracting the rate straight from the total assumes the rate applies to the total itself, which overstates the tax removed and understates the net price. Dividing by (1 + rate ÷ 100) correctly reverses the original multiplication, so a 1,180 total at 18% GST divides back to exactly 1,000 net — not the 967.60 you'd get by simply subtracting 18%.",
     "faq.q5": "Is this GST calculator tax advice, and is my amount sent anywhere?",
-    "faq.a5": "No to both. This tool performs a fixed arithmetic calculation — it is not tax, legal or financial advice, and GST/VAT rules vary by product category, exemption and jurisdiction, so confirm the exact rate that applies to your transaction with your local tax authority or a professional. Every calculation runs entirely in your browser: the amount and rate you enter are never uploaded or stored on a server, and your last input is saved only in your own browser's local storage."
+    "faq.a5": "No to both. This tool performs a fixed arithmetic calculation — it is not tax, legal or financial advice, and GST/VAT rules vary by product category, exemption and jurisdiction, so confirm the exact rate that applies to your transaction with your local tax authority or a professional. Every calculation runs entirely in your browser: the amount and rate you enter are never uploaded or stored on a server, and your last input is saved only in your own browser's local storage.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -119,7 +124,12 @@ window.I18N_LOCALES = {
     "faq.q4": "从含税总额中剔除GST时，为什么要用除法而不是直接减去百分比？",
     "faq.a4": "因为税率原本是作用在较小的净额上，而不是你手中较大的含税总额上。如果直接从总额里减去税率，就等于假设税率是作用在总额本身，这会高估被剔除的税额、低估净价。用(1 + 税率 ÷ 100)去除才能正确还原原来的乘法运算，所以按18%税率，含税总额1,180除回去正好是净额1,000——而不是直接减去18%得到的967.60。",
     "faq.q5": "这个GST计算器是否构成税务建议？我的金额会被发送到别处吗？",
-    "faq.a5": "都不会。本工具只执行固定的算术计算——不构成税务、法律或财务建议，而且GST/VAT的规则会因商品类别、免税情形和司法管辖区而异，请向当地税务机关或专业人士确认适用于你交易的准确税率。所有计算均完全在你的浏览器中进行：你输入的金额和税率绝不会被上传或存储到服务器，最近一次输入也只会保存在你自己浏览器的本地存储中。"
+    "faq.a5": "都不会。本工具只执行固定的算术计算——不构成税务、法律或财务建议，而且GST/VAT的规则会因商品类别、免税情形和司法管辖区而异，请向当地税务机关或专业人士确认适用于你交易的准确税率。所有计算均完全在你的浏览器中进行：你输入的金额和税率绝不会被上传或存储到服务器，最近一次输入也只会保存在你自己浏览器的本地存储中。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -171,7 +181,12 @@ window.I18N_LOCALES = {
     "faq.q4": "GST हटाते समय प्रतिशत सीधे घटाने के बजाय भाग क्यों दिया जाता है?",
     "faq.a4": "क्योंकि कर दर छोटी नेट राशि पर लागू की गई थी, न कि आपके पास मौजूद बड़ी कुल राशि पर। कुल राशि में से सीधे दर घटाने का मतलब यह मान लेना है कि दर कुल राशि पर ही लागू होती है, जिससे हटाया गया कर ज़्यादा और नेट क़ीमत कम आँकी जाती है। (1 + दर ÷ 100) से भाग देना मूल गुणा को सही तरीक़े से उलटता है, इसलिए 18% GST पर 1,180 की कुल राशि को भाग देने पर ठीक 1,000 नेट मिलता है — न कि सीधे 18% घटाने पर मिलने वाला 967.60।",
     "faq.q5": "क्या यह GST कैलकुलेटर कर सलाह है, और क्या मेरी राशि कहीं भेजी जाती है?",
-    "faq.a5": "दोनों का जवाब नहीं है। यह टूल केवल एक तय गणितीय गणना करता है — यह कर, कानूनी या वित्तीय सलाह नहीं है, और GST/VAT के नियम उत्पाद श्रेणी, छूट और क्षेत्राधिकार के अनुसार बदलते हैं, इसलिए अपने लेन-देन पर लागू सटीक दर की पुष्टि अपने स्थानीय कर प्राधिकरण या किसी विशेषज्ञ से करें। हर गणना पूरी तरह आपके ब्राउज़र में होती है: आपके द्वारा दर्ज की गई राशि और दर कभी भी सर्वर पर अपलोड या संग्रहीत नहीं होती, और आपकी आख़िरी प्रविष्टि केवल आपके अपने ब्राउज़र के लोकल स्टोरेज में सहेजी जाती है।"
+    "faq.a5": "दोनों का जवाब नहीं है। यह टूल केवल एक तय गणितीय गणना करता है — यह कर, कानूनी या वित्तीय सलाह नहीं है, और GST/VAT के नियम उत्पाद श्रेणी, छूट और क्षेत्राधिकार के अनुसार बदलते हैं, इसलिए अपने लेन-देन पर लागू सटीक दर की पुष्टि अपने स्थानीय कर प्राधिकरण या किसी विशेषज्ञ से करें। हर गणना पूरी तरह आपके ब्राउज़र में होती है: आपके द्वारा दर्ज की गई राशि और दर कभी भी सर्वर पर अपलोड या संग्रहीत नहीं होती, और आपकी आख़िरी प्रविष्टि केवल आपके अपने ब्राउज़र के लोकल स्टोरेज में सहेजी जाती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -223,7 +238,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué al quitar el GST se usa una división en vez de restar simplemente el porcentaje?",
     "faq.a4": "Porque la tasa de impuesto se aplicó sobre el importe neto, más pequeño, y no sobre el total más grande que tienes en la mano. Restar la tasa directamente del total supone que la tasa se aplica al total en sí, lo que sobreestima el impuesto quitado y subestima el precio neto. Dividir entre (1 + tasa ÷ 100) revierte correctamente la multiplicación original, así que un total de 1.180 con un 18% de GST se divide para dar exactamente 1.000 de neto — no los 967,60 que obtendrías restando simplemente el 18%.",
     "faq.q5": "¿Esta calculadora de GST constituye asesoramiento fiscal, y se envía mi importe a algún sitio?",
-    "faq.a5": "No, en ambos casos. Esta herramienta realiza un cálculo aritmético fijo — no es asesoramiento fiscal, legal ni financiero, y las normas de GST/IVA varían según la categoría del producto, las exenciones y la jurisdicción, así que confirma la tasa exacta aplicable a tu operación con tu autoridad fiscal local o un profesional. Todos los cálculos se realizan por completo en tu navegador: el importe y la tasa que introduces nunca se suben ni se guardan en un servidor, y tu última entrada solo se guarda en el almacenamiento local de tu propio navegador."
+    "faq.a5": "No, en ambos casos. Esta herramienta realiza un cálculo aritmético fijo — no es asesoramiento fiscal, legal ni financiero, y las normas de GST/IVA varían según la categoría del producto, las exenciones y la jurisdicción, así que confirma la tasa exacta aplicable a tu operación con tu autoridad fiscal local o un profesional. Todos los cálculos se realizan por completo en tu navegador: el importe y la tasa que introduces nunca se suben ni se guardan en un servidor, y tu última entrada solo se guarda en el almacenamiento local de tu propio navegador.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -275,7 +295,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا يُستخدم القسمة عند حذف GST بدلاً من طرح النسبة مباشرة؟",
     "faq.a4": "لأن نسبة الضريبة طُبِّقت على المبلغ الصافي الأصغر، وليس على المبلغ الإجمالي الأكبر الذي بين يديك. فطرح النسبة مباشرة من الإجمالي يفترض أن النسبة تُطبَّق على الإجمالي نفسه، ما يؤدي إلى المبالغة في قيمة الضريبة المحذوفة والتقليل من قيمة السعر الصافي. أما القسمة على (1 + النسبة ÷ 100) فتعكس بشكل صحيح عملية الضرب الأصلية، لذا فإن مبلغًا إجماليًا قدره 1,180 بنسبة GST 18% يُقسَّم ليعطي بالضبط 1,000 صافٍ — وليس 967.60 التي تحصل عليها بطرح 18% مباشرة.",
     "faq.q5": "هل تُعد هذه الحاسبة استشارة ضريبية، وهل يُرسل مبلغي إلى أي جهة؟",
-    "faq.a5": "لا في الحالتين. تُجري هذه الأداة عملية حسابية ثابتة فقط — وهي ليست استشارة ضريبية أو قانونية أو مالية، وتختلف قواعد GST/ضريبة القيمة المضافة باختلاف فئة المنتج والإعفاءات والولاية القضائية، لذا تأكد من النسبة الدقيقة المطبَّقة على معاملتك لدى الهيئة الضريبية المحلية أو مختص. تتم كل عملية حساب بالكامل داخل متصفحك: لا يُرفَع المبلغ والنسبة اللذان تُدخلهما ولا يُخزَّنان أبدًا على أي خادم، ولا يُحفظ آخر إدخال لك إلا في التخزين المحلي لمتصفحك أنت."
+    "faq.a5": "لا في الحالتين. تُجري هذه الأداة عملية حسابية ثابتة فقط — وهي ليست استشارة ضريبية أو قانونية أو مالية، وتختلف قواعد GST/ضريبة القيمة المضافة باختلاف فئة المنتج والإعفاءات والولاية القضائية، لذا تأكد من النسبة الدقيقة المطبَّقة على معاملتك لدى الهيئة الضريبية المحلية أو مختص. تتم كل عملية حساب بالكامل داخل متصفحك: لا يُرفَع المبلغ والنسبة اللذان تُدخلهما ولا يُخزَّنان أبدًا على أي خادم، ولا يُحفظ آخر إدخال لك إلا في التخزين المحلي لمتصفحك أنت.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -327,7 +352,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi retirer la GST utilise-t-il une division plutôt qu'une simple soustraction du pourcentage ?",
     "faq.a4": "Parce que le taux de taxe a été appliqué sur le montant net, plus petit, et non sur le total plus important que vous avez en main. Soustraire le taux directement du total revient à supposer que le taux s'applique au total lui-même, ce qui surestime la taxe retirée et sous-estime le prix net. Diviser par (1 + taux ÷ 100) inverse correctement la multiplication d'origine, si bien qu'un total de 1 180 avec une GST de 18 % se divise pour redonner exactement 1 000 net — et non les 967,60 obtenus en soustrayant simplement 18 %.",
     "faq.q5": "Ce calculateur de GST constitue-t-il un conseil fiscal, et mon montant est-il envoyé quelque part ?",
-    "faq.a5": "Non, dans les deux cas. Cet outil effectue un calcul arithmétique fixe — ce n'est pas un conseil fiscal, juridique ou financier, et les règles de GST/TVA varient selon la catégorie de produit, les exonérations et la juridiction ; vérifiez donc le taux exact applicable à votre transaction auprès de votre administration fiscale locale ou d'un professionnel. Chaque calcul s'effectue entièrement dans votre navigateur : le montant et le taux que vous saisissez ne sont jamais téléversés ni stockés sur un serveur, et votre dernière saisie n'est enregistrée que dans le stockage local de votre propre navigateur."
+    "faq.a5": "Non, dans les deux cas. Cet outil effectue un calcul arithmétique fixe — ce n'est pas un conseil fiscal, juridique ou financier, et les règles de GST/TVA varient selon la catégorie de produit, les exonérations et la juridiction ; vérifiez donc le taux exact applicable à votre transaction auprès de votre administration fiscale locale ou d'un professionnel. Chaque calcul s'effectue entièrement dans votre navigateur : le montant et le taux que vous saisissez ne sont jamais téléversés ni stockés sur un serveur, et votre dernière saisie n'est enregistrée que dans le stockage local de votre propre navigateur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -379,7 +409,12 @@ window.I18N_LOCALES = {
     "faq.q4": "মোট থেকে GST বাদ দিতে সরাসরি শতাংশ বিয়োগ না করে ভাগ কেন ব্যবহার করা হয়?",
     "faq.a4": "কারণ কর হার ছোট নিট পরিমাণের উপর প্রয়োগ করা হয়েছিল, আপনার হাতে থাকা বড় মোট পরিমাণের উপর নয়। মোট থেকে সরাসরি হার বিয়োগ করলে ধরে নেওয়া হয় যে হারটি মোট পরিমাণের উপরই প্রযোজ্য, যা বাদ দেওয়া করকে বেশি এবং নিট মূল্যকে কম দেখায়। (1 + হার ÷ 100) দিয়ে ভাগ করলে মূল গুণ সঠিকভাবে উল্টে যায়, তাই ১৮% GST হারে ১,১৮০ মোট পরিমাণকে ভাগ করলে ঠিক ১,০০০ নিট পাওয়া যায় — সরাসরি ১৮% বিয়োগ করে পাওয়া ৯৬৭.৬০ নয়।",
     "faq.q5": "এই GST ক্যালকুলেটর কি কর পরামর্শ, এবং আমার পরিমাণ কি কোথাও পাঠানো হয়?",
-    "faq.a5": "দুটোরই উত্তর না। এই টুলটি কেবল একটি নির্দিষ্ট গাণিতিক হিসাব করে — এটি কর, আইনি বা আর্থিক পরামর্শ নয়, এবং GST/VAT-এর নিয়ম পণ্যের শ্রেণি, ছাড় ও অঞ্চলভেদে ভিন্ন হয়, তাই আপনার লেনদেনে প্রযোজ্য সঠিক হার আপনার স্থানীয় কর কর্তৃপক্ষ বা কোনো বিশেষজ্ঞের সাথে নিশ্চিত করুন। প্রতিটি হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারেই হয়: আপনার লেখা পরিমাণ ও হার কখনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না, এবং আপনার সর্বশেষ ইনপুট শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজেই সংরক্ষিত থাকে।"
+    "faq.a5": "দুটোরই উত্তর না। এই টুলটি কেবল একটি নির্দিষ্ট গাণিতিক হিসাব করে — এটি কর, আইনি বা আর্থিক পরামর্শ নয়, এবং GST/VAT-এর নিয়ম পণ্যের শ্রেণি, ছাড় ও অঞ্চলভেদে ভিন্ন হয়, তাই আপনার লেনদেনে প্রযোজ্য সঠিক হার আপনার স্থানীয় কর কর্তৃপক্ষ বা কোনো বিশেষজ্ঞের সাথে নিশ্চিত করুন। প্রতিটি হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারেই হয়: আপনার লেখা পরিমাণ ও হার কখনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না, এবং আপনার সর্বশেষ ইনপুট শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজেই সংরক্ষিত থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -431,7 +466,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que remover o GST usa divisão em vez de simplesmente subtrair a porcentagem?",
     "faq.a4": "Porque a taxa de imposto foi aplicada sobre o valor líquido menor, não sobre o total maior que você tem em mãos. Subtrair a taxa diretamente do total pressupõe que ela se aplica ao próprio total, o que superestima o imposto removido e subestima o preço líquido. Dividir por (1 + taxa ÷ 100) reverte corretamente a multiplicação original, então um total de 1.180 com 18% de GST dividido dá exatamente 1.000 líquido — não os 967,60 que você obteria subtraindo simplesmente 18%.",
     "faq.q5": "Esta calculadora de GST é aconselhamento fiscal, e meu valor é enviado a algum lugar?",
-    "faq.a5": "Não, em ambos os casos. Esta ferramenta realiza apenas um cálculo aritmético fixo — não é aconselhamento fiscal, jurídico ou financeiro, e as regras de GST/IVA variam por categoria de produto, isenção e jurisdição, então confirme a taxa exata aplicável à sua transação com sua autoridade fiscal local ou um profissional. Todo cálculo é feito inteiramente no seu navegador: o valor e a taxa que você digita nunca são enviados nem armazenados em um servidor, e sua última entrada é salva apenas no armazenamento local do seu próprio navegador."
+    "faq.a5": "Não, em ambos os casos. Esta ferramenta realiza apenas um cálculo aritmético fixo — não é aconselhamento fiscal, jurídico ou financeiro, e as regras de GST/IVA variam por categoria de produto, isenção e jurisdição, então confirme a taxa exata aplicável à sua transação com sua autoridade fiscal local ou um profissional. Todo cálculo é feito inteiramente no seu navegador: o valor e a taxa que você digita nunca são enviados nem armazenados em um servidor, e sua última entrada é salva apenas no armazenamento local do seu próprio navegador.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -483,7 +523,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему при снятии GST используется деление, а не простое вычитание процента?",
     "faq.a4": "Потому что налоговая ставка применялась к меньшей сумме без налога, а не к большей общей сумме, которая у вас на руках. Вычитание ставки напрямую из общей суммы предполагает, что ставка применяется к самой общей сумме, что завышает снимаемый налог и занижает цену без налога. Деление на (1 + ставка ÷ 100) корректно обращает исходное умножение, поэтому сумма 1180 с GST 18%, поделённая обратно, даёт ровно 1000 без налога — а не 967,60, которые вы получите, просто вычтя 18%.",
     "faq.q5": "Является ли этот калькулятор GST налоговой консультацией и отправляется ли моя сумма куда-либо?",
-    "faq.a5": "Нет по обоим пунктам. Этот инструмент выполняет фиксированный арифметический расчёт — это не налоговая, юридическая или финансовая консультация, а правила GST/НДС различаются в зависимости от категории товара, льгот и юрисдикции, поэтому уточните точную ставку, применимую к вашей сделке, у местного налогового органа или специалиста. Каждый расчёт полностью выполняется в вашем браузере: введённые вами сумма и ставка никогда не загружаются и не хранятся на сервере, а последний ввод сохраняется только в локальном хранилище вашего собственного браузера."
+    "faq.a5": "Нет по обоим пунктам. Этот инструмент выполняет фиксированный арифметический расчёт — это не налоговая, юридическая или финансовая консультация, а правила GST/НДС различаются в зависимости от категории товара, льгот и юрисдикции, поэтому уточните точную ставку, применимую к вашей сделке, у местного налогового органа или специалиста. Каждый расчёт полностью выполняется в вашем браузере: введённые вами сумма и ставка никогда не загружаются и не хранятся на сервере, а последний ввод сохраняется только в локальном хранилище вашего собственного браузера.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -535,7 +580,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کل رقم سے GST خارج کرتے وقت براہ راست فیصد تفریق کرنے کے بجائے تقسیم کیوں استعمال ہوتی ہے؟",
     "faq.a4": "کیونکہ ٹیکس کی شرح چھوٹی خالص رقم پر لاگو کی گئی تھی، نہ کہ آپ کے پاس موجود بڑی کل رقم پر۔ کل رقم سے براہ راست شرح گھٹانا یہ فرض کرتا ہے کہ شرح کل رقم پر ہی لاگو ہوتی ہے، جس سے نکالا گیا ٹیکس زیادہ اور خالص قیمت کم ظاہر ہوتی ہے۔ (1 + شرح ÷ 100) سے تقسیم کرنا اصل ضرب کو درست طریقے سے واپس پلٹاتا ہے، اس لیے 18% GST پر 1,180 کی کل رقم کو تقسیم کرنے پر بالکل 1,000 خالص ملتا ہے — نہ کہ براہ راست 18% گھٹانے پر ملنے والا 967.60۔",
     "faq.q5": "کیا یہ GST کیلکولیٹر ٹیکس مشورہ ہے، اور کیا میری رقم کہیں بھیجی جاتی ہے؟",
-    "faq.a5": "دونوں کا جواب نہیں ہے۔ یہ ٹول صرف ایک مقررہ ریاضیاتی حساب کرتا ہے — یہ ٹیکس، قانونی یا مالی مشورہ نہیں ہے، اور GST/VAT کے قواعد مصنوعات کی قسم، چھوٹ اور دائرہ اختیار کے مطابق مختلف ہوتے ہیں، اس لیے اپنے لین دین پر لاگو درست شرح اپنے مقامی ٹیکس ادارے یا کسی ماہر سے تصدیق کریں۔ ہر حساب مکمل طور پر آپ کے براؤزر میں ہوتا ہے: آپ کی درج کردہ رقم اور شرح کبھی بھی سرور پر اپ لوڈ یا محفوظ نہیں کی جاتی، اور آپ کا آخری اندراج صرف آپ کے اپنے براؤزر کے مقامی اسٹوریج میں محفوظ ہوتا ہے۔"
+    "faq.a5": "دونوں کا جواب نہیں ہے۔ یہ ٹول صرف ایک مقررہ ریاضیاتی حساب کرتا ہے — یہ ٹیکس، قانونی یا مالی مشورہ نہیں ہے، اور GST/VAT کے قواعد مصنوعات کی قسم، چھوٹ اور دائرہ اختیار کے مطابق مختلف ہوتے ہیں، اس لیے اپنے لین دین پر لاگو درست شرح اپنے مقامی ٹیکس ادارے یا کسی ماہر سے تصدیق کریں۔ ہر حساب مکمل طور پر آپ کے براؤزر میں ہوتا ہے: آپ کی درج کردہ رقم اور شرح کبھی بھی سرور پر اپ لوڈ یا محفوظ نہیں کی جاتی، اور آپ کا آخری اندراج صرف آپ کے اپنے براؤزر کے مقامی اسٹوریج میں محفوظ ہوتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -587,7 +637,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa menghapus GST menggunakan pembagian, bukan sekadar mengurangkan persentase?",
     "faq.a4": "Karena tarif pajak diterapkan pada jumlah neto yang lebih kecil, bukan pada total yang lebih besar yang Anda pegang. Mengurangkan tarif langsung dari total mengasumsikan tarif itu berlaku pada total itu sendiri, sehingga melebih-lebihkan pajak yang dihapus dan meremehkan harga neto. Membagi dengan (1 + tarif ÷ 100) membalikkan perkalian aslinya dengan benar, sehingga total 1.180 dengan GST 18% dibagi kembali menghasilkan tepat 1.000 neto — bukan 967,60 yang akan Anda dapatkan dengan sekadar mengurangkan 18%.",
     "faq.q5": "Apakah kalkulator GST ini merupakan nasihat pajak, dan apakah jumlah saya dikirim ke suatu tempat?",
-    "faq.a5": "Tidak untuk keduanya. Alat ini hanya melakukan perhitungan aritmetika tetap — ini bukan nasihat pajak, hukum, atau keuangan, dan aturan GST/PPN bervariasi menurut kategori produk, pengecualian, dan yurisdiksi, jadi pastikan tarif yang tepat berlaku untuk transaksi Anda kepada otoritas pajak setempat atau profesional. Setiap perhitungan sepenuhnya berjalan di browser Anda: jumlah dan tarif yang Anda masukkan tidak pernah diunggah atau disimpan di server, dan input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri."
+    "faq.a5": "Tidak untuk keduanya. Alat ini hanya melakukan perhitungan aritmetika tetap — ini bukan nasihat pajak, hukum, atau keuangan, dan aturan GST/PPN bervariasi menurut kategori produk, pengecualian, dan yurisdiksi, jadi pastikan tarif yang tepat berlaku untuk transaksi Anda kepada otoritas pajak setempat atau profesional. Setiap perhitungan sepenuhnya berjalan di browser Anda: jumlah dan tarif yang Anda masukkan tidak pernah diunggah atau disimpan di server, dan input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -639,7 +694,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum wird beim Entfernen der GST dividiert, statt den Prozentsatz einfach abzuziehen?",
     "faq.a4": "Weil der Steuersatz auf den kleineren Nettobetrag angewendet wurde, nicht auf die größere Gesamtsumme, die Sie in der Hand halten. Den Satz direkt von der Gesamtsumme abzuziehen unterstellt, dass der Satz auf die Gesamtsumme selbst angewendet wird, was die entfernte Steuer überschätzt und den Nettopreis unterschätzt. Die Division durch (1 + Satz ÷ 100) kehrt die ursprüngliche Multiplikation korrekt um, sodass eine Gesamtsumme von 1.180 bei 18 % GST zurückgeteilt genau 1.000 netto ergibt — nicht die 967,60, die Sie durch einfaches Abziehen von 18 % erhalten würden.",
     "faq.q5": "Ist dieser GST-Rechner eine Steuerberatung, und wird mein Betrag irgendwohin gesendet?",
-    "faq.a5": "Nein, in beiden Fällen. Dieses Tool führt lediglich eine feste arithmetische Berechnung durch — es ist keine Steuer-, Rechts- oder Finanzberatung, und die GST-/Mehrwertsteuerregeln variieren je nach Produktkategorie, Befreiung und Rechtsordnung. Bestätigen Sie daher den genauen, für Ihre Transaktion geltenden Satz bei Ihrer örtlichen Steuerbehörde oder einer Fachperson. Jede Berechnung läuft vollständig in Ihrem Browser: Der von Ihnen eingegebene Betrag und Satz werden niemals auf einen Server hochgeladen oder dort gespeichert, und Ihre letzte Eingabe wird nur im lokalen Speicher Ihres eigenen Browsers abgelegt."
+    "faq.a5": "Nein, in beiden Fällen. Dieses Tool führt lediglich eine feste arithmetische Berechnung durch — es ist keine Steuer-, Rechts- oder Finanzberatung, und die GST-/Mehrwertsteuerregeln variieren je nach Produktkategorie, Befreiung und Rechtsordnung. Bestätigen Sie daher den genauen, für Ihre Transaktion geltenden Satz bei Ihrer örtlichen Steuerbehörde oder einer Fachperson. Jede Berechnung läuft vollständig in Ihrem Browser: Der von Ihnen eingegebene Betrag und Satz werden niemals auf einen Server hochgeladen oder dort gespeichert, und Ihre letzte Eingabe wird nur im lokalen Speicher Ihres eigenen Browsers abgelegt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -691,7 +751,12 @@ window.I18N_LOCALES = {
     "faq.q4": "GSTを除去する際、パーセンテージを単純に引き算せず割り算を使うのはなぜですか?",
     "faq.a4": "税率は手元にある大きい合計額ではなく、より小さい正味額に対して適用されたものだからです。合計額から税率を直接引くと、税率が合計額そのものに適用されると仮定することになり、除去される税額を過大に、正味価格を過小に見積もってしまいます。(1 + 税率 ÷ 100)で割ることで元の掛け算を正しく逆算できるため、税率18%で合計1,180を割り戻すとちょうど正味額1,000になります——単純に18%を引いて得られる967.60ではありません。",
     "faq.q5": "このGST計算機は税務上の助言に当たりますか?また入力した金額はどこかに送信されますか?",
-    "faq.a5": "どちらもいいえです。このツールは固定的な算術計算を行うだけで、税務・法律・財務上の助言ではありません。GST/VATの規則は商品区分・免税の有無・法域によって異なるため、実際の取引に適用される正確な税率は、お住まいの地域の税務当局または専門家にご確認ください。すべての計算はブラウザ内で完結します。入力した金額と税率がサーバーにアップロードされたり保存されたりすることは一切なく、最後の入力内容はご自身のブラウザのローカルストレージにのみ保存されます。"
+    "faq.a5": "どちらもいいえです。このツールは固定的な算術計算を行うだけで、税務・法律・財務上の助言ではありません。GST/VATの規則は商品区分・免税の有無・法域によって異なるため、実際の取引に適用される正確な税率は、お住まいの地域の税務当局または専門家にご確認ください。すべての計算はブラウザ内で完結します。入力した金額と税率がサーバーにアップロードされたり保存されたりすることは一切なく、最後の入力内容はご自身のブラウザのローカルストレージにのみ保存されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -743,6 +808,11 @@ window.I18N_LOCALES = {
     "faq.q4": "합계에서 GST를 제거할 때 왜 백분율을 그냥 빼지 않고 나눗셈을 사용하나요?",
     "faq.a4": "세율이 적용된 대상은 더 큰 합계가 아니라 더 작은 순액이기 때문입니다. 합계에서 세율을 바로 빼면 세율이 합계 자체에 적용된다고 가정하는 셈이 되어, 제거되는 세액을 과대평가하고 순가격을 과소평가하게 됩니다. (1 + 세율 ÷ 100)로 나누면 원래의 곱셈을 정확히 되돌릴 수 있으므로, GST 18%에서 합계 1,180을 나누면 정확히 순액 1,000이 나옵니다 — 18%를 그냥 빼서 나오는 967.60이 아닙니다.",
     "faq.q5": "이 GST 계산기가 세무 자문에 해당하나요? 입력한 금액이 어딘가로 전송되나요?",
-    "faq.a5": "둘 다 아닙니다. 이 도구는 고정된 산술 계산만 수행합니다 — 세무·법률·재무 자문이 아니며, GST/VAT 규정은 상품 구분, 면세 여부, 관할 지역에 따라 달라지므로 실제 거래에 적용되는 정확한 세율은 관할 세무 당국이나 전문가에게 확인하세요. 모든 계산은 전적으로 브라우저에서 실행됩니다: 입력한 금액과 세율은 서버에 업로드되거나 저장되지 않으며, 마지막 입력값은 오직 사용자 본인 브라우저의 로컬 저장소에만 저장됩니다."
+    "faq.a5": "둘 다 아닙니다. 이 도구는 고정된 산술 계산만 수행합니다 — 세무·법률·재무 자문이 아니며, GST/VAT 규정은 상품 구분, 면세 여부, 관할 지역에 따라 달라지므로 실제 거래에 적용되는 정확한 세율은 관할 세무 당국이나 전문가에게 확인하세요. 모든 계산은 전적으로 브라우저에서 실행됩니다: 입력한 금액과 세율은 서버에 업로드되거나 저장되지 않으며, 마지막 입력값은 오직 사용자 본인 브라우저의 로컬 저장소에만 저장됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

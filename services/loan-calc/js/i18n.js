@@ -99,6 +99,33 @@
       setMeta('meta[property="og:description"]', desc);
     }
 
+    // 보이는 제목·브랜드도 언어 추종 (2026-08-06) — meta.title 첫 절 재사용
+    if (title) {
+      var headWord = title.split(/—|\||–/)[0].trim();
+      var h1El = document.querySelector(".hero h1");
+      if (h1El && headWord) h1El.textContent = headWord;
+      var brandSpan = document.querySelector(".brand span");
+      if (brandSpan && headWord) brandSpan.textContent = headWord;
+    }
+
+    // 심화 가이드 언어 스왑 — js/guide-i18n.js 가 있으면 lazy 로드 (없으면 EN 유지)
+    var gc = document.querySelector(".guide-content");
+    if (gc) {
+      if (!gc.__en) gc.__en = gc.innerHTML;
+      var applyGuide = function () {
+        var g = window.GUIDES || {};
+        gc.innerHTML = (lang !== "en" && g[lang]) ? g[lang] : gc.__en;
+      };
+      if (lang !== "en" && !window.GUIDES && !window.__guideLoading) {
+        window.__guideLoading = true;
+        var gs = document.createElement("script");
+        gs.src = "js/guide-i18n.js";
+        gs.onload = applyGuide;
+        gs.onerror = function () { window.GUIDES = window.GUIDES || {}; };
+        document.head.appendChild(gs);
+      } else { applyGuide(); }
+    }
+
     // 문서 언어/방향
     document.documentElement.lang = lang;
     document.documentElement.dir = RTL[lang] ? "rtl" : "ltr";

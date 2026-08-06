@@ -60,7 +60,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Does this VAT calculator work with any currency, and is my data sent anywhere?",
     "faq.a4": "Yes to both. Adding or removing VAT is pure percentage math with no currency conversion involved, so the result is correct whether you're entering dollars, euros, yen, or any other unit — just type the number without a currency symbol. Everything runs locally in your browser: the amount and rate you enter are never uploaded or stored on a server, and there's no sign-up or tracking.",
     "faq.q5": "What happens if I set the VAT rate to 0%?",
-    "faq.a5": "At 0% VAT the net and gross prices are identical and the VAT amount is zero — useful for zero-rated goods and services, which are taxable at 0% rather than exempt (the distinction matters for VAT-registered businesses reclaiming input tax). Enter 0 in the rate field, or as a custom rate if it isn't one of the presets, to confirm a price shouldn't change after VAT."
+    "faq.a5": "At 0% VAT the net and gross prices are identical and the VAT amount is zero — useful for zero-rated goods and services, which are taxable at 0% rather than exempt (the distinction matters for VAT-registered businesses reclaiming input tax). Enter 0 in the rate field, or as a custom rate if it isn't one of the presets, to confirm a price shouldn't change after VAT.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -105,7 +110,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这个增值税计算器支持任何货币吗？我的数据会被发送出去吗？",
     "faq.a4": "两者都是肯定的。加算或反算增值税纯粹是百分比运算，不涉及汇率换算，所以无论你输入的是美元、欧元、日元还是其他任何单位，结果都是准确的——只需输入数字，无需货币符号。所有计算都在你的浏览器本地完成：你输入的金额和税率不会上传或存储到服务器，也没有注册或追踪。",
     "faq.q5": "如果把增值税率设为 0% 会怎样？",
-    "faq.a5": "在 0% 税率下，税前价与含税价完全相同，增值税额为零——这适用于“零税率”商品和服务，它们按 0% 征税而非完全免税（这个区别对可抵扣进项税的增值税注册企业很重要）。在税率字段中输入 0（如果不在预设范围内可作为自定义税率），即可确认某个价格在增值税下不应发生变化。"
+    "faq.a5": "在 0% 税率下，税前价与含税价完全相同，增值税额为零——这适用于“零税率”商品和服务，它们按 0% 征税而非完全免税（这个区别对可抵扣进项税的增值税注册企业很重要）。在税率字段中输入 0（如果不在预设范围内可作为自定义税率），即可确认某个价格在增值税下不应发生变化。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -150,7 +160,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या यह वैट कैलकुलेटर किसी भी मुद्रा के साथ काम करता है, और क्या मेरा डेटा कहीं भेजा जाता है?",
     "faq.a4": "दोनों सवालों का जवाब हाँ है। VAT जोड़ना या हटाना शुद्ध प्रतिशत गणित है जिसमें कोई मुद्रा रूपांतरण शामिल नहीं है, इसलिए चाहे आप डॉलर, यूरो, येन या कोई और इकाई डालें, परिणाम सही रहेगा — बस बिना मुद्रा चिह्न के संख्या टाइप करें। सब कुछ आपके ब्राउज़र में स्थानीय रूप से चलता है: आपके द्वारा डाली गई राशि और दर कभी सर्वर पर अपलोड या संग्रहीत नहीं होती, और न ही कोई साइन-अप या ट्रैकिंग है।",
     "faq.q5": "अगर मैं VAT दर 0% कर दूँ तो क्या होगा?",
-    "faq.a5": "0% दर पर टैक्स-पूर्व और कुल कीमत बिल्कुल बराबर होती है और VAT राशि शून्य होती है — यह \"शून्य-दर\" वाले सामान और सेवाओं के लिए उपयोगी है, जिन पर पूरी तरह छूट देने के बजाय 0% कर लगता है (VAT-पंजीकृत व्यवसायों के लिए इनपुट टैक्स वापस पाने में यह अंतर मायने रखता है)। दर फ़ील्ड में 0 डालें (या यदि यह प्रीसेट में नहीं है तो कस्टम दर के रूप में) यह पुष्टि करने के लिए कि VAT के तहत कोई कीमत बदलनी नहीं चाहिए।"
+    "faq.a5": "0% दर पर टैक्स-पूर्व और कुल कीमत बिल्कुल बराबर होती है और VAT राशि शून्य होती है — यह \"शून्य-दर\" वाले सामान और सेवाओं के लिए उपयोगी है, जिन पर पूरी तरह छूट देने के बजाय 0% कर लगता है (VAT-पंजीकृत व्यवसायों के लिए इनपुट टैक्स वापस पाने में यह अंतर मायने रखता है)। दर फ़ील्ड में 0 डालें (या यदि यह प्रीसेट में नहीं है तो कस्टम दर के रूप में) यह पुष्टि करने के लिए कि VAT के तहत कोई कीमत बदलनी नहीं चाहिए।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -195,7 +210,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Esta calculadora de IVA funciona con cualquier moneda, y se envían mis datos a algún sitio?",
     "faq.a4": "Sí a ambas cosas. Añadir o quitar el IVA es pura aritmética de porcentajes, sin conversión de divisas, así que el resultado es correcto tanto si introduces dólares, euros, yenes o cualquier otra unidad: solo escribe el número, sin símbolo de moneda. Todo se ejecuta localmente en tu navegador: el importe y el tipo que introduces nunca se suben ni se guardan en un servidor, y no hay registro ni seguimiento.",
     "faq.q5": "¿Qué pasa si pongo el tipo de IVA al 0%?",
-    "faq.a5": "Con un tipo del 0%, el precio neto y el total son idénticos y el importe del IVA es cero — útil para bienes y servicios \"de tipo cero\", que tributan al 0% en lugar de estar exentos (la diferencia importa para las empresas registradas a efectos de IVA que recuperan el IVA soportado). Introduce 0 en el campo del tipo (o como tipo personalizado si no está entre los predefinidos) para confirmar que un precio no debería cambiar con el IVA."
+    "faq.a5": "Con un tipo del 0%, el precio neto y el total son idénticos y el importe del IVA es cero — útil para bienes y servicios \"de tipo cero\", que tributan al 0% en lugar de estar exentos (la diferencia importa para las empresas registradas a efectos de IVA que recuperan el IVA soportado). Introduce 0 en el campo del tipo (o como tipo personalizado si no está entre los predefinidos) para confirmar que un precio no debería cambiar con el IVA.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -240,7 +260,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تعمل هذه الحاسبة مع أي عملة، وهل تُرسل بياناتي إلى أي مكان؟",
     "faq.a4": "نعم في الحالتين. إضافة أو حذف ضريبة القيمة المضافة هو حساب نسبة مئوية بحت لا يتضمن أي تحويل عملة، لذا تكون النتيجة صحيحة سواء أدخلت دولارات أو يورو أو ينًا أو أي وحدة أخرى — فقط أدخل الرقم دون رمز العملة. كل شيء يعمل محليًا داخل متصفحك: المبلغ والنسبة اللذان تُدخلهما لا يُرفعان أو يُخزَّنان على أي خادم أبدًا، ولا يوجد تسجيل أو تتبّع.",
     "faq.q5": "ماذا يحدث إذا ضبطت نسبة ضريبة القيمة المضافة على 0%؟",
-    "faq.a5": "عند نسبة 0%، يتساوى السعر الصافي مع السعر الإجمالي ويكون مبلغ الضريبة صفرًا — وهذا مفيد للسلع والخدمات \"ذات النسبة الصفرية\"، الخاضعة للضريبة بنسبة 0% بدلاً من كونها معفاة تمامًا (هذا الفرق مهم للشركات المسجَّلة في ضريبة القيمة المضافة عند استرداد ضريبة المدخلات). أدخل 0 في حقل النسبة (أو كنسبة مخصّصة إذا لم تكن ضمن الأزرار الجاهزة) للتأكد من أن السعر لا ينبغي أن يتغيّر بموجب الضريبة."
+    "faq.a5": "عند نسبة 0%، يتساوى السعر الصافي مع السعر الإجمالي ويكون مبلغ الضريبة صفرًا — وهذا مفيد للسلع والخدمات \"ذات النسبة الصفرية\"، الخاضعة للضريبة بنسبة 0% بدلاً من كونها معفاة تمامًا (هذا الفرق مهم للشركات المسجَّلة في ضريبة القيمة المضافة عند استرداد ضريبة المدخلات). أدخل 0 في حقل النسبة (أو كنسبة مخصّصة إذا لم تكن ضمن الأزرار الجاهزة) للتأكد من أن السعر لا ينبغي أن يتغيّر بموجب الضريبة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -285,7 +310,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Ce calculateur de TVA fonctionne-t-il avec n'importe quelle devise, et mes données sont-elles envoyées quelque part ?",
     "faq.a4": "Oui, dans les deux cas. Ajouter ou retirer la TVA est un simple calcul de pourcentage, sans conversion de devise, donc le résultat est correct que vous saisissiez des dollars, des euros, des yens ou toute autre unité — saisissez simplement le nombre, sans symbole monétaire. Tout s'exécute localement dans votre navigateur : le montant et le taux que vous saisissez ne sont jamais envoyés ni stockés sur un serveur, et il n'y a ni inscription ni suivi.",
     "faq.q5": "Que se passe-t-il si je fixe le taux de TVA à 0 % ?",
-    "faq.a5": "À un taux de 0 %, le prix hors taxe et le prix TTC sont identiques et le montant de la TVA est nul — utile pour les biens et services \"taux zéro\", taxés à 0 % plutôt qu'exonérés (la distinction compte pour les entreprises assujetties à la TVA qui récupèrent la taxe sur leurs achats). Saisissez 0 dans le champ du taux (ou comme taux personnalisé s'il ne figure pas parmi les valeurs prédéfinies) pour confirmer qu'un prix ne doit pas changer sous l'effet de la TVA."
+    "faq.a5": "À un taux de 0 %, le prix hors taxe et le prix TTC sont identiques et le montant de la TVA est nul — utile pour les biens et services \"taux zéro\", taxés à 0 % plutôt qu'exonérés (la distinction compte pour les entreprises assujetties à la TVA qui récupèrent la taxe sur leurs achats). Saisissez 0 dans le champ du taux (ou comme taux personnalisé s'il ne figure pas parmi les valeurs prédéfinies) pour confirmer qu'un prix ne doit pas changer sous l'effet de la TVA.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -330,7 +360,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এই ভ্যাট ক্যালকুলেটর কি যেকোনো মুদ্রায় কাজ করে, আর আমার ডেটা কি কোথাও পাঠানো হয়?",
     "faq.a4": "দুটোরই উত্তর হ্যাঁ। ভ্যাট যোগ বা বাদ দেওয়া নিখাদ শতাংশের অঙ্ক, এতে কোনো মুদ্রা রূপান্তর জড়িত নেই, তাই আপনি ডলার, ইউরো, ইয়েন বা যেকোনো একক লিখলেও ফলাফল সঠিক থাকে — শুধু চিহ্ন ছাড়া সংখ্যা লিখুন। সবকিছু আপনার ব্রাউজারে স্থানীয়ভাবে চলে: আপনার লেখা পরিমাণ ও হার কখনও সার্ভারে আপলোড বা সংরক্ষণ হয় না, এবং কোনো সাইন-আপ বা ট্র্যাকিং নেই।",
     "faq.q5": "ভ্যাট হার 0% করলে কী হয়?",
-    "faq.a5": "0% হারে নিট দাম ও মোট দাম হুবহু সমান হয় এবং ভ্যাটের পরিমাণ শূন্য হয় — এটা \"শূন্য-হার\" পণ্য ও সেবার জন্য কাজে লাগে, যেগুলো সম্পূর্ণ ছাড়ের বদলে 0% হারে করযোগ্য (ইনপুট ট্যাক্স ফেরত পাওয়া ভ্যাট-নিবন্ধিত ব্যবসার জন্য এই পার্থক্যটা গুরুত্বপূর্ণ)। হার ফিল্ডে 0 লিখুন (প্রিসেটে না থাকলে কাস্টম হার হিসেবে) যাতে নিশ্চিত হওয়া যায় ভ্যাটের কারণে দাম বদলানো উচিত নয়।"
+    "faq.a5": "0% হারে নিট দাম ও মোট দাম হুবহু সমান হয় এবং ভ্যাটের পরিমাণ শূন্য হয় — এটা \"শূন্য-হার\" পণ্য ও সেবার জন্য কাজে লাগে, যেগুলো সম্পূর্ণ ছাড়ের বদলে 0% হারে করযোগ্য (ইনপুট ট্যাক্স ফেরত পাওয়া ভ্যাট-নিবন্ধিত ব্যবসার জন্য এই পার্থক্যটা গুরুত্বপূর্ণ)। হার ফিল্ডে 0 লিখুন (প্রিসেটে না থাকলে কাস্টম হার হিসেবে) যাতে নিশ্চিত হওয়া যায় ভ্যাটের কারণে দাম বদলানো উচিত নয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -375,7 +410,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Esta calculadora de IVA funciona com qualquer moeda, e meus dados são enviados a algum lugar?",
     "faq.a4": "Sim para as duas perguntas. Somar ou remover o IVA é pura matemática de porcentagem, sem conversão de moeda, então o resultado é correto seja qual for a unidade digitada — dólares, euros, ienes ou qualquer outra —, basta digitar o número sem símbolo de moeda. Tudo roda localmente no seu navegador: o valor e a taxa que você digita nunca são enviados nem armazenados em um servidor, e não há cadastro nem rastreamento.",
     "faq.q5": "O que acontece se eu definir a taxa de IVA como 0%?",
-    "faq.a5": "Com taxa de 0%, o preço líquido e o total ficam idênticos e o valor do IVA é zero — útil para bens e serviços de \"taxa zero\", tributados a 0% em vez de isentos (a diferença importa para empresas registradas no IVA que recuperam o imposto pago em compras). Digite 0 no campo da taxa (ou como taxa personalizada, se não estiver entre as predefinidas) para confirmar que um preço não deveria mudar com o IVA."
+    "faq.a5": "Com taxa de 0%, o preço líquido e o total ficam idênticos e o valor do IVA é zero — útil para bens e serviços de \"taxa zero\", tributados a 0% em vez de isentos (a diferença importa para empresas registradas no IVA que recuperam o imposto pago em compras). Digite 0 no campo da taxa (ou como taxa personalizada, se não estiver entre as predefinidas) para confirmar que um preço não deveria mudar com o IVA.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -420,7 +460,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Работает ли этот калькулятор с любой валютой и отправляются ли мои данные куда-либо?",
     "faq.a4": "Да, и то и другое. Начисление и выделение НДС — это чистая процентная арифметика без конвертации валют, поэтому результат будет верным независимо от того, вводите ли вы доллары, евро, йены или любую другую единицу — просто вводите число без символа валюты. Всё выполняется локально в вашем браузере: введённая сумма и ставка никогда не отправляются и не сохраняются на сервере, регистрация и отслеживание отсутствуют.",
     "faq.q5": "Что произойдёт, если установить ставку НДС на 0%?",
-    "faq.a5": "При ставке 0% сумма без налога и цена с НДС совпадают, а сумма НДС равна нулю — это полезно для товаров и услуг с \"нулевой ставкой\", которые облагаются налогом по ставке 0%, а не полностью освобождены от него (это различие важно для плательщиков НДС, возмещающих входной налог). Введите 0 в поле ставки (или как собственную ставку, если её нет среди готовых) — так вы убедитесь, что цена не должна измениться из-за НДС."
+    "faq.a5": "При ставке 0% сумма без налога и цена с НДС совпадают, а сумма НДС равна нулю — это полезно для товаров и услуг с \"нулевой ставкой\", которые облагаются налогом по ставке 0%, а не полностью освобождены от него (это различие важно для плательщиков НДС, возмещающих входной налог). Введите 0 в поле ставки (или как собственную ставку, если её нет среди готовых) — так вы убедитесь, что цена не должна измениться из-за НДС.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -465,7 +510,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ ویٹ کیلکولیٹر کسی بھی کرنسی کے ساتھ کام کرتا ہے، اور کیا میرا ڈیٹا کہیں بھیجا جاتا ہے؟",
     "faq.a4": "دونوں کا جواب ہاں ہے۔ ویٹ شامل یا کم کرنا خالص فیصد کا حساب ہے جس میں کوئی کرنسی تبدیلی شامل نہیں، اس لیے چاہے آپ ڈالر، یورو، ین یا کوئی اور اکائی درج کریں، نتیجہ درست رہتا ہے — بس کرنسی کے نشان کے بغیر نمبر لکھیں۔ سب کچھ آپ کے براؤزر میں مقامی طور پر چلتا ہے: آپ کی درج کردہ رقم اور شرح کبھی سرور پر اپ لوڈ یا محفوظ نہیں ہوتیں، اور نہ کوئی سائن اپ ہے نہ ٹریکنگ۔",
     "faq.q5": "اگر میں ویٹ کی شرح 0% رکھوں تو کیا ہوگا؟",
-    "faq.a5": "0% شرح پر خالص اور مجموعی قیمت بالکل برابر ہوتی ہیں اور ویٹ کی رقم صفر ہوتی ہے — یہ \"زیرو ریٹ\" اشیاء اور خدمات کے لیے مفید ہے، جن پر مکمل چھوٹ کے بجائے 0% ٹیکس لگتا ہے (یہ فرق ویٹ میں رجسٹرڈ کاروباروں کے لیے اہم ہے جو ان پٹ ٹیکس واپس لیتے ہیں)۔ شرح کے خانے میں 0 درج کریں (اگر پریسیٹ میں نہیں تو حسب ضرورت شرح کے طور پر) تاکہ تصدیق ہو کہ ویٹ کے تحت قیمت میں تبدیلی نہیں آنی چاہیے۔"
+    "faq.a5": "0% شرح پر خالص اور مجموعی قیمت بالکل برابر ہوتی ہیں اور ویٹ کی رقم صفر ہوتی ہے — یہ \"زیرو ریٹ\" اشیاء اور خدمات کے لیے مفید ہے، جن پر مکمل چھوٹ کے بجائے 0% ٹیکس لگتا ہے (یہ فرق ویٹ میں رجسٹرڈ کاروباروں کے لیے اہم ہے جو ان پٹ ٹیکس واپس لیتے ہیں)۔ شرح کے خانے میں 0 درج کریں (اگر پریسیٹ میں نہیں تو حسب ضرورت شرح کے طور پر) تاکہ تصدیق ہو کہ ویٹ کے تحت قیمت میں تبدیلی نہیں آنی چاہیے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -510,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah kalkulator PPN ini berfungsi dengan mata uang apa pun, dan apakah data saya dikirim ke suatu tempat?",
     "faq.a4": "Ya, untuk keduanya. Menambah atau menghapus PPN murni perhitungan persentase tanpa konversi mata uang, jadi hasilnya tetap benar baik Anda memasukkan dolar, euro, yen, atau satuan lain — cukup ketik angkanya tanpa simbol mata uang. Semua berjalan lokal di browser Anda: jumlah dan tarif yang Anda masukkan tidak pernah diunggah atau disimpan di server, dan tidak ada pendaftaran maupun pelacakan.",
     "faq.q5": "Apa yang terjadi jika saya mengatur tarif PPN ke 0%?",
-    "faq.a5": "Pada tarif 0%, harga bersih dan harga total menjadi identik dan jumlah PPN adalah nol — berguna untuk barang dan jasa \"tarif nol\", yang dikenakan pajak 0% alih-alih dibebaskan sepenuhnya (perbedaan ini penting bagi bisnis terdaftar PPN yang mengklaim kembali pajak masukan). Masukkan 0 di kolom tarif (atau sebagai tarif khusus jika bukan salah satu preset) untuk memastikan suatu harga seharusnya tidak berubah karena PPN."
+    "faq.a5": "Pada tarif 0%, harga bersih dan harga total menjadi identik dan jumlah PPN adalah nol — berguna untuk barang dan jasa \"tarif nol\", yang dikenakan pajak 0% alih-alih dibebaskan sepenuhnya (perbedaan ini penting bagi bisnis terdaftar PPN yang mengklaim kembali pajak masukan). Masukkan 0 di kolom tarif (atau sebagai tarif khusus jika bukan salah satu preset) untuk memastikan suatu harga seharusnya tidak berubah karena PPN.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -555,7 +610,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Funktioniert dieser MwSt.-Rechner mit jeder Währung, und werden meine Daten irgendwohin gesendet?",
     "faq.a4": "Beides trifft zu. Das Hinzufügen oder Entfernen der MwSt. ist reine Prozentrechnung ohne Währungsumrechnung, das Ergebnis stimmt also unabhängig davon, ob Sie Dollar, Euro, Yen oder eine andere Einheit eingeben — geben Sie einfach die Zahl ohne Währungssymbol ein. Alles läuft lokal in Ihrem Browser: Der eingegebene Betrag und Satz werden nie hochgeladen oder auf einem Server gespeichert, und es gibt weder Anmeldung noch Tracking.",
     "faq.q5": "Was passiert, wenn ich den MwSt.-Satz auf 0 % setze?",
-    "faq.a5": "Bei 0 % sind Netto- und Bruttopreis identisch und der MwSt.-Betrag ist null — nützlich für Waren und Dienstleistungen mit \"Nullsatz\", die mit 0 % besteuert statt vollständig befreit sind (dieser Unterschied ist für MwSt.-registrierte Unternehmen wichtig, die Vorsteuer zurückfordern). Geben Sie 0 im Satzfeld ein (oder als benutzerdefinierten Satz, falls nicht voreingestellt), um zu bestätigen, dass sich ein Preis durch die MwSt. nicht ändern sollte."
+    "faq.a5": "Bei 0 % sind Netto- und Bruttopreis identisch und der MwSt.-Betrag ist null — nützlich für Waren und Dienstleistungen mit \"Nullsatz\", die mit 0 % besteuert statt vollständig befreit sind (dieser Unterschied ist für MwSt.-registrierte Unternehmen wichtig, die Vorsteuer zurückfordern). Geben Sie 0 im Satzfeld ein (oder als benutzerdefinierten Satz, falls nicht voreingestellt), um zu bestätigen, dass sich ein Preis durch die MwSt. nicht ändern sollte.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -600,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "このVAT計算機はどの通貨でも使えますか？また、入力したデータはどこかに送信されますか？",
     "faq.a4": "どちらも問題ありません。VATの加算・除去は通貨換算を伴わない純粋なパーセンテージ計算なので、ドル・ユーロ・円など、どの単位を入力しても結果は正確です——通貨記号を付けず数字だけを入力してください。すべての計算はブラウザ内でローカルに行われ、入力した金額と税率がサーバーにアップロードされたり保存されたりすることは一切なく、登録や追跡も行われません。",
     "faq.q5": "VAT率を0%に設定するとどうなりますか？",
-    "faq.a5": "税率0%では税抜価格と税込価格が完全に一致し、VAT額はゼロになります——これは「ゼロ税率」の商品・サービスに役立ちます。ゼロ税率は完全な非課税ではなく0%課税として扱われる点が異なり、この違いは仕入税額を還付請求するVAT登録事業者にとって重要です。税率欄に0を入力する（プリセットになければカスタム税率として）ことで、VATによって価格が変わらないことを確認できます。"
+    "faq.a5": "税率0%では税抜価格と税込価格が完全に一致し、VAT額はゼロになります——これは「ゼロ税率」の商品・サービスに役立ちます。ゼロ税率は完全な非課税ではなく0%課税として扱われる点が異なり、この違いは仕入税額を還付請求するVAT登録事業者にとって重要です。税率欄に0を入力する（プリセットになければカスタム税率として）ことで、VATによって価格が変わらないことを確認できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -645,6 +710,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 부가가치세 계산기는 어떤 통화에서도 쓸 수 있나요? 입력한 데이터가 어딘가로 전송되나요?",
     "faq.a4": "둘 다 맞습니다. VAT를 더하거나 빼는 것은 환율 변환이 필요 없는 순수한 비율 계산이므로, 달러든 유로든 엔이든 어떤 단위를 입력해도 결과는 정확합니다 — 통화 기호 없이 숫자만 입력하면 됩니다. 모든 계산은 브라우저에서 로컬로 처리되며, 입력한 금액과 세율은 서버에 업로드되거나 저장되지 않고, 회원가입이나 추적도 없습니다.",
     "faq.q5": "VAT 세율을 0%로 설정하면 어떻게 되나요?",
-    "faq.a5": "세율이 0%면 세전 가격과 세금 포함 가격이 완전히 같아지고 VAT 금액은 0이 됩니다 — 이는 완전 면세가 아니라 0%로 과세되는 \"영세율\" 재화·용역에 유용합니다(이 차이는 매입세액을 환급받는 VAT 등록 사업자에게 중요합니다). 세율 칸에 0을 입력하면(프리셋에 없다면 사용자 지정 세율로) VAT로 인해 가격이 바뀌지 않아야 함을 확인할 수 있습니다."
+    "faq.a5": "세율이 0%면 세전 가격과 세금 포함 가격이 완전히 같아지고 VAT 금액은 0이 됩니다 — 이는 완전 면세가 아니라 0%로 과세되는 \"영세율\" 재화·용역에 유용합니다(이 차이는 매입세액을 환급받는 VAT 등록 사업자에게 중요합니다). 세율 칸에 0을 입력하면(프리셋에 없다면 사용자 지정 세율로) VAT로 인해 가격이 바뀌지 않아야 함을 확인할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

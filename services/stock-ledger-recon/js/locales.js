@@ -176,7 +176,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} loaded ({mb} MB) — it will be streamed when you build.",
     "tool.fileLoaded": "{name} loaded.",
     "tool.cancelled": "Cancelled.",
-    "tool.dlNothing": "Nothing to download yet."
+    "tool.dlNothing": "Nothing to download yet.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -337,7 +342,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} 已载入（{mb} MB）—— 生成时将以流式读取。",
     "tool.fileLoaded": "{name} 已载入。",
     "tool.cancelled": "已取消。",
-    "tool.dlNothing": "暂无可下载内容。"
+    "tool.dlNothing": "暂无可下载内容。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -498,7 +508,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} लोड हुई ({mb} MB) — बनाते समय इसे स्ट्रीम किया जाएगा।",
     "tool.fileLoaded": "{name} लोड हुई।",
     "tool.cancelled": "रद्द किया गया।",
-    "tool.dlNothing": "अभी डाउनलोड करने को कुछ नहीं।"
+    "tool.dlNothing": "अभी डाउनलोड करने को कुछ नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -659,7 +674,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} cargado ({mb} MB) — se transmitirá al armar.",
     "tool.fileLoaded": "{name} cargado.",
     "tool.cancelled": "Cancelado.",
-    "tool.dlNothing": "Aún no hay nada que descargar."
+    "tool.dlNothing": "Aún no hay nada que descargar.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -820,7 +840,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "حُمِّل {name} ({mb} م.ب) — سيُبَثّ عند البناء.",
     "tool.fileLoaded": "حُمِّل {name}.",
     "tool.cancelled": "أُلغي.",
-    "tool.dlNothing": "لا شيء للتنزيل بعد."
+    "tool.dlNothing": "لا شيء للتنزيل بعد.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -981,7 +1006,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} chargé ({mb} Mo) — il sera lu en flux lors de la construction.",
     "tool.fileLoaded": "{name} chargé.",
     "tool.cancelled": "Annulé.",
-    "tool.dlNothing": "Rien à télécharger pour l'instant."
+    "tool.dlNothing": "Rien à télécharger pour l'instant.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -1142,7 +1172,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} লোড হয়েছে ({mb} MB) — তৈরির সময় স্ট্রিম করা হবে।",
     "tool.fileLoaded": "{name} লোড হয়েছে।",
     "tool.cancelled": "বাতিল করা হয়েছে।",
-    "tool.dlNothing": "এখনও ডাউনলোড করার কিছু নেই।"
+    "tool.dlNothing": "এখনও ডাউনলোড করার কিছু নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1303,7 +1338,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} carregado ({mb} MB) — será transmitido ao montar.",
     "tool.fileLoaded": "{name} carregado.",
     "tool.cancelled": "Cancelado.",
-    "tool.dlNothing": "Nada para baixar ainda."
+    "tool.dlNothing": "Nada para baixar ainda.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1464,7 +1504,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} загружен ({mb} МБ) — при построении будет считан потоком.",
     "tool.fileLoaded": "{name} загружен.",
     "tool.cancelled": "Отменено.",
-    "tool.dlNothing": "Пока нечего скачивать."
+    "tool.dlNothing": "Пока нечего скачивать.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1625,7 +1670,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} لوڈ ہوا ({mb} MB) — بناتے وقت اسٹریم کیا جائے گا۔",
     "tool.fileLoaded": "{name} لوڈ ہوا۔",
     "tool.cancelled": "منسوخ کر دیا گیا۔",
-    "tool.dlNothing": "ابھی ڈاؤن لوڈ کرنے کو کچھ نہیں۔"
+    "tool.dlNothing": "ابھی ڈاؤن لوڈ کرنے کو کچھ نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1786,7 +1836,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} dimuat ({mb} MB) — akan dialirkan saat menyusun.",
     "tool.fileLoaded": "{name} dimuat.",
     "tool.cancelled": "Dibatalkan.",
-    "tool.dlNothing": "Belum ada yang bisa diunduh."
+    "tool.dlNothing": "Belum ada yang bisa diunduh.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1947,7 +2002,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} geladen ({mb} MB) — wird beim Erstellen gestreamt.",
     "tool.fileLoaded": "{name} geladen.",
     "tool.cancelled": "Abgebrochen.",
-    "tool.dlNothing": "Noch nichts zum Herunterladen."
+    "tool.dlNothing": "Noch nichts zum Herunterladen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -2108,7 +2168,12 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} を読み込みました({mb} MB)— 作成時にストリーミングします。",
     "tool.fileLoaded": "{name} を読み込みました。",
     "tool.cancelled": "キャンセルしました。",
-    "tool.dlNothing": "ダウンロードするものはまだありません。"
+    "tool.dlNothing": "ダウンロードするものはまだありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -2269,6 +2334,11 @@ window.I18N_LOCALES = {
     "tool.bigFile": "{name} 불러옴({mb} MB) — 작성 시 스트리밍합니다.",
     "tool.fileLoaded": "{name} 불러옴.",
     "tool.cancelled": "취소되었습니다.",
-    "tool.dlNothing": "아직 다운로드할 항목이 없습니다."
+    "tool.dlNothing": "아직 다운로드할 항목이 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

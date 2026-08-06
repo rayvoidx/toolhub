@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "My JSON won't convert — how do I find and fix the error?",
     "faq.a4": "When the pasted text isn't valid JSON, the converter doesn't just say \"invalid\" — it reports the exact line and column where parsing failed, shows the underlying parser message, and displays a short excerpt of that line with a caret (^) pointing at the problem character. The most common causes are a trailing comma after the last item in an array or object, single quotes used instead of double quotes around keys and strings, or an unescaped double quote inside a string value. Fix the highlighted spot and the CSV regenerates automatically the moment the JSON becomes valid again, with no button to click.",
     "faq.q5": "Will the CSV open correctly in Excel, and is my data uploaded anywhere?",
-    "faq.a5": "The generated CSV follows the RFC 4180 standard: any value that contains the chosen delimiter, a double quote, or a line break is automatically wrapped in quotes with internal quotes doubled, so commas and line breaks inside your data never break the column alignment. If your Excel locale uses a comma as the decimal separator, switch the delimiter dropdown to semicolon or tab before downloading so the file opens in the correct number of columns; downloaded files also carry a UTF-8 byte-order mark so accented and non-Latin characters display correctly instead of turning into garbled symbols. Every conversion happens locally in your browser using JavaScript — your JSON is never uploaded to a server, logged, or stored anywhere except your own browser's local storage, which only remembers your last input so a page refresh doesn't lose it."
+    "faq.a5": "The generated CSV follows the RFC 4180 standard: any value that contains the chosen delimiter, a double quote, or a line break is automatically wrapped in quotes with internal quotes doubled, so commas and line breaks inside your data never break the column alignment. If your Excel locale uses a comma as the decimal separator, switch the delimiter dropdown to semicolon or tab before downloading so the file opens in the correct number of columns; downloaded files also carry a UTF-8 byte-order mark so accented and non-Latin characters display correctly instead of turning into garbled symbols. Every conversion happens locally in your browser using JavaScript — your JSON is never uploaded to a server, logged, or stored anywhere except your own browser's local storage, which only remembers your last input so a page refresh doesn't lose it.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -111,7 +116,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的 JSON 无法转换——该如何定位并修复错误？",
     "faq.a4": "当粘贴的文本不是有效的 JSON 时，转换器不会只显示\"无效\"——它会报告解析失败的确切行号和列号，显示底层解析器的错误信息，并展示该行的简短摘录，用插入符号（^）指向出错的字符。最常见的原因是数组或对象最后一项后面多了一个逗号、用单引号代替了 JSON 要求的双引号，或者字符串内部有未转义的双引号。修正高亮位置后，只要 JSON 重新变得有效，CSV 就会自动重新生成，无需再次点击任何按钮。",
     "faq.q5": "生成的 CSV 能在 Excel 中正确打开吗？我的数据会被上传吗？",
-    "faq.a5": "生成的 CSV 遵循 RFC 4180 标准：任何包含所选分隔符、双引号或换行符的值都会自动加上引号，内部的引号会被替换为两个引号，因此数据中的逗号和换行符不会破坏列对齐。如果您所在地区的 Excel 将逗号用作小数点分隔符，请在下载前将分隔符切换为分号或制表符，以便文件以正确的列数打开；下载的文件还带有 UTF-8 字节顺序标记（BOM），确保带重音符号和非拉丁字符能在 Excel 中正确显示，而不会变成乱码。所有转换都在您的浏览器中通过 JavaScript 本地完成——您的 JSON 数据不会被上传到服务器、记录或存储在任何地方，只有浏览器本地存储会记住您上次输入的内容，以免刷新页面后丢失。"
+    "faq.a5": "生成的 CSV 遵循 RFC 4180 标准：任何包含所选分隔符、双引号或换行符的值都会自动加上引号，内部的引号会被替换为两个引号，因此数据中的逗号和换行符不会破坏列对齐。如果您所在地区的 Excel 将逗号用作小数点分隔符，请在下载前将分隔符切换为分号或制表符，以便文件以正确的列数打开；下载的文件还带有 UTF-8 字节顺序标记（BOM），确保带重音符号和非拉丁字符能在 Excel 中正确显示，而不会变成乱码。所有转换都在您的浏览器中通过 JavaScript 本地完成——您的 JSON 数据不会被上传到服务器、记录或存储在任何地方，只有浏览器本地存储会记住您上次输入的内容，以免刷新页面后丢失。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -159,7 +169,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मेरा JSON कन्वर्ट नहीं हो रहा — एरर कैसे ढूँढूँ और ठीक करूँ?",
     "faq.a4": "जब पेस्ट किया गया टेक्स्ट मान्य JSON नहीं होता, तो कनवर्टर सिर्फ़ \"अमान्य\" नहीं कहता — यह ठीक वही लाइन और कॉलम बताता है जहाँ पार्सिंग फेल हुई, अंदरूनी पार्सर मैसेज दिखाता है, और उस लाइन का एक छोटा अंश एक कैरेट (^) के साथ दिखाता है जो समस्या वाले कैरेक्टर की ओर इशारा करता है। सबसे आम वजहें हैं: ऐरे या ऑब्जेक्ट के आख़िरी आइटम के बाद एक अतिरिक्त कॉमा, कीज़ और स्ट्रिंग्स के चारों ओर डबल कोट्स की जगह सिंगल कोट्स, या किसी स्ट्रिंग के अंदर बिना एस्केप किया डबल कोट। हाइलाइट की गई जगह ठीक करते ही, JSON के फिर से मान्य होते ही CSV अपने आप दोबारा बन जाती है — किसी बटन को दोबारा दबाने की ज़रूरत नहीं।",
     "faq.q5": "क्या CSV Excel में सही खुलेगी, और क्या मेरा डेटा कहीं अपलोड होता है?",
-    "faq.a5": "बनाई गई CSV RFC 4180 स्टैंडर्ड का पालन करती है: चुने गए डिलिमिटर, डबल कोट या लाइन ब्रेक वाली कोई भी वैल्यू अपने आप कोट्स में लपेट दी जाती है और अंदर के कोट्स को डबल कर दिया जाता है, इसलिए आपके डेटा के अंदर मौजूद कॉमा और लाइन ब्रेक कभी कॉलम अलाइनमेंट नहीं बिगाड़ते। अगर आपकी Excel लोकेल कॉमा को डेसिमल सेपरेटर की तरह इस्तेमाल करती है, तो डाउनलोड करने से पहले डिलिमिटर को सेमीकोलन या टैब में बदल लें ताकि फ़ाइल सही कॉलम गिनती में खुले; डाउनलोड की गई फ़ाइलों में UTF-8 बाइट-ऑर्डर मार्क भी होता है ताकि एक्सेंट और नॉन-लैटिन कैरेक्टर Excel में सही दिखें, न कि बिगड़े हुए सिंबल में बदल जाएँ। हर कन्वर्ज़न आपके ब्राउज़र में लोकली JavaScript से होता है — आपका JSON कभी किसी सर्वर पर अपलोड, लॉग या कहीं स्टोर नहीं होता, सिर्फ़ आपके ब्राउज़र का लोकल स्टोरेज आपका आख़िरी इनपुट याद रखता है ताकि पेज रीफ़्रेश होने पर वह न खोए।"
+    "faq.a5": "बनाई गई CSV RFC 4180 स्टैंडर्ड का पालन करती है: चुने गए डिलिमिटर, डबल कोट या लाइन ब्रेक वाली कोई भी वैल्यू अपने आप कोट्स में लपेट दी जाती है और अंदर के कोट्स को डबल कर दिया जाता है, इसलिए आपके डेटा के अंदर मौजूद कॉमा और लाइन ब्रेक कभी कॉलम अलाइनमेंट नहीं बिगाड़ते। अगर आपकी Excel लोकेल कॉमा को डेसिमल सेपरेटर की तरह इस्तेमाल करती है, तो डाउनलोड करने से पहले डिलिमिटर को सेमीकोलन या टैब में बदल लें ताकि फ़ाइल सही कॉलम गिनती में खुले; डाउनलोड की गई फ़ाइलों में UTF-8 बाइट-ऑर्डर मार्क भी होता है ताकि एक्सेंट और नॉन-लैटिन कैरेक्टर Excel में सही दिखें, न कि बिगड़े हुए सिंबल में बदल जाएँ। हर कन्वर्ज़न आपके ब्राउज़र में लोकली JavaScript से होता है — आपका JSON कभी किसी सर्वर पर अपलोड, लॉग या कहीं स्टोर नहीं होता, सिर्फ़ आपके ब्राउज़र का लोकल स्टोरेज आपका आख़िरी इनपुट याद रखता है ताकि पेज रीफ़्रेश होने पर वह न खोए।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -207,7 +222,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mi JSON no se convierte — ¿cómo encuentro y corrijo el error?",
     "faq.a4": "Cuando el texto pegado no es JSON válido, el conversor no se limita a decir \"no válido\" — indica la línea y columna exactas donde falló el análisis, muestra el mensaje del analizador subyacente y despliega un breve fragmento de esa línea con un símbolo de intercalación (^) que señala el carácter problemático. Las causas más comunes son una coma sobrante después del último elemento de un array u objeto, comillas simples en lugar de las comillas dobles que exige JSON, o una comilla doble sin escapar dentro de una cadena. Corrige el punto resaltado y el CSV se regenera automáticamente en cuanto el JSON vuelve a ser válido, sin necesidad de pulsar ningún botón de nuevo.",
     "faq.q5": "¿Se abrirá el CSV correctamente en Excel, y se sube mi información a algún sitio?",
-    "faq.a5": "El CSV generado sigue el estándar RFC 4180: cualquier valor que contenga el delimitador elegido, una comilla doble o un salto de línea se envuelve automáticamente entre comillas y las comillas internas se duplican, así que las comas y los saltos de línea dentro de tus datos nunca rompen la alineación de columnas. Si la configuración regional de tu Excel usa la coma como separador decimal, cambia el delimitador a punto y coma o tabulación antes de descargar para que el archivo se abra con el número correcto de columnas; los archivos descargados también incluyen una marca de orden de bytes UTF-8 para que los caracteres acentuados y no latinos se muestren correctamente en Excel en lugar de convertirse en símbolos ilegibles. Cada conversión ocurre localmente en tu navegador mediante JavaScript — tu JSON nunca se sube a un servidor, ni se registra ni se almacena en ningún sitio salvo en el almacenamiento local de tu propio navegador, que solo recuerda tu última entrada para que no la pierdas al recargar la página."
+    "faq.a5": "El CSV generado sigue el estándar RFC 4180: cualquier valor que contenga el delimitador elegido, una comilla doble o un salto de línea se envuelve automáticamente entre comillas y las comillas internas se duplican, así que las comas y los saltos de línea dentro de tus datos nunca rompen la alineación de columnas. Si la configuración regional de tu Excel usa la coma como separador decimal, cambia el delimitador a punto y coma o tabulación antes de descargar para que el archivo se abra con el número correcto de columnas; los archivos descargados también incluyen una marca de orden de bytes UTF-8 para que los caracteres acentuados y no latinos se muestren correctamente en Excel en lugar de convertirse en símbolos ilegibles. Cada conversión ocurre localmente en tu navegador mediante JavaScript — tu JSON nunca se sube a un servidor, ni se registra ni se almacena en ningún sitio salvo en el almacenamiento local de tu propio navegador, que solo recuerda tu última entrada para que no la pierdas al recargar la página.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -255,7 +275,12 @@ window.I18N_LOCALES = {
     "faq.q4": "JSON الخاص بي لا يتحول — كيف أجد الخطأ وأصلحه؟",
     "faq.a4": "عندما لا يكون النص الملصق JSON صالحًا، لا يكتفي المحوّل بكتابة \"غير صالح\" — بل يذكر السطر والعمود الدقيقين اللذين فشل التحليل عندهما، ويعرض رسالة المحلل الأساسية، ويظهر مقتطفًا قصيرًا من ذلك السطر مع رمز إشارة (^) يشير إلى الحرف المسبب للمشكلة. أكثر الأسباب شيوعًا هي فاصلة زائدة بعد آخر عنصر في مصفوفة أو كائن، أو استخدام علامات اقتباس مفردة بدلاً من علامات الاقتباس المزدوجة التي يتطلبها JSON، أو علامة اقتباس مزدوجة غير مُهرَّبة داخل نص. أصلح الموضع المُبرَز وستُعاد بناء CSV تلقائيًا بمجرد أن يصبح JSON صالحًا مرة أخرى، دون الحاجة للضغط على أي زر مجددًا.",
     "faq.q5": "هل سيُفتح CSV بشكل صحيح في Excel، وهل تُرفع بياناتي إلى أي مكان؟",
-    "faq.a5": "يتبع CSV الناتج معيار RFC 4180: أي قيمة تحتوي على الفاصل المختار أو علامة اقتباس مزدوجة أو فاصل أسطر تُحاط تلقائيًا بعلامات اقتباس مع مضاعفة علامات الاقتباس الداخلية، لذا لا تُخِلّ الفواصل وفواصل الأسطر داخل بياناتك أبدًا بمحاذاة الأعمدة. إذا كانت إعدادات Excel المحلية لديك تستخدم الفاصلة كفاصل عشري، فبدّل الفاصل إلى فاصلة منقوطة أو تبويب قبل التنزيل حتى يُفتح الملف بعدد الأعمدة الصحيح؛ كما تحمل الملفات التي يتم تنزيلها علامة ترتيب البايت UTF-8 لضمان ظهور الأحرف المنقوطة وغير اللاتينية بشكل صحيح في Excel بدلاً من تحولها إلى رموز غير مفهومة. يحدث كل تحويل محليًا داخل متصفحك باستخدام JavaScript — لا يُرفع JSON الخاص بك أبدًا إلى خادم، ولا يُسجَّل، ولا يُخزَّن في أي مكان باستثناء التخزين المحلي لمتصفحك، الذي يتذكر فقط آخر إدخال لك حتى لا تفقده عند تحديث الصفحة."
+    "faq.a5": "يتبع CSV الناتج معيار RFC 4180: أي قيمة تحتوي على الفاصل المختار أو علامة اقتباس مزدوجة أو فاصل أسطر تُحاط تلقائيًا بعلامات اقتباس مع مضاعفة علامات الاقتباس الداخلية، لذا لا تُخِلّ الفواصل وفواصل الأسطر داخل بياناتك أبدًا بمحاذاة الأعمدة. إذا كانت إعدادات Excel المحلية لديك تستخدم الفاصلة كفاصل عشري، فبدّل الفاصل إلى فاصلة منقوطة أو تبويب قبل التنزيل حتى يُفتح الملف بعدد الأعمدة الصحيح؛ كما تحمل الملفات التي يتم تنزيلها علامة ترتيب البايت UTF-8 لضمان ظهور الأحرف المنقوطة وغير اللاتينية بشكل صحيح في Excel بدلاً من تحولها إلى رموز غير مفهومة. يحدث كل تحويل محليًا داخل متصفحك باستخدام JavaScript — لا يُرفع JSON الخاص بك أبدًا إلى خادم، ولا يُسجَّل، ولا يُخزَّن في أي مكان باستثناء التخزين المحلي لمتصفحك، الذي يتذكر فقط آخر إدخال لك حتى لا تفقده عند تحديث الصفحة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -303,7 +328,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mon JSON ne se convertit pas — comment trouver et corriger l'erreur ?",
     "faq.a4": "Lorsque le texte collé n'est pas du JSON valide, le convertisseur ne se contente pas d'indiquer « invalide » — il signale la ligne et la colonne exactes où l'analyse a échoué, affiche le message du moteur d'analyse sous-jacent, et montre un court extrait de cette ligne avec un accent circonflexe (^) pointant vers le caractère problématique. Les causes les plus courantes sont une virgule superflue après le dernier élément d'un tableau ou d'un objet, des guillemets simples utilisés à la place des guillemets doubles requis par JSON, ou un guillemet double non échappé à l'intérieur d'une chaîne. Corrigez l'endroit surligné et le CSV se régénère automatiquement dès que le JSON redevient valide, sans avoir à cliquer sur un bouton.",
     "faq.q5": "Le CSV s'ouvrira-t-il correctement dans Excel, et mes données sont-elles envoyées quelque part ?",
-    "faq.a5": "Le CSV généré suit la norme RFC 4180 : toute valeur contenant le délimiteur choisi, un guillemet double ou un saut de ligne est automatiquement entourée de guillemets, les guillemets internes étant doublés, si bien que les virgules et sauts de ligne présents dans vos données ne cassent jamais l'alignement des colonnes. Si les paramètres régionaux de votre Excel utilisent la virgule comme séparateur décimal, changez le délimiteur pour point-virgule ou tabulation avant de télécharger afin que le fichier s'ouvre avec le bon nombre de colonnes ; les fichiers téléchargés comportent aussi une marque d'ordre des octets UTF-8 pour que les caractères accentués et non latins s'affichent correctement dans Excel au lieu de se transformer en symboles illisibles. Chaque conversion s'effectue localement dans votre navigateur en JavaScript — votre JSON n'est jamais envoyé à un serveur, ni journalisé, ni stocké nulle part, à l'exception du stockage local de votre propre navigateur, qui ne retient que votre dernière saisie pour éviter de la perdre lors d'une actualisation de la page."
+    "faq.a5": "Le CSV généré suit la norme RFC 4180 : toute valeur contenant le délimiteur choisi, un guillemet double ou un saut de ligne est automatiquement entourée de guillemets, les guillemets internes étant doublés, si bien que les virgules et sauts de ligne présents dans vos données ne cassent jamais l'alignement des colonnes. Si les paramètres régionaux de votre Excel utilisent la virgule comme séparateur décimal, changez le délimiteur pour point-virgule ou tabulation avant de télécharger afin que le fichier s'ouvre avec le bon nombre de colonnes ; les fichiers téléchargés comportent aussi une marque d'ordre des octets UTF-8 pour que les caractères accentués et non latins s'affichent correctement dans Excel au lieu de se transformer en symboles illisibles. Chaque conversion s'effectue localement dans votre navigateur en JavaScript — votre JSON n'est jamais envoyé à un serveur, ni journalisé, ni stocké nulle part, à l'exception du stockage local de votre propre navigateur, qui ne retient que votre dernière saisie pour éviter de la perdre lors d'une actualisation de la page.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -351,7 +381,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার JSON রূপান্তর হচ্ছে না — আমি কীভাবে ত্রুটি খুঁজে ঠিক করব?",
     "faq.a4": "পেস্ট করা টেক্সট বৈধ JSON না হলে, কনভার্টার শুধু \"অবৈধ\" বলে থেমে যায় না — এটি ঠিক কোন লাইন ও কলামে পার্সিং ব্যর্থ হয়েছে তা জানায়, অন্তর্নিহিত পার্সার বার্তা দেখায়, এবং সমস্যাযুক্ত অক্ষরের দিকে ইঙ্গিত করে একটি ক্যারেট (^) চিহ্নসহ সেই লাইনের একটি সংক্ষিপ্ত অংশ প্রদর্শন করে। সবচেয়ে সাধারণ কারণগুলো হলো: অ্যারে বা অবজেক্টের শেষ আইটেমের পরে একটি অতিরিক্ত কমা, কী ও স্ট্রিংয়ের চারপাশে JSON-এর প্রয়োজনীয় ডাবল কোটের বদলে সিঙ্গেল কোট ব্যবহার, অথবা কোনো স্ট্রিংয়ের ভেতরে আনএস্কেপড ডাবল কোট। হাইলাইট করা জায়গাটি ঠিক করলেই, JSON আবার বৈধ হওয়ার সাথে সাথে CSV স্বয়ংক্রিয়ভাবে পুনরায় তৈরি হয় — আর কোনো বোতাম চাপার দরকার নেই।",
     "faq.q5": "CSV কি Excel-এ সঠিকভাবে খুলবে, এবং আমার ডেটা কি কোথাও আপলোড হয়?",
-    "faq.a5": "তৈরি হওয়া CSV RFC 4180 স্ট্যান্ডার্ড অনুসরণ করে: নির্বাচিত ডিলিমিটার, ডাবল কোট বা লাইন ব্রেক ধারণকারী যেকোনো মান স্বয়ংক্রিয়ভাবে কোটের ভেতরে মোড়ানো হয় এবং ভেতরের কোটগুলো দ্বিগুণ করা হয়, তাই আপনার ডেটার ভেতরের কমা ও লাইন ব্রেক কখনো কলাম অ্যালাইনমেন্ট নষ্ট করে না। আপনার Excel-এর লোকেল যদি দশমিক বিভাজক হিসেবে কমা ব্যবহার করে, তাহলে ডাউনলোড করার আগে ডিলিমিটারটি সেমিকোলন বা ট্যাবে পরিবর্তন করুন যাতে ফাইলটি সঠিক সংখ্যক কলামে খোলে; ডাউনলোড করা ফাইলগুলোতে একটি UTF-8 বাইট-অর্ডার মার্কও থাকে যাতে উচ্চারণচিহ্নযুক্ত ও নন-ল্যাটিন অক্ষরগুলো Excel-এ সঠিকভাবে দেখা যায়, এলোমেলো চিহ্নে পরিণত না হয়ে। প্রতিটি রূপান্তর আপনার ব্রাউজারে স্থানীয়ভাবে JavaScript ব্যবহার করে ঘটে — আপনার JSON কখনো কোনো সার্ভারে আপলোড, লগ বা কোথাও সংরক্ষিত হয় না, শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজ আপনার শেষ ইনপুটটি মনে রাখে যাতে পেজ রিফ্রেশ করলে তা হারিয়ে না যায়।"
+    "faq.a5": "তৈরি হওয়া CSV RFC 4180 স্ট্যান্ডার্ড অনুসরণ করে: নির্বাচিত ডিলিমিটার, ডাবল কোট বা লাইন ব্রেক ধারণকারী যেকোনো মান স্বয়ংক্রিয়ভাবে কোটের ভেতরে মোড়ানো হয় এবং ভেতরের কোটগুলো দ্বিগুণ করা হয়, তাই আপনার ডেটার ভেতরের কমা ও লাইন ব্রেক কখনো কলাম অ্যালাইনমেন্ট নষ্ট করে না। আপনার Excel-এর লোকেল যদি দশমিক বিভাজক হিসেবে কমা ব্যবহার করে, তাহলে ডাউনলোড করার আগে ডিলিমিটারটি সেমিকোলন বা ট্যাবে পরিবর্তন করুন যাতে ফাইলটি সঠিক সংখ্যক কলামে খোলে; ডাউনলোড করা ফাইলগুলোতে একটি UTF-8 বাইট-অর্ডার মার্কও থাকে যাতে উচ্চারণচিহ্নযুক্ত ও নন-ল্যাটিন অক্ষরগুলো Excel-এ সঠিকভাবে দেখা যায়, এলোমেলো চিহ্নে পরিণত না হয়ে। প্রতিটি রূপান্তর আপনার ব্রাউজারে স্থানীয়ভাবে JavaScript ব্যবহার করে ঘটে — আপনার JSON কখনো কোনো সার্ভারে আপলোড, লগ বা কোথাও সংরক্ষিত হয় না, শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজ আপনার শেষ ইনপুটটি মনে রাখে যাতে পেজ রিফ্রেশ করলে তা হারিয়ে না যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -399,7 +434,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meu JSON não converte — como encontro e corrijo o erro?",
     "faq.a4": "Quando o texto colado não é JSON válido, o conversor não apenas diz \"inválido\" — ele informa a linha e a coluna exatas onde a análise falhou, mostra a mensagem do analisador subjacente e exibe um trecho curto dessa linha com um acento circunflexo (^) apontando para o caractere problemático. As causas mais comuns são uma vírgula sobrando após o último item de um array ou objeto, aspas simples usadas em vez das aspas duplas exigidas pelo JSON, ou uma aspa dupla não escapada dentro de uma string. Corrija o ponto destacado e o CSV é regenerado automaticamente assim que o JSON volta a ser válido, sem precisar clicar em nenhum botão novamente.",
     "faq.q5": "O CSV vai abrir corretamente no Excel, e meus dados são enviados para algum lugar?",
-    "faq.a5": "O CSV gerado segue o padrão RFC 4180: qualquer valor que contenha o delimitador escolhido, uma aspa dupla ou uma quebra de linha é automaticamente envolto em aspas, com as aspas internas duplicadas, então vírgulas e quebras de linha dentro dos seus dados nunca quebram o alinhamento das colunas. Se a configuração regional do seu Excel usa vírgula como separador decimal, mude o delimitador para ponto e vírgula ou tabulação antes de baixar, para que o arquivo abra com o número correto de colunas; os arquivos baixados também carregam uma marca de ordem de bytes UTF-8 para que caracteres acentuados e não latinos apareçam corretamente no Excel em vez de virarem símbolos ilegíveis. Cada conversão acontece localmente no seu navegador usando JavaScript — seu JSON nunca é enviado a um servidor, registrado ou armazenado em nenhum lugar além do armazenamento local do seu próprio navegador, que só lembra sua última entrada para que uma atualização de página não a perca."
+    "faq.a5": "O CSV gerado segue o padrão RFC 4180: qualquer valor que contenha o delimitador escolhido, uma aspa dupla ou uma quebra de linha é automaticamente envolto em aspas, com as aspas internas duplicadas, então vírgulas e quebras de linha dentro dos seus dados nunca quebram o alinhamento das colunas. Se a configuração regional do seu Excel usa vírgula como separador decimal, mude o delimitador para ponto e vírgula ou tabulação antes de baixar, para que o arquivo abra com o número correto de colunas; os arquivos baixados também carregam uma marca de ordem de bytes UTF-8 para que caracteres acentuados e não latinos apareçam corretamente no Excel em vez de virarem símbolos ilegíveis. Cada conversão acontece localmente no seu navegador usando JavaScript — seu JSON nunca é enviado a um servidor, registrado ou armazenado em nenhum lugar além do armazenamento local do seu próprio navegador, que só lembra sua última entrada para que uma atualização de página não a perca.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -447,7 +487,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Мой JSON не преобразуется — как найти и исправить ошибку?",
     "faq.a4": "Когда вставленный текст не является допустимым JSON, конвертер не просто пишет «недопустимо» — он сообщает точную строку и столбец, где произошёл сбой разбора, показывает исходное сообщение парсера и выводит короткий фрагмент этой строки со знаком вставки (^), указывающим на проблемный символ. Наиболее частые причины — лишняя запятая после последнего элемента массива или объекта, одинарные кавычки вместо двойных, которые требует JSON, или неэкранированная двойная кавычка внутри строки. Исправьте выделенное место, и CSV автоматически перестроится, как только JSON снова станет допустимым — без повторного нажатия каких-либо кнопок.",
     "faq.q5": "Откроется ли CSV корректно в Excel и загружаются ли мои данные куда-либо?",
-    "faq.a5": "Созданный CSV соответствует стандарту RFC 4180: любое значение, содержащее выбранный разделитель, двойную кавычку или перенос строки, автоматически заключается в кавычки с удвоением внутренних кавычек, поэтому запятые и переносы строк внутри ваших данных никогда не нарушают выравнивание столбцов. Если региональные настройки вашего Excel используют запятую как десятичный разделитель, переключите разделитель на точку с запятой или табуляцию перед скачиванием, чтобы файл открылся с правильным числом столбцов; скачанные файлы также содержат метку порядка байтов UTF-8, чтобы символы с диакритикой и нелатинские символы отображались в Excel корректно, а не превращались в нечитаемые знаки. Каждое преобразование происходит локально в вашем браузере с помощью JavaScript — ваш JSON никогда не отправляется на сервер, не логируется и не хранится нигде, кроме локального хранилища вашего собственного браузера, которое запоминает только последний введённый текст, чтобы он не терялся при обновлении страницы."
+    "faq.a5": "Созданный CSV соответствует стандарту RFC 4180: любое значение, содержащее выбранный разделитель, двойную кавычку или перенос строки, автоматически заключается в кавычки с удвоением внутренних кавычек, поэтому запятые и переносы строк внутри ваших данных никогда не нарушают выравнивание столбцов. Если региональные настройки вашего Excel используют запятую как десятичный разделитель, переключите разделитель на точку с запятой или табуляцию перед скачиванием, чтобы файл открылся с правильным числом столбцов; скачанные файлы также содержат метку порядка байтов UTF-8, чтобы символы с диакритикой и нелатинские символы отображались в Excel корректно, а не превращались в нечитаемые знаки. Каждое преобразование происходит локально в вашем браузере с помощью JavaScript — ваш JSON никогда не отправляется на сервер, не логируется и не хранится нигде, кроме локального хранилища вашего собственного браузера, которое запоминает только последний введённый текст, чтобы он не терялся при обновлении страницы.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -495,7 +540,12 @@ window.I18N_LOCALES = {
     "faq.q4": "میرا JSON تبدیل نہیں ہو رہا — میں غلطی کیسے تلاش کر کے ٹھیک کروں؟",
     "faq.a4": "جب پیسٹ کیا گیا متن درست JSON نہ ہو، تو کنورٹر صرف \"غلط\" نہیں کہتا — یہ بالکل وہی لائن اور کالم بتاتا ہے جہاں پارسنگ ناکام ہوئی، بنیادی پارسر کا پیغام دکھاتا ہے، اور اس لائن کا ایک مختصر اقتباس ایک کیرٹ (^) کے ساتھ دکھاتا ہے جو مسئلے والے حرف کی طرف اشارہ کرتا ہے۔ سب سے عام وجوہات یہ ہیں: اری یا آبجیکٹ کے آخری آئٹم کے بعد ایک اضافی کاما، کیز اور سٹرنگز کے ارد گرد JSON کے لیے درکار ڈبل کوٹس کی بجائے سنگل کوٹس کا استعمال، یا کسی سٹرنگ کے اندر بغیر ایسکیپ کیا ہوا ڈبل کوٹ۔ نمایاں کی گئی جگہ ٹھیک کریں اور JSON دوبارہ درست ہوتے ہی CSV خود بخود دوبارہ بن جاتی ہے — کسی بٹن کو دوبارہ دبانے کی ضرورت نہیں۔",
     "faq.q5": "کیا CSV ایکسل میں صحیح طریقے سے کھلے گی، اور کیا میرا ڈیٹا کہیں اپ لوڈ ہوتا ہے؟",
-    "faq.a5": "بنائی گئی CSV RFC 4180 معیار کی پیروی کرتی ہے: منتخب کردہ ڈیلیمیٹر، ڈبل کوٹ یا لائن بریک پر مشتمل کوئی بھی ویلیو خود بخود کوٹس میں لپیٹ دی جاتی ہے اور اندرونی کوٹس کو دوگنا کر دیا جاتا ہے، اس لیے آپ کے ڈیٹا کے اندر موجود کاماز اور لائن بریکس کبھی کالم الائنمنٹ کو نہیں بگاڑتے۔ اگر آپ کے ایکسل کی لوکیل کاما کو ڈیسیمل سیپریٹر کے طور پر استعمال کرتی ہے، تو ڈاؤن لوڈ کرنے سے پہلے ڈیلیمیٹر کو سیمی کولن یا ٹیب میں تبدیل کر دیں تاکہ فائل درست تعداد کے کالموں میں کھلے؛ ڈاؤن لوڈ کی گئی فائلوں میں ایک UTF-8 بائٹ آرڈر مارک بھی شامل ہوتا ہے تاکہ ایکسنٹ والے اور غیر لاطینی حروف ایکسل میں صحیح طور پر ظاہر ہوں، بگڑی ہوئی علامتوں میں تبدیل ہونے کی بجائے۔ ہر تبدیلی مقامی طور پر آپ کے براؤزر میں JavaScript کے ذریعے ہوتی ہے — آپ کا JSON کبھی کسی سرور پر اپ لوڈ، لاگ یا کہیں محفوظ نہیں ہوتا، صرف آپ کے اپنے براؤزر کا لوکل سٹوریج آپ کا آخری ان پٹ یاد رکھتا ہے تاکہ صفحہ ریفریش ہونے پر یہ ضائع نہ ہو۔"
+    "faq.a5": "بنائی گئی CSV RFC 4180 معیار کی پیروی کرتی ہے: منتخب کردہ ڈیلیمیٹر، ڈبل کوٹ یا لائن بریک پر مشتمل کوئی بھی ویلیو خود بخود کوٹس میں لپیٹ دی جاتی ہے اور اندرونی کوٹس کو دوگنا کر دیا جاتا ہے، اس لیے آپ کے ڈیٹا کے اندر موجود کاماز اور لائن بریکس کبھی کالم الائنمنٹ کو نہیں بگاڑتے۔ اگر آپ کے ایکسل کی لوکیل کاما کو ڈیسیمل سیپریٹر کے طور پر استعمال کرتی ہے، تو ڈاؤن لوڈ کرنے سے پہلے ڈیلیمیٹر کو سیمی کولن یا ٹیب میں تبدیل کر دیں تاکہ فائل درست تعداد کے کالموں میں کھلے؛ ڈاؤن لوڈ کی گئی فائلوں میں ایک UTF-8 بائٹ آرڈر مارک بھی شامل ہوتا ہے تاکہ ایکسنٹ والے اور غیر لاطینی حروف ایکسل میں صحیح طور پر ظاہر ہوں، بگڑی ہوئی علامتوں میں تبدیل ہونے کی بجائے۔ ہر تبدیلی مقامی طور پر آپ کے براؤزر میں JavaScript کے ذریعے ہوتی ہے — آپ کا JSON کبھی کسی سرور پر اپ لوڈ، لاگ یا کہیں محفوظ نہیں ہوتا، صرف آپ کے اپنے براؤزر کا لوکل سٹوریج آپ کا آخری ان پٹ یاد رکھتا ہے تاکہ صفحہ ریفریش ہونے پر یہ ضائع نہ ہو۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -543,7 +593,12 @@ window.I18N_LOCALES = {
     "faq.q4": "JSON saya tidak bisa dikonversi — bagaimana cara menemukan dan memperbaiki errornya?",
     "faq.a4": "Ketika teks yang ditempel bukan JSON yang valid, konverter tidak hanya mengatakan \"tidak valid\" — ia melaporkan baris dan kolom persis di mana parsing gagal, menampilkan pesan parser aslinya, dan menunjukkan potongan singkat dari baris tersebut dengan tanda sisipan (^) yang menunjuk ke karakter bermasalah. Penyebab paling umum adalah koma tambahan setelah item terakhir dalam array atau objek, tanda kutip tunggal yang digunakan alih-alih tanda kutip ganda yang diwajibkan JSON, atau tanda kutip ganda yang tidak di-escape di dalam string. Perbaiki bagian yang disorot dan CSV akan otomatis dibuat ulang begitu JSON kembali valid, tanpa perlu mengklik tombol lagi.",
     "faq.q5": "Apakah CSV akan terbuka dengan benar di Excel, dan apakah data saya diunggah ke suatu tempat?",
-    "faq.a5": "CSV yang dihasilkan mengikuti standar RFC 4180: nilai apa pun yang mengandung pembatas yang dipilih, tanda kutip ganda, atau jeda baris otomatis dibungkus dengan tanda kutip dengan tanda kutip internal digandakan, sehingga koma dan jeda baris di dalam data Anda tidak pernah merusak kesejajaran kolom. Jika lokal Excel Anda menggunakan koma sebagai pemisah desimal, ubah pembatas ke titik koma atau tab sebelum mengunduh agar file terbuka dengan jumlah kolom yang benar; file yang diunduh juga menyertakan tanda urutan byte UTF-8 agar karakter beraksen dan non-Latin ditampilkan dengan benar di Excel, bukan berubah menjadi simbol yang rusak. Setiap konversi terjadi secara lokal di browser Anda menggunakan JavaScript — JSON Anda tidak pernah diunggah ke server, dicatat, atau disimpan di mana pun kecuali di penyimpanan lokal browser Anda sendiri, yang hanya mengingat input terakhir Anda agar tidak hilang saat halaman dimuat ulang."
+    "faq.a5": "CSV yang dihasilkan mengikuti standar RFC 4180: nilai apa pun yang mengandung pembatas yang dipilih, tanda kutip ganda, atau jeda baris otomatis dibungkus dengan tanda kutip dengan tanda kutip internal digandakan, sehingga koma dan jeda baris di dalam data Anda tidak pernah merusak kesejajaran kolom. Jika lokal Excel Anda menggunakan koma sebagai pemisah desimal, ubah pembatas ke titik koma atau tab sebelum mengunduh agar file terbuka dengan jumlah kolom yang benar; file yang diunduh juga menyertakan tanda urutan byte UTF-8 agar karakter beraksen dan non-Latin ditampilkan dengan benar di Excel, bukan berubah menjadi simbol yang rusak. Setiap konversi terjadi secara lokal di browser Anda menggunakan JavaScript — JSON Anda tidak pernah diunggah ke server, dicatat, atau disimpan di mana pun kecuali di penyimpanan lokal browser Anda sendiri, yang hanya mengingat input terakhir Anda agar tidak hilang saat halaman dimuat ulang.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -591,7 +646,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mein JSON lässt sich nicht umwandeln — wie finde und behebe ich den Fehler?",
     "faq.a4": "Wenn der eingefügte Text kein gültiges JSON ist, zeigt der Konverter nicht einfach nur „ungültig\" an — er nennt die genaue Zeile und Spalte, an der die Analyse fehlgeschlagen ist, zeigt die zugrunde liegende Parser-Meldung und einen kurzen Ausschnitt dieser Zeile mit einem Zeigezeichen (^) auf das problematische Zeichen. Die häufigsten Ursachen sind ein überzähliges Komma nach dem letzten Element eines Arrays oder Objekts, einfache Anführungszeichen anstelle der von JSON geforderten doppelten Anführungszeichen oder ein nicht maskiertes doppeltes Anführungszeichen innerhalb einer Zeichenkette. Beheben Sie die hervorgehobene Stelle, und die CSV wird automatisch neu erzeugt, sobald das JSON wieder gültig ist — ohne erneuten Klick auf eine Schaltfläche.",
     "faq.q5": "Öffnet sich die CSV korrekt in Excel, und werden meine Daten irgendwohin hochgeladen?",
-    "faq.a5": "Die erzeugte CSV folgt dem RFC-4180-Standard: Jeder Wert, der das gewählte Trennzeichen, ein doppeltes Anführungszeichen oder einen Zeilenumbruch enthält, wird automatisch in Anführungszeichen gesetzt, wobei interne Anführungszeichen verdoppelt werden, sodass Kommas und Zeilenumbrüche innerhalb Ihrer Daten die Spaltenausrichtung nie stören. Wenn Ihre Excel-Ländereinstellung das Komma als Dezimaltrennzeichen verwendet, stellen Sie das Trennzeichen vor dem Herunterladen auf Semikolon oder Tab um, damit die Datei mit der richtigen Spaltenzahl geöffnet wird; heruntergeladene Dateien enthalten außerdem eine UTF-8-Byte-Reihenfolge-Kennung, damit Akzentzeichen und nichtlateinische Zeichen in Excel korrekt angezeigt werden, statt zu unleserlichen Symbolen zu werden. Jede Umwandlung erfolgt lokal in Ihrem Browser mittels JavaScript — Ihr JSON wird niemals an einen Server hochgeladen, protokolliert oder irgendwo gespeichert außer im lokalen Speicher Ihres eigenen Browsers, der sich nur Ihre letzte Eingabe merkt, damit sie bei einem Neuladen der Seite nicht verloren geht."
+    "faq.a5": "Die erzeugte CSV folgt dem RFC-4180-Standard: Jeder Wert, der das gewählte Trennzeichen, ein doppeltes Anführungszeichen oder einen Zeilenumbruch enthält, wird automatisch in Anführungszeichen gesetzt, wobei interne Anführungszeichen verdoppelt werden, sodass Kommas und Zeilenumbrüche innerhalb Ihrer Daten die Spaltenausrichtung nie stören. Wenn Ihre Excel-Ländereinstellung das Komma als Dezimaltrennzeichen verwendet, stellen Sie das Trennzeichen vor dem Herunterladen auf Semikolon oder Tab um, damit die Datei mit der richtigen Spaltenzahl geöffnet wird; heruntergeladene Dateien enthalten außerdem eine UTF-8-Byte-Reihenfolge-Kennung, damit Akzentzeichen und nichtlateinische Zeichen in Excel korrekt angezeigt werden, statt zu unleserlichen Symbolen zu werden. Jede Umwandlung erfolgt lokal in Ihrem Browser mittels JavaScript — Ihr JSON wird niemals an einen Server hochgeladen, protokolliert oder irgendwo gespeichert außer im lokalen Speicher Ihres eigenen Browsers, der sich nur Ihre letzte Eingabe merkt, damit sie bei einem Neuladen der Seite nicht verloren geht.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -639,7 +699,12 @@ window.I18N_LOCALES = {
     "faq.q4": "JSONが変換されません — エラーの見つけ方と修正方法は?",
     "faq.a4": "貼り付けたテキストが有効なJSONでない場合、変換ツールは単に「無効」と表示するだけではなく、パースが失敗した正確な行と列を報告し、パーサーの元のエラーメッセージを表示し、問題のある文字を指すキャレット記号(^)付きでその行の短い抜粋を表示します。最も一般的な原因は、配列やオブジェクトの最後の項目の後に余分なカンマがある、JSONで必須のダブルクォートの代わりにシングルクォートを使っている、文字列内にエスケープされていないダブルクォートがある、といったものです。ハイライトされた箇所を修正すると、JSONが再び有効になった瞬間にCSVが自動的に再生成されます — 再度ボタンを押す必要はありません。",
     "faq.q5": "生成されたCSVはExcelで正しく開けますか? データはどこかにアップロードされますか?",
-    "faq.a5": "生成されるCSVはRFC 4180標準に準拠しています: 選択した区切り文字、ダブルクォート、改行を含む値は自動的に引用符で囲まれ、内部の引用符は二重化されるため、データ内のカンマや改行が列のずれを引き起こすことはありません。お使いのExcelのロケールでカンマが小数点区切りとして使われている場合は、ダウンロード前に区切り文字をセミコロンまたはタブに切り替えることで、正しい列数でファイルが開くようになります。ダウンロードされるファイルにはUTF-8のバイトオーダーマークも含まれており、アクセント記号付き文字や非ラテン文字がExcelで文字化けせずに正しく表示されます。すべての変換はブラウザ内でJavaScriptによりローカルに行われます — JSONがサーバーにアップロードされたり、記録されたり、保存されたりすることは一切なく、ページを再読み込みしても失われないよう最後の入力内容だけがご自身のブラウザのローカルストレージに記憶されます。"
+    "faq.a5": "生成されるCSVはRFC 4180標準に準拠しています: 選択した区切り文字、ダブルクォート、改行を含む値は自動的に引用符で囲まれ、内部の引用符は二重化されるため、データ内のカンマや改行が列のずれを引き起こすことはありません。お使いのExcelのロケールでカンマが小数点区切りとして使われている場合は、ダウンロード前に区切り文字をセミコロンまたはタブに切り替えることで、正しい列数でファイルが開くようになります。ダウンロードされるファイルにはUTF-8のバイトオーダーマークも含まれており、アクセント記号付き文字や非ラテン文字がExcelで文字化けせずに正しく表示されます。すべての変換はブラウザ内でJavaScriptによりローカルに行われます — JSONがサーバーにアップロードされたり、記録されたり、保存されたりすることは一切なく、ページを再読み込みしても失われないよう最後の入力内容だけがご自身のブラウザのローカルストレージに記憶されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -687,6 +752,11 @@ window.I18N_LOCALES = {
     "faq.q4": "JSON이 변환되지 않습니다 — 오류를 찾아 고치려면 어떻게 하나요?",
     "faq.a4": "붙여넣은 텍스트가 유효한 JSON이 아니면, 변환기는 단순히 \"잘못됨\"이라고만 표시하지 않습니다 — 파싱이 실패한 정확한 행과 열을 알려주고, 원래의 파서 오류 메시지를 보여주며, 문제가 되는 문자를 캐럿(^) 기호로 가리키는 해당 줄의 짧은 발췌를 표시합니다. 가장 흔한 원인은 배열이나 객체의 마지막 항목 뒤에 붙은 불필요한 쉼표, 키와 문자열에 JSON이 요구하는 큰따옴표 대신 작은따옴표를 사용한 경우, 또는 문자열 안에서 이스케이프되지 않은 큰따옴표입니다. 강조 표시된 부분을 고치면 JSON이 다시 유효해지는 즉시 CSV가 자동으로 재생성되며, 버튼을 다시 누를 필요가 없습니다.",
     "faq.q5": "생성된 CSV가 엑셀에서 제대로 열리나요? 제 데이터가 어딘가로 업로드되나요?",
-    "faq.a5": "생성된 CSV는 RFC 4180 표준을 따릅니다: 선택한 구분자, 큰따옴표, 줄바꿈이 포함된 값은 자동으로 따옴표로 감싸지고 내부 따옴표는 두 개로 늘어나므로, 데이터 안의 쉼표와 줄바꿈이 열 정렬을 깨뜨리는 일이 없습니다. 사용 중인 엑셀의 로케일이 쉼표를 소수점 구분자로 사용한다면, 다운로드하기 전에 구분자를 세미콜론이나 탭으로 바꾸면 파일이 올바른 열 개수로 열립니다. 다운로드되는 파일에는 UTF-8 바이트 순서 표시(BOM)도 포함되어 있어 악센트 문자와 비라틴 문자가 깨지지 않고 엑셀에서 올바르게 표시됩니다. 모든 변환은 브라우저 안에서 JavaScript로 로컬에서 이루어집니다 — JSON이 서버로 업로드되거나 기록되거나 어딘가에 저장되는 일은 전혀 없으며, 새로고침해도 입력 내용을 잃지 않도록 마지막 입력값만 사용자 브라우저의 로컬 스토리지에 저장됩니다."
+    "faq.a5": "생성된 CSV는 RFC 4180 표준을 따릅니다: 선택한 구분자, 큰따옴표, 줄바꿈이 포함된 값은 자동으로 따옴표로 감싸지고 내부 따옴표는 두 개로 늘어나므로, 데이터 안의 쉼표와 줄바꿈이 열 정렬을 깨뜨리는 일이 없습니다. 사용 중인 엑셀의 로케일이 쉼표를 소수점 구분자로 사용한다면, 다운로드하기 전에 구분자를 세미콜론이나 탭으로 바꾸면 파일이 올바른 열 개수로 열립니다. 다운로드되는 파일에는 UTF-8 바이트 순서 표시(BOM)도 포함되어 있어 악센트 문자와 비라틴 문자가 깨지지 않고 엑셀에서 올바르게 표시됩니다. 모든 변환은 브라우저 안에서 JavaScript로 로컬에서 이루어집니다 — JSON이 서버로 업로드되거나 기록되거나 어딘가에 저장되는 일은 전혀 없으며, 새로고침해도 입력 내용을 잃지 않도록 마지막 입력값만 사용자 브라우저의 로컬 스토리지에 저장됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -79,7 +79,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I verify that our review data is never uploaded?",
     "faq.a4": "Check it yourself, do not take our word for it. Open DevTools (F12) → Network tab, clear it, then paste your scores and hit Calibrate: the request list stays empty, because the parsing, the z-scores and the grade assignment all run in JavaScript in this tab. You can also load the page, go offline (Network → Offline, or unplug), and calibrate — it still works, which is only possible if nothing leaves the browser. The page keeps your preset, column mapping and weights in localStorage; employee IDs, names and scores are never written to storage and never sent anywhere.",
     "faq.q5": "Can we treat the normalized grades as final?",
-    "faq.a5": "No — this is preparation for a calibration session, not a verdict. Z-scores assume a rater's own ratees are a fair comparison group, which breaks down for very small teams, for a genuinely outstanding team, and for anyone rated only once. The tool flags those cases instead of hiding them: raters with a single ratee or zero score variance are left out of normalization, and every excluded row is listed with its line number. Bring the ranking, the rater bias report and the excluded rows to the meeting, let managers argue the edge cases with evidence, and record the human decision as the outcome."
+    "faq.a5": "No — this is preparation for a calibration session, not a verdict. Z-scores assume a rater's own ratees are a fair comparison group, which breaks down for very small teams, for a genuinely outstanding team, and for anyone rated only once. The tool flags those cases instead of hiding them: raters with a single ratee or zero score variance are left out of normalization, and every excluded row is listed with its line number. Bring the ranking, the rater bias report and the excluded rows to the meeting, let managers argue the edge cases with evidence, and record the human decision as the outcome.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -143,7 +148,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我如何确认我们的考核数据从未被上传？",
     "faq.a4": "自己动手验证，别只听我们说。打开开发者工具（F12）→ 网络标签，清空它，然后粘贴分数并点击\"校准\"：请求列表始终为空，因为解析、Z 分数和等级分配全都在本标签页的 JavaScript 中运行。你也可以加载页面后断网（网络 → 离线，或拔网线）再校准 — 它照样能用，这只有在没有任何数据离开浏览器时才可能。页面会把你的预设、列映射和权重保存在 localStorage 中；员工编号、姓名和分数从不写入存储，也从不发送到任何地方。",
     "faq.q5": "可以把归一化后的等级当作最终结果吗？",
-    "faq.a5": "不行 — 这是校准会议的准备工作，而不是定论。Z 分数假定某位评分者手下的被评者是一个公平的比较群体，但对于极小的团队、真正出色的团队，以及只被评过一次的人，这个假定就不成立。工具会把这些情况标记出来而不是隐藏：只有一名被评者或分数方差为零的评分者会被排除在归一化之外，每一被排除的行都会连同其行号列出。把排名、评分者偏差报告和被排除的行带到会议上，让经理们用证据讨论这些边界情况，并把人的决定记录为最终结果。"
+    "faq.a5": "不行 — 这是校准会议的准备工作，而不是定论。Z 分数假定某位评分者手下的被评者是一个公平的比较群体，但对于极小的团队、真正出色的团队，以及只被评过一次的人，这个假定就不成立。工具会把这些情况标记出来而不是隐藏：只有一名被评者或分数方差为零的评分者会被排除在归一化之外，每一被排除的行都会连同其行号列出。把排名、评分者偏差报告和被排除的行带到会议上，让经理们用证据讨论这些边界情况，并把人的决定记录为最终结果。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -207,7 +217,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मैं कैसे पुष्टि करूँ कि हमारा समीक्षा डेटा कभी अपलोड नहीं होता?",
     "faq.a4": "ख़ुद जाँचें, हमारी बात पर भरोसा मत कीजिए। DevTools (F12) → Network टैब खोलें, उसे साफ़ करें, फिर अपने स्कोर पेस्ट करके \"कैलिब्रेट\" दबाएँ: रिक्वेस्ट सूची ख़ाली रहती है, क्योंकि पार्सिंग, Z-स्कोर और ग्रेड आवंटन सब इसी टैब के JavaScript में चलते हैं। आप पेज लोड करके ऑफ़लाइन भी जा सकते हैं (Network → Offline, या केबल निकालकर) और कैलिब्रेट कर सकते हैं — यह फिर भी काम करता है, जो तभी संभव है जब कुछ भी ब्राउज़र से बाहर न जाए। पेज आपका प्रीसेट, कॉलम मैपिंग और भार localStorage में रखता है; कर्मचारी आईडी, नाम और स्कोर कभी स्टोरेज में नहीं लिखे जाते और कहीं नहीं भेजे जाते।",
     "faq.q5": "क्या हम सामान्यीकृत ग्रेड को अंतिम मान सकते हैं?",
-    "faq.a5": "नहीं — यह कैलिब्रेशन सत्र की तैयारी है, कोई फ़ैसला नहीं। Z-स्कोर यह मान लेते हैं कि किसी मूल्यांकनकर्ता के अपने अधीनस्थ एक निष्पक्ष तुलना समूह हैं, जो बहुत छोटी टीमों, वास्तव में उत्कृष्ट टीम, और केवल एक बार मूल्यांकित किसी व्यक्ति के लिए टूट जाता है। टूल इन मामलों को छिपाने के बजाय चिह्नित करता है: एक ही अधीनस्थ या शून्य स्कोर-विचरण वाले मूल्यांकनकर्ताओं को सामान्यीकरण से बाहर रखा जाता है, और हर बाहर की गई पंक्ति उसकी लाइन संख्या के साथ सूचीबद्ध होती है। रैंकिंग, मूल्यांकनकर्ता पूर्वाग्रह रिपोर्ट और बाहर की गई पंक्तियाँ मीटिंग में ले जाएँ, मैनेजरों को साक्ष्य के साथ किनारे वाले मामलों पर बहस करने दें, और मानव-निर्णय को परिणाम के रूप में दर्ज करें।"
+    "faq.a5": "नहीं — यह कैलिब्रेशन सत्र की तैयारी है, कोई फ़ैसला नहीं। Z-स्कोर यह मान लेते हैं कि किसी मूल्यांकनकर्ता के अपने अधीनस्थ एक निष्पक्ष तुलना समूह हैं, जो बहुत छोटी टीमों, वास्तव में उत्कृष्ट टीम, और केवल एक बार मूल्यांकित किसी व्यक्ति के लिए टूट जाता है। टूल इन मामलों को छिपाने के बजाय चिह्नित करता है: एक ही अधीनस्थ या शून्य स्कोर-विचरण वाले मूल्यांकनकर्ताओं को सामान्यीकरण से बाहर रखा जाता है, और हर बाहर की गई पंक्ति उसकी लाइन संख्या के साथ सूचीबद्ध होती है। रैंकिंग, मूल्यांकनकर्ता पूर्वाग्रह रिपोर्ट और बाहर की गई पंक्तियाँ मीटिंग में ले जाएँ, मैनेजरों को साक्ष्य के साथ किनारे वाले मामलों पर बहस करने दें, और मानव-निर्णय को परिणाम के रूप में दर्ज करें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -271,7 +286,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo verifico que los datos de nuestras evaluaciones nunca se suben?",
     "faq.a4": "Compruébalo tú mismo, no te fíes de nuestra palabra. Abre DevTools (F12) → pestaña Red, límpiala, luego pega tus notas y pulsa Calibrar: la lista de peticiones sigue vacía, porque el análisis, las puntuaciones Z y la asignación de calificaciones se ejecutan en JavaScript en esta pestaña. También puedes cargar la página, desconectarte (Red → Sin conexión, o desenchufar) y calibrar — sigue funcionando, lo que solo es posible si nada sale del navegador. La página guarda tu preajuste, la asociación de columnas y los pesos en localStorage; los identificadores, nombres y notas de los empleados nunca se escriben en el almacenamiento ni se envían a ningún sitio.",
     "faq.q5": "¿Podemos tomar las calificaciones normalizadas como definitivas?",
-    "faq.a5": "No — esto es preparación para una sesión de calibración, no un veredicto. Las puntuaciones Z suponen que las personas evaluadas por un evaluador son un grupo de comparación justo, algo que se rompe en equipos muy pequeños, en un equipo realmente excepcional y para quien fue evaluado una sola vez. La herramienta marca esos casos en lugar de ocultarlos: los evaluadores con una sola persona evaluada o con varianza cero quedan fuera de la normalización, y cada fila excluida aparece con su número de línea. Lleva el ranking, el informe de sesgo del evaluador y las filas excluidas a la reunión, deja que los jefes discutan los casos límite con evidencia y registra la decisión humana como resultado."
+    "faq.a5": "No — esto es preparación para una sesión de calibración, no un veredicto. Las puntuaciones Z suponen que las personas evaluadas por un evaluador son un grupo de comparación justo, algo que se rompe en equipos muy pequeños, en un equipo realmente excepcional y para quien fue evaluado una sola vez. La herramienta marca esos casos en lugar de ocultarlos: los evaluadores con una sola persona evaluada o con varianza cero quedan fuera de la normalización, y cada fila excluida aparece con su número de línea. Lleva el ranking, el informe de sesgo del evaluador y las filas excluidas a la reunión, deja que los jefes discutan los casos límite con evidencia y registra la decisión humana como resultado.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -335,7 +355,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أتحقق أن بيانات تقييمنا لا تُرفَع أبدًا؟",
     "faq.a4": "تحقّق بنفسك ولا تأخذ بكلامنا. افتح أدوات المطور (F12) ← تبويب الشبكة، امسحه، ثم الصق درجاتك واضغط \"معايرة\": تبقى قائمة الطلبات فارغة، لأن التحليل ودرجات Z وإسناد الدرجات كلها تعمل بلغة JavaScript في هذا التبويب. يمكنك أيضًا تحميل الصفحة ثم قطع الاتصال (الشبكة ← دون اتصال، أو انزع الكابل) والمعايرة — وستظل تعمل، وهذا لا يكون ممكنًا إلا إذا لم يغادر شيء المتصفح. تحفظ الصفحة إعدادك المسبق وربط الأعمدة والأوزان في localStorage؛ أما معرّفات الموظفين وأسماؤهم ودرجاتهم فلا تُكتب في التخزين ولا تُرسل إلى أي مكان.",
     "faq.q5": "هل يمكننا اعتبار الدرجات المُطبَّعة نهائية؟",
-    "faq.a5": "لا — هذا إعداد لجلسة معايرة، وليس حُكمًا. تفترض درجات Z أن مَن يقيّمهم مُقيّمٌ ما يشكّلون مجموعة مقارنة عادلة، وهو ما يتهاوى للفرق الصغيرة جدًا، وللفريق المتميّز فعلًا، ولمن قُيّم مرة واحدة فقط. تُبرز الأداة هذه الحالات بدلًا من إخفائها: يُستبعَد من التطبيع المُقيّمون الذين لديهم مُقيَّم واحد أو تباين صفري، وتُدرَج كل صف مُستبعَد مع رقم سطره. خُذ إلى الاجتماع الترتيبَ وتقرير تحيّز المُقيّم والصفوف المُستبعَدة، ودع المديرين يناقشون الحالات الحدّية بالأدلة، وسجِّل القرار البشري بوصفه النتيجة."
+    "faq.a5": "لا — هذا إعداد لجلسة معايرة، وليس حُكمًا. تفترض درجات Z أن مَن يقيّمهم مُقيّمٌ ما يشكّلون مجموعة مقارنة عادلة، وهو ما يتهاوى للفرق الصغيرة جدًا، وللفريق المتميّز فعلًا، ولمن قُيّم مرة واحدة فقط. تُبرز الأداة هذه الحالات بدلًا من إخفائها: يُستبعَد من التطبيع المُقيّمون الذين لديهم مُقيَّم واحد أو تباين صفري، وتُدرَج كل صف مُستبعَد مع رقم سطره. خُذ إلى الاجتماع الترتيبَ وتقرير تحيّز المُقيّم والصفوف المُستبعَدة، ودع المديرين يناقشون الحالات الحدّية بالأدلة، وسجِّل القرار البشري بوصفه النتيجة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -399,7 +424,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment vérifier que nos données d'évaluation ne sont jamais envoyées ?",
     "faq.a4": "Vérifiez-le vous-même, ne nous croyez pas sur parole. Ouvrez les DevTools (F12) → onglet Réseau, videz-le, puis collez vos notes et cliquez sur Calibrer : la liste des requêtes reste vide, car l'analyse, les scores Z et l'attribution des notes s'exécutent tous en JavaScript dans cet onglet. Vous pouvez aussi charger la page, passer hors ligne (Réseau → Hors ligne, ou débrancher) et calibrer — cela fonctionne toujours, ce qui n'est possible que si rien ne quitte le navigateur. La page conserve votre préréglage, la correspondance des colonnes et les pondérations dans le localStorage ; les identifiants, noms et notes des salariés ne sont jamais écrits en stockage ni envoyés où que ce soit.",
     "faq.q5": "Pouvons-nous considérer les notes normalisées comme définitives ?",
-    "faq.a5": "Non — c'est une préparation à une séance de calibration, pas un verdict. Les scores Z supposent que les personnes évaluées par un même évaluateur forment un groupe de comparaison équitable, ce qui s'effondre pour les très petites équipes, pour une équipe réellement exceptionnelle et pour quelqu'un évalué une seule fois. L'outil signale ces cas au lieu de les masquer : les évaluateurs avec un seul évalué ou une variance nulle sont exclus de la normalisation, et chaque ligne exclue est listée avec son numéro de ligne. Apportez le classement, le rapport de biais de l'évaluateur et les lignes exclues à la réunion, laissez les managers débattre des cas limites avec des preuves, et consignez la décision humaine comme résultat."
+    "faq.a5": "Non — c'est une préparation à une séance de calibration, pas un verdict. Les scores Z supposent que les personnes évaluées par un même évaluateur forment un groupe de comparaison équitable, ce qui s'effondre pour les très petites équipes, pour une équipe réellement exceptionnelle et pour quelqu'un évalué une seule fois. L'outil signale ces cas au lieu de les masquer : les évaluateurs avec un seul évalué ou une variance nulle sont exclus de la normalisation, et chaque ligne exclue est listée avec son numéro de ligne. Apportez le classement, le rapport de biais de l'évaluateur et les lignes exclues à la réunion, laissez les managers débattre des cas limites avec des preuves, et consignez la décision humaine comme résultat.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -463,7 +493,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমাদের রিভিউ ডেটা কখনও আপলোড হয় না তা আমি কীভাবে যাচাই করব?",
     "faq.a4": "নিজে যাচাই করুন, আমাদের কথায় ভরসা করবেন না। DevTools (F12) → Network ট্যাব খুলুন, সেটি ক্লিয়ার করুন, তারপর স্কোর পেস্ট করে \"ক্যালিব্রেট\" চাপুন: রিকোয়েস্ট তালিকা খালি থাকে, কারণ পার্সিং, Z-স্কোর ও গ্রেড নির্ধারণ সবই এই ট্যাবের JavaScript-এ চলে। পেজ লোড করে অফলাইনে গিয়েও (Network → Offline, বা ক্যাবল খুলে) ক্যালিব্রেট করতে পারেন — এটি তবুও কাজ করে, যা কেবল তখনই সম্ভব যখন কিছুই ব্রাউজার ছাড়ে না। পেজ আপনার প্রিসেট, কলাম ম্যাপিং ও ওজন localStorage-এ রাখে; কর্মীর আইডি, নাম ও স্কোর কখনও স্টোরেজে লেখা হয় না এবং কোথাও পাঠানো হয় না।",
     "faq.q5": "সমতাকৃত গ্রেডগুলোকে কি চূড়ান্ত ধরা যায়?",
-    "faq.a5": "না — এটি ক্যালিব্রেশন সেশনের প্রস্তুতি, কোনো চূড়ান্ত রায় নয়। Z-স্কোর ধরে নেয় যে একজন মূল্যায়নকারীর অধীনস্থরা একটি ন্যায্য তুলনামূলক গোষ্ঠী, যা খুব ছোট দল, সত্যিকারের অসাধারণ দল এবং কেবল একবার মূল্যায়িত ব্যক্তির ক্ষেত্রে ভেঙে পড়ে। টুল এসব ক্ষেত্র লুকানোর বদলে চিহ্নিত করে: একজন অধীনস্থ বা শূন্য স্কোর-বিচ্যুতি-সম্পন্ন মূল্যায়নকারীদের সমতাকরণ থেকে বাদ দেওয়া হয়, আর প্রতিটি বাদ দেওয়া সারি তার লাইন নম্বর-সহ তালিকাভুক্ত হয়। র‍্যাঙ্কিং, মূল্যায়নকারীর পক্ষপাত রিপোর্ট ও বাদ দেওয়া সারিগুলো মিটিংয়ে নিয়ে যান, ম্যানেজারদের প্রমাণসহ প্রান্তিক ক্ষেত্র নিয়ে আলোচনা করতে দিন, আর মানবিক সিদ্ধান্তটিকে ফলাফল হিসেবে নথিভুক্ত করুন।"
+    "faq.a5": "না — এটি ক্যালিব্রেশন সেশনের প্রস্তুতি, কোনো চূড়ান্ত রায় নয়। Z-স্কোর ধরে নেয় যে একজন মূল্যায়নকারীর অধীনস্থরা একটি ন্যায্য তুলনামূলক গোষ্ঠী, যা খুব ছোট দল, সত্যিকারের অসাধারণ দল এবং কেবল একবার মূল্যায়িত ব্যক্তির ক্ষেত্রে ভেঙে পড়ে। টুল এসব ক্ষেত্র লুকানোর বদলে চিহ্নিত করে: একজন অধীনস্থ বা শূন্য স্কোর-বিচ্যুতি-সম্পন্ন মূল্যায়নকারীদের সমতাকরণ থেকে বাদ দেওয়া হয়, আর প্রতিটি বাদ দেওয়া সারি তার লাইন নম্বর-সহ তালিকাভুক্ত হয়। র‍্যাঙ্কিং, মূল্যায়নকারীর পক্ষপাত রিপোর্ট ও বাদ দেওয়া সারিগুলো মিটিংয়ে নিয়ে যান, ম্যানেজারদের প্রমাণসহ প্রান্তিক ক্ষেত্র নিয়ে আলোচনা করতে দিন, আর মানবিক সিদ্ধান্তটিকে ফলাফল হিসেবে নথিভুক্ত করুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -527,7 +562,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como verifico que os dados das nossas avaliações nunca são enviados?",
     "faq.a4": "Verifique você mesmo, não confie só na nossa palavra. Abra o DevTools (F12) → aba Rede, limpe-a, depois cole suas notas e clique em Calibrar: a lista de requisições continua vazia, porque a análise, os escores Z e a atribuição de conceitos rodam todos em JavaScript nesta aba. Você também pode carregar a página, ficar off-line (Rede → Off-line, ou desconectar) e calibrar — continua funcionando, o que só é possível se nada sair do navegador. A página guarda seu preset, a associação de colunas e os pesos no localStorage; IDs, nomes e notas dos funcionários nunca são gravados no armazenamento nem enviados a lugar algum.",
     "faq.q5": "Podemos considerar os conceitos normalizados como finais?",
-    "faq.a5": "Não — isto é preparação para uma sessão de calibração, não um veredito. Os escores Z presumem que as pessoas avaliadas por um mesmo avaliador formam um grupo de comparação justo, o que desmorona em equipes muito pequenas, numa equipe realmente excepcional e para quem foi avaliado uma única vez. A ferramenta sinaliza esses casos em vez de escondê-los: avaliadores com um só avaliado ou variância zero ficam de fora da normalização, e cada linha excluída aparece com seu número de linha. Leve o ranking, o relatório de viés do avaliador e as linhas excluídas para a reunião, deixe os gestores discutirem os casos-limite com evidências e registre a decisão humana como resultado."
+    "faq.a5": "Não — isto é preparação para uma sessão de calibração, não um veredito. Os escores Z presumem que as pessoas avaliadas por um mesmo avaliador formam um grupo de comparação justo, o que desmorona em equipes muito pequenas, numa equipe realmente excepcional e para quem foi avaliado uma única vez. A ferramenta sinaliza esses casos em vez de escondê-los: avaliadores com um só avaliado ou variância zero ficam de fora da normalização, e cada linha excluída aparece com seu número de linha. Leve o ranking, o relatório de viés do avaliador e as linhas excluídas para a reunião, deixe os gestores discutirem os casos-limite com evidências e registre a decisão humana como resultado.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -591,7 +631,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как убедиться, что данные наших оценок никогда не отправляются?",
     "faq.a4": "Проверьте сами, не верьте нам на слово. Откройте DevTools (F12) → вкладку «Сеть», очистите её, затем вставьте баллы и нажмите «Калибровать»: список запросов остаётся пустым, потому что разбор, Z-оценки и назначение грейдов выполняются на JavaScript в этой вкладке. Можно также загрузить страницу, отключиться от сети («Сеть» → «Офлайн» или выдернуть кабель) и калибровать — всё равно работает, что возможно, только если ничего не покидает браузер. Страница хранит ваш пресет, сопоставление столбцов и веса в localStorage; идентификаторы, имена и баллы сотрудников никогда не записываются в хранилище и никуда не отправляются.",
     "faq.q5": "Можно ли считать нормализованные грейды окончательными?",
-    "faq.a5": "Нет — это подготовка к калибровочной сессии, а не приговор. Z-оценки исходят из того, что подчинённые одного оценивающего образуют справедливую группу сравнения, а это рушится для очень маленьких команд, для по-настоящему выдающейся команды и для тех, кого оценили лишь однажды. Инструмент помечает такие случаи, а не прячет их: оценивающие с единственным оцениваемым или нулевой дисперсией баллов исключаются из нормализации, и каждая исключённая строка выводится с номером строки. Принесите на встречу ранжирование, отчёт о предвзятости оценивающих и исключённые строки, дайте руководителям обсудить пограничные случаи с доказательствами и зафиксируйте человеческое решение как итог."
+    "faq.a5": "Нет — это подготовка к калибровочной сессии, а не приговор. Z-оценки исходят из того, что подчинённые одного оценивающего образуют справедливую группу сравнения, а это рушится для очень маленьких команд, для по-настоящему выдающейся команды и для тех, кого оценили лишь однажды. Инструмент помечает такие случаи, а не прячет их: оценивающие с единственным оцениваемым или нулевой дисперсией баллов исключаются из нормализации, и каждая исключённая строка выводится с номером строки. Принесите на встречу ранжирование, отчёт о предвзятости оценивающих и исключённые строки, дайте руководителям обсудить пограничные случаи с доказательствами и зафиксируйте человеческое решение как итог.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -655,7 +700,12 @@ window.I18N_LOCALES = {
     "faq.q4": "میں کیسے تصدیق کروں کہ ہمارا جائزہ ڈیٹا کبھی اپ لوڈ نہیں ہوتا؟",
     "faq.a4": "خود جانچیں، ہماری بات پر بھروسہ نہ کریں۔ DevTools (F12) → Network ٹیب کھولیں، اسے صاف کریں، پھر اپنے اسکور پیسٹ کریں اور \"کیلیبریٹ\" دبائیں: درخواستوں کی فہرست خالی رہتی ہے، کیونکہ پارسنگ، Z-اسکور اور گریڈ تفویض سب اسی ٹیب کے JavaScript میں چلتے ہیں۔ آپ صفحہ لوڈ کر کے آف لائن بھی جا سکتے ہیں (Network → Offline، یا کیبل نکال کر) اور کیلیبریٹ کر سکتے ہیں — یہ پھر بھی کام کرتا ہے، جو صرف تب ممکن ہے جب کچھ بھی براؤزر سے باہر نہ جائے۔ صفحہ آپ کا پری سیٹ، کالم میپنگ اور وزن localStorage میں رکھتا ہے؛ ملازمین کے آئی ڈی، نام اور اسکور کبھی اسٹوریج میں نہیں لکھے جاتے اور کہیں نہیں بھیجے جاتے۔",
     "faq.q5": "کیا ہم نارملائزڈ گریڈز کو حتمی مان سکتے ہیں؟",
-    "faq.a5": "نہیں — یہ کیلیبریشن سیشن کی تیاری ہے، کوئی فیصلہ نہیں۔ Z-اسکور یہ فرض کرتے ہیں کہ کسی جائزہ لینے والے کے ماتحت ایک منصفانہ موازنہ گروہ ہیں، جو بہت چھوٹی ٹیموں، واقعی شاندار ٹیم، اور صرف ایک بار جانچے گئے کسی فرد کے لیے ٹوٹ جاتا ہے۔ ٹول ان صورتوں کو چھپانے کے بجائے نشان زد کرتا ہے: ایک ہی ماتحت یا صفر اسکور-فرق والے جائزہ لینے والے نارملائزیشن سے باہر رکھے جاتے ہیں، اور ہر خارج کی گئی سطر اپنے لائن نمبر کے ساتھ درج ہوتی ہے۔ رینکنگ، جائزہ لینے والے کے تعصب کی رپورٹ اور خارج کی گئی سطریں میٹنگ میں لے جائیں، مینیجرز کو ثبوت کے ساتھ کنارے کے معاملات پر بحث کرنے دیں، اور انسانی فیصلے کو نتیجے کے طور پر ریکارڈ کریں۔"
+    "faq.a5": "نہیں — یہ کیلیبریشن سیشن کی تیاری ہے، کوئی فیصلہ نہیں۔ Z-اسکور یہ فرض کرتے ہیں کہ کسی جائزہ لینے والے کے ماتحت ایک منصفانہ موازنہ گروہ ہیں، جو بہت چھوٹی ٹیموں، واقعی شاندار ٹیم، اور صرف ایک بار جانچے گئے کسی فرد کے لیے ٹوٹ جاتا ہے۔ ٹول ان صورتوں کو چھپانے کے بجائے نشان زد کرتا ہے: ایک ہی ماتحت یا صفر اسکور-فرق والے جائزہ لینے والے نارملائزیشن سے باہر رکھے جاتے ہیں، اور ہر خارج کی گئی سطر اپنے لائن نمبر کے ساتھ درج ہوتی ہے۔ رینکنگ، جائزہ لینے والے کے تعصب کی رپورٹ اور خارج کی گئی سطریں میٹنگ میں لے جائیں، مینیجرز کو ثبوت کے ساتھ کنارے کے معاملات پر بحث کرنے دیں، اور انسانی فیصلے کو نتیجے کے طور پر ریکارڈ کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -719,7 +769,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana saya memastikan data penilaian kami tidak pernah diunggah?",
     "faq.a4": "Periksa sendiri, jangan hanya percaya perkataan kami. Buka DevTools (F12) → tab Network, bersihkan, lalu tempel skor Anda dan tekan Kalibrasi: daftar permintaan tetap kosong, karena penguraian, skor-Z, dan penetapan grade semuanya berjalan di JavaScript pada tab ini. Anda juga bisa memuat halaman, beralih ke luring (Network → Offline, atau cabut kabel), lalu mengalibrasi — tetap berfungsi, yang hanya mungkin jika tidak ada yang keluar dari browser. Halaman menyimpan preset, pemetaan kolom, dan bobot Anda di localStorage; ID, nama, dan skor karyawan tidak pernah ditulis ke penyimpanan dan tidak pernah dikirim ke mana pun.",
     "faq.q5": "Bolehkah kami menganggap grade yang dinormalisasi sebagai final?",
-    "faq.a5": "Tidak — ini persiapan untuk sesi kalibrasi, bukan vonis. Skor-Z mengasumsikan bahwa orang-orang yang dinilai seorang penilai membentuk kelompok pembanding yang adil, yang runtuh untuk tim yang sangat kecil, untuk tim yang benar-benar istimewa, dan untuk siapa pun yang dinilai hanya sekali. Alat ini menandai kasus-kasus itu alih-alih menyembunyikannya: penilai dengan satu orang yang dinilai atau varians skor nol dikeluarkan dari normalisasi, dan setiap baris yang dikecualikan dicantumkan beserta nomor barisnya. Bawa pemeringkatan, laporan bias penilai, dan baris yang dikecualikan ke rapat, biarkan para manajer memperdebatkan kasus batas dengan bukti, dan catat keputusan manusia sebagai hasilnya."
+    "faq.a5": "Tidak — ini persiapan untuk sesi kalibrasi, bukan vonis. Skor-Z mengasumsikan bahwa orang-orang yang dinilai seorang penilai membentuk kelompok pembanding yang adil, yang runtuh untuk tim yang sangat kecil, untuk tim yang benar-benar istimewa, dan untuk siapa pun yang dinilai hanya sekali. Alat ini menandai kasus-kasus itu alih-alih menyembunyikannya: penilai dengan satu orang yang dinilai atau varians skor nol dikeluarkan dari normalisasi, dan setiap baris yang dikecualikan dicantumkan beserta nomor barisnya. Bawa pemeringkatan, laporan bias penilai, dan baris yang dikecualikan ke rapat, biarkan para manajer memperdebatkan kasus batas dengan bukti, dan catat keputusan manusia sebagai hasilnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -783,7 +838,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie überprüfe ich, dass unsere Beurteilungsdaten nie hochgeladen werden?",
     "faq.a4": "Prüfen Sie es selbst, verlassen Sie sich nicht auf unser Wort. Öffnen Sie DevTools (F12) → Tab Netzwerk, leeren Sie ihn, fügen Sie dann Ihre Bewertungen ein und klicken Sie auf Kalibrieren: Die Anfrageliste bleibt leer, denn das Parsen, die Z-Werte und die Notenzuweisung laufen alle in JavaScript in diesem Tab. Sie können die Seite auch laden, offline gehen (Netzwerk → Offline oder Kabel ziehen) und kalibrieren — es funktioniert weiterhin, was nur möglich ist, wenn nichts den Browser verlässt. Die Seite speichert Ihr Preset, die Spaltenzuordnung und die Gewichte im localStorage; Mitarbeiter-IDs, Namen und Bewertungen werden nie in den Speicher geschrieben und nie irgendwohin gesendet.",
     "faq.q5": "Dürfen wir die normalisierten Noten als endgültig betrachten?",
-    "faq.a5": "Nein — dies ist die Vorbereitung auf eine Kalibrierungssitzung, kein Urteil. Z-Werte setzen voraus, dass die von einem Beurteiler bewerteten Personen eine faire Vergleichsgruppe bilden, was bei sehr kleinen Teams, bei einem wirklich herausragenden Team und bei nur einmal bewerteten Personen zusammenbricht. Das Tool kennzeichnet diese Fälle, statt sie zu verbergen: Beurteiler mit nur einer bewerteten Person oder Varianz null bleiben aus der Normalisierung heraus, und jede ausgeschlossene Zeile wird mit ihrer Zeilennummer aufgeführt. Bringen Sie die Rangfolge, den Bericht zur Beurteiler-Verzerrung und die ausgeschlossenen Zeilen in die Sitzung, lassen Sie die Führungskräfte die Grenzfälle mit Belegen ausdiskutieren und halten Sie die menschliche Entscheidung als Ergebnis fest."
+    "faq.a5": "Nein — dies ist die Vorbereitung auf eine Kalibrierungssitzung, kein Urteil. Z-Werte setzen voraus, dass die von einem Beurteiler bewerteten Personen eine faire Vergleichsgruppe bilden, was bei sehr kleinen Teams, bei einem wirklich herausragenden Team und bei nur einmal bewerteten Personen zusammenbricht. Das Tool kennzeichnet diese Fälle, statt sie zu verbergen: Beurteiler mit nur einer bewerteten Person oder Varianz null bleiben aus der Normalisierung heraus, und jede ausgeschlossene Zeile wird mit ihrer Zeilennummer aufgeführt. Bringen Sie die Rangfolge, den Bericht zur Beurteiler-Verzerrung und die ausgeschlossenen Zeilen in die Sitzung, lassen Sie die Führungskräfte die Grenzfälle mit Belegen ausdiskutieren und halten Sie die menschliche Entscheidung als Ergebnis fest.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -847,7 +907,12 @@ window.I18N_LOCALES = {
     "faq.q4": "評価データが一切アップロードされないことをどう確かめればよいか?",
     "faq.a4": "私たちの言葉をうのみにせず、自分で確かめてください。DevTools（F12）→ ネットワークタブを開いてクリアし、点数を貼り付けて「キャリブレーション」を押します。リクエスト一覧は空のままです。解析もZスコアも等級割り当ても、すべてこのタブ内のJavaScriptで動くからです。ページを読み込んだあとオフラインにして（ネットワーク → オフライン、またはケーブルを抜く）補正することもできます — それでも動くのは、何もブラウザの外へ出ていないからこそです。ページはプリセット・列の対応づけ・重みをlocalStorageに保存しますが、従業員ID・氏名・点数はストレージに書き込まれることも、どこかに送られることもありません。",
     "faq.q5": "標準化した等級をそのまま最終結果としてよいか?",
-    "faq.a5": "いいえ — これはキャリブレーション会議の準備であって、結論ではありません。Zスコアは、ある評価者の被評価者たちが公平な比較集団であることを前提にします。しかしこれは、極端に小さいチーム、本当に優秀なチーム、そして一度しか評価されていない人については成り立ちません。ツールはこうしたケースを隠さず印を付けます。被評価者が一人だけ、または点数の分散がゼロの評価者は標準化から除外し、除外された行はすべて行番号とともに一覧化します。順位・評価者バイアスのレポート・除外された行を会議に持ち込み、境界事例は上司どうしが根拠をもって議論し、人が下した判断を結果として記録してください。"
+    "faq.a5": "いいえ — これはキャリブレーション会議の準備であって、結論ではありません。Zスコアは、ある評価者の被評価者たちが公平な比較集団であることを前提にします。しかしこれは、極端に小さいチーム、本当に優秀なチーム、そして一度しか評価されていない人については成り立ちません。ツールはこうしたケースを隠さず印を付けます。被評価者が一人だけ、または点数の分散がゼロの評価者は標準化から除外し、除外された行はすべて行番号とともに一覧化します。順位・評価者バイアスのレポート・除外された行を会議に持ち込み、境界事例は上司どうしが根拠をもって議論し、人が下した判断を結果として記録してください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -911,6 +976,11 @@ window.I18N_LOCALES = {
     "faq.q4": "우리 평가 데이터가 절대 업로드되지 않는지 어떻게 확인하나요?",
     "faq.a4": "우리 말을 믿지 말고 직접 확인하세요. 개발자 도구(F12) → 네트워크 탭을 열어 비운 뒤, 점수를 붙여넣고 \"보정\"을 누르세요. 요청 목록은 그대로 비어 있습니다. 파싱, Z점수, 등급 배정이 모두 이 탭의 자바스크립트에서 돌아가기 때문입니다. 페이지를 불러온 뒤 오프라인으로 전환하거나(네트워크 → 오프라인, 또는 케이블 분리) 보정해 봐도 그대로 작동하는데, 이는 아무것도 브라우저를 벗어나지 않을 때만 가능한 일입니다. 페이지는 프리셋·열 매핑·가중치를 localStorage에 저장하지만, 직원 ID·이름·점수는 저장소에 기록되지도, 어디로도 전송되지도 않습니다.",
     "faq.q5": "표준화된 등급을 최종 결과로 봐도 되나요?",
-    "faq.a5": "아니요 — 이것은 캘리브레이션 세션을 위한 준비이지 결론이 아닙니다. Z점수는 한 평가자의 피평가자들이 공정한 비교 집단이라고 가정하는데, 아주 작은 팀, 정말로 뛰어난 팀, 단 한 번만 평가받은 사람에게는 이 가정이 무너집니다. 도구는 이런 경우를 감추지 않고 표시합니다. 피평가자가 한 명뿐이거나 점수 분산이 0인 평가자는 표준화에서 제외되며, 제외된 행은 모두 줄 번호와 함께 나열됩니다. 순위, 평가자 편향 리포트, 제외된 행을 회의에 가져가 관리자들이 근거를 들어 경계 사례를 논의하게 하고, 사람이 내린 결정을 결과로 기록하세요."
+    "faq.a5": "아니요 — 이것은 캘리브레이션 세션을 위한 준비이지 결론이 아닙니다. Z점수는 한 평가자의 피평가자들이 공정한 비교 집단이라고 가정하는데, 아주 작은 팀, 정말로 뛰어난 팀, 단 한 번만 평가받은 사람에게는 이 가정이 무너집니다. 도구는 이런 경우를 감추지 않고 표시합니다. 피평가자가 한 명뿐이거나 점수 분산이 0인 평가자는 표준화에서 제외되며, 제외된 행은 모두 줄 번호와 함께 나열됩니다. 순위, 평가자 편향 리포트, 제외된 행을 회의에 가져가 관리자들이 근거를 들어 경계 사례를 논의하게 하고, 사람이 내린 결정을 결과로 기록하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

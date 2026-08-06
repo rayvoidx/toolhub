@@ -74,7 +74,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How can I raise my basal metabolic rate?",
     "faq.a4": "The most reliable way is building muscle. Muscle burns more energy at rest than fat, so strength training 2-3 times a week with enough protein gradually raises your BMR. Extreme dieting does the opposite — it lowers your metabolism.",
     "faq.q5": "Is my body data sent to a server?",
-    "faq.a5": "No. Every calculation in this BMR calculator runs inside your browser; your sex, age, height and weight never leave your device. They are only saved to your browser's localStorage for convenience on your next visit, and you can delete them anytime."
+    "faq.a5": "No. Every calculation in this BMR calculator runs inside your browser; your sex, age, height and weight never leave your device. They are only saved to your browser's localStorage for convenience on your next visit, and you can delete them anytime.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "tool.rate.label": "每日热量赤字 / 盈余",
@@ -133,7 +138,12 @@ window.I18N_LOCALES = {
     "faq.q4": "有什么方法能提高基础代谢率?",
     "faq.a4": "最可靠的方法是增加肌肉量。同等重量下肌肉比脂肪消耗更多能量,每周2~3次力量训练加充足蛋白质能逐步提高基础代谢。极端节食反而会降低代谢,应当避免。",
     "faq.q5": "输入的身体数据会上传到服务器吗?",
-    "faq.a5": "不会。本基础代谢率计算器的所有计算都在浏览器内完成,性别、年龄、身高、体重不会发送到任何服务器,只为方便下次访问保存在浏览器localStorage中,可随时删除。"
+    "faq.a5": "不会。本基础代谢率计算器的所有计算都在浏览器内完成,性别、年龄、身高、体重不会发送到任何服务器,只为方便下次访问保存在浏览器localStorage中,可随时删除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "tool.rate.label": "प्रति दिन कैलोरी घाटा / अधिशेष",
@@ -192,7 +202,12 @@ window.I18N_LOCALES = {
     "faq.q4": "बेसल मेटाबॉलिक रेट कैसे बढ़ाएँ?",
     "faq.a4": "सबसे भरोसेमंद तरीका मांसपेशी बढ़ाना है। समान वज़न में मांसपेशी वसा से अधिक ऊर्जा खर्च करती है, इसलिए हफ़्ते में 2–3 बार शक्ति-प्रशिक्षण और पर्याप्त प्रोटीन धीरे-धीरे BMR बढ़ाते हैं। अत्यधिक उपवास इसके उलट चयापचय घटाता है।",
     "faq.q5": "क्या मेरी शारीरिक जानकारी सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। इस BMR कैलकुलेटर की सारी गणना आपके ब्राउज़र में होती है; लिंग, उम्र, कद और वज़न किसी सर्वर पर नहीं जाते। अगली बार की सुविधा के लिए वे केवल ब्राउज़र के localStorage में सहेजे जाते हैं, जिन्हें आप कभी भी हटा सकते हैं।"
+    "faq.a5": "नहीं। इस BMR कैलकुलेटर की सारी गणना आपके ब्राउज़र में होती है; लिंग, उम्र, कद और वज़न किसी सर्वर पर नहीं जाते। अगली बार की सुविधा के लिए वे केवल ब्राउज़र के localStorage में सहेजे जाते हैं, जिन्हें आप कभी भी हटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "tool.rate.label": "Déficit / superávit de calorías por día",
@@ -251,7 +266,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo puedo aumentar mi metabolismo basal?",
     "faq.a4": "La forma más fiable es ganar masa muscular. El músculo consume más energía en reposo que la grasa, así que entrenar fuerza 2–3 veces por semana con proteína suficiente eleva la TMB gradualmente. Las dietas extremas hacen lo contrario: reducen el metabolismo.",
     "faq.q5": "¿Mis datos corporales se envían a un servidor?",
-    "faq.a5": "No. Todos los cálculos de esta calculadora de metabolismo basal se ejecutan en tu navegador; sexo, edad, altura y peso nunca salen de tu dispositivo. Solo se guardan en el localStorage del navegador para tu próxima visita y puedes borrarlos cuando quieras."
+    "faq.a5": "No. Todos los cálculos de esta calculadora de metabolismo basal se ejecutan en tu navegador; sexo, edad, altura y peso nunca salen de tu dispositivo. Solo se guardan en el localStorage del navegador para tu próxima visita y puedes borrarlos cuando quieras.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "tool.rate.label": "العجز / الفائض من السعرات يوميًا",
@@ -310,7 +330,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أرفع معدل الأيض الأساسي؟",
     "faq.a4": "أضمن طريقة هي زيادة الكتلة العضلية؛ فالعضلات تستهلك في الراحة طاقة أكثر من الدهون. تمارين القوة 2–3 مرات أسبوعيًا مع بروتين كافٍ ترفع BMR تدريجيًا، بينما الحميات القاسية تخفض الأيض.",
     "faq.q5": "هل تُرسل بياناتي الجسدية إلى خادم؟",
-    "faq.a5": "لا. تُجرى جميع حسابات هذه الحاسبة داخل متصفحك؛ الجنس والعمر والطول والوزن لا تغادر جهازك، وتُحفظ فقط في localStorage للمتصفح لتسهيل زيارتك القادمة ويمكن حذفها في أي وقت."
+    "faq.a5": "لا. تُجرى جميع حسابات هذه الحاسبة داخل متصفحك؛ الجنس والعمر والطول والوزن لا تغادر جهازك، وتُحفظ فقط في localStorage للمتصفح لتسهيل زيارتك القادمة ويمكن حذفها في أي وقت.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "tool.rate.label": "Déficit / surplus calorique par jour",
@@ -369,7 +394,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment augmenter son métabolisme de base ?",
     "faq.a4": "Le moyen le plus fiable est de gagner du muscle : à poids égal, le muscle consomme plus d'énergie au repos que la graisse. Deux à trois séances de musculation par semaine avec assez de protéines élèvent progressivement le MB. Les régimes extrêmes font l'inverse.",
     "faq.q5": "Mes données corporelles sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Tous les calculs de ce calculateur de métabolisme de base s'exécutent dans votre navigateur ; sexe, âge, taille et poids ne quittent jamais votre appareil. Ils ne sont conservés que dans le localStorage du navigateur pour votre prochaine visite et restent supprimables à tout moment."
+    "faq.a5": "Non. Tous les calculs de ce calculateur de métabolisme de base s'exécutent dans votre navigateur ; sexe, âge, taille et poids ne quittent jamais votre appareil. Ils ne sont conservés que dans le localStorage du navigateur pour votre prochaine visite et restent supprimables à tout moment.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "tool.rate.label": "প্রতিদিন ক্যালোরি ঘাটতি / উদ্বৃত্ত",
@@ -428,7 +458,12 @@ window.I18N_LOCALES = {
     "faq.q4": "বেসাল মেটাবলিক রেট বাড়ানোর উপায় কী?",
     "faq.a4": "সবচেয়ে নির্ভরযোগ্য উপায় পেশি বাড়ানো। সমান ওজনে পেশি চর্বির চেয়ে বেশি শক্তি খরচ করে, তাই সপ্তাহে 2–3 দিন স্ট্রেংথ ট্রেনিং ও যথেষ্ট প্রোটিন ধীরে ধীরে BMR বাড়ায়। চরম উপবাস উল্টো বিপাক কমায়।",
     "faq.q5": "আমার শারীরিক তথ্য কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই BMR ক্যালকুলেটরের সব হিসাব আপনার ব্রাউজারেই হয়; লিঙ্গ, বয়স, উচ্চতা ও ওজন কোনো সার্ভারে যায় না। পরের বার সুবিধার জন্য শুধু ব্রাউজারের localStorage-এ থাকে, যা যেকোনো সময় মুছে ফেলা যায়।"
+    "faq.a5": "না। এই BMR ক্যালকুলেটরের সব হিসাব আপনার ব্রাউজারেই হয়; লিঙ্গ, বয়স, উচ্চতা ও ওজন কোনো সার্ভারে যায় না। পরের বার সুবিধার জন্য শুধু ব্রাউজারের localStorage-এ থাকে, যা যেকোনো সময় মুছে ফেলা যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "tool.rate.label": "Déficit / superávit calórico por dia",
@@ -487,7 +522,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como aumentar a taxa metabólica basal?",
     "faq.a4": "O caminho mais confiável é ganhar massa muscular: em repouso, o músculo gasta mais energia que a gordura. Musculação 2–3 vezes por semana com proteína suficiente eleva a TMB gradualmente. Dietas extremas fazem o oposto e derrubam o metabolismo.",
     "faq.q5": "Meus dados corporais são enviados a algum servidor?",
-    "faq.a5": "Não. Todos os cálculos desta calculadora de TMB acontecem no seu navegador; sexo, idade, altura e peso nunca saem do seu dispositivo. Eles ficam salvos apenas no localStorage do navegador para a próxima visita e podem ser apagados a qualquer momento."
+    "faq.a5": "Não. Todos os cálculos desta calculadora de TMB acontecem no seu navegador; sexo, idade, altura e peso nunca saem do seu dispositivo. Eles ficam salvos apenas no localStorage do navegador para a próxima visita e podem ser apagados a qualquer momento.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "tool.rate.label": "Дефицит / профицит калорий в день",
@@ -546,7 +586,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как повысить базальный метаболизм?",
     "faq.a4": "Надёжнее всего — нарастить мышечную массу: мышцы в покое тратят больше энергии, чем жир. Силовые тренировки 2–3 раза в неделю и достаточное количество белка постепенно повышают BMR. Жёсткие голодовки, наоборот, замедляют обмен веществ.",
     "faq.q5": "Отправляются ли мои данные на сервер?",
-    "faq.a5": "Нет. Все расчёты этого калькулятора базального метаболизма выполняются в вашем браузере; пол, возраст, рост и вес не покидают устройство. Они сохраняются только в localStorage браузера для удобства следующего визита, и их можно удалить в любой момент."
+    "faq.a5": "Нет. Все расчёты этого калькулятора базального метаболизма выполняются в вашем браузере; пол, возраст, рост и вес не покидают устройство. Они сохраняются только в localStorage браузера для удобства следующего визита, и их можно удалить в любой момент.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "tool.rate.label": "روزانہ کیلوری کی کمی / زیادتی",
@@ -605,7 +650,12 @@ window.I18N_LOCALES = {
     "faq.q4": "بنیادی میٹابولک ریٹ کیسے بڑھائیں؟",
     "faq.a4": "سب سے قابل اعتماد طریقہ پٹھوں کی مقدار بڑھانا ہے۔ برابر وزن میں پٹھے چربی سے زیادہ توانائی خرچ کرتے ہیں، اس لیے ہفتے میں 2–3 بار طاقت کی ورزش اور کافی پروٹین آہستہ آہستہ BMR بڑھاتے ہیں۔ انتہائی فاقہ کشی اس کے برعکس میٹابولزم گھٹا دیتی ہے۔",
     "faq.q5": "کیا میری جسمانی معلومات سرور کو بھیجی جاتی ہیں؟",
-    "faq.a5": "نہیں۔ اس BMR کیلکولیٹر کے تمام حساب آپ کے براؤزر میں ہوتے ہیں؛ جنس، عمر، قد اور وزن کسی سرور کو نہیں جاتے۔ اگلی بار کی سہولت کے لیے صرف براؤزر کے localStorage میں محفوظ رہتے ہیں جنہیں کبھی بھی حذف کیا جا سکتا ہے۔"
+    "faq.a5": "نہیں۔ اس BMR کیلکولیٹر کے تمام حساب آپ کے براؤزر میں ہوتے ہیں؛ جنس، عمر، قد اور وزن کسی سرور کو نہیں جاتے۔ اگلی بار کی سہولت کے لیے صرف براؤزر کے localStorage میں محفوظ رہتے ہیں جنہیں کبھی بھی حذف کیا جا سکتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "tool.rate.label": "Defisit / surplus kalori per hari",
@@ -664,7 +714,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara menaikkan laju metabolisme basal?",
     "faq.a4": "Cara paling andal adalah menambah massa otot: pada berat yang sama, otot membakar lebih banyak energi saat istirahat daripada lemak. Latihan beban 2–3 kali seminggu dengan protein cukup akan menaikkan BMR secara bertahap. Diet ekstrem justru menurunkan metabolisme.",
     "faq.q5": "Apakah data tubuh saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan kalkulator BMR ini berjalan di browser Anda; jenis kelamin, usia, tinggi, dan berat tidak pernah meninggalkan perangkat. Data hanya disimpan di localStorage browser untuk kenyamanan kunjungan berikutnya dan bisa dihapus kapan saja."
+    "faq.a5": "Tidak. Semua perhitungan kalkulator BMR ini berjalan di browser Anda; jenis kelamin, usia, tinggi, dan berat tidak pernah meninggalkan perangkat. Data hanya disimpan di localStorage browser untuk kenyamanan kunjungan berikutnya dan bisa dihapus kapan saja.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "tool.rate.label": "Kaloriendefizit / -überschuss pro Tag",
@@ -723,7 +778,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie kann ich meinen Grundumsatz erhöhen?",
     "faq.a4": "Am zuverlässigsten durch Muskelaufbau: Muskeln verbrauchen in Ruhe mehr Energie als Fett. Krafttraining 2–3-mal pro Woche mit ausreichend Protein steigert den Grundumsatz allmählich. Extreme Diäten bewirken das Gegenteil.",
     "faq.q5": "Werden meine Körperdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen dieses Grundumsatz-Rechners laufen in Ihrem Browser; Geschlecht, Alter, Größe und Gewicht verlassen Ihr Gerät nicht. Sie werden nur im localStorage des Browsers für den nächsten Besuch gespeichert und lassen sich jederzeit löschen."
+    "faq.a5": "Nein. Alle Berechnungen dieses Grundumsatz-Rechners laufen in Ihrem Browser; Geschlecht, Alter, Größe und Gewicht verlassen Ihr Gerät nicht. Sie werden nur im localStorage des Browsers für den nächsten Besuch gespeichert und lassen sich jederzeit löschen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "tool.rate.label": "1日あたりのカロリー不足 / 過剰",
@@ -782,7 +842,12 @@ window.I18N_LOCALES = {
     "faq.q4": "基礎代謝量を上げる方法は?",
     "faq.a4": "最も確実なのは筋肉量を増やすことです。筋肉は同じ重さの脂肪より維持に多くのエネルギーを使うため、週2〜3回の筋力トレーニングと十分なタンパク質摂取が基礎代謝量を徐々に引き上げます。極端な食事制限は逆に基礎代謝を下げるため避けてください。",
     "faq.q5": "入力した身体情報はサーバーに送信されますか?",
-    "faq.a5": "いいえ。この基礎代謝量計算ツールの計算はすべてブラウザ内で行われ、性別・年齢・身長・体重が外部サーバーに送信されることはありません。次回訪問時の利便性のためにブラウザのlocalStorageにのみ保存され、いつでも削除できます。"
+    "faq.a5": "いいえ。この基礎代謝量計算ツールの計算はすべてブラウザ内で行われ、性別・年齢・身長・体重が外部サーバーに送信されることはありません。次回訪問時の利便性のためにブラウザのlocalStorageにのみ保存され、いつでも削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "tool.rate.label": "하루 칼로리 적자 / 흑자",
@@ -841,6 +906,11 @@ window.I18N_LOCALES = {
     "faq.q4": "기초대사량을 높이는 방법이 있나요?",
     "faq.a4": "가장 확실한 방법은 근육량을 늘리는 것입니다. 근육은 같은 무게의 지방보다 유지에 더 많은 에너지를 쓰므로, 주 2~3회 근력 운동과 충분한 단백질 섭취가 기초대사량을 서서히 끌어올립니다. 반대로 극단적인 절식은 기초대사량을 떨어뜨리므로 피해야 합니다.",
     "faq.q5": "입력한 신체 정보가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 기초대사량 계산기의 모든 계산은 브라우저 안에서 이루어지며, 성별·나이·키·몸무게는 외부 서버로 전송되지 않습니다. 다음 방문 시 편의를 위해 브라우저 localStorage에만 저장되며 언제든 삭제할 수 있습니다."
+    "faq.a5": "아니요. 이 기초대사량 계산기의 모든 계산은 브라우저 안에서 이루어지며, 성별·나이·키·몸무게는 외부 서버로 전송되지 않습니다. 다음 방문 시 편의를 위해 브라우저 localStorage에만 저장되며 언제든 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

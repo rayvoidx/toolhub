@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why does the calculator add about 15 minutes to fall asleep?",
     "faq.a4": "Almost nobody falls asleep the instant their head hits the pillow. This gap is called sleep latency, and it shifts your real bedtime. The bedtime calculator adds your fall-asleep time (15 minutes by default, adjustable from 0 to 60) so the cycles are counted from when you actually drift off, not from when you get into bed.",
     "faq.q5": "Is this medical advice, and is my sleep data private?",
-    "faq.a5": "No — the times here are averages meant for general reference, not medical advice; if you have ongoing sleep problems, talk to a doctor. Your privacy is fully protected: every calculation runs inside your browser, your times are saved only on your own device, and nothing is ever sent to a server."
+    "faq.a5": "No — the times here are averages meant for general reference, not medical advice; if you have ongoing sleep problems, talk to a doctor. Your privacy is fully protected: every calculation runs inside your browser, your times are saved only on your own device, and nothing is ever sent to a server.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -115,7 +120,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么计算器要额外加上约15分钟入睡时间？",
     "faq.a4": "几乎没有人一躺下就能立刻睡着。这段间隔叫做睡眠潜伏期，它会推迟你真正的入睡时间。这个就寝时间计算器会加上你的入睡时间（默认15分钟，可在0到60之间调节），这样周期就从你真正睡着时开始计算，而不是从你上床时开始。",
     "faq.q5": "这是医疗建议吗？我的睡眠数据私密吗？",
-    "faq.a5": "不是——这里的时间只是用于一般参考的平均值，并非医疗建议；如果你长期有睡眠问题，请咨询医生。你的隐私得到充分保护：所有计算都在你的浏览器中进行，你的时间只保存在你自己的设备上，绝不会发送到任何服务器。"
+    "faq.a5": "不是——这里的时间只是用于一般参考的平均值，并非医疗建议；如果你长期有睡眠问题，请咨询医生。你的隐私得到充分保护：所有计算都在你的浏览器中进行，你的时间只保存在你自己的设备上，绝不会发送到任何服务器。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कैलकुलेटर नींद आने के लिए लगभग 15 मिनट क्यों जोड़ता है?",
     "faq.a4": "लगभग कोई भी तकिये पर सिर रखते ही तुरंत नहीं सो जाता। इस अंतराल को स्लीप लेटेंसी कहते हैं, और यह आपके असली सोने के समय को खिसका देता है। यह बेडटाइम कैलकुलेटर आपका नींद आने का समय जोड़ता है (डिफ़ॉल्ट 15 मिनट, 0 से 60 तक समायोज्य) ताकि चक्र तब से गिने जाएँ जब आप सच में सो जाते हैं, न कि जब आप बिस्तर पर जाते हैं।",
     "faq.q5": "क्या यह चिकित्सा सलाह है, और क्या मेरा नींद डेटा निजी है?",
-    "faq.a5": "नहीं — यहाँ दिए समय सामान्य जानकारी के लिए औसत हैं, चिकित्सा सलाह नहीं; अगर आपको लगातार नींद की समस्या है तो डॉक्टर से मिलें। आपकी निजता पूरी तरह सुरक्षित है: हर गणना आपके ब्राउज़र में होती है, आपके समय केवल आपके अपने डिवाइस पर सहेजे जाते हैं, और कुछ भी कभी किसी सर्वर पर नहीं भेजा जाता।"
+    "faq.a5": "नहीं — यहाँ दिए समय सामान्य जानकारी के लिए औसत हैं, चिकित्सा सलाह नहीं; अगर आपको लगातार नींद की समस्या है तो डॉक्टर से मिलें। आपकी निजता पूरी तरह सुरक्षित है: हर गणना आपके ब्राउज़र में होती है, आपके समय केवल आपके अपने डिवाइस पर सहेजे जाते हैं, और कुछ भी कभी किसी सर्वर पर नहीं भेजा जाता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -215,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué la calculadora suma unos 15 minutos para dormirte?",
     "faq.a4": "Casi nadie se duerme en cuanto apoya la cabeza en la almohada. Ese intervalo se llama latencia del sueño y desplaza tu hora real de dormir. Esta calculadora de hora de dormir suma tu tiempo para dormirte (15 minutos por defecto, ajustable de 0 a 60) para que los ciclos se cuenten desde que realmente te duermes, no desde que te metes en la cama.",
     "faq.q5": "¿Es esto consejo médico y son privados mis datos de sueño?",
-    "faq.a5": "No: las horas de aquí son promedios pensados como referencia general, no consejo médico; si tienes problemas de sueño continuos, consulta a un médico. Tu privacidad está totalmente protegida: cada cálculo se hace dentro de tu navegador, tus horas se guardan solo en tu propio dispositivo y nunca se envía nada a un servidor."
+    "faq.a5": "No: las horas de aquí son promedios pensados como referencia general, no consejo médico; si tienes problemas de sueño continuos, consulta a un médico. Tu privacidad está totalmente protegida: cada cálculo se hace dentro de tu navegador, tus horas se guardan solo en tu propio dispositivo y nunca se envía nada a un servidor.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -265,7 +285,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا تضيف الحاسبة نحو 15 دقيقة للخلود إلى النوم؟",
     "faq.a4": "لا أحد تقريبًا يغفو لحظة ملامسة رأسه الوسادة. تُسمى هذه الفجوة زمن الخلود إلى النوم، وهي تؤخّر وقت نومك الفعلي. تضيف حاسبة وقت النوم هذه المدة التي تستغرقها لتغفو (15 دقيقة افتراضيًا، قابلة للتعديل من 0 إلى 60) حتى تُحسب الدورات من لحظة نومك فعلًا، لا من لحظة دخولك الفراش.",
     "faq.q5": "هل هذه نصيحة طبية، وهل بيانات نومي خاصة؟",
-    "faq.a5": "لا — الأوقات هنا متوسطات للاسترشاد العام، وليست نصيحة طبية؛ وإذا كانت لديك مشكلات نوم مستمرة فاستشر طبيبًا. خصوصيتك محمية تمامًا: كل عملية حساب تتم داخل متصفحك، وتُحفظ أوقاتك على جهازك وحده، ولا يُرسَل أي شيء إلى أي خادم أبدًا."
+    "faq.a5": "لا — الأوقات هنا متوسطات للاسترشاد العام، وليست نصيحة طبية؛ وإذا كانت لديك مشكلات نوم مستمرة فاستشر طبيبًا. خصوصيتك محمية تمامًا: كل عملية حساب تتم داخل متصفحك، وتُحفظ أوقاتك على جهازك وحده، ولا يُرسَل أي شيء إلى أي خادم أبدًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -315,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi le calculateur ajoute-t-il environ 15 minutes pour s'endormir ?",
     "faq.a4": "Presque personne ne s'endort dès que sa tête touche l'oreiller. Ce délai s'appelle la latence d'endormissement et décale votre heure de sommeil réelle. Ce calculateur d'heure de coucher ajoute votre temps d'endormissement (15 minutes par défaut, ajustable de 0 à 60) pour que les cycles soient comptés à partir du moment où vous vous endormez vraiment, et non du moment où vous vous mettez au lit.",
     "faq.q5": "Est-ce un avis médical, et mes données de sommeil sont-elles privées ?",
-    "faq.a5": "Non — les heures indiquées sont des moyennes à titre indicatif, pas un avis médical ; en cas de troubles du sommeil persistants, consultez un médecin. Votre vie privée est entièrement protégée : chaque calcul se fait dans votre navigateur, vos heures ne sont enregistrées que sur votre propre appareil, et rien n'est jamais envoyé à un serveur."
+    "faq.a5": "Non — les heures indiquées sont des moyennes à titre indicatif, pas un avis médical ; en cas de troubles du sommeil persistants, consultez un médecin. Votre vie privée est entièrement protégée : chaque calcul se fait dans votre navigateur, vos heures ne sont enregistrées que sur votre propre appareil, et rien n'est jamais envoyé à un serveur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -365,7 +395,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ক্যালকুলেটর ঘুম আসতে কেন প্রায় ১৫ মিনিট যোগ করে?",
     "faq.a4": "প্রায় কেউই বালিশে মাথা রাখা মাত্র ঘুমিয়ে পড়ে না। এই ব্যবধানকে বলে স্লিপ লেটেন্সি, আর এটি আপনার আসল ঘুমানোর সময় পিছিয়ে দেয়। এই বেডটাইম ক্যালকুলেটর আপনার ঘুম আসার সময় যোগ করে (ডিফল্ট ১৫ মিনিট, ০ থেকে ৬০ পর্যন্ত সমন্বয়যোগ্য) যাতে চক্র গণনা শুরু হয় যখন আপনি সত্যিই ঘুমিয়ে পড়েন, বিছানায় যাওয়ার সময় থেকে নয়।",
     "faq.q5": "এটি কি চিকিৎসা পরামর্শ, আর আমার ঘুমের তথ্য কি ব্যক্তিগত?",
-    "faq.a5": "না — এখানকার সময়গুলো সাধারণ তথ্যের জন্য গড়, চিকিৎসা পরামর্শ নয়; দীর্ঘমেয়াদি ঘুমের সমস্যা থাকলে চিকিৎসকের সঙ্গে কথা বলুন। আপনার গোপনীয়তা পুরোপুরি সুরক্ষিত: প্রতিটি হিসাব আপনার ব্রাউজারে হয়, আপনার সময় কেবল আপনার নিজের ডিভাইসে সংরক্ষিত হয়, আর কিছুই কখনো কোনো সার্ভারে পাঠানো হয় না।"
+    "faq.a5": "না — এখানকার সময়গুলো সাধারণ তথ্যের জন্য গড়, চিকিৎসা পরামর্শ নয়; দীর্ঘমেয়াদি ঘুমের সমস্যা থাকলে চিকিৎসকের সঙ্গে কথা বলুন। আপনার গোপনীয়তা পুরোপুরি সুরক্ষিত: প্রতিটি হিসাব আপনার ব্রাউজারে হয়, আপনার সময় কেবল আপনার নিজের ডিভাইসে সংরক্ষিত হয়, আর কিছুই কখনো কোনো সার্ভারে পাঠানো হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que a calculadora adiciona cerca de 15 minutos para adormecer?",
     "faq.a4": "Quase ninguém adormece assim que encosta a cabeça no travesseiro. Esse intervalo se chama latência do sono e desloca seu horário real de dormir. Esta calculadora de hora de dormir soma o seu tempo para adormecer (15 minutos por padrão, ajustável de 0 a 60) para que os ciclos sejam contados a partir de quando você realmente pega no sono, e não de quando você se deita.",
     "faq.q5": "Isso é orientação médica e meus dados de sono são privados?",
-    "faq.a5": "Não — os horários aqui são médias para referência geral, não orientação médica; se você tem problemas de sono contínuos, procure um médico. Sua privacidade é totalmente protegida: cada cálculo é feito dentro do seu navegador, seus horários são salvos apenas no seu próprio dispositivo e nada é enviado a um servidor."
+    "faq.a5": "Não — os horários aqui são médias para referência geral, não orientação médica; se você tem problemas de sono contínuos, procure um médico. Sua privacidade é totalmente protegida: cada cálculo é feito dentro do seu navegador, seus horários são salvos apenas no seu próprio dispositivo e nada é enviado a um servidor.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -465,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему калькулятор добавляет около 15 минут на засыпание?",
     "faq.a4": "Почти никто не засыпает в тот же миг, как голова коснулась подушки. Этот промежуток называется латентностью сна, и он сдвигает ваше реальное время засыпания. Этот калькулятор времени сна добавляет ваше время засыпания (по умолчанию 15 минут, настраивается от 0 до 60), чтобы циклы отсчитывались с момента, когда вы действительно засыпаете, а не когда ложитесь в кровать.",
     "faq.q5": "Это медицинский совет и приватны ли мои данные о сне?",
-    "faq.a5": "Нет — приведённое время является средними значениями для общего ориентира, а не медицинским советом; при постоянных проблемах со сном обратитесь к врачу. Ваша приватность полностью защищена: все вычисления выполняются в вашем браузере, ваше время сохраняется только на вашем устройстве, и ничто никогда не отправляется на сервер."
+    "faq.a5": "Нет — приведённое время является средними значениями для общего ориентира, а не медицинским советом; при постоянных проблемах со сном обратитесь к врачу. Ваша приватность полностью защищена: все вычисления выполняются в вашем браузере, ваше время сохраняется только на вашем устройстве, и ничто никогда не отправляется на сервер.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -515,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیلکولیٹر نیند آنے کے لیے تقریباً 15 منٹ کیوں جوڑتا ہے؟",
     "faq.a4": "تقریباً کوئی بھی تکیے پر سر رکھتے ہی فوراً نہیں سو جاتا۔ اِس وقفے کو سلیپ لیٹنسی کہتے ہیں، اور یہ آپ کے اصل سونے کے وقت کو آگے کھسکا دیتا ہے۔ یہ بیڈ ٹائم کیلکولیٹر آپ کا نیند آنے کا وقت جوڑتا ہے (پہلے سے 15 منٹ، 0 سے 60 تک قابلِ ترمیم) تاکہ چکر اُس وقت سے گنے جائیں جب آپ واقعی سو جاتے ہیں، نہ کہ جب آپ بستر پر جاتے ہیں۔",
     "faq.q5": "کیا یہ طبی مشورہ ہے، اور کیا میرا نیند کا ڈیٹا نجی ہے؟",
-    "faq.a5": "نہیں — یہاں دیے گئے اوقات عمومی رہنمائی کے لیے اوسط ہیں، طبی مشورہ نہیں؛ اگر آپ کو مسلسل نیند کے مسائل ہیں تو ڈاکٹر سے رجوع کریں۔ آپ کی رازداری مکمل طور پر محفوظ ہے: ہر حساب آپ کے براؤزر میں ہوتا ہے، آپ کے اوقات صرف آپ کے اپنے آلے پر محفوظ ہوتے ہیں، اور کچھ بھی کبھی کسی سرور پر نہیں بھیجا جاتا۔"
+    "faq.a5": "نہیں — یہاں دیے گئے اوقات عمومی رہنمائی کے لیے اوسط ہیں، طبی مشورہ نہیں؛ اگر آپ کو مسلسل نیند کے مسائل ہیں تو ڈاکٹر سے رجوع کریں۔ آپ کی رازداری مکمل طور پر محفوظ ہے: ہر حساب آپ کے براؤزر میں ہوتا ہے، آپ کے اوقات صرف آپ کے اپنے آلے پر محفوظ ہوتے ہیں، اور کچھ بھی کبھی کسی سرور پر نہیں بھیجا جاتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -565,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa kalkulator menambahkan sekitar 15 menit untuk tertidur?",
     "faq.a4": "Hampir tidak ada yang langsung tertidur begitu kepala menyentuh bantal. Jeda ini disebut latensi tidur, dan menggeser waktu tidurmu yang sebenarnya. Kalkulator waktu tidur ini menambahkan waktu untuk tertidurmu (bawaan 15 menit, bisa diatur dari 0 sampai 60) agar siklus dihitung sejak kamu benar-benar tertidur, bukan sejak kamu naik ke tempat tidur.",
     "faq.q5": "Apakah ini nasihat medis, dan apakah data tidurku bersifat pribadi?",
-    "faq.a5": "Bukan — waktu di sini adalah rata-rata untuk acuan umum, bukan nasihat medis; jika kamu punya masalah tidur yang terus-menerus, konsultasikan ke dokter. Privasimu sepenuhnya terlindungi: setiap perhitungan berjalan di dalam browsermu, waktumu hanya disimpan di perangkatmu sendiri, dan tidak ada yang pernah dikirim ke server."
+    "faq.a5": "Bukan — waktu di sini adalah rata-rata untuk acuan umum, bukan nasihat medis; jika kamu punya masalah tidur yang terus-menerus, konsultasikan ke dokter. Privasimu sepenuhnya terlindungi: setiap perhitungan berjalan di dalam browsermu, waktumu hanya disimpan di perangkatmu sendiri, dan tidak ada yang pernah dikirim ke server.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -615,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum rechnet der Rechner etwa 15 Minuten zum Einschlafen dazu?",
     "faq.a4": "Fast niemand schläft ein, sobald der Kopf das Kissen berührt. Diese Spanne heißt Einschlaflatenz und verschiebt deine tatsächliche Schlafenszeit. Dieser Schlafenszeit-Rechner addiert deine Einschlafzeit (standardmäßig 15 Minuten, einstellbar von 0 bis 60), damit die Zyklen ab dem Moment gezählt werden, in dem du wirklich einschläfst, und nicht ab dem Zubettgehen.",
     "faq.q5": "Ist das ein medizinischer Rat, und sind meine Schlafdaten privat?",
-    "faq.a5": "Nein — die Zeiten hier sind Durchschnittswerte zur allgemeinen Orientierung, kein medizinischer Rat; bei anhaltenden Schlafproblemen sprich mit einer Ärztin oder einem Arzt. Deine Privatsphäre ist vollständig geschützt: Jede Berechnung läuft in deinem Browser, deine Zeiten werden nur auf deinem eigenen Gerät gespeichert, und es wird nie etwas an einen Server gesendet."
+    "faq.a5": "Nein — die Zeiten hier sind Durchschnittswerte zur allgemeinen Orientierung, kein medizinischer Rat; bei anhaltenden Schlafproblemen sprich mit einer Ärztin oder einem Arzt. Deine Privatsphäre ist vollständig geschützt: Jede Berechnung läuft in deinem Browser, deine Zeiten werden nur auf deinem eigenen Gerät gespeichert, und es wird nie etwas an einen Server gesendet.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -665,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "なぜ計算機は入眠にかかる約15分を加えるのですか？",
     "faq.a4": "枕に頭をつけた瞬間に眠れる人はほとんどいません。この間隔は入眠潜時と呼ばれ、実際の就寝時刻をずらします。この就寝時刻計算機はあなたの入眠時間（初期値15分、0〜60分で調整可能）を加え、ベッドに入った時刻ではなく実際に眠りについた時刻からサイクルを数えます。",
     "faq.q5": "これは医学的アドバイスですか。私の睡眠データは非公開ですか？",
-    "faq.a5": "いいえ。ここでの時刻は一般的な目安のための平均値であり、医学的アドバイスではありません。睡眠の悩みが続く場合は医師にご相談ください。プライバシーは完全に守られます。すべての計算はブラウザ内で行われ、時刻はあなたの端末だけに保存され、サーバーに送信されることは一切ありません。"
+    "faq.a5": "いいえ。ここでの時刻は一般的な目安のための平均値であり、医学的アドバイスではありません。睡眠の悩みが続く場合は医師にご相談ください。プライバシーは完全に守られます。すべての計算はブラウザ内で行われ、時刻はあなたの端末だけに保存され、サーバーに送信されることは一切ありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -715,6 +780,11 @@ window.I18N_LOCALES = {
     "faq.q4": "계산기는 왜 잠드는 데 약 15분을 더하나요?",
     "faq.a4": "베개에 머리를 대자마자 잠드는 사람은 거의 없습니다. 이 간격을 수면 잠복기라고 하며, 실제 취침 시간을 뒤로 미룹니다. 이 취침 시간 계산기는 잠드는 시간(기본 15분, 0~60분 조절 가능)을 더해, 침대에 들어간 시점이 아니라 실제로 잠든 시점부터 주기를 계산합니다.",
     "faq.q5": "이건 의학적 조언인가요? 제 수면 데이터는 비공개인가요?",
-    "faq.a5": "아니요. 여기 시간은 일반적인 참고용 평균값이며 의학적 조언이 아닙니다. 수면 문제가 계속되면 의사와 상담하세요. 개인정보는 완전히 보호됩니다. 모든 계산은 브라우저 안에서 이루어지고, 시간은 본인 기기에만 저장되며, 어떤 것도 서버로 전송되지 않습니다."
+    "faq.a5": "아니요. 여기 시간은 일반적인 참고용 평균값이며 의학적 조언이 아닙니다. 수면 문제가 계속되면 의사와 상담하세요. 개인정보는 완전히 보호됩니다. 모든 계산은 브라우저 안에서 이루어지고, 시간은 본인 기기에만 저장되며, 어떤 것도 서버로 전송되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I keep more than one note at the same time?",
     "faq.a4": "Yes — use the tab list above the text box to keep up to 10 separate notes at once, each saved independently. Click + to open a new tab, click a tab to switch to it, and click the × on a tab to close and delete that note. This is handy for keeping a scratchpad, a to-do list, and a draft message going side by side without them getting mixed together.",
     "faq.q5": "How do I save my note as a file, or move it into Word or Google Docs?",
-    "faq.a5": "Click Download .txt to save the current note as a plain-text file on your device, ready to open in Word, Google Docs, Notepad, or any text editor. Or click Copy all to copy the full note to your clipboard and paste it directly into another app. Both act on the note in the tab you're currently viewing, and both run locally — nothing is sent anywhere in the process."
+    "faq.a5": "Click Download .txt to save the current note as a plain-text file on your device, ready to open in Word, Google Docs, Notepad, or any text editor. Or click Copy all to copy the full note to your clipboard and paste it directly into another app. Both act on the note in the tab you're currently viewing, and both run locally — nothing is sent anywhere in the process.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -119,7 +124,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我可以同时保留不止一篇便签吗？",
     "faq.a4": "可以——使用文本框上方的标签列表，最多可同时保留 10 篇各自独立保存的便签。点击「+」新建一个标签，点击某个标签即可切换到它，点击标签上的「×」可以关闭并删除那篇便签。这很适合把草稿、待办清单和一封写到一半的消息分开放，互不干扰。",
     "faq.q5": "我要怎么把便签存成文件，或者搬到 Word、Google 文档里？",
-    "faq.a5": "点击「下载 .txt」即可把当前便签保存为纯文本文件到你的设备上，可以直接在 Word、Google 文档、记事本或任意文本编辑器中打开。也可以点击「复制全部」把整篇便签复制到剪贴板，然后直接粘贴到别的应用里。这两个操作都作用于你当前正在查看的这个标签的便签，并且都在本地完成——过程中不会向任何地方发送数据。"
+    "faq.a5": "点击「下载 .txt」即可把当前便签保存为纯文本文件到你的设备上，可以直接在 Word、Google 文档、记事本或任意文本编辑器中打开。也可以点击「复制全部」把整篇便签复制到剪贴板，然后直接粘贴到别的应用里。这两个操作都作用于你当前正在查看的这个标签的便签，并且都在本地完成——过程中不会向任何地方发送数据。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -175,7 +185,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मैं एक साथ एक से ज़्यादा नोट रख सकता हूँ?",
     "faq.a4": "हाँ — टेक्स्ट बॉक्स के ऊपर मौजूद टैब लिस्ट से एक साथ 10 अलग-अलग नोट रखें, हर एक स्वतंत्र रूप से सेव होता है। नया टैब खोलने के लिए + दबाएँ, किसी टैब पर जाने के लिए उसे क्लिक करें, और किसी नोट को बंद कर मिटाने के लिए टैब पर × दबाएँ। यह स्क्रैचपैड, टू-डू लिस्ट और आधा लिखा मैसेज एक साथ, बिना मिलाए, रखने के लिए काफ़ी सुविधाजनक है।",
     "faq.q5": "मैं अपना नोट फ़ाइल के रूप में कैसे सेव करूँ, या इसे Word या Google Docs में कैसे ले जाऊँ?",
-    "faq.a5": "मौजूदा नोट को अपनी डिवाइस पर प्लेन-टेक्स्ट फ़ाइल के रूप में सेव करने के लिए .txt डाउनलोड करें दबाएँ, जिसे Word, Google Docs, नोटपैड या किसी भी टेक्स्ट एडिटर में खोला जा सकता है। या पूरा नोट क्लिपबोर्ड पर कॉपी करने और सीधे किसी दूसरे ऐप में पेस्ट करने के लिए सब कॉपी करें दबाएँ। दोनों ही आप जिस टैब को देख रहे हैं उस नोट पर काम करते हैं, और दोनों स्थानीय रूप से चलते हैं — इस प्रक्रिया में कहीं कुछ नहीं भेजा जाता।"
+    "faq.a5": "मौजूदा नोट को अपनी डिवाइस पर प्लेन-टेक्स्ट फ़ाइल के रूप में सेव करने के लिए .txt डाउनलोड करें दबाएँ, जिसे Word, Google Docs, नोटपैड या किसी भी टेक्स्ट एडिटर में खोला जा सकता है। या पूरा नोट क्लिपबोर्ड पर कॉपी करने और सीधे किसी दूसरे ऐप में पेस्ट करने के लिए सब कॉपी करें दबाएँ। दोनों ही आप जिस टैब को देख रहे हैं उस नोट पर काम करते हैं, और दोनों स्थानीय रूप से चलते हैं — इस प्रक्रिया में कहीं कुछ नहीं भेजा जाता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -231,7 +246,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo mantener más de una nota al mismo tiempo?",
     "faq.a4": "Sí: usa la lista de pestañas encima del cuadro de texto para mantener hasta 10 notas separadas a la vez, cada una guardada de forma independiente. Haz clic en + para abrir una pestaña nueva, haz clic en una pestaña para cambiar a ella, y haz clic en la × de una pestaña para cerrarla y borrar esa nota. Es muy útil para llevar un borrador, una lista de tareas y un mensaje a medio escribir al mismo tiempo sin que se mezclen.",
     "faq.q5": "¿Cómo guardo mi nota como archivo, o la paso a Word o Google Docs?",
-    "faq.a5": "Haz clic en Descargar .txt para guardar la nota actual como archivo de texto plano en tu dispositivo, listo para abrir en Word, Google Docs, el Bloc de notas o cualquier editor de texto. O haz clic en Copiar todo para copiar la nota completa al portapapeles y pegarla directamente en otra aplicación. Ambas acciones se aplican a la nota de la pestaña que estás viendo, y ambas funcionan localmente — no se envía nada a ningún sitio en el proceso."
+    "faq.a5": "Haz clic en Descargar .txt para guardar la nota actual como archivo de texto plano en tu dispositivo, listo para abrir en Word, Google Docs, el Bloc de notas o cualquier editor de texto. O haz clic en Copiar todo para copiar la nota completa al portapapeles y pegarla directamente en otra aplicación. Ambas acciones se aplican a la nota de la pestaña que estás viendo, y ambas funcionan localmente — no se envía nada a ningún sitio en el proceso.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -287,7 +307,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني الاحتفاظ بأكثر من ملاحظة واحدة في الوقت نفسه؟",
     "faq.a4": "نعم — استخدم قائمة التبويبات أعلى مربع النص للاحتفاظ بحتى 10 ملاحظات منفصلة في آن واحد، كل واحدة تُحفظ بشكل مستقل. اضغط + لفتح تبويب جديد، واضغط على أي تبويب للتنقل إليه، واضغط على × في التبويب لإغلاق تلك الملاحظة وحذفها. هذا مفيد لإبقاء مسودة وقائمة مهام ورسالة نصف مكتوبة جنبًا إلى جنب دون أن تختلط ببعضها.",
     "faq.q5": "كيف أحفظ ملاحظتي كملف، أو أنقلها إلى Word أو Google Docs؟",
-    "faq.a5": "اضغط تنزيل .txt لحفظ الملاحظة الحالية كملف نصي عادي على جهازك، جاهز للفتح في Word أو Google Docs أو المفكرة أو أي محرر نصوص. أو اضغط نسخ الكل لنسخ الملاحظة كاملة إلى الحافظة ولصقها مباشرة في تطبيق آخر. كلا الإجراءين يعمل على الملاحظة في التبويب الذي تعرضه حاليًا، وكلاهما يعمل محليًا — لا يُرسَل شيء إلى أي مكان أثناء العملية."
+    "faq.a5": "اضغط تنزيل .txt لحفظ الملاحظة الحالية كملف نصي عادي على جهازك، جاهز للفتح في Word أو Google Docs أو المفكرة أو أي محرر نصوص. أو اضغط نسخ الكل لنسخ الملاحظة كاملة إلى الحافظة ولصقها مباشرة في تطبيق آخر. كلا الإجراءين يعمل على الملاحظة في التبويب الذي تعرضه حاليًا، وكلاهما يعمل محليًا — لا يُرسَل شيء إلى أي مكان أثناء العملية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -343,7 +368,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je garder plusieurs notes en même temps ?",
     "faq.a4": "Oui : utilisez la liste d'onglets au-dessus de la zone de texte pour garder jusqu'à 10 notes distinctes à la fois, chacune enregistrée indépendamment. Cliquez sur + pour ouvrir un nouvel onglet, cliquez sur un onglet pour y basculer, et cliquez sur le × d'un onglet pour le fermer et supprimer cette note. C'est pratique pour garder un brouillon, une liste de tâches et un message en cours de rédaction côte à côte sans qu'ils se mélangent.",
     "faq.q5": "Comment enregistrer ma note en fichier, ou la transférer vers Word ou Google Docs ?",
-    "faq.a5": "Cliquez sur Télécharger en .txt pour enregistrer la note actuelle en fichier texte brut sur votre appareil, prêt à ouvrir dans Word, Google Docs, le Bloc-notes ou tout éditeur de texte. Ou cliquez sur Tout copier pour copier la note entière dans le presse-papiers et la coller directement dans une autre application. Les deux actions portent sur la note de l'onglet actuellement affiché, et toutes deux s'exécutent localement — rien n'est envoyé nulle part au cours du processus."
+    "faq.a5": "Cliquez sur Télécharger en .txt pour enregistrer la note actuelle en fichier texte brut sur votre appareil, prêt à ouvrir dans Word, Google Docs, le Bloc-notes ou tout éditeur de texte. Ou cliquez sur Tout copier pour copier la note entière dans le presse-papiers et la coller directement dans une autre application. Les deux actions portent sur la note de l'onglet actuellement affiché, et toutes deux s'exécutent localement — rien n'est envoyé nulle part au cours du processus.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -399,7 +429,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমি কি একসঙ্গে একাধিক নোট রাখতে পারি?",
     "faq.a4": "হ্যাঁ — টেক্সট বক্সের ওপরের ট্যাব তালিকা দিয়ে একসঙ্গে সর্বোচ্চ ১০টি আলাদা নোট রাখুন, প্রতিটি আলাদাভাবে সেভ হয়। নতুন ট্যাব খুলতে + চাপুন, কোনো ট্যাবে যেতে সেটিতে ক্লিক করুন, আর কোনো নোট বন্ধ করে মুছে ফেলতে ট্যাবের × চাপুন। এটি একসঙ্গে একটি স্ক্র্যাচপ্যাড, একটি টু-ডু লিস্ট আর একটি অর্ধেক লেখা বার্তা আলাদাভাবে রাখতে বেশ কাজে লাগে।",
     "faq.q5": "আমি কীভাবে আমার নোট ফাইল হিসেবে সেভ করব, বা Word বা Google Docs-এ নিয়ে যাব?",
-    "faq.a5": "বর্তমান নোটটি আপনার ডিভাইসে প্লেইন-টেক্সট ফাইল হিসেবে সেভ করতে .txt ডাউনলোড করুন চাপুন, যা Word, Google Docs, নোটপ্যাড বা যেকোনো টেক্সট এডিটরে খোলা যাবে। অথবা পুরো নোট ক্লিপবোর্ডে কপি করে সরাসরি অন্য অ্যাপে পেস্ট করতে সব কপি করুন চাপুন। দুটোই আপনি এখন যে ট্যাবে আছেন সেই নোটের ওপর কাজ করে, আর দুটোই স্থানীয়ভাবে চলে — এই প্রক্রিয়ায় কোথাও কিছু পাঠানো হয় না।"
+    "faq.a5": "বর্তমান নোটটি আপনার ডিভাইসে প্লেইন-টেক্সট ফাইল হিসেবে সেভ করতে .txt ডাউনলোড করুন চাপুন, যা Word, Google Docs, নোটপ্যাড বা যেকোনো টেক্সট এডিটরে খোলা যাবে। অথবা পুরো নোট ক্লিপবোর্ডে কপি করে সরাসরি অন্য অ্যাপে পেস্ট করতে সব কপি করুন চাপুন। দুটোই আপনি এখন যে ট্যাবে আছেন সেই নোটের ওপর কাজ করে, আর দুটোই স্থানীয়ভাবে চলে — এই প্রক্রিয়ায় কোথাও কিছু পাঠানো হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -455,7 +490,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Posso manter mais de uma nota ao mesmo tempo?",
     "faq.a4": "Sim — use a lista de abas acima da caixa de texto para manter até 10 notas separadas ao mesmo tempo, cada uma salva de forma independente. Clique em + para abrir uma nova aba, clique em uma aba para alternar para ela, e clique no × de uma aba para fechá-la e apagar aquela nota. Isso é útil para manter um rascunho, uma lista de tarefas e uma mensagem pela metade lado a lado sem se misturarem.",
     "faq.q5": "Como salvo minha nota como arquivo, ou levo para o Word ou Google Docs?",
-    "faq.a5": "Clique em Baixar .txt para salvar a nota atual como um arquivo de texto simples no seu dispositivo, pronto para abrir no Word, Google Docs, Bloco de Notas ou qualquer editor de texto. Ou clique em Copiar tudo para copiar a nota inteira para a área de transferência e colá-la direto em outro aplicativo. As duas ações atuam sobre a nota da aba que você está vendo no momento, e ambas rodam localmente — nada é enviado a lugar nenhum nesse processo."
+    "faq.a5": "Clique em Baixar .txt para salvar a nota atual como um arquivo de texto simples no seu dispositivo, pronto para abrir no Word, Google Docs, Bloco de Notas ou qualquer editor de texto. Ou clique em Copiar tudo para copiar a nota inteira para a área de transferência e colá-la direto em outro aplicativo. As duas ações atuam sobre a nota da aba que você está vendo no momento, e ambas rodam localmente — nada é enviado a lugar nenhum nesse processo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -511,7 +551,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Можно ли хранить больше одной заметки одновременно?",
     "faq.a4": "Да — используйте список вкладок над текстовым полем, чтобы хранить до 10 отдельных заметок одновременно, каждая сохраняется независимо. Нажмите +, чтобы открыть новую вкладку, щёлкните по вкладке, чтобы переключиться на неё, и нажмите × на вкладке, чтобы закрыть и удалить эту заметку. Это удобно, когда нужно одновременно держать черновик, список дел и недописанное сообщение, не смешивая их между собой.",
     "faq.q5": "Как сохранить заметку в файл или перенести её в Word или Google Docs?",
-    "faq.a5": "Нажмите «Скачать .txt», чтобы сохранить текущую заметку как обычный текстовый файл на устройство — его можно открыть в Word, Google Docs, Блокноте или любом текстовом редакторе. Или нажмите «Копировать всё», чтобы скопировать всю заметку в буфер обмена и вставить прямо в другое приложение. Оба действия применяются к заметке из той вкладки, которую вы сейчас просматриваете, и оба выполняются локально — в процессе никуда ничего не отправляется."
+    "faq.a5": "Нажмите «Скачать .txt», чтобы сохранить текущую заметку как обычный текстовый файл на устройство — его можно открыть в Word, Google Docs, Блокноте или любом текстовом редакторе. Или нажмите «Копировать всё», чтобы скопировать всю заметку в буфер обмена и вставить прямо в другое приложение. Оба действия применяются к заметке из той вкладки, которую вы сейчас просматриваете, и оба выполняются локально — в процессе никуда ничего не отправляется.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -567,7 +612,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میں ایک ساتھ ایک سے زیادہ نوٹ رکھ سکتا ہوں؟",
     "faq.a4": "جی ہاں — ٹیکسٹ باکس کے اوپر موجود ٹیب لسٹ سے ایک ساتھ 10 الگ نوٹس رکھیں، ہر ایک الگ سے محفوظ ہوتا ہے۔ نیا ٹیب کھولنے کے لیے + دبائیں، کسی ٹیب پر جانے کے لیے اسے کلک کریں، اور کسی نوٹ کو بند کر کے حذف کرنے کے لیے ٹیب پر × دبائیں۔ یہ ایک ڈرافٹ، ٹو ڈو لسٹ، اور آدھا لکھا پیغام ایک ساتھ، بغیر ملائے، رکھنے کے لیے کافی مفید ہے۔",
     "faq.q5": "میں اپنا نوٹ فائل کے طور پر کیسے محفوظ کروں، یا اسے Word یا Google Docs میں کیسے لے جاؤں؟",
-    "faq.a5": "موجودہ نوٹ کو اپنی ڈیوائس پر پلین ٹیکسٹ فائل کے طور پر محفوظ کرنے کے لیے .txt ڈاؤن لوڈ کریں دبائیں، جسے Word، Google Docs، نوٹ پیڈ یا کسی بھی ٹیکسٹ ایڈیٹر میں کھولا جا سکتا ہے۔ یا پورا نوٹ کلپ بورڈ پر کاپی کر کے براہ راست کسی دوسری ایپ میں پیسٹ کرنے کے لیے سب کاپی کریں دبائیں۔ دونوں اسی ٹیب کے نوٹ پر کام کرتے ہیں جو آپ اس وقت دیکھ رہے ہیں، اور دونوں مقامی طور پر چلتے ہیں — اس عمل میں کہیں بھی کچھ نہیں بھیجا جاتا۔"
+    "faq.a5": "موجودہ نوٹ کو اپنی ڈیوائس پر پلین ٹیکسٹ فائل کے طور پر محفوظ کرنے کے لیے .txt ڈاؤن لوڈ کریں دبائیں، جسے Word، Google Docs، نوٹ پیڈ یا کسی بھی ٹیکسٹ ایڈیٹر میں کھولا جا سکتا ہے۔ یا پورا نوٹ کلپ بورڈ پر کاپی کر کے براہ راست کسی دوسری ایپ میں پیسٹ کرنے کے لیے سب کاپی کریں دبائیں۔ دونوں اسی ٹیب کے نوٹ پر کام کرتے ہیں جو آپ اس وقت دیکھ رہے ہیں، اور دونوں مقامی طور پر چلتے ہیں — اس عمل میں کہیں بھی کچھ نہیں بھیجا جاتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -623,7 +673,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah saya menyimpan lebih dari satu catatan sekaligus?",
     "faq.a4": "Bisa — gunakan daftar tab di atas kotak teks untuk menyimpan hingga 10 catatan terpisah sekaligus, masing-masing tersimpan secara independen. Klik + untuk membuka tab baru, klik sebuah tab untuk berpindah ke sana, dan klik × pada tab untuk menutup dan menghapus catatan itu. Ini berguna untuk menyimpan coretan cepat, daftar tugas, dan draf pesan berdampingan tanpa tercampur.",
     "faq.q5": "Bagaimana cara menyimpan catatan saya sebagai file, atau memindahkannya ke Word atau Google Docs?",
-    "faq.a5": "Klik Unduh .txt untuk menyimpan catatan saat ini sebagai file teks biasa ke perangkat Anda, siap dibuka di Word, Google Docs, Notepad, atau editor teks apa pun. Atau klik Salin semua untuk menyalin seluruh catatan ke clipboard dan menempelkannya langsung ke aplikasi lain. Keduanya berlaku untuk catatan pada tab yang sedang Anda lihat, dan keduanya berjalan secara lokal — tidak ada yang dikirim ke mana pun dalam prosesnya."
+    "faq.a5": "Klik Unduh .txt untuk menyimpan catatan saat ini sebagai file teks biasa ke perangkat Anda, siap dibuka di Word, Google Docs, Notepad, atau editor teks apa pun. Atau klik Salin semua untuk menyalin seluruh catatan ke clipboard dan menempelkannya langsung ke aplikasi lain. Keduanya berlaku untuk catatan pada tab yang sedang Anda lihat, dan keduanya berjalan secara lokal — tidak ada yang dikirim ke mana pun dalam prosesnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -679,7 +734,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich mehr als eine Notiz gleichzeitig führen?",
     "faq.a4": "Ja — nutzen Sie die Tab-Liste über dem Textfeld, um bis zu 10 separate Notizen gleichzeitig zu führen, jede unabhängig gespeichert. Klicken Sie auf +, um einen neuen Tab zu öffnen, klicken Sie auf einen Tab, um zu ihm zu wechseln, und klicken Sie auf das × eines Tabs, um diese Notiz zu schließen und zu löschen. Das ist praktisch, um einen Schmierzettel, eine To-do-Liste und einen halb fertigen Entwurf gleichzeitig zu führen, ohne dass sie sich vermischen.",
     "faq.q5": "Wie speichere ich meine Notiz als Datei oder übertrage sie nach Word oder Google Docs?",
-    "faq.a5": "Klicken Sie auf Als .txt herunterladen, um die aktuelle Notiz als reine Textdatei auf Ihrem Gerät zu speichern, bereit zum Öffnen in Word, Google Docs, dem Editor oder jedem beliebigen Texteditor. Oder klicken Sie auf Alles kopieren, um die gesamte Notiz in die Zwischenablage zu kopieren und direkt in eine andere App einzufügen. Beides wirkt auf die Notiz im gerade angezeigten Tab, und beides läuft lokal ab — dabei wird nichts irgendwohin gesendet."
+    "faq.a5": "Klicken Sie auf Als .txt herunterladen, um die aktuelle Notiz als reine Textdatei auf Ihrem Gerät zu speichern, bereit zum Öffnen in Word, Google Docs, dem Editor oder jedem beliebigen Texteditor. Oder klicken Sie auf Alles kopieren, um die gesamte Notiz in die Zwischenablage zu kopieren und direkt in eine andere App einzufügen. Beides wirkt auf die Notiz im gerade angezeigten Tab, und beides läuft lokal ab — dabei wird nichts irgendwohin gesendet.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -735,7 +795,12 @@ window.I18N_LOCALES = {
     "faq.q4": "複数のメモを同時に保持できますか？",
     "faq.a4": "はい — テキストボックス上部のタブ一覧を使えば、最大10件の独立したメモを同時に保持でき、それぞれ個別に保存されます。「＋」で新しいタブを開き、タブをクリックして切り替え、タブの「×」でそのメモを閉じて削除できます。走り書き・やることリスト・書きかけのメッセージを混ざらないように同時進行させたいときに便利です。",
     "faq.q5": "メモをファイルとして保存したり、WordやGoogleドキュメントに移したりするには？",
-    "faq.a5": "「.txtでダウンロード」をクリックすると、現在のメモがプレーンテキストファイルとして端末に保存され、Word、Googleドキュメント、メモ帳などどのテキストエディターでも開けます。あるいは「すべてコピー」をクリックすると、メモ全文がクリップボードにコピーされ、他のアプリへそのまま貼り付けられます。どちらも今表示しているタブのメモに対して働き、処理はすべてローカルで完結します — どこにも何も送信されません。"
+    "faq.a5": "「.txtでダウンロード」をクリックすると、現在のメモがプレーンテキストファイルとして端末に保存され、Word、Googleドキュメント、メモ帳などどのテキストエディターでも開けます。あるいは「すべてコピー」をクリックすると、メモ全文がクリップボードにコピーされ、他のアプリへそのまま貼り付けられます。どちらも今表示しているタブのメモに対して働き、処理はすべてローカルで完結します — どこにも何も送信されません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -791,6 +856,11 @@ window.I18N_LOCALES = {
     "faq.q4": "메모를 한 번에 여러 개 보관할 수 있나요?",
     "faq.a4": "네 — 텍스트 입력창 위의 탭 목록을 이용하면 최대 10개의 독립된 메모를 동시에 보관할 수 있고, 각각 따로 저장됩니다. +를 눌러 새 탭을 열고, 탭을 클릭해 전환하고, 탭의 ×를 눌러 그 메모를 닫고 삭제할 수 있습니다. 낙서용 메모, 할 일 목록, 작성 중인 메시지를 서로 섞이지 않게 나란히 두고 싶을 때 유용합니다.",
     "faq.q5": "메모를 파일로 저장하거나 Word나 Google 문서로 옮기려면 어떻게 하나요?",
-    "faq.a5": "'.txt 다운로드'를 누르면 현재 메모를 순수 텍스트 파일로 기기에 저장할 수 있으며, Word·Google 문서·메모장 등 어떤 텍스트 편집기에서도 열 수 있습니다. 또는 '전체 복사'를 눌러 메모 전체를 클립보드에 복사한 뒤 다른 앱에 바로 붙여넣을 수도 있습니다. 두 기능 모두 현재 보고 있는 탭의 메모에 적용되며, 모든 과정이 로컬에서 처리되어 어디로도 전송되지 않습니다."
+    "faq.a5": "'.txt 다운로드'를 누르면 현재 메모를 순수 텍스트 파일로 기기에 저장할 수 있으며, Word·Google 문서·메모장 등 어떤 텍스트 편집기에서도 열 수 있습니다. 또는 '전체 복사'를 눌러 메모 전체를 클립보드에 복사한 뒤 다른 앱에 바로 붙여넣을 수도 있습니다. 두 기능 모두 현재 보고 있는 탭의 메모에 적용되며, 모든 과정이 로컬에서 처리되어 어디로도 전송되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

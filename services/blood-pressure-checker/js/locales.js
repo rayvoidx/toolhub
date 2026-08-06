@@ -76,7 +76,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I get an accurate blood pressure reading at home?",
     "faq.a4": "A few habits make home readings far more reliable: sit with your back supported and feet flat on the floor for five minutes beforehand, rest your arm on a table so the cuff sits at heart level, and skip caffeine, exercise, or smoking for 30 minutes before measuring. Use a properly sized cuff against bare skin rather than over clothing, stay still, and avoid talking during the reading. Because blood pressure naturally fluctuates through the day, take two or three readings a minute apart and use the average, and measure at a similar time each day — many doctors suggest once in the morning and once in the evening — for a trend that means more than any single number.",
     "faq.q5": "Is this blood pressure checker a diagnosis, and is my data sent anywhere?",
-    "faq.a5": "No to both. This tool only sorts the two numbers you enter into the standard ACC/AHA categories — it can't measure your blood pressure and doesn't replace a diagnosis from a doctor, who weighs your history, other risk factors, and readings taken over time. All calculations run entirely in your browser; the systolic and diastolic numbers you type are never uploaded to a server or stored anywhere outside your own device. If your readings stay elevated or you're ever unsure what a number means, talk to a healthcare professional."
+    "faq.a5": "No to both. This tool only sorts the two numbers you enter into the standard ACC/AHA categories — it can't measure your blood pressure and doesn't replace a diagnosis from a doctor, who weighs your history, other risk factors, and readings taken over time. All calculations run entirely in your browser; the systolic and diastolic numbers you type are never uploaded to a server or stored anywhere outside your own device. If your readings stay elevated or you're ever unsure what a number means, talk to a healthcare professional.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -137,7 +142,12 @@ window.I18N_LOCALES = {
     "faq.q4": "在家该如何获得准确的血压读数？",
     "faq.a4": "养成几个习惯能让居家测量更可靠：测量前先靠背坐好、双脚平放在地面上静坐约五分钟，将手臂放在桌面上使袖带与心脏保持同一高度，并在测量前30分钟内避免咖啡因、运动或吸烟。使用尺寸合适的袖带并直接绑在裸露的皮肤上，而不是隔着衣袖；测量时保持静止，不要说话。由于血压在一天中会自然波动，建议间隔一分钟连续测量两到三次并取平均值，并且每天在相近的时间段测量——许多医生建议早晚各测一次——这样得到的趋势比单次数值更有参考意义。",
     "faq.q5": "这个血压检测器能作为诊断依据吗？我的数据会被发送出去吗？",
-    "faq.a5": "都不会。这个工具只是把你输入的两个数值归类到标准的ACC/AHA分类中——它无法测量你的血压，也不能替代医生的诊断，因为医生会综合考虑你的病史、其他风险因素以及长期的读数变化。所有计算都完全在你的浏览器本地完成；你输入的收缩压和舒张压数值从不会上传到服务器，也不会保存在你设备之外的任何地方。如果你的读数持续偏高，或者你对某个数值的含义有疑问，请咨询专业医疗人员。"
+    "faq.a5": "都不会。这个工具只是把你输入的两个数值归类到标准的ACC/AHA分类中——它无法测量你的血压，也不能替代医生的诊断，因为医生会综合考虑你的病史、其他风险因素以及长期的读数变化。所有计算都完全在你的浏览器本地完成；你输入的收缩压和舒张压数值从不会上传到服务器，也不会保存在你设备之外的任何地方。如果你的读数持续偏高，或者你对某个数值的含义有疑问，请咨询专业医疗人员。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -198,7 +208,12 @@ window.I18N_LOCALES = {
     "faq.q4": "घर पर सही ब्लड प्रेशर रीडिंग कैसे लें?",
     "faq.a4": "कुछ आदतें घर की रीडिंग को कहीं ज़्यादा भरोसेमंद बना देती हैं: नापने से पहले लगभग पाँच मिनट तक पीठ टिकाकर और पैर ज़मीन पर सपाट रखकर शांति से बैठें, हाथ को मेज़ पर रखें ताकि कफ़ दिल के लेवल पर रहे, और नापने से 30 मिनट पहले कैफ़ीन, व्यायाम या धूम्रपान से बचें। सही साइज़ का कफ़ इस्तेमाल करें और उसे कपड़ों के ऊपर की बजाय सीधे त्वचा पर बांधें, स्थिर रहें, और रीडिंग के दौरान बात करने से बचें। चूँकि ब्लड प्रेशर दिन भर स्वाभाविक रूप से बदलता रहता है, एक मिनट के अंतर पर दो-तीन रीडिंग लें और उनका औसत निकालें, और हर दिन लगभग एक जैसे समय पर नापें — कई डॉक्टर सुबह और शाम दोनों समय नापने की सलाह देते हैं — ताकि एक अकेली रीडिंग से ज़्यादा मतलब वाला ट्रेंड मिल सके।",
     "faq.q5": "क्या यह ब्लड प्रेशर चेकर एक डायग्नोसिस है, और क्या मेरा डेटा कहीं भेजा जाता है?",
-    "faq.a5": "दोनों का जवाब नहीं है। यह टूल सिर्फ़ आपके डाले गए दो नंबरों को मानक ACC/AHA श्रेणियों में बांटता है — यह आपका ब्लड प्रेशर माप नहीं सकता और डॉक्टर की डायग्नोसिस की जगह नहीं ले सकता, जो आपके मेडिकल इतिहास, अन्य जोखिम कारकों, और समय के साथ ली गई रीडिंग को ध्यान में रखते हैं। सभी गणनाएँ पूरी तरह आपके ब्राउज़र में होती हैं; आपके डाले गए सिस्टोलिक और डायस्टोलिक नंबर कभी किसी सर्वर पर अपलोड नहीं होते और आपके डिवाइस के बाहर कहीं सेव नहीं होते। अगर आपकी रीडिंग लगातार एलिवेटेड रहती है, या किसी नंबर का मतलब समझ न आए, तो किसी हेल्थकेयर प्रोफ़ेशनल से बात करें।"
+    "faq.a5": "दोनों का जवाब नहीं है। यह टूल सिर्फ़ आपके डाले गए दो नंबरों को मानक ACC/AHA श्रेणियों में बांटता है — यह आपका ब्लड प्रेशर माप नहीं सकता और डॉक्टर की डायग्नोसिस की जगह नहीं ले सकता, जो आपके मेडिकल इतिहास, अन्य जोखिम कारकों, और समय के साथ ली गई रीडिंग को ध्यान में रखते हैं। सभी गणनाएँ पूरी तरह आपके ब्राउज़र में होती हैं; आपके डाले गए सिस्टोलिक और डायस्टोलिक नंबर कभी किसी सर्वर पर अपलोड नहीं होते और आपके डिवाइस के बाहर कहीं सेव नहीं होते। अगर आपकी रीडिंग लगातार एलिवेटेड रहती है, या किसी नंबर का मतलब समझ न आए, तो किसी हेल्थकेयर प्रोफ़ेशनल से बात करें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -259,7 +274,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo obtengo una lectura precisa de presión arterial en casa?",
     "faq.a4": "Algunos hábitos hacen que las lecturas en casa sean mucho más confiables: siéntate con la espalda apoyada y los pies planos en el suelo durante cinco minutos antes de medir, apoya el brazo en una mesa para que el manguito quede a la altura del corazón, y evita cafeína, ejercicio o tabaco 30 minutos antes de medir. Usa un manguito del tamaño adecuado sobre la piel desnuda en vez de sobre la ropa, mantente quieto, y evita hablar durante la lectura. Como la presión arterial fluctúa naturalmente a lo largo del día, toma dos o tres lecturas con un minuto de diferencia y usa el promedio, y mide a una hora similar cada día — muchos médicos sugieren una vez por la mañana y otra por la noche — para obtener una tendencia más útil que un solo número.",
     "faq.q5": "¿Es este comprobador de presión arterial un diagnóstico, y se envían mis datos a algún lugar?",
-    "faq.a5": "No a ambas cosas. Esta herramienta solo clasifica los dos números que introduces en las categorías estándar de ACC/AHA — no puede medir tu presión arterial y no reemplaza el diagnóstico de un médico, que evalúa tu historial, otros factores de riesgo y lecturas tomadas a lo largo del tiempo. Todos los cálculos se ejecutan completamente en tu navegador; los números sistólico y diastólico que escribes nunca se suben a un servidor ni se guardan en ningún lugar fuera de tu propio dispositivo. Si tus lecturas se mantienen elevadas o no estás seguro del significado de un número, habla con un profesional de la salud."
+    "faq.a5": "No a ambas cosas. Esta herramienta solo clasifica los dos números que introduces en las categorías estándar de ACC/AHA — no puede medir tu presión arterial y no reemplaza el diagnóstico de un médico, que evalúa tu historial, otros factores de riesgo y lecturas tomadas a lo largo del tiempo. Todos los cálculos se ejecutan completamente en tu navegador; los números sistólico y diastólico que escribes nunca se suben a un servidor ni se guardan en ningún lugar fuera de tu propio dispositivo. Si tus lecturas se mantienen elevadas o no estás seguro del significado de un número, habla con un profesional de la salud.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -320,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أحصل على قراءة دقيقة لضغط الدم في المنزل؟",
     "faq.a4": "تجعل بعض العادات القراءات المنزلية أكثر موثوقية بكثير: اجلس مسترخياً وظهرك مسنود وقدماك مسطحتان على الأرض لمدة خمس دقائق قبل القياس، وضع ذراعك على طاولة بحيث تكون الكفة عند مستوى القلب، وتجنب الكافيين أو الرياضة أو التدخين لمدة 30 دقيقة قبل القياس. استخدم كفة بالحجم المناسب على الجلد مباشرةً بدلاً من فوق الملابس، وابقَ ثابتاً، وتجنب الكلام أثناء القراءة. ولأن ضغط الدم يتقلب طبيعياً على مدار اليوم، خذ قراءتين أو ثلاثاً بفارق دقيقة واحدة واستخدم المتوسط، وقِس في وقت مماثل كل يوم — يقترح كثير من الأطباء مرة صباحاً ومرة مساءً — للحصول على اتجاه أكثر دلالة من رقم واحد.",
     "faq.q5": "هل يُعد فاحص ضغط الدم هذا تشخيصاً، وهل تُرسَل بياناتي إلى أي مكان؟",
-    "faq.a5": "لا في كلتا الحالتين. تكتفي هذه الأداة بتصنيف الرقمين اللذين تدخلهما ضمن فئات ACC/AHA القياسية — لا يمكنها قياس ضغط دمك ولا تحل محل تشخيص الطبيب، الذي يأخذ في الاعتبار تاريخك الطبي وعوامل الخطر الأخرى والقراءات المأخوذة عبر الزمن. تتم جميع الحسابات بالكامل داخل متصفحك؛ الأرقام الانقباضية والانبساطية التي تكتبها لا تُرفَع أبداً إلى أي خادم ولا تُحفَظ في أي مكان خارج جهازك. إذا ظلت قراءاتك مرتفعة أو لم تكن متأكداً من معنى رقم ما، تحدث مع أخصائي رعاية صحية."
+    "faq.a5": "لا في كلتا الحالتين. تكتفي هذه الأداة بتصنيف الرقمين اللذين تدخلهما ضمن فئات ACC/AHA القياسية — لا يمكنها قياس ضغط دمك ولا تحل محل تشخيص الطبيب، الذي يأخذ في الاعتبار تاريخك الطبي وعوامل الخطر الأخرى والقراءات المأخوذة عبر الزمن. تتم جميع الحسابات بالكامل داخل متصفحك؛ الأرقام الانقباضية والانبساطية التي تكتبها لا تُرفَع أبداً إلى أي خادم ولا تُحفَظ في أي مكان خارج جهازك. إذا ظلت قراءاتك مرتفعة أو لم تكن متأكداً من معنى رقم ما، تحدث مع أخصائي رعاية صحية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -381,7 +406,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment obtenir une mesure précise de la tension artérielle à la maison ?",
     "faq.a4": "Quelques habitudes rendent les mesures à domicile bien plus fiables : asseyez-vous le dos soutenu et les pieds à plat sur le sol pendant cinq minutes avant de mesurer, posez votre bras sur une table pour que le brassard soit au niveau du cœur, et évitez la caféine, l'exercice ou le tabac dans les 30 minutes précédant la mesure. Utilisez un brassard de taille adaptée directement sur la peau plutôt que par-dessus un vêtement, restez immobile, et évitez de parler pendant la mesure. Comme la tension artérielle fluctue naturellement au cours de la journée, prenez deux ou trois mesures espacées d'une minute et faites la moyenne, et mesurez à une heure similaire chaque jour — de nombreux médecins recommandent une fois le matin et une fois le soir — pour obtenir une tendance plus significative qu'un seul chiffre.",
     "faq.q5": "Ce vérificateur de tension artérielle est-il un diagnostic, et mes données sont-elles envoyées quelque part ?",
-    "faq.a5": "Non, dans les deux cas. Cet outil se contente de classer les deux nombres que vous saisissez dans les catégories standard de l'ACC/AHA — il ne peut pas mesurer votre tension artérielle et ne remplace pas le diagnostic d'un médecin, qui prend en compte vos antécédents, d'autres facteurs de risque, et des mesures prises dans le temps. Tous les calculs s'exécutent entièrement dans votre navigateur ; les nombres systolique et diastolique que vous saisissez ne sont jamais envoyés à un serveur ni stockés ailleurs que sur votre propre appareil. Si vos mesures restent élevées ou si un chiffre n'est pas clair pour vous, parlez-en à un professionnel de santé."
+    "faq.a5": "Non, dans les deux cas. Cet outil se contente de classer les deux nombres que vous saisissez dans les catégories standard de l'ACC/AHA — il ne peut pas mesurer votre tension artérielle et ne remplace pas le diagnostic d'un médecin, qui prend en compte vos antécédents, d'autres facteurs de risque, et des mesures prises dans le temps. Tous les calculs s'exécutent entièrement dans votre navigateur ; les nombres systolique et diastolique que vous saisissez ne sont jamais envoyés à un serveur ni stockés ailleurs que sur votre propre appareil. Si vos mesures restent élevées ou si un chiffre n'est pas clair pour vous, parlez-en à un professionnel de santé.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -442,7 +472,12 @@ window.I18N_LOCALES = {
     "faq.q4": "বাড়িতে কীভাবে সঠিক রক্তচাপ রিডিং পাওয়া যায়?",
     "faq.a4": "কয়েকটি অভ্যাস বাড়ির রিডিংকে অনেক বেশি নির্ভরযোগ্য করে তোলে: মাপার আগে পিঠ হেলান দিয়ে এবং পা মেঝেতে সমতলভাবে রেখে প্রায় পাঁচ মিনিট শান্তভাবে বসুন, বাহুটি টেবিলে রাখুন যাতে কাফটি হৃদয়ের সমান উচ্চতায় থাকে, এবং মাপার আগে 30 মিনিট ক্যাফেইন, ব্যায়াম, বা ধূমপান এড়িয়ে চলুন। কাপড়ের ওপর না দিয়ে সরাসরি খালি ত্বকে সঠিক আকারের কাফ ব্যবহার করুন, স্থির থাকুন, এবং রিডিংয়ের সময় কথা বলা এড়িয়ে চলুন। যেহেতু রক্তচাপ সারাদিন স্বাভাবিকভাবেই ওঠানামা করে, এক মিনিটের ব্যবধানে দুই বা তিনটি রিডিং নিন এবং গড় ব্যবহার করুন, এবং প্রতিদিন কাছাকাছি সময়ে মাপুন — অনেক ডাক্তার সকালে ও সন্ধ্যায় একবার করে মাপার পরামর্শ দেন — যাতে একক সংখ্যার চেয়ে বেশি অর্থবহ একটি প্রবণতা পাওয়া যায়।",
     "faq.q5": "এই ব্লাড প্রেসার চেকার কি একটি নির্ণয়, এবং আমার তথ্য কি কোথাও পাঠানো হয়?",
-    "faq.a5": "দুটোই না। এই টুলটি শুধু আপনার লেখা দুটি সংখ্যাকে মানক ACC/AHA ক্যাটাগরিতে সাজায় — এটি আপনার রক্তচাপ মাপতে পারে না এবং ডাক্তারের নির্ণয়ের বিকল্প নয়, যিনি আপনার ইতিহাস, অন্যান্য ঝুঁকির কারণ, এবং সময়ের সঙ্গে নেওয়া রিডিং বিবেচনা করেন। সমস্ত হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারে হয়; আপনি যে সিস্টোলিক ও ডায়াস্টোলিক সংখ্যা লেখেন তা কখনো সার্ভারে আপলোড হয় না বা আপনার ডিভাইসের বাইরে কোথাও সংরক্ষিত হয় না। যদি আপনার রিডিং ক্রমাগত বর্ধিত থাকে বা কোনো সংখ্যার অর্থ নিয়ে আপনি অনিশ্চিত থাকেন, তাহলে একজন স্বাস্থ্যসেবা পেশাদারের সঙ্গে কথা বলুন।"
+    "faq.a5": "দুটোই না। এই টুলটি শুধু আপনার লেখা দুটি সংখ্যাকে মানক ACC/AHA ক্যাটাগরিতে সাজায় — এটি আপনার রক্তচাপ মাপতে পারে না এবং ডাক্তারের নির্ণয়ের বিকল্প নয়, যিনি আপনার ইতিহাস, অন্যান্য ঝুঁকির কারণ, এবং সময়ের সঙ্গে নেওয়া রিডিং বিবেচনা করেন। সমস্ত হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারে হয়; আপনি যে সিস্টোলিক ও ডায়াস্টোলিক সংখ্যা লেখেন তা কখনো সার্ভারে আপলোড হয় না বা আপনার ডিভাইসের বাইরে কোথাও সংরক্ষিত হয় না। যদি আপনার রিডিং ক্রমাগত বর্ধিত থাকে বা কোনো সংখ্যার অর্থ নিয়ে আপনি অনিশ্চিত থাকেন, তাহলে একজন স্বাস্থ্যসেবা পেশাদারের সঙ্গে কথা বলুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -503,7 +538,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como obter uma leitura precisa de pressão arterial em casa?",
     "faq.a4": "Alguns hábitos tornam as leituras em casa muito mais confiáveis: sente-se com as costas apoiadas e os pés apoiados no chão por cinco minutos antes de medir, apoie o braço em uma mesa para que o manguito fique na altura do coração, e evite cafeína, exercício ou cigarro por 30 minutos antes de medir. Use um manguito de tamanho adequado direto na pele, não sobre a roupa, fique parado, e evite falar durante a leitura. Como a pressão arterial flutua naturalmente ao longo do dia, faça duas ou três leituras com um minuto de intervalo e use a média, e meça em horário parecido todos os dias — muitos médicos sugerem uma vez de manhã e outra à noite — para obter uma tendência mais significativa do que um único número.",
     "faq.q5": "Este verificador de pressão arterial é um diagnóstico, e meus dados são enviados para algum lugar?",
-    "faq.a5": "Não, em nenhum dos casos. Esta ferramenta apenas classifica os dois números que você digita nas categorias padrão da ACC/AHA — ela não pode medir sua pressão arterial e não substitui o diagnóstico de um médico, que avalia seu histórico, outros fatores de risco e leituras feitas ao longo do tempo. Todos os cálculos são feitos inteiramente no seu navegador; os números sistólico e diastólico que você digita nunca são enviados a um servidor nem armazenados fora do seu próprio dispositivo. Se suas leituras permanecerem elevadas ou você não tiver certeza do que um número significa, converse com um profissional de saúde."
+    "faq.a5": "Não, em nenhum dos casos. Esta ferramenta apenas classifica os dois números que você digita nas categorias padrão da ACC/AHA — ela não pode medir sua pressão arterial e não substitui o diagnóstico de um médico, que avalia seu histórico, outros fatores de risco e leituras feitas ao longo do tempo. Todos os cálculos são feitos inteiramente no seu navegador; os números sistólico e diastólico que você digita nunca são enviados a um servidor nem armazenados fora do seu próprio dispositivo. Se suas leituras permanecerem elevadas ou você não tiver certeza do que um número significa, converse com um profissional de saúde.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -564,7 +604,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как получить точное измерение артериального давления дома?",
     "faq.a4": "Несколько привычек делают домашние измерения гораздо надёжнее: перед измерением спокойно посидите с опорой на спину и стопами на полу около пяти минут, положите руку на стол так, чтобы манжета была на уровне сердца, и избегайте кофеина, физических нагрузок или курения в течение 30 минут перед измерением. Используйте манжету подходящего размера прямо на голой коже, а не поверх одежды, оставайтесь неподвижны и не разговаривайте во время измерения. Поскольку давление естественным образом колеблется в течение дня, сделайте два-три измерения с интервалом в минуту и используйте среднее значение, а измеряйте примерно в одно и то же время каждый день — многие врачи рекомендуют один раз утром и один раз вечером — чтобы получить более информативную динамику, чем одно число.",
     "faq.q5": "Является ли эта проверка артериального давления диагнозом, и отправляются ли мои данные куда-либо?",
-    "faq.a5": "Нет, ни то, ни другое. Этот инструмент только сортирует введённые вами два числа по стандартным категориям ACC/AHA — он не может измерить ваше давление и не заменяет диагноз врача, который учитывает вашу историю болезни, другие факторы риска и показания, снятые с течением времени. Все вычисления выполняются полностью в вашем браузере; введённые вами систолическое и диастолическое числа никогда не отправляются на сервер и не сохраняются нигде за пределами вашего устройства. Если ваши показания остаются повышенными или вы не уверены, что означает то или иное число, поговорите со специалистом здравоохранения."
+    "faq.a5": "Нет, ни то, ни другое. Этот инструмент только сортирует введённые вами два числа по стандартным категориям ACC/AHA — он не может измерить ваше давление и не заменяет диагноз врача, который учитывает вашу историю болезни, другие факторы риска и показания, снятые с течением времени. Все вычисления выполняются полностью в вашем браузере; введённые вами систолическое и диастолическое числа никогда не отправляются на сервер и не сохраняются нигде за пределами вашего устройства. Если ваши показания остаются повышенными или вы не уверены, что означает то или иное число, поговорите со специалистом здравоохранения.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -625,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "گھر پر درست بلڈ پریشر ریڈنگ کیسے حاصل کریں؟",
     "faq.a4": "چند عادات گھریلو ریڈنگز کو کہیں زیادہ قابل بھروسہ بنا دیتی ہیں: ناپنے سے پہلے پیٹھ ٹیک کر اور پاؤں زمین پر سیدھے رکھ کر تقریباً پانچ منٹ سکون سے بیٹھیں، بازو کو میز پر رکھیں تاکہ کف دل کی سطح پر رہے، اور ناپنے سے 30 منٹ پہلے کیفین، ورزش، یا سگریٹ نوشی سے پرہیز کریں۔ کپڑوں کے اوپر کی بجائے براہ راست ننگی جلد پر صحیح سائز کا کف استعمال کریں، ساکن رہیں، اور ریڈنگ کے دوران بات کرنے سے گریز کریں۔ چونکہ بلڈ پریشر دن بھر قدرتی طور پر بدلتا رہتا ہے، ایک منٹ کے وقفے سے دو یا تین ریڈنگز لیں اور اوسط استعمال کریں، اور ہر روز تقریباً ایک ہی وقت پر ناپیں — بہت سے ڈاکٹر صبح اور شام دونوں وقت ناپنے کا مشورہ دیتے ہیں — تاکہ ایک اکیلے نمبر کی بجائے زیادہ معنی خیز رجحان ملے۔",
     "faq.q5": "کیا یہ بلڈ پریشر چیکر ایک تشخیص ہے، اور کیا میرا ڈیٹا کہیں بھیجا جاتا ہے؟",
-    "faq.a5": "دونوں کا جواب نہیں ہے۔ یہ ٹول صرف آپ کے درج کردہ دو نمبروں کو معیاری ACC/AHA زمروں میں تقسیم کرتا ہے — یہ آپ کا بلڈ پریشر ناپ نہیں سکتا اور ڈاکٹر کی تشخیص کا متبادل نہیں ہے، جو آپ کی طبی تاریخ، دیگر خطرے کے عوامل، اور وقت کے ساتھ لی گئی ریڈنگز کو مدنظر رکھتا ہے۔ تمام حساب مکمل طور پر آپ کے براؤزر میں ہوتے ہیں؛ آپ کے درج کردہ سسٹولک اور ڈائسٹولک نمبر کبھی کسی سرور پر اپ لوڈ نہیں ہوتے اور نہ ہی آپ کے آلے سے باہر کہیں محفوظ ہوتے ہیں۔ اگر آپ کی ریڈنگز مسلسل بلند رہیں یا کسی نمبر کا مطلب سمجھ نہ آئے، تو کسی صحت کے ماہر سے بات کریں۔"
+    "faq.a5": "دونوں کا جواب نہیں ہے۔ یہ ٹول صرف آپ کے درج کردہ دو نمبروں کو معیاری ACC/AHA زمروں میں تقسیم کرتا ہے — یہ آپ کا بلڈ پریشر ناپ نہیں سکتا اور ڈاکٹر کی تشخیص کا متبادل نہیں ہے، جو آپ کی طبی تاریخ، دیگر خطرے کے عوامل، اور وقت کے ساتھ لی گئی ریڈنگز کو مدنظر رکھتا ہے۔ تمام حساب مکمل طور پر آپ کے براؤزر میں ہوتے ہیں؛ آپ کے درج کردہ سسٹولک اور ڈائسٹولک نمبر کبھی کسی سرور پر اپ لوڈ نہیں ہوتے اور نہ ہی آپ کے آلے سے باہر کہیں محفوظ ہوتے ہیں۔ اگر آپ کی ریڈنگز مسلسل بلند رہیں یا کسی نمبر کا مطلب سمجھ نہ آئے، تو کسی صحت کے ماہر سے بات کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -686,7 +736,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara mendapatkan hasil tekanan darah yang akurat di rumah?",
     "faq.a4": "Beberapa kebiasaan membuat hasil pengukuran di rumah jauh lebih dapat diandalkan: duduklah dengan punggung tersandar dan kaki rata di lantai selama lima menit sebelum mengukur, letakkan lengan di atas meja agar manset berada setinggi jantung, dan hindari kafein, olahraga, atau merokok selama 30 menit sebelum mengukur. Gunakan manset berukuran tepat langsung pada kulit telanjang, bukan di atas pakaian, tetap diam, dan hindari berbicara selama pengukuran. Karena tekanan darah secara alami berfluktuasi sepanjang hari, ambil dua atau tiga hasil dengan jeda satu menit dan gunakan rata-ratanya, serta ukur pada waktu yang sama setiap hari — banyak dokter menyarankan sekali di pagi hari dan sekali di malam hari — untuk mendapatkan tren yang lebih bermakna daripada satu angka saja.",
     "faq.q5": "Apakah pengecek tekanan darah ini merupakan diagnosis, dan apakah data saya dikirim ke suatu tempat?",
-    "faq.a5": "Tidak untuk keduanya. Alat ini hanya mengelompokkan dua angka yang Anda masukkan ke dalam kategori standar ACC/AHA — alat ini tidak dapat mengukur tekanan darah Anda dan tidak menggantikan diagnosis dokter, yang mempertimbangkan riwayat kesehatan Anda, faktor risiko lain, dan hasil pengukuran yang diambil dari waktu ke waktu. Semua perhitungan sepenuhnya dijalankan di browser Anda; angka sistolik dan diastolik yang Anda ketik tidak pernah diunggah ke server atau disimpan di mana pun di luar perangkat Anda sendiri. Jika hasil Anda tetap tinggi atau Anda tidak yakin dengan arti suatu angka, bicarakan dengan tenaga profesional kesehatan."
+    "faq.a5": "Tidak untuk keduanya. Alat ini hanya mengelompokkan dua angka yang Anda masukkan ke dalam kategori standar ACC/AHA — alat ini tidak dapat mengukur tekanan darah Anda dan tidak menggantikan diagnosis dokter, yang mempertimbangkan riwayat kesehatan Anda, faktor risiko lain, dan hasil pengukuran yang diambil dari waktu ke waktu. Semua perhitungan sepenuhnya dijalankan di browser Anda; angka sistolik dan diastolik yang Anda ketik tidak pernah diunggah ke server atau disimpan di mana pun di luar perangkat Anda sendiri. Jika hasil Anda tetap tinggi atau Anda tidak yakin dengan arti suatu angka, bicarakan dengan tenaga profesional kesehatan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -747,7 +802,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie erhalte ich zu Hause einen genauen Blutdruckmesswert?",
     "faq.a4": "Ein paar Gewohnheiten machen Messungen zu Hause deutlich zuverlässiger: Sitzen Sie vor der Messung etwa fünf Minuten ruhig mit angelehntem Rücken und flach auf dem Boden stehenden Füßen, legen Sie den Arm auf einen Tisch, sodass die Manschette auf Herzhöhe liegt, und verzichten Sie 30 Minuten vor der Messung auf Koffein, Sport oder Rauchen. Verwenden Sie eine passend große Manschette direkt auf der nackten Haut statt über der Kleidung, bleiben Sie ruhig sitzen und vermeiden Sie es, während der Messung zu sprechen. Da der Blutdruck im Tagesverlauf natürlich schwankt, nehmen Sie zwei oder drei Messungen im Abstand von einer Minute vor und verwenden Sie den Durchschnitt, und messen Sie täglich zu einer ähnlichen Zeit — viele Ärzte empfehlen einmal morgens und einmal abends — um einen aussagekräftigeren Trend als eine einzelne Zahl zu erhalten.",
     "faq.q5": "Ist dieser Blutdruck-Checker eine Diagnose, und werden meine Daten irgendwohin gesendet?",
-    "faq.a5": "Nein, beides nicht. Dieses Tool ordnet lediglich die beiden von Ihnen eingegebenen Zahlen den Standard-ACC/AHA-Kategorien zu — es kann Ihren Blutdruck nicht messen und ersetzt nicht die Diagnose eines Arztes, der Ihre Krankengeschichte, andere Risikofaktoren und im Zeitverlauf erhobene Messwerte berücksichtigt. Alle Berechnungen laufen vollständig in Ihrem Browser; die systolischen und diastolischen Zahlen, die Sie eingeben, werden nie an einen Server hochgeladen oder außerhalb Ihres eigenen Geräts gespeichert. Wenn Ihre Messwerte weiterhin erhöht sind oder Sie sich bei der Bedeutung eines Werts unsicher sind, sprechen Sie mit einer medizinischen Fachkraft."
+    "faq.a5": "Nein, beides nicht. Dieses Tool ordnet lediglich die beiden von Ihnen eingegebenen Zahlen den Standard-ACC/AHA-Kategorien zu — es kann Ihren Blutdruck nicht messen und ersetzt nicht die Diagnose eines Arztes, der Ihre Krankengeschichte, andere Risikofaktoren und im Zeitverlauf erhobene Messwerte berücksichtigt. Alle Berechnungen laufen vollständig in Ihrem Browser; die systolischen und diastolischen Zahlen, die Sie eingeben, werden nie an einen Server hochgeladen oder außerhalb Ihres eigenen Geräts gespeichert. Wenn Ihre Messwerte weiterhin erhöht sind oder Sie sich bei der Bedeutung eines Werts unsicher sind, sprechen Sie mit einer medizinischen Fachkraft.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -808,7 +868,12 @@ window.I18N_LOCALES = {
     "faq.q4": "自宅で正確な血圧測定値を得るにはどうすればよいですか？",
     "faq.a4": "いくつかの習慣で、自宅測定の信頼性は大きく向上します：測定前に背もたれに寄りかかり足を床にしっかりつけて約5分間静かに座る、カフが心臓の高さになるよう腕をテーブルに置く、測定前30分はカフェイン・運動・喫煙を避ける、といった点です。カフは服の上ではなく素肌に直接、適切なサイズのものを使用し、測定中は動かず会話も控えてください。血圧は一日の中で自然に変動するため、1分間隔で2〜3回測定して平均を使い、毎日ほぼ同じ時間帯に測定することをおすすめします — 多くの医師は朝と晩の1日2回の測定を勧めています — これにより、一度きりの数値よりも意味のある傾向がつかめます。",
     "faq.q5": "この血圧チェッカーは診断になりますか？また、入力データはどこかに送信されますか？",
-    "faq.a5": "どちらもいいえです。このツールは、入力された2つの数値を標準的なACC/AHAの分類に振り分けるだけです — 実際に血圧を測定することはできず、既往歴や他のリスク要因、経時的な測定値を考慮する医師の診断の代わりにはなりません。すべての計算は完全にブラウザ内で行われます。入力した収縮期・拡張期の数値がサーバーにアップロードされたり、お使いの端末以外の場所に保存されたりすることは一切ありません。測定値が高いままの場合や、数値の意味に確信が持てない場合は、医療専門家に相談してください。"
+    "faq.a5": "どちらもいいえです。このツールは、入力された2つの数値を標準的なACC/AHAの分類に振り分けるだけです — 実際に血圧を測定することはできず、既往歴や他のリスク要因、経時的な測定値を考慮する医師の診断の代わりにはなりません。すべての計算は完全にブラウザ内で行われます。入力した収縮期・拡張期の数値がサーバーにアップロードされたり、お使いの端末以外の場所に保存されたりすることは一切ありません。測定値が高いままの場合や、数値の意味に確信が持てない場合は、医療専門家に相談してください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -869,6 +934,11 @@ window.I18N_LOCALES = {
     "faq.q4": "집에서 정확한 혈압을 측정하려면 어떻게 해야 하나요?",
     "faq.a4": "몇 가지 습관만으로 가정 측정의 정확도가 크게 높아집니다: 측정 전 등을 기대고 발을 바닥에 평평하게 둔 채 약 5분간 조용히 앉아 있고, 팔을 탁자 위에 올려 커프가 심장 높이에 오도록 하며, 측정 30분 전에는 카페인·운동·흡연을 피하세요. 옷 위가 아니라 맨살에 적절한 크기의 커프를 착용하고, 측정 중에는 움직이거나 말하지 마세요. 혈압은 하루 중에도 자연스럽게 변동하므로 1분 간격으로 두세 번 측정해 평균을 내고, 매일 비슷한 시간대에 측정하는 것이 좋습니다 — 많은 의사가 아침과 저녁 하루 두 번 측정을 권장합니다 — 이렇게 하면 한 번의 수치보다 훨씬 의미 있는 추세를 파악할 수 있습니다.",
     "faq.q5": "이 혈압 체커가 진단을 대신하나요? 입력한 데이터는 어딘가로 전송되나요?",
-    "faq.a5": "둘 다 아닙니다. 이 도구는 입력하신 두 수치를 표준 ACC/AHA 단계로 분류할 뿐입니다 — 실제로 혈압을 측정할 수는 없으며, 병력·다른 위험 요인·시간에 따른 측정값 변화를 종합적으로 고려하는 의사의 진단을 대체하지 않습니다. 모든 계산은 전적으로 브라우저 안에서 이루어지며, 입력하신 수축기·이완기 수치는 서버로 업로드되거나 기기 밖 어디에도 저장되지 않습니다. 측정값이 계속 높게 나오거나 수치의 의미가 확실하지 않다면 의료 전문가와 상담하세요."
+    "faq.a5": "둘 다 아닙니다. 이 도구는 입력하신 두 수치를 표준 ACC/AHA 단계로 분류할 뿐입니다 — 실제로 혈압을 측정할 수는 없으며, 병력·다른 위험 요인·시간에 따른 측정값 변화를 종합적으로 고려하는 의사의 진단을 대체하지 않습니다. 모든 계산은 전적으로 브라우저 안에서 이루어지며, 입력하신 수축기·이완기 수치는 서버로 업로드되거나 기기 밖 어디에도 저장되지 않습니다. 측정값이 계속 높게 나오거나 수치의 의미가 확실하지 않다면 의료 전문가와 상담하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

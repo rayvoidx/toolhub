@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I subtract days, weeks, months, or years instead of adding them?",
     "faq.a4": "Yes. Switch Direction to Subtract and the calculator counts backward from the start date instead of forward — useful for questions like 'what date was 90 days ago' or 'what date was 6 months before this deadline.' The business-days-only option also works in reverse, skipping weekends as it counts back.",
     "faq.q5": "Is my date data sent to a server?",
-    "faq.a5": "No. This date calculator runs entirely in your browser — the start date, amount, and every calculation stay on your device and are never uploaded or stored on a server. Your last inputs are saved only in your browser's local storage, so the tool remembers them the next time you open it."
+    "faq.a5": "No. This date calculator runs entirely in your browser — the start date, amount, and every calculation stay on your device and are never uploaded or stored on a server. Your last inputs are saved only in your browser's local storage, so the tool remembers them the next time you open it.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -121,7 +126,12 @@ window.I18N_LOCALES = {
     "faq.q4": "可以做减法而不是加法吗？比如天数、周数、月数或年数？",
     "faq.a4": "可以。将方向切换为“减”，计算器就会从起始日期向前倒推计算，而不是向后累加——适合“90天前是几号”或“这个截止日期6个月前是哪天”之类的问题。仅工作日选项在倒推计算时同样有效，会跳过周末。",
     "faq.q5": "我的日期数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个日期计算器完全在你的浏览器中运行——起始日期、数量以及所有计算都只保留在你的设备上，绝不会上传或存储到任何服务器。你最近一次的输入仅保存在浏览器的本地存储中，方便下次打开时自动恢复。"
+    "faq.a5": "不会。这个日期计算器完全在你的浏览器中运行——起始日期、数量以及所有计算都只保留在你的设备上，绝不会上传或存储到任何服务器。你最近一次的输入仅保存在浏览器的本地存储中，方便下次打开时自动恢复。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -179,7 +189,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मैं जोड़ने की बजाय दिन, सप्ताह, महीने या साल घटा सकता हूँ?",
     "faq.a4": "हाँ। दिशा को घटाएँ पर बदलें और कैलकुलेटर शुरुआती तारीख़ से आगे की बजाय पीछे की ओर गिनेगा — यह '90 दिन पहले कौन-सी तारीख़ थी' या 'इस डेडलाइन से 6 महीने पहले कौन-सी तारीख़ थी' जैसे सवालों के लिए उपयोगी है। केवल कार्य दिवस विकल्प उलटी दिशा में भी काम करता है और पीछे गिनते समय सप्ताहांत छोड़ता है।",
     "faq.q5": "क्या मेरा तारीख़ डेटा किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह डेट कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — शुरुआती तारीख़, मात्रा और हर गणना आपके डिवाइस पर ही रहती है और कभी किसी सर्वर पर अपलोड या संग्रहीत नहीं होती। आपके आख़िरी इनपुट केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजे जाते हैं, ताकि अगली बार टूल खोलने पर वे याद रहें।"
+    "faq.a5": "नहीं। यह डेट कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — शुरुआती तारीख़, मात्रा और हर गणना आपके डिवाइस पर ही रहती है और कभी किसी सर्वर पर अपलोड या संग्रहीत नहीं होती। आपके आख़िरी इनपुट केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजे जाते हैं, ताकि अगली बार टूल खोलने पर वे याद रहें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -237,7 +252,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo restar días, semanas, meses o años en lugar de sumarlos?",
     "faq.a4": "Sí. Cambia la operación a Restar y la calculadora contará hacia atrás desde la fecha de inicio en lugar de hacia adelante — útil para preguntas como 'qué fecha fue hace 90 días' o 'qué fecha fue 6 meses antes de esta fecha límite'. La opción de solo días hábiles también funciona al revés, omitiendo los fines de semana al contar hacia atrás.",
     "faq.q5": "¿Se envían mis datos de fecha a un servidor?",
-    "faq.a5": "No. Esta calculadora de fechas se ejecuta por completo en tu navegador — la fecha de inicio, la cantidad y cada cálculo permanecen en tu dispositivo y nunca se suben ni se almacenan en ningún servidor. Tus últimos datos se guardan solo en el almacenamiento local de tu navegador, para que la herramienta los recuerde la próxima vez que la abras."
+    "faq.a5": "No. Esta calculadora de fechas se ejecuta por completo en tu navegador — la fecha de inicio, la cantidad y cada cálculo permanecen en tu dispositivo y nunca se suben ni se almacenan en ningún servidor. Tus últimos datos se guardan solo en el almacenamiento local de tu navegador, para que la herramienta los recuerde la próxima vez que la abras.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -295,7 +315,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني طرح الأيام أو الأسابيع أو الأشهر أو السنوات بدلًا من إضافتها؟",
     "faq.a4": "نعم. بدّل الاتجاه إلى طرح لتحسب الحاسبة إلى الخلف من تاريخ البداية بدلًا من الأمام — مفيد لأسئلة مثل 'ما التاريخ قبل 90 يومًا' أو 'ما التاريخ قبل 6 أشهر من هذا الموعد النهائي'. يعمل خيار أيام العمل فقط أيضًا بشكل عكسي، متجاوزًا عطلات نهاية الأسبوع أثناء الحساب إلى الخلف.",
     "faq.q5": "هل تُرسَل بيانات تاريخي إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة التاريخ هذه بالكامل داخل متصفحك — يبقى تاريخ البداية والعدد وكل عملية حساب على جهازك ولا تُرفع أو تُخزَّن أبدًا على أي خادم. تُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك، بحيث تتذكرها الأداة في المرة القادمة التي تفتحها فيها."
+    "faq.a5": "لا. تعمل حاسبة التاريخ هذه بالكامل داخل متصفحك — يبقى تاريخ البداية والعدد وكل عملية حساب على جهازك ولا تُرفع أو تُخزَّن أبدًا على أي خادم. تُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك، بحيث تتذكرها الأداة في المرة القادمة التي تفتحها فيها.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -353,7 +378,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je soustraire des jours, semaines, mois ou années au lieu de les ajouter ?",
     "faq.a4": "Oui. Passez l'opération sur Soustraire et le calculateur comptera vers l'arrière à partir de la date de départ au lieu d'avancer — utile pour des questions comme « quelle date était-ce il y a 90 jours » ou « quelle date était-ce 6 mois avant cette échéance ». L'option jours ouvrés uniquement fonctionne aussi à l'envers, en ignorant les week-ends lors du décompte arrière.",
     "faq.q5": "Mes données de date sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce calculateur de dates fonctionne entièrement dans votre navigateur — la date de départ, la quantité et chaque calcul restent sur votre appareil et ne sont jamais téléversés ni stockés sur un serveur. Vos dernières saisies sont enregistrées uniquement dans le stockage local de votre navigateur, afin que l'outil s'en souvienne la prochaine fois que vous l'ouvrez."
+    "faq.a5": "Non. Ce calculateur de dates fonctionne entièrement dans votre navigateur — la date de départ, la quantité et chaque calcul restent sur votre appareil et ne sont jamais téléversés ni stockés sur un serveur. Vos dernières saisies sont enregistrées uniquement dans le stockage local de votre navigateur, afin que l'outil s'en souvienne la prochaine fois que vous l'ouvrez.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -411,7 +441,12 @@ window.I18N_LOCALES = {
     "faq.q4": "যোগ করার বদলে কি আমি দিন, সপ্তাহ, মাস বা বছর বিয়োগ করতে পারি?",
     "faq.a4": "হ্যাঁ। দিক বিয়োগ-এ পরিবর্তন করুন, তাহলে ক্যালকুলেটর শুরুর তারিখ থেকে সামনে না গিয়ে পেছনের দিকে গণনা করবে — এটি 'আজ থেকে 90 দিন আগে কোন তারিখ ছিল' বা 'এই সময়সীমার 6 মাস আগে কোন তারিখ ছিল' এই ধরনের প্রশ্নের জন্য কাজে আসে। শুধু কর্মদিবস অপশনটি পেছনের দিকে গণনার সময়ও কাজ করে, সাপ্তাহিক ছুটি বাদ দিয়ে।",
     "faq.q5": "আমার তারিখের তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই তারিখ ক্যালকুলেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — শুরুর তারিখ, পরিমাণ এবং প্রতিটি হিসাব আপনার ডিভাইসেই থাকে এবং কখনো কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। আপনার সর্বশেষ ইনপুটগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরবর্তীতে টুলটি খুললে সেগুলো মনে থাকে।"
+    "faq.a5": "না। এই তারিখ ক্যালকুলেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — শুরুর তারিখ, পরিমাণ এবং প্রতিটি হিসাব আপনার ডিভাইসেই থাকে এবং কখনো কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। আপনার সর্বশেষ ইনপুটগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরবর্তীতে টুলটি খুললে সেগুলো মনে থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -469,7 +504,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Posso subtrair dias, semanas, meses ou anos em vez de somar?",
     "faq.a4": "Sim. Mude a operação para Subtrair e a calculadora contará para trás a partir da data inicial, em vez de para frente — útil para perguntas como 'que data foi há 90 dias' ou 'que data foi 6 meses antes deste prazo'. A opção de somente dias úteis também funciona ao contrário, pulando fins de semana ao contar para trás.",
     "faq.q5": "Meus dados de data são enviados a um servidor?",
-    "faq.a5": "Não. Esta calculadora de datas roda inteiramente no seu navegador — a data inicial, a quantidade e cada cálculo permanecem no seu dispositivo e nunca são enviados ou armazenados em um servidor. Suas últimas entradas são salvas apenas no armazenamento local do seu navegador, para que a ferramenta se lembre delas na próxima vez que você a abrir."
+    "faq.a5": "Não. Esta calculadora de datas roda inteiramente no seu navegador — a data inicial, a quantidade e cada cálculo permanecem no seu dispositivo e nunca são enviados ou armazenados em um servidor. Suas últimas entradas são salvas apenas no armazenamento local do seu navegador, para que a ferramenta se lembre delas na próxima vez que você a abrir.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -527,7 +567,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Могу ли я вычитать дни, недели, месяцы или годы вместо прибавления?",
     "faq.a4": "Да. Переключите действие на Вычесть, и калькулятор будет считать назад от начальной даты, а не вперёд — это полезно для вопросов вроде 'какая дата была 90 дней назад' или 'какая дата была за 6 месяцев до этого срока'. Опция только рабочих дней также работает в обратном направлении, пропуская выходные при обратном отсчёте.",
     "faq.q5": "Отправляются ли мои данные о дате на сервер?",
-    "faq.a5": "Нет. Этот калькулятор дат полностью работает в вашем браузере — начальная дата, количество и все вычисления остаются на вашем устройстве и никогда не загружаются и не хранятся на сервере. Ваши последние введённые значения сохраняются только в локальном хранилище браузера, чтобы инструмент запомнил их при следующем открытии."
+    "faq.a5": "Нет. Этот калькулятор дат полностью работает в вашем браузере — начальная дата, количество и все вычисления остаются на вашем устройстве и никогда не загружаются и не хранятся на сервере. Ваши последние введённые значения сохраняются только в локальном хранилище браузера, чтобы инструмент запомнил их при следующем открытии.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -585,7 +630,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میں جمع کرنے کے بجائے دن، ہفتے، مہینے یا سال تفریق کر سکتا ہوں؟",
     "faq.a4": "جی ہاں۔ سمت کو تفریق پر تبدیل کریں اور کیلکولیٹر شروع کی تاریخ سے آگے کی بجائے پیچھے کی طرف شمار کرے گا — یہ 'آج سے 90 دن پہلے کون سی تاریخ تھی' یا 'اس ڈیڈ لائن سے 6 مہینے پہلے کون سی تاریخ تھی' جیسے سوالات کے لیے مفید ہے۔ صرف کاروباری دن کا آپشن پیچھے کی طرف شمار کرتے وقت بھی کام کرتا ہے، ہفتہ وار چھٹیاں چھوڑتے ہوئے۔",
     "faq.q5": "کیا میری تاریخ کا ڈیٹا کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ تاریخ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — شروع کی تاریخ، مقدار اور ہر حساب آپ کے آلے پر ہی رہتا ہے اور کبھی کسی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا۔ آپ کی آخری معلومات صرف آپ کے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہیں، تاکہ اگلی بار ٹول کھولنے پر یہ یاد رہیں۔"
+    "faq.a5": "نہیں۔ یہ تاریخ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — شروع کی تاریخ، مقدار اور ہر حساب آپ کے آلے پر ہی رہتا ہے اور کبھی کسی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا۔ آپ کی آخری معلومات صرف آپ کے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہیں، تاکہ اگلی بار ٹول کھولنے پر یہ یاد رہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -643,7 +693,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah saya mengurangi hari, minggu, bulan, atau tahun alih-alih menambahkannya?",
     "faq.a4": "Bisa. Ubah arah ke Kurangi, dan kalkulator akan menghitung mundur dari tanggal mulai alih-alih maju — berguna untuk pertanyaan seperti 'tanggal berapa 90 hari yang lalu' atau 'tanggal berapa 6 bulan sebelum tenggat ini'. Opsi hari kerja saja juga berlaku saat menghitung mundur, dengan tetap melewati akhir pekan.",
     "faq.q5": "Apakah data tanggal saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator tanggal ini berjalan sepenuhnya di browser Anda — tanggal mulai, jumlah, dan setiap perhitungan tetap berada di perangkat Anda dan tidak pernah diunggah atau disimpan di server. Input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda, sehingga alat ini mengingatnya saat Anda membukanya lagi."
+    "faq.a5": "Tidak. Kalkulator tanggal ini berjalan sepenuhnya di browser Anda — tanggal mulai, jumlah, dan setiap perhitungan tetap berada di perangkat Anda dan tidak pernah diunggah atau disimpan di server. Input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda, sehingga alat ini mengingatnya saat Anda membukanya lagi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -701,7 +756,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich Tage, Wochen, Monate oder Jahre subtrahieren statt sie zu addieren?",
     "faq.a4": "Ja. Stellen Sie die Richtung auf Subtrahieren, und der Rechner zählt vom Startdatum aus rückwärts statt vorwärts — nützlich für Fragen wie 'welches Datum war vor 90 Tagen' oder 'welches Datum war 6 Monate vor dieser Frist'. Die Option nur Werktage funktioniert auch rückwärts und überspringt dabei Wochenenden.",
     "faq.q5": "Werden meine Datumsdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Datumsrechner läuft vollständig in Ihrem Browser — das Startdatum, die Anzahl und jede Berechnung bleiben auf Ihrem Gerät und werden niemals hochgeladen oder auf einem Server gespeichert. Ihre letzten Eingaben werden nur im lokalen Speicher Ihres Browsers gesichert, damit das Tool sie beim nächsten Öffnen wiedererkennt."
+    "faq.a5": "Nein. Dieser Datumsrechner läuft vollständig in Ihrem Browser — das Startdatum, die Anzahl und jede Berechnung bleiben auf Ihrem Gerät und werden niemals hochgeladen oder auf einem Server gespeichert. Ihre letzten Eingaben werden nur im lokalen Speicher Ihres Browsers gesichert, damit das Tool sie beim nächsten Öffnen wiedererkennt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -759,7 +819,12 @@ window.I18N_LOCALES = {
     "faq.q4": "加算ではなく、日数・週数・月数・年数を減算することはできますか？",
     "faq.a4": "はい。方向を減算に切り替えると、計算機は起点日から未来ではなく過去にさかのぼって計算します。「90日前は何日だったか」や「この締め切りの6ヶ月前は何日だったか」といった質問に便利です。営業日のみオプションも逆方向で機能し、過去にさかのぼる際も土日を除きます。",
     "faq.q5": "入力した日付データはサーバーに送信されますか？",
-    "faq.a5": "いいえ。この日付計算機はすべてブラウザ内で動作します — 起点日、数量、すべての計算結果はお使いの端末内にとどまり、サーバーにアップロードや保存されることは一切ありません。直近の入力内容はブラウザのローカルストレージにのみ保存され、次回開いたときに復元されます。"
+    "faq.a5": "いいえ。この日付計算機はすべてブラウザ内で動作します — 起点日、数量、すべての計算結果はお使いの端末内にとどまり、サーバーにアップロードや保存されることは一切ありません。直近の入力内容はブラウザのローカルストレージにのみ保存され、次回開いたときに復元されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -817,6 +882,11 @@ window.I18N_LOCALES = {
     "faq.q4": "더하기 대신 일·주·월·년을 뺄 수도 있나요?",
     "faq.a4": "네. 방향을 빼기로 전환하면 계산기가 기준 날짜에서 앞으로가 아니라 뒤로 계산합니다 — '90일 전은 며칠이었는지'나 '이 마감일 6개월 전은 며칠이었는지' 같은 질문에 유용합니다. 영업일만 옵션도 역방향으로 동작하여, 거꾸로 셀 때도 주말을 건너뜁니다.",
     "faq.q5": "제 날짜 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 날짜 계산기는 전적으로 브라우저 안에서 동작합니다 — 기준 날짜, 수량, 모든 계산 결과는 사용자의 기기에만 남아 있으며 서버로 업로드되거나 저장되는 일이 없습니다. 마지막으로 입력한 값은 브라우저의 로컬 스토리지에만 저장되어, 다음에 도구를 열었을 때 그대로 불러옵니다."
+    "faq.a5": "아니요. 이 날짜 계산기는 전적으로 브라우저 안에서 동작합니다 — 기준 날짜, 수량, 모든 계산 결과는 사용자의 기기에만 남아 있으며 서버로 업로드되거나 저장되는 일이 없습니다. 마지막으로 입력한 값은 브라우저의 로컬 스토리지에만 저장되어, 다음에 도구를 열었을 때 그대로 불러옵니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

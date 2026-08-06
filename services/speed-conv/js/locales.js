@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How precise are the results?",
     "faq.a4": "Every conversion keeps up to 10 significant figures, then trailing zeros are trimmed for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. The km/h, mph, ft/s and knot factors are exact by definition; only Mach depends on the chosen air condition.",
     "faq.q5": "Is my input sent to a server?",
-    "faq.a5": "No. This speed converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example km/h → mph), kept in your browser's local storage so it is ready next time. The value itself is not stored, and there are no accounts or trackers."
+    "faq.a5": "No. This speed converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example km/h → mph), kept in your browser's local storage so it is ready next time. The value itself is not stored, and there are no accounts or trackers.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -115,7 +120,12 @@ window.I18N_LOCALES = {
     "faq.q4": "结果有多精确？",
     "faq.a4": "每次换算最多保留 10 位有效数字，然后去掉末尾的零以便阅读。对于极大或极小的数字（约 1e15 及以上，或小于 1e-9），会切换为科学计数法，因此不会被悄悄舍入为零。km/h、mph、ft/s 和节的系数按定义都是精确值；只有马赫取决于所选的空气条件。",
     "faq.q5": "我输入的数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个速度换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如 km/h → mph），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存，也没有账户或跟踪器。"
+    "faq.a5": "不会。这个速度换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如 km/h → mph），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存，也没有账户或跟踪器。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "परिणाम कितने सटीक हैं?",
     "faq.a4": "हर रूपांतरण में 10 सार्थक अंकों तक रखा जाता है, फिर पठनीयता के लिए अंत के शून्य हटा दिए जाते हैं। बहुत बड़ी या बहुत छोटी संख्याएँ (लगभग 1e15 और अधिक, या 1e-9 से कम) वैज्ञानिक संकेतन में बदल जाती हैं, ताकि कुछ भी चुपचाप शून्य न हो जाए। km/h, mph, ft/s और नॉट के गुणांक परिभाषा के अनुसार सटीक हैं; केवल मैक चुनी गई वायु स्थिति पर निर्भर करता है।",
     "faq.q5": "क्या मेरा इनपुट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह स्पीड कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं भी अपलोड नहीं होती। केवल आपकी पिछली चुनी हुई इकाई जोड़ी (उदाहरण के लिए km/h → mph) सहेजी जाती है, जो अगली बार के लिए ब्राउज़र के लोकल स्टोरेज में रखी जाती है। मान स्वयं सहेजा नहीं जाता, और कोई खाता या ट्रैकर नहीं है।"
+    "faq.a5": "नहीं। यह स्पीड कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं भी अपलोड नहीं होती। केवल आपकी पिछली चुनी हुई इकाई जोड़ी (उदाहरण के लिए km/h → mph) सहेजी जाती है, जो अगली बार के लिए ब्राउज़र के लोकल स्टोरेज में रखी जाती है। मान स्वयं सहेजा नहीं जाता, और कोई खाता या ट्रैकर नहीं है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -215,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué precisión tienen los resultados?",
     "faq.a4": "Cada conversión conserva hasta 10 cifras significativas y luego se recortan los ceros finales para facilitar la lectura. Los números muy grandes o muy pequeños (aproximadamente 1e15 o más, o por debajo de 1e-9) pasan a notación científica, de modo que nada se redondea silenciosamente a cero. Los factores de km/h, mph, ft/s y nudos son exactos por definición; solo Mach depende de la condición del aire elegida.",
     "faq.q5": "¿Se envía mi entrada a un servidor?",
-    "faq.a5": "No. Este conversor de velocidad funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es tu último par de unidades elegido (por ejemplo km/h → mph), almacenado en el almacenamiento local de tu navegador para la próxima vez. El valor en sí no se guarda, y no hay cuentas ni rastreadores."
+    "faq.a5": "No. Este conversor de velocidad funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es tu último par de unidades elegido (por ejemplo km/h → mph), almacenado en el almacenamiento local de tu navegador para la próxima vez. El valor en sí no se guarda, y no hay cuentas ni rastreadores.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -265,7 +285,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما مدى دقة النتائج؟",
     "faq.a4": "يحتفظ كل تحويل بما يصل إلى 10 أرقام معنوية، ثم تُقصّ الأصفار الأخيرة لتسهيل القراءة. تتحول الأرقام الكبيرة جدًا أو الصغيرة جدًا (نحو 1e15 فأكثر، أو أقل من 1e-9) إلى الترميز العلمي، فلا يُقرَّب شيء إلى الصفر بصمت. معاملات km/h و mph و ft/s والعقدة دقيقة بحكم التعريف؛ وحده ماخ يعتمد على حالة الهواء المختارة.",
     "faq.q5": "هل يُرسَل إدخالي إلى خادم؟",
-    "faq.a5": "لا. يعمل محول السرعة هذا بالكامل في متصفحك — الرقم الذي تكتبه لا يُرفَع إلى أي مكان. الشيء الوحيد الذي يُحفَظ هو آخر زوج وحدات اخترته (مثل km/h → mph)، ويُخزَّن في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة. القيمة نفسها لا تُحفَظ، ولا توجد حسابات أو أدوات تتبع."
+    "faq.a5": "لا. يعمل محول السرعة هذا بالكامل في متصفحك — الرقم الذي تكتبه لا يُرفَع إلى أي مكان. الشيء الوحيد الذي يُحفَظ هو آخر زوج وحدات اخترته (مثل km/h → mph)، ويُخزَّن في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة. القيمة نفسها لا تُحفَظ، ولا توجد حسابات أو أدوات تتبع.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -315,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la précision des résultats ?",
     "faq.a4": "Chaque conversion conserve jusqu'à 10 chiffres significatifs, puis les zéros finaux sont retirés pour la lisibilité. Les nombres très grands ou très petits (environ 1e15 et plus, ou en dessous de 1e-9) passent en notation scientifique, de sorte que rien n'est arrondi silencieusement à zéro. Les facteurs km/h, mph, ft/s et nœuds sont exacts par définition ; seul Mach dépend de la condition d'air choisie.",
     "faq.q5": "Ma saisie est-elle envoyée à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur de vitesse fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais envoyé nulle part. La seule chose enregistrée est votre dernier couple d'unités choisi (par exemple km/h → mph), conservé dans le stockage local de votre navigateur pour la prochaine fois. La valeur elle-même n'est pas enregistrée, et il n'y a ni comptes ni traceurs."
+    "faq.a5": "Non. Ce convertisseur de vitesse fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais envoyé nulle part. La seule chose enregistrée est votre dernier couple d'unités choisi (par exemple km/h → mph), conservé dans le stockage local de votre navigateur pour la prochaine fois. La valeur elle-même n'est pas enregistrée, et il n'y a ni comptes ni traceurs.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -365,7 +395,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ফলাফল কতটা নির্ভুল?",
     "faq.a4": "প্রতিটি রূপান্তরে 10টি পর্যন্ত সার্থক অঙ্ক রাখা হয়, তারপর পড়ার সুবিধার্থে শেষের শূন্যগুলো বাদ দেওয়া হয়। খুব বড় বা খুব ছোট সংখ্যা (প্রায় 1e15 ও তার বেশি, বা 1e-9-এর কম) বৈজ্ঞানিক সংকেতে পরিণত হয়, তাই কিছুই নীরবে শূন্যে গোল হয় না। km/h, mph, ft/s ও নটের গুণক সংজ্ঞা অনুসারে নির্ভুল; কেবল মাক নির্বাচিত বায়ু অবস্থার উপর নির্ভর করে।",
     "faq.q5": "আমার ইনপুট কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই স্পিড কনভার্টার পুরোপুরি আপনার ব্রাউজারে চলে — আপনার টাইপ করা সংখ্যা কোথাও আপলোড হয় না। কেবল আপনার সর্বশেষ বেছে নেওয়া এককজোড়া (যেমন km/h → mph) সংরক্ষিত হয়, যা পরের বারের জন্য ব্রাউজারের লোকাল স্টোরেজে রাখা হয়। মান নিজে সংরক্ষিত হয় না, এবং কোনো অ্যাকাউন্ট বা ট্র্যাকার নেই।"
+    "faq.a5": "না। এই স্পিড কনভার্টার পুরোপুরি আপনার ব্রাউজারে চলে — আপনার টাইপ করা সংখ্যা কোথাও আপলোড হয় না। কেবল আপনার সর্বশেষ বেছে নেওয়া এককজোড়া (যেমন km/h → mph) সংরক্ষিত হয়, যা পরের বারের জন্য ব্রাউজারের লোকাল স্টোরেজে রাখা হয়। মান নিজে সংরক্ষিত হয় না, এবং কোনো অ্যাকাউন্ট বা ট্র্যাকার নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual a precisão dos resultados?",
     "faq.a4": "Cada conversão mantém até 10 algarismos significativos e depois os zeros à direita são removidos para facilitar a leitura. Números muito grandes ou muito pequenos (cerca de 1e15 ou mais, ou abaixo de 1e-9) passam para notação científica, de modo que nada é silenciosamente arredondado para zero. Os fatores de km/h, mph, ft/s e nós são exatos por definição; só o Mach depende da condição do ar escolhida.",
     "faq.q5": "Minha entrada é enviada a um servidor?",
-    "faq.a5": "Não. Este conversor de velocidade funciona inteiramente no seu navegador — o número que você digita nunca é enviado a lugar nenhum. A única coisa salva é o seu último par de unidades escolhido (por exemplo, km/h → mph), guardado no armazenamento local do navegador para a próxima vez. O valor em si não é salvo, e não há contas nem rastreadores."
+    "faq.a5": "Não. Este conversor de velocidade funciona inteiramente no seu navegador — o número que você digita nunca é enviado a lugar nenhum. A única coisa salva é o seu último par de unidades escolhido (por exemplo, km/h → mph), guardado no armazenamento local do navegador para a próxima vez. O valor em si não é salvo, e não há contas nem rastreadores.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -465,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Насколько точны результаты?",
     "faq.a4": "Каждый пересчёт сохраняет до 10 значащих цифр, затем конечные нули убираются для удобства чтения. Очень большие или очень малые числа (примерно 1e15 и выше или ниже 1e-9) переходят в научную запись, так что ничего не округляется до нуля незаметно. Коэффициенты km/h, mph, ft/s и узла точны по определению; только Мах зависит от выбранного состояния воздуха.",
     "faq.q5": "Отправляется ли мой ввод на сервер?",
-    "faq.a5": "Нет. Этот конвертер скорости работает полностью в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, km/h → mph) в локальном хранилище браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется, и нет ни аккаунтов, ни трекеров."
+    "faq.a5": "Нет. Этот конвертер скорости работает полностью в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, km/h → mph) в локальном хранилище браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется, и нет ни аккаунтов, ни трекеров.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -515,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "نتائج کتنے درست ہیں؟",
     "faq.a4": "ہر تبدیلی میں 10 بامعنی ہندسوں تک رکھا جاتا ہے، پھر پڑھنے کی آسانی کے لیے آخری صفر ہٹا دیے جاتے ہیں۔ بہت بڑے یا بہت چھوٹے اعداد (تقریباً 1e15 اور اس سے زیادہ، یا 1e-9 سے کم) سائنسی اشاریے میں بدل جاتے ہیں، تاکہ کچھ بھی خاموشی سے صفر نہ ہو۔ km/h، mph، ft/s اور ناٹ کے عوامل تعریف کے لحاظ سے درست ہیں؛ صرف ماخ منتخب ہوا کی حالت پر منحصر ہے۔",
     "faq.q5": "کیا میرا ان پٹ سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ اسپیڈ کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا ٹائپ کردہ عدد کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری منتخب کردہ اکائی جوڑا (مثلاً km/h → mph) محفوظ ہوتا ہے، جو اگلی بار کے لیے براؤزر کے لوکل اسٹوریج میں رکھا جاتا ہے۔ قدر خود محفوظ نہیں ہوتی، اور کوئی اکاؤنٹ یا ٹریکر نہیں ہے۔"
+    "faq.a5": "نہیں۔ یہ اسپیڈ کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا ٹائپ کردہ عدد کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری منتخب کردہ اکائی جوڑا (مثلاً km/h → mph) محفوظ ہوتا ہے، جو اگلی بار کے لیے براؤزر کے لوکل اسٹوریج میں رکھا جاتا ہے۔ قدر خود محفوظ نہیں ہوتی، اور کوئی اکاؤنٹ یا ٹریکر نہیں ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -565,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Seberapa akurat hasilnya?",
     "faq.a4": "Setiap konversi menyimpan hingga 10 angka penting, lalu nol di belakang dipangkas agar mudah dibaca. Angka yang sangat besar atau sangat kecil (sekitar 1e15 ke atas, atau di bawah 1e-9) beralih ke notasi ilmiah, sehingga tidak ada yang diam-diam dibulatkan menjadi nol. Faktor km/h, mph, ft/s, dan knot bersifat pasti menurut definisi; hanya Mach yang bergantung pada kondisi udara yang dipilih.",
     "faq.q5": "Apakah masukan saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter kecepatan ini berjalan sepenuhnya di peramban Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya km/h → mph), tersimpan di penyimpanan lokal peramban agar siap dipakai lain kali. Nilainya sendiri tidak disimpan, dan tidak ada akun atau pelacak."
+    "faq.a5": "Tidak. Konverter kecepatan ini berjalan sepenuhnya di peramban Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya km/h → mph), tersimpan di penyimpanan lokal peramban agar siap dipakai lain kali. Nilainya sendiri tidak disimpan, dan tidak ada akun atau pelacak.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -615,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie genau sind die Ergebnisse?",
     "faq.a4": "Jede Umrechnung behält bis zu 10 signifikante Stellen, danach werden nachfolgende Nullen zur besseren Lesbarkeit entfernt. Sehr große oder sehr kleine Zahlen (etwa 1e15 und größer oder unter 1e-9) wechseln zur wissenschaftlichen Schreibweise, sodass nichts stillschweigend auf null gerundet wird. Die Faktoren für km/h, mph, ft/s und Knoten sind per Definition exakt; nur Mach hängt von der gewählten Luftbedingung ab.",
     "faq.q5": "Wird meine Eingabe an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Geschwindigkeitsrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwohin hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (zum Beispiel km/h → mph) im lokalen Speicher des Browsers, damit es beim nächsten Mal bereitsteht. Der Wert selbst wird nicht gespeichert, und es gibt keine Konten oder Tracker."
+    "faq.a5": "Nein. Dieser Geschwindigkeitsrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwohin hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (zum Beispiel km/h → mph) im lokalen Speicher des Browsers, damit es beim nächsten Mal bereitsteht. Der Wert selbst wird nicht gespeichert, und es gibt keine Konten oder Tracker.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -665,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "結果はどれくらい正確ですか？",
     "faq.a4": "各換算は有効数字10桁まで保持し、その後、読みやすさのため末尾のゼロを除きます。非常に大きい／小さい数（おおよそ 1e15 以上、または 1e-9 未満）は指数表記に切り替わり、静かにゼロへ丸められることはありません。km/h・mph・ft/s・ノットの係数は定義上正確で、マッハのみ選んだ空気条件に依存します。",
     "faq.q5": "入力はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この速度換算ツールは完全にブラウザ内で動作し、入力した数字がどこかに送信されることはありません。保存されるのは最後に選んだ単位のペア（例: km/h → mph）だけで、次回のためにブラウザのローカルストレージに保持されます。数値そのものは保存されず、アカウントやトラッカーもありません。"
+    "faq.a5": "いいえ。この速度換算ツールは完全にブラウザ内で動作し、入力した数字がどこかに送信されることはありません。保存されるのは最後に選んだ単位のペア（例: km/h → mph）だけで、次回のためにブラウザのローカルストレージに保持されます。数値そのものは保存されず、アカウントやトラッカーもありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -715,6 +780,11 @@ window.I18N_LOCALES = {
     "faq.q4": "결과는 얼마나 정확한가요?",
     "faq.a4": "모든 변환은 유효숫자 10자리까지 유지한 뒤, 읽기 쉽도록 뒤쪽 0을 제거합니다. 아주 크거나 아주 작은 수(대략 1e15 이상 또는 1e-9 미만)는 지수 표기로 바뀌므로 값이 조용히 0으로 반올림되지 않습니다. km/h·mph·ft/s·노트 계수는 정의상 정확하며, 마하만 선택한 공기 조건에 따라 달라집니다.",
     "faq.q5": "입력이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 속도 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 숫자는 어디에도 업로드되지 않습니다. 저장되는 것은 마지막으로 고른 단위 쌍(예: km/h → mph)뿐이며, 다음 방문 때 바로 쓰도록 브라우저 로컬 저장소에 보관됩니다. 값 자체는 저장되지 않고, 계정이나 추적기도 없습니다."
+    "faq.a5": "아니요. 이 속도 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 숫자는 어디에도 업로드되지 않습니다. 저장되는 것은 마지막으로 고른 단위 쌍(예: km/h → mph)뿐이며, 다음 방문 때 바로 쓰도록 브라우저 로컬 저장소에 보관됩니다. 값 자체는 저장되지 않고, 계정이나 추적기도 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

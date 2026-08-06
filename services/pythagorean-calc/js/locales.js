@@ -76,7 +76,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What are common Pythagorean triples?",
     "faq.a4": "A Pythagorean triple is a set of three positive whole numbers that satisfy a² + b² = c² exactly, so the sides come out as neat integers instead of decimals. The most common ones are 3-4-5, 5-12-13, 8-15-17, 7-24-25, and 20-21-29, along with any whole-number multiple of them (like 6-8-10 or 9-12-15). Tap one of the preset buttons above to load a triple and see it verified instantly, or check the reference table further down the page for more examples.",
     "faq.q5": "Can this calculator check whether three sides form a right triangle? Is my data sent to a server?",
-    "faq.a5": "Yes — enter all three sides at once and the calculator checks whether a² + b² = c² holds, telling you immediately if they form a valid right triangle or not, along with the area and perimeter when they do. And no, nothing is sent anywhere: this tool runs entirely in your browser, the numbers you type never leave your device, and there's no sign-up, tracking, or server storage involved."
+    "faq.a5": "Yes — enter all three sides at once and the calculator checks whether a² + b² = c² holds, telling you immediately if they form a valid right triangle or not, along with the area and perimeter when they do. And no, nothing is sent anywhere: this tool runs entirely in your browser, the numbers you type never leave your device, and there's no sign-up, tracking, or server storage involved.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -137,7 +142,12 @@ window.I18N_LOCALES = {
     "faq.q4": "常见的勾股数有哪些？",
     "faq.a4": "勾股数是指恰好满足 a² + b² = c² 的三个正整数，因此三边都是整齐的整数而非小数。最常见的有 3-4-5、5-12-13、8-15-17、7-24-25 和 20-21-29，以及它们的任意整数倍（如 6-8-10 或 9-12-15）。点击上方的预设按钮即可加载一组勾股数并立即看到验证结果，页面下方的参考表格中还有更多示例。",
     "faq.q5": "这个计算器能判断三条边是否构成直角三角形吗？我的数据会发送到服务器吗？",
-    "faq.a5": "可以——一次性输入三条边，计算器会检查是否满足 a² + b² = c²，立即告诉你它们是否构成有效的直角三角形，若是则同时给出面积和周长。而且不会有任何数据被发送出去：这个工具完全在你的浏览器中运行，你输入的数字不会离开你的设备，也没有注册、追踪或服务器存储。"
+    "faq.a5": "可以——一次性输入三条边，计算器会检查是否满足 a² + b² = c²，立即告诉你它们是否构成有效的直角三角形，若是则同时给出面积和周长。而且不会有任何数据被发送出去：这个工具完全在你的浏览器中运行，你输入的数字不会离开你的设备，也没有注册、追踪或服务器存储。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -198,7 +208,12 @@ window.I18N_LOCALES = {
     "faq.q4": "आम पाइथागोरस त्रिक कौन-से हैं?",
     "faq.a4": "पाइथागोरस त्रिक तीन ऐसी धनात्मक पूर्णांक संख्याएँ हैं जो ठीक-ठीक a² + b² = c² को पूरा करती हैं, यानी भुजाएँ दशमलव की बजाय साफ़ पूर्णांक निकलती हैं। सबसे आम त्रिक हैं 3-4-5, 5-12-13, 8-15-17, 7-24-25 और 20-21-29, साथ ही इनके किसी भी पूर्णांक गुणज (जैसे 6-8-10 या 9-12-15)। ऊपर दिए किसी प्रीसेट बटन पर टैप करके त्रिक लोड करें और तुरंत सत्यापन देखें, या पेज में नीचे दी गई संदर्भ तालिका में और उदाहरण देखें।",
     "faq.q5": "क्या यह कैलकुलेटर बता सकता है कि तीन भुजाएँ समकोण त्रिभुज बनाती हैं या नहीं? क्या मेरा डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "हाँ — एक साथ तीनों भुजाएँ डालें और कैलकुलेटर जाँच करेगा कि a² + b² = c² सही बैठता है या नहीं, और तुरंत बता देगा कि वे मान्य समकोण त्रिभुज बनाती हैं या नहीं, साथ ही मान्य होने पर क्षेत्रफल और परिमाप भी। और नहीं, कुछ भी कहीं नहीं भेजा जाता: यह टूल पूरी तरह आपके ब्राउज़र में चलता है, आपके डाले नंबर आपकी डिवाइस से बाहर कभी नहीं जाते, और इसमें कोई साइन-अप, ट्रैकिंग या सर्वर स्टोरेज नहीं है।"
+    "faq.a5": "हाँ — एक साथ तीनों भुजाएँ डालें और कैलकुलेटर जाँच करेगा कि a² + b² = c² सही बैठता है या नहीं, और तुरंत बता देगा कि वे मान्य समकोण त्रिभुज बनाती हैं या नहीं, साथ ही मान्य होने पर क्षेत्रफल और परिमाप भी। और नहीं, कुछ भी कहीं नहीं भेजा जाता: यह टूल पूरी तरह आपके ब्राउज़र में चलता है, आपके डाले नंबर आपकी डिवाइस से बाहर कभी नहीं जाते, और इसमें कोई साइन-अप, ट्रैकिंग या सर्वर स्टोरेज नहीं है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -259,7 +274,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuáles son las ternas pitagóricas más comunes?",
     "faq.a4": "Una terna pitagórica es un conjunto de tres números enteros positivos que cumplen exactamente a² + b² = c², de modo que los lados salen como enteros limpios en vez de decimales. Las más comunes son 3-4-5, 5-12-13, 8-15-17, 7-24-25 y 20-21-29, además de cualquier múltiplo entero de ellas (como 6-8-10 o 9-12-15). Toca uno de los botones de arriba para cargar una terna y verla verificada al instante, o consulta la tabla de referencia más abajo para ver más ejemplos.",
     "faq.q5": "¿Puede esta calculadora comprobar si tres lados forman un triángulo rectángulo? ¿Se envían mis datos a un servidor?",
-    "faq.a5": "Sí: introduce los tres lados a la vez y la calculadora comprueba si se cumple a² + b² = c², indicándote de inmediato si forman un triángulo rectángulo válido y, si es así, mostrando también el área y el perímetro. Y no, nada se envía a ningún sitio: esta herramienta funciona por completo en tu navegador, los números que escribes nunca salen de tu dispositivo, y no hay registro, seguimiento ni almacenamiento en servidores."
+    "faq.a5": "Sí: introduce los tres lados a la vez y la calculadora comprueba si se cumple a² + b² = c², indicándote de inmediato si forman un triángulo rectángulo válido y, si es así, mostrando también el área y el perímetro. Y no, nada se envía a ningún sitio: esta herramienta funciona por completo en tu navegador, los números que escribes nunca salen de tu dispositivo, y no hay registro, seguimiento ni almacenamiento en servidores.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -320,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هي ثلاثيات فيثاغورس الشائعة؟",
     "faq.a4": "ثلاثية فيثاغورس هي مجموعة من ثلاثة أعداد صحيحة موجبة تحقق a² + b² = c² تمامًا، فتخرج الأضلاع كأعداد صحيحة مرتبة بدلًا من كسور عشرية. أشهرها 3-4-5 و5-12-13 و8-15-17 و7-24-25 و20-21-29، إضافةً إلى أي مضاعف صحيح لها (مثل 6-8-10 أو 9-12-15). انقر على أحد الأزرار الجاهزة أعلاه لتحميل ثلاثية ورؤية التحقق منها فورًا، أو راجع الجدول المرجعي أسفل الصفحة لمزيد من الأمثلة.",
     "faq.q5": "هل يمكن لهذه الحاسبة التحقق مما إذا كانت ثلاثة أضلاع تُكوّن مثلثًا قائم الزاوية؟ وهل تُرسل بياناتي إلى خادم؟",
-    "faq.a5": "نعم — أدخل الأضلاع الثلاثة معًا، وستتحقق الحاسبة مما إذا كانت a² + b² = c² متحققة، وتخبرك فورًا إن كانت تُكوّن مثلثًا قائم الزاوية صحيحًا أم لا، مع عرض المساحة والمحيط عند التحقق. ولا، لا يُرسل شيء إلى أي مكان: تعمل هذه الأداة بالكامل داخل متصفحك، ولا تغادر الأرقام التي تُدخلها جهازك أبدًا، ولا يوجد تسجيل أو تتبّع أو تخزين على خادم."
+    "faq.a5": "نعم — أدخل الأضلاع الثلاثة معًا، وستتحقق الحاسبة مما إذا كانت a² + b² = c² متحققة، وتخبرك فورًا إن كانت تُكوّن مثلثًا قائم الزاوية صحيحًا أم لا، مع عرض المساحة والمحيط عند التحقق. ولا، لا يُرسل شيء إلى أي مكان: تعمل هذه الأداة بالكامل داخل متصفحك، ولا تغادر الأرقام التي تُدخلها جهازك أبدًا، ولا يوجد تسجيل أو تتبّع أو تخزين على خادم.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -381,7 +406,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quels sont les triplets pythagoriciens courants ?",
     "faq.a4": "Un triplet pythagoricien est un ensemble de trois entiers positifs qui satisfont exactement a² + b² = c², si bien que les côtés sont des entiers nets plutôt que des décimales. Les plus courants sont 3-4-5, 5-12-13, 8-15-17, 7-24-25 et 20-21-29, ainsi que tout multiple entier de ceux-ci (comme 6-8-10 ou 9-12-15). Touchez l'un des boutons prédéfinis ci-dessus pour charger un triplet et le voir vérifié aussitôt, ou consultez le tableau de référence plus bas sur la page pour d'autres exemples.",
     "faq.q5": "Ce calculateur peut-il vérifier si trois côtés forment un triangle rectangle ? Mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Oui : saisissez les trois côtés en même temps et le calculateur vérifie si a² + b² = c² est vérifié, vous indiquant aussitôt s'ils forment un triangle rectangle valide, avec l'aire et le périmètre le cas échéant. Et non, rien n'est envoyé nulle part : cet outil fonctionne entièrement dans votre navigateur, les nombres saisis ne quittent jamais votre appareil, et il n'y a ni inscription, ni suivi, ni stockage sur un serveur."
+    "faq.a5": "Oui : saisissez les trois côtés en même temps et le calculateur vérifie si a² + b² = c² est vérifié, vous indiquant aussitôt s'ils forment un triangle rectangle valide, avec l'aire et le périmètre le cas échéant. Et non, rien n'est envoyé nulle part : cet outil fonctionne entièrement dans votre navigateur, les nombres saisis ne quittent jamais votre appareil, et il n'y a ni inscription, ni suivi, ni stockage sur un serveur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -442,7 +472,12 @@ window.I18N_LOCALES = {
     "faq.q4": "সাধারণ পিথাগোরিয়ান ট্রিপল কোনগুলো?",
     "faq.a4": "পিথাগোরিয়ান ট্রিপল হলো তিনটি ধনাত্মক পূর্ণসংখ্যা যা ঠিক ঠিক a² + b² = c² মেনে চলে, ফলে বাহুগুলো দশমিকের বদলে পরিষ্কার পূর্ণসংখ্যা হিসেবে আসে। সবচেয়ে সাধারণগুলো হলো ৩-৪-৫, ৫-১২-১৩, ৮-১৫-১৭, ৭-২৪-২৫ এবং ২০-২১-২৯, এবং এদের যেকোনো পূর্ণসংখ্যার গুণিতক (যেমন ৬-৮-১০ বা ৯-১২-১৫)। উপরের প্রিসেট বোতামগুলোর একটিতে ট্যাপ করে একটি ট্রিপল লোড করুন এবং তাৎক্ষণিক যাচাই দেখুন, বা আরও উদাহরণের জন্য পাতার নিচের তালিকা দেখুন।",
     "faq.q5": "এই ক্যালকুলেটর কি যাচাই করতে পারে তিনটি বাহু সমকোণী ত্রিভুজ গঠন করে কি না? আমার তথ্য কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "হ্যাঁ — একসাথে তিনটি বাহু লিখুন, ক্যালকুলেটর যাচাই করবে a² + b² = c² মেলে কি না, এবং সঙ্গে সঙ্গে জানিয়ে দেবে সেগুলো বৈধ সমকোণী ত্রিভুজ গঠন করে কি না, মিললে ক্ষেত্রফল ও পরিসীমাও দেখাবে। আর না, কিছুই কোথাও পাঠানো হয় না: এই টুল সম্পূর্ণ আপনার ব্রাউজারে চলে, আপনার লেখা সংখ্যা কখনও আপনার ডিভাইস ছাড়ে না, এবং এতে কোনো সাইন-আপ, ট্র্যাকিং বা সার্ভার সংরক্ষণ নেই।"
+    "faq.a5": "হ্যাঁ — একসাথে তিনটি বাহু লিখুন, ক্যালকুলেটর যাচাই করবে a² + b² = c² মেলে কি না, এবং সঙ্গে সঙ্গে জানিয়ে দেবে সেগুলো বৈধ সমকোণী ত্রিভুজ গঠন করে কি না, মিললে ক্ষেত্রফল ও পরিসীমাও দেখাবে। আর না, কিছুই কোথাও পাঠানো হয় না: এই টুল সম্পূর্ণ আপনার ব্রাউজারে চলে, আপনার লেখা সংখ্যা কখনও আপনার ডিভাইস ছাড়ে না, এবং এতে কোনো সাইন-আপ, ট্র্যাকিং বা সার্ভার সংরক্ষণ নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -503,7 +538,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quais são os ternos pitagóricos comuns?",
     "faq.a4": "Um terno pitagórico é um conjunto de três números inteiros positivos que satisfazem exatamente a² + b² = c², de modo que os lados saem como inteiros certinhos em vez de decimais. Os mais comuns são 3-4-5, 5-12-13, 8-15-17, 7-24-25 e 20-21-29, além de qualquer múltiplo inteiro deles (como 6-8-10 ou 9-12-15). Toque em um dos botões predefinidos acima para carregar um terno e ver a verificação na hora, ou consulte a tabela de referência mais abaixo na página para mais exemplos.",
     "faq.q5": "Esta calculadora pode verificar se três lados formam um triângulo retângulo? Meus dados são enviados a um servidor?",
-    "faq.a5": "Sim — digite os três lados de uma vez e a calculadora verifica se a² + b² = c² é válido, avisando na hora se eles formam um triângulo retângulo válido e, se sim, mostrando também a área e o perímetro. E não, nada é enviado a lugar nenhum: esta ferramenta funciona inteiramente no seu navegador, os números que você digita nunca saem do seu aparelho, e não há cadastro, rastreamento nem armazenamento em servidor."
+    "faq.a5": "Sim — digite os três lados de uma vez e a calculadora verifica se a² + b² = c² é válido, avisando na hora se eles formam um triângulo retângulo válido e, se sim, mostrando também a área e o perímetro. E não, nada é enviado a lugar nenhum: esta ferramenta funciona inteiramente no seu navegador, os números que você digita nunca saem do seu aparelho, e não há cadastro, rastreamento nem armazenamento em servidor.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -564,7 +604,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Какие пифагоровы тройки встречаются чаще всего?",
     "faq.a4": "Пифагорова тройка — это набор из трёх положительных целых чисел, которые точно удовлетворяют a² + b² = c², благодаря чему стороны получаются аккуратными целыми числами, а не дробями. Самые распространённые — 3-4-5, 5-12-13, 8-15-17, 7-24-25 и 20-21-29, а также любые их целые кратные (например, 6-8-10 или 9-12-15). Нажмите на одну из кнопок с готовыми наборами выше, чтобы загрузить тройку и сразу увидеть проверку, или посмотрите таблицу с примерами ниже на странице.",
     "faq.q5": "Может ли этот калькулятор проверить, образуют ли три стороны прямоугольный треугольник? Отправляются ли мои данные на сервер?",
-    "faq.a5": "Да — введите все три стороны сразу, и калькулятор проверит, выполняется ли a² + b² = c², сразу сообщив, образуют ли они верный прямоугольный треугольник, а если да — покажет также площадь и периметр. И нет, никакие данные никуда не отправляются: этот инструмент полностью работает в вашем браузере, введённые числа никогда не покидают ваше устройство, здесь нет ни регистрации, ни отслеживания, ни хранения на сервере."
+    "faq.a5": "Да — введите все три стороны сразу, и калькулятор проверит, выполняется ли a² + b² = c², сразу сообщив, образуют ли они верный прямоугольный треугольник, а если да — покажет также площадь и периметр. И нет, никакие данные никуда не отправляются: этот инструмент полностью работает в вашем браузере, введённые числа никогда не покидают ваше устройство, здесь нет ни регистрации, ни отслеживания, ни хранения на сервере.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -625,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "عام فیثاغورثی تھری کون سے ہیں؟",
     "faq.a4": "فیثاغورثی تھری تین مثبت پورے اعداد کا مجموعہ ہے جو بالکل a² + b² = c² پر پورا اترتے ہیں، اس لیے اضلاع اعشاریہ کے بجائے صاف پورے اعداد کی شکل میں آتے ہیں۔ سب سے عام تھری 3-4-5، 5-12-13، 8-15-17، 7-24-25 اور 20-21-29 ہیں، ساتھ ہی ان کا کوئی بھی پورا ضرب (جیسے 6-8-10 یا 9-12-15)۔ اوپر دیے گئے پریسیٹ بٹنوں میں سے کسی پر ٹیپ کر کے ایک تھری لوڈ کریں اور فوراً تصدیق دیکھیں، یا مزید مثالوں کے لیے صفحے کے نیچے دیا گیا حوالہ جدول دیکھیں۔",
     "faq.q5": "کیا یہ کیلکولیٹر چیک کر سکتا ہے کہ تین اضلاع قائم الزاویہ مثلث بناتے ہیں؟ کیا میرا ڈیٹا سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "جی ہاں — تینوں اضلاع ایک ساتھ درج کریں اور کیلکولیٹر چیک کرے گا کہ a² + b² = c² پورا ہوتا ہے یا نہیں، اور فوراً بتا دے گا کہ وہ درست قائم الزاویہ مثلث بناتے ہیں یا نہیں، اور اگر بناتے ہیں تو رقبہ اور محیط بھی دکھائے گا۔ اور نہیں، کچھ بھی کہیں نہیں بھیجا جاتا: یہ ٹول مکمل طور پر آپ کے براؤزر میں چلتا ہے، آپ کے درج کردہ نمبر کبھی آپ کے ڈیوائس سے باہر نہیں جاتے، اور اس میں کوئی سائن اپ، ٹریکنگ یا سرور اسٹوریج شامل نہیں۔"
+    "faq.a5": "جی ہاں — تینوں اضلاع ایک ساتھ درج کریں اور کیلکولیٹر چیک کرے گا کہ a² + b² = c² پورا ہوتا ہے یا نہیں، اور فوراً بتا دے گا کہ وہ درست قائم الزاویہ مثلث بناتے ہیں یا نہیں، اور اگر بناتے ہیں تو رقبہ اور محیط بھی دکھائے گا۔ اور نہیں، کچھ بھی کہیں نہیں بھیجا جاتا: یہ ٹول مکمل طور پر آپ کے براؤزر میں چلتا ہے، آپ کے درج کردہ نمبر کبھی آپ کے ڈیوائس سے باہر نہیں جاتے، اور اس میں کوئی سائن اپ، ٹریکنگ یا سرور اسٹوریج شامل نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -686,7 +736,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa saja tripel Pythagoras yang umum?",
     "faq.a4": "Tripel Pythagoras adalah sekumpulan tiga bilangan bulat positif yang memenuhi a² + b² = c² secara tepat, sehingga sisi-sisinya berupa bilangan bulat rapi, bukan desimal. Yang paling umum adalah 3-4-5, 5-12-13, 8-15-17, 7-24-25, dan 20-21-29, beserta kelipatan bulat mana pun dari tripel tersebut (seperti 6-8-10 atau 9-12-15). Ketuk salah satu tombol preset di atas untuk memuat sebuah tripel dan langsung melihat verifikasinya, atau lihat tabel referensi lebih jauh di bawah halaman untuk contoh lainnya.",
     "faq.q5": "Bisakah kalkulator ini memeriksa apakah tiga sisi membentuk segitiga siku-siku? Apakah data saya dikirim ke server?",
-    "faq.a5": "Ya — masukkan ketiga sisi sekaligus dan kalkulator akan memeriksa apakah a² + b² = c² terpenuhi, langsung memberi tahu Anda apakah ketiganya membentuk segitiga siku-siku yang valid, lengkap dengan luas dan keliling jika sesuai. Dan tidak, tidak ada apa pun yang dikirim ke mana pun: alat ini berjalan sepenuhnya di browser Anda, angka yang Anda ketik tidak pernah meninggalkan perangkat Anda, dan tidak ada pendaftaran, pelacakan, atau penyimpanan di server."
+    "faq.a5": "Ya — masukkan ketiga sisi sekaligus dan kalkulator akan memeriksa apakah a² + b² = c² terpenuhi, langsung memberi tahu Anda apakah ketiganya membentuk segitiga siku-siku yang valid, lengkap dengan luas dan keliling jika sesuai. Dan tidak, tidak ada apa pun yang dikirim ke mana pun: alat ini berjalan sepenuhnya di browser Anda, angka yang Anda ketik tidak pernah meninggalkan perangkat Anda, dan tidak ada pendaftaran, pelacakan, atau penyimpanan di server.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -747,7 +802,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was sind gängige pythagoreische Tripel?",
     "faq.a4": "Ein pythagoreisches Tripel ist eine Menge von drei positiven ganzen Zahlen, die a² + b² = c² exakt erfüllen, sodass die Seiten als saubere ganze Zahlen statt Dezimalzahlen herauskommen. Die häufigsten sind 3-4-5, 5-12-13, 8-15-17, 7-24-25 und 20-21-29, sowie jedes ganzzahlige Vielfache davon (z. B. 6-8-10 oder 9-12-15). Tippen Sie oben auf eine der Preset-Schaltflächen, um ein Tripel zu laden und sofort verifiziert zu sehen, oder werfen Sie weiter unten auf der Seite einen Blick auf die Referenztabelle für weitere Beispiele.",
     "faq.q5": "Kann dieser Rechner prüfen, ob drei Seiten ein rechtwinkliges Dreieck bilden? Werden meine Daten an einen Server gesendet?",
-    "faq.a5": "Ja — geben Sie alle drei Seiten gleichzeitig ein, und der Rechner prüft, ob a² + b² = c² gilt, und teilt Ihnen sofort mit, ob sie ein gültiges rechtwinkliges Dreieck bilden, inklusive Fläche und Umfang, falls ja. Und nein, es wird nichts irgendwohin gesendet: Dieses Tool läuft vollständig in Ihrem Browser, die eingegebenen Zahlen verlassen niemals Ihr Gerät, und es gibt keine Anmeldung, kein Tracking und keine Serverspeicherung."
+    "faq.a5": "Ja — geben Sie alle drei Seiten gleichzeitig ein, und der Rechner prüft, ob a² + b² = c² gilt, und teilt Ihnen sofort mit, ob sie ein gültiges rechtwinkliges Dreieck bilden, inklusive Fläche und Umfang, falls ja. Und nein, es wird nichts irgendwohin gesendet: Dieses Tool läuft vollständig in Ihrem Browser, die eingegebenen Zahlen verlassen niemals Ihr Gerät, und es gibt keine Anmeldung, kein Tracking und keine Serverspeicherung.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -808,7 +868,12 @@ window.I18N_LOCALES = {
     "faq.q4": "よく使われるピタゴラス数にはどんなものがある？",
     "faq.a4": "ピタゴラス数とは、a² + b² = c²をぴったり満たす3つの正の整数の組で、辺が小数ではなくきれいな整数になります。代表的なものは3-4-5、5-12-13、8-15-17、7-24-25、20-21-29で、これらの整数倍（6-8-10や9-12-15など）も同様です。上のプリセットボタンをタップすると、そのピタゴラス数を読み込んですぐに検証結果を確認できます。さらに多くの例はページ下部の一覧表をご覧ください。",
     "faq.q5": "3辺が直角三角形になるか確認できる？データはサーバーに送信される？",
-    "faq.a5": "はい——3辺を同時に入力すると、a² + b² = c²が成り立つかを計算機が確認し、正しい直角三角形かどうかを即座に表示します。成り立つ場合は面積と周囲長もあわせて表示されます。また、データがどこかに送信されることはありません。このツールはすべてブラウザ内で完結し、入力した数値が端末の外に出ることはなく、登録や追跡、サーバーへの保存も一切ありません。"
+    "faq.a5": "はい——3辺を同時に入力すると、a² + b² = c²が成り立つかを計算機が確認し、正しい直角三角形かどうかを即座に表示します。成り立つ場合は面積と周囲長もあわせて表示されます。また、データがどこかに送信されることはありません。このツールはすべてブラウザ内で完結し、入力した数値が端末の外に出ることはなく、登録や追跡、サーバーへの保存も一切ありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -869,6 +934,11 @@ window.I18N_LOCALES = {
     "faq.q4": "자주 쓰이는 피타고라스 수에는 어떤 것이 있나요?",
     "faq.a4": "피타고라스 수란 a² + b² = c²를 정확히 만족하는 세 개의 양의 정수 조합으로, 변의 길이가 소수점 없이 깔끔한 정수로 나옵니다. 가장 흔한 조합은 3-4-5, 5-12-13, 8-15-17, 7-24-25, 20-21-29이며, 이들의 정수배(예: 6-8-10, 9-12-15)도 마찬가지로 성립합니다. 위의 프리셋 버튼을 누르면 해당 조합을 바로 불러와 검증 결과를 확인할 수 있고, 페이지 아래쪽 표에서 더 많은 예시를 볼 수 있습니다.",
     "faq.q5": "이 계산기로 세 변이 직각삼각형을 이루는지 확인할 수 있나요? 입력한 데이터는 서버로 전송되나요?",
-    "faq.a5": "네 — 세 변을 한꺼번에 입력하면 계산기가 a² + b² = c²가 성립하는지 확인해서 올바른 직각삼각형인지 여부를 바로 알려주고, 성립할 경우 넓이와 둘레도 함께 보여줍니다. 그리고 어디로도 데이터가 전송되지 않습니다 — 이 도구는 전적으로 브라우저에서 작동하며 입력한 숫자는 기기 밖으로 나가지 않고, 회원가입이나 추적, 서버 저장이 전혀 없습니다."
+    "faq.a5": "네 — 세 변을 한꺼번에 입력하면 계산기가 a² + b² = c²가 성립하는지 확인해서 올바른 직각삼각형인지 여부를 바로 알려주고, 성립할 경우 넓이와 둘레도 함께 보여줍니다. 그리고 어디로도 데이터가 전송되지 않습니다 — 이 도구는 전적으로 브라우저에서 작동하며 입력한 숫자는 기기 밖으로 나가지 않고, 회원가입이나 추적, 서버 저장이 전혀 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

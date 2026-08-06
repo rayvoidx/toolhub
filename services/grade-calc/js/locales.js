@@ -69,7 +69,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What letter grade is 91%? Which grading scale does this calculator use?",
     "faq.a4": "This grade calculator uses a common US 10-point scale: 97+ is A+, 93-96 is A, 90-92 is A-, and so on down through the B, C, D and F ranges in 3-4 point steps, so 91% shows as an A-. Many schools and instructors set their own cutoffs — some skip the +/- grades, some round differently, some pass at 65 instead of 60 — so treat the letter shown here as a reference and check your syllabus for the exact scale your class actually uses.",
     "faq.q5": "Is this the same as a GPA calculator, and is my data sent to a server?",
-    "faq.a5": "No to both. This tool finds your current average within one class from assignment scores and weights — for GPA across multiple courses using credit hours and 4.0-style grade points, use a dedicated GPA calculator instead. And no, nothing is sent anywhere: every calculation runs in your browser, your assignments are saved only in your device's local storage so they're there next time, and you can erase them anytime with \"Clear all\"."
+    "faq.a5": "No to both. This tool finds your current average within one class from assignment scores and weights — for GPA across multiple courses using credit hours and 4.0-style grade points, use a dedicated GPA calculator instead. And no, nothing is sent anywhere: every calculation runs in your browser, your assignments are saved only in your device's local storage so they're there next time, and you can erase them anytime with \"Clear all\".",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -120,7 +125,12 @@ window.I18N_LOCALES = {
     "faq.q4": "91% 是什么等级？这个计算器用的是哪种评分标准？",
     "faq.a4": "本成绩计算器采用常见的美国十分制：97 分以上为 A+，93-96 为 A，90-92 为 A-，之后 B、C、D、F 各档以 3-4 分为一个区间依次递减，所以 91% 会显示为 A-。许多学校和老师会设定自己的评分标准——有些不使用 +/- 等级，有些四舍五入方式不同，有些及格线是 65 而非 60——因此请把这里显示的等级当作参考，具体标准以你课程的教学大纲为准。",
     "faq.q5": "这和 GPA 计算器一样吗？我的数据会上传到服务器吗？",
-    "faq.a5": "都不是。这个工具计算的是你在单门课程中，根据作业分数和权重得出的当前平均分；如果要计算跨多门课程、按学分和 4.0 制绩点计算的 GPA，请使用专门的 GPA 计算器。而且不会上传任何数据：所有计算都在你的浏览器本地完成，你的作业信息仅保存在设备的本地存储中，下次打开时依然还在，你也可以随时点击「全部清空」删除它们。"
+    "faq.a5": "都不是。这个工具计算的是你在单门课程中，根据作业分数和权重得出的当前平均分；如果要计算跨多门课程、按学分和 4.0 制绩点计算的 GPA，请使用专门的 GPA 计算器。而且不会上传任何数据：所有计算都在你的浏览器本地完成，你的作业信息仅保存在设备的本地存储中，下次打开时依然还在，你也可以随时点击「全部清空」删除它们。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -171,7 +181,12 @@ window.I18N_LOCALES = {
     "faq.q4": "91% किस लेटर ग्रेड के बराबर है? यह कैलकुलेटर कौन-सा ग्रेडिंग स्केल इस्तेमाल करता है?",
     "faq.a4": "यह ग्रेड कैलकुलेटर एक आम अमेरिकी 10-पॉइंट स्केल इस्तेमाल करता है: 97 और ऊपर A+, 93-96 A, 90-92 A-, और इसी तरह B, C, D और F रेंज में 3-4 पॉइंट के अंतराल में आगे बढ़ता है, इसलिए 91% को A- दिखाया जाएगा। कई स्कूल और शिक्षक अपने खुद के कटऑफ़ तय करते हैं — कुछ +/- ग्रेड नहीं इस्तेमाल करते, कुछ अलग तरीके से राउंड करते हैं, कुछ में पासिंग 60 की बजाय 65 होती है — इसलिए यहाँ दिखाए गए लेटर को सिर्फ़ संदर्भ मानें और अपनी क्लास के असली स्केल के लिए सिलेबस देखें।",
     "faq.q5": "क्या यह GPA कैलकुलेटर जैसा ही है, और क्या मेरा डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "दोनों का जवाब नहीं है। यह टूल असाइनमेंट स्कोर और वेट से एक ही क्लास के अंदर आपका मौजूदा एवरेज निकालता है — कई कोर्सेज़ में क्रेडिट ऑवर और 4.0-स्टाइल ग्रेड पॉइंट्स से GPA निकालने के लिए एक अलग GPA कैलकुलेटर इस्तेमाल करें। और नहीं, कुछ भी कहीं नहीं भेजा जाता: हर गणना आपके ब्राउज़र में होती है, आपके असाइनमेंट सिर्फ़ आपकी डिवाइस के लोकल स्टोरेज में सेव होते हैं ताकि अगली बार भी वहीं मिलें, और आप कभी भी \"सब साफ़ करें\" से उन्हें मिटा सकते हैं।"
+    "faq.a5": "दोनों का जवाब नहीं है। यह टूल असाइनमेंट स्कोर और वेट से एक ही क्लास के अंदर आपका मौजूदा एवरेज निकालता है — कई कोर्सेज़ में क्रेडिट ऑवर और 4.0-स्टाइल ग्रेड पॉइंट्स से GPA निकालने के लिए एक अलग GPA कैलकुलेटर इस्तेमाल करें। और नहीं, कुछ भी कहीं नहीं भेजा जाता: हर गणना आपके ब्राउज़र में होती है, आपके असाइनमेंट सिर्फ़ आपकी डिवाइस के लोकल स्टोरेज में सेव होते हैं ताकि अगली बार भी वहीं मिलें, और आप कभी भी \"सब साफ़ करें\" से उन्हें मिटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -222,7 +237,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué nota con letra corresponde a un 91%? ¿Qué escala de calificación usa esta calculadora?",
     "faq.a4": "Esta calculadora de notas usa una escala estadounidense de 10 puntos habitual: 97 o más es A+, 93-96 es A, 90-92 es A-, y así sucesivamente por los rangos de B, C, D y F en tramos de 3-4 puntos, así que un 91% aparece como A-. Muchos colegios y profesores fijan sus propios cortes — algunos no usan las notas con +/-, algunos redondean de otra forma, algunos aprueban con 65 en lugar de 60 — así que toma la letra mostrada aquí como referencia y consulta el programa de tu clase para la escala exacta que se usa realmente.",
     "faq.q5": "¿Es lo mismo que una calculadora de GPA, y se envían mis datos a un servidor?",
-    "faq.a5": "No, en ambos casos. Esta herramienta calcula tu media actual dentro de una sola clase a partir de las puntuaciones y pesos de las tareas — para el GPA entre varias asignaturas usando créditos y puntos de nota estilo 4.0, usa una calculadora de GPA específica. Y no, no se envía nada a ningún sitio: todos los cálculos se hacen en tu navegador, tus tareas se guardan solo en el almacenamiento local de tu dispositivo para que sigan ahí la próxima vez, y puedes borrarlas cuando quieras con «Borrar todo»."
+    "faq.a5": "No, en ambos casos. Esta herramienta calcula tu media actual dentro de una sola clase a partir de las puntuaciones y pesos de las tareas — para el GPA entre varias asignaturas usando créditos y puntos de nota estilo 4.0, usa una calculadora de GPA específica. Y no, no se envía nada a ningún sitio: todos los cálculos se hacen en tu navegador, tus tareas se guardan solo en el almacenamiento local de tu dispositivo para que sigan ahí la próxima vez, y puedes borrarlas cuando quieras con «Borrar todo».",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -273,7 +293,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما التقدير الحرفي لنسبة 91%؟ وما سلّم الدرجات الذي تستخدمه هذه الحاسبة؟",
     "faq.a4": "تستخدم حاسبة الدرجات هذه سلّمًا أمريكيًا شائعًا من 10 نقاط: 97 فأكثر يعني A+، و93-96 يعني A، و90-92 يعني A-، وهكذا عبر نطاقات B وC وD وF بفواصل من 3-4 نقاط، لذا تظهر نسبة 91% كتقدير A-. تحدد مدارس ومدرّسون كثيرون معاييرهم الخاصة — بعضهم لا يستخدم تقديرات +/-، وبعضهم يقرّب بطريقة مختلفة، وبعضهم يجعل النجاح عند 65 بدلًا من 60 — لذا اعتبر التقدير المعروض هنا مرجعًا فقط وارجع إلى منهج مادتك لمعرفة السلّم الفعلي المستخدم.",
     "faq.q5": "هل هذه الأداة مثل حاسبة المعدل التراكمي GPA، وهل تُرسَل بياناتي إلى خادم؟",
-    "faq.a5": "لا في الحالتين. تحسب هذه الأداة معدلك الحالي داخل مادة واحدة فقط من درجات الواجبات وأوزانها — أما لحساب المعدل التراكمي GPA عبر عدة مواد باستخدام الساعات المعتمدة ونقاط بنظام 4.0، فاستخدم حاسبة GPA مخصصة لذلك. ولا تُرسَل أي بيانات إلى أي مكان: تتم جميع الحسابات داخل متصفحك، وتُحفظ واجباتك فقط في التخزين المحلي لجهازك لتبقى موجودة في المرة القادمة، ويمكنك حذفها في أي وقت عبر «مسح الكل»."
+    "faq.a5": "لا في الحالتين. تحسب هذه الأداة معدلك الحالي داخل مادة واحدة فقط من درجات الواجبات وأوزانها — أما لحساب المعدل التراكمي GPA عبر عدة مواد باستخدام الساعات المعتمدة ونقاط بنظام 4.0، فاستخدم حاسبة GPA مخصصة لذلك. ولا تُرسَل أي بيانات إلى أي مكان: تتم جميع الحسابات داخل متصفحك، وتُحفظ واجباتك فقط في التخزين المحلي لجهازك لتبقى موجودة في المرة القادمة، ويمكنك حذفها في أي وقت عبر «مسح الكل».",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -324,7 +349,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle note en lettre correspond à 91 % ? Quel barème utilise cette calculatrice ?",
     "faq.a4": "Cette calculatrice de notes utilise un barème américain courant sur 10 points : 97 et plus donne A+, 93-96 donne A, 90-92 donne A-, et ainsi de suite dans les tranches B, C, D et F par paliers de 3-4 points, donc 91 % s'affiche comme A-. Beaucoup d'écoles et d'enseignants fixent leurs propres seuils — certains n'utilisent pas les notes +/-, certains arrondissent différemment, certains fixent la réussite à 65 plutôt qu'à 60 — considérez donc la lettre affichée ici comme une référence et consultez le plan de cours pour le barème exact réellement utilisé.",
     "faq.q5": "Est-ce la même chose qu'une calculatrice de GPA, et mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non, dans les deux cas. Cet outil calcule votre moyenne actuelle au sein d'un seul cours à partir des notes et poids des devoirs — pour un GPA sur plusieurs cours utilisant des crédits et des points de note style 4.0, utilisez plutôt une calculatrice de GPA dédiée. Et non, rien n'est envoyé nulle part : tous les calculs s'effectuent dans votre navigateur, vos devoirs sont enregistrés uniquement dans le stockage local de votre appareil pour être encore là la prochaine fois, et vous pouvez les effacer à tout moment avec « Tout effacer »."
+    "faq.a5": "Non, dans les deux cas. Cet outil calcule votre moyenne actuelle au sein d'un seul cours à partir des notes et poids des devoirs — pour un GPA sur plusieurs cours utilisant des crédits et des points de note style 4.0, utilisez plutôt une calculatrice de GPA dédiée. Et non, rien n'est envoyé nulle part : tous les calculs s'effectuent dans votre navigateur, vos devoirs sont enregistrés uniquement dans le stockage local de votre appareil pour être encore là la prochaine fois, et vous pouvez les effacer à tout moment avec « Tout effacer ».",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -375,7 +405,12 @@ window.I18N_LOCALES = {
     "faq.q4": "৯১% কোন লেটার গ্রেড? এই ক্যালকুলেটর কোন গ্রেডিং স্কেল ব্যবহার করে?",
     "faq.a4": "এই গ্রেড ক্যালকুলেটর একটি সাধারণ মার্কিন ১০-পয়েন্ট স্কেল ব্যবহার করে: ৯৭+ মানে A+, ৯৩-৯৬ মানে A, ৯০-৯২ মানে A-, এবং এভাবে B, C, D ও F রেঞ্জে ৩-৪ পয়েন্ট ব্যবধানে চলতে থাকে, তাই ৯১% দেখাবে A- হিসেবে। অনেক স্কুল ও শিক্ষক নিজস্ব কাটঅফ নির্ধারণ করেন — কেউ কেউ +/- গ্রেড ব্যবহার করেন না, কেউ ভিন্নভাবে রাউন্ড করেন, কেউ ৬০-এর বদলে ৬৫-এ পাস ধরেন — তাই এখানে দেখানো লেটারকে শুধু রেফারেন্স হিসেবে নিন এবং আপনার ক্লাসে আসলে কোন স্কেল ব্যবহৃত হয় তা জানতে সিলেবাস দেখুন।",
     "faq.q5": "এটা কি GPA ক্যালকুলেটরের মতোই, এবং আমার ডেটা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "দুটোরই উত্তর না। এই টুলটি অ্যাসাইনমেন্টের স্কোর ও ওয়েট থেকে একটি মাত্র ক্লাসের মধ্যে আপনার বর্তমান গড় বের করে — ক্রেডিট আওয়ার ও 4.0-স্টাইল গ্রেড পয়েন্ট ব্যবহার করে একাধিক কোর্স জুড়ে GPA-এর জন্য একটি আলাদা GPA ক্যালকুলেটর ব্যবহার করুন। এবং না, কিছুই কোথাও পাঠানো হয় না: প্রতিটি হিসাব আপনার ব্রাউজারে হয়, আপনার অ্যাসাইনমেন্টগুলো শুধু আপনার ডিভাইসের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার এলেও পাওয়া যায়, এবং আপনি যেকোনো সময় \"সব মুছুন\" দিয়ে সেগুলো মুছে ফেলতে পারেন।"
+    "faq.a5": "দুটোরই উত্তর না। এই টুলটি অ্যাসাইনমেন্টের স্কোর ও ওয়েট থেকে একটি মাত্র ক্লাসের মধ্যে আপনার বর্তমান গড় বের করে — ক্রেডিট আওয়ার ও 4.0-স্টাইল গ্রেড পয়েন্ট ব্যবহার করে একাধিক কোর্স জুড়ে GPA-এর জন্য একটি আলাদা GPA ক্যালকুলেটর ব্যবহার করুন। এবং না, কিছুই কোথাও পাঠানো হয় না: প্রতিটি হিসাব আপনার ব্রাউজারে হয়, আপনার অ্যাসাইনমেন্টগুলো শুধু আপনার ডিভাইসের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার এলেও পাওয়া যায়, এবং আপনি যেকোনো সময় \"সব মুছুন\" দিয়ে সেগুলো মুছে ফেলতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -426,7 +461,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que nota em letra corresponde a 91%? Qual escala de notas esta calculadora usa?",
     "faq.a4": "Esta calculadora de notas usa uma escala americana comum de 10 pontos: 97 ou mais é A+, 93-96 é A, 90-92 é A-, e assim por diante pelas faixas B, C, D e F em intervalos de 3-4 pontos, então 91% aparece como A-. Muitas escolas e professores definem seus próprios cortes — alguns não usam notas com +/-, alguns arredondam de forma diferente, alguns aprovam com 65 em vez de 60 — por isso trate a letra mostrada aqui como referência e consulte o plano de ensino da sua disciplina para a escala exata realmente usada.",
     "faq.q5": "Isso é o mesmo que uma calculadora de GPA, e meus dados são enviados a um servidor?",
-    "faq.a5": "Não, em nenhum dos casos. Esta ferramenta calcula sua média atual dentro de uma única disciplina a partir das notas e pesos dos trabalhos — para o GPA entre várias disciplinas usando créditos e pontos de nota estilo 4.0, use uma calculadora de GPA dedicada. E não, nada é enviado a lugar nenhum: todo o cálculo roda no seu navegador, seus trabalhos ficam salvos apenas no armazenamento local do seu dispositivo para continuarem lá na próxima vez, e você pode apagá-los quando quiser com \"Limpar tudo\"."
+    "faq.a5": "Não, em nenhum dos casos. Esta ferramenta calcula sua média atual dentro de uma única disciplina a partir das notas e pesos dos trabalhos — para o GPA entre várias disciplinas usando créditos e pontos de nota estilo 4.0, use uma calculadora de GPA dedicada. E não, nada é enviado a lugar nenhum: todo o cálculo roda no seu navegador, seus trabalhos ficam salvos apenas no armazenamento local do seu dispositivo para continuarem lá na próxima vez, e você pode apagá-los quando quiser com \"Limpar tudo\".",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -477,7 +517,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Какая буквенная оценка соответствует 91%? Какую шкалу оценок использует этот калькулятор?",
     "faq.a4": "Этот калькулятор оценок использует распространённую американскую 10-балльную шкалу: 97 и выше — A+, 93-96 — A, 90-92 — A-, и так далее по диапазонам B, C, D и F с шагом 3-4 балла, поэтому 91% отображается как A-. Многие школы и преподаватели устанавливают собственные границы — некоторые не используют оценки с +/-, некоторые округляют иначе, у некоторых порог прохождения 65, а не 60 — поэтому воспринимайте показанную здесь букву лишь как ориентир и сверяйтесь с программой курса, чтобы узнать точную шкалу, которая реально используется.",
     "faq.q5": "Это то же самое, что калькулятор GPA, и отправляются ли мои данные на сервер?",
-    "faq.a5": "Нет по обоим пунктам. Этот инструмент рассчитывает вашу текущую оценку в рамках одного курса на основе баллов и весов работ — для GPA по нескольким курсам с учётом кредитных часов и баллов по шкале 4.0 используйте отдельный калькулятор GPA. И нет, ничего никуда не отправляется: все расчёты выполняются в вашем браузере, ваши работы сохраняются только в локальном хранилище устройства, чтобы быть на месте в следующий раз, и вы можете удалить их в любой момент кнопкой «Очистить всё»."
+    "faq.a5": "Нет по обоим пунктам. Этот инструмент рассчитывает вашу текущую оценку в рамках одного курса на основе баллов и весов работ — для GPA по нескольким курсам с учётом кредитных часов и баллов по шкале 4.0 используйте отдельный калькулятор GPA. И нет, ничего никуда не отправляется: все расчёты выполняются в вашем браузере, ваши работы сохраняются только в локальном хранилище устройства, чтобы быть на месте в следующий раз, и вы можете удалить их в любой момент кнопкой «Очистить всё».",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -528,7 +573,12 @@ window.I18N_LOCALES = {
     "faq.q4": "91% کس لیٹر گریڈ کے برابر ہے؟ یہ کیلکولیٹر کون سا گریڈنگ اسکیل استعمال کرتا ہے؟",
     "faq.a4": "یہ گریڈ کیلکولیٹر ایک عام امریکی 10-پوائنٹ اسکیل استعمال کرتا ہے: 97 اور اس سے زیادہ A+، 93-96 A، 90-92 A-، اور اسی طرح B، C، D اور F کی حدود میں 3-4 پوائنٹ کے وقفوں میں آگے بڑھتا ہے، اس لیے 91% کو A- دکھایا جائے گا۔ بہت سے اسکول اور اساتذہ اپنا خود کا کٹ آف مقرر کرتے ہیں — کچھ +/- گریڈ استعمال نہیں کرتے، کچھ مختلف انداز میں راؤنڈ کرتے ہیں، کچھ میں پاسنگ 60 کی بجائے 65 ہوتی ہے — اس لیے یہاں دکھائے گئے لیٹر کو محض حوالہ سمجھیں اور اپنی کلاس میں اصل میں استعمال ہونے والے اسکیل کے لیے نصاب دیکھیں۔",
     "faq.q5": "کیا یہ GPA کیلکولیٹر جیسا ہی ہے، اور کیا میرا ڈیٹا سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "دونوں کا جواب نہیں ہے۔ یہ ٹول اسائنمنٹ اسکورز اور ویٹس سے صرف ایک کلاس کے اندر آپ کا موجودہ اوسط نکالتا ہے — کریڈٹ آورز اور 4.0-طرز کے گریڈ پوائنٹس استعمال کرتے ہوئے متعدد کورسز میں GPA کے لیے ایک الگ GPA کیلکولیٹر استعمال کریں۔ اور نہیں، کچھ بھی کہیں نہیں بھیجا جاتا: ہر حساب آپ کے براؤزر میں ہوتا ہے، آپ کی اسائنمنٹس صرف آپ کے آلے کے مقامی اسٹوریج میں محفوظ ہوتی ہیں تاکہ اگلی بار بھی موجود رہیں، اور آپ کسی بھی وقت \"سب صاف کریں\" سے انہیں مٹا سکتے ہیں۔"
+    "faq.a5": "دونوں کا جواب نہیں ہے۔ یہ ٹول اسائنمنٹ اسکورز اور ویٹس سے صرف ایک کلاس کے اندر آپ کا موجودہ اوسط نکالتا ہے — کریڈٹ آورز اور 4.0-طرز کے گریڈ پوائنٹس استعمال کرتے ہوئے متعدد کورسز میں GPA کے لیے ایک الگ GPA کیلکولیٹر استعمال کریں۔ اور نہیں، کچھ بھی کہیں نہیں بھیجا جاتا: ہر حساب آپ کے براؤزر میں ہوتا ہے، آپ کی اسائنمنٹس صرف آپ کے آلے کے مقامی اسٹوریج میں محفوظ ہوتی ہیں تاکہ اگلی بار بھی موجود رہیں، اور آپ کسی بھی وقت \"سب صاف کریں\" سے انہیں مٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -579,7 +629,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Nilai huruf apa untuk 91%? Skala penilaian apa yang digunakan kalkulator ini?",
     "faq.a4": "Kalkulator nilai ini menggunakan skala 10 poin ala Amerika yang umum: 97 ke atas adalah A+, 93-96 adalah A, 90-92 adalah A-, dan seterusnya melalui rentang B, C, D, dan F dengan interval 3-4 poin, sehingga 91% ditampilkan sebagai A-. Banyak sekolah dan pengajar menetapkan batas nilai mereka sendiri — ada yang tidak memakai nilai +/-, ada yang membulatkan secara berbeda, ada yang batas lulusnya 65 alih-alih 60 — jadi anggap huruf yang ditampilkan di sini sebagai referensi saja dan periksa silabus kelas Anda untuk skala yang benar-benar digunakan.",
     "faq.q5": "Apakah ini sama dengan kalkulator IPK, dan apakah data saya dikirim ke server?",
-    "faq.a5": "Tidak untuk keduanya. Alat ini menghitung rata-rata Anda saat ini dalam satu mata kuliah dari skor dan bobot tugas — untuk IPK lintas beberapa mata kuliah menggunakan jam kredit dan poin nilai gaya 4.0, gunakan kalkulator IPK khusus. Dan tidak, tidak ada apa pun yang dikirim ke mana pun: semua perhitungan berjalan di browser Anda, tugas Anda hanya disimpan di penyimpanan lokal perangkat Anda agar tetap ada saat Anda kembali, dan Anda bisa menghapusnya kapan saja dengan \"Hapus semua\"."
+    "faq.a5": "Tidak untuk keduanya. Alat ini menghitung rata-rata Anda saat ini dalam satu mata kuliah dari skor dan bobot tugas — untuk IPK lintas beberapa mata kuliah menggunakan jam kredit dan poin nilai gaya 4.0, gunakan kalkulator IPK khusus. Dan tidak, tidak ada apa pun yang dikirim ke mana pun: semua perhitungan berjalan di browser Anda, tugas Anda hanya disimpan di penyimpanan lokal perangkat Anda agar tetap ada saat Anda kembali, dan Anda bisa menghapusnya kapan saja dengan \"Hapus semua\".",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -630,7 +685,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Welche Notenstufe entspricht 91 %? Welche Notenskala verwendet dieser Rechner?",
     "faq.a4": "Dieser Notenrechner verwendet eine gängige amerikanische 10-Punkte-Skala: 97 und mehr ist A+, 93-96 ist A, 90-92 ist A-, und so weiter durch die Bereiche B, C, D und F in Schritten von 3-4 Punkten, sodass 91 % als A- angezeigt wird. Viele Schulen und Lehrkräfte legen ihre eigenen Grenzwerte fest — manche verwenden keine +/--Noten, manche runden anders, bei manchen liegt die Bestehensgrenze bei 65 statt 60 — betrachten Sie die hier angezeigte Note daher nur als Referenz und prüfen Sie den Lehrplan Ihres Kurses für die tatsächlich verwendete Skala.",
     "faq.q5": "Ist das dasselbe wie ein GPA-Rechner, und werden meine Daten an einen Server gesendet?",
-    "faq.a5": "Nein, in beiden Fällen. Dieses Tool berechnet Ihren aktuellen Durchschnitt innerhalb eines einzigen Kurses aus Aufgabenpunktzahlen und -gewichten — für den GPA über mehrere Kurse hinweg mit Credit Hours und Notenpunkten im 4,0-Stil nutzen Sie einen eigenen GPA-Rechner. Und nein, es wird nichts irgendwohin gesendet: Jede Berechnung läuft in Ihrem Browser, Ihre Aufgaben werden nur im lokalen Speicher Ihres Geräts gespeichert, damit sie beim nächsten Mal noch da sind, und Sie können sie jederzeit mit „Alles löschen“ entfernen."
+    "faq.a5": "Nein, in beiden Fällen. Dieses Tool berechnet Ihren aktuellen Durchschnitt innerhalb eines einzigen Kurses aus Aufgabenpunktzahlen und -gewichten — für den GPA über mehrere Kurse hinweg mit Credit Hours und Notenpunkten im 4,0-Stil nutzen Sie einen eigenen GPA-Rechner. Und nein, es wird nichts irgendwohin gesendet: Jede Berechnung läuft in Ihrem Browser, Ihre Aufgaben werden nur im lokalen Speicher Ihres Geräts gespeichert, damit sie beim nächsten Mal noch da sind, und Sie können sie jederzeit mit „Alles löschen“ entfernen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -681,7 +741,12 @@ window.I18N_LOCALES = {
     "faq.q4": "91%はどのレターグレードですか? この計算機はどの評価基準を使用していますか?",
     "faq.a4": "この成績計算機は一般的な米国式10ポイントスケールを使用しています: 97以上はA+、93〜96はA、90〜92はA-、そしてB、C、D、Fの範囲を3〜4ポイント刻みで続きます。そのため91%はA-と表示されます。多くの学校や教員は独自の基準を設定しています——+/-の成績を使わない場合や、丸め方が異なる場合、合格ラインが60ではなく65の場合などもあるため、ここに表示されるレターグレードはあくまで目安とし、実際に使われる基準についてはシラバスをご確認ください。",
     "faq.q5": "これはGPA計算機と同じですか? また、私のデータはサーバーに送信されますか?",
-    "faq.a5": "どちらも違います。このツールは課題のスコアと重みから、1つのクラス内での現在の平均を求めるものです——単位数と4.0方式の成績ポイントを使った複数コース間のGPAには、専用のGPA計算機をご利用ください。また、データがどこかに送信されることもありません: すべての計算はブラウザ内で行われ、課題は端末のローカルストレージにのみ保存されるため次回もそのまま残り、いつでも「すべてクリア」で削除できます。"
+    "faq.a5": "どちらも違います。このツールは課題のスコアと重みから、1つのクラス内での現在の平均を求めるものです——単位数と4.0方式の成績ポイントを使った複数コース間のGPAには、専用のGPA計算機をご利用ください。また、データがどこかに送信されることもありません: すべての計算はブラウザ内で行われ、課題は端末のローカルストレージにのみ保存されるため次回もそのまま残り、いつでも「すべてクリア」で削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -732,6 +797,11 @@ window.I18N_LOCALES = {
     "faq.q4": "91점은 어떤 등급인가요? 이 계산기는 어떤 등급 기준을 사용하나요?",
     "faq.a4": "이 성적 계산기는 흔히 쓰이는 미국식 10점 단위 등급 기준을 사용합니다: 97점 이상은 A+, 93~96점은 A, 90~92점은 A-이며, 이런 식으로 B, C, D, F 구간이 3~4점 간격으로 이어집니다. 따라서 91%는 A-로 표시됩니다. 많은 학교와 강사는 자체 기준을 정합니다 — +/- 등급을 쓰지 않거나, 반올림 방식이 다르거나, 합격선이 60점이 아닌 65점인 경우도 있으므로, 여기 표시되는 등급은 참고용으로만 보고 실제 수업에서 사용하는 정확한 기준은 강의계획서를 확인하세요.",
     "faq.q5": "이 도구는 GPA 계산기와 같은 건가요? 제 데이터가 서버로 전송되나요?",
-    "faq.a5": "둘 다 아닙니다. 이 도구는 과제 점수와 반영 비율로 한 과목 안에서의 현재 평균을 계산합니다 — 학점(이수 단위)과 4.0 방식 평점을 사용하는 여러 과목의 GPA를 계산하려면 별도의 GPA 계산기를 이용하세요. 그리고 어떤 데이터도 어디로도 전송되지 않습니다: 모든 계산은 브라우저에서 실행되며, 입력한 과제는 기기의 로컬 저장소에만 저장되어 다음에 다시 방문해도 그대로 남아 있고, 언제든지 \"전체 지우기\"로 삭제할 수 있습니다."
+    "faq.a5": "둘 다 아닙니다. 이 도구는 과제 점수와 반영 비율로 한 과목 안에서의 현재 평균을 계산합니다 — 학점(이수 단위)과 4.0 방식 평점을 사용하는 여러 과목의 GPA를 계산하려면 별도의 GPA 계산기를 이용하세요. 그리고 어떤 데이터도 어디로도 전송되지 않습니다: 모든 계산은 브라우저에서 실행되며, 입력한 과제는 기기의 로컬 저장소에만 저장되어 다음에 다시 방문해도 그대로 남아 있고, 언제든지 \"전체 지우기\"로 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

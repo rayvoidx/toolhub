@@ -79,7 +79,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Does this protein calculator send my weight or any data to a server?",
     "faq.a4": "No. Your body weight, unit choice, activity level and meal count are processed entirely in your browser using JavaScript — nothing is uploaded, logged, or stored on a server. The only place your inputs are saved is your own browser's localStorage, purely so the form remembers your last entry the next time you open the page, and you can clear that at any time by clearing your browser data.",
     "faq.q5": "Is this medical or nutrition advice, and where do the guideline ranges come from?",
-    "faq.a5": "No — this tool provides general educational estimates based on widely cited sports-nutrition guidance (protein ranges roughly 0.8–2.2 g/kg body weight depending on activity and goal), not a personalized medical or dietary recommendation. It cannot account for your full health history, medications, kidney or liver function, pregnancy, or other individual factors. For a plan tailored to you, talk to a registered dietitian or your physician, especially if you have an existing medical condition."
+    "faq.a5": "No — this tool provides general educational estimates based on widely cited sports-nutrition guidance (protein ranges roughly 0.8–2.2 g/kg body weight depending on activity and goal), not a personalized medical or dietary recommendation. It cannot account for your full health history, medications, kidney or liver function, pregnancy, or other individual factors. For a plan tailored to you, talk to a registered dietitian or your physician, especially if you have an existing medical condition.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -143,7 +148,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这个蛋白质计算器会将我的体重或其他数据发送到服务器吗？",
     "faq.a4": "不会。您的体重、单位选择、运动量和餐数完全在您的浏览器中通过JavaScript处理——不会上传、记录或存储到任何服务器。您输入的内容仅保存在您自己浏览器的localStorage中，目的只是让表单在您下次打开页面时记住上次的输入，您也可以随时通过清除浏览器数据来清除这些内容。",
     "faq.q5": "这是医疗或营养建议吗？这些指导范围的依据是什么？",
-    "faq.a5": "不是——本工具基于被广泛引用的运动营养学一般性指导（根据运动量和目标的不同，蛋白质范围大约为每公斤体重0.8–2.2克）提供教育性估算，而非个性化的医疗或饮食建议。它无法了解您完整的健康状况、用药情况、肾脏或肝脏功能、是否怀孕或哺乳等个人因素。如需量身定制的方案，请咨询注册营养师或医生，尤其是在您患有既往疾病的情况下。"
+    "faq.a5": "不是——本工具基于被广泛引用的运动营养学一般性指导（根据运动量和目标的不同，蛋白质范围大约为每公斤体重0.8–2.2克）提供教育性估算，而非个性化的医疗或饮食建议。它无法了解您完整的健康状况、用药情况、肾脏或肝脏功能、是否怀孕或哺乳等个人因素。如需量身定制的方案，请咨询注册营养师或医生，尤其是在您患有既往疾病的情况下。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -207,7 +217,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या यह प्रोटीन कैलकुलेटर मेरा वज़न या कोई भी डेटा सर्वर पर भेजता है?",
     "faq.a4": "नहीं। आपका शरीर का वज़न, यूनिट का चुनाव, गतिविधि स्तर और भोजन की संख्या पूरी तरह आपके ब्राउज़र में JavaScript के ज़रिए प्रोसेस होते हैं — कुछ भी अपलोड, लॉग या सर्वर पर स्टोर नहीं किया जाता। आपकी एंट्री केवल आपके ब्राउज़र के localStorage में सेव होती है, ताकि अगली बार पेज खोलने पर फॉर्म आपकी पिछली एंट्री याद रखे, और आप कभी भी अपना ब्राउज़र डेटा साफ़ करके इसे मिटा सकते हैं।",
     "faq.q5": "क्या यह मेडिकल या न्यूट्रिशन सलाह है, और यह गाइडलाइन रेंज कहाँ से ली गई हैं?",
-    "faq.a5": "नहीं — यह टूल व्यापक रूप से उद्धृत स्पोर्ट्स-न्यूट्रिशन गाइडेंस (गतिविधि और लक्ष्य के अनुसार लगभग 0.8–2.2 ग्राम/किग्रा शरीर वज़न की प्रोटीन रेंज) पर आधारित सामान्य शैक्षिक अनुमान प्रदान करता है, न कि कोई व्यक्तिगत मेडिकल या डाइट संबंधी सिफारिश। यह आपका पूरा स्वास्थ्य इतिहास, दवाइयां, किडनी या लिवर की कार्यक्षमता, गर्भावस्था, या अन्य व्यक्तिगत कारकों को ध्यान में रखने में सक्षम नहीं है। अपने लिए तैयार की गई योजना के लिए, किसी रजिस्टर्ड डाइटिशियन या अपने डॉक्टर से बात करें, खासतौर अगर आपको कोई मौजूदा मेडिकल स्थिति है।"
+    "faq.a5": "नहीं — यह टूल व्यापक रूप से उद्धृत स्पोर्ट्स-न्यूट्रिशन गाइडेंस (गतिविधि और लक्ष्य के अनुसार लगभग 0.8–2.2 ग्राम/किग्रा शरीर वज़न की प्रोटीन रेंज) पर आधारित सामान्य शैक्षिक अनुमान प्रदान करता है, न कि कोई व्यक्तिगत मेडिकल या डाइट संबंधी सिफारिश। यह आपका पूरा स्वास्थ्य इतिहास, दवाइयां, किडनी या लिवर की कार्यक्षमता, गर्भावस्था, या अन्य व्यक्तिगत कारकों को ध्यान में रखने में सक्षम नहीं है। अपने लिए तैयार की गई योजना के लिए, किसी रजिस्टर्ड डाइटिशियन या अपने डॉक्टर से बात करें, खासतौर अगर आपको कोई मौजूदा मेडिकल स्थिति है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -271,7 +286,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Esta calculadora de proteína envía mi peso o algún dato a un servidor?",
     "faq.a4": "No. Tu peso corporal, la unidad elegida, el nivel de actividad y el número de comidas se procesan completamente en tu navegador mediante JavaScript — nada se sube, se registra ni se almacena en un servidor. El único lugar donde se guardan tus datos es el localStorage de tu propio navegador, únicamente para que el formulario recuerde tu última entrada la próxima vez que abras la página, y puedes borrarlo en cualquier momento borrando los datos de tu navegador.",
     "faq.q5": "¿Es esto un consejo médico o nutricional, y de dónde vienen estos rangos orientativos?",
-    "faq.a5": "No — esta herramienta ofrece estimaciones educativas generales basadas en guías de nutrición deportiva ampliamente citadas (rangos de proteína de aproximadamente 0.8–2.2 g/kg de peso corporal según la actividad y el objetivo), no una recomendación médica o dietética personalizada. No puede tener en cuenta tu historial médico completo, medicamentos, función renal o hepática, embarazo u otros factores individuales. Para un plan adaptado a ti, habla con un dietista registrado o con tu médico, especialmente si tienes alguna condición médica existente."
+    "faq.a5": "No — esta herramienta ofrece estimaciones educativas generales basadas en guías de nutrición deportiva ampliamente citadas (rangos de proteína de aproximadamente 0.8–2.2 g/kg de peso corporal según la actividad y el objetivo), no una recomendación médica o dietética personalizada. No puede tener en cuenta tu historial médico completo, medicamentos, función renal o hepática, embarazo u otros factores individuales. Para un plan adaptado a ti, habla con un dietista registrado o con tu médico, especialmente si tienes alguna condición médica existente.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -335,7 +355,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل ترسل حاسبة البروتين هذه وزني أو أي بيانات إلى خادم؟",
     "faq.a4": "لا. تتم معالجة وزن جسمك واختيار الوحدة ومستوى النشاط وعدد الوجبات بالكامل داخل متصفحك باستخدام جافاسكريبت — لا يُرفع أو يُسجَّل أو يُخزَّن أي شيء على خادم. المكان الوحيد الذي تُحفظ فيه مدخلاتك هو خاصية localStorage في متصفحك أنت، وذلك فقط ليتذكر النموذج آخر إدخال لك في المرة التالية التي تفتح فيها الصفحة، ويمكنك مسح ذلك في أي وقت عن طريق مسح بيانات متصفحك.",
     "faq.q5": "هل هذه نصيحة طبية أو غذائية؟ ومن أين تأتي هذه النطاقات الإرشادية؟",
-    "faq.a5": "لا — تقدم هذه الأداة تقديرات تعليمية عامة استنادًا إلى إرشادات تغذية رياضية مُستشهد بها على نطاق واسع (نطاقات بروتين تبلغ تقريبًا 0.8–2.2 جم/كجم من وزن الجسم حسب النشاط والهدف)، وليست توصية طبية أو غذائية شخصية. لا يمكنها مراعاة تاريخك الصحي الكامل، أو الأدوية، أو وظائف الكلى أو الكبد، أو الحمل، أو عوامل فردية أخرى. للحصول على خطة مصممة خصيصًا لك، تحدث مع أخصائي تغذية مسجل أو طبيبك، خاصة إذا كانت لديك حالة طبية قائمة."
+    "faq.a5": "لا — تقدم هذه الأداة تقديرات تعليمية عامة استنادًا إلى إرشادات تغذية رياضية مُستشهد بها على نطاق واسع (نطاقات بروتين تبلغ تقريبًا 0.8–2.2 جم/كجم من وزن الجسم حسب النشاط والهدف)، وليست توصية طبية أو غذائية شخصية. لا يمكنها مراعاة تاريخك الصحي الكامل، أو الأدوية، أو وظائف الكلى أو الكبد، أو الحمل، أو عوامل فردية أخرى. للحصول على خطة مصممة خصيصًا لك، تحدث مع أخصائي تغذية مسجل أو طبيبك، خاصة إذا كانت لديك حالة طبية قائمة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -399,7 +424,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Ce calculateur de protéines envoie-t-il mon poids ou d'autres données à un serveur ?",
     "faq.a4": "Non. Votre poids corporel, le choix de l'unité, le niveau d'activité et le nombre de repas sont traités entièrement dans votre navigateur via JavaScript — rien n'est téléversé, enregistré ni stocké sur un serveur. Le seul endroit où vos saisies sont conservées est le localStorage de votre propre navigateur, uniquement pour que le formulaire se souvienne de votre dernière saisie la prochaine fois que vous ouvrez la page ; vous pouvez l'effacer à tout moment en supprimant les données de votre navigateur.",
     "faq.q5": "S'agit-il d'un avis médical ou nutritionnel, et d'où viennent ces fourchettes indicatives ?",
-    "faq.a5": "Non — cet outil fournit des estimations éducatives générales basées sur des recommandations de nutrition sportive largement citées (fourchettes de protéines d'environ 0,8–2,2 g/kg de poids corporel selon l'activité et l'objectif), et non une recommandation médicale ou diététique personnalisée. Il ne peut pas tenir compte de l'intégralité de vos antécédents médicaux, de vos médicaments, de votre fonction rénale ou hépatique, d'une grossesse ou d'autres facteurs individuels. Pour un plan adapté à votre situation, consultez un diététicien agréé ou votre médecin, surtout si vous avez une condition médicale existante."
+    "faq.a5": "Non — cet outil fournit des estimations éducatives générales basées sur des recommandations de nutrition sportive largement citées (fourchettes de protéines d'environ 0,8–2,2 g/kg de poids corporel selon l'activité et l'objectif), et non une recommandation médicale ou diététique personnalisée. Il ne peut pas tenir compte de l'intégralité de vos antécédents médicaux, de vos médicaments, de votre fonction rénale ou hépatique, d'une grossesse ou d'autres facteurs individuels. Pour un plan adapté à votre situation, consultez un diététicien agréé ou votre médecin, surtout si vous avez une condition médicale existante.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -463,7 +493,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এই প্রোটিন ক্যালকুলেটরটি কি আমার ওজন বা কোনো তথ্য সার্ভারে পাঠায়?",
     "faq.a4": "না। আপনার শরীরের ওজন, একক নির্বাচন, কার্যকলাপের মাত্রা এবং খাবারের সংখ্যা সম্পূর্ণভাবে আপনার ব্রাউজারে JavaScript ব্যবহার করে প্রসেস করা হয় — কিছুই আপলোড, লগ বা সার্ভারে সংরক্ষণ করা হয় না। আপনার ইনপুটগুলো শুধুমাত্র আপনার নিজের ব্রাউজারের localStorage-এ সংরক্ষিত হয়, যাতে পরবর্তীতে পেজ খোলার সময় ফর্মটি আপনার শেষ এন্ট্রি মনে রাখে, এবং আপনি যেকোনো সময় আপনার ব্রাউজার ডেটা মুছে এটি সাফ করতে পারেন।",
     "faq.q5": "এটি কি চিকিৎসা বা পুষ্টি পরামর্শ, এবং এই নির্দেশিকা পরিসীমাগুলো কোথা থেকে এসেছে?",
-    "faq.a5": "না — এই টুলটি ব্যাপকভাবে উদ্ধৃত স্পোর্টস-নিউট্রিশন নির্দেশিকার (কার্যকলাপ ও লক্ষ্যের উপর নির্ভর করে প্রায় 0.8–2.2 গ্রাম/কেজি শরীরের ওজনের প্রোটিন পরিসীমা) উপর ভিত্তি করে সাধারণ শিক্ষামূলক অনুমান প্রদান করে, এটি কোনো ব্যক্তিগতকৃত চিকিৎসা বা খাদ্যতালিকাগত সুপারিশ নয়। এটি আপনার সম্পূর্ণ স্বাস্থ্য ইতিহাস, ওষুধ, কিডনি বা লিভারের কার্যকারিতা, গর্ভাবস্থা, বা অন্যান্য ব্যক্তিগত বিষয়গুলো বিবেচনা করতে পারে না। আপনার জন্য তৈরি একটি পরিকল্পনার জন্য, একজন নিবন্ধিত ডায়েটিশিয়ান বা আপনার চিকিৎসকের সাথে কথা বলুন, বিশেষত যদি আপনার কোনো বিদ্যমান চিকিৎসা অবস্থা থাকে।"
+    "faq.a5": "না — এই টুলটি ব্যাপকভাবে উদ্ধৃত স্পোর্টস-নিউট্রিশন নির্দেশিকার (কার্যকলাপ ও লক্ষ্যের উপর নির্ভর করে প্রায় 0.8–2.2 গ্রাম/কেজি শরীরের ওজনের প্রোটিন পরিসীমা) উপর ভিত্তি করে সাধারণ শিক্ষামূলক অনুমান প্রদান করে, এটি কোনো ব্যক্তিগতকৃত চিকিৎসা বা খাদ্যতালিকাগত সুপারিশ নয়। এটি আপনার সম্পূর্ণ স্বাস্থ্য ইতিহাস, ওষুধ, কিডনি বা লিভারের কার্যকারিতা, গর্ভাবস্থা, বা অন্যান্য ব্যক্তিগত বিষয়গুলো বিবেচনা করতে পারে না। আপনার জন্য তৈরি একটি পরিকল্পনার জন্য, একজন নিবন্ধিত ডায়েটিশিয়ান বা আপনার চিকিৎসকের সাথে কথা বলুন, বিশেষত যদি আপনার কোনো বিদ্যমান চিকিৎসা অবস্থা থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -527,7 +562,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Esta calculadora de proteína envia meu peso ou algum dado para um servidor?",
     "faq.a4": "Não. Seu peso corporal, a unidade escolhida, o nível de atividade e o número de refeições são processados inteiramente no seu navegador usando JavaScript — nada é enviado, registrado ou armazenado em um servidor. O único lugar onde suas entradas são salvas é o localStorage do seu próprio navegador, apenas para que o formulário lembre sua última entrada na próxima vez que você abrir a página, e você pode apagar isso a qualquer momento limpando os dados do seu navegador.",
     "faq.q5": "Isso é aconselhamento médico ou nutricional, e de onde vêm essas faixas orientativas?",
-    "faq.a5": "Não — esta ferramenta oferece estimativas educacionais gerais baseadas em orientações de nutrição esportiva amplamente citadas (faixas de proteína de aproximadamente 0,8–2,2 g/kg de peso corporal, dependendo da atividade e do objetivo), não uma recomendação médica ou dietética personalizada. Ela não pode levar em conta seu histórico de saúde completo, medicamentos, função renal ou hepática, gravidez ou outros fatores individuais. Para um plano feito sob medida para você, converse com um nutricionista registrado ou seu médico, especialmente se você tiver alguma condição médica existente."
+    "faq.a5": "Não — esta ferramenta oferece estimativas educacionais gerais baseadas em orientações de nutrição esportiva amplamente citadas (faixas de proteína de aproximadamente 0,8–2,2 g/kg de peso corporal, dependendo da atividade e do objetivo), não uma recomendação médica ou dietética personalizada. Ela não pode levar em conta seu histórico de saúde completo, medicamentos, função renal ou hepática, gravidez ou outros fatores individuais. Para um plano feito sob medida para você, converse com um nutricionista registrado ou seu médico, especialmente se você tiver alguma condição médica existente.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -591,7 +631,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Отправляет ли этот калькулятор белка мой вес или другие данные на сервер?",
     "faq.a4": "Нет. Ваш вес тела, выбор единиц измерения, уровень активности и количество приёмов пищи полностью обрабатываются в вашем браузере с помощью JavaScript — ничего не загружается, не регистрируется и не хранится на сервере. Единственное место, где сохраняются ваши данные, — это localStorage вашего собственного браузера, единственная цель которого — чтобы форма запомнила ваш последний ввод при следующем открытии страницы; вы можете удалить это в любой момент, очистив данные браузера.",
     "faq.q5": "Является ли это медицинской или диетологической консультацией, и откуда взяты эти рекомендуемые диапазоны?",
-    "faq.a5": "Нет — этот инструмент предоставляет общие образовательные оценки на основе широко цитируемых рекомендаций по спортивному питанию (диапазоны белка примерно 0,8–2,2 г/кг веса тела в зависимости от активности и цели), а не персональную медицинскую или диетологическую рекомендацию. Он не может учитывать вашу полную историю здоровья, принимаемые лекарства, функцию почек или печени, беременность или другие индивидуальные факторы. Для плана, разработанного специально для вас, обратитесь к дипломированному диетологу или своему врачу, особенно если у вас есть текущее заболевание."
+    "faq.a5": "Нет — этот инструмент предоставляет общие образовательные оценки на основе широко цитируемых рекомендаций по спортивному питанию (диапазоны белка примерно 0,8–2,2 г/кг веса тела в зависимости от активности и цели), а не персональную медицинскую или диетологическую рекомендацию. Он не может учитывать вашу полную историю здоровья, принимаемые лекарства, функцию почек или печени, беременность или другие индивидуальные факторы. Для плана, разработанного специально для вас, обратитесь к дипломированному диетологу или своему врачу, особенно если у вас есть текущее заболевание.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -655,7 +700,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ پروٹین کیلکولیٹر میرا وزن یا کوئی ڈیٹا سرور کو بھیجتا ہے؟",
     "faq.a4": "نہیں۔ آپ کا جسمانی وزن، یونٹ کا انتخاب، سرگرمی کی سطح اور کھانوں کی تعداد مکمل طور پر آپ کے براؤزر میں جاوا اسکرپٹ کے ذریعے پروسیس ہوتی ہے — کچھ بھی اپ لوڈ، لاگ یا سرور پر محفوظ نہیں کیا جاتا۔ آپ کی معلومات صرف آپ کے اپنے براؤزر کے localStorage میں محفوظ ہوتی ہیں، صرف اس لیے کہ اگلی بار جب آپ صفحہ کھولیں تو فارم آپ کی آخری اندراج یاد رکھے، اور آپ کسی بھی وقت اپنے براؤزر کا ڈیٹا صاف کر کے اسے مٹا سکتے ہیں۔",
     "faq.q5": "کیا یہ طبی یا غذائی مشورہ ہے، اور یہ رہنما رینجز کہاں سے آتی ہیں؟",
-    "faq.a5": "نہیں — یہ ٹول وسیع پیمانے پر حوالہ دی جانے والی اسپورٹس نیوٹریشن رہنمائی (سرگرمی اور مقصد کے لحاظ سے تقریباً 0.8–2.2 گرام/کلوگرام جسمانی وزن کی پروٹین رینجز) پر مبنی عمومی تعلیمی اندازے فراہم کرتا ہے، نہ کہ کوئی ذاتی نوعیت کا طبی یا غذائی مشورہ۔ یہ آپ کی مکمل صحت کی تاریخ، ادویات، گردے یا جگر کے فنکشن، حمل، یا دیگر انفرادی عوامل کو مدنظر نہیں رکھ سکتا۔ آپ کے لیے مخصوص منصوبے کے لیے، کسی رجسٹرڈ ڈائیٹیشن یا اپنے معالج سے بات کریں، خاص طور پر اگر آپ کو کوئی موجودہ طبی حالت ہے۔"
+    "faq.a5": "نہیں — یہ ٹول وسیع پیمانے پر حوالہ دی جانے والی اسپورٹس نیوٹریشن رہنمائی (سرگرمی اور مقصد کے لحاظ سے تقریباً 0.8–2.2 گرام/کلوگرام جسمانی وزن کی پروٹین رینجز) پر مبنی عمومی تعلیمی اندازے فراہم کرتا ہے، نہ کہ کوئی ذاتی نوعیت کا طبی یا غذائی مشورہ۔ یہ آپ کی مکمل صحت کی تاریخ، ادویات، گردے یا جگر کے فنکشن، حمل، یا دیگر انفرادی عوامل کو مدنظر نہیں رکھ سکتا۔ آپ کے لیے مخصوص منصوبے کے لیے، کسی رجسٹرڈ ڈائیٹیشن یا اپنے معالج سے بات کریں، خاص طور پر اگر آپ کو کوئی موجودہ طبی حالت ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -719,7 +769,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah kalkulator protein ini mengirim berat badan atau data saya ke server?",
     "faq.a4": "Tidak. Berat badan, pilihan satuan, tingkat aktivitas, dan jumlah makan Anda diproses sepenuhnya di browser Anda menggunakan JavaScript — tidak ada yang diunggah, dicatat, atau disimpan di server. Satu-satunya tempat input Anda disimpan adalah localStorage browser Anda sendiri, semata-mata agar formulir mengingat entri terakhir Anda saat Anda membuka halaman berikutnya, dan Anda dapat menghapusnya kapan saja dengan membersihkan data browser Anda.",
     "faq.q5": "Apakah ini saran medis atau nutrisi, dan dari mana rentang panduan ini berasal?",
-    "faq.a5": "Tidak — alat ini memberikan perkiraan edukatif umum berdasarkan panduan nutrisi olahraga yang banyak dikutip (rentang protein sekitar 0,8–2,2 g/kg berat badan tergantung aktivitas dan tujuan), bukan rekomendasi medis atau diet yang personal. Alat ini tidak dapat mempertimbangkan riwayat kesehatan lengkap Anda, obat-obatan, fungsi ginjal atau hati, kehamilan, atau faktor individu lainnya. Untuk rencana yang disesuaikan dengan Anda, bicaralah dengan ahli gizi terdaftar atau dokter Anda, terutama jika Anda memiliki kondisi medis yang sudah ada."
+    "faq.a5": "Tidak — alat ini memberikan perkiraan edukatif umum berdasarkan panduan nutrisi olahraga yang banyak dikutip (rentang protein sekitar 0,8–2,2 g/kg berat badan tergantung aktivitas dan tujuan), bukan rekomendasi medis atau diet yang personal. Alat ini tidak dapat mempertimbangkan riwayat kesehatan lengkap Anda, obat-obatan, fungsi ginjal atau hati, kehamilan, atau faktor individu lainnya. Untuk rencana yang disesuaikan dengan Anda, bicaralah dengan ahli gizi terdaftar atau dokter Anda, terutama jika Anda memiliki kondisi medis yang sudah ada.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -783,7 +838,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Sendet dieser Protein-Rechner mein Gewicht oder andere Daten an einen Server?",
     "faq.a4": "Nein. Dein Körpergewicht, die gewählte Einheit, das Aktivitätslevel und die Anzahl der Mahlzeiten werden vollständig in deinem Browser per JavaScript verarbeitet — nichts wird hochgeladen, protokolliert oder auf einem Server gespeichert. Deine Eingaben werden nur im localStorage deines eigenen Browsers gespeichert, damit sich das Formular beim nächsten Öffnen der Seite an deine letzte Eingabe erinnert; du kannst dies jederzeit löschen, indem du deine Browserdaten leerst.",
     "faq.q5": "Ist das medizinische oder ernährungswissenschaftliche Beratung, und woher stammen diese Richtwert-Spannen?",
-    "faq.a5": "Nein — dieses Tool liefert allgemeine pädagogische Schätzungen auf Basis breit zitierter Sporternährungs-Richtlinien (Protein-Spannen von etwa 0,8–2,2 g/kg Körpergewicht je nach Aktivität und Ziel), keine personalisierte medizinische oder diätetische Empfehlung. Es kann deine vollständige Krankengeschichte, Medikamente, Nieren- oder Leberfunktion, Schwangerschaft oder andere individuelle Faktoren nicht berücksichtigen. Für einen auf dich zugeschnittenen Plan sprich mit einer registrierten Ernährungsberatung oder deinem Arzt, besonders wenn eine bestehende Erkrankung vorliegt."
+    "faq.a5": "Nein — dieses Tool liefert allgemeine pädagogische Schätzungen auf Basis breit zitierter Sporternährungs-Richtlinien (Protein-Spannen von etwa 0,8–2,2 g/kg Körpergewicht je nach Aktivität und Ziel), keine personalisierte medizinische oder diätetische Empfehlung. Es kann deine vollständige Krankengeschichte, Medikamente, Nieren- oder Leberfunktion, Schwangerschaft oder andere individuelle Faktoren nicht berücksichtigen. Für einen auf dich zugeschnittenen Plan sprich mit einer registrierten Ernährungsberatung oder deinem Arzt, besonders wenn eine bestehende Erkrankung vorliegt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -847,7 +907,12 @@ window.I18N_LOCALES = {
     "faq.q4": "このプロテイン計算機は、体重やデータをサーバーに送信しますか？",
     "faq.a4": "いいえ。体重、単位の選択、活動量、食事回数はすべてお使いのブラウザ内でJavaScriptによって処理され、アップロードやログ記録、サーバーへの保存は一切行われません。入力内容が保存される唯一の場所は、あなた自身のブラウザのlocalStorageのみで、これは次回ページを開いたときに前回の入力を思い出せるようにするためだけのものです。ブラウザのデータを消去すれば、いつでもこれを削除できます。",
     "faq.q5": "これは医療・栄養に関する助言ですか？この目安となる範囲はどこから来ていますか？",
-    "faq.a5": "いいえ — 本ツールは広く引用されているスポーツ栄養学のガイドライン（活動量や目標に応じておよそ体重1kgあたり0.8〜2.2gのタンパク質範囲）に基づく一般的・教育的な目安を提供するものであり、あなた個人に合わせた医療・食事上の推奨ではありません。あなたの完全な健康歴、服薬状況、腎臓や肝臓の機能、妊娠の有無、その他の個別要因を考慮することはできません。あなたに合わせたプランについては、既往症がある場合は特に、管理栄養士や主治医にご相談ください。"
+    "faq.a5": "いいえ — 本ツールは広く引用されているスポーツ栄養学のガイドライン（活動量や目標に応じておよそ体重1kgあたり0.8〜2.2gのタンパク質範囲）に基づく一般的・教育的な目安を提供するものであり、あなた個人に合わせた医療・食事上の推奨ではありません。あなたの完全な健康歴、服薬状況、腎臓や肝臓の機能、妊娠の有無、その他の個別要因を考慮することはできません。あなたに合わせたプランについては、既往症がある場合は特に、管理栄養士や主治医にご相談ください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -911,6 +976,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 단백질 계산기가 제 체중이나 데이터를 서버로 전송하나요?",
     "faq.a4": "아니요. 체중, 단위 선택, 활동량, 식사 횟수는 전부 사용자의 브라우저 안에서 자바스크립트로 처리되며, 업로드되거나 기록되거나 서버에 저장되지 않습니다. 입력값이 저장되는 유일한 곳은 사용자 브라우저 자체의 localStorage뿐이며, 이는 다음에 페이지를 열었을 때 마지막 입력값을 기억하기 위한 용도일 뿐입니다. 브라우저 데이터를 지우면 언제든 삭제할 수 있습니다.",
     "faq.q5": "이것은 의료나 영양 관련 조언인가요? 이 안내 범위는 어디서 나온 것인가요?",
-    "faq.a5": "아니요 — 이 도구는 널리 인용되는 스포츠 영양 가이드라인(활동량과 목표에 따라 체중 1kg당 약 0.8–2.2g의 단백질 범위)을 바탕으로 한 일반적인 교육용 추정치를 제공할 뿐, 개인 맞춤형 의료·식이 권고가 아닙니다. 사용자의 전체 건강 이력, 복용 약물, 신장·간 기능, 임신 여부 등 개인적 요인을 반영할 수 없습니다. 자신에게 맞는 계획을 원한다면, 특히 기존 질환이 있다면 등록 영양사나 주치의와 상담하세요."
+    "faq.a5": "아니요 — 이 도구는 널리 인용되는 스포츠 영양 가이드라인(활동량과 목표에 따라 체중 1kg당 약 0.8–2.2g의 단백질 범위)을 바탕으로 한 일반적인 교육용 추정치를 제공할 뿐, 개인 맞춤형 의료·식이 권고가 아닙니다. 사용자의 전체 건강 이력, 복용 약물, 신장·간 기능, 임신 여부 등 개인적 요인을 반영할 수 없습니다. 자신에게 맞는 계획을 원한다면, 특히 기존 질환이 있다면 등록 영양사나 주치의와 상담하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

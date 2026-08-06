@@ -54,7 +54,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Is this gross pay or my actual take-home pay?",
     "faq.a5": "Every figure here is gross pay — the amount before income tax, social insurance, retirement contributions or any other withholding is subtracted. Take-home pay is always lower, and by how much depends on your country, tax bracket, filing status and any pre-tax deductions, so this calculator can't estimate net pay directly. Use the numbers here as a starting point before checking a paycheck or tax calculator built for your local rules.",
     "faq.q6": "Is my wage or salary information sent to a server?",
-    "faq.a6": "No. Every calculation happens locally in your browser using plain JavaScript — the numbers you type never leave your device, aren't uploaded anywhere and aren't stored on any server. There's no sign-up and nothing is tracked, so you can check your pay figures privately."
+    "faq.a6": "No. Every calculation happens locally in your browser using plain JavaScript — the numbers you type never leave your device, aren't uploaded anywhere and aren't stored on any server. There's no sign-up and nothing is tracked, so you can check your pay figures privately.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -106,7 +111,12 @@ window.I18N_LOCALES = {
     "faq.q5": "这是税前总收入还是我实际到手的收入？",
     "faq.a5": "这里显示的所有数字都是税前总收入（gross pay）——尚未扣除个人所得税、社会保险、退休金缴费或其他任何代扣款项。实际到手的收入总是更低，具体低多少取决于你所在的国家、税率级别、报税身份以及各种税前扣除项，因此本计算器无法直接估算净收入。你可以把这里的数字作为起点，再用适合你所在地区规则的工资单或个税计算器进一步核算。",
     "faq.q6": "我的工资或薪水信息会被发送到服务器吗？",
-    "faq.a6": "不会。所有计算都通过纯JavaScript在你的浏览器本地完成——你输入的数字不会离开你的设备，不会被上传，也不会存储在任何服务器上。无需注册，也没有任何跟踪，你可以放心私密地核对自己的薪资数字。"
+    "faq.a6": "不会。所有计算都通过纯JavaScript在你的浏览器本地完成——你输入的数字不会离开你的设备，不会被上传，也不会存储在任何服务器上。无需注册，也没有任何跟踪，你可以放心私密地核对自己的薪资数字。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -158,7 +168,12 @@ window.I18N_LOCALES = {
     "faq.q5": "क्या यह सकल (ग्रॉस) वेतन है या मेरी असली हाथ में आने वाली रकम?",
     "faq.a5": "यहाँ दिखाया गया हर आंकड़ा सकल वेतन है — आयकर, सामाजिक बीमा, रिटायरमेंट योगदान या किसी अन्य कटौती से पहले की रकम। हाथ में आने वाली रकम हमेशा इससे कम होती है, और कितनी कम, यह आपके देश, टैक्स ब्रैकेट, फाइलिंग स्थिति और किसी भी टैक्स-पूर्व कटौती पर निर्भर करता है, इसलिए यह कैलकुलेटर सीधे नेट पे का अनुमान नहीं लगा सकता। यहाँ के आंकड़ों को शुरुआती बिंदु मानें, फिर अपने क्षेत्र के नियमों के अनुसार बने पेचेक या टैक्स कैलकुलेटर से जांच करें।",
     "faq.q6": "क्या मेरी दर या वेतन की जानकारी किसी सर्वर पर भेजी जाती है?",
-    "faq.a6": "नहीं। हर गणना आपके ब्राउज़र में सीधे JavaScript के ज़रिए स्थानीय रूप से होती है — आपके टाइप किए नंबर कभी आपकी डिवाइस से बाहर नहीं जाते, कहीं अपलोड नहीं होते और किसी सर्वर पर संग्रहीत नहीं होते। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, तो आप अपने वेतन के आंकड़े निजी तौर पर जांच सकते हैं।"
+    "faq.a6": "नहीं। हर गणना आपके ब्राउज़र में सीधे JavaScript के ज़रिए स्थानीय रूप से होती है — आपके टाइप किए नंबर कभी आपकी डिवाइस से बाहर नहीं जाते, कहीं अपलोड नहीं होते और किसी सर्वर पर संग्रहीत नहीं होते। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, तो आप अपने वेतन के आंकड़े निजी तौर पर जांच सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -210,7 +225,12 @@ window.I18N_LOCALES = {
     "faq.q5": "¿Esto es el salario bruto o lo que realmente me llevo a casa?",
     "faq.a5": "Cada cifra aquí es salario bruto — el importe antes de restar el impuesto sobre la renta, la seguridad social, las aportaciones a la jubilación o cualquier otra retención. El salario neto siempre es menor, y cuánto menor depende de tu país, tu tramo impositivo, tu situación de declaración y cualquier deducción previa a impuestos, así que esta calculadora no puede estimar el neto directamente. Usa estas cifras como punto de partida antes de consultar una nómina o una calculadora fiscal ajustada a tus normas locales.",
     "faq.q6": "¿Se envía mi información de tarifa o sueldo a un servidor?",
-    "faq.a6": "No. Todos los cálculos se hacen localmente en tu navegador con JavaScript sencillo — los números que escribes nunca salen de tu dispositivo, no se suben a ningún sitio y no se almacenan en ningún servidor. No hay registro ni seguimiento, así que puedes comprobar tus cifras salariales con privacidad."
+    "faq.a6": "No. Todos los cálculos se hacen localmente en tu navegador con JavaScript sencillo — los números que escribes nunca salen de tu dispositivo, no se suben a ningún sitio y no se almacenan en ningún servidor. No hay registro ni seguimiento, así que puedes comprobar tus cifras salariales con privacidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -262,7 +282,12 @@ window.I18N_LOCALES = {
     "faq.q5": "هل هذا الراتب الإجمالي أم صافي ما أستلمه فعليًا؟",
     "faq.a5": "كل رقم هنا هو راتب إجمالي — المبلغ قبل خصم ضريبة الدخل والتأمينات الاجتماعية واشتراكات التقاعد أو أي اقتطاعات أخرى. صافي الراتب دائمًا أقل، ومقدار الفرق يعتمد على بلدك وشريحتك الضريبية وحالتك الضريبية وأي خصومات قبل الضريبة، لذا لا تستطيع هذه الحاسبة تقدير الصافي مباشرة. استخدم هذه الأرقام كنقطة بداية قبل مراجعة كشف راتب أو حاسبة ضرائب مصمّمة لقواعد بلدك.",
     "faq.q6": "هل تُرسَل معلومات أجري أو راتبي إلى خادم؟",
-    "faq.a6": "لا. تتم جميع الحسابات محليًا في متصفحك باستخدام جافاسكريبت بسيطة — الأرقام التي تكتبها لا تغادر جهازك أبدًا، ولا تُرفَع إلى أي مكان، ولا تُخزَّن على أي خادم. لا يوجد تسجيل ولا تتبع، فيمكنك مراجعة أرقام راتبك بخصوصية تامة."
+    "faq.a6": "لا. تتم جميع الحسابات محليًا في متصفحك باستخدام جافاسكريبت بسيطة — الأرقام التي تكتبها لا تغادر جهازك أبدًا، ولا تُرفَع إلى أي مكان، ولا تُخزَّن على أي خادم. لا يوجد تسجيل ولا تتبع، فيمكنك مراجعة أرقام راتبك بخصوصية تامة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -314,7 +339,12 @@ window.I18N_LOCALES = {
     "faq.q5": "S'agit-il du salaire brut ou de ce que je touche réellement ?",
     "faq.a5": "Chaque chiffre ici est un salaire brut — le montant avant déduction de l'impôt sur le revenu, des cotisations sociales, des cotisations retraite ou de toute autre retenue. Le salaire net est toujours inférieur, et de combien dépend de votre pays, de votre tranche d'imposition, de votre situation fiscale et de toute déduction avant impôt, donc ce calculateur ne peut pas estimer le net directement. Utilisez ces chiffres comme point de départ avant de consulter une fiche de paie ou un calculateur fiscal adapté aux règles de votre pays.",
     "faq.q6": "Mes informations de taux ou de salaire sont-elles envoyées à un serveur ?",
-    "faq.a6": "Non. Tous les calculs s'effectuent localement dans votre navigateur avec du JavaScript simple — les nombres que vous saisissez ne quittent jamais votre appareil, ne sont téléversés nulle part et ne sont stockés sur aucun serveur. Aucune inscription, aucun suivi, vous pouvez donc vérifier vos chiffres de salaire en toute confidentialité."
+    "faq.a6": "Non. Tous les calculs s'effectuent localement dans votre navigateur avec du JavaScript simple — les nombres que vous saisissez ne quittent jamais votre appareil, ne sont téléversés nulle part et ne sont stockés sur aucun serveur. Aucune inscription, aucun suivi, vous pouvez donc vérifier vos chiffres de salaire en toute confidentialité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -366,7 +396,12 @@ window.I18N_LOCALES = {
     "faq.q5": "এটি কি মোট (গ্রস) বেতন, নাকি আমি হাতে যা পাই তা?",
     "faq.a5": "এখানে দেখানো প্রতিটি সংখ্যাই গ্রস বেতন — আয়কর, সামাজিক বীমা, অবসরকালীন তহবিলে জমা বা অন্য যেকোনো কর্তনের আগের অঙ্ক। হাতে পাওয়া বেতন সবসময় কম হয়, আর কতটা কম তা নির্ভর করে আপনার দেশ, কর স্ল্যাব, ফাইলিং অবস্থা এবং করপূর্ব কর্তনের ওপর, তাই এই ক্যালকুলেটর সরাসরি নেট বেতন হিসাব করতে পারে না। এখানকার সংখ্যাগুলোকে শুরুর বিন্দু হিসেবে ব্যবহার করুন, তারপর আপনার এলাকার নিয়ম অনুযায়ী পে-স্লিপ বা কর ক্যালকুলেটর দিয়ে যাচাই করুন।",
     "faq.q6": "আমার হার বা বেতনের তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a6": "না। সব হিসাব সাধারণ জাভাস্ক্রিপ্ট দিয়ে আপনার ব্রাউজারে স্থানীয়ভাবে হয় — আপনি যে সংখ্যা টাইপ করেন তা কখনো আপনার ডিভাইস ছেড়ে যায় না, কোথাও আপলোড হয় না, কোনো সার্ভারে সংরক্ষিতও হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি নিশ্চিন্তে ব্যক্তিগতভাবে আপনার বেতনের সংখ্যা যাচাই করতে পারেন।"
+    "faq.a6": "না। সব হিসাব সাধারণ জাভাস্ক্রিপ্ট দিয়ে আপনার ব্রাউজারে স্থানীয়ভাবে হয় — আপনি যে সংখ্যা টাইপ করেন তা কখনো আপনার ডিভাইস ছেড়ে যায় না, কোথাও আপলোড হয় না, কোনো সার্ভারে সংরক্ষিতও হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি নিশ্চিন্তে ব্যক্তিগতভাবে আপনার বেতনের সংখ্যা যাচাই করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -418,7 +453,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Isso é o salário bruto ou o que eu realmente recebo?",
     "faq.a5": "Cada número aqui é salário bruto — o valor antes de descontar imposto de renda, previdência, contribuições de aposentadoria ou qualquer outra retenção. O salário líquido é sempre menor, e o quanto menor depende do seu país, faixa de imposto, situação de declaração e quaisquer deduções antes de impostos, então esta calculadora não consegue estimar o líquido diretamente. Use estes números como ponto de partida antes de conferir um holerite ou uma calculadora de imposto ajustada às regras da sua região.",
     "faq.q6": "Minhas informações de valor por hora ou salário são enviadas a um servidor?",
-    "faq.a6": "Não. Todos os cálculos são feitos localmente no seu navegador com JavaScript simples — os números que você digita nunca saem do seu dispositivo, não são enviados a lugar nenhum e não são armazenados em nenhum servidor. Não há cadastro nem rastreamento, então você pode conferir seus números salariais com privacidade."
+    "faq.a6": "Não. Todos os cálculos são feitos localmente no seu navegador com JavaScript simples — os números que você digita nunca saem do seu dispositivo, não são enviados a lugar nenhum e não são armazenados em nenhum servidor. Não há cadastro nem rastreamento, então você pode conferir seus números salariais com privacidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -470,7 +510,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Это оклад до вычетов или моя фактическая зарплата на руки?",
     "faq.a5": "Каждая цифра здесь — это оклад до вычетов: сумма до удержания подоходного налога, социальных взносов, пенсионных отчислений или любых других удержаний. Зарплата на руки всегда меньше, и насколько меньше — зависит от вашей страны, налоговой ставки, статуса декларации и любых вычетов до налогообложения, поэтому этот калькулятор не может напрямую оценить сумму на руки. Используйте эти цифры как отправную точку, а затем сверьтесь с расчётным листком или налоговым калькулятором, учитывающим правила вашего региона.",
     "faq.q6": "Отправляется ли информация о моей ставке или окладе на сервер?",
-    "faq.a6": "Нет. Все расчёты выполняются локально в вашем браузере на обычном JavaScript — введённые вами числа никогда не покидают ваше устройство, никуда не загружаются и не сохраняются ни на каком сервере. Регистрация не требуется, слежки нет, так что вы можете проверить свои цифры зарплаты приватно."
+    "faq.a6": "Нет. Все расчёты выполняются локально в вашем браузере на обычном JavaScript — введённые вами числа никогда не покидают ваше устройство, никуда не загружаются и не сохраняются ни на каком сервере. Регистрация не требуется, слежки нет, так что вы можете проверить свои цифры зарплаты приватно.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -522,7 +567,12 @@ window.I18N_LOCALES = {
     "faq.q5": "کیا یہ مجموعی (گراس) تنخواہ ہے یا میری اصل ہاتھ میں آنے والی رقم؟",
     "faq.a5": "یہاں دکھایا گیا ہر عدد گراس تنخواہ ہے — انکم ٹیکس، سماجی بیمہ، ریٹائرمنٹ کی رقم یا کسی بھی دیگر کٹوتی سے پہلے کی رقم۔ ہاتھ میں آنے والی رقم ہمیشہ اس سے کم ہوتی ہے، اور کتنی کم یہ آپ کے ملک، ٹیکس بریکٹ، فائلنگ حیثیت اور کسی بھی ٹیکس-سے-پہلے کٹوتی پر منحصر ہے، اس لیے یہ کیلکولیٹر براہ راست خالص تنخواہ کا اندازہ نہیں لگا سکتا۔ یہاں کے اعداد کو ابتدائی نقطہ سمجھیں، پھر اپنے علاقے کے قوانین کے مطابق بنی پے سلپ یا ٹیکس کیلکولیٹر سے تصدیق کریں۔",
     "faq.q6": "کیا میری اجرت یا تنخواہ کی معلومات کسی سرور کو بھیجی جاتی ہیں؟",
-    "faq.a6": "نہیں۔ ہر حساب کتاب سادہ جاوا اسکرپٹ کے ذریعے آپ کے براؤزر میں مقامی طور پر ہوتا ہے — آپ جو نمبر ٹائپ کرتے ہیں وہ کبھی آپ کے آلے سے باہر نہیں جاتے، کہیں اپ لوڈ نہیں ہوتے اور کسی سرور پر محفوظ نہیں ہوتے۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں، تو آپ اپنی تنخواہ کے اعداد نجی طور پر جانچ سکتے ہیں۔"
+    "faq.a6": "نہیں۔ ہر حساب کتاب سادہ جاوا اسکرپٹ کے ذریعے آپ کے براؤزر میں مقامی طور پر ہوتا ہے — آپ جو نمبر ٹائپ کرتے ہیں وہ کبھی آپ کے آلے سے باہر نہیں جاتے، کہیں اپ لوڈ نہیں ہوتے اور کسی سرور پر محفوظ نہیں ہوتے۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں، تو آپ اپنی تنخواہ کے اعداد نجی طور پر جانچ سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -574,7 +624,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Apakah ini gaji kotor atau yang benar-benar saya terima?",
     "faq.a5": "Setiap angka di sini adalah gaji kotor — jumlah sebelum dikurangi pajak penghasilan, asuransi sosial, kontribusi pensiun, atau potongan lainnya. Gaji bersih selalu lebih rendah, dan seberapa rendah tergantung pada negara, golongan pajak, status pelaporan, dan potongan sebelum pajak Anda, sehingga kalkulator ini tidak dapat memperkirakan gaji bersih secara langsung. Gunakan angka di sini sebagai titik awal sebelum memeriksa slip gaji atau kalkulator pajak yang sesuai dengan aturan wilayah Anda.",
     "faq.q6": "Apakah informasi upah atau gaji saya dikirim ke server?",
-    "faq.a6": "Tidak. Semua perhitungan dilakukan secara lokal di browser Anda menggunakan JavaScript sederhana — angka yang Anda ketik tidak pernah meninggalkan perangkat Anda, tidak diunggah ke mana pun, dan tidak disimpan di server mana pun. Tidak ada pendaftaran dan tidak ada pelacakan, sehingga Anda dapat memeriksa angka gaji Anda secara pribadi."
+    "faq.a6": "Tidak. Semua perhitungan dilakukan secara lokal di browser Anda menggunakan JavaScript sederhana — angka yang Anda ketik tidak pernah meninggalkan perangkat Anda, tidak diunggah ke mana pun, dan tidak disimpan di server mana pun. Tidak ada pendaftaran dan tidak ada pelacakan, sehingga Anda dapat memeriksa angka gaji Anda secara pribadi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -626,7 +681,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Ist das Bruttogehalt oder das, was ich tatsächlich ausgezahlt bekomme?",
     "faq.a5": "Jede Zahl hier ist ein Bruttogehalt — der Betrag vor Abzug von Einkommensteuer, Sozialversicherung, Rentenbeiträgen oder anderen Abzügen. Das Nettogehalt ist immer niedriger, und wie viel niedriger hängt von Ihrem Land, Ihrer Steuerklasse, Ihrem Familienstand und etwaigen Abzügen vor Steuern ab, sodass dieser Rechner das Netto nicht direkt schätzen kann. Nutzen Sie diese Zahlen als Ausgangspunkt, bevor Sie eine Gehaltsabrechnung oder einen auf Ihre lokalen Regeln zugeschnittenen Steuerrechner prüfen.",
     "faq.q6": "Werden meine Lohn- oder Gehaltsangaben an einen Server gesendet?",
-    "faq.a6": "Nein. Alle Berechnungen erfolgen lokal in Ihrem Browser mit einfachem JavaScript — die Zahlen, die Sie eingeben, verlassen niemals Ihr Gerät, werden nirgendwohin hochgeladen und auf keinem Server gespeichert. Es gibt keine Anmeldung und kein Tracking, sodass Sie Ihre Gehaltszahlen privat überprüfen können."
+    "faq.a6": "Nein. Alle Berechnungen erfolgen lokal in Ihrem Browser mit einfachem JavaScript — die Zahlen, die Sie eingeben, verlassen niemals Ihr Gerät, werden nirgendwohin hochgeladen und auf keinem Server gespeichert. Es gibt keine Anmeldung und kein Tracking, sodass Sie Ihre Gehaltszahlen privat überprüfen können.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -678,7 +738,12 @@ window.I18N_LOCALES = {
     "faq.q5": "これは総支給額ですか、それとも実際の手取り額ですか？",
     "faq.a5": "ここに表示されるすべての数字は総支給額（グロス）です — 所得税、社会保険料、年金拠出金、その他の控除が引かれる前の金額です。手取り額は常にこれより少なく、どれだけ少ないかは国、税率区分、申告状況、税引き前の控除によって異なるため、この計算機では手取り額を直接見積もることはできません。ここでの数字を出発点とし、お住まいの地域の規則に合った給与明細や税金計算機で確認してください。",
     "faq.q6": "私の時給や年収の情報はサーバーに送信されますか？",
-    "faq.a6": "いいえ。すべての計算は、シンプルなJavaScriptを使ってブラウザ内でローカルに行われます — 入力した数字がデバイスの外に出ることはなく、どこにもアップロードされず、サーバーに保存されることもありません。登録は不要で追跡も一切ないため、安心してプライベートに給与の数字を確認できます。"
+    "faq.a6": "いいえ。すべての計算は、シンプルなJavaScriptを使ってブラウザ内でローカルに行われます — 入力した数字がデバイスの外に出ることはなく、どこにもアップロードされず、サーバーに保存されることもありません。登録は不要で追跡も一切ないため、安心してプライベートに給与の数字を確認できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -730,6 +795,11 @@ window.I18N_LOCALES = {
     "faq.q5": "이건 세전 총액인가요, 실제로 받는 실수령액인가요?",
     "faq.a5": "여기 나오는 모든 숫자는 세전 총액(그로스)입니다 — 소득세, 사회보험료, 퇴직연금 기여금 등 어떤 공제도 빠지지 않은 금액입니다. 실수령액은 항상 이보다 적으며, 얼마나 적은지는 거주 국가, 세율 구간, 신고 상태, 세전 공제 항목에 따라 달라지므로 이 계산기는 실수령액을 직접 추정할 수 없습니다. 여기 숫자를 출발점으로 삼고, 해당 지역 규정에 맞는 급여명세서나 세금 계산기로 다시 확인하세요.",
     "faq.q6": "제 시급이나 연봉 정보가 서버로 전송되나요?",
-    "faq.a6": "아니요. 모든 계산은 순수 자바스크립트로 브라우저 안에서만 이루어집니다 — 입력한 숫자는 기기 밖으로 나가지 않고, 어디에도 업로드되지 않으며, 어떤 서버에도 저장되지 않습니다. 회원가입도, 추적도 없으므로 급여 숫자를 안심하고 비공개로 확인할 수 있습니다."
+    "faq.a6": "아니요. 모든 계산은 순수 자바스크립트로 브라우저 안에서만 이루어집니다 — 입력한 숫자는 기기 밖으로 나가지 않고, 어디에도 업로드되지 않으며, 어떤 서버에도 저장되지 않습니다. 회원가입도, 추적도 없으므로 급여 숫자를 안심하고 비공개로 확인할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

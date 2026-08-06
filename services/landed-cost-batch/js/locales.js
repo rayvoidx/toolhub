@@ -180,7 +180,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What are MPF and HMF, and why do they appear only for the US?",
     "faq.a4": "They are US-specific customs user fees that sit alongside duty. The Merchandise Processing Fee (MPF) is 0.3464% of the value of the merchandise, but it is bracketed: for FY2026 it cannot fall below $33.58 nor exceed $651.50 per entry, so on small shipments it behaves like a flat minimum and on large ones like a cap. The Harbor Maintenance Fee (HMF) is 0.125% of the value and applies to ocean cargo only — air, truck and rail arrivals are exempt, so switching the transport mode to Air zeroes it out and says so. Both are charged per entry, so this calculator apportions them across your items by customs value. Note that the US has no import VAT, so that column disappears when you select the United States.",
     "faq.q5": "Why do I have to type in the duty rate and exchange rate myself?",
-    "faq.a5": "Because looking them up would mean sending your invoice to a server, and this tool's whole point is that it never does. HS classification is a judgement call that decides the duty rate — the same product can sit under different headings depending on material, function and origin — and the customs exchange rate is a published weekly figure that only your customs authority can make official. Guessing either one would give you a confident number that is wrong. So you enter the duty rate per line and the applied exchange rate once, and the tool does the part that is genuinely mechanical: freight apportionment, the CIF/FOB split, the duty and VAT stack, and rounding reconciliation. Everything else — every price and supplier on that invoice — stays in your browser."
+    "faq.a5": "Because looking them up would mean sending your invoice to a server, and this tool's whole point is that it never does. HS classification is a judgement call that decides the duty rate — the same product can sit under different headings depending on material, function and origin — and the customs exchange rate is a published weekly figure that only your customs authority can make official. Guessing either one would give you a confident number that is wrong. So you enter the duty rate per line and the applied exchange rate once, and the tool does the part that is genuinely mechanical: freight apportionment, the CIF/FOB split, the duty and VAT stack, and rounding reconciliation. Everything else — every price and supplier on that invoice — stays in your browser.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -337,7 +342,12 @@ window.I18N_LOCALES = {
     "faq.q4": "MPF 和 HMF 是什么，为什么只有美国才出现？",
     "faq.a4": "它们是美国特有的海关规费，与关税并行征收。商品处理费（MPF）为货值的 0.3464%，但设有上下限：2026 财年每票不得低于 $33.58，也不得高于 $651.50，所以小票像固定最低收费，大票则像封顶。港口维护费（HMF）为货值的 0.125%，且仅适用于海运货物 — 空运、卡车和铁路到货免征，因此把运输方式切换到空运会让它归零并给出说明。两者都按票征收，所以本计算器会按完税价格把它们分摊到各品项。另外，美国没有进口增值税，所以选择美国时那一列会消失。",
     "faq.q5": "为什么关税率和汇率要我自己填？",
-    "faq.a5": "因为替你查，就意味着把你的发票发到服务器上，而本工具的全部意义就在于它从不这么做。HS 归类是一个判断问题，它决定关税率 — 同一件产品会因材质、功能和原产地落在不同税号下 — 而海关公布汇率是每周公布的官方数字，只有你的海关当局才能让它生效。这两者只要猜错，你得到的就是一个自信却错误的数字。所以由你逐行填关税率、填一次适用汇率，本工具则完成真正机械的部分：运费分摊、CIF／FOB 的切换、关税与增值税的叠加，以及尾差核对。其余的一切 — 那张发票上的每个价格和每个供应商 — 都留在你的浏览器里。"
+    "faq.a5": "因为替你查，就意味着把你的发票发到服务器上，而本工具的全部意义就在于它从不这么做。HS 归类是一个判断问题，它决定关税率 — 同一件产品会因材质、功能和原产地落在不同税号下 — 而海关公布汇率是每周公布的官方数字，只有你的海关当局才能让它生效。这两者只要猜错，你得到的就是一个自信却错误的数字。所以由你逐行填关税率、填一次适用汇率，本工具则完成真正机械的部分：运费分摊、CIF／FOB 的切换、关税与增值税的叠加，以及尾差核对。其余的一切 — 那张发票上的每个价格和每个供应商 — 都留在你的浏览器里。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -494,7 +504,12 @@ window.I18N_LOCALES = {
     "faq.q4": "MPF और HMF क्या हैं, और वे सिर्फ़ अमेरिका के लिए क्यों दिखते हैं?",
     "faq.a4": "ये अमेरिका-विशिष्ट सीमा शुल्क उपयोक्ता शुल्क हैं जो शुल्क के साथ-साथ लगते हैं। मर्चेंडाइज़ प्रोसेसिंग फ़ीस (MPF) माल के मूल्य का 0.3464% है, पर वह सीमाओं में बँधी है: वित्त वर्ष 2026 के लिए वह प्रति एंट्री न $33.58 से नीचे जा सकती है, न $651.50 से ऊपर — इसलिए छोटे शिपमेंट पर वह एक तय न्यूनतम जैसी और बड़े पर अधिकतम सीमा जैसी बर्ताव करती है। हार्बर मेंटेनेंस फ़ीस (HMF) मूल्य का 0.125% है और केवल समुद्री माल पर लगती है — हवाई, ट्रक और रेल से आने वाला माल मुक्त है, इसलिए परिवहन माध्यम को हवाई करते ही वह शून्य हो जाती है और टूल यह बता भी देता है। दोनों प्रति एंट्री लगते हैं, इसलिए यह कैलकुलेटर उन्हें सीमा शुल्क मूल्य के अनुपात में आपके आइटमों पर बाँट देता है। ध्यान रहे, अमेरिका में आयात वैट नहीं है, इसलिए संयुक्त राज्य चुनने पर वह कॉलम गायब हो जाता है।",
     "faq.q5": "शुल्क दर और विनिमय दर मुझे खुद क्यों भरनी पड़ती है?",
-    "faq.a5": "क्योंकि उन्हें ढूँढने का मतलब होता आपका इनवॉइस किसी सर्वर पर भेजना, और इस टूल की पूरी बात यही है कि वह ऐसा कभी नहीं करता। HS वर्गीकरण एक निर्णय का मामला है जो शुल्क दर तय करता है — वही उत्पाद सामग्री, कार्य और मूल देश के हिसाब से अलग-अलग शीर्षकों में बैठ सकता है — और सीमा शुल्क विनिमय दर हर सप्ताह घोषित होने वाला आँकड़ा है जिसे केवल आपका सीमा शुल्क विभाग ही आधिकारिक बना सकता है। इनमें से किसी का भी अनुमान लगाने पर आपको एक आत्मविश्वासी पर ग़लत संख्या मिलेगी। इसलिए आप हर पंक्ति की शुल्क दर और एक बार लागू विनिमय दर भरते हैं, और टूल वह हिस्सा करता है जो सचमुच यांत्रिक है: भाड़े का बँटवारा, CIF/FOB का भेद, शुल्क और वैट की परतें, तथा राउंडिंग का मिलान। बाकी सब कुछ — उस इनवॉइस की हर कीमत और हर सप्लायर — आपके ब्राउज़र में ही रहता है।"
+    "faq.a5": "क्योंकि उन्हें ढूँढने का मतलब होता आपका इनवॉइस किसी सर्वर पर भेजना, और इस टूल की पूरी बात यही है कि वह ऐसा कभी नहीं करता। HS वर्गीकरण एक निर्णय का मामला है जो शुल्क दर तय करता है — वही उत्पाद सामग्री, कार्य और मूल देश के हिसाब से अलग-अलग शीर्षकों में बैठ सकता है — और सीमा शुल्क विनिमय दर हर सप्ताह घोषित होने वाला आँकड़ा है जिसे केवल आपका सीमा शुल्क विभाग ही आधिकारिक बना सकता है। इनमें से किसी का भी अनुमान लगाने पर आपको एक आत्मविश्वासी पर ग़लत संख्या मिलेगी। इसलिए आप हर पंक्ति की शुल्क दर और एक बार लागू विनिमय दर भरते हैं, और टूल वह हिस्सा करता है जो सचमुच यांत्रिक है: भाड़े का बँटवारा, CIF/FOB का भेद, शुल्क और वैट की परतें, तथा राउंडिंग का मिलान। बाकी सब कुछ — उस इनवॉइस की हर कीमत और हर सप्लायर — आपके ब्राउज़र में ही रहता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -651,7 +666,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué son el MPF y el HMF, y por qué solo aparecen en EE. UU.?",
     "faq.a4": "Son tasas aduaneras propias de EE. UU. que conviven con el arancel. El Merchandise Processing Fee (MPF) es el 0,3464% del valor de la mercancía, pero está acotado: para el ejercicio fiscal 2026 no puede bajar de 33,58 $ ni superar 651,50 $ por declaración, así que en envíos pequeños funciona como un mínimo fijo y en los grandes como un tope. El Harbor Maintenance Fee (HMF) es el 0,125% del valor y solo se aplica a la carga marítima: las llegadas por aire, camión y tren están exentas, de modo que cambiar el modo de transporte a Aéreo lo deja en cero y así te lo indica. Ambos se cobran por declaración, por lo que esta calculadora los prorratea entre tus artículos por valor en aduana. Ten en cuenta que EE. UU. no tiene IVA de importación, así que esa columna desaparece al seleccionar Estados Unidos.",
     "faq.q5": "¿Por qué tengo que escribir yo el tipo arancelario y el tipo de cambio?",
-    "faq.a5": "Porque consultarlos significaría enviar tu factura a un servidor, y el sentido de esta herramienta es precisamente que nunca lo hace. La clasificación HS es una decisión de criterio que determina el tipo arancelario —el mismo producto puede caer en partidas distintas según material, función y origen— y el tipo de cambio aduanero es una cifra que se publica semanalmente y que solo tu autoridad aduanera puede hacer oficial. Adivinar cualquiera de los dos te daría un número rotundo y equivocado. Así que tú introduces el tipo arancelario de cada línea y el tipo de cambio aplicado una vez, y la herramienta hace la parte que sí es mecánica: el prorrateo del flete, la distinción CIF/FOB, la pila de arancel e IVA y el cuadre del redondeo. Todo lo demás —cada precio y cada proveedor de esa factura— se queda en tu navegador."
+    "faq.a5": "Porque consultarlos significaría enviar tu factura a un servidor, y el sentido de esta herramienta es precisamente que nunca lo hace. La clasificación HS es una decisión de criterio que determina el tipo arancelario —el mismo producto puede caer en partidas distintas según material, función y origen— y el tipo de cambio aduanero es una cifra que se publica semanalmente y que solo tu autoridad aduanera puede hacer oficial. Adivinar cualquiera de los dos te daría un número rotundo y equivocado. Así que tú introduces el tipo arancelario de cada línea y el tipo de cambio aplicado una vez, y la herramienta hace la parte que sí es mecánica: el prorrateo del flete, la distinción CIF/FOB, la pila de arancel e IVA y el cuadre del redondeo. Todo lo demás —cada precio y cada proveedor de esa factura— se queda en tu navegador.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -808,7 +828,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هما MPF وHMF، ولماذا يظهران للولايات المتحدة فقط؟",
     "faq.a4": "هما رسمان جمركيان خاصان بالولايات المتحدة يُفرضان إلى جانب الرسوم الجمركية. رسم معالجة البضائع (MPF) يعادل 0.3464% من قيمة البضاعة، لكنه محصور بحدّين: للسنة المالية 2026 لا يقل عن 33.58 دولارًا ولا يتجاوز 651.50 دولارًا لكل إقرار، فيتصرّف في الشحنات الصغيرة كحدٍّ أدنى ثابت وفي الكبيرة كسقف. ورسم صيانة الموانئ (HMF) يعادل 0.125% من القيمة ويسري على البضائع البحرية فقط — أما الوارد جوًا وبرًا وبالسكك فمعفى، لذا يصير صفرًا حين تحوّل وسيلة النقل إلى جوي وتخبرك الأداة بذلك. وكلاهما يُفرض لكل إقرار، لذا توزّعهما هذه الحاسبة على أصنافك حسب القيمة الجمركية. ولاحظ أن الولايات المتحدة بلا ضريبة قيمة مضافة على الاستيراد، فيختفي ذلك العمود عند اختيارها.",
     "faq.q5": "لماذا عليّ إدخال نسبة الرسوم وسعر الصرف بنفسي؟",
-    "faq.a5": "لأن البحث عنهما يعني إرسال فاتورتك إلى خادم، وجوهر هذه الأداة أنها لا تفعل ذلك أبدًا. فتصنيف HS مسألة اجتهاد تحدّد نسبة الرسوم — إذ قد يقع المنتج نفسه تحت بنود مختلفة تبعًا للمادة والوظيفة والمنشأ — وسعر الصرف الجمركي رقم يُنشر أسبوعيًا ولا تُضفي عليه الرسمية إلا سلطتك الجمركية. وتخمين أيٍّ منهما يمنحك رقمًا واثقًا لكنه خاطئ. لذا تُدخل أنت نسبة الرسوم لكل بند وسعر الصرف المطبَّق مرة واحدة، وتتولى الأداة الجزء الآلي حقًا: توزيع الشحن، والتفريق بين CIF وFOB، وتراكم الرسوم والضريبة، وتسوية التقريب. وكل ما عدا ذلك — كل سعر وكل مورّد في تلك الفاتورة — يبقى داخل متصفحك."
+    "faq.a5": "لأن البحث عنهما يعني إرسال فاتورتك إلى خادم، وجوهر هذه الأداة أنها لا تفعل ذلك أبدًا. فتصنيف HS مسألة اجتهاد تحدّد نسبة الرسوم — إذ قد يقع المنتج نفسه تحت بنود مختلفة تبعًا للمادة والوظيفة والمنشأ — وسعر الصرف الجمركي رقم يُنشر أسبوعيًا ولا تُضفي عليه الرسمية إلا سلطتك الجمركية. وتخمين أيٍّ منهما يمنحك رقمًا واثقًا لكنه خاطئ. لذا تُدخل أنت نسبة الرسوم لكل بند وسعر الصرف المطبَّق مرة واحدة، وتتولى الأداة الجزء الآلي حقًا: توزيع الشحن، والتفريق بين CIF وFOB، وتراكم الرسوم والضريبة، وتسوية التقريب. وكل ما عدا ذلك — كل سعر وكل مورّد في تلك الفاتورة — يبقى داخل متصفحك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -965,7 +990,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que sont le MPF et le HMF, et pourquoi n'apparaissent-ils que pour les États-Unis ?",
     "faq.a4": "Ce sont des redevances douanières propres aux États-Unis, qui s'ajoutent aux droits. Le Merchandise Processing Fee (MPF) vaut 0,3464 % de la valeur des marchandises, mais il est encadré : pour l'exercice 2026, il ne peut pas descendre sous 33,58 $ ni dépasser 651,50 $ par déclaration — sur les petites expéditions il se comporte donc comme un minimum forfaitaire, et sur les grosses comme un plafond. Le Harbor Maintenance Fee (HMF) vaut 0,125 % de la valeur et ne s'applique qu'au fret maritime : les arrivées par air, camion et rail en sont exonérées, si bien que passer le mode de transport à Aérien le ramène à zéro, et l'outil vous le signale. Les deux sont perçus par déclaration : ce calculateur les ventile donc entre vos articles à la valeur en douane. Notez que les États-Unis n'ont pas de TVA à l'importation : cette colonne disparaît quand vous sélectionnez ce pays.",
     "faq.q5": "Pourquoi dois-je saisir moi-même le taux de droit et le taux de change ?",
-    "faq.a5": "Parce que les rechercher supposerait d'envoyer votre facture à un serveur, et tout l'intérêt de cet outil est qu'il ne le fait jamais. Le classement SH est une appréciation qui détermine le taux de droit — un même produit peut relever de positions différentes selon la matière, la fonction et l'origine — et le taux de change douanier est un chiffre publié chaque semaine que seule votre administration douanière peut rendre officiel. Deviner l'un ou l'autre vous donnerait un résultat assuré et faux. Vous saisissez donc le taux de droit par ligne et le taux de change appliqué une fois, et l'outil fait la part réellement mécanique : la ventilation du fret, la distinction CIF/FOB, l'empilement droits + TVA et le rapprochement des arrondis. Tout le reste — chaque prix et chaque fournisseur de cette facture — reste dans votre navigateur."
+    "faq.a5": "Parce que les rechercher supposerait d'envoyer votre facture à un serveur, et tout l'intérêt de cet outil est qu'il ne le fait jamais. Le classement SH est une appréciation qui détermine le taux de droit — un même produit peut relever de positions différentes selon la matière, la fonction et l'origine — et le taux de change douanier est un chiffre publié chaque semaine que seule votre administration douanière peut rendre officiel. Deviner l'un ou l'autre vous donnerait un résultat assuré et faux. Vous saisissez donc le taux de droit par ligne et le taux de change appliqué une fois, et l'outil fait la part réellement mécanique : la ventilation du fret, la distinction CIF/FOB, l'empilement droits + TVA et le rapprochement des arrondis. Tout le reste — chaque prix et chaque fournisseur de cette facture — reste dans votre navigateur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -1122,7 +1152,12 @@ window.I18N_LOCALES = {
     "faq.q4": "MPF আর HMF কী, আর সেগুলো কেবল যুক্তরাষ্ট্রের বেলায় আসে কেন?",
     "faq.a4": "এগুলো যুক্তরাষ্ট্রের নিজস্ব কাস্টমস ব্যবহারকারী ফি, যা শুল্কের পাশাপাশি বসে। মার্চেন্ডাইজ প্রসেসিং ফি (MPF) পণ্যমূল্যের ০.৩৪৬৪%, তবে তার সীমা বাঁধা: ২০২৬ অর্থবছরে প্রতি এন্ট্রিতে এটি $33.58-এর নিচে নামতে পারে না, $651.50-এর উপরেও উঠতে পারে না — তাই ছোট চালানে এটি নির্দিষ্ট সর্বনিম্নের মতো আর বড় চালানে ঊর্ধ্বসীমার মতো আচরণ করে। হারবার মেইনটেন্যান্স ফি (HMF) মূল্যের ০.১২৫% এবং কেবল সমুদ্রপথের পণ্যে প্রযোজ্য — আকাশ, ট্রাক ও রেলপথে আসা পণ্য অব্যাহতিপ্রাপ্ত, তাই পরিবহন মাধ্যম আকাশপথ করলেই সেটি শূন্য হয়ে যায় এবং টুল তা জানিয়েও দেয়। দুটোই প্রতি এন্ট্রিতে বসে, তাই এই ক্যালকুলেটর সেগুলো শুল্কমূল্যের অনুপাতে আপনার পণ্যগুলোতে বণ্টন করে। মনে রাখুন, যুক্তরাষ্ট্রে আমদানি ভ্যাট নেই, তাই সেই দেশ বাছলে ওই কলামটি মিলিয়ে যায়।",
     "faq.q5": "শুল্কহার আর বিনিময় হার আমাকেই কেন লিখতে হয়?",
-    "faq.a5": "কারণ সেগুলো খুঁজে দিতে হলে আপনার ইনভয়েস সার্ভারে পাঠাতে হতো, আর এই টুলের পুরো কথাটাই হলো সে কাজ সে কখনো করে না। HS শ্রেণিবিন্যাস একটি বিচারের বিষয় যা শুল্কহার ঠিক করে — একই পণ্য উপাদান, কার্যকারিতা ও উৎস অনুযায়ী ভিন্ন শিরোনামে পড়তে পারে — আর কাস্টমস বিনিময় হার সাপ্তাহিকভাবে ঘোষিত একটি সংখ্যা, যাকে কেবল আপনার কাস্টমস কর্তৃপক্ষই দাপ্তরিক করতে পারে। দুটোর যেকোনোটি আন্দাজ করলে আপনি পাবেন এমন একটি সংখ্যা, যা দেখতে নিশ্চিত কিন্তু ভুল। তাই আপনি প্রতিটি সারির শুল্কহার আর একবার প্রযোজ্য বিনিময় হার লেখেন, আর টুল করে সেই কাজটুকু যা সত্যিই যান্ত্রিক: ফ্রেইট বণ্টন, CIF/FOB ভাগ, শুল্ক ও ভ্যাটের স্তর, আর রাউন্ডিং মেলানো। বাকি সবকিছু — ওই ইনভয়েসের প্রতিটি দাম আর প্রতিটি সরবরাহকারী — আপনার ব্রাউজারেই থেকে যায়।"
+    "faq.a5": "কারণ সেগুলো খুঁজে দিতে হলে আপনার ইনভয়েস সার্ভারে পাঠাতে হতো, আর এই টুলের পুরো কথাটাই হলো সে কাজ সে কখনো করে না। HS শ্রেণিবিন্যাস একটি বিচারের বিষয় যা শুল্কহার ঠিক করে — একই পণ্য উপাদান, কার্যকারিতা ও উৎস অনুযায়ী ভিন্ন শিরোনামে পড়তে পারে — আর কাস্টমস বিনিময় হার সাপ্তাহিকভাবে ঘোষিত একটি সংখ্যা, যাকে কেবল আপনার কাস্টমস কর্তৃপক্ষই দাপ্তরিক করতে পারে। দুটোর যেকোনোটি আন্দাজ করলে আপনি পাবেন এমন একটি সংখ্যা, যা দেখতে নিশ্চিত কিন্তু ভুল। তাই আপনি প্রতিটি সারির শুল্কহার আর একবার প্রযোজ্য বিনিময় হার লেখেন, আর টুল করে সেই কাজটুকু যা সত্যিই যান্ত্রিক: ফ্রেইট বণ্টন, CIF/FOB ভাগ, শুল্ক ও ভ্যাটের স্তর, আর রাউন্ডিং মেলানো। বাকি সবকিছু — ওই ইনভয়েসের প্রতিটি দাম আর প্রতিটি সরবরাহকারী — আপনার ব্রাউজারেই থেকে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1279,7 +1314,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que são MPF e HMF, e por que só aparecem para os EUA?",
     "faq.a4": "São taxas alfandegárias específicas dos EUA que andam ao lado do imposto. O Merchandise Processing Fee (MPF) é 0,3464% do valor da mercadoria, mas tem faixa: no ano fiscal de 2026 não pode ficar abaixo de US$ 33,58 nem acima de US$ 651,50 por declaração — em embarques pequenos funciona como um mínimo fixo e nos grandes como um teto. O Harbor Maintenance Fee (HMF) é 0,125% do valor e vale só para carga marítima: chegadas por ar, caminhão e trem são isentas, de modo que mudar o modal para Aéreo zera a taxa e a ferramenta avisa. Ambos são cobrados por declaração, então esta calculadora os rateia entre os itens pelo valor aduaneiro. Vale lembrar: os EUA não têm IVA de importação, então essa coluna some quando você seleciona Estados Unidos.",
     "faq.q5": "Por que eu tenho que digitar a alíquota e a taxa de câmbio?",
-    "faq.a5": "Porque buscá-las significaria mandar sua fatura para um servidor, e o sentido inteiro desta ferramenta é que ela nunca faz isso. A classificação HS é um juízo que decide a alíquota — o mesmo produto pode cair em posições diferentes conforme material, função e origem — e a taxa de câmbio aduaneira é um número publicado semanalmente que só a sua aduana pode tornar oficial. Chutar qualquer um dos dois entregaria a você um número convicto e errado. Então você informa a alíquota linha a linha e a taxa de câmbio aplicada uma vez, e a ferramenta faz a parte genuinamente mecânica: o rateio do frete, a divisão CIF/FOB, a pilha de imposto e IVA e a conciliação do arredondamento. Todo o resto — cada preço e cada fornecedor daquela fatura — fica no seu navegador."
+    "faq.a5": "Porque buscá-las significaria mandar sua fatura para um servidor, e o sentido inteiro desta ferramenta é que ela nunca faz isso. A classificação HS é um juízo que decide a alíquota — o mesmo produto pode cair em posições diferentes conforme material, função e origem — e a taxa de câmbio aduaneira é um número publicado semanalmente que só a sua aduana pode tornar oficial. Chutar qualquer um dos dois entregaria a você um número convicto e errado. Então você informa a alíquota linha a linha e a taxa de câmbio aplicada uma vez, e a ferramenta faz a parte genuinamente mecânica: o rateio do frete, a divisão CIF/FOB, a pilha de imposto e IVA e a conciliação do arredondamento. Todo o resto — cada preço e cada fornecedor daquela fatura — fica no seu navegador.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1436,7 +1476,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что такое MPF и HMF и почему они появляются только для США?",
     "faq.a4": "Это специфические таможенные сборы США, которые идут рядом с пошлиной. Merchandise Processing Fee (MPF) — 0,3464% от стоимости товара, но он зажат в вилку: на 2026 финансовый год он не может быть меньше $33.58 и больше $651.50 за декларацию, поэтому на мелких поставках ведёт себя как фиксированный минимум, а на крупных — как потолок. Harbor Maintenance Fee (HMF) — 0,125% от стоимости и только для морских грузов: прибытие авиа, автотранспортом и по железной дороге освобождено, поэтому переключение вида транспорта на «Авиа» обнуляет сбор, о чём инструмент сообщает. Оба берутся за декларацию, так что калькулятор распределяет их по позициям пропорционально таможенной стоимости. Учтите: ввозного НДС в США нет, поэтому при выборе США эта колонка исчезает.",
     "faq.q5": "Почему ставку пошлины и курс нужно вводить самому?",
-    "faq.a5": "Потому что искать их означало бы отправить ваш инвойс на сервер, а весь смысл инструмента в том, что он этого никогда не делает. Классификация ТН ВЭД — вопрос суждения, и именно она определяет ставку: один и тот же товар может попасть в разные позиции в зависимости от материала, функции и происхождения. А таможенный курс — публикуемая раз в неделю величина, официальной её делает только ваша таможня. Угадать любое из двух — значит получить уверенное, но неверное число. Поэтому ставку вы вводите построчно, применяемый курс — один раз, а инструмент делает по-настоящему механическую часть: распределение фрахта, разделение CIF/FOB, стопку пошлины и НДС и сверку округлений. Всё остальное — каждая цена и каждый поставщик из этого инвойса — остаётся в вашем браузере."
+    "faq.a5": "Потому что искать их означало бы отправить ваш инвойс на сервер, а весь смысл инструмента в том, что он этого никогда не делает. Классификация ТН ВЭД — вопрос суждения, и именно она определяет ставку: один и тот же товар может попасть в разные позиции в зависимости от материала, функции и происхождения. А таможенный курс — публикуемая раз в неделю величина, официальной её делает только ваша таможня. Угадать любое из двух — значит получить уверенное, но неверное число. Поэтому ставку вы вводите построчно, применяемый курс — один раз, а инструмент делает по-настоящему механическую часть: распределение фрахта, разделение CIF/FOB, стопку пошлины и НДС и сверку округлений. Всё остальное — каждая цена и каждый поставщик из этого инвойса — остаётся в вашем браузере.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1593,7 +1638,12 @@ window.I18N_LOCALES = {
     "faq.q4": "MPF اور HMF کیا ہیں، اور صرف امریکہ کے لیے کیوں ظاہر ہوتے ہیں؟",
     "faq.a4": "یہ امریکہ کی مخصوص کسٹم یوزر فیسیں ہیں جو ڈیوٹی کے ساتھ ساتھ لگتی ہیں۔ مرچنڈائز پروسیسنگ فیس (MPF) مال کی قیمت کا ۰.۳۴۶۴٪ ہے، مگر وہ حدود میں بندھی ہے: مالی سال ۲۰۲۶ کے لیے فی گوشوارہ نہ $33.58 سے کم ہو سکتی ہے، نہ $651.50 سے زیادہ — اس لیے چھوٹی کھیپوں پر وہ ایک مقررہ کم از کم کی طرح اور بڑی کھیپوں پر ایک حد کی طرح برتاؤ کرتی ہے۔ ہاربر مینٹیننس فیس (HMF) قیمت کا ۰.۱۲۵٪ ہے اور صرف بحری مال پر لاگو ہوتی ہے — فضائی، ٹرک اور ریل سے آنے والا مال مستثنیٰ ہے، چنانچہ ذریعۂ نقل و حمل کو فضائی کرتے ہی وہ صفر ہو جاتی ہے اور ٹول یہ بتا بھی دیتا ہے۔ دونوں فی گوشوارہ لگتی ہیں، اس لیے یہ کیلکولیٹر انہیں کسٹم ویلیو کے تناسب سے آپ کے آئٹموں پر تقسیم کر دیتا ہے۔ یاد رہے کہ امریکہ میں درآمدی ویٹ نہیں ہے، اس لیے امریکہ منتخب کرنے پر وہ کالم غائب ہو جاتا ہے۔",
     "faq.q5": "ڈیوٹی کی شرح اور شرحِ تبادلہ مجھے خود کیوں لکھنی پڑتی ہے؟",
-    "faq.a5": "کیونکہ انہیں تلاش کرنے کا مطلب ہوتا آپ کا انوائس کسی سرور کو بھیجنا، اور اس ٹول کی ساری بات یہی ہے کہ وہ ایسا کبھی نہیں کرتا۔ HS درجہ بندی ایک فیصلے کا معاملہ ہے جو ڈیوٹی کی شرح طے کرتا ہے — ایک ہی مصنوعہ مادے، کارکردگی اور مبدأ کے لحاظ سے مختلف عنوانات میں آ سکتا ہے — اور کسٹم شرحِ تبادلہ ہفتہ وار جاری ہونے والا عدد ہے جسے صرف آپ کا کسٹم ادارہ سرکاری بنا سکتا ہے۔ ان میں سے کسی کا اندازہ لگانا آپ کو ایک پُریقین مگر غلط عدد دے گا۔ چنانچہ آپ ہر سطر کی ڈیوٹی شرح اور ایک بار لاگو شرحِ تبادلہ درج کرتے ہیں، اور ٹول وہ حصہ کرتا ہے جو واقعی میکانکی ہے: کرایے کی تقسیم، CIF/FOB کا فرق، ڈیوٹی اور ویٹ کی تہیں، اور راؤنڈنگ کی مطابقت۔ باقی سب کچھ — اس انوائس کی ہر قیمت اور ہر سپلائر — آپ کے براؤزر ہی میں رہتا ہے۔"
+    "faq.a5": "کیونکہ انہیں تلاش کرنے کا مطلب ہوتا آپ کا انوائس کسی سرور کو بھیجنا، اور اس ٹول کی ساری بات یہی ہے کہ وہ ایسا کبھی نہیں کرتا۔ HS درجہ بندی ایک فیصلے کا معاملہ ہے جو ڈیوٹی کی شرح طے کرتا ہے — ایک ہی مصنوعہ مادے، کارکردگی اور مبدأ کے لحاظ سے مختلف عنوانات میں آ سکتا ہے — اور کسٹم شرحِ تبادلہ ہفتہ وار جاری ہونے والا عدد ہے جسے صرف آپ کا کسٹم ادارہ سرکاری بنا سکتا ہے۔ ان میں سے کسی کا اندازہ لگانا آپ کو ایک پُریقین مگر غلط عدد دے گا۔ چنانچہ آپ ہر سطر کی ڈیوٹی شرح اور ایک بار لاگو شرحِ تبادلہ درج کرتے ہیں، اور ٹول وہ حصہ کرتا ہے جو واقعی میکانکی ہے: کرایے کی تقسیم، CIF/FOB کا فرق، ڈیوٹی اور ویٹ کی تہیں، اور راؤنڈنگ کی مطابقت۔ باقی سب کچھ — اس انوائس کی ہر قیمت اور ہر سپلائر — آپ کے براؤزر ہی میں رہتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1750,7 +1800,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa itu MPF dan HMF, dan kenapa hanya muncul untuk AS?",
     "faq.a4": "Keduanya pungutan pabean khas AS yang berjalan berdampingan dengan bea masuk. Merchandise Processing Fee (MPF) sebesar 0,3464% dari nilai barang, tetapi ada batasnya: untuk tahun fiskal 2026 ia tidak boleh kurang dari $33.58 maupun lebih dari $651.50 per dokumen, sehingga pada kiriman kecil ia berlaku seperti minimum tetap dan pada kiriman besar seperti plafon. Harbor Maintenance Fee (HMF) sebesar 0,125% dari nilai dan hanya berlaku untuk kargo laut — kedatangan lewat udara, truk, dan kereta dibebaskan, jadi mengubah moda ke Udara membuatnya nol dan alat ini memberitahukannya. Keduanya dipungut per dokumen, jadi kalkulator ini mengalokasikannya ke tiap barang menurut nilai pabean. Perlu diingat, AS tidak punya PPN impor, jadi kolom itu hilang saat Anda memilih Amerika Serikat.",
     "faq.q5": "Kenapa tarif bea dan kurs harus saya ketik sendiri?",
-    "faq.a5": "Karena mencarinya berarti mengirim invoice Anda ke server, dan justru itulah yang tidak pernah dilakukan alat ini. Klasifikasi HS adalah soal pertimbangan yang menentukan tarif bea — produk yang sama bisa jatuh ke pos berbeda tergantung bahan, fungsi, dan asal — sedangkan kurs pabean adalah angka yang diumumkan mingguan dan hanya otoritas pabean Anda yang bisa mengesahkannya. Menebak salah satunya akan memberi Anda angka yang terdengar pasti tetapi keliru. Jadi Anda mengisi tarif bea per baris dan kurs yang dipakai sekali saja, lalu alat ini mengerjakan bagian yang memang mekanis: alokasi ongkos angkut, pemisahan CIF/FOB, tumpukan bea dan PPN, serta rekonsiliasi pembulatan. Selebihnya — setiap harga dan setiap pemasok pada invoice itu — tetap di browser Anda."
+    "faq.a5": "Karena mencarinya berarti mengirim invoice Anda ke server, dan justru itulah yang tidak pernah dilakukan alat ini. Klasifikasi HS adalah soal pertimbangan yang menentukan tarif bea — produk yang sama bisa jatuh ke pos berbeda tergantung bahan, fungsi, dan asal — sedangkan kurs pabean adalah angka yang diumumkan mingguan dan hanya otoritas pabean Anda yang bisa mengesahkannya. Menebak salah satunya akan memberi Anda angka yang terdengar pasti tetapi keliru. Jadi Anda mengisi tarif bea per baris dan kurs yang dipakai sekali saja, lalu alat ini mengerjakan bagian yang memang mekanis: alokasi ongkos angkut, pemisahan CIF/FOB, tumpukan bea dan PPN, serta rekonsiliasi pembulatan. Selebihnya — setiap harga dan setiap pemasok pada invoice itu — tetap di browser Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1907,7 +1962,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was sind MPF und HMF, und warum tauchen sie nur bei den USA auf?",
     "faq.a4": "Es sind US-spezifische Zollgebühren, die neben dem Zoll stehen. Die Merchandise Processing Fee (MPF) beträgt 0,3464 % des Warenwerts, ist aber gedeckelt: Im Haushaltsjahr 2026 darf sie je Anmeldung weder unter 33,58 $ fallen noch über 651,50 $ steigen — bei kleinen Sendungen wirkt sie deshalb wie ein Mindestbetrag, bei großen wie eine Obergrenze. Die Harbor Maintenance Fee (HMF) beträgt 0,125 % des Werts und gilt nur für Seefracht: Ankünfte per Luft, Lkw und Bahn sind befreit, deshalb setzt ein Wechsel der Transportart auf Luft sie auf null — und das Tool sagt es Ihnen. Beide fallen je Anmeldung an, also legt dieser Rechner sie nach Zollwert auf Ihre Artikel um. Beachten Sie: Die USA kennen keine Einfuhrumsatzsteuer, deshalb verschwindet diese Spalte, sobald Sie die Vereinigten Staaten wählen.",
     "faq.q5": "Warum muss ich Zollsatz und Umrechnungskurs selbst eintragen?",
-    "faq.a5": "Weil sie nachzuschlagen hieße, Ihre Rechnung an einen Server zu schicken — und der ganze Sinn dieses Tools ist, dass es das nie tut. Die HS-Einreihung ist eine Ermessensfrage, die den Zollsatz bestimmt: Dasselbe Produkt kann je nach Material, Funktion und Ursprung unter verschiedene Positionen fallen. Und der Zollkurs ist ein wöchentlich veröffentlichter Wert, den nur Ihre Zollverwaltung amtlich machen kann. Beides zu raten liefert Ihnen eine selbstbewusste, aber falsche Zahl. Also tragen Sie den Zollsatz je Zeile und den angewandten Kurs einmal ein, und das Tool übernimmt den wirklich mechanischen Teil: Frachtumlage, CIF-/FOB-Unterscheidung, die Staffel aus Zoll und Steuer sowie den Rundungsausgleich. Alles Übrige — jeder Preis und jeder Lieferant auf dieser Rechnung — bleibt in Ihrem Browser."
+    "faq.a5": "Weil sie nachzuschlagen hieße, Ihre Rechnung an einen Server zu schicken — und der ganze Sinn dieses Tools ist, dass es das nie tut. Die HS-Einreihung ist eine Ermessensfrage, die den Zollsatz bestimmt: Dasselbe Produkt kann je nach Material, Funktion und Ursprung unter verschiedene Positionen fallen. Und der Zollkurs ist ein wöchentlich veröffentlichter Wert, den nur Ihre Zollverwaltung amtlich machen kann. Beides zu raten liefert Ihnen eine selbstbewusste, aber falsche Zahl. Also tragen Sie den Zollsatz je Zeile und den angewandten Kurs einmal ein, und das Tool übernimmt den wirklich mechanischen Teil: Frachtumlage, CIF-/FOB-Unterscheidung, die Staffel aus Zoll und Steuer sowie den Rundungsausgleich. Alles Übrige — jeder Preis und jeder Lieferant auf dieser Rechnung — bleibt in Ihrem Browser.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -2064,7 +2124,12 @@ window.I18N_LOCALES = {
     "faq.q4": "MPFとHMFとは何ですか。なぜ米国のときだけ表示されるのですか?",
     "faq.a4": "関税と並んで課される、米国固有の税関ユーザーフィーです。Merchandise Processing Fee(MPF)は貨物代金の0.3464%ですが上下限があり、2026会計年度は申告1件あたり$33.58を下回らず$651.50を超えません。そのため小口では定額の最低料金のように、大口では上限のように働きます。Harbor Maintenance Fee(HMF)は貨物代金の0.125%で、海上貨物のみが対象です — 航空・トラック・鉄道での到着は免除なので、輸送手段を航空に切り替えると0になり、その旨も表示します。どちらも申告単位の課金なので、このツールは課税価格の比率で品目に按分します。なお米国に輸入付加価値税はないため、米国を選ぶとその列は消えます。",
     "faq.q5": "関税率と為替レートを自分で入力しなければならないのはなぜですか?",
-    "faq.a5": "調べるということは、あなたのインボイスをサーバーへ送るということだからです。このツールの存在意義は、それを決してしない点にあります。HS分類は関税率を決める判断業務で、同じ製品でも材質・機能・原産地によって異なる項目に入りえます。また税関の公示レートは週次で公示される値で、公式にできるのはあなたの税関当局だけです。どちらも推測すれば、自信ありげで間違った数字が出てきます。ですから関税率は行ごとに、適用為替レートは一度だけ入力していただき、ツールは本当に機械的な部分 — 運賃の按分、CIF/FOBの切り分け、関税と付加価値税の積み上げ、端数の整合 — を担います。それ以外のすべて、そのインボイスに載った単価も取引先も、あなたのブラウザから出ません。"
+    "faq.a5": "調べるということは、あなたのインボイスをサーバーへ送るということだからです。このツールの存在意義は、それを決してしない点にあります。HS分類は関税率を決める判断業務で、同じ製品でも材質・機能・原産地によって異なる項目に入りえます。また税関の公示レートは週次で公示される値で、公式にできるのはあなたの税関当局だけです。どちらも推測すれば、自信ありげで間違った数字が出てきます。ですから関税率は行ごとに、適用為替レートは一度だけ入力していただき、ツールは本当に機械的な部分 — 運賃の按分、CIF/FOBの切り分け、関税と付加価値税の積み上げ、端数の整合 — を担います。それ以外のすべて、そのインボイスに載った単価も取引先も、あなたのブラウザから出ません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -2221,6 +2286,11 @@ window.I18N_LOCALES = {
     "faq.q4": "MPF 와 HMF 는 무엇이고, 왜 미국에서만 나오나요?",
     "faq.a4": "관세와 별개로 붙는 미국 고유의 세관 수수료입니다. 물품취급수수료(MPF)는 물품가의 0.3464% 인데 상·하한이 있습니다. 2026 회계연도 기준 건당 $33.58 미만으로 내려가지도, $651.50 을 넘지도 않습니다. 그래서 소액 건에서는 정액 최저요금처럼, 대형 건에서는 상한처럼 작동합니다. 항만유지수수료(HMF)는 물품가의 0.125% 이고 해상 화물에만 붙습니다 — 항공·트럭·철도 반입은 면제라, 운송 모드를 항공으로 바꾸면 0 이 되고 그 사실도 함께 표시합니다. 둘 다 건 단위 부과라 이 계산기는 과세가격 비율로 품목에 안분합니다. 참고로 미국에는 수입 부가세가 없어서 미국을 선택하면 그 열이 사라집니다.",
     "faq.q5": "관세율과 환율을 왜 직접 입력해야 하나요?",
-    "faq.a5": "조회한다는 건 인보이스를 서버로 보낸다는 뜻이고, 이 도구의 존재 이유가 바로 그걸 하지 않는 데 있기 때문입니다. HS 분류는 관세율을 좌우하는 판단 업무라 같은 제품도 재질·기능·원산지에 따라 다른 호에 들어갈 수 있고, 고시환율은 주 단위로 공시되는 값이라 공식화할 수 있는 곳은 관세당국뿐입니다. 둘 중 하나라도 추측하면 그럴듯하지만 틀린 숫자가 나옵니다. 그래서 관세율은 행마다, 적용환율은 한 번 입력받고, 도구는 진짜 기계적인 부분 — 운임 안분, CIF/FOB 분기, 관세·부가세 스택, 단수차 정합 — 을 맡습니다. 그 밖의 모든 것, 그 인보이스에 적힌 단가와 거래처는 브라우저 밖으로 나가지 않습니다."
+    "faq.a5": "조회한다는 건 인보이스를 서버로 보낸다는 뜻이고, 이 도구의 존재 이유가 바로 그걸 하지 않는 데 있기 때문입니다. HS 분류는 관세율을 좌우하는 판단 업무라 같은 제품도 재질·기능·원산지에 따라 다른 호에 들어갈 수 있고, 고시환율은 주 단위로 공시되는 값이라 공식화할 수 있는 곳은 관세당국뿐입니다. 둘 중 하나라도 추측하면 그럴듯하지만 틀린 숫자가 나옵니다. 그래서 관세율은 행마다, 적용환율은 한 번 입력받고, 도구는 진짜 기계적인 부분 — 운임 안분, CIF/FOB 분기, 관세·부가세 스택, 단수차 정합 — 을 맡습니다. 그 밖의 모든 것, 그 인보이스에 적힌 단가와 거래처는 브라우저 밖으로 나가지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

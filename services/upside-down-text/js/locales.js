@@ -45,7 +45,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What's the actual difference between the \"upside down\" and \"mirrored\" results?",
     "faq.a4": "They flip text along different axes. Upside down simulates rotating the whole page 180 degrees: it reverses the character order within each line and also reverses the order of the lines themselves, so a multi-line upside-down result reads from the last line to the first. Mirrored simulates holding the text up to a vertical mirror: it reverses the character order within each line but keeps the lines in their original top-to-bottom order, since a mirror only flips left-to-right. Short, symmetric-looking words highlight the difference well — mirroring \"SOS\" gives \"ƧOƧ\", while \"bad\" mirrors right back to \"bad\" because b and d are swapped in exactly the right places.",
     "faq.q5": "Is my text sent to a server?",
-    "faq.a5": "No. This upside down text generator runs entirely in your browser — nothing you type or paste is uploaded, logged, or shared with any server. Your most recent input is optionally saved to this browser's local storage so it's still here next time you open the page; untick \"Save my text in this browser\" to keep it private to the current session, and clearing the box removes any stored copy immediately."
+    "faq.a5": "No. This upside down text generator runs entirely in your browser — nothing you type or paste is uploaded, logged, or shared with any server. Your most recent input is optionally saved to this browser's local storage so it's still here next time you open the page; untick \"Save my text in this browser\" to keep it private to the current session, and clearing the box removes any stored copy immediately.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -84,7 +89,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"上下颠倒\"和\"镜像翻转\"到底有什么区别？",
     "faq.a4": "两者是沿不同方向翻转文字的。上下颠倒模拟把整页纸旋转180度：它会反转每一行内的字符顺序，也会反转各行本身的先后顺序，所以多行的倒转结果会从最后一行读到第一行。镜像翻转模拟把文字举到竖直的镜子前：它只反转每一行内的字符顺序，行与行的上下顺序保持不变，因为镜子只左右翻转，不会上下翻转。用简短、对称的单词最能看出区别——把\"SOS\"镜像会得到\"ƧOƧ\"，而\"bad\"镜像后又变回\"bad\"，因为 b 和 d 恰好互换到彼此的位置。",
     "faq.q5": "我的文字会被发送到服务器吗？",
-    "faq.a5": "不会。这个文字倒转生成器完全在你的浏览器中运行——你输入或粘贴的任何内容都不会被上传、记录或分享给任何服务器。你最近一次输入的内容会（可选地）保存在浏览器本地存储中，方便下次打开页面时仍然可见；取消勾选\"在此浏览器中保存我的文字\"即可让当前会话保持私密，清空输入框也会立即删除已保存的内容。"
+    "faq.a5": "不会。这个文字倒转生成器完全在你的浏览器中运行——你输入或粘贴的任何内容都不会被上传、记录或分享给任何服务器。你最近一次输入的内容会（可选地）保存在浏览器本地存储中，方便下次打开页面时仍然可见；取消勾选\"在此浏览器中保存我的文字\"即可让当前会话保持私密，清空输入框也会立即删除已保存的内容。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -123,7 +133,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"अपसाइड डाउन\" और \"मिरर\" नतीजों में असल फ़र्क़ क्या है?",
     "faq.a4": "दोनों टेक्स्ट को अलग-अलग दिशा में पलटते हैं। अपसाइड डाउन पूरे पन्ने को 180 डिग्री घुमाने जैसा असर देता है: यह हर लाइन के अंदर कैरेक्टर का क्रम उलटता है और साथ ही लाइनों का क्रम भी उलट देता है, इसलिए कई लाइनों वाला उल्टा नतीजा आख़िरी लाइन से पहली लाइन की तरफ़ पढ़ा जाता है। मिरर टेक्स्ट को सीधे शीशे के सामने रखने जैसा असर देता है: यह हर लाइन के अंदर कैरेक्टर का क्रम उलटता है, लेकिन लाइनों का ऊपर-नीचे क्रम वैसा ही रहता है, क्योंकि शीशा सिर्फ़ लेफ़्ट-राइट पलटता है। छोटे, सिमेट्रिक दिखने वाले शब्दों में यह फ़र्क़ साफ़ नज़र आता है — \"SOS\" को मिरर करने पर \"ƧOƧ\" मिलता है, जबकि \"bad\" मिरर होकर फिर से \"bad\" ही बन जाता है, क्योंकि b और d ठीक एक-दूसरे की जगह पर आ जाते हैं।",
     "faq.q5": "क्या मेरा टेक्स्ट किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह अपसाइड डाउन टेक्स्ट जनरेटर पूरी तरह आपके ब्राउज़र में चलता है — आप जो कुछ भी टाइप या पेस्ट करते हैं, वह कहीं अपलोड, रिकॉर्ड या किसी सर्वर के साथ शेयर नहीं होता। आपका सबसे हाल का इनपुट चाहें तो इस ब्राउज़र की लोकल स्टोरेज में सेव हो जाता है ताकि अगली बार पेज खोलने पर वह वहीं मिले; \"मेरा टेक्स्ट इस ब्राउज़र में सेव करें\" को अनचेक करके इसे मौजूदा सेशन तक निजी रखा जा सकता है, और बॉक्स खाली करते ही सेव किया गया कॉपी भी तुरंत हट जाता है।"
+    "faq.a5": "नहीं। यह अपसाइड डाउन टेक्स्ट जनरेटर पूरी तरह आपके ब्राउज़र में चलता है — आप जो कुछ भी टाइप या पेस्ट करते हैं, वह कहीं अपलोड, रिकॉर्ड या किसी सर्वर के साथ शेयर नहीं होता। आपका सबसे हाल का इनपुट चाहें तो इस ब्राउज़र की लोकल स्टोरेज में सेव हो जाता है ताकि अगली बार पेज खोलने पर वह वहीं मिले; \"मेरा टेक्स्ट इस ब्राउज़र में सेव करें\" को अनचेक करके इसे मौजूदा सेशन तक निजी रखा जा सकता है, और बॉक्स खाली करते ही सेव किया गया कॉपी भी तुरंत हट जाता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -162,7 +177,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuál es la diferencia real entre los resultados \"al revés\" y \"reflejado\"?",
     "faq.a4": "Cada uno voltea el texto sobre un eje distinto. Al revés simula girar toda la página 180 grados: invierte el orden de los caracteres dentro de cada línea y también invierte el orden de las propias líneas, así que un resultado al revés con varias líneas se lee de la última línea a la primera. Reflejado simula sostener el texto frente a un espejo vertical: invierte el orden de los caracteres dentro de cada línea, pero mantiene las líneas en su orden original de arriba abajo, porque un espejo solo voltea de izquierda a derecha. Las palabras cortas y simétricas muestran bien la diferencia — reflejar \"SOS\" da \"ƧOƧ\", mientras que \"bad\" reflejado vuelve a ser \"bad\", porque la b y la d intercambian exactamente sus posiciones.",
     "faq.q5": "¿Se envía mi texto a algún servidor?",
-    "faq.a5": "No. Este generador de texto al revés funciona por completo en tu navegador — nada de lo que escribas o pegues se sube, se registra ni se comparte con ningún servidor. Tu texto más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga ahí la próxima vez que abras la página; desmarca \"Guardar mi texto en este navegador\" para mantener la sesión actual privada, y al vaciar el cuadro se elimina de inmediato cualquier copia guardada."
+    "faq.a5": "No. Este generador de texto al revés funciona por completo en tu navegador — nada de lo que escribas o pegues se sube, se registra ni se comparte con ningún servidor. Tu texto más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga ahí la próxima vez que abras la página; desmarca \"Guardar mi texto en este navegador\" para mantener la sesión actual privada, y al vaciar el cuadro se elimina de inmediato cualquier copia guardada.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -201,7 +221,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الفرق الحقيقي بين نتيجتي \"المقلوب رأسًا على عقب\" و\"المعكوس كالمرآة\"؟",
     "faq.a4": "يقلب كل منهما النص على محور مختلف. يحاكي المقلوب رأسًا على عقب تدوير الصفحة كاملة 180 درجة: فهو يعكس ترتيب الأحرف داخل كل سطر، ويعكس أيضًا ترتيب الأسطر نفسها، لذا تُقرأ النتيجة متعددة الأسطر من آخر سطر إلى أوله. أما المعكوس كالمرآة فيحاكي وضع النص أمام مرآة عمودية: يعكس ترتيب الأحرف داخل كل سطر فقط، مع إبقاء ترتيب الأسطر من الأعلى إلى الأسفل كما هو، لأن المرآة تعكس اليمين واليسار فقط. تُظهر الكلمات القصيرة المتناظرة هذا الفرق بوضوح — فعكس \"SOS\" يعطي \"ƧOƧ\"، بينما تعود \"bad\" بعد عكسها لتصبح \"bad\" مجددًا لأن الحرفين b وd يتبادلان مكانيهما تمامًا.",
     "faq.q5": "هل يُرسَل نصي إلى أي خادم؟",
-    "faq.a5": "لا. يعمل مولّد النص المقلوب هذا بالكامل داخل متصفحك — لا يُرفع أو يُسجَّل أو يُشارَك أي شيء تكتبه أو تلصقه مع أي خادم. يُحفظ آخر نص أدخلته اختياريًا في التخزين المحلي لهذا المتصفح ليبقى موجودًا في المرة القادمة التي تفتح فيها الصفحة؛ ألغِ تحديد \"احفظ نصي في هذا المتصفح\" لإبقاء الجلسة الحالية خاصة، ومسح الحقل يحذف فورًا أي نسخة محفوظة."
+    "faq.a5": "لا. يعمل مولّد النص المقلوب هذا بالكامل داخل متصفحك — لا يُرفع أو يُسجَّل أو يُشارَك أي شيء تكتبه أو تلصقه مع أي خادم. يُحفظ آخر نص أدخلته اختياريًا في التخزين المحلي لهذا المتصفح ليبقى موجودًا في المرة القادمة التي تفتح فيها الصفحة؛ ألغِ تحديد \"احفظ نصي في هذا المتصفح\" لإبقاء الجلسة الحالية خاصة، ومسح الحقل يحذف فورًا أي نسخة محفوظة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -240,7 +265,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la vraie différence entre les résultats « à l'envers » et « en miroir » ?",
     "faq.a4": "Chacun retourne le texte selon un axe différent. À l'envers simule une rotation de toute la page à 180 degrés : il inverse l'ordre des caractères à l'intérieur de chaque ligne et inverse aussi l'ordre des lignes elles-mêmes, si bien qu'un résultat à l'envers sur plusieurs lignes se lit de la dernière ligne à la première. En miroir simule le fait de tenir le texte devant un miroir vertical : il inverse l'ordre des caractères à l'intérieur de chaque ligne, mais conserve l'ordre haut-bas des lignes, car un miroir ne retourne que la gauche et la droite. Les mots courts et symétriques illustrent bien la différence — mettre \"SOS\" en miroir donne \"ƧOƧ\", tandis que \"bad\" redevient \"bad\" en miroir, car le b et le d échangent exactement leurs places.",
     "faq.q5": "Mon texte est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Ce générateur de texte à l'envers fonctionne entièrement dans votre navigateur — rien de ce que vous tapez ou collez n'est envoyé, enregistré ou partagé avec un serveur. Votre saisie la plus récente est éventuellement sauvegardée dans le stockage local de ce navigateur pour être encore là à votre prochaine visite ; décochez « Enregistrer mon texte dans ce navigateur » pour garder la session actuelle privée, et vider le champ supprime immédiatement toute copie enregistrée."
+    "faq.a5": "Non. Ce générateur de texte à l'envers fonctionne entièrement dans votre navigateur — rien de ce que vous tapez ou collez n'est envoyé, enregistré ou partagé avec un serveur. Votre saisie la plus récente est éventuellement sauvegardée dans le stockage local de ce navigateur pour être encore là à votre prochaine visite ; décochez « Enregistrer mon texte dans ce navigateur » pour garder la session actuelle privée, et vider le champ supprime immédiatement toute copie enregistrée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -279,7 +309,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"উল্টো\" আর \"মিরর\" ফলাফলের মধ্যে আসল পার্থক্য কী?",
     "faq.a4": "দুটি ভিন্ন অক্ষে টেক্সটকে উল্টে দেয়। উল্টো মোড পুরো পাতাকে ১৮০ ডিগ্রি ঘোরানোর মতো কাজ করে: এটি প্রতিটি লাইনের ভেতরে অক্ষরের ক্রম উল্টে দেয় এবং লাইনগুলোর নিজস্ব ক্রমও উল্টে দেয়, তাই একাধিক লাইনের উল্টো ফলাফল শেষ লাইন থেকে প্রথম লাইন পর্যন্ত পড়া যায়। মিরর মোড টেক্সটকে একটি উলম্ব আয়নার সামনে ধরার মতো কাজ করে: এটি প্রতিটি লাইনের ভেতরে অক্ষরের ক্রম উল্টে দেয়, কিন্তু লাইনগুলোর উপর-নিচ ক্রম অপরিবর্তিত রাখে, কারণ আয়না শুধু বাম-ডান উল্টে দেয়। ছোট, প্রতিসম দেখতে শব্দগুলো এই পার্থক্য ভালোভাবে দেখায় — \"SOS\" মিরর করলে \"ƧOƧ\" পাওয়া যায়, অথচ \"bad\" মিরর করলে আবার \"bad\"-ই ফিরে আসে, কারণ b আর d ঠিক একে অপরের জায়গায় বদলে যায়।",
     "faq.q5": "আমার লেখা কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই উল্টো টেক্সট জেনারেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যা কিছু টাইপ বা পেস্ট করেন, তার কিছুই কোনো সার্ভারে আপলোড, রেকর্ড বা শেয়ার করা হয় না। আপনার সাম্প্রতিক ইনপুটটি ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়, যাতে পরের বার পাতাটি খুললে সেটি এখানে থাকে; \"এই ব্রাউজারে আমার লেখা সংরক্ষণ করুন\" আনচেক করলে বর্তমান সেশনটি ব্যক্তিগত থাকে, আর বাক্সটি খালি করলে সংরক্ষিত কপিও সাথে সাথে মুছে যায়।"
+    "faq.a5": "না। এই উল্টো টেক্সট জেনারেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যা কিছু টাইপ বা পেস্ট করেন, তার কিছুই কোনো সার্ভারে আপলোড, রেকর্ড বা শেয়ার করা হয় না। আপনার সাম্প্রতিক ইনপুটটি ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়, যাতে পরের বার পাতাটি খুললে সেটি এখানে থাকে; \"এই ব্রাউজারে আমার লেখা সংরক্ষণ করুন\" আনচেক করলে বর্তমান সেশনটি ব্যক্তিগত থাকে, আর বাক্সটি খালি করলে সংরক্ষিত কপিও সাথে সাথে মুছে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -318,7 +353,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a diferença real entre os resultados \"de cabeça para baixo\" e \"espelhado\"?",
     "faq.a4": "Cada um vira o texto em um eixo diferente. De cabeça para baixo simula girar a página inteira 180 graus: inverte a ordem dos caracteres dentro de cada linha e também inverte a ordem das próprias linhas, então um resultado invertido com várias linhas se lê da última linha até a primeira. Espelhado simula segurar o texto diante de um espelho vertical: inverte a ordem dos caracteres dentro de cada linha, mas mantém a ordem das linhas de cima para baixo, já que um espelho só vira da esquerda para a direita. Palavras curtas e simétricas mostram bem essa diferença — espelhar \"SOS\" dá \"ƧOƧ\", enquanto \"bad\" espelhado volta a ser \"bad\", porque o b e o d trocam exatamente de posição.",
     "faq.q5": "Meu texto é enviado para algum servidor?",
-    "faq.a5": "Não. Este gerador de texto invertido funciona inteiramente no seu navegador — nada do que você digita ou cola é enviado, registrado ou compartilhado com qualquer servidor. Seu texto mais recente é opcionalmente salvo no armazenamento local deste navegador para continuar aqui na próxima vez que você abrir a página; desmarque \"Salvar meu texto neste navegador\" para manter a sessão atual privada, e esvaziar a caixa remove imediatamente qualquer cópia salva."
+    "faq.a5": "Não. Este gerador de texto invertido funciona inteiramente no seu navegador — nada do que você digita ou cola é enviado, registrado ou compartilhado com qualquer servidor. Seu texto mais recente é opcionalmente salvo no armazenamento local deste navegador para continuar aqui na próxima vez que você abrir a página; desmarque \"Salvar meu texto neste navegador\" para manter a sessão atual privada, e esvaziar a caixa remove imediatamente qualquer cópia salva.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -357,7 +397,12 @@ window.I18N_LOCALES = {
     "faq.q4": "В чём реальная разница между результатами «вверх ногами» и «зеркально»?",
     "faq.a4": "Каждый переворачивает текст по своей оси. Вверх ногами имитирует поворот всей страницы на 180 градусов: меняется порядок символов внутри каждой строки, а также порядок самих строк, поэтому многострочный перевёрнутый результат читается от последней строки к первой. Зеркально имитирует поднесение текста к вертикальному зеркалу: меняется порядок символов внутри каждой строки, но порядок строк сверху вниз сохраняется, ведь зеркало переворачивает только слева направо. Короткие симметричные слова хорошо показывают эту разницу — зеркальное отражение \"SOS\" даёт \"ƧOƧ\", а \"bad\" при отражении снова становится \"bad\", потому что b и d меняются местами ровно так, что всё сходится.",
     "faq.q5": "Отправляется ли мой текст на сервер?",
-    "faq.a5": "Нет. Этот генератор перевёрнутого текста работает полностью в вашем браузере — ничего из того, что вы вводите или вставляете, не загружается, не записывается и не передаётся ни на какой сервер. Ваш последний введённый текст по желанию сохраняется в локальном хранилище браузера, чтобы оставаться на месте при следующем открытии страницы; снимите флажок «Сохранять мой текст в этом браузере», чтобы сессия оставалась приватной, а очистка поля сразу удаляет любую сохранённую копию."
+    "faq.a5": "Нет. Этот генератор перевёрнутого текста работает полностью в вашем браузере — ничего из того, что вы вводите или вставляете, не загружается, не записывается и не передаётся ни на какой сервер. Ваш последний введённый текст по желанию сохраняется в локальном хранилище браузера, чтобы оставаться на месте при следующем открытии страницы; снимите флажок «Сохранять мой текст в этом браузере», чтобы сессия оставалась приватной, а очистка поля сразу удаляет любую сохранённую копию.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -396,7 +441,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"الٹا\" اور \"آئینہ نما\" نتائج میں اصل فرق کیا ہے؟",
     "faq.a4": "دونوں متن کو مختلف محور پر پلٹتے ہیں۔ الٹا موڈ پورے صفحے کو 180 ڈگری گھمانے کی نقل کرتا ہے: یہ ہر سطر کے اندر حروف کی ترتیب الٹتا ہے اور سطروں کی اپنی ترتیب بھی الٹ دیتا ہے، اسی لیے کئی سطروں والا الٹا نتیجہ آخری سطر سے پہلی سطر تک پڑھا جاتا ہے۔ آئینہ نما موڈ متن کو عمودی آئینے کے سامنے رکھنے کی نقل کرتا ہے: یہ ہر سطر کے اندر حروف کی ترتیب الٹتا ہے، لیکن سطروں کی اوپر سے نیچے ترتیب ویسی ہی رہتی ہے، کیونکہ آئینہ صرف بائیں سے دائیں پلٹتا ہے۔ چھوٹے، ہم آہنگ نظر آنے والے الفاظ یہ فرق واضح طور پر دکھاتے ہیں — \"SOS\" کو آئینہ نما بنانے پر \"ƧOƧ\" ملتا ہے، جبکہ \"bad\" آئینہ نما ہو کر دوبارہ \"bad\" ہی بن جاتا ہے، کیونکہ b اور d بالکل ایک دوسرے کی جگہ پر آ جاتے ہیں۔",
     "faq.q5": "کیا میرا متن کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ الٹا ٹیکسٹ جنریٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو کچھ بھی ٹائپ یا پیسٹ کرتے ہیں وہ کسی سرور پر اپ لوڈ، ریکارڈ یا شیئر نہیں کیا جاتا۔ آپ کا تازہ ترین ان پٹ اختیاری طور پر اس براؤزر کے لوکل اسٹوریج میں محفوظ ہو جاتا ہے تاکہ اگلی بار صفحہ کھولنے پر وہ موجود رہے؛ \"میرا متن اس براؤزر میں محفوظ کریں\" کو ان چیک کر کے موجودہ سیشن نجی رکھا جا سکتا ہے، اور خانہ خالی کرنے سے محفوظ شدہ کاپی فوراً حذف ہو جاتی ہے۔"
+    "faq.a5": "نہیں۔ یہ الٹا ٹیکسٹ جنریٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو کچھ بھی ٹائپ یا پیسٹ کرتے ہیں وہ کسی سرور پر اپ لوڈ، ریکارڈ یا شیئر نہیں کیا جاتا۔ آپ کا تازہ ترین ان پٹ اختیاری طور پر اس براؤزر کے لوکل اسٹوریج میں محفوظ ہو جاتا ہے تاکہ اگلی بار صفحہ کھولنے پر وہ موجود رہے؛ \"میرا متن اس براؤزر میں محفوظ کریں\" کو ان چیک کر کے موجودہ سیشن نجی رکھا جا سکتا ہے، اور خانہ خالی کرنے سے محفوظ شدہ کاپی فوراً حذف ہو جاتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Indonesia",
@@ -435,7 +485,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa perbedaan sebenarnya antara hasil \"terbalik\" dan \"cermin\"?",
     "faq.a4": "Keduanya membalik teks pada sumbu yang berbeda. Terbalik meniru pemutaran seluruh halaman sebesar 180 derajat: ia membalik urutan karakter di dalam setiap baris dan juga membalik urutan baris itu sendiri, sehingga hasil terbalik dengan banyak baris dibaca dari baris terakhir ke baris pertama. Cermin meniru teks yang dipegang di depan cermin vertikal: ia membalik urutan karakter di dalam setiap baris, tetapi urutan baris dari atas ke bawah tetap sama, karena cermin hanya membalik dari kiri ke kanan. Kata-kata pendek yang simetris menunjukkan perbedaan ini dengan jelas — mencerminkan \"SOS\" menghasilkan \"ƧOƧ\", sedangkan \"bad\" yang dicerminkan kembali menjadi \"bad\", karena b dan d bertukar tepat pada posisi yang saling meniadakan.",
     "faq.q5": "Apakah teks saya dikirim ke server?",
-    "faq.a5": "Tidak. Generator teks terbalik ini berjalan sepenuhnya di browser Anda — apa pun yang Anda ketik atau tempel tidak diunggah, dicatat, atau dibagikan ke server mana pun. Input terbaru Anda secara opsional disimpan di penyimpanan lokal browser ini agar tetap ada saat Anda membuka halaman berikutnya; hapus centang \"Simpan teks saya di browser ini\" untuk menjaga sesi saat ini tetap privat, dan mengosongkan kotak akan langsung menghapus salinan yang tersimpan."
+    "faq.a5": "Tidak. Generator teks terbalik ini berjalan sepenuhnya di browser Anda — apa pun yang Anda ketik atau tempel tidak diunggah, dicatat, atau dibagikan ke server mana pun. Input terbaru Anda secara opsional disimpan di penyimpanan lokal browser ini agar tetap ada saat Anda membuka halaman berikutnya; hapus centang \"Simpan teks saya di browser ini\" untuk menjaga sesi saat ini tetap privat, dan mengosongkan kotak akan langsung menghapus salinan yang tersimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -474,7 +529,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist der eigentliche Unterschied zwischen den Ergebnissen \"auf dem Kopf\" und \"gespiegelt\"?",
     "faq.a4": "Beide klappen den Text um eine andere Achse. Auf dem Kopf simuliert das Drehen der gesamten Seite um 180 Grad: Es kehrt die Zeichenreihenfolge innerhalb jeder Zeile um und dreht auch die Reihenfolge der Zeilen selbst um, sodass ein mehrzeiliges Kopfüber-Ergebnis von der letzten bis zur ersten Zeile gelesen wird. Gespiegelt simuliert das Halten des Textes vor einen senkrechten Spiegel: Es kehrt die Zeichenreihenfolge innerhalb jeder Zeile um, behält aber die Reihenfolge der Zeilen von oben nach unten bei, da ein Spiegel nur links und rechts vertauscht. Kurze, symmetrisch wirkende Wörter zeigen den Unterschied gut — das Spiegeln von \"SOS\" ergibt \"ƧOƧ\", während \"bad\" gespiegelt wieder \"bad\" ergibt, weil b und d genau an den passenden Stellen die Plätze tauschen.",
     "faq.q5": "Wird mein Text an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Generator für auf den Kopf gestellten Text läuft vollständig in deinem Browser — nichts von dem, was du eingibst oder einfügst, wird hochgeladen, protokolliert oder mit einem Server geteilt. Deine zuletzt eingegebene Eingabe wird optional im lokalen Speicher dieses Browsers gespeichert, damit sie beim nächsten Öffnen der Seite noch da ist; deaktiviere \"Meinen Text in diesem Browser speichern\", um die aktuelle Sitzung privat zu halten — beim Leeren des Feldes wird eine gespeicherte Kopie sofort entfernt."
+    "faq.a5": "Nein. Dieser Generator für auf den Kopf gestellten Text läuft vollständig in deinem Browser — nichts von dem, was du eingibst oder einfügst, wird hochgeladen, protokolliert oder mit einem Server geteilt. Deine zuletzt eingegebene Eingabe wird optional im lokalen Speicher dieses Browsers gespeichert, damit sie beim nächsten Öffnen der Seite noch da ist; deaktiviere \"Meinen Text in diesem Browser speichern\", um die aktuelle Sitzung privat zu halten — beim Leeren des Feldes wird eine gespeicherte Kopie sofort entfernt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -513,7 +573,12 @@ window.I18N_LOCALES = {
     "faq.q4": "「さかさま」と「鏡文字」の結果には実際どんな違いがあるのですか？",
     "faq.a4": "それぞれ異なる軸で文字を反転させます。「さかさま」はページ全体を180度回転させるのと同じで、各行内の文字順序を反転させ、さらに行そのものの順序も反転させるため、複数行のさかさま結果は最後の行から最初の行の順に読めます。「鏡文字」はテキストを縦の鏡に映すのと同じで、各行内の文字順序は反転させますが、行の上下の順序はそのままです。鏡は左右しか反転させないためです。短くて対称的な単語ではこの違いがよくわかります — \"SOS\" を鏡文字にすると \"ƧOƧ\" になりますが、\"bad\" を鏡文字にすると再び \"bad\" に戻ります。b と d がちょうど入れ替わる位置にあるためです。",
     "faq.q5": "入力したテキストはサーバーに送信されますか？",
-    "faq.a5": "いいえ。このさかさま文字ジェネレーターはすべてブラウザ内で動作します — 入力または貼り付けた内容がサーバーにアップロード・記録・共有されることはありません。直近の入力内容はこのブラウザのローカルストレージに任意で保存され、次回ページを開いたときにも残ります。「このブラウザにテキストを保存する」のチェックを外せば現在のセッション内だけの扱いになり、テキストボックスを空にすると保存されたコピーも即座に削除されます。"
+    "faq.a5": "いいえ。このさかさま文字ジェネレーターはすべてブラウザ内で動作します — 入力または貼り付けた内容がサーバーにアップロード・記録・共有されることはありません。直近の入力内容はこのブラウザのローカルストレージに任意で保存され、次回ページを開いたときにも残ります。「このブラウザにテキストを保存する」のチェックを外せば現在のセッション内だけの扱いになり、テキストボックスを空にすると保存されたコピーも即座に削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -552,6 +617,11 @@ window.I18N_LOCALES = {
     "faq.q4": "\"거꾸로\"와 \"거울 반전\" 결과는 실제로 무엇이 다른가요?",
     "faq.a4": "둘은 서로 다른 축으로 텍스트를 뒤집습니다. 거꾸로는 페이지 전체를 180도 회전시키는 것과 같아서, 각 줄 안의 문자 순서를 뒤집을 뿐 아니라 줄 자체의 순서도 뒤집습니다. 그래서 여러 줄로 된 거꾸로 결과는 마지막 줄부터 첫 줄 순서로 읽히게 됩니다. 거울 반전은 텍스트를 세로 거울 앞에 비추는 것과 같아서, 각 줄 안의 문자 순서만 뒤집고 줄의 위아래 순서는 그대로 유지합니다. 거울은 좌우만 뒤집기 때문입니다. 짧고 대칭적인 단어에서 이 차이가 잘 드러나는데, \"SOS\"를 거울 반전하면 \"ƧOƧ\"가 되지만, \"bad\"는 거울 반전해도 다시 \"bad\"가 됩니다. b와 d가 정확히 서로의 자리를 맞바꾸기 때문입니다.",
     "faq.q5": "제 텍스트가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 거꾸로 텍스트 생성기는 전적으로 브라우저 안에서 동작합니다 — 입력하거나 붙여넣은 내용은 어떤 서버로도 업로드·기록·공유되지 않습니다. 가장 최근에 입력한 내용은 원하는 경우에만 이 브라우저의 로컬 저장소에 저장되어 다음에 페이지를 열었을 때도 남아 있습니다. \"이 브라우저에 내 텍스트 저장\"의 체크를 해제하면 현재 세션에서만 비공개로 유지되며, 입력창을 비우면 저장된 사본도 즉시 삭제됩니다."
+    "faq.a5": "아니요. 이 거꾸로 텍스트 생성기는 전적으로 브라우저 안에서 동작합니다 — 입력하거나 붙여넣은 내용은 어떤 서버로도 업로드·기록·공유되지 않습니다. 가장 최근에 입력한 내용은 원하는 경우에만 이 브라우저의 로컬 저장소에 저장되어 다음에 페이지를 열었을 때도 남아 있습니다. \"이 브라우저에 내 텍스트 저장\"의 체크를 해제하면 현재 세션에서만 비공개로 유지되며, 입력창을 비우면 저장된 사본도 즉시 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

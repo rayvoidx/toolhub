@@ -74,7 +74,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Does this tool assume deposits at the start or end of the month?",
     "faq.a4": "It assumes each deposit is made at the start of the month (an annuity-due), so every deposit earns one extra period of interest compared with end-of-month timing. If your real plan deposits at the end of the month you will earn slightly less than shown. Depositing earlier in the cycle is one simple way to squeeze a little more interest out of the same monthly deposit interest calculator plan.",
     "faq.q5": "Lump sum vs monthly deposits at the same rate — which earns more?",
-    "faq.a5": "A single lump sum left for the whole term earns more interest than the same total split into monthly deposits, because the lump sum is invested for longer. In this savings calculator you can model a lump sum by putting it in the starting balance, a savings plan by using the monthly deposit, or combine both to compare them on one screen."
+    "faq.a5": "A single lump sum left for the whole term earns more interest than the same total split into monthly deposits, because the lump sum is invested for longer. In this savings calculator you can model a lump sum by putting it in the starting balance, a savings plan by using the monthly deposit, or combine both to compare them on one screen.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -133,7 +138,12 @@ window.I18N_LOCALES = {
     "faq.q4": "本工具假设在月初还是月末存款？",
     "faq.a4": "它假设每笔存款在月初存入（期初年金），因此每笔存款都比月末存入多赚一期利息。如果你的实际计划在月末存入，到手会略少于显示金额。在同样的每月存款计划下，早点存入是多赚一点利息的简单方法。",
     "faq.q5": "同样利率下，一次性存入与每月存款哪个赚得多？",
-    "faq.a5": "把同样的总额一次性存入整个期限，会比拆成每月存款赚更多利息，因为这笔钱投资的时间更长。在这个储蓄计算器里，你可以把一次性金额填入起始余额来模拟，或用每月存款来模拟储蓄计划，也可以两者结合，在一个界面上对比。"
+    "faq.a5": "把同样的总额一次性存入整个期限，会比拆成每月存款赚更多利息，因为这笔钱投资的时间更长。在这个储蓄计算器里，你可以把一次性金额填入起始余额来模拟，或用每月存款来模拟储蓄计划，也可以两者结合，在一个界面上对比。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -192,7 +202,12 @@ window.I18N_LOCALES = {
     "faq.q4": "यह टूल महीने की शुरुआत में जमा मानता है या अंत में?",
     "faq.a4": "यह मानता है कि हर जमा महीने की शुरुआत में होता है (एन्युटी-ड्यू), इसलिए हर जमा महीने के अंत की तुलना में एक अतिरिक्त अवधि का ब्याज कमाती है। अगर आपकी असली योजना महीने के अंत में जमा करती है तो दिखाए गए से थोड़ा कम मिलेगा। महीने में जल्दी जमा करना उसी योजना से थोड़ा अधिक ब्याज पाने का सरल तरीका है।",
     "faq.q5": "समान दर पर एकमुश्त बनाम मासिक जमा — कौन ज़्यादा कमाता है?",
-    "faq.a5": "पूरी अवधि के लिए रखी गई एकमुश्त राशि उतनी ही कुल राशि को मासिक जमा में बाँटने से ज़्यादा ब्याज कमाती है, क्योंकि एकमुश्त राशि अधिक समय तक निवेशित रहती है। इस बचत कैलकुलेटर में आप एकमुश्त राशि को प्रारंभिक शेष में डालकर, या मासिक जमा से बचत योजना बनाकर, या दोनों मिलाकर एक ही स्क्रीन पर तुलना कर सकते हैं।"
+    "faq.a5": "पूरी अवधि के लिए रखी गई एकमुश्त राशि उतनी ही कुल राशि को मासिक जमा में बाँटने से ज़्यादा ब्याज कमाती है, क्योंकि एकमुश्त राशि अधिक समय तक निवेशित रहती है। इस बचत कैलकुलेटर में आप एकमुश्त राशि को प्रारंभिक शेष में डालकर, या मासिक जमा से बचत योजना बनाकर, या दोनों मिलाकर एक ही स्क्रीन पर तुलना कर सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -251,7 +266,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Esta herramienta asume depósitos al inicio o al final del mes?",
     "faq.a4": "Asume que cada depósito se hace al inicio del mes (anualidad anticipada), así que cada depósito gana un periodo extra de interés frente al final del mes. Si tu plan real deposita a fin de mes, ganarás algo menos de lo mostrado. Depositar antes en el ciclo es una forma sencilla de exprimir un poco más de interés del mismo plan.",
     "faq.q5": "Suma única frente a depósitos mensuales a la misma tasa: ¿qué gana más?",
-    "faq.a5": "Una suma única mantenida todo el plazo gana más interés que el mismo total repartido en depósitos mensuales, porque está invertida más tiempo. En esta calculadora de ahorro puedes modelar una suma única en el saldo inicial, un plan de ahorro con el depósito mensual, o combinar ambos y compararlos en una sola pantalla."
+    "faq.a5": "Una suma única mantenida todo el plazo gana más interés que el mismo total repartido en depósitos mensuales, porque está invertida más tiempo. En esta calculadora de ahorro puedes modelar una suma única en el saldo inicial, un plan de ahorro con el depósito mensual, o combinar ambos y compararlos en una sola pantalla.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -310,7 +330,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تفترض الأداة الإيداع في بداية الشهر أم نهايته؟",
     "faq.a4": "تفترض أن كل إيداع يتم في بداية الشهر (دفعة مقدمة)، فيكسب كل إيداع فترة فائدة إضافية مقارنة بنهاية الشهر. إذا كانت خطتك الفعلية تودع في نهاية الشهر فستكسب أقل قليلاً مما هو معروض. والإيداع مبكراً في الدورة وسيلة بسيطة لكسب فائدة أكبر قليلاً من الخطة نفسها.",
     "faq.q5": "مبلغ مقطوع مقابل إيداعات شهرية بالنسبة نفسها — أيهما يربح أكثر؟",
-    "faq.a5": "المبلغ المقطوع المتروك طوال المدة يكسب فائدة أكثر من المبلغ نفسه موزعاً على إيداعات شهرية، لأنه يبقى مستثمراً لفترة أطول. في حاسبة الادخار هذه يمكنك تمثيل مبلغ مقطوع في الرصيد الابتدائي، أو خطة ادخار عبر الإيداع الشهري، أو الجمع بينهما ومقارنتهما في شاشة واحدة."
+    "faq.a5": "المبلغ المقطوع المتروك طوال المدة يكسب فائدة أكثر من المبلغ نفسه موزعاً على إيداعات شهرية، لأنه يبقى مستثمراً لفترة أطول. في حاسبة الادخار هذه يمكنك تمثيل مبلغ مقطوع في الرصيد الابتدائي، أو خطة ادخار عبر الإيداع الشهري، أو الجمع بينهما ومقارنتهما في شاشة واحدة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -369,7 +394,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Cet outil suppose-t-il des versements en début ou en fin de mois ?",
     "faq.a4": "Il suppose que chaque versement est fait en début de mois (annuité de début), si bien que chaque versement gagne une période d'intérêts de plus qu'en fin de mois. Si votre plan réel verse en fin de mois, vous gagnerez un peu moins qu'affiché. Verser tôt dans le cycle est un moyen simple de tirer un peu plus d'intérêts du même plan.",
     "faq.q5": "Somme unique ou versements mensuels au même taux — lequel rapporte le plus ?",
-    "faq.a5": "Une somme unique laissée toute la durée rapporte plus d'intérêts que le même total réparti en versements mensuels, car elle reste investie plus longtemps. Dans ce calculateur d'épargne, vous pouvez modéliser une somme unique via le solde de départ, un plan d'épargne via le versement mensuel, ou combiner les deux pour les comparer sur un seul écran."
+    "faq.a5": "Une somme unique laissée toute la durée rapporte plus d'intérêts que le même total réparti en versements mensuels, car elle reste investie plus longtemps. Dans ce calculateur d'épargne, vous pouvez modéliser une somme unique via le solde de départ, un plan d'épargne via le versement mensuel, ou combiner les deux pour les comparer sur un seul écran.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -428,7 +458,12 @@ window.I18N_LOCALES = {
     "faq.q4": "টুলটি মাসের শুরুতে না শেষে জমা ধরে?",
     "faq.a4": "এটি ধরে নেয় প্রতিটি জমা মাসের শুরুতে হয় (অ্যানুইটি-ডিউ), তাই প্রতিটি জমা মাসের শেষের তুলনায় এক অতিরিক্ত মেয়াদের সুদ পায়। আপনার বাস্তব পরিকল্পনা মাসের শেষে জমা করলে দেখানো থেকে একটু কম পাবেন। চক্রে আগে জমা দেওয়া একই পরিকল্পনা থেকে একটু বেশি সুদ পাওয়ার সহজ উপায়।",
     "faq.q5": "একই হারে এককালীন বনাম মাসিক জমা — কোনটি বেশি আয় করে?",
-    "faq.a5": "পুরো মেয়াদে রাখা এককালীন অর্থ একই মোট অর্থকে মাসিক জমায় ভাগ করার চেয়ে বেশি সুদ পায়, কারণ এটি বেশি সময় বিনিয়োগে থাকে। এই সঞ্চয় ক্যালকুলেটরে আপনি এককালীন অর্থ শুরুর ব্যালেন্সে দিয়ে, বা মাসিক জমায় সঞ্চয় পরিকল্পনা করে, বা দুটো মিলিয়ে এক স্ক্রিনে তুলনা করতে পারেন।"
+    "faq.a5": "পুরো মেয়াদে রাখা এককালীন অর্থ একই মোট অর্থকে মাসিক জমায় ভাগ করার চেয়ে বেশি সুদ পায়, কারণ এটি বেশি সময় বিনিয়োগে থাকে। এই সঞ্চয় ক্যালকুলেটরে আপনি এককালীন অর্থ শুরুর ব্যালেন্সে দিয়ে, বা মাসিক জমায় সঞ্চয় পরিকল্পনা করে, বা দুটো মিলিয়ে এক স্ক্রিনে তুলনা করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -487,7 +522,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Esta ferramenta assume depósitos no início ou no fim do mês?",
     "faq.a4": "Ela assume que cada depósito é feito no início do mês (anuidade antecipada), então cada depósito rende um período extra de juros em relação ao fim do mês. Se o seu plano real deposita no fim do mês, você renderá um pouco menos do que o mostrado. Depositar mais cedo no ciclo é um jeito simples de extrair um pouco mais de juros do mesmo plano.",
     "faq.q5": "Quantia única x depósitos mensais à mesma taxa — o que rende mais?",
-    "faq.a5": "Uma quantia única mantida por todo o prazo rende mais juros do que o mesmo total dividido em depósitos mensais, porque fica investida por mais tempo. Nesta calculadora de poupança você pode simular uma quantia única no saldo inicial, um plano de poupança no depósito mensal, ou combinar os dois e compará-los numa só tela."
+    "faq.a5": "Uma quantia única mantida por todo o prazo rende mais juros do que o mesmo total dividido em depósitos mensais, porque fica investida por mais tempo. Nesta calculadora de poupança você pode simular uma quantia única no saldo inicial, um plano de poupança no depósito mensal, ou combinar os dois e compará-los numa só tela.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -546,7 +586,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Инструмент предполагает взносы в начале или в конце месяца?",
     "faq.a4": "Он предполагает, что каждый взнос делается в начале месяца (пренумерандо), поэтому каждый взнос приносит на один период процентов больше, чем при взносе в конце месяца. Если ваш реальный план предполагает взнос в конце месяца, вы получите чуть меньше показанного. Взнос в начале цикла — простой способ выжать чуть больше процентов из того же плана.",
     "faq.q5": "Единовременная сумма или ежемесячные взносы при той же ставке — что выгоднее?",
-    "faq.a5": "Единовременная сумма, оставленная на весь срок, приносит больше процентов, чем та же сумма, разбитая на ежемесячные взносы, так как дольше находится в обороте. В этом калькуляторе накоплений вы можете смоделировать единовременную сумму в начальном балансе, план накоплений через ежемесячный взнос или совместить их и сравнить на одном экране."
+    "faq.a5": "Единовременная сумма, оставленная на весь срок, приносит больше процентов, чем та же сумма, разбитая на ежемесячные взносы, так как дольше находится в обороте. В этом калькуляторе накоплений вы можете смоделировать единовременную сумму в начальном балансе, план накоплений через ежемесячный взнос или совместить их и сравнить на одном экране.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -605,7 +650,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ ٹول مہینے کے شروع میں جمع مانتا ہے یا آخر میں؟",
     "faq.a4": "یہ فرض کرتا ہے کہ ہر جمع مہینے کے شروع میں ہوتا ہے (اینوٹی-ڈیو)، اس لیے ہر جمع مہینے کے آخر کے مقابلے ایک اضافی مدت کا سود کماتی ہے۔ اگر آپ کا اصل منصوبہ مہینے کے آخر میں جمع کرتا ہے تو دکھائی گئی رقم سے تھوڑا کم ملے گا۔ سائیکل میں جلدی جمع کرنا اسی منصوبے سے تھوڑا زیادہ سود پانے کا آسان طریقہ ہے۔",
     "faq.q5": "یکمشت بمقابلہ ماہانہ جمع اسی شرح پر — کون زیادہ کماتا ہے؟",
-    "faq.a5": "پوری مدت کے لیے رکھی گئی یکمشت رقم اسی کل رقم کو ماہانہ جمع میں بانٹنے سے زیادہ سود کماتی ہے، کیونکہ یہ زیادہ عرصہ سرمایہ کاری میں رہتی ہے۔ اس بچت کیلکولیٹر میں آپ یکمشت رقم کو ابتدائی بیلنس میں ڈال کر، یا ماہانہ جمع سے بچت منصوبہ بنا کر، یا دونوں ملا کر ایک ہی اسکرین پر موازنہ کر سکتے ہیں۔"
+    "faq.a5": "پوری مدت کے لیے رکھی گئی یکمشت رقم اسی کل رقم کو ماہانہ جمع میں بانٹنے سے زیادہ سود کماتی ہے، کیونکہ یہ زیادہ عرصہ سرمایہ کاری میں رہتی ہے۔ اس بچت کیلکولیٹر میں آپ یکمشت رقم کو ابتدائی بیلنس میں ڈال کر، یا ماہانہ جمع سے بچت منصوبہ بنا کر، یا دونوں ملا کر ایک ہی اسکرین پر موازنہ کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -664,7 +714,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah alat ini mengasumsikan setoran di awal atau akhir bulan?",
     "faq.a4": "Alat ini mengasumsikan tiap setoran dilakukan di awal bulan (anuitas awal), sehingga tiap setoran mendapat satu periode bunga ekstra dibanding akhir bulan. Jika rencana nyata Anda menyetor di akhir bulan, hasilnya sedikit lebih kecil dari yang ditampilkan. Menyetor lebih awal dalam siklus adalah cara sederhana memeras sedikit bunga tambahan dari rencana yang sama.",
     "faq.q5": "Sekaligus vs setoran bulanan pada tarif sama — mana yang lebih menguntungkan?",
-    "faq.a5": "Dana sekaligus yang dibiarkan sepanjang jangka menghasilkan bunga lebih banyak daripada total sama yang dibagi menjadi setoran bulanan, karena diinvestasikan lebih lama. Di kalkulator tabungan ini Anda bisa memodelkan dana sekaligus di saldo awal, rencana menabung lewat setoran bulanan, atau menggabungkan keduanya dan membandingkannya dalam satu layar."
+    "faq.a5": "Dana sekaligus yang dibiarkan sepanjang jangka menghasilkan bunga lebih banyak daripada total sama yang dibagi menjadi setoran bulanan, karena diinvestasikan lebih lama. Di kalkulator tabungan ini Anda bisa memodelkan dana sekaligus di saldo awal, rencana menabung lewat setoran bulanan, atau menggabungkan keduanya dan membandingkannya dalam satu layar.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -723,7 +778,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Nimmt das Tool Einzahlungen zu Monatsbeginn oder Monatsende an?",
     "faq.a4": "Es nimmt an, dass jede Einzahlung zu Monatsbeginn erfolgt (vorschüssig), sodass jede Einzahlung eine Zinsperiode mehr bringt als am Monatsende. Zahlt Ihr echter Plan am Monatsende ein, erhalten Sie etwas weniger als angezeigt. Früher im Zyklus einzuzahlen ist ein einfacher Weg, aus demselben Plan etwas mehr Zinsen herauszuholen.",
     "faq.q5": "Einmalbetrag vs. monatliche Einzahlungen zum selben Satz — was bringt mehr?",
-    "faq.a5": "Ein Einmalbetrag, der die ganze Laufzeit liegt, bringt mehr Zinsen als dieselbe Summe in monatlichen Einzahlungen, weil er länger angelegt ist. In diesem Sparrechner können Sie einen Einmalbetrag über das Startguthaben abbilden, einen Sparplan über die monatliche Einzahlung, oder beides kombinieren und auf einem Bildschirm vergleichen."
+    "faq.a5": "Ein Einmalbetrag, der die ganze Laufzeit liegt, bringt mehr Zinsen als dieselbe Summe in monatlichen Einzahlungen, weil er länger angelegt ist. In diesem Sparrechner können Sie einen Einmalbetrag über das Startguthaben abbilden, einen Sparplan über die monatliche Einzahlung, oder beides kombinieren und auf einem Bildschirm vergleichen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -782,7 +842,12 @@ window.I18N_LOCALES = {
     "faq.q4": "このツールは月初と月末どちらの入金を前提にしている？",
     "faq.a4": "各入金は月初に行われる前提（期首払い）です。そのため各入金は月末よりも 1 期間分多く利息を得ます。実際のプランが月末入金なら、表示より少し少なくなります。サイクルの早い時期に入金するのは、同じプランから少し多く利息を得る簡単な方法です。",
     "faq.q5": "同じ金利で一括と毎月積立 — どちらが多く増える？",
-    "faq.a5": "同じ総額でも、全期間据え置く一括の方が毎月積立より多くの利息を生みます。投資期間が長いためです。この積立計算機では、一括額を初期残高に入れる、毎月の積立で積立プランを組む、あるいは両方を組み合わせて 1 画面で比較できます。"
+    "faq.a5": "同じ総額でも、全期間据え置く一括の方が毎月積立より多くの利息を生みます。投資期間が長いためです。この積立計算機では、一括額を初期残高に入れる、毎月の積立で積立プランを組む、あるいは両方を組み合わせて 1 画面で比較できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -841,6 +906,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 도구는 월초 납입인가요, 월말 납입인가요?",
     "faq.a4": "각 납입이 월초에 이뤄진다고 가정합니다(기초 납입). 그래서 각 납입은 월말 납입보다 한 기간의 이자를 더 받습니다. 실제 계획이 월말 납입이라면 표시된 금액보다 조금 적게 받습니다. 주기 앞쪽에 납입하는 것은 같은 계획에서 이자를 조금 더 받는 간단한 방법입니다.",
     "faq.q5": "같은 이율에서 목돈 예치와 매달 적립 — 어느 쪽이 더 받나요?",
-    "faq.a5": "같은 총액이라도 전 기간 예치하는 목돈이 매달 나눠 넣는 적립보다 이자를 더 받습니다. 투자 기간이 더 길기 때문입니다. 이 적금 계산기에서는 목돈을 시작 잔액에 넣거나, 월 납입으로 적립 계획을 세우거나, 둘을 합쳐 한 화면에서 비교할 수 있습니다."
+    "faq.a5": "같은 총액이라도 전 기간 예치하는 목돈이 매달 나눠 넣는 적립보다 이자를 더 받습니다. 투자 기간이 더 길기 때문입니다. 이 적금 계산기에서는 목돈을 시작 잔액에 넣거나, 월 납입으로 적립 계획을 세우거나, 둘을 합쳐 한 화면에서 비교할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

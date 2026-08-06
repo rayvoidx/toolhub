@@ -190,7 +190,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "This browser cannot decode {enc}. Re-save the file as UTF-8.",
     "tool.err.fileRead": "The file could not be read. It may have been moved or changed.",
     "tool.err.noInput": "Nothing to calculate yet — drop a CSV, paste your history, or press “Fill with example data”.",
-    "tool.err.cancelled": "Cancelled. Nothing was sent anywhere — the file never left this tab."
+    "tool.err.cancelled": "Cancelled. Nothing was sent anywhere — the file never left this tab.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -365,7 +370,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "此浏览器无法解码 {enc}。请将文件另存为 UTF-8。",
     "tool.err.fileRead": "无法读取该文件。它可能已被移动或更改。",
     "tool.err.noInput": "还没有可计算的内容——请拖入 CSV、粘贴你的历史，或点击“填入示例数据”。",
-    "tool.err.cancelled": "已取消。没有向任何地方发送——文件从未离开此标签页。"
+    "tool.err.cancelled": "已取消。没有向任何地方发送——文件从未离开此标签页。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -540,7 +550,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "यह ब्राउज़र {enc} को डिकोड नहीं कर सकता। फ़ाइल को UTF-8 में फिर से सहेजें।",
     "tool.err.fileRead": "फ़ाइल पढ़ी नहीं जा सकी। हो सकता है इसे स्थानांतरित या बदल दिया गया हो।",
     "tool.err.noInput": "अभी गणना के लिए कुछ नहीं — CSV डालें, अपनी हिस्ट्री पेस्ट करें, या “उदाहरण डेटा भरें” दबाएँ।",
-    "tool.err.cancelled": "रद्द किया गया। कहीं कुछ नहीं भेजा गया — फ़ाइल ने कभी यह टैब नहीं छोड़ा।"
+    "tool.err.cancelled": "रद्द किया गया। कहीं कुछ नहीं भेजा गया — फ़ाइल ने कभी यह टैब नहीं छोड़ा।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -715,7 +730,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "Este navegador no puede decodificar {enc}. Vuelve a guardar el archivo como UTF-8.",
     "tool.err.fileRead": "No se pudo leer el archivo. Puede que se haya movido o cambiado.",
     "tool.err.noInput": "Aún no hay nada que calcular — suelta un CSV, pega tu histórico o pulsa «Rellenar con datos de ejemplo».",
-    "tool.err.cancelled": "Cancelado. No se envió nada a ningún sitio — el archivo nunca salió de esta pestaña."
+    "tool.err.cancelled": "Cancelado. No se envió nada a ningún sitio — el archivo nunca salió de esta pestaña.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -890,7 +910,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "لا يستطيع هذا المتصفح فكّ ترميز {enc}. احفظ الملف من جديد بترميز UTF-8.",
     "tool.err.fileRead": "تعذّرت قراءة الملف. ربما نُقل أو تغيّر.",
     "tool.err.noInput": "لا شيء لحسابه بعد — أسقِط ملف CSV، أو الصق سجلّك، أو اضغط «املأ ببيانات مثال».",
-    "tool.err.cancelled": "أُلغي. لم يُرسَل شيء إلى أي مكان — لم يغادر الملف هذا التبويب قط."
+    "tool.err.cancelled": "أُلغي. لم يُرسَل شيء إلى أي مكان — لم يغادر الملف هذا التبويب قط.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -1065,7 +1090,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "Ce navigateur ne peut pas décoder {enc}. Réenregistrez le fichier en UTF-8.",
     "tool.err.fileRead": "Le fichier n'a pas pu être lu. Il a peut-être été déplacé ou modifié.",
     "tool.err.noInput": "Rien à calculer pour l'instant — déposez un CSV, collez votre historique ou cliquez sur « Remplir avec des données d'exemple ».",
-    "tool.err.cancelled": "Annulé. Rien n'a été envoyé nulle part — le fichier n'a jamais quitté cet onglet."
+    "tool.err.cancelled": "Annulé. Rien n'a été envoyé nulle part — le fichier n'a jamais quitté cet onglet.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -1240,7 +1270,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "এই ব্রাউজার {enc} ডিকোড করতে পারে না। ফাইলটি UTF-8 হিসেবে আবার সংরক্ষণ করুন।",
     "tool.err.fileRead": "ফাইলটি পড়া যায়নি। এটি সরানো বা পরিবর্তিত হয়ে থাকতে পারে।",
     "tool.err.noInput": "এখনো হিসাব করার কিছু নেই — CSV ফেলুন, আপনার ইতিহাস পেস্ট করুন, বা “উদাহরণ ডেটা দিয়ে পূরণ করুন” চাপুন।",
-    "tool.err.cancelled": "বাতিল করা হয়েছে। কোথাও কিছু পাঠানো হয়নি — ফাইলটি কখনও এই ট্যাব ছাড়েনি।"
+    "tool.err.cancelled": "বাতিল করা হয়েছে। কোথাও কিছু পাঠানো হয়নি — ফাইলটি কখনও এই ট্যাব ছাড়েনি।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -1415,7 +1450,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "Este navegador não consegue decodificar {enc}. Salve o arquivo novamente como UTF-8.",
     "tool.err.fileRead": "Não foi possível ler o arquivo. Ele pode ter sido movido ou alterado.",
     "tool.err.noInput": "Ainda não há nada para calcular — solte um CSV, cole seu histórico ou clique em “Preencher com dados de exemplo”.",
-    "tool.err.cancelled": "Cancelado. Nada foi enviado a lugar algum — o arquivo nunca saiu desta aba."
+    "tool.err.cancelled": "Cancelado. Nada foi enviado a lugar algum — o arquivo nunca saiu desta aba.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -1590,7 +1630,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "Этот браузер не может декодировать {enc}. Пересохраните файл в UTF-8.",
     "tool.err.fileRead": "Не удалось прочитать файл. Возможно, он был перемещён или изменён.",
     "tool.err.noInput": "Пока нечего рассчитывать — перетащите CSV, вставьте историю или нажмите «Заполнить примером данных».",
-    "tool.err.cancelled": "Отменено. Никуда ничего не отправлено — файл ни разу не покинул эту вкладку."
+    "tool.err.cancelled": "Отменено. Никуда ничего не отправлено — файл ни разу не покинул эту вкладку.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -1765,7 +1810,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "یہ براؤزر {enc} کو ڈی کوڈ نہیں کر سکتا۔ فائل کو دوبارہ UTF-8 میں محفوظ کریں۔",
     "tool.err.fileRead": "فائل پڑھی نہ جا سکی۔ ہو سکتا ہے اسے منتقل یا تبدیل کر دیا گیا ہو۔",
     "tool.err.noInput": "ابھی حساب کے لیے کچھ نہیں — CSV ڈالیں، اپنی تاریخ پیسٹ کریں، یا «مثال ڈیٹا سے بھریں» دبائیں۔",
-    "tool.err.cancelled": "منسوخ کر دیا گیا۔ کہیں کچھ نہیں بھیجا گیا — فائل نے کبھی یہ ٹیب نہیں چھوڑا۔"
+    "tool.err.cancelled": "منسوخ کر دیا گیا۔ کہیں کچھ نہیں بھیجا گیا — فائل نے کبھی یہ ٹیب نہیں چھوڑا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -1940,7 +1990,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "Browser ini tak dapat mendekode {enc}. Simpan ulang berkas sebagai UTF-8.",
     "tool.err.fileRead": "Berkas tak dapat dibaca. Mungkin telah dipindahkan atau diubah.",
     "tool.err.noInput": "Belum ada yang dihitung — jatuhkan CSV, tempel riwayat Anda, atau tekan “Isi dengan data contoh”.",
-    "tool.err.cancelled": "Dibatalkan. Tak ada yang dikirim ke mana pun — berkas tak pernah keluar dari tab ini."
+    "tool.err.cancelled": "Dibatalkan. Tak ada yang dikirim ke mana pun — berkas tak pernah keluar dari tab ini.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -2115,7 +2170,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "Dieser Browser kann {enc} nicht dekodieren. Speichern Sie die Datei erneut als UTF-8.",
     "tool.err.fileRead": "Die Datei konnte nicht gelesen werden. Sie wurde möglicherweise verschoben oder geändert.",
     "tool.err.noInput": "Noch nichts zu berechnen — legen Sie eine CSV ab, fügen Sie Ihre Historie ein oder klicken Sie auf „Mit Beispieldaten füllen“.",
-    "tool.err.cancelled": "Abgebrochen. Es wurde nichts irgendwohin gesendet — die Datei hat diesen Tab nie verlassen."
+    "tool.err.cancelled": "Abgebrochen. Es wurde nichts irgendwohin gesendet — die Datei hat diesen Tab nie verlassen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -2290,7 +2350,12 @@ window.I18N_LOCALES = {
     "tool.err.enc": "このブラウザは {enc} をデコードできません。ファイルをUTF-8で保存し直してください。",
     "tool.err.fileRead": "ファイルを読み取れませんでした。移動または変更された可能性があります。",
     "tool.err.noInput": "まだ計算するものがありません——CSVをドロップするか、履歴を貼り付けるか、「サンプルデータを入力」を押してください。",
-    "tool.err.cancelled": "キャンセルしました。どこにも送信されていません——ファイルはこのタブから一度も出ていません。"
+    "tool.err.cancelled": "キャンセルしました。どこにも送信されていません——ファイルはこのタブから一度も出ていません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -2465,6 +2530,11 @@ window.I18N_LOCALES = {
     "tool.err.enc": "이 브라우저는 {enc}를 디코딩할 수 없습니다. 파일을 UTF-8로 다시 저장하세요.",
     "tool.err.fileRead": "파일을 읽을 수 없습니다. 이동되었거나 변경되었을 수 있습니다.",
     "tool.err.noInput": "아직 계산할 것이 없습니다 — CSV를 놓거나, 이력을 붙여넣거나, '예시 데이터 채우기'를 누르세요.",
-    "tool.err.cancelled": "취소되었습니다. 어디로도 전송되지 않았습니다 — 파일은 이 탭을 떠난 적이 없습니다."
+    "tool.err.cancelled": "취소되었습니다. 어디로도 전송되지 않았습니다 — 파일은 이 탭을 떠난 적이 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

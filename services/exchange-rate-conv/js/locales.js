@@ -58,7 +58,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Are these live, real-time trading rates?",
     "faq.a4": "No — and no free tool should claim to be. These are daily mid-market reference rates, fine for shopping, travel budgets and money transfers. They are not tick-by-tick trading rates, so don't use them for FX dealing or large, time-sensitive transfers.",
     "faq.q5": "Is my amount sent to a server?",
-    "faq.a5": "No. Only the exchange-rate table is fetched; every conversion runs locally in your browser. Nothing you type is uploaded, stored, or shared — no account, no tracking, and it keeps working offline from saved rates."
+    "faq.a5": "No. Only the exchange-rate table is fetched; every conversion runs locally in your browser. Nothing you type is uploaded, stored, or shared — no account, no tracking, and it keeps working offline from saved rates.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -101,7 +106,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这些是实时的交易汇率吗?",
     "faq.a4": "不是 — 任何免费工具都不应声称如此。这些是每日中间价参考汇率,适用于购物、旅行预算和转账。它们不是逐笔交易汇率,请勿用于外汇交易或大额、时间敏感的转账。",
     "faq.q5": "我的金额会发送到服务器吗?",
-    "faq.a5": "不会。只有汇率表会被下载;每一次换算都在你的浏览器本地完成。你输入的任何内容都不会被上传、保存或分享 — 无需账户、无追踪,离线时也能用已保存的汇率继续工作。"
+    "faq.a5": "不会。只有汇率表会被下载;每一次换算都在你的浏览器本地完成。你输入的任何内容都不会被上传、保存或分享 — 无需账户、无追踪,离线时也能用已保存的汇率继续工作。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -144,7 +154,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या ये लाइव, रियल-टाइम ट्रेडिंग दरें हैं?",
     "faq.a4": "नहीं — और किसी मुफ़्त टूल को ऐसा दावा नहीं करना चाहिए। ये दैनिक मिड-मार्केट संदर्भ दरें हैं, जो ख़रीदारी, यात्रा बजट और ट्रांसफ़र के लिए ठीक हैं। ये टिक-दर-टिक ट्रेडिंग दरें नहीं हैं, इसलिए इन्हें FX डीलिंग या बड़े समय-संवेदनशील ट्रांसफ़र के लिए इस्तेमाल न करें।",
     "faq.q5": "क्या मेरी राशि किसी सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। केवल विनिमय-दर तालिका डाउनलोड होती है; हर गणना आपके ब्राउज़र में ही चलती है। आपकी टाइप की गई कोई भी चीज़ अपलोड, सेव या साझा नहीं होती — कोई खाता नहीं, कोई ट्रैकिंग नहीं, और यह ऑफ़लाइन में सेव दरों से चलता रहता है।"
+    "faq.a5": "नहीं। केवल विनिमय-दर तालिका डाउनलोड होती है; हर गणना आपके ब्राउज़र में ही चलती है। आपकी टाइप की गई कोई भी चीज़ अपलोड, सेव या साझा नहीं होती — कोई खाता नहीं, कोई ट्रैकिंग नहीं, और यह ऑफ़लाइन में सेव दरों से चलता रहता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -187,7 +202,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Son tipos de negociación en tiempo real?",
     "faq.a4": "No, y ninguna herramienta gratuita debería afirmarlo. Son tipos de referencia de mercado medio diarios, válidos para compras, presupuestos de viaje y transferencias. No son tipos de negociación al instante, así que no los uses para operar en el mercado de divisas ni para transferencias grandes sensibles al tiempo.",
     "faq.q5": "¿Se envía mi importe a un servidor?",
-    "faq.a5": "No. Solo se descarga la tabla de tipos; cada conversión se ejecuta localmente en tu navegador. Nada de lo que escribes se sube, guarda ni comparte: sin cuenta, sin rastreo, y sigue funcionando sin conexión con los tipos guardados."
+    "faq.a5": "No. Solo se descarga la tabla de tipos; cada conversión se ejecuta localmente en tu navegador. Nada de lo que escribes se sube, guarda ni comparte: sin cuenta, sin rastreo, y sigue funcionando sin conexión con los tipos guardados.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -230,7 +250,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل هذه أسعار تداول لحظية مباشرة؟",
     "faq.a4": "لا — ولا ينبغي لأي أداة مجانية أن تدّعي ذلك. هذه أسعار مرجعية يومية لمنتصف السوق، مناسبة للتسوق وميزانيات السفر والتحويلات. إنها ليست أسعار تداول لحظية، فلا تستخدمها في تداول العملات أو التحويلات الكبيرة الحسّاسة للوقت.",
     "faq.q5": "هل يُرسَل مبلغي إلى خادم؟",
-    "faq.a5": "لا. لا يُنزَّل سوى جدول أسعار الصرف؛ وكل عملية تحويل تُجرى محليًا في متصفحك. لا يُرفع أي شيء تكتبه ولا يُحفظ ولا يُشارَك — بلا حساب، بلا تتبّع، ويستمر في العمل دون اتصال من الأسعار المحفوظة."
+    "faq.a5": "لا. لا يُنزَّل سوى جدول أسعار الصرف؛ وكل عملية تحويل تُجرى محليًا في متصفحك. لا يُرفع أي شيء تكتبه ولا يُحفظ ولا يُشارَك — بلا حساب، بلا تتبّع، ويستمر في العمل دون اتصال من الأسعار المحفوظة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -273,7 +298,12 @@ window.I18N_LOCALES = {
     "faq.q4": "S'agit-il de taux de marché en temps réel ?",
     "faq.a4": "Non — et aucun outil gratuit ne devrait le prétendre. Ce sont des taux de référence interbancaires quotidiens, adaptés aux achats, aux budgets de voyage et aux transferts. Ce ne sont pas des taux de trading en continu : ne les utilisez pas pour opérer sur le marché des changes ni pour de gros transferts sensibles au temps.",
     "faq.q5": "Mon montant est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Seule la table des taux de change est téléchargée ; chaque conversion s'exécute localement dans votre navigateur. Rien de ce que vous saisissez n'est envoyé, enregistré ni partagé — aucun compte, aucun suivi, et cela continue de fonctionner hors ligne à partir des taux enregistrés."
+    "faq.a5": "Non. Seule la table des taux de change est téléchargée ; chaque conversion s'exécute localement dans votre navigateur. Rien de ce que vous saisissez n'est envoyé, enregistré ni partagé — aucun compte, aucun suivi, et cela continue de fonctionner hors ligne à partir des taux enregistrés.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -316,7 +346,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এগুলো কি লাইভ, রিয়েল-টাইম ট্রেডিং রেট?",
     "faq.a4": "না — এবং কোনো বিনামূল্যের টুলের এমন দাবি করা উচিত নয়। এগুলো দৈনিক মিড-মার্কেট রেফারেন্স রেট, কেনাকাটা, ভ্রমণ বাজেট ও ট্রান্সফারের জন্য উপযুক্ত। এগুলো টিক-বাই-টিক ট্রেডিং রেট নয়, তাই FX ডিলিং বা বড়, সময়-সংবেদনশীল ট্রান্সফারে ব্যবহার করবেন না।",
     "faq.q5": "আমার অঙ্ক কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। শুধু বিনিময়-হার তালিকা ডাউনলোড হয়; প্রতিটি রূপান্তর আপনার ব্রাউজারেই চলে। আপনি যা টাইপ করেন তা আপলোড, সেভ বা শেয়ার হয় না — কোনো অ্যাকাউন্ট নেই, ট্র্যাকিং নেই, আর অফলাইনে সেভ করা রেট থেকে কাজ চলতে থাকে।"
+    "faq.a5": "না। শুধু বিনিময়-হার তালিকা ডাউনলোড হয়; প্রতিটি রূপান্তর আপনার ব্রাউজারেই চলে। আপনি যা টাইপ করেন তা আপলোড, সেভ বা শেয়ার হয় না — কোনো অ্যাকাউন্ট নেই, ট্র্যাকিং নেই, আর অফলাইনে সেভ করা রেট থেকে কাজ চলতে থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -359,7 +394,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Estas são taxas de negociação em tempo real?",
     "faq.a4": "Não — e nenhuma ferramenta gratuita deveria alegar isso. São taxas de referência de mercado médio diárias, ótimas para compras, orçamentos de viagem e transferências. Não são taxas de negociação em tempo real, então não as use para operar câmbio nem para transferências grandes sensíveis ao tempo.",
     "faq.q5": "Meu valor é enviado a um servidor?",
-    "faq.a5": "Não. Apenas a tabela de taxas de câmbio é baixada; cada conversão roda localmente no seu navegador. Nada do que você digita é enviado, salvo ou compartilhado — sem conta, sem rastreamento, e continua funcionando offline com as taxas salvas."
+    "faq.a5": "Não. Apenas a tabela de taxas de câmbio é baixada; cada conversão roda localmente no seu navegador. Nada do que você digita é enviado, salvo ou compartilhado — sem conta, sem rastreamento, e continua funcionando offline com as taxas salvas.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -402,7 +442,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Это реальные курсы торгов в реальном времени?",
     "faq.a4": "Нет — и ни один бесплатный инструмент не должен так утверждать. Это ежедневные среднерыночные справочные курсы, подходящие для покупок, планирования поездок и переводов. Это не потиковые торговые курсы, поэтому не используйте их для валютной торговли или крупных срочных переводов.",
     "faq.q5": "Отправляется ли моя сумма на сервер?",
-    "faq.a5": "Нет. Загружается только таблица курсов; каждый пересчёт выполняется локально в вашем браузере. Ничего из введённого не загружается, не сохраняется и не передаётся — без аккаунта, без слежки, и всё продолжает работать офлайн по сохранённым курсам."
+    "faq.a5": "Нет. Загружается только таблица курсов; каждый пересчёт выполняется локально в вашем браузере. Ничего из введённого не загружается, не сохраняется и не передаётся — без аккаунта, без слежки, и всё продолжает работать офлайн по сохранённым курсам.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -445,7 +490,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ لائیو، حقیقی وقت کے ٹریڈنگ ریٹس ہیں؟",
     "faq.a4": "نہیں — اور کسی مفت ٹول کو ایسا دعویٰ نہیں کرنا چاہیے۔ یہ روزانہ مڈ مارکیٹ حوالہ ریٹس ہیں، جو خریداری، سفری بجٹ اور ٹرانسفر کے لیے موزوں ہیں۔ یہ ٹِک بہ ٹِک ٹریڈنگ ریٹس نہیں، اس لیے انہیں FX ڈیلنگ یا بڑے، وقت کے حساس ٹرانسفر کے لیے استعمال نہ کریں۔",
     "faq.q5": "کیا میری رقم کسی سرور کو بھیجی جاتی ہے؟",
-    "faq.a5": "نہیں۔ صرف شرحِ تبادلہ کی فہرست ڈاؤن لوڈ ہوتی ہے؛ ہر تبدیلی آپ کے براؤزر میں مقامی طور پر چلتی ہے۔ آپ جو کچھ ٹائپ کرتے ہیں وہ اپ لوڈ، محفوظ یا شیئر نہیں ہوتا — کوئی اکاؤنٹ نہیں، کوئی ٹریکنگ نہیں، اور یہ آف لائن محفوظ ریٹس سے کام کرتا رہتا ہے۔"
+    "faq.a5": "نہیں۔ صرف شرحِ تبادلہ کی فہرست ڈاؤن لوڈ ہوتی ہے؛ ہر تبدیلی آپ کے براؤزر میں مقامی طور پر چلتی ہے۔ آپ جو کچھ ٹائپ کرتے ہیں وہ اپ لوڈ، محفوظ یا شیئر نہیں ہوتا — کوئی اکاؤنٹ نہیں، کوئی ٹریکنگ نہیں، اور یہ آف لائن محفوظ ریٹس سے کام کرتا رہتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -488,7 +538,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah ini kurs perdagangan real-time?",
     "faq.a4": "Bukan — dan tak ada alat gratis yang seharusnya mengklaim itu. Ini kurs acuan mid-market harian, cocok untuk belanja, anggaran perjalanan, dan transfer. Ini bukan kurs perdagangan tick-by-tick, jadi jangan pakai untuk trading valas atau transfer besar yang sensitif waktu.",
     "faq.q5": "Apakah jumlah saya dikirim ke server?",
-    "faq.a5": "Tidak. Hanya tabel kurs yang diunduh; setiap konversi berjalan lokal di browser Anda. Apa pun yang Anda ketik tidak diunggah, disimpan, atau dibagikan — tanpa akun, tanpa pelacakan, dan tetap berfungsi offline dari kurs tersimpan."
+    "faq.a5": "Tidak. Hanya tabel kurs yang diunduh; setiap konversi berjalan lokal di browser Anda. Apa pun yang Anda ketik tidak diunggah, disimpan, atau dibagikan — tanpa akun, tanpa pelacakan, dan tetap berfungsi offline dari kurs tersimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -531,7 +586,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Sind das Live-Handelskurse in Echtzeit?",
     "faq.a4": "Nein — und kein kostenloses Tool sollte das behaupten. Es sind tägliche Mid-Market-Referenzkurse, gut geeignet für Einkäufe, Reisebudgets und Überweisungen. Es sind keine Tick-für-Tick-Handelskurse, nutzen Sie sie also nicht für Devisenhandel oder große, zeitkritische Transfers.",
     "faq.q5": "Wird mein Betrag an einen Server gesendet?",
-    "faq.a5": "Nein. Nur die Wechselkurstabelle wird geladen; jede Umrechnung läuft lokal in Ihrem Browser. Nichts, was Sie eingeben, wird hochgeladen, gespeichert oder geteilt — kein Konto, kein Tracking, und es funktioniert offline mit gespeicherten Kursen weiter."
+    "faq.a5": "Nein. Nur die Wechselkurstabelle wird geladen; jede Umrechnung läuft lokal in Ihrem Browser. Nichts, was Sie eingeben, wird hochgeladen, gespeichert oder geteilt — kein Konto, kein Tracking, und es funktioniert offline mit gespeicherten Kursen weiter.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -574,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.q4": "これはリアルタイムの取引レートですか?",
     "faq.a4": "いいえ。無料ツールがそう主張すべきではありません。これは日次の仲値参考レートで、買い物・旅行予算・送金には十分です。ティック単位の取引レートではないため、FX取引や時間に敏感な大口送金には使わないでください。",
     "faq.q5": "入力した金額はサーバーに送信されますか?",
-    "faq.a5": "いいえ。ダウンロードされるのは為替レート表だけで、換算はすべてブラウザ内で行われます。入力内容がアップロード・保存・共有されることはありません — アカウント不要、追跡なし、オフラインでも保存レートで動作します。"
+    "faq.a5": "いいえ。ダウンロードされるのは為替レート表だけで、換算はすべてブラウザ内で行われます。入力内容がアップロード・保存・共有されることはありません — アカウント不要、追跡なし、オフラインでも保存レートで動作します。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -617,6 +682,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이건 실시간 거래 환율인가요?",
     "faq.a4": "아니요. 무료 도구가 그렇게 주장해서는 안 됩니다. 이것은 일일 중간 시장 기준 환율로 쇼핑, 여행 예산, 송금에는 충분합니다. 틱 단위 거래 환율이 아니므로 외환 거래나 시간에 민감한 큰 금액 송금에는 쓰지 마세요.",
     "faq.q5": "제 금액이 서버로 전송되나요?",
-    "faq.a5": "아니요. 환율 표만 내려받고 모든 환산은 브라우저 안에서 처리됩니다. 입력한 내용은 업로드·저장·공유되지 않습니다 — 계정도 없고 추적도 없으며, 오프라인에서도 저장된 환율로 계속 작동합니다."
+    "faq.a5": "아니요. 환율 표만 내려받고 모든 환산은 브라우저 안에서 처리됩니다. 입력한 내용은 업로드·저장·공유되지 않습니다 — 계정도 없고 추적도 없으며, 오프라인에서도 저장된 환율로 계속 작동합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

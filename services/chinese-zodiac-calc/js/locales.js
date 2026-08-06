@@ -90,7 +90,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Are the Chinese zodiac compatibility matches (trines and clashes) based on science?",
     "faq.a4": "No — the \"best match\" and \"needs extra effort\" pairings shown here come from traditional Chinese astrology folklore, grouping animals into four-animal \"trine\" friendship sets and paired \"clash\" opposites six years apart in the cycle. They are a fun cultural tradition, not a scientific or psychological finding, and shouldn't be used to make real relationship decisions. Treat them as an entertaining icebreaker rather than compatibility advice.",
     "faq.q5": "Is my birth date sent to a server?",
-    "faq.a5": "No. This Chinese zodiac calculator runs entirely in your browser — your birth year, month and day never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can look up your own animal sign or a family member's with peace of mind."
+    "faq.a5": "No. This Chinese zodiac calculator runs entirely in your browser — your birth year, month and day never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can look up your own animal sign or a family member's with peace of mind.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -171,7 +176,12 @@ window.I18N_LOCALES = {
     "faq.q4": "生肖相配中的三合与六冲，有科学依据吗？",
     "faq.a4": "没有——这里展示的\"最佳搭档\"与\"需要多花心思相处\"配对，来自中国传统命理民俗中的\"三合\"（每三个生肖一组，关系融洽）与\"六冲\"（相隔六年、彼此相冲）说法。它们只是有趣的文化传统，并非科学或心理学结论，不应作为真实感情决策的依据，当作轻松的话题即可。",
     "faq.q5": "我的出生日期会被发送到服务器吗？",
-    "faq.a5": "不会。这个生肖计算器完全在你的浏览器本地运行——你的出生年、月、日不会离开你的设备，也不会上传或存储到任何服务器。无需注册、不追踪任何信息，你可以放心查询自己或家人的生肖。"
+    "faq.a5": "不会。这个生肖计算器完全在你的浏览器本地运行——你的出生年、月、日不会离开你的设备，也不会上传或存储到任何服务器。无需注册、不追踪任何信息，你可以放心查询自己或家人的生肖。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -252,7 +262,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या चाइनीज़ राशि की अनुकूलता (त्रिकोण और टकराव) वैज्ञानिक आधार पर है?",
     "faq.a4": "नहीं — यहाँ दिखाई गई \"बढ़िया जोड़ी\" और \"थोड़ी अतिरिक्त मेहनत चाहिए\" जोड़ियाँ पारंपरिक चाइनीज़ ज्योतिष लोक-मान्यता से आती हैं, जो पशुओं को चार-चार के \"त्रिकोण\" मित्रता समूहों में और चक्र में छह साल की दूरी पर स्थित \"टकराव\" जोड़ों में बाँटती हैं। ये एक मज़ेदार सांस्कृतिक परंपरा हैं, कोई वैज्ञानिक या मनोवैज्ञानिक निष्कर्ष नहीं, और इन्हें असली रिश्तों के फ़ैसलों के लिए इस्तेमाल नहीं करना चाहिए। इन्हें एक हल्के-फुल्के आइसब्रेकर की तरह लें, अनुकूलता सलाह की तरह नहीं।",
     "faq.q5": "क्या मेरी जन्मतिथि सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। यह चाइनीज़ राशि कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपका जन्म वर्ष, महीना और दिन कभी आपके डिवाइस से बाहर नहीं जाते और कुछ भी सर्वर पर अपलोड या संग्रहीत नहीं होता। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, इसलिए आप बेफ़िक्र होकर अपनी या परिवार के किसी सदस्य की राशि देख सकते हैं।"
+    "faq.a5": "नहीं। यह चाइनीज़ राशि कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपका जन्म वर्ष, महीना और दिन कभी आपके डिवाइस से बाहर नहीं जाते और कुछ भी सर्वर पर अपलोड या संग्रहीत नहीं होता। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, इसलिए आप बेफ़िक्र होकर अपनी या परिवार के किसी सदस्य की राशि देख सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -333,7 +348,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Las combinaciones de compatibilidad del zodiaco chino (trígonos y choques) tienen base científica?",
     "faq.a4": "No: las combinaciones de \"gran combinación\" y \"requiere más esfuerzo\" que se muestran aquí provienen del folclore tradicional de la astrología china, que agrupa a los animales en conjuntos de amistad de \"trígono\" de tres animales y en pares \"de choque\" opuestos, separados por seis años en el ciclo. Son una tradición cultural divertida, no un hallazgo científico ni psicológico, y no deberían usarse para tomar decisiones reales sobre relaciones. Tómalas como un tema de conversación entretenido, no como un consejo de compatibilidad.",
     "faq.q5": "¿Se envía mi fecha de nacimiento a un servidor?",
-    "faq.a5": "No. Esta calculadora del zodiaco chino funciona por completo en tu navegador: tu año, mes y día de nacimiento nunca salen de tu dispositivo y nada se sube ni se guarda en un servidor. No hay registro ni seguimiento, así que puedes consultar tu propio signo o el de un familiar con total tranquilidad."
+    "faq.a5": "No. Esta calculadora del zodiaco chino funciona por completo en tu navegador: tu año, mes y día de nacimiento nunca salen de tu dispositivo y nada se sube ni se guarda en un servidor. No hay registro ni seguimiento, así que puedes consultar tu propio signo o el de un familiar con total tranquilidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -414,7 +434,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل توافقات البرج الصيني (التآلف والتصادم) مبنية على أساس علمي؟",
     "faq.a4": "لا — أزواج \"توافق رائع\" و\"يحتاج جهدًا إضافيًا\" المعروضة هنا مأخوذة من الفلكلور التقليدي للتنجيم الصيني، الذي يجمع الحيوانات في مجموعات صداقة \"تآلف\" من ثلاثة حيوانات، وأزواج \"تصادم\" متقابلة تفصل بينها ست سنوات في الدورة. إنها تقليد ثقافي طريف، وليست نتيجة علمية أو نفسية، ولا ينبغي الاعتماد عليها في قرارات علاقات حقيقية — اعتبرها فكرة طريفة لكسر الجليد لا نصيحة توافق.",
     "faq.q5": "هل يُرسل تاريخ ميلادي إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة الأبراج الصينية هذه بالكامل داخل متصفحك — لا تغادر سنة ميلادك وشهرك ويومك جهازك مطلقًا ولا يُرفع أو يُخزَّن أي شيء على خادم. لا تسجيل ولا تتبّع، فيمكنك الاطمئنان عند البحث عن برجك أو برج أحد أفراد عائلتك."
+    "faq.a5": "لا. تعمل حاسبة الأبراج الصينية هذه بالكامل داخل متصفحك — لا تغادر سنة ميلادك وشهرك ويومك جهازك مطلقًا ولا يُرفع أو يُخزَّن أي شيء على خادم. لا تسجيل ولا تتبّع، فيمكنك الاطمئنان عند البحث عن برجك أو برج أحد أفراد عائلتك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -495,7 +520,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Les compatibilités du zodiaque chinois (trigones et oppositions) reposent-elles sur une base scientifique ?",
     "faq.a4": "Non — les associations « excellente entente » et « demande plus d'efforts » présentées ici viennent du folklore traditionnel de l'astrologie chinoise, qui regroupe les animaux en ensembles amicaux de « trigone » de trois animaux et en paires « opposées » situées exactement à six ans d'écart dans le cycle. C'est une tradition culturelle amusante, pas une conclusion scientifique ou psychologique, et cela ne devrait pas guider de vraies décisions relationnelles. Prenez-les comme une amorce de conversation divertissante, pas comme un conseil de compatibilité.",
     "faq.q5": "Ma date de naissance est-elle envoyée à un serveur ?",
-    "faq.a5": "Non. Ce calculateur du zodiaque chinois fonctionne entièrement dans votre navigateur — votre année, mois et jour de naissance ne quittent jamais votre appareil et rien n'est envoyé ni stocké sur un serveur. Aucune inscription, aucun suivi : vous pouvez consulter votre propre signe ou celui d'un proche en toute tranquillité."
+    "faq.a5": "Non. Ce calculateur du zodiaque chinois fonctionne entièrement dans votre navigateur — votre année, mois et jour de naissance ne quittent jamais votre appareil et rien n'est envoyé ni stocké sur un serveur. Aucune inscription, aucun suivi : vous pouvez consulter votre propre signe ou celui d'un proche en toute tranquillité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -576,7 +606,12 @@ window.I18N_LOCALES = {
     "faq.q4": "চাইনিজ রাশির সামঞ্জস্য (ত্রিভুজ ও সংঘর্ষ) কি বিজ্ঞানভিত্তিক?",
     "faq.a4": "না — এখানে দেখানো \"দারুণ জুটি\" ও \"একটু বেশি চেষ্টা লাগবে\" জুটিগুলো আসে চীনা জ্যোতিষশাস্ত্রের ঐতিহ্যবাহী লোককথা থেকে, যা প্রাণীদের চার-প্রাণীর \"ত্রিভুজ\" বন্ধুত্বের দলে আর চক্রে ঠিক ছয় বছরের ব্যবধানে থাকা \"সংঘর্ষ\" জুটিতে ভাগ করে। এগুলো একটি মজার সাংস্কৃতিক ঐতিহ্য, কোনো বৈজ্ঞানিক বা মনস্তাত্ত্বিক সিদ্ধান্ত নয়, আর প্রকৃত সম্পর্কের সিদ্ধান্তে এগুলো ব্যবহার করা উচিত নয়। এগুলোকে মজার আলাপচারিতার বিষয় হিসেবে নিন, সামঞ্জস্যের পরামর্শ হিসেবে নয়।",
     "faq.q5": "আমার জন্মতারিখ কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই চাইনিজ রাশি ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে — আপনার জন্ম সাল, মাস ও তারিখ কখনও আপনার ডিভাইস ছেড়ে যায় না আর কিছুই সার্ভারে আপলোড বা সংরক্ষণ হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি নিশ্চিন্তে নিজের বা পরিবারের কারও রাশি দেখতে পারেন।"
+    "faq.a5": "না। এই চাইনিজ রাশি ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে — আপনার জন্ম সাল, মাস ও তারিখ কখনও আপনার ডিভাইস ছেড়ে যায় না আর কিছুই সার্ভারে আপলোড বা সংরক্ষণ হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি নিশ্চিন্তে নিজের বা পরিবারের কারও রাশি দেখতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -657,7 +692,12 @@ window.I18N_LOCALES = {
     "faq.q4": "As combinações de compatibilidade do zodíaco chinês (trígonos e choques) têm base científica?",
     "faq.a4": "Não — as combinações \"ótima combinação\" e \"exige mais esforço\" mostradas aqui vêm do folclore tradicional da astrologia chinesa, que agrupa os animais em conjuntos de amizade \"trígono\" de três animais e em pares \"de choque\" opostos, separados por seis anos no ciclo. São uma tradição cultural divertida, não uma conclusão científica ou psicológica, e não devem guiar decisões reais sobre relacionamentos. Trate-as como um assunto divertido para puxar papo, não como conselho de compatibilidade.",
     "faq.q5": "Minha data de nascimento é enviada a um servidor?",
-    "faq.a5": "Não. Esta calculadora do zodíaco chinês funciona inteiramente no seu navegador — seu ano, mês e dia de nascimento nunca saem do seu aparelho e nada é enviado ou armazenado em um servidor. Não há cadastro nem rastreamento, então você pode consultar seu próprio signo ou o de um familiar com tranquilidade."
+    "faq.a5": "Não. Esta calculadora do zodíaco chinês funciona inteiramente no seu navegador — seu ano, mês e dia de nascimento nunca saem do seu aparelho e nada é enviado ou armazenado em um servidor. Não há cadastro nem rastreamento, então você pode consultar seu próprio signo ou o de um familiar com tranquilidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -738,7 +778,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Основана ли совместимость по китайскому зодиаку (гармония и конфликт) на науке?",
     "faq.a4": "Нет — показанные здесь пары «отличная пара» и «требует больше усилий» взяты из традиционного фольклора китайской астрологии, которая группирует животных в дружественные тройки «гармонии» и противоположные пары «конфликта», расположенные ровно через шесть лет цикла друг от друга. Это забавная культурная традиция, а не научный или психологический вывод, и на неё не стоит опираться в реальных решениях об отношениях. Воспринимайте это как развлечение для разговора, а не совет по совместимости.",
     "faq.q5": "Отправляется ли моя дата рождения на сервер?",
-    "faq.a5": "Нет. Этот калькулятор китайского зодиака работает полностью в вашем браузере — год, месяц и день рождения никогда не покидают ваше устройство, и ничего не загружается и не хранится на сервере. Нет регистрации и отслеживания, поэтому вы можете спокойно узнать свой знак или знак члена семьи."
+    "faq.a5": "Нет. Этот калькулятор китайского зодиака работает полностью в вашем браузере — год, месяц и день рождения никогда не покидают ваше устройство, и ничего не загружается и не хранится на сервере. Нет регистрации и отслеживания, поэтому вы можете спокойно узнать свой знак или знак члена семьи.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -819,7 +864,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا چینی زائچے کی مطابقت (سہ رخی اور تصادم) سائنسی بنیاد رکھتی ہے؟",
     "faq.a4": "نہیں — یہاں دکھائی گئی \"بہترین جوڑی\" اور \"تھوڑی اضافی محنت درکار\" جوڑیاں چینی نجوم کی روایتی لوک داستانوں سے آتی ہیں، جو جانوروں کو چار جانوروں کے \"سہ رخی\" دوستی گروہوں اور چکر میں ٹھیک چھ سال کے فاصلے پر موجود \"تصادم\" جوڑوں میں تقسیم کرتی ہیں۔ یہ ایک دلچسپ ثقافتی روایت ہیں، کوئی سائنسی یا نفسیاتی نتیجہ نہیں، اور انہیں حقیقی تعلقات کے فیصلوں کے لیے استعمال نہیں کرنا چاہیے۔ انہیں ایک دلچسپ بات چیت کا موضوع سمجھیں، مطابقت کا مشورہ نہیں۔",
     "faq.q5": "کیا میری تاریخِ پیدائش سرور پر بھیجی جاتی ہے؟",
-    "faq.a5": "نہیں۔ یہ چینی زائچہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا سال، مہینہ اور دنِ پیدائش کبھی آپ کے آلے سے باہر نہیں جاتے اور کچھ بھی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں، اس لیے آپ اطمینان سے اپنا یا اپنے خاندان کے کسی فرد کا زائچہ دیکھ سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ چینی زائچہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا سال، مہینہ اور دنِ پیدائش کبھی آپ کے آلے سے باہر نہیں جاتے اور کچھ بھی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں، اس لیے آپ اطمینان سے اپنا یا اپنے خاندان کے کسی فرد کا زائچہ دیکھ سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -900,7 +950,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah kecocokan shio (trine dan clash) punya dasar ilmiah?",
     "faq.a4": "Tidak — pasangan \"cocok banget\" dan \"butuh usaha ekstra\" yang ditampilkan di sini berasal dari kepercayaan tradisional astrologi China, yang mengelompokkan hewan ke dalam kelompok persahabatan \"trine\" beranggotakan tiga hewan dan pasangan \"clash\" yang berlawanan, terpisah tepat enam tahun dalam siklus. Ini adalah tradisi budaya yang menyenangkan, bukan temuan ilmiah atau psikologis, dan sebaiknya tidak dijadikan dasar keputusan hubungan yang sesungguhnya. Anggap saja sebagai obrolan seru, bukan nasihat kecocokan.",
     "faq.q5": "Apakah tanggal lahir saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator shio ini berjalan sepenuhnya di browser Anda — tahun, bulan, dan tanggal lahir Anda tidak pernah meninggalkan perangkat Anda dan tidak ada yang diunggah atau disimpan di server. Tidak ada pendaftaran maupun pelacakan, jadi Anda bisa mencari tahu shio Anda sendiri atau anggota keluarga dengan tenang."
+    "faq.a5": "Tidak. Kalkulator shio ini berjalan sepenuhnya di browser Anda — tahun, bulan, dan tanggal lahir Anda tidak pernah meninggalkan perangkat Anda dan tidak ada yang diunggah atau disimpan di server. Tidak ada pendaftaran maupun pelacakan, jadi Anda bisa mencari tahu shio Anda sendiri atau anggota keluarga dengan tenang.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -981,7 +1036,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Beruhen die Kompatibilitäts-Kombinationen des chinesischen Tierkreises (Trigon und Konflikt) auf Wissenschaft?",
     "faq.a4": "Nein — die hier gezeigten Kombinationen „bestens geeignet“ und „braucht mehr Mühe“ stammen aus der traditionellen chinesischen Astrologie-Folklore, die Tiere in freundschaftliche Dreier-„Trigon“-Gruppen und gegenüberliegende „Konflikt“-Paare einteilt, die im Zyklus genau sechs Jahre auseinanderliegen. Das ist eine unterhaltsame kulturelle Tradition, kein wissenschaftlicher oder psychologischer Befund, und sollte keine echten Beziehungsentscheidungen leiten. Nimm es als unterhaltsamen Gesprächsstoff, nicht als Kompatibilitätsratschlag.",
     "faq.q5": "Wird mein Geburtsdatum an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Rechner für das chinesische Sternzeichen läuft vollständig in deinem Browser — Geburtsjahr, -monat und -tag verlassen niemals dein Gerät, und nichts wird auf einen Server hochgeladen oder dort gespeichert. Es gibt keine Anmeldung und kein Tracking, du kannst also unbesorgt dein eigenes Zeichen oder das eines Familienmitglieds nachschlagen."
+    "faq.a5": "Nein. Dieser Rechner für das chinesische Sternzeichen läuft vollständig in deinem Browser — Geburtsjahr, -monat und -tag verlassen niemals dein Gerät, und nichts wird auf einen Server hochgeladen oder dort gespeichert. Es gibt keine Anmeldung und kein Tracking, du kannst also unbesorgt dein eigenes Zeichen oder das eines Familienmitglieds nachschlagen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1062,7 +1122,12 @@ window.I18N_LOCALES = {
     "faq.q4": "十二支の相性（三合・六冲）には科学的根拠がありますか？",
     "faq.a4": "ありません。ここに表示される「相性がよい」「もう少し歩み寄りが必要」という組み合わせは、動物を3つ1組の仲の良い「三合」グループと、周期上でちょうど6年離れた対になる「六冲」の組み合わせに分ける、伝統的な占いの言い伝えに基づいています。これは楽しい文化的な言い伝えであり、科学的・心理学的な結論ではないため、実際の人間関係の判断材料にすべきではありません。相性のアドバイスではなく、話のきっかけ程度に楽しんでください。",
     "faq.q5": "生年月日はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この十二支計算機はすべてお使いのブラウザ内だけで動作し、生まれた年・月・日が端末の外に送られることはなく、サーバーへのアップロードや保存も一切行われません。登録も追跡も不要なので、安心してご自身やご家族の十二支を調べていただけます。"
+    "faq.a5": "いいえ。この十二支計算機はすべてお使いのブラウザ内だけで動作し、生まれた年・月・日が端末の外に送られることはなく、サーバーへのアップロードや保存も一切行われません。登録も追跡も不要なので、安心してご自身やご家族の十二支を調べていただけます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1143,6 +1208,11 @@ window.I18N_LOCALES = {
     "faq.q4": "삼합·육충 같은 띠 궁합에 과학적 근거가 있나요?",
     "faq.a4": "없습니다 — 여기 나오는 '찰떡궁합'과 '노력이 좀 더 필요한 상대'는 전통 명리학 민속에서 온 것으로, 띠 동물을 세 개씩 묶어 사이가 좋다고 보는 '삼합' 그룹과, 순환에서 정확히 6년 떨어져 마주 보는 '육충' 상대로 나눈 것입니다. 이는 재미있는 문화적 전통일 뿐 과학적이거나 심리학적인 결론이 아니므로, 실제 관계에 대한 판단 근거로 삼아서는 안 됩니다. 궁합 조언이 아니라 가벼운 대화 소재로 즐겨 주세요.",
     "faq.q5": "제 생년월일이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 띠 계산기는 전적으로 브라우저 안에서만 동작합니다 — 태어난 연도, 월, 일이 기기 밖으로 나가는 일이 없고, 서버에 업로드되거나 저장되지도 않습니다. 회원가입도, 추적도 없으니 나 자신이나 가족의 띠를 마음 편히 확인해 보세요."
+    "faq.a5": "아니요. 이 띠 계산기는 전적으로 브라우저 안에서만 동작합니다 — 태어난 연도, 월, 일이 기기 밖으로 나가는 일이 없고, 서버에 업로드되거나 저장되지도 않습니다. 회원가입도, 추적도 없으니 나 자신이나 가족의 띠를 마음 편히 확인해 보세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -56,7 +56,12 @@ window.I18N_LOCALES = {
     "faq.q3": "How do I enter a multipack (2+1 etc.)?",
     "faq.a3": "Enter the number of items in the items-per-pack field. For example, if a 500g product is sold as a pack of 3 for 9,000, enter amount 500, unit g and items per pack 3. The unit price is calculated from the total amount (amount × items per pack) to tell you which is cheaper.",
     "faq.q4": "Is my data sent to a server?",
-    "faq.a4": "No. The price, amount and other inputs are never sent to a server — everything is calculated inside your browser. Only your last inputs are saved in this browser's localStorage so you can pick up where you left off; nothing is transmitted anywhere else."
+    "faq.a4": "No. The price, amount and other inputs are never sent to a server — everything is calculated inside your browser. Only your last inputs are saved in this browser's localStorage so you can pick up where you left off; nothing is transmitted anywhere else.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -102,7 +107,12 @@ window.I18N_LOCALES = {
     "faq.q3": "组合装（买二送一等）怎么输入？",
     "faq.a3": "在“每组件数”栏填入单件数量即可。例如一款 500g 的商品以 3 件一组卖 9,000，就填容量 500、单位 g、每组件数 3。计算器会按总容量（容量 × 每组件数）算出单位价格，告诉你哪款更便宜。",
     "faq.q4": "我输入的信息会发送到服务器吗？",
-    "faq.a4": "不会。价格、容量等输入不会发送到服务器，全部在你的浏览器中计算。为方便下次继续使用，仅将上次的输入保存在本浏览器的 localStorage 中，不会传送到其他任何地方。"
+    "faq.a4": "不会。价格、容量等输入不会发送到服务器，全部在你的浏览器中计算。为方便下次继续使用，仅将上次的输入保存在本浏览器的 localStorage 中，不会传送到其他任何地方。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -148,7 +158,12 @@ window.I18N_LOCALES = {
     "faq.q3": "मल्टीपैक (2+1 आदि) कैसे डालें?",
     "faq.a3": "“प्रति पैक नग” वाले खाने में नगों की संख्या डालें। उदाहरण के लिए, यदि 500g का उत्पाद 3 के पैक में 9,000 में बिकता है, तो मात्रा 500, यूनिट g और प्रति पैक नग 3 डालें। यूनिट प्राइस कुल मात्रा (मात्रा × प्रति पैक नग) के आधार पर निकाली जाती है ताकि पता चले कौन-सा सस्ता है।",
     "faq.q4": "क्या मेरा डेटा किसी सर्वर पर भेजा जाता है?",
-    "faq.a4": "नहीं। कीमत, मात्रा और अन्य इनपुट सर्वर पर नहीं भेजे जाते — सारी गणना आपके ब्राउज़र में ही होती है। अगली बार जारी रखने की सुविधा के लिए केवल आपके पिछले इनपुट इसी ब्राउज़र के localStorage में सहेजे जाते हैं; और कहीं नहीं भेजे जाते।"
+    "faq.a4": "नहीं। कीमत, मात्रा और अन्य इनपुट सर्वर पर नहीं भेजे जाते — सारी गणना आपके ब्राउज़र में ही होती है। अगली बार जारी रखने की सुविधा के लिए केवल आपके पिछले इनपुट इसी ब्राउज़र के localStorage में सहेजे जाते हैं; और कहीं नहीं भेजे जाते।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -194,7 +209,12 @@ window.I18N_LOCALES = {
     "faq.q3": "¿Cómo introduzco un pack múltiple (2+1, etc.)?",
     "faq.a3": "Introduce el número de piezas en el campo de unidades por paquete. Por ejemplo, si un producto de 500g se vende en un pack de 3 por 9.000, pon cantidad 500, unidad g y unidades por paquete 3. El precio unitario se calcula a partir de la cantidad total (cantidad × unidades por paquete) para decirte cuál es más barato.",
     "faq.q4": "¿Se envían mis datos a un servidor?",
-    "faq.a4": "No. El precio, la cantidad y demás datos nunca se envían a un servidor: todo se calcula dentro de tu navegador. Solo se guardan tus últimos datos en el localStorage de este navegador para que puedas continuar donde lo dejaste; no se transmiten a ningún otro sitio."
+    "faq.a4": "No. El precio, la cantidad y demás datos nunca se envían a un servidor: todo se calcula dentro de tu navegador. Solo se guardan tus últimos datos en el localStorage de este navegador para que puedas continuar donde lo dejaste; no se transmiten a ningún otro sitio.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -240,7 +260,12 @@ window.I18N_LOCALES = {
     "faq.q3": "كيف أُدخل عبوة متعددة (2+1 وغيرها)؟",
     "faq.a3": "أدخل عدد القطع في خانة عدد القطع في العبوة. مثلًا إذا بيع منتج 500g في عبوة من 3 قطع بسعر 9,000، فأدخل الكمية 500 والوحدة g وعدد القطع في العبوة 3. يُحسب سعر الوحدة من الكمية الإجمالية (الكمية × عدد القطع في العبوة) ليخبرك أيّهما أرخص.",
     "faq.q4": "هل تُرسل بياناتي إلى خادم؟",
-    "faq.a4": "لا. السعر والكمية وبقية المدخلات لا تُرسل إلى أي خادم — كل الحساب يجري داخل متصفحك. تُحفظ فقط آخر مدخلاتك في localStorage الخاص بهذا المتصفح لتتابع من حيث توقفت؛ ولا يُرسل أي شيء إلى أي مكان آخر."
+    "faq.a4": "لا. السعر والكمية وبقية المدخلات لا تُرسل إلى أي خادم — كل الحساب يجري داخل متصفحك. تُحفظ فقط آخر مدخلاتك في localStorage الخاص بهذا المتصفح لتتابع من حيث توقفت؛ ولا يُرسل أي شيء إلى أي مكان آخر.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -286,7 +311,12 @@ window.I18N_LOCALES = {
     "faq.q3": "Comment saisir un lot (2+1, etc.) ?",
     "faq.a3": "Indiquez le nombre d'articles dans le champ articles par lot. Par exemple, si un produit de 500g est vendu par lot de 3 pour 9 000, entrez quantité 500, unité g et articles par lot 3. Le prix unitaire est calculé à partir de la quantité totale (quantité × articles par lot) pour vous dire lequel est le moins cher.",
     "faq.q4": "Mes données sont-elles envoyées à un serveur ?",
-    "faq.a4": "Non. Le prix, la quantité et les autres saisies ne sont jamais envoyés à un serveur — tout est calculé dans votre navigateur. Seules vos dernières saisies sont enregistrées dans le localStorage de ce navigateur pour reprendre là où vous en étiez ; rien n'est transmis ailleurs."
+    "faq.a4": "Non. Le prix, la quantité et les autres saisies ne sont jamais envoyés à un serveur — tout est calculé dans votre navigateur. Seules vos dernières saisies sont enregistrées dans le localStorage de ce navigateur pour reprendre là où vous en étiez ; rien n'est transmis ailleurs.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -332,7 +362,12 @@ window.I18N_LOCALES = {
     "faq.q3": "মাল্টিপ্যাক (2+1 ইত্যাদি) কীভাবে দেব?",
     "faq.a3": "“প্রতি প্যাকে সংখ্যা” ঘরে একক সংখ্যা লিখুন। যেমন 500g-এর একটি পণ্য 3টির প্যাকে 9,000-এ বিক্রি হলে পরিমাণ 500, একক g ও প্রতি প্যাকে সংখ্যা 3 দিন। ইউনিট মূল্য মোট পরিমাণ (পরিমাণ × প্রতি প্যাকে সংখ্যা) থেকে হিসাব করে জানিয়ে দেয় কোনটি সস্তা।",
     "faq.q4": "আমার তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a4": "না। দাম, পরিমাণ ও অন্যান্য ইনপুট সার্ভারে পাঠানো হয় না — সব হিসাব আপনার ব্রাউজারেই হয়। পরের বার যাতে চালিয়ে যেতে পারেন, সেজন্য শুধু আপনার শেষ ইনপুট এই ব্রাউজারের localStorage-এ সংরক্ষিত থাকে; অন্য কোথাও পাঠানো হয় না।"
+    "faq.a4": "না। দাম, পরিমাণ ও অন্যান্য ইনপুট সার্ভারে পাঠানো হয় না — সব হিসাব আপনার ব্রাউজারেই হয়। পরের বার যাতে চালিয়ে যেতে পারেন, সেজন্য শুধু আপনার শেষ ইনপুট এই ব্রাউজারের localStorage-এ সংরক্ষিত থাকে; অন্য কোথাও পাঠানো হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -378,7 +413,12 @@ window.I18N_LOCALES = {
     "faq.q3": "Como insiro um pacote múltiplo (2+1 etc.)?",
     "faq.a3": "Digite o número de itens no campo itens por embalagem. Por exemplo, se um produto de 500g é vendido em um pacote de 3 por 9.000, informe quantidade 500, unidade g e itens por embalagem 3. O preço unitário é calculado a partir da quantidade total (quantidade × itens por embalagem) para dizer qual é mais barato.",
     "faq.q4": "Meus dados são enviados a um servidor?",
-    "faq.a4": "Não. O preço, a quantidade e os demais dados nunca são enviados a um servidor — tudo é calculado dentro do seu navegador. Apenas os seus últimos dados são salvos no localStorage deste navegador para você continuar de onde parou; nada é transmitido para qualquer outro lugar."
+    "faq.a4": "Não. O preço, a quantidade e os demais dados nunca são enviados a um servidor — tudo é calculado dentro do seu navegador. Apenas os seus últimos dados são salvos no localStorage deste navegador para você continuar de onde parou; nada é transmitido para qualquer outro lugar.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -424,7 +464,12 @@ window.I18N_LOCALES = {
     "faq.q3": "Как ввести мультиупаковку (2+1 и т. п.)?",
     "faq.a3": "Введите число штук в поле «штук в упаковке». Например, если товар 500 g продаётся упаковкой по 3 за 9 000, укажите количество 500, единицу g и штук в упаковке 3. Цена за единицу рассчитывается по общему количеству (количество × штук в упаковке) и показывает, что дешевле.",
     "faq.q4": "Отправляются ли мои данные на сервер?",
-    "faq.a4": "Нет. Цена, количество и прочий ввод не отправляются на сервер — все расчёты идут в вашем браузере. Только ваш последний ввод сохраняется в localStorage этого браузера, чтобы вы могли продолжить с того же места; больше никуда ничего не передаётся."
+    "faq.a4": "Нет. Цена, количество и прочий ввод не отправляются на сервер — все расчёты идут в вашем браузере. Только ваш последний ввод сохраняется в localStorage этого браузера, чтобы вы могли продолжить с того же места; больше никуда ничего не передаётся.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -470,7 +515,12 @@ window.I18N_LOCALES = {
     "faq.q3": "ملٹی پیک (2+1 وغیرہ) کیسے درج کریں؟",
     "faq.a3": "”فی پیک عدد“ کے خانے میں اکائیوں کی تعداد درج کریں۔ مثلاً اگر 500g کی چیز 3 کے پیک میں 9,000 میں فروخت ہو تو مقدار 500، یونٹ g اور فی پیک عدد 3 درج کریں۔ یونٹ قیمت کل مقدار (مقدار × فی پیک عدد) کی بنیاد پر نکالی جاتی ہے تاکہ بتا سکے کون سا سستا ہے۔",
     "faq.q4": "کیا میرا ڈیٹا کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a4": "نہیں۔ قیمت، مقدار اور دیگر اندراج کسی سرور کو نہیں بھیجے جاتے — سارا حساب آپ کے براؤزر ہی میں ہوتا ہے۔ اگلی بار جاری رکھنے کی سہولت کے لیے صرف آپ کا آخری اندراج اسی براؤزر کے localStorage میں محفوظ ہوتا ہے؛ کہیں اور کچھ نہیں بھیجا جاتا۔"
+    "faq.a4": "نہیں۔ قیمت، مقدار اور دیگر اندراج کسی سرور کو نہیں بھیجے جاتے — سارا حساب آپ کے براؤزر ہی میں ہوتا ہے۔ اگلی بار جاری رکھنے کی سہولت کے لیے صرف آپ کا آخری اندراج اسی براؤزر کے localStorage میں محفوظ ہوتا ہے؛ کہیں اور کچھ نہیں بھیجا جاتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -516,7 +566,12 @@ window.I18N_LOCALES = {
     "faq.q3": "Bagaimana memasukkan multipack (2+1 dll.)?",
     "faq.a3": "Masukkan jumlah butir pada kolom isi per kemasan. Misalnya, jika produk 500g dijual dalam kemasan isi 3 seharga 9.000, isikan jumlah 500, satuan g, dan isi per kemasan 3. Harga satuan dihitung dari jumlah total (jumlah × isi per kemasan) untuk memberi tahu mana yang lebih murah.",
     "faq.q4": "Apakah data saya dikirim ke server?",
-    "faq.a4": "Tidak. Harga, jumlah, dan masukan lainnya tidak pernah dikirim ke server — semuanya dihitung di dalam browser Anda. Hanya masukan terakhir Anda yang disimpan di localStorage browser ini agar bisa dilanjutkan; tidak ada yang dikirim ke tempat lain."
+    "faq.a4": "Tidak. Harga, jumlah, dan masukan lainnya tidak pernah dikirim ke server — semuanya dihitung di dalam browser Anda. Hanya masukan terakhir Anda yang disimpan di localStorage browser ini agar bisa dilanjutkan; tidak ada yang dikirim ke tempat lain.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -562,7 +617,12 @@ window.I18N_LOCALES = {
     "faq.q3": "Wie gebe ich ein Multipack (2+1 usw.) ein?",
     "faq.a3": "Gib die Stückzahl im Feld „Stück pro Packung“ ein. Wird zum Beispiel ein 500g-Produkt als 3er-Pack für 9.000 verkauft, gib Menge 500, Einheit g und Stück pro Packung 3 ein. Der Grundpreis wird aus der Gesamtmenge (Menge × Stück pro Packung) berechnet und sagt dir, was günstiger ist.",
     "faq.q4": "Werden meine Daten an einen Server gesendet?",
-    "faq.a4": "Nein. Preis, Menge und andere Eingaben werden nie an einen Server gesendet — alles wird in deinem Browser berechnet. Nur deine letzten Eingaben werden im localStorage dieses Browsers gespeichert, damit du weitermachen kannst, wo du aufgehört hast; sonst wird nichts übertragen."
+    "faq.a4": "Nein. Preis, Menge und andere Eingaben werden nie an einen Server gesendet — alles wird in deinem Browser berechnet. Nur deine letzten Eingaben werden im localStorage dieses Browsers gespeichert, damit du weitermachen kannst, wo du aufgehört hast; sonst wird nichts übertragen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -608,7 +668,12 @@ window.I18N_LOCALES = {
     "faq.q3": "まとめ買い(2+1など)はどう入力する？",
     "faq.a3": "「1パックの個数」欄に個数を入力します。たとえば500gの商品を3個パックで9,000で売っている場合は、内容量500・単位g・1パックの個数3と入力します。単価は総量（内容量 × 1パックの個数）を基準に計算し、どちらが安いかをお知らせします。",
     "faq.q4": "入力した情報はサーバーに送信される？",
-    "faq.a4": "いいえ。価格や内容量などの入力はサーバーに送信されず、ブラウザ内だけで計算されます。次回の続きに使えるよう、最後の入力だけがこのブラウザのlocalStorageに保存され、ほかへは送信されません。"
+    "faq.a4": "いいえ。価格や内容量などの入力はサーバーに送信されず、ブラウザ内だけで計算されます。次回の続きに使えるよう、最後の入力だけがこのブラウザのlocalStorageに保存され、ほかへは送信されません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -654,6 +719,11 @@ window.I18N_LOCALES = {
     "faq.q3": "묶음 상품(2+1 등)은 어떻게 입력하나?",
     "faq.a3": "묶음 개수 칸에 낱개 수를 입력하면 됩니다. 예를 들어 500g짜리 상품을 3개 묶음으로 9,000에 판다면 용량 500·단위 g·묶음 개수 3으로 입력하세요. 총용량(용량 × 묶음 개수) 기준으로 단위가격을 계산해 어느 게 더 싼지 알려드립니다.",
     "faq.q4": "입력한 정보가 서버로 전송되나?",
-    "faq.a4": "아니오. 가격과 용량 등 입력값은 서버로 전송되지 않고 브라우저 안에서만 계산됩니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값만 이 브라우저의 localStorage에 저장되며, 다른 곳으로 전송되지 않습니다."
+    "faq.a4": "아니오. 가격과 용량 등 입력값은 서버로 전송되지 않고 브라우저 안에서만 계산됩니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값만 이 브라우저의 localStorage에 저장되며, 다른 곳으로 전송되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

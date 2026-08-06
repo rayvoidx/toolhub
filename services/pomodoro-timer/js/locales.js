@@ -64,7 +64,12 @@ window.I18N_LOCALES = {
     "faq.q4": "I can't hear the alert sound — why?",
     "faq.a4": "Browsers only allow sound after you interact with the page, so this timer arms the audio the moment you press Start. Focus endings use a higher beep (880Hz) and break endings a lower one (660Hz), so you can tell them apart without looking. If you still hear nothing, check the system volume, tab mute and your phone's silent switch. Without Web Audio support, a notice appears and the alert stays visual.",
     "faq.q5": "Where is my daily pomodoro count stored?",
-    "faq.a5": "Today's count and your timer settings are stored only in your browser (localStorage) — nothing is sent to a server. No sign-up or install is needed, and the count automatically resets to zero when the date changes. Clearing browser data or opening the page on another device starts a fresh count."
+    "faq.a5": "Today's count and your timer settings are stored only in your browser (localStorage) — nothing is sent to a server. No sign-up or install is needed, and the count automatically resets to zero when the date changes. Clearing browser data or opening the page on another device starts a fresh count.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -113,7 +118,12 @@ window.I18N_LOCALES = {
     "faq.q4": "听不到提示音怎么办？",
     "faq.a4": "浏览器的自动播放策略要求先与页面交互才能发声，因此按下开始的瞬间就会准备声音。专注结束是高音（880Hz），休息结束是低音（660Hz），不看屏幕也能分辨。若仍无声，请检查系统音量、标签页静音和手机静音开关。不支持 Web Audio 的浏览器会显示提示，仅以视觉方式提醒。",
     "faq.q5": "今天完成的番茄数保存在哪里？",
-    "faq.a5": "今日计数和计时器设置都只保存在您的浏览器（localStorage）中，不会向服务器发送任何数据。无需注册和安装，日期一变计数自动从零开始。清除浏览器数据或换设备打开时计数不会延续。"
+    "faq.a5": "今日计数和计时器设置都只保存在您的浏览器（localStorage）中，不会向服务器发送任何数据。无需注册和安装，日期一变计数自动从零开始。清除浏览器数据或换设备打开时计数不会延续。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -162,7 +172,12 @@ window.I18N_LOCALES = {
     "faq.q4": "अलर्ट की आवाज़ नहीं आ रही — क्यों?",
     "faq.a4": "ब्राउज़र पेज से इंटरैक्शन के बाद ही ध्वनि की अनुमति देते हैं, इसलिए स्टार्ट दबाते ही ध्वनि तैयार हो जाती है। फोकस के अंत में ऊँची बीप (880Hz) और ब्रेक के अंत में नीची बीप (660Hz) बजती है, ताकि बिना देखे पहचान सकें। फिर भी न सुनाई दे तो सिस्टम वॉल्यूम, टैब म्यूट और फोन का साइलेंट मोड जाँचें। Web Audio न होने पर सूचना के साथ केवल दृश्य अलर्ट मिलता है।",
     "faq.q5": "आज के पोमोडोरो की गिनती कहाँ सहेजी जाती है?",
-    "faq.a5": "आज की गिनती और टाइमर सेटिंग्स केवल आपके ब्राउज़र (localStorage) में रहती हैं — सर्वर को कुछ नहीं भेजा जाता। साइनअप या इंस्टॉल की ज़रूरत नहीं, और तारीख़ बदलते ही गिनती अपने आप शून्य से शुरू होती है। ब्राउज़र डेटा मिटाने या दूसरे डिवाइस पर खोलने से गिनती आगे नहीं बढ़ती।"
+    "faq.a5": "आज की गिनती और टाइमर सेटिंग्स केवल आपके ब्राउज़र (localStorage) में रहती हैं — सर्वर को कुछ नहीं भेजा जाता। साइनअप या इंस्टॉल की ज़रूरत नहीं, और तारीख़ बदलते ही गिनती अपने आप शून्य से शुरू होती है। ब्राउज़र डेटा मिटाने या दूसरे डिवाइस पर खोलने से गिनती आगे नहीं बढ़ती।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -211,7 +226,12 @@ window.I18N_LOCALES = {
     "faq.q4": "No oigo el aviso sonoro, ¿por qué?",
     "faq.a4": "Los navegadores solo permiten sonido tras interactuar con la página, así que el audio se activa al pulsar Iniciar. El fin de la concentración usa un pitido agudo (880Hz) y el fin del descanso uno grave (660Hz), para distinguirlos sin mirar. Si sigue sin oírse, revisa el volumen del sistema, el silencio de la pestaña y el modo silencio del móvil. Sin Web Audio, se muestra un aviso y la alerta es solo visual.",
     "faq.q5": "¿Dónde se guarda mi recuento diario de pomodoros?",
-    "faq.a5": "El recuento de hoy y los ajustes se guardan solo en tu navegador (localStorage) — no se envía nada a un servidor. No hace falta registro ni instalación, y el recuento vuelve a cero automáticamente al cambiar la fecha. Si borras los datos del navegador o abres la página en otro dispositivo, el recuento empieza de nuevo."
+    "faq.a5": "El recuento de hoy y los ajustes se guardan solo en tu navegador (localStorage) — no se envía nada a un servidor. No hace falta registro ni instalación, y el recuento vuelve a cero automáticamente al cambiar la fecha. Si borras los datos del navegador o abres la página en otro dispositivo, el recuento empieza de nuevo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -260,7 +280,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لا أسمع صوت التنبيه — ما السبب؟",
     "faq.a4": "لا يسمح المتصفح بالصوت إلا بعد تفاعلك مع الصفحة، لذا يُجهَّز الصوت لحظة ضغط ابدأ. نهاية التركيز نغمة عالية (880 هرتز) ونهاية الاستراحة نغمة أخفض (660 هرتز) لتميّز بينهما دون النظر. إن لم تسمع شيئًا فتحقق من مستوى صوت النظام وكتم التبويب ووضع الصامت في الهاتف. وبدون دعم Web Audio يظهر تنبيه ويبقى الإشعار مرئيًا فقط.",
     "faq.q5": "أين يُحفظ عدّاد بومودورو اليومي؟",
-    "faq.a5": "يُحفظ عدّاد اليوم وإعدادات المؤقت في متصفحك فقط (localStorage) — لا يُرسل شيء إلى أي خادم. لا حاجة إلى تسجيل أو تثبيت، ويعود العدّاد إلى الصفر تلقائيًا عند تغيّر التاريخ. مسح بيانات المتصفح أو الفتح على جهاز آخر يبدأ عدًّا جديدًا."
+    "faq.a5": "يُحفظ عدّاد اليوم وإعدادات المؤقت في متصفحك فقط (localStorage) — لا يُرسل شيء إلى أي خادم. لا حاجة إلى تسجيل أو تثبيت، ويعود العدّاد إلى الصفر تلقائيًا عند تغيّر التاريخ. مسح بيانات المتصفح أو الفتح على جهاز آخر يبدأ عدًّا جديدًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -309,7 +334,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Je n'entends pas l'alerte sonore — pourquoi ?",
     "faq.a4": "Les navigateurs n'autorisent le son qu'après une interaction avec la page : l'audio est donc armé au clic sur Démarrer. La fin de concentration émet un bip aigu (880 Hz) et la fin de pause un bip plus grave (660 Hz), pour les distinguer sans regarder. Si rien ne sonne, vérifiez le volume système, le mode muet de l'onglet et le mode silencieux du téléphone. Sans Web Audio, un message s'affiche et l'alerte reste visuelle.",
     "faq.q5": "Où est stocké mon compteur quotidien de pomodoros ?",
-    "faq.a5": "Le compteur du jour et vos réglages sont stockés uniquement dans votre navigateur (localStorage) — rien n'est envoyé à un serveur. Aucune inscription ni installation, et le compteur revient automatiquement à zéro au changement de date. Effacer les données du navigateur ou ouvrir la page sur un autre appareil repart d'un compteur neuf."
+    "faq.a5": "Le compteur du jour et vos réglages sont stockés uniquement dans votre navigateur (localStorage) — rien n'est envoyé à un serveur. Aucune inscription ni installation, et le compteur revient automatiquement à zéro au changement de date. Effacer les données du navigateur ou ouvrir la page sur un autre appareil repart d'un compteur neuf.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -358,7 +388,12 @@ window.I18N_LOCALES = {
     "faq.q4": "সতর্কতার শব্দ শুনতে পাচ্ছি না — কেন?",
     "faq.a4": "ব্রাউজার পেজে ইন্টারঅ্যাক্ট করার পরই শব্দের অনুমতি দেয়, তাই স্টার্ট চাপার মুহূর্তেই শব্দ প্রস্তুত হয়। ফোকাস শেষে উঁচু বিপ (৮৮০Hz) আর বিরতি শেষে নিচু বিপ (৬৬০Hz) বাজে, ফলে না তাকিয়েও বোঝা যায়। তবুও না শুনলে সিস্টেম ভলিউম, ট্যাব মিউট ও ফোনের সাইলেন্ট মোড দেখুন। Web Audio সমর্থন না থাকলে নোটিশসহ শুধু ভিজ্যুয়াল সতর্কতা দেখানো হয়।",
     "faq.q5": "আজকের পোমোডোরোর হিসাব কোথায় সংরক্ষিত হয়?",
-    "faq.a5": "আজকের হিসাব আর টাইমার সেটিংস শুধু আপনার ব্রাউজারে (localStorage) থাকে — সার্ভারে কিছুই পাঠানো হয় না। সাইনআপ বা ইনস্টল লাগে না, আর তারিখ বদলালে হিসাব নিজে থেকেই শূন্য থেকে শুরু হয়। ব্রাউজার ডেটা মুছলে বা অন্য ডিভাইসে খুললে হিসাব এগোয় না।"
+    "faq.a5": "আজকের হিসাব আর টাইমার সেটিংস শুধু আপনার ব্রাউজারে (localStorage) থাকে — সার্ভারে কিছুই পাঠানো হয় না। সাইনআপ বা ইনস্টল লাগে না, আর তারিখ বদলালে হিসাব নিজে থেকেই শূন্য থেকে শুরু হয়। ব্রাউজার ডেটা মুছলে বা অন্য ডিভাইসে খুললে হিসাব এগোয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -407,7 +442,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Não ouço o alerta sonoro — por quê?",
     "faq.a4": "Os navegadores só liberam som após você interagir com a página, então o áudio é armado no momento em que você toca em Iniciar. O fim do foco usa um bipe agudo (880Hz) e o fim da pausa um grave (660Hz), para distinguir sem olhar. Se ainda não ouvir, verifique o volume do sistema, o mudo da aba e o modo silencioso do celular. Sem Web Audio, um aviso aparece e o alerta fica só visual.",
     "faq.q5": "Onde fica salva minha contagem diária de pomodoros?",
-    "faq.a5": "A contagem de hoje e as configurações ficam apenas no seu navegador (localStorage) — nada é enviado a um servidor. Não precisa de cadastro nem instalação, e a contagem zera automaticamente quando a data muda. Limpar os dados do navegador ou abrir em outro aparelho começa uma contagem nova."
+    "faq.a5": "A contagem de hoje e as configurações ficam apenas no seu navegador (localStorage) — nada é enviado a um servidor. Não precisa de cadastro nem instalação, e a contagem zera automaticamente quando a data muda. Limpar os dados do navegador ou abrir em outro aparelho começa uma contagem nova.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -456,7 +496,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Не слышно сигнала — почему?",
     "faq.a4": "Браузеры разрешают звук только после взаимодействия со страницей, поэтому аудио включается в момент нажатия «Старт». Конец фокуса — высокий сигнал (880 Гц), конец перерыва — низкий (660 Гц), их можно различить не глядя. Если звука всё равно нет, проверьте громкость системы, отключение звука вкладки и беззвучный режим телефона. Без поддержки Web Audio появится уведомление, а оповещение будет только визуальным.",
     "faq.q5": "Где хранится счётчик помодоро за день?",
-    "faq.a5": "Счётчик за сегодня и настройки хранятся только в вашем браузере (localStorage) — на сервер ничего не отправляется. Регистрация и установка не нужны, а при смене даты счётчик автоматически обнуляется. Очистка данных браузера или открытие на другом устройстве начнёт счёт заново."
+    "faq.a5": "Счётчик за сегодня и настройки хранятся только в вашем браузере (localStorage) — на сервер ничего не отправляется. Регистрация и установка не нужны, а при смене даты счётчик автоматически обнуляется. Очистка данных браузера или открытие на другом устройстве начнёт счёт заново.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -505,7 +550,12 @@ window.I18N_LOCALES = {
     "faq.q4": "الرٹ کی آواز نہیں آ رہی — کیوں؟",
     "faq.a4": "براؤزر صفحے سے تعامل کے بعد ہی آواز کی اجازت دیتے ہیں، اس لیے اسٹارٹ دباتے ہی آواز تیار ہو جاتی ہے۔ فوکس کے اختتام پر اونچی بیپ (880Hz) اور وقفے کے اختتام پر نیچی بیپ (660Hz) بجتی ہے تاکہ بغیر دیکھے فرق معلوم ہو۔ پھر بھی نہ سنائی دے تو سسٹم والیم، ٹیب کا میوٹ اور فون کا سائلنٹ موڈ دیکھیں۔ Web Audio نہ ہونے پر اطلاع کے ساتھ صرف بصری الرٹ ملتا ہے۔",
     "faq.q5": "آج کے پومودورو کی گنتی کہاں محفوظ ہوتی ہے؟",
-    "faq.a5": "آج کی گنتی اور ٹائمر کی ترتیبات صرف آپ کے براؤزر (localStorage) میں رہتی ہیں — سرور کو کچھ نہیں بھیجا جاتا۔ سائن اپ یا انسٹال کی ضرورت نہیں، اور تاریخ بدلتے ہی گنتی خود صفر سے شروع ہوتی ہے۔ براؤزر ڈیٹا مٹانے یا دوسرے آلے پر کھولنے سے گنتی آگے نہیں بڑھتی۔"
+    "faq.a5": "آج کی گنتی اور ٹائمر کی ترتیبات صرف آپ کے براؤزر (localStorage) میں رہتی ہیں — سرور کو کچھ نہیں بھیجا جاتا۔ سائن اپ یا انسٹال کی ضرورت نہیں، اور تاریخ بدلتے ہی گنتی خود صفر سے شروع ہوتی ہے۔ براؤزر ڈیٹا مٹانے یا دوسرے آلے پر کھولنے سے گنتی آگے نہیں بڑھتی۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -554,7 +604,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Suara notifikasi tidak terdengar — kenapa?",
     "faq.a4": "Browser hanya mengizinkan suara setelah Anda berinteraksi dengan halaman, jadi audio disiapkan begitu tombol Mulai ditekan. Akhir fokus memakai bip tinggi (880Hz) dan akhir istirahat bip rendah (660Hz), sehingga bisa dibedakan tanpa melihat layar. Jika masih hening, periksa volume sistem, mute tab, dan mode senyap ponsel. Tanpa dukungan Web Audio, muncul pemberitahuan dan peringatan hanya berupa visual.",
     "faq.q5": "Di mana hitungan pomodoro harian saya disimpan?",
-    "faq.a5": "Hitungan hari ini dan pengaturan timer hanya disimpan di browser Anda (localStorage) — tidak ada yang dikirim ke server. Tanpa daftar atau instal, dan hitungan otomatis kembali ke nol saat tanggal berganti. Menghapus data browser atau membuka di perangkat lain memulai hitungan baru."
+    "faq.a5": "Hitungan hari ini dan pengaturan timer hanya disimpan di browser Anda (localStorage) — tidak ada yang dikirim ke server. Tanpa daftar atau instal, dan hitungan otomatis kembali ke nol saat tanggal berganti. Menghapus data browser atau membuka di perangkat lain memulai hitungan baru.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -603,7 +658,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Ich höre den Hinweiston nicht — woran liegt das?",
     "faq.a4": "Browser erlauben Ton erst nach einer Interaktion mit der Seite; der Klang wird daher beim Klick auf Start scharfgestellt. Das Fokus-Ende nutzt einen hohen Piepton (880 Hz), das Pausen-Ende einen tieferen (660 Hz) — so unterscheidest du sie ohne hinzusehen. Wenn trotzdem nichts zu hören ist, prüfe Systemlautstärke, Tab-Stummschaltung und den Lautlos-Modus des Handys. Ohne Web-Audio-Unterstützung erscheint ein Hinweis, und die Warnung bleibt rein visuell.",
     "faq.q5": "Wo wird mein täglicher Pomodoro-Zähler gespeichert?",
-    "faq.a5": "Der heutige Zähler und die Timer-Einstellungen liegen nur in deinem Browser (localStorage) — nichts wird an einen Server gesendet. Keine Anmeldung, keine Installation, und beim Datumswechsel beginnt der Zähler automatisch wieder bei null. Nach dem Löschen der Browserdaten oder auf einem anderen Gerät startet ein neuer Zähler."
+    "faq.a5": "Der heutige Zähler und die Timer-Einstellungen liegen nur in deinem Browser (localStorage) — nichts wird an einen Server gesendet. Keine Anmeldung, keine Installation, und beim Datumswechsel beginnt der Zähler automatisch wieder bei null. Nach dem Löschen der Browserdaten oder auf einem anderen Gerät startet ein neuer Zähler.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -652,7 +712,12 @@ window.I18N_LOCALES = {
     "faq.q4": "通知音が聞こえません — なぜ?",
     "faq.a4": "ブラウザの自動再生ポリシーにより、音はページ操作後にのみ許可されます。そのためこのタイマーはスタートを押した瞬間に音を準備します。集中終了は高い音(880Hz)、休憩終了は低い音(660Hz)で区別されるので、画面を見なくても分かります。それでも聞こえない場合は、システム音量・タブのミュート・スマホのサイレントモードを確認してください。Web Audio非対応のブラウザでは通知を表示し、画面表示のみでお知らせします。",
     "faq.q5": "今日完了したポモドーロ数はどこに保存されますか?",
-    "faq.a5": "今日のカウントとタイマー設定はすべてお使いのブラウザ(localStorage)にのみ保存され、サーバーには何も送信されません。登録もインストールも不要で、日付が変わるとカウントは自動で0から再スタートします。ブラウザのデータを消したり別の端末で開いたりすると、カウントは引き継がれません。"
+    "faq.a5": "今日のカウントとタイマー設定はすべてお使いのブラウザ(localStorage)にのみ保存され、サーバーには何も送信されません。登録もインストールも不要で、日付が変わるとカウントは自動で0から再スタートします。ブラウザのデータを消したり別の端末で開いたりすると、カウントは引き継がれません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -701,6 +766,11 @@ window.I18N_LOCALES = {
     "faq.q4": "알림음이 안 들려요 — 왜 그런가요?",
     "faq.a4": "브라우저 자동재생 정책 때문에 소리는 사용자가 페이지와 상호작용한 뒤에만 허용됩니다. 그래서 이 타이머는 시작 버튼을 누르는 순간 소리를 준비합니다. 집중 종료는 높은 음(880Hz), 휴식 종료는 낮은 음(660Hz)으로 구분되어 화면을 보지 않아도 알 수 있습니다. 그래도 안 들리면 시스템 볼륨, 탭 음소거, 휴대폰 무음 스위치를 확인하세요. Web Audio 미지원 브라우저에서는 안내 문구와 함께 시각 알림으로 대신합니다.",
     "faq.q5": "오늘 완료한 뽀모도로 수는 어디에 저장되나요?",
-    "faq.a5": "오늘 카운트와 타이머 설정은 모두 내 브라우저(localStorage)에만 저장되며 서버로는 아무것도 전송되지 않습니다. 가입도 설치도 필요 없고, 날짜가 바뀌면 카운트는 자동으로 0부터 다시 시작합니다. 브라우저 데이터를 지우거나 다른 기기에서 열면 카운트는 이어지지 않습니다."
+    "faq.a5": "오늘 카운트와 타이머 설정은 모두 내 브라우저(localStorage)에만 저장되며 서버로는 아무것도 전송되지 않습니다. 가입도 설치도 필요 없고, 날짜가 바뀌면 카운트는 자동으로 0부터 다시 시작합니다. 브라우저 데이터를 지우거나 다른 기기에서 열면 카운트는 이어지지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

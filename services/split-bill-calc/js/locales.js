@@ -59,7 +59,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is my amount sent to a server?",
     "faq.a4": "No. Every calculation runs locally in your browser. Nothing you type is uploaded, saved, or shared — no account, no tracking, works offline.",
     "faq.q5": "How do I use the copy button?",
-    "faq.a5": "Tap \"Copy message\" for a ready-to-send line like \"Each of 4 pays 21,200 (total 84,800)\" and paste it into your group chat. You can also tap any single figure to copy just that number."
+    "faq.a5": "Tap \"Copy message\" for a ready-to-send line like \"Each of 4 pays 21,200 (total 84,800)\" and paste it into your group chat. You can also tap any single figure to copy just that number.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -112,7 +117,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的金额会上传到服务器吗？",
     "faq.a4": "不会。所有计算都在浏览器本地完成，输入内容不会上传、保存或分享，无需账号，也可离线使用。",
     "faq.q5": "复制按钮怎么用？",
-    "faq.a5": "点“复制消息”即可得到一条可直接发送的文本，例如“4 人平摊，每人 21,200（合计 84,800）”，粘贴到群聊即可。也可点按单个数字只复制该数值。"
+    "faq.a5": "点“复制消息”即可得到一条可直接发送的文本，例如“4 人平摊，每人 21,200（合计 84,800）”，粘贴到群聊即可。也可点按单个数字只复制该数值。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरी रकम सर्वर पर भेजी जाती है?",
     "faq.a4": "नहीं। हर गणना आपके ब्राउज़र में ही होती है। आपकी डाली गई कोई भी बात अपलोड, सेव या शेयर नहीं होती — न खाता, न ट्रैकिंग, ऑफ़लाइन भी चलता है।",
     "faq.q5": "कॉपी बटन कैसे इस्तेमाल करें?",
-    "faq.a5": "“मैसेज कॉपी करें” दबाएँ और भेजने लायक लाइन पाएँ जैसे “4 लोगों में हर एक 21,200 (कुल 84,800)” और उसे ग्रुप चैट में पेस्ट करें। किसी एक संख्या पर टैप कर सिर्फ़ वही भी कॉपी कर सकते हैं।"
+    "faq.a5": "“मैसेज कॉपी करें” दबाएँ और भेजने लायक लाइन पाएँ जैसे “4 लोगों में हर एक 21,200 (कुल 84,800)” और उसे ग्रुप चैट में पेस्ट करें। किसी एक संख्या पर टैप कर सिर्फ़ वही भी कॉपी कर सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -218,7 +233,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se envía mi importe a un servidor?",
     "faq.a4": "No. Todo se calcula en tu navegador. Nada de lo que escribes se sube, guarda ni comparte — sin cuenta, sin seguimiento y funciona sin conexión.",
     "faq.q5": "¿Cómo uso el botón de copiar?",
-    "faq.a5": "Toca \"Copiar mensaje\" para obtener una línea lista como \"Cada uno de 4 paga 21.200 (total 84.800)\" y pégala en tu chat de grupo. También puedes tocar una sola cifra para copiar solo ese número."
+    "faq.a5": "Toca \"Copiar mensaje\" para obtener una línea lista como \"Cada uno de 4 paga 21.200 (total 84.800)\" y pégala en tu chat de grupo. También puedes tocar una sola cifra para copiar solo ese número.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -271,7 +291,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يُرسَل مبلغي إلى خادم؟",
     "faq.a4": "لا. كل عملية حساب تجري داخل متصفحك. لا يُرفع ما تكتبه ولا يُحفظ ولا يُشارك — بلا حساب، بلا تتبّع، ويعمل دون اتصال.",
     "faq.q5": "كيف أستخدم زر النسخ؟",
-    "faq.a5": "انقر \"نسخ الرسالة\" للحصول على سطر جاهز مثل \"كل واحد من 4 يدفع 21,200 (الإجمالي 84,800)\" والصقه في مجموعتك. يمكنك أيضًا النقر على رقم واحد لنسخه وحده."
+    "faq.a5": "انقر \"نسخ الرسالة\" للحصول على سطر جاهز مثل \"كل واحد من 4 يدفع 21,200 (الإجمالي 84,800)\" والصقه في مجموعتك. يمكنك أيضًا النقر على رقم واحد لنسخه وحده.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -324,7 +349,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mon montant est-il envoyé à un serveur ?",
     "faq.a4": "Non. Tout est calculé dans votre navigateur. Rien de ce que vous saisissez n'est envoyé, enregistré ni partagé — sans compte, sans suivi, et fonctionne hors ligne.",
     "faq.q5": "Comment utiliser le bouton copier ?",
-    "faq.a5": "Touchez « Copier le message » pour obtenir une ligne prête comme « Chacun des 4 paie 21 200 (total 84 800) » et collez-la dans votre discussion. Vous pouvez aussi toucher un seul chiffre pour ne copier que ce montant."
+    "faq.a5": "Touchez « Copier le message » pour obtenir une ligne prête comme « Chacun des 4 paie 21 200 (total 84 800) » et collez-la dans votre discussion. Vous pouvez aussi toucher un seul chiffre pour ne copier que ce montant.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -377,7 +407,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার অঙ্ক কি সার্ভারে যায়?",
     "faq.a4": "না। প্রতিটি হিসাব আপনার ব্রাউজারেই হয়। আপনি যা লেখেন তা আপলোড, সংরক্ষণ বা শেয়ার হয় না — অ্যাকাউন্ট নেই, ট্র্যাকিং নেই, অফলাইনেও চলে।",
     "faq.q5": "কপি বোতাম কীভাবে ব্যবহার করব?",
-    "faq.a5": "“বার্তা কপি করুন” চাপুন, পাবেন পাঠানোর মতো লাইন যেমন “৪ জনের প্রত্যেকে 21,200 (মোট 84,800)”, গ্রুপ চ্যাটে পেস্ট করুন। যেকোনো একটি সংখ্যায় ট্যাপ করে শুধু সেটিও কপি করা যায়।"
+    "faq.a5": "“বার্তা কপি করুন” চাপুন, পাবেন পাঠানোর মতো লাইন যেমন “৪ জনের প্রত্যেকে 21,200 (মোট 84,800)”, গ্রুপ চ্যাটে পেস্ট করুন। যেকোনো একটি সংখ্যায় ট্যাপ করে শুধু সেটিও কপি করা যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -430,7 +465,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meu valor é enviado a um servidor?",
     "faq.a4": "Não. Todo cálculo roda no seu navegador. Nada do que você digita é enviado, salvo ou compartilhado — sem conta, sem rastreamento e funciona offline.",
     "faq.q5": "Como uso o botão de copiar?",
-    "faq.a5": "Toque em \"Copiar mensagem\" para obter uma linha pronta como \"Cada um dos 4 paga 21.200 (total 84.800)\" e cole no seu grupo. Você também pode tocar num número só para copiar apenas ele."
+    "faq.a5": "Toque em \"Copiar mensagem\" para obter uma linha pronta como \"Cada um dos 4 paga 21.200 (total 84.800)\" e cole no seu grupo. Você também pode tocar num número só para copiar apenas ele.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -483,7 +523,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Отправляется ли моя сумма на сервер?",
     "faq.a4": "Нет. Все расчёты идут в вашем браузере. Ничего из введённого не загружается, не сохраняется и не передаётся — без аккаунта, без слежки, работает офлайн.",
     "faq.q5": "Как пользоваться кнопкой копирования?",
-    "faq.a5": "Нажмите «Скопировать сообщение», чтобы получить готовую строку вроде «Каждый из 4 платит 21 200 (всего 84 800)», и вставьте её в чат. Можно также нажать отдельное число, чтобы скопировать только его."
+    "faq.a5": "Нажмите «Скопировать сообщение», чтобы получить готовую строку вроде «Каждый из 4 платит 21 200 (всего 84 800)», и вставьте её в чат. Можно также нажать отдельное число, чтобы скопировать только его.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -536,7 +581,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میری رقم سرور پر بھیجی جاتی ہے؟",
     "faq.a4": "نہیں۔ ہر حساب آپ کے براؤزر میں ہوتا ہے۔ آپ جو لکھتے ہیں وہ اپ لوڈ، محفوظ یا شیئر نہیں ہوتا — نہ اکاؤنٹ، نہ ٹریکنگ، آف لائن بھی چلتا ہے۔",
     "faq.q5": "کاپی بٹن کیسے استعمال کریں؟",
-    "faq.a5": "”پیغام کاپی کریں“ دبائیں اور بھیجنے کے لیے تیار لائن پائیں جیسے ”4 افراد میں ہر ایک 21,200 (کل 84,800)“ اور اسے گروپ چیٹ میں پیسٹ کریں۔ کسی ایک عدد پر ٹیپ کر کے صرف وہی بھی کاپی کر سکتے ہیں۔"
+    "faq.a5": "”پیغام کاپی کریں“ دبائیں اور بھیجنے کے لیے تیار لائن پائیں جیسے ”4 افراد میں ہر ایک 21,200 (کل 84,800)“ اور اسے گروپ چیٹ میں پیسٹ کریں۔ کسی ایک عدد پر ٹیپ کر کے صرف وہی بھی کاپی کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -589,7 +639,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah jumlah saya dikirim ke server?",
     "faq.a4": "Tidak. Semua perhitungan berjalan di browser Anda. Apa pun yang Anda ketik tidak diunggah, disimpan, atau dibagikan — tanpa akun, tanpa pelacakan, dan bisa offline.",
     "faq.q5": "Bagaimana memakai tombol salin?",
-    "faq.a5": "Ketuk \"Salin pesan\" untuk mendapat baris siap kirim seperti \"Masing-masing dari 4 bayar 21.200 (total 84.800)\" lalu tempel ke chat grup. Anda juga bisa mengetuk satu angka untuk menyalin angka itu saja."
+    "faq.a5": "Ketuk \"Salin pesan\" untuk mendapat baris siap kirim seperti \"Masing-masing dari 4 bayar 21.200 (total 84.800)\" lalu tempel ke chat grup. Anda juga bisa mengetuk satu angka untuk menyalin angka itu saja.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -642,7 +697,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wird mein Betrag an einen Server gesendet?",
     "faq.a4": "Nein. Jede Berechnung läuft in deinem Browser. Nichts, was du eingibst, wird hochgeladen, gespeichert oder geteilt — kein Konto, kein Tracking, funktioniert offline.",
     "faq.q5": "Wie nutze ich die Kopieren-Schaltfläche?",
-    "faq.a5": "Tippe auf \"Nachricht kopieren\" für eine fertige Zeile wie \"Jede*r der 4 zahlt 21.200 (gesamt 84.800)\" und füge sie in deinen Gruppenchat ein. Du kannst auch eine einzelne Zahl antippen, um nur diese zu kopieren."
+    "faq.a5": "Tippe auf \"Nachricht kopieren\" für eine fertige Zeile wie \"Jede*r der 4 zahlt 21.200 (gesamt 84.800)\" und füge sie in deinen Gruppenchat ein. Du kannst auch eine einzelne Zahl antippen, um nur diese zu kopieren.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -695,7 +755,12 @@ window.I18N_LOCALES = {
     "faq.q4": "入力した金額はサーバーに送られますか？",
     "faq.a4": "いいえ。計算はすべてブラウザ内で行われます。入力内容がアップロード・保存・共有されることはありません。アカウント不要、トラッキングなし、オフラインでも動きます。",
     "faq.q5": "コピーボタンの使い方は？",
-    "faq.a5": "「メッセージをコピー」を押すと、「4人でそれぞれ21,200（合計84,800）」のような送信用の一文が手に入り、グループチャットに貼り付けられます。数字を1つタップすれば、その数字だけコピーもできます。"
+    "faq.a5": "「メッセージをコピー」を押すと、「4人でそれぞれ21,200（合計84,800）」のような送信用の一文が手に入り、グループチャットに貼り付けられます。数字を1つタップすれば、その数字だけコピーもできます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -748,6 +813,11 @@ window.I18N_LOCALES = {
     "faq.q4": "입력한 금액이 서버로 전송되나요?",
     "faq.a4": "아니요. 모든 계산은 브라우저 안에서 이뤄집니다. 입력값은 업로드·저장·공유되지 않습니다 — 계정도, 추적도 없고 오프라인에서도 동작합니다.",
     "faq.q5": "복사 버튼은 어떻게 쓰나요?",
-    "faq.a5": "‘메시지 복사’를 누르면 “4명이 각자 21,200 (총 84,800)” 같은 회식비 정산 문구가 만들어져 단톡방에 바로 붙여넣을 수 있습니다. 숫자 하나만 탭하면 그 금액만 복사할 수도 있어요."
+    "faq.a5": "‘메시지 복사’를 누르면 “4명이 각자 21,200 (총 84,800)” 같은 회식비 정산 문구가 만들어져 단톡방에 바로 붙여넣을 수 있습니다. 숫자 하나만 탭하면 그 금액만 복사할 수도 있어요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

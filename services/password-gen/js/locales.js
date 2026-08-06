@@ -51,7 +51,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why should I include symbols?",
     "faq.a4": "Including symbols greatly raises a password's entropy (information content). Lowercase letters alone give 26 possibilities, but combining uppercase, lowercase, numbers and symbols yields about 94 possible characters — dramatically improving brute-force resistance at the same length.",
     "faq.q5": "Where should I store the passwords I generate?",
-    "faq.a5": "Use a password manager such as Bitwarden, 1Password or KeePass. It lets you keep a different strong password for every account without memorizing them, and alerts you to breaches. Avoid saving passwords as plain text in notes or spreadsheets."
+    "faq.a5": "Use a password manager such as Bitwarden, 1Password or KeePass. It lets you keep a different strong password for every account without memorizing them, and alerts you to breaches. Avoid saving passwords as plain text in notes or spreadsheets.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -93,7 +98,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么要包含符号？",
     "faq.a4": "包含符号能大幅提高密码的熵（信息量）。仅小写字母只有 26 种可能，而同时使用大写、小写、数字和符号可用约 94 种字符——在相同长度下大幅提升抗暴力破解能力。",
     "faq.q5": "生成的密码该存放在哪里？",
-    "faq.a5": "建议使用密码管理器（如 Bitwarden、1Password、KeePass）。它让你为每个账户使用不同的强密码而无需记忆，还会提醒你数据泄露。请避免在记事本或表格中以明文保存密码。"
+    "faq.a5": "建议使用密码管理器（如 Bitwarden、1Password、KeePass）。它让你为每个账户使用不同的强密码而无需记忆，还会提醒你数据泄露。请避免在记事本或表格中以明文保存密码。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -135,7 +145,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मुझे प्रतीक क्यों शामिल करने चाहिए?",
     "faq.a4": "प्रतीक शामिल करने से पासवर्ड की एन्ट्रॉपी (सूचना-मात्रा) काफ़ी बढ़ जाती है। केवल छोटे अक्षरों से 26 संभावनाएँ बनती हैं, जबकि बड़े अक्षर, छोटे अक्षर, अंक और प्रतीक मिलाकर लगभग 94 संभावित कैरेक्टर मिलते हैं — जिससे समान लंबाई पर भी ब्रूट-फ़ोर्स प्रतिरोध बहुत बढ़ जाता है।",
     "faq.q5": "बनाए गए पासवर्ड मुझे कहाँ रखने चाहिए?",
-    "faq.a5": "पासवर्ड मैनेजर (जैसे Bitwarden, 1Password या KeePass) का उपयोग करें। यह हर खाते के लिए अलग मज़बूत पासवर्ड याद किए बिना रखने देता है और सेंधमारी की चेतावनी भी देता है। नोट्स या स्प्रेडशीट में पासवर्ड सादे टेक्स्ट में सहेजने से बचें।"
+    "faq.a5": "पासवर्ड मैनेजर (जैसे Bitwarden, 1Password या KeePass) का उपयोग करें। यह हर खाते के लिए अलग मज़बूत पासवर्ड याद किए बिना रखने देता है और सेंधमारी की चेतावनी भी देता है। नोट्स या स्प्रेडशीट में पासवर्ड सादे टेक्स्ट में सहेजने से बचें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -177,7 +192,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué debería incluir símbolos?",
     "faq.a4": "Incluir símbolos aumenta mucho la entropía (cantidad de información) de una contraseña. Solo con minúsculas hay 26 posibilidades, mientras que combinar mayúsculas, minúsculas, números y símbolos ofrece unos 94 caracteres posibles, mejorando enormemente la resistencia a la fuerza bruta con la misma longitud.",
     "faq.q5": "¿Dónde debería guardar las contraseñas que genero?",
-    "faq.a5": "Usa un gestor de contraseñas (como Bitwarden, 1Password o KeePass). Te permite tener una contraseña fuerte distinta para cada cuenta sin memorizarlas y te avisa de filtraciones. Evita guardar contraseñas en texto plano en notas u hojas de cálculo."
+    "faq.a5": "Usa un gestor de contraseñas (como Bitwarden, 1Password o KeePass). Te permite tener una contraseña fuerte distinta para cada cuenta sin memorizarlas y te avisa de filtraciones. Evita guardar contraseñas en texto plano en notas u hojas de cálculo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -219,7 +239,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا ينبغي تضمين الرموز؟",
     "faq.a4": "يرفع تضمين الرموز إنتروبيا كلمة المرور (كمية المعلومات) بشكل كبير. فالأحرف الصغيرة وحدها تمنح 26 احتمالًا، بينما يوفّر الجمع بين الأحرف الكبيرة والصغيرة والأرقام والرموز نحو 94 حرفًا ممكنًا — مما يحسّن مقاومة القوة الغاشمة بشكل هائل عند الطول نفسه.",
     "faq.q5": "أين ينبغي أن أحفظ كلمات المرور التي أُنشئها؟",
-    "faq.a5": "استخدم مدير كلمات مرور (مثل Bitwarden أو 1Password أو KeePass). فهو يتيح لك استخدام كلمة مرور قوية مختلفة لكل حساب دون حفظها في ذاكرتك، وينبّهك إلى التسريبات. تجنّب حفظ كلمات المرور كنص عادي في الملاحظات أو جداول البيانات."
+    "faq.a5": "استخدم مدير كلمات مرور (مثل Bitwarden أو 1Password أو KeePass). فهو يتيح لك استخدام كلمة مرور قوية مختلفة لكل حساب دون حفظها في ذاكرتك، وينبّهك إلى التسريبات. تجنّب حفظ كلمات المرور كنص عادي في الملاحظات أو جداول البيانات.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -261,7 +286,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi inclure des symboles ?",
     "faq.a4": "Inclure des symboles augmente fortement l'entropie (quantité d'information) d'un mot de passe. Les minuscules seules offrent 26 possibilités, tandis que combiner majuscules, minuscules, chiffres et symboles donne environ 94 caractères possibles — ce qui améliore énormément la résistance à la force brute à longueur égale.",
     "faq.q5": "Où stocker les mots de passe générés ?",
-    "faq.a5": "Utilisez un gestionnaire de mots de passe (comme Bitwarden, 1Password ou KeePass). Il vous permet d'avoir un mot de passe fort différent pour chaque compte sans les mémoriser, et vous avertit des fuites. Évitez d'enregistrer les mots de passe en texte clair dans des notes ou des tableurs."
+    "faq.a5": "Utilisez un gestionnaire de mots de passe (comme Bitwarden, 1Password ou KeePass). Il vous permet d'avoir un mot de passe fort différent pour chaque compte sans les mémoriser, et vous avertit des fuites. Évitez d'enregistrer les mots de passe en texte clair dans des notes ou des tableurs.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -303,7 +333,12 @@ window.I18N_LOCALES = {
     "faq.q4": "চিহ্ন কেন যুক্ত করব?",
     "faq.a4": "চিহ্ন যুক্ত করলে পাসওয়ার্ডের এন্ট্রপি (তথ্যের পরিমাণ) অনেক বেড়ে যায়। শুধু ছোট হাতের অক্ষরে 26টি সম্ভাবনা থাকে, কিন্তু বড় হাতের, ছোট হাতের, সংখ্যা ও চিহ্ন একসাথে ব্যবহার করলে প্রায় 94টি সম্ভাব্য অক্ষর পাওয়া যায় — একই দৈর্ঘ্যেও ব্রুট-ফোর্স প্রতিরোধ ব্যাপকভাবে উন্নত হয়।",
     "faq.q5": "তৈরি করা পাসওয়ার্ড কোথায় সংরক্ষণ করব?",
-    "faq.a5": "একটি পাসওয়ার্ড ম্যানেজার (যেমন Bitwarden, 1Password বা KeePass) ব্যবহার করুন। এটি প্রতিটি অ্যাকাউন্টের জন্য আলাদা শক্তিশালী পাসওয়ার্ড মুখস্থ না করেই রাখতে দেয় এবং তথ্য ফাঁসের সতর্কতাও দেয়। নোট বা স্প্রেডশিটে সাধারণ টেক্সট হিসেবে পাসওয়ার্ড সংরক্ষণ এড়িয়ে চলুন।"
+    "faq.a5": "একটি পাসওয়ার্ড ম্যানেজার (যেমন Bitwarden, 1Password বা KeePass) ব্যবহার করুন। এটি প্রতিটি অ্যাকাউন্টের জন্য আলাদা শক্তিশালী পাসওয়ার্ড মুখস্থ না করেই রাখতে দেয় এবং তথ্য ফাঁসের সতর্কতাও দেয়। নোট বা স্প্রেডশিটে সাধারণ টেক্সট হিসেবে পাসওয়ার্ড সংরক্ষণ এড়িয়ে চলুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -345,7 +380,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que devo incluir símbolos?",
     "faq.a4": "Incluir símbolos aumenta muito a entropia (quantidade de informação) de uma senha. Somente com minúsculas há 26 possibilidades, enquanto combinar maiúsculas, minúsculas, números e símbolos oferece cerca de 94 caracteres possíveis — melhorando enormemente a resistência à força bruta no mesmo comprimento.",
     "faq.q5": "Onde devo guardar as senhas que gero?",
-    "faq.a5": "Use um gerenciador de senhas (como Bitwarden, 1Password ou KeePass). Ele permite ter uma senha forte diferente para cada conta sem precisar memorizá-las e avisa sobre vazamentos. Evite salvar senhas em texto simples em notas ou planilhas."
+    "faq.a5": "Use um gerenciador de senhas (como Bitwarden, 1Password ou KeePass). Ele permite ter uma senha forte diferente para cada conta sem precisar memorizá-las e avisa sobre vazamentos. Evite salvar senhas em texto simples em notas ou planilhas.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -387,7 +427,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Зачем включать символы?",
     "faq.a4": "Включение символов значительно повышает энтропию (количество информации) пароля. Только строчные буквы дают 26 вариантов, а сочетание прописных, строчных, цифр и символов — около 94 возможных символов, что при той же длине резко повышает стойкость к перебору.",
     "faq.q5": "Где хранить созданные пароли?",
-    "faq.a5": "Используйте менеджер паролей (например, Bitwarden, 1Password или KeePass). Он позволяет иметь отдельный надёжный пароль для каждого аккаунта, не запоминая их, и предупреждает об утечках. Не храните пароли в виде обычного текста в заметках или таблицах."
+    "faq.a5": "Используйте менеджер паролей (например, Bitwarden, 1Password или KeePass). Он позволяет иметь отдельный надёжный пароль для каждого аккаунта, не запоминая их, и предупреждает об утечках. Не храните пароли в виде обычного текста в заметках или таблицах.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -429,7 +474,12 @@ window.I18N_LOCALES = {
     "faq.q4": "مجھے علامات کیوں شامل کرنی چاہئیں؟",
     "faq.a4": "علامات شامل کرنے سے پاس ورڈ کی اینٹروپی (معلومات کی مقدار) بہت بڑھ جاتی ہے۔ صرف چھوٹے حروف سے 26 امکانات بنتے ہیں، جبکہ بڑے حروف، چھوٹے حروف، ہندسے اور علامات ملا کر تقریباً 94 ممکنہ حروف ملتے ہیں — جس سے ایک ہی لمبائی پر بروٹ فورس مزاحمت بہت بہتر ہو جاتی ہے۔",
     "faq.q5": "بنائے گئے پاس ورڈ مجھے کہاں محفوظ کرنے چاہئیں؟",
-    "faq.a5": "پاس ورڈ مینیجر (جیسے Bitwarden، 1Password یا KeePass) استعمال کریں۔ یہ آپ کو ہر اکاؤنٹ کے لیے الگ مضبوط پاس ورڈ یاد کیے بغیر رکھنے دیتا ہے اور ڈیٹا لیک کی اطلاع بھی دیتا ہے۔ نوٹس یا اسپریڈ شیٹ میں پاس ورڈ سادہ متن کے طور پر محفوظ کرنے سے گریز کریں۔"
+    "faq.a5": "پاس ورڈ مینیجر (جیسے Bitwarden، 1Password یا KeePass) استعمال کریں۔ یہ آپ کو ہر اکاؤنٹ کے لیے الگ مضبوط پاس ورڈ یاد کیے بغیر رکھنے دیتا ہے اور ڈیٹا لیک کی اطلاع بھی دیتا ہے۔ نوٹس یا اسپریڈ شیٹ میں پاس ورڈ سادہ متن کے طور پر محفوظ کرنے سے گریز کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -471,7 +521,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa saya harus menyertakan simbol?",
     "faq.a4": "Menyertakan simbol sangat meningkatkan entropi (jumlah informasi) kata sandi. Huruf kecil saja memberi 26 kemungkinan, sedangkan menggabungkan huruf besar, huruf kecil, angka, dan simbol menghasilkan sekitar 94 karakter yang mungkin — meningkatkan ketahanan brute-force secara drastis pada panjang yang sama.",
     "faq.q5": "Di mana sebaiknya saya menyimpan kata sandi yang dibuat?",
-    "faq.a5": "Gunakan pengelola kata sandi (seperti Bitwarden, 1Password, atau KeePass). Ini memungkinkan Anda memakai kata sandi kuat yang berbeda untuk setiap akun tanpa menghafalnya, dan memperingatkan tentang kebocoran. Hindari menyimpan kata sandi sebagai teks biasa di catatan atau spreadsheet."
+    "faq.a5": "Gunakan pengelola kata sandi (seperti Bitwarden, 1Password, atau KeePass). Ini memungkinkan Anda memakai kata sandi kuat yang berbeda untuk setiap akun tanpa menghafalnya, dan memperingatkan tentang kebocoran. Hindari menyimpan kata sandi sebagai teks biasa di catatan atau spreadsheet.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -513,7 +568,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum sollte ich Symbole einbeziehen?",
     "faq.a4": "Symbole erhöhen die Entropie (Informationsgehalt) eines Passworts stark. Kleinbuchstaben allein ergeben 26 Möglichkeiten, während die Kombination aus Groß- und Kleinbuchstaben, Zahlen und Symbolen rund 94 mögliche Zeichen liefert — das verbessert die Brute-Force-Resistenz bei gleicher Länge enorm.",
     "faq.q5": "Wo sollte ich die erzeugten Passwörter speichern?",
-    "faq.a5": "Nutze einen Passwort-Manager (z. B. Bitwarden, 1Password oder KeePass). Damit kannst du für jedes Konto ein anderes starkes Passwort verwenden, ohne es dir zu merken, und wirst über Datenlecks gewarnt. Speichere Passwörter nicht im Klartext in Notizen oder Tabellen."
+    "faq.a5": "Nutze einen Passwort-Manager (z. B. Bitwarden, 1Password oder KeePass). Damit kannst du für jedes Konto ein anderes starkes Passwort verwenden, ohne es dir zu merken, und wirst über Datenlecks gewarnt. Speichere Passwörter nicht im Klartext in Notizen oder Tabellen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -555,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "なぜ記号を含めるべきですか？",
     "faq.a4": "記号を含めるとパスワードのエントロピー（情報量）が大きく高まります。小文字だけなら26通りですが、大文字・小文字・数字・記号をすべて使うと約94種類の文字が使え、同じ長さでも総当たり耐性が飛躍的に向上します。",
     "faq.q5": "生成したパスワードはどこに保存すればよいですか？",
-    "faq.a5": "パスワードマネージャー（Bitwarden、1Password、KeePass など）の利用を推奨します。アカウントごとに異なる強力なパスワードを暗記せずに管理でき、漏えい通知も受け取れます。メモ帳や表計算に平文で保存するのは避けましょう。"
+    "faq.a5": "パスワードマネージャー（Bitwarden、1Password、KeePass など）の利用を推奨します。アカウントごとに異なる強力なパスワードを暗記せずに管理でき、漏えい通知も受け取れます。メモ帳や表計算に平文で保存するのは避けましょう。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -597,6 +662,11 @@ window.I18N_LOCALES = {
     "faq.q4": "특수문자를 포함해야 하는 이유는 무엇인가요?",
     "faq.a4": "특수문자를 포함하면 패스워드의 엔트로피(정보량)가 크게 높아집니다. 예를 들어 소문자만 26가지인 데 반해, 대·소문자·숫자·특수문자를 모두 쓰면 약 94가지 문자를 사용할 수 있어 같은 길이라도 무차별 대입 저항성이 비약적으로 향상됩니다.",
     "faq.q5": "생성한 비밀번호를 어디에 저장하면 되나요?",
-    "faq.a5": "패스워드 매니저(예: Bitwarden, 1Password, KeePass 등) 사용을 권장합니다. 강력한 비밀번호를 계정마다 다르게 사용하면서도 외울 필요가 없고, 유출 알림 기능도 제공합니다. 메모장이나 엑셀에 평문 저장하는 방식은 피하세요."
+    "faq.a5": "패스워드 매니저(예: Bitwarden, 1Password, KeePass 등) 사용을 권장합니다. 강력한 비밀번호를 계정마다 다르게 사용하면서도 외울 필요가 없고, 유출 알림 기능도 제공합니다. 메모장이나 엑셀에 평문 저장하는 방식은 피하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -67,7 +67,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I use this as a printable weekly timesheet for payroll or timekeeping?",
     "faq.a4": "Yes — fill in each day's times and breaks, optionally add the week's start date so each row shows an actual calendar date, and press \"Print timesheet\" to get a clean printout with the navigation, ads, and related links removed. The printed page keeps the day-by-day table, the weekly total, and the pay estimate if you entered an hourly rate, so it can be handed to a manager or kept as a personal record. Your entries are also saved automatically in your browser between visits, so you don't need to print immediately or lose data if you close the tab. This is meant as a personal or small-team convenience tool rather than a certified payroll system, so check your employer's or jurisdiction's official timekeeping requirements for formal payroll records.",
     "faq.q5": "Is my timesheet data — hours, pay rate, and schedule — sent to a server?",
-    "faq.a5": "No. Every calculation in this time card calculator runs directly in your browser using JavaScript; the times, break minutes, hourly rate, and any date you enter are never transmitted anywhere. Your entries are saved only in your browser's local storage so the form is still filled in the next time you visit, and clearing your browser data or using \"Clear week\" removes them completely. There's no account, no login, and no server-side database involved, so you can log a real work schedule or a sensitive pay rate without it leaving your device. This makes the tool suitable for quick personal use even on a shared or public computer, provided you clear the entries afterward."
+    "faq.a5": "No. Every calculation in this time card calculator runs directly in your browser using JavaScript; the times, break minutes, hourly rate, and any date you enter are never transmitted anywhere. Your entries are saved only in your browser's local storage so the form is still filled in the next time you visit, and clearing your browser data or using \"Clear week\" removes them completely. There's no account, no login, and no server-side database involved, so you can log a real work schedule or a sensitive pay rate without it leaving your device. This makes the tool suitable for quick personal use even on a shared or public computer, provided you clear the entries afterward.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -133,7 +138,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我可以把它当作可打印的每周工时表用于薪资或考勤吗？",
     "faq.a4": "可以——填写每天的上下班时间和休息时长，可选择性地加上本周开始日期，让每一行显示实际日期，然后点击\"打印工时表\"即可得到去除导航栏、广告和相关链接的整洁打印页面。打印页面会保留逐日表格、每周合计工时，以及（如果填写了时薪）工资估算，方便交给主管或作为个人记录保存。你的填写内容还会自动保存在浏览器中，无需立即打印，关闭标签页也不会丢失数据。本工具仅作为个人或小团队的便捷工具，并非官方薪资系统，正式薪资记录请遵循雇主或所在地区的官方考勤要求。",
     "faq.q5": "我的工时、薪资和排班数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个工时卡计算器的所有计算都直接在你的浏览器中用JavaScript完成；你输入的时间、休息分钟数、时薪以及任何日期都不会被发送到任何地方。你的填写内容仅保存在浏览器的本地存储中，方便下次访问时仍保留原样，清除浏览器数据或点击\"清空本周\"即可彻底删除。没有账号、无需登录，也没有服务器端数据库，因此即便记录真实的工作时间或敏感的薪资信息，也不会离开你的设备。这使得该工具即使在共享或公共电脑上也可放心用于快速的个人计算，只需事后清空记录即可。"
+    "faq.a5": "不会。这个工时卡计算器的所有计算都直接在你的浏览器中用JavaScript完成；你输入的时间、休息分钟数、时薪以及任何日期都不会被发送到任何地方。你的填写内容仅保存在浏览器的本地存储中，方便下次访问时仍保留原样，清除浏览器数据或点击\"清空本周\"即可彻底删除。没有账号、无需登录，也没有服务器端数据库，因此即便记录真实的工作时间或敏感的薪资信息，也不会离开你的设备。这使得该工具即使在共享或公共电脑上也可放心用于快速的个人计算，只需事后清空记录即可。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -199,7 +209,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मैं इसे पेरोल या टाइमकीपिंग के लिए प्रिंट करने योग्य साप्ताहिक टाइमशीट के रूप में उपयोग कर सकता हूँ?",
     "faq.a4": "हाँ — हर दिन के समय और ब्रेक भरें, वैकल्पिक रूप से सप्ताह की शुरुआत की तारीख जोड़ें ताकि हर पंक्ति असली तारीख दिखाए, और \"टाइमशीट प्रिंट करें\" दबाएँ ताकि नेविगेशन, विज्ञापन और संबंधित लिंक हटाकर एक साफ प्रिंटआउट मिले। प्रिंट किया गया पेज दिन-प्रतिदिन की तालिका, साप्ताहिक कुल, और यदि आपने प्रति घंटा दर दर्ज की है तो वेतन अनुमान भी रखता है, ताकि इसे किसी प्रबंधक को दिया जा सके या व्यक्तिगत रिकॉर्ड के रूप में रखा जा सके। आपकी प्रविष्टियाँ भी आपके ब्राउज़र में अपने आप सहेजी जाती हैं, इसलिए आपको तुरंत प्रिंट करने की जरूरत नहीं और टैब बंद करने पर डेटा नहीं खोता। यह एक व्यक्तिगत या छोटी टीम की सुविधा के लिए है, प्रमाणित पेरोल प्रणाली नहीं, इसलिए औपचारिक पेरोल रिकॉर्ड के लिए अपने नियोक्ता या क्षेत्र की आधिकारिक टाइमकीपिंग आवश्यकताओं की जाँच करें।",
     "faq.q5": "क्या मेरा टाइमशीट डेटा — घंटे, वेतन दर और शेड्यूल — सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। इस टाइम कार्ड कैलकुलेटर में हर गणना सीधे आपके ब्राउज़र में जावास्क्रिप्ट के जरिए होती है; आपके द्वारा दर्ज समय, ब्रेक मिनट, प्रति घंटा दर और कोई भी तारीख कभी कहीं प्रसारित नहीं होती। आपकी प्रविष्टियाँ केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजी जाती हैं ताकि अगली बार आने पर फॉर्म भरा हुआ मिले, और ब्राउज़र डेटा साफ़ करने या \"सप्ताह साफ़ करें\" उपयोग करने से ये पूरी तरह हट जाती हैं। कोई खाता नहीं, कोई लॉगिन नहीं, और कोई सर्वर-साइड डेटाबेस शामिल नहीं है, इसलिए आप असली कार्य शेड्यूल या संवेदनशील वेतन दर बिना डिवाइस छोड़े दर्ज कर सकते हैं। इससे यह टूल साझा या सार्वजनिक कंप्यूटर पर भी त्वरित व्यक्तिगत उपयोग के लिए उपयुक्त बनता है, बशर्ते आप बाद में प्रविष्टियाँ साफ़ कर दें।"
+    "faq.a5": "नहीं। इस टाइम कार्ड कैलकुलेटर में हर गणना सीधे आपके ब्राउज़र में जावास्क्रिप्ट के जरिए होती है; आपके द्वारा दर्ज समय, ब्रेक मिनट, प्रति घंटा दर और कोई भी तारीख कभी कहीं प्रसारित नहीं होती। आपकी प्रविष्टियाँ केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजी जाती हैं ताकि अगली बार आने पर फॉर्म भरा हुआ मिले, और ब्राउज़र डेटा साफ़ करने या \"सप्ताह साफ़ करें\" उपयोग करने से ये पूरी तरह हट जाती हैं। कोई खाता नहीं, कोई लॉगिन नहीं, और कोई सर्वर-साइड डेटाबेस शामिल नहीं है, इसलिए आप असली कार्य शेड्यूल या संवेदनशील वेतन दर बिना डिवाइस छोड़े दर्ज कर सकते हैं। इससे यह टूल साझा या सार्वजनिक कंप्यूटर पर भी त्वरित व्यक्तिगत उपयोग के लिए उपयुक्त बनता है, बशर्ते आप बाद में प्रविष्टियाँ साफ़ कर दें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -265,7 +280,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo usar esto como una hoja de horario semanal imprimible para nómina o control de asistencia?",
     "faq.a4": "Sí — completa las horas y descansos de cada día, añade opcionalmente la fecha de inicio de la semana para que cada fila muestre una fecha real del calendario, y pulsa \"Imprimir horario\" para obtener una impresión limpia sin la navegación, los anuncios ni los enlaces relacionados. La página impresa conserva la tabla día a día, el total semanal y la estimación de salario si introdujiste una tarifa por hora, para poder entregarla a un supervisor o guardarla como registro personal. Tus datos también se guardan automáticamente en el navegador entre visitas, así que no necesitas imprimir de inmediato ni perder información al cerrar la pestaña. Está pensado como una herramienta de conveniencia personal o de equipos pequeños, no como un sistema de nómina certificado, así que revisa los requisitos oficiales de tu empleador o jurisdicción para registros formales de nómina.",
     "faq.q5": "¿Se envían mis datos de horario — horas, tarifa de pago y turnos — a un servidor?",
-    "faq.a5": "No. Todos los cálculos de esta calculadora de tarjeta de horario se ejecutan directamente en tu navegador mediante JavaScript; las horas, los minutos de descanso, la tarifa por hora y cualquier fecha que introduzcas nunca se transmiten a ningún sitio. Tus datos solo se guardan en el almacenamiento local de tu navegador para que el formulario siga rellenado en tu próxima visita, y borrar los datos del navegador o usar \"Borrar semana\" los elimina por completo. No hay cuenta, ni inicio de sesión, ni base de datos en un servidor, así que puedes registrar un horario de trabajo real o una tarifa salarial sensible sin que salga de tu dispositivo. Esto hace que la herramienta sea adecuada para un uso personal rápido incluso en un ordenador compartido o público, siempre que borres las entradas después."
+    "faq.a5": "No. Todos los cálculos de esta calculadora de tarjeta de horario se ejecutan directamente en tu navegador mediante JavaScript; las horas, los minutos de descanso, la tarifa por hora y cualquier fecha que introduzcas nunca se transmiten a ningún sitio. Tus datos solo se guardan en el almacenamiento local de tu navegador para que el formulario siga rellenado en tu próxima visita, y borrar los datos del navegador o usar \"Borrar semana\" los elimina por completo. No hay cuenta, ni inicio de sesión, ni base de datos en un servidor, así que puedes registrar un horario de trabajo real o una tarifa salarial sensible sin que salga de tu dispositivo. Esto hace que la herramienta sea adecuada para un uso personal rápido incluso en un ordenador compartido o público, siempre que borres las entradas después.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -331,7 +351,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني استخدام هذا ككشف دوام أسبوعي قابل للطباعة للرواتب أو تسجيل الحضور؟",
     "faq.a4": "نعم — أدخل أوقات كل يوم واستراحاته، وأضف اختياريًا تاريخ بداية الأسبوع بحيث يُظهر كل صف تاريخًا فعليًا من التقويم، ثم اضغط \"طباعة كشف الدوام\" للحصول على مطبوعة نظيفة خالية من شريط التنقل والإعلانات والروابط ذات الصلة. تحتفظ الصفحة المطبوعة بالجدول اليومي وإجمالي الأسبوع وتقدير الأجر إذا أدخلت أجرًا بالساعة، بحيث يمكن تسليمها لمدير أو الاحتفاظ بها كسجل شخصي. تُحفَظ إدخالاتك أيضًا تلقائيًا في متصفحك بين الزيارات، فلا تحتاج للطباعة فورًا ولن تفقد البيانات عند إغلاق التبويب. هذه الأداة مخصصة كوسيلة شخصية أو لفريق صغير وليست نظام رواتب معتمدًا، لذا راجع متطلبات صاحب العمل أو جهتك الرسمية لسجلات الرواتب الرسمية.",
     "faq.q5": "هل تُرسل بيانات كشف دوامي — الساعات وأجر الساعة والجدول — إلى خادم؟",
-    "faq.a5": "لا. تُجرى كل الحسابات في حاسبة بطاقة الدوام هذه مباشرة داخل متصفحك باستخدام جافاسكريبت؛ الأوقات ودقائق الاستراحة والأجر بالساعة وأي تاريخ تُدخله لا تُنقَل إلى أي مكان إطلاقًا. تُحفَظ إدخالاتك فقط في التخزين المحلي لمتصفحك بحيث يبقى النموذج معبّأ في زيارتك التالية، ومسح بيانات المتصفح أو استخدام \"مسح الأسبوع\" يزيلها تمامًا. لا يوجد حساب ولا تسجيل دخول ولا قاعدة بيانات على خادم، لذا يمكنك تسجيل جدول عمل حقيقي أو أجر حساس دون أن يغادر جهازك. هذا يجعل الأداة مناسبة للاستخدام الشخصي السريع حتى على جهاز مشترك أو عام، شرط مسح الإدخالات بعد ذلك."
+    "faq.a5": "لا. تُجرى كل الحسابات في حاسبة بطاقة الدوام هذه مباشرة داخل متصفحك باستخدام جافاسكريبت؛ الأوقات ودقائق الاستراحة والأجر بالساعة وأي تاريخ تُدخله لا تُنقَل إلى أي مكان إطلاقًا. تُحفَظ إدخالاتك فقط في التخزين المحلي لمتصفحك بحيث يبقى النموذج معبّأ في زيارتك التالية، ومسح بيانات المتصفح أو استخدام \"مسح الأسبوع\" يزيلها تمامًا. لا يوجد حساب ولا تسجيل دخول ولا قاعدة بيانات على خادم، لذا يمكنك تسجيل جدول عمل حقيقي أو أجر حساس دون أن يغادر جهازك. هذا يجعل الأداة مناسبة للاستخدام الشخصي السريع حتى على جهاز مشترك أو عام، شرط مسح الإدخالات بعد ذلك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -397,7 +422,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je l'utiliser comme fiche de temps hebdomadaire imprimable pour la paie ou le pointage ?",
     "faq.a4": "Oui — renseignez les horaires et les pauses de chaque jour, ajoutez éventuellement la date de début de semaine pour que chaque ligne affiche une date réelle du calendrier, puis appuyez sur « Imprimer la fiche de temps » pour obtenir une impression nette sans la navigation, les publicités ni les liens connexes. La page imprimée conserve le tableau jour par jour, le total hebdomadaire et l'estimation de salaire si vous avez saisi un taux horaire, afin de pouvoir la remettre à un responsable ou la conserver comme document personnel. Vos saisies sont également enregistrées automatiquement dans votre navigateur d'une visite à l'autre, vous n'avez donc pas besoin d'imprimer immédiatement ni de perdre vos données en fermant l'onglet. Cet outil est conçu comme une commodité personnelle ou pour une petite équipe, et non comme un système de paie certifié ; vérifiez donc les exigences officielles de votre employeur ou de votre juridiction pour les registres de paie formels.",
     "faq.q5": "Mes données de fiche de temps — heures, taux de paie et horaires — sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Tous les calculs de ce calculateur de fiche de temps s'exécutent directement dans votre navigateur en JavaScript ; les horaires, les minutes de pause, le taux horaire et toute date que vous saisissez ne sont jamais transmis nulle part. Vos saisies sont enregistrées uniquement dans le stockage local de votre navigateur afin que le formulaire reste rempli lors de votre prochaine visite, et effacer les données de votre navigateur ou utiliser « Effacer la semaine » les supprime complètement. Il n'y a ni compte, ni connexion, ni base de données côté serveur, vous pouvez donc consigner un horaire de travail réel ou un taux de rémunération sensible sans qu'il ne quitte votre appareil. Cela rend l'outil adapté à un usage personnel rapide même sur un ordinateur partagé ou public, à condition d'effacer les entrées ensuite."
+    "faq.a5": "Non. Tous les calculs de ce calculateur de fiche de temps s'exécutent directement dans votre navigateur en JavaScript ; les horaires, les minutes de pause, le taux horaire et toute date que vous saisissez ne sont jamais transmis nulle part. Vos saisies sont enregistrées uniquement dans le stockage local de votre navigateur afin que le formulaire reste rempli lors de votre prochaine visite, et effacer les données de votre navigateur ou utiliser « Effacer la semaine » les supprime complètement. Il n'y a ni compte, ni connexion, ni base de données côté serveur, vous pouvez donc consigner un horaire de travail réel ou un taux de rémunération sensible sans qu'il ne quitte votre appareil. Cela rend l'outil adapté à un usage personnel rapide même sur un ordinateur partagé ou public, à condition d'effacer les entrées ensuite.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -463,7 +493,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমি কি এটিকে বেতন বা হাজিরার জন্য প্রিন্টযোগ্য সাপ্তাহিক টাইমশিট হিসেবে ব্যবহার করতে পারি?",
     "faq.a4": "হ্যাঁ — প্রতিদিনের সময় ও বিরতি পূরণ করুন, ঐচ্ছিকভাবে সপ্তাহ শুরুর তারিখ যোগ করুন যাতে প্রতিটি সারি প্রকৃত ক্যালেন্ডার তারিখ দেখায়, এবং \"টাইমশিট প্রিন্ট করুন\" চাপুন যাতে নেভিগেশন, বিজ্ঞাপন ও সম্পর্কিত লিংক ছাড়া একটি পরিচ্ছন্ন প্রিন্ট পান। প্রিন্ট করা পাতাটি দিনওয়ারি টেবিল, সাপ্তাহিক মোট এবং যদি ঘণ্টার হার দিয়ে থাকেন তবে বেতন অনুমানও রাখে, যাতে এটি কোনো ম্যানেজারকে দেওয়া যায় বা ব্যক্তিগত রেকর্ড হিসেবে রাখা যায়। আপনার এন্ট্রিগুলো ব্রাউজারে স্বয়ংক্রিয়ভাবে সংরক্ষিত থাকে, তাই তাৎক্ষণিকভাবে প্রিন্ট করার দরকার নেই এবং ট্যাব বন্ধ করলেও ডেটা হারাবে না। এটি ব্যক্তিগত বা ছোট দলের সুবিধার জন্য তৈরি, প্রত্যায়িত পে-রোল সিস্টেম নয়, তাই আনুষ্ঠানিক পে-রোল রেকর্ডের জন্য আপনার নিয়োগকর্তা বা এলাকার অফিসিয়াল হাজিরার প্রয়োজনীয়তা যাচাই করুন।",
     "faq.q5": "আমার টাইমশিট ডেটা — ঘণ্টা, বেতনের হার ও সময়সূচি — কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই টাইম কার্ড ক্যালকুলেটরের প্রতিটি হিসাব সরাসরি আপনার ব্রাউজারে জাভাস্ক্রিপ্ট দিয়ে চলে; আপনার দেওয়া সময়, বিরতির মিনিট, ঘণ্টার হার এবং যেকোনো তারিখ কখনো কোথাও পাঠানো হয় না। আপনার এন্ট্রিগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার এলে ফর্মটি পূরণ করা অবস্থায় পান, এবং ব্রাউজার ডেটা মুছে ফেললে বা \"সপ্তাহ মুছুন\" ব্যবহার করলে এগুলো সম্পূর্ণ মুছে যায়। কোনো অ্যাকাউন্ট নেই, লগইন নেই, সার্ভার-সাইড ডেটাবেসও নেই, তাই আপনি প্রকৃত কাজের সময়সূচি বা সংবেদনশীল বেতনের হার আপনার ডিভাইস থেকে বের না করেই লিখতে পারেন। এটি ভাগাভাগি করা বা পাবলিক কম্পিউটারেও দ্রুত ব্যক্তিগত ব্যবহারের জন্য এই টুলটিকে উপযুক্ত করে তোলে, যদি আপনি পরে এন্ট্রিগুলো মুছে ফেলেন।"
+    "faq.a5": "না। এই টাইম কার্ড ক্যালকুলেটরের প্রতিটি হিসাব সরাসরি আপনার ব্রাউজারে জাভাস্ক্রিপ্ট দিয়ে চলে; আপনার দেওয়া সময়, বিরতির মিনিট, ঘণ্টার হার এবং যেকোনো তারিখ কখনো কোথাও পাঠানো হয় না। আপনার এন্ট্রিগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার এলে ফর্মটি পূরণ করা অবস্থায় পান, এবং ব্রাউজার ডেটা মুছে ফেললে বা \"সপ্তাহ মুছুন\" ব্যবহার করলে এগুলো সম্পূর্ণ মুছে যায়। কোনো অ্যাকাউন্ট নেই, লগইন নেই, সার্ভার-সাইড ডেটাবেসও নেই, তাই আপনি প্রকৃত কাজের সময়সূচি বা সংবেদনশীল বেতনের হার আপনার ডিভাইস থেকে বের না করেই লিখতে পারেন। এটি ভাগাভাগি করা বা পাবলিক কম্পিউটারেও দ্রুত ব্যক্তিগত ব্যবহারের জন্য এই টুলটিকে উপযুক্ত করে তোলে, যদি আপনি পরে এন্ট্রিগুলো মুছে ফেলেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -529,7 +564,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Posso usar isso como uma folha de ponto semanal imprimível para folha de pagamento ou controle de frequência?",
     "faq.a4": "Sim — preencha os horários e intervalos de cada dia, adicione opcionalmente a data de início da semana para que cada linha mostre uma data real do calendário, e clique em \"Imprimir cartão de ponto\" para obter uma impressão limpa, sem navegação, anúncios ou links relacionados. A página impressa mantém a tabela dia a dia, o total semanal e a estimativa de pagamento, caso você tenha informado um valor por hora, para que possa ser entregue a um gestor ou guardada como registro pessoal. Seus dados também são salvos automaticamente no navegador entre as visitas, então você não precisa imprimir imediatamente nem perde informações ao fechar a aba. Isso é pensado como uma ferramenta de conveniência pessoal ou para equipes pequenas, não um sistema de folha de pagamento certificado, então verifique os requisitos oficiais do seu empregador ou jurisdição para registros formais de folha de pagamento.",
     "faq.q5": "Meus dados de cartão de ponto — horas, valor por hora e escala — são enviados a um servidor?",
-    "faq.a5": "Não. Todos os cálculos desta calculadora de cartão de ponto são executados diretamente no seu navegador em JavaScript; os horários, os minutos de intervalo, o valor por hora e qualquer data que você informar nunca são transmitidos a lugar nenhum. Seus registros são salvos apenas no armazenamento local do seu navegador, para que o formulário continue preenchido na próxima visita, e limpar os dados do navegador ou usar \"Limpar semana\" os remove completamente. Não há conta, nem login, nem banco de dados no servidor envolvido, então você pode registrar uma escala de trabalho real ou um valor salarial sensível sem que ele saia do seu dispositivo. Isso torna a ferramenta adequada para uso pessoal rápido mesmo em um computador compartilhado ou público, desde que você limpe os registros depois."
+    "faq.a5": "Não. Todos os cálculos desta calculadora de cartão de ponto são executados diretamente no seu navegador em JavaScript; os horários, os minutos de intervalo, o valor por hora e qualquer data que você informar nunca são transmitidos a lugar nenhum. Seus registros são salvos apenas no armazenamento local do seu navegador, para que o formulário continue preenchido na próxima visita, e limpar os dados do navegador ou usar \"Limpar semana\" os remove completamente. Não há conta, nem login, nem banco de dados no servidor envolvido, então você pode registrar uma escala de trabalho real ou um valor salarial sensível sem que ele saia do seu dispositivo. Isso torna a ferramenta adequada para uso pessoal rápido mesmo em um computador compartilhado ou público, desde que você limpe os registros depois.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -595,7 +635,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Могу ли я использовать это как распечатываемый недельный табель для расчёта зарплаты или учёта времени?",
     "faq.a4": "Да — заполните время и перерывы для каждого дня, при желании добавьте дату начала недели, чтобы в каждой строке отображалась реальная календарная дата, и нажмите «Распечатать табель», чтобы получить чистую распечатку без навигации, рекламы и похожих ссылок. Распечатанная страница сохраняет таблицу по дням, недельный итог и оценку оплаты, если вы указали почасовую ставку, чтобы её можно было передать руководителю или сохранить как личную запись. Ваши данные также автоматически сохраняются в браузере между визитами, поэтому не нужно печатать сразу же и данные не теряются при закрытии вкладки. Это задумано как удобный инструмент для личного использования или небольшой команды, а не сертифицированная система расчёта зарплаты, поэтому для официальных записей уточните требования вашего работодателя или юрисдикции.",
     "faq.q5": "Отправляются ли мои данные табеля — часы, ставка оплаты и график — на сервер?",
-    "faq.a5": "Нет. Все вычисления в этом калькуляторе табеля выполняются прямо в вашем браузере на JavaScript; введённое время, минуты перерыва, почасовая ставка и любая дата никогда никуда не передаются. Ваши записи сохраняются только в локальном хранилище браузера, чтобы форма оставалась заполненной при следующем посещении, а очистка данных браузера или использование «Очистить неделю» полностью их удаляет. Нет ни учётной записи, ни входа в систему, ни серверной базы данных, поэтому вы можете указать реальный рабочий график или конфиденциальную ставку оплаты, не покидая устройство. Это делает инструмент пригодным для быстрого личного использования даже на общем или публичном компьютере, если впоследствии вы очистите записи."
+    "faq.a5": "Нет. Все вычисления в этом калькуляторе табеля выполняются прямо в вашем браузере на JavaScript; введённое время, минуты перерыва, почасовая ставка и любая дата никогда никуда не передаются. Ваши записи сохраняются только в локальном хранилище браузера, чтобы форма оставалась заполненной при следующем посещении, а очистка данных браузера или использование «Очистить неделю» полностью их удаляет. Нет ни учётной записи, ни входа в систему, ни серверной базы данных, поэтому вы можете указать реальный рабочий график или конфиденциальную ставку оплаты, не покидая устройство. Это делает инструмент пригодным для быстрого личного использования даже на общем или публичном компьютере, если впоследствии вы очистите записи.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -661,7 +706,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میں اسے تنخواہ یا حاضری کے لیے پرنٹ کے قابل ہفتہ وار ٹائم شیٹ کے طور پر استعمال کر سکتا ہوں؟",
     "faq.a4": "جی ہاں — ہر دن کے اوقات اور وقفے پُر کریں، اختیاری طور پر ہفتے کے آغاز کی تاریخ شامل کریں تاکہ ہر قطار حقیقی کیلنڈر تاریخ دکھائے، اور \"ٹائم شیٹ پرنٹ کریں\" دبائیں تاکہ نیویگیشن، اشتہارات اور متعلقہ لنکس کے بغیر ایک صاف پرنٹ آؤٹ ملے۔ پرنٹ شدہ صفحہ روزانہ کا جدول، ہفتہ وار مجموعہ، اور اگر آپ نے فی گھنٹہ اجرت درج کی ہو تو تنخواہ کا تخمینہ بھی برقرار رکھتا ہے، تاکہ اسے کسی منیجر کو دیا جا سکے یا ذاتی ریکارڈ کے طور پر رکھا جا سکے۔ آپ کے اندراجات براؤزر میں خودکار طور پر محفوظ بھی ہوتے ہیں، اس لیے فوری پرنٹ کرنے کی ضرورت نہیں اور ٹیب بند کرنے پر ڈیٹا ضائع نہیں ہوتا۔ یہ ذاتی یا چھوٹی ٹیم کی سہولت کے لیے ہے، کوئی تصدیق شدہ پے رول نظام نہیں، اس لیے باضابطہ پے رول ریکارڈ کے لیے اپنے آجر یا علاقے کی سرکاری حاضری کی ضروریات دیکھیں۔",
     "faq.q5": "کیا میرا ٹائم شیٹ ڈیٹا — گھنٹے، تنخواہ کی شرح اور شیڈول — سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ اس ٹائم کارڈ کیلکولیٹر میں ہر حساب براہ راست آپ کے براؤزر میں جاوا اسکرپٹ کے ذریعے ہوتا ہے؛ آپ کے درج کردہ اوقات، وقفے کے منٹ، فی گھنٹہ اجرت اور کوئی بھی تاریخ کبھی کہیں منتقل نہیں ہوتی۔ آپ کے اندراجات صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں تاکہ اگلی بار آنے پر فارم بھرا ہوا ملے، اور براؤزر ڈیٹا صاف کرنے یا \"ہفتہ صاف کریں\" استعمال کرنے سے یہ مکمل طور پر ہٹ جاتے ہیں۔ کوئی اکاؤنٹ، لاگ اِن یا سرور سائیڈ ڈیٹا بیس شامل نہیں، اس لیے آپ حقیقی کام کا شیڈول یا حساس تنخواہ کی شرح اپنے آلے سے باہر بھیجے بغیر درج کر سکتے ہیں۔ یہ ٹول مشترکہ یا عوامی کمپیوٹر پر بھی فوری ذاتی استعمال کے لیے موزوں بناتا ہے، بشرطیکہ آپ بعد میں اندراجات صاف کر دیں۔"
+    "faq.a5": "نہیں۔ اس ٹائم کارڈ کیلکولیٹر میں ہر حساب براہ راست آپ کے براؤزر میں جاوا اسکرپٹ کے ذریعے ہوتا ہے؛ آپ کے درج کردہ اوقات، وقفے کے منٹ، فی گھنٹہ اجرت اور کوئی بھی تاریخ کبھی کہیں منتقل نہیں ہوتی۔ آپ کے اندراجات صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں تاکہ اگلی بار آنے پر فارم بھرا ہوا ملے، اور براؤزر ڈیٹا صاف کرنے یا \"ہفتہ صاف کریں\" استعمال کرنے سے یہ مکمل طور پر ہٹ جاتے ہیں۔ کوئی اکاؤنٹ، لاگ اِن یا سرور سائیڈ ڈیٹا بیس شامل نہیں، اس لیے آپ حقیقی کام کا شیڈول یا حساس تنخواہ کی شرح اپنے آلے سے باہر بھیجے بغیر درج کر سکتے ہیں۔ یہ ٹول مشترکہ یا عوامی کمپیوٹر پر بھی فوری ذاتی استعمال کے لیے موزوں بناتا ہے، بشرطیکہ آپ بعد میں اندراجات صاف کر دیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -727,7 +777,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah saya menggunakan ini sebagai lembar waktu mingguan yang dapat dicetak untuk penggajian atau absensi?",
     "faq.a4": "Ya — isi jam dan istirahat tiap hari, opsional tambahkan tanggal mulai minggu agar setiap baris menampilkan tanggal kalender yang sebenarnya, lalu tekan \"Cetak kartu jam kerja\" untuk mendapatkan cetakan bersih tanpa navigasi, iklan, atau tautan terkait. Halaman cetak menyimpan tabel harian, total mingguan, dan estimasi gaji jika Anda memasukkan upah per jam, sehingga bisa diserahkan ke manajer atau disimpan sebagai catatan pribadi. Entri Anda juga otomatis tersimpan di browser antar kunjungan, jadi Anda tidak perlu langsung mencetak atau kehilangan data saat menutup tab. Alat ini dimaksudkan sebagai kemudahan pribadi atau tim kecil, bukan sistem penggajian resmi, jadi periksa persyaratan resmi pemberi kerja atau yurisdiksi Anda untuk catatan penggajian formal.",
     "faq.q5": "Apakah data kartu jam kerja saya — jam, tarif upah, dan jadwal — dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan di kalkulator kartu jam kerja ini berjalan langsung di browser Anda menggunakan JavaScript; jam, menit istirahat, tarif per jam, dan tanggal apa pun yang Anda masukkan tidak pernah dikirim ke mana pun. Entri Anda hanya disimpan di penyimpanan lokal browser Anda sehingga formulir tetap terisi saat kunjungan berikutnya, dan menghapus data browser atau menggunakan \"Hapus minggu\" menghapusnya sepenuhnya. Tidak ada akun, login, atau basis data sisi server yang terlibat, jadi Anda dapat mencatat jadwal kerja sungguhan atau tarif gaji yang sensitif tanpa meninggalkan perangkat Anda. Ini membuat alat ini cocok untuk penggunaan pribadi cepat bahkan di komputer bersama atau publik, asalkan Anda menghapus entri setelahnya."
+    "faq.a5": "Tidak. Semua perhitungan di kalkulator kartu jam kerja ini berjalan langsung di browser Anda menggunakan JavaScript; jam, menit istirahat, tarif per jam, dan tanggal apa pun yang Anda masukkan tidak pernah dikirim ke mana pun. Entri Anda hanya disimpan di penyimpanan lokal browser Anda sehingga formulir tetap terisi saat kunjungan berikutnya, dan menghapus data browser atau menggunakan \"Hapus minggu\" menghapusnya sepenuhnya. Tidak ada akun, login, atau basis data sisi server yang terlibat, jadi Anda dapat mencatat jadwal kerja sungguhan atau tarif gaji yang sensitif tanpa meninggalkan perangkat Anda. Ini membuat alat ini cocok untuk penggunaan pribadi cepat bahkan di komputer bersama atau publik, asalkan Anda menghapus entri setelahnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -793,7 +848,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich das als druckbaren wöchentlichen Stundenzettel für Lohnabrechnung oder Zeiterfassung nutzen?",
     "faq.a4": "Ja — tragen Sie die Zeiten und Pausen jedes Tages ein, fügen Sie optional das Startdatum der Woche hinzu, damit jede Zeile ein echtes Kalenderdatum zeigt, und klicken Sie auf „Stundenzettel drucken\", um einen sauberen Ausdruck ohne Navigation, Werbung und verwandte Links zu erhalten. Die gedruckte Seite behält die Tag-für-Tag-Tabelle, die Wochensumme und die Lohnschätzung bei, falls Sie einen Stundenlohn eingegeben haben, sodass sie einer Führungskraft übergeben oder als persönliche Aufzeichnung aufbewahrt werden kann. Ihre Einträge werden zudem automatisch im Browser zwischen Besuchen gespeichert, sodass Sie nicht sofort drucken müssen und beim Schließen des Tabs keine Daten verlieren. Dies ist als persönliches Hilfsmittel oder für kleine Teams gedacht, kein zertifiziertes Lohnabrechnungssystem — prüfen Sie daher für offizielle Lohnunterlagen die Anforderungen Ihres Arbeitgebers oder Ihrer Gerichtsbarkeit.",
     "faq.q5": "Werden meine Stundenzettel-Daten — Stunden, Lohnsatz und Zeitplan — an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen in diesem Stundenzettel-Rechner laufen direkt in Ihrem Browser per JavaScript ab; die eingegebenen Zeiten, Pausenminuten, der Stundenlohn und jedes Datum werden niemals irgendwohin übertragen. Ihre Einträge werden nur im lokalen Speicher Ihres Browsers gesichert, damit das Formular beim nächsten Besuch ausgefüllt bleibt, und das Löschen der Browserdaten oder „Woche löschen\" entfernt sie vollständig. Es gibt kein Konto, keinen Login und keine serverseitige Datenbank, sodass Sie einen echten Arbeitsplan oder einen sensiblen Lohnsatz erfassen können, ohne dass er Ihr Gerät verlässt. Das macht das Tool auch auf einem gemeinsam genutzten oder öffentlichen Computer für die schnelle persönliche Nutzung geeignet, sofern Sie die Einträge anschließend löschen."
+    "faq.a5": "Nein. Alle Berechnungen in diesem Stundenzettel-Rechner laufen direkt in Ihrem Browser per JavaScript ab; die eingegebenen Zeiten, Pausenminuten, der Stundenlohn und jedes Datum werden niemals irgendwohin übertragen. Ihre Einträge werden nur im lokalen Speicher Ihres Browsers gesichert, damit das Formular beim nächsten Besuch ausgefüllt bleibt, und das Löschen der Browserdaten oder „Woche löschen\" entfernt sie vollständig. Es gibt kein Konto, keinen Login und keine serverseitige Datenbank, sodass Sie einen echten Arbeitsplan oder einen sensiblen Lohnsatz erfassen können, ohne dass er Ihr Gerät verlässt. Das macht das Tool auch auf einem gemeinsam genutzten oder öffentlichen Computer für die schnelle persönliche Nutzung geeignet, sofern Sie die Einträge anschließend löschen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -859,7 +919,12 @@ window.I18N_LOCALES = {
     "faq.q4": "給与計算や勤怠管理のために印刷可能な週間タイムシートとして使えますか？",
     "faq.a4": "はい。毎日の時刻と休憩を入力し、任意で週の開始日を追加すると各行に実際のカレンダー日付が表示されます。「タイムシートを印刷」を押すと、ナビゲーション・広告・関連リンクを除いたきれいな印刷ページが得られます。印刷ページには日ごとの表、週の合計、時給を入力していれば給与見積りも保持されるため、上司に提出したり個人の記録として保管したりできます。入力内容はブラウザに自動保存されるため、すぐに印刷する必要も、タブを閉じてデータを失う心配もありません。このツールは個人や小規模チーム向けの便利な機能であり、公式の給与計算システムではないため、正式な給与記録については雇用主や地域の公式な勤怠要件を確認してください。",
     "faq.q5": "私のタイムシートデータ（労働時間、時給、スケジュール）はサーバーに送信されますか？",
-    "faq.a5": "いいえ。このタイムカード計算機のすべての計算はブラウザ内でJavaScriptによって直接実行され、入力した時刻、休憩の分数、時給、日付が外部に送信されることは一切ありません。入力内容はブラウザのローカルストレージにのみ保存され、次回訪問時にもフォームが入力された状態を保ちます。ブラウザデータを消去するか「週をクリア」を使うと完全に削除されます。アカウントもログインもサーバー側のデータベースも存在しないため、実際の勤務スケジュールや機密性の高い時給情報を、デバイスの外に出すことなく記録できます。そのため、共有パソコンや公共のパソコンでも、後で入力内容を消去すれば、素早い個人利用に適しています。"
+    "faq.a5": "いいえ。このタイムカード計算機のすべての計算はブラウザ内でJavaScriptによって直接実行され、入力した時刻、休憩の分数、時給、日付が外部に送信されることは一切ありません。入力内容はブラウザのローカルストレージにのみ保存され、次回訪問時にもフォームが入力された状態を保ちます。ブラウザデータを消去するか「週をクリア」を使うと完全に削除されます。アカウントもログインもサーバー側のデータベースも存在しないため、実際の勤務スケジュールや機密性の高い時給情報を、デバイスの外に出すことなく記録できます。そのため、共有パソコンや公共のパソコンでも、後で入力内容を消去すれば、素早い個人利用に適しています。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -925,6 +990,11 @@ window.I18N_LOCALES = {
     "faq.q4": "급여나 근태 관리를 위해 인쇄 가능한 주간 타임시트로 사용할 수 있나요?",
     "faq.a4": "네 — 매일의 시간과 휴게 시간을 입력하고, 선택적으로 주 시작일을 추가하면 각 행에 실제 달력 날짜가 표시됩니다. \"타임시트 인쇄\"를 누르면 내비게이션, 광고, 관련 링크가 제거된 깔끔한 인쇄물을 얻을 수 있습니다. 인쇄된 페이지에는 일자별 표, 주간 합계, 그리고 시급을 입력했다면 예상 급여까지 포함되어 관리자에게 제출하거나 개인 기록으로 보관할 수 있습니다. 입력 내용은 브라우저에 자동으로 저장되므로 바로 인쇄하지 않아도 되고 탭을 닫아도 데이터가 사라지지 않습니다. 이 도구는 개인이나 소규모 팀을 위한 편의 도구이며 공식 급여 시스템이 아니므로, 정식 급여 기록에는 고용주나 해당 지역의 공식 근태 요건을 확인하세요.",
     "faq.q5": "제 타임시트 데이터(근무시간, 시급, 일정)가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 타임카드 계산기의 모든 계산은 브라우저에서 자바스크립트로 직접 실행되며, 입력한 시간, 휴게 분, 시급, 날짜는 어디로도 전송되지 않습니다. 입력 내용은 브라우저의 로컬 저장소에만 저장되어 다음 방문 시에도 양식이 그대로 남아 있으며, 브라우저 데이터를 지우거나 \"이번 주 지우기\"를 사용하면 완전히 삭제됩니다. 계정도, 로그인도, 서버 측 데이터베이스도 없으므로 실제 근무 일정이나 민감한 급여 정보를 기기 밖으로 유출하지 않고 기록할 수 있습니다. 이후 입력 내용을 지우기만 하면 공용 컴퓨터나 공공장소의 컴퓨터에서도 빠르게 개인적으로 사용하기에 적합합니다."
+    "faq.a5": "아니요. 이 타임카드 계산기의 모든 계산은 브라우저에서 자바스크립트로 직접 실행되며, 입력한 시간, 휴게 분, 시급, 날짜는 어디로도 전송되지 않습니다. 입력 내용은 브라우저의 로컬 저장소에만 저장되어 다음 방문 시에도 양식이 그대로 남아 있으며, 브라우저 데이터를 지우거나 \"이번 주 지우기\"를 사용하면 완전히 삭제됩니다. 계정도, 로그인도, 서버 측 데이터베이스도 없으므로 실제 근무 일정이나 민감한 급여 정보를 기기 밖으로 유출하지 않고 기록할 수 있습니다. 이후 입력 내용을 지우기만 하면 공용 컴퓨터나 공공장소의 컴퓨터에서도 빠르게 개인적으로 사용하기에 적합합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

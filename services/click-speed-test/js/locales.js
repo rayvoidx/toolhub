@@ -62,7 +62,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Does the test duration — 1 second versus 60 seconds — change my CPS score?",
     "faq.a4": "Yes. Very short tests like 1 second often show a higher peak CPS because a quick burst is easier to sustain than a long one, while longer tests like 30 or 60 seconds reveal endurance as your fingers tire and the average drops. Because the two aren't directly comparable, this click speed test tracks your personal best separately for each duration, so your 1-second record and your 60-second record never overwrite each other.",
     "faq.q5": "Is my click data saved or sent to a server?",
-    "faq.a5": "No. Every click, timer tick and CPS calculation happens locally in your browser — nothing is uploaded anywhere and there's no account or sign-in required. Only your personal best score per duration is kept, and it stays in this browser's local storage on this device until you press \"Reset best score\" or clear your browsing data."
+    "faq.a5": "No. Every click, timer tick and CPS calculation happens locally in your browser — nothing is uploaded anywhere and there's no account or sign-in required. Only your personal best score per duration is kept, and it stays in this browser's local storage on this device until you press \"Reset best score\" or clear your browsing data.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -109,7 +114,12 @@ window.I18N_LOCALES = {
     "faq.q4": "测试时长——1 秒和 60 秒——会影响我的 CPS 分数吗？",
     "faq.a4": "会。像 1 秒这样很短的测试往往会显示更高的峰值 CPS，因为短暂的爆发比长时间维持更容易；而像 30 秒或 60 秒这样较长的测试会随着手指疲劳、平均值下降而体现出耐力。由于两者不能直接比较，这个点击速度测试会为每种时长单独记录你的最佳成绩，因此你的 1 秒纪录和 60 秒纪录不会互相覆盖。",
     "faq.q5": "我的点击数据会被保存或发送到服务器吗？",
-    "faq.a5": "不会。每一次点击、每一次计时和 CPS 计算都完全在你的浏览器本地完成——不会上传到任何地方，也不需要账号或登录。只有你每种时长的个人最佳成绩会被保存，它只存放在这台设备浏览器的本地存储中，直到你点击\"重置最佳成绩\"或清除浏览数据。"
+    "faq.a5": "不会。每一次点击、每一次计时和 CPS 计算都完全在你的浏览器本地完成——不会上传到任何地方，也不需要账号或登录。只有你每种时长的个人最佳成绩会被保存，它只存放在这台设备浏览器的本地存储中，直到你点击\"重置最佳成绩\"或清除浏览数据。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -156,7 +166,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या टेस्ट की अवधि — 1 सेकंड बनाम 60 सेकंड — मेरा CPS स्कोर बदल देती है?",
     "faq.a4": "हाँ। 1 सेकंड जैसे बहुत छोटे टेस्ट अक्सर ज़्यादा पीक CPS दिखाते हैं क्योंकि छोटा बर्स्ट लंबे समय तक बनाए रखने से आसान होता है, जबकि 30 या 60 सेकंड जैसे लंबे टेस्ट आपकी उँगलियों के थकने और औसत गिरने के साथ सहनशक्ति दिखाते हैं। चूँकि दोनों की सीधी तुलना नहीं हो सकती, यह क्लिक स्पीड टेस्ट हर अवधि के लिए आपका पर्सनल बेस्ट अलग-अलग ट्रैक करता है, इसलिए आपका 1-सेकंड रिकॉर्ड और 60-सेकंड रिकॉर्ड कभी एक-दूसरे को ओवरराइट नहीं करते।",
     "faq.q5": "क्या मेरा क्लिक डेटा सेव होता है या सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। हर क्लिक, टाइमर टिक और CPS कैलकुलेशन पूरी तरह आपके ब्राउज़र में स्थानीय रूप से होता है — कहीं भी कुछ अपलोड नहीं होता और किसी अकाउंट या साइन-इन की ज़रूरत नहीं। सिर्फ़ हर अवधि का आपका पर्सनल बेस्ट स्कोर सेव होता है, और वह इसी डिवाइस के ब्राउज़र के लोकल स्टोरेज में तब तक रहता है जब तक आप \"बेस्ट स्कोर रीसेट करें\" न दबाएँ या अपना ब्राउज़िंग डेटा साफ़ न करें।"
+    "faq.a5": "नहीं। हर क्लिक, टाइमर टिक और CPS कैलकुलेशन पूरी तरह आपके ब्राउज़र में स्थानीय रूप से होता है — कहीं भी कुछ अपलोड नहीं होता और किसी अकाउंट या साइन-इन की ज़रूरत नहीं। सिर्फ़ हर अवधि का आपका पर्सनल बेस्ट स्कोर सेव होता है, और वह इसी डिवाइस के ब्राउज़र के लोकल स्टोरेज में तब तक रहता है जब तक आप \"बेस्ट स्कोर रीसेट करें\" न दबाएँ या अपना ब्राउज़िंग डेटा साफ़ न करें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -203,7 +218,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿La duración del test —1 segundo frente a 60 segundos— cambia mi puntuación de CPS?",
     "faq.a4": "Sí. Los test muy cortos, como el de 1 segundo, suelen mostrar un CPS pico más alto porque una ráfaga breve es más fácil de sostener que una larga, mientras que los test más largos, como los de 30 o 60 segundos, revelan tu resistencia a medida que tus dedos se cansan y el promedio baja. Como los dos no son directamente comparables, este test de velocidad de clic guarda tu mejor marca personal por separado para cada duración, así que tu récord de 1 segundo y el de 60 segundos nunca se sobrescriben entre sí.",
     "faq.q5": "¿Se guardan o se envían mis datos de clic a un servidor?",
-    "faq.a5": "No. Cada clic, cada tick del temporizador y cada cálculo de CPS ocurre localmente en tu navegador — no se sube nada a ningún sitio y no hace falta cuenta ni inicio de sesión. Solo se guarda tu mejor puntuación personal por cada duración, y permanece en el almacenamiento local del navegador de este dispositivo hasta que pulses \"Restablecer mejor marca\" o borres tus datos de navegación."
+    "faq.a5": "No. Cada clic, cada tick del temporizador y cada cálculo de CPS ocurre localmente en tu navegador — no se sube nada a ningún sitio y no hace falta cuenta ni inicio de sesión. Solo se guarda tu mejor puntuación personal por cada duración, y permanece en el almacenamiento local del navegador de este dispositivo hasta que pulses \"Restablecer mejor marca\" o borres tus datos de navegación.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -250,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تغيّر مدة الاختبار — ثانية واحدة مقابل 60 ثانية — نتيجة CPS الخاصة بي؟",
     "faq.a4": "نعم. غالبًا ما تُظهر الاختبارات القصيرة جدًا مثل ثانية واحدة أعلى CPS لحظي لأن الدفعة السريعة أسهل في الحفاظ عليها من دفعة طويلة، بينما تكشف الاختبارات الأطول مثل 30 أو 60 ثانية عن قدرة التحمل مع تعب أصابعك وانخفاض المتوسط. ولأن الاثنين لا يمكن مقارنتهما مباشرة، يتتبّع اختبار سرعة النقر هذا أفضل رقم شخصي لك بشكل منفصل لكل مدة، لذا لا يُلغي رقمك القياسي لثانية واحدة رقمك القياسي لـ60 ثانية أبدًا.",
     "faq.q5": "هل تُحفظ بيانات نقراتي أو تُرسَل إلى خادم؟",
-    "faq.a5": "لا. تحدث كل نقرة وكل نبضة مؤقت وكل عملية حساب لـCPS محليًا في متصفحك — لا يُرفَع شيء إلى أي مكان ولا حاجة لحساب أو تسجيل دخول. يُحفَظ فقط أفضل رقم شخصي لك لكل مدة، ويبقى في التخزين المحلي لمتصفح هذا الجهاز إلى أن تضغط \"إعادة تعيين أفضل نتيجة\" أو تمسح بيانات التصفح."
+    "faq.a5": "لا. تحدث كل نقرة وكل نبضة مؤقت وكل عملية حساب لـCPS محليًا في متصفحك — لا يُرفَع شيء إلى أي مكان ولا حاجة لحساب أو تسجيل دخول. يُحفَظ فقط أفضل رقم شخصي لك لكل مدة، ويبقى في التخزين المحلي لمتصفح هذا الجهاز إلى أن تضغط \"إعادة تعيين أفضل نتيجة\" أو تمسح بيانات التصفح.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -297,7 +322,12 @@ window.I18N_LOCALES = {
     "faq.q4": "La durée du test — 1 seconde contre 60 secondes — change-t-elle mon score CPS ?",
     "faq.a4": "Oui. Les tests très courts comme celui d'1 seconde affichent souvent un CPS de pointe plus élevé, car une rafale brève est plus facile à soutenir qu'une longue, tandis que les tests plus longs comme 30 ou 60 secondes révèlent votre endurance à mesure que vos doigts se fatiguent et que la moyenne baisse. Comme les deux ne sont pas directement comparables, ce test de vitesse de clic suit votre meilleur score personnel séparément pour chaque durée, si bien que votre record d'1 seconde et celui de 60 secondes ne s'écrasent jamais l'un l'autre.",
     "faq.q5": "Mes données de clic sont-elles enregistrées ou envoyées à un serveur ?",
-    "faq.a5": "Non. Chaque clic, chaque tic du minuteur et chaque calcul de CPS se déroule localement dans votre navigateur — rien n'est téléversé nulle part et aucun compte ni connexion n'est nécessaire. Seul votre meilleur score personnel par durée est conservé, et il reste dans le stockage local du navigateur de cet appareil jusqu'à ce que vous appuyiez sur « Réinitialiser le record » ou que vous effaciez vos données de navigation."
+    "faq.a5": "Non. Chaque clic, chaque tic du minuteur et chaque calcul de CPS se déroule localement dans votre navigateur — rien n'est téléversé nulle part et aucun compte ni connexion n'est nécessaire. Seul votre meilleur score personnel par durée est conservé, et il reste dans le stockage local du navigateur de cet appareil jusqu'à ce que vous appuyiez sur « Réinitialiser le record » ou que vous effaciez vos données de navigation.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -344,7 +374,12 @@ window.I18N_LOCALES = {
     "faq.q4": "টেস্টের সময়কাল — ১ সেকেন্ড বনাম ৬০ সেকেন্ড — কি আমার CPS স্কোর বদলে দেয়?",
     "faq.a4": "হ্যাঁ। ১ সেকেন্ডের মতো খুব ছোট টেস্ট প্রায়ই বেশি পিক CPS দেখায় কারণ দীর্ঘ সময় ধরে রাখার চেয়ে সংক্ষিপ্ত বার্স্ট বজায় রাখা সহজ, আর ৩০ বা ৬০ সেকেন্ডের মতো দীর্ঘ টেস্ট আপনার আঙুল ক্লান্ত হওয়ার সাথে সাথে সহনশীলতা দেখায় এবং গড় কমে যায়। যেহেতু দুটি সরাসরি তুলনাযোগ্য নয়, এই ক্লিক স্পিড টেস্ট প্রতিটি সময়কালের জন্য আলাদাভাবে আপনার ব্যক্তিগত সেরা ট্র্যাক করে, তাই আপনার ১ সেকেন্ডের রেকর্ড এবং ৬০ সেকেন্ডের রেকর্ড কখনো একে অপরকে ওভাররাইট করে না।",
     "faq.q5": "আমার ক্লিক ডেটা কি সংরক্ষিত হয় বা সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। প্রতিটি ক্লিক, টাইমার টিক এবং CPS হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারে স্থানীয়ভাবে ঘটে — কোথাও কিছু আপলোড হয় না এবং কোনো অ্যাকাউন্ট বা সাইন-ইন প্রয়োজন নেই। শুধু প্রতিটি সময়কালের জন্য আপনার ব্যক্তিগত সেরা স্কোর সংরক্ষিত থাকে, এবং এটি এই ডিভাইসের ব্রাউজারের লোকাল স্টোরেজে থাকে যতক্ষণ না আপনি \"সেরা স্কোর রিসেট করুন\" চাপেন বা আপনার ব্রাউজিং ডেটা মুছে ফেলেন।"
+    "faq.a5": "না। প্রতিটি ক্লিক, টাইমার টিক এবং CPS হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারে স্থানীয়ভাবে ঘটে — কোথাও কিছু আপলোড হয় না এবং কোনো অ্যাকাউন্ট বা সাইন-ইন প্রয়োজন নেই। শুধু প্রতিটি সময়কালের জন্য আপনার ব্যক্তিগত সেরা স্কোর সংরক্ষিত থাকে, এবং এটি এই ডিভাইসের ব্রাউজারের লোকাল স্টোরেজে থাকে যতক্ষণ না আপনি \"সেরা স্কোর রিসেট করুন\" চাপেন বা আপনার ব্রাউজিং ডেটা মুছে ফেলেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -391,7 +426,12 @@ window.I18N_LOCALES = {
     "faq.q4": "A duração do teste — 1 segundo contra 60 segundos — muda minha pontuação de CPS?",
     "faq.a4": "Sim. Testes muito curtos, como o de 1 segundo, costumam mostrar um pico de CPS mais alto porque uma rajada breve é mais fácil de sustentar do que uma longa, enquanto testes mais longos, como 30 ou 60 segundos, revelam sua resistência à medida que seus dedos cansam e a média cai. Como os dois não são diretamente comparáveis, este teste de velocidade de clique acompanha seu melhor recorde pessoal separadamente para cada duração, então seu recorde de 1 segundo e o de 60 segundos nunca se sobrescrevem.",
     "faq.q5": "Meus dados de clique são salvos ou enviados para um servidor?",
-    "faq.a5": "Não. Cada clique, cada tique do temporizador e cada cálculo de CPS acontece localmente no seu navegador — nada é enviado a lugar nenhum e não é necessária conta ou login. Apenas sua melhor pontuação pessoal por duração é guardada, e ela permanece no armazenamento local do navegador deste dispositivo até que você clique em \"Redefinir melhor pontuação\" ou limpe os dados de navegação."
+    "faq.a5": "Não. Cada clique, cada tique do temporizador e cada cálculo de CPS acontece localmente no seu navegador — nada é enviado a lugar nenhum e não é necessária conta ou login. Apenas sua melhor pontuação pessoal por duração é guardada, e ela permanece no armazenamento local do navegador deste dispositivo até que você clique em \"Redefinir melhor pontuação\" ou limpe os dados de navegação.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -438,7 +478,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Меняет ли длительность теста — 1 секунда против 60 секунд — мой результат CPS?",
     "faq.a4": "Да. Очень короткие тесты, например на 1 секунду, часто показывают более высокий пиковый CPS, потому что короткую серию легче поддерживать, чем длинную, а более долгие тесты, например на 30 или 60 секунд, показывают вашу выносливость по мере того, как пальцы устают и среднее значение падает. Поскольку эти два результата напрямую не сравнимы, этот тест скорости кликов отслеживает ваш личный рекорд отдельно для каждой длительности, поэтому ваш рекорд за 1 секунду и рекорд за 60 секунд никогда не перезаписывают друг друга.",
     "faq.q5": "Сохраняются ли мои данные о кликах или отправляются на сервер?",
-    "faq.a5": "Нет. Каждый клик, каждый тик таймера и каждый расчёт CPS происходит локально в вашем браузере — никуда ничего не загружается, и учётная запись или вход не требуются. Сохраняется только ваш личный лучший результат по каждой длительности, и он остаётся в локальном хранилище браузера этого устройства, пока вы не нажмёте «Сбросить рекорд» или не очистите данные браузера."
+    "faq.a5": "Нет. Каждый клик, каждый тик таймера и каждый расчёт CPS происходит локально в вашем браузере — никуда ничего не загружается, и учётная запись или вход не требуются. Сохраняется только ваш личный лучший результат по каждой длительности, и он остаётся в локальном хранилище браузера этого устройства, пока вы не нажмёте «Сбросить рекорд» или не очистите данные браузера.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -485,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا ٹیسٹ کا دورانیہ — 1 سیکنڈ بمقابلہ 60 سیکنڈ — میرا CPS اسکور بدل دیتا ہے؟",
     "faq.a4": "جی ہاں۔ 1 سیکنڈ جیسے بہت مختصر ٹیسٹ اکثر زیادہ چوٹی CPS دکھاتے ہیں کیونکہ مختصر پھٹکا طویل عرصے تک برقرار رکھنے سے آسان ہوتا ہے، جبکہ 30 یا 60 سیکنڈ جیسے لمبے ٹیسٹ آپ کی انگلیوں کے تھکنے اور اوسط کم ہونے کے ساتھ برداشت ظاہر کرتے ہیں۔ چونکہ دونوں کا براہ راست موازنہ نہیں ہو سکتا، یہ کلک اسپیڈ ٹیسٹ ہر دورانیے کے لیے آپ کا ذاتی بہترین ریکارڈ الگ الگ رکھتا ہے، اس لیے آپ کا 1 سیکنڈ کا ریکارڈ اور 60 سیکنڈ کا ریکارڈ کبھی ایک دوسرے کو اوور رائٹ نہیں کرتے۔",
     "faq.q5": "کیا میرا کلک ڈیٹا محفوظ ہوتا ہے یا سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر کلک، ٹائمر ٹک اور CPS حساب مکمل طور پر آپ کے براؤزر میں مقامی طور پر ہوتا ہے — کہیں بھی کچھ اپ لوڈ نہیں ہوتا اور کسی اکاؤنٹ یا سائن اِن کی ضرورت نہیں۔ صرف ہر دورانیے کے لیے آپ کا ذاتی بہترین اسکور محفوظ ہوتا ہے، اور یہ اس ڈیوائس کے براؤزر کے مقامی سٹوریج میں اس وقت تک رہتا ہے جب تک آپ \"بہترین اسکور ری سیٹ کریں\" نہ دبائیں یا اپنا براؤزنگ ڈیٹا صاف نہ کریں۔"
+    "faq.a5": "نہیں۔ ہر کلک، ٹائمر ٹک اور CPS حساب مکمل طور پر آپ کے براؤزر میں مقامی طور پر ہوتا ہے — کہیں بھی کچھ اپ لوڈ نہیں ہوتا اور کسی اکاؤنٹ یا سائن اِن کی ضرورت نہیں۔ صرف ہر دورانیے کے لیے آپ کا ذاتی بہترین اسکور محفوظ ہوتا ہے، اور یہ اس ڈیوائس کے براؤزر کے مقامی سٹوریج میں اس وقت تک رہتا ہے جب تک آپ \"بہترین اسکور ری سیٹ کریں\" نہ دبائیں یا اپنا براؤزنگ ڈیٹا صاف نہ کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -532,7 +582,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah durasi tes — 1 detik versus 60 detik — mengubah skor CPS saya?",
     "faq.a4": "Ya. Tes yang sangat singkat seperti 1 detik sering menunjukkan CPS puncak yang lebih tinggi karena letupan singkat lebih mudah dipertahankan daripada yang panjang, sementara tes yang lebih panjang seperti 30 atau 60 detik mengungkapkan daya tahan Anda seiring jari Anda lelah dan rata-rata menurun. Karena keduanya tidak bisa dibandingkan secara langsung, tes kecepatan klik ini melacak rekor pribadi terbaik Anda secara terpisah untuk setiap durasi, sehingga rekor 1 detik dan rekor 60 detik Anda tidak akan pernah saling menimpa.",
     "faq.q5": "Apakah data klik saya disimpan atau dikirim ke server?",
-    "faq.a5": "Tidak. Setiap klik, setiap detak timer, dan setiap perhitungan CPS terjadi secara lokal di browser Anda — tidak ada yang diunggah ke mana pun dan tidak perlu akun atau masuk. Hanya skor pribadi terbaik Anda per durasi yang disimpan, dan itu tetap berada di penyimpanan lokal browser perangkat ini sampai Anda menekan \"Atur ulang skor terbaik\" atau menghapus data penjelajahan Anda."
+    "faq.a5": "Tidak. Setiap klik, setiap detak timer, dan setiap perhitungan CPS terjadi secara lokal di browser Anda — tidak ada yang diunggah ke mana pun dan tidak perlu akun atau masuk. Hanya skor pribadi terbaik Anda per durasi yang disimpan, dan itu tetap berada di penyimpanan lokal browser perangkat ini sampai Anda menekan \"Atur ulang skor terbaik\" atau menghapus data penjelajahan Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -579,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Verändert die Testdauer — 1 Sekunde gegenüber 60 Sekunden — meinen CPS-Wert?",
     "faq.a4": "Ja. Sehr kurze Tests wie 1 Sekunde zeigen oft einen höheren Spitzen-CPS-Wert, weil ein kurzer Ausbruch leichter durchzuhalten ist als ein langer, während längere Tests wie 30 oder 60 Sekunden deine Ausdauer offenbaren, wenn deine Finger ermüden und der Durchschnitt sinkt. Da die beiden nicht direkt vergleichbar sind, verfolgt dieser Klickgeschwindigkeitstest deinen persönlichen Bestwert getrennt für jede Dauer, sodass dein 1-Sekunden-Rekord und dein 60-Sekunden-Rekord sich nie gegenseitig überschreiben.",
     "faq.q5": "Werden meine Klickdaten gespeichert oder an einen Server gesendet?",
-    "faq.a5": "Nein. Jeder Klick, jeder Timer-Tick und jede CPS-Berechnung erfolgt lokal in deinem Browser — nichts wird irgendwohin hochgeladen, und es ist kein Konto oder Login erforderlich. Nur dein persönlicher Bestwert pro Dauer wird gespeichert, und er bleibt im lokalen Speicher des Browsers auf diesem Gerät, bis du auf „Bestwert zurücksetzen“ klickst oder deine Browserdaten löschst."
+    "faq.a5": "Nein. Jeder Klick, jeder Timer-Tick und jede CPS-Berechnung erfolgt lokal in deinem Browser — nichts wird irgendwohin hochgeladen, und es ist kein Konto oder Login erforderlich. Nur dein persönlicher Bestwert pro Dauer wird gespeichert, und er bleibt im lokalen Speicher des Browsers auf diesem Gerät, bis du auf „Bestwert zurücksetzen“ klickst oder deine Browserdaten löschst.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -626,7 +686,12 @@ window.I18N_LOCALES = {
     "faq.q4": "テスト時間（1秒と60秒）によってCPSスコアは変わりますか？",
     "faq.a4": "はい。1秒のような非常に短いテストは、短い連打の方が長時間維持するより簡単なため、ピークCPSが高く出ることが多い一方、30秒や60秒のような長いテストでは指が疲れて平均値が下がり、持久力が現れます。この2つは直接比較できないため、このクリックスピードテストは時間ごとに個人ベストを別々に記録し、1秒の記録と60秒の記録が互いに上書きされることはありません。",
     "faq.q5": "クリックデータは保存されたり、サーバーに送信されたりしますか？",
-    "faq.a5": "いいえ。すべてのクリック、タイマーの更新、CPSの計算はブラウザ内でローカルに行われ、どこにもアップロードされず、アカウントやログインも不要です。保存されるのは時間ごとの個人ベストスコアのみで、これは「ベストスコアをリセット」を押すかブラウジングデータを消去するまで、このデバイスのブラウザのローカルストレージに残ります。"
+    "faq.a5": "いいえ。すべてのクリック、タイマーの更新、CPSの計算はブラウザ内でローカルに行われ、どこにもアップロードされず、アカウントやログインも不要です。保存されるのは時間ごとの個人ベストスコアのみで、これは「ベストスコアをリセット」を押すかブラウジングデータを消去するまで、このデバイスのブラウザのローカルストレージに残ります。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -673,6 +738,11 @@ window.I18N_LOCALES = {
     "faq.q4": "테스트 시간(1초 대 60초)에 따라 CPS 점수가 달라지나요?",
     "faq.a4": "네. 1초처럼 아주 짧은 테스트는 짧은 폭발적인 연타를 유지하기가 더 쉬워서 순간 최고 CPS가 높게 나오는 경우가 많고, 30초나 60초처럼 긴 테스트는 손가락이 지치면서 평균이 떨어져 지구력이 드러납니다. 두 값은 직접 비교할 수 없기 때문에 이 클릭 속도 테스트는 시간대별로 개인 최고 기록을 따로 저장하므로, 1초 기록과 60초 기록이 서로 덮어써지는 일은 없습니다.",
     "faq.q5": "제 클릭 데이터가 저장되거나 서버로 전송되나요?",
-    "faq.a5": "아니요. 모든 클릭, 타이머 업데이트, CPS 계산은 브라우저 안에서만 로컬로 처리되며 어디에도 업로드되지 않고 계정이나 로그인도 필요 없습니다. 시간대별 개인 최고 기록만 저장되며, \"최고 기록 초기화\"를 누르거나 브라우징 데이터를 지우기 전까지 이 기기의 브라우저 로컬 저장소에만 남아 있습니다."
+    "faq.a5": "아니요. 모든 클릭, 타이머 업데이트, CPS 계산은 브라우저 안에서만 로컬로 처리되며 어디에도 업로드되지 않고 계정이나 로그인도 필요 없습니다. 시간대별 개인 최고 기록만 저장되며, \"최고 기록 초기화\"를 누르거나 브라우징 데이터를 지우기 전까지 이 기기의 브라우저 로컬 저장소에만 남아 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

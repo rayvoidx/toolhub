@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.a4": "A discount calculation takes a list price and a sale price to find how much you saved, while a change-rate calculation finds the rate of change between two values. The formula is the same but the purpose differs. If you want a tool built for shopping discounts, use our",
     "faq.a4.link": "discount calculator →",
     "faq.q5": "Are my results sent to a server?",
-    "faq.a5": "No. This percentage calculator processes the numbers you type entirely inside your browser. Every calculation runs locally in JavaScript with no server communication at all. Even sensitive financial figures never leave your device, so you can use it with peace of mind."
+    "faq.a5": "No. This percentage calculator processes the numbers you type entirely inside your browser. Every calculation runs locally in JavaScript with no server communication at all. Even sensitive financial figures never leave your device, so you can use it with peace of mind.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -124,7 +129,12 @@ window.I18N_LOCALES = {
     "faq.a4": "折扣计算是输入原价和售价，算出省了多少钱；增减率计算是求两个数值之间的变化率。公式相同但目的不同。如果你想要一款专为购物折扣打造的工具，请使用我们的",
     "faq.a4.link": "折扣计算器 →",
     "faq.q5": "计算结果会被发送到服务器吗？",
-    "faq.a5": "不会。本百分比计算器完全在你的浏览器内处理你输入的数字。所有计算都用 JavaScript 在本地运行，完全没有服务器通信。即使输入敏感的财务数字也不会离开你的设备，可以放心使用。"
+    "faq.a5": "不会。本百分比计算器完全在你的浏览器内处理你输入的数字。所有计算都用 JavaScript 在本地运行，完全没有服务器通信。即使输入敏感的财务数字也不会离开你的设备，可以放心使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -183,7 +193,12 @@ window.I18N_LOCALES = {
     "faq.a4": "छूट गणना में सूची मूल्य और बिक्री मूल्य डालकर पता चलता है कि आपने कितना बचाया, जबकि परिवर्तन-दर गणना दो मानों के बीच बदलाव की दर निकालती है। सूत्र एक ही है पर उद्देश्य अलग है। यदि आप खरीदारी छूट के लिए बना टूल चाहते हैं, तो हमारे",
     "faq.a4.link": "छूट कैलकुलेटर →",
     "faq.q5": "क्या मेरे परिणाम सर्वर पर भेजे जाते हैं?",
-    "faq.a5": "नहीं। यह प्रतिशत कैलकुलेटर आपकी डाली गई संख्याओं को पूरी तरह आपके ब्राउज़र के भीतर ही संसाधित करता है। हर गणना JavaScript में स्थानीय रूप से चलती है, कोई सर्वर संचार नहीं होता। संवेदनशील वित्तीय आँकड़े भी आपके डिवाइस से बाहर नहीं जाते, इसलिए आप निश्चिंत होकर इसका उपयोग कर सकते हैं।"
+    "faq.a5": "नहीं। यह प्रतिशत कैलकुलेटर आपकी डाली गई संख्याओं को पूरी तरह आपके ब्राउज़र के भीतर ही संसाधित करता है। हर गणना JavaScript में स्थानीय रूप से चलती है, कोई सर्वर संचार नहीं होता। संवेदनशील वित्तीय आँकड़े भी आपके डिवाइस से बाहर नहीं जाते, इसलिए आप निश्चिंत होकर इसका उपयोग कर सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -242,7 +257,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Un cálculo de descuento toma el precio de lista y el precio de venta para saber cuánto ahorraste, mientras que un cálculo de tasa de cambio halla la tasa de variación entre dos valores. La fórmula es la misma pero el propósito difiere. Si quieres una herramienta hecha para descuentos de compras, usa nuestra",
     "faq.a4.link": "calculadora de descuentos →",
     "faq.q5": "¿Mis resultados se envían a un servidor?",
-    "faq.a5": "No. Esta calculadora de porcentajes procesa los números que escribes por completo dentro de tu navegador. Cada cálculo se ejecuta localmente en JavaScript sin comunicación alguna con el servidor. Ni siquiera las cifras financieras sensibles salen de tu dispositivo, así que puedes usarla con total tranquilidad."
+    "faq.a5": "No. Esta calculadora de porcentajes procesa los números que escribes por completo dentro de tu navegador. Cada cálculo se ejecuta localmente en JavaScript sin comunicación alguna con el servidor. Ni siquiera las cifras financieras sensibles salen de tu dispositivo, así que puedes usarla con total tranquilidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -301,7 +321,12 @@ window.I18N_LOCALES = {
     "faq.a4": "حساب الخصم يأخذ السعر الأصلي وسعر البيع لمعرفة قيمة ما وفّرته، أما حساب معدل التغير فيوجد نسبة التغير بين قيمتين. المعادلة واحدة لكن الغرض مختلف. إذا أردت أداة مخصصة لخصومات التسوق، استخدم",
     "faq.a4.link": "حاسبة الخصم →",
     "faq.q5": "هل تُرسل نتائجي إلى خادم؟",
-    "faq.a5": "لا. تعالج حاسبة النسبة المئوية هذه الأرقام التي تدخلها داخل متصفحك بالكامل. كل عملية حساب تُنفَّذ محلياً بلغة JavaScript دون أي اتصال بالخادم. حتى الأرقام المالية الحساسة لا تغادر جهازك، فيمكنك استخدامها بكل اطمئنان."
+    "faq.a5": "لا. تعالج حاسبة النسبة المئوية هذه الأرقام التي تدخلها داخل متصفحك بالكامل. كل عملية حساب تُنفَّذ محلياً بلغة JavaScript دون أي اتصال بالخادم. حتى الأرقام المالية الحساسة لا تغادر جهازك، فيمكنك استخدامها بكل اطمئنان.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -360,7 +385,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Un calcul de remise part du prix affiché et du prix soldé pour trouver combien vous avez économisé, tandis qu'un calcul de taux de variation détermine le taux d'évolution entre deux valeurs. La formule est la même mais l'objectif diffère. Si vous voulez un outil conçu pour les remises d'achat, utilisez notre",
     "faq.a4.link": "calculatrice de remise →",
     "faq.q5": "Mes résultats sont-ils envoyés à un serveur ?",
-    "faq.a5": "Non. Cette calculatrice de pourcentage traite les nombres que vous saisissez entièrement dans votre navigateur. Chaque calcul s'exécute localement en JavaScript, sans aucune communication avec un serveur. Même des chiffres financiers sensibles ne quittent jamais votre appareil : vous pouvez l'utiliser en toute tranquillité."
+    "faq.a5": "Non. Cette calculatrice de pourcentage traite les nombres que vous saisissez entièrement dans votre navigateur. Chaque calcul s'exécute localement en JavaScript, sans aucune communication avec un serveur. Même des chiffres financiers sensibles ne quittent jamais votre appareil : vous pouvez l'utiliser en toute tranquillité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -419,7 +449,12 @@ window.I18N_LOCALES = {
     "faq.a4": "ছাড় গণনায় তালিকা মূল্য ও বিক্রয় মূল্য দিয়ে কত সাশ্রয় হলো তা বের করা হয়, আর পরিবর্তন-হার গণনায় দুটি মানের মধ্যে পরিবর্তনের হার বের করা হয়। সূত্র একই কিন্তু উদ্দেশ্য আলাদা। কেনাকাটার ছাড়ের জন্য তৈরি টুল চাইলে আমাদের",
     "faq.a4.link": "ছাড় ক্যালকুলেটর →",
     "faq.q5": "আমার ফলাফল কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই শতাংশ ক্যালকুলেটর আপনার লেখা সংখ্যাগুলো সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরেই প্রক্রিয়া করে। প্রতিটি গণনা JavaScript দিয়ে স্থানীয়ভাবে চলে, কোনো সার্ভার যোগাযোগ নেই। সংবেদনশীল আর্থিক সংখ্যাও আপনার ডিভাইস ছেড়ে যায় না, তাই নিশ্চিন্তে ব্যবহার করতে পারেন।"
+    "faq.a5": "না। এই শতাংশ ক্যালকুলেটর আপনার লেখা সংখ্যাগুলো সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরেই প্রক্রিয়া করে। প্রতিটি গণনা JavaScript দিয়ে স্থানীয়ভাবে চলে, কোনো সার্ভার যোগাযোগ নেই। সংবেদনশীল আর্থিক সংখ্যাও আপনার ডিভাইস ছেড়ে যায় না, তাই নিশ্চিন্তে ব্যবহার করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -478,7 +513,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Um cálculo de desconto usa o preço de tabela e o preço promocional para descobrir quanto você economizou, enquanto um cálculo de taxa de variação encontra a taxa de mudança entre dois valores. A fórmula é a mesma, mas a finalidade é diferente. Se você quer uma ferramenta feita para descontos de compras, use nossa",
     "faq.a4.link": "calculadora de desconto →",
     "faq.q5": "Meus resultados são enviados para um servidor?",
-    "faq.a5": "Não. Esta calculadora de porcentagem processa os números que você digita inteiramente dentro do seu navegador. Cada cálculo roda localmente em JavaScript, sem nenhuma comunicação com servidor. Nem mesmo números financeiros sensíveis saem do seu dispositivo, então você pode usá-la com tranquilidade."
+    "faq.a5": "Não. Esta calculadora de porcentagem processa os números que você digita inteiramente dentro do seu navegador. Cada cálculo roda localmente em JavaScript, sem nenhuma comunicação com servidor. Nem mesmo números financeiros sensíveis saem do seu dispositivo, então você pode usá-la com tranquilidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -537,7 +577,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Расчёт скидки берёт исходную и цену со скидкой, чтобы узнать, сколько вы сэкономили, а расчёт темпа изменения находит темп изменения между двумя значениями. Формула та же, но цель разная. Если нужен инструмент для торговых скидок, используйте наш",
     "faq.a4.link": "калькулятор скидок →",
     "faq.q5": "Отправляются ли мои результаты на сервер?",
-    "faq.a5": "Нет. Этот калькулятор процентов обрабатывает вводимые вами числа полностью внутри браузера. Каждый расчёт выполняется локально на JavaScript без какой-либо связи с сервером. Даже конфиденциальные финансовые данные не покидают ваше устройство, поэтому им можно пользоваться спокойно."
+    "faq.a5": "Нет. Этот калькулятор процентов обрабатывает вводимые вами числа полностью внутри браузера. Каждый расчёт выполняется локально на JavaScript без какой-либо связи с сервером. Даже конфиденциальные финансовые данные не покидают ваше устройство, поэтому им можно пользоваться спокойно.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -596,7 +641,12 @@ window.I18N_LOCALES = {
     "faq.a4": "رعایت کے حساب میں فہرست قیمت اور فروخت قیمت درج کر کے معلوم ہوتا ہے کہ آپ نے کتنی بچت کی، جبکہ شرحِ تبدیلی کا حساب دو قدروں کے درمیان تبدیلی کی شرح نکالتا ہے۔ فارمولا ایک ہی ہے مگر مقصد مختلف ہے۔ اگر آپ کو خریداری کی رعایت کے لیے بنایا گیا ٹول چاہیے، تو ہمارا",
     "faq.a4.link": "رعایت کیلکولیٹر →",
     "faq.q5": "کیا میرے نتائج سرور کو بھیجے جاتے ہیں؟",
-    "faq.a5": "نہیں۔ یہ فیصد کیلکولیٹر آپ کے درج کردہ اعداد کو مکمل طور پر آپ کے براؤزر کے اندر ہی پروسیس کرتا ہے۔ ہر حساب JavaScript میں مقامی طور پر چلتا ہے، کوئی سرور رابطہ نہیں ہوتا۔ حساس مالی اعداد بھی آپ کے آلے سے باہر نہیں جاتے، اس لیے آپ اطمینان سے استعمال کر سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ فیصد کیلکولیٹر آپ کے درج کردہ اعداد کو مکمل طور پر آپ کے براؤزر کے اندر ہی پروسیس کرتا ہے۔ ہر حساب JavaScript میں مقامی طور پر چلتا ہے، کوئی سرور رابطہ نہیں ہوتا۔ حساس مالی اعداد بھی آپ کے آلے سے باہر نہیں جاتے، اس لیے آپ اطمینان سے استعمال کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -655,7 +705,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Perhitungan diskon memakai harga daftar dan harga jual untuk mengetahui berapa yang Anda hemat, sedangkan perhitungan laju perubahan mencari laju perubahan antara dua nilai. Rumusnya sama tetapi tujuannya berbeda. Jika Anda mau alat khusus untuk diskon belanja, gunakan",
     "faq.a4.link": "kalkulator diskon →",
     "faq.q5": "Apakah hasil saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator persentase ini memproses angka yang Anda ketik sepenuhnya di dalam browser Anda. Setiap perhitungan berjalan secara lokal dengan JavaScript tanpa komunikasi server sama sekali. Bahkan angka keuangan sensitif tidak pernah keluar dari perangkat Anda, jadi Anda bisa memakainya dengan tenang."
+    "faq.a5": "Tidak. Kalkulator persentase ini memproses angka yang Anda ketik sepenuhnya di dalam browser Anda. Setiap perhitungan berjalan secara lokal dengan JavaScript tanpa komunikasi server sama sekali. Bahkan angka keuangan sensitif tidak pernah keluar dari perangkat Anda, jadi Anda bisa memakainya dengan tenang.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -714,7 +769,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Eine Rabattberechnung nutzt Listenpreis und Verkaufspreis, um herauszufinden, wie viel Sie gespart haben, während eine Änderungsraten-Berechnung die Änderungsrate zwischen zwei Werten ermittelt. Die Formel ist gleich, der Zweck jedoch verschieden. Wenn Sie ein Tool speziell für Einkaufsrabatte möchten, nutzen Sie unseren",
     "faq.a4.link": "Rabattrechner →",
     "faq.q5": "Werden meine Ergebnisse an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Prozentrechner verarbeitet die von Ihnen eingegebenen Zahlen vollständig in Ihrem Browser. Jede Berechnung läuft lokal in JavaScript ohne jegliche Serverkommunikation. Selbst sensible Finanzzahlen verlassen Ihr Gerät nie, sodass Sie ihn unbesorgt nutzen können."
+    "faq.a5": "Nein. Dieser Prozentrechner verarbeitet die von Ihnen eingegebenen Zahlen vollständig in Ihrem Browser. Jede Berechnung läuft lokal in JavaScript ohne jegliche Serverkommunikation. Selbst sensible Finanzzahlen verlassen Ihr Gerät nie, sodass Sie ihn unbesorgt nutzen können.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -773,7 +833,12 @@ window.I18N_LOCALES = {
     "faq.a4": "割引計算は定価と販売価格を入力してどれだけ安く買えたかを求めるもの、変化率計算は2つの値の変化の割合を求めるものです。式は同じでも目的が異なります。買い物の割引に特化したツールが欲しい場合は、",
     "faq.a4.link": "割引計算機 →",
     "faq.q5": "計算結果はサーバーに送信されますか？",
-    "faq.a5": "いいえ。このパーセント計算機は、入力した数字をすべてブラウザ内だけで処理します。すべての計算はJavaScriptでローカルに実行され、サーバー通信は一切ありません。機微な財務数値を入力しても外部に送信されないので、安心してお使いいただけます。"
+    "faq.a5": "いいえ。このパーセント計算機は、入力した数字をすべてブラウザ内だけで処理します。すべての計算はJavaScriptでローカルに実行され、サーバー通信は一切ありません。機微な財務数値を入力しても外部に送信されないので、安心してお使いいただけます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -832,6 +897,11 @@ window.I18N_LOCALES = {
     "faq.a4": "할인율 계산은 정가와 할인가를 입력해 얼마나 싸게 샀는지를 구하는 것이고, 증감률 계산은 두 값 사이의 변화 비율을 구하는 것입니다. 수식은 동일하지만 목적이 다릅니다. 쇼핑 할인율 계산에 특화된 도구를 원한다면 우리",
     "faq.a4.link": "할인율 계산기 →",
     "faq.q5": "계산 결과가 서버로 전송되나요?",
-    "faq.a5": "아니오. 이 퍼센트 계산기는 입력한 숫자를 브라우저 안에서만 처리합니다. 모든 계산은 자바스크립트로 로컬 실행되며, 서버 통신이 전혀 없습니다. 민감한 재무 수치를 입력해도 외부로 전송되지 않으니 안심하고 사용하실 수 있습니다."
+    "faq.a5": "아니오. 이 퍼센트 계산기는 입력한 숫자를 브라우저 안에서만 처리합니다. 모든 계산은 자바스크립트로 로컬 실행되며, 서버 통신이 전혀 없습니다. 민감한 재무 수치를 입력해도 외부로 전송되지 않으니 안심하고 사용하실 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

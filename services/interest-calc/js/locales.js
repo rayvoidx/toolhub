@@ -76,7 +76,12 @@ window.I18N_LOCALES = {
     "faq.a4": "A time deposit keeps the whole lump sum invested for the entire term, while installment savings deposit money month by month, so the average deposit period is about half the term — at the same rate, pre-tax interest is roughly half. This deposit interest calculator assumes a lump sum; if you save monthly, use the savings maturity calculator.",
     "faq.a4.link": "Open the savings maturity calculator →",
     "faq.q5": "Why can the result differ from the interest my bank actually pays?",
-    "faq.a5": "This after-tax interest calculator assumes whole-month terms and rounds amounts down to the won. Banks count exact days, early withdrawal applies a lower early-termination rate, and bonus-rate conditions can change the applied rate — so the actual payout can differ by a few won to a few thousand won. Use the result as an estimate."
+    "faq.a5": "This after-tax interest calculator assumes whole-month terms and rounds amounts down to the won. Banks count exact days, early withdrawal applies a lower early-termination rate, and bonus-rate conditions can change the applied rate — so the actual payout can differ by a few won to a few thousand won. Use the result as an estimate.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -137,7 +142,12 @@ window.I18N_LOCALES = {
     "faq.a4": "定期存款的整笔本金在整个期限内计息;零存整取分月存入,平均存期约为期限的一半,同样年利率下税前利息约为定期存款的一半。本计算器按整笔存入计算,若是每月存入请使用零存整取计算器。",
     "faq.a4.link": "打开零存整取计算器 →",
     "faq.q5": "计算结果为什么可能与银行实际利息不同?",
-    "faq.a5": "本税后利息计算器假设按整月存期计算并将不足 1 韩元舍去。银行按实际天数计息,提前支取会适用较低的中途解约利率,优惠利率条件也会影响适用利率,因此实际金额可能相差几韩元到几千韩元,结果仅供参考。"
+    "faq.a5": "本税后利息计算器假设按整月存期计算并将不足 1 韩元舍去。银行按实际天数计息,提前支取会适用较低的中途解约利率,优惠利率条件也会影响适用利率,因此实际金额可能相差几韩元到几千韩元,结果仅供参考。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -198,7 +208,12 @@ window.I18N_LOCALES = {
     "faq.a4": "सावधि जमा में पूरी रकम पूरे कार्यकाल जमा रहती है; किस्त-बचत में पैसा हर माह जाता है, औसत अवधि लगभग आधी रहती है — समान दर पर कर-पूर्व ब्याज लगभग आधा। यह कैलकुलेटर एकमुश्त जमा मानता है; मासिक बचत के लिए बचत परिपक्वता कैलकुलेटर उपयोग करें।",
     "faq.a4.link": "बचत परिपक्वता कैलकुलेटर खोलें →",
     "faq.q5": "परिणाम बैंक के वास्तविक ब्याज से अलग क्यों हो सकता है?",
-    "faq.a5": "यह कर-पश्चात ब्याज कैलकुलेटर पूर्ण-माह अवधि मानता है और राशि नीचे पूर्णांकित करता है। बैंक दिनों के हिसाब से गिनते हैं, समयपूर्व निकासी पर कम दर लागू होती है और बोनस-दर शर्तें भी दर बदल सकती हैं — इसलिए वास्तविक राशि कुछ वॉन से कुछ हज़ार वॉन तक भिन्न हो सकती है। परिणाम अनुमान के रूप में लें।"
+    "faq.a5": "यह कर-पश्चात ब्याज कैलकुलेटर पूर्ण-माह अवधि मानता है और राशि नीचे पूर्णांकित करता है। बैंक दिनों के हिसाब से गिनते हैं, समयपूर्व निकासी पर कम दर लागू होती है और बोनस-दर शर्तें भी दर बदल सकती हैं — इसलिए वास्तविक राशि कुछ वॉन से कुछ हज़ार वॉन तक भिन्न हो सकती है। परिणाम अनुमान के रूप में लें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -259,7 +274,12 @@ window.I18N_LOCALES = {
     "faq.a4": "En el depósito a plazo todo el capital permanece invertido durante todo el plazo; en el ahorro por cuotas el dinero entra mes a mes y el periodo medio es la mitad del plazo — a igual tasa, el interés bruto es aproximadamente la mitad. Esta calculadora asume capital único; si ahorras cada mes, usa la calculadora de ahorro a plazo.",
     "faq.a4.link": "Abrir la calculadora de ahorro a plazo →",
     "faq.q5": "¿Por qué el resultado puede diferir del interés real del banco?",
-    "faq.a5": "Esta calculadora de interés neto asume plazos de meses completos y redondea hacia abajo al won. Los bancos cuentan días exactos, la cancelación anticipada aplica una tasa menor y las tasas bonificadas dependen de condiciones, así que el pago real puede diferir en unos pocos wones o miles de wones. Úsala como estimación."
+    "faq.a5": "Esta calculadora de interés neto asume plazos de meses completos y redondea hacia abajo al won. Los bancos cuentan días exactos, la cancelación anticipada aplica una tasa menor y las tasas bonificadas dependen de condiciones, así que el pago real puede diferir en unos pocos wones o miles de wones. Úsala como estimación.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -320,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.a4": "في الوديعة لأجل يبقى كامل المبلغ مودعًا طوال المدة، أما في الادخار بالأقساط فيدخل المال شهريًا فيبلغ متوسط مدة الإيداع نصف الأجل تقريبًا — وبالمعدل نفسه تكون الفائدة قبل الضريبة نحو النصف. تفترض هذه الحاسبة إيداعًا دفعة واحدة؛ إن كنت تدّخر شهريًا فاستخدم حاسبة استحقاق الادخار.",
     "faq.a4.link": "افتح حاسبة استحقاق الادخار ←",
     "faq.q5": "لماذا قد تختلف النتيجة عن الفائدة الفعلية من البنك؟",
-    "faq.a5": "تفترض حاسبة الفائدة بعد الضريبة هذه مددًا بأشهر كاملة وتُنزل المبالغ إلى الوون. البنوك تحسب بالأيام الفعلية، والسحب المبكر يطبّق معدلًا أدنى، وشروط المعدلات الإضافية قد تغيّر السعر المطبق — لذا قد يختلف المبلغ الفعلي بضعة وونات إلى بضعة آلاف. اعتبر النتيجة تقديرية."
+    "faq.a5": "تفترض حاسبة الفائدة بعد الضريبة هذه مددًا بأشهر كاملة وتُنزل المبالغ إلى الوون. البنوك تحسب بالأيام الفعلية، والسحب المبكر يطبّق معدلًا أدنى، وشروط المعدلات الإضافية قد تغيّر السعر المطبق — لذا قد يختلف المبلغ الفعلي بضعة وونات إلى بضعة آلاف. اعتبر النتيجة تقديرية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -381,7 +406,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Dans un dépôt à terme, toute la somme reste placée pendant la durée totale ; avec des versements mensuels, l'argent entre peu à peu et la durée moyenne vaut environ la moitié du terme — à taux égal, les intérêts bruts représentent à peu près la moitié. Ce calculateur suppose une somme unique ; si vous épargnez chaque mois, utilisez le calculateur d'épargne à échéance.",
     "faq.a4.link": "Ouvrir le calculateur d'épargne à échéance →",
     "faq.q5": "Pourquoi le résultat peut-il différer des intérêts réellement versés par la banque ?",
-    "faq.a5": "Ce calculateur d'intérêts nets suppose des durées en mois entiers et arrondit au won inférieur. Les banques comptent les jours exacts, un retrait anticipé applique un taux plus bas et les taux bonifiés dépendent de conditions : le montant réel peut donc différer de quelques wons à quelques milliers de wons. Utilisez le résultat comme estimation."
+    "faq.a5": "Ce calculateur d'intérêts nets suppose des durées en mois entiers et arrondit au won inférieur. Les banques comptent les jours exacts, un retrait anticipé applique un taux plus bas et les taux bonifiés dépendent de conditions : le montant réel peut donc différer de quelques wons à quelques milliers de wons. Utilisez le résultat comme estimation.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -442,7 +472,12 @@ window.I18N_LOCALES = {
     "faq.a4": "মেয়াদি আমানতে পুরো টাকা পুরো মেয়াদ জমা থাকে; কিস্তি-সঞ্চয়ে টাকা মাসে মাসে জমা হয়, গড় জমার সময় মেয়াদের প্রায় অর্ধেক — একই হারে কর-পূর্ব সুদ প্রায় অর্ধেক। এই ক্যালকুলেটর এককালীন জমা ধরে; মাসে মাসে জমালে সঞ্চয় মেয়াদপূর্তি ক্যালকুলেটর ব্যবহার করুন।",
     "faq.a4.link": "সঞ্চয় মেয়াদপূর্তি ক্যালকুলেটর খুলুন →",
     "faq.q5": "ফল ব্যাংকের প্রকৃত সুদের সঙ্গে ভিন্ন হতে পারে কেন?",
-    "faq.a5": "এই কর-পরবর্তী সুদ ক্যালকুলেটর পূর্ণ-মাস মেয়াদ ধরে এবং ওয়ানের নিচের অংশ বাদ দেয়। ব্যাংক প্রকৃত দিনের হিসাবে সুদ গণনা করে, আগাম ভাঙালে কম হার প্রযোজ্য হয় এবং বোনাস হারের শর্তে প্রকৃত হার বদলাতে পারে — তাই কয়েক ওয়ান থেকে কয়েক হাজার ওয়ান পার্থক্য হতে পারে। ফলটিকে আনুমানিক ধরুন।"
+    "faq.a5": "এই কর-পরবর্তী সুদ ক্যালকুলেটর পূর্ণ-মাস মেয়াদ ধরে এবং ওয়ানের নিচের অংশ বাদ দেয়। ব্যাংক প্রকৃত দিনের হিসাবে সুদ গণনা করে, আগাম ভাঙালে কম হার প্রযোজ্য হয় এবং বোনাস হারের শর্তে প্রকৃত হার বদলাতে পারে — তাই কয়েক ওয়ান থেকে কয়েক হাজার ওয়ান পার্থক্য হতে পারে। ফলটিকে আনুমানিক ধরুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -503,7 +538,12 @@ window.I18N_LOCALES = {
     "faq.a4": "No depósito a prazo, todo o capital fica aplicado durante o prazo inteiro; na poupança em parcelas o dinheiro entra mês a mês e o período médio é cerca de metade do prazo — à mesma taxa, os juros brutos ficam em torno da metade. Esta calculadora assume quantia única; se você poupa mensalmente, use a calculadora de poupança no vencimento.",
     "faq.a4.link": "Abrir a calculadora de poupança no vencimento →",
     "faq.q5": "Por que o resultado pode diferir dos juros reais pagos pelo banco?",
-    "faq.a5": "Esta calculadora de juros líquidos assume prazos em meses inteiros e arredonda para baixo até o won. Os bancos contam dias exatos, o resgate antecipado aplica taxa menor e taxas-bônus dependem de condições — o valor real pode diferir de alguns wons a alguns milhares de wons. Use como estimativa."
+    "faq.a5": "Esta calculadora de juros líquidos assume prazos em meses inteiros e arredonda para baixo até o won. Os bancos contam dias exatos, o resgate antecipado aplica taxa menor e taxas-bônus dependem de condições — o valor real pode diferir de alguns wons a alguns milhares de wons. Use como estimativa.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -564,7 +604,12 @@ window.I18N_LOCALES = {
     "faq.a4": "В срочном вкладе вся сумма размещена весь срок; в накопительном деньги вносятся помесячно, средний срок размещения — около половины периода, поэтому проценты до налога примерно вдвое меньше при той же ставке. Этот калькулятор считает единовременный вклад; если копите ежемесячно, используйте калькулятор накопительного вклада.",
     "faq.a4.link": "Открыть калькулятор накопительного вклада →",
     "faq.q5": "Почему результат может отличаться от фактических процентов банка?",
-    "faq.a5": "Этот калькулятор процентов после налога предполагает целые месяцы и округляет суммы вниз до вона. Банки считают по дням, досрочное расторжение идёт по пониженной ставке, а бонусные ставки зависят от условий — фактическая сумма может отличаться на несколько вон или тысяч вон. Используйте результат как оценку."
+    "faq.a5": "Этот калькулятор процентов после налога предполагает целые месяцы и округляет суммы вниз до вона. Банки считают по дням, досрочное расторжение идёт по пониженной ставке, а бонусные ставки зависят от условий — фактическая сумма может отличаться на несколько вон или тысяч вон. Используйте результат как оценку.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -625,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.a4": "فکسڈ ڈپازٹ میں پوری رقم پوری مدت جمع رہتی ہے؛ قسط وار بچت میں رقم ماہ بہ ماہ جاتی ہے، اوسط مدت تقریباً نصف رہتی ہے — اسی شرح پر قبل از ٹیکس سود تقریباً آدھا۔ یہ کیلکولیٹر یکمشت جمع فرض کرتا ہے؛ ماہانہ بچت کے لیے بچت میچورٹی کیلکولیٹر استعمال کریں۔",
     "faq.a4.link": "بچت میچورٹی کیلکولیٹر کھولیں ←",
     "faq.q5": "نتیجہ بینک کے اصل سود سے مختلف کیوں ہو سکتا ہے؟",
-    "faq.a5": "یہ بعد از ٹیکس سود کیلکولیٹر مکمل مہینوں کی مدت فرض کرتا ہے اور رقم وون تک نیچے راؤنڈ کرتا ہے۔ بینک دنوں کے حساب سے گنتے ہیں، قبل از وقت نکالنے پر کم شرح لگتی ہے اور بونس شرح کی شرائط بھی اثر ڈالتی ہیں — اس لیے چند وون سے چند ہزار وون کا فرق ممکن ہے۔ نتیجے کو تخمینہ سمجھیں۔"
+    "faq.a5": "یہ بعد از ٹیکس سود کیلکولیٹر مکمل مہینوں کی مدت فرض کرتا ہے اور رقم وون تک نیچے راؤنڈ کرتا ہے۔ بینک دنوں کے حساب سے گنتے ہیں، قبل از وقت نکالنے پر کم شرح لگتی ہے اور بونس شرح کی شرائط بھی اثر ڈالتی ہیں — اس لیے چند وون سے چند ہزار وون کا فرق ممکن ہے۔ نتیجے کو تخمینہ سمجھیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -686,7 +736,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Pada deposito, seluruh dana tersimpan selama seluruh tenor; pada tabungan berjangka uang masuk tiap bulan sehingga rata-rata masa simpan sekitar setengah tenor — dengan bunga sama, bunga sebelum pajak kira-kira setengahnya. Kalkulator ini mengasumsikan setoran sekaligus; jika menabung bulanan, gunakan kalkulator tabungan berjangka.",
     "faq.a4.link": "Buka kalkulator tabungan berjangka →",
     "faq.q5": "Mengapa hasilnya bisa berbeda dengan bunga asli dari bank?",
-    "faq.a5": "Kalkulator bunga setelah pajak ini mengasumsikan jangka bulan penuh dan membulatkan ke bawah hingga won. Bank menghitung per hari, pencairan awal memakai suku bunga lebih rendah, dan syarat bunga bonus dapat mengubah tarif — jadi jumlah asli bisa berbeda beberapa won hingga ribuan won. Gunakan sebagai perkiraan."
+    "faq.a5": "Kalkulator bunga setelah pajak ini mengasumsikan jangka bulan penuh dan membulatkan ke bawah hingga won. Bank menghitung per hari, pencairan awal memakai suku bunga lebih rendah, dan syarat bunga bonus dapat mengubah tarif — jadi jumlah asli bisa berbeda beberapa won hingga ribuan won. Gunakan sebagai perkiraan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -747,7 +802,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Beim Festgeld bleibt die gesamte Summe über die volle Laufzeit angelegt; beim Ratensparen fließt das Geld Monat für Monat ein, die mittlere Anlagedauer ist etwa die halbe Laufzeit — bei gleichem Zins sind die Zinsen vor Steuern rund die Hälfte. Dieser Rechner geht von einer Einmalanlage aus; wer monatlich spart, nutzt den Sparplan-Rechner.",
     "faq.a4.link": "Sparplan-Rechner öffnen →",
     "faq.q5": "Warum kann das Ergebnis von den tatsächlichen Bankzinsen abweichen?",
-    "faq.a5": "Dieser Rechner für Zinsen nach Steuern nimmt ganze Monate an und rundet auf den Won ab. Banken rechnen taggenau, vorzeitige Kündigung bringt einen niedrigeren Zins und Bonuszinsen hängen von Bedingungen ab — die tatsächliche Auszahlung kann daher um wenige bis einige tausend Won abweichen. Als Schätzung verwenden."
+    "faq.a5": "Dieser Rechner für Zinsen nach Steuern nimmt ganze Monate an und rundet auf den Won ab. Banken rechnen taggenau, vorzeitige Kündigung bringt einen niedrigeren Zins und Bonuszinsen hängen von Bedingungen ab — die tatsächliche Auszahlung kann daher um wenige bis einige tausend Won abweichen. Als Schätzung verwenden.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -808,7 +868,12 @@ window.I18N_LOCALES = {
     "faq.a4": "預金はまとまった全額が全期間預けられますが、積金は毎月分割して預けるため平均預入期間が満期の半分程度になり、同じ年利でも税引前利息は預金の約半分です。本計算機はまとまった資金の据置式基準なので、毎月積み立てる場合は積立満期計算機をご利用ください。",
     "faq.a4.link": "積立満期計算機で計算する →",
     "faq.q5": "銀行の実際の利息と違うことがあるのはなぜ?",
-    "faq.a5": "この税引後利息計算機は、か月単位の預入とウォン未満切り捨てを前提とします。実際の銀行は日割り計算で、中途解約時は約定より低い中途解約金利が適用され、優遇金利の条件によっても適用金利が変わるため、数ウォン~数千ウォンの差が出ることがあります。結果は目安としてご利用ください。"
+    "faq.a5": "この税引後利息計算機は、か月単位の預入とウォン未満切り捨てを前提とします。実際の銀行は日割り計算で、中途解約時は約定より低い中途解約金利が適用され、優遇金利の条件によっても適用金利が変わるため、数ウォン~数千ウォンの差が出ることがあります。結果は目安としてご利用ください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -869,6 +934,11 @@ window.I18N_LOCALES = {
     "faq.a4": "예금은 목돈 전액이 전체 기간 동안 예치되지만, 적금은 매달 나눠 넣어 평균 예치 기간이 만기의 절반 수준입니다. 그래서 같은 연 이율이라도 적금의 세전 이자는 예금의 약 절반입니다. 이 예금 이자 계산기는 목돈 거치식 기준이므로, 매달 납입하는 적금은 적금 만기 계산기를 이용하세요.",
     "faq.a4.link": "적금 만기 계산기로 계산하기 →",
     "faq.q5": "계산 결과가 은행의 실제 이자와 왜 다를 수 있나요?",
-    "faq.a5": "이 계산기는 개월 단위 예치와 원 단위 버림을 가정한 세후 이자 계산 도구입니다. 실제 은행은 예치일 기준 일할 계산을 적용하고, 중도해지 시 약정보다 낮은 중도해지 금리가 적용되며, 우대금리 조건 충족 여부에 따라 적용 금리도 달라집니다. 그래서 실제 지급액과 몇 원~몇천 원 정도 차이가 날 수 있으며, 결과는 참고용으로 활용하세요."
+    "faq.a5": "이 계산기는 개월 단위 예치와 원 단위 버림을 가정한 세후 이자 계산 도구입니다. 실제 은행은 예치일 기준 일할 계산을 적용하고, 중도해지 시 약정보다 낮은 중도해지 금리가 적용되며, 우대금리 조건 충족 여부에 따라 적용 금리도 달라집니다. 그래서 실제 지급액과 몇 원~몇천 원 정도 차이가 날 수 있으며, 결과는 참고용으로 활용하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

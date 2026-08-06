@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.q4": "In what order are the cleanup operations applied?",
     "faq.a4": "Always in the same fixed order, regardless of which boxes you check: collapse multiple spaces, trim line edges, remove tabs, remove blank lines, then remove all whitespace. The order matters — for example, a tab is converted to a single space after the space-collapsing step runs, so that new space is not re-collapsed even if it lands next to another space. If you need a fully squeezed result, check \"Remove ALL whitespace\" instead of combining several milder options.",
     "faq.q5": "Is my text uploaded to a server when I use this tool?",
-    "faq.a5": "No. This tool runs entirely in your browser using plain JavaScript — the text you paste, the options you choose and the cleaned result are never sent to a server or logged anywhere. Your last input and settings are optionally kept in this browser's local storage only, purely for convenience, and clearing your browser data removes them. There's no sign-up, no upload and no practical size limit beyond what your device can handle."
+    "faq.a5": "No. This tool runs entirely in your browser using plain JavaScript — the text you paste, the options you choose and the cleaned result are never sent to a server or logged anywhere. Your last input and settings are optionally kept in this browser's local storage only, purely for convenience, and clearing your browser data removes them. There's no sign-up, no upload and no practical size limit beyond what your device can handle.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -115,7 +120,12 @@ window.I18N_LOCALES = {
     "faq.q4": "各项清理操作的执行顺序是怎样的？",
     "faq.a4": "无论你勾选了哪些选项，执行顺序始终固定不变：先合并连续空格，再清理每行首尾空白，然后去除制表符，接着删除空行，最后清除全部空白字符。顺序会影响结果——例如制表符是在“合并空格”步骤之后才被替换成一个空格的，所以这个新出现的空格即使紧挨着另一个空格，也不会被再次合并。如果你想要彻底压缩的结果，直接勾选“清除全部空白字符”，而不是同时叠加多个较温和的选项。",
     "faq.q5": "使用这个工具时，我的文本会被上传到服务器吗？",
-    "faq.a5": "不会。这个工具完全使用纯 JavaScript 在你的浏览器中运行——你粘贴的文本、选择的选项和清理后的结果都不会被发送到服务器，也不会被记录在任何地方。为了方便起见，你最近一次的输入和设置可以选择性地只保存在这个浏览器的本地存储中，清除浏览器数据即可将其删除。无需注册、无需上传，除了你设备本身的处理能力外，也没有实际的大小限制。"
+    "faq.a5": "不会。这个工具完全使用纯 JavaScript 在你的浏览器中运行——你粘贴的文本、选择的选项和清理后的结果都不会被发送到服务器，也不会被记录在任何地方。为了方便起见，你最近一次的输入和设置可以选择性地只保存在这个浏览器的本地存储中，清除浏览器数据即可将其删除。无需注册、无需上传，除了你设备本身的处理能力外，也没有实际的大小限制。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "सफ़ाई की प्रक्रियाएँ किस क्रम में लागू होती हैं?",
     "faq.a4": "आप चाहे जो भी बॉक्स चुनें, क्रम हमेशा एक जैसा रहता है: पहले कई स्पेस मिलाना, फिर लाइन किनारों की स्पेस हटाना, फिर टैब हटाना, फिर खाली लाइनें हटाना, और आख़िर में पूरा व्हाइटस्पेस हटाना। यह क्रम मायने रखता है — जैसे, टैब को स्पेस-मिलाने के चरण के बाद एक स्पेस में बदला जाता है, तो वह नया स्पेस किसी दूसरे स्पेस के बगल में होने पर भी दोबारा नहीं मिलाया जाता। अगर आपको पूरी तरह समेटा हुआ नतीजा चाहिए, तो कई हल्के विकल्पों को मिलाने के बजाय सीधे \"पूरा व्हाइटस्पेस हटाएँ\" चुनें।",
     "faq.q5": "इस टूल का इस्तेमाल करते समय क्या मेरा टेक्स्ट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह टूल पूरी तरह आपके ब्राउज़र में सादे JavaScript से चलता है — आपका पेस्ट किया टेक्स्ट, चुने गए विकल्प और साफ़ किया गया नतीजा कभी सर्वर पर नहीं भेजे जाते और कहीं लॉग भी नहीं होते। सुविधा के लिए आपका आख़िरी इनपुट और सेटिंग्स चाहें तो सिर्फ़ इसी ब्राउज़र के लोकल स्टोरेज में रखी जा सकती हैं, और ब्राउज़र डेटा साफ़ करने पर वे हट जाती हैं। न कोई साइन-अप चाहिए, न अपलोड, और आपकी डिवाइस जितना संभाल सके उससे ज़्यादा कोई सीमा भी नहीं।"
+    "faq.a5": "नहीं। यह टूल पूरी तरह आपके ब्राउज़र में सादे JavaScript से चलता है — आपका पेस्ट किया टेक्स्ट, चुने गए विकल्प और साफ़ किया गया नतीजा कभी सर्वर पर नहीं भेजे जाते और कहीं लॉग भी नहीं होते। सुविधा के लिए आपका आख़िरी इनपुट और सेटिंग्स चाहें तो सिर्फ़ इसी ब्राउज़र के लोकल स्टोरेज में रखी जा सकती हैं, और ब्राउज़र डेटा साफ़ करने पर वे हट जाती हैं। न कोई साइन-अप चाहिए, न अपलोड, और आपकी डिवाइस जितना संभाल सके उससे ज़्यादा कोई सीमा भी नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -215,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿En qué orden se aplican las operaciones de limpieza?",
     "faq.a4": "Siempre en el mismo orden fijo, sin importar qué casillas marques: combinar varios espacios, recortar los bordes de línea, quitar tabulaciones, eliminar líneas en blanco y, por último, eliminar todos los espacios. El orden importa — por ejemplo, una tabulación se convierte en un espacio después del paso de combinar espacios, así que ese nuevo espacio no se vuelve a combinar aunque quede junto a otro espacio. Si necesitas un resultado totalmente compacto, marca directamente \"Eliminar TODOS los espacios\" en vez de combinar varias opciones más suaves.",
     "faq.q5": "¿Se sube mi texto a un servidor al usar esta herramienta?",
-    "faq.a5": "No. Esta herramienta funciona por completo en tu navegador con JavaScript sencillo: el texto que pegas, las opciones que eliges y el resultado limpio nunca se envían a un servidor ni se registran en ningún sitio. Tu última entrada y tus ajustes se pueden guardar, de forma opcional, solo en el almacenamiento local de este navegador por comodidad, y se borran si limpias los datos del navegador. No hace falta registrarse, no hay subida de archivos y no existe un límite práctico de tamaño más allá de lo que tu propio dispositivo pueda manejar."
+    "faq.a5": "No. Esta herramienta funciona por completo en tu navegador con JavaScript sencillo: el texto que pegas, las opciones que eliges y el resultado limpio nunca se envían a un servidor ni se registran en ningún sitio. Tu última entrada y tus ajustes se pueden guardar, de forma opcional, solo en el almacenamiento local de este navegador por comodidad, y se borran si limpias los datos del navegador. No hace falta registrarse, no hay subida de archivos y no existe un límite práctico de tamaño más allá de lo que tu propio dispositivo pueda manejar.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -265,7 +285,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الترتيب الذي تُطبَّق به عمليات التنظيف؟",
     "faq.a4": "يبقى الترتيب ثابتًا دائمًا مهما كانت الخيارات التي تفعّلها: أولًا دمج المسافات المتعددة، ثم حذف مسافات أطراف الأسطر، ثم إزالة علامات التبويب، ثم حذف الأسطر الفارغة، وأخيرًا إزالة كل المسافات. هذا الترتيب مؤثر فعليًا — فمثلًا تُستبدل علامة التبويب بمسافة واحدة بعد خطوة دمج المسافات، لذا لا تُدمَج هذه المسافة الجديدة حتى لو جاورت مسافة أخرى. إذا أردت نتيجة مضغوطة تمامًا، فعّل \"إزالة كل المسافات\" مباشرة بدل الجمع بين عدة خيارات أخف.",
     "faq.q5": "هل يُرفع نصي إلى خادم عند استخدام هذه الأداة؟",
-    "faq.a5": "لا. تعمل هذه الأداة بالكامل داخل متصفحك بلغة JavaScript البسيطة — النص الذي تلصقه، والخيارات التي تختارها، والنتيجة النظيفة لا تُرسل أبدًا إلى خادم ولا تُسجَّل في أي مكان. يمكن الاحتفاظ بآخر إدخال وإعدادات لك اختياريًا في التخزين المحلي لهذا المتصفح فقط للتسهيل عليك، وتُحذف عند مسح بيانات المتصفح. لا حاجة للتسجيل، ولا رفع ملفات، ولا حد عملي لحجم النص سوى ما يستطيع جهازك التعامل معه."
+    "faq.a5": "لا. تعمل هذه الأداة بالكامل داخل متصفحك بلغة JavaScript البسيطة — النص الذي تلصقه، والخيارات التي تختارها، والنتيجة النظيفة لا تُرسل أبدًا إلى خادم ولا تُسجَّل في أي مكان. يمكن الاحتفاظ بآخر إدخال وإعدادات لك اختياريًا في التخزين المحلي لهذا المتصفح فقط للتسهيل عليك، وتُحذف عند مسح بيانات المتصفح. لا حاجة للتسجيل، ولا رفع ملفات، ولا حد عملي لحجم النص سوى ما يستطيع جهازك التعامل معه.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -315,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Dans quel ordre les opérations de nettoyage sont-elles appliquées ?",
     "faq.a4": "Toujours dans le même ordre fixe, quelles que soient les cases cochées : fusionner les espaces multiples, nettoyer les bords de ligne, retirer les tabulations, supprimer les lignes vides, puis supprimer tous les espaces. Cet ordre a un effet réel — par exemple, une tabulation est convertie en un espace après l'étape de fusion des espaces, donc ce nouvel espace n'est pas re-fusionné même s'il se retrouve à côté d'un autre espace. Pour un résultat totalement compact, cochez directement \"Supprimer TOUS les espaces\" plutôt que de combiner plusieurs options plus douces.",
     "faq.q5": "Mon texte est-il envoyé à un serveur lorsque j'utilise cet outil ?",
-    "faq.a5": "Non. Cet outil fonctionne entièrement dans votre navigateur en JavaScript simple : le texte que vous collez, les options choisies et le résultat nettoyé ne sont jamais envoyés à un serveur ni enregistrés où que ce soit. Votre dernière saisie et vos réglages peuvent être conservés, uniquement dans le stockage local de ce navigateur, par simple confort, et disparaissent si vous effacez les données du navigateur. Pas d'inscription, pas de téléversement, et aucune limite de taille pratique au-delà de ce que votre appareil peut gérer."
+    "faq.a5": "Non. Cet outil fonctionne entièrement dans votre navigateur en JavaScript simple : le texte que vous collez, les options choisies et le résultat nettoyé ne sont jamais envoyés à un serveur ni enregistrés où que ce soit. Votre dernière saisie et vos réglages peuvent être conservés, uniquement dans le stockage local de ce navigateur, par simple confort, et disparaissent si vous effacez les données du navigateur. Pas d'inscription, pas de téléversement, et aucune limite de taille pratique au-delà de ce que votre appareil peut gérer.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -365,7 +395,12 @@ window.I18N_LOCALES = {
     "faq.q4": "পরিষ্কারের কাজগুলো কোন ক্রমে প্রয়োগ হয়?",
     "faq.a4": "আপনি যে বক্সগুলোই টিক দিন না কেন, ক্রম সবসময় একই থাকে: প্রথমে একাধিক স্পেস মেলানো, তারপর লাইনের প্রান্তের স্পেস মোছা, তারপর ট্যাব সরানো, তারপর ফাঁকা লাইন মোছা, আর সবশেষে সব হোয়াইটস্পেস মোছা। এই ক্রম সত্যিই প্রভাব ফেলে — যেমন, স্পেস-মেলানোর ধাপের পরে ট্যাবকে একটি স্পেসে বদলানো হয়, তাই এই নতুন স্পেসটি অন্য কোনো স্পেসের পাশে থাকলেও আবার মেলানো হয় না। পুরোপুরি সংকুচিত ফলাফল চাইলে একাধিক হালকা অপশন একসঙ্গে টিক না দিয়ে সরাসরি \"সব হোয়াইটস্পেস মুছুন\" টিক দিন।",
     "faq.q5": "এই টুল ব্যবহারের সময় আমার টেক্সট কি সার্ভারে আপলোড হয়?",
-    "faq.a5": "না। এই টুল সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript দিয়ে চলে — আপনার পেস্ট করা টেক্সট, বেছে নেওয়া অপশন আর পরিষ্কার করা ফলাফল কখনোই সার্ভারে পাঠানো হয় না বা কোথাও লগ হয় না। সুবিধার জন্য আপনার সবশেষ ইনপুট আর সেটিংস চাইলে শুধু এই ব্রাউজারের লোকাল স্টোরেজে রাখা যায়, আর ব্রাউজারের ডেটা মুছে দিলে সেগুলোও মুছে যায়। কোনো সাইন-আপ লাগে না, আপলোড লাগে না, আর আপনার ডিভাইস যতটা সামলাতে পারে তার বাইরে কোনো বাস্তব সীমাও নেই।"
+    "faq.a5": "না। এই টুল সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript দিয়ে চলে — আপনার পেস্ট করা টেক্সট, বেছে নেওয়া অপশন আর পরিষ্কার করা ফলাফল কখনোই সার্ভারে পাঠানো হয় না বা কোথাও লগ হয় না। সুবিধার জন্য আপনার সবশেষ ইনপুট আর সেটিংস চাইলে শুধু এই ব্রাউজারের লোকাল স্টোরেজে রাখা যায়, আর ব্রাউজারের ডেটা মুছে দিলে সেগুলোও মুছে যায়। কোনো সাইন-আপ লাগে না, আপলোড লাগে না, আর আপনার ডিভাইস যতটা সামলাতে পারে তার বাইরে কোনো বাস্তব সীমাও নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Em que ordem as operações de limpeza são aplicadas?",
     "faq.a4": "Sempre na mesma ordem fixa, não importa quais caixas você marque: combinar vários espaços, aparar as bordas das linhas, remover tabulações, remover linhas em branco e, por fim, remover todos os espaços. Essa ordem realmente influencia o resultado — por exemplo, uma tabulação é convertida em um espaço depois da etapa de combinar espaços, então esse novo espaço não é combinado de novo mesmo que fique ao lado de outro espaço. Se você quiser um resultado totalmente compacto, marque diretamente \"Remover TODOS os espaços\" em vez de combinar várias opções mais leves.",
     "faq.q5": "Meu texto é enviado para um servidor ao usar esta ferramenta?",
-    "faq.a5": "Não. Esta ferramenta funciona inteiramente no seu navegador com JavaScript simples — o texto que você cola, as opções escolhidas e o resultado limpo nunca são enviados a um servidor nem registrados em lugar nenhum. Sua última entrada e configurações podem, opcionalmente, ficar guardadas apenas no armazenamento local deste navegador por conveniência, e são apagadas se você limpar os dados do navegador. Não é preciso se cadastrar, não há upload, e não existe limite prático de tamanho além do que o seu próprio dispositivo aguentar."
+    "faq.a5": "Não. Esta ferramenta funciona inteiramente no seu navegador com JavaScript simples — o texto que você cola, as opções escolhidas e o resultado limpo nunca são enviados a um servidor nem registrados em lugar nenhum. Sua última entrada e configurações podem, opcionalmente, ficar guardadas apenas no armazenamento local deste navegador por conveniência, e são apagadas se você limpar os dados do navegador. Não é preciso se cadastrar, não há upload, e não existe limite prático de tamanho além do que o seu próprio dispositivo aguentar.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -465,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "В каком порядке применяются операции очистки?",
     "faq.a4": "Порядок всегда одинаков, независимо от того, какие галочки вы поставили: сначала схлопывание нескольких пробелов, затем обрезка краёв строк, затем удаление табуляции, затем удаление пустых строк, и в конце — удаление всех пробельных символов. Этот порядок реально влияет на результат — например, табуляция превращается в один пробел уже после этапа схлопывания пробелов, поэтому этот новый пробел не схлопывается повторно, даже если оказывается рядом с другим пробелом. Если нужен полностью сжатый результат, отметьте сразу \"Удалить ВСЕ пробельные символы\" вместо сочетания нескольких более мягких опций.",
     "faq.q5": "Отправляется ли мой текст на сервер при использовании этого инструмента?",
-    "faq.a5": "Нет. Этот инструмент работает полностью в вашем браузере на обычном JavaScript — вставленный текст, выбранные опции и очищенный результат никогда не отправляются на сервер и нигде не логируются. Ваш последний ввод и настройки можно по желанию сохранить только в локальном хранилище этого браузера для удобства, и они удаляются при очистке данных браузера. Регистрация не нужна, загрузка файлов не требуется, и практического ограничения по размеру нет — только возможности вашего устройства."
+    "faq.a5": "Нет. Этот инструмент работает полностью в вашем браузере на обычном JavaScript — вставленный текст, выбранные опции и очищенный результат никогда не отправляются на сервер и нигде не логируются. Ваш последний ввод и настройки можно по желанию сохранить только в локальном хранилище этого браузера для удобства, и они удаляются при очистке данных браузера. Регистрация не нужна, загрузка файлов не требуется, и практического ограничения по размеру нет — только возможности вашего устройства.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -515,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "صفائی کے عمل کس ترتیب میں لاگو ہوتے ہیں؟",
     "faq.a4": "آپ چاہے جو بھی باکس منتخب کریں، ترتیب ہمیشہ ایک جیسی رہتی ہے: پہلے کئی اسپیس ملانا، پھر لائن کناروں کی اسپیس ہٹانا، پھر ٹیب ہٹانا، پھر خالی لائنیں حذف کرنا، اور آخر میں تمام وائٹ اسپیس ہٹانا۔ یہ ترتیب واقعی نتیجے پر اثر ڈالتی ہے — مثلاً، ٹیب کو اسپیس ملانے کے مرحلے کے بعد ایک اسپیس میں بدلا جاتا ہے، تو یہ نئی اسپیس کسی دوسری اسپیس کے ساتھ ہونے پر بھی دوبارہ نہیں ملائی جاتی۔ اگر آپ کو مکمل طور پر سمٹا ہوا نتیجہ چاہیے تو کئی ہلکے آپشنز ملانے کے بجائے سیدھا \"تمام وائٹ اسپیس ہٹائیں\" منتخب کریں۔",
     "faq.q5": "کیا اس ٹول کے استعمال کے دوران میرا ٹیکسٹ سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ ٹول مکمل طور پر آپ کے براؤزر میں سادہ جاوا اسکرپٹ سے چلتا ہے — آپ کا پیسٹ کیا گیا ٹیکسٹ، منتخب کردہ آپشنز اور صاف شدہ نتیجہ کبھی سرور پر نہیں بھیجے جاتے اور کہیں محفوظ بھی نہیں ہوتے۔ سہولت کے لیے آپ کا آخری ان پٹ اور سیٹنگز صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہو سکتی ہیں، اور براؤزر کا ڈیٹا صاف کرنے سے یہ ختم ہو جاتی ہیں۔ نہ رجسٹریشن درکار ہے، نہ اپ لوڈ، اور آپ کے آلے کی صلاحیت کے سوا کوئی حقیقی حد بھی نہیں۔"
+    "faq.a5": "نہیں۔ یہ ٹول مکمل طور پر آپ کے براؤزر میں سادہ جاوا اسکرپٹ سے چلتا ہے — آپ کا پیسٹ کیا گیا ٹیکسٹ، منتخب کردہ آپشنز اور صاف شدہ نتیجہ کبھی سرور پر نہیں بھیجے جاتے اور کہیں محفوظ بھی نہیں ہوتے۔ سہولت کے لیے آپ کا آخری ان پٹ اور سیٹنگز صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہو سکتی ہیں، اور براؤزر کا ڈیٹا صاف کرنے سے یہ ختم ہو جاتی ہیں۔ نہ رجسٹریشن درکار ہے، نہ اپ لوڈ، اور آپ کے آلے کی صلاحیت کے سوا کوئی حقیقی حد بھی نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -565,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Dalam urutan apa operasi pembersihan diterapkan?",
     "faq.a4": "Selalu dalam urutan tetap yang sama, apa pun kotak yang Anda centang: menggabungkan beberapa spasi, merapikan tepi baris, menghapus tab, menghapus baris kosong, lalu menghapus semua whitespace. Urutan ini benar-benar berpengaruh — misalnya, tab diubah menjadi satu spasi setelah tahap penggabungan spasi berjalan, jadi spasi baru ini tidak digabungkan lagi meski berada di sebelah spasi lain. Jika Anda ingin hasil yang benar-benar padat, langsung centang \"Hapus SEMUA whitespace\" alih-alih menggabungkan beberapa opsi yang lebih ringan.",
     "faq.q5": "Apakah teks saya diunggah ke server saat menggunakan alat ini?",
-    "faq.a5": "Tidak. Alat ini sepenuhnya berjalan di browser Anda menggunakan JavaScript biasa — teks yang Anda tempel, opsi yang dipilih, dan hasil yang dibersihkan tidak pernah dikirim ke server atau dicatat di mana pun. Input dan pengaturan terakhir Anda secara opsional dapat disimpan hanya di penyimpanan lokal browser ini demi kenyamanan, dan akan terhapus jika Anda membersihkan data browser. Tidak perlu mendaftar, tidak ada unggahan, dan tidak ada batas ukuran praktis selain kemampuan perangkat Anda sendiri."
+    "faq.a5": "Tidak. Alat ini sepenuhnya berjalan di browser Anda menggunakan JavaScript biasa — teks yang Anda tempel, opsi yang dipilih, dan hasil yang dibersihkan tidak pernah dikirim ke server atau dicatat di mana pun. Input dan pengaturan terakhir Anda secara opsional dapat disimpan hanya di penyimpanan lokal browser ini demi kenyamanan, dan akan terhapus jika Anda membersihkan data browser. Tidak perlu mendaftar, tidak ada unggahan, dan tidak ada batas ukuran praktis selain kemampuan perangkat Anda sendiri.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -615,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "In welcher Reihenfolge werden die Bereinigungsschritte angewendet?",
     "faq.a4": "Immer in derselben festen Reihenfolge, egal welche Kästchen Sie ankreuzen: zuerst mehrfache Leerzeichen zusammenfassen, dann Zeilenränder trimmen, dann Tabs entfernen, dann Leerzeilen entfernen und zuletzt alle Leerzeichen entfernen. Diese Reihenfolge hat einen echten Effekt — ein Tab wird beispielsweise erst nach dem Zusammenfassen-Schritt in ein Leerzeichen umgewandelt, sodass dieses neue Leerzeichen nicht erneut zusammengefasst wird, selbst wenn es neben einem anderen Leerzeichen steht. Für ein komplett kompaktes Ergebnis kreuzen Sie direkt \"ALLE Leerzeichen entfernen\" an, statt mehrere mildere Optionen zu kombinieren.",
     "faq.q5": "Wird mein Text bei der Nutzung dieses Tools an einen Server gesendet?",
-    "faq.a5": "Nein. Dieses Tool läuft vollständig in Ihrem Browser mit einfachem JavaScript — der eingefügte Text, die gewählten Optionen und das bereinigte Ergebnis werden niemals an einen Server gesendet oder irgendwo protokolliert. Ihre letzte Eingabe und Einstellungen können optional bequemlichkeitshalber ausschließlich im lokalen Speicher dieses Browsers abgelegt werden und verschwinden, wenn Sie die Browserdaten löschen. Es ist keine Anmeldung nötig, kein Upload, und es gibt keine praktische Größenbeschränkung außer dem, was Ihr eigenes Gerät verkraftet."
+    "faq.a5": "Nein. Dieses Tool läuft vollständig in Ihrem Browser mit einfachem JavaScript — der eingefügte Text, die gewählten Optionen und das bereinigte Ergebnis werden niemals an einen Server gesendet oder irgendwo protokolliert. Ihre letzte Eingabe und Einstellungen können optional bequemlichkeitshalber ausschließlich im lokalen Speicher dieses Browsers abgelegt werden und verschwinden, wenn Sie die Browserdaten löschen. Es ist keine Anmeldung nötig, kein Upload, und es gibt keine praktische Größenbeschränkung außer dem, was Ihr eigenes Gerät verkraftet.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -665,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "整形処理はどの順番で適用されますか？",
     "faq.a4": "どのチェックボックスを選んでも、常に同じ固定順序で適用されます：連続スペースのまとめ→各行前後の空白除去→タブの削除→空行の削除→すべての空白文字の削除、の順です。この順序は結果に実際に影響します。たとえばタブは、スペースをまとめる処理の後にスペース1つへ変換されるため、その新しいスペースが別のスペースの隣にあっても再度まとめられることはありません。完全に圧縮した結果が欲しい場合は、複数の穏やかなオプションを組み合わせるより「すべての空白文字を削除する」を直接選んでください。",
     "faq.q5": "このツールを使うと、テキストはサーバーにアップロードされますか？",
-    "faq.a5": "いいえ。このツールは純粋なJavaScriptで完全にブラウザ内で動作します——貼り付けたテキスト、選択したオプション、整形後の結果がサーバーに送信されたり、どこかに記録されたりすることは一切ありません。利便性のため、直前の入力内容と設定はこのブラウザのローカルストレージにのみ任意で保存され、ブラウザのデータを消去すれば削除されます。会員登録もアップロードも不要で、お使いの端末が処理できる範囲であれば実質的なサイズ制限もありません。"
+    "faq.a5": "いいえ。このツールは純粋なJavaScriptで完全にブラウザ内で動作します——貼り付けたテキスト、選択したオプション、整形後の結果がサーバーに送信されたり、どこかに記録されたりすることは一切ありません。利便性のため、直前の入力内容と設定はこのブラウザのローカルストレージにのみ任意で保存され、ブラウザのデータを消去すれば削除されます。会員登録もアップロードも不要で、お使いの端末が処理できる範囲であれば実質的なサイズ制限もありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -715,6 +780,11 @@ window.I18N_LOCALES = {
     "faq.q4": "정리 작업은 어떤 순서로 적용되나요?",
     "faq.a4": "어떤 체크박스를 선택하든 항상 같은 고정된 순서로 적용됩니다: 연속 공백 합치기 → 줄 앞뒤 공백 정리 → 탭 제거 → 빈 줄 삭제 → 모든 공백 문자 제거. 이 순서는 실제로 결과에 영향을 줍니다 — 예를 들어 탭은 공백 합치기 단계가 끝난 뒤에 공백 1칸으로 바뀌기 때문에, 이 새로 생긴 공백은 옆에 다른 공백이 있어도 다시 합쳐지지 않습니다. 완전히 압축된 결과를 원한다면 여러 옵션을 조합하는 대신 \"모든 공백 문자 제거하기\"를 바로 선택하세요.",
     "faq.q5": "이 도구를 사용할 때 제 텍스트가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 도구는 순수 자바스크립트로 브라우저 안에서만 완전히 동작합니다 — 붙여넣은 텍스트, 선택한 옵션, 정리된 결과는 서버로 전송되거나 어디에도 기록되지 않습니다. 편의를 위해 마지막 입력값과 설정을 이 브라우저의 로컬 저장소에만 선택적으로 저장할 수 있으며, 브라우저 데이터를 지우면 함께 삭제됩니다. 회원가입도, 업로드도 필요 없고, 기기 자체의 처리 능력 외에는 실질적인 용량 제한도 없습니다."
+    "faq.a5": "아니요. 이 도구는 순수 자바스크립트로 브라우저 안에서만 완전히 동작합니다 — 붙여넣은 텍스트, 선택한 옵션, 정리된 결과는 서버로 전송되거나 어디에도 기록되지 않습니다. 편의를 위해 마지막 입력값과 설정을 이 브라우저의 로컬 저장소에만 선택적으로 저장할 수 있으며, 브라우저 데이터를 지우면 함께 삭제됩니다. 회원가입도, 업로드도 필요 없고, 기기 자체의 처리 능력 외에는 실질적인 용량 제한도 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

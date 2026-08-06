@@ -80,7 +80,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is my photo uploaded anywhere?",
     "faq.a4": "No. This resizer runs entirely in your browser using the HTML canvas element — the file you choose is read locally, drawn to a canvas at your chosen size, and encoded back into an image file, all on your own device. Nothing is sent to a server, there's no upload progress bar because there's no upload, and closing the tab leaves no trace beyond your last settings, which are kept only in your browser's local storage.",
     "faq.q5": "Which output format should I choose — JPEG, PNG or WEBP?",
-    "faq.a5": "JPEG is the safest general choice for photos and is supported everywhere, with the quality slider trading file size for detail. PNG is lossless and supports transparency, so it's the right pick for screenshots, logos, icons and images with sharp text or flat colors — but it produces much larger files for photos. WEBP is a newer format that is now supported by essentially every modern browser and typically gives a smaller file than JPEG at the same visual quality, so it's a good default if you don't need maximum compatibility with very old software. \"Keep original format\" simply re-encodes at the new size without changing the format at all."
+    "faq.a5": "JPEG is the safest general choice for photos and is supported everywhere, with the quality slider trading file size for detail. PNG is lossless and supports transparency, so it's the right pick for screenshots, logos, icons and images with sharp text or flat colors — but it produces much larger files for photos. WEBP is a newer format that is now supported by essentially every modern browser and typically gives a smaller file than JPEG at the same visual quality, so it's a good default if you don't need maximum compatibility with very old software. \"Keep original format\" simply re-encodes at the new size without changing the format at all.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -145,7 +150,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的照片会被上传到什么地方吗？",
     "faq.a4": "不会。本工具完全在你的浏览器中通过 HTML canvas 元素运行——你选择的文件会在本地被读取，按你设定的尺寸绘制到 canvas 上，再重新编码为图片文件，全过程都在你自己的设备上完成。没有任何数据发送到服务器，也没有上传进度条，因为根本没有上传；关闭标签页后不会留下任何痕迹，只有你的偏好设置会保存在浏览器的本地存储中。",
     "faq.q5": "应该选择哪种输出格式——JPEG、PNG 还是 WEBP？",
-    "faq.a5": "JPEG 是照片最通用、兼容性最好的选择，可以用质量滑块在文件大小和细节之间权衡。PNG 是无损格式并支持透明背景，适合截图、Logo、图标以及带清晰文字或纯色块的图片，但用于照片时文件会大很多。WEBP 是较新的格式，如今几乎所有现代浏览器都已支持，在相同视觉质量下通常比 JPEG 文件更小，如果不需要兼容非常old的软件，它是不错的默认选择。选择“保留原格式”则只会按新尺寸重新编码，完全不改变原有格式。"
+    "faq.a5": "JPEG 是照片最通用、兼容性最好的选择，可以用质量滑块在文件大小和细节之间权衡。PNG 是无损格式并支持透明背景，适合截图、Logo、图标以及带清晰文字或纯色块的图片，但用于照片时文件会大很多。WEBP 是较新的格式，如今几乎所有现代浏览器都已支持，在相同视觉质量下通常比 JPEG 文件更小，如果不需要兼容非常old的软件，它是不错的默认选择。选择“保留原格式”则只会按新尺寸重新编码，完全不改变原有格式。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -210,7 +220,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरी फ़ोटो कहीं अपलोड होती है?",
     "faq.a4": "नहीं। यह रीसाइज़र पूरी तरह आपके ब्राउज़र में HTML canvas एलिमेंट का इस्तेमाल करके चलता है — आपकी चुनी हुई फ़ाइल लोकली पढ़ी जाती है, आपके चुने गए साइज़ पर canvas पर बनाई जाती है, और वापस एक इमेज फ़ाइल में एन्कोड की जाती है — यह सब आपकी अपनी डिवाइस पर होता है। कुछ भी सर्वर पर नहीं भेजा जाता, कोई अपलोड प्रोग्रेस बार नहीं दिखता क्योंकि कोई अपलोड होता ही नहीं, और टैब बंद करने पर आपकी आख़िरी सेटिंग्स के अलावा कुछ भी बचा नहीं रहता, जो सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में रहती हैं।",
     "faq.q5": "कौन-सा आउटपुट फ़ॉर्मेट चुनें — JPEG, PNG या WEBP?",
-    "faq.a5": "फ़ोटो के लिए JPEG सबसे सेफ़ और हर जगह सपोर्टेड चॉइस है, और क्वालिटी स्लाइडर से आप फ़ाइल साइज़ और डिटेल के बीच बैलेंस बना सकते हैं। PNG लॉसलेस है और ट्रांसपेरेंसी सपोर्ट करता है, इसलिए स्क्रीनशॉट, लोगो, आइकन और शार्प टेक्स्ट या फ्लैट कलर वाली इमेज के लिए यह सही चॉइस है — लेकिन फ़ोटो के लिए इसकी फ़ाइल काफ़ी बड़ी हो जाती है। WEBP एक नया फ़ॉर्मेट है जो अब लगभग हर मॉडर्न ब्राउज़र में सपोर्टेड है और आमतौर पर उतनी ही क्वालिटी पर JPEG से छोटी फ़ाइल देता है, तो अगर आपको बहुत पुराने सॉफ़्टवेयर के साथ कम्पैटिबिलिटी नहीं चाहिए तो यह एक अच्छा डिफ़ॉल्ट है। “ओरिजिनल फ़ॉर्मेट रखें” चुनने पर फ़ॉर्मेट बदले बिना बस नए साइज़ पर दोबारा एन्कोड होता है।"
+    "faq.a5": "फ़ोटो के लिए JPEG सबसे सेफ़ और हर जगह सपोर्टेड चॉइस है, और क्वालिटी स्लाइडर से आप फ़ाइल साइज़ और डिटेल के बीच बैलेंस बना सकते हैं। PNG लॉसलेस है और ट्रांसपेरेंसी सपोर्ट करता है, इसलिए स्क्रीनशॉट, लोगो, आइकन और शार्प टेक्स्ट या फ्लैट कलर वाली इमेज के लिए यह सही चॉइस है — लेकिन फ़ोटो के लिए इसकी फ़ाइल काफ़ी बड़ी हो जाती है। WEBP एक नया फ़ॉर्मेट है जो अब लगभग हर मॉडर्न ब्राउज़र में सपोर्टेड है और आमतौर पर उतनी ही क्वालिटी पर JPEG से छोटी फ़ाइल देता है, तो अगर आपको बहुत पुराने सॉफ़्टवेयर के साथ कम्पैटिबिलिटी नहीं चाहिए तो यह एक अच्छा डिफ़ॉल्ट है। “ओरिजिनल फ़ॉर्मेट रखें” चुनने पर फ़ॉर्मेट बदले बिना बस नए साइज़ पर दोबारा एन्कोड होता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -275,7 +290,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se sube mi foto a algún sitio?",
     "faq.a4": "No. Este redimensionador funciona por completo en tu navegador usando el elemento canvas de HTML — el archivo que elijas se lee localmente, se dibuja en un canvas al tamaño que hayas elegido y se vuelve a codificar como archivo de imagen, todo en tu propio dispositivo. No se envía nada a ningún servidor, no hay barra de progreso de subida porque no hay subida, y al cerrar la pestaña no queda ningún rastro más allá de tus últimos ajustes, que solo se guardan en el almacenamiento local de tu navegador.",
     "faq.q5": "¿Qué formato de salida debería elegir: JPEG, PNG o WEBP?",
-    "faq.a5": "JPEG es la opción general más segura para fotos y es compatible en todas partes, con el control deslizante de calidad para equilibrar peso y detalle. PNG no tiene pérdida y admite transparencia, por lo que es ideal para capturas de pantalla, logotipos, iconos e imágenes con texto nítido o colores planos — pero genera archivos mucho más pesados para fotos. WEBP es un formato más reciente que ya es compatible con prácticamente todos los navegadores modernos y suele dar un archivo más pequeño que JPEG con la misma calidad visual, así que es una buena opción por defecto si no necesitas compatibilidad con software muy antiguo. «Mantener formato original» simplemente vuelve a codificar la imagen al nuevo tamaño sin cambiar el formato."
+    "faq.a5": "JPEG es la opción general más segura para fotos y es compatible en todas partes, con el control deslizante de calidad para equilibrar peso y detalle. PNG no tiene pérdida y admite transparencia, por lo que es ideal para capturas de pantalla, logotipos, iconos e imágenes con texto nítido o colores planos — pero genera archivos mucho más pesados para fotos. WEBP es un formato más reciente que ya es compatible con prácticamente todos los navegadores modernos y suele dar un archivo más pequeño que JPEG con la misma calidad visual, así que es una buena opción por defecto si no necesitas compatibilidad con software muy antiguo. «Mantener formato original» simplemente vuelve a codificar la imagen al nuevo tamaño sin cambiar el formato.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -340,7 +360,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تُرفع صورتي إلى أي مكان؟",
     "faq.a4": "لا. تعمل هذه الأداة بالكامل داخل متصفحك باستخدام عنصر canvas في HTML — الملف الذي تختاره يُقرأ محليًا، ويُرسم على عنصر canvas بالحجم الذي اخترته، ثم يُعاد ترميزه كملف صورة، وكل ذلك على جهازك أنت. لا يُرسل شيء إلى أي خادم، ولا يوجد شريط تقدّم للرفع لأنه لا يوجد رفع أصلًا، وإغلاق التبويب لا يترك أي أثر سوى إعداداتك الأخيرة، المحفوظة فقط في التخزين المحلي لمتصفحك.",
     "faq.q5": "أي صيغة إخراج يجب أن أختار — JPEG أم PNG أم WEBP؟",
-    "faq.a5": "JPEG هو الخيار العام الأكثر أمانًا للصور الفوتوغرافية ومدعوم في كل مكان، مع شريط تمرير الجودة الذي يوازن بين حجم الملف والتفاصيل. أما PNG فهو بلا فقدان ويدعم الشفافية، لذا فهو الخيار الصحيح للقطات الشاشة والشعارات والأيقونات والصور ذات النصوص الحادة أو الألوان المسطحة — لكنه ينتج ملفات أكبر بكثير للصور الفوتوغرافية. WEBP صيغة أحدث مدعومة الآن في كل متصفح حديث تقريبًا، وعادة ما تعطي ملفًا أصغر من JPEG بنفس الجودة البصرية، فهي خيار افتراضي جيد إن لم تكن بحاجة إلى توافق مع برمجيات قديمة جدًا. اختيار «الإبقاء على الصيغة الأصلية» يعيد الترميز بالحجم الجديد فقط دون تغيير الصيغة إطلاقًا."
+    "faq.a5": "JPEG هو الخيار العام الأكثر أمانًا للصور الفوتوغرافية ومدعوم في كل مكان، مع شريط تمرير الجودة الذي يوازن بين حجم الملف والتفاصيل. أما PNG فهو بلا فقدان ويدعم الشفافية، لذا فهو الخيار الصحيح للقطات الشاشة والشعارات والأيقونات والصور ذات النصوص الحادة أو الألوان المسطحة — لكنه ينتج ملفات أكبر بكثير للصور الفوتوغرافية. WEBP صيغة أحدث مدعومة الآن في كل متصفح حديث تقريبًا، وعادة ما تعطي ملفًا أصغر من JPEG بنفس الجودة البصرية، فهي خيار افتراضي جيد إن لم تكن بحاجة إلى توافق مع برمجيات قديمة جدًا. اختيار «الإبقاء على الصيغة الأصلية» يعيد الترميز بالحجم الجديد فقط دون تغيير الصيغة إطلاقًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -405,7 +430,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Ma photo est-elle envoyée quelque part ?",
     "faq.a4": "Non. Ce redimensionneur fonctionne entièrement dans votre navigateur grâce à l'élément canvas HTML — le fichier choisi est lu localement, dessiné sur un canvas à la taille voulue, puis réencodé en fichier image, le tout sur votre propre appareil. Rien n'est envoyé à un serveur, il n'y a pas de barre de progression d'envoi puisqu'il n'y a pas d'envoi, et fermer l'onglet ne laisse aucune trace en dehors de vos derniers réglages, conservés uniquement dans le stockage local de votre navigateur.",
     "faq.q5": "Quel format de sortie choisir : JPEG, PNG ou WEBP ?",
-    "faq.a5": "Le JPEG est le choix général le plus sûr pour les photos et il est pris en charge partout, avec un curseur de qualité qui arbitre entre poids et détail. Le PNG est sans perte et prend en charge la transparence, c'est donc le bon choix pour les captures d'écran, logos, icônes et images à texte net ou aplats de couleur — mais il produit des fichiers bien plus lourds pour les photos. Le WEBP est un format plus récent désormais pris en charge par pratiquement tous les navigateurs modernes, qui donne généralement un fichier plus léger que le JPEG à qualité visuelle égale : un bon choix par défaut si vous n'avez pas besoin de compatibilité avec de très vieux logiciels. « Conserver le format d'origine » réencode simplement à la nouvelle taille sans changer le format."
+    "faq.a5": "Le JPEG est le choix général le plus sûr pour les photos et il est pris en charge partout, avec un curseur de qualité qui arbitre entre poids et détail. Le PNG est sans perte et prend en charge la transparence, c'est donc le bon choix pour les captures d'écran, logos, icônes et images à texte net ou aplats de couleur — mais il produit des fichiers bien plus lourds pour les photos. Le WEBP est un format plus récent désormais pris en charge par pratiquement tous les navigateurs modernes, qui donne généralement un fichier plus léger que le JPEG à qualité visuelle égale : un bon choix par défaut si vous n'avez pas besoin de compatibilité avec de très vieux logiciels. « Conserver le format d'origine » réencode simplement à la nouvelle taille sans changer le format.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -470,7 +500,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার ছবি কি কোথাও আপলোড হয়?",
     "faq.a4": "না। এই রিসাইজার সম্পূর্ণভাবে আপনার ব্রাউজারে HTML canvas এলিমেন্ট ব্যবহার করে চলে — আপনার বেছে নেওয়া ফাইল স্থানীয়ভাবে পড়া হয়, আপনার বেছে নেওয়া সাইজে একটি canvas-এ আঁকা হয়, এবং আবার একটি ছবি ফাইলে এনকোড করা হয়, সবকিছুই আপনার নিজের ডিভাইসে। কোনো কিছু সার্ভারে পাঠানো হয় না, কোনো আপলোড প্রোগ্রেস বার নেই কারণ কোনো আপলোডই নেই, এবং ট্যাব বন্ধ করলে আপনার শেষ সেটিংস ছাড়া কিছুই থাকে না, যা শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে রাখা হয়।",
     "faq.q5": "কোন আউটপুট ফরম্যাট বেছে নেব — JPEG, PNG নাকি WEBP?",
-    "faq.a5": "ছবির জন্য JPEG সবচেয়ে নিরাপদ ও সর্বত্র সমর্থিত সাধারণ পছন্দ, যেখানে কোয়ালিটি স্লাইডার ফাইলের আকার ও বিস্তারিত অংশের মধ্যে ভারসাম্য রাখে। PNG লসলেস এবং স্বচ্ছতা সমর্থন করে, তাই স্ক্রিনশট, লোগো, আইকন এবং স্পষ্ট টেক্সট বা সমতল রঙের ছবির জন্য এটি সঠিক পছন্দ — কিন্তু ছবির জন্য এটি অনেক বড় ফাইল তৈরি করে। WEBP একটি নতুন ফরম্যাট যা এখন প্রায় সব আধুনিক ব্রাউজারে সমর্থিত এবং সাধারণত একই ভিজ্যুয়াল কোয়ালিটিতে JPEG-এর চেয়ে ছোট ফাইল দেয়, তাই খুব পুরনো সফটওয়্যারের সাথে সামঞ্জস্য দরকার না হলে এটি একটি ভালো ডিফল্ট। “মূল ফরম্যাট রাখুন” বেছে নিলে ফরম্যাট না বদলে শুধু নতুন সাইজে আবার এনকোড হয়।"
+    "faq.a5": "ছবির জন্য JPEG সবচেয়ে নিরাপদ ও সর্বত্র সমর্থিত সাধারণ পছন্দ, যেখানে কোয়ালিটি স্লাইডার ফাইলের আকার ও বিস্তারিত অংশের মধ্যে ভারসাম্য রাখে। PNG লসলেস এবং স্বচ্ছতা সমর্থন করে, তাই স্ক্রিনশট, লোগো, আইকন এবং স্পষ্ট টেক্সট বা সমতল রঙের ছবির জন্য এটি সঠিক পছন্দ — কিন্তু ছবির জন্য এটি অনেক বড় ফাইল তৈরি করে। WEBP একটি নতুন ফরম্যাট যা এখন প্রায় সব আধুনিক ব্রাউজারে সমর্থিত এবং সাধারণত একই ভিজ্যুয়াল কোয়ালিটিতে JPEG-এর চেয়ে ছোট ফাইল দেয়, তাই খুব পুরনো সফটওয়্যারের সাথে সামঞ্জস্য দরকার না হলে এটি একটি ভালো ডিফল্ট। “মূল ফরম্যাট রাখুন” বেছে নিলে ফরম্যাট না বদলে শুধু নতুন সাইজে আবার এনকোড হয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -535,7 +570,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Minha foto é enviada para algum lugar?",
     "faq.a4": "Não. Este redimensionador funciona inteiramente no seu navegador usando o elemento canvas do HTML — o arquivo escolhido é lido localmente, desenhado em um canvas no tamanho escolhido e recodificado de volta em um arquivo de imagem, tudo no seu próprio dispositivo. Nada é enviado a um servidor, não há barra de progresso de envio porque não há envio, e fechar a aba não deixa rastro além das suas últimas configurações, guardadas apenas no armazenamento local do seu navegador.",
     "faq.q5": "Qual formato de saída escolher: JPEG, PNG ou WEBP?",
-    "faq.a5": "JPEG é a escolha geral mais segura para fotos e é compatível em todo lugar, com o controle de qualidade equilibrando tamanho de arquivo e detalhe. PNG é sem perdas e suporta transparência, sendo a escolha certa para capturas de tela, logotipos, ícones e imagens com texto nítido ou cores sólidas — mas gera arquivos bem maiores para fotos. WEBP é um formato mais novo, hoje suportado por praticamente todos os navegadores modernos, que costuma gerar um arquivo menor que o JPEG com a mesma qualidade visual, sendo uma boa escolha padrão se você não precisar de compatibilidade com softwares muito antigos. «Manter formato original» apenas recodifica no novo tamanho sem mudar o formato."
+    "faq.a5": "JPEG é a escolha geral mais segura para fotos e é compatível em todo lugar, com o controle de qualidade equilibrando tamanho de arquivo e detalhe. PNG é sem perdas e suporta transparência, sendo a escolha certa para capturas de tela, logotipos, ícones e imagens com texto nítido ou cores sólidas — mas gera arquivos bem maiores para fotos. WEBP é um formato mais novo, hoje suportado por praticamente todos os navegadores modernos, que costuma gerar um arquivo menor que o JPEG com a mesma qualidade visual, sendo uma boa escolha padrão se você não precisar de compatibilidade com softwares muito antigos. «Manter formato original» apenas recodifica no novo tamanho sem mudar o formato.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -600,7 +640,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Загружается ли моя фотография куда-либо?",
     "faq.a4": "Нет. Этот инструмент полностью работает в вашем браузере с использованием элемента canvas HTML — выбранный вами файл читается локально, отрисовывается на canvas в выбранном размере и снова кодируется в файл изображения — всё на вашем собственном устройстве. Ничего не отправляется на сервер, нет индикатора загрузки, потому что нет самой загрузки, а закрытие вкладки не оставляет никаких следов, кроме ваших последних настроек, которые хранятся только в локальном хранилище вашего браузера.",
     "faq.q5": "Какой формат вывода выбрать — JPEG, PNG или WEBP?",
-    "faq.a5": "JPEG — самый безопасный универсальный выбор для фотографий, поддерживаемый повсеместно, а ползунок качества позволяет балансировать между размером файла и детализацией. PNG — формат без потерь с поддержкой прозрачности, поэтому он подходит для скриншотов, логотипов, иконок и изображений с чётким текстом или плоскими цветами — но для фотографий он создаёт гораздо более крупные файлы. WEBP — более новый формат, который сейчас поддерживается практически всеми современными браузерами и обычно даёт файл меньшего размера, чем JPEG, при том же визуальном качестве, так что это хороший выбор по умолчанию, если вам не нужна совместимость с очень старым программным обеспечением. «Сохранить исходный формат» просто перекодирует изображение в новом размере, не меняя формат."
+    "faq.a5": "JPEG — самый безопасный универсальный выбор для фотографий, поддерживаемый повсеместно, а ползунок качества позволяет балансировать между размером файла и детализацией. PNG — формат без потерь с поддержкой прозрачности, поэтому он подходит для скриншотов, логотипов, иконок и изображений с чётким текстом или плоскими цветами — но для фотографий он создаёт гораздо более крупные файлы. WEBP — более новый формат, который сейчас поддерживается практически всеми современными браузерами и обычно даёт файл меньшего размера, чем JPEG, при том же визуальном качестве, так что это хороший выбор по умолчанию, если вам не нужна совместимость с очень старым программным обеспечением. «Сохранить исходный формат» просто перекодирует изображение в новом размере, не меняя формат.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -665,7 +710,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میری تصویر کہیں اپ لوڈ ہوتی ہے؟",
     "faq.a4": "نہیں۔ یہ ری سائزر مکمل طور پر آپ کے براؤزر میں HTML canvas ایلیمنٹ استعمال کرکے چلتا ہے — آپ کی منتخب کردہ فائل مقامی طور پر پڑھی جاتی ہے، آپ کے منتخب کردہ سائز پر canvas پر بنائی جاتی ہے، اور واپس ایک تصویر فائل میں انکوڈ کی جاتی ہے، یہ سب کچھ آپ کی اپنی ڈیوائس پر ہوتا ہے۔ کچھ بھی سرور پر نہیں بھیجا جاتا، کوئی اپ لوڈ پروگریس بار نظر نہیں آتا کیونکہ کوئی اپ لوڈ ہوتا ہی نہیں، اور ٹیب بند کرنے پر آپ کی آخری سیٹنگز کے علاوہ کچھ بھی باقی نہیں رہتا، جو صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں۔",
     "faq.q5": "کون سا آؤٹ پٹ فارمیٹ منتخب کریں — JPEG، PNG یا WEBP؟",
-    "faq.a5": "تصاویر کے لیے JPEG سب سے محفوظ اور ہر جگہ سپورٹڈ عمومی انتخاب ہے، اور کوالٹی سلائیڈر فائل سائز اور تفصیل کے درمیان توازن رکھتا ہے۔ PNG لاس لیس ہے اور شفافیت سپورٹ کرتا ہے، اس لیے اسکرین شاٹس، لوگو، آئیکنز اور واضح متن یا فلیٹ رنگوں والی تصاویر کے لیے یہ صحیح انتخاب ہے — لیکن تصاویر کے لیے اس کی فائل کافی بڑی ہو جاتی ہے۔ WEBP ایک نیا فارمیٹ ہے جو اب تقریباً ہر جدید براؤزر میں سپورٹڈ ہے اور عام طور پر اسی بصری کوالٹی پر JPEG سے چھوٹی فائل دیتا ہے، تو اگر آپ کو بہت پرانے سافٹ ویئر کے ساتھ مطابقت نہیں چاہیے تو یہ ایک اچھا ڈیفالٹ ہے۔ “اصل فارمیٹ برقرار رکھیں” منتخب کرنے پر فارمیٹ بدلے بغیر صرف نئے سائز پر دوبارہ انکوڈ ہوتا ہے۔"
+    "faq.a5": "تصاویر کے لیے JPEG سب سے محفوظ اور ہر جگہ سپورٹڈ عمومی انتخاب ہے، اور کوالٹی سلائیڈر فائل سائز اور تفصیل کے درمیان توازن رکھتا ہے۔ PNG لاس لیس ہے اور شفافیت سپورٹ کرتا ہے، اس لیے اسکرین شاٹس، لوگو، آئیکنز اور واضح متن یا فلیٹ رنگوں والی تصاویر کے لیے یہ صحیح انتخاب ہے — لیکن تصاویر کے لیے اس کی فائل کافی بڑی ہو جاتی ہے۔ WEBP ایک نیا فارمیٹ ہے جو اب تقریباً ہر جدید براؤزر میں سپورٹڈ ہے اور عام طور پر اسی بصری کوالٹی پر JPEG سے چھوٹی فائل دیتا ہے، تو اگر آپ کو بہت پرانے سافٹ ویئر کے ساتھ مطابقت نہیں چاہیے تو یہ ایک اچھا ڈیفالٹ ہے۔ “اصل فارمیٹ برقرار رکھیں” منتخب کرنے پر فارمیٹ بدلے بغیر صرف نئے سائز پر دوبارہ انکوڈ ہوتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -730,7 +780,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah foto saya diunggah ke suatu tempat?",
     "faq.a4": "Tidak. Alat ini berjalan sepenuhnya di browser Anda menggunakan elemen canvas HTML — file yang Anda pilih dibaca secara lokal, digambar ke canvas pada ukuran pilihan Anda, lalu dienkode kembali menjadi file gambar, semuanya di perangkat Anda sendiri. Tidak ada yang dikirim ke server, tidak ada bilah kemajuan unggah karena memang tidak ada unggahan, dan menutup tab tidak meninggalkan jejak apa pun selain pengaturan terakhir Anda, yang hanya disimpan di penyimpanan lokal browser Anda.",
     "faq.q5": "Format keluaran mana yang harus dipilih — JPEG, PNG, atau WEBP?",
-    "faq.a5": "JPEG adalah pilihan umum paling aman untuk foto dan didukung di mana saja, dengan penggeser kualitas yang menyeimbangkan ukuran file dan detail. PNG bersifat lossless dan mendukung transparansi, sehingga menjadi pilihan tepat untuk tangkapan layar, logo, ikon, dan gambar dengan teks tajam atau warna datar — tetapi menghasilkan file jauh lebih besar untuk foto. WEBP adalah format lebih baru yang kini didukung hampir semua browser modern dan biasanya menghasilkan file lebih kecil dari JPEG pada kualitas visual yang sama, jadi ini pilihan default yang baik jika Anda tidak butuh kompatibilitas dengan software yang sangat lama. Memilih “Pertahankan format asli” hanya akan mengenkode ulang pada ukuran baru tanpa mengubah formatnya sama sekali."
+    "faq.a5": "JPEG adalah pilihan umum paling aman untuk foto dan didukung di mana saja, dengan penggeser kualitas yang menyeimbangkan ukuran file dan detail. PNG bersifat lossless dan mendukung transparansi, sehingga menjadi pilihan tepat untuk tangkapan layar, logo, ikon, dan gambar dengan teks tajam atau warna datar — tetapi menghasilkan file jauh lebih besar untuk foto. WEBP adalah format lebih baru yang kini didukung hampir semua browser modern dan biasanya menghasilkan file lebih kecil dari JPEG pada kualitas visual yang sama, jadi ini pilihan default yang baik jika Anda tidak butuh kompatibilitas dengan software yang sangat lama. Memilih “Pertahankan format asli” hanya akan mengenkode ulang pada ukuran baru tanpa mengubah formatnya sama sekali.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -795,7 +850,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wird mein Foto irgendwohin hochgeladen?",
     "faq.a4": "Nein. Dieses Tool läuft vollständig in deinem Browser über das HTML-canvas-Element — die gewählte Datei wird lokal gelesen, in der gewählten Größe auf ein canvas gezeichnet und wieder in eine Bilddatei kodiert, alles auf deinem eigenen Gerät. Es wird nichts an einen Server gesendet, es gibt keinen Upload-Fortschrittsbalken, weil es keinen Upload gibt, und das Schließen des Tabs hinterlässt keine Spur außer deinen letzten Einstellungen, die nur im lokalen Speicher deines Browsers abgelegt werden.",
     "faq.q5": "Welches Ausgabeformat sollte ich wählen — JPEG, PNG oder WEBP?",
-    "faq.a5": "JPEG ist die sicherste allgemeine Wahl für Fotos und wird überall unterstützt, mit dem Qualitätsregler als Kompromiss zwischen Dateigröße und Detail. PNG ist verlustfrei und unterstützt Transparenz, daher die richtige Wahl für Screenshots, Logos, Icons und Bilder mit scharfem Text oder flächigen Farben — erzeugt bei Fotos aber deutlich größere Dateien. WEBP ist ein neueres Format, das inzwischen von praktisch jedem modernen Browser unterstützt wird und bei gleicher visueller Qualität meist eine kleinere Datei als JPEG liefert — eine gute Standardwahl, wenn du keine Kompatibilität mit sehr alter Software brauchst. „Originalformat beibehalten“ kodiert einfach in der neuen Größe neu, ohne das Format zu ändern."
+    "faq.a5": "JPEG ist die sicherste allgemeine Wahl für Fotos und wird überall unterstützt, mit dem Qualitätsregler als Kompromiss zwischen Dateigröße und Detail. PNG ist verlustfrei und unterstützt Transparenz, daher die richtige Wahl für Screenshots, Logos, Icons und Bilder mit scharfem Text oder flächigen Farben — erzeugt bei Fotos aber deutlich größere Dateien. WEBP ist ein neueres Format, das inzwischen von praktisch jedem modernen Browser unterstützt wird und bei gleicher visueller Qualität meist eine kleinere Datei als JPEG liefert — eine gute Standardwahl, wenn du keine Kompatibilität mit sehr alter Software brauchst. „Originalformat beibehalten“ kodiert einfach in der neuen Größe neu, ohne das Format zu ändern.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -860,7 +920,12 @@ window.I18N_LOCALES = {
     "faq.q4": "写真はどこかにアップロードされますか?",
     "faq.a4": "いいえ。このツールはHTMLのcanvas要素を使い、完全にブラウザ内で動作します — 選択したファイルはローカルで読み込まれ、指定したサイズでcanvasに描画され、画像ファイルとして再エンコードされます。すべてお使いの端末上で完結します。サーバーには何も送信されず、アップロードが存在しないためアップロード進捗バーもありません。タブを閉じても、ブラウザのローカルストレージに保存された直近の設定以外、何も残りません。",
     "faq.q5": "出力形式はJPEG・PNG・WEBPのどれを選べばいい?",
-    "faq.a5": "JPEGは写真向けの最も無難な選択肢で、どこでも対応しており、画質スライダーでファイルサイズとディテールのバランスを取れます。PNGは可逆圧縮で透過にも対応しているため、スクリーンショットやロゴ、アイコン、くっきりした文字や単色を含む画像に適していますが、写真に使うとファイルがかなり大きくなります。WEBPは比較的新しい形式で、今ではほぼすべてのモダンブラウザに対応しており、同程度の見た目の画質でJPEGより小さいファイルになることが多いため、非常に古いソフトとの互換性が不要ならデフォルトとしておすすめです。「元の形式を維持」を選ぶと、形式を変えずに新しいサイズだけで再エンコードします。"
+    "faq.a5": "JPEGは写真向けの最も無難な選択肢で、どこでも対応しており、画質スライダーでファイルサイズとディテールのバランスを取れます。PNGは可逆圧縮で透過にも対応しているため、スクリーンショットやロゴ、アイコン、くっきりした文字や単色を含む画像に適していますが、写真に使うとファイルがかなり大きくなります。WEBPは比較的新しい形式で、今ではほぼすべてのモダンブラウザに対応しており、同程度の見た目の画質でJPEGより小さいファイルになることが多いため、非常に古いソフトとの互換性が不要ならデフォルトとしておすすめです。「元の形式を維持」を選ぶと、形式を変えずに新しいサイズだけで再エンコードします。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -925,6 +990,11 @@ window.I18N_LOCALES = {
     "faq.q4": "제 사진이 어딘가에 업로드되나요?",
     "faq.a4": "아니요. 이 도구는 HTML canvas 요소를 사용해 전적으로 브라우저 안에서 동작합니다 — 선택한 파일은 로컬에서 읽혀 원하는 크기로 canvas에 그려지고, 다시 이미지 파일로 인코딩됩니다. 이 모든 과정이 사용자의 기기에서만 이루어집니다. 서버로 전송되는 것은 아무것도 없고, 업로드 자체가 없으니 업로드 진행률 표시도 없으며, 탭을 닫아도 브라우저 로컬 저장소에만 남는 마지막 설정 값 외에는 아무 흔적도 남지 않습니다.",
     "faq.q5": "출력 포맷은 JPEG, PNG, WEBP 중 무엇을 선택해야 하나요?",
-    "faq.a5": "JPEG는 사진에 가장 무난하고 어디서나 지원되는 선택지로, 화질 슬라이더로 파일 크기와 디테일 사이 균형을 맞출 수 있습니다. PNG는 무손실 포맷이며 투명도를 지원해 스크린샷, 로고, 아이콘, 선명한 텍스트나 단색 위주 이미지에 적합하지만, 사진에 사용하면 파일이 훨씬 커집니다. WEBP는 비교적 최신 포맷으로 이제 거의 모든 최신 브라우저에서 지원되며, 같은 시각적 화질에서 JPEG보다 파일이 작은 경우가 많아 아주 오래된 소프트웨어와의 호환성이 필요하지 않다면 기본값으로 좋은 선택입니다. “원본 포맷 유지”를 선택하면 포맷은 바꾸지 않고 새 크기로만 다시 인코딩합니다."
+    "faq.a5": "JPEG는 사진에 가장 무난하고 어디서나 지원되는 선택지로, 화질 슬라이더로 파일 크기와 디테일 사이 균형을 맞출 수 있습니다. PNG는 무손실 포맷이며 투명도를 지원해 스크린샷, 로고, 아이콘, 선명한 텍스트나 단색 위주 이미지에 적합하지만, 사진에 사용하면 파일이 훨씬 커집니다. WEBP는 비교적 최신 포맷으로 이제 거의 모든 최신 브라우저에서 지원되며, 같은 시각적 화질에서 JPEG보다 파일이 작은 경우가 많아 아주 오래된 소프트웨어와의 호환성이 필요하지 않다면 기본값으로 좋은 선택입니다. “원본 포맷 유지”를 선택하면 포맷은 바꾸지 않고 새 크기로만 다시 인코딩합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

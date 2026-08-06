@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why round the per-person amount up when splitting a bill?",
     "faq.a4": "When you split a check in cash, awkward shares like 17.43 each are a pain to collect. Turning on \"Round up per person\" makes this bill split calculator round each share up to a clean cash unit for the country you picked — a whole dollar or euro, ¥100 in Japan, ₩1,000 in Korea — so everyone pays a tidy amount and the small surplus covers the rounding. The tool shows exactly how much the rounding adds to the total paid.",
     "faq.q5": "Is my bill amount sent to a server?",
-    "faq.a5": "No. This tip calculator runs entirely in your browser — the bill, tip percentage and headcount never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can split a private dinner bill with peace of mind."
+    "faq.a5": "No. This tip calculator runs entirely in your browser — the bill, tip percentage and headcount never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can split a private dinner bill with peace of mind.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -115,7 +120,12 @@ window.I18N_LOCALES = {
     "faq.q4": "分摊账单时为什么要把每人金额向上取整？",
     "faq.a4": "用现金分摊时，像每人 17.43 这样的零头很难凑。打开“每人向上取整”后，这个分账计算器会按你所选国家的现金单位向上取整——整数美元或欧元、日本 ¥100、韩国 ₩1,000——让每个人都付一个整齐的金额，多出的零头正好覆盖取整差额。工具会显示取整让实付总额增加了多少。",
     "faq.q5": "我的账单金额会被发送到服务器吗？",
-    "faq.a5": "不会。这个小费计算器完全在你的浏览器中运行——账单、小费比例和人数都不会离开你的设备，不会上传或存储到服务器。无需注册，也不追踪你的数字，你可以放心分摊私人晚餐的账单。"
+    "faq.a5": "不会。这个小费计算器完全在你的浏览器中运行——账单、小费比例和人数都不会离开你的设备，不会上传或存储到服务器。无需注册，也不追踪你的数字，你可以放心分摊私人晚餐的账单。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "बिल बाँटते समय प्रति-व्यक्ति राशि को ऊपर पूर्णांकित क्यों करें?",
     "faq.a4": "नकद में बिल बाँटते समय हर व्यक्ति 17.43 जैसे अटपटे हिस्से इकट्ठा करना मुश्किल होता है। \"प्रति व्यक्ति ऊपर पूर्णांकित करें\" चालू करने पर यह बिल-स्प्लिट कैलकुलेटर हर हिस्से को चुने गए देश की साफ़ नकद इकाई तक बढ़ा देता है — पूरा डॉलर या यूरो, जापान में ¥100, कोरिया में ₩1,000 — ताकि सब एक साफ़ राशि दें और थोड़ा अधिशेष पूर्णांकन को कवर कर ले। टूल दिखाता है कि पूर्णांकन से कुल भुगतान में कितना जुड़ता है।",
     "faq.q5": "क्या मेरी बिल राशि सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। यह टिप कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — बिल, टिप प्रतिशत और लोगों की संख्या आपके डिवाइस से बाहर नहीं जाती और कुछ भी सर्वर पर अपलोड या संग्रहीत नहीं होता। कोई साइन-अप नहीं और आपके नंबरों की कोई ट्रैकिंग नहीं, इसलिए आप निजी डिनर बिल निश्चिंत होकर बाँट सकते हैं।"
+    "faq.a5": "नहीं। यह टिप कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — बिल, टिप प्रतिशत और लोगों की संख्या आपके डिवाइस से बाहर नहीं जाती और कुछ भी सर्वर पर अपलोड या संग्रहीत नहीं होता। कोई साइन-अप नहीं और आपके नंबरों की कोई ट्रैकिंग नहीं, इसलिए आप निजी डिनर बिल निश्चिंत होकर बाँट सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -215,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué redondear hacia arriba el importe por persona al dividir la cuenta?",
     "faq.a4": "Al dividir la cuenta en efectivo, partes incómodas como 17,43 por persona son difíciles de reunir. Al activar \"Redondear hacia arriba por persona\", esta calculadora para dividir la cuenta redondea cada parte hasta una unidad de efectivo limpia del país elegido (un dólar o un euro enteros, ¥100 en Japón, ₩1.000 en Corea), de modo que todos paguen una cifra limpia y el pequeño excedente cubra el redondeo. La herramienta muestra exactamente cuánto añade el redondeo al total pagado.",
     "faq.q5": "¿Se envía el importe de mi cuenta a un servidor?",
-    "faq.a5": "No. Esta calculadora de propinas funciona por completo en tu navegador: la cuenta, el porcentaje de propina y el número de personas nunca salen de tu dispositivo y nada se sube ni se guarda en un servidor. No hay registro ni seguimiento de tus cifras, así que puedes dividir la cuenta de una cena privada con tranquilidad."
+    "faq.a5": "No. Esta calculadora de propinas funciona por completo en tu navegador: la cuenta, el porcentaje de propina y el número de personas nunca salen de tu dispositivo y nada se sube ni se guarda en un servidor. No hay registro ni seguimiento de tus cifras, así que puedes dividir la cuenta de una cena privada con tranquilidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -265,7 +285,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا نقرّب نصيب كل شخص للأعلى عند تقسيم الفاتورة؟",
     "faq.a4": "عند تقسيم الفاتورة نقدًا، تصعب مطالبة الجميع بمبالغ غريبة مثل 17.43 لكل شخص. عند تفعيل \"تقريب نصيب كل شخص للأعلى\"، تقرّب حاسبة تقسيم الفاتورة كل نصيب إلى وحدة نقدية مرتبة حسب البلد الذي اخترته — دولار أو يورو كامل، و¥100 في اليابان، و₩1,000 في كوريا — فيدفع الجميع مبلغًا مرتبًا ويغطي الفائض الصغير فرق التقريب. تعرض الأداة بالضبط كم يضيف التقريب إلى الإجمالي المدفوع.",
     "faq.q5": "هل تُرسل قيمة فاتورتي إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة البقشيش هذه بالكامل داخل متصفحك — لا تغادر الفاتورة ونسبة البقشيش وعدد الأشخاص جهازك، ولا يُرفع أو يُخزَّن أي شيء على خادم. لا تسجيل ولا تتبّع لأرقامك، فيمكنك تقسيم فاتورة عشاء خاص باطمئنان."
+    "faq.a5": "لا. تعمل حاسبة البقشيش هذه بالكامل داخل متصفحك — لا تغادر الفاتورة ونسبة البقشيش وعدد الأشخاص جهازك، ولا يُرفع أو يُخزَّن أي شيء على خادم. لا تسجيل ولا تتبّع لأرقامك، فيمكنك تقسيم فاتورة عشاء خاص باطمئنان.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -315,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi arrondir à l'unité supérieure le montant par personne lors du partage ?",
     "faq.a4": "Quand on partage l'addition en espèces, des parts bancales comme 17,43 par personne sont pénibles à réunir. En activant \"Arrondir à l'unité supérieure par personne\", ce calculateur de partage d'addition arrondit chaque part à une coupure pratique du pays choisi — un dollar ou un euro entier, ¥100 au Japon, ₩1 000 en Corée — pour que chacun paie un montant net et que le petit surplus couvre l'arrondi. L'outil indique précisément ce que l'arrondi ajoute au total payé.",
     "faq.q5": "Le montant de mon addition est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Ce calculateur de pourboire fonctionne entièrement dans votre navigateur : l'addition, le pourcentage et le nombre de personnes ne quittent jamais votre appareil et rien n'est envoyé ni stocké sur un serveur. Aucune inscription ni suivi de vos chiffres : vous pouvez partager l'addition d'un dîner privé en toute tranquillité."
+    "faq.a5": "Non. Ce calculateur de pourboire fonctionne entièrement dans votre navigateur : l'addition, le pourcentage et le nombre de personnes ne quittent jamais votre appareil et rien n'est envoyé ni stocké sur un serveur. Aucune inscription ni suivi de vos chiffres : vous pouvez partager l'addition d'un dîner privé en toute tranquillité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -365,7 +395,12 @@ window.I18N_LOCALES = {
     "faq.q4": "বিল ভাগ করার সময় জনপ্রতি অঙ্ক উপরে পূর্ণ করা কেন?",
     "faq.a4": "নগদে বিল ভাগ করার সময় জনপ্রতি 17.43-এর মতো অদ্ভুত ভাগ তোলা কঠিন। \"জনপ্রতি উপরে পূর্ণ করুন\" চালু করলে এই বিল-স্প্লিট ক্যালকুলেটর প্রতিটি ভাগ আপনার বেছে নেওয়া দেশের পরিষ্কার নগদ এককে বাড়ায় — পূর্ণ ডলার বা ইউরো, জাপানে ¥100, কোরিয়ায় ₩1,000 — যাতে সবাই পরিষ্কার অঙ্ক দেয় আর সামান্য উদ্বৃত্ত পূর্ণকরণ ঢেকে দেয়। টুল দেখায় পূর্ণকরণে মোট পরিশোধে ঠিক কত যোগ হলো।",
     "faq.q5": "আমার বিলের অঙ্ক কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই টিপ ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে — বিল, টিপ শতাংশ ও লোকসংখ্যা কখনও আপনার ডিভাইস ছাড়ে না এবং কিছুই সার্ভারে আপলোড বা সংরক্ষণ হয় না। কোনো সাইন-আপ নেই, আপনার সংখ্যার কোনো ট্র্যাকিং নেই, তাই নিশ্চিন্তে ব্যক্তিগত ডিনারের বিল ভাগ করতে পারেন।"
+    "faq.a5": "না। এই টিপ ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে — বিল, টিপ শতাংশ ও লোকসংখ্যা কখনও আপনার ডিভাইস ছাড়ে না এবং কিছুই সার্ভারে আপলোড বা সংরক্ষণ হয় না। কোনো সাইন-আপ নেই, আপনার সংখ্যার কোনো ট্র্যাকিং নেই, তাই নিশ্চিন্তে ব্যক্তিগত ডিনারের বিল ভাগ করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que arredondar para cima o valor por pessoa ao dividir a conta?",
     "faq.a4": "Ao dividir a conta em dinheiro, partes esquisitas como 17,43 por pessoa são difíceis de juntar. Ao ativar \"Arredondar para cima por pessoa\", esta calculadora de divisão de conta arredonda cada parte para uma unidade de dinheiro redonda do país escolhido — um dólar ou euro inteiro, ¥100 no Japão, ₩1.000 na Coreia — para que todos paguem um valor certinho e o pequeno excedente cubra o arredondamento. A ferramenta mostra exatamente quanto o arredondamento acrescenta ao total pago.",
     "faq.q5": "O valor da minha conta é enviado a um servidor?",
-    "faq.a5": "Não. Esta calculadora de gorjeta funciona inteiramente no seu navegador — a conta, a porcentagem de gorjeta e o número de pessoas nunca saem do seu aparelho e nada é enviado ou armazenado em um servidor. Não há cadastro nem rastreamento dos seus números, então você pode dividir a conta de um jantar particular com tranquilidade."
+    "faq.a5": "Não. Esta calculadora de gorjeta funciona inteiramente no seu navegador — a conta, a porcentagem de gorjeta e o número de pessoas nunca saem do seu aparelho e nada é enviado ou armazenado em um servidor. Não há cadastro nem rastreamento dos seus números, então você pode dividir a conta de um jantar particular com tranquilidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -465,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Зачем округлять долю каждого вверх при разделении счёта?",
     "faq.a4": "Когда делите счёт наличными, неудобные доли вроде 17,43 на человека трудно собрать. Если включить \"Округлять долю каждого вверх\", этот калькулятор разделения счёта округляет каждую долю до удобной денежной единицы выбранной страны — целого доллара или евро, ¥100 в Японии, ₩1 000 в Корее — чтобы все платили ровную сумму, а небольшой излишек покрывал округление. Инструмент показывает, сколько именно округление добавляет к оплаченному итогу.",
     "faq.q5": "Отправляется ли сумма моего счёта на сервер?",
-    "faq.a5": "Нет. Этот калькулятор чаевых работает полностью в вашем браузере — счёт, процент чаевых и число людей не покидают устройство, ничего не загружается и не хранится на сервере. Нет регистрации и отслеживания ваших чисел, так что можно спокойно делить счёт за частный ужин."
+    "faq.a5": "Нет. Этот калькулятор чаевых работает полностью в вашем браузере — счёт, процент чаевых и число людей не покидают устройство, ничего не загружается и не хранится на сервере. Нет регистрации и отслеживания ваших чисел, так что можно спокойно делить счёт за частный ужин.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -515,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "بل تقسیم کرتے وقت فی کس رقم کو اوپر کیوں پورا کریں؟",
     "faq.a4": "نقد میں بل تقسیم کرتے وقت فی کس 17.43 جیسے عجیب حصے جمع کرنا مشکل ہوتا ہے۔ \"فی کس اوپر کی طرف پورا کریں\" آن کرنے پر یہ بل اسپلٹ کیلکولیٹر ہر حصے کو منتخب ملک کی صاف نقد اکائی تک بڑھا دیتا ہے — پورا ڈالر یا یورو، جاپان میں ¥100، کوریا میں ₩1,000 — تاکہ سب صاف رقم دیں اور تھوڑا سا زائد پورا کرنے کو ڈھانپ لے۔ ٹول دکھاتا ہے کہ پورا کرنے سے کل ادائیگی میں کتنا شامل ہوا۔",
     "faq.q5": "کیا میری بل کی رقم سرور پر بھیجی جاتی ہے؟",
-    "faq.a5": "نہیں۔ یہ ٹِپ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — بل، ٹِپ فیصد اور افراد کی تعداد آپ کے آلے سے باہر نہیں جاتی اور کچھ بھی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا۔ کوئی سائن اپ نہیں اور آپ کے اعداد کی کوئی ٹریکنگ نہیں، اس لیے آپ نجی ڈنر کا بل بےفکری سے تقسیم کر سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ ٹِپ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — بل، ٹِپ فیصد اور افراد کی تعداد آپ کے آلے سے باہر نہیں جاتی اور کچھ بھی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا۔ کوئی سائن اپ نہیں اور آپ کے اعداد کی کوئی ٹریکنگ نہیں، اس لیے آپ نجی ڈنر کا بل بےفکری سے تقسیم کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -565,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa membulatkan jumlah per orang ke atas saat membagi tagihan?",
     "faq.a4": "Saat membagi tagihan dengan uang tunai, bagian ganjil seperti 17,43 per orang sulit dikumpulkan. Dengan mengaktifkan \"Bulatkan ke atas per orang\", kalkulator pembagi tagihan ini membulatkan tiap bagian ke satuan uang tunai yang rapi sesuai negara pilihan Anda — dolar atau euro utuh, ¥100 di Jepang, ₩1.000 di Korea — sehingga semua membayar angka yang rapi dan sedikit kelebihan menutup pembulatan. Alat ini menunjukkan persis berapa yang ditambahkan pembulatan pada total yang dibayar.",
     "faq.q5": "Apakah jumlah tagihan saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator tip ini berjalan sepenuhnya di peramban Anda — tagihan, persentase tip, dan jumlah orang tidak pernah meninggalkan perangkat Anda serta tidak ada yang diunggah atau disimpan di server. Tanpa pendaftaran dan tanpa pelacakan angka Anda, jadi Anda bisa membagi tagihan makan malam pribadi dengan tenang."
+    "faq.a5": "Tidak. Kalkulator tip ini berjalan sepenuhnya di peramban Anda — tagihan, persentase tip, dan jumlah orang tidak pernah meninggalkan perangkat Anda serta tidak ada yang diunggah atau disimpan di server. Tanpa pendaftaran dan tanpa pelacakan angka Anda, jadi Anda bisa membagi tagihan makan malam pribadi dengan tenang.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -615,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum den Betrag pro Person beim Teilen aufrunden?",
     "faq.a4": "Beim Teilen der Rechnung in bar sind krumme Anteile wie 17,43 pro Person mühsam einzusammeln. Mit \"Pro Person aufrunden\" rundet dieser Rechner zum Aufteilen der Rechnung jeden Anteil auf eine glatte Bargeldeinheit des gewählten Landes — einen ganzen Dollar oder Euro, ¥100 in Japan, ₩1.000 in Korea —, sodass alle einen glatten Betrag zahlen und der kleine Überschuss die Rundung deckt. Das Tool zeigt genau, wie viel die Rundung zum gezahlten Gesamtbetrag hinzufügt.",
     "faq.q5": "Wird mein Rechnungsbetrag an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Trinkgeld-Rechner läuft vollständig in Ihrem Browser – Rechnung, Trinkgeldprozentsatz und Personenzahl verlassen Ihr Gerät nie, und nichts wird hochgeladen oder auf einem Server gespeichert. Keine Anmeldung und kein Tracking Ihrer Zahlen, sodass Sie die Rechnung eines privaten Abendessens unbesorgt teilen können."
+    "faq.a5": "Nein. Dieser Trinkgeld-Rechner läuft vollständig in Ihrem Browser – Rechnung, Trinkgeldprozentsatz und Personenzahl verlassen Ihr Gerät nie, und nichts wird hochgeladen oder auf einem Server gespeichert. Keine Anmeldung und kein Tracking Ihrer Zahlen, sodass Sie die Rechnung eines privaten Abendessens unbesorgt teilen können.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -665,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "割り勘のとき、なぜ1人あたりを切り上げるの？",
     "faq.a4": "現金で割り勘にすると、1人17.43のような半端な額は集めにくいものです。「1人あたりを切り上げる」をオンにすると、この割り勘計算機は選んだ国の現金単位まで切り上げます（1ドル・1ユーロ単位、日本なら¥100、韓国なら₩1,000）。全員がきりの良い額を払い、わずかな余りが端数を吸収します。切り上げによって支払合計にいくら上乗せされるかもツールが表示します。",
     "faq.q5": "入力した会計額はサーバーに送られますか？",
-    "faq.a5": "いいえ。このチップ計算機は完全にブラウザ内で動作し、会計額・チップ割合・人数が端末の外に出ることはなく、サーバーへの送信や保存も行いません。登録も数値の追跡もないため、プライベートな食事の会計も安心して割り勘できます。"
+    "faq.a5": "いいえ。このチップ計算機は完全にブラウザ内で動作し、会計額・チップ割合・人数が端末の外に出ることはなく、サーバーへの送信や保存も行いません。登録も数値の追跡もないため、プライベートな食事の会計も安心して割り勘できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -715,6 +780,11 @@ window.I18N_LOCALES = {
     "faq.q4": "더치페이할 때 1인당 금액을 왜 올림하나요?",
     "faq.a4": "현금으로 나눌 때 1인당 17.43 같은 어중간한 금액은 걷기 번거롭습니다. \"1인당 금액 올림\"을 켜면 이 분담 계산기가 선택한 나라의 현금 단위로 각자의 몫을 올려 줍니다 — 1달러·1유로 단위, 일본은 ¥100, 한국은 ₩1,000 — 그래서 모두 깔끔한 금액을 내고 남는 소액이 올림분을 덮습니다. 올림으로 지불 총액이 얼마나 늘어나는지도 도구가 보여줍니다.",
     "faq.q5": "제가 입력한 청구 금액이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 팁 계산기는 전부 브라우저 안에서 동작합니다 — 청구 금액, 팁 퍼센트, 인원수는 기기를 벗어나지 않으며 서버에 업로드하거나 저장하지 않습니다. 가입도 없고 입력값을 추적하지도 않으니 사적인 저녁 식사 비용도 안심하고 나눌 수 있습니다."
+    "faq.a5": "아니요. 이 팁 계산기는 전부 브라우저 안에서 동작합니다 — 청구 금액, 팁 퍼센트, 인원수는 기기를 벗어나지 않으며 서버에 업로드하거나 저장하지 않습니다. 가입도 없고 입력값을 추적하지도 않으니 사적인 저녁 식사 비용도 안심하고 나눌 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -96,7 +96,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How accurate is the calorie estimate?",
     "faq.a4": "It's a rough, MET-based estimate, not a medical-grade measurement. The calculator multiplies a standard walking MET value (metabolic equivalent of task, from the Compendium of Physical Activities) for your chosen pace by your body weight and walking time. Actual calorie burn also depends on terrain, incline, fitness level, and individual metabolism, so treat the number as a ballpark for tracking trends rather than a substitute for a fitness tracker or medical device.",
     "faq.q5": "Is my step count, height, or weight sent to a server?",
-    "faq.a5": "No. Every calculation in this steps-to-miles calculator — distance, walking time, and calories — runs entirely in your browser. Nothing you type is uploaded or stored on a server; your last inputs are saved only in your browser's local storage so the form remembers them the next time you visit."
+    "faq.a5": "No. Every calculation in this steps-to-miles calculator — distance, walking time, and calories — runs entirely in your browser. Nothing you type is uploaded or stored on a server; your last inputs are saved only in your browser's local storage so the form remembers them the next time you visit.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -187,7 +192,12 @@ window.I18N_LOCALES = {
     "faq.q4": "卡路里估算准确吗？",
     "faq.a4": "这是一个基于 MET（代谢当量）的粗略估算，并非医学级测量。计算器会用你所选速度对应的标准步行 MET 值（数据来自《身体活动纲要》Compendium of Physical Activities）乘以体重和步行时间。实际消耗的卡路里还与地形、坡度、体能水平和个人代谢有关，因此这个数字只适合作为大致参考，不能替代运动手环或医疗设备的测量。",
     "faq.q5": "我的步数、身高或体重会被发送到服务器吗？",
-    "faq.a5": "不会。这个步数换算英里计算器的所有计算——距离、步行时间和卡路里——完全在你的浏览器本地完成。你输入的任何内容都不会上传或存储到服务器；你上次输入的数值只保存在浏览器本地存储中，方便下次访问时自动填充。"
+    "faq.a5": "不会。这个步数换算英里计算器的所有计算——距离、步行时间和卡路里——完全在你的浏览器本地完成。你输入的任何内容都不会上传或存储到服务器；你上次输入的数值只保存在浏览器本地存储中，方便下次访问时自动填充。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -278,7 +288,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कैलोरी का अनुमान कितना सटीक है?",
     "faq.a4": "यह एक मोटा, MET-आधारित अनुमान है, चिकित्सा-स्तर की माप नहीं। कैलकुलेटर आपकी चुनी गई गति के लिए एक मानक चलने वाला MET मान (मेटाबॉलिक इक्विवैलेंट ऑफ़ टास्क, Compendium of Physical Activities से) आपके वज़न और चलने के समय से गुणा करता है। असली कैलोरी बर्न इलाक़े, चढ़ाई, फ़िटनेस स्तर और व्यक्तिगत मेटाबॉलिज़्म पर भी निर्भर करता है, इसलिए इसे एक मोटा अंदाज़ा मानें, फ़िटनेस ट्रैकर या मेडिकल डिवाइस का विकल्प नहीं।",
     "faq.q5": "क्या मेरे कदम, ऊंचाई या वज़न सर्वर पर भेजे जाते हैं?",
-    "faq.a5": "नहीं। इस कदम-से-मील कैलकुलेटर की हर गणना — दूरी, चलने का समय और कैलोरी — पूरी तरह आपके ब्राउज़र में होती है। आपके टाइप किए गए कुछ भी सर्वर पर अपलोड या संग्रहीत नहीं होता; आपकी पिछली एंट्रीज़ सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में सेव होती हैं ताकि अगली बार फ़ॉर्म उन्हें याद रखे।"
+    "faq.a5": "नहीं। इस कदम-से-मील कैलकुलेटर की हर गणना — दूरी, चलने का समय और कैलोरी — पूरी तरह आपके ब्राउज़र में होती है। आपके टाइप किए गए कुछ भी सर्वर पर अपलोड या संग्रहीत नहीं होता; आपकी पिछली एंट्रीज़ सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में सेव होती हैं ताकि अगली बार फ़ॉर्म उन्हें याद रखे।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -369,7 +384,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué tan precisa es la estimación de calorías?",
     "faq.a4": "Es una estimación aproximada basada en el MET, no una medición de nivel médico. La calculadora multiplica un valor MET estándar para caminar (equivalente metabólico de la tarea, de la Compendium of Physical Activities) correspondiente a tu ritmo elegido, por tu peso corporal y tu tiempo caminando. El gasto calórico real también depende del terreno, la pendiente, tu nivel de condición física y tu metabolismo individual, así que trata la cifra como una referencia aproximada para seguir tendencias, no como un sustituto de un pulsómetro o un dispositivo médico.",
     "faq.q5": "¿Se envía mi número de pasos, altura o peso a un servidor?",
-    "faq.a5": "No. Todos los cálculos de esta calculadora de pasos a millas — distancia, tiempo caminando y calorías — se ejecutan por completo en tu navegador. Nada de lo que escribes se sube ni se guarda en un servidor; tus últimos datos solo se guardan en el almacenamiento local de tu navegador para que el formulario los recuerde la próxima vez que lo visites."
+    "faq.a5": "No. Todos los cálculos de esta calculadora de pasos a millas — distancia, tiempo caminando y calorías — se ejecutan por completo en tu navegador. Nada de lo que escribes se sube ni se guarda en un servidor; tus últimos datos solo se guardan en el almacenamiento local de tu navegador para que el formulario los recuerde la próxima vez que lo visites.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -460,7 +480,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما مدى دقة تقدير السعرات الحرارية؟",
     "faq.a4": "إنه تقدير تقريبي مبني على معامل الأيض (MET)، وليس قياسًا بمستوى طبي. تضرب الحاسبة قيمة MET القياسية للمشي (المكافئ الأيضي للمهمة، من دليل الأنشطة البدنية Compendium of Physical Activities) الموافقة لسرعتك المختارة، في وزن جسمك ووقت مشيك. ويعتمد الحرق الفعلي للسعرات أيضًا على التضاريس والانحدار ومستوى اللياقة والأيض الفردي، لذا اعتبر الرقم تقديرًا تقريبيًا لتتبع الاتجاه العام لا بديلًا عن جهاز لياقة أو جهاز طبي.",
     "faq.q5": "هل يُرسَل عدد خطواتي أو طولي أو وزني إلى خادم؟",
-    "faq.a5": "لا. تتم كل عملية حساب في حاسبة تحويل الخطوات إلى أميال هذه — المسافة ووقت المشي والسعرات — بالكامل داخل متصفحك. لا يُرفَع أو يُخزَّن أي شيء تكتبه على أي خادم؛ وتُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك ليتذكرها النموذج في زيارتك التالية."
+    "faq.a5": "لا. تتم كل عملية حساب في حاسبة تحويل الخطوات إلى أميال هذه — المسافة ووقت المشي والسعرات — بالكامل داخل متصفحك. لا يُرفَع أو يُخزَّن أي شيء تكتبه على أي خادم؛ وتُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك ليتذكرها النموذج في زيارتك التالية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -551,7 +576,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la précision de l'estimation des calories ?",
     "faq.a4": "C'est une estimation approximative basée sur le MET, pas une mesure de qualité médicale. Le calculateur multiplie une valeur MET standard de marche (équivalent métabolique de la tâche, tiré du Compendium of Physical Activities) correspondant à votre allure choisie, par votre poids corporel et votre temps de marche. La dépense calorique réelle dépend aussi du terrain, de la pente, du niveau de forme physique et du métabolisme individuel ; considérez donc ce chiffre comme un ordre de grandeur pour suivre une tendance, pas comme un substitut à un bracelet connecté ou un appareil médical.",
     "faq.q5": "Mon nombre de pas, ma taille ou mon poids sont-ils envoyés à un serveur ?",
-    "faq.a5": "Non. Chaque calcul de ce calculateur pas-en-miles — distance, temps de marche et calories — s'effectue entièrement dans votre navigateur. Rien de ce que vous saisissez n'est envoyé ni stocké sur un serveur ; vos dernières saisies sont enregistrées uniquement dans le stockage local de votre navigateur afin que le formulaire s'en souvienne lors de votre prochaine visite."
+    "faq.a5": "Non. Chaque calcul de ce calculateur pas-en-miles — distance, temps de marche et calories — s'effectue entièrement dans votre navigateur. Rien de ce que vous saisissez n'est envoyé ni stocké sur un serveur ; vos dernières saisies sont enregistrées uniquement dans le stockage local de votre navigateur afin que le formulaire s'en souvienne lors de votre prochaine visite.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -642,7 +672,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ক্যালোরির অনুমান কতটা নির্ভুল?",
     "faq.a4": "এটি একটি মোটামুটি, MET-ভিত্তিক অনুমান, চিকিৎসা-মানের পরিমাপ নয়। ক্যালকুলেটর আপনার বেছে নেওয়া গতির জন্য একটি প্রমিত হাঁটার MET মান (মেটাবলিক ইকুইভ্যালেন্ট অফ টাস্ক, Compendium of Physical Activities থেকে) আপনার শরীরের ওজন ও হাঁটার সময় দিয়ে গুণ করে। প্রকৃত ক্যালোরি খরচ ভূখণ্ড, ঢাল, ফিটনেস স্তর এবং ব্যক্তিগত বিপাকের ওপরও নির্ভর করে, তাই সংখ্যাটিকে প্রবণতা বোঝার একটি মোটামুটি ধারণা হিসেবে নিন, ফিটনেস ট্র্যাকার বা চিকিৎসা যন্ত্রের বিকল্প নয়।",
     "faq.q5": "আমার পদক্ষেপ সংখ্যা, উচ্চতা বা ওজন কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই স্টেপ-টু-মাইলস ক্যালকুলেটরের প্রতিটি হিসাব — দূরত্ব, হাঁটার সময় ও ক্যালোরি — সম্পূর্ণ আপনার ব্রাউজারে হয়। আপনি যা টাইপ করেন তার কিছুই সার্ভারে আপলোড বা সংরক্ষিত হয় না; আপনার শেষ ইনপুটগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার ফর্মটি সেগুলো মনে রাখে।"
+    "faq.a5": "না। এই স্টেপ-টু-মাইলস ক্যালকুলেটরের প্রতিটি হিসাব — দূরত্ব, হাঁটার সময় ও ক্যালোরি — সম্পূর্ণ আপনার ব্রাউজারে হয়। আপনি যা টাইপ করেন তার কিছুই সার্ভারে আপলোড বা সংরক্ষিত হয় না; আপনার শেষ ইনপুটগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার ফর্মটি সেগুলো মনে রাখে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -733,7 +768,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quão precisa é a estimativa de calorias?",
     "faq.a4": "É uma estimativa aproximada baseada em MET, não uma medição de nível médico. A calculadora multiplica um valor MET padrão de caminhada (equivalente metabólico da tarefa, do Compendium of Physical Activities) para o seu ritmo escolhido pelo seu peso corporal e tempo de caminhada. O gasto calórico real também depende do terreno, da inclinação, do nível de condicionamento físico e do metabolismo individual, então trate o número como uma referência aproximada para acompanhar tendências, não como substituto de um monitor de atividade física ou dispositivo médico.",
     "faq.q5": "Meu número de passos, altura ou peso são enviados a um servidor?",
-    "faq.a5": "Não. Todo cálculo nesta calculadora de passos para milhas — distância, tempo de caminhada e calorias — é feito inteiramente no seu navegador. Nada do que você digita é enviado ou armazenado em um servidor; suas últimas entradas são salvas apenas no armazenamento local do seu navegador, para que o formulário se lembre delas na próxima visita."
+    "faq.a5": "Não. Todo cálculo nesta calculadora de passos para milhas — distância, tempo de caminhada e calorias — é feito inteiramente no seu navegador. Nada do que você digita é enviado ou armazenado em um servidor; suas últimas entradas são salvas apenas no armazenamento local do seu navegador, para que o formulário se lembre delas na próxima visita.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -824,7 +864,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Насколько точна оценка калорий?",
     "faq.a4": "Это приблизительная оценка на основе MET, а не измерение медицинского уровня. Калькулятор умножает стандартное значение MET для ходьбы (метаболический эквивалент задачи, из Compendium of Physical Activities) для выбранного вами темпа на вес тела и время ходьбы. Реальный расход калорий также зависит от рельефа местности, уклона, уровня физической подготовки и индивидуального метаболизма, поэтому воспринимайте это число как ориентир для отслеживания тенденций, а не замену фитнес-трекера или медицинского прибора.",
     "faq.q5": "Отправляются ли моё количество шагов, рост или вес на сервер?",
-    "faq.a5": "Нет. Все расчёты в этом калькуляторе шагов в мили — расстояние, время ходьбы и калории — выполняются полностью в вашем браузере. Ничего из того, что вы вводите, не загружается и не хранится на сервере; ваши последние введённые данные сохраняются только в локальном хранилище браузера, чтобы форма запомнила их при следующем посещении."
+    "faq.a5": "Нет. Все расчёты в этом калькуляторе шагов в мили — расстояние, время ходьбы и калории — выполняются полностью в вашем браузере. Ничего из того, что вы вводите, не загружается и не хранится на сервере; ваши последние введённые данные сохраняются только в локальном хранилище браузера, чтобы форма запомнила их при следующем посещении.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -915,7 +960,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیلوریز کا تخمینہ کتنا درست ہے؟",
     "faq.a4": "یہ ایک اندازاً، MET پر مبنی تخمینہ ہے، طبی سطح کی پیمائش نہیں۔ کیلکولیٹر آپ کی منتخب کردہ رفتار کے لیے ایک معیاری چلنے کی MET قدر (میٹابولک ایکوی ویلنٹ آف ٹاسک، Compendium of Physical Activities سے) کو آپ کے جسمانی وزن اور چلنے کے وقت سے ضرب دیتا ہے۔ اصل کیلوریز کا خرچ زمین کی ساخت، چڑھائی، فٹنس کی سطح اور انفرادی میٹابولزم پر بھی منحصر ہوتا ہے، اس لیے اس عدد کو رجحان جانچنے کے لیے ایک اندازاً حوالہ سمجھیں، فٹنس ٹریکر یا طبی آلے کا متبادل نہیں۔",
     "faq.q5": "کیا میرے قدموں کی تعداد، قد یا وزن سرور کو بھیجے جاتے ہیں؟",
-    "faq.a5": "نہیں۔ اس قدم سے میل کیلکولیٹر میں ہر حساب — فاصلہ، چلنے کا وقت اور کیلوریز — مکمل طور پر آپ کے براؤزر میں ہوتا ہے۔ آپ جو کچھ بھی ٹائپ کرتے ہیں وہ کسی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا؛ آپ کی آخری اندراج شدہ قدریں صرف آپ کے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہیں تاکہ اگلی بار فارم انہیں یاد رکھے۔"
+    "faq.a5": "نہیں۔ اس قدم سے میل کیلکولیٹر میں ہر حساب — فاصلہ، چلنے کا وقت اور کیلوریز — مکمل طور پر آپ کے براؤزر میں ہوتا ہے۔ آپ جو کچھ بھی ٹائپ کرتے ہیں وہ کسی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا؛ آپ کی آخری اندراج شدہ قدریں صرف آپ کے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہیں تاکہ اگلی بار فارم انہیں یاد رکھے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1006,7 +1056,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Seberapa akurat perkiraan kalorinya?",
     "faq.a4": "Ini adalah perkiraan kasar berbasis MET, bukan pengukuran tingkat medis. Kalkulator mengalikan nilai MET berjalan standar (metabolic equivalent of task, dari Compendium of Physical Activities) untuk kecepatan pilihan Anda dengan berat badan dan waktu berjalan Anda. Pembakaran kalori sebenarnya juga bergantung pada medan, kemiringan, tingkat kebugaran, dan metabolisme individu, jadi anggap angka ini sebagai patokan kasar untuk memantau tren, bukan pengganti pelacak kebugaran atau perangkat medis.",
     "faq.q5": "Apakah jumlah langkah, tinggi badan, atau berat badan saya dikirim ke server?",
-    "faq.a5": "Tidak. Setiap perhitungan di kalkulator langkah ke mil ini — jarak, waktu berjalan, dan kalori — sepenuhnya berjalan di browser Anda. Tidak ada yang Anda ketik yang diunggah atau disimpan di server; input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda agar formulir mengingatnya pada kunjungan berikutnya."
+    "faq.a5": "Tidak. Setiap perhitungan di kalkulator langkah ke mil ini — jarak, waktu berjalan, dan kalori — sepenuhnya berjalan di browser Anda. Tidak ada yang Anda ketik yang diunggah atau disimpan di server; input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda agar formulir mengingatnya pada kunjungan berikutnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1097,7 +1152,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie genau ist die Kalorienschätzung?",
     "faq.a4": "Es ist eine grobe, MET-basierte Schätzung, keine medizinisch genaue Messung. Der Rechner multipliziert einen Standard-MET-Wert fürs Gehen (metabolisches Äquivalent der Aufgabe, aus dem Compendium of Physical Activities) für Ihr gewähltes Tempo mit Ihrem Körpergewicht und Ihrer Gehzeit. Der tatsächliche Kalorienverbrauch hängt auch von Gelände, Steigung, Fitnesslevel und individuellem Stoffwechsel ab. Betrachten Sie die Zahl daher als groben Anhaltspunkt zur Trendverfolgung, nicht als Ersatz für einen Fitnesstracker oder ein medizinisches Gerät.",
     "faq.q5": "Werden meine Schrittzahl, Körpergröße oder mein Gewicht an einen Server gesendet?",
-    "faq.a5": "Nein. Jede Berechnung in diesem Schritte-in-Meilen-Rechner — Distanz, Gehzeit und Kalorien — läuft vollständig in Ihrem Browser ab. Nichts, was Sie eingeben, wird hochgeladen oder auf einem Server gespeichert; Ihre letzten Eingaben werden nur im lokalen Speicher Ihres Browsers gesichert, damit sich das Formular bei Ihrem nächsten Besuch daran erinnert."
+    "faq.a5": "Nein. Jede Berechnung in diesem Schritte-in-Meilen-Rechner — Distanz, Gehzeit und Kalorien — läuft vollständig in Ihrem Browser ab. Nichts, was Sie eingeben, wird hochgeladen oder auf einem Server gespeichert; Ihre letzten Eingaben werden nur im lokalen Speicher Ihres Browsers gesichert, damit sich das Formular bei Ihrem nächsten Besuch daran erinnert.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1188,7 +1248,12 @@ window.I18N_LOCALES = {
     "faq.q4": "消費カロリーの推定はどのくらい正確ですか？",
     "faq.a4": "これはMET（メッツ）に基づく大まかな推定値であり、医療レベルの測定ではありません。この計算機は、選択した歩行ペースに対応する標準的な歩行時のMET値（タスクの代謝当量、Compendium of Physical Activitiesに基づく）に、体重と歩行時間を掛け合わせています。実際の消費カロリーは、地形、傾斜、体力レベル、個人の代謝によっても変わるため、この数値は傾向をつかむための目安として扱い、フィットネストラッカーや医療機器の代わりにはしないでください。",
     "faq.q5": "私の歩数・身長・体重はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この歩数マイル換算計算機での計算 — 距離、歩行時間、消費カロリー — はすべてブラウザ内だけで行われます。入力した内容がアップロードされたりサーバーに保存されたりすることはありません。最後に入力した値はブラウザのローカルストレージにのみ保存され、次回訪問時にフォームが記憶しています。"
+    "faq.a5": "いいえ。この歩数マイル換算計算機での計算 — 距離、歩行時間、消費カロリー — はすべてブラウザ内だけで行われます。入力した内容がアップロードされたりサーバーに保存されたりすることはありません。最後に入力した値はブラウザのローカルストレージにのみ保存され、次回訪問時にフォームが記憶しています。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1279,6 +1344,11 @@ window.I18N_LOCALES = {
     "faq.q4": "칼로리 추정치는 얼마나 정확한가요?",
     "faq.a4": "이는 MET(대사당량) 기반의 대략적인 추정치이며, 의료 수준의 측정값이 아닙니다. 이 계산기는 선택한 속도에 해당하는 표준 걷기 MET 값(과업 대사당량, Compendium of Physical Activities 자료 기준)에 체중과 걷는 시간을 곱합니다. 실제 칼로리 소모량은 지형, 경사, 체력 수준, 개인의 대사량에 따라서도 달라지므로, 이 수치는 경향을 파악하기 위한 대략적인 참고값으로만 활용하고 피트니스 트래커나 의료 기기를 대체하는 용도로는 사용하지 마세요.",
     "faq.q5": "제 걸음 수, 키, 체중이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 걸음수 마일 변환 계산기의 모든 계산 — 거리, 걷는 시간, 칼로리 — 은 전적으로 사용자의 브라우저에서만 이루어집니다. 입력한 내용은 어떤 서버에도 업로드되거나 저장되지 않으며, 마지막으로 입력한 값은 다음 방문 시 양식이 기억할 수 있도록 브라우저의 로컬 저장소에만 저장됩니다."
+    "faq.a5": "아니요. 이 걸음수 마일 변환 계산기의 모든 계산 — 거리, 걷는 시간, 칼로리 — 은 전적으로 사용자의 브라우저에서만 이루어집니다. 입력한 내용은 어떤 서버에도 업로드되거나 저장되지 않으며, 마지막으로 입력한 값은 다음 방문 시 양식이 기억할 수 있도록 브라우저의 로컬 저장소에만 저장됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

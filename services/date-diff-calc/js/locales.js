@@ -73,7 +73,12 @@ window.I18N_LOCALES = {
     "faq.a4": "This tool measures the gap between two dates — total days plus a years/months/weeks breakdown. If you want a countdown to a single target date, use our D-day calculator instead:",
     "faq.a4.link": "D-day calculator →",
     "faq.q5": "Can I use it for job tenure or pregnancy weeks?",
-    "faq.a5": "Yes. Enter your hire date and today for exact tenure, or the first day of the last period and today to read pregnancy progress from the weeks row (e.g. 24 weeks 3 days). It works for any elapsed-days question."
+    "faq.a5": "Yes. Enter your hire date and today for exact tenure, or the first day of the last period and today to read pregnancy progress from the weeks row (e.g. 24 weeks 3 days). It works for any elapsed-days question.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.a4": "本工具计算两个日期之间的间隔——总天数以及年/月/周分解。若需要对单个目标日期倒计时，请使用我们的D-day计算器：",
     "faq.a4.link": "D-day 计算器 →",
     "faq.q5": "可以用来算工龄或孕周吗？",
-    "faq.a5": "可以。输入入职日和今天可得精确工龄；输入末次月经第一天和今天，从“按周计”一行即可读出孕周（如24周3天）。任何“过了多少天”的问题都适用。"
+    "faq.a5": "可以。输入入职日和今天可得精确工龄；输入末次月经第一天和今天，从“按周计”一行即可读出孕周（如24周3天）。任何“过了多少天”的问题都适用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -181,7 +191,12 @@ window.I18N_LOCALES = {
     "faq.a4": "यह टूल दो तारीखों के बीच का अंतर मापता है — कुल दिन और वर्ष/माह/सप्ताह विवरण। किसी एक लक्ष्य तिथि की उलटी गिनती चाहिए तो हमारा D-day कैलकुलेटर देखें:",
     "faq.a4.link": "D-day कैलकुलेटर →",
     "faq.q5": "क्या नौकरी की अवधि या गर्भावस्था के सप्ताह के लिए उपयोग कर सकते हैं?",
-    "faq.a5": "हां। ज्वाइनिंग की तारीख और आज डालकर सटीक सेवा-अवधि पाएं, या अंतिम माहवारी के पहले दिन और आज से 'सप्ताह में' पंक्ति में गर्भावस्था की प्रगति देखें (जैसे 24 सप्ताह 3 दिन)।"
+    "faq.a5": "हां। ज्वाइनिंग की तारीख और आज डालकर सटीक सेवा-अवधि पाएं, या अंतिम माहवारी के पहले दिन और आज से 'सप्ताह में' पंक्ति में गर्भावस्था की प्रगति देखें (जैसे 24 सप्ताह 3 दिन)।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -235,7 +250,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Esta herramienta mide la distancia entre dos fechas: días totales más desglose en años/meses/semanas. Si buscas una cuenta regresiva hacia una fecha objetivo, usa nuestra calculadora D-day:",
     "faq.a4.link": "Calculadora D-day →",
     "faq.q5": "¿Sirve para antigüedad laboral o semanas de embarazo?",
-    "faq.a5": "Sí. Introduce tu fecha de ingreso y hoy para la antigüedad exacta, o el primer día de la última regla y hoy para leer las semanas de embarazo en la fila de semanas (p. ej. 24 semanas 3 días)."
+    "faq.a5": "Sí. Introduce tu fecha de ingreso y hoy para la antigüedad exacta, o el primer día de la última regla y hoy para leer las semanas de embarazo en la fila de semanas (p. ej. 24 semanas 3 días).",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -289,7 +309,12 @@ window.I18N_LOCALES = {
     "faq.a4": "تقيس هذه الأداة المسافة بين تاريخين — إجمالي الأيام مع تفصيل بالسنوات/الأشهر/الأسابيع. إن أردت عدًا تنازليًا نحو تاريخ واحد فاستخدم حاسبة D-day لدينا:",
     "faq.a4.link": "حاسبة D-day ←",
     "faq.q5": "هل تصلح لحساب مدة الخدمة أو أسابيع الحمل؟",
-    "faq.a5": "نعم. أدخل تاريخ التعيين واليوم لمعرفة مدة الخدمة بدقة، أو أول يوم من آخر دورة واليوم لقراءة أسابيع الحمل من صف الأسابيع (مثل 24 أسبوعًا و3 أيام)."
+    "faq.a5": "نعم. أدخل تاريخ التعيين واليوم لمعرفة مدة الخدمة بدقة، أو أول يوم من آخر دورة واليوم لقراءة أسابيع الحمل من صف الأسابيع (مثل 24 أسبوعًا و3 أيام).",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -343,7 +368,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Cet outil mesure l'écart entre deux dates : jours totaux et détail en années/mois/semaines. Pour un compte à rebours vers une date cible, utilisez notre calculateur D-day :",
     "faq.a4.link": "Calculateur D-day →",
     "faq.q5": "Peut-on l'utiliser pour l'ancienneté ou les semaines de grossesse ?",
-    "faq.a5": "Oui. Saisissez votre date d'embauche et aujourd'hui pour l'ancienneté exacte, ou le premier jour des dernières règles et aujourd'hui pour lire les semaines de grossesse sur la ligne « En semaines » (p. ex. 24 semaines 3 jours)."
+    "faq.a5": "Oui. Saisissez votre date d'embauche et aujourd'hui pour l'ancienneté exacte, ou le premier jour des dernières règles et aujourd'hui pour lire les semaines de grossesse sur la ligne « En semaines » (p. ex. 24 semaines 3 jours).",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -397,7 +427,12 @@ window.I18N_LOCALES = {
     "faq.a4": "এই টুল দুই তারিখের মধ্যকার দূরত্ব মাপে — মোট দিন এবং বছর/মাস/সপ্তাহ বিভাজন। একটি লক্ষ্য তারিখের কাউন্টডাউন চাইলে আমাদের D-day ক্যালকুলেটর ব্যবহার করুন:",
     "faq.a4.link": "D-day ক্যালকুলেটর →",
     "faq.q5": "চাকরির মেয়াদ বা গর্ভাবস্থার সপ্তাহ হিসাবে ব্যবহার করা যাবে?",
-    "faq.a5": "যাবে। যোগদানের তারিখ ও আজ দিলে সঠিক চাকরির মেয়াদ, বা শেষ মাসিকের প্রথম দিন ও আজ দিলে 'সপ্তাহে' সারি থেকে গর্ভাবস্থার অগ্রগতি (যেমন ২৪ সপ্তাহ ৩ দিন) জানা যায়।"
+    "faq.a5": "যাবে। যোগদানের তারিখ ও আজ দিলে সঠিক চাকরির মেয়াদ, বা শেষ মাসিকের প্রথম দিন ও আজ দিলে 'সপ্তাহে' সারি থেকে গর্ভাবস্থার অগ্রগতি (যেমন ২৪ সপ্তাহ ৩ দিন) জানা যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -451,7 +486,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Esta ferramenta mede a distância entre duas datas — dias totais e detalhamento em anos/meses/semanas. Para contagem regressiva até uma data-alvo, use nossa calculadora D-day:",
     "faq.a4.link": "Calculadora D-day →",
     "faq.q5": "Serve para tempo de serviço ou semanas de gravidez?",
-    "faq.a5": "Sim. Informe a data de admissão e hoje para o tempo de serviço exato, ou o primeiro dia da última menstruação e hoje para ler as semanas de gravidez na linha de semanas (ex.: 24 semanas e 3 dias)."
+    "faq.a5": "Sim. Informe a data de admissão e hoje para o tempo de serviço exato, ou o primeiro dia da última menstruação e hoje para ler as semanas de gravidez na linha de semanas (ex.: 24 semanas e 3 dias).",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -505,7 +545,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Этот инструмент измеряет расстояние между двумя датами — всего дней плюс разбивка по годам/месяцам/неделям. Для обратного отсчёта до одной целевой даты используйте наш калькулятор D-day:",
     "faq.a4.link": "Калькулятор D-day →",
     "faq.q5": "Подойдёт ли для стажа или недель беременности?",
-    "faq.a5": "Да. Введите дату приёма на работу и сегодня — получите точный стаж; либо первый день последней менструации и сегодня — недели беременности в строке недель (напр. 24 недели 3 дня)."
+    "faq.a5": "Да. Введите дату приёма на работу и сегодня — получите точный стаж; либо первый день последней менструации и сегодня — недели беременности в строке недель (напр. 24 недели 3 дня).",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -559,7 +604,12 @@ window.I18N_LOCALES = {
     "faq.a4": "یہ ٹول دو تاریخوں کے درمیان فاصلہ ناپتا ہے — کل دن اور سال/مہینہ/ہفتہ تفصیل۔ کسی ایک ہدف تاریخ کی الٹی گنتی چاہیے تو ہمارا D-day کیلکولیٹر استعمال کریں:",
     "faq.a4.link": "D-day کیلکولیٹر ←",
     "faq.q5": "کیا ملازمت کی مدت یا حمل کے ہفتوں کے لیے استعمال ہو سکتا ہے؟",
-    "faq.a5": "جی ہاں۔ ملازمت شروع ہونے کی تاریخ اور آج ڈال کر درست مدتِ ملازمت پائیں، یا آخری ماہواری کے پہلے دن اور آج سے 'ہفتوں میں' والی قطار سے حمل کی پیش رفت (جیسے 24 ہفتے 3 دن) دیکھیں۔"
+    "faq.a5": "جی ہاں۔ ملازمت شروع ہونے کی تاریخ اور آج ڈال کر درست مدتِ ملازمت پائیں، یا آخری ماہواری کے پہلے دن اور آج سے 'ہفتوں میں' والی قطار سے حمل کی پیش رفت (جیسے 24 ہفتے 3 دن) دیکھیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -613,7 +663,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Alat ini mengukur jarak antara dua tanggal — total hari plus rincian tahun/bulan/minggu. Untuk hitung mundur ke satu tanggal target, gunakan kalkulator D-day kami:",
     "faq.a4.link": "Kalkulator D-day →",
     "faq.q5": "Bisa untuk masa kerja atau usia kehamilan?",
-    "faq.a5": "Bisa. Masukkan tanggal mulai kerja dan hari ini untuk masa kerja yang tepat, atau hari pertama haid terakhir dan hari ini untuk membaca usia kehamilan di baris minggu (mis. 24 minggu 3 hari)."
+    "faq.a5": "Bisa. Masukkan tanggal mulai kerja dan hari ini untuk masa kerja yang tepat, atau hari pertama haid terakhir dan hari ini untuk membaca usia kehamilan di baris minggu (mis. 24 minggu 3 hari).",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -667,7 +722,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Dieses Tool misst den Abstand zwischen zwei Daten — Gesamttage plus Aufschlüsselung in Jahre/Monate/Wochen. Für einen Countdown auf ein Zieldatum nutzen Sie unseren D-day-Rechner:",
     "faq.a4.link": "D-day-Rechner →",
     "faq.q5": "Eignet es sich für Betriebszugehörigkeit oder Schwangerschaftswochen?",
-    "faq.a5": "Ja. Eintrittsdatum und heute eingeben für die exakte Betriebszugehörigkeit, oder den ersten Tag der letzten Periode und heute — die Schwangerschaftswochen stehen in der Wochenzeile (z. B. 24 Wochen 3 Tage)."
+    "faq.a5": "Ja. Eintrittsdatum und heute eingeben für die exakte Betriebszugehörigkeit, oder den ersten Tag der letzten Periode und heute — die Schwangerschaftswochen stehen in der Wochenzeile (z. B. 24 Wochen 3 Tage).",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -721,7 +781,12 @@ window.I18N_LOCALES = {
     "faq.a4": "このツールは2つの日付の間隔を測ります — 合計日数と年/月/週の内訳。目標日へのカウントダウンが必要なら、D-day計算機をご利用ください：",
     "faq.a4.link": "D-day計算機 →",
     "faq.q5": "勤続年数や妊娠週数の計算にも使えますか？",
-    "faq.a5": "使えます。入社日と今日を入れれば正確な勤続期間、最終月経の開始日と今日を入れれば週単位の行から妊娠週数（例：24週3日）が読み取れます。"
+    "faq.a5": "使えます。入社日と今日を入れれば正確な勤続期間、最終月経の開始日と今日を入れれば週単位の行から妊娠週数（例：24週3日）が読み取れます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -775,6 +840,11 @@ window.I18N_LOCALES = {
     "faq.a4": "이 도구는 두 날짜 '사이'를 잽니다 — 총 일수와 년/개월/주 분해까지. 하나의 목표일까지 남은 날을 세는 카운트다운이 필요하면 디데이 계산기를 쓰세요:",
     "faq.a4.link": "디데이 계산기 →",
     "faq.q5": "근속연수나 임신 주수 계산에도 쓸 수 있나요?",
-    "faq.a5": "네. 입사일과 오늘을 넣으면 정확한 근속기간이, 마지막 생리 시작일과 오늘을 넣으면 주 단위 행에서 임신 주수(예: 24주 3일)가 나옵니다. 며칠 지났는지 계산이 필요한 모든 상황에 쓸 수 있습니다."
+    "faq.a5": "네. 입사일과 오늘을 넣으면 정확한 근속기간이, 마지막 생리 시작일과 오늘을 넣으면 주 단위 행에서 임신 주수(예: 24주 3일)가 나옵니다. 며칠 지났는지 계산이 필요한 모든 상황에 쓸 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

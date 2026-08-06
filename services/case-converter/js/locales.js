@@ -67,7 +67,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do Title Case and Sentence case differ?",
     "faq.a4": "Title Case capitalises the first letter of every word — Convert Your Text Like This — which suits headlines and titles. Sentence case capitalises only the first letter of each sentence (after a period, question mark or exclamation mark) and leaves the rest lowercase — Convert your text like this. Use Title Case for headings and Sentence case for body copy and normal prose.",
     "faq.q5": "Is my text sent to a server?",
-    "faq.a5": "No. This case converter runs entirely in your browser — nothing you type is ever uploaded, logged or shared, so it is safe for confidential text and code. Your most recent input is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it for this session only, and clearing the box removes the stored copy."
+    "faq.a5": "No. This case converter runs entirely in your browser — nothing you type is ever uploaded, logged or shared, so it is safe for confidential text and code. Your most recent input is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it for this session only, and clearing the box removes the stored copy.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -116,7 +121,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Title Case 和 Sentence case 有什么区别？",
     "faq.a4": "Title Case 会把每个单词的首字母大写——Convert Your Text Like This——适合标题。Sentence case 只把每个句子的首字母大写（在句号、问号或感叹号之后），其余保持小写——Convert your text like this。标题用 Title Case，正文和普通文句用 Sentence case。",
     "faq.q5": "使用时我的文本会被发送到服务器吗？",
-    "faq.a5": "不会。这个大小写转换器完全在你的浏览器中运行——你输入的内容绝不会被上传、记录或分享，因此可以安全处理机密文本和代码。你最近一次的输入会可选地保存到浏览器的本地存储中，方便你下次回来继续使用；取消勾选保存选项即可仅在本次会话中保留，清空输入框会删除已保存的副本。"
+    "faq.a5": "不会。这个大小写转换器完全在你的浏览器中运行——你输入的内容绝不会被上传、记录或分享，因此可以安全处理机密文本和代码。你最近一次的输入会可选地保存到浏览器的本地存储中，方便你下次回来继续使用；取消勾选保存选项即可仅在本次会话中保留，清空输入框会删除已保存的副本。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Title Case और Sentence case में क्या अंतर है?",
     "faq.a4": "Title Case हर शब्द का पहला अक्षर बड़ा करता है — Convert Your Text Like This — जो शीर्षकों के लिए उपयुक्त है। Sentence case केवल हर वाक्य का पहला अक्षर बड़ा करता है (पूर्ण विराम, प्रश्नवाचक या विस्मयादिबोधक चिह्न के बाद) और बाकी छोटे रखता है — Convert your text like this। शीर्षकों के लिए Title Case और मुख्य पाठ व सामान्य गद्य के लिए Sentence case उपयोग करें।",
     "faq.q5": "क्या इसका उपयोग करते समय मेरा टेक्स्ट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह केस कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके टाइप किए गए किसी भी टेक्स्ट को कभी अपलोड, लॉग या साझा नहीं किया जाता, इसलिए यह गोपनीय टेक्स्ट और कोड के लिए सुरक्षित है। आपका सबसे हालिया इनपुट वैकल्पिक रूप से इस ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है ताकि लौटने पर वह मौजूद रहे; सेव विकल्प अनचेक करें ताकि यह केवल इस सत्र के लिए रहे, और बॉक्स साफ़ करने से सहेजी गई प्रति हट जाती है।"
+    "faq.a5": "नहीं। यह केस कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके टाइप किए गए किसी भी टेक्स्ट को कभी अपलोड, लॉग या साझा नहीं किया जाता, इसलिए यह गोपनीय टेक्स्ट और कोड के लिए सुरक्षित है। आपका सबसे हालिया इनपुट वैकल्पिक रूप से इस ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है ताकि लौटने पर वह मौजूद रहे; सेव विकल्प अनचेक करें ताकि यह केवल इस सत्र के लिए रहे, और बॉक्स साफ़ करने से सहेजी गई प्रति हट जाती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -214,7 +229,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿En qué se diferencian Title Case y Sentence case?",
     "faq.a4": "Title Case pone en mayúscula la primera letra de cada palabra — Convert Your Text Like This — ideal para titulares. Sentence case pone en mayúscula solo la primera letra de cada oración (tras un punto, signo de interrogación o de exclamación) y deja el resto en minúsculas — Convert your text like this. Usa Title Case para títulos y Sentence case para el cuerpo del texto y la prosa normal.",
     "faq.q5": "¿Se envía mi texto a un servidor al usarlo?",
-    "faq.a5": "No. Este conversor funciona por completo en tu navegador — nada de lo que escribes se sube, registra ni comparte, por lo que es seguro para texto y código confidenciales. Tu entrada más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga aquí cuando vuelvas; desmarca la opción de guardar para conservarla solo durante esta sesión, y al borrar el cuadro se elimina la copia guardada."
+    "faq.a5": "No. Este conversor funciona por completo en tu navegador — nada de lo que escribes se sube, registra ni comparte, por lo que es seguro para texto y código confidenciales. Tu entrada más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga aquí cuando vuelvas; desmarca la opción de guardar para conservarla solo durante esta sesión, y al borrar el cuadro se elimina la copia guardada.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -263,7 +283,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الفرق بين Title Case وSentence case؟",
     "faq.a4": "يجعل Title Case أول حرف من كل كلمة كبيرًا — Convert Your Text Like This — وهو مناسب للعناوين. أما Sentence case فيجعل أول حرف من كل جملة كبيرًا فقط (بعد نقطة أو علامة استفهام أو تعجب) ويترك الباقي صغيرًا — Convert your text like this. استخدم Title Case للعناوين وSentence case لنص المتن والنثر العادي.",
     "faq.q5": "هل يُرسَل نصي إلى خادم عند استخدامه؟",
-    "faq.a5": "لا. يعمل هذا المحوّل بالكامل في متصفحك — لا يُرفع أي شيء تكتبه أو يُسجَّل أو يُشارَك، لذا فهو آمن للنصوص والأكواد السرية. يُحفَظ إدخالك الأخير اختياريًا في التخزين المحلي لهذا المتصفح ليبقى موجودًا عند عودتك؛ ألغِ تحديد خيار الحفظ لإبقائه لهذه الجلسة فقط، وسيؤدي مسح الصندوق إلى إزالة النسخة المحفوظة."
+    "faq.a5": "لا. يعمل هذا المحوّل بالكامل في متصفحك — لا يُرفع أي شيء تكتبه أو يُسجَّل أو يُشارَك، لذا فهو آمن للنصوص والأكواد السرية. يُحفَظ إدخالك الأخير اختياريًا في التخزين المحلي لهذا المتصفح ليبقى موجودًا عند عودتك؛ ألغِ تحديد خيار الحفظ لإبقائه لهذه الجلسة فقط، وسيؤدي مسح الصندوق إلى إزالة النسخة المحفوظة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -312,7 +337,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la différence entre Title Case et Sentence case ?",
     "faq.a4": "Title Case met en majuscule la première lettre de chaque mot — Convert Your Text Like This — idéal pour les titres. Sentence case met en majuscule uniquement la première lettre de chaque phrase (après un point, un point d'interrogation ou d'exclamation) et laisse le reste en minuscules — Convert your text like this. Utilisez Title Case pour les titres et Sentence case pour le corps du texte et la prose ordinaire.",
     "faq.q5": "Mon texte est-il envoyé à un serveur lorsque je l'utilise ?",
-    "faq.a5": "Non. Ce convertisseur fonctionne entièrement dans votre navigateur — rien de ce que vous saisissez n'est envoyé, journalisé ni partagé, il est donc sûr pour le texte et le code confidentiels. Votre saisie la plus récente est facultativement enregistrée dans le stockage local de ce navigateur afin de la retrouver à votre retour ; décochez l'option d'enregistrement pour la conserver seulement pour cette session, et vider le champ supprime la copie enregistrée."
+    "faq.a5": "Non. Ce convertisseur fonctionne entièrement dans votre navigateur — rien de ce que vous saisissez n'est envoyé, journalisé ni partagé, il est donc sûr pour le texte et le code confidentiels. Votre saisie la plus récente est facultativement enregistrée dans le stockage local de ce navigateur afin de la retrouver à votre retour ; décochez l'option d'enregistrement pour la conserver seulement pour cette session, et vider le champ supprime la copie enregistrée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -361,7 +391,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Title Case এবং Sentence case-এর মধ্যে পার্থক্য কী?",
     "faq.a4": "Title Case প্রতিটি শব্দের প্রথম অক্ষর বড় হাতের করে — Convert Your Text Like This — যা শিরোনামের জন্য উপযুক্ত। Sentence case শুধুমাত্র প্রতিটি বাক্যের প্রথম অক্ষর বড় হাতের করে (পূর্ণচ্ছেদ, প্রশ্নবোধক বা বিস্ময়বোধক চিহ্নের পরে) এবং বাকি ছোট হাতের রাখে — Convert your text like this। শিরোনামের জন্য Title Case এবং মূল লেখা ও সাধারণ গদ্যের জন্য Sentence case ব্যবহার করুন।",
     "faq.q5": "এটি ব্যবহার করার সময় আমার টেক্সট কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই কনভার্টার সম্পূর্ণ আপনার ব্রাউজারে চলে — আপনি যা টাইপ করেন তা কখনও আপলোড, লগ বা শেয়ার করা হয় না, তাই এটি গোপনীয় টেক্সট ও কোডের জন্য নিরাপদ। আপনার সাম্প্রতিকতম ইনপুট ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয় যাতে ফিরে এলে তা থেকে যায়; শুধু এই সেশনের জন্য রাখতে সেভ অপশন আনচেক করুন, এবং বক্স মুছলে সংরক্ষিত কপি সরে যায়।"
+    "faq.a5": "না। এই কনভার্টার সম্পূর্ণ আপনার ব্রাউজারে চলে — আপনি যা টাইপ করেন তা কখনও আপলোড, লগ বা শেয়ার করা হয় না, তাই এটি গোপনীয় টেক্সট ও কোডের জন্য নিরাপদ। আপনার সাম্প্রতিকতম ইনপুট ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয় যাতে ফিরে এলে তা থেকে যায়; শুধু এই সেশনের জন্য রাখতে সেভ অপশন আনচেক করুন, এবং বক্স মুছলে সংরক্ষিত কপি সরে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -410,7 +445,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a diferença entre Title Case e Sentence case?",
     "faq.a4": "Title Case coloca em maiúscula a primeira letra de cada palavra — Convert Your Text Like This — ideal para títulos. Sentence case coloca em maiúscula apenas a primeira letra de cada frase (após ponto, ponto de interrogação ou de exclamação) e deixa o restante em minúsculas — Convert your text like this. Use Title Case para títulos e Sentence case para o corpo do texto e prosa comum.",
     "faq.q5": "Meu texto é enviado a um servidor ao usá-lo?",
-    "faq.a5": "Não. Este conversor funciona totalmente no seu navegador — nada do que você digita é enviado, registrado ou compartilhado, por isso é seguro para textos e códigos confidenciais. Sua entrada mais recente é opcionalmente salva no armazenamento local deste navegador para continuar aqui quando você voltar; desmarque a opção de salvar para mantê-la apenas nesta sessão, e limpar a caixa remove a cópia salva."
+    "faq.a5": "Não. Este conversor funciona totalmente no seu navegador — nada do que você digita é enviado, registrado ou compartilhado, por isso é seguro para textos e códigos confidenciais. Sua entrada mais recente é opcionalmente salva no armazenamento local deste navegador para continuar aqui quando você voltar; desmarque a opção de salvar para mantê-la apenas nesta sessão, e limpar a caixa remove a cópia salva.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -459,7 +499,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Чем отличаются Title Case и Sentence case?",
     "faq.a4": "Title Case делает заглавной первую букву каждого слова — Convert Your Text Like This — что подходит для заголовков. Sentence case делает заглавной только первую букву каждого предложения (после точки, вопросительного или восклицательного знака), а остальное оставляет строчным — Convert your text like this. Используйте Title Case для заголовков, а Sentence case — для основного текста и обычной прозы.",
     "faq.q5": "Отправляется ли мой текст на сервер при использовании?",
-    "faq.a5": "Нет. Этот конвертер работает полностью в вашем браузере — ничего из введённого не загружается, не логируется и не передаётся, поэтому он безопасен для конфиденциального текста и кода. Ваш последний ввод по желанию сохраняется в локальном хранилище браузера, чтобы оставаться на месте по возвращении; снимите флажок сохранения, чтобы хранить его только в этой сессии, а очистка поля удаляет сохранённую копию."
+    "faq.a5": "Нет. Этот конвертер работает полностью в вашем браузере — ничего из введённого не загружается, не логируется и не передаётся, поэтому он безопасен для конфиденциального текста и кода. Ваш последний ввод по желанию сохраняется в локальном хранилище браузера, чтобы оставаться на месте по возвращении; снимите флажок сохранения, чтобы хранить его только в этой сессии, а очистка поля удаляет сохранённую копию.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -508,7 +553,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Title Case اور Sentence case میں کیا فرق ہے؟",
     "faq.a4": "Title Case ہر لفظ کا پہلا حرف بڑا کرتا ہے — Convert Your Text Like This — جو عنوانات کے لیے موزوں ہے۔ Sentence case صرف ہر جملے کا پہلا حرف بڑا کرتا ہے (نقطہ، سوالیہ یا فجائیہ نشان کے بعد) اور باقی چھوٹے رکھتا ہے — Convert your text like this۔ عنوانات کے لیے Title Case اور مرکزی متن و عام نثر کے لیے Sentence case استعمال کریں۔",
     "faq.q5": "کیا استعمال کرتے وقت میرا متن سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو بھی ٹائپ کرتے ہیں وہ کبھی اپ لوڈ، لاگ یا شیئر نہیں ہوتا، اس لیے یہ خفیہ متن اور کوڈ کے لیے محفوظ ہے۔ آپ کا تازہ ترین ان پٹ اختیاری طور پر اس براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ واپسی پر موجود رہے؛ صرف اس سیشن کے لیے رکھنے کو سیو آپشن ان چیک کریں، اور باکس صاف کرنے سے محفوظ نقل ہٹ جاتی ہے۔"
+    "faq.a5": "نہیں۔ یہ کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو بھی ٹائپ کرتے ہیں وہ کبھی اپ لوڈ، لاگ یا شیئر نہیں ہوتا، اس لیے یہ خفیہ متن اور کوڈ کے لیے محفوظ ہے۔ آپ کا تازہ ترین ان پٹ اختیاری طور پر اس براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ واپسی پر موجود رہے؛ صرف اس سیشن کے لیے رکھنے کو سیو آپشن ان چیک کریں، اور باکس صاف کرنے سے محفوظ نقل ہٹ جاتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -557,7 +607,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa beda Title Case dan Sentence case?",
     "faq.a4": "Title Case membuat huruf pertama setiap kata menjadi kapital — Convert Your Text Like This — cocok untuk judul. Sentence case hanya membuat huruf pertama setiap kalimat menjadi kapital (setelah titik, tanda tanya, atau tanda seru) dan sisanya huruf kecil — Convert your text like this. Gunakan Title Case untuk judul dan Sentence case untuk isi teks dan prosa biasa.",
     "faq.q5": "Apakah teks saya dikirim ke server saat memakainya?",
-    "faq.a5": "Tidak. Konverter ini berjalan sepenuhnya di peramban Anda — tidak ada yang Anda ketik yang diunggah, dicatat, atau dibagikan, sehingga aman untuk teks dan kode rahasia. Masukan terbaru Anda secara opsional disimpan di penyimpanan lokal peramban ini agar tetap ada saat Anda kembali; hapus centang opsi simpan untuk menyimpannya hanya pada sesi ini, dan mengosongkan kotak akan menghapus salinan tersimpan."
+    "faq.a5": "Tidak. Konverter ini berjalan sepenuhnya di peramban Anda — tidak ada yang Anda ketik yang diunggah, dicatat, atau dibagikan, sehingga aman untuk teks dan kode rahasia. Masukan terbaru Anda secara opsional disimpan di penyimpanan lokal peramban ini agar tetap ada saat Anda kembali; hapus centang opsi simpan untuk menyimpannya hanya pada sesi ini, dan mengosongkan kotak akan menghapus salinan tersimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -606,7 +661,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Worin unterscheiden sich Title Case und Sentence case?",
     "faq.a4": "Title Case schreibt den ersten Buchstaben jedes Wortes groß — Convert Your Text Like This — passend für Überschriften. Sentence case schreibt nur den ersten Buchstaben jedes Satzes groß (nach Punkt, Frage- oder Ausrufezeichen) und lässt den Rest klein — Convert your text like this. Verwenden Sie Title Case für Überschriften und Sentence case für Fließtext und normale Prosa.",
     "faq.q5": "Wird mein Text bei der Nutzung an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Konverter läuft vollständig in Ihrem Browser — nichts, was Sie eingeben, wird hochgeladen, protokolliert oder geteilt, daher ist er für vertrauliche Texte und Code sicher. Ihre letzte Eingabe wird optional im lokalen Speicher dieses Browsers gesichert, damit sie bei Ihrer Rückkehr noch da ist; deaktivieren Sie die Speicheroption, um sie nur für diese Sitzung zu behalten, und das Leeren des Felds entfernt die gespeicherte Kopie."
+    "faq.a5": "Nein. Dieser Konverter läuft vollständig in Ihrem Browser — nichts, was Sie eingeben, wird hochgeladen, protokolliert oder geteilt, daher ist er für vertrauliche Texte und Code sicher. Ihre letzte Eingabe wird optional im lokalen Speicher dieses Browsers gesichert, damit sie bei Ihrer Rückkehr noch da ist; deaktivieren Sie die Speicheroption, um sie nur für diese Sitzung zu behalten, und das Leeren des Felds entfernt die gespeicherte Kopie.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -655,7 +715,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Title Case と Sentence case はどう違いますか？",
     "faq.a4": "Title Case は各単語の最初の文字を大文字にします — Convert Your Text Like This — 見出しに適しています。Sentence case は各文の最初の文字だけを大文字にし（ピリオド・疑問符・感嘆符の後）、残りは小文字にします — Convert your text like this。見出しには Title Case、本文や通常の文章には Sentence case を使いましょう。",
     "faq.q5": "使用時にテキストはサーバーに送信されますか？",
-    "faq.a5": "いいえ。この変換ツールはすべてブラウザ内で動作し、入力した内容がアップロード・記録・共有されることは一切ないため、機密のテキストやコードにも安全です。最後の入力は任意でこのブラウザのローカルストレージに保存され、次回訪問時にも残ります。保存オプションのチェックを外すとこのセッション中のみ保持され、ボックスを空にすると保存されたコピーは削除されます。"
+    "faq.a5": "いいえ。この変換ツールはすべてブラウザ内で動作し、入力した内容がアップロード・記録・共有されることは一切ないため、機密のテキストやコードにも安全です。最後の入力は任意でこのブラウザのローカルストレージに保存され、次回訪問時にも残ります。保存オプションのチェックを外すとこのセッション中のみ保持され、ボックスを空にすると保存されたコピーは削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -704,6 +769,11 @@ window.I18N_LOCALES = {
     "faq.q4": "Title Case 와 Sentence case 는 어떻게 다른가요?",
     "faq.a4": "Title Case 는 모든 단어의 첫 글자를 대문자로 만듭니다 — Convert Your Text Like This — 제목에 적합합니다. Sentence case 는 각 문장의 첫 글자만 대문자로 만들고(마침표·물음표·느낌표 뒤) 나머지는 소문자로 둡니다 — Convert your text like this. 제목에는 Title Case, 본문과 일반 문장에는 Sentence case 를 쓰세요.",
     "faq.q5": "사용할 때 내 텍스트가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 변환기는 전부 브라우저 안에서 실행되며 입력한 내용은 절대 업로드·기록·공유되지 않으므로 민감한 텍스트와 코드에도 안전합니다. 가장 최근 입력은 선택적으로 이 브라우저의 로컬 스토리지에 저장되어 다시 방문할 때 남아 있습니다. 저장 옵션을 해제하면 이번 세션에만 유지되고, 입력란을 비우면 저장된 사본이 삭제됩니다."
+    "faq.a5": "아니요. 이 변환기는 전부 브라우저 안에서 실행되며 입력한 내용은 절대 업로드·기록·공유되지 않으므로 민감한 텍스트와 코드에도 안전합니다. 가장 최근 입력은 선택적으로 이 브라우저의 로컬 스토리지에 저장되어 다시 방문할 때 남아 있습니다. 저장 옵션을 해제하면 이번 세션에만 유지되고, 입력란을 비우면 저장된 사본이 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

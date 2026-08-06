@@ -80,7 +80,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What are the odds of giving birth exactly on the due date?",
     "faq.a4": "About 5% — only around 1 baby in 20 arrives on its estimated due date. The due date is the midpoint of a range, not a deadline. Most babies are born between 37 and 42 weeks of gestational age, with 38 to 42 weeks treated as the normal window for delivery, and first babies tend to arrive a little later than the estimate. So read the date this due date calculator gives you as the centre of a month-wide landing zone, and use the week count to follow along with your pregnancy rather than to count down to one fixed day.",
     "faq.q5": "Are the dates I enter sent to a server?",
-    "faq.a5": "No. This pregnancy week calculator runs entirely in your browser — your last period date, cycle length and calculation date are never uploaded, tracked or shared. Your last entry is kept only in your own browser’s localStorage, so the form is already filled in when you come back, and you can wipe it at any time by clearing your browser data. There is no account, no server call and no analytics attached to the calculation: nothing about your pregnancy leaves your device."
+    "faq.a5": "No. This pregnancy week calculator runs entirely in your browser — your last period date, cycle length and calculation date are never uploaded, tracked or shared. Your last entry is kept only in your own browser’s localStorage, so the form is already filled in when you come back, and you can wipe it at any time by clearing your browser data. There is no account, no server call and no analytics attached to the calculation: nothing about your pregnancy leaves your device.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -142,7 +147,12 @@ window.I18N_LOCALES = {
     "faq.q4": "正好在预产期当天分娩的概率有多大？",
     "faq.a4": "大约 5% — 只有约二十分之一的宝宝正好在预产期当天出生。预产期是一个范围的中点，而不是截止日期。大多数宝宝在孕 37 至 42 周之间出生，其中 38 至 42 周被视为正常分娩窗口，头胎往往比预产期稍晚一些。所以请把这个预产期计算器给出的日期看作一个横跨约一个月的“着陆区”的中心，用周数来跟进孕期进展，而不是倒数某个固定的日子。",
     "faq.q5": "我输入的日期会被发送到服务器吗？",
-    "faq.a5": "不会。这个怀孕周数计算器完全在你的浏览器中运行 — 末次月经日期、周期天数和计算日期都不会上传、追踪或分享。你最近一次输入的内容只保存在你自己浏览器的 localStorage 中，方便你下次回来时表单已经填好，你随时可以通过清除浏览器数据来删除它。计算过程没有账号、没有服务器请求、也没有绑定任何分析工具：关于你怀孕的信息不会离开你的设备。"
+    "faq.a5": "不会。这个怀孕周数计算器完全在你的浏览器中运行 — 末次月经日期、周期天数和计算日期都不会上传、追踪或分享。你最近一次输入的内容只保存在你自己浏览器的 localStorage 中，方便你下次回来时表单已经填好，你随时可以通过清除浏览器数据来删除它。计算过程没有账号、没有服务器请求、也没有绑定任何分析工具：关于你怀孕的信息不会离开你的设备。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -204,7 +214,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ठीक संभावित तारीख पर ही बच्चा होने की संभावना कितनी है?",
     "faq.a4": "लगभग 5% — बीस में से क़रीब एक बच्चा ही अपनी संभावित तारीख पर पैदा होता है। यह तारीख़ एक दायरे का मध्यबिंदु है, कोई समय-सीमा नहीं। ज़्यादातर बच्चे 37 से 42 हफ्ते के बीच जन्म लेते हैं, जिसमें 38 से 42 हफ्ते को सामान्य प्रसव अवधि माना जाता है, और पहला बच्चा अक्सर अनुमान से थोड़ा देर से आता है। इसलिए इस कैलकुलेटर की दी तारीख़ को लगभग एक महीने चौड़े दायरे का केंद्र समझें, और हफ्तों की गिनती का इस्तेमाल गर्भावस्था के साथ चलने के लिए करें, किसी एक तय दिन की उलटी गिनती के लिए नहीं।",
     "faq.q5": "क्या मैंने जो तारीखें डाली हैं वे सर्वर पर भेजी जाती हैं?",
-    "faq.a5": "नहीं। यह प्रेग्नेंसी वीक कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपकी माहवारी की तारीख, चक्र की लंबाई और गणना की तारीख कभी अपलोड, ट्रैक या साझा नहीं की जातीं। आपकी पिछली प्रविष्टि सिर्फ़ आपके अपने ब्राउज़र के localStorage में रहती है, ताकि लौटने पर फ़ॉर्म पहले से भरा मिले, और आप ब्राउज़र डेटा मिटाकर उसे कभी भी हटा सकती हैं। न कोई अकाउंट, न सर्वर कॉल, न गणना से जुड़ा कोई एनालिटिक्स: आपकी गर्भावस्था की कोई जानकारी आपके डिवाइस से बाहर नहीं जाती।"
+    "faq.a5": "नहीं। यह प्रेग्नेंसी वीक कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपकी माहवारी की तारीख, चक्र की लंबाई और गणना की तारीख कभी अपलोड, ट्रैक या साझा नहीं की जातीं। आपकी पिछली प्रविष्टि सिर्फ़ आपके अपने ब्राउज़र के localStorage में रहती है, ताकि लौटने पर फ़ॉर्म पहले से भरा मिले, और आप ब्राउज़र डेटा मिटाकर उसे कभी भी हटा सकती हैं। न कोई अकाउंट, न सर्वर कॉल, न गणना से जुड़ा कोई एनालिटिक्स: आपकी गर्भावस्था की कोई जानकारी आपके डिवाइस से बाहर नहीं जाती।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -266,7 +281,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué probabilidad hay de dar a luz justo en la fecha prevista?",
     "faq.a4": "Alrededor del 5%: solo 1 de cada 20 bebés nace exactamente en su fecha probable de parto. Esa fecha es el punto medio de un intervalo, no un plazo límite. La mayoría de los bebés nacen entre las semanas 37 y 42 de edad gestacional, y se considera que de la 38 a la 42 es la ventana normal de parto; además, los primeros hijos suelen llegar algo más tarde que la estimación. Así que interpreta la fecha que te da esta calculadora como el centro de una zona de aterrizaje de casi un mes, y usa la cuenta de semanas para acompañar tu embarazo más que para descontar los días hasta un día fijo.",
     "faq.q5": "¿Las fechas que introduzco se envían a un servidor?",
-    "faq.a5": "No. Esta calculadora de semanas de embarazo funciona por completo en tu navegador: la fecha de tu última regla, la duración de tu ciclo y la fecha de cálculo nunca se suben, se rastrean ni se comparten. Tu última entrada se guarda solo en el localStorage de tu propio navegador, para que el formulario ya esté relleno cuando vuelvas, y puedes borrarla cuando quieras eliminando los datos de navegación. No hay cuenta, ni llamadas a servidor, ni analítica ligada al cálculo: nada sobre tu embarazo sale de tu dispositivo."
+    "faq.a5": "No. Esta calculadora de semanas de embarazo funciona por completo en tu navegador: la fecha de tu última regla, la duración de tu ciclo y la fecha de cálculo nunca se suben, se rastrean ni se comparten. Tu última entrada se guarda solo en el localStorage de tu propio navegador, para que el formulario ya esté relleno cuando vuelvas, y puedes borrarla cuando quieras eliminando los datos de navegación. No hay cuenta, ni llamadas a servidor, ni analítica ligada al cálculo: nada sobre tu embarazo sale de tu dispositivo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -328,7 +348,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما احتمال الولادة في يوم الموعد المتوقع بالضبط؟",
     "faq.a4": "نحو 5% — أي طفل واحد تقريبًا من كل عشرين يولد في موعده المتوقع بالضبط. فالموعد هو منتصف نطاق، وليس موعدًا نهائيًا. معظم الأطفال يولدون بين الأسبوع 37 و42 من عمر الحمل، ويُعد ما بين 38 و42 أسبوعًا النافذة الطبيعية للولادة، كما أن المولود الأول غالبًا ما يتأخر قليلًا عن التقدير. لذلك اعتبري التاريخ الذي تعطيه لكِ هذه الحاسبة مركزًا لمنطقة تمتد نحو شهر كامل، واستخدمي عدّ الأسابيع لمواكبة حملك بدل العد التنازلي ليوم واحد ثابت.",
     "faq.q5": "هل تُرسل التواريخ التي أدخلها إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة أسابيع الحمل هذه بالكامل داخل متصفحك — تاريخ آخر دورة وطول دورتك وتاريخ الحساب لا تُرفع ولا تُتعقب ولا تُشارك أبدًا. يُحفظ آخر إدخال في localStorage الخاص بمتصفحك وحده، لتجدي النموذج جاهزًا عند عودتك، ويمكنك محوه في أي وقت بمسح بيانات التصفح. لا حساب ولا اتصال بخادم ولا أدوات تحليل مرتبطة بالحساب: لا شيء عن حملك يغادر جهازك."
+    "faq.a5": "لا. تعمل حاسبة أسابيع الحمل هذه بالكامل داخل متصفحك — تاريخ آخر دورة وطول دورتك وتاريخ الحساب لا تُرفع ولا تُتعقب ولا تُشارك أبدًا. يُحفظ آخر إدخال في localStorage الخاص بمتصفحك وحده، لتجدي النموذج جاهزًا عند عودتك، ويمكنك محوه في أي وقت بمسح بيانات التصفح. لا حساب ولا اتصال بخادم ولا أدوات تحليل مرتبطة بالحساب: لا شيء عن حملك يغادر جهازك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -390,7 +415,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelles sont les chances d'accoucher exactement à la date prévue ?",
     "faq.a4": "Environ 5 % — à peine 1 bébé sur 20 naît le jour de sa date prévue. Cette date est le milieu d'une fourchette, pas une échéance. La plupart des bébés naissent entre 37 et 42 semaines d'âge gestationnel, la période de 38 à 42 semaines étant considérée comme la fenêtre normale d'accouchement, et les premiers enfants arrivent souvent un peu après l'estimation. Considérez donc la date donnée par ce calculateur comme le centre d'une zone d'atterrissage large d'environ un mois, et servez-vous du compte des semaines pour suivre votre grossesse plutôt que pour décompter jusqu'à un jour fixe.",
     "faq.q5": "Les dates que je saisis sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce calculateur de semaines de grossesse fonctionne entièrement dans votre navigateur : la date de vos dernières règles, la durée de votre cycle et la date de calcul ne sont jamais transmises, suivies ni partagées. Votre dernière saisie est conservée uniquement dans le localStorage de votre propre navigateur, afin que le formulaire soit prérempli à votre retour, et vous pouvez l'effacer à tout moment en supprimant les données de navigation. Aucun compte, aucun appel serveur, aucune mesure d'audience liée au calcul : rien de votre grossesse ne quitte votre appareil."
+    "faq.a5": "Non. Ce calculateur de semaines de grossesse fonctionne entièrement dans votre navigateur : la date de vos dernières règles, la durée de votre cycle et la date de calcul ne sont jamais transmises, suivies ni partagées. Votre dernière saisie est conservée uniquement dans le localStorage de votre propre navigateur, afin que le formulaire soit prérempli à votre retour, et vous pouvez l'effacer à tout moment en supprimant les données de navigation. Aucun compte, aucun appel serveur, aucune mesure d'audience liée au calcul : rien de votre grossesse ne quitte votre appareil.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -452,7 +482,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ঠিক সম্ভাব্য তারিখেই সন্তান জন্মানোর সম্ভাবনা কত?",
     "faq.a4": "প্রায় ৫% — কুড়িতে মোটে একটি শিশু তার সম্ভাব্য তারিখে জন্মায়। এই তারিখ একটি পরিসরের মধ্যবিন্দু, কোনো শেষ সময়সীমা নয়। বেশিরভাগ শিশু গর্ভকালীন ৩৭ থেকে ৪২ সপ্তাহের মধ্যে জন্মায়, এর মধ্যে ৩৮ থেকে ৪২ সপ্তাহকে স্বাভাবিক প্রসবের সময় ধরা হয়, আর প্রথম সন্তান সাধারণত অনুমানের চেয়ে একটু দেরিতে আসে। তাই এই ক্যালকুলেটরের দেওয়া তারিখটিকে প্রায় এক মাস চওড়া একটি এলাকার কেন্দ্র হিসেবে দেখুন, এবং সপ্তাহের হিসাব ব্যবহার করুন গর্ভাবস্থার সঙ্গে তাল মেলাতে, কোনো নির্দিষ্ট দিনের উল্টো গণনার জন্য নয়।",
     "faq.q5": "আমি যে তারিখগুলো দিই তা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই গর্ভাবস্থার সপ্তাহ ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে — আপনার শেষ মাসিকের তারিখ, চক্রের দৈর্ঘ্য ও হিসাবের তারিখ কখনও আপলোড, ট্র্যাক বা শেয়ার করা হয় না। আপনার শেষ ইনপুট কেবল আপনার নিজের ব্রাউজারের localStorage-এ থাকে, যাতে ফিরে এলে ফর্ম আগেই পূরণ থাকে, আর ব্রাউজারের ডেটা মুছে যেকোনো সময় তা সরিয়ে ফেলতে পারেন। কোনো অ্যাকাউন্ট নেই, সার্ভার কল নেই, হিসাবের সঙ্গে কোনো অ্যানালিটিক্সও যুক্ত নয়: আপনার গর্ভাবস্থার কিছুই আপনার ডিভাইস ছেড়ে যায় না।"
+    "faq.a5": "না। এই গর্ভাবস্থার সপ্তাহ ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে — আপনার শেষ মাসিকের তারিখ, চক্রের দৈর্ঘ্য ও হিসাবের তারিখ কখনও আপলোড, ট্র্যাক বা শেয়ার করা হয় না। আপনার শেষ ইনপুট কেবল আপনার নিজের ব্রাউজারের localStorage-এ থাকে, যাতে ফিরে এলে ফর্ম আগেই পূরণ থাকে, আর ব্রাউজারের ডেটা মুছে যেকোনো সময় তা সরিয়ে ফেলতে পারেন। কোনো অ্যাকাউন্ট নেই, সার্ভার কল নেই, হিসাবের সঙ্গে কোনো অ্যানালিটিক্সও যুক্ত নয়: আপনার গর্ভাবস্থার কিছুই আপনার ডিভাইস ছেড়ে যায় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -514,7 +549,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual a chance de o bebê nascer exatamente na data prevista?",
     "faq.a4": "Cerca de 5% — apenas 1 bebê em cada 20 nasce na data provável do parto. Essa data é o ponto médio de um intervalo, não um prazo. A maioria dos bebês nasce entre 37 e 42 semanas de idade gestacional, sendo de 38 a 42 semanas a janela considerada normal para o parto, e o primeiro filho costuma chegar um pouco depois da estimativa. Portanto, leia a data que esta calculadora informa como o centro de uma faixa de quase um mês, e use a contagem de semanas para acompanhar a gestação em vez de fazer contagem regressiva para um dia fixo.",
     "faq.q5": "As datas que eu informo são enviadas para um servidor?",
-    "faq.a5": "Não. Esta calculadora de semanas de gravidez roda inteiramente no seu navegador — a data da sua última menstruação, a duração do ciclo e a data de cálculo nunca são enviadas, rastreadas ou compartilhadas. Sua última entrada fica salva apenas no localStorage do seu próprio navegador, para que o formulário já esteja preenchido quando você voltar, e você pode apagá-la quando quiser limpando os dados de navegação. Não há conta, chamada a servidor nem analytics ligado ao cálculo: nada sobre sua gravidez sai do seu dispositivo."
+    "faq.a5": "Não. Esta calculadora de semanas de gravidez roda inteiramente no seu navegador — a data da sua última menstruação, a duração do ciclo e a data de cálculo nunca são enviadas, rastreadas ou compartilhadas. Sua última entrada fica salva apenas no localStorage do seu próprio navegador, para que o formulário já esteja preenchido quando você voltar, e você pode apagá-la quando quiser limpando os dados de navegação. Não há conta, chamada a servidor nem analytics ligado ao cálculo: nada sobre sua gravidez sai do seu dispositivo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -576,7 +616,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Какова вероятность родить точно в предполагаемую дату?",
     "faq.a4": "Около 5% — лишь примерно один ребёнок из двадцати рождается точно в свою ПДР. Эта дата — середина диапазона, а не крайний срок. Большинство детей рождаются между 37-й и 42-й неделями гестационного срока, причём период с 38-й по 42-ю неделю считается нормальным окном для родов, а первые дети обычно появляются чуть позже расчётной даты. Поэтому воспринимайте дату, которую даёт калькулятор, как центр «зоны приземления» шириной почти в месяц, и используйте счёт недель, чтобы следить за беременностью, а не как обратный отсчёт до одного фиксированного дня.",
     "faq.q5": "Отправляются ли введённые даты на сервер?",
-    "faq.a5": "Нет. Этот калькулятор срока беременности работает полностью в вашем браузере — дата последней менструации, длина цикла и дата расчёта никогда не выгружаются, не отслеживаются и не передаются. Последний ввод хранится только в localStorage вашего собственного браузера, чтобы при возвращении форма уже была заполнена, и вы можете стереть его в любой момент, очистив данные браузера. Ни аккаунта, ни обращений к серверу, ни аналитики, связанной с расчётом: ничего о вашей беременности не покидает устройство."
+    "faq.a5": "Нет. Этот калькулятор срока беременности работает полностью в вашем браузере — дата последней менструации, длина цикла и дата расчёта никогда не выгружаются, не отслеживаются и не передаются. Последний ввод хранится только в localStorage вашего собственного браузера, чтобы при возвращении форма уже была заполнена, и вы можете стереть его в любой момент, очистив данные браузера. Ни аккаунта, ни обращений к серверу, ни аналитики, связанной с расчётом: ничего о вашей беременности не покидает устройство.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -638,7 +683,12 @@ window.I18N_LOCALES = {
     "faq.q4": "بالکل متوقع تاریخ پر ہی بچہ پیدا ہونے کا امکان کتنا ہے؟",
     "faq.a4": "تقریباً 5% — بیس میں سے صرف ایک بچہ اپنی متوقع تاریخ پر پیدا ہوتا ہے۔ یہ تاریخ ایک دائرے کا وسط ہے، کوئی آخری حد نہیں۔ زیادہ تر بچے حملی عمر کے 37 سے 42 ہفتوں کے درمیان پیدا ہوتے ہیں، جس میں 38 سے 42 ہفتے کو زچگی کا معمول کا وقفہ سمجھا جاتا ہے، اور پہلا بچہ اکثر اندازے سے کچھ دیر سے آتا ہے۔ اس لیے اس کیلکولیٹر کی دی ہوئی تاریخ کو تقریباً ایک مہینہ چوڑے علاقے کا مرکز سمجھیں، اور ہفتوں کی گنتی کو حمل کے ساتھ چلنے کے لیے استعمال کریں، کسی ایک مقررہ دن کی الٹی گنتی کے لیے نہیں۔",
     "faq.q5": "کیا میں جو تاریخیں درج کرتی ہوں وہ سرور پر بھیجی جاتی ہیں؟",
-    "faq.a5": "نہیں۔ یہ حملِ ہفتہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی ماہواری کی تاریخ، سائیکل کی لمبائی اور حساب کی تاریخ کبھی اپ لوڈ، ٹریک یا شیئر نہیں کی جاتیں۔ آپ کا آخری اندراج صرف آپ کے اپنے براؤزر کے localStorage میں رہتا ہے، تاکہ واپس آنے پر فارم پہلے سے بھرا ہوا ملے، اور آپ براؤزر ڈیٹا صاف کر کے اسے کبھی بھی مٹا سکتی ہیں۔ نہ کوئی اکاؤنٹ، نہ سرور کال، نہ حساب سے جڑا کوئی اینالیٹکس: آپ کے حمل کے بارے میں کچھ بھی آپ کے آلے سے باہر نہیں جاتا۔"
+    "faq.a5": "نہیں۔ یہ حملِ ہفتہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی ماہواری کی تاریخ، سائیکل کی لمبائی اور حساب کی تاریخ کبھی اپ لوڈ، ٹریک یا شیئر نہیں کی جاتیں۔ آپ کا آخری اندراج صرف آپ کے اپنے براؤزر کے localStorage میں رہتا ہے، تاکہ واپس آنے پر فارم پہلے سے بھرا ہوا ملے، اور آپ براؤزر ڈیٹا صاف کر کے اسے کبھی بھی مٹا سکتی ہیں۔ نہ کوئی اکاؤنٹ، نہ سرور کال، نہ حساب سے جڑا کوئی اینالیٹکس: آپ کے حمل کے بارے میں کچھ بھی آپ کے آلے سے باہر نہیں جاتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -700,7 +750,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Berapa peluang melahirkan tepat pada HPL?",
     "faq.a4": "Sekitar 5% — hanya kira-kira 1 dari 20 bayi lahir tepat pada hari perkiraan lahirnya. HPL adalah titik tengah sebuah rentang, bukan tenggat. Sebagian besar bayi lahir antara usia kehamilan 37 dan 42 minggu, dengan 38 sampai 42 minggu dianggap jendela normal persalinan, dan anak pertama cenderung datang sedikit lebih lambat dari perkiraan. Jadi bacalah tanggal dari kalkulator HPL ini sebagai pusat “zona pendaratan” selebar hampir sebulan, dan gunakan hitungan minggu untuk mengikuti perkembangan kehamilan, bukan untuk menghitung mundur ke satu hari tertentu.",
     "faq.q5": "Apakah tanggal yang saya masukkan dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator usia kehamilan ini berjalan sepenuhnya di peramban Anda — tanggal haid terakhir, panjang siklus, dan tanggal perhitungan tidak pernah diunggah, dilacak, atau dibagikan. Entri terakhir Anda hanya disimpan di localStorage peramban Anda sendiri, supaya formulir sudah terisi saat Anda kembali, dan Anda bisa menghapusnya kapan saja dengan membersihkan data peramban. Tidak ada akun, tidak ada panggilan server, dan tidak ada analitik yang menempel pada perhitungan: tidak ada informasi kehamilan Anda yang meninggalkan perangkat."
+    "faq.a5": "Tidak. Kalkulator usia kehamilan ini berjalan sepenuhnya di peramban Anda — tanggal haid terakhir, panjang siklus, dan tanggal perhitungan tidak pernah diunggah, dilacak, atau dibagikan. Entri terakhir Anda hanya disimpan di localStorage peramban Anda sendiri, supaya formulir sudah terisi saat Anda kembali, dan Anda bisa menghapusnya kapan saja dengan membersihkan data peramban. Tidak ada akun, tidak ada panggilan server, dan tidak ada analitik yang menempel pada perhitungan: tidak ada informasi kehamilan Anda yang meninggalkan perangkat.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -762,7 +817,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie hoch ist die Chance, genau am errechneten Termin zu entbinden?",
     "faq.a4": "Etwa 5% — nur rund eines von 20 Babys kommt exakt am errechneten Geburtstermin zur Welt. Der Termin ist die Mitte eines Zeitraums, keine Frist. Die meisten Babys werden zwischen der 37. und 42. Schwangerschaftswoche geboren, wobei 38 bis 42 Wochen als normales Fenster für die Geburt gelten, und erste Kinder kommen tendenziell etwas später als geschätzt. Lesen Sie das Datum aus diesem Rechner also als Mitte eines fast monatsbreiten Landekorridors und nutzen Sie die Wochenzählung, um Ihre Schwangerschaft zu begleiten, statt auf einen fixen Tag herunterzuzählen.",
     "faq.q5": "Werden die eingegebenen Daten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Schwangerschaftswochen-Rechner läuft vollständig in Ihrem Browser — das Datum Ihrer letzten Periode, Ihre Zykluslänge und das Berechnungsdatum werden nie hochgeladen, getrackt oder geteilt. Ihre letzte Eingabe bleibt allein im localStorage Ihres eigenen Browsers, damit das Formular bei Ihrem nächsten Besuch schon ausgefüllt ist, und Sie können sie jederzeit löschen, indem Sie Ihre Browserdaten leeren. Kein Konto, kein Serveraufruf, keine Analyse an der Berechnung: Nichts über Ihre Schwangerschaft verlässt Ihr Gerät."
+    "faq.a5": "Nein. Dieser Schwangerschaftswochen-Rechner läuft vollständig in Ihrem Browser — das Datum Ihrer letzten Periode, Ihre Zykluslänge und das Berechnungsdatum werden nie hochgeladen, getrackt oder geteilt. Ihre letzte Eingabe bleibt allein im localStorage Ihres eigenen Browsers, damit das Formular bei Ihrem nächsten Besuch schon ausgefüllt ist, und Sie können sie jederzeit löschen, indem Sie Ihre Browserdaten leeren. Kein Konto, kein Serveraufruf, keine Analyse an der Berechnung: Nichts über Ihre Schwangerschaft verlässt Ihr Gerät.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -824,7 +884,12 @@ window.I18N_LOCALES = {
     "faq.q4": "予定日ぴったりに生まれる確率はどのくらい？",
     "faq.a4": "約5%です。予定日当日に生まれる赤ちゃんは20人に1人ほどしかいません。予定日は期間の中心であって締切ではありません。多くの赤ちゃんは在胎37〜42週の間に生まれ、38〜42週が正期産の範囲とされています。また初産では予定日より少し遅くなる傾向があります。この計算ツールが示す日付は、およそ1か月幅の「着地ゾーン」の中心と捉え、週数は特定の1日へのカウントダウンではなく、妊娠の経過を追うための目安として使ってください。",
     "faq.q5": "入力した日付はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この妊娠週数計算ツールは完全にブラウザ内で動作します。最終月経の日付・周期日数・計算する日付が、アップロード・追跡・共有されることはありません。前回の入力内容はご自身のブラウザのlocalStorageにのみ保存され、次に訪れたときに入力済みの状態になります。ブラウザのデータを消去すればいつでも削除できます。アカウントもサーバー通信もなく、計算に紐づく解析も行いません。妊娠に関する情報が端末の外に出ることはありません。"
+    "faq.a5": "いいえ。この妊娠週数計算ツールは完全にブラウザ内で動作します。最終月経の日付・周期日数・計算する日付が、アップロード・追跡・共有されることはありません。前回の入力内容はご自身のブラウザのlocalStorageにのみ保存され、次に訪れたときに入力済みの状態になります。ブラウザのデータを消去すればいつでも削除できます。アカウントもサーバー通信もなく、計算に紐づく解析も行いません。妊娠に関する情報が端末の外に出ることはありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -886,6 +951,11 @@ window.I18N_LOCALES = {
     "faq.q4": "예정일에 정확히 태어날 확률은 얼마나 되나요?",
     "faq.a4": "약 5%입니다 — 예정일 당일에 태어나는 아기는 스무 명 중 한 명 정도뿐입니다. 예정일은 마감일이 아니라 구간의 중간점입니다. 대부분의 아기는 재태 37~42주 사이에 태어나고, 그중 38~42주가 정상 분만 범위로 여겨집니다. 또 첫아이는 예정일보다 조금 늦게 나오는 경향이 있습니다. 그러니 이 계산기가 알려주는 날짜는 약 한 달 폭의 ‘착륙 구간’ 한가운데라고 보시고, 주수는 특정한 하루를 향한 카운트다운이 아니라 임신 경과를 따라가는 지표로 쓰는 게 좋습니다.",
     "faq.q5": "입력한 날짜가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 임신 주수 계산기는 전적으로 브라우저 안에서만 동작합니다 — 마지막 생리일, 생리주기, 기준일은 업로드되거나 추적·공유되지 않습니다. 마지막 입력값은 오직 사용자 브라우저의 localStorage에만 저장되어 다시 방문했을 때 입력창이 채워져 있게 해주며, 브라우저 데이터를 지우면 언제든 삭제할 수 있습니다. 계정도, 서버 호출도, 계산에 붙는 분석 도구도 없습니다. 임신에 관한 어떤 정보도 기기 밖으로 나가지 않습니다."
+    "faq.a5": "아니요. 이 임신 주수 계산기는 전적으로 브라우저 안에서만 동작합니다 — 마지막 생리일, 생리주기, 기준일은 업로드되거나 추적·공유되지 않습니다. 마지막 입력값은 오직 사용자 브라우저의 localStorage에만 저장되어 다시 방문했을 때 입력창이 채워져 있게 해주며, 브라우저 데이터를 지우면 언제든 삭제할 수 있습니다. 계정도, 서버 호출도, 계산에 붙는 분석 도구도 없습니다. 임신에 관한 어떤 정보도 기기 밖으로 나가지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

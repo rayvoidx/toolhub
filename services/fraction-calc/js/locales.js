@@ -77,7 +77,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "Multiply straight across",
     "tool.step.reciprocal": "Divide = multiply by the reciprocal",
     "tool.step.reduce": "Divide top and bottom by the GCD ({g})",
-    "tool.step.lowest": "Already in lowest terms (GCD is 1)"
+    "tool.step.lowest": "Already in lowest terms (GCD is 1)",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -139,7 +144,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "分子乘分子、分母乘分母",
     "tool.step.reciprocal": "除以等于乘倒数",
     "tool.step.reduce": "分子分母同除以最大公约数（{g}）",
-    "tool.step.lowest": "已是最简分数（最大公约数为 1）"
+    "tool.step.lowest": "已是最简分数（最大公约数为 1）",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -201,7 +211,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "सीधे अंश×अंश, हर×हर",
     "tool.step.reciprocal": "भाग = व्युत्क्रम से गुणा",
     "tool.step.reduce": "अंश-हर को GCD ({g}) से भाग दें",
-    "tool.step.lowest": "पहले से सरलतम रूप में (GCD 1 है)"
+    "tool.step.lowest": "पहले से सरलतम रूप में (GCD 1 है)",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -263,7 +278,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "Multiplica en línea recta",
     "tool.step.reciprocal": "Dividir = multiplicar por el recíproco",
     "tool.step.reduce": "Divide numerador y denominador por el MCD ({g})",
-    "tool.step.lowest": "Ya está en su mínima expresión (MCD es 1)"
+    "tool.step.lowest": "Ya está en su mínima expresión (MCD es 1)",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -325,7 +345,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "اضرب مباشرة بسطًا في بسط ومقامًا في مقام",
     "tool.step.reciprocal": "القسمة = ضرب في المقلوب",
     "tool.step.reduce": "اقسم البسط والمقام على القاسم المشترك ({g})",
-    "tool.step.lowest": "بالفعل في أبسط صورة (القاسم المشترك 1)"
+    "tool.step.lowest": "بالفعل في أبسط صورة (القاسم المشترك 1)",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -387,7 +412,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "Multiplier tout droit",
     "tool.step.reciprocal": "Diviser = multiplier par l'inverse",
     "tool.step.reduce": "Diviser haut et bas par le PGCD ({g})",
-    "tool.step.lowest": "Déjà à sa plus simple expression (PGCD égal à 1)"
+    "tool.step.lowest": "Déjà à sa plus simple expression (PGCD égal à 1)",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -449,7 +479,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "সরাসরি লব×লব, হর×হর",
     "tool.step.reciprocal": "ভাগ = বিপরীত রাশি দিয়ে গুণ",
     "tool.step.reduce": "লব-হরকে GCD ({g}) দিয়ে ভাগ করুন",
-    "tool.step.lowest": "ইতিমধ্যে লঘিষ্ঠ আকারে (GCD 1)"
+    "tool.step.lowest": "ইতিমধ্যে লঘিষ্ঠ আকারে (GCD 1)",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -511,7 +546,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "Multiplique direto",
     "tool.step.reciprocal": "Dividir = multiplicar pelo inverso",
     "tool.step.reduce": "Divida em cima e embaixo pelo MDC ({g})",
-    "tool.step.lowest": "Já está na forma irredutível (MDC é 1)"
+    "tool.step.lowest": "Já está na forma irredutível (MDC é 1)",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -573,7 +613,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "Перемножьте напрямую",
     "tool.step.reciprocal": "Деление = умножение на обратную дробь",
     "tool.step.reduce": "Разделите числитель и знаменатель на НОД ({g})",
-    "tool.step.lowest": "Уже несократима (НОД равен 1)"
+    "tool.step.lowest": "Уже несократима (НОД равен 1)",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -635,7 +680,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "سیدھا شمار×شمار، مخرج×مخرج",
     "tool.step.reciprocal": "تقسیم = معکوس سے ضرب",
     "tool.step.reduce": "شمار و مخرج کو GCD ({g}) پر تقسیم کریں",
-    "tool.step.lowest": "پہلے ہی سادہ ترین شکل میں (GCD 1 ہے)"
+    "tool.step.lowest": "پہلے ہی سادہ ترین شکل میں (GCD 1 ہے)",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -697,7 +747,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "Kalikan lurus",
     "tool.step.reciprocal": "Membagi = mengalikan dengan kebalikan",
     "tool.step.reduce": "Bagi atas dan bawah dengan FPB ({g})",
-    "tool.step.lowest": "Sudah bentuk paling sederhana (FPB 1)"
+    "tool.step.lowest": "Sudah bentuk paling sederhana (FPB 1)",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -759,7 +814,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "Geradeaus multiplizieren",
     "tool.step.reciprocal": "Dividieren = mit dem Kehrwert multiplizieren",
     "tool.step.reduce": "Zähler und Nenner durch den ggT ({g}) teilen",
-    "tool.step.lowest": "Bereits vollständig gekürzt (ggT ist 1)"
+    "tool.step.lowest": "Bereits vollständig gekürzt (ggT ist 1)",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -821,7 +881,12 @@ window.I18N_LOCALES = {
     "tool.step.across": "分子・分母をそのまま掛ける",
     "tool.step.reciprocal": "割る＝逆数を掛ける",
     "tool.step.reduce": "分子と分母を最大公約数（{g}）で割る",
-    "tool.step.lowest": "すでに既約分数です（最大公約数は1）"
+    "tool.step.lowest": "すでに既約分数です（最大公約数は1）",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -883,6 +948,11 @@ window.I18N_LOCALES = {
     "tool.step.across": "분자끼리·분모끼리 곱하기",
     "tool.step.reciprocal": "나누기 = 역수 곱하기",
     "tool.step.reduce": "분자와 분모를 최대공약수({g})로 나누기",
-    "tool.step.lowest": "이미 기약분수입니다 (최대공약수가 1)"
+    "tool.step.lowest": "이미 기약분수입니다 (최대공약수가 1)",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

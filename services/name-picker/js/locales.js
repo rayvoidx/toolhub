@@ -59,7 +59,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can the same name win more than one slot in a single draw?",
     "faq.a4": "Only if you typed that name more than once — duplicate entries are treated as separate tickets, so listing \"Alice\" twice doubles her odds and, with multiple winners, could let her fill two slots in the same round. If you want each person to have exactly one chance, keep every name on its own unique line. This mirrors how a physical raffle works: more tickets in the box, more chances to win.",
     "faq.q5": "Are the names I paste in saved or sent anywhere?",
-    "faq.a5": "No. Everything — your list, the winner count, and the draw history — stays in your browser's memory and localStorage and is never uploaded to a server. Your last list is restored automatically the next time you open the page from the same browser, but nothing about it is visible to us or anyone else; clearing site data removes it for good."
+    "faq.a5": "No. Everything — your list, the winner count, and the draw history — stays in your browser's memory and localStorage and is never uploaded to a server. Your last list is restored automatically the next time you open the page from the same browser, but nothing about it is visible to us or anyone else; clearing site data removes it for good.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -103,7 +108,12 @@ window.I18N_LOCALES = {
     "faq.q4": "同一个名字会不会在同一轮里中不止一个名额？",
     "faq.a4": "只有当你把同一个名字重复输入多行时才会发生——重复的条目会被当作独立的“抽奖券”，比如把“Alice”写两行会让她的中奖概率翻倍，在抽取多名获奖者时，她甚至可能同时中两个名额。如果希望每个人只有一次机会，请把每个名字只写在唯一的一行里。这和实体抽奖箱的原理一样：券越多，中奖机会越大。",
     "faq.q5": "我粘贴的姓名会被保存或发送到别处吗？",
-    "faq.a5": "不会。名单、获奖人数设置以及抽签历史都只保存在你浏览器的内存和 localStorage 中，绝不会上传到服务器。下次用同一浏览器打开页面时会自动恢复上一次的名单，但这些内容对我们或其他任何人都不可见；清除网站数据即可彻底删除。"
+    "faq.a5": "不会。名单、获奖人数设置以及抽签历史都只保存在你浏览器的内存和 localStorage 中，绝不会上传到服务器。下次用同一浏览器打开页面时会自动恢复上一次的名单，但这些内容对我们或其他任何人都不可见；清除网站数据即可彻底删除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -147,7 +157,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या एक ही नाम एक ही ड्रॉ में एक से ज्यादा जगह जीत सकता है?",
     "faq.a4": "सिर्फ़ तभी जब आपने वह नाम एक से ज्यादा बार लिखा हो — डुप्लिकेट एंट्री को अलग-अलग टिकट माना जाता है, इसलिए \"Alice\" को दो बार लिखने से उसकी संभावना दोगुनी हो जाती है, और कई विजेता चुनते समय वह एक ही राउंड में दो जगह जीत सकती है। अगर आप चाहते हैं कि हर व्यक्ति को बिल्कुल एक मौका मिले, तो हर नाम को उसकी अपनी अनोखी पंक्ति में रखें। यह ठीक वैसा ही है जैसे असली रैफल में होता है: जितने ज्यादा टिकट, जीतने का उतना ज्यादा मौका।",
     "faq.q5": "मैंने जो नाम पेस्ट किए, क्या वे कहीं सेव या भेजे जाते हैं?",
-    "faq.a5": "नहीं। आपकी सूची, विजेताओं की संख्या और ड्रॉ का इतिहास — सब कुछ सिर्फ़ आपके ब्राउज़र की मेमोरी और localStorage में रहता है और कभी सर्वर पर नहीं भेजा जाता। उसी ब्राउज़र से अगली बार पेज खोलने पर आपकी पिछली सूची अपने आप वापस आ जाती है, लेकिन इसके बारे में कुछ भी हमें या किसी और को नहीं दिखता; साइट डेटा साफ़ करने से यह हमेशा के लिए मिट जाता है।"
+    "faq.a5": "नहीं। आपकी सूची, विजेताओं की संख्या और ड्रॉ का इतिहास — सब कुछ सिर्फ़ आपके ब्राउज़र की मेमोरी और localStorage में रहता है और कभी सर्वर पर नहीं भेजा जाता। उसी ब्राउज़र से अगली बार पेज खोलने पर आपकी पिछली सूची अपने आप वापस आ जाती है, लेकिन इसके बारे में कुछ भी हमें या किसी और को नहीं दिखता; साइट डेटा साफ़ करने से यह हमेशा के लिए मिट जाता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -191,7 +206,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puede el mismo nombre ganar más de un puesto en un solo sorteo?",
     "faq.a4": "Solo si escribiste ese nombre más de una vez: las entradas duplicadas se tratan como boletos independientes, así que escribir \"Alice\" dos veces duplica sus probabilidades y, con varios ganadores, podría ocupar dos puestos en la misma ronda. Si quieres que cada persona tenga exactamente una oportunidad, escribe cada nombre en su propia línea única. Funciona igual que una rifa física: más boletos en la caja, más posibilidades de ganar.",
     "faq.q5": "¿Los nombres que pego se guardan o se envían a algún sitio?",
-    "faq.a5": "No. Todo —tu lista, el número de ganadores y el historial de sorteos— permanece solo en la memoria y el localStorage de tu navegador y nunca se sube a un servidor. Tu última lista se restaura automáticamente la próxima vez que abras la página desde el mismo navegador, pero nada de esto es visible para nosotros ni para nadie más; al borrar los datos del sitio desaparece por completo."
+    "faq.a5": "No. Todo —tu lista, el número de ganadores y el historial de sorteos— permanece solo en la memoria y el localStorage de tu navegador y nunca se sube a un servidor. Tu última lista se restaura automáticamente la próxima vez que abras la página desde el mismo navegador, pero nada de esto es visible para nosotros ni para nadie más; al borrar los datos del sitio desaparece por completo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -235,7 +255,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكن أن يفوز نفس الاسم بأكثر من مكان في سحب واحد؟",
     "faq.a4": "فقط إذا كتبت ذلك الاسم أكثر من مرة — تُعامل الإدخالات المكررة كتذاكر منفصلة، فكتابة \"Alice\" مرتين يضاعف فرصتها، وعند اختيار عدة فائزين قد تشغل مكانين في نفس الجولة. إذا أردت أن تكون فرصة كل شخص واحدة بالضبط، اكتب كل اسم في سطره الخاص به فقط. هذا يشبه تمامًا آلية اليانصيب الفعلي: كلما زادت التذاكر في الصندوق، زادت فرص الفوز.",
     "faq.q5": "هل تُحفظ الأسماء التي ألصقها أو تُرسل إلى أي مكان؟",
-    "faq.a5": "لا. كل شيء — قائمتك، وعدد الفائزين، وسجل السحوبات — يبقى فقط في ذاكرة متصفحك وفي localStorage ولا يُرفع أبدًا إلى أي خادم. تُستعاد قائمتك الأخيرة تلقائيًا في المرة القادمة التي تفتح فيها الصفحة من نفس المتصفح، لكن لا شيء من ذلك مرئي لنا أو لأي شخص آخر؛ ومسح بيانات الموقع يزيله نهائيًا."
+    "faq.a5": "لا. كل شيء — قائمتك، وعدد الفائزين، وسجل السحوبات — يبقى فقط في ذاكرة متصفحك وفي localStorage ولا يُرفع أبدًا إلى أي خادم. تُستعاد قائمتك الأخيرة تلقائيًا في المرة القادمة التي تفتح فيها الصفحة من نفس المتصفح، لكن لا شيء من ذلك مرئي لنا أو لأي شخص آخر؛ ومسح بيانات الموقع يزيله نهائيًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -279,7 +304,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Le même nom peut-il gagner plus d'une place lors d'un même tirage ?",
     "faq.a4": "Seulement si vous avez saisi ce nom plusieurs fois : les entrées en double sont traitées comme des tickets distincts, donc écrire « Alice » deux fois double ses chances et, avec plusieurs gagnants, pourrait lui faire occuper deux places dans le même tour. Si vous voulez que chaque personne n'ait qu'une seule chance, indiquez chaque nom sur sa propre ligne unique. Cela reproduit le fonctionnement d'une tombola physique : plus il y a de tickets dans l'urne, plus les chances de gagner augmentent.",
     "faq.q5": "Les noms que je colle sont-ils enregistrés ou envoyés quelque part ?",
-    "faq.a5": "Non. Tout — votre liste, le nombre de gagnants et l'historique des tirages — reste uniquement dans la mémoire de votre navigateur et le localStorage, et n'est jamais envoyé à un serveur. Votre dernière liste est restaurée automatiquement la prochaine fois que vous ouvrez la page depuis le même navigateur, mais rien de tout cela n'est visible pour nous ni pour personne d'autre ; effacer les données du site le supprime définitivement."
+    "faq.a5": "Non. Tout — votre liste, le nombre de gagnants et l'historique des tirages — reste uniquement dans la mémoire de votre navigateur et le localStorage, et n'est jamais envoyé à un serveur. Votre dernière liste est restaurée automatiquement la prochaine fois que vous ouvrez la page depuis le même navigateur, mais rien de tout cela n'est visible pour nous ni pour personne d'autre ; effacer les données du site le supprime définitivement.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -323,7 +353,12 @@ window.I18N_LOCALES = {
     "faq.q4": "একই নাম কি এক ড্রয়ে একাধিক স্থান জিততে পারে?",
     "faq.a4": "শুধু তখনই, যদি আপনি সেই নাম একাধিকবার লেখেন — ডুপ্লিকেট এন্ট্রিকে আলাদা টিকিট হিসেবে গণ্য করা হয়, তাই \"Alice\" দুইবার লিখলে তার সুযোগ দ্বিগুণ হয়ে যায়, আর একাধিক বিজয়ী বাছার সময় সে একই রাউন্ডে দুটি স্থান দখল করতে পারে। প্রতিজনের ঠিক একটিই সুযোগ চাইলে প্রতিটি নাম তার নিজস্ব আলাদা লাইনে রাখুন। এটি ঠিক বাস্তব র‍্যাফেলের মতোই কাজ করে: বাক্সে যত বেশি টিকিট, জেতার সুযোগ তত বেশি।",
     "faq.q5": "আমি যে নামগুলো পেস্ট করি তা কি সংরক্ষিত হয় বা কোথাও পাঠানো হয়?",
-    "faq.a5": "না। আপনার তালিকা, বিজয়ীর সংখ্যা, এবং ড্র-এর ইতিহাস — সবকিছুই শুধু আপনার ব্রাউজারের মেমোরি ও localStorage-এ থাকে, কখনও সার্ভারে আপলোড হয় না। একই ব্রাউজার থেকে পরের বার পেজ খুললে আপনার শেষ তালিকা স্বয়ংক্রিয়ভাবে ফিরে আসে, কিন্তু এর কিছুই আমাদের বা অন্য কারও কাছে দৃশ্যমান নয়; সাইট ডেটা মুছে ফেললে তা চিরতরে সরে যায়।"
+    "faq.a5": "না। আপনার তালিকা, বিজয়ীর সংখ্যা, এবং ড্র-এর ইতিহাস — সবকিছুই শুধু আপনার ব্রাউজারের মেমোরি ও localStorage-এ থাকে, কখনও সার্ভারে আপলোড হয় না। একই ব্রাউজার থেকে পরের বার পেজ খুললে আপনার শেষ তালিকা স্বয়ংক্রিয়ভাবে ফিরে আসে, কিন্তু এর কিছুই আমাদের বা অন্য কারও কাছে দৃশ্যমান নয়; সাইট ডেটা মুছে ফেললে তা চিরতরে সরে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -367,7 +402,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O mesmo nome pode vencer mais de uma vaga em um único sorteio?",
     "faq.a4": "Só se você digitou esse nome mais de uma vez — entradas duplicadas são tratadas como bilhetes separados, então escrever \"Alice\" duas vezes dobra suas chances e, com vários vencedores, ela pode ocupar duas vagas na mesma rodada. Se quiser que cada pessoa tenha exatamente uma chance, mantenha cada nome em sua própria linha única. Isso reflete como funciona uma rifa física: quanto mais bilhetes na caixa, mais chances de ganhar.",
     "faq.q5": "Os nomes que eu colo são salvos ou enviados para algum lugar?",
-    "faq.a5": "Não. Tudo — sua lista, o número de vencedores e o histórico de sorteios — fica apenas na memória do seu navegador e no localStorage, e nunca é enviado a um servidor. Sua última lista é restaurada automaticamente na próxima vez que você abrir a página no mesmo navegador, mas nada disso é visível para nós ou para qualquer outra pessoa; limpar os dados do site remove tudo permanentemente."
+    "faq.a5": "Não. Tudo — sua lista, o número de vencedores e o histórico de sorteios — fica apenas na memória do seu navegador e no localStorage, e nunca é enviado a um servidor. Sua última lista é restaurada automaticamente na próxima vez que você abrir a página no mesmo navegador, mas nada disso é visível para nós ou para qualquer outra pessoa; limpar os dados do site remove tudo permanentemente.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -411,7 +451,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Может ли одно и то же имя выиграть больше одного места за один розыгрыш?",
     "faq.a4": "Только если вы ввели это имя более одного раза — повторяющиеся записи считаются отдельными «билетами», поэтому запись «Alice» дважды удваивает её шансы, и при нескольких победителях она может занять два места в одном раунде. Если хотите, чтобы у каждого человека был ровно один шанс, указывайте каждое имя в отдельной уникальной строке. Это работает так же, как настоящая лотерея: чем больше билетов в барабане, тем выше шансы на выигрыш.",
     "faq.q5": "Сохраняются или отправляются ли куда-то вставленные имена?",
-    "faq.a5": "Нет. Всё — ваш список, число победителей и история розыгрышей — хранится только в памяти вашего браузера и localStorage и никогда не отправляется на сервер. При следующем открытии страницы в том же браузере ваш последний список восстанавливается автоматически, но ничего из этого не видно ни нам, ни кому-либо ещё; очистка данных сайта удаляет всё безвозвратно."
+    "faq.a5": "Нет. Всё — ваш список, число победителей и история розыгрышей — хранится только в памяти вашего браузера и localStorage и никогда не отправляется на сервер. При следующем открытии страницы в том же браузере ваш последний список восстанавливается автоматически, но ничего из этого не видно ни нам, ни кому-либо ещё; очистка данных сайта удаляет всё безвозвратно.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -455,7 +500,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا ایک ہی نام ایک ہی ڈرا میں ایک سے زیادہ جگہ جیت سکتا ہے؟",
     "faq.a4": "صرف تب جب آپ نے وہ نام ایک سے زیادہ بار لکھا ہو — نقل شدہ اندراجات کو الگ ٹکٹ سمجھا جاتا ہے، اس لیے \"Alice\" کو دو بار لکھنے سے اس کا امکان دوگنا ہو جاتا ہے، اور کئی فاتحین منتخب کرتے وقت وہ ایک ہی راؤنڈ میں دو جگہیں بھر سکتی ہے۔ اگر آپ چاہتے ہیں کہ ہر شخص کو بالکل ایک موقع ملے، تو ہر نام کو اس کی اپنی منفرد سطر میں رکھیں۔ یہ بالکل اسی طرح کام کرتا ہے جیسے حقیقی ریفل: ڈبے میں جتنے زیادہ ٹکٹ، جیتنے کے اتنے ہی زیادہ مواقع۔",
     "faq.q5": "کیا میرے پیسٹ کیے گئے نام کہیں محفوظ یا بھیجے جاتے ہیں؟",
-    "faq.a5": "نہیں۔ سب کچھ — آپ کی فہرست، فاتحین کی تعداد، اور ڈرا کی تاریخ — صرف آپ کے براؤزر کی میموری اور localStorage میں رہتا ہے اور کبھی سرور پر اپ لوڈ نہیں ہوتا۔ اسی براؤزر سے اگلی بار صفحہ کھولنے پر آپ کی آخری فہرست خودکار طور پر بحال ہو جاتی ہے، لیکن اس میں سے کچھ بھی ہمیں یا کسی اور کو نظر نہیں آتا؛ سائٹ ڈیٹا صاف کرنے سے یہ ہمیشہ کے لیے مٹ جاتا ہے۔"
+    "faq.a5": "نہیں۔ سب کچھ — آپ کی فہرست، فاتحین کی تعداد، اور ڈرا کی تاریخ — صرف آپ کے براؤزر کی میموری اور localStorage میں رہتا ہے اور کبھی سرور پر اپ لوڈ نہیں ہوتا۔ اسی براؤزر سے اگلی بار صفحہ کھولنے پر آپ کی آخری فہرست خودکار طور پر بحال ہو جاتی ہے، لیکن اس میں سے کچھ بھی ہمیں یا کسی اور کو نظر نہیں آتا؛ سائٹ ڈیٹا صاف کرنے سے یہ ہمیشہ کے لیے مٹ جاتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -499,7 +549,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah nama yang sama menang lebih dari satu slot dalam satu undian?",
     "faq.a4": "Hanya jika Anda mengetik nama itu lebih dari sekali — entri duplikat diperlakukan sebagai tiket terpisah, jadi menulis \"Alice\" dua kali menggandakan peluangnya, dan dengan beberapa pemenang, dia bisa mengisi dua slot dalam putaran yang sama. Jika Anda ingin setiap orang punya tepat satu peluang, tuliskan setiap nama di barisnya sendiri yang unik. Ini sama seperti cara kerja undian fisik: makin banyak tiket di dalam kotak, makin besar peluang menang.",
     "faq.q5": "Apakah nama yang saya tempel disimpan atau dikirim ke suatu tempat?",
-    "faq.a5": "Tidak. Semuanya — daftar Anda, jumlah pemenang, dan riwayat undian — hanya tersimpan di memori browser dan localStorage Anda, dan tidak pernah diunggah ke server. Daftar terakhir Anda dipulihkan otomatis saat Anda membuka halaman ini lagi dari browser yang sama, tapi tidak ada yang terlihat oleh kami atau siapa pun; menghapus data situs akan menghilangkannya secara permanen."
+    "faq.a5": "Tidak. Semuanya — daftar Anda, jumlah pemenang, dan riwayat undian — hanya tersimpan di memori browser dan localStorage Anda, dan tidak pernah diunggah ke server. Daftar terakhir Anda dipulihkan otomatis saat Anda membuka halaman ini lagi dari browser yang sama, tapi tidak ada yang terlihat oleh kami atau siapa pun; menghapus data situs akan menghilangkannya secara permanen.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -543,7 +598,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann derselbe Name in einer Ziehung mehr als einen Platz gewinnen?",
     "faq.a4": "Nur wenn du diesen Namen mehr als einmal eingetragen hast — doppelte Einträge werden als separate Lose behandelt, sodass \"Alice\" zweimal einzutragen ihre Chancen verdoppelt und sie bei mehreren Gewinnern sogar zwei Plätze in derselben Runde belegen könnte. Wenn jede Person genau eine Chance haben soll, trage jeden Namen in einer eigenen, einmaligen Zeile ein. Das entspricht genau einer echten Verlosung: mehr Lose in der Trommel bedeuten mehr Gewinnchancen.",
     "faq.q5": "Werden die eingefügten Namen gespeichert oder irgendwohin gesendet?",
-    "faq.a5": "Nein. Alles — deine Liste, die Gewinnerzahl und der Ziehungsverlauf — bleibt ausschließlich im Speicher deines Browsers und im localStorage und wird nie auf einen Server hochgeladen. Deine letzte Liste wird beim nächsten Öffnen der Seite im selben Browser automatisch wiederhergestellt, aber nichts davon ist für uns oder sonst jemanden sichtbar; das Löschen der Website-Daten entfernt es endgültig."
+    "faq.a5": "Nein. Alles — deine Liste, die Gewinnerzahl und der Ziehungsverlauf — bleibt ausschließlich im Speicher deines Browsers und im localStorage und wird nie auf einen Server hochgeladen. Deine letzte Liste wird beim nächsten Öffnen der Seite im selben Browser automatisch wiederhergestellt, aber nichts davon ist für uns oder sonst jemanden sichtbar; das Löschen der Website-Daten entfernt es endgültig.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -587,7 +647,12 @@ window.I18N_LOCALES = {
     "faq.q4": "1回の抽選で同じ名前が複数枠に当選することはありますか？",
     "faq.a4": "その名前を複数回入力した場合のみ起こり得ます — 重複した項目は別々の「くじ」として扱われるため、「Alice」を2行入力すると当選確率が2倍になり、複数当選者を選ぶ際には同じラウンドで2枠を占める可能性があります。全員にちょうど1回のチャンスを与えたい場合は、各名前を1行ずつ、重複なく入力してください。これは実際の抽選箱と同じ仕組みです：くじが多いほど当選のチャンスも増えます。",
     "faq.q5": "貼り付けた名前は保存されたり、どこかに送信されたりしますか？",
-    "faq.a5": "いいえ。リスト、当選者数の設定、抽選履歴はすべてブラウザのメモリとlocalStorageにのみ保存され、サーバーにアップロードされることはありません。同じブラウザで次回このページを開くと直前のリストが自動的に復元されますが、その内容は私たちを含め誰にも見えません。サイトデータを消去すれば完全に削除されます。"
+    "faq.a5": "いいえ。リスト、当選者数の設定、抽選履歴はすべてブラウザのメモリとlocalStorageにのみ保存され、サーバーにアップロードされることはありません。同じブラウザで次回このページを開くと直前のリストが自動的に復元されますが、その内容は私たちを含め誰にも見えません。サイトデータを消去すれば完全に削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -631,6 +696,11 @@ window.I18N_LOCALES = {
     "faq.q4": "한 번의 추첨에서 같은 이름이 두 자리 이상 당첨될 수 있나요?",
     "faq.a4": "그 이름을 두 줄 이상 입력한 경우에만 가능합니다 — 중복 입력은 별개의 응모권으로 취급되므로, \"철수\"를 두 번 적으면 당첨 확률이 두 배가 되고, 여러 명을 뽑을 때는 같은 회차에서 두 자리를 차지할 수도 있습니다. 모두에게 정확히 한 번의 기회를 주고 싶다면 이름을 각각 고유한 한 줄에만 적으세요. 실제 추첨함과 같은 원리입니다: 응모권이 많을수록 당첨 확률도 높아집니다.",
     "faq.q5": "붙여넣은 이름이 저장되거나 어딘가로 전송되나요?",
-    "faq.a5": "아니요. 명단, 당첨자 수 설정, 추첨 기록 모두 브라우저의 메모리와 localStorage에만 남고 서버로 전송되지 않습니다. 같은 브라우저로 다음에 페이지를 열면 마지막 명단이 자동으로 복원되지만, 이 내용은 저희를 포함해 그 누구에게도 보이지 않습니다. 사이트 데이터를 지우면 완전히 삭제됩니다."
+    "faq.a5": "아니요. 명단, 당첨자 수 설정, 추첨 기록 모두 브라우저의 메모리와 localStorage에만 남고 서버로 전송되지 않습니다. 같은 브라우저로 다음에 페이지를 열면 마지막 명단이 자동으로 복원되지만, 이 내용은 저희를 포함해 그 누구에게도 보이지 않습니다. 사이트 데이터를 지우면 완전히 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

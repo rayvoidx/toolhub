@@ -69,7 +69,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why is the 'value in today's money' lower than the headline number?",
     "faq.a4": "A million in thirty years will not buy what a million buys today, because inflation erodes purchasing power. When you enter an annual inflation rate, this investment growth calculator discounts your after-tax future balance back to what it would be worth in today's money — dividing by (1 + inflation) for each year of the horizon. That real value is the more honest measure of how much your future portfolio can actually buy. Leave inflation at 0 to see the plain nominal amount, or try 2–3% to match typical long-run inflation and watch how much the real figure shrinks over long horizons.",
     "faq.q5": "How is capital-gains tax handled, and why might my broker's figure differ?",
-    "faq.a5": "The tool applies your capital-gains tax rate only to the profit (market gains), not to the money you contributed, assuming a single sale at the end. The 15.4% preset reflects Korea's tax on financial income (14% income tax plus a 1.4% local surtax) as of 2025 — many countries and account types differ, and tax-advantaged accounts such as a 401(k), IRA or pension wrapper may defer or reduce tax entirely, so 0% is the default. Real brokers may tax each sale, use allowances, cost-basis rules or withholding, and rates change over time. Use this as an arithmetic estimate and confirm your own situation with a tax professional or official source."
+    "faq.a5": "The tool applies your capital-gains tax rate only to the profit (market gains), not to the money you contributed, assuming a single sale at the end. The 15.4% preset reflects Korea's tax on financial income (14% income tax plus a 1.4% local surtax) as of 2025 — many countries and account types differ, and tax-advantaged accounts such as a 401(k), IRA or pension wrapper may defer or reduce tax entirely, so 0% is the default. Real brokers may tax each sale, use allowances, cost-basis rules or withholding, and rates change over time. Use this as an arithmetic estimate and confirm your own situation with a tax professional or official source.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -129,7 +134,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么“按今天购买力计的价值”比标题数字低？",
     "faq.a4": "三十年后的一百万买不到今天一百万能买的东西，因为通胀会侵蚀购买力。当你输入年通胀率时，这个投资增长计算器会把税后的未来余额折算回今天的购买力——按期限的每一年除以（1 + 通胀率）。这个实际价值更诚实地衡量你未来的组合到底能买多少东西。把通胀设为 0 可看纯名义金额，或试 2–3% 匹配长期典型通胀，看看长期限下实际数字缩水多少。",
     "faq.q5": "资本利得税如何计算，为什么可能与券商数字不同？",
-    "faq.a5": "本工具只对收益（市场收益）按你的资本利得税率征税，不对你投入的本金征税，并假设期末一次性卖出。15.4% 预设反映的是韩国对金融收入的税（14% 所得税加 1.4% 地方附加税），基准为 2025 年——许多国家和账户类型各不相同，而像 401(k)、IRA 或养老金账户等税收优惠账户可能递延或完全减免税负，因此默认 0%。真实券商可能对每次卖出征税、使用免税额度、成本基础规则或预扣，税率也会随时间变化。请把它当作算术估算，并向税务专业人士或官方渠道确认你的具体情况。"
+    "faq.a5": "本工具只对收益（市场收益）按你的资本利得税率征税，不对你投入的本金征税，并假设期末一次性卖出。15.4% 预设反映的是韩国对金融收入的税（14% 所得税加 1.4% 地方附加税），基准为 2025 年——许多国家和账户类型各不相同，而像 401(k)、IRA 或养老金账户等税收优惠账户可能递延或完全减免税负，因此默认 0%。真实券商可能对每次卖出征税、使用免税额度、成本基础规则或预扣，税率也会随时间变化。请把它当作算术估算，并向税务专业人士或官方渠道确认你的具体情况。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -189,7 +199,12 @@ window.I18N_LOCALES = {
     "faq.q4": "'आज के पैसे में मूल्य' शीर्षक संख्या से कम क्यों है?",
     "faq.a4": "तीस साल बाद के दस लाख से वह नहीं खरीदा जा सकता जो आज दस लाख से खरीदते हैं, क्योंकि महंगाई क्रय-शक्ति घटाती है। जब आप वार्षिक महंगाई दर डालते हैं, यह निवेश ग्रोथ कैलकुलेटर आपके कर-पश्चात भावी राशि को आज के पैसे में वापस छूट देता है — अवधि के हर वर्ष के लिए (1 + महंगाई) से भाग देकर। यह असली मूल्य ज्यादा ईमानदारी से बताता है कि आपका भावी पोर्टफोलियो असल में कितना खरीद सकता है। शुद्ध नाममात्र राशि देखने के लिए महंगाई 0 रखें, या सामान्य दीर्घकालिक महंगाई से मिलाने के लिए 2–3% आज़माएं और देखें कि लंबी अवधि में असली आंकड़ा कितना घटता है।",
     "faq.q5": "कैपिटल गेन्स टैक्स कैसे लगाया जाता है, और मेरे ब्रोकर का आंकड़ा अलग क्यों हो सकता है?",
-    "faq.a5": "टूल आपका कैपिटल गेन्स टैक्स केवल लाभ (बाजार लाभ) पर लगाता है, आपके निवेश किए गए पैसे पर नहीं, यह मानते हुए कि अंत में एक बार बिक्री होती है। 15.4% प्रीसेट 2025 तक कोरिया के वित्तीय आय पर कर को दर्शाता है (14% आयकर और 1.4% स्थानीय अधिभार) — कई देश और खाता प्रकार अलग होते हैं, और 401(k), IRA या पेंशन जैसे कर-लाभ वाले खाते कर को टाल या पूरी तरह घटा सकते हैं, इसलिए डिफ़ॉल्ट 0% है। असली ब्रोकर हर बिक्री पर कर लगा सकते हैं, छूट, लागत-आधार नियम या रोक (विदहोल्डिंग) लगा सकते हैं, और दरें समय के साथ बदलती हैं। इसे अंकगणितीय अनुमान मानें और अपनी स्थिति किसी कर पेशेवर या आधिकारिक स्रोत से पुष्टि करें।"
+    "faq.a5": "टूल आपका कैपिटल गेन्स टैक्स केवल लाभ (बाजार लाभ) पर लगाता है, आपके निवेश किए गए पैसे पर नहीं, यह मानते हुए कि अंत में एक बार बिक्री होती है। 15.4% प्रीसेट 2025 तक कोरिया के वित्तीय आय पर कर को दर्शाता है (14% आयकर और 1.4% स्थानीय अधिभार) — कई देश और खाता प्रकार अलग होते हैं, और 401(k), IRA या पेंशन जैसे कर-लाभ वाले खाते कर को टाल या पूरी तरह घटा सकते हैं, इसलिए डिफ़ॉल्ट 0% है। असली ब्रोकर हर बिक्री पर कर लगा सकते हैं, छूट, लागत-आधार नियम या रोक (विदहोल्डिंग) लगा सकते हैं, और दरें समय के साथ बदलती हैं। इसे अंकगणितीय अनुमान मानें और अपनी स्थिति किसी कर पेशेवर या आधिकारिक स्रोत से पुष्टि करें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -249,7 +264,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué el 'valor en dinero de hoy' es menor que la cifra principal?",
     "faq.a4": "Un millón dentro de treinta años no comprará lo que compra hoy, porque la inflación erosiona el poder adquisitivo. Cuando introduces una tasa de inflación anual, esta calculadora de crecimiento de la inversión descuenta tu saldo futuro después de impuestos hasta lo que valdría en dinero de hoy — dividiendo por (1 + inflación) por cada año del horizonte. Ese valor real mide con más honestidad cuánto podrá comprar tu cartera futura. Deja la inflación en 0 para ver el importe nominal, o prueba 2–3% para acercarte a la inflación típica a largo plazo y observa cuánto encoge la cifra real en horizontes largos.",
     "faq.q5": "¿Cómo se aplica el impuesto sobre plusvalías y por qué la cifra de mi bróker puede diferir?",
-    "faq.a5": "La herramienta aplica tu tasa de impuesto sobre plusvalías solo a la ganancia (las ganancias del mercado), no al dinero que aportaste, asumiendo una única venta al final. El valor 15.4% refleja el impuesto de Corea sobre las rentas financieras (14% de impuesto más 1.4% de recargo local) a fecha de 2025 — muchos países y tipos de cuenta difieren, y las cuentas con ventajas fiscales como un 401(k), IRA o plan de pensiones pueden diferir o reducir el impuesto por completo, por eso el valor por defecto es 0%. Los brókeres reales pueden gravar cada venta, usar mínimos exentos, reglas de coste de adquisición o retenciones, y las tasas cambian con el tiempo. Úsalo como una estimación aritmética y confirma tu situación con un profesional fiscal o una fuente oficial."
+    "faq.a5": "La herramienta aplica tu tasa de impuesto sobre plusvalías solo a la ganancia (las ganancias del mercado), no al dinero que aportaste, asumiendo una única venta al final. El valor 15.4% refleja el impuesto de Corea sobre las rentas financieras (14% de impuesto más 1.4% de recargo local) a fecha de 2025 — muchos países y tipos de cuenta difieren, y las cuentas con ventajas fiscales como un 401(k), IRA o plan de pensiones pueden diferir o reducir el impuesto por completo, por eso el valor por defecto es 0%. Los brókeres reales pueden gravar cada venta, usar mínimos exentos, reglas de coste de adquisición o retenciones, y las tasas cambian con el tiempo. Úsalo como una estimación aritmética y confirma tu situación con un profesional fiscal o una fuente oficial.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -309,7 +329,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا 'القيمة بأموال اليوم' أقل من الرقم الرئيسي؟",
     "faq.a4": "مليون بعد ثلاثين سنة لن يشتري ما يشتريه المليون اليوم، لأن التضخم يأكل القوة الشرائية. عند إدخال معدل تضخم سنوي، تخصم حاسبة نمو الاستثمار هذه رصيدك المستقبلي بعد الضريبة إلى ما يعادله بأموال اليوم — بالقسمة على (1 + التضخم) عن كل سنة من المدة. تلك القيمة الحقيقية مقياس أكثر صدقاً لما يمكن أن تشتريه محفظتك مستقبلاً. اترك التضخم عند 0 لرؤية المبلغ الاسمي، أو جرّب 2–3% لمحاكاة تضخم طويل الأمد نموذجي وشاهد كم تتقلص القيمة الحقيقية في المدد الطويلة.",
     "faq.q5": "كيف تُحتسب ضريبة أرباح رأس المال، ولماذا قد يختلف رقم وسيطي؟",
-    "faq.a5": "تطبّق الأداة نسبة ضريبة أرباح رأس المال على الربح فقط (أرباح السوق) لا على المال الذي دفعته، بافتراض بيع واحد في النهاية. تعكس نسبة 15.4% ضريبة كوريا على الدخل المالي (14% ضريبة دخل مع 1.4% رسم محلي) اعتباراً من 2025 — تختلف دول وأنواع حسابات كثيرة، وقد تؤجل الحسابات ذات المزايا الضريبية مثل 401(k) أو IRA أو حسابات المعاشات الضريبة أو تخفضها كلياً، لذا القيمة الافتراضية 0%. قد يفرض الوسطاء الحقيقيون ضريبة على كل بيع، أو يستخدمون إعفاءات وقواعد تكلفة أو اقتطاعاً، وتتغير النسب مع الوقت. استخدم هذا كتقدير حسابي وتأكد من وضعك مع مختص ضرائب أو مصدر رسمي."
+    "faq.a5": "تطبّق الأداة نسبة ضريبة أرباح رأس المال على الربح فقط (أرباح السوق) لا على المال الذي دفعته، بافتراض بيع واحد في النهاية. تعكس نسبة 15.4% ضريبة كوريا على الدخل المالي (14% ضريبة دخل مع 1.4% رسم محلي) اعتباراً من 2025 — تختلف دول وأنواع حسابات كثيرة، وقد تؤجل الحسابات ذات المزايا الضريبية مثل 401(k) أو IRA أو حسابات المعاشات الضريبة أو تخفضها كلياً، لذا القيمة الافتراضية 0%. قد يفرض الوسطاء الحقيقيون ضريبة على كل بيع، أو يستخدمون إعفاءات وقواعد تكلفة أو اقتطاعاً، وتتغير النسب مع الوقت. استخدم هذا كتقدير حسابي وتأكد من وضعك مع مختص ضرائب أو مصدر رسمي.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -369,7 +394,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi la 'valeur en argent d'aujourd'hui' est-elle inférieure au chiffre principal ?",
     "faq.a4": "Un million dans trente ans n'achètera pas ce qu'un million achète aujourd'hui, car l'inflation érode le pouvoir d'achat. Lorsque vous saisissez un taux d'inflation annuel, ce calculateur de croissance d'investissement actualise votre solde futur après impôt vers ce qu'il vaudrait en argent d'aujourd'hui — en divisant par (1 + inflation) pour chaque année de l'horizon. Cette valeur réelle mesure plus honnêtement ce que votre portefeuille futur pourra réellement acheter. Laissez l'inflation à 0 pour voir le montant nominal, ou essayez 2–3% pour vous approcher d'une inflation typique de long terme et observez combien le chiffre réel diminue sur les longs horizons.",
     "faq.q5": "Comment l'impôt sur les plus-values est-il traité, et pourquoi le chiffre de mon courtier peut-il différer ?",
-    "faq.a5": "L'outil applique votre taux d'impôt sur les plus-values uniquement au gain (les gains du marché), pas à l'argent que vous avez versé, en supposant une seule vente à la fin. Le préréglage 15,4% reflète l'impôt coréen sur les revenus financiers (14% d'impôt plus 1,4% de surtaxe locale) au titre de 2025 — de nombreux pays et types de comptes diffèrent, et les comptes fiscalement avantagés comme un 401(k), un IRA ou une enveloppe retraite peuvent différer ou réduire l'impôt entièrement, d'où la valeur par défaut de 0%. Les vrais courtiers peuvent taxer chaque vente, appliquer des abattements, des règles de prix de revient ou une retenue, et les taux évoluent dans le temps. Utilisez ceci comme une estimation arithmétique et confirmez votre situation auprès d'un professionnel fiscal ou d'une source officielle."
+    "faq.a5": "L'outil applique votre taux d'impôt sur les plus-values uniquement au gain (les gains du marché), pas à l'argent que vous avez versé, en supposant une seule vente à la fin. Le préréglage 15,4% reflète l'impôt coréen sur les revenus financiers (14% d'impôt plus 1,4% de surtaxe locale) au titre de 2025 — de nombreux pays et types de comptes diffèrent, et les comptes fiscalement avantagés comme un 401(k), un IRA ou une enveloppe retraite peuvent différer ou réduire l'impôt entièrement, d'où la valeur par défaut de 0%. Les vrais courtiers peuvent taxer chaque vente, appliquer des abattements, des règles de prix de revient ou une retenue, et les taux évoluent dans le temps. Utilisez ceci comme une estimation arithmétique et confirmez votre situation auprès d'un professionnel fiscal ou d'une source officielle.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -429,7 +459,12 @@ window.I18N_LOCALES = {
     "faq.q4": "'আজকের টাকায় মূল্য' শিরোনামের সংখ্যার চেয়ে কম কেন?",
     "faq.a4": "ত্রিশ বছর পরের দশ লাখ দিয়ে আজকের দশ লাখ যা কেনা যায় তা কেনা যাবে না, কারণ মুদ্রাস্ফীতি ক্রয়ক্ষমতা ক্ষয় করে। আপনি বার্ষিক মুদ্রাস্ফীতির হার দিলে, এই বিনিয়োগ বৃদ্ধি ক্যালকুলেটর আপনার কর-পরবর্তী ভবিষ্যৎ ব্যালেন্সকে আজকের টাকায় ছাড় দেয় — মেয়াদের প্রতি বছরের জন্য (1 + মুদ্রাস্ফীতি) দিয়ে ভাগ করে। সেই প্রকৃত মূল্য আরও সৎভাবে বলে আপনার ভবিষ্যৎ পোর্টফোলিও আসলে কতটা কিনতে পারবে। শুধু নামমাত্র পরিমাণ দেখতে মুদ্রাস্ফীতি 0 রাখুন, অথবা সাধারণ দীর্ঘমেয়াদি মুদ্রাস্ফীতির সঙ্গে মেলাতে 2–3% চেষ্টা করুন এবং দেখুন দীর্ঘ মেয়াদে প্রকৃত সংখ্যা কতটা কমে।",
     "faq.q5": "মূলধন লাভ কর কীভাবে ধরা হয়, আর আমার ব্রোকারের সংখ্যা ভিন্ন কেন হতে পারে?",
-    "faq.a5": "টুলটি আপনার মূলধন লাভ কর কেবল মুনাফায় (বাজার মুনাফা) প্রয়োগ করে, আপনার জমা করা টাকায় নয়, ধরে নিয়ে যে শেষে একবার বিক্রি হয়। 15.4% প্রিসেট 2025 অনুযায়ী কোরিয়ার আর্থিক আয়ের উপর কর (14% আয়কর ও 1.4% স্থানীয় সারচার্জ) নির্দেশ করে — অনেক দেশ ও অ্যাকাউন্টের ধরন আলাদা, আর 401(k), IRA বা পেনশনের মতো কর-সুবিধা অ্যাকাউন্ট কর স্থগিত বা পুরোপুরি কমাতে পারে, তাই ডিফল্ট 0%। বাস্তব ব্রোকার প্রতিটি বিক্রিতে কর বসাতে পারে, ছাড়, কস্ট-বেসিস নিয়ম বা কর্তন ব্যবহার করতে পারে, আর হার সময়ের সঙ্গে বদলায়। একে গাণিতিক অনুমান হিসেবে ব্যবহার করুন এবং আপনার পরিস্থিতি কর পেশাদার বা সরকারি উৎস থেকে নিশ্চিত করুন।"
+    "faq.a5": "টুলটি আপনার মূলধন লাভ কর কেবল মুনাফায় (বাজার মুনাফা) প্রয়োগ করে, আপনার জমা করা টাকায় নয়, ধরে নিয়ে যে শেষে একবার বিক্রি হয়। 15.4% প্রিসেট 2025 অনুযায়ী কোরিয়ার আর্থিক আয়ের উপর কর (14% আয়কর ও 1.4% স্থানীয় সারচার্জ) নির্দেশ করে — অনেক দেশ ও অ্যাকাউন্টের ধরন আলাদা, আর 401(k), IRA বা পেনশনের মতো কর-সুবিধা অ্যাকাউন্ট কর স্থগিত বা পুরোপুরি কমাতে পারে, তাই ডিফল্ট 0%। বাস্তব ব্রোকার প্রতিটি বিক্রিতে কর বসাতে পারে, ছাড়, কস্ট-বেসিস নিয়ম বা কর্তন ব্যবহার করতে পারে, আর হার সময়ের সঙ্গে বদলায়। একে গাণিতিক অনুমান হিসেবে ব্যবহার করুন এবং আপনার পরিস্থিতি কর পেশাদার বা সরকারি উৎস থেকে নিশ্চিত করুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -489,7 +524,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que o 'valor em dinheiro de hoje' é menor que o número principal?",
     "faq.a4": "Um milhão daqui a trinta anos não comprará o que um milhão compra hoje, porque a inflação corrói o poder de compra. Quando você informa uma taxa de inflação anual, esta calculadora de crescimento do investimento desconta seu saldo futuro após impostos até o que valeria em dinheiro de hoje — dividindo por (1 + inflação) para cada ano do horizonte. Esse valor real mede com mais honestidade quanto sua carteira futura poderá de fato comprar. Deixe a inflação em 0 para ver o valor nominal, ou tente 2–3% para se aproximar de uma inflação típica de longo prazo e veja quanto o número real encolhe em horizontes longos.",
     "faq.q5": "Como o imposto sobre ganho de capital é tratado e por que o número da minha corretora pode diferir?",
-    "faq.a5": "A ferramenta aplica sua alíquota de imposto sobre ganho de capital apenas ao lucro (ganhos de mercado), não ao dinheiro que você aportou, assumindo uma única venda no fim. A predefinição de 15,4% reflete o imposto da Coreia sobre rendimentos financeiros (14% de imposto mais 1,4% de sobretaxa local) referente a 2025 — muitos países e tipos de conta diferem, e contas com vantagens fiscais como 401(k), IRA ou previdência podem diferir ou reduzir o imposto por completo, por isso o padrão é 0%. Corretoras reais podem tributar cada venda, usar isenções, regras de custo de aquisição ou retenção, e as alíquotas mudam com o tempo. Use isto como estimativa aritmética e confirme sua situação com um profissional tributário ou fonte oficial."
+    "faq.a5": "A ferramenta aplica sua alíquota de imposto sobre ganho de capital apenas ao lucro (ganhos de mercado), não ao dinheiro que você aportou, assumindo uma única venda no fim. A predefinição de 15,4% reflete o imposto da Coreia sobre rendimentos financeiros (14% de imposto mais 1,4% de sobretaxa local) referente a 2025 — muitos países e tipos de conta diferem, e contas com vantagens fiscais como 401(k), IRA ou previdência podem diferir ou reduzir o imposto por completo, por isso o padrão é 0%. Corretoras reais podem tributar cada venda, usar isenções, regras de custo de aquisição ou retenção, e as alíquotas mudam com o tempo. Use isto como estimativa aritmética e confirme sua situação com um profissional tributário ou fonte oficial.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -549,7 +589,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему 'стоимость в сегодняшних деньгах' ниже основной цифры?",
     "faq.a4": "Миллион через тридцать лет не купит того, что миллион покупает сегодня, потому что инфляция размывает покупательную способность. Когда вы вводите годовую инфляцию, этот калькулятор роста инвестиций дисконтирует ваш будущий баланс после налога до его стоимости в сегодняшних деньгах — деля на (1 + инфляция) за каждый год срока. Эта реальная стоимость честнее показывает, сколько ваш будущий портфель сможет реально купить. Оставьте инфляцию 0, чтобы увидеть номинальную сумму, или попробуйте 2–3%, чтобы приблизиться к типичной долгосрочной инфляции, и посмотрите, насколько уменьшается реальная цифра на длинных сроках.",
     "faq.q5": "Как учитывается налог на прирост капитала и почему цифра брокера может отличаться?",
-    "faq.a5": "Инструмент применяет вашу ставку налога на прирост капитала только к прибыли (рыночной прибыли), а не к внесённым деньгам, предполагая одну продажу в конце. Пресет 15,4% отражает налог Кореи на финансовый доход (14% подоходный плюс 1,4% местный сбор) по состоянию на 2025 год — во многих странах и типах счетов иначе, а счета с налоговыми льготами, такие как 401(k), IRA или пенсионные, могут отсрочить или полностью снизить налог, поэтому по умолчанию 0%. Реальные брокеры могут облагать каждую продажу, применять вычеты, правила себестоимости или удержание, и ставки меняются со временем. Используйте это как арифметическую оценку и уточните свою ситуацию у налогового специалиста или в официальном источнике."
+    "faq.a5": "Инструмент применяет вашу ставку налога на прирост капитала только к прибыли (рыночной прибыли), а не к внесённым деньгам, предполагая одну продажу в конце. Пресет 15,4% отражает налог Кореи на финансовый доход (14% подоходный плюс 1,4% местный сбор) по состоянию на 2025 год — во многих странах и типах счетов иначе, а счета с налоговыми льготами, такие как 401(k), IRA или пенсионные, могут отсрочить или полностью снизить налог, поэтому по умолчанию 0%. Реальные брокеры могут облагать каждую продажу, применять вычеты, правила себестоимости или удержание, и ставки меняются со временем. Используйте это как арифметическую оценку и уточните свою ситуацию у налогового специалиста или в официальном источнике.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -609,7 +654,12 @@ window.I18N_LOCALES = {
     "faq.q4": "'آج کے پیسوں میں قدر' سرخی کے عدد سے کم کیوں ہے؟",
     "faq.a4": "تیس سال بعد کے دس لاکھ سے وہ نہیں خریدا جا سکتا جو آج دس لاکھ سے خریدتے ہیں، کیونکہ مہنگائی قوتِ خرید گھٹاتی ہے۔ جب آپ سالانہ مہنگائی کی شرح درج کرتے ہیں، یہ سرمایہ کاری اضافہ کیلکولیٹر آپ کے ٹیکس کے بعد مستقبل بیلنس کو آج کے پیسوں میں واپس رعایت دیتا ہے — مدت کے ہر سال کے لیے (1 + مہنگائی) سے تقسیم کر کے۔ وہ اصل قدر زیادہ ایمانداری سے بتاتی ہے کہ آپ کا مستقبل پورٹ فولیو اصل میں کتنا خرید سکتا ہے۔ خالص برائے نام رقم دیکھنے کے لیے مہنگائی 0 رکھیں، یا عام طویل مدتی مہنگائی سے ملانے کے لیے 2–3% آزمائیں اور دیکھیں کہ طویل مدت میں اصل عدد کتنا سکڑتا ہے۔",
     "faq.q5": "کیپیٹل گین ٹیکس کیسے لگایا جاتا ہے، اور میرے بروکر کا عدد مختلف کیوں ہو سکتا ہے؟",
-    "faq.a5": "ٹول آپ کا کیپیٹل گین ٹیکس صرف منافع (مارکیٹ منافع) پر لگاتا ہے، آپ کی لگائی گئی رقم پر نہیں، یہ فرض کرتے ہوئے کہ آخر میں ایک بار فروخت ہوتی ہے۔ 15.4% پری سیٹ 2025 کے مطابق کوریا کے مالی آمدنی پر ٹیکس (14% انکم ٹیکس اور 1.4% مقامی سرچارج) کو ظاہر کرتا ہے — بہت سے ممالک اور اکاؤنٹ کی اقسام مختلف ہوتی ہیں، اور 401(k)، IRA یا پنشن جیسے ٹیکس فائدہ اکاؤنٹ ٹیکس مؤخر یا مکمل کم کر سکتے ہیں، اس لیے پہلے سے 0% ہے۔ اصل بروکر ہر فروخت پر ٹیکس لگا سکتے ہیں، چھوٹ، لاگت کی بنیاد کے اصول یا کٹوتی استعمال کر سکتے ہیں، اور شرحیں وقت کے ساتھ بدلتی ہیں۔ اسے ریاضیاتی اندازہ سمجھیں اور اپنی صورتحال کسی ٹیکس ماہر یا سرکاری ذریعے سے تصدیق کریں۔"
+    "faq.a5": "ٹول آپ کا کیپیٹل گین ٹیکس صرف منافع (مارکیٹ منافع) پر لگاتا ہے، آپ کی لگائی گئی رقم پر نہیں، یہ فرض کرتے ہوئے کہ آخر میں ایک بار فروخت ہوتی ہے۔ 15.4% پری سیٹ 2025 کے مطابق کوریا کے مالی آمدنی پر ٹیکس (14% انکم ٹیکس اور 1.4% مقامی سرچارج) کو ظاہر کرتا ہے — بہت سے ممالک اور اکاؤنٹ کی اقسام مختلف ہوتی ہیں، اور 401(k)، IRA یا پنشن جیسے ٹیکس فائدہ اکاؤنٹ ٹیکس مؤخر یا مکمل کم کر سکتے ہیں، اس لیے پہلے سے 0% ہے۔ اصل بروکر ہر فروخت پر ٹیکس لگا سکتے ہیں، چھوٹ، لاگت کی بنیاد کے اصول یا کٹوتی استعمال کر سکتے ہیں، اور شرحیں وقت کے ساتھ بدلتی ہیں۔ اسے ریاضیاتی اندازہ سمجھیں اور اپنی صورتحال کسی ٹیکس ماہر یا سرکاری ذریعے سے تصدیق کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -669,7 +719,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa 'nilai dalam uang hari ini' lebih rendah dari angka utama?",
     "faq.a4": "Satu juta dalam tiga puluh tahun tidak akan membeli apa yang satu juta beli hari ini, karena inflasi menggerus daya beli. Saat Anda memasukkan tingkat inflasi tahunan, kalkulator pertumbuhan investasi ini mendiskontokan saldo masa depan setelah pajak Anda ke nilai uang hari ini — membaginya dengan (1 + inflasi) untuk tiap tahun jangka waktu. Nilai riil itu mengukur lebih jujur seberapa banyak portofolio masa depan Anda benar-benar bisa membeli. Biarkan inflasi 0 untuk melihat jumlah nominal, atau coba 2–3% untuk mendekati inflasi jangka panjang yang umum dan lihat seberapa banyak angka riil menyusut pada jangka waktu panjang.",
     "faq.q5": "Bagaimana pajak keuntungan modal diterapkan, dan mengapa angka broker saya bisa berbeda?",
-    "faq.a5": "Alat ini menerapkan tarif pajak keuntungan modal Anda hanya pada laba (keuntungan pasar), bukan pada uang yang Anda setorkan, dengan asumsi satu kali penjualan di akhir. Preset 15,4% mencerminkan pajak Korea atas penghasilan finansial (14% pajak penghasilan plus 1,4% pajak daerah) per 2025 — banyak negara dan jenis akun berbeda, dan akun dengan keuntungan pajak seperti 401(k), IRA, atau dana pensiun dapat menunda atau mengurangi pajak sepenuhnya, sehingga default-nya 0%. Broker nyata bisa memajaki tiap penjualan, memakai pembebasan, aturan basis biaya, atau pemotongan, dan tarif berubah seiring waktu. Gunakan ini sebagai perkiraan aritmetika dan konfirmasikan situasi Anda dengan profesional pajak atau sumber resmi."
+    "faq.a5": "Alat ini menerapkan tarif pajak keuntungan modal Anda hanya pada laba (keuntungan pasar), bukan pada uang yang Anda setorkan, dengan asumsi satu kali penjualan di akhir. Preset 15,4% mencerminkan pajak Korea atas penghasilan finansial (14% pajak penghasilan plus 1,4% pajak daerah) per 2025 — banyak negara dan jenis akun berbeda, dan akun dengan keuntungan pajak seperti 401(k), IRA, atau dana pensiun dapat menunda atau mengurangi pajak sepenuhnya, sehingga default-nya 0%. Broker nyata bisa memajaki tiap penjualan, memakai pembebasan, aturan basis biaya, atau pemotongan, dan tarif berubah seiring waktu. Gunakan ini sebagai perkiraan aritmetika dan konfirmasikan situasi Anda dengan profesional pajak atau sumber resmi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -729,7 +784,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum ist der 'Wert in heutigem Geld' niedriger als die Endzahl?",
     "faq.a4": "Eine Million in dreißig Jahren kauft nicht, was eine Million heute kauft, weil Inflation die Kaufkraft aushöhlt. Wenn Sie eine jährliche Inflationsrate eingeben, diskontiert dieser Rechner für Investmentwachstum Ihren künftigen Saldo nach Steuern auf seinen Wert in heutigem Geld zurück — durch Teilen durch (1 + Inflation) für jedes Jahr des Horizonts. Dieser Realwert misst ehrlicher, wie viel Ihr künftiges Portfolio tatsächlich kaufen kann. Lassen Sie die Inflation bei 0, um den nominalen Betrag zu sehen, oder probieren Sie 2–3%, um einer typischen langfristigen Inflation nahezukommen, und beobachten Sie, wie stark der Realwert über lange Horizonte schrumpft.",
     "faq.q5": "Wie wird die Kapitalertragsteuer behandelt, und warum kann die Zahl meines Brokers abweichen?",
-    "faq.a5": "Das Tool wendet Ihren Kapitalertragsteuersatz nur auf den Gewinn (die Marktgewinne) an, nicht auf das eingezahlte Geld, und nimmt einen einzigen Verkauf am Ende an. Die Vorgabe 15,4% spiegelt Koreas Steuer auf Kapitaleinkünfte wider (14% Einkommensteuer plus 1,4% Kommunalzuschlag), Stand 2025 — viele Länder und Kontotypen unterscheiden sich, und steuerbegünstigte Konten wie ein 401(k), IRA oder Rentenmantel können die Steuer aufschieben oder ganz senken, daher ist 0% die Vorgabe. Echte Broker können jeden Verkauf besteuern, Freibeträge, Anschaffungskostenregeln oder Quellensteuer anwenden, und Sätze ändern sich über die Zeit. Nutzen Sie dies als arithmetische Schätzung und prüfen Sie Ihre Lage mit einem Steuerfachmann oder einer offiziellen Quelle."
+    "faq.a5": "Das Tool wendet Ihren Kapitalertragsteuersatz nur auf den Gewinn (die Marktgewinne) an, nicht auf das eingezahlte Geld, und nimmt einen einzigen Verkauf am Ende an. Die Vorgabe 15,4% spiegelt Koreas Steuer auf Kapitaleinkünfte wider (14% Einkommensteuer plus 1,4% Kommunalzuschlag), Stand 2025 — viele Länder und Kontotypen unterscheiden sich, und steuerbegünstigte Konten wie ein 401(k), IRA oder Rentenmantel können die Steuer aufschieben oder ganz senken, daher ist 0% die Vorgabe. Echte Broker können jeden Verkauf besteuern, Freibeträge, Anschaffungskostenregeln oder Quellensteuer anwenden, und Sätze ändern sich über die Zeit. Nutzen Sie dies als arithmetische Schätzung und prüfen Sie Ihre Lage mit einem Steuerfachmann oder einer offiziellen Quelle.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -789,7 +849,12 @@ window.I18N_LOCALES = {
     "faq.q4": "なぜ「今のお金での価値」は見出しの数字より低いの？",
     "faq.a4": "30 年後の 100 万円は、今の 100 万円が買えるものを買えません。インフレが購買力を目減りさせるからです。年間インフレ率を入力すると、この投資成長計算機は税引後の将来残高を今のお金での価値に割り引きます — 期間の各年について（1 + インフレ率）で割ります。この実質価値は、将来のポートフォリオが実際にどれだけ買えるかをより正直に測ります。名目額を見るにはインフレを 0 のままにし、一般的な長期インフレに合わせるには 2〜3% を試して、長期間で実質値がどれだけ縮むか見てみましょう。",
     "faq.q5": "譲渡益課税はどう扱われ、なぜ証券会社の数字と異なることがあるの？",
-    "faq.a5": "本ツールは譲渡益課税率を利益（市場リターン）だけに適用し、投じた元本には適用せず、期末に一度売却すると仮定します。15.4% プリセットは 2025 年時点の韓国の金融所得課税（所得税 14% + 地方税 1.4%）を反映しています — 多くの国や口座の種類で異なり、401(k)・IRA・年金枠のような税制優遇口座は課税を繰り延べたり完全に軽減したりできるため、既定は 0% です。実際の証券会社は売却ごとに課税したり、控除・取得原価ルール・源泉徴収を用いたりし、税率も時とともに変わります。これは算術的な概算として使い、ご自身の状況は税務の専門家や公式情報で確認してください。"
+    "faq.a5": "本ツールは譲渡益課税率を利益（市場リターン）だけに適用し、投じた元本には適用せず、期末に一度売却すると仮定します。15.4% プリセットは 2025 年時点の韓国の金融所得課税（所得税 14% + 地方税 1.4%）を反映しています — 多くの国や口座の種類で異なり、401(k)・IRA・年金枠のような税制優遇口座は課税を繰り延べたり完全に軽減したりできるため、既定は 0% です。実際の証券会社は売却ごとに課税したり、控除・取得原価ルール・源泉徴収を用いたりし、税率も時とともに変わります。これは算術的な概算として使い、ご自身の状況は税務の専門家や公式情報で確認してください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -849,6 +914,11 @@ window.I18N_LOCALES = {
     "faq.q4": "'오늘 돈 기준 가치'가 대표 숫자보다 낮은 이유는요?",
     "faq.a4": "30년 뒤의 백만 원은 지금 백만 원이 사는 것을 사지 못합니다. 물가상승이 구매력을 갉아먹기 때문입니다. 연 물가상승률을 입력하면, 이 투자 성장 계산기는 세후 미래 잔액을 오늘 돈 기준 가치로 할인합니다 — 기간의 각 해마다 (1 + 물가상승률)로 나눕니다. 이 실질가치는 미래 포트폴리오가 실제로 얼마나 살 수 있는지를 더 정직하게 보여줍니다. 명목 금액만 보려면 물가를 0으로 두고, 일반적인 장기 물가에 맞추려면 2~3%를 넣어 장기간에 실질 숫자가 얼마나 줄어드는지 확인하세요.",
     "faq.q5": "자본이득세는 어떻게 계산되며, 증권사 숫자와 다를 수 있는 이유는요?",
-    "faq.a5": "이 도구는 자본이득세율을 수익(시장 수익)에만 적용하고 투자한 원금에는 적용하지 않으며, 만기에 한 번 매도한다고 가정합니다. 15.4% 프리셋은 2025년 기준 한국의 금융소득 과세(소득세 14% + 지방세 1.4%)를 반영합니다 — 나라와 계좌 유형마다 다르고, 401(k)·IRA·연금계좌 같은 세제혜택 계좌는 과세를 이연하거나 완전히 줄일 수 있어 기본값은 0%입니다. 실제 증권사는 매도마다 과세하거나 공제·취득원가 규칙·원천징수를 적용할 수 있고, 세율도 시간이 지나면 바뀝니다. 이 값은 산술 추정치로 쓰고, 본인 상황은 세무 전문가나 공식 자료로 확인하세요."
+    "faq.a5": "이 도구는 자본이득세율을 수익(시장 수익)에만 적용하고 투자한 원금에는 적용하지 않으며, 만기에 한 번 매도한다고 가정합니다. 15.4% 프리셋은 2025년 기준 한국의 금융소득 과세(소득세 14% + 지방세 1.4%)를 반영합니다 — 나라와 계좌 유형마다 다르고, 401(k)·IRA·연금계좌 같은 세제혜택 계좌는 과세를 이연하거나 완전히 줄일 수 있어 기본값은 0%입니다. 실제 증권사는 매도마다 과세하거나 공제·취득원가 규칙·원천징수를 적용할 수 있고, 세율도 시간이 지나면 바뀝니다. 이 값은 산술 추정치로 쓰고, 본인 상황은 세무 전문가나 공식 자료로 확인하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

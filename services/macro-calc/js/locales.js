@@ -99,7 +99,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What does IIFYM mean, and does this calculator support flexible dieting?",
     "faq.a4": "IIFYM stands for 'if it fits your macros' — a flexible-dieting approach where you can eat any food, as long as its protein, carbs, and fat add up to your daily targets. The Custom split mode is built for exactly this: set your own protein, carb, and fat percentages, for example based on a coach's recommendation, and this macro calculator turns them into grams you can track in any food-logging app. Keep in mind this tool computes calorie and macro targets only — it doesn't account for fiber, micronutrients, or food quality, so IIFYM works best alongside otherwise reasonably nutritious eating rather than as a substitute for it.",
     "faq.q5": "Is this medical advice, and does my data leave my browser?",
-    "faq.a5": "No to both. Every calculation — the BMR estimate, the calorie target, and the macro split — runs entirely in your browser using the numbers you type; nothing is uploaded, logged in, or sent to any server, and your last inputs are saved only in your browser's local storage for next time. This calculator provides educational, formula-based estimates for general fitness and nutrition planning, not personalized medical, dietary, or clinical advice — if you have a health condition, are pregnant, or want a plan tailored to you, please consult a doctor or registered dietitian."
+    "faq.a5": "No to both. Every calculation — the BMR estimate, the calorie target, and the macro split — runs entirely in your browser using the numbers you type; nothing is uploaded, logged in, or sent to any server, and your last inputs are saved only in your browser's local storage for next time. This calculator provides educational, formula-based estimates for general fitness and nutrition planning, not personalized medical, dietary, or clinical advice — if you have a health condition, are pregnant, or want a plan tailored to you, please consult a doctor or registered dietitian.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "ur": {
     "_label": "اردو",
@@ -183,7 +188,12 @@ window.I18N_LOCALES = {
     "faq.q4": "IIFYM کا مطلب کیا ہے، اور کیا یہ کیلکولیٹر فلیکسیبل ڈائیٹنگ کو سپورٹ کرتا ہے؟",
     "faq.a4": "IIFYM کا مطلب ہے \"if it fits your macros\" (اگر یہ آپ کے میکروز میں فٹ بیٹھے) — یہ ایک فلیکسیبل ڈائیٹنگ طریقہ ہے جس میں آپ کوئی بھی خوراک کھا سکتے ہیں، بشرطیکہ اس کا پروٹین، کاربس اور فیٹ آپ کے روزانہ اہداف کے برابر ہو۔ \"اپنی مرضی کا\" تناسب موڈ بالکل اسی مقصد کے لیے بنایا گیا ہے: اپنے خود کے پروٹین، کارب اور فیٹ فیصد سیٹ کریں، مثلاً کسی کوچ کی تجویز کی بنیاد پر، اور یہ میکرو کیلکولیٹر انہیں گرام میں بدل دیتا ہے، جنہیں آپ کسی بھی فوڈ لاگنگ ایپ میں ٹریک کر سکتے ہیں۔ یاد رکھیں کہ یہ ٹول صرف کیلوری اور میکرو اہداف حساب کرتا ہے — یہ فائبر، مائیکرونیوٹرینٹس یا خوراک کے معیار کا خیال نہیں رکھتا، اس لیے IIFYM بصورتِ دیگر مناسب طور پر غذائیت بخش خوراک کے ساتھ مل کر بہترین کام کرتا ہے، اس کے متبادل کے طور پر نہیں۔",
     "faq.q5": "کیا یہ طبی مشورہ ہے، اور کیا میرا ڈیٹا میرے براؤزر سے باہر جاتا ہے؟",
-    "faq.a5": "دونوں کا جواب نہیں ہے۔ ہر حساب — BMR کا اندازہ، کیلوری ہدف، اور میکرو تناسب — مکمل طور پر آپ کے براؤزر میں، آپ کے درج کردہ نمبروں سے چلتا ہے؛ کچھ بھی اپ لوڈ، لاگ ان یا کسی سرور پر نہیں بھیجا جاتا، اور آپ کی آخری اندراج صرف آپ کے براؤزر کے مقامی اسٹوریج میں اگلی بار کے لیے محفوظ ہوتی ہے۔ یہ کیلکولیٹر عمومی فٹنس اور غذائی منصوبہ بندی کے لیے تعلیمی، فارمولا پر مبنی تخمینے فراہم کرتا ہے، نہ کہ ذاتی نوعیت کا طبی، غذائی یا کلینیکل مشورہ — اگر آپ کو کوئی صحت کا مسئلہ ہے، حاملہ ہیں، یا اپنے لیے خاص طور پر تیار کردہ منصوبہ چاہتی ہیں، تو براہِ کرم ڈاکٹر یا رجسٹرڈ ڈائیٹیشن سے مشورہ کریں۔"
+    "faq.a5": "دونوں کا جواب نہیں ہے۔ ہر حساب — BMR کا اندازہ، کیلوری ہدف، اور میکرو تناسب — مکمل طور پر آپ کے براؤزر میں، آپ کے درج کردہ نمبروں سے چلتا ہے؛ کچھ بھی اپ لوڈ، لاگ ان یا کسی سرور پر نہیں بھیجا جاتا، اور آپ کی آخری اندراج صرف آپ کے براؤزر کے مقامی اسٹوریج میں اگلی بار کے لیے محفوظ ہوتی ہے۔ یہ کیلکولیٹر عمومی فٹنس اور غذائی منصوبہ بندی کے لیے تعلیمی، فارمولا پر مبنی تخمینے فراہم کرتا ہے، نہ کہ ذاتی نوعیت کا طبی، غذائی یا کلینیکل مشورہ — اگر آپ کو کوئی صحت کا مسئلہ ہے، حاملہ ہیں، یا اپنے لیے خاص طور پر تیار کردہ منصوبہ چاہتی ہیں، تو براہِ کرم ڈاکٹر یا رجسٹرڈ ڈائیٹیشن سے مشورہ کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -267,7 +277,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa arti IIFYM, dan apakah kalkulator ini mendukung diet fleksibel?",
     "faq.a4": "IIFYM adalah singkatan dari 'if it fits your macros' (jika sesuai dengan makro Anda) — pendekatan diet fleksibel di mana Anda bisa makan makanan apa pun, selama protein, karbo, dan lemaknya sesuai dengan target harian Anda. Mode pembagian Kustom dibuat khusus untuk ini: atur sendiri persentase protein, karbo, dan lemak Anda, misalnya berdasarkan rekomendasi pelatih, dan kalkulator makro ini akan mengubahnya menjadi gram yang bisa Anda lacak di aplikasi pencatat makanan mana pun. Perlu diingat bahwa alat ini hanya menghitung target kalori dan makro — tidak memperhitungkan serat, mikronutrien, atau kualitas makanan, jadi IIFYM bekerja paling baik bersama pola makan yang sudah cukup bergizi, bukan sebagai penggantinya.",
     "faq.q5": "Apakah ini saran medis, dan apakah data saya keluar dari browser saya?",
-    "faq.a5": "Tidak untuk keduanya. Setiap perhitungan — perkiraan BMR, target kalori, dan pembagian makro — sepenuhnya berjalan di browser Anda menggunakan angka yang Anda masukkan; tidak ada yang diunggah, memerlukan login, atau dikirim ke server mana pun, dan input terakhir Anda hanya disimpan di penyimpanan lokal browser untuk digunakan berikutnya. Kalkulator ini memberikan perkiraan edukatif berbasis rumus untuk perencanaan kebugaran dan gizi secara umum, bukan saran medis, diet, atau klinis yang dipersonalisasi — jika Anda memiliki kondisi kesehatan, sedang hamil, atau menginginkan rencana yang disesuaikan khusus untuk Anda, silakan konsultasikan dengan dokter atau ahli gizi terdaftar."
+    "faq.a5": "Tidak untuk keduanya. Setiap perhitungan — perkiraan BMR, target kalori, dan pembagian makro — sepenuhnya berjalan di browser Anda menggunakan angka yang Anda masukkan; tidak ada yang diunggah, memerlukan login, atau dikirim ke server mana pun, dan input terakhir Anda hanya disimpan di penyimpanan lokal browser untuk digunakan berikutnya. Kalkulator ini memberikan perkiraan edukatif berbasis rumus untuk perencanaan kebugaran dan gizi secara umum, bukan saran medis, diet, atau klinis yang dipersonalisasi — jika Anda memiliki kondisi kesehatan, sedang hamil, atau menginginkan rencana yang disesuaikan khusus untuk Anda, silakan konsultasikan dengan dokter atau ahli gizi terdaftar.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "zh": {
     "_label": "中文",
@@ -351,7 +366,12 @@ window.I18N_LOCALES = {
     "faq.q4": "IIFYM 是什么意思？这款计算器支持灵活饮食吗？",
     "faq.a4": "IIFYM 意为“只要符合你的宏量营养素”（if it fits your macros）——这是一种灵活饮食法，只要食物中的蛋白质、碳水和脂肪总量符合你的每日目标，吃什么都可以。“自定义”比例模式正是为此而设计：你可以设定自己的蛋白质、碳水和脂肪百分比（例如按教练的建议），这款宏量营养素计算器会把它们换算成克数，方便你在任何饮食记录应用中追踪。请注意，本工具只计算热量和宏量营养素目标——不考虑膳食纤维、微量营养素或食物质量，因此 IIFYM 最好搭配总体营养均衡的饮食一起使用，而不是完全取代它。",
     "faq.q5": "这是医疗建议吗？我的数据会离开浏览器吗？",
-    "faq.a5": "都不是。每一次计算——基础代谢率估算、热量目标和宏量营养素比例——都完全在你的浏览器中运行，使用的是你自己输入的数字；不会上传、登录或发送到任何服务器，你上一次的输入只会保存在浏览器本地存储中，方便下次使用。本计算器仅为一般健身和营养规划提供基于公式的教育性估算，并非针对个人的医疗、饮食或临床建议——如果你有健康状况、正在怀孕，或希望获得为你量身定制的方案，请咨询医生或注册营养师。"
+    "faq.a5": "都不是。每一次计算——基础代谢率估算、热量目标和宏量营养素比例——都完全在你的浏览器中运行，使用的是你自己输入的数字；不会上传、登录或发送到任何服务器，你上一次的输入只会保存在浏览器本地存储中，方便下次使用。本计算器仅为一般健身和营养规划提供基于公式的教育性估算，并非针对个人的医疗、饮食或临床建议——如果你有健康状况、正在怀孕，或希望获得为你量身定制的方案，请咨询医生或注册营养师。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -435,7 +455,12 @@ window.I18N_LOCALES = {
     "faq.q4": "IIFYM का मतलब क्या है, और क्या यह कैलकुलेटर फ़्लेक्सिबल डाइटिंग को सपोर्ट करता है?",
     "faq.a4": "IIFYM का मतलब है \"if it fits your macros\" (अगर यह आपके मैक्रोज़ में फ़िट बैठता है) — एक फ़्लेक्सिबल डाइटिंग तरीका जिसमें आप कोई भी खाना खा सकते हैं, बशर्ते उसका प्रोटीन, कार्ब्स और फैट आपके दैनिक लक्ष्यों के बराबर हो। \"कस्टम\" स्प्लिट मोड बिल्कुल इसी के लिए बनाया गया है: अपने खुद के प्रोटीन, कार्ब और फैट प्रतिशत सेट करें, जैसे किसी कोच की सिफ़ारिश के आधार पर, और यह मैक्रो कैलकुलेटर उन्हें ग्राम में बदल देता है, जिन्हें आप किसी भी फ़ूड-लॉगिंग ऐप में ट्रैक कर सकते हैं। ध्यान रखें कि यह टूल सिर्फ़ कैलोरी और मैक्रो लक्ष्य कैलकुलेट करता है — यह फ़ाइबर, माइक्रोन्यूट्रिएंट्स या खाने की गुणवत्ता का हिसाब नहीं रखता, इसलिए IIFYM अन्यथा संतुलित खानपान के साथ मिलाकर सबसे बेहतर काम करता है, न कि उसकी जगह लेकर।",
     "faq.q5": "क्या यह मेडिकल सलाह है, और क्या मेरा डेटा मेरे ब्राउज़र से बाहर जाता है?",
-    "faq.a5": "दोनों का जवाब नहीं है। हर गणना — BMR अनुमान, कैलोरी लक्ष्य और मैक्रो स्प्लिट — पूरी तरह आपके ब्राउज़र में, आपके डाले नंबरों से चलती है; कुछ भी अपलोड, लॉग-इन या किसी सर्वर पर नहीं भेजा जाता, और आपकी आख़िरी एंट्री सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में अगली बार के लिए सेव होती है। यह कैलकुलेटर सामान्य फ़िटनेस और पोषण योजना के लिए शैक्षणिक, फ़ॉर्मूला-आधारित अनुमान देता है, न कि व्यक्तिगत मेडिकल, आहार या क्लिनिकल सलाह — अगर आपको कोई स्वास्थ्य समस्या है, आप गर्भवती हैं, या आपको अपने लिए बनाई गई योजना चाहिए, तो कृपया डॉक्टर या रजिस्टर्ड डायटीशियन से सलाह लें।"
+    "faq.a5": "दोनों का जवाब नहीं है। हर गणना — BMR अनुमान, कैलोरी लक्ष्य और मैक्रो स्प्लिट — पूरी तरह आपके ब्राउज़र में, आपके डाले नंबरों से चलती है; कुछ भी अपलोड, लॉग-इन या किसी सर्वर पर नहीं भेजा जाता, और आपकी आख़िरी एंट्री सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में अगली बार के लिए सेव होती है। यह कैलकुलेटर सामान्य फ़िटनेस और पोषण योजना के लिए शैक्षणिक, फ़ॉर्मूला-आधारित अनुमान देता है, न कि व्यक्तिगत मेडिकल, आहार या क्लिनिकल सलाह — अगर आपको कोई स्वास्थ्य समस्या है, आप गर्भवती हैं, या आपको अपने लिए बनाई गई योजना चाहिए, तो कृपया डॉक्टर या रजिस्टर्ड डायटीशियन से सलाह लें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -519,7 +544,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué significa IIFYM, y esta calculadora admite dieta flexible?",
     "faq.a4": "IIFYM significa 'if it fits your macros' (si encaja en tus macros) — un enfoque de dieta flexible en el que puedes comer cualquier alimento, siempre que su proteína, carbohidratos y grasa sumen tus objetivos diarios. El modo de reparto Personalizado está hecho justo para esto: fija tus propios porcentajes de proteína, carbohidratos y grasa, por ejemplo según la recomendación de un entrenador, y esta calculadora de macros los convierte en gramos que puedes registrar en cualquier app de seguimiento de comidas. Ten en cuenta que esta herramienta solo calcula objetivos de calorías y macros — no tiene en cuenta la fibra, los micronutrientes ni la calidad de los alimentos, así que el IIFYM funciona mejor junto a una alimentación por lo demás razonablemente nutritiva, no como sustituto de ella.",
     "faq.q5": "¿Es esto asesoramiento médico, y mis datos salen de mi navegador?",
-    "faq.a5": "No a ambas preguntas. Cada cálculo — la estimación de la TMB, el objetivo de calorías y el reparto de macros — se ejecuta enteramente en tu navegador con los números que escribes; nada se sube, se registra ni se envía a ningún servidor, y tu última entrada solo se guarda en el almacenamiento local de tu navegador para la próxima vez. Esta calculadora ofrece estimaciones educativas basadas en fórmulas para la planificación general de fitness y nutrición, no un asesoramiento médico, dietético o clínico personalizado — si tienes una condición de salud, estás embarazada o quieres un plan hecho a tu medida, consulta a un médico o a un dietista-nutricionista colegiado."
+    "faq.a5": "No a ambas preguntas. Cada cálculo — la estimación de la TMB, el objetivo de calorías y el reparto de macros — se ejecuta enteramente en tu navegador con los números que escribes; nada se sube, se registra ni se envía a ningún servidor, y tu última entrada solo se guarda en el almacenamiento local de tu navegador para la próxima vez. Esta calculadora ofrece estimaciones educativas basadas en fórmulas para la planificación general de fitness y nutrición, no un asesoramiento médico, dietético o clínico personalizado — si tienes una condición de salud, estás embarazada o quieres un plan hecho a tu medida, consulta a un médico o a un dietista-nutricionista colegiado.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -603,7 +633,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ماذا تعني IIFYM، وهل تدعم هذه الحاسبة الحمية المرنة؟",
     "faq.a4": "تعني IIFYM 'إن كان يناسب ماكروزك' (if it fits your macros) — وهي طريقة حمية مرنة يمكنك فيها تناول أي طعام، طالما أن مجموع بروتينه وكربوهيدراته ودهونه يطابق أهدافك اليومية. وضع التوزيع 'مخصص' مصمم لهذا بالضبط: حدّد نسبك الخاصة من البروتين والكربوهيدرات والدهون، مثلًا بناءً على توصية مدرب، وتحوّلها حاسبة الماكروز هذه إلى غرامات يمكنك تتبعها في أي تطبيق لتسجيل الطعام. ضع في اعتبارك أن هذه الأداة تحسب أهداف السعرات والماكروز فقط — ولا تأخذ في الحسبان الألياف أو المغذيات الدقيقة أو جودة الطعام، لذا يعمل IIFYM بشكل أفضل إلى جانب نظام غذائي مغذٍّ بشكل معقول أصلًا، وليس كبديل عنه.",
     "faq.q5": "هل هذه نصيحة طبية، وهل تغادر بياناتي متصفحي؟",
-    "faq.a5": "لا، في كلتا الحالتين. كل عملية حساب — تقدير معدل الأيض الأساسي، وهدف السعرات، وتوزيع الماكروز — تعمل بالكامل في متصفحك باستخدام الأرقام التي تكتبها؛ لا يُرفع أي شيء أو يُسجَّل الدخول به أو يُرسَل إلى أي خادم، وتُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك لاستخدامها في المرة القادمة. توفر هذه الحاسبة تقديرات تعليمية قائمة على معادلات لأغراض اللياقة والتخطيط الغذائي العام، وليست نصيحة طبية أو غذائية أو سريرية مخصصة لك — إذا كانت لديك حالة صحية، أو كنتِ حاملًا، أو ترغب في خطة مصممة خصيصًا لك، فيُرجى استشارة طبيب أو أخصائي تغذية معتمد."
+    "faq.a5": "لا، في كلتا الحالتين. كل عملية حساب — تقدير معدل الأيض الأساسي، وهدف السعرات، وتوزيع الماكروز — تعمل بالكامل في متصفحك باستخدام الأرقام التي تكتبها؛ لا يُرفع أي شيء أو يُسجَّل الدخول به أو يُرسَل إلى أي خادم، وتُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك لاستخدامها في المرة القادمة. توفر هذه الحاسبة تقديرات تعليمية قائمة على معادلات لأغراض اللياقة والتخطيط الغذائي العام، وليست نصيحة طبية أو غذائية أو سريرية مخصصة لك — إذا كانت لديك حالة صحية، أو كنتِ حاملًا، أو ترغب في خطة مصممة خصيصًا لك، فيُرجى استشارة طبيب أو أخصائي تغذية معتمد.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -687,7 +722,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que signifie IIFYM, et ce calculateur prend-il en charge l'alimentation flexible ?",
     "faq.a4": "IIFYM signifie « if it fits your macros » (si ça correspond à vos macros) — une approche d'alimentation flexible où vous pouvez manger n'importe quel aliment, tant que ses protéines, glucides et lipides correspondent à vos objectifs quotidiens. Le mode de répartition Personnalisée est conçu exactement pour cela : définissez vos propres pourcentages de protéines, glucides et lipides, par exemple selon la recommandation d'un coach, et ce calculateur de macros les convertit en grammes que vous pouvez suivre dans n'importe quelle application de suivi alimentaire. Gardez à l'esprit que cet outil calcule uniquement des objectifs de calories et de macros — il ne tient pas compte des fibres, des micronutriments ni de la qualité des aliments, donc l'IIFYM fonctionne mieux associé à une alimentation par ailleurs raisonnablement nutritive plutôt qu'en remplacement de celle-ci.",
     "faq.q5": "Est-ce un avis médical, et mes données quittent-elles mon navigateur ?",
-    "faq.a5": "Non, dans les deux cas. Chaque calcul — l'estimation du métabolisme de base, l'objectif de calories et la répartition des macros — s'exécute entièrement dans votre navigateur à partir des chiffres que vous saisissez ; rien n'est téléversé, connecté ou envoyé à un serveur, et votre dernière saisie n'est enregistrée que dans le stockage local de votre navigateur pour la prochaine fois. Ce calculateur fournit des estimations éducatives fondées sur des formules pour la planification générale de la forme et de la nutrition, et non un avis médical, diététique ou clinique personnalisé — si vous avez un problème de santé, si vous êtes enceinte, ou si vous souhaitez un plan adapté à votre situation, consultez un médecin ou un diététicien-nutritionniste diplômé."
+    "faq.a5": "Non, dans les deux cas. Chaque calcul — l'estimation du métabolisme de base, l'objectif de calories et la répartition des macros — s'exécute entièrement dans votre navigateur à partir des chiffres que vous saisissez ; rien n'est téléversé, connecté ou envoyé à un serveur, et votre dernière saisie n'est enregistrée que dans le stockage local de votre navigateur pour la prochaine fois. Ce calculateur fournit des estimations éducatives fondées sur des formules pour la planification générale de la forme et de la nutrition, et non un avis médical, diététique ou clinique personnalisé — si vous avez un problème de santé, si vous êtes enceinte, ou si vous souhaitez un plan adapté à votre situation, consultez un médecin ou un diététicien-nutritionniste diplômé.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -771,7 +811,12 @@ window.I18N_LOCALES = {
     "faq.q4": "IIFYM মানে কী, আর এই ক্যালকুলেটর কি ফ্লেক্সিবল ডায়েটিং সমর্থন করে?",
     "faq.a4": "IIFYM মানে \"if it fits your macros\" (যদি এটি আপনার ম্যাক্রোতে মানানসই হয়) — এটি একটি ফ্লেক্সিবল ডায়েটিং পদ্ধতি, যেখানে যেকোনো খাবার খাওয়া যায়, যতক্ষণ তার প্রোটিন, কার্বস ও ফ্যাট আপনার দৈনিক লক্ষ্যের সমান হয়। \"কাস্টম\" বণ্টন মোড ঠিক এই কাজের জন্যই তৈরি: আপনার নিজের প্রোটিন, কার্ব ও ফ্যাটের শতাংশ সেট করুন, যেমন কোনো কোচের পরামর্শ অনুযায়ী, আর এই ম্যাক্রো ক্যালকুলেটর সেগুলোকে গ্রামে রূপান্তর করে দেয়, যা আপনি যেকোনো ফুড-লগিং অ্যাপে ট্র্যাক করতে পারবেন। মনে রাখবেন, এই টুল শুধু ক্যালোরি ও ম্যাক্রো লক্ষ্য হিসাব করে — এটি ফাইবার, মাইক্রোনিউট্রিয়েন্ট বা খাবারের গুণমান বিবেচনা করে না, তাই IIFYM অন্যথায় যুক্তিসঙ্গতভাবে পুষ্টিকর খাদ্যাভ্যাসের পাশাপাশি সবচেয়ে ভালো কাজ করে, তার বিকল্প হিসেবে নয়।",
     "faq.q5": "এটা কি চিকিৎসা পরামর্শ, আর আমার তথ্য কি আমার ব্রাউজার থেকে বের হয়?",
-    "faq.a5": "দুটোরই উত্তর না। প্রতিটি হিসাব — BMR অনুমান, ক্যালোরি লক্ষ্য ও ম্যাক্রো বণ্টন — সম্পূর্ণভাবে আপনার ব্রাউজারে, আপনার দেওয়া সংখ্যা দিয়ে চলে; কিছুই আপলোড, লগ-ইন বা কোনো সার্ভারে পাঠানো হয় না, এবং আপনার শেষ ইনপুট শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে পরের বারের জন্য সংরক্ষিত থাকে। এই ক্যালকুলেটর সাধারণ ফিটনেস ও পুষ্টি পরিকল্পনার জন্য শিক্ষামূলক, সূত্রভিত্তিক অনুমান দেয়, ব্যক্তিগতকৃত চিকিৎসা, খাদ্য বা ক্লিনিক্যাল পরামর্শ নয় — আপনার কোনো স্বাস্থ্য সমস্যা থাকলে, গর্ভবতী হলে, বা নিজের জন্য বিশেষভাবে তৈরি পরিকল্পনা চাইলে, দয়া করে একজন ডাক্তার বা নিবন্ধিত ডায়েটিশিয়ানের পরামর্শ নিন।"
+    "faq.a5": "দুটোরই উত্তর না। প্রতিটি হিসাব — BMR অনুমান, ক্যালোরি লক্ষ্য ও ম্যাক্রো বণ্টন — সম্পূর্ণভাবে আপনার ব্রাউজারে, আপনার দেওয়া সংখ্যা দিয়ে চলে; কিছুই আপলোড, লগ-ইন বা কোনো সার্ভারে পাঠানো হয় না, এবং আপনার শেষ ইনপুট শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে পরের বারের জন্য সংরক্ষিত থাকে। এই ক্যালকুলেটর সাধারণ ফিটনেস ও পুষ্টি পরিকল্পনার জন্য শিক্ষামূলক, সূত্রভিত্তিক অনুমান দেয়, ব্যক্তিগতকৃত চিকিৎসা, খাদ্য বা ক্লিনিক্যাল পরামর্শ নয় — আপনার কোনো স্বাস্থ্য সমস্যা থাকলে, গর্ভবতী হলে, বা নিজের জন্য বিশেষভাবে তৈরি পরিকল্পনা চাইলে, দয়া করে একজন ডাক্তার বা নিবন্ধিত ডায়েটিশিয়ানের পরামর্শ নিন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -855,7 +900,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que significa IIFYM, e esta calculadora suporta dieta flexível?",
     "faq.a4": "IIFYM significa 'if it fits your macros' (se couber nos seus macros) — uma abordagem de dieta flexível em que você pode comer qualquer alimento, desde que sua proteína, carboidratos e gordura somem suas metas diárias. O modo de divisão Personalizada foi feito exatamente para isso: defina suas próprias porcentagens de proteína, carboidrato e gordura, por exemplo com base na recomendação de um treinador, e esta calculadora de macros as transforma em gramas que você pode acompanhar em qualquer app de registro alimentar. Lembre-se de que esta ferramenta calcula apenas metas de calorias e macros — não considera fibras, micronutrientes ou qualidade dos alimentos, então o IIFYM funciona melhor junto a uma alimentação já razoavelmente nutritiva, e não como substituto dela.",
     "faq.q5": "Isso é aconselhamento médico, e meus dados saem do meu navegador?",
-    "faq.a5": "Não, em ambos os casos. Todo cálculo — a estimativa de TMB, a meta de calorias e a divisão de macros — é executado inteiramente no seu navegador com os números que você digita; nada é enviado, registrado ou transmitido a nenhum servidor, e sua última entrada é salva apenas no armazenamento local do seu navegador para a próxima vez. Esta calculadora fornece estimativas educacionais baseadas em fórmulas para planejamento geral de fitness e nutrição, não aconselhamento médico, dietético ou clínico personalizado — se você tem uma condição de saúde, está grávida, ou quer um plano feito sob medida, consulte um médico ou nutricionista registrado."
+    "faq.a5": "Não, em ambos os casos. Todo cálculo — a estimativa de TMB, a meta de calorias e a divisão de macros — é executado inteiramente no seu navegador com os números que você digita; nada é enviado, registrado ou transmitido a nenhum servidor, e sua última entrada é salva apenas no armazenamento local do seu navegador para a próxima vez. Esta calculadora fornece estimativas educacionais baseadas em fórmulas para planejamento geral de fitness e nutrição, não aconselhamento médico, dietético ou clínico personalizado — se você tem uma condição de saúde, está grávida, ou quer um plano feito sob medida, consulte um médico ou nutricionista registrado.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -939,7 +989,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что означает IIFYM, и поддерживает ли этот калькулятор гибкое питание?",
     "faq.a4": "IIFYM расшифровывается как «if it fits your macros» («если это укладывается в ваши макросы») — подход гибкого питания, при котором можно есть любую еду, если её белки, углеводы и жиры укладываются в ваши суточные цели. Режим «Своё» соотношение создан именно для этого: задайте собственные проценты белков, углеводов и жиров, например по рекомендации тренера, и этот калькулятор макросов переведёт их в граммы, которые можно отслеживать в любом приложении для учёта питания. Учтите, что этот инструмент рассчитывает только цели по калориям и макросам — он не учитывает клетчатку, микронутриенты или качество продуктов, поэтому IIFYM лучше всего работает вместе с в целом достаточно питательным рационом, а не как его замена.",
     "faq.q5": "Это медицинская рекомендация, и покидают ли мои данные браузер?",
-    "faq.a5": "Нет и нет. Каждый расчёт — оценка базового обмена, целевая калорийность и соотношение макросов — полностью выполняется в вашем браузере на основе введённых вами чисел; ничего не загружается, не отправляется на сервер и не требует входа в аккаунт, а ваши последние введённые данные сохраняются только в локальном хранилище браузера для следующего раза. Этот калькулятор предоставляет образовательные, основанные на формулах оценки для общего планирования фитнеса и питания, а не персональную медицинскую, диетологическую или клиническую рекомендацию — если у вас есть заболевание, вы беременны или хотите план, составленный именно для вас, обратитесь к врачу или дипломированному диетологу."
+    "faq.a5": "Нет и нет. Каждый расчёт — оценка базового обмена, целевая калорийность и соотношение макросов — полностью выполняется в вашем браузере на основе введённых вами чисел; ничего не загружается, не отправляется на сервер и не требует входа в аккаунт, а ваши последние введённые данные сохраняются только в локальном хранилище браузера для следующего раза. Этот калькулятор предоставляет образовательные, основанные на формулах оценки для общего планирования фитнеса и питания, а не персональную медицинскую, диетологическую или клиническую рекомендацию — если у вас есть заболевание, вы беременны или хотите план, составленный именно для вас, обратитесь к врачу или дипломированному диетологу.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "de": {
     "_label": "Deutsch",
@@ -1023,7 +1078,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was bedeutet IIFYM, und unterstützt dieser Rechner flexibles Diäten?",
     "faq.a4": "IIFYM steht für 'if it fits your macros' (wenn es in deine Makros passt) — ein flexibler Diätansatz, bei dem Sie jedes Lebensmittel essen können, solange dessen Protein, Kohlenhydrate und Fett Ihre Tagesziele ergeben. Der Modus Individuell wurde genau dafür entwickelt: Legen Sie Ihre eigenen Protein-, Kohlenhydrat- und Fettanteile fest, etwa nach Empfehlung eines Coaches, und dieser Makrorechner wandelt sie in Grammzahlen um, die Sie in jeder Ernährungs-App verfolgen können. Beachten Sie, dass dieses Tool nur Kalorien- und Makroziele berechnet — es berücksichtigt weder Ballaststoffe noch Mikronährstoffe oder Lebensmittelqualität, daher funktioniert IIFYM am besten in Kombination mit einer ansonsten angemessen nährstoffreichen Ernährung und nicht als Ersatz dafür.",
     "faq.q5": "Ist das medizinischer Rat, und verlassen meine Daten meinen Browser?",
-    "faq.a5": "Beides nein. Jede Berechnung — die BMR-Schätzung, das Kalorienziel und die Makroverteilung — läuft vollständig in Ihrem Browser mit den von Ihnen eingegebenen Zahlen ab; nichts wird hochgeladen, angemeldet oder an einen Server gesendet, und Ihre letzten Eingaben werden nur im lokalen Speicher Ihres Browsers für das nächste Mal gespeichert. Dieser Rechner liefert formelbasierte Bildungsschätzungen für die allgemeine Fitness- und Ernährungsplanung, keine personalisierte medizinische, diätetische oder klinische Beratung — wenn Sie eine gesundheitliche Erkrankung haben, schwanger sind oder einen auf Sie zugeschnittenen Plan wünschen, wenden Sie sich bitte an einen Arzt oder eine registrierte Ernährungsfachkraft."
+    "faq.a5": "Beides nein. Jede Berechnung — die BMR-Schätzung, das Kalorienziel und die Makroverteilung — läuft vollständig in Ihrem Browser mit den von Ihnen eingegebenen Zahlen ab; nichts wird hochgeladen, angemeldet oder an einen Server gesendet, und Ihre letzten Eingaben werden nur im lokalen Speicher Ihres Browsers für das nächste Mal gespeichert. Dieser Rechner liefert formelbasierte Bildungsschätzungen für die allgemeine Fitness- und Ernährungsplanung, keine personalisierte medizinische, diätetische oder klinische Beratung — wenn Sie eine gesundheitliche Erkrankung haben, schwanger sind oder einen auf Sie zugeschnittenen Plan wünschen, wenden Sie sich bitte an einen Arzt oder eine registrierte Ernährungsfachkraft.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -1107,7 +1167,12 @@ window.I18N_LOCALES = {
     "faq.q4": "IIFYMとは何ですか?このツールは柔軟な食事法(フレキシブルダイエット)に対応していますか?",
     "faq.a4": "IIFYMは「if it fits your macros(自分のマクロに収まるなら何でもよい)」の略で、タンパク質・炭水化物・脂質の合計が1日の目標に収まっている限り、どんな食品を食べてもよいという柔軟な食事法です。「カスタム」配分モードはまさにこのために作られています。コーチの提案などをもとに自分でタンパク質・炭水化物・脂質の割合を設定すれば、このマクロ計算機がそれを、どんな食事記録アプリでも記録できるグラム数に変換してくれます。ただし、このツールが計算するのはカロリーとマクロの目標のみで、食物繊維・微量栄養素・食品の質は考慮していない点にご注意ください。そのため、IIFYMはそれ自体を食事の代わりにするのではなく、それなりに栄養バランスの取れた食事と組み合わせるのが最も効果的です。",
     "faq.q5": "これは医療的な助言ですか?データはブラウザの外に送信されますか?",
-    "faq.a5": "どちらも「いいえ」です。BMRの推定、カロリー目標、マクロ配分といったすべての計算は、あなたが入力した数値を使ってブラウザ内だけで完結します。アップロード、ログイン、サーバーへの送信は一切行われず、直前の入力内容は次回のためにブラウザのローカルストレージにのみ保存されます。この計算機は、一般的なフィットネスや栄養計画のための、数式に基づく教育目的の推定値を提供するものであり、あなた個人に合わせた医療・食事療法・臨床的な助言ではありません。持病がある場合、妊娠中の場合、または自分専用のプランを希望する場合は、医師や管理栄養士にご相談ください。"
+    "faq.a5": "どちらも「いいえ」です。BMRの推定、カロリー目標、マクロ配分といったすべての計算は、あなたが入力した数値を使ってブラウザ内だけで完結します。アップロード、ログイン、サーバーへの送信は一切行われず、直前の入力内容は次回のためにブラウザのローカルストレージにのみ保存されます。この計算機は、一般的なフィットネスや栄養計画のための、数式に基づく教育目的の推定値を提供するものであり、あなた個人に合わせた医療・食事療法・臨床的な助言ではありません。持病がある場合、妊娠中の場合、または自分専用のプランを希望する場合は、医師や管理栄養士にご相談ください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -1191,6 +1256,11 @@ window.I18N_LOCALES = {
     "faq.q4": "IIFYM은 무슨 뜻이고, 이 계산기가 유연한 식단(플렉시블 다이어트)을 지원하나요?",
     "faq.a4": "IIFYM은 'if it fits your macros'(내 매크로에 맞기만 하면 된다)의 약자로, 단백질·탄수화물·지방의 합이 하루 목표에 맞기만 하면 어떤 음식이든 먹을 수 있는 유연한 식단 방식입니다. '커스텀' 비율 모드는 정확히 이를 위해 만들어졌습니다: 예를 들어 코치의 권장 사항에 따라 단백질·탄수화물·지방 비율을 직접 설정하면, 이 매크로 계산기가 이를 어떤 식단 기록 앱에서도 추적할 수 있는 그램 수로 변환해 줍니다. 다만 이 도구는 칼로리와 매크로 목표만 계산하며, 식이섬유·미량영양소·음식의 질은 고려하지 않는다는 점을 기억하세요. 그래서 IIFYM은 그 자체로 식단을 대체하기보다는, 그 외에는 어느 정도 균형 잡힌 식사와 함께할 때 가장 효과적입니다.",
     "faq.q5": "이건 의료적 조언인가요? 제 데이터가 브라우저 밖으로 나가나요?",
-    "faq.a5": "둘 다 아닙니다. 기초대사량 추정, 칼로리 목표, 매크로 비율 계산까지 모든 계산은 입력한 숫자만으로 브라우저 안에서 완전히 처리됩니다. 업로드되거나 로그인되거나 서버로 전송되는 것은 전혀 없으며, 마지막 입력값은 다음 방문을 위해 브라우저의 로컬 저장소에만 저장됩니다. 이 계산기는 일반적인 체력 관리와 영양 계획을 위한 공식 기반의 교육용 추정치를 제공할 뿐, 개인 맞춤형 의료·식이·임상 조언이 아닙니다 — 건강 상태가 있거나 임신 중이거나 자신에게 맞춘 계획을 원한다면 의사나 등록 영양사와 상담하세요."
+    "faq.a5": "둘 다 아닙니다. 기초대사량 추정, 칼로리 목표, 매크로 비율 계산까지 모든 계산은 입력한 숫자만으로 브라우저 안에서 완전히 처리됩니다. 업로드되거나 로그인되거나 서버로 전송되는 것은 전혀 없으며, 마지막 입력값은 다음 방문을 위해 브라우저의 로컬 저장소에만 저장됩니다. 이 계산기는 일반적인 체력 관리와 영양 계획을 위한 공식 기반의 교육용 추정치를 제공할 뿐, 개인 맞춤형 의료·식이·임상 조언이 아닙니다 — 건강 상태가 있거나 임신 중이거나 자신에게 맞춘 계획을 원한다면 의사나 등록 영양사와 상담하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

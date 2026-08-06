@@ -68,7 +68,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is my list uploaded anywhere, and is there a size limit?",
     "faq.a4": "No. Every sort runs entirely in your browser with plain JavaScript — nothing you paste is uploaded, logged, or sent to a server. Your last list and chosen options are optionally kept in this browser's local storage only, so they're still there next time you open the tool; clearing your browser data removes them. There's no hard line limit, but extremely large pastes (tens of thousands of lines) may feel sluggish since sorting happens on your own device.",
     "faq.q5": "What happens to blank lines and duplicate entries?",
-    "faq.a5": "\"Remove blank lines\" is on by default and filters out any line that is empty or contains only spaces before sorting, so they don't cluster at the top or bottom of your result. Turn it off to keep every blank line exactly where it falls. Duplicate entries are never merged or removed — if \"apple\" appears three times in your list, it appears three times in the sorted result, in its correct alphabetical position."
+    "faq.a5": "\"Remove blank lines\" is on by default and filters out any line that is empty or contains only spaces before sorting, so they don't cluster at the top or bottom of your result. Turn it off to keep every blank line exactly where it falls. Duplicate entries are never merged or removed — if \"apple\" appears three times in your list, it appears three times in the sorted result, in its correct alphabetical position.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -121,7 +126,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的列表会被上传到任何地方吗？有行数上限吗？",
     "faq.a4": "不会。所有排序都完全在你的浏览器中通过纯 JavaScript 完成 — 你粘贴的任何内容都不会被上传、记录或发送到服务器。你最近一次的列表和所选选项仅会（可选地）保存在本浏览器的本地存储中，方便下次打开时继续使用；清除浏览器数据即可移除它们。没有硬性的行数上限，但粘贴数万行这样极大的内容可能会让排序在你自己的设备上感觉变慢。",
     "faq.q5": "空行和重复条目会怎样处理？",
-    "faq.a5": "“移除空行”默认开启，会在排序前过滤掉所有空白或仅含空格的行，避免它们堆积在结果的顶部或底部。关闭它则会保留每一处空行的原始位置。重复条目永远不会被合并或删除 — 如果 \"apple\" 在你的列表中出现三次，排序结果中它仍会出现三次，并各自处于正确的字母顺序位置。"
+    "faq.a5": "“移除空行”默认开启，会在排序前过滤掉所有空白或仅含空格的行，避免它们堆积在结果的顶部或底部。关闭它则会保留每一处空行的原始位置。重复条目永远不会被合并或删除 — 如果 \"apple\" 在你的列表中出现三次，排序结果中它仍会出现三次，并各自处于正确的字母顺序位置。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -174,7 +184,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरी सूची कहीं अपलोड होती है, और क्या कोई साइज़ सीमा है?",
     "faq.a4": "नहीं। हर सॉर्ट पूरी तरह आपके ब्राउज़र में सामान्य JavaScript से चलती है — आपके द्वारा पेस्ट किया गया कुछ भी अपलोड, लॉग या सर्वर पर नहीं भेजा जाता। आपकी आख़िरी सूची और चुने गए विकल्प वैकल्पिक रूप से केवल इस ब्राउज़र के लोकल स्टोरेज में रखे जाते हैं, ताकि अगली बार टूल खोलने पर वे मौजूद रहें; ब्राउज़र डेटा साफ़ करने से वे हट जाते हैं। कोई सख़्त लाइन सीमा नहीं है, लेकिन बहुत बड़े पेस्ट (हज़ारों-दहाई हज़ार लाइनें) आपके अपने डिवाइस पर सॉर्टिंग को धीमा महसूस करा सकते हैं।",
     "faq.q5": "खाली लाइनों और डुप्लिकेट एंट्रीज़ का क्या होता है?",
-    "faq.a5": "\"खाली लाइनें हटाएँ\" डिफ़ॉल्ट रूप से चालू रहता है और सॉर्ट करने से पहले किसी भी खाली या केवल स्पेस वाली लाइन को फ़िल्टर कर देता है, ताकि वे परिणाम के ऊपर या नीचे इकट्ठा न हों। इसे बंद करने पर हर खाली लाइन ठीक उसी स्थान पर बनी रहती है जहाँ वह आती है। डुप्लिकेट एंट्रीज़ कभी मर्ज या हटाई नहीं जातीं — अगर \"apple\" आपकी सूची में तीन बार आता है, तो वह सॉर्ट किए गए परिणाम में भी तीन बार, अपने सही वर्णानुक्रम स्थान पर दिखाई देगा।"
+    "faq.a5": "\"खाली लाइनें हटाएँ\" डिफ़ॉल्ट रूप से चालू रहता है और सॉर्ट करने से पहले किसी भी खाली या केवल स्पेस वाली लाइन को फ़िल्टर कर देता है, ताकि वे परिणाम के ऊपर या नीचे इकट्ठा न हों। इसे बंद करने पर हर खाली लाइन ठीक उसी स्थान पर बनी रहती है जहाँ वह आती है। डुप्लिकेट एंट्रीज़ कभी मर्ज या हटाई नहीं जातीं — अगर \"apple\" आपकी सूची में तीन बार आता है, तो वह सॉर्ट किए गए परिणाम में भी तीन बार, अपने सही वर्णानुक्रम स्थान पर दिखाई देगा।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -227,7 +242,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se sube mi lista a algún sitio y hay algún límite de tamaño?",
     "faq.a4": "No. Cada ordenación se ejecuta por completo en tu navegador con JavaScript normal — nada de lo que pegues se sube, se registra ni se envía a un servidor. Tu última lista y las opciones elegidas se guardan opcionalmente solo en el almacenamiento local de este navegador, para que sigan ahí la próxima vez que abras la herramienta; al borrar los datos del navegador se eliminan. No hay un límite estricto de líneas, pero pegar listas extremadamente grandes (decenas de miles de líneas) puede notarse lento, ya que la ordenación ocurre en tu propio dispositivo.",
     "faq.q5": "¿Qué pasa con las líneas en blanco y las entradas duplicadas?",
-    "faq.a5": "\"Quitar líneas en blanco\" está activado de forma predeterminada y filtra cualquier línea vacía o que solo contenga espacios antes de ordenar, para que no se acumulen al principio o al final del resultado. Desactívala para conservar cada línea en blanco exactamente donde aparece. Las entradas duplicadas nunca se combinan ni se eliminan — si \"apple\" aparece tres veces en tu lista, aparecerá tres veces en el resultado ordenado, cada una en su posición alfabética correcta."
+    "faq.a5": "\"Quitar líneas en blanco\" está activado de forma predeterminada y filtra cualquier línea vacía o que solo contenga espacios antes de ordenar, para que no se acumulen al principio o al final del resultado. Desactívala para conservar cada línea en blanco exactamente donde aparece. Las entradas duplicadas nunca se combinan ni se eliminan — si \"apple\" aparece tres veces en tu lista, aparecerá tres veces en el resultado ordenado, cada una en su posición alfabética correcta.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -280,7 +300,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تُرفع قائمتي إلى أي مكان، وهل هناك حد لحجمها؟",
     "faq.a4": "لا. يعمل كل ترتيب بالكامل داخل متصفحك باستخدام جافاسكريبت عادية — لا يُرفع أي شيء تلصقه ولا يُسجَّل ولا يُرسَل إلى أي خادم. تُحفظ قائمتك الأخيرة والخيارات المختارة اختياريًا فقط في التخزين المحلي لهذا المتصفح، لتبقى متاحة في المرة القادمة التي تفتح فيها الأداة؛ ومسح بيانات المتصفح يزيلها. لا يوجد حد صارم لعدد الأسطر، لكن اللصق الضخم جدًا (عشرات الآلاف من الأسطر) قد يجعل الترتيب يبدو بطيئًا لأنه يحدث على جهازك.",
     "faq.q5": "ماذا يحدث للأسطر الفارغة والإدخالات المكررة؟",
-    "faq.a5": "خيار \"إزالة الأسطر الفارغة\" مفعّل افتراضيًا ويستبعد أي سطر فارغ أو يحتوي على مسافات فقط قبل الترتيب، حتى لا تتجمّع في أعلى النتيجة أو أسفلها. أوقف تفعيله للاحتفاظ بكل سطر فارغ بالضبط في مكانه. أما الإدخالات المكررة فلا تُدمَج أو تُحذف أبدًا — إذا ظهرت \"apple\" ثلاث مرات في قائمتك، فستظهر ثلاث مرات في النتيجة المرتّبة، كل واحدة في موضعها الأبجدي الصحيح."
+    "faq.a5": "خيار \"إزالة الأسطر الفارغة\" مفعّل افتراضيًا ويستبعد أي سطر فارغ أو يحتوي على مسافات فقط قبل الترتيب، حتى لا تتجمّع في أعلى النتيجة أو أسفلها. أوقف تفعيله للاحتفاظ بكل سطر فارغ بالضبط في مكانه. أما الإدخالات المكررة فلا تُدمَج أو تُحذف أبدًا — إذا ظهرت \"apple\" ثلاث مرات في قائمتك، فستظهر ثلاث مرات في النتيجة المرتّبة، كل واحدة في موضعها الأبجدي الصحيح.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -333,7 +358,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Ma liste est-elle envoyée quelque part, et y a-t-il une limite de taille ?",
     "faq.a4": "Non. Chaque tri s'exécute entièrement dans votre navigateur en JavaScript pur — rien de ce que vous collez n'est envoyé, enregistré ou transmis à un serveur. Votre dernière liste et les options choisies sont éventuellement conservées uniquement dans le stockage local de ce navigateur, pour être encore là la prochaine fois que vous ouvrez l'outil ; effacer les données de votre navigateur les supprime. Il n'y a pas de limite stricte de lignes, mais coller des listes extrêmement volumineuses (des dizaines de milliers de lignes) peut ralentir le tri, qui s'effectue sur votre propre appareil.",
     "faq.q5": "Que deviennent les lignes vides et les entrées en double ?",
-    "faq.a5": "\"Supprimer les lignes vides\" est activé par défaut et filtre avant le tri toute ligne vide ou ne contenant que des espaces, pour éviter qu'elles ne s'accumulent en haut ou en bas du résultat. Désactivez l'option pour conserver chaque ligne vide exactement à sa place. Les entrées en double ne sont jamais fusionnées ni supprimées — si \"apple\" apparaît trois fois dans votre liste, elle apparaîtra trois fois dans le résultat trié, chacune à sa position alphabétique correcte."
+    "faq.a5": "\"Supprimer les lignes vides\" est activé par défaut et filtre avant le tri toute ligne vide ou ne contenant que des espaces, pour éviter qu'elles ne s'accumulent en haut ou en bas du résultat. Désactivez l'option pour conserver chaque ligne vide exactement à sa place. Les entrées en double ne sont jamais fusionnées ni supprimées — si \"apple\" apparaît trois fois dans votre liste, elle apparaîtra trois fois dans le résultat trié, chacune à sa position alphabétique correcte.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -386,7 +416,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার তালিকা কি কোথাও আপলোড হয়, এবং সাইজের কোনো সীমা আছে কি?",
     "faq.a4": "না। প্রতিটি সাজানো সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript দিয়ে চলে — আপনি যা পেস্ট করেন তার কিছুই আপলোড, লগ বা সার্ভারে পাঠানো হয় না। আপনার সর্বশেষ তালিকা ও বেছে নেওয়া অপশনগুলো ঐচ্ছিকভাবে শুধু এই ব্রাউজারের লোকাল স্টোরেজে রাখা হয়, যাতে পরের বার টুলটি খুললে সেগুলো থাকে; ব্রাউজার ডেটা মুছে ফেললে সেগুলো সরে যায়। লাইনের কোনো কঠোর সীমা নেই, তবে অত্যন্ত বড় পেস্ট (কয়েক হাজার লাইন) আপনার নিজের ডিভাইসে সাজানো একটু ধীর মনে হতে পারে।",
     "faq.q5": "খালি লাইন এবং ডুপ্লিকেট এন্ট্রিগুলোর কী হয়?",
-    "faq.a5": "\"খালি লাইন সরান\" ডিফল্টভাবে চালু থাকে এবং সাজানোর আগে খালি বা শুধু স্পেসযুক্ত যেকোনো লাইন ফিল্টার করে দেয়, যাতে সেগুলো ফলাফলের উপরে বা নিচে জমা না হয়। এটি বন্ধ করলে প্রতিটি খালি লাইন ঠিক যেখানে আছে সেখানেই থাকে। ডুপ্লিকেট এন্ট্রি কখনও মার্জ বা মুছে ফেলা হয় না — যদি \"apple\" আপনার তালিকায় তিনবার থাকে, তবে সাজানো ফলাফলেও এটি তিনবার, প্রতিটি তার সঠিক বর্ণানুক্রমিক স্থানে দেখা যাবে।"
+    "faq.a5": "\"খালি লাইন সরান\" ডিফল্টভাবে চালু থাকে এবং সাজানোর আগে খালি বা শুধু স্পেসযুক্ত যেকোনো লাইন ফিল্টার করে দেয়, যাতে সেগুলো ফলাফলের উপরে বা নিচে জমা না হয়। এটি বন্ধ করলে প্রতিটি খালি লাইন ঠিক যেখানে আছে সেখানেই থাকে। ডুপ্লিকেট এন্ট্রি কখনও মার্জ বা মুছে ফেলা হয় না — যদি \"apple\" আপনার তালিকায় তিনবার থাকে, তবে সাজানো ফলাফলেও এটি তিনবার, প্রতিটি তার সঠিক বর্ণানুক্রমিক স্থানে দেখা যাবে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -439,7 +474,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Minha lista é enviada para algum lugar, e há algum limite de tamanho?",
     "faq.a4": "Não. Cada ordenação roda inteiramente no seu navegador com JavaScript puro — nada do que você cola é enviado, registrado ou transmitido a um servidor. Sua última lista e as opções escolhidas são opcionalmente mantidas apenas no armazenamento local deste navegador, para que continuem lá na próxima vez que você abrir a ferramenta; limpar os dados do navegador as remove. Não há um limite rígido de linhas, mas colar listas extremamente grandes (dezenas de milhares de linhas) pode deixar a ordenação lenta, já que ela ocorre no seu próprio dispositivo.",
     "faq.q5": "O que acontece com linhas em branco e entradas duplicadas?",
-    "faq.a5": "\"Remover linhas em branco\" fica ativado por padrão e filtra, antes de ordenar, qualquer linha vazia ou que contenha apenas espaços, para que não se acumulem no topo ou no fim do resultado. Desative para manter cada linha em branco exatamente onde ela cai. Entradas duplicadas nunca são mescladas ou removidas — se \"apple\" aparece três vezes na sua lista, aparecerá três vezes no resultado ordenado, cada uma em sua posição alfabética correta."
+    "faq.a5": "\"Remover linhas em branco\" fica ativado por padrão e filtra, antes de ordenar, qualquer linha vazia ou que contenha apenas espaços, para que não se acumulem no topo ou no fim do resultado. Desative para manter cada linha em branco exatamente onde ela cai. Entradas duplicadas nunca são mescladas ou removidas — se \"apple\" aparece três vezes na sua lista, aparecerá três vezes no resultado ordenado, cada uma em sua posição alfabética correta.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -492,7 +532,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Загружается ли мой список куда-либо, и есть ли ограничение по размеру?",
     "faq.a4": "Нет. Каждая сортировка выполняется полностью в вашем браузере на обычном JavaScript — ничего из вставленного вами не загружается, не логируется и не отправляется на сервер. Ваш последний список и выбранные параметры по желанию сохраняются только в локальном хранилище этого браузера, чтобы быть на месте при следующем открытии инструмента; очистка данных браузера удаляет их. Жёсткого ограничения по количеству строк нет, но чрезвычайно большие вставки (десятки тысяч строк) могут ощущаться медленными, поскольку сортировка выполняется на вашем устройстве.",
     "faq.q5": "Что происходит с пустыми строками и повторяющимися записями?",
-    "faq.a5": "Опция \"Удалить пустые строки\" включена по умолчанию и перед сортировкой отфильтровывает любую пустую строку или строку только с пробелами, чтобы они не скапливались в начале или конце результата. Отключите её, чтобы сохранить каждую пустую строку точно на её месте. Повторяющиеся записи никогда не объединяются и не удаляются — если \"apple\" встречается в вашем списке трижды, она появится трижды и в отсортированном результате, каждый раз на своём правильном алфавитном месте."
+    "faq.a5": "Опция \"Удалить пустые строки\" включена по умолчанию и перед сортировкой отфильтровывает любую пустую строку или строку только с пробелами, чтобы они не скапливались в начале или конце результата. Отключите её, чтобы сохранить каждую пустую строку точно на её месте. Повторяющиеся записи никогда не объединяются и не удаляются — если \"apple\" встречается в вашем списке трижды, она появится трижды и в отсортированном результате, каждый раз на своём правильном алфавитном месте.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -545,7 +590,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میری فہرست کہیں اپ لوڈ ہوتی ہے، اور کیا سائز کی کوئی حد ہے؟",
     "faq.a4": "نہیں۔ ہر ترتیب مکمل طور پر آپ کے براؤزر میں سادہ جاوا اسکرپٹ کے ذریعے چلتی ہے — آپ جو کچھ بھی پیسٹ کرتے ہیں وہ اپ لوڈ، لاگ یا سرور کو نہیں بھیجا جاتا۔ آپ کی آخری فہرست اور منتخب کردہ آپشنز اختیاری طور پر صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں، تاکہ اگلی بار ٹول کھولنے پر موجود رہیں؛ براؤزر ڈیٹا صاف کرنے سے یہ ہٹ جاتے ہیں۔ لائنوں کی کوئی سخت حد نہیں، لیکن انتہائی بڑی پیسٹ (ہزاروں لائنیں) آپ کے اپنے ڈیوائس پر ترتیب کو سست محسوس کروا سکتی ہیں۔",
     "faq.q5": "خالی لائنوں اور ڈپلیکیٹ اندراجات کا کیا ہوتا ہے؟",
-    "faq.a5": "\"خالی لائنیں ہٹائیں\" بطور ڈیفالٹ آن رہتا ہے اور ترتیب دینے سے پہلے کسی بھی خالی یا صرف اسپیس والی لائن کو فلٹر کر دیتا ہے، تاکہ وہ نتیجے کے اوپر یا نیچے جمع نہ ہوں۔ اسے بند کرنے پر ہر خالی لائن بالکل اسی جگہ رہتی ہے جہاں وہ آتی ہے۔ ڈپلیکیٹ اندراجات کبھی ضم یا حذف نہیں کیے جاتے — اگر \"apple\" آپ کی فہرست میں تین بار آتا ہے، تو یہ ترتیب شدہ نتیجے میں بھی تین بار، ہر بار اپنی درست حروف تہجی کی جگہ پر ظاہر ہوگا۔"
+    "faq.a5": "\"خالی لائنیں ہٹائیں\" بطور ڈیفالٹ آن رہتا ہے اور ترتیب دینے سے پہلے کسی بھی خالی یا صرف اسپیس والی لائن کو فلٹر کر دیتا ہے، تاکہ وہ نتیجے کے اوپر یا نیچے جمع نہ ہوں۔ اسے بند کرنے پر ہر خالی لائن بالکل اسی جگہ رہتی ہے جہاں وہ آتی ہے۔ ڈپلیکیٹ اندراجات کبھی ضم یا حذف نہیں کیے جاتے — اگر \"apple\" آپ کی فہرست میں تین بار آتا ہے، تو یہ ترتیب شدہ نتیجے میں بھی تین بار، ہر بار اپنی درست حروف تہجی کی جگہ پر ظاہر ہوگا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -598,7 +648,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah daftar saya diunggah ke suatu tempat, dan apakah ada batas ukuran?",
     "faq.a4": "Tidak. Setiap pengurutan berjalan sepenuhnya di browser Anda dengan JavaScript biasa — apa pun yang Anda tempel tidak diunggah, dicatat, atau dikirim ke server. Daftar terakhir dan opsi yang Anda pilih secara opsional disimpan hanya di penyimpanan lokal browser ini, sehingga masih ada saat Anda membuka alat ini lagi; menghapus data browser akan menghilangkannya. Tidak ada batas baris yang tegas, tetapi menempel daftar yang sangat besar (puluhan ribu baris) mungkin terasa lambat karena pengurutan terjadi di perangkat Anda sendiri.",
     "faq.q5": "Apa yang terjadi pada baris kosong dan entri duplikat?",
-    "faq.a5": "\"Hapus baris kosong\" aktif secara default dan menyaring baris kosong atau yang hanya berisi spasi sebelum diurutkan, sehingga tidak menumpuk di atas atau bawah hasil. Nonaktifkan untuk mempertahankan setiap baris kosong persis di posisinya. Entri duplikat tidak pernah digabungkan atau dihapus — jika \"apple\" muncul tiga kali dalam daftar Anda, hasil terurut juga akan menampilkannya tiga kali, masing-masing pada posisi alfabet yang benar."
+    "faq.a5": "\"Hapus baris kosong\" aktif secara default dan menyaring baris kosong atau yang hanya berisi spasi sebelum diurutkan, sehingga tidak menumpuk di atas atau bawah hasil. Nonaktifkan untuk mempertahankan setiap baris kosong persis di posisinya. Entri duplikat tidak pernah digabungkan atau dihapus — jika \"apple\" muncul tiga kali dalam daftar Anda, hasil terurut juga akan menampilkannya tiga kali, masing-masing pada posisi alfabet yang benar.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -651,7 +706,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wird meine Liste irgendwohin hochgeladen, und gibt es eine Größenbeschränkung?",
     "faq.a4": "Nein. Jede Sortierung läuft vollständig in Ihrem Browser mit einfachem JavaScript ab — nichts von dem, was Sie einfügen, wird hochgeladen, protokolliert oder an einen Server gesendet. Ihre letzte Liste und die gewählten Optionen werden optional nur im lokalen Speicher dieses Browsers abgelegt, damit sie beim nächsten Öffnen des Tools noch da sind; das Löschen der Browserdaten entfernt sie. Es gibt kein hartes Zeilenlimit, aber extrem große Einfügungen (Zehntausende Zeilen) können sich auf Ihrem eigenen Gerät etwas träge anfühlen, da die Sortierung dort stattfindet.",
     "faq.q5": "Was passiert mit leeren Zeilen und doppelten Einträgen?",
-    "faq.a5": "\"Leere Zeilen entfernen\" ist standardmäßig aktiviert und filtert vor dem Sortieren jede leere oder nur aus Leerzeichen bestehende Zeile heraus, damit sie sich nicht am Anfang oder Ende des Ergebnisses ansammeln. Deaktivieren Sie die Option, um jede leere Zeile genau an ihrer Stelle zu behalten. Doppelte Einträge werden nie zusammengeführt oder entfernt — wenn \"apple\" dreimal in Ihrer Liste vorkommt, erscheint es auch dreimal im sortierten Ergebnis, jeweils an seiner korrekten alphabetischen Position."
+    "faq.a5": "\"Leere Zeilen entfernen\" ist standardmäßig aktiviert und filtert vor dem Sortieren jede leere oder nur aus Leerzeichen bestehende Zeile heraus, damit sie sich nicht am Anfang oder Ende des Ergebnisses ansammeln. Deaktivieren Sie die Option, um jede leere Zeile genau an ihrer Stelle zu behalten. Doppelte Einträge werden nie zusammengeführt oder entfernt — wenn \"apple\" dreimal in Ihrer Liste vorkommt, erscheint es auch dreimal im sortierten Ergebnis, jeweils an seiner korrekten alphabetischen Position.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -704,7 +764,12 @@ window.I18N_LOCALES = {
     "faq.q4": "リストはどこかにアップロードされますか。サイズ制限はありますか？",
     "faq.a4": "いいえ。すべての並べ替えは通常のJavaScriptによりブラウザ内で完結します — 貼り付けた内容がアップロードされたり、記録されたり、サーバーに送信されたりすることは一切ありません。最後に入力したリストと選択したオプションは、任意でこのブラウザのローカルストレージにのみ保存され、次回ツールを開いたときにも残っています。ブラウザデータを消去すればそれらは削除されます。行数の厳密な上限はありませんが、非常に大きな貼り付け（数万行）の場合、並べ替えはお使いの端末で行われるため動作が遅く感じることがあります。",
     "faq.q5": "空行や重複した項目はどう扱われますか？",
-    "faq.a5": "「空行を削除」はデフォルトでオンになっており、並べ替え前に空行やスペースのみの行をすべて除外するため、結果の先頭や末尾に集まることがありません。オフにすると、すべての空行が元の位置にそのまま残ります。重複した項目が統合されたり削除されたりすることはありません — リスト内に「apple」が3回含まれていれば、並べ替え結果でも3回、それぞれ正しいアルファベット順の位置に表示されます。"
+    "faq.a5": "「空行を削除」はデフォルトでオンになっており、並べ替え前に空行やスペースのみの行をすべて除外するため、結果の先頭や末尾に集まることがありません。オフにすると、すべての空行が元の位置にそのまま残ります。重複した項目が統合されたり削除されたりすることはありません — リスト内に「apple」が3回含まれていれば、並べ替え結果でも3回、それぞれ正しいアルファベット順の位置に表示されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -757,6 +822,11 @@ window.I18N_LOCALES = {
     "faq.q4": "제 목록이 어딘가에 업로드되나요? 크기 제한이 있나요?",
     "faq.a4": "아니요. 모든 정렬은 순수 자바스크립트로 브라우저 안에서만 실행됩니다 — 붙여넣은 내용은 업로드되거나 기록되거나 서버로 전송되지 않습니다. 마지막으로 입력한 목록과 선택한 옵션은 선택적으로 이 브라우저의 로컬 저장소에만 저장되어 다음에 도구를 열었을 때도 남아 있으며, 브라우저 데이터를 지우면 함께 삭제됩니다. 엄격한 줄 수 제한은 없지만, 수만 줄에 달하는 매우 큰 목록을 붙여넣으면 정렬이 사용자 기기에서 실행되기 때문에 다소 느리게 느껴질 수 있습니다.",
     "faq.q5": "빈 줄과 중복 항목은 어떻게 처리되나요?",
-    "faq.a5": "\"빈 줄 제거\"는 기본으로 켜져 있어 정렬 전에 비어 있거나 공백만 있는 줄을 걸러내므로 결과의 맨 위나 맨 아래에 몰리지 않습니다. 이 옵션을 끄면 모든 빈 줄이 원래 위치 그대로 유지됩니다. 중복 항목은 절대 병합되거나 삭제되지 않습니다 — 목록에 \"apple\"이 세 번 있다면 정렬 결과에도 세 번 나타나며, 각각 올바른 알파벳 순서 위치에 놓입니다."
+    "faq.a5": "\"빈 줄 제거\"는 기본으로 켜져 있어 정렬 전에 비어 있거나 공백만 있는 줄을 걸러내므로 결과의 맨 위나 맨 아래에 몰리지 않습니다. 이 옵션을 끄면 모든 빈 줄이 원래 위치 그대로 유지됩니다. 중복 항목은 절대 병합되거나 삭제되지 않습니다 — 목록에 \"apple\"이 세 번 있다면 정렬 결과에도 세 번 나타나며, 각각 올바른 알파벳 순서 위치에 놓입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

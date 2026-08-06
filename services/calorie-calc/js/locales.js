@@ -97,7 +97,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How many calories equal 1 kg or 1 lb of body fat?",
     "faq.a4": "Roughly 7,700 kcal per kilogram of fat, or about 3,500 kcal per pound. So the ~300 kcal a typical workout burns is a fraction of a kilogram — sustainable fat loss comes from a steady daily deficit, not a single session. Use the food equivalents in this exercise calorie calculator to see how one workout compares to what you eat.",
     "faq.q5": "Is my weight sent to a server?",
-    "faq.a5": "No. Every calculation in this calories burned calculator runs inside your browser, and your weight, activity and duration never leave your device. Your last entry is saved only to your browser's localStorage for convenience on your next visit, and you can clear it anytime by clearing site data."
+    "faq.a5": "No. Every calculation in this calories burned calculator runs inside your browser, and your weight, activity and duration never leave your device. Your last entry is saved only to your browser's localStorage for convenience on your next visit, and you can clear it anytime by clearing site data.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -179,7 +184,12 @@ window.I18N_LOCALES = {
     "faq.q4": "1 kg 或 1 lb 体脂等于多少卡路里？",
     "faq.a4": "大约每公斤脂肪 7,700 kcal，每磅约 3,500 kcal。所以一次运动燃烧的约 300 kcal 只是一小部分——持续减脂来自每日稳定的热量缺口，而非单次训练。",
     "faq.q5": "我的体重会发送到服务器吗？",
-    "faq.a5": "不会。本卡路里消耗计算器的所有计算都在你的浏览器内完成，体重、运动和时长都不会离开你的设备。最近一次输入仅保存在浏览器的 localStorage 中，你可随时清除。"
+    "faq.a5": "不会。本卡路里消耗计算器的所有计算都在你的浏览器内完成，体重、运动和时长都不会离开你的设备。最近一次输入仅保存在浏览器的 localStorage 中，你可随时清除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -261,7 +271,12 @@ window.I18N_LOCALES = {
     "faq.q4": "1 kg या 1 lb शरीर वसा कितनी कैलोरी के बराबर है?",
     "faq.a4": "लगभग 7,700 kcal प्रति किलोग्राम वसा, या लगभग 3,500 kcal प्रति पाउंड। इसलिए एक वर्कआउट का ~300 kcal एक छोटा हिस्सा है — स्थायी वसा घटाव रोज़ के स्थिर घाटे से आता है।",
     "faq.q5": "क्या मेरा वज़न सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। इस कैलोरी बर्न कैलकुलेटर की सभी गणनाएँ आपके ब्राउज़र में होती हैं; आपका डेटा डिवाइस नहीं छोड़ता। अंतिम प्रविष्टि केवल localStorage में सहेजी जाती है, जिसे आप कभी भी हटा सकते हैं।"
+    "faq.a5": "नहीं। इस कैलोरी बर्न कैलकुलेटर की सभी गणनाएँ आपके ब्राउज़र में होती हैं; आपका डेटा डिवाइस नहीं छोड़ता। अंतिम प्रविष्टि केवल localStorage में सहेजी जाती है, जिसे आप कभी भी हटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -343,7 +358,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuántas calorías equivalen a 1 kg o 1 lb de grasa?",
     "faq.a4": "Unas 7.700 kcal por kilo de grasa, o unas 3.500 kcal por libra. Así, los ~300 kcal de un entrenamiento típico son una fracción — la pérdida sostenible viene de un déficit diario constante.",
     "faq.q5": "¿Se envía mi peso a un servidor?",
-    "faq.a5": "No. Todos los cálculos ocurren en tu navegador; tu peso, actividad y duración nunca salen de tu dispositivo. La última entrada solo se guarda en localStorage y puedes borrarla cuando quieras."
+    "faq.a5": "No. Todos los cálculos ocurren en tu navegador; tu peso, actividad y duración nunca salen de tu dispositivo. La última entrada solo se guarda en localStorage y puedes borrarla cuando quieras.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -425,7 +445,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كم سعرة تعادل 1 kg أو 1 lb من الدهون؟",
     "faq.a4": "نحو 7,700 سعرة لكل كيلوغرام دهون، أو نحو 3,500 سعرة لكل رطل. فالـ~300 سعرة لتمرين معتاد جزء صغير — يأتي فقدان الدهون المستدام من عجز يومي ثابت.",
     "faq.q5": "هل يُرسل وزني إلى خادم؟",
-    "faq.a5": "لا. تتم كل الحسابات داخل متصفحك؛ وزنك ونشاطك ومدتك لا تغادر جهازك. تُحفظ آخر إدخال في localStorage فقط ويمكنك حذفها في أي وقت."
+    "faq.a5": "لا. تتم كل الحسابات داخل متصفحك؛ وزنك ونشاطك ومدتك لا تغادر جهازك. تُحفظ آخر إدخال في localStorage فقط ويمكنك حذفها في أي وقت.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -507,7 +532,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Combien de calories valent 1 kg ou 1 lb de graisse ?",
     "faq.a4": "Environ 7 700 kcal par kilo de graisse, ou environ 3 500 kcal par livre. Les ~300 kcal d'un entraînement typique ne sont qu'une fraction — la perte durable vient d'un déficit quotidien régulier.",
     "faq.q5": "Mon poids est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Tous les calculs se font dans votre navigateur ; votre poids, activité et durée ne quittent jamais votre appareil. La dernière saisie n'est enregistrée que dans le localStorage et vous pouvez l'effacer à tout moment."
+    "faq.a5": "Non. Tous les calculs se font dans votre navigateur ; votre poids, activité et durée ne quittent jamais votre appareil. La dernière saisie n'est enregistrée que dans le localStorage et vous pouvez l'effacer à tout moment.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -589,7 +619,12 @@ window.I18N_LOCALES = {
     "faq.q4": "1 kg বা 1 lb চর্বি কত ক্যালরির সমান?",
     "faq.a4": "প্রতি কিলোগ্রাম চর্বিতে প্রায় 7,700 ক্যালরি, বা প্রতি পাউন্ডে প্রায় 3,500 ক্যালরি। তাই একটি ব্যায়ামের ~300 ক্যালরি সামান্য অংশ — স্থায়ী চর্বি কমে দৈনিক ঘাটতি থেকে।",
     "faq.q5": "আমার ওজন কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। সব গণনা আপনার ব্রাউজারে হয়; ওজন, কার্যকলাপ ও সময় আপনার ডিভাইস ছাড়ে না। শেষ এন্ট্রি শুধু localStorage-এ সংরক্ষিত হয়, যেকোনো সময় মুছতে পারেন।"
+    "faq.a5": "না। সব গণনা আপনার ব্রাউজারে হয়; ওজন, কার্যকলাপ ও সময় আপনার ডিভাইস ছাড়ে না। শেষ এন্ট্রি শুধু localStorage-এ সংরক্ষিত হয়, যেকোনো সময় মুছতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -671,7 +706,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quantas calorias equivalem a 1 kg ou 1 lb de gordura?",
     "faq.a4": "Cerca de 7.700 kcal por quilo de gordura, ou cerca de 3.500 kcal por libra. Assim, os ~300 kcal de um treino típico são uma fração — a perda sustentável vem de um déficit diário constante.",
     "faq.q5": "Meu peso é enviado a um servidor?",
-    "faq.a5": "Não. Todos os cálculos ocorrem no seu navegador; peso, atividade e duração nunca saem do seu dispositivo. A última entrada é salva apenas no localStorage e você pode apagá-la quando quiser."
+    "faq.a5": "Não. Todos os cálculos ocorrem no seu navegador; peso, atividade e duração nunca saem do seu dispositivo. A última entrada é salva apenas no localStorage e você pode apagá-la quando quiser.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -753,7 +793,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Сколько калорий в 1 kg или 1 lb жира?",
     "faq.a4": "Около 7 700 ккал на килограмм жира или около 3 500 ккал на фунт. Так что ~300 ккал обычной тренировки — малая доля; устойчивое похудение даёт стабильный ежедневный дефицит.",
     "faq.q5": "Отправляется ли мой вес на сервер?",
-    "faq.a5": "Нет. Все расчёты идут в вашем браузере; вес, активность и время не покидают устройство. Последний ввод сохраняется только в localStorage, и его можно удалить в любой момент."
+    "faq.a5": "Нет. Все расчёты идут в вашем браузере; вес, активность и время не покидают устройство. Последний ввод сохраняется только в localStorage, и его можно удалить в любой момент.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -835,7 +880,12 @@ window.I18N_LOCALES = {
     "faq.q4": "1 kg یا 1 lb چربی کتنی کیلوریز کے برابر ہے؟",
     "faq.a4": "تقریباً 7,700 کیلوریز فی کلوگرام چربی، یا تقریباً 3,500 کیلوریز فی پاؤنڈ۔ تو ایک ورزش کی ~300 کیلوریز ایک چھوٹا حصہ ہے — پائیدار کمی روزانہ مستقل خسارے سے آتی ہے۔",
     "faq.q5": "کیا میرا وزن سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ تمام حساب آپ کے براؤزر میں ہوتے ہیں؛ وزن، سرگرمی اور دورانیہ آپ کا آلہ نہیں چھوڑتے۔ آخری اندراج صرف localStorage میں محفوظ ہوتا ہے، جسے آپ کبھی بھی مٹا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ تمام حساب آپ کے براؤزر میں ہوتے ہیں؛ وزن، سرگرمی اور دورانیہ آپ کا آلہ نہیں چھوڑتے۔ آخری اندراج صرف localStorage میں محفوظ ہوتا ہے، جسے آپ کبھی بھی مٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -917,7 +967,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Berapa kalori setara 1 kg atau 1 lb lemak?",
     "faq.a4": "Sekitar 7.700 kkal per kilogram lemak, atau sekitar 3.500 kkal per pon. Jadi ~300 kkal dari satu latihan hanyalah sebagian kecil — penurunan lemak berkelanjutan datang dari defisit harian yang stabil.",
     "faq.q5": "Apakah berat saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan berjalan di peramban Anda; berat, aktivitas, dan durasi tidak pernah meninggalkan perangkat. Entri terakhir hanya disimpan di localStorage dan bisa Anda hapus kapan saja."
+    "faq.a5": "Tidak. Semua perhitungan berjalan di peramban Anda; berat, aktivitas, dan durasi tidak pernah meninggalkan perangkat. Entri terakhir hanya disimpan di localStorage dan bisa Anda hapus kapan saja.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -999,7 +1054,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie viele Kalorien entsprechen 1 kg oder 1 lb Fett?",
     "faq.a4": "Etwa 7.700 kcal pro Kilogramm Fett bzw. rund 3.500 kcal pro Pfund. Die ~300 kcal eines typischen Workouts sind also nur ein Bruchteil — nachhaltiger Fettabbau kommt aus einem stetigen täglichen Defizit.",
     "faq.q5": "Werden meine Gewichtsdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen laufen in deinem Browser; Gewicht, Aktivität und Dauer verlassen dein Gerät nie. Die letzte Eingabe wird nur im localStorage gespeichert und lässt sich jederzeit löschen."
+    "faq.a5": "Nein. Alle Berechnungen laufen in deinem Browser; Gewicht, Aktivität und Dauer verlassen dein Gerät nie. Die letzte Eingabe wird nur im localStorage gespeichert und lässt sich jederzeit löschen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1081,7 +1141,12 @@ window.I18N_LOCALES = {
     "faq.q4": "体脂肪 1 kg・1 lb は何カロリー？",
     "faq.a4": "脂肪1 kg で約 7,700 kcal、1 lb で約 3,500 kcal です。1回の運動の約300 kcal はごく一部で、続く減量は毎日の安定した収支から生まれます。",
     "faq.q5": "体重はサーバーに送られますか？",
-    "faq.a5": "いいえ。すべての計算はブラウザ内で行われ、体重・運動・時間が端末を離れることはありません。最後の入力は localStorage にのみ保存され、いつでも削除できます。"
+    "faq.a5": "いいえ。すべての計算はブラウザ内で行われ、体重・運動・時間が端末を離れることはありません。最後の入力は localStorage にのみ保存され、いつでも削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1163,6 +1228,11 @@ window.I18N_LOCALES = {
     "faq.q4": "체지방 1 kg·1 lb는 몇 kcal인가요?",
     "faq.a4": "지방 1 kg는 약 7,700 kcal, 1 lb는 약 3,500 kcal입니다. 즉 운동 한 번의 약 300 kcal는 일부일 뿐이며, 지속적인 감량은 매일의 꾸준한 적자에서 옵니다.",
     "faq.q5": "제 체중이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 칼로리 소모 계산기의 모든 계산은 브라우저 안에서 이루어지며, 체중·운동·시간은 기기를 벗어나지 않습니다. 마지막 입력만 localStorage에 저장되며 언제든 삭제할 수 있습니다."
+    "faq.a5": "아니요. 이 칼로리 소모 계산기의 모든 계산은 브라우저 안에서 이루어지며, 체중·운동·시간은 기기를 벗어나지 않습니다. 마지막 입력만 localStorage에 저장되며 언제든 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

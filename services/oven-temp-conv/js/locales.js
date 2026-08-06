@@ -83,7 +83,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Are Gas Mark conversions to Celsius and Fahrenheit exact?",
     "faq.a4": "No — Gas Mark is a stepped scale of only 12 fixed points (1/4 through 10), while Celsius and Fahrenheit are continuous. When you type a temperature that falls between two Gas Mark points, this tool shows the nearest match with an approximate (≈) mark rather than inventing a fractional Gas Mark that doesn't exist. If your number is well outside the normal oven range, the tool tells you there's no sensible Gas Mark match instead of guessing.",
     "faq.q5": "Is my oven temperature sent to a server?",
-    "faq.a5": "No. This oven temperature converter runs entirely in your browser — every Fahrenheit, Celsius, and Gas Mark calculation happens on your device using plain JavaScript. Nothing you type is uploaded, stored, or tracked, and the page keeps working offline once it has loaded."
+    "faq.a5": "No. This oven temperature converter runs entirely in your browser — every Fahrenheit, Celsius, and Gas Mark calculation happens on your device using plain JavaScript. Nothing you type is uploaded, stored, or tracked, and the page keeps working offline once it has loaded.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -151,7 +156,12 @@ window.I18N_LOCALES = {
     "faq.q4": "燃气刻度换算成摄氏度、华氏度是精确的吗？",
     "faq.a4": "不是——燃气刻度只有 12 个固定的点位（从 1/4 到 10），而摄氏度和华氏度是连续的数值。当你输入的温度落在两个燃气刻度之间时，本工具会显示最接近的匹配，并标注约等于（≈），而不是凭空造一个并不存在的小数燃气刻度。如果你输入的数值明显超出正常烤箱范围，工具会明确提示没有合适的燃气刻度对应，而不是随意给出一个结果。",
     "faq.q5": "我输入的烤箱温度会被发送到服务器吗？",
-    "faq.a5": "不会。这个烤箱温度换算器完全在你的浏览器中运行——每一次华氏度、摄氏度和燃气刻度的计算都只发生在你自己的设备上，使用的是普通的 JavaScript。你输入的任何内容都不会被上传、保存或跟踪，页面加载完成后即使离线也能继续使用。"
+    "faq.a5": "不会。这个烤箱温度换算器完全在你的浏览器中运行——每一次华氏度、摄氏度和燃气刻度的计算都只发生在你自己的设备上，使用的是普通的 JavaScript。你输入的任何内容都不会被上传、保存或跟踪，页面加载完成后即使离线也能继续使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -219,7 +229,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या गैस मार्क से सेल्सियस/फ़ारेनहाइट में कन्वर्ज़न बिल्कुल सटीक होता है?",
     "faq.a4": "नहीं — गैस मार्क सिर्फ़ 12 तय बिंदुओं (1/4 से 10 तक) वाला एक चरणबद्ध पैमाना है, जबकि सेल्सियस और फ़ारेनहाइट निरंतर (कंटिन्युअस) मान हैं। जब आपका तापमान दो गैस मार्क बिंदुओं के बीच आता है, तो यह टूल एक काल्पनिक दशमलव गैस मार्क बनाने के बजाय नज़दीकी मिलान को लगभग (≈) चिह्न के साथ दिखाता है। अगर आपकी संख्या सामान्य ओवन रेंज से काफ़ी बाहर है, तो टूल अंदाज़ा लगाने के बजाय साफ़ बता देता है कि कोई उपयुक्त गैस मार्क मौजूद नहीं है।",
     "faq.q5": "क्या मेरा ओवन तापमान किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह ओवन तापमान कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — हर फ़ारेनहाइट, सेल्सियस और गैस मार्क गणना सिर्फ़ आपकी डिवाइस पर, सामान्य जावास्क्रिप्ट का उपयोग करके होती है। आप जो कुछ भी टाइप करते हैं वह न तो अपलोड होता है, न सेव होता है, न ट्रैक होता है, और पेज लोड होने के बाद ऑफ़लाइन भी काम करता रहता है।"
+    "faq.a5": "नहीं। यह ओवन तापमान कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — हर फ़ारेनहाइट, सेल्सियस और गैस मार्क गणना सिर्फ़ आपकी डिवाइस पर, सामान्य जावास्क्रिप्ट का उपयोग करके होती है। आप जो कुछ भी टाइप करते हैं वह न तो अपलोड होता है, न सेव होता है, न ट्रैक होता है, और पेज लोड होने के बाद ऑफ़लाइन भी काम करता रहता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -287,7 +302,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Son exactas las conversiones de Gas Mark a Celsius y Fahrenheit?",
     "faq.a4": "No: Gas Mark es una escala escalonada de solo 12 puntos fijos (de 1/4 a 10), mientras que Celsius y Fahrenheit son continuos. Cuando escribes una temperatura que cae entre dos puntos de Gas Mark, esta herramienta muestra la coincidencia más cercana marcada como aproximada (≈) en lugar de inventar un Gas Mark decimal que no existe. Si tu número está claramente fuera del rango normal de un horno, la herramienta te avisa que no hay un Gas Mark razonable en vez de adivinar uno.",
     "faq.q5": "¿Se envía mi temperatura de horno a algún servidor?",
-    "faq.a5": "No. Este conversor de temperatura de horno funciona por completo en tu navegador: cada cálculo de Fahrenheit, Celsius y Gas Mark ocurre en tu propio dispositivo usando JavaScript normal. Nada de lo que escribes se sube, se guarda ni se rastrea, y la página sigue funcionando sin conexión una vez cargada."
+    "faq.a5": "No. Este conversor de temperatura de horno funciona por completo en tu navegador: cada cálculo de Fahrenheit, Celsius y Gas Mark ocurre en tu propio dispositivo usando JavaScript normal. Nada de lo que escribes se sube, se guarda ni se rastrea, y la página sigue funcionando sin conexión una vez cargada.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -355,7 +375,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تحويلات Gas Mark إلى السيلزيوس والفهرنهايت دقيقة تمامًا؟",
     "faq.a4": "لا — فـGas Mark سلّم متدرّج يضم 12 نقطة ثابتة فقط (من 1/4 إلى 10)، بينما السيلزيوس والفهرنهايت قيم متصلة. عندما تكتب درجة حرارة تقع بين نقطتي Gas Mark، تعرض هذه الأداة أقرب تطابق مع علامة تقريبية (≈) بدلاً من اختراع رقم Gas Mark عشري غير موجود أصلاً. وإذا كان رقمك خارج نطاق الفرن الطبيعي بوضوح، تخبرك الأداة بعدم وجود رقم Gas Mark مناسب بدلاً من التخمين.",
     "faq.q5": "هل تُرسَل درجة حرارة الفرن التي أدخلها إلى أي خادم؟",
-    "faq.a5": "لا. يعمل محول درجة حرارة الفرن هذا بالكامل داخل متصفحك — كل عملية حساب للفهرنهايت والسيلزيوس وGas Mark تتم على جهازك فقط باستخدام جافاسكريبت عادية. لا يُرفَع أي شيء تكتبه ولا يُحفَظ ولا يُتتبَّع، وتستمر الصفحة في العمل حتى بلا اتصال بعد تحميلها."
+    "faq.a5": "لا. يعمل محول درجة حرارة الفرن هذا بالكامل داخل متصفحك — كل عملية حساب للفهرنهايت والسيلزيوس وGas Mark تتم على جهازك فقط باستخدام جافاسكريبت عادية. لا يُرفَع أي شيء تكتبه ولا يُحفَظ ولا يُتتبَّع، وتستمر الصفحة في العمل حتى بلا اتصال بعد تحميلها.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -423,7 +448,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Les conversions Gas Mark vers Celsius et Fahrenheit sont-elles exactes ?",
     "faq.a4": "Non — le Gas Mark est une échelle par paliers de seulement 12 points fixes (de 1/4 à 10), alors que le Celsius et le Fahrenheit sont continus. Lorsque la température saisie se situe entre deux paliers Gas Mark, cet outil affiche la correspondance la plus proche avec une marque approximative (≈) plutôt que d'inventer un Gas Mark décimal qui n'existe pas. Si votre valeur est nettement hors de la plage normale d'un four, l'outil indique clairement qu'il n'y a pas de Gas Mark pertinent plutôt que de deviner.",
     "faq.q5": "Ma température de four est-elle envoyée à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur de température de four fonctionne entièrement dans votre navigateur — chaque calcul en Fahrenheit, Celsius et Gas Mark s'effectue sur votre appareil avec du JavaScript classique. Rien de ce que vous saisissez n'est envoyé, stocké ni suivi, et la page continue de fonctionner hors ligne une fois chargée."
+    "faq.a5": "Non. Ce convertisseur de température de four fonctionne entièrement dans votre navigateur — chaque calcul en Fahrenheit, Celsius et Gas Mark s'effectue sur votre appareil avec du JavaScript classique. Rien de ce que vous saisissez n'est envoyé, stocké ni suivi, et la page continue de fonctionner hors ligne une fois chargée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -491,7 +521,12 @@ window.I18N_LOCALES = {
     "faq.q4": "গ্যাস মার্ক থেকে সেলসিয়াস/ফারেনহাইট রূপান্তর কি একদম সঠিক?",
     "faq.a4": "না — গ্যাস মার্ক মাত্র 12টি নির্দিষ্ট বিন্দুর (1/4 থেকে 10) একটি ধাপে ধাপে সাজানো স্কেল, অথচ সেলসিয়াস ও ফারেনহাইট ধারাবাহিক মান। আপনার লেখা তাপমাত্রা দুটো গ্যাস মার্ক বিন্দুর মাঝামাঝি পড়লে, এই টুল একটি কাল্পনিক দশমিক গ্যাস মার্ক তৈরি না করে সবচেয়ে কাছের মিলটি প্রায় (≈) চিহ্নসহ দেখায়। আপনার সংখ্যাটি স্বাভাবিক ওভেন পরিসরের অনেক বাইরে হলে, টুলটি অনুমান না করে স্পষ্টভাবে জানিয়ে দেয় যে কোনো উপযুক্ত গ্যাস মার্ক নেই।",
     "faq.q5": "আমার ওভেনের তাপমাত্রা কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই ওভেন তাপমাত্রা কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — ফারেনহাইট, সেলসিয়াস ও গ্যাস মার্কের প্রতিটি হিসাব সাধারণ জাভাস্ক্রিপ্ট ব্যবহার করে আপনার নিজের ডিভাইসেই ঘটে। আপনি যা কিছু লেখেন তা আপলোড, সংরক্ষণ বা ট্র্যাক করা হয় না, এবং পেজ লোড হওয়ার পর অফলাইনেও কাজ করতে থাকে।"
+    "faq.a5": "না। এই ওভেন তাপমাত্রা কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — ফারেনহাইট, সেলসিয়াস ও গ্যাস মার্কের প্রতিটি হিসাব সাধারণ জাভাস্ক্রিপ্ট ব্যবহার করে আপনার নিজের ডিভাইসেই ঘটে। আপনি যা কিছু লেখেন তা আপলোড, সংরক্ষণ বা ট্র্যাক করা হয় না, এবং পেজ লোড হওয়ার পর অফলাইনেও কাজ করতে থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -559,7 +594,12 @@ window.I18N_LOCALES = {
     "faq.q4": "As conversões de Gas Mark para Celsius e Fahrenheit são exatas?",
     "faq.a4": "Não — o Gas Mark é uma escala escalonada de apenas 12 pontos fixos (de 1/4 a 10), enquanto Celsius e Fahrenheit são contínuos. Quando você digita uma temperatura que cai entre dois pontos de Gas Mark, esta ferramenta mostra a correspondência mais próxima marcada como aproximada (≈), em vez de inventar um Gas Mark decimal que não existe. Se o seu número estiver bem fora da faixa normal de um forno, a ferramenta avisa que não há um Gas Mark razoável em vez de arriscar um palpite.",
     "faq.q5": "Minha temperatura de forno é enviada para algum servidor?",
-    "faq.a5": "Não. Este conversor de temperatura do forno roda inteiramente no seu navegador — cada cálculo de Fahrenheit, Celsius e Gas Mark acontece no seu próprio dispositivo, usando JavaScript comum. Nada do que você digita é enviado, salvo ou rastreado, e a página continua funcionando offline depois de carregada."
+    "faq.a5": "Não. Este conversor de temperatura do forno roda inteiramente no seu navegador — cada cálculo de Fahrenheit, Celsius e Gas Mark acontece no seu próprio dispositivo, usando JavaScript comum. Nada do que você digita é enviado, salvo ou rastreado, e a página continua funcionando offline depois de carregada.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -627,7 +667,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Точны ли переводы Gas Mark в Цельсии и Фаренгейты?",
     "faq.a4": "Нет — Gas Mark представляет собой ступенчатую шкалу всего из 12 фиксированных точек (от 1/4 до 10), тогда как Цельсий и Фаренгейт непрерывны. Когда введённая температура попадает между двумя точками Gas Mark, инструмент показывает ближайшее совпадение с пометкой приблизительно (≈), а не придумывает несуществующий дробный Gas Mark. Если число заметно выходит за пределы обычного диапазона духовки, инструмент честно сообщает, что подходящего Gas Mark нет, вместо того чтобы гадать.",
     "faq.q5": "Отправляется ли температура моей духовки на сервер?",
-    "faq.a5": "Нет. Этот конвертер температуры духовки полностью работает в вашем браузере — каждый расчёт в Фаренгейтах, Цельсиях и Gas Mark происходит только на вашем устройстве с помощью обычного JavaScript. Ничто из введённого вами не загружается, не сохраняется и не отслеживается, и страница продолжает работать офлайн после загрузки."
+    "faq.a5": "Нет. Этот конвертер температуры духовки полностью работает в вашем браузере — каждый расчёт в Фаренгейтах, Цельсиях и Gas Mark происходит только на вашем устройстве с помощью обычного JavaScript. Ничто из введённого вами не загружается, не сохраняется и не отслеживается, и страница продолжает работать офлайн после загрузки.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -695,7 +740,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا گیس مارک سے سیلسیئس/فارن ہائیٹ میں تبدیلی بالکل درست ہوتی ہے؟",
     "faq.a4": "نہیں — گیس مارک صرف 12 مقررہ پوائنٹس (1/4 سے 10 تک) کا ایک درجہ بہ درجہ پیمانہ ہے، جبکہ سیلسیئس اور فارن ہائیٹ مسلسل اقدار ہیں۔ جب آپ کا لکھا ہوا درجہ حرارت دو گیس مارک پوائنٹس کے درمیان آتا ہے، تو یہ ٹول ایک خیالی اعشاریہ گیس مارک بنانے کے بجائے قریب ترین مماثلت کو تقریباً (≈) کے نشان کے ساتھ دکھاتا ہے۔ اگر آپ کا نمبر معمول کی اوون رینج سے کافی باہر ہو، تو ٹول اندازہ لگانے کے بجائے واضح طور پر بتا دیتا ہے کہ کوئی موزوں گیس مارک موجود نہیں۔",
     "faq.q5": "کیا میرا اوون کا درجہ حرارت کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ اوون درجہ حرارت کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — فارن ہائیٹ، سیلسیئس اور گیس مارک کا ہر حساب صرف آپ کے اپنے آلے پر عام جاوا اسکرپٹ استعمال کرتے ہوئے ہوتا ہے۔ آپ جو کچھ بھی لکھتے ہیں وہ نہ اپ لوڈ ہوتا ہے، نہ محفوظ ہوتا ہے، نہ ٹریک ہوتا ہے، اور صفحہ لوڈ ہونے کے بعد آف لائن بھی کام کرتا رہتا ہے۔"
+    "faq.a5": "نہیں۔ یہ اوون درجہ حرارت کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — فارن ہائیٹ، سیلسیئس اور گیس مارک کا ہر حساب صرف آپ کے اپنے آلے پر عام جاوا اسکرپٹ استعمال کرتے ہوئے ہوتا ہے۔ آپ جو کچھ بھی لکھتے ہیں وہ نہ اپ لوڈ ہوتا ہے، نہ محفوظ ہوتا ہے، نہ ٹریک ہوتا ہے، اور صفحہ لوڈ ہونے کے بعد آف لائن بھی کام کرتا رہتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -763,7 +813,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah konversi Gas Mark ke Celsius dan Fahrenheit itu tepat?",
     "faq.a4": "Tidak — Gas Mark adalah skala bertahap dengan hanya 12 titik tetap (1/4 hingga 10), sedangkan Celsius dan Fahrenheit bersifat kontinu. Saat suhu yang Anda ketik jatuh di antara dua titik Gas Mark, alat ini menampilkan kecocokan terdekat dengan tanda perkiraan (≈), bukannya mengarang Gas Mark desimal yang sebenarnya tidak ada. Jika angka Anda jauh di luar rentang oven normal, alat ini memberi tahu bahwa tidak ada Gas Mark yang masuk akal, bukannya menebak-nebak.",
     "faq.q5": "Apakah suhu oven saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter suhu oven ini sepenuhnya berjalan di browser Anda — setiap perhitungan Fahrenheit, Celsius, dan Gas Mark terjadi di perangkat Anda sendiri menggunakan JavaScript biasa. Apa pun yang Anda ketik tidak diunggah, disimpan, atau dilacak, dan halaman ini tetap berfungsi secara offline setelah dimuat."
+    "faq.a5": "Tidak. Konverter suhu oven ini sepenuhnya berjalan di browser Anda — setiap perhitungan Fahrenheit, Celsius, dan Gas Mark terjadi di perangkat Anda sendiri menggunakan JavaScript biasa. Apa pun yang Anda ketik tidak diunggah, disimpan, atau dilacak, dan halaman ini tetap berfungsi secara offline setelah dimuat.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -831,7 +886,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Sind die Gas-Mark-Umrechnungen in Celsius und Fahrenheit exakt?",
     "faq.a4": "Nein — Gas Mark ist eine gestufte Skala mit nur 12 festen Punkten (1/4 bis 10), während Celsius und Fahrenheit kontinuierlich sind. Liegt Ihre eingegebene Temperatur zwischen zwei Gas-Mark-Punkten, zeigt dieses Tool den nächstgelegenen Treffer mit einem Näherungszeichen (≈) an, statt eine nicht existierende Dezimal-Gas-Mark zu erfinden. Liegt Ihre Zahl deutlich außerhalb des normalen Ofenbereichs, teilt Ihnen das Tool klar mit, dass es keine sinnvolle Gas Mark gibt, statt zu raten.",
     "faq.q5": "Wird meine Backofentemperatur an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Backofen-Temperatur-Umrechner läuft vollständig in Ihrem Browser — jede Fahrenheit-, Celsius- und Gas-Mark-Berechnung findet nur auf Ihrem eigenen Gerät mit gewöhnlichem JavaScript statt. Nichts, was Sie eingeben, wird hochgeladen, gespeichert oder verfolgt, und die Seite funktioniert nach dem Laden auch offline weiter."
+    "faq.a5": "Nein. Dieser Backofen-Temperatur-Umrechner läuft vollständig in Ihrem Browser — jede Fahrenheit-, Celsius- und Gas-Mark-Berechnung findet nur auf Ihrem eigenen Gerät mit gewöhnlichem JavaScript statt. Nichts, was Sie eingeben, wird hochgeladen, gespeichert oder verfolgt, und die Seite funktioniert nach dem Laden auch offline weiter.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -899,7 +959,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ガスマークから摂氏・華氏への変換は正確ですか？",
     "faq.a4": "いいえ — ガスマークは1/4から10までのわずか12個の固定点しかない段階的なスケールですが、摂氏と華氏は連続した値です。入力した温度が2つのガスマークの間に落ちる場合、このツールは存在しない小数点のガスマークを作り出す代わりに、近似記号（≈）付きで最も近い一致を表示します。数値が通常のオーブン範囲を大きく外れている場合、当て推量をする代わりに、適切なガスマークがないことをはっきり伝えます。",
     "faq.q5": "入力したオーブンの温度はサーバーに送信されますか？",
-    "faq.a5": "いいえ。このオーブン温度コンバーターは完全にブラウザ内で動作します — 華氏、摂氏、ガスマークのすべての計算は、通常のJavaScriptを使ってお使いの端末上だけで行われます。入力した内容がアップロードされたり、保存されたり、追跡されたりすることはなく、ページは読み込み後、オフラインでも動作し続けます。"
+    "faq.a5": "いいえ。このオーブン温度コンバーターは完全にブラウザ内で動作します — 華氏、摂氏、ガスマークのすべての計算は、通常のJavaScriptを使ってお使いの端末上だけで行われます。入力した内容がアップロードされたり、保存されたり、追跡されたりすることはなく、ページは読み込み後、オフラインでも動作し続けます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -967,6 +1032,11 @@ window.I18N_LOCALES = {
     "faq.q4": "가스 마크를 섭씨·화씨로 변환하는 것이 정확한가요?",
     "faq.a4": "아닙니다 — 가스 마크는 1/4부터 10까지 단 12개의 고정된 지점만 있는 단계적 척도인 반면, 섭씨와 화씨는 연속적인 값입니다. 입력한 온도가 두 가스 마크 지점 사이에 있을 경우, 이 도구는 존재하지 않는 소수점 가스 마크를 만들어내는 대신 근사(≈) 표시와 함께 가장 가까운 값을 보여줍니다. 입력한 숫자가 일반적인 오븐 범위를 크게 벗어나면, 추측하는 대신 적절한 가스 마크가 없다는 것을 명확히 알려줍니다.",
     "faq.q5": "제 오븐 온도가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 오븐 온도 변환기는 전적으로 브라우저 안에서 동작합니다 — 화씨, 섭씨, 가스 마크 계산이 모두 일반 자바스크립트를 사용해 사용자의 기기에서만 이루어집니다. 입력한 어떤 내용도 업로드되거나 저장되거나 추적되지 않으며, 페이지가 한 번 로드되면 오프라인에서도 계속 작동합니다."
+    "faq.a5": "아니요. 이 오븐 온도 변환기는 전적으로 브라우저 안에서 동작합니다 — 화씨, 섭씨, 가스 마크 계산이 모두 일반 자바스크립트를 사용해 사용자의 기기에서만 이루어집니다. 입력한 어떤 내용도 업로드되거나 저장되거나 추적되지 않으며, 페이지가 한 번 로드되면 오프라인에서도 계속 작동합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -62,7 +62,12 @@ window.I18N_LOCALES = {
     "faq.a4": "A stopwatch counts up from zero to measure how long something takes. A countdown timer does the opposite: you set a duration, it counts down to zero and then rings. Use a stopwatch to record times, and a timer with alarm to be reminded.",
     "faq.a4link": "Try the online stopwatch →",
     "faq.q5": "Does it keep working if the internet disconnects?",
-    "faq.a5": "Yes. Once the page is loaded, everything runs inside your browser and nothing is sent to a server. A running online timer keeps counting down and rings even while offline, and you can install it as a PWA for offline use."
+    "faq.a5": "Yes. Once the page is loaded, everything runs inside your browser and nothing is sent to a server. A running online timer keeps counting down and rings even while offline, and you can install it as a PWA for offline use.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -109,7 +114,12 @@ window.I18N_LOCALES = {
     "faq.a4": "秒表从零开始向上计时，用来测量耗时；倒计时器则相反，设定时长后向零递减，归零时响铃。要记录用秒表，要提醒用带闹铃的倒计时器。",
     "faq.a4link": "试试在线秒表 →",
     "faq.q5": "断网后还能用吗？",
-    "faq.a5": "可以。页面加载后所有计算都在浏览器内完成，不向服务器发送任何数据。正在运行的在线计时器离线时也会继续倒数并按时响铃，还可作为 PWA 安装离线使用。"
+    "faq.a5": "可以。页面加载后所有计算都在浏览器内完成，不向服务器发送任何数据。正在运行的在线计时器离线时也会继续倒数并按时响铃，还可作为 PWA 安装离线使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -156,7 +166,12 @@ window.I18N_LOCALES = {
     "faq.a4": "स्टॉपवॉच शून्य से ऊपर की ओर गिनकर लगा समय मापती है, जबकि काउंटडाउन टाइमर तय समय से शून्य तक घटता है और फिर अलार्म बजाता है। रिकॉर्ड करने के लिए स्टॉपवॉच, याद दिलाने के लिए अलार्म वाला टाइमर।",
     "faq.a4link": "ऑनलाइन स्टॉपवॉच आज़माएँ →",
     "faq.q5": "इंटरनेट कट जाए तो भी चलेगा?",
-    "faq.a5": "हाँ। पेज लोड होने के बाद सब कुछ ब्राउज़र में ही चलता है, सर्वर को कुछ नहीं भेजा जाता। चल रहा ऑनलाइन टाइमर ऑफ़लाइन में भी घटता रहता है और समय पर बजता है। PWA की तरह इंस्टॉल कर ऑफ़लाइन भी खोल सकते हैं।"
+    "faq.a5": "हाँ। पेज लोड होने के बाद सब कुछ ब्राउज़र में ही चलता है, सर्वर को कुछ नहीं भेजा जाता। चल रहा ऑनलाइन टाइमर ऑफ़लाइन में भी घटता रहता है और समय पर बजता है। PWA की तरह इंस्टॉल कर ऑफ़लाइन भी खोल सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -203,7 +218,12 @@ window.I18N_LOCALES = {
     "faq.a4": "El cronómetro cuenta hacia arriba desde cero para medir cuánto tarda algo. El temporizador hace lo contrario: fijas una duración, baja hasta cero y suena. Para registrar, cronómetro; para que te avise, temporizador con alarma.",
     "faq.a4link": "Prueba el cronómetro online →",
     "faq.q5": "¿Funciona si se corta internet?",
-    "faq.a5": "Sí. Una vez cargada la página, todo ocurre en tu navegador y no se envía nada a un servidor. Un temporizador en marcha sigue contando y suena aunque estés sin conexión, y puedes instalarlo como PWA para usarlo offline."
+    "faq.a5": "Sí. Una vez cargada la página, todo ocurre en tu navegador y no se envía nada a un servidor. Un temporizador en marcha sigue contando y suena aunque estés sin conexión, y puedes instalarlo como PWA para usarlo offline.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -250,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.a4": "ساعة الإيقاف تعد تصاعديًا من الصفر لقياس المدة، أما المؤقت التنازلي فيبدأ من مدة تحددها وينقص حتى الصفر ثم يرن. للتسجيل استخدم ساعة الإيقاف، وللتذكير استخدم المؤقت ذا المنبه.",
     "faq.a4link": "جرّب ساعة الإيقاف أونلاين",
     "faq.q5": "هل يعمل إذا انقطع الإنترنت؟",
-    "faq.a5": "نعم. بعد تحميل الصفحة يجري كل شيء داخل متصفحك ولا يُرسل شيء إلى الخادم. يستمر المؤقت الجاري بالعد ويرن حتى دون اتصال، ويمكن تثبيته كتطبيق PWA للاستخدام دون إنترنت."
+    "faq.a5": "نعم. بعد تحميل الصفحة يجري كل شيء داخل متصفحك ولا يُرسل شيء إلى الخادم. يستمر المؤقت الجاري بالعد ويرن حتى دون اتصال، ويمكن تثبيته كتطبيق PWA للاستخدام دون إنترنت.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -297,7 +322,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Le chronomètre compte vers le haut depuis zéro pour mesurer une durée. Le compte à rebours fait l'inverse : vous fixez une durée, il descend jusqu'à zéro puis sonne. Pour mesurer, chronomètre ; pour être averti, minuteur avec alarme.",
     "faq.a4link": "Essayez le chronomètre en ligne →",
     "faq.q5": "Fonctionne-t-il sans connexion internet ?",
-    "faq.a5": "Oui. Une fois la page chargée, tout se passe dans votre navigateur, rien n'est envoyé à un serveur. Un minuteur en cours continue de décompter et sonne même hors ligne, et l'application peut être installée en PWA pour un usage hors connexion."
+    "faq.a5": "Oui. Une fois la page chargée, tout se passe dans votre navigateur, rien n'est envoyé à un serveur. Un minuteur en cours continue de décompter et sonne même hors ligne, et l'application peut être installée en PWA pour un usage hors connexion.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -344,7 +374,12 @@ window.I18N_LOCALES = {
     "faq.a4": "স্টপওয়াচ শূন্য থেকে বেড়ে সময় মাপে, আর কাউন্টডাউন টাইমার নির্ধারিত সময় থেকে শূন্যে নেমে অ্যালার্ম বাজায়। রেকর্ডের জন্য স্টপওয়াচ, মনে করিয়ে দেওয়ার জন্য অ্যালার্মসহ টাইমার।",
     "faq.a4link": "অনলাইন স্টপওয়াচ দেখুন →",
     "faq.q5": "ইন্টারনেট চলে গেলেও কি কাজ করবে?",
-    "faq.a5": "হ্যাঁ। পেজ একবার লোড হলে সবকিছু ব্রাউজারের ভেতরেই চলে, সার্ভারে কিছুই পাঠানো হয় না। চালু থাকা অনলাইন টাইমার অফলাইনেও কমতে থাকে এবং সময়মতো বাজে; PWA হিসেবে ইনস্টল করে অফলাইনেও খোলা যায়।"
+    "faq.a5": "হ্যাঁ। পেজ একবার লোড হলে সবকিছু ব্রাউজারের ভেতরেই চলে, সার্ভারে কিছুই পাঠানো হয় না। চালু থাকা অনলাইন টাইমার অফলাইনেও কমতে থাকে এবং সময়মতো বাজে; PWA হিসেবে ইনস্টল করে অফলাইনেও খোলা যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -391,7 +426,12 @@ window.I18N_LOCALES = {
     "faq.a4": "O cronômetro conta para cima a partir do zero para medir a duração de algo. O timer faz o contrário: você define um tempo, ele desce até zero e toca. Para registrar, cronômetro; para ser avisado, timer com alarme.",
     "faq.a4link": "Experimente o cronômetro online →",
     "faq.q5": "Funciona se a internet cair?",
-    "faq.a5": "Sim. Depois que a página carrega, tudo roda no seu navegador e nada é enviado a um servidor. Um timer em andamento continua contando e toca mesmo offline, e o app pode ser instalado como PWA para uso sem conexão."
+    "faq.a5": "Sim. Depois que a página carrega, tudo roda no seu navegador e nada é enviado a um servidor. Um timer em andamento continua contando e toca mesmo offline, e o app pode ser instalado como PWA para uso sem conexão.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -438,7 +478,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Секундомер считает вверх от нуля и измеряет длительность. Таймер наоборот: вы задаёте время, он убывает до нуля и звонит. Для замеров — секундомер, для напоминания — таймер с будильником.",
     "faq.a4link": "Попробуйте онлайн-секундомер →",
     "faq.q5": "Работает ли без интернета?",
-    "faq.a5": "Да. После загрузки страницы всё выполняется в браузере, на сервер ничего не отправляется. Запущенный онлайн-таймер продолжает отсчёт и звонит даже офлайн, а приложение можно установить как PWA для работы без сети."
+    "faq.a5": "Да. После загрузки страницы всё выполняется в браузере, на сервер ничего не отправляется. Запущенный онлайн-таймер продолжает отсчёт и звонит даже офлайн, а приложение можно установить как PWA для работы без сети.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -485,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.a4": "اسٹاپ واچ صفر سے اوپر گن کر دورانیہ ناپتی ہے، جبکہ کاؤنٹ ڈاؤن ٹائمر مقررہ وقت سے صفر تک گھٹتا ہے اور پھر الارم بجاتا ہے۔ ریکارڈ کے لیے اسٹاپ واچ، یاد دہانی کے لیے الارم والا ٹائمر۔",
     "faq.a4link": "آن لائن اسٹاپ واچ آزمائیں",
     "faq.q5": "انٹرنیٹ منقطع ہو جائے تو بھی چلے گا؟",
-    "faq.a5": "جی ہاں۔ صفحہ لوڈ ہونے کے بعد سب کچھ آپ کے براؤزر میں چلتا ہے، سرور کو کچھ نہیں بھیجا جاتا۔ چلتا ہوا آن لائن ٹائمر آف لائن بھی گھٹتا رہتا ہے اور وقت پر بجتا ہے؛ PWA کے طور پر انسٹال کر کے آف لائن بھی کھول سکتے ہیں۔"
+    "faq.a5": "جی ہاں۔ صفحہ لوڈ ہونے کے بعد سب کچھ آپ کے براؤزر میں چلتا ہے، سرور کو کچھ نہیں بھیجا جاتا۔ چلتا ہوا آن لائن ٹائمر آف لائن بھی گھٹتا رہتا ہے اور وقت پر بجتا ہے؛ PWA کے طور پر انسٹال کر کے آف لائن بھی کھول سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -532,7 +582,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Stopwatch menghitung naik dari nol untuk mengukur durasi. Timer sebaliknya: Anda menetapkan durasi, angkanya turun sampai nol lalu berbunyi. Untuk mencatat pakai stopwatch, untuk diingatkan pakai timer dengan alarm.",
     "faq.a4link": "Coba stopwatch online →",
     "faq.q5": "Apakah tetap berfungsi saat internet terputus?",
-    "faq.a5": "Ya. Setelah halaman termuat, semuanya berjalan di browser Anda dan tidak ada data yang dikirim ke server. Timer online yang berjalan terus menghitung dan berbunyi meski offline, dan aplikasinya bisa dipasang sebagai PWA untuk dipakai tanpa koneksi."
+    "faq.a5": "Ya. Setelah halaman termuat, semuanya berjalan di browser Anda dan tidak ada data yang dikirim ke server. Timer online yang berjalan terus menghitung dan berbunyi meski offline, dan aplikasinya bisa dipasang sebagai PWA untuk dipakai tanpa koneksi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -579,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.a4": "Eine Stoppuhr zählt von null aufwärts und misst, wie lange etwas dauert. Ein Countdown-Timer macht das Gegenteil: Du stellst eine Dauer ein, er zählt bis null herunter und klingelt dann. Zum Messen die Stoppuhr, zum Erinnern der Timer mit Alarm.",
     "faq.a4link": "Zur Online-Stoppuhr →",
     "faq.q5": "Funktioniert er auch ohne Internetverbindung?",
-    "faq.a5": "Ja. Nach dem Laden der Seite läuft alles im Browser, nichts wird an einen Server gesendet. Ein laufender Online-Timer zählt auch offline weiter und klingelt pünktlich; als PWA installiert lässt er sich sogar offline öffnen."
+    "faq.a5": "Ja. Nach dem Laden der Seite läuft alles im Browser, nichts wird an einen Server gesendet. Ein laufender Online-Timer zählt auch offline weiter und klingelt pünktlich; als PWA installiert lässt er sich sogar offline öffnen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -626,7 +686,12 @@ window.I18N_LOCALES = {
     "faq.a4": "ストップウォッチは0から数え上げて所要時間を測る道具、カウントダウンタイマーは設定時間から0まで減ってアラームが鳴る道具です。記録にはストップウォッチ、リマインドにはアラーム付きタイマーを。",
     "faq.a4link": "オンラインストップウォッチを試す →",
     "faq.q5": "インターネットが切れても動きますか?",
-    "faq.a5": "はい。ページを一度読み込めば、すべてブラウザ内で完結し、サーバーには何も送信しません。実行中のオンラインタイマーはオフラインでも動き続け、時間になれば鳴ります。PWAとしてインストールすればオフラインでも開けます。"
+    "faq.a5": "はい。ページを一度読み込めば、すべてブラウザ内で完結し、サーバーには何も送信しません。実行中のオンラインタイマーはオフラインでも動き続け、時間になれば鳴ります。PWAとしてインストールすればオフラインでも開けます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -673,6 +738,11 @@ window.I18N_LOCALES = {
     "faq.a4": "스톱워치는 0에서 시작해 걸린 시간을 재는 도구이고, 카운트다운 타이머는 반대로 정해둔 시간에서 0까지 줄어든 뒤 알람이 울리는 도구입니다. 기록이 목적이면 스톱워치, 알림이 목적이면 알람 타이머를 쓰세요.",
     "faq.a4link": "온라인 스톱워치 써보기 →",
     "faq.q5": "인터넷이 끊겨도 작동하나요?",
-    "faq.a5": "네. 페이지가 한 번 열리면 모든 계산이 브라우저 안에서 끝나며 서버로 아무것도 보내지 않습니다. 진행 중이던 온라인 타이머는 오프라인 상태에서도 계속 줄어들고 끝나면 울립니다. PWA로 설치하면 오프라인에서도 열 수 있습니다."
+    "faq.a5": "네. 페이지가 한 번 열리면 모든 계산이 브라우저 안에서 끝나며 서버로 아무것도 보내지 않습니다. 진행 중이던 온라인 타이머는 오프라인 상태에서도 계속 줄어들고 끝나면 울립니다. PWA로 설치하면 오프라인에서도 열 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

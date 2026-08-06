@@ -53,7 +53,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Does this Markdown editor support GFM tables and nested lists?",
     "faq.a4": "Yes. Type a header row, a separator row made of dashes (optionally with colons for alignment, like :---, ---: or :---:), and one or more data rows separated by pipes to get a table. For lists, indent a line by two or more spaces under a bullet or numbered item to nest a sub-list underneath it — the previewer renders the nesting as nested lists inside the parent item.",
     "faq.q5": "Is my Markdown text saved or sent to a server?",
-    "faq.a5": "No. Everything runs locally in your browser — typing, parsing and rendering all happen on your device. The only storage used is your browser's localStorage, purely so your draft is still there if you reload the page; nothing is uploaded, and there's no sign-up or tracking."
+    "faq.a5": "No. Everything runs locally in your browser — typing, parsing and rendering all happen on your device. The only storage used is your browser's localStorage, purely so your draft is still there if you reload the page; nothing is uploaded, and there's no sign-up or tracking.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -91,7 +96,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这个 Markdown 编辑器支持 GFM 表格和嵌套列表吗？",
     "faq.a4": "支持。输入一行表头，再输入一行由短横线组成的分隔行（可选择加冒号实现对齐，如 :---、---: 或 :---:），然后输入一行或多行以竖线分隔的数据行即可生成表格。对于列表，在某个项目符号或编号项下方缩进两个或更多空格即可创建嵌套子列表——预览工具会将其渲染为父项内部的嵌套列表。",
     "faq.q5": "我的 Markdown 文本会被保存或发送到服务器吗？",
-    "faq.a5": "不会。一切都在你的浏览器本地运行——输入、解析和渲染都在你的设备上完成。唯一使用的存储是浏览器的 localStorage，仅用于在刷新页面后保留你的草稿；不会上传任何内容，也没有注册或追踪。"
+    "faq.a5": "不会。一切都在你的浏览器本地运行——输入、解析和渲染都在你的设备上完成。唯一使用的存储是浏览器的 localStorage，仅用于在刷新页面后保留你的草稿；不会上传任何内容，也没有注册或追踪。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -129,7 +139,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या यह Markdown एडिटर GFM टेबल और नेस्टेड लिस्ट को सपोर्ट करता है?",
     "faq.a4": "हाँ। टेबल बनाने के लिए एक हेडर रो, डैश से बनी एक सेपरेटर रो (अलाइनमेंट के लिए वैकल्पिक रूप से कोलन के साथ, जैसे :---, ---: या :---:), और पाइप से अलग की गई एक या अधिक डेटा रो टाइप करें। लिस्ट के लिए, किसी बुलेट या नंबर वाले आइटम के नीचे लाइन को दो या अधिक स्पेस से इंडेंट करें ताकि उसके नीचे एक सब-लिस्ट नेस्ट हो जाए — प्रीव्यूअर इस नेस्टिंग को पैरेंट आइटम के अंदर नेस्टेड लिस्ट के रूप में रेंडर करता है।",
     "faq.q5": "क्या मेरा Markdown टेक्स्ट सेव या सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। सब कुछ आपके ब्राउज़र में लोकली चलता है — टाइप करना, पार्स करना और रेंडर करना, सब कुछ आपके डिवाइस पर होता है। इस्तेमाल होने वाला एकमात्र स्टोरेज आपके ब्राउज़र का localStorage है, जो सिर्फ़ इसलिए है ताकि पेज रीलोड करने पर भी आपका ड्राफ़्ट बना रहे; कुछ भी अपलोड नहीं होता, और न ही कोई साइन-अप या ट्रैकिंग है।"
+    "faq.a5": "नहीं। सब कुछ आपके ब्राउज़र में लोकली चलता है — टाइप करना, पार्स करना और रेंडर करना, सब कुछ आपके डिवाइस पर होता है। इस्तेमाल होने वाला एकमात्र स्टोरेज आपके ब्राउज़र का localStorage है, जो सिर्फ़ इसलिए है ताकि पेज रीलोड करने पर भी आपका ड्राफ़्ट बना रहे; कुछ भी अपलोड नहीं होता, और न ही कोई साइन-अप या ट्रैकिंग है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -167,7 +182,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Este editor de Markdown admite tablas GFM y listas anidadas?",
     "faq.a4": "Sí. Escribe una fila de encabezado, una fila separadora hecha de guiones (opcionalmente con dos puntos para alinear, como :---, ---: o :---:) y una o más filas de datos separadas por barras verticales para obtener una tabla. Para las listas, sangra una línea con dos o más espacios debajo de un elemento con viñeta o numerado para anidar una sublista debajo — el visor renderiza esa anidación como listas anidadas dentro del elemento padre.",
     "faq.q5": "¿Mi texto de Markdown se guarda o se envía a un servidor?",
-    "faq.a5": "No. Todo se ejecuta localmente en tu navegador: escribir, analizar y renderizar ocurre en tu dispositivo. El único almacenamiento que se usa es el localStorage de tu navegador, únicamente para que tu borrador siga ahí si recargas la página; no se sube nada y no hay registro ni seguimiento."
+    "faq.a5": "No. Todo se ejecuta localmente en tu navegador: escribir, analizar y renderizar ocurre en tu dispositivo. El único almacenamiento que se usa es el localStorage de tu navegador, únicamente para que tu borrador siga ahí si recargas la página; no se sube nada y no hay registro ni seguimiento.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -205,7 +225,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يدعم محرر Markdown هذا جداول GFM والقوائم المتداخلة؟",
     "faq.a4": "نعم. اكتب صف عناوين، ثم صف فاصل مكوّن من شرطات (يمكن إضافة نقطتين رأسيتين للمحاذاة، مثل :---‏ أو ---:‏ أو :---:‏)، ثم صفًا واحدًا أو أكثر من صفوف البيانات مفصولة بخطوط عمودية للحصول على جدول. أما بالنسبة للقوائم، فقم بإزاحة السطر بمسافتين أو أكثر تحت عنصر نقطي أو مرقم لإنشاء قائمة فرعية متداخلة تحته — تعرض الأداة هذا التداخل كقوائم متداخلة داخل العنصر الأب.",
     "faq.q5": "هل يُحفظ نص Markdown الخاص بي أو يُرسل إلى خادم؟",
-    "faq.a5": "لا. كل شيء يعمل محليًا داخل متصفحك — الكتابة والتحليل والعرض تحدث كلها على جهازك. التخزين الوحيد المستخدم هو localStorage الخاص بمتصفحك، وذلك فقط ليبقى مسوّدتك موجودة عند إعادة تحميل الصفحة؛ لا يُرفع أي شيء، ولا يوجد تسجيل أو تتبّع."
+    "faq.a5": "لا. كل شيء يعمل محليًا داخل متصفحك — الكتابة والتحليل والعرض تحدث كلها على جهازك. التخزين الوحيد المستخدم هو localStorage الخاص بمتصفحك، وذلك فقط ليبقى مسوّدتك موجودة عند إعادة تحميل الصفحة؛ لا يُرفع أي شيء، ولا يوجد تسجيل أو تتبّع.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -243,7 +268,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Cet éditeur Markdown prend-il en charge les tableaux GFM et les listes imbriquées ?",
     "faq.a4": "Oui. Tapez une ligne d'en-tête, une ligne de séparation composée de tirets (avec éventuellement des deux-points pour l'alignement, comme :---, ---: ou :---:), puis une ou plusieurs lignes de données séparées par des barres verticales pour obtenir un tableau. Pour les listes, indentez une ligne de deux espaces ou plus sous un élément à puce ou numéroté pour imbriquer une sous-liste en dessous — l'outil rend cette imbrication sous forme de listes imbriquées à l'intérieur de l'élément parent.",
     "faq.q5": "Mon texte Markdown est-il enregistré ou envoyé à un serveur ?",
-    "faq.a5": "Non. Tout s'exécute localement dans votre navigateur — la saisie, l'analyse et le rendu se font sur votre appareil. Le seul stockage utilisé est le localStorage de votre navigateur, uniquement pour que votre brouillon reste présent si vous rechargez la page ; rien n'est envoyé, et il n'y a ni inscription ni suivi."
+    "faq.a5": "Non. Tout s'exécute localement dans votre navigateur — la saisie, l'analyse et le rendu se font sur votre appareil. Le seul stockage utilisé est le localStorage de votre navigateur, uniquement pour que votre brouillon reste présent si vous rechargez la page ; rien n'est envoyé, et il n'y a ni inscription ni suivi.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -281,7 +311,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এই Markdown এডিটর কি GFM টেবিল ও নেস্টেড লিস্ট সাপোর্ট করে?",
     "faq.a4": "হ্যাঁ। একটি হেডার সারি, ড্যাশ দিয়ে তৈরি একটি সেপারেটর সারি (অ্যালাইনমেন্টের জন্য চাইলে কোলনসহ, যেমন :---, ---: বা :---:), এবং পাইপ দিয়ে আলাদা করা এক বা একাধিক ডেটা সারি টাইপ করলেই টেবিল তৈরি হয়ে যায়। লিস্টের ক্ষেত্রে, কোনো বুলেট বা নম্বরযুক্ত আইটেমের নিচে লাইনটি দুই বা তার বেশি স্পেস ইনডেন্ট করলে তার নিচে একটি সাব-লিস্ট নেস্ট হয়ে যায় — প্রিভিউয়ার এই নেস্টিংকে প্যারেন্ট আইটেমের ভেতরে নেস্টেড লিস্ট হিসেবে রেন্ডার করে।",
     "faq.q5": "আমার Markdown টেক্সট কি সংরক্ষিত হয় বা সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। সবকিছু আপনার ব্রাউজারে স্থানীয়ভাবেই চলে — টাইপ করা, পার্স করা ও রেন্ডার করা সবই আপনার ডিভাইসে হয়। ব্যবহৃত একমাত্র স্টোরেজ হলো আপনার ব্রাউজারের localStorage, যা শুধু পেজ রিলোড করলেও আপনার খসড়া যেন থেকে যায় সেজন্য; কিছুই আপলোড হয় না, এবং কোনো সাইন-আপ বা ট্র্যাকিং নেই।"
+    "faq.a5": "না। সবকিছু আপনার ব্রাউজারে স্থানীয়ভাবেই চলে — টাইপ করা, পার্স করা ও রেন্ডার করা সবই আপনার ডিভাইসে হয়। ব্যবহৃত একমাত্র স্টোরেজ হলো আপনার ব্রাউজারের localStorage, যা শুধু পেজ রিলোড করলেও আপনার খসড়া যেন থেকে যায় সেজন্য; কিছুই আপলোড হয় না, এবং কোনো সাইন-আপ বা ট্র্যাকিং নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -319,7 +354,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Este editor de Markdown suporta tabelas GFM e listas aninhadas?",
     "faq.a4": "Sim. Digite uma linha de cabeçalho, uma linha separadora feita de traços (opcionalmente com dois-pontos para alinhamento, como :---, ---: ou :---:), e uma ou mais linhas de dados separadas por barras verticais para obter uma tabela. Para listas, recue uma linha com dois ou mais espaços abaixo de um item com marcador ou numerado para aninhar uma sublista abaixo dele — o visualizador renderiza esse aninhamento como listas aninhadas dentro do item pai.",
     "faq.q5": "Meu texto Markdown é salvo ou enviado para um servidor?",
-    "faq.a5": "Não. Tudo roda localmente no seu navegador — digitar, analisar e renderizar acontecem no seu dispositivo. O único armazenamento usado é o localStorage do seu navegador, apenas para que seu rascunho continue lá se você recarregar a página; nada é enviado, e não há cadastro nem rastreamento."
+    "faq.a5": "Não. Tudo roda localmente no seu navegador — digitar, analisar e renderizar acontecem no seu dispositivo. O único armazenamento usado é o localStorage do seu navegador, apenas para que seu rascunho continue lá se você recarregar a página; nada é enviado, e não há cadastro nem rastreamento.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -357,7 +397,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Поддерживает ли этот редактор Markdown таблицы GFM и вложенные списки?",
     "faq.a4": "Да. Введите строку заголовка, строку-разделитель из дефисов (при желании с двоеточиями для выравнивания, например :---, ---: или :---:), а затем одну или несколько строк данных, разделённых вертикальными чертами, — и получится таблица. Для списков сделайте отступ строки на два и более пробела под маркированным или нумерованным пунктом, чтобы вложить под ним подсписок — просмотрщик отрендерит это как вложенные списки внутри родительского пункта.",
     "faq.q5": "Сохраняется ли мой текст Markdown или отправляется на сервер?",
-    "faq.a5": "Нет. Всё выполняется локально в вашем браузере — ввод, разбор и рендеринг происходят на вашем устройстве. Единственное используемое хранилище — localStorage вашего браузера, и оно нужно лишь для того, чтобы черновик оставался на месте при перезагрузке страницы; ничего не загружается на сервер, регистрации и отслеживания нет."
+    "faq.a5": "Нет. Всё выполняется локально в вашем браузере — ввод, разбор и рендеринг происходят на вашем устройстве. Единственное используемое хранилище — localStorage вашего браузера, и оно нужно лишь для того, чтобы черновик оставался на месте при перезагрузке страницы; ничего не загружается на сервер, регистрации и отслеживания нет.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -395,7 +440,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ Markdown ایڈیٹر GFM ٹیبلز اور نیسٹڈ فہرستوں کو سپورٹ کرتا ہے؟",
     "faq.a4": "جی ہاں۔ ٹیبل بنانے کے لیے ایک ہیڈر لائن، ڈیشز پر مشتمل ایک سیپریٹر لائن (ترتیب کے لیے اختیاری طور پر کالن کے ساتھ، جیسے :---، ---: یا :---:)، اور پائپ سے الگ کی گئی ایک یا زیادہ ڈیٹا لائنیں ٹائپ کریں۔ فہرستوں کے لیے، کسی بلٹ یا نمبر والے آئٹم کے نیچے لائن کو دو یا زیادہ اسپیس سے انڈینٹ کریں تاکہ اس کے نیچے ذیلی فہرست نیسٹ ہو جائے — پیش نظارہ کار اس نیسٹنگ کو پیرنٹ آئٹم کے اندر نیسٹڈ فہرستوں کے طور پر رینڈر کرتا ہے۔",
     "faq.q5": "کیا میرا Markdown متن محفوظ کیا جاتا ہے یا سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ سب کچھ آپ کے براؤزر میں مقامی طور پر چلتا ہے — ٹائپنگ، پارسنگ اور رینڈرنگ سب کچھ آپ کے ڈیوائس پر ہوتا ہے۔ استعمال ہونے والا واحد اسٹوریج آپ کے براؤزر کا localStorage ہے، جو صرف اس لیے ہے تاکہ صفحہ دوبارہ لوڈ کرنے پر بھی آپ کا ڈرافٹ موجود رہے؛ کچھ بھی اپ لوڈ نہیں ہوتا، اور نہ ہی کوئی سائن اپ یا ٹریکنگ ہے۔"
+    "faq.a5": "نہیں۔ سب کچھ آپ کے براؤزر میں مقامی طور پر چلتا ہے — ٹائپنگ، پارسنگ اور رینڈرنگ سب کچھ آپ کے ڈیوائس پر ہوتا ہے۔ استعمال ہونے والا واحد اسٹوریج آپ کے براؤزر کا localStorage ہے، جو صرف اس لیے ہے تاکہ صفحہ دوبارہ لوڈ کرنے پر بھی آپ کا ڈرافٹ موجود رہے؛ کچھ بھی اپ لوڈ نہیں ہوتا، اور نہ ہی کوئی سائن اپ یا ٹریکنگ ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -433,7 +483,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah editor Markdown ini mendukung tabel GFM dan daftar bersarang?",
     "faq.a4": "Ya. Ketik satu baris header, satu baris pemisah berupa tanda hubung (opsional dengan titik dua untuk perataan, seperti :---, ---:, atau :---:), lalu satu atau beberapa baris data yang dipisahkan tanda pipa untuk mendapatkan tabel. Untuk daftar, indentasikan baris dengan dua spasi atau lebih di bawah item berpoin atau bernomor untuk menyarangkan sub-daftar di bawahnya — pratinjau akan merender penyarangan ini sebagai daftar bersarang di dalam item induk.",
     "faq.q5": "Apakah teks Markdown saya disimpan atau dikirim ke server?",
-    "faq.a5": "Tidak. Semuanya berjalan secara lokal di browser Anda — mengetik, mem-parsing, dan merender semuanya terjadi di perangkat Anda. Satu-satunya penyimpanan yang digunakan adalah localStorage browser Anda, semata-mata agar draf Anda tetap ada jika Anda memuat ulang halaman; tidak ada yang diunggah, dan tidak ada pendaftaran atau pelacakan."
+    "faq.a5": "Tidak. Semuanya berjalan secara lokal di browser Anda — mengetik, mem-parsing, dan merender semuanya terjadi di perangkat Anda. Satu-satunya penyimpanan yang digunakan adalah localStorage browser Anda, semata-mata agar draf Anda tetap ada jika Anda memuat ulang halaman; tidak ada yang diunggah, dan tidak ada pendaftaran atau pelacakan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -471,7 +526,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Unterstützt dieser Markdown-Editor GFM-Tabellen und verschachtelte Listen?",
     "faq.a4": "Ja. Gib eine Kopfzeile ein, darunter eine Trennzeile aus Bindestrichen (optional mit Doppelpunkten zur Ausrichtung, z. B. :---, ---: oder :---:), gefolgt von einer oder mehreren durch Pipes getrennten Datenzeilen, um eine Tabelle zu erhalten. Für Listen rückst du eine Zeile um zwei oder mehr Leerzeichen unter einem Aufzählungs- oder nummerierten Element ein, um darunter eine Unterliste zu verschachteln — die Vorschau rendert diese Verschachtelung als geschachtelte Listen innerhalb des übergeordneten Elements.",
     "faq.q5": "Wird mein Markdown-Text gespeichert oder an einen Server gesendet?",
-    "faq.a5": "Nein. Alles läuft lokal in deinem Browser ab — Eingeben, Parsen und Rendern geschehen auf deinem Gerät. Der einzige verwendete Speicher ist der localStorage deines Browsers, nur damit dein Entwurf beim Neuladen der Seite erhalten bleibt; es wird nichts hochgeladen, und es gibt weder Anmeldung noch Tracking."
+    "faq.a5": "Nein. Alles läuft lokal in deinem Browser ab — Eingeben, Parsen und Rendern geschehen auf deinem Gerät. Der einzige verwendete Speicher ist der localStorage deines Browsers, nur damit dein Entwurf beim Neuladen der Seite erhalten bleibt; es wird nichts hochgeladen, und es gibt weder Anmeldung noch Tracking.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -509,7 +569,12 @@ window.I18N_LOCALES = {
     "faq.q4": "このMarkdownエディタはGFMテーブルやネストされたリストに対応していますか?",
     "faq.a4": "はい。ヘッダー行、ハイフンで構成された区切り行(:---、---:、:---:のようにコロンで配置を指定することも可能)、そしてパイプで区切られた1行以上のデータ行を入力すると表になります。リストの場合、箇条書きや番号付き項目の下の行を2つ以上のスペースでインデントすると、その下にサブリストがネストされます — プレビューはこのネストを親項目の中のネストされたリストとしてレンダリングします。",
     "faq.q5": "入力したMarkdownテキストは保存されたり、サーバーに送信されたりしますか?",
-    "faq.a5": "いいえ。すべてはブラウザ内でローカルに実行されます — 入力、解析、レンダリングはすべてお使いの端末上で行われます。使用される唯一のストレージはブラウザのlocalStorageで、ページを再読み込みしても下書きが残るようにするためだけのものです。アップロードは一切行われず、登録やトラッキングもありません。"
+    "faq.a5": "いいえ。すべてはブラウザ内でローカルに実行されます — 入力、解析、レンダリングはすべてお使いの端末上で行われます。使用される唯一のストレージはブラウザのlocalStorageで、ページを再読み込みしても下書きが残るようにするためだけのものです。アップロードは一切行われず、登録やトラッキングもありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -547,6 +612,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 마크다운 편집기는 GFM 표와 중첩 목록을 지원하나요?",
     "faq.a4": "네. 헤더 행 하나, 하이픈으로 이루어진 구분 행(정렬을 위해 콜론을 추가할 수도 있습니다. 예: :---, ---:, :---:), 그리고 파이프로 구분된 하나 이상의 데이터 행을 입력하면 표가 만들어집니다. 목록의 경우 글머리 기호나 번호가 있는 항목 아래 줄을 공백 2칸 이상 들여쓰면 그 아래에 하위 목록이 중첩됩니다 — 미리보기는 이 중첩 구조를 상위 항목 안에 중첩된 목록으로 렌더링합니다.",
     "faq.q5": "제 마크다운 텍스트가 저장되거나 서버로 전송되나요?",
-    "faq.a5": "아니요. 모든 과정이 브라우저 내에서 로컬로 실행됩니다 — 입력, 파싱, 렌더링 모두 사용자의 기기에서 이루어집니다. 사용되는 유일한 저장소는 브라우저의 localStorage이며, 이는 페이지를 새로고침해도 작성 중이던 내용이 남아 있도록 하기 위한 용도일 뿐입니다. 어떤 내용도 업로드되지 않으며 가입이나 추적도 없습니다."
+    "faq.a5": "아니요. 모든 과정이 브라우저 내에서 로컬로 실행됩니다 — 입력, 파싱, 렌더링 모두 사용자의 기기에서 이루어집니다. 사용되는 유일한 저장소는 브라우저의 localStorage이며, 이는 페이지를 새로고침해도 작성 중이던 내용이 남아 있도록 하기 위한 용도일 뿐입니다. 어떤 내용도 업로드되지 않으며 가입이나 추적도 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

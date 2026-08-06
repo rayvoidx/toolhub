@@ -73,7 +73,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Does this metronome keep perfectly steady time?",
     "faq.a4": "Yes. Instead of firing a sound directly from a JavaScript timer, which drifts because the browser can delay ticks under load, this metronome uses the Web Audio API's own clock with a lookahead scheduler that queues every beat about 100 milliseconds before it needs to play. That keeps timing accurate even while the page is busy updating the visual beat indicator. If you switch to another tab, playback stops automatically instead of drifting silently in the background.",
     "faq.q5": "Is my tempo saved anywhere, and does it work offline?",
-    "faq.a5": "Your BPM and time signature are saved only in your browser's localStorage, so they're there the next time you visit — nothing is sent to a server, and there's no sign-up. The metronome is also an installable app that caches its files for offline use, so once you've loaded it, it keeps working without an internet connection. Clearing your browser data or switching devices simply resets it to the default 120 BPM in 4/4."
+    "faq.a5": "Your BPM and time signature are saved only in your browser's localStorage, so they're there the next time you visit — nothing is sent to a server, and there's no sign-up. The metronome is also an installable app that caches its files for offline use, so once you've loaded it, it keeps working without an internet connection. Clearing your browser data or switching devices simply resets it to the default 120 BPM in 4/4.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这个节拍器的节拍够稳吗？",
     "faq.a4": "够稳。它不像用 JavaScript 定时器直接发声那样，会因浏览器在负载下延迟触发而产生漂移，而是使用 Web Audio API 自身的时钟，配合“预调度”机制，在每个节拍需要播放前约 100 毫秒就把它放入队列。这样即使页面正忙于更新节拍指示灯，节拍时间依然精准。切换到其他标签页时，播放会自动停止，而不是在后台悄悄地越走越偏。",
     "faq.q5": "我的速度设置会保存在哪里？能离线使用吗？",
-    "faq.a5": "你的 BPM 和拍号只会保存在浏览器的 localStorage 中，下次打开时依然在——不会发送到任何服务器，也无需注册。这个节拍器还是一个可安装的应用，会缓存所需文件以便离线使用，加载过一次之后，即使没有网络也能继续工作。清除浏览器数据或更换设备只会把它重置回默认的 4/4 拍、120 BPM。"
+    "faq.a5": "你的 BPM 和拍号只会保存在浏览器的 localStorage 中，下次打开时依然在——不会发送到任何服务器，也无需注册。这个节拍器还是一个可安装的应用，会缓存所需文件以便离线使用，加载过一次之后，即使没有网络也能继续工作。清除浏览器数据或更换设备只会把它重置回默认的 4/4 拍、120 BPM。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -181,7 +191,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या यह मेट्रोनोम बिल्कुल स्थिर समय बनाए रखता है?",
     "faq.a4": "हाँ। JavaScript टाइमर से सीधे ध्वनि बजाने के बजाय — जो ब्राउज़र पर लोड होने पर देरी से बहक (drift) सकता है — यह मेट्रोनोम Web Audio API की अपनी घड़ी और एक लुकअहेड शेड्यूलर इस्तेमाल करता है, जो हर बीट को बजने से लगभग 100 मिलीसेकंड पहले ही कतार में डाल देता है। इससे पेज के व्यस्त होकर विज़ुअल बीट इंडिकेटर अपडेट करने के दौरान भी समय सटीक बना रहता है। किसी दूसरे टैब पर जाने पर प्लेबैक चुपचाप बहकने के बजाय अपने आप रुक जाता है।",
     "faq.q5": "क्या मेरा टेम्पो कहीं सेव होता है, और क्या यह ऑफ़लाइन काम करता है?",
-    "faq.a5": "आपका BPM और टाइम सिग्नेचर सिर्फ़ आपके ब्राउज़र के localStorage में सेव होते हैं, इसलिए अगली बार आने पर वहीं मिलेंगे — कुछ भी सर्वर पर नहीं भेजा जाता और कोई साइन-अप नहीं चाहिए। यह मेट्रोनोम एक इंस्टॉल किया जा सकने वाला ऐप भी है जो ऑफ़लाइन इस्तेमाल के लिए अपनी फ़ाइलें कैश कर लेता है, इसलिए एक बार लोड होने के बाद यह बिना इंटरनेट के भी काम करता रहता है। ब्राउज़र डेटा साफ़ करने या डिवाइस बदलने पर यह बस डिफ़ॉल्ट 4/4 में 120 BPM पर रीसेट हो जाता है।"
+    "faq.a5": "आपका BPM और टाइम सिग्नेचर सिर्फ़ आपके ब्राउज़र के localStorage में सेव होते हैं, इसलिए अगली बार आने पर वहीं मिलेंगे — कुछ भी सर्वर पर नहीं भेजा जाता और कोई साइन-अप नहीं चाहिए। यह मेट्रोनोम एक इंस्टॉल किया जा सकने वाला ऐप भी है जो ऑफ़लाइन इस्तेमाल के लिए अपनी फ़ाइलें कैश कर लेता है, इसलिए एक बार लोड होने के बाद यह बिना इंटरनेट के भी काम करता रहता है। ब्राउज़र डेटा साफ़ करने या डिवाइस बदलने पर यह बस डिफ़ॉल्ट 4/4 में 120 BPM पर रीसेट हो जाता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -235,7 +250,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Este metrónomo mantiene el tiempo perfectamente estable?",
     "faq.a4": "Sí. En lugar de reproducir un sonido directamente desde un temporizador de JavaScript, que se desvía porque el navegador puede retrasar los ciclos bajo carga, este metrónomo usa el reloj propio de la Web Audio API con un planificador anticipado que encola cada pulso unos 100 milisegundos antes de que deba sonar. Eso mantiene el tiempo preciso incluso mientras la página está ocupada actualizando el indicador visual de pulso. Si cambias a otra pestaña, la reproducción se detiene automáticamente en lugar de desviarse en silencio en segundo plano.",
     "faq.q5": "¿Se guarda mi tempo en algún sitio, y funciona sin conexión?",
-    "faq.a5": "Tu BPM y compás se guardan solo en el localStorage de tu navegador, así que estarán ahí la próxima vez que entres: nada se envía a un servidor y no hace falta registrarse. El metrónomo también es una app instalable que guarda en caché sus archivos para usarse sin conexión, así que una vez cargado sigue funcionando sin internet. Borrar los datos del navegador o cambiar de dispositivo simplemente lo restablece a los 120 BPM en 4/4 por defecto."
+    "faq.a5": "Tu BPM y compás se guardan solo en el localStorage de tu navegador, así que estarán ahí la próxima vez que entres: nada se envía a un servidor y no hace falta registrarse. El metrónomo también es una app instalable que guarda en caché sus archivos para usarse sin conexión, así que una vez cargado sigue funcionando sin internet. Borrar los datos del navegador o cambiar de dispositivo simplemente lo restablece a los 120 BPM en 4/4 por defecto.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -289,7 +309,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يحافظ هذا المترونوم على توقيت ثابت تمامًا؟",
     "faq.a4": "نعم. بدلاً من إصدار الصوت مباشرةً من مؤقّت جافاسكريبت — الذي قد ينحرف لأن المتصفح قد يؤخر الدورات تحت الضغط — يستخدم هذا المترونوم ساعة واجهة Web Audio نفسها مع مجدوِل استباقي يضع كل نبضة في الطابور قبل نحو 100 مللي ثانية من موعد تشغيلها. هذا يبقي التوقيت دقيقًا حتى عندما تكون الصفحة مشغولة بتحديث مؤشر النبضات المرئي. وإذا انتقلت إلى تبويب آخر، يتوقف التشغيل تلقائيًا بدلاً من الانحراف بصمت في الخلفية.",
     "faq.q5": "هل تُحفظ سرعتي في أي مكان، وهل يعمل بلا اتصال بالإنترنت؟",
-    "faq.a5": "تُحفظ سرعتك (BPM) وميزانك الإيقاعي فقط في التخزين المحلي (localStorage) لمتصفحك، لذا ستجدهما في زيارتك التالية — لا يُرسل شيء إلى أي خادم، ولا حاجة للتسجيل. هذا المترونوم أيضًا تطبيق قابل للتثبيت يخزّن ملفاته مؤقتًا للاستخدام دون اتصال، فبمجرد تحميله مرة واحدة يستمر بالعمل من دون إنترنت. حذف بيانات المتصفح أو تبديل الجهاز يعيده ببساطة إلى الإعداد الافتراضي 120 BPM على ميزان 4/4."
+    "faq.a5": "تُحفظ سرعتك (BPM) وميزانك الإيقاعي فقط في التخزين المحلي (localStorage) لمتصفحك، لذا ستجدهما في زيارتك التالية — لا يُرسل شيء إلى أي خادم، ولا حاجة للتسجيل. هذا المترونوم أيضًا تطبيق قابل للتثبيت يخزّن ملفاته مؤقتًا للاستخدام دون اتصال، فبمجرد تحميله مرة واحدة يستمر بالعمل من دون إنترنت. حذف بيانات المتصفح أو تبديل الجهاز يعيده ببساطة إلى الإعداد الافتراضي 120 BPM على ميزان 4/4.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -343,7 +368,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Ce métronome garde-t-il un tempo parfaitement stable ?",
     "faq.a4": "Oui. Plutôt que de déclencher un son directement depuis un minuteur JavaScript, qui dérive parce que le navigateur peut retarder les cycles sous charge, ce métronome utilise l'horloge propre de l'API Web Audio avec un planificateur anticipé qui place chaque temps dans la file environ 100 millisecondes avant qu'il ne doive sonner. Le tempo reste ainsi précis même quand la page est occupée à mettre à jour l'indicateur visuel de pulsation. Si vous passez à un autre onglet, la lecture s'arrête automatiquement au lieu de dériver silencieusement en arrière-plan.",
     "faq.q5": "Mon tempo est-il sauvegardé quelque part, et fonctionne-t-il hors ligne ?",
-    "faq.a5": "Votre BPM et votre signature rythmique sont enregistrés uniquement dans le localStorage de votre navigateur, ils seront donc là lors de votre prochaine visite — rien n'est envoyé à un serveur et aucune inscription n'est nécessaire. Le métronome est aussi une application installable qui met ses fichiers en cache pour une utilisation hors ligne : une fois chargé, il continue de fonctionner sans connexion internet. Effacer les données du navigateur ou changer d'appareil le remet simplement à sa valeur par défaut de 120 BPM en 4/4."
+    "faq.a5": "Votre BPM et votre signature rythmique sont enregistrés uniquement dans le localStorage de votre navigateur, ils seront donc là lors de votre prochaine visite — rien n'est envoyé à un serveur et aucune inscription n'est nécessaire. Le métronome est aussi une application installable qui met ses fichiers en cache pour une utilisation hors ligne : une fois chargé, il continue de fonctionner sans connexion internet. Effacer les données du navigateur ou changer d'appareil le remet simplement à sa valeur par défaut de 120 BPM en 4/4.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -397,7 +427,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এই মেট্রোনোম কি একদম স্থির সময় বজায় রাখে?",
     "faq.a4": "হ্যাঁ। জাভাস্ক্রিপ্ট টাইমার থেকে সরাসরি শব্দ চালানোর বদলে — যা ব্রাউজার ব্যস্ত থাকলে বিলম্বিত হয়ে বিচ্যুত (drift) হতে পারে — এই মেট্রোনোম Web Audio API-এর নিজস্ব ঘড়ি এবং একটি লুকঅ্যাহেড শিডিউলার ব্যবহার করে, যা প্রতিটি বিট বাজার প্রায় ১০০ মিলিসেকেন্ড আগেই সারিতে যোগ করে দেয়। এতে পেজ ভিজ্যুয়াল বিট ইন্ডিকেটর আপডেটে ব্যস্ত থাকলেও সময় নিখুঁত থাকে। অন্য ট্যাবে গেলে প্লেব্যাক নিঃশব্দে বিচ্যুত হওয়ার বদলে নিজে থেকেই থেমে যায়।",
     "faq.q5": "আমার টেম্পো কোথাও সংরক্ষিত হয় কি, আর এটি কি অফলাইনে কাজ করে?",
-    "faq.a5": "আপনার BPM ও টাইম সিগনেচার শুধু আপনার ব্রাউজারের localStorage-এ সংরক্ষিত হয়, তাই পরের বার এলেও তা থাকবে — কিছুই সার্ভারে পাঠানো হয় না এবং সাইন-আপেরও দরকার নেই। এই মেট্রোনোম একটি ইনস্টলযোগ্য অ্যাপও বটে, যা অফলাইন ব্যবহারের জন্য নিজের ফাইল ক্যাশ করে রাখে, ফলে একবার লোড হওয়ার পর ইন্টারনেট ছাড়াও এটি কাজ করতে থাকে। ব্রাউজার ডেটা মুছে ফেললে বা ডিভাইস বদলালে এটি শুধু ডিফল্ট ৪/৪-এ ১২০ BPM-এ রিসেট হয়ে যায়।"
+    "faq.a5": "আপনার BPM ও টাইম সিগনেচার শুধু আপনার ব্রাউজারের localStorage-এ সংরক্ষিত হয়, তাই পরের বার এলেও তা থাকবে — কিছুই সার্ভারে পাঠানো হয় না এবং সাইন-আপেরও দরকার নেই। এই মেট্রোনোম একটি ইনস্টলযোগ্য অ্যাপও বটে, যা অফলাইন ব্যবহারের জন্য নিজের ফাইল ক্যাশ করে রাখে, ফলে একবার লোড হওয়ার পর ইন্টারনেট ছাড়াও এটি কাজ করতে থাকে। ব্রাউজার ডেটা মুছে ফেললে বা ডিভাইস বদলালে এটি শুধু ডিফল্ট ৪/৪-এ ১২০ BPM-এ রিসেট হয়ে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -451,7 +486,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Este metrônomo mantém um tempo perfeitamente estável?",
     "faq.a4": "Sim. Em vez de disparar um som diretamente de um temporizador JavaScript, que sofre desvio porque o navegador pode atrasar os ciclos sob carga, este metrônomo usa o relógio próprio da Web Audio API com um agendador antecipado que enfileira cada batida cerca de 100 milissegundos antes de precisar tocar. Isso mantém o tempo preciso mesmo enquanto a página está ocupada atualizando o indicador visual de batida. Se você mudar para outra aba, a reprodução para automaticamente em vez de desviar silenciosamente em segundo plano.",
     "faq.q5": "Meu andamento é salvo em algum lugar, e ele funciona offline?",
-    "faq.a5": "Seu BPM e fórmula de compasso são salvos apenas no localStorage do seu navegador, então estarão lá na próxima visita — nada é enviado a um servidor e não é preciso cadastro. O metrônomo também é um aplicativo instalável que armazena seus arquivos em cache para uso offline, então depois de carregado uma vez, ele continua funcionando sem internet. Limpar os dados do navegador ou trocar de dispositivo simplesmente o redefine para o padrão de 120 BPM em 4/4."
+    "faq.a5": "Seu BPM e fórmula de compasso são salvos apenas no localStorage do seu navegador, então estarão lá na próxima visita — nada é enviado a um servidor e não é preciso cadastro. O metrônomo também é um aplicativo instalável que armazena seus arquivos em cache para uso offline, então depois de carregado uma vez, ele continua funcionando sem internet. Limpar os dados do navegador ou trocar de dispositivo simplesmente o redefine para o padrão de 120 BPM em 4/4.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -505,7 +545,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Держит ли этот метроном идеально стабильный ритм?",
     "faq.a4": "Да. Вместо того чтобы запускать звук напрямую из таймера JavaScript, который может «плыть» из-за задержек браузера под нагрузкой, этот метроном использует собственные часы Web Audio API с планировщиком с упреждением: каждая доля ставится в очередь примерно за 100 миллисекунд до момента звучания. Это сохраняет точность даже пока страница занята обновлением визуального индикатора долей. При переключении на другую вкладку воспроизведение останавливается автоматически, а не «плывёт» молча в фоне.",
     "faq.q5": "Сохраняется ли где-то мой темп, и работает ли это офлайн?",
-    "faq.a5": "Ваш BPM и размер такта сохраняются только в localStorage вашего браузера, поэтому будут на месте при следующем визите — ничего не отправляется на сервер, регистрация не нужна. Метроном также является устанавливаемым приложением, кэширующим свои файлы для офлайн-использования, так что после однократной загрузки он продолжает работать без интернета. Очистка данных браузера или смена устройства просто сбросит его к значению по умолчанию — 120 BPM в размере 4/4."
+    "faq.a5": "Ваш BPM и размер такта сохраняются только в localStorage вашего браузера, поэтому будут на месте при следующем визите — ничего не отправляется на сервер, регистрация не нужна. Метроном также является устанавливаемым приложением, кэширующим свои файлы для офлайн-использования, так что после однократной загрузки он продолжает работать без интернета. Очистка данных браузера или смена устройства просто сбросит его к значению по умолчанию — 120 BPM в размере 4/4.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -559,7 +604,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ میٹرونوم بالکل مستحکم وقت برقرار رکھتا ہے؟",
     "faq.a4": "جی ہاں۔ جاوا اسکرپٹ ٹائمر سے براہ راست آواز چلانے کی بجائے — جو براؤزر پر بوجھ ہونے پر تاخیر سے بہک (drift) سکتا ہے — یہ میٹرونوم Web Audio API کی اپنی گھڑی اور ایک لُک اہیڈ شیڈیولر استعمال کرتا ہے، جو ہر دھڑکن کو بجنے سے تقریباً 100 ملی سیکنڈ پہلے ہی قطار میں ڈال دیتا ہے۔ اس سے پیج کے بصری دھڑکن اشارے کو اپ ڈیٹ کرنے میں مصروف ہونے کے دوران بھی وقت درست رہتا ہے۔ دوسرے ٹیب پر جانے پر پلے بیک خاموشی سے بہکنے کی بجائے خود بخود رک جاتا ہے۔",
     "faq.q5": "کیا میرا ٹیمپو کہیں محفوظ ہوتا ہے، اور کیا یہ آف لائن کام کرتا ہے؟",
-    "faq.a5": "آپ کا BPM اور ٹائم سگنیچر صرف آپ کے براؤزر کے localStorage میں محفوظ ہوتے ہیں، اس لیے اگلی بار آنے پر وہیں ملیں گے — کچھ بھی سرور پر نہیں بھیجا جاتا اور سائن اپ کی ضرورت نہیں۔ یہ میٹرونوم ایک انسٹال کیا جا سکنے والا ایپ بھی ہے جو آف لائن استعمال کے لیے اپنی فائلیں کیش کر لیتا ہے، اس لیے ایک بار لوڈ ہونے کے بعد یہ بغیر انٹرنیٹ کے بھی کام کرتا رہتا ہے۔ براؤزر ڈیٹا صاف کرنا یا ڈیوائس بدلنا اسے محض ڈیفالٹ 4/4 میں 120 BPM پر ری سیٹ کر دیتا ہے۔"
+    "faq.a5": "آپ کا BPM اور ٹائم سگنیچر صرف آپ کے براؤزر کے localStorage میں محفوظ ہوتے ہیں، اس لیے اگلی بار آنے پر وہیں ملیں گے — کچھ بھی سرور پر نہیں بھیجا جاتا اور سائن اپ کی ضرورت نہیں۔ یہ میٹرونوم ایک انسٹال کیا جا سکنے والا ایپ بھی ہے جو آف لائن استعمال کے لیے اپنی فائلیں کیش کر لیتا ہے، اس لیے ایک بار لوڈ ہونے کے بعد یہ بغیر انٹرنیٹ کے بھی کام کرتا رہتا ہے۔ براؤزر ڈیٹا صاف کرنا یا ڈیوائس بدلنا اسے محض ڈیفالٹ 4/4 میں 120 BPM پر ری سیٹ کر دیتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -613,7 +663,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah metronom ini menjaga waktu dengan benar-benar stabil?",
     "faq.a4": "Ya. Alih-alih membunyikan suara langsung dari timer JavaScript, yang bisa melenceng karena peramban dapat menunda proses saat sibuk, metronom ini memakai jam bawaan Web Audio API dengan penjadwal antisipatif yang mengantre setiap ketukan sekitar 100 milidetik sebelum harus berbunyi. Ini menjaga waktu tetap akurat bahkan saat halaman sibuk memperbarui indikator ketukan visual. Jika Anda beralih ke tab lain, pemutaran berhenti secara otomatis alih-alih melenceng diam-diam di latar belakang.",
     "faq.q5": "Apakah tempo saya tersimpan di suatu tempat, dan apakah bisa dipakai offline?",
-    "faq.a5": "BPM dan birama Anda hanya disimpan di localStorage peramban, jadi masih ada saat Anda kembali — tidak ada yang dikirim ke server dan tidak perlu mendaftar. Metronom ini juga aplikasi yang bisa dipasang dan menyimpan cache filenya untuk pemakaian offline, jadi setelah dimuat sekali, ia tetap berfungsi tanpa koneksi internet. Menghapus data peramban atau berganti perangkat hanya akan mengembalikannya ke default 120 BPM pada birama 4/4."
+    "faq.a5": "BPM dan birama Anda hanya disimpan di localStorage peramban, jadi masih ada saat Anda kembali — tidak ada yang dikirim ke server dan tidak perlu mendaftar. Metronom ini juga aplikasi yang bisa dipasang dan menyimpan cache filenya untuk pemakaian offline, jadi setelah dimuat sekali, ia tetap berfungsi tanpa koneksi internet. Menghapus data peramban atau berganti perangkat hanya akan mengembalikannya ke default 120 BPM pada birama 4/4.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -667,7 +722,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Hält dieses Metronom ein perfekt stabiles Tempo?",
     "faq.a4": "Ja. Statt einen Ton direkt über einen JavaScript-Timer auszulösen, der unter Last driften kann, weil der Browser Ticks verzögern kann, nutzt dieses Metronom die eigene Uhr der Web Audio API mit einem vorausschauenden Scheduler, der jeden Schlag rund 100 Millisekunden im Voraus einplant. So bleibt das Timing präzise, selbst wenn die Seite mit der Aktualisierung der visuellen Taktanzeige beschäftigt ist. Wechseln Sie zu einem anderen Tab, stoppt die Wiedergabe automatisch, statt still im Hintergrund zu driften.",
     "faq.q5": "Wird mein Tempo irgendwo gespeichert, und funktioniert es offline?",
-    "faq.a5": "Ihr BPM und Ihre Taktart werden nur im localStorage Ihres Browsers gespeichert, sodass sie beim nächsten Besuch noch da sind — nichts wird an einen Server gesendet, und es ist keine Anmeldung nötig. Das Metronom ist außerdem eine installierbare App, die ihre Dateien für die Offline-Nutzung zwischenspeichert, sodass es nach dem ersten Laden auch ohne Internetverbindung weiterläuft. Browserdaten löschen oder das Gerät wechseln setzt es einfach auf den Standard von 120 BPM im 4/4-Takt zurück."
+    "faq.a5": "Ihr BPM und Ihre Taktart werden nur im localStorage Ihres Browsers gespeichert, sodass sie beim nächsten Besuch noch da sind — nichts wird an einen Server gesendet, und es ist keine Anmeldung nötig. Das Metronom ist außerdem eine installierbare App, die ihre Dateien für die Offline-Nutzung zwischenspeichert, sodass es nach dem ersten Laden auch ohne Internetverbindung weiterläuft. Browserdaten löschen oder das Gerät wechseln setzt es einfach auf den Standard von 120 BPM im 4/4-Takt zurück.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -721,7 +781,12 @@ window.I18N_LOCALES = {
     "faq.q4": "このメトロノームは完全に安定したテンポを保てますか？",
     "faq.a4": "はい。ブラウザが負荷で遅延しがちなJavaScriptタイマーから直接音を鳴らすのではなく、このメトロノームはWeb Audio API自体のクロックと先読みスケジューラーを使い、各拍を鳴らす約100ミリ秒前にあらかじめキューへ登録します。そのため、ページがビジュアルの拍インジケーター更新で忙しくてもタイミングは正確なままです。別のタブに切り替えると、バックグラウンドで静かにずれていく代わりに再生は自動的に停止します。",
     "faq.q5": "テンポはどこかに保存されますか？オフラインでも使えますか？",
-    "faq.a5": "BPMと拍子はブラウザのlocalStorageにのみ保存され、次回訪問時にも残っています — サーバーへの送信は一切なく、登録も不要です。このメトロノームはインストール可能なアプリでもあり、オフライン利用のためにファイルをキャッシュするので、一度読み込めばインターネットなしでも動作し続けます。ブラウザデータを消去したり別の端末に切り替えたりすると、単にデフォルトの4/4拍子・120 BPMにリセットされます。"
+    "faq.a5": "BPMと拍子はブラウザのlocalStorageにのみ保存され、次回訪問時にも残っています — サーバーへの送信は一切なく、登録も不要です。このメトロノームはインストール可能なアプリでもあり、オフライン利用のためにファイルをキャッシュするので、一度読み込めばインターネットなしでも動作し続けます。ブラウザデータを消去したり別の端末に切り替えたりすると、単にデフォルトの4/4拍子・120 BPMにリセットされます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -775,6 +840,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 메트로놈은 정말 정확한 박자를 유지하나요?",
     "faq.a4": "네. 브라우저가 부하 상태에서 지연될 수 있어 어긋나기 쉬운 자바스크립트 타이머로 직접 소리를 내는 대신, 이 메트로놈은 Web Audio API 자체의 정밀한 시계와 룩어헤드 스케줄러를 사용해 각 박자를 재생 약 100밀리초 전에 미리 대기열에 넣습니다. 그래서 화면의 박자 표시등을 갱신하느라 페이지가 바빠도 타이밍은 정확하게 유지됩니다. 다른 탭으로 전환하면 백그라운드에서 조용히 어긋나는 대신 재생이 자동으로 멈춥니다.",
     "faq.q5": "제 템포는 어딘가에 저장되나요? 오프라인에서도 되나요?",
-    "faq.a5": "BPM과 박자표는 브라우저의 localStorage에만 저장되어 다음에 다시 방문해도 그대로 남아 있습니다 — 서버로 전송되는 것은 없고 가입도 필요 없습니다. 이 메트로놈은 설치 가능한 앱이기도 해서 오프라인 사용을 위해 파일을 캐시해 두므로, 한 번 불러온 뒤에는 인터넷 없이도 계속 작동합니다. 브라우저 데이터를 지우거나 다른 기기로 바꾸면 그저 기본값인 4/4박자·120 BPM으로 초기화될 뿐입니다."
+    "faq.a5": "BPM과 박자표는 브라우저의 localStorage에만 저장되어 다음에 다시 방문해도 그대로 남아 있습니다 — 서버로 전송되는 것은 없고 가입도 필요 없습니다. 이 메트로놈은 설치 가능한 앱이기도 해서 오프라인 사용을 위해 파일을 캐시해 두므로, 한 번 불러온 뒤에는 인터넷 없이도 계속 작동합니다. 브라우저 데이터를 지우거나 다른 기기로 바꾸면 그저 기본값인 4/4박자·120 BPM으로 초기화될 뿐입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

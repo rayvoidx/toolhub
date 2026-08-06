@@ -169,7 +169,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: why \"will be truncated\" instead of \"over the limit\"?",
     "faq.a4": "Because Meta will accept the ad either way. Primary text is recommended at 125 characters but accepts up to 500; a headline is recommended at 40 but accepts up to 255. Past the recommendation your copy is not rejected, it is cut off with an ellipsis on most placements. Flagging that in red like a hard limit would be a false alarm, so it is shown in orange as a truncation warning — and only a genuine hard limit is shown as an error.",
     "faq.q5": "How are spaces, emoji and keyword insertion counted?",
-    "faq.a5": "Spaces and punctuation are counted, because the platforms count them. Emoji are counted as one grapheme each — including multi-codepoint ones — but Google Ads does not allow emoji in search ads at all, so they are flagged. Keyword insertion like {KeyWord:Running Shoes} is measured on the default text you supplied, since that is what shows when the keyword does not fit; the cell is badged so you know. If a placeholder has no default, the length genuinely varies at serving time and the tool says so rather than guessing. And none of this leaves your browser: the counting runs locally, your ad copy is never uploaded and never saved."
+    "faq.a5": "Spaces and punctuation are counted, because the platforms count them. Emoji are counted as one grapheme each — including multi-codepoint ones — but Google Ads does not allow emoji in search ads at all, so they are flagged. Keyword insertion like {KeyWord:Running Shoes} is measured on the default text you supplied, since that is what shows when the keyword does not fit; the cell is badged so you know. If a placeholder has no default, the length genuinely varies at serving time and the tool says so rather than guessing. And none of this leaves your browser: the counting runs locally, your ad copy is never uploaded and never saved.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -315,7 +320,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta 为什么显示“将被截断”而不是“超出上限”？",
     "faq.a4": "因为无论如何 Meta 都会接受这条广告。正文建议 125 个字符，但最多可接受 500；标题建议 40 个字符，但最多可接受 255。超过建议值时，你的文案不会被拒绝，而是在大多数广告位上以省略号截断。把它像硬上限那样标红是误报，所以这里用橙色显示为截断提示——只有真正的硬上限才会显示为错误。",
     "faq.q5": "空格、表情符号和关键字插入是怎么计算的？",
-    "faq.a5": "空格和标点都计入，因为平台就是这么算的。表情符号按每个字素计算一个——包括由多个码位组成的——但 Google Ads 的搜索广告完全不允许使用表情符号，因此会被标出。像 {KeyWord:跑鞋} 这样的关键字插入，按你填写的默认文字计算，因为关键词放不下时展示的正是这段文字；对应单元格会加上标记提示你。如果占位符没有默认文字，实际展示长度确实会变化，本工具会如实说明而不是靠猜。而且这一切都不会离开你的浏览器：统计在本地运行，你的广告文案不会上传，也不会被保存。"
+    "faq.a5": "空格和标点都计入，因为平台就是这么算的。表情符号按每个字素计算一个——包括由多个码位组成的——但 Google Ads 的搜索广告完全不允许使用表情符号，因此会被标出。像 {KeyWord:跑鞋} 这样的关键字插入，按你填写的默认文字计算，因为关键词放不下时展示的正是这段文字；对应单元格会加上标记提示你。如果占位符没有默认文字，实际展示长度确实会变化，本工具会如实说明而不是靠猜。而且这一切都不会离开你的浏览器：统计在本地运行，你的广告文案不会上传，也不会被保存。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -461,7 +471,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: “सीमा से ज़्यादा” की जगह “काट दिया जाएगा” क्यों?",
     "faq.a4": "क्योंकि Meta दोनों ही हालात में विज्ञापन स्वीकार कर लेगा। मुख्य टेक्स्ट के लिए 125 अक्षर सुझाए जाते हैं पर 500 तक स्वीकार होते हैं; शीर्षक के लिए 40 सुझाए जाते हैं पर 255 तक स्वीकार होते हैं। सुझाव से आगे आपकी कॉपी अस्वीकार नहीं होती, बल्कि ज़्यादातर प्लेसमेंट पर तीन बिंदुओं के साथ काट दी जाती है। उसे सख़्त सीमा की तरह लाल दिखाना ग़लत अलार्म होगा, इसलिए उसे नारंगी रंग में कटने की चेतावनी के रूप में दिखाया जाता है — और सिर्फ़ असली सख़्त सीमा ही त्रुटि के रूप में दिखती है।",
     "faq.q5": "स्पेस, इमोजी और कीवर्ड इंसर्शन कैसे गिने जाते हैं?",
-    "faq.a5": "स्पेस और विराम चिह्न गिने जाते हैं, क्योंकि प्लेटफ़ॉर्म उन्हें गिनते हैं। हर इमोजी एक ग्राफ़ीम के रूप में गिना जाता है — कई कोडपॉइंट वाले भी — पर Google Ads सर्च विज्ञापनों में इमोजी की अनुमति ही नहीं देता, इसलिए उन्हें चिह्नित किया जाता है। {KeyWord:रनिंग शूज़} जैसा कीवर्ड इंसर्शन आपके दिए डिफ़ॉल्ट टेक्स्ट पर मापा जाता है, क्योंकि कीवर्ड फ़िट न होने पर वही दिखता है; सेल पर बैज लगा दिया जाता है ताकि आपको पता रहे। अगर प्लेसहोल्डर का डिफ़ॉल्ट नहीं है, तो लंबाई सचमुच सर्विंग के वक़्त बदलती है और टूल अनुमान लगाने के बजाय यही बता देता है। और इसमें से कुछ भी आपके ब्राउज़र से बाहर नहीं जाता: गिनती लोकल चलती है, आपकी विज्ञापन कॉपी न अपलोड होती है न कभी सेव होती है।"
+    "faq.a5": "स्पेस और विराम चिह्न गिने जाते हैं, क्योंकि प्लेटफ़ॉर्म उन्हें गिनते हैं। हर इमोजी एक ग्राफ़ीम के रूप में गिना जाता है — कई कोडपॉइंट वाले भी — पर Google Ads सर्च विज्ञापनों में इमोजी की अनुमति ही नहीं देता, इसलिए उन्हें चिह्नित किया जाता है। {KeyWord:रनिंग शूज़} जैसा कीवर्ड इंसर्शन आपके दिए डिफ़ॉल्ट टेक्स्ट पर मापा जाता है, क्योंकि कीवर्ड फ़िट न होने पर वही दिखता है; सेल पर बैज लगा दिया जाता है ताकि आपको पता रहे। अगर प्लेसहोल्डर का डिफ़ॉल्ट नहीं है, तो लंबाई सचमुच सर्विंग के वक़्त बदलती है और टूल अनुमान लगाने के बजाय यही बता देता है। और इसमें से कुछ भी आपके ब्राउज़र से बाहर नहीं जाता: गिनती लोकल चलती है, आपकी विज्ञापन कॉपी न अपलोड होती है न कभी सेव होती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -607,7 +622,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: ¿por qué «se cortará» en vez de «supera el límite»?",
     "faq.a4": "Porque Meta acepta el anuncio en cualquier caso. Para el texto principal se recomiendan 125 caracteres, pero admite hasta 500; para el título se recomiendan 40, pero admite hasta 255. Pasada la recomendación, tu texto no se rechaza: se corta con puntos suspensivos en la mayoría de las ubicaciones. Marcarlo en rojo como un límite estricto sería una falsa alarma, así que se muestra en naranja como aviso de recorte, y solo un límite estricto real se muestra como error.",
     "faq.q5": "¿Cómo se cuentan los espacios, los emojis y la inserción de palabra clave?",
-    "faq.a5": "Los espacios y la puntuación se cuentan, porque las plataformas los cuentan. Cada emoji cuenta como un grafema —incluidos los formados por varios puntos de código—, pero Google Ads no admite emojis en los anuncios de búsqueda, así que se marcan. La inserción de palabra clave como {KeyWord:Zapatillas} se mide sobre el texto predeterminado que indicaste, ya que es lo que se muestra cuando la palabra clave no cabe; la celda lleva una etiqueta para que lo sepas. Si un marcador no tiene texto predeterminado, la longitud varía de verdad al publicarse y la herramienta lo dice en lugar de adivinar. Y nada de esto sale de tu navegador: el recuento se hace en local y el texto de tu anuncio nunca se sube ni se guarda."
+    "faq.a5": "Los espacios y la puntuación se cuentan, porque las plataformas los cuentan. Cada emoji cuenta como un grafema —incluidos los formados por varios puntos de código—, pero Google Ads no admite emojis en los anuncios de búsqueda, así que se marcan. La inserción de palabra clave como {KeyWord:Zapatillas} se mide sobre el texto predeterminado que indicaste, ya que es lo que se muestra cuando la palabra clave no cabe; la celda lleva una etiqueta para que lo sepas. Si un marcador no tiene texto predeterminado, la longitud varía de verdad al publicarse y la herramienta lo dice en lugar de adivinar. Y nada de esto sale de tu navegador: el recuento se hace en local y el texto de tu anuncio nunca se sube ni se guarda.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -753,7 +773,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: لماذا «سيُقتطع» بدلاً من «تجاوز الحد»؟",
     "faq.a4": "لأن Meta ستقبل الإعلان في الحالتين. يُوصى بـ 125 حرفاً للنص الأساسي لكنه يقبل حتى 500؛ ويُوصى بـ 40 حرفاً للعنوان لكنه يقبل حتى 255. بعد الحد الموصى به لا يُرفض نصك، بل يُقتطع بعلامة حذف في معظم مواضع الظهور. ووسمه بالأحمر كأنه حد صارم سيكون إنذاراً كاذباً، لذا يظهر باللون البرتقالي كتحذير اقتطاع — ولا يظهر كخطأ إلا الحد الصارم الحقيقي.",
     "faq.q5": "كيف تُحتسب المسافات والرموز التعبيرية وإدراج الكلمات المفتاحية؟",
-    "faq.a5": "تُحتسب المسافات وعلامات الترقيم، لأن المنصات تحتسبها. ويُحتسب كل رمز تعبيري بوحدة كتابية واحدة — حتى المكوَّن من عدة نقاط ترميز — لكن Google Ads لا يسمح بالرموز التعبيرية في إعلانات البحث إطلاقاً، لذا يجري تعليمها. أما إدراج الكلمة المفتاحية مثل {KeyWord:أحذية رياضية} فيُقاس على النص الافتراضي الذي أدخلته، لأنه ما سيظهر عندما لا تتسع الكلمة المفتاحية؛ وتُوسَم الخلية لتكون على علم بذلك. وإن كان العنصر النائب بلا نص افتراضي، فالطول يتغير فعلاً وقت العرض، وتصرّح الأداة بذلك بدل التخمين. ولا يغادر أيٌّ من هذا متصفحك: يجري العد محلياً، ولا يُرفع نصك الإعلاني ولا يُحفظ أبداً."
+    "faq.a5": "تُحتسب المسافات وعلامات الترقيم، لأن المنصات تحتسبها. ويُحتسب كل رمز تعبيري بوحدة كتابية واحدة — حتى المكوَّن من عدة نقاط ترميز — لكن Google Ads لا يسمح بالرموز التعبيرية في إعلانات البحث إطلاقاً، لذا يجري تعليمها. أما إدراج الكلمة المفتاحية مثل {KeyWord:أحذية رياضية} فيُقاس على النص الافتراضي الذي أدخلته، لأنه ما سيظهر عندما لا تتسع الكلمة المفتاحية؛ وتُوسَم الخلية لتكون على علم بذلك. وإن كان العنصر النائب بلا نص افتراضي، فالطول يتغير فعلاً وقت العرض، وتصرّح الأداة بذلك بدل التخمين. ولا يغادر أيٌّ من هذا متصفحك: يجري العد محلياً، ولا يُرفع نصك الإعلاني ولا يُحفظ أبداً.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -899,7 +924,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta : pourquoi « sera tronqué » plutôt que « dépasse la limite » ?",
     "faq.a4": "Parce que Meta acceptera l'annonce dans les deux cas. Le texte principal est recommandé à 125 caractères mais accepté jusqu'à 500 ; un titre est recommandé à 40 mais accepté jusqu'à 255. Au-delà de la recommandation, votre texte n'est pas refusé : il est coupé par des points de suspension sur la plupart des emplacements. Le signaler en rouge comme une limite stricte serait une fausse alerte : il apparaît donc en orange comme un avertissement de troncature — et seule une vraie limite stricte s'affiche en erreur.",
     "faq.q5": "Comment sont comptés les espaces, les emojis et l'insertion de mot clé ?",
-    "faq.a5": "Les espaces et la ponctuation sont comptés, parce que les plateformes les comptent. Chaque emoji compte pour un graphème — y compris ceux formés de plusieurs points de code — mais Google Ads n'accepte aucun emoji dans les annonces sur le Réseau de Recherche : ils sont donc signalés. L'insertion de mot clé du type {KeyWord:Chaussures} est mesurée sur le texte par défaut que vous avez fourni, puisque c'est lui qui s'affiche quand le mot clé ne tient pas ; la cellule porte un badge pour que vous le sachiez. Si un paramètre n'a pas de valeur par défaut, la longueur varie réellement au moment de la diffusion et l'outil le dit plutôt que de deviner. Et rien de tout cela ne quitte votre navigateur : le comptage est local, le texte de votre annonce n'est jamais envoyé ni enregistré."
+    "faq.a5": "Les espaces et la ponctuation sont comptés, parce que les plateformes les comptent. Chaque emoji compte pour un graphème — y compris ceux formés de plusieurs points de code — mais Google Ads n'accepte aucun emoji dans les annonces sur le Réseau de Recherche : ils sont donc signalés. L'insertion de mot clé du type {KeyWord:Chaussures} est mesurée sur le texte par défaut que vous avez fourni, puisque c'est lui qui s'affiche quand le mot clé ne tient pas ; la cellule porte un badge pour que vous le sachiez. Si un paramètre n'a pas de valeur par défaut, la longueur varie réellement au moment de la diffusion et l'outil le dit plutôt que de deviner. Et rien de tout cela ne quitte votre navigateur : le comptage est local, le texte de votre annonce n'est jamais envoyé ni enregistré.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -1045,7 +1075,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: “সীমা ছাড়িয়েছে”-র বদলে “কেটে যাবে” কেন?",
     "faq.a4": "কারণ Meta দুই ক্ষেত্রেই বিজ্ঞাপনটি গ্রহণ করবে। মূল টেক্সটের জন্য ১২৫ অক্ষর প্রস্তাবিত, তবে ৫০০ পর্যন্ত গ্রহণ করা হয়; শিরোনামের জন্য ৪০ প্রস্তাবিত, তবে ২৫৫ পর্যন্ত চলে। প্রস্তাবিত সীমার পরে আপনার কপি বাতিল হয় না, বরং বেশিরভাগ প্লেসমেন্টে ইলিপসিস দিয়ে কেটে দেওয়া হয়। সেটিকে কঠিন সীমার মতো লাল দেখানো হবে ভুল সতর্কতা, তাই এটি কমলা রঙে কেটে যাওয়ার সতর্কতা হিসেবে দেখানো হয় — আর শুধু সত্যিকারের কঠিন সীমাই ত্রুটি হিসেবে দেখানো হয়।",
     "faq.q5": "স্পেস, ইমোজি ও কীওয়ার্ড ইনসার্শন কীভাবে গণনা হয়?",
-    "faq.a5": "স্পেস ও যতিচিহ্ন গণনা হয়, কারণ প্ল্যাটফর্মগুলো সেগুলো গণনা করে। প্রতিটি ইমোজি একটি গ্রাফিম হিসেবে গণনা হয় — একাধিক কোডপয়েন্টের হলেও — তবে Google Ads সার্চ বিজ্ঞাপনে ইমোজি একেবারেই অনুমোদন করে না, তাই সেগুলো চিহ্নিত করা হয়। {KeyWord:রানিং শু}-এর মতো কীওয়ার্ড ইনসার্শন আপনার দেওয়া ডিফল্ট লেখার ভিত্তিতে মাপা হয়, কারণ কীওয়ার্ড না আঁটলে সেটিই দেখানো হয়; ঘরটিতে ব্যাজ দেওয়া হয় যাতে আপনি জানেন। প্লেসহোল্ডারের ডিফল্ট না থাকলে প্রদর্শনের সময় দৈর্ঘ্য সত্যিই বদলায়, আর টুল অনুমান না করে সেটিই জানিয়ে দেয়। এর কিছুই আপনার ব্রাউজার ছাড়ে না: গণনা স্থানীয়ভাবে চলে, আপনার বিজ্ঞাপন কপি কখনও আপলোড বা সংরক্ষণ হয় না।"
+    "faq.a5": "স্পেস ও যতিচিহ্ন গণনা হয়, কারণ প্ল্যাটফর্মগুলো সেগুলো গণনা করে। প্রতিটি ইমোজি একটি গ্রাফিম হিসেবে গণনা হয় — একাধিক কোডপয়েন্টের হলেও — তবে Google Ads সার্চ বিজ্ঞাপনে ইমোজি একেবারেই অনুমোদন করে না, তাই সেগুলো চিহ্নিত করা হয়। {KeyWord:রানিং শু}-এর মতো কীওয়ার্ড ইনসার্শন আপনার দেওয়া ডিফল্ট লেখার ভিত্তিতে মাপা হয়, কারণ কীওয়ার্ড না আঁটলে সেটিই দেখানো হয়; ঘরটিতে ব্যাজ দেওয়া হয় যাতে আপনি জানেন। প্লেসহোল্ডারের ডিফল্ট না থাকলে প্রদর্শনের সময় দৈর্ঘ্য সত্যিই বদলায়, আর টুল অনুমান না করে সেটিই জানিয়ে দেয়। এর কিছুই আপনার ব্রাউজার ছাড়ে না: গণনা স্থানীয়ভাবে চলে, আপনার বিজ্ঞাপন কপি কখনও আপলোড বা সংরক্ষণ হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1191,7 +1226,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: por que “vai ser cortado” em vez de “passou do limite”?",
     "faq.a4": "Porque a Meta aceita o anúncio de qualquer jeito. O texto principal é recomendado em 125 caracteres, mas aceita até 500; o título é recomendado em 40, mas aceita até 255. Passando da recomendação, seu texto não é reprovado: ele é cortado com reticências na maioria dos posicionamentos. Marcar isso em vermelho como se fosse um limite rígido seria alarme falso, então aparece em laranja como aviso de corte — e só um limite rígido de verdade aparece como erro.",
     "faq.q5": "Como espaços, emojis e inserção de palavra-chave são contados?",
-    "faq.a5": "Espaços e pontuação são contados, porque as plataformas contam. Cada emoji conta como um grafema — inclusive os de vários pontos de código — mas o Google Ads não aceita emoji nenhum em anúncios de pesquisa, então eles são sinalizados. A inserção de palavra-chave como {KeyWord:Tênis} é medida pelo texto padrão que você informou, já que é ele que aparece quando a palavra-chave não cabe; a célula ganha um selo para você saber. Se um marcador não tem padrão, o comprimento realmente varia na hora da veiculação e a ferramenta diz isso em vez de chutar. E nada disso sai do seu navegador: a contagem roda localmente, e o texto do seu anúncio nunca é enviado nem salvo."
+    "faq.a5": "Espaços e pontuação são contados, porque as plataformas contam. Cada emoji conta como um grafema — inclusive os de vários pontos de código — mas o Google Ads não aceita emoji nenhum em anúncios de pesquisa, então eles são sinalizados. A inserção de palavra-chave como {KeyWord:Tênis} é medida pelo texto padrão que você informou, já que é ele que aparece quando a palavra-chave não cabe; a célula ganha um selo para você saber. Se um marcador não tem padrão, o comprimento realmente varia na hora da veiculação e a ferramenta diz isso em vez de chutar. E nada disso sai do seu navegador: a contagem roda localmente, e o texto do seu anúncio nunca é enviado nem salvo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1337,7 +1377,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: почему «будет обрезано», а не «превышен лимит»?",
     "faq.a4": "Потому что Meta примет объявление в любом случае. Для основного текста рекомендуется 125 символов, но принимается до 500; для заголовка рекомендуется 40, а принимается до 255. За пределами рекомендации ваш текст не отклоняют — его обрезают многоточием на большинстве плейсментов. Помечать это красным, как жёсткий лимит, было бы ложной тревогой, поэтому показывается оранжевое предупреждение об обрезке — и только настоящий жёсткий лимит отображается как ошибка.",
     "faq.q5": "Как считаются пробелы, эмодзи и подстановка ключевых слов?",
-    "faq.a5": "Пробелы и знаки препинания считаются, потому что их считают сами площадки. Каждое эмодзи считается за один графемный кластер — включая составные из нескольких кодовых точек, — но Google Ads вообще не допускает эмодзи в поисковых объявлениях, поэтому они помечаются. Подстановка вида {KeyWord:Кроссовки} измеряется по указанному вами тексту по умолчанию, ведь именно он показывается, когда ключевое слово не помещается; на ячейку ставится значок, чтобы вы это видели. Если у плейсхолдера нет значения по умолчанию, длина при показе действительно меняется, и инструмент честно об этом говорит, а не гадает. И ничего из этого не покидает ваш браузер: подсчёт идёт локально, ваш рекламный текст никогда не загружается и не сохраняется."
+    "faq.a5": "Пробелы и знаки препинания считаются, потому что их считают сами площадки. Каждое эмодзи считается за один графемный кластер — включая составные из нескольких кодовых точек, — но Google Ads вообще не допускает эмодзи в поисковых объявлениях, поэтому они помечаются. Подстановка вида {KeyWord:Кроссовки} измеряется по указанному вами тексту по умолчанию, ведь именно он показывается, когда ключевое слово не помещается; на ячейку ставится значок, чтобы вы это видели. Если у плейсхолдера нет значения по умолчанию, длина при показе действительно меняется, и инструмент честно об этом говорит, а не гадает. И ничего из этого не покидает ваш браузер: подсчёт идёт локально, ваш рекламный текст никогда не загружается и не сохраняется.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1483,7 +1528,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: “حد سے زیادہ” کے بجائے “کاٹ دیا جائے گا” کیوں؟",
     "faq.a4": "کیونکہ Meta دونوں صورتوں میں اشتہار قبول کر لے گا۔ بنیادی متن کے لیے 125 حروف تجویز کیے جاتے ہیں مگر 500 تک قبول ہوتے ہیں؛ سرخی کے لیے 40 تجویز کیے جاتے ہیں مگر 255 تک چلتے ہیں۔ تجویز سے آگے آپ کا متن مسترد نہیں ہوتا، بلکہ زیادہ تر جگہوں پر نقطوں کے ساتھ کاٹ دیا جاتا ہے۔ اسے سخت حد کی طرح سرخ دکھانا جھوٹا الارم ہوگا، اس لیے اسے نارنجی رنگ میں کٹنے کی تنبیہ کے طور پر دکھایا جاتا ہے — اور صرف اصل سخت حد ہی غلطی کے طور پر دکھائی جاتی ہے۔",
     "faq.q5": "خالی جگہیں، ایموجی اور کی ورڈ انسرشن کیسے گنے جاتے ہیں؟",
-    "faq.a5": "خالی جگہیں اور رموزِ اوقاف گنے جاتے ہیں، کیونکہ پلیٹ فارم انہیں گنتے ہیں۔ ہر ایموجی ایک گرافیم کے طور پر گنا جاتا ہے — چاہے وہ کئی کوڈ پوائنٹس پر مشتمل ہو — مگر Google Ads سرچ اشتہارات میں ایموجی کی اجازت ہی نہیں دیتا، اس لیے انہیں نشان زد کیا جاتا ہے۔ {KeyWord:رننگ شوز} جیسا کی ورڈ انسرشن آپ کے دیے گئے ڈیفالٹ متن پر ماپا جاتا ہے، کیونکہ کی ورڈ نہ سمانے پر وہی دکھایا جاتا ہے؛ خانے پر بیج لگا دیا جاتا ہے تاکہ آپ کو معلوم رہے۔ اگر پلیس ہولڈر کا ڈیفالٹ نہ ہو تو دکھائے جانے کے وقت لمبائی واقعی بدلتی ہے، اور ٹول اندازہ لگانے کے بجائے یہی بتا دیتا ہے۔ اور اس میں سے کچھ بھی آپ کا براؤزر نہیں چھوڑتا: گنتی مقامی طور پر چلتی ہے، آپ کا اشتہاری متن نہ اپ لوڈ ہوتا ہے نہ کبھی محفوظ ہوتا ہے۔"
+    "faq.a5": "خالی جگہیں اور رموزِ اوقاف گنے جاتے ہیں، کیونکہ پلیٹ فارم انہیں گنتے ہیں۔ ہر ایموجی ایک گرافیم کے طور پر گنا جاتا ہے — چاہے وہ کئی کوڈ پوائنٹس پر مشتمل ہو — مگر Google Ads سرچ اشتہارات میں ایموجی کی اجازت ہی نہیں دیتا، اس لیے انہیں نشان زد کیا جاتا ہے۔ {KeyWord:رننگ شوز} جیسا کی ورڈ انسرشن آپ کے دیے گئے ڈیفالٹ متن پر ماپا جاتا ہے، کیونکہ کی ورڈ نہ سمانے پر وہی دکھایا جاتا ہے؛ خانے پر بیج لگا دیا جاتا ہے تاکہ آپ کو معلوم رہے۔ اگر پلیس ہولڈر کا ڈیفالٹ نہ ہو تو دکھائے جانے کے وقت لمبائی واقعی بدلتی ہے، اور ٹول اندازہ لگانے کے بجائے یہی بتا دیتا ہے۔ اور اس میں سے کچھ بھی آپ کا براؤزر نہیں چھوڑتا: گنتی مقامی طور پر چلتی ہے، آپ کا اشتہاری متن نہ اپ لوڈ ہوتا ہے نہ کبھی محفوظ ہوتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1629,7 +1679,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: kenapa “akan terpotong”, bukan “melebihi batas”?",
     "faq.a4": "Karena Meta tetap menerima iklannya. Teks utama disarankan 125 karakter tetapi diterima sampai 500; headline disarankan 40 tetapi diterima sampai 255. Melewati angka saran, teks Anda tidak ditolak, melainkan dipotong dengan elipsis di sebagian besar penempatan. Menandainya merah seperti batas keras justru jadi alarm palsu, jadi ditampilkan oranye sebagai peringatan pemotongan — dan hanya batas keras yang sungguhan ditampilkan sebagai error.",
     "faq.q5": "Bagaimana spasi, emoji, dan penyisipan kata kunci dihitung?",
-    "faq.a5": "Spasi dan tanda baca dihitung, karena platformnya memang menghitungnya. Emoji dihitung satu grafem masing-masing — termasuk yang terdiri dari banyak titik kode — tetapi Google Ads sama sekali tidak mengizinkan emoji di iklan penelusuran, jadi emoji akan ditandai. Penyisipan kata kunci seperti {KeyWord:Sepatu Lari} diukur dari teks default yang Anda isi, karena itulah yang tampil saat kata kuncinya tidak muat; selnya diberi badge supaya Anda tahu. Kalau sebuah placeholder tidak punya default, panjangnya memang berubah-ubah saat tayang dan alat ini mengatakannya apa adanya alih-alih menebak. Dan semua ini tidak pernah keluar dari browser Anda: penghitungan berjalan lokal, teks iklan Anda tidak pernah diunggah dan tidak pernah disimpan."
+    "faq.a5": "Spasi dan tanda baca dihitung, karena platformnya memang menghitungnya. Emoji dihitung satu grafem masing-masing — termasuk yang terdiri dari banyak titik kode — tetapi Google Ads sama sekali tidak mengizinkan emoji di iklan penelusuran, jadi emoji akan ditandai. Penyisipan kata kunci seperti {KeyWord:Sepatu Lari} diukur dari teks default yang Anda isi, karena itulah yang tampil saat kata kuncinya tidak muat; selnya diberi badge supaya Anda tahu. Kalau sebuah placeholder tidak punya default, panjangnya memang berubah-ubah saat tayang dan alat ini mengatakannya apa adanya alih-alih menebak. Dan semua ini tidak pernah keluar dari browser Anda: penghitungan berjalan lokal, teks iklan Anda tidak pernah diunggah dan tidak pernah disimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1775,7 +1830,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta: warum „wird abgeschnitten“ statt „über dem Limit“?",
     "faq.a4": "Weil Meta die Anzeige so oder so akzeptiert. Für den Primärtext werden 125 Zeichen empfohlen, akzeptiert werden bis zu 500; für einen Anzeigentitel werden 40 empfohlen, akzeptiert bis zu 255. Jenseits der Empfehlung wird Ihr Text nicht abgelehnt, sondern auf den meisten Platzierungen mit Auslassungspunkten gekürzt. Das rot wie ein hartes Limit zu markieren wäre ein Fehlalarm, deshalb erscheint es orange als Kürzungshinweis — und nur ein echtes hartes Limit wird als Fehler angezeigt.",
     "faq.q5": "Wie werden Leerzeichen, Emojis und Keyword-Einfügung gezählt?",
-    "faq.a5": "Leerzeichen und Satzzeichen werden gezählt, weil die Plattformen sie zählen. Emojis zählen als je ein Graphem — auch solche aus mehreren Codepoints —, aber Google Ads erlaubt in Suchanzeigen überhaupt keine Emojis, daher werden sie markiert. Eine Keyword-Einfügung wie {KeyWord:Laufschuhe} wird am hinterlegten Standardtext gemessen, denn genau der erscheint, wenn das Keyword nicht passt; die Zelle bekommt dafür ein Badge. Hat ein Platzhalter keinen Standardtext, schwankt die Länge bei der Auslieferung tatsächlich — und das Tool sagt das, statt zu raten. Und nichts davon verlässt Ihren Browser: Die Zählung läuft lokal, Ihr Anzeigentext wird nie hochgeladen und nie gespeichert."
+    "faq.a5": "Leerzeichen und Satzzeichen werden gezählt, weil die Plattformen sie zählen. Emojis zählen als je ein Graphem — auch solche aus mehreren Codepoints —, aber Google Ads erlaubt in Suchanzeigen überhaupt keine Emojis, daher werden sie markiert. Eine Keyword-Einfügung wie {KeyWord:Laufschuhe} wird am hinterlegten Standardtext gemessen, denn genau der erscheint, wenn das Keyword nicht passt; die Zelle bekommt dafür ein Badge. Hat ein Platzhalter keinen Standardtext, schwankt die Länge bei der Auslieferung tatsächlich — und das Tool sagt das, statt zu raten. Und nichts davon verlässt Ihren Browser: Die Zählung läuft lokal, Ihr Anzeigentext wird nie hochgeladen und nie gespeichert.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1921,7 +1981,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meta で「上限オーバー」ではなく「途中で切れます」と出るのはなぜ？",
     "faq.a4": "Meta はどちらの場合でも広告を受け付けるからです。メインテキストの推奨は125文字ですが500文字まで登録でき、見出しの推奨は40文字ですが255文字まで通ります。推奨を超えても否認はされず、多くの配置で末尾が「…」で切られるだけです。これを本当の上限と同じ赤で警告するのは誤報になるため、オレンジの「切れます」警告として表示し、実際のハード上限のときだけエラーとして表示します。",
     "faq.q5": "スペース・絵文字・キーワード挿入はどう数えますか？",
-    "faq.a5": "スペースと記号は数えます。媒体側が数えているからです。絵文字は複数のコードポイントで構成されるものも含め、1つを1文字（1書記素）として数えます。ただし Google 広告の検索広告では絵文字自体が使えないため、警告として表示します。{KeyWord:ランニングシューズ} のようなキーワード挿入は、入力された既定のテキストで計測します。キーワードが収まらないときに実際に表示されるのがそのテキストだからです。該当セルにはその旨のバッジが付きます。既定のテキストがない差し込みは配信時に文字数が本当に変動するため、推測せずにその事実をお伝えします。そしてこれらの処理はすべてブラウザ内で完結します。広告文がアップロードされることも、保存されることもありません。"
+    "faq.a5": "スペースと記号は数えます。媒体側が数えているからです。絵文字は複数のコードポイントで構成されるものも含め、1つを1文字（1書記素）として数えます。ただし Google 広告の検索広告では絵文字自体が使えないため、警告として表示します。{KeyWord:ランニングシューズ} のようなキーワード挿入は、入力された既定のテキストで計測します。キーワードが収まらないときに実際に表示されるのがそのテキストだからです。該当セルにはその旨のバッジが付きます。既定のテキストがない差し込みは配信時に文字数が本当に変動するため、推測せずにその事実をお伝えします。そしてこれらの処理はすべてブラウザ内で完結します。広告文がアップロードされることも、保存されることもありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -2067,6 +2132,11 @@ window.I18N_LOCALES = {
     "faq.q4": "메타는 왜 “제한 초과”가 아니라 “잘려서 노출됨”인가요?",
     "faq.a4": "메타는 어느 쪽이든 광고를 등록해 주기 때문입니다. 기본 텍스트는 125자를 권장하지만 500자까지 허용하고, 제목은 40자를 권장하지만 255자까지 받습니다. 권장치를 넘겨도 반려되지 않고, 대부분의 게재 위치에서 말줄임표로 잘릴 뿐입니다. 이걸 하드 제한처럼 빨간색으로 표시하면 거짓 경고가 되므로, 주황색 잘림 경고로 보여주고 진짜 하드 제한일 때만 오류로 표시합니다.",
     "faq.q5": "공백, 이모지, 키워드 삽입은 어떻게 계산하나요?",
-    "faq.a5": "공백과 문장부호는 계산합니다. 매체가 세기 때문입니다. 이모지는 여러 코드포인트로 이뤄진 것까지 포함해 1개를 1자(1자소)로 세지만, 구글애즈 검색광고는 이모지 자체를 허용하지 않으므로 경고로 표시합니다. {KeyWord:러닝화} 같은 키워드 삽입은 입력하신 기본 문구를 기준으로 계산합니다. 키워드가 들어가지 못할 때 실제로 노출되는 것이 그 문구이기 때문이며, 해당 셀에는 배지를 달아 알려 드립니다. 기본 문구가 없는 키워드 삽입은 게재 시점에 길이가 실제로 달라지므로, 추측하지 않고 그 사실을 그대로 알려 드립니다. 그리고 이 모든 과정은 브라우저 밖으로 나가지 않습니다. 계산은 로컬에서 이뤄지고, 광고 문구는 업로드되지도 저장되지도 않습니다."
+    "faq.a5": "공백과 문장부호는 계산합니다. 매체가 세기 때문입니다. 이모지는 여러 코드포인트로 이뤄진 것까지 포함해 1개를 1자(1자소)로 세지만, 구글애즈 검색광고는 이모지 자체를 허용하지 않으므로 경고로 표시합니다. {KeyWord:러닝화} 같은 키워드 삽입은 입력하신 기본 문구를 기준으로 계산합니다. 키워드가 들어가지 못할 때 실제로 노출되는 것이 그 문구이기 때문이며, 해당 셀에는 배지를 달아 알려 드립니다. 기본 문구가 없는 키워드 삽입은 게재 시점에 길이가 실제로 달라지므로, 추측하지 않고 그 사실을 그대로 알려 드립니다. 그리고 이 모든 과정은 브라우저 밖으로 나가지 않습니다. 계산은 로컬에서 이뤄지고, 광고 문구는 업로드되지도 저장되지도 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

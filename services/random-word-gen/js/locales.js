@@ -61,7 +61,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why did my search return no words or fewer words than I asked for?",
     "faq.a4": "This happens when your filters are narrower than the available word bank — for example asking for adjectives that start with \"x\" and are at least 10 letters long. The tool never fails silently: it tells you plainly when no words match so you can loosen a filter, and if fewer matching words exist than the count you requested, it returns every matching word and shows you the true total instead of padding the list with repeats.",
     "faq.q5": "Is my activity or word list saved or sent anywhere?",
-    "faq.a5": "No. Every word is picked entirely inside your browser from a built-in list — no filter, count, or generated word is ever sent to a server. Your last-used filters are saved only in your browser's local storage purely so the tool remembers your preferences next time, and you can clear that at any time by clearing your browser data. There's no sign-up and nothing to track."
+    "faq.a5": "No. Every word is picked entirely inside your browser from a built-in list — no filter, count, or generated word is ever sent to a server. Your last-used filters are saved only in your browser's local storage purely so the tool remembers your preferences next time, and you can clear that at any time by clearing your browser data. There's no sign-up and nothing to track.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -111,7 +116,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么我的搜索没有返回单词,或者返回的单词比我要求的少?",
     "faq.a4": "这通常是因为你的筛选条件比可用词库更窄——例如要求以“x”开头且至少 10 个字母的形容词。这个工具绝不会悄无声息地失败:如果没有单词匹配,它会明确告诉你,你可以放宽某个筛选条件;如果匹配的单词比你要求的数量少,它会返回所有匹配的单词并显示真实总数,而不是用重复的词凑数。",
     "faq.q5": "我的操作或单词列表会被保存或发送到别处吗?",
-    "faq.a5": "不会。每个单词都完全在你的浏览器内部、从内置列表中挑选——没有任何筛选条件、数量或生成的单词会被发送到服务器。你最近使用的筛选条件仅保存在浏览器的本地存储中,纯粹是为了让工具记住你的偏好,你也可以随时通过清除浏览器数据来清除它。无需注册,也没有任何追踪。"
+    "faq.a5": "不会。每个单词都完全在你的浏览器内部、从内置列表中挑选——没有任何筛选条件、数量或生成的单词会被发送到服务器。你最近使用的筛选条件仅保存在浏览器的本地存储中,纯粹是为了让工具记住你的偏好,你也可以随时通过清除浏览器数据来清除它。无需注册,也没有任何追踪。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -161,7 +171,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मेरी खोज में कोई शब्द क्यों नहीं मिला, या मांगे गए से कम शब्द क्यों मिले?",
     "faq.a4": "ऐसा तब होता है जब आपके फ़िल्टर उपलब्ध शब्द बैंक से ज़्यादा संकीर्ण हों — जैसे \"x\" से शुरू होने वाले और कम से कम 10 अक्षर वाले विशेषण मांगना। यह टूल कभी चुपचाप विफल नहीं होता: अगर कोई शब्द मेल नहीं खाता तो यह साफ़ बताता है ताकि आप कोई फ़िल्टर ढीला कर सकें, और अगर मांगी गई संख्या से कम मेल खाते शब्द मौजूद हों, तो यह सभी मेल खाते शब्द लौटाता है और असली कुल संख्या दिखाता है, दोहराव से सूची भरने के बजाय।",
     "faq.q5": "क्या मेरी गतिविधि या शब्द सूची कहीं सेव या भेजी जाती है?",
-    "faq.a5": "नहीं। हर शब्द पूरी तरह आपके ब्राउज़र के भीतर, एक बिल्ट-इन सूची से चुना जाता है — कोई फ़िल्टर, संख्या या जनरेट किया गया शब्द कभी सर्वर पर नहीं भेजा जाता। आपकी हाल की फ़िल्टर सेटिंग्स केवल आपके ब्राउज़र के लोकल स्टोरेज में सेव होती हैं, ताकि टूल अगली बार आपकी पसंद याद रख सके, और आप कभी भी अपना ब्राउज़र डेटा साफ़ करके इसे मिटा सकते हैं। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं।"
+    "faq.a5": "नहीं। हर शब्द पूरी तरह आपके ब्राउज़र के भीतर, एक बिल्ट-इन सूची से चुना जाता है — कोई फ़िल्टर, संख्या या जनरेट किया गया शब्द कभी सर्वर पर नहीं भेजा जाता। आपकी हाल की फ़िल्टर सेटिंग्स केवल आपके ब्राउज़र के लोकल स्टोरेज में सेव होती हैं, ताकि टूल अगली बार आपकी पसंद याद रख सके, और आप कभी भी अपना ब्राउज़र डेटा साफ़ करके इसे मिटा सकते हैं। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -211,7 +226,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué mi búsqueda no devolvió palabras, o devolvió menos de las que pedí?",
     "faq.a4": "Esto ocurre cuando tus filtros son más estrechos que el banco de palabras disponible — por ejemplo, pedir adjetivos que empiecen por \"x\" y tengan al menos 10 letras. La herramienta nunca falla en silencio: te dice claramente cuando ninguna palabra coincide para que puedas relajar un filtro, y si existen menos palabras coincidentes que la cantidad pedida, devuelve todas las coincidentes y muestra el total real en lugar de rellenar la lista con repeticiones.",
     "faq.q5": "¿Se guarda o se envía a algún sitio mi actividad o lista de palabras?",
-    "faq.a5": "No. Cada palabra se elige completamente dentro de tu navegador a partir de una lista incorporada — ningún filtro, cantidad o palabra generada se envía jamás a un servidor. Tus filtros más recientes se guardan solo en el almacenamiento local de tu navegador, únicamente para que la herramienta recuerde tus preferencias la próxima vez, y puedes borrarlo en cualquier momento borrando los datos de tu navegador. No hay registro ni seguimiento."
+    "faq.a5": "No. Cada palabra se elige completamente dentro de tu navegador a partir de una lista incorporada — ningún filtro, cantidad o palabra generada se envía jamás a un servidor. Tus filtros más recientes se guardan solo en el almacenamiento local de tu navegador, únicamente para que la herramienta recuerde tus preferencias la próxima vez, y puedes borrarlo en cualquier momento borrando los datos de tu navegador. No hay registro ni seguimiento.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -261,7 +281,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا لم يُرجِع بحثي أي كلمات، أو أرجع كلمات أقل مما طلبت؟",
     "faq.a4": "يحدث هذا عندما تكون مرشحاتك أضيق من بنك الكلمات المتاح — مثل طلب صفات تبدأ بحرف \"x\" ولا يقل طولها عن 10 حروف. لا تفشل الأداة أبدًا بصمت: فهي تخبرك بوضوح عندما لا تطابق أي كلمة حتى تتمكن من تخفيف أحد المرشحات، وإذا كانت الكلمات المطابقة أقل من العدد الذي طلبته، فإنها تُرجع كل الكلمات المطابقة وتعرض العدد الحقيقي بدلاً من ملء القائمة بتكرارات.",
     "faq.q5": "هل يتم حفظ نشاطي أو قائمة كلماتي أو إرسالها إلى أي مكان؟",
-    "faq.a5": "لا. يتم اختيار كل كلمة بالكامل داخل متصفحك من قائمة مدمجة — لا يُرسَل أي مرشح أو عدد أو كلمة تم إنشاؤها إلى أي خادم أبدًا. تُحفظ مرشحاتك الأخيرة فقط في التخزين المحلي لمتصفحك، وذلك فقط لتتذكر الأداة تفضيلاتك في المرة القادمة، ويمكنك مسحها في أي وقت بمسح بيانات متصفحك. لا يوجد تسجيل ولا أي تتبع."
+    "faq.a5": "لا. يتم اختيار كل كلمة بالكامل داخل متصفحك من قائمة مدمجة — لا يُرسَل أي مرشح أو عدد أو كلمة تم إنشاؤها إلى أي خادم أبدًا. تُحفظ مرشحاتك الأخيرة فقط في التخزين المحلي لمتصفحك، وذلك فقط لتتذكر الأداة تفضيلاتك في المرة القادمة، ويمكنك مسحها في أي وقت بمسح بيانات متصفحك. لا يوجد تسجيل ولا أي تتبع.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -311,7 +336,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi ma recherche n'a-t-elle renvoyé aucun mot, ou moins de mots que demandé ?",
     "faq.a4": "Cela arrive lorsque vos filtres sont plus restrictifs que la banque de mots disponible — par exemple demander des adjectifs commençant par « x » et comptant au moins 10 lettres. L'outil n'échoue jamais silencieusement : il vous indique clairement qu'aucun mot ne correspond afin que vous puissiez assouplir un filtre, et s'il existe moins de mots correspondants que la quantité demandée, il renvoie tous les mots correspondants et affiche le total réel plutôt que de compléter la liste avec des répétitions.",
     "faq.q5": "Mon activité ou ma liste de mots est-elle enregistrée ou envoyée quelque part ?",
-    "faq.a5": "Non. Chaque mot est choisi entièrement dans votre navigateur à partir d'une liste intégrée — aucun filtre, aucune quantité, aucun mot généré n'est jamais envoyé à un serveur. Vos derniers filtres utilisés sont enregistrés uniquement dans le stockage local de votre navigateur, uniquement pour que l'outil se souvienne de vos préférences la prochaine fois, et vous pouvez les effacer à tout moment en effaçant les données de votre navigateur. Aucune inscription, aucun suivi."
+    "faq.a5": "Non. Chaque mot est choisi entièrement dans votre navigateur à partir d'une liste intégrée — aucun filtre, aucune quantité, aucun mot généré n'est jamais envoyé à un serveur. Vos derniers filtres utilisés sont enregistrés uniquement dans le stockage local de votre navigateur, uniquement pour que l'outil se souvienne de vos préférences la prochaine fois, et vous pouvez les effacer à tout moment en effaçant les données de votre navigateur. Aucune inscription, aucun suivi.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -361,7 +391,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার সার্চে কেন কোনো শব্দ আসেনি, বা চাওয়ার চেয়ে কম শব্দ এসেছে?",
     "faq.a4": "এটি তখন ঘটে যখন আপনার ফিল্টারগুলো উপলব্ধ শব্দভাণ্ডারের চেয়ে সংকীর্ণ হয় — যেমন \"x\" দিয়ে শুরু এবং কমপক্ষে ১০ অক্ষরের বিশেষণ চাওয়া। এই টুলটি কখনো নীরবে ব্যর্থ হয় না: কোনো শব্দ না মিললে এটি স্পষ্টভাবে জানিয়ে দেয় যাতে আপনি একটি ফিল্টার শিথিল করতে পারেন, এবং চাওয়া সংখ্যার চেয়ে কম মিলে যাওয়া শব্দ থাকলে, এটি সমস্ত মিলে যাওয়া শব্দ ফেরত দেয় এবং প্রকৃত মোট সংখ্যা দেখায়, পুনরাবৃত্তি দিয়ে তালিকা পূরণ না করে।",
     "faq.q5": "আমার কার্যকলাপ বা শব্দ তালিকা কি কোথাও সংরক্ষণ বা পাঠানো হয়?",
-    "faq.a5": "না। প্রতিটি শব্দ সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরে, একটি বিল্ট-ইন তালিকা থেকে বেছে নেওয়া হয় — কোনো ফিল্টার, সংখ্যা বা তৈরি করা শব্দ কখনো সার্ভারে পাঠানো হয় না। আপনার সাম্প্রতিক ফিল্টারগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়, যাতে টুলটি পরের বার আপনার পছন্দ মনে রাখতে পারে, এবং আপনি যেকোনো সময় ব্রাউজার ডেটা মুছে এটি সাফ করতে পারেন। কোনো সাইনআপ নেই, কোনো ট্র্যাকিং নেই।"
+    "faq.a5": "না। প্রতিটি শব্দ সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরে, একটি বিল্ট-ইন তালিকা থেকে বেছে নেওয়া হয় — কোনো ফিল্টার, সংখ্যা বা তৈরি করা শব্দ কখনো সার্ভারে পাঠানো হয় না। আপনার সাম্প্রতিক ফিল্টারগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়, যাতে টুলটি পরের বার আপনার পছন্দ মনে রাখতে পারে, এবং আপনি যেকোনো সময় ব্রাউজার ডেটা মুছে এটি সাফ করতে পারেন। কোনো সাইনআপ নেই, কোনো ট্র্যাকিং নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -411,7 +446,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que minha busca não retornou palavras, ou retornou menos do que pedi?",
     "faq.a4": "Isso acontece quando seus filtros são mais restritos do que o banco de palavras disponível — por exemplo, pedir adjetivos que comecem com \"x\" e tenham pelo menos 10 letras. A ferramenta nunca falha silenciosamente: ela avisa claramente quando nenhuma palavra corresponde para que você possa afrouxar um filtro, e se existirem menos palavras correspondentes do que a quantidade pedida, ela retorna todas as correspondentes e mostra o total real em vez de completar a lista com repetições.",
     "faq.q5": "Minha atividade ou lista de palavras é salva ou enviada para algum lugar?",
-    "faq.a5": "Não. Cada palavra é escolhida inteiramente dentro do seu navegador a partir de uma lista embutida — nenhum filtro, quantidade ou palavra gerada é enviado a um servidor. Seus filtros mais recentes são salvos apenas no armazenamento local do seu navegador, unicamente para que a ferramenta lembre suas preferências na próxima vez, e você pode apagá-los a qualquer momento limpando os dados do navegador. Sem cadastro, sem rastreamento."
+    "faq.a5": "Não. Cada palavra é escolhida inteiramente dentro do seu navegador a partir de uma lista embutida — nenhum filtro, quantidade ou palavra gerada é enviado a um servidor. Seus filtros mais recentes são salvos apenas no armazenamento local do seu navegador, unicamente para que a ferramenta lembre suas preferências na próxima vez, e você pode apagá-los a qualquer momento limpando os dados do navegador. Sem cadastro, sem rastreamento.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -461,7 +501,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему мой поиск не вернул слов или вернул меньше, чем я запросил?",
     "faq.a4": "Это происходит, когда ваши фильтры уже, чем доступный банк слов — например, запрос прилагательных, начинающихся на «x» и содержащих не менее 10 букв. Инструмент никогда не завершается молча: он ясно сообщает, когда ни одно слово не подходит, чтобы вы могли ослабить фильтр, а если подходящих слов меньше запрошенного количества, он возвращает все подходящие слова и показывает реальное общее число, а не дополняет список повторами.",
     "faq.q5": "Сохраняется ли или отправляется куда-либо моя активность или список слов?",
-    "faq.a5": "Нет. Каждое слово выбирается полностью внутри вашего браузера из встроенного списка — ни один фильтр, количество или сгенерированное слово никогда не отправляются на сервер. Ваши последние использованные фильтры сохраняются только в локальном хранилище вашего браузера — исключительно для того, чтобы инструмент запомнил ваши предпочтения в следующий раз, и вы можете удалить их в любой момент, очистив данные браузера. Никакой регистрации, никакого отслеживания."
+    "faq.a5": "Нет. Каждое слово выбирается полностью внутри вашего браузера из встроенного списка — ни один фильтр, количество или сгенерированное слово никогда не отправляются на сервер. Ваши последние использованные фильтры сохраняются только в локальном хранилище вашего браузера — исключительно для того, чтобы инструмент запомнил ваши предпочтения в следующий раз, и вы можете удалить их в любой момент, очистив данные браузера. Никакой регистрации, никакого отслеживания.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -511,7 +556,12 @@ window.I18N_LOCALES = {
     "faq.q4": "میری تلاش میں کوئی لفظ کیوں نہیں آیا، یا مانگی گئی تعداد سے کم الفاظ کیوں آئے؟",
     "faq.a4": "یہ اس وقت ہوتا ہے جب آپ کے فلٹرز دستیاب ذخیرے سے زیادہ تنگ ہوں — مثلاً \"x\" سے شروع ہونے والے اور کم از کم 10 حروف کے صفت مانگنا۔ یہ ٹول کبھی خاموشی سے ناکام نہیں ہوتا: اگر کوئی لفظ میل نہیں کھاتا تو یہ واضح طور پر بتاتا ہے تاکہ آپ کوئی فلٹر نرم کر سکیں، اور اگر مانگی گئی تعداد سے کم میل کھاتے الفاظ موجود ہوں، تو یہ تمام میل کھاتے الفاظ واپس کرتا ہے اور اصل کل تعداد دکھاتا ہے، دہرائے گئے الفاظ سے فہرست بھرنے کی بجائے۔",
     "faq.q5": "کیا میری سرگرمی یا الفاظ کی فہرست کہیں محفوظ یا بھیجی جاتی ہے؟",
-    "faq.a5": "نہیں۔ ہر لفظ مکمل طور پر آپ کے براؤزر کے اندر، ایک بلٹ اِن فہرست سے چنا جاتا ہے — کوئی فلٹر، تعداد یا بنایا گیا لفظ کبھی سرور پر نہیں بھیجا جاتا۔ آپ کے حالیہ فلٹرز صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں، صرف اس لیے کہ ٹول اگلی بار آپ کی ترجیحات یاد رکھ سکے، اور آپ کسی بھی وقت اپنے براؤزر کا ڈیٹا صاف کر کے اسے مٹا سکتے ہیں۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں۔"
+    "faq.a5": "نہیں۔ ہر لفظ مکمل طور پر آپ کے براؤزر کے اندر، ایک بلٹ اِن فہرست سے چنا جاتا ہے — کوئی فلٹر، تعداد یا بنایا گیا لفظ کبھی سرور پر نہیں بھیجا جاتا۔ آپ کے حالیہ فلٹرز صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں، صرف اس لیے کہ ٹول اگلی بار آپ کی ترجیحات یاد رکھ سکے، اور آپ کسی بھی وقت اپنے براؤزر کا ڈیٹا صاف کر کے اسے مٹا سکتے ہیں۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -561,7 +611,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa pencarian saya tidak menghasilkan kata, atau menghasilkan lebih sedikit dari yang saya minta?",
     "faq.a4": "Ini terjadi ketika filter Anda lebih sempit daripada bank kata yang tersedia — misalnya meminta kata sifat yang diawali huruf \"x\" dan minimal 10 huruf. Alat ini tidak pernah gagal secara diam-diam: alat ini memberi tahu Anda dengan jelas jika tidak ada kata yang cocok agar Anda bisa melonggarkan filter, dan jika kata yang cocok lebih sedikit dari jumlah yang diminta, alat ini mengembalikan semua kata yang cocok dan menunjukkan jumlah sebenarnya alih-alih mengisi daftar dengan pengulangan.",
     "faq.q5": "Apakah aktivitas atau daftar kata saya disimpan atau dikirim ke suatu tempat?",
-    "faq.a5": "Tidak. Setiap kata dipilih sepenuhnya di dalam browser Anda dari daftar bawaan — tidak ada filter, jumlah, atau kata yang dihasilkan yang pernah dikirim ke server. Filter terakhir Anda hanya disimpan di penyimpanan lokal browser Anda, semata-mata agar alat ini mengingat preferensi Anda di lain waktu, dan Anda bisa menghapusnya kapan saja dengan menghapus data browser. Tidak perlu mendaftar, tidak ada pelacakan."
+    "faq.a5": "Tidak. Setiap kata dipilih sepenuhnya di dalam browser Anda dari daftar bawaan — tidak ada filter, jumlah, atau kata yang dihasilkan yang pernah dikirim ke server. Filter terakhir Anda hanya disimpan di penyimpanan lokal browser Anda, semata-mata agar alat ini mengingat preferensi Anda di lain waktu, dan Anda bisa menghapusnya kapan saja dengan menghapus data browser. Tidak perlu mendaftar, tidak ada pelacakan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -611,7 +666,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum hat meine Suche keine Wörter geliefert oder weniger als angefordert?",
     "faq.a4": "Das passiert, wenn deine Filter enger sind als der verfügbare Wortschatz — zum Beispiel Adjektive mit \"x\" am Anfang und mindestens 10 Buchstaben. Das Tool scheitert nie stillschweigend: Es teilt klar mit, wenn kein Wort passt, damit du einen Filter lockern kannst, und wenn es weniger passende Wörter gibt als angefordert, gibt es alle passenden Wörter zurück und zeigt die tatsächliche Gesamtzahl, statt die Liste mit Wiederholungen aufzufüllen.",
     "faq.q5": "Werden meine Aktivität oder meine Wortliste gespeichert oder irgendwohin gesendet?",
-    "faq.a5": "Nein. Jedes Wort wird vollständig innerhalb deines Browsers aus einer eingebauten Liste ausgewählt — kein Filter, keine Anzahl und kein erzeugtes Wort wird jemals an einen Server gesendet. Deine zuletzt verwendeten Filter werden nur im lokalen Speicher deines Browsers gespeichert, einzig damit das Tool sich beim nächsten Mal an deine Einstellungen erinnert, und du kannst sie jederzeit durch Löschen deiner Browserdaten entfernen. Keine Anmeldung, kein Tracking."
+    "faq.a5": "Nein. Jedes Wort wird vollständig innerhalb deines Browsers aus einer eingebauten Liste ausgewählt — kein Filter, keine Anzahl und kein erzeugtes Wort wird jemals an einen Server gesendet. Deine zuletzt verwendeten Filter werden nur im lokalen Speicher deines Browsers gespeichert, einzig damit das Tool sich beim nächsten Mal an deine Einstellungen erinnert, und du kannst sie jederzeit durch Löschen deiner Browserdaten entfernen. Keine Anmeldung, kein Tracking.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -661,7 +721,12 @@ window.I18N_LOCALES = {
     "faq.q4": "検索しても単語が出ない、または要求数より少ない理由は?",
     "faq.a4": "これは、フィルター条件が利用可能な単語バンクより狭すぎる場合に起こります。例えば「x」で始まり10文字以上の形容詞を要求した場合などです。このツールは決して静かに失敗しません。一致する単語がない場合は明確に伝えるので、フィルターを緩めることができます。また、要求数より一致する単語が少ない場合は、一致するすべての単語を返し、重複で水増しするのではなく実際の合計数を表示します。",
     "faq.q5": "私の操作や単語リストはどこかに保存・送信されますか?",
-    "faq.a5": "いいえ。すべての単語は、組み込みのリストからブラウザ内で完全に選ばれます。フィルター、数、生成された単語がサーバーに送信されることは一切ありません。直近のフィルター設定は、次回もツールが好みを覚えておくためだけにブラウザのローカルストレージにのみ保存され、いつでもブラウザのデータを削除することで消去できます。登録もトラッキングも不要です。"
+    "faq.a5": "いいえ。すべての単語は、組み込みのリストからブラウザ内で完全に選ばれます。フィルター、数、生成された単語がサーバーに送信されることは一切ありません。直近のフィルター設定は、次回もツールが好みを覚えておくためだけにブラウザのローカルストレージにのみ保存され、いつでもブラウザのデータを削除することで消去できます。登録もトラッキングも不要です。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -711,6 +776,11 @@ window.I18N_LOCALES = {
     "faq.q4": "검색 결과에 단어가 없거나 요청한 개수보다 적게 나오는 이유는 무엇인가요?",
     "faq.a4": "필터가 사용 가능한 단어 목록보다 너무 좁을 때 이런 일이 발생합니다 — 예를 들어 \"x\"로 시작하고 최소 10글자인 형용사를 요청하는 경우입니다. 이 도구는 절대 조용히 실패하지 않습니다. 일치하는 단어가 없으면 명확히 알려 주어 필터를 완화할 수 있게 하고, 요청한 개수보다 일치하는 단어가 적으면 중복으로 목록을 채우는 대신 일치하는 단어를 모두 반환하고 실제 총 개수를 보여 줍니다.",
     "faq.q5": "제 활동이나 단어 목록이 어딘가에 저장되거나 전송되나요?",
-    "faq.a5": "아니요. 모든 단어는 내장된 목록에서 브라우저 안에서만 선택됩니다 — 필터, 개수, 생성된 단어 중 어느 것도 서버로 전송되지 않습니다. 최근 사용한 필터는 다음에도 설정을 기억할 수 있도록 브라우저의 로컬 저장소에만 저장되며, 언제든 브라우저 데이터를 지워 삭제할 수 있습니다. 가입도, 추적도 없습니다."
+    "faq.a5": "아니요. 모든 단어는 내장된 목록에서 브라우저 안에서만 선택됩니다 — 필터, 개수, 생성된 단어 중 어느 것도 서버로 전송되지 않습니다. 최근 사용한 필터는 다음에도 설정을 기억할 수 있도록 브라우저의 로컬 저장소에만 저장되며, 언제든 브라우저 데이터를 지워 삭제할 수 있습니다. 가입도, 추적도 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

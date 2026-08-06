@@ -43,7 +43,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is there a limit to how much text I can compare?",
     "faq.a4": "Yes — each box supports up to about 2,000 lines or 200,000 characters, which covers most articles, emails, config files and short scripts. If either box goes over that limit the comparison is skipped and a warning appears instead of a result, so the page doesn't freeze on a very large paste. For anything longer, compare the text in smaller sections.",
     "faq.q5": "Is my text uploaded to a server when I compare it?",
-    "faq.a5": "No. Both text boxes are compared entirely inside your browser using JavaScript — nothing you paste is uploaded, logged or sent to a server. The only thing saved is a local copy in your own browser's storage, so your text and options are still there if you come back to this tab, and you can remove it any time with the Clear button."
+    "faq.a5": "No. Both text boxes are compared entirely inside your browser using JavaScript — nothing you paste is uploaded, logged or sent to a server. The only thing saved is a local copy in your own browser's storage, so your text and options are still there if you come back to this tab, and you can remove it any time with the Clear button.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -86,7 +91,12 @@ window.I18N_LOCALES = {
     "faq.q4": "可以比较的文本长度有限制吗？",
     "faq.a4": "有——每个文本框最多支持约 2,000 行或 200,000 个字符，足以应对大多数文章、邮件、配置文件和短脚本。如果任意一个文本框超过这个限制，比较会被跳过并显示提示信息，而不是直接给出结果，以避免超长粘贴内容卡住页面。如果文本更长，建议分段比较。",
     "faq.q5": "比较时我的文本会被上传到服务器吗？",
-    "faq.a5": "不会。两个文本框的比较完全在你的浏览器中通过 JavaScript 完成——你粘贴的任何内容都不会被上传、记录或发送到服务器。唯一保存的是你自己浏览器本地存储中的一份副本，方便你下次打开这个页面时文本和选项还在，你也可以随时点击「清空」按钮删除它。"
+    "faq.a5": "不会。两个文本框的比较完全在你的浏览器中通过 JavaScript 完成——你粘贴的任何内容都不会被上传、记录或发送到服务器。唯一保存的是你自己浏览器本地存储中的一份副本，方便你下次打开这个页面时文本和选项还在，你也可以随时点击「清空」按钮删除它。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -129,7 +139,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मैं जितना टेक्स्ट तुलना कर सकता/सकती हूँ उसकी कोई सीमा है?",
     "faq.a4": "हाँ — हर बॉक्स लगभग 2,000 लाइन या 200,000 अक्षर तक सपोर्ट करता है, जो ज़्यादातर लेख, ईमेल, कॉन्फ़िग फ़ाइल और छोटी स्क्रिप्ट के लिए काफ़ी है। अगर कोई भी बॉक्स इस सीमा से ज़्यादा हो जाए, तो तुलना छोड़ दी जाती है और नतीजे की जगह चेतावनी दिखाई जाती है, ताकि बहुत बड़े पेस्ट पर पेज अटके नहीं। इससे लंबे टेक्स्ट के लिए, उसे छोटे हिस्सों में बाँटकर तुलना करें।",
     "faq.q5": "तुलना करते समय क्या मेरा टेक्स्ट सर्वर पर अपलोड होता है?",
-    "faq.a5": "नहीं। दोनों टेक्स्ट बॉक्स की तुलना पूरी तरह आपके ब्राउज़र के अंदर JavaScript से होती है — आपके पेस्ट किए गए किसी भी हिस्से को अपलोड, लॉग या सर्वर पर नहीं भेजा जाता। बस एक स्थानीय प्रति आपके अपने ब्राउज़र के स्टोरेज में सेव होती है, ताकि आप वापस आएँ तो टेक्स्ट और विकल्प वहीं मिलें, और आप चाहें तो कभी भी 'साफ़ करें' बटन से इसे हटा सकते हैं।"
+    "faq.a5": "नहीं। दोनों टेक्स्ट बॉक्स की तुलना पूरी तरह आपके ब्राउज़र के अंदर JavaScript से होती है — आपके पेस्ट किए गए किसी भी हिस्से को अपलोड, लॉग या सर्वर पर नहीं भेजा जाता। बस एक स्थानीय प्रति आपके अपने ब्राउज़र के स्टोरेज में सेव होती है, ताकि आप वापस आएँ तो टेक्स्ट और विकल्प वहीं मिलें, और आप चाहें तो कभी भी 'साफ़ करें' बटन से इसे हटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -172,7 +187,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Hay un límite de cuánto texto puedo comparar?",
     "faq.a4": "Sí: cada cuadro admite hasta unas 2000 líneas o 200 000 caracteres, suficiente para la mayoría de artículos, correos, archivos de configuración y scripts cortos. Si algún cuadro supera ese límite, la comparación se omite y aparece un aviso en lugar de un resultado, para que la página no se bloquee con un texto pegado muy grande. Para textos más largos, compáralos en secciones más pequeñas.",
     "faq.q5": "¿Mi texto se sube a un servidor al compararlo?",
-    "faq.a5": "No. Ambos cuadros de texto se comparan por completo dentro de tu navegador usando JavaScript: nada de lo que pegas se sube, se registra ni se envía a un servidor. Lo único que se guarda es una copia local en el almacenamiento de tu propio navegador, para que tu texto y tus opciones sigan ahí si vuelves a esta pestaña, y puedes eliminarla en cualquier momento con el botón Borrar."
+    "faq.a5": "No. Ambos cuadros de texto se comparan por completo dentro de tu navegador usando JavaScript: nada de lo que pegas se sube, se registra ni se envía a un servidor. Lo único que se guarda es una copia local en el almacenamiento de tu propio navegador, para que tu texto y tus opciones sigan ahí si vuelves a esta pestaña, y puedes eliminarla en cualquier momento con el botón Borrar.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -215,7 +235,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل هناك حد لكمية النص التي يمكنني مقارنتها؟",
     "faq.a4": "نعم — يدعم كل مربع نحو 2,000 سطر أو 200,000 حرف كحد أقصى، وهو ما يكفي لمعظم المقالات ورسائل البريد الإلكتروني وملفات الإعداد والبرمجيات النصية القصيرة. وإذا تجاوز أي مربع هذا الحد، تُتخطى المقارنة ويظهر تحذير بدلاً من النتيجة، حتى لا تتجمد الصفحة عند لصق نص كبير جدًا. وللنصوص الأطول، قارنها على أجزاء أصغر.",
     "faq.q5": "هل يُرفع نصي إلى خادم عند مقارنته؟",
-    "faq.a5": "لا. تتم مقارنة كلا مربعي النص بالكامل داخل متصفحك باستخدام JavaScript — لا يُرفع أي شيء تلصقه أو يُسجَّل أو يُرسَل إلى أي خادم. الشيء الوحيد الذي يُحفظ هو نسخة محلية في تخزين متصفحك الخاص، بحيث يبقى نصك وخياراتك موجودَين إذا عدت إلى هذا التبويب، ويمكنك حذفها في أي وقت باستخدام زر المسح."
+    "faq.a5": "لا. تتم مقارنة كلا مربعي النص بالكامل داخل متصفحك باستخدام JavaScript — لا يُرفع أي شيء تلصقه أو يُسجَّل أو يُرسَل إلى أي خادم. الشيء الوحيد الذي يُحفظ هو نسخة محلية في تخزين متصفحك الخاص، بحيث يبقى نصك وخياراتك موجودَين إذا عدت إلى هذا التبويب، ويمكنك حذفها في أي وقت باستخدام زر المسح.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -258,7 +283,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Y a-t-il une limite à la quantité de texte que je peux comparer ?",
     "faq.a4": "Oui — chaque zone accepte jusqu'à environ 2 000 lignes ou 200 000 caractères, ce qui couvre la plupart des articles, e-mails, fichiers de configuration et scripts courts. Si une zone dépasse cette limite, la comparaison est ignorée et un avertissement apparaît à la place d'un résultat, afin que la page ne se bloque pas sur un très gros collage. Pour un texte plus long, comparez-le par sections plus petites.",
     "faq.q5": "Mon texte est-il envoyé à un serveur lors de la comparaison ?",
-    "faq.a5": "Non. Les deux zones de texte sont comparées entièrement dans votre navigateur via JavaScript — rien de ce que vous collez n'est envoyé, enregistré ou transmis à un serveur. La seule chose sauvegardée est une copie locale dans le stockage de votre propre navigateur, afin que votre texte et vos options soient toujours là si vous revenez sur cet onglet, et vous pouvez la supprimer à tout moment avec le bouton Effacer."
+    "faq.a5": "Non. Les deux zones de texte sont comparées entièrement dans votre navigateur via JavaScript — rien de ce que vous collez n'est envoyé, enregistré ou transmis à un serveur. La seule chose sauvegardée est une copie locale dans le stockage de votre propre navigateur, afin que votre texte et vos options soient toujours là si vous revenez sur cet onglet, et vous pouvez la supprimer à tout moment avec le bouton Effacer.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -301,7 +331,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমি কতটা টেক্সট তুলনা করতে পারি তার কোনো সীমা আছে কি?",
     "faq.a4": "হ্যাঁ — প্রতিটি বক্স প্রায় ২,০০০ লাইন বা ২,০০,০০০ অক্ষর পর্যন্ত সমর্থন করে, যা বেশিরভাগ প্রবন্ধ, ইমেইল, কনফিগ ফাইল ও ছোট স্ক্রিপ্টের জন্য যথেষ্ট। কোনো বক্স এই সীমা ছাড়িয়ে গেলে তুলনা বাদ দেওয়া হয় এবং ফলাফলের বদলে একটি সতর্কবার্তা দেখানো হয়, যাতে খুব বড় পেস্টে পেজ আটকে না যায়। এর চেয়ে বড় টেক্সটের জন্য, ছোট ছোট অংশে ভাগ করে তুলনা করুন।",
     "faq.q5": "তুলনা করার সময় আমার টেক্সট কি কোনো সার্ভারে আপলোড হয়?",
-    "faq.a5": "না। দুটি টেক্সট বক্সের তুলনা সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরে জাভাস্ক্রিপ্ট দিয়ে হয় — আপনি যা পেস্ট করেন তার কিছুই আপলোড, লগ বা সার্ভারে পাঠানো হয় না। শুধু আপনার নিজের ব্রাউজারের স্টোরেজে একটি স্থানীয় কপি সংরক্ষিত হয়, যাতে আপনি এই ট্যাবে ফিরে এলে টেক্সট ও অপশনগুলো ঠিক সেখানেই পান, এবং আপনি চাইলে যেকোনো সময় 'মুছুন' বাটন দিয়ে তা মুছে ফেলতে পারেন।"
+    "faq.a5": "না। দুটি টেক্সট বক্সের তুলনা সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরে জাভাস্ক্রিপ্ট দিয়ে হয় — আপনি যা পেস্ট করেন তার কিছুই আপলোড, লগ বা সার্ভারে পাঠানো হয় না। শুধু আপনার নিজের ব্রাউজারের স্টোরেজে একটি স্থানীয় কপি সংরক্ষিত হয়, যাতে আপনি এই ট্যাবে ফিরে এলে টেক্সট ও অপশনগুলো ঠিক সেখানেই পান, এবং আপনি চাইলে যেকোনো সময় 'মুছুন' বাটন দিয়ে তা মুছে ফেলতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -344,7 +379,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Existe um limite para a quantidade de texto que posso comparar?",
     "faq.a4": "Sim — cada caixa suporta até cerca de 2.000 linhas ou 200.000 caracteres, suficiente para a maioria dos artigos, e-mails, arquivos de configuração e scripts curtos. Se alguma caixa ultrapassar esse limite, a comparação é ignorada e um aviso aparece no lugar de um resultado, para que a página não trave com um texto colado muito grande. Para textos maiores, compare em seções menores.",
     "faq.q5": "Meu texto é enviado a um servidor ao ser comparado?",
-    "faq.a5": "Não. As duas caixas de texto são comparadas inteiramente dentro do seu navegador usando JavaScript — nada do que você cola é enviado, registrado ou transmitido a um servidor. A única coisa salva é uma cópia local no armazenamento do seu próprio navegador, para que seu texto e suas opções continuem lá se você voltar a esta aba, e você pode removê-la a qualquer momento com o botão Limpar."
+    "faq.a5": "Não. As duas caixas de texto são comparadas inteiramente dentro do seu navegador usando JavaScript — nada do que você cola é enviado, registrado ou transmitido a um servidor. A única coisa salva é uma cópia local no armazenamento do seu próprio navegador, para que seu texto e suas opções continuem lá se você voltar a esta aba, e você pode removê-la a qualquer momento com o botão Limpar.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -387,7 +427,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Есть ли ограничение на объём текста для сравнения?",
     "faq.a4": "Да — каждое поле поддерживает до примерно 2000 строк или 200 000 символов, чего достаточно для большинства статей, писем, конфигурационных файлов и коротких скриптов. Если какое-либо поле превышает этот предел, сравнение пропускается и вместо результата появляется предупреждение, чтобы страница не зависала при вставке очень большого текста. Для более длинного текста сравнивайте его по частям.",
     "faq.q5": "Загружается ли мой текст на сервер при сравнении?",
-    "faq.a5": "Нет. Оба текстовых поля сравниваются полностью внутри вашего браузера с помощью JavaScript — ничто из вставленного вами не загружается, не логируется и не отправляется на сервер. Единственное, что сохраняется, — это локальная копия в хранилище вашего собственного браузера, чтобы текст и настройки оставались на месте, если вы вернётесь на эту вкладку, и вы можете удалить их в любой момент кнопкой 'Очистить'."
+    "faq.a5": "Нет. Оба текстовых поля сравниваются полностью внутри вашего браузера с помощью JavaScript — ничто из вставленного вами не загружается, не логируется и не отправляется на сервер. Единственное, что сохраняется, — это локальная копия в хранилище вашего собственного браузера, чтобы текст и настройки оставались на месте, если вы вернётесь на эту вкладку, и вы можете удалить их в любой момент кнопкой 'Очистить'.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -430,7 +475,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میں جتنا متن موازنہ کر سکتا ہوں اس کی کوئی حد ہے؟",
     "faq.a4": "جی ہاں — ہر خانہ تقریباً 2,000 سطروں یا 200,000 حروف تک سپورٹ کرتا ہے، جو زیادہ تر مضامین، ای میلز، کنفگ فائلوں اور مختصر اسکرپٹس کے لیے کافی ہے۔ اگر کوئی خانہ اس حد سے تجاوز کرے تو موازنہ چھوڑ دیا جاتا ہے اور نتیجے کے بجائے انتباہ دکھایا جاتا ہے، تاکہ بہت بڑے پیسٹ پر صفحہ رک نہ جائے۔ اس سے زیادہ لمبے متن کے لیے، اسے چھوٹے حصوں میں موازنہ کریں۔",
     "faq.q5": "موازنے کے دوران کیا میرا متن سرور پر اپ لوڈ ہوتا ہے؟",
-    "faq.a5": "نہیں۔ دونوں متن کے خانوں کا موازنہ مکمل طور پر آپ کے براؤزر کے اندر جاوا اسکرپٹ سے ہوتا ہے — آپ جو کچھ بھی پیسٹ کرتے ہیں وہ اپ لوڈ، لاگ یا سرور کو نہیں بھیجا جاتا۔ صرف ایک چیز محفوظ ہوتی ہے: آپ کے اپنے براؤزر کے اسٹوریج میں ایک مقامی کاپی، تاکہ اگر آپ اس ٹیب پر واپس آئیں تو متن اور اختیارات وہیں موجود ہوں، اور آپ کسی بھی وقت 'صاف کریں' بٹن سے اسے ہٹا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ دونوں متن کے خانوں کا موازنہ مکمل طور پر آپ کے براؤزر کے اندر جاوا اسکرپٹ سے ہوتا ہے — آپ جو کچھ بھی پیسٹ کرتے ہیں وہ اپ لوڈ، لاگ یا سرور کو نہیں بھیجا جاتا۔ صرف ایک چیز محفوظ ہوتی ہے: آپ کے اپنے براؤزر کے اسٹوریج میں ایک مقامی کاپی، تاکہ اگر آپ اس ٹیب پر واپس آئیں تو متن اور اختیارات وہیں موجود ہوں، اور آپ کسی بھی وقت 'صاف کریں' بٹن سے اسے ہٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -473,7 +523,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah ada batas jumlah teks yang bisa saya bandingkan?",
     "faq.a4": "Ya — setiap kotak mendukung hingga sekitar 2.000 baris atau 200.000 karakter, cukup untuk sebagian besar artikel, email, file konfigurasi, dan skrip pendek. Jika salah satu kotak melebihi batas ini, perbandingan akan dilewati dan muncul peringatan alih-alih hasil, agar halaman tidak macet saat menempel teks yang sangat besar. Untuk teks yang lebih panjang, bandingkan dalam bagian-bagian yang lebih kecil.",
     "faq.q5": "Apakah teks saya diunggah ke server saat dibandingkan?",
-    "faq.a5": "Tidak. Kedua kotak teks dibandingkan sepenuhnya di dalam browser Anda menggunakan JavaScript — tidak ada yang Anda tempel yang diunggah, dicatat, atau dikirim ke server. Satu-satunya yang disimpan adalah salinan lokal di penyimpanan browser Anda sendiri, sehingga teks dan opsi Anda tetap ada jika Anda kembali ke tab ini, dan Anda dapat menghapusnya kapan saja dengan tombol Hapus."
+    "faq.a5": "Tidak. Kedua kotak teks dibandingkan sepenuhnya di dalam browser Anda menggunakan JavaScript — tidak ada yang Anda tempel yang diunggah, dicatat, atau dikirim ke server. Satu-satunya yang disimpan adalah salinan lokal di penyimpanan browser Anda sendiri, sehingga teks dan opsi Anda tetap ada jika Anda kembali ke tab ini, dan Anda dapat menghapusnya kapan saja dengan tombol Hapus.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -516,7 +571,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Gibt es eine Grenze für die Textmenge, die ich vergleichen kann?",
     "faq.a4": "Ja — jedes Feld unterstützt bis zu etwa 2.000 Zeilen oder 200.000 Zeichen, was für die meisten Artikel, E-Mails, Konfigurationsdateien und kurzen Skripte ausreicht. Überschreitet ein Feld dieses Limit, wird der Vergleich übersprungen und statt eines Ergebnisses eine Warnung angezeigt, damit die Seite bei sehr großen eingefügten Texten nicht einfriert. Für längere Texte vergleichen Sie diese in kleineren Abschnitten.",
     "faq.q5": "Wird mein Text beim Vergleich auf einen Server hochgeladen?",
-    "faq.a5": "Nein. Beide Textfelder werden vollständig in Ihrem Browser per JavaScript verglichen — nichts, was Sie einfügen, wird hochgeladen, protokolliert oder an einen Server gesendet. Das Einzige, was gespeichert wird, ist eine lokale Kopie im Speicher Ihres eigenen Browsers, damit Ihr Text und Ihre Optionen noch da sind, wenn Sie zu diesem Tab zurückkehren, und Sie können sie jederzeit mit der Schaltfläche Löschen entfernen."
+    "faq.a5": "Nein. Beide Textfelder werden vollständig in Ihrem Browser per JavaScript verglichen — nichts, was Sie einfügen, wird hochgeladen, protokolliert oder an einen Server gesendet. Das Einzige, was gespeichert wird, ist eine lokale Kopie im Speicher Ihres eigenen Browsers, damit Ihr Text und Ihre Optionen noch da sind, wenn Sie zu diesem Tab zurückkehren, und Sie können sie jederzeit mit der Schaltfläche Löschen entfernen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -559,7 +619,12 @@ window.I18N_LOCALES = {
     "faq.q4": "比較できるテキストの量に制限はありますか？",
     "faq.a4": "はい——各ボックスは最大でおよそ2,000行、または200,000文字までに対応しており、ほとんどの記事、メール、設定ファイル、短いスクリプトには十分です。どちらかのボックスがこの上限を超えると、比較はスキップされ、結果の代わりに警告が表示されるため、非常に大きなテキストを貼り付けてもページが固まりません。それより長いテキストは、小さく分けて比較してください。",
     "faq.q5": "比較の際、テキストはサーバーにアップロードされますか？",
-    "faq.a5": "いいえ。2つのテキストボックスの比較はすべてブラウザ内でJavaScriptによって行われ——貼り付けた内容がアップロードされたり、記録されたり、サーバーに送信されたりすることはありません。保存されるのは、お使いのブラウザ自身のストレージ内にあるローカルコピーだけなので、このタブに戻ってきたときにテキストとオプションがそのまま残っており、いつでも「クリア」ボタンで削除できます。"
+    "faq.a5": "いいえ。2つのテキストボックスの比較はすべてブラウザ内でJavaScriptによって行われ——貼り付けた内容がアップロードされたり、記録されたり、サーバーに送信されたりすることはありません。保存されるのは、お使いのブラウザ自身のストレージ内にあるローカルコピーだけなので、このタブに戻ってきたときにテキストとオプションがそのまま残っており、いつでも「クリア」ボタンで削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -602,6 +667,11 @@ window.I18N_LOCALES = {
     "faq.q4": "비교할 수 있는 텍스트 양에 제한이 있나요?",
     "faq.a4": "네 — 각 상자는 약 2,000줄 또는 200,000자까지 지원하며, 대부분의 글, 이메일, 설정 파일, 짧은 스크립트를 다루기에 충분합니다. 어느 한쪽 상자라도 이 한도를 넘으면 비교를 건너뛰고 결과 대신 경고 메시지를 표시하여, 매우 큰 텍스트를 붙여넣어도 페이지가 멈추지 않도록 합니다. 더 긴 텍스트는 더 작은 단위로 나누어 비교하세요.",
     "faq.q5": "비교할 때 제 텍스트가 서버에 업로드되나요?",
-    "faq.a5": "아니요. 두 텍스트 상자의 비교는 전적으로 브라우저 안에서 자바스크립트로 이루어지며, 붙여넣은 내용은 업로드되거나 기록되거나 서버로 전송되지 않습니다. 저장되는 것은 오직 사용자 브라우저 자체 저장소에 남는 로컬 사본뿐이라 이 탭에 다시 돌아와도 텍스트와 옵션이 그대로 남아 있으며, 언제든지 '지우기' 버튼으로 삭제할 수 있습니다."
+    "faq.a5": "아니요. 두 텍스트 상자의 비교는 전적으로 브라우저 안에서 자바스크립트로 이루어지며, 붙여넣은 내용은 업로드되거나 기록되거나 서버로 전송되지 않습니다. 저장되는 것은 오직 사용자 브라우저 자체 저장소에 남는 로컬 사본뿐이라 이 탭에 다시 돌아와도 텍스트와 옵션이 그대로 남아 있으며, 언제든지 '지우기' 버튼으로 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

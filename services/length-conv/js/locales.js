@@ -62,7 +62,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is my input sent to a server?",
     "faq.a4": "No. This length converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example inches → centimeters), kept in your browser's local storage so it is ready next time. The value itself is not stored.",
     "faq.q5": "Where can I convert weight, temperature and other units?",
-    "faq.a5": "This tool focuses on length. For other conversions — weight, temperature, area, volume, speed and data size — visit the Toolhub home, where the matching converters live alongside this one, all free and ad-light."
+    "faq.a5": "This tool focuses on length. For other conversions — weight, temperature, area, volume, speed and data size — visit the Toolhub home, where the matching converters live alongside this one, all free and ad-light.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -109,7 +114,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我输入的数据会被发送到服务器吗？",
     "faq.a4": "不会。这个长度换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如英寸 → 厘米），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存。",
     "faq.q5": "哪里可以换算重量、温度和其他单位？",
-    "faq.a5": "本工具专注于长度换算。其他换算 — 重量、温度、面积、体积、速度和数据大小 — 请访问 Toolhub 主页，那里有配套的换算器与本工具并列，全部免费且几乎无广告。"
+    "faq.a5": "本工具专注于长度换算。其他换算 — 重量、温度、面积、体积、速度和数据大小 — 请访问 Toolhub 主页，那里有配套的换算器与本工具并列，全部免费且几乎无广告。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -156,7 +166,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरा इनपुट किसी सर्वर पर भेजा जाता है?",
     "faq.a4": "नहीं। यह लंबाई कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं अपलोड नहीं होती। केवल आपकी अंतिम चुनी हुई इकाई जोड़ी (उदाहरण के लिए इंच → सेंटीमीटर) आपके ब्राउज़र की लोकल स्टोरेज में सहेजी जाती है ताकि अगली बार तैयार रहे। मान स्वयं सहेजा नहीं जाता।",
     "faq.q5": "मैं वजन, तापमान और अन्य इकाइयाँ कहाँ बदल सकता हूँ?",
-    "faq.a5": "यह टूल लंबाई पर केंद्रित है। अन्य रूपांतरणों के लिए — वजन, तापमान, क्षेत्रफल, आयतन, गति और डेटा आकार — Toolhub होम पर जाएँ, जहाँ मिलते-जुलते कन्वर्टर इसके साथ मौजूद हैं, सभी मुफ़्त और लगभग विज्ञापन-रहित।"
+    "faq.a5": "यह टूल लंबाई पर केंद्रित है। अन्य रूपांतरणों के लिए — वजन, तापमान, क्षेत्रफल, आयतन, गति और डेटा आकार — Toolhub होम पर जाएँ, जहाँ मिलते-जुलते कन्वर्टर इसके साथ मौजूद हैं, सभी मुफ़्त और लगभग विज्ञापन-रहित।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -203,7 +218,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se envían mis datos a un servidor?",
     "faq.a4": "No. Este conversor de longitud funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es el último par de unidades elegido (por ejemplo pulgadas → centímetros), almacenado en el almacenamiento local de tu navegador para tenerlo listo la próxima vez. El valor en sí no se guarda.",
     "faq.q5": "¿Dónde puedo convertir peso, temperatura y otras unidades?",
-    "faq.a5": "Esta herramienta se centra en la longitud. Para otras conversiones — peso, temperatura, área, volumen, velocidad y tamaño de datos — visita la página de inicio de Toolhub, donde los conversores correspondientes están junto a este, todos gratis y con muy poca publicidad."
+    "faq.a5": "Esta herramienta se centra en la longitud. Para otras conversiones — peso, temperatura, área, volumen, velocidad y tamaño de datos — visita la página de inicio de Toolhub, donde los conversores correspondientes están junto a este, todos gratis y con muy poca publicidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -250,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تُرسَل مدخلاتي إلى خادم؟",
     "faq.a4": "لا. يعمل محوّل الطول هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفع إلى أي مكان. الشيء الوحيد الذي يُحفَظ هو آخر زوج وحدات اخترته (مثل بوصة → سنتيمتر)، ويُخزَّن في التخزين المحلي للمتصفح ليكون جاهزًا في المرة القادمة. أما القيمة نفسها فلا تُحفَظ.",
     "faq.q5": "أين يمكنني تحويل الوزن ودرجة الحرارة والوحدات الأخرى؟",
-    "faq.a5": "تركّز هذه الأداة على الطول. لإجراء تحويلات أخرى — الوزن ودرجة الحرارة والمساحة والحجم والسرعة وحجم البيانات — تفضّل بزيارة الصفحة الرئيسية لـ Toolhub، حيث تجد المحوّلات المطابقة بجانب هذه الأداة، كلها مجانية وبإعلانات قليلة."
+    "faq.a5": "تركّز هذه الأداة على الطول. لإجراء تحويلات أخرى — الوزن ودرجة الحرارة والمساحة والحجم والسرعة وحجم البيانات — تفضّل بزيارة الصفحة الرئيسية لـ Toolhub، حيث تجد المحوّلات المطابقة بجانب هذه الأداة، كلها مجانية وبإعلانات قليلة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -297,7 +322,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mes données sont-elles envoyées à un serveur ?",
     "faq.a4": "Non. Ce convertisseur de longueur fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais envoyé où que ce soit. La seule chose enregistrée est votre dernière paire d'unités choisie (par exemple pouces → centimètres), conservée dans le stockage local de votre navigateur pour la fois suivante. La valeur elle-même n'est pas enregistrée.",
     "faq.q5": "Où puis-je convertir le poids, la température et d'autres unités ?",
-    "faq.a5": "Cet outil se concentre sur la longueur. Pour d'autres conversions — poids, température, surface, volume, vitesse et taille de données — rendez-vous sur l'accueil de Toolhub, où les convertisseurs correspondants côtoient celui-ci, tous gratuits et avec très peu de publicité."
+    "faq.a5": "Cet outil se concentre sur la longueur. Pour d'autres conversions — poids, température, surface, volume, vitesse et taille de données — rendez-vous sur l'accueil de Toolhub, où les convertisseurs correspondants côtoient celui-ci, tous gratuits et avec très peu de publicité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -344,7 +374,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার ইনপুট কি কোনো সার্ভারে পাঠানো হয়?",
     "faq.a4": "না। এই দৈর্ঘ্য কনভার্টার পুরোপুরি আপনার ব্রাউজারে চলে — আপনার টাইপ করা সংখ্যা কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ বেছে নেওয়া একক জোড়া (যেমন ইঞ্চি → সেন্টিমিটার) আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার প্রস্তুত থাকে। মানটি নিজে সংরক্ষণ করা হয় না।",
     "faq.q5": "ওজন, তাপমাত্রা ও অন্যান্য একক কোথায় রূপান্তর করব?",
-    "faq.a5": "এই টুলটি দৈর্ঘ্যে মনোযোগী। অন্যান্য রূপান্তরের জন্য — ওজন, তাপমাত্রা, ক্ষেত্রফল, আয়তন, গতি ও ডেটার আকার — Toolhub হোমে যান, যেখানে মিল রেখে তৈরি কনভার্টারগুলো এটির পাশেই আছে, সবই বিনামূল্যে ও প্রায় বিজ্ঞাপনহীন।"
+    "faq.a5": "এই টুলটি দৈর্ঘ্যে মনোযোগী। অন্যান্য রূপান্তরের জন্য — ওজন, তাপমাত্রা, ক্ষেত্রফল, আয়তন, গতি ও ডেটার আকার — Toolhub হোমে যান, যেখানে মিল রেখে তৈরি কনভার্টারগুলো এটির পাশেই আছে, সবই বিনামূল্যে ও প্রায় বিজ্ঞাপনহীন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -391,7 +426,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meus dados são enviados para um servidor?",
     "faq.a4": "Não. Este conversor de comprimento funciona inteiramente no seu navegador — o número que você digita nunca é enviado para lugar algum. A única coisa salva é o último par de unidades escolhido (por exemplo, polegadas → centímetros), guardado no armazenamento local do navegador para estar pronto na próxima vez. O valor em si não é salvo.",
     "faq.q5": "Onde posso converter peso, temperatura e outras unidades?",
-    "faq.a5": "Esta ferramenta foca em comprimento. Para outras conversões — peso, temperatura, área, volume, velocidade e tamanho de dados — acesse a página inicial do Toolhub, onde os conversores correspondentes ficam ao lado deste, todos gratuitos e com pouca publicidade."
+    "faq.a5": "Esta ferramenta foca em comprimento. Para outras conversões — peso, temperatura, área, volume, velocidade e tamanho de dados — acesse a página inicial do Toolhub, onde os conversores correspondentes ficam ao lado deste, todos gratuitos e com pouca publicidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -438,7 +478,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Отправляются ли мои данные на сервер?",
     "faq.a4": "Нет. Этот конвертер длины работает целиком в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, дюймы → сантиметры) в локальном хранилище браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется.",
     "faq.q5": "Где можно перевести вес, температуру и другие единицы?",
-    "faq.a5": "Этот инструмент посвящён длине. Для других переводов — вес, температура, площадь, объём, скорость и размер данных — зайдите на главную страницу Toolhub, где рядом с этим находятся соответствующие конвертеры, все бесплатные и почти без рекламы."
+    "faq.a5": "Этот инструмент посвящён длине. Для других переводов — вес, температура, площадь, объём, скорость и размер данных — зайдите на главную страницу Toolhub, где рядом с этим находятся соответствующие конвертеры, все бесплатные и почти без рекламы.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -485,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میرا ان پٹ کسی سرور کو بھیجا جاتا ہے؟",
     "faq.a4": "نہیں۔ یہ لمبائی کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا لکھا ہوا نمبر کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کی آخری منتخب کردہ اکائی جوڑی (مثلاً انچ → سینٹی میٹر) آپ کے براؤزر کی لوکل اسٹوریج میں محفوظ ہوتی ہے تاکہ اگلی بار تیار ہو۔ قدر خود محفوظ نہیں کی جاتی۔",
     "faq.q5": "میں وزن، درجہ حرارت اور دیگر اکائیاں کہاں تبدیل کر سکتا ہوں؟",
-    "faq.a5": "یہ ٹول لمبائی پر مرکوز ہے۔ دیگر تبدیلیوں کے لیے — وزن، درجہ حرارت، رقبہ، حجم، رفتار اور ڈیٹا سائز — Toolhub کے ہوم پیج پر جائیں، جہاں متعلقہ کنورٹر اسی کے ساتھ موجود ہیں، سب مفت اور تقریباً اشتہار کے بغیر۔"
+    "faq.a5": "یہ ٹول لمبائی پر مرکوز ہے۔ دیگر تبدیلیوں کے لیے — وزن، درجہ حرارت، رقبہ، حجم، رفتار اور ڈیٹا سائز — Toolhub کے ہوم پیج پر جائیں، جہاں متعلقہ کنورٹر اسی کے ساتھ موجود ہیں، سب مفت اور تقریباً اشتہار کے بغیر۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -532,7 +582,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah input saya dikirim ke server?",
     "faq.a4": "Tidak. Konverter panjang ini berjalan sepenuhnya di peramban Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya inci → sentimeter), disimpan di penyimpanan lokal peramban agar siap saat berikutnya. Nilainya sendiri tidak disimpan.",
     "faq.q5": "Di mana saya bisa mengonversi berat, suhu, dan satuan lain?",
-    "faq.a5": "Alat ini fokus pada panjang. Untuk konversi lain — berat, suhu, luas, volume, kecepatan, dan ukuran data — kunjungi beranda Toolhub, tempat konverter yang sesuai berada di samping alat ini, semuanya gratis dan minim iklan."
+    "faq.a5": "Alat ini fokus pada panjang. Untuk konversi lain — berat, suhu, luas, volume, kecepatan, dan ukuran data — kunjungi beranda Toolhub, tempat konverter yang sesuai berada di samping alat ini, semuanya gratis dan minim iklan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -579,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Werden meine Eingaben an einen Server gesendet?",
     "faq.a4": "Nein. Dieser Längenumrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwohin hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (zum Beispiel Zoll → Zentimeter) im lokalen Speicher des Browsers, damit es beim nächsten Mal bereitsteht. Der Wert selbst wird nicht gespeichert.",
     "faq.q5": "Wo kann ich Gewicht, Temperatur und andere Einheiten umrechnen?",
-    "faq.a5": "Dieses Tool konzentriert sich auf Länge. Für andere Umrechnungen — Gewicht, Temperatur, Fläche, Volumen, Geschwindigkeit und Datengröße — besuchen Sie die Toolhub-Startseite, wo die passenden Umrechner neben diesem liegen, alle kostenlos und werbearm."
+    "faq.a5": "Dieses Tool konzentriert sich auf Länge. Für andere Umrechnungen — Gewicht, Temperatur, Fläche, Volumen, Geschwindigkeit und Datengröße — besuchen Sie die Toolhub-Startseite, wo die passenden Umrechner neben diesem liegen, alle kostenlos und werbearm.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -626,7 +686,12 @@ window.I18N_LOCALES = {
     "faq.q4": "入力した内容はサーバーに送信されますか？",
     "faq.a4": "いいえ。この長さ変換ツールは完全にブラウザ内で動作し、入力した数字がどこかに送信されることはありません。保存されるのは最後に選んだ単位のペア（例: インチ → センチメートル）だけで、次回すぐ使えるようブラウザのローカルストレージに保持されます。数値そのものは保存されません。",
     "faq.q5": "重さや温度など、他の単位はどこで変換できますか？",
-    "faq.a5": "このツールは長さに特化しています。重さ・温度・面積・体積・速度・データ容量など他の換算は、Toolhub のトップページをご覧ください。対応する変換ツールが本ツールと並んで用意されており、すべて無料で広告も控えめです。"
+    "faq.a5": "このツールは長さに特化しています。重さ・温度・面積・体積・速度・データ容量など他の換算は、Toolhub のトップページをご覧ください。対応する変換ツールが本ツールと並んで用意されており、すべて無料で広告も控えめです。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -673,6 +738,11 @@ window.I18N_LOCALES = {
     "faq.q4": "입력한 값이 서버로 전송되나요?",
     "faq.a4": "아니요. 이 길이 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 숫자는 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 쌍(예: 인치 → 센티미터)뿐이며, 다음 방문에 바로 쓸 수 있도록 브라우저의 로컬 저장소에 보관됩니다. 값 자체는 저장하지 않습니다.",
     "faq.q5": "무게·온도 등 다른 단위는 어디서 변환하나요?",
-    "faq.a5": "이 도구는 길이에 특화되어 있습니다. 무게·온도·넓이·부피·속도·데이터 용량 같은 다른 변환은 Toolhub 홈에서 확인하세요. 이 도구와 나란히 대응하는 변환기들이 준비되어 있으며, 모두 무료에 광고도 거의 없습니다."
+    "faq.a5": "이 도구는 길이에 특화되어 있습니다. 무게·온도·넓이·부피·속도·데이터 용량 같은 다른 변환은 Toolhub 홈에서 확인하세요. 이 도구와 나란히 대응하는 변환기들이 준비되어 있으며, 모두 무료에 광고도 거의 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

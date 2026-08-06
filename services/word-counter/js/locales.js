@@ -58,7 +58,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How are sentences and paragraphs counted?",
     "faq.a4": "A sentence ends at a period, question mark or exclamation mark (or their full-width CJK equivalents 。！？), and the final sentence is still counted even without closing punctuation. A paragraph is any non-empty line, so pressing Enter starts a new paragraph. Very long single-line text with no line breaks counts as one paragraph.",
     "faq.q5": "Is my text uploaded to a server?",
-    "faq.a5": "No. Every count runs entirely inside your browser — nothing you type is ever sent to a server or shared. Your most recent text is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it in memory for this session only, and clearing it removes the stored copy immediately."
+    "faq.a5": "No. Every count runs entirely inside your browser — nothing you type is ever sent to a server or shared. Your most recent text is optionally saved to this browser's local storage so it is still here when you return; untick the save option to keep it in memory for this session only, and clearing it removes the stored copy immediately.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -109,7 +114,12 @@ window.I18N_LOCALES = {
     "faq.q4": "句子和段落是如何统计的？",
     "faq.a4": "句子以句号、问号、感叹号或对应的全角标点（。！？）结束，且最后一句即使没有结束标点也会计入。段落是任意非空行，因此按下回车即开始新段落。没有换行的超长单行文本算作一个段落。",
     "faq.q5": "我的文本会被上传到服务器吗？",
-    "faq.a5": "不会。所有统计都完全在你的浏览器中进行——你输入的任何内容都不会被发送到服务器或分享。最近一次的文本可选择性地保存在本浏览器的本地存储中，方便你下次继续；取消勾选保存选项即可仅在本次会话的内存中保留，清除后会立即删除已存副本。"
+    "faq.a5": "不会。所有统计都完全在你的浏览器中进行——你输入的任何内容都不会被发送到服务器或分享。最近一次的文本可选择性地保存在本浏览器的本地存储中，方便你下次继续；取消勾选保存选项即可仅在本次会话的内存中保留，清除后会立即删除已存副本。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -160,7 +170,12 @@ window.I18N_LOCALES = {
     "faq.q4": "वाक्य और अनुच्छेद कैसे गिने जाते हैं?",
     "faq.a4": "वाक्य पूर्ण विराम, प्रश्नवाचक या विस्मयादिबोधक चिह्न (या CJK समकक्ष 。！？) पर समाप्त होता है, और अंतिम वाक्य बिना अंत चिह्न के भी गिना जाता है। अनुच्छेद कोई भी खाली न होने वाली पंक्ति है, इसलिए Enter दबाते ही नया अनुच्छेद शुरू होता है। बिना लाइन ब्रेक वाला बहुत लंबा टेक्स्ट एक अनुच्छेद गिना जाता है।",
     "faq.q5": "क्या मेरा टेक्स्ट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। सारी गिनती पूरी तरह आपके ब्राउज़र में होती है — आपका लिखा कुछ भी सर्वर पर नहीं भेजा या साझा नहीं किया जाता। आपका हाल का टेक्स्ट वैकल्पिक रूप से इसी ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है ताकि लौटने पर मौजूद रहे; सहेजने का विकल्प हटा दें तो यह केवल इस सत्र की मेमोरी में रहेगा, और साफ़ करते ही सहेजी प्रति तुरंत हट जाती है।"
+    "faq.a5": "नहीं। सारी गिनती पूरी तरह आपके ब्राउज़र में होती है — आपका लिखा कुछ भी सर्वर पर नहीं भेजा या साझा नहीं किया जाता। आपका हाल का टेक्स्ट वैकल्पिक रूप से इसी ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है ताकि लौटने पर मौजूद रहे; सहेजने का विकल्प हटा दें तो यह केवल इस सत्र की मेमोरी में रहेगा, और साफ़ करते ही सहेजी प्रति तुरंत हट जाती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -211,7 +226,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo se cuentan las frases y los párrafos?",
     "faq.a4": "Una frase termina en punto, signo de interrogación o de exclamación (o sus equivalentes CJK 。！？), y la última frase se cuenta aunque no lleve puntuación final. Un párrafo es cualquier línea no vacía, así que pulsar Enter inicia un párrafo nuevo. Un texto muy largo en una sola línea, sin saltos, cuenta como un párrafo.",
     "faq.q5": "¿Se envía mi texto a un servidor?",
-    "faq.a5": "No. Todos los recuentos se realizan por completo en tu navegador: nada de lo que escribes se envía a un servidor ni se comparte. Tu texto más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga ahí al volver; desmarca la opción de guardar para mantenerlo solo en memoria durante esta sesión, y al borrarlo se elimina la copia de inmediato."
+    "faq.a5": "No. Todos los recuentos se realizan por completo en tu navegador: nada de lo que escribes se envía a un servidor ni se comparte. Tu texto más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga ahí al volver; desmarca la opción de guardar para mantenerlo solo en memoria durante esta sesión, y al borrarlo se elimina la copia de inmediato.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -262,7 +282,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف تُحسب الجمل والفقرات؟",
     "faq.a4": "تنتهي الجملة بنقطة أو علامة استفهام أو تعجّب (أو ما يقابلها في CJK 。！？)، وتُحسب الجملة الأخيرة حتى بلا علامة ختامية. الفقرة هي أي سطر غير فارغ، لذا يبدأ الضغط على Enter فقرة جديدة. النص الطويل جدًا في سطر واحد بلا فواصل أسطر يُحسب فقرة واحدة.",
     "faq.q5": "هل يُرسَل نصي إلى خادم؟",
-    "faq.a5": "لا. تجري كل العمليات الحسابية بالكامل داخل متصفحك — لا يُرسَل أي شيء تكتبه إلى خادم ولا يُشارَك. يُحفظ نصك الأخير اختياريًا في التخزين المحلي لهذا المتصفح ليبقى عند عودتك؛ ألغِ خيار الحفظ ليبقى في الذاكرة لهذه الجلسة فقط، ويُحذف عند المسح فورًا."
+    "faq.a5": "لا. تجري كل العمليات الحسابية بالكامل داخل متصفحك — لا يُرسَل أي شيء تكتبه إلى خادم ولا يُشارَك. يُحفظ نصك الأخير اختياريًا في التخزين المحلي لهذا المتصفح ليبقى عند عودتك؛ ألغِ خيار الحفظ ليبقى في الذاكرة لهذه الجلسة فقط، ويُحذف عند المسح فورًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -313,7 +338,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment les phrases et paragraphes sont-ils comptés ?",
     "faq.a4": "Une phrase se termine par un point, un point d'interrogation ou d'exclamation (ou leurs équivalents CJK 。！？), et la dernière phrase est comptée même sans ponctuation finale. Un paragraphe est toute ligne non vide ; appuyer sur Entrée démarre donc un nouveau paragraphe. Un très long texte sur une seule ligne, sans saut, compte pour un paragraphe.",
     "faq.q5": "Mon texte est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Tous les calculs se font entièrement dans votre navigateur — rien de ce que vous saisissez n'est envoyé à un serveur ni partagé. Votre texte le plus récent est enregistré, en option, dans le stockage local de ce navigateur pour le retrouver à votre retour ; décochez l'option d'enregistrement pour le garder en mémoire le temps de la session, et l'effacer supprime aussitôt la copie."
+    "faq.a5": "Non. Tous les calculs se font entièrement dans votre navigateur — rien de ce que vous saisissez n'est envoyé à un serveur ni partagé. Votre texte le plus récent est enregistré, en option, dans le stockage local de ce navigateur pour le retrouver à votre retour ; décochez l'option d'enregistrement pour le garder en mémoire le temps de la session, et l'effacer supprime aussitôt la copie.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -364,7 +394,12 @@ window.I18N_LOCALES = {
     "faq.q4": "বাক্য ও অনুচ্ছেদ কীভাবে গোনা হয়?",
     "faq.a4": "বাক্য শেষ হয় দাঁড়ি/পূর্ণচ্ছেদ, প্রশ্নবোধক বা বিস্ময়সূচক চিহ্নে (বা CJK সমতুল্য 。！？), আর শেষ বাক্যটি শেষ চিহ্ন ছাড়াও গোনা হয়। অনুচ্ছেদ হলো যেকোনো অ-খালি লাইন, তাই Enter চাপলে নতুন অনুচ্ছেদ শুরু হয়। লাইন ব্রেক ছাড়া খুব দীর্ঘ এক লাইনের লেখা এক অনুচ্ছেদ হিসেবে গোনা হয়।",
     "faq.q5": "আমার লেখা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। সব গণনা সম্পূর্ণ আপনার ব্রাউজারেই হয় — আপনি যা লেখেন তার কিছুই সার্ভারে পাঠানো বা শেয়ার হয় না। আপনার সাম্প্রতিক লেখা ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয় যাতে ফিরে এলে থাকে; সংরক্ষণ অপশনটি তুলে দিলে তা কেবল এই সেশনের মেমরিতে থাকবে, আর মুছে ফেললে সংরক্ষিত কপি সঙ্গে সঙ্গে চলে যায়।"
+    "faq.a5": "না। সব গণনা সম্পূর্ণ আপনার ব্রাউজারেই হয় — আপনি যা লেখেন তার কিছুই সার্ভারে পাঠানো বা শেয়ার হয় না। আপনার সাম্প্রতিক লেখা ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয় যাতে ফিরে এলে থাকে; সংরক্ষণ অপশনটি তুলে দিলে তা কেবল এই সেশনের মেমরিতে থাকবে, আর মুছে ফেললে সংরক্ষিত কপি সঙ্গে সঙ্গে চলে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como as frases e os parágrafos são contados?",
     "faq.a4": "Uma frase termina em ponto, ponto de interrogação ou de exclamação (ou seus equivalentes CJK 。！？), e a última frase é contada mesmo sem pontuação final. Um parágrafo é qualquer linha não vazia, então pressionar Enter inicia um novo parágrafo. Um texto muito longo em uma única linha, sem quebras, conta como um parágrafo.",
     "faq.q5": "Meu texto é enviado a um servidor?",
-    "faq.a5": "Não. Todas as contagens são feitas inteiramente no seu navegador — nada do que você digita é enviado a um servidor ou compartilhado. Seu texto mais recente é salvo, opcionalmente, no armazenamento local deste navegador para continuar ali quando você voltar; desmarque a opção de salvar para mantê-lo apenas na memória desta sessão, e ao limpar a cópia é removida na hora."
+    "faq.a5": "Não. Todas as contagens são feitas inteiramente no seu navegador — nada do que você digita é enviado a um servidor ou compartilhado. Seu texto mais recente é salvo, opcionalmente, no armazenamento local deste navegador para continuar ali quando você voltar; desmarque a opção de salvar para mantê-lo apenas na memória desta sessão, e ao limpar a cópia é removida na hora.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -466,7 +506,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как считаются предложения и абзацы?",
     "faq.a4": "Предложение заканчивается точкой, вопросительным или восклицательным знаком (или их эквивалентами CJK 。！？), и последнее предложение считается даже без завершающего знака. Абзац — это любая непустая строка, поэтому нажатие Enter начинает новый абзац. Очень длинный текст в одну строку без переносов считается одним абзацем.",
     "faq.q5": "Отправляется ли мой текст на сервер?",
-    "faq.a5": "Нет. Все подсчёты выполняются полностью в вашем браузере — ничего из введённого не отправляется на сервер и не передаётся. Ваш последний текст по желанию сохраняется в локальном хранилище этого браузера, чтобы остаться при возвращении; снимите флажок сохранения, чтобы держать его в памяти только на эту сессию, а при очистке сохранённая копия удаляется сразу."
+    "faq.a5": "Нет. Все подсчёты выполняются полностью в вашем браузере — ничего из введённого не отправляется на сервер и не передаётся. Ваш последний текст по желанию сохраняется в локальном хранилище этого браузера, чтобы остаться при возвращении; снимите флажок сохранения, чтобы держать его в памяти только на эту сессию, а при очистке сохранённая копия удаляется сразу.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -517,7 +562,12 @@ window.I18N_LOCALES = {
     "faq.q4": "جملے اور پیراگراف کیسے گنے جاتے ہیں؟",
     "faq.a4": "جملہ نقطہ، سوالیہ یا فجائیہ نشان (یا CJK مساوی 。！？) پر ختم ہوتا ہے، اور آخری جملہ اختتامی نشان کے بغیر بھی گنا جاتا ہے۔ پیراگراف کوئی بھی غیر خالی سطر ہے، سو Enter دبانے سے نیا پیراگراف شروع ہوتا ہے۔ بغیر لائن بریک کے بہت طویل ایک سطری متن ایک پیراگراف شمار ہوتا ہے۔",
     "faq.q5": "کیا میرا متن سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ساری گنتی مکمل طور پر آپ کے براؤزر میں ہوتی ہے — آپ جو لکھتے ہیں وہ سرور پر نہیں بھیجا یا شیئر نہیں کیا جاتا۔ آپ کا حالیہ متن اختیاری طور پر اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ واپسی پر موجود ہو؛ محفوظ کرنے کا اختیار ہٹا دیں تو یہ صرف اس سیشن کی میموری میں رہے گا، اور صاف کرنے پر محفوظ نقل فوراً ختم ہو جاتی ہے۔"
+    "faq.a5": "نہیں۔ ساری گنتی مکمل طور پر آپ کے براؤزر میں ہوتی ہے — آپ جو لکھتے ہیں وہ سرور پر نہیں بھیجا یا شیئر نہیں کیا جاتا۔ آپ کا حالیہ متن اختیاری طور پر اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ واپسی پر موجود ہو؛ محفوظ کرنے کا اختیار ہٹا دیں تو یہ صرف اس سیشن کی میموری میں رہے گا، اور صاف کرنے پر محفوظ نقل فوراً ختم ہو جاتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -568,7 +618,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana kalimat dan paragraf dihitung?",
     "faq.a4": "Kalimat berakhir pada titik, tanda tanya, atau tanda seru (atau padanan CJK 。！？), dan kalimat terakhir tetap dihitung meski tanpa tanda akhir. Paragraf adalah setiap baris yang tidak kosong, jadi menekan Enter memulai paragraf baru. Teks satu baris yang sangat panjang tanpa pindah baris dihitung sebagai satu paragraf.",
     "faq.q5": "Apakah teks saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua penghitungan berjalan sepenuhnya di browser Anda — tidak ada yang Anda ketik dikirim ke server atau dibagikan. Teks terbaru Anda disimpan secara opsional di penyimpanan lokal browser ini agar tetap ada saat Anda kembali; hapus centang opsi simpan untuk menahannya di memori sesi ini saja, dan menghapusnya langsung membuang salinan tersimpan."
+    "faq.a5": "Tidak. Semua penghitungan berjalan sepenuhnya di browser Anda — tidak ada yang Anda ketik dikirim ke server atau dibagikan. Teks terbaru Anda disimpan secara opsional di penyimpanan lokal browser ini agar tetap ada saat Anda kembali; hapus centang opsi simpan untuk menahannya di memori sesi ini saja, dan menghapusnya langsung membuang salinan tersimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -619,7 +674,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie werden Sätze und Absätze gezählt?",
     "faq.a4": "Ein Satz endet mit Punkt, Frage- oder Ausrufezeichen (oder den CJK-Entsprechungen 。！？), und der letzte Satz wird auch ohne Schlusszeichen gezählt. Ein Absatz ist jede nicht leere Zeile, also beginnt Enter einen neuen Absatz. Sehr langer Text in einer einzigen Zeile ohne Umbruch zählt als ein Absatz.",
     "faq.q5": "Wird mein Text an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Zählungen laufen vollständig in Ihrem Browser — nichts, was Sie eingeben, wird an einen Server gesendet oder geteilt. Ihr letzter Text wird optional im lokalen Speicher dieses Browsers gesichert, damit er bei Ihrer Rückkehr da ist; entfernen Sie das Häkchen zum Speichern, um ihn nur für diese Sitzung im Speicher zu halten — beim Löschen wird die Kopie sofort entfernt."
+    "faq.a5": "Nein. Alle Zählungen laufen vollständig in Ihrem Browser — nichts, was Sie eingeben, wird an einen Server gesendet oder geteilt. Ihr letzter Text wird optional im lokalen Speicher dieses Browsers gesichert, damit er bei Ihrer Rückkehr da ist; entfernen Sie das Häkchen zum Speichern, um ihn nur für diese Sitzung im Speicher zu halten — beim Löschen wird die Kopie sofort entfernt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -670,7 +730,12 @@ window.I18N_LOCALES = {
     "faq.q4": "文と段落はどのように数えますか？",
     "faq.a4": "文はピリオド・疑問符・感嘆符（またはCJKの。！？）で終わり、終端記号がなくても最後の文は1文として数えます。段落は空でない各行なので、Enterを押すと新しい段落が始まります。改行のない非常に長い1行のテキストは1段落として数えます。",
     "faq.q5": "入力したテキストはサーバーに送られますか？",
-    "faq.a5": "いいえ。すべての計算はブラウザー内だけで行われ、入力内容がサーバーに送信・共有されることはありません。直近のテキストは任意でこのブラウザーのローカルストレージに保存され、次回もそのまま使えます。保存のチェックを外すとこのセッションのメモリーだけに保持され、消去すると保存済みのコピーはすぐに削除されます。"
+    "faq.a5": "いいえ。すべての計算はブラウザー内だけで行われ、入力内容がサーバーに送信・共有されることはありません。直近のテキストは任意でこのブラウザーのローカルストレージに保存され、次回もそのまま使えます。保存のチェックを外すとこのセッションのメモリーだけに保持され、消去すると保存済みのコピーはすぐに削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -721,6 +786,11 @@ window.I18N_LOCALES = {
     "faq.q4": "문장과 문단은 어떻게 세나요?",
     "faq.a4": "문장은 마침표·물음표·느낌표(또는 CJK의 。！？)로 끝나며, 끝맺음 부호가 없어도 마지막 문장은 하나로 셉니다. 문단은 비어 있지 않은 각 줄이므로 Enter를 누르면 새 문단이 시작됩니다. 줄바꿈이 없는 아주 긴 한 줄 텍스트는 한 문단으로 셉니다.",
     "faq.q5": "제 텍스트가 서버로 전송되나요?",
-    "faq.a5": "아니요. 모든 계산은 전적으로 브라우저 안에서 이뤄지며, 입력한 내용은 서버로 전송되거나 공유되지 않습니다. 최근 텍스트는 선택적으로 이 브라우저의 로컬 저장소에 저장되어 다시 방문해도 남아 있습니다. 저장 옵션을 끄면 이번 세션의 메모리에만 유지되고, 지우면 저장된 사본이 즉시 삭제됩니다."
+    "faq.a5": "아니요. 모든 계산은 전적으로 브라우저 안에서 이뤄지며, 입력한 내용은 서버로 전송되거나 공유되지 않습니다. 최근 텍스트는 선택적으로 이 브라우저의 로컬 저장소에 저장되어 다시 방문해도 남아 있습니다. 저장 옵션을 끄면 이번 세션의 메모리에만 유지되고, 지우면 저장된 사본이 즉시 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

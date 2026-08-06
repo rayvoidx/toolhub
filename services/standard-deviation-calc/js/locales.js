@@ -70,7 +70,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can standard deviation be negative or zero, and why does the sample value show N/A for a single number?",
     "faq.a4": "Standard deviation can never be negative — it's a square root of squared numbers, which are always zero or positive. It equals exactly zero only when every value in the list is identical, since there's no spread at all to measure. With only one number entered, the sample standard deviation shows N/A because its formula divides by n − 1, which is zero for n = 1 — an undefined division. Population standard deviation still works with a single value (it's simply 0), since its formula divides by n instead.",
     "faq.q5": "What number formats are accepted, and is my data sent to a server?",
-    "faq.a5": "Type or paste numbers separated by commas, spaces, or new lines, in any mix — negative numbers and decimals are both fine, and pasting a column straight from a spreadsheet works the same way. Anything that isn't a valid number is skipped, and the calculator tells you how many entries it ignored. Every calculation runs entirely in your browser — nothing you type or paste is uploaded or shared with anyone. Your last entry is saved only in this browser's local storage, so clearing your browser data removes it completely."
+    "faq.a5": "Type or paste numbers separated by commas, spaces, or new lines, in any mix — negative numbers and decimals are both fine, and pasting a column straight from a spreadsheet works the same way. Anything that isn't a valid number is skipped, and the calculator tells you how many entries it ignored. Every calculation runs entirely in your browser — nothing you type or paste is uploaded or shared with anyone. Your last entry is saved only in this browser's local storage, so clearing your browser data removes it completely.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -125,7 +130,12 @@ window.I18N_LOCALES = {
     "faq.q4": "标准差可以是负数或零吗？为什么只输入一个数字时样本标准差显示为 N/A？",
     "faq.a4": "标准差永远不会是负数——因为它是平方数的平方根，而平方数总是零或正数。只有当列表中所有数值都完全相同时，标准差才恰好等于零，因为此时根本没有离散程度可言。只输入一个数字时，样本标准差会显示 N/A，因为它的公式要除以 n − 1，当 n = 1 时分母为 0，属于无定义的除法。而总体标准差在只有一个数值时仍然可以计算（结果就是 0），因为它的公式是除以 n。",
     "faq.q5": "支持哪些数字格式？我的数据会被发送到服务器吗？",
-    "faq.a5": "你可以用逗号、空格或换行符分隔数字，混用也没问题——负数和小数都可以，直接从表格粘贴一整列数字效果也一样。任何不是有效数字的内容都会被跳过，计算器会告诉你忽略了多少项。所有计算都完全在你的浏览器中完成——你输入或粘贴的任何内容都不会被上传或分享给任何人。你最后一次输入的内容只会保存在浏览器的本地存储中，清除浏览器数据即可彻底删除。"
+    "faq.a5": "你可以用逗号、空格或换行符分隔数字，混用也没问题——负数和小数都可以，直接从表格粘贴一整列数字效果也一样。任何不是有效数字的内容都会被跳过，计算器会告诉你忽略了多少项。所有计算都完全在你的浏览器中完成——你输入或粘贴的任何内容都不会被上传或分享给任何人。你最后一次输入的内容只会保存在浏览器的本地存储中，清除浏览器数据即可彻底删除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -180,7 +190,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मानक विचलन ऋणात्मक या शून्य हो सकता है, और सिर्फ़ एक संख्या डालने पर नमूना मान N/A क्यों दिखाता है?",
     "faq.a4": "मानक विचलन कभी ऋणात्मक नहीं हो सकता — यह वर्ग संख्याओं का वर्गमूल है, जो हमेशा शून्य या धनात्मक होती हैं। यह तभी बिल्कुल शून्य होता है जब सूची की हर संख्या एक जैसी हो, क्योंकि तब मापने के लिए कोई फैलाव ही नहीं होता। केवल एक संख्या डालने पर नमूना मानक विचलन N/A दिखाता है क्योंकि इसका सूत्र n − 1 से भाग देता है, जो n = 1 पर शून्य होता है — यह भाग अपरिभाषित है। समष्टि मानक विचलन एक ही संख्या के साथ भी काम करता है (परिणाम बस 0 होता है), क्योंकि इसका सूत्र n से भाग देता है।",
     "faq.q5": "कौन-से संख्या प्रारूप स्वीकार किए जाते हैं, और क्या मेरा डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "संख्याओं को कॉमा, स्पेस या नई पंक्ति से अलग करके टाइप या पेस्ट करें, मिलाकर भी चलेगा — ऋणात्मक संख्याएँ और दशमलव दोनों ठीक हैं, और स्प्रेडशीट से सीधे कॉलम पेस्ट करना भी उसी तरह काम करता है। जो भी मान्य संख्या नहीं है उसे छोड़ दिया जाता है, और कैलकुलेटर बताता है कि कितनी प्रविष्टियाँ अनदेखी की गईं। हर गणना पूरी तरह आपके ब्राउज़र में होती है — आपके द्वारा टाइप या पेस्ट किया गया कुछ भी अपलोड या किसी के साथ साझा नहीं किया जाता। आपकी आख़िरी प्रविष्टि केवल इस ब्राउज़र के लोकल स्टोरेज में सहेजी जाती है, इसलिए ब्राउज़र डेटा साफ़ करने पर यह पूरी तरह हट जाती है।"
+    "faq.a5": "संख्याओं को कॉमा, स्पेस या नई पंक्ति से अलग करके टाइप या पेस्ट करें, मिलाकर भी चलेगा — ऋणात्मक संख्याएँ और दशमलव दोनों ठीक हैं, और स्प्रेडशीट से सीधे कॉलम पेस्ट करना भी उसी तरह काम करता है। जो भी मान्य संख्या नहीं है उसे छोड़ दिया जाता है, और कैलकुलेटर बताता है कि कितनी प्रविष्टियाँ अनदेखी की गईं। हर गणना पूरी तरह आपके ब्राउज़र में होती है — आपके द्वारा टाइप या पेस्ट किया गया कुछ भी अपलोड या किसी के साथ साझा नहीं किया जाता। आपकी आख़िरी प्रविष्टि केवल इस ब्राउज़र के लोकल स्टोरेज में सहेजी जाती है, इसलिए ब्राउज़र डेटा साफ़ करने पर यह पूरी तरह हट जाती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -235,7 +250,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puede la desviación estándar ser negativa o cero, y por qué el valor muestral muestra N/D con un solo número?",
     "faq.a4": "La desviación estándar nunca puede ser negativa: es la raíz cuadrada de números al cuadrado, que siempre son cero o positivos. Solo es exactamente cero cuando todos los valores de la lista son idénticos, ya que entonces no hay ninguna dispersión que medir. Con un solo número introducido, la desviación estándar muestral muestra N/D porque su fórmula divide entre n − 1, que es cero para n = 1 — una división indefinida. La desviación estándar poblacional sigue funcionando con un solo valor (el resultado es simplemente 0), porque su fórmula divide entre n.",
     "faq.q5": "¿Qué formatos de número se aceptan, y se envían mis datos a un servidor?",
-    "faq.a5": "Escribe o pega números separados por comas, espacios o saltos de línea, en cualquier combinación — los números negativos y los decimales funcionan bien, y pegar una columna directamente desde una hoja de cálculo también funciona igual. Todo lo que no sea un número válido se omite, y la calculadora te indica cuántas entradas ignoró. Cada cálculo se realiza por completo en tu navegador — nada de lo que escribas o pegues se sube ni se comparte con nadie. Tu última entrada se guarda solo en el almacenamiento local de este navegador, así que al borrar los datos de tu navegador se elimina por completo."
+    "faq.a5": "Escribe o pega números separados por comas, espacios o saltos de línea, en cualquier combinación — los números negativos y los decimales funcionan bien, y pegar una columna directamente desde una hoja de cálculo también funciona igual. Todo lo que no sea un número válido se omite, y la calculadora te indica cuántas entradas ignoró. Cada cálculo se realiza por completo en tu navegador — nada de lo que escribas o pegues se sube ni se comparte con nadie. Tu última entrada se guarda solo en el almacenamiento local de este navegador, así que al borrar los datos de tu navegador se elimina por completo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -290,7 +310,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكن أن يكون الانحراف المعياري سالبًا أو صفرًا، ولماذا تظهر قيمة العينة N/A عند إدخال رقم واحد فقط؟",
     "faq.a4": "لا يمكن أن يكون الانحراف المعياري سالبًا أبدًا — فهو جذر تربيعي لأرقام مربعة، وهي دائمًا صفر أو موجبة. يساوي صفرًا فقط عندما تكون جميع القيم في القائمة متطابقة تمامًا، لأنه لا يوجد أي تشتت لقياسه حينها. عند إدخال رقم واحد فقط، تظهر قيمة انحراف العينة N/A لأن معادلتها تقسم على n − 1، وهو صفر عندما n = 1 — وهي قسمة غير معرَّفة. أما انحراف المجتمع المعياري فيظل يعمل مع قيمة واحدة (والنتيجة ببساطة تكون 0) لأن معادلته تقسم على n.",
     "faq.q5": "ما تنسيقات الأرقام المقبولة، وهل تُرسل بياناتي إلى خادم؟",
-    "faq.a5": "اكتب أو الصق الأرقام مفصولة بفواصل أو مسافات أو أسطر جديدة، بأي مزيج تريده — الأرقام السالبة والكسور العشرية تعمل جيدًا، ولصق عمود مباشرة من جدول بيانات يعمل بنفس الطريقة. أي عنصر ليس رقمًا صالحًا يتم تجاهله، وتخبرك الحاسبة بعدد العناصر التي تم تجاهلها. تتم جميع الحسابات بالكامل داخل متصفحك — لا يُرفع أو يُشارك أي شيء تكتبه أو تلصقه مع أي جهة. يُحفظ آخر إدخال لك فقط في التخزين المحلي لهذا المتصفح، لذا فإن مسح بيانات المتصفح يحذفه بالكامل."
+    "faq.a5": "اكتب أو الصق الأرقام مفصولة بفواصل أو مسافات أو أسطر جديدة، بأي مزيج تريده — الأرقام السالبة والكسور العشرية تعمل جيدًا، ولصق عمود مباشرة من جدول بيانات يعمل بنفس الطريقة. أي عنصر ليس رقمًا صالحًا يتم تجاهله، وتخبرك الحاسبة بعدد العناصر التي تم تجاهلها. تتم جميع الحسابات بالكامل داخل متصفحك — لا يُرفع أو يُشارك أي شيء تكتبه أو تلصقه مع أي جهة. يُحفظ آخر إدخال لك فقط في التخزين المحلي لهذا المتصفح، لذا فإن مسح بيانات المتصفح يحذفه بالكامل.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -345,7 +370,12 @@ window.I18N_LOCALES = {
     "faq.q4": "L'écart-type peut-il être négatif ou nul, et pourquoi la valeur de l'échantillon affiche-t-elle N/D avec un seul nombre ?",
     "faq.a4": "L'écart-type ne peut jamais être négatif : c'est la racine carrée de nombres élevés au carré, qui sont toujours nuls ou positifs. Il n'est exactement nul que lorsque toutes les valeurs de la liste sont identiques, puisqu'il n'y a alors aucune dispersion à mesurer. Avec un seul nombre saisi, l'écart-type de l'échantillon affiche N/D car sa formule divise par n − 1, qui vaut zéro pour n = 1 — une division indéfinie. L'écart-type de la population, lui, fonctionne toujours avec une seule valeur (le résultat est simplement 0), car sa formule divise par n.",
     "faq.q5": "Quels formats de nombres sont acceptés, et mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Saisissez ou collez des nombres séparés par des virgules, des espaces ou des retours à la ligne, dans n'importe quelle combinaison — les nombres négatifs et les décimales fonctionnent très bien, et coller une colonne directement depuis un tableur fonctionne de la même façon. Tout ce qui n'est pas un nombre valide est ignoré, et le calculateur vous indique combien d'entrées ont été ignorées. Chaque calcul s'exécute entièrement dans votre navigateur — rien de ce que vous saisissez ou collez n'est envoyé ou partagé avec qui que ce soit. Votre dernière saisie est enregistrée uniquement dans le stockage local de ce navigateur, donc effacer les données de votre navigateur la supprime complètement."
+    "faq.a5": "Saisissez ou collez des nombres séparés par des virgules, des espaces ou des retours à la ligne, dans n'importe quelle combinaison — les nombres négatifs et les décimales fonctionnent très bien, et coller une colonne directement depuis un tableur fonctionne de la même façon. Tout ce qui n'est pas un nombre valide est ignoré, et le calculateur vous indique combien d'entrées ont été ignorées. Chaque calcul s'exécute entièrement dans votre navigateur — rien de ce que vous saisissez ou collez n'est envoyé ou partagé avec qui que ce soit. Votre dernière saisie est enregistrée uniquement dans le stockage local de ce navigateur, donc effacer les données de votre navigateur la supprime complètement.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -400,7 +430,12 @@ window.I18N_LOCALES = {
     "faq.q4": "স্ট্যান্ডার্ড ডেভিয়েশন কি ঋণাত্মক বা শূন্য হতে পারে, এবং একটিমাত্র সংখ্যা দিলে নমুনার মান কেন N/A দেখায়?",
     "faq.a4": "স্ট্যান্ডার্ড ডেভিয়েশন কখনও ঋণাত্মক হতে পারে না — এটি বর্গ সংখ্যার বর্গমূল, যা সবসময় শূন্য বা ধনাত্মক হয়। এটি একদম শূন্য হয় শুধুমাত্র তখনই যখন তালিকার প্রতিটি মান একই, কারণ তখন মাপার মতো কোনো বিস্তারই নেই। মাত্র একটি সংখ্যা দিলে নমুনা স্ট্যান্ডার্ড ডেভিয়েশন N/A দেখায়, কারণ এর সূত্র n − 1 দিয়ে ভাগ করে, যা n = 1 হলে শূন্য হয় — এটি অসংজ্ঞায়িত ভাগ। সমগ্রক স্ট্যান্ডার্ড ডেভিয়েশন একটি মান দিয়েও কাজ করে (ফলাফল কেবল 0), কারণ এর সূত্র n দিয়ে ভাগ করে।",
     "faq.q5": "কোন সংখ্যার ফরম্যাট গ্রহণযোগ্য, এবং আমার ডেটা কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "সংখ্যাগুলো কমা, স্পেস বা নতুন লাইন দিয়ে আলাদা করে টাইপ বা পেস্ট করুন, মিশিয়েও চলবে — ঋণাত্মক সংখ্যা ও দশমিক দুটোই ঠিক আছে, এবং স্প্রেডশিট থেকে সরাসরি একটি কলাম পেস্ট করাও একইভাবে কাজ করে। বৈধ সংখ্যা নয় এমন যেকোনো কিছু বাদ দেওয়া হয়, এবং ক্যালকুলেটর জানিয়ে দেয় কতগুলো এন্ট্রি উপেক্ষা করা হয়েছে। প্রতিটি হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারে হয় — আপনি যা টাইপ বা পেস্ট করেন তার কিছুই আপলোড বা কারো সাথে শেয়ার করা হয় না। আপনার শেষ এন্ট্রি শুধুমাত্র এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, তাই ব্রাউজার ডেটা মুছে ফেললে এটি সম্পূর্ণ মুছে যায়।"
+    "faq.a5": "সংখ্যাগুলো কমা, স্পেস বা নতুন লাইন দিয়ে আলাদা করে টাইপ বা পেস্ট করুন, মিশিয়েও চলবে — ঋণাত্মক সংখ্যা ও দশমিক দুটোই ঠিক আছে, এবং স্প্রেডশিট থেকে সরাসরি একটি কলাম পেস্ট করাও একইভাবে কাজ করে। বৈধ সংখ্যা নয় এমন যেকোনো কিছু বাদ দেওয়া হয়, এবং ক্যালকুলেটর জানিয়ে দেয় কতগুলো এন্ট্রি উপেক্ষা করা হয়েছে। প্রতিটি হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারে হয় — আপনি যা টাইপ বা পেস্ট করেন তার কিছুই আপলোড বা কারো সাথে শেয়ার করা হয় না। আপনার শেষ এন্ট্রি শুধুমাত্র এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, তাই ব্রাউজার ডেটা মুছে ফেললে এটি সম্পূর্ণ মুছে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -455,7 +490,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O desvio padrão pode ser negativo ou zero, e por que o valor amostral mostra N/D com apenas um número?",
     "faq.a4": "O desvio padrão nunca pode ser negativo — é a raiz quadrada de números elevados ao quadrado, que são sempre zero ou positivos. Ele é exatamente zero apenas quando todos os valores da lista são idênticos, já que não há dispersão alguma para medir. Com apenas um número inserido, o desvio padrão amostral mostra N/D porque sua fórmula divide por n − 1, que é zero para n = 1 — uma divisão indefinida. O desvio padrão populacional continua funcionando com um único valor (o resultado é simplesmente 0), pois sua fórmula divide por n.",
     "faq.q5": "Quais formatos de número são aceitos, e meus dados são enviados a um servidor?",
-    "faq.a5": "Digite ou cole números separados por vírgulas, espaços ou quebras de linha, em qualquer combinação — números negativos e decimais funcionam bem, e colar uma coluna diretamente de uma planilha também funciona da mesma forma. Qualquer coisa que não seja um número válido é ignorada, e a calculadora informa quantas entradas foram ignoradas. Cada cálculo é feito inteiramente no seu navegador — nada do que você digita ou cola é enviado ou compartilhado com ninguém. Sua última entrada é salva apenas no armazenamento local deste navegador, então limpar os dados do navegador a remove completamente."
+    "faq.a5": "Digite ou cole números separados por vírgulas, espaços ou quebras de linha, em qualquer combinação — números negativos e decimais funcionam bem, e colar uma coluna diretamente de uma planilha também funciona da mesma forma. Qualquer coisa que não seja um número válido é ignorada, e a calculadora informa quantas entradas foram ignoradas. Cada cálculo é feito inteiramente no seu navegador — nada do que você digita ou cola é enviado ou compartilhado com ninguém. Sua última entrada é salva apenas no armazenamento local deste navegador, então limpar os dados do navegador a remove completamente.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -510,7 +550,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Может ли стандартное отклонение быть отрицательным или нулевым, и почему выборочное значение показывает N/A при вводе одного числа?",
     "faq.a4": "Стандартное отклонение никогда не может быть отрицательным — это квадратный корень из квадратов чисел, которые всегда неотрицательны. Оно равно нулю только тогда, когда все значения списка совпадают, ведь измерять разброс тогда попросту нечего. При вводе всего одного числа выборочное стандартное отклонение показывает N/A, потому что в его формуле делят на n − 1, а при n = 1 это ноль — деление не определено. Генеральное стандартное отклонение работает и с одним значением (результат просто равен 0), так как его формула делит на n.",
     "faq.q5": "Какие форматы чисел поддерживаются и отправляются ли мои данные на сервер?",
-    "faq.a5": "Вводите или вставляйте числа, разделённые запятыми, пробелами или переносами строк, в любом сочетании — отрицательные числа и десятичные дроби работают нормально, а вставка столбца прямо из таблицы работает так же. Всё, что не является допустимым числом, пропускается, и калькулятор сообщает, сколько записей было проигнорировано. Все вычисления полностью выполняются в вашем браузере — ничего из того, что вы вводите или вставляете, не загружается и не передаётся кому-либо. Ваш последний ввод сохраняется только в локальном хранилище этого браузера, поэтому очистка данных браузера полностью его удаляет."
+    "faq.a5": "Вводите или вставляйте числа, разделённые запятыми, пробелами или переносами строк, в любом сочетании — отрицательные числа и десятичные дроби работают нормально, а вставка столбца прямо из таблицы работает так же. Всё, что не является допустимым числом, пропускается, и калькулятор сообщает, сколько записей было проигнорировано. Все вычисления полностью выполняются в вашем браузере — ничего из того, что вы вводите или вставляете, не загружается и не передаётся кому-либо. Ваш последний ввод сохраняется только в локальном хранилище этого браузера, поэтому очистка данных браузера полностью его удаляет.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -565,7 +610,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا معیاری انحراف منفی یا صفر ہو سکتا ہے، اور صرف ایک عدد درج کرنے پر نمونہ قدر N/A کیوں دکھاتی ہے؟",
     "faq.a4": "معیاری انحراف کبھی منفی نہیں ہو سکتا — یہ مربع اعداد کا جذر ہے، جو ہمیشہ صفر یا مثبت ہوتے ہیں۔ یہ بالکل صفر تب ہی ہوتا ہے جب فہرست کی ہر قدر بالکل یکساں ہو، کیونکہ تب ناپنے کے لیے کوئی پھیلاؤ ہی نہیں ہوتا۔ صرف ایک عدد درج کرنے پر نمونہ معیاری انحراف N/A دکھاتا ہے کیونکہ اس کا فارمولا n − 1 سے تقسیم کرتا ہے، جو n = 1 پر صفر ہوتا ہے — یہ تقسیم غیر متعین ہے۔ آبادی کا معیاری انحراف ایک ہی قدر کے ساتھ بھی کام کرتا ہے (نتیجہ محض 0 ہوتا ہے)، کیونکہ اس کا فارمولا n سے تقسیم کرتا ہے۔",
     "faq.q5": "کون سے عددی فارمیٹس قبول کیے جاتے ہیں، اور کیا میرا ڈیٹا سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "اعداد کو کاما، اسپیس یا نئی سطر سے الگ کر کے ٹائپ یا پیسٹ کریں، کسی بھی امتزاج میں — منفی اعداد اور اعشاریے دونوں ٹھیک کام کرتے ہیں، اور اسپریڈشیٹ سے براہ راست کالم پیسٹ کرنا بھی اسی طرح چلتا ہے۔ جو کچھ درست عدد نہ ہو اسے نظرانداز کر دیا جاتا ہے، اور کیلکولیٹر بتاتا ہے کہ کتنے اندراجات نظرانداز کیے گئے۔ ہر حساب مکمل طور پر آپ کے براؤزر میں ہوتا ہے — آپ جو کچھ بھی ٹائپ یا پیسٹ کرتے ہیں وہ اپ لوڈ یا کسی کے ساتھ شیئر نہیں کیا جاتا۔ آپ کا آخری اندراج صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے، اس لیے براؤزر ڈیٹا صاف کرنے سے یہ مکمل طور پر حذف ہو جاتا ہے۔"
+    "faq.a5": "اعداد کو کاما، اسپیس یا نئی سطر سے الگ کر کے ٹائپ یا پیسٹ کریں، کسی بھی امتزاج میں — منفی اعداد اور اعشاریے دونوں ٹھیک کام کرتے ہیں، اور اسپریڈشیٹ سے براہ راست کالم پیسٹ کرنا بھی اسی طرح چلتا ہے۔ جو کچھ درست عدد نہ ہو اسے نظرانداز کر دیا جاتا ہے، اور کیلکولیٹر بتاتا ہے کہ کتنے اندراجات نظرانداز کیے گئے۔ ہر حساب مکمل طور پر آپ کے براؤزر میں ہوتا ہے — آپ جو کچھ بھی ٹائپ یا پیسٹ کرتے ہیں وہ اپ لوڈ یا کسی کے ساتھ شیئر نہیں کیا جاتا۔ آپ کا آخری اندراج صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے، اس لیے براؤزر ڈیٹا صاف کرنے سے یہ مکمل طور پر حذف ہو جاتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -620,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah standar deviasi bernilai negatif atau nol, dan mengapa nilai sampel menampilkan N/A jika hanya satu angka?",
     "faq.a4": "Standar deviasi tidak pernah bisa negatif — ini adalah akar kuadrat dari angka yang dikuadratkan, yang selalu nol atau positif. Nilainya persis nol hanya ketika semua nilai dalam daftar identik, karena tidak ada sebaran sama sekali untuk diukur. Jika hanya satu angka yang dimasukkan, standar deviasi sampel menampilkan N/A karena rumusnya membagi dengan n − 1, yang bernilai nol saat n = 1 — pembagian yang tidak terdefinisi. Standar deviasi populasi tetap berfungsi dengan satu nilai (hasilnya cukup 0), karena rumusnya membagi dengan n.",
     "faq.q5": "Format angka apa yang diterima, dan apakah data saya dikirim ke server?",
-    "faq.a5": "Ketik atau tempel angka yang dipisahkan koma, spasi, atau baris baru, dalam kombinasi apa pun — angka negatif dan desimal berfungsi dengan baik, dan menempel satu kolom langsung dari spreadsheet juga berfungsi sama. Apa pun yang bukan angka valid akan dilewati, dan kalkulator memberi tahu berapa banyak entri yang diabaikan. Semua perhitungan sepenuhnya berjalan di browser Anda — tidak ada yang Anda ketik atau tempel yang diunggah atau dibagikan ke siapa pun. Entri terakhir Anda hanya disimpan di penyimpanan lokal browser ini, jadi menghapus data browser akan menghapusnya sepenuhnya."
+    "faq.a5": "Ketik atau tempel angka yang dipisahkan koma, spasi, atau baris baru, dalam kombinasi apa pun — angka negatif dan desimal berfungsi dengan baik, dan menempel satu kolom langsung dari spreadsheet juga berfungsi sama. Apa pun yang bukan angka valid akan dilewati, dan kalkulator memberi tahu berapa banyak entri yang diabaikan. Semua perhitungan sepenuhnya berjalan di browser Anda — tidak ada yang Anda ketik atau tempel yang diunggah atau dibagikan ke siapa pun. Entri terakhir Anda hanya disimpan di penyimpanan lokal browser ini, jadi menghapus data browser akan menghapusnya sepenuhnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -675,7 +730,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann die Standardabweichung negativ oder null sein, und warum zeigt der Stichprobenwert bei nur einer Zahl N/V an?",
     "faq.a4": "Die Standardabweichung kann niemals negativ sein — sie ist die Quadratwurzel aus quadrierten Zahlen, die stets null oder positiv sind. Sie ist genau dann null, wenn alle Werte in der Liste identisch sind, da es dann überhaupt keine Streuung zu messen gibt. Bei Eingabe nur einer Zahl zeigt die Standardabweichung der Stichprobe N/V an, weil ihre Formel durch n − 1 teilt, was bei n = 1 null ergibt — eine undefinierte Division. Die Standardabweichung der Grundgesamtheit funktioniert auch mit einem einzigen Wert (das Ergebnis ist einfach 0), da ihre Formel durch n teilt.",
     "faq.q5": "Welche Zahlenformate werden akzeptiert, und werden meine Daten an einen Server gesendet?",
-    "faq.a5": "Tippen oder fügen Sie Zahlen ein, getrennt durch Kommas, Leerzeichen oder Zeilenumbrüche, in beliebiger Mischung — negative Zahlen und Dezimalzahlen funktionieren einwandfrei, und das direkte Einfügen einer Spalte aus einer Tabellenkalkulation funktioniert genauso. Alles, was keine gültige Zahl ist, wird übersprungen, und der Rechner teilt Ihnen mit, wie viele Einträge ignoriert wurden. Jede Berechnung läuft vollständig in Ihrem Browser ab — nichts, was Sie eingeben oder einfügen, wird hochgeladen oder mit irgendjemandem geteilt. Ihre letzte Eingabe wird nur im lokalen Speicher dieses Browsers gespeichert, sodass das Löschen Ihrer Browserdaten sie vollständig entfernt."
+    "faq.a5": "Tippen oder fügen Sie Zahlen ein, getrennt durch Kommas, Leerzeichen oder Zeilenumbrüche, in beliebiger Mischung — negative Zahlen und Dezimalzahlen funktionieren einwandfrei, und das direkte Einfügen einer Spalte aus einer Tabellenkalkulation funktioniert genauso. Alles, was keine gültige Zahl ist, wird übersprungen, und der Rechner teilt Ihnen mit, wie viele Einträge ignoriert wurden. Jede Berechnung läuft vollständig in Ihrem Browser ab — nichts, was Sie eingeben oder einfügen, wird hochgeladen oder mit irgendjemandem geteilt. Ihre letzte Eingabe wird nur im lokalen Speicher dieses Browsers gespeichert, sodass das Löschen Ihrer Browserdaten sie vollständig entfernt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -730,7 +790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "標準偏差が負の値やゼロになることはありますか？また、数値を1つだけ入力すると標本値がN/Aになるのはなぜですか？",
     "faq.a4": "標準偏差が負の値になることは決してありません。標準偏差は二乗した数（常にゼロ以上）の平方根だからです。ちょうどゼロになるのは、リスト内のすべての値が完全に同じ場合のみで、そのときは測定すべき散らばりが全くないためです。数値を1つだけ入力した場合、標本標準偏差はN/Aと表示されます。これは計算式が n − 1 で割り、n = 1 のときそれがゼロになり、割り算が定義できないためです。母標準偏差は数値が1つでも計算できます（結果は単に0になります）。これは計算式が n で割るためです。",
     "faq.q5": "どのような数値形式に対応していますか？また、データはサーバーに送信されますか？",
-    "faq.a5": "数値はカンマ、スペース、改行のどれで区切っても、組み合わせても構いません。負の数や小数も問題なく扱え、表計算ソフトから列をそのまま貼り付けても同様に動作します。有効な数値でないものは無視され、何件無視したかも表示されます。すべての計算は完全にブラウザ内で行われ、入力・貼り付けした内容がアップロードされたり、誰かと共有されたりすることは一切ありません。最後に入力した内容はこのブラウザのローカルストレージにのみ保存されるため、ブラウザのデータを消去すれば完全に削除されます。"
+    "faq.a5": "数値はカンマ、スペース、改行のどれで区切っても、組み合わせても構いません。負の数や小数も問題なく扱え、表計算ソフトから列をそのまま貼り付けても同様に動作します。有効な数値でないものは無視され、何件無視したかも表示されます。すべての計算は完全にブラウザ内で行われ、入力・貼り付けした内容がアップロードされたり、誰かと共有されたりすることは一切ありません。最後に入力した内容はこのブラウザのローカルストレージにのみ保存されるため、ブラウザのデータを消去すれば完全に削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -785,6 +850,11 @@ window.I18N_LOCALES = {
     "faq.q4": "표준편차가 음수나 0이 될 수 있나요? 숫자를 하나만 입력하면 표본 값이 왜 N/A로 표시되나요?",
     "faq.a4": "표준편차는 절대 음수가 될 수 없습니다 — 제곱된 숫자(항상 0 이상)의 제곱근이기 때문입니다. 목록의 모든 값이 완전히 동일할 때만 정확히 0이 되는데, 이때는 측정할 퍼짐이 전혀 없기 때문입니다. 숫자를 하나만 입력하면 표본 표준편차는 N/A로 표시되는데, 공식이 n − 1로 나누며 n = 1일 때 이는 0이 되어 정의되지 않은 나눗셈이 되기 때문입니다. 모집단 표준편차는 값이 하나만 있어도 계산됩니다(결과는 단순히 0). 공식이 n으로 나누기 때문입니다.",
     "faq.q5": "어떤 숫자 형식을 지원하며, 제 데이터가 서버로 전송되나요?",
-    "faq.a5": "숫자는 쉼표, 공백, 줄바꿈으로 구분해 입력하거나 붙여넣으면 되며, 섞어서 사용해도 됩니다 — 음수와 소수 모두 문제없이 처리되고, 스프레드시트에서 열을 그대로 붙여넣어도 동일하게 작동합니다. 유효한 숫자가 아닌 항목은 무시되며, 계산기가 몇 개의 항목을 무시했는지 알려줍니다. 모든 계산은 전적으로 브라우저에서 이루어지며, 입력하거나 붙여넣은 내용은 업로드되거나 누구와도 공유되지 않습니다. 마지막으로 입력한 내용은 이 브라우저의 로컬 저장소에만 저장되므로, 브라우저 데이터를 삭제하면 완전히 제거됩니다."
+    "faq.a5": "숫자는 쉼표, 공백, 줄바꿈으로 구분해 입력하거나 붙여넣으면 되며, 섞어서 사용해도 됩니다 — 음수와 소수 모두 문제없이 처리되고, 스프레드시트에서 열을 그대로 붙여넣어도 동일하게 작동합니다. 유효한 숫자가 아닌 항목은 무시되며, 계산기가 몇 개의 항목을 무시했는지 알려줍니다. 모든 계산은 전적으로 브라우저에서 이루어지며, 입력하거나 붙여넣은 내용은 업로드되거나 누구와도 공유되지 않습니다. 마지막으로 입력한 내용은 이 브라우저의 로컬 저장소에만 저장되므로, 브라우저 데이터를 삭제하면 완전히 제거됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

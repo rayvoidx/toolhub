@@ -95,7 +95,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why do comments, single quotes or trailing commas fail?",
     "faq.a4": "Because this tool validates against the standard JSON specification (RFC 8259), not the relaxed JSON5 or JSONC dialects. Standard JSON requires double quotes around every key and string, forbids trailing commas after the last item, and does not allow comments (// or /* */) or single quotes. If your file uses those, the validator will point to the exact spot that breaks the rules — remove the comment, swap single quotes for double quotes, or delete the trailing comma and it will parse.",
     "faq.q5": "Why do very large integers lose precision, and how are duplicate keys handled?",
-    "faq.a5": "JSON numbers are parsed as standard IEEE-754 doubles, so any integer above 2^53 − 1 (9,007,199,254,740,991) may be rounded — for example a 64-bit ID like 9223372036854775807 can come back slightly changed. Keep such values as strings if the exact digits matter. When an object contains the same key twice, standard JSON keeps only the last occurrence, so duplicates are silently merged; the formatter follows that rule, which is another reason to validate machine-generated JSON before trusting it."
+    "faq.a5": "JSON numbers are parsed as standard IEEE-754 doubles, so any integer above 2^53 − 1 (9,007,199,254,740,991) may be rounded — for example a 64-bit ID like 9223372036854775807 can come back slightly changed. Keep such values as strings if the exact digits matter. When an object contains the same key twice, standard JSON keeps only the last occurrence, so duplicates are silently merged; the formatter follows that rule, which is another reason to validate machine-generated JSON before trusting it.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -175,7 +180,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么注释、单引号或末尾逗号会导致失败？",
     "faq.a4": "因为本工具按照标准 JSON 规范（RFC 8259）校验，而不是宽松的 JSON5 或 JSONC 方言。标准 JSON 要求每个键和字符串都用双引号，禁止最后一项后的末尾逗号，也不允许注释（// 或 /* */）或单引号。如果你的文件用了这些，校验器会指向破坏规则的确切位置——删掉注释、把单引号换成双引号、或去掉末尾逗号，它就能解析了。",
     "faq.q5": "为什么很大的整数会丢失精度？重复的键如何处理？",
-    "faq.a5": "JSON 数字按标准 IEEE-754 双精度浮点解析，因此任何超过 2^53 − 1（9,007,199,254,740,991）的整数都可能被舍入——例如像 9223372036854775807 这样的 64 位 ID 返回时可能略有变化。如果确切数字很重要，请将这类值保存为字符串。当一个对象两次包含同一个键时，标准 JSON 只保留最后一次出现，所以重复项会被静默合并；本工具遵循该规则，这也是在信任机器生成的 JSON 之前先校验它的又一个理由。"
+    "faq.a5": "JSON 数字按标准 IEEE-754 双精度浮点解析，因此任何超过 2^53 − 1（9,007,199,254,740,991）的整数都可能被舍入——例如像 9223372036854775807 这样的 64 位 ID 返回时可能略有变化。如果确切数字很重要，请将这类值保存为字符串。当一个对象两次包含同一个键时，标准 JSON 只保留最后一次出现，所以重复项会被静默合并；本工具遵循该规则，这也是在信任机器生成的 JSON 之前先校验它的又一个理由。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -255,7 +265,12 @@ window.I18N_LOCALES = {
     "faq.q4": "टिप्पणियाँ, एकल उद्धरण या अंत में कॉमा क्यों विफल हो जाते हैं?",
     "faq.a4": "क्योंकि यह टूल मानक JSON विनिर्देश (RFC 8259) के अनुसार वैलिडेट करता है, न कि ढीली JSON5 या JSONC बोलियों के। मानक JSON हर कुंजी और स्ट्रिंग के चारों ओर दोहरे उद्धरण चाहता है, अंतिम आइटम के बाद कॉमा मना करता है, और टिप्पणियाँ (// या /* */) या एकल उद्धरण की अनुमति नहीं देता। अगर आपकी फ़ाइल इनका उपयोग करती है, तो वैलिडेटर नियम तोड़ने वाली ठीक जगह की ओर इशारा करेगा — टिप्पणी हटाएँ, एकल उद्धरण को दोहरे से बदलें, या अंत का कॉमा मिटाएँ और यह पार्स हो जाएगा।",
     "faq.q5": "बहुत बड़े पूर्णांक परिशुद्धता क्यों खो देते हैं, और डुप्लिकेट कुंजियाँ कैसे संभाली जाती हैं?",
-    "faq.a5": "JSON संख्याएँ मानक IEEE-754 डबल के रूप में पार्स होती हैं, इसलिए 2^53 − 1 (9,007,199,254,740,991) से बड़ा कोई भी पूर्णांक गोल हो सकता है — उदाहरण के लिए 9223372036854775807 जैसी 64-बिट ID लौटने पर थोड़ी बदल सकती है। अगर सटीक अंक मायने रखते हैं तो ऐसे मानों को स्ट्रिंग के रूप में रखें। जब कोई ऑब्जेक्ट एक ही कुंजी दो बार रखता है, तो मानक JSON केवल अंतिम घटना रखता है, इसलिए डुप्लिकेट चुपचाप मर्ज हो जाते हैं; यह टूल उसी नियम का पालन करता है, जो मशीन-जनित JSON पर भरोसा करने से पहले उसे वैलिडेट करने का एक और कारण है।"
+    "faq.a5": "JSON संख्याएँ मानक IEEE-754 डबल के रूप में पार्स होती हैं, इसलिए 2^53 − 1 (9,007,199,254,740,991) से बड़ा कोई भी पूर्णांक गोल हो सकता है — उदाहरण के लिए 9223372036854775807 जैसी 64-बिट ID लौटने पर थोड़ी बदल सकती है। अगर सटीक अंक मायने रखते हैं तो ऐसे मानों को स्ट्रिंग के रूप में रखें। जब कोई ऑब्जेक्ट एक ही कुंजी दो बार रखता है, तो मानक JSON केवल अंतिम घटना रखता है, इसलिए डुप्लिकेट चुपचाप मर्ज हो जाते हैं; यह टूल उसी नियम का पालन करता है, जो मशीन-जनित JSON पर भरोसा करने से पहले उसे वैलिडेट करने का एक और कारण है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -335,7 +350,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué fallan los comentarios, las comillas simples o las comas finales?",
     "faq.a4": "Porque esta herramienta valida según la especificación estándar de JSON (RFC 8259), no los dialectos flexibles JSON5 o JSONC. El JSON estándar exige comillas dobles alrededor de cada clave y cadena, prohíbe las comas después del último elemento y no permite comentarios (// o /* */) ni comillas simples. Si tu archivo los usa, el validador señalará el punto exacto que rompe las reglas: elimina el comentario, cambia las comillas simples por dobles o borra la coma final y se analizará.",
     "faq.q5": "¿Por qué los enteros muy grandes pierden precisión y cómo se tratan las claves duplicadas?",
-    "faq.a5": "Los números JSON se analizan como dobles IEEE-754 estándar, por lo que cualquier entero mayor que 2^53 − 1 (9.007.199.254.740.991) puede redondearse; por ejemplo, un ID de 64 bits como 9223372036854775807 puede volver ligeramente cambiado. Guarda esos valores como cadenas si los dígitos exactos importan. Cuando un objeto contiene la misma clave dos veces, el JSON estándar conserva solo la última aparición, así que los duplicados se fusionan en silencio; el formateador sigue esa regla, otra razón para validar el JSON generado por máquinas antes de confiar en él."
+    "faq.a5": "Los números JSON se analizan como dobles IEEE-754 estándar, por lo que cualquier entero mayor que 2^53 − 1 (9.007.199.254.740.991) puede redondearse; por ejemplo, un ID de 64 bits como 9223372036854775807 puede volver ligeramente cambiado. Guarda esos valores como cadenas si los dígitos exactos importan. Cuando un objeto contiene la misma clave dos veces, el JSON estándar conserva solo la última aparición, así que los duplicados se fusionan en silencio; el formateador sigue esa regla, otra razón para validar el JSON generado por máquinas antes de confiar en él.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -415,7 +435,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا تفشل التعليقات أو علامات الاقتباس المفردة أو الفواصل الأخيرة؟",
     "faq.a4": "لأن هذه الأداة تتحقق وفق مواصفات JSON القياسية (RFC 8259)، وليس لهجتَي JSON5 أو JSONC المرنتين. يتطلب JSON القياسي علامات اقتباس مزدوجة حول كل مفتاح ونص، ويمنع الفاصلة بعد العنصر الأخير، ولا يسمح بالتعليقات (‎// أو ‎/* */‎) أو علامات الاقتباس المفردة. إذا استخدم ملفك ذلك، فسيشير المدقّق إلى الموضع الدقيق الذي يخالف القواعد — احذف التعليق، أو بدّل علامات الاقتباس المفردة بمزدوجة، أو احذف الفاصلة الأخيرة وسيُحلَّل الملف.",
     "faq.q5": "لماذا تفقد الأعداد الصحيحة الكبيرة جدًا الدقة، وكيف تُعالَج المفاتيح المكررة؟",
-    "faq.a5": "تُحلَّل أرقام JSON كأعداد عشرية مزدوجة قياسية (IEEE-754)، لذا قد يُقرَّب أي عدد صحيح أكبر من 2^53 − 1 (9,007,199,254,740,991) — فمثلًا مُعرّف 64-بت مثل 9223372036854775807 قد يعود متغيرًا قليلًا. احتفظ بهذه القيم كنصوص إذا كانت الأرقام الدقيقة مهمة. عندما يحتوي كائن على المفتاح نفسه مرتين، يحتفظ JSON القياسي بالظهور الأخير فقط، فتُدمَج المكررات بصمت؛ وتتبع هذه الأداة القاعدة نفسها، وهو سبب آخر للتحقق من JSON المُولَّد آليًا قبل الوثوق به."
+    "faq.a5": "تُحلَّل أرقام JSON كأعداد عشرية مزدوجة قياسية (IEEE-754)، لذا قد يُقرَّب أي عدد صحيح أكبر من 2^53 − 1 (9,007,199,254,740,991) — فمثلًا مُعرّف 64-بت مثل 9223372036854775807 قد يعود متغيرًا قليلًا. احتفظ بهذه القيم كنصوص إذا كانت الأرقام الدقيقة مهمة. عندما يحتوي كائن على المفتاح نفسه مرتين، يحتفظ JSON القياسي بالظهور الأخير فقط، فتُدمَج المكررات بصمت؛ وتتبع هذه الأداة القاعدة نفسها، وهو سبب آخر للتحقق من JSON المُولَّد آليًا قبل الوثوق به.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -495,7 +520,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi les commentaires, les guillemets simples ou les virgules finales échouent-ils ?",
     "faq.a4": "Parce que cet outil valide selon la spécification JSON standard (RFC 8259), et non les dialectes souples JSON5 ou JSONC. Le JSON standard exige des guillemets doubles autour de chaque clé et chaîne, interdit la virgule après le dernier élément et n'autorise ni commentaires (// ou /* */) ni guillemets simples. Si votre fichier en contient, le validateur indiquera l'endroit exact qui enfreint les règles — supprimez le commentaire, remplacez les guillemets simples par des doubles ou effacez la virgule finale et il s'analysera.",
     "faq.q5": "Pourquoi les très grands entiers perdent-ils en précision et comment les clés en double sont-elles gérées ?",
-    "faq.a5": "Les nombres JSON sont analysés comme des doubles IEEE-754 standard, si bien que tout entier supérieur à 2^53 − 1 (9 007 199 254 740 991) peut être arrondi — par exemple, un identifiant 64 bits comme 9223372036854775807 peut revenir légèrement modifié. Conservez ces valeurs sous forme de chaînes si les chiffres exacts comptent. Lorsqu'un objet contient deux fois la même clé, le JSON standard ne garde que la dernière occurrence, donc les doublons sont fusionnés silencieusement ; le formateur suit cette règle, une raison de plus de valider le JSON généré par une machine avant de lui faire confiance."
+    "faq.a5": "Les nombres JSON sont analysés comme des doubles IEEE-754 standard, si bien que tout entier supérieur à 2^53 − 1 (9 007 199 254 740 991) peut être arrondi — par exemple, un identifiant 64 bits comme 9223372036854775807 peut revenir légèrement modifié. Conservez ces valeurs sous forme de chaînes si les chiffres exacts comptent. Lorsqu'un objet contient deux fois la même clé, le JSON standard ne garde que la dernière occurrence, donc les doublons sont fusionnés silencieusement ; le formateur suit cette règle, une raison de plus de valider le JSON généré par une machine avant de lui faire confiance.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -575,7 +605,12 @@ window.I18N_LOCALES = {
     "faq.q4": "মন্তব্য, একক উদ্ধৃতি বা শেষ কমা কেন ব্যর্থ হয়?",
     "faq.a4": "কারণ এই টুল মানক JSON স্পেসিফিকেশন (RFC 8259) অনুযায়ী যাচাই করে, শিথিল JSON5 বা JSONC উপভাষা নয়। মানক JSON প্রতিটি কী ও স্ট্রিং-এর চারপাশে দ্বৈত উদ্ধৃতি চায়, শেষ আইটেমের পর কমা নিষেধ করে, এবং মন্তব্য (// বা /* */) বা একক উদ্ধৃতি অনুমোদন করে না। আপনার ফাইলে এগুলো থাকলে ভ্যালিডেটর নিয়ম-ভঙ্গকারী সঠিক জায়গাটি নির্দেশ করবে — মন্তব্য সরান, একক উদ্ধৃতি দ্বৈততে বদলান, বা শেষ কমা মুছুন, তাহলেই এটি পার্স হবে।",
     "faq.q5": "খুব বড় পূর্ণসংখ্যা কেন নির্ভুলতা হারায়, এবং ডুপ্লিকেট কী কীভাবে পরিচালিত হয়?",
-    "faq.a5": "JSON সংখ্যা মানক IEEE-754 ডাবল হিসেবে পার্স হয়, তাই 2^53 − 1 (9,007,199,254,740,991)-এর বেশি যেকোনো পূর্ণসংখ্যা রাউন্ড হতে পারে — যেমন 9223372036854775807-এর মতো একটি 64-বিট ID ফেরার সময় সামান্য বদলে যেতে পারে। সঠিক অঙ্ক গুরুত্বপূর্ণ হলে এমন মান স্ট্রিং হিসেবে রাখুন। কোনো অবজেক্টে একই কী দুবার থাকলে মানক JSON শুধু শেষ উপস্থিতিটি রাখে, তাই ডুপ্লিকেট নীরবে মিশে যায়; এই টুল সেই নিয়ম অনুসরণ করে, যা মেশিন-জেনারেটেড JSON-এ ভরসা করার আগে যাচাই করার আরেকটি কারণ।"
+    "faq.a5": "JSON সংখ্যা মানক IEEE-754 ডাবল হিসেবে পার্স হয়, তাই 2^53 − 1 (9,007,199,254,740,991)-এর বেশি যেকোনো পূর্ণসংখ্যা রাউন্ড হতে পারে — যেমন 9223372036854775807-এর মতো একটি 64-বিট ID ফেরার সময় সামান্য বদলে যেতে পারে। সঠিক অঙ্ক গুরুত্বপূর্ণ হলে এমন মান স্ট্রিং হিসেবে রাখুন। কোনো অবজেক্টে একই কী দুবার থাকলে মানক JSON শুধু শেষ উপস্থিতিটি রাখে, তাই ডুপ্লিকেট নীরবে মিশে যায়; এই টুল সেই নিয়ম অনুসরণ করে, যা মেশিন-জেনারেটেড JSON-এ ভরসা করার আগে যাচাই করার আরেকটি কারণ।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -655,7 +690,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que comentários, aspas simples ou vírgulas finais falham?",
     "faq.a4": "Porque esta ferramenta valida conforme a especificação JSON padrão (RFC 8259), não os dialetos flexíveis JSON5 ou JSONC. O JSON padrão exige aspas duplas em torno de cada chave e string, proíbe a vírgula após o último item e não permite comentários (// ou /* */) nem aspas simples. Se seu arquivo os usar, o validador apontará o ponto exato que quebra as regras — remova o comentário, troque as aspas simples por duplas ou apague a vírgula final e ele será analisado.",
     "faq.q5": "Por que inteiros muito grandes perdem precisão e como as chaves duplicadas são tratadas?",
-    "faq.a5": "Os números JSON são analisados como doubles IEEE-754 padrão, então qualquer inteiro acima de 2^53 − 1 (9.007.199.254.740.991) pode ser arredondado — por exemplo, um ID de 64 bits como 9223372036854775807 pode voltar levemente alterado. Guarde esses valores como strings se os dígitos exatos importarem. Quando um objeto contém a mesma chave duas vezes, o JSON padrão mantém apenas a última ocorrência, então duplicatas são mescladas silenciosamente; o formatador segue essa regra, mais um motivo para validar JSON gerado por máquina antes de confiar nele."
+    "faq.a5": "Os números JSON são analisados como doubles IEEE-754 padrão, então qualquer inteiro acima de 2^53 − 1 (9.007.199.254.740.991) pode ser arredondado — por exemplo, um ID de 64 bits como 9223372036854775807 pode voltar levemente alterado. Guarde esses valores como strings se os dígitos exatos importarem. Quando um objeto contém a mesma chave duas vezes, o JSON padrão mantém apenas a última ocorrência, então duplicatas são mescladas silenciosamente; o formatador segue essa regra, mais um motivo para validar JSON gerado por máquina antes de confiar nele.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -735,7 +775,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему комментарии, одинарные кавычки или замыкающие запятые вызывают ошибку?",
     "faq.a4": "Потому что этот инструмент проверяет по стандартной спецификации JSON (RFC 8259), а не по гибким диалектам JSON5 или JSONC. Стандартный JSON требует двойных кавычек вокруг каждого ключа и строки, запрещает запятую после последнего элемента и не допускает комментарии (// или /* */) и одинарные кавычки. Если ваш файл их использует, валидатор укажет точное место, нарушающее правила — уберите комментарий, замените одинарные кавычки двойными или удалите замыкающую запятую, и он будет разобран.",
     "faq.q5": "Почему очень большие целые числа теряют точность и как обрабатываются дублирующиеся ключи?",
-    "faq.a5": "Числа JSON разбираются как стандартные double IEEE-754, поэтому любое целое больше 2^53 − 1 (9 007 199 254 740 991) может быть округлено — например, 64-битный идентификатор вроде 9223372036854775807 может вернуться слегка изменённым. Храните такие значения как строки, если важны точные цифры. Когда объект содержит один и тот же ключ дважды, стандартный JSON сохраняет только последнее вхождение, поэтому дубликаты тихо сливаются; форматтер следует этому правилу — ещё один повод проверять машинно-сгенерированный JSON, прежде чем доверять ему."
+    "faq.a5": "Числа JSON разбираются как стандартные double IEEE-754, поэтому любое целое больше 2^53 − 1 (9 007 199 254 740 991) может быть округлено — например, 64-битный идентификатор вроде 9223372036854775807 может вернуться слегка изменённым. Храните такие значения как строки, если важны точные цифры. Когда объект содержит один и тот же ключ дважды, стандартный JSON сохраняет только последнее вхождение, поэтому дубликаты тихо сливаются; форматтер следует этому правилу — ещё один повод проверять машинно-сгенерированный JSON, прежде чем доверять ему.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -815,7 +860,12 @@ window.I18N_LOCALES = {
     "faq.q4": "تبصرے، اکہرے کوٹیشن یا آخری کوما کیوں ناکام ہوتے ہیں؟",
     "faq.a4": "کیونکہ یہ ٹول معیاری JSON تفصیلات (RFC 8259) کے مطابق تصدیق کرتا ہے، نہ کہ نرم JSON5 یا JSONC بولیوں کے۔ معیاری JSON ہر کی اور اسٹرنگ کے گرد دہرے کوٹیشن چاہتا ہے، آخری آئٹم کے بعد کوما منع کرتا ہے، اور تبصرے (// یا /* */) یا اکہرے کوٹیشن کی اجازت نہیں دیتا۔ اگر آپ کی فائل انہیں استعمال کرے تو ویلیڈیٹر اصول توڑنے والی درست جگہ کی نشاندہی کرے گا — تبصرہ ہٹائیں، اکہرے کوٹیشن کو دہرے سے بدلیں، یا آخری کوما مٹائیں اور یہ پارس ہو جائے گا۔",
     "faq.q5": "بہت بڑے عدد صحیح درستگی کیوں کھو دیتے ہیں، اور نقل شدہ کیز کیسے سنبھالی جاتی ہیں؟",
-    "faq.a5": "JSON اعداد معیاری IEEE-754 ڈبل کے طور پر پارس ہوتے ہیں، اس لیے 2^53 − 1 (9,007,199,254,740,991) سے بڑا کوئی بھی عدد صحیح گول ہو سکتا ہے — مثلاً 9223372036854775807 جیسی 64-بٹ ID واپسی پر ذرا بدل سکتی ہے۔ اگر درست ہندسے اہم ہوں تو ایسی اقدار کو اسٹرنگ کے طور پر رکھیں۔ جب کوئی آبجیکٹ ایک ہی کی دو بار رکھے تو معیاری JSON صرف آخری موجودگی رکھتا ہے، اس لیے نقلیں خاموشی سے ضم ہو جاتی ہیں؛ یہ ٹول اسی اصول پر عمل کرتا ہے، جو مشین سے بنے JSON پر بھروسہ کرنے سے پہلے اس کی تصدیق کی ایک اور وجہ ہے۔"
+    "faq.a5": "JSON اعداد معیاری IEEE-754 ڈبل کے طور پر پارس ہوتے ہیں، اس لیے 2^53 − 1 (9,007,199,254,740,991) سے بڑا کوئی بھی عدد صحیح گول ہو سکتا ہے — مثلاً 9223372036854775807 جیسی 64-بٹ ID واپسی پر ذرا بدل سکتی ہے۔ اگر درست ہندسے اہم ہوں تو ایسی اقدار کو اسٹرنگ کے طور پر رکھیں۔ جب کوئی آبجیکٹ ایک ہی کی دو بار رکھے تو معیاری JSON صرف آخری موجودگی رکھتا ہے، اس لیے نقلیں خاموشی سے ضم ہو جاتی ہیں؛ یہ ٹول اسی اصول پر عمل کرتا ہے، جو مشین سے بنے JSON پر بھروسہ کرنے سے پہلے اس کی تصدیق کی ایک اور وجہ ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -895,7 +945,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa komentar, tanda kutip tunggal, atau koma di akhir gagal?",
     "faq.a4": "Karena alat ini memvalidasi menurut spesifikasi JSON standar (RFC 8259), bukan dialek longgar JSON5 atau JSONC. JSON standar mengharuskan tanda kutip ganda di sekitar setiap kunci dan string, melarang koma setelah item terakhir, dan tidak mengizinkan komentar (// atau /* */) maupun tanda kutip tunggal. Jika berkas Anda memakainya, validator akan menunjuk titik persis yang melanggar aturan — hapus komentar, ganti tanda kutip tunggal dengan ganda, atau hapus koma di akhir, dan JSON akan terurai.",
     "faq.q5": "Mengapa bilangan bulat sangat besar kehilangan presisi, dan bagaimana kunci ganda ditangani?",
-    "faq.a5": "Angka JSON diurai sebagai double IEEE-754 standar, jadi bilangan bulat mana pun di atas 2^53 − 1 (9.007.199.254.740.991) bisa dibulatkan — misalnya ID 64-bit seperti 9223372036854775807 bisa kembali sedikit berubah. Simpan nilai seperti itu sebagai string jika digit persisnya penting. Ketika sebuah objek memuat kunci yang sama dua kali, JSON standar hanya menyimpan kemunculan terakhir, sehingga duplikat digabung diam-diam; pemformat mengikuti aturan itu, satu alasan lagi untuk memvalidasi JSON hasil mesin sebelum mempercayainya."
+    "faq.a5": "Angka JSON diurai sebagai double IEEE-754 standar, jadi bilangan bulat mana pun di atas 2^53 − 1 (9.007.199.254.740.991) bisa dibulatkan — misalnya ID 64-bit seperti 9223372036854775807 bisa kembali sedikit berubah. Simpan nilai seperti itu sebagai string jika digit persisnya penting. Ketika sebuah objek memuat kunci yang sama dua kali, JSON standar hanya menyimpan kemunculan terakhir, sehingga duplikat digabung diam-diam; pemformat mengikuti aturan itu, satu alasan lagi untuk memvalidasi JSON hasil mesin sebelum mempercayainya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -975,7 +1030,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum scheitern Kommentare, einfache Anführungszeichen oder abschließende Kommas?",
     "faq.a4": "Weil dieses Tool nach der Standard-JSON-Spezifikation (RFC 8259) validiert, nicht nach den lockeren Dialekten JSON5 oder JSONC. Standard-JSON verlangt doppelte Anführungszeichen um jeden Schlüssel und String, verbietet ein Komma nach dem letzten Element und erlaubt weder Kommentare (// oder /* */) noch einfache Anführungszeichen. Wenn Ihre Datei diese verwendet, weist der Validator genau auf die Stelle hin, die die Regeln bricht — entfernen Sie den Kommentar, ersetzen Sie einfache durch doppelte Anführungszeichen oder löschen Sie das abschließende Komma, dann wird es geparst.",
     "faq.q5": "Warum verlieren sehr große Ganzzahlen an Genauigkeit und wie werden doppelte Schlüssel behandelt?",
-    "faq.a5": "JSON-Zahlen werden als Standard-IEEE-754-Doubles geparst, daher kann jede Ganzzahl über 2^53 − 1 (9.007.199.254.740.991) gerundet werden — etwa eine 64-Bit-ID wie 9223372036854775807 kann leicht verändert zurückkommen. Speichern Sie solche Werte als Zeichenketten, wenn die genauen Ziffern wichtig sind. Enthält ein Objekt denselben Schlüssel zweimal, behält Standard-JSON nur das letzte Vorkommen, sodass Duplikate stillschweigend zusammengeführt werden; der Formatter folgt dieser Regel — ein weiterer Grund, maschinell erzeugtes JSON vor dem Vertrauen zu validieren."
+    "faq.a5": "JSON-Zahlen werden als Standard-IEEE-754-Doubles geparst, daher kann jede Ganzzahl über 2^53 − 1 (9.007.199.254.740.991) gerundet werden — etwa eine 64-Bit-ID wie 9223372036854775807 kann leicht verändert zurückkommen. Speichern Sie solche Werte als Zeichenketten, wenn die genauen Ziffern wichtig sind. Enthält ein Objekt denselben Schlüssel zweimal, behält Standard-JSON nur das letzte Vorkommen, sodass Duplikate stillschweigend zusammengeführt werden; der Formatter folgt dieser Regel — ein weiterer Grund, maschinell erzeugtes JSON vor dem Vertrauen zu validieren.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1055,7 +1115,12 @@ window.I18N_LOCALES = {
     "faq.q4": "コメント・シングルクォート・末尾カンマはなぜエラーになるのですか？",
     "faq.a4": "このツールは、緩いJSON5やJSONCの方言ではなく、標準JSON仕様（RFC 8259）に沿って検証するためです。標準JSONは、すべてのキーと文字列をダブルクォートで囲むことを求め、最後の要素の後のカンマを禁止し、コメント（// や /* */）やシングルクォートを許可しません。ファイルがそれらを使っている場合、バリデーターは規則を破る正確な場所を指し示します。コメントを削除し、シングルクォートをダブルクォートに置き換え、末尾のカンマを消せば解析できます。",
     "faq.q5": "とても大きな整数はなぜ精度を失うのですか。重複キーはどう扱われますか？",
-    "faq.a5": "JSONの数値は標準のIEEE-754倍精度として解析されるため、2^53 − 1（9,007,199,254,740,991）を超える整数は丸められることがあります。たとえば9223372036854775807のような64ビットIDは、戻ってきたときにわずかに変わることがあります。正確な桁が重要な場合は、そうした値を文字列として保持してください。オブジェクトが同じキーを2回含む場合、標準JSONは最後の出現だけを残すため、重複は静かに統合されます。このフォーマッターもその規則に従います。機械生成のJSONを信頼する前に検証すべきもう一つの理由です。"
+    "faq.a5": "JSONの数値は標準のIEEE-754倍精度として解析されるため、2^53 − 1（9,007,199,254,740,991）を超える整数は丸められることがあります。たとえば9223372036854775807のような64ビットIDは、戻ってきたときにわずかに変わることがあります。正確な桁が重要な場合は、そうした値を文字列として保持してください。オブジェクトが同じキーを2回含む場合、標準JSONは最後の出現だけを残すため、重複は静かに統合されます。このフォーマッターもその規則に従います。機械生成のJSONを信頼する前に検証すべきもう一つの理由です。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1135,6 +1200,11 @@ window.I18N_LOCALES = {
     "faq.q4": "주석·홑따옴표·마지막 쉼표는 왜 오류가 나나요?",
     "faq.a4": "이 도구는 느슨한 JSON5나 JSONC 방언이 아니라 표준 JSON 사양(RFC 8259)에 따라 검증하기 때문입니다. 표준 JSON은 모든 키와 문자열을 큰따옴표로 감싸야 하고, 마지막 항목 뒤의 쉼표를 금지하며, 주석(// 또는 /* */)이나 홑따옴표를 허용하지 않습니다. 파일에 이런 것이 있다면 검증기가 규칙을 어긴 정확한 위치를 짚어 줍니다. 주석을 없애고, 홑따옴표를 큰따옴표로 바꾸고, 마지막 쉼표를 지우면 정상적으로 파싱됩니다.",
     "faq.q5": "아주 큰 정수는 왜 정밀도를 잃고, 중복 키는 어떻게 처리되나요?",
-    "faq.a5": "JSON 숫자는 표준 IEEE-754 배정밀도로 파싱되므로 2^53 − 1(9,007,199,254,740,991)을 넘는 정수는 반올림될 수 있습니다. 예를 들어 9223372036854775807 같은 64비트 ID는 되돌아올 때 값이 조금 달라질 수 있습니다. 정확한 자릿수가 중요하면 그런 값은 문자열로 보관하세요. 한 객체에 같은 키가 두 번 있으면 표준 JSON은 마지막 값만 유지하므로 중복은 조용히 병합됩니다. 이 도구도 그 규칙을 따르며, 이는 기계가 생성한 JSON을 신뢰하기 전에 검증해야 하는 또 하나의 이유입니다."
+    "faq.a5": "JSON 숫자는 표준 IEEE-754 배정밀도로 파싱되므로 2^53 − 1(9,007,199,254,740,991)을 넘는 정수는 반올림될 수 있습니다. 예를 들어 9223372036854775807 같은 64비트 ID는 되돌아올 때 값이 조금 달라질 수 있습니다. 정확한 자릿수가 중요하면 그런 값은 문자열로 보관하세요. 한 객체에 같은 키가 두 번 있으면 표준 JSON은 마지막 값만 유지하므로 중복은 조용히 병합됩니다. 이 도구도 그 규칙을 따르며, 이는 기계가 생성한 JSON을 신뢰하기 전에 검증해야 하는 또 하나의 이유입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

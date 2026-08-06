@@ -75,7 +75,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What happens when I hit Snooze, and can I stop the sound if I'm not near the tab?",
     "faq.a4": "Snooze silences the current ring and schedules that same alarm to sound again in exactly 5 minutes — you can snooze as many times as you like. If you don't touch anything, the tone automatically stops itself after a few minutes of ringing to avoid endless noise from an abandoned tab, but the on-screen banner and the flashing browser tab title keep signalling until you press Stop, so you'll still see it when you come back.",
     "faq.q5": "Is my alarm time or label sent to a server, and do I need an account?",
-    "faq.a5": "No. This online alarm clock needs no sign-up and no account — every alarm, along with its time and optional label, is calculated and stored only in your browser's local storage, and nothing is uploaded anywhere. Clearing your browser data or switching devices removes the saved alarms, since there is no server-side sync; that's the trade-off for a tool that tracks nothing about you."
+    "faq.a5": "No. This online alarm clock needs no sign-up and no account — every alarm, along with its time and optional label, is calculated and stored only in your browser's local storage, and nothing is uploaded anywhere. Clearing your browser data or switching devices removes the saved alarms, since there is no server-side sync; that's the trade-off for a tool that tracks nothing about you.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -135,7 +140,12 @@ window.I18N_LOCALES = {
     "faq.q4": "点击“稍后提醒”会发生什么？如果我不在标签页旁边，还能停止声音吗？",
     "faq.a4": "稍后提醒会让当前的响铃静音，并把同一个闹钟安排在正好 5 分钟后再次响起——你可以按需多次使用这个功能。如果你没有做任何操作，提示音会在响铃几分钟后自动停止，避免无人查看的标签页无休止地发出声音，但屏幕横幅和闪烁的浏览器标签标题会持续提示，直到你按下“停止”，所以你回来后仍然能看到它。",
     "faq.q5": "我的闹钟时间或标签会发送到服务器吗？需要注册账号吗？",
-    "faq.a5": "不会。这款在线闹钟不需要注册，也不需要账号——每个闹钟连同它的时间和可选标签，都只在你浏览器的本地存储中计算和保存，不会上传到任何地方。清除浏览器数据或更换设备会导致已保存的闹钟丢失，因为没有服务器端同步；这正是一款不追踪你任何信息的工具所需要的取舍。"
+    "faq.a5": "不会。这款在线闹钟不需要注册，也不需要账号——每个闹钟连同它的时间和可选标签，都只在你浏览器的本地存储中计算和保存，不会上传到任何地方。清除浏览器数据或更换设备会导致已保存的闹钟丢失，因为没有服务器端同步；这正是一款不追踪你任何信息的工具所需要的取舍。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -195,7 +205,12 @@ window.I18N_LOCALES = {
     "faq.q4": "स्नूज़ दबाने पर क्या होता है, और अगर मैं टैब के पास न होऊँ तो क्या मैं ध्वनि रोक सकता हूँ?",
     "faq.a4": "स्नूज़ मौजूदा बजती हुई ध्वनि को शांत कर देता है और उसी अलार्म को ठीक 5 मिनट बाद फिर बजने के लिए शेड्यूल कर देता है — आप जितनी बार चाहें स्नूज़ कर सकते हैं। अगर आप कुछ नहीं छूते, तो टोन कुछ मिनट बजने के बाद अपने आप रुक जाता है ताकि किसी छोड़े गए टैब से लगातार शोर न हो, लेकिन ऑन-स्क्रीन बैनर और झपकता हुआ ब्राउज़र टैब शीर्षक तब तक संकेत देते रहते हैं जब तक आप “रोकें” न दबाएँ, इसलिए लौटने पर आपको यह दिख जाएगा।",
     "faq.q5": "क्या मेरा अलार्म समय या लेबल किसी सर्वर पर भेजा जाता है, और क्या मुझे खाता चाहिए?",
-    "faq.a5": "नहीं। इस ऑनलाइन अलार्म घड़ी के लिए साइन-अप या खाते की ज़रूरत नहीं है — हर अलार्म, उसके समय और वैकल्पिक लेबल सहित, केवल आपके ब्राउज़र के लोकल स्टोरेज में गणना और सहेजा जाता है, और कहीं अपलोड नहीं होता। ब्राउज़र डेटा साफ़ करने या डिवाइस बदलने से सहेजे गए अलार्म हट जाते हैं, क्योंकि कोई सर्वर-साइड सिंक नहीं है; एक ऐसे टूल के लिए यही समझौता है जो आपके बारे में कुछ भी ट्रैक नहीं करता।"
+    "faq.a5": "नहीं। इस ऑनलाइन अलार्म घड़ी के लिए साइन-अप या खाते की ज़रूरत नहीं है — हर अलार्म, उसके समय और वैकल्पिक लेबल सहित, केवल आपके ब्राउज़र के लोकल स्टोरेज में गणना और सहेजा जाता है, और कहीं अपलोड नहीं होता। ब्राउज़र डेटा साफ़ करने या डिवाइस बदलने से सहेजे गए अलार्म हट जाते हैं, क्योंकि कोई सर्वर-साइड सिंक नहीं है; एक ऐसे टूल के लिए यही समझौता है जो आपके बारे में कुछ भी ट्रैक नहीं करता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -255,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué ocurre al pulsar Posponer, y puedo detener el sonido si no estoy junto a la pestaña?",
     "faq.a4": "Posponer silencia el sonido actual y programa esa misma alarma para sonar de nuevo en exactamente 5 minutos; puedes posponerla tantas veces como quieras. Si no tocas nada, el tono se detiene solo tras unos minutos de sonar para evitar un ruido interminable desde una pestaña abandonada, pero el aviso en pantalla y el título parpadeante de la pestaña siguen avisando hasta que pulses Detener, así que lo verás al volver.",
     "faq.q5": "¿Se envía a un servidor mi hora de alarma o etiqueta, y necesito una cuenta?",
-    "faq.a5": "No. Este despertador en línea no requiere registro ni cuenta: cada alarma, junto con su hora y etiqueta opcional, se calcula y guarda solo en el almacenamiento local de tu navegador, y no se sube a ningún sitio. Borrar los datos del navegador o cambiar de dispositivo elimina las alarmas guardadas, ya que no hay sincronización en el servidor; ese es el compromiso de una herramienta que no rastrea nada sobre ti."
+    "faq.a5": "No. Este despertador en línea no requiere registro ni cuenta: cada alarma, junto con su hora y etiqueta opcional, se calcula y guarda solo en el almacenamiento local de tu navegador, y no se sube a ningún sitio. Borrar los datos del navegador o cambiar de dispositivo elimina las alarmas guardadas, ya que no hay sincronización en el servidor; ese es el compromiso de una herramienta que no rastrea nada sobre ti.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -315,7 +335,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ماذا يحدث عند الضغط على غفوة، وهل يمكنني إيقاف الصوت إذا لم أكن بالقرب من التبويب؟",
     "faq.a4": "تُسكت «غفوة» الرنين الحالي وتُجدول المنبه نفسه ليرن مرة أخرى بعد 5 دقائق بالضبط — ويمكنك استخدام الغفوة عدة مرات كما تشاء. إذا لم تلمس شيئًا، تتوقف النغمة تلقائيًا من تلقاء نفسها بعد بضع دقائق من الرنين لتجنب ضجيج لا ينتهي من تبويب مهجور، لكن اللافتة على الشاشة وعنوان تبويب المتصفح الوامض يستمران في التنبيه حتى تضغط على إيقاف، فسترى ذلك عند عودتك.",
     "faq.q5": "هل يُرسل وقت المنبه أو تسميته إلى خادم، وهل أحتاج إلى حساب؟",
-    "faq.a5": "لا. لا يتطلب هذا المنبه عبر الإنترنت تسجيلًا ولا حسابًا — يُحسب كل منبه، مع وقته وتسميته الاختيارية، ويُحفظ فقط في التخزين المحلي لمتصفحك، ولا يُرفع إلى أي مكان. مسح بيانات المتصفح أو تغيير الجهاز يزيل المنبهات المحفوظة، لأنه لا توجد مزامنة من جانب الخادم؛ وهذه هي المقايضة اللازمة لأداة لا تتعقب أي شيء عنك."
+    "faq.a5": "لا. لا يتطلب هذا المنبه عبر الإنترنت تسجيلًا ولا حسابًا — يُحسب كل منبه، مع وقته وتسميته الاختيارية، ويُحفظ فقط في التخزين المحلي لمتصفحك، ولا يُرفع إلى أي مكان. مسح بيانات المتصفح أو تغيير الجهاز يزيل المنبهات المحفوظة، لأنه لا توجد مزامنة من جانب الخادم؛ وهذه هي المقايضة اللازمة لأداة لا تتعقب أي شيء عنك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -375,7 +400,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que se passe-t-il quand j'appuie sur Répéter, et puis-je arrêter le son si je ne suis pas près de l'onglet ?",
     "faq.a4": "Répéter coupe la sonnerie en cours et reprogramme la même alarme pour sonner exactement 5 minutes plus tard — vous pouvez répéter autant de fois que vous le souhaitez. Si vous ne touchez à rien, la tonalité s'arrête automatiquement au bout de quelques minutes pour éviter un bruit sans fin depuis un onglet abandonné, mais la bannière à l'écran et le titre clignotant de l'onglet continuent de signaler jusqu'à ce que vous appuyiez sur Arrêter, donc vous le verrez à votre retour.",
     "faq.q5": "Mon heure d'alarme ou mon libellé sont-ils envoyés à un serveur, et ai-je besoin d'un compte ?",
-    "faq.a5": "Non. Ce réveil en ligne ne nécessite ni inscription ni compte — chaque alarme, avec son heure et son libellé facultatif, est calculée et stockée uniquement dans le stockage local de votre navigateur, et rien n'est envoyé où que ce soit. Effacer les données du navigateur ou changer d'appareil supprime les alarmes enregistrées, car il n'y a pas de synchronisation côté serveur ; c'est le compromis d'un outil qui ne trace rien sur vous."
+    "faq.a5": "Non. Ce réveil en ligne ne nécessite ni inscription ni compte — chaque alarme, avec son heure et son libellé facultatif, est calculée et stockée uniquement dans le stockage local de votre navigateur, et rien n'est envoyé où que ce soit. Effacer les données du navigateur ou changer d'appareil supprime les alarmes enregistrées, car il n'y a pas de synchronisation côté serveur ; c'est le compromis d'un outil qui ne trace rien sur vous.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -435,7 +465,12 @@ window.I18N_LOCALES = {
     "faq.q4": "স্নুজে চাপ দিলে কী হয়, আর আমি ট্যাবের কাছে না থাকলে কি শব্দ থামাতে পারি?",
     "faq.a4": "স্নুজ বর্তমান বাজতে থাকা শব্দ নিঃশব্দ করে দেয় এবং সেই একই অ্যালার্মকে ঠিক ৫ মিনিট পরে আবার বাজার জন্য নির্ধারণ করে — আপনি যতবার ইচ্ছা স্নুজ করতে পারেন। আপনি কিছু না ছুঁলে, একটি পরিত্যক্ত ট্যাব থেকে অন্তহীন শব্দ এড়াতে টোনটি কয়েক মিনিট বাজার পর নিজে থেকেই থেমে যায়, তবে অন-স্ক্রিন ব্যানার এবং ঝলকানো ব্রাউজার ট্যাব শিরোনাম আপনি থামান না চাপা পর্যন্ত সংকেত দিতে থাকে, তাই ফিরে এলে আপনি এটি দেখতে পাবেন।",
     "faq.q5": "আমার অ্যালার্মের সময় বা লেবেল কি কোনো সার্ভারে পাঠানো হয়, আর আমার কি অ্যাকাউন্ট দরকার?",
-    "faq.a5": "না। এই অনলাইন অ্যালার্ম ঘড়িতে সাইন-আপ বা অ্যাকাউন্টের দরকার নেই — প্রতিটি অ্যালার্ম, এর সময় ও ঐচ্ছিক লেবেলসহ, শুধুমাত্র আপনার ব্রাউজারের লোকাল স্টোরেজে গণনা ও সংরক্ষিত হয়, এবং কোথাও আপলোড করা হয় না। ব্রাউজার ডেটা মুছে ফেললে বা ডিভাইস পরিবর্তন করলে সংরক্ষিত অ্যালার্মগুলো মুছে যায়, কারণ কোনো সার্ভার-সাইড সিঙ্ক নেই; আপনার সম্পর্কে কিছুই ট্র্যাক না করা একটি টুলের জন্য এটাই বিনিময়।"
+    "faq.a5": "না। এই অনলাইন অ্যালার্ম ঘড়িতে সাইন-আপ বা অ্যাকাউন্টের দরকার নেই — প্রতিটি অ্যালার্ম, এর সময় ও ঐচ্ছিক লেবেলসহ, শুধুমাত্র আপনার ব্রাউজারের লোকাল স্টোরেজে গণনা ও সংরক্ষিত হয়, এবং কোথাও আপলোড করা হয় না। ব্রাউজার ডেটা মুছে ফেললে বা ডিভাইস পরিবর্তন করলে সংরক্ষিত অ্যালার্মগুলো মুছে যায়, কারণ কোনো সার্ভার-সাইড সিঙ্ক নেই; আপনার সম্পর্কে কিছুই ট্র্যাক না করা একটি টুলের জন্য এটাই বিনিময়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -495,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que acontece quando aperto Soneca, e consigo parar o som se não estiver perto da aba?",
     "faq.a4": "Soneca silencia o toque atual e reagenda esse mesmo alarme para tocar novamente em exatamente 5 minutos — você pode usar a soneca quantas vezes quiser. Se você não tocar em nada, o tom para automaticamente depois de alguns minutos tocando para evitar barulho interminável de uma aba abandonada, mas o aviso na tela e o título piscante da aba continuam sinalizando até você apertar Parar, então você ainda vai vê-lo ao voltar.",
     "faq.q5": "Meu horário de alarme ou rótulo é enviado a um servidor, e preciso de uma conta?",
-    "faq.a5": "Não. Este despertador online não exige cadastro nem conta — cada alarme, com seu horário e rótulo opcional, é calculado e armazenado apenas no armazenamento local do seu navegador, e nada é enviado a lugar nenhum. Limpar os dados do navegador ou trocar de dispositivo remove os alarmes salvos, já que não há sincronização no servidor; essa é a troca justa por uma ferramenta que não rastreia nada sobre você."
+    "faq.a5": "Não. Este despertador online não exige cadastro nem conta — cada alarme, com seu horário e rótulo opcional, é calculado e armazenado apenas no armazenamento local do seu navegador, e nada é enviado a lugar nenhum. Limpar os dados do navegador ou trocar de dispositivo remove os alarmes salvos, já que não há sincronização no servidor; essa é a troca justa por uma ferramenta que não rastreia nada sobre você.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -555,7 +595,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что происходит при нажатии «Отложить», и могу ли я остановить звук, если не рядом с вкладкой?",
     "faq.a4": "«Отложить» заглушает текущий сигнал и планирует этот же будильник на повтор ровно через 5 минут — вы можете откладывать сколько угодно раз. Если вы ничего не трогаете, тон автоматически останавливается сам после нескольких минут звонка, чтобы избежать бесконечного шума от заброшенной вкладки, но баннер на экране и мигающий заголовок вкладки браузера продолжают сигнализировать, пока вы не нажмёте «Остановить», так что вы всё равно увидите его по возвращении.",
     "faq.q5": "Отправляется ли время или метка моего будильника на сервер, и нужен ли мне аккаунт?",
-    "faq.a5": "Нет. Этот онлайн-будильник не требует регистрации или аккаунта — каждый будильник, вместе с временем и необязательной меткой, вычисляется и хранится только в локальном хранилище вашего браузера, и никуда не отправляется. Очистка данных браузера или смена устройства удаляет сохранённые будильники, так как серверной синхронизации нет; это компромисс инструмента, который ничего о вас не отслеживает."
+    "faq.a5": "Нет. Этот онлайн-будильник не требует регистрации или аккаунта — каждый будильник, вместе с временем и необязательной меткой, вычисляется и хранится только в локальном хранилище вашего браузера, и никуда не отправляется. Очистка данных браузера или смена устройства удаляет сохранённые будильники, так как серверной синхронизации нет; это компромисс инструмента, который ничего о вас не отслеживает.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -615,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "اسنوز دبانے پر کیا ہوتا ہے، اور اگر میں ٹیب کے قریب نہ ہوں تو کیا میں آواز روک سکتا ہوں؟",
     "faq.a4": "اسنوز موجودہ بجتی ہوئی آواز کو خاموش کر دیتا ہے اور اسی الارم کو ٹھیک 5 منٹ بعد دوبارہ بجنے کے لیے شیڈول کر دیتا ہے — آپ جتنی بار چاہیں اسنوز کر سکتے ہیں۔ اگر آپ کچھ نہیں چھوتے، تو ٹون چند منٹ بجنے کے بعد خود بخود رک جاتا ہے تاکہ چھوڑے گئے ٹیب سے مسلسل شور نہ ہو، لیکن آن اسکرین بینر اور جھپکتا ہوا براؤزر ٹیب کا عنوان اس وقت تک اشارہ دیتے رہتے ہیں جب تک آپ روکیں نہ دبائیں، اس لیے واپس آنے پر آپ کو یہ نظر آئے گا۔",
     "faq.q5": "کیا میرا الارم وقت یا لیبل کسی سرور کو بھیجا جاتا ہے، اور کیا مجھے اکاؤنٹ کی ضرورت ہے؟",
-    "faq.a5": "نہیں۔ اس آن لائن الارم گھڑی کے لیے سائن اپ یا اکاؤنٹ کی ضرورت نہیں — ہر الارم، اپنے وقت اور اختیاری لیبل کے ساتھ، صرف آپ کے براؤزر کے لوکل اسٹوریج میں شمار اور محفوظ ہوتا ہے، اور کہیں اپ لوڈ نہیں ہوتا۔ براؤزر ڈیٹا صاف کرنے یا ڈیوائس تبدیل کرنے سے محفوظ شدہ الارمز حذف ہو جاتے ہیں، کیونکہ کوئی سرور سائیڈ سنک نہیں؛ یہی ایک ایسے ٹول کا سمجھوتہ ہے جو آپ کے بارے میں کچھ بھی ٹریک نہیں کرتا۔"
+    "faq.a5": "نہیں۔ اس آن لائن الارم گھڑی کے لیے سائن اپ یا اکاؤنٹ کی ضرورت نہیں — ہر الارم، اپنے وقت اور اختیاری لیبل کے ساتھ، صرف آپ کے براؤزر کے لوکل اسٹوریج میں شمار اور محفوظ ہوتا ہے، اور کہیں اپ لوڈ نہیں ہوتا۔ براؤزر ڈیٹا صاف کرنے یا ڈیوائس تبدیل کرنے سے محفوظ شدہ الارمز حذف ہو جاتے ہیں، کیونکہ کوئی سرور سائیڈ سنک نہیں؛ یہی ایک ایسے ٹول کا سمجھوتہ ہے جو آپ کے بارے میں کچھ بھی ٹریک نہیں کرتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -675,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa yang terjadi saat saya menekan Tunda, dan bisakah saya menghentikan suara jika tidak dekat tab?",
     "faq.a4": "Tunda membisukan bunyi saat ini dan menjadwalkan ulang alarm yang sama untuk berbunyi lagi tepat 5 menit kemudian — Anda bisa menunda sebanyak yang Anda mau. Jika tidak menyentuh apa pun, nada berhenti otomatis setelah berbunyi beberapa menit untuk menghindari suara tanpa henti dari tab yang ditinggalkan, tetapi spanduk di layar dan judul tab browser yang berkedip terus memberi sinyal sampai Anda menekan Hentikan, jadi Anda akan tetap melihatnya saat kembali.",
     "faq.q5": "Apakah waktu atau label alarm saya dikirim ke server, dan apakah saya perlu akun?",
-    "faq.a5": "Tidak. Alarm online ini tidak memerlukan pendaftaran atau akun — setiap alarm, beserta waktu dan label opsionalnya, dihitung dan disimpan hanya di penyimpanan lokal browser Anda, dan tidak ada yang diunggah ke mana pun. Menghapus data browser atau berganti perangkat akan menghapus alarm yang tersimpan, karena tidak ada sinkronisasi sisi server; itulah trade-off untuk alat yang tidak melacak apa pun tentang Anda."
+    "faq.a5": "Tidak. Alarm online ini tidak memerlukan pendaftaran atau akun — setiap alarm, beserta waktu dan label opsionalnya, dihitung dan disimpan hanya di penyimpanan lokal browser Anda, dan tidak ada yang diunggah ke mana pun. Menghapus data browser atau berganti perangkat akan menghapus alarm yang tersimpan, karena tidak ada sinkronisasi sisi server; itulah trade-off untuk alat yang tidak melacak apa pun tentang Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -735,7 +790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was passiert, wenn ich auf Schlummern drücke, und kann ich den Ton stoppen, wenn ich nicht in der Nähe des Tabs bin?",
     "faq.a4": "Schlummern schaltet das aktuelle Klingeln stumm und plant denselben Alarm für genau 5 Minuten später neu ein — du kannst so oft schlummern, wie du willst. Fasst du nichts an, stoppt der Ton nach ein paar Minuten Klingeln automatisch von selbst, um endloses Geräusch von einem verlassenen Tab zu vermeiden, aber das Banner auf dem Bildschirm und der blinkende Tab-Titel signalisieren weiter, bis du auf Stopp drückst, sodass du es bei deiner Rückkehr trotzdem siehst.",
     "faq.q5": "Wird meine Alarmzeit oder Beschriftung an einen Server gesendet, und brauche ich ein Konto?",
-    "faq.a5": "Nein. Dieser Online-Wecker benötigt keine Anmeldung und kein Konto — jeder Alarm wird zusammen mit seiner Uhrzeit und optionalen Beschriftung nur im lokalen Speicher deines Browsers berechnet und gespeichert, und nichts wird irgendwohin hochgeladen. Das Löschen der Browserdaten oder ein Gerätewechsel entfernt die gespeicherten Alarme, da es keine serverseitige Synchronisierung gibt; das ist der Kompromiss bei einem Tool, das nichts über dich verfolgt."
+    "faq.a5": "Nein. Dieser Online-Wecker benötigt keine Anmeldung und kein Konto — jeder Alarm wird zusammen mit seiner Uhrzeit und optionalen Beschriftung nur im lokalen Speicher deines Browsers berechnet und gespeichert, und nichts wird irgendwohin hochgeladen. Das Löschen der Browserdaten oder ein Gerätewechsel entfernt die gespeicherten Alarme, da es keine serverseitige Synchronisierung gibt; das ist der Kompromiss bei einem Tool, das nichts über dich verfolgt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -795,7 +855,12 @@ window.I18N_LOCALES = {
     "faq.q4": "スヌーズを押すとどうなりますか？タブのそばにいなくても音を止められますか？",
     "faq.a4": "スヌーズは現在鳴っているアラームを消音し、同じアラームをちょうど5分後にもう一度鳴るよう再設定します — 何度でもスヌーズできます。何も操作しなければ、放置されたタブから延々と音が鳴り続けないよう、数分間鳴った後トーンは自動的に停止しますが、画面のバナーと点滅するブラウザタブのタイトルは、停止を押すまで知らせ続けるので、戻ってきたときにも気付けます。",
     "faq.q5": "アラームの時刻やラベルはサーバーに送信されますか？アカウントは必要ですか？",
-    "faq.a5": "いいえ。このオンライン目覚まし時計に登録やアカウントは不要です — 各アラームは、その時刻と任意のラベルとともに、ブラウザのローカルストレージ内でのみ計算・保存され、どこにもアップロードされません。サーバー側の同期がないため、ブラウザのデータを消去したり端末を変更したりすると保存されたアラームは失われます。これは、あなたについて何も追跡しないツールであることの引き換えです。"
+    "faq.a5": "いいえ。このオンライン目覚まし時計に登録やアカウントは不要です — 各アラームは、その時刻と任意のラベルとともに、ブラウザのローカルストレージ内でのみ計算・保存され、どこにもアップロードされません。サーバー側の同期がないため、ブラウザのデータを消去したり端末を変更したりすると保存されたアラームは失われます。これは、あなたについて何も追跡しないツールであることの引き換えです。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -855,6 +920,11 @@ window.I18N_LOCALES = {
     "faq.q4": "다시 알림을 누르면 어떻게 되나요? 탭 근처에 없어도 소리를 멈출 수 있나요?",
     "faq.a4": "다시 알림은 현재 울리는 소리를 멈추고 같은 알람을 정확히 5분 후에 다시 울리도록 예약합니다 — 원하는 만큼 여러 번 사용할 수 있습니다. 아무것도 건드리지 않으면 방치된 탭에서 끝없이 소리가 나는 것을 막기 위해 몇 분간 울린 뒤 알람음은 자동으로 멈추지만, 화면 배너와 깜빡이는 브라우저 탭 제목은 정지를 누르기 전까지 계속 신호를 보내므로 돌아왔을 때도 확인할 수 있습니다.",
     "faq.q5": "알람 시간이나 라벨이 서버로 전송되나요? 계정이 필요한가요?",
-    "faq.a5": "아니요. 이 온라인 알람 시계는 가입도 계정도 필요 없습니다 — 모든 알람은 시간과 선택적 라벨을 포함해 오직 이 브라우저의 로컬 저장소에서만 계산되고 저장되며, 어디에도 업로드되지 않습니다. 서버 측 동기화가 없기 때문에 브라우저 데이터를 지우거나 기기를 바꾸면 저장된 알람이 사라집니다. 이는 사용자에 대해 아무것도 추적하지 않는 도구가 감수하는 트레이드오프입니다."
+    "faq.a5": "아니요. 이 온라인 알람 시계는 가입도 계정도 필요 없습니다 — 모든 알람은 시간과 선택적 라벨을 포함해 오직 이 브라우저의 로컬 저장소에서만 계산되고 저장되며, 어디에도 업로드되지 않습니다. 서버 측 동기화가 없기 때문에 브라우저 데이터를 지우거나 기기를 바꾸면 저장된 알람이 사라집니다. 이는 사용자에 대해 아무것도 추적하지 않는 도구가 감수하는 트레이드오프입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -79,7 +79,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I split fuel cost or add a round trip?",
     "faq.a4": "Open \"Round trip and passengers\" under the price. Tick round trip to count the drive there and back (distance × 2), and set the number of passengers with the − and + buttons — the calculator then shows the cost per passenger so everyone can chip in a fair share. Both are optional: leave them alone for a plain one-way estimate.",
     "faq.q5": "Are live fuel prices included?",
-    "faq.a5": "No. You enter the current fuel price yourself, so the result is always up to date and never depends on an external server. Every calculation runs locally in your browser — nothing you type is uploaded, saved, or shared."
+    "faq.a5": "No. You enter the current fuel price yourself, so the result is always up to date and never depends on an external server. Every calculation runs locally in your browser — nothing you type is uploaded, saved, or shared.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -140,7 +145,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如何分摊油费或添加往返？",
     "faq.a4": "展开油价下方的“往返与乘客”。勾选往返即可计入去程和返程（距离 × 2），用 − 和 + 按钮设置乘客人数——计算器会显示每位乘客的费用，方便大家公平分摊。两者都是可选的：不动它们就是普通的单程估算。",
     "faq.q5": "是否包含实时油价？",
-    "faq.a5": "不包含。油价由你自己输入，因此结果始终最新，也不依赖任何外部服务器。所有计算都在你的浏览器本地完成——你输入的内容不会被上传、保存或分享。"
+    "faq.a5": "不包含。油价由你自己输入，因此结果始终最新，也不依赖任何外部服务器。所有计算都在你的浏览器本地完成——你输入的内容不会被上传、保存或分享。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -201,7 +211,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ईंधन खर्च कैसे बाँटें या राउंड ट्रिप कैसे जोड़ें?",
     "faq.a4": "कीमत के नीचे \"राउंड ट्रिप और यात्री\" खोलें। जाने और लौटने दोनों को गिनने के लिए राउंड ट्रिप चुनें (दूरी × 2), और − तथा + बटन से यात्रियों की संख्या तय करें — फिर कैलकुलेटर प्रति यात्री खर्च दिखाएगा ताकि सब बराबरी से हिस्सा दे सकें। दोनों वैकल्पिक हैं: इन्हें छोड़ दें तो सीधा वन-वे अनुमान मिलेगा।",
     "faq.q5": "क्या इसमें लाइव ईंधन कीमतें शामिल हैं?",
-    "faq.a5": "नहीं। मौजूदा ईंधन कीमत आप खुद दर्ज करते हैं, इसलिए परिणाम हमेशा अद्यतित रहता है और किसी बाहरी सर्वर पर निर्भर नहीं करता। हर गणना आपके ब्राउज़र में ही चलती है — आपका दर्ज किया कुछ भी अपलोड, सेव या साझा नहीं होता।"
+    "faq.a5": "नहीं। मौजूदा ईंधन कीमत आप खुद दर्ज करते हैं, इसलिए परिणाम हमेशा अद्यतित रहता है और किसी बाहरी सर्वर पर निर्भर नहीं करता। हर गणना आपके ब्राउज़र में ही चलती है — आपका दर्ज किया कुछ भी अपलोड, सेव या साझा नहीं होता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -262,7 +277,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo reparto el costo del combustible o añado ida y vuelta?",
     "faq.a4": "Abre «Ida y vuelta y pasajeros» debajo del precio. Marca ida y vuelta para contar el trayecto de ida y de regreso (distancia × 2) y ajusta el número de pasajeros con los botones − y +: la calculadora mostrará el costo por pasajero para que cada uno aporte su parte justa. Ambas opciones son opcionales: déjalas como están para una estimación simple de solo ida.",
     "faq.q5": "¿Incluye precios de combustible en tiempo real?",
-    "faq.a5": "No. Tú introduces el precio actual del combustible, por lo que el resultado siempre está actualizado y no depende de ningún servidor externo. Cada cálculo se ejecuta localmente en tu navegador: nada de lo que escribes se sube, guarda ni comparte."
+    "faq.a5": "No. Tú introduces el precio actual del combustible, por lo que el resultado siempre está actualizado y no depende de ningún servidor externo. Cada cálculo se ejecuta localmente en tu navegador: nada de lo que escribes se sube, guarda ni comparte.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -323,7 +343,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أقسّم تكلفة الوقود أو أضيف الذهاب والإياب؟",
     "faq.a4": "افتح «الذهاب والإياب والركاب» أسفل السعر. فعّل الذهاب والإياب لاحتساب الطريقين (المسافة × 2)، واضبط عدد الركاب بزرّي − و+، فتعرض الحاسبة التكلفة لكل راكب ليساهم الجميع بحصة عادلة. كلاهما اختياري: اتركهما كما هما لتقدير بسيط لرحلة ذهاب فقط.",
     "faq.q5": "هل تتضمن أسعار وقود مباشرة؟",
-    "faq.a5": "لا. تُدخل سعر الوقود الحالي بنفسك، فتبقى النتيجة محدّثة دائمًا ولا تعتمد على أي خادم خارجي. تُجرى كل عملية حسابية محليًا في متصفحك — لا يُرفع ما تكتبه ولا يُحفظ ولا يُشارك."
+    "faq.a5": "لا. تُدخل سعر الوقود الحالي بنفسك، فتبقى النتيجة محدّثة دائمًا ولا تعتمد على أي خادم خارجي. تُجرى كل عملية حسابية محليًا في متصفحك — لا يُرفع ما تكتبه ولا يُحفظ ولا يُشارك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -384,7 +409,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment partager le coût ou ajouter un aller-retour ?",
     "faq.a4": "Ouvrez « Aller-retour et passagers » sous le prix. Cochez aller-retour pour compter le trajet aller et retour (distance × 2), et réglez le nombre de passagers avec les boutons − et + : le calculateur affiche alors le coût par passager pour que chacun paie sa juste part. Les deux sont facultatifs : laissez-les tels quels pour une simple estimation aller simple.",
     "faq.q5": "Les prix du carburant en temps réel sont-ils inclus ?",
-    "faq.a5": "Non. Vous saisissez vous-même le prix actuel du carburant : le résultat est donc toujours à jour et ne dépend d'aucun serveur externe. Chaque calcul s'exécute localement dans votre navigateur — rien de ce que vous saisissez n'est envoyé, enregistré ni partagé."
+    "faq.a5": "Non. Vous saisissez vous-même le prix actuel du carburant : le résultat est donc toujours à jour et ne dépend d'aucun serveur externe. Chaque calcul s'exécute localement dans votre navigateur — rien de ce que vous saisissez n'est envoyé, enregistré ni partagé.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -445,7 +475,12 @@ window.I18N_LOCALES = {
     "faq.q4": "জ্বালানি খরচ কীভাবে ভাগ করব বা রাউন্ড ট্রিপ যোগ করব?",
     "faq.a4": "দামের নিচে \"রাউন্ড ট্রিপ ও যাত্রী\" খুলুন। যাওয়া ও ফেরা দুটোই গুনতে রাউন্ড ট্রিপ টিক করুন (দূরত্ব × 2), আর − ও + বোতাম দিয়ে যাত্রীসংখ্যা ঠিক করুন — তখন ক্যালকুলেটর যাত্রীপ্রতি খরচ দেখাবে যাতে সবাই ন্যায্য ভাগ দিতে পারে। দুটিই ঐচ্ছিক: হাত না দিলে সাধারণ একমুখী হিসাব পাবেন।",
     "faq.q5": "এতে কি লাইভ জ্বালানির দাম আছে?",
-    "faq.a5": "না। বর্তমান জ্বালানির দাম আপনি নিজে দেন, তাই ফলাফল সবসময় হালনাগাদ থাকে এবং কোনো বাইরের সার্ভারের উপর নির্ভর করে না। প্রতিটি হিসাব আপনার ব্রাউজারেই চলে — আপনি যা লেখেন তা আপলোড, সংরক্ষণ বা শেয়ার হয় না।"
+    "faq.a5": "না। বর্তমান জ্বালানির দাম আপনি নিজে দেন, তাই ফলাফল সবসময় হালনাগাদ থাকে এবং কোনো বাইরের সার্ভারের উপর নির্ভর করে না। প্রতিটি হিসাব আপনার ব্রাউজারেই চলে — আপনি যা লেখেন তা আপলোড, সংরক্ষণ বা শেয়ার হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -506,7 +541,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como divido o custo ou adiciono ida e volta?",
     "faq.a4": "Abra \"Ida e volta e passageiros\" abaixo do preço. Marque ida e volta para contar o trajeto de ida e de volta (distância × 2) e ajuste o número de passageiros com os botões − e + — a calculadora mostra o custo por passageiro para cada um pagar sua parte justa. Os dois são opcionais: deixe como estão para uma estimativa simples só de ida.",
     "faq.q5": "Os preços de combustível em tempo real estão incluídos?",
-    "faq.a5": "Não. Você mesmo informa o preço atual do combustível, então o resultado está sempre atualizado e não depende de nenhum servidor externo. Cada cálculo roda localmente no seu navegador — nada do que você digita é enviado, salvo ou compartilhado."
+    "faq.a5": "Não. Você mesmo informa o preço atual do combustível, então o resultado está sempre atualizado e não depende de nenhum servidor externo. Cada cálculo roda localmente no seu navegador — nada do que você digita é enviado, salvo ou compartilhado.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -567,7 +607,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как разделить расходы или добавить обратный путь?",
     "faq.a4": "Откройте «Туда-обратно и пассажиры» под ценой. Отметьте «туда и обратно», чтобы учесть путь в обе стороны (расстояние × 2), и задайте число пассажиров кнопками − и + — калькулятор покажет стоимость на пассажира, чтобы каждый внёс справедливую долю. Оба параметра необязательны: не трогайте их для обычной оценки поездки в одну сторону.",
     "faq.q5": "Учитываются ли актуальные цены на топливо?",
-    "faq.a5": "Нет. Текущую цену топлива вы вводите сами, поэтому результат всегда актуален и не зависит от внешнего сервера. Все вычисления выполняются локально в вашем браузере — ничего из введённого не загружается, не сохраняется и не передаётся."
+    "faq.a5": "Нет. Текущую цену топлива вы вводите сами, поэтому результат всегда актуален и не зависит от внешнего сервера. Все вычисления выполняются локально в вашем браузере — ничего из введённого не загружается, не сохраняется и не передаётся.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -628,7 +673,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ایندھن کی لاگت کیسے بانٹوں یا آنا جانا کیسے شامل کروں؟",
     "faq.a4": "قیمت کے نیچے \"آنا جانا اور مسافر\" کھولیں۔ جانے اور واپسی دونوں کو گننے کے لیے آنا جانا ٹک کریں (مسافت × 2)، اور − اور + بٹن سے مسافروں کی تعداد مقرر کریں — پھر کیلکولیٹر فی مسافر لاگت دکھائے گا تاکہ سب برابر حصہ ڈالیں۔ دونوں اختیاری ہیں: انہیں چھوڑ دیں تو سادہ یک طرفہ تخمینہ ملے گا۔",
     "faq.q5": "کیا اس میں لائیو ایندھن قیمتیں شامل ہیں؟",
-    "faq.a5": "نہیں۔ موجودہ ایندھن قیمت آپ خود درج کرتے ہیں، اس لیے نتیجہ ہمیشہ تازہ رہتا ہے اور کسی بیرونی سرور پر منحصر نہیں۔ ہر حساب آپ کے براؤزر میں ہی چلتا ہے — آپ کا لکھا کچھ بھی اپ لوڈ، محفوظ یا شیئر نہیں ہوتا۔"
+    "faq.a5": "نہیں۔ موجودہ ایندھن قیمت آپ خود درج کرتے ہیں، اس لیے نتیجہ ہمیشہ تازہ رہتا ہے اور کسی بیرونی سرور پر منحصر نہیں۔ ہر حساب آپ کے براؤزر میں ہی چلتا ہے — آپ کا لکھا کچھ بھی اپ لوڈ، محفوظ یا شیئر نہیں ہوتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -689,7 +739,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana membagi biaya BBM atau menambah pulang-pergi?",
     "faq.a4": "Buka \"Pulang-pergi dan penumpang\" di bawah harga. Centang pulang-pergi untuk menghitung perjalanan berangkat dan kembali (jarak × 2), lalu atur jumlah penumpang dengan tombol − dan + — kalkulator akan menampilkan biaya per penumpang agar semua urunan secara adil. Keduanya opsional: biarkan saja untuk estimasi sekali jalan.",
     "faq.q5": "Apakah harga bahan bakar langsung disertakan?",
-    "faq.a5": "Tidak. Anda memasukkan sendiri harga bahan bakar terkini, jadi hasilnya selalu mutakhir dan tidak bergantung pada server eksternal. Setiap perhitungan berjalan lokal di browser Anda — apa pun yang Anda ketik tidak diunggah, disimpan, atau dibagikan."
+    "faq.a5": "Tidak. Anda memasukkan sendiri harga bahan bakar terkini, jadi hasilnya selalu mutakhir dan tidak bergantung pada server eksternal. Setiap perhitungan berjalan lokal di browser Anda — apa pun yang Anda ketik tidak diunggah, disimpan, atau dibagikan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -750,7 +805,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie teile ich die Kosten oder füge eine Rückfahrt hinzu?",
     "faq.a4": "Öffne „Hin- und Rückfahrt und Mitfahrer“ unter dem Preis. Setze das Häkchen bei Hin- und Rückfahrt, um Hin- und Rückweg zu zählen (Strecke × 2), und stelle die Zahl der Mitfahrer mit den Tasten − und + ein — der Rechner zeigt dann die Kosten pro Mitfahrer, damit jeder seinen fairen Anteil zahlt. Beides ist optional: Lass es unberührt für eine einfache Hinfahrt-Schätzung.",
     "faq.q5": "Sind aktuelle Spritpreise enthalten?",
-    "faq.a5": "Nein. Den aktuellen Spritpreis gibst du selbst ein, das Ergebnis ist also immer aktuell und hängt von keinem externen Server ab. Jede Berechnung läuft lokal in deinem Browser — nichts, was du eingibst, wird hochgeladen, gespeichert oder geteilt."
+    "faq.a5": "Nein. Den aktuellen Spritpreis gibst du selbst ein, das Ergebnis ist also immer aktuell und hängt von keinem externen Server ab. Jede Berechnung läuft lokal in deinem Browser — nichts, was du eingibst, wird hochgeladen, gespeichert oder geteilt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -811,7 +871,12 @@ window.I18N_LOCALES = {
     "faq.q4": "燃料費の割り勘や往復はどうする？",
     "faq.a4": "価格の下にある「往復・同乗者」を開いてください。往復にチェックを入れると行きと帰りの両方を計算し（距離 × 2）、− と + のボタンで同乗者の人数を設定すると1人あたりの費用が表示され、みんなで公平に負担できます。どちらも任意です — そのままにすれば片道の見積もりになります。",
     "faq.q5": "リアルタイムの燃料価格は含まれますか？",
-    "faq.a5": "いいえ。現在の燃料価格はご自身で入力するので、結果は常に最新で、外部サーバーに依存しません。すべての計算はブラウザ内で行われ、入力した内容がアップロード・保存・共有されることはありません。"
+    "faq.a5": "いいえ。現在の燃料価格はご自身で入力するので、結果は常に最新で、外部サーバーに依存しません。すべての計算はブラウザ内で行われ、入力した内容がアップロード・保存・共有されることはありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -872,6 +937,11 @@ window.I18N_LOCALES = {
     "faq.q4": "유류비를 어떻게 나누거나 왕복을 더하나요?",
     "faq.a4": "유가 아래의 \"왕복·탑승 인원\"을 펼치세요. 왕복을 체크하면 가는 길과 오는 길을 모두 계산하고(거리 × 2), − 와 + 버튼으로 탑승 인원을 정하면 1인당 비용이 표시되어 모두가 공평하게 나눠 낼 수 있어요. 둘 다 선택 사항이라 그냥 두면 편도 기준으로 계산됩니다.",
     "faq.q5": "실시간 유가가 포함되나요?",
-    "faq.a5": "아니요. 현재 유가는 직접 입력하므로 결과가 항상 최신이고 외부 서버에 의존하지 않습니다. 모든 계산은 브라우저 안에서 이뤄지며, 입력한 내용은 업로드·저장·공유되지 않습니다."
+    "faq.a5": "아니요. 현재 유가는 직접 입력하므로 결과가 항상 최신이고 외부 서버에 의존하지 않습니다. 모든 계산은 브라우저 안에서 이뤄지며, 입력한 내용은 업로드·저장·공유되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

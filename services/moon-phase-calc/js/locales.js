@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.a2": "The Moon's phase is calculated from a known reference new moon and the average length of a synodic month (about 29.53 days), the same lunar-cycle math used by many simple moon calendars. This gives results accurate to roughly plus or minus one day for any date, past or future. It is not precise enough for celestial navigation, tide prediction, or religious observances that require exact timing — those need a full astronomical ephemeris.",
     "faq.a3": "A full lunar cycle moves through 8 named phases: New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, and Waning Crescent. Waxing means the lit portion is growing night by night, and waning means it's shrinking. New Moon marks the start of the cycle, when the Moon is essentially invisible, and Full Moon marks the midpoint, when the entire face is lit. The reference strip below the calculator shows the glyph and a short description for each phase.",
     "faq.a4": "Traditional East Asian calendars such as Korea's 음력 (eumnyeok) and Japan's 旧暦 (kyūreki) are lunisolar: each calendar month begins on or near a new moon, and the 15th of the month falls close to a full moon. That's why holidays like Chuseok and Tsukimi (harvest moon festivals) and Lunar New Year always land on a new or full moon. This tool calculates the astronomical moon phase for any date — it doesn't convert dates to a lunisolar calendar, but it's a quick way to see why a given lunar-calendar date lines up with a particular moon phase.",
-    "faq.a5": "No. This moon phase calculator runs entirely in your browser — the date you pick and the calculated results never leave your device and nothing is uploaded or stored on a server. The only thing saved locally is the last date you looked up, kept in your browser's local storage so it's there if you come back."
+    "faq.a5": "No. This moon phase calculator runs entirely in your browser — the date you pick and the calculated results never leave your device and nothing is uploaded or stored on a server. The only thing saved locally is the last date you looked up, kept in your browser's local storage so it's there if you come back.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -120,7 +125,12 @@ window.I18N_LOCALES = {
     "faq.a2": "月相是根据一个已知的参考新月时刻，以及朔望月的平均长度（约29.53天）计算得出的，这也是许多简易月历使用的算法。这种方法对任意日期（无论过去还是未来）的结果误差大约在正负一天以内。但它不足以用于天文导航、潮汐预测，或需要精确时刻的宗教仪式——这些场合需要完整的天文历表。",
     "faq.a3": "一个完整的朔望周期会经历8个命名阶段：新月、娥眉月、上弦月、盈凸月、满月、亏凸月、下弦月和残月。“盈”表示照亮部分每晚都在增大，“亏”表示正在缩小。新月标志着周期的开始，此时月亮几乎不可见；满月标志着周期的中点，此时整个月面都被照亮。计算器下方的参考条列出了每个阶段的图形符号和简短说明。",
     "faq.a4": "韩国的음력（阴历）和日本的旧暦，与中国农历一样，都属于阴阳合历：每个历月都从新月或接近新月的那天开始，而历月的十五日则接近满月。这也是为什么中秋节、日本的赏月节（十五夜）以及农历新年总是恰好落在满月或新月附近的原因。本工具计算的是任意日期对应的天文月相，并不会把日期换算成阴历日期，但可以帮助您快速理解某个农历/阴历日期为什么对应着特定的月相。",
-    "faq.a5": "不会。这个月相计算器完全在您的浏览器中运行——您选择的日期和计算结果不会离开您的设备，也不会被上传或存储到任何服务器。本地唯一保存的是您上次查询的日期，保存在浏览器的本地存储中，方便您下次回来时继续使用。"
+    "faq.a5": "不会。这个月相计算器完全在您的浏览器中运行——您选择的日期和计算结果不会离开您的设备，也不会被上传或存储到任何服务器。本地唯一保存的是您上次查询的日期，保存在浏览器的本地存储中，方便您下次回来时继续使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -177,7 +187,12 @@ window.I18N_LOCALES = {
     "faq.a2": "चाँद का चरण एक ज्ञात संदर्भ अमावस्या और साइनोडिक महीने की औसत लंबाई (लगभग 29.53 दिन) से निकाला जाता है — यही गणित कई सामान्य चंद्र पंचांगों में भी इस्तेमाल होता है। इससे किसी भी तारीख (चाहे बीती हो या आने वाली) के लिए परिणाम लगभग एक दिन की सटीकता के भीतर मिलते हैं। यह समुद्री नौवहन, ज्वार-भाटा अनुमान, या सटीक समय चाहने वाले धार्मिक अनुष्ठानों के लिए पर्याप्त सटीक नहीं है — उनके लिए पूर्ण खगोलीय पंचांग चाहिए।",
     "faq.a3": "एक पूरा चंद्र चक्र 8 नामित चरणों से गुज़रता है: नया चाँद, बढ़ता अर्धचंद्र, प्रथम चौथाई, बढ़ता उभरा चाँद, पूर्णिमा, घटता उभरा चाँद, अंतिम चौथाई, और घटता अर्धचंद्र। बढ़ना का मतलब है कि रोशन हिस्सा हर रात बढ़ रहा है, और घटना का मतलब है कि वह सिकुड़ रहा है। नया चाँद चक्र की शुरुआत दिखाता है, जब चाँद लगभग अदृश्य होता है, और पूर्णिमा चक्र का मध्यबिंदु है, जब पूरा चाँद रोशन होता है। कैलकुलेटर के नीचे दी गई पट्टी में हर चरण का चिह्न और छोटा विवरण दिया गया है।",
     "faq.a4": "कोरिया का 음력 (eumnyeok) और जापान का 旧暦 (kyūreki) जैसे पारंपरिक पूर्वी एशियाई पंचांग चंद्र-सौर होते हैं: हर महीना नए चाँद पर या उसके आसपास शुरू होता है, और महीने की 15वीं तारीख पूर्णिमा के करीब पड़ती है। यही वजह है कि चुसोक और त्सुकिमी (फसल-चाँद उत्सव) जैसे त्योहार और चंद्र नववर्ष हमेशा नए चाँद या पूर्णिमा पर ही पड़ते हैं। भारत के पंचांग में भी अमावस्या और पूर्णिमा इसी खगोलीय गणना पर आधारित हैं। यह टूल किसी भी तारीख के लिए खगोलीय चंद्र चरण निकालता है — यह तारीख को चंद्र पंचांग में नहीं बदलता, लेकिन यह जल्दी समझने में मदद करता है कि कोई पंचांग तिथि किसी खास चंद्र चरण से क्यों मेल खाती है।",
-    "faq.a5": "नहीं। यह मून फेज़ कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपकी चुनी हुई तारीख और परिणाम आपकी डिवाइस से बाहर कभी नहीं जाते और न ही किसी सर्वर पर अपलोड या सेव होते हैं। स्थानीय रूप से केवल आखिरी देखी गई तारीख सेव होती है, आपके ब्राउज़र के लोकल स्टोरेज में, ताकि वापस आने पर वह वहीं मिले।"
+    "faq.a5": "नहीं। यह मून फेज़ कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपकी चुनी हुई तारीख और परिणाम आपकी डिवाइस से बाहर कभी नहीं जाते और न ही किसी सर्वर पर अपलोड या सेव होते हैं। स्थानीय रूप से केवल आखिरी देखी गई तारीख सेव होती है, आपके ब्राउज़र के लोकल स्टोरेज में, ताकि वापस आने पर वह वहीं मिले।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -234,7 +249,12 @@ window.I18N_LOCALES = {
     "faq.a2": "La fase de la Luna se calcula a partir de una luna nueva de referencia conocida y la duración media de un mes sinódico (unos 29,53 días), el mismo cálculo lunar que usan muchos calendarios lunares sencillos. Esto da resultados con una precisión aproximada de más o menos un día para cualquier fecha, pasada o futura. No es lo bastante preciso para navegación celeste, predicción de mareas u observancias religiosas que requieran un horario exacto — eso necesita una efeméride astronómica completa.",
     "faq.a3": "Un ciclo lunar completo pasa por 8 fases con nombre: Luna Nueva, Creciente Iluminante, Cuarto Creciente, Gibosa Creciente, Luna Llena, Gibosa Menguante, Cuarto Menguante y Menguante Iluminante. Creciente significa que la parte iluminada aumenta noche tras noche, y menguante que va disminuyendo. La Luna Nueva marca el inicio del ciclo, cuando la Luna es prácticamente invisible, y la Luna Llena marca el punto medio, cuando toda la cara está iluminada. La franja de referencia debajo de la calculadora muestra el símbolo y una breve descripción de cada fase.",
     "faq.a4": "Calendarios tradicionales de Asia oriental como el 음력 (eumnyeok) de Corea y el 旧暦 (kyūreki) de Japón son lunisolares: cada mes empieza en la luna nueva o cerca de ella, y el día 15 del mes cae cerca de la luna llena. Por eso festividades como el Chuseok y el Tsukimi (fiestas de la luna de la cosecha) y el Año Nuevo Lunar siempre caen en luna nueva o luna llena. Esta herramienta calcula la fase lunar astronómica de cualquier fecha — no convierte la fecha a un calendario lunisolar, pero es una forma rápida de ver por qué una fecha de calendario lunar coincide con una fase concreta de la Luna.",
-    "faq.a5": "No. Esta calculadora de fases lunares funciona por completo en tu navegador — la fecha que eliges y los resultados calculados nunca salen de tu dispositivo, y no se sube ni se guarda nada en ningún servidor. Lo único que se guarda localmente es la última fecha consultada, en el almacenamiento local de tu navegador, para que siga ahí si vuelves."
+    "faq.a5": "No. Esta calculadora de fases lunares funciona por completo en tu navegador — la fecha que eliges y los resultados calculados nunca salen de tu dispositivo, y no se sube ni se guarda nada en ningún servidor. Lo único que se guarda localmente es la última fecha consultada, en el almacenamiento local de tu navegador, para que siga ahí si vuelves.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -291,7 +311,12 @@ window.I18N_LOCALES = {
     "faq.a2": "يُحسب طور القمر انطلاقًا من محاق مرجعي معروف ومتوسط طول الشهر التقويمي (نحو 29.53 يومًا)، وهي نفس الحسابات القمرية المستخدمة في كثير من التقاويم القمرية البسيطة. يمنح ذلك نتائج دقيقة بحدود يوم واحد تقريبًا لأي تاريخ، ماضٍ أو مستقبلي. لكنه ليس دقيقًا بما يكفي للملاحة الفلكية أو التنبؤ بالمد والجزر أو الشعائر الدينية التي تتطلب توقيتًا دقيقًا — فتلك تحتاج إلى تقويم فلكي كامل.",
     "faq.a3": "تمر الدورة القمرية الكاملة بثمانية أطوار مُسمّاة: المحاق، هلال متزايد، التربيع الأول، أحدب متزايد، البدر، أحدب متناقص، التربيع الأخير، وهلال متناقص. يعني متزايد أن الجزء المضاء يكبر كل ليلة، بينما يعني متناقص أنه يتقلّص. يمثّل المحاق بداية الدورة حين يكون القمر شبه غير مرئي، ويمثّل البدر منتصف الدورة حين يكون القرص كله مضاءً. يعرض الشريط المرجعي أسفل الحاسبة رمز كل طور مع وصف مختصر له.",
     "faq.a4": "التقاويم التقليدية في شرق آسيا، مثل التقويم الكوري 음력 (eumnyeok) والياباني 旧暦 (kyūreki)، هي تقاويم قمرية-شمسية: يبدأ كل شهر عند المحاق أو قريبًا منه، ويقع اليوم الخامس عشر من الشهر قرب البدر. لهذا السبب تقع أعياد مثل تشوسوك وتسوكيمي (أعياد قمر الحصاد) ورأس السنة القمرية دائمًا عند محاق أو بدر. التقويم الهجري الإسلامي أيضًا قمري بالكامل ويبدأ كل شهر تقليديًا برؤية الهلال الجديد. لا تحوّل هذه الأداة التاريخ إلى تقويم قمري-شمسي، لكنها طريقة سريعة لمعرفة سبب تطابق تاريخ تقويم قمري معيّن مع طور قمري محدد.",
-    "faq.a5": "لا. تعمل حاسبة أطوار القمر هذه بالكامل داخل متصفحك — لا يغادر التاريخ الذي تختاره ولا النتائج المحسوبة جهازك أبدًا، ولا يُرفَع أو يُخزَّن أي شيء على أي خادم. الشيء الوحيد المحفوظ محليًا هو آخر تاريخ بحثت عنه، ويُحفظ في التخزين المحلي لمتصفحك ليكون جاهزًا عند عودتك."
+    "faq.a5": "لا. تعمل حاسبة أطوار القمر هذه بالكامل داخل متصفحك — لا يغادر التاريخ الذي تختاره ولا النتائج المحسوبة جهازك أبدًا، ولا يُرفَع أو يُخزَّن أي شيء على أي خادم. الشيء الوحيد المحفوظ محليًا هو آخر تاريخ بحثت عنه، ويُحفظ في التخزين المحلي لمتصفحك ليكون جاهزًا عند عودتك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -348,7 +373,12 @@ window.I18N_LOCALES = {
     "faq.a2": "La phase de la Lune est calculée à partir d'une nouvelle lune de référence connue et de la durée moyenne d'un mois synodique (environ 29,53 jours), le même calcul lunaire utilisé par de nombreux calendriers lunaires simples. Cela donne des résultats précis à environ un jour près, pour n'importe quelle date, passée ou future. Ce n'est pas assez précis pour la navigation céleste, la prédiction des marées, ou les observances religieuses exigeant un horaire exact — celles-ci nécessitent une éphéméride astronomique complète.",
     "faq.a3": "Un cycle lunaire complet traverse 8 phases nommées : Nouvelle Lune, Premier Croissant, Premier Quartier, Gibbeuse Croissante, Pleine Lune, Gibbeuse Décroissante, Dernier Quartier et Dernier Croissant. Croissant signifie que la portion éclairée grandit nuit après nuit, et décroissant qu'elle rétrécit. La Nouvelle Lune marque le début du cycle, quand la Lune est pratiquement invisible, et la Pleine Lune en marque le milieu, quand toute la face est éclairée. La bande de référence sous le calculateur montre le symbole et une courte description de chaque phase.",
     "faq.a4": "Les calendriers traditionnels d'Asie de l'Est, comme le 음력 (eumnyeok) coréen et le 旧暦 (kyūreki) japonais, sont luni-solaires : chaque mois commence à la nouvelle lune ou tout près, et le 15e jour du mois tombe près de la pleine lune. C'est pourquoi des fêtes comme Chuseok et Tsukimi (fêtes de la lune des récoltes) ainsi que le Nouvel An lunaire tombent toujours sur une nouvelle ou une pleine lune. Cet outil calcule la phase lunaire astronomique pour n'importe quelle date — il ne convertit pas la date en calendrier luni-solaire, mais permet de comprendre rapidement pourquoi une date de calendrier lunaire correspond à une phase lunaire donnée.",
-    "faq.a5": "Non. Ce calculateur de phases lunaires fonctionne entièrement dans votre navigateur — la date choisie et les résultats calculés ne quittent jamais votre appareil et rien n'est téléversé ni stocké sur un serveur. La seule chose enregistrée localement est la dernière date consultée, conservée dans le stockage local de votre navigateur pour être toujours là à votre retour."
+    "faq.a5": "Non. Ce calculateur de phases lunaires fonctionne entièrement dans votre navigateur — la date choisie et les résultats calculés ne quittent jamais votre appareil et rien n'est téléversé ni stocké sur un serveur. La seule chose enregistrée localement est la dernière date consultée, conservée dans le stockage local de votre navigateur pour être toujours là à votre retour.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -405,7 +435,12 @@ window.I18N_LOCALES = {
     "faq.a2": "চাঁদের দশা একটি পরিচিত রেফারেন্স অমাবস্যা এবং সাইনোডিক মাসের গড় দৈর্ঘ্য (প্রায় ২৯.৫৩ দিন) থেকে হিসাব করা হয় — এটি একই গণিত যা অনেক সাধারণ চান্দ্র পঞ্জিকায় ব্যবহৃত হয়। এর ফলে অতীত বা ভবিষ্যতের যেকোনো তারিখের জন্য প্রায় প্লাস-মাইনাস এক দিনের নির্ভুলতা পাওয়া যায়। এটি সমুদ্র নৌ-চলাচল, জোয়ার-ভাটার পূর্বাভাস, বা নির্ভুল সময় প্রয়োজন এমন ধর্মীয় অনুষ্ঠানের জন্য যথেষ্ট নির্ভুল নয় — সেসবের জন্য সম্পূর্ণ জ্যোতির্বৈজ্ঞানিক পঞ্জিকা প্রয়োজন।",
     "faq.a3": "একটি সম্পূর্ণ চান্দ্র চক্র ৮টি নামযুক্ত দশার মধ্য দিয়ে যায়: অমাবস্যা, বর্ধনশীল অর্ধচন্দ্র, প্রথম প্রহর, বর্ধনশীল উত্তল চাঁদ, পূর্ণিমা, হ্রাসমান উত্তল চাঁদ, শেষ প্রহর এবং হ্রাসমান অর্ধচন্দ্র। বর্ধনশীল মানে আলোকিত অংশ প্রতি রাতে বাড়ছে, আর হ্রাসমান মানে তা কমছে। অমাবস্যা চক্রের শুরু বোঝায়, যখন চাঁদ প্রায় অদৃশ্য থাকে, আর পূর্ণিমা চক্রের মাঝামাঝি বোঝায়, যখন পুরো পৃষ্ঠ আলোকিত থাকে। ক্যালকুলেটরের নিচের রেফারেন্স ফালিতে প্রতিটি দশার চিহ্ন ও সংক্ষিপ্ত বিবরণ দেখানো হয়।",
     "faq.a4": "কোরিয়ার 음력 (eumnyeok) এবং জাপানের 旧暦 (kyūreki)-এর মতো পূর্ব এশিয়ার ঐতিহ্যবাহী পঞ্জিকাগুলো চান্দ্র-সৌর: প্রতিটি মাস অমাবস্যায় বা তার কাছাকাছি শুরু হয়, আর মাসের ১৫ তারিখ পূর্ণিমার কাছাকাছি পড়ে। এই কারণেই চুসোক ও সুকিমি (ফসল-চাঁদ উৎসব)-এর মতো উৎসব এবং চান্দ্র নববর্ষ সবসময় অমাবস্যা বা পূর্ণিমায় পড়ে। বাংলাদেশ ও ভারতের পঞ্জিকাতেও অমাবস্যা-পূর্ণিমার হিসাব একই জ্যোতির্বৈজ্ঞানিক নিয়মের ওপর ভিত্তি করে হয়। এই টুল যেকোনো তারিখের জ্যোতির্বৈজ্ঞানিক চাঁদের দশা হিসাব করে — এটি তারিখকে চান্দ্র পঞ্জিকায় রূপান্তর করে না, তবে কোনো পঞ্জিকা তারিখ কেন একটি নির্দিষ্ট চাঁদের দশার সাথে মেলে তা দ্রুত বুঝতে সাহায্য করে।",
-    "faq.a5": "না। এই চাঁদের দশা ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার বেছে নেওয়া তারিখ ও হিসাব করা ফলাফল কখনোই আপনার ডিভাইস থেকে বের হয় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষিত হয় না। স্থানীয়ভাবে শুধু আপনার সর্বশেষ দেখা তারিখটি সংরক্ষিত হয়, আপনার ব্রাউজারের লোকাল স্টোরেজে, যাতে আপনি ফিরে এলে সেটি থাকে।"
+    "faq.a5": "না। এই চাঁদের দশা ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার বেছে নেওয়া তারিখ ও হিসাব করা ফলাফল কখনোই আপনার ডিভাইস থেকে বের হয় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষিত হয় না। স্থানীয়ভাবে শুধু আপনার সর্বশেষ দেখা তারিখটি সংরক্ষিত হয়, আপনার ব্রাউজারের লোকাল স্টোরেজে, যাতে আপনি ফিরে এলে সেটি থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -462,7 +497,12 @@ window.I18N_LOCALES = {
     "faq.a2": "A fase da Lua é calculada a partir de uma lua nova de referência conhecida e da duração média de um mês sinódico (cerca de 29,53 dias), o mesmo cálculo lunar usado por muitos calendários lunares simples. Isso resulta em precisão de aproximadamente mais ou menos um dia para qualquer data, passada ou futura. Não é precisa o suficiente para navegação celeste, previsão de marés ou observâncias religiosas que exigem horário exato — essas precisam de uma efeméride astronômica completa.",
     "faq.a3": "Um ciclo lunar completo passa por 8 fases nomeadas: Lua Nova, Crescente, Quarto Crescente, Gibosa Crescente, Lua Cheia, Gibosa Minguante, Quarto Minguante e Minguante. Crescente significa que a parte iluminada aumenta noite após noite, e minguante significa que está diminuindo. A Lua Nova marca o início do ciclo, quando a Lua está praticamente invisível, e a Lua Cheia marca o ponto médio, quando toda a face está iluminada. A faixa de referência abaixo da calculadora mostra o símbolo e uma breve descrição de cada fase.",
     "faq.a4": "Calendários tradicionais do Leste Asiático, como o 음력 (eumnyeok) coreano e o 旧暦 (kyūreki) japonês, são lunissolares: cada mês começa na lua nova ou perto dela, e o 15º dia do mês cai perto da lua cheia. É por isso que festas como Chuseok e Tsukimi (festivais da lua da colheita) e o Ano Novo Lunar sempre caem em lua nova ou lua cheia. Esta ferramenta calcula a fase lunar astronômica de qualquer data — ela não converte a data para um calendário lunissolar, mas é uma forma rápida de entender por que uma data de calendário lunar coincide com determinada fase da Lua.",
-    "faq.a5": "Não. Esta calculadora de fases da Lua funciona inteiramente no seu navegador — a data escolhida e os resultados calculados nunca saem do seu dispositivo, e nada é enviado ou armazenado em nenhum servidor. A única coisa salva localmente é a última data consultada, guardada no armazenamento local do seu navegador para estar lá quando você voltar."
+    "faq.a5": "Não. Esta calculadora de fases da Lua funciona inteiramente no seu navegador — a data escolhida e os resultados calculados nunca saem do seu dispositivo, e nada é enviado ou armazenado em nenhum servidor. A única coisa salva localmente é a última data consultada, guardada no armazenamento local do seu navegador para estar lá quando você voltar.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -519,7 +559,12 @@ window.I18N_LOCALES = {
     "faq.a2": "Фаза Луны рассчитывается на основе известного опорного новолуния и средней продолжительности синодического месяца (около 29,53 дня) — те же расчёты, что используются во многих простых лунных календарях. Это даёт точность около одного дня для любой даты, прошлой или будущей. Этого недостаточно для астронавигации, прогноза приливов или религиозных обрядов, требующих точного времени, — для них нужна полная астрономическая эфемерида.",
     "faq.a3": "Полный лунный цикл проходит через 8 названных фаз: Новолуние, Растущий серп, Первая четверть, Растущая Луна, Полнолуние, Убывающая Луна, Последняя четверть и Убывающий серп. Растущая означает, что освещённая часть увеличивается каждую ночь, а убывающая — что она уменьшается. Новолуние отмечает начало цикла, когда Луна практически не видна, а Полнолуние — его середину, когда освещён весь диск. В справочной полосе под калькулятором показан символ и краткое описание каждой фазы.",
     "faq.a4": "Традиционные восточноазиатские календари, такие как корейский 음력 (eumnyeok) и японский 旧暦 (kyūreki), являются лунно-солнечными: каждый месяц начинается в новолуние или около него, а 15-й день месяца приходится примерно на полнолуние. Именно поэтому праздники вроде Чхусок и Цукими (праздники урожайной луны), а также лунный Новый год всегда выпадают на новолуние или полнолуние. Этот инструмент рассчитывает астрономическую фазу Луны для любой даты — он не переводит дату в лунно-солнечный календарь, но позволяет быстро понять, почему определённая дата лунного календаря соответствует конкретной фазе Луны.",
-    "faq.a5": "Нет. Этот калькулятор фаз Луны работает полностью в вашем браузере — выбранная дата и рассчитанные результаты никогда не покидают ваше устройство и не загружаются и не хранятся ни на каком сервере. Локально сохраняется только последняя просмотренная дата — в локальном хранилище браузера, чтобы она была там при следующем визите."
+    "faq.a5": "Нет. Этот калькулятор фаз Луны работает полностью в вашем браузере — выбранная дата и рассчитанные результаты никогда не покидают ваше устройство и не загружаются и не хранятся ни на каком сервере. Локально сохраняется только последняя просмотренная дата — в локальном хранилище браузера, чтобы она была там при следующем визите.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -576,7 +621,12 @@ window.I18N_LOCALES = {
     "faq.a2": "چاند کی منزل ایک معلوم حوالہ نئے چاند اور قمری مہینے کی اوسط لمبائی (تقریباً 29.53 دن) سے نکالی جاتی ہے — یہی حساب کئی سادہ قمری کیلنڈرز میں بھی استعمال ہوتا ہے۔ اس سے کسی بھی تاریخ (ماضی ہو یا مستقبل) کے لیے تقریباً ایک دن کی درستگی ملتی ہے۔ یہ سمندری نیویگیشن، جوار بھاٹا کی پیش گوئی، یا درست وقت چاہنے والی مذہبی رسومات کے لیے کافی درست نہیں — ان کے لیے مکمل فلکیاتی جدول درکار ہوتا ہے۔",
     "faq.a3": "ایک مکمل قمری چکر 8 نامزد منازل سے گزرتا ہے: نیا چاند، بڑھتا ہلال، پہلی سہ ماہی، بڑھتا محدب چاند، بدر، گھٹتا محدب چاند، آخری سہ ماہی، اور گھٹتا ہلال۔ بڑھنے کا مطلب ہے کہ روشن حصہ ہر رات بڑھ رہا ہے، اور گھٹنے کا مطلب ہے کہ وہ سکڑ رہا ہے۔ نیا چاند چکر کا آغاز ظاہر کرتا ہے، جب چاند تقریباً غائب ہوتا ہے، اور بدر چکر کا وسط ظاہر کرتا ہے، جب پورا چہرہ روشن ہوتا ہے۔ کیلکولیٹر کے نیچے دی گئی پٹی میں ہر منزل کی علامت اور مختصر وضاحت دی گئی ہے۔",
     "faq.a4": "کوریا کا 음력 (eumnyeok) اور جاپان کا 旧暦 (kyūreki) جیسے مشرقی ایشیائی روایتی کیلنڈر قمری-شمسی ہوتے ہیں: ہر مہینہ نئے چاند پر یا اس کے قریب شروع ہوتا ہے، اور مہینے کی 15 تاریخ بدر کے قریب پڑتی ہے۔ یہی وجہ ہے کہ چوسیوک اور سوکیمی (فصل کے چاند کے تہوار) جیسے تہوار اور قمری نیا سال ہمیشہ نئے چاند یا بدر پر پڑتے ہیں۔ اسلامی ہجری کیلنڈر بھی مکمل طور پر قمری ہے اور روایتی طور پر ہر مہینہ نئے ہلال کے نظر آنے سے شروع ہوتا ہے۔ یہ ٹول کسی بھی تاریخ کے لیے فلکیاتی چاند کی منزل نکالتا ہے — یہ تاریخ کو قمری کیلنڈر میں تبدیل نہیں کرتا، لیکن یہ جلدی سمجھنے میں مدد دیتا ہے کہ کوئی قمری تاریخ کسی خاص چاند کی منزل سے کیوں میل کھاتی ہے۔",
-    "faq.a5": "نہیں۔ یہ قمری منازل کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی منتخب کردہ تاریخ اور حساب شدہ نتائج کبھی بھی آپ کے آلے سے باہر نہیں جاتے اور نہ ہی کسی سرور پر اپ لوڈ یا محفوظ ہوتے ہیں۔ مقامی طور پر صرف آپ کی آخری دیکھی گئی تاریخ محفوظ ہوتی ہے، آپ کے براؤزر کے لوکل سٹوریج میں، تاکہ واپس آنے پر وہ وہیں موجود ہو۔"
+    "faq.a5": "نہیں۔ یہ قمری منازل کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی منتخب کردہ تاریخ اور حساب شدہ نتائج کبھی بھی آپ کے آلے سے باہر نہیں جاتے اور نہ ہی کسی سرور پر اپ لوڈ یا محفوظ ہوتے ہیں۔ مقامی طور پر صرف آپ کی آخری دیکھی گئی تاریخ محفوظ ہوتی ہے، آپ کے براؤزر کے لوکل سٹوریج میں، تاکہ واپس آنے پر وہ وہیں موجود ہو۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -633,7 +683,12 @@ window.I18N_LOCALES = {
     "faq.a2": "Fase bulan dihitung dari bulan baru referensi yang diketahui dan panjang rata-rata bulan sinodis (sekitar 29,53 hari), perhitungan yang sama yang digunakan banyak kalender bulan sederhana. Ini memberikan hasil dengan akurasi sekitar plus minus satu hari untuk tanggal apa pun, baik masa lalu maupun masa depan. Ini tidak cukup presisi untuk navigasi langit, prediksi pasang surut, atau upacara keagamaan yang membutuhkan waktu tepat — hal-hal tersebut memerlukan efemeris astronomi yang lengkap.",
     "faq.a3": "Satu siklus bulan penuh melewati 8 fase bernama: Bulan Baru, Sabit Bertambah, Kuartal Pertama, Cembung Bertambah, Bulan Purnama, Cembung Berkurang, Kuartal Akhir, dan Sabit Berkurang. Bertambah berarti bagian yang menyala tumbuh setiap malam, dan berkurang berarti menyusut. Bulan Baru menandai awal siklus, saat bulan hampir tidak terlihat, dan Bulan Purnama menandai titik tengahnya, saat seluruh permukaan menyala. Strip referensi di bawah kalkulator menampilkan simbol dan deskripsi singkat setiap fase.",
     "faq.a4": "Kalender tradisional Asia Timur seperti 음력 (eumnyeok) Korea dan 旧暦 (kyūreki) Jepang bersifat lunisolar: setiap bulan kalender dimulai pada atau dekat bulan baru, dan tanggal 15 bulan tersebut jatuh dekat dengan purnama. Itulah sebabnya perayaan seperti Chuseok dan Tsukimi (festival bulan panen) serta Tahun Baru Imlek selalu jatuh pada bulan baru atau purnama. Alat ini menghitung fase bulan astronomis untuk tanggal apa pun — alat ini tidak mengonversi tanggal ke kalender lunisolar, tetapi menjadi cara cepat untuk melihat mengapa tanggal kalender lunar tertentu sesuai dengan fase bulan tertentu.",
-    "faq.a5": "Tidak. Kalkulator fase bulan ini berjalan sepenuhnya di browser Anda — tanggal yang Anda pilih dan hasil perhitungannya tidak pernah meninggalkan perangkat Anda dan tidak diunggah atau disimpan di server mana pun. Satu-satunya yang disimpan secara lokal adalah tanggal terakhir yang Anda lihat, disimpan di penyimpanan lokal browser Anda agar tetap ada saat Anda kembali."
+    "faq.a5": "Tidak. Kalkulator fase bulan ini berjalan sepenuhnya di browser Anda — tanggal yang Anda pilih dan hasil perhitungannya tidak pernah meninggalkan perangkat Anda dan tidak diunggah atau disimpan di server mana pun. Satu-satunya yang disimpan secara lokal adalah tanggal terakhir yang Anda lihat, disimpan di penyimpanan lokal browser Anda agar tetap ada saat Anda kembali.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -690,7 +745,12 @@ window.I18N_LOCALES = {
     "faq.a2": "Die Mondphase wird anhand eines bekannten Referenz-Neumonds und der durchschnittlichen Länge eines synodischen Monats (etwa 29,53 Tage) berechnet — dieselbe Mondzyklus-Mathematik, die viele einfache Mondkalender verwenden. Das ergibt für jedes Datum, ob vergangen oder zukünftig, eine Genauigkeit von ungefähr plus oder minus einem Tag. Für die Himmelsnavigation, Gezeitenvorhersagen oder religiöse Anlässe, die eine exakte Zeitangabe benötigen, reicht das nicht — dafür braucht es eine vollständige astronomische Ephemeride.",
     "faq.a3": "Ein vollständiger Mondzyklus durchläuft 8 benannte Phasen: Neumond, Zunehmende Sichel, Erstes Viertel, Zunehmender Mond, Vollmond, Abnehmender Mond, Letztes Viertel und Abnehmende Sichel. Zunehmend bedeutet, dass der beleuchtete Teil Nacht für Nacht wächst, abnehmend, dass er schrumpft. Neumond markiert den Beginn des Zyklus, wenn der Mond praktisch unsichtbar ist, und Vollmond die Mitte, wenn die gesamte Fläche beleuchtet ist. Der Referenzstreifen unter dem Rechner zeigt für jede Phase das Symbol und eine kurze Beschreibung.",
     "faq.a4": "Traditionelle ostasiatische Kalender wie der koreanische 음력 (Eumnyeok) und der japanische 旧暦 (Kyūreki) sind lunisolar: Jeder Monat beginnt bei oder nahe einem Neumond, und der 15. Tag des Monats fällt nahe an einen Vollmond. Deshalb fallen Feste wie Chuseok und Tsukimi (Erntemond-Feste) sowie das Mondneujahr immer auf einen Neu- oder Vollmond. Dieses Tool berechnet die astronomische Mondphase für ein beliebiges Datum — es wandelt das Datum nicht in einen lunisolaren Kalender um, hilft aber schnell zu verstehen, warum ein bestimmtes Mondkalender-Datum zu einer bestimmten Mondphase passt.",
-    "faq.a5": "Nein. Dieser Mondphasen-Rechner läuft vollständig in Ihrem Browser — das gewählte Datum und die berechneten Ergebnisse verlassen niemals Ihr Gerät und werden nicht auf einen Server hochgeladen oder dort gespeichert. Lokal wird nur das zuletzt angesehene Datum gespeichert, im lokalen Speicher Ihres Browsers, damit es bei Ihrer Rückkehr noch da ist."
+    "faq.a5": "Nein. Dieser Mondphasen-Rechner läuft vollständig in Ihrem Browser — das gewählte Datum und die berechneten Ergebnisse verlassen niemals Ihr Gerät und werden nicht auf einen Server hochgeladen oder dort gespeichert. Lokal wird nur das zuletzt angesehene Datum gespeichert, im lokalen Speicher Ihres Browsers, damit es bei Ihrer Rückkehr noch da ist.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -747,7 +807,12 @@ window.I18N_LOCALES = {
     "faq.a2": "月相は、既知の基準新月と朔望月の平均の長さ（約29.53日）から計算されます。これは多くの簡易的な月齢カレンダーでも使われている計算方法です。この方法では、過去でも未来でも、どの日付についてもおよそ±1日程度の精度が得られます。ただし、天文航法、潮汐予測、あるいは正確な時刻が必要な宗教的行事に使うには十分な精度ではありません。それらには完全な天文暦が必要です。",
     "faq.a3": "月の満ち欠けは、新月・三日月・上弦の月・十三夜月・満月・十六夜・下弦の月・二十六夜という8つの名前付きの段階を巡ります。輝く部分が夜ごとに増えていく状態を満ちていく、減っていく状態を欠けていくと呼びます。新月はサイクルの始まりで、月がほとんど見えない状態を指し、満月はサイクルの中間点で、面全体が輝いている状態を指します。計算機の下にある一覧には、各段階の記号と簡単な説明が表示されています。",
     "faq.a4": "韓国の음력（陰暦）や日本の旧暦のような東アジアの伝統的な暦は太陰太陽暦で、各月は新月かその前後で始まり、月の15日ごろが満月に近づくよう作られています。中秋節（チュソク）や日本のお月見（十五夜）といった収穫の月を祝う行事、そして旧正月がいつも新月や満月の頃になるのはこのためです。このツールはどんな日付についても天文学上の月相を計算しますが、日付を太陰暦の日付に変換するわけではありません。それでも、ある太陰暦の日付がなぜ特定の月相と結びついているのかを手早く確認するのに役立ちます。",
-    "faq.a5": "いいえ。この月齢計算機はすべてブラウザ内で完結して動作します。選択した日付や計算結果がお使いの端末の外に送信されることはなく、サーバーにアップロードや保存もされません。ローカルに保存されるのは最後に調べた日付だけで、次回訪れたときのためにブラウザのローカルストレージに保存されます。"
+    "faq.a5": "いいえ。この月齢計算機はすべてブラウザ内で完結して動作します。選択した日付や計算結果がお使いの端末の外に送信されることはなく、サーバーにアップロードや保存もされません。ローカルに保存されるのは最後に調べた日付だけで、次回訪れたときのためにブラウザのローカルストレージに保存されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -804,6 +869,11 @@ window.I18N_LOCALES = {
     "faq.a2": "달의 위상은 알려진 기준 삭(신월) 시점과 삭망월의 평균 길이(약 29.53일)를 이용해 계산되며, 이는 여러 간단한 달력 앱에서도 쓰이는 방식입니다. 이 방법은 과거나 미래의 어떤 날짜든 대략 하루 정도의 오차 범위 내에서 결과를 보여줍니다. 다만 천문 항법, 조수 예측, 정확한 시각이 필요한 종교 의식 등에는 충분히 정밀하지 않으며, 이런 용도에는 완전한 천문 역표가 필요합니다.",
     "faq.a3": "하나의 완전한 삭망 주기는 삭(신월), 초승달, 상현달, 차오르는 달, 보름달(망), 기우는 달, 하현달, 그믐달이라는 8개의 이름 붙은 단계를 거칩니다. 차오른다는 것은 밝은 부분이 밤마다 커지는 것을, 기운다는 것은 줄어드는 것을 의미합니다. 삭은 달이 거의 보이지 않는 주기의 시작을, 보름달은 전체 면이 밝게 빛나는 주기의 중간점을 나타냅니다. 계산기 아래의 참고 목록에서 각 위상의 기호와 짧은 설명을 확인할 수 있습니다.",
     "faq.a4": "한국의 음력과 일본의 旧暦(구력) 같은 전통 동아시아 달력은 태음태양력으로, 매달 삭(신월) 즈음에 시작되고 음력 15일 무렵이 보름달에 가깝게 맞춰져 있습니다. 추석이나 일본의 오츠키미(십오야) 같은 한가위·추수 명절, 그리고 설날(음력설)이 늘 삭이나 보름달 무렵에 오는 이유가 바로 여기에 있습니다. 이 도구는 특정 날짜의 천문학적 달의 위상을 계산할 뿐 날짜를 음력으로 변환하지는 않지만, 특정 음력 날짜가 왜 특정 달의 위상과 맞아떨어지는지 빠르게 확인하는 데 도움이 됩니다.",
-    "faq.a5": "아니요. 이 달의 위상 계산기는 전적으로 브라우저에서 실행됩니다 — 선택한 날짜와 계산 결과는 기기 밖으로 나가지 않으며 서버에 업로드되거나 저장되지 않습니다. 로컬에는 마지막으로 조회한 날짜만 저장되며, 다시 방문했을 때를 위해 브라우저의 로컬 스토리지에 보관됩니다."
+    "faq.a5": "아니요. 이 달의 위상 계산기는 전적으로 브라우저에서 실행됩니다 — 선택한 날짜와 계산 결과는 기기 밖으로 나가지 않으며 서버에 업로드되거나 저장되지 않습니다. 로컬에는 마지막으로 조회한 날짜만 저장되며, 다시 방문했을 때를 위해 브라우저의 로컬 스토리지에 보관됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };
