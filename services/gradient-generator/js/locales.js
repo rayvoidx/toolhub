@@ -68,7 +68,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why does the generated CSS include a background-color as well as background-image?",
     "faq.a4": "background-image: linear-gradient(...) (or radial-/conic-gradient()) is what actually paints the gradient, but it does nothing if a browser can't parse it or while a heavy page is still loading. Setting background-color to your first color stop gives a sensible flat-color fallback that shows immediately and matches the gradient's overall tone, so the layout never looks broken or transparent.",
     "faq.q5": "Is my gradient design sent to a server?",
-    "faq.a5": "No. Every color, position, angle and preview in this CSS gradient generator is computed and rendered locally in your browser with plain JavaScript and CSS — nothing is uploaded, logged or shared. Your last design is saved only in your own browser's local storage so the tool reopens where you left off, and no account or sign-up is required."
+    "faq.a5": "No. Every color, position, angle and preview in this CSS gradient generator is computed and rendered locally in your browser with plain JavaScript and CSS — nothing is uploaded, logged or shared. Your last design is saved only in your own browser's local storage so the tool reopens where you left off, and no account or sign-up is required.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -121,7 +126,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么生成的 CSS 里既有 background-color 又有 background-image？",
     "faq.a4": "background-image: linear-gradient(...)（或 radial-/conic-gradient()）才是真正绘制渐变的部分，但如果浏览器无法解析它，或者页面较重仍在加载时，它不会显示任何东西。把 background-color 设为第一个色标的颜色，能提供一个立即显示、且色调匹配的纯色兜底，让布局不会显得破损或透明。",
     "faq.q5": "我的渐变设计会被发送到服务器吗？",
-    "faq.a5": "不会。这个 CSS 渐变生成器中的每一种颜色、位置、角度和预览，都是用纯 JavaScript 和 CSS 在你的浏览器本地计算和渲染的——不会上传、记录或分享任何内容。你的上一次设计只会保存在你自己浏览器的本地存储中，方便工具重新打开时恢复原状，无需注册或登录任何账号。"
+    "faq.a5": "不会。这个 CSS 渐变生成器中的每一种颜色、位置、角度和预览，都是用纯 JavaScript 和 CSS 在你的浏览器本地计算和渲染的——不会上传、记录或分享任何内容。你的上一次设计只会保存在你自己浏览器的本地存储中，方便工具重新打开时恢复原状，无需注册或登录任何账号。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -174,7 +184,12 @@ window.I18N_LOCALES = {
     "faq.q4": "जनरेट हुए CSS में background-image के साथ background-color क्यों शामिल है?",
     "faq.a4": "background-image: linear-gradient(...) (या radial-/conic-gradient()) ही असल में ग्रेडिएंट बनाता है, लेकिन अगर ब्राउज़र इसे पार्स न कर पाए या भारी पेज अभी लोड हो ही रहा हो, तो यह कुछ नहीं दिखाता। background-color को आपके पहले कलर स्टॉप पर सेट करने से एक ठोस-रंग फ़ॉलबैक मिलता है जो तुरंत दिखता है और ग्रेडिएंट के समग्र टोन से मेल खाता है, ताकि लेआउट कभी टूटा हुआ या पारदर्शी न दिखे।",
     "faq.q5": "क्या मेरा ग्रेडिएंट डिज़ाइन सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। इस CSS ग्रेडिएंट जनरेटर में हर रंग, स्थिति, कोण और प्रीव्यू सादे JavaScript और CSS से आपके ब्राउज़र में ही स्थानीय रूप से गणना और रेंडर किया जाता है — कुछ भी अपलोड, लॉग या साझा नहीं होता। आपका आख़िरी डिज़ाइन केवल आपके अपने ब्राउज़र के लोकल स्टोरेज में सेव होता है ताकि टूल दोबारा खोलने पर वहीं से शुरू हो जहाँ आपने छोड़ा था, और किसी अकाउंट या साइन-अप की ज़रूरत नहीं।"
+    "faq.a5": "नहीं। इस CSS ग्रेडिएंट जनरेटर में हर रंग, स्थिति, कोण और प्रीव्यू सादे JavaScript और CSS से आपके ब्राउज़र में ही स्थानीय रूप से गणना और रेंडर किया जाता है — कुछ भी अपलोड, लॉग या साझा नहीं होता। आपका आख़िरी डिज़ाइन केवल आपके अपने ब्राउज़र के लोकल स्टोरेज में सेव होता है ताकि टूल दोबारा खोलने पर वहीं से शुरू हो जहाँ आपने छोड़ा था, और किसी अकाउंट या साइन-अप की ज़रूरत नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -227,7 +242,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué el CSS generado incluye un background-color además de background-image?",
     "faq.a4": "background-image: linear-gradient(...) (o radial-/conic-gradient()) es lo que realmente pinta el degradado, pero no hace nada si un navegador no puede interpretarlo o mientras una página pesada aún está cargando. Fijar background-color en tu primer punto de color da un respaldo de color plano razonable que se muestra de inmediato y coincide con el tono general del degradado, para que el diseño nunca se vea roto o transparente.",
     "faq.q5": "¿Se envía mi diseño de degradado a un servidor?",
-    "faq.a5": "No. Todos los colores, posiciones, ángulos y la vista previa de este generador de degradados CSS se calculan y renderizan localmente en tu navegador con JavaScript y CSS puros — nada se sube, se registra ni se comparte. Tu último diseño solo se guarda en el almacenamiento local de tu propio navegador para que la herramienta se reabra donde lo dejaste, sin necesidad de cuenta ni registro."
+    "faq.a5": "No. Todos los colores, posiciones, ángulos y la vista previa de este generador de degradados CSS se calculan y renderizan localmente en tu navegador con JavaScript y CSS puros — nada se sube, se registra ni se comparte. Tu último diseño solo se guarda en el almacenamiento local de tu propio navegador para que la herramienta se reabra donde lo dejaste, sin necesidad de cuenta ni registro.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -280,7 +300,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا يتضمن كود CSS الناتج background-color إلى جانب background-image؟",
     "faq.a4": "خاصية background-image: linear-gradient(...) (أو radial-/conic-gradient()) هي التي ترسم التدرج فعليًا، لكنها لا تفعل شيئًا إذا تعذّر على المتصفح تفسيرها أو أثناء تحميل صفحة ثقيلة. يمنحك ضبط background-color على أول نقطة لون احتياطيًا لونيًا مسطحًا معقولًا يظهر فورًا ويطابق النغمة العامة للتدرج، حتى لا يبدو التصميم مكسورًا أو شفافًا أبدًا.",
     "faq.q5": "هل يُرسل تصميم التدرج الخاص بي إلى خادم؟",
-    "faq.a5": "لا. يتم حساب وعرض كل لون وموضع وزاوية ومعاينة في مولّد تدرجات CSS هذا محليًا في متصفحك باستخدام JavaScript وCSS فقط — لا يُرفع أو يُسجَّل أو يُشارَك أي شيء. يُحفظ تصميمك الأخير فقط في التخزين المحلي لمتصفحك الخاص حتى تُعاود الأداة فتحها من حيث توقفت، دون الحاجة إلى حساب أو تسجيل."
+    "faq.a5": "لا. يتم حساب وعرض كل لون وموضع وزاوية ومعاينة في مولّد تدرجات CSS هذا محليًا في متصفحك باستخدام JavaScript وCSS فقط — لا يُرفع أو يُسجَّل أو يُشارَك أي شيء. يُحفظ تصميمك الأخير فقط في التخزين المحلي لمتصفحك الخاص حتى تُعاود الأداة فتحها من حيث توقفت، دون الحاجة إلى حساب أو تسجيل.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -333,7 +358,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi le CSS généré inclut-il un background-color en plus de background-image ?",
     "faq.a4": "background-image: linear-gradient(...) (ou radial-/conic-gradient()) est ce qui peint réellement le dégradé, mais cela ne fait rien si un navigateur ne peut pas l'interpréter ou pendant qu'une page lourde est encore en train de charger. Définir background-color sur votre premier point de couleur offre un repli de couleur unie raisonnable qui s'affiche immédiatement et correspond au ton général du dégradé, afin que la mise en page ne paraisse jamais cassée ou transparente.",
     "faq.q5": "Mon design de dégradé est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Chaque couleur, position, angle et aperçu de ce générateur de dégradés CSS est calculé et rendu localement dans votre navigateur avec du JavaScript et du CSS purs — rien n'est envoyé, enregistré ou partagé. Votre dernier design n'est enregistré que dans le stockage local de votre propre navigateur afin que l'outil se rouvre là où vous l'avez laissé, sans besoin de compte ni d'inscription."
+    "faq.a5": "Non. Chaque couleur, position, angle et aperçu de ce générateur de dégradés CSS est calculé et rendu localement dans votre navigateur avec du JavaScript et du CSS purs — rien n'est envoyé, enregistré ou partagé. Votre dernier design n'est enregistré que dans le stockage local de votre propre navigateur afin que l'outil se rouvre là où vous l'avez laissé, sans besoin de compte ni d'inscription.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -386,7 +416,12 @@ window.I18N_LOCALES = {
     "faq.q4": "তৈরি হওয়া CSS-এ background-image-এর পাশাপাশি background-color কেন থাকে?",
     "faq.a4": "background-image: linear-gradient(...) (বা radial-/conic-gradient()) আসলে গ্রেডিয়েন্ট আঁকে, তবে ব্রাউজার এটি পার্স করতে না পারলে বা ভারী পেজ তখনও লোড হতে থাকলে এটি কিছুই দেখায় না। আপনার প্রথম কালার স্টপে background-color সেট করলে একটি যুক্তিসঙ্গত ফ্ল্যাট-কালার ফলব্যাক পাওয়া যায় যা তাৎক্ষণিক দেখা যায় এবং গ্রেডিয়েন্টের সামগ্রিক টোনের সাথে মেলে, যাতে লেআউট কখনো ভাঙা বা স্বচ্ছ দেখায় না।",
     "faq.q5": "আমার গ্রেডিয়েন্ট ডিজাইন কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই CSS গ্রেডিয়েন্ট জেনারেটরের প্রতিটি রং, অবস্থান, কোণ ও প্রিভিউ শুধুমাত্র জাভাস্ক্রিপ্ট ও CSS দিয়ে আপনার ব্রাউজারেই স্থানীয়ভাবে গণনা ও রেন্ডার করা হয় — কিছুই আপলোড, লগ বা শেয়ার করা হয় না। আপনার শেষ ডিজাইন শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে টুলটি যেখানে ছেড়েছিলেন সেখান থেকেই আবার খোলে, কোনো অ্যাকাউন্ট বা সাইন-আপের প্রয়োজন নেই।"
+    "faq.a5": "না। এই CSS গ্রেডিয়েন্ট জেনারেটরের প্রতিটি রং, অবস্থান, কোণ ও প্রিভিউ শুধুমাত্র জাভাস্ক্রিপ্ট ও CSS দিয়ে আপনার ব্রাউজারেই স্থানীয়ভাবে গণনা ও রেন্ডার করা হয় — কিছুই আপলোড, লগ বা শেয়ার করা হয় না। আপনার শেষ ডিজাইন শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে টুলটি যেখানে ছেড়েছিলেন সেখান থেকেই আবার খোলে, কোনো অ্যাকাউন্ট বা সাইন-আপের প্রয়োজন নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -439,7 +474,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que o CSS gerado inclui um background-color além de background-image?",
     "faq.a4": "background-image: linear-gradient(...) (ou radial-/conic-gradient()) é o que realmente pinta o gradiente, mas não faz nada se um navegador não conseguir interpretá-lo ou enquanto uma página pesada ainda está carregando. Definir background-color para seu primeiro ponto de cor fornece um respaldo de cor sólida sensato que aparece imediatamente e combina com o tom geral do gradiente, para que o layout nunca pareça quebrado ou transparente.",
     "faq.q5": "Meu design de gradiente é enviado a um servidor?",
-    "faq.a5": "Não. Cada cor, posição, ângulo e prévia neste gerador de gradiente CSS é calculado e renderizado localmente no seu navegador com JavaScript e CSS puros — nada é enviado, registrado ou compartilhado. Seu último design é salvo apenas no armazenamento local do seu próprio navegador para que a ferramenta reabra de onde você parou, sem necessidade de conta ou cadastro."
+    "faq.a5": "Não. Cada cor, posição, ângulo e prévia neste gerador de gradiente CSS é calculado e renderizado localmente no seu navegador com JavaScript e CSS puros — nada é enviado, registrado ou compartilhado. Seu último design é salvo apenas no armazenamento local do seu próprio navegador para que a ferramenta reabra de onde você parou, sem necessidade de conta ou cadastro.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -492,7 +532,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему в сгенерированном CSS есть background-color в дополнение к background-image?",
     "faq.a4": "background-image: linear-gradient(...) (или radial-/conic-gradient()) — это то, что реально рисует градиент, но оно ничего не делает, если браузер не может его разобрать или пока тяжёлая страница ещё загружается. Установка background-color на цвет первой точки даёт разумный запасной сплошной цвет, который отображается сразу и соответствует общему тону градиента, поэтому макет никогда не выглядит сломанным или прозрачным.",
     "faq.q5": "Отправляется ли мой дизайн градиента на сервер?",
-    "faq.a5": "Нет. Каждый цвет, позиция, угол и предпросмотр в этом генераторе CSS-градиентов вычисляются и отображаются локально в вашем браузере на чистом JavaScript и CSS — ничего не загружается, не логируется и не передаётся. Ваш последний дизайн сохраняется только в локальном хранилище вашего собственного браузера, чтобы инструмент открывался там, где вы остановились, без необходимости регистрации или аккаунта."
+    "faq.a5": "Нет. Каждый цвет, позиция, угол и предпросмотр в этом генераторе CSS-градиентов вычисляются и отображаются локально в вашем браузере на чистом JavaScript и CSS — ничего не загружается, не логируется и не передаётся. Ваш последний дизайн сохраняется только в локальном хранилище вашего собственного браузера, чтобы инструмент открывался там, где вы остановились, без необходимости регистрации или аккаунта.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -545,7 +590,12 @@ window.I18N_LOCALES = {
     "faq.q4": "تیار شدہ CSS میں background-image کے ساتھ background-color کیوں شامل ہے؟",
     "faq.a4": "background-image: linear-gradient(...) (یا radial-/conic-gradient()) دراصل گریڈینٹ بناتا ہے، لیکن اگر براؤزر اسے پارس نہ کر سکے یا بھاری صفحہ ابھی لوڈ ہو رہا ہو تو یہ کچھ نہیں دکھاتا۔ background-color کو آپ کے پہلے کلر اسٹاپ پر سیٹ کرنے سے ایک مناسب فلیٹ کلر فال بیک ملتا ہے جو فوری دکھائی دیتا ہے اور گریڈینٹ کے مجموعی ٹون سے مماثل ہوتا ہے، تاکہ لے آؤٹ کبھی ٹوٹا ہوا یا شفاف نظر نہ آئے۔",
     "faq.q5": "کیا میرا گریڈینٹ ڈیزائن سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ اس CSS گریڈینٹ جنریٹر میں ہر رنگ، پوزیشن، زاویہ اور پریویو خالص جاوا اسکرپٹ اور CSS کے ساتھ آپ کے براؤزر میں مقامی طور پر شمار اور رینڈر کیا جاتا ہے — کچھ بھی اپ لوڈ، لاگ یا شیئر نہیں ہوتا۔ آپ کا آخری ڈیزائن صرف آپ کے اپنے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ ٹول وہیں سے دوبارہ کھلے جہاں آپ نے چھوڑا تھا، کسی اکاؤنٹ یا سائن اپ کی ضرورت نہیں۔"
+    "faq.a5": "نہیں۔ اس CSS گریڈینٹ جنریٹر میں ہر رنگ، پوزیشن، زاویہ اور پریویو خالص جاوا اسکرپٹ اور CSS کے ساتھ آپ کے براؤزر میں مقامی طور پر شمار اور رینڈر کیا جاتا ہے — کچھ بھی اپ لوڈ، لاگ یا شیئر نہیں ہوتا۔ آپ کا آخری ڈیزائن صرف آپ کے اپنے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ ٹول وہیں سے دوبارہ کھلے جہاں آپ نے چھوڑا تھا، کسی اکاؤنٹ یا سائن اپ کی ضرورت نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -598,7 +648,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa CSS yang dihasilkan menyertakan background-color selain background-image?",
     "faq.a4": "background-image: linear-gradient(...) (atau radial-/conic-gradient()) adalah yang benar-benar melukis gradien, tetapi tidak berbuat apa-apa jika browser tidak bisa mengurainya atau saat halaman berat masih dimuat. Mengatur background-color ke color stop pertama Anda memberikan cadangan warna solid yang masuk akal, langsung terlihat, dan sesuai dengan nada keseluruhan gradien, sehingga tata letak tidak pernah terlihat rusak atau transparan.",
     "faq.q5": "Apakah desain gradien saya dikirim ke server?",
-    "faq.a5": "Tidak. Setiap warna, posisi, sudut, dan pratinjau di generator gradien CSS ini dihitung dan dirender secara lokal di browser Anda dengan JavaScript dan CSS murni — tidak ada yang diunggah, dicatat, atau dibagikan. Desain terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri sehingga alat ini terbuka kembali dari tempat Anda berhenti, tanpa perlu akun atau pendaftaran."
+    "faq.a5": "Tidak. Setiap warna, posisi, sudut, dan pratinjau di generator gradien CSS ini dihitung dan dirender secara lokal di browser Anda dengan JavaScript dan CSS murni — tidak ada yang diunggah, dicatat, atau dibagikan. Desain terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri sehingga alat ini terbuka kembali dari tempat Anda berhenti, tanpa perlu akun atau pendaftaran.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -651,7 +706,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum enthält das generierte CSS neben background-image auch background-color?",
     "faq.a4": "background-image: linear-gradient(...) (oder radial-/conic-gradient()) malt tatsächlich den Verlauf, tut aber nichts, wenn ein Browser es nicht parsen kann oder solange eine schwere Seite noch lädt. Wird background-color auf deinen ersten Farbstopp gesetzt, entsteht ein sinnvoller einfarbiger Fallback, der sofort erscheint und zum Gesamtton des Verlaufs passt, sodass das Layout nie kaputt oder transparent wirkt.",
     "faq.q5": "Wird mein Verlaufs-Design an einen Server gesendet?",
-    "faq.a5": "Nein. Jede Farbe, Position, jeder Winkel und jede Vorschau in diesem CSS-Gradient-Generator wird lokal in deinem Browser mit reinem JavaScript und CSS berechnet und gerendert — nichts wird hochgeladen, protokolliert oder geteilt. Dein letztes Design wird nur im lokalen Speicher deines eigenen Browsers gespeichert, damit sich das Tool dort wieder öffnet, wo du aufgehört hast — ganz ohne Konto oder Anmeldung."
+    "faq.a5": "Nein. Jede Farbe, Position, jeder Winkel und jede Vorschau in diesem CSS-Gradient-Generator wird lokal in deinem Browser mit reinem JavaScript und CSS berechnet und gerendert — nichts wird hochgeladen, protokolliert oder geteilt. Dein letztes Design wird nur im lokalen Speicher deines eigenen Browsers gespeichert, damit sich das Tool dort wieder öffnet, wo du aufgehört hast — ganz ohne Konto oder Anmeldung.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -704,7 +764,12 @@ window.I18N_LOCALES = {
     "faq.q4": "生成されたCSSにbackground-imageに加えてbackground-colorが含まれているのはなぜですか？",
     "faq.a4": "実際にグラデーションを描画するのは background-image: linear-gradient(...)（またはradial-/conic-gradient()）ですが、ブラウザがこれを解析できない場合や、重いページがまだ読み込み中の場合には何も表示されません。background-colorを最初のカラーストップに設定しておくと、すぐに表示され、グラデーション全体のトーンに合った妥当な単色のフォールバックになるため、レイアウトが壊れたり透明に見えたりすることがありません。",
     "faq.q5": "私のグラデーションのデザインはサーバーに送信されますか？",
-    "faq.a5": "いいえ。このCSSグラデーションジェネレーターのすべての色・位置・角度・プレビューは、純粋なJavaScriptとCSSであなたのブラウザ内でローカルに計算・描画されます — 何もアップロード、記録、共有されません。最後のデザインはあなた自身のブラウザのローカルストレージにのみ保存されるため、ツールは中断した場所から再開でき、アカウント登録やサインアップは一切不要です。"
+    "faq.a5": "いいえ。このCSSグラデーションジェネレーターのすべての色・位置・角度・プレビューは、純粋なJavaScriptとCSSであなたのブラウザ内でローカルに計算・描画されます — 何もアップロード、記録、共有されません。最後のデザインはあなた自身のブラウザのローカルストレージにのみ保存されるため、ツールは中断した場所から再開でき、アカウント登録やサインアップは一切不要です。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -757,6 +822,11 @@ window.I18N_LOCALES = {
     "faq.q4": "생성된 CSS에 background-image뿐 아니라 background-color도 포함되는 이유는 무엇인가요?",
     "faq.a4": "실제로 그라디언트를 그리는 것은 background-image: linear-gradient(...)(또는 radial-/conic-gradient())이지만, 브라우저가 이를 해석하지 못하거나 무거운 페이지가 아직 로딩 중일 때는 아무것도 표시되지 않습니다. background-color를 첫 번째 컬러 스톱으로 설정하면 즉시 표시되고 그라디언트의 전체 톤과 어울리는 적절한 단색 대체값이 생겨, 레이아웃이 깨지거나 투명하게 보이는 일이 없습니다.",
     "faq.q5": "제 그라디언트 디자인이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 CSS 그라디언트 생성기의 모든 색상, 위치, 각도, 미리보기는 순수 JavaScript와 CSS로 브라우저 안에서만 계산되고 렌더링됩니다 — 아무것도 업로드, 기록, 공유되지 않습니다. 마지막 디자인은 사용자 본인 브라우저의 로컬 스토리지에만 저장되어 도구를 다시 열면 이전 상태로 돌아오며, 계정이나 가입이 전혀 필요 없습니다."
+    "faq.a5": "아니요. 이 CSS 그라디언트 생성기의 모든 색상, 위치, 각도, 미리보기는 순수 JavaScript와 CSS로 브라우저 안에서만 계산되고 렌더링됩니다 — 아무것도 업로드, 기록, 공유되지 않습니다. 마지막 디자인은 사용자 본인 브라우저의 로컬 스토리지에만 저장되어 도구를 다시 열면 이전 상태로 돌아오며, 계정이나 가입이 전혀 필요 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

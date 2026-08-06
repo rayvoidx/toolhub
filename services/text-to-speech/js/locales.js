@@ -68,7 +68,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is my text uploaded to a server when I use this reader?",
     "faq.a4": "The text box, sliders, and every control on this page run entirely in your browser — nothing about your typing is sent anywhere by this tool. However, some voices themselves are 'online' voices: the browser sends the text to that voice provider's servers to generate the audio. Voices marked 'offline' in the list process everything locally on your device; pick one of those if you want the text to never leave your machine.",
     "faq.q5": "Why does playback sometimes stop partway through a long text, and how does this tool fix it?",
-    "faq.a5": "Some browsers, notably desktop Chrome, have a long-standing bug where speech synthesis silently stops after roughly 15 seconds of continuous playback on longer passages. This text-to-speech tool works around it automatically by nudging playback every few seconds behind the scenes, so long articles keep reading through to the end without you noticing anything."
+    "faq.a5": "Some browsers, notably desktop Chrome, have a long-standing bug where speech synthesis silently stops after roughly 15 seconds of continuous playback on longer passages. This text-to-speech tool works around it automatically by nudging playback every few seconds behind the scenes, so long articles keep reading through to the end without you noticing anything.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -121,7 +126,12 @@ window.I18N_LOCALES = {
     "faq.q4": "使用这个朗读工具时，我的文本会被上传到服务器吗？",
     "faq.a4": "页面上的文本框、滑块和各项控制都完全在你的浏览器里运行 —— 这个工具本身不会把你输入的任何内容发送到任何地方。不过，部分语音属于'在线'语音：浏览器会把文本发送到该语音提供方的服务器以生成音频。列表中标注为'离线'的语音则完全在本地设备处理；如果你希望文本永远不离开你的设备，请选择这类语音。",
     "faq.q5": "为什么朗读长文本时播放会中途停止？这个工具是如何解决的？",
-    "faq.a5": "部分浏览器（尤其是桌面版 Chrome）存在一个由来已久的 bug：朗读较长内容时，语音合成会在持续播放约 15 秒后悄悄停止。这个文本转语音工具会在后台每隔几秒自动'轻推'一下播放状态来规避这个问题，因此较长的文章可以一路读完，你不会察觉到任何异常。"
+    "faq.a5": "部分浏览器（尤其是桌面版 Chrome）存在一个由来已久的 bug：朗读较长内容时，语音合成会在持续播放约 15 秒后悄悄停止。这个文本转语音工具会在后台每隔几秒自动'轻推'一下播放状态来规避这个问题，因此较长的文章可以一路读完，你不会察觉到任何异常。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -174,7 +184,12 @@ window.I18N_LOCALES = {
     "faq.q4": "इस रीडर का उपयोग करते समय क्या मेरा टेक्स्ट किसी सर्वर पर अपलोड होता है?",
     "faq.a4": "इस पेज का टेक्स्ट बॉक्स, स्लाइडर और हर नियंत्रण पूरी तरह आपके ब्राउज़र में चलता है — यह टूल आपके टाइप किए गए किसी भी हिस्से को कहीं नहीं भेजता। हालाँकि, कुछ आवाज़ें खुद 'ऑनलाइन' आवाज़ें होती हैं: ब्राउज़र ऑडियो बनाने के लिए टेक्स्ट को उस आवाज़ के प्रदाता के सर्वर पर भेजता है। सूची में 'ऑफ़लाइन' चिह्नित आवाज़ें पूरी तरह लोकल डिवाइस पर प्रोसेस होती हैं; अगर आप चाहते हैं कि टेक्स्ट कभी आपकी मशीन से बाहर न जाए, तो इनमें से कोई चुनें।",
     "faq.q5": "लंबे टेक्स्ट में प्लेबैक कभी-कभी बीच में क्यों रुक जाता है, और यह टूल इसे कैसे ठीक करता है?",
-    "faq.a5": "कुछ ब्राउज़र, खासकर डेस्कटॉप Chrome, में एक पुरानी ज्ञात बग है जिसमें लंबे टेक्स्ट पर लगातार लगभग 15 सेकंड चलने के बाद स्पीच सिंथेसिस चुपचाप रुक जाती है। यह टेक्स्ट-टू-स्पीच टूल बैकग्राउंड में हर कुछ सेकंड में प्लेबैक को धीरे से 'हिलाकर' अपने आप इसे ठीक कर देता है, ताकि लंबे लेख बिना आपको कुछ महसूस हुए अंत तक पढ़े जाएँ।"
+    "faq.a5": "कुछ ब्राउज़र, खासकर डेस्कटॉप Chrome, में एक पुरानी ज्ञात बग है जिसमें लंबे टेक्स्ट पर लगातार लगभग 15 सेकंड चलने के बाद स्पीच सिंथेसिस चुपचाप रुक जाती है। यह टेक्स्ट-टू-स्पीच टूल बैकग्राउंड में हर कुछ सेकंड में प्लेबैक को धीरे से 'हिलाकर' अपने आप इसे ठीक कर देता है, ताकि लंबे लेख बिना आपको कुछ महसूस हुए अंत तक पढ़े जाएँ।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -227,7 +242,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se sube mi texto a un servidor al usar este lector?",
     "faq.a4": "El cuadro de texto, los deslizadores y todos los controles de esta página funcionan enteramente en tu navegador — esta herramienta no envía nada de lo que escribes a ningún sitio. Sin embargo, algunas voces son 'en línea': el navegador envía el texto a los servidores de ese proveedor de voz para generar el audio. Las voces marcadas como 'sin conexión' en la lista procesan todo localmente en tu dispositivo; elige una de esas si quieres que el texto nunca salga de tu equipo.",
     "faq.q5": "¿Por qué a veces la reproducción se detiene a la mitad de un texto largo, y cómo lo soluciona esta herramienta?",
-    "faq.a5": "Algunos navegadores, sobre todo Chrome de escritorio, tienen un error conocido desde hace tiempo por el que la síntesis de voz se detiene silenciosamente tras unos 15 segundos de reproducción continua en textos largos. Este conversor de texto a voz lo evita automáticamente 'empujando' la reproducción cada pocos segundos en segundo plano, así los artículos largos se leen hasta el final sin que notes nada raro."
+    "faq.a5": "Algunos navegadores, sobre todo Chrome de escritorio, tienen un error conocido desde hace tiempo por el que la síntesis de voz se detiene silenciosamente tras unos 15 segundos de reproducción continua en textos largos. Este conversor de texto a voz lo evita automáticamente 'empujando' la reproducción cada pocos segundos en segundo plano, así los artículos largos se leen hasta el final sin que notes nada raro.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -280,7 +300,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يُرفع نصي إلى خادم عند استخدام هذه الأداة؟",
     "faq.a4": "صندوق النص والمنزلقات وكل عناصر التحكم في هذه الصفحة تعمل بالكامل داخل متصفحك — هذه الأداة لا ترسل أي شيء مما تكتبه إلى أي مكان. لكن بعض الأصوات نفسها هي أصوات 'عبر الإنترنت': يرسل المتصفح النص إلى خوادم مزوّد ذلك الصوت لتوليد الملف الصوتي. أما الأصوات المُعلَّمة بـ'دون اتصال' في القائمة فتُعالَج بالكامل محليًا على جهازك؛ اختر واحدًا منها إذا أردت ألا يغادر نصك جهازك أبدًا.",
     "faq.q5": "لماذا يتوقف التشغيل أحيانًا في منتصف نص طويل، وكيف تعالج هذه الأداة ذلك؟",
-    "faq.a5": "تعاني بعض المتصفحات، وخصوصًا Chrome على سطح المكتب، من علة معروفة منذ زمن طويل حيث يتوقف تركيب الكلام بصمت بعد نحو 15 ثانية من التشغيل المتواصل في النصوص الطويلة. تتجنّب أداة تحويل النص إلى كلام هذه المشكلة تلقائيًا عبر 'دفع' التشغيل بلطف كل بضع ثوانٍ في الخلفية، بحيث تُقرأ المقالات الطويلة حتى النهاية دون أن تلاحظ أي خلل."
+    "faq.a5": "تعاني بعض المتصفحات، وخصوصًا Chrome على سطح المكتب، من علة معروفة منذ زمن طويل حيث يتوقف تركيب الكلام بصمت بعد نحو 15 ثانية من التشغيل المتواصل في النصوص الطويلة. تتجنّب أداة تحويل النص إلى كلام هذه المشكلة تلقائيًا عبر 'دفع' التشغيل بلطف كل بضع ثوانٍ في الخلفية، بحيث تُقرأ المقالات الطويلة حتى النهاية دون أن تلاحظ أي خلل.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -333,7 +358,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mon texte est-il envoyé à un serveur lorsque j'utilise ce lecteur ?",
     "faq.a4": "La zone de texte, les curseurs et toutes les commandes de cette page fonctionnent entièrement dans votre navigateur — cet outil n'envoie nulle part ce que vous tapez. Cependant, certaines voix sont elles-mêmes des voix « en ligne » : le navigateur envoie le texte aux serveurs de ce fournisseur de voix pour générer l'audio. Les voix marquées « hors ligne » dans la liste traitent tout localement sur votre appareil ; choisissez-en une si vous voulez que le texte ne quitte jamais votre machine.",
     "faq.q5": "Pourquoi la lecture s'arrête-t-elle parfois en plein milieu d'un texte long, et comment cet outil corrige-t-il cela ?",
-    "faq.a5": "Certains navigateurs, notamment Chrome sur ordinateur, ont un bug connu de longue date qui fait que la synthèse vocale s'arrête silencieusement après environ 15 secondes de lecture continue sur les textes longs. Cet outil de synthèse vocale contourne automatiquement ce problème en relançant discrètement la lecture toutes les quelques secondes en arrière-plan, afin que les longs articles soient lus jusqu'au bout sans que vous remarquiez quoi que ce soit."
+    "faq.a5": "Certains navigateurs, notamment Chrome sur ordinateur, ont un bug connu de longue date qui fait que la synthèse vocale s'arrête silencieusement après environ 15 secondes de lecture continue sur les textes longs. Cet outil de synthèse vocale contourne automatiquement ce problème en relançant discrètement la lecture toutes les quelques secondes en arrière-plan, afin que les longs articles soient lus jusqu'au bout sans que vous remarquiez quoi que ce soit.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -386,7 +416,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এই রিডার ব্যবহার করার সময় আমার টেক্সট কি কোনো সার্ভারে আপলোড হয়?",
     "faq.a4": "এই পেজের টেক্সট বক্স, স্লাইডার এবং সব নিয়ন্ত্রণ সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — এই টুল আপনার টাইপ করা কিছুই কোথাও পাঠায় না। তবে, কিছু কণ্ঠ নিজেই 'অনলাইন' কণ্ঠ: অডিও তৈরি করতে ব্রাউজার টেক্সট সেই কণ্ঠ প্রোভাইডারের সার্ভারে পাঠায়। তালিকায় 'অফলাইন' চিহ্নিত কণ্ঠগুলো সম্পূর্ণভাবে স্থানীয় ডিভাইসেই প্রসেস হয়; আপনি যদি চান টেক্সট কখনো আপনার মেশিন থেকে বের না হোক, তাহলে এমন একটি বেছে নিন।",
     "faq.q5": "লম্বা টেক্সটে মাঝে মাঝে প্লেব্যাক কেন থেমে যায়, এবং এই টুল সেটা কীভাবে ঠিক করে?",
-    "faq.a5": "কিছু ব্রাউজার, বিশেষত ডেস্কটপ Chrome-এ, দীর্ঘদিনের একটি পরিচিত বাগ আছে যেখানে দীর্ঘ টেক্সটে প্রায় ১৫ সেকেন্ড একটানা চলার পর স্পিচ সিন্থেসিস নিঃশব্দে থেমে যায়। এই টেক্সট-টু-স্পিচ টুল ব্যাকগ্রাউন্ডে প্রতি কয়েক সেকেন্ডে প্লেব্যাককে আলতো করে 'ঠেলে' দিয়ে স্বয়ংক্রিয়ভাবে এটি এড়িয়ে যায়, যাতে লম্বা লেখা শেষ পর্যন্ত পড়া হয় এবং আপনি কিছুই খেয়াল করেন না।"
+    "faq.a5": "কিছু ব্রাউজার, বিশেষত ডেস্কটপ Chrome-এ, দীর্ঘদিনের একটি পরিচিত বাগ আছে যেখানে দীর্ঘ টেক্সটে প্রায় ১৫ সেকেন্ড একটানা চলার পর স্পিচ সিন্থেসিস নিঃশব্দে থেমে যায়। এই টেক্সট-টু-স্পিচ টুল ব্যাকগ্রাউন্ডে প্রতি কয়েক সেকেন্ডে প্লেব্যাককে আলতো করে 'ঠেলে' দিয়ে স্বয়ংক্রিয়ভাবে এটি এড়িয়ে যায়, যাতে লম্বা লেখা শেষ পর্যন্ত পড়া হয় এবং আপনি কিছুই খেয়াল করেন না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -439,7 +474,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meu texto é enviado para um servidor ao usar este leitor?",
     "faq.a4": "A caixa de texto, os controles deslizantes e todos os controles desta página funcionam inteiramente no seu navegador — esta ferramenta não envia nada do que você digita para lugar nenhum. No entanto, algumas vozes em si são vozes 'online': o navegador envia o texto para os servidores desse provedor de voz para gerar o áudio. As vozes marcadas como 'offline' na lista processam tudo localmente no seu dispositivo; escolha uma dessas se quiser que o texto nunca saia da sua máquina.",
     "faq.q5": "Por que a reprodução às vezes para no meio de um texto longo, e como esta ferramenta corrige isso?",
-    "faq.a5": "Alguns navegadores, principalmente o Chrome no desktop, têm um bug antigo e conhecido em que a síntese de voz para silenciosamente após cerca de 15 segundos de reprodução contínua em textos longos. Esta ferramenta de texto para voz contorna isso automaticamente, dando um leve 'empurrão' na reprodução a cada poucos segundos em segundo plano, para que artigos longos sejam lidos até o fim sem que você perceba nada."
+    "faq.a5": "Alguns navegadores, principalmente o Chrome no desktop, têm um bug antigo e conhecido em que a síntese de voz para silenciosamente após cerca de 15 segundos de reprodução contínua em textos longos. Esta ferramenta de texto para voz contorna isso automaticamente, dando um leve 'empurrão' na reprodução a cada poucos segundos em segundo plano, para que artigos longos sejam lidos até o fim sem que você perceba nada.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -492,7 +532,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Отправляется ли мой текст на сервер при использовании этой читалки?",
     "faq.a4": "Текстовое поле, ползунки и все элементы управления на этой странице работают полностью в вашем браузере — этот инструмент никуда не отправляет то, что вы вводите. Однако некоторые голоса сами по себе являются «онлайн»-голосами: браузер отправляет текст на серверы поставщика такого голоса для генерации звука. Голоса, помеченные в списке как «офлайн», обрабатываются полностью локально на вашем устройстве; выберите один из них, если хотите, чтобы текст никогда не покидал ваш компьютер.",
     "faq.q5": "Почему воспроизведение иногда останавливается посреди длинного текста и как этот инструмент это исправляет?",
-    "faq.a5": "В некоторых браузерах, особенно в Chrome на компьютере, есть давно известная ошибка: синтез речи молча останавливается примерно через 15 секунд непрерывного воспроизведения длинных текстов. Этот инструмент синтеза речи автоматически обходит проблему, незаметно «подталкивая» воспроизведение каждые несколько секунд в фоновом режиме, поэтому длинные статьи дочитываются до конца, и вы ничего не замечаете."
+    "faq.a5": "В некоторых браузерах, особенно в Chrome на компьютере, есть давно известная ошибка: синтез речи молча останавливается примерно через 15 секунд непрерывного воспроизведения длинных текстов. Этот инструмент синтеза речи автоматически обходит проблему, незаметно «подталкивая» воспроизведение каждые несколько секунд в фоновом режиме, поэтому длинные статьи дочитываются до конца, и вы ничего не замечаете.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -545,7 +590,12 @@ window.I18N_LOCALES = {
     "faq.q4": "اس ریڈر کو استعمال کرتے وقت کیا میرا متن سرور پر اپ لوڈ ہوتا ہے؟",
     "faq.a4": "اس صفحے کا ٹیکسٹ باکس، سلائیڈرز اور تمام کنٹرولز مکمل طور پر آپ کے براؤزر میں چلتے ہیں — یہ ٹول آپ کے ٹائپ کیے گئے کسی بھی حصے کو کہیں نہیں بھیجتا۔ تاہم، کچھ آوازیں خود 'آن لائن' آوازیں ہیں: براؤزر آڈیو بنانے کے لیے متن کو اس آواز فراہم کنندہ کے سرورز کو بھیجتا ہے۔ فہرست میں 'آف لائن' نشان زدہ آوازیں مکمل طور پر مقامی طور پر آپ کی ڈیوائس پر پروسیس ہوتی ہیں؛ اگر آپ چاہتے ہیں کہ متن کبھی آپ کی مشین سے باہر نہ جائے تو ان میں سے کوئی ایک منتخب کریں۔",
     "faq.q5": "لمبے متن میں پلے بیک کبھی کبھار درمیان میں کیوں رک جاتی ہے، اور یہ ٹول اسے کیسے ٹھیک کرتا ہے؟",
-    "faq.a5": "کچھ براؤزرز، خاص طور پر ڈیسک ٹاپ Chrome، میں ایک پرانا معلوم بگ ہے جہاں لمبے متن پر تقریباً 15 سیکنڈ کی مسلسل چلائی کے بعد اسپیچ سنتھیسز خاموشی سے رک جاتی ہے۔ یہ ٹیکسٹ ٹو اسپیچ ٹول بیک گراؤنڈ میں ہر چند سیکنڈ بعد پلے بیک کو ہلکا سا 'دھکا' دے کر خودکار طور پر اس سے بچتا ہے، تاکہ لمبے مضامین آخر تک پڑھے جائیں اور آپ کو کچھ محسوس نہ ہو۔"
+    "faq.a5": "کچھ براؤزرز، خاص طور پر ڈیسک ٹاپ Chrome، میں ایک پرانا معلوم بگ ہے جہاں لمبے متن پر تقریباً 15 سیکنڈ کی مسلسل چلائی کے بعد اسپیچ سنتھیسز خاموشی سے رک جاتی ہے۔ یہ ٹیکسٹ ٹو اسپیچ ٹول بیک گراؤنڈ میں ہر چند سیکنڈ بعد پلے بیک کو ہلکا سا 'دھکا' دے کر خودکار طور پر اس سے بچتا ہے، تاکہ لمبے مضامین آخر تک پڑھے جائیں اور آپ کو کچھ محسوس نہ ہو۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -598,7 +648,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah teks saya diunggah ke server saat menggunakan pembaca ini?",
     "faq.a4": "Kotak teks, penggeser, dan semua kontrol di halaman ini berjalan sepenuhnya di browser Anda — alat ini tidak mengirim apa pun yang Anda ketik ke mana pun. Namun, beberapa suara itu sendiri adalah suara 'online': browser mengirim teks ke server penyedia suara tersebut untuk menghasilkan audio. Suara yang ditandai 'offline' dalam daftar memproses semuanya secara lokal di perangkat Anda; pilih salah satunya jika Anda ingin teks tidak pernah meninggalkan perangkat Anda.",
     "faq.q5": "Mengapa pemutaran terkadang berhenti di tengah teks panjang, dan bagaimana alat ini memperbaikinya?",
-    "faq.a5": "Beberapa browser, terutama Chrome di desktop, memiliki bug lama yang sudah dikenal di mana sintesis suara berhenti secara diam-diam setelah sekitar 15 detik pemutaran terus-menerus pada teks panjang. Alat teks ke suara ini secara otomatis mengatasinya dengan 'mendorong' pemutaran secara halus setiap beberapa detik di latar belakang, sehingga artikel panjang tetap terbaca hingga selesai tanpa Anda menyadari apa pun."
+    "faq.a5": "Beberapa browser, terutama Chrome di desktop, memiliki bug lama yang sudah dikenal di mana sintesis suara berhenti secara diam-diam setelah sekitar 15 detik pemutaran terus-menerus pada teks panjang. Alat teks ke suara ini secara otomatis mengatasinya dengan 'mendorong' pemutaran secara halus setiap beberapa detik di latar belakang, sehingga artikel panjang tetap terbaca hingga selesai tanpa Anda menyadari apa pun.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -651,7 +706,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wird mein Text bei der Nutzung dieses Vorlesers an einen Server gesendet?",
     "faq.a4": "Das Textfeld, die Regler und alle Steuerelemente dieser Seite laufen vollständig in Ihrem Browser — dieses Tool sendet nichts von dem, was Sie eingeben, irgendwohin. Manche Stimmen sind jedoch selbst 'Online'-Stimmen: Der Browser sendet den Text an die Server dieses Stimmenanbieters, um das Audio zu erzeugen. Als 'offline' markierte Stimmen in der Liste verarbeiten alles lokal auf Ihrem Gerät; wählen Sie eine davon, wenn der Text niemals Ihr Gerät verlassen soll.",
     "faq.q5": "Warum stoppt die Wiedergabe manchmal mitten in einem langen Text, und wie behebt dieses Tool das?",
-    "faq.a5": "Manche Browser, insbesondere Chrome auf dem Desktop, haben einen seit Langem bekannten Fehler, bei dem die Sprachsynthese bei längeren Texten nach etwa 15 Sekunden ununterbrochener Wiedergabe stillschweigend stoppt. Dieses Text-zu-Sprache-Tool umgeht das automatisch, indem es die Wiedergabe im Hintergrund alle paar Sekunden sanft 'anstößt', sodass lange Artikel bis zum Ende vorgelesen werden, ohne dass Sie etwas bemerken."
+    "faq.a5": "Manche Browser, insbesondere Chrome auf dem Desktop, haben einen seit Langem bekannten Fehler, bei dem die Sprachsynthese bei längeren Texten nach etwa 15 Sekunden ununterbrochener Wiedergabe stillschweigend stoppt. Dieses Text-zu-Sprache-Tool umgeht das automatisch, indem es die Wiedergabe im Hintergrund alle paar Sekunden sanft 'anstößt', sodass lange Artikel bis zum Ende vorgelesen werden, ohne dass Sie etwas bemerken.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -704,7 +764,12 @@ window.I18N_LOCALES = {
     "faq.q4": "このツールを使うと、テキストはサーバーにアップロードされますか？",
     "faq.a4": "このページのテキストボックス、スライダー、すべての操作はブラウザ内で完結しており、このツール自体は入力内容をどこにも送信しません。ただし、一部の音声はそれ自体が「オンライン」音声であり、音声を生成するためにブラウザがその音声提供元のサーバーへテキストを送信します。リストで「オフライン」と表示されている音声はすべて端末上でローカル処理されるため、テキストを一切外部に出したくない場合はそちらを選んでください。",
     "faq.q5": "長いテキストで再生が途中で止まってしまうことがあるのはなぜですか？このツールはどう対処していますか？",
-    "faq.a5": "一部のブラウザ、特にデスクトップ版Chromeには、長いテキストを約15秒以上連続再生すると音声合成が無言で停止してしまうという以前から知られた不具合があります。このテキスト読み上げツールは、バックグラウンドで数秒おきに再生を軽く「揺さぶる」ことでこの問題を自動的に回避するため、長い記事でも気づかないうちに最後まで読み上げられます。"
+    "faq.a5": "一部のブラウザ、特にデスクトップ版Chromeには、長いテキストを約15秒以上連続再生すると音声合成が無言で停止してしまうという以前から知られた不具合があります。このテキスト読み上げツールは、バックグラウンドで数秒おきに再生を軽く「揺さぶる」ことでこの問題を自動的に回避するため、長い記事でも気づかないうちに最後まで読み上げられます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -757,6 +822,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 도구를 사용하면 제 텍스트가 서버로 전송되나요?",
     "faq.a4": "이 페이지의 텍스트 상자, 슬라이더, 모든 조작은 전적으로 브라우저 안에서 이루어지며, 이 도구 자체는 입력한 내용을 어디로도 전송하지 않습니다. 다만 일부 목소리는 그 자체가 '온라인' 목소리로, 오디오를 생성하기 위해 브라우저가 해당 목소리 제공업체의 서버로 텍스트를 전송합니다. 목록에서 '오프라인'으로 표시된 목소리는 모두 기기 내에서 로컬로 처리되므로, 텍스트가 기기 밖으로 나가지 않기를 원한다면 그런 목소리를 선택하세요.",
     "faq.q5": "긴 텍스트에서 재생이 중간에 멈추는 경우가 있는 이유는 무엇이고, 이 도구는 이를 어떻게 해결하나요?",
-    "faq.a5": "일부 브라우저, 특히 데스크톱 Chrome에는 긴 텍스트를 약 15초 이상 연속 재생하면 음성 합성이 소리 없이 멈춰버리는 오래된 알려진 버그가 있습니다. 이 텍스트 음성 변환 도구는 백그라운드에서 몇 초마다 재생을 살짝 '흔들어' 이 문제를 자동으로 피해가므로, 긴 글도 사용자가 눈치채지 못한 채 끝까지 읽힙니다."
+    "faq.a5": "일부 브라우저, 특히 데스크톱 Chrome에는 긴 텍스트를 약 15초 이상 연속 재생하면 음성 합성이 소리 없이 멈춰버리는 오래된 알려진 버그가 있습니다. 이 텍스트 음성 변환 도구는 백그라운드에서 몇 초마다 재생을 살짝 '흔들어' 이 문제를 자동으로 피해가므로, 긴 글도 사용자가 눈치채지 못한 채 끝까지 읽힙니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

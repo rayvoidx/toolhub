@@ -57,7 +57,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I undo a find and replace after applying it?",
     "faq.a4": "Yes. After clicking Replace All, an Undo button appears that restores the text exactly as it was one step back. The tool keeps a single level of undo — enough to recover from an unwanted replacement — but it doesn't keep a longer history, so it's still worth checking the highlighted preview before applying if you want to be extra careful.",
     "faq.q5": "Is my text uploaded to a server when I use this tool?",
-    "faq.a5": "No. Find and Replace Text runs entirely in your browser using standard JavaScript string and regular-expression functions — your text, find term, and replacement never leave your device and nothing is stored on a server. The only place anything is saved is your own browser's local storage, so you can close the tab and come back to your last text later."
+    "faq.a5": "No. Find and Replace Text runs entirely in your browser using standard JavaScript string and regular-expression functions — your text, find term, and replacement never leave your device and nothing is stored on a server. The only place anything is saved is your own browser's local storage, so you can close the tab and come back to your last text later.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -112,7 +117,12 @@ window.I18N_LOCALES = {
     "faq.q4": "应用查找替换之后可以撤销吗？",
     "faq.a4": "可以。点击\"全部替换\"后会出现一个\"撤销\"按钮，可以将文本恢复到替换前的状态。该工具只保留一级撤销——足以挽回一次误操作——但不会保存更长的历史记录，所以建议在应用前先仔细查看高亮预览。",
     "faq.q5": "使用这个工具时，我的文本会被上传到服务器吗？",
-    "faq.a5": "不会。\"查找替换文本\"完全在你的浏览器中运行，使用标准的 JavaScript 字符串和正则表达式函数——你的文本、查找内容和替换内容都不会离开你的设备，也不会存储在任何服务器上。唯一保存数据的地方是你自己浏览器的本地存储，因此你可以关闭页面后再回来继续编辑上次的文本。"
+    "faq.a5": "不会。\"查找替换文本\"完全在你的浏览器中运行，使用标准的 JavaScript 字符串和正则表达式函数——你的文本、查找内容和替换内容都不会离开你的设备，也不会存储在任何服务器上。唯一保存数据的地方是你自己浏览器的本地存储，因此你可以关闭页面后再回来继续编辑上次的文本。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -167,7 +177,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या लागू करने के बाद फाइंड एंड रिप्लेस को पूर्ववत किया जा सकता है?",
     "faq.a4": "हाँ। \"सभी बदलें\" पर क्लिक करने के बाद एक \"पूर्ववत करें\" बटन दिखता है, जो टेक्स्ट को ठीक एक कदम पहले जैसा वापस कर देता है। यह टूल सिर्फ़ एक स्तर का पूर्ववत रखता है — किसी अनचाहे बदलाव से उबरने के लिए काफ़ी — लेकिन इससे लंबी हिस्ट्री सेव नहीं होती, इसलिए लागू करने से पहले हाइलाइट किया गया पूर्वावलोकन ज़रूर देख लें।",
     "faq.q5": "क्या इस टूल का इस्तेमाल करते समय मेरा टेक्स्ट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। फाइंड एंड रिप्लेस टेक्स्ट पूरी तरह आपके ब्राउज़र में सामान्य JavaScript स्ट्रिंग और रेगुलर-एक्सप्रेशन फ़ंक्शन का उपयोग करके चलता है — आपका टेक्स्ट, खोजा गया शब्द और बदला हुआ शब्द कभी आपके डिवाइस से बाहर नहीं जाते और किसी सर्वर पर सेव नहीं होते। सिर्फ़ आपके ब्राउज़र का लोकल स्टोरेज ही कुछ सेव करता है, ताकि आप टैब बंद करके बाद में अपने पिछले टेक्स्ट पर लौट सकें।"
+    "faq.a5": "नहीं। फाइंड एंड रिप्लेस टेक्स्ट पूरी तरह आपके ब्राउज़र में सामान्य JavaScript स्ट्रिंग और रेगुलर-एक्सप्रेशन फ़ंक्शन का उपयोग करके चलता है — आपका टेक्स्ट, खोजा गया शब्द और बदला हुआ शब्द कभी आपके डिवाइस से बाहर नहीं जाते और किसी सर्वर पर सेव नहीं होते। सिर्फ़ आपके ब्राउज़र का लोकल स्टोरेज ही कुछ सेव करता है, ताकि आप टैब बंद करके बाद में अपने पिछले टेक्स्ट पर लौट सकें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -222,7 +237,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo deshacer un buscar y reemplazar después de aplicarlo?",
     "faq.a4": "Sí. Después de hacer clic en Reemplazar todo, aparece un botón Deshacer que restaura el texto exactamente a como estaba un paso atrás. La herramienta conserva un solo nivel de deshacer —suficiente para recuperarse de un reemplazo no deseado— pero no guarda un historial más largo, así que vale la pena revisar la vista previa resaltada antes de aplicar si quieres ir sobre seguro.",
     "faq.q5": "¿Se sube mi texto a un servidor al usar esta herramienta?",
-    "faq.a5": "No. Buscar y Reemplazar Texto se ejecuta enteramente en tu navegador usando funciones estándar de JavaScript para cadenas y expresiones regulares — tu texto, el término de búsqueda y el reemplazo nunca salen de tu dispositivo y no se guardan en ningún servidor. El único lugar donde se guarda algo es el almacenamiento local de tu propio navegador, así que puedes cerrar la pestaña y volver más tarde a tu último texto."
+    "faq.a5": "No. Buscar y Reemplazar Texto se ejecuta enteramente en tu navegador usando funciones estándar de JavaScript para cadenas y expresiones regulares — tu texto, el término de búsqueda y el reemplazo nunca salen de tu dispositivo y no se guardan en ningún servidor. El único lugar donde se guarda algo es el almacenamiento local de tu propio navegador, así que puedes cerrar la pestaña y volver más tarde a tu último texto.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -277,7 +297,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني التراجع عن عملية بحث واستبدال بعد تطبيقها؟",
     "faq.a4": "نعم. بعد الضغط على \"استبدال الكل\"، يظهر زر \"تراجع\" يعيد النص تمامًا كما كان قبل خطوة واحدة. تحتفظ الأداة بمستوى واحد فقط من التراجع — يكفي للتعافي من استبدال غير مرغوب فيه — لكنها لا تحتفظ بسجل أطول، لذا يُستحسن دائمًا مراجعة المعاينة المُبرزة قبل التطبيق لمزيد من الاطمئنان.",
     "faq.q5": "هل يُرفع نصّي إلى خادم عند استخدام هذه الأداة؟",
-    "faq.a5": "لا. تعمل أداة البحث عن نص واستبداله بالكامل داخل متصفحك باستخدام دوال JavaScript القياسية للنصوص والتعبيرات النمطية — نصّك ومصطلح البحث والاستبدال لا تغادر جهازك أبدًا ولا تُخزَّن على أي خادم. المكان الوحيد الذي يُحفظ فيه أي شيء هو التخزين المحلي في متصفحك أنت، لذا يمكنك إغلاق التبويب والعودة لاحقًا إلى آخر نص عملت عليه."
+    "faq.a5": "لا. تعمل أداة البحث عن نص واستبداله بالكامل داخل متصفحك باستخدام دوال JavaScript القياسية للنصوص والتعبيرات النمطية — نصّك ومصطلح البحث والاستبدال لا تغادر جهازك أبدًا ولا تُخزَّن على أي خادم. المكان الوحيد الذي يُحفظ فيه أي شيء هو التخزين المحلي في متصفحك أنت، لذا يمكنك إغلاق التبويب والعودة لاحقًا إلى آخر نص عملت عليه.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -332,7 +357,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je annuler une recherche-remplacement après l'avoir appliquée ?",
     "faq.a4": "Oui. Après avoir cliqué sur Tout remplacer, un bouton Annuler apparaît et restaure le texte exactement tel qu'il était une étape auparavant. L'outil ne conserve qu'un seul niveau d'annulation — suffisant pour corriger un remplacement non désiré — mais ne garde pas d'historique plus long, il vaut donc mieux vérifier l'aperçu surligné avant d'appliquer si vous voulez être vraiment prudent.",
     "faq.q5": "Mon texte est-il envoyé à un serveur lorsque j'utilise cet outil ?",
-    "faq.a5": "Non. Rechercher et Remplacer du Texte s'exécute entièrement dans votre navigateur à l'aide des fonctions JavaScript standard pour les chaînes et les expressions régulières — votre texte, le terme recherché et son remplacement ne quittent jamais votre appareil et ne sont stockés sur aucun serveur. Le seul endroit où quelque chose est enregistré est le stockage local de votre propre navigateur, vous pouvez donc fermer l'onglet et retrouver votre dernier texte plus tard."
+    "faq.a5": "Non. Rechercher et Remplacer du Texte s'exécute entièrement dans votre navigateur à l'aide des fonctions JavaScript standard pour les chaînes et les expressions régulières — votre texte, le terme recherché et son remplacement ne quittent jamais votre appareil et ne sont stockés sur aucun serveur. Le seul endroit où quelque chose est enregistré est le stockage local de votre propre navigateur, vous pouvez donc fermer l'onglet et retrouver votre dernier texte plus tard.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -387,7 +417,12 @@ window.I18N_LOCALES = {
     "faq.q4": "প্রয়োগ করার পর কি ফাইন্ড অ্যান্ড রিপ্লেস ফিরিয়ে নেওয়া যায়?",
     "faq.a4": "হ্যাঁ। \"সব প্রতিস্থাপন করুন\"-এ ক্লিক করার পর একটি \"ফিরিয়ে নিন\" বোতাম দেখা যায়, যা টেক্সটকে ঠিক এক ধাপ আগের অবস্থায় ফিরিয়ে দেয়। এই টুল শুধু একধাপ ফিরিয়ে নেওয়ার সুবিধা রাখে — অনাকাঙ্ক্ষিত প্রতিস্থাপন থেকে বাঁচার জন্য যথেষ্ট — কিন্তু এর চেয়ে বেশি ইতিহাস রাখে না, তাই প্রয়োগ করার আগে হাইলাইট করা প্রিভিউ দেখে নেওয়াই ভালো।",
     "faq.q5": "এই টুল ব্যবহার করার সময় আমার টেক্সট কি সার্ভারে আপলোড হয়?",
-    "faq.a5": "না। ফাইন্ড অ্যান্ড রিপ্লেস টেক্সট সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript স্ট্রিং ও রেগুলার-এক্সপ্রেশন ফাংশন ব্যবহার করে চলে — আপনার টেক্সট, খোঁজার শব্দ ও প্রতিস্থাপন কখনো আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে জমা থাকে না। শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজেই কিছু জমা থাকে, তাই ট্যাব বন্ধ করে পরে ফিরে এসেও আপনার শেষ টেক্সট আবার পেতে পারেন।"
+    "faq.a5": "না। ফাইন্ড অ্যান্ড রিপ্লেস টেক্সট সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript স্ট্রিং ও রেগুলার-এক্সপ্রেশন ফাংশন ব্যবহার করে চলে — আপনার টেক্সট, খোঁজার শব্দ ও প্রতিস্থাপন কখনো আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে জমা থাকে না। শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজেই কিছু জমা থাকে, তাই ট্যাব বন্ধ করে পরে ফিরে এসেও আপনার শেষ টেক্সট আবার পেতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -442,7 +477,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Posso desfazer uma substituição depois de aplicá-la?",
     "faq.a4": "Sim. Depois de clicar em Substituir tudo, aparece um botão Desfazer que restaura o texto exatamente como estava um passo atrás. A ferramenta mantém apenas um nível de desfazer — suficiente para se recuperar de uma substituição indesejada — mas não guarda um histórico maior, por isso vale a pena conferir a prévia destacada antes de aplicar se você quiser ter mais segurança.",
     "faq.q5": "Meu texto é enviado para um servidor ao usar esta ferramenta?",
-    "faq.a5": "Não. O Localizar e Substituir Texto roda inteiramente no seu navegador usando funções padrão de string e expressão regular do JavaScript — seu texto, o termo buscado e a substituição nunca saem do seu dispositivo e não ficam armazenados em nenhum servidor. O único lugar onde algo é salvo é o armazenamento local do seu próprio navegador, então você pode fechar a aba e voltar depois para o seu último texto."
+    "faq.a5": "Não. O Localizar e Substituir Texto roda inteiramente no seu navegador usando funções padrão de string e expressão regular do JavaScript — seu texto, o termo buscado e a substituição nunca saem do seu dispositivo e não ficam armazenados em nenhum servidor. O único lugar onde algo é salvo é o armazenamento local do seu próprio navegador, então você pode fechar a aba e voltar depois para o seu último texto.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -497,7 +537,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Можно ли отменить замену после её применения?",
     "faq.a4": "Да. После нажатия «Заменить все» появляется кнопка «Отменить», которая возвращает текст ровно к состоянию на шаг назад. Инструмент хранит только один уровень отмены — этого достаточно, чтобы исправить нежелательную замену, — но более длинную историю не сохраняет, поэтому перед применением стоит внимательно проверить подсвеченный предпросмотр.",
     "faq.q5": "Отправляется ли мой текст на сервер при использовании этого инструмента?",
-    "faq.a5": "Нет. «Найти и заменить текст» полностью работает в вашем браузере с помощью стандартных функций JavaScript для строк и регулярных выражений — ваш текст, искомое слово и замена никогда не покидают устройство и не сохраняются ни на каком сервере. Единственное место, куда что-либо сохраняется, — это локальное хранилище вашего собственного браузера, так что вы можете закрыть вкладку и вернуться к своему последнему тексту позже."
+    "faq.a5": "Нет. «Найти и заменить текст» полностью работает в вашем браузере с помощью стандартных функций JavaScript для строк и регулярных выражений — ваш текст, искомое слово и замена никогда не покидают устройство и не сохраняются ни на каком сервере. Единственное место, куда что-либо сохраняется, — это локальное хранилище вашего собственного браузера, так что вы можете закрыть вкладку и вернуться к своему последнему тексту позже.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -552,7 +597,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا لاگو کرنے کے بعد تلاش اور تبدیلی کو کالعدم کیا جا سکتا ہے؟",
     "faq.a4": "جی ہاں۔ \"سب تبدیل کریں\" پر کلک کرنے کے بعد ایک \"کالعدم کریں\" بٹن ظاہر ہوتا ہے، جو متن کو بالکل ایک قدم پہلے کی حالت میں واپس لے آتا ہے۔ یہ ٹول صرف ایک سطح کا کالعدم رکھتا ہے — کسی ناخواستہ تبدیلی سے بچنے کے لیے کافی ہے — لیکن اس سے زیادہ لمبی تاریخ محفوظ نہیں رکھتا، اس لیے لاگو کرنے سے پہلے ہائی لائٹ شدہ پیش منظر ضرور دیکھ لیں۔",
     "faq.q5": "اس ٹول کو استعمال کرتے وقت کیا میرا متن سرور پر اپ لوڈ ہوتا ہے؟",
-    "faq.a5": "نہیں۔ متن تلاش اور تبدیل کریں مکمل طور پر آپ کے براؤزر میں معیاری JavaScript سٹرنگ اور ریگولر ایکسپریشن فنکشنز استعمال کر کے چلتا ہے — آپ کا متن، تلاش کی گئی اصطلاح، اور تبدیلی کبھی آپ کے آلے سے باہر نہیں جاتے اور کسی سرور پر محفوظ نہیں ہوتے۔ صرف آپ کے اپنے براؤزر کا لوکل سٹوریج ہی کچھ محفوظ کرتا ہے، اس لیے آپ ٹیب بند کر کے بعد میں اپنے آخری متن پر واپس آ سکتے ہیں۔"
+    "faq.a5": "نہیں۔ متن تلاش اور تبدیل کریں مکمل طور پر آپ کے براؤزر میں معیاری JavaScript سٹرنگ اور ریگولر ایکسپریشن فنکشنز استعمال کر کے چلتا ہے — آپ کا متن، تلاش کی گئی اصطلاح، اور تبدیلی کبھی آپ کے آلے سے باہر نہیں جاتے اور کسی سرور پر محفوظ نہیں ہوتے۔ صرف آپ کے اپنے براؤزر کا لوکل سٹوریج ہی کچھ محفوظ کرتا ہے، اس لیے آپ ٹیب بند کر کے بعد میں اپنے آخری متن پر واپس آ سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -607,7 +657,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah saya membatalkan cari dan ganti setelah diterapkan?",
     "faq.a4": "Bisa. Setelah mengklik Ganti Semua, tombol Urungkan akan muncul dan mengembalikan teks persis seperti satu langkah sebelumnya. Alat ini hanya menyimpan satu tingkat pembatalan — cukup untuk memulihkan dari penggantian yang tidak diinginkan — tetapi tidak menyimpan riwayat yang lebih panjang, jadi sebaiknya periksa pratinjau yang disorot sebelum menerapkan jika Anda ingin lebih berhati-hati.",
     "faq.q5": "Apakah teks saya diunggah ke server saat menggunakan alat ini?",
-    "faq.a5": "Tidak. Cari dan Ganti Teks berjalan sepenuhnya di browser Anda menggunakan fungsi string dan ekspresi reguler JavaScript standar — teks, kata yang dicari, dan penggantinya tidak pernah meninggalkan perangkat Anda dan tidak disimpan di server mana pun. Satu-satunya tempat yang menyimpan sesuatu adalah penyimpanan lokal browser Anda sendiri, jadi Anda bisa menutup tab dan kembali lagi nanti ke teks terakhir Anda."
+    "faq.a5": "Tidak. Cari dan Ganti Teks berjalan sepenuhnya di browser Anda menggunakan fungsi string dan ekspresi reguler JavaScript standar — teks, kata yang dicari, dan penggantinya tidak pernah meninggalkan perangkat Anda dan tidak disimpan di server mana pun. Satu-satunya tempat yang menyimpan sesuatu adalah penyimpanan lokal browser Anda sendiri, jadi Anda bisa menutup tab dan kembali lagi nanti ke teks terakhir Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -662,7 +717,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich ein Suchen-und-Ersetzen nach dem Anwenden rückgängig machen?",
     "faq.a4": "Ja. Nach einem Klick auf Alle ersetzen erscheint eine Schaltfläche Rückgängig, die den Text genau auf den Stand einen Schritt zuvor zurücksetzt. Das Werkzeug speichert nur eine Ebene des Rückgängigmachens — genug, um eine unerwünschte Ersetzung zu korrigieren — aber keinen längeren Verlauf, daher lohnt es sich, die markierte Vorschau vor dem Anwenden zu prüfen, wenn Sie auf Nummer sicher gehen wollen.",
     "faq.q5": "Wird mein Text beim Verwenden dieses Werkzeugs auf einen Server hochgeladen?",
-    "faq.a5": "Nein. Text Suchen und Ersetzen läuft vollständig in Ihrem Browser mit Standard-JavaScript-Funktionen für Zeichenketten und reguläre Ausdrücke — Ihr Text, der Suchbegriff und der Ersatz verlassen niemals Ihr Gerät und werden auf keinem Server gespeichert. Der einzige Ort, an dem etwas gespeichert wird, ist der lokale Speicher Ihres eigenen Browsers, sodass Sie den Tab schließen und später zu Ihrem letzten Text zurückkehren können."
+    "faq.a5": "Nein. Text Suchen und Ersetzen läuft vollständig in Ihrem Browser mit Standard-JavaScript-Funktionen für Zeichenketten und reguläre Ausdrücke — Ihr Text, der Suchbegriff und der Ersatz verlassen niemals Ihr Gerät und werden auf keinem Server gespeichert. Der einzige Ort, an dem etwas gespeichert wird, ist der lokale Speicher Ihres eigenen Browsers, sodass Sie den Tab schließen und später zu Ihrem letzten Text zurückkehren können.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -717,7 +777,12 @@ window.I18N_LOCALES = {
     "faq.q4": "適用後に検索・置換を元に戻すことはできますか？",
     "faq.a4": "はい。「すべて置換」をクリックすると「元に戻す」ボタンが表示され、テキストを1ステップ前の状態に正確に復元します。このツールは1段階分の取り消しのみを保持します — 意図しない置換から復旧するには十分ですが、それより長い履歴は保持しないため、慎重を期したい場合は適用前にハイライトされたプレビューを確認することをおすすめします。",
     "faq.q5": "このツールを使用する際、テキストはサーバーにアップロードされますか？",
-    "faq.a5": "いいえ。「文字列の検索・置換ツール」は標準の JavaScript の文字列・正規表現関数を使い、すべてブラウザ内で完結して動作します。テキスト、検索語、置換後の文字列がデバイスの外に送信されることはなく、サーバーに保存されることもありません。保存される唯一の場所はご自身のブラウザのローカルストレージのみなので、タブを閉じても後でまた最後のテキストに戻ってくることができます。"
+    "faq.a5": "いいえ。「文字列の検索・置換ツール」は標準の JavaScript の文字列・正規表現関数を使い、すべてブラウザ内で完結して動作します。テキスト、検索語、置換後の文字列がデバイスの外に送信されることはなく、サーバーに保存されることもありません。保存される唯一の場所はご自身のブラウザのローカルストレージのみなので、タブを閉じても後でまた最後のテキストに戻ってくることができます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -772,6 +837,11 @@ window.I18N_LOCALES = {
     "faq.q4": "적용한 후에 찾아 바꾸기를 실행 취소할 수 있나요?",
     "faq.a4": "네. \"모두 바꾸기\"를 클릭하면 \"실행 취소\" 버튼이 나타나며, 텍스트를 정확히 한 단계 이전 상태로 되돌립니다. 이 도구는 원치 않는 변경을 복구하기에 충분한 1단계 실행 취소만 유지하며 더 긴 기록은 저장하지 않으므로, 더 확실히 하고 싶다면 적용 전에 하이라이트된 미리보기를 꼭 확인하세요.",
     "faq.q5": "이 도구를 사용할 때 내 텍스트가 서버로 업로드되나요?",
-    "faq.a5": "아니요. 찾아 바꾸기 도구는 표준 JavaScript 문자열 및 정규식 함수를 사용해 브라우저 안에서 전부 실행됩니다 — 텍스트, 찾을 단어, 바꿀 내용은 기기 밖으로 나가지 않으며 어떤 서버에도 저장되지 않습니다. 유일하게 저장되는 곳은 사용자 브라우저의 로컬 저장소뿐이므로, 탭을 닫았다가 나중에 다시 열어도 마지막 텍스트로 돌아올 수 있습니다."
+    "faq.a5": "아니요. 찾아 바꾸기 도구는 표준 JavaScript 문자열 및 정규식 함수를 사용해 브라우저 안에서 전부 실행됩니다 — 텍스트, 찾을 단어, 바꿀 내용은 기기 밖으로 나가지 않으며 어떤 서버에도 저장되지 않습니다. 유일하게 저장되는 곳은 사용자 브라우저의 로컬 저장소뿐이므로, 탭을 닫았다가 나중에 다시 열어도 마지막 텍스트로 돌아올 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

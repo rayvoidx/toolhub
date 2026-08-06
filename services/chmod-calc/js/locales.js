@@ -66,7 +66,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What are setuid, setgid, and the sticky bit?",
     "faq.a4": "These are special permission bits shown as a fourth leading octal digit (e.g. 4755) or as an s/t in the symbolic string. Setuid (4, shown as s in the owner's execute slot) makes a program run with the file owner's privileges instead of the user who launched it — classic examples are /usr/bin/passwd. Setgid (2, s in the group slot) does the same for the group, and on a directory makes new files inherit that directory's group. The sticky bit (1, t in the others' execute slot) on a shared directory like /tmp stops users from deleting or renaming files they don't own, even if the directory itself is writable by everyone.",
     "faq.q5": "Is my file name or permission data sent to a server?",
-    "faq.a5": "No. This chmod calculator runs entirely in your browser — the permissions you toggle, the octal or symbolic values you type, and any filename you enter for the command preview never leave your device. Nothing is uploaded, logged or stored on a server, and your last permission setting is only kept in your own browser's local storage so it's there next time you open the page."
+    "faq.a5": "No. This chmod calculator runs entirely in your browser — the permissions you toggle, the octal or symbolic values you type, and any filename you enter for the command preview never leave your device. Nothing is uploaded, logged or stored on a server, and your last permission setting is only kept in your own browser's local storage so it's there next time you open the page.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.q4": "什么是 setuid、setgid 和粘滞位？",
     "faq.a4": "这些是特殊权限位，表现为 8 进制数前面多出的第 4 位（例如 4755），或符号字符串中的 s/t。Setuid（4，显示为属主执行位上的 s）让程序以文件属主的权限运行，而不是运行它的用户的权限——典型例子是 /usr/bin/passwd。Setgid（2，属组执行位上的 s）对属组也是同样的效果，用在目录上还会让目录内新建文件自动继承该目录所属的组。粘滞位（1，其他用户执行位上的 t）用在像 /tmp 这样人人可写的共享目录上，可以防止用户删除或重命名不属于自己的文件，即便目录本身对所有人可写。",
     "faq.q5": "我的文件名或权限数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个 chmod 计算器完全在你的浏览器中运行——你勾选的权限、输入的 8 进制或符号值，以及为命令预览填写的文件名都不会离开你的设备。没有任何内容会被上传、记录或存储到服务器，你最近一次的权限设置只保存在你自己浏览器的本地存储中，方便下次打开时继续使用。"
+    "faq.a5": "不会。这个 chmod 计算器完全在你的浏览器中运行——你勾选的权限、输入的 8 进制或符号值，以及为命令预览填写的文件名都不会离开你的设备。没有任何内容会被上传、记录或存储到服务器，你最近一次的权限设置只保存在你自己浏览器的本地存储中，方便下次打开时继续使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -188,7 +198,12 @@ window.I18N_LOCALES = {
     "faq.q4": "setuid, setgid और स्टिकी बिट क्या हैं?",
     "faq.a4": "ये विशेष परमिशन बिट हैं जो ऑक्टल नंबर के आगे चौथे अंक (जैसे 4755) या सिंबॉलिक स्ट्रिंग में s/t के रूप में दिखते हैं। Setuid (4, ओनर के एक्ज़िक्यूट स्लॉट में s) प्रोग्राम को उसे चलाने वाले यूज़र की बजाय फ़ाइल के ओनर की परमिशन से चलाता है — क्लासिक उदाहरण /usr/bin/passwd है। Setgid (2, ग्रुप स्लॉट में s) ग्रुप के लिए वही करता है, और डायरेक्टरी पर लगाने से उसमें बनी नई फ़ाइलें उसी ग्रुप की बन जाती हैं। स्टिकी बिट (1, अदर्स के एक्ज़िक्यूट स्लॉट में t) /tmp जैसी शेयर्ड डायरेक्टरी में यूज़र्स को दूसरों की फ़ाइल डिलीट या रीनेम करने से रोकता है, भले ही डायरेक्टरी सबके लिए राइटेबल हो।",
     "faq.q5": "क्या मेरा फ़ाइल नाम या परमिशन डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह chmod कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके टॉगल की गई परमिशन, टाइप किए गए ऑक्टल या सिंबॉलिक वैल्यू, और कमांड प्रीव्यू के लिए डाला गया फ़ाइल नाम कभी आपकी डिवाइस से बाहर नहीं जाता। कुछ भी सर्वर पर अपलोड, लॉग या स्टोर नहीं होता, और आपकी आख़िरी परमिशन सेटिंग केवल आपके ब्राउज़र के लोकल स्टोरेज में रहती है, ताकि अगली बार पेज खोलने पर वह वहीं मिले।"
+    "faq.a5": "नहीं। यह chmod कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके टॉगल की गई परमिशन, टाइप किए गए ऑक्टल या सिंबॉलिक वैल्यू, और कमांड प्रीव्यू के लिए डाला गया फ़ाइल नाम कभी आपकी डिवाइस से बाहर नहीं जाता। कुछ भी सर्वर पर अपलोड, लॉग या स्टोर नहीं होता, और आपकी आख़िरी परमिशन सेटिंग केवल आपके ब्राउज़र के लोकल स्टोरेज में रहती है, ताकि अगली बार पेज खोलने पर वह वहीं मिले।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -249,7 +264,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué son setuid, setgid y el sticky bit?",
     "faq.a4": "Son bits de permiso especiales que aparecen como un cuarto dígito octal inicial (p. ej. 4755) o como una s/t en la cadena simbólica. Setuid (4, mostrado como s en la posición de ejecución del propietario) hace que un programa se ejecute con los privilegios del propietario del archivo en lugar de los del usuario que lo lanza — el ejemplo clásico es /usr/bin/passwd. Setgid (2, s en la posición del grupo) hace lo mismo para el grupo, y en un directorio hace que los archivos nuevos hereden ese grupo. El sticky bit (1, t en la posición de ejecución de otros) en un directorio compartido como /tmp impide que nadie salvo el propietario borre o renombre archivos ajenos, aunque el directorio sea de escritura para todos.",
     "faq.q5": "¿Se envía a un servidor el nombre de mi archivo o los datos de permisos?",
-    "faq.a5": "No. Esta calculadora chmod funciona por completo en tu navegador — los permisos que activas, los valores octales o simbólicos que escribes y cualquier nombre de archivo que introduzcas para la vista previa del comando nunca salen de tu dispositivo. Nada se sube, se registra ni se guarda en un servidor, y tu último ajuste de permisos solo se guarda en el almacenamiento local de tu propio navegador para que esté ahí la próxima vez que abras la página."
+    "faq.a5": "No. Esta calculadora chmod funciona por completo en tu navegador — los permisos que activas, los valores octales o simbólicos que escribes y cualquier nombre de archivo que introduzcas para la vista previa del comando nunca salen de tu dispositivo. Nada se sube, se registra ni se guarda en un servidor, y tu último ajuste de permisos solo se guarda en el almacenamiento local de tu propio navegador para que esté ahí la próxima vez que abras la página.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -310,7 +330,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هي setuid و setgid و sticky bit؟",
     "faq.a4": "هذه بتات صلاحيات خاصة تظهر كرقم ثماني رابع في المقدمة (مثل 4755) أو كحرف s/t في السلسلة الرمزية. Setuid (4، يظهر كـ s في خانة تنفيذ المالك) يجعل البرنامج يعمل بصلاحيات مالك الملف بدلًا من صلاحيات من شغّله — والمثال الكلاسيكي هو /usr/bin/passwd. Setgid (2، s في خانة المجموعة) يفعل الشيء نفسه للمجموعة، وعلى مجلد يجعل الملفات الجديدة ترث مجموعة ذلك المجلد. أما sticky bit (1، t في خانة تنفيذ الآخرين) على مجلد مشترك مثل /tmp فيمنع أي شخص غير المالك من حذف أو إعادة تسمية ملفات لا يملكها، حتى لو كان المجلد قابلًا للكتابة من الجميع.",
     "faq.q5": "هل يُرسل اسم ملفي أو بيانات الصلاحيات إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة chmod هذه بالكامل داخل متصفحك — الصلاحيات التي تفعّلها، والقيم الثمانية أو الرمزية التي تكتبها، وأي اسم ملف تدخله لمعاينة الأمر لا تغادر جهازك أبدًا. لا يُرفع أو يُسجَّل أو يُخزَّن أي شيء على خادم، ويُحفظ آخر إعداد صلاحيات فقط في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة التي تفتح فيها الصفحة."
+    "faq.a5": "لا. تعمل حاسبة chmod هذه بالكامل داخل متصفحك — الصلاحيات التي تفعّلها، والقيم الثمانية أو الرمزية التي تكتبها، وأي اسم ملف تدخله لمعاينة الأمر لا تغادر جهازك أبدًا. لا يُرفع أو يُسجَّل أو يُخزَّن أي شيء على خادم، ويُحفظ آخر إعداد صلاحيات فقط في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة التي تفتح فيها الصفحة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -371,7 +396,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que sont setuid, setgid et le sticky bit ?",
     "faq.a4": "Ce sont des bits de permission spéciaux, représentés par un quatrième chiffre octal en tête (ex. 4755) ou par un s/t dans la chaîne symbolique. Setuid (4, affiché comme s dans la position d'exécution du propriétaire) fait qu'un programme s'exécute avec les droits du propriétaire du fichier plutôt que ceux de l'utilisateur qui le lance — l'exemple classique est /usr/bin/passwd. Setgid (2, s dans la position du groupe) fait de même pour le groupe, et sur un dossier, fait hériter les nouveaux fichiers du groupe de ce dossier. Le sticky bit (1, t dans la position d'exécution des autres) sur un dossier partagé comme /tmp empêche quiconque, hormis le propriétaire, de supprimer ou renommer des fichiers qui ne lui appartiennent pas, même si le dossier est accessible en écriture à tous.",
     "faq.q5": "Le nom de mon fichier ou mes données de permissions sont-ils envoyés à un serveur ?",
-    "faq.a5": "Non. Ce calculateur chmod fonctionne entièrement dans votre navigateur — les permissions que vous activez, les valeurs octales ou symboliques que vous saisissez, et tout nom de fichier saisi pour l'aperçu de la commande ne quittent jamais votre appareil. Rien n'est envoyé, journalisé ni stocké sur un serveur, et votre dernier réglage de permissions n'est conservé que dans le stockage local de votre propre navigateur, pour être là la prochaine fois que vous ouvrez la page."
+    "faq.a5": "Non. Ce calculateur chmod fonctionne entièrement dans votre navigateur — les permissions que vous activez, les valeurs octales ou symboliques que vous saisissez, et tout nom de fichier saisi pour l'aperçu de la commande ne quittent jamais votre appareil. Rien n'est envoyé, journalisé ni stocké sur un serveur, et votre dernier réglage de permissions n'est conservé que dans le stockage local de votre propre navigateur, pour être là la prochaine fois que vous ouvrez la page.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -432,7 +462,12 @@ window.I18N_LOCALES = {
     "faq.q4": "setuid, setgid ও স্টিকি বিট কী?",
     "faq.a4": "এগুলো বিশেষ পারমিশন বিট, যা অক্টাল সংখ্যার সামনে চতুর্থ অঙ্ক (যেমন 4755) বা সিম্বলিক স্ট্রিং-এ s/t হিসেবে দেখা যায়। Setuid (4, ওনারের এক্সিকিউট স্লটে s) প্রোগ্রামকে চালানো ইউজারের বদলে ফাইলের ওনারের পারমিশনে চালায় — ক্লাসিক উদাহরণ /usr/bin/passwd। Setgid (2, গ্রুপ স্লটে s) গ্রুপের জন্য একই কাজ করে, আর ডিরেক্টরিতে দিলে ভেতরের নতুন ফাইল সেই গ্রুপ পায়। স্টিকি বিট (1, আদারদের এক্সিকিউট স্লটে t) /tmp-এর মতো শেয়ার্ড ডিরেক্টরিতে ওনার ছাড়া অন্য কাউকে ফাইল ডিলিট বা রিনেম করতে বাধা দেয়, যদিও ডিরেক্টরিটি সবার জন্য রাইটেবল।",
     "faq.q5": "আমার ফাইলের নাম বা পারমিশন ডেটা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই chmod ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে — আপনি যে পারমিশন টগল করেন, যে অক্টাল বা সিম্বলিক মান টাইপ করেন, আর কমান্ড প্রিভিউর জন্য যে ফাইলের নাম দেন তা কখনও আপনার ডিভাইস ছাড়ে না। কিছুই সার্ভারে আপলোড, লগ বা সংরক্ষণ করা হয় না, আর আপনার শেষ পারমিশন সেটিং শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে থাকে, যাতে পরের বার পেজ খুললে সেটা পাওয়া যায়।"
+    "faq.a5": "না। এই chmod ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে — আপনি যে পারমিশন টগল করেন, যে অক্টাল বা সিম্বলিক মান টাইপ করেন, আর কমান্ড প্রিভিউর জন্য যে ফাইলের নাম দেন তা কখনও আপনার ডিভাইস ছাড়ে না। কিছুই সার্ভারে আপলোড, লগ বা সংরক্ষণ করা হয় না, আর আপনার শেষ পারমিশন সেটিং শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে থাকে, যাতে পরের বার পেজ খুললে সেটা পাওয়া যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -493,7 +528,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que são setuid, setgid e o sticky bit?",
     "faq.a4": "São bits de permissão especiais, mostrados como um quarto dígito octal à frente (ex.: 4755) ou como um s/t na string simbólica. Setuid (4, mostrado como s na posição de execução do proprietário) faz um programa rodar com os privilégios do proprietário do arquivo em vez dos do usuário que o executou — o exemplo clássico é /usr/bin/passwd. Setgid (2, s na posição do grupo) faz o mesmo para o grupo, e num diretório faz os novos arquivos herdarem esse grupo. O sticky bit (1, t na posição de execução dos outros) num diretório compartilhado como /tmp impede que qualquer um, exceto o proprietário, exclua ou renomeie arquivos que não são seus, mesmo que o diretório seja gravável por todos.",
     "faq.q5": "O nome do meu arquivo ou os dados de permissão são enviados a um servidor?",
-    "faq.a5": "Não. Esta calculadora chmod funciona inteiramente no seu navegador — as permissões que você ativa, os valores octais ou simbólicos que digita, e qualquer nome de arquivo inserido para a pré-visualização do comando nunca saem do seu dispositivo. Nada é enviado, registrado ou armazenado num servidor, e sua última configuração de permissão fica guardada apenas no armazenamento local do seu próprio navegador, para estar lá na próxima vez que você abrir a página."
+    "faq.a5": "Não. Esta calculadora chmod funciona inteiramente no seu navegador — as permissões que você ativa, os valores octais ou simbólicos que digita, e qualquer nome de arquivo inserido para a pré-visualização do comando nunca saem do seu dispositivo. Nada é enviado, registrado ou armazenado num servidor, e sua última configuração de permissão fica guardada apenas no armazenamento local do seu próprio navegador, para estar lá na próxima vez que você abrir a página.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -554,7 +594,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что такое setuid, setgid и sticky bit?",
     "faq.a4": "Это специальные биты прав доступа, которые отображаются как четвёртая, ведущая восьмеричная цифра (например, 4755) или как s/t в символьной строке. Setuid (4, отображается как s в позиции выполнения владельца) заставляет программу запускаться с правами владельца файла, а не пользователя, который её запустил, — классический пример /usr/bin/passwd. Setgid (2, s в позиции группы) делает то же самое для группы, а на каталоге заставляет новые файлы наследовать группу этого каталога. Sticky bit (1, t в позиции выполнения остальных) на общем каталоге вроде /tmp не позволяет никому, кроме владельца, удалять или переименовывать чужие файлы, даже если каталог доступен для записи всем.",
     "faq.q5": "Отправляются ли имя моего файла или данные о правах на сервер?",
-    "faq.a5": "Нет. Этот калькулятор chmod полностью работает в вашем браузере — переключаемые вами права, вводимые восьмеричные или символьные значения и любое имя файла, введённое для предпросмотра команды, никогда не покидают ваше устройство. Ничего не загружается, не логируется и не хранится на сервере, а последняя настройка прав сохраняется только в локальном хранилище вашего собственного браузера, чтобы быть под рукой при следующем открытии страницы."
+    "faq.a5": "Нет. Этот калькулятор chmod полностью работает в вашем браузере — переключаемые вами права, вводимые восьмеричные или символьные значения и любое имя файла, введённое для предпросмотра команды, никогда не покидают ваше устройство. Ничего не загружается, не логируется и не хранится на сервере, а последняя настройка прав сохраняется только в локальном хранилище вашего собственного браузера, чтобы быть под рукой при следующем открытии страницы.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -615,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "setuid، setgid اور سٹکی بٹ کیا ہیں؟",
     "faq.a4": "یہ خصوصی پرمیشن بٹس ہیں جو آکٹل نمبر کے آگے چوتھے ہندسے (مثلاً 4755) یا سمبولک سٹرنگ میں s/t کے طور پر ظاہر ہوتے ہیں۔ Setuid (4، اونر کے ایگزیکیوٹ سلاٹ میں s) پروگرام کو اسے چلانے والے یوزر کی بجائے فائل کے اونر کی پرمیشنز کے ساتھ چلاتا ہے — کلاسک مثال /usr/bin/passwd ہے۔ Setgid (2، گروپ سلاٹ میں s) گروپ کے لیے وہی کام کرتا ہے، اور ڈائریکٹری پر لگانے سے اس میں بننے والی نئی فائلیں اسی گروپ کی ہو جاتی ہیں۔ سٹکی بٹ (1، دیگر کے ایگزیکیوٹ سلاٹ میں t) /tmp جیسی شیئرڈ ڈائریکٹری میں اونر کے سوا کسی کو دوسروں کی فائل ڈیلیٹ یا ری نیم کرنے سے روکتا ہے، چاہے ڈائریکٹری سب کے لیے رائٹ ایبل ہی کیوں نہ ہو۔",
     "faq.q5": "کیا میری فائل کا نام یا پرمیشن ڈیٹا سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ chmod کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی ٹوگل کی گئی پرمیشنز، ٹائپ کی گئی آکٹل یا سمبولک ویلیوز، اور کمانڈ پریویو کے لیے دیا گیا کوئی بھی فائل نام کبھی آپ کی ڈیوائس سے باہر نہیں جاتا۔ کچھ بھی سرور پر اپ لوڈ، لاگ یا محفوظ نہیں ہوتا، اور آپ کی آخری پرمیشن سیٹنگ صرف آپ کے اپنے براؤزر کے لوکل سٹوریج میں رہتی ہے تاکہ اگلی بار صفحہ کھولنے پر وہ وہیں مل جائے۔"
+    "faq.a5": "نہیں۔ یہ chmod کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی ٹوگل کی گئی پرمیشنز، ٹائپ کی گئی آکٹل یا سمبولک ویلیوز، اور کمانڈ پریویو کے لیے دیا گیا کوئی بھی فائل نام کبھی آپ کی ڈیوائس سے باہر نہیں جاتا۔ کچھ بھی سرور پر اپ لوڈ، لاگ یا محفوظ نہیں ہوتا، اور آپ کی آخری پرمیشن سیٹنگ صرف آپ کے اپنے براؤزر کے لوکل سٹوریج میں رہتی ہے تاکہ اگلی بار صفحہ کھولنے پر وہ وہیں مل جائے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -676,7 +726,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa itu setuid, setgid, dan sticky bit?",
     "faq.a4": "Ini adalah bit izin khusus yang ditampilkan sebagai digit oktal keempat di depan (mis. 4755) atau sebagai s/t dalam string simbolik. Setuid (4, ditampilkan sebagai s di slot eksekusi pemilik) membuat program berjalan dengan hak akses pemilik file, bukan pengguna yang menjalankannya — contoh klasiknya adalah /usr/bin/passwd. Setgid (2, s di slot grup) melakukan hal sama untuk grup, dan pada direktori membuat file baru mewarisi grup direktori tersebut. Sticky bit (1, t di slot eksekusi lainnya) pada direktori bersama seperti /tmp mencegah siapa pun selain pemiliknya menghapus atau mengganti nama file yang bukan miliknya, meski direktori itu bisa ditulis oleh semua orang.",
     "faq.q5": "Apakah nama file atau data izin saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator chmod ini berjalan sepenuhnya di browser Anda — izin yang Anda aktifkan, nilai oktal atau simbolik yang Anda ketik, dan nama file apa pun yang dimasukkan untuk pratinjau perintah tidak pernah meninggalkan perangkat Anda. Tidak ada yang diunggah, dicatat, atau disimpan di server, dan pengaturan izin terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri agar tersedia saat Anda membuka halaman ini lagi."
+    "faq.a5": "Tidak. Kalkulator chmod ini berjalan sepenuhnya di browser Anda — izin yang Anda aktifkan, nilai oktal atau simbolik yang Anda ketik, dan nama file apa pun yang dimasukkan untuk pratinjau perintah tidak pernah meninggalkan perangkat Anda. Tidak ada yang diunggah, dicatat, atau disimpan di server, dan pengaturan izin terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri agar tersedia saat Anda membuka halaman ini lagi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -737,7 +792,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was sind setuid, setgid und das Sticky-Bit?",
     "faq.a4": "Das sind spezielle Berechtigungsbits, die als vierte, führende Oktalziffer (z. B. 4755) oder als s/t in der symbolischen Zeichenkette erscheinen. Setuid (4, angezeigt als s an der Ausführungsstelle des Besitzers) lässt ein Programm mit den Rechten des Dateibesitzers laufen statt mit denen des ausführenden Benutzers — das klassische Beispiel ist /usr/bin/passwd. Setgid (2, s an der Gruppenstelle) macht dasselbe für die Gruppe, und bei einem Verzeichnis erben neu erstellte Dateien dessen Gruppe. Das Sticky-Bit (1, t an der Ausführungsstelle der anderen) verhindert in einem gemeinsamen Verzeichnis wie /tmp, dass jemand außer dem Besitzer fremde Dateien löscht oder umbenennt, selbst wenn das Verzeichnis für alle beschreibbar ist.",
     "faq.q5": "Werden mein Dateiname oder meine Berechtigungsdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Chmod-Rechner läuft vollständig in deinem Browser — die Berechtigungen, die du umschaltest, die eingegebenen Oktal- oder Symbolwerte und jeder für die Befehlsvorschau eingegebene Dateiname verlassen niemals dein Gerät. Nichts wird hochgeladen, protokolliert oder auf einem Server gespeichert, und deine letzte Berechtigungseinstellung wird nur im lokalen Speicher deines eigenen Browsers abgelegt, damit sie beim nächsten Öffnen der Seite wieder da ist."
+    "faq.a5": "Nein. Dieser Chmod-Rechner läuft vollständig in deinem Browser — die Berechtigungen, die du umschaltest, die eingegebenen Oktal- oder Symbolwerte und jeder für die Befehlsvorschau eingegebene Dateiname verlassen niemals dein Gerät. Nichts wird hochgeladen, protokolliert oder auf einem Server gespeichert, und deine letzte Berechtigungseinstellung wird nur im lokalen Speicher deines eigenen Browsers abgelegt, damit sie beim nächsten Öffnen der Seite wieder da ist.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -798,7 +858,12 @@ window.I18N_LOCALES = {
     "faq.q4": "setuid、setgid、スティッキービットとは何ですか？",
     "faq.a4": "これらは特殊な権限ビットで、8進数の先頭に付く4桁目（例: 4755）や、シンボル文字列内のs/tとして表示されます。Setuid（4、所有者の実行位置にsと表示）は、実行したユーザーではなくファイル所有者の権限でプログラムを実行させます — 典型例は/usr/bin/passwdです。Setgid（2、グループ位置のs）はグループに対して同じ働きをし、ディレクトリに設定すると新規作成されるファイルがそのディレクトリのグループを継承します。スティッキービット（1、その他の実行位置のt）は/tmpのような共有ディレクトリで、ディレクトリ自体が全員に書き込み可能であっても、所有者以外が他人のファイルを削除・改名できないようにします。",
     "faq.q5": "ファイル名や権限データはサーバーに送信されますか？",
-    "faq.a5": "いいえ。このchmod計算機は完全にブラウザ内で動作します — 切り替えた権限、入力した8進数やシンボルの値、コマンドプレビュー用に入力したファイル名は、あなたの端末から一切送信されません。サーバーへのアップロード・記録・保存は一切行われず、最後に設定した権限はあなた自身のブラウザのローカルストレージにのみ保存されるため、次回このページを開いたときにそのまま残っています。"
+    "faq.a5": "いいえ。このchmod計算機は完全にブラウザ内で動作します — 切り替えた権限、入力した8進数やシンボルの値、コマンドプレビュー用に入力したファイル名は、あなたの端末から一切送信されません。サーバーへのアップロード・記録・保存は一切行われず、最後に設定した権限はあなた自身のブラウザのローカルストレージにのみ保存されるため、次回このページを開いたときにそのまま残っています。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -859,6 +924,11 @@ window.I18N_LOCALES = {
     "faq.q4": "setuid, setgid, 스티키 비트는 무엇인가요?",
     "faq.a4": "이들은 8진수 앞에 붙는 네 번째 자릿수(예: 4755)나 심볼릭 문자열의 s/t로 표시되는 특수 권한 비트입니다. Setuid(4, 소유자 실행 자리에 s로 표시)는 프로그램을 실행한 사용자가 아니라 파일 소유자의 권한으로 프로그램이 실행되게 합니다 — 대표적인 예가 /usr/bin/passwd입니다. Setgid(2, 그룹 자리의 s)는 그룹에 대해 같은 역할을 하며, 디렉터리에 설정하면 그 안에 새로 생성되는 파일이 해당 디렉터리의 그룹을 상속받습니다. 스티키 비트(1, 기타 사용자 실행 자리의 t)는 /tmp처럼 모두가 쓸 수 있는 공유 디렉터리에서, 디렉터리 자체는 누구나 쓸 수 있어도 소유자가 아닌 사람은 남의 파일을 삭제하거나 이름을 바꿀 수 없도록 막습니다.",
     "faq.q5": "제 파일 이름이나 권한 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 chmod 계산기는 전적으로 브라우저 안에서 동작합니다 — 켜고 끈 권한, 입력한 8진수·심볼릭 값, 명령어 미리보기를 위해 입력한 파일 이름 모두 기기 밖으로 나가지 않습니다. 서버에 업로드되거나 기록·저장되는 정보는 전혀 없으며, 마지막으로 설정한 권한은 사용자 본인 브라우저의 로컬 저장소에만 보관되어 다음에 페이지를 열었을 때 그대로 남아 있습니다."
+    "faq.a5": "아니요. 이 chmod 계산기는 전적으로 브라우저 안에서 동작합니다 — 켜고 끈 권한, 입력한 8진수·심볼릭 값, 명령어 미리보기를 위해 입력한 파일 이름 모두 기기 밖으로 나가지 않습니다. 서버에 업로드되거나 기록·저장되는 정보는 전혀 없으며, 마지막으로 설정한 권한은 사용자 본인 브라우저의 로컬 저장소에만 보관되어 다음에 페이지를 열었을 때 그대로 남아 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

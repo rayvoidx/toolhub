@@ -128,7 +128,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What is the EU Pay Transparency Directive (2023/970) 5% trigger and a joint pay assessment?",
     "faq.a4": "Directive 2023/970 says that when the gender pay gap within a category of workers doing equal work exceeds 5% and cannot be justified by objective, gender-neutral criteria, the employer must carry out a joint pay assessment with worker representatives. In EU mode this tool builds a per-category mean hourly gap table from your grade/category column and flags any category above 5% as a review signal. That flag is a prompt to look closer — it is not a legal determination.",
     "faq.q5": "Is our payroll data sent to a server, and how can I verify it?",
-    "faq.a5": "No. Everything — CSV parsing, encoding detection, sorting, quartiles and every gap — runs inside your browser tab, so raw payroll never reaches any server and there is no signup, email or upload. You can verify it yourself: open your browser's developer tools, go to the Network tab, then load your file and calculate. You will see zero requests carrying your data. That is why security teams clear it where uploading to a pay-equity vendor would be blocked."
+    "faq.a5": "No. Everything — CSV parsing, encoding detection, sorting, quartiles and every gap — runs inside your browser tab, so raw payroll never reaches any server and there is no signup, email or upload. You can verify it yourself: open your browser's developer tools, go to the Network tab, then load your file and calculate. You will see zero requests carrying your data. That is why security teams clear it where uploading to a pay-equity vendor would be blocked.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -256,7 +261,12 @@ window.I18N_LOCALES = {
     "faq.q4": "欧盟薪酬透明指令(2023/970)的 5% 触发与联合薪酬评估是什么?",
     "faq.a4": "指令 2023/970 规定:当从事同等价值工作的某类别劳动者薪酬差距超过 5%,且无法以客观、性别中立的标准解释时,雇主须与劳工代表共同进行联合薪酬评估。EU 模式会根据你的职级/类别列生成按类别的平均时薪差距表,并将超过 5% 的类别标记为复核信号。该标记是提示进一步查看,并非法律判定。",
     "faq.q5": "我们的工资数据会被发送到服务器吗?如何验证?",
-    "faq.a5": "不会。CSV 解析、编码检测、排序、四分位以及所有差距计算都在你的浏览器标签页内运行,原始工资数据不会到达任何服务器,也没有注册、邮箱或上传。你可以自行验证:打开浏览器开发者工具,进入 Network 面板,然后加载文件并计算,你会看到承载数据的请求为 0。这正是在禁止上传到薪酬公平供应商的地方,安全团队仍会放行本工具的原因。"
+    "faq.a5": "不会。CSV 解析、编码检测、排序、四分位以及所有差距计算都在你的浏览器标签页内运行,原始工资数据不会到达任何服务器,也没有注册、邮箱或上传。你可以自行验证:打开浏览器开发者工具,进入 Network 面板,然后加载文件并计算,你会看到承载数据的请求为 0。这正是在禁止上传到薪酬公平供应商的地方,安全团队仍会放行本工具的原因。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -384,7 +394,12 @@ window.I18N_LOCALES = {
     "faq.q4": "EU वेतन पारदर्शिता निर्देश (2023/970) का 5% ट्रिगर और संयुक्त वेतन मूल्यांकन क्या है?",
     "faq.a4": "निर्देश 2023/970 कहता है कि जब समान मूल्य का कार्य करने वाले श्रमिकों की किसी श्रेणी में वेतन अंतर 5% से अधिक हो और वस्तुनिष्ठ, लिंग-तटस्थ मानदंडों से उचित न ठहराया जा सके, तो नियोक्ता को श्रमिक प्रतिनिधियों के साथ संयुक्त वेतन मूल्यांकन करना होगा। EU मोड में यह टूल आपके श्रेणी/वर्ग कॉलम से श्रेणी-वार माध्य प्रति-घंटा अंतर की तालिका बनाता है और 5% से ऊपर की किसी भी श्रेणी को समीक्षा संकेत के रूप में चिह्नित करता है। यह चिह्न करीब से देखने का संकेत है — कानूनी निर्धारण नहीं।",
     "faq.q5": "क्या हमारा पेरोल डेटा किसी सर्वर पर भेजा जाता है, और मैं इसे कैसे सत्यापित करूँ?",
-    "faq.a5": "नहीं। सब कुछ — CSV पार्सिंग, एन्कोडिंग पहचान, क्रमबद्धता, चतुर्थक और हर अंतर — आपके ब्राउज़र टैब में चलता है, इसलिए कच्चा पेरोल किसी सर्वर तक नहीं पहुँचता और कोई साइनअप, ईमेल या अपलोड नहीं। आप स्वयं सत्यापित कर सकते हैं: ब्राउज़र के डेवलपर टूल्स खोलें, Network टैब पर जाएँ, फिर अपनी फ़ाइल लोड करके गणना करें। आपको अपने डेटा वाले शून्य अनुरोध दिखेंगे। यही कारण है कि जहाँ किसी पे-इक्विटी विक्रेता पर अपलोड रोक दिया जाता है, वहाँ भी सुरक्षा टीमें इसे स्वीकृति देती हैं।"
+    "faq.a5": "नहीं। सब कुछ — CSV पार्सिंग, एन्कोडिंग पहचान, क्रमबद्धता, चतुर्थक और हर अंतर — आपके ब्राउज़र टैब में चलता है, इसलिए कच्चा पेरोल किसी सर्वर तक नहीं पहुँचता और कोई साइनअप, ईमेल या अपलोड नहीं। आप स्वयं सत्यापित कर सकते हैं: ब्राउज़र के डेवलपर टूल्स खोलें, Network टैब पर जाएँ, फिर अपनी फ़ाइल लोड करके गणना करें। आपको अपने डेटा वाले शून्य अनुरोध दिखेंगे। यही कारण है कि जहाँ किसी पे-इक्विटी विक्रेता पर अपलोड रोक दिया जाता है, वहाँ भी सुरक्षा टीमें इसे स्वीकृति देती हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -512,7 +527,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué es el umbral del 5% de la Directiva de Transparencia Retributiva de la UE (2023/970) y una evaluación conjunta de retribuciones?",
     "faq.a4": "La Directiva 2023/970 establece que cuando la brecha retributiva dentro de una categoría de trabajadores de igual valor supera el 5% y no puede justificarse con criterios objetivos y neutros en cuanto al género, el empleador debe realizar una evaluación conjunta de retribuciones con los representantes de los trabajadores. En modo UE, la herramienta construye una tabla de brecha horaria media por categoría a partir de tu columna de categoría/grado y marca cualquier categoría por encima del 5% como señal de revisión. Esa marca invita a mirar más de cerca — no es una determinación legal.",
     "faq.q5": "¿Se envían nuestros datos de nómina a un servidor y cómo puedo verificarlo?",
-    "faq.a5": "No. Todo — el análisis del CSV, la detección de codificación, la ordenación, los cuartiles y cada brecha — se ejecuta dentro de tu pestaña, así que la nómina en bruto nunca llega a ningún servidor y no hay registro, correo ni subida. Puedes verificarlo tú mismo: abre las herramientas de desarrollo, ve a la pestaña Red y luego carga tu archivo y calcula. Verás cero solicitudes que transporten tus datos. Por eso los equipos de seguridad lo aprueban donde subir a un proveedor de equidad salarial estaría bloqueado."
+    "faq.a5": "No. Todo — el análisis del CSV, la detección de codificación, la ordenación, los cuartiles y cada brecha — se ejecuta dentro de tu pestaña, así que la nómina en bruto nunca llega a ningún servidor y no hay registro, correo ni subida. Puedes verificarlo tú mismo: abre las herramientas de desarrollo, ve a la pestaña Red y luego carga tu archivo y calcula. Verás cero solicitudes que transporten tus datos. Por eso los equipos de seguridad lo aprueban donde subir a un proveedor de equidad salarial estaría bloqueado.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -640,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هو محفّز الـ5% في توجيه شفافية الأجور الأوروبي (2023/970) والتقييم المشترك للأجور؟",
     "faq.a4": "ينص التوجيه 2023/970 على أنه عندما تتجاوز فجوة الأجور داخل فئة من العمال يؤدون عملًا متساوي القيمة نسبة 5% ولا يمكن تبريرها بمعايير موضوعية ومحايدة جنسيًا، يجب على صاحب العمل إجراء تقييم مشترك للأجور مع ممثلي العمال. في وضع الاتحاد الأوروبي، تبني الأداة جدولًا لفجوة الأجر بالساعة (المتوسط) لكل فئة من عمود الدرجة/الفئة لديك، وتُبرز أي فئة تتجاوز 5% كإشارة مراجعة. هذه الإشارة دعوة للتدقيق — وليست تحديدًا قانونيًا.",
     "faq.q5": "هل تُرسَل بيانات رواتبنا إلى خادم، وكيف أتحقق من ذلك؟",
-    "faq.a5": "لا. كل شيء — تحليل CSV، وكشف الترميز، والترتيب، والأرباع، وكل فجوة — يعمل داخل علامة تبويب متصفحك، فلا تصل الرواتب الخام إلى أي خادم، ولا يوجد تسجيل أو بريد إلكتروني أو رفع. يمكنك التحقق بنفسك: افتح أدوات المطور، انتقل إلى تبويب Network، ثم حمّل ملفك واحسب. سترى صفر طلبات تحمل بياناتك. لهذا تُجيزها فرق الأمن حيث يُحظر الرفع إلى مورّد لإنصاف الأجور."
+    "faq.a5": "لا. كل شيء — تحليل CSV، وكشف الترميز، والترتيب، والأرباع، وكل فجوة — يعمل داخل علامة تبويب متصفحك، فلا تصل الرواتب الخام إلى أي خادم، ولا يوجد تسجيل أو بريد إلكتروني أو رفع. يمكنك التحقق بنفسك: افتح أدوات المطور، انتقل إلى تبويب Network، ثم حمّل ملفك واحسب. سترى صفر طلبات تحمل بياناتك. لهذا تُجيزها فرق الأمن حيث يُحظر الرفع إلى مورّد لإنصاف الأجور.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -768,7 +793,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qu'est-ce que le seuil de 5% de la Directive UE sur la transparence des rémunérations (2023/970) et une évaluation conjointe des rémunérations ?",
     "faq.a4": "La Directive 2023/970 prévoit que lorsque l'écart de rémunération au sein d'une catégorie de travailleurs effectuant un travail de valeur égale dépasse 5% et ne peut être justifié par des critères objectifs et neutres, l'employeur doit mener une évaluation conjointe des rémunérations avec les représentants du personnel. En mode UE, l'outil construit un tableau des écarts horaires moyens par catégorie à partir de votre colonne de niveau/catégorie et signale toute catégorie au-dessus de 5% comme indice de revue. Ce marquage invite à regarder de plus près — ce n'est pas une décision juridique.",
     "faq.q5": "Nos données de paie sont-elles envoyées à un serveur, et comment le vérifier ?",
-    "faq.a5": "Non. Tout — l'analyse CSV, la détection d'encodage, le tri, les quartiles et chaque écart — s'exécute dans votre onglet, de sorte que la paie brute n'atteint aucun serveur et qu'il n'y a ni inscription, ni e-mail, ni téléversement. Vous pouvez le vérifier vous-même : ouvrez les outils de développement, allez dans l'onglet Réseau, puis chargez votre fichier et calculez. Vous verrez zéro requête transportant vos données. C'est pourquoi les équipes sécurité l'autorisent là où un téléversement vers un fournisseur d'équité salariale serait bloqué."
+    "faq.a5": "Non. Tout — l'analyse CSV, la détection d'encodage, le tri, les quartiles et chaque écart — s'exécute dans votre onglet, de sorte que la paie brute n'atteint aucun serveur et qu'il n'y a ni inscription, ni e-mail, ni téléversement. Vous pouvez le vérifier vous-même : ouvrez les outils de développement, allez dans l'onglet Réseau, puis chargez votre fichier et calculez. Vous verrez zéro requête transportant vos données. C'est pourquoi les équipes sécurité l'autorisent là où un téléversement vers un fournisseur d'équité salariale serait bloqué.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -896,7 +926,12 @@ window.I18N_LOCALES = {
     "faq.q4": "EU বেতন-স্বচ্ছতা নির্দেশিকা (2023/970)-এর 5% ট্রিগার ও যৌথ বেতন মূল্যায়ন কী?",
     "faq.a4": "নির্দেশিকা 2023/970 বলে যে সমমূল্যের কাজ করা কোনো শ্রমিক শ্রেণির মধ্যে বেতন বৈষম্য 5% ছাড়ালে এবং বস্তুনিষ্ঠ, লিঙ্গ-নিরপেক্ষ মানদণ্ডে ন্যায্য করা না গেলে, নিয়োগকর্তাকে শ্রমিক প্রতিনিধিদের সাথে যৌথ বেতন মূল্যায়ন করতে হয়। EU মোডে টুলটি আপনার গ্রেড/শ্রেণি কলাম থেকে শ্রেণিভিত্তিক গড় ঘণ্টাপ্রতি বৈষম্যের সারণি বানায় এবং 5%-এর বেশি যেকোনো শ্রেণিকে পর্যালোচনা সংকেত হিসেবে চিহ্নিত করে। এই চিহ্ন কাছ থেকে দেখার ইঙ্গিত — আইনি সিদ্ধান্ত নয়।",
     "faq.q5": "আমাদের পে-রোল ডেটা কি কোনো সার্ভারে পাঠানো হয়, এবং আমি কীভাবে যাচাই করব?",
-    "faq.a5": "না। সবকিছু — CSV পার্সিং, এনকোডিং শনাক্তকরণ, সাজানো, চতুর্থক এবং প্রতিটি বৈষম্য — আপনার ব্রাউজার ট্যাবেই চলে, তাই কাঁচা পে-রোল কোনো সার্ভারে পৌঁছায় না এবং কোনো সাইনআপ, ইমেইল বা আপলোড নেই। আপনি নিজেই যাচাই করতে পারেন: ব্রাউজারের ডেভেলপার টুল খুলুন, Network ট্যাবে যান, তারপর আপনার ফাইল লোড করে হিসাব করুন। আপনি আপনার ডেটা বহনকারী শূন্য অনুরোধ দেখবেন। এজন্যই যেখানে পে-ইক্যুইটি ভেন্ডরে আপলোড আটকে যায়, সেখানেও নিরাপত্তা দল এটি অনুমোদন করে।"
+    "faq.a5": "না। সবকিছু — CSV পার্সিং, এনকোডিং শনাক্তকরণ, সাজানো, চতুর্থক এবং প্রতিটি বৈষম্য — আপনার ব্রাউজার ট্যাবেই চলে, তাই কাঁচা পে-রোল কোনো সার্ভারে পৌঁছায় না এবং কোনো সাইনআপ, ইমেইল বা আপলোড নেই। আপনি নিজেই যাচাই করতে পারেন: ব্রাউজারের ডেভেলপার টুল খুলুন, Network ট্যাবে যান, তারপর আপনার ফাইল লোড করে হিসাব করুন। আপনি আপনার ডেটা বহনকারী শূন্য অনুরোধ দেখবেন। এজন্যই যেখানে পে-ইক্যুইটি ভেন্ডরে আপলোড আটকে যায়, সেখানেও নিরাপত্তা দল এটি অনুমোদন করে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1024,7 +1059,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que é o gatilho de 5% da Diretiva de Transparência Salarial da UE (2023/970) e uma avaliação conjunta de remunerações?",
     "faq.a4": "A Diretiva 2023/970 determina que, quando a diferença salarial dentro de uma categoria de trabalhadores de igual valor ultrapassa 5% e não pode ser justificada por critérios objetivos e neutros quanto ao gênero, o empregador deve realizar uma avaliação conjunta de remunerações com os representantes dos trabalhadores. No modo UE, a ferramenta monta uma tabela de diferença horária média por categoria a partir da sua coluna de nível/categoria e marca qualquer categoria acima de 5% como sinal de revisão. Essa marca é um convite a olhar mais de perto — não é uma determinação legal.",
     "faq.q5": "Nossos dados de folha são enviados a um servidor e como posso verificar?",
-    "faq.a5": "Não. Tudo — a análise do CSV, a detecção de codificação, a ordenação, os quartis e cada diferença — roda dentro da sua aba, então a folha bruta nunca chega a nenhum servidor e não há cadastro, e-mail ou envio. Você pode verificar por conta própria: abra as ferramentas de desenvolvedor, vá até a aba Rede e então carregue o arquivo e calcule. Você verá zero requisições transportando seus dados. É por isso que equipes de segurança liberam a ferramenta onde o envio a um fornecedor de equidade salarial seria bloqueado."
+    "faq.a5": "Não. Tudo — a análise do CSV, a detecção de codificação, a ordenação, os quartis e cada diferença — roda dentro da sua aba, então a folha bruta nunca chega a nenhum servidor e não há cadastro, e-mail ou envio. Você pode verificar por conta própria: abra as ferramentas de desenvolvedor, vá até a aba Rede e então carregue o arquivo e calcule. Você verá zero requisições transportando seus dados. É por isso que equipes de segurança liberam a ferramenta onde o envio a um fornecedor de equidade salarial seria bloqueado.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1152,7 +1192,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что такое порог 5% Директивы ЕС о прозрачности оплаты (2023/970) и совместная оценка оплаты?",
     "faq.a4": "Директива 2023/970 гласит: когда разрыв в оплате внутри категории работников равной ценности превышает 5% и не может быть объяснён объективными, гендерно-нейтральными критериями, работодатель обязан провести совместную оценку оплаты с представителями работников. В режиме ЕС инструмент строит по вашему столбцу уровня/категории таблицу среднего часового разрыва по категориям и отмечает любую категорию выше 5% как сигнал для проверки. Такая отметка — повод присмотреться, а не юридическое заключение.",
     "faq.q5": "Отправляются ли наши платёжные данные на сервер и как это проверить?",
-    "faq.a5": "Нет. Всё — разбор CSV, определение кодировки, сортировка, квартили и каждый разрыв — выполняется внутри вашей вкладки, поэтому исходная ведомость не попадает ни на какой сервер, и нет ни регистрации, ни почты, ни загрузки. Вы можете проверить сами: откройте инструменты разработчика, перейдите на вкладку Network, затем загрузите файл и посчитайте. Вы увидите ноль запросов с вашими данными. Именно поэтому службы безопасности пропускают инструмент там, где загрузка к платному поставщику по равенству оплаты была бы заблокирована."
+    "faq.a5": "Нет. Всё — разбор CSV, определение кодировки, сортировка, квартили и каждый разрыв — выполняется внутри вашей вкладки, поэтому исходная ведомость не попадает ни на какой сервер, и нет ни регистрации, ни почты, ни загрузки. Вы можете проверить сами: откройте инструменты разработчика, перейдите на вкладку Network, затем загрузите файл и посчитайте. Вы увидите ноль запросов с вашими данными. Именно поэтому службы безопасности пропускают инструмент там, где загрузка к платному поставщику по равенству оплаты была бы заблокирована.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1280,7 +1325,12 @@ window.I18N_LOCALES = {
     "faq.q4": "EU اجرت شفافیت ہدایت (2023/970) کا 5% محرک اور مشترکہ اجرت جائزہ کیا ہے؟",
     "faq.a4": "ہدایت 2023/970 کہتی ہے کہ جب مساوی قدر کا کام کرنے والے کارکنوں کے کسی زمرے میں اجرت فرق 5% سے تجاوز کرے اور معروضی، صنفی طور پر غیر جانب دار معیارات سے جواز نہ دیا جا سکے، تو آجر کو کارکنوں کے نمائندوں کے ساتھ مشترکہ اجرت جائزہ کرنا ہوتا ہے۔ EU موڈ میں ٹول آپ کے گریڈ/زمرہ کالم سے زمرہ وار اوسط فی گھنٹہ فرق کی جدول بناتا ہے اور 5% سے اوپر کسی بھی زمرے کو جائزہ اشارے کے طور پر نشان زد کرتا ہے۔ یہ نشان قریب سے دیکھنے کی دعوت ہے — قانونی فیصلہ نہیں۔",
     "faq.q5": "کیا ہمارا پے رول ڈیٹا کسی سرور کو بھیجا جاتا ہے، اور میں اس کی تصدیق کیسے کروں؟",
-    "faq.a5": "نہیں۔ سب کچھ — CSV پارسنگ، انکوڈنگ شناخت، ترتیب، چوتھائیاں اور ہر فرق — آپ کے براؤزر ٹیب میں چلتا ہے، اس لیے خام پے رول کسی سرور تک نہیں پہنچتا اور کوئی سائن اپ، ای میل یا اپلوڈ نہیں۔ آپ خود تصدیق کر سکتے ہیں: براؤزر کے ڈیولپر ٹولز کھولیں، Network ٹیب پر جائیں، پھر اپنی فائل لوڈ کر کے حساب کریں۔ آپ کو اپنے ڈیٹا والی صفر درخواستیں نظر آئیں گی۔ یہی وجہ ہے کہ جہاں کسی پے ایکویٹی وینڈر پر اپلوڈ روک دیا جاتا ہے، وہاں بھی سکیورٹی ٹیمیں اسے اجازت دیتی ہیں۔"
+    "faq.a5": "نہیں۔ سب کچھ — CSV پارسنگ، انکوڈنگ شناخت، ترتیب، چوتھائیاں اور ہر فرق — آپ کے براؤزر ٹیب میں چلتا ہے، اس لیے خام پے رول کسی سرور تک نہیں پہنچتا اور کوئی سائن اپ، ای میل یا اپلوڈ نہیں۔ آپ خود تصدیق کر سکتے ہیں: براؤزر کے ڈیولپر ٹولز کھولیں، Network ٹیب پر جائیں، پھر اپنی فائل لوڈ کر کے حساب کریں۔ آپ کو اپنے ڈیٹا والی صفر درخواستیں نظر آئیں گی۔ یہی وجہ ہے کہ جہاں کسی پے ایکویٹی وینڈر پر اپلوڈ روک دیا جاتا ہے، وہاں بھی سکیورٹی ٹیمیں اسے اجازت دیتی ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1408,7 +1458,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa pemicu 5% Arahan Transparansi Upah UE (2023/970) dan penilaian upah bersama?",
     "faq.a4": "Arahan 2023/970 menyatakan bahwa ketika kesenjangan upah dalam suatu kategori pekerja dengan nilai kerja setara melebihi 5% dan tidak dapat dibenarkan oleh kriteria objektif dan netral gender, pemberi kerja harus melakukan penilaian upah bersama dengan perwakilan pekerja. Dalam mode UE, alat ini menyusun tabel kesenjangan per jam rata-rata per kategori dari kolom tingkat/kategori Anda dan menandai kategori mana pun di atas 5% sebagai sinyal tinjauan. Tanda itu ajakan untuk mencermati — bukan penetapan hukum.",
     "faq.q5": "Apakah data penggajian kami dikirim ke server, dan bagaimana saya memverifikasinya?",
-    "faq.a5": "Tidak. Semuanya — penguraian CSV, deteksi enkode, pengurutan, kuartil, dan setiap kesenjangan — berjalan di dalam tab peramban Anda, sehingga penggajian mentah tidak pernah mencapai server mana pun dan tidak ada pendaftaran, email, atau unggahan. Anda dapat memverifikasinya sendiri: buka alat pengembang peramban, ke tab Network, lalu muat berkas Anda dan hitung. Anda akan melihat nol permintaan yang membawa data Anda. Itulah sebabnya tim keamanan meloloskannya di tempat yang memblokir unggahan ke vendor kesetaraan upah."
+    "faq.a5": "Tidak. Semuanya — penguraian CSV, deteksi enkode, pengurutan, kuartil, dan setiap kesenjangan — berjalan di dalam tab peramban Anda, sehingga penggajian mentah tidak pernah mencapai server mana pun dan tidak ada pendaftaran, email, atau unggahan. Anda dapat memverifikasinya sendiri: buka alat pengembang peramban, ke tab Network, lalu muat berkas Anda dan hitung. Anda akan melihat nol permintaan yang membawa data Anda. Itulah sebabnya tim keamanan meloloskannya di tempat yang memblokir unggahan ke vendor kesetaraan upah.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1536,7 +1591,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist der 5%-Auslöser der EU-Entgelttransparenz-Richtlinie (2023/970) und eine gemeinsame Entgeltbewertung?",
     "faq.a4": "Richtlinie 2023/970 besagt: Übersteigt die Entgeltlücke innerhalb einer Kategorie gleichwertiger Arbeit 5% und lässt sie sich nicht durch objektive, geschlechtsneutrale Kriterien rechtfertigen, muss der Arbeitgeber mit den Arbeitnehmervertretungen eine gemeinsame Entgeltbewertung durchführen. Im EU-Modus erstellt das Tool aus Ihrer Stufen-/Kategorie-Spalte eine Tabelle der mittleren Stundenlücke je Kategorie und markiert jede Kategorie über 5% als Prüfsignal. Diese Markierung ist ein Anlass zum genaueren Hinsehen — keine rechtliche Feststellung.",
     "faq.q5": "Werden unsere Gehaltsdaten an einen Server gesendet und wie kann ich das prüfen?",
-    "faq.a5": "Nein. Alles — CSV-Verarbeitung, Kodierungserkennung, Sortierung, Quartile und jede Lücke — läuft in Ihrem Browser-Tab, sodass Rohgehälter keinen Server erreichen und es keine Anmeldung, E-Mail oder Upload gibt. Sie können es selbst prüfen: Öffnen Sie die Entwicklertools, gehen Sie zum Netzwerk-Tab, laden Sie Ihre Datei und berechnen Sie. Sie sehen null Anfragen mit Ihren Daten. Deshalb geben Sicherheitsteams es frei, wo ein Upload zu einem Pay-Equity-Anbieter blockiert würde."
+    "faq.a5": "Nein. Alles — CSV-Verarbeitung, Kodierungserkennung, Sortierung, Quartile und jede Lücke — läuft in Ihrem Browser-Tab, sodass Rohgehälter keinen Server erreichen und es keine Anmeldung, E-Mail oder Upload gibt. Sie können es selbst prüfen: Öffnen Sie die Entwicklertools, gehen Sie zum Netzwerk-Tab, laden Sie Ihre Datei und berechnen Sie. Sie sehen null Anfragen mit Ihren Daten. Deshalb geben Sicherheitsteams es frei, wo ein Upload zu einem Pay-Equity-Anbieter blockiert würde.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1664,7 +1724,12 @@ window.I18N_LOCALES = {
     "faq.q4": "EU賃金透明性指令(2023/970)の5%トリガーと共同賃金評価とは?",
     "faq.a4": "指令2023/970は、同等価値の労働者カテゴリ内の賃金格差が5%を超え、客観的で性中立な基準で正当化できない場合、雇用者が労働者代表と共同賃金評価を実施すべきと定めます。EUモードでは等級/カテゴリ列からカテゴリ別の平均時給格差表を作り、5%超のカテゴリを検討シグナルとして表示します。この表示はより詳しく見るための合図であり、法的確定ではありません。",
     "faq.q5": "当社の給与データはサーバーに送信されますか? どう確認できますか?",
-    "faq.a5": "いいえ。CSV解析、文字コード判定、並べ替え、四分位、すべての格差計算がブラウザタブ内で動くため、給与原本はどのサーバーにも届かず、登録・メール・アップロードもありません。自分で確認できます: 開発者ツールを開きNetworkタブへ行き、ファイルを読み込んで計算すると、データを運ぶリクエストが0件であることが分かります。有料の賃金公平ベンダーへのアップロードが禁じられる環境でも、セキュリティチームが本ツールを通す理由です。"
+    "faq.a5": "いいえ。CSV解析、文字コード判定、並べ替え、四分位、すべての格差計算がブラウザタブ内で動くため、給与原本はどのサーバーにも届かず、登録・メール・アップロードもありません。自分で確認できます: 開発者ツールを開きNetworkタブへ行き、ファイルを読み込んで計算すると、データを運ぶリクエストが0件であることが分かります。有料の賃金公平ベンダーへのアップロードが禁じられる環境でも、セキュリティチームが本ツールを通す理由です。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1792,6 +1857,11 @@ window.I18N_LOCALES = {
     "faq.q4": "EU 임금투명성 지침(2023/970)의 5% 트리거와 공동임금평가란 무엇인가요?",
     "faq.a4": "지침 2023/970은 동등 가치 근로자 범주 내 임금격차가 5%를 넘고 객관적·성중립 기준으로 정당화되지 않으면, 고용주가 근로자 대표와 함께 공동임금평가(joint pay assessment)를 실시하도록 합니다. EU 모드에서는 등급/범주 열로 범주별 평균 시급격차표를 만들고 5%를 넘는 범주를 검토 신호로 표시합니다. 이 표시는 자세히 보라는 신호이지 법적 확정이 아닙니다.",
     "faq.q5": "우리 급여 데이터가 서버로 전송되나요? 어떻게 확인하나요?",
-    "faq.a5": "아니요. CSV 파싱, 인코딩 감지, 정렬, 사분위, 모든 격차 계산이 브라우저 탭 안에서 돌아가므로 급여 원본은 어떤 서버에도 닿지 않고 가입·이메일·업로드도 없습니다. 직접 확인할 수 있어요: 개발자도구를 열고 Network 탭으로 간 뒤 파일을 올려 계산하면, 데이터를 실어 나르는 요청이 0건임을 보게 됩니다. 유료 임금형평 벤더 업로드가 막히는 곳에서도 보안팀이 이 도구를 통과시키는 이유입니다."
+    "faq.a5": "아니요. CSV 파싱, 인코딩 감지, 정렬, 사분위, 모든 격차 계산이 브라우저 탭 안에서 돌아가므로 급여 원본은 어떤 서버에도 닿지 않고 가입·이메일·업로드도 없습니다. 직접 확인할 수 있어요: 개발자도구를 열고 Network 탭으로 간 뒤 파일을 올려 계산하면, 데이터를 실어 나르는 요청이 0건임을 보게 됩니다. 유료 임금형평 벤더 업로드가 막히는 곳에서도 보안팀이 이 도구를 통과시키는 이유입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

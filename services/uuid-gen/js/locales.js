@@ -52,7 +52,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Are the generated UUIDs sent anywhere?",
     "faq.a4": "No. This uuid generator runs 100% in your browser — every UUID v4, UUID v7 and nil value is created locally in JavaScript, and nothing is ever uploaded, logged, or shared. That makes it safe for API keys, database rows, secrets, and test fixtures. The values are one-shot: reload the page and they are gone, because nothing is stored.",
     "faq.q5": "How do I generate UUIDs in bulk and copy them all at once?",
-    "faq.a5": "Set the count to any number from 1 to 500 and click Generate to create a whole batch. Each row has its own copy button, or use \"Copy all\" to put the entire list on your clipboard as newline-separated lines — perfect for seeding a database, filling a test dataset, or pasting into a spreadsheet. The format toggles (Uppercase, Hyphens, and Wrap in braces) reformat the current batch instantly without regenerating, so you can match whatever your database or code expects."
+    "faq.a5": "Set the count to any number from 1 to 500 and click Generate to create a whole batch. Each row has its own copy button, or use \"Copy all\" to put the entire list on your clipboard as newline-separated lines — perfect for seeding a database, filling a test dataset, or pasting into a spreadsheet. The format toggles (Uppercase, Hyphens, and Wrap in braces) reformat the current batch instantly without regenerating, so you can match whatever your database or code expects.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -98,7 +103,12 @@ window.I18N_LOCALES = {
     "faq.q4": "生成的 UUID 会被发送到某处吗？",
     "faq.a4": "不会。这个 UUID 生成器 100% 在你的浏览器中运行 — 每个 UUID v4、UUID v7 和 nil 值都在本地用 JavaScript 生成，绝不会上传、记录或共享。因此它可安全用于 API 密钥、数据库行、密钥和测试数据。这些值是一次性的：刷新页面就会消失，因为不会被保存。",
     "faq.q5": "如何批量生成 UUID 并一次性全部复制？",
-    "faq.a5": "把数量设为 1 到 500 之间的任意值，点击“生成”即可创建整批。每一行都有独立的复制按钮，或使用“全部复制”把整个列表以换行分隔的形式放入剪贴板 — 非常适合填充数据库、构建测试数据集或粘贴到电子表格。格式开关（大写、连字符、用花括号包裹）会即时重排当前批次而不重新生成，让你匹配数据库或代码所需的格式。"
+    "faq.a5": "把数量设为 1 到 500 之间的任意值，点击“生成”即可创建整批。每一行都有独立的复制按钮，或使用“全部复制”把整个列表以换行分隔的形式放入剪贴板 — 非常适合填充数据库、构建测试数据集或粘贴到电子表格。格式开关（大写、连字符、用花括号包裹）会即时重排当前批次而不重新生成，让你匹配数据库或代码所需的格式。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -144,7 +154,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या जनरेट किए गए UUID कहीं भेजे जाते हैं?",
     "faq.a4": "नहीं। यह UUID जनरेटर 100% आपके ब्राउज़र में चलता है — हर UUID v4, UUID v7 और nil मान स्थानीय रूप से JavaScript में बनता है, और कुछ भी कभी अपलोड, लॉग या साझा नहीं होता। इससे यह API कुंजियों, डेटाबेस पंक्तियों, सीक्रेट और टेस्ट फ़िक्स्चर के लिए सुरक्षित है। मान एक-बार के हैं: पेज रीलोड करें और वे चले जाते हैं, क्योंकि कुछ भी सहेजा नहीं जाता।",
     "faq.q5": "मैं थोक में UUID कैसे बनाऊँ और एक साथ सभी कॉपी करूँ?",
-    "faq.a5": "गिनती 1 से 500 के बीच किसी भी संख्या पर सेट करें और पूरी बैच बनाने के लिए जनरेट पर क्लिक करें। हर पंक्ति का अपना कॉपी बटन है, या पूरी सूची को न्यूलाइन-विभाजित पंक्तियों के रूप में क्लिपबोर्ड पर रखने के लिए “सभी कॉपी करें” का उपयोग करें — डेटाबेस भरने, टेस्ट डेटासेट बनाने या स्प्रेडशीट में पेस्ट करने के लिए बिल्कुल सही। फ़ॉर्मैट टॉगल (अपरकेस, हाइफ़न और ब्रेसेस में लपेटें) वर्तमान बैच को बिना दोबारा बनाए तुरंत पुनः फ़ॉर्मैट करते हैं, ताकि आप अपने डेटाबेस या कोड की अपेक्षा से मेल खा सकें।"
+    "faq.a5": "गिनती 1 से 500 के बीच किसी भी संख्या पर सेट करें और पूरी बैच बनाने के लिए जनरेट पर क्लिक करें। हर पंक्ति का अपना कॉपी बटन है, या पूरी सूची को न्यूलाइन-विभाजित पंक्तियों के रूप में क्लिपबोर्ड पर रखने के लिए “सभी कॉपी करें” का उपयोग करें — डेटाबेस भरने, टेस्ट डेटासेट बनाने या स्प्रेडशीट में पेस्ट करने के लिए बिल्कुल सही। फ़ॉर्मैट टॉगल (अपरकेस, हाइफ़न और ब्रेसेस में लपेटें) वर्तमान बैच को बिना दोबारा बनाए तुरंत पुनः फ़ॉर्मैट करते हैं, ताकि आप अपने डेटाबेस या कोड की अपेक्षा से मेल खा सकें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -190,7 +205,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Los UUID generados se envían a algún sitio?",
     "faq.a4": "No. Este generador de UUID funciona 100% en tu navegador: cada UUID v4, UUID v7 y valor nil se crea localmente en JavaScript y nada se sube, registra ni comparte. Eso lo hace seguro para claves de API, filas de base de datos, secretos y datos de prueba. Los valores son de un solo uso: recarga la página y desaparecen, porque no se guarda nada.",
     "faq.q5": "¿Cómo genero UUID en lote y los copio todos a la vez?",
-    "faq.a5": "Ajusta la cantidad a cualquier número del 1 al 500 y haz clic en Generar para crear un lote entero. Cada fila tiene su propio botón de copiar, o usa “Copiar todo” para poner la lista completa en el portapapeles como líneas separadas por saltos de línea: ideal para poblar una base de datos, llenar un conjunto de datos de prueba o pegar en una hoja de cálculo. Los interruptores de formato (mayúsculas, guiones y entre llaves) reformatean el lote actual al instante sin regenerarlo, para que coincida con lo que espera tu base de datos o tu código."
+    "faq.a5": "Ajusta la cantidad a cualquier número del 1 al 500 y haz clic en Generar para crear un lote entero. Cada fila tiene su propio botón de copiar, o usa “Copiar todo” para poner la lista completa en el portapapeles como líneas separadas por saltos de línea: ideal para poblar una base de datos, llenar un conjunto de datos de prueba o pegar en una hoja de cálculo. Los interruptores de formato (mayúsculas, guiones y entre llaves) reformatean el lote actual al instante sin regenerarlo, para que coincida con lo que espera tu base de datos o tu código.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -236,7 +256,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تُرسَل معرّفات UUID المُولّدة إلى أي مكان؟",
     "faq.a4": "لا. يعمل مولّد UUID هذا 100% في متصفحك — كل قيمة UUID v4 و UUID v7 و nil تُنشأ محليًا بلغة JavaScript، ولا يُرفع أو يُسجّل أو يُشارَك أي شيء أبدًا. هذا يجعله آمنًا لمفاتيح API وصفوف قواعد البيانات والأسرار وبيانات الاختبار. القيم لمرة واحدة: أعِد تحميل الصفحة فتختفي، لأنه لا يُحفَظ شيء.",
     "faq.q5": "كيف أُولّد معرّفات UUID دفعة واحدة وأنسخها كلها معًا؟",
-    "faq.a5": "اضبط العدد على أي رقم من 1 إلى 500 وانقر على إنشاء لتوليد دفعة كاملة. لكل صف زر نسخ خاص به، أو استخدم “نسخ الكل” لوضع القائمة كاملة في الحافظة كأسطر يفصلها سطر جديد — مثالي لتعبئة قاعدة بيانات أو بناء مجموعة بيانات اختبار أو اللصق في جدول بيانات. ومفاتيح التنسيق (الأحرف الكبيرة، الشرطات، والأقواس المعقوفة) تعيد تنسيق الدفعة الحالية فورًا دون إعادة توليد، لتطابق ما يتوقعه قاعدة بياناتك أو شيفرتك."
+    "faq.a5": "اضبط العدد على أي رقم من 1 إلى 500 وانقر على إنشاء لتوليد دفعة كاملة. لكل صف زر نسخ خاص به، أو استخدم “نسخ الكل” لوضع القائمة كاملة في الحافظة كأسطر يفصلها سطر جديد — مثالي لتعبئة قاعدة بيانات أو بناء مجموعة بيانات اختبار أو اللصق في جدول بيانات. ومفاتيح التنسيق (الأحرف الكبيرة، الشرطات، والأقواس المعقوفة) تعيد تنسيق الدفعة الحالية فورًا دون إعادة توليد، لتطابق ما يتوقعه قاعدة بياناتك أو شيفرتك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -282,7 +307,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Les UUID générés sont-ils envoyés quelque part ?",
     "faq.a4": "Non. Ce générateur d'UUID fonctionne à 100 % dans votre navigateur — chaque UUID v4, UUID v7 et valeur nil est créé localement en JavaScript, et rien n'est jamais téléversé, journalisé ni partagé. Il est donc sûr pour les clés d'API, les lignes de base de données, les secrets et les jeux de test. Les valeurs sont à usage unique : rechargez la page et elles disparaissent, car rien n'est enregistré.",
     "faq.q5": "Comment générer des UUID en lot et tous les copier d'un coup ?",
-    "faq.a5": "Réglez le nombre sur n'importe quelle valeur de 1 à 500 et cliquez sur Générer pour créer un lot entier. Chaque ligne a son propre bouton de copie, ou utilisez « Tout copier » pour placer la liste entière dans le presse-papiers sous forme de lignes séparées par des sauts de ligne — parfait pour peupler une base de données, remplir un jeu de test ou coller dans un tableur. Les interrupteurs de format (majuscules, tirets et accolades) reformatent le lot actuel instantanément sans le régénérer, pour correspondre à ce qu'attend votre base de données ou votre code."
+    "faq.a5": "Réglez le nombre sur n'importe quelle valeur de 1 à 500 et cliquez sur Générer pour créer un lot entier. Chaque ligne a son propre bouton de copie, ou utilisez « Tout copier » pour placer la liste entière dans le presse-papiers sous forme de lignes séparées par des sauts de ligne — parfait pour peupler une base de données, remplir un jeu de test ou coller dans un tableur. Les interrupteurs de format (majuscules, tirets et accolades) reformatent le lot actuel instantanément sans le régénérer, pour correspondre à ce qu'attend votre base de données ou votre code.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -328,7 +358,12 @@ window.I18N_LOCALES = {
     "faq.q4": "তৈরি করা UUID কি কোথাও পাঠানো হয়?",
     "faq.a4": "না। এই UUID জেনারেটর ১০০% আপনার ব্রাউজারে চলে — প্রতিটি UUID v4, UUID v7 এবং nil মান স্থানীয়ভাবে JavaScript-এ তৈরি হয়, এবং কিছুই কখনো আপলোড, লগ বা শেয়ার করা হয় না। এটি API কী, ডেটাবেস রো, সিক্রেট এবং টেস্ট ফিক্সচারের জন্য নিরাপদ করে তোলে। মানগুলো একবারের: পৃষ্ঠা রিলোড করলে সেগুলো চলে যায়, কারণ কিছুই সংরক্ষণ করা হয় না।",
     "faq.q5": "আমি কীভাবে একসাথে অনেক UUID তৈরি করে সব কপি করব?",
-    "faq.a5": "সংখ্যা ১ থেকে ৫০০-এর মধ্যে যেকোনো মানে সেট করুন এবং একটি পুরো ব্যাচ তৈরি করতে জেনারেট-এ ক্লিক করুন। প্রতিটি সারির নিজস্ব কপি বোতাম আছে, অথবা পুরো তালিকাটি নিউলাইন-বিভক্ত লাইন হিসেবে ক্লিপবোর্ডে রাখতে “সব কপি করুন” ব্যবহার করুন — ডেটাবেস পূরণ, টেস্ট ডেটাসেট তৈরি বা স্প্রেডশিটে পেস্ট করার জন্য উপযুক্ত। ফরম্যাট টগল (আপারকেস, হাইফেন এবং ব্রেসেস) বর্তমান ব্যাচকে পুনরায় তৈরি না করেই তাৎক্ষণিক পুনরায় ফরম্যাট করে, যাতে আপনি আপনার ডেটাবেস বা কোড যা প্রত্যাশা করে তার সাথে মেলাতে পারেন।"
+    "faq.a5": "সংখ্যা ১ থেকে ৫০০-এর মধ্যে যেকোনো মানে সেট করুন এবং একটি পুরো ব্যাচ তৈরি করতে জেনারেট-এ ক্লিক করুন। প্রতিটি সারির নিজস্ব কপি বোতাম আছে, অথবা পুরো তালিকাটি নিউলাইন-বিভক্ত লাইন হিসেবে ক্লিপবোর্ডে রাখতে “সব কপি করুন” ব্যবহার করুন — ডেটাবেস পূরণ, টেস্ট ডেটাসেট তৈরি বা স্প্রেডশিটে পেস্ট করার জন্য উপযুক্ত। ফরম্যাট টগল (আপারকেস, হাইফেন এবং ব্রেসেস) বর্তমান ব্যাচকে পুনরায় তৈরি না করেই তাৎক্ষণিক পুনরায় ফরম্যাট করে, যাতে আপনি আপনার ডেটাবেস বা কোড যা প্রত্যাশা করে তার সাথে মেলাতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -374,7 +409,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Os UUIDs gerados são enviados para algum lugar?",
     "faq.a4": "Não. Este gerador de UUID funciona 100% no seu navegador — cada UUID v4, UUID v7 e valor nil é criado localmente em JavaScript, e nada é enviado, registrado ou compartilhado. Isso o torna seguro para chaves de API, linhas de banco de dados, segredos e dados de teste. Os valores são de uso único: recarregue a página e eles somem, porque nada é salvo.",
     "faq.q5": "Como gero UUIDs em lote e copio todos de uma vez?",
-    "faq.a5": "Defina a quantidade em qualquer número de 1 a 500 e clique em Gerar para criar um lote inteiro. Cada linha tem seu próprio botão de copiar, ou use “Copiar tudo” para colocar a lista inteira na área de transferência como linhas separadas por quebras de linha — perfeito para popular um banco de dados, preencher um conjunto de teste ou colar em uma planilha. Os interruptores de formato (maiúsculas, hifens e entre chaves) reformatam o lote atual na hora sem regenerar, para combinar com o que seu banco de dados ou código espera."
+    "faq.a5": "Defina a quantidade em qualquer número de 1 a 500 e clique em Gerar para criar um lote inteiro. Cada linha tem seu próprio botão de copiar, ou use “Copiar tudo” para colocar a lista inteira na área de transferência como linhas separadas por quebras de linha — perfeito para popular um banco de dados, preencher um conjunto de teste ou colar em uma planilha. Os interruptores de formato (maiúsculas, hifens e entre chaves) reformatam o lote atual na hora sem regenerar, para combinar com o que seu banco de dados ou código espera.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -420,7 +460,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Отправляются ли сгенерированные UUID куда-либо?",
     "faq.a4": "Нет. Этот генератор UUID работает на 100% в вашем браузере — каждое значение UUID v4, UUID v7 и nil создаётся локально на JavaScript, и ничего никогда не загружается, не логируется и не передаётся. Поэтому его безопасно использовать для ключей API, строк базы данных, секретов и тестовых данных. Значения одноразовые: перезагрузите страницу — и они исчезнут, потому что ничего не сохраняется.",
     "faq.q5": "Как сгенерировать UUID пакетом и скопировать все сразу?",
-    "faq.a5": "Задайте количество от 1 до 500 и нажмите «Сгенерировать», чтобы создать целый пакет. У каждой строки своя кнопка копирования, либо используйте «Копировать все», чтобы поместить весь список в буфер обмена как строки, разделённые переводами строки, — удобно для наполнения базы данных, создания тестового набора или вставки в таблицу. Переключатели формата (верхний регистр, дефисы и фигурные скобки) мгновенно переформатируют текущий пакет без повторной генерации, чтобы совпасть с тем, что ожидает ваша база данных или код."
+    "faq.a5": "Задайте количество от 1 до 500 и нажмите «Сгенерировать», чтобы создать целый пакет. У каждой строки своя кнопка копирования, либо используйте «Копировать все», чтобы поместить весь список в буфер обмена как строки, разделённые переводами строки, — удобно для наполнения базы данных, создания тестового набора или вставки в таблицу. Переключатели формата (верхний регистр, дефисы и фигурные скобки) мгновенно переформатируют текущий пакет без повторной генерации, чтобы совпасть с тем, что ожидает ваша база данных или код.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -466,7 +511,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا بنائے گئے UUID کہیں بھیجے جاتے ہیں؟",
     "faq.a4": "نہیں۔ یہ UUID جنریٹر 100% آپ کے براؤزر میں چلتا ہے — ہر UUID v4، UUID v7 اور nil ویلیو مقامی طور پر JavaScript میں بنتی ہے، اور کچھ بھی کبھی اپ لوڈ، لاگ یا شیئر نہیں ہوتا۔ یہ اسے API کیز، ڈیٹابیس رَوز، سیکریٹس اور ٹیسٹ فکسچرز کے لیے محفوظ بناتا ہے۔ ویلیوز ایک بار کی ہیں: صفحہ ری لوڈ کریں تو غائب ہو جاتی ہیں، کیونکہ کچھ بھی محفوظ نہیں ہوتا۔",
     "faq.q5": "میں بلک میں UUID کیسے بناؤں اور سب ایک ساتھ کاپی کروں؟",
-    "faq.a5": "تعداد کو 1 سے 500 کے درمیان کسی بھی عدد پر مقرر کریں اور پوری بیچ بنانے کے لیے جنریٹ پر کلک کریں۔ ہر سطر کا اپنا کاپی بٹن ہے، یا پوری فہرست کو نئی سطر سے جدا لائنوں کے طور پر کلپ بورڈ پر رکھنے کے لیے “سب کاپی کریں” استعمال کریں — ڈیٹابیس بھرنے، ٹیسٹ ڈیٹاسیٹ بنانے یا اسپریڈ شیٹ میں پیسٹ کرنے کے لیے بہترین۔ فارمیٹ ٹوگلز (اپر کیس، ہائفن اور بریسز) موجودہ بیچ کو دوبارہ بنائے بغیر فوراً دوبارہ فارمیٹ کرتے ہیں، تاکہ آپ اپنے ڈیٹابیس یا کوڈ کی توقع سے مطابقت رکھ سکیں۔"
+    "faq.a5": "تعداد کو 1 سے 500 کے درمیان کسی بھی عدد پر مقرر کریں اور پوری بیچ بنانے کے لیے جنریٹ پر کلک کریں۔ ہر سطر کا اپنا کاپی بٹن ہے، یا پوری فہرست کو نئی سطر سے جدا لائنوں کے طور پر کلپ بورڈ پر رکھنے کے لیے “سب کاپی کریں” استعمال کریں — ڈیٹابیس بھرنے، ٹیسٹ ڈیٹاسیٹ بنانے یا اسپریڈ شیٹ میں پیسٹ کرنے کے لیے بہترین۔ فارمیٹ ٹوگلز (اپر کیس، ہائفن اور بریسز) موجودہ بیچ کو دوبارہ بنائے بغیر فوراً دوبارہ فارمیٹ کرتے ہیں، تاکہ آپ اپنے ڈیٹابیس یا کوڈ کی توقع سے مطابقت رکھ سکیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -512,7 +562,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah UUID yang dibuat dikirim ke suatu tempat?",
     "faq.a4": "Tidak. Generator UUID ini berjalan 100% di browser Anda — setiap UUID v4, UUID v7, dan nilai nil dibuat secara lokal di JavaScript, dan tidak ada yang pernah diunggah, dicatat, atau dibagikan. Itu membuatnya aman untuk kunci API, baris basis data, rahasia, dan data uji. Nilainya sekali pakai: muat ulang halaman dan nilainya hilang, karena tidak ada yang disimpan.",
     "faq.q5": "Bagaimana cara membuat UUID secara massal dan menyalin semuanya sekaligus?",
-    "faq.a5": "Atur jumlah ke angka mana pun dari 1 hingga 500 dan klik Hasilkan untuk membuat satu batch penuh. Setiap baris punya tombol salin sendiri, atau gunakan “Salin semua” untuk menaruh seluruh daftar ke papan klip sebagai baris-baris yang dipisahkan baris baru — cocok untuk mengisi basis data, membuat kumpulan data uji, atau menempel ke lembar kerja. Sakelar format (huruf besar, tanda hubung, dan kurung kurawal) memformat ulang batch saat ini seketika tanpa membuat ulang, agar sesuai dengan yang diharapkan basis data atau kode Anda."
+    "faq.a5": "Atur jumlah ke angka mana pun dari 1 hingga 500 dan klik Hasilkan untuk membuat satu batch penuh. Setiap baris punya tombol salin sendiri, atau gunakan “Salin semua” untuk menaruh seluruh daftar ke papan klip sebagai baris-baris yang dipisahkan baris baru — cocok untuk mengisi basis data, membuat kumpulan data uji, atau menempel ke lembar kerja. Sakelar format (huruf besar, tanda hubung, dan kurung kurawal) memformat ulang batch saat ini seketika tanpa membuat ulang, agar sesuai dengan yang diharapkan basis data atau kode Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -558,7 +613,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Werden die erzeugten UUIDs irgendwohin gesendet?",
     "faq.a4": "Nein. Dieser UUID-Generator läuft zu 100 % in deinem Browser — jeder UUID-v4-, UUID-v7- und nil-Wert wird lokal in JavaScript erzeugt, und nichts wird jemals hochgeladen, protokolliert oder geteilt. Das macht ihn sicher für API-Schlüssel, Datenbankzeilen, Geheimnisse und Testdaten. Die Werte sind einmalig: Lade die Seite neu und sie sind weg, denn nichts wird gespeichert.",
     "faq.q5": "Wie erzeuge ich UUIDs im Stapel und kopiere alle auf einmal?",
-    "faq.a5": "Stelle die Anzahl auf einen beliebigen Wert von 1 bis 500 und klicke auf Erzeugen, um einen ganzen Stapel zu erstellen. Jede Zeile hat ihre eigene Kopierschaltfläche, oder nutze „Alle kopieren“, um die ganze Liste als durch Zeilenumbrüche getrennte Zeilen in die Zwischenablage zu legen — perfekt, um eine Datenbank zu füllen, einen Testdatensatz zu erstellen oder in eine Tabelle einzufügen. Die Format-Schalter (Großbuchstaben, Bindestriche und geschweifte Klammern) formatieren den aktuellen Stapel sofort ohne Neuerzeugung um, damit er zu dem passt, was deine Datenbank oder dein Code erwartet."
+    "faq.a5": "Stelle die Anzahl auf einen beliebigen Wert von 1 bis 500 und klicke auf Erzeugen, um einen ganzen Stapel zu erstellen. Jede Zeile hat ihre eigene Kopierschaltfläche, oder nutze „Alle kopieren“, um die ganze Liste als durch Zeilenumbrüche getrennte Zeilen in die Zwischenablage zu legen — perfekt, um eine Datenbank zu füllen, einen Testdatensatz zu erstellen oder in eine Tabelle einzufügen. Die Format-Schalter (Großbuchstaben, Bindestriche und geschweifte Klammern) formatieren den aktuellen Stapel sofort ohne Neuerzeugung um, damit er zu dem passt, was deine Datenbank oder dein Code erwartet.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -604,7 +664,12 @@ window.I18N_LOCALES = {
     "faq.q4": "生成した UUID はどこかに送信されますか？",
     "faq.a4": "いいえ。この UUID ジェネレーターは 100% ブラウザ内で動作します。すべての UUID v4、UUID v7、nil 値は JavaScript でローカルに作成され、何もアップロード・記録・共有されません。そのため API キー、データベース行、シークレット、テストデータに安全に使えます。値は使い切りで、ページを再読み込みすると消えます。何も保存されないからです。",
     "faq.q5": "UUID を一括生成してまとめてコピーするには？",
-    "faq.a5": "個数を 1〜500 の任意の数に設定し、生成をクリックするとバッチ全体を作成します。各行に独自のコピーボタンがあり、または「すべてコピー」でリスト全体を改行区切りの行としてクリップボードに入れられます。データベースの初期投入、テストデータセットの作成、表計算への貼り付けに最適です。形式トグル（大文字・ハイフン・波かっこ）は再生成せずに現在のバッチを即座に整形し直すので、データベースやコードが期待する形式に合わせられます。"
+    "faq.a5": "個数を 1〜500 の任意の数に設定し、生成をクリックするとバッチ全体を作成します。各行に独自のコピーボタンがあり、または「すべてコピー」でリスト全体を改行区切りの行としてクリップボードに入れられます。データベースの初期投入、テストデータセットの作成、表計算への貼り付けに最適です。形式トグル（大文字・ハイフン・波かっこ）は再生成せずに現在のバッチを即座に整形し直すので、データベースやコードが期待する形式に合わせられます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -650,6 +715,11 @@ window.I18N_LOCALES = {
     "faq.q4": "생성된 UUID가 어딘가로 전송되나요?",
     "faq.a4": "아니요. 이 UUID 생성기는 100% 브라우저에서 동작합니다. 모든 UUID v4, UUID v7, nil 값은 JavaScript로 로컬에서 만들어지며, 무엇도 업로드·기록·공유되지 않습니다. 그래서 API 키, 데이터베이스 행, 비밀값, 테스트 데이터에 안전하게 쓸 수 있습니다. 값은 일회성이라 페이지를 새로고침하면 사라집니다. 아무것도 저장하지 않기 때문입니다.",
     "faq.q5": "UUID를 대량 생성해 한 번에 모두 복사하려면?",
-    "faq.a5": "개수를 1에서 500 사이 아무 값으로 정하고 생성을 누르면 한 배치를 통째로 만듭니다. 각 행에 자체 복사 버튼이 있고, “모두 복사”를 쓰면 전체 목록을 줄바꿈으로 구분한 형태로 클립보드에 담습니다. 데이터베이스 초기 데이터 채우기, 테스트 데이터셋 만들기, 스프레드시트 붙여넣기에 알맞습니다. 형식 토글(대문자·하이픈·중괄호)은 재생성 없이 현재 배치를 즉시 다시 포맷해, 데이터베이스나 코드가 기대하는 형식에 맞출 수 있습니다."
+    "faq.a5": "개수를 1에서 500 사이 아무 값으로 정하고 생성을 누르면 한 배치를 통째로 만듭니다. 각 행에 자체 복사 버튼이 있고, “모두 복사”를 쓰면 전체 목록을 줄바꿈으로 구분한 형태로 클립보드에 담습니다. 데이터베이스 초기 데이터 채우기, 테스트 데이터셋 만들기, 스프레드시트 붙여넣기에 알맞습니다. 형식 토글(대문자·하이픈·중괄호)은 재생성 없이 현재 배치를 즉시 다시 포맷해, 데이터베이스나 코드가 기대하는 형식에 맞출 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

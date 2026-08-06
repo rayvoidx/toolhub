@@ -60,7 +60,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "Enter a number using digits from 1 to 3,999,999.",
     "tool.err.badChars": "Only I, V, X, L, C, D, M are valid Roman symbols.",
     "tool.err.notRoman": "Not a valid Roman numeral. Did you mean {x}?",
-    "tool.err.notRomanPlain": "That isn't a valid Roman numeral."
+    "tool.err.notRomanPlain": "That isn't a valid Roman numeral.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -105,7 +110,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "请用 1 到 3,999,999 的数字输入。",
     "tool.err.badChars": "只有 I、V、X、L、C、D、M 是有效的罗马符号。",
     "tool.err.notRoman": "不是有效的罗马数字。你是指 {x} 吗？",
-    "tool.err.notRomanPlain": "这不是有效的罗马数字。"
+    "tool.err.notRomanPlain": "这不是有效的罗马数字。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -150,7 +160,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "1 से 3,999,999 तक अंकों में दर्ज करें।",
     "tool.err.badChars": "केवल I, V, X, L, C, D, M मान्य रोमन चिह्न हैं।",
     "tool.err.notRoman": "यह मान्य रोमन अंक नहीं है। क्या आपका मतलब {x} था?",
-    "tool.err.notRomanPlain": "यह मान्य रोमन अंक नहीं है।"
+    "tool.err.notRomanPlain": "यह मान्य रोमन अंक नहीं है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -195,7 +210,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "Introduce un número con dígitos del 1 al 3 999 999.",
     "tool.err.badChars": "Solo I, V, X, L, C, D, M son símbolos romanos válidos.",
     "tool.err.notRoman": "No es un número romano válido. ¿Querías decir {x}?",
-    "tool.err.notRomanPlain": "Eso no es un número romano válido."
+    "tool.err.notRomanPlain": "Eso no es un número romano válido.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -240,7 +260,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "أدخل رقماً بالأرقام من 1 إلى 3999999.",
     "tool.err.badChars": "الرموز الرومانية الصحيحة هي I وV وX وL وC وD وM فقط.",
     "tool.err.notRoman": "ليس رقماً رومانياً صحيحاً. هل تقصد {x}؟",
-    "tool.err.notRomanPlain": "هذا ليس رقماً رومانياً صحيحاً."
+    "tool.err.notRomanPlain": "هذا ليس رقماً رومانياً صحيحاً.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -285,7 +310,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "Saisissez un nombre avec des chiffres de 1 à 3 999 999.",
     "tool.err.badChars": "Seuls I, V, X, L, C, D, M sont des symboles romains valides.",
     "tool.err.notRoman": "Chiffre romain non valide. Vouliez-vous dire {x} ?",
-    "tool.err.notRomanPlain": "Ce n’est pas un chiffre romain valide."
+    "tool.err.notRomanPlain": "Ce n’est pas un chiffre romain valide.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -330,7 +360,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "1 থেকে 3,999,999 পর্যন্ত অঙ্ক দিয়ে লিখুন।",
     "tool.err.badChars": "শুধু I, V, X, L, C, D, M বৈধ রোমান চিহ্ন।",
     "tool.err.notRoman": "এটি বৈধ রোমান সংখ্যা নয়। আপনি কি {x} বোঝাতে চেয়েছেন?",
-    "tool.err.notRomanPlain": "এটি বৈধ রোমান সংখ্যা নয়।"
+    "tool.err.notRomanPlain": "এটি বৈধ রোমান সংখ্যা নয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -375,7 +410,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "Digite um número com dígitos de 1 a 3 999 999.",
     "tool.err.badChars": "Apenas I, V, X, L, C, D, M são símbolos romanos válidos.",
     "tool.err.notRoman": "Não é um algarismo romano válido. Você quis dizer {x}?",
-    "tool.err.notRomanPlain": "Isso não é um algarismo romano válido."
+    "tool.err.notRomanPlain": "Isso não é um algarismo romano válido.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -420,7 +460,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "Введите число цифрами от 1 до 3 999 999.",
     "tool.err.badChars": "Допустимы только римские символы I, V, X, L, C, D, M.",
     "tool.err.notRoman": "Недопустимое римское число. Возможно, вы имели в виду {x}?",
-    "tool.err.notRomanPlain": "Это недопустимое римское число."
+    "tool.err.notRomanPlain": "Это недопустимое римское число.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -465,7 +510,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "1 سے 3,999,999 تک ہندسوں میں درج کریں۔",
     "tool.err.badChars": "صرف I، V، X، L، C، D، M درست رومن علامتیں ہیں۔",
     "tool.err.notRoman": "یہ درست رومن ہندسہ نہیں۔ کیا آپ کا مطلب {x} تھا؟",
-    "tool.err.notRomanPlain": "یہ درست رومن ہندسہ نہیں۔"
+    "tool.err.notRomanPlain": "یہ درست رومن ہندسہ نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -510,7 +560,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "Masukkan angka dengan digit dari 1 sampai 3.999.999.",
     "tool.err.badChars": "Hanya I, V, X, L, C, D, M yang merupakan lambang Romawi yang sah.",
     "tool.err.notRoman": "Bukan angka Romawi yang sah. Apakah maksud Anda {x}?",
-    "tool.err.notRomanPlain": "Itu bukan angka Romawi yang sah."
+    "tool.err.notRomanPlain": "Itu bukan angka Romawi yang sah.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -555,7 +610,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "Gib eine Zahl mit Ziffern von 1 bis 3.999.999 ein.",
     "tool.err.badChars": "Nur I, V, X, L, C, D, M sind gültige römische Zeichen.",
     "tool.err.notRoman": "Keine gültige römische Zahl. Meintest du {x}?",
-    "tool.err.notRomanPlain": "Das ist keine gültige römische Zahl."
+    "tool.err.notRomanPlain": "Das ist keine gültige römische Zahl.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -600,7 +660,12 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "1〜3,999,999 の数字で入力してください。",
     "tool.err.badChars": "有効なローマ数字の記号は I・V・X・L・C・D・M のみです。",
     "tool.err.notRoman": "有効なローマ数字ではありません。{x} のことですか？",
-    "tool.err.notRomanPlain": "有効なローマ数字ではありません。"
+    "tool.err.notRomanPlain": "有効なローマ数字ではありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -645,6 +710,11 @@ window.I18N_LOCALES = {
     "tool.err.notNumber": "1 ~ 3,999,999 범위의 숫자로 입력하세요.",
     "tool.err.badChars": "유효한 로마 기호는 I, V, X, L, C, D, M뿐입니다.",
     "tool.err.notRoman": "유효한 로마 숫자가 아닙니다. 혹시 {x}인가요?",
-    "tool.err.notRomanPlain": "유효한 로마 숫자가 아닙니다."
+    "tool.err.notRomanPlain": "유효한 로마 숫자가 아닙니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -82,7 +82,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How is the delimiter (comma, semicolon or tab) detected, and can I override it?",
     "faq.a4": "Many countries export CSV with a semicolon instead of a comma — common where the decimal separator is itself a comma — and some exports use tabs (TSV). This tool samples the first several non-empty lines and picks whichever of comma, semicolon or tab appears the same number of times on every one of them, which is a far stronger signal than just counting the single most common character. If your file is unusual, or auto-detect guesses wrong, the Delimiter dropdown lets you force comma, semicolon or tab directly.",
     "faq.q5": "Is my CSV file uploaded to a server?",
-    "faq.a5": "No. Parsing, type conversion and JSON generation all run locally in this browser's own JavaScript engine — a pasted CSV or a dropped file is never sent anywhere, which matters if your spreadsheet contains names, emails or other personal or business data. Only your option choices (header row, type detection, delimiter, pretty/minified) are kept in this browser's local storage so they're remembered next time; the CSV content itself is never saved, even locally."
+    "faq.a5": "No. Parsing, type conversion and JSON generation all run locally in this browser's own JavaScript engine — a pasted CSV or a dropped file is never sent anywhere, which matters if your spreadsheet contains names, emails or other personal or business data. Only your option choices (header row, type detection, delimiter, pretty/minified) are kept in this browser's local storage so they're remembered next time; the CSV content itself is never saved, even locally.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -150,7 +155,12 @@ window.I18N_LOCALES = {
     "faq.q4": "分隔符（逗号、分号或制表符）是怎么识别的？可以手动指定吗？",
     "faq.a4": "不少国家导出 CSV 时用分号而不是逗号——这在小数点本身用逗号表示的地区很常见——也有些导出文件用制表符（TSV）。本工具会取开头几行非空内容作样本，找出在每一行都出现相同次数的分隔符（逗号、分号或制表符），这比单纯统计出现次数最多的字符要可靠得多。如果你的文件比较特殊，或者自动识别猜错了，也可以直接在“分隔符”下拉菜单里手动指定逗号、分号或制表符。",
     "faq.q5": "我的 CSV 文件会被上传到服务器吗？",
-    "faq.a5": "不会。解析、类型转换和生成 JSON 全部在你浏览器自带的 JavaScript 引擎里本地完成——无论是粘贴的 CSV 还是拖入的文件都不会被发送到任何地方，这一点在表格里包含姓名、邮箱等个人或业务数据时尤其重要。只有你的选项设置（表头、类型识别、分隔符、格式化/压缩）会保存在浏览器本地存储中，方便下次使用；CSV 内容本身不会被保存，哪怕只是保存在本地也不会。"
+    "faq.a5": "不会。解析、类型转换和生成 JSON 全部在你浏览器自带的 JavaScript 引擎里本地完成——无论是粘贴的 CSV 还是拖入的文件都不会被发送到任何地方，这一点在表格里包含姓名、邮箱等个人或业务数据时尤其重要。只有你的选项设置（表头、类型识别、分隔符、格式化/压缩）会保存在浏览器本地存储中，方便下次使用；CSV 内容本身不会被保存，哪怕只是保存在本地也不会。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -218,7 +228,12 @@ window.I18N_LOCALES = {
     "faq.q4": "डिलिमिटर (कॉमा, सेमीकोलन या टैब) कैसे पहचाना जाता है, और क्या इसे बदला जा सकता है?",
     "faq.a4": "कई देशों में CSV कॉमा की जगह सेमीकोलन से एक्सपोर्ट होती है — ख़ासकर वहाँ जहाँ दशमलव चिह्न ख़ुद कॉमा होता है — और कुछ एक्सपोर्ट टैब (TSV) इस्तेमाल करते हैं। यह टूल शुरुआती कुछ ग़ैर-ख़ाली लाइनों का नमूना लेकर देखता है कि कॉमा, सेमीकोलन या टैब में से कौन हर लाइन में बराबर बार आता है — यह सिर्फ़ सबसे ज़्यादा बार दिखने वाला अक्षर गिनने से कहीं बेहतर संकेत है। अगर आपकी फ़ाइल असामान्य है, या ऑटो-डिटेक्ट ग़लत अंदाज़ा लगाए, तो \"डिलिमिटर\" ड्रॉपडाउन से सीधे कॉमा, सेमीकोलन या टैब चुना जा सकता है।",
     "faq.q5": "क्या मेरी CSV फ़ाइल किसी सर्वर पर अपलोड होती है?",
-    "faq.a5": "नहीं। पार्सिंग, टाइप कन्वर्ज़न और JSON बनाना — सब कुछ आपके ब्राउज़र के अपने JavaScript इंजन में स्थानीय रूप से होता है — पेस्ट की गई CSV हो या ड्रॉप की गई फ़ाइल, कहीं नहीं भेजी जाती, जो तब ख़ासतौर पर मायने रखता है जब आपकी शीट में नाम, ईमेल या अन्य निजी/व्यावसायिक डेटा हो। सिर्फ़ आपके विकल्प (हेडर, टाइप पहचान, डिलिमिटर, प्रिटी/मिनिफ़ाइड) ब्राउज़र के लोकल स्टोरेज में याद रखे जाते हैं; CSV की सामग्री कभी सेव नहीं होती, स्थानीय रूप से भी नहीं।"
+    "faq.a5": "नहीं। पार्सिंग, टाइप कन्वर्ज़न और JSON बनाना — सब कुछ आपके ब्राउज़र के अपने JavaScript इंजन में स्थानीय रूप से होता है — पेस्ट की गई CSV हो या ड्रॉप की गई फ़ाइल, कहीं नहीं भेजी जाती, जो तब ख़ासतौर पर मायने रखता है जब आपकी शीट में नाम, ईमेल या अन्य निजी/व्यावसायिक डेटा हो। सिर्फ़ आपके विकल्प (हेडर, टाइप पहचान, डिलिमिटर, प्रिटी/मिनिफ़ाइड) ब्राउज़र के लोकल स्टोरेज में याद रखे जाते हैं; CSV की सामग्री कभी सेव नहीं होती, स्थानीय रूप से भी नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -286,7 +301,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo se detecta el delimitador (coma, punto y coma o tabulador), y puedo forzarlo?",
     "faq.a4": "Muchos países exportan CSV con punto y coma en lugar de coma — algo habitual donde el separador decimal es a su vez una coma — y algunas exportaciones usan tabuladores (TSV). Esta herramienta toma como muestra las primeras líneas no vacías y elige el delimitador (coma, punto y coma o tabulador) que aparece el mismo número de veces en todas ellas, una señal mucho más fiable que simplemente contar el carácter más frecuente. Si tu archivo es poco habitual, o la detección automática se equivoca, el menú desplegable de Delimitador te permite forzar directamente coma, punto y coma o tabulador.",
     "faq.q5": "¿Se sube mi archivo CSV a algún servidor?",
-    "faq.a5": "No. El análisis, la conversión de tipos y la generación del JSON se ejecutan localmente en el propio motor de JavaScript de tu navegador — un CSV pegado o un archivo soltado nunca se envía a ningún sitio, algo importante si tu hoja de cálculo contiene nombres, correos u otros datos personales o de negocio. Solo tus opciones (encabezado, detección de tipos, delimitador, con formato/minificado) se guardan en el almacenamiento local del navegador para recordarlas la próxima vez; el contenido del CSV en sí nunca se guarda, ni siquiera localmente."
+    "faq.a5": "No. El análisis, la conversión de tipos y la generación del JSON se ejecutan localmente en el propio motor de JavaScript de tu navegador — un CSV pegado o un archivo soltado nunca se envía a ningún sitio, algo importante si tu hoja de cálculo contiene nombres, correos u otros datos personales o de negocio. Solo tus opciones (encabezado, detección de tipos, delimitador, con formato/minificado) se guardan en el almacenamiento local del navegador para recordarlas la próxima vez; el contenido del CSV en sí nunca se guarda, ni siquiera localmente.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -354,7 +374,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف يتم اكتشاف الفاصل (فاصلة أو فاصلة منقوطة أو تبويب)، وهل يمكنني تحديده يدويًا؟",
     "faq.a4": "تُصدِّر دول كثيرة ملفات CSV بفاصلة منقوطة بدل الفاصلة — وهذا شائع حيث يكون فاصل الأعداد العشرية نفسه فاصلة — وتستخدم بعض التصديرات التبويب (TSV). تأخذ هذه الأداة عيّنة من أول عدة أسطر غير فارغة، وتختار الفاصل (فاصلة أو فاصلة منقوطة أو تبويب) الذي يظهر بالعدد نفسه في كل سطر منها، وهذه إشارة أقوى بكثير من مجرد عدّ الحرف الأكثر تكرارًا. إذا كان ملفك غير معتاد، أو أخطأ الاكتشاف التلقائي في التخمين، فتتيح لك قائمة \"الفاصل\" المنسدلة فرض الفاصلة أو الفاصلة المنقوطة أو التبويب مباشرة.",
     "faq.q5": "هل يُرفع ملف CSV الخاص بي إلى خادم؟",
-    "faq.a5": "لا. يعمل التحليل وتحويل الأنواع وتوليد JSON كلها محليًا داخل محرك JavaScript الخاص بمتصفحك — فملف CSV الملصق أو المُفلَت لا يُرسَل إلى أي مكان أبدًا، وهذا مهم إن كان جدولك يحتوي على أسماء أو بريد إلكتروني أو بيانات شخصية أو تجارية أخرى. يُحفَظ في التخزين المحلي للمتصفح خياراتك فقط (الرأس، اكتشاف الأنواع، الفاصل، منسّق/مصغّر) لتُتذكَّر في المرة القادمة؛ أما محتوى CSV نفسه فلا يُحفَظ أبدًا، ولا حتى محليًا."
+    "faq.a5": "لا. يعمل التحليل وتحويل الأنواع وتوليد JSON كلها محليًا داخل محرك JavaScript الخاص بمتصفحك — فملف CSV الملصق أو المُفلَت لا يُرسَل إلى أي مكان أبدًا، وهذا مهم إن كان جدولك يحتوي على أسماء أو بريد إلكتروني أو بيانات شخصية أو تجارية أخرى. يُحفَظ في التخزين المحلي للمتصفح خياراتك فقط (الرأس، اكتشاف الأنواع، الفاصل، منسّق/مصغّر) لتُتذكَّر في المرة القادمة؛ أما محتوى CSV نفسه فلا يُحفَظ أبدًا، ولا حتى محليًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -422,7 +447,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment le délimiteur (virgule, point-virgule ou tabulation) est-il détecté, et puis-je le forcer ?",
     "faq.a4": "De nombreux pays exportent le CSV avec un point-virgule plutôt qu'une virgule — courant là où le séparateur décimal est lui-même une virgule — et certains exports utilisent des tabulations (TSV). Cet outil échantillonne les premières lignes non vides et choisit le délimiteur (virgule, point-virgule ou tabulation) qui apparaît le même nombre de fois sur chacune d'elles, un signal bien plus fiable que de simplement compter le caractère le plus fréquent. Si votre fichier est inhabituel, ou si la détection automatique se trompe, le menu déroulant Délimiteur permet de forcer directement la virgule, le point-virgule ou la tabulation.",
     "faq.q5": "Mon fichier CSV est-il envoyé à un serveur ?",
-    "faq.a5": "Non. L'analyse, la conversion de types et la génération du JSON s'exécutent toutes localement dans le moteur JavaScript de votre navigateur — un CSV collé ou un fichier déposé n'est jamais envoyé où que ce soit, ce qui compte si votre feuille contient des noms, des e-mails ou d'autres données personnelles ou professionnelles. Seules vos options (en-tête, détection de types, délimiteur, formaté/minifié) sont conservées dans le stockage local du navigateur pour être mémorisées la prochaine fois ; le contenu du CSV lui-même n'est jamais enregistré, même localement."
+    "faq.a5": "Non. L'analyse, la conversion de types et la génération du JSON s'exécutent toutes localement dans le moteur JavaScript de votre navigateur — un CSV collé ou un fichier déposé n'est jamais envoyé où que ce soit, ce qui compte si votre feuille contient des noms, des e-mails ou d'autres données personnelles ou professionnelles. Seules vos options (en-tête, détection de types, délimiteur, formaté/minifié) sont conservées dans le stockage local du navigateur pour être mémorisées la prochaine fois ; le contenu du CSV lui-même n'est jamais enregistré, même localement.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -490,7 +520,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ডিলিমিটার (কমা, সেমিকোলন বা ট্যাব) কীভাবে শনাক্ত হয়, আর আমি কি এটি নিজে ঠিক করতে পারি?",
     "faq.a4": "অনেক দেশ কমার বদলে সেমিকোলন দিয়ে CSV এক্সপোর্ট করে — যেখানে দশমিক চিহ্ন নিজেই কমা, সেখানে এটি সাধারণ — আর কিছু এক্সপোর্ট ট্যাব (TSV) ব্যবহার করে। এই টুল শুরুর কয়েকটি খালি নয় এমন লাইন নমুনা হিসেবে নেয় এবং কমা, সেমিকোলন বা ট্যাবের মধ্যে যেটি প্রতিটি লাইনে সমান সংখ্যক বার দেখা যায় সেটি বেছে নেয়, যা শুধু সবচেয়ে বেশি দেখা যাওয়া অক্ষর গোনার চেয়ে অনেক বেশি নির্ভরযোগ্য সংকেত। আপনার ফাইল অস্বাভাবিক হলে, বা স্বয়ংক্রিয় শনাক্তকরণ ভুল অনুমান করলে, \"ডিলিমিটার\" ড্রপডাউন থেকে সরাসরি কমা, সেমিকোলন বা ট্যাব বেছে নিতে পারেন।",
     "faq.q5": "আমার CSV ফাইল কি কোনো সার্ভারে আপলোড হয়?",
-    "faq.a5": "না। পার্সিং, টাইপ রূপান্তর এবং JSON তৈরি — সবকিছু আপনার ব্রাউজারের নিজস্ব JavaScript ইঞ্জিনে স্থানীয়ভাবে চলে — পেস্ট করা CSV হোক বা ড্রপ করা ফাইল, কোথাও পাঠানো হয় না, যা গুরুত্বপূর্ণ যদি আপনার শিটে নাম, ইমেইল বা অন্য ব্যক্তিগত/ব্যবসায়িক তথ্য থাকে। শুধু আপনার অপশনগুলো (হেডার, টাইপ শনাক্তকরণ, ডিলিমিটার, সুবিন্যস্ত/সংক্ষিপ্ত) পরের বার মনে রাখার জন্য ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়; CSV-এর বিষয়বস্তু কখনোই সংরক্ষিত হয় না, স্থানীয়ভাবেও নয়।"
+    "faq.a5": "না। পার্সিং, টাইপ রূপান্তর এবং JSON তৈরি — সবকিছু আপনার ব্রাউজারের নিজস্ব JavaScript ইঞ্জিনে স্থানীয়ভাবে চলে — পেস্ট করা CSV হোক বা ড্রপ করা ফাইল, কোথাও পাঠানো হয় না, যা গুরুত্বপূর্ণ যদি আপনার শিটে নাম, ইমেইল বা অন্য ব্যক্তিগত/ব্যবসায়িক তথ্য থাকে। শুধু আপনার অপশনগুলো (হেডার, টাইপ শনাক্তকরণ, ডিলিমিটার, সুবিন্যস্ত/সংক্ষিপ্ত) পরের বার মনে রাখার জন্য ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়; CSV-এর বিষয়বস্তু কখনোই সংরক্ষিত হয় না, স্থানীয়ভাবেও নয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -558,7 +593,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como o delimitador (vírgula, ponto e vírgula ou tabulação) é detectado, e posso forçá-lo?",
     "faq.a4": "Muitos países exportam CSV com ponto e vírgula em vez de vírgula — comum onde o próprio separador decimal é uma vírgula — e algumas exportações usam tabulações (TSV). Esta ferramenta amostra as primeiras linhas não vazias e escolhe o delimitador (vírgula, ponto e vírgula ou tabulação) que aparece o mesmo número de vezes em todas elas, um sinal muito mais forte do que simplesmente contar o caractere mais comum. Se seu arquivo for incomum, ou a detecção automática errar, o menu suspenso Delimitador permite forçar diretamente vírgula, ponto e vírgula ou tabulação.",
     "faq.q5": "Meu arquivo CSV é enviado para um servidor?",
-    "faq.a5": "Não. A análise, a conversão de tipos e a geração do JSON rodam localmente no próprio mecanismo JavaScript do seu navegador — um CSV colado ou um arquivo solto nunca é enviado a lugar nenhum, o que importa se sua planilha contém nomes, e-mails ou outros dados pessoais ou comerciais. Somente suas opções (cabeçalho, detecção de tipos, delimitador, formatado/minificado) são guardadas no armazenamento local do navegador para serem lembradas da próxima vez; o conteúdo do CSV em si nunca é salvo, nem mesmo localmente."
+    "faq.a5": "Não. A análise, a conversão de tipos e a geração do JSON rodam localmente no próprio mecanismo JavaScript do seu navegador — um CSV colado ou um arquivo solto nunca é enviado a lugar nenhum, o que importa se sua planilha contém nomes, e-mails ou outros dados pessoais ou comerciais. Somente suas opções (cabeçalho, detecção de tipos, delimitador, formatado/minificado) são guardadas no armazenamento local do navegador para serem lembradas da próxima vez; o conteúdo do CSV em si nunca é salvo, nem mesmo localmente.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -626,7 +666,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как определяется разделитель (запятая, точка с запятой или табуляция) и можно ли задать его вручную?",
     "faq.a4": "Многие страны экспортируют CSV с точкой с запятой вместо запятой — это часто встречается там, где сам десятичный разделитель — запятая, — а некоторые экспорты используют табуляцию (TSV). Этот инструмент берёт в качестве образца первые несколько непустых строк и выбирает тот разделитель (запятую, точку с запятой или табуляцию), который встречается одинаковое число раз в каждой из них, — это гораздо более надёжный сигнал, чем просто подсчёт самого частого символа. Если ваш файл нестандартный или автоопределение ошиблось, в выпадающем списке «Разделитель» можно вручную задать запятую, точку с запятой или табуляцию.",
     "faq.q5": "Загружается ли мой CSV-файл на сервер?",
-    "faq.a5": "Нет. Разбор, преобразование типов и генерация JSON полностью выполняются локально, в собственном движке JavaScript вашего браузера — вставленный CSV или перетащённый файл никуда не отправляются, а это важно, если в вашей таблице есть имена, адреса электронной почты или другие личные либо деловые данные. В локальном хранилище браузера сохраняются только ваши настройки (заголовок, определение типов, разделитель, с отступами/сжато), чтобы запомнить их в следующий раз; само содержимое CSV никогда не сохраняется, даже локально."
+    "faq.a5": "Нет. Разбор, преобразование типов и генерация JSON полностью выполняются локально, в собственном движке JavaScript вашего браузера — вставленный CSV или перетащённый файл никуда не отправляются, а это важно, если в вашей таблице есть имена, адреса электронной почты или другие личные либо деловые данные. В локальном хранилище браузера сохраняются только ваши настройки (заголовок, определение типов, разделитель, с отступами/сжато), чтобы запомнить их в следующий раз; само содержимое CSV никогда не сохраняется, даже локально.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -694,7 +739,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ڈیلیمیٹر (کوما، سیمی کولن یا ٹیب) کیسے شناخت ہوتا ہے، اور کیا میں اسے خود مقرر کر سکتا ہوں؟",
     "faq.a4": "کئی ممالک کوما کے بجائے سیمی کولن کے ساتھ CSV ایکسپورٹ کرتے ہیں — خاص طور پر وہاں جہاں اعشاریہ نشان خود کوما ہوتا ہے — اور کچھ ایکسپورٹس ٹیب (TSV) استعمال کرتے ہیں۔ یہ ٹول شروع کی چند غیر خالی لائنوں کا نمونہ لیتا ہے اور کوما، سیمی کولن یا ٹیب میں سے وہ منتخب کرتا ہے جو ہر لائن میں برابر تعداد میں آتا ہو — یہ صرف سب سے زیادہ بار آنے والے حرف کو گننے سے کہیں زیادہ قابلِ اعتماد اشارہ ہے۔ اگر آپ کی فائل غیر معمولی ہے، یا خودکار شناخت غلط اندازہ لگائے، تو \"ڈیلیمیٹر\" ڈراپ ڈاؤن سے براہِ راست کوما، سیمی کولن یا ٹیب مقرر کیا جا سکتا ہے۔",
     "faq.q5": "کیا میری CSV فائل کسی سرور پر اپ لوڈ ہوتی ہے؟",
-    "faq.a5": "نہیں۔ پارسنگ، ٹائپ تبدیلی اور JSON بنانا — سب کچھ آپ کے براؤزر کے اپنے JavaScript انجن میں مقامی طور پر چلتا ہے — پیسٹ کی گئی CSV ہو یا ڈراپ کی گئی فائل، کہیں نہیں بھیجی جاتی، جو اس وقت اہم ہے جب آپ کی شیٹ میں نام، ای میل یا دیگر ذاتی یا کاروباری ڈیٹا ہو۔ صرف آپ کے آپشنز (ہیڈر، ٹائپ شناخت، ڈیلیمیٹر، مرتب/مختصر) براؤزر کے لوکل اسٹوریج میں محفوظ رہتے ہیں تاکہ اگلی بار یاد رہیں؛ CSV کا مواد کبھی محفوظ نہیں ہوتا، مقامی طور پر بھی نہیں۔"
+    "faq.a5": "نہیں۔ پارسنگ، ٹائپ تبدیلی اور JSON بنانا — سب کچھ آپ کے براؤزر کے اپنے JavaScript انجن میں مقامی طور پر چلتا ہے — پیسٹ کی گئی CSV ہو یا ڈراپ کی گئی فائل، کہیں نہیں بھیجی جاتی، جو اس وقت اہم ہے جب آپ کی شیٹ میں نام، ای میل یا دیگر ذاتی یا کاروباری ڈیٹا ہو۔ صرف آپ کے آپشنز (ہیڈر، ٹائپ شناخت، ڈیلیمیٹر، مرتب/مختصر) براؤزر کے لوکل اسٹوریج میں محفوظ رہتے ہیں تاکہ اگلی بار یاد رہیں؛ CSV کا مواد کبھی محفوظ نہیں ہوتا، مقامی طور پر بھی نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -762,7 +812,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana pembatas (koma, titik koma, atau tab) dideteksi, dan bisakah saya menimpanya secara manual?",
     "faq.a4": "Banyak negara mengekspor CSV dengan titik koma, bukan koma — umum terjadi di tempat yang tanda desimalnya sendiri berupa koma — dan beberapa ekspor menggunakan tab (TSV). Alat ini mengambil sampel beberapa baris awal yang tidak kosong dan memilih pembatas (koma, titik koma, atau tab) yang muncul dengan jumlah yang sama di setiap barisnya, sinyal yang jauh lebih kuat daripada sekadar menghitung karakter yang paling sering muncul. Jika file Anda tidak biasa, atau deteksi otomatis salah menebak, menu tarik-turun Pembatas memungkinkan Anda memaksa koma, titik koma, atau tab secara langsung.",
     "faq.q5": "Apakah file CSV saya diunggah ke server?",
-    "faq.a5": "Tidak. Penguraian, konversi tipe, dan pembuatan JSON semuanya berjalan secara lokal di mesin JavaScript browser Anda sendiri — CSV yang ditempel atau file yang diseret tidak pernah dikirim ke mana pun, yang penting jika spreadsheet Anda berisi nama, email, atau data pribadi/bisnis lainnya. Hanya pilihan opsi Anda (header, deteksi tipe, pembatas, rapi/diminifikasi) yang disimpan di penyimpanan lokal browser agar diingat lain kali; isi CSV itu sendiri tidak pernah disimpan, bahkan secara lokal sekalipun."
+    "faq.a5": "Tidak. Penguraian, konversi tipe, dan pembuatan JSON semuanya berjalan secara lokal di mesin JavaScript browser Anda sendiri — CSV yang ditempel atau file yang diseret tidak pernah dikirim ke mana pun, yang penting jika spreadsheet Anda berisi nama, email, atau data pribadi/bisnis lainnya. Hanya pilihan opsi Anda (header, deteksi tipe, pembatas, rapi/diminifikasi) yang disimpan di penyimpanan lokal browser agar diingat lain kali; isi CSV itu sendiri tidak pernah disimpan, bahkan secara lokal sekalipun.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -830,7 +885,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie wird das Trennzeichen (Komma, Semikolon oder Tabulator) erkannt, und kann ich es manuell festlegen?",
     "faq.a4": "Viele Länder exportieren CSV mit Semikolon statt Komma — üblich dort, wo das Dezimaltrennzeichen selbst ein Komma ist — und manche Exporte verwenden Tabulatoren (TSV). Dieses Tool nimmt die ersten mehreren nicht leeren Zeilen als Stichprobe und wählt das Trennzeichen (Komma, Semikolon oder Tabulator), das in jeder davon gleich oft vorkommt — ein weitaus stärkeres Signal, als nur das häufigste Zeichen zu zählen. Ist Ihre Datei ungewöhnlich oder die automatische Erkennung falsch, können Sie über das Dropdown „Trennzeichen“ direkt Komma, Semikolon oder Tabulator erzwingen.",
     "faq.q5": "Wird meine CSV-Datei auf einen Server hochgeladen?",
-    "faq.a5": "Nein. Parsing, Typumwandlung und JSON-Erzeugung laufen vollständig lokal in der eigenen JavaScript-Engine Ihres Browsers ab — eine eingefügte CSV oder eine abgelegte Datei wird niemals irgendwohin gesendet, was wichtig ist, wenn Ihre Tabelle Namen, E-Mail-Adressen oder andere persönliche oder geschäftliche Daten enthält. Nur Ihre Optionen (Kopfzeile, Typerkennung, Trennzeichen, formatiert/minifiziert) werden im lokalen Speicher des Browsers gemerkt, damit sie beim nächsten Mal parat sind; der CSV-Inhalt selbst wird nie gespeichert, auch nicht lokal."
+    "faq.a5": "Nein. Parsing, Typumwandlung und JSON-Erzeugung laufen vollständig lokal in der eigenen JavaScript-Engine Ihres Browsers ab — eine eingefügte CSV oder eine abgelegte Datei wird niemals irgendwohin gesendet, was wichtig ist, wenn Ihre Tabelle Namen, E-Mail-Adressen oder andere persönliche oder geschäftliche Daten enthält. Nur Ihre Optionen (Kopfzeile, Typerkennung, Trennzeichen, formatiert/minifiziert) werden im lokalen Speicher des Browsers gemerkt, damit sie beim nächsten Mal parat sind; der CSV-Inhalt selbst wird nie gespeichert, auch nicht lokal.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -898,7 +958,12 @@ window.I18N_LOCALES = {
     "faq.q4": "区切り文字（カンマ・セミコロン・タブ）はどのように判定され、手動で指定できますか？",
     "faq.a4": "多くの国では、小数点自体がカンマで表記される地域を中心に、カンマではなくセミコロンでCSVを書き出します。また、タブ区切り（TSV）で書き出す場合もあります。このツールは先頭の空でない数行をサンプルとして取り出し、カンマ・セミコロン・タブのうち、すべての行で同じ回数だけ現れるものを選びます。これは単に最も多く現れる文字を数えるよりもずっと信頼できる判定方法です。ファイルが特殊な形式だったり、自動判定が誤って推測した場合は、「区切り文字」のドロップダウンからカンマ・セミコロン・タブを直接指定できます。",
     "faq.q5": "私のCSVファイルはサーバーにアップロードされますか？",
-    "faq.a5": "いいえ。解析・型変換・JSON生成はすべて、このブラウザ自体のJavaScriptエンジン上でローカルに実行されます。貼り付けたCSVもドロップしたファイルも、どこにも送信されることはありません。これは、表の中に氏名やメールアドレスなど個人情報や業務データが含まれている場合に特に重要です。保存されるのはオプション設定（ヘッダー・型判定・区切り文字・整形/圧縮）だけがブラウザのローカルストレージに記憶され、CSVの中身そのものはローカルであっても一切保存されません。"
+    "faq.a5": "いいえ。解析・型変換・JSON生成はすべて、このブラウザ自体のJavaScriptエンジン上でローカルに実行されます。貼り付けたCSVもドロップしたファイルも、どこにも送信されることはありません。これは、表の中に氏名やメールアドレスなど個人情報や業務データが含まれている場合に特に重要です。保存されるのはオプション設定（ヘッダー・型判定・区切り文字・整形/圧縮）だけがブラウザのローカルストレージに記憶され、CSVの中身そのものはローカルであっても一切保存されません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -966,6 +1031,11 @@ window.I18N_LOCALES = {
     "faq.q4": "구분자(콤마·세미콜론·탭)는 어떻게 감지되며, 직접 지정할 수도 있나요?",
     "faq.a4": "소수점 자체를 콤마로 쓰는 지역에서는 콤마 대신 세미콜론으로 CSV를 내보내는 경우가 많고, 일부 내보내기는 탭(TSV)을 사용합니다. 이 도구는 비어 있지 않은 앞쪽 몇 줄을 표본으로 삼아, 콤마·세미콜론·탭 중 모든 줄에서 정확히 같은 횟수로 나타나는 구분자를 고릅니다 — 이는 단순히 가장 많이 등장한 문자를 세는 것보다 훨씬 믿을 만한 신호입니다. 파일이 특이하거나 자동 감지가 잘못 추측했다면 \"구분자\" 드롭다운에서 콤마·세미콜론·탭을 직접 지정할 수 있습니다.",
     "faq.q5": "제 CSV 파일이 서버로 업로드되나요?",
-    "faq.a5": "아니요. 파싱, 타입 변환, JSON 생성 모두 이 브라우저 자체의 자바스크립트 엔진에서 로컬로 실행됩니다 — 붙여넣은 CSV든 드롭한 파일이든 어디로도 전송되지 않으며, 표에 이름·이메일 등 개인 정보나 업무 데이터가 들어 있을 때 특히 중요한 부분입니다. 브라우저 로컬 저장소에는 옵션 선택값(헤더 여부·타입 감지·구분자·정렬형/압축형)만 저장되어 다음에도 기억되고, CSV 내용 자체는 로컬에조차 절대 저장되지 않습니다."
+    "faq.a5": "아니요. 파싱, 타입 변환, JSON 생성 모두 이 브라우저 자체의 자바스크립트 엔진에서 로컬로 실행됩니다 — 붙여넣은 CSV든 드롭한 파일이든 어디로도 전송되지 않으며, 표에 이름·이메일 등 개인 정보나 업무 데이터가 들어 있을 때 특히 중요한 부분입니다. 브라우저 로컬 저장소에는 옵션 선택값(헤더 여부·타입 감지·구분자·정렬형/압축형)만 저장되어 다음에도 기억되고, CSV 내용 자체는 로컬에조차 절대 저장되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

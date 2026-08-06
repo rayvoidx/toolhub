@@ -80,7 +80,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How are optional monthly contributions handled, and when do they start earning interest?",
     "faq.a4": "If you add a monthly contribution, it's added to your balance at the end of each month, so it starts earning interest from the following month onward — the same \"ordinary annuity\" convention used by most bank and retirement calculators. For example, a $10,000 principal at 6% compounded monthly, plus $100 added every month, grows to about $34,581.90 after 10 years: $22,000 of that is your own contributions and about $12,581.90 is interest. Your real account may credit contributions slightly differently, so treat this as a close estimate rather than an exact bank statement.",
     "faq.q5": "Is my financial data sent to a server, and is this investment advice?",
-    "faq.a5": "No. Every number you enter and every result this compound interest calculator shows is computed entirely in your browser — nothing is uploaded, logged or stored on a server, and there's no sign-up required. And this is an educational arithmetic tool, not financial, investment or tax advice: it shows you the math of compounding at the rate you choose, not a prediction of what any real investment will actually earn."
+    "faq.a5": "No. Every number you enter and every result this compound interest calculator shows is computed entirely in your browser — nothing is uploaded, logged or stored on a server, and there's no sign-up required. And this is an educational arithmetic tool, not financial, investment or tax advice: it shows you the math of compounding at the rate you choose, not a prediction of what any real investment will actually earn.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -145,7 +150,12 @@ window.I18N_LOCALES = {
     "faq.q4": "每月定投是怎么计算的？它从什么时候开始生息？",
     "faq.a4": "如果你设置了每月定投，系统会在每月月末把这笔钱加入余额，所以它要到下个月才开始生息——这也是大多数银行和退休金计算器采用的“期末年金”惯例。举例来说，本金 10,000 美元、年利率 6%、按月复利，再加上每月定投 100 美元，10 年后余额约为 34,581.90 美元：其中 22,000 美元是你自己投入的本金和定投，约 12,581.90 美元是利息。你实际账户的计息方式可能略有不同，所以请把这个结果当作接近的估算，而不是精确的银行对账单。",
     "faq.q5": "我的财务数据会被发送到服务器吗？这是投资建议吗？",
-    "faq.a5": "不会。你输入的每一个数字，以及这个复利计算器给出的每一项结果，都完全在你的浏览器里计算完成——不会上传、记录或存储到任何服务器，也不需要注册。而且这只是一个教育性的算术工具，不是金融、投资或税务建议：它展示的是你所选利率下复利的数学计算结果，而不是对任何真实投资实际收益的预测。"
+    "faq.a5": "不会。你输入的每一个数字，以及这个复利计算器给出的每一项结果，都完全在你的浏览器里计算完成——不会上传、记录或存储到任何服务器，也不需要注册。而且这只是一个教育性的算术工具，不是金融、投资或税务建议：它展示的是你所选利率下复利的数学计算结果，而不是对任何真实投资实际收益的预测。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -210,7 +220,12 @@ window.I18N_LOCALES = {
     "faq.q4": "वैकल्पिक मासिक योगदान कैसे गिने जाते हैं, और वे ब्याज कमाना कब शुरू करते हैं?",
     "faq.a4": "अगर आप मासिक योगदान जोड़ते हैं, तो वह हर महीने के अंत में आपके शेष में जोड़ा जाता है, इसलिए वह अगले महीने से ब्याज कमाना शुरू करता है — यह वही \"ऑर्डिनरी एन्युटी\" परंपरा है जो ज़्यादातर बैंक और रिटायरमेंट कैलकुलेटर इस्तेमाल करते हैं। उदाहरण के लिए, $10,000 का मूलधन 6% पर मासिक चक्रवृद्धि के साथ, और हर महीने $100 जोड़ने पर, 10 वर्षों बाद लगभग $34,581.90 हो जाता है: इसमें से $22,000 आपका खुद का योगदान है और लगभग $12,581.90 ब्याज है। आपका असली खाता योगदान को थोड़ा अलग तरीके से जोड़ सकता है, इसलिए इसे सटीक बैंक स्टेटमेंट नहीं बल्कि एक करीबी अनुमान मानें।",
     "faq.q5": "क्या मेरा वित्तीय डेटा सर्वर पर भेजा जाता है, और क्या यह निवेश सलाह है?",
-    "faq.a5": "नहीं। आपके द्वारा दर्ज किया गया हर नंबर, और यह कंपाउंड इंटरेस्ट कैलकुलेटर जो भी परिणाम दिखाता है, पूरी तरह आपके ब्राउज़र में गणना होता है — कुछ भी अपलोड, लॉग या सर्वर पर संग्रहीत नहीं होता, और साइन-अप की ज़रूरत नहीं है। और यह एक शैक्षिक गणनात्मक उपकरण है, वित्तीय, निवेश या कर सलाह नहीं: यह आपकी चुनी दर पर कंपाउंडिंग का गणित दिखाता है, किसी असली निवेश की वास्तविक कमाई का अनुमान नहीं।"
+    "faq.a5": "नहीं। आपके द्वारा दर्ज किया गया हर नंबर, और यह कंपाउंड इंटरेस्ट कैलकुलेटर जो भी परिणाम दिखाता है, पूरी तरह आपके ब्राउज़र में गणना होता है — कुछ भी अपलोड, लॉग या सर्वर पर संग्रहीत नहीं होता, और साइन-अप की ज़रूरत नहीं है। और यह एक शैक्षिक गणनात्मक उपकरण है, वित्तीय, निवेश या कर सलाह नहीं: यह आपकी चुनी दर पर कंपाउंडिंग का गणित दिखाता है, किसी असली निवेश की वास्तविक कमाई का अनुमान नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -275,7 +290,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo se gestionan los aportes mensuales opcionales, y cuándo empiezan a generar interés?",
     "faq.a4": "Si añades un aporte mensual, se suma a tu saldo al final de cada mes, así que empieza a generar interés a partir del mes siguiente — la misma convención de \"anualidad ordinaria\" que usan la mayoría de calculadoras bancarias y de jubilación. Por ejemplo, un capital de 10.000 $ al 6% capitalizado mensualmente, más 100 $ añadidos cada mes, crece hasta unos 34.581,90 $ tras 10 años: 22.000 $ de eso son tus propios aportes y unos 12.581,90 $ son interés. Tu cuenta real puede acreditar los aportes de forma ligeramente distinta, así que trátalo como una estimación aproximada y no como un extracto bancario exacto.",
     "faq.q5": "¿Se envían mis datos financieros a un servidor, y esto es asesoría de inversión?",
-    "faq.a5": "No. Todos los números que introduces y todos los resultados que muestra esta calculadora de interés compuesto se calculan por completo en tu navegador — nada se sube, se registra ni se guarda en un servidor, y no hace falta registrarse. Y esto es una herramienta aritmética educativa, no asesoría financiera, de inversión ni fiscal: muestra la matemática de la capitalización a la tasa que elijas, no una predicción de lo que realmente ganará una inversión real."
+    "faq.a5": "No. Todos los números que introduces y todos los resultados que muestra esta calculadora de interés compuesto se calculan por completo en tu navegador — nada se sube, se registra ni se guarda en un servidor, y no hace falta registrarse. Y esto es una herramienta aritmética educativa, no asesoría financiera, de inversión ni fiscal: muestra la matemática de la capitalización a la tasa que elijas, no una predicción de lo que realmente ganará una inversión real.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -340,7 +360,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف تُحتسب الدفعات الشهرية الاختيارية، ومتى تبدأ في تحقيق فائدة؟",
     "faq.a4": "إذا أضفت دفعة شهرية، فإنها تُضاف إلى رصيدك في نهاية كل شهر، لذا تبدأ في تحقيق فائدة اعتبارًا من الشهر التالي — وهي نفس عُرف \"الدفعة اللاحقة\" الذي تستخدمه معظم حاسبات البنوك والتقاعد. على سبيل المثال، رأس مال 10,000 دولار بنسبة 6% محتسَبة شهريًا، إضافة 100 دولار كل شهر، ينمو إلى نحو 34,581.90 دولارًا بعد 10 سنوات: 22,000 دولار منها مساهماتك الخاصة، ونحو 12,581.90 دولارًا فائدة. قد يقيّد حسابك الفعلي الدفعات بطريقة مختلفة قليلًا، فاعتبر هذا تقديرًا قريبًا وليس كشف حساب بنكي دقيقًا.",
     "faq.q5": "هل تُرسل بياناتي المالية إلى خادم، وهل هذه نصيحة استثمارية؟",
-    "faq.a5": "لا. كل رقم تدخله وكل نتيجة تعرضها حاسبة الفائدة المركبة هذه تُحسب بالكامل داخل متصفحك — لا يُرفع أو يُسجَّل أو يُخزَّن أي شيء على خادم، ولا حاجة للتسجيل. وهذه أداة حسابية تعليمية، وليست نصيحة مالية أو استثمارية أو ضريبية: فهي تعرض حساب التركيب بالنسبة التي تختارها، وليست تنبؤًا بما سيحققه أي استثمار حقيقي فعليًا."
+    "faq.a5": "لا. كل رقم تدخله وكل نتيجة تعرضها حاسبة الفائدة المركبة هذه تُحسب بالكامل داخل متصفحك — لا يُرفع أو يُسجَّل أو يُخزَّن أي شيء على خادم، ولا حاجة للتسجيل. وهذه أداة حسابية تعليمية، وليست نصيحة مالية أو استثمارية أو ضريبية: فهي تعرض حساب التركيب بالنسبة التي تختارها، وليست تنبؤًا بما سيحققه أي استثمار حقيقي فعليًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -405,7 +430,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment sont gérés les versements mensuels optionnels, et quand commencent-ils à générer des intérêts ?",
     "faq.a4": "Si vous ajoutez un versement mensuel, il est ajouté à votre solde à la fin de chaque mois, et commence donc à générer des intérêts à partir du mois suivant — c'est la même convention de \"rente ordinaire\" utilisée par la plupart des calculateurs bancaires et de retraite. Par exemple, un capital de 10 000 $ à 6 % capitalisé mensuellement, plus 100 $ ajoutés chaque mois, atteint environ 34 581,90 $ après 10 ans : 22 000 $ correspondent à vos propres apports et environ 12 581,90 $ aux intérêts. Votre compte réel peut créditer les versements de façon légèrement différente, considérez donc ceci comme une estimation proche plutôt qu'un relevé bancaire exact.",
     "faq.q5": "Mes données financières sont-elles envoyées à un serveur, et est-ce un conseil en investissement ?",
-    "faq.a5": "Non. Chaque nombre que vous saisissez et chaque résultat affiché par ce calculateur d'intérêts composés est calculé entièrement dans votre navigateur — rien n'est téléversé, journalisé ni stocké sur un serveur, et aucune inscription n'est requise. Et ceci est un outil arithmétique à but éducatif, pas un conseil financier, d'investissement ni fiscal : il montre le calcul de la capitalisation au taux que vous choisissez, pas une prédiction de ce qu'un investissement réel rapportera effectivement."
+    "faq.a5": "Non. Chaque nombre que vous saisissez et chaque résultat affiché par ce calculateur d'intérêts composés est calculé entièrement dans votre navigateur — rien n'est téléversé, journalisé ni stocké sur un serveur, et aucune inscription n'est requise. Et ceci est un outil arithmétique à but éducatif, pas un conseil financier, d'investissement ni fiscal : il montre le calcul de la capitalisation au taux que vous choisissez, pas une prédiction de ce qu'un investissement réel rapportera effectivement.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -470,7 +500,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ঐচ্ছিক মাসিক জমা কীভাবে গণনা করা হয়, এবং এটি কখন সুদ অর্জন শুরু করে?",
     "faq.a4": "আপনি যদি মাসিক জমা যোগ করেন, তা প্রতি মাসের শেষে আপনার ব্যালেন্সে যোগ হয়, তাই পরের মাস থেকে সুদ অর্জন শুরু হয় — এটি বেশিরভাগ ব্যাংক ও অবসর ক্যালকুলেটরের ব্যবহৃত একই \"অর্ডিনারি অ্যানুইটি\" রীতি। উদাহরণস্বরূপ, $10,000 মূলধন 6% হারে মাসিক চক্রবৃদ্ধিতে, প্রতি মাসে $100 যোগ করে, 10 বছর পর প্রায় $34,581.90 হয়ে যায়: এর মধ্যে $22,000 আপনার নিজের জমা এবং প্রায় $12,581.90 সুদ। আপনার প্রকৃত অ্যাকাউন্ট কিছুটা ভিন্নভাবে জমা যোগ করতে পারে, তাই এটিকে সঠিক ব্যাংক স্টেটমেন্ট নয়, বরং একটি কাছাকাছি অনুমান হিসেবে ধরুন।",
     "faq.q5": "আমার আর্থিক তথ্য কি সার্ভারে পাঠানো হয়, এবং এটি কি বিনিয়োগ পরামর্শ?",
-    "faq.a5": "না। আপনি যে প্রতিটি সংখ্যা লেখেন এবং এই চক্রবৃদ্ধি সুদ ক্যালকুলেটর যে প্রতিটি ফলাফল দেখায়, তা সম্পূর্ণভাবে আপনার ব্রাউজারে গণনা হয় — সার্ভারে কিছুই আপলোড, লগ বা সংরক্ষণ হয় না, এবং সাইন-আপের প্রয়োজন নেই। আর এটি একটি শিক্ষামূলক গাণিতিক টুল, আর্থিক, বিনিয়োগ বা কর পরামর্শ নয়: এটি আপনার বেছে নেওয়া হারে চক্রবৃদ্ধির গণিত দেখায়, কোনো প্রকৃত বিনিয়োগ আসলে কত আয় করবে তার পূর্বাভাস নয়।"
+    "faq.a5": "না। আপনি যে প্রতিটি সংখ্যা লেখেন এবং এই চক্রবৃদ্ধি সুদ ক্যালকুলেটর যে প্রতিটি ফলাফল দেখায়, তা সম্পূর্ণভাবে আপনার ব্রাউজারে গণনা হয় — সার্ভারে কিছুই আপলোড, লগ বা সংরক্ষণ হয় না, এবং সাইন-আপের প্রয়োজন নেই। আর এটি একটি শিক্ষামূলক গাণিতিক টুল, আর্থিক, বিনিয়োগ বা কর পরামর্শ নয়: এটি আপনার বেছে নেওয়া হারে চক্রবৃদ্ধির গণিত দেখায়, কোনো প্রকৃত বিনিয়োগ আসলে কত আয় করবে তার পূর্বাভাস নয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -535,7 +570,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como os aportes mensais opcionais são tratados, e quando começam a gerar juros?",
     "faq.a4": "Se você adicionar um aporte mensal, ele é somado ao seu saldo no final de cada mês, então começa a gerar juros a partir do mês seguinte — a mesma convenção de \"anuidade ordinária\" usada pela maioria das calculadoras bancárias e de aposentadoria. Por exemplo, um capital de US$ 10.000 a 6% capitalizado mensalmente, mais US$ 100 adicionados todo mês, cresce para cerca de US$ 34.581,90 após 10 anos: US$ 22.000 disso são seus próprios aportes e cerca de US$ 12.581,90 são juros. Sua conta real pode creditar os aportes de forma ligeiramente diferente, então trate isso como uma estimativa aproximada, não um extrato bancário exato.",
     "faq.q5": "Meus dados financeiros são enviados a um servidor, e isso é aconselhamento de investimento?",
-    "faq.a5": "Não. Todo número que você digita e todo resultado que esta calculadora de juros compostos mostra é calculado inteiramente no seu navegador — nada é enviado, registrado ou armazenado em um servidor, e não é necessário se cadastrar. E esta é uma ferramenta aritmética educativa, não é aconselhamento financeiro, de investimento ou fiscal: ela mostra a matemática da capitalização na taxa que você escolher, não uma previsão do que um investimento real realmente vai render."
+    "faq.a5": "Não. Todo número que você digita e todo resultado que esta calculadora de juros compostos mostra é calculado inteiramente no seu navegador — nada é enviado, registrado ou armazenado em um servidor, e não é necessário se cadastrar. E esta é uma ferramenta aritmética educativa, não é aconselhamento financeiro, de investimento ou fiscal: ela mostra a matemática da capitalização na taxa que você escolher, não uma previsão do que um investimento real realmente vai render.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -600,7 +640,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как учитываются необязательные ежемесячные взносы, и когда они начинают приносить проценты?",
     "faq.a4": "Если вы добавляете ежемесячный взнос, он прибавляется к вашему балансу в конце каждого месяца, поэтому начинает приносить проценты со следующего месяца — это то же соглашение об \"обычной ренте\", которое используют большинство банковских и пенсионных калькуляторов. Например, вклад 10 000 $ под 6% с ежемесячным начислением плюс 100 $ ежемесячно вырастает примерно до 34 581,90 $ через 10 лет: 22 000 $ из этого — ваши собственные взносы, а около 12 581,90 $ — проценты. Ваш реальный счёт может зачислять взносы немного иначе, так что считайте это близкой оценкой, а не точной банковской выпиской.",
     "faq.q5": "Отправляются ли мои финансовые данные на сервер, и является ли это инвестиционным советом?",
-    "faq.a5": "Нет. Каждое введённое вами число и каждый результат, который показывает этот калькулятор сложных процентов, полностью рассчитывается в вашем браузере — ничего не загружается, не логируется и не хранится на сервере, регистрация не требуется. И это учебный арифметический инструмент, а не финансовая, инвестиционная или налоговая консультация: он показывает математику начисления процентов по выбранной вами ставке, а не прогноз того, сколько реально принесёт какая-либо инвестиция."
+    "faq.a5": "Нет. Каждое введённое вами число и каждый результат, который показывает этот калькулятор сложных процентов, полностью рассчитывается в вашем браузере — ничего не загружается, не логируется и не хранится на сервере, регистрация не требуется. И это учебный арифметический инструмент, а не финансовая, инвестиционная или налоговая консультация: он показывает математику начисления процентов по выбранной вами ставке, а не прогноз того, сколько реально принесёт какая-либо инвестиция.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -665,7 +710,12 @@ window.I18N_LOCALES = {
     "faq.q4": "اختیاری ماہانہ شراکتیں کیسے شمار کی جاتی ہیں، اور یہ سود کمانا کب شروع کرتی ہیں؟",
     "faq.a4": "اگر آپ ماہانہ شراکت شامل کرتے ہیں، تو یہ ہر مہینے کے آخر میں آپ کے بیلنس میں شامل ہو جاتی ہے، اس لیے یہ اگلے مہینے سے سود کمانا شروع کرتی ہے — یہی \"عام سالانہ\" روایت ہے جو زیادہ تر بینک اور ریٹائرمنٹ کیلکولیٹرز استعمال کرتے ہیں۔ مثال کے طور پر، $10,000 پرنسپل 6% پر ماہانہ کمپاؤنڈنگ کے ساتھ، اور ہر مہینے $100 شامل کرنے پر، 10 سالوں بعد تقریباً $34,581.90 ہو جاتا ہے: اس میں سے $22,000 آپ کی اپنی شراکت ہے اور تقریباً $12,581.90 سود ہے۔ آپ کا اصل اکاؤنٹ شراکتوں کو تھوڑا مختلف انداز میں جمع کر سکتا ہے، اس لیے اسے ایک قریبی تخمینہ سمجھیں، نہ کہ ایک عین بینک اسٹیٹمنٹ۔",
     "faq.q5": "کیا میرا مالی ڈیٹا سرور پر بھیجا جاتا ہے، اور کیا یہ سرمایہ کاری کا مشورہ ہے؟",
-    "faq.a5": "نہیں۔ آپ کا درج کردہ ہر نمبر، اور اس کمپاؤنڈ انٹرسٹ کیلکولیٹر کا دکھایا گیا ہر نتیجہ، مکمل طور پر آپ کے براؤزر میں شمار ہوتا ہے — کچھ بھی اپ لوڈ، لاگ یا سرور پر محفوظ نہیں ہوتا، اور سائن اپ کی ضرورت نہیں۔ اور یہ ایک تعلیمی حسابی ٹول ہے، مالی، سرمایہ کاری یا ٹیکس کا مشورہ نہیں: یہ آپ کی منتخب کردہ شرح پر کمپاؤنڈنگ کی ریاضی دکھاتا ہے، کسی حقیقی سرمایہ کاری کی اصل کمائی کی پیش گوئی نہیں۔"
+    "faq.a5": "نہیں۔ آپ کا درج کردہ ہر نمبر، اور اس کمپاؤنڈ انٹرسٹ کیلکولیٹر کا دکھایا گیا ہر نتیجہ، مکمل طور پر آپ کے براؤزر میں شمار ہوتا ہے — کچھ بھی اپ لوڈ، لاگ یا سرور پر محفوظ نہیں ہوتا، اور سائن اپ کی ضرورت نہیں۔ اور یہ ایک تعلیمی حسابی ٹول ہے، مالی، سرمایہ کاری یا ٹیکس کا مشورہ نہیں: یہ آپ کی منتخب کردہ شرح پر کمپاؤنڈنگ کی ریاضی دکھاتا ہے، کسی حقیقی سرمایہ کاری کی اصل کمائی کی پیش گوئی نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -730,7 +780,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana setoran bulanan opsional diperhitungkan, dan kapan mulai menghasilkan bunga?",
     "faq.a4": "Jika Anda menambahkan setoran bulanan, itu ditambahkan ke saldo Anda di akhir setiap bulan, sehingga mulai menghasilkan bunga sejak bulan berikutnya — konvensi \"anuitas biasa\" yang sama yang digunakan sebagian besar kalkulator bank dan pensiun. Misalnya, pokok $10.000 dengan bunga 6% dimajemukkan bulanan, ditambah $100 setiap bulan, tumbuh menjadi sekitar $34.581,90 setelah 10 tahun: $22.000 di antaranya adalah kontribusi Anda sendiri dan sekitar $12.581,90 adalah bunga. Rekening asli Anda mungkin mengkreditkan setoran sedikit berbeda, jadi anggap ini sebagai perkiraan mendekati, bukan laporan bank yang persis.",
     "faq.q5": "Apakah data keuangan saya dikirim ke server, dan apakah ini nasihat investasi?",
-    "faq.a5": "Tidak. Setiap angka yang Anda masukkan dan setiap hasil yang ditampilkan kalkulator bunga majemuk ini dihitung sepenuhnya di browser Anda — tidak ada yang diunggah, dicatat, atau disimpan di server, dan tidak perlu mendaftar. Dan ini adalah alat aritmetika edukatif, bukan nasihat keuangan, investasi, atau pajak: alat ini menunjukkan matematika pemajemukan pada suku bunga yang Anda pilih, bukan prediksi berapa sebenarnya hasil investasi nyata."
+    "faq.a5": "Tidak. Setiap angka yang Anda masukkan dan setiap hasil yang ditampilkan kalkulator bunga majemuk ini dihitung sepenuhnya di browser Anda — tidak ada yang diunggah, dicatat, atau disimpan di server, dan tidak perlu mendaftar. Dan ini adalah alat aritmetika edukatif, bukan nasihat keuangan, investasi, atau pajak: alat ini menunjukkan matematika pemajemukan pada suku bunga yang Anda pilih, bukan prediksi berapa sebenarnya hasil investasi nyata.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -795,7 +850,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie werden optionale monatliche Einzahlungen behandelt, und ab wann erzielen sie Zinsen?",
     "faq.a4": "Wenn Sie eine monatliche Einzahlung hinzufügen, wird sie am Ende jedes Monats zu Ihrem Guthaben addiert und beginnt daher ab dem folgenden Monat, Zinsen zu erzielen — dieselbe Konvention der \"nachschüssigen Rente\", die die meisten Bank- und Renten-Rechner verwenden. Zum Beispiel wächst ein Kapital von 10.000 $ bei 6% monatlicher Verzinsung, plus 100 $ jeden Monat, nach 10 Jahren auf etwa 34.581,90 $: 22.000 $ davon sind Ihre eigenen Einzahlungen, und etwa 12.581,90 $ sind Zinsen. Ihr tatsächliches Konto kann Einzahlungen etwas anders gutschreiben, betrachten Sie dies also als eine nahe Schätzung und nicht als exakten Kontoauszug.",
     "faq.q5": "Werden meine Finanzdaten an einen Server gesendet, und ist dies eine Anlageberatung?",
-    "faq.a5": "Nein. Jede Zahl, die Sie eingeben, und jedes Ergebnis, das dieser Zinseszinsrechner anzeigt, wird vollständig in Ihrem Browser berechnet — nichts wird hochgeladen, protokolliert oder auf einem Server gespeichert, und es ist keine Anmeldung erforderlich. Und dies ist ein pädagogisches Rechenwerkzeug, keine Finanz-, Anlage- oder Steuerberatung: Es zeigt Ihnen die Mathematik der Verzinsung zu dem von Ihnen gewählten Zinssatz, keine Vorhersage darüber, was eine echte Investition tatsächlich erwirtschaften wird."
+    "faq.a5": "Nein. Jede Zahl, die Sie eingeben, und jedes Ergebnis, das dieser Zinseszinsrechner anzeigt, wird vollständig in Ihrem Browser berechnet — nichts wird hochgeladen, protokolliert oder auf einem Server gespeichert, und es ist keine Anmeldung erforderlich. Und dies ist ein pädagogisches Rechenwerkzeug, keine Finanz-, Anlage- oder Steuerberatung: Es zeigt Ihnen die Mathematik der Verzinsung zu dem von Ihnen gewählten Zinssatz, keine Vorhersage darüber, was eine echte Investition tatsächlich erwirtschaften wird.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -860,7 +920,12 @@ window.I18N_LOCALES = {
     "faq.q4": "任意の毎月積立はどのように扱われ、いつから利息が付きますか？",
     "faq.a4": "毎月の積立額を設定すると、それは各月末に残高へ加算されるため、翌月から利息が付き始めます——これはほとんどの銀行や退職金の計算機が採用している「期末年金」の慣例と同じです。例えば元金10,000ドルを年利6%で毎月複利運用し、さらに毎月100ドルを積み立てると、10年後には約34,581.90ドルになります。そのうち22,000ドルはご自身の積立分で、約12,581.90ドルが利息です。実際の口座では積立の計上方法が多少異なる場合があるため、これは正確な取引明細ではなく、近い概算値としてお考えください。",
     "faq.q5": "私の財務データはサーバーに送信されますか？これは投資アドバイスですか？",
-    "faq.a5": "いいえ。入力したすべての数値と、この複利計算機が表示するすべての結果は、あなたのブラウザ内だけで計算されます——アップロードやログの記録、サーバーへの保存は一切なく、登録も不要です。またこれは教育目的の計算ツールであり、金融・投資・税務のアドバイスではありません。選んだ利率での複利の計算結果を示すものであり、実際の投資が本当にどれだけ増えるかを予測するものではありません。"
+    "faq.a5": "いいえ。入力したすべての数値と、この複利計算機が表示するすべての結果は、あなたのブラウザ内だけで計算されます——アップロードやログの記録、サーバーへの保存は一切なく、登録も不要です。またこれは教育目的の計算ツールであり、金融・投資・税務のアドバイスではありません。選んだ利率での複利の計算結果を示すものであり、実際の投資が本当にどれだけ増えるかを予測するものではありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -925,6 +990,11 @@ window.I18N_LOCALES = {
     "faq.q4": "선택적인 매월 적립액은 어떻게 계산되고, 언제부터 이자가 붙나요?",
     "faq.a4": "매월 적립액을 설정하면 매월 말에 잔액에 더해지므로, 다음 달부터 이자가 붙기 시작합니다 — 대부분의 은행·연금 계산기가 쓰는 \"기말 지급\" 방식과 같습니다. 예를 들어 원금 10,000달러를 연이율 6%로 월복리 운용하면서 매월 100달러씩 적립하면, 10년 후 잔액은 약 34,581.90달러가 됩니다. 이 중 22,000달러는 본인이 넣은 원금과 적립액이고, 약 12,581.90달러가 이자입니다. 실제 계좌는 적립금 반영 시점이 조금 다를 수 있으니, 이 결과는 정확한 거래 내역이 아니라 근접한 추정치로 참고하세요.",
     "faq.q5": "제 금융 데이터가 서버로 전송되나요? 이건 투자 자문인가요?",
-    "faq.a5": "아니요. 입력한 모든 숫자와 이 복리 계산기가 보여주는 모든 결과는 전적으로 브라우저 안에서만 계산됩니다 — 서버로 업로드·기록·저장되는 것이 전혀 없으며 회원가입도 필요 없습니다. 그리고 이 도구는 교육용 산술 도구일 뿐, 금융·투자·세무 자문이 아닙니다. 사용자가 선택한 이율에서의 복리 계산 결과를 보여줄 뿐, 실제 투자가 실제로 얼마를 벌어들일지 예측하는 것이 아닙니다."
+    "faq.a5": "아니요. 입력한 모든 숫자와 이 복리 계산기가 보여주는 모든 결과는 전적으로 브라우저 안에서만 계산됩니다 — 서버로 업로드·기록·저장되는 것이 전혀 없으며 회원가입도 필요 없습니다. 그리고 이 도구는 교육용 산술 도구일 뿐, 금융·투자·세무 자문이 아닙니다. 사용자가 선택한 이율에서의 복리 계산 결과를 보여줄 뿐, 실제 투자가 실제로 얼마를 벌어들일지 예측하는 것이 아닙니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

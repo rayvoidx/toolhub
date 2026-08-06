@@ -88,7 +88,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What if my goal weight or pace doesn't make sense?",
     "faq.a4": "The calculator requires a goal weight below your current weight, since it is built around a calorie deficit for weight loss — if you want to maintain or gain weight, try a maintenance or TDEE calculator instead. Extreme height/weight combinations trigger a \"double-check your numbers\" note, and very aggressive paces (like 1 kg/week) at a small body size often hit the low-calorie floor warning above, since there isn't enough of a maintenance budget to cut that much safely.",
     "faq.q5": "Is my health information sent to a server?",
-    "faq.a5": "No. This calorie deficit calculator runs entirely in your browser — your sex, age, height, weight and goal never leave your device, and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can plan a weight-loss target privately."
+    "faq.a5": "No. This calorie deficit calculator runs entirely in your browser — your sex, age, height, weight and goal never leave your device, and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can plan a weight-loss target privately.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -161,7 +166,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如果目标体重或速度不合理怎么办？",
     "faq.a4": "本工具要求目标体重低于当前体重，因为它专为减重热量缺口而设计 — 如果您想维持或增重，请改用维持热量或TDEE计算器。极端的身高体重组合会触发“请再次确认数值”的提示，而在体型较小的情况下选择过于激进的速度（如每周1千克）常常会触发上方的低热量下限警告，因为可减少的维持预算不足以安全地削减这么多。",
     "faq.q5": "我的健康信息会上传到服务器吗？",
-    "faq.a5": "不会。本卡路里缺口计算器完全在您的浏览器中运行 — 您的性别、年龄、身高、体重和目标从不离开您的设备，也不会上传或存储到任何服务器。无需注册，也没有任何跟踪，您可以放心地私下规划减重目标。"
+    "faq.a5": "不会。本卡路里缺口计算器完全在您的浏览器中运行 — 您的性别、年龄、身高、体重和目标从不离开您的设备，也不会上传或存储到任何服务器。无需注册，也没有任何跟踪，您可以放心地私下规划减重目标。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -234,7 +244,12 @@ window.I18N_LOCALES = {
     "faq.q4": "यदि मेरा लक्ष्य वज़न या गति उचित न हो तो क्या होगा?",
     "faq.a4": "यह कैलकुलेटर आपके वर्तमान वज़न से कम लक्ष्य वज़न की माँग करता है, क्योंकि यह वज़न घटाने के लिए कैलोरी डेफिसिट पर आधारित है — यदि आप वज़न बनाए रखना या बढ़ाना चाहते हैं, तो इसके बजाय मेंटेनेंस या TDEE कैलकुलेटर आज़माएँ। अत्यधिक असामान्य ऊँचाई/वज़न संयोजन पर \"अपने आँकड़े दोबारा जाँचें\" की सूचना दिखती है, और छोटे शरीर के आकार में बहुत आक्रामक गति (जैसे 1 किलो/सप्ताह) अक्सर ऊपर दी गई न्यूनतम कैलोरी चेतावनी को ट्रिगर करती है, क्योंकि इतनी बड़ी कमी सुरक्षित रूप से करने के लिए पर्याप्त मेंटेनेंस बजट नहीं होता।",
     "faq.q5": "क्या मेरी स्वास्थ्य जानकारी सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। यह कैलोरी डेफिसिट कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपका लिंग, उम्र, ऊँचाई, वज़न और लक्ष्य कभी भी आपकी डिवाइस से बाहर नहीं जाते, और कुछ भी सर्वर पर अपलोड या संग्रहीत नहीं होता। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, इसलिए आप निजी तौर पर अपना वज़न घटाने का लक्ष्य बना सकते हैं।"
+    "faq.a5": "नहीं। यह कैलोरी डेफिसिट कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपका लिंग, उम्र, ऊँचाई, वज़न और लक्ष्य कभी भी आपकी डिवाइस से बाहर नहीं जाते, और कुछ भी सर्वर पर अपलोड या संग्रहीत नहीं होता। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, इसलिए आप निजी तौर पर अपना वज़न घटाने का लक्ष्य बना सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -307,7 +322,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué pasa si mi peso meta o ritmo no tienen sentido?",
     "faq.a4": "La calculadora requiere un peso meta menor que tu peso actual, ya que está diseñada para un déficit calórico de pérdida de peso — si quieres mantener o ganar peso, prueba una calculadora de mantenimiento o TDEE. Las combinaciones extremas de estatura/peso activan un aviso de \"verifica tus datos\", y los ritmos muy agresivos (como 1 kg/semana) en cuerpos pequeños suelen activar la advertencia de mínimo calórico anterior, porque no hay suficiente margen de mantenimiento para recortar tanto de forma segura.",
     "faq.q5": "¿Se envía mi información de salud a un servidor?",
-    "faq.a5": "No. Esta calculadora de déficit calórico se ejecuta completamente en tu navegador — tu sexo, edad, estatura, peso y meta nunca salen de tu dispositivo, y nada se sube ni se guarda en un servidor. No hay registro ni seguimiento, así que puedes planificar tu objetivo de pérdida de peso de forma privada."
+    "faq.a5": "No. Esta calculadora de déficit calórico se ejecuta completamente en tu navegador — tu sexo, edad, estatura, peso y meta nunca salen de tu dispositivo, y nada se sube ni se guarda en un servidor. No hay registro ni seguimiento, así que puedes planificar tu objetivo de pérdida de peso de forma privada.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -380,7 +400,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ماذا لو كان وزني المستهدف أو وتيرتي غير منطقيين؟",
     "faq.a4": "تتطلب الحاسبة وزنًا مستهدفًا أقل من وزنك الحالي، لأنها مبنية على عجز سعري لإنقاص الوزن — إذا كنت تريد الحفاظ على وزنك أو زيادته، جرّب بدلًا من ذلك حاسبة الحفاظ على الوزن أو TDEE. تؤدي تركيبات الطول/الوزن المتطرفة إلى ظهور ملاحظة \"تحقق من أرقامك مجددًا\"، كما أن الوتيرة العدوانية جدًا (مثل 1 كجم/أسبوع) مع جسم صغير غالبًا ما تُطلق تحذير الحد الأدنى للسعرات أعلاه، لأنه لا توجد ميزانية حفاظ كافية لخفضها بهذا القدر بأمان.",
     "faq.q5": "هل تُرسل معلوماتي الصحية إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة العجز السعري هذه بالكامل داخل متصفحك — جنسك وعمرك وطولك ووزنك وهدفك لا تغادر جهازك أبدًا، ولا يُرفع أو يُخزَّن أي شيء على خادم. لا يوجد تسجيل ولا تتبع، لذا يمكنك التخطيط لهدف إنقاص وزنك بخصوصية."
+    "faq.a5": "لا. تعمل حاسبة العجز السعري هذه بالكامل داخل متصفحك — جنسك وعمرك وطولك ووزنك وهدفك لا تغادر جهازك أبدًا، ولا يُرفع أو يُخزَّن أي شيء على خادم. لا يوجد تسجيل ولا تتبع، لذا يمكنك التخطيط لهدف إنقاص وزنك بخصوصية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -453,7 +478,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que se passe-t-il si mon poids cible ou mon rythme n'a pas de sens ?",
     "faq.a4": "Le calculateur exige un poids cible inférieur à votre poids actuel, car il est conçu pour un déficit calorique de perte de poids — si vous souhaitez maintenir ou prendre du poids, essayez plutôt un calculateur de maintien ou de TDEE. Des combinaisons extrêmes de taille/poids déclenchent une note « vérifiez vos chiffres », et des rythmes très agressifs (comme 1 kg/semaine) pour une petite corpulence déclenchent souvent l'avertissement de seuil calorique minimal ci-dessus, faute d'une marge de maintien suffisante pour réduire autant en toute sécurité.",
     "faq.q5": "Mes informations de santé sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce calculateur de déficit calorique fonctionne entièrement dans votre navigateur — votre sexe, âge, taille, poids et objectif ne quittent jamais votre appareil, et rien n'est téléversé ni stocké sur un serveur. Aucune inscription, aucun suivi : vous pouvez planifier votre objectif de perte de poids en toute confidentialité."
+    "faq.a5": "Non. Ce calculateur de déficit calorique fonctionne entièrement dans votre navigateur — votre sexe, âge, taille, poids et objectif ne quittent jamais votre appareil, et rien n'est téléversé ni stocké sur un serveur. Aucune inscription, aucun suivi : vous pouvez planifier votre objectif de perte de poids en toute confidentialité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -526,7 +556,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার লক্ষ্য ওজন বা গতি যুক্তিসঙ্গত না হলে কী হবে?",
     "faq.a4": "এই ক্যালকুলেটরের জন্য লক্ষ্য ওজন আপনার বর্তমান ওজনের চেয়ে কম হতে হবে, কারণ এটি ওজন কমানোর ক্যালোরি ঘাটতির জন্য তৈরি — আপনি যদি ওজন ধরে রাখতে বা বাড়াতে চান, তবে পরিবর্তে একটি রক্ষণাবেক্ষণ বা TDEE ক্যালকুলেটর ব্যবহার করুন। চরম উচ্চতা/ওজনের সমন্বয় \"আপনার সংখ্যাগুলো আবার যাচাই করুন\" নোটিশ চালু করে, এবং ছোট শরীরের গঠনে অত্যন্ত আক্রমণাত্মক গতি (যেমন 1 কেজি/সপ্তাহ) প্রায়ই উপরের কম-ক্যালোরি সীমার সতর্কতা চালু করে, কারণ এত বেশি নিরাপদে কমানোর জন্য যথেষ্ট রক্ষণাবেক্ষণ বাজেট থাকে না।",
     "faq.q5": "আমার স্বাস্থ্য তথ্য কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই ক্যালোরি ঘাটতি ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার লিঙ্গ, বয়স, উচ্চতা, ওজন ও লক্ষ্য কখনো আপনার ডিভাইস ছেড়ে যায় না, এবং কিছুই সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি ব্যক্তিগতভাবে আপনার ওজন কমানোর লক্ষ্য পরিকল্পনা করতে পারেন।"
+    "faq.a5": "না। এই ক্যালোরি ঘাটতি ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার লিঙ্গ, বয়স, উচ্চতা, ওজন ও লক্ষ্য কখনো আপনার ডিভাইস ছেড়ে যায় না, এবং কিছুই সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি ব্যক্তিগতভাবে আপনার ওজন কমানোর লক্ষ্য পরিকল্পনা করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -599,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.q4": "E se meu peso desejado ou ritmo não fizer sentido?",
     "faq.a4": "A calculadora exige um peso desejado abaixo do seu peso atual, pois foi criada para um déficit calórico de perda de peso — se você quiser manter ou ganhar peso, experimente uma calculadora de manutenção ou de TDEE. Combinações extremas de altura/peso acionam um aviso de \"verifique seus números novamente\", e ritmos muito agressivos (como 1 kg/semana) em um corpo pequeno costumam acionar o aviso de mínimo calórico acima, pois não há margem de manutenção suficiente para cortar tanto com segurança.",
     "faq.q5": "Minhas informações de saúde são enviadas a um servidor?",
-    "faq.a5": "Não. Esta calculadora de déficit calórico funciona inteiramente no seu navegador — seu sexo, idade, altura, peso e meta nunca saem do seu dispositivo, e nada é enviado ou armazenado em um servidor. Não há cadastro nem rastreamento, então você pode planejar sua meta de perda de peso com privacidade."
+    "faq.a5": "Não. Esta calculadora de déficit calórico funciona inteiramente no seu navegador — seu sexo, idade, altura, peso e meta nunca saem do seu dispositivo, e nada é enviado ou armazenado em um servidor. Não há cadastro nem rastreamento, então você pode planejar sua meta de perda de peso com privacidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -672,7 +712,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что если мой целевой вес или темп не имеют смысла?",
     "faq.a4": "Калькулятор требует, чтобы целевой вес был меньше текущего, поскольку он предназначен для дефицита калорий при похудении — если вы хотите поддерживать вес или набрать его, попробуйте калькулятор поддержания или TDEE. Экстремальные сочетания роста и веса вызывают отметку «перепроверьте свои цифры», а слишком агрессивный темп (например, 1 кг/нед) при небольшом теле часто вызывает описанное выше предупреждение о минимуме калорий, поскольку не хватает запаса от нормы поддержания, чтобы безопасно урезать так сильно.",
     "faq.q5": "Отправляется ли моя медицинская информация на сервер?",
-    "faq.a5": "Нет. Этот калькулятор дефицита калорий работает полностью в вашем браузере — ваш пол, возраст, рост, вес и цель никогда не покидают ваше устройство, и ничего не загружается и не хранится на сервере. Регистрация и отслеживание отсутствуют, поэтому вы можете планировать цель похудения приватно."
+    "faq.a5": "Нет. Этот калькулятор дефицита калорий работает полностью в вашем браузере — ваш пол, возраст, рост, вес и цель никогда не покидают ваше устройство, и ничего не загружается и не хранится на сервере. Регистрация и отслеживание отсутствуют, поэтому вы можете планировать цель похудения приватно.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -745,7 +790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "اگر میرا ہدف وزن یا رفتار مناسب نہ ہو تو کیا ہوگا؟",
     "faq.a4": "یہ کیلکولیٹر ہدف وزن کو موجودہ وزن سے کم ہونے کا تقاضا کرتا ہے، کیونکہ یہ وزن کم کرنے کے کیلوری خسارے کے لیے بنایا گیا ہے — اگر آپ وزن برقرار رکھنا یا بڑھانا چاہتے ہیں، تو اس کے بجائے برقراری یا TDEE کیلکولیٹر آزمائیں۔ انتہائی قد/وزن کے امتزاج \"اپنے اعداد دوبارہ چیک کریں\" کا نوٹ ظاہر کرتے ہیں، اور چھوٹے جسمانی حجم پر بہت جارحانہ رفتار (جیسے 1 کلوگرام/ہفتہ) اکثر اوپر دیا گیا کم کیلوری کا انتباہ ظاہر کرتی ہے، کیونکہ اتنی مقدار محفوظ طریقے سے کم کرنے کے لیے کافی برقراری بجٹ نہیں ہوتا۔",
     "faq.q5": "کیا میری صحت کی معلومات سرور پر بھیجی جاتی ہیں؟",
-    "faq.a5": "نہیں۔ یہ کیلوری خسارہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی جنس، عمر، قد، وزن اور ہدف کبھی بھی آپ کے آلے سے باہر نہیں جاتے، اور کچھ بھی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں، اس لیے آپ نجی طور پر اپنا وزن کم کرنے کا ہدف طے کر سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ کیلوری خسارہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی جنس، عمر، قد، وزن اور ہدف کبھی بھی آپ کے آلے سے باہر نہیں جاتے، اور کچھ بھی سرور پر اپ لوڈ یا محفوظ نہیں ہوتا۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں، اس لیے آپ نجی طور پر اپنا وزن کم کرنے کا ہدف طے کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -818,7 +868,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana jika berat target atau kecepatan saya tidak masuk akal?",
     "faq.a4": "Kalkulator ini mensyaratkan berat target lebih rendah dari berat badan Anda saat ini, karena dirancang untuk defisit kalori penurunan berat badan — jika Anda ingin mempertahankan atau menambah berat badan, coba gunakan kalkulator pemeliharaan atau TDEE. Kombinasi tinggi/berat yang ekstrem memicu catatan \"periksa kembali angka Anda\", dan kecepatan yang sangat agresif (seperti 1 kg/minggu) pada tubuh yang kecil sering memicu peringatan batas kalori minimum di atas, karena tidak ada cukup anggaran pemeliharaan untuk memotong sebanyak itu dengan aman.",
     "faq.q5": "Apakah informasi kesehatan saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator defisit kalori ini sepenuhnya berjalan di browser Anda — jenis kelamin, usia, tinggi, berat, dan target Anda tidak pernah meninggalkan perangkat Anda, dan tidak ada yang diunggah atau disimpan di server. Tidak ada pendaftaran dan tidak ada pelacakan, jadi Anda dapat merencanakan target penurunan berat badan secara pribadi."
+    "faq.a5": "Tidak. Kalkulator defisit kalori ini sepenuhnya berjalan di browser Anda — jenis kelamin, usia, tinggi, berat, dan target Anda tidak pernah meninggalkan perangkat Anda, dan tidak ada yang diunggah atau disimpan di server. Tidak ada pendaftaran dan tidak ada pelacakan, jadi Anda dapat merencanakan target penurunan berat badan secara pribadi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -891,7 +946,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was, wenn mein Zielgewicht oder Tempo keinen Sinn ergibt?",
     "faq.a4": "Der Rechner verlangt ein Zielgewicht unterhalb deines aktuellen Gewichts, da er auf ein Kaloriendefizit zum Abnehmen ausgelegt ist — willst du dein Gewicht halten oder zunehmen, probiere stattdessen einen Erhaltungs- oder TDEE-Rechner. Extreme Größen-/Gewichtskombinationen lösen einen Hinweis „überprüfe deine Werte“ aus, und ein sehr aggressives Tempo (wie 1 kg/Woche) bei einem kleinen Körper löst oft die oben genannte Warnung zur Kalorien-Untergrenze aus, da nicht genug Erhaltungsspielraum vorhanden ist, um so viel sicher zu kürzen.",
     "faq.q5": "Werden meine Gesundheitsdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Kalorien-Defizit-Rechner läuft vollständig in deinem Browser — dein Geschlecht, Alter, deine Größe, dein Gewicht und Ziel verlassen niemals dein Gerät, und nichts wird auf einen Server hochgeladen oder gespeichert. Es gibt keine Anmeldung und kein Tracking, sodass du dein Abnehmziel privat planen kannst."
+    "faq.a5": "Nein. Dieser Kalorien-Defizit-Rechner läuft vollständig in deinem Browser — dein Geschlecht, Alter, deine Größe, dein Gewicht und Ziel verlassen niemals dein Gerät, und nichts wird auf einen Server hochgeladen oder gespeichert. Es gibt keine Anmeldung und kein Tracking, sodass du dein Abnehmziel privat planen kannst.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -964,7 +1024,12 @@ window.I18N_LOCALES = {
     "faq.q4": "目標体重やペースが合っていない場合はどうなる?",
     "faq.a4": "このツールはカロリー赤字(減量)向けに作られているため、目標体重は現在の体重より低い値が必要です。維持や増量をしたい場合は、維持カロリーやTDEE計算ツールをお使いください。極端な身長・体重の組み合わせでは「数値を再確認してください」という注記が表示され、体格が小さい人が週1kgのような非常にアグレッシブなペースを選ぶと、上記の低カロリー下限警告が表示されやすくなります。これは、それほど大きく削るには維持カロリーの余裕が十分でないためです。",
     "faq.q5": "健康情報はサーバーに送信されますか?",
-    "faq.a5": "いいえ。このカロリー収支計算機はすべてブラウザ内で動作します — 性別・年齢・身長・体重・目標がデバイスの外に送られることはなく、サーバーへのアップロードや保存も行われません。会員登録もトラッキングもないため、安心して減量目標を計画できます。"
+    "faq.a5": "いいえ。このカロリー収支計算機はすべてブラウザ内で動作します — 性別・年齢・身長・体重・目標がデバイスの外に送られることはなく、サーバーへのアップロードや保存も行われません。会員登録もトラッキングもないため、安心して減量目標を計画できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1037,6 +1102,11 @@ window.I18N_LOCALES = {
     "faq.q4": "목표 체중이나 속도가 맞지 않으면 어떻게 되나요?",
     "faq.a4": "이 계산기는 체중 감량을 위한 칼로리 결핍 계산 도구이므로 목표 체중이 현재 체중보다 낮아야 합니다 — 체중을 유지하거나 늘리고 싶다면 유지 칼로리나 TDEE 계산기를 사용해 보세요. 극단적인 키/체중 조합에서는 '수치를 다시 확인하세요'라는 안내가 표시되며, 체구가 작은 상태에서 주 1kg처럼 매우 공격적인 속도를 선택하면 위에서 설명한 저칼로리 하한 경고가 자주 나타납니다. 이는 그만큼 크게 줄일 만큼 유지 칼로리에 여유가 충분하지 않기 때문입니다.",
     "faq.q5": "제 건강 정보가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 칼로리 결핍 계산기는 전적으로 브라우저에서 실행됩니다 — 성별, 나이, 키, 체중, 목표 체중은 절대 기기 밖으로 나가지 않으며, 서버에 업로드되거나 저장되지 않습니다. 회원가입도 추적도 없으므로 체중 감량 목표를 개인정보 걱정 없이 계획할 수 있습니다."
+    "faq.a5": "아니요. 이 칼로리 결핍 계산기는 전적으로 브라우저에서 실행됩니다 — 성별, 나이, 키, 체중, 목표 체중은 절대 기기 밖으로 나가지 않으며, 서버에 업로드되거나 저장되지 않습니다. 회원가입도 추적도 없으므로 체중 감량 목표를 개인정보 걱정 없이 계획할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

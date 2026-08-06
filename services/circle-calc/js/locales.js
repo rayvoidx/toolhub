@@ -66,7 +66,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Does this calculator convert between units like centimeters and inches?",
     "faq.a4": "No. The unit label is for display only — it's attached to the numbers you see, but no unit conversion happens. Enter your radius, diameter, circumference, or area in whichever unit you're working with (centimeters, inches, meters, or anything else), and the results come back in that same unit. If you need to convert between units first, use a dedicated length converter before entering the number here.",
     "faq.q5": "Is my data sent to a server when I use this circle calculator?",
-    "faq.a5": "No. Every calculation runs locally in your browser using JavaScript — the numbers you enter are never uploaded or transmitted anywhere. The only thing saved is your last input, unit label, and decimal-place preference, stored in your browser's localStorage so they're there next time you open the page on the same device."
+    "faq.a5": "No. Every calculation runs locally in your browser using JavaScript — the numbers you enter are never uploaded or transmitted anywhere. The only thing saved is your last input, unit label, and decimal-place preference, stored in your browser's localStorage so they're there next time you open the page on the same device.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
 
   zh: {
@@ -120,7 +125,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这个计算器会在厘米和英寸等单位之间换算吗?",
     "faq.a4": "不会。单位标签只用于显示——它只是附加在数值旁边,并不会进行单位换算。请用你实际使用的单位(厘米、英寸、米或其他任何单位)输入半径、直径、周长或面积,结果也会以相同单位返回。如果需要先换算单位,请使用专门的长度换算工具,再把数值输入这里。",
     "faq.q5": "使用这个圆计算器时,我的数据会发送到服务器吗?",
-    "faq.a5": "不会。所有计算都通过 JavaScript 在你的浏览器本地完成——你输入的数字从不会被上传或传输到任何地方。唯一会保存的是你上次输入的数值、单位标签和小数位数偏好,它们保存在浏览器的 localStorage 中,以便下次在同一设备上打开页面时仍然保留。"
+    "faq.a5": "不会。所有计算都通过 JavaScript 在你的浏览器本地完成——你输入的数字从不会被上传或传输到任何地方。唯一会保存的是你上次输入的数值、单位标签和小数位数偏好,它们保存在浏览器的 localStorage 中,以便下次在同一设备上打开页面时仍然保留。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
 
   hi: {
@@ -174,7 +184,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या यह कैलकुलेटर सेंटीमीटर और इंच जैसी इकाइयों के बीच परिवर्तन करता है?",
     "faq.a4": "नहीं। इकाई लेबल केवल दिखाने के लिए है — यह आपकी संख्याओं के साथ जुड़ जाता है, पर कोई इकाई परिवर्तन नहीं होता। आप जिस भी इकाई में काम कर रहे हों (सेंटीमीटर, इंच, मीटर या कुछ और), उसी में त्रिज्या, व्यास, परिधि या क्षेत्रफल दर्ज करें, और परिणाम भी उसी इकाई में मिलेंगे। पहले इकाई बदलनी हो तो किसी अलग लंबाई परिवर्तक का उपयोग करें, फिर संख्या यहाँ दर्ज करें।",
     "faq.q5": "इस सर्कल कैलकुलेटर का उपयोग करते समय क्या मेरा डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। हर गणना आपके ब्राउज़र में ही JavaScript से होती है — आपके द्वारा दर्ज की गई संख्याएँ कभी अपलोड या कहीं ट्रांसमिट नहीं होतीं। केवल आपका आख़िरी इनपुट, इकाई लेबल और दशमलव-स्थान की पसंद सेव होती है, जो आपके ब्राउज़र के localStorage में रहती है ताकि उसी डिवाइस पर अगली बार पेज खोलने पर वे मौजूद रहें।"
+    "faq.a5": "नहीं। हर गणना आपके ब्राउज़र में ही JavaScript से होती है — आपके द्वारा दर्ज की गई संख्याएँ कभी अपलोड या कहीं ट्रांसमिट नहीं होतीं। केवल आपका आख़िरी इनपुट, इकाई लेबल और दशमलव-स्थान की पसंद सेव होती है, जो आपके ब्राउज़र के localStorage में रहती है ताकि उसी डिवाइस पर अगली बार पेज खोलने पर वे मौजूद रहें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
 
   es: {
@@ -228,7 +243,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Esta calculadora convierte entre unidades como centímetros y pulgadas?",
     "faq.a4": "No. La etiqueta de unidad es solo para mostrar — se añade junto a los números que ves, pero no ocurre ninguna conversión de unidades. Introduce tu radio, diámetro, circunferencia o área en la unidad que estés usando (centímetros, pulgadas, metros o cualquier otra), y los resultados se devuelven en esa misma unidad. Si necesitas convertir entre unidades primero, usa un conversor de longitud dedicado antes de introducir el número aquí.",
     "faq.q5": "¿Se envían mis datos a un servidor al usar esta calculadora de círculo?",
-    "faq.a5": "No. Todos los cálculos se ejecutan localmente en tu navegador con JavaScript — los números que introduces nunca se suben ni se transmiten a ningún sitio. Lo único que se guarda es tu última entrada, la etiqueta de unidad y tu preferencia de decimales, almacenados en el localStorage de tu navegador para que estén ahí la próxima vez que abras la página en el mismo dispositivo."
+    "faq.a5": "No. Todos los cálculos se ejecutan localmente en tu navegador con JavaScript — los números que introduces nunca se suben ni se transmiten a ningún sitio. Lo único que se guarda es tu última entrada, la etiqueta de unidad y tu preferencia de decimales, almacenados en el localStorage de tu navegador para que estén ahí la próxima vez que abras la página en el mismo dispositivo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
 
   ar: {
@@ -282,7 +302,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تحوّل هذه الحاسبة بين وحدات مثل السنتيمتر والإنش؟",
     "faq.a4": "لا. تسمية الوحدة هي للعرض فقط — تُرفق بجانب الأرقام التي تراها، لكن لا يحدث أي تحويل فعلي للوحدات. أدخل نصف القطر أو القطر أو المحيط أو المساحة بأي وحدة تعمل بها (سنتيمتر أو إنش أو متر أو غيرها)، وستُعرض النتائج بنفس تلك الوحدة. إذا احتجت إلى التحويل بين الوحدات أولًا، فاستخدم أداة تحويل طول مخصصة قبل إدخال الرقم هنا.",
     "faq.q5": "هل تُرسل بياناتي إلى خادم عند استخدام حاسبة الدائرة هذه؟",
-    "faq.a5": "لا. تتم كل عملية حساب محليًا داخل متصفحك باستخدام JavaScript — الأرقام التي تدخلها لا تُرفع أو تُنقل إلى أي مكان مطلقًا. الشيء الوحيد الذي يُحفظ هو آخر إدخال لك وتسمية الوحدة وتفضيل عدد الخانات العشرية، وتُخزَّن في localStorage الخاص بمتصفحك لتكون موجودة في المرة التالية التي تفتح فيها الصفحة على الجهاز نفسه."
+    "faq.a5": "لا. تتم كل عملية حساب محليًا داخل متصفحك باستخدام JavaScript — الأرقام التي تدخلها لا تُرفع أو تُنقل إلى أي مكان مطلقًا. الشيء الوحيد الذي يُحفظ هو آخر إدخال لك وتسمية الوحدة وتفضيل عدد الخانات العشرية، وتُخزَّن في localStorage الخاص بمتصفحك لتكون موجودة في المرة التالية التي تفتح فيها الصفحة على الجهاز نفسه.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
 
   fr: {
@@ -336,7 +361,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Ce calculateur convertit-il entre des unités comme les centimètres et les pouces ?",
     "faq.a4": "Non. L'étiquette d'unité est purement indicative — elle est simplement accolée aux nombres affichés, mais aucune conversion d'unité n'a lieu. Entrez votre rayon, diamètre, circonférence ou aire dans l'unité que vous utilisez (centimètres, pouces, mètres ou autre), et les résultats reviennent dans cette même unité. Si vous devez d'abord convertir entre unités, utilisez un convertisseur de longueur dédié avant de saisir le nombre ici.",
     "faq.q5": "Mes données sont-elles envoyées à un serveur lorsque j'utilise ce calculateur de cercle ?",
-    "faq.a5": "Non. Chaque calcul s'exécute localement dans votre navigateur en JavaScript — les nombres que vous saisissez ne sont jamais téléversés ni transmis où que ce soit. La seule chose enregistrée est votre dernière saisie, l'étiquette d'unité et votre préférence de décimales, stockées dans le localStorage de votre navigateur afin d'être retrouvées la prochaine fois que vous ouvrez la page sur le même appareil."
+    "faq.a5": "Non. Chaque calcul s'exécute localement dans votre navigateur en JavaScript — les nombres que vous saisissez ne sont jamais téléversés ni transmis où que ce soit. La seule chose enregistrée est votre dernière saisie, l'étiquette d'unité et votre préférence de décimales, stockées dans le localStorage de votre navigateur afin d'être retrouvées la prochaine fois que vous ouvrez la page sur le même appareil.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
 
   bn: {
@@ -390,7 +420,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এই ক্যালকুলেটর কি সেন্টিমিটার ও ইঞ্চির মতো এককের মধ্যে রূপান্তর করে?",
     "faq.a4": "না। একক লেবেলটি শুধু দেখানোর জন্য — এটি আপনার দেখা সংখ্যার পাশে যুক্ত হয়, কিন্তু কোনো একক রূপান্তর ঘটে না। আপনি যে এককে কাজ করছেন (সেন্টিমিটার, ইঞ্চি, মিটার বা অন্য কিছু) সেই এককেই ব্যাসার্ধ, ব্যাস, পরিধি বা ক্ষেত্রফল লিখুন, ফলাফলও একই এককে ফিরে আসবে। আগে একক রূপান্তর করতে হলে, এখানে সংখ্যা লেখার আগে একটি আলাদা দৈর্ঘ্য রূপান্তরকারী ব্যবহার করুন।",
     "faq.q5": "এই সার্কেল ক্যালকুলেটর ব্যবহার করার সময় আমার ডেটা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। প্রতিটি হিসাব আপনার ব্রাউজারেই JavaScript দিয়ে স্থানীয়ভাবে হয় — আপনার লেখা সংখ্যাগুলো কখনো আপলোড বা কোথাও প্রেরণ করা হয় না। শুধু আপনার শেষ ইনপুট, একক লেবেল এবং দশমিক-ঘরের পছন্দ সংরক্ষিত হয়, যা আপনার ব্রাউজারের localStorage-এ থাকে যাতে একই ডিভাইসে পরের বার পেজ খুললে সেগুলো থেকে যায়।"
+    "faq.a5": "না। প্রতিটি হিসাব আপনার ব্রাউজারেই JavaScript দিয়ে স্থানীয়ভাবে হয় — আপনার লেখা সংখ্যাগুলো কখনো আপলোড বা কোথাও প্রেরণ করা হয় না। শুধু আপনার শেষ ইনপুট, একক লেবেল এবং দশমিক-ঘরের পছন্দ সংরক্ষিত হয়, যা আপনার ব্রাউজারের localStorage-এ থাকে যাতে একই ডিভাইসে পরের বার পেজ খুললে সেগুলো থেকে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
 
   pt: {
@@ -444,7 +479,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Esta calculadora converte entre unidades como centímetros e polegadas?",
     "faq.a4": "Não. O rótulo de unidade é apenas para exibição — ele é anexado aos números que você vê, mas nenhuma conversão de unidade acontece. Informe seu raio, diâmetro, circunferência ou área na unidade que você já está usando (centímetros, polegadas, metros ou qualquer outra), e os resultados voltam nessa mesma unidade. Se precisar converter entre unidades primeiro, use um conversor de comprimento dedicado antes de digitar o número aqui.",
     "faq.q5": "Meus dados são enviados a um servidor ao usar esta calculadora de círculo?",
-    "faq.a5": "Não. Todo cálculo roda localmente no seu navegador usando JavaScript — os números que você digita nunca são enviados ou transmitidos a lugar nenhum. A única coisa salva é sua última entrada, o rótulo de unidade e sua preferência de casas decimais, armazenados no localStorage do seu navegador para que estejam lá na próxima vez que você abrir a página no mesmo dispositivo."
+    "faq.a5": "Não. Todo cálculo roda localmente no seu navegador usando JavaScript — os números que você digita nunca são enviados ou transmitidos a lugar nenhum. A única coisa salva é sua última entrada, o rótulo de unidade e sua preferência de casas decimais, armazenados no localStorage do seu navegador para que estejam lá na próxima vez que você abrir a página no mesmo dispositivo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
 
   ru: {
@@ -498,7 +538,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Конвертирует ли этот калькулятор между единицами измерения, например сантиметрами и дюймами?",
     "faq.a4": "Нет. Метка единицы измерения используется только для отображения — она просто добавляется к числам, которые вы видите, но никакой конвертации не происходит. Вводите радиус, диаметр, длину окружности или площадь в той единице, с которой уже работаете (сантиметры, дюймы, метры или любая другая), и результаты будут показаны в той же единице. Если вам сначала нужно перевести значение в другую единицу, воспользуйтесь отдельным конвертером длины, прежде чем вводить число сюда.",
     "faq.q5": "Отправляются ли мои данные на сервер при использовании этого калькулятора круга?",
-    "faq.a5": "Нет. Все вычисления выполняются локально в вашем браузере на JavaScript — введённые вами числа никогда не загружаются и никуда не передаются. Сохраняется только последний введённый вами результат, метка единицы измерения и выбранное количество знаков после запятой — они хранятся в localStorage вашего браузера, чтобы оставаться на месте при следующем открытии страницы на том же устройстве."
+    "faq.a5": "Нет. Все вычисления выполняются локально в вашем браузере на JavaScript — введённые вами числа никогда не загружаются и никуда не передаются. Сохраняется только последний введённый вами результат, метка единицы измерения и выбранное количество знаков после запятой — они хранятся в localStorage вашего браузера, чтобы оставаться на месте при следующем открытии страницы на том же устройстве.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
 
   ur: {
@@ -552,7 +597,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ کیلکولیٹر سینٹی میٹر اور انچ جیسی یونٹس کے درمیان تبدیلی کرتا ہے؟",
     "faq.a4": "نہیں۔ یونٹ لیبل صرف دکھانے کے لیے ہے — یہ آپ کو نظر آنے والے نمبروں کے ساتھ جُڑ جاتا ہے، لیکن کوئی یونٹ تبدیلی نہیں ہوتی۔ اپنا رداس، قطر، محیط یا رقبہ جس یونٹ میں کام کر رہے ہیں (سینٹی میٹر، انچ، میٹر یا کچھ اور) اسی میں درج کریں، نتائج بھی اسی یونٹ میں واپس آئیں گے۔ اگر پہلے یونٹس کے درمیان تبدیلی کرنی ہو تو یہاں نمبر درج کرنے سے پہلے ایک علیحدہ لمبائی کنورٹر استعمال کریں۔",
     "faq.q5": "اس سرکل کیلکولیٹر کے استعمال کے دوران کیا میرا ڈیٹا سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر حساب آپ کے براؤزر میں ہی JavaScript کے ذریعے مقامی طور پر ہوتا ہے — آپ کے درج کردہ نمبر کبھی اپ لوڈ یا کہیں بھی منتقل نہیں کیے جاتے۔ صرف آپ کا آخری اندراج، یونٹ لیبل اور اعشاریہ کی ترجیح محفوظ ہوتی ہے، جو آپ کے براؤزر کے localStorage میں رہتی ہے تاکہ اگلی بار اسی ڈیوائس پر پیج کھولنے پر موجود رہیں۔"
+    "faq.a5": "نہیں۔ ہر حساب آپ کے براؤزر میں ہی JavaScript کے ذریعے مقامی طور پر ہوتا ہے — آپ کے درج کردہ نمبر کبھی اپ لوڈ یا کہیں بھی منتقل نہیں کیے جاتے۔ صرف آپ کا آخری اندراج، یونٹ لیبل اور اعشاریہ کی ترجیح محفوظ ہوتی ہے، جو آپ کے براؤزر کے localStorage میں رہتی ہے تاکہ اگلی بار اسی ڈیوائس پر پیج کھولنے پر موجود رہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
 
   id: {
@@ -606,7 +656,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah kalkulator ini mengonversi antar satuan seperti sentimeter dan inci?",
     "faq.a4": "Tidak. Label satuan hanya untuk tampilan — label ini hanya ditempelkan pada angka yang Anda lihat, tanpa ada konversi satuan yang terjadi. Masukkan jari-jari, diameter, keliling, atau luas dalam satuan apa pun yang sedang Anda gunakan (sentimeter, inci, meter, atau lainnya), dan hasilnya akan kembali dalam satuan yang sama. Jika Anda perlu mengonversi satuan terlebih dahulu, gunakan konverter panjang khusus sebelum memasukkan angkanya di sini.",
     "faq.q5": "Apakah data saya dikirim ke server saat menggunakan kalkulator lingkaran ini?",
-    "faq.a5": "Tidak. Semua perhitungan berjalan secara lokal di browser Anda menggunakan JavaScript — angka yang Anda masukkan tidak pernah diunggah atau dikirim ke mana pun. Satu-satunya yang disimpan adalah input terakhir Anda, label satuan, dan preferensi jumlah desimal, yang disimpan di localStorage browser Anda agar tetap ada saat Anda membuka halaman ini lagi di perangkat yang sama."
+    "faq.a5": "Tidak. Semua perhitungan berjalan secara lokal di browser Anda menggunakan JavaScript — angka yang Anda masukkan tidak pernah diunggah atau dikirim ke mana pun. Satu-satunya yang disimpan adalah input terakhir Anda, label satuan, dan preferensi jumlah desimal, yang disimpan di localStorage browser Anda agar tetap ada saat Anda membuka halaman ini lagi di perangkat yang sama.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
 
   de: {
@@ -660,7 +715,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Rechnet dieser Rechner zwischen Einheiten wie Zentimetern und Zoll um?",
     "faq.a4": "Nein. Die Einheitenbezeichnung dient nur der Anzeige — sie wird lediglich an die angezeigten Zahlen angehängt, aber es findet keine tatsächliche Einheitenumrechnung statt. Geben Sie Ihren Radius, Durchmesser, Umfang oder Ihre Fläche in der Einheit ein, mit der Sie arbeiten (Zentimeter, Zoll, Meter oder eine andere), und die Ergebnisse kommen in derselben Einheit zurück. Wenn Sie zuerst zwischen Einheiten umrechnen müssen, verwenden Sie einen eigenen Längenrechner, bevor Sie die Zahl hier eingeben.",
     "faq.q5": "Werden meine Daten an einen Server gesendet, wenn ich diesen Kreisrechner benutze?",
-    "faq.a5": "Nein. Jede Berechnung läuft lokal in Ihrem Browser mit JavaScript ab — die von Ihnen eingegebenen Zahlen werden nie hochgeladen oder irgendwohin übertragen. Gespeichert wird nur Ihre letzte Eingabe, die Einheitenbezeichnung und Ihre bevorzugte Anzahl an Nachkommastellen, im localStorage Ihres Browsers, damit sie beim nächsten Öffnen der Seite auf demselben Gerät wieder da sind."
+    "faq.a5": "Nein. Jede Berechnung läuft lokal in Ihrem Browser mit JavaScript ab — die von Ihnen eingegebenen Zahlen werden nie hochgeladen oder irgendwohin übertragen. Gespeichert wird nur Ihre letzte Eingabe, die Einheitenbezeichnung und Ihre bevorzugte Anzahl an Nachkommastellen, im localStorage Ihres Browsers, damit sie beim nächsten Öffnen der Seite auf demselben Gerät wieder da sind.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
 
   ja: {
@@ -714,7 +774,12 @@ window.I18N_LOCALES = {
     "faq.q4": "この計算機はセンチメートルとインチのような単位間の換算をしてくれますか?",
     "faq.a4": "いいえ。単位ラベルは表示のみのためのもので、見えている数値に付け加えられるだけで、実際の単位換算は行われません。半径・直径・円周・面積は、あなたが使っている単位(センチメートル、インチ、メートルなど)のまま入力してください。結果も同じ単位で返されます。先に単位を変換したい場合は、専用の長さ変換ツールで変換してから、その数値をここに入力してください。",
     "faq.q5": "この円計算機を使うとき、データはサーバーに送信されますか?",
-    "faq.a5": "いいえ。すべての計算はJavaScriptによってブラウザ内でローカルに行われ、入力した数値がアップロードされたり、どこかに送信されたりすることはありません。保存されるのは、最後に入力した値・単位ラベル・小数点以下の桁数の設定のみで、ブラウザのlocalStorageに保存され、同じ端末で次回ページを開いたときに復元されます。"
+    "faq.a5": "いいえ。すべての計算はJavaScriptによってブラウザ内でローカルに行われ、入力した数値がアップロードされたり、どこかに送信されたりすることはありません。保存されるのは、最後に入力した値・単位ラベル・小数点以下の桁数の設定のみで、ブラウザのlocalStorageに保存され、同じ端末で次回ページを開いたときに復元されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
 
   ko: {
@@ -768,6 +833,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 계산기는 센티미터와 인치 같은 단위 간 변환도 해주나요?",
     "faq.a4": "아니요. 단위 라벨은 표시 전용입니다 — 화면에 보이는 숫자 옆에 붙을 뿐, 실제 단위 변환은 이루어지지 않습니다. 현재 사용 중인 단위(센티미터, 인치, 미터 등) 그대로 반지름, 지름, 둘레, 넓이를 입력하면 결과도 같은 단위로 표시됩니다. 먼저 단위를 변환해야 한다면, 별도의 길이 변환 도구를 사용한 뒤 그 숫자를 여기에 입력하세요.",
     "faq.q5": "이 원 계산기를 사용할 때 제 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 모든 계산은 자바스크립트로 브라우저 안에서만 처리되며, 입력한 숫자가 업로드되거나 다른 곳으로 전송되는 일은 없습니다. 저장되는 것은 마지막으로 입력한 값, 단위 라벨, 소수점 자리수 설정뿐이며, 같은 기기에서 다음에 페이지를 열었을 때 남아있도록 브라우저의 localStorage에 저장됩니다."
+    "faq.a5": "아니요. 모든 계산은 자바스크립트로 브라우저 안에서만 처리되며, 입력한 숫자가 업로드되거나 다른 곳으로 전송되는 일은 없습니다. 저장되는 것은 마지막으로 입력한 값, 단위 라벨, 소수점 자리수 설정뿐이며, 같은 기기에서 다음에 페이지를 열었을 때 남아있도록 브라우저의 localStorage에 저장됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

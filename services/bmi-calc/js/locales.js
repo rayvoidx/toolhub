@@ -90,7 +90,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Is my height and weight sent to a server?",
     "faq.a5": "No. This body mass index calculator runs every calculation inside your browser. Your inputs are never sent to an external server; they are stored only in the browser's localStorage for convenience on your next visit (height and weight, unit system, interpretation standard). For the same reason the values are not put in the URL — so opening a link never leaves your numbers in a server access log. You can clear the stored values anytime from your browser settings.",
     "faq.q6": "How is a BMI calculator different from a body-fat calculator?",
-    "faq.a6": "A BMI (body mass index) calculator estimates weight status quickly from height and weight only. A body-fat calculator measures the actual percentage of body fat and needs separate equipment such as a DEXA scan or bioelectrical impedance (BIA). BMI is a useful fast screen; body-fat percentage is for more precise body-composition analysis."
+    "faq.a6": "A BMI (body mass index) calculator estimates weight status quickly from height and weight only. A body-fat calculator measures the actual percentage of body fat and needs separate equipment such as a DEXA scan or bioelectrical impedance (BIA). BMI is a useful fast screen; body-fat percentage is for more precise body-composition analysis.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -168,7 +173,12 @@ window.I18N_LOCALES = {
     "faq.q5": "身高体重的输入值会发送到服务器吗？",
     "faq.a5": "不会。本体质指数计算器的所有计算都在浏览器内完成。输入值不会发送到外部服务器，仅为下次访问方便而保存在浏览器的 localStorage 中（身高体重、单位制、解读标准）。出于同样原因，输入值也不会带入网址（URL）——这样重新打开链接时数值不会留在服务器访问记录里。保存的值可随时在浏览器设置中删除。",
     "faq.q6": "BMI 计算器和体脂率计算器有什么区别？",
-    "faq.a6": "BMI（体质指数）计算器仅凭身高和体重快速估算肥胖度。体脂率计算器测量实际体脂比例，需要 DEXA 扫描、生物电阻抗（BIA）等专门测量设备。BMI 适合作为快速筛查指标，体脂率则用于更精细的体成分分析。"
+    "faq.a6": "BMI（体质指数）计算器仅凭身高和体重快速估算肥胖度。体脂率计算器测量实际体脂比例，需要 DEXA 扫描、生物电阻抗（BIA）等专门测量设备。BMI 适合作为快速筛查指标，体脂率则用于更精细的体成分分析。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -246,7 +256,12 @@ window.I18N_LOCALES = {
     "faq.q5": "क्या कद और वज़न के मान सर्वर पर भेजे जाते हैं?",
     "faq.a5": "नहीं। यह बॉडी मास इंडेक्स कैलकुलेटर हर गणना आपके ब्राउज़र के भीतर करता है। इनपुट किसी बाहरी सर्वर पर नहीं भेजे जाते; केवल अगली बार की सुविधा हेतु ब्राउज़र के localStorage में सहेजे जाते हैं (कद-वज़न, इकाई प्रणाली, व्याख्या मानक)। इसी वजह से मान URL में नहीं डाले जाते — ताकि लिंक खोलने पर आपकी संख्याएँ सर्वर एक्सेस लॉग में न रहें। सहेजे मान ब्राउज़र सेटिंग्स से कभी भी हटाए जा सकते हैं।",
     "faq.q6": "BMI कैलकुलेटर और बॉडी-फ़ैट कैलकुलेटर में क्या अंतर है?",
-    "faq.a6": "BMI (बॉडी मास इंडेक्स) कैलकुलेटर केवल कद और वज़न से वज़न-स्थिति का तेज़ अनुमान देता है। बॉडी-फ़ैट कैलकुलेटर असली वसा प्रतिशत मापता है और इसके लिए DEXA स्कैन या बायोइलेक्ट्रिकल इम्पीडेंस (BIA) जैसे अलग उपकरण चाहिए। BMI तेज़ स्क्रीनिंग के लिए उपयोगी है; बॉडी-फ़ैट प्रतिशत अधिक सटीक बॉडी-कम्पोज़िशन विश्लेषण के लिए।"
+    "faq.a6": "BMI (बॉडी मास इंडेक्स) कैलकुलेटर केवल कद और वज़न से वज़न-स्थिति का तेज़ अनुमान देता है। बॉडी-फ़ैट कैलकुलेटर असली वसा प्रतिशत मापता है और इसके लिए DEXA स्कैन या बायोइलेक्ट्रिकल इम्पीडेंस (BIA) जैसे अलग उपकरण चाहिए। BMI तेज़ स्क्रीनिंग के लिए उपयोगी है; बॉडी-फ़ैट प्रतिशत अधिक सटीक बॉडी-कम्पोज़िशन विश्लेषण के लिए।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -324,7 +339,12 @@ window.I18N_LOCALES = {
     "faq.q5": "¿Se envían mi altura y peso a un servidor?",
     "faq.a5": "No. Esta calculadora de índice de masa corporal realiza todos los cálculos dentro de tu navegador. Tus datos nunca se envían a un servidor externo; solo se guardan en el localStorage del navegador para tu comodidad en la próxima visita (altura y peso, sistema de unidades, criterio de interpretación). Por lo mismo, los valores no se ponen en la URL, así abrir un enlace nunca deja tus cifras en un registro de acceso del servidor. Puedes borrar los valores guardados cuando quieras desde la configuración del navegador.",
     "faq.q6": "¿En qué se diferencia una calculadora de IMC de una de grasa corporal?",
-    "faq.a6": "Una calculadora de IMC (índice de masa corporal) estima el estado del peso rápidamente solo con la altura y el peso. Una calculadora de grasa corporal mide el porcentaje real de grasa y necesita equipos aparte, como un escáner DEXA o la impedancia bioeléctrica (BIA). El IMC es un cribado rápido útil; el porcentaje de grasa sirve para un análisis más preciso de la composición corporal."
+    "faq.a6": "Una calculadora de IMC (índice de masa corporal) estima el estado del peso rápidamente solo con la altura y el peso. Una calculadora de grasa corporal mide el porcentaje real de grasa y necesita equipos aparte, como un escáner DEXA o la impedancia bioeléctrica (BIA). El IMC es un cribado rápido útil; el porcentaje de grasa sirve para un análisis más preciso de la composición corporal.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -402,7 +422,12 @@ window.I18N_LOCALES = {
     "faq.q5": "هل يُرسَل طولي ووزني إلى خادم؟",
     "faq.a5": "لا. تُجري حاسبة مؤشر كتلة الجسم هذه كل الحسابات داخل متصفحك. لا تُرسَل مدخلاتك إلى أي خادم خارجي؛ بل تُحفَظ فقط في localStorage بالمتصفح لتسهيل زيارتك القادمة (الطول والوزن، نظام الوحدات، معيار التفسير). وللسبب نفسه لا تُوضع القيم في الرابط (URL) — كي لا تبقى أرقامك في سجل وصول الخادم عند فتح رابط. ويمكنك حذف القيم المحفوظة في أي وقت من إعدادات المتصفح.",
     "faq.q6": "ما الفرق بين حاسبة مؤشر كتلة الجسم وحاسبة نسبة الدهون؟",
-    "faq.a6": "تقدّر حاسبة مؤشر كتلة الجسم (BMI) حالة الوزن بسرعة من الطول والوزن فقط. أما حاسبة نسبة الدهون فتقيس النسبة الفعلية للدهون وتحتاج أجهزة منفصلة مثل مسح DEXA أو المعاوقة الكهربائية الحيوية (BIA). مؤشر كتلة الجسم فحص سريع مفيد، ونسبة الدهون لتحليل أدق لتركيب الجسم."
+    "faq.a6": "تقدّر حاسبة مؤشر كتلة الجسم (BMI) حالة الوزن بسرعة من الطول والوزن فقط. أما حاسبة نسبة الدهون فتقيس النسبة الفعلية للدهون وتحتاج أجهزة منفصلة مثل مسح DEXA أو المعاوقة الكهربائية الحيوية (BIA). مؤشر كتلة الجسم فحص سريع مفيد، ونسبة الدهون لتحليل أدق لتركيب الجسم.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -480,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Ma taille et mon poids sont-ils envoyés à un serveur ?",
     "faq.a5": "Non. Ce calculateur d'indice de masse corporelle effectue tous les calculs dans votre navigateur. Vos saisies ne sont jamais envoyées à un serveur externe ; elles sont seulement enregistrées dans le localStorage du navigateur pour votre confort à la prochaine visite (taille et poids, système d'unités, référentiel d'interprétation). Pour la même raison, les valeurs ne sont pas placées dans l'URL — ainsi ouvrir un lien ne laisse jamais vos chiffres dans un journal d'accès serveur. Vous pouvez supprimer les valeurs enregistrées à tout moment dans les réglages du navigateur.",
     "faq.q6": "Quelle différence entre un calculateur d'IMC et un calculateur de masse grasse ?",
-    "faq.a6": "Un calculateur d'IMC (indice de masse corporelle) estime rapidement le statut pondéral à partir de la taille et du poids seuls. Un calculateur de masse grasse mesure le pourcentage réel de graisse et nécessite un équipement dédié comme un scanner DEXA ou l'impédancemétrie (BIA). L'IMC est un dépistage rapide utile ; le pourcentage de graisse sert à une analyse plus fine de la composition corporelle."
+    "faq.a6": "Un calculateur d'IMC (indice de masse corporelle) estime rapidement le statut pondéral à partir de la taille et du poids seuls. Un calculateur de masse grasse mesure le pourcentage réel de graisse et nécessite un équipement dédié comme un scanner DEXA ou l'impédancemétrie (BIA). L'IMC est un dépistage rapide utile ; le pourcentage de graisse sert à une analyse plus fine de la composition corporelle.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -558,7 +588,12 @@ window.I18N_LOCALES = {
     "faq.q5": "উচ্চতা ও ওজনের মান কি সার্ভারে পাঠানো হয়?",
     "faq.a5": "না। এই বডি মাস ইনডেক্স ক্যালকুলেটর সব হিসাব আপনার ব্রাউজারের ভেতরেই করে। ইনপুট কোনো বাইরের সার্ভারে পাঠানো হয় না; পরের বার সুবিধার জন্য কেবল ব্রাউজারের localStorage-এ সংরক্ষিত হয় (উচ্চতা-ওজন, একক পদ্ধতি, ব্যাখ্যা মানদণ্ড)। একই কারণে মানগুলো URL-এ রাখা হয় না — যাতে লিঙ্ক খুললে আপনার সংখ্যা সার্ভার অ্যাক্সেস লগে না থাকে। সংরক্ষিত মান ব্রাউজার সেটিংস থেকে যেকোনো সময় মুছে ফেলা যায়।",
     "faq.q6": "BMI ক্যালকুলেটর ও বডি-ফ্যাট ক্যালকুলেটরের পার্থক্য কী?",
-    "faq.a6": "BMI (বডি মাস ইনডেক্স) ক্যালকুলেটর কেবল উচ্চতা ও ওজন থেকে দ্রুত ওজন-অবস্থা আন্দাজ করে। বডি-ফ্যাট ক্যালকুলেটর প্রকৃত চর্বির শতাংশ মাপে এবং এর জন্য DEXA স্ক্যান বা বায়োইলেকট্রিক্যাল ইম্পিড্যান্স (BIA)-এর মতো আলাদা যন্ত্র লাগে। BMI দ্রুত স্ক্রিনিংয়ে উপযোগী; বডি-ফ্যাট শতাংশ আরও নিখুঁত দেহ-গঠন বিশ্লেষণের জন্য।"
+    "faq.a6": "BMI (বডি মাস ইনডেক্স) ক্যালকুলেটর কেবল উচ্চতা ও ওজন থেকে দ্রুত ওজন-অবস্থা আন্দাজ করে। বডি-ফ্যাট ক্যালকুলেটর প্রকৃত চর্বির শতাংশ মাপে এবং এর জন্য DEXA স্ক্যান বা বায়োইলেকট্রিক্যাল ইম্পিড্যান্স (BIA)-এর মতো আলাদা যন্ত্র লাগে। BMI দ্রুত স্ক্রিনিংয়ে উপযোগী; বডি-ফ্যাট শতাংশ আরও নিখুঁত দেহ-গঠন বিশ্লেষণের জন্য।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -636,7 +671,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Minha altura e peso são enviados a um servidor?",
     "faq.a5": "Não. Esta calculadora de índice de massa corporal faz todos os cálculos dentro do seu navegador. Seus dados nunca são enviados a um servidor externo; ficam salvos apenas no localStorage do navegador, para sua comodidade na próxima visita (altura e peso, sistema de unidades, critério de interpretação). Pelo mesmo motivo, os valores não vão para a URL — assim abrir um link nunca deixa seus números num registro de acesso de servidor. Você pode apagar os valores salvos a qualquer momento nas configurações do navegador.",
     "faq.q6": "Qual a diferença entre uma calculadora de IMC e uma de gordura corporal?",
-    "faq.a6": "Uma calculadora de IMC (índice de massa corporal) estima o status de peso rapidamente só com altura e peso. Uma calculadora de gordura corporal mede a porcentagem real de gordura e precisa de equipamento à parte, como um exame DEXA ou a impedância bioelétrica (BIA). O IMC é uma triagem rápida útil; a porcentagem de gordura serve para uma análise mais precisa da composição corporal."
+    "faq.a6": "Uma calculadora de IMC (índice de massa corporal) estima o status de peso rapidamente só com altura e peso. Uma calculadora de gordura corporal mede a porcentagem real de gordura e precisa de equipamento à parte, como um exame DEXA ou a impedância bioelétrica (BIA). O IMC é uma triagem rápida útil; a porcentagem de gordura serve para uma análise mais precisa da composição corporal.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -714,7 +754,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Отправляются ли мой рост и вес на сервер?",
     "faq.a5": "Нет. Этот калькулятор индекса массы тела выполняет все расчёты в вашем браузере. Введённые данные не отправляются на внешний сервер; они сохраняются только в localStorage браузера для удобства при следующем визите (рост и вес, система единиц, критерий интерпретации). По той же причине значения не помещаются в URL — чтобы открытие ссылки не оставляло ваши числа в журнале доступа сервера. Сохранённые значения можно в любой момент удалить в настройках браузера.",
     "faq.q6": "Чем калькулятор ИМТ отличается от калькулятора процента жира?",
-    "faq.a6": "Калькулятор ИМТ (индекса массы тела) быстро оценивает статус веса только по росту и весу. Калькулятор процента жира измеряет фактическую долю жира и требует отдельного оборудования — DEXA-сканирования или биоимпедансометрии (BIA). ИМТ полезен как быстрый скрининг; процент жира — для более точного анализа состава тела."
+    "faq.a6": "Калькулятор ИМТ (индекса массы тела) быстро оценивает статус веса только по росту и весу. Калькулятор процента жира измеряет фактическую долю жира и требует отдельного оборудования — DEXA-сканирования или биоимпедансометрии (BIA). ИМТ полезен как быстрый скрининг; процент жира — для более точного анализа состава тела.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -792,7 +837,12 @@ window.I18N_LOCALES = {
     "faq.q5": "کیا قد اور وزن کی قدریں سرور کو بھیجی جاتی ہیں؟",
     "faq.a5": "نہیں۔ یہ باڈی ماس انڈیکس کیلکولیٹر ہر شمار آپ کے براؤزر کے اندر کرتا ہے۔ ان پٹ کسی بیرونی سرور کو نہیں بھیجی جاتیں؛ صرف اگلی بار سہولت کے لیے براؤزر کے localStorage میں محفوظ ہوتی ہیں (قد و وزن، اکائی نظام، تشریحی معیار)۔ اسی وجہ سے قدریں URL میں نہیں ڈالی جاتیں — تاکہ لنک کھولنے پر آپ کے اعداد سرور ایکسیس لاگ میں نہ رہیں۔ محفوظ قدریں براؤزر کی سیٹنگز سے کبھی بھی حذف کی جا سکتی ہیں۔",
     "faq.q6": "BMI کیلکولیٹر اور باڈی-فیٹ کیلکولیٹر میں کیا فرق ہے؟",
-    "faq.a6": "BMI (باڈی ماس انڈیکس) کیلکولیٹر صرف قد اور وزن سے وزن کی حالت کا تیز اندازہ دیتا ہے۔ باڈی-فیٹ کیلکولیٹر اصل چربی فیصد ناپتا ہے اور اس کے لیے DEXA اسکین یا بایو الیکٹریکل امپیڈنس (BIA) جیسے الگ آلات درکار ہوتے ہیں۔ BMI تیز اسکریننگ کے لیے مفید ہے؛ باڈی-فیٹ فیصد زیادہ درست جسمی ساخت کے تجزیے کے لیے۔"
+    "faq.a6": "BMI (باڈی ماس انڈیکس) کیلکولیٹر صرف قد اور وزن سے وزن کی حالت کا تیز اندازہ دیتا ہے۔ باڈی-فیٹ کیلکولیٹر اصل چربی فیصد ناپتا ہے اور اس کے لیے DEXA اسکین یا بایو الیکٹریکل امپیڈنس (BIA) جیسے الگ آلات درکار ہوتے ہیں۔ BMI تیز اسکریننگ کے لیے مفید ہے؛ باڈی-فیٹ فیصد زیادہ درست جسمی ساخت کے تجزیے کے لیے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -870,7 +920,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Apakah tinggi dan berat saya dikirim ke server?",
     "faq.a5": "Tidak. Kalkulator indeks massa tubuh ini menjalankan semua perhitungan di dalam peramban Anda. Masukan Anda tidak pernah dikirim ke server eksternal; hanya disimpan di localStorage peramban demi kenyamanan kunjungan berikutnya (tinggi dan berat, sistem satuan, standar interpretasi). Karena alasan yang sama, nilai tidak dimasukkan ke URL — sehingga membuka tautan tidak pernah meninggalkan angka Anda di log akses server. Nilai tersimpan bisa dihapus kapan saja dari pengaturan peramban.",
     "faq.q6": "Apa beda kalkulator BMI dengan kalkulator lemak tubuh?",
-    "faq.a6": "Kalkulator BMI (indeks massa tubuh) memperkirakan status berat dengan cepat hanya dari tinggi dan berat. Kalkulator lemak tubuh mengukur persentase lemak sebenarnya dan butuh alat terpisah seperti pemindaian DEXA atau impedansi bioelektrik (BIA). BMI berguna sebagai penapisan cepat; persentase lemak untuk analisis komposisi tubuh yang lebih presisi."
+    "faq.a6": "Kalkulator BMI (indeks massa tubuh) memperkirakan status berat dengan cepat hanya dari tinggi dan berat. Kalkulator lemak tubuh mengukur persentase lemak sebenarnya dan butuh alat terpisah seperti pemindaian DEXA atau impedansi bioelektrik (BIA). BMI berguna sebagai penapisan cepat; persentase lemak untuk analisis komposisi tubuh yang lebih presisi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -948,7 +1003,12 @@ window.I18N_LOCALES = {
     "faq.q5": "Werden meine Größe und mein Gewicht an einen Server gesendet?",
     "faq.a5": "Nein. Dieser Body-Mass-Index-Rechner führt jede Berechnung in Ihrem Browser aus. Ihre Eingaben werden nie an einen externen Server gesendet; sie werden nur im localStorage des Browsers gespeichert, für Ihren Komfort beim nächsten Besuch (Größe und Gewicht, Einheitensystem, Interpretationsstandard). Aus demselben Grund stehen die Werte nicht in der URL — so hinterlässt das Öffnen eines Links Ihre Zahlen nie in einem Server-Zugriffsprotokoll. Die gespeicherten Werte können Sie jederzeit in den Browsereinstellungen löschen.",
     "faq.q6": "Wie unterscheidet sich ein BMI-Rechner von einem Körperfett-Rechner?",
-    "faq.a6": "Ein BMI-Rechner (Body-Mass-Index) schätzt den Gewichtsstatus schnell allein aus Größe und Gewicht. Ein Körperfett-Rechner misst den tatsächlichen Fettanteil und braucht separate Geräte wie einen DEXA-Scan oder die bioelektrische Impedanz (BIA). Der BMI ist ein nützliches schnelles Screening; der Fettanteil dient der genaueren Analyse der Körperzusammensetzung."
+    "faq.a6": "Ein BMI-Rechner (Body-Mass-Index) schätzt den Gewichtsstatus schnell allein aus Größe und Gewicht. Ein Körperfett-Rechner misst den tatsächlichen Fettanteil und braucht separate Geräte wie einen DEXA-Scan oder die bioelektrische Impedanz (BIA). Der BMI ist ein nützliches schnelles Screening; der Fettanteil dient der genaueren Analyse der Körperzusammensetzung.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1026,7 +1086,12 @@ window.I18N_LOCALES = {
     "faq.q5": "身長・体重の入力値はサーバーへ送信されますか？",
     "faq.a5": "いいえ。このBMI計算機はすべての計算をブラウザ内で行います。入力値は外部サーバーへ送信されず、次回の利便性のためブラウザのlocalStorageにのみ保存されます（身長・体重、単位系、解釈基準）。同じ理由で入力値をURLに載せません — リンクを開いても数値がサーバーのアクセスログに残らないようにするためです。保存された値はブラウザ設定からいつでも削除できます。",
     "faq.q6": "BMI計算機と体脂肪率計算機の違いは？",
-    "faq.a6": "BMI（体格指数）計算機は身長と体重だけで手軽に肥満度を推定します。体脂肪率計算機は実際の体脂肪の割合を測るもので、DEXAスキャンや生体電気インピーダンス（BIA）など別途の測定機器が必要です。BMIは素早いスクリーニング指標として有用で、体脂肪率はより精密な体組成分析に使われます。"
+    "faq.a6": "BMI（体格指数）計算機は身長と体重だけで手軽に肥満度を推定します。体脂肪率計算機は実際の体脂肪の割合を測るもので、DEXAスキャンや生体電気インピーダンス（BIA）など別途の測定機器が必要です。BMIは素早いスクリーニング指標として有用で、体脂肪率はより精密な体組成分析に使われます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1104,6 +1169,11 @@ window.I18N_LOCALES = {
     "faq.q5": "키와 몸무게 입력값이 서버로 전송되나요?",
     "faq.a5": "아니요. 이 체질량지수 계산기는 모든 계산을 브라우저 안에서 수행합니다. 입력값은 외부 서버로 전송되지 않으며, 다음 방문 시 편의를 위해 브라우저 localStorage에만 저장됩니다(키·몸무게, 단위계, 해석 기준). 같은 이유로 입력값을 주소창(URL)에 싣지 않습니다 — 링크를 새로 열 때 수치가 서버 접속 기록에 남지 않게 하기 위해서입니다. 저장된 값은 언제든지 브라우저 설정에서 삭제할 수 있습니다.",
     "faq.q6": "BMI 계산기와 체지방률 계산기의 차이는?",
-    "faq.a6": "BMI(체질량지수) 계산기는 키와 몸무게만으로 간편하게 비만도를 추정합니다. 체지방률 계산기는 실제 체지방 비율을 측정하는 것으로 DEXA 스캔, 생체전기저항(BIA) 등 별도 측정 장비가 필요합니다. BMI는 빠른 선별 지표로 유용하고, 체지방률은 더 정밀한 체성분 분석에 쓰입니다."
+    "faq.a6": "BMI(체질량지수) 계산기는 키와 몸무게만으로 간편하게 비만도를 추정합니다. 체지방률 계산기는 실제 체지방 비율을 측정하는 것으로 DEXA 스캔, 생체전기저항(BIA) 등 별도 측정 장비가 필요합니다. BMI는 빠른 선별 지표로 유용하고, 체지방률은 더 정밀한 체성분 분석에 쓰입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

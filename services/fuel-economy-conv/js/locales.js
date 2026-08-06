@@ -60,7 +60,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I convert km/L to MPG?",
     "faq.a4": "Multiply km/L by 2.352 for MPG (US), or by 2.825 for MPG (UK) — these factors come from converting kilometers to miles and liters to the respective gallon size. For example, 12.75 km/L × 2.352 ≈ 30.0 MPG (US), and the same 12.75 km/L × 2.825 ≈ 36.0 MPG (UK). Type into the km/L field and every other unit, including L/100km, updates at the same time.",
     "faq.q5": "Is my fuel economy data sent to a server?",
-    "faq.a5": "No. This fuel economy converter runs entirely in your browser — every number you type stays on your device and is never uploaded anywhere. The only thing saved is your last value, kept in your browser's local storage so it's there next time you open the page; clearing your browser data removes it."
+    "faq.a5": "No. This fuel economy converter runs entirely in your browser — every number you type stays on your device and is never uploaded anywhere. The only thing saved is your last value, kept in your browser's local storage so it's there next time you open the page; clearing your browser data removes it.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -105,7 +110,12 @@ window.I18N_LOCALES = {
     "faq.q4": "km/L 怎么换算成 MPG？",
     "faq.a4": "km/L 乘以 2.352 得到 MPG（美制），乘以 2.825 得到 MPG（英制）——这两个系数来自公里换算英里、升换算成对应的加仑大小。例如，12.75 km/L × 2.352 ≈ 30.0 MPG（美制），同样 12.75 km/L × 2.825 ≈ 36.0 MPG（英制）。在 km/L 栏输入数字，其余单位（包括 L/100km）会同时更新。",
     "faq.q5": "我的油耗数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个燃油经济性换算器完全在你的浏览器里运行——你输入的每个数字都只留在你的设备上，不会上传到任何地方。唯一保存的是你上次输入的数值，存放在浏览器的本地存储里，方便下次打开时自动恢复；清除浏览器数据即可删除它。"
+    "faq.a5": "不会。这个燃油经济性换算器完全在你的浏览器里运行——你输入的每个数字都只留在你的设备上，不会上传到任何地方。唯一保存的是你上次输入的数值，存放在浏览器的本地存储里，方便下次打开时自动恢复；清除浏览器数据即可删除它。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -150,7 +160,12 @@ window.I18N_LOCALES = {
     "faq.q4": "km/L को MPG में कैसे बदलें?",
     "faq.a4": "km/L को 2.352 से गुणा करने पर MPG (US) मिलता है, और 2.825 से गुणा करने पर MPG (UK) — ये गुणांक किलोमीटर को मील में और लीटर को संबंधित गैलन के आकार में बदलकर निकाले गए हैं। उदाहरण के लिए, 12.75 km/L × 2.352 ≈ 30.0 MPG (US), और वही 12.75 km/L × 2.825 ≈ 36.0 MPG (UK)। km/L बॉक्स में टाइप करते ही बाकी सभी यूनिट, L/100km सहित, एक साथ अपडेट हो जाती हैं।",
     "faq.q5": "क्या मेरा माइलेज डेटा किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह फ्यूल इकॉनमी कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप किया हर नंबर आपके डिवाइस पर ही रहता है, कहीं अपलोड नहीं होता। सिर्फ़ आपका आख़िरी मान सेव होता है, वह भी आपके ब्राउज़र के लोकल स्टोरेज में, ताकि अगली बार पेज खोलने पर वापस मिल जाए; ब्राउज़र डेटा साफ़ करने पर यह हट जाता है।"
+    "faq.a5": "नहीं। यह फ्यूल इकॉनमी कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप किया हर नंबर आपके डिवाइस पर ही रहता है, कहीं अपलोड नहीं होता। सिर्फ़ आपका आख़िरी मान सेव होता है, वह भी आपके ब्राउज़र के लोकल स्टोरेज में, ताकि अगली बार पेज खोलने पर वापस मिल जाए; ब्राउज़र डेटा साफ़ करने पर यह हट जाता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -195,7 +210,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo convierto km/L a MPG?",
     "faq.a4": "Multiplica km/L por 2.352 para obtener MPG (EE. UU.), o por 2.825 para MPG (Reino Unido) — estos factores vienen de convertir kilómetros a millas y litros al tamaño de galón correspondiente. Por ejemplo, 12.75 km/L × 2.352 ≈ 30.0 MPG (EE. UU.), y esos mismos 12.75 km/L × 2.825 ≈ 36.0 MPG (Reino Unido). Escribe en el campo km/L y todas las demás unidades, incluida L/100km, se actualizan a la vez.",
     "faq.q5": "¿Se envían mis datos de consumo a un servidor?",
-    "faq.a5": "No. Este conversor de consumo de combustible funciona completamente en tu navegador — cada número que escribes se queda en tu dispositivo y nunca se sube a ningún sitio. Lo único que se guarda es tu último valor, en el almacenamiento local de tu navegador, para que esté ahí la próxima vez que abras la página; si borras los datos del navegador, desaparece."
+    "faq.a5": "No. Este conversor de consumo de combustible funciona completamente en tu navegador — cada número que escribes se queda en tu dispositivo y nunca se sube a ningún sitio. Lo único que se guarda es tu último valor, en el almacenamiento local de tu navegador, para que esté ahí la próxima vez que abras la página; si borras los datos del navegador, desaparece.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -240,7 +260,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أحوّل km/L إلى MPG؟",
     "faq.a4": "اضرب km/L في 2.352 للحصول على MPG (أمريكي)، أو في 2.825 للحصول على MPG (بريطاني) — هذان المعاملان ناتجان عن تحويل الكيلومترات إلى أميال واللترات إلى حجم الغالون المقابل. مثلًا، 12.75 km/L × 2.352 ≈ 30.0 MPG (أمريكي)، ونفس الـ12.75 km/L × 2.825 ≈ 36.0 MPG (بريطاني). اكتب في حقل km/L وستتحدّث بقية الوحدات، بما فيها L/100km، في الوقت نفسه.",
     "faq.q5": "هل تُرسَل بيانات كفاءة الوقود إلى خادم؟",
-    "faq.a5": "لا. يعمل محوّل كفاءة الوقود هذا بالكامل داخل متصفحك — كل رقم تكتبه يبقى على جهازك ولا يُرفَع إلى أي مكان أبدًا. الشيء الوحيد المحفوظ هو آخر قيمة أدخلتها، وتُخزَّن في التخزين المحلي لمتصفحك لتكون جاهزة في المرة القادمة؛ ومسح بيانات المتصفح يحذفها."
+    "faq.a5": "لا. يعمل محوّل كفاءة الوقود هذا بالكامل داخل متصفحك — كل رقم تكتبه يبقى على جهازك ولا يُرفَع إلى أي مكان أبدًا. الشيء الوحيد المحفوظ هو آخر قيمة أدخلتها، وتُخزَّن في التخزين المحلي لمتصفحك لتكون جاهزة في المرة القادمة؛ ومسح بيانات المتصفح يحذفها.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -285,7 +310,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment convertir km/L en MPG ?",
     "faq.a4": "Multipliez le km/L par 2,352 pour obtenir le MPG (US), ou par 2,825 pour le MPG (UK) — ces facteurs viennent de la conversion des kilomètres en miles et des litres vers la taille de gallon correspondante. Par exemple, 12,75 km/L × 2,352 ≈ 30,0 MPG (US), et ces mêmes 12,75 km/L × 2,825 ≈ 36,0 MPG (UK). Tapez dans le champ km/L et toutes les autres unités, y compris le L/100km, se mettent à jour en même temps.",
     "faq.q5": "Mes données de consommation sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur de consommation de carburant fonctionne entièrement dans votre navigateur — chaque chiffre que vous tapez reste sur votre appareil et n'est jamais envoyé nulle part. La seule chose enregistrée est votre dernière valeur, conservée dans le stockage local de votre navigateur pour être là à votre prochaine visite ; effacer les données du navigateur la supprime."
+    "faq.a5": "Non. Ce convertisseur de consommation de carburant fonctionne entièrement dans votre navigateur — chaque chiffre que vous tapez reste sur votre appareil et n'est jamais envoyé nulle part. La seule chose enregistrée est votre dernière valeur, conservée dans le stockage local de votre navigateur pour être là à votre prochaine visite ; effacer les données du navigateur la supprime.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -330,7 +360,12 @@ window.I18N_LOCALES = {
     "faq.q4": "km/L থেকে MPG-এ কীভাবে রূপান্তর করব?",
     "faq.a4": "km/L-কে ২.৩৫২ দিয়ে গুণ করলে MPG (US) পাওয়া যায়, আর ২.৮২৫ দিয়ে গুণ করলে MPG (UK) — এই গুণকগুলো কিলোমিটারকে মাইলে এবং লিটারকে সংশ্লিষ্ট গ্যালনের আকারে রূপান্তর করে পাওয়া। উদাহরণস্বরূপ, ১২.৭৫ km/L × ২.৩৫২ ≈ ৩০.০ MPG (US), এবং একই ১২.৭৫ km/L × ২.৮২৫ ≈ ৩৬.০ MPG (UK)। km/L বক্সে টাইপ করলে বাকি সব ইউনিট, L/100km সহ, একসাথে আপডেট হয়।",
     "faq.q5": "আমার মাইলেজ ডেটা কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই ফুয়েল ইকোনমি কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যাই টাইপ করুন না কেন, তা আপনার ডিভাইসেই থাকে, কোথাও আপলোড হয় না। শুধু আপনার শেষ মানটি সংরক্ষিত হয়, তা-ও আপনার ব্রাউজারের লোকাল স্টোরেজে, যাতে পরের বার পেজ খুললে ফিরে পান; ব্রাউজার ডেটা মুছে ফেললে এটিও মুছে যায়।"
+    "faq.a5": "না। এই ফুয়েল ইকোনমি কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যাই টাইপ করুন না কেন, তা আপনার ডিভাইসেই থাকে, কোথাও আপলোড হয় না। শুধু আপনার শেষ মানটি সংরক্ষিত হয়, তা-ও আপনার ব্রাউজারের লোকাল স্টোরেজে, যাতে পরের বার পেজ খুললে ফিরে পান; ব্রাউজার ডেটা মুছে ফেললে এটিও মুছে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -375,7 +410,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como converto km/L para MPG?",
     "faq.a4": "Multiplique km/L por 2,352 para obter MPG (EUA), ou por 2,825 para MPG (Reino Unido) — esses fatores vêm da conversão de quilômetros para milhas e litros para o tamanho de galão correspondente. Por exemplo, 12,75 km/L × 2,352 ≈ 30,0 MPG (EUA), e os mesmos 12,75 km/L × 2,825 ≈ 36,0 MPG (Reino Unido). Digite no campo km/L e todas as demais unidades, incluindo L/100km, se atualizam ao mesmo tempo.",
     "faq.q5": "Meus dados de consumo são enviados a um servidor?",
-    "faq.a5": "Não. Este conversor de consumo de combustível roda inteiramente no seu navegador — cada número que você digita fica no seu dispositivo e nunca é enviado a lugar nenhum. A única coisa salva é seu último valor, guardado no armazenamento local do seu navegador para estar lá na próxima vez que você abrir a página; limpar os dados do navegador o remove."
+    "faq.a5": "Não. Este conversor de consumo de combustível roda inteiramente no seu navegador — cada número que você digita fica no seu dispositivo e nunca é enviado a lugar nenhum. A única coisa salva é seu último valor, guardado no armazenamento local do seu navegador para estar lá na próxima vez que você abrir a página; limpar os dados do navegador o remove.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -420,7 +460,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как перевести км/л в MPG?",
     "faq.a4": "Умножьте км/л на 2,352, чтобы получить MPG (США), или на 2,825 для MPG (Великобритания) — эти коэффициенты получены переводом километров в мили и литров в соответствующий размер галлона. Например, 12,75 км/л × 2,352 ≈ 30,0 MPG (США), а те же 12,75 км/л × 2,825 ≈ 36,0 MPG (Великобритания). Введите число в поле км/л, и все остальные единицы, включая л/100км, обновятся одновременно.",
     "faq.q5": "Отправляются ли мои данные о расходе топлива на сервер?",
-    "faq.a5": "Нет. Этот конвертер расхода топлива работает полностью в вашем браузере — каждое введённое число остаётся на вашем устройстве и никуда не загружается. Сохраняется только последнее введённое значение, в локальном хранилище браузера, чтобы оно было под рукой при следующем открытии страницы; очистка данных браузера удаляет его."
+    "faq.a5": "Нет. Этот конвертер расхода топлива работает полностью в вашем браузере — каждое введённое число остаётся на вашем устройстве и никуда не загружается. Сохраняется только последнее введённое значение, в локальном хранилище браузера, чтобы оно было под рукой при следующем открытии страницы; очистка данных браузера удаляет его.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -465,7 +510,12 @@ window.I18N_LOCALES = {
     "faq.q4": "km/L کو MPG میں کیسے بدلیں؟",
     "faq.a4": "km/L کو 2.352 سے ضرب دیں تو MPG (US) ملتا ہے، اور 2.825 سے ضرب دیں تو MPG (UK) — یہ عوامل کلومیٹر کو میل میں اور لیٹر کو متعلقہ گیلن کے سائز میں بدل کر حاصل کیے گئے ہیں۔ مثال کے طور پر، 12.75 km/L × 2.352 ≈ 30.0 MPG (US)، اور وہی 12.75 km/L × 2.825 ≈ 36.0 MPG (UK)۔ km/L خانے میں لکھتے ہی باقی تمام یونٹس، بشمول L/100km، ایک ساتھ اپڈیٹ ہو جاتی ہیں۔",
     "faq.q5": "کیا میرا مائلیج ڈیٹا کسی سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ فیول اکانومی کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو بھی نمبر لکھتے ہیں وہ آپ کے ڈیوائس پر ہی رہتا ہے، کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کی آخری قدر محفوظ ہوتی ہے، وہ بھی آپ کے براؤزر کے لوکل اسٹوریج میں، تاکہ اگلی بار پیج کھولنے پر واپس مل جائے؛ براؤزر ڈیٹا صاف کرنے سے یہ ختم ہو جاتی ہے۔"
+    "faq.a5": "نہیں۔ یہ فیول اکانومی کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو بھی نمبر لکھتے ہیں وہ آپ کے ڈیوائس پر ہی رہتا ہے، کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کی آخری قدر محفوظ ہوتی ہے، وہ بھی آپ کے براؤزر کے لوکل اسٹوریج میں، تاکہ اگلی بار پیج کھولنے پر واپس مل جائے؛ براؤزر ڈیٹا صاف کرنے سے یہ ختم ہو جاتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -510,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara mengonversi km/L ke MPG?",
     "faq.a4": "Kalikan km/L dengan 2,352 untuk mendapatkan MPG (AS), atau dengan 2,825 untuk MPG (Inggris) — faktor ini berasal dari konversi kilometer ke mil dan liter ke ukuran galon yang sesuai. Misalnya, 12,75 km/L × 2,352 ≈ 30,0 MPG (AS), dan 12,75 km/L yang sama × 2,825 ≈ 36,0 MPG (Inggris). Ketik di kolom km/L dan semua satuan lainnya, termasuk L/100km, diperbarui bersamaan.",
     "faq.q5": "Apakah data konsumsi BBM saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter konsumsi BBM ini sepenuhnya berjalan di browser Anda — setiap angka yang Anda ketik tetap ada di perangkat Anda dan tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah nilai terakhir Anda, disimpan di penyimpanan lokal browser agar tersedia saat Anda membuka halaman ini lagi; menghapus data browser akan menghapusnya."
+    "faq.a5": "Tidak. Konverter konsumsi BBM ini sepenuhnya berjalan di browser Anda — setiap angka yang Anda ketik tetap ada di perangkat Anda dan tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah nilai terakhir Anda, disimpan di penyimpanan lokal browser agar tersedia saat Anda membuka halaman ini lagi; menghapus data browser akan menghapusnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -555,7 +610,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie rechne ich km/L in MPG um?",
     "faq.a4": "Multiplizieren Sie km/L mit 2,352 für MPG (US) oder mit 2,825 für MPG (UK) — diese Faktoren stammen aus der Umrechnung von Kilometern in Meilen und Litern in die jeweilige Gallonengröße. Zum Beispiel ergibt 12,75 km/L × 2,352 ≈ 30,0 MPG (US), und dieselben 12,75 km/L × 2,825 ≈ 36,0 MPG (UK). Tippen Sie ins Feld km/L, und alle anderen Einheiten, einschließlich L/100km, aktualisieren sich gleichzeitig.",
     "faq.q5": "Werden meine Verbrauchsdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Kraftstoffverbrauch-Umrechner läuft vollständig in Ihrem Browser — jede eingegebene Zahl bleibt auf Ihrem Gerät und wird nirgendwo hochgeladen. Gespeichert wird nur Ihr letzter Wert, im lokalen Speicher Ihres Browsers, damit er beim nächsten Öffnen der Seite wieder da ist; das Löschen der Browserdaten entfernt ihn."
+    "faq.a5": "Nein. Dieser Kraftstoffverbrauch-Umrechner läuft vollständig in Ihrem Browser — jede eingegebene Zahl bleibt auf Ihrem Gerät und wird nirgendwo hochgeladen. Gespeichert wird nur Ihr letzter Wert, im lokalen Speicher Ihres Browsers, damit er beim nächsten Öffnen der Seite wieder da ist; das Löschen der Browserdaten entfernt ihn.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -600,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "km/LをMPGに変換するには?",
     "faq.a4": "km/Lに2.352を掛けるとMPG(米国)、2.825を掛けるとMPG(英国)になります — この係数はキロメートルをマイルに、リットルをそれぞれのガロンサイズに変換したものです。例えば、12.75 km/L × 2.352 ≈ 30.0 MPG(米国)、同じ12.75 km/L × 2.825 ≈ 36.0 MPG(英国)です。km/L欄に入力すると、L/100kmを含む他のすべての単位が同時に更新されます。",
     "faq.q5": "燃費データはサーバーに送信されますか?",
-    "faq.a5": "いいえ。この燃費換算ツールは完全にブラウザ内で動作し、入力した数値はすべてお使いの端末内にとどまり、どこにもアップロードされません。保存されるのは最後に入力した値だけで、ブラウザのローカルストレージに保存され、次回ページを開いたときに復元されます。ブラウザのデータを消去すれば削除されます。"
+    "faq.a5": "いいえ。この燃費換算ツールは完全にブラウザ内で動作し、入力した数値はすべてお使いの端末内にとどまり、どこにもアップロードされません。保存されるのは最後に入力した値だけで、ブラウザのローカルストレージに保存され、次回ページを開いたときに復元されます。ブラウザのデータを消去すれば削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -645,6 +710,11 @@ window.I18N_LOCALES = {
     "faq.q4": "km/L를 MPG로 어떻게 변환하나요?",
     "faq.a4": "km/L에 2.352를 곱하면 MPG(US), 2.825를 곱하면 MPG(UK)가 됩니다 — 이 계수는 킬로미터를 마일로, 리터를 해당 갤런 크기로 바꿔서 나온 값입니다. 예를 들어 12.75 km/L × 2.352 ≈ 30.0 MPG(US)이고, 같은 12.75 km/L × 2.825 ≈ 36.0 MPG(UK)입니다. km/L 칸에 입력하면 L/100km를 포함한 나머지 모든 단위가 동시에 업데이트됩니다.",
     "faq.q5": "제 연비 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 연비 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 모든 숫자는 사용자의 기기에만 남고 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 입력한 값뿐이며, 그마저도 브라우저의 로컬 저장소에 보관되어 다음에 페이지를 열 때 다시 불러올 뿐입니다. 브라우저 데이터를 지우면 이 값도 함께 삭제됩니다."
+    "faq.a5": "아니요. 이 연비 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 모든 숫자는 사용자의 기기에만 남고 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 입력한 값뿐이며, 그마저도 브라우저의 로컬 저장소에 보관되어 다음에 페이지를 열 때 다시 불러올 뿐입니다. 브라우저 데이터를 지우면 이 값도 함께 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

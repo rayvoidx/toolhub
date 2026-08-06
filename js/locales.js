@@ -554,6 +554,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "Self-Employment Tax Calculator",
     "tool.wavelength-calc.name": "Wavelength Calculator",
       "cat.science": "Math & Science",
+      "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
 
   /* ---------------- 中文 (简体) ---------------- */
@@ -1097,6 +1102,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "自雇税计算器",
     "tool.wavelength-calc.name": "波长计算器",
       "cat.science": "数学与科学",
+      "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
 
   /* ---------------- हिन्दी ---------------- */
@@ -1640,6 +1650,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "सेल्फ-एम्प्लॉयमेंट टैक्स कैलकुलेटर",
     "tool.wavelength-calc.name": "वेवलेंथ कैलकुलेटर",
       "cat.science": "गणित और विज्ञान",
+      "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
 
   /* ---------------- Español ---------------- */
@@ -2183,6 +2198,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "Calculadora de impuesto por trabajo autónomo",
     "tool.wavelength-calc.name": "Calculadora de longitud de onda y frecuencia",
       "cat.science": "Matemáticas y ciencia",
+      "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
 
   /* ---------------- العربية ---------------- */
@@ -2726,6 +2746,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "حاسبة ضريبة العمل الحر",
     "tool.wavelength-calc.name": "حاسبة الطول الموجي",
       "cat.science": "الرياضيات والعلوم",
+      "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
 
   /* ---------------- Français ---------------- */
@@ -3269,6 +3294,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "Calculateur de self-employment tax",
     "tool.wavelength-calc.name": "Calculateur de longueur d'onde et de fréquen",
       "cat.science": "Maths et sciences",
+      "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
 
   /* ---------------- বাংলা ---------------- */
@@ -3812,6 +3842,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "সেলফ-এমপ্লয়মেন্ট ট্যাক্স ক্যালকুলেটর",
     "tool.wavelength-calc.name": "তরঙ্গদৈর্ঘ্য ক্যালকুলেটর",
       "cat.science": "গণিত ও বিজ্ঞান",
+      "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
 
   /* ---------------- Português ---------------- */
@@ -4355,6 +4390,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "Calculadora de self-employment tax",
     "tool.wavelength-calc.name": "Calculadora de comprimento de onda e frequên",
       "cat.science": "Matemática e ciência",
+      "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
 
   /* ---------------- Русский ---------------- */
@@ -4898,6 +4938,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "Калькулятор налога на самозанятость (SE tax)",
     "tool.wavelength-calc.name": "Калькулятор длины волны и частоты",
       "cat.science": "Математика и наука",
+      "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
 
   /* ---------------- اردو ---------------- */
@@ -5441,6 +5486,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "سیلف ایمپلائمنٹ ٹیکس کیلکولیٹر",
     "tool.wavelength-calc.name": "ویو لینتھ کیلکولیٹر",
       "cat.science": "ریاضی اور سائنس",
+      "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
 
   /* ---------------- Bahasa Indonesia ---------------- */
@@ -5984,6 +6034,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "Kalkulator Pajak Wiraswasta AS",
     "tool.wavelength-calc.name": "Kalkulator Panjang Gelombang dan Frekuensi",
       "cat.science": "Matematika & Sains",
+      "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
 
   /* ---------------- Deutsch ---------------- */
@@ -6527,6 +6582,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "Self-Employment-Tax-Rechner",
     "tool.wavelength-calc.name": "Wellenlängen-Rechner",
       "cat.science": "Mathe & Wissenschaft",
+      "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
 
   /* ---------------- 日本語 ---------------- */
@@ -7070,6 +7130,11 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "自営業税（SEタックス）計算ツール",
     "tool.wavelength-calc.name": "波長計算ツール",
       "cat.science": "数学・理科",
+      "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
 
   /* ---------------- 한국어 ---------------- */
@@ -7613,5 +7678,10 @@ window.I18N_LOCALES = {
     "tool.self-employment-tax-calc.name": "자영업세(SE tax) 계산기",
     "tool.wavelength-calc.name": "파장 계산기",
       "cat.science": "수학·과학",
+      "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

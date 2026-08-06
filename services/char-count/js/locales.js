@@ -55,7 +55,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How are emoji and special characters counted?",
     "faq.a4": "Emoji (for example 😀) count as one character by Unicode code point. This tool uses Array.from(text).length, so surrogate pairs are never split. Bytes, however, reflect real UTF-8 encoding, so a single emoji can take 4 bytes. Special characters range from 1 byte (ASCII) to 3 bytes (CJK and symbols). Most character limits count code points, so you can rely on the character number.",
     "faq.q5": "Is my text sent to a server?",
-    "faq.a5": "No. Every calculation in this character counter happens inside your browser. Your text is never transmitted anywhere over the internet. Your last input is saved only in this device's localStorage so you can continue where you left off — and that never leaves your device either. Even sensitive drafts like a cover letter are safe to check here."
+    "faq.a5": "No. Every calculation in this character counter happens inside your browser. Your text is never transmitted anywhere over the internet. Your last input is saved only in this device's localStorage so you can continue where you left off — and that never leaves your device either. Even sensitive drafts like a cover letter are safe to check here.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -97,7 +102,12 @@ window.I18N_LOCALES = {
     "faq.q4": "表情符号和特殊字符怎么计数？",
     "faq.a4": "表情符号（如 😀）按 Unicode 码点算作 1 个字符。本工具使用 Array.from(text).length，因此代理对不会被拆开。但字节数按真实的 UTF-8 编码计算，一个表情符号可能占 4 字节。特殊字符从 1 字节（ASCII）到 3 字节（中日韩与符号）不等。大多数字数限制按码点计算，因此可放心参考字符数。",
     "faq.q5": "输入的文本会发送到服务器吗？",
-    "faq.a5": "不会。本字数统计工具的所有计算都在你的浏览器内完成，输入的文本绝不会通过网络传输到任何地方。为方便下次接着用，最后一次的输入仅保存在本设备的 localStorage 中，同样不会离开你的设备。即便是求职信这类敏感草稿也可放心检查。"
+    "faq.a5": "不会。本字数统计工具的所有计算都在你的浏览器内完成，输入的文本绝不会通过网络传输到任何地方。为方便下次接着用，最后一次的输入仅保存在本设备的 localStorage 中，同样不会离开你的设备。即便是求职信这类敏感草稿也可放心检查。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -139,7 +149,12 @@ window.I18N_LOCALES = {
     "faq.q4": "इमोजी और विशेष अक्षर कैसे गिने जाते हैं?",
     "faq.a4": "इमोजी (जैसे 😀) यूनिकोड कोड-पॉइंट के अनुसार 1 अक्षर गिने जाते हैं। यह टूल Array.from(text).length उपयोग करता है, इसलिए सरोगेट जोड़े कभी नहीं टूटते। पर बाइट असली UTF-8 एन्कोडिंग दर्शाते हैं, इसलिए एक इमोजी 4 बाइट तक ले सकता है। विशेष अक्षर 1 बाइट (ASCII) से 3 बाइट (CJK व चिह्न) तक होते हैं। अधिकांश सीमाएँ कोड-पॉइंट गिनती हैं, इसलिए अक्षर संख्या पर भरोसा कर सकते हैं।",
     "faq.q5": "क्या मेरा टेक्स्ट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। इस कैरेक्टर काउंटर की सारी गणना आपके ब्राउज़र के भीतर ही होती है। आपका टेक्स्ट इंटरनेट के ज़रिए कहीं नहीं भेजा जाता। अगली बार जारी रखने के लिए आपका अंतिम इनपुट केवल इस डिवाइस के localStorage में सहेजा जाता है — वह भी डिवाइस से बाहर नहीं जाता। कवर लेटर जैसे संवेदनशील ड्राफ़्ट भी यहाँ सुरक्षित रूप से जाँच सकते हैं।"
+    "faq.a5": "नहीं। इस कैरेक्टर काउंटर की सारी गणना आपके ब्राउज़र के भीतर ही होती है। आपका टेक्स्ट इंटरनेट के ज़रिए कहीं नहीं भेजा जाता। अगली बार जारी रखने के लिए आपका अंतिम इनपुट केवल इस डिवाइस के localStorage में सहेजा जाता है — वह भी डिवाइस से बाहर नहीं जाता। कवर लेटर जैसे संवेदनशील ड्राफ़्ट भी यहाँ सुरक्षित रूप से जाँच सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -181,7 +196,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo se cuentan los emojis y los caracteres especiales?",
     "faq.a4": "Los emojis (por ejemplo 😀) cuentan como un carácter según el punto de código Unicode. Esta herramienta usa Array.from(text).length, así que los pares suplentes nunca se dividen. Los bytes, en cambio, reflejan la codificación UTF-8 real, por lo que un emoji puede ocupar 4 bytes. Los caracteres especiales van de 1 byte (ASCII) a 3 bytes (CJK y símbolos). La mayoría de los límites cuentan puntos de código, así que puedes fiarte del número de caracteres.",
     "faq.q5": "¿Se envía mi texto a un servidor?",
-    "faq.a5": "No. Todos los cálculos de este contador de caracteres se hacen dentro de tu navegador. Tu texto nunca se transmite a ningún sitio por internet. Tu última entrada se guarda solo en el localStorage de este dispositivo para que continúes donde lo dejaste, y tampoco sale de tu dispositivo. Incluso borradores sensibles como una carta de presentación se pueden revisar aquí con tranquilidad."
+    "faq.a5": "No. Todos los cálculos de este contador de caracteres se hacen dentro de tu navegador. Tu texto nunca se transmite a ningún sitio por internet. Tu última entrada se guarda solo en el localStorage de este dispositivo para que continúes donde lo dejaste, y tampoco sale de tu dispositivo. Incluso borradores sensibles como una carta de presentación se pueden revisar aquí con tranquilidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -223,7 +243,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف تُحسب الرموز التعبيرية والأحرف الخاصة؟",
     "faq.a4": "تُحسب الرموز التعبيرية (مثل 😀) حرفًا واحدًا حسب نقطة ترميز يونيكود. تستخدم هذه الأداة Array.from(text).length، فلا تنكسر الأزواج البديلة أبدًا. أما البايتات فتعكس ترميز UTF-8 الفعلي، لذا قد يشغل رمز تعبيري واحد 4 بايتات. وتتراوح الأحرف الخاصة من بايت واحد (ASCII) إلى 3 بايتات (CJK والرموز). ومعظم الحدود تعدّ نقاط الترميز، فيمكنك الاعتماد على عدد الأحرف.",
     "faq.q5": "هل يُرسَل نصي إلى خادم؟",
-    "faq.a5": "لا. تجري كل عمليات هذا العدّاد داخل متصفحك. ولا يُرسَل نصك إلى أي مكان عبر الإنترنت. يُحفظ آخر إدخال لك في localStorage الخاص بهذا الجهاز فقط لتُكمل من حيث توقفت — وهو أيضًا لا يغادر جهازك. حتى المسودات الحساسة مثل خطاب التقديم يمكن مراجعتها هنا بأمان."
+    "faq.a5": "لا. تجري كل عمليات هذا العدّاد داخل متصفحك. ولا يُرسَل نصك إلى أي مكان عبر الإنترنت. يُحفظ آخر إدخال لك في localStorage الخاص بهذا الجهاز فقط لتُكمل من حيث توقفت — وهو أيضًا لا يغادر جهازك. حتى المسودات الحساسة مثل خطاب التقديم يمكن مراجعتها هنا بأمان.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -265,7 +290,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment les emojis et caractères spéciaux sont-ils comptés ?",
     "faq.a4": "Les emojis (par exemple 😀) comptent pour un caractère selon le point de code Unicode. Cet outil utilise Array.from(text).length : les paires de substitution ne sont jamais coupées. Les octets, eux, reflètent l'encodage UTF-8 réel, si bien qu'un emoji peut occuper 4 octets. Les caractères spéciaux vont de 1 octet (ASCII) à 3 octets (CJC et symboles). La plupart des limites comptent les points de code : vous pouvez donc vous fier au nombre de caractères.",
     "faq.q5": "Mon texte est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Tous les calculs de ce compteur de caractères se font dans votre navigateur. Votre texte n'est jamais transmis où que ce soit sur internet. Votre dernière saisie est enregistrée uniquement dans le localStorage de cet appareil pour que vous repreniez où vous en étiez — et cela non plus ne quitte pas votre appareil. Même des brouillons sensibles comme une lettre de motivation peuvent être vérifiés ici en toute tranquillité."
+    "faq.a5": "Non. Tous les calculs de ce compteur de caractères se font dans votre navigateur. Votre texte n'est jamais transmis où que ce soit sur internet. Votre dernière saisie est enregistrée uniquement dans le localStorage de cet appareil pour que vous repreniez où vous en étiez — et cela non plus ne quitte pas votre appareil. Même des brouillons sensibles comme une lettre de motivation peuvent être vérifiés ici en toute tranquillité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -307,7 +337,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ইমোজি ও বিশেষ অক্ষর কীভাবে গণনা হয়?",
     "faq.a4": "ইমোজি (যেমন 😀) ইউনিকোড কোড-পয়েন্ট অনুযায়ী ১ অক্ষর হিসেবে গোনা হয়। এই টুল Array.from(text).length ব্যবহার করে, তাই সারোগেট জোড়া কখনো ভাঙে না। তবে বাইট প্রকৃত UTF-8 এনকোডিং প্রতিফলিত করে, তাই একটি ইমোজি ৪ বাইট পর্যন্ত নিতে পারে। বিশেষ অক্ষর ১ বাইট (ASCII) থেকে ৩ বাইট (CJK ও প্রতীক) পর্যন্ত হয়। বেশিরভাগ সীমা কোড-পয়েন্ট গোনে, তাই অক্ষর সংখ্যায় নির্ভর করতে পারেন।",
     "faq.q5": "আমার টেক্সট কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই ক্যারেক্টার কাউন্টারের সব হিসাব আপনার ব্রাউজারের ভেতরেই হয়। আপনার টেক্সট ইন্টারনেটে কোথাও পাঠানো হয় না। পরেরবার চালিয়ে যেতে আপনার শেষ ইনপুট কেবল এই ডিভাইসের localStorage-এ সংরক্ষিত থাকে — সেটিও ডিভাইস ছেড়ে যায় না। কভার লেটারের মতো সংবেদনশীল খসড়াও এখানে নিরাপদে যাচাই করতে পারেন।"
+    "faq.a5": "না। এই ক্যারেক্টার কাউন্টারের সব হিসাব আপনার ব্রাউজারের ভেতরেই হয়। আপনার টেক্সট ইন্টারনেটে কোথাও পাঠানো হয় না। পরেরবার চালিয়ে যেতে আপনার শেষ ইনপুট কেবল এই ডিভাইসের localStorage-এ সংরক্ষিত থাকে — সেটিও ডিভাইস ছেড়ে যায় না। কভার লেটারের মতো সংবেদনশীল খসড়াও এখানে নিরাপদে যাচাই করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -349,7 +384,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como emojis e caracteres especiais são contados?",
     "faq.a4": "Emojis (por exemplo 😀) contam como um caractere pelo ponto de código Unicode. Esta ferramenta usa Array.from(text).length, então os pares substitutos nunca são divididos. Já os bytes refletem a codificação UTF-8 real, então um emoji pode ocupar 4 bytes. Caracteres especiais vão de 1 byte (ASCII) a 3 bytes (CJK e símbolos). A maioria dos limites conta pontos de código, então você pode confiar no número de caracteres.",
     "faq.q5": "Meu texto é enviado a um servidor?",
-    "faq.a5": "Não. Todos os cálculos deste contador de caracteres acontecem dentro do seu navegador. Seu texto nunca é transmitido para lugar nenhum pela internet. Sua última entrada é salva apenas no localStorage deste dispositivo para você continuar de onde parou — e isso também não sai do seu aparelho. Até rascunhos sensíveis como uma carta de apresentação podem ser conferidos aqui com tranquilidade."
+    "faq.a5": "Não. Todos os cálculos deste contador de caracteres acontecem dentro do seu navegador. Seu texto nunca é transmitido para lugar nenhum pela internet. Sua última entrada é salva apenas no localStorage deste dispositivo para você continuar de onde parou — e isso também não sai do seu aparelho. Até rascunhos sensíveis como uma carta de apresentação podem ser conferidos aqui com tranquilidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -391,7 +431,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как считаются эмодзи и специальные символы?",
     "faq.a4": "Эмодзи (например 😀) считаются одним символом по кодовой точке Unicode. Инструмент использует Array.from(text).length, поэтому суррогатные пары никогда не разрываются. А байты отражают реальную кодировку UTF-8, поэтому один эмодзи может занимать 4 байта. Специальные символы занимают от 1 байта (ASCII) до 3 байтов (CJK и символы). Большинство ограничений считают кодовые точки, так что можно опираться на число символов.",
     "faq.q5": "Отправляется ли мой текст на сервер?",
-    "faq.a5": "Нет. Все вычисления этого счётчика символов происходят внутри вашего браузера. Ваш текст никуда не передаётся по интернету. Последний ввод сохраняется только в localStorage этого устройства, чтобы вы могли продолжить с того же места, — и он тоже не покидает ваше устройство. Даже такие конфиденциальные черновики, как сопроводительное письмо, можно спокойно проверять здесь."
+    "faq.a5": "Нет. Все вычисления этого счётчика символов происходят внутри вашего браузера. Ваш текст никуда не передаётся по интернету. Последний ввод сохраняется только в localStorage этого устройства, чтобы вы могли продолжить с того же места, — и он тоже не покидает ваше устройство. Даже такие конфиденциальные черновики, как сопроводительное письмо, можно спокойно проверять здесь.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -433,7 +478,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ایموجی اور خصوصی حروف کیسے گنے جاتے ہیں؟",
     "faq.a4": "ایموجی (مثلاً 😀) یونیکوڈ کوڈ پوائنٹ کے مطابق ایک حرف گنے جاتے ہیں۔ یہ ٹول Array.from(text).length استعمال کرتا ہے، اس لیے سروگیٹ جوڑے کبھی نہیں ٹوٹتے۔ البتہ بائٹ اصل UTF-8 انکوڈنگ ظاہر کرتے ہیں، اس لیے ایک ایموجی 4 بائٹ تک لے سکتا ہے۔ خصوصی حروف 1 بائٹ (ASCII) سے 3 بائٹ (CJK اور علامات) تک ہوتے ہیں۔ زیادہ تر حدیں کوڈ پوائنٹ گنتی ہیں، اس لیے آپ حروف کی تعداد پر بھروسا کر سکتے ہیں۔",
     "faq.q5": "کیا میرا متن سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ اس کریکٹر کاؤنٹر کے تمام حسابات آپ کے براؤزر کے اندر ہی ہوتے ہیں۔ آپ کا متن انٹرنیٹ کے ذریعے کہیں نہیں بھیجا جاتا۔ اگلی بار جاری رکھنے کے لیے آپ کا آخری اِن پٹ صرف اس ڈیوائس کے localStorage میں محفوظ ہوتا ہے — وہ بھی ڈیوائس سے باہر نہیں جاتا۔ کور لیٹر جیسے حساس مسودے بھی یہاں محفوظ طریقے سے جانچے جا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ اس کریکٹر کاؤنٹر کے تمام حسابات آپ کے براؤزر کے اندر ہی ہوتے ہیں۔ آپ کا متن انٹرنیٹ کے ذریعے کہیں نہیں بھیجا جاتا۔ اگلی بار جاری رکھنے کے لیے آپ کا آخری اِن پٹ صرف اس ڈیوائس کے localStorage میں محفوظ ہوتا ہے — وہ بھی ڈیوائس سے باہر نہیں جاتا۔ کور لیٹر جیسے حساس مسودے بھی یہاں محفوظ طریقے سے جانچے جا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -475,7 +525,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana emoji dan karakter khusus dihitung?",
     "faq.a4": "Emoji (misalnya 😀) dihitung sebagai satu karakter menurut titik kode Unicode. Alat ini memakai Array.from(text).length, sehingga pasangan pengganti tak pernah terpecah. Namun byte mencerminkan enkode UTF-8 yang sebenarnya, jadi satu emoji bisa memakan 4 byte. Karakter khusus berkisar dari 1 byte (ASCII) hingga 3 byte (CJK dan simbol). Sebagian besar batas menghitung titik kode, jadi Anda bisa mengandalkan angka karakter.",
     "faq.q5": "Apakah teks saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan penghitung karakter ini terjadi di dalam browser Anda. Teks Anda tidak pernah dikirim ke mana pun melalui internet. Input terakhir Anda disimpan hanya di localStorage perangkat ini agar bisa dilanjutkan, dan itu pun tidak meninggalkan perangkat Anda. Bahkan draf sensitif seperti surat lamaran aman diperiksa di sini."
+    "faq.a5": "Tidak. Semua perhitungan penghitung karakter ini terjadi di dalam browser Anda. Teks Anda tidak pernah dikirim ke mana pun melalui internet. Input terakhir Anda disimpan hanya di localStorage perangkat ini agar bisa dilanjutkan, dan itu pun tidak meninggalkan perangkat Anda. Bahkan draf sensitif seperti surat lamaran aman diperiksa di sini.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -517,7 +572,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie werden Emojis und Sonderzeichen gezählt?",
     "faq.a4": "Emojis (zum Beispiel 😀) zählen als ein Zeichen nach Unicode-Codepunkt. Dieses Tool verwendet Array.from(text).length, sodass Surrogatpaare nie getrennt werden. Bytes hingegen spiegeln die tatsächliche UTF-8-Kodierung wider, daher kann ein einzelnes Emoji 4 Bytes belegen. Sonderzeichen reichen von 1 Byte (ASCII) bis 3 Bytes (CJK und Symbole). Die meisten Limits zählen Codepunkte, Sie können sich also auf die Zeichenzahl verlassen.",
     "faq.q5": "Wird mein Text an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen dieses Zeichenzählers finden in Ihrem Browser statt. Ihr Text wird nie über das Internet irgendwohin übertragen. Ihre letzte Eingabe wird nur im localStorage dieses Geräts gespeichert, damit Sie fortfahren können — auch das verlässt Ihr Gerät nicht. Selbst sensible Entwürfe wie ein Anschreiben können Sie hier bedenkenlos prüfen."
+    "faq.a5": "Nein. Alle Berechnungen dieses Zeichenzählers finden in Ihrem Browser statt. Ihr Text wird nie über das Internet irgendwohin übertragen. Ihre letzte Eingabe wird nur im localStorage dieses Geräts gespeichert, damit Sie fortfahren können — auch das verlässt Ihr Gerät nicht. Selbst sensible Entwürfe wie ein Anschreiben können Sie hier bedenkenlos prüfen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -559,7 +619,12 @@ window.I18N_LOCALES = {
     "faq.q4": "絵文字や特殊文字は何文字として数えられる？",
     "faq.a4": "絵文字（例：😀）はUnicodeのコードポイント基準で1文字として数えます。本ツールはArray.from(text).lengthを使うため、サロゲートペアが分割されることはありません。ただしバイト数は実際のUTF-8エンコード結果なので、絵文字1つで4バイトを占めることもあります。特殊文字は種類により1バイト（ASCII）〜3バイト（漢字・記号）とさまざまです。文字数制限の多くはコードポイント基準なので、文字数を目安にして問題ありません。",
     "faq.q5": "入力したテキストはサーバーに送信される？",
-    "faq.a5": "いいえ。この文字数カウントのすべての計算はブラウザ内だけで行われます。入力したテキストがインターネット経由でどこかに送信されることはありません。次回続けて使えるよう、最後の入力内容はこの端末のlocalStorageにのみ保存され、これも端末の外には出ません。エントリーシートのような機微な下書きも安心してご確認いただけます。"
+    "faq.a5": "いいえ。この文字数カウントのすべての計算はブラウザ内だけで行われます。入力したテキストがインターネット経由でどこかに送信されることはありません。次回続けて使えるよう、最後の入力内容はこの端末のlocalStorageにのみ保存され、これも端末の外には出ません。エントリーシートのような機微な下書きも安心してご確認いただけます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -601,6 +666,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이모지나 특수문자는 몇 글자로 계산되나?",
     "faq.a4": "이모지(예: 😀)는 유니코드 코드포인트 기준으로 1글자로 셉니다. 이 도구는 서로게이트 페어가 깨지지 않도록 Array.from(text).length 방식으로 글자수를 셉니다. 다만 바이트는 UTF-8 실제 인코딩 결과로 계산되므로, 이모지 하나가 4byte를 차지할 수 있습니다. 특수문자는 종류에 따라 1byte(ASCII)~3byte(한자·특수기호)까지 다양합니다. 자소서 글자수 제한은 대부분 코드포인트(글자) 기준이므로 걱정 없이 사용하셔도 됩니다.",
     "faq.q5": "입력한 텍스트가 서버로 전송되나?",
-    "faq.a5": "아니오. 이 글자수 세기 도구의 모든 계산은 브라우저 안에서만 이루어집니다. 입력한 텍스트는 인터넷을 통해 어디에도 전송되지 않습니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값이 이 기기의 localStorage에만 저장되며, 이것 역시 외부로 전송되지 않습니다. 민감한 자소서 글자수 확인도 안심하고 사용하세요."
+    "faq.a5": "아니오. 이 글자수 세기 도구의 모든 계산은 브라우저 안에서만 이루어집니다. 입력한 텍스트는 인터넷을 통해 어디에도 전송되지 않습니다. 다음 방문 시 이어서 쓸 수 있도록 마지막 입력값이 이 기기의 localStorage에만 저장되며, 이것 역시 외부로 전송되지 않습니다. 민감한 자소서 글자수 확인도 안심하고 사용하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

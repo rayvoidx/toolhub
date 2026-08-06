@@ -82,7 +82,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mild cut, standard cut or bulk — how many calories should I eat to lose or gain weight?",
     "faq.a4": "This calculator shows a mild cut (10% below TDEE, roughly 0.25-0.3 kg a week) and a standard cut (20% below TDEE, roughly 0.5-0.6 kg a week) for weight loss, plus a bulk (15% above TDEE) for building muscle with a lean surplus. The weekly rate uses the common estimate that about 7,700 kcal equals 1 kg of body fat; individual results vary with water weight, sleep, and training. A mild cut is easier to sustain and preserves more muscle; a standard cut is faster but harder to stick to for long periods, so pick based on the deficit you can maintain consistently.",
     "faq.q5": "Is my age, height and weight sent to a server?",
-    "faq.a5": "No. Every calculation in this TDEE calculator runs entirely in your browser; your age, sex, height, weight and activity level never leave your device. They are only saved to your browser's localStorage so the form is pre-filled on your next visit, and you can clear them anytime from your browser settings. This tool provides educational estimates only and is not medical, nutrition, or fitness advice."
+    "faq.a5": "No. Every calculation in this TDEE calculator runs entirely in your browser; your age, sex, height, weight and activity level never leave your device. They are only saved to your browser's localStorage so the form is pre-filled on your next visit, and you can clear them anytime from your browser settings. This tool provides educational estimates only and is not medical, nutrition, or fitness advice.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -149,7 +154,12 @@ window.I18N_LOCALES = {
     "faq.q4": "温和减脂、标准减脂还是增肌——该吃多少卡路里才能减重或增重?",
     "faq.a4": "本计算器提供温和减脂(比TDEE低10%,每周约减0.25~0.3 kg)和标准减脂(比TDEE低20%,每周约减0.5~0.6 kg)两个减重方案,以及增肌用的增肌方案(比TDEE高15%)。每周变化速度采用常见估算:约7,700 kcal相当于1 kg体脂;实际结果会因水分、睡眠和训练而有差异。温和减脂更容易坚持、更能保留肌肉;标准减脂速度更快但长期难以坚持,请根据自己能稳定维持的缺口来选择。",
     "faq.q5": "我的年龄、身高和体重会发送到服务器吗?",
-    "faq.a5": "不会。本TDEE计算器的所有计算都在您的浏览器中完成;年龄、性别、身高、体重和活动水平都不会离开您的设备。它们只会保存在浏览器的localStorage中,方便下次访问自动填充,您可以随时在浏览器设置中清除。本工具仅提供教育性估算,不构成医疗、营养或健身建议。"
+    "faq.a5": "不会。本TDEE计算器的所有计算都在您的浏览器中完成;年龄、性别、身高、体重和活动水平都不会离开您的设备。它们只会保存在浏览器的localStorage中,方便下次访问自动填充,您可以随时在浏览器设置中清除。本工具仅提供教育性估算,不构成医疗、营养或健身建议。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -216,7 +226,12 @@ window.I18N_LOCALES = {
     "faq.q4": "हल्का घाटा, मानक घाटा या बल्क — वज़न घटाने/बढ़ाने के लिए कितनी कैलोरी खाएँ?",
     "faq.a4": "यह कैलकुलेटर वज़न घटाने के लिए हल्का घाटा (TDEE से 10% कम, लगभग 0.25–0.3 kg/सप्ताह) और मानक घाटा (TDEE से 20% कम, लगभग 0.5–0.6 kg/सप्ताह) दिखाता है, साथ ही मांसपेशी बनाने के लिए बल्क (TDEE से 15% अधिक) भी। साप्ताहिक दर के लिए आम अनुमान इस्तेमाल होता है कि लगभग 7,700 kcal = 1 kg शरीर की चर्बी; असल नतीजे पानी, नींद और ट्रेनिंग के अनुसार बदल सकते हैं। हल्का घाटा बनाए रखना आसान है और मांसपेशी बचाता है; मानक घाटा तेज़ है पर लंबे समय तक टिकाना मुश्किल — जो घाटा आप लगातार बनाए रख सकें वही चुनें।",
     "faq.q5": "क्या मेरी उम्र, कद और वज़न सर्वर पर भेजे जाते हैं?",
-    "faq.a5": "नहीं। इस TDEE कैलकुलेटर की सारी गणना आपके ब्राउज़र में होती है; उम्र, लिंग, कद, वज़न और गतिविधि स्तर कभी आपके डिवाइस से बाहर नहीं जाते। अगली बार फ़ॉर्म अपने-आप भरने के लिए ये केवल ब्राउज़र के localStorage में सहेजे जाते हैं, जिन्हें आप कभी भी हटा सकते हैं। यह टूल केवल शैक्षिक अनुमान देता है और चिकित्सा, पोषण या फिटनेस सलाह नहीं है।"
+    "faq.a5": "नहीं। इस TDEE कैलकुलेटर की सारी गणना आपके ब्राउज़र में होती है; उम्र, लिंग, कद, वज़न और गतिविधि स्तर कभी आपके डिवाइस से बाहर नहीं जाते। अगली बार फ़ॉर्म अपने-आप भरने के लिए ये केवल ब्राउज़र के localStorage में सहेजे जाते हैं, जिन्हें आप कभी भी हटा सकते हैं। यह टूल केवल शैक्षिक अनुमान देता है और चिकित्सा, पोषण या फिटनेस सलाह नहीं है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -283,7 +298,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Déficit leve, estándar o volumen: ¿cuántas calorías comer para perder o ganar peso?",
     "faq.a4": "Esta calculadora muestra un déficit leve (10% bajo el TDEE, unos 0,25–0,3 kg/semana) y uno estándar (20% bajo el TDEE, unos 0,5–0,6 kg/semana) para perder peso, además de un volumen (15% sobre el TDEE) para ganar músculo con un superávit moderado. El ritmo semanal usa la estimación habitual de que unas 7.700 kcal equivalen a 1 kg de grasa corporal; los resultados individuales varían con el agua corporal, el sueño y el entrenamiento. Un déficit leve es más sostenible y conserva más músculo; uno estándar es más rápido pero más difícil de mantener, así que elige según el déficit que puedas sostener con constancia.",
     "faq.q5": "¿Se envían mi edad, altura y peso a un servidor?",
-    "faq.a5": "No. Todos los cálculos de esta calculadora de TDEE se ejecutan por completo en tu navegador; tu edad, sexo, altura, peso y nivel de actividad nunca salen de tu dispositivo. Solo se guardan en el localStorage de tu navegador para rellenar el formulario en tu próxima visita, y puedes borrarlos cuando quieras desde los ajustes de tu navegador. Esta herramienta ofrece estimaciones educativas y no es consejo médico, nutricional ni de fitness."
+    "faq.a5": "No. Todos los cálculos de esta calculadora de TDEE se ejecutan por completo en tu navegador; tu edad, sexo, altura, peso y nivel de actividad nunca salen de tu dispositivo. Solo se guardan en el localStorage de tu navegador para rellenar el formulario en tu próxima visita, y puedes borrarlos cuando quieras desde los ajustes de tu navegador. Esta herramienta ofrece estimaciones educativas y no es consejo médico, nutricional ni de fitness.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -350,7 +370,12 @@ window.I18N_LOCALES = {
     "faq.q4": "تنشيف خفيف أم قياسي أم تضخيم — كم سعرة آكل لأخسر أو أكتسب وزنًا؟",
     "faq.a4": "تعرض هذه الحاسبة تنشيفًا خفيفًا (أقل بـ10% من TDEE، حوالي 0.25–0.3 كجم أسبوعيًا) وتنشيفًا قياسيًا (أقل بـ20%، حوالي 0.5–0.6 كجم أسبوعيًا) لخسارة الوزن، وتضخيمًا (أعلى بـ15% من TDEE) لبناء العضلات بفائض معتدل. يعتمد المعدل الأسبوعي على التقدير الشائع بأن نحو 7,700 سعرة تعادل 1 كجم من دهون الجسم؛ تختلف النتائج الفردية حسب احتباس الماء والنوم والتدريب. التنشيف الخفيف أسهل استدامة ويحافظ على العضلات أكثر، بينما القياسي أسرع لكن أصعب للاستمرار عليه طويلًا.",
     "faq.q5": "هل يُرسل عمري وطولي ووزني إلى خادم؟",
-    "faq.a5": "لا. تُجرى جميع حسابات حاسبة TDEE هذه داخل متصفحك بالكامل؛ العمر والجنس والطول والوزن ومستوى النشاط لا تغادر جهازك أبدًا. تُحفظ فقط في localStorage للمتصفح لتعبئة النموذج تلقائيًا في زيارتك القادمة، ويمكنك حذفها في أي وقت من إعدادات متصفحك. يقدّم هذا الأداة تقديرات تثقيفية فقط وليست نصيحة طبية أو غذائية أو رياضية."
+    "faq.a5": "لا. تُجرى جميع حسابات حاسبة TDEE هذه داخل متصفحك بالكامل؛ العمر والجنس والطول والوزن ومستوى النشاط لا تغادر جهازك أبدًا. تُحفظ فقط في localStorage للمتصفح لتعبئة النموذج تلقائيًا في زيارتك القادمة، ويمكنك حذفها في أي وقت من إعدادات متصفحك. يقدّم هذا الأداة تقديرات تثقيفية فقط وليست نصيحة طبية أو غذائية أو رياضية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -417,7 +442,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Sèche légère, sèche standard ou prise de masse : combien manger pour perdre ou prendre du poids ?",
     "faq.a4": "Ce calculateur affiche une sèche légère (10 % sous le TDEE, environ 0,25–0,3 kg/semaine) et une sèche standard (20 % sous le TDEE, environ 0,5–0,6 kg/semaine) pour perdre du poids, ainsi qu'une prise de masse (15 % au-dessus du TDEE) pour construire du muscle avec un surplus modéré. Le rythme hebdomadaire utilise l'estimation courante selon laquelle environ 7 700 kcal équivalent à 1 kg de graisse corporelle ; les résultats individuels varient selon l'eau corporelle, le sommeil et l'entraînement. Une sèche légère est plus facile à tenir et préserve plus de muscle ; une sèche standard est plus rapide mais plus dure à maintenir longtemps, choisissez selon le déficit que vous pouvez tenir durablement.",
     "faq.q5": "Mon âge, ma taille et mon poids sont-ils envoyés à un serveur ?",
-    "faq.a5": "Non. Tous les calculs de ce calculateur de TDEE s'exécutent entièrement dans votre navigateur ; âge, sexe, taille, poids et niveau d'activité ne quittent jamais votre appareil. Ils ne sont enregistrés que dans le localStorage de votre navigateur pour préremplir le formulaire à votre prochaine visite, et vous pouvez les effacer à tout moment depuis les réglages de votre navigateur. Cet outil fournit des estimations éducatives et ne constitue pas un avis médical, nutritionnel ou sportif."
+    "faq.a5": "Non. Tous les calculs de ce calculateur de TDEE s'exécutent entièrement dans votre navigateur ; âge, sexe, taille, poids et niveau d'activité ne quittent jamais votre appareil. Ils ne sont enregistrés que dans le localStorage de votre navigateur pour préremplir le formulaire à votre prochaine visite, et vous pouvez les effacer à tout moment depuis les réglages de votre navigateur. Cet outil fournit des estimations éducatives et ne constitue pas un avis médical, nutritionnel ou sportif.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -484,7 +514,12 @@ window.I18N_LOCALES = {
     "faq.q4": "হালকা কাট, স্ট্যান্ডার্ড কাট নাকি বাল্ক — ওজন কমাতে/বাড়াতে কত ক্যালরি খাব?",
     "faq.a4": "এই ক্যালকুলেটর ওজন কমানোর জন্য হালকা কাট (TDEE-এর 10% কম, প্রায় 0.25–0.3 kg/সপ্তাহ) ও স্ট্যান্ডার্ড কাট (TDEE-এর 20% কম, প্রায় 0.5–0.6 kg/সপ্তাহ) দেখায়, সাথে পেশি গড়ার জন্য বাল্ক (TDEE-এর 15% বেশি)। সাপ্তাহিক হার হিসাবে প্রচলিত ধারণা ব্যবহার হয় যে প্রায় 7,700 kcal = 1 kg দেহের চর্বি; পানি, ঘুম ও ট্রেনিংয়ের কারণে ব্যক্তিভেদে ফলাফল ভিন্ন হতে পারে। হালকা কাট টিকিয়ে রাখা সহজ ও পেশি বেশি রক্ষা করে; স্ট্যান্ডার্ড কাট দ্রুত কিন্তু দীর্ঘদিন টিকিয়ে রাখা কঠিন।",
     "faq.q5": "আমার বয়স, উচ্চতা ও ওজন কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই TDEE ক্যালকুলেটরের সব হিসাব সম্পূর্ণ আপনার ব্রাউজারে হয়; বয়স, লিঙ্গ, উচ্চতা, ওজন ও কার্যকলাপের মাত্রা কখনো আপনার ডিভাইস ছেড়ে যায় না। পরের ভিজিটে ফর্ম আগে থেকে পূরণ রাখতে এগুলো শুধু ব্রাউজারের localStorage-এ সংরক্ষিত হয়, যা যেকোনো সময় মুছে ফেলা যায়। এই টুল শুধু শিক্ষামূলক অনুমান দেয়, চিকিৎসা, পুষ্টি বা ফিটনেস পরামর্শ নয়।"
+    "faq.a5": "না। এই TDEE ক্যালকুলেটরের সব হিসাব সম্পূর্ণ আপনার ব্রাউজারে হয়; বয়স, লিঙ্গ, উচ্চতা, ওজন ও কার্যকলাপের মাত্রা কখনো আপনার ডিভাইস ছেড়ে যায় না। পরের ভিজিটে ফর্ম আগে থেকে পূরণ রাখতে এগুলো শুধু ব্রাউজারের localStorage-এ সংরক্ষিত হয়, যা যেকোনো সময় মুছে ফেলা যায়। এই টুল শুধু শিক্ষামূলক অনুমান দেয়, চিকিৎসা, পুষ্টি বা ফিটনেস পরামর্শ নয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -551,7 +586,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Cutting leve, padrão ou bulking — quantas calorias comer para perder ou ganhar peso?",
     "faq.a4": "Esta calculadora mostra um cutting leve (10% abaixo do TDEE, cerca de 0,25–0,3 kg/semana) e um cutting padrão (20% abaixo do TDEE, cerca de 0,5–0,6 kg/semana) para perder peso, além de um bulking (15% acima do TDEE) para ganhar músculo com superávit moderado. O ritmo semanal usa a estimativa comum de que cerca de 7.700 kcal equivalem a 1 kg de gordura corporal; resultados individuais variam com retenção de água, sono e treino. Um cutting leve é mais fácil de manter e preserva mais músculo; o padrão é mais rápido, mas mais difícil de sustentar por muito tempo.",
     "faq.q5": "Minha idade, altura e peso são enviados a um servidor?",
-    "faq.a5": "Não. Todos os cálculos desta calculadora de TDEE rodam inteiramente no seu navegador; idade, sexo, altura, peso e nível de atividade nunca saem do seu dispositivo. Eles ficam salvos apenas no localStorage do navegador para preencher o formulário na próxima visita, e você pode apagá-los quando quiser nas configurações do navegador. Esta ferramenta fornece estimativas educativas e não é conselho médico, nutricional ou de fitness."
+    "faq.a5": "Não. Todos os cálculos desta calculadora de TDEE rodam inteiramente no seu navegador; idade, sexo, altura, peso e nível de atividade nunca saem do seu dispositivo. Eles ficam salvos apenas no localStorage do navegador para preencher o formulário na próxima visita, e você pode apagá-los quando quiser nas configurações do navegador. Esta ferramenta fornece estimativas educativas e não é conselho médico, nutricional ou de fitness.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -618,7 +658,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Лёгкий дефицит, стандартный дефицит или набор массы — сколько есть, чтобы похудеть или набрать вес?",
     "faq.a4": "Этот калькулятор показывает лёгкий дефицит (на 10% ниже TDEE, около 0,25–0,3 кг в неделю) и стандартный дефицит (на 20% ниже TDEE, около 0,5–0,6 кг в неделю) для похудения, а также набор массы (на 15% выше TDEE) для набора мышц с умеренным профицитом. Недельная скорость основана на распространённой оценке, что около 7700 ккал равны 1 кг жира; индивидуальные результаты зависят от задержки воды, сна и тренировок. Лёгкий дефицит легче поддерживать и он сохраняет больше мышц; стандартный быстрее, но труднее выдержать долго.",
     "faq.q5": "Отправляются ли мои возраст, рост и вес на сервер?",
-    "faq.a5": "Нет. Все расчёты этого калькулятора TDEE выполняются полностью в вашем браузере; возраст, пол, рост, вес и уровень активности никогда не покидают устройство. Они сохраняются только в localStorage браузера для автозаполнения формы при следующем визите, и вы можете удалить их в любой момент в настройках браузера. Этот инструмент даёт только образовательные оценки и не является медицинской, диетической или фитнес-рекомендацией."
+    "faq.a5": "Нет. Все расчёты этого калькулятора TDEE выполняются полностью в вашем браузере; возраст, пол, рост, вес и уровень активности никогда не покидают устройство. Они сохраняются только в localStorage браузера для автозаполнения формы при следующем визите, и вы можете удалить их в любой момент в настройках браузера. Этот инструмент даёт только образовательные оценки и не является медицинской, диетической или фитнес-рекомендацией.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -685,7 +730,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ہلکی کمی، معیاری کمی یا بلک — وزن گھٹانے/بڑھانے کے لیے کتنی کیلوریز کھائیں؟",
     "faq.a4": "یہ کیلکولیٹر وزن گھٹانے کے لیے ہلکی کمی (TDEE سے 10% کم، تقریباً 0.25–0.3 kg فی ہفتہ) اور معیاری کمی (TDEE سے 20% کم، تقریباً 0.5–0.6 kg فی ہفتہ) دکھاتا ہے، ساتھ ہی پٹھے بنانے کے لیے بلک (TDEE سے 15% زیادہ)۔ ہفتہ وار شرح کے لیے عام تخمینہ استعمال ہوتا ہے کہ تقریباً 7,700 kcal = 1 kg جسمانی چربی؛ انفرادی نتائج پانی، نیند اور تربیت کے مطابق مختلف ہو سکتے ہیں۔ ہلکی کمی برقرار رکھنا آسان ہے اور زیادہ پٹھے بچاتی ہے؛ معیاری کمی تیز مگر طویل عرصے تک برقرار رکھنا مشکل ہے۔",
     "faq.q5": "کیا میری عمر، قد اور وزن سرور کو بھیجے جاتے ہیں؟",
-    "faq.a5": "نہیں۔ اس TDEE کیلکولیٹر کے تمام حساب مکمل طور پر آپ کے براؤزر میں ہوتے ہیں؛ عمر، جنس، قد، وزن اور سرگرمی کی سطح کبھی آپ کے آلے سے باہر نہیں جاتے۔ اگلی بار فارم خودکار بھرنے کے لیے یہ صرف براؤزر کے localStorage میں محفوظ ہوتے ہیں، جنہیں آپ کبھی بھی حذف کر سکتے ہیں۔ یہ ٹول صرف تعلیمی تخمینے فراہم کرتا ہے اور طبی، غذائی یا فٹنس مشورہ نہیں ہے۔"
+    "faq.a5": "نہیں۔ اس TDEE کیلکولیٹر کے تمام حساب مکمل طور پر آپ کے براؤزر میں ہوتے ہیں؛ عمر، جنس، قد، وزن اور سرگرمی کی سطح کبھی آپ کے آلے سے باہر نہیں جاتے۔ اگلی بار فارم خودکار بھرنے کے لیے یہ صرف براؤزر کے localStorage میں محفوظ ہوتے ہیں، جنہیں آپ کبھی بھی حذف کر سکتے ہیں۔ یہ ٹول صرف تعلیمی تخمینے فراہم کرتا ہے اور طبی، غذائی یا فٹنس مشورہ نہیں ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -752,7 +802,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Cutting ringan, cutting standar, atau bulking — berapa kalori untuk turun atau naik berat badan?",
     "faq.a4": "Kalkulator ini menampilkan cutting ringan (10% di bawah TDEE, sekitar 0,25–0,3 kg/minggu) dan cutting standar (20% di bawah TDEE, sekitar 0,5–0,6 kg/minggu) untuk menurunkan berat badan, plus bulking (15% di atas TDEE) untuk membangun otot dengan surplus moderat. Laju mingguan menggunakan perkiraan umum bahwa sekitar 7.700 kkal setara 1 kg lemak tubuh; hasil individu bervariasi karena air tubuh, tidur, dan latihan. Cutting ringan lebih mudah dipertahankan dan menjaga lebih banyak otot; cutting standar lebih cepat tetapi lebih sulit dijalani dalam waktu lama.",
     "faq.q5": "Apakah usia, tinggi, dan berat saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan kalkulator TDEE ini berjalan sepenuhnya di browser Anda; usia, jenis kelamin, tinggi, berat, dan tingkat aktivitas tidak pernah meninggalkan perangkat Anda. Data hanya disimpan di localStorage browser agar formulir terisi otomatis pada kunjungan berikutnya, dan Anda bisa menghapusnya kapan saja dari pengaturan browser. Alat ini memberikan perkiraan edukatif dan bukan saran medis, gizi, atau kebugaran."
+    "faq.a5": "Tidak. Semua perhitungan kalkulator TDEE ini berjalan sepenuhnya di browser Anda; usia, jenis kelamin, tinggi, berat, dan tingkat aktivitas tidak pernah meninggalkan perangkat Anda. Data hanya disimpan di localStorage browser agar formulir terisi otomatis pada kunjungan berikutnya, dan Anda bisa menghapusnya kapan saja dari pengaturan browser. Alat ini memberikan perkiraan edukatif dan bukan saran medis, gizi, atau kebugaran.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -819,7 +874,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Leichtes Defizit, Standard-Defizit oder Aufbau — wie viel essen zum Ab- oder Zunehmen?",
     "faq.a4": "Dieser Rechner zeigt ein leichtes Defizit (10 % unter dem TDEE, etwa 0,25–0,3 kg/Woche) und ein Standard-Defizit (20 % unter dem TDEE, etwa 0,5–0,6 kg/Woche) zum Abnehmen sowie einen Aufbau (15 % über dem TDEE) für moderaten Muskelaufbau. Die Wochenrate nutzt die gängige Schätzung, dass etwa 7.700 kcal einem Kilogramm Körperfett entsprechen; individuelle Ergebnisse variieren durch Wassereinlagerung, Schlaf und Training. Ein leichtes Defizit lässt sich leichter durchhalten und schont mehr Muskeln; das Standard-Defizit ist schneller, aber schwerer über längere Zeit einzuhalten.",
     "faq.q5": "Werden mein Alter, meine Größe und mein Gewicht an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen dieses TDEE-Rechners laufen vollständig in Ihrem Browser; Alter, Geschlecht, Größe, Gewicht und Aktivitätslevel verlassen Ihr Gerät nie. Sie werden nur im localStorage des Browsers gespeichert, damit das Formular beim nächsten Besuch vorausgefüllt ist, und lassen sich jederzeit in den Browsereinstellungen löschen. Dieses Tool liefert nur Bildungsschätzungen und ist keine medizinische, ernährungswissenschaftliche oder Fitness-Beratung."
+    "faq.a5": "Nein. Alle Berechnungen dieses TDEE-Rechners laufen vollständig in Ihrem Browser; Alter, Geschlecht, Größe, Gewicht und Aktivitätslevel verlassen Ihr Gerät nie. Sie werden nur im localStorage des Browsers gespeichert, damit das Formular beim nächsten Besuch vorausgefüllt ist, und lassen sich jederzeit in den Browsereinstellungen löschen. Dieses Tool liefert nur Bildungsschätzungen und ist keine medizinische, ernährungswissenschaftliche oder Fitness-Beratung.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -886,7 +946,12 @@ window.I18N_LOCALES = {
     "faq.q4": "緩やかな減量・標準減量・増量 — 減量/増量にはどれくらいのカロリーを食べればいい?",
     "faq.a4": "本ツールでは、減量用に緩やかな減量(TDEEの10%減、週あたり約0.25〜0.3 kg)と標準減量(TDEEの20%減、週あたり約0.5〜0.6 kg)、筋肉づくり用に増量(TDEEの15%増)を表示します。週あたりの変化量は、脂肪1kgが約7,700 kcalに相当するという一般的な目安に基づいており、実際の結果は水分量・睡眠・トレーニングにより変わります。緩やかな減量は続けやすく筋肉も残りやすい一方、標準減量は速いものの長期間続けるのは難しいため、無理なく維持できる方を選んでください。",
     "faq.q5": "入力した年齢・身長・体重はサーバーに送信されますか?",
-    "faq.a5": "いいえ。このTDEE計算ツールの計算はすべてブラウザ内で完結し、年齢・性別・身長・体重・活動レベルが外部サーバーに送信されることはありません。次回訪問時にフォームへ自動入力するため、ブラウザのlocalStorageにのみ保存され、いつでもブラウザの設定から削除できます。本ツールは教育目的の推定値を提供するものであり、医療・栄養・フィットネスの助言ではありません。"
+    "faq.a5": "いいえ。このTDEE計算ツールの計算はすべてブラウザ内で完結し、年齢・性別・身長・体重・活動レベルが外部サーバーに送信されることはありません。次回訪問時にフォームへ自動入力するため、ブラウザのlocalStorageにのみ保存され、いつでもブラウザの設定から削除できます。本ツールは教育目的の推定値を提供するものであり、医療・栄養・フィットネスの助言ではありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -953,6 +1018,11 @@ window.I18N_LOCALES = {
     "faq.q4": "완만한 감량, 표준 감량, 증량 중 무엇을 골라야 하나요? 감량·증량에는 칼로리를 얼마나 먹어야 하나요?",
     "faq.a4": "이 계산기는 체중 감량을 위해 완만한 감량(TDEE 대비 10% 감소, 주당 약 0.25~0.3 kg)과 표준 감량(TDEE 대비 20% 감소, 주당 약 0.5~0.6 kg)을, 근육량 증가를 위해 증량(TDEE 대비 15% 증가)을 보여줍니다. 주당 변화량은 체지방 1kg이 약 7,700 kcal에 해당한다는 통상적인 추정치를 사용하며, 실제 결과는 수분·수면·운동에 따라 달라질 수 있습니다. 완만한 감량은 유지하기 쉽고 근육 손실이 적은 반면, 표준 감량은 더 빠르지만 오래 지속하기 어려우므로 꾸준히 유지할 수 있는 강도를 고르세요.",
     "faq.q5": "입력한 나이, 키, 몸무게가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 TDEE 계산기의 모든 계산은 브라우저 안에서만 이루어지며, 나이·성별·키·몸무게·활동 수준은 외부 서버로 전송되지 않습니다. 다음 방문 시 자동으로 입력되도록 브라우저 localStorage에만 저장되며, 언제든 삭제할 수 있습니다. 이 도구는 교육 목적의 추정치를 제공할 뿐이며 의료·영양·피트니스 조언이 아닙니다."
+    "faq.a5": "아니요. 이 TDEE 계산기의 모든 계산은 브라우저 안에서만 이루어지며, 나이·성별·키·몸무게·활동 수준은 외부 서버로 전송되지 않습니다. 다음 방문 시 자동으로 입력되도록 브라우저 localStorage에만 저장되며, 언제든 삭제할 수 있습니다. 이 도구는 교육 목적의 추정치를 제공할 뿐이며 의료·영양·피트니스 조언이 아닙니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

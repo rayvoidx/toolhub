@@ -75,7 +75,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What are complex roots, and what does 'a + bi' mean?",
     "faq.a4": "When the discriminant is negative, the square root of a negative number isn't a real number — it's an imaginary number, written using i, where i = √−1. The two roots then form a complex conjugate pair, written as a + bi and a − bi, where a is the real part (−b divided by 2a) and b is the imaginary part (the square root of the discriminant's absolute value, divided by 2a). Graphically, this means the parabola stays entirely above or entirely below the x-axis and never crosses it.",
     "faq.q5": "Are my coefficients sent to a server?",
-    "faq.a5": "No. This quadratic equation solver runs entirely in your browser — the values of a, b, and c you enter never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can use it freely for homework, test prep, or quick checks with full privacy."
+    "faq.a5": "No. This quadratic equation solver runs entirely in your browser — the values of a, b, and c you enter never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking, so you can use it freely for homework, test prep, or quick checks with full privacy.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -135,7 +140,12 @@ window.I18N_LOCALES = {
     "faq.q4": "什么是复数根？'a + bi' 是什么意思？",
     "faq.a4": "当判别式为负数时，负数的平方根不是实数，而是虚数，用 i 表示，其中 i = √−1。此时两个根构成一对共轭复数，写作 a + bi 和 a − bi，其中 a 是实部（等于 −b 除以 2a），b 是虚部（等于判别式绝对值的平方根除以 2a）。从图像上看，这意味着抛物线整体位于 x 轴上方或下方，完全不与 x 轴相交。",
     "faq.q5": "我输入的系数会被发送到服务器吗？",
-    "faq.a5": "不会。本二次方程求解器完全在你的浏览器中运行 —— 你输入的 a、b、c 数值永远不会离开你的设备，也不会被上传或存储到任何服务器。无需注册、没有追踪，你可以放心地用它来做作业、备考或快速验算，输入内容完全保密。"
+    "faq.a5": "不会。本二次方程求解器完全在你的浏览器中运行 —— 你输入的 a、b、c 数值永远不会离开你的设备，也不会被上传或存储到任何服务器。无需注册、没有追踪，你可以放心地用它来做作业、备考或快速验算，输入内容完全保密。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -195,7 +205,12 @@ window.I18N_LOCALES = {
     "faq.q4": "सम्मिश्र मूल क्या होते हैं, और 'a + bi' का क्या अर्थ है?",
     "faq.a4": "जब विविक्तकर ऋणात्मक होता है, तो ऋणात्मक संख्या का वर्गमूल वास्तविक संख्या नहीं होता — यह एक काल्पनिक संख्या होती है, जिसे i से लिखा जाता है, जहाँ i = √−1 है। तब दोनों मूल एक संयुग्मी सम्मिश्र युग्म बनाते हैं, जिसे a + bi और a − bi लिखा जाता है, जहाँ a वास्तविक भाग है (−b को 2a से भाग देने पर) और b काल्पनिक भाग है (विविक्तकर के निरपेक्ष मान के वर्गमूल को 2a से भाग देने पर)। ग्राफ़ में इसका अर्थ है कि परवलय पूरी तरह x-अक्ष के ऊपर या पूरी तरह नीचे रहता है और उसे कभी नहीं छूता।",
     "faq.q5": "क्या मेरे गुणांक सर्वर पर भेजे जाते हैं?",
-    "faq.a5": "नहीं। यह द्विघात समीकरण हल करने वाला पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा दर्ज किए गए a, b और c के मान कभी आपके डिवाइस से बाहर नहीं जाते और न ही किसी सर्वर पर अपलोड या संग्रहीत होते हैं। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, इसलिए आप इसे होमवर्क, परीक्षा की तैयारी या त्वरित जाँच के लिए पूरी निजता के साथ स्वतंत्र रूप से उपयोग कर सकते हैं।"
+    "faq.a5": "नहीं। यह द्विघात समीकरण हल करने वाला पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा दर्ज किए गए a, b और c के मान कभी आपके डिवाइस से बाहर नहीं जाते और न ही किसी सर्वर पर अपलोड या संग्रहीत होते हैं। कोई साइन-अप नहीं, कोई ट्रैकिंग नहीं, इसलिए आप इसे होमवर्क, परीक्षा की तैयारी या त्वरित जाँच के लिए पूरी निजता के साथ स्वतंत्र रूप से उपयोग कर सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -255,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué son las raíces complejas y qué significa 'a + bi'?",
     "faq.a4": "Cuando el discriminante es negativo, la raíz cuadrada de un número negativo no es un número real, sino un número imaginario, escrito con i, donde i = √−1. Las dos raíces forman entonces un par complejo conjugado, escrito como a + bi y a − bi, donde a es la parte real (−b dividido entre 2a) y b es la parte imaginaria (la raíz cuadrada del valor absoluto del discriminante, dividida entre 2a). Gráficamente, esto significa que la parábola queda completamente por encima o por debajo del eje x y nunca lo cruza.",
     "faq.q5": "¿Se envían mis coeficientes a un servidor?",
-    "faq.a5": "No. Este resolutor de ecuaciones cuadráticas funciona completamente en tu navegador — los valores de a, b y c que introduces nunca salen de tu dispositivo y no se suben ni se almacenan en ningún servidor. No requiere registro ni rastreo, así que puedes usarlo libremente para tareas, preparar exámenes o comprobaciones rápidas con total privacidad."
+    "faq.a5": "No. Este resolutor de ecuaciones cuadráticas funciona completamente en tu navegador — los valores de a, b y c que introduces nunca salen de tu dispositivo y no se suben ni se almacenan en ningún servidor. No requiere registro ni rastreo, así que puedes usarlo libremente para tareas, preparar exámenes o comprobaciones rápidas con total privacidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -315,7 +335,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هي الجذور المركّبة، وماذا تعني 'a + bi'؟",
     "faq.a4": "عندما يكون المميّز سالبًا، فإن الجذر التربيعي لعدد سالب ليس عددًا حقيقيًا — بل هو عدد تخيلي، يُكتب باستخدام i، حيث i = √−1. يشكّل الجذران عندئذٍ زوجًا مركّبًا مترافقًا، يُكتب بالصورة a + bi وa − bi، حيث a هو الجزء الحقيقي (−b مقسومًا على 2a) وb هو الجزء التخيلي (الجذر التربيعي للقيمة المطلقة للمميّز، مقسومًا على 2a). بيانيًا، هذا يعني أن القطع المكافئ يبقى بالكامل فوق محور x أو تحته ولا يقطعه أبدًا.",
     "faq.q5": "هل تُرسل معاملاتي إلى خادم؟",
-    "faq.a5": "لا. يعمل حلّال المعادلات التربيعية هذا بالكامل داخل متصفحك — قيم a وb وc التي تدخلها لا تغادر جهازك أبدًا ولا تُرفع أو تُخزَّن على أي خادم. لا حاجة للتسجيل ولا تتبع، فيمكنك استخدامه بحرية للواجبات المدرسية أو التحضير للاختبارات أو التحقق السريع بخصوصية تامة."
+    "faq.a5": "لا. يعمل حلّال المعادلات التربيعية هذا بالكامل داخل متصفحك — قيم a وb وc التي تدخلها لا تغادر جهازك أبدًا ولا تُرفع أو تُخزَّن على أي خادم. لا حاجة للتسجيل ولا تتبع، فيمكنك استخدامه بحرية للواجبات المدرسية أو التحضير للاختبارات أو التحقق السريع بخصوصية تامة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -375,7 +400,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que sont les racines complexes, et que signifie « a + bi » ?",
     "faq.a4": "Lorsque le discriminant est négatif, la racine carrée d'un nombre négatif n'est pas un nombre réel — c'est un nombre imaginaire, noté avec i, où i = √−1. Les deux racines forment alors une paire complexe conjuguée, notée a + bi et a − bi, où a est la partie réelle (−b divisé par 2a) et b la partie imaginaire (la racine carrée de la valeur absolue du discriminant, divisée par 2a). Graphiquement, cela signifie que la parabole reste entièrement au-dessus ou entièrement en dessous de l'axe des x et ne le croise jamais.",
     "faq.q5": "Mes coefficients sont-ils envoyés à un serveur ?",
-    "faq.a5": "Non. Ce résolveur d'équation du second degré fonctionne entièrement dans votre navigateur — les valeurs de a, b et c que vous entrez ne quittent jamais votre appareil et ne sont ni téléversées ni stockées sur un serveur. Aucune inscription, aucun suivi, vous pouvez donc l'utiliser librement pour vos devoirs, réviser un examen ou faire une vérification rapide en toute confidentialité."
+    "faq.a5": "Non. Ce résolveur d'équation du second degré fonctionne entièrement dans votre navigateur — les valeurs de a, b et c que vous entrez ne quittent jamais votre appareil et ne sont ni téléversées ni stockées sur un serveur. Aucune inscription, aucun suivi, vous pouvez donc l'utiliser librement pour vos devoirs, réviser un examen ou faire une vérification rapide en toute confidentialité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -435,7 +465,12 @@ window.I18N_LOCALES = {
     "faq.q4": "জটিল মূল কী, এবং 'a + bi' এর অর্থ কী?",
     "faq.a4": "নিশ্চায়ক ঋণাত্মক হলে, একটি ঋণাত্মক সংখ্যার বর্গমূল বাস্তব সংখ্যা নয় — এটি একটি কাল্পনিক সংখ্যা, যা i দিয়ে লেখা হয়, যেখানে i = √−1। তখন দুটি মূল একটি অনুবন্ধী জটিল জোড়া গঠন করে, যা a + bi এবং a − bi আকারে লেখা হয়, যেখানে a হলো বাস্তব অংশ (−b কে 2a দিয়ে ভাগ করে) এবং b হলো কাল্পনিক অংশ (নিশ্চায়কের পরম মানের বর্গমূলকে 2a দিয়ে ভাগ করে)। লেখচিত্রে এর অর্থ হলো প্যারাবোলাটি সম্পূর্ণভাবে x-অক্ষের ওপরে বা সম্পূর্ণভাবে নিচে থাকে এবং কখনো তা অতিক্রম করে না।",
     "faq.q5": "আমার সহগগুলো কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই দ্বিঘাত সমীকরণ সমাধানকারীটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে a, b, c মান লেখেন তা কখনো আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি হোমওয়ার্ক, পরীক্ষার প্রস্তুতি বা দ্রুত যাচাইয়ের জন্য সম্পূর্ণ গোপনীয়তার সাথে স্বাধীনভাবে এটি ব্যবহার করতে পারেন।"
+    "faq.a5": "না। এই দ্বিঘাত সমীকরণ সমাধানকারীটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে a, b, c মান লেখেন তা কখনো আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। কোনো সাইন-আপ নেই, কোনো ট্র্যাকিং নেই, তাই আপনি হোমওয়ার্ক, পরীক্ষার প্রস্তুতি বা দ্রুত যাচাইয়ের জন্য সম্পূর্ণ গোপনীয়তার সাথে স্বাধীনভাবে এটি ব্যবহার করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -495,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que são raízes complexas, e o que significa 'a + bi'?",
     "faq.a4": "Quando o discriminante é negativo, a raiz quadrada de um número negativo não é um número real — é um número imaginário, escrito com i, onde i = √−1. As duas raízes formam então um par complexo conjugado, escrito como a + bi e a − bi, onde a é a parte real (−b dividido por 2a) e b é a parte imaginária (a raiz quadrada do valor absoluto do discriminante, dividida por 2a). Graficamente, isso significa que a parábola fica inteiramente acima ou inteiramente abaixo do eixo x e nunca o cruza.",
     "faq.q5": "Meus coeficientes são enviados a um servidor?",
-    "faq.a5": "Não. Este resolvedor de equação do segundo grau funciona inteiramente no seu navegador — os valores de a, b e c que você insere nunca saem do seu dispositivo e não são enviados nem armazenados em nenhum servidor. Não há cadastro nem rastreamento, então você pode usá-lo livremente para tarefas escolares, preparação para provas ou verificações rápidas com total privacidade."
+    "faq.a5": "Não. Este resolvedor de equação do segundo grau funciona inteiramente no seu navegador — os valores de a, b e c que você insere nunca saem do seu dispositivo e não são enviados nem armazenados em nenhum servidor. Não há cadastro nem rastreamento, então você pode usá-lo livremente para tarefas escolares, preparação para provas ou verificações rápidas com total privacidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -555,7 +595,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что такое комплексные корни и что означает 'a + bi'?",
     "faq.a4": "Когда дискриминант отрицателен, квадратный корень из отрицательного числа не является действительным числом — это мнимое число, записываемое с помощью i, где i = √−1. Тогда два корня образуют пару комплексно-сопряжённых чисел, записываемых как a + bi и a − bi, где a — действительная часть (−b, делённое на 2a), а b — мнимая часть (квадратный корень из модуля дискриминанта, делённый на 2a). Графически это означает, что парабола целиком расположена выше или ниже оси x и никогда её не пересекает.",
     "faq.q5": "Отправляются ли мои коэффициенты на сервер?",
-    "faq.a5": "Нет. Этот калькулятор для решения квадратных уравнений полностью работает в вашем браузере — введённые вами значения a, b и c никогда не покидают ваше устройство и не загружаются и не хранятся ни на каком сервере. Регистрация и отслеживание не требуются, поэтому вы можете свободно использовать его для домашних заданий, подготовки к экзаменам или быстрой проверки, сохраняя полную конфиденциальность."
+    "faq.a5": "Нет. Этот калькулятор для решения квадратных уравнений полностью работает в вашем браузере — введённые вами значения a, b и c никогда не покидают ваше устройство и не загружаются и не хранятся ни на каком сервере. Регистрация и отслеживание не требуются, поэтому вы можете свободно использовать его для домашних заданий, подготовки к экзаменам или быстрой проверки, сохраняя полную конфиденциальность.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -615,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "مرکب جڑیں کیا ہیں، اور 'a + bi' کا کیا مطلب ہے؟",
     "faq.a4": "جب ڈسکریمیننٹ منفی ہو تو منفی عدد کا جذر حقیقی عدد نہیں ہوتا — یہ ایک تصوراتی عدد ہوتا ہے، جسے i سے لکھا جاتا ہے، جہاں i = √−1۔ تب دونوں جڑیں ایک مرکب مترافق جوڑا بناتی ہیں، جسے a + bi اور a − bi لکھا جاتا ہے، جہاں a حقیقی جزو ہے (−b کو 2a سے تقسیم کرنے پر) اور b تصوراتی جزو ہے (ڈسکریمیننٹ کی مطلق قدر کا جذر، 2a سے تقسیم کرنے پر)۔ گرافی طور پر اس کا مطلب ہے کہ پیرابولا مکمل طور پر x-محور کے اوپر یا مکمل طور پر نیچے رہتا ہے اور اسے کبھی نہیں کاٹتا۔",
     "faq.q5": "کیا میرے ضرائب سرور پر بھیجے جاتے ہیں؟",
-    "faq.a5": "نہیں۔ یہ کواڈریٹک مساوات حل کار مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کے درج کردہ a، b اور c کی قدریں کبھی آپ کے آلے سے باہر نہیں جاتیں اور نہ ہی کسی سرور پر اپ لوڈ یا محفوظ ہوتی ہیں۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں، اس لیے آپ اسے مکمل رازداری کے ساتھ ہوم ورک، امتحان کی تیاری، یا فوری جانچ کے لیے آزادانہ استعمال کر سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ کواڈریٹک مساوات حل کار مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کے درج کردہ a، b اور c کی قدریں کبھی آپ کے آلے سے باہر نہیں جاتیں اور نہ ہی کسی سرور پر اپ لوڈ یا محفوظ ہوتی ہیں۔ کوئی سائن اپ نہیں، کوئی ٹریکنگ نہیں، اس لیے آپ اسے مکمل رازداری کے ساتھ ہوم ورک، امتحان کی تیاری، یا فوری جانچ کے لیے آزادانہ استعمال کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -675,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa itu akar kompleks, dan apa arti 'a + bi'?",
     "faq.a4": "Ketika diskriminan negatif, akar kuadrat dari bilangan negatif bukanlah bilangan real — itu adalah bilangan imajiner, ditulis dengan i, di mana i = √−1. Kedua akar kemudian membentuk sepasang bilangan kompleks konjugat, ditulis sebagai a + bi dan a − bi, di mana a adalah bagian real (−b dibagi 2a) dan b adalah bagian imajiner (akar kuadrat dari nilai absolut diskriminan, dibagi 2a). Secara grafis, ini berarti parabola berada sepenuhnya di atas atau sepenuhnya di bawah sumbu x dan tidak pernah memotongnya.",
     "faq.q5": "Apakah koefisien saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator persamaan kuadrat ini sepenuhnya berjalan di browser Anda — nilai a, b, dan c yang Anda masukkan tidak pernah meninggalkan perangkat Anda dan tidak diunggah atau disimpan di server mana pun. Tidak perlu mendaftar dan tidak ada pelacakan, jadi Anda bisa menggunakannya dengan bebas untuk pekerjaan rumah, persiapan ujian, atau pengecekan cepat dengan privasi penuh."
+    "faq.a5": "Tidak. Kalkulator persamaan kuadrat ini sepenuhnya berjalan di browser Anda — nilai a, b, dan c yang Anda masukkan tidak pernah meninggalkan perangkat Anda dan tidak diunggah atau disimpan di server mana pun. Tidak perlu mendaftar dan tidak ada pelacakan, jadi Anda bisa menggunakannya dengan bebas untuk pekerjaan rumah, persiapan ujian, atau pengecekan cepat dengan privasi penuh.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -735,7 +790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was sind komplexe Lösungen, und was bedeutet 'a + bi'?",
     "faq.a4": "Ist die Diskriminante negativ, ist die Quadratwurzel einer negativen Zahl keine reelle Zahl — sie ist eine imaginäre Zahl, geschrieben mit i, wobei i = √−1 ist. Die beiden Lösungen bilden dann ein konjugiert komplexes Paar, geschrieben als a + bi und a − bi, wobei a der Realteil ist (−b geteilt durch 2a) und b der Imaginärteil (die Quadratwurzel des Absolutbetrags der Diskriminante, geteilt durch 2a). Grafisch bedeutet das, dass die Parabel vollständig oberhalb oder vollständig unterhalb der x-Achse liegt und sie nie kreuzt.",
     "faq.q5": "Werden meine Koeffizienten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Löser für quadratische Gleichungen läuft vollständig in Ihrem Browser — die von Ihnen eingegebenen Werte für a, b und c verlassen niemals Ihr Gerät und werden nicht auf einen Server hochgeladen oder dort gespeichert. Es gibt keine Anmeldung und kein Tracking, sodass Sie ihn frei für Hausaufgaben, Prüfungsvorbereitung oder schnelle Kontrollen mit voller Privatsphäre nutzen können."
+    "faq.a5": "Nein. Dieser Löser für quadratische Gleichungen läuft vollständig in Ihrem Browser — die von Ihnen eingegebenen Werte für a, b und c verlassen niemals Ihr Gerät und werden nicht auf einen Server hochgeladen oder dort gespeichert. Es gibt keine Anmeldung und kein Tracking, sodass Sie ihn frei für Hausaufgaben, Prüfungsvorbereitung oder schnelle Kontrollen mit voller Privatsphäre nutzen können.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -795,7 +855,12 @@ window.I18N_LOCALES = {
     "faq.q4": "複素数解とは何ですか？「a + bi」の意味は？",
     "faq.a4": "判別式が負のとき、負の数の平方根は実数ではなく虚数になり、i を使って表します（i = √−1）。このとき2つの解は共役な複素数のペアとなり、a + bi と a − bi の形で表されます。a は実部（−b を 2a で割った値）、b は虚部（判別式の絶対値の平方根を 2a で割った値）です。グラフ上では、放物線が完全にx軸の上側またはx軸の下側にあり、決してx軸と交わらないことを意味します。",
     "faq.q5": "入力した係数はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この二次方程式ソルバーはすべてブラウザ内で完結します — 入力した a、b、c の値がデバイスの外に送られることはなく、サーバーへのアップロードや保存も一切行われません。登録もトラッキングも不要なので、宿題やテスト対策、ちょっとした確認にも、プライバシーを気にせず自由にお使いいただけます。"
+    "faq.a5": "いいえ。この二次方程式ソルバーはすべてブラウザ内で完結します — 入力した a、b、c の値がデバイスの外に送られることはなく、サーバーへのアップロードや保存も一切行われません。登録もトラッキングも不要なので、宿題やテスト対策、ちょっとした確認にも、プライバシーを気にせず自由にお使いいただけます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -855,6 +920,11 @@ window.I18N_LOCALES = {
     "faq.q4": "허근(복소수근)이란 무엇이며 'a + bi'는 무슨 뜻인가요?",
     "faq.a4": "판별식이 음수이면 음수의 제곱근은 실수가 아니라 허수이며, i로 표기합니다(i = √−1). 이때 두 근은 켤레 복소수 쌍을 이루며 a + bi, a − bi로 표기합니다. 여기서 a는 실수부(−b를 2a로 나눈 값), b는 허수부(판별식의 절댓값의 제곱근을 2a로 나눈 값)입니다. 그래프로 보면 포물선이 x축 전체 위쪽 또는 전체 아래쪽에만 있고 x축과 절대 교차하지 않는다는 뜻입니다.",
     "faq.q5": "입력한 계수가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 이차방정식 계산기는 전적으로 사용자의 브라우저에서 실행됩니다 — 입력하신 a, b, c 값은 기기 밖으로 나가지 않으며 서버에 업로드되거나 저장되지 않습니다. 회원가입이나 추적이 전혀 없으므로 숙제, 시험 대비, 간단한 검산 등에 개인정보 걱정 없이 자유롭게 사용하실 수 있습니다."
+    "faq.a5": "아니요. 이 이차방정식 계산기는 전적으로 사용자의 브라우저에서 실행됩니다 — 입력하신 a, b, c 값은 기기 밖으로 나가지 않으며 서버에 업로드되거나 저장되지 않습니다. 회원가입이나 추적이 전혀 없으므로 숙제, 시험 대비, 간단한 검산 등에 개인정보 걱정 없이 자유롭게 사용하실 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

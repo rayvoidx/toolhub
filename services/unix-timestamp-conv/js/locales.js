@@ -72,7 +72,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What is the year 2038 problem, and does it limit this converter?",
     "faq.a4": "Systems that store Unix time in a signed 32-bit integer run out of room at 03:14:07 UTC on 19 January 2038 (timestamp 2147483647), and the counter can wrap around to 1901 — the reason it is called the Y2K38 problem. It affects old C programs and embedded devices, not this tool: your browser keeps the value as a 64-bit floating point number, so this converter works from about 275,760 BC to AD 275,760 (±8.64e15 milliseconds). Anything beyond that range gets an explicit out-of-range message rather than a wrong date.",
     "faq.q5": "Is the timestamp I paste sent to a server?",
-    "faq.a5": "No. Every conversion runs inside your browser with the built-in Date and Intl features — there is no API call, no analytics on your input, and nothing is uploaded or logged. The page also stores nothing about your conversions: the timestamp and unit you choose live only in the open tab and disappear when you close it. That means production log data or customer timestamps are safe to paste here, and the converter keeps working offline once the page has loaded."
+    "faq.a5": "No. Every conversion runs inside your browser with the built-in Date and Intl features — there is no API call, no analytics on your input, and nothing is uploaded or logged. The page also stores nothing about your conversions: the timestamp and unit you choose live only in the open tab and disappear when you close it. That means production log data or customer timestamps are safe to paste here, and the converter keeps working offline once the page has loaded.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -129,7 +134,12 @@ window.I18N_LOCALES = {
     "faq.q4": "什么是 2038 年问题？它会限制这个工具吗？",
     "faq.a4": "用 32 位有符号整数存储 Unix 时间的系统，会在 2038 年 1 月 19 日 03:14:07 UTC（时间戳 2147483647）溢出，计数可能回卷到 1901 年，这就是 Y2K38 问题。它影响的是老旧 C 程序和嵌入式设备，而不是本工具：浏览器用 64 位浮点数保存该值，因此可转换范围约为公元前 275760 年到公元 275760 年（±8.64e15 毫秒）。超出范围时会明确提示，而不会给出错误日期。",
     "faq.q5": "我粘贴的时间戳会被发送到服务器吗？",
-    "faq.a5": "不会。所有转换都在你的浏览器里用内置的 Date 和 Intl 完成，没有任何 API 调用，也不会上传或记录你的输入。页面同样不保存转换记录：输入的时间戳和选择的单位只存在于当前标签页，关闭即消失。所以生产日志或客户数据可以放心粘贴；页面加载后即使离线也能继续使用。"
+    "faq.a5": "不会。所有转换都在你的浏览器里用内置的 Date 和 Intl 完成，没有任何 API 调用，也不会上传或记录你的输入。页面同样不保存转换记录：输入的时间戳和选择的单位只存在于当前标签页，关闭即消失。所以生产日志或客户数据可以放心粘贴；页面加载后即使离线也能继续使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -186,7 +196,12 @@ window.I18N_LOCALES = {
     "faq.q4": "2038 की समस्या क्या है, क्या उससे यह कन्वर्टर सीमित होता है?",
     "faq.a4": "जो सिस्टम Unix समय को 32-बिट signed पूर्णांक में रखते हैं, उनकी जगह 19 जनवरी 2038 को 03:14:07 UTC (टाइमस्टैम्प 2147483647) पर ख़त्म हो जाती है और गिनती 1901 पर लौट सकती है — इसे ही Y2K38 समस्या कहते हैं। यह पुराने C प्रोग्राम और एम्बेडेड उपकरणों पर असर डालती है, इस टूल पर नहीं: आपका ब्राउज़र यह मान 64-बिट फ़्लोटिंग पॉइंट में रखता है, इसलिए यह कन्वर्टर लगभग 275,760 ईसा पूर्व से 275,760 ईस्वी तक (±8.64e15 मिलीसेकंड) काम करता है। इस सीमा के बाहर ग़लत तारीख के बजाय साफ़ चेतावनी दिखती है।",
     "faq.q5": "क्या मैं जो टाइमस्टैम्प पेस्ट करता हूँ वह सर्वर पर जाता है?",
-    "faq.a5": "नहीं। हर गणना आपके ब्राउज़र में मौजूद Date और Intl सुविधाओं से होती है — कोई API कॉल नहीं, आपके इनपुट पर कोई एनालिटिक्स नहीं, और कुछ भी अपलोड या लॉग नहीं होता। पेज आपकी गणनाएँ सहेजता भी नहीं: डाला गया टाइमस्टैम्प और चुनी गई यूनिट सिर्फ़ खुले टैब में रहते हैं और टैब बंद करते ही मिट जाते हैं। इसलिए प्रोडक्शन लॉग या ग्राहक का डेटा यहाँ पेस्ट करना सुरक्षित है, और पेज एक बार लोड होने के बाद ऑफ़लाइन भी चलता है।"
+    "faq.a5": "नहीं। हर गणना आपके ब्राउज़र में मौजूद Date और Intl सुविधाओं से होती है — कोई API कॉल नहीं, आपके इनपुट पर कोई एनालिटिक्स नहीं, और कुछ भी अपलोड या लॉग नहीं होता। पेज आपकी गणनाएँ सहेजता भी नहीं: डाला गया टाइमस्टैम्प और चुनी गई यूनिट सिर्फ़ खुले टैब में रहते हैं और टैब बंद करते ही मिट जाते हैं। इसलिए प्रोडक्शन लॉग या ग्राहक का डेटा यहाँ पेस्ट करना सुरक्षित है, और पेज एक बार लोड होने के बाद ऑफ़लाइन भी चलता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -243,7 +258,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué es el problema del año 2038 y limita a este conversor?",
     "faq.a4": "Los sistemas que guardan el tiempo Unix en un entero de 32 bits con signo se quedan sin margen a las 03:14:07 UTC del 19 de enero de 2038 (timestamp 2147483647) y el contador puede saltar a 1901: es el famoso problema Y2K38. Afecta a programas antiguos en C y a dispositivos embebidos, no a esta herramienta: tu navegador guarda el valor como número de coma flotante de 64 bits, así que el conversor abarca desde unos 275.760 a. C. hasta 275.760 d. C. (±8,64e15 milisegundos). Fuera de ese rango verás un aviso explícito en lugar de una fecha incorrecta.",
     "faq.q5": "¿El timestamp que pego se envía a algún servidor?",
-    "faq.a5": "No. Cada conversión se ejecuta dentro de tu navegador con las funciones Date e Intl integradas: no hay llamadas a ninguna API, no se analiza lo que escribes y nada se sube ni se registra. La página tampoco guarda tus conversiones: el timestamp y la unidad elegida viven solo en la pestaña abierta y desaparecen al cerrarla. Por eso puedes pegar aquí logs de producción o datos de clientes con tranquilidad, y el conversor sigue funcionando sin conexión una vez cargada la página."
+    "faq.a5": "No. Cada conversión se ejecuta dentro de tu navegador con las funciones Date e Intl integradas: no hay llamadas a ninguna API, no se analiza lo que escribes y nada se sube ni se registra. La página tampoco guarda tus conversiones: el timestamp y la unidad elegida viven solo en la pestaña abierta y desaparecen al cerrarla. Por eso puedes pegar aquí logs de producción o datos de clientes con tranquilidad, y el conversor sigue funcionando sin conexión una vez cargada la página.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -300,7 +320,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما مشكلة عام 2038، وهل تحدّ من هذا المحوّل؟",
     "faq.a4": "الأنظمة التي تخزّن وقت Unix في عدد صحيح 32-بت بإشارة ينفد مداها عند 03:14:07 UTC يوم 19 يناير 2038 (الطابع 2147483647)، وقد يلتف العدّاد إلى 1901، ولهذا تسمى مشكلة Y2K38. وهي تصيب برامج C القديمة والأجهزة المدمجة، لا هذه الأداة: فالمتصفح يحفظ القيمة كعدد عشري 64-بت، ما يجعل المحوّل يعمل من نحو 275760 ق.م حتى 275760 م (‏±8.64e15 مللي ثانية). وأي قيمة خارج هذا المدى تُقابَل برسالة واضحة بدل تاريخ خاطئ.",
     "faq.q5": "هل يُرسل الطابع الزمني الذي ألصقه إلى خادم؟",
-    "faq.a5": "لا. كل عملية تحويل تجري داخل متصفحك بالاعتماد على Date وIntl المدمجتين: لا استدعاء لأي واجهة برمجية، ولا تحليلات على ما تكتبه، ولا شيء يُرفع أو يُسجَّل. كما أن الصفحة لا تحفظ عملياتك: الطابع الزمني والوحدة التي تختارها يبقيان في التبويب المفتوح فقط ويختفيان بإغلاقه. لذلك يمكنك لصق سجلات الإنتاج أو بيانات العملاء بأمان، ويستمر المحوّل في العمل دون اتصال بالإنترنت بعد تحميل الصفحة."
+    "faq.a5": "لا. كل عملية تحويل تجري داخل متصفحك بالاعتماد على Date وIntl المدمجتين: لا استدعاء لأي واجهة برمجية، ولا تحليلات على ما تكتبه، ولا شيء يُرفع أو يُسجَّل. كما أن الصفحة لا تحفظ عملياتك: الطابع الزمني والوحدة التي تختارها يبقيان في التبويب المفتوح فقط ويختفيان بإغلاقه. لذلك يمكنك لصق سجلات الإنتاج أو بيانات العملاء بأمان، ويستمر المحوّل في العمل دون اتصال بالإنترنت بعد تحميل الصفحة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -357,7 +382,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qu'est-ce que le problème de l'an 2038 et limite-t-il ce convertisseur ?",
     "faq.a4": "Les systèmes qui stockent le temps Unix dans un entier signé 32 bits arrivent à saturation le 19 janvier 2038 à 03:14:07 UTC (timestamp 2147483647), et le compteur peut repartir en 1901 : c'est le problème Y2K38. Il touche les vieux programmes C et les systèmes embarqués, pas cet outil : votre navigateur conserve la valeur en nombre flottant 64 bits, si bien que le convertisseur couvre environ 275 760 av. J.-C. à 275 760 apr. J.-C. (±8,64e15 millisecondes). Au-delà, un message d'erreur explicite s'affiche plutôt qu'une date fausse.",
     "faq.q5": "Le timestamp que je colle est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Chaque conversion s'exécute dans votre navigateur avec les fonctions Date et Intl intégrées : aucun appel d'API, aucune analyse de ce que vous saisissez, rien n'est envoyé ni journalisé. La page ne conserve pas non plus vos conversions : le timestamp et l'unité choisie ne vivent que dans l'onglet ouvert et disparaissent à sa fermeture. Vous pouvez donc y coller des logs de production ou des données client en toute tranquillité, et le convertisseur continue de fonctionner hors ligne une fois la page chargée."
+    "faq.a5": "Non. Chaque conversion s'exécute dans votre navigateur avec les fonctions Date et Intl intégrées : aucun appel d'API, aucune analyse de ce que vous saisissez, rien n'est envoyé ni journalisé. La page ne conserve pas non plus vos conversions : le timestamp et l'unité choisie ne vivent que dans l'onglet ouvert et disparaissent à sa fermeture. Vous pouvez donc y coller des logs de production ou des données client en toute tranquillité, et le convertisseur continue de fonctionner hors ligne une fois la page chargée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -414,7 +444,12 @@ window.I18N_LOCALES = {
     "faq.q4": "২০৩৮ সমস্যা কী, এটি কি এই কনভার্টারকে সীমিত করে?",
     "faq.a4": "যেসব সিস্টেম Unix সময়কে ৩২-বিট signed পূর্ণসংখ্যায় রাখে, তাদের জায়গা ফুরায় ১৯ জানুয়ারি ২০৩৮, ০৩:১৪:০৭ UTC-তে (টাইমস্ট্যাম্প 2147483647), আর গণনা ১৯০১-এ ফিরে যেতে পারে — একেই বলে Y2K38 সমস্যা। এটি পুরোনো C প্রোগ্রাম ও এমবেডেড যন্ত্রে ঘটে, এই টুলে নয়: আপনার ব্রাউজার মানটি ৬৪-বিট ফ্লোটিং পয়েন্টে রাখে, তাই কনভার্টার প্রায় ২৭৫,৭৬০ খ্রিস্টপূর্ব থেকে ২৭৫,৭৬০ খ্রিস্টাব্দ (±8.64e15 মিলিসেকেন্ড) পর্যন্ত কাজ করে। সীমার বাইরে ভুল তারিখের বদলে স্পষ্ট বার্তা দেখানো হয়।",
     "faq.q5": "আমি যে টাইমস্ট্যাম্প পেস্ট করি তা কি সার্ভারে যায়?",
-    "faq.a5": "না। প্রতিটি রূপান্তর আপনার ব্রাউজারেই অন্তর্নির্মিত Date ও Intl দিয়ে হয় — কোনো API কল নেই, আপনার ইনপুট নিয়ে কোনো অ্যানালিটিক্স নেই, কিছুই আপলোড বা লগ হয় না। পেজটি আপনার রূপান্তরও সংরক্ষণ করে না: দেওয়া টাইমস্ট্যাম্প ও বেছে নেওয়া একক শুধু খোলা ট্যাবেই থাকে, ট্যাব বন্ধ করলেই মুছে যায়। তাই প্রোডাকশন লগ বা গ্রাহকের ডেটা নিশ্চিন্তে পেস্ট করতে পারেন, আর পেজ একবার লোড হলে অফলাইনেও কাজ চলে।"
+    "faq.a5": "না। প্রতিটি রূপান্তর আপনার ব্রাউজারেই অন্তর্নির্মিত Date ও Intl দিয়ে হয় — কোনো API কল নেই, আপনার ইনপুট নিয়ে কোনো অ্যানালিটিক্স নেই, কিছুই আপলোড বা লগ হয় না। পেজটি আপনার রূপান্তরও সংরক্ষণ করে না: দেওয়া টাইমস্ট্যাম্প ও বেছে নেওয়া একক শুধু খোলা ট্যাবেই থাকে, ট্যাব বন্ধ করলেই মুছে যায়। তাই প্রোডাকশন লগ বা গ্রাহকের ডেটা নিশ্চিন্তে পেস্ট করতে পারেন, আর পেজ একবার লোড হলে অফলাইনেও কাজ চলে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -471,7 +506,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que é o problema do ano 2038 e ele limita este conversor?",
     "faq.a4": "Sistemas que guardam o tempo Unix em um inteiro de 32 bits com sinal esgotam a capacidade às 03:14:07 UTC de 19 de janeiro de 2038 (timestamp 2147483647), e o contador pode voltar para 1901 — é o problema Y2K38. Ele afeta programas antigos em C e dispositivos embarcados, não esta ferramenta: o navegador guarda o valor como ponto flutuante de 64 bits, então o conversor cobre de cerca de 275.760 a.C. até 275.760 d.C. (±8,64e15 milissegundos). Fora desse intervalo aparece um aviso explícito, em vez de uma data errada.",
     "faq.q5": "O timestamp que eu colo é enviado para algum servidor?",
-    "faq.a5": "Não. Cada conversão roda dentro do seu navegador com os recursos Date e Intl embutidos: não há chamada de API, nenhuma análise do que você digita e nada é enviado ou registrado. A página também não guarda suas conversões: o timestamp e a unidade escolhida existem apenas na aba aberta e somem quando você a fecha. Assim, dá para colar logs de produção ou dados de clientes com tranquilidade, e o conversor continua funcionando offline depois que a página carrega."
+    "faq.a5": "Não. Cada conversão roda dentro do seu navegador com os recursos Date e Intl embutidos: não há chamada de API, nenhuma análise do que você digita e nada é enviado ou registrado. A página também não guarda suas conversões: o timestamp e a unidade escolhida existem apenas na aba aberta e somem quando você a fecha. Assim, dá para colar logs de produção ou dados de clientes com tranquilidade, e o conversor continua funcionando offline depois que a página carrega.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -528,7 +568,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что такое проблема 2038 года и ограничивает ли она конвертер?",
     "faq.a4": "Системы, хранящие Unix-время в 32-битном знаковом целом, исчерпают диапазон 19 января 2038 года в 03:14:07 UTC (таймстамп 2147483647), и счётчик может перескочить в 1901 год — это и есть проблема Y2K38. Она касается старых программ на C и встраиваемых устройств, но не этого инструмента: браузер хранит значение как 64-битное число с плавающей точкой, поэтому конвертер работает примерно с 275 760 года до н. э. по 275 760 год н. э. (±8,64e15 миллисекунд). За пределами диапазона вы увидите явное сообщение, а не неверную дату.",
     "faq.q5": "Отправляется ли вставленный таймстамп на сервер?",
-    "faq.a5": "Нет. Все вычисления выполняются в вашем браузере встроенными Date и Intl: никаких обращений к API, никакой аналитики по введённым данным, ничего не загружается и не пишется в логи. Страница не сохраняет и историю: введённый таймстамп и выбранные единицы живут только в открытой вкладке и исчезают при её закрытии. Поэтому сюда спокойно можно вставлять боевые логи или данные клиентов, а после загрузки страница работает и без интернета."
+    "faq.a5": "Нет. Все вычисления выполняются в вашем браузере встроенными Date и Intl: никаких обращений к API, никакой аналитики по введённым данным, ничего не загружается и не пишется в логи. Страница не сохраняет и историю: введённый таймстамп и выбранные единицы живут только в открытой вкладке и исчезают при её закрытии. Поэтому сюда спокойно можно вставлять боевые логи или данные клиентов, а после загрузки страница работает и без интернета.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -585,7 +630,12 @@ window.I18N_LOCALES = {
     "faq.q4": "2038 کا مسئلہ کیا ہے، کیا اس سے یہ کنورٹر محدود ہوتا ہے؟",
     "faq.a4": "جو سسٹم Unix وقت کو 32-بٹ signed عدد میں رکھتے ہیں، ان کی گنجائش 19 جنوری 2038 کو 03:14:07 UTC (ٹائم اسٹیمپ 2147483647) پر ختم ہو جاتی ہے اور شمار 1901 پر پلٹ سکتا ہے — اسی کو Y2K38 مسئلہ کہتے ہیں۔ یہ پرانے C پروگراموں اور ایمبیڈڈ آلات کو متاثر کرتا ہے، اس ٹول کو نہیں: آپ کا براؤزر یہ ویلیو 64-بٹ فلوٹنگ پوائنٹ میں رکھتا ہے، اس لیے یہ کنورٹر تقریباً 275,760 ق م سے 275,760 عیسوی تک (±8.64e15 ملی سیکنڈ) کام کرتا ہے۔ اس حد سے باہر غلط تاریخ کے بجائے واضح پیغام دکھایا جاتا ہے۔",
     "faq.q5": "کیا میں جو ٹائم اسٹیمپ پیسٹ کرتا ہوں وہ سرور پر جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر تبدیلی آپ کے براؤزر میں موجود Date اور Intl سے ہوتی ہے — کوئی API کال نہیں، آپ کے ان پٹ پر کوئی اینالیٹکس نہیں، اور کچھ بھی اپ لوڈ یا لاگ نہیں ہوتا۔ صفحہ آپ کی تبدیلیاں محفوظ بھی نہیں کرتا: دیا گیا ٹائم اسٹیمپ اور منتخب اکائی صرف کھلے ٹیب میں رہتے ہیں اور ٹیب بند ہوتے ہی مٹ جاتے ہیں۔ اس لیے پروڈکشن لاگز یا صارفین کا ڈیٹا یہاں پیسٹ کرنا محفوظ ہے، اور صفحہ ایک بار لوڈ ہونے کے بعد آف لائن بھی چلتا ہے۔"
+    "faq.a5": "نہیں۔ ہر تبدیلی آپ کے براؤزر میں موجود Date اور Intl سے ہوتی ہے — کوئی API کال نہیں، آپ کے ان پٹ پر کوئی اینالیٹکس نہیں، اور کچھ بھی اپ لوڈ یا لاگ نہیں ہوتا۔ صفحہ آپ کی تبدیلیاں محفوظ بھی نہیں کرتا: دیا گیا ٹائم اسٹیمپ اور منتخب اکائی صرف کھلے ٹیب میں رہتے ہیں اور ٹیب بند ہوتے ہی مٹ جاتے ہیں۔ اس لیے پروڈکشن لاگز یا صارفین کا ڈیٹا یہاں پیسٹ کرنا محفوظ ہے، اور صفحہ ایک بار لوڈ ہونے کے بعد آف لائن بھی چلتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -642,7 +692,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa itu masalah tahun 2038, dan apakah membatasi konverter ini?",
     "faq.a4": "Sistem yang menyimpan waktu Unix dalam integer 32-bit bertanda akan kehabisan ruang pada 03:14:07 UTC, 19 Januari 2038 (timestamp 2147483647), dan penghitungnya bisa berbalik ke 1901 — inilah masalah Y2K38. Yang terdampak adalah program C lama dan perangkat tertanam, bukan alat ini: browser Anda menyimpan nilainya sebagai bilangan floating point 64-bit, sehingga konverter bekerja dari sekitar 275.760 SM sampai 275.760 M (±8,64e15 milidetik). Di luar rentang itu akan muncul pesan yang jelas, bukan tanggal yang salah.",
     "faq.q5": "Apakah timestamp yang saya tempel dikirim ke server?",
-    "faq.a5": "Tidak. Setiap konversi berjalan di dalam browser Anda memakai fitur bawaan Date dan Intl: tidak ada panggilan API, tidak ada analitik atas input Anda, dan tidak ada yang diunggah atau dicatat. Halaman ini juga tidak menyimpan konversi Anda: timestamp dan satuan yang dipilih hanya hidup di tab yang terbuka dan hilang saat ditutup. Jadi log produksi atau data pelanggan aman ditempel di sini, dan konverter tetap jalan offline setelah halaman termuat."
+    "faq.a5": "Tidak. Setiap konversi berjalan di dalam browser Anda memakai fitur bawaan Date dan Intl: tidak ada panggilan API, tidak ada analitik atas input Anda, dan tidak ada yang diunggah atau dicatat. Halaman ini juga tidak menyimpan konversi Anda: timestamp dan satuan yang dipilih hanya hidup di tab yang terbuka dan hilang saat ditutup. Jadi log produksi atau data pelanggan aman ditempel di sini, dan konverter tetap jalan offline setelah halaman termuat.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -699,7 +754,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist das Jahr-2038-Problem, und begrenzt es diesen Konverter?",
     "faq.a4": "Systeme, die Unix-Zeit in einem vorzeichenbehafteten 32-Bit-Integer speichern, laufen am 19. Januar 2038 um 03:14:07 UTC über (Timestamp 2147483647), und der Zähler kann auf 1901 zurückspringen — das ist das Y2K38-Problem. Betroffen sind alte C-Programme und Embedded-Geräte, nicht dieses Tool: Ihr Browser hält den Wert als 64-Bit-Gleitkommazahl, daher arbeitet der Konverter von etwa 275.760 v. Chr. bis 275.760 n. Chr. (±8,64e15 Millisekunden). Außerhalb dieses Bereichs erscheint ein klarer Hinweis statt eines falschen Datums.",
     "faq.q5": "Wird der eingefügte Timestamp an einen Server gesendet?",
-    "faq.a5": "Nein. Jede Umrechnung läuft in Ihrem Browser mit den eingebauten Funktionen Date und Intl: kein API-Aufruf, keine Analyse Ihrer Eingabe, nichts wird hochgeladen oder protokolliert. Die Seite speichert auch Ihre Umrechnungen nicht: Timestamp und gewählte Einheit existieren nur im geöffneten Tab und verschwinden beim Schließen. Produktions-Logs oder Kundendaten können Sie hier also bedenkenlos einfügen, und nach dem Laden funktioniert der Konverter auch offline."
+    "faq.a5": "Nein. Jede Umrechnung läuft in Ihrem Browser mit den eingebauten Funktionen Date und Intl: kein API-Aufruf, keine Analyse Ihrer Eingabe, nichts wird hochgeladen oder protokolliert. Die Seite speichert auch Ihre Umrechnungen nicht: Timestamp und gewählte Einheit existieren nur im geöffneten Tab und verschwinden beim Schließen. Produktions-Logs oder Kundendaten können Sie hier also bedenkenlos einfügen, und nach dem Laden funktioniert der Konverter auch offline.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -756,7 +816,12 @@ window.I18N_LOCALES = {
     "faq.q4": "2038年問題とは何ですか？このツールにも影響しますか？",
     "faq.a4": "Unix時間を32ビット符号付き整数で保持するシステムは、2038年1月19日 03:14:07 UTC（タイムスタンプ 2147483647）で上限に達し、カウンタが1901年に巻き戻ることがあります。これがY2K38問題です。影響を受けるのは古いCプログラムや組み込み機器で、このツールは対象外です。ブラウザは値を64ビット浮動小数点で保持するため、およそ紀元前275760年から西暦275760年（±8.64e15ミリ秒）まで変換できます。範囲を超えた場合は誤った日時ではなく、明示的なエラーを表示します。",
     "faq.q5": "貼り付けたタイムスタンプはサーバーに送信されますか？",
-    "faq.a5": "送信されません。変換はすべてブラウザ内蔵の Date と Intl だけで行われ、API呼び出しも、入力内容の解析も、アップロードもログ記録もありません。ページは変換履歴も保存しません。入力したタイムスタンプや選んだ単位は開いているタブの中だけに存在し、閉じれば消えます。本番ログや顧客データも安心して貼り付けられ、いちど読み込めばオフラインでも動作します。"
+    "faq.a5": "送信されません。変換はすべてブラウザ内蔵の Date と Intl だけで行われ、API呼び出しも、入力内容の解析も、アップロードもログ記録もありません。ページは変換履歴も保存しません。入力したタイムスタンプや選んだ単位は開いているタブの中だけに存在し、閉じれば消えます。本番ログや顧客データも安心して貼り付けられ、いちど読み込めばオフラインでも動作します。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -813,6 +878,11 @@ window.I18N_LOCALES = {
     "faq.q4": "2038년 문제란 무엇이고, 이 도구도 영향을 받나요?",
     "faq.a4": "Unix 시간을 32비트 부호 있는 정수에 담는 시스템은 2038년 1월 19일 03:14:07 UTC(타임스탬프 2147483647)에서 자리가 바닥나고, 카운터가 1901년으로 되돌아갈 수 있습니다. 이것이 Y2K38 문제입니다. 오래된 C 프로그램과 임베디드 기기의 문제이지 이 도구와는 무관합니다. 브라우저는 값을 64비트 부동소수점으로 다루므로 이 변환기는 약 기원전 275,760년부터 서기 275,760년까지(±8.64e15 밀리초) 동작합니다. 그 범위를 벗어나면 틀린 날짜 대신 범위 초과 안내를 명시적으로 보여줍니다.",
     "faq.q5": "붙여넣은 타임스탬프가 서버로 전송되나요?",
-    "faq.a5": "아니요. 모든 변환은 브라우저에 내장된 Date와 Intl 기능만으로 처리합니다. API 호출도, 입력값에 대한 분석도 없고, 어디에도 업로드하거나 기록하지 않습니다. 변환 내역도 저장하지 않습니다 — 입력한 타임스탬프와 선택한 단위는 열려 있는 탭 안에만 있다가 탭을 닫으면 사라집니다. 그래서 운영 로그나 고객 데이터를 붙여넣어도 안전하고, 페이지를 한 번 불러온 뒤에는 오프라인에서도 그대로 동작합니다."
+    "faq.a5": "아니요. 모든 변환은 브라우저에 내장된 Date와 Intl 기능만으로 처리합니다. API 호출도, 입력값에 대한 분석도 없고, 어디에도 업로드하거나 기록하지 않습니다. 변환 내역도 저장하지 않습니다 — 입력한 타임스탬프와 선택한 단위는 열려 있는 탭 안에만 있다가 탭을 닫으면 사라집니다. 그래서 운영 로그나 고객 데이터를 붙여넣어도 안전하고, 페이지를 한 번 불러온 뒤에는 오프라인에서도 그대로 동작합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

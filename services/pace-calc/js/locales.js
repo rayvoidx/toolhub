@@ -86,7 +86,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What time formats does the time field accept?",
     "faq.a4": "You can type hours:minutes:seconds (1:32:15), just minutes:seconds (45:00), or a plain number of minutes (45). The pace field works the same way for minutes:seconds — 5:30 means 5 minutes 30 seconds. The parser is tolerant of missing leading zeros and decimal seconds, so “1:5:9” and “1:05:09.5” both work.",
     "faq.q5": "Is my pace and distance data sent to a server?",
-    "faq.a5": "No. Every calculation — distance, time, pace, speed, and the split table — runs entirely in your browser. Nothing is uploaded, there's no sign-up, and your last entries are only saved in your browser's local storage so the form remembers them next time. This isn't training advice from a coach; it's arithmetic based on the numbers you enter."
+    "faq.a5": "No. Every calculation — distance, time, pace, speed, and the split table — runs entirely in your browser. Nothing is uploaded, there's no sign-up, and your last entries are only saved in your browser's local storage so the form remembers them next time. This isn't training advice from a coach; it's arithmetic based on the numbers you enter.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -165,7 +170,12 @@ window.I18N_LOCALES = {
     "faq.q4": "时间输入框支持哪些格式？",
     "faq.a4": "你可以输入 时:分:秒（如 1:32:15）、分:秒（如 45:00），或直接输入分钟数（如 45）。配速输入框同样支持 分:秒 格式——5:30 表示 5分30秒。解析器对缺少前导零和带小数的秒数也很宽容，因此“1:5:9”和“1:05:09.5”都能正确识别。",
     "faq.q5": "我的配速和距离数据会被发送到服务器吗？",
-    "faq.a5": "不会。所有计算——距离、时间、配速、速度以及分段表——都完全在你的浏览器中完成。数据不会被上传，无需注册，最近一次输入仅保存在浏览器本地存储中，方便你下次使用时自动恢复。本工具并非教练提供的训练建议，只是根据你输入的数字进行的算术计算。"
+    "faq.a5": "不会。所有计算——距离、时间、配速、速度以及分段表——都完全在你的浏览器中完成。数据不会被上传，无需注册，最近一次输入仅保存在浏览器本地存储中，方便你下次使用时自动恢复。本工具并非教练提供的训练建议，只是根据你输入的数字进行的算术计算。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -244,7 +254,12 @@ window.I18N_LOCALES = {
     "faq.q4": "टाइम फ़ील्ड कौन-कौन से फ़ॉर्मैट स्वीकार करता है?",
     "faq.a4": "आप घंटे:मिनट:सेकंड (1:32:15), सिर्फ़ मिनट:सेकंड (45:00), या सादा मिनट की संख्या (45) टाइप कर सकते हैं। पेस फ़ील्ड भी मिनट:सेकंड में ऐसे ही काम करता है — 5:30 का मतलब है 5 मिनट 30 सेकंड। यह पार्सर शुरुआती शून्य न होने और दशमलव सेकंड को भी सही से समझ लेता है, इसलिए “1:5:9” और “1:05:09.5” दोनों काम करते हैं।",
     "faq.q5": "क्या मेरा पेस और दूरी डेटा किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। हर गणना — दूरी, समय, पेस, स्पीड और स्प्लिट टेबल — पूरी तरह आपके ब्राउज़र में होती है। कुछ भी अपलोड नहीं होता, कोई साइन-अप नहीं है, और आपकी आख़िरी एंट्री सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार फ़ॉर्म याद रहे। यह किसी कोच की ट्रेनिंग सलाह नहीं है; यह सिर्फ़ आपके डाले गए नंबरों पर आधारित गणित है।"
+    "faq.a5": "नहीं। हर गणना — दूरी, समय, पेस, स्पीड और स्प्लिट टेबल — पूरी तरह आपके ब्राउज़र में होती है। कुछ भी अपलोड नहीं होता, कोई साइन-अप नहीं है, और आपकी आख़िरी एंट्री सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार फ़ॉर्म याद रहे। यह किसी कोच की ट्रेनिंग सलाह नहीं है; यह सिर्फ़ आपके डाले गए नंबरों पर आधारित गणित है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -323,7 +338,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué formatos de tiempo acepta el campo de tiempo?",
     "faq.a4": "Puedes escribir horas:minutos:segundos (1:32:15), solo minutos:segundos (45:00), o un número simple de minutos (45). El campo de ritmo funciona igual con minutos:segundos — 5:30 significa 5 minutos 30 segundos. El analizador tolera ceros iniciales faltantes y segundos decimales, así que tanto “1:5:9” como “1:05:09.5” funcionan.",
     "faq.q5": "¿Se envían mis datos de ritmo y distancia a un servidor?",
-    "faq.a5": "No. Cada cálculo — distancia, tiempo, ritmo, velocidad y la tabla de parciales — se ejecuta completamente en tu navegador. Nada se sube, no hay que registrarse, y tus últimos datos solo se guardan en el almacenamiento local de tu navegador para que el formulario los recuerde la próxima vez. Esto no es un consejo de entrenamiento de un entrenador; es aritmética basada en los números que introduces."
+    "faq.a5": "No. Cada cálculo — distancia, tiempo, ritmo, velocidad y la tabla de parciales — se ejecuta completamente en tu navegador. Nada se sube, no hay que registrarse, y tus últimos datos solo se guardan en el almacenamiento local de tu navegador para que el formulario los recuerde la próxima vez. Esto no es un consejo de entrenamiento de un entrenador; es aritmética basada en los números que introduces.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -402,7 +422,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما صيغ الوقت التي يقبلها حقل الوقت؟",
     "faq.a4": "يمكنك كتابة ساعات:دقائق:ثوانٍ (1:32:15)، أو دقائق:ثوانٍ فقط (45:00)، أو رقم دقائق بسيط (45). يعمل حقل الإيقاع بنفس الطريقة لدقائق:ثوانٍ — 5:30 تعني 5 دقائق و30 ثانية. المحلِّل متسامح مع غياب الأصفار البادئة والثواني العشرية، لذا يعمل كلٌّ من «1:5:9» و«1:05:09.5».",
     "faq.q5": "هل تُرسل بيانات إيقاعي ومسافتي إلى خادم؟",
-    "faq.a5": "لا. كل عملية حساب — المسافة والوقت والإيقاع والسرعة وجدول التقسيم — تتم بالكامل داخل متصفحك. لا يُرفع شيء، ولا حاجة للتسجيل، ويتم حفظ آخر إدخالاتك فقط في التخزين المحلي لمتصفحك ليتذكرها النموذج في المرة القادمة. هذه ليست نصيحة تدريبية من مدرّب؛ إنها عملية حسابية مبنية على الأرقام التي تُدخلها."
+    "faq.a5": "لا. كل عملية حساب — المسافة والوقت والإيقاع والسرعة وجدول التقسيم — تتم بالكامل داخل متصفحك. لا يُرفع شيء، ولا حاجة للتسجيل، ويتم حفظ آخر إدخالاتك فقط في التخزين المحلي لمتصفحك ليتذكرها النموذج في المرة القادمة. هذه ليست نصيحة تدريبية من مدرّب؛ إنها عملية حسابية مبنية على الأرقام التي تُدخلها.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -481,7 +506,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quels formats de temps le champ temps accepte-t-il ?",
     "faq.a4": "Vous pouvez saisir heures:minutes:secondes (1:32:15), juste minutes:secondes (45:00), ou un simple nombre de minutes (45). Le champ allure fonctionne de la même façon pour minutes:secondes — 5:30 signifie 5 minutes 30 secondes. L'analyseur tolère l'absence de zéros non significatifs et les secondes décimales, donc « 1:5:9 » et « 1:05:09.5 » fonctionnent tous les deux.",
     "faq.q5": "Mes données d'allure et de distance sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Chaque calcul — distance, temps, allure, vitesse et tableau des temps de passage — s'exécute entièrement dans votre navigateur. Rien n'est téléversé, aucune inscription n'est nécessaire, et vos dernières saisies ne sont enregistrées que dans le stockage local de votre navigateur afin que le formulaire s'en souvienne la prochaine fois. Ceci n'est pas un conseil d'entraînement d'un coach ; c'est un calcul arithmétique basé sur les chiffres que vous saisissez."
+    "faq.a5": "Non. Chaque calcul — distance, temps, allure, vitesse et tableau des temps de passage — s'exécute entièrement dans votre navigateur. Rien n'est téléversé, aucune inscription n'est nécessaire, et vos dernières saisies ne sont enregistrées que dans le stockage local de votre navigateur afin que le formulaire s'en souvienne la prochaine fois. Ceci n'est pas un conseil d'entraînement d'un coach ; c'est un calcul arithmétique basé sur les chiffres que vous saisissez.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -560,7 +590,12 @@ window.I18N_LOCALES = {
     "faq.q4": "সময় ফিল্ড কোন কোন ফরম্যাট গ্রহণ করে?",
     "faq.a4": "আপনি ঘণ্টা:মিনিট:সেকেন্ড (1:32:15), শুধু মিনিট:সেকেন্ড (45:00), বা সাধারণ মিনিট সংখ্যা (45) লিখতে পারেন। পেস ফিল্ডও মিনিট:সেকেন্ডে একইভাবে কাজ করে — 5:30 মানে 5 মিনিট 30 সেকেন্ড। পার্সার শুরুর শূন্য না থাকলে এবং দশমিক সেকেন্ড হলেও তা মেনে নেয়, তাই “1:5:9” ও “1:05:09.5” দুটোই কাজ করে।",
     "faq.q5": "আমার পেস ও দূরত্বের তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। প্রতিটি হিসাব — দূরত্ব, সময়, পেস, গতি এবং স্প্লিট টেবিল — সম্পূর্ণভাবে আপনার ব্রাউজারেই হয়। কিছুই আপলোড হয় না, সাইন-আপের দরকার নেই, এবং আপনার শেষ এন্ট্রিগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার ফর্ম মনে রাখে। এটি কোনো কোচের ট্রেনিং পরামর্শ নয়; এটি আপনার দেওয়া সংখ্যার উপর ভিত্তি করে করা গাণিতিক হিসাব।"
+    "faq.a5": "না। প্রতিটি হিসাব — দূরত্ব, সময়, পেস, গতি এবং স্প্লিট টেবিল — সম্পূর্ণভাবে আপনার ব্রাউজারেই হয়। কিছুই আপলোড হয় না, সাইন-আপের দরকার নেই, এবং আপনার শেষ এন্ট্রিগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার ফর্ম মনে রাখে। এটি কোনো কোচের ট্রেনিং পরামর্শ নয়; এটি আপনার দেওয়া সংখ্যার উপর ভিত্তি করে করা গাণিতিক হিসাব।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -639,7 +674,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quais formatos de tempo o campo de tempo aceita?",
     "faq.a4": "Você pode digitar horas:minutos:segundos (1:32:15), apenas minutos:segundos (45:00), ou um número simples de minutos (45). O campo de ritmo funciona da mesma forma para minutos:segundos — 5:30 significa 5 minutos e 30 segundos. O analisador tolera a ausência de zeros à esquerda e segundos decimais, então “1:5:9” e “1:05:09.5” funcionam.",
     "faq.q5": "Meus dados de ritmo e distância são enviados a um servidor?",
-    "faq.a5": "Não. Cada cálculo — distância, tempo, ritmo, velocidade e a tabela de parciais — é executado inteiramente no seu navegador. Nada é enviado, não é preciso se cadastrar, e suas últimas entradas são salvas apenas no armazenamento local do seu navegador para que o formulário se lembre delas na próxima vez. Isto não é orientação de treino de um treinador; é aritmética baseada nos números que você informa."
+    "faq.a5": "Não. Cada cálculo — distância, tempo, ritmo, velocidade e a tabela de parciais — é executado inteiramente no seu navegador. Nada é enviado, não é preciso se cadastrar, e suas últimas entradas são salvas apenas no armazenamento local do seu navegador para que o formulário se lembre delas na próxima vez. Isto não é orientação de treino de um treinador; é aritmética baseada nos números que você informa.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -718,7 +758,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Какие форматы времени принимает поле времени?",
     "faq.a4": "Можно ввести часы:минуты:секунды (1:32:15), просто минуты:секунды (45:00) или обычное число минут (45). Поле темпа работает так же для минут:секунд — 5:30 означает 5 минут 30 секунд. Парсер терпимо относится к отсутствию ведущих нулей и десятичным секундам, поэтому подходят и «1:5:9», и «1:05:09.5».",
     "faq.q5": "Отправляются ли мои данные о темпе и дистанции на сервер?",
-    "faq.a5": "Нет. Все расчёты — дистанция, время, темп, скорость и таблица сплитов — выполняются полностью в вашем браузере. Ничего не загружается, регистрация не нужна, а последние введённые данные сохраняются только в локальном хранилище вашего браузера, чтобы форма запомнила их в следующий раз. Это не тренерская рекомендация, а арифметика на основе введённых вами чисел."
+    "faq.a5": "Нет. Все расчёты — дистанция, время, темп, скорость и таблица сплитов — выполняются полностью в вашем браузере. Ничего не загружается, регистрация не нужна, а последние введённые данные сохраняются только в локальном хранилище вашего браузера, чтобы форма запомнила их в следующий раз. Это не тренерская рекомендация, а арифметика на основе введённых вами чисел.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -797,7 +842,12 @@ window.I18N_LOCALES = {
     "faq.q4": "وقت کا خانہ کون کون سے فارمیٹس قبول کرتا ہے؟",
     "faq.a4": "آپ گھنٹے:منٹ:سیکنڈ (1:32:15)، صرف منٹ:سیکنڈ (45:00)، یا سادہ منٹوں کی تعداد (45) لکھ سکتے ہیں۔ پیس کا خانہ بھی منٹ:سیکنڈ کے لیے اسی طرح کام کرتا ہے — 5:30 کا مطلب ہے 5 منٹ 30 سیکنڈ۔ پارسر ابتدائی صفر نہ ہونے اور اعشاریہ سیکنڈز کو بھی برداشت کرتا ہے، اس لیے «1:5:9» اور «1:05:09.5» دونوں کام کرتے ہیں۔",
     "faq.q5": "کیا میرا پیس اور فاصلے کا ڈیٹا کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر حساب — فاصلہ، وقت، پیس، رفتار اور اسپلٹ ٹیبل — مکمل طور پر آپ کے براؤزر میں ہوتا ہے۔ کچھ بھی اپ لوڈ نہیں ہوتا، سائن اپ کی ضرورت نہیں، اور آپ کی آخری اندراجات صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں تاکہ اگلی بار فارم انہیں یاد رکھے۔ یہ کسی کوچ کا تربیتی مشورہ نہیں ہے؛ یہ آپ کے درج کردہ اعداد پر مبنی ریاضی ہے۔"
+    "faq.a5": "نہیں۔ ہر حساب — فاصلہ، وقت، پیس، رفتار اور اسپلٹ ٹیبل — مکمل طور پر آپ کے براؤزر میں ہوتا ہے۔ کچھ بھی اپ لوڈ نہیں ہوتا، سائن اپ کی ضرورت نہیں، اور آپ کی آخری اندراجات صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں تاکہ اگلی بار فارم انہیں یاد رکھے۔ یہ کسی کوچ کا تربیتی مشورہ نہیں ہے؛ یہ آپ کے درج کردہ اعداد پر مبنی ریاضی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -876,7 +926,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Format waktu apa saja yang diterima kolom waktu?",
     "faq.a4": "Anda bisa mengetik jam:menit:detik (1:32:15), hanya menit:detik (45:00), atau angka menit biasa (45). Kolom pace bekerja dengan cara yang sama untuk menit:detik — 5:30 berarti 5 menit 30 detik. Parser ini toleran terhadap nol di depan yang hilang dan detik desimal, jadi “1:5:9” maupun “1:05:09.5” sama-sama berfungsi.",
     "faq.q5": "Apakah data pace dan jarak saya dikirim ke server?",
-    "faq.a5": "Tidak. Setiap perhitungan — jarak, waktu, pace, kecepatan, dan tabel split — berjalan sepenuhnya di browser Anda. Tidak ada yang diunggah, tidak perlu mendaftar, dan entri terakhir Anda hanya disimpan di penyimpanan lokal browser Anda agar formulir mengingatnya lain kali. Ini bukan saran latihan dari pelatih; ini adalah perhitungan aritmatika berdasarkan angka yang Anda masukkan."
+    "faq.a5": "Tidak. Setiap perhitungan — jarak, waktu, pace, kecepatan, dan tabel split — berjalan sepenuhnya di browser Anda. Tidak ada yang diunggah, tidak perlu mendaftar, dan entri terakhir Anda hanya disimpan di penyimpanan lokal browser Anda agar formulir mengingatnya lain kali. Ini bukan saran latihan dari pelatih; ini adalah perhitungan aritmatika berdasarkan angka yang Anda masukkan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -955,7 +1010,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Welche Zeitformate akzeptiert das Zeitfeld?",
     "faq.a4": "Sie können Stunden:Minuten:Sekunden (1:32:15), nur Minuten:Sekunden (45:00) oder eine einfache Minutenzahl (45) eingeben. Das Tempofeld funktioniert genauso für Minuten:Sekunden — 5:30 bedeutet 5 Minuten 30 Sekunden. Der Parser toleriert fehlende führende Nullen und Dezimalsekunden, sodass sowohl „1:5:9“ als auch „1:05:09.5“ funktionieren.",
     "faq.q5": "Werden meine Tempo- und Distanzdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Jede Berechnung — Distanz, Zeit, Tempo, Geschwindigkeit und die Split-Tabelle — läuft vollständig in Ihrem Browser. Es wird nichts hochgeladen, keine Anmeldung ist nötig, und Ihre letzten Eingaben werden nur im lokalen Speicher Ihres Browsers gesichert, damit sich das Formular beim nächsten Mal daran erinnert. Dies ist kein Trainingsrat eines Coaches, sondern Arithmetik auf Basis der von Ihnen eingegebenen Zahlen."
+    "faq.a5": "Nein. Jede Berechnung — Distanz, Zeit, Tempo, Geschwindigkeit und die Split-Tabelle — läuft vollständig in Ihrem Browser. Es wird nichts hochgeladen, keine Anmeldung ist nötig, und Ihre letzten Eingaben werden nur im lokalen Speicher Ihres Browsers gesichert, damit sich das Formular beim nächsten Mal daran erinnert. Dies ist kein Trainingsrat eines Coaches, sondern Arithmetik auf Basis der von Ihnen eingegebenen Zahlen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1034,7 +1094,12 @@ window.I18N_LOCALES = {
     "faq.q4": "時間の入力欄はどのような形式に対応していますか？",
     "faq.a4": "時:分:秒（1:32:15）、分:秒のみ（45:00）、または単純な分の数値（45）を入力できます。ペースの入力欄も同様に分:秒に対応しており、5:30は5分30秒を意味します。パーサーは先頭のゼロが省略されていたり、秒が小数であったりしても許容するため、「1:5:9」も「1:05:09.5」もどちらも動作します。",
     "faq.q5": "ペースや距離のデータはサーバーに送信されますか？",
-    "faq.a5": "いいえ。距離、時間、ペース、速度、スプリット表など、すべての計算は完全にブラウザ内で行われます。アップロードは一切なく、登録も不要です。最後に入力した内容はブラウザのローカルストレージにのみ保存され、次回フォームに復元されます。これはコーチによるトレーニング指導ではなく、入力された数値に基づく単純な算術計算です。"
+    "faq.a5": "いいえ。距離、時間、ペース、速度、スプリット表など、すべての計算は完全にブラウザ内で行われます。アップロードは一切なく、登録も不要です。最後に入力した内容はブラウザのローカルストレージにのみ保存され、次回フォームに復元されます。これはコーチによるトレーニング指導ではなく、入力された数値に基づく単純な算術計算です。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1113,6 +1178,11 @@ window.I18N_LOCALES = {
     "faq.q4": "시간 입력란은 어떤 형식을 지원하나요?",
     "faq.a4": "시:분:초(1:32:15), 분:초만(45:00), 또는 단순한 분 숫자(45)로 입력할 수 있습니다. 페이스 입력란도 분:초 형식으로 동일하게 작동합니다 — 5:30은 5분 30초를 의미합니다. 파서는 앞자리 0이 없거나 초에 소수점이 있어도 허용하므로 “1:5:9”와 “1:05:09.5” 모두 정상적으로 처리됩니다.",
     "faq.q5": "제 페이스와 거리 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 거리, 시간, 페이스, 속도, 구간 기록표 등 모든 계산은 전적으로 브라우저에서 실행됩니다. 어떤 데이터도 업로드되지 않고 가입도 필요 없으며, 마지막으로 입력한 값은 브라우저의 로컬 스토리지에만 저장되어 다음 방문 시 폼에 자동으로 복원됩니다. 이는 코치의 훈련 조언이 아니라 입력한 숫자를 바탕으로 한 단순 산술 계산입니다."
+    "faq.a5": "아니요. 거리, 시간, 페이스, 속도, 구간 기록표 등 모든 계산은 전적으로 브라우저에서 실행됩니다. 어떤 데이터도 업로드되지 않고 가입도 필요 없으며, 마지막으로 입력한 값은 브라우저의 로컬 스토리지에만 저장되어 다음 방문 시 폼에 자동으로 복원됩니다. 이는 코치의 훈련 조언이 아니라 입력한 숫자를 바탕으로 한 단순 산술 계산입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -72,7 +72,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I convert an image to a Base64 data URI and back?",
     "faq.a4": "On the Image tab, drop or choose a file to get its full data URI plus the raw Base64 — ready to paste into an <img>, a CSS background or JSON. To go the other way, paste a Base64 string or data URI to preview the picture, then download it. It works as an image to base64 data uri converter both ways.",
     "faq.q5": "Is my text or image uploaded to a server?",
-    "faq.a5": "No. Everything runs 100% in your browser — text uses btoa/atob with TextEncoder, and images are read locally with FileReader, so nothing is uploaded. Only your last text and the URL-safe option are saved to this browser's local storage for convenience; image data is never stored."
+    "faq.a5": "No. Everything runs 100% in your browser — text uses btoa/atob with TextEncoder, and images are read locally with FileReader, so nothing is uploaded. Only your last text and the URL-safe option are saved to this browser's local storage for convenience; image data is never stored.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -129,7 +134,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如何把图片转换为 Base64 data URI，以及还原？",
     "faq.a4": "在「图片」标签页，拖入或选择文件即可得到完整 data URI 和原始 Base64——可直接粘贴到 <img>、CSS 背景或 JSON。反向操作时，粘贴 Base64 字符串或 data URI 预览图片，再下载。它是一款双向的 image to base64 data uri 转换器。",
     "faq.q5": "我的文本或图片会被上传到服务器吗？",
-    "faq.a5": "不会。所有处理都 100% 在浏览器中完成——文本使用 btoa/atob 配合 TextEncoder，图片用 FileReader 在本地读取，不上传任何内容。仅为方便起见，会把你最近的文本和 URL-safe 选项保存到浏览器本地存储；图片数据从不保存。"
+    "faq.a5": "不会。所有处理都 100% 在浏览器中完成——文本使用 btoa/atob 配合 TextEncoder，图片用 FileReader 在本地读取，不上传任何内容。仅为方便起见，会把你最近的文本和 URL-safe 选项保存到浏览器本地存储；图片数据从不保存。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -186,7 +196,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मैं इमेज को Base64 data URI में और वापस कैसे बदलूँ?",
     "faq.a4": "इमेज टैब पर फ़ाइल छोड़ें या चुनें और उसका पूरा data URI तथा रॉ Base64 पाएँ — <img>, CSS बैकग्राउंड या JSON में सीधे पेस्ट करने योग्य। उलटा करने के लिए, Base64 स्ट्रिंग या data URI पेस्ट करके तस्वीर देखें, फिर डाउनलोड करें। यह दोनों दिशाओं में image to base64 data uri कन्वर्टर की तरह काम करता है।",
     "faq.q5": "क्या मेरा टेक्स्ट या इमेज सर्वर पर अपलोड होता है?",
-    "faq.a5": "नहीं। सब कुछ 100% आपके ब्राउज़र में चलता है — टेक्स्ट के लिए TextEncoder के साथ btoa/atob, और इमेज को FileReader से स्थानीय रूप से पढ़ा जाता है, इसलिए कुछ भी अपलोड नहीं होता। सुविधा के लिए केवल आपका अंतिम टेक्स्ट और URL-safe विकल्प ब्राउज़र के लोकल स्टोरेज में सहेजे जाते हैं; इमेज डेटा कभी संग्रहीत नहीं होता।"
+    "faq.a5": "नहीं। सब कुछ 100% आपके ब्राउज़र में चलता है — टेक्स्ट के लिए TextEncoder के साथ btoa/atob, और इमेज को FileReader से स्थानीय रूप से पढ़ा जाता है, इसलिए कुछ भी अपलोड नहीं होता। सुविधा के लिए केवल आपका अंतिम टेक्स्ट और URL-safe विकल्प ब्राउज़र के लोकल स्टोरेज में सहेजे जाते हैं; इमेज डेटा कभी संग्रहीत नहीं होता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -243,7 +258,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo convierto una imagen en un data URI Base64 y de vuelta?",
     "faq.a4": "En la pestaña Imagen, suelta o elige un archivo para obtener su data URI completo y el Base64 sin procesar — listo para pegar en un <img>, un fondo CSS o JSON. Para el sentido inverso, pega una cadena Base64 o un data URI y previsualiza la imagen, luego descárgala. Funciona como un convertidor de image to base64 data uri en ambos sentidos.",
     "faq.q5": "¿Se sube mi texto o imagen a un servidor?",
-    "faq.a5": "No. Todo se ejecuta 100% en tu navegador — el texto usa btoa/atob con TextEncoder, y las imágenes se leen localmente con FileReader, así que nada se sube. Solo se guardan tu último texto y la opción URL-safe en el almacenamiento local del navegador por comodidad; los datos de imagen nunca se guardan."
+    "faq.a5": "No. Todo se ejecuta 100% en tu navegador — el texto usa btoa/atob con TextEncoder, y las imágenes se leen localmente con FileReader, así que nada se sube. Solo se guardan tu último texto y la opción URL-safe en el almacenamiento local del navegador por comodidad; los datos de imagen nunca se guardan.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -300,7 +320,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أحوّل صورة إلى data URI بترميز Base64 والعكس؟",
     "faq.a4": "في تبويب الصورة، أفلِت ملفًا أو اختره للحصول على data URI الكامل مع Base64 الخام — جاهز للصقه في <img> أو خلفية CSS أو JSON. وللاتجاه المعاكس، الصق سلسلة Base64 أو data URI لمعاينة الصورة ثم نزّلها. إنه يعمل كمحوّل image to base64 data uri في الاتجاهين.",
     "faq.q5": "هل يُرفع نصّي أو صورتي إلى خادم؟",
-    "faq.a5": "لا. كل شيء يعمل 100% داخل متصفحك — يستخدم النص btoa/atob مع TextEncoder، وتُقرأ الصور محليًا عبر FileReader، فلا يُرفع أي شيء. يُحفظ فقط آخر نص لديك وخيار URL-safe في التخزين المحلي للمتصفح للتسهيل؛ ولا تُخزَّن بيانات الصور أبدًا."
+    "faq.a5": "لا. كل شيء يعمل 100% داخل متصفحك — يستخدم النص btoa/atob مع TextEncoder، وتُقرأ الصور محليًا عبر FileReader، فلا يُرفع أي شيء. يُحفظ فقط آخر نص لديك وخيار URL-safe في التخزين المحلي للمتصفح للتسهيل؛ ولا تُخزَّن بيانات الصور أبدًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -357,7 +382,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment convertir une image en data URI Base64 et inversement ?",
     "faq.a4": "Dans l'onglet Image, déposez ou choisissez un fichier pour obtenir son data URI complet et le Base64 brut — prêt à coller dans une balise <img>, un arrière-plan CSS ou du JSON. Dans l'autre sens, collez une chaîne Base64 ou un data URI pour prévisualiser l'image, puis téléchargez-la. Il fonctionne comme un convertisseur image to base64 data uri dans les deux sens.",
     "faq.q5": "Mon texte ou mon image est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Tout s'exécute à 100 % dans votre navigateur — le texte utilise btoa/atob avec TextEncoder, et les images sont lues localement avec FileReader, donc rien n'est envoyé. Seuls votre dernier texte et l'option URL-safe sont enregistrés dans le stockage local du navigateur, par commodité ; les données d'image ne sont jamais conservées."
+    "faq.a5": "Non. Tout s'exécute à 100 % dans votre navigateur — le texte utilise btoa/atob avec TextEncoder, et les images sont lues localement avec FileReader, donc rien n'est envoyé. Seuls votre dernier texte et l'option URL-safe sont enregistrés dans le stockage local du navigateur, par commodité ; les données d'image ne sont jamais conservées.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -414,7 +444,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমি কীভাবে একটি ছবিকে Base64 data URI-তে ও ফিরে রূপান্তর করব?",
     "faq.a4": "ছবি ট্যাবে একটি ফাইল ছাড়ুন বা বেছে নিন এবং তার সম্পূর্ণ data URI ও র Base64 পান — <img>, CSS ব্যাকগ্রাউন্ড বা JSON-এ সরাসরি পেস্ট করার উপযোগী। উল্টো দিকে যেতে, একটি Base64 স্ট্রিং বা data URI পেস্ট করে ছবিটি প্রিভিউ করুন, তারপর ডাউনলোড করুন। এটি উভয় দিকেই image to base64 data uri কনভার্টার হিসেবে কাজ করে।",
     "faq.q5": "আমার টেক্সট বা ছবি কি সার্ভারে আপলোড হয়?",
-    "faq.a5": "না। সবকিছু ১০০% আপনার ব্রাউজারে চলে — টেক্সট TextEncoder-সহ btoa/atob ব্যবহার করে, আর ছবি FileReader দিয়ে স্থানীয়ভাবে পড়া হয়, তাই কিছুই আপলোড হয় না। সুবিধার জন্য কেবল আপনার শেষ টেক্সট ও URL-safe বিকল্প ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়; ছবির ডেটা কখনও সংরক্ষণ করা হয় না।"
+    "faq.a5": "না। সবকিছু ১০০% আপনার ব্রাউজারে চলে — টেক্সট TextEncoder-সহ btoa/atob ব্যবহার করে, আর ছবি FileReader দিয়ে স্থানীয়ভাবে পড়া হয়, তাই কিছুই আপলোড হয় না। সুবিধার জন্য কেবল আপনার শেষ টেক্সট ও URL-safe বিকল্প ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়; ছবির ডেটা কখনও সংরক্ষণ করা হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -471,7 +506,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como converto uma imagem em um data URI Base64 e de volta?",
     "faq.a4": "Na aba Imagem, solte ou escolha um arquivo para obter o data URI completo e o Base64 bruto — pronto para colar em uma tag <img>, um fundo CSS ou JSON. No sentido inverso, cole uma string Base64 ou um data URI para pré-visualizar a imagem e baixá-la. Funciona como um conversor image to base64 data uri nos dois sentidos.",
     "faq.q5": "Meu texto ou imagem é enviado para um servidor?",
-    "faq.a5": "Não. Tudo roda 100% no seu navegador — o texto usa btoa/atob com TextEncoder, e as imagens são lidas localmente com FileReader, então nada é enviado. Apenas seu último texto e a opção URL-safe são salvos no armazenamento local do navegador por conveniência; os dados de imagem nunca são armazenados."
+    "faq.a5": "Não. Tudo roda 100% no seu navegador — o texto usa btoa/atob com TextEncoder, e as imagens são lidas localmente com FileReader, então nada é enviado. Apenas seu último texto e a opção URL-safe são salvos no armazenamento local do navegador por conveniência; os dados de imagem nunca são armazenados.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -528,7 +568,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как преобразовать изображение в data URI Base64 и обратно?",
     "faq.a4": "На вкладке «Изображение» перетащите или выберите файл, чтобы получить полный data URI и чистый Base64 — готовый для вставки в тег <img>, фон CSS или JSON. В обратную сторону вставьте строку Base64 или data URI, чтобы просмотреть картинку, а затем скачать её. Это работает как конвертер image to base64 data uri в обе стороны.",
     "faq.q5": "Загружается ли мой текст или изображение на сервер?",
-    "faq.a5": "Нет. Всё работает на 100% в вашем браузере — текст использует btoa/atob с TextEncoder, а изображения читаются локально через FileReader, поэтому ничего не загружается. Для удобства в локальном хранилище браузера сохраняются только ваш последний текст и опция URL-safe; данные изображений никогда не сохраняются."
+    "faq.a5": "Нет. Всё работает на 100% в вашем браузере — текст использует btoa/atob с TextEncoder, а изображения читаются локально через FileReader, поэтому ничего не загружается. Для удобства в локальном хранилище браузера сохраняются только ваш последний текст и опция URL-safe; данные изображений никогда не сохраняются.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -585,7 +630,12 @@ window.I18N_LOCALES = {
     "faq.q4": "میں تصویر کو Base64 data URI میں اور واپس کیسے تبدیل کروں؟",
     "faq.a4": "تصویر ٹیب پر فائل چھوڑیں یا منتخب کریں اور اس کا مکمل data URI اور خام Base64 حاصل کریں — <img>، CSS بیک گراؤنڈ یا JSON میں براہ راست پیسٹ کرنے کے لیے تیار۔ الٹی سمت میں، Base64 اسٹرنگ یا data URI پیسٹ کر کے تصویر دیکھیں، پھر ڈاؤن لوڈ کریں۔ یہ دونوں سمتوں میں image to base64 data uri کنورٹر کے طور پر کام کرتا ہے۔",
     "faq.q5": "کیا میرا ٹیکسٹ یا تصویر سرور پر اپ لوڈ ہوتا ہے؟",
-    "faq.a5": "نہیں۔ سب کچھ 100% آپ کے براؤزر میں چلتا ہے — ٹیکسٹ TextEncoder کے ساتھ btoa/atob استعمال کرتا ہے، اور تصاویر FileReader سے مقامی طور پر پڑھی جاتی ہیں، اس لیے کچھ اپ لوڈ نہیں ہوتا۔ آسانی کے لیے صرف آپ کا آخری ٹیکسٹ اور URL-safe اختیار براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں؛ تصویر کا ڈیٹا کبھی محفوظ نہیں ہوتا۔"
+    "faq.a5": "نہیں۔ سب کچھ 100% آپ کے براؤزر میں چلتا ہے — ٹیکسٹ TextEncoder کے ساتھ btoa/atob استعمال کرتا ہے، اور تصاویر FileReader سے مقامی طور پر پڑھی جاتی ہیں، اس لیے کچھ اپ لوڈ نہیں ہوتا۔ آسانی کے لیے صرف آپ کا آخری ٹیکسٹ اور URL-safe اختیار براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں؛ تصویر کا ڈیٹا کبھی محفوظ نہیں ہوتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -642,7 +692,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana mengubah gambar menjadi data URI Base64 dan sebaliknya?",
     "faq.a4": "Di tab Gambar, letakkan atau pilih berkas untuk memperoleh data URI lengkap plus Base64 mentah — siap ditempel ke tag <img>, latar CSS, atau JSON. Untuk arah sebaliknya, tempel string Base64 atau data URI untuk melihat pratinjau gambar, lalu unduh. Ini bekerja sebagai konverter image to base64 data uri dua arah.",
     "faq.q5": "Apakah teks atau gambar saya diunggah ke server?",
-    "faq.a5": "Tidak. Semuanya berjalan 100% di browser Anda — teks memakai btoa/atob dengan TextEncoder, dan gambar dibaca lokal dengan FileReader, jadi tidak ada yang diunggah. Hanya teks terakhir dan opsi URL-safe yang disimpan di penyimpanan lokal browser demi kenyamanan; data gambar tidak pernah disimpan."
+    "faq.a5": "Tidak. Semuanya berjalan 100% di browser Anda — teks memakai btoa/atob dengan TextEncoder, dan gambar dibaca lokal dengan FileReader, jadi tidak ada yang diunggah. Hanya teks terakhir dan opsi URL-safe yang disimpan di penyimpanan lokal browser demi kenyamanan; data gambar tidak pernah disimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -699,7 +754,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie wandle ich ein Bild in ein Base64-Data-URI und zurück?",
     "faq.a4": "Legen Sie im Tab „Bild“ eine Datei ab oder wählen Sie sie, um das vollständige Data URI plus das reine Base64 zu erhalten — bereit zum Einfügen in ein <img>-Tag, einen CSS-Hintergrund oder JSON. Für den umgekehrten Weg fügen Sie eine Base64-Zeichenkette oder ein Data URI ein, zeigen das Bild in der Vorschau und laden es herunter. Es arbeitet in beide Richtungen als image to base64 data uri Konverter.",
     "faq.q5": "Wird mein Text oder Bild auf einen Server hochgeladen?",
-    "faq.a5": "Nein. Alles läuft zu 100 % in Ihrem Browser — Text nutzt btoa/atob mit TextEncoder, und Bilder werden lokal mit FileReader gelesen, sodass nichts hochgeladen wird. Nur Ihr letzter Text und die URL-safe-Option werden aus Bequemlichkeit im lokalen Speicher des Browsers gesichert; Bilddaten werden nie gespeichert."
+    "faq.a5": "Nein. Alles läuft zu 100 % in Ihrem Browser — Text nutzt btoa/atob mit TextEncoder, und Bilder werden lokal mit FileReader gelesen, sodass nichts hochgeladen wird. Nur Ihr letzter Text und die URL-safe-Option werden aus Bequemlichkeit im lokalen Speicher des Browsers gesichert; Bilddaten werden nie gespeichert.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -756,7 +816,12 @@ window.I18N_LOCALES = {
     "faq.q4": "画像を Base64 data URI に、またその逆に変換するには？",
     "faq.a4": "「画像」タブでファイルをドロップまたは選択すると、完全な data URI と生の Base64 が得られます — <img> タグ・CSS 背景・JSON にそのまま貼り付け可能です。逆方向では、Base64 文字列または data URI を貼り付けて画像をプレビューし、ダウンロードできます。双方向の image to base64 data uri 変換ツールとして機能します。",
     "faq.q5": "テキストや画像はサーバーにアップロードされますか？",
-    "faq.a5": "いいえ。すべて 100% ブラウザー内で動作します — テキストは TextEncoder と btoa/atob を使い、画像は FileReader でローカルに読み込むため、何もアップロードされません。利便性のため直近のテキストと URL-safe オプションのみブラウザーのローカルストレージに保存され、画像データは一切保存されません。"
+    "faq.a5": "いいえ。すべて 100% ブラウザー内で動作します — テキストは TextEncoder と btoa/atob を使い、画像は FileReader でローカルに読み込むため、何もアップロードされません。利便性のため直近のテキストと URL-safe オプションのみブラウザーのローカルストレージに保存され、画像データは一切保存されません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -813,6 +878,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이미지를 Base64 data URI로, 또 그 반대로 어떻게 변환하나요?",
     "faq.a4": "이미지 탭에서 파일을 놓거나 선택하면 전체 data URI와 원시 Base64를 얻습니다 — <img> 태그, CSS 배경, JSON에 바로 붙여넣을 수 있습니다. 반대로는 Base64 문자열이나 data URI를 붙여넣어 그림을 미리 본 뒤 내려받으세요. 양방향 base64 이미지 인코더로 동작합니다.",
     "faq.q5": "제 텍스트나 이미지가 서버로 업로드되나요?",
-    "faq.a5": "아니요. 모든 처리는 100% 브라우저 안에서 이루어집니다 — 텍스트는 TextEncoder와 btoa/atob를 쓰고, 이미지는 FileReader로 로컬에서 읽으므로 아무것도 업로드되지 않습니다. 편의를 위해 마지막 텍스트와 URL-safe 옵션만 브라우저 로컬 저장소에 저장되며, 이미지 데이터는 절대 저장되지 않습니다."
+    "faq.a5": "아니요. 모든 처리는 100% 브라우저 안에서 이루어집니다 — 텍스트는 TextEncoder와 btoa/atob를 쓰고, 이미지는 FileReader로 로컬에서 읽으므로 아무것도 업로드되지 않습니다. 편의를 위해 마지막 텍스트와 URL-safe 옵션만 브라우저 로컬 저장소에 저장되며, 이미지 데이터는 절대 저장되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

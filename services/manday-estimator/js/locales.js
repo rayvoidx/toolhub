@@ -121,7 +121,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "Qty (M/M)",
     "tool.q.rate": "Unit price",
     "tool.q.amount": "Amount",
-    "tool.sample": "Task\tRole\tEffort\tPhase\nRequirements workshop\tBusiness analyst\t24\tAnalysis\nLogin screen\tUI designer\t32\tDesign\nAuth API\tBackend dev\t40\tBuild\nPayment integration\tBackend dev\t64\tBuild\nQA regression\tQA engineer\t48\tTest"
+    "tool.sample": "Task\tRole\tEffort\tPhase\nRequirements workshop\tBusiness analyst\t24\tAnalysis\nLogin screen\tUI designer\t32\tDesign\nAuth API\tBackend dev\t40\tBuild\nPayment integration\tBackend dev\t64\tBuild\nQA regression\tQA engineer\t48\tTest",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -227,7 +232,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "数量（人月）",
     "tool.q.rate": "单价",
     "tool.q.amount": "金额",
-    "tool.sample": "任务\t角色\t工作量\t阶段\n需求研讨\t业务分析师\t24\t分析\n登录页面\tUI 设计师\t32\t设计\n认证接口\t后端开发\t40\t开发\n支付集成\t后端开发\t64\t开发\nQA 回归测试\tQA 工程师\t48\t测试"
+    "tool.sample": "任务\t角色\t工作量\t阶段\n需求研讨\t业务分析师\t24\t分析\n登录页面\tUI 设计师\t32\t设计\n认证接口\t后端开发\t40\t开发\n支付集成\t后端开发\t64\t开发\nQA 回归测试\tQA 工程师\t48\t测试",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -333,7 +343,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "मात्रा (M/M)",
     "tool.q.rate": "इकाई मूल्य",
     "tool.q.amount": "राशि",
-    "tool.sample": "टास्क\tभूमिका\tएफर्ट\tचरण\nआवश्यकता कार्यशाला\tबिज़नेस एनालिस्ट\t24\tविश्लेषण\nलॉगिन स्क्रीन\tUI डिज़ाइनर\t32\tडिज़ाइन\nऑथ API\tबैकएंड डेव\t40\tबिल्ड\nपेमेंट इंटीग्रेशन\tबैकएंड डेव\t64\tबिल्ड\nQA रिग्रेशन\tQA इंजीनियर\t48\tटेस्ट"
+    "tool.sample": "टास्क\tभूमिका\tएफर्ट\tचरण\nआवश्यकता कार्यशाला\tबिज़नेस एनालिस्ट\t24\tविश्लेषण\nलॉगिन स्क्रीन\tUI डिज़ाइनर\t32\tडिज़ाइन\nऑथ API\tबैकएंड डेव\t40\tबिल्ड\nपेमेंट इंटीग्रेशन\tबैकएंड डेव\t64\tबिल्ड\nQA रिग्रेशन\tQA इंजीनियर\t48\tटेस्ट",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -439,7 +454,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "Cant. (M/M)",
     "tool.q.rate": "Precio unitario",
     "tool.q.amount": "Importe",
-    "tool.sample": "Tarea\tRol\tEsfuerzo\tFase\nTaller de requisitos\tAnalista de negocio\t24\tAnálisis\nPantalla de login\tDiseñador UI\t32\tDiseño\nAPI de autenticación\tDesarrollador backend\t40\tConstrucción\nIntegración de pagos\tDesarrollador backend\t64\tConstrucción\nRegresión de QA\tIngeniero de QA\t48\tPruebas"
+    "tool.sample": "Tarea\tRol\tEsfuerzo\tFase\nTaller de requisitos\tAnalista de negocio\t24\tAnálisis\nPantalla de login\tDiseñador UI\t32\tDiseño\nAPI de autenticación\tDesarrollador backend\t40\tConstrucción\nIntegración de pagos\tDesarrollador backend\t64\tConstrucción\nRegresión de QA\tIngeniero de QA\t48\tPruebas",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -545,7 +565,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "الكمية (M/M)",
     "tool.q.rate": "سعر الوحدة",
     "tool.q.amount": "المبلغ",
-    "tool.sample": "المهمة\tالدور\tالجهد\tالمرحلة\nورشة المتطلّبات\tمحلّل أعمال\t24\tتحليل\nشاشة تسجيل الدخول\tمصمّم واجهات\t32\tتصميم\nواجهة برمجة المصادقة\tمطوّر خلفية\t40\tبناء\nتكامل الدفع\tمطوّر خلفية\t64\tبناء\nاختبار انحدار الجودة\tمهندس جودة\t48\tاختبار"
+    "tool.sample": "المهمة\tالدور\tالجهد\tالمرحلة\nورشة المتطلّبات\tمحلّل أعمال\t24\tتحليل\nشاشة تسجيل الدخول\tمصمّم واجهات\t32\tتصميم\nواجهة برمجة المصادقة\tمطوّر خلفية\t40\tبناء\nتكامل الدفع\tمطوّر خلفية\t64\tبناء\nاختبار انحدار الجودة\tمهندس جودة\t48\tاختبار",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -651,7 +676,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "Qté (H/M)",
     "tool.q.rate": "Prix unitaire",
     "tool.q.amount": "Montant",
-    "tool.sample": "Tâche\tRôle\tEffort\tPhase\nAtelier des besoins\tAnalyste métier\t24\tAnalyse\nÉcran de connexion\tDesigner UI\t32\tConception\nAPI d'authentification\tDéveloppeur backend\t40\tRéalisation\nIntégration des paiements\tDéveloppeur backend\t64\tRéalisation\nRecette QA\tIngénieur QA\t48\tTests"
+    "tool.sample": "Tâche\tRôle\tEffort\tPhase\nAtelier des besoins\tAnalyste métier\t24\tAnalyse\nÉcran de connexion\tDesigner UI\t32\tConception\nAPI d'authentification\tDéveloppeur backend\t40\tRéalisation\nIntégration des paiements\tDéveloppeur backend\t64\tRéalisation\nRecette QA\tIngénieur QA\t48\tTests",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -757,7 +787,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "পরিমাণ (M/M)",
     "tool.q.rate": "একক দর",
     "tool.q.amount": "পরিমাণ",
-    "tool.sample": "টাস্ক\tভূমিকা\tএফোর্ট\tধাপ\nরিকোয়্যারমেন্ট ওয়ার্কশপ\tবিজনেস অ্যানালিস্ট\t24\tবিশ্লেষণ\nলগইন স্ক্রিন\tUI ডিজাইনার\t32\tডিজাইন\nঅথ API\tব্যাকএন্ড ডেভ\t40\tবিল্ড\nপেমেন্ট ইন্টিগ্রেশন\tব্যাকএন্ড ডেভ\t64\tবিল্ড\nQA রিগ্রেশন\tQA ইঞ্জিনিয়ার\t48\tটেস্ট"
+    "tool.sample": "টাস্ক\tভূমিকা\tএফোর্ট\tধাপ\nরিকোয়্যারমেন্ট ওয়ার্কশপ\tবিজনেস অ্যানালিস্ট\t24\tবিশ্লেষণ\nলগইন স্ক্রিন\tUI ডিজাইনার\t32\tডিজাইন\nঅথ API\tব্যাকএন্ড ডেভ\t40\tবিল্ড\nপেমেন্ট ইন্টিগ্রেশন\tব্যাকএন্ড ডেভ\t64\tবিল্ড\nQA রিগ্রেশন\tQA ইঞ্জিনিয়ার\t48\tটেস্ট",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -863,7 +898,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "Qtd. (H/M)",
     "tool.q.rate": "Preço unitário",
     "tool.q.amount": "Valor",
-    "tool.sample": "Tarefa\tPapel\tEsforço\tFase\nWorkshop de requisitos\tAnalista de negócios\t24\tAnálise\nTela de login\tDesigner de UI\t32\tDesign\nAPI de autenticação\tDev backend\t40\tConstrução\nIntegração de pagamentos\tDev backend\t64\tConstrução\nRegressão de QA\tEngenheiro de QA\t48\tTestes"
+    "tool.sample": "Tarefa\tPapel\tEsforço\tFase\nWorkshop de requisitos\tAnalista de negócios\t24\tAnálise\nTela de login\tDesigner de UI\t32\tDesign\nAPI de autenticação\tDev backend\t40\tConstrução\nIntegração de pagamentos\tDev backend\t64\tConstrução\nRegressão de QA\tEngenheiro de QA\t48\tTestes",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -969,7 +1009,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "Кол-во (ч-мес)",
     "tool.q.rate": "Цена за единицу",
     "tool.q.amount": "Сумма",
-    "tool.sample": "Задача\tРоль\tТрудозатраты\tЭтап\nВоркшоп по требованиям\tБизнес-аналитик\t24\tАнализ\nЭкран входа\tUI-дизайнер\t32\tПроектирование\nAPI аутентификации\tBackend-разработчик\t40\tРазработка\nИнтеграция платежей\tBackend-разработчик\t64\tРазработка\nРегрессия QA\tQA-инженер\t48\tТестирование"
+    "tool.sample": "Задача\tРоль\tТрудозатраты\tЭтап\nВоркшоп по требованиям\tБизнес-аналитик\t24\tАнализ\nЭкран входа\tUI-дизайнер\t32\tПроектирование\nAPI аутентификации\tBackend-разработчик\t40\tРазработка\nИнтеграция платежей\tBackend-разработчик\t64\tРазработка\nРегрессия QA\tQA-инженер\t48\tТестирование",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1075,7 +1120,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "مقدار (M/M)",
     "tool.q.rate": "فی اکائی قیمت",
     "tool.q.amount": "رقم",
-    "tool.sample": "ٹاسک\tکردار\tایفرٹ\tمرحلہ\nریکوائرمنٹ ورکشاپ\tبزنس تجزیہ کار\t24\tتجزیہ\nلاگ ان اسکرین\tUI ڈیزائنر\t32\tڈیزائن\nآتھ API\tبیک اینڈ ڈیو\t40\tبلڈ\nپیمنٹ انٹیگریشن\tبیک اینڈ ڈیو\t64\tبلڈ\nQA ریگریشن\tQA انجینئر\t48\tٹیسٹ"
+    "tool.sample": "ٹاسک\tکردار\tایفرٹ\tمرحلہ\nریکوائرمنٹ ورکشاپ\tبزنس تجزیہ کار\t24\tتجزیہ\nلاگ ان اسکرین\tUI ڈیزائنر\t32\tڈیزائن\nآتھ API\tبیک اینڈ ڈیو\t40\tبلڈ\nپیمنٹ انٹیگریشن\tبیک اینڈ ڈیو\t64\tبلڈ\nQA ریگریشن\tQA انجینئر\t48\tٹیسٹ",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1181,7 +1231,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "Jml (M/M)",
     "tool.q.rate": "Harga satuan",
     "tool.q.amount": "Jumlah",
-    "tool.sample": "Tugas\tPeran\tEffort\tFase\nLokakarya kebutuhan\tAnalis bisnis\t24\tAnalisis\nLayar login\tDesainer UI\t32\tDesain\nAPI autentikasi\tDev backend\t40\tBangun\nIntegrasi pembayaran\tDev backend\t64\tBangun\nRegresi QA\tInsinyur QA\t48\tUji"
+    "tool.sample": "Tugas\tPeran\tEffort\tFase\nLokakarya kebutuhan\tAnalis bisnis\t24\tAnalisis\nLayar login\tDesainer UI\t32\tDesain\nAPI autentikasi\tDev backend\t40\tBangun\nIntegrasi pembayaran\tDev backend\t64\tBangun\nRegresi QA\tInsinyur QA\t48\tUji",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1287,7 +1342,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "Menge (PM)",
     "tool.q.rate": "Stückpreis",
     "tool.q.amount": "Betrag",
-    "tool.sample": "Aufgabe\tRolle\tAufwand\tPhase\nAnforderungs-Workshop\tBusiness-Analyst\t24\tAnalyse\nLogin-Bildschirm\tUI-Designer\t32\tDesign\nAuth-API\tBackend-Entwickler\t40\tUmsetzung\nZahlungs-Integration\tBackend-Entwickler\t64\tUmsetzung\nQA-Regression\tQA-Ingenieur\t48\tTest"
+    "tool.sample": "Aufgabe\tRolle\tAufwand\tPhase\nAnforderungs-Workshop\tBusiness-Analyst\t24\tAnalyse\nLogin-Bildschirm\tUI-Designer\t32\tDesign\nAuth-API\tBackend-Entwickler\t40\tUmsetzung\nZahlungs-Integration\tBackend-Entwickler\t64\tUmsetzung\nQA-Regression\tQA-Ingenieur\t48\tTest",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1393,7 +1453,12 @@ window.I18N_LOCALES = {
     "tool.q.qty": "数量（人月）",
     "tool.q.rate": "単価",
     "tool.q.amount": "金額",
-    "tool.sample": "作業\t役割\t工数\t工程\n要件定義ワークショップ\t業務分析\t24\t分析\nログイン画面\tUIデザイナー\t32\t設計\n認証API\tバックエンド開発\t40\t製造\n決済連携\tバックエンド開発\t64\t製造\nQAリグレッション\tQAエンジニア\t48\tテスト"
+    "tool.sample": "作業\t役割\t工数\t工程\n要件定義ワークショップ\t業務分析\t24\t分析\nログイン画面\tUIデザイナー\t32\t設計\n認証API\tバックエンド開発\t40\t製造\n決済連携\tバックエンド開発\t64\t製造\nQAリグレッション\tQAエンジニア\t48\tテスト",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1499,6 +1564,11 @@ window.I18N_LOCALES = {
     "tool.q.qty": "수량(M/M)",
     "tool.q.rate": "단가",
     "tool.q.amount": "금액",
-    "tool.sample": "작업명\t역할\t공수\t단계\n요구사항 워크숍\t업무 분석가\t24\t분석\n로그인 화면\tUI 디자이너\t32\t설계\n인증 API\t백엔드 개발\t40\t구현\n결제 연동\t백엔드 개발\t64\t구현\nQA 회귀 테스트\tQA 엔지니어\t48\t테스트"
+    "tool.sample": "작업명\t역할\t공수\t단계\n요구사항 워크숍\t업무 분석가\t24\t분석\n로그인 화면\tUI 디자이너\t32\t설계\n인증 API\t백엔드 개발\t40\t구현\n결제 연동\t백엔드 개발\t64\t구현\nQA 회귀 테스트\tQA 엔지니어\t48\t테스트",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

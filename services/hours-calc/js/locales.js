@@ -67,7 +67,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I add or subtract hours and minutes from a time?",
     "faq.a4": "Switch to the \"Add or subtract time\" tab, enter a starting time, choose Add or Subtract, and type how many hours and minutes to apply. For example, starting at 23:30 and adding 2 hours 45 minutes rolls past midnight to 02:15 the next day, and the tool notes the day change so you don't lose track of it. This mode is handy for working out shift end times, appointment reminders, or how many hours ago something happened, without doing the clock math by hand.",
     "faq.q5": "Is my time data sent to a server?",
-    "faq.a5": "No. This hours calculator runs entirely in your browser — the times, break minutes, and any add/subtract values you enter never leave your device and nothing is uploaded or stored on a server. Your last inputs are saved only in your browser's local storage so the tool remembers them next time, and you can clear that at any time by clearing your browser data."
+    "faq.a5": "No. This hours calculator runs entirely in your browser — the times, break minutes, and any add/subtract values you enter never leave your device and nothing is uploaded or stored on a server. Your last inputs are saved only in your browser's local storage so the tool remembers them next time, and you can clear that at any time by clearing your browser data.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如何给某个时间加上或减去小时和分钟？",
     "faq.a4": "切换到“加减时间”标签页，输入一个起始时间，选择“加”或“减”，再输入要应用的小时数和分钟数。例如，从 23:30 开始加上 2 小时 45 分钟会跨过午夜，得到次日的 02:15，工具会提示日期变化，让你不会搞混。这个模式非常适合计算班次结束时间、预约提醒，或某件事发生在几小时前，而无需自己手动做时钟运算。",
     "faq.q5": "我的时间数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个工时计算器完全在你的浏览器中运行——你输入的时间、休息分钟数以及任何加减数值都不会离开你的设备，也不会被上传或存储到任何服务器。你上次输入的内容只会保存在浏览器的本地存储中，以便工具下次记住它们，你也可以随时清除浏览器数据来清空这些记录。"
+    "faq.a5": "不会。这个工时计算器完全在你的浏览器中运行——你输入的时间、休息分钟数以及任何加减数值都不会离开你的设备，也不会被上传或存储到任何服务器。你上次输入的内容只会保存在浏览器的本地存储中，以便工具下次记住它们，你也可以随时清除浏览器数据来清空这些记录。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -187,7 +197,12 @@ window.I18N_LOCALES = {
     "faq.q4": "किसी समय में घंटे और मिनट कैसे जोड़ें या घटाएँ?",
     "faq.a4": "\"समय जोड़ें/घटाएँ\" टैब पर जाएँ, एक शुरुआती समय डालें, जोड़ें या घटाएँ चुनें, और कितने घंटे-मिनट लागू करने हैं वह लिखें। उदाहरण के लिए, 23:30 से शुरू करके 2 घंटे 45 मिनट जोड़ने पर आधी रात पार होकर अगले दिन 02:15 आता है, और टूल दिन के बदलाव को नोट कर देता है ताकि आप इसे न भूलें। यह मोड शिफ्ट समाप्ति समय, अपॉइंटमेंट रिमाइंडर, या कोई चीज़ कितने घंटे पहले हुई, यह पता लगाने के लिए बहुत काम का है — बिना हाथ से घड़ी की गणना किए।",
     "faq.q5": "क्या मेरा समय डेटा किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह ऑवर्स कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा डाले गए समय, ब्रेक मिनट और कोई भी जोड़ने/घटाने के मान कभी भी आपकी डिवाइस से बाहर नहीं जाते और न ही किसी सर्वर पर अपलोड या संग्रहीत होते हैं। आपकी अंतिम प्रविष्टियाँ केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजी जाती हैं ताकि टूल अगली बार उन्हें याद रखे, और आप कभी भी अपना ब्राउज़र डेटा साफ़ करके इसे मिटा सकते हैं।"
+    "faq.a5": "नहीं। यह ऑवर्स कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा डाले गए समय, ब्रेक मिनट और कोई भी जोड़ने/घटाने के मान कभी भी आपकी डिवाइस से बाहर नहीं जाते और न ही किसी सर्वर पर अपलोड या संग्रहीत होते हैं। आपकी अंतिम प्रविष्टियाँ केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजी जाती हैं ताकि टूल अगली बार उन्हें याद रखे, और आप कभी भी अपना ब्राउज़र डेटा साफ़ करके इसे मिटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -247,7 +262,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo sumo o resto horas y minutos a una hora?",
     "faq.a4": "Cambia a la pestaña \"Sumar o restar tiempo\", ingresa una hora de inicio, elige Sumar o Restar, y escribe cuántas horas y minutos aplicar. Por ejemplo, empezando a las 23:30 y sumando 2 horas 45 minutos se pasa la medianoche hasta las 02:15 del día siguiente, y la herramienta señala el cambio de día para que no lo pierdas de vista. Este modo es útil para calcular horas de fin de turno, recordatorios de citas, o cuántas horas hace que ocurrió algo, sin hacer la aritmética del reloj a mano.",
     "faq.q5": "¿Se envían mis datos de hora a un servidor?",
-    "faq.a5": "No. Esta calculadora de horas se ejecuta completamente en tu navegador — las horas, los minutos de descanso y cualquier valor de suma o resta que ingreses nunca salen de tu dispositivo y no se sube ni se almacena nada en ningún servidor. Tus últimas entradas se guardan solo en el almacenamiento local de tu navegador para que la herramienta las recuerde la próxima vez, y puedes borrar eso en cualquier momento borrando los datos de tu navegador."
+    "faq.a5": "No. Esta calculadora de horas se ejecuta completamente en tu navegador — las horas, los minutos de descanso y cualquier valor de suma o resta que ingreses nunca salen de tu dispositivo y no se sube ni se almacena nada en ningún servidor. Tus últimas entradas se guardan solo en el almacenamiento local de tu navegador para que la herramienta las recuerde la próxima vez, y puedes borrar eso en cualquier momento borrando los datos de tu navegador.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -307,7 +327,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أضيف ساعات ودقائق إلى وقت أو أطرحها منه؟",
     "faq.a4": "بدّل إلى تبويب \"إضافة أو طرح الوقت\"، أدخل وقت بداية، اختر إضافة أو طرح، واكتب عدد الساعات والدقائق المراد تطبيقها. على سبيل المثال، البدء من الساعة 23:30 وإضافة ساعتين و45 دقيقة يتجاوز منتصف الليل إلى الساعة 02:15 من اليوم التالي، وتشير الأداة إلى تغيّر اليوم حتى لا يفوتك ذلك. هذا الوضع مفيد لحساب أوقات انتهاء الورديات، أو تذكيرات المواعيد، أو معرفة منذ كم ساعة حدث أمر ما، من دون إجراء حسابات الساعة يدويًا.",
     "faq.q5": "هل تُرسل بيانات وقتي إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة الساعات هذه بالكامل داخل متصفحك — لا تغادر الأوقات ودقائق الاستراحة وأي قيم إضافة أو طرح تدخلها جهازك أبدًا، ولا يُرفع أو يُخزَّن أي شيء على خادم. تُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك حتى تتذكرها الأداة في المرة القادمة، ويمكنك مسح ذلك في أي وقت بمسح بيانات متصفحك."
+    "faq.a5": "لا. تعمل حاسبة الساعات هذه بالكامل داخل متصفحك — لا تغادر الأوقات ودقائق الاستراحة وأي قيم إضافة أو طرح تدخلها جهازك أبدًا، ولا يُرفع أو يُخزَّن أي شيء على خادم. تُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك حتى تتذكرها الأداة في المرة القادمة، ويمكنك مسح ذلك في أي وقت بمسح بيانات متصفحك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -367,7 +392,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment ajouter ou soustraire des heures et des minutes à une heure ?",
     "faq.a4": "Passez à l'onglet « Ajouter ou soustraire du temps », saisissez une heure de départ, choisissez Ajouter ou Soustraire, et indiquez combien d'heures et de minutes appliquer. Par exemple, en partant de 23h30 et en ajoutant 2 heures 45 minutes, on dépasse minuit pour arriver à 2h15 le lendemain, et l'outil signale le changement de jour pour que vous ne le perdiez pas de vue. Ce mode est pratique pour calculer une heure de fin de poste, un rappel de rendez-vous, ou depuis combien d'heures quelque chose s'est produit, sans faire le calcul d'horloge à la main.",
     "faq.q5": "Mes données horaires sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce calculateur d'heures fonctionne entièrement dans votre navigateur — les horaires, les minutes de pause et toute valeur d'ajout/soustraction que vous saisissez ne quittent jamais votre appareil et rien n'est téléversé ni stocké sur un serveur. Vos dernières saisies sont enregistrées uniquement dans le stockage local de votre navigateur afin que l'outil s'en souvienne la prochaine fois, et vous pouvez les effacer à tout moment en supprimant les données de votre navigateur."
+    "faq.a5": "Non. Ce calculateur d'heures fonctionne entièrement dans votre navigateur — les horaires, les minutes de pause et toute valeur d'ajout/soustraction que vous saisissez ne quittent jamais votre appareil et rien n'est téléversé ni stocké sur un serveur. Vos dernières saisies sont enregistrées uniquement dans le stockage local de votre navigateur afin que l'outil s'en souvienne la prochaine fois, et vous pouvez les effacer à tout moment en supprimant les données de votre navigateur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -427,7 +457,12 @@ window.I18N_LOCALES = {
     "faq.q4": "কোনো সময়ে ঘণ্টা ও মিনিট কীভাবে যোগ বা বিয়োগ করবেন?",
     "faq.a4": "\"সময় যোগ বা বিয়োগ\" ট্যাবে যান, একটি শুরুর সময় দিন, যোগ বা বিয়োগ বেছে নিন, এবং কত ঘণ্টা-মিনিট প্রয়োগ করতে হবে তা লিখুন। উদাহরণস্বরূপ, ২৩:৩০ থেকে শুরু করে ২ ঘণ্টা ৪৫ মিনিট যোগ করলে মধ্যরাত পেরিয়ে পরের দিন ০২:১৫ হয়, এবং টুলটি দিনের পরিবর্তন উল্লেখ করে দেয় যাতে আপনি বিভ্রান্ত না হন। এই মোডটি শিফট শেষ হওয়ার সময়, অ্যাপয়েন্টমেন্ট রিমাইন্ডার, বা কোনো কিছু কত ঘণ্টা আগে ঘটেছে তা হাতে হিসাব না করেই বের করার জন্য সুবিধাজনক।",
     "faq.q5": "আমার সময়ের ডেটা কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই আওয়ার্স ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার দেওয়া সময়, বিরতির মিনিট এবং যেকোনো যোগ/বিয়োগ মান কখনো আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষিত হয় না। আপনার সর্বশেষ ইনপুটগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে টুলটি পরবর্তী বার সেগুলো মনে রাখে, এবং আপনি চাইলে যেকোনো সময় ব্রাউজার ডেটা মুছে তা সাফ করতে পারেন।"
+    "faq.a5": "না। এই আওয়ার্স ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার দেওয়া সময়, বিরতির মিনিট এবং যেকোনো যোগ/বিয়োগ মান কখনো আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষিত হয় না। আপনার সর্বশেষ ইনপুটগুলো শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে টুলটি পরবর্তী বার সেগুলো মনে রাখে, এবং আপনি চাইলে যেকোনো সময় ব্রাউজার ডেটা মুছে তা সাফ করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -487,7 +522,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como somo ou subtraio horas e minutos de um horário?",
     "faq.a4": "Mude para a aba \"Somar ou subtrair tempo\", insira um horário inicial, escolha Somar ou Subtrair, e digite quantas horas e minutos aplicar. Por exemplo, começando às 23h30 e somando 2 horas e 45 minutos, passa da meia-noite para 02h15 do dia seguinte, e a ferramenta indica a mudança de dia para você não perder o controle. Esse modo é útil para calcular horários de término de turno, lembretes de compromissos, ou há quantas horas algo aconteceu, sem fazer as contas do relógio manualmente.",
     "faq.q5": "Meus dados de horário são enviados a um servidor?",
-    "faq.a5": "Não. Esta calculadora de horas funciona inteiramente no seu navegador — os horários, os minutos de pausa e quaisquer valores de soma/subtração que você insere nunca saem do seu dispositivo, e nada é enviado ou armazenado em um servidor. Suas últimas entradas são salvas apenas no armazenamento local do seu navegador, para que a ferramenta se lembre delas da próxima vez, e você pode apagar isso a qualquer momento limpando os dados do seu navegador."
+    "faq.a5": "Não. Esta calculadora de horas funciona inteiramente no seu navegador — os horários, os minutos de pausa e quaisquer valores de soma/subtração que você insere nunca saem do seu dispositivo, e nada é enviado ou armazenado em um servidor. Suas últimas entradas são salvas apenas no armazenamento local do seu navegador, para que a ferramenta se lembre delas da próxima vez, e você pode apagar isso a qualquer momento limpando os dados do seu navegador.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -547,7 +587,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как прибавить или вычесть часы и минуты из времени?",
     "faq.a4": "Перейдите на вкладку «Прибавить или вычесть время», введите начальное время, выберите «Прибавить» или «Вычесть» и укажите, сколько часов и минут применить. Например, если начать с 23:30 и прибавить 2 часа 45 минут, время перейдёт через полночь на 02:15 следующего дня, и инструмент отметит смену дня, чтобы вы не потеряли это из виду. Этот режим удобен для расчёта времени окончания смены, напоминаний о встречах или того, сколько часов назад что-то произошло, без ручных вычислений на часах.",
     "faq.q5": "Отправляются ли мои данные о времени на сервер?",
-    "faq.a5": "Нет. Этот калькулятор часов работает полностью в вашем браузере — время, минуты перерыва и любые значения для прибавления/вычитания, которые вы вводите, никогда не покидают ваше устройство, и ничего не загружается и не хранится на сервере. Ваши последние введённые данные сохраняются только в локальном хранилище браузера, чтобы инструмент запомнил их в следующий раз, и вы можете стереть их в любой момент, очистив данные браузера."
+    "faq.a5": "Нет. Этот калькулятор часов работает полностью в вашем браузере — время, минуты перерыва и любые значения для прибавления/вычитания, которые вы вводите, никогда не покидают ваше устройство, и ничего не загружается и не хранится на сервере. Ваши последние введённые данные сохраняются только в локальном хранилище браузера, чтобы инструмент запомнил их в следующий раз, и вы можете стереть их в любой момент, очистив данные браузера.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -607,7 +652,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کسی وقت میں گھنٹے اور منٹ کیسے جمع یا منہا کریں؟",
     "faq.a4": "\"وقت جمع یا منہا کریں\" ٹیب پر جائیں، ایک ابتدائی وقت درج کریں، جمع یا منہا منتخب کریں، اور کتنے گھنٹے اور منٹ لاگو کرنے ہیں لکھیں۔ مثال کے طور پر، 23:30 سے شروع کر کے 2 گھنٹے 45 منٹ جمع کرنے پر آدھی رات گزر کر اگلے دن 02:15 آ جاتا ہے، اور ٹول دن کی تبدیلی نوٹ کر دیتا ہے تاکہ آپ الجھن میں نہ پڑیں۔ یہ موڈ شفٹ ختم ہونے کے اوقات، اپائنٹمنٹ یاد دہانیوں، یا کوئی چیز کتنے گھنٹے پہلے ہوئی معلوم کرنے کے لیے مفید ہے — ہاتھ سے گھڑی کا حساب لگائے بغیر۔",
     "faq.q5": "کیا میرا وقت کا ڈیٹا کسی سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ آورز کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کے درج کردہ اوقات، وقفے کے منٹ اور کوئی بھی جمع/منہا کی قدریں کبھی بھی آپ کے آلے سے باہر نہیں جاتیں اور کسی سرور پر اپ لوڈ یا محفوظ نہیں ہوتیں۔ آپ کی آخری اندراجات صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں تاکہ ٹول اگلی بار انہیں یاد رکھے، اور آپ کسی بھی وقت اپنا براؤزر ڈیٹا صاف کر کے اسے مٹا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ آورز کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کے درج کردہ اوقات، وقفے کے منٹ اور کوئی بھی جمع/منہا کی قدریں کبھی بھی آپ کے آلے سے باہر نہیں جاتیں اور کسی سرور پر اپ لوڈ یا محفوظ نہیں ہوتیں۔ آپ کی آخری اندراجات صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں تاکہ ٹول اگلی بار انہیں یاد رکھے، اور آپ کسی بھی وقت اپنا براؤزر ڈیٹا صاف کر کے اسے مٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -667,7 +717,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara menambah atau mengurangi jam dan menit dari suatu waktu?",
     "faq.a4": "Pindah ke tab \"Tambah atau kurangi waktu\", masukkan waktu awal, pilih Tambah atau Kurangi, dan ketik berapa jam dan menit yang ingin diterapkan. Misalnya, mulai pukul 23:30 dan menambahkan 2 jam 45 menit akan melewati tengah malam menjadi pukul 02:15 keesokan harinya, dan alat ini mencatat perubahan hari agar Anda tidak kehilangan jejak. Mode ini praktis untuk menghitung waktu selesai shift, pengingat janji temu, atau berapa jam yang lalu sesuatu terjadi, tanpa perhitungan jam secara manual.",
     "faq.q5": "Apakah data waktu saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator jam ini sepenuhnya berjalan di browser Anda — waktu, menit istirahat, dan nilai tambah/kurang apa pun yang Anda masukkan tidak pernah meninggalkan perangkat Anda dan tidak ada yang diunggah atau disimpan di server. Input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda agar alat ini mengingatnya lain kali, dan Anda dapat menghapusnya kapan saja dengan menghapus data browser Anda."
+    "faq.a5": "Tidak. Kalkulator jam ini sepenuhnya berjalan di browser Anda — waktu, menit istirahat, dan nilai tambah/kurang apa pun yang Anda masukkan tidak pernah meninggalkan perangkat Anda dan tidak ada yang diunggah atau disimpan di server. Input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda agar alat ini mengingatnya lain kali, dan Anda dapat menghapusnya kapan saja dengan menghapus data browser Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -727,7 +782,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie addiere oder subtrahiere ich Stunden und Minuten von einer Uhrzeit?",
     "faq.a4": "Wechsle zum Tab „Zeit addieren oder subtrahieren“, gib eine Startzeit ein, wähle Addieren oder Subtrahieren und gib an, wie viele Stunden und Minuten angewendet werden sollen. Wenn du beispielsweise um 23:30 Uhr beginnst und 2 Stunden 45 Minuten addierst, wird Mitternacht überschritten und man landet am nächsten Tag bei 02:15 Uhr — das Tool vermerkt den Tageswechsel, damit du ihn nicht übersiehst. Dieser Modus ist praktisch, um Schichtenden, Terminerinnerungen oder zu berechnen, vor wie vielen Stunden etwas passiert ist, ohne die Uhrzeit-Rechnerei von Hand zu machen.",
     "faq.q5": "Werden meine Zeitdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Stundenrechner läuft vollständig in deinem Browser — die Uhrzeiten, Pausenminuten und alle Additions-/Subtraktionswerte, die du eingibst, verlassen niemals dein Gerät, und nichts wird auf einen Server hochgeladen oder dort gespeichert. Deine letzten Eingaben werden nur im lokalen Speicher deines Browsers gespeichert, damit sich das Tool beim nächsten Mal daran erinnert, und du kannst das jederzeit löschen, indem du deine Browserdaten löschst."
+    "faq.a5": "Nein. Dieser Stundenrechner läuft vollständig in deinem Browser — die Uhrzeiten, Pausenminuten und alle Additions-/Subtraktionswerte, die du eingibst, verlassen niemals dein Gerät, und nichts wird auf einen Server hochgeladen oder dort gespeichert. Deine letzten Eingaben werden nur im lokalen Speicher deines Browsers gespeichert, damit sich das Tool beim nächsten Mal daran erinnert, und du kannst das jederzeit löschen, indem du deine Browserdaten löschst.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -787,7 +847,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ある時刻に時間や分を足したり引いたりするにはどうすればよいですか？",
     "faq.a4": "「時間を足す・引く」タブに切り替え、開始時刻を入力し、足すか引くかを選び、適用する時間と分を入力します。例えば23:30から2時間45分を足すと、真夜中を越えて翌日の02:15になり、ツールは日付が変わったことを表示するので見落としません。このモードはシフトの終了時刻の計算、予定のリマインダー、何時間前に何かが起きたかを知るのに便利で、手作業で時計の計算をする必要がありません。",
     "faq.q5": "私の時刻データはサーバーに送信されますか？",
-    "faq.a5": "いいえ。この時間計算機は完全にブラウザ内で動作します — 入力した時刻、休憩時間、加減算の値が端末の外に出ることはなく、サーバーにアップロードや保存されることもありません。直前の入力内容はブラウザのローカルストレージにのみ保存され、次回ツールがそれを覚えています。ブラウザデータを消去すれば、いつでもその情報を削除できます。"
+    "faq.a5": "いいえ。この時間計算機は完全にブラウザ内で動作します — 入力した時刻、休憩時間、加減算の値が端末の外に出ることはなく、サーバーにアップロードや保存されることもありません。直前の入力内容はブラウザのローカルストレージにのみ保存され、次回ツールがそれを覚えています。ブラウザデータを消去すれば、いつでもその情報を削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -847,6 +912,11 @@ window.I18N_LOCALES = {
     "faq.q4": "특정 시각에 시간과 분을 더하거나 빼려면 어떻게 하나요?",
     "faq.a4": "\"시간 더하기/빼기\" 탭으로 전환한 뒤 기준 시각을 입력하고 더하기 또는 빼기를 선택한 다음, 적용할 시간과 분을 입력하세요. 예를 들어 23:30에서 2시간 45분을 더하면 자정을 넘어 다음 날 02:15가 되며, 도구가 날짜 변경을 표시해 주므로 놓치지 않습니다. 이 모드는 근무 종료 시각 계산, 약속 알림, 또는 몇 시간 전에 일어난 일을 손으로 계산하지 않고 알아낼 때 유용합니다.",
     "faq.q5": "제 시간 데이터가 서버로 전송되나요?",
-    "faq.a5": "아닙니다. 이 근무시간 계산기는 전적으로 브라우저 안에서 동작합니다 — 입력한 시각, 휴게 분, 더하기/빼기 값은 기기 밖으로 전송되지 않으며 서버에 업로드되거나 저장되지 않습니다. 마지막 입력값은 브라우저의 로컬 저장소에만 저장되어 다음에 방문할 때 도구가 기억하며, 언제든 브라우저 데이터를 지우면 이 값도 함께 삭제됩니다."
+    "faq.a5": "아닙니다. 이 근무시간 계산기는 전적으로 브라우저 안에서 동작합니다 — 입력한 시각, 휴게 분, 더하기/빼기 값은 기기 밖으로 전송되지 않으며 서버에 업로드되거나 저장되지 않습니다. 마지막 입력값은 브라우저의 로컬 저장소에만 저장되어 다음에 방문할 때 도구가 기억하며, 언제든 브라우저 데이터를 지우면 이 값도 함께 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

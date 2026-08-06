@@ -75,7 +75,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can my BMI be normal but my body fat high?",
     "faq.a4": "Yes — this is often called \"skinny fat\". BMI only uses height and weight, so someone with little muscle and more fat can have a normal BMI while their body fat percentage is high. Because this calculator measures actual girths and reports fat mass and lean body mass separately, it catches cases that a BMI calculator misses.",
     "faq.q5": "Is my body data sent to a server?",
-    "faq.a5": "No. Every calculation runs entirely inside your browser; your measurements never leave your device. They are only saved to your browser's localStorage so the form is pre-filled on your next visit, and you can clear them anytime from your browser settings."
+    "faq.a5": "No. Every calculation runs entirely inside your browser; your measurements never leave your device. They are only saved to your browser's localStorage so the form is pre-filled on your next visit, and you can clear them anytime from your browser settings.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -135,7 +140,12 @@ window.I18N_LOCALES = {
     "faq.q4": "BMI正常但体脂率会偏高吗?",
     "faq.a4": "会——这常被称为“瘦胖子”。BMI只用身高和体重,所以肌肉少、脂肪多的人BMI可能正常,而体脂率却偏高。本计算器测量实际围度,并分别给出脂肪量和瘦体重,能识别出BMI计算器忽略的情况。",
     "faq.q5": "我的身体数据会上传到服务器吗?",
-    "faq.a5": "不会。所有计算都在你的浏览器内完成,测量数据不会离开你的设备。数据仅保存在浏览器的localStorage中,方便下次访问时自动填写,你可以随时在浏览器设置中清除。"
+    "faq.a5": "不会。所有计算都在你的浏览器内完成,测量数据不会离开你的设备。数据仅保存在浏览器的localStorage中,方便下次访问时自动填写,你可以随时在浏览器设置中清除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -195,7 +205,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरा BMI सामान्य पर बॉडी फैट अधिक हो सकता है?",
     "faq.a4": "हाँ — इसे अक्सर 'स्किनी फैट' कहते हैं। BMI केवल ऊँचाई और वज़न का उपयोग करता है, इसलिए कम मांसपेशी और अधिक वसा वाले व्यक्ति का BMI सामान्य हो सकता है जबकि बॉडी फैट प्रतिशत अधिक हो। यह कैलकुलेटर वास्तविक माप लेता है और फैट मास तथा लीन बॉडी मास अलग-अलग बताता है, इसलिए यह उन मामलों को पकड़ लेता है जिन्हें BMI कैलकुलेटर चूक जाता है।",
     "faq.q5": "क्या मेरा शारीरिक डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। सभी गणनाएँ पूरी तरह आपके ब्राउज़र में होती हैं; आपकी माप आपके डिवाइस से बाहर नहीं जाती। यह केवल आपके ब्राउज़र के localStorage में सहेजी जाती है ताकि अगली बार फ़ॉर्म पहले से भरा हो, और आप इसे कभी भी ब्राउज़र सेटिंग्स से हटा सकते हैं।"
+    "faq.a5": "नहीं। सभी गणनाएँ पूरी तरह आपके ब्राउज़र में होती हैं; आपकी माप आपके डिवाइस से बाहर नहीं जाती। यह केवल आपके ब्राउज़र के localStorage में सहेजी जाती है ताकि अगली बार फ़ॉर्म पहले से भरा हो, और आप इसे कभी भी ब्राउज़र सेटिंग्स से हटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -255,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puede mi IMC ser normal y tener la grasa corporal alta?",
     "faq.a4": "Sí, es lo que se conoce como 'delgado con grasa' (skinny fat). El IMC solo usa altura y peso, así que alguien con poco músculo y más grasa puede tener un IMC normal mientras su porcentaje de grasa corporal es alto. Como esta calculadora mide contornos reales e informa por separado de la masa grasa y la masa magra, detecta casos que una calculadora de IMC pasa por alto.",
     "faq.q5": "¿Se envían mis datos corporales a un servidor?",
-    "faq.a5": "No. Todos los cálculos se realizan por completo en tu navegador; tus medidas nunca salen de tu dispositivo. Solo se guardan en el localStorage de tu navegador para rellenar el formulario en tu próxima visita, y puedes borrarlas cuando quieras desde los ajustes del navegador."
+    "faq.a5": "No. Todos los cálculos se realizan por completo en tu navegador; tus medidas nunca salen de tu dispositivo. Solo se guardan en el localStorage de tu navegador para rellenar el formulario en tu próxima visita, y puedes borrarlas cuando quieras desde los ajustes del navegador.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -315,7 +335,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكن أن يكون مؤشر كتلة جسمي طبيعياً مع ارتفاع نسبة الدهون؟",
     "faq.a4": "نعم — يُسمى ذلك غالباً \"النحيف السمين\" (skinny fat). يعتمد مؤشر كتلة الجسم على الطول والوزن فقط، لذا قد يكون لدى شخص قليل العضلات وكثير الدهون مؤشر طبيعي بينما نسبة دهونه مرتفعة. ولأن هذه الحاسبة تقيس المحيطات الفعلية وتذكر كتلة الدهون والكتلة الخالية من الدهون كلاً على حدة، فإنها تكشف الحالات التي تفوتها حاسبة مؤشر كتلة الجسم.",
     "faq.q5": "هل تُرسل بيانات جسمي إلى خادم؟",
-    "faq.a5": "لا. تُجرى كل الحسابات بالكامل داخل متصفحك؛ ولا تغادر قياساتك جهازك. تُحفظ فقط في localStorage بمتصفحك ليُملأ النموذج تلقائياً في زيارتك التالية، ويمكنك مسحها في أي وقت من إعدادات المتصفح."
+    "faq.a5": "لا. تُجرى كل الحسابات بالكامل داخل متصفحك؛ ولا تغادر قياساتك جهازك. تُحفظ فقط في localStorage بمتصفحك ليُملأ النموذج تلقائياً في زيارتك التالية، ويمكنك مسحها في أي وقت من إعدادات المتصفح.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -375,7 +400,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mon IMC peut-il être normal avec une masse grasse élevée ?",
     "faq.a4": "Oui, c'est ce qu'on appelle souvent le « faux maigre » (skinny fat). L'IMC n'utilise que la taille et le poids : une personne peu musclée mais plus grasse peut avoir un IMC normal alors que son pourcentage de masse grasse est élevé. Comme ce calculateur mesure des circonférences réelles et indique séparément la masse grasse et la masse maigre, il détecte des cas qu'un calculateur d'IMC laisse passer.",
     "faq.q5": "Mes données corporelles sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Tous les calculs se font entièrement dans votre navigateur ; vos mesures ne quittent jamais votre appareil. Elles sont uniquement enregistrées dans le localStorage de votre navigateur pour préremplir le formulaire lors de votre prochaine visite, et vous pouvez les effacer à tout moment depuis les réglages du navigateur."
+    "faq.a5": "Non. Tous les calculs se font entièrement dans votre navigateur ; vos mesures ne quittent jamais votre appareil. Elles sont uniquement enregistrées dans le localStorage de votre navigateur pour préremplir le formulaire lors de votre prochaine visite, et vous pouvez les effacer à tout moment depuis les réglages du navigateur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -435,7 +465,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার BMI স্বাভাবিক কিন্তু চর্বি বেশি হতে পারে কি?",
     "faq.a4": "হ্যাঁ — একে প্রায়ই 'স্কিনি ফ্যাট' বলা হয়। BMI শুধু উচ্চতা ও ওজন ব্যবহার করে, তাই কম পেশি ও বেশি চর্বিযুক্ত কারও BMI স্বাভাবিক হতে পারে যখন তার চর্বির শতাংশ বেশি। এই ক্যালকুলেটর প্রকৃত পরিধি মাপে এবং ফ্যাট ভর ও লিন বডি ভর আলাদাভাবে দেখায়, তাই এটি এমন ক্ষেত্র ধরে ফেলে যা BMI ক্যালকুলেটর মিস করে।",
     "faq.q5": "আমার শরীরের তথ্য কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। সব হিসাব সম্পূর্ণ আপনার ব্রাউজারেই হয়; আপনার মাপ কখনও আপনার ডিভাইস ছাড়ে না। পরের বার ফর্ম আগে থেকে পূরণ করার সুবিধার জন্য এটি শুধু ব্রাউজারের localStorage-এ সংরক্ষণ করা হয়, এবং আপনি যেকোনো সময় ব্রাউজার সেটিংস থেকে মুছে ফেলতে পারেন।"
+    "faq.a5": "না। সব হিসাব সম্পূর্ণ আপনার ব্রাউজারেই হয়; আপনার মাপ কখনও আপনার ডিভাইস ছাড়ে না। পরের বার ফর্ম আগে থেকে পূরণ করার সুবিধার জন্য এটি শুধু ব্রাউজারের localStorage-এ সংরক্ষণ করা হয়, এবং আপনি যেকোনো সময় ব্রাউজার সেটিংস থেকে মুছে ফেলতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -495,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meu IMC pode ser normal e minha gordura corporal alta?",
     "faq.a4": "Sim — isso é frequentemente chamado de 'falso magro' (skinny fat). O IMC usa apenas altura e peso, então alguém com pouco músculo e mais gordura pode ter IMC normal enquanto o percentual de gordura corporal é alto. Como esta calculadora mede circunferências reais e informa a massa gorda e a massa magra separadamente, ela detecta casos que uma calculadora de IMC deixa passar.",
     "faq.q5": "Meus dados corporais são enviados a um servidor?",
-    "faq.a5": "Não. Todos os cálculos acontecem inteiramente no seu navegador; suas medidas nunca saem do seu dispositivo. Elas são salvas apenas no localStorage do navegador para preencher o formulário na próxima visita, e você pode apagá-las quando quiser nas configurações do navegador."
+    "faq.a5": "Não. Todos os cálculos acontecem inteiramente no seu navegador; suas medidas nunca saem do seu dispositivo. Elas são salvas apenas no localStorage do navegador para preencher o formulário na próxima visita, e você pode apagá-las quando quiser nas configurações do navegador.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -555,7 +595,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Может ли ИМТ быть нормальным при высоком проценте жира?",
     "faq.a4": "Да — это часто называют «худой толстяк» (skinny fat). ИМТ учитывает только рост и вес, поэтому у человека с малой мышечной массой и большим количеством жира ИМТ может быть нормальным, а процент жира — высоким. Поскольку этот калькулятор измеряет реальные обхваты и отдельно показывает жировую и безжировую массу, он выявляет случаи, которые пропускает калькулятор ИМТ.",
     "faq.q5": "Отправляются ли данные о теле на сервер?",
-    "faq.a5": "Нет. Все вычисления выполняются полностью в вашем браузере; ваши мерки никогда не покидают устройство. Они сохраняются только в localStorage браузера, чтобы форма заполнялась при следующем визите, и вы можете удалить их в любой момент в настройках браузера."
+    "faq.a5": "Нет. Все вычисления выполняются полностью в вашем браузере; ваши мерки никогда не покидают устройство. Они сохраняются только в localStorage браузера, чтобы форма заполнялась при следующем визите, и вы можете удалить их в любой момент в настройках браузера.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -615,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میرا BMI نارمل ہو سکتا ہے مگر چربی زیادہ؟",
     "faq.a4": "جی ہاں — اسے اکثر 'اسکنی فیٹ' کہا جاتا ہے۔ BMI صرف قد اور وزن استعمال کرتا ہے، اس لیے کم پٹھوں اور زیادہ چربی والے شخص کا BMI نارمل ہو سکتا ہے جبکہ اس کی چربی کی فیصد زیادہ ہو۔ چونکہ یہ کیلکولیٹر اصل گھیر ناپتا ہے اور فیٹ ماس اور لین باڈی ماس الگ الگ بتاتا ہے، اس لیے یہ ان صورتوں کو پکڑ لیتا ہے جو BMI کیلکولیٹر سے رہ جاتی ہیں۔",
     "faq.q5": "کیا میرا جسمانی ڈیٹا سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ تمام حساب مکمل طور پر آپ کے براؤزر میں ہوتے ہیں؛ آپ کی پیمائش کبھی آپ کے آلے سے باہر نہیں جاتی۔ یہ صرف براؤزر کے localStorage میں محفوظ ہوتی ہے تاکہ اگلی بار فارم پہلے سے بھرا ہو، اور آپ اسے کسی بھی وقت براؤزر کی ترتیبات سے حذف کر سکتے ہیں۔"
+    "faq.a5": "نہیں۔ تمام حساب مکمل طور پر آپ کے براؤزر میں ہوتے ہیں؛ آپ کی پیمائش کبھی آپ کے آلے سے باہر نہیں جاتی۔ یہ صرف براؤزر کے localStorage میں محفوظ ہوتی ہے تاکہ اگلی بار فارم پہلے سے بھرا ہو، اور آپ اسے کسی بھی وقت براؤزر کی ترتیبات سے حذف کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -675,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah BMI saya normal tetapi lemak tubuh tinggi?",
     "faq.a4": "Bisa — ini sering disebut 'skinny fat'. BMI hanya memakai tinggi dan berat, jadi seseorang dengan sedikit otot dan lebih banyak lemak bisa memiliki BMI normal padahal persentase lemak tubuhnya tinggi. Karena kalkulator ini mengukur lingkar sebenarnya dan melaporkan massa lemak serta massa tanpa lemak secara terpisah, ia menangkap kasus yang terlewat oleh kalkulator BMI.",
     "faq.q5": "Apakah data tubuh saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan berjalan sepenuhnya di peramban Anda; ukuran Anda tidak pernah meninggalkan perangkat. Data hanya disimpan di localStorage peramban agar formulir terisi otomatis pada kunjungan berikutnya, dan Anda dapat menghapusnya kapan saja dari pengaturan peramban."
+    "faq.a5": "Tidak. Semua perhitungan berjalan sepenuhnya di peramban Anda; ukuran Anda tidak pernah meninggalkan perangkat. Data hanya disimpan di localStorage peramban agar formulir terisi otomatis pada kunjungan berikutnya, dan Anda dapat menghapusnya kapan saja dari pengaturan peramban.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -735,7 +790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann mein BMI normal, mein Körperfett aber hoch sein?",
     "faq.a4": "Ja — das nennt man oft „skinny fat\". Der BMI nutzt nur Größe und Gewicht, daher kann jemand mit wenig Muskeln und mehr Fett einen normalen BMI haben, während der Körperfettanteil hoch ist. Da dieser Rechner tatsächliche Umfänge misst und Fettmasse sowie fettfreie Masse getrennt ausweist, erkennt er Fälle, die ein BMI-Rechner übersieht.",
     "faq.q5": "Werden meine Körperdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen laufen vollständig in Ihrem Browser; Ihre Maße verlassen nie Ihr Gerät. Sie werden nur im localStorage Ihres Browsers gespeichert, damit das Formular beim nächsten Besuch vorausgefüllt ist, und Sie können sie jederzeit in den Browsereinstellungen löschen."
+    "faq.a5": "Nein. Alle Berechnungen laufen vollständig in Ihrem Browser; Ihre Maße verlassen nie Ihr Gerät. Sie werden nur im localStorage Ihres Browsers gespeichert, damit das Formular beim nächsten Besuch vorausgefüllt ist, und Sie können sie jederzeit in den Browsereinstellungen löschen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -795,7 +855,12 @@ window.I18N_LOCALES = {
     "faq.q4": "BMIは標準でも体脂肪率が高いことはありますか?",
     "faq.a4": "はい — いわゆる「隠れ肥満(スキニーファット)」です。BMIは身長と体重だけで算出するため、筋肉が少なく脂肪が多い人はBMIが標準でも体脂肪率が高いことがあります。この計算機は実際の周囲径を測り、体脂肪量と除脂肪体重を別々に示すので、BMI計算機では見逃すケースも捉えられます。",
     "faq.q5": "私の身体データはサーバーに送信されますか?",
-    "faq.a5": "いいえ。すべての計算はブラウザ内で完結し、測定値が端末の外に出ることはありません。次回の入力を楽にするためブラウザのlocalStorageに保存されるだけで、ブラウザの設定からいつでも削除できます。"
+    "faq.a5": "いいえ。すべての計算はブラウザ内で完結し、測定値が端末の外に出ることはありません。次回の入力を楽にするためブラウザのlocalStorageに保存されるだけで、ブラウザの設定からいつでも削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -855,6 +920,11 @@ window.I18N_LOCALES = {
     "faq.q4": "BMI는 정상인데 체지방률이 높을 수 있나요?",
     "faq.a4": "네 — 흔히 '마른 비만(스키니 팻)'이라고 합니다. BMI는 키와 몸무게만 사용하므로 근육이 적고 지방이 많은 사람은 BMI가 정상이어도 체지방률이 높을 수 있습니다. 이 계산기는 실제 둘레를 측정하고 체지방량과 제지방량을 따로 보여주기 때문에, BMI 계산기가 놓치는 경우도 잡아냅니다.",
     "faq.q5": "제 신체 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 모든 계산은 브라우저 안에서 이루어지며 측정값은 기기를 벗어나지 않습니다. 다음 방문 시 입력 편의를 위해 브라우저 localStorage에만 저장되고, 브라우저 설정에서 언제든지 삭제할 수 있습니다."
+    "faq.a5": "아니요. 모든 계산은 브라우저 안에서 이루어지며 측정값은 기기를 벗어나지 않습니다. 다음 방문 시 입력 편의를 위해 브라우저 localStorage에만 저장되고, 브라우저 설정에서 언제든지 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

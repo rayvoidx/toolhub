@@ -86,7 +86,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I calculate cumulative GPA across multiple semesters?",
     "faq.a4": "Open \"Include previous semesters\" and enter your prior cumulative GPA and the total credits you have already earned. The calculator turns your prior GPA back into quality points (prior GPA × prior credits), adds this semester's quality points and credits, and divides the totals — giving your new cumulative GPA. Make sure the prior GPA is on the same scale you selected above.",
     "faq.q5": "Is my data sent to a server?",
-    "faq.a5": "No. Everything runs entirely in your browser — your courses, grades and credits never leave your device. Your entries are saved only in your browser's local storage so they are still there when you return, and you can wipe them any time with \"Clear all\". There is no sign-up and no tracking of what you type."
+    "faq.a5": "No. Everything runs entirely in your browser — your courses, grades and credits never leave your device. Your entries are saved only in your browser's local storage so they are still there when you return, and you can wipe them any time with \"Clear all\". There is no sign-up and no tracking of what you type.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -154,7 +159,12 @@ window.I18N_LOCALES = {
     "faq.q4": "多个学期的累计 GPA 怎么算？",
     "faq.a4": "展开「计入之前学期」，填写此前累计 GPA 和已修总学分。计算器会把此前 GPA 还原成质量分（此前 GPA × 此前学分），加上本学期的质量分和学分，再相除，得到新的累计 GPA。请确保此前 GPA 与上方所选制式一致。",
     "faq.q5": "我的数据会被上传到服务器吗？",
-    "faq.a5": "不会。所有计算都在你的浏览器本地完成——课程、成绩和学分绝不会离开你的设备。输入仅保存在浏览器本地存储中，方便下次打开时仍在，随时可用「全部清空」删除。无需注册，也不会追踪你输入的任何内容。"
+    "faq.a5": "不会。所有计算都在你的浏览器本地完成——课程、成绩和学分绝不会离开你的设备。输入仅保存在浏览器本地存储中，方便下次打开时仍在，随时可用「全部清空」删除。无需注册，也不会追踪你输入的任何内容。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -222,7 +232,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कई सेमेस्टर का संचयी GPA कैसे निकालें?",
     "faq.a4": "\"पिछले सेमेस्टर शामिल करें\" खोलें और अपना पिछला संचयी GPA तथा पहले अर्जित कुल क्रेडिट डालें। कैलकुलेटर आपके पिछले GPA को वापस क्वालिटी पॉइंट में बदलता है (पिछला GPA × पिछले क्रेडिट), इसमें इस सेमेस्टर के क्वालिटी पॉइंट और क्रेडिट जोड़ता है और योगों को भाग देता है — नया संचयी GPA मिलता है। ध्यान दें कि पिछला GPA उसी स्केल पर हो जो ऊपर चुना है।",
     "faq.q5": "क्या मेरा डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। सब कुछ पूरी तरह आपके ब्राउज़र में चलता है — आपके कोर्स, ग्रेड और क्रेडिट कभी आपके डिवाइस से बाहर नहीं जाते। आपकी प्रविष्टियां केवल ब्राउज़र के लोकल स्टोरेज में सहेजी जाती हैं ताकि लौटने पर मौजूद रहें, और आप \"सब साफ़ करें\" से कभी भी मिटा सकते हैं। कोई साइन-अप नहीं और आपके टाइप किए का कोई ट्रैकिंग नहीं।"
+    "faq.a5": "नहीं। सब कुछ पूरी तरह आपके ब्राउज़र में चलता है — आपके कोर्स, ग्रेड और क्रेडिट कभी आपके डिवाइस से बाहर नहीं जाते। आपकी प्रविष्टियां केवल ब्राउज़र के लोकल स्टोरेज में सहेजी जाती हैं ताकि लौटने पर मौजूद रहें, और आप \"सब साफ़ करें\" से कभी भी मिटा सकते हैं। कोई साइन-अप नहीं और आपके टाइप किए का कोई ट्रैकिंग नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -290,7 +305,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo calculo el GPA acumulado de varios semestres?",
     "faq.a4": "Abre \"Incluir semestres anteriores\" e introduce tu GPA acumulado anterior y el total de créditos ya cursados. La calculadora convierte tu GPA anterior de nuevo en puntos de calidad (GPA anterior × créditos anteriores), suma los puntos de calidad y créditos de este semestre y divide los totales, dándote tu nuevo GPA acumulado. Asegúrate de que el GPA anterior esté en la misma escala que elegiste arriba.",
     "faq.q5": "¿Se envían mis datos a un servidor?",
-    "faq.a5": "No. Todo se ejecuta por completo en tu navegador: tus asignaturas, notas y créditos nunca salen de tu dispositivo. Tus entradas se guardan solo en el almacenamiento local del navegador para que sigan ahí al volver, y puedes borrarlas cuando quieras con \"Borrar todo\". No hay registro ni seguimiento de lo que escribes."
+    "faq.a5": "No. Todo se ejecuta por completo en tu navegador: tus asignaturas, notas y créditos nunca salen de tu dispositivo. Tus entradas se guardan solo en el almacenamiento local del navegador para que sigan ahí al volver, y puedes borrarlas cuando quieras con \"Borrar todo\". No hay registro ni seguimiento de lo que escribes.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -358,7 +378,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أحسب المعدل التراكمي عبر عدة فصول؟",
     "faq.a4": "افتح \"تضمين الفصول السابقة\" وأدخل معدلك التراكمي السابق وإجمالي الساعات التي أنهيتها. تعيد الحاسبة تحويل معدلك السابق إلى نقاط جودة (المعدل السابق × الساعات السابقة)، ثم تضيف نقاط جودة وساعات هذا الفصل وتقسم المجاميع — فتحصل على معدلك التراكمي الجديد. تأكد أن المعدل السابق على المقياس نفسه الذي اخترته أعلاه.",
     "faq.q5": "هل تُرسَل بياناتي إلى خادم؟",
-    "faq.a5": "لا. كل شيء يعمل بالكامل داخل متصفحك — موادك ودرجاتك وساعاتك لا تغادر جهازك أبدًا. تُحفظ مدخلاتك فقط في التخزين المحلي للمتصفح لتبقى عند عودتك، ويمكنك مسحها في أي وقت بـ \"مسح الكل\". لا تسجيل ولا تتبّع لما تكتبه."
+    "faq.a5": "لا. كل شيء يعمل بالكامل داخل متصفحك — موادك ودرجاتك وساعاتك لا تغادر جهازك أبدًا. تُحفظ مدخلاتك فقط في التخزين المحلي للمتصفح لتبقى عند عودتك، ويمكنك مسحها في أي وقت بـ \"مسح الكل\". لا تسجيل ولا تتبّع لما تكتبه.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -426,7 +451,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment calculer le GPA cumulatif sur plusieurs semestres ?",
     "faq.a4": "Ouvrez « Inclure les semestres précédents » et saisissez votre GPA cumulatif précédent et le total des crédits déjà obtenus. Le calculateur reconvertit votre GPA précédent en points de qualité (GPA précédent × crédits précédents), ajoute les points de qualité et crédits de ce semestre, puis divise les totaux — ce qui donne votre nouveau GPA cumulatif. Veillez à ce que le GPA précédent soit sur la même échelle que celle choisie ci-dessus.",
     "faq.q5": "Mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Tout s'exécute entièrement dans votre navigateur — vos cours, notes et crédits ne quittent jamais votre appareil. Vos saisies sont enregistrées uniquement dans le stockage local du navigateur pour être encore là à votre retour, et vous pouvez les effacer à tout moment avec « Tout effacer ». Aucune inscription et aucun suivi de ce que vous tapez."
+    "faq.a5": "Non. Tout s'exécute entièrement dans votre navigateur — vos cours, notes et crédits ne quittent jamais votre appareil. Vos saisies sont enregistrées uniquement dans le stockage local du navigateur pour être encore là à votre retour, et vous pouvez les effacer à tout moment avec « Tout effacer ». Aucune inscription et aucun suivi de ce que vous tapez.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -494,7 +524,12 @@ window.I18N_LOCALES = {
     "faq.q4": "একাধিক সেমিস্টারের ক্রমসঞ্চিত GPA কীভাবে বের করি?",
     "faq.a4": "\"আগের সেমিস্টার যুক্ত করুন\" খুলে আপনার আগের ক্রমসঞ্চিত GPA এবং আগে অর্জিত মোট ক্রেডিট দিন। ক্যালকুলেটর আপনার আগের GPA-কে আবার কোয়ালিটি পয়েন্টে বদলায় (আগের GPA × আগের ক্রেডিট), এই সেমিস্টারের কোয়ালিটি পয়েন্ট ও ক্রেডিট যোগ করে এবং যোগফলগুলো ভাগ করে — নতুন ক্রমসঞ্চিত GPA পাওয়া যায়। খেয়াল রাখুন, আগের GPA যেন উপরে বাছাই করা একই স্কেলে থাকে।",
     "faq.q5": "আমার ডেটা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। সবকিছু পুরোপুরি আপনার ব্রাউজারে চলে — আপনার কোর্স, গ্রেড ও ক্রেডিট কখনও আপনার ডিভাইস ছাড়ে না। আপনার ইনপুট কেবল ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে ফিরে এলে থেকে যায়, আর \"সব মুছুন\" দিয়ে যেকোনো সময় মুছে ফেলতে পারেন। কোনো সাইন-আপ নেই, আপনি যা টাইপ করেন তার কোনো ট্র্যাকিং নেই।"
+    "faq.a5": "না। সবকিছু পুরোপুরি আপনার ব্রাউজারে চলে — আপনার কোর্স, গ্রেড ও ক্রেডিট কখনও আপনার ডিভাইস ছাড়ে না। আপনার ইনপুট কেবল ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে ফিরে এলে থেকে যায়, আর \"সব মুছুন\" দিয়ে যেকোনো সময় মুছে ফেলতে পারেন। কোনো সাইন-আপ নেই, আপনি যা টাইপ করেন তার কোনো ট্র্যাকিং নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -562,7 +597,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como calcular o GPA acumulado ao longo de vários semestres?",
     "faq.a4": "Abra \"Incluir semestres anteriores\" e informe seu GPA acumulado anterior e o total de créditos já cursados. A calculadora converte seu GPA anterior de volta em pontos de qualidade (GPA anterior × créditos anteriores), soma os pontos de qualidade e créditos deste semestre e divide os totais — dando seu novo GPA acumulado. Garanta que o GPA anterior esteja na mesma escala selecionada acima.",
     "faq.q5": "Meus dados são enviados para um servidor?",
-    "faq.a5": "Não. Tudo roda inteiramente no seu navegador — suas disciplinas, notas e créditos nunca saem do seu dispositivo. Suas entradas são salvas apenas no armazenamento local do navegador para continuarem lá quando você voltar, e você pode apagá-las quando quiser com \"Limpar tudo\". Não há cadastro nem rastreamento do que você digita."
+    "faq.a5": "Não. Tudo roda inteiramente no seu navegador — suas disciplinas, notas e créditos nunca saem do seu dispositivo. Suas entradas são salvas apenas no armazenamento local do navegador para continuarem lá quando você voltar, e você pode apagá-las quando quiser com \"Limpar tudo\". Não há cadastro nem rastreamento do que você digita.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -630,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как рассчитать накопительный GPA за несколько семестров?",
     "faq.a4": "Откройте «Учесть прошлые семестры» и введите прежний накопительный GPA и общее число уже набранных кредитов. Калькулятор снова переводит ваш прежний GPA в баллы качества (прежний GPA × прежние кредиты), прибавляет баллы качества и кредиты текущего семестра и делит суммы — получая новый накопительный GPA. Убедитесь, что прежний GPA указан в той же шкале, что выбрана выше.",
     "faq.q5": "Отправляются ли мои данные на сервер?",
-    "faq.a5": "Нет. Всё работает полностью в вашем браузере — курсы, оценки и кредиты никогда не покидают ваше устройство. Введённые данные сохраняются только в локальном хранилище браузера, чтобы остаться на месте при возвращении, и вы можете стереть их в любой момент кнопкой «Очистить всё». Нет ни регистрации, ни отслеживания того, что вы вводите."
+    "faq.a5": "Нет. Всё работает полностью в вашем браузере — курсы, оценки и кредиты никогда не покидают ваше устройство. Введённые данные сохраняются только в локальном хранилище браузера, чтобы остаться на месте при возвращении, и вы можете стереть их в любой момент кнопкой «Очистить всё». Нет ни регистрации, ни отслеживания того, что вы вводите.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -698,7 +743,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کئی سمسٹرز کا مجموعی GPA کیسے نکالوں؟",
     "faq.a4": "\"پچھلے سمسٹر شامل کریں\" کھولیں اور اپنا پچھلا مجموعی GPA اور پہلے حاصل کیے گئے کل کریڈٹ درج کریں۔ کیلکولیٹر آپ کے پچھلے GPA کو دوبارہ کوالٹی پوائنٹس میں بدلتا ہے (پچھلا GPA × پچھلے کریڈٹ)، اس سمسٹر کے کوالٹی پوائنٹس اور کریڈٹ شامل کرتا ہے اور مجموعوں کو تقسیم کرتا ہے — نیا مجموعی GPA مل جاتا ہے۔ خیال رکھیں کہ پچھلا GPA اسی اسکیل پر ہو جو اوپر منتخب کیا ہے۔",
     "faq.q5": "کیا میرا ڈیٹا سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ سب کچھ مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کے کورس، گریڈ اور کریڈٹ کبھی آپ کے آلے سے باہر نہیں جاتے۔ آپ کی اندراجات صرف براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں تاکہ واپسی پر موجود رہیں، اور آپ \"سب صاف کریں\" سے کسی بھی وقت مٹا سکتے ہیں۔ نہ کوئی سائن اپ ہے، نہ آپ کے ٹائپ کیے کی کوئی ٹریکنگ۔"
+    "faq.a5": "نہیں۔ سب کچھ مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کے کورس، گریڈ اور کریڈٹ کبھی آپ کے آلے سے باہر نہیں جاتے۔ آپ کی اندراجات صرف براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں تاکہ واپسی پر موجود رہیں، اور آپ \"سب صاف کریں\" سے کسی بھی وقت مٹا سکتے ہیں۔ نہ کوئی سائن اپ ہے، نہ آپ کے ٹائپ کیے کی کوئی ٹریکنگ۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -766,7 +816,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana menghitung GPA kumulatif lintas beberapa semester?",
     "faq.a4": "Buka \"Sertakan semester sebelumnya\" dan masukkan GPA kumulatif sebelumnya serta total SKS yang sudah ditempuh. Kalkulator mengubah GPA lama Anda kembali menjadi poin kualitas (GPA lama × SKS lama), menambah poin kualitas dan SKS semester ini, lalu membagi totalnya — menghasilkan GPA kumulatif baru. Pastikan GPA lama berada pada skala yang sama seperti yang dipilih di atas.",
     "faq.q5": "Apakah data saya dikirim ke server?",
-    "faq.a5": "Tidak. Semuanya berjalan sepenuhnya di browser Anda — mata kuliah, nilai, dan SKS tidak pernah meninggalkan perangkat Anda. Entri Anda hanya disimpan di penyimpanan lokal browser agar tetap ada saat Anda kembali, dan bisa dihapus kapan saja dengan \"Hapus semua\". Tidak ada pendaftaran dan tidak ada pelacakan atas apa yang Anda ketik."
+    "faq.a5": "Tidak. Semuanya berjalan sepenuhnya di browser Anda — mata kuliah, nilai, dan SKS tidak pernah meninggalkan perangkat Anda. Entri Anda hanya disimpan di penyimpanan lokal browser agar tetap ada saat Anda kembali, dan bisa dihapus kapan saja dengan \"Hapus semua\". Tidak ada pendaftaran dan tidak ada pelacakan atas apa yang Anda ketik.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -834,7 +889,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie berechne ich den kumulativen GPA über mehrere Semester?",
     "faq.a4": "Öffne „Frühere Semester einbeziehen“ und gib deinen bisherigen kumulativen GPA und die insgesamt bereits erworbenen Credits ein. Der Rechner wandelt deinen bisherigen GPA zurück in Quality Points (bisheriger GPA × bisherige Credits), addiert die Quality Points und Credits dieses Semesters und teilt die Summen — das ergibt deinen neuen kumulativen GPA. Achte darauf, dass der bisherige GPA auf derselben oben gewählten Skala liegt.",
     "faq.q5": "Werden meine Daten an einen Server gesendet?",
-    "faq.a5": "Nein. Alles läuft vollständig in deinem Browser — deine Kurse, Noten und Credits verlassen dein Gerät nie. Deine Eingaben werden nur im lokalen Speicher des Browsers gespeichert, damit sie bei deiner Rückkehr noch da sind, und du kannst sie jederzeit mit „Alles löschen“ entfernen. Es gibt keine Anmeldung und kein Tracking dessen, was du tippst."
+    "faq.a5": "Nein. Alles läuft vollständig in deinem Browser — deine Kurse, Noten und Credits verlassen dein Gerät nie. Deine Eingaben werden nur im lokalen Speicher des Browsers gespeichert, damit sie bei deiner Rückkehr noch da sind, und du kannst sie jederzeit mit „Alles löschen“ entfernen. Es gibt keine Anmeldung und kein Tracking dessen, was du tippst.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -902,7 +962,12 @@ window.I18N_LOCALES = {
     "faq.q4": "複数学期の累積GPAはどう計算しますか？",
     "faq.a4": "「以前の学期を含める」を開き、これまでの累積GPAと取得済みの合計単位を入力します。計算機はこれまでのGPAをクオリティポイントに戻し（これまでのGPA × これまでの単位）、今学期のクオリティポイントと単位を足して合計を割り、新しい累積GPAを算出します。これまでのGPAは上で選んだスケールと同じにしてください。",
     "faq.q5": "入力したデータはサーバーに送られますか？",
-    "faq.a5": "いいえ。すべてブラウザ内で完結し、科目・成績・単位が端末の外に出ることはありません。入力内容はブラウザのローカルストレージにのみ保存され、次回もそのまま残りますが、「すべてクリア」でいつでも消せます。登録は不要で、入力内容の追跡も行いません。"
+    "faq.a5": "いいえ。すべてブラウザ内で完結し、科目・成績・単位が端末の外に出ることはありません。入力内容はブラウザのローカルストレージにのみ保存され、次回もそのまま残りますが、「すべてクリア」でいつでも消せます。登録は不要で、入力内容の追跡も行いません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -970,6 +1035,11 @@ window.I18N_LOCALES = {
     "faq.q4": "여러 학기의 누적 GPA는 어떻게 계산하나요?",
     "faq.a4": "\"이전 학기 포함\"을 펼치고 이전 누적 GPA와 지금까지 취득한 총 학점을 입력하세요. 계산기는 이전 GPA를 다시 성적 포인트로 환산해(이전 GPA × 이전 학점) 이번 학기의 성적 포인트·학점을 더한 뒤 합을 나눠 새 누적 GPA를 구합니다. 이전 GPA는 위에서 고른 것과 같은 스케일이어야 합니다.",
     "faq.q5": "제 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 모든 계산이 브라우저 안에서만 이뤄지며 과목·성적·학점이 기기를 벗어나지 않습니다. 입력값은 브라우저 로컬 저장소에만 저장되어 다시 방문해도 남아 있고, \"모두 지우기\"로 언제든 삭제할 수 있습니다. 가입도, 입력 내용에 대한 추적도 없습니다."
+    "faq.a5": "아니요. 모든 계산이 브라우저 안에서만 이뤄지며 과목·성적·학점이 기기를 벗어나지 않습니다. 입력값은 브라우저 로컬 저장소에만 저장되어 다시 방문해도 남아 있고, \"모두 지우기\"로 언제든 삭제할 수 있습니다. 가입도, 입력 내용에 대한 추적도 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

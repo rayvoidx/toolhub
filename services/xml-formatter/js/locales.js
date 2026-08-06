@@ -88,7 +88,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Does this tool preserve CDATA sections, comments and the XML declaration?",
     "faq.a4": "Yes. Instead of using regular expressions on the raw text, the formatter parses your XML into a real document tree with the browser's DOMParser and then walks that tree with a hand-written serializer, so <![CDATA[ ... ]]> blocks, <!-- comments --> and the original <?xml version=\"1.0\" encoding=\"UTF-8\"?> declaration are re-emitted exactly as they were, never stripped or reformatted. Elements that mix text and child elements (for example <p>Hello <b>world</b>!</p>) are also left untouched on one line, since reformatting the whitespace inside mixed content could change what the document means.",
     "faq.q5": "Is my XML data uploaded to a server?",
-    "faq.a5": "No. Parsing, formatting, minifying and validation all run locally in your browser using the built-in DOMParser — nothing you paste is ever sent to a server, logged or shared, which makes it safe for XML that contains API responses, configuration or personal data. Your most recent input is optionally kept in this browser's local storage so it's still here next time; untick \"Save my XML in this browser\" to keep it for the current session only, and Clear removes the stored copy immediately."
+    "faq.a5": "No. Parsing, formatting, minifying and validation all run locally in your browser using the built-in DOMParser — nothing you paste is ever sent to a server, logged or shared, which makes it safe for XML that contains API responses, configuration or personal data. Your most recent input is optionally kept in this browser's local storage so it's still here next time; untick \"Save my XML in this browser\" to keep it for the current session only, and Clear removes the stored copy immediately.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -161,7 +166,12 @@ window.I18N_LOCALES = {
     "faq.q4": "这个工具会保留 CDATA 区块、注释和 XML 声明吗？",
     "faq.a4": "会。格式化工具不会用正则表达式直接处理原始文本，而是用浏览器内置的 DOMParser 把你的 XML 解析成真正的文档树，再用手写的序列化器遍历这棵树，因此 <![CDATA[ ... ]]> 区块、<!-- 注释 --> 以及原始的 <?xml version=\"1.0\" encoding=\"UTF-8\"?> 声明都会原样重新输出，绝不会被删除或重新排版。文本与子元素混合的元素（例如 <p>Hello <b>world</b>!</p>）同样会原样保留在一行中，因为改动混合内容中的空白可能会改变文档的含义。",
     "faq.q5": "我的 XML 数据会被上传到服务器吗？",
-    "faq.a5": "不会。解析、格式化、压缩和校验全部在你的浏览器本地运行，使用的是浏览器内置的 DOMParser——你粘贴的任何内容都不会被发送到服务器、记录或分享，因此可以放心处理包含 API 响应、配置信息或个人数据的 XML。你最近一次输入的内容会可选地保存在此浏览器的本地存储中，方便下次使用；取消勾选「在此浏览器中保存我的 XML」即可只在当前会话中保留，点击「清空」会立即删除已保存的副本。"
+    "faq.a5": "不会。解析、格式化、压缩和校验全部在你的浏览器本地运行，使用的是浏览器内置的 DOMParser——你粘贴的任何内容都不会被发送到服务器、记录或分享，因此可以放心处理包含 API 响应、配置信息或个人数据的 XML。你最近一次输入的内容会可选地保存在此浏览器的本地存储中，方便下次使用；取消勾选「在此浏览器中保存我的 XML」即可只在当前会话中保留，点击「清空」会立即删除已保存的副本。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -234,7 +244,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या यह टूल CDATA सेक्शन, कमेंट और XML डिक्लेरेशन को सुरक्षित रखता है?",
     "faq.a4": "हाँ। रॉ टेक्स्ट पर रेगुलर एक्सप्रेशन इस्तेमाल करने के बजाय, यह फ़ॉर्मेटर आपके XML को ब्राउज़र के DOMParser से एक असली डॉक्यूमेंट ट्री में पार्स करता है और फिर एक हाथ से लिखे सीरियलाइज़र से उस ट्री को ट्रैवर्स करता है, इसलिए <![CDATA[ ... ]]> ब्लॉक, <!-- कमेंट --> और मूल <?xml version=\"1.0\" encoding=\"UTF-8\"?> डिक्लेरेशन बिल्कुल वैसे ही दोबारा लिखे जाते हैं जैसे थे, कभी हटाए या रीफ़ॉर्मेट नहीं किए जाते। टेक्स्ट और चाइल्ड एलिमेंट्स को मिलाने वाले एलिमेंट (उदाहरण के लिए <p>Hello <b>world</b>!</p>) भी एक लाइन में वैसे ही छोड़ दिए जाते हैं, क्योंकि मिश्रित कंटेंट के अंदर स्पेसिंग बदलने से दस्तावेज़ का अर्थ बदल सकता है।",
     "faq.q5": "क्या मेरा XML डेटा किसी सर्वर पर अपलोड होता है?",
-    "faq.a5": "नहीं। पार्सिंग, फ़ॉर्मेटिंग, मिनिफ़ाइंग और वैलिडेशन सब कुछ आपके ब्राउज़र में बिल्ट-इन DOMParser का उपयोग करके लोकली चलता है — आप जो भी पेस्ट करते हैं वह कभी सर्वर पर नहीं भेजा जाता, लॉग नहीं होता या शेयर नहीं होता, इसलिए यह ऐसे XML के लिए सुरक्षित है जिसमें API रिस्पॉन्स, कॉन्फ़िगरेशन या व्यक्तिगत डेटा हो। आपका सबसे हाल का इनपुट वैकल्पिक रूप से इस ब्राउज़र के लोकल स्टोरेज में रखा जाता है ताकि अगली बार भी मौजूद रहे; \"मेरा XML इस ब्राउज़र में सेव करें\" अनचेक करके इसे केवल मौजूदा सेशन के लिए रखें, और साफ़ करें पर क्लिक करते ही सेव की गई कॉपी तुरंत हट जाती है।"
+    "faq.a5": "नहीं। पार्सिंग, फ़ॉर्मेटिंग, मिनिफ़ाइंग और वैलिडेशन सब कुछ आपके ब्राउज़र में बिल्ट-इन DOMParser का उपयोग करके लोकली चलता है — आप जो भी पेस्ट करते हैं वह कभी सर्वर पर नहीं भेजा जाता, लॉग नहीं होता या शेयर नहीं होता, इसलिए यह ऐसे XML के लिए सुरक्षित है जिसमें API रिस्पॉन्स, कॉन्फ़िगरेशन या व्यक्तिगत डेटा हो। आपका सबसे हाल का इनपुट वैकल्पिक रूप से इस ब्राउज़र के लोकल स्टोरेज में रखा जाता है ताकि अगली बार भी मौजूद रहे; \"मेरा XML इस ब्राउज़र में सेव करें\" अनचेक करके इसे केवल मौजूदा सेशन के लिए रखें, और साफ़ करें पर क्लिक करते ही सेव की गई कॉपी तुरंत हट जाती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -307,7 +322,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Esta herramienta conserva las secciones CDATA, los comentarios y la declaración XML?",
     "faq.a4": "Sí. En lugar de usar expresiones regulares sobre el texto sin procesar, el formateador analiza tu XML en un árbol de documento real con el DOMParser del navegador y luego recorre ese árbol con un serializador escrito a mano, de modo que los bloques <![CDATA[ ... ]]>, los <!-- comentarios --> y la declaración original <?xml version=\"1.0\" encoding=\"UTF-8\"?> se reproducen exactamente igual, sin eliminarse ni reformatearse nunca. Los elementos que mezclan texto y elementos hijos (por ejemplo <p>Hello <b>world</b>!</p>) también se dejan intactos en una sola línea, ya que reformatear los espacios dentro de contenido mixto podría cambiar el significado del documento.",
     "faq.q5": "¿Se sube mi XML a un servidor?",
-    "faq.a5": "No. El análisis, el formateo, la minificación y la validación se ejecutan localmente en tu navegador usando el DOMParser integrado — nada de lo que pegas se envía nunca a un servidor, se registra o se comparte, lo que lo hace seguro para XML que contenga respuestas de API, configuración o datos personales. Tu entrada más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga aquí la próxima vez; desmarca \"Guardar mi XML en este navegador\" para conservarla solo durante la sesión actual, y Borrar elimina la copia guardada de inmediato."
+    "faq.a5": "No. El análisis, el formateo, la minificación y la validación se ejecutan localmente en tu navegador usando el DOMParser integrado — nada de lo que pegas se envía nunca a un servidor, se registra o se comparte, lo que lo hace seguro para XML que contenga respuestas de API, configuración o datos personales. Tu entrada más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga aquí la próxima vez; desmarca \"Guardar mi XML en este navegador\" para conservarla solo durante la sesión actual, y Borrar elimina la copia guardada de inmediato.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -380,7 +400,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تحافظ هذه الأداة على أقسام CDATA والتعليقات وإعلان XML؟",
     "faq.a4": "نعم. بدلًا من استخدام التعبيرات النمطية على النص الخام، يقوم المنسّق بتحليل XML الخاص بك إلى شجرة مستند حقيقية باستخدام DOMParser المدمج في المتصفح، ثم يجتاز تلك الشجرة بمسلسل مكتوب يدويًا، لذا يُعاد إخراج كتل <![CDATA[ ... ]]> و<!-- التعليقات --> وإعلان <?xml version=\"1.0\" encoding=\"UTF-8\"?> الأصلي تمامًا كما كانت، دون حذف أو إعادة تنسيق أبدًا. كما تُترك العناصر التي تمزج بين النص والعناصر الفرعية (مثل <p>Hello <b>world</b>!</p>) دون تغيير في سطر واحد، لأن إعادة تنسيق المسافات داخل المحتوى المختلط قد تغيّر معنى المستند.",
     "faq.q5": "هل تُرفع بيانات XML الخاصة بي إلى خادم؟",
-    "faq.a5": "لا. يتم التحليل والتنسيق والضغط والتحقق كلها محليًا في متصفحك باستخدام DOMParser المدمج — لا يُرسل أي شيء تلصقه إلى خادم أو يُسجَّل أو يُشارَك أبدًا، ما يجعلها آمنة لـ XML الذي يحتوي على استجابات API أو إعدادات أو بيانات شخصية. يُحفظ آخر إدخال لك اختياريًا في التخزين المحلي لهذا المتصفح ليبقى موجودًا في المرة القادمة؛ ألغِ تحديد \"احفظ XML الخاص بي في هذا المتصفح\" للاحتفاظ به لهذه الجلسة فقط، ويؤدي النقر على مسح إلى حذف النسخة المحفوظة فورًا."
+    "faq.a5": "لا. يتم التحليل والتنسيق والضغط والتحقق كلها محليًا في متصفحك باستخدام DOMParser المدمج — لا يُرسل أي شيء تلصقه إلى خادم أو يُسجَّل أو يُشارَك أبدًا، ما يجعلها آمنة لـ XML الذي يحتوي على استجابات API أو إعدادات أو بيانات شخصية. يُحفظ آخر إدخال لك اختياريًا في التخزين المحلي لهذا المتصفح ليبقى موجودًا في المرة القادمة؛ ألغِ تحديد \"احفظ XML الخاص بي في هذا المتصفح\" للاحتفاظ به لهذه الجلسة فقط، ويؤدي النقر على مسح إلى حذف النسخة المحفوظة فورًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -453,7 +478,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Cet outil préserve-t-il les sections CDATA, les commentaires et la déclaration XML ?",
     "faq.a4": "Oui. Plutôt que d'utiliser des expressions régulières sur le texte brut, le formateur analyse votre XML en un véritable arbre de document avec le DOMParser du navigateur, puis parcourt cet arbre avec un sérialiseur écrit à la main, si bien que les blocs <![CDATA[ ... ]]>, les <!-- commentaires --> et la déclaration d'origine <?xml version=\"1.0\" encoding=\"UTF-8\"?> sont réémis exactement tels quels, jamais supprimés ni reformatés. Les éléments qui mélangent texte et éléments enfants (par exemple <p>Hello <b>world</b>!</p>) sont eux aussi laissés intacts sur une seule ligne, car reformater les espaces à l'intérieur d'un contenu mixte pourrait changer le sens du document.",
     "faq.q5": "Mes données XML sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. L'analyse, la mise en forme, la minification et la validation s'exécutent toutes localement dans votre navigateur grâce au DOMParser intégré — rien de ce que vous collez n'est jamais envoyé à un serveur, enregistré ou partagé, ce qui rend l'outil sûr pour du XML contenant des réponses d'API, des configurations ou des données personnelles. Votre dernière saisie est éventuellement conservée dans le stockage local de ce navigateur pour être encore là la prochaine fois ; décochez « Enregistrer mon XML dans ce navigateur » pour ne la garder que pour la session en cours, et Effacer supprime immédiatement la copie enregistrée."
+    "faq.a5": "Non. L'analyse, la mise en forme, la minification et la validation s'exécutent toutes localement dans votre navigateur grâce au DOMParser intégré — rien de ce que vous collez n'est jamais envoyé à un serveur, enregistré ou partagé, ce qui rend l'outil sûr pour du XML contenant des réponses d'API, des configurations ou des données personnelles. Votre dernière saisie est éventuellement conservée dans le stockage local de ce navigateur pour être encore là la prochaine fois ; décochez « Enregistrer mon XML dans ce navigateur » pour ne la garder que pour la session en cours, et Effacer supprime immédiatement la copie enregistrée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -526,7 +556,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এই টুলটি কি CDATA সেকশন, কমেন্ট ও XML ডিক্লারেশন সংরক্ষণ করে?",
     "faq.a4": "হ্যাঁ। কাঁচা টেক্সটে রেগুলার এক্সপ্রেশন ব্যবহার করার পরিবর্তে, ফরম্যাটারটি ব্রাউজারের DOMParser দিয়ে আপনার XML-কে একটি প্রকৃত ডকুমেন্ট ট্রিতে পার্স করে এবং তারপর হাতে লেখা একটি সিরিয়ালাইজার দিয়ে সেই ট্রি ট্রাভার্স করে, তাই <![CDATA[ ... ]]> ব্লক, <!-- কমেন্ট --> এবং মূল <?xml version=\"1.0\" encoding=\"UTF-8\"?> ডিক্লারেশন ঠিক আগের মতোই পুনরায় প্রকাশিত হয়, কখনো মুছে বা রিফরম্যাট করা হয় না। যেসব এলিমেন্টে টেক্সট ও চাইল্ড এলিমেন্ট মিশে থাকে (উদাহরণস্বরূপ <p>Hello <b>world</b>!</p>) সেগুলোও একই লাইনে অপরিবর্তিত রাখা হয়, কারণ মিশ্র কনটেন্টের ভেতরের স্পেস পুনর্বিন্যাস করলে ডকুমেন্টের অর্থ বদলে যেতে পারে।",
     "faq.q5": "আমার XML ডেটা কি কোনো সার্ভারে আপলোড হয়?",
-    "faq.a5": "না। পার্সিং, ফরম্যাটিং, মিনিফাইং ও ভ্যালিডেশন সবকিছু আপনার ব্রাউজারে বিল্ট-ইন DOMParser ব্যবহার করে স্থানীয়ভাবে চলে — আপনি যা পেস্ট করেন তা কখনো কোনো সার্ভারে পাঠানো, লগ করা বা শেয়ার করা হয় না, যা এটিকে API রেসপন্স, কনফিগারেশন বা ব্যক্তিগত ডেটাযুক্ত XML-এর জন্য নিরাপদ করে তোলে। আপনার সাম্প্রতিকতম ইনপুট ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে রাখা হয় যাতে পরের বারও এটি থাকে; শুধুমাত্র বর্তমান সেশনের জন্য রাখতে \"আমার XML এই ব্রাউজারে সংরক্ষণ করুন\" আনচেক করুন, এবং মুছুন-এ ক্লিক করলে সংরক্ষিত কপিটি সাথে সাথে মুছে যায়।"
+    "faq.a5": "না। পার্সিং, ফরম্যাটিং, মিনিফাইং ও ভ্যালিডেশন সবকিছু আপনার ব্রাউজারে বিল্ট-ইন DOMParser ব্যবহার করে স্থানীয়ভাবে চলে — আপনি যা পেস্ট করেন তা কখনো কোনো সার্ভারে পাঠানো, লগ করা বা শেয়ার করা হয় না, যা এটিকে API রেসপন্স, কনফিগারেশন বা ব্যক্তিগত ডেটাযুক্ত XML-এর জন্য নিরাপদ করে তোলে। আপনার সাম্প্রতিকতম ইনপুট ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে রাখা হয় যাতে পরের বারও এটি থাকে; শুধুমাত্র বর্তমান সেশনের জন্য রাখতে \"আমার XML এই ব্রাউজারে সংরক্ষণ করুন\" আনচেক করুন, এবং মুছুন-এ ক্লিক করলে সংরক্ষিত কপিটি সাথে সাথে মুছে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -599,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Esta ferramenta preserva seções CDATA, comentários e a declaração XML?",
     "faq.a4": "Sim. Em vez de usar expressões regulares no texto bruto, o formatador analisa seu XML em uma árvore de documento real com o DOMParser do navegador e depois percorre essa árvore com um serializador escrito à mão, então os blocos <![CDATA[ ... ]]>, os <!-- comentários --> e a declaração original <?xml version=\"1.0\" encoding=\"UTF-8\"?> são reemitidos exatamente como estavam, nunca removidos ou reformatados. Elementos que misturam texto e elementos filhos (por exemplo <p>Hello <b>world</b>!</p>) também são deixados intactos em uma linha, já que reformatar os espaços dentro de conteúdo misto poderia mudar o significado do documento.",
     "faq.q5": "Meus dados XML são enviados a um servidor?",
-    "faq.a5": "Não. A análise, formatação, minificação e validação são executadas localmente no seu navegador usando o DOMParser embutido — nada do que você cola é enviado a um servidor, registrado ou compartilhado, o que torna seguro para XML que contenha respostas de API, configurações ou dados pessoais. Sua entrada mais recente é opcionalmente mantida no armazenamento local deste navegador para que ainda esteja aqui na próxima vez; desmarque \"Salvar meu XML neste navegador\" para mantê-la apenas durante a sessão atual, e Limpar remove a cópia salva imediatamente."
+    "faq.a5": "Não. A análise, formatação, minificação e validação são executadas localmente no seu navegador usando o DOMParser embutido — nada do que você cola é enviado a um servidor, registrado ou compartilhado, o que torna seguro para XML que contenha respostas de API, configurações ou dados pessoais. Sua entrada mais recente é opcionalmente mantida no armazenamento local deste navegador para que ainda esteja aqui na próxima vez; desmarque \"Salvar meu XML neste navegador\" para mantê-la apenas durante a sessão atual, e Limpar remove a cópia salva imediatamente.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -672,7 +712,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Сохраняет ли этот инструмент секции CDATA, комментарии и декларацию XML?",
     "faq.a4": "Да. Вместо использования регулярных выражений на сыром тексте форматировщик разбирает ваш XML в настоящее дерево документа с помощью встроенного в браузер DOMParser, а затем обходит это дерево написанным вручную сериализатором, поэтому блоки <![CDATA[ ... ]]>, <!-- комментарии --> и исходная декларация <?xml version=\"1.0\" encoding=\"UTF-8\"?> выводятся заново в точности такими же, как были, — их никогда не удаляют и не переформатируют. Элементы, смешивающие текст и дочерние элементы (например, <p>Hello <b>world</b>!</p>), тоже остаются нетронутыми в одной строке, поскольку изменение пробелов внутри смешанного содержимого может изменить смысл документа.",
     "faq.q5": "Загружаются ли мои данные XML на сервер?",
-    "faq.a5": "Нет. Разбор, форматирование, минификация и проверка полностью выполняются локально в вашем браузере с помощью встроенного DOMParser — то, что вы вставляете, никогда не отправляется на сервер, не логируется и не передаётся третьим лицам, поэтому это безопасно для XML, содержащего ответы API, конфигурации или личные данные. Ваш последний ввод по желанию сохраняется в локальном хранилище этого браузера, чтобы оставаться там в следующий раз; снимите флажок «Сохранять мой XML в этом браузере», чтобы хранить его только в течение текущей сессии, а кнопка «Очистить» немедленно удаляет сохранённую копию."
+    "faq.a5": "Нет. Разбор, форматирование, минификация и проверка полностью выполняются локально в вашем браузере с помощью встроенного DOMParser — то, что вы вставляете, никогда не отправляется на сервер, не логируется и не передаётся третьим лицам, поэтому это безопасно для XML, содержащего ответы API, конфигурации или личные данные. Ваш последний ввод по желанию сохраняется в локальном хранилище этого браузера, чтобы оставаться там в следующий раз; снимите флажок «Сохранять мой XML в этом браузере», чтобы хранить его только в течение текущей сессии, а кнопка «Очистить» немедленно удаляет сохранённую копию.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -745,7 +790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا یہ ٹول CDATA سیکشنز، تبصرے اور XML اعلامیہ کو محفوظ رکھتا ہے؟",
     "faq.a4": "جی ہاں۔ خام متن پر ریگولر ایکسپریشنز استعمال کرنے کے بجائے، فارمیٹر آپ کے XML کو براؤزر کے DOMParser سے ایک حقیقی دستاویزی ٹری میں پارس کرتا ہے اور پھر ہاتھ سے لکھے گئے سیریلائزر سے اس ٹری کو ٹریورس کرتا ہے، اس لیے <![CDATA[ ... ]]> بلاکس، <!-- تبصرے --> اور اصل <?xml version=\"1.0\" encoding=\"UTF-8\"?> اعلامیہ بالکل ویسے ہی دوبارہ لکھے جاتے ہیں جیسے تھے، کبھی ہٹائے یا دوبارہ فارمیٹ نہیں کیے جاتے۔ ایسے ایلیمنٹس جو متن اور چائلڈ ایلیمنٹس کو ملاتے ہیں (مثال کے طور پر <p>Hello <b>world</b>!</p>) بھی ایک لائن میں ویسے ہی رہنے دیے جاتے ہیں، کیونکہ مخلوط مواد کے اندر خالی جگہ کو دوبارہ ترتیب دینا دستاویز کے معنی بدل سکتا ہے۔",
     "faq.q5": "کیا میرا XML ڈیٹا کسی سرور پر اپ لوڈ ہوتا ہے؟",
-    "faq.a5": "نہیں۔ پارسنگ، فارمیٹنگ، مِنی فائینگ اور تصدیق سب کچھ آپ کے براؤزر میں بلٹ اِن DOMParser استعمال کرتے ہوئے مقامی طور پر چلتا ہے — آپ جو کچھ بھی پیسٹ کرتے ہیں وہ کبھی کسی سرور کو نہیں بھیجا جاتا، لاگ نہیں ہوتا یا شیئر نہیں ہوتا، جو اسے ایسے XML کے لیے محفوظ بناتا ہے جس میں API رسپانس، کنفیگریشن یا ذاتی ڈیٹا شامل ہو۔ آپ کا حالیہ ترین ان پٹ اختیاری طور پر اس براؤزر کے لوکل اسٹوریج میں رکھا جاتا ہے تاکہ اگلی بار بھی موجود رہے؛ اسے صرف موجودہ سیشن کے لیے رکھنے کے لیے \"میرا XML اس براؤزر میں محفوظ کریں\" کو ان چیک کریں، اور صاف کریں پر کلک کرتے ہی محفوظ شدہ کاپی فوری طور پر ہٹ جاتی ہے۔"
+    "faq.a5": "نہیں۔ پارسنگ، فارمیٹنگ، مِنی فائینگ اور تصدیق سب کچھ آپ کے براؤزر میں بلٹ اِن DOMParser استعمال کرتے ہوئے مقامی طور پر چلتا ہے — آپ جو کچھ بھی پیسٹ کرتے ہیں وہ کبھی کسی سرور کو نہیں بھیجا جاتا، لاگ نہیں ہوتا یا شیئر نہیں ہوتا، جو اسے ایسے XML کے لیے محفوظ بناتا ہے جس میں API رسپانس، کنفیگریشن یا ذاتی ڈیٹا شامل ہو۔ آپ کا حالیہ ترین ان پٹ اختیاری طور پر اس براؤزر کے لوکل اسٹوریج میں رکھا جاتا ہے تاکہ اگلی بار بھی موجود رہے؛ اسے صرف موجودہ سیشن کے لیے رکھنے کے لیے \"میرا XML اس براؤزر میں محفوظ کریں\" کو ان چیک کریں، اور صاف کریں پر کلک کرتے ہی محفوظ شدہ کاپی فوری طور پر ہٹ جاتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -818,7 +868,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah alat ini menjaga bagian CDATA, komentar, dan deklarasi XML?",
     "faq.a4": "Ya. Alih-alih menggunakan ekspresi reguler pada teks mentah, formatter ini mengurai XML Anda menjadi document tree sungguhan menggunakan DOMParser bawaan browser, lalu menelusuri tree tersebut dengan serializer yang ditulis manual, sehingga blok <![CDATA[ ... ]]>, <!-- komentar -->, dan deklarasi asli <?xml version=\"1.0\" encoding=\"UTF-8\"?> dikeluarkan kembali persis seperti sebelumnya, tidak pernah dihapus atau diformat ulang. Elemen yang mencampur teks dan elemen anak (misalnya <p>Hello <b>world</b>!</p>) juga dibiarkan utuh dalam satu baris, karena menata ulang spasi di dalam konten campuran dapat mengubah makna dokumen.",
     "faq.q5": "Apakah data XML saya diunggah ke server?",
-    "faq.a5": "Tidak. Parsing, pemformatan, minifikasi, dan validasi semuanya berjalan secara lokal di browser Anda menggunakan DOMParser bawaan — apa pun yang Anda tempel tidak pernah dikirim ke server, dicatat, atau dibagikan, sehingga aman untuk XML yang berisi respons API, konfigurasi, atau data pribadi. Input terbaru Anda secara opsional disimpan di local storage browser ini agar tetap ada saat Anda kembali; hapus centang \"Simpan XML saya di browser ini\" untuk menyimpannya hanya selama sesi saat ini, dan Bersihkan akan langsung menghapus salinan yang tersimpan."
+    "faq.a5": "Tidak. Parsing, pemformatan, minifikasi, dan validasi semuanya berjalan secara lokal di browser Anda menggunakan DOMParser bawaan — apa pun yang Anda tempel tidak pernah dikirim ke server, dicatat, atau dibagikan, sehingga aman untuk XML yang berisi respons API, konfigurasi, atau data pribadi. Input terbaru Anda secara opsional disimpan di local storage browser ini agar tetap ada saat Anda kembali; hapus centang \"Simpan XML saya di browser ini\" untuk menyimpannya hanya selama sesi saat ini, dan Bersihkan akan langsung menghapus salinan yang tersimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -891,7 +946,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bleiben CDATA-Abschnitte, Kommentare und die XML-Deklaration bei diesem Tool erhalten?",
     "faq.a4": "Ja. Statt reguläre Ausdrücke auf dem Rohtext anzuwenden, analysiert der Formatierer Ihr XML mit dem im Browser eingebauten DOMParser zu einem echten Dokumentbaum und durchläuft diesen Baum dann mit einem von Hand geschriebenen Serialisierer, sodass <![CDATA[ ... ]]>-Blöcke, <!-- Kommentare --> und die ursprüngliche <?xml version=\"1.0\" encoding=\"UTF-8\"?>-Deklaration exakt so wieder ausgegeben werden, wie sie waren — nie entfernt oder umformatiert. Elemente, die Text und Kindelemente mischen (zum Beispiel <p>Hello <b>world</b>!</p>), bleiben ebenfalls unverändert in einer Zeile, da eine Umformatierung der Leerzeichen innerhalb von gemischtem Inhalt die Bedeutung des Dokuments verändern könnte.",
     "faq.q5": "Werden meine XML-Daten auf einen Server hochgeladen?",
-    "faq.a5": "Nein. Parsing, Formatierung, Minifizierung und Validierung laufen vollständig lokal in Ihrem Browser mit dem eingebauten DOMParser — nichts, was Sie einfügen, wird jemals an einen Server gesendet, protokolliert oder geteilt, was es sicher für XML macht, das API-Antworten, Konfigurationen oder personenbezogene Daten enthält. Ihre letzte Eingabe wird optional im lokalen Speicher dieses Browsers behalten, damit sie beim nächsten Mal noch da ist; deaktivieren Sie \"Mein XML in diesem Browser speichern\", um sie nur für die aktuelle Sitzung zu behalten, und Leeren entfernt die gespeicherte Kopie sofort."
+    "faq.a5": "Nein. Parsing, Formatierung, Minifizierung und Validierung laufen vollständig lokal in Ihrem Browser mit dem eingebauten DOMParser — nichts, was Sie einfügen, wird jemals an einen Server gesendet, protokolliert oder geteilt, was es sicher für XML macht, das API-Antworten, Konfigurationen oder personenbezogene Daten enthält. Ihre letzte Eingabe wird optional im lokalen Speicher dieses Browsers behalten, damit sie beim nächsten Mal noch da ist; deaktivieren Sie \"Mein XML in diesem Browser speichern\", um sie nur für die aktuelle Sitzung zu behalten, und Leeren entfernt die gespeicherte Kopie sofort.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -964,7 +1024,12 @@ window.I18N_LOCALES = {
     "faq.q4": "このツールはCDATAセクション、コメント、XML宣言を保持しますか？",
     "faq.a4": "はい。このフォーマッターは生テキストに対して正規表現を使うのではなく、ブラウザ組み込みのDOMParserでXMLを実際のドキュメントツリーに解析し、そのツリーを手書きのシリアライザーでたどるため、<![CDATA[ ... ]]>ブロック、<!-- コメント -->、元の<?xml version=\"1.0\" encoding=\"UTF-8\"?>宣言はすべて、削除や再整形されることなく、そのままの形で出力されます。テキストと子要素が混在する要素（例：<p>Hello <b>world</b>!</p>）も1行のまま変更されません。混在コンテンツ内の空白を整形し直すと、ドキュメントの意味が変わってしまう可能性があるためです。",
     "faq.q5": "私のXMLデータはサーバーにアップロードされますか？",
-    "faq.a5": "いいえ。解析、整形、圧縮、検証はすべて、ブラウザに組み込まれたDOMParserを使ってローカルで実行されます——貼り付けた内容がサーバーに送信されたり、記録されたり、共有されたりすることは一切ありません。そのため、APIレスポンスや設定、個人データを含むXMLでも安全に扱えます。最新の入力内容は、次回も残るようにこのブラウザのローカルストレージに任意で保存されます。「このブラウザにXMLを保存する」のチェックを外せば現在のセッションのみの保持になり、「クリア」をクリックすると保存されたコピーは即座に削除されます。"
+    "faq.a5": "いいえ。解析、整形、圧縮、検証はすべて、ブラウザに組み込まれたDOMParserを使ってローカルで実行されます——貼り付けた内容がサーバーに送信されたり、記録されたり、共有されたりすることは一切ありません。そのため、APIレスポンスや設定、個人データを含むXMLでも安全に扱えます。最新の入力内容は、次回も残るようにこのブラウザのローカルストレージに任意で保存されます。「このブラウザにXMLを保存する」のチェックを外せば現在のセッションのみの保持になり、「クリア」をクリックすると保存されたコピーは即座に削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1037,6 +1102,11 @@ window.I18N_LOCALES = {
     "faq.q4": "이 도구는 CDATA 섹션, 주석, XML 선언을 보존하나요?",
     "faq.a4": "네. 이 포맷터는 원본 텍스트에 정규식을 적용하는 대신, 브라우저 내장 DOMParser로 XML을 실제 문서 트리로 파싱한 뒤 직접 작성한 직렬화기로 그 트리를 순회합니다. 그래서 <![CDATA[ ... ]]> 블록, <!-- 주석 -->, 원본 <?xml version=\"1.0\" encoding=\"UTF-8\"?> 선언이 삭제되거나 재구성되지 않고 원래 그대로 다시 출력됩니다. 텍스트와 자식 요소가 섞인 요소(예: <p>Hello <b>world</b>!</p>)도 한 줄에 그대로 유지됩니다. 혼합 콘텐츠 안의 공백을 다시 배치하면 문서의 의미가 바뀔 수 있기 때문입니다.",
     "faq.q5": "제 XML 데이터가 서버로 업로드되나요?",
-    "faq.a5": "아니요. 파싱, 정렬, 압축, 검증은 모두 브라우저에 내장된 DOMParser를 사용해 로컬에서 실행됩니다 — 붙여넣은 내용은 서버로 전송되거나 기록되거나 공유되지 않으므로, API 응답이나 설정, 개인정보가 담긴 XML도 안전하게 다룰 수 있습니다. 가장 최근 입력 내용은 다음에 다시 방문했을 때도 남아 있도록 이 브라우저의 로컬 저장소에 선택적으로 보관됩니다. \"이 브라우저에 XML 저장\"의 체크를 해제하면 현재 세션에서만 유지되고, 지우기를 클릭하면 저장된 사본이 즉시 삭제됩니다."
+    "faq.a5": "아니요. 파싱, 정렬, 압축, 검증은 모두 브라우저에 내장된 DOMParser를 사용해 로컬에서 실행됩니다 — 붙여넣은 내용은 서버로 전송되거나 기록되거나 공유되지 않으므로, API 응답이나 설정, 개인정보가 담긴 XML도 안전하게 다룰 수 있습니다. 가장 최근 입력 내용은 다음에 다시 방문했을 때도 남아 있도록 이 브라우저의 로컬 저장소에 선택적으로 보관됩니다. \"이 브라우저에 XML 저장\"의 체크를 해제하면 현재 세션에서만 유지되고, 지우기를 클릭하면 저장된 사본이 즉시 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

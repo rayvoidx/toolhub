@@ -82,7 +82,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "Cycle length must be between 21 and 60 days. Cycles outside that range, or that vary a lot, make these estimates unreliable — an ovulation test kit and a doctor's advice are better guides.",
     "tool.warn.old": "That period started over a year ago. The dates below are extrapolated from it — enter your most recent period for a useful prediction.",
     "tool.warn.rolled": "That period started more than 60 days ago, so the dates below are rolled forward to your next upcoming cycle.",
-    "tool.privacy": "Calculated in your browser. Your dates stay on this device and are never sent to a server."
+    "tool.privacy": "Calculated in your browser. Your dates stay on this device and are never sent to a server.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -149,7 +154,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "周期长度需在 21 至 60 天之间。超出该范围或波动很大的周期，预测结果不可靠——建议使用排卵试纸并咨询医生。",
     "tool.warn.old": "这次月经已是一年多以前。下面的日期由它推算而来——请填写最近一次月经以获得有参考价值的预测。",
     "tool.warn.rolled": "这次月经已是 60 天以前，因此下面的日期已按周期顺推到你即将到来的周期。",
-    "tool.privacy": "全部在你的浏览器中计算。日期只保存在本设备，绝不会发送到服务器。"
+    "tool.privacy": "全部在你的浏览器中计算。日期只保存在本设备，绝不会发送到服务器。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -216,7 +226,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "साइकिल की लंबाई 21 से 60 दिन के बीच होनी चाहिए। इस सीमा से बाहर या बहुत बदलते चक्रों में यह अनुमान भरोसेमंद नहीं रहता — ओव्यूलेशन टेस्ट किट और डॉक्टर की सलाह बेहतर मार्गदर्शन देंगे।",
     "tool.warn.old": "यह पीरियड एक साल से भी पुराना है। नीचे की तारीखें उसी से आगे बढ़ाकर निकाली गई हैं — काम की भविष्यवाणी के लिए अपना सबसे हालिया पीरियड डालें।",
     "tool.warn.rolled": "यह पीरियड 60 दिन से भी पुराना है, इसलिए नीचे की तारीखें आगे बढ़ाकर आपके आने वाले साइकिल पर सेट कर दी गई हैं।",
-    "tool.privacy": "गणना आपके ब्राउज़र में होती है। आपकी तारीखें इसी डिवाइस पर रहती हैं और कभी सर्वर पर नहीं भेजी जातीं।"
+    "tool.privacy": "गणना आपके ब्राउज़र में होती है। आपकी तारीखें इसी डिवाइस पर रहती हैं और कभी सर्वर पर नहीं भेजी जातीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -283,7 +298,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "La duración del ciclo debe estar entre 21 y 60 días. Los ciclos fuera de ese rango, o que varían mucho, hacen que estas estimaciones no sean fiables: un test de ovulación y el consejo de tu médico te orientarán mejor.",
     "tool.warn.old": "Esa regla empezó hace más de un año. Las fechas de abajo se han extrapolado a partir de ella; introduce tu regla más reciente para una predicción útil.",
     "tool.warn.rolled": "Esa regla empezó hace más de 60 días, así que las fechas de abajo se han adelantado hasta tu próximo ciclo.",
-    "tool.privacy": "Se calcula en tu navegador. Tus fechas se quedan en este dispositivo y nunca se envían a un servidor."
+    "tool.privacy": "Se calcula en tu navegador. Tus fechas se quedan en este dispositivo y nunca se envían a un servidor.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -350,7 +370,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "يجب أن يكون طول الدورة بين 21 و60 يومًا. فالدورات خارج هذا النطاق، أو الشديدة التفاوت، تجعل هذه التقديرات غير موثوقة — واختبار التبويض واستشارة الطبيب دليل أفضل.",
     "tool.warn.old": "بدأت هذه الدورة قبل أكثر من عام. التواريخ أدناه مستنتجة منها — أدخلي أحدث دورة لديك للحصول على توقع مفيد.",
     "tool.warn.rolled": "بدأت هذه الدورة قبل أكثر من 60 يومًا، لذلك جرى تقديم التواريخ أدناه إلى دورتك القادمة.",
-    "tool.privacy": "يتم الحساب داخل متصفحك. تبقى تواريخك على هذا الجهاز ولا تُرسل إلى أي خادم."
+    "tool.privacy": "يتم الحساب داخل متصفحك. تبقى تواريخك على هذا الجهاز ولا تُرسل إلى أي خادم.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -417,7 +442,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "La durée du cycle doit être comprise entre 21 et 60 jours. Des cycles hors de cette plage, ou très variables, rendent ces estimations peu fiables : un test d'ovulation et l'avis d'un médecin vous guideront mieux.",
     "tool.warn.old": "Ces règles remontent à plus d'un an. Les dates ci-dessous en sont extrapolées : indiquez vos règles les plus récentes pour une prévision utile.",
     "tool.warn.rolled": "Ces règles remontent à plus de 60 jours : les dates ci-dessous ont donc été avancées jusqu'à votre prochain cycle.",
-    "tool.privacy": "Calculé dans votre navigateur. Vos dates restent sur cet appareil et ne sont jamais envoyées à un serveur."
+    "tool.privacy": "Calculé dans votre navigateur. Vos dates restent sur cet appareil et ne sont jamais envoyées à un serveur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -484,7 +514,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "চক্রের দৈর্ঘ্য ২১ থেকে ৬০ দিনের মধ্যে হতে হবে। এর বাইরের বা খুব ওঠানামা করা চক্রে এই হিসাব নির্ভরযোগ্য নয় — ওভুলেশন টেস্ট কিট ও ডাক্তারের পরামর্শ বেশি কাজে দেবে।",
     "tool.warn.old": "এই পিরিয়ড এক বছরেরও বেশি পুরোনো। নিচের তারিখগুলো সেখান থেকেই বাড়িয়ে হিসাব করা — কাজে লাগার মতো পূর্বাভাসের জন্য সাম্প্রতিকতম পিরিয়ড দিন।",
     "tool.warn.rolled": "এই পিরিয়ড ৬০ দিনেরও বেশি পুরোনো, তাই নিচের তারিখগুলো এগিয়ে নিয়ে আপনার আসন্ন চক্রে সাজানো হয়েছে।",
-    "tool.privacy": "হিসাব হয় আপনার ব্রাউজারেই। আপনার তারিখ এই ডিভাইসেই থাকে, কখনো সার্ভারে যায় না।"
+    "tool.privacy": "হিসাব হয় আপনার ব্রাউজারেই। আপনার তারিখ এই ডিভাইসেই থাকে, কখনো সার্ভারে যায় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -551,7 +586,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "A duração do ciclo precisa ficar entre 21 e 60 dias. Ciclos fora dessa faixa, ou que variam muito, tornam estas estimativas pouco confiáveis — um teste de ovulação e a orientação de um médico são guias melhores.",
     "tool.warn.old": "Essa menstruação começou há mais de um ano. As datas abaixo são extrapoladas a partir dela — informe sua menstruação mais recente para uma previsão útil.",
     "tool.warn.rolled": "Essa menstruação começou há mais de 60 dias, então as datas abaixo foram avançadas até o seu próximo ciclo.",
-    "tool.privacy": "Calculado no seu navegador. Suas datas ficam neste dispositivo e nunca são enviadas a um servidor."
+    "tool.privacy": "Calculado no seu navegador. Suas datas ficam neste dispositivo e nunca são enviadas a um servidor.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -618,7 +658,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "Длина цикла должна быть от 21 до 60 дней. При цикле вне этого диапазона или с большими колебаниями прогноз ненадёжен — лучше ориентироваться на тест на овуляцию и консультацию врача.",
     "tool.warn.old": "Эти месячные были больше года назад. Даты ниже рассчитаны на их основе — укажите последние месячные, чтобы прогноз имел смысл.",
     "tool.warn.rolled": "Эти месячные были больше 60 дней назад, поэтому даты ниже смещены вперёд к вашему ближайшему циклу.",
-    "tool.privacy": "Расчёт идёт в вашем браузере. Даты остаются на этом устройстве и никогда не отправляются на сервер."
+    "tool.privacy": "Расчёт идёт в вашем браузере. Даты остаются на этом устройстве и никогда не отправляются на сервер.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -685,7 +730,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "سائیکل کی لمبائی 21 سے 60 دن کے درمیان ہونی چاہیے۔ اس حد سے باہر یا بہت بدلنے والے سائیکل میں یہ تخمینے قابلِ اعتماد نہیں — اوویولیشن ٹیسٹ کٹ اور ڈاکٹر کا مشورہ بہتر رہنمائی دے گا۔",
     "tool.warn.old": "یہ ماہواری ایک سال سے بھی پرانی ہے۔ نیچے دی گئی تاریخیں اسی سے آگے بڑھا کر نکالی گئی ہیں — کارآمد پیش گوئی کے لیے اپنی حالیہ ترین ماہواری درج کریں۔",
     "tool.warn.rolled": "یہ ماہواری 60 دن سے زیادہ پرانی ہے، اس لیے نیچے دی گئی تاریخیں آگے بڑھا کر آپ کے آنے والے سائیکل پر کر دی گئی ہیں۔",
-    "tool.privacy": "حساب آپ کے براؤزر میں ہوتا ہے۔ آپ کی تاریخیں اسی ڈیوائس پر رہتی ہیں اور کبھی سرور پر نہیں بھیجی جاتیں۔"
+    "tool.privacy": "حساب آپ کے براؤزر میں ہوتا ہے۔ آپ کی تاریخیں اسی ڈیوائس پر رہتی ہیں اور کبھی سرور پر نہیں بھیجی جاتیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -752,7 +802,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "Panjang siklus harus antara 21 dan 60 hari. Siklus di luar rentang itu, atau yang naik-turun jauh, membuat perkiraan ini tidak dapat diandalkan — alat tes ovulasi dan saran dokter adalah panduan yang lebih baik.",
     "tool.warn.old": "Haid itu dimulai lebih dari setahun lalu. Tanggal di bawah hanya diekstrapolasi dari data tersebut — masukkan haid terbaru Anda agar perkiraannya berguna.",
     "tool.warn.rolled": "Haid itu dimulai lebih dari 60 hari lalu, jadi tanggal di bawah sudah dimajukan ke siklus Anda berikutnya.",
-    "tool.privacy": "Dihitung di browser Anda. Tanggal Anda tetap di perangkat ini dan tidak pernah dikirim ke server."
+    "tool.privacy": "Dihitung di browser Anda. Tanggal Anda tetap di perangkat ini dan tidak pernah dikirim ke server.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -819,7 +874,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "Die Zykluslänge muss zwischen 21 und 60 Tagen liegen. Bei Zyklen außerhalb dieses Bereichs oder mit starken Schwankungen sind diese Schätzungen unzuverlässig — ein Ovulationstest und ärztlicher Rat helfen dir besser weiter.",
     "tool.warn.old": "Diese Periode liegt über ein Jahr zurück. Die Daten unten sind daraus hochgerechnet — gib deine aktuellste Periode ein, damit die Prognose brauchbar wird.",
     "tool.warn.rolled": "Diese Periode liegt mehr als 60 Tage zurück. Die Daten unten wurden deshalb bis zu deinem nächsten Zyklus vorgerechnet.",
-    "tool.privacy": "Berechnung im Browser. Deine Daten bleiben auf diesem Gerät und werden nie an einen Server gesendet."
+    "tool.privacy": "Berechnung im Browser. Deine Daten bleiben auf diesem Gerät und werden nie an einen Server gesendet.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -886,7 +946,12 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "生理周期は21〜60日の範囲で入力してください。この範囲を外れる周期やばらつきが大きい周期では、この予測は当てになりません — 排卵検査薬の使用と医師への相談をおすすめします。",
     "tool.warn.old": "1年以上前の生理日です。以下の日付はそこから推定したものです — 実用的な予測のために直近の生理日を入力してください。",
     "tool.warn.rolled": "60日以上前の生理日のため、以下の日付は周期を進めて次に来る周期に合わせて表示しています。",
-    "tool.privacy": "計算はブラウザ内で完結します。入力した日付はこの端末にのみ残り、サーバーへ送信されることはありません。"
+    "tool.privacy": "計算はブラウザ内で完結します。入力した日付はこの端末にのみ残り、サーバーへ送信されることはありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -953,6 +1018,11 @@ window.I18N_LOCALES = {
     "tool.err.cycleRange": "생리주기는 21~60일 사이여야 합니다. 이 범위를 벗어나거나 편차가 큰 주기는 계산 정확도가 낮습니다 — 배란테스트기와 의사 상담이 더 정확한 기준입니다.",
     "tool.warn.old": "1년도 더 지난 생리일입니다. 아래 날짜는 그 값에서 추정한 것이니, 쓸모 있는 예측을 위해 가장 최근 생리일로 갱신해 주세요.",
     "tool.warn.rolled": "60일 이상 지난 생리일이라, 아래 날짜는 주기를 순방향으로 굴려 다가오는 주기 기준으로 표시했습니다.",
-    "tool.privacy": "브라우저 안에서 계산합니다. 입력한 날짜는 이 기기에만 남고 서버로 전송되지 않습니다."
+    "tool.privacy": "브라우저 안에서 계산합니다. 입력한 날짜는 이 기기에만 남고 서버로 전송되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

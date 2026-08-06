@@ -64,7 +64,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I find my margin if I only know my cost and selling price?",
     "faq.a4": "Yes — switch to the “Find markup %” tab and enter the cost and the selling price you already charge. The calculator returns the profit per unit, the markup percentage, and the profit margin percentage in one step, so you don't need to rearrange the formulas yourself.",
     "faq.q5": "Is my cost and pricing data sent to a server?",
-    "faq.a5": "No. This markup calculator runs entirely in your browser — the cost, price, and currency you enter never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can price products or services with confidence."
+    "faq.a5": "No. This markup calculator runs entirely in your browser — the cost, price, and currency you enter never leave your device and nothing is uploaded or stored on a server. There's no sign-up and no tracking of your numbers, so you can price products or services with confidence.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如果我只知道成本和售价，能算出毛利率吗？",
     "faq.a4": "可以——切换到\"算加价率\"标签页，输入成本和你已经在收取的售价，计算器会一次性给出单位利润、加价率和毛利率，你不需要自己倒推公式。",
     "faq.q5": "我的成本和定价数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个加价计算器完全在你的浏览器中运行——你输入的成本、售价和货币不会离开你的设备，也不会被上传或存储到任何服务器。无需注册，也不会追踪你的数字，你可以放心地为产品或服务定价。"
+    "faq.a5": "不会。这个加价计算器完全在你的浏览器中运行——你输入的成本、售价和货币不会离开你的设备，也不会被上传或存储到任何服务器。无需注册，也不会追踪你的数字，你可以放心地为产品或服务定价。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -190,7 +200,12 @@ window.I18N_LOCALES = {
     "faq.q4": "अगर मुझे सिर्फ़ कॉस्ट और सेलिंग प्राइस पता है तो मार्जिन कैसे निकालूँ?",
     "faq.a4": "“मार्कअप % निकालें” टैब पर जाएँ और कॉस्ट व अपनी मौजूदा सेलिंग प्राइस डालें। कैलकुलेटर एक ही बार में प्रति यूनिट प्रॉफ़िट, मार्कअप % और मार्जिन % दे देगा — फ़ॉर्मूला ख़ुद निकालने की ज़रूरत नहीं।",
     "faq.q5": "क्या मेरी कॉस्ट और प्राइसिंग डेटा सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। यह मार्कअप कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपकी डाली गई कॉस्ट, प्राइस और करेंसी कभी आपकी डिवाइस से बाहर नहीं जातीं और किसी सर्वर पर अपलोड या स्टोर नहीं होतीं। न कोई साइनअप, न आपके नंबरों की कोई ट्रैकिंग — बेझिझक अपने प्रोडक्ट या सर्विस की प्राइसिंग करें।"
+    "faq.a5": "नहीं। यह मार्कअप कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपकी डाली गई कॉस्ट, प्राइस और करेंसी कभी आपकी डिवाइस से बाहर नहीं जातीं और किसी सर्वर पर अपलोड या स्टोर नहीं होतीं। न कोई साइनअप, न आपके नंबरों की कोई ट्रैकिंग — बेझिझक अपने प्रोडक्ट या सर्विस की प्राइसिंग करें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -253,7 +268,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo hallar mi margen si solo conozco el costo y el precio de venta?",
     "faq.a4": "Sí — cambia a la pestaña “Hallar markup %” e introduce el costo y el precio de venta que ya cobras. La calculadora devuelve la ganancia por unidad, el porcentaje de recargo y el margen de ganancia en un solo paso, sin que tengas que despejar las fórmulas tú mismo.",
     "faq.q5": "¿Mis datos de costo y precios se envían a un servidor?",
-    "faq.a5": "No. Esta calculadora de markup funciona completamente en tu navegador — el costo, el precio y la moneda que introduces nunca salen de tu dispositivo y no se suben ni se guardan en ningún servidor. No hay registro ni seguimiento de tus cifras, así que puedes fijar precios de productos o servicios con confianza."
+    "faq.a5": "No. Esta calculadora de markup funciona completamente en tu navegador — el costo, el precio y la moneda que introduces nunca salen de tu dispositivo y no se suben ni se guardan en ningún servidor. No hay registro ni seguimiento de tus cifras, así que puedes fijar precios de productos o servicios con confianza.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -316,7 +336,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني إيجاد هامش الربح إن كنت أعرف فقط التكلفة وسعر البيع؟",
     "faq.a4": "نعم — انتقل إلى تبويب «إيجاد نسبة الزيادة» وأدخل التكلفة وسعر البيع الذي تتقاضاه بالفعل. تعطيك الحاسبة الربح لكل وحدة ونسبة الزيادة وهامش الربح في خطوة واحدة، دون الحاجة لإعادة ترتيب المعادلات بنفسك.",
     "faq.q5": "هل تُرسَل بيانات التكلفة والتسعير الخاصة بي إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة نسبة الزيادة هذه بالكامل داخل متصفحك — التكلفة والسعر والعملة التي تدخلها لا تغادر جهازك أبدًا ولا تُرفَع أو تُخزَّن على أي خادم. لا تسجيل ولا تتبع لأرقامك، لذا يمكنك تسعير منتجاتك أو خدماتك بثقة."
+    "faq.a5": "لا. تعمل حاسبة نسبة الزيادة هذه بالكامل داخل متصفحك — التكلفة والسعر والعملة التي تدخلها لا تغادر جهازك أبدًا ولا تُرفَع أو تُخزَّن على أي خادم. لا تسجيل ولا تتبع لأرقامك، لذا يمكنك تسعير منتجاتك أو خدماتك بثقة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -379,7 +404,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je trouver ma marge si je connais seulement le coût et le prix de vente ?",
     "faq.a4": "Oui — passez à l'onglet « Trouver le taux de marge » et entrez le coût et le prix de vente que vous pratiquez déjà. Le calculateur renvoie en une seule étape le profit par unité, le taux de marge et la marge, sans que vous ayez à réarranger les formules vous-même.",
     "faq.q5": "Mes données de coût et de tarification sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce calculateur de marge fonctionne entièrement dans votre navigateur — le coût, le prix et la devise que vous saisissez ne quittent jamais votre appareil et ne sont ni téléversés ni stockés sur un serveur. Aucune inscription, aucun suivi de vos chiffres : vous pouvez fixer vos prix en toute confiance."
+    "faq.a5": "Non. Ce calculateur de marge fonctionne entièrement dans votre navigateur — le coût, le prix et la devise que vous saisissez ne quittent jamais votre appareil et ne sont ni téléversés ni stockés sur un serveur. Aucune inscription, aucun suivi de vos chiffres : vous pouvez fixer vos prix en toute confiance.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -442,7 +472,12 @@ window.I18N_LOCALES = {
     "faq.q4": "শুধু কস্ট আর সেলিং প্রাইস জানা থাকলে মার্জিন বের করা যাবে?",
     "faq.a4": "হ্যাঁ — “মার্কআপ % বের করুন” ট্যাবে যান আর কস্ট এবং আপনার বর্তমান সেলিং প্রাইস দিন। ক্যালকুলেটর একবারেই প্রতি ইউনিট প্রফিট, মার্কআপ % আর মার্জিন % দেখিয়ে দেবে — নিজে ফর্মুলা সাজাতে হবে না।",
     "faq.q5": "আমার কস্ট আর প্রাইসিং ডেটা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই মার্কআপ ক্যালকুলেটর পুরোপুরি আপনার ব্রাউজারে চলে — আপনার দেওয়া কস্ট, প্রাইস আর কারেন্সি কখনও আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। কোনো সাইনআপ নেই, আপনার সংখ্যার কোনো ট্র্যাকিং নেই — নিশ্চিন্তে আপনার প্রোডাক্ট বা সার্ভিসের দাম ঠিক করুন।"
+    "faq.a5": "না। এই মার্কআপ ক্যালকুলেটর পুরোপুরি আপনার ব্রাউজারে চলে — আপনার দেওয়া কস্ট, প্রাইস আর কারেন্সি কখনও আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। কোনো সাইনআপ নেই, আপনার সংখ্যার কোনো ট্র্যাকিং নেই — নিশ্চিন্তে আপনার প্রোডাক্ট বা সার্ভিসের দাম ঠিক করুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -505,7 +540,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Consigo achar minha margem se eu só souber o custo e o preço de venda?",
     "faq.a4": "Sim — mude para a aba “Achar markup %” e informe o custo e o preço de venda que você já pratica. A calculadora retorna o lucro por unidade, o markup % e a margem de lucro em uma única etapa, sem precisar rearranjar as fórmulas sozinho.",
     "faq.q5": "Meus dados de custo e preço são enviados a um servidor?",
-    "faq.a5": "Não. Esta calculadora de markup roda inteiramente no seu navegador — o custo, o preço e a moeda que você informa nunca saem do seu dispositivo e não são enviados nem armazenados em nenhum servidor. Não há cadastro nem rastreamento dos seus números, então você pode precificar produtos ou serviços com confiança."
+    "faq.a5": "Não. Esta calculadora de markup roda inteiramente no seu navegador — o custo, o preço e a moeda que você informa nunca saem do seu dispositivo e não são enviados nem armazenados em nenhum servidor. Não há cadastro nem rastreamento dos seus números, então você pode precificar produtos ou serviços com confiança.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -568,7 +608,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Могу ли я найти маржу, если знаю только себестоимость и цену продажи?",
     "faq.a4": "Да — переключитесь на вкладку «Найти наценку %» и введите себестоимость и цену продажи, которую вы уже назначили. Калькулятор за один шаг вернёт прибыль на единицу, процент наценки и маржу — не нужно самостоятельно преобразовывать формулы.",
     "faq.q5": "Отправляются ли мои данные о себестоимости и ценах на сервер?",
-    "faq.a5": "Нет. Этот калькулятор наценки работает полностью в вашем браузере — введённые вами себестоимость, цена и валюта никогда не покидают ваше устройство и не загружаются и не хранятся на сервере. Регистрация и отслеживание ваших чисел отсутствуют, поэтому вы можете спокойно назначать цены на товары или услуги."
+    "faq.a5": "Нет. Этот калькулятор наценки работает полностью в вашем браузере — введённые вами себестоимость, цена и валюта никогда не покидают ваше устройство и не загружаются и не хранятся на сервере. Регистрация и отслеживание ваших чисел отсутствуют, поэтому вы можете спокойно назначать цены на товары или услуги.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -631,7 +676,12 @@ window.I18N_LOCALES = {
     "faq.q4": "اگر مجھے صرف لاگت اور فروخت کی قیمت معلوم ہو تو کیا مارجن نکال سکتا ہوں؟",
     "faq.a4": "جی ہاں — “مارک اپ % نکالیں” ٹیب پر جائیں اور لاگت اور اپنی موجودہ فروخت کی قیمت درج کریں۔ کیلکولیٹر ایک ہی مرحلے میں فی یونٹ منافع، مارک اپ % اور مارجن % دے دے گا — آپ کو خود فارمولے ترتیب دینے کی ضرورت نہیں۔",
     "faq.q5": "کیا میری لاگت اور قیمتوں کا ڈیٹا سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ مارک اپ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی درج کردہ لاگت، قیمت اور کرنسی کبھی آپ کے آلے سے باہر نہیں جاتیں اور کسی سرور پر اپ لوڈ یا محفوظ نہیں ہوتیں۔ نہ کوئی سائن اپ، نہ آپ کے اعداد کی کوئی ٹریکنگ — بلا جھجک اپنی مصنوعات یا خدمات کی قیمت طے کریں۔"
+    "faq.a5": "نہیں۔ یہ مارک اپ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کی درج کردہ لاگت، قیمت اور کرنسی کبھی آپ کے آلے سے باہر نہیں جاتیں اور کسی سرور پر اپ لوڈ یا محفوظ نہیں ہوتیں۔ نہ کوئی سائن اپ، نہ آپ کے اعداد کی کوئی ٹریکنگ — بلا جھجک اپنی مصنوعات یا خدمات کی قیمت طے کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -694,7 +744,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah saya mencari margin jika hanya tahu biaya dan harga jual?",
     "faq.a4": "Bisa — pindah ke tab \"Cari markup %\" dan masukkan biaya serta harga jual yang sudah Anda kenakan. Kalkulator akan langsung memberikan keuntungan per unit, persentase markup, dan margin keuntungan dalam satu langkah, tanpa perlu menyusun ulang rumus sendiri.",
     "faq.q5": "Apakah data biaya dan harga saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator markup ini sepenuhnya berjalan di browser Anda — biaya, harga, dan mata uang yang Anda masukkan tidak pernah meninggalkan perangkat Anda dan tidak diunggah atau disimpan di server mana pun. Tidak ada pendaftaran dan tidak ada pelacakan angka Anda, jadi Anda bisa menetapkan harga produk atau layanan dengan percaya diri."
+    "faq.a5": "Tidak. Kalkulator markup ini sepenuhnya berjalan di browser Anda — biaya, harga, dan mata uang yang Anda masukkan tidak pernah meninggalkan perangkat Anda dan tidak diunggah atau disimpan di server mana pun. Tidak ada pendaftaran dan tidak ada pelacakan angka Anda, jadi Anda bisa menetapkan harga produk atau layanan dengan percaya diri.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -757,7 +812,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich meine Marge finden, wenn ich nur Kosten und Verkaufspreis kenne?",
     "faq.a4": "Ja — wechsle zum Tab „Aufschlag % finden“ und gib die Kosten sowie den Verkaufspreis ein, den du bereits verlangst. Der Rechner liefert Gewinn pro Einheit, Aufschlagsprozentsatz und Gewinnmarge in einem Schritt, ohne dass du die Formeln selbst umstellen musst.",
     "faq.q5": "Werden meine Kosten- und Preisdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Aufschlagsrechner läuft komplett in deinem Browser — die eingegebenen Kosten, der Preis und die Währung verlassen nie dein Gerät und werden nicht auf einen Server hochgeladen oder gespeichert. Es gibt keine Anmeldung und kein Tracking deiner Zahlen, sodass du Produkte oder Dienstleistungen bedenkenlos bepreisen kannst."
+    "faq.a5": "Nein. Dieser Aufschlagsrechner läuft komplett in deinem Browser — die eingegebenen Kosten, der Preis und die Währung verlassen nie dein Gerät und werden nicht auf einen Server hochgeladen oder gespeichert. Es gibt keine Anmeldung und kein Tracking deiner Zahlen, sodass du Produkte oder Dienstleistungen bedenkenlos bepreisen kannst.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -820,7 +880,12 @@ window.I18N_LOCALES = {
     "faq.q4": "原価と売価しかわからなくても粗利率を求められますか？",
     "faq.a4": "はい。「値入率を求める」タブに切り替えて、原価とすでに設定している売価を入力してください。計算機が単位あたり利益・値入率・粗利率を一度に返すので、自分で数式を組み替える必要はありません。",
     "faq.q5": "原価や価格のデータはサーバーに送信されますか？",
-    "faq.a5": "いいえ。この値入率計算機はすべてブラウザ内で動作し、入力した原価・売価・通貨がデバイスの外に送られることはなく、サーバーにアップロードや保存もされません。会員登録や数値のトラッキングも一切ないので、安心して商品やサービスの価格を設定できます。"
+    "faq.a5": "いいえ。この値入率計算機はすべてブラウザ内で動作し、入力した原価・売価・通貨がデバイスの外に送られることはなく、サーバーにアップロードや保存もされません。会員登録や数値のトラッキングも一切ないので、安心して商品やサービスの価格を設定できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -883,6 +948,11 @@ window.I18N_LOCALES = {
     "faq.q4": "원가와 판매가만 알아도 마진율을 구할 수 있나요?",
     "faq.a4": "네 — \"마크업 % 구하기\" 탭에서 원가와 이미 받고 있는 판매가를 입력하세요. 계산기가 개당 이익, 마크업 %, 마진율을 한 번에 계산해 주므로 직접 공식을 바꿔 계산할 필요가 없습니다.",
     "faq.q5": "제 원가와 가격 정보가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 마크업 계산기는 전적으로 브라우저에서 실행되며, 입력한 원가·판매가·통화는 기기 밖으로 절대 나가지 않고 서버에 업로드되거나 저장되지 않습니다. 가입도, 숫자 추적도 없으므로 안심하고 제품이나 서비스의 가격을 책정할 수 있습니다."
+    "faq.a5": "아니요. 이 마크업 계산기는 전적으로 브라우저에서 실행되며, 입력한 원가·판매가·통화는 기기 밖으로 절대 나가지 않고 서버에 업로드되거나 저장되지 않습니다. 가입도, 숫자 추적도 없으므로 안심하고 제품이나 서비스의 가격을 책정할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

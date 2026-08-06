@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How precise are the results?",
     "faq.a4": "Every conversion keeps up to 10 significant figures, then trims trailing zeros for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values come from the exact definition of each area unit — for example the square foot is exactly 0.09290304 m².",
     "faq.q5": "Is my input sent to a server?",
-    "faq.a5": "No. This area converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example square feet → square meters), kept in your browser's local storage so it is ready next time. The value itself is not stored."
+    "faq.a5": "No. This area converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example square feet → square meters), kept in your browser's local storage so it is ready next time. The value itself is not stored.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -111,7 +116,12 @@ window.I18N_LOCALES = {
     "faq.q4": "结果有多精确？",
     "faq.a4": "每次换算最多保留 10 位有效数字，然后去掉末尾的零以便阅读。对于极大或极小的数字（约 1e15 及以上，或小于 1e-9），会切换为科学计数法，因此不会被悄悄舍入为零。所有数值均来自各面积单位的精确定义 — 例如 1 平方英尺正好是 0.09290304 m²。",
     "faq.q5": "我输入的数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个面积换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如平方英尺 → 平方米），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存。"
+    "faq.a5": "不会。这个面积换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如平方英尺 → 平方米），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -159,7 +169,12 @@ window.I18N_LOCALES = {
     "faq.q4": "परिणाम कितने सटीक हैं?",
     "faq.a4": "हर रूपांतरण 10 सार्थक अंकों तक रखता है, फिर पढ़ने में आसानी के लिए अंत के शून्य हटा दिए जाते हैं। बहुत बड़ी या बहुत छोटी संख्याएँ (लगभग 1e15 और उससे ऊपर, या 1e-9 से नीचे) वैज्ञानिक संकेतन में बदल जाती हैं, ताकि कुछ भी चुपचाप शून्य न हो जाए। सभी मान प्रत्येक क्षेत्रफल इकाई की सटीक परिभाषा से आते हैं — उदाहरण के लिए 1 वर्ग फुट ठीक 0.09290304 m² है।",
     "faq.q5": "क्या मेरा इनपुट किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह क्षेत्रफल कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं अपलोड नहीं होती। केवल आपकी अंतिम चुनी हुई इकाई जोड़ी (उदाहरण के लिए वर्ग फुट → वर्ग मीटर) आपके ब्राउज़र की लोकल स्टोरेज में सहेजी जाती है ताकि अगली बार तैयार रहे। मान स्वयं सहेजा नहीं जाता।"
+    "faq.a5": "नहीं। यह क्षेत्रफल कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं अपलोड नहीं होती। केवल आपकी अंतिम चुनी हुई इकाई जोड़ी (उदाहरण के लिए वर्ग फुट → वर्ग मीटर) आपके ब्राउज़र की लोकल स्टोरेज में सहेजी जाती है ताकि अगली बार तैयार रहे। मान स्वयं सहेजा नहीं जाता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -207,7 +222,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué tan precisos son los resultados?",
     "faq.a4": "Cada conversión conserva hasta 10 cifras significativas y luego elimina los ceros finales para facilitar la lectura. Los números muy grandes o muy pequeños (alrededor de 1e15 o más, o por debajo de 1e-9) pasan a notación científica, de modo que nada se redondea silenciosamente a cero. Todos los valores provienen de la definición exacta de cada unidad de área — por ejemplo, el pie cuadrado es exactamente 0,09290304 m².",
     "faq.q5": "¿Se envían mis datos a un servidor?",
-    "faq.a5": "No. Este conversor de área funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es el último par de unidades elegido (por ejemplo pies cuadrados → metros cuadrados), almacenado en el almacenamiento local de tu navegador para tenerlo listo la próxima vez. El valor en sí no se guarda."
+    "faq.a5": "No. Este conversor de área funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es el último par de unidades elegido (por ejemplo pies cuadrados → metros cuadrados), almacenado en el almacenamiento local de tu navegador para tenerlo listo la próxima vez. El valor en sí no se guarda.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -255,7 +275,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما مدى دقة النتائج؟",
     "faq.a4": "يحتفظ كل تحويل بما يصل إلى 10 أرقام معنوية، ثم تُحذف الأصفار الزائدة لتسهيل القراءة. تتحول الأرقام الكبيرة جدًا أو الصغيرة جدًا (نحو 1e15 فأكثر، أو أقل من 1e-9) إلى الترميز العلمي، حتى لا يُقرَّب أي شيء إلى صفر بصمت. جميع القيم مأخوذة من التعريف الدقيق لكل وحدة مساحة — فمثلًا القدم المربع يساوي 0.09290304 م² بالضبط.",
     "faq.q5": "هل تُرسَل مدخلاتي إلى خادم؟",
-    "faq.a5": "لا. يعمل محوّل المساحة هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفع إلى أي مكان. الشيء الوحيد الذي يُحفَظ هو آخر زوج وحدات اخترته (مثل قدم مربع → متر مربع)، ويُخزَّن في التخزين المحلي للمتصفح ليكون جاهزًا في المرة القادمة. أما القيمة نفسها فلا تُحفَظ."
+    "faq.a5": "لا. يعمل محوّل المساحة هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفع إلى أي مكان. الشيء الوحيد الذي يُحفَظ هو آخر زوج وحدات اخترته (مثل قدم مربع → متر مربع)، ويُخزَّن في التخزين المحلي للمتصفح ليكون جاهزًا في المرة القادمة. أما القيمة نفسها فلا تُحفَظ.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -303,7 +328,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la précision des résultats ?",
     "faq.a4": "Chaque conversion conserve jusqu'à 10 chiffres significatifs, puis supprime les zéros finaux pour la lisibilité. Les très grands ou très petits nombres (environ 1e15 et plus, ou en dessous de 1e-9) passent en notation scientifique, afin que rien ne soit silencieusement arrondi à zéro. Toutes les valeurs proviennent de la définition exacte de chaque unité de surface — par exemple, le pied carré vaut exactement 0,09290304 m².",
     "faq.q5": "Mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur de surface fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais envoyé où que ce soit. La seule chose enregistrée est votre dernière paire d'unités choisie (par exemple pieds carrés → mètres carrés), conservée dans le stockage local de votre navigateur pour la fois suivante. La valeur elle-même n'est pas enregistrée."
+    "faq.a5": "Non. Ce convertisseur de surface fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais envoyé où que ce soit. La seule chose enregistrée est votre dernière paire d'unités choisie (par exemple pieds carrés → mètres carrés), conservée dans le stockage local de votre navigateur pour la fois suivante. La valeur elle-même n'est pas enregistrée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -351,7 +381,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ফলাফল কতটা নির্ভুল?",
     "faq.a4": "প্রতিটি রূপান্তর 10টি সার্থক অঙ্ক পর্যন্ত রাখে, তারপর পড়ার সুবিধার জন্য শেষের শূন্যগুলো বাদ দেওয়া হয়। খুব বড় বা খুব ছোট সংখ্যা (প্রায় 1e15 ও তার বেশি, অথবা 1e-9 এর কম) বৈজ্ঞানিক লিখনরীতিতে বদলে যায়, যাতে কিছুই নীরবে শূন্যে গোল না হয়। সব মান প্রতিটি ক্ষেত্রফল এককের সঠিক সংজ্ঞা থেকে আসে — যেমন 1 বর্গফুট ঠিক 0.09290304 m²।",
     "faq.q5": "আমার ইনপুট কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই ক্ষেত্রফল কনভার্টার পুরোপুরি আপনার ব্রাউজারে চলে — আপনার টাইপ করা সংখ্যা কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ বেছে নেওয়া একক জোড়া (যেমন বর্গফুট → বর্গমিটার) আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার প্রস্তুত থাকে। মানটি নিজে সংরক্ষণ করা হয় না।"
+    "faq.a5": "না। এই ক্ষেত্রফল কনভার্টার পুরোপুরি আপনার ব্রাউজারে চলে — আপনার টাইপ করা সংখ্যা কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ বেছে নেওয়া একক জোড়া (যেমন বর্গফুট → বর্গমিটার) আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার প্রস্তুত থাকে। মানটি নিজে সংরক্ষণ করা হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -399,7 +434,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a precisão dos resultados?",
     "faq.a4": "Cada conversão mantém até 10 algarismos significativos e depois remove os zeros finais para facilitar a leitura. Números muito grandes ou muito pequenos (cerca de 1e15 ou mais, ou abaixo de 1e-9) passam para notação científica, de modo que nada é silenciosamente arredondado para zero. Todos os valores vêm da definição exata de cada unidade de área — por exemplo, o pé quadrado é exatamente 0,09290304 m².",
     "faq.q5": "Meus dados são enviados para um servidor?",
-    "faq.a5": "Não. Este conversor de área funciona inteiramente no seu navegador — o número que você digita nunca é enviado para lugar algum. A única coisa salva é o último par de unidades escolhido (por exemplo, pés quadrados → metros quadrados), guardado no armazenamento local do navegador para estar pronto na próxima vez. O valor em si não é salvo."
+    "faq.a5": "Não. Este conversor de área funciona inteiramente no seu navegador — o número que você digita nunca é enviado para lugar algum. A única coisa salva é o último par de unidades escolhido (por exemplo, pés quadrados → metros quadrados), guardado no armazenamento local do navegador para estar pronto na próxima vez. O valor em si não é salvo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -447,7 +487,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Насколько точны результаты?",
     "faq.a4": "Каждый расчёт сохраняет до 10 значащих цифр, затем конечные нули убираются для удобства чтения. Очень большие или очень маленькие числа (примерно от 1e15 и выше или меньше 1e-9) переходят в научную запись, чтобы ничего не округлялось до нуля незаметно. Все значения основаны на точном определении каждой единицы площади — например, квадратный фут равен ровно 0,09290304 м².",
     "faq.q5": "Отправляются ли мои данные на сервер?",
-    "faq.a5": "Нет. Этот конвертер площади работает целиком в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, квадратные футы → квадратные метры) в локальном хранилище браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется."
+    "faq.a5": "Нет. Этот конвертер площади работает целиком в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, квадратные футы → квадратные метры) в локальном хранилище браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -495,7 +540,12 @@ window.I18N_LOCALES = {
     "faq.q4": "نتائج کتنے درست ہیں؟",
     "faq.a4": "ہر تبدیلی 10 بامعنی ہندسوں تک رکھتی ہے، پھر پڑھنے میں آسانی کے لیے آخری صفر ہٹا دیے جاتے ہیں۔ بہت بڑے یا بہت چھوٹے اعداد (تقریباً 1e15 اور اس سے زیادہ، یا 1e-9 سے کم) سائنسی اشاریے میں بدل جاتے ہیں، تاکہ کچھ بھی خاموشی سے صفر نہ ہو جائے۔ تمام اقدار ہر رقبہ اکائی کی درست تعریف سے آتی ہیں — مثلاً 1 مربع فٹ بالکل 0.09290304 m² ہے۔",
     "faq.q5": "کیا میرا ان پٹ کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ رقبہ کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا لکھا ہوا نمبر کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کی آخری منتخب کردہ اکائی جوڑی (مثلاً مربع فٹ → مربع میٹر) آپ کے براؤزر کی لوکل اسٹوریج میں محفوظ ہوتی ہے تاکہ اگلی بار تیار ہو۔ قدر خود محفوظ نہیں کی جاتی۔"
+    "faq.a5": "نہیں۔ یہ رقبہ کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا لکھا ہوا نمبر کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کی آخری منتخب کردہ اکائی جوڑی (مثلاً مربع فٹ → مربع میٹر) آپ کے براؤزر کی لوکل اسٹوریج میں محفوظ ہوتی ہے تاکہ اگلی بار تیار ہو۔ قدر خود محفوظ نہیں کی جاتی۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -543,7 +593,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Seberapa akurat hasilnya?",
     "faq.a4": "Setiap konversi menyimpan hingga 10 angka penting, lalu nol di belakang dipangkas agar mudah dibaca. Angka yang sangat besar atau sangat kecil (sekitar 1e15 ke atas, atau di bawah 1e-9) beralih ke notasi ilmiah, sehingga tidak ada yang diam-diam dibulatkan menjadi nol. Semua nilai berasal dari definisi tepat tiap satuan luas — misalnya kaki persegi tepat 0,09290304 m².",
     "faq.q5": "Apakah input saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter luas ini berjalan sepenuhnya di peramban Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya kaki persegi → meter persegi), disimpan di penyimpanan lokal peramban agar siap saat berikutnya. Nilainya sendiri tidak disimpan."
+    "faq.a5": "Tidak. Konverter luas ini berjalan sepenuhnya di peramban Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya kaki persegi → meter persegi), disimpan di penyimpanan lokal peramban agar siap saat berikutnya. Nilainya sendiri tidak disimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -591,7 +646,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie genau sind die Ergebnisse?",
     "faq.a4": "Jede Umrechnung behält bis zu 10 signifikante Stellen und entfernt dann zur besseren Lesbarkeit die nachlaufenden Nullen. Sehr große oder sehr kleine Zahlen (etwa ab 1e15 oder unter 1e-9) wechseln zur wissenschaftlichen Schreibweise, damit nichts unbemerkt auf null gerundet wird. Alle Werte stammen aus der exakten Definition jeder Flächeneinheit — zum Beispiel ist der Quadratfuß genau 0,09290304 m².",
     "faq.q5": "Werden meine Eingaben an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Flächenumrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwohin hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (zum Beispiel Quadratfuß → Quadratmeter) im lokalen Speicher des Browsers, damit es beim nächsten Mal bereitsteht. Der Wert selbst wird nicht gespeichert."
+    "faq.a5": "Nein. Dieser Flächenumrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwohin hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (zum Beispiel Quadratfuß → Quadratmeter) im lokalen Speicher des Browsers, damit es beim nächsten Mal bereitsteht. Der Wert selbst wird nicht gespeichert.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -639,7 +699,12 @@ window.I18N_LOCALES = {
     "faq.q4": "結果の精度はどのくらいですか？",
     "faq.a4": "各換算は有効数字10桁まで保持し、その後は読みやすさのため末尾のゼロを取り除きます。非常に大きい・小さい数（おおよそ 1e15 以上、または 1e-9 未満）は指数表記に切り替わるため、静かにゼロへ丸められることはありません。すべての値は各面積単位の正確な定義に基づきます — たとえば1平方フィートはちょうど 0.09290304 m² です。",
     "faq.q5": "入力した内容はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この面積変換ツールは完全にブラウザ内で動作し、入力した数字がどこかに送信されることはありません。保存されるのは最後に選んだ単位のペア（例: 平方フィート → 平方メートル）だけで、次回すぐ使えるようブラウザのローカルストレージに保持されます。数値そのものは保存されません。"
+    "faq.a5": "いいえ。この面積変換ツールは完全にブラウザ内で動作し、入力した数字がどこかに送信されることはありません。保存されるのは最後に選んだ単位のペア（例: 平方フィート → 平方メートル）だけで、次回すぐ使えるようブラウザのローカルストレージに保持されます。数値そのものは保存されません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -687,6 +752,11 @@ window.I18N_LOCALES = {
     "faq.q4": "결과는 얼마나 정확한가요?",
     "faq.a4": "모든 환산은 유효숫자 10자리까지 유지한 뒤, 읽기 쉽도록 뒤쪽의 0을 제거합니다. 아주 크거나 아주 작은 수(대략 1e15 이상 또는 1e-9 미만)는 지수 표기로 전환되어, 어떤 값도 조용히 0으로 반올림되지 않습니다. 모든 값은 각 넓이 단위의 정확한 정의에 근거합니다 — 예를 들어 1제곱피트는 정확히 0.09290304 m²입니다.",
     "faq.q5": "입력한 값이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 넓이 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 숫자는 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 쌍(예: 제곱피트 → 제곱미터)뿐이며, 다음 방문에 바로 쓸 수 있도록 브라우저의 로컬 저장소에 보관됩니다. 값 자체는 저장하지 않습니다."
+    "faq.a5": "아니요. 이 넓이 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 숫자는 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 쌍(예: 제곱피트 → 제곱미터)뿐이며, 다음 방문에 바로 쓸 수 있도록 브라우저의 로컬 저장소에 보관됩니다. 값 자체는 저장하지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

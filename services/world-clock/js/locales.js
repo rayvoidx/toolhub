@@ -59,7 +59,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How accurate is the time shown?",
     "faq.a4": "Every clock is calculated from your device's own clock and then shifted into each city's time zone, so the world clock is exactly as accurate as your computer or phone. If a city looks off by a few minutes, check that your device is set to update its clock automatically over the network.",
     "faq.q5": "How do I use the Yesterday / Today / Tomorrow labels to schedule meetings?",
-    "faq.a5": "The label under each city tells you whether that city is on a different calendar day from you right now — handy when you book a call across time zones. If a teammate's city shows Tomorrow, a 9 a.m. slot for you may already be their next evening, so you can pick a time that is daytime for everyone using the sun and moon icons."
+    "faq.a5": "The label under each city tells you whether that city is on a different calendar day from you right now — handy when you book a call across time zones. If a teammate's city shows Tomorrow, a 9 a.m. slot for you may already be their next evening, so you can pick a time that is daytime for everyone using the sun and moon icons.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -103,7 +108,12 @@ window.I18N_LOCALES = {
     "faq.q4": "显示的时间有多准确？",
     "faq.a4": "每个时钟都根据你设备自身的时钟计算，再换算到各城市的时区，所以世界时钟的准确度和你的电脑或手机完全一致。如果某个城市差了几分钟，请检查你的设备是否设置为通过网络自动校准时间。",
     "faq.q5": "如何用 昨天/今天/明天 标签来安排会议？",
-    "faq.a5": "每个城市下方的标签会告诉你该城市此刻是否和你处在不同的日历日 — 跨时区约会议时很有用。如果同事所在城市显示 明天，那你的上午 9 点可能已经是他们的第二天傍晚，你可以借助太阳和月亮图标，挑一个大家都在白天的时间。"
+    "faq.a5": "每个城市下方的标签会告诉你该城市此刻是否和你处在不同的日历日 — 跨时区约会议时很有用。如果同事所在城市显示 明天，那你的上午 9 点可能已经是他们的第二天傍晚，你可以借助太阳和月亮图标，挑一个大家都在白天的时间。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -147,7 +157,12 @@ window.I18N_LOCALES = {
     "faq.q4": "दिखाया गया समय कितना सटीक है?",
     "faq.a4": "हर घड़ी आपके डिवाइस की अपनी घड़ी से गणना कर, फिर हर शहर के टाइम ज़ोन में बदल दी जाती है — इसलिए वर्ल्ड क्लॉक उतना ही सटीक है जितना आपका कंप्यूटर या फ़ोन। अगर कोई शहर कुछ मिनट गलत दिखे, तो जाँचें कि आपका डिवाइस नेटवर्क से समय अपने-आप अपडेट करने के लिए सेट है।",
     "faq.q5": "मीटिंग तय करने के लिए बीता कल/आज/आने वाला कल लेबल कैसे इस्तेमाल करें?",
-    "faq.a5": "हर शहर के नीचे का लेबल बताता है कि वह शहर अभी आपसे अलग कैलेंडर दिन पर है या नहीं — टाइम ज़ोन के पार कॉल तय करते समय बहुत काम आता है। अगर किसी साथी के शहर पर आने वाला कल दिखे, तो आपके सुबह 9 बजे उनकी अगली शाम हो सकती है; सूरज और चाँद के आइकन देखकर आप ऐसा समय चुन सकते हैं जो सबके लिए दिन का हो।"
+    "faq.a5": "हर शहर के नीचे का लेबल बताता है कि वह शहर अभी आपसे अलग कैलेंडर दिन पर है या नहीं — टाइम ज़ोन के पार कॉल तय करते समय बहुत काम आता है। अगर किसी साथी के शहर पर आने वाला कल दिखे, तो आपके सुबह 9 बजे उनकी अगली शाम हो सकती है; सूरज और चाँद के आइकन देखकर आप ऐसा समय चुन सकते हैं जो सबके लिए दिन का हो।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -191,7 +206,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué precisión tiene la hora mostrada?",
     "faq.a4": "Cada reloj se calcula a partir del reloj de tu propio dispositivo y luego se ajusta a la zona horaria de cada ciudad, así que el reloj mundial es tan preciso como tu ordenador o tu móvil. Si una ciudad se ve mal por unos minutos, comprueba que tu dispositivo esté configurado para actualizar la hora automáticamente por la red.",
     "faq.q5": "¿Cómo uso las etiquetas Ayer/Hoy/Mañana para programar reuniones?",
-    "faq.a5": "La etiqueta bajo cada ciudad te dice si esa ciudad está ahora mismo en un día del calendario distinto al tuyo, muy útil al reservar una llamada entre zonas horarias. Si la ciudad de un compañero muestra Mañana, tus 9 de la mañana pueden ser ya su noche siguiente; con los iconos de sol y luna puedes elegir una hora que sea de día para todos."
+    "faq.a5": "La etiqueta bajo cada ciudad te dice si esa ciudad está ahora mismo en un día del calendario distinto al tuyo, muy útil al reservar una llamada entre zonas horarias. Si la ciudad de un compañero muestra Mañana, tus 9 de la mañana pueden ser ya su noche siguiente; con los iconos de sol y luna puedes elegir una hora que sea de día para todos.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -235,7 +255,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما مدى دقة الوقت المعروض؟",
     "faq.a4": "تُحسب كل ساعة من ساعة جهازك نفسه ثم تُحوَّل إلى المنطقة الزمنية لكل مدينة، لذا فإن الساعة العالمية دقيقة تمامًا بدقة حاسوبك أو هاتفك. إذا بدت مدينة خاطئة ببضع دقائق، فتأكد من ضبط جهازك على تحديث الوقت تلقائيًا عبر الشبكة.",
     "faq.q5": "كيف أستخدم علامات أمس/اليوم/غدًا لتحديد مواعيد الاجتماعات؟",
-    "faq.a5": "تخبرك العلامة أسفل كل مدينة بما إذا كانت تلك المدينة في يوم تقويمي مختلف عنك الآن — وهو أمر مفيد عند حجز مكالمة عبر المناطق الزمنية. إذا أظهرت مدينة زميلك غدًا، فقد تكون التاسعة صباحًا لديك هي مساؤه التالي؛ وباستخدام أيقونتي الشمس والقمر يمكنك اختيار وقت يكون نهارًا للجميع."
+    "faq.a5": "تخبرك العلامة أسفل كل مدينة بما إذا كانت تلك المدينة في يوم تقويمي مختلف عنك الآن — وهو أمر مفيد عند حجز مكالمة عبر المناطق الزمنية. إذا أظهرت مدينة زميلك غدًا، فقد تكون التاسعة صباحًا لديك هي مساؤه التالي؛ وباستخدام أيقونتي الشمس والقمر يمكنك اختيار وقت يكون نهارًا للجميع.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -279,7 +304,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la précision de l'heure affichée ?",
     "faq.a4": "Chaque horloge est calculée à partir de l'horloge de votre propre appareil, puis décalée vers le fuseau de chaque ville : l'horloge mondiale est donc aussi précise que votre ordinateur ou votre téléphone. Si une ville semble fausse de quelques minutes, vérifiez que votre appareil est réglé pour mettre l'heure à jour automatiquement via le réseau.",
     "faq.q5": "Comment utiliser les étiquettes Hier/Aujourd'hui/Demain pour planifier des réunions ?",
-    "faq.a5": "L'étiquette sous chaque ville indique si cette ville est en ce moment un jour de calendrier différent du vôtre — pratique pour réserver un appel entre fuseaux horaires. Si la ville d'un collègue affiche Demain, votre 9 h peut déjà être son lendemain soir ; avec les icônes de soleil et de lune, vous pouvez choisir une heure qui fait jour pour tout le monde."
+    "faq.a5": "L'étiquette sous chaque ville indique si cette ville est en ce moment un jour de calendrier différent du vôtre — pratique pour réserver un appel entre fuseaux horaires. Si la ville d'un collègue affiche Demain, votre 9 h peut déjà être son lendemain soir ; avec les icônes de soleil et de lune, vous pouvez choisir une heure qui fait jour pour tout le monde.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -323,7 +353,12 @@ window.I18N_LOCALES = {
     "faq.q4": "দেখানো সময় কতটা সঠিক?",
     "faq.a4": "প্রতিটি ঘড়ি আপনার ডিভাইসের নিজের ঘড়ি থেকে হিসাব করে প্রতিটি শহরের টাইম জোনে রূপান্তর করা হয়, তাই ওয়ার্ল্ড ক্লক ঠিক আপনার কম্পিউটার বা ফোনের মতোই সঠিক। কোনো শহর কয়েক মিনিট ভুল দেখালে দেখুন আপনার ডিভাইস নেটওয়ার্ক থেকে সময় স্বয়ংক্রিয়ভাবে আপডেট করতে সেট আছে কি না।",
     "faq.q5": "মিটিং ঠিক করতে গতকাল/আজ/আগামীকাল লেবেল কীভাবে ব্যবহার করব?",
-    "faq.a5": "প্রতিটি শহরের নিচের লেবেল বলে দেয় সেই শহর এই মুহূর্তে আপনার থেকে আলাদা ক্যালেন্ডার দিনে আছে কি না — টাইম জোন পেরিয়ে কল ঠিক করার সময় খুব কাজে লাগে। কোনো সহকর্মীর শহরে আগামীকাল দেখালে, আপনার সকাল ৯টা হয়তো তার পরদিন সন্ধ্যা; সূর্য ও চাঁদের আইকন দেখে আপনি এমন সময় বেছে নিতে পারেন যা সবার জন্য দিনের বেলা।"
+    "faq.a5": "প্রতিটি শহরের নিচের লেবেল বলে দেয় সেই শহর এই মুহূর্তে আপনার থেকে আলাদা ক্যালেন্ডার দিনে আছে কি না — টাইম জোন পেরিয়ে কল ঠিক করার সময় খুব কাজে লাগে। কোনো সহকর্মীর শহরে আগামীকাল দেখালে, আপনার সকাল ৯টা হয়তো তার পরদিন সন্ধ্যা; সূর্য ও চাঁদের আইকন দেখে আপনি এমন সময় বেছে নিতে পারেন যা সবার জন্য দিনের বেলা।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -367,7 +402,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a precisão da hora exibida?",
     "faq.a4": "Cada relógio é calculado a partir do relógio do seu próprio dispositivo e depois convertido para o fuso de cada cidade, então o relógio mundial é tão preciso quanto o seu computador ou celular. Se uma cidade parecer errada por alguns minutos, verifique se o dispositivo está configurado para atualizar a hora automaticamente pela rede.",
     "faq.q5": "Como uso as etiquetas Ontem/Hoje/Amanhã para agendar reuniões?",
-    "faq.a5": "A etiqueta abaixo de cada cidade informa se aquela cidade está agora em um dia de calendário diferente do seu — útil ao marcar uma chamada entre fusos horários. Se a cidade de um colega mostrar Amanhã, suas 9h podem já ser a noite seguinte dele; com os ícones de sol e lua, você escolhe um horário que seja de dia para todos."
+    "faq.a5": "A etiqueta abaixo de cada cidade informa se aquela cidade está agora em um dia de calendário diferente do seu — útil ao marcar uma chamada entre fusos horários. Se a cidade de um colega mostrar Amanhã, suas 9h podem já ser a noite seguinte dele; com os ícones de sol e lua, você escolhe um horário que seja de dia para todos.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -411,7 +451,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Насколько точно показанное время?",
     "faq.a4": "Каждые часы рассчитываются от собственных часов вашего устройства, а затем переводятся в часовой пояс каждого города, поэтому мировые часы точны ровно настолько, насколько точны ваш компьютер или телефон. Если город отстаёт или спешит на несколько минут, проверьте, что устройство настроено на автоматическое обновление времени по сети.",
     "faq.q5": "Как использовать метки Вчера/Сегодня/Завтра для планирования встреч?",
-    "faq.a5": "Метка под каждым городом показывает, находится ли этот город сейчас в другом календарном дне, чем вы, — удобно при назначении звонка между часовыми поясами. Если у города коллеги стоит Завтра, ваши 9 утра могут быть уже его следующим вечером; по значкам солнца и луны вы выберете время, которое у всех приходится на день."
+    "faq.a5": "Метка под каждым городом показывает, находится ли этот город сейчас в другом календарном дне, чем вы, — удобно при назначении звонка между часовыми поясами. Если у города коллеги стоит Завтра, ваши 9 утра могут быть уже его следующим вечером; по значкам солнца и луны вы выберете время, которое у всех приходится на день.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -455,7 +500,12 @@ window.I18N_LOCALES = {
     "faq.q4": "دکھایا گیا وقت کتنا درست ہے؟",
     "faq.a4": "ہر گھڑی آپ کے آلے کی اپنی گھڑی سے شمار کر کے ہر شہر کے ٹائم زون میں بدلی جاتی ہے، اس لیے ورلڈ کلاک اتنا ہی درست ہے جتنا آپ کا کمپیوٹر یا فون۔ اگر کوئی شہر چند منٹ غلط دکھائے تو دیکھیں کہ آپ کا آلہ نیٹ ورک سے وقت خودکار اپ ڈیٹ کرنے پر مقرر ہے۔",
     "faq.q5": "میٹنگ طے کرنے کے لیے گزشتہ کل/آج/آنے والا کل کے لیبل کیسے استعمال کریں؟",
-    "faq.a5": "ہر شہر کے نیچے کا لیبل بتاتا ہے کہ وہ شہر اس وقت آپ سے مختلف کیلنڈر دن پر ہے یا نہیں — ٹائم زونز کے پار کال طے کرتے وقت بہت کارآمد۔ اگر کسی ساتھی کے شہر پر آنے والا کل دکھے تو آپ کے صبح 9 بجے اس کی اگلی شام ہو سکتی ہے؛ سورج اور چاند کے آئیکن دیکھ کر آپ ایسا وقت چن سکتے ہیں جو سب کے لیے دن ہو۔"
+    "faq.a5": "ہر شہر کے نیچے کا لیبل بتاتا ہے کہ وہ شہر اس وقت آپ سے مختلف کیلنڈر دن پر ہے یا نہیں — ٹائم زونز کے پار کال طے کرتے وقت بہت کارآمد۔ اگر کسی ساتھی کے شہر پر آنے والا کل دکھے تو آپ کے صبح 9 بجے اس کی اگلی شام ہو سکتی ہے؛ سورج اور چاند کے آئیکن دیکھ کر آپ ایسا وقت چن سکتے ہیں جو سب کے لیے دن ہو۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -499,7 +549,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Seberapa akurat waktu yang ditampilkan?",
     "faq.a4": "Setiap jam dihitung dari jam perangkat Anda sendiri lalu digeser ke zona waktu tiap kota, jadi jam dunia ini seakurat komputer atau ponsel Anda. Jika sebuah kota tampak meleset beberapa menit, periksa apakah perangkat Anda disetel untuk memperbarui waktu secara otomatis lewat jaringan.",
     "faq.q5": "Bagaimana memakai label Kemarin/Hari ini/Besok untuk menjadwalkan rapat?",
-    "faq.a5": "Label di bawah tiap kota memberi tahu apakah kota itu sedang berada di hari kalender yang berbeda dari Anda — berguna saat menjadwalkan panggilan lintas zona waktu. Jika kota rekan menampilkan Besok, pukul 9 pagi Anda bisa jadi sudah malam harinya; dengan ikon matahari dan bulan, Anda bisa memilih waktu yang siang bagi semua orang."
+    "faq.a5": "Label di bawah tiap kota memberi tahu apakah kota itu sedang berada di hari kalender yang berbeda dari Anda — berguna saat menjadwalkan panggilan lintas zona waktu. Jika kota rekan menampilkan Besok, pukul 9 pagi Anda bisa jadi sudah malam harinya; dengan ikon matahari dan bulan, Anda bisa memilih waktu yang siang bagi semua orang.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -543,7 +598,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie genau ist die angezeigte Zeit?",
     "faq.a4": "Jede Uhr wird aus der Uhr deines eigenen Geräts berechnet und dann in die Zeitzone jeder Stadt verschoben — die Weltuhr ist also genauso genau wie dein Computer oder Handy. Wenn eine Stadt um ein paar Minuten falsch aussieht, prüfe, ob dein Gerät die Zeit automatisch über das Netzwerk aktualisiert.",
     "faq.q5": "Wie nutze ich die Gestern/Heute/Morgen-Labels zum Planen von Meetings?",
-    "faq.a5": "Das Label unter jeder Stadt zeigt, ob diese Stadt gerade an einem anderen Kalendertag ist als du — praktisch, wenn du einen Anruf über Zeitzonen hinweg planst. Zeigt die Stadt eines Kollegen Morgen, ist deine 9-Uhr-Zeit dort vielleicht schon der nächste Abend; mit den Sonnen- und Mondsymbolen wählst du eine Zeit, die für alle Tag ist."
+    "faq.a5": "Das Label unter jeder Stadt zeigt, ob diese Stadt gerade an einem anderen Kalendertag ist als du — praktisch, wenn du einen Anruf über Zeitzonen hinweg planst. Zeigt die Stadt eines Kollegen Morgen, ist deine 9-Uhr-Zeit dort vielleicht schon der nächste Abend; mit den Sonnen- und Mondsymbolen wählst du eine Zeit, die für alle Tag ist.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -587,7 +647,12 @@ window.I18N_LOCALES = {
     "faq.q4": "表示される時刻はどれくらい正確ですか？",
     "faq.a4": "各時計は端末自身の時計をもとに計算し、各都市のタイムゾーンに変換します。したがって世界時計の精度は、あなたのパソコンやスマートフォンとまったく同じです。数分ずれて見える場合は、端末がネットワーク経由で時刻を自動更新する設定になっているか確認してください。",
     "faq.q5": "昨日／今日／明日ラベルを会議の予定にどう使いますか？",
-    "faq.a5": "各都市の下のラベルは、その都市が今あなたと違う暦日かどうかを示します。タイムゾーンをまたいで通話を設定するときに便利です。相手の都市が「明日」と表示されていれば、あなたの午前9時は相手の翌日の夜かもしれません。太陽と月のアイコンを見れば、全員が昼になる時間を選べます。"
+    "faq.a5": "各都市の下のラベルは、その都市が今あなたと違う暦日かどうかを示します。タイムゾーンをまたいで通話を設定するときに便利です。相手の都市が「明日」と表示されていれば、あなたの午前9時は相手の翌日の夜かもしれません。太陽と月のアイコンを見れば、全員が昼になる時間を選べます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -631,6 +696,11 @@ window.I18N_LOCALES = {
     "faq.q4": "표시되는 시각은 얼마나 정확한가요?",
     "faq.a4": "모든 시계는 여러분 기기의 시계를 기준으로 계산한 뒤 각 도시의 시간대로 변환합니다. 따라서 세계 시계의 정확도는 여러분의 컴퓨터나 휴대폰과 똑같습니다. 특정 도시가 몇 분 어긋나 보이면, 기기가 네트워크로 시간을 자동 업데이트하도록 설정돼 있는지 확인하세요.",
     "faq.q5": "회의를 잡을 때 어제/오늘/내일 표시는 어떻게 쓰나요?",
-    "faq.a5": "각 도시 아래의 표시는 그 도시가 지금 나와 다른 날짜인지 알려 주어, 시간대를 넘나드는 통화를 잡을 때 유용합니다. 동료의 도시에 내일이 뜬다면, 내 오전 9시가 그쪽은 이미 다음 날 저녁일 수 있습니다. 해와 달 아이콘을 보며 모두가 낮인 시각을 고르세요."
+    "faq.a5": "각 도시 아래의 표시는 그 도시가 지금 나와 다른 날짜인지 알려 주어, 시간대를 넘나드는 통화를 잡을 때 유용합니다. 동료의 도시에 내일이 뜬다면, 내 오전 9시가 그쪽은 이미 다음 날 저녁일 수 있습니다. 해와 달 아이콘을 보며 모두가 낮인 시각을 고르세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -68,7 +68,12 @@ window.I18N_LOCALES = {
     "faq.q4": "At what age is a height prediction reliable?",
     "faq.a4": "The mid-parental method is age-independent — it estimates adult height from the parents alone, so it works the same whether your child is a toddler or a teenager. Methods that read the child directly, such as bone-age X-rays or plotting current height on a growth percentile chart, become more precise as the child approaches puberty, because more of their growth has already happened. For a family-heights estimate, though, this calculator gives you a reasonable ballpark at any age.",
     "faq.q5": "Is my family's height data sent to a server?",
-    "faq.a5": "No. This child height predictor runs entirely in your browser — the father's height, mother's height and the child's sex never leave your device. Your last entry is saved only in your browser's localStorage so the form is pre-filled on your next visit, and you can clear it anytime from your browser settings. Nothing is uploaded, tracked or shared."
+    "faq.a5": "No. This child height predictor runs entirely in your browser — the father's height, mother's height and the child's sex never leave your device. Your last entry is saved only in your browser's localStorage so the form is pre-filled on your next visit, and you can clear it anytime from your browser settings. Nothing is uploaded, tracked or shared.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -121,7 +126,12 @@ window.I18N_LOCALES = {
     "faq.q4": "孩子多大时身高预测才可靠？",
     "faq.a4": "中亲身高法与年龄无关——它仅根据父母估算成年身高，因此无论孩子是幼儿还是青少年，结果都一样。而直接观察孩子的方法，如骨龄 X 光或将当前身高绘制在生长曲线百分位图上，会随着孩子接近青春期而更精确，因为此时大部分生长已经完成。但作为基于家庭身高的估算，本计算器在任何年龄都能给出合理的大致范围。",
     "faq.q5": "我家人的身高数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个儿童身高预测器完全在您的浏览器中运行——父亲身高、母亲身高和孩子性别都不会离开您的设备。您的最后一次输入仅保存在浏览器的 localStorage 中，方便下次访问时自动填充，您可随时在浏览器设置中清除。不上传、不追踪、不分享。"
+    "faq.a5": "不会。这个儿童身高预测器完全在您的浏览器中运行——父亲身高、母亲身高和孩子性别都不会离开您的设备。您的最后一次输入仅保存在浏览器的 localStorage 中，方便下次访问时自动填充，您可随时在浏览器设置中清除。不上传、不追踪、不分享。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -174,7 +184,12 @@ window.I18N_LOCALES = {
     "faq.q4": "किस उम्र में लंबाई का अनुमान भरोसेमंद होता है?",
     "faq.a4": "मिड-पैरेंटल विधि उम्र पर निर्भर नहीं है — यह केवल माता-पिता से वयस्क लंबाई का अनुमान लगाती है, इसलिए बच्चा छोटा हो या किशोर, परिणाम एक-सा रहता है। बच्चे को सीधे मापने वाली विधियाँ, जैसे बोन-एज एक्स-रे या वर्तमान लंबाई को ग्रोथ पर्सेंटाइल चार्ट पर अंकित करना, बच्चे के यौवन के करीब पहुँचने पर अधिक सटीक होती हैं, क्योंकि तब तक अधिकांश वृद्धि हो चुकी होती है। फिर भी, पारिवारिक-लंबाई आधारित अनुमान के लिए यह कैलकुलेटर किसी भी उम्र में एक उचित अंदाज़ा देता है।",
     "faq.q5": "क्या मेरे परिवार की लंबाई का डेटा किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह चाइल्ड हाइट प्रेडिक्टर पूरी तरह आपके ब्राउज़र में चलता है — पिता की लंबाई, माता की लंबाई और बच्चे का लिंग आपके डिवाइस से बाहर नहीं जाते। आपकी आख़िरी प्रविष्टि केवल ब्राउज़र के localStorage में सहेजी जाती है ताकि अगली बार फ़ॉर्म पहले से भरा मिले, और आप इसे कभी भी ब्राउज़र सेटिंग्स से हटा सकते हैं। कुछ भी अपलोड, ट्रैक या साझा नहीं होता।"
+    "faq.a5": "नहीं। यह चाइल्ड हाइट प्रेडिक्टर पूरी तरह आपके ब्राउज़र में चलता है — पिता की लंबाई, माता की लंबाई और बच्चे का लिंग आपके डिवाइस से बाहर नहीं जाते। आपकी आख़िरी प्रविष्टि केवल ब्राउज़र के localStorage में सहेजी जाती है ताकि अगली बार फ़ॉर्म पहले से भरा मिले, और आप इसे कभी भी ब्राउज़र सेटिंग्स से हटा सकते हैं। कुछ भी अपलोड, ट्रैक या साझा नहीं होता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -227,7 +242,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿A qué edad es fiable una predicción de estatura?",
     "faq.a4": "El método mid-parental es independiente de la edad: estima la estatura adulta solo a partir de los padres, así que funciona igual tanto si tu hijo es un bebé como un adolescente. Los métodos que miran directamente al niño, como la radiografía de edad ósea o situar su estatura actual en una tabla de percentiles de crecimiento, ganan precisión a medida que se acerca la pubertad, porque ya ha ocurrido gran parte del crecimiento. Aun así, para una estimación basada en la estatura familiar, esta calculadora ofrece una orientación razonable a cualquier edad.",
     "faq.q5": "¿Se envían a un servidor los datos de estatura de mi familia?",
-    "faq.a5": "No. Este predictor de estatura infantil funciona por completo en tu navegador: la estatura del padre, la de la madre y el sexo del niño nunca salen de tu dispositivo. Tu última entrada se guarda solo en el localStorage del navegador para rellenar el formulario en tu próxima visita, y puedes borrarla cuando quieras desde los ajustes del navegador. Nada se sube, rastrea ni comparte."
+    "faq.a5": "No. Este predictor de estatura infantil funciona por completo en tu navegador: la estatura del padre, la de la madre y el sexo del niño nunca salen de tu dispositivo. Tu última entrada se guarda solo en el localStorage del navegador para rellenar el formulario en tu próxima visita, y puedes borrarla cuando quieras desde los ajustes del navegador. Nada se sube, rastrea ni comparte.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -280,7 +300,12 @@ window.I18N_LOCALES = {
     "faq.q4": "في أي عمر يكون توقّع الطول موثوقًا؟",
     "faq.a4": "طريقة متوسط طول الوالدين مستقلة عن العمر — فهي تقدّر الطول عند البلوغ من الوالدين فقط، لذا تعمل بالمثل سواء كان طفلك رضيعًا أو مراهقًا. أما الطرق التي تنظر إلى الطفل مباشرة، مثل أشعة عمر العظام أو رسم الطول الحالي على مخطط النمو المئيني، فتزداد دقتها كلما اقترب الطفل من البلوغ لأن معظم النمو يكون قد حدث. ومع ذلك، لتقدير قائم على طول العائلة، تمنحك هذه الحاسبة تقديرًا معقولًا في أي عمر.",
     "faq.q5": "هل تُرسَل بيانات طول عائلتي إلى خادم؟",
-    "faq.a5": "لا. تعمل هذه الأداة بالكامل داخل متصفحك — لا يغادر طول الأب ولا الأم ولا جنس الطفل جهازك. يُحفظ آخر إدخال فقط في localStorage بالمتصفح ليُملأ النموذج تلقائيًا في زيارتك التالية، ويمكنك مسحه في أي وقت من إعدادات المتصفح. لا شيء يُرفَع أو يُتتبَّع أو يُشارَك."
+    "faq.a5": "لا. تعمل هذه الأداة بالكامل داخل متصفحك — لا يغادر طول الأب ولا الأم ولا جنس الطفل جهازك. يُحفظ آخر إدخال فقط في localStorage بالمتصفح ليُملأ النموذج تلقائيًا في زيارتك التالية، ويمكنك مسحه في أي وقت من إعدادات المتصفح. لا شيء يُرفَع أو يُتتبَّع أو يُشارَك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -333,7 +358,12 @@ window.I18N_LOCALES = {
     "faq.q4": "À quel âge une prédiction de taille est-elle fiable ?",
     "faq.a4": "La méthode mid-parentale est indépendante de l'âge : elle estime la taille adulte à partir des seuls parents, elle fonctionne donc de la même façon que votre enfant soit un tout-petit ou un adolescent. Les méthodes qui observent directement l'enfant, comme la radiographie de l'âge osseux ou le report de la taille actuelle sur une courbe de croissance en percentiles, gagnent en précision à l'approche de la puberté, car l'essentiel de la croissance a déjà eu lieu. Pour une estimation fondée sur la taille familiale, ce calculateur donne néanmoins un ordre de grandeur raisonnable à tout âge.",
     "faq.q5": "Les données de taille de ma famille sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce prédicteur de taille fonctionne entièrement dans votre navigateur : la taille du père, celle de la mère et le sexe de l'enfant ne quittent jamais votre appareil. Votre dernière saisie est enregistrée uniquement dans le localStorage du navigateur pour préremplir le formulaire lors de votre prochaine visite, et vous pouvez l'effacer à tout moment dans les paramètres. Rien n'est téléversé, suivi ni partagé."
+    "faq.a5": "Non. Ce prédicteur de taille fonctionne entièrement dans votre navigateur : la taille du père, celle de la mère et le sexe de l'enfant ne quittent jamais votre appareil. Votre dernière saisie est enregistrée uniquement dans le localStorage du navigateur pour préremplir le formulaire lors de votre prochaine visite, et vous pouvez l'effacer à tout moment dans les paramètres. Rien n'est téléversé, suivi ni partagé.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -386,7 +416,12 @@ window.I18N_LOCALES = {
     "faq.q4": "কোন বয়সে উচ্চতার অনুমান নির্ভরযোগ্য হয়?",
     "faq.a4": "মিড-প্যারেন্টাল পদ্ধতি বয়স-নিরপেক্ষ — এটি কেবল বাবা-মা থেকে প্রাপ্তবয়স্ক উচ্চতা অনুমান করে, তাই সন্তান শিশু হোক বা কিশোর, ফলাফল একই থাকে। সন্তানকে সরাসরি দেখে এমন পদ্ধতি, যেমন বোন-এজ এক্স-রে বা বর্তমান উচ্চতাকে গ্রোথ পার্সেন্টাইল চার্টে বসানো, বয়ঃসন্ধির কাছাকাছি এলে বেশি নির্ভুল হয়, কারণ ততক্ষণে বেশিরভাগ বৃদ্ধি ঘটে গেছে। তবুও, পারিবারিক উচ্চতাভিত্তিক অনুমানের জন্য এই ক্যালকুলেটর যেকোনো বয়সে একটি যুক্তিসঙ্গত ধারণা দেয়।",
     "faq.q5": "আমার পরিবারের উচ্চতার তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই শিশুর উচ্চতা প্রেডিক্টর সম্পূর্ণ আপনার ব্রাউজারে চলে — বাবার উচ্চতা, মায়ের উচ্চতা ও সন্তানের লিঙ্গ কখনও আপনার ডিভাইস ছাড়ে না। আপনার সর্বশেষ ইনপুট কেবল ব্রাউজারের localStorage-এ সংরক্ষিত থাকে যাতে পরের বার ফর্মটি আগে থেকে পূরণ থাকে, এবং আপনি যেকোনো সময় ব্রাউজার সেটিংস থেকে তা মুছতে পারেন। কিছুই আপলোড, ট্র্যাক বা শেয়ার করা হয় না।"
+    "faq.a5": "না। এই শিশুর উচ্চতা প্রেডিক্টর সম্পূর্ণ আপনার ব্রাউজারে চলে — বাবার উচ্চতা, মায়ের উচ্চতা ও সন্তানের লিঙ্গ কখনও আপনার ডিভাইস ছাড়ে না। আপনার সর্বশেষ ইনপুট কেবল ব্রাউজারের localStorage-এ সংরক্ষিত থাকে যাতে পরের বার ফর্মটি আগে থেকে পূরণ থাকে, এবং আপনি যেকোনো সময় ব্রাউজার সেটিংস থেকে তা মুছতে পারেন। কিছুই আপলোড, ট্র্যাক বা শেয়ার করা হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -439,7 +474,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Com que idade uma previsão de altura é confiável?",
     "faq.a4": "O método mid-parental é independente da idade — estima a altura adulta apenas a partir dos pais, então funciona da mesma forma quer o seu filho seja um bebê ou um adolescente. Métodos que observam a criança diretamente, como a radiografia de idade óssea ou marcar a altura atual em um gráfico de percentis de crescimento, tornam-se mais precisos à medida que a puberdade se aproxima, pois grande parte do crescimento já ocorreu. Ainda assim, para uma estimativa baseada na altura da família, esta calculadora dá uma orientação razoável em qualquer idade.",
     "faq.q5": "Os dados de altura da minha família são enviados a um servidor?",
-    "faq.a5": "Não. Este preditor de altura infantil funciona inteiramente no seu navegador — a altura do pai, a da mãe e o sexo da criança nunca saem do seu dispositivo. A sua última entrada é salva apenas no localStorage do navegador para preencher o formulário na próxima visita, e você pode apagá-la a qualquer momento nas configurações do navegador. Nada é enviado, rastreado ou compartilhado."
+    "faq.a5": "Não. Este preditor de altura infantil funciona inteiramente no seu navegador — a altura do pai, a da mãe e o sexo da criança nunca saem do seu dispositivo. A sua última entrada é salva apenas no localStorage do navegador para preencher o formulário na próxima visita, e você pode apagá-la a qualquer momento nas configurações do navegador. Nada é enviado, rastreado ou compartilhado.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -492,7 +532,12 @@ window.I18N_LOCALES = {
     "faq.q4": "В каком возрасте прогноз роста надёжен?",
     "faq.a4": "Метод среднего роста родителей не зависит от возраста — он оценивает взрослый рост только по родителям, поэтому работает одинаково, будь ваш ребёнок малышом или подростком. Методы, которые смотрят на самого ребёнка, — рентген костного возраста или нанесение текущего роста на перцентильную кривую роста — становятся точнее по мере приближения к половому созреванию, ведь большая часть роста уже произошла. И всё же для оценки по росту семьи этот калькулятор даёт разумный ориентир в любом возрасте.",
     "faq.q5": "Отправляются ли данные о росте моей семьи на сервер?",
-    "faq.a5": "Нет. Этот калькулятор роста ребёнка работает полностью в вашем браузере — рост отца, рост матери и пол ребёнка никогда не покидают ваше устройство. Последний ввод сохраняется только в localStorage браузера, чтобы форма заполнилась при следующем визите, и вы можете удалить его в любой момент в настройках браузера. Ничего не загружается, не отслеживается и не передаётся."
+    "faq.a5": "Нет. Этот калькулятор роста ребёнка работает полностью в вашем браузере — рост отца, рост матери и пол ребёнка никогда не покидают ваше устройство. Последний ввод сохраняется только в localStorage браузера, чтобы форма заполнилась при следующем визите, и вы можете удалить его в любой момент в настройках браузера. Ничего не загружается, не отслеживается и не передаётся.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -545,7 +590,12 @@ window.I18N_LOCALES = {
     "faq.q4": "قد کی پیش گوئی کس عمر میں قابلِ اعتماد ہوتی ہے؟",
     "faq.a4": "مڈ-پیرینٹل طریقہ عمر سے آزاد ہے — یہ صرف والدین سے بالغ قد کا اندازہ لگاتا ہے، اس لیے بچہ چھوٹا ہو یا نوعمر، نتیجہ ایک جیسا رہتا ہے۔ بچے کو براہِ راست دیکھنے والے طریقے، جیسے بون-ایج ایکس رے یا موجودہ قد کو گروتھ پرسنٹائل چارٹ پر رکھنا، بلوغت کے قریب آنے پر زیادہ درست ہوتے ہیں کیونکہ تب تک زیادہ تر نمو ہو چکی ہوتی ہے۔ پھر بھی، خاندانی قد پر مبنی اندازے کے لیے یہ کیلکولیٹر کسی بھی عمر میں معقول اندازہ دیتا ہے۔",
     "faq.q5": "کیا میرے خاندان کے قد کا ڈیٹا کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ چائلڈ ہائٹ پریڈکٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — والد کا قد، والدہ کا قد اور بچے کی جنس آپ کے آلے سے باہر نہیں جاتے۔ آپ کا آخری اندراج صرف براؤزر کے localStorage میں محفوظ ہوتا ہے تاکہ اگلی بار فارم پہلے سے بھرا ہو، اور آپ اسے کسی بھی وقت براؤزر کی ترتیبات سے حذف کر سکتے ہیں۔ کچھ بھی اپ لوڈ، ٹریک یا شیئر نہیں ہوتا۔"
+    "faq.a5": "نہیں۔ یہ چائلڈ ہائٹ پریڈکٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — والد کا قد، والدہ کا قد اور بچے کی جنس آپ کے آلے سے باہر نہیں جاتے۔ آپ کا آخری اندراج صرف براؤزر کے localStorage میں محفوظ ہوتا ہے تاکہ اگلی بار فارم پہلے سے بھرا ہو، اور آپ اسے کسی بھی وقت براؤزر کی ترتیبات سے حذف کر سکتے ہیں۔ کچھ بھی اپ لوڈ، ٹریک یا شیئر نہیں ہوتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -598,7 +648,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pada usia berapa prediksi tinggi bisa diandalkan?",
     "faq.a4": "Metode mid-parental tidak bergantung pada usia — ia memperkirakan tinggi dewasa hanya dari orang tua, jadi hasilnya sama baik anak Anda balita maupun remaja. Metode yang mengamati anak secara langsung, seperti rontgen usia tulang atau memplot tinggi saat ini pada kurva persentil pertumbuhan, menjadi lebih tepat saat anak mendekati pubertas karena sebagian besar pertumbuhan sudah terjadi. Namun, untuk perkiraan berdasarkan tinggi keluarga, kalkulator ini memberi gambaran yang wajar pada usia berapa pun.",
     "faq.q5": "Apakah data tinggi keluarga saya dikirim ke server?",
-    "faq.a5": "Tidak. Prediktor tinggi anak ini berjalan sepenuhnya di browser Anda — tinggi ayah, tinggi ibu, dan jenis kelamin anak tidak pernah meninggalkan perangkat Anda. Entri terakhir Anda hanya disimpan di localStorage browser agar formulir terisi otomatis pada kunjungan berikutnya, dan Anda bisa menghapusnya kapan saja dari pengaturan browser. Tidak ada yang diunggah, dilacak, atau dibagikan."
+    "faq.a5": "Tidak. Prediktor tinggi anak ini berjalan sepenuhnya di browser Anda — tinggi ayah, tinggi ibu, dan jenis kelamin anak tidak pernah meninggalkan perangkat Anda. Entri terakhir Anda hanya disimpan di localStorage browser agar formulir terisi otomatis pada kunjungan berikutnya, dan Anda bisa menghapusnya kapan saja dari pengaturan browser. Tidak ada yang diunggah, dilacak, atau dibagikan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -651,7 +706,12 @@ window.I18N_LOCALES = {
     "faq.q4": "In welchem Alter ist eine Größenvorhersage zuverlässig?",
     "faq.a4": "Die Mid-Parental-Methode ist altersunabhängig — sie schätzt die Erwachsenengröße allein aus den Eltern und funktioniert daher gleich, ob Ihr Kind ein Kleinkind oder ein Teenager ist. Methoden, die das Kind direkt betrachten, etwa das Knochenalter-Röntgen oder das Eintragen der aktuellen Größe in eine Wachstumsperzentile, werden mit Annäherung an die Pubertät genauer, weil dann schon ein Großteil des Wachstums stattgefunden hat. Für eine Schätzung auf Basis der Familiengröße liefert dieser Rechner dennoch in jedem Alter einen sinnvollen Anhaltspunkt.",
     "faq.q5": "Werden die Größendaten meiner Familie an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Größenrechner läuft vollständig in Ihrem Browser — die Größe von Vater und Mutter sowie das Geschlecht des Kindes verlassen Ihr Gerät nie. Ihre letzte Eingabe wird nur im localStorage des Browsers gespeichert, damit das Formular beim nächsten Besuch vorausgefüllt ist, und Sie können sie jederzeit in den Browsereinstellungen löschen. Nichts wird hochgeladen, verfolgt oder geteilt."
+    "faq.a5": "Nein. Dieser Größenrechner läuft vollständig in Ihrem Browser — die Größe von Vater und Mutter sowie das Geschlecht des Kindes verlassen Ihr Gerät nie. Ihre letzte Eingabe wird nur im localStorage des Browsers gespeichert, damit das Formular beim nächsten Besuch vorausgefüllt ist, und Sie können sie jederzeit in den Browsereinstellungen löschen. Nichts wird hochgeladen, verfolgt oder geteilt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -704,7 +764,12 @@ window.I18N_LOCALES = {
     "faq.q4": "身長予測は何歳から信頼できますか？",
     "faq.a4": "両親身長法は年齢に依存しません。両親だけから成人身長を推定するので、お子さんが幼児でも思春期でも結果は同じです。骨年齢のレントゲンや、現在の身長を成長曲線（パーセンタイル）に当てはめる方法など、子ども本人を直接見る方法は、思春期に近づくほど正確になります。成長の大部分がすでに済んでいるからです。とはいえ、家族の身長にもとづく推定としては、このツールはどの年齢でも妥当な目安を示します。",
     "faq.q5": "家族の身長データはサーバーに送信されますか？",
-    "faq.a5": "いいえ。この子ども身長予測ツールはすべてブラウザ内で動作し、父親・母親の身長や子どもの性別が端末の外に出ることはありません。前回の入力はブラウザのlocalStorageにのみ保存され、次回の訪問時にフォームへ自動入力されます。ブラウザの設定からいつでも削除できます。アップロード・追跡・共有は一切行いません。"
+    "faq.a5": "いいえ。この子ども身長予測ツールはすべてブラウザ内で動作し、父親・母親の身長や子どもの性別が端末の外に出ることはありません。前回の入力はブラウザのlocalStorageにのみ保存され、次回の訪問時にフォームへ自動入力されます。ブラウザの設定からいつでも削除できます。アップロード・追跡・共有は一切行いません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -757,6 +822,11 @@ window.I18N_LOCALES = {
     "faq.q4": "키 예측은 몇 살부터 믿을 만한가요?",
     "faq.a4": "중부모 신장법은 나이와 무관합니다. 부모만으로 성인 키를 추정하므로 아이가 유아든 청소년이든 결과는 같습니다. 골연령 X선이나 현재 키를 성장 백분위 곡선에 표시하는 방법처럼 아이를 직접 관찰하는 방식은 사춘기에 가까워질수록 더 정확해지는데, 그때는 이미 성장의 대부분이 이뤄졌기 때문입니다. 그래도 가족 키 기반 추정으로는 이 계산기가 어느 나이에서든 합리적인 대략치를 제공합니다.",
     "faq.q5": "우리 가족의 키 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 아이 키 예측 계산기는 전부 브라우저 안에서 동작합니다. 아빠 키, 엄마 키, 아이 성별은 기기를 벗어나지 않습니다. 마지막 입력은 다음 방문 시 자동 채움을 위해 브라우저 localStorage에만 저장되며, 언제든 브라우저 설정에서 지울 수 있습니다. 어떤 것도 업로드·추적·공유되지 않습니다."
+    "faq.a5": "아니요. 이 아이 키 예측 계산기는 전부 브라우저 안에서 동작합니다. 아빠 키, 엄마 키, 아이 성별은 기기를 벗어나지 않습니다. 마지막 입력은 다음 방문 시 자동 채움을 위해 브라우저 localStorage에만 저장되며, 언제든 브라우저 설정에서 지울 수 있습니다. 어떤 것도 업로드·추적·공유되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

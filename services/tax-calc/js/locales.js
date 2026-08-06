@@ -71,7 +71,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How current are the rates, and what about reduced rates?",
     "faq.a4": "The built-in standard rates are as of July 2026 and are reviewed once a year. Reduced rates for food, books or medicine (for example 7% in Germany or 5% in the UK) and zero-rated supplies depend on the specific goods, so they are not applied automatically. Open “Fine-tune” and type the rate you need — the calculator will use that instead.",
     "faq.q5": "Is the amount I type sent to a server?",
-    "faq.a5": "No. This calculator runs entirely inside your browser and sends no data anywhere. Your last entry is kept in your device's localStorage for convenience only, and you can clear it any time in your browser settings."
+    "faq.a5": "No. This calculator runs entirely inside your browser and sends no data anywhere. Your last entry is kept in your device's localStorage for convenience only, and you can clear it any time in your browser settings.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.q4": "税率数据的基准时间是什么时候？优惠税率怎么办？",
     "faq.a4": "内置的各国标准税率以 2026 年 7 月为基准，每年复核更新一次。食品、书籍、药品等适用的优惠税率（如德国 7%、英国 5%）以及零税率因商品而异，因此不会自动套用。此时请展开“详细调整”直接输入所需税率，计算器会改用该税率。",
     "faq.q5": "输入的金额会被发送到服务器吗？",
-    "faq.a5": "不会。本计算器完全在您的浏览器内运行，不会向外部发送任何数据。最后一次输入仅为方便使用而保存在设备的 localStorage 中，您随时可以在浏览器设置中清除。"
+    "faq.a5": "不会。本计算器完全在您的浏览器内运行，不会向外部发送任何数据。最后一次输入仅为方便使用而保存在设备的 localStorage 中，您随时可以在浏览器设置中清除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -183,7 +193,12 @@ window.I18N_LOCALES = {
     "faq.q4": "दरें कब तक की हैं, और रियायती दरों का क्या?",
     "faq.a4": "इसमें दी गई मानक दरें जुलाई 2026 तक की हैं और साल में एक बार जाँची जाती हैं। खाने-पीने की चीज़ों, किताबों या दवाओं पर लगने वाली रियायती दरें (जैसे जर्मनी में 7%, ब्रिटेन में 5%) और शून्य दर वस्तु पर निर्भर करती हैं, इसलिए अपने आप नहीं लगतीं। ऐसे में “विस्तृत सेटिंग” खोलकर अपनी दर डालें — गणना उसी से होगी।",
     "faq.q5": "क्या डाली गई रकम सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। यह कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है और कोई डेटा कहीं नहीं भेजता। आपकी पिछली एंट्री सिर्फ़ सुविधा के लिए डिवाइस के localStorage में रहती है, जिसे आप कभी भी ब्राउज़र सेटिंग से मिटा सकते हैं।"
+    "faq.a5": "नहीं। यह कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है और कोई डेटा कहीं नहीं भेजता। आपकी पिछली एंट्री सिर्फ़ सुविधा के लिए डिवाइस के localStorage में रहती है, जिसे आप कभी भी ब्राउज़र सेटिंग से मिटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -239,7 +254,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿De qué fecha son los tipos y qué pasa con los tipos reducidos?",
     "faq.a4": "Los tipos generales incluidos están actualizados a julio de 2026 y se revisan una vez al año. Los tipos reducidos de alimentos, libros o medicamentos (por ejemplo, 7% en Alemania o 5% en Reino Unido) y las operaciones exentas dependen del producto concreto, así que no se aplican solos. Abre «Ajustes avanzados» y escribe el tipo que necesites: se calculará con ese valor.",
     "faq.q5": "¿El importe que escribo se envía a un servidor?",
-    "faq.a5": "No. Esta calculadora funciona íntegramente en tu navegador y no envía ningún dato a ninguna parte. La última entrada se guarda solo por comodidad en el localStorage de tu dispositivo y puedes borrarla cuando quieras desde los ajustes del navegador."
+    "faq.a5": "No. Esta calculadora funciona íntegramente en tu navegador y no envía ningún dato a ninguna parte. La última entrada se guarda solo por comodidad en el localStorage de tu dispositivo y puedes borrarla cuando quieras desde los ajustes del navegador.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -295,7 +315,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما تاريخ النسب المستخدمة؟ وماذا عن النسب المخفّضة؟",
     "faq.a4": "النسب القياسية المضمّنة محدّثة حتى يوليو 2026 وتُراجَع مرة واحدة سنويًا. أما النسب المخفّضة على الأغذية أو الكتب أو الأدوية (مثل 7٪ في ألمانيا و5٪ في المملكة المتحدة) والتوريدات بنسبة صفر فتختلف حسب السلعة ولا تُطبَّق تلقائيًا. افتح «إعدادات متقدّمة» وأدخل النسبة المطلوبة لتُحتسب بها.",
     "faq.q5": "هل يُرسَل المبلغ الذي أُدخله إلى خادم؟",
-    "faq.a5": "لا. تعمل هذه الحاسبة بالكامل داخل متصفّحك ولا ترسل أي بيانات إلى أي جهة. يُحفظ آخر إدخال في localStorage على جهازك للتسهيل فقط، ويمكنك مسحه في أي وقت من إعدادات المتصفّح."
+    "faq.a5": "لا. تعمل هذه الحاسبة بالكامل داخل متصفّحك ولا ترسل أي بيانات إلى أي جهة. يُحفظ آخر إدخال في localStorage على جهازك للتسهيل فقط، ويمكنك مسحه في أي وقت من إعدادات المتصفّح.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -351,7 +376,12 @@ window.I18N_LOCALES = {
     "faq.q4": "À quelle date correspondent les taux, et pour les taux réduits ?",
     "faq.a4": "Les taux normaux intégrés sont à jour à juillet 2026 et sont revus une fois par an. Les taux réduits sur l'alimentation, les livres ou les médicaments (par exemple 7 % en Allemagne ou 5 % au Royaume-Uni) et les opérations à taux zéro dépendent du produit précis : ils ne sont donc pas appliqués automatiquement. Ouvrez « Réglages avancés » et saisissez le taux voulu, le calcul l'utilisera.",
     "faq.q5": "Le montant saisi est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Ce calculateur fonctionne entièrement dans votre navigateur et n'envoie aucune donnée. Votre dernière saisie est conservée uniquement dans le localStorage de votre appareil, par commodité, et vous pouvez l'effacer à tout moment dans les réglages du navigateur."
+    "faq.a5": "Non. Ce calculateur fonctionne entièrement dans votre navigateur et n'envoie aucune donnée. Votre dernière saisie est conservée uniquement dans le localStorage de votre appareil, par commodité, et vous pouvez l'effacer à tout moment dans les réglages du navigateur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -407,7 +437,12 @@ window.I18N_LOCALES = {
     "faq.q4": "হারগুলো কোন সময়ের, আর ছাড়যুক্ত হার কীভাবে?",
     "faq.a4": "অন্তর্ভুক্ত আদর্শ হারগুলো ২০২৬ সালের জুলাই পর্যন্ত এবং বছরে একবার যাচাই করা হয়। খাদ্য, বই বা ওষুধের ছাড়যুক্ত হার (যেমন জার্মানিতে 7%, যুক্তরাজ্যে 5%) ও শূন্য হার পণ্যভেদে বদলায়, তাই নিজে থেকে বসে না। তখন “বিস্তারিত সমন্বয়” খুলে প্রয়োজনীয় হার লিখুন — হিসাব সেটিই ব্যবহার করবে।",
     "faq.q5": "লেখা অঙ্ক কি সার্ভারে যায়?",
-    "faq.a5": "না। এই ক্যালকুলেটর পুরোপুরি আপনার ব্রাউজারেই চলে, কোথাও কোনো তথ্য পাঠায় না। সুবিধার জন্য শেষ ইনপুটটি শুধু আপনার ডিভাইসের localStorage-এ থাকে, যা ব্রাউজার সেটিংস থেকে যেকোনো সময় মুছে ফেলা যায়।"
+    "faq.a5": "না। এই ক্যালকুলেটর পুরোপুরি আপনার ব্রাউজারেই চলে, কোথাও কোনো তথ্য পাঠায় না। সুবিধার জন্য শেষ ইনপুটটি শুধু আপনার ডিভাইসের localStorage-এ থাকে, যা ব্রাউজার সেটিংস থেকে যেকোনো সময় মুছে ফেলা যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -463,7 +498,12 @@ window.I18N_LOCALES = {
     "faq.q4": "De quando são as alíquotas e o que fazer com as reduzidas?",
     "faq.a4": "As alíquotas padrão embutidas têm como referência julho de 2026 e são revisadas uma vez por ano. Alíquotas reduzidas para alimentos, livros ou medicamentos (por exemplo, 7% na Alemanha ou 5% no Reino Unido) e operações com alíquota zero dependem do produto, por isso não são aplicadas sozinhas. Abra “Ajustes avançados” e digite a alíquota desejada — o cálculo usará esse valor.",
     "faq.q5": "O valor digitado é enviado para algum servidor?",
-    "faq.a5": "Não. Esta calculadora funciona inteiramente no seu navegador e não envia dado algum. A última entrada fica guardada apenas no localStorage do seu aparelho, por comodidade, e você pode apagá-la quando quiser nas configurações do navegador."
+    "faq.a5": "Não. Esta calculadora funciona inteiramente no seu navegador e não envia dado algum. A última entrada fica guardada apenas no localStorage do seu aparelho, por comodidade, e você pode apagá-la quando quiser nas configurações do navegador.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -519,7 +559,12 @@ window.I18N_LOCALES = {
     "faq.q4": "На какую дату указаны ставки и как быть с льготными?",
     "faq.a4": "Встроенные стандартные ставки актуальны на июль 2026 года и пересматриваются раз в год. Льготные ставки на продукты, книги или лекарства (например, 7% в Германии или 5% в Великобритании) и нулевая ставка зависят от конкретного товара, поэтому автоматически не применяются. Откройте «Точную настройку» и введите нужную ставку — расчёт пойдёт по ней.",
     "faq.q5": "Отправляется ли введённая сумма на сервер?",
-    "faq.a5": "Нет. Калькулятор полностью работает в вашем браузере и никуда не передаёт данные. Последний ввод хранится только в localStorage вашего устройства для удобства, и вы можете удалить его в настройках браузера в любой момент."
+    "faq.a5": "Нет. Калькулятор полностью работает в вашем браузере и никуда не передаёт данные. Последний ввод хранится только в localStorage вашего устройства для удобства, и вы можете удалить его в настройках браузера в любой момент.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -575,7 +620,12 @@ window.I18N_LOCALES = {
     "faq.q4": "شرحیں کس تاریخ تک کی ہیں اور رعایتی شرحوں کا کیا؟",
     "faq.a4": "شامل کی گئی معیاری شرحیں جولائی 2026 تک کی ہیں اور سال میں ایک بار جانچی جاتی ہیں۔ کھانے پینے کی اشیاء، کتابوں یا ادویات پر رعایتی شرحیں (جیسے جرمنی میں 7%، برطانیہ میں 5%) اور صفر شرح شے کے مطابق بدلتی ہیں، اس لیے خودبخود لاگو نہیں ہوتیں۔ ایسے میں “تفصیلی ترتیب” کھول کر اپنی شرح لکھیں — حساب اسی سے ہوگا۔",
     "faq.q5": "کیا لکھی گئی رقم سرور پر بھیجی جاتی ہے؟",
-    "faq.a5": "نہیں۔ یہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے اور کوئی ڈیٹا کہیں نہیں بھیجتا۔ آپ کا آخری اندراج صرف سہولت کے لیے آپ کے آلے کے localStorage میں محفوظ رہتا ہے، جسے آپ کسی بھی وقت براؤزر کی ترتیبات سے مٹا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے اور کوئی ڈیٹا کہیں نہیں بھیجتا۔ آپ کا آخری اندراج صرف سہولت کے لیے آپ کے آلے کے localStorage میں محفوظ رہتا ہے، جسے آپ کسی بھی وقت براؤزر کی ترتیبات سے مٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -631,7 +681,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Tarifnya per kapan, dan bagaimana dengan tarif khusus?",
     "faq.a4": "Tarif standar bawaan berlaku per Juli 2026 dan ditinjau setahun sekali. Tarif khusus untuk makanan, buku, atau obat (misalnya 7% di Jerman atau 5% di Inggris) serta penyerahan bertarif nol bergantung pada jenis barang sehingga tidak diterapkan otomatis. Buka “Penyesuaian lanjutan” lalu ketik tarif yang Anda butuhkan — perhitungan akan memakai nilai itu.",
     "faq.q5": "Apakah nominal yang saya ketik dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator ini berjalan sepenuhnya di peramban Anda dan tidak mengirim data ke mana pun. Entri terakhir hanya disimpan di localStorage perangkat Anda demi kenyamanan, dan bisa Anda hapus kapan saja lewat pengaturan peramban."
+    "faq.a5": "Tidak. Kalkulator ini berjalan sepenuhnya di peramban Anda dan tidak mengirim data ke mana pun. Entri terakhir hanya disimpan di localStorage perangkat Anda demi kenyamanan, dan bisa Anda hapus kapan saja lewat pengaturan peramban.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -687,7 +742,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Von wann sind die Sätze und was ist mit ermäßigten Sätzen?",
     "faq.a4": "Die hinterlegten Regelsätze haben den Stand Juli 2026 und werden einmal jährlich geprüft. Ermäßigte Sätze für Lebensmittel, Bücher oder Medikamente (etwa 7 % in Deutschland oder 5 % in Großbritannien) sowie Nullsätze hängen von der konkreten Ware ab und werden deshalb nicht automatisch angewendet. Öffnen Sie „Feineinstellung“ und tragen Sie den gewünschten Satz ein — damit wird gerechnet.",
     "faq.q5": "Wird der eingegebene Betrag an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Rechner läuft vollständig in Ihrem Browser und sendet keine Daten. Ihre letzte Eingabe wird nur zur Bequemlichkeit im localStorage Ihres Geräts gespeichert und lässt sich jederzeit in den Browser-Einstellungen löschen."
+    "faq.a5": "Nein. Dieser Rechner läuft vollständig in Ihrem Browser und sendet keine Daten. Ihre letzte Eingabe wird nur zur Bequemlichkeit im localStorage Ihres Geräts gespeichert und lässt sich jederzeit in den Browser-Einstellungen löschen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -743,7 +803,12 @@ window.I18N_LOCALES = {
     "faq.q4": "税率はいつ時点のものですか。軽減税率はどうなりますか？",
     "faq.a4": "内蔵している各国の標準税率は2026年7月時点で、年1回見直します。食品・書籍・医薬品などの軽減税率（日本8%、ドイツ7%、英国5%など）やゼロ税率は品目ごとに異なるため自動適用しません。その場合は「詳細設定」を開いて税率を手入力すれば、その値で計算します。",
     "faq.q5": "入力した金額はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この計算機はブラウザ内で完結し、外部にデータを送信しません。最後の入力は利便性のため端末のlocalStorageにのみ保存され、ブラウザの設定からいつでも削除できます。"
+    "faq.a5": "いいえ。この計算機はブラウザ内で完結し、外部にデータを送信しません。最後の入力は利便性のため端末のlocalStorageにのみ保存され、ブラウザの設定からいつでも削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -799,6 +864,11 @@ window.I18N_LOCALES = {
     "faq.q4": "세율표는 언제 기준이며, 경감세율은 어떻게 하나요?",
     "faq.a4": "내장된 국가별 표준 세율은 2026년 7월 기준이며 연 1회 검토·갱신합니다. 식품·도서·의약품 등에 적용되는 경감세율(예: 독일 7%, 영국 5%, 일본 8%)이나 영세율은 품목마다 달라 자동 적용하지 않습니다. 이런 경우 ‘상세 조정’을 열어 세율을 직접 입력하면 그 값으로 계산합니다.",
     "faq.q5": "입력한 금액이 서버로 전송되나요?",
-    "faq.a5": "아닙니다. 이 계산기는 브라우저 안에서 완전히 동작하며 외부로 어떤 데이터도 전송하지 않습니다. 마지막 입력값은 편의를 위해 사용자 기기의 localStorage에만 저장되며, 언제든지 브라우저 설정에서 삭제할 수 있습니다."
+    "faq.a5": "아닙니다. 이 계산기는 브라우저 안에서 완전히 동작하며 외부로 어떤 데이터도 전송하지 않습니다. 마지막 입력값은 편의를 위해 사용자 기기의 localStorage에만 저장되며, 언제든지 브라우저 설정에서 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -63,7 +63,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Are Japanese and Korean ring sizes the same?",
     "faq.a4": "Yes — Japan and Korea both use the same 号 (ho/ho-su) numbering system, so a Japanese size 14 ring is identical to a Korean 14호 ring; this converter's Japan/Korea column covers both. The scale isn't linear with US or EU sizes, which is why looking the number up on a chart, rather than doing quick mental math, avoids ordering the wrong size online.",
     "faq.q5": "Does this converter handle half sizes, and is my size sent anywhere?",
-    "faq.a5": "Yes — the US/CA and UK/AU dropdowns include every half size from 3 to 16 (and F to Z+6), which covers the range most adult rings are sold in. And no, nothing is sent anywhere: this ring size converter runs entirely in your browser, so the size you enter or measure never leaves your device and isn't stored on any server."
+    "faq.a5": "Yes — the US/CA and UK/AU dropdowns include every half size from 3 to 16 (and F to Z+6), which covers the range most adult rings are sold in. And no, nothing is sent anywhere: this ring size converter runs entirely in your browser, so the size you enter or measure never leaves your device and isn't stored on any server.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -111,7 +116,12 @@ window.I18N_LOCALES = {
     "faq.q4": "日本号和韩国号是同一套尺码吗？",
     "faq.a4": "是的——日本和韩国用的是同一套「号」编号系统，所以日本 14 号戒指和韩国 14 号戒指完全一样；这个换算器的「日本/韩国」一栏同时覆盖两地。这套号数和美码、欧码之间不是线性对应关系，所以查对照表比心算更靠谱，能避免在网上买错尺码。",
     "faq.q5": "这个换算器支持半码吗？我的尺码会被发送到别处吗？",
-    "faq.a5": "支持——美码/加码和英码/澳码的下拉列表包含从 3 到 16 的每个半码（以及 F 到 Z+6），覆盖了绝大多数成人戒指的销售范围。而且不会发送到任何地方：这个戒指尺码换算器完全在你的浏览器里运行，你输入或量到的尺码不会离开你的设备，也不会存储在任何服务器上。"
+    "faq.a5": "支持——美码/加码和英码/澳码的下拉列表包含从 3 到 16 的每个半码（以及 F 到 Z+6），覆盖了绝大多数成人戒指的销售范围。而且不会发送到任何地方：这个戒指尺码换算器完全在你的浏览器里运行，你输入或量到的尺码不会离开你的设备，也不会存储在任何服务器上。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -159,7 +169,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या जापानी और कोरियाई रिंग साइज़ एक जैसे होते हैं?",
     "faq.a4": "हाँ — जापान और कोरिया दोनों एक ही 号 (गो/होसू) नंबरिंग सिस्टम इस्तेमाल करते हैं, इसलिए जापानी साइज़ 14 की अंगूठी कोरियाई 14호 अंगूठी जैसी ही होती है; इस कन्वर्टर का जापान/कोरिया कॉलम दोनों को कवर करता है। यह स्केल US या EU साइज़ के साथ रैखिक नहीं है, इसलिए दिमाग़ी हिसाब लगाने की बजाय चार्ट देखना ऑनलाइन ग़लत साइज़ ऑर्डर करने से बचाता है।",
     "faq.q5": "क्या यह कन्वर्टर हाफ़ साइज़ संभालता है, और क्या मेरा साइज़ कहीं भेजा जाता है?",
-    "faq.a5": "हाँ — US/CA और UK/AU ड्रॉपडाउन में 3 से 16 तक हर हाफ़ साइज़ (और F से Z+6 तक) शामिल है, जो ज़्यादातर वयस्क अंगूठियों की रेंज को कवर करता है। और नहीं, कुछ भी कहीं नहीं भेजा जाता: यह रिंग साइज़ कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है, इसलिए आपका डाला या नापा हुआ साइज़ कभी आपकी डिवाइस से बाहर नहीं जाता और किसी सर्वर पर सेव नहीं होता।"
+    "faq.a5": "हाँ — US/CA और UK/AU ड्रॉपडाउन में 3 से 16 तक हर हाफ़ साइज़ (और F से Z+6 तक) शामिल है, जो ज़्यादातर वयस्क अंगूठियों की रेंज को कवर करता है। और नहीं, कुछ भी कहीं नहीं भेजा जाता: यह रिंग साइज़ कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है, इसलिए आपका डाला या नापा हुआ साइज़ कभी आपकी डिवाइस से बाहर नहीं जाता और किसी सर्वर पर सेव नहीं होता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -207,7 +222,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Las tallas de anillo japonesas y coreanas son iguales?",
     "faq.a4": "Sí: Japón y Corea usan el mismo sistema de numeración 号 (go/hosu), así que un anillo talla japonesa 14 es idéntico a un anillo coreano 14호; la columna Japón/Corea de este conversor cubre ambos. La escala no es lineal respecto a las tallas US o EU, por eso consultar la tabla, en lugar de calcularlo de cabeza, evita pedir la talla equivocada por internet.",
     "faq.q5": "¿Este conversor maneja medias tallas, y se envía mi talla a algún lado?",
-    "faq.a5": "Sí: los menús US/CA y UK/AU incluyen todas las medias tallas del 3 al 16 (y de F a Z+6), lo que cubre el rango en el que se vende la mayoría de anillos para adultos. Y no, nada se envía a ningún lado: este conversor de tallas de anillos funciona por completo en tu navegador, así que la talla que introduces o mides nunca sale de tu dispositivo ni se guarda en ningún servidor."
+    "faq.a5": "Sí: los menús US/CA y UK/AU incluyen todas las medias tallas del 3 al 16 (y de F a Z+6), lo que cubre el rango en el que se vende la mayoría de anillos para adultos. Y no, nada se envía a ningún lado: este conversor de tallas de anillos funciona por completo en tu navegador, así que la talla que introduces o mides nunca sale de tu dispositivo ni se guarda en ningún servidor.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -255,7 +275,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل مقاسات الخواتم اليابانية والكورية متطابقة؟",
     "faq.a4": "نعم — تستخدم اليابان وكوريا نفس نظام الترقيم 号 (جو/هوسو)، لذا فإن خاتمًا يابانيًا مقاس 14 مطابق تمامًا لخاتم كوري 14호؛ عمود اليابان/كوريا في هذا المحول يغطي كليهما. هذا المقياس ليس خطيًا مع مقاسات US أو EU، لذا فإن مراجعة الجدول بدلًا من الحساب الذهني السريع تجنّبك طلب المقاس الخاطئ عبر الإنترنت.",
     "faq.q5": "هل يدعم هذا المحول أنصاف المقاسات، وهل يُرسل مقاسي إلى أي مكان؟",
-    "faq.a5": "نعم — تشمل قوائم US/CA وUK/AU كل نصف مقاس من 3 إلى 16 (ومن F إلى Z+6)، وهو ما يغطي النطاق الذي تُباع فيه معظم خواتم البالغين. ولا، لا يُرسل شيء إلى أي مكان: يعمل محول مقاسات الخواتم هذا بالكامل داخل متصفحك، فالمقاس الذي تُدخله أو تقيسه لا يغادر جهازك أبدًا ولا يُخزَّن على أي خادم."
+    "faq.a5": "نعم — تشمل قوائم US/CA وUK/AU كل نصف مقاس من 3 إلى 16 (ومن F إلى Z+6)، وهو ما يغطي النطاق الذي تُباع فيه معظم خواتم البالغين. ولا، لا يُرسل شيء إلى أي مكان: يعمل محول مقاسات الخواتم هذا بالكامل داخل متصفحك، فالمقاس الذي تُدخله أو تقيسه لا يغادر جهازك أبدًا ولا يُخزَّن على أي خادم.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -303,7 +328,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Les tailles de bagues japonaises et coréennes sont-elles identiques ?",
     "faq.a4": "Oui — le Japon et la Corée utilisent le même système de numérotation 号 (go/hosu), donc une bague japonaise taille 14 est identique à une bague coréenne 14호 ; la colonne Japon/Corée de ce convertisseur couvre les deux. Cette échelle n'est pas linéaire par rapport aux tailles US ou EU, c'est pourquoi consulter le tableau, plutôt que de calculer de tête, évite de commander la mauvaise taille en ligne.",
     "faq.q5": "Ce convertisseur gère-t-il les demi-tailles, et ma taille est-elle envoyée quelque part ?",
-    "faq.a5": "Oui — les listes US/CA et UK/AU incluent toutes les demi-tailles de 3 à 16 (et de F à Z+6), ce qui couvre la plage dans laquelle se vendent la plupart des bagues pour adultes. Et non, rien n'est envoyé nulle part : ce convertisseur de tailles de bagues fonctionne entièrement dans votre navigateur, donc la taille que vous saisissez ou mesurez ne quitte jamais votre appareil et n'est stockée sur aucun serveur."
+    "faq.a5": "Oui — les listes US/CA et UK/AU incluent toutes les demi-tailles de 3 à 16 (et de F à Z+6), ce qui couvre la plage dans laquelle se vendent la plupart des bagues pour adultes. Et non, rien n'est envoyé nulle part : ce convertisseur de tailles de bagues fonctionne entièrement dans votre navigateur, donc la taille que vous saisissez ou mesurez ne quitte jamais votre appareil et n'est stockée sur aucun serveur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -351,7 +381,12 @@ window.I18N_LOCALES = {
     "faq.q4": "জাপানি ও কোরিয়ান রিং সাইজ কি একই?",
     "faq.a4": "হ্যাঁ — জাপান ও কোরিয়া দুটোই একই 号 (গো/হোসু) নম্বরিং সিস্টেম ব্যবহার করে, তাই একটি জাপানি সাইজ 14 আংটি একটি কোরিয়ান 14호 আংটির সমান; এই কনভার্টারের জাপান/কোরিয়া কলাম দুটোই কভার করে। এই স্কেল US বা EU সাইজের সঙ্গে সরলরৈখিক নয়, তাই মনে মনে হিসাব করার বদলে চার্ট দেখলে অনলাইনে ভুল সাইজ অর্ডার করা এড়ানো যায়।",
     "faq.q5": "এই কনভার্টার কি হাফ সাইজ সামলায়, আর আমার সাইজ কি কোথাও পাঠানো হয়?",
-    "faq.a5": "হ্যাঁ — US/CA ও UK/AU ড্রপডাউনে 3 থেকে 16 পর্যন্ত প্রতিটি হাফ সাইজ (এবং F থেকে Z+6) রয়েছে, যা বেশিরভাগ প্রাপ্তবয়স্কদের আংটির বিক্রির রেঞ্জ কভার করে। আর না, কোথাও কিছু পাঠানো হয় না: এই রিং সাইজ কনভার্টার সম্পূর্ণ আপনার ব্রাউজারে চলে, তাই আপনি যা লেখেন বা মাপেন তা কখনও আপনার ডিভাইস ছাড়ে না এবং কোনো সার্ভারে জমা থাকে না।"
+    "faq.a5": "হ্যাঁ — US/CA ও UK/AU ড্রপডাউনে 3 থেকে 16 পর্যন্ত প্রতিটি হাফ সাইজ (এবং F থেকে Z+6) রয়েছে, যা বেশিরভাগ প্রাপ্তবয়স্কদের আংটির বিক্রির রেঞ্জ কভার করে। আর না, কোথাও কিছু পাঠানো হয় না: এই রিং সাইজ কনভার্টার সম্পূর্ণ আপনার ব্রাউজারে চলে, তাই আপনি যা লেখেন বা মাপেন তা কখনও আপনার ডিভাইস ছাড়ে না এবং কোনো সার্ভারে জমা থাকে না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -399,7 +434,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Os tamanhos de anéis japoneses e coreanos são iguais?",
     "faq.a4": "Sim — Japão e Coreia usam o mesmo sistema de numeração 号 (go/hosu), então um anel japonês tamanho 14 é idêntico a um anel coreano 14호; a coluna Japão/Coreia deste conversor cobre os dois. Essa escala não é linear em relação aos tamanhos US ou EU, por isso consultar a tabela, em vez de calcular de cabeça, evita pedir o tamanho errado on-line.",
     "faq.q5": "Este conversor lida com meios tamanhos, e meu tamanho é enviado a algum lugar?",
-    "faq.a5": "Sim — os menus US/CA e UK/AU incluem todo meio tamanho de 3 a 16 (e de F a Z+6), o que cobre a faixa em que a maioria dos anéis adultos é vendida. E não, nada é enviado a lugar nenhum: este conversor de tamanho de anéis roda inteiramente no seu navegador, então o tamanho que você digita ou mede nunca sai do seu aparelho e não fica armazenado em nenhum servidor."
+    "faq.a5": "Sim — os menus US/CA e UK/AU incluem todo meio tamanho de 3 a 16 (e de F a Z+6), o que cobre a faixa em que a maioria dos anéis adultos é vendida. E não, nada é enviado a lugar nenhum: este conversor de tamanho de anéis roda inteiramente no seu navegador, então o tamanho que você digita ou mede nunca sai do seu aparelho e não fica armazenado em nenhum servidor.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -447,7 +487,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Японские и корейские размеры колец одинаковы?",
     "faq.a4": "Да — Япония и Корея используют одну и ту же систему нумерации 号 (го/хосу), поэтому японское кольцо 14-го размера идентично корейскому кольцу 14호; колонка «Япония / Корея» в этом конвертере охватывает оба варианта. Эта шкала нелинейна относительно размеров US или EU, поэтому сверка с таблицей, а не расчёт в уме, помогает не заказать неверный размер онлайн.",
     "faq.q5": "Учитывает ли этот конвертер половинные размеры и отправляется ли мой размер куда-либо?",
-    "faq.a5": "Да — списки US/CA и UK/AU включают каждый половинный размер от 3 до 16 (и от F до Z+6), что покрывает диапазон, в котором продаётся большинство колец для взрослых. И нет, никуда ничего не отправляется: этот конвертер размеров колец полностью работает в вашем браузере, поэтому введённый или измеренный вами размер никогда не покидает ваше устройство и не хранится ни на каком сервере."
+    "faq.a5": "Да — списки US/CA и UK/AU включают каждый половинный размер от 3 до 16 (и от F до Z+6), что покрывает диапазон, в котором продаётся большинство колец для взрослых. И нет, никуда ничего не отправляется: этот конвертер размеров колец полностью работает в вашем браузере, поэтому введённый или измеренный вами размер никогда не покидает ваше устройство и не хранится ни на каком сервере.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -495,7 +540,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا جاپانی اور کوریائی انگوٹھی کے سائز ایک جیسے ہیں؟",
     "faq.a4": "جی ہاں — جاپان اور کوریا دونوں ایک ہی 号 (گو/ہوسو) نمبرنگ نظام استعمال کرتے ہیں، اس لیے جاپانی سائز 14 کی انگوٹھی کوریائی 14호 انگوٹھی جیسی ہی ہے؛ اس کنورٹر کا جاپان/کوریا کالم دونوں کا احاطہ کرتا ہے۔ یہ پیمانہ US یا EU سائز کے ساتھ لکیری نہیں، اس لیے ذہنی حساب کے بجائے چارٹ دیکھنا آن لائن غلط سائز منگوانے سے بچاتا ہے۔",
     "faq.q5": "کیا یہ کنورٹر آدھے سائز سنبھالتا ہے، اور کیا میرا سائز کہیں بھیجا جاتا ہے؟",
-    "faq.a5": "جی ہاں — US/CA اور UK/AU ڈراپ ڈاؤن میں 3 سے 16 تک ہر آدھا سائز (اور F سے Z+6 تک) شامل ہے، جو بیشتر بالغ انگوٹھیوں کی فروخت کی حد کا احاطہ کرتا ہے۔ اور نہیں، کچھ بھی کہیں نہیں بھیجا جاتا: یہ انگوٹھی سائز کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے، اس لیے آپ کا درج یا ناپا گیا سائز کبھی آپ کے آلے سے باہر نہیں جاتا اور کسی سرور پر محفوظ نہیں ہوتا۔"
+    "faq.a5": "جی ہاں — US/CA اور UK/AU ڈراپ ڈاؤن میں 3 سے 16 تک ہر آدھا سائز (اور F سے Z+6 تک) شامل ہے، جو بیشتر بالغ انگوٹھیوں کی فروخت کی حد کا احاطہ کرتا ہے۔ اور نہیں، کچھ بھی کہیں نہیں بھیجا جاتا: یہ انگوٹھی سائز کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے، اس لیے آپ کا درج یا ناپا گیا سائز کبھی آپ کے آلے سے باہر نہیں جاتا اور کسی سرور پر محفوظ نہیں ہوتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -543,7 +593,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah ukuran cincin Jepang dan Korea sama?",
     "faq.a4": "Ya — Jepang dan Korea sama-sama menggunakan sistem penomoran 号 (go/hosu) yang sama, sehingga cincin ukuran Jepang 14 identik dengan cincin Korea 14호; kolom Jepang/Korea di konverter ini mencakup keduanya. Skala ini tidak linear terhadap ukuran US atau EU, itulah sebabnya melihat tabel, bukan menghitung cepat di kepala, mencegah Anda memesan ukuran yang salah secara daring.",
     "faq.q5": "Apakah konverter ini menangani setengah ukuran, dan apakah ukuran saya dikirim ke suatu tempat?",
-    "faq.a5": "Ya — menu US/CA dan UK/AU mencakup setiap setengah ukuran dari 3 hingga 16 (dan F hingga Z+6), yang mencakup rentang di mana sebagian besar cincin dewasa dijual. Dan tidak, tidak ada yang dikirim ke mana pun: konverter ukuran cincin ini berjalan sepenuhnya di browser Anda, sehingga ukuran yang Anda masukkan atau ukur tidak pernah meninggalkan perangkat Anda dan tidak disimpan di server mana pun."
+    "faq.a5": "Ya — menu US/CA dan UK/AU mencakup setiap setengah ukuran dari 3 hingga 16 (dan F hingga Z+6), yang mencakup rentang di mana sebagian besar cincin dewasa dijual. Dan tidak, tidak ada yang dikirim ke mana pun: konverter ukuran cincin ini berjalan sepenuhnya di browser Anda, sehingga ukuran yang Anda masukkan atau ukur tidak pernah meninggalkan perangkat Anda dan tidak disimpan di server mana pun.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -591,7 +646,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Sind japanische und koreanische Ringgrößen identisch?",
     "faq.a4": "Ja — Japan und Korea verwenden dasselbe 号-Nummerierungssystem (go/hosu), sodass ein japanischer Ring der Größe 14 identisch mit einem koreanischen Ring 14호 ist; die Spalte Japan/Korea dieses Umrechners deckt beide ab. Diese Skala verläuft nicht linear zu US- oder EU-Größen, weshalb ein Blick in die Tabelle statt schnellem Kopfrechnen verhindert, dass online die falsche Größe bestellt wird.",
     "faq.q5": "Berücksichtigt dieser Umrechner halbe Größen, und wird meine Größe irgendwohin gesendet?",
-    "faq.a5": "Ja — die US/CA- und UK/AU-Auswahllisten enthalten jede halbe Größe von 3 bis 16 (und F bis Z+6), was den Bereich abdeckt, in dem die meisten Erwachsenenringe verkauft werden. Und nein, es wird nichts irgendwohin gesendet: Dieser Ringgrößen-Umrechner läuft vollständig in Ihrem Browser, sodass die eingegebene oder gemessene Größe Ihr Gerät nie verlässt und auf keinem Server gespeichert wird."
+    "faq.a5": "Ja — die US/CA- und UK/AU-Auswahllisten enthalten jede halbe Größe von 3 bis 16 (und F bis Z+6), was den Bereich abdeckt, in dem die meisten Erwachsenenringe verkauft werden. Und nein, es wird nichts irgendwohin gesendet: Dieser Ringgrößen-Umrechner läuft vollständig in Ihrem Browser, sodass die eingegebene oder gemessene Größe Ihr Gerät nie verlässt und auf keinem Server gespeichert wird.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -639,7 +699,12 @@ window.I18N_LOCALES = {
     "faq.q4": "日本と韓国のリングサイズは同じですか？",
     "faq.a4": "はい。日本と韓国はどちらも同じ号数（ごう）の体系を使っているため、日本の14号と韓国の14호は同一のサイズです。この変換ツールの「日本/韓国」列は両方をカバーしています。この号数の目盛りはUSやEUサイズと直線的に対応していないため、暗算ではなく表で確認することで、オンラインでの誤発注を防げます。",
     "faq.q5": "この変換ツールは半号に対応していますか？また入力したサイズはどこかに送信されますか？",
-    "faq.a5": "はい。US/CAとUK/AUのプルダウンには、3から16までのすべての半号（およびFからZ+6まで）が含まれており、成人用指輪の販売サイズのほとんどをカバーしています。そして、どこにも送信されません — このリングサイズ変換ツールは完全にブラウザ内で動作するため、入力または実測したサイズが端末の外に出ることはなく、サーバーに保存されることもありません。"
+    "faq.a5": "はい。US/CAとUK/AUのプルダウンには、3から16までのすべての半号（およびFからZ+6まで）が含まれており、成人用指輪の販売サイズのほとんどをカバーしています。そして、どこにも送信されません — このリングサイズ変換ツールは完全にブラウザ内で動作するため、入力または実測したサイズが端末の外に出ることはなく、サーバーに保存されることもありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -687,6 +752,11 @@ window.I18N_LOCALES = {
     "faq.q4": "일본 사이즈와 한국 사이즈(호수)는 같은가요?",
     "faq.a4": "네 — 일본과 한국은 똑같은 호수 체계를 쓰기 때문에 일본 14호 반지와 한국 14호 반지는 완전히 같은 사이즈입니다. 이 변환기의 '일본/한국' 항목이 양쪽을 함께 커버합니다. 이 호수 눈금은 US나 EU 사이즈와 선형으로 대응하지 않기 때문에, 암산으로 어림잡기보다 조견표를 확인해야 온라인에서 엉뚱한 사이즈를 주문하는 실수를 막을 수 있습니다.",
     "faq.q5": "반 사이즈도 지원하나요? 그리고 입력한 사이즈가 어딘가로 전송되나요?",
-    "faq.a5": "네 — US/CA와 UK/AU 드롭다운에는 3호부터 16호까지 모든 반 사이즈(그리고 F부터 Z+6까지)가 들어 있어 성인 반지가 판매되는 범위 대부분을 커버합니다. 그리고 아니요, 어디로도 전송되지 않습니다 — 이 반지 사이즈 변환기는 전적으로 브라우저 안에서 동작하므로 입력하거나 측정한 사이즈가 기기 밖으로 나가지 않고 서버에 저장되지도 않습니다."
+    "faq.a5": "네 — US/CA와 UK/AU 드롭다운에는 3호부터 16호까지 모든 반 사이즈(그리고 F부터 Z+6까지)가 들어 있어 성인 반지가 판매되는 범위 대부분을 커버합니다. 그리고 아니요, 어디로도 전송되지 않습니다 — 이 반지 사이즈 변환기는 전적으로 브라우저 안에서 동작하므로 입력하거나 측정한 사이즈가 기기 밖으로 나가지 않고 서버에 저장되지도 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

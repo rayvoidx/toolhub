@@ -73,7 +73,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why do some countries use mg/dL and others use mmol/L?",
     "faq.a4": "It's mostly historical convention rather than anything about the blood itself. The United States, Japan and a few other countries report glucose as a mass concentration, milligrams of glucose per deciliter of blood (mg/dL). Most of Europe, Canada, Australia and much of the rest of the world report it as a molar concentration, millimoles of glucose per liter of blood (mmol/L), the SI-standard unit. Neither unit is more accurate than the other — they describe the same measurement two different ways, which is exactly what this converter bridges.",
     "faq.q5": "Can this blood sugar converter replace a glucose meter or medical advice?",
-    "faq.a5": "No. This tool only converts and classifies numbers you already have from a glucose meter, lab test or continuous glucose monitor — it cannot measure your blood sugar itself. The reference ranges shown are educational, general-population figures, not a diagnosis, and they don't account for medication, illness, pregnancy or other individual factors. Always rely on an actual meter or lab test for real readings, and talk to your doctor or care team about the target range and next steps that are right for you."
+    "faq.a5": "No. This tool only converts and classifies numbers you already have from a glucose meter, lab test or continuous glucose monitor — it cannot measure your blood sugar itself. The reference ranges shown are educational, general-population figures, not a diagnosis, and they don't account for medication, illness, pregnancy or other individual factors. Always rely on an actual meter or lab test for real readings, and talk to your doctor or care team about the target range and next steps that are right for you.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -131,7 +136,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么有些国家用 mg/dL,有些国家用 mmol/L?",
     "faq.a4": "这主要是历史习惯的差异,与血液本身无关。美国、日本等少数国家以质量浓度(每分升血液中含多少毫克葡萄糖,mg/dL)来表示血糖;欧洲大部分地区、加拿大、澳大利亚及世界上大多数地区则采用摩尔浓度(每升血液中含多少毫摩尔葡萄糖,mmol/L),这是国际单位制(SI)标准单位。两种单位并无准确度高低之分——它们只是用两种不同方式描述同一个测量结果,而这正是本换算器要解决的问题。",
     "faq.q5": "这个血糖换算器能替代血糖仪或医疗建议吗?",
-    "faq.a5": "不能。本工具仅对您已经通过血糖仪、化验或连续血糖监测仪获得的数值进行换算和分类——它本身无法测量您的血糖。所显示的参考范围是面向大众人群的健康教育信息,并非诊断,也未考虑用药、疾病、妊娠等个人因素。请始终以实际血糖仪或化验结果为准,并向医生或医疗团队咨询适合您的目标范围与后续措施。"
+    "faq.a5": "不能。本工具仅对您已经通过血糖仪、化验或连续血糖监测仪获得的数值进行换算和分类——它本身无法测量您的血糖。所显示的参考范围是面向大众人群的健康教育信息,并非诊断,也未考虑用药、疾病、妊娠等个人因素。请始终以实际血糖仪或化验结果为准,并向医生或医疗团队咨询适合您的目标范围与后续措施。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -189,7 +199,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कुछ देश mg/dL और कुछ mmol/L क्यों उपयोग करते हैं?",
     "faq.a4": "यह ज़्यादातर ऐतिहासिक परंपरा है, न कि रक्त से जुड़ी कोई बात। अमेरिका, जापान और कुछ अन्य देश ग्लूकोज़ को मास कॉन्सन्ट्रेशन के रूप में बताते हैं — प्रति डेसीलीटर रक्त में ग्लूकोज़ के मिलीग्राम (mg/dL)। यूरोप का अधिकांश हिस्सा, कनाडा, ऑस्ट्रेलिया और बाकी दुनिया का अधिकांश हिस्सा इसे मोलर कॉन्सन्ट्रेशन के रूप में बताता है — प्रति लीटर रक्त में ग्लूकोज़ के मिलीमोल (mmol/L), जो SI-मानक इकाई है। कोई भी इकाई दूसरी से अधिक सटीक नहीं है — वे एक ही माप को दो अलग तरीकों से बताती हैं, और यही यह कनवर्टर जोड़ता है।",
     "faq.q5": "क्या यह ब्लड शुगर कनवर्टर ग्लूकोज़ मीटर या चिकित्सीय सलाह की जगह ले सकता है?",
-    "faq.a5": "नहीं। यह टूल केवल उन अंकों को बदलता और वर्गीकृत करता है जो आपके पास पहले से ग्लूकोज़ मीटर, लैब टेस्ट या कंटीन्यूअस ग्लूकोज़ मॉनिटर से हैं — यह खुद आपका ब्लड शुगर नहीं माप सकता। दिखाई गई संदर्भ सीमाएँ शिक्षाप्रद, सामान्य-जनसंख्या के आँकड़े हैं, निदान नहीं, और वे दवा, बीमारी, गर्भावस्था या अन्य व्यक्तिगत कारकों को ध्यान में नहीं रखतीं। वास्तविक रीडिंग के लिए हमेशा एक असली मीटर या लैब टेस्ट पर भरोसा करें, और अपने लिए सही लक्ष्य सीमा व अगले कदमों के बारे में अपने डॉक्टर या केयर टीम से बात करें।"
+    "faq.a5": "नहीं। यह टूल केवल उन अंकों को बदलता और वर्गीकृत करता है जो आपके पास पहले से ग्लूकोज़ मीटर, लैब टेस्ट या कंटीन्यूअस ग्लूकोज़ मॉनिटर से हैं — यह खुद आपका ब्लड शुगर नहीं माप सकता। दिखाई गई संदर्भ सीमाएँ शिक्षाप्रद, सामान्य-जनसंख्या के आँकड़े हैं, निदान नहीं, और वे दवा, बीमारी, गर्भावस्था या अन्य व्यक्तिगत कारकों को ध्यान में नहीं रखतीं। वास्तविक रीडिंग के लिए हमेशा एक असली मीटर या लैब टेस्ट पर भरोसा करें, और अपने लिए सही लक्ष्य सीमा व अगले कदमों के बारे में अपने डॉक्टर या केयर टीम से बात करें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -247,7 +262,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué algunos países usan mg/dL y otros mmol/L?",
     "faq.a4": "Es sobre todo una convención histórica y no algo relacionado con la sangre en sí. Estados Unidos, Japón y algunos otros países expresan la glucosa como concentración de masa: miligramos de glucosa por decilitro de sangre (mg/dL). La mayor parte de Europa, Canadá, Australia y buena parte del resto del mundo la expresan como concentración molar: milimoles de glucosa por litro de sangre (mmol/L), la unidad estándar del SI. Ninguna unidad es más precisa que la otra — describen la misma medición de dos maneras distintas, que es justo lo que este conversor conecta.",
     "faq.q5": "¿Puede este conversor de glucosa reemplazar a un glucómetro o un consejo médico?",
-    "faq.a5": "No. Esta herramienta solo convierte y clasifica números que ya obtuviste de un glucómetro, un análisis de laboratorio o un monitor continuo de glucosa — no puede medir tu glucosa por sí misma. Los rangos de referencia mostrados son cifras educativas de la población general, no un diagnóstico, y no tienen en cuenta la medicación, enfermedades, el embarazo u otros factores individuales. Confía siempre en un glucómetro real o un análisis de laboratorio para lecturas reales, y habla con tu médico o equipo de salud sobre el rango objetivo y los siguientes pasos adecuados para ti."
+    "faq.a5": "No. Esta herramienta solo convierte y clasifica números que ya obtuviste de un glucómetro, un análisis de laboratorio o un monitor continuo de glucosa — no puede medir tu glucosa por sí misma. Los rangos de referencia mostrados son cifras educativas de la población general, no un diagnóstico, y no tienen en cuenta la medicación, enfermedades, el embarazo u otros factores individuales. Confía siempre en un glucómetro real o un análisis de laboratorio para lecturas reales, y habla con tu médico o equipo de salud sobre el rango objetivo y los siguientes pasos adecuados para ti.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -305,7 +325,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا تستخدم بعض الدول mg/dL وأخرى mmol/L؟",
     "faq.a4": "الأمر في الغالب عرف تاريخي وليس له علاقة بطبيعة الدم نفسه. تُعبّر الولايات المتحدة واليابان وقلة من الدول الأخرى عن الغلوكوز بتركيز الكتلة: مليغرام من الغلوكوز في كل ديسيلتر من الدم (mg/dL). أما معظم أوروبا وكندا وأستراليا ومعظم بقية دول العالم فتعبّر عنه بالتركيز المولاري: مليمول من الغلوكوز في كل لتر من الدم (mmol/L)، وهي الوحدة المعيارية في النظام الدولي للوحدات. لا توجد وحدة أدق من الأخرى — فهما تصفان القياس نفسه بطريقتين مختلفتين، وهذا بالضبط ما يربط بينهما هذا المحوّل.",
     "faq.q5": "هل يمكن لهذا المحوّل أن يحل محل جهاز قياس السكر أو الاستشارة الطبية؟",
-    "faq.a5": "لا. تقتصر مهمة هذه الأداة على تحويل وتصنيف أرقام حصلت عليها بالفعل من جهاز قياس السكر أو تحليل مخبري أو جهاز مراقبة الغلوكوز المستمر — فهي لا تستطيع قياس سكر دمك بنفسها. النطاقات المرجعية المعروضة هي أرقام تعليمية عامة لعموم السكان، وليست تشخيصًا، ولا تأخذ في الاعتبار الأدوية أو الأمراض أو الحمل أو غيرها من العوامل الفردية. اعتمد دائمًا على جهاز قياس فعلي أو تحليل مخبري للحصول على قراءات حقيقية، وتحدث مع طبيبك أو فريق الرعاية بشأن النطاق المستهدف والخطوات التالية المناسبة لك."
+    "faq.a5": "لا. تقتصر مهمة هذه الأداة على تحويل وتصنيف أرقام حصلت عليها بالفعل من جهاز قياس السكر أو تحليل مخبري أو جهاز مراقبة الغلوكوز المستمر — فهي لا تستطيع قياس سكر دمك بنفسها. النطاقات المرجعية المعروضة هي أرقام تعليمية عامة لعموم السكان، وليست تشخيصًا، ولا تأخذ في الاعتبار الأدوية أو الأمراض أو الحمل أو غيرها من العوامل الفردية. اعتمد دائمًا على جهاز قياس فعلي أو تحليل مخبري للحصول على قراءات حقيقية، وتحدث مع طبيبك أو فريق الرعاية بشأن النطاق المستهدف والخطوات التالية المناسبة لك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -363,7 +388,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi certains pays utilisent-ils le mg/dL et d'autres le mmol/L ?",
     "faq.a4": "C'est surtout une convention historique, sans rapport avec le sang lui-même. Les États-Unis, le Japon et quelques autres pays expriment le glucose en concentration massique : milligrammes de glucose par décilitre de sang (mg/dL). La majeure partie de l'Europe, le Canada, l'Australie et une grande partie du reste du monde l'expriment en concentration molaire : millimoles de glucose par litre de sang (mmol/L), l'unité standard du système international. Aucune unité n'est plus précise que l'autre — elles décrivent la même mesure de deux manières différentes, ce que ce convertisseur relie exactement.",
     "faq.q5": "Ce convertisseur de glycémie peut-il remplacer un lecteur de glycémie ou un avis médical ?",
-    "faq.a5": "Non. Cet outil se contente de convertir et de classer des valeurs que vous avez déjà obtenues avec un lecteur de glycémie, une analyse de laboratoire ou un capteur de glucose en continu — il ne peut pas mesurer votre glycémie lui-même. Les plages de référence affichées sont des données éducatives, valables pour la population générale, et non un diagnostic ; elles ne tiennent pas compte des médicaments, d'une maladie, d'une grossesse ou d'autres facteurs individuels. Fiez-vous toujours à un lecteur réel ou à une analyse de laboratoire pour des mesures réelles, et parlez à votre médecin ou à votre équipe soignante de l'objectif et des prochaines étapes qui vous conviennent."
+    "faq.a5": "Non. Cet outil se contente de convertir et de classer des valeurs que vous avez déjà obtenues avec un lecteur de glycémie, une analyse de laboratoire ou un capteur de glucose en continu — il ne peut pas mesurer votre glycémie lui-même. Les plages de référence affichées sont des données éducatives, valables pour la population générale, et non un diagnostic ; elles ne tiennent pas compte des médicaments, d'une maladie, d'une grossesse ou d'autres facteurs individuels. Fiez-vous toujours à un lecteur réel ou à une analyse de laboratoire pour des mesures réelles, et parlez à votre médecin ou à votre équipe soignante de l'objectif et des prochaines étapes qui vous conviennent.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -421,7 +451,12 @@ window.I18N_LOCALES = {
     "faq.q4": "কেন কিছু দেশ mg/dL এবং কিছু দেশ mmol/L ব্যবহার করে?",
     "faq.a4": "এটি মূলত ঐতিহাসিক রীতি, রক্তের নিজস্ব কোনো বৈশিষ্ট্যের কারণে নয়। যুক্তরাষ্ট্র, জাপান এবং আরও কিছু দেশ গ্লুকোজকে ভর ঘনত্ব হিসেবে প্রকাশ করে — প্রতি ডেসিলিটার রক্তে গ্লুকোজের মিলিগ্রাম (mg/dL)। ইউরোপের বেশিরভাগ অংশ, কানাডা, অস্ট্রেলিয়া এবং বিশ্বের বাকি অংশের বেশিরভাগ এটিকে মোলার ঘনত্ব হিসেবে প্রকাশ করে — প্রতি লিটার রক্তে গ্লুকোজের মিলিমোল (mmol/L), যা SI-মানক একক। কোনো এককই অন্যটির চেয়ে বেশি নিখুঁত নয় — উভয়ই একই পরিমাপকে দুটি ভিন্ন উপায়ে বর্ণনা করে, আর এই রূপান্তরকারী ঠিক সেটাই সংযুক্ত করে।",
     "faq.q5": "এই রক্তে শর্করা রূপান্তরকারী কি গ্লুকোজ মিটার বা চিকিৎসা পরামর্শের বিকল্প হতে পারে?",
-    "faq.a5": "না। এই টুলটি শুধু আপনার গ্লুকোজ মিটার, ল্যাব টেস্ট বা কন্টিনিউয়াস গ্লুকোজ মনিটর থেকে ইতিমধ্যে পাওয়া সংখ্যা রূপান্তর ও শ্রেণিবদ্ধ করে — এটি নিজে আপনার রক্তে শর্করা মাপতে পারে না। দেখানো রেফারেন্স রেঞ্জগুলো শিক্ষামূলক, সাধারণ জনগোষ্ঠীর সংখ্যা, রোগনির্ণয় নয়, এবং এগুলো ওষুধ, অসুস্থতা, গর্ভাবস্থা বা অন্যান্য ব্যক্তিগত বিষয় বিবেচনা করে না। প্রকৃত রিডিং-এর জন্য সবসময় একটি আসল মিটার বা ল্যাব টেস্টের উপর নির্ভর করুন, এবং আপনার জন্য সঠিক লক্ষ্য রেঞ্জ ও পরবর্তী পদক্ষেপ নিয়ে আপনার ডাক্তার বা কেয়ার টিমের সাথে কথা বলুন।"
+    "faq.a5": "না। এই টুলটি শুধু আপনার গ্লুকোজ মিটার, ল্যাব টেস্ট বা কন্টিনিউয়াস গ্লুকোজ মনিটর থেকে ইতিমধ্যে পাওয়া সংখ্যা রূপান্তর ও শ্রেণিবদ্ধ করে — এটি নিজে আপনার রক্তে শর্করা মাপতে পারে না। দেখানো রেফারেন্স রেঞ্জগুলো শিক্ষামূলক, সাধারণ জনগোষ্ঠীর সংখ্যা, রোগনির্ণয় নয়, এবং এগুলো ওষুধ, অসুস্থতা, গর্ভাবস্থা বা অন্যান্য ব্যক্তিগত বিষয় বিবেচনা করে না। প্রকৃত রিডিং-এর জন্য সবসময় একটি আসল মিটার বা ল্যাব টেস্টের উপর নির্ভর করুন, এবং আপনার জন্য সঠিক লক্ষ্য রেঞ্জ ও পরবর্তী পদক্ষেপ নিয়ে আপনার ডাক্তার বা কেয়ার টিমের সাথে কথা বলুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -479,7 +514,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que alguns países usam mg/dL e outros mmol/L?",
     "faq.a4": "É basicamente uma convenção histórica, sem relação com o sangue em si. Estados Unidos, Japão e alguns outros países expressam a glicose como concentração de massa: miligramas de glicose por decilitro de sangue (mg/dL). A maior parte da Europa, Canadá, Austrália e boa parte do restante do mundo a expressam como concentração molar: milimoles de glicose por litro de sangue (mmol/L), a unidade padrão do SI. Nenhuma unidade é mais precisa que a outra — ambas descrevem a mesma medida de duas formas diferentes, que é exatamente o que este conversor conecta.",
     "faq.q5": "Este conversor de glicemia pode substituir um glicosímetro ou aconselhamento médico?",
-    "faq.a5": "Não. Esta ferramenta apenas converte e classifica números que você já obteve de um glicosímetro, exame laboratorial ou monitor contínuo de glicose — ela não consegue medir sua glicemia sozinha. As faixas de referência mostradas são dados educativos da população em geral, não um diagnóstico, e não levam em conta medicação, doenças, gravidez ou outros fatores individuais. Confie sempre em um glicosímetro real ou exame laboratorial para leituras reais, e converse com seu médico ou equipe de saúde sobre a faixa alvo e os próximos passos certos para você."
+    "faq.a5": "Não. Esta ferramenta apenas converte e classifica números que você já obteve de um glicosímetro, exame laboratorial ou monitor contínuo de glicose — ela não consegue medir sua glicemia sozinha. As faixas de referência mostradas são dados educativos da população em geral, não um diagnóstico, e não levam em conta medicação, doenças, gravidez ou outros fatores individuais. Confie sempre em um glicosímetro real ou exame laboratorial para leituras reais, e converse com seu médico ou equipe de saúde sobre a faixa alvo e os próximos passos certos para você.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -537,7 +577,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему в одних странах используют mg/dL, а в других — mmol/L?",
     "faq.a4": "Это в основном историческая традиция, а не что-то связанное с самой кровью. США, Япония и несколько других стран выражают глюкозу как массовую концентрацию: миллиграммы глюкозы на децилитр крови (mg/dL). Большая часть Европы, Канада, Австралия и значительная часть остального мира выражают её как молярную концентрацию: миллимоли глюкозы на литр крови (mmol/L) — стандартную единицу СИ. Ни одна из единиц не точнее другой — они описывают одно и то же измерение двумя разными способами, и именно это связывает данный конвертер.",
     "faq.q5": "Может ли этот конвертер сахара в крови заменить глюкометр или медицинскую консультацию?",
-    "faq.a5": "Нет. Этот инструмент только конвертирует и классифицирует значения, которые вы уже получили с глюкометра, лабораторного анализа или монитора непрерывного контроля глюкозы — сам он не может измерить ваш сахар в крови. Показанные референсные диапазоны — это образовательные данные для общей популяции, а не диагноз, и они не учитывают лекарства, болезни, беременность и другие индивидуальные факторы. Всегда полагайтесь на реальный глюкометр или лабораторный анализ для настоящих показаний и обсудите со своим врачом или медицинской командой целевой диапазон и дальнейшие шаги, подходящие именно вам."
+    "faq.a5": "Нет. Этот инструмент только конвертирует и классифицирует значения, которые вы уже получили с глюкометра, лабораторного анализа или монитора непрерывного контроля глюкозы — сам он не может измерить ваш сахар в крови. Показанные референсные диапазоны — это образовательные данные для общей популяции, а не диагноз, и они не учитывают лекарства, болезни, беременность и другие индивидуальные факторы. Всегда полагайтесь на реальный глюкометр или лабораторный анализ для настоящих показаний и обсудите со своим врачом или медицинской командой целевой диапазон и дальнейшие шаги, подходящие именно вам.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -595,7 +640,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کچھ ممالک mg/dL اور کچھ mmol/L کیوں استعمال کرتے ہیں؟",
     "faq.a4": "یہ زیادہ تر تاریخی روایت ہے، نہ کہ خون سے متعلق کوئی بات۔ امریکہ، جاپان اور کچھ دیگر ممالک گلوکوز کو ماس کنسنٹریشن کے طور پر بیان کرتے ہیں — فی ڈیسی لیٹر خون میں گلوکوز کے ملی گرام (mg/dL)۔ زیادہ تر یورپ، کینیڈا، آسٹریلیا اور دنیا کے بیشتر حصے اسے مولر کنسنٹریشن کے طور پر بیان کرتے ہیں — فی لیٹر خون میں گلوکوز کے ملی مول (mmol/L)، جو SI معیاری یونٹ ہے۔ کوئی بھی یونٹ دوسرے سے زیادہ درست نہیں ہے — دونوں ایک ہی پیمائش کو دو مختلف طریقوں سے بیان کرتے ہیں، اور یہی وہ چیز ہے جسے یہ کنورٹر جوڑتا ہے۔",
     "faq.q5": "کیا یہ بلڈ شوگر کنورٹر گلوکوز میٹر یا طبی مشورے کا متبادل بن سکتا ہے؟",
-    "faq.a5": "نہیں۔ یہ ٹول صرف ان اعداد کو تبدیل اور درجہ بندی کرتا ہے جو آپ پہلے سے گلوکوز میٹر، لیب ٹیسٹ یا کنٹینیوئس گلوکوز مانیٹر سے حاصل کر چکے ہیں — یہ خود آپ کا بلڈ شوگر نہیں ناپ سکتا۔ دکھائی گئی حوالہ رینجز عام آبادی کے تعلیمی اعداد ہیں، تشخیص نہیں، اور یہ ادویات، بیماری، حمل یا دیگر انفرادی عوامل کو مدنظر نہیں رکھتیں۔ حقیقی ریڈنگز کے لیے ہمیشہ ایک اصل میٹر یا لیب ٹیسٹ پر بھروسہ کریں، اور اپنے لیے مناسب ہدف رینج اور اگلے اقدامات کے بارے میں اپنے ڈاکٹر یا کیئر ٹیم سے بات کریں۔"
+    "faq.a5": "نہیں۔ یہ ٹول صرف ان اعداد کو تبدیل اور درجہ بندی کرتا ہے جو آپ پہلے سے گلوکوز میٹر، لیب ٹیسٹ یا کنٹینیوئس گلوکوز مانیٹر سے حاصل کر چکے ہیں — یہ خود آپ کا بلڈ شوگر نہیں ناپ سکتا۔ دکھائی گئی حوالہ رینجز عام آبادی کے تعلیمی اعداد ہیں، تشخیص نہیں، اور یہ ادویات، بیماری، حمل یا دیگر انفرادی عوامل کو مدنظر نہیں رکھتیں۔ حقیقی ریڈنگز کے لیے ہمیشہ ایک اصل میٹر یا لیب ٹیسٹ پر بھروسہ کریں، اور اپنے لیے مناسب ہدف رینج اور اگلے اقدامات کے بارے میں اپنے ڈاکٹر یا کیئر ٹیم سے بات کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -653,7 +703,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa beberapa negara menggunakan mg/dL dan yang lain mmol/L?",
     "faq.a4": "Ini sebagian besar konvensi historis, bukan sesuatu yang berkaitan dengan darah itu sendiri. Amerika Serikat, Jepang, dan beberapa negara lain menyatakan glukosa sebagai konsentrasi massa: miligram glukosa per desiliter darah (mg/dL). Sebagian besar Eropa, Kanada, Australia, dan sebagian besar wilayah dunia lainnya menyatakannya sebagai konsentrasi molar: milimol glukosa per liter darah (mmol/L), satuan standar SI. Tidak ada satuan yang lebih akurat dari yang lain — keduanya menggambarkan pengukuran yang sama dengan dua cara berbeda, dan itulah yang dijembatani konverter ini.",
     "faq.q5": "Bisakah konverter gula darah ini menggantikan alat ukur glukosa atau nasihat medis?",
-    "faq.a5": "Tidak. Alat ini hanya mengonversi dan mengklasifikasikan angka yang sudah Anda dapatkan dari alat ukur glukosa, tes lab, atau monitor glukosa kontinu — alat ini tidak bisa mengukur gula darah Anda sendiri. Rentang referensi yang ditampilkan adalah angka edukasi populasi umum, bukan diagnosis, dan tidak memperhitungkan obat, penyakit, kehamilan, atau faktor individu lainnya. Selalu andalkan alat ukur asli atau tes lab untuk pembacaan yang sebenarnya, dan bicarakan dengan dokter atau tim perawatan Anda tentang rentang target dan langkah selanjutnya yang tepat untuk Anda."
+    "faq.a5": "Tidak. Alat ini hanya mengonversi dan mengklasifikasikan angka yang sudah Anda dapatkan dari alat ukur glukosa, tes lab, atau monitor glukosa kontinu — alat ini tidak bisa mengukur gula darah Anda sendiri. Rentang referensi yang ditampilkan adalah angka edukasi populasi umum, bukan diagnosis, dan tidak memperhitungkan obat, penyakit, kehamilan, atau faktor individu lainnya. Selalu andalkan alat ukur asli atau tes lab untuk pembacaan yang sebenarnya, dan bicarakan dengan dokter atau tim perawatan Anda tentang rentang target dan langkah selanjutnya yang tepat untuk Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -711,7 +766,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum verwenden manche Länder mg/dL und andere mmol/L?",
     "faq.a4": "Das ist größtenteils historische Konvention und hat nichts mit dem Blut selbst zu tun. Die USA, Japan und einige andere Länder geben Glukose als Massenkonzentration an: Milligramm Glukose pro Deziliter Blut (mg/dL). Der Großteil Europas, Kanada, Australien und weite Teile der übrigen Welt geben sie als molare Konzentration an: Millimol Glukose pro Liter Blut (mmol/L), die SI-Standardeinheit. Keine Einheit ist genauer als die andere — beide beschreiben dieselbe Messung auf zwei verschiedene Arten, und genau das verbindet dieser Umrechner.",
     "faq.q5": "Kann dieser Blutzucker-Umrechner ein Blutzuckermessgerät oder ärztlichen Rat ersetzen?",
-    "faq.a5": "Nein. Dieses Tool rechnet nur Werte um und klassifiziert sie, die Sie bereits von einem Blutzuckermessgerät, einem Labortest oder einem kontinuierlichen Glukosemonitor haben — es kann Ihren Blutzucker nicht selbst messen. Die angezeigten Referenzbereiche sind allgemeine, bevölkerungsbezogene Bildungswerte, keine Diagnose, und berücksichtigen weder Medikamente, Krankheiten, Schwangerschaft noch andere individuelle Faktoren. Verlassen Sie sich für echte Messwerte immer auf ein tatsächliches Messgerät oder einen Labortest, und sprechen Sie mit Ihrem Arzt oder Behandlungsteam über den für Sie richtigen Zielbereich und die nächsten Schritte."
+    "faq.a5": "Nein. Dieses Tool rechnet nur Werte um und klassifiziert sie, die Sie bereits von einem Blutzuckermessgerät, einem Labortest oder einem kontinuierlichen Glukosemonitor haben — es kann Ihren Blutzucker nicht selbst messen. Die angezeigten Referenzbereiche sind allgemeine, bevölkerungsbezogene Bildungswerte, keine Diagnose, und berücksichtigen weder Medikamente, Krankheiten, Schwangerschaft noch andere individuelle Faktoren. Verlassen Sie sich für echte Messwerte immer auf ein tatsächliches Messgerät oder einen Labortest, und sprechen Sie mit Ihrem Arzt oder Behandlungsteam über den für Sie richtigen Zielbereich und die nächsten Schritte.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -769,7 +829,12 @@ window.I18N_LOCALES = {
     "faq.q4": "なぜ国によって mg/dL と mmol/L が使い分けられているのですか?",
     "faq.a4": "これは主に歴史的な慣習によるもので、血液そのものとは関係ありません。米国や日本など一部の国では、血液1デシリットルあたりのブドウ糖のミリグラム(mg/dL)という質量濃度で表します。欧州の多く、カナダ、オーストラリア、そのほか世界の大部分では、血液1リットルあたりのブドウ糖のミリモル(mmol/L、国際単位系(SI)の標準単位)というモル濃度で表します。どちらの単位もより正確というわけではなく、同じ測定値を異なる方法で表しているだけです。このコンバーターはその橋渡しをします。",
     "faq.q5": "この血糖値コンバーターは血糖測定器や医療アドバイスの代わりになりますか?",
-    "faq.a5": "いいえ。このツールは、血糖測定器や検査、持続血糖モニターですでに得た数値を変換・分類するだけで、それ自体で血糖値を測定することはできません。表示される基準範囲は一般集団向けの教育的な数値であり、診断ではなく、服薬・疾患・妊娠などの個人的要因は考慮されていません。実際の値は必ず本物の測定器や検査結果を頼りにし、ご自身に適した目標範囲や次のステップについては主治医や医療チームに相談してください。"
+    "faq.a5": "いいえ。このツールは、血糖測定器や検査、持続血糖モニターですでに得た数値を変換・分類するだけで、それ自体で血糖値を測定することはできません。表示される基準範囲は一般集団向けの教育的な数値であり、診断ではなく、服薬・疾患・妊娠などの個人的要因は考慮されていません。実際の値は必ず本物の測定器や検査結果を頼りにし、ご自身に適した目標範囲や次のステップについては主治医や医療チームに相談してください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -827,6 +892,11 @@ window.I18N_LOCALES = {
     "faq.q4": "왜 어떤 나라는 mg/dL를, 어떤 나라는 mmol/L를 쓰나요?",
     "faq.a4": "이는 혈액 자체의 특성이 아니라 대부분 역사적인 관행 차이입니다. 미국, 일본 등 일부 국가는 혈당을 질량 농도, 즉 혈액 1데시리터당 포도당 밀리그램(mg/dL)으로 표기합니다. 유럽 대부분과 캐나다, 호주, 그 외 세계 많은 지역은 몰 농도, 즉 혈액 1리터당 포도당 밀리몰(mmol/L, 국제단위계(SI) 표준 단위)로 표기합니다. 어느 쪽이 더 정확한 것은 아니며, 같은 측정값을 두 가지 방식으로 표현할 뿐입니다. 이 변환기는 바로 그 두 단위를 이어주는 도구입니다.",
     "faq.q5": "이 혈당 변환기가 혈당계나 의료 조언을 대신할 수 있나요?",
-    "faq.a5": "아니요. 이 도구는 이미 혈당계, 검사실 검사, 연속혈당측정기(CGM)로 얻은 수치를 변환하고 분류할 뿐이며, 스스로 혈당을 측정할 수는 없습니다. 표시되는 기준 범위는 일반 인구를 대상으로 한 교육용 수치일 뿐 진단이 아니며, 복용 중인 약물이나 질병, 임신 등 개인적인 요인은 반영되어 있지 않습니다. 실제 수치는 반드시 실제 혈당계나 검사 결과를 기준으로 삼고, 자신에게 맞는 목표 범위와 다음 단계는 담당 의사나 의료진과 상담하세요."
+    "faq.a5": "아니요. 이 도구는 이미 혈당계, 검사실 검사, 연속혈당측정기(CGM)로 얻은 수치를 변환하고 분류할 뿐이며, 스스로 혈당을 측정할 수는 없습니다. 표시되는 기준 범위는 일반 인구를 대상으로 한 교육용 수치일 뿐 진단이 아니며, 복용 중인 약물이나 질병, 임신 등 개인적인 요인은 반영되어 있지 않습니다. 실제 수치는 반드시 실제 혈당계나 검사 결과를 기준으로 삼고, 자신에게 맞는 목표 범위와 다음 단계는 담당 의사나 의료진과 상담하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

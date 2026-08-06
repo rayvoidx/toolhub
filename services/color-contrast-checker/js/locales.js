@@ -71,7 +71,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What happens with identical colors or other edge cases?",
     "faq.a4": "Checking a color against itself always gives a 1:1 ratio — the minimum possible — because there's no luminance difference at all, so every level fails. Very similar colors, or colors with the same lightness but different hues, can also produce a surprisingly low ratio, since contrast depends on luminance rather than how different two colors look at a glance. If your pair fails, use the swap button to check the reverse direction, or apply one of the suggested shades, which nudge your text color lighter or darker in fixed steps until it clears the AA normal-text threshold.",
     "faq.q5": "Is my color data uploaded or tracked?",
-    "faq.a5": "No. Every calculation — parsing the hex or RGB values, computing relative luminance and contrast ratio, and generating suggested shades — runs locally in your browser's JavaScript. Nothing is sent to a server, there's no account, and no color values are logged anywhere. Your last two colors are saved only in your browser's local storage so they're there the next time you open the tool, and you can clear that at any time by clearing your browser data. This tool checks the contrast-ratio math only; a full accessibility audit also considers font choice, spacing and non-text elements."
+    "faq.a5": "No. Every calculation — parsing the hex or RGB values, computing relative luminance and contrast ratio, and generating suggested shades — runs locally in your browser's JavaScript. Nothing is sent to a server, there's no account, and no color values are logged anywhere. Your last two colors are saved only in your browser's local storage so they're there the next time you open the tool, and you can clear that at any time by clearing your browser data. This tool checks the contrast-ratio math only; a full accessibility audit also considers font choice, spacing and non-text elements.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.q4": "颜色完全相同或其他边界情况会怎样？",
     "faq.a4": "用同一个颜色互相比较，对比度永远是 1:1——可能的最低值，因为两者的亮度毫无差异，所有等级都会未达标。非常接近的颜色，或亮度相同但色相不同的颜色，也可能得出意外偏低的对比度，因为对比度取决于亮度而非肉眼看起来的差异程度。如果你的配色未达标，可以用交换按钮查看反过来的效果，或直接应用推荐的配色建议——它会按固定步长调整文字颜色的明暗，直到达到 AA 正文标准。",
     "faq.q5": "我的颜色数据会被上传或追踪吗？",
-    "faq.a5": "不会。无论是解析 hex/RGB 值、计算相对亮度和对比度，还是生成配色建议，全部在你的浏览器本地 JavaScript 中完成。数据不会发送到任何服务器，无需注册账号，也不会记录任何颜色数值。最近使用的两个颜色仅保存在浏览器的本地存储中，方便你下次打开时继续使用，你可以随时清除浏览器数据来清空它。本工具只计算对比度数值本身；完整的无障碍审查还需要考虑字体选择、间距和非文字元素等因素。"
+    "faq.a5": "不会。无论是解析 hex/RGB 值、计算相对亮度和对比度，还是生成配色建议，全部在你的浏览器本地 JavaScript 中完成。数据不会发送到任何服务器，无需注册账号，也不会记录任何颜色数值。最近使用的两个颜色仅保存在浏览器的本地存储中，方便你下次打开时继续使用，你可以随时清除浏览器数据来清空它。本工具只计算对比度数值本身；完整的无障碍审查还需要考虑字体选择、间距和非文字元素等因素。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -183,7 +193,12 @@ window.I18N_LOCALES = {
     "faq.q4": "एक जैसे रंग या दूसरे किनारे के मामलों में क्या होता है?",
     "faq.a4": "किसी रंग की उसी रंग से तुलना करने पर हमेशा 1:1 रेशियो मिलता है — यह न्यूनतम संभव मान है — क्योंकि ल्यूमिनेंस में कोई फ़र्क़ ही नहीं होता, इसलिए हर स्तर फेल होता है। बहुत मिलते-जुलते रंग, या एक जैसी लाइटनेस मगर अलग ह्यू वाले रंग भी हैरान करने वाला कम रेशियो दे सकते हैं, क्योंकि कंट्रास्ट ल्यूमिनेंस पर निर्भर करता है, न कि आँख से दिखने वाले फ़र्क़ पर। अगर आपकी रंग-जोड़ी फेल होती है, तो उल्टी दिशा जाँचने के लिए स्वैप बटन इस्तेमाल करें, या सुझाए गए शेड में से कोई एक लगाएँ — यह टेक्स्ट के रंग को तय क़दमों में हल्का या गहरा करता रहता है जब तक सामान्य टेक्स्ट की AA सीमा पार न हो जाए।",
     "faq.q5": "क्या मेरे रंग का डेटा अपलोड या ट्रैक होता है?",
-    "faq.a5": "नहीं। हर गणना — hex या RGB मान पढ़ना, रिलेटिव ल्यूमिनेंस और कंट्रास्ट रेशियो निकालना, और सुझाए गए शेड बनाना — पूरी तरह आपके ब्राउज़र की JavaScript में स्थानीय रूप से होती है। कुछ भी सर्वर पर नहीं भेजा जाता, कोई अकाउंट नहीं चाहिए, और कोई भी रंग-मान कहीं दर्ज नहीं होता। आपके आख़िरी दो रंग सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में सेव होते हैं ताकि अगली बार टूल खोलने पर वे मौजूद हों, और आप कभी भी ब्राउज़र का डेटा साफ़ करके इन्हें मिटा सकते हैं। यह टूल सिर्फ़ कंट्रास्ट रेशियो की गणना करता है; पूर्ण एक्सेसिबिलिटी ऑडिट में फ़ॉन्ट चुनाव, स्पेसिंग और नॉन-टेक्स्ट तत्व भी शामिल होते हैं।"
+    "faq.a5": "नहीं। हर गणना — hex या RGB मान पढ़ना, रिलेटिव ल्यूमिनेंस और कंट्रास्ट रेशियो निकालना, और सुझाए गए शेड बनाना — पूरी तरह आपके ब्राउज़र की JavaScript में स्थानीय रूप से होती है। कुछ भी सर्वर पर नहीं भेजा जाता, कोई अकाउंट नहीं चाहिए, और कोई भी रंग-मान कहीं दर्ज नहीं होता। आपके आख़िरी दो रंग सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में सेव होते हैं ताकि अगली बार टूल खोलने पर वे मौजूद हों, और आप कभी भी ब्राउज़र का डेटा साफ़ करके इन्हें मिटा सकते हैं। यह टूल सिर्फ़ कंट्रास्ट रेशियो की गणना करता है; पूर्ण एक्सेसिबिलिटी ऑडिट में फ़ॉन्ट चुनाव, स्पेसिंग और नॉन-टेक्स्ट तत्व भी शामिल होते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -239,7 +254,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué ocurre con colores idénticos u otros casos límite?",
     "faq.a4": "Comprobar un color contra sí mismo siempre da un ratio de 1:1 — el mínimo posible — porque no hay ninguna diferencia de luminancia, así que falla en todos los niveles. Colores muy parecidos, o colores con la misma claridad pero distinto tono, también pueden dar un ratio sorprendentemente bajo, ya que el contraste depende de la luminancia y no de lo diferentes que parezcan a simple vista. Si tu par de colores falla, usa el botón de intercambiar para comprobar la dirección inversa, o aplica una de las sugerencias, que ajustan el color del texto más claro o más oscuro en pasos fijos hasta superar el umbral AA de texto normal.",
     "faq.q5": "¿Se suben o rastrean mis datos de color?",
-    "faq.a5": "No. Cada cálculo — analizar los valores hex o RGB, calcular la luminancia relativa y el ratio de contraste, y generar los tonos sugeridos — se ejecuta localmente en el JavaScript de tu navegador. Nada se envía a un servidor, no hay cuenta de usuario y ningún valor de color queda registrado en ningún sitio. Tus dos últimos colores se guardan solo en el almacenamiento local de tu navegador para que estén ahí la próxima vez que abras la herramienta, y puedes borrarlos en cualquier momento borrando los datos del navegador. Esta herramienta solo calcula el ratio de contraste; una auditoría de accesibilidad completa también tiene en cuenta la tipografía, el espaciado y los elementos no textuales."
+    "faq.a5": "No. Cada cálculo — analizar los valores hex o RGB, calcular la luminancia relativa y el ratio de contraste, y generar los tonos sugeridos — se ejecuta localmente en el JavaScript de tu navegador. Nada se envía a un servidor, no hay cuenta de usuario y ningún valor de color queda registrado en ningún sitio. Tus dos últimos colores se guardan solo en el almacenamiento local de tu navegador para que estén ahí la próxima vez que abras la herramienta, y puedes borrarlos en cualquier momento borrando los datos del navegador. Esta herramienta solo calcula el ratio de contraste; una auditoría de accesibilidad completa también tiene en cuenta la tipografía, el espaciado y los elementos no textuales.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -295,7 +315,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ماذا يحدث مع الألوان المتطابقة أو الحالات الحدّية الأخرى؟",
     "faq.a4": "تؤدي مقارنة لون بنفسه دائمًا إلى نسبة 1:1 — وهي أدنى قيمة ممكنة — لأنه لا يوجد أي فرق في السطوع على الإطلاق، لذا تفشل جميع المستويات. كما يمكن للألوان المتشابهة جدًا، أو الألوان ذات الإضاءة نفسها لكن بدرجة لونية مختلفة، أن تعطي نسبة منخفضة بشكل مفاجئ، لأن التباين يعتمد على السطوع وليس على مدى اختلاف اللونين للعين المجردة. إذا فشل زوج ألوانك، استخدم زر التبديل للتحقق من الاتجاه المعاكس، أو طبّق أحد الدرجات المقترحة، التي تُغيّر لون النص أفتح أو أغمق بخطوات ثابتة حتى يتجاوز حد AA للنص العادي.",
     "faq.q5": "هل تُرفع بيانات ألواني أو يتم تتبعها؟",
-    "faq.a5": "لا. تعمل كل عملية حسابية — تحليل قيم hex أو RGB، وحساب السطوع النسبي ونسبة التباين، وتوليد درجات الألوان المقترحة — محليًا في جافاسكريبت متصفحك. لا يُرسل شيء إلى خادم، ولا حاجة لحساب مستخدم، ولا تُسجَّل أي قيمة لون في أي مكان. يُحفظ آخر لونين استخدمتهما فقط في التخزين المحلي لمتصفحك ليكونا جاهزين في المرة القادمة التي تفتح فيها الأداة، ويمكنك حذفهما في أي وقت عبر مسح بيانات المتصفح. تحسب هذه الأداة نسبة التباين فقط؛ أما التدقيق الشامل لإمكانية الوصول فيأخذ في الاعتبار أيضًا اختيار الخط والتباعد والعناصر غير النصية."
+    "faq.a5": "لا. تعمل كل عملية حسابية — تحليل قيم hex أو RGB، وحساب السطوع النسبي ونسبة التباين، وتوليد درجات الألوان المقترحة — محليًا في جافاسكريبت متصفحك. لا يُرسل شيء إلى خادم، ولا حاجة لحساب مستخدم، ولا تُسجَّل أي قيمة لون في أي مكان. يُحفظ آخر لونين استخدمتهما فقط في التخزين المحلي لمتصفحك ليكونا جاهزين في المرة القادمة التي تفتح فيها الأداة، ويمكنك حذفهما في أي وقت عبر مسح بيانات المتصفح. تحسب هذه الأداة نسبة التباين فقط؛ أما التدقيق الشامل لإمكانية الوصول فيأخذ في الاعتبار أيضًا اختيار الخط والتباعد والعناصر غير النصية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -351,7 +376,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que se passe-t-il avec des couleurs identiques ou d'autres cas limites ?",
     "faq.a4": "Comparer une couleur à elle-même donne toujours un ratio de 1:1 — le minimum possible — puisqu'il n'y a aucune différence de luminance, donc tous les niveaux échouent. Des couleurs très proches, ou de même clarté mais de teinte différente, peuvent aussi donner un ratio étonnamment bas, car le contraste dépend de la luminance et non de la différence perçue à l'œil nu. Si votre paire échoue, utilisez le bouton d'échange pour tester le sens inverse, ou appliquez l'une des teintes suggérées, qui ajuste la couleur du texte par paliers fixes, plus clair ou plus foncé, jusqu'à franchir le seuil AA du texte normal.",
     "faq.q5": "Mes données de couleur sont-elles envoyées ou suivies ?",
-    "faq.a5": "Non. Chaque calcul — analyse des valeurs hex ou RGB, calcul de la luminance relative et du ratio de contraste, génération des teintes suggérées — s'exécute localement dans le JavaScript de votre navigateur. Rien n'est envoyé à un serveur, il n'y a pas de compte, et aucune valeur de couleur n'est enregistrée où que ce soit. Vos deux dernières couleurs ne sont sauvegardées que dans le stockage local de votre navigateur, pour être retrouvées à la prochaine ouverture, et vous pouvez les effacer à tout moment en supprimant les données de votre navigateur. Cet outil ne calcule que le ratio de contraste ; un audit d'accessibilité complet prend aussi en compte la police, l'espacement et les éléments non textuels."
+    "faq.a5": "Non. Chaque calcul — analyse des valeurs hex ou RGB, calcul de la luminance relative et du ratio de contraste, génération des teintes suggérées — s'exécute localement dans le JavaScript de votre navigateur. Rien n'est envoyé à un serveur, il n'y a pas de compte, et aucune valeur de couleur n'est enregistrée où que ce soit. Vos deux dernières couleurs ne sont sauvegardées que dans le stockage local de votre navigateur, pour être retrouvées à la prochaine ouverture, et vous pouvez les effacer à tout moment en supprimant les données de votre navigateur. Cet outil ne calcule que le ratio de contraste ; un audit d'accessibilité complet prend aussi en compte la police, l'espacement et les éléments non textuels.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -407,7 +437,12 @@ window.I18N_LOCALES = {
     "faq.q4": "একই রঙ বা অন্যান্য সীমান্ত পরিস্থিতিতে কী হয়?",
     "faq.a4": "একটি রঙকে নিজের সঙ্গে মেলালে সবসময় 1:1 রেশিও পাওয়া যায় — সম্ভাব্য সর্বনিম্ন — কারণ লুমিন্যান্সে কোনো তফাত নেই, তাই সব স্তরেই ফেল হয়। খুব কাছাকাছি রঙ, বা একই উজ্জ্বলতার কিন্তু ভিন্ন হিউয়ের রঙও অপ্রত্যাশিতভাবে কম রেশিও দিতে পারে, কারণ কনট্রাস্ট নির্ভর করে লুমিন্যান্সের উপর, চোখে কতটা আলাদা লাগছে তার উপর নয়। আপনার রঙ-জোড়া ফেল করলে বিপরীত দিক দেখতে সোয়াপ বাটন ব্যবহার করুন, অথবা প্রস্তাবিত শেডগুলোর একটি প্রয়োগ করুন, যা টেক্সটের রঙকে নির্দিষ্ট ধাপে হালকা বা গাঢ় করতে থাকে যতক্ষণ না সাধারণ টেক্সটের AA মানদণ্ড পার হয়।",
     "faq.q5": "আমার রঙের তথ্য কি আপলোড বা ট্র্যাক করা হয়?",
-    "faq.a5": "না। hex বা RGB মান বিশ্লেষণ, রিলেটিভ লুমিন্যান্স ও কনট্রাস্ট রেশিও হিসাব, এবং প্রস্তাবিত শেড তৈরি — সবকিছুই আপনার ব্রাউজারের জাভাস্ক্রিপ্টে স্থানীয়ভাবে চলে। কিছুই সার্ভারে পাঠানো হয় না, কোনো অ্যাকাউন্ট লাগে না, আর কোনো রঙের মান কোথাও রেকর্ড করা হয় না। আপনার শেষ দুটি রঙ শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরেরবার টুল খুললে সেগুলো থাকে, আর আপনি যেকোনো সময় ব্রাউজারের ডেটা মুছে এগুলো সরিয়ে ফেলতে পারেন। এই টুল শুধু কনট্রাস্ট রেশিওর হিসাব করে; পূর্ণাঙ্গ অ্যাক্সেসিবিলিটি অডিটে ফন্ট বাছাই, স্পেসিং আর নন-টেক্সট উপাদানও বিবেচনায় আসে।"
+    "faq.a5": "না। hex বা RGB মান বিশ্লেষণ, রিলেটিভ লুমিন্যান্স ও কনট্রাস্ট রেশিও হিসাব, এবং প্রস্তাবিত শেড তৈরি — সবকিছুই আপনার ব্রাউজারের জাভাস্ক্রিপ্টে স্থানীয়ভাবে চলে। কিছুই সার্ভারে পাঠানো হয় না, কোনো অ্যাকাউন্ট লাগে না, আর কোনো রঙের মান কোথাও রেকর্ড করা হয় না। আপনার শেষ দুটি রঙ শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরেরবার টুল খুললে সেগুলো থাকে, আর আপনি যেকোনো সময় ব্রাউজারের ডেটা মুছে এগুলো সরিয়ে ফেলতে পারেন। এই টুল শুধু কনট্রাস্ট রেশিওর হিসাব করে; পূর্ণাঙ্গ অ্যাক্সেসিবিলিটি অডিটে ফন্ট বাছাই, স্পেসিং আর নন-টেক্সট উপাদানও বিবেচনায় আসে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -463,7 +498,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que acontece com cores idênticas ou outros casos limítrofes?",
     "faq.a4": "Comparar uma cor com ela mesma sempre resulta em uma taxa de 1:1 — a mínima possível — porque não há nenhuma diferença de luminância, então todos os níveis reprovam. Cores muito parecidas, ou cores com a mesma claridade mas matizes diferentes, também podem gerar uma taxa surpreendentemente baixa, já que o contraste depende da luminância, não de quão diferentes as cores parecem a olho nu. Se o seu par reprovar, use o botão de trocar para verificar a direção inversa, ou aplique uma das sugestões, que ajustam a cor do texto mais clara ou mais escura em passos fixos até ultrapassar o limite AA para texto normal.",
     "faq.q5": "Meus dados de cor são enviados ou rastreados?",
-    "faq.a5": "Não. Todo cálculo — analisar os valores hex ou RGB, calcular a luminância relativa e a taxa de contraste, e gerar os tons sugeridos — roda localmente no JavaScript do seu navegador. Nada é enviado a um servidor, não há conta de usuário, e nenhum valor de cor é registrado em lugar nenhum. Suas últimas duas cores ficam salvas apenas no armazenamento local do seu navegador, para estarem lá na próxima vez que você abrir a ferramenta, e você pode apagá-las a qualquer momento limpando os dados do navegador. Esta ferramenta calcula apenas a matemática da taxa de contraste; uma auditoria de acessibilidade completa também considera a escolha de fonte, o espaçamento e elementos não textuais."
+    "faq.a5": "Não. Todo cálculo — analisar os valores hex ou RGB, calcular a luminância relativa e a taxa de contraste, e gerar os tons sugeridos — roda localmente no JavaScript do seu navegador. Nada é enviado a um servidor, não há conta de usuário, e nenhum valor de cor é registrado em lugar nenhum. Suas últimas duas cores ficam salvas apenas no armazenamento local do seu navegador, para estarem lá na próxima vez que você abrir a ferramenta, e você pode apagá-las a qualquer momento limpando os dados do navegador. Esta ferramenta calcula apenas a matemática da taxa de contraste; uma auditoria de acessibilidade completa também considera a escolha de fonte, o espaçamento e elementos não textuais.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -519,7 +559,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что происходит при одинаковых цветах или других пограничных случаях?",
     "faq.a4": "Сравнение цвета с самим собой всегда даёт коэффициент 1:1 — минимально возможный, — поскольку разницы в яркости вообще нет, и все уровни проваливаются. Очень похожие цвета, а также цвета одинаковой светлоты, но разного оттенка, тоже могут дать неожиданно низкий коэффициент, ведь контраст зависит от яркости, а не от того, насколько разными кажутся цвета на глаз. Если ваша пара цветов не проходит проверку, используйте кнопку обмена, чтобы проверить обратное направление, либо примените одну из подсказок — она сдвигает цвет текста светлее или темнее фиксированными шагами, пока не будет достигнут порог AA для обычного текста.",
     "faq.q5": "Отправляются ли или отслеживаются мои данные о цвете?",
-    "faq.a5": "Нет. Все вычисления — разбор значений hex или RGB, расчёт относительной яркости и коэффициента контрастности, а также подбор рекомендуемых оттенков — выполняются локально в JavaScript вашего браузера. Ничего не отправляется на сервер, аккаунт не требуется, и никакие значения цвета нигде не логируются. Два последних выбранных цвета сохраняются только в локальном хранилище вашего браузера, чтобы быть под рукой при следующем открытии инструмента, и вы можете удалить их в любой момент, очистив данные браузера. Этот инструмент вычисляет только коэффициент контрастности; полный аудит доступности учитывает также выбор шрифта, отступы и нетекстовые элементы."
+    "faq.a5": "Нет. Все вычисления — разбор значений hex или RGB, расчёт относительной яркости и коэффициента контрастности, а также подбор рекомендуемых оттенков — выполняются локально в JavaScript вашего браузера. Ничего не отправляется на сервер, аккаунт не требуется, и никакие значения цвета нигде не логируются. Два последних выбранных цвета сохраняются только в локальном хранилище вашего браузера, чтобы быть под рукой при следующем открытии инструмента, и вы можете удалить их в любой момент, очистив данные браузера. Этот инструмент вычисляет только коэффициент контрастности; полный аудит доступности учитывает также выбор шрифта, отступы и нетекстовые элементы.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -575,7 +620,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ایک جیسے رنگوں یا دیگر حدی معاملات میں کیا ہوتا ہے؟",
     "faq.a4": "کسی رنگ کا اپنے آپ سے موازنہ ہمیشہ 1:1 ریشو دیتا ہے — ممکنہ کم ترین قدر — کیونکہ چمک میں کوئی فرق ہی نہیں ہوتا، اس لیے ہر سطح فیل ہوتی ہے۔ بہت ملتے جلتے رنگ، یا ایک جیسی روشنی مگر مختلف ہیو والے رنگ بھی حیران کن حد تک کم ریشو دے سکتے ہیں، کیونکہ کنٹراسٹ چمک پر منحصر ہوتا ہے، نہ کہ آنکھ سے نظر آنے والے فرق پر۔ اگر آپ کا رنگ جوڑا فیل ہو جائے تو الٹی سمت جانچنے کے لیے تبدیلی کا بٹن استعمال کریں، یا تجویز کردہ شیڈز میں سے کوئی ایک لگائیں، جو متن کے رنگ کو مقررہ مراحل میں ہلکا یا گہرا کرتا رہتا ہے یہاں تک کہ عام متن کی AA حد پار ہو جائے۔",
     "faq.q5": "کیا میرے رنگ کا ڈیٹا اپ لوڈ یا ٹریک کیا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر حساب — hex یا RGB اقدار پڑھنا، نسبتی چمک اور کنٹراسٹ ریشو نکالنا، اور تجویز کردہ شیڈز بنانا — مکمل طور پر آپ کے براؤزر کے جاوا اسکرپٹ میں مقامی طور پر ہوتا ہے۔ کچھ بھی سرور کو نہیں بھیجا جاتا، کسی اکاؤنٹ کی ضرورت نہیں، اور کوئی بھی رنگ کی قدر کہیں محفوظ نہیں کی جاتی۔ آپ کے آخری دو رنگ صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں تاکہ اگلی بار ٹول کھولنے پر موجود ہوں، اور آپ کسی بھی وقت براؤزر کا ڈیٹا صاف کر کے انہیں مٹا سکتے ہیں۔ یہ ٹول صرف کنٹراسٹ ریشو کا حساب لگاتا ہے؛ مکمل رسائی آڈٹ میں فونٹ کا انتخاب، فاصلہ اور غیر متنی عناصر بھی شامل ہوتے ہیں۔"
+    "faq.a5": "نہیں۔ ہر حساب — hex یا RGB اقدار پڑھنا، نسبتی چمک اور کنٹراسٹ ریشو نکالنا، اور تجویز کردہ شیڈز بنانا — مکمل طور پر آپ کے براؤزر کے جاوا اسکرپٹ میں مقامی طور پر ہوتا ہے۔ کچھ بھی سرور کو نہیں بھیجا جاتا، کسی اکاؤنٹ کی ضرورت نہیں، اور کوئی بھی رنگ کی قدر کہیں محفوظ نہیں کی جاتی۔ آپ کے آخری دو رنگ صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں تاکہ اگلی بار ٹول کھولنے پر موجود ہوں، اور آپ کسی بھی وقت براؤزر کا ڈیٹا صاف کر کے انہیں مٹا سکتے ہیں۔ یہ ٹول صرف کنٹراسٹ ریشو کا حساب لگاتا ہے؛ مکمل رسائی آڈٹ میں فونٹ کا انتخاب، فاصلہ اور غیر متنی عناصر بھی شامل ہوتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -631,7 +681,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa yang terjadi jika warnanya identik atau kasus batas lainnya?",
     "faq.a4": "Memeriksa suatu warna terhadap dirinya sendiri selalu menghasilkan rasio 1:1 — nilai minimum yang mungkin — karena tidak ada perbedaan luminansi sama sekali, sehingga semua level gagal. Warna yang sangat mirip, atau warna dengan kecerahan sama tetapi corak berbeda, juga bisa menghasilkan rasio yang mengejutkan rendahnya, karena kontras bergantung pada luminansi, bukan seberapa berbeda tampilannya secara kasat mata. Jika pasangan warna Anda gagal, gunakan tombol tukar untuk memeriksa arah sebaliknya, atau terapkan salah satu saran, yang menggeser warna teks lebih terang atau lebih gelap dalam langkah tetap hingga mencapai ambang AA untuk teks normal.",
     "faq.q5": "Apakah data warna saya diunggah atau dilacak?",
-    "faq.a5": "Tidak. Setiap perhitungan — mengurai nilai hex atau RGB, menghitung luminansi relatif dan rasio kontras, serta menghasilkan corak yang disarankan — berjalan secara lokal di JavaScript browser Anda. Tidak ada yang dikirim ke server, tidak perlu akun, dan tidak ada nilai warna yang dicatat di mana pun. Dua warna terakhir Anda hanya disimpan di penyimpanan lokal browser Anda agar tetap ada saat Anda membuka alat ini lagi, dan Anda bisa menghapusnya kapan saja dengan membersihkan data browser. Alat ini hanya menghitung rasio kontras; audit aksesibilitas yang lengkap juga mempertimbangkan pemilihan font, jarak, dan elemen non-teks."
+    "faq.a5": "Tidak. Setiap perhitungan — mengurai nilai hex atau RGB, menghitung luminansi relatif dan rasio kontras, serta menghasilkan corak yang disarankan — berjalan secara lokal di JavaScript browser Anda. Tidak ada yang dikirim ke server, tidak perlu akun, dan tidak ada nilai warna yang dicatat di mana pun. Dua warna terakhir Anda hanya disimpan di penyimpanan lokal browser Anda agar tetap ada saat Anda membuka alat ini lagi, dan Anda bisa menghapusnya kapan saja dengan membersihkan data browser. Alat ini hanya menghitung rasio kontras; audit aksesibilitas yang lengkap juga mempertimbangkan pemilihan font, jarak, dan elemen non-teks.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -687,7 +742,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was passiert bei identischen Farben oder anderen Grenzfällen?",
     "faq.a4": "Eine Farbe gegen sich selbst zu prüfen ergibt immer ein Verhältnis von 1:1 — das niedrigstmögliche —, weil es überhaupt keinen Leuchtdichteunterschied gibt, sodass alle Stufen durchfallen. Sehr ähnliche Farben oder Farben mit gleicher Helligkeit, aber unterschiedlichem Farbton, können ebenfalls ein überraschend niedriges Verhältnis ergeben, da Kontrast von der Leuchtdichte abhängt und nicht davon, wie unterschiedlich zwei Farben mit bloßem Auge wirken. Wenn dein Farbpaar durchfällt, nutze die Tausch-Schaltfläche, um die umgekehrte Richtung zu prüfen, oder wende einen der vorgeschlagenen Farbtöne an, der die Textfarbe in festen Schritten heller oder dunkler macht, bis die AA-Schwelle für normalen Text erreicht ist.",
     "faq.q5": "Werden meine Farbdaten hochgeladen oder verfolgt?",
-    "faq.a5": "Nein. Jede Berechnung — das Einlesen der Hex- oder RGB-Werte, die Berechnung von relativer Leuchtdichte und Kontrastverhältnis sowie die Erzeugung der Farbvorschläge — läuft lokal im JavaScript deines Browsers ab. Nichts wird an einen Server gesendet, es gibt kein Konto, und keine Farbwerte werden irgendwo protokolliert. Deine letzten beiden Farben werden nur im lokalen Speicher deines Browsers abgelegt, damit sie beim nächsten Öffnen wieder da sind, und du kannst sie jederzeit löschen, indem du deine Browserdaten leerst. Dieses Tool berechnet nur das Kontrastverhältnis; eine vollständige Barrierefreiheitsprüfung berücksichtigt auch Schriftwahl, Abstände und nicht-textliche Elemente."
+    "faq.a5": "Nein. Jede Berechnung — das Einlesen der Hex- oder RGB-Werte, die Berechnung von relativer Leuchtdichte und Kontrastverhältnis sowie die Erzeugung der Farbvorschläge — läuft lokal im JavaScript deines Browsers ab. Nichts wird an einen Server gesendet, es gibt kein Konto, und keine Farbwerte werden irgendwo protokolliert. Deine letzten beiden Farben werden nur im lokalen Speicher deines Browsers abgelegt, damit sie beim nächsten Öffnen wieder da sind, und du kannst sie jederzeit löschen, indem du deine Browserdaten leerst. Dieses Tool berechnet nur das Kontrastverhältnis; eine vollständige Barrierefreiheitsprüfung berücksichtigt auch Schriftwahl, Abstände und nicht-textliche Elemente.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -743,7 +803,12 @@ window.I18N_LOCALES = {
     "faq.q4": "同一色や、その他の境界的なケースではどうなりますか？",
     "faq.a4": "同じ色同士を比較すると、輝度の差が全くないため常に1:1（最小値）となり、すべての基準で不合格になります。非常に似た色や、明度は同じでも色相が異なる色の組み合わせも、意外に低いコントラスト比になることがあります。コントラストは見た目の印象ではなく輝度に基づくためです。配色が不合格だった場合は、入れ替えボタンで逆方向を確認するか、提案された色味を適用してください。提案は文字色を一定のステップで明るく・暗くしながら、通常テキストのAA基準を満たす地点を探します。",
     "faq.q5": "色のデータはアップロードされたり追跡されたりしますか？",
-    "faq.a5": "いいえ。hexやRGB値の解析、相対輝度とコントラスト比の計算、提案する色味の生成まで、すべての処理はお使いのブラウザ内のJavaScriptだけで完結します。サーバーへの送信は一切なく、アカウント登録も不要で、色の値がどこかに記録されることもありません。直近の2色はブラウザのローカルストレージにのみ保存され、次回開いたときにすぐ使えるようになっていますが、ブラウザのデータを削除すればいつでも消去できます。本ツールが計算するのはコントラスト比のみであり、完全なアクセシビリティ監査ではフォント選び、余白、非テキスト要素なども考慮する必要があります。"
+    "faq.a5": "いいえ。hexやRGB値の解析、相対輝度とコントラスト比の計算、提案する色味の生成まで、すべての処理はお使いのブラウザ内のJavaScriptだけで完結します。サーバーへの送信は一切なく、アカウント登録も不要で、色の値がどこかに記録されることもありません。直近の2色はブラウザのローカルストレージにのみ保存され、次回開いたときにすぐ使えるようになっていますが、ブラウザのデータを削除すればいつでも消去できます。本ツールが計算するのはコントラスト比のみであり、完全なアクセシビリティ監査ではフォント選び、余白、非テキスト要素なども考慮する必要があります。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -799,6 +864,11 @@ window.I18N_LOCALES = {
     "faq.q4": "동일한 색상이거나 그 밖의 경계 사례에서는 어떻게 되나요?",
     "faq.a4": "같은 색상끼리 비교하면 휘도 차이가 전혀 없기 때문에 명암비는 항상 1:1(가능한 최솟값)이 되어 모든 등급에서 미달합니다. 매우 비슷한 색상이나, 명도는 같지만 색상(hue)이 다른 색상 조합도 의외로 낮은 명암비가 나올 수 있는데, 명암비는 눈으로 봤을 때 얼마나 달라 보이는지가 아니라 휘도에 좌우되기 때문입니다. 조합이 기준에 미달한다면 서로 바꾸기 버튼으로 반대 방향을 확인하거나, 제안된 색조 중 하나를 적용해 보세요. 제안 기능은 텍스트 색상의 명도를 일정한 단계로 밝게 또는 어둡게 조정해 일반 텍스트 AA 기준을 통과하는 지점을 찾아줍니다.",
     "faq.q5": "제 색상 데이터가 업로드되거나 추적되나요?",
-    "faq.a5": "아니요. hex/RGB 값 해석부터 상대 휘도·명암비 계산, 추천 색조 생성까지 모든 계산은 브라우저의 자바스크립트 안에서만 이루어집니다. 서버로 전송되는 데이터는 없고, 계정도 필요 없으며, 어떤 색상 값도 어디에도 기록되지 않습니다. 마지막으로 입력한 두 색상은 다음에 도구를 열었을 때 이어서 쓸 수 있도록 브라우저의 로컬 스토리지에만 저장되며, 언제든 브라우저 데이터를 지워 삭제할 수 있습니다. 이 도구는 명암비 수치만 계산하며, 완전한 접근성 감사에는 글꼴 선택, 여백, 텍스트 외 요소도 함께 고려해야 합니다."
+    "faq.a5": "아니요. hex/RGB 값 해석부터 상대 휘도·명암비 계산, 추천 색조 생성까지 모든 계산은 브라우저의 자바스크립트 안에서만 이루어집니다. 서버로 전송되는 데이터는 없고, 계정도 필요 없으며, 어떤 색상 값도 어디에도 기록되지 않습니다. 마지막으로 입력한 두 색상은 다음에 도구를 열었을 때 이어서 쓸 수 있도록 브라우저의 로컬 스토리지에만 저장되며, 언제든 브라우저 데이터를 지워 삭제할 수 있습니다. 이 도구는 명암비 수치만 계산하며, 완전한 접근성 감사에는 글꼴 선택, 여백, 텍스트 외 요소도 함께 고려해야 합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

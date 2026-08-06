@@ -100,4 +100,12 @@
     });
     if (any && fields[0]) fields[0].focus();
   });
+
+  /* v2.1: 언어 전환 시 ux 부가 문구 재렌더 (2026-08-06) */
+  document.addEventListener("i18n:change", function () {
+    var ex = document.getElementById("ux-example");
+    if (ex) ex.textContent = t("ux.example", "Try an example");
+    var sb = document.getElementById("ux-share");
+    if (sb) { var sl = t("ux.share", "Share this tool"); sb.setAttribute("aria-label", sl); sb.title = sl; }
+  });
 })();

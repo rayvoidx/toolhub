@@ -80,7 +80,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What is absolute zero?",
     "faq.a4": "Absolute zero is the lowest temperature possible: −273.15 °C, −459.67 °F, or 0 K. At that point molecular motion reaches its theoretical minimum, so nothing can get colder. This converter shows values below absolute zero for reference but flags them with a warning, because no real substance can actually reach such a temperature.",
     "faq.q5": "Are the numbers I enter sent to a server?",
-    "faq.a5": "No. This temperature converter runs entirely in your browser using plain JavaScript — every Celsius, Fahrenheit and Kelvin calculation happens on your device. Nothing you type is uploaded, stored or tracked, and the tool keeps working offline once the page has loaded."
+    "faq.a5": "No. This temperature converter runs entirely in your browser using plain JavaScript — every Celsius, Fahrenheit and Kelvin calculation happens on your device. Nothing you type is uploaded, stored or tracked, and the tool keeps working offline once the page has loaded.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -145,7 +150,12 @@ window.I18N_LOCALES = {
     "faq.q4": "什么是绝对零度？",
     "faq.a4": "绝对零度是可能的最低温度：−273.15 °C、−459.67 °F 或 0 K。在该点分子运动达到理论最小值，因此没有比它更冷的温度。本换算器会显示低于绝对零度的数值以供参考，但会用警告标注，因为没有真实物质能达到这样的温度。",
     "faq.q5": "我输入的数字会发送到服务器吗？",
-    "faq.a5": "不会。这个温度换算器完全在你的浏览器中用纯 JavaScript 运行 —— 每一次摄氏、华氏和开尔文的换算都在你的设备上完成。你输入的内容不会被上传、存储或追踪，页面加载后即使离线也能使用。"
+    "faq.a5": "不会。这个温度换算器完全在你的浏览器中用纯 JavaScript 运行 —— 每一次摄氏、华氏和开尔文的换算都在你的设备上完成。你输入的内容不会被上传、存储或追踪，页面加载后即使离线也能使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -210,7 +220,12 @@ window.I18N_LOCALES = {
     "faq.q4": "परम शून्य क्या है?",
     "faq.a4": "परम शून्य संभव न्यूनतम तापमान है: −273.15 °C, −459.67 °F, या 0 K। उस बिंदु पर आणविक गति अपने सैद्धांतिक न्यूनतम पर पहुँच जाती है, इसलिए इससे ठंडा कुछ नहीं हो सकता। यह कन्वर्टर संदर्भ के लिए परम शून्य से नीचे के मान दिखाता है पर उन्हें चेतावनी के साथ चिह्नित करता है, क्योंकि कोई वास्तविक पदार्थ इतना ठंडा नहीं हो सकता।",
     "faq.q5": "क्या मेरे दर्ज किए गए अंक सर्वर पर भेजे जाते हैं?",
-    "faq.a5": "नहीं। यह तापमान कन्वर्टर पूरी तरह आपके ब्राउज़र में साधारण JavaScript से चलता है — हर सेल्सियस, फ़ारेनहाइट और केल्विन गणना आपके डिवाइस पर होती है। आपका टाइप किया कुछ भी अपलोड, संग्रहीत या ट्रैक नहीं होता, और पेज लोड होने के बाद टूल ऑफ़लाइन भी काम करता है।"
+    "faq.a5": "नहीं। यह तापमान कन्वर्टर पूरी तरह आपके ब्राउज़र में साधारण JavaScript से चलता है — हर सेल्सियस, फ़ारेनहाइट और केल्विन गणना आपके डिवाइस पर होती है। आपका टाइप किया कुछ भी अपलोड, संग्रहीत या ट्रैक नहीं होता, और पेज लोड होने के बाद टूल ऑफ़लाइन भी काम करता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -275,7 +290,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué es el cero absoluto?",
     "faq.a4": "El cero absoluto es la temperatura más baja posible: −273,15 °C, −459,67 °F o 0 K. En ese punto el movimiento molecular alcanza su mínimo teórico, así que nada puede enfriarse más. Este conversor muestra valores por debajo del cero absoluto como referencia, pero los marca con una advertencia, porque ninguna sustancia real puede alcanzar esa temperatura.",
     "faq.q5": "¿Los números que escribo se envían a un servidor?",
-    "faq.a5": "No. Este conversor de temperatura funciona por completo en tu navegador con JavaScript sencillo: cada cálculo de Celsius, Fahrenheit y Kelvin ocurre en tu dispositivo. Nada de lo que escribes se sube, guarda ni rastrea, y la herramienta sigue funcionando sin conexión una vez cargada la página."
+    "faq.a5": "No. Este conversor de temperatura funciona por completo en tu navegador con JavaScript sencillo: cada cálculo de Celsius, Fahrenheit y Kelvin ocurre en tu dispositivo. Nada de lo que escribes se sube, guarda ni rastrea, y la herramienta sigue funcionando sin conexión una vez cargada la página.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -340,7 +360,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هو الصفر المطلق؟",
     "faq.a4": "الصفر المطلق هو أدنى درجة حرارة ممكنة: −273.15 °C أو −459.67 °F أو 0 K. عند تلك النقطة تصل حركة الجزيئات إلى حدّها الأدنى النظري، فلا يمكن لأي شيء أن يصير أبرد. يعرض هذا المحوّل قيمًا أقل من الصفر المطلق للاطلاع لكنه ينبّه إليها بتحذير، إذ لا يمكن لأي مادة حقيقية بلوغ هذه الحرارة.",
     "faq.q5": "هل تُرسَل الأرقام التي أُدخلها إلى خادم؟",
-    "faq.a5": "لا. يعمل هذا المحوّل بالكامل داخل متصفحك بلغة JavaScript بسيطة — كل عمليات تحويل سلسيوس وفهرنهايت وكلفن تجري على جهازك. لا يُرفَع ما تكتبه ولا يُخزَّن ولا يُتتبَّع، وتظل الأداة تعمل دون اتصال بمجرد تحميل الصفحة."
+    "faq.a5": "لا. يعمل هذا المحوّل بالكامل داخل متصفحك بلغة JavaScript بسيطة — كل عمليات تحويل سلسيوس وفهرنهايت وكلفن تجري على جهازك. لا يُرفَع ما تكتبه ولا يُخزَّن ولا يُتتبَّع، وتظل الأداة تعمل دون اتصال بمجرد تحميل الصفحة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -405,7 +430,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qu'est-ce que le zéro absolu ?",
     "faq.a4": "Le zéro absolu est la température la plus basse possible : −273,15 °C, −459,67 °F ou 0 K. À ce point, le mouvement moléculaire atteint son minimum théorique : rien ne peut être plus froid. Ce convertisseur affiche des valeurs sous le zéro absolu à titre indicatif mais les signale par un avertissement, car aucune substance réelle ne peut atteindre une telle température.",
     "faq.q5": "Les nombres que je saisis sont-ils envoyés à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur de température fonctionne entièrement dans votre navigateur en JavaScript simple : chaque calcul Celsius, Fahrenheit et Kelvin se fait sur votre appareil. Rien de ce que vous saisissez n'est téléversé, stocké ou suivi, et l'outil continue de fonctionner hors ligne une fois la page chargée."
+    "faq.a5": "Non. Ce convertisseur de température fonctionne entièrement dans votre navigateur en JavaScript simple : chaque calcul Celsius, Fahrenheit et Kelvin se fait sur votre appareil. Rien de ce que vous saisissez n'est téléversé, stocké ou suivi, et l'outil continue de fonctionner hors ligne une fois la page chargée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -470,7 +500,12 @@ window.I18N_LOCALES = {
     "faq.q4": "পরম শূন্য কী?",
     "faq.a4": "পরম শূন্য হলো সম্ভাব্য সর্বনিম্ন তাপমাত্রা: −273.15 °C, −459.67 °F, বা 0 K। ওই বিন্দুতে অণুর গতি তাত্ত্বিক সর্বনিম্নে পৌঁছায়, তাই এর চেয়ে ঠান্ডা কিছু হতে পারে না। এই রূপান্তরকারী তথ্যের জন্য পরম শূন্যের নিচের মান দেখায়, তবে সতর্কবার্তা দিয়ে চিহ্নিত করে, কারণ কোনো বাস্তব পদার্থ এত ঠান্ডা হতে পারে না।",
     "faq.q5": "আমি যে সংখ্যা লিখি তা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই তাপমাত্রা রূপান্তরকারী সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript দিয়ে চলে — প্রতিটি সেলসিয়াস, ফারেনহাইট ও কেলভিন হিসাব আপনার ডিভাইসেই হয়। আপনার লেখা কিছুই আপলোড, সংরক্ষণ বা ট্র্যাক করা হয় না, এবং পেজ লোড হওয়ার পর টুলটি অফলাইনেও কাজ করে।"
+    "faq.a5": "না। এই তাপমাত্রা রূপান্তরকারী সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript দিয়ে চলে — প্রতিটি সেলসিয়াস, ফারেনহাইট ও কেলভিন হিসাব আপনার ডিভাইসেই হয়। আপনার লেখা কিছুই আপলোড, সংরক্ষণ বা ট্র্যাক করা হয় না, এবং পেজ লোড হওয়ার পর টুলটি অফলাইনেও কাজ করে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -535,7 +570,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que é o zero absoluto?",
     "faq.a4": "O zero absoluto é a menor temperatura possível: −273,15 °C, −459,67 °F ou 0 K. Nesse ponto o movimento molecular atinge o mínimo teórico, então nada pode ficar mais frio. Este conversor mostra valores abaixo do zero absoluto como referência, mas os marca com um aviso, porque nenhuma substância real pode alcançar tal temperatura.",
     "faq.q5": "Os números que eu digito são enviados a um servidor?",
-    "faq.a5": "Não. Este conversor de temperatura funciona inteiramente no seu navegador com JavaScript simples — cada cálculo de Celsius, Fahrenheit e Kelvin acontece no seu dispositivo. Nada do que você digita é enviado, armazenado ou rastreado, e a ferramenta continua funcionando offline depois que a página carrega."
+    "faq.a5": "Não. Este conversor de temperatura funciona inteiramente no seu navegador com JavaScript simples — cada cálculo de Celsius, Fahrenheit e Kelvin acontece no seu dispositivo. Nada do que você digita é enviado, armazenado ou rastreado, e a ferramenta continua funcionando offline depois que a página carrega.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -600,7 +640,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что такое абсолютный ноль?",
     "faq.a4": "Абсолютный ноль — самая низкая возможная температура: −273,15 °C, −459,67 °F или 0 K. В этой точке движение молекул достигает теоретического минимума, поэтому ничто не может стать холоднее. Конвертер показывает значения ниже абсолютного нуля для справки, но помечает их предупреждением, ведь ни одно реальное вещество не может достичь такой температуры.",
     "faq.q5": "Отправляются ли введённые числа на сервер?",
-    "faq.a5": "Нет. Этот конвертер температуры работает полностью в вашем браузере на простом JavaScript — каждый расчёт Цельсия, Фаренгейта и Кельвина происходит на вашем устройстве. Ничего из введённого не загружается, не сохраняется и не отслеживается, а инструмент продолжает работать офлайн после загрузки страницы."
+    "faq.a5": "Нет. Этот конвертер температуры работает полностью в вашем браузере на простом JavaScript — каждый расчёт Цельсия, Фаренгейта и Кельвина происходит на вашем устройстве. Ничего из введённого не загружается, не сохраняется и не отслеживается, а инструмент продолжает работать офлайн после загрузки страницы.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -665,7 +710,12 @@ window.I18N_LOCALES = {
     "faq.q4": "مطلق صفر کیا ہے؟",
     "faq.a4": "مطلق صفر ممکنہ کم ترین درجہ حرارت ہے: −273.15 °C، −459.67 °F، یا 0 K۔ اس نقطے پر سالماتی حرکت اپنی نظری کم ترین حد کو پہنچ جاتی ہے، اس لیے اس سے ٹھنڈا کچھ نہیں ہو سکتا۔ یہ کنورٹر حوالے کے لیے مطلق صفر سے نیچے کی اقدار دکھاتا ہے مگر انہیں تنبیہ کے ساتھ نشان زد کرتا ہے، کیونکہ کوئی حقیقی مادہ اتنا ٹھنڈا نہیں ہو سکتا۔",
     "faq.q5": "کیا میرے درج کردہ اعداد سرور پر بھیجے جاتے ہیں؟",
-    "faq.a5": "نہیں۔ یہ درجہ حرارت کنورٹر مکمل طور پر آپ کے براؤزر میں سادہ JavaScript سے چلتا ہے — ہر سیلسیئس، فارن ہائٹ اور کیلون کا حساب آپ کے آلے پر ہوتا ہے۔ آپ کا لکھا کچھ بھی اپ لوڈ، محفوظ یا ٹریک نہیں ہوتا، اور صفحہ لوڈ ہونے کے بعد ٹول آف لائن بھی کام کرتا ہے۔"
+    "faq.a5": "نہیں۔ یہ درجہ حرارت کنورٹر مکمل طور پر آپ کے براؤزر میں سادہ JavaScript سے چلتا ہے — ہر سیلسیئس، فارن ہائٹ اور کیلون کا حساب آپ کے آلے پر ہوتا ہے۔ آپ کا لکھا کچھ بھی اپ لوڈ، محفوظ یا ٹریک نہیں ہوتا، اور صفحہ لوڈ ہونے کے بعد ٹول آف لائن بھی کام کرتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -730,7 +780,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa itu nol mutlak?",
     "faq.a4": "Nol mutlak adalah suhu terendah yang mungkin: −273,15 °C, −459,67 °F, atau 0 K. Pada titik itu gerak molekul mencapai minimum teoretisnya, sehingga tidak ada yang bisa lebih dingin. Konverter ini menampilkan nilai di bawah nol mutlak sebagai rujukan tetapi menandainya dengan peringatan, karena tidak ada zat nyata yang bisa sedingin itu.",
     "faq.q5": "Apakah angka yang saya masukkan dikirim ke server?",
-    "faq.a5": "Tidak. Konverter suhu ini berjalan sepenuhnya di peramban Anda dengan JavaScript biasa — setiap perhitungan Celsius, Fahrenheit, dan Kelvin terjadi di perangkat Anda. Apa pun yang Anda ketik tidak diunggah, disimpan, atau dilacak, dan alat ini tetap bekerja luring setelah halaman dimuat."
+    "faq.a5": "Tidak. Konverter suhu ini berjalan sepenuhnya di peramban Anda dengan JavaScript biasa — setiap perhitungan Celsius, Fahrenheit, dan Kelvin terjadi di perangkat Anda. Apa pun yang Anda ketik tidak diunggah, disimpan, atau dilacak, dan alat ini tetap bekerja luring setelah halaman dimuat.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -795,7 +850,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist der absolute Nullpunkt?",
     "faq.a4": "Der absolute Nullpunkt ist die tiefstmögliche Temperatur: −273,15 °C, −459,67 °F oder 0 K. An diesem Punkt erreicht die Molekülbewegung ihr theoretisches Minimum, kälter geht es nicht. Dieser Umrechner zeigt Werte unter dem absoluten Nullpunkt zur Orientierung an, kennzeichnet sie aber mit einem Warnhinweis, denn keine reale Substanz kann so kalt werden.",
     "faq.q5": "Werden die eingegebenen Zahlen an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Temperatur-Umrechner läuft vollständig in deinem Browser mit reinem JavaScript — jede Umrechnung von Celsius, Fahrenheit und Kelvin geschieht auf deinem Gerät. Nichts, was du eingibst, wird hochgeladen, gespeichert oder verfolgt, und das Tool funktioniert nach dem Laden der Seite auch offline."
+    "faq.a5": "Nein. Dieser Temperatur-Umrechner läuft vollständig in deinem Browser mit reinem JavaScript — jede Umrechnung von Celsius, Fahrenheit und Kelvin geschieht auf deinem Gerät. Nichts, was du eingibst, wird hochgeladen, gespeichert oder verfolgt, und das Tool funktioniert nach dem Laden der Seite auch offline.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -860,7 +920,12 @@ window.I18N_LOCALES = {
     "faq.q4": "絶対零度とは？",
     "faq.a4": "絶対零度は可能な最低温度で、−273.15 °C、−459.67 °F、0 K です。この点で分子運動は理論上の最小に達し、これより冷たくはなれません。この換算ツールは参考として絶対零度未満の値も表示しますが、実在する物質はそこまで冷えないため、警告付きで示します。",
     "faq.q5": "入力した数値はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この温度換算ツールは純粋な JavaScript で完全にブラウザ内で動作し、摂氏・華氏・ケルビンの計算はすべてお使いの端末で行われます。入力内容がアップロード・保存・追跡されることはなく、ページを読み込めばオフラインでも動作します。"
+    "faq.a5": "いいえ。この温度換算ツールは純粋な JavaScript で完全にブラウザ内で動作し、摂氏・華氏・ケルビンの計算はすべてお使いの端末で行われます。入力内容がアップロード・保存・追跡されることはなく、ページを読み込めばオフラインでも動作します。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -925,6 +990,11 @@ window.I18N_LOCALES = {
     "faq.q4": "절대영도란 무엇인가요?",
     "faq.a4": "절대영도는 가능한 가장 낮은 온도로 −273.15 °C, −459.67 °F, 0 K입니다. 이 지점에서 분자 운동이 이론상 최소에 이르러 더 차가워질 수 없습니다. 이 변환기는 참고를 위해 절대영도 미만 값도 보여 주지만, 실제 물질은 그렇게 차가워질 수 없으므로 경고와 함께 표시합니다.",
     "faq.q5": "입력한 숫자가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 온도 변환기는 순수 자바스크립트로 브라우저 안에서만 동작하며, 섭씨·화씨·켈빈 계산은 모두 사용자의 기기에서 이뤄집니다. 입력한 내용은 업로드·저장·추적되지 않고, 페이지를 한 번 불러오면 오프라인에서도 작동합니다."
+    "faq.a5": "아니요. 이 온도 변환기는 순수 자바스크립트로 브라우저 안에서만 동작하며, 섭씨·화씨·켈빈 계산은 모두 사용자의 기기에서 이뤄집니다. 입력한 내용은 업로드·저장·추적되지 않고, 페이지를 한 번 불러오면 오프라인에서도 작동합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

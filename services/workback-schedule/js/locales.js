@@ -115,7 +115,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "Row {n}",
     "tool.res.excluded": "{n} rows excluded",
     "tool.res.allExcluded": "All {n} rows were excluded — nothing left to schedule.",
-    "tool.sampleRows": "Creative review\t3\tDana\nPrint production\t5\tVendor\nStore setup\t2\tOps"
+    "tool.sampleRows": "Creative review\t3\tDana\nPrint production\t5\tVendor\nStore setup\t2\tOps",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -223,7 +228,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "第 {n} 行",
     "tool.res.excluded": "已排除 {n} 行",
     "tool.res.allExcluded": "全部 {n} 行均被排除 —— 没有可排期的内容。",
-    "tool.sampleRows": "创意评审\t3\tDana\n印刷制作\t5\t供应商\n门店布置\t2\t运营"
+    "tool.sampleRows": "创意评审\t3\tDana\n印刷制作\t5\t供应商\n门店布置\t2\t运营",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -331,7 +341,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "पंक्ति {n}",
     "tool.res.excluded": "{n} पंक्तियां छोड़ी गईं",
     "tool.res.allExcluded": "सभी {n} पंक्तियां छोड़ी गईं — शेड्यूल करने को कुछ नहीं बचा।",
-    "tool.sampleRows": "क्रिएटिव समीक्षा\t3\tDana\nप्रिंट उत्पादन\t5\tवेंडर\nस्टोर सेटअप\t2\tऑप्स"
+    "tool.sampleRows": "क्रिएटिव समीक्षा\t3\tDana\nप्रिंट उत्पादन\t5\tवेंडर\nस्टोर सेटअप\t2\tऑप्स",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -439,7 +454,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "Fila {n}",
     "tool.res.excluded": "{n} filas excluidas",
     "tool.res.allExcluded": "Se excluyeron las {n} filas: no queda nada que programar.",
-    "tool.sampleRows": "Revisión creativa\t3\tDana\nProducción de impresión\t5\tProveedor\nMontaje de tienda\t2\tOperaciones"
+    "tool.sampleRows": "Revisión creativa\t3\tDana\nProducción de impresión\t5\tProveedor\nMontaje de tienda\t2\tOperaciones",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -547,7 +567,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "الصف {n}",
     "tool.res.excluded": "{n} صفوف مستبعَدة",
     "tool.res.allExcluded": "استُبعِدت جميع الصفوف الـ{n} — لم يبقَ ما يُجدوَل.",
-    "tool.sampleRows": "مراجعة إبداعية\t3\tDana\nإنتاج الطباعة\t5\tمورّد\nتجهيز المتجر\t2\tالعمليات"
+    "tool.sampleRows": "مراجعة إبداعية\t3\tDana\nإنتاج الطباعة\t5\tمورّد\nتجهيز المتجر\t2\tالعمليات",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -655,7 +680,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "Ligne {n}",
     "tool.res.excluded": "{n} lignes exclues",
     "tool.res.allExcluded": "Les {n} lignes ont toutes été exclues — plus rien à planifier.",
-    "tool.sampleRows": "Revue créative\t3\tDana\nProduction d'impression\t5\tPrestataire\nAménagement du magasin\t2\tOps"
+    "tool.sampleRows": "Revue créative\t3\tDana\nProduction d'impression\t5\tPrestataire\nAménagement du magasin\t2\tOps",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -763,7 +793,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "সারি {n}",
     "tool.res.excluded": "{n}টি সারি বাদ দেওয়া হয়েছে",
     "tool.res.allExcluded": "সব {n}টি সারি বাদ দেওয়া হয়েছে — শিডিউল করার মতো কিছু নেই।",
-    "tool.sampleRows": "ক্রিয়েটিভ রিভিউ\t3\tDana\nপ্রিন্ট প্রোডাকশন\t5\tভেন্ডর\nস্টোর সেটআপ\t2\tঅপস"
+    "tool.sampleRows": "ক্রিয়েটিভ রিভিউ\t3\tDana\nপ্রিন্ট প্রোডাকশন\t5\tভেন্ডর\nস্টোর সেটআপ\t2\tঅপস",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -871,7 +906,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "Linha {n}",
     "tool.res.excluded": "{n} linhas excluídas",
     "tool.res.allExcluded": "Todas as {n} linhas foram excluídas — nada sobrou para agendar.",
-    "tool.sampleRows": "Revisão criativa\t3\tDana\nProdução de impressão\t5\tFornecedor\nMontagem da loja\t2\tOperações"
+    "tool.sampleRows": "Revisão criativa\t3\tDana\nProdução de impressão\t5\tFornecedor\nMontagem da loja\t2\tOperações",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -979,7 +1019,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "Строка {n}",
     "tool.res.excluded": "Исключено строк: {n}",
     "tool.res.allExcluded": "Все {n} строк исключены — планировать нечего.",
-    "tool.sampleRows": "Креативная проверка\t3\tDana\nПечатное производство\t5\tПодрядчик\nОформление магазина\t2\tОперации"
+    "tool.sampleRows": "Креативная проверка\t3\tDana\nПечатное производство\t5\tПодрядчик\nОформление магазина\t2\tОперации",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1087,7 +1132,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "قطار {n}",
     "tool.res.excluded": "{n} قطاریں خارج کی گئیں",
     "tool.res.allExcluded": "تمام {n} قطاریں خارج کر دی گئیں — شیڈول کرنے کو کچھ باقی نہیں۔",
-    "tool.sampleRows": "کریئیٹو جائزہ\t3\tDana\nپرنٹ پروڈکشن\t5\tوینڈر\nاسٹور سیٹ اپ\t2\tآپس"
+    "tool.sampleRows": "کریئیٹو جائزہ\t3\tDana\nپرنٹ پروڈکشن\t5\tوینڈر\nاسٹور سیٹ اپ\t2\tآپس",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1195,7 +1245,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "Baris {n}",
     "tool.res.excluded": "{n} baris dikecualikan",
     "tool.res.allExcluded": "Semua {n} baris dikecualikan — tidak ada yang tersisa untuk dijadwalkan.",
-    "tool.sampleRows": "Tinjauan kreatif\t3\tDana\nProduksi cetak\t5\tVendor\nPenataan toko\t2\tOps"
+    "tool.sampleRows": "Tinjauan kreatif\t3\tDana\nProduksi cetak\t5\tVendor\nPenataan toko\t2\tOps",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1303,7 +1358,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "Zeile {n}",
     "tool.res.excluded": "{n} Zeilen ausgeschlossen",
     "tool.res.allExcluded": "Alle {n} Zeilen wurden ausgeschlossen — nichts mehr zu planen.",
-    "tool.sampleRows": "Kreativ-Review\t3\tDana\nDruckproduktion\t5\tDienstleister\nLadeneinrichtung\t2\tOps"
+    "tool.sampleRows": "Kreativ-Review\t3\tDana\nDruckproduktion\t5\tDienstleister\nLadeneinrichtung\t2\tOps",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1411,7 +1471,12 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "{n} 行目",
     "tool.res.excluded": "{n} 行を除外",
     "tool.res.allExcluded": "全 {n} 行が除外されました。スケジュールする対象がありません。",
-    "tool.sampleRows": "クリエイティブ確認\t3\tDANA\n印刷制作\t5\tベンダー\n店舗設営\t2\t運用"
+    "tool.sampleRows": "クリエイティブ確認\t3\tDANA\n印刷制作\t5\tベンダー\n店舗設営\t2\t運用",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1519,6 +1584,11 @@ window.I18N_LOCALES = {
     "tool.res.rowLabel": "{n}행",
     "tool.res.excluded": "{n}행 제외됨",
     "tool.res.allExcluded": "전체 {n}행이 제외되었습니다 — 계산할 대상이 없습니다.",
-    "tool.sampleRows": "크리에이티브 검토\t3\t다나\n인쇄 제작\t5\t협력사\n매장 세팅\t2\t운영"
+    "tool.sampleRows": "크리에이티브 검토\t3\t다나\n인쇄 제작\t5\t협력사\n매장 세팅\t2\t운영",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is my text or file uploaded anywhere?",
     "faq.a4": "No. Every hash is computed locally — SHA-1/256/384/512 use the browser's built-in Web Crypto API and files are read with FileReader, so your data never leaves your device. Nothing is uploaded, logged or stored on a server.",
     "faq.q5": "Why does MD5 work here when browsers don't support it?",
-    "faq.a5": "The Web Crypto API deliberately omits MD5, so this hash generator ships a small pure-JavaScript MD5 implementation that runs locally in your browser — no external library or CDN. That's how you still get an MD5 alongside the SHA hashes with zero network calls."
+    "faq.a5": "The Web Crypto API deliberately omits MD5, so this hash generator ships a small pure-JavaScript MD5 implementation that runs locally in your browser — no external library or CDN. That's how you still get an MD5 alongside the SHA hashes with zero network calls.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -115,7 +120,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的文本或文件会被上传吗？",
     "faq.a4": "不会。所有哈希都在本地计算——SHA-1/256/384/512 使用浏览器内置的 Web Crypto API，文件通过 FileReader 读取，你的数据始终留在设备上。不上传、不记录、不在服务器保存。",
     "faq.q5": "浏览器不支持 MD5，为什么这里能用？",
-    "faq.a5": "Web Crypto API 有意不提供 MD5，因此本哈希生成器自带一个小巧的纯 JavaScript MD5 实现，在你的浏览器本地运行——不依赖外部库或 CDN。这样便能在得到 SHA 哈希的同时也得到 MD5，且完全无需网络请求。"
+    "faq.a5": "Web Crypto API 有意不提供 MD5，因此本哈希生成器自带一个小巧的纯 JavaScript MD5 实现，在你的浏览器本地运行——不依赖外部库或 CDN。这样便能在得到 SHA 哈希的同时也得到 MD5，且完全无需网络请求。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरा टेक्स्ट या फ़ाइल कहीं अपलोड होती है?",
     "faq.a4": "नहीं। हर हैश स्थानीय रूप से बनता है — SHA-1/256/384/512 ब्राउज़र के अंतर्निहित Web Crypto API का उपयोग करते हैं और फ़ाइलें FileReader से पढ़ी जाती हैं, इसलिए आपका डेटा कभी आपके डिवाइस से बाहर नहीं जाता। कुछ भी अपलोड, लॉग या सर्वर पर संग्रहित नहीं होता।",
     "faq.q5": "जब ब्राउज़र MD5 समर्थन नहीं करते, तब यह यहाँ कैसे काम करता है?",
-    "faq.a5": "Web Crypto API जानबूझकर MD5 को छोड़ देता है, इसलिए यह हैश जनरेटर एक छोटा, शुद्ध-JavaScript MD5 कार्यान्वयन साथ लाता है जो आपके ब्राउज़र में स्थानीय रूप से चलता है — कोई बाहरी लाइब्रेरी या CDN नहीं। इसी तरह आपको SHA हैश के साथ MD5 भी मिलता है, वह भी बिना किसी नेटवर्क कॉल के।"
+    "faq.a5": "Web Crypto API जानबूझकर MD5 को छोड़ देता है, इसलिए यह हैश जनरेटर एक छोटा, शुद्ध-JavaScript MD5 कार्यान्वयन साथ लाता है जो आपके ब्राउज़र में स्थानीय रूप से चलता है — कोई बाहरी लाइब्रेरी या CDN नहीं। इसी तरह आपको SHA हैश के साथ MD5 भी मिलता है, वह भी बिना किसी नेटवर्क कॉल के।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -215,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se sube mi texto o archivo a algún sitio?",
     "faq.a4": "No. Cada hash se calcula localmente: SHA-1/256/384/512 usan la Web Crypto API integrada del navegador y los archivos se leen con FileReader, así que tus datos nunca salen de tu dispositivo. Nada se sube, registra ni almacena en un servidor.",
     "faq.q5": "¿Por qué funciona MD5 aquí si los navegadores no lo admiten?",
-    "faq.a5": "La Web Crypto API omite MD5 a propósito, por lo que este generador de hash incluye una pequeña implementación de MD5 en JavaScript puro que se ejecuta localmente en tu navegador, sin librerías externas ni CDN. Así obtienes un MD5 junto a los hashes SHA sin ninguna llamada de red."
+    "faq.a5": "La Web Crypto API omite MD5 a propósito, por lo que este generador de hash incluye una pequeña implementación de MD5 en JavaScript puro que se ejecuta localmente en tu navegador, sin librerías externas ni CDN. Así obtienes un MD5 junto a los hashes SHA sin ninguna llamada de red.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -265,7 +285,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يُرفع نصي أو ملفي إلى أي مكان؟",
     "faq.a4": "لا. تُحسب كل تجزئة محليًا — تستخدم SHA-1/256/384/512 واجهة Web Crypto API المدمجة في المتصفح، وتُقرأ الملفات عبر FileReader، فلا تغادر بياناتك جهازك أبدًا. لا شيء يُرفع أو يُسجَّل أو يُخزَّن على خادم.",
     "faq.q5": "لماذا يعمل MD5 هنا رغم أن المتصفحات لا تدعمه؟",
-    "faq.a5": "تتجاهل واجهة Web Crypto API خوارزمية MD5 عمدًا، لذا يأتي مولّد التجزئة هذا بتنفيذ MD5 صغير بلغة JavaScript خالصة يعمل محليًا داخل متصفحك — دون مكتبة خارجية أو CDN. بذلك تحصل على MD5 إلى جانب تجزئات SHA بلا أي طلب شبكي."
+    "faq.a5": "تتجاهل واجهة Web Crypto API خوارزمية MD5 عمدًا، لذا يأتي مولّد التجزئة هذا بتنفيذ MD5 صغير بلغة JavaScript خالصة يعمل محليًا داخل متصفحك — دون مكتبة خارجية أو CDN. بذلك تحصل على MD5 إلى جانب تجزئات SHA بلا أي طلب شبكي.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -315,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mon texte ou mon fichier est-il envoyé quelque part ?",
     "faq.a4": "Non. Chaque empreinte est calculée localement : SHA-1/256/384/512 utilisent la Web Crypto API intégrée au navigateur et les fichiers sont lus avec FileReader, si bien que vos données ne quittent jamais votre appareil. Rien n'est envoyé, journalisé ni stocké sur un serveur.",
     "faq.q5": "Pourquoi MD5 fonctionne-t-il ici alors que les navigateurs ne le prennent pas en charge ?",
-    "faq.a5": "La Web Crypto API omet délibérément MD5 ; ce générateur de hachage embarque donc une petite implémentation MD5 en JavaScript pur qui s'exécute localement dans votre navigateur — sans bibliothèque externe ni CDN. Vous obtenez ainsi un MD5 à côté des empreintes SHA, sans le moindre appel réseau."
+    "faq.a5": "La Web Crypto API omet délibérément MD5 ; ce générateur de hachage embarque donc une petite implémentation MD5 en JavaScript pur qui s'exécute localement dans votre navigateur — sans bibliothèque externe ni CDN. Vous obtenez ainsi un MD5 à côté des empreintes SHA, sans le moindre appel réseau.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -365,7 +395,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার টেক্সট বা ফাইল কি কোথাও আপলোড হয়?",
     "faq.a4": "না। প্রতিটি হ্যাশ স্থানীয়ভাবে হিসাব হয় — SHA-1/256/384/512 ব্রাউজারের অন্তর্নির্মিত Web Crypto API ব্যবহার করে এবং ফাইল FileReader দিয়ে পড়া হয়, তাই আপনার ডেটা কখনও ডিভাইস ছেড়ে যায় না। কিছুই আপলোড, লগ বা সার্ভারে সংরক্ষণ হয় না।",
     "faq.q5": "ব্রাউজার MD5 সমর্থন না করলেও এখানে এটি কাজ করে কেন?",
-    "faq.a5": "Web Crypto API ইচ্ছাকৃতভাবে MD5 বাদ দেয়, তাই এই হ্যাশ জেনারেটর একটি ছোট, বিশুদ্ধ-JavaScript MD5 বাস্তবায়ন সাথে আনে যা আপনার ব্রাউজারে স্থানীয়ভাবে চলে — কোনো বাহ্যিক লাইব্রেরি বা CDN নেই। এভাবেই SHA হ্যাশের পাশাপাশি MD5-ও পাওয়া যায়, কোনো নেটওয়ার্ক কল ছাড়াই।"
+    "faq.a5": "Web Crypto API ইচ্ছাকৃতভাবে MD5 বাদ দেয়, তাই এই হ্যাশ জেনারেটর একটি ছোট, বিশুদ্ধ-JavaScript MD5 বাস্তবায়ন সাথে আনে যা আপনার ব্রাউজারে স্থানীয়ভাবে চলে — কোনো বাহ্যিক লাইব্রেরি বা CDN নেই। এভাবেই SHA হ্যাশের পাশাপাশি MD5-ও পাওয়া যায়, কোনো নেটওয়ার্ক কল ছাড়াই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meu texto ou arquivo é enviado para algum lugar?",
     "faq.a4": "Não. Cada hash é calculado localmente — SHA-1/256/384/512 usam a Web Crypto API embutida no navegador e os arquivos são lidos com FileReader, então seus dados nunca saem do seu dispositivo. Nada é enviado, registrado ou armazenado em servidor.",
     "faq.q5": "Por que o MD5 funciona aqui se os navegadores não o suportam?",
-    "faq.a5": "A Web Crypto API omite o MD5 de propósito, então este gerador de hash traz uma pequena implementação de MD5 em JavaScript puro que roda localmente no seu navegador — sem biblioteca externa nem CDN. É assim que você obtém um MD5 ao lado dos hashes SHA, sem nenhuma chamada de rede."
+    "faq.a5": "A Web Crypto API omite o MD5 de propósito, então este gerador de hash traz uma pequena implementação de MD5 em JavaScript puro que roda localmente no seu navegador — sem biblioteca externa nem CDN. É assim que você obtém um MD5 ao lado dos hashes SHA, sem nenhuma chamada de rede.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -465,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Загружаются ли мои текст или файл куда-либо?",
     "faq.a4": "Нет. Каждый хеш вычисляется локально — SHA-1/256/384/512 используют встроенный в браузер Web Crypto API, а файлы читаются через FileReader, поэтому ваши данные никогда не покидают устройство. Ничего не загружается, не логируется и не хранится на сервере.",
     "faq.q5": "Почему MD5 работает здесь, если браузеры его не поддерживают?",
-    "faq.a5": "Web Crypto API намеренно не включает MD5, поэтому этот генератор хешей содержит небольшую реализацию MD5 на чистом JavaScript, работающую локально в вашем браузере — без внешних библиотек и CDN. Так вы получаете MD5 вместе с хешами SHA без единого сетевого запроса."
+    "faq.a5": "Web Crypto API намеренно не включает MD5, поэтому этот генератор хешей содержит небольшую реализацию MD5 на чистом JavaScript, работающую локально в вашем браузере — без внешних библиотек и CDN. Так вы получаете MD5 вместе с хешами SHA без единого сетевого запроса.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -515,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میرا متن یا فائل کہیں اپ لوڈ ہوتی ہے؟",
     "faq.a4": "نہیں۔ ہر ہیش مقامی طور پر شمار ہوتا ہے — SHA-1/256/384/512 براؤزر کی اندرونی Web Crypto API استعمال کرتے ہیں اور فائلیں FileReader سے پڑھی جاتی ہیں، اس لیے آپ کا ڈیٹا کبھی آپ کے آلے سے باہر نہیں جاتا۔ کچھ بھی اپ لوڈ، لاگ یا سرور پر محفوظ نہیں ہوتا۔",
     "faq.q5": "جب براؤزر MD5 کی حمایت نہیں کرتے تو یہ یہاں کیوں کام کرتا ہے؟",
-    "faq.a5": "Web Crypto API جان بوجھ کر MD5 کو چھوڑ دیتی ہے، اس لیے یہ ہیش جنریٹر ایک چھوٹا، خالص JavaScript MD5 نفاذ ساتھ لاتا ہے جو آپ کے براؤزر میں مقامی طور پر چلتا ہے — کوئی بیرونی لائبریری یا CDN نہیں۔ اسی طرح آپ کو SHA ہیش کے ساتھ MD5 بھی ملتا ہے، وہ بھی کسی نیٹ ورک کال کے بغیر۔"
+    "faq.a5": "Web Crypto API جان بوجھ کر MD5 کو چھوڑ دیتی ہے، اس لیے یہ ہیش جنریٹر ایک چھوٹا، خالص JavaScript MD5 نفاذ ساتھ لاتا ہے جو آپ کے براؤزر میں مقامی طور پر چلتا ہے — کوئی بیرونی لائبریری یا CDN نہیں۔ اسی طرح آپ کو SHA ہیش کے ساتھ MD5 بھی ملتا ہے، وہ بھی کسی نیٹ ورک کال کے بغیر۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -565,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah teks atau file saya diunggah ke suatu tempat?",
     "faq.a4": "Tidak. Setiap hash dihitung secara lokal — SHA-1/256/384/512 memakai Web Crypto API bawaan peramban dan file dibaca dengan FileReader, sehingga data Anda tidak pernah meninggalkan perangkat. Tidak ada yang diunggah, dicatat, atau disimpan di server.",
     "faq.q5": "Mengapa MD5 berfungsi di sini padahal peramban tidak mendukungnya?",
-    "faq.a5": "Web Crypto API sengaja meniadakan MD5, jadi generator hash ini menyertakan implementasi MD5 kecil berbasis JavaScript murni yang berjalan lokal di peramban Anda — tanpa pustaka eksternal atau CDN. Begitulah Anda tetap mendapat MD5 di samping hash SHA tanpa panggilan jaringan sama sekali."
+    "faq.a5": "Web Crypto API sengaja meniadakan MD5, jadi generator hash ini menyertakan implementasi MD5 kecil berbasis JavaScript murni yang berjalan lokal di peramban Anda — tanpa pustaka eksternal atau CDN. Begitulah Anda tetap mendapat MD5 di samping hash SHA tanpa panggilan jaringan sama sekali.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -615,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Werden mein Text oder meine Datei irgendwohin hochgeladen?",
     "faq.a4": "Nein. Jeder Hash wird lokal berechnet — SHA-1/256/384/512 nutzen die im Browser eingebaute Web Crypto API, und Dateien werden mit FileReader gelesen, sodass Ihre Daten Ihr Gerät nie verlassen. Nichts wird hochgeladen, protokolliert oder auf einem Server gespeichert.",
     "faq.q5": "Warum funktioniert MD5 hier, obwohl Browser es nicht unterstützen?",
-    "faq.a5": "Die Web Crypto API lässt MD5 bewusst weg, daher bringt dieser Hash-Generator eine kleine MD5-Implementierung in reinem JavaScript mit, die lokal in Ihrem Browser läuft — ohne externe Bibliothek oder CDN. So erhalten Sie ein MD5 neben den SHA-Hashes, ganz ohne Netzwerkaufruf."
+    "faq.a5": "Die Web Crypto API lässt MD5 bewusst weg, daher bringt dieser Hash-Generator eine kleine MD5-Implementierung in reinem JavaScript mit, die lokal in Ihrem Browser läuft — ohne externe Bibliothek oder CDN. So erhalten Sie ein MD5 neben den SHA-Hashes, ganz ohne Netzwerkaufruf.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -665,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "私のテキストやファイルはどこかにアップロードされますか？",
     "faq.a4": "いいえ。すべてのハッシュはローカルで計算されます。SHA-1/256/384/512 はブラウザー内蔵の Web Crypto API を使い、ファイルは FileReader で読み込むため、データが端末の外へ出ることはありません。アップロードもログ記録もサーバー保存も一切ありません。",
     "faq.q5": "ブラウザーが MD5 をサポートしていないのに、なぜここでは動くのですか？",
-    "faq.a5": "Web Crypto API は意図的に MD5 を除外しているため、このハッシュ生成ツールは小さな純 JavaScript 製の MD5 実装を同梱し、ブラウザー内でローカルに実行します——外部ライブラリや CDN は不要です。こうして、ネットワーク通信を一切行わずに、SHA ハッシュと並べて MD5 も得られます。"
+    "faq.a5": "Web Crypto API は意図的に MD5 を除外しているため、このハッシュ生成ツールは小さな純 JavaScript 製の MD5 実装を同梱し、ブラウザー内でローカルに実行します——外部ライブラリや CDN は不要です。こうして、ネットワーク通信を一切行わずに、SHA ハッシュと並べて MD5 も得られます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -715,6 +780,11 @@ window.I18N_LOCALES = {
     "faq.q4": "제 텍스트나 파일이 어딘가로 업로드되나요?",
     "faq.a4": "아니요. 모든 해시는 로컬에서 계산됩니다 — SHA-1/256/384/512는 브라우저 내장 Web Crypto API를 쓰고 파일은 FileReader로 읽으므로 데이터가 기기를 벗어나지 않습니다. 아무것도 업로드·기록되거나 서버에 저장되지 않습니다.",
     "faq.q5": "브라우저가 MD5를 지원하지 않는데 왜 여기서는 되나요?",
-    "faq.a5": "Web Crypto API는 의도적으로 MD5를 제외합니다. 그래서 이 해시 생성기는 작은 순수 JavaScript MD5 구현을 내장해 브라우저 안에서 로컬로 실행합니다 — 외부 라이브러리나 CDN이 없습니다. 이렇게 네트워크 호출 없이 SHA 해시와 함께 MD5도 얻을 수 있습니다."
+    "faq.a5": "Web Crypto API는 의도적으로 MD5를 제외합니다. 그래서 이 해시 생성기는 작은 순수 JavaScript MD5 구현을 내장해 브라우저 안에서 로컬로 실행합니다 — 외부 라이브러리나 CDN이 없습니다. 이렇게 네트워크 호출 없이 SHA 해시와 함께 MD5도 얻을 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

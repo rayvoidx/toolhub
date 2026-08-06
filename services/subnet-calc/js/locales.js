@@ -81,7 +81,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I convert a subnet mask like 255.255.255.0 into a CIDR prefix?",
     "faq.a4": "Count the number of 1 bits in the mask's binary form, from the left. 255.255.255.0 in binary is 11111111.11111111.11111111.00000000 — 24 ones followed by 8 zeros — so it's a /24. A valid netmask always has its 1 bits contiguous starting from the left with no gaps; if you type a mask that doesn't follow that pattern, this calculator flags it as invalid rather than guessing. Type the dotted netmask directly into the prefix field and the CIDR number appears automatically alongside the rest of the subnet breakdown.",
     "faq.q5": "Is my IP address sent to a server when I use this calculator?",
-    "faq.a5": "No. Every calculation — parsing the address, deriving the netmask, computing the network, broadcast and usable range — runs locally in your browser's JavaScript. Nothing you type is uploaded, logged, or stored anywhere except your own browser's localStorage (used only to remember your last input for next time). You can look up private or internal network ranges with this subnet calculator without exposing them to the network."
+    "faq.a5": "No. Every calculation — parsing the address, deriving the netmask, computing the network, broadcast and usable range — runs locally in your browser's JavaScript. Nothing you type is uploaded, logged, or stored anywhere except your own browser's localStorage (used only to remember your last input for next time). You can look up private or internal network ranges with this subnet calculator without exposing them to the network.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -147,7 +152,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如何把 255.255.255.0 这样的子网掩码换算成 CIDR 前缀？",
     "faq.a4": "从左边数掩码二进制形式中 1 的个数。255.255.255.0 的二进制是 11111111.11111111.11111111.00000000——24 个 1 后面跟着 8 个 0——所以是 /24。有效的子网掩码，其 1 必须从左边开始连续、中间不能有间断；如果输入的掩码不符合这个规律，这个计算器会将其标记为无效，而不是随意猜测。直接在前缀输入框里填写点分十进制掩码，CIDR 数字会和其余子网信息一起自动出现。",
     "faq.q5": "使用这个计算器时，我的 IP 地址会被发送到服务器吗？",
-    "faq.a5": "不会。解析地址、推算子网掩码、计算网络地址、广播地址和可用范围——每一步都在你浏览器本地的 JavaScript 中运行。你输入的任何内容都不会上传、记录或存储到任何地方，唯一的例外是你自己浏览器的 localStorage（仅用于记住上次输入，方便下次使用）。你可以放心用这个子网计算器查询私有或内网地址段，而不会将它们暴露到网络上。"
+    "faq.a5": "不会。解析地址、推算子网掩码、计算网络地址、广播地址和可用范围——每一步都在你浏览器本地的 JavaScript 中运行。你输入的任何内容都不会上传、记录或存储到任何地方，唯一的例外是你自己浏览器的 localStorage（仅用于记住上次输入，方便下次使用）。你可以放心用这个子网计算器查询私有或内网地址段，而不会将它们暴露到网络上。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -213,7 +223,12 @@ window.I18N_LOCALES = {
     "faq.q4": "255.255.255.0 जैसे सबनेट मास्क को CIDR प्रीफ़िक्स में कैसे बदलें?",
     "faq.a4": "मास्क के बाइनरी रूप में बायीं ओर से 1 बिट्स गिनें। 255.255.255.0 बाइनरी में 11111111.11111111.11111111.00000000 है — 24 एक, फिर 8 शून्य — इसलिए यह /24 है। वैध नेटमास्क में 1 बिट्स हमेशा बायीं ओर से बिना किसी अंतराल के लगातार होते हैं; अगर आप कोई ऐसा मास्क डालें जो इस पैटर्न का पालन न करे, तो यह कैलकुलेटर अनुमान लगाने के बजाय उसे अमान्य बताता है। प्रीफ़िक्स फ़ील्ड में सीधे डॉटेड नेटमास्क टाइप करें, और बाकी सबनेट विवरण के साथ CIDR संख्या अपने आप दिख जाएगी।",
     "faq.q5": "क्या यह कैलकुलेटर इस्तेमाल करते समय मेरा IP पता सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। पता पार्स करना, नेटमास्क निकालना, नेटवर्क, ब्रॉडकास्ट और उपयोग योग्य रेंज की गणना करना — हर हिसाब आपके ब्राउज़र के JavaScript में स्थानीय रूप से होता है। आप जो कुछ भी टाइप करते हैं वह कहीं अपलोड, लॉग या संग्रहीत नहीं होता, सिवाय आपके अपने ब्राउज़र के localStorage के (जो सिर्फ़ अगली बार के लिए आपका आख़िरी इनपुट याद रखने के लिए इस्तेमाल होता है)। आप इस सबनेट कैलकुलेटर से प्राइवेट या इंटरनल नेटवर्क रेंज बिना नेटवर्क पर उजागर किए देख सकते हैं।"
+    "faq.a5": "नहीं। पता पार्स करना, नेटमास्क निकालना, नेटवर्क, ब्रॉडकास्ट और उपयोग योग्य रेंज की गणना करना — हर हिसाब आपके ब्राउज़र के JavaScript में स्थानीय रूप से होता है। आप जो कुछ भी टाइप करते हैं वह कहीं अपलोड, लॉग या संग्रहीत नहीं होता, सिवाय आपके अपने ब्राउज़र के localStorage के (जो सिर्फ़ अगली बार के लिए आपका आख़िरी इनपुट याद रखने के लिए इस्तेमाल होता है)। आप इस सबनेट कैलकुलेटर से प्राइवेट या इंटरनल नेटवर्क रेंज बिना नेटवर्क पर उजागर किए देख सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -279,7 +294,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo convierto una máscara de subred como 255.255.255.0 en un prefijo CIDR?",
     "faq.a4": "Cuenta los bits en 1 de la forma binaria de la máscara, desde la izquierda. 255.255.255.0 en binario es 11111111.11111111.11111111.00000000: 24 unos seguidos de 8 ceros, así que es un /24. Una máscara válida siempre tiene sus bits en 1 contiguos desde la izquierda, sin huecos; si escribes una máscara que no sigue ese patrón, esta calculadora la marca como no válida en lugar de adivinar. Escribe la máscara en el campo de prefijo y el número CIDR aparecerá automáticamente junto al resto del desglose de la subred.",
     "faq.q5": "¿Se envía mi dirección IP a un servidor al usar esta calculadora?",
-    "faq.a5": "No. Cada cálculo —analizar la dirección, obtener la máscara, calcular la red, la difusión y el rango utilizable— se ejecuta localmente en el JavaScript de tu navegador. Nada de lo que escribas se sube, se registra ni se guarda en ningún sitio, salvo en el localStorage de tu propio navegador (que solo se usa para recordar tu última entrada). Puedes consultar rangos de red privados o internos con esta calculadora de subredes sin exponerlos a la red."
+    "faq.a5": "No. Cada cálculo —analizar la dirección, obtener la máscara, calcular la red, la difusión y el rango utilizable— se ejecuta localmente en el JavaScript de tu navegador. Nada de lo que escribas se sube, se registra ni se guarda en ningún sitio, salvo en el localStorage de tu propio navegador (que solo se usa para recordar tu última entrada). Puedes consultar rangos de red privados o internos con esta calculadora de subredes sin exponerlos a la red.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -345,7 +365,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أحوّل قناع شبكة مثل 255.255.255.0 إلى بادئة CIDR؟",
     "faq.a4": "عدّ بتّات الواحد في الشكل الثنائي للقناع، من اليسار. 255.255.255.0 بالثنائي هو 11111111.11111111.11111111.00000000 — 24 واحدًا يتبعها 8 أصفار — لذا فهو /24. القناع الصالح تكون بتّاته الواحدة دائمًا متتالية من اليسار دون فجوات؛ إذا أدخلت قناعًا لا يتبع هذا النمط، تُشير هذه الحاسبة إلى أنه غير صالح بدلًا من التخمين. اكتب قناع الشبكة المنقوط مباشرة في حقل البادئة وسيظهر رقم CIDR تلقائيًا مع بقية تفاصيل الشبكة الفرعية.",
     "faq.q5": "هل يُرسل عنوان IP الخاص بي إلى خادم عند استخدام هذه الحاسبة؟",
-    "faq.a5": "لا. كل عملية حساب — تحليل العنوان، واشتقاق قناع الشبكة، وحساب الشبكة والبث والنطاق القابل للاستخدام — تعمل محليًا داخل جافاسكريبت في متصفحك. لا شيء مما تكتبه يُرفع أو يُسجَّل أو يُخزَّن في أي مكان باستثناء localStorage الخاص بمتصفحك (يُستخدم فقط لتذكّر آخر إدخال لك في المرة القادمة). يمكنك البحث عن نطاقات شبكات خاصة أو داخلية بهذه الحاسبة دون كشفها على الشبكة."
+    "faq.a5": "لا. كل عملية حساب — تحليل العنوان، واشتقاق قناع الشبكة، وحساب الشبكة والبث والنطاق القابل للاستخدام — تعمل محليًا داخل جافاسكريبت في متصفحك. لا شيء مما تكتبه يُرفع أو يُسجَّل أو يُخزَّن في أي مكان باستثناء localStorage الخاص بمتصفحك (يُستخدم فقط لتذكّر آخر إدخال لك في المرة القادمة). يمكنك البحث عن نطاقات شبكات خاصة أو داخلية بهذه الحاسبة دون كشفها على الشبكة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -411,7 +436,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment convertir un masque de sous-réseau comme 255.255.255.0 en préfixe CIDR ?",
     "faq.a4": "Comptez le nombre de bits à 1 dans la forme binaire du masque, depuis la gauche. 255.255.255.0 en binaire est 11111111.11111111.11111111.00000000 — 24 uns suivis de 8 zéros — c'est donc un /24. Un masque valide a toujours ses bits à 1 contigus depuis la gauche, sans interruption ; si vous saisissez un masque qui ne suit pas ce schéma, ce calculateur le signale comme invalide plutôt que de deviner. Tapez le masque en notation décimale pointée directement dans le champ du préfixe, et le nombre CIDR apparaît automatiquement avec le reste du détail du sous-réseau.",
     "faq.q5": "Mon adresse IP est-elle envoyée à un serveur lorsque j'utilise ce calculateur ?",
-    "faq.a5": "Non. Chaque calcul — analyse de l'adresse, dérivation du masque, calcul du réseau, de la diffusion et de la plage utilisable — s'exécute localement dans le JavaScript de votre navigateur. Rien de ce que vous saisissez n'est envoyé, enregistré ou stocké ailleurs que dans le localStorage de votre propre navigateur (utilisé uniquement pour retenir votre dernière saisie). Vous pouvez consulter des plages réseau privées ou internes avec ce calculateur de sous-réseau sans les exposer sur le réseau."
+    "faq.a5": "Non. Chaque calcul — analyse de l'adresse, dérivation du masque, calcul du réseau, de la diffusion et de la plage utilisable — s'exécute localement dans le JavaScript de votre navigateur. Rien de ce que vous saisissez n'est envoyé, enregistré ou stocké ailleurs que dans le localStorage de votre propre navigateur (utilisé uniquement pour retenir votre dernière saisie). Vous pouvez consulter des plages réseau privées ou internes avec ce calculateur de sous-réseau sans les exposer sur le réseau.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -477,7 +507,12 @@ window.I18N_LOCALES = {
     "faq.q4": "255.255.255.0-এর মতো একটি নেটমাস্ককে CIDR প্রিফিক্সে কীভাবে রূপান্তর করব?",
     "faq.a4": "মাস্কের বাইনারি রূপে বাম দিক থেকে 1 বিটের সংখ্যা গুনুন। 255.255.255.0 বাইনারিতে হলো 11111111.11111111.11111111.00000000 — 24টি 1 এর পর 8টি 0 — তাই এটি /24। একটি বৈধ নেটমাস্কে 1 বিটগুলো সবসময় বাম দিক থেকে কোনো ফাঁক ছাড়া টানা থাকে; আপনি যদি এমন মাস্ক লেখেন যা এই প্যাটার্ন মানে না, তাহলে এই ক্যালকুলেটর অনুমান না করে সেটিকে অবৈধ হিসেবে চিহ্নিত করে। প্রিফিক্স ফিল্ডে সরাসরি ডটেড নেটমাস্ক লিখুন, এবং বাকি সাবনেট বিশ্লেষণের সঙ্গে CIDR সংখ্যা স্বয়ংক্রিয়ভাবে দেখা যাবে।",
     "faq.q5": "এই ক্যালকুলেটর ব্যবহার করার সময় আমার IP ঠিকানা কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। ঠিকানা পার্স করা, নেটমাস্ক বের করা, নেটওয়ার্ক, ব্রডকাস্ট ও ব্যবহারযোগ্য রেঞ্জ হিসাব করা — প্রতিটি হিসাব আপনার ব্রাউজারের জাভাস্ক্রিপ্টে স্থানীয়ভাবে চলে। আপনি যা কিছু লেখেন তা কোথাও আপলোড, লগ বা সংরক্ষিত হয় না, শুধু আপনার নিজের ব্রাউজারের localStorage ছাড়া (যা শুধু পরের বারের জন্য আপনার শেষ ইনপুট মনে রাখতে ব্যবহৃত হয়)। আপনি এই সাবনেট ক্যালকুলেটর দিয়ে প্রাইভেট বা ইন্টারনাল নেটওয়ার্ক রেঞ্জ নেটওয়ার্কে প্রকাশ না করেই খুঁজে দেখতে পারেন।"
+    "faq.a5": "না। ঠিকানা পার্স করা, নেটমাস্ক বের করা, নেটওয়ার্ক, ব্রডকাস্ট ও ব্যবহারযোগ্য রেঞ্জ হিসাব করা — প্রতিটি হিসাব আপনার ব্রাউজারের জাভাস্ক্রিপ্টে স্থানীয়ভাবে চলে। আপনি যা কিছু লেখেন তা কোথাও আপলোড, লগ বা সংরক্ষিত হয় না, শুধু আপনার নিজের ব্রাউজারের localStorage ছাড়া (যা শুধু পরের বারের জন্য আপনার শেষ ইনপুট মনে রাখতে ব্যবহৃত হয়)। আপনি এই সাবনেট ক্যালকুলেটর দিয়ে প্রাইভেট বা ইন্টারনাল নেটওয়ার্ক রেঞ্জ নেটওয়ার্কে প্রকাশ না করেই খুঁজে দেখতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -543,7 +578,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como converter uma máscara de sub-rede como 255.255.255.0 em um prefixo CIDR?",
     "faq.a4": "Conte o número de bits 1 na forma binária da máscara, a partir da esquerda. 255.255.255.0 em binário é 11111111.11111111.11111111.00000000 — 24 uns seguidos de 8 zeros — então é um /24. Uma máscara válida sempre tem seus bits 1 contíguos a partir da esquerda, sem lacunas; se você digitar uma máscara que não segue esse padrão, esta calculadora a sinaliza como inválida em vez de adivinhar. Digite a máscara decimal com pontos diretamente no campo de prefixo, e o número CIDR aparece automaticamente junto ao restante do detalhamento da sub-rede.",
     "faq.q5": "Meu endereço IP é enviado a um servidor ao usar esta calculadora?",
-    "faq.a5": "Não. Todo cálculo — analisar o endereço, derivar a máscara, calcular a rede, o broadcast e a faixa utilizável — roda localmente no JavaScript do seu navegador. Nada do que você digita é enviado, registrado ou armazenado em qualquer lugar, exceto no localStorage do seu próprio navegador (usado só para lembrar sua última entrada da próxima vez). Você pode consultar faixas de rede privadas ou internas com esta calculadora de sub-rede sem expô-las à rede."
+    "faq.a5": "Não. Todo cálculo — analisar o endereço, derivar a máscara, calcular a rede, o broadcast e a faixa utilizável — roda localmente no JavaScript do seu navegador. Nada do que você digita é enviado, registrado ou armazenado em qualquer lugar, exceto no localStorage do seu próprio navegador (usado só para lembrar sua última entrada da próxima vez). Você pode consultar faixas de rede privadas ou internas com esta calculadora de sub-rede sem expô-las à rede.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -609,7 +649,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как преобразовать маску подсети вроде 255.255.255.0 в префикс CIDR?",
     "faq.a4": "Посчитайте количество единичных битов в двоичном представлении маски, начиная слева. 255.255.255.0 в двоичном виде — это 11111111.11111111.11111111.00000000: 24 единицы, за которыми следуют 8 нулей, значит это /24. У корректной маски единичные биты всегда идут подряд слева без пропусков; если ввести маску, не соответствующую этому шаблону, калькулятор пометит её как некорректную, а не будет угадывать. Введите маску в десятичном представлении через точки прямо в поле префикса, и число CIDR появится автоматически вместе с остальным разбором подсети.",
     "faq.q5": "Отправляется ли мой IP-адрес на сервер при использовании этого калькулятора?",
-    "faq.a5": "Нет. Каждое вычисление — разбор адреса, определение маски, расчёт сети, широковещательного адреса и доступного диапазона — выполняется локально в JavaScript вашего браузера. Ничего из введённого вами не загружается, не записывается и не сохраняется нигде, кроме localStorage вашего собственного браузера (используется только для запоминания последнего ввода на будущее). Вы можете просматривать частные или внутренние диапазоны сети с помощью этого калькулятора подсетей, не раскрывая их в сети."
+    "faq.a5": "Нет. Каждое вычисление — разбор адреса, определение маски, расчёт сети, широковещательного адреса и доступного диапазона — выполняется локально в JavaScript вашего браузера. Ничего из введённого вами не загружается, не записывается и не сохраняется нигде, кроме localStorage вашего собственного браузера (используется только для запоминания последнего ввода на будущее). Вы можете просматривать частные или внутренние диапазоны сети с помощью этого калькулятора подсетей, не раскрывая их в сети.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -675,7 +720,12 @@ window.I18N_LOCALES = {
     "faq.q4": "255.255.255.0 جیسے نیٹ ماسک کو CIDR پریفکس میں کیسے تبدیل کروں؟",
     "faq.a4": "ماسک کی بائنری شکل میں بائیں طرف سے 1 بٹس گنیں۔ 255.255.255.0 بائنری میں 11111111.11111111.11111111.00000000 ہے — 24 ایک کے بعد 8 صفر — اس لیے یہ /24 ہے۔ ایک درست نیٹ ماسک میں 1 بٹس ہمیشہ بائیں طرف سے بغیر کسی وقفے کے مسلسل ہوتے ہیں؛ اگر آپ ایسا ماسک درج کریں جو اس پیٹرن کی پیروی نہ کرے، تو یہ کیلکولیٹر اندازہ لگانے کے بجائے اسے غلط قرار دیتا ہے۔ پریفکس فیلڈ میں براہ راست ڈوٹڈ نیٹ ماسک لکھیں، اور CIDR نمبر باقی سب نیٹ تفصیل کے ساتھ خودکار طور پر ظاہر ہو جائے گا۔",
     "faq.q5": "کیا یہ کیلکولیٹر استعمال کرتے وقت میرا IP ایڈریس سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ایڈریس پارس کرنا، نیٹ ماسک اخذ کرنا، نیٹ ورک، براڈکاسٹ اور قابلِ استعمال رینج شمار کرنا — ہر حساب آپ کے براؤزر کے جاوا اسکرپٹ میں مقامی طور پر چلتا ہے۔ آپ جو کچھ بھی لکھتے ہیں وہ کہیں اپ لوڈ، لاگ یا محفوظ نہیں ہوتا، سوائے آپ کے اپنے براؤزر کے localStorage کے (جو صرف اگلی بار کے لیے آپ کا آخری ان پٹ یاد رکھنے کے لیے استعمال ہوتا ہے)۔ آپ اس سب نیٹ کیلکولیٹر سے پرائیویٹ یا انٹرنل نیٹ ورک رینجز کو نیٹ ورک پر ظاہر کیے بغیر دیکھ سکتے ہیں۔"
+    "faq.a5": "نہیں۔ ایڈریس پارس کرنا، نیٹ ماسک اخذ کرنا، نیٹ ورک، براڈکاسٹ اور قابلِ استعمال رینج شمار کرنا — ہر حساب آپ کے براؤزر کے جاوا اسکرپٹ میں مقامی طور پر چلتا ہے۔ آپ جو کچھ بھی لکھتے ہیں وہ کہیں اپ لوڈ، لاگ یا محفوظ نہیں ہوتا، سوائے آپ کے اپنے براؤزر کے localStorage کے (جو صرف اگلی بار کے لیے آپ کا آخری ان پٹ یاد رکھنے کے لیے استعمال ہوتا ہے)۔ آپ اس سب نیٹ کیلکولیٹر سے پرائیویٹ یا انٹرنل نیٹ ورک رینجز کو نیٹ ورک پر ظاہر کیے بغیر دیکھ سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -741,7 +791,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara mengonversi netmask seperti 255.255.255.0 menjadi prefiks CIDR?",
     "faq.a4": "Hitung jumlah bit 1 dalam bentuk biner mask, dari kiri. 255.255.255.0 dalam biner adalah 11111111.11111111.11111111.00000000 — 24 angka satu diikuti 8 angka nol — jadi itu adalah /24. Netmask yang valid selalu memiliki bit 1 yang berurutan dari kiri tanpa celah; jika Anda mengetik mask yang tidak mengikuti pola ini, kalkulator ini menandainya sebagai tidak valid alih-alih menebak-nebak. Ketik netmask bertitik langsung di kolom prefiks, dan angka CIDR akan muncul otomatis bersama rincian subnet lainnya.",
     "faq.q5": "Apakah alamat IP saya dikirim ke server saat menggunakan kalkulator ini?",
-    "faq.a5": "Tidak. Setiap perhitungan — mengurai alamat, menurunkan netmask, menghitung jaringan, broadcast, dan rentang yang dapat digunakan — berjalan secara lokal di JavaScript browser Anda. Tidak ada yang Anda ketik yang diunggah, dicatat, atau disimpan di mana pun kecuali di localStorage browser Anda sendiri (hanya digunakan untuk mengingat input terakhir Anda untuk lain waktu). Anda dapat mencari rentang jaringan pribadi atau internal dengan kalkulator subnet ini tanpa mengekspos rentang tersebut ke jaringan."
+    "faq.a5": "Tidak. Setiap perhitungan — mengurai alamat, menurunkan netmask, menghitung jaringan, broadcast, dan rentang yang dapat digunakan — berjalan secara lokal di JavaScript browser Anda. Tidak ada yang Anda ketik yang diunggah, dicatat, atau disimpan di mana pun kecuali di localStorage browser Anda sendiri (hanya digunakan untuk mengingat input terakhir Anda untuk lain waktu). Anda dapat mencari rentang jaringan pribadi atau internal dengan kalkulator subnet ini tanpa mengekspos rentang tersebut ke jaringan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -807,7 +862,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie wandle ich eine Subnetzmaske wie 255.255.255.0 in ein CIDR-Präfix um?",
     "faq.a4": "Zählen Sie die Anzahl der 1-Bits in der Binärform der Maske, von links. 255.255.255.0 ist binär 11111111.11111111.11111111.00000000 — 24 Einsen gefolgt von 8 Nullen —, also ein /24. Eine gültige Netzmaske hat ihre 1-Bits immer von links zusammenhängend ohne Lücken; geben Sie eine Maske ein, die diesem Muster nicht folgt, markiert dieser Rechner sie als ungültig, statt zu raten. Geben Sie die Subnetzmaske direkt in das Präfixfeld ein, und die CIDR-Zahl erscheint automatisch zusammen mit dem Rest der Subnetzaufschlüsselung.",
     "faq.q5": "Wird meine IP-Adresse bei Nutzung dieses Rechners an einen Server gesendet?",
-    "faq.a5": "Nein. Jede Berechnung — das Parsen der Adresse, die Ableitung der Maske, die Berechnung von Netzwerk, Broadcast und nutzbarem Bereich — läuft lokal im JavaScript Ihres Browsers ab. Nichts, was Sie eingeben, wird hochgeladen, protokolliert oder irgendwo gespeichert, außer im localStorage Ihres eigenen Browsers (der nur dazu dient, sich Ihre letzte Eingabe für das nächste Mal zu merken). Sie können private oder interne Netzwerkbereiche mit diesem Subnetzrechner nachschlagen, ohne sie im Netzwerk offenzulegen."
+    "faq.a5": "Nein. Jede Berechnung — das Parsen der Adresse, die Ableitung der Maske, die Berechnung von Netzwerk, Broadcast und nutzbarem Bereich — läuft lokal im JavaScript Ihres Browsers ab. Nichts, was Sie eingeben, wird hochgeladen, protokolliert oder irgendwo gespeichert, außer im localStorage Ihres eigenen Browsers (der nur dazu dient, sich Ihre letzte Eingabe für das nächste Mal zu merken). Sie können private oder interne Netzwerkbereiche mit diesem Subnetzrechner nachschlagen, ohne sie im Netzwerk offenzulegen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -873,7 +933,12 @@ window.I18N_LOCALES = {
     "faq.q4": "255.255.255.0のようなネットマスクをCIDRプレフィックスに変換するには？",
     "faq.a4": "マスクの2進数表現で左から1のビット数を数えます。255.255.255.0を2進数にすると11111111.11111111.11111111.00000000となり、1が24個続いた後に0が8個続くため、/24になります。有効なネットマスクは常に左から途切れなく連続した1のビットを持ちます。このパターンに従わないマスクを入力すると、この計算機は推測せずに無効と表示します。プレフィックス欄にドット表記のネットマスクを直接入力すれば、CIDRの数字が他のサブネット情報とともに自動的に表示されます。",
     "faq.q5": "この計算機を使うと、私のIPアドレスはサーバーに送信されますか？",
-    "faq.a5": "いいえ。アドレスの解析、ネットマスクの導出、ネットワーク・ブロードキャスト・使用可能範囲の計算まで、すべての計算はブラウザのJavaScript内でローカルに実行されます。入力した内容がどこかにアップロード、記録、保存されることはありません。唯一の例外は、次回のために最後の入力を記憶するためだけに使われる、あなた自身のブラウザのlocalStorageです。このサブネット計算機を使えば、プライベートアドレスや内部ネットワークの範囲をネットワークに公開することなく調べられます。"
+    "faq.a5": "いいえ。アドレスの解析、ネットマスクの導出、ネットワーク・ブロードキャスト・使用可能範囲の計算まで、すべての計算はブラウザのJavaScript内でローカルに実行されます。入力した内容がどこかにアップロード、記録、保存されることはありません。唯一の例外は、次回のために最後の入力を記憶するためだけに使われる、あなた自身のブラウザのlocalStorageです。このサブネット計算機を使えば、プライベートアドレスや内部ネットワークの範囲をネットワークに公開することなく調べられます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -939,6 +1004,11 @@ window.I18N_LOCALES = {
     "faq.q4": "255.255.255.0 같은 서브넷마스크를 CIDR 프리픽스로 바꾸려면 어떻게 하나요?",
     "faq.a4": "마스크의 2진수 표현에서 왼쪽부터 1 비트의 개수를 세면 됩니다. 255.255.255.0을 2진수로 바꾸면 11111111.11111111.11111111.00000000으로, 1이 24개 나온 뒤 0이 8개 이어지므로 /24가 됩니다. 유효한 서브넷마스크는 항상 왼쪽부터 끊김 없이 1 비트가 이어져야 합니다. 이 패턴을 따르지 않는 마스크를 입력하면 이 계산기는 임의로 추측하지 않고 유효하지 않다고 표시합니다. 프리픽스 입력란에 점 표기 서브넷마스크를 직접 입력하면 나머지 서브넷 분석 결과와 함께 CIDR 숫자가 자동으로 나타납니다.",
     "faq.q5": "이 계산기를 사용할 때 제 IP 주소가 서버로 전송되나요?",
-    "faq.a5": "아니요. 주소 파싱, 서브넷마스크 도출, 네트워크·브로드캐스트·사용 가능 범위 계산까지 모든 연산은 브라우저의 자바스크립트에서 로컬로 실행됩니다. 입력한 내용은 어디에도 업로드, 기록, 저장되지 않으며, 유일한 예외는 다음 방문 시 마지막 입력값을 기억하기 위해서만 쓰이는 사용자 브라우저 자체의 localStorage뿐입니다. 이 서브넷 계산기를 이용하면 사설 또는 내부 네트워크 대역을 네트워크에 노출하지 않고도 조회할 수 있습니다."
+    "faq.a5": "아니요. 주소 파싱, 서브넷마스크 도출, 네트워크·브로드캐스트·사용 가능 범위 계산까지 모든 연산은 브라우저의 자바스크립트에서 로컬로 실행됩니다. 입력한 내용은 어디에도 업로드, 기록, 저장되지 않으며, 유일한 예외는 다음 방문 시 마지막 입력값을 기억하기 위해서만 쓰이는 사용자 브라우저 자체의 localStorage뿐입니다. 이 서브넷 계산기를 이용하면 사설 또는 내부 네트워크 대역을 네트워크에 노출하지 않고도 조회할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

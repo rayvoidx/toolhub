@@ -77,7 +77,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why do I need both Open Graph and Twitter Card tags — isn't one enough?",
     "faq.a4": "X (Twitter) reads its own twitter:* tags first and only falls back to Open Graph tags if a twitter tag is missing, so relying on og:* alone can give you a broken or generic-looking card on X specifically. Every other major platform — Facebook, LinkedIn, Slack, Discord, iMessage — reads Open Graph tags and ignores twitter:* entirely. Generating both from the same title, description and image, as this tool does, is the only way to guarantee a consistent share card everywhere.",
     "faq.q5": "Does this tool upload my title, description or image anywhere?",
-    "faq.a5": "No. Every tag is built with JavaScript running in your own browser, and nothing you type is sent to a server or saved anywhere outside your device's local storage, which only remembers your last inputs so you don't lose them on refresh. The one exception is the image URL: if you paste one into the OG image field, your browser requests that image directly from the address you provided so it can show a preview — that request goes straight to the image's own host, not through this site."
+    "faq.a5": "No. Every tag is built with JavaScript running in your own browser, and nothing you type is sent to a server or saved anywhere outside your device's local storage, which only remembers your last inputs so you don't lose them on refresh. The one exception is the image URL: if you paste one into the OG image field, your browser requests that image directly from the address you provided so it can show a preview — that request goes straight to the image's own host, not through this site.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
 
   zh: {
@@ -153,7 +158,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么 Open Graph 和 Twitter Card 标签都要有？只写一种不够吗？",
     "faq.a4": "X（Twitter）会优先读取自己的 twitter:* 标签，只有在缺失时才会回退使用 Open Graph 标签，所以只写 og:* 可能会导致在 X 上出现残缺或很普通的卡片。而 Facebook、LinkedIn、Slack、Discord、iMessage 等其他主流平台都只读取 Open Graph 标签，完全不理会 twitter:*。像这个工具一样，用同一套标题、描述和图片同时生成两种标签，才是让分享卡片在所有平台上保持一致的唯一办法。",
     "faq.q5": "这个工具会把我的标题、描述或图片上传到什么地方吗？",
-    "faq.a5": "不会。所有标签都是由运行在你自己浏览器里的 JavaScript 生成的，你输入的任何内容都不会发送到服务器，也不会保存在设备本地存储之外的任何地方——本地存储只是记住你上一次的输入，方便刷新页面后不用重新填写。唯一的例外是图片网址：如果你在 OG 图片字段里粘贴了一个网址，你的浏览器会直接向你提供的那个地址请求这张图片以显示预览——这个请求会直接发往图片所在的服务器，而不会经过本站。"
+    "faq.a5": "不会。所有标签都是由运行在你自己浏览器里的 JavaScript 生成的，你输入的任何内容都不会发送到服务器，也不会保存在设备本地存储之外的任何地方——本地存储只是记住你上一次的输入，方便刷新页面后不用重新填写。唯一的例外是图片网址：如果你在 OG 图片字段里粘贴了一个网址，你的浏览器会直接向你提供的那个地址请求这张图片以显示预览——这个请求会直接发往图片所在的服务器，而不会经过本站。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
 
   hi: {
@@ -229,7 +239,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मुझे Open Graph और Twitter Card, दोनों टैग की ज़रूरत क्यों है — क्या एक काफ़ी नहीं?",
     "faq.a4": "X (Twitter) पहले अपने खुद के twitter:* टैग पढ़ता है और तभी Open Graph पर वापस जाता है जब कोई twitter टैग मौजूद न हो — इसलिए सिर्फ़ og:* पर निर्भर रहने से X पर कार्ड टूटा हुआ या बहुत सामान्य दिख सकता है। बाकी हर बड़ा प्लेटफ़ॉर्म — Facebook, LinkedIn, Slack, Discord, iMessage — सिर्फ़ Open Graph टैग पढ़ता है और twitter:* को पूरी तरह नज़रअंदाज़ करता है। इस टूल की तरह एक ही टाइटल, डिस्क्रिप्शन और इमेज से दोनों टैग जनरेट करना ही हर जगह एक जैसा शेयर कार्ड पक्का करने का इकलौता तरीका है।",
     "faq.q5": "क्या यह टूल मेरा टाइटल, डिस्क्रिप्शन या इमेज कहीं अपलोड करता है?",
-    "faq.a5": "नहीं। हर टैग आपके अपने ब्राउज़र में चल रही JavaScript से बनता है, और आप जो भी टाइप करते हैं वह किसी सर्वर पर नहीं भेजा जाता और आपकी डिवाइस के लोकल स्टोरेज के अलावा कहीं सेव नहीं होता — लोकल स्टोरेज सिर्फ़ आपकी पिछली एंट्री याद रखता है ताकि रीफ़्रेश करने पर आपको दोबारा टाइप न करना पड़े। एक अपवाद इमेज URL है: अगर आप OG इमेज फ़ील्ड में कोई URL पेस्ट करते हैं, तो आपका ब्राउज़र प्रीव्यू दिखाने के लिए सीधे उस पते से इमेज माँगता है — यह रिक्वेस्ट सीधे इमेज के अपने होस्ट पर जाती है, इस साइट के ज़रिए नहीं।"
+    "faq.a5": "नहीं। हर टैग आपके अपने ब्राउज़र में चल रही JavaScript से बनता है, और आप जो भी टाइप करते हैं वह किसी सर्वर पर नहीं भेजा जाता और आपकी डिवाइस के लोकल स्टोरेज के अलावा कहीं सेव नहीं होता — लोकल स्टोरेज सिर्फ़ आपकी पिछली एंट्री याद रखता है ताकि रीफ़्रेश करने पर आपको दोबारा टाइप न करना पड़े। एक अपवाद इमेज URL है: अगर आप OG इमेज फ़ील्ड में कोई URL पेस्ट करते हैं, तो आपका ब्राउज़र प्रीव्यू दिखाने के लिए सीधे उस पते से इमेज माँगता है — यह रिक्वेस्ट सीधे इमेज के अपने होस्ट पर जाती है, इस साइट के ज़रिए नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
 
   es: {
@@ -305,7 +320,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué necesito etiquetas Open Graph y Twitter Card a la vez? ¿No basta con una?",
     "faq.a4": "X (Twitter) lee primero sus propias etiquetas twitter:* y solo recurre a Open Graph si falta alguna etiqueta twitter, así que depender solo de og:* puede darte una tarjeta rota o genérica específicamente en X. El resto de plataformas importantes — Facebook, LinkedIn, Slack, Discord, iMessage — leen las etiquetas Open Graph e ignoran twitter:* por completo. Generar ambas a partir del mismo título, descripción e imagen, como hace esta herramienta, es la única forma de garantizar una tarjeta de vista previa consistente en todas partes.",
     "faq.q5": "¿Esta herramienta sube mi título, descripción o imagen a algún sitio?",
-    "faq.a5": "No. Cada etiqueta se genera con JavaScript que se ejecuta en tu propio navegador, y nada de lo que escribes se envía a un servidor ni se guarda fuera del almacenamiento local de tu dispositivo, que solo recuerda tus últimas entradas para que no las pierdas al recargar. La única excepción es la URL de imagen: si pegas una en el campo de imagen OG, tu navegador solicita esa imagen directamente a la dirección que indicaste para mostrar la vista previa — esa solicitud va directo al servidor de la imagen, no pasa por este sitio."
+    "faq.a5": "No. Cada etiqueta se genera con JavaScript que se ejecuta en tu propio navegador, y nada de lo que escribes se envía a un servidor ni se guarda fuera del almacenamiento local de tu dispositivo, que solo recuerda tus últimas entradas para que no las pierdas al recargar. La única excepción es la URL de imagen: si pegas una en el campo de imagen OG, tu navegador solicita esa imagen directamente a la dirección que indicaste para mostrar la vista previa — esa solicitud va directo al servidor de la imagen, no pasa por este sitio.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
 
   ar: {
@@ -381,7 +401,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا أحتاج إلى وسوم Open Graph وTwitter Card معًا — ألا تكفي واحدة منهما؟",
     "faq.a4": "تقرأ منصة X (Twitter) وسومها الخاصة twitter:* أولًا، ولا ترجع إلى وسوم Open Graph إلا عند غياب أحد وسوم twitter، لذا فإن الاعتماد على og:* فقط قد يمنحك بطاقة مكسورة أو عامة على X تحديدًا. أما بقية المنصات الكبرى — Facebook وLinkedIn وSlack وDiscord وiMessage — فتقرأ وسوم Open Graph وتتجاهل twitter:* تمامًا. توليد كلا النوعين من العنوان والوصف والصورة نفسها، كما تفعل هذه الأداة، هو الطريقة الوحيدة لضمان بطاقة مشاركة متسقة في كل مكان.",
     "faq.q5": "هل يرفع هذا الأداة عنواني أو وصفي أو صورتي إلى أي مكان؟",
-    "faq.a5": "لا. يُبنى كل وسم بواسطة JavaScript يعمل داخل متصفحك أنت، ولا يُرسَل أي شيء تكتبه إلى أي خادم ولا يُحفظ في أي مكان خارج التخزين المحلي لجهازك، الذي لا يتذكر سوى مدخلاتك الأخيرة حتى لا تفقدها عند إعادة تحميل الصفحة. الاستثناء الوحيد هو رابط الصورة: إذا لصقت رابطًا في حقل صورة OG، يطلب متصفحك تلك الصورة مباشرة من العنوان الذي أدخلته لعرض المعاينة — يذهب هذا الطلب مباشرة إلى خادم الصورة نفسه، وليس عبر هذا الموقع."
+    "faq.a5": "لا. يُبنى كل وسم بواسطة JavaScript يعمل داخل متصفحك أنت، ولا يُرسَل أي شيء تكتبه إلى أي خادم ولا يُحفظ في أي مكان خارج التخزين المحلي لجهازك، الذي لا يتذكر سوى مدخلاتك الأخيرة حتى لا تفقدها عند إعادة تحميل الصفحة. الاستثناء الوحيد هو رابط الصورة: إذا لصقت رابطًا في حقل صورة OG، يطلب متصفحك تلك الصورة مباشرة من العنوان الذي أدخلته لعرض المعاينة — يذهب هذا الطلب مباشرة إلى خادم الصورة نفسه، وليس عبر هذا الموقع.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
 
   fr: {
@@ -457,7 +482,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi ai-je besoin à la fois des balises Open Graph et Twitter Card — une seule ne suffit-elle pas ?",
     "faq.a4": "X (Twitter) lit d'abord ses propres balises twitter:* et ne se rabat sur Open Graph que si une balise twitter est absente, donc ne compter que sur og:* peut vous donner une carte cassée ou générique spécifiquement sur X. Toutes les autres grandes plateformes — Facebook, LinkedIn, Slack, Discord, iMessage — lisent les balises Open Graph et ignorent complètement twitter:*. Générer les deux à partir du même titre, de la même description et de la même image, comme le fait cet outil, est le seul moyen de garantir une carte de partage cohérente partout.",
     "faq.q5": "Cet outil envoie-t-il mon titre, ma description ou mon image quelque part ?",
-    "faq.a5": "Non. Chaque balise est construite avec du JavaScript qui s'exécute dans votre propre navigateur, et rien de ce que vous saisissez n'est envoyé à un serveur ni enregistré ailleurs que dans le stockage local de votre appareil, qui ne retient que vos dernières saisies pour que vous ne les perdiez pas au rechargement. La seule exception est l'URL de l'image : si vous en collez une dans le champ image OG, votre navigateur demande cette image directement à l'adresse fournie pour afficher un aperçu — cette requête va directement à l'hébergeur de l'image, pas via ce site."
+    "faq.a5": "Non. Chaque balise est construite avec du JavaScript qui s'exécute dans votre propre navigateur, et rien de ce que vous saisissez n'est envoyé à un serveur ni enregistré ailleurs que dans le stockage local de votre appareil, qui ne retient que vos dernières saisies pour que vous ne les perdiez pas au rechargement. La seule exception est l'URL de l'image : si vous en collez une dans le champ image OG, votre navigateur demande cette image directement à l'adresse fournie pour afficher un aperçu — cette requête va directement à l'hébergeur de l'image, pas via ce site.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
 
   bn: {
@@ -533,7 +563,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার Open Graph ও Twitter Card, দুটো ট্যাগই কেন দরকার — একটাই কি যথেষ্ট নয়?",
     "faq.a4": "X (Twitter) প্রথমে নিজের twitter:* ট্যাগ পড়ে এবং কোনো twitter ট্যাগ না থাকলেই কেবল Open Graph-এ ফিরে যায়, তাই শুধু og:*-এর উপর নির্ভর করলে X-এ বিশেষভাবে ভাঙা বা সাধারণ কার্ড দেখা যেতে পারে। বাকি বড় প্ল্যাটফর্মগুলো — Facebook, LinkedIn, Slack, Discord, iMessage — Open Graph ট্যাগ পড়ে এবং twitter:* সম্পূর্ণ উপেক্ষা করে। এই টুলের মতো একই টাইটেল, ডেসক্রিপশন ও ইমেজ থেকে দুটোই তৈরি করাই সব জায়গায় একই রকম শেয়ার কার্ড নিশ্চিত করার একমাত্র উপায়।",
     "faq.q5": "এই টুল কি আমার টাইটেল, ডেসক্রিপশন বা ইমেজ কোথাও আপলোড করে?",
-    "faq.a5": "না। প্রতিটি ট্যাগ আপনার নিজের ব্রাউজারে চলা JavaScript দিয়ে তৈরি হয়, আর আপনি যা টাইপ করেন তা কোনো সার্ভারে পাঠানো হয় না বা আপনার ডিভাইসের লোকাল স্টোরেজের বাইরে কোথাও সংরক্ষিত হয় না — লোকাল স্টোরেজ শুধু আপনার শেষ ইনপুট মনে রাখে, যাতে রিফ্রেশ করলে হারিয়ে না যায়। একমাত্র ব্যতিক্রম হলো ইমেজ URL: আপনি যদি OG ইমেজ ফিল্ডে একটি URL পেস্ট করেন, তাহলে প্রিভিউ দেখানোর জন্য আপনার ব্রাউজার সরাসরি সেই ঠিকানা থেকে ছবিটি অনুরোধ করে — এই অনুরোধ সরাসরি ইমেজের নিজস্ব হোস্টে যায়, এই সাইটের মধ্য দিয়ে নয়।"
+    "faq.a5": "না। প্রতিটি ট্যাগ আপনার নিজের ব্রাউজারে চলা JavaScript দিয়ে তৈরি হয়, আর আপনি যা টাইপ করেন তা কোনো সার্ভারে পাঠানো হয় না বা আপনার ডিভাইসের লোকাল স্টোরেজের বাইরে কোথাও সংরক্ষিত হয় না — লোকাল স্টোরেজ শুধু আপনার শেষ ইনপুট মনে রাখে, যাতে রিফ্রেশ করলে হারিয়ে না যায়। একমাত্র ব্যতিক্রম হলো ইমেজ URL: আপনি যদি OG ইমেজ ফিল্ডে একটি URL পেস্ট করেন, তাহলে প্রিভিউ দেখানোর জন্য আপনার ব্রাউজার সরাসরি সেই ঠিকানা থেকে ছবিটি অনুরোধ করে — এই অনুরোধ সরাসরি ইমেজের নিজস্ব হোস্টে যায়, এই সাইটের মধ্য দিয়ে নয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
 
   pt: {
@@ -609,7 +644,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que preciso das tags Open Graph e Twitter Card ao mesmo tempo — uma não basta?",
     "faq.a4": "O X (Twitter) lê primeiro suas próprias tags twitter:* e só recorre ao Open Graph se alguma tag twitter estiver ausente, então depender só de og:* pode gerar um cartão quebrado ou genérico especificamente no X. Todas as outras grandes plataformas — Facebook, LinkedIn, Slack, Discord, iMessage — leem as tags Open Graph e ignoram twitter:* completamente. Gerar as duas a partir do mesmo título, descrição e imagem, como faz esta ferramenta, é a única forma de garantir um cartão de compartilhamento consistente em todo lugar.",
     "faq.q5": "Esta ferramenta envia meu título, descrição ou imagem para algum lugar?",
-    "faq.a5": "Não. Cada tag é construída com JavaScript rodando no seu próprio navegador, e nada do que você digita é enviado a um servidor nem salvo fora do armazenamento local do seu dispositivo, que só guarda suas últimas entradas para que você não as perca ao atualizar a página. A única exceção é a URL da imagem: se você colar uma no campo de imagem OG, seu navegador solicita essa imagem diretamente do endereço fornecido para exibir a prévia — essa solicitação vai direto para o servidor da própria imagem, não passa por este site."
+    "faq.a5": "Não. Cada tag é construída com JavaScript rodando no seu próprio navegador, e nada do que você digita é enviado a um servidor nem salvo fora do armazenamento local do seu dispositivo, que só guarda suas últimas entradas para que você não as perca ao atualizar a página. A única exceção é a URL da imagem: se você colar uma no campo de imagem OG, seu navegador solicita essa imagem diretamente do endereço fornecido para exibir a prévia — essa solicitação vai direto para o servidor da própria imagem, não passa por este site.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
 
   ru: {
@@ -685,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Зачем мне теги Open Graph и Twitter Card одновременно — разве одного недостаточно?",
     "faq.a4": "X (Twitter) сначала читает собственные теги twitter:* и обращается к Open Graph только при отсутствии тега twitter, поэтому опора только на og:* может дать сломанную или неприметную карточку именно на X. Все остальные крупные платформы — Facebook, LinkedIn, Slack, Discord, iMessage — читают теги Open Graph и полностью игнорируют twitter:*. Генерация обоих наборов из одного и того же заголовка, описания и изображения, как делает этот инструмент, — единственный способ гарантировать одинаковую карточку везде.",
     "faq.q5": "Отправляет ли этот инструмент мой заголовок, описание или изображение куда-либо?",
-    "faq.a5": "Нет. Каждый тег создаётся JavaScript-кодом, работающим прямо в вашем браузере, и ничего из введённого не отправляется на сервер и не сохраняется нигде, кроме локального хранилища вашего устройства, которое запоминает только последние введённые данные, чтобы вы не потеряли их при обновлении страницы. Единственное исключение — URL изображения: если вы вставите его в поле изображения OG, браузер запросит это изображение напрямую по указанному адресу для отображения предпросмотра — этот запрос идёт прямо на сервер изображения, минуя этот сайт."
+    "faq.a5": "Нет. Каждый тег создаётся JavaScript-кодом, работающим прямо в вашем браузере, и ничего из введённого не отправляется на сервер и не сохраняется нигде, кроме локального хранилища вашего устройства, которое запоминает только последние введённые данные, чтобы вы не потеряли их при обновлении страницы. Единственное исключение — URL изображения: если вы вставите его в поле изображения OG, браузер запросит это изображение напрямую по указанному адресу для отображения предпросмотра — этот запрос идёт прямо на сервер изображения, минуя этот сайт.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
 
   ur: {
@@ -761,7 +806,12 @@ window.I18N_LOCALES = {
     "faq.q4": "مجھے Open Graph اور Twitter Card، دونوں ٹیگز کی ضرورت کیوں ہے — کیا ایک کافی نہیں؟",
     "faq.a4": "X (Twitter) پہلے اپنے twitter:* ٹیگز پڑھتا ہے اور صرف اسی وقت Open Graph کی طرف واپس جاتا ہے جب کوئی twitter ٹیگ موجود نہ ہو، اس لیے صرف og:* پر انحصار کرنے سے خاص طور پر X پر ٹوٹا ہوا یا عام سا کارڈ نظر آ سکتا ہے۔ باقی تمام بڑے پلیٹ فارمز — Facebook، LinkedIn، Slack، Discord، iMessage — صرف Open Graph ٹیگز پڑھتے ہیں اور twitter:* کو مکمل نظرانداز کرتے ہیں۔ اس ٹول کی طرح ایک ہی عنوان، تفصیل اور تصویر سے دونوں بنانا ہی ہر جگہ ایک جیسا شیئر کارڈ یقینی بنانے کا واحد طریقہ ہے۔",
     "faq.q5": "کیا یہ ٹول میرا عنوان، تفصیل یا تصویر کہیں اپ لوڈ کرتا ہے؟",
-    "faq.a5": "نہیں۔ ہر ٹیگ آپ کے اپنے براؤزر میں چلنے والی JavaScript سے بنتا ہے، اور آپ جو کچھ ٹائپ کرتے ہیں وہ کسی سرور کو نہیں بھیجا جاتا اور نہ ہی آپ کی ڈیوائس کے لوکل اسٹوریج کے علاوہ کہیں محفوظ ہوتا ہے — لوکل اسٹوریج صرف آپ کی آخری اندراجات یاد رکھتا ہے تاکہ ریفریش کرنے پر آپ انہیں نہ کھوئیں۔ ایک استثنا امیج URL ہے: اگر آپ OG امیج فیلڈ میں کوئی URL پیسٹ کرتے ہیں، تو آپ کا براؤزر پریویو دکھانے کے لیے براہ راست اسی پتے سے وہ تصویر منگواتا ہے — یہ درخواست براہ راست تصویر کے اپنے ہوسٹ کو جاتی ہے، اس سائٹ کے ذریعے نہیں۔"
+    "faq.a5": "نہیں۔ ہر ٹیگ آپ کے اپنے براؤزر میں چلنے والی JavaScript سے بنتا ہے، اور آپ جو کچھ ٹائپ کرتے ہیں وہ کسی سرور کو نہیں بھیجا جاتا اور نہ ہی آپ کی ڈیوائس کے لوکل اسٹوریج کے علاوہ کہیں محفوظ ہوتا ہے — لوکل اسٹوریج صرف آپ کی آخری اندراجات یاد رکھتا ہے تاکہ ریفریش کرنے پر آپ انہیں نہ کھوئیں۔ ایک استثنا امیج URL ہے: اگر آپ OG امیج فیلڈ میں کوئی URL پیسٹ کرتے ہیں، تو آپ کا براؤزر پریویو دکھانے کے لیے براہ راست اسی پتے سے وہ تصویر منگواتا ہے — یہ درخواست براہ راست تصویر کے اپنے ہوسٹ کو جاتی ہے، اس سائٹ کے ذریعے نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
 
   id: {
@@ -837,7 +887,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa saya perlu tag Open Graph dan Twitter Card sekaligus — apakah satu saja tidak cukup?",
     "faq.a4": "X (Twitter) membaca tag twitter:* miliknya sendiri terlebih dahulu dan hanya beralih ke Open Graph jika tag twitter tidak ada, jadi mengandalkan og:* saja bisa membuat kartu Anda rusak atau terlihat generik khususnya di X. Semua platform besar lainnya — Facebook, LinkedIn, Slack, Discord, iMessage — membaca tag Open Graph dan mengabaikan twitter:* sepenuhnya. Membuat keduanya dari judul, deskripsi, dan gambar yang sama, seperti yang dilakukan alat ini, adalah satu-satunya cara memastikan kartu berbagi yang konsisten di mana pun.",
     "faq.q5": "Apakah alat ini mengunggah judul, deskripsi, atau gambar saya ke suatu tempat?",
-    "faq.a5": "Tidak. Setiap tag dibuat dengan JavaScript yang berjalan di browser Anda sendiri, dan apa pun yang Anda ketik tidak dikirim ke server atau disimpan di mana pun selain penyimpanan lokal perangkat Anda, yang hanya mengingat input terakhir Anda agar tidak hilang saat memuat ulang. Satu-satunya pengecualian adalah URL gambar: jika Anda menempelkannya di kolom gambar OG, browser Anda akan meminta gambar tersebut langsung dari alamat yang Anda berikan untuk menampilkan pratinjau — permintaan itu langsung ke host gambar itu sendiri, bukan melalui situs ini."
+    "faq.a5": "Tidak. Setiap tag dibuat dengan JavaScript yang berjalan di browser Anda sendiri, dan apa pun yang Anda ketik tidak dikirim ke server atau disimpan di mana pun selain penyimpanan lokal perangkat Anda, yang hanya mengingat input terakhir Anda agar tidak hilang saat memuat ulang. Satu-satunya pengecualian adalah URL gambar: jika Anda menempelkannya di kolom gambar OG, browser Anda akan meminta gambar tersebut langsung dari alamat yang Anda berikan untuk menampilkan pratinjau — permintaan itu langsung ke host gambar itu sendiri, bukan melalui situs ini.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
 
   de: {
@@ -913,7 +968,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum brauche ich sowohl Open-Graph- als auch Twitter-Card-Tags — reicht nicht eines?",
     "faq.a4": "X (Twitter) liest zuerst seine eigenen twitter:*-Tags und greift nur dann auf Open Graph zurück, wenn ein twitter-Tag fehlt — sich nur auf og:* zu verlassen kann speziell auf X zu einer kaputten oder generischen Karte führen. Alle anderen großen Plattformen — Facebook, LinkedIn, Slack, Discord, iMessage — lesen Open-Graph-Tags und ignorieren twitter:* vollständig. Beide aus demselben Titel, derselben Beschreibung und demselben Bild zu erzeugen, wie es dieses Tool tut, ist die einzige Möglichkeit, überall eine konsistente Share-Karte zu garantieren.",
     "faq.q5": "Lädt dieses Tool meinen Titel, meine Beschreibung oder mein Bild irgendwohin hoch?",
-    "faq.a5": "Nein. Jedes Tag wird mit JavaScript erzeugt, das in deinem eigenen Browser läuft, und nichts, was du eingibst, wird an einen Server gesendet oder außerhalb des lokalen Speichers deines Geräts gespeichert — dieser merkt sich nur deine letzten Eingaben, damit sie beim Neuladen nicht verloren gehen. Die einzige Ausnahme ist die Bild-URL: Fügst du eine ins OG-Bildfeld ein, fordert dein Browser dieses Bild direkt von der angegebenen Adresse an, um eine Vorschau zu zeigen — diese Anfrage geht direkt an den Host des Bildes, nicht über diese Seite."
+    "faq.a5": "Nein. Jedes Tag wird mit JavaScript erzeugt, das in deinem eigenen Browser läuft, und nichts, was du eingibst, wird an einen Server gesendet oder außerhalb des lokalen Speichers deines Geräts gespeichert — dieser merkt sich nur deine letzten Eingaben, damit sie beim Neuladen nicht verloren gehen. Die einzige Ausnahme ist die Bild-URL: Fügst du eine ins OG-Bildfeld ein, fordert dein Browser dieses Bild direkt von der angegebenen Adresse an, um eine Vorschau zu zeigen — diese Anfrage geht direkt an den Host des Bildes, nicht über diese Seite.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
 
   ja: {
@@ -989,7 +1049,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Open GraphとTwitter Cardの両方のタグが必要なのはなぜですか？片方だけでは不十分ですか？",
     "faq.a4": "X（Twitter）はまず自身のtwitter:*タグを読み取り、twitterタグがない場合にのみOpen Graphにフォールバックします。そのためog:*だけに頼ると、特にX上で崩れた表示や一般的すぎるカードになることがあります。Facebook、LinkedIn、Slack、Discord、iMessageなど他の主要なプラットフォームはOpen Graphタグを読み取り、twitter:*は完全に無視します。このツールのように、同じタイトル・説明文・画像から両方を生成することが、あらゆる場所で一貫したシェアカードを保証する唯一の方法です。",
     "faq.q5": "このツールは私のタイトル、説明文、画像をどこかにアップロードしますか？",
-    "faq.a5": "いいえ。すべてのタグはあなた自身のブラウザ内で動作するJavaScriptによって生成され、入力した内容がサーバーに送信されたり、端末のローカルストレージ以外の場所に保存されたりすることはありません。ローカルストレージは、更新時に入力内容を失わないよう最後の入力だけを記憶します。唯一の例外は画像URLです。OG画像欄にURLを貼り付けると、プレビュー表示のためブラウザが指定されたアドレスから直接その画像をリクエストします。このリクエストは本サイトを経由せず、画像そのもののホストへ直接送られます。"
+    "faq.a5": "いいえ。すべてのタグはあなた自身のブラウザ内で動作するJavaScriptによって生成され、入力した内容がサーバーに送信されたり、端末のローカルストレージ以外の場所に保存されたりすることはありません。ローカルストレージは、更新時に入力内容を失わないよう最後の入力だけを記憶します。唯一の例外は画像URLです。OG画像欄にURLを貼り付けると、プレビュー表示のためブラウザが指定されたアドレスから直接その画像をリクエストします。このリクエストは本サイトを経由せず、画像そのもののホストへ直接送られます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
 
   ko: {
@@ -1065,6 +1130,11 @@ window.I18N_LOCALES = {
     "faq.q4": "Open Graph와 Twitter Card 태그가 왜 둘 다 필요한가요? 하나로는 부족한가요?",
     "faq.a4": "X(트위터)는 자체 twitter:* 태그를 먼저 읽고, twitter 태그가 없을 때만 Open Graph로 대체합니다. 그래서 og:*에만 의존하면 특히 X에서 카드가 깨지거나 밋밋하게 보일 수 있습니다. 페이스북, 링크드인, 슬랙, 디스코드, 아이메시지 등 다른 주요 플랫폼은 Open Graph 태그만 읽고 twitter:*는 아예 무시합니다. 이 도구처럼 같은 제목·설명·이미지로 두 태그를 함께 생성하는 것이 어디서나 일관된 공유 카드를 보장하는 유일한 방법입니다.",
     "faq.q5": "이 도구가 제 제목, 설명, 이미지를 어딘가에 업로드하나요?",
-    "faq.a5": "아니요. 모든 태그는 사용자 브라우저에서 실행되는 자바스크립트로 만들어지며, 입력한 내용은 서버로 전송되거나 기기의 로컬 스토리지 밖 어디에도 저장되지 않습니다. 로컬 스토리지는 새로고침해도 입력값을 잃지 않도록 마지막 입력만 기억할 뿐입니다. 유일한 예외는 이미지 URL입니다. OG 이미지 칸에 URL을 붙여넣으면 미리보기를 보여주기 위해 브라우저가 입력한 주소에서 이미지를 직접 요청하는데, 이 요청은 이 사이트를 거치지 않고 이미지가 있는 호스트로 곧장 전달됩니다."
+    "faq.a5": "아니요. 모든 태그는 사용자 브라우저에서 실행되는 자바스크립트로 만들어지며, 입력한 내용은 서버로 전송되거나 기기의 로컬 스토리지 밖 어디에도 저장되지 않습니다. 로컬 스토리지는 새로고침해도 입력값을 잃지 않도록 마지막 입력만 기억할 뿐입니다. 유일한 예외는 이미지 URL입니다. OG 이미지 칸에 URL을 붙여넣으면 미리보기를 보여주기 위해 브라우저가 입력한 주소에서 이미지를 직접 요청하는데, 이 요청은 이 사이트를 거치지 않고 이미지가 있는 호스트로 곧장 전달됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

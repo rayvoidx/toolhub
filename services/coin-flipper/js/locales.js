@@ -64,7 +64,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Are my flips or results stored or sent anywhere?",
     "faq.a4": "No. Every coin flip runs entirely in your browser and nothing is sent to any server. Your running tally and custom labels are saved only in your device's local storage for convenience, and “Reset stats” clears the counts whenever you want.",
     "faq.q5": "Is a coin flip exactly 50/50?",
-    "faq.a5": "Digitally, yes — this simulator gives each side an exact 50% chance on every toss, with no memory of past results. A real, physical coin is very close but not perfect: tiny differences in weight, how it's caught, or a rare edge landing can add a fraction of a percent of bias. For a clean, unbiased heads or tails, a crypto-backed digital flip is actually fairer than the real thing."
+    "faq.a5": "Digitally, yes — this simulator gives each side an exact 50% chance on every toss, with no memory of past results. A real, physical coin is very close but not perfect: tiny differences in weight, how it's caught, or a rare edge landing can add a fraction of a percent of bias. For a clean, unbiased heads or tails, a crypto-backed digital flip is actually fairer than the real thing.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -113,7 +118,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的抛掷或结果会被存储或发送吗？",
     "faq.a4": "不会。每次抛硬币都完全在你的浏览器中运行，不会发送到任何服务器。累计统计和自定义名称只保存在你设备的本地存储中，方便下次使用，随时点击“重置统计”即可清除。",
     "faq.q5": "抛硬币真的正好是 50/50 吗？",
-    "faq.a5": "在数字世界里是的——本模拟器每次抛掷都给每一面精确的 50% 概率，且不记忆过去的结果。真实的实体硬币非常接近但并不完美：重量的细微差异、接住的方式或罕见的立起，都可能带来不到百分之一的偏差。若想要干净无偏的正反面，加密支持的数字抛掷其实比真硬币更公平。"
+    "faq.a5": "在数字世界里是的——本模拟器每次抛掷都给每一面精确的 50% 概率，且不记忆过去的结果。真实的实体硬币非常接近但并不完美：重量的细微差异、接住的方式或罕见的立起，都可能带来不到百分之一的偏差。若想要干净无偏的正反面，加密支持的数字抛掷其实比真硬币更公平。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -162,7 +172,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरी उछालें या नतीजे कहीं संग्रहीत या भेजे जाते हैं?",
     "faq.a4": "नहीं। हर सिक्का उछाल पूरी तरह आपके ब्राउज़र में चलती है और कुछ भी किसी सर्वर को नहीं भेजा जाता। आपके आँकड़े और कस्टम नाम सुविधा के लिए केवल आपके डिवाइस के लोकल स्टोरेज में सहेजे जाते हैं, और “आँकड़े रीसेट करें” से आप कभी भी गिनती मिटा सकते हैं।",
     "faq.q5": "क्या सिक्का उछाल ठीक 50/50 होती है?",
-    "faq.a5": "डिजिटल रूप में, हाँ — यह सिम्युलेटर हर उछाल में हर पहलू को ठीक 50% मौका देता है, और पिछले नतीजों की कोई याद नहीं रखता। असली सिक्का बहुत करीब है पर बिल्कुल सही नहीं: वज़न का छोटा अंतर, पकड़ने का तरीका, या कभी-कभार किनारे पर खड़ा हो जाना, एक प्रतिशत के अंश जितना झुकाव ला सकता है। साफ़, निष्पक्ष चित या पट के लिए क्रिप्टो-आधारित डिजिटल उछाल असल में असली सिक्के से ज़्यादा निष्पक्ष है।"
+    "faq.a5": "डिजिटल रूप में, हाँ — यह सिम्युलेटर हर उछाल में हर पहलू को ठीक 50% मौका देता है, और पिछले नतीजों की कोई याद नहीं रखता। असली सिक्का बहुत करीब है पर बिल्कुल सही नहीं: वज़न का छोटा अंतर, पकड़ने का तरीका, या कभी-कभार किनारे पर खड़ा हो जाना, एक प्रतिशत के अंश जितना झुकाव ला सकता है। साफ़, निष्पक्ष चित या पट के लिए क्रिप्टो-आधारित डिजिटल उछाल असल में असली सिक्के से ज़्यादा निष्पक्ष है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -211,7 +226,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Mis lanzamientos o resultados se guardan o se envían a algún sitio?",
     "faq.a4": "No. Cada lanzamiento se ejecuta por completo en tu navegador y nada se envía a ningún servidor. Tu recuento y tus etiquetas personalizadas se guardan solo en el almacenamiento local de tu dispositivo, por comodidad, y “Reiniciar estadísticas” borra los conteos cuando quieras.",
     "faq.q5": "¿Un lanzamiento de moneda es exactamente 50/50?",
-    "faq.a5": "En digital, sí: este simulador da a cada cara un 50% exacto en cada tirada, sin memoria de resultados anteriores. Una moneda física real está muy cerca pero no es perfecta: pequeñas diferencias de peso, cómo se atrapa o un raro canto pueden introducir una fracción de un por ciento de sesgo. Para una cara o cruz limpia e imparcial, un lanzamiento digital con criptografía es, de hecho, más justo que el real."
+    "faq.a5": "En digital, sí: este simulador da a cada cara un 50% exacto en cada tirada, sin memoria de resultados anteriores. Una moneda física real está muy cerca pero no es perfecta: pequeñas diferencias de peso, cómo se atrapa o un raro canto pueden introducir una fracción de un por ciento de sesgo. Para una cara o cruz limpia e imparcial, un lanzamiento digital con criptografía es, de hecho, más justo que el real.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -260,7 +280,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تُخزَّن رمياتي أو نتائجي أو تُرسَل إلى أي مكان؟",
     "faq.a4": "لا. تعمل كل رمية بالكامل داخل متصفحك ولا يُرسَل شيء إلى أي خادم. يُحفظ عدّادك وأسماؤك المخصصة في التخزين المحلي لجهازك فقط للتسهيل، وزر “إعادة ضبط الإحصائيات” يمسح الأعداد متى شئت.",
     "faq.q5": "هل رمية العملة 50/50 بالضبط؟",
-    "faq.a5": "رقميًا نعم — يمنح هذا المحاكي كل وجه فرصة 50% دقيقة في كل رمية، دون ذاكرة للنتائج السابقة. العملة الحقيقية قريبة جدًا لكنها ليست مثالية: فروق الوزن الطفيفة، وطريقة التقاطها، أو وقوفها النادر على الحافة قد تُدخل انحيازًا بجزء من واحد بالمئة. للحصول على صورة أو كتابة نظيفة ومحايدة، فإن الرمية الرقمية المدعومة بالتشفير أعدل فعليًا من الحقيقية."
+    "faq.a5": "رقميًا نعم — يمنح هذا المحاكي كل وجه فرصة 50% دقيقة في كل رمية، دون ذاكرة للنتائج السابقة. العملة الحقيقية قريبة جدًا لكنها ليست مثالية: فروق الوزن الطفيفة، وطريقة التقاطها، أو وقوفها النادر على الحافة قد تُدخل انحيازًا بجزء من واحد بالمئة. للحصول على صورة أو كتابة نظيفة ومحايدة، فإن الرمية الرقمية المدعومة بالتشفير أعدل فعليًا من الحقيقية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -309,7 +334,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mes lancers ou résultats sont-ils stockés ou envoyés quelque part ?",
     "faq.a4": "Non. Chaque lancer s'exécute entièrement dans votre navigateur et rien n'est envoyé à un serveur. Votre décompte et vos étiquettes personnalisées sont enregistrés uniquement dans le stockage local de votre appareil, par commodité, et “Réinitialiser les stats” efface les compteurs quand vous le souhaitez.",
     "faq.q5": "Un lancer de pièce est-il exactement 50/50 ?",
-    "faq.a5": "En numérique, oui : ce simulateur donne à chaque face exactement 50 % de chances à chaque lancer, sans mémoire des résultats passés. Une vraie pièce physique en est très proche mais pas parfaite : de minuscules différences de poids, la façon dont on la rattrape ou une rare chute sur la tranche peuvent introduire une fraction de pour cent de biais. Pour un pile ou face propre et impartial, un lancer numérique appuyé sur la cryptographie est en fait plus équitable que le vrai."
+    "faq.a5": "En numérique, oui : ce simulateur donne à chaque face exactement 50 % de chances à chaque lancer, sans mémoire des résultats passés. Une vraie pièce physique en est très proche mais pas parfaite : de minuscules différences de poids, la façon dont on la rattrape ou une rare chute sur la tranche peuvent introduire une fraction de pour cent de biais. Pour un pile ou face propre et impartial, un lancer numérique appuyé sur la cryptographie est en fait plus équitable que le vrai.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -358,7 +388,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার টস বা ফলাফল কি কোথাও সংরক্ষণ বা পাঠানো হয়?",
     "faq.a4": "না। প্রতিটি টস সম্পূর্ণ আপনার ব্রাউজারেই চলে এবং কিছুই কোনো সার্ভারে পাঠানো হয় না। আপনার হিসাব ও কাস্টম নাম সুবিধার জন্য শুধু আপনার ডিভাইসের লোকাল স্টোরেজে সংরক্ষিত থাকে, আর “পরিসংখ্যান রিসেট” যেকোনো সময় গণনা মুছে দেয়।",
     "faq.q5": "কয়েন টস কি ঠিক ৫০/৫০?",
-    "faq.a5": "ডিজিটালে হ্যাঁ — এই সিমুলেটর প্রতিটি টসে প্রতিটি দিককে ঠিক ৫০% সুযোগ দেয়, অতীত ফলের কোনো স্মৃতি রাখে না। বাস্তব কয়েন খুব কাছাকাছি হলেও নিখুঁত নয়: ওজনের সামান্য পার্থক্য, ধরার ধরন, কিংবা বিরল কিনারায় দাঁড়ানো এক শতাংশের ভগ্নাংশ পক্ষপাত আনতে পারে। পরিষ্কার, নিরপেক্ষ হেড বা টেলের জন্য ক্রিপ্টো-নির্ভর ডিজিটাল টস আসলে বাস্তবের চেয়েও ন্যায্য।"
+    "faq.a5": "ডিজিটালে হ্যাঁ — এই সিমুলেটর প্রতিটি টসে প্রতিটি দিককে ঠিক ৫০% সুযোগ দেয়, অতীত ফলের কোনো স্মৃতি রাখে না। বাস্তব কয়েন খুব কাছাকাছি হলেও নিখুঁত নয়: ওজনের সামান্য পার্থক্য, ধরার ধরন, কিংবা বিরল কিনারায় দাঁড়ানো এক শতাংশের ভগ্নাংশ পক্ষপাত আনতে পারে। পরিষ্কার, নিরপেক্ষ হেড বা টেলের জন্য ক্রিপ্টো-নির্ভর ডিজিটাল টস আসলে বাস্তবের চেয়েও ন্যায্য।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -407,7 +442,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meus lançamentos ou resultados são armazenados ou enviados a algum lugar?",
     "faq.a4": "Não. Cada lançamento roda inteiramente no seu navegador e nada é enviado a nenhum servidor. Sua contagem e seus rótulos personalizados são salvos apenas no armazenamento local do seu dispositivo, por conveniência, e “Zerar estatísticas” limpa as contagens quando você quiser.",
     "faq.q5": "Um lançamento de moeda é exatamente 50/50?",
-    "faq.a5": "No digital, sim — este simulador dá a cada lado exatamente 50% de chance em cada lançamento, sem memória de resultados anteriores. Uma moeda física real chega bem perto, mas não é perfeita: pequenas diferenças de peso, o modo como é apanhada ou uma rara parada na borda podem introduzir uma fração de por cento de viés. Para uma cara ou coroa limpa e imparcial, um lançamento digital com criptografia é, na verdade, mais justo que o real."
+    "faq.a5": "No digital, sim — este simulador dá a cada lado exatamente 50% de chance em cada lançamento, sem memória de resultados anteriores. Uma moeda física real chega bem perto, mas não é perfeita: pequenas diferenças de peso, o modo como é apanhada ou uma rara parada na borda podem introduzir uma fração de por cento de viés. Para uma cara ou coroa limpa e imparcial, um lançamento digital com criptografia é, na verdade, mais justo que o real.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -456,7 +496,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Мои броски и результаты где-то сохраняются или отправляются?",
     "faq.a4": "Нет. Каждый бросок выполняется полностью в вашем браузере, и ничего не отправляется на серверы. Ваш счёт и свои подписи сохраняются только в локальном хранилище устройства для удобства, а кнопка «Сбросить статистику» очищает счётчики в любой момент.",
     "faq.q5": "Бросок монеты — это ровно 50/50?",
-    "faq.a5": "В цифровом виде — да: этот симулятор даёт каждой стороне ровно 50% при каждом броске, без памяти о прошлых результатах. Настоящая монета очень близка, но не идеальна: крошечные различия в весе, способ ловли или редкое падение на ребро могут дать смещение в доли процента. Для чистого, беспристрастного орла или решки цифровой бросок на криптографии на деле честнее настоящего."
+    "faq.a5": "В цифровом виде — да: этот симулятор даёт каждой стороне ровно 50% при каждом броске, без памяти о прошлых результатах. Настоящая монета очень близка, но не идеальна: крошечные различия в весе, способ ловли или редкое падение на ребро могут дать смещение в доли процента. Для чистого, беспристрастного орла или решки цифровой бросок на криптографии на деле честнее настоящего.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -505,7 +550,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میری اچھالیں یا نتائج کہیں محفوظ یا بھیجے جاتے ہیں؟",
     "faq.a4": "نہیں۔ ہر اچھال مکمل طور پر آپ کے براؤزر میں چلتی ہے اور کچھ بھی کسی سرور کو نہیں بھیجا جاتا۔ آپ کی گنتی اور اپنی مرضی کے نام سہولت کے لیے صرف آپ کے ڈیوائس کے لوکل اسٹوریج میں محفوظ ہوتے ہیں، اور “اعداد و شمار ری سیٹ کریں” جب چاہیں گنتی مٹا دیتا ہے۔",
     "faq.q5": "کیا سکہ اچھالنا بالکل 50/50 ہوتا ہے؟",
-    "faq.a5": "ڈیجیٹل طور پر، جی ہاں — یہ سمیولیٹر ہر اچھال میں ہر رخ کو ٹھیک 50% موقع دیتا ہے، اور پچھلے نتائج کی کوئی یاد نہیں رکھتا۔ اصلی سکہ بہت قریب ہے مگر مکمل نہیں: وزن کا معمولی فرق، پکڑنے کا انداز، یا کبھی کبھار کنارے پر کھڑا ہو جانا، ایک فیصد کے حصے جتنا جھکاؤ لا سکتا ہے۔ صاف، غیر جانبدار ہیڈ یا ٹیل کے لیے کرپٹو پر مبنی ڈیجیٹل اچھال دراصل اصلی سے زیادہ منصفانہ ہے۔"
+    "faq.a5": "ڈیجیٹل طور پر، جی ہاں — یہ سمیولیٹر ہر اچھال میں ہر رخ کو ٹھیک 50% موقع دیتا ہے، اور پچھلے نتائج کی کوئی یاد نہیں رکھتا۔ اصلی سکہ بہت قریب ہے مگر مکمل نہیں: وزن کا معمولی فرق، پکڑنے کا انداز، یا کبھی کبھار کنارے پر کھڑا ہو جانا، ایک فیصد کے حصے جتنا جھکاؤ لا سکتا ہے۔ صاف، غیر جانبدار ہیڈ یا ٹیل کے لیے کرپٹو پر مبنی ڈیجیٹل اچھال دراصل اصلی سے زیادہ منصفانہ ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -554,7 +604,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah lemparan atau hasil saya disimpan atau dikirim ke suatu tempat?",
     "faq.a4": "Tidak. Setiap lemparan berjalan sepenuhnya di browser Anda dan tak ada yang dikirim ke server mana pun. Hitungan dan label khusus Anda hanya disimpan di penyimpanan lokal perangkat demi kenyamanan, dan “Atur ulang statistik” menghapus hitungan kapan pun Anda mau.",
     "faq.q5": "Apakah lemparan koin benar-benar 50/50?",
-    "faq.a5": "Secara digital, ya — simulator ini memberi setiap sisi peluang tepat 50% di setiap lemparan, tanpa mengingat hasil sebelumnya. Koin fisik sungguhan sangat dekat tetapi tak sempurna: perbedaan berat yang kecil, cara menangkapnya, atau berdiri di sisinya yang langka bisa menambah bias sepersekian persen. Untuk kepala atau ekor yang bersih dan netral, lemparan digital berbasis kriptografi justru lebih adil daripada yang asli."
+    "faq.a5": "Secara digital, ya — simulator ini memberi setiap sisi peluang tepat 50% di setiap lemparan, tanpa mengingat hasil sebelumnya. Koin fisik sungguhan sangat dekat tetapi tak sempurna: perbedaan berat yang kecil, cara menangkapnya, atau berdiri di sisinya yang langka bisa menambah bias sepersekian persen. Untuk kepala atau ekor yang bersih dan netral, lemparan digital berbasis kriptografi justru lebih adil daripada yang asli.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -603,7 +658,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Werden meine Würfe oder Ergebnisse gespeichert oder irgendwohin gesendet?",
     "faq.a4": "Nein. Jeder Wurf läuft vollständig in deinem Browser, und nichts wird an einen Server gesendet. Deine Zählung und eigenen Bezeichnungen werden nur im lokalen Speicher deines Geräts gespeichert, zur Bequemlichkeit, und “Statistik zurücksetzen” löscht die Zähler, wann immer du willst.",
     "faq.q5": "Ist ein Münzwurf genau 50/50?",
-    "faq.a5": "Digital ja — dieser Simulator gibt jeder Seite bei jedem Wurf exakt 50% Chance, ohne Erinnerung an frühere Ergebnisse. Eine echte, physische Münze kommt sehr nah heran, ist aber nicht perfekt: winzige Gewichtsunterschiede, die Art des Auffangens oder ein seltenes Landen auf der Kante können einen Bruchteil eines Prozents Verzerrung bringen. Für ein sauberes, unvoreingenommenes Kopf oder Zahl ist ein krypto-gestützter digitaler Wurf tatsächlich fairer als der echte."
+    "faq.a5": "Digital ja — dieser Simulator gibt jeder Seite bei jedem Wurf exakt 50% Chance, ohne Erinnerung an frühere Ergebnisse. Eine echte, physische Münze kommt sehr nah heran, ist aber nicht perfekt: winzige Gewichtsunterschiede, die Art des Auffangens oder ein seltenes Landen auf der Kante können einen Bruchteil eines Prozents Verzerrung bringen. Für ein sauberes, unvoreingenommenes Kopf oder Zahl ist ein krypto-gestützter digitaler Wurf tatsächlich fairer als der echte.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -652,7 +712,12 @@ window.I18N_LOCALES = {
     "faq.q4": "投げた記録や結果はどこかに保存・送信されますか？",
     "faq.a4": "いいえ。すべての投げは完全にブラウザ内で動き、どのサーバーにも何も送信されません。累計と自分で付けた名前は、便利さのために端末のローカルストレージにだけ保存され、“統計をリセット”でいつでも消せます。",
     "faq.q5": "コイントスはちょうど50/50ですか？",
-    "faq.a5": "デジタルなら、はい — このシミュレーターは毎回どちらの面にも正確に50%の確率を与え、過去の結果を覚えていません。実物のコインは非常に近いものの完璧ではなく、わずかな重さの違いや受け止め方、まれに縁で立つことで、コンマ数パーセントの偏りが生じます。きれいで偏りのない表か裏なら、暗号に基づくデジタルの投げのほうが実は本物より公平です。"
+    "faq.a5": "デジタルなら、はい — このシミュレーターは毎回どちらの面にも正確に50%の確率を与え、過去の結果を覚えていません。実物のコインは非常に近いものの完璧ではなく、わずかな重さの違いや受け止め方、まれに縁で立つことで、コンマ数パーセントの偏りが生じます。きれいで偏りのない表か裏なら、暗号に基づくデジタルの投げのほうが実は本物より公平です。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -701,6 +766,11 @@ window.I18N_LOCALES = {
     "faq.q4": "제 던지기나 결과가 어딘가에 저장되거나 전송되나요?",
     "faq.a4": "아니요. 모든 동전 던지기는 전적으로 브라우저 안에서 실행되며 어떤 서버로도 전송되지 않습니다. 누적 기록과 사용자 지정 이름은 편의를 위해 기기의 로컬 저장소에만 저장되고, “통계 초기화”로 언제든 횟수를 지울 수 있습니다.",
     "faq.q5": "동전 던지기는 정확히 50/50인가요?",
-    "faq.a5": "디지털에서는 그렇습니다 — 이 시뮬레이터는 매번 각 면에 정확히 50% 확률을 주며 과거 결과를 기억하지 않습니다. 실제 동전은 매우 가깝지만 완벽하지는 않아서, 미세한 무게 차이, 받는 방식, 드물게 모서리로 서는 경우 등이 1퍼센트의 일부만큼 편향을 만들 수 있습니다. 깔끔하고 치우침 없는 앞면 또는 뒷면을 원한다면, 암호 기반 디지털 던지기가 사실 실제보다 더 공정합니다."
+    "faq.a5": "디지털에서는 그렇습니다 — 이 시뮬레이터는 매번 각 면에 정확히 50% 확률을 주며 과거 결과를 기억하지 않습니다. 실제 동전은 매우 가깝지만 완벽하지는 않아서, 미세한 무게 차이, 받는 방식, 드물게 모서리로 서는 경우 등이 1퍼센트의 일부만큼 편향을 만들 수 있습니다. 깔끔하고 치우침 없는 앞면 또는 뒷면을 원한다면, 암호 기반 디지털 던지기가 사실 실제보다 더 공정합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

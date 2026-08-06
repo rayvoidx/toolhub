@@ -59,7 +59,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Will encoding mangle Korean, Chinese, Arabic or emoji text?",
     "faq.a4": "No, not by default. With Encode all non-ASCII characters turned off, this tool only touches the characters that are actually unsafe or have a well-known named entity, and leaves other-language text and emoji exactly as typed, since modern browsers render UTF-8 correctly without any encoding. Turning the toggle on instead converts every character above the ASCII range into a numeric entity — useful when you need output that only contains plain ASCII bytes, for example an old email template or a system that cannot declare UTF-8.",
     "faq.q5": "Is my text sent to a server when I encode or decode it here?",
-    "faq.a5": "No. Encoding runs on a small built-in table of named entities plus a numeric fallback, and decoding uses the browser's own HTML parser through a hidden, never-inserted textarea element, so it understands every entity a real browser understands — without ever sending your text anywhere. Nothing is uploaded, there is no sign-up, and only your last input and toggle choice are kept in this browser's local storage for convenience."
+    "faq.a5": "No. Encoding runs on a small built-in table of named entities plus a numeric fallback, and decoding uses the browser's own HTML parser through a hidden, never-inserted textarea element, so it understands every entity a real browser understands — without ever sending your text anywhere. Nothing is uploaded, there is no sign-up, and only your last input and toggle choice are kept in this browser's local storage for convenience.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -103,7 +108,12 @@ window.I18N_LOCALES = {
     "faq.q4": "编码会不会把中文、韩文、阿拉伯文或表情符号弄乱？",
     "faq.a4": "默认不会。在关闭「编码所有非 ASCII 字符」时，本工具只处理真正不安全或拥有知名命名实体的字符，其他语言文字和表情符号会原样保留，因为现代浏览器本就能正确渲染 UTF-8。打开该开关后，则会把 ASCII 范围以外的每个字符都转换为数字实体——这仅在你需要纯 ASCII 字节输出时才有用，例如旧式邮件模板或无法声明 UTF-8 的系统。",
     "faq.q5": "我在这里编码或解码的文本会被发送到服务器吗？",
-    "faq.a5": "不会。编码基于内置的命名实体表加数字回退方案运行，解码则通过一个隐藏、从未插入文档的 textarea 元素，借助浏览器自身的 HTML 解析器完成，因此它能理解真实浏览器所理解的每一种实体——且从不会把你的文本发送到任何地方。没有任何内容会被上传，无需注册，仅为方便起见，你最近一次的输入和开关选择会保存在此浏览器的本地存储中。"
+    "faq.a5": "不会。编码基于内置的命名实体表加数字回退方案运行，解码则通过一个隐藏、从未插入文档的 textarea 元素，借助浏览器自身的 HTML 解析器完成，因此它能理解真实浏览器所理解的每一种实体——且从不会把你的文本发送到任何地方。没有任何内容会被上传，无需注册，仅为方便起见，你最近一次的输入和开关选择会保存在此浏览器的本地存储中。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -147,7 +157,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या एन्कोडिंग कोरियन, चीनी, अरबी या इमोजी टेक्स्ट को बिगाड़ देगी?",
     "faq.a4": "नहीं, डिफ़ॉल्ट रूप से नहीं। 'सभी नॉन-ASCII अक्षर एन्कोड करें' बंद होने पर, यह टूल केवल उन्हीं अक्षरों को छूता है जो वास्तव में असुरक्षित हैं या जिनकी कोई जानी-मानी नामित एंटिटी है, और अन्य भाषाओं के टेक्स्ट व इमोजी को बिल्कुल वैसे ही छोड़ देता है जैसे टाइप किए गए थे, क्योंकि आधुनिक ब्राउज़र पहले से ही UTF-8 को सही तरीक़े से रेंडर करते हैं। टॉगल चालू करने पर ASCII दायरे से ऊपर का हर अक्षर न्यूमेरिक एंटिटी में बदल जाता है — यह तभी उपयोगी है जब आपको ऐसा आउटपुट चाहिए जिसमें केवल सादे ASCII बाइट्स हों, जैसे कोई पुराना ईमेल टेम्पलेट या ऐसा सिस्टम जो UTF-8 घोषित नहीं कर सकता।",
     "faq.q5": "क्या यहाँ एन्कोड या डिकोड करते समय मेरा टेक्स्ट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। एन्कोडिंग नामित एंटिटी की एक छोटी अंतर्निर्मित तालिका और न्यूमेरिक फ़ॉलबैक पर चलती है, और डिकोडिंग एक छिपे हुए, कभी दस्तावेज़ में न जोड़े गए textarea एलिमेंट के ज़रिए ब्राउज़र के अपने HTML पार्सर का उपयोग करती है, इसलिए यह हर वह एंटिटी समझता है जो एक असली ब्राउज़र समझता है — और आपका टेक्स्ट कहीं नहीं भेजा जाता। कुछ भी अपलोड नहीं होता, कोई साइन-अप नहीं है, और सुविधा के लिए केवल आपका अंतिम इनपुट और टॉगल चुनाव इस ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है।"
+    "faq.a5": "नहीं। एन्कोडिंग नामित एंटिटी की एक छोटी अंतर्निर्मित तालिका और न्यूमेरिक फ़ॉलबैक पर चलती है, और डिकोडिंग एक छिपे हुए, कभी दस्तावेज़ में न जोड़े गए textarea एलिमेंट के ज़रिए ब्राउज़र के अपने HTML पार्सर का उपयोग करती है, इसलिए यह हर वह एंटिटी समझता है जो एक असली ब्राउज़र समझता है — और आपका टेक्स्ट कहीं नहीं भेजा जाता। कुछ भी अपलोड नहीं होता, कोई साइन-अप नहीं है, और सुविधा के लिए केवल आपका अंतिम इनपुट और टॉगल चुनाव इस ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -191,7 +206,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿La codificación estropeará el texto en coreano, chino, árabe o los emojis?",
     "faq.a4": "No, no por defecto. Con Codificar todos los caracteres no ASCII desactivado, esta herramienta solo toca los caracteres que realmente son inseguros o tienen una entidad con nombre conocida, y deja el texto en otros idiomas y los emojis exactamente como se escribieron, ya que los navegadores modernos ya renderizan UTF-8 correctamente. Activar el interruptor, en cambio, convierte cada carácter por encima del rango ASCII en una entidad numérica —útil solo cuando necesitas una salida que contenga únicamente bytes ASCII puros, por ejemplo una plantilla de correo antigua o un sistema que no puede declarar UTF-8.",
     "faq.q5": "¿Se envía mi texto a un servidor cuando lo codifico o decodifico aquí?",
-    "faq.a5": "No. La codificación funciona con una pequeña tabla incorporada de entidades con nombre más un método numérico de respaldo, y la decodificación usa el propio analizador HTML del navegador a través de un elemento textarea oculto que nunca se inserta en el documento, por lo que entiende cualquier entidad que un navegador real entienda —sin enviar tu texto a ningún sitio. No se sube nada, no hay registro, y solo tu última entrada y tu elección del interruptor se guardan en el almacenamiento local de este navegador por comodidad."
+    "faq.a5": "No. La codificación funciona con una pequeña tabla incorporada de entidades con nombre más un método numérico de respaldo, y la decodificación usa el propio analizador HTML del navegador a través de un elemento textarea oculto que nunca se inserta en el documento, por lo que entiende cualquier entidad que un navegador real entienda —sin enviar tu texto a ningún sitio. No se sube nada, no hay registro, y solo tu última entrada y tu elección del interruptor se guardan en el almacenamiento local de este navegador por comodidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -235,7 +255,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل سيؤدي الترميز إلى تشويه النص الكوري أو الصيني أو العربي أو الإيموجي؟",
     "faq.a4": "لا، ليس افتراضيًا. مع إيقاف ترميز جميع الأحرف غير ASCII، لا تلمس هذه الأداة سوى الأحرف غير الآمنة فعلًا أو التي لها كيان مسمّى معروف، وتترك نص اللغات الأخرى والإيموجي كما كُتب تمامًا، لأن المتصفحات الحديثة تعرض UTF-8 بشكل صحيح أصلًا. أما تفعيل المفتاح فيحوّل كل حرف فوق نطاق ASCII إلى كيان رقمي — وهو مفيد فقط عندما تحتاج مخرجات تحتوي على بايتات ASCII صرفة فقط، مثل قالب بريد إلكتروني قديم أو نظام لا يمكنه الإعلان عن UTF-8.",
     "faq.q5": "هل يُرسَل نصي إلى خادم عند ترميزه أو فك ترميزه هنا؟",
-    "faq.a5": "لا. يعمل الترميز اعتمادًا على جدول مدمج صغير للكيانات المسمّاة إضافة إلى صيغة رقمية احتياطية، ويستخدم فك الترميز محلل HTML الخاص بالمتصفح نفسه عبر عنصر textarea مخفي لا يُدرَج في المستند أبدًا، لذا فهو يفهم كل كيان يفهمه متصفح حقيقي — دون إرسال نصك إلى أي مكان أبدًا. لا يُرفع أي شيء، ولا يوجد تسجيل، ويُحفظ فقط آخر إدخال لك واختيار المفتاح في التخزين المحلي لهذا المتصفح للتيسير."
+    "faq.a5": "لا. يعمل الترميز اعتمادًا على جدول مدمج صغير للكيانات المسمّاة إضافة إلى صيغة رقمية احتياطية، ويستخدم فك الترميز محلل HTML الخاص بالمتصفح نفسه عبر عنصر textarea مخفي لا يُدرَج في المستند أبدًا، لذا فهو يفهم كل كيان يفهمه متصفح حقيقي — دون إرسال نصك إلى أي مكان أبدًا. لا يُرفع أي شيء، ولا يوجد تسجيل، ويُحفظ فقط آخر إدخال لك واختيار المفتاح في التخزين المحلي لهذا المتصفح للتيسير.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -279,7 +304,12 @@ window.I18N_LOCALES = {
     "faq.q4": "L'encodage va-t-il abîmer le texte en coréen, chinois, arabe ou les emojis ?",
     "faq.a4": "Non, pas par défaut. Avec l'option Encoder tous les caractères non-ASCII désactivée, cet outil ne touche que les caractères réellement dangereux ou possédant une entité nommée connue, et laisse le texte dans d'autres langues et les emojis exactement tels qu'ils ont été saisis, puisque les navigateurs modernes affichent déjà l'UTF-8 correctement. Activer l'option convertit en revanche chaque caractère au-delà de la plage ASCII en une entité numérique — utile seulement quand vous avez besoin d'une sortie ne contenant que des octets ASCII purs, par exemple un vieux modèle d'e-mail ou un système incapable de déclarer l'UTF-8.",
     "faq.q5": "Mon texte est-il envoyé à un serveur quand je l'encode ou le décode ici ?",
-    "faq.a5": "Non. L'encodage repose sur une petite table intégrée d'entités nommées complétée par un repli numérique, et le décodage utilise l'analyseur HTML du navigateur lui-même via un élément textarea caché, jamais inséré dans le document, si bien qu'il comprend toute entité qu'un vrai navigateur comprend — sans jamais envoyer votre texte où que ce soit. Rien n'est téléversé, il n'y a pas d'inscription, et seuls votre dernière saisie et votre choix d'option sont conservés dans le stockage local de ce navigateur, par commodité."
+    "faq.a5": "Non. L'encodage repose sur une petite table intégrée d'entités nommées complétée par un repli numérique, et le décodage utilise l'analyseur HTML du navigateur lui-même via un élément textarea caché, jamais inséré dans le document, si bien qu'il comprend toute entité qu'un vrai navigateur comprend — sans jamais envoyer votre texte où que ce soit. Rien n'est téléversé, il n'y a pas d'inscription, et seuls votre dernière saisie et votre choix d'option sont conservés dans le stockage local de ce navigateur, par commodité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -323,7 +353,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এনকোডিং কি কোরিয়ান, চীনা, আরবি বা ইমোজি টেক্সট নষ্ট করে দেবে?",
     "faq.a4": "না, ডিফল্টভাবে নয়। 'সব নন-ASCII অক্ষর এনকোড করুন' বন্ধ থাকলে, এই টুল শুধু সেই অক্ষরগুলোই স্পর্শ করে যেগুলো সত্যিই অনিরাপদ বা যাদের সুপরিচিত নামযুক্ত এনটিটি আছে, এবং অন্য ভাষার টেক্সট ও ইমোজি ঠিক যেভাবে টাইপ করা হয়েছিল সেভাবেই রেখে দেয়, কারণ আধুনিক ব্রাউজারগুলো এমনিতেই UTF-8 সঠিকভাবে রেন্ডার করে। টগল চালু করলে বরং ASCII পরিসরের ঊর্ধ্বের প্রতিটি অক্ষর সংখ্যাগত এনটিটিতে রূপান্তরিত হয় — এটি কেবল তখনই দরকারি যখন আপনার আউটপুটে শুধু সাদামাটা ASCII বাইট দরকার, যেমন কোনো পুরনো ইমেইল টেমপ্লেট বা এমন কোনো সিস্টেম যা UTF-8 ঘোষণা করতে পারে না।",
     "faq.q5": "এখানে এনকোড বা ডিকোড করার সময় আমার টেক্সট কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এনকোডিং নামযুক্ত এনটিটির একটি ছোট বিল্ট-ইন টেবিল এবং একটি সংখ্যাগত ফলব্যাকের উপর ভিত্তি করে চলে, আর ডিকোডিং একটি লুকানো, কখনো ডকুমেন্টে যোগ না-করা textarea এলিমেন্টের মাধ্যমে ব্রাউজারের নিজস্ব HTML পার্সার ব্যবহার করে, তাই এটি একটি আসল ব্রাউজার যা যা এনটিটি বোঝে তার সবই বোঝে — আপনার টেক্সট কখনো কোথাও না পাঠিয়েই। কিছুই আপলোড হয় না, কোনো সাইন-আপ নেই, এবং শুধুমাত্র সুবিধার জন্য আপনার শেষ ইনপুট ও টগল পছন্দ এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে।"
+    "faq.a5": "না। এনকোডিং নামযুক্ত এনটিটির একটি ছোট বিল্ট-ইন টেবিল এবং একটি সংখ্যাগত ফলব্যাকের উপর ভিত্তি করে চলে, আর ডিকোডিং একটি লুকানো, কখনো ডকুমেন্টে যোগ না-করা textarea এলিমেন্টের মাধ্যমে ব্রাউজারের নিজস্ব HTML পার্সার ব্যবহার করে, তাই এটি একটি আসল ব্রাউজার যা যা এনটিটি বোঝে তার সবই বোঝে — আপনার টেক্সট কখনো কোথাও না পাঠিয়েই। কিছুই আপলোড হয় না, কোনো সাইন-আপ নেই, এবং শুধুমাত্র সুবিধার জন্য আপনার শেষ ইনপুট ও টগল পছন্দ এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -367,7 +402,12 @@ window.I18N_LOCALES = {
     "faq.q4": "A codificação vai bagunçar texto em coreano, chinês, árabe ou emojis?",
     "faq.a4": "Não, não por padrão. Com Codificar todos os caracteres não ASCII desativado, esta ferramenta só toca nos caracteres que são realmente inseguros ou têm uma entidade nomeada conhecida, e deixa o texto em outros idiomas e os emojis exatamente como foram digitados, já que navegadores modernos já renderizam UTF-8 corretamente. Ativar a opção, em vez disso, converte cada caractere acima do intervalo ASCII em uma entidade numérica — útil apenas quando você precisa de uma saída que contenha somente bytes ASCII puros, por exemplo um modelo de e-mail antigo ou um sistema que não pode declarar UTF-8.",
     "faq.q5": "Meu texto é enviado a um servidor quando eu codifico ou decodifico aqui?",
-    "faq.a5": "Não. A codificação roda sobre uma pequena tabela embutida de entidades nomeadas mais um fallback numérico, e a decodificação usa o próprio analisador HTML do navegador por meio de um elemento textarea oculto, nunca inserido no documento, então ela entende toda entidade que um navegador real entende — sem nunca enviar seu texto para lugar nenhum. Nada é enviado, não há cadastro, e apenas sua última entrada e escolha da opção são guardadas no armazenamento local deste navegador por conveniência."
+    "faq.a5": "Não. A codificação roda sobre uma pequena tabela embutida de entidades nomeadas mais um fallback numérico, e a decodificação usa o próprio analisador HTML do navegador por meio de um elemento textarea oculto, nunca inserido no documento, então ela entende toda entidade que um navegador real entende — sem nunca enviar seu texto para lugar nenhum. Nada é enviado, não há cadastro, e apenas sua última entrada e escolha da opção são guardadas no armazenamento local deste navegador por conveniência.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -411,7 +451,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Испортит ли кодирование корейский, китайский, арабский текст или эмодзи?",
     "faq.a4": "Нет, не по умолчанию. При выключенном переключателе «Кодировать все не-ASCII символы» этот инструмент трогает только те символы, которые действительно небезопасны или имеют известную именованную сущность, и оставляет текст на других языках и эмодзи в точности такими, как они были введены, поскольку современные браузеры и так корректно отображают UTF-8. Включение переключателя, напротив, превращает каждый символ за пределами диапазона ASCII в числовую сущность — это полезно, только если вам нужен вывод, содержащий исключительно чистые байты ASCII, например для старого email-шаблона или системы, не умеющей объявлять UTF-8.",
     "faq.q5": "Отправляется ли мой текст на сервер при кодировании или декодировании здесь?",
-    "faq.a5": "Нет. Кодирование работает на основе небольшой встроенной таблицы именованных сущностей плюс числового резерва, а декодирование использует собственный HTML-парсер браузера через скрытый, никогда не вставляемый в документ элемент textarea, поэтому оно понимает любую сущность, которую понимает настоящий браузер, — и при этом ваш текст никуда не отправляется. Ничего не загружается на сервер, регистрация не требуется, а в локальном хранилище этого браузера для удобства сохраняются только последний введённый текст и выбор переключателя."
+    "faq.a5": "Нет. Кодирование работает на основе небольшой встроенной таблицы именованных сущностей плюс числового резерва, а декодирование использует собственный HTML-парсер браузера через скрытый, никогда не вставляемый в документ элемент textarea, поэтому оно понимает любую сущность, которую понимает настоящий браузер, — и при этом ваш текст никуда не отправляется. Ничего не загружается на сервер, регистрация не требуется, а в локальном хранилище этого браузера для удобства сохраняются только последний введённый текст и выбор переключателя.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -455,7 +500,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا انکوڈنگ کورین، چینی، عربی یا ایموجی ٹیکسٹ کو بگاڑ دے گی؟",
     "faq.a4": "نہیں، پہلے سے طے شدہ طور پر نہیں۔ 'تمام نان-ASCII حروف انکوڈ کریں' بند ہونے پر، یہ ٹول صرف انہی حروف کو چھوتا ہے جو واقعی غیر محفوظ ہیں یا جن کی کوئی معروف نامی اینٹیٹی موجود ہے، اور دوسری زبانوں کے ٹیکسٹ اور ایموجی کو بالکل ویسے ہی چھوڑ دیتا ہے جیسے ٹائپ کیے گئے تھے، کیونکہ جدید براؤزرز پہلے ہی UTF-8 کو درست طریقے سے رینڈر کرتے ہیں۔ ٹوگل آن کرنے سے اس کے برعکس ASCII رینج سے اوپر ہر حرف عددی اینٹیٹی میں بدل جاتا ہے — یہ صرف اسی وقت مفید ہے جب آپ کو ایسا آؤٹ پٹ چاہیے جس میں صرف خالص ASCII بائٹس ہوں، مثلاً کوئی پرانا ای میل ٹیمپلیٹ یا ایسا سسٹم جو UTF-8 اعلان نہیں کر سکتا۔",
     "faq.q5": "کیا یہاں انکوڈ یا ڈی کوڈ کرتے وقت میرا ٹیکسٹ کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ انکوڈنگ نامی اینٹیٹیز کے ایک چھوٹے بلٹ اِن جدول اور ایک عددی متبادل کی بنیاد پر چلتی ہے، اور ڈی کوڈنگ ایک پوشیدہ، کبھی دستاویز میں شامل نہ کیے جانے والے textarea عنصر کے ذریعے براؤزر کے اپنے HTML پارسر کا استعمال کرتی ہے، اس لیے یہ ہر وہ اینٹیٹی سمجھتی ہے جو ایک حقیقی براؤزر سمجھتا ہے — اور آپ کا ٹیکسٹ کبھی کہیں نہیں بھیجا جاتا۔ کچھ بھی اپ لوڈ نہیں ہوتا، کوئی سائن اپ نہیں، اور صرف سہولت کے لیے آپ کا آخری ان پٹ اور ٹوگل کا انتخاب اس براؤزر کے لوکل اسٹوریج میں محفوظ رکھا جاتا ہے۔"
+    "faq.a5": "نہیں۔ انکوڈنگ نامی اینٹیٹیز کے ایک چھوٹے بلٹ اِن جدول اور ایک عددی متبادل کی بنیاد پر چلتی ہے، اور ڈی کوڈنگ ایک پوشیدہ، کبھی دستاویز میں شامل نہ کیے جانے والے textarea عنصر کے ذریعے براؤزر کے اپنے HTML پارسر کا استعمال کرتی ہے، اس لیے یہ ہر وہ اینٹیٹی سمجھتی ہے جو ایک حقیقی براؤزر سمجھتا ہے — اور آپ کا ٹیکسٹ کبھی کہیں نہیں بھیجا جاتا۔ کچھ بھی اپ لوڈ نہیں ہوتا، کوئی سائن اپ نہیں، اور صرف سہولت کے لیے آپ کا آخری ان پٹ اور ٹوگل کا انتخاب اس براؤزر کے لوکل اسٹوریج میں محفوظ رکھا جاتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -499,7 +549,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah enkode akan merusak teks Korea, Cina, Arab, atau emoji?",
     "faq.a4": "Tidak, tidak secara default. Dengan opsi Enkode semua karakter non-ASCII dinonaktifkan, alat ini hanya menyentuh karakter yang benar-benar tidak aman atau memiliki entitas bernama yang dikenal, dan membiarkan teks bahasa lain serta emoji persis seperti saat diketik, karena browser modern sudah merender UTF-8 dengan benar. Mengaktifkan toggle justru mengubah setiap karakter di atas rentang ASCII menjadi entitas numerik — berguna hanya saat Anda memerlukan output yang hanya berisi byte ASCII murni, misalnya templat email lama atau sistem yang tidak bisa mendeklarasikan UTF-8.",
     "faq.q5": "Apakah teks saya dikirim ke server saat saya mengenkode atau mendekode di sini?",
-    "faq.a5": "Tidak. Enkode berjalan berdasarkan tabel bawaan kecil berisi entitas bernama ditambah cadangan numerik, dan dekode menggunakan parser HTML bawaan browser melalui elemen textarea tersembunyi yang tidak pernah dimasukkan ke dokumen, sehingga memahami setiap entitas yang dipahami browser sungguhan — tanpa pernah mengirim teks Anda ke mana pun. Tidak ada yang diunggah, tidak perlu mendaftar, dan hanya input terakhir serta pilihan toggle Anda yang disimpan di penyimpanan lokal browser ini demi kenyamanan."
+    "faq.a5": "Tidak. Enkode berjalan berdasarkan tabel bawaan kecil berisi entitas bernama ditambah cadangan numerik, dan dekode menggunakan parser HTML bawaan browser melalui elemen textarea tersembunyi yang tidak pernah dimasukkan ke dokumen, sehingga memahami setiap entitas yang dipahami browser sungguhan — tanpa pernah mengirim teks Anda ke mana pun. Tidak ada yang diunggah, tidak perlu mendaftar, dan hanya input terakhir serta pilihan toggle Anda yang disimpan di penyimpanan lokal browser ini demi kenyamanan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -543,7 +598,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wird die Kodierung koreanischen, chinesischen, arabischen Text oder Emojis verunstalten?",
     "faq.a4": "Nein, standardmäßig nicht. Bei deaktiviertem Alle Nicht-ASCII-Zeichen kodieren rührt dieses Tool nur die Zeichen an, die tatsächlich unsicher sind oder eine bekannte benannte Entity haben, und lässt Text in anderen Sprachen sowie Emojis genau so, wie sie eingegeben wurden, da moderne Browser UTF-8 ohnehin korrekt darstellen. Das Aktivieren des Schalters wandelt stattdessen jedes Zeichen oberhalb des ASCII-Bereichs in eine numerische Entity um — nützlich nur, wenn Sie eine Ausgabe benötigen, die ausschließlich reine ASCII-Bytes enthält, etwa für eine alte E-Mail-Vorlage oder ein System, das kein UTF-8 deklarieren kann.",
     "faq.q5": "Wird mein Text an einen Server gesendet, wenn ich hier kodiere oder dekodiere?",
-    "faq.a5": "Nein. Die Kodierung läuft über eine kleine eingebaute Tabelle benannter Entities plus einen numerischen Fallback, und die Dekodierung nutzt den eigenen HTML-Parser des Browsers über ein verstecktes, nie in das Dokument eingefügtes Textarea-Element, sodass sie jede Entity versteht, die ein echter Browser versteht — ohne Ihren Text jemals irgendwohin zu senden. Es wird nichts hochgeladen, es gibt keine Registrierung, und nur Ihre letzte Eingabe sowie die Schalterwahl werden der Bequemlichkeit halber im lokalen Speicher dieses Browsers abgelegt."
+    "faq.a5": "Nein. Die Kodierung läuft über eine kleine eingebaute Tabelle benannter Entities plus einen numerischen Fallback, und die Dekodierung nutzt den eigenen HTML-Parser des Browsers über ein verstecktes, nie in das Dokument eingefügtes Textarea-Element, sodass sie jede Entity versteht, die ein echter Browser versteht — ohne Ihren Text jemals irgendwohin zu senden. Es wird nichts hochgeladen, es gibt keine Registrierung, und nur Ihre letzte Eingabe sowie die Schalterwahl werden der Bequemlichkeit halber im lokalen Speicher dieses Browsers abgelegt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -587,7 +647,12 @@ window.I18N_LOCALES = {
     "faq.q4": "エンコードによって韓国語・中国語・アラビア語・絵文字のテキストが崩れてしまいますか。",
     "faq.a4": "いいえ、デフォルトでは崩れません。「すべての非ASCII文字をエンコード」がオフの場合、このツールは実際に安全でない文字や既知の名前付きエンティティを持つ文字のみを変換し、他言語のテキストや絵文字は入力されたとおりにそのまま残します。現代のブラウザーはすでにUTF-8を正しく表示できるためです。トグルをオンにすると、逆にASCII範囲を超えるすべての文字が数値エンティティに変換されます——これは、古いメールテンプレートやUTF-8を宣言できないシステムなど、純粋なASCIIバイトのみを含む出力が必要な場合にのみ役立ちます。",
     "faq.q5": "ここでエンコードまたはデコードするテキストはサーバーに送信されますか。",
-    "faq.a5": "いいえ。エンコードは名前付きエンティティの小さな組み込みテーブルと数値フォールバックによって動作し、デコードはドキュメントに挿入されることのない非表示のtextarea要素を通じて、ブラウザー自身のHTMLパーサーを利用します。そのため、実際のブラウザーが理解するあらゆるエンティティを理解しながら、あなたのテキストがどこかに送信されることは一切ありません。何もアップロードされず、サインアップも不要で、利便性のために最後の入力内容とトグルの選択だけがこのブラウザーのローカルストレージに保存されます。"
+    "faq.a5": "いいえ。エンコードは名前付きエンティティの小さな組み込みテーブルと数値フォールバックによって動作し、デコードはドキュメントに挿入されることのない非表示のtextarea要素を通じて、ブラウザー自身のHTMLパーサーを利用します。そのため、実際のブラウザーが理解するあらゆるエンティティを理解しながら、あなたのテキストがどこかに送信されることは一切ありません。何もアップロードされず、サインアップも不要で、利便性のために最後の入力内容とトグルの選択だけがこのブラウザーのローカルストレージに保存されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -631,6 +696,11 @@ window.I18N_LOCALES = {
     "faq.q4": "인코딩하면 한국어·중국어·아랍어 텍스트나 이모지가 깨지나요?",
     "faq.a4": "기본적으로는 깨지지 않습니다. '모든 비-ASCII 문자 인코딩'을 끄면, 이 도구는 실제로 안전하지 않거나 잘 알려진 이름형 엔티티가 있는 문자만 건드리고, 다른 언어 텍스트와 이모지는 입력한 그대로 남겨둡니다. 최신 브라우저는 이미 UTF-8을 올바르게 렌더링하기 때문입니다. 반대로 토글을 켜면 ASCII 범위를 벗어난 모든 문자가 숫자형 엔티티로 바뀝니다—이는 오래된 이메일 템플릿이나 UTF-8을 선언할 수 없는 시스템처럼 순수 ASCII 바이트만 담긴 출력이 필요할 때만 유용합니다.",
     "faq.q5": "여기서 인코딩하거나 디코딩한 텍스트가 서버로 전송되나요?",
-    "faq.a5": "아니요. 인코딩은 내장된 작은 이름형 엔티티 표와 숫자형 대체 방식으로 동작하고, 디코딩은 문서에 삽입된 적 없는 숨겨진 textarea 요소를 통해 브라우저 자체의 HTML 파서를 사용하므로, 실제 브라우저가 이해하는 모든 엔티티를 이해하면서도 텍스트를 어디로도 전송하지 않습니다. 아무것도 업로드되지 않고 가입도 필요 없으며, 편의를 위해 마지막 입력값과 토글 선택만 이 브라우저의 로컬 스토리지에 저장됩니다."
+    "faq.a5": "아니요. 인코딩은 내장된 작은 이름형 엔티티 표와 숫자형 대체 방식으로 동작하고, 디코딩은 문서에 삽입된 적 없는 숨겨진 textarea 요소를 통해 브라우저 자체의 HTML 파서를 사용하므로, 실제 브라우저가 이해하는 모든 엔티티를 이해하면서도 텍스트를 어디로도 전송하지 않습니다. 아무것도 업로드되지 않고 가입도 필요 없으며, 편의를 위해 마지막 입력값과 토글 선택만 이 브라우저의 로컬 스토리지에 저장됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

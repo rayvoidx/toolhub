@@ -89,7 +89,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do named capture groups like (?<year>\\d{4}) work in JavaScript regex?",
     "faq.a4": "Wrapping part of a pattern in (?<name>...) creates a named capture group alongside the normal numbered groups — for example (?<year>\\d{4})-(?<month>\\d{2}) matched against \"2026-07\" captures group 1 / \"year\" as 2026 and group 2 / \"month\" as 07. Named groups can also be referenced in a replacement string as $<year>, which is often clearer than $1 in longer patterns. This tester lists both the numbered groups and the named groups for every match, so you can confirm the capture works before using it in real code.",
     "faq.q5": "Is my regex pattern or test string sent to a server, and does this match every regex dialect?",
-    "faq.a5": "No — everything runs locally using your browser's built-in RegExp engine; your pattern, test string, and replacement text are never uploaded or stored anywhere, and nothing is saved except your last input in your own browser's local storage for convenience. This tool tests the JavaScript (ECMAScript) regex dialect specifically, so a pattern that relies on PCRE-only or Python re-only features (like recursive patterns, atomic groups, or possessive quantifiers) may behave differently here than in those languages — check your target language's own documentation if you are writing regex for something other than JavaScript."
+    "faq.a5": "No — everything runs locally using your browser's built-in RegExp engine; your pattern, test string, and replacement text are never uploaded or stored anywhere, and nothing is saved except your last input in your own browser's local storage for convenience. This tool tests the JavaScript (ECMAScript) regex dialect specifically, so a pattern that relies on PCRE-only or Python re-only features (like recursive patterns, atomic groups, or possessive quantifiers) may behave differently here than in those languages — check your target language's own documentation if you are writing regex for something other than JavaScript.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -163,7 +168,12 @@ window.I18N_LOCALES = {
     "faq.q4": "像 (?<year>\\d{4}) 这样的命名捕获组在 JavaScript 正则表达式中是如何工作的？",
     "faq.a4": "用 (?<name>...) 包裹模式的一部分即可创建一个命名捕获组，它与普通的编号捕获组同时存在——例如 (?<year>\\d{4})-(?<month>\\d{2}) 匹配 “2026-07” 时，第 1 组／命名为 “year” 的捕获结果是 2026，第 2 组／命名为 “month” 的捕获结果是 07。命名组也可以在替换字符串中用 $<year> 引用，在较长的模式中通常比 $1 更清晰。这个测试工具会为每个匹配项同时列出编号组和命名组，方便你在实际代码中使用之前先确认捕获是否正确。",
     "faq.q5": "我的正则表达式或测试字符串会发送到服务器吗？这个工具支持所有正则方言吗？",
-    "faq.a5": "不会——一切都在你的浏览器内使用内置的 RegExp 引擎本地运行；你的模式、测试字符串和替换文本都不会被上传或存储到任何地方，唯一保存的只有你最近一次的输入，且只保存在你自己浏览器的本地存储中，方便下次使用。这个工具专门测试 JavaScript（ECMAScript）正则方言，因此如果你的模式依赖仅 PCRE 或仅 Python re 支持的特性（比如递归模式、原子组或独占量词），在这里的表现可能会不同——如果你是为 JavaScript 以外的语言编写正则表达式，请查阅目标语言自己的文档。"
+    "faq.a5": "不会——一切都在你的浏览器内使用内置的 RegExp 引擎本地运行；你的模式、测试字符串和替换文本都不会被上传或存储到任何地方，唯一保存的只有你最近一次的输入，且只保存在你自己浏览器的本地存储中，方便下次使用。这个工具专门测试 JavaScript（ECMAScript）正则方言，因此如果你的模式依赖仅 PCRE 或仅 Python re 支持的特性（比如递归模式、原子组或独占量词），在这里的表现可能会不同——如果你是为 JavaScript 以外的语言编写正则表达式，请查阅目标语言自己的文档。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -237,7 +247,12 @@ window.I18N_LOCALES = {
     "faq.q4": "(?<year>\\d{4}) जैसे नामित कैप्चर ग्रुप JavaScript रेगेक्स में कैसे काम करते हैं?",
     "faq.a4": "पैटर्न के किसी हिस्से को (?<name>...) में लपेटने से सामान्य नंबर वाले ग्रुप के साथ-साथ एक नामित कैप्चर ग्रुप भी बनता है — उदाहरण के लिए (?<year>\\d{4})-(?<month>\\d{2}) को \"2026-07\" पर लगाने से ग्रुप 1 / \"year\" 2026 कैप्चर करता है और ग्रुप 2 / \"month\" 07 कैप्चर करता है। नामित ग्रुप को रिप्लेसमेंट स्ट्रिंग में $<year> के रूप में भी संदर्भित किया जा सकता है, जो लंबे पैटर्न में अक्सर $1 से ज़्यादा स्पष्ट होता है। यह टेस्टर हर मैच के लिए नंबर वाले और नामित दोनों ग्रुप सूचीबद्ध करता है, ताकि असली कोड में इस्तेमाल करने से पहले आप कैप्चर की पुष्टि कर सकें।",
     "faq.q5": "क्या मेरा रेगेक्स पैटर्न या टेस्ट स्ट्रिंग सर्वर पर भेजा जाता है, और क्या यह हर रेगेक्स डायलेक्ट से मेल खाता है?",
-    "faq.a5": "नहीं — सब कुछ आपके ब्राउज़र के अंतर्निहित RegExp इंजन का उपयोग करके स्थानीय रूप से चलता है; आपका पैटर्न, टेस्ट स्ट्रिंग और रिप्लेसमेंट टेक्स्ट कभी अपलोड या कहीं संग्रहीत नहीं होता, और सुविधा के लिए सिर्फ़ आपकी आख़िरी एंट्री आपके अपने ब्राउज़र के लोकल स्टोरेज में सहेजी जाती है। यह टूल विशेष रूप से JavaScript (ECMAScript) रेगेक्स डायलेक्ट टेस्ट करता है, इसलिए अगर आपका पैटर्न केवल PCRE या केवल Python re में मिलने वाली सुविधाओं (जैसे रिकर्सिव पैटर्न, एटॉमिक ग्रुप या पज़ेसिव क्वांटिफ़ायर) पर निर्भर है, तो यहाँ व्यवहार अलग हो सकता है — अगर आप JavaScript के अलावा किसी और भाषा के लिए रेगेक्स लिख रहे हैं तो उस भाषा का अपना दस्तावेज़ देखें।"
+    "faq.a5": "नहीं — सब कुछ आपके ब्राउज़र के अंतर्निहित RegExp इंजन का उपयोग करके स्थानीय रूप से चलता है; आपका पैटर्न, टेस्ट स्ट्रिंग और रिप्लेसमेंट टेक्स्ट कभी अपलोड या कहीं संग्रहीत नहीं होता, और सुविधा के लिए सिर्फ़ आपकी आख़िरी एंट्री आपके अपने ब्राउज़र के लोकल स्टोरेज में सहेजी जाती है। यह टूल विशेष रूप से JavaScript (ECMAScript) रेगेक्स डायलेक्ट टेस्ट करता है, इसलिए अगर आपका पैटर्न केवल PCRE या केवल Python re में मिलने वाली सुविधाओं (जैसे रिकर्सिव पैटर्न, एटॉमिक ग्रुप या पज़ेसिव क्वांटिफ़ायर) पर निर्भर है, तो यहाँ व्यवहार अलग हो सकता है — अगर आप JavaScript के अलावा किसी और भाषा के लिए रेगेक्स लिख रहे हैं तो उस भाषा का अपना दस्तावेज़ देखें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -311,7 +326,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo funcionan los grupos de captura con nombre como (?<year>\\d{4}) en las expresiones regulares de JavaScript?",
     "faq.a4": "Envolver parte de un patrón en (?<name>...) crea un grupo de captura con nombre además de los grupos numerados normales — por ejemplo, (?<year>\\d{4})-(?<month>\\d{2}) al coincidir con \"2026-07\" captura el grupo 1 / \"year\" como 2026 y el grupo 2 / \"month\" como 07. Los grupos con nombre también se pueden referenciar en una cadena de reemplazo como $<year>, lo cual suele ser más claro que $1 en patrones largos. Este probador lista tanto los grupos numerados como los grupos con nombre de cada coincidencia, para que puedas confirmar que la captura funciona antes de usarla en código real.",
     "faq.q5": "¿Se envía mi patrón de regex o mi cadena de prueba a un servidor, y funciona esto con cualquier dialecto de regex?",
-    "faq.a5": "No — todo se ejecuta localmente usando el motor RegExp integrado de tu navegador; tu patrón, tu cadena de prueba y tu texto de reemplazo nunca se suben ni se almacenan en ningún sitio, y lo único que se guarda es tu última entrada, en el almacenamiento local de tu propio navegador, por comodidad. Esta herramienta prueba específicamente el dialecto regex de JavaScript (ECMAScript), así que un patrón que dependa de funciones exclusivas de PCRE o de Python re (como patrones recursivos, grupos atómicos o cuantificadores posesivos) puede comportarse de forma diferente aquí — si estás escribiendo regex para un lenguaje distinto de JavaScript, consulta la documentación propia de ese lenguaje."
+    "faq.a5": "No — todo se ejecuta localmente usando el motor RegExp integrado de tu navegador; tu patrón, tu cadena de prueba y tu texto de reemplazo nunca se suben ni se almacenan en ningún sitio, y lo único que se guarda es tu última entrada, en el almacenamiento local de tu propio navegador, por comodidad. Esta herramienta prueba específicamente el dialecto regex de JavaScript (ECMAScript), así que un patrón que dependa de funciones exclusivas de PCRE o de Python re (como patrones recursivos, grupos atómicos o cuantificadores posesivos) puede comportarse de forma diferente aquí — si estás escribiendo regex para un lenguaje distinto de JavaScript, consulta la documentación propia de ese lenguaje.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -385,7 +405,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف تعمل مجموعات الالتقاط المُسمّاة مثل (?<year>\\d{4}) في تعبيرات JavaScript النمطية؟",
     "faq.a4": "لف جزء من النمط بـ (?<name>...) ينشئ مجموعة التقاط مُسمّاة إلى جانب المجموعات المرقّمة العادية — فمثلًا (?<year>\\d{4})-(?<month>\\d{2}) عند مطابقة \"2026-07\" يلتقط المجموعة 1 / \"year\" كـ 2026 والمجموعة 2 / \"month\" كـ 07. يمكن أيضًا الإشارة إلى المجموعات المُسمّاة في نص الاستبدال بصيغة $<year>، وهو غالبًا أوضح من $1 في الأنماط الطويلة. تُدرِج هذه الأداة كلًا من المجموعات المرقّمة والمُسمّاة لكل تطابق، لتتأكد من عمل الالتقاط قبل استخدامه في كود فعلي.",
     "faq.q5": "هل يُرسَل نمط regex أو نص الاختبار إلى خادم، وهل يطابق هذا كل لهجات regex؟",
-    "faq.a5": "لا — يعمل كل شيء محليًا باستخدام محرك RegExp المدمج في متصفحك؛ لا يُرفَع نمطك أو نص اختبارك أو نص الاستبدال أو يُخزَّن في أي مكان أبدًا، ولا يُحفَظ شيء سوى آخر إدخال لك، وذلك فقط في التخزين المحلي لمتصفحك الخاص من أجل الراحة. تختبر هذه الأداة تحديدًا لهجة regex الخاصة بـ JavaScript (ECMAScript)، لذا فإن أي نمط يعتمد على ميزات حصرية لـ PCRE أو Python re (مثل الأنماط التكرارية أو المجموعات الذرية أو المحدِّدات الحيازية) قد يتصرف هنا بشكل مختلف — إن كنت تكتب regex للغة أخرى غير JavaScript فراجع توثيق تلك اللغة نفسها."
+    "faq.a5": "لا — يعمل كل شيء محليًا باستخدام محرك RegExp المدمج في متصفحك؛ لا يُرفَع نمطك أو نص اختبارك أو نص الاستبدال أو يُخزَّن في أي مكان أبدًا، ولا يُحفَظ شيء سوى آخر إدخال لك، وذلك فقط في التخزين المحلي لمتصفحك الخاص من أجل الراحة. تختبر هذه الأداة تحديدًا لهجة regex الخاصة بـ JavaScript (ECMAScript)، لذا فإن أي نمط يعتمد على ميزات حصرية لـ PCRE أو Python re (مثل الأنماط التكرارية أو المجموعات الذرية أو المحدِّدات الحيازية) قد يتصرف هنا بشكل مختلف — إن كنت تكتب regex للغة أخرى غير JavaScript فراجع توثيق تلك اللغة نفسها.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -459,7 +484,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment fonctionnent les groupes de capture nommés comme (?<year>\\d{4}) en regex JavaScript ?",
     "faq.a4": "Entourer une partie d'un motif avec (?<name>...) crée un groupe de capture nommé en plus des groupes numérotés habituels — par exemple (?<year>\\d{4})-(?<month>\\d{2}) appliqué à « 2026-07 » capture le groupe 1 / « year » comme 2026 et le groupe 2 / « month » comme 07. Les groupes nommés peuvent aussi être référencés dans une chaîne de remplacement sous la forme $<year>, souvent plus clair que $1 dans les motifs longs. Ce testeur liste à la fois les groupes numérotés et les groupes nommés pour chaque correspondance, afin que vous puissiez vérifier que la capture fonctionne avant de l'utiliser dans du vrai code.",
     "faq.q5": "Mon motif regex ou ma chaîne de test sont-ils envoyés à un serveur, et cela correspond-il à tous les dialectes regex ?",
-    "faq.a5": "Non — tout s'exécute localement grâce au moteur RegExp intégré de votre navigateur ; votre motif, votre chaîne de test et votre texte de remplacement ne sont jamais envoyés ni stockés où que ce soit, et seule votre dernière saisie est conservée, uniquement dans le stockage local de votre propre navigateur, par commodité. Cet outil teste spécifiquement le dialecte regex de JavaScript (ECMAScript) : un motif reposant sur des fonctionnalités propres à PCRE ou à Python re (comme les motifs récursifs, les groupes atomiques ou les quantificateurs possessifs) peut donc se comporter différemment ici — si vous écrivez du regex pour un langage autre que JavaScript, consultez la documentation propre à ce langage."
+    "faq.a5": "Non — tout s'exécute localement grâce au moteur RegExp intégré de votre navigateur ; votre motif, votre chaîne de test et votre texte de remplacement ne sont jamais envoyés ni stockés où que ce soit, et seule votre dernière saisie est conservée, uniquement dans le stockage local de votre propre navigateur, par commodité. Cet outil teste spécifiquement le dialecte regex de JavaScript (ECMAScript) : un motif reposant sur des fonctionnalités propres à PCRE ou à Python re (comme les motifs récursifs, les groupes atomiques ou les quantificateurs possessifs) peut donc se comporter différemment ici — si vous écrivez du regex pour un langage autre que JavaScript, consultez la documentation propre à ce langage.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -533,7 +563,12 @@ window.I18N_LOCALES = {
     "faq.q4": "(?<year>\\d{4})-এর মতো নামযুক্ত ক্যাপচার গ্রুপ JavaScript রেজেক্সে কীভাবে কাজ করে?",
     "faq.a4": "প্যাটার্নের কোনো অংশকে (?<name>...)-এ মোড়ানো হলে সাধারণ নম্বরযুক্ত গ্রুপের পাশাপাশি একটি নামযুক্ত ক্যাপচার গ্রুপ তৈরি হয় — উদাহরণস্বরূপ (?<year>\\d{4})-(?<month>\\d{2}) \"2026-07\"-এর সাথে মিলালে গ্রুপ ১ / \"year\" হিসেবে 2026 এবং গ্রুপ ২ / \"month\" হিসেবে 07 ক্যাপচার করে। নামযুক্ত গ্রুপকে রিপ্লেসমেন্ট স্ট্রিংয়ে $<year> হিসেবেও উল্লেখ করা যায়, যা লম্বা প্যাটার্নে প্রায়ই $1-এর চেয়ে স্পষ্ট। এই টেস্টার প্রতিটি ম্যাচের জন্য নম্বরযুক্ত এবং নামযুক্ত উভয় গ্রুপই তালিকাভুক্ত করে, যাতে আসল কোডে ব্যবহারের আগে আপনি ক্যাপচারটি কাজ করছে কিনা নিশ্চিত করতে পারেন।",
     "faq.q5": "আমার রেজেক্স প্যাটার্ন বা টেস্ট স্ট্রিং কি সার্ভারে পাঠানো হয়, এবং এটি কি সব রেজেক্স ডায়ালেক্টের সাথে মেলে?",
-    "faq.a5": "না — সবকিছু আপনার ব্রাউজারের বিল্ট-ইন RegExp ইঞ্জিন ব্যবহার করে স্থানীয়ভাবে চলে; আপনার প্যাটার্ন, টেস্ট স্ট্রিং এবং রিপ্লেসমেন্ট টেক্সট কখনো আপলোড বা কোথাও সংরক্ষণ করা হয় না, এবং সুবিধার জন্য শুধু আপনার সর্বশেষ ইনপুট আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে। এই টুলটি নির্দিষ্টভাবে JavaScript (ECMAScript) রেজেক্স ডায়ালেক্ট টেস্ট করে, তাই যদি আপনার প্যাটার্ন শুধু PCRE বা শুধু Python re-এ থাকা ফিচারের (যেমন রিকার্সিভ প্যাটার্ন, অ্যাটমিক গ্রুপ বা পজেসিভ কোয়ান্টিফায়ার) উপর নির্ভর করে, তাহলে এখানে আচরণ ভিন্ন হতে পারে — আপনি যদি JavaScript ছাড়া অন্য কোনো ভাষার জন্য রেজেক্স লিখছেন, তাহলে সেই ভাষার নিজস্ব ডকুমেন্টেশন দেখুন।"
+    "faq.a5": "না — সবকিছু আপনার ব্রাউজারের বিল্ট-ইন RegExp ইঞ্জিন ব্যবহার করে স্থানীয়ভাবে চলে; আপনার প্যাটার্ন, টেস্ট স্ট্রিং এবং রিপ্লেসমেন্ট টেক্সট কখনো আপলোড বা কোথাও সংরক্ষণ করা হয় না, এবং সুবিধার জন্য শুধু আপনার সর্বশেষ ইনপুট আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে। এই টুলটি নির্দিষ্টভাবে JavaScript (ECMAScript) রেজেক্স ডায়ালেক্ট টেস্ট করে, তাই যদি আপনার প্যাটার্ন শুধু PCRE বা শুধু Python re-এ থাকা ফিচারের (যেমন রিকার্সিভ প্যাটার্ন, অ্যাটমিক গ্রুপ বা পজেসিভ কোয়ান্টিফায়ার) উপর নির্ভর করে, তাহলে এখানে আচরণ ভিন্ন হতে পারে — আপনি যদি JavaScript ছাড়া অন্য কোনো ভাষার জন্য রেজেক্স লিখছেন, তাহলে সেই ভাষার নিজস্ব ডকুমেন্টেশন দেখুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -607,7 +642,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como funcionam os grupos de captura nomeados como (?<year>\\d{4}) no regex do JavaScript?",
     "faq.a4": "Envolver parte de um padrão em (?<name>...) cria um grupo de captura nomeado além dos grupos numerados normais — por exemplo, (?<year>\\d{4})-(?<month>\\d{2}) ao corresponder a \"2026-07\" captura o grupo 1 / \"year\" como 2026 e o grupo 2 / \"month\" como 07. Grupos nomeados também podem ser referenciados em uma string de substituição como $<year>, o que costuma ser mais claro que $1 em padrões longos. Este testador lista tanto os grupos numerados quanto os nomeados para cada correspondência, para você confirmar que a captura funciona antes de usá-la em código real.",
     "faq.q5": "Meu padrão de regex ou string de teste são enviados a um servidor, e isso corresponde a todos os dialetos de regex?",
-    "faq.a5": "Não — tudo roda localmente usando o mecanismo RegExp embutido do seu navegador; seu padrão, string de teste e texto de substituição nunca são enviados ou armazenados em nenhum lugar, e a única coisa salva é sua última entrada, apenas no armazenamento local do seu próprio navegador, por conveniência. Esta ferramenta testa especificamente o dialeto de regex do JavaScript (ECMAScript), então um padrão que dependa de recursos exclusivos do PCRE ou do Python re (como padrões recursivos, grupos atômicos ou quantificadores possessivos) pode se comportar de forma diferente aqui — se você está escrevendo regex para uma linguagem diferente do JavaScript, consulte a documentação própria dessa linguagem."
+    "faq.a5": "Não — tudo roda localmente usando o mecanismo RegExp embutido do seu navegador; seu padrão, string de teste e texto de substituição nunca são enviados ou armazenados em nenhum lugar, e a única coisa salva é sua última entrada, apenas no armazenamento local do seu próprio navegador, por conveniência. Esta ferramenta testa especificamente o dialeto de regex do JavaScript (ECMAScript), então um padrão que dependa de recursos exclusivos do PCRE ou do Python re (como padrões recursivos, grupos atômicos ou quantificadores possessivos) pode se comportar de forma diferente aqui — se você está escrevendo regex para uma linguagem diferente do JavaScript, consulte a documentação própria dessa linguagem.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -681,7 +721,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как работают именованные группы захвата вроде (?<year>\\d{4}) в regex JavaScript?",
     "faq.a4": "Обёртывание части шаблона в (?<name>...) создаёт именованную группу захвата в дополнение к обычным нумерованным группам — например, (?<year>\\d{4})-(?<month>\\d{2}) при сопоставлении с «2026-07» захватывает группу 1 / «year» как 2026 и группу 2 / «month» как 07. На именованные группы также можно ссылаться в строке замены как $<year>, что часто понятнее, чем $1, в длинных шаблонах. Этот тестер показывает и нумерованные, и именованные группы для каждого совпадения, чтобы вы могли убедиться, что захват работает, прежде чем использовать его в реальном коде.",
     "faq.q5": "Отправляются ли мой шаблон regex или тестовая строка на сервер, и подходит ли это для любых диалектов regex?",
-    "faq.a5": "Нет — всё выполняется локально с помощью встроенного движка RegExp вашего браузера; ваш шаблон, тестовая строка и текст замены никогда никуда не загружаются и не сохраняются, а единственное, что сохраняется — это ваш последний ввод, и только в локальном хранилище вашего собственного браузера для удобства. Этот инструмент тестирует именно диалект regex JavaScript (ECMAScript), поэтому шаблон, зависящий от возможностей, доступных только в PCRE или только в Python re (например, рекурсивные шаблоны, атомарные группы или собственнические квантификаторы), здесь может вести себя иначе — если вы пишете regex для языка, отличного от JavaScript, обратитесь к документации именно этого языка."
+    "faq.a5": "Нет — всё выполняется локально с помощью встроенного движка RegExp вашего браузера; ваш шаблон, тестовая строка и текст замены никогда никуда не загружаются и не сохраняются, а единственное, что сохраняется — это ваш последний ввод, и только в локальном хранилище вашего собственного браузера для удобства. Этот инструмент тестирует именно диалект regex JavaScript (ECMAScript), поэтому шаблон, зависящий от возможностей, доступных только в PCRE или только в Python re (например, рекурсивные шаблоны, атомарные группы или собственнические квантификаторы), здесь может вести себя иначе — если вы пишете regex для языка, отличного от JavaScript, обратитесь к документации именно этого языка.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -755,7 +800,12 @@ window.I18N_LOCALES = {
     "faq.q4": "(?<year>\\d{4}) جیسے نامزد کیپچر گروپس JavaScript ریجیکس میں کیسے کام کرتے ہیں؟",
     "faq.a4": "پیٹرن کے کسی حصے کو (?<name>...) میں لپیٹنے سے عام نمبر والے گروپس کے ساتھ ساتھ ایک نامزد کیپچر گروپ بھی بنتا ہے — مثال کے طور پر (?<year>\\d{4})-(?<month>\\d{2}) کو \"2026-07\" پر لگانے سے گروپ 1 / \"year\" 2026 کیپچر کرتا ہے اور گروپ 2 / \"month\" 07 کیپچر کرتا ہے۔ نامزد گروپس کو ریپلیسمنٹ سٹرنگ میں $<year> کے طور پر بھی حوالہ دیا جا سکتا ہے، جو لمبے پیٹرنز میں اکثر $1 سے زیادہ واضح ہوتا ہے۔ یہ ٹیسٹر ہر میچ کے لیے نمبر والے اور نامزد دونوں گروپس درج کرتا ہے، تاکہ آپ اصل کوڈ میں استعمال کرنے سے پہلے تصدیق کر سکیں کہ کیپچر کام کر رہا ہے۔",
     "faq.q5": "کیا میرا ریجیکس پیٹرن یا ٹیسٹ سٹرنگ سرور پر بھیجی جاتی ہے، اور کیا یہ ہر ریجیکس ڈائلیکٹ سے میل کھاتا ہے؟",
-    "faq.a5": "نہیں — سب کچھ آپ کے براؤزر کے بلٹ اِن RegExp انجن کا استعمال کرتے ہوئے مقامی طور پر چلتا ہے؛ آپ کا پیٹرن، ٹیسٹ سٹرنگ اور ریپلیسمنٹ متن کبھی اپ لوڈ یا کہیں محفوظ نہیں ہوتا، اور سہولت کے لیے صرف آپ کی آخری اندراج آپ کے اپنے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہے۔ یہ ٹول خاص طور پر JavaScript (ECMAScript) ریجیکس ڈائلیکٹ ٹیسٹ کرتا ہے، اس لیے اگر آپ کا پیٹرن صرف PCRE یا صرف Python re میں موجود خصوصیات (جیسے ری کرسیو پیٹرنز، ایٹامک گروپس یا پوزیسیو کوانٹیفائرز) پر انحصار کرتا ہے، تو یہاں رویہ مختلف ہو سکتا ہے — اگر آپ JavaScript کے علاوہ کسی اور زبان کے لیے ریجیکس لکھ رہے ہیں تو اُس زبان کی اپنی دستاویزات دیکھیں۔"
+    "faq.a5": "نہیں — سب کچھ آپ کے براؤزر کے بلٹ اِن RegExp انجن کا استعمال کرتے ہوئے مقامی طور پر چلتا ہے؛ آپ کا پیٹرن، ٹیسٹ سٹرنگ اور ریپلیسمنٹ متن کبھی اپ لوڈ یا کہیں محفوظ نہیں ہوتا، اور سہولت کے لیے صرف آپ کی آخری اندراج آپ کے اپنے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہے۔ یہ ٹول خاص طور پر JavaScript (ECMAScript) ریجیکس ڈائلیکٹ ٹیسٹ کرتا ہے، اس لیے اگر آپ کا پیٹرن صرف PCRE یا صرف Python re میں موجود خصوصیات (جیسے ری کرسیو پیٹرنز، ایٹامک گروپس یا پوزیسیو کوانٹیفائرز) پر انحصار کرتا ہے، تو یہاں رویہ مختلف ہو سکتا ہے — اگر آپ JavaScript کے علاوہ کسی اور زبان کے لیے ریجیکس لکھ رہے ہیں تو اُس زبان کی اپنی دستاویزات دیکھیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -829,7 +879,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara kerja grup tangkapan bernama seperti (?<year>\\d{4}) di regex JavaScript?",
     "faq.a4": "Membungkus bagian pola dengan (?<name>...) membuat grup tangkapan bernama selain grup bernomor biasa — misalnya (?<year>\\d{4})-(?<month>\\d{2}) yang dicocokkan dengan \"2026-07\" menangkap grup 1 / \"year\" sebagai 2026 dan grup 2 / \"month\" sebagai 07. Grup bernama juga bisa dirujuk dalam string penggantian sebagai $<year>, yang seringkali lebih jelas daripada $1 pada pola yang panjang. Tester ini mencantumkan baik grup bernomor maupun grup bernama untuk setiap kecocokan, sehingga Anda bisa memastikan tangkapan tersebut bekerja sebelum menggunakannya dalam kode sungguhan.",
     "faq.q5": "Apakah pola regex atau string uji saya dikirim ke server, dan apakah ini cocok untuk semua dialek regex?",
-    "faq.a5": "Tidak — semuanya berjalan secara lokal menggunakan mesin RegExp bawaan browser Anda; pola, string uji, dan teks penggantian Anda tidak pernah diunggah atau disimpan di mana pun, dan satu-satunya yang disimpan adalah input terakhir Anda, hanya di penyimpanan lokal browser Anda sendiri demi kenyamanan. Alat ini menguji dialek regex JavaScript (ECMAScript) secara spesifik, jadi pola yang bergantung pada fitur khusus PCRE atau Python re (seperti pola rekursif, grup atomik, atau kuantifier posesif) mungkin berperilaku berbeda di sini — jika Anda menulis regex untuk bahasa selain JavaScript, periksa dokumentasi bahasa tersebut."
+    "faq.a5": "Tidak — semuanya berjalan secara lokal menggunakan mesin RegExp bawaan browser Anda; pola, string uji, dan teks penggantian Anda tidak pernah diunggah atau disimpan di mana pun, dan satu-satunya yang disimpan adalah input terakhir Anda, hanya di penyimpanan lokal browser Anda sendiri demi kenyamanan. Alat ini menguji dialek regex JavaScript (ECMAScript) secara spesifik, jadi pola yang bergantung pada fitur khusus PCRE atau Python re (seperti pola rekursif, grup atomik, atau kuantifier posesif) mungkin berperilaku berbeda di sini — jika Anda menulis regex untuk bahasa selain JavaScript, periksa dokumentasi bahasa tersebut.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -903,7 +958,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie funktionieren benannte Erfassungsgruppen wie (?<year>\\d{4}) im JavaScript-Regex?",
     "faq.a4": "Wenn du einen Teil eines Musters in (?<name>...) einschließt, entsteht neben den normalen nummerierten Gruppen eine benannte Erfassungsgruppe — zum Beispiel erfasst (?<year>\\d{4})-(?<month>\\d{2}) bei Abgleich mit „2026-07\" Gruppe 1 / „year\" als 2026 und Gruppe 2 / „month\" als 07. Benannte Gruppen lassen sich in einem Ersetzungsstring auch als $<year> referenzieren, was in längeren Mustern oft klarer ist als $1. Dieser Tester listet für jeden Treffer sowohl die nummerierten als auch die benannten Gruppen auf, damit du bestätigen kannst, dass die Erfassung funktioniert, bevor du sie in echtem Code verwendest.",
     "faq.q5": "Werden mein Regex-Muster oder Test-String an einen Server gesendet, und deckt das jeden Regex-Dialekt ab?",
-    "faq.a5": "Nein — alles läuft lokal mit der eingebauten RegExp-Engine deines Browsers ab; dein Muster, dein Test-String und dein Ersetzungstext werden nie hochgeladen oder irgendwo gespeichert, und das Einzige, was gespeichert wird, ist deine letzte Eingabe — bequemerweise nur im lokalen Speicher deines eigenen Browsers. Dieses Tool testet speziell den JavaScript-(ECMAScript-)Regex-Dialekt. Ein Muster, das auf reinen PCRE- oder Python-re-Funktionen beruht (wie rekursive Muster, atomare Gruppen oder besitzergreifende Quantoren), kann sich hier daher anders verhalten — wenn du Regex für eine andere Sprache als JavaScript schreibst, sieh in der Dokumentation dieser Sprache nach."
+    "faq.a5": "Nein — alles läuft lokal mit der eingebauten RegExp-Engine deines Browsers ab; dein Muster, dein Test-String und dein Ersetzungstext werden nie hochgeladen oder irgendwo gespeichert, und das Einzige, was gespeichert wird, ist deine letzte Eingabe — bequemerweise nur im lokalen Speicher deines eigenen Browsers. Dieses Tool testet speziell den JavaScript-(ECMAScript-)Regex-Dialekt. Ein Muster, das auf reinen PCRE- oder Python-re-Funktionen beruht (wie rekursive Muster, atomare Gruppen oder besitzergreifende Quantoren), kann sich hier daher anders verhalten — wenn du Regex für eine andere Sprache als JavaScript schreibst, sieh in der Dokumentation dieser Sprache nach.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -977,7 +1037,12 @@ window.I18N_LOCALES = {
     "faq.q4": "(?<year>\\d{4}) のような名前付きキャプチャグループは、JavaScriptの正規表現でどう動作しますか？",
     "faq.a4": "パターンの一部を (?<name>...) で囲むと、通常の番号付きグループに加えて名前付きキャプチャグループが作られます。例えば (?<year>\\d{4})-(?<month>\\d{2}) を \"2026-07\" にマッチさせると、グループ1／「year」として 2026 が、グループ2／「month」として 07 がキャプチャされます。名前付きグループは置換文字列の中で $<year> のように参照することもでき、長いパターンでは $1 よりわかりやすいことがよくあります。このテスターは各マッチについて番号付きグループと名前付きグループの両方を一覧表示するので、実際のコードで使う前にキャプチャが正しく動作しているか確認できます。",
     "faq.q5": "自分の正規表現パターンやテスト文字列はサーバーに送信されますか？また、あらゆる正規表現の方言に対応していますか？",
-    "faq.a5": "いいえ — すべてお使いのブラウザに内蔵された RegExp エンジンを使ってローカルで処理されます。パターン、テスト文字列、置換テキストがどこかにアップロードされたり保存されたりすることは一切なく、保存されるのは利便性のために最後の入力内容だけで、それもあなた自身のブラウザのローカルストレージにのみ保存されます。このツールは特に JavaScript(ECMAScript)の正規表現方言をテストするものなので、PCRE や Python re にしかない機能(再帰パターン、アトミックグループ、所有量指定子など)に依存するパターンは、ここでは異なる挙動になる場合があります — JavaScript 以外の言語向けに正規表現を書いている場合は、その言語自体のドキュメントを確認してください。"
+    "faq.a5": "いいえ — すべてお使いのブラウザに内蔵された RegExp エンジンを使ってローカルで処理されます。パターン、テスト文字列、置換テキストがどこかにアップロードされたり保存されたりすることは一切なく、保存されるのは利便性のために最後の入力内容だけで、それもあなた自身のブラウザのローカルストレージにのみ保存されます。このツールは特に JavaScript(ECMAScript)の正規表現方言をテストするものなので、PCRE や Python re にしかない機能(再帰パターン、アトミックグループ、所有量指定子など)に依存するパターンは、ここでは異なる挙動になる場合があります — JavaScript 以外の言語向けに正規表現を書いている場合は、その言語自体のドキュメントを確認してください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -1051,6 +1116,11 @@ window.I18N_LOCALES = {
     "faq.q4": "(?<year>\\d{4}) 같은 네임드 캡처 그룹은 JavaScript 정규식에서 어떻게 동작하나요?",
     "faq.a4": "패턴의 일부를 (?<name>...)으로 감싸면 일반 번호 그룹과 함께 네임드 캡처 그룹이 만들어집니다 — 예를 들어 (?<year>\\d{4})-(?<month>\\d{2})를 \"2026-07\"에 매치시키면 그룹 1 / \"year\"는 2026을, 그룹 2 / \"month\"는 07을 캡처합니다. 네임드 그룹은 치환 문자열에서 $<year>처럼 참조할 수도 있는데, 긴 패턴에서는 $1보다 훨씬 명확한 경우가 많습니다. 이 테스터는 매치마다 번호 그룹과 네임드 그룹을 모두 나열해 주므로, 실제 코드에 사용하기 전에 캡처가 제대로 동작하는지 확인할 수 있습니다.",
     "faq.q5": "제 정규식 패턴이나 테스트 문자열이 서버로 전송되나요? 그리고 이 도구는 모든 정규식 방언을 지원하나요?",
-    "faq.a5": "아니요 — 모든 처리는 브라우저에 내장된 RegExp 엔진을 사용해 로컬에서만 이루어집니다. 패턴, 테스트 문자열, 치환 텍스트는 어디에도 업로드되거나 저장되지 않으며, 편의를 위해 마지막 입력값만 사용자 본인 브라우저의 로컬 스토리지에 저장됩니다. 이 도구는 특히 JavaScript(ECMAScript) 정규식 방언을 테스트하므로, PCRE나 Python re 전용 기능(재귀 패턴, 원자 그룹, 소유형 수량자 등)에 의존하는 패턴은 여기서 다르게 동작할 수 있습니다 — JavaScript가 아닌 다른 언어를 위한 정규식을 작성하고 있다면 해당 언어의 공식 문서를 확인하세요."
+    "faq.a5": "아니요 — 모든 처리는 브라우저에 내장된 RegExp 엔진을 사용해 로컬에서만 이루어집니다. 패턴, 테스트 문자열, 치환 텍스트는 어디에도 업로드되거나 저장되지 않으며, 편의를 위해 마지막 입력값만 사용자 본인 브라우저의 로컬 스토리지에 저장됩니다. 이 도구는 특히 JavaScript(ECMAScript) 정규식 방언을 테스트하므로, PCRE나 Python re 전용 기능(재귀 패턴, 원자 그룹, 소유형 수량자 등)에 의존하는 패턴은 여기서 다르게 동작할 수 있습니다 — JavaScript가 아닌 다른 언어를 위한 정규식을 작성하고 있다면 해당 언어의 공식 문서를 확인하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

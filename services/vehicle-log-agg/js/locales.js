@@ -180,7 +180,12 @@ window.I18N_LOCALES = {
     "faq.q4": "We never bought business-only auto insurance. Does the ratio still help?",
     "faq.a4": "No — and that is why this tool asks. Without 업무전용자동차보험, every related expense for that vehicle is disallowed in full, regardless of how good your ratio looks. The 50% transitional relief that applied in 2024–2025 has ended, so from fiscal 2026 corporations and double-entry sole proprietors are treated the same (it already applied to taxpayers subject to 성실신고확인 from 2024). Untick the insurance box for a car and the tool overwrites its deductible with ₩0 and tells you why, instead of showing you a comfortable number that the filing will not accept.",
     "faq.q5": "How is this different from a US IRS mileage calculator?",
-    "faq.a5": "Completely different maths, which is why this is a company vehicle log calculator korea and says so in the name. The US lets you take a flat standard mileage rate per mile, or actual expenses × business percentage (IRS Pub. 463). Korea has no flat rate: you take actual related expenses × business-use ratio, then run them through the 15,000,000 KRW no-log threshold and the 8,000,000 KRW depreciation cap. Bolting both regimes into one screen would break the tool for both audiences, so a US edition is a separate service."
+    "faq.a5": "Completely different maths, which is why this is a company vehicle log calculator korea and says so in the name. The US lets you take a flat standard mileage rate per mile, or actual expenses × business percentage (IRS Pub. 463). Korea has no flat rate: you take actual related expenses × business-use ratio, then run them through the 15,000,000 KRW no-log threshold and the 8,000,000 KRW depreciation cap. Bolting both regimes into one screen would break the tool for both audiences, so a US edition is a separate service.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -336,7 +341,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我们没有投保业务专用汽车保险。比例还有意义吗？",
     "faq.a4": "没有 — 这正是本工具要问的原因。没有业务专用汽车保险（업무전용자동차보험），该车的所有相关费用将全额不得扣除，无论比例多好看。2024–2025年适用的50%过渡性减免已经结束，因此从2026事业年度起，法人与复式簿记个人事业者待遇相同（对适用诚实申报确认的纳税人自2024年起已适用）。取消某辆车的保险勾选后，本工具会把其可扣除额覆盖为 ₩0 并说明原因，而不是给你一个申报时不被接受的漂亮数字。",
     "faq.q5": "这和美国 IRS 的里程计算器有什么不同？",
-    "faq.a5": "计算方式完全不同，所以本工具名称里明确写着“韩国”。美国可以按每英里的标准里程费率扣除，或按实际费用 × 业务使用百分比（IRS Pub. 463）。韩国没有标准费率：按实际相关费用 × 业务使用比例计算，再经过1,500万韩元免记录门槛和800万韩元折旧限额。把两套制度硬塞进一个界面会让双方都用不好，所以美国版是独立的服务。"
+    "faq.a5": "计算方式完全不同，所以本工具名称里明确写着“韩国”。美国可以按每英里的标准里程费率扣除，或按实际费用 × 业务使用百分比（IRS Pub. 463）。韩国没有标准费率：按实际相关费用 × 业务使用比例计算，再经过1,500万韩元免记录门槛和800万韩元折旧限额。把两套制度硬塞进一个界面会让双方都用不好，所以美国版是独立的服务。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -492,7 +502,12 @@ window.I18N_LOCALES = {
     "faq.q4": "हमने व्यवसाय-मात्र वाहन बीमा कभी नहीं लिया। क्या अनुपात फिर भी काम आएगा?",
     "faq.a4": "नहीं — और इसीलिए यह टूल पूछता है। 업무전용자동차보험 के बिना उस वाहन का हर संबंधित व्यय पूरी तरह अस्वीकार्य है, चाहे आपका अनुपात कितना भी अच्छा दिखे। 2024–2025 में लागू 50% संक्रमणकालीन छूट समाप्त हो चुकी है, इसलिए वित्त वर्ष 2026 से निगम और दोहरी-प्रविष्टि वाले एकल स्वामी एक समान माने जाते हैं (성실신고확인 के अधीन करदाताओं पर यह 2024 से ही लागू था)। किसी कार का बीमा बॉक्स हटाइए और टूल उसकी कटौती को ₩0 कर देता है और कारण बताता है — बजाय इसके कि आपको एक सुहावना आँकड़ा दिखाए जिसे फाइलिंग स्वीकार नहीं करेगी।",
     "faq.q5": "यह अमेरिकी IRS माइलेज कैलकुलेटर से कैसे अलग है?",
-    "faq.a5": "गणित पूरी तरह अलग है, इसीलिए नाम में ही “कोरिया” लिखा है। अमेरिका में प्रति मील एक तय मानक माइलेज दर ली जा सकती है, या वास्तविक व्यय × व्यावसायिक प्रतिशत (IRS Pub. 463)। कोरिया में कोई तय दर नहीं है: वास्तविक संबंधित व्यय × व्यावसायिक उपयोग अनुपात लिया जाता है, फिर उसे 1.5 करोड़ वॉन की बिना-लॉग सीमा और 80 लाख वॉन की मूल्यह्रास सीमा से गुज़ारा जाता है। दोनों व्यवस्थाओं को एक ही स्क्रीन में ठूँसना दोनों वर्गों के लिए टूल को बिगाड़ देता, इसलिए अमेरिकी संस्करण एक अलग सेवा है।"
+    "faq.a5": "गणित पूरी तरह अलग है, इसीलिए नाम में ही “कोरिया” लिखा है। अमेरिका में प्रति मील एक तय मानक माइलेज दर ली जा सकती है, या वास्तविक व्यय × व्यावसायिक प्रतिशत (IRS Pub. 463)। कोरिया में कोई तय दर नहीं है: वास्तविक संबंधित व्यय × व्यावसायिक उपयोग अनुपात लिया जाता है, फिर उसे 1.5 करोड़ वॉन की बिना-लॉग सीमा और 80 लाख वॉन की मूल्यह्रास सीमा से गुज़ारा जाता है। दोनों व्यवस्थाओं को एक ही स्क्रीन में ठूँसना दोनों वर्गों के लिए टूल को बिगाड़ देता, इसलिए अमेरिकी संस्करण एक अलग सेवा है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -648,7 +663,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Nunca contratamos el seguro exclusivo de uso empresarial. ¿Sirve de algo el porcentaje?",
     "faq.a4": "No, y por eso la herramienta lo pregunta. Sin 업무전용자동차보험, todos los gastos relacionados de ese vehículo son no deducibles en su totalidad, por bueno que parezca tu porcentaje. La reducción transitoria del 50% aplicable en 2024–2025 ha terminado, así que desde el ejercicio 2026 las sociedades y los autónomos en estimación directa con contabilidad por partida doble reciben el mismo trato (a los contribuyentes sujetos a 성실신고확인 ya se les aplicaba desde 2024). Desmarca la casilla del seguro de un coche y la herramienta sustituye su importe deducible por ₩0 y te explica por qué, en vez de enseñarte una cifra cómoda que la declaración no va a aceptar.",
     "faq.q5": "¿En qué se diferencia de una calculadora de millas del IRS estadounidense?",
-    "faq.a5": "Las matemáticas son completamente distintas, y por eso el nombre dice «Corea». En EE. UU. puedes aplicar una tarifa estándar fija por milla, o gastos reales × porcentaje empresarial (IRS Pub. 463). Corea no tiene tarifa fija: se toman los gastos relacionados reales × porcentaje de uso empresarial y después se pasan por el umbral de 15.000.000 KRW sin registro y por el límite de amortización de 8.000.000 KRW. Meter los dos regímenes en una sola pantalla estropearía la herramienta para ambos públicos, así que la edición estadounidense es un servicio aparte."
+    "faq.a5": "Las matemáticas son completamente distintas, y por eso el nombre dice «Corea». En EE. UU. puedes aplicar una tarifa estándar fija por milla, o gastos reales × porcentaje empresarial (IRS Pub. 463). Corea no tiene tarifa fija: se toman los gastos relacionados reales × porcentaje de uso empresarial y después se pasan por el umbral de 15.000.000 KRW sin registro y por el límite de amortización de 8.000.000 KRW. Meter los dos regímenes en una sola pantalla estropearía la herramienta para ambos públicos, así que la edición estadounidense es un servicio aparte.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -804,7 +824,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لم نشترِ قط تأمين السيارات المخصّص للأعمال. هل تنفع النسبة رغم ذلك؟",
     "faq.a4": "لا — ولهذا تسأل الأداة عن ذلك. بدون 업무전용자동차보험، تصبح كل مصروفات تلك المركبة غير قابلة للخصم بالكامل، مهما بدت نسبتك جيدة. وقد انتهى الإعفاء الانتقالي البالغ ٥٠٪ الذي طُبِّق في ٢٠٢٤–٢٠٢٥، لذا تُعامل الشركات وأصحاب الأعمال الفردية الممسكون بدفاتر مزدوجة القيد المعاملة نفسها اعتباراً من السنة المالية ٢٠٢٦ (وقد كان مطبقاً أصلاً على الخاضعين لـ 성실신고확인 منذ ٢٠٢٤). ألغِ تحديد خانة التأمين لسيارة ما، وستستبدل الأداة مبلغها القابل للخصم بـ ‏₩0 وتشرح لك السبب، بدلاً من أن تعرض عليك رقماً مريحاً لن يقبله الإقرار.",
     "faq.q5": "بماذا تختلف هذه الأداة عن حاسبة الأميال لدى مصلحة الضرائب الأمريكية؟",
-    "faq.a5": "الحساب مختلف تماماً، ولهذا يذكر الاسم «كوريا» صراحةً. تتيح الولايات المتحدة معدلاً قياسياً ثابتاً لكل ميل، أو المصروفات الفعلية × نسبة الاستخدام للأعمال (IRS Pub. 463). أما كوريا فلا تعرف معدلاً ثابتاً: تأخذ المصروفات المتعلقة الفعلية × نسبة الاستخدام للأعمال، ثم تمرّرها عبر عتبة ١٥٬٠٠٠٬٠٠٠ وون بدون سجل وحد الإهلاك البالغ ٨٬٠٠٠٬٠٠٠ وون. وحشر النظامين في شاشة واحدة يفسد الأداة على الفئتين معاً، لذا فالنسخة الأمريكية خدمة مستقلة."
+    "faq.a5": "الحساب مختلف تماماً، ولهذا يذكر الاسم «كوريا» صراحةً. تتيح الولايات المتحدة معدلاً قياسياً ثابتاً لكل ميل، أو المصروفات الفعلية × نسبة الاستخدام للأعمال (IRS Pub. 463). أما كوريا فلا تعرف معدلاً ثابتاً: تأخذ المصروفات المتعلقة الفعلية × نسبة الاستخدام للأعمال، ثم تمرّرها عبر عتبة ١٥٬٠٠٠٬٠٠٠ وون بدون سجل وحد الإهلاك البالغ ٨٬٠٠٠٬٠٠٠ وون. وحشر النظامين في شاشة واحدة يفسد الأداة على الفئتين معاً، لذا فالنسخة الأمريكية خدمة مستقلة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -960,7 +985,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Nous n'avons jamais souscrit d'assurance auto exclusivement professionnelle. Le taux sert-il quand même ?",
     "faq.a4": "Non — et c'est précisément pour cela que l'outil pose la question. Sans 업무전용자동차보험, toutes les charges liées à ce véhicule sont intégralement non déductibles, aussi bon que paraisse votre taux. L'abattement transitoire de 50 % applicable en 2024–2025 a pris fin : à partir de l'exercice 2026, les sociétés et les entrepreneurs individuels en comptabilité en partie double sont traités de la même façon (cela s'appliquait déjà depuis 2024 aux contribuables soumis au 성실신고확인). Décochez la case assurance pour une voiture et l'outil remplace son montant déductible par ₩0 en vous expliquant pourquoi, plutôt que de vous montrer un chiffre confortable que la déclaration n'acceptera pas.",
     "faq.q5": "En quoi est-ce différent d'un calculateur de frais kilométriques de l'IRS américain ?",
-    "faq.a5": "Le calcul est totalement différent, et c'est pourquoi le nom précise « Corée ». Aux États-Unis, vous pouvez appliquer un barème kilométrique forfaitaire au mile, ou les frais réels × pourcentage professionnel (IRS Pub. 463). La Corée n'a pas de forfait : on prend les charges liées réelles × taux d'utilisation professionnelle, puis on les passe par le seuil de 15 000 000 KRW sans carnet et par le plafond d'amortissement de 8 000 000 KRW. Faire entrer les deux régimes dans un même écran casserait l'outil pour les deux publics : l'édition américaine est donc un service distinct."
+    "faq.a5": "Le calcul est totalement différent, et c'est pourquoi le nom précise « Corée ». Aux États-Unis, vous pouvez appliquer un barème kilométrique forfaitaire au mile, ou les frais réels × pourcentage professionnel (IRS Pub. 463). La Corée n'a pas de forfait : on prend les charges liées réelles × taux d'utilisation professionnelle, puis on les passe par le seuil de 15 000 000 KRW sans carnet et par le plafond d'amortissement de 8 000 000 KRW. Faire entrer les deux régimes dans un même écran casserait l'outil pour les deux publics : l'édition américaine est donc un service distinct.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -1116,7 +1146,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমরা কখনও ব্যবসা-নির্দিষ্ট গাড়ি বিমা কিনিনি। অনুপাত কি তবুও কাজে লাগে?",
     "faq.a4": "না — আর সেজন্যই টুলটি জিজ্ঞেস করে। 업무전용자동차보험 ছাড়া ওই গাড়ির প্রতিটি সংশ্লিষ্ট ব্যয় পুরোপুরি অগ্রাহ্য, অনুপাত যতই ভালো দেখাক। ২০২৪–২০২৫-এ প্রযোজ্য ৫০% অন্তর্বর্তী ছাড় শেষ হয়ে গেছে, তাই ২০২৬ অর্থবছর থেকে কর্পোরেশন ও দ্বৈত-এন্ট্রি হিসাবরক্ষণকারী একক মালিকদের একই নিয়মে দেখা হয় (성실신고확인-এর আওতাধীন করদাতাদের ক্ষেত্রে ২০২৪ থেকেই তা প্রযোজ্য ছিল)। কোনও গাড়ির বিমার ঘর তুলে দিলে টুল তার কর্তনযোগ্য অঙ্ক ₩0 করে দেয় এবং কারণ জানায় — দাখিলে গ্রহণযোগ্য নয় এমন আরামদায়ক সংখ্যা দেখানোর বদলে।",
     "faq.q5": "এটি মার্কিন IRS মাইলেজ ক্যালকুলেটর থেকে কীভাবে আলাদা?",
-    "faq.a5": "হিসাব সম্পূর্ণ আলাদা, সেজন্যই নামেই “কোরিয়া” বলা আছে। যুক্তরাষ্ট্রে প্রতি মাইলে নির্দিষ্ট স্ট্যান্ডার্ড মাইলেজ হার নেওয়া যায়, বা প্রকৃত ব্যয় × ব্যবসায়িক শতাংশ (IRS Pub. 463)। কোরিয়ায় কোনও নির্দিষ্ট হার নেই: প্রকৃত সংশ্লিষ্ট ব্যয় × ব্যবসায়িক ব্যবহারের অনুপাত নেওয়া হয়, তারপর তা ১,৫০,০০,০০০ ওনের লগ-ছাড়া সীমা ও ৮০,০০,০০০ ওনের অবচয় সীমার মধ্য দিয়ে যায়। দুটি ব্যবস্থাকে এক পর্দায় ঠেসে দিলে দুই পক্ষের জন্যই টুলটি নষ্ট হত, তাই মার্কিন সংস্করণ আলাদা সেবা।"
+    "faq.a5": "হিসাব সম্পূর্ণ আলাদা, সেজন্যই নামেই “কোরিয়া” বলা আছে। যুক্তরাষ্ট্রে প্রতি মাইলে নির্দিষ্ট স্ট্যান্ডার্ড মাইলেজ হার নেওয়া যায়, বা প্রকৃত ব্যয় × ব্যবসায়িক শতাংশ (IRS Pub. 463)। কোরিয়ায় কোনও নির্দিষ্ট হার নেই: প্রকৃত সংশ্লিষ্ট ব্যয় × ব্যবসায়িক ব্যবহারের অনুপাত নেওয়া হয়, তারপর তা ১,৫০,০০,০০০ ওনের লগ-ছাড়া সীমা ও ৮০,০০,০০০ ওনের অবচয় সীমার মধ্য দিয়ে যায়। দুটি ব্যবস্থাকে এক পর্দায় ঠেসে দিলে দুই পক্ষের জন্যই টুলটি নষ্ট হত, তাই মার্কিন সংস্করণ আলাদা সেবা।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1272,7 +1307,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Nunca contratamos o seguro exclusivo para uso empresarial. O percentual ainda ajuda?",
     "faq.a4": "Não — e é por isso que a ferramenta pergunta. Sem 업무전용자동차보험, toda despesa relacionada àquele veículo é integralmente indedutível, por melhor que pareça o seu percentual. O alívio transitório de 50% aplicável em 2024–2025 acabou, então a partir do exercício de 2026 as pessoas jurídicas e os empresários individuais com escrituração por partidas dobradas recebem o mesmo tratamento (já valia desde 2024 para os contribuintes sujeitos ao 성실신고확인). Desmarque a caixa do seguro de um carro e a ferramenta substitui o valor dedutível por ₩0 e explica o motivo, em vez de mostrar um número confortável que a declaração não vai aceitar.",
     "faq.q5": "Qual a diferença em relação a uma calculadora de milhagem do IRS americano?",
-    "faq.a5": "A matemática é completamente diferente, e por isso o nome diz “Coreia”. Nos EUA você pode usar uma taxa padrão fixa por milha, ou despesas reais × percentual empresarial (IRS Pub. 463). A Coreia não tem taxa fixa: pegam-se as despesas relacionadas reais × percentual de uso empresarial e depois passa-se pelo limite de 15.000.000 KRW sem registro e pelo teto de depreciação de 8.000.000 KRW. Enfiar os dois regimes numa só tela quebraria a ferramenta para os dois públicos, então a edição americana é um serviço separado."
+    "faq.a5": "A matemática é completamente diferente, e por isso o nome diz “Coreia”. Nos EUA você pode usar uma taxa padrão fixa por milha, ou despesas reais × percentual empresarial (IRS Pub. 463). A Coreia não tem taxa fixa: pegam-se as despesas relacionadas reais × percentual de uso empresarial e depois passa-se pelo limite de 15.000.000 KRW sem registro e pelo teto de depreciação de 8.000.000 KRW. Enfiar os dois regimes numa só tela quebraria a ferramenta para os dois públicos, então a edição americana é um serviço separado.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1428,7 +1468,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Мы никогда не оформляли служебное автострахование. Доля всё равно поможет?",
     "faq.a4": "Нет — и именно поэтому инструмент об этом спрашивает. Без 업무전용자동차보험 все связанные расходы по этому автомобилю полностью невычитаемы, какой бы хорошей ни выглядела ваша доля. Переходная льгота в 50%, действовавшая в 2024–2025 годах, закончилась, поэтому с 2026 финансового года организации и индивидуальные предприниматели, ведущие двойную бухгалтерию, приравнены (к налогоплательщикам, подпадающим под 성실신고확인, это применялось уже с 2024 года). Снимите галочку страхования у автомобиля — и инструмент заменит его вычитаемую сумму на ₩0 и объяснит почему, вместо того чтобы показать удобную цифру, которую декларация не примет.",
     "faq.q5": "Чем это отличается от американского калькулятора пробега IRS?",
-    "faq.a5": "Расчёт совершенно другой, поэтому в названии прямо указана Корея. В США можно применить фиксированную стандартную ставку за милю или фактические расходы × служебный процент (IRS Pub. 463). В Корее фиксированной ставки нет: берутся фактические связанные расходы × доля служебного использования, а затем они проходят через порог 15 000 000 вон без журнала и лимит амортизации 8 000 000 вон. Впихнуть оба режима в один экран — сломать инструмент для обеих аудиторий, поэтому американская версия это отдельный сервис."
+    "faq.a5": "Расчёт совершенно другой, поэтому в названии прямо указана Корея. В США можно применить фиксированную стандартную ставку за милю или фактические расходы × служебный процент (IRS Pub. 463). В Корее фиксированной ставки нет: берутся фактические связанные расходы × доля служебного использования, а затем они проходят через порог 15 000 000 вон без журнала и лимит амортизации 8 000 000 вон. Впихнуть оба режима в один экран — сломать инструмент для обеих аудиторий, поэтому американская версия это отдельный сервис.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1584,7 +1629,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ہم نے کبھی کاروبار کے لیے مخصوص گاڑی بیمہ نہیں لیا۔ کیا تناسب پھر بھی مددگار ہے؟",
     "faq.a4": "نہیں — اور اسی لیے یہ ٹول پوچھتا ہے۔ 업무전용자동차보험 کے بغیر اس گاڑی کا ہر متعلقہ خرچ مکمل طور پر ناقابلِ کٹوتی ہے، خواہ آپ کا تناسب کتنا ہی اچھا لگے۔ 2024–2025 میں لاگو 50% عبوری رعایت ختم ہو چکی ہے، چنانچہ مالی سال 2026 سے کمپنیوں اور دوہری اندراج والے انفرادی کاروباریوں کے ساتھ یکساں سلوک ہوتا ہے (성실신고확인 کے تابع ٹیکس دہندگان پر یہ 2024 سے ہی لاگو تھا)۔ کسی گاڑی کا بیمہ خانہ ہٹا دیں تو ٹول اس کی قابلِ کٹوتی رقم کو ₩0 کر دیتا ہے اور وجہ بتاتا ہے، بجائے اس کے کہ آپ کو ایک آرام دہ عدد دکھائے جسے گوشوارہ قبول نہیں کرے گا۔",
     "faq.q5": "یہ امریکی IRS مائلیج کیلکولیٹر سے کیسے مختلف ہے؟",
-    "faq.a5": "حساب بالکل مختلف ہے، اسی لیے نام میں ہی «کوریا» لکھا ہے۔ امریکہ میں فی میل ایک مقررہ معیاری شرح لی جا سکتی ہے، یا حقیقی اخراجات × کاروباری فیصد (IRS Pub. 463)۔ کوریا میں کوئی مقررہ شرح نہیں: حقیقی متعلقہ اخراجات × کاروباری استعمال کا تناسب لیا جاتا ہے، پھر انہیں 15,000,000 وون کی بغیر لاگ حد اور 8,000,000 وون کی فرسودگی حد سے گزارا جاتا ہے۔ دونوں نظاموں کو ایک ہی اسکرین میں ٹھونسنا دونوں فریقوں کے لیے ٹول کو خراب کر دیتا، اس لیے امریکی ایڈیشن ایک الگ سروس ہے۔"
+    "faq.a5": "حساب بالکل مختلف ہے، اسی لیے نام میں ہی «کوریا» لکھا ہے۔ امریکہ میں فی میل ایک مقررہ معیاری شرح لی جا سکتی ہے، یا حقیقی اخراجات × کاروباری فیصد (IRS Pub. 463)۔ کوریا میں کوئی مقررہ شرح نہیں: حقیقی متعلقہ اخراجات × کاروباری استعمال کا تناسب لیا جاتا ہے، پھر انہیں 15,000,000 وون کی بغیر لاگ حد اور 8,000,000 وون کی فرسودگی حد سے گزارا جاتا ہے۔ دونوں نظاموں کو ایک ہی اسکرین میں ٹھونسنا دونوں فریقوں کے لیے ٹول کو خراب کر دیتا، اس لیے امریکی ایڈیشن ایک الگ سروس ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1740,7 +1790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kami tidak pernah membeli asuransi mobil khusus bisnis. Apakah rasionya masih berguna?",
     "faq.a4": "Tidak — dan itulah sebabnya alat ini menanyakannya. Tanpa 업무전용자동차보험, setiap biaya terkait kendaraan itu tidak dapat dikurangkan sepenuhnya, sebagus apa pun rasio Anda terlihat. Keringanan transisi 50% yang berlaku pada 2024–2025 telah berakhir, sehingga sejak tahun buku 2026 badan usaha dan pengusaha perorangan dengan pembukuan berpasangan diperlakukan sama (bagi wajib pajak yang tunduk pada 성실신고확인 hal itu sudah berlaku sejak 2024). Hapus centang kotak asuransi sebuah mobil dan alat ini menimpa jumlah yang dapat dikurangkan menjadi ₩0 serta menjelaskan alasannya, alih-alih menunjukkan angka nyaman yang tidak akan diterima dalam pelaporan.",
     "faq.q5": "Apa bedanya dengan kalkulator jarak tempuh IRS Amerika?",
-    "faq.a5": "Perhitungannya sama sekali berbeda, karena itu namanya menyebut “Korea”. Amerika membolehkan tarif jarak tempuh standar tetap per mil, atau biaya aktual × persentase bisnis (IRS Pub. 463). Korea tidak punya tarif tetap: yang dipakai adalah biaya terkait aktual × rasio penggunaan bisnis, lalu dilewatkan pada ambang 15.000.000 KRW tanpa catatan dan batas penyusutan 8.000.000 KRW. Menjejalkan kedua rezim ke satu layar akan merusak alat ini bagi kedua kelompok pengguna, jadi edisi Amerika adalah layanan terpisah."
+    "faq.a5": "Perhitungannya sama sekali berbeda, karena itu namanya menyebut “Korea”. Amerika membolehkan tarif jarak tempuh standar tetap per mil, atau biaya aktual × persentase bisnis (IRS Pub. 463). Korea tidak punya tarif tetap: yang dipakai adalah biaya terkait aktual × rasio penggunaan bisnis, lalu dilewatkan pada ambang 15.000.000 KRW tanpa catatan dan batas penyusutan 8.000.000 KRW. Menjejalkan kedua rezim ke satu layar akan merusak alat ini bagi kedua kelompok pengguna, jadi edisi Amerika adalah layanan terpisah.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1896,7 +1951,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wir haben nie eine rein betriebliche Kfz-Versicherung abgeschlossen. Hilft der Nutzungsanteil trotzdem?",
     "faq.a4": "Nein — und genau deshalb fragt dieses Tool danach. Ohne 업무전용자동차보험 sind sämtliche zugehörigen Kosten dieses Fahrzeugs vollständig nicht abzugsfähig, so gut Ihr Anteil auch aussehen mag. Die 50-%-Übergangsregelung der Jahre 2024–2025 ist ausgelaufen; ab dem Geschäftsjahr 2026 werden Kapitalgesellschaften und doppelt buchführende Einzelunternehmer gleich behandelt (für Steuerpflichtige mit 성실신고확인 galt dies bereits ab 2024). Entfernen Sie bei einem Wagen das Versicherungshäkchen, überschreibt das Tool dessen abzugsfähigen Betrag mit ₩0 und nennt den Grund — statt Ihnen eine bequeme Zahl zu zeigen, die die Erklärung nicht akzeptiert.",
     "faq.q5": "Worin unterscheidet sich das von einem US-amerikanischen IRS-Kilometerrechner?",
-    "faq.a5": "Die Rechnung ist völlig anders, deshalb steht „Korea“ im Namen. In den USA können Sie eine pauschale Kilometerpauschale je Meile ansetzen oder tatsächliche Kosten × betrieblicher Prozentsatz (IRS Pub. 463). Korea kennt keine Pauschale: Man nimmt die tatsächlichen zugehörigen Kosten × betrieblicher Nutzungsanteil und schickt sie anschließend durch die 15.000.000-KRW-Schwelle ohne Fahrtenbuch und die Abschreibungsobergrenze von 8.000.000 KRW. Beide Systeme in einen Bildschirm zu pressen würde das Tool für beide Zielgruppen ruinieren — die US-Ausgabe ist daher ein eigener Dienst."
+    "faq.a5": "Die Rechnung ist völlig anders, deshalb steht „Korea“ im Namen. In den USA können Sie eine pauschale Kilometerpauschale je Meile ansetzen oder tatsächliche Kosten × betrieblicher Prozentsatz (IRS Pub. 463). Korea kennt keine Pauschale: Man nimmt die tatsächlichen zugehörigen Kosten × betrieblicher Nutzungsanteil und schickt sie anschließend durch die 15.000.000-KRW-Schwelle ohne Fahrtenbuch und die Abschreibungsobergrenze von 8.000.000 KRW. Beide Systeme in einen Bildschirm zu pressen würde das Tool für beide Zielgruppen ruinieren — die US-Ausgabe ist daher ein eigener Dienst.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -2052,7 +2112,12 @@ window.I18N_LOCALES = {
     "faq.q4": "業務専用自動車保険に加入していません。それでも比率は役に立ちますか？",
     "faq.a4": "いいえ — だからこそ当ツールはこれを確認します。업무전용자동차보험に未加入の場合、比率がどれほど良く見えても、その車両の関連費用は全額損金不算入です。2024〜2025年に適用された50%の経過措置は終了したため、2026事業年度からは法人と複式簿記の個人事業者が同じ扱いになります（성실신고확인 の対象となる納税者には2024年から適用済みです）。ある車両の保険チェックを外すと、ツールはその損金算入額を₩0で上書きし、その理由を示します — 申告では通らない心地よい数字を見せる代わりに。",
     "faq.q5": "米国IRSのマイレージ計算ツールとは何が違いますか？",
-    "faq.a5": "計算方法がまったく異なるため、名称にも「韓国」と明記しています。米国は1マイルあたりの定額標準マイレージ率、または実費 × 業務割合を選べます（IRS Pub. 463）。韓国に定額制はありません。実際の関連費用 × 業務使用比率を求めたうえで、記録簿なしの1,500万ウォン基準と減価償却費の800万ウォン限度額を通します。両制度を1つの画面に詰め込めば双方の利用者にとって使いものにならなくなるため、米国版は別サービスとしています。"
+    "faq.a5": "計算方法がまったく異なるため、名称にも「韓国」と明記しています。米国は1マイルあたりの定額標準マイレージ率、または実費 × 業務割合を選べます（IRS Pub. 463）。韓国に定額制はありません。実際の関連費用 × 業務使用比率を求めたうえで、記録簿なしの1,500万ウォン基準と減価償却費の800万ウォン限度額を通します。両制度を1つの画面に詰め込めば双方の利用者にとって使いものにならなくなるため、米国版は別サービスとしています。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -2208,6 +2273,11 @@ window.I18N_LOCALES = {
     "faq.q4": "업무전용자동차보험을 안 들었는데, 비율이 의미가 있나요?",
     "faq.a4": "없습니다 — 그래서 이 도구가 묻는 겁니다. 업무전용자동차보험이 없으면 비율이 아무리 좋아도 그 차량의 관련비용은 전액 손금불산입됩니다. 2024~2025년에 적용되던 50% 경과조치가 끝나 2026 사업연도부터는 법인과 복식부기 개인사업자가 같은 취급을 받습니다(성실신고확인 대상자에게는 2024년부터 이미 적용). 특정 차량의 보험 체크를 해제하면 도구는 손금산입액을 ₩0 으로 덮고 그 이유를 알려줍니다 — 신고에서 받아들여지지 않을 편안한 숫자를 보여주는 대신에.",
     "faq.q5": "미국 IRS 마일리지 계산기와는 뭐가 다른가요?",
-    "faq.a5": "계산 자체가 완전히 다릅니다. 그래서 이름에 한국이라고 못박아 뒀습니다. 미국은 마일당 정액 표준 마일리지율을 쓰거나 실제 비용 × 업무 비율을 씁니다(IRS Pub. 463). 한국엔 정액제가 없습니다. 실제 관련비용 × 업무사용비율을 구한 뒤 기록부 미작성 시 1,500만원 기준과 감가상각비 800만원 한도를 통과시킵니다. 두 제도를 한 화면에 욱여넣으면 양쪽 모두에게 못 쓸 도구가 되므로, 미국판은 별도 서비스로 둡니다."
+    "faq.a5": "계산 자체가 완전히 다릅니다. 그래서 이름에 한국이라고 못박아 뒀습니다. 미국은 마일당 정액 표준 마일리지율을 쓰거나 실제 비용 × 업무 비율을 씁니다(IRS Pub. 463). 한국엔 정액제가 없습니다. 실제 관련비용 × 업무사용비율을 구한 뒤 기록부 미작성 시 1,500만원 기준과 감가상각비 800만원 한도를 통과시킵니다. 두 제도를 한 화면에 욱여넣으면 양쪽 모두에게 못 쓸 도구가 되므로, 미국판은 별도 서비스로 둡니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

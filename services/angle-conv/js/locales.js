@@ -60,7 +60,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why do some angles show an exact π fraction and others don't?",
     "faq.a4": "Converting degrees to radians is always deg × π/180, so in principle every whole or simple decimal degree value has an exact fraction of π. This tool shows that exact fraction — like π/6 for 30° or 3π/4 for 135° — only when the fraction has a small, tidy denominator (up to 360). For arbitrary decimals such as 12.7° the exact fraction would have an ugly, meaningless denominator, so the tool shows only the decimal radian value instead.",
     "faq.q5": "Is my angle value sent to a server?",
-    "faq.a5": "No. This angle converter runs entirely in your browser — nothing you type is uploaded anywhere. The only thing saved is your last angle and whether DMS mode was on, kept in your browser's local storage so the tool is ready next time you open it."
+    "faq.a5": "No. This angle converter runs entirely in your browser — nothing you type is uploaded anywhere. The only thing saved is your last angle and whether DMS mode was on, kept in your browser's local storage so the tool is ready next time you open it.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -105,7 +110,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么有些角度会显示精确的 π 分数，有些不会？",
     "faq.a4": "度换算成弧度始终是 度 × π/180，所以理论上任何整数或简单小数的角度都有一个精确的 π 分数。但本工具只在这个分数的分母足够小、整齐（不超过 360）时才显示精确值，比如 30° 对应 π/6、135° 对应 3π/4。对于像 12.7° 这样任意的小数，精确分数的分母会又大又没有意义，因此工具此时只显示弧度的小数近似值。",
     "faq.q5": "我输入的角度会被发送到服务器吗？",
-    "faq.a5": "不会。这个角度换算器完全在你的浏览器中运行——你输入的任何内容都不会被上传。唯一保存的是你最近一次输入的角度以及是否开启了 DMS 模式，保存在浏览器的本地存储中，方便你下次打开时直接使用。"
+    "faq.a5": "不会。这个角度换算器完全在你的浏览器中运行——你输入的任何内容都不会被上传。唯一保存的是你最近一次输入的角度以及是否开启了 DMS 模式，保存在浏览器的本地存储中，方便你下次打开时直接使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -150,7 +160,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कुछ कोणों में सटीक π भिन्न क्यों दिखता है और कुछ में नहीं?",
     "faq.a4": "डिग्री को रेडियन में बदलना हमेशा डिग्री × π/180 होता है, इसलिए सिद्धांततः हर पूर्णांक या सरल दशमलव डिग्री मान का एक सटीक π भिन्न होता है। यह टूल वह सटीक भिन्न — जैसे 30° के लिए π/6 या 135° के लिए 3π/4 — तभी दिखाता है जब भिन्न का हर छोटा और साफ़ हो (360 तक)। 12.7° जैसे मनमाने दशमलव के लिए सटीक भिन्न का हर बहुत बड़ा और अर्थहीन होगा, इसलिए टूल तब केवल दशमलव रेडियन मान दिखाता है।",
     "faq.q5": "क्या मेरा कोण मान किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह कोण कनवर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपने जो भी टाइप किया वह कहीं अपलोड नहीं होता। केवल आपका आख़िरी कोण और DMS मोड चालू था या नहीं, यह आपके ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है ताकि अगली बार टूल तैयार मिले।"
+    "faq.a5": "नहीं। यह कोण कनवर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपने जो भी टाइप किया वह कहीं अपलोड नहीं होता। केवल आपका आख़िरी कोण और DMS मोड चालू था या नहीं, यह आपके ब्राउज़र के लोकल स्टोरेज में सहेजा जाता है ताकि अगली बार टूल तैयार मिले।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -195,7 +210,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué algunos ángulos muestran una fracción exacta de π y otros no?",
     "faq.a4": "Convertir grados a radianes siempre es grados × π/180, así que en principio todo valor entero o decimal sencillo en grados tiene una fracción exacta de π. Esta herramienta muestra esa fracción exacta —como π/6 para 30° o 3π/4 para 135°— solo cuando tiene un denominador pequeño y ordenado (hasta 360). Para decimales arbitrarios como 12,7°, la fracción exacta tendría un denominador feo y sin sentido, así que la herramienta muestra solo el valor decimal en radianes.",
     "faq.q5": "¿Se envía mi ángulo a un servidor?",
-    "faq.a5": "No. Este conversor de ángulos funciona por completo en tu navegador — nada de lo que escribas se sube a ningún sitio. Lo único que se guarda es tu último ángulo y si el modo GMS estaba activado, en el almacenamiento local de tu navegador, para que la herramienta esté lista la próxima vez."
+    "faq.a5": "No. Este conversor de ángulos funciona por completo en tu navegador — nada de lo que escribas se sube a ningún sitio. Lo único que se guarda es tu último ángulo y si el modo GMS estaba activado, en el almacenamiento local de tu navegador, para que la herramienta esté lista la próxima vez.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -240,7 +260,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا تظهر بعض الزوايا كسر π دقيقًا وأخرى لا تظهره؟",
     "faq.a4": "تحويل الدرجات إلى راديان هو دائمًا الدرجات × π/180، لذا من حيث المبدأ لكل قيمة درجات صحيحة أو عشرية بسيطة كسر دقيق من π. تعرض هذه الأداة ذلك الكسر الدقيق — مثل π/6 لـ 30° أو 3π/4 لـ 135° — فقط عندما يكون مقام الكسر صغيرًا ومرتبًا (حتى 360). أما بالنسبة للأعداد العشرية العشوائية مثل 12.7°، فسيكون مقام الكسر الدقيق كبيرًا وغير ذي معنى، لذا تعرض الأداة عندئذٍ القيمة العشرية بالراديان فقط.",
     "faq.q5": "هل تُرسَل قيمة الزاوية إلى خادم؟",
-    "faq.a5": "لا. يعمل محوّل الزوايا هذا بالكامل داخل متصفحك — لا يُرفع أي شيء تكتبه إلى أي مكان. الشيء الوحيد الذي يُحفظ هو آخر زاوية أدخلتها وما إذا كان وضع DMS مفعّلاً، ويُخزَّن ذلك في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة."
+    "faq.a5": "لا. يعمل محوّل الزوايا هذا بالكامل داخل متصفحك — لا يُرفع أي شيء تكتبه إلى أي مكان. الشيء الوحيد الذي يُحفظ هو آخر زاوية أدخلتها وما إذا كان وضع DMS مفعّلاً، ويُخزَّن ذلك في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -285,7 +310,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi certains angles affichent-ils une fraction exacte de π et d'autres non ?",
     "faq.a4": "La conversion des degrés en radians est toujours degrés × π/180, donc en principe toute valeur entière ou décimale simple en degrés a une fraction exacte de π. Cet outil n'affiche cette fraction exacte — comme π/6 pour 30° ou 3π/4 pour 135° — que lorsqu'elle a un dénominateur petit et net (jusqu'à 360). Pour des décimales arbitraires comme 12,7°, la fraction exacte aurait un dénominateur disproportionné et sans intérêt, donc l'outil n'affiche alors que la valeur décimale en radians.",
     "faq.q5": "Mon angle est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur d'angles fonctionne entièrement dans votre navigateur — rien de ce que vous saisissez n'est envoyé où que ce soit. Seuls votre dernier angle et l'état du mode DMS sont enregistrés, dans le stockage local de votre navigateur, afin que l'outil soit prêt la prochaine fois."
+    "faq.a5": "Non. Ce convertisseur d'angles fonctionne entièrement dans votre navigateur — rien de ce que vous saisissez n'est envoyé où que ce soit. Seuls votre dernier angle et l'état du mode DMS sont enregistrés, dans le stockage local de votre navigateur, afin que l'outil soit prêt la prochaine fois.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -330,7 +360,12 @@ window.I18N_LOCALES = {
     "faq.q4": "কেন কিছু কোণে সঠিক π ভগ্নাংশ দেখায় আর কিছুতে দেখায় না?",
     "faq.a4": "ডিগ্রিকে রেডিয়ানে রূপান্তর সবসময় ডিগ্রি × π/180, তাই নীতিগতভাবে প্রতিটি পূর্ণসংখ্যা বা সাধারণ দশমিক ডিগ্রি মানের একটি সঠিক π ভগ্নাংশ থাকে। এই টুল সেই সঠিক ভগ্নাংশ — যেমন 30°-এর জন্য π/6 বা 135°-এর জন্য 3π/4 — তখনই দেখায় যখন ভগ্নাংশের হর ছোট ও পরিচ্ছন্ন হয় (360 পর্যন্ত)। 12.7°-এর মতো যেকোনো দশমিকের জন্য সঠিক ভগ্নাংশের হর অনেক বড় ও অর্থহীন হয়ে যাবে, তাই তখন টুলটি শুধু রেডিয়ানের দশমিক মান দেখায়।",
     "faq.q5": "আমার কোণের মান কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই কোণ কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যা টাইপ করেন তা কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ কোণ এবং DMS মোড চালু ছিল কিনা তা আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার টুলটি প্রস্তুত থাকে।"
+    "faq.a5": "না। এই কোণ কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যা টাইপ করেন তা কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ কোণ এবং DMS মোড চালু ছিল কিনা তা আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার টুলটি প্রস্তুত থাকে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -375,7 +410,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que alguns ângulos mostram uma fração exata de π e outros não?",
     "faq.a4": "Converter graus em radianos é sempre graus × π/180, então, em princípio, todo valor inteiro ou decimal simples em graus tem uma fração exata de π. Esta ferramenta mostra essa fração exata — como π/6 para 30° ou 3π/4 para 135° — apenas quando ela tem um denominador pequeno e arrumado (até 360). Para decimais arbitrários como 12,7°, a fração exata teria um denominador feio e sem sentido, então a ferramenta mostra apenas o valor decimal em radianos.",
     "faq.q5": "Meu ângulo é enviado para um servidor?",
-    "faq.a5": "Não. Este conversor de ângulos funciona inteiramente no seu navegador — nada do que você digita é enviado para lugar algum. A única coisa salva é o seu último ângulo e se o modo GMS estava ativado, guardados no armazenamento local do navegador, para que a ferramenta esteja pronta na próxima vez."
+    "faq.a5": "Não. Este conversor de ângulos funciona inteiramente no seu navegador — nada do que você digita é enviado para lugar algum. A única coisa salva é o seu último ângulo e se o modo GMS estava ativado, guardados no armazenamento local do navegador, para que a ferramenta esteja pronta na próxima vez.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -420,7 +460,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему у одних углов показывается точная дробь π, а у других нет?",
     "faq.a4": "Перевод градусов в радианы — это всегда градусы × π/180, поэтому в принципе у любого целого или простого десятичного значения в градусах есть точная дробь π. Этот инструмент показывает такую точную дробь — например, π/6 для 30° или 3π/4 для 135° — только когда у неё небольшой и аккуратный знаменатель (до 360). Для произвольных десятичных чисел вроде 12,7° точная дробь получилась бы с громоздким и бессмысленным знаменателем, поэтому инструмент тогда показывает только десятичное значение в радианах.",
     "faq.q5": "Отправляется ли значение угла на сервер?",
-    "faq.a5": "Нет. Этот конвертер углов работает целиком в вашем браузере — ничего из введённого никуда не загружается. Сохраняется только последний угол и было ли включено режим ГМС — в локальном хранилище вашего браузера, чтобы инструмент был готов в следующий раз."
+    "faq.a5": "Нет. Этот конвертер углов работает целиком в вашем браузере — ничего из введённого никуда не загружается. Сохраняется только последний угол и было ли включено режим ГМС — в локальном хранилище вашего браузера, чтобы инструмент был готов в следующий раз.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -465,7 +510,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کچھ زاویوں میں درست π کسر کیوں دکھتی ہے اور کچھ میں نہیں؟",
     "faq.a4": "ڈگری کو ریڈیئن میں بدلنا ہمیشہ ڈگری × π/180 ہوتا ہے، اس لیے اصولاً ہر مکمل یا سادہ اعشاریہ ڈگری قدر کی ایک درست π کسر ہوتی ہے۔ یہ ٹول وہ درست کسر — جیسے 30° کے لیے π/6 یا 135° کے لیے 3π/4 — تبھی دکھاتا ہے جب کسر کا حاصل تقسیم چھوٹا اور صاف ہو (360 تک)۔ 12.7° جیسے کسی بھی اعشاریہ کے لیے درست کسر کا حاصل تقسیم بہت بڑا اور بےمعنی ہوگا، اس لیے ٹول تب صرف ریڈیئن کی اعشاریہ قدر دکھاتا ہے۔",
     "faq.q5": "کیا میرا زاویہ کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ زاویہ کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا لکھا ہوا کچھ بھی کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری زاویہ اور یہ کہ DMS موڈ آن تھا یا نہیں، آپ کے براؤزر کی لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ اگلی بار ٹول تیار ہو۔"
+    "faq.a5": "نہیں۔ یہ زاویہ کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا لکھا ہوا کچھ بھی کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری زاویہ اور یہ کہ DMS موڈ آن تھا یا نہیں، آپ کے براؤزر کی لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ اگلی بار ٹول تیار ہو۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -510,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa beberapa sudut menampilkan pecahan π eksak dan yang lain tidak?",
     "faq.a4": "Mengonversi derajat ke radian selalu berupa derajat × π/180, jadi pada dasarnya setiap nilai derajat bulat atau desimal sederhana memiliki pecahan π eksak. Alat ini hanya menampilkan pecahan eksak tersebut — seperti π/6 untuk 30° atau 3π/4 untuk 135° — ketika penyebutnya kecil dan rapi (hingga 360). Untuk desimal acak seperti 12,7°, pecahan eksaknya akan memiliki penyebut yang besar dan tidak berarti, sehingga alat ini hanya menampilkan nilai desimal radian saja.",
     "faq.q5": "Apakah nilai sudut saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter sudut ini berjalan sepenuhnya di browser Anda — apa pun yang Anda ketik tidak diunggah ke mana pun. Satu-satunya yang disimpan adalah sudut terakhir Anda dan apakah mode DMS aktif, disimpan di penyimpanan lokal browser Anda agar alat ini siap digunakan lain kali."
+    "faq.a5": "Tidak. Konverter sudut ini berjalan sepenuhnya di browser Anda — apa pun yang Anda ketik tidak diunggah ke mana pun. Satu-satunya yang disimpan adalah sudut terakhir Anda dan apakah mode DMS aktif, disimpan di penyimpanan lokal browser Anda agar alat ini siap digunakan lain kali.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -555,7 +610,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum zeigen manche Winkel einen exakten π-Bruch und andere nicht?",
     "faq.a4": "Die Umrechnung von Grad in Radiant ist immer Grad × π/180, sodass im Prinzip jeder ganzzahlige oder einfache dezimale Gradwert einen exakten π-Bruch hat. Dieses Tool zeigt diesen exakten Bruch — etwa π/6 für 30° oder 3π/4 für 135° — nur dann, wenn er einen kleinen, sauberen Nenner hat (bis 360). Bei beliebigen Dezimalzahlen wie 12,7° hätte der exakte Bruch einen unhandlich großen, bedeutungslosen Nenner, daher zeigt das Tool dann nur den dezimalen Radiantwert.",
     "faq.q5": "Wird mein Winkelwert an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Winkelumrechner läuft vollständig in Ihrem Browser — nichts, was Sie eingeben, wird irgendwohin hochgeladen. Gespeichert werden nur Ihr letzter Winkel und ob der DMS-Modus aktiv war, und zwar im lokalen Speicher Ihres Browsers, damit das Tool beim nächsten Mal bereit ist."
+    "faq.a5": "Nein. Dieser Winkelumrechner läuft vollständig in Ihrem Browser — nichts, was Sie eingeben, wird irgendwohin hochgeladen. Gespeichert werden nur Ihr letzter Winkel und ob der DMS-Modus aktiv war, und zwar im lokalen Speicher Ihres Browsers, damit das Tool beim nächsten Mal bereit ist.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -600,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "なぜ一部の角度だけ正確なπ分数が表示されるのですか？",
     "faq.a4": "度からラジアンへの変換は常に「度 × π/180」なので、理論上は整数や単純な小数の度の値であれば、必ず正確なπ分数が存在します。このツールは、その分数の分母が小さくきれいな数（360以下）のときだけ正確な値 — 30°ならπ/6、135°なら3π/4など — を表示します。12.7°のような任意の小数では分母がとても大きく意味のない数になってしまうため、その場合はラジアンの小数近似値のみを表示します。",
     "faq.q5": "入力した角度はサーバーに送信されますか？",
-    "faq.a5": "いいえ。この角度変換ツールはすべてブラウザ内で完結し、入力した内容がどこかにアップロードされることはありません。保存されるのは直近の角度とDMSモードのオン・オフのみで、ブラウザのローカルストレージに保存され、次回開いたときにすぐ使えるようになります。"
+    "faq.a5": "いいえ。この角度変換ツールはすべてブラウザ内で完結し、入力した内容がどこかにアップロードされることはありません。保存されるのは直近の角度とDMSモードのオン・オフのみで、ブラウザのローカルストレージに保存され、次回開いたときにすぐ使えるようになります。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -645,6 +710,11 @@ window.I18N_LOCALES = {
     "faq.q4": "왜 어떤 각도는 정확한 π 분수가 나오고 어떤 각도는 안 나오나요?",
     "faq.a4": "도를 라디안으로 바꾸는 계산은 항상 '도 × π/180'이므로, 원칙적으로는 정수나 간단한 소수 형태의 도 값이면 모두 정확한 π 분수를 가질 수 있습니다. 이 도구는 그 분수의 분모가 작고 깔끔할 때(360 이하)만 정확한 값 — 예를 들어 30°는 π/6, 135°는 3π/4 — 을 보여줍니다. 12.7°처럼 임의의 소수인 경우 정확한 분수의 분모가 지나치게 크고 의미가 없어지므로, 이때는 라디안의 소수 근삿값만 표시합니다.",
     "faq.q5": "입력한 각도가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 각도 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 내용이 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 입력한 각도와 DMS 모드 사용 여부뿐이며, 브라우저의 로컬 저장소에 저장되어 다음에 열 때 바로 이어서 쓸 수 있습니다."
+    "faq.a5": "아니요. 이 각도 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 내용이 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 입력한 각도와 DMS 모드 사용 여부뿐이며, 브라우저의 로컬 저장소에 저장되어 다음에 열 때 바로 이어서 쓸 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

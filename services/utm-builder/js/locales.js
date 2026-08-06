@@ -85,7 +85,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why does my Korean utm_term show up as %ED%95%9C… in reports?",
     "faq.a4": "That is percent-encoding, and it is correct behaviour — URLs may only carry ASCII, so non-ASCII characters are encoded per character. GA4 usually decodes it back, but exports, third-party tools and shared links often show the raw form, which makes a keyword report unreadable. This UTM link generator shows the encoded result next to your value so you can decide before launch. Safest option: romanise the value (winter-coat) and keep the original wording in utm_content or your own naming sheet.",
     "faq.q5": "What is the difference between utm_id and utm_campaign, and are my links uploaded anywhere?",
-    "faq.a5": "utm_campaign is the human-readable name you read in reports (spring-sale); utm_id is the campaign ID that ties the click to imported cost data from your ad platform, so GA4 can join spend to sessions. Use both when you import cost data, and keep utm_id stable even if you rename the campaign. As for your links: nothing is uploaded. This bulk UTM builder runs entirely in your browser, there is no account and no server to send to, and a CSV you drop in is read with the File API in this tab. Your campaign plan is unreleased information, and it never leaves your device."
+    "faq.a5": "utm_campaign is the human-readable name you read in reports (spring-sale); utm_id is the campaign ID that ties the click to imported cost data from your ad platform, so GA4 can join spend to sessions. Use both when you import cost data, and keep utm_id stable even if you rename the campaign. As for your links: nothing is uploaded. This bulk UTM builder runs entirely in your browser, there is no account and no server to send to, and a CSV you drop in is read with the File API in this tab. Your campaign plan is unreleased information, and it never leaves your device.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -155,7 +160,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么我的中文 utm_term 在报告里显示成 %E4%B8%AD…？",
     "faq.a4": "那是百分号编码，属于正确行为——URL 只能承载 ASCII 字符，所以非 ASCII 字符会被逐字符编码。GA4 通常会把它解码回来，但导出文件、第三方工具和分享链接往往显示原始形式，让关键词报告变得难以阅读。本 UTM 链接生成器会在你的取值旁边显示编码后的结果，让你在投放前就能决定。最稳妥的做法：把取值转写成拉丁字母（winter-coat），并把原始措辞放进 utm_content 或你自己的命名表。",
     "faq.q5": "utm_id 和 utm_campaign 有什么区别，我的链接会被上传到什么地方吗？",
-    "faq.a5": "utm_campaign 是你在报告里看到的可读名称（spring-sale）；utm_id 是广告系列 ID，用来把点击与从广告平台导入的费用数据关联起来，让 GA4 能把花费和会话对应上。导入费用数据时两者都要用，并且即使重命名活动也要保持 utm_id 不变。至于你的链接：什么都不会上传。本批量 UTM 生成器完全在你的浏览器中运行，没有账户、也没有服务器可发送，你拖入的 CSV 会在本标签页内用 File API 读取。你的活动计划属于未公开信息，绝不会离开你的设备。"
+    "faq.a5": "utm_campaign 是你在报告里看到的可读名称（spring-sale）；utm_id 是广告系列 ID，用来把点击与从广告平台导入的费用数据关联起来，让 GA4 能把花费和会话对应上。导入费用数据时两者都要用，并且即使重命名活动也要保持 utm_id 不变。至于你的链接：什么都不会上传。本批量 UTM 生成器完全在你的浏览器中运行，没有账户、也没有服务器可发送，你拖入的 CSV 会在本标签页内用 File API 读取。你的活动计划属于未公开信息，绝不会离开你的设备。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -225,7 +235,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मेरा हिन्दी utm_term रिपोर्ट में %E0%A4%B9… जैसा क्यों दिखता है?",
     "faq.a4": "वह percent-encoding है और यह सही व्यवहार है — URL केवल ASCII ले जा सकते हैं, इसलिए गैर-ASCII अक्षर प्रति-अक्षर एन्कोड होते हैं। GA4 आमतौर पर इसे वापस डिकोड कर देता है, लेकिन एक्सपोर्ट, तीसरे-पक्ष के टूल और शेयर किए गए लिंक अक्सर कच्चा रूप दिखाते हैं, जिससे कीवर्ड रिपोर्ट पढ़ना मुश्किल हो जाता है। यह UTM लिंक जनरेटर आपकी वैल्यू के बगल में एन्कोडेड परिणाम दिखाता है ताकि आप लॉन्च से पहले तय कर सकें। सबसे सुरक्षित विकल्प: वैल्यू को रोमन में लिखें (winter-coat) और मूल शब्द utm_content या अपनी नामकरण शीट में रखें।",
     "faq.q5": "utm_id और utm_campaign में क्या अंतर है, और क्या मेरे लिंक कहीं अपलोड होते हैं?",
-    "faq.a5": "utm_campaign वह पढ़ने-योग्य नाम है जो आप रिपोर्ट में देखते हैं (spring-sale); utm_id वह कैंपेन ID है जो क्लिक को आपके विज्ञापन प्लेटफ़ॉर्म से आयातित लागत डेटा से जोड़ता है, ताकि GA4 खर्च को सेशन से मिला सके। लागत डेटा आयात करते समय दोनों का उपयोग करें, और कैंपेन का नाम बदलने पर भी utm_id स्थिर रखें। रहा आपके लिंक का सवाल: कुछ भी अपलोड नहीं होता। यह बल्क UTM बिल्डर पूरी तरह आपके ब्राउज़र में चलता है, न कोई अकाउंट है न भेजने के लिए कोई सर्वर, और आप जो CSV छोड़ते हैं वह इसी टैब में File API से पढ़ी जाती है। आपकी कैंपेन योजना अप्रकाशित जानकारी है, और यह कभी आपके डिवाइस से बाहर नहीं जाती।"
+    "faq.a5": "utm_campaign वह पढ़ने-योग्य नाम है जो आप रिपोर्ट में देखते हैं (spring-sale); utm_id वह कैंपेन ID है जो क्लिक को आपके विज्ञापन प्लेटफ़ॉर्म से आयातित लागत डेटा से जोड़ता है, ताकि GA4 खर्च को सेशन से मिला सके। लागत डेटा आयात करते समय दोनों का उपयोग करें, और कैंपेन का नाम बदलने पर भी utm_id स्थिर रखें। रहा आपके लिंक का सवाल: कुछ भी अपलोड नहीं होता। यह बल्क UTM बिल्डर पूरी तरह आपके ब्राउज़र में चलता है, न कोई अकाउंट है न भेजने के लिए कोई सर्वर, और आप जो CSV छोड़ते हैं वह इसी टैब में File API से पढ़ी जाती है। आपकी कैंपेन योजना अप्रकाशित जानकारी है, और यह कभी आपके डिवाइस से बाहर नहीं जाती।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -295,7 +310,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué mi utm_term en español aparece como caf%C3%A9… en los informes?",
     "faq.a4": "Eso es codificación por porcentaje y es el comportamiento correcto: las URL solo pueden llevar ASCII, así que los caracteres no ASCII (como las tildes o la ñ) se codifican carácter a carácter. GA4 suele descodificarlo, pero las exportaciones, las herramientas de terceros y los enlaces compartidos a menudo muestran la forma en bruto, lo que hace ilegible un informe de palabras clave. Este generador de enlaces UTM muestra el resultado codificado junto a tu valor para que decidas antes de lanzar. La opción más segura: transcribe el valor a caracteres básicos (winter-coat) y guarda la redacción original en utm_content o en tu propia hoja de nomenclatura.",
     "faq.q5": "¿Cuál es la diferencia entre utm_id y utm_campaign, y se suben mis enlaces a algún sitio?",
-    "faq.a5": "utm_campaign es el nombre legible que ves en los informes (spring-sale); utm_id es el ID de campaña que vincula el clic con los datos de coste importados de tu plataforma publicitaria, de modo que GA4 pueda unir el gasto con las sesiones. Usa ambos cuando importes datos de coste y mantén utm_id estable aunque cambies el nombre de la campaña. En cuanto a tus enlaces: no se sube nada. Este generador UTM masivo funciona por completo en tu navegador, no hay cuenta ni servidor al que enviar nada, y el CSV que sueltas se lee con la File API en esta pestaña. Tu plan de campaña es información no publicada y nunca sale de tu dispositivo."
+    "faq.a5": "utm_campaign es el nombre legible que ves en los informes (spring-sale); utm_id es el ID de campaña que vincula el clic con los datos de coste importados de tu plataforma publicitaria, de modo que GA4 pueda unir el gasto con las sesiones. Usa ambos cuando importes datos de coste y mantén utm_id estable aunque cambies el nombre de la campaña. En cuanto a tus enlaces: no se sube nada. Este generador UTM masivo funciona por completo en tu navegador, no hay cuenta ni servidor al que enviar nada, y el CSV que sueltas se lee con la File API en esta pestaña. Tu plan de campaña es información no publicada y nunca sale de tu dispositivo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -365,7 +385,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا يظهر utm_term العربي في التقارير على هيئة %D8%B9…؟",
     "faq.a4": "هذا ترميز بالنسبة المئوية، وهو سلوك صحيح — إذ لا تحمل الروابط سوى محارف ASCII، فتُرمَّز المحارف غير اللاتينية محرفًا محرفًا. عادةً ما يفكّ GA4 ترميزها، لكن ملفات التصدير وأدوات الطرف الثالث والروابط المشتركة كثيرًا ما تُظهر الصيغة الخام، مما يجعل تقرير الكلمات المفتاحية غير مقروء. تعرض أداة إنشاء روابط UTM هذه النتيجة المرمَّزة بجوار قيمتك لتقرّر قبل الإطلاق. الخيار الأأمن: اكتب القيمة بالحروف اللاتينية (winter-coat) واحتفظ بالصياغة الأصلية في utm_content أو في ورقة التسمية الخاصة بك.",
     "faq.q5": "ما الفرق بين utm_id وutm_campaign، وهل تُرفَع روابطي إلى أي مكان؟",
-    "faq.a5": "utm_campaign هو الاسم المقروء الذي تراه في التقارير (spring-sale)؛ أما utm_id فهو معرّف الحملة الذي يربط النقرة ببيانات التكلفة المستوردة من منصة إعلاناتك، كي يستطيع GA4 ربط الإنفاق بالجلسات. استخدم كليهما عند استيراد بيانات التكلفة، وأبقِ utm_id ثابتًا حتى لو غيّرت اسم الحملة. أما عن روابطك: لا يُرفَع شيء. تعمل أداة UTM بالجملة هذه بالكامل في متصفحك، فلا حساب ولا خادم لإرسالها إليه، وأي ملف CSV تُفلِته يُقرَأ عبر File API في هذه التبويبة. خطة حملتك معلومات غير منشورة، ولا تغادر جهازك أبدًا."
+    "faq.a5": "utm_campaign هو الاسم المقروء الذي تراه في التقارير (spring-sale)؛ أما utm_id فهو معرّف الحملة الذي يربط النقرة ببيانات التكلفة المستوردة من منصة إعلاناتك، كي يستطيع GA4 ربط الإنفاق بالجلسات. استخدم كليهما عند استيراد بيانات التكلفة، وأبقِ utm_id ثابتًا حتى لو غيّرت اسم الحملة. أما عن روابطك: لا يُرفَع شيء. تعمل أداة UTM بالجملة هذه بالكامل في متصفحك، فلا حساب ولا خادم لإرسالها إليه، وأي ملف CSV تُفلِته يُقرَأ عبر File API في هذه التبويبة. خطة حملتك معلومات غير منشورة، ولا تغادر جهازك أبدًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -435,7 +460,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi mon utm_term en français s'affiche-t-il comme %C3%A9t%C3%A9… dans les rapports ?",
     "faq.a4": "C'est de l'encodage-pourcent, et c'est le comportement correct — une URL ne peut transporter que de l'ASCII, donc les caractères non ASCII (comme les accents) sont encodés caractère par caractère. GA4 le décode généralement, mais les exports, les outils tiers et les liens partagés affichent souvent la forme brute, ce qui rend un rapport de mots-clés illisible. Ce générateur de liens UTM affiche le résultat encodé à côté de votre valeur pour que vous décidiez avant le lancement. L'option la plus sûre : translittérez la valeur en caractères simples (winter-coat) et gardez la formulation d'origine dans utm_content ou dans votre propre feuille de nomenclature.",
     "faq.q5": "Quelle est la différence entre utm_id et utm_campaign, et mes liens sont-ils envoyés quelque part ?",
-    "faq.a5": "utm_campaign est le nom lisible que vous voyez dans les rapports (spring-sale) ; utm_id est l'ID de campagne qui relie le clic aux données de coût importées de votre plateforme publicitaire, afin que GA4 puisse rapprocher les dépenses des sessions. Utilisez les deux lorsque vous importez des données de coût, et gardez utm_id stable même si vous renommez la campagne. Quant à vos liens : rien n'est envoyé. Ce générateur UTM en masse s'exécute entièrement dans votre navigateur, il n'y a ni compte ni serveur à qui envoyer quoi que ce soit, et un CSV que vous déposez est lu via la File API dans cet onglet. Votre plan de campagne est une information non publiée, et il ne quitte jamais votre appareil."
+    "faq.a5": "utm_campaign est le nom lisible que vous voyez dans les rapports (spring-sale) ; utm_id est l'ID de campagne qui relie le clic aux données de coût importées de votre plateforme publicitaire, afin que GA4 puisse rapprocher les dépenses des sessions. Utilisez les deux lorsque vous importez des données de coût, et gardez utm_id stable même si vous renommez la campagne. Quant à vos liens : rien n'est envoyé. Ce générateur UTM en masse s'exécute entièrement dans votre navigateur, il n'y a ni compte ni serveur à qui envoyer quoi que ce soit, et un CSV que vous déposez est lu via la File API dans cet onglet. Votre plan de campagne est une information non publiée, et il ne quitte jamais votre appareil.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -505,7 +535,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার বাংলা utm_term রিপোর্টে %E0%A6%AC… হিসেবে দেখায় কেন?",
     "faq.a4": "এটি percent-encoding, এবং এটি সঠিক আচরণ — URL শুধু ASCII বহন করতে পারে, তাই নন-ASCII অক্ষর প্রতিটি অক্ষর ধরে এনকোড হয়। GA4 সাধারণত এটি ডিকোড করে ফেরত দেয়, কিন্তু এক্সপোর্ট, তৃতীয়-পক্ষের টুল ও শেয়ার করা লিঙ্ক প্রায়ই কাঁচা রূপ দেখায়, যা কীওয়ার্ড রিপোর্ট পড়া কঠিন করে তোলে। এই UTM লিঙ্ক জেনারেটর আপনার মানের পাশে এনকোড করা ফলাফল দেখায় যাতে লঞ্চের আগে সিদ্ধান্ত নিতে পারেন। সবচেয়ে নিরাপদ উপায়: মানটি রোমান হরফে লিখুন (winter-coat) এবং মূল শব্দটি utm_content বা আপনার নিজের নামকরণ শিটে রাখুন।",
     "faq.q5": "utm_id ও utm_campaign-এর মধ্যে পার্থক্য কী, আর আমার লিঙ্ক কি কোথাও আপলোড হয়?",
-    "faq.a5": "utm_campaign হলো রিপোর্টে আপনি যে পাঠযোগ্য নাম দেখেন (spring-sale); utm_id হলো সেই ক্যাম্পেইন ID যা ক্লিককে আপনার বিজ্ঞাপন প্ল্যাটফর্ম থেকে আমদানি করা খরচ ডেটার সাথে জোড়ে, যাতে GA4 খরচকে সেশনের সাথে মেলাতে পারে। খরচ ডেটা আমদানি করার সময় দুটোই ব্যবহার করুন, এবং ক্যাম্পেইনের নাম বদলালেও utm_id অপরিবর্তিত রাখুন। আপনার লিঙ্কের কথা বলতে গেলে: কিছুই আপলোড হয় না। এই বাল্ক UTM বিল্ডার পুরোপুরি আপনার ব্রাউজারে চলে, কোনো অ্যাকাউন্ট নেই, পাঠানোর মতো কোনো সার্ভার নেই, এবং আপনি যে CSV ছাড়েন তা এই ট্যাবেই File API দিয়ে পড়া হয়। আপনার ক্যাম্পেইন পরিকল্পনা অপ্রকাশিত তথ্য, এবং তা কখনো আপনার ডিভাইস ছাড়ে না।"
+    "faq.a5": "utm_campaign হলো রিপোর্টে আপনি যে পাঠযোগ্য নাম দেখেন (spring-sale); utm_id হলো সেই ক্যাম্পেইন ID যা ক্লিককে আপনার বিজ্ঞাপন প্ল্যাটফর্ম থেকে আমদানি করা খরচ ডেটার সাথে জোড়ে, যাতে GA4 খরচকে সেশনের সাথে মেলাতে পারে। খরচ ডেটা আমদানি করার সময় দুটোই ব্যবহার করুন, এবং ক্যাম্পেইনের নাম বদলালেও utm_id অপরিবর্তিত রাখুন। আপনার লিঙ্কের কথা বলতে গেলে: কিছুই আপলোড হয় না। এই বাল্ক UTM বিল্ডার পুরোপুরি আপনার ব্রাউজারে চলে, কোনো অ্যাকাউন্ট নেই, পাঠানোর মতো কোনো সার্ভার নেই, এবং আপনি যে CSV ছাড়েন তা এই ট্যাবেই File API দিয়ে পড়া হয়। আপনার ক্যাম্পেইন পরিকল্পনা অপ্রকাশিত তথ্য, এবং তা কখনো আপনার ডিভাইস ছাড়ে না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -575,7 +610,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que meu utm_term em português aparece como promo%C3%A7%C3%A3o… nos relatórios?",
     "faq.a4": "Isso é codificação por porcentagem e é o comportamento correto — URLs só podem carregar ASCII, então caracteres não ASCII (como acentos e o ç) são codificados caractere a caractere. O GA4 normalmente decodifica de volta, mas exportações, ferramentas de terceiros e links compartilhados costumam mostrar a forma bruta, o que deixa um relatório de palavras-chave ilegível. Este gerador de links UTM mostra o resultado codificado ao lado do seu valor para você decidir antes de publicar. A opção mais segura: transcreva o valor para caracteres simples (winter-coat) e guarde a redação original em utm_content ou na sua própria planilha de nomenclatura.",
     "faq.q5": "Qual é a diferença entre utm_id e utm_campaign, e meus links são enviados para algum lugar?",
-    "faq.a5": "utm_campaign é o nome legível que você vê nos relatórios (spring-sale); utm_id é o ID da campanha que liga o clique aos dados de custo importados da sua plataforma de anúncios, para que o GA4 possa juntar o gasto às sessões. Use os dois ao importar dados de custo e mantenha utm_id estável mesmo se renomear a campanha. Quanto aos seus links: nada é enviado. Este gerador UTM em massa roda inteiramente no seu navegador, não há conta nem servidor para onde enviar, e um CSV que você solta é lido com a File API nesta aba. Seu plano de campanha é informação não publicada e nunca sai do seu dispositivo."
+    "faq.a5": "utm_campaign é o nome legível que você vê nos relatórios (spring-sale); utm_id é o ID da campanha que liga o clique aos dados de custo importados da sua plataforma de anúncios, para que o GA4 possa juntar o gasto às sessões. Use os dois ao importar dados de custo e mantenha utm_id estável mesmo se renomear a campanha. Quanto aos seus links: nada é enviado. Este gerador UTM em massa roda inteiramente no seu navegador, não há conta nem servidor para onde enviar, e um CSV que você solta é lido com a File API nesta aba. Seu plano de campanha é informação não publicada e nunca sai do seu dispositivo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -645,7 +685,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему мой utm_term на русском отображается в отчётах как %D0%B7%D0%B8%D0%BC%D0%B0…?",
     "faq.a4": "Это процентное кодирование, и это правильное поведение — URL могут содержать только ASCII, поэтому не-ASCII символы (например, кириллица) кодируются посимвольно. GA4 обычно декодирует их обратно, но экспорт, сторонние инструменты и общие ссылки часто показывают исходную форму, из-за чего отчёт по ключевым словам становится нечитаемым. Этот генератор ссылок UTM показывает закодированный результат рядом с вашим значением, чтобы вы могли решить до запуска. Самый безопасный вариант: транслитерируйте значение латиницей (winter-coat), а исходную формулировку храните в utm_content или в собственной таблице именования.",
     "faq.q5": "В чём разница между utm_id и utm_campaign, и загружаются ли мои ссылки куда-либо?",
-    "faq.a5": "utm_campaign — это читаемое название, которое вы видите в отчётах (spring-sale); utm_id — это идентификатор кампании, который связывает клик с данными о расходах, импортированными из вашей рекламной платформы, чтобы GA4 мог сопоставить затраты с сессиями. Используйте оба при импорте данных о расходах и сохраняйте utm_id неизменным, даже если переименуете кампанию. Что касается ваших ссылок: ничего не загружается. Этот массовый UTM-конструктор работает полностью в вашем браузере, нет ни аккаунта, ни сервера для отправки, а CSV, который вы перетаскиваете, читается через File API в этой вкладке. Ваш план кампании — неопубликованная информация, и он никогда не покидает ваше устройство."
+    "faq.a5": "utm_campaign — это читаемое название, которое вы видите в отчётах (spring-sale); utm_id — это идентификатор кампании, который связывает клик с данными о расходах, импортированными из вашей рекламной платформы, чтобы GA4 мог сопоставить затраты с сессиями. Используйте оба при импорте данных о расходах и сохраняйте utm_id неизменным, даже если переименуете кампанию. Что касается ваших ссылок: ничего не загружается. Этот массовый UTM-конструктор работает полностью в вашем браузере, нет ни аккаунта, ни сервера для отправки, а CSV, который вы перетаскиваете, читается через File API в этой вкладке. Ваш план кампании — неопубликованная информация, и он никогда не покидает ваше устройство.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -715,7 +760,12 @@ window.I18N_LOCALES = {
     "faq.q4": "میرا اردو utm_term رپورٹس میں %D8%A7… کے طور پر کیوں دکھتا ہے؟",
     "faq.a4": "یہ percent-encoding ہے، اور یہ درست رویہ ہے — URLs صرف ASCII لے جا سکتے ہیں، اس لیے غیر ASCII حروف فی حرف انکوڈ ہوتے ہیں۔ GA4 عام طور پر اسے واپس ڈی کوڈ کر دیتا ہے، لیکن ایکسپورٹس، تیسرے فریق کے ٹولز اور شیئر کیے گئے لنکس اکثر خام شکل دکھاتے ہیں، جس سے کی ورڈ رپورٹ پڑھنا مشکل ہو جاتا ہے۔ یہ UTM لنک جنریٹر آپ کی ویلیو کے ساتھ انکوڈ شدہ نتیجہ دکھاتا ہے تاکہ آپ لانچ سے پہلے فیصلہ کر سکیں۔ سب سے محفوظ آپشن: ویلیو کو رومن حروف میں لکھیں (winter-coat) اور اصل الفاظ utm_content یا اپنی نام دہی شیٹ میں رکھیں۔",
     "faq.q5": "utm_id اور utm_campaign میں کیا فرق ہے، اور کیا میرے لنکس کہیں اپ لوڈ ہوتے ہیں؟",
-    "faq.a5": "utm_campaign وہ قابلِ مطالعہ نام ہے جو آپ رپورٹس میں دیکھتے ہیں (spring-sale)؛ utm_id وہ کیمپین ID ہے جو کلک کو آپ کے اشتہاری پلیٹ فارم سے درآمد شدہ لاگت ڈیٹا سے جوڑتا ہے، تاکہ GA4 خرچ کو سیشنز سے ملا سکے۔ لاگت ڈیٹا درآمد کرتے وقت دونوں استعمال کریں، اور کیمپین کا نام بدلنے پر بھی utm_id مستحکم رکھیں۔ رہی بات آپ کے لنکس کی: کچھ بھی اپ لوڈ نہیں ہوتا۔ یہ بلک UTM بلڈر مکمل طور پر آپ کے براؤزر میں چلتا ہے، نہ کوئی اکاؤنٹ ہے نہ بھیجنے کے لیے کوئی سرور، اور آپ جو CSV چھوڑتے ہیں وہ اسی ٹیب میں File API سے پڑھی جاتی ہے۔ آپ کا کیمپین منصوبہ غیر مطبوعہ معلومات ہے، اور یہ کبھی آپ کے ڈیوائس سے باہر نہیں جاتا۔"
+    "faq.a5": "utm_campaign وہ قابلِ مطالعہ نام ہے جو آپ رپورٹس میں دیکھتے ہیں (spring-sale)؛ utm_id وہ کیمپین ID ہے جو کلک کو آپ کے اشتہاری پلیٹ فارم سے درآمد شدہ لاگت ڈیٹا سے جوڑتا ہے، تاکہ GA4 خرچ کو سیشنز سے ملا سکے۔ لاگت ڈیٹا درآمد کرتے وقت دونوں استعمال کریں، اور کیمپین کا نام بدلنے پر بھی utm_id مستحکم رکھیں۔ رہی بات آپ کے لنکس کی: کچھ بھی اپ لوڈ نہیں ہوتا۔ یہ بلک UTM بلڈر مکمل طور پر آپ کے براؤزر میں چلتا ہے، نہ کوئی اکاؤنٹ ہے نہ بھیجنے کے لیے کوئی سرور، اور آپ جو CSV چھوڑتے ہیں وہ اسی ٹیب میں File API سے پڑھی جاتی ہے۔ آپ کا کیمپین منصوبہ غیر مطبوعہ معلومات ہے، اور یہ کبھی آپ کے ڈیوائس سے باہر نہیں جاتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -785,7 +835,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa utm_term saya muncul sebagai %C3%A9… di laporan?",
     "faq.a4": "Itu adalah pengodean persen, dan itu perilaku yang benar — URL hanya boleh membawa ASCII, jadi karakter non-ASCII (seperti huruf beraksen atau aksara lain) dikodekan per karakter. GA4 biasanya mendekodekannya kembali, tetapi ekspor, alat pihak ketiga, dan tautan yang dibagikan sering menampilkan bentuk mentahnya, sehingga laporan kata kunci menjadi sulit dibaca. Pembuat tautan UTM ini menampilkan hasil terkode di samping nilai Anda agar Anda bisa memutuskan sebelum meluncurkan. Opsi teraman: alihaksarakan nilai ke karakter sederhana (winter-coat) dan simpan kata aslinya di utm_content atau lembar penamaan Anda sendiri.",
     "faq.q5": "Apa beda utm_id dan utm_campaign, dan apakah tautan saya diunggah ke suatu tempat?",
-    "faq.a5": "utm_campaign adalah nama yang mudah dibaca yang Anda lihat di laporan (spring-sale); utm_id adalah ID kampanye yang menghubungkan klik dengan data biaya yang diimpor dari platform iklan Anda, sehingga GA4 dapat menggabungkan pengeluaran dengan sesi. Gunakan keduanya saat mengimpor data biaya, dan pertahankan utm_id tetap stabil meski Anda mengganti nama kampanye. Soal tautan Anda: tidak ada yang diunggah. Pembuat UTM massal ini berjalan sepenuhnya di browser Anda, tidak ada akun maupun server tujuan pengiriman, dan CSV yang Anda jatuhkan dibaca dengan File API di tab ini. Rencana kampanye Anda adalah informasi yang belum dipublikasikan, dan tidak pernah meninggalkan perangkat Anda."
+    "faq.a5": "utm_campaign adalah nama yang mudah dibaca yang Anda lihat di laporan (spring-sale); utm_id adalah ID kampanye yang menghubungkan klik dengan data biaya yang diimpor dari platform iklan Anda, sehingga GA4 dapat menggabungkan pengeluaran dengan sesi. Gunakan keduanya saat mengimpor data biaya, dan pertahankan utm_id tetap stabil meski Anda mengganti nama kampanye. Soal tautan Anda: tidak ada yang diunggah. Pembuat UTM massal ini berjalan sepenuhnya di browser Anda, tidak ada akun maupun server tujuan pengiriman, dan CSV yang Anda jatuhkan dibaca dengan File API di tab ini. Rencana kampanye Anda adalah informasi yang belum dipublikasikan, dan tidak pernah meninggalkan perangkat Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -855,7 +910,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum erscheint mein deutsches utm_term in Berichten als Gr%C3%B6%C3%9Fe…?",
     "faq.a4": "Das ist Prozentkodierung und korrektes Verhalten – URLs dürfen nur ASCII enthalten, daher werden Nicht-ASCII-Zeichen (wie Umlaute oder ß) Zeichen für Zeichen kodiert. GA4 dekodiert es meist wieder, aber Exporte, Drittanbieter-Tools und geteilte Links zeigen oft die Rohform, was einen Keyword-Bericht unleserlich macht. Dieser UTM-Link-Generator zeigt das kodierte Ergebnis neben Ihrem Wert an, damit Sie vor dem Start entscheiden können. Sicherste Option: Umschreiben Sie den Wert in einfache Zeichen (winter-coat) und bewahren Sie den Originalwortlaut in utm_content oder Ihrer eigenen Benennungstabelle auf.",
     "faq.q5": "Was ist der Unterschied zwischen utm_id und utm_campaign, und werden meine Links irgendwohin hochgeladen?",
-    "faq.a5": "utm_campaign ist der lesbare Name, den Sie in Berichten sehen (spring-sale); utm_id ist die Kampagnen-ID, die den Klick mit den aus Ihrer Werbeplattform importierten Kostendaten verknüpft, damit GA4 Ausgaben mit Sitzungen zusammenführen kann. Verwenden Sie beide, wenn Sie Kostendaten importieren, und halten Sie utm_id stabil, selbst wenn Sie die Kampagne umbenennen. Zu Ihren Links: nichts wird hochgeladen. Dieser Bulk-UTM-Builder läuft vollständig in Ihrem Browser, es gibt kein Konto und keinen Server, an den etwas gesendet wird, und eine CSV, die Sie ablegen, wird mit der File API in diesem Tab gelesen. Ihr Kampagnenplan ist unveröffentlichte Information und verlässt Ihr Gerät nie."
+    "faq.a5": "utm_campaign ist der lesbare Name, den Sie in Berichten sehen (spring-sale); utm_id ist die Kampagnen-ID, die den Klick mit den aus Ihrer Werbeplattform importierten Kostendaten verknüpft, damit GA4 Ausgaben mit Sitzungen zusammenführen kann. Verwenden Sie beide, wenn Sie Kostendaten importieren, und halten Sie utm_id stabil, selbst wenn Sie die Kampagne umbenennen. Zu Ihren Links: nichts wird hochgeladen. Dieser Bulk-UTM-Builder läuft vollständig in Ihrem Browser, es gibt kein Konto und keinen Server, an den etwas gesendet wird, und eine CSV, die Sie ablegen, wird mit der File API in diesem Tab gelesen. Ihr Kampagnenplan ist unveröffentlichte Information und verlässt Ihr Gerät nie.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -925,7 +985,12 @@ window.I18N_LOCALES = {
     "faq.q4": "日本語のutm_termがレポートで %E6%97%A5… と表示されるのはなぜですか？",
     "faq.a4": "これはパーセントエンコードで、正しい挙動です — URLはASCIIしか運べないため、非ASCII文字は1文字ずつエンコードされます。GA4は通常これを復号して戻しますが、エクスポート・サードパーティツール・共有リンクでは生の形式のまま表示されることが多く、キーワードレポートが読みにくくなります。このUTMリンクジェネレーターは値の隣にエンコード結果を並べて表示するので、公開前に判断できます。最も安全なのは、値をローマ字に置き換え（winter-coat）、元の表記はutm_contentか自分の命名シートに残すことです。",
     "faq.q5": "utm_idとutm_campaignの違いは何ですか。また私のリンクはどこかにアップロードされますか？",
-    "faq.a5": "utm_campaignはレポートで目にする読みやすい名前（spring-sale）で、utm_idは広告プラットフォームから取り込んだ費用データとクリックを結びつけるキャンペーンIDです。これによりGA4は費用とセッションを突き合わせられます。費用データを取り込むときは両方を使い、キャンペーン名を変えてもutm_idは変えずに保ってください。リンクについては、一切アップロードされません。この一括UTMビルダーは完全にブラウザ内で動作し、アカウントも送信先サーバーもなく、ドロップしたCSVはFile APIでこのタブ内で読み込まれます。キャンペーン計画は未公開情報であり、端末の外に出ることはありません。"
+    "faq.a5": "utm_campaignはレポートで目にする読みやすい名前（spring-sale）で、utm_idは広告プラットフォームから取り込んだ費用データとクリックを結びつけるキャンペーンIDです。これによりGA4は費用とセッションを突き合わせられます。費用データを取り込むときは両方を使い、キャンペーン名を変えてもutm_idは変えずに保ってください。リンクについては、一切アップロードされません。この一括UTMビルダーは完全にブラウザ内で動作し、アカウントも送信先サーバーもなく、ドロップしたCSVはFile APIでこのタブ内で読み込まれます。キャンペーン計画は未公開情報であり、端末の外に出ることはありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -995,6 +1060,11 @@ window.I18N_LOCALES = {
     "faq.q4": "한글 utm_term이 리포트에 %ED%95%9C… 로 보이는 이유는 무엇인가요?",
     "faq.a4": "그건 퍼센트 인코딩이고 정상 동작입니다 — URL은 ASCII만 담을 수 있어서 한글 같은 비ASCII 문자는 글자 단위로 인코딩됩니다. GA4는 보통 이를 다시 디코딩하지만, 내보내기·서드파티 도구·공유 링크에서는 원본 형태로 보일 때가 많아 키워드 리포트가 읽기 어려워집니다. 이 UTM 링크 생성기는 값 옆에 인코딩된 결과를 나란히 보여줘서 게시 전에 판단할 수 있게 합니다. 가장 안전한 방법은 값을 로마자로 바꾸고(winter-coat) 원래 표현은 utm_content나 자체 명명 시트에 남겨 두는 것입니다.",
     "faq.q5": "utm_id와 utm_campaign의 차이는 무엇이고, 제 링크는 어딘가로 업로드되나요?",
-    "faq.a5": "utm_campaign은 리포트에서 읽는 사람이 알아볼 이름(spring-sale)이고, utm_id는 클릭을 광고 플랫폼에서 가져온 비용 데이터와 연결하는 캠페인 ID입니다. 덕분에 GA4가 지출과 세션을 이어 붙일 수 있습니다. 비용 데이터를 가져올 때는 둘 다 쓰고, 캠페인 이름을 바꿔도 utm_id는 그대로 유지하세요. 링크에 관해서는 아무것도 업로드되지 않습니다. 이 대량 UTM 생성기는 전부 브라우저 안에서 돌아가고, 계정도 보낼 서버도 없으며, 놓아 둔 CSV는 이 탭 안에서 File API로 읽습니다. 캠페인 계획은 공개되지 않은 정보이며 기기 밖으로 나가지 않습니다."
+    "faq.a5": "utm_campaign은 리포트에서 읽는 사람이 알아볼 이름(spring-sale)이고, utm_id는 클릭을 광고 플랫폼에서 가져온 비용 데이터와 연결하는 캠페인 ID입니다. 덕분에 GA4가 지출과 세션을 이어 붙일 수 있습니다. 비용 데이터를 가져올 때는 둘 다 쓰고, 캠페인 이름을 바꿔도 utm_id는 그대로 유지하세요. 링크에 관해서는 아무것도 업로드되지 않습니다. 이 대량 UTM 생성기는 전부 브라우저 안에서 돌아가고, 계정도 보낼 서버도 없으며, 놓아 둔 CSV는 이 탭 안에서 File API로 읽습니다. 캠페인 계획은 공개되지 않은 정보이며 기기 밖으로 나가지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

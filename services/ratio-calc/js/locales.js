@@ -96,7 +96,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I scale a ratio like an aspect ratio or a recipe up or down?",
     "faq.a4": "Enter the original ratio and a scale factor in the Scale ratio tab. A 16:9 screen ratio scaled by 120 becomes 1920:1080 — still the same shape, just bigger. The same math scales a recipe: a 2:3 sugar-to-flour ratio scaled by 1.5 for a bigger batch becomes 3:4.5. Scaling never changes the simplified ratio, only the size of each part.",
     "faq.q5": "Is my ratio data sent to a server?",
-    "faq.a5": "No. This ratio calculator runs entirely in your browser — nothing you type is uploaded, tracked, or stored on a server. There's no sign-up, and your last inputs are saved only in your own browser's local storage so they're there next time you open the page."
+    "faq.a5": "No. This ratio calculator runs entirely in your browser — nothing you type is uploaded, tracked, or stored on a server. There's no sign-up, and your last inputs are saved only in your own browser's local storage so they're there next time you open the page.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -177,7 +182,12 @@ window.I18N_LOCALES = {
     "faq.q4": "像宽高比或食谱配比这样的比例,该如何按倍数放大或缩小?",
     "faq.a4": "在“缩放比例”标签页中输入原始比例和缩放倍数。16:9 的屏幕比例乘以 120 倍会变成 1920:1080 —— 形状不变,只是变大了。同样的方法也适用于食谱:2:3 的糖与面粉比例,若要做更大份量而乘以 1.5 倍,就变成 3:4.5。缩放不会改变化简后的比例,只会改变每一份的大小。",
     "faq.q5": "我的比例数据会被发送到服务器吗?",
-    "faq.a5": "不会。这个比例计算器完全在你的浏览器中运行 —— 你输入的任何内容都不会被上传、追踪或存储到服务器上。无需注册,你上次输入的数值只会保存在你自己浏览器的本地存储中,方便下次打开页面时继续使用。"
+    "faq.a5": "不会。这个比例计算器完全在你的浏览器中运行 —— 你输入的任何内容都不会被上传、追踪或存储到服务器上。无需注册,你上次输入的数值只会保存在你自己浏览器的本地存储中,方便下次打开页面时继续使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -258,7 +268,12 @@ window.I18N_LOCALES = {
     "faq.q4": "स्क्रीन अनुपात या रेसिपी जैसे अनुपात को बड़ा या छोटा (स्केल) कैसे करें?",
     "faq.a4": "अनुपात स्केल करें टैब में मूल अनुपात और एक स्केल गुणक डालें। 16:9 स्क्रीन अनुपात को 120 से गुणा करने पर 1920:1080 मिलता है — आकार वही रहता है, बस बड़ा हो जाता है। यही गणित रेसिपी पर भी लागू होता है: चीनी और आटे का 2:3 अनुपात, बड़ी मात्रा के लिए 1.5 से गुणा करने पर 3:4.5 हो जाता है। स्केल करने से सरल किया गया अनुपात कभी नहीं बदलता, केवल हर हिस्से का आकार बदलता है।",
     "faq.q5": "क्या मेरे अनुपात का डेटा किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह अनुपात कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई कोई भी चीज़ अपलोड, ट्रैक या सर्वर पर संग्रहीत नहीं होती। साइन-अप की ज़रूरत नहीं है, और आपके आख़िरी इनपुट सिर्फ़ आपके अपने ब्राउज़र के लोकल स्टोरेज में सहेजे जाते हैं, ताकि अगली बार पेज खोलने पर वे वहीं मिलें।"
+    "faq.a5": "नहीं। यह अनुपात कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई कोई भी चीज़ अपलोड, ट्रैक या सर्वर पर संग्रहीत नहीं होती। साइन-अप की ज़रूरत नहीं है, और आपके आख़िरी इनपुट सिर्फ़ आपके अपने ब्राउज़र के लोकल स्टोरेज में सहेजे जाते हैं, ताकि अगली बार पेज खोलने पर वे वहीं मिलें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -339,7 +354,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo escalo una razón, como una relación de aspecto o una receta, hacia arriba o abajo?",
     "faq.a4": "Introduce la razón original y un factor de escala en la pestaña Escalar razón. Una relación de aspecto de pantalla 16:9 escalada por 120 se convierte en 1920:1080 — la misma forma, solo más grande. La misma lógica escala una receta: una razón de azúcar a harina de 2:3 escalada por 1.5 para una tanda más grande se convierte en 3:4.5. Escalar nunca cambia la razón simplificada, solo el tamaño de cada parte.",
     "faq.q5": "¿Se envían mis datos de razones a un servidor?",
-    "faq.a5": "No. Esta calculadora de razones se ejecuta completamente en tu navegador — nada de lo que escribes se sube, rastrea ni almacena en un servidor. No hay que registrarse, y tus últimos valores se guardan solo en el almacenamiento local de tu propio navegador, listos para la próxima vez que abras la página."
+    "faq.a5": "No. Esta calculadora de razones se ejecuta completamente en tu navegador — nada de lo que escribes se sube, rastrea ni almacena en un servidor. No hay que registrarse, y tus últimos valores se guardan solo en el almacenamiento local de tu propio navegador, listos para la próxima vez que abras la página.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -420,7 +440,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أحجّم نسبة مثل نسبة العرض إلى الارتفاع أو وصفة طبخ، تكبيرًا أو تصغيرًا؟",
     "faq.a4": "أدخل النسبة الأصلية ومعامل التحجيم في تبويب تحجيم النسبة. نسبة شاشة 16:9 مضروبة في 120 تصبح 1920:1080 — الشكل نفسه، لكن أكبر حجمًا. المنطق نفسه ينطبق على وصفة الطبخ: نسبة السكر إلى الدقيق 2:3، مضروبة في 1.5 لكمية أكبر، تصبح 3:4.5. التحجيم لا يغيّر أبدًا النسبة المبسّطة، بل يغيّر فقط حجم كل جزء.",
     "faq.q5": "هل تُرسَل بيانات النسبة الخاصة بي إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة النسب هذه بالكامل داخل متصفحك — لا شيء مما تكتبه يُرفع أو يُتعقّب أو يُخزَّن على أي خادم. لا حاجة للتسجيل، وتُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك الخاص، لتكون جاهزة في المرة التالية التي تفتح فيها الصفحة."
+    "faq.a5": "لا. تعمل حاسبة النسب هذه بالكامل داخل متصفحك — لا شيء مما تكتبه يُرفع أو يُتعقّب أو يُخزَّن على أي خادم. لا حاجة للتسجيل، وتُحفظ آخر مدخلاتك فقط في التخزين المحلي لمتصفحك الخاص، لتكون جاهزة في المرة التالية التي تفتح فيها الصفحة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -501,7 +526,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment mettre à l'échelle un ratio, comme un format d'image ou une recette ?",
     "faq.a4": "Entrez le ratio d'origine et un facteur d'échelle dans l'onglet Mettre à l'échelle. Un format d'écran 16:9 mis à l'échelle par 120 devient 1920:1080 — la même forme, juste plus grande. La même logique s'applique à une recette : un ratio sucre/farine de 2:3 mis à l'échelle par 1,5 pour une plus grande quantité devient 3:4,5. La mise à l'échelle ne change jamais le ratio simplifié, seulement la taille de chaque partie.",
     "faq.q5": "Mes données de ratio sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce calculateur de ratios fonctionne entièrement dans votre navigateur — rien de ce que vous saisissez n'est envoyé, suivi ou stocké sur un serveur. Aucune inscription n'est nécessaire, et vos dernières saisies sont enregistrées uniquement dans le stockage local de votre propre navigateur, prêtes pour la prochaine fois que vous ouvrirez la page."
+    "faq.a5": "Non. Ce calculateur de ratios fonctionne entièrement dans votre navigateur — rien de ce que vous saisissez n'est envoyé, suivi ou stocké sur un serveur. Aucune inscription n'est nécessaire, et vos dernières saisies sont enregistrées uniquement dans le stockage local de votre propre navigateur, prêtes pour la prochaine fois que vous ouvrirez la page.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -582,7 +612,12 @@ window.I18N_LOCALES = {
     "faq.q4": "স্ক্রিন অনুপাত বা রেসিপির মতো কোনো অনুপাত কীভাবে বড় বা ছোট করব?",
     "faq.a4": "অনুপাত স্কেল করুন ট্যাবে মূল অনুপাত এবং একটি স্কেল গুণক লিখুন। ১৬:৯ স্ক্রিন অনুপাতকে ১২০ দিয়ে গুণ করলে হয় ১৯২০:১০৮০ — আকৃতি একই থাকে, শুধু বড় হয়। রেসিপিতেও একই নিয়ম কাজ করে: চিনি ও ময়দার ২:৩ অনুপাতকে বড় পরিমাণের জন্য ১.৫ দিয়ে গুণ করলে হয় ৩:৪.৫। স্কেল করলে সরলীকৃত অনুপাত কখনো বদলায় না, শুধু প্রতিটি অংশের আকার বদলায়।",
     "faq.q5": "আমার অনুপাতের তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই অনুপাত ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারেই চলে — আপনি যা কিছু টাইপ করেন তা কোথাও আপলোড, ট্র্যাক বা সার্ভারে সংরক্ষণ করা হয় না। সাইন-আপের প্রয়োজন নেই, এবং আপনার সর্বশেষ ইনপুটগুলো কেবল আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার পেজ খুললে সেগুলো পাওয়া যায়।"
+    "faq.a5": "না। এই অনুপাত ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারেই চলে — আপনি যা কিছু টাইপ করেন তা কোথাও আপলোড, ট্র্যাক বা সার্ভারে সংরক্ষণ করা হয় না। সাইন-আপের প্রয়োজন নেই, এবং আপনার সর্বশেষ ইনপুটগুলো কেবল আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার পেজ খুললে সেগুলো পাওয়া যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -663,7 +698,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como escalo uma razão, como uma proporção de tela ou uma receita, para cima ou para baixo?",
     "faq.a4": "Insira a razão original e um fator de escala na aba Escalar razão. Uma proporção de tela 16:9 escalada por 120 se torna 1920:1080 — a mesma forma, só que maior. A mesma lógica escala uma receita: uma razão de açúcar para farinha de 2:3, escalada por 1,5 para um lote maior, se torna 3:4,5. Escalar nunca muda a razão simplificada, apenas o tamanho de cada parte.",
     "faq.q5": "Meus dados de razão são enviados a um servidor?",
-    "faq.a5": "Não. Esta calculadora de razões roda inteiramente no seu navegador — nada do que você digita é enviado, rastreado ou armazenado em um servidor. Não é preciso se cadastrar, e suas últimas entradas ficam salvas apenas no armazenamento local do seu próprio navegador, prontas para a próxima vez que você abrir a página."
+    "faq.a5": "Não. Esta calculadora de razões roda inteiramente no seu navegador — nada do que você digita é enviado, rastreado ou armazenado em um servidor. Não é preciso se cadastrar, e suas últimas entradas ficam salvas apenas no armazenamento local do seu próprio navegador, prontas para a próxima vez que você abrir a página.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -744,7 +784,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как масштабировать отношение, например соотношение сторон экрана или рецепт, в большую или меньшую сторону?",
     "faq.a4": "Введите исходное отношение и коэффициент масштабирования на вкладке «Масштабировать отношение». Соотношение экрана 16:9, умноженное на 120, становится 1920:1080 — та же форма, только крупнее. По той же логике масштабируется и рецепт: отношение сахара к муке 2:3, умноженное на 1,5 для большей порции, становится 3:4,5. Масштабирование никогда не меняет упрощённое отношение — только размер каждой части.",
     "faq.q5": "Отправляются ли данные моего отношения на сервер?",
-    "faq.a5": "Нет. Этот калькулятор пропорций полностью работает в вашем браузере — ничто из введённого вами не загружается, не отслеживается и не сохраняется на сервере. Регистрация не требуется, а последние введённые значения сохраняются только в локальном хранилище вашего браузера, чтобы быть под рукой при следующем открытии страницы."
+    "faq.a5": "Нет. Этот калькулятор пропорций полностью работает в вашем браузере — ничто из введённого вами не загружается, не отслеживается и не сохраняется на сервере. Регистрация не требуется, а последние введённые значения сохраняются только в локальном хранилище вашего браузера, чтобы быть под рукой при следующем открытии страницы.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -825,7 +870,12 @@ window.I18N_LOCALES = {
     "faq.q4": "اسکرین تناسب یا ریسیپی جیسے تناسب کو بڑا یا چھوٹا (اسکیل) کیسے کریں؟",
     "faq.a4": "تناسب اسکیل کریں ٹیب میں اصل تناسب اور ایک اسکیل فیکٹر درج کریں۔ 16:9 اسکرین تناسب کو 120 سے ضرب دینے پر 1920:1080 بنتا ہے — شکل وہی رہتی ہے، بس بڑی ہو جاتی ہے۔ یہی اصول ریسیپی پر بھی لاگو ہوتا ہے: چینی اور آٹے کا 2:3 تناسب، بڑی مقدار کے لیے 1.5 سے ضرب دینے پر 3:4.5 بن جاتا ہے۔ اسکیل کرنے سے آسان کیا گیا تناسب کبھی نہیں بدلتا، صرف ہر حصے کا سائز بدلتا ہے۔",
     "faq.q5": "کیا میرا تناسب ڈیٹا کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ تناسب کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو کچھ بھی ٹائپ کرتے ہیں وہ کہیں اپ لوڈ، ٹریک یا سرور پر محفوظ نہیں ہوتا۔ سائن اپ کی ضرورت نہیں، اور آپ کی آخری اندراجات صرف آپ کے اپنے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں، تاکہ اگلی بار صفحہ کھولنے پر وہ موجود ہوں۔"
+    "faq.a5": "نہیں۔ یہ تناسب کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو کچھ بھی ٹائپ کرتے ہیں وہ کہیں اپ لوڈ، ٹریک یا سرور پر محفوظ نہیں ہوتا۔ سائن اپ کی ضرورت نہیں، اور آپ کی آخری اندراجات صرف آپ کے اپنے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہیں، تاکہ اگلی بار صفحہ کھولنے پر وہ موجود ہوں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -906,7 +956,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara menskalakan rasio seperti rasio aspek atau resep, naik atau turun?",
     "faq.a4": "Masukkan rasio asli dan faktor skala di tab Skalakan rasio. Rasio aspek layar 16:9 yang diskalakan dengan faktor 120 menjadi 1920:1080 — bentuknya sama, hanya lebih besar. Logika yang sama berlaku untuk resep: rasio gula banding tepung 2:3 yang diskalakan dengan faktor 1,5 untuk porsi lebih besar menjadi 3:4,5. Menskalakan tidak pernah mengubah rasio yang disederhanakan, hanya ukuran tiap bagiannya.",
     "faq.q5": "Apakah data rasio saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator rasio ini sepenuhnya berjalan di browser Anda — apa pun yang Anda ketik tidak diunggah, dilacak, atau disimpan di server. Tidak perlu mendaftar, dan input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri sehingga tersedia lagi saat Anda membuka halaman ini di lain waktu."
+    "faq.a5": "Tidak. Kalkulator rasio ini sepenuhnya berjalan di browser Anda — apa pun yang Anda ketik tidak diunggah, dilacak, atau disimpan di server. Tidak perlu mendaftar, dan input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri sehingga tersedia lagi saat Anda membuka halaman ini di lain waktu.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -987,7 +1042,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie skaliere ich ein Verhältnis wie ein Seitenverhältnis oder ein Rezept nach oben oder unten?",
     "faq.a4": "Gib das ursprüngliche Verhältnis und einen Skalierungsfaktor im Tab Verhältnis skalieren ein. Ein 16:9-Bildschirmverhältnis, mit 120 skaliert, wird zu 1920:1080 — dieselbe Form, nur größer. Dieselbe Logik skaliert auch ein Rezept: Ein Zucker-zu-Mehl-Verhältnis von 2:3, mit 1,5 skaliert für eine größere Menge, wird zu 3:4,5. Skalieren ändert nie das gekürzte Verhältnis, nur die Größe jedes Teils.",
     "faq.q5": "Werden meine Verhältnisdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Verhältnisrechner läuft vollständig in deinem Browser — nichts, was du eingibst, wird hochgeladen, verfolgt oder auf einem Server gespeichert. Es ist keine Anmeldung nötig, und deine letzten Eingaben werden nur im lokalen Speicher deines eigenen Browsers gespeichert, damit sie beim nächsten Öffnen der Seite wieder da sind."
+    "faq.a5": "Nein. Dieser Verhältnisrechner läuft vollständig in deinem Browser — nichts, was du eingibst, wird hochgeladen, verfolgt oder auf einem Server gespeichert. Es ist keine Anmeldung nötig, und deine letzten Eingaben werden nur im lokalen Speicher deines eigenen Browsers gespeichert, damit sie beim nächsten Öffnen der Seite wieder da sind.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1068,7 +1128,12 @@ window.I18N_LOCALES = {
     "faq.q4": "アスペクト比やレシピのような比率はどうやって拡大・縮小しますか?",
     "faq.a4": "比率を拡大縮小タブに元の比と倍率を入力します。16:9の画面比を120倍にすると1920:1080になります — 形は同じで、大きさだけが変わります。レシピにも同じ考え方が使えます。砂糖対小麦粉が2:3の比を、より多い分量にするために1.5倍すると3:4.5になります。拡大縮小では簡約された比そのものは変わらず、各項の大きさだけが変わります。",
     "faq.q5": "入力した比率のデータはサーバーに送信されますか?",
-    "faq.a5": "いいえ。この比率計算機はすべてブラウザ内で動作します — 入力した内容がアップロードされたり、追跡されたり、サーバーに保存されたりすることはありません。登録の必要もなく、最後に入力した値はご自身のブラウザのローカルストレージにのみ保存され、次回ページを開いたときにそのまま残っています。"
+    "faq.a5": "いいえ。この比率計算機はすべてブラウザ内で動作します — 入力した内容がアップロードされたり、追跡されたり、サーバーに保存されたりすることはありません。登録の必要もなく、最後に入力した値はご自身のブラウザのローカルストレージにのみ保存され、次回ページを開いたときにそのまま残っています。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1149,6 +1214,11 @@ window.I18N_LOCALES = {
     "faq.q4": "화면 비율이나 레시피 같은 비율을 어떻게 확대·축소하나요?",
     "faq.a4": "비율 배율 조정 탭에 원래 비율과 배율을 입력하세요. 16:9 화면 비율에 120배를 곱하면 1920:1080이 됩니다 — 모양은 그대로에 크기만 커진 것입니다. 레시피도 같은 원리로, 설탕:밀가루가 2:3인 비율에 1.5배를 곱해 더 큰 분량을 만들면 3:4.5가 됩니다. 배율을 조정해도 약분된 비율 자체는 바뀌지 않고 각 항의 크기만 달라집니다.",
     "faq.q5": "제 비율 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 비율 계산기는 전부 브라우저 안에서 실행됩니다 — 입력한 내용은 어디로도 업로드되거나 추적되거나 서버에 저장되지 않습니다. 가입도 필요 없으며, 마지막으로 입력한 값은 사용자 브라우저의 로컬 저장소에만 저장되어 다음에 페이지를 열 때 그대로 남아 있습니다."
+    "faq.a5": "아니요. 이 비율 계산기는 전부 브라우저 안에서 실행됩니다 — 입력한 내용은 어디로도 업로드되거나 추적되거나 서버에 저장되지 않습니다. 가입도 필요 없으며, 마지막으로 입력한 값은 사용자 브라우저의 로컬 저장소에만 저장되어 다음에 페이지를 열 때 그대로 남아 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

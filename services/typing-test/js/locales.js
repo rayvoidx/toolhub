@@ -58,7 +58,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I change the test length, and does 30 seconds vs 3 minutes change my score?",
     "faq.a4": "Yes — pick 30 seconds, 1 minute or 3 minutes before you start, or mid-test to restart with a new duration. Short 30-second tests are more affected by a fast or slow start and by which words happen to appear, so your WPM can swing more between runs. Longer 1-minute and 3-minute tests average out those swings and are generally considered a more reliable typing speed measurement — many typing certifications default to 1 minute or more for this reason.",
     "faq.q5": "Is my typing sent to a server?",
-    "faq.a5": "No. Every word in this typing test is baked into the page's JavaScript, so nothing is fetched from a server before or during the test, and no keystroke, WPM score or accuracy number ever leaves your browser. There's no sign-up, no leaderboard upload and no tracking — your results exist only on your screen and reset the moment you refresh or start a new test."
+    "faq.a5": "No. Every word in this typing test is baked into the page's JavaScript, so nothing is fetched from a server before or during the test, and no keystroke, WPM score or accuracy number ever leaves your browser. There's no sign-up, no leaderboard upload and no tracking — your results exist only on your screen and reset the moment you refresh or start a new test.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -101,7 +106,12 @@ window.I18N_LOCALES = {
     "faq.q4": "可以更改测试时长吗?30 秒和 3 分钟的成绩会不一样吗?",
     "faq.a4": "可以——开始前(或测试中途)选择 30 秒、1 分钟或 3 分钟即可用新时长重新开始。较短的 30 秒测试更容易受开局快慢和出现单词的运气影响,因此每次的 WPM 波动会更大。较长的 1 分钟和 3 分钟测试能拉平这些波动,通常被认为是更可靠的打字速度衡量方式——许多打字认证正因如此默认采用 1 分钟或更长时间。",
     "faq.q5": "我的打字内容会发送到服务器吗?",
-    "faq.a5": "不会。本打字测试的每个单词都直接写在页面的 JavaScript 里,测试前后都不会从服务器获取任何内容,任何按键、WPM 成绩或准确率数字都不会离开你的浏览器。没有注册、没有排行榜上传、没有任何跟踪——你的成绩只存在于屏幕上,刷新页面或开始新测试即会重置。"
+    "faq.a5": "不会。本打字测试的每个单词都直接写在页面的 JavaScript 里,测试前后都不会从服务器获取任何内容,任何按键、WPM 成绩或准确率数字都不会离开你的浏览器。没有注册、没有排行榜上传、没有任何跟踪——你的成绩只存在于屏幕上,刷新页面或开始新测试即会重置。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -144,7 +154,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मैं टेस्ट की अवधि बदल सकता/सकती हूँ, और क्या 30 सेकंड बनाम 3 मिनट से स्कोर बदलता है?",
     "faq.a4": "हाँ — शुरू करने से पहले (या टेस्ट के बीच में) 30 सेकंड, 1 मिनट या 3 मिनट चुनें और नई अवधि के साथ फिर से शुरू हो जाएगा। छोटे 30-सेकंड टेस्ट पर तेज़ या धीमी शुरुआत और किन शब्दों का आना हुआ, इसका असर ज़्यादा पड़ता है, इसलिए हर बार WPM में ज़्यादा उतार-चढ़ाव हो सकता है। लंबे 1-मिनट और 3-मिनट टेस्ट इन उतार-चढ़ावों को औसत कर देते हैं और आमतौर पर टाइपिंग स्पीड मापने का ज़्यादा भरोसेमंद तरीका माने जाते हैं — इसी वजह से कई टाइपिंग सर्टिफ़िकेशन डिफ़ॉल्ट रूप से 1 मिनट या उससे ज़्यादा रखते हैं।",
     "faq.q5": "क्या मेरी टाइपिंग सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। इस टाइपिंग टेस्ट का हर शब्द पेज की JavaScript में ही मौजूद है, इसलिए टेस्ट से पहले या दौरान सर्वर से कुछ भी नहीं मँगाया जाता, और कोई भी की-स्ट्रोक, WPM स्कोर या सटीकता का आँकड़ा आपके ब्राउज़र से बाहर नहीं जाता। कोई साइन-अप नहीं, कोई लीडरबोर्ड अपलोड नहीं और कोई ट्रैकिंग नहीं — आपके नतीजे सिर्फ़ आपकी स्क्रीन पर होते हैं और रीफ़्रेश करते ही या नया टेस्ट शुरू करते ही रीसेट हो जाते हैं।"
+    "faq.a5": "नहीं। इस टाइपिंग टेस्ट का हर शब्द पेज की JavaScript में ही मौजूद है, इसलिए टेस्ट से पहले या दौरान सर्वर से कुछ भी नहीं मँगाया जाता, और कोई भी की-स्ट्रोक, WPM स्कोर या सटीकता का आँकड़ा आपके ब्राउज़र से बाहर नहीं जाता। कोई साइन-अप नहीं, कोई लीडरबोर्ड अपलोड नहीं और कोई ट्रैकिंग नहीं — आपके नतीजे सिर्फ़ आपकी स्क्रीन पर होते हैं और रीफ़्रेश करते ही या नया टेस्ट शुरू करते ही रीसेट हो जाते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -187,7 +202,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo cambiar la duración de la prueba? ¿30 segundos frente a 3 minutos cambia mi puntuación?",
     "faq.a4": "Sí — elige 30 segundos, 1 minuto o 3 minutos antes de empezar, o incluso a mitad de la prueba para reiniciar con una nueva duración. Las pruebas cortas de 30 segundos se ven más afectadas por un inicio rápido o lento y por qué palabras te toquen, así que tu WPM puede variar más entre intentos. Las pruebas más largas de 1 y 3 minutos suavizan esas variaciones y se consideran generalmente una medida más fiable de la velocidad de escritura — por eso muchas certificaciones de mecanografía usan por defecto 1 minuto o más.",
     "faq.q5": "¿Se envía mi escritura a algún servidor?",
-    "faq.a5": "No. Cada palabra de este test de mecanografía está incluida directamente en el JavaScript de la página, así que no se descarga nada de ningún servidor antes ni durante la prueba, y ninguna pulsación de tecla, puntuación de WPM o dato de precisión sale nunca de tu navegador. No hay registro, no hay subida a ninguna clasificación y no hay seguimiento — tus resultados existen solo en tu pantalla y se reinician en cuanto actualizas la página o empiezas una prueba nueva."
+    "faq.a5": "No. Cada palabra de este test de mecanografía está incluida directamente en el JavaScript de la página, así que no se descarga nada de ningún servidor antes ni durante la prueba, y ninguna pulsación de tecla, puntuación de WPM o dato de precisión sale nunca de tu navegador. No hay registro, no hay subida a ninguna clasificación y no hay seguimiento — tus resultados existen solo en tu pantalla y se reinician en cuanto actualizas la página o empiezas una prueba nueva.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -230,7 +250,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني تغيير مدة الاختبار، وهل تختلف نتيجتي بين 30 ثانية و3 دقائق؟",
     "faq.a4": "نعم — اختر 30 ثانية أو دقيقة واحدة أو 3 دقائق قبل البدء، أو حتى في منتصف الاختبار لإعادة البدء بمدة جديدة. تتأثر اختبارات الـ30 ثانية القصيرة أكثر بسرعة أو بطء البداية وبنوع الكلمات التي تظهر، لذا قد يتفاوت WPM أكثر بين المحاولات. أما اختبارات الدقيقة والثلاث دقائق الأطول فتُخفف من هذه التفاوتات، وتُعتبر عمومًا مقياسًا أكثر موثوقية لسرعة الكتابة — ولهذا السبب تعتمد الكثير من شهادات الكتابة على دقيقة واحدة أو أكثر كإعداد افتراضي.",
     "faq.q5": "هل تُرسل كتابتي إلى خادم؟",
-    "faq.a5": "لا. كل كلمة في اختبار الكتابة هذا مضمّنة مباشرة في كود JavaScript الخاص بالصفحة، لذا لا يُجلب أي شيء من أي خادم قبل الاختبار أو أثناءه، ولا تغادر أي ضغطة مفتاح أو نتيجة WPM أو رقم دقة متصفحك أبدًا. لا تسجيل، ولا رفع إلى أي لوحة صدارة، ولا أي تتبع — نتائجك موجودة فقط على شاشتك، وتُعاد ضبطها بمجرد تحديث الصفحة أو بدء اختبار جديد."
+    "faq.a5": "لا. كل كلمة في اختبار الكتابة هذا مضمّنة مباشرة في كود JavaScript الخاص بالصفحة، لذا لا يُجلب أي شيء من أي خادم قبل الاختبار أو أثناءه، ولا تغادر أي ضغطة مفتاح أو نتيجة WPM أو رقم دقة متصفحك أبدًا. لا تسجيل، ولا رفع إلى أي لوحة صدارة، ولا أي تتبع — نتائجك موجودة فقط على شاشتك، وتُعاد ضبطها بمجرد تحديث الصفحة أو بدء اختبار جديد.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -273,7 +298,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je changer la durée du test, et 30 secondes contre 3 minutes change-t-il mon score ?",
     "faq.a4": "Oui — choisissez 30 secondes, 1 minute ou 3 minutes avant de commencer, ou même en cours de test pour recommencer avec une nouvelle durée. Les tests courts de 30 secondes sont plus sensibles à un départ rapide ou lent et aux mots qui tombent, donc votre WPM peut varier davantage d'un essai à l'autre. Les tests plus longs d'1 et 3 minutes lissent ces variations et sont généralement considérés comme une mesure plus fiable de la vitesse de frappe — beaucoup de certifications de dactylographie utilisent d'ailleurs 1 minute ou plus par défaut.",
     "faq.q5": "Ma frappe est-elle envoyée à un serveur ?",
-    "faq.a5": "Non. Chaque mot de ce test de frappe est directement intégré dans le JavaScript de la page, donc rien n'est récupéré depuis un serveur avant ou pendant le test, et aucune frappe, aucun score WPM ni aucun taux de précision ne quitte jamais votre navigateur. Pas d'inscription, pas d'envoi vers un classement, aucun suivi — vos résultats n'existent que sur votre écran et se réinitialisent dès que vous actualisez la page ou démarrez un nouveau test."
+    "faq.a5": "Non. Chaque mot de ce test de frappe est directement intégré dans le JavaScript de la page, donc rien n'est récupéré depuis un serveur avant ou pendant le test, et aucune frappe, aucun score WPM ni aucun taux de précision ne quitte jamais votre navigateur. Pas d'inscription, pas d'envoi vers un classement, aucun suivi — vos résultats n'existent que sur votre écran et se réinitialisent dès que vous actualisez la page ou démarrez un nouveau test.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -316,7 +346,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমি কি টেস্টের সময়কাল পরিবর্তন করতে পারি, আর ৩০ সেকেন্ড বনাম ৩ মিনিটে কি স্কোর বদলায়?",
     "faq.a4": "হ্যাঁ — শুরু করার আগে (বা টেস্টের মাঝপথে) ৩০ সেকেন্ড, ১ মিনিট বা ৩ মিনিট বেছে নিলে নতুন সময়কাল দিয়ে আবার শুরু হবে। ছোট ৩০-সেকেন্ডের টেস্টে দ্রুত বা ধীর শুরু এবং কোন শব্দ আসছে তার উপর বেশি প্রভাব পড়ে, তাই প্রতিবার WPM-এ বেশি ওঠানামা হতে পারে। দীর্ঘ ১-মিনিট ও ৩-মিনিটের টেস্ট এই ওঠানামাগুলো গড় করে ফেলে এবং সাধারণত টাইপিং স্পিডের বেশি নির্ভরযোগ্য পরিমাপ হিসেবে ধরা হয় — এই কারণেই অনেক টাইপিং সার্টিফিকেশন ডিফল্টভাবে ১ মিনিট বা তার বেশি ব্যবহার করে।",
     "faq.q5": "আমার টাইপিং কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই টাইপিং টেস্টের প্রতিটি শব্দ পেজের JavaScript-এর মধ্যেই সরাসরি রাখা আছে, তাই টেস্টের আগে বা চলাকালীন সার্ভার থেকে কিছুই আনা হয় না, এবং কোনো কি-স্ট্রোক, WPM স্কোর বা নির্ভুলতার সংখ্যা কখনো আপনার ব্রাউজার থেকে বের হয় না। কোনো সাইন-আপ নেই, কোনো লিডারবোর্ডে আপলোড নেই, কোনো ট্র্যাকিং নেই — আপনার ফলাফল শুধু আপনার স্ক্রিনেই থাকে এবং পেজ রিফ্রেশ করলে বা নতুন টেস্ট শুরু করলেই রিসেট হয়ে যায়।"
+    "faq.a5": "না। এই টাইপিং টেস্টের প্রতিটি শব্দ পেজের JavaScript-এর মধ্যেই সরাসরি রাখা আছে, তাই টেস্টের আগে বা চলাকালীন সার্ভার থেকে কিছুই আনা হয় না, এবং কোনো কি-স্ট্রোক, WPM স্কোর বা নির্ভুলতার সংখ্যা কখনো আপনার ব্রাউজার থেকে বের হয় না। কোনো সাইন-আপ নেই, কোনো লিডারবোর্ডে আপলোড নেই, কোনো ট্র্যাকিং নেই — আপনার ফলাফল শুধু আপনার স্ক্রিনেই থাকে এবং পেজ রিফ্রেশ করলে বা নতুন টেস্ট শুরু করলেই রিসেট হয়ে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -359,7 +394,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Posso mudar a duração do teste, e 30 segundos versus 3 minutos muda meu resultado?",
     "faq.a4": "Sim — escolha 30 segundos, 1 minuto ou 3 minutos antes de começar, ou até no meio do teste para reiniciar com uma nova duração. Testes curtos de 30 segundos sofrem mais influência de um início rápido ou lento e de quais palavras aparecem, então seu WPM pode variar mais entre as tentativas. Testes mais longos de 1 e 3 minutos suavizam essas variações e geralmente são considerados uma medida mais confiável da velocidade de digitação — por isso muitas certificações de digitação usam 1 minuto ou mais como padrão.",
     "faq.q5": "Minha digitação é enviada para um servidor?",
-    "faq.a5": "Não. Cada palavra deste teste de digitação está embutida diretamente no JavaScript da página, então nada é buscado em nenhum servidor antes ou durante o teste, e nenhuma tecla digitada, pontuação de WPM ou número de precisão sai do seu navegador. Não há cadastro, não há envio para nenhum ranking e não há rastreamento — seus resultados existem só na sua tela e são reiniciados assim que você atualiza a página ou começa um novo teste."
+    "faq.a5": "Não. Cada palavra deste teste de digitação está embutida diretamente no JavaScript da página, então nada é buscado em nenhum servidor antes ou durante o teste, e nenhuma tecla digitada, pontuação de WPM ou número de precisão sai do seu navegador. Não há cadastro, não há envio para nenhum ranking e não há rastreamento — seus resultados existem só na sua tela e são reiniciados assim que você atualiza a página ou começa um novo teste.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -402,7 +442,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Могу ли я изменить длительность теста, и меняется ли результат между 30 секундами и 3 минутами?",
     "faq.a4": "Да — выберите 30 секунд, 1 минуту или 3 минуты перед началом, или даже посреди теста, чтобы начать заново с новой длительностью. На коротких 30-секундных тестах сильнее сказываются быстрый или медленный старт и то, какие слова попадутся, поэтому WPM может сильнее колебаться от попытки к попытке. Более длинные тесты на 1 и 3 минуты сглаживают эти колебания и обычно считаются более надёжным способом измерения скорости печати — поэтому многие сертификации по машинописи по умолчанию используют 1 минуту или больше.",
     "faq.q5": "Отправляется ли моя печать на сервер?",
-    "faq.a5": "Нет. Каждое слово в этом тесте печати встроено прямо в JavaScript страницы, поэтому ничего не запрашивается с сервера ни до, ни во время теста, и ни одно нажатие клавиши, результат WPM или показатель точности никогда не покидают ваш браузер. Нет регистрации, нет отправки в таблицу лидеров и нет отслеживания — ваши результаты существуют только на экране и сбрасываются, как только вы обновите страницу или начнёте новый тест."
+    "faq.a5": "Нет. Каждое слово в этом тесте печати встроено прямо в JavaScript страницы, поэтому ничего не запрашивается с сервера ни до, ни во время теста, и ни одно нажатие клавиши, результат WPM или показатель точности никогда не покидают ваш браузер. Нет регистрации, нет отправки в таблицу лидеров и нет отслеживания — ваши результаты существуют только на экране и сбрасываются, как только вы обновите страницу или начнёте новый тест.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -445,7 +490,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میں ٹیسٹ کا دورانیہ بدل سکتا ہوں، اور کیا 30 سیکنڈ بمقابلہ 3 منٹ سے میرا اسکور بدلتا ہے؟",
     "faq.a4": "جی ہاں — شروع کرنے سے پہلے (یا ٹیسٹ کے دوران) 30 سیکنڈ، 1 منٹ یا 3 منٹ منتخب کریں تو نئے دورانیے کے ساتھ دوبارہ شروع ہو جائے گا۔ مختصر 30 سیکنڈ کے ٹیسٹ تیز یا سست آغاز اور کون سے الفاظ آتے ہیں اس سے زیادہ متاثر ہوتے ہیں، اس لیے آپ کا WPM ہر بار زیادہ اوپر نیچے ہو سکتا ہے۔ طویل 1 منٹ اور 3 منٹ کے ٹیسٹ ان اتار چڑھاؤ کو اوسط کر دیتے ہیں اور عام طور پر ٹائپنگ اسپیڈ ناپنے کا زیادہ قابل بھروسہ طریقہ سمجھے جاتے ہیں — اسی وجہ سے بہت سی ٹائپنگ سرٹیفیکیشنز بطور ڈیفالٹ 1 منٹ یا اس سے زیادہ استعمال کرتی ہیں۔",
     "faq.q5": "کیا میری ٹائپنگ سرور کو بھیجی جاتی ہے؟",
-    "faq.a5": "نہیں۔ اس ٹائپنگ ٹیسٹ کا ہر لفظ براہ راست صفحے کے JavaScript میں شامل ہے، اس لیے ٹیسٹ سے پہلے یا دوران کچھ بھی سرور سے حاصل نہیں کیا جاتا، اور کوئی بھی کی اسٹروک، WPM اسکور یا درستگی کا عدد کبھی آپ کے براؤزر سے باہر نہیں جاتا۔ نہ کوئی سائن اپ ہے، نہ کسی لیڈر بورڈ پر اپ لوڈ، نہ کوئی ٹریکنگ — آپ کے نتائج صرف آپ کی اسکرین پر موجود ہوتے ہیں اور صفحہ ریفریش کرتے ہی یا نیا ٹیسٹ شروع کرتے ہی دوبارہ ترتیب پا جاتے ہیں۔"
+    "faq.a5": "نہیں۔ اس ٹائپنگ ٹیسٹ کا ہر لفظ براہ راست صفحے کے JavaScript میں شامل ہے، اس لیے ٹیسٹ سے پہلے یا دوران کچھ بھی سرور سے حاصل نہیں کیا جاتا، اور کوئی بھی کی اسٹروک، WPM اسکور یا درستگی کا عدد کبھی آپ کے براؤزر سے باہر نہیں جاتا۔ نہ کوئی سائن اپ ہے، نہ کسی لیڈر بورڈ پر اپ لوڈ، نہ کوئی ٹریکنگ — آپ کے نتائج صرف آپ کی اسکرین پر موجود ہوتے ہیں اور صفحہ ریفریش کرتے ہی یا نیا ٹیسٹ شروع کرتے ہی دوبارہ ترتیب پا جاتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -488,7 +538,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah saya mengubah durasi tes, dan apakah 30 detik dan 3 menit menghasilkan skor berbeda?",
     "faq.a4": "Bisa — pilih 30 detik, 1 menit, atau 3 menit sebelum mulai, atau bahkan di tengah tes untuk memulai ulang dengan durasi baru. Tes singkat 30 detik lebih terpengaruh oleh awal yang cepat atau lambat serta kata apa saja yang muncul, jadi WPM Anda bisa lebih bervariasi antar percobaan. Tes yang lebih panjang, 1 dan 3 menit, meratakan variasi tersebut dan umumnya dianggap sebagai ukuran kecepatan mengetik yang lebih andal — karena itu banyak sertifikasi mengetik menggunakan durasi 1 menit atau lebih sebagai standar.",
     "faq.q5": "Apakah ketikan saya dikirim ke server?",
-    "faq.a5": "Tidak. Setiap kata dalam tes mengetik ini sudah tertanam langsung di dalam JavaScript halaman, jadi tidak ada yang diambil dari server sebelum maupun selama tes, dan tidak ada ketukan tombol, skor WPM, atau angka akurasi yang pernah meninggalkan browser Anda. Tidak ada pendaftaran, tidak ada unggahan ke papan peringkat, dan tidak ada pelacakan — hasil Anda hanya ada di layar Anda dan akan direset begitu Anda menyegarkan halaman atau memulai tes baru."
+    "faq.a5": "Tidak. Setiap kata dalam tes mengetik ini sudah tertanam langsung di dalam JavaScript halaman, jadi tidak ada yang diambil dari server sebelum maupun selama tes, dan tidak ada ketukan tombol, skor WPM, atau angka akurasi yang pernah meninggalkan browser Anda. Tidak ada pendaftaran, tidak ada unggahan ke papan peringkat, dan tidak ada pelacakan — hasil Anda hanya ada di layar Anda dan akan direset begitu Anda menyegarkan halaman atau memulai tes baru.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -531,7 +586,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich die Testdauer ändern, und ändert sich mein Ergebnis zwischen 30 Sekunden und 3 Minuten?",
     "faq.a4": "Ja — wähle 30 Sekunden, 1 Minute oder 3 Minuten vor dem Start, oder auch mitten im Test, um mit einer neuen Dauer neu zu starten. Kurze 30-Sekunden-Tests werden stärker von einem schnellen oder langsamen Start und davon beeinflusst, welche Wörter zufällig erscheinen, sodass dein WPM-Wert zwischen den Versuchen stärker schwanken kann. Längere 1- und 3-Minuten-Tests gleichen diese Schwankungen aus und gelten allgemein als zuverlässigere Messung der Tippgeschwindigkeit — deshalb verwenden viele Tipp-Zertifizierungen standardmäßig 1 Minute oder mehr.",
     "faq.q5": "Wird mein Tippen an einen Server gesendet?",
-    "faq.a5": "Nein. Jedes Wort in diesem Tipptest ist direkt im JavaScript der Seite hinterlegt, sodass vor oder während des Tests nichts von einem Server abgerufen wird, und kein Tastendruck, WPM-Wert oder Genauigkeitswert jemals deinen Browser verlässt. Es gibt keine Anmeldung, keinen Upload zu einer Rangliste und kein Tracking — deine Ergebnisse existieren nur auf deinem Bildschirm und werden zurückgesetzt, sobald du die Seite neu lädst oder einen neuen Test startest."
+    "faq.a5": "Nein. Jedes Wort in diesem Tipptest ist direkt im JavaScript der Seite hinterlegt, sodass vor oder während des Tests nichts von einem Server abgerufen wird, und kein Tastendruck, WPM-Wert oder Genauigkeitswert jemals deinen Browser verlässt. Es gibt keine Anmeldung, keinen Upload zu einer Rangliste und kein Tracking — deine Ergebnisse existieren nur auf deinem Bildschirm und werden zurückgesetzt, sobald du die Seite neu lädst oder einen neuen Test startest.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -574,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.q4": "テストの時間は変更できますか?30秒と3分でスコアは変わりますか?",
     "faq.a4": "はい——開始前(またはテストの途中)でも30秒・1分・3分を選べば、新しい時間でやり直せます。短い30秒のテストは、出だしの速さや出てくる単語の運に結果が左右されやすく、実施ごとにWPMの変動が大きくなりがちです。より長い1分や3分のテストはそうした変動を平均化するため、一般にタイピング速度をより信頼性高く測定できるとされています——多くのタイピング検定が1分以上をデフォルトにしているのはこのためです。",
     "faq.q5": "入力内容はサーバーに送信されますか?",
-    "faq.a5": "いいえ。このタイピングテストの単語はすべてページのJavaScriptに直接埋め込まれているため、テストの前後を通じてサーバーから何かを取得することはなく、キー入力・WPMスコア・正確率の数値がブラウザの外に出ることも一切ありません。登録も、ランキングへのアップロードも、追跡も行われません——結果はあなたの画面上にのみ存在し、ページを更新するか新しいテストを始めた時点でリセットされます。"
+    "faq.a5": "いいえ。このタイピングテストの単語はすべてページのJavaScriptに直接埋め込まれているため、テストの前後を通じてサーバーから何かを取得することはなく、キー入力・WPMスコア・正確率の数値がブラウザの外に出ることも一切ありません。登録も、ランキングへのアップロードも、追跡も行われません——結果はあなたの画面上にのみ存在し、ページを更新するか新しいテストを始めた時点でリセットされます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -617,6 +682,11 @@ window.I18N_LOCALES = {
     "faq.q4": "테스트 시간을 바꿀 수 있나요? 30초와 3분은 결과가 다른가요?",
     "faq.a4": "네 — 시작 전(또는 테스트 도중)에 30초·1분·3분을 선택하면 새 시간으로 다시 시작됩니다. 짧은 30초 테스트는 시작 속도나 어떤 단어가 나오는지에 따른 변동 폭이 커서 시도할 때마다 WPM이 크게 오르내릴 수 있습니다. 더 긴 1분·3분 테스트는 이런 변동을 평균으로 완화해 주어 일반적으로 타자 속도를 더 신뢰성 있게 측정하는 방법으로 여겨집니다 — 많은 타자 자격시험이 기본값으로 1분 이상을 사용하는 이유이기도 합니다.",
     "faq.q5": "제가 입력한 내용이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 타자 테스트의 모든 단어는 페이지의 JavaScript 안에 직접 포함되어 있어 테스트 전후로 서버에서 아무것도 가져오지 않으며, 키 입력·WPM 점수·정확도 수치가 브라우저 밖으로 나가는 일도 전혀 없습니다. 가입도, 순위표 업로드도, 추적도 없습니다 — 결과는 오직 화면에만 존재하며 새로고침하거나 새 테스트를 시작하는 순간 초기화됩니다."
+    "faq.a5": "아니요. 이 타자 테스트의 모든 단어는 페이지의 JavaScript 안에 직접 포함되어 있어 테스트 전후로 서버에서 아무것도 가져오지 않으며, 키 입력·WPM 점수·정확도 수치가 브라우저 밖으로 나가는 일도 전혀 없습니다. 가입도, 순위표 업로드도, 추적도 없습니다 — 결과는 오직 화면에만 존재하며 새로고침하거나 새 테스트를 시작하는 순간 초기화됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

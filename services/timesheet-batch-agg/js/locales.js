@@ -138,7 +138,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How are dirty rows like a missing clock-out or a duplicate punch handled?",
     "faq.a4": "Nothing is silently dropped. Rows with a missing employee ID, an unparseable date, a missing or unparseable clock-in/clock-out, a non-numeric or negative break, a break longer than the shift, or an unreasonable span are excluded and listed in an \"excluded rows\" report with a per-reason count. Exact duplicate punches (same employee, date, clock-in, clock-out and break) keep the first and exclude the rest as duplicates. That way your totals never quietly absorb a bad row.",
     "faq.q5": "Is our attendance data sent to a server, and how can I verify it?",
-    "faq.a5": "No. CSV parsing, encoding detection, the time and date parsers, sorting and the per-employee, per-week roll-up all run inside your browser tab, so employee IDs and clock times never reach any server, and there is no signup, email or upload. You can verify it yourself: open your browser's developer tools, go to the Network tab, then load your file and aggregate — you will see zero requests carrying your data. That is why security teams clear it where uploading attendance to a SaaS would be blocked."
+    "faq.a5": "No. CSV parsing, encoding detection, the time and date parsers, sorting and the per-employee, per-week roll-up all run inside your browser tab, so employee IDs and clock times never reach any server, and there is no signup, email or upload. You can verify it yourself: open your browser's developer tools, go to the Network tab, then load your file and aggregate — you will see zero requests carrying your data. That is why security teams clear it where uploading attendance to a SaaS would be blocked.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -274,7 +279,12 @@ window.I18N_LOCALES = {
     "faq.q4": "缺少下班时间或重复打卡等脏数据如何处理？",
     "faq.a4": "任何行都不会被悄悄丢弃。缺少员工编号、日期无法解析、上/下班缺失或无法解析、休息为非数字或负数、休息长于班次、或时长不合理的行会被排除，并在“被排除的行”报告中按原因计数列出。完全重复的打卡（员工、日期、上班、下班、休息都相同）保留第一条，其余作为重复排除。这样你的合计绝不会悄悄吸收坏数据。",
     "faq.q5": "我们的考勤数据会被发送到服务器吗？如何验证？",
-    "faq.a5": "不会。CSV 解析、编码检测、时间与日期解析器、排序，以及按员工、按周的汇总，全部在你的浏览器标签页内运行，因此员工编号和打卡时间从不到达任何服务器，也没有注册、邮件或上传。你可以自行验证：打开浏览器开发者工具，切到“网络”面板，然后加载文件并汇总——你会看到携带你数据的请求为零。这正是安全团队在禁止把考勤上传到 SaaS 的场景下仍放行它的原因。"
+    "faq.a5": "不会。CSV 解析、编码检测、时间与日期解析器、排序，以及按员工、按周的汇总，全部在你的浏览器标签页内运行，因此员工编号和打卡时间从不到达任何服务器，也没有注册、邮件或上传。你可以自行验证：打开浏览器开发者工具，切到“网络”面板，然后加载文件并汇总——你会看到携带你数据的请求为零。这正是安全团队在禁止把考勤上传到 SaaS 的场景下仍放行它的原因。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -410,7 +420,12 @@ window.I18N_LOCALES = {
     "faq.q4": "पंच-आउट गायब या डुप्लिकेट पंच जैसी गंदी पंक्तियाँ कैसे संभाली जाती हैं?",
     "faq.a4": "कुछ भी चुपचाप नहीं हटाया जाता। कर्मचारी ID गायब, अपठनीय तिथि, पंच-इन/आउट गायब या अपठनीय, गैर-संख्या या ऋणात्मक ब्रेक, पाली से लंबा ब्रेक, या अनुचित अवधि वाली पंक्तियाँ बहिष्कृत होती हैं और \"बहिष्कृत पंक्तियाँ\" रिपोर्ट में कारण-अनुसार गिनती सहित सूचीबद्ध। बिल्कुल डुप्लिकेट पंच (समान कर्मचारी, तिथि, पंच-इन, आउट और ब्रेक) में पहला रखा जाता है, बाकी डुप्लिकेट के रूप में बहिष्कृत। इस तरह आपके योग कभी चुपचाप ख़राब पंक्ति नहीं समाते।",
     "faq.q5": "क्या हमारा उपस्थिति डेटा किसी सर्वर को भेजा जाता है, और मैं इसे कैसे सत्यापित करूँ?",
-    "faq.a5": "नहीं। CSV पार्सिंग, एन्कोडिंग पहचान, समय व तिथि पार्सर, सॉर्टिंग और प्रति-कर्मचारी, प्रति-सप्ताह रोल-अप सब आपके ब्राउज़र टैब में चलते हैं, इसलिए कर्मचारी ID और पंच समय कभी किसी सर्वर तक नहीं पहुँचते, न कोई साइन-अप, ईमेल या अपलोड। आप स्वयं सत्यापित करें: ब्राउज़र के डेवलपर टूल्स खोलें, Network टैब पर जाएँ, फिर फ़ाइल लोड कर एग्रीगेट करें — आपको अपना डेटा ले जाने वाले शून्य अनुरोध दिखेंगे। यही कारण है कि जहाँ उपस्थिति को SaaS पर अपलोड करना अवरुद्ध होता, वहाँ सुरक्षा टीमें इसे मंज़ूरी देती हैं।"
+    "faq.a5": "नहीं। CSV पार्सिंग, एन्कोडिंग पहचान, समय व तिथि पार्सर, सॉर्टिंग और प्रति-कर्मचारी, प्रति-सप्ताह रोल-अप सब आपके ब्राउज़र टैब में चलते हैं, इसलिए कर्मचारी ID और पंच समय कभी किसी सर्वर तक नहीं पहुँचते, न कोई साइन-अप, ईमेल या अपलोड। आप स्वयं सत्यापित करें: ब्राउज़र के डेवलपर टूल्स खोलें, Network टैब पर जाएँ, फिर फ़ाइल लोड कर एग्रीगेट करें — आपको अपना डेटा ले जाने वाले शून्य अनुरोध दिखेंगे। यही कारण है कि जहाँ उपस्थिति को SaaS पर अपलोड करना अवरुद्ध होता, वहाँ सुरक्षा टीमें इसे मंज़ूरी देती हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -546,7 +561,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo se manejan las filas con errores, como una salida faltante o un fichaje duplicado?",
     "faq.a4": "Nada se descarta en silencio. Las filas con ID de empleado faltante, fecha no interpretable, entrada/salida faltante o no interpretable, descanso no numérico o negativo, descanso mayor que el turno, o duración irrazonable se excluyen y se listan en un informe de \"filas excluidas\" con un recuento por motivo. Los fichajes exactamente duplicados (mismo empleado, fecha, entrada, salida y descanso) conservan el primero y excluyen el resto como duplicados. Así tus totales nunca absorben en silencio una fila mala.",
     "faq.q5": "¿Se envían nuestros datos de asistencia a un servidor, y cómo puedo verificarlo?",
-    "faq.a5": "No. El análisis del CSV, la detección de codificación, los analizadores de hora y fecha, la ordenación y el resumen por empleado y por semana se ejecutan dentro de tu pestaña, así que los ID de empleado y las horas de fichaje nunca llegan a un servidor, y no hay registro, correo ni subida. Puedes verificarlo tú mismo: abre las herramientas de desarrollo, ve a la pestaña Red, carga tu archivo y agrega — verás cero solicitudes con tus datos. Por eso los equipos de seguridad lo aprueban donde subir la asistencia a un SaaS estaría bloqueado."
+    "faq.a5": "No. El análisis del CSV, la detección de codificación, los analizadores de hora y fecha, la ordenación y el resumen por empleado y por semana se ejecutan dentro de tu pestaña, así que los ID de empleado y las horas de fichaje nunca llegan a un servidor, y no hay registro, correo ni subida. Puedes verificarlo tú mismo: abre las herramientas de desarrollo, ve a la pestaña Red, carga tu archivo y agrega — verás cero solicitudes con tus datos. Por eso los equipos de seguridad lo aprueban donde subir la asistencia a un SaaS estaría bloqueado.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -682,7 +702,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف تُعالَج الصفوف المعيبة مثل خروج مفقود أو تسجيل مكرَّر؟",
     "faq.a4": "لا شيء يُحذف بصمت. الصفوف ذات معرّف موظف مفقود، أو تاريخ غير قابل للقراءة، أو دخول/خروج مفقود أو غير قابل للقراءة، أو استراحة غير رقمية أو سالبة، أو استراحة أطول من الوردية، أو مدة غير معقولة تُستبعَد وتُدرَج في تقرير \"الصفوف المستبعدة\" مع عدّاد لكل سبب. التسجيلات المكرَّرة تمامًا (نفس الموظف والتاريخ والدخول والخروج والاستراحة) تُبقي الأول وتستبعد الباقي كمكرَّرات. هكذا لا تبتلع مجاميعك صفًا سيئًا بصمت.",
     "faq.q5": "هل تُرسَل بيانات دوامنا إلى خادم، وكيف أتحقق من ذلك؟",
-    "faq.a5": "لا. تحليل CSV واكتشاف الترميز ومحلِّلا الوقت والتاريخ والفرز والتلخيص لكل موظف ولكل أسبوع كلها تعمل داخل علامة تبويب متصفحك، فلا تصل معرّفات الموظفين وأوقات الدوام إلى أي خادم، ولا تسجيل ولا بريد ولا رفع. يمكنك التحقق بنفسك: افتح أدوات المطور، انتقل إلى تبويب الشبكة، ثم حمِّل ملفك وجمِّع — سترى صفر طلبات تحمل بياناتك. لهذا توافق عليه فرق الأمن حيث يُمنع رفع الدوام إلى خدمة سحابية."
+    "faq.a5": "لا. تحليل CSV واكتشاف الترميز ومحلِّلا الوقت والتاريخ والفرز والتلخيص لكل موظف ولكل أسبوع كلها تعمل داخل علامة تبويب متصفحك، فلا تصل معرّفات الموظفين وأوقات الدوام إلى أي خادم، ولا تسجيل ولا بريد ولا رفع. يمكنك التحقق بنفسك: افتح أدوات المطور، انتقل إلى تبويب الشبكة، ثم حمِّل ملفك وجمِّع — سترى صفر طلبات تحمل بياناتك. لهذا توافق عليه فرق الأمن حيث يُمنع رفع الدوام إلى خدمة سحابية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -818,7 +843,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment les lignes erronées, comme une sortie manquante ou un pointage en double, sont-elles traitées ?",
     "faq.a4": "Rien n'est supprimé en silence. Les lignes avec ID employé manquant, date illisible, entrée/sortie manquante ou illisible, pause non numérique ou négative, pause plus longue que le poste, ou durée déraisonnable sont exclues et listées dans un rapport « lignes exclues » avec un décompte par motif. Les pointages exactement en double (même employé, date, entrée, sortie et pause) conservent le premier et excluent le reste comme doublons. Ainsi vos totaux n'absorbent jamais discrètement une mauvaise ligne.",
     "faq.q5": "Nos données de présence sont-elles envoyées à un serveur, et comment le vérifier ?",
-    "faq.a5": "Non. L'analyse du CSV, la détection d'encodage, les analyseurs d'heure et de date, le tri et le récapitulatif par employé et par semaine s'exécutent tous dans votre onglet, si bien que les ID employés et les heures de pointage n'atteignent aucun serveur, et il n'y a ni inscription, ni e-mail, ni téléversement. Vous pouvez le vérifier : ouvrez les outils de développement, allez dans l'onglet Réseau, chargez votre fichier et agrégez — vous verrez zéro requête transportant vos données. C'est pourquoi les équipes de sécurité l'autorisent là où téléverser la présence vers un SaaS serait bloqué."
+    "faq.a5": "Non. L'analyse du CSV, la détection d'encodage, les analyseurs d'heure et de date, le tri et le récapitulatif par employé et par semaine s'exécutent tous dans votre onglet, si bien que les ID employés et les heures de pointage n'atteignent aucun serveur, et il n'y a ni inscription, ni e-mail, ni téléversement. Vous pouvez le vérifier : ouvrez les outils de développement, allez dans l'onglet Réseau, chargez votre fichier et agrégez — vous verrez zéro requête transportant vos données. C'est pourquoi les équipes de sécurité l'autorisent là où téléverser la présence vers un SaaS serait bloqué.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -954,7 +984,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ক্লক-আউট নেই বা ডুপ্লিকেট পাঞ্চের মতো ত্রুটিপূর্ণ সারি কীভাবে সামলানো হয়?",
     "faq.a4": "কিছুই নীরবে বাদ পড়ে না। কর্মী ID নেই, তারিখ পার্স-অযোগ্য, ক্লক-ইন/আউট নেই বা পার্স-অযোগ্য, বিরতি অ-সংখ্যা বা ঋণাত্মক, বিরতি শিফটের চেয়ে দীর্ঘ, বা অযৌক্তিক সময়কালযুক্ত সারি বাদ পড়ে এবং কারণ-ভিত্তিক গণনাসহ \"বাদ পড়া সারি\" রিপোর্টে তালিকাভুক্ত হয়। হুবহু ডুপ্লিকেট পাঞ্চ (একই কর্মী, তারিখ, ইন, আউট ও বিরতি) প্রথমটি রাখে, বাকিগুলো ডুপ্লিকেট হিসেবে বাদ। এতে আপনার মোট কখনো নীরবে খারাপ সারি শোষণ করে না।",
     "faq.q5": "আমাদের উপস্থিতির তথ্য কি সার্ভারে পাঠানো হয়, আর আমি কীভাবে যাচাই করব?",
-    "faq.a5": "না। CSV পার্সিং, এনকোডিং শনাক্তকরণ, সময় ও তারিখ পার্সার, সাজানো এবং কর্মী ও সপ্তাহ অনুযায়ী রোল-আপ সবই আপনার ব্রাউজার ট্যাবে চলে, তাই কর্মী ID ও পাঞ্চ সময় কখনো কোনো সার্ভারে পৌঁছায় না, সাইন-আপ, ইমেল বা আপলোডও নেই। নিজেই যাচাই করুন: ব্রাউজারের ডেভেলপার টুলস খুলুন, Network ট্যাবে যান, ফাইল লোড করে একত্র করুন — আপনার ডেটা বহনকারী শূন্য অনুরোধ দেখবেন। এজন্যই যেখানে উপস্থিতি SaaS-এ আপলোড আটকে যায়, সেখানেও নিরাপত্তা দল এটি অনুমোদন করে।"
+    "faq.a5": "না। CSV পার্সিং, এনকোডিং শনাক্তকরণ, সময় ও তারিখ পার্সার, সাজানো এবং কর্মী ও সপ্তাহ অনুযায়ী রোল-আপ সবই আপনার ব্রাউজার ট্যাবে চলে, তাই কর্মী ID ও পাঞ্চ সময় কখনো কোনো সার্ভারে পৌঁছায় না, সাইন-আপ, ইমেল বা আপলোডও নেই। নিজেই যাচাই করুন: ব্রাউজারের ডেভেলপার টুলস খুলুন, Network ট্যাবে যান, ফাইল লোড করে একত্র করুন — আপনার ডেটা বহনকারী শূন্য অনুরোধ দেখবেন। এজন্যই যেখানে উপস্থিতি SaaS-এ আপলোড আটকে যায়, সেখানেও নিরাপত্তা দল এটি অনুমোদন করে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1090,7 +1125,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como são tratadas as linhas com erro, como saída ausente ou registro duplicado?",
     "faq.a4": "Nada é descartado silenciosamente. Linhas com ID do funcionário ausente, data não interpretável, entrada/saída ausente ou não interpretável, intervalo não numérico ou negativo, intervalo maior que o turno, ou duração irrazoável são excluídas e listadas num relatório de \"linhas excluídas\" com contagem por motivo. Registros exatamente duplicados (mesmo funcionário, data, entrada, saída e intervalo) mantêm o primeiro e excluem o resto como duplicados. Assim seus totais nunca absorvem silenciosamente uma linha ruim.",
     "faq.q5": "Nossos dados de presença são enviados a um servidor, e como posso verificar?",
-    "faq.a5": "Não. A análise do CSV, a detecção de codificação, os analisadores de hora e data, a ordenação e o resumo por funcionário e por semana rodam todos na sua aba, então IDs de funcionários e horários de ponto nunca chegam a um servidor, e não há cadastro, e-mail ou upload. Você pode verificar: abra as ferramentas de desenvolvedor, vá à aba Rede, carregue seu arquivo e agregue — verá zero requisições carregando seus dados. É por isso que equipes de segurança aprovam onde enviar a presença a um SaaS seria bloqueado."
+    "faq.a5": "Não. A análise do CSV, a detecção de codificação, os analisadores de hora e data, a ordenação e o resumo por funcionário e por semana rodam todos na sua aba, então IDs de funcionários e horários de ponto nunca chegam a um servidor, e não há cadastro, e-mail ou upload. Você pode verificar: abra as ferramentas de desenvolvedor, vá à aba Rede, carregue seu arquivo e agregue — verá zero requisições carregando seus dados. É por isso que equipes de segurança aprovam onde enviar a presença a um SaaS seria bloqueado.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1226,7 +1266,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как обрабатываются ошибочные строки, например пропущенный выход или дублирующая отметка?",
     "faq.a4": "Ничего не отбрасывается молча. Строки с отсутствующим ID сотрудника, нераспознаваемой датой, отсутствующим или нераспознаваемым входом/выходом, нечисловым или отрицательным перерывом, перерывом длиннее смены или нереалистичной длительностью исключаются и перечисляются в отчёте «исключённые строки» с подсчётом по причинам. Полностью дублирующие отметки (тот же сотрудник, дата, вход, выход и перерыв) сохраняют первую, остальные исключаются как дубликаты. Так ваши итоги никогда не поглощают плохую строку незаметно.",
     "faq.q5": "Отправляются ли наши данные о посещаемости на сервер и как это проверить?",
-    "faq.a5": "Нет. Разбор CSV, определение кодировки, парсеры времени и даты, сортировка и свод по сотруднику и по неделям выполняются внутри вкладки браузера, поэтому ID сотрудников и время отметок никогда не попадают на сервер, и нет ни регистрации, ни почты, ни загрузки. Проверьте сами: откройте инструменты разработчика, перейдите на вкладку Network, загрузите файл и выполните агрегацию — вы увидите ноль запросов с вашими данными. Именно поэтому службы безопасности одобряют его там, где загрузка посещаемости в SaaS была бы заблокирована."
+    "faq.a5": "Нет. Разбор CSV, определение кодировки, парсеры времени и даты, сортировка и свод по сотруднику и по неделям выполняются внутри вкладки браузера, поэтому ID сотрудников и время отметок никогда не попадают на сервер, и нет ни регистрации, ни почты, ни загрузки. Проверьте сами: откройте инструменты разработчика, перейдите на вкладку Network, загрузите файл и выполните агрегацию — вы увидите ноль запросов с вашими данными. Именно поэтому службы безопасности одобряют его там, где загрузка посещаемости в SaaS была бы заблокирована.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1362,7 +1407,12 @@ window.I18N_LOCALES = {
     "faq.q4": "خراب قطاریں جیسے آؤٹ غائب یا نقل شدہ پنچ کیسے سنبھالی جاتی ہیں؟",
     "faq.a4": "کچھ بھی خاموشی سے حذف نہیں ہوتا۔ ملازم ID غائب، ناقابل تجزیہ تاریخ، اِن/آؤٹ غائب یا ناقابل تجزیہ، غیر عددی یا منفی وقفہ، شفٹ سے طویل وقفہ، یا غیر معقول دورانیے والی قطاریں خارج ہوتی ہیں اور فی وجہ گنتی کے ساتھ \"خارج شدہ قطاریں\" رپورٹ میں درج ہوتی ہیں۔ بالکل نقل شدہ پنچز (وہی ملازم، تاریخ، اِن، آؤٹ اور وقفہ) پہلا رکھتے ہیں اور باقی کو نقل کے طور پر خارج۔ یوں آپ کے مجموعے کبھی خاموشی سے کوئی خراب قطار جذب نہیں کرتے۔",
     "faq.q5": "کیا ہمارا حاضری ڈیٹا سرور کو بھیجا جاتا ہے، اور میں اسے کیسے تصدیق کروں؟",
-    "faq.a5": "نہیں۔ CSV پارسنگ، انکوڈنگ کی شناخت، وقت اور تاریخ پارسر، ترتیب اور فی ملازم، فی ہفتہ رول اپ سب آپ کے براؤزر ٹیب میں چلتے ہیں، اس لیے ملازم IDs اور کلاک اوقات کبھی کسی سرور تک نہیں پہنچتے، نہ کوئی سائن اپ، ای میل یا اپ لوڈ۔ آپ خود تصدیق کر سکتے ہیں: براؤزر کے ڈیولپر ٹولز کھولیں، Network ٹیب پر جائیں، پھر فائل لوڈ کر کے اکٹھا کریں — آپ کو آپ کا ڈیٹا لے جانے والی صفر درخواستیں نظر آئیں گی۔ اسی لیے جہاں حاضری کو SaaS پر اپ لوڈ کرنا روک دیا جاتا، وہاں سیکیورٹی ٹیمیں اسے منظور کرتی ہیں۔"
+    "faq.a5": "نہیں۔ CSV پارسنگ، انکوڈنگ کی شناخت، وقت اور تاریخ پارسر، ترتیب اور فی ملازم، فی ہفتہ رول اپ سب آپ کے براؤزر ٹیب میں چلتے ہیں، اس لیے ملازم IDs اور کلاک اوقات کبھی کسی سرور تک نہیں پہنچتے، نہ کوئی سائن اپ، ای میل یا اپ لوڈ۔ آپ خود تصدیق کر سکتے ہیں: براؤزر کے ڈیولپر ٹولز کھولیں، Network ٹیب پر جائیں، پھر فائل لوڈ کر کے اکٹھا کریں — آپ کو آپ کا ڈیٹا لے جانے والی صفر درخواستیں نظر آئیں گی۔ اسی لیے جہاں حاضری کو SaaS پر اپ لوڈ کرنا روک دیا جاتا، وہاں سیکیورٹی ٹیمیں اسے منظور کرتی ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1498,7 +1548,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana baris bermasalah seperti clock-out hilang atau clock duplikat ditangani?",
     "faq.a4": "Tidak ada yang dibuang diam-diam. Baris dengan ID karyawan hilang, tanggal tak terbaca, clock-in/out hilang atau tak terbaca, istirahat non-angka atau negatif, istirahat lebih lama dari sif, atau durasi tak wajar dikecualikan dan didaftar dalam laporan \"baris dikecualikan\" dengan hitungan per alasan. Clock yang benar-benar duplikat (karyawan, tanggal, clock-in, clock-out, dan istirahat sama) menyimpan yang pertama dan mengecualikan sisanya sebagai duplikat. Dengan begitu total Anda tak pernah diam-diam menyerap baris buruk.",
     "faq.q5": "Apakah data absensi kami dikirim ke server, dan bagaimana cara memverifikasinya?",
-    "faq.a5": "Tidak. Penguraian CSV, deteksi enkode, pengurai waktu dan tanggal, pengurutan, serta rekap per karyawan per minggu semuanya berjalan di tab browser Anda, sehingga ID karyawan dan waktu clock tak pernah mencapai server mana pun, dan tak ada pendaftaran, email, atau unggah. Anda bisa memverifikasinya sendiri: buka developer tools browser, ke tab Network, muat file lalu agregasikan — Anda akan melihat nol permintaan yang membawa data Anda. Itulah mengapa tim keamanan meloloskannya di tempat mengunggah absensi ke SaaS akan diblokir."
+    "faq.a5": "Tidak. Penguraian CSV, deteksi enkode, pengurai waktu dan tanggal, pengurutan, serta rekap per karyawan per minggu semuanya berjalan di tab browser Anda, sehingga ID karyawan dan waktu clock tak pernah mencapai server mana pun, dan tak ada pendaftaran, email, atau unggah. Anda bisa memverifikasinya sendiri: buka developer tools browser, ke tab Network, muat file lalu agregasikan — Anda akan melihat nol permintaan yang membawa data Anda. Itulah mengapa tim keamanan meloloskannya di tempat mengunggah absensi ke SaaS akan diblokir.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1634,7 +1689,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie werden fehlerhafte Zeilen wie fehlendes Ausstempeln oder eine doppelte Stempelung behandelt?",
     "faq.a4": "Nichts wird stillschweigend verworfen. Zeilen mit fehlender Mitarbeiter-ID, unlesbarem Datum, fehlendem oder unlesbarem Ein-/Ausstempeln, nicht-numerischer oder negativer Pause, einer Pause länger als die Schicht oder unplausibler Dauer werden ausgeschlossen und in einem Bericht „ausgeschlossene Zeilen“ mit einer Zählung je Grund aufgeführt. Exakt doppelte Stempelungen (gleicher Mitarbeiter, Datum, Ein-, Ausstempeln und Pause) behalten die erste und schließen den Rest als Duplikate aus. So nehmen Ihre Summen nie stillschweigend eine fehlerhafte Zeile auf.",
     "faq.q5": "Werden unsere Anwesenheitsdaten an einen Server gesendet, und wie kann ich das prüfen?",
-    "faq.a5": "Nein. CSV-Parsing, Kodierungserkennung, die Zeit- und Datumsparser, das Sortieren und die Zusammenfassung pro Mitarbeiter und Woche laufen alle in Ihrem Browser-Tab, sodass Mitarbeiter-IDs und Stempelzeiten nie einen Server erreichen, und es gibt keine Anmeldung, E-Mail oder Upload. Sie können es selbst prüfen: öffnen Sie die Entwicklertools, gehen Sie zum Reiter Netzwerk, laden Sie Ihre Datei und aggregieren Sie — Sie sehen null Anfragen mit Ihren Daten. Deshalb geben Sicherheitsteams es frei, wo das Hochladen von Anwesenheit zu einem SaaS blockiert wäre."
+    "faq.a5": "Nein. CSV-Parsing, Kodierungserkennung, die Zeit- und Datumsparser, das Sortieren und die Zusammenfassung pro Mitarbeiter und Woche laufen alle in Ihrem Browser-Tab, sodass Mitarbeiter-IDs und Stempelzeiten nie einen Server erreichen, und es gibt keine Anmeldung, E-Mail oder Upload. Sie können es selbst prüfen: öffnen Sie die Entwicklertools, gehen Sie zum Reiter Netzwerk, laden Sie Ihre Datei und aggregieren Sie — Sie sehen null Anfragen mit Ihren Daten. Deshalb geben Sicherheitsteams es frei, wo das Hochladen von Anwesenheit zu einem SaaS blockiert wäre.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1770,7 +1830,12 @@ window.I18N_LOCALES = {
     "faq.q4": "退勤なしや重複打刻などの不正な行はどう扱われますか？",
     "faq.a4": "何も黙って破棄しません。従業員IDなし、解析不能な日付、出勤/退勤の欠落・解析不能、非数値または負の休憩、シフトより長い休憩、不合理な長さの行は除外し、「除外行」レポートに理由別件数付きで一覧化します。完全に重複した打刻（従業員・日付・出勤・退勤・休憩が同一）は最初の1件を残し、残りを重複として除外します。こうして合計が黙って不良行を取り込むことはありません。",
     "faq.q5": "勤怠データはサーバーに送信されますか、どう確認できますか？",
-    "faq.a5": "いいえ。CSV 解析、文字コード判定、時刻・日付パーサー、ソート、従業員別・週別の集計はすべてブラウザのタブ内で動作し、従業員IDや打刻時刻はどのサーバーにも届かず、登録・メール・アップロードもありません。ご自身で確認できます。開発者ツールを開き Network タブへ移動し、ファイルを読み込んで集計すると、データを運ぶリクエストがゼロだと分かります。だからこそ、勤怠を SaaS にアップロードするとブロックされる環境でも、セキュリティチームはこれを許可します。"
+    "faq.a5": "いいえ。CSV 解析、文字コード判定、時刻・日付パーサー、ソート、従業員別・週別の集計はすべてブラウザのタブ内で動作し、従業員IDや打刻時刻はどのサーバーにも届かず、登録・メール・アップロードもありません。ご自身で確認できます。開発者ツールを開き Network タブへ移動し、ファイルを読み込んで集計すると、データを運ぶリクエストがゼロだと分かります。だからこそ、勤怠を SaaS にアップロードするとブロックされる環境でも、セキュリティチームはこれを許可します。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1906,6 +1971,11 @@ window.I18N_LOCALES = {
     "faq.q4": "퇴근 결측이나 중복 타각 같은 더러운 행은 어떻게 처리되나요?",
     "faq.a4": "아무것도 조용히 버리지 않습니다. 사번 결측, 해석 불가 날짜, 출근/퇴근 결측 또는 해석 불가, 비숫자·음수 휴게, 근무보다 긴 휴게, 비합리적 길이의 행은 제외되어 사유별 개수와 함께 '제외된 행' 리포트에 나열됩니다. 완전히 동일한 타각(사번·날짜·출근·퇴근·휴게 동일)은 첫 행을 남기고 나머지를 중복으로 제외합니다. 그래서 합계가 나쁜 행을 조용히 흡수하는 일이 없습니다.",
     "faq.q5": "우리 근태 데이터가 서버로 전송되나요, 어떻게 확인하나요?",
-    "faq.a5": "아니요. CSV 파싱, 인코딩 감지, 시간·날짜 파서, 정렬, 직원별·주별 롤업이 모두 브라우저 탭 안에서 실행되므로 사번과 타각 시각은 어떤 서버에도 도달하지 않고, 가입·이메일·업로드도 없습니다. 직접 확인할 수 있습니다: 브라우저 개발자도구를 열고 Network 탭으로 가서 파일을 불러와 집계하면 데이터를 실은 요청이 0건임을 볼 수 있습니다. 그래서 근태를 SaaS에 업로드하면 막히는 환경에서도 보안팀이 이 도구를 승인합니다."
+    "faq.a5": "아니요. CSV 파싱, 인코딩 감지, 시간·날짜 파서, 정렬, 직원별·주별 롤업이 모두 브라우저 탭 안에서 실행되므로 사번과 타각 시각은 어떤 서버에도 도달하지 않고, 가입·이메일·업로드도 없습니다. 직접 확인할 수 있습니다: 브라우저 개발자도구를 열고 Network 탭으로 가서 파일을 불러와 집계하면 데이터를 실은 요청이 0건임을 볼 수 있습니다. 그래서 근태를 SaaS에 업로드하면 막히는 환경에서도 보안팀이 이 도구를 승인합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

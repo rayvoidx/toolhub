@@ -71,7 +71,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Ideal weight vs healthy weight vs BMI — what is the difference?",
     "faq.a4": "Ideal (body) weight is a single target figure from a formula like Devine or Hamwi. A healthy weight is a range you can sit anywhere within, taken here from a healthy BMI. BMI is the underlying number (weight ÷ height²) used to define that band. This tool shows all three at once: four ideal-weight figures, the healthy weight range, and — if you add your current weight — where you fall relative to it.",
     "faq.q5": "Is my height and weight sent to a server?",
-    "faq.a5": "No. Every calculation in this ideal weight calculator runs entirely in your browser; your height, sex and weight never leave your device. Your last entry is saved only in your browser's localStorage for convenience on your next visit, and you can clear it anytime."
+    "faq.a5": "No. Every calculation in this ideal weight calculator runs entirely in your browser; your height, sex and weight never leave your device. Your last entry is saved only in your browser's localStorage for convenience on your next visit, and you can clear it anytime.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.q4": "理想体重、健康体重、BMI有什么区别?",
     "faq.a4": "理想体重是Devine、Hamwi等公式给出的单一目标值;健康体重是你可以停留其中任意位置的区间,这里取自健康BMI;BMI则是用来定义该区间的底层数值(体重 ÷ 身高²)。本工具一次显示三者:四个理想体重值、健康体重范围,以及——如果你输入当前体重——你相对它的位置。",
     "faq.q5": "我的身高和体重会被上传到服务器吗?",
-    "faq.a5": "不会。本理想体重计算器的所有计算都在你的浏览器内完成,身高、性别和体重不会离开你的设备。你上次的输入只为方便下次访问保存在浏览器localStorage中,可随时清除。"
+    "faq.a5": "不会。本理想体重计算器的所有计算都在你的浏览器内完成,身高、性别和体重不会离开你的设备。你上次的输入只为方便下次访问保存在浏览器localStorage中,可随时清除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -183,7 +193,12 @@ window.I18N_LOCALES = {
     "faq.q4": "आदर्श वज़न, स्वस्थ वज़न और BMI में क्या अंतर है?",
     "faq.a4": "आदर्श वज़न Devine या Hamwi जैसे सूत्र से मिला एक लक्ष्य अंक है; स्वस्थ वज़न एक सीमा है जिसमें आप कहीं भी रह सकते हैं, यहाँ स्वस्थ BMI से ली गई; BMI वह अंतर्निहित संख्या है (वज़न ÷ कद²) जो उस पट्टी को परिभाषित करती है। यह टूल तीनों एक साथ दिखाता है: चार आदर्श-वज़न मान, स्वस्थ वज़न सीमा, और — यदि आप मौजूदा वज़न डालें — उसके सापेक्ष आपकी स्थिति।",
     "faq.q5": "क्या मेरा कद और वज़न किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। इस आदर्श वज़न कैलकुलेटर की सारी गणना आपके ब्राउज़र में होती है; कद, लिंग और वज़न आपके डिवाइस से बाहर नहीं जाते। अगली बार की सुविधा के लिए आपकी पिछली प्रविष्टि केवल ब्राउज़र के localStorage में सहेजी जाती है, जिसे आप कभी भी हटा सकते हैं।"
+    "faq.a5": "नहीं। इस आदर्श वज़न कैलकुलेटर की सारी गणना आपके ब्राउज़र में होती है; कद, लिंग और वज़न आपके डिवाइस से बाहर नहीं जाते। अगली बार की सुविधा के लिए आपकी पिछली प्रविष्टि केवल ब्राउज़र के localStorage में सहेजी जाती है, जिसे आप कभी भी हटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -239,7 +254,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Peso ideal, peso saludable e IMC: ¿cuál es la diferencia?",
     "faq.a4": "El peso ideal es una única cifra objetivo de una fórmula como Devine o Hamwi. El peso saludable es un rango en el que puedes situarte en cualquier punto, tomado aquí de un IMC sano. El IMC es el número base (peso ÷ altura²) que define esa franja. Esta herramienta muestra las tres a la vez: cuatro cifras de peso ideal, el rango saludable y —si añades tu peso actual— dónde te sitúas respecto a él.",
     "faq.q5": "¿Se envían mi altura y mi peso a un servidor?",
-    "faq.a5": "No. Todos los cálculos de esta calculadora de peso ideal se ejecutan por completo en tu navegador; tu altura, sexo y peso nunca salen de tu dispositivo. Tu última entrada solo se guarda en el localStorage del navegador para tu próxima visita y puedes borrarla cuando quieras."
+    "faq.a5": "No. Todos los cálculos de esta calculadora de peso ideal se ejecutan por completo en tu navegador; tu altura, sexo y peso nunca salen de tu dispositivo. Tu última entrada solo se guarda en el localStorage del navegador para tu próxima visita y puedes borrarla cuando quieras.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -295,7 +315,12 @@ window.I18N_LOCALES = {
     "faq.q4": "الوزن المثالي والوزن الصحي ومؤشر كتلة الجسم — ما الفرق؟",
     "faq.a4": "الوزن المثالي رقم هدف واحد من معادلة مثل Devine أو Hamwi؛ والوزن الصحي مدى يمكنك أن تكون في أي نقطة داخله، مأخوذ هنا من مؤشر كتلة جسم صحي؛ والمؤشر هو الرقم الأساس (الوزن ÷ الطول²) الذي يعرّف تلك الشريحة. تعرض هذه الأداة الثلاثة معًا: أربع قيم للوزن المثالي، نطاق الوزن الصحي، و— إن أضفت وزنك الحالي — موضعك منه.",
     "faq.q5": "هل يُرسَل طولي ووزني إلى خادم؟",
-    "faq.a5": "لا. تُجرى كل حسابات هذه الحاسبة داخل متصفحك بالكامل؛ الطول والجنس والوزن لا تغادر جهازك. تُحفَظ آخر إدخالاتك فقط في localStorage للمتصفح لتسهيل زيارتك القادمة، ويمكنك حذفها في أي وقت."
+    "faq.a5": "لا. تُجرى كل حسابات هذه الحاسبة داخل متصفحك بالكامل؛ الطول والجنس والوزن لا تغادر جهازك. تُحفَظ آخر إدخالاتك فقط في localStorage للمتصفح لتسهيل زيارتك القادمة، ويمكنك حذفها في أي وقت.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -351,7 +376,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Poids idéal, poids sain et IMC : quelle différence ?",
     "faq.a4": "Le poids idéal est un chiffre cible unique issu d'une formule comme Devine ou Hamwi ; le poids sain est un intervalle où vous pouvez vous situer, tiré ici d'un IMC sain ; l'IMC est le nombre sous-jacent (poids ÷ taille²) qui définit cette plage. Cet outil montre les trois à la fois : quatre valeurs de poids idéal, la fourchette saine et — si vous ajoutez votre poids actuel — votre position par rapport à elle.",
     "faq.q5": "Ma taille et mon poids sont-ils envoyés à un serveur ?",
-    "faq.a5": "Non. Tous les calculs de ce calculateur de poids idéal s'exécutent entièrement dans votre navigateur ; votre taille, votre sexe et votre poids ne quittent jamais votre appareil. Votre dernière saisie n'est enregistrée que dans le localStorage du navigateur pour votre prochaine visite, et vous pouvez l'effacer à tout moment."
+    "faq.a5": "Non. Tous les calculs de ce calculateur de poids idéal s'exécutent entièrement dans votre navigateur ; votre taille, votre sexe et votre poids ne quittent jamais votre appareil. Votre dernière saisie n'est enregistrée que dans le localStorage du navigateur pour votre prochaine visite, et vous pouvez l'effacer à tout moment.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -407,7 +437,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আদর্শ ওজন, স্বাস্থ্যকর ওজন ও BMI-এর পার্থক্য কী?",
     "faq.a4": "আদর্শ ওজন হলো Devine বা Hamwi-এর মতো সূত্রের একটি লক্ষ্য সংখ্যা; স্বাস্থ্যকর ওজন হলো একটি পরিসর যেখানে যেকোনো জায়গায় থাকতে পারেন, এখানে স্বাস্থ্যকর BMI থেকে নেওয়া; BMI হলো সেই ভিত্তি সংখ্যা (ওজন ÷ উচ্চতা²) যা ব্যান্ডটি নির্ধারণ করে। এই টুল তিনটিই একসঙ্গে দেখায়: চারটি আদর্শ-ওজন মান, স্বাস্থ্যকর পরিসর, এবং — বর্তমান ওজন দিলে — তার সাপেক্ষে আপনার অবস্থান।",
     "faq.q5": "আমার উচ্চতা ও ওজন কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই আদর্শ ওজন ক্যালকুলেটরের সব হিসাব সম্পূর্ণ আপনার ব্রাউজারেই হয়; উচ্চতা, লিঙ্গ ও ওজন আপনার ডিভাইস ছাড়ে না। পরের বার সুবিধার জন্য আপনার শেষ ইনপুট কেবল ব্রাউজারের localStorage-এ থাকে, যা যেকোনো সময় মুছে ফেলা যায়।"
+    "faq.a5": "না। এই আদর্শ ওজন ক্যালকুলেটরের সব হিসাব সম্পূর্ণ আপনার ব্রাউজারেই হয়; উচ্চতা, লিঙ্গ ও ওজন আপনার ডিভাইস ছাড়ে না। পরের বার সুবিধার জন্য আপনার শেষ ইনপুট কেবল ব্রাউজারের localStorage-এ থাকে, যা যেকোনো সময় মুছে ফেলা যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -463,7 +498,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Peso ideal, peso saudável e IMC — qual a diferença?",
     "faq.a4": "O peso ideal é um único valor-alvo de uma fórmula como Devine ou Hamwi; o peso saudável é uma faixa em que você pode ficar em qualquer ponto, tirada aqui de um IMC saudável; o IMC é o número base (peso ÷ altura²) que define essa banda. Esta ferramenta mostra os três de uma vez: quatro valores de peso ideal, a faixa saudável e — se você adicionar seu peso atual — onde você está em relação a ela.",
     "faq.q5": "Minha altura e meu peso são enviados a um servidor?",
-    "faq.a5": "Não. Todos os cálculos desta calculadora de peso ideal rodam inteiramente no seu navegador; altura, sexo e peso nunca saem do seu dispositivo. Sua última entrada fica salva apenas no localStorage do navegador para a próxima visita e pode ser apagada quando quiser."
+    "faq.a5": "Não. Todos os cálculos desta calculadora de peso ideal rodam inteiramente no seu navegador; altura, sexo e peso nunca saem do seu dispositivo. Sua última entrada fica salva apenas no localStorage do navegador para a próxima visita e pode ser apagada quando quiser.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -519,7 +559,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Идеальный вес, здоровый вес и ИМТ — в чём разница?",
     "faq.a4": "Идеальный вес — одно целевое число из формулы вроде Девайна или Хамви; здоровый вес — диапазон, в любой точке которого можно находиться, здесь взятый из здорового ИМТ; ИМТ — базовое число (вес ÷ рост²), определяющее эту полосу. Инструмент показывает всё три сразу: четыре значения идеального веса, здоровый диапазон и — если добавить текущий вес — где вы относительно него.",
     "faq.q5": "Отправляются ли мой рост и вес на сервер?",
-    "faq.a5": "Нет. Все расчёты этого калькулятора идеального веса выполняются полностью в вашем браузере; рост, пол и вес не покидают устройство. Ваш последний ввод сохраняется только в localStorage браузера для удобства при следующем визите, и его можно удалить в любой момент."
+    "faq.a5": "Нет. Все расчёты этого калькулятора идеального веса выполняются полностью в вашем браузере; рост, пол и вес не покидают устройство. Ваш последний ввод сохраняется только в localStorage браузера для удобства при следующем визите, и его можно удалить в любой момент.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -575,7 +620,12 @@ window.I18N_LOCALES = {
     "faq.q4": "مثالی وزن، صحت مند وزن اور BMI میں کیا فرق ہے؟",
     "faq.a4": "مثالی وزن Devine یا Hamwi جیسے فارمولے کا ایک ہدف عدد ہے؛ صحت مند وزن ایک رینج ہے جس میں آپ کہیں بھی رہ سکتے ہیں، یہاں صحت مند BMI سے لی گئی؛ BMI وہ بنیادی عدد ہے (وزن ÷ قد²) جو اس پٹی کی تعریف کرتا ہے۔ یہ ٹول تینوں ایک ساتھ دکھاتا ہے: چار مثالی وزن اقدار، صحت مند رینج، اور — اگر آپ موجودہ وزن شامل کریں — اس کے حوالے سے آپ کی پوزیشن۔",
     "faq.q5": "کیا میرا قد اور وزن کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ اس آئیڈیل وزن کیلکولیٹر کے تمام حساب مکمل طور پر آپ کے براؤزر میں ہوتے ہیں؛ قد، جنس اور وزن آپ کے آلے سے باہر نہیں جاتے۔ اگلی بار کی سہولت کے لیے آپ کا آخری اندراج صرف براؤزر کے localStorage میں محفوظ رہتا ہے، جسے آپ کسی بھی وقت مٹا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ اس آئیڈیل وزن کیلکولیٹر کے تمام حساب مکمل طور پر آپ کے براؤزر میں ہوتے ہیں؛ قد، جنس اور وزن آپ کے آلے سے باہر نہیں جاتے۔ اگلی بار کی سہولت کے لیے آپ کا آخری اندراج صرف براؤزر کے localStorage میں محفوظ رہتا ہے، جسے آپ کسی بھی وقت مٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -631,7 +681,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Berat ideal, berat sehat, dan BMI — apa bedanya?",
     "faq.a4": "Berat ideal adalah satu angka target dari rumus seperti Devine atau Hamwi; berat sehat adalah rentang di mana Anda bisa berada di titik mana pun, di sini diambil dari BMI sehat; BMI adalah angka dasar (berat ÷ tinggi²) yang menentukan pita itu. Alat ini menampilkan ketiganya sekaligus: empat angka berat ideal, rentang sehat, dan — jika Anda menambahkan berat saat ini — posisi Anda terhadapnya.",
     "faq.q5": "Apakah tinggi dan berat saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan kalkulator berat ideal ini berjalan sepenuhnya di browser Anda; tinggi, jenis kelamin, dan berat tidak pernah meninggalkan perangkat Anda. Entri terakhir Anda hanya disimpan di localStorage browser untuk kenyamanan kunjungan berikutnya, dan dapat dihapus kapan saja."
+    "faq.a5": "Tidak. Semua perhitungan kalkulator berat ideal ini berjalan sepenuhnya di browser Anda; tinggi, jenis kelamin, dan berat tidak pernah meninggalkan perangkat Anda. Entri terakhir Anda hanya disimpan di localStorage browser untuk kenyamanan kunjungan berikutnya, dan dapat dihapus kapan saja.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -687,7 +742,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Idealgewicht, gesundes Gewicht und BMI — was ist der Unterschied?",
     "faq.a4": "Das Idealgewicht ist eine einzelne Zielzahl aus einer Formel wie Devine oder Hamwi; das gesunde Gewicht ist ein Bereich, in dem Sie sich überall aufhalten können, hier aus einem gesunden BMI abgeleitet; der BMI ist die zugrunde liegende Zahl (Gewicht ÷ Größe²), die dieses Band definiert. Dieses Tool zeigt alle drei zugleich: vier Idealgewichtswerte, den gesunden Bereich und — wenn Sie Ihr aktuelles Gewicht ergänzen — Ihre Lage dazu.",
     "faq.q5": "Werden meine Größe und mein Gewicht an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen dieses Idealgewicht-Rechners laufen vollständig in Ihrem Browser; Größe, Geschlecht und Gewicht verlassen Ihr Gerät nie. Ihre letzte Eingabe wird nur im localStorage des Browsers für Ihren nächsten Besuch gespeichert und lässt sich jederzeit löschen."
+    "faq.a5": "Nein. Alle Berechnungen dieses Idealgewicht-Rechners laufen vollständig in Ihrem Browser; Größe, Geschlecht und Gewicht verlassen Ihr Gerät nie. Ihre letzte Eingabe wird nur im localStorage des Browsers für Ihren nächsten Besuch gespeichert und lässt sich jederzeit löschen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -743,7 +803,12 @@ window.I18N_LOCALES = {
     "faq.q4": "理想体重・健康的な体重・BMIの違いは?",
     "faq.a4": "理想体重はDevineやHamwiなどの式が出す単一の目標値、健康的な体重はその中のどこにいてもよい範囲(ここでは健康的なBMIから算出)、BMIはその帯を定義する基礎の数値(体重 ÷ 身長²)です。このツールは3つを同時に表示します:4つの理想体重値、健康的な範囲、そして現在の体重を入れれば、それに対する位置も。",
     "faq.q5": "身長や体重はサーバーに送信される?",
-    "faq.a5": "いいえ。この理想体重計算機の計算はすべてブラウザ内で完結し、身長・性別・体重が端末の外に出ることはありません。前回の入力は次回の利便のためにブラウザのlocalStorageにのみ保存され、いつでも削除できます。"
+    "faq.a5": "いいえ。この理想体重計算機の計算はすべてブラウザ内で完結し、身長・性別・体重が端末の外に出ることはありません。前回の入力は次回の利便のためにブラウザのlocalStorageにのみ保存され、いつでも削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -799,6 +864,11 @@ window.I18N_LOCALES = {
     "faq.q4": "적정 체중·건강 체중·BMI는 어떻게 다른가요?",
     "faq.a4": "적정(이상) 체중은 Devine·Hamwi 같은 공식이 내는 하나의 목표 수치이고, 건강 체중은 그 안 어디에 있어도 되는 범위(여기서는 건강 BMI에서 산출)이며, BMI는 그 구간을 정의하는 기초 숫자(체중 ÷ 키²)입니다. 이 도구는 셋을 한 번에 보여줍니다: 네 개의 이상 체중 값, 건강 체중 범위, 그리고 현재 체중을 넣으면 그에 대한 위치까지.",
     "faq.q5": "제 키와 체중이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 적정 체중 계산기의 모든 계산은 전적으로 브라우저 안에서 이뤄지며, 키·성별·체중은 기기를 벗어나지 않습니다. 마지막 입력값은 다음 방문 편의를 위해 브라우저 localStorage에만 저장되며 언제든 삭제할 수 있습니다."
+    "faq.a5": "아니요. 이 적정 체중 계산기의 모든 계산은 전적으로 브라우저 안에서 이뤄지며, 키·성별·체중은 기기를 벗어나지 않습니다. 마지막 입력값은 다음 방문 편의를 위해 브라우저 localStorage에만 저장되며 언제든 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

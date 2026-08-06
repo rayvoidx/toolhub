@@ -61,7 +61,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is my height data sent to a server?",
     "faq.a4": "No. This height converter runs entirely in your browser — every number you type stays on your device and nothing is uploaded anywhere. The only thing saved is your last height, kept in your browser's local storage so it's there next time you open the page; clearing your browser data removes it.",
     "faq.q5": "What's the difference between this tool and the generic Length Converter?",
-    "faq.a5": "This Height Converter is built specifically for human height: it understands the feet-and-inches composite notation (5'11\") people actually search for, includes a quick-reference table of common heights from 150 to 200 cm, and shows a dedicated inches-only view. For generic length units — millimeters, kilometers, yards, miles and more — use the Length Converter instead."
+    "faq.a5": "This Height Converter is built specifically for human height: it understands the feet-and-inches composite notation (5'11\") people actually search for, includes a quick-reference table of common heights from 150 to 200 cm, and shows a dedicated inches-only view. For generic length units — millimeters, kilometers, yards, miles and more — use the Length Converter instead.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -107,7 +112,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的身高数据会被发送到服务器吗？",
     "faq.a4": "不会。这个身高换算器完全在你的浏览器里运行——你输入的每一个数字都只留在你的设备上，不会上传到任何地方。唯一保存的是你上次输入的身高，存放在浏览器的本地存储里，方便下次打开时自动恢复；清除浏览器数据即可删除它。",
     "faq.q5": "这个工具和通用的长度换算器有什么区别？",
-    "faq.a5": "这个身高换算器专为人体身高设计：它能识别人们实际搜索时使用的英尺英寸复合表示法（5'11\"），内置 150 到 200 厘米的常见身高速查表，还提供专门的总英寸视图。如果要换算毫米、千米、码、英里等通用长度单位，请使用长度换算器。"
+    "faq.a5": "这个身高换算器专为人体身高设计：它能识别人们实际搜索时使用的英尺英寸复合表示法（5'11\"），内置 150 到 200 厘米的常见身高速查表，还提供专门的总英寸视图。如果要换算毫米、千米、码、英里等通用长度单位，请使用长度换算器。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -153,7 +163,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरी हाइट का डेटा किसी सर्वर पर भेजा जाता है?",
     "faq.a4": "नहीं। यह हाइट कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप किया हर नंबर आपके डिवाइस पर ही रहता है, कहीं अपलोड नहीं होता। सिर्फ़ आपकी पिछली हाइट सेव होती है, वह भी आपके ब्राउज़र के लोकल स्टोरेज में, ताकि अगली बार पेज खोलने पर वह वापस मिल जाए; ब्राउज़र डेटा साफ़ करने पर यह हट जाती है।",
     "faq.q5": "यह टूल और सामान्य लेंथ कन्वर्टर में क्या फ़र्क़ है?",
-    "faq.a5": "यह हाइट कन्वर्टर खासतौर पर इंसानी कद के लिए बनाया गया है: यह फ़ीट-इंच का संयुक्त फ़ॉर्मेट (5'11\") समझता है जिसे लोग असल में खोजते हैं, इसमें 150 से 200 cm तक की सामान्य हाइट की क्विक-रेफ़रेंस टेबल है, और कुल-इंच का अलग व्यू भी दिखाता है। मिलीमीटर, किलोमीटर, यार्ड, मील जैसी सामान्य लंबाई इकाइयों के लिए लेंथ कन्वर्टर इस्तेमाल करें।"
+    "faq.a5": "यह हाइट कन्वर्टर खासतौर पर इंसानी कद के लिए बनाया गया है: यह फ़ीट-इंच का संयुक्त फ़ॉर्मेट (5'11\") समझता है जिसे लोग असल में खोजते हैं, इसमें 150 से 200 cm तक की सामान्य हाइट की क्विक-रेफ़रेंस टेबल है, और कुल-इंच का अलग व्यू भी दिखाता है। मिलीमीटर, किलोमीटर, यार्ड, मील जैसी सामान्य लंबाई इकाइयों के लिए लेंथ कन्वर्टर इस्तेमाल करें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -199,7 +214,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se envían mis datos de estatura a un servidor?",
     "faq.a4": "No. Este conversor de estatura funciona completamente en tu navegador — cada número que escribes se queda en tu dispositivo y nada se sube a ningún sitio. Lo único que se guarda es tu última estatura, en el almacenamiento local de tu navegador, para que esté ahí la próxima vez que abras la página; si borras los datos del navegador, desaparece.",
     "faq.q5": "¿Cuál es la diferencia entre esta herramienta y el Conversor de longitud genérico?",
-    "faq.a5": "Este Conversor de estatura está pensado específicamente para la estatura humana: entiende la notación compuesta de pies y pulgadas (5'11\") que la gente realmente busca, incluye una tabla de referencia rápida de estaturas comunes de 150 a 200 cm, y muestra una vista dedicada solo en pulgadas. Para unidades de longitud genéricas — milímetros, kilómetros, yardas, millas y más — usa el Conversor de longitud."
+    "faq.a5": "Este Conversor de estatura está pensado específicamente para la estatura humana: entiende la notación compuesta de pies y pulgadas (5'11\") que la gente realmente busca, incluye una tabla de referencia rápida de estaturas comunes de 150 a 200 cm, y muestra una vista dedicada solo en pulgadas. Para unidades de longitud genéricas — milímetros, kilómetros, yardas, millas y más — usa el Conversor de longitud.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -245,7 +265,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تُرسَل بيانات طولي إلى خادم؟",
     "faq.a4": "لا. يعمل محوّل الطول هذا بالكامل داخل متصفحك — كل رقم تكتبه يبقى على جهازك ولا يُرفَع إلى أي مكان. الشيء الوحيد المحفوظ هو آخر طول أدخلته، ويُخزَّن في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة؛ ومسح بيانات المتصفح يحذفه.",
     "faq.q5": "ما الفرق بين هذه الأداة ومحوّل الطول العام؟",
-    "faq.a5": "صُمِّم محوّل الطول هذا خصيصًا لطول الإنسان: يفهم صيغة القدم والبوصة المركّبة (5'11\") التي يبحث عنها الناس فعليًا، ويتضمّن جدول مرجع سريع للأطوال الشائعة من 150 إلى 200 سم، ويعرض واجهة مخصّصة بالبوصات فقط. لوحدات الطول العامة — المليمتر والكيلومتر والياردة والميل وغيرها — استخدم محوّل الطول العام."
+    "faq.a5": "صُمِّم محوّل الطول هذا خصيصًا لطول الإنسان: يفهم صيغة القدم والبوصة المركّبة (5'11\") التي يبحث عنها الناس فعليًا، ويتضمّن جدول مرجع سريع للأطوال الشائعة من 150 إلى 200 سم، ويعرض واجهة مخصّصة بالبوصات فقط. لوحدات الطول العامة — المليمتر والكيلومتر والياردة والميل وغيرها — استخدم محوّل الطول العام.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -291,7 +316,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mes données de taille sont-elles envoyées à un serveur ?",
     "faq.a4": "Non. Ce convertisseur de taille fonctionne entièrement dans votre navigateur — chaque chiffre que vous tapez reste sur votre appareil et rien n'est envoyé nulle part. La seule chose enregistrée est votre dernière taille, conservée dans le stockage local de votre navigateur pour être là à votre prochaine visite ; effacer les données du navigateur la supprime.",
     "faq.q5": "Quelle est la différence entre cet outil et le Convertisseur de longueur générique ?",
-    "faq.a5": "Ce Convertisseur de taille est conçu spécifiquement pour la taille humaine : il comprend la notation composite pieds-pouces (5'11\") que les gens recherchent réellement, inclut un tableau de référence rapide des tailles courantes de 150 à 200 cm, et affiche une vue dédiée en pouces uniquement. Pour les unités de longueur génériques — millimètres, kilomètres, yards, miles et plus — utilisez le Convertisseur de longueur."
+    "faq.a5": "Ce Convertisseur de taille est conçu spécifiquement pour la taille humaine : il comprend la notation composite pieds-pouces (5'11\") que les gens recherchent réellement, inclut un tableau de référence rapide des tailles courantes de 150 à 200 cm, et affiche une vue dédiée en pouces uniquement. Pour les unités de longueur génériques — millimètres, kilomètres, yards, miles et plus — utilisez le Convertisseur de longueur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -337,7 +367,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার উচ্চতার তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
     "faq.a4": "না। এই উচ্চতা কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যাই লিখুন না কেন, তা আপনার ডিভাইসেই থাকে, কোথাও আপলোড হয় না। শুধু আপনার শেষ উচ্চতাটি সংরক্ষিত হয়, তা-ও আপনার ব্রাউজারের লোকাল স্টোরেজে, যাতে পরের বার পেজ খুললে সেটি ফিরে পান; ব্রাউজার ডেটা মুছে ফেললে এটিও মুছে যায়।",
     "faq.q5": "এই টুল আর সাধারণ দৈর্ঘ্য কনভার্টারের মধ্যে পার্থক্য কী?",
-    "faq.a5": "এই উচ্চতা কনভার্টার বিশেষভাবে মানুষের উচ্চতার জন্য তৈরি: এটি ফুট-ইঞ্চির যৌগিক ফরম্যাট (5'11\") বোঝে যা মানুষ আসলে খোঁজে, এতে ১৫০ থেকে ২০০ cm পর্যন্ত সাধারণ উচ্চতার একটি কুইক-রেফারেন্স টেবিল আছে, এবং আলাদা মোট-ইঞ্চি ভিউ দেখায়। মিলিমিটার, কিলোমিটার, গজ, মাইলের মতো সাধারণ দৈর্ঘ্য এককের জন্য দৈর্ঘ্য কনভার্টার ব্যবহার করুন।"
+    "faq.a5": "এই উচ্চতা কনভার্টার বিশেষভাবে মানুষের উচ্চতার জন্য তৈরি: এটি ফুট-ইঞ্চির যৌগিক ফরম্যাট (5'11\") বোঝে যা মানুষ আসলে খোঁজে, এতে ১৫০ থেকে ২০০ cm পর্যন্ত সাধারণ উচ্চতার একটি কুইক-রেফারেন্স টেবিল আছে, এবং আলাদা মোট-ইঞ্চি ভিউ দেখায়। মিলিমিটার, কিলোমিটার, গজ, মাইলের মতো সাধারণ দৈর্ঘ্য এককের জন্য দৈর্ঘ্য কনভার্টার ব্যবহার করুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -383,7 +418,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Meus dados de altura são enviados a um servidor?",
     "faq.a4": "Não. Este conversor de altura roda inteiramente no seu navegador — cada número que você digita fica no seu dispositivo e nada é enviado a lugar nenhum. A única coisa salva é sua última altura, guardada no armazenamento local do seu navegador para estar lá na próxima vez que você abrir a página; limpar os dados do navegador a remove.",
     "faq.q5": "Qual a diferença entre esta ferramenta e o Conversor de comprimento genérico?",
-    "faq.a5": "Este Conversor de altura foi feito especificamente para a altura humana: entende a notação composta de pés e polegadas (5'11\") que as pessoas realmente buscam, inclui uma tabela de referência rápida de alturas comuns de 150 a 200 cm, e mostra uma visualização dedicada apenas em polegadas. Para unidades de comprimento genéricas — milímetros, quilômetros, jardas, milhas e mais — use o Conversor de comprimento."
+    "faq.a5": "Este Conversor de altura foi feito especificamente para a altura humana: entende a notação composta de pés e polegadas (5'11\") que as pessoas realmente buscam, inclui uma tabela de referência rápida de alturas comuns de 150 a 200 cm, e mostra uma visualização dedicada apenas em polegadas. Para unidades de comprimento genéricas — milímetros, quilômetros, jardas, milhas e mais — use o Conversor de comprimento.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -429,7 +469,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Отправляются ли мои данные о росте на сервер?",
     "faq.a4": "Нет. Этот конвертер роста работает полностью в вашем браузере — каждое введённое число остаётся на вашем устройстве и никуда не загружается. Сохраняется только последнее введённое значение роста, в локальном хранилище браузера, чтобы оно было под рукой при следующем открытии страницы; очистка данных браузера удаляет его.",
     "faq.q5": "В чём разница между этим инструментом и обычным Конвертером длины?",
-    "faq.a5": "Этот Конвертер роста создан именно для роста человека: он понимает составную запись футов и дюймов (5'11\"), которую люди действительно ищут, включает таблицу быстрого справочника частых значений роста от 150 до 200 см и показывает отдельное представление только в дюймах. Для обычных единиц длины — миллиметров, километров, ярдов, миль и других — используйте Конвертер длины."
+    "faq.a5": "Этот Конвертер роста создан именно для роста человека: он понимает составную запись футов и дюймов (5'11\"), которую люди действительно ищут, включает таблицу быстрого справочника частых значений роста от 150 до 200 см и показывает отдельное представление только в дюймах. Для обычных единиц длины — миллиметров, километров, ярдов, миль и других — используйте Конвертер длины.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -475,7 +520,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میرے قد کا ڈیٹا کسی سرور پر بھیجا جاتا ہے؟",
     "faq.a4": "نہیں۔ یہ قد کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو بھی نمبر لکھتے ہیں وہ آپ کے ڈیوائس پر ہی رہتا ہے، کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری قد محفوظ ہوتا ہے، وہ بھی آپ کے براؤزر کے لوکل اسٹوریج میں، تاکہ اگلی بار پیج کھولنے پر واپس مل جائے؛ براؤزر ڈیٹا صاف کرنے سے یہ ختم ہو جاتا ہے۔",
     "faq.q5": "اس ٹول اور عام لمبائی کنورٹر میں کیا فرق ہے؟",
-    "faq.a5": "یہ قد کنورٹر خاص طور پر انسانی قد کے لیے بنایا گیا ہے: یہ فٹ اور انچ کا مرکب فارمیٹ (5'11\") سمجھتا ہے جسے لوگ حقیقت میں تلاش کرتے ہیں، اس میں 150 سے 200 cm تک کے عام قد کا فوری حوالہ جدول شامل ہے، اور صرف کل انچ کا الگ منظر بھی دکھاتا ہے۔ ملی میٹر، کلومیٹر، گز، میل جیسی عام لمبائی اکائیوں کے لیے لمبائی کنورٹر استعمال کریں۔"
+    "faq.a5": "یہ قد کنورٹر خاص طور پر انسانی قد کے لیے بنایا گیا ہے: یہ فٹ اور انچ کا مرکب فارمیٹ (5'11\") سمجھتا ہے جسے لوگ حقیقت میں تلاش کرتے ہیں، اس میں 150 سے 200 cm تک کے عام قد کا فوری حوالہ جدول شامل ہے، اور صرف کل انچ کا الگ منظر بھی دکھاتا ہے۔ ملی میٹر، کلومیٹر، گز، میل جیسی عام لمبائی اکائیوں کے لیے لمبائی کنورٹر استعمال کریں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -521,7 +571,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah data tinggi badan saya dikirim ke server?",
     "faq.a4": "Tidak. Konverter tinggi badan ini sepenuhnya berjalan di browser Anda — setiap angka yang Anda ketik tetap ada di perangkat Anda dan tidak diunggah ke mana pun. Satu-satunya yang disimpan adalah tinggi terakhir Anda, disimpan di penyimpanan lokal browser agar tersedia saat Anda membuka halaman ini lagi; menghapus data browser akan menghapusnya.",
     "faq.q5": "Apa bedanya alat ini dengan Konverter Panjang generik?",
-    "faq.a5": "Konverter Tinggi Badan ini dibuat khusus untuk tinggi manusia: memahami notasi gabungan kaki-inci (5'11\") yang benar-benar dicari orang, menyertakan tabel referensi cepat tinggi badan umum dari 150 hingga 200 cm, dan menampilkan tampilan khusus hanya-inci. Untuk satuan panjang generik — milimeter, kilometer, yard, mil, dan lainnya — gunakan Konverter Panjang."
+    "faq.a5": "Konverter Tinggi Badan ini dibuat khusus untuk tinggi manusia: memahami notasi gabungan kaki-inci (5'11\") yang benar-benar dicari orang, menyertakan tabel referensi cepat tinggi badan umum dari 150 hingga 200 cm, dan menampilkan tampilan khusus hanya-inci. Untuk satuan panjang generik — milimeter, kilometer, yard, mil, dan lainnya — gunakan Konverter Panjang.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -567,7 +622,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Werden meine Größendaten an einen Server gesendet?",
     "faq.a4": "Nein. Dieser Größenumrechner läuft vollständig in Ihrem Browser — jede eingegebene Zahl bleibt auf Ihrem Gerät, nichts wird irgendwohin hochgeladen. Gespeichert wird nur Ihre zuletzt eingegebene Größe, im lokalen Speicher Ihres Browsers, damit sie beim nächsten Öffnen der Seite wieder da ist; das Löschen der Browserdaten entfernt sie.",
     "faq.q5": "Was ist der Unterschied zwischen diesem Tool und dem allgemeinen Längenumrechner?",
-    "faq.a5": "Dieser Größenumrechner ist speziell für die menschliche Körpergröße gemacht: Er versteht die zusammengesetzte Fuß-Zoll-Schreibweise (5'11\"), nach der Menschen tatsächlich suchen, enthält eine Schnellreferenztabelle gängiger Körpergrößen von 150 bis 200 cm und zeigt eine eigene Nur-Zoll-Ansicht. Für allgemeine Längeneinheiten — Millimeter, Kilometer, Yards, Meilen und mehr — verwenden Sie den Längenumrechner."
+    "faq.a5": "Dieser Größenumrechner ist speziell für die menschliche Körpergröße gemacht: Er versteht die zusammengesetzte Fuß-Zoll-Schreibweise (5'11\"), nach der Menschen tatsächlich suchen, enthält eine Schnellreferenztabelle gängiger Körpergrößen von 150 bis 200 cm und zeigt eine eigene Nur-Zoll-Ansicht. Für allgemeine Längeneinheiten — Millimeter, Kilometer, Yards, Meilen und mehr — verwenden Sie den Längenumrechner.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -613,7 +673,12 @@ window.I18N_LOCALES = {
     "faq.q4": "身長のデータはサーバーに送信されますか?",
     "faq.a4": "いいえ。この身長換算ツールは完全にブラウザ内で動作し、入力した数値はすべてお使いの端末内にとどまり、どこにもアップロードされません。保存されるのは最後に入力した身長だけで、ブラウザのローカルストレージに保存され、次回ページを開いたときに復元されます。ブラウザのデータを消去すれば削除されます。",
     "faq.q5": "このツールと一般的な長さ単位変換ツールとの違いは?",
-    "faq.a5": "この身長換算ツールは人の身長専用に作られています:人が実際に検索するフィート・インチの複合表記(5'11\")を理解し、150〜200cmのよくある身長の早見表を備え、インチのみの専用表示も表示します。ミリメートル・キロメートル・ヤード・マイルなど一般的な長さの単位には、長さ単位変換ツールをご利用ください。"
+    "faq.a5": "この身長換算ツールは人の身長専用に作られています:人が実際に検索するフィート・インチの複合表記(5'11\")を理解し、150〜200cmのよくある身長の早見表を備え、インチのみの専用表示も表示します。ミリメートル・キロメートル・ヤード・マイルなど一般的な長さの単位には、長さ単位変換ツールをご利用ください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -659,6 +724,11 @@ window.I18N_LOCALES = {
     "faq.q4": "제 키 데이터가 서버로 전송되나요?",
     "faq.a4": "아니요. 이 키 변환기는 전적으로 브라우저 안에서 동작하며, 입력한 모든 숫자는 사용자의 기기에만 남고 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 입력한 키 값뿐이며, 그마저도 브라우저의 로컬 저장소에 보관되어 다음에 페이지를 열 때 다시 불러올 뿐입니다. 브라우저 데이터를 지우면 이 값도 함께 삭제됩니다.",
     "faq.q5": "이 도구와 일반 길이 변환기는 무엇이 다른가요?",
-    "faq.a5": "이 키 변환기는 사람의 키를 위해 특별히 만들어졌습니다: 사람들이 실제로 검색하는 피트·인치 합성 표기(5'11\")를 이해하고, 150~200cm 범위의 흔한 키를 모아둔 빠른 참조표를 제공하며, 총 인치만 따로 보여주는 화면도 갖추고 있습니다. 밀리미터·킬로미터·야드·마일 같은 일반적인 길이 단위는 길이 변환기를 이용하세요."
+    "faq.a5": "이 키 변환기는 사람의 키를 위해 특별히 만들어졌습니다: 사람들이 실제로 검색하는 피트·인치 합성 표기(5'11\")를 이해하고, 150~200cm 범위의 흔한 키를 모아둔 빠른 참조표를 제공하며, 총 인치만 따로 보여주는 화면도 갖추고 있습니다. 밀리미터·킬로미터·야드·마일 같은 일반적인 길이 단위는 길이 변환기를 이용하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

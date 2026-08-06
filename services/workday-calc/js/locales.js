@@ -101,7 +101,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Can I change the weekend from Saturday–Sunday?",
     "faq.a4": "The weekend is set for you: visitors in Saudi Arabia, Egypt, Bangladesh, Israel and other Friday–Saturday regions get that weekend automatically, everyone else gets Saturday–Sunday. You can override it any time under More options → Weekend days, and the setting applies both to counting days between dates and to adding or subtracting business days.",
     "faq.q5": "How do I add business days to a date to find a due date?",
-    "faq.a5": "Switch to the 'Add or subtract days' tab, pick a start date, enter a number of business days and choose After to get a due date or Before to work back to a start date. Weekends and the selected holidays are skipped automatically, which is handy for shipping ETAs, payment terms and SLA deadlines. Everything runs in your browser, so your dates never leave your device."
+    "faq.a5": "Switch to the 'Add or subtract days' tab, pick a start date, enter a number of business days and choose After to get a due date or Before to work back to a start date. Weekends and the selected holidays are skipped automatically, which is handy for shipping ETAs, payment terms and SLA deadlines. Everything runs in your browser, so your dates never leave your device.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -184,7 +189,12 @@ window.I18N_LOCALES = {
     "faq.q4": "可以把周末从周六–周日改成其他吗？",
     "faq.a4": "周末会自动设置：在沙特阿拉伯、埃及、孟加拉国、以色列等以周五至周六为周末的地区，会自动采用周五–周六，其他地区则为周六–周日。你可以随时在「更多选项 → 周末日」中更改，该设置同时适用于计算两个日期之间的天数和加减工作日。",
     "faq.q5": "如何在某日期上加工作日来求到期日？",
-    "faq.a5": "切换到“加减工作日”标签，选择开始日期，输入工作日数，选择“之后”求到期日，或“之前”反推起始日。周末和所选假日会自动跳过，非常适合计算发货 ETA、付款期限和 SLA 截止日期。所有计算都在浏览器中完成，日期不会离开你的设备。"
+    "faq.a5": "切换到“加减工作日”标签，选择开始日期，输入工作日数，选择“之后”求到期日，或“之前”反推起始日。周末和所选假日会自动跳过，非常适合计算发货 ETA、付款期限和 SLA 截止日期。所有计算都在浏览器中完成，日期不会离开你的设备。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -267,7 +277,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या सप्ताहांत शनि–रवि से बदला जा सकता है?",
     "faq.a4": "सप्ताहांत अपने आप सेट होता है: सऊदी अरब, मिस्र, बांग्लादेश, इज़राइल जैसे शुक्र–शनि वाले क्षेत्रों में वही, बाकी जगह शनि–रवि। इसे 'और विकल्प → सप्ताहांत के दिन' में कभी भी बदल सकते हैं, और यह सेटिंग दोनों टैब पर लागू होती है।",
     "faq.q5": "नियत तारीख पाने के लिए कार्यदिवस कैसे जोड़ें?",
-    "faq.a5": "‘दिन जोड़ें/घटाएँ’ टैब पर जाएँ, आरंभ तारीख चुनें, कार्यदिवसों की संख्या दर्ज करें, और नियत तारीख के लिए ‘बाद’ या आरंभ तारीख के लिए ‘पहले’ चुनें। सप्ताहांत और चुनी हुई छुट्टियाँ अपने-आप छूट जाती हैं — शिपिंग ETA, भुगतान शर्तें और SLA समयसीमा के लिए उपयोगी। सब कुछ आपके ब्राउज़र में चलता है, तारीखें डिवाइस से बाहर नहीं जातीं।"
+    "faq.a5": "‘दिन जोड़ें/घटाएँ’ टैब पर जाएँ, आरंभ तारीख चुनें, कार्यदिवसों की संख्या दर्ज करें, और नियत तारीख के लिए ‘बाद’ या आरंभ तारीख के लिए ‘पहले’ चुनें। सप्ताहांत और चुनी हुई छुट्टियाँ अपने-आप छूट जाती हैं — शिपिंग ETA, भुगतान शर्तें और SLA समयसीमा के लिए उपयोगी। सब कुछ आपके ब्राउज़र में चलता है, तारीखें डिवाइस से बाहर नहीं जातीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -350,7 +365,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Puedo cambiar el fin de semana de sábado–domingo?",
     "faq.a4": "El fin de semana se configura solo: quien entra desde Arabia Saudí, Egipto, Bangladés, Israel u otras regiones de viernes–sábado obtiene ese fin de semana, y el resto sábado–domingo. Puedes cambiarlo cuando quieras en Más opciones → Días de fin de semana, y se aplica tanto al contar días entre fechas como al sumar o restar días hábiles.",
     "faq.q5": "¿Cómo sumo días hábiles a una fecha para hallar un vencimiento?",
-    "faq.a5": "Ve a la pestaña ‘Sumar o restar días’, elige una fecha de inicio, indica un número de días hábiles y elige Después para obtener un vencimiento o Antes para retroceder a una fecha de inicio. Los fines de semana y los festivos seleccionados se omiten automáticamente, ideal para ETA de envíos, plazos de pago y vencimientos de SLA. Todo se ejecuta en tu navegador, así que tus fechas nunca salen de tu dispositivo."
+    "faq.a5": "Ve a la pestaña ‘Sumar o restar días’, elige una fecha de inicio, indica un número de días hábiles y elige Después para obtener un vencimiento o Antes para retroceder a una fecha de inicio. Los fines de semana y los festivos seleccionados se omiten automáticamente, ideal para ETA de envíos, plazos de pago y vencimientos de SLA. Todo se ejecuta en tu navegador, así que tus fechas nunca salen de tu dispositivo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -433,7 +453,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يمكنني تغيير نهاية الأسبوع من السبت–الأحد؟",
     "faq.a4": "يُضبط أسبوع العمل تلقائيًا: من يزور الموقع من السعودية أو مصر أو بنغلاديش أو إسرائيل ومناطق الجمعة–السبت يحصل على تلك العطلة، وغيرهم على السبت–الأحد. يمكنك تغييرها في أي وقت من «خيارات إضافية ← أيام نهاية الأسبوع»، وتنطبق على حساب المدة وعلى جمع أيام العمل وطرحها.",
     "faq.q5": "كيف أضيف أيام عمل إلى تاريخ لإيجاد موعد الاستحقاق؟",
-    "faq.a5": "انتقل إلى تبويب ‘إضافة أو طرح أيام’، اختر تاريخ بدء، أدخل عدد أيام العمل، ثم اختر ‘بعد’ للحصول على موعد استحقاق أو ‘قبل’ للرجوع إلى تاريخ بدء. تُتخطّى عطلات نهاية الأسبوع والعطلات المختارة تلقائيًا — مفيد لمواعيد الشحن وشروط الدفع ومواعيد اتفاقيات الخدمة. يعمل كل شيء في متصفحك، فلا تغادر تواريخك جهازك."
+    "faq.a5": "انتقل إلى تبويب ‘إضافة أو طرح أيام’، اختر تاريخ بدء، أدخل عدد أيام العمل، ثم اختر ‘بعد’ للحصول على موعد استحقاق أو ‘قبل’ للرجوع إلى تاريخ بدء. تُتخطّى عطلات نهاية الأسبوع والعطلات المختارة تلقائيًا — مفيد لمواعيد الشحن وشروط الدفع ومواعيد اتفاقيات الخدمة. يعمل كل شيء في متصفحك، فلا تغادر تواريخك جهازك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -516,7 +541,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Puis-je changer le week-end de samedi–dimanche ?",
     "faq.a4": "Le week-end est réglé pour vous : les visiteurs d'Arabie saoudite, d'Égypte, du Bangladesh, d'Israël et des autres régions vendredi–samedi obtiennent ce week-end, les autres samedi–dimanche. Vous pouvez le changer à tout moment dans Plus d'options → Jours de week-end ; le réglage s'applique au calcul entre deux dates comme à l'ajout ou au retrait de jours ouvrés.",
     "faq.q5": "Comment ajouter des jours ouvrés à une date pour trouver une échéance ?",
-    "faq.a5": "Allez dans l'onglet ‘Ajouter ou soustraire’, choisissez une date de début, saisissez un nombre de jours ouvrés puis choisissez Après pour une échéance ou Avant pour remonter à une date de début. Les week-ends et les fériés choisis sont ignorés automatiquement — pratique pour les ETA d'expédition, délais de paiement et échéances SLA. Tout s'exécute dans votre navigateur, vos dates ne quittent jamais votre appareil."
+    "faq.a5": "Allez dans l'onglet ‘Ajouter ou soustraire’, choisissez une date de début, saisissez un nombre de jours ouvrés puis choisissez Après pour une échéance ou Avant pour remonter à une date de début. Les week-ends et les fériés choisis sont ignorés automatiquement — pratique pour les ETA d'expédition, délais de paiement et échéances SLA. Tout s'exécute dans votre navigateur, vos dates ne quittent jamais votre appareil.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -599,7 +629,12 @@ window.I18N_LOCALES = {
     "faq.q4": "সপ্তাহান্ত কি শনি–রবি থেকে বদলানো যায়?",
     "faq.a4": "সাপ্তাহিক ছুটি নিজে থেকেই ঠিক হয়: সৌদি আরব, মিশর, বাংলাদেশ, ইসরায়েলসহ শুক্র–শনি অঞ্চলের দর্শনার্থীরা সেই ছুটি পান, বাকিরা শনি–রবি। 'আরও অপশন → সাপ্তাহিক ছুটির দিন'-এ যেকোনো সময় বদলাতে পারেন, আর এটি দুই ট্যাবেই প্রযোজ্য।",
     "faq.q5": "নির্ধারিত তারিখ পেতে কীভাবে কর্মদিবস যোগ করব?",
-    "faq.a5": "‘দিন যোগ/বিয়োগ’ ট্যাবে যান, শুরুর তারিখ বেছে নিন, কর্মদিবসের সংখ্যা দিন, এবং নির্ধারিত তারিখের জন্য ‘পরে’ বা শুরুর তারিখের জন্য ‘আগে’ বেছে নিন। সপ্তাহান্ত ও নির্বাচিত ছুটি স্বয়ংক্রিয়ভাবে বাদ পড়ে — শিপিং ETA, পেমেন্ট শর্ত ও SLA সময়সীমার জন্য কাজে লাগে। সবকিছু আপনার ব্রাউজারে চলে, তারিখ ডিভাইস ছাড়ে না।"
+    "faq.a5": "‘দিন যোগ/বিয়োগ’ ট্যাবে যান, শুরুর তারিখ বেছে নিন, কর্মদিবসের সংখ্যা দিন, এবং নির্ধারিত তারিখের জন্য ‘পরে’ বা শুরুর তারিখের জন্য ‘আগে’ বেছে নিন। সপ্তাহান্ত ও নির্বাচিত ছুটি স্বয়ংক্রিয়ভাবে বাদ পড়ে — শিপিং ETA, পেমেন্ট শর্ত ও SLA সময়সীমার জন্য কাজে লাগে। সবকিছু আপনার ব্রাউজারে চলে, তারিখ ডিভাইস ছাড়ে না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -682,7 +717,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Posso mudar o fim de semana de sábado–domingo?",
     "faq.a4": "O fim de semana é definido para você: quem acessa da Arábia Saudita, Egito, Bangladesh, Israel e outras regiões de sexta–sábado recebe esse fim de semana; os demais, sábado–domingo. Você pode trocar quando quiser em Mais opções → Dias de fim de semana, e vale tanto para contar dias entre datas quanto para somar ou subtrair dias úteis.",
     "faq.q5": "Como somo dias úteis a uma data para achar um vencimento?",
-    "faq.a5": "Vá até a aba ‘Somar ou subtrair dias’, escolha uma data inicial, informe um número de dias úteis e escolha Depois para um vencimento ou Antes para voltar a uma data de início. Fins de semana e os feriados selecionados são pulados automaticamente — útil para ETA de envio, prazos de pagamento e vencimentos de SLA. Tudo roda no seu navegador, então suas datas nunca saem do seu dispositivo."
+    "faq.a5": "Vá até a aba ‘Somar ou subtrair dias’, escolha uma data inicial, informe um número de dias úteis e escolha Depois para um vencimento ou Antes para voltar a uma data de início. Fins de semana e os feriados selecionados são pulados automaticamente — útil para ETA de envio, prazos de pagamento e vencimentos de SLA. Tudo roda no seu navegador, então suas datas nunca saem do seu dispositivo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -765,7 +805,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Можно ли изменить выходные с субботы–воскресенья?",
     "faq.a4": "Выходные настраиваются сами: посетители из Саудовской Аравии, Египта, Бангладеш, Израиля и других регионов с выходными в пятницу–субботу получают именно их, остальные — субботу–воскресенье. Изменить можно в любой момент в «Больше настроек → Выходные дни»; настройка действует и при подсчёте дней между датами, и при прибавлении или вычитании рабочих дней.",
     "faq.q5": "Как прибавить рабочие дни к дате, чтобы найти срок?",
-    "faq.a5": "Перейдите на вкладку ‘Прибавить/вычесть дни’, выберите дату начала, укажите число рабочих дней и выберите ‘После’ для срока или ‘До’, чтобы отсчитать назад к дате начала. Выходные и выбранные праздники пропускаются автоматически — удобно для ETA доставки, сроков оплаты и SLA. Всё работает в браузере, ваши даты не покидают устройство."
+    "faq.a5": "Перейдите на вкладку ‘Прибавить/вычесть дни’, выберите дату начала, укажите число рабочих дней и выберите ‘После’ для срока или ‘До’, чтобы отсчитать назад к дате начала. Выходные и выбранные праздники пропускаются автоматически — удобно для ETA доставки, сроков оплаты и SLA. Всё работает в браузере, ваши даты не покидают устройство.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -848,7 +893,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا ہفتہ وار تعطیل کو ہفتہ–اتوار سے بدلا جا سکتا ہے؟",
     "faq.a4": "ہفتہ وار چھٹی خود بخود طے ہوتی ہے: سعودی عرب، مصر، بنگلہ دیش، اسرائیل جیسے جمعہ–ہفتہ والے علاقوں سے آنے والوں کو وہی، باقی سب کو ہفتہ–اتوار ملتا ہے۔ «مزید اختیارات ← ہفتہ وار چھٹی کے دن» سے کسی بھی وقت بدل سکتے ہیں، اور یہ دونوں ٹیبز پر لاگو ہوتا ہے۔",
     "faq.q5": "مقررہ تاریخ کے لیے کاروباری دن کیسے جمع کروں؟",
-    "faq.a5": "‘دن جمع/منفی کریں’ ٹیب پر جائیں، آغاز کی تاریخ منتخب کریں، کاروباری دنوں کی تعداد درج کریں، اور مقررہ تاریخ کے لیے ‘بعد’ یا آغاز کی تاریخ کے لیے ‘پہلے’ چنیں۔ ہفتہ وار تعطیلات اور منتخب چھٹیاں خودکار طور پر چھوٹ جاتی ہیں — شپنگ ETA، ادائیگی کی شرائط اور SLA ڈیڈ لائن کے لیے مفید۔ سب کچھ آپ کے براؤزر میں چلتا ہے، تاریخیں آپ کے آلے سے باہر نہیں جاتیں۔"
+    "faq.a5": "‘دن جمع/منفی کریں’ ٹیب پر جائیں، آغاز کی تاریخ منتخب کریں، کاروباری دنوں کی تعداد درج کریں، اور مقررہ تاریخ کے لیے ‘بعد’ یا آغاز کی تاریخ کے لیے ‘پہلے’ چنیں۔ ہفتہ وار تعطیلات اور منتخب چھٹیاں خودکار طور پر چھوٹ جاتی ہیں — شپنگ ETA، ادائیگی کی شرائط اور SLA ڈیڈ لائن کے لیے مفید۔ سب کچھ آپ کے براؤزر میں چلتا ہے، تاریخیں آپ کے آلے سے باہر نہیں جاتیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -931,7 +981,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bisakah mengubah akhir pekan dari Sabtu–Minggu?",
     "faq.a4": "Akhir pekan diatur otomatis: pengunjung dari Arab Saudi, Mesir, Bangladesh, Israel, dan wilayah Jumat–Sabtu lainnya mendapat akhir pekan itu, sisanya Sabtu–Minggu. Anda bisa mengubahnya kapan saja di Opsi lainnya → Hari akhir pekan, dan pengaturan ini berlaku untuk menghitung hari antar tanggal maupun menambah atau mengurangi hari kerja.",
     "faq.q5": "Bagaimana menambah hari kerja ke tanggal untuk mencari jatuh tempo?",
-    "faq.a5": "Buka tab ‘Tambah/kurangi hari’, pilih tanggal mulai, masukkan jumlah hari kerja, lalu pilih Sesudah untuk jatuh tempo atau Sebelum untuk mundur ke tanggal mulai. Akhir pekan dan libur terpilih dilewati otomatis — praktis untuk ETA pengiriman, tenggat pembayaran, dan SLA. Semua berjalan di browser Anda, jadi tanggal Anda tidak pernah keluar dari perangkat."
+    "faq.a5": "Buka tab ‘Tambah/kurangi hari’, pilih tanggal mulai, masukkan jumlah hari kerja, lalu pilih Sesudah untuk jatuh tempo atau Sebelum untuk mundur ke tanggal mulai. Akhir pekan dan libur terpilih dilewati otomatis — praktis untuk ETA pengiriman, tenggat pembayaran, dan SLA. Semua berjalan di browser Anda, jadi tanggal Anda tidak pernah keluar dari perangkat.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1014,7 +1069,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Kann ich das Wochenende von Samstag–Sonntag ändern?",
     "faq.a4": "Das Wochenende wird für Sie gesetzt: Wer aus Saudi-Arabien, Ägypten, Bangladesch, Israel oder anderen Freitag-Samstag-Regionen kommt, bekommt dieses Wochenende, alle anderen Samstag–Sonntag. Unter Weitere Optionen → Wochenendtage können Sie es jederzeit ändern; die Einstellung gilt sowohl für die Tage zwischen zwei Daten als auch für das Addieren und Abziehen von Arbeitstagen.",
     "faq.q5": "Wie addiere ich Arbeitstage zu einem Datum, um eine Fälligkeit zu finden?",
-    "faq.a5": "Wechseln Sie zum Tab ‘Tage addieren/abziehen’, wählen Sie ein Startdatum, geben Sie eine Anzahl Arbeitstage ein und wählen Sie Danach für eine Fälligkeit oder Davor, um zu einem Startdatum zurückzurechnen. Wochenenden und die gewählten Feiertage werden automatisch übersprungen — praktisch für Versand-ETAs, Zahlungsfristen und SLA-Termine. Alles läuft in Ihrem Browser, Ihre Daten verlassen nie Ihr Gerät."
+    "faq.a5": "Wechseln Sie zum Tab ‘Tage addieren/abziehen’, wählen Sie ein Startdatum, geben Sie eine Anzahl Arbeitstage ein und wählen Sie Danach für eine Fälligkeit oder Davor, um zu einem Startdatum zurückzurechnen. Wochenenden und die gewählten Feiertage werden automatisch übersprungen — praktisch für Versand-ETAs, Zahlungsfristen und SLA-Termine. Alles läuft in Ihrem Browser, Ihre Daten verlassen nie Ihr Gerät.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1097,7 +1157,12 @@ window.I18N_LOCALES = {
     "faq.q4": "週末を土–日から変更できますか？",
     "faq.a4": "週末は自動で設定されます。サウジアラビア、エジプト、バングラデシュ、イスラエルなど金・土が週末の地域では金〜土、それ以外は土〜日になります。「詳細設定 → 週末の曜日」でいつでも変更でき、この設定は期間の計算と営業日の加算・減算の両方に適用されます。",
     "faq.q5": "期日を求めるには営業日をどう加算しますか？",
-    "faq.a5": "「日数を加算・減算」タブを開き、開始日を選び、営業日数を入力して、期日を求めるなら「後」、開始日を逆算するなら「前」を選びます。週末と選択した祝日は自動でスキップされ、発送ETA・支払期日・SLAの締め切りに便利です。すべてブラウザ内で動作し、日付が端末の外に出ることはありません。"
+    "faq.a5": "「日数を加算・減算」タブを開き、開始日を選び、営業日数を入力して、期日を求めるなら「後」、開始日を逆算するなら「前」を選びます。週末と選択した祝日は自動でスキップされ、発送ETA・支払期日・SLAの締め切りに便利です。すべてブラウザ内で動作し、日付が端末の外に出ることはありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1180,6 +1245,11 @@ window.I18N_LOCALES = {
     "faq.q4": "주말을 토–일에서 바꿀 수 있나요?",
     "faq.a4": "주말은 자동으로 맞춰집니다: 사우디아라비아·이집트·방글라데시·이스라엘 등 금·토가 주말인 지역에서 접속하면 금–토로, 그 밖에는 토–일로 설정됩니다. 세부 설정 → 주말 요일에서 언제든 바꿀 수 있고, 이 설정은 기간 계산과 영업일 더하기·빼기에 모두 적용됩니다.",
     "faq.q5": "마감일을 구하려면 영업일을 어떻게 더하나요?",
-    "faq.a5": "‘근무일 더하기/빼기’ 탭에서 시작일을 고르고 영업일 수를 입력한 뒤, 마감일은 ‘이후’, 시작일 역산은 ‘이전’을 선택하세요. 주말과 선택한 공휴일은 자동으로 건너뜁니다 — 배송 ETA, 결제 기한, SLA 마감에 유용합니다. 모든 계산은 브라우저에서 이뤄지며 날짜는 기기를 벗어나지 않습니다."
+    "faq.a5": "‘근무일 더하기/빼기’ 탭에서 시작일을 고르고 영업일 수를 입력한 뒤, 마감일은 ‘이후’, 시작일 역산은 ‘이전’을 선택하세요. 주말과 선택한 공휴일은 자동으로 건너뜁니다 — 배송 ETA, 결제 기한, SLA 마감에 유용합니다. 모든 계산은 브라우저에서 이뤄지며 날짜는 기기를 벗어나지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

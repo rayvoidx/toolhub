@@ -75,7 +75,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is there a limit on file size or how many images I can compress at once?",
     "faq.a4": "You can compress up to 10 images in one batch; if you select more, the extra files are skipped and a message tells you so. There's no hard file-size limit enforced by the tool itself, but very large images (many megapixels) take longer to decode and re-encode because everything happens on your device's CPU rather than a server, and extremely large batches can use a noticeable amount of memory in the browser tab. If a particular image fails to process, it's flagged individually so the rest of your batch still completes.",
     "faq.q5": "Are my photos uploaded anywhere, and why is a compressed file sometimes bigger than the original?",
-    "faq.a5": "No — every step, from reading the file to drawing it on a canvas to re-encoding it, happens locally in your browser tab; nothing is uploaded, and closing the tab clears everything. Occasionally a \"compressed\" file comes out larger than the original — this happens when the quality slider is set very high, when a small already-optimized image is re-encoded, or when converting a simple PNG graphic to JPEG adds overhead it didn't have before. Because this tool always shows the before-and-after size for every file, you can compare and simply skip downloading any result that isn't actually smaller, or lower the quality slider and try again."
+    "faq.a5": "No — every step, from reading the file to drawing it on a canvas to re-encoding it, happens locally in your browser tab; nothing is uploaded, and closing the tab clears everything. Occasionally a \"compressed\" file comes out larger than the original — this happens when the quality slider is set very high, when a small already-optimized image is re-encoded, or when converting a simple PNG graphic to JPEG adds overhead it didn't have before. Because this tool always shows the before-and-after size for every file, you can compare and simply skip downloading any result that isn't actually smaller, or lower the quality slider and try again.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -138,7 +143,12 @@ window.I18N_LOCALES = {
     "faq.q4": "一次能压缩的图片数量或文件大小有限制吗？",
     "faq.a4": "一次最多可以压缩 10 张图片；如果选择的文件更多，多余的会被跳过并给出提示。工具本身没有硬性的文件大小限制，但非常大的图片（像素很多）解码和重新编码会花更长时间，因为所有处理都在你的设备 CPU 上完成，而不是在服务器上；数量很大的批次也会占用浏览器标签页较明显的内存。如果某张图片处理失败，会单独标记出来，不影响批次中其余图片的处理。",
     "faq.q5": "我的照片会被上传到什么地方吗？为什么压缩后的文件有时反而更大？",
-    "faq.a5": "不会 — 从读取文件、绘制到画布，到重新编码，每一步都只在你的浏览器标签页本地完成；不会上传任何内容，关闭标签页后一切都会清除。有时“压缩后”的文件反而比原文件大 — 这可能是因为质量滑块设得很高、对一张本就已优化过的小图片再次编码，或者把简单的 PNG 图形转换成 JPEG 时增加了原本没有的开销。由于本工具始终会显示每个文件压缩前后的大小，你可以自行比较，对实际没有变小的结果直接跳过下载，或调低质量滑块再试一次。"
+    "faq.a5": "不会 — 从读取文件、绘制到画布，到重新编码，每一步都只在你的浏览器标签页本地完成；不会上传任何内容，关闭标签页后一切都会清除。有时“压缩后”的文件反而比原文件大 — 这可能是因为质量滑块设得很高、对一张本就已优化过的小图片再次编码，或者把简单的 PNG 图形转换成 JPEG 时增加了原本没有的开销。由于本工具始终会显示每个文件压缩前后的大小，你可以自行比较，对实际没有变小的结果直接跳过下载，或调低质量滑块再试一次。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -201,7 +211,12 @@ window.I18N_LOCALES = {
     "faq.q4": "एक बार में कंप्रेस की जा सकने वाली इमेज की संख्या या फ़ाइल साइज़ की कोई सीमा है?",
     "faq.a4": "आप एक बार में अधिकतम 10 इमेज कंप्रेस कर सकते हैं; अगर आप ज़्यादा चुनते हैं, तो बाकी फ़ाइलें छोड़ दी जाती हैं और इसकी जानकारी दे दी जाती है। टूल खुद कोई सख़्त फ़ाइल-साइज़ सीमा लागू नहीं करता, लेकिन बहुत बड़ी इमेज (कई मेगापिक्सेल) को डिकोड और दोबारा एनकोड करने में ज़्यादा समय लगता है क्योंकि सब कुछ सर्वर की बजाय आपकी डिवाइस के CPU पर होता है, और बहुत बड़े बैच ब्राउज़र टैब में काफ़ी मेमोरी भी इस्तेमाल कर सकते हैं। अगर कोई खास इमेज प्रोसेस नहीं हो पाती, तो उसे अलग से फ़्लैग कर दिया जाता है ताकि बाकी बैच पूरा हो सके।",
     "faq.q5": "क्या मेरी फ़ोटो कहीं अपलोड होती हैं, और कंप्रेस की गई फ़ाइल कभी-कभी मूल से बड़ी क्यों हो जाती है?",
-    "faq.a5": "नहीं — फ़ाइल पढ़ने से लेकर कैनवस पर बनाने और दोबारा एनकोड करने तक, हर स्टेप आपके ब्राउज़र टैब में ही स्थानीय रूप से होता है; कुछ भी अपलोड नहीं होता, और टैब बंद करते ही सब कुछ मिट जाता है। कभी-कभी \"कंप्रेस्ड\" फ़ाइल मूल से बड़ी निकल आती है — ऐसा तब होता है जब क्वालिटी स्लाइडर बहुत ज़्यादा सेट हो, जब पहले से ऑप्टिमाइज़ की गई छोटी इमेज को फिर एनकोड किया जाए, या जब किसी साधारण PNG ग्राफ़िक को JPEG में बदलने पर वह ओवरहेड जुड़ जाए जो पहले नहीं था। चूँकि यह टूल हर फ़ाइल के लिए हमेशा पहले और बाद का साइज़ दिखाता है, आप तुलना कर सकते हैं और जो नतीजा असल में छोटा नहीं है उसे डाउनलोड करना बस छोड़ सकते हैं, या क्वालिटी स्लाइडर घटाकर दोबारा कोशिश कर सकते हैं।"
+    "faq.a5": "नहीं — फ़ाइल पढ़ने से लेकर कैनवस पर बनाने और दोबारा एनकोड करने तक, हर स्टेप आपके ब्राउज़र टैब में ही स्थानीय रूप से होता है; कुछ भी अपलोड नहीं होता, और टैब बंद करते ही सब कुछ मिट जाता है। कभी-कभी \"कंप्रेस्ड\" फ़ाइल मूल से बड़ी निकल आती है — ऐसा तब होता है जब क्वालिटी स्लाइडर बहुत ज़्यादा सेट हो, जब पहले से ऑप्टिमाइज़ की गई छोटी इमेज को फिर एनकोड किया जाए, या जब किसी साधारण PNG ग्राफ़िक को JPEG में बदलने पर वह ओवरहेड जुड़ जाए जो पहले नहीं था। चूँकि यह टूल हर फ़ाइल के लिए हमेशा पहले और बाद का साइज़ दिखाता है, आप तुलना कर सकते हैं और जो नतीजा असल में छोटा नहीं है उसे डाउनलोड करना बस छोड़ सकते हैं, या क्वालिटी स्लाइडर घटाकर दोबारा कोशिश कर सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -264,7 +279,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Hay un límite de tamaño de archivo o de cuántas imágenes puedo comprimir a la vez?",
     "faq.a4": "Puedes comprimir hasta 10 imágenes en un lote; si seleccionas más, los archivos adicionales se omiten y se muestra un mensaje al respecto. La herramienta en sí no impone un límite estricto de tamaño de archivo, pero las imágenes muy grandes (de muchos megapíxeles) tardan más en decodificarse y volver a codificarse porque todo ocurre en la CPU de tu dispositivo en lugar de en un servidor, y los lotes muy grandes pueden usar una cantidad notable de memoria en la pestaña del navegador. Si una imagen en particular falla al procesarse, se marca individualmente para que el resto del lote se complete igualmente.",
     "faq.q5": "¿Se suben mis fotos a algún lado, y por qué a veces un archivo comprimido es más grande que el original?",
-    "faq.a5": "No — cada paso, desde leer el archivo hasta dibujarlo en un lienzo y volver a codificarlo, ocurre localmente en la pestaña de tu navegador; no se sube nada, y cerrar la pestaña borra todo. A veces un archivo \"comprimido\" resulta más grande que el original — esto ocurre cuando el control de calidad está muy alto, cuando se vuelve a codificar una imagen pequeña ya optimizada, o al convertir un gráfico PNG sencillo a JPEG, lo que añade una sobrecarga que antes no tenía. Como esta herramienta siempre muestra el tamaño antes y después de cada archivo, puedes comparar y simplemente evitar descargar cualquier resultado que en realidad no sea más pequeño, o bajar el control de calidad e intentarlo de nuevo."
+    "faq.a5": "No — cada paso, desde leer el archivo hasta dibujarlo en un lienzo y volver a codificarlo, ocurre localmente en la pestaña de tu navegador; no se sube nada, y cerrar la pestaña borra todo. A veces un archivo \"comprimido\" resulta más grande que el original — esto ocurre cuando el control de calidad está muy alto, cuando se vuelve a codificar una imagen pequeña ya optimizada, o al convertir un gráfico PNG sencillo a JPEG, lo que añade una sobrecarga que antes no tenía. Como esta herramienta siempre muestra el tamaño antes y después de cada archivo, puedes comparar y simplemente evitar descargar cualquier resultado que en realidad no sea más pequeño, o bajar el control de calidad e intentarlo de nuevo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -327,7 +347,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل هناك حد لحجم الملف أو لعدد الصور التي يمكنني ضغطها دفعة واحدة؟",
     "faq.a4": "يمكنك ضغط حتى 10 صور في دفعة واحدة؛ وإذا اخترت أكثر من ذلك، يتم تخطي الملفات الزائدة مع ظهور رسالة توضح ذلك. لا تفرض الأداة نفسها حدًا صارمًا لحجم الملف، لكن الصور الكبيرة جدًا (بملايين البكسلات) تستغرق وقتًا أطول لفك ترميزها وإعادة ترميزها لأن كل شيء يحدث على معالج جهازك بدلًا من خادم، كما أن الدفعات الكبيرة جدًا قد تستهلك قدرًا ملحوظًا من الذاكرة في تبويب المتصفح. وإذا فشلت معالجة صورة معينة، يتم تمييزها بشكل منفرد حتى تكتمل بقية الدفعة.",
     "faq.q5": "هل تُرفع صوري إلى أي مكان، ولماذا يكون الملف المضغوط أحيانًا أكبر من الأصلي؟",
-    "faq.a5": "لا — كل خطوة، من قراءة الملف إلى رسمه على لوحة وإعادة ترميزه، تحدث محليًا داخل تبويب متصفحك؛ لا يُرفع شيء، وإغلاق التبويب يمسح كل شيء. أحيانًا يخرج ملف \"مضغوط\" أكبر من الأصلي — يحدث هذا عندما يكون شريط الجودة مضبوطًا مرتفعًا جدًا، أو عند إعادة ترميز صورة صغيرة محسّنة أصلًا، أو عند تحويل رسم PNG بسيط إلى JPEG مما يضيف عبئًا لم يكن موجودًا من قبل. ولأن هذه الأداة تعرض دائمًا الحجم قبل وبعد لكل ملف، يمكنك المقارنة وببساطة تجاهل تنزيل أي نتيجة ليست أصغر فعلًا، أو خفض شريط الجودة والمحاولة مجددًا."
+    "faq.a5": "لا — كل خطوة، من قراءة الملف إلى رسمه على لوحة وإعادة ترميزه، تحدث محليًا داخل تبويب متصفحك؛ لا يُرفع شيء، وإغلاق التبويب يمسح كل شيء. أحيانًا يخرج ملف \"مضغوط\" أكبر من الأصلي — يحدث هذا عندما يكون شريط الجودة مضبوطًا مرتفعًا جدًا، أو عند إعادة ترميز صورة صغيرة محسّنة أصلًا، أو عند تحويل رسم PNG بسيط إلى JPEG مما يضيف عبئًا لم يكن موجودًا من قبل. ولأن هذه الأداة تعرض دائمًا الحجم قبل وبعد لكل ملف، يمكنك المقارنة وببساطة تجاهل تنزيل أي نتيجة ليست أصغر فعلًا، أو خفض شريط الجودة والمحاولة مجددًا.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -390,7 +415,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Y a-t-il une limite de taille de fichier ou du nombre d'images que je peux compresser à la fois ?",
     "faq.a4": "Vous pouvez compresser jusqu'à 10 images en un seul lot ; si vous en sélectionnez davantage, les fichiers supplémentaires sont ignorés avec un message vous en informant. L'outil n'impose pas de limite stricte de taille de fichier, mais les images très volumineuses (plusieurs mégapixels) mettent plus de temps à être décodées et réencodées puisque tout se passe sur le processeur de votre appareil plutôt que sur un serveur, et des lots très importants peuvent utiliser une quantité de mémoire notable dans l'onglet du navigateur. Si une image particulière échoue au traitement, elle est signalée individuellement afin que le reste du lot se termine quand même.",
     "faq.q5": "Mes photos sont-elles envoyées quelque part, et pourquoi un fichier compressé est-il parfois plus lourd que l'original ?",
-    "faq.a5": "Non — chaque étape, de la lecture du fichier à son dessin sur un canevas jusqu'à son réencodage, se déroule localement dans votre onglet de navigateur ; rien n'est envoyé, et fermer l'onglet efface tout. Il arrive qu'un fichier \"compressé\" ressorte plus lourd que l'original — cela se produit quand le curseur de qualité est réglé très haut, quand une petite image déjà optimisée est réencodée, ou quand la conversion d'un simple graphique PNG en JPEG ajoute une surcharge qu'il n'avait pas auparavant. Comme cet outil affiche toujours la taille avant et après pour chaque fichier, vous pouvez comparer et simplement éviter de télécharger un résultat qui n'est pas réellement plus petit, ou baisser le curseur de qualité et réessayer."
+    "faq.a5": "Non — chaque étape, de la lecture du fichier à son dessin sur un canevas jusqu'à son réencodage, se déroule localement dans votre onglet de navigateur ; rien n'est envoyé, et fermer l'onglet efface tout. Il arrive qu'un fichier \"compressé\" ressorte plus lourd que l'original — cela se produit quand le curseur de qualité est réglé très haut, quand une petite image déjà optimisée est réencodée, ou quand la conversion d'un simple graphique PNG en JPEG ajoute une surcharge qu'il n'avait pas auparavant. Comme cet outil affiche toujours la taille avant et après pour chaque fichier, vous pouvez comparer et simplement éviter de télécharger un résultat qui n'est pas réellement plus petit, ou baisser le curseur de qualité et réessayer.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -453,7 +483,12 @@ window.I18N_LOCALES = {
     "faq.q4": "একবারে কতগুলো ছবি কম্প্রেস করা যায় বা ফাইল সাইজের কোনো সীমা আছে কি?",
     "faq.a4": "আপনি একবারে সর্বোচ্চ ১০টি ছবি কম্প্রেস করতে পারেন; বেশি বাছলে বাড়তি ফাইলগুলো বাদ দেওয়া হয় এবং একটি বার্তা জানিয়ে দেয়। টুলটি নিজে কোনো কঠোর ফাইল-সাইজ সীমা প্রয়োগ করে না, তবে অনেক বড় ছবি (অনেক মেগাপিক্সেল) ডিকোড ও পুনরায় এনকোড করতে বেশি সময় লাগে কারণ সবকিছু সার্ভারের বদলে আপনার ডিভাইসের CPU-তে হয়, আর অনেক বড় ব্যাচ ব্রাউজার ট্যাবে উল্লেখযোগ্য মেমোরি ব্যবহার করতে পারে। কোনো নির্দিষ্ট ছবি প্রসেস করতে ব্যর্থ হলে সেটি আলাদাভাবে চিহ্নিত করা হয় যাতে বাকি ব্যাচ ঠিকভাবে সম্পন্ন হয়।",
     "faq.q5": "আমার ছবি কি কোথাও আপলোড হয়, আর কম্প্রেসড ফাইল কখনো কখনো মূলের চেয়ে বড় হয় কেন?",
-    "faq.a5": "না — ফাইল পড়া থেকে শুরু করে ক্যানভাসে আঁকা এবং পুনরায় এনকোড করা পর্যন্ত প্রতিটি ধাপ আপনার ব্রাউজার ট্যাবেই স্থানীয়ভাবে ঘটে; কিছুই আপলোড হয় না, আর ট্যাব বন্ধ করলে সবকিছু মুছে যায়। মাঝে মাঝে একটি \"কম্প্রেসড\" ফাইল মূলের চেয়ে বড় বের হয় — এটি ঘটে যখন কোয়ালিটি স্লাইডার খুব বেশি রাখা হয়, যখন আগে থেকেই অপ্টিমাইজড একটি ছোট ছবি আবার এনকোড করা হয়, বা সাধারণ একটি PNG গ্রাফিককে JPEG-এ রূপান্তর করলে আগে না থাকা বাড়তি ওভারহেড যোগ হয়। যেহেতু এই টুল সবসময় প্রতিটি ফাইলের আগে ও পরের সাইজ দেখায়, আপনি তুলনা করতে পারেন এবং প্রকৃতপক্ষে ছোট নয় এমন কোনো ফলাফল ডাউনলোড না করে এড়িয়ে যেতে পারেন, বা কোয়ালিটি স্লাইডার কমিয়ে আবার চেষ্টা করতে পারেন।"
+    "faq.a5": "না — ফাইল পড়া থেকে শুরু করে ক্যানভাসে আঁকা এবং পুনরায় এনকোড করা পর্যন্ত প্রতিটি ধাপ আপনার ব্রাউজার ট্যাবেই স্থানীয়ভাবে ঘটে; কিছুই আপলোড হয় না, আর ট্যাব বন্ধ করলে সবকিছু মুছে যায়। মাঝে মাঝে একটি \"কম্প্রেসড\" ফাইল মূলের চেয়ে বড় বের হয় — এটি ঘটে যখন কোয়ালিটি স্লাইডার খুব বেশি রাখা হয়, যখন আগে থেকেই অপ্টিমাইজড একটি ছোট ছবি আবার এনকোড করা হয়, বা সাধারণ একটি PNG গ্রাফিককে JPEG-এ রূপান্তর করলে আগে না থাকা বাড়তি ওভারহেড যোগ হয়। যেহেতু এই টুল সবসময় প্রতিটি ফাইলের আগে ও পরের সাইজ দেখায়, আপনি তুলনা করতে পারেন এবং প্রকৃতপক্ষে ছোট নয় এমন কোনো ফলাফল ডাউনলোড না করে এড়িয়ে যেতে পারেন, বা কোয়ালিটি স্লাইডার কমিয়ে আবার চেষ্টা করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -516,7 +551,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Há um limite de tamanho de arquivo ou de quantas imagens posso comprimir de uma vez?",
     "faq.a4": "Você pode comprimir até 10 imagens em um lote; se selecionar mais, os arquivos extras são ignorados e uma mensagem avisa sobre isso. A ferramenta em si não impõe um limite rígido de tamanho de arquivo, mas imagens muito grandes (com muitos megapixels) levam mais tempo para decodificar e recodificar, pois tudo acontece na CPU do seu dispositivo em vez de em um servidor, e lotes muito grandes podem usar uma quantidade considerável de memória na aba do navegador. Se uma imagem específica falhar ao processar, ela é sinalizada individualmente para que o restante do lote seja concluído mesmo assim.",
     "faq.q5": "Minhas fotos são enviadas para algum lugar, e por que um arquivo comprimido às vezes fica maior que o original?",
-    "faq.a5": "Não — cada etapa, desde a leitura do arquivo até desenhá-lo em um canvas e recodificá-lo, acontece localmente na sua aba do navegador; nada é enviado, e fechar a aba apaga tudo. Às vezes um arquivo \"comprimido\" acaba maior que o original — isso acontece quando o controle de qualidade está muito alto, quando uma imagem pequena já otimizada é recodificada, ou ao converter um gráfico PNG simples para JPEG, o que adiciona uma sobrecarga que ele não tinha antes. Como esta ferramenta sempre mostra o tamanho antes e depois de cada arquivo, você pode comparar e simplesmente evitar baixar qualquer resultado que não seja realmente menor, ou reduzir o controle de qualidade e tentar novamente."
+    "faq.a5": "Não — cada etapa, desde a leitura do arquivo até desenhá-lo em um canvas e recodificá-lo, acontece localmente na sua aba do navegador; nada é enviado, e fechar a aba apaga tudo. Às vezes um arquivo \"comprimido\" acaba maior que o original — isso acontece quando o controle de qualidade está muito alto, quando uma imagem pequena já otimizada é recodificada, ou ao converter um gráfico PNG simples para JPEG, o que adiciona uma sobrecarga que ele não tinha antes. Como esta ferramenta sempre mostra o tamanho antes e depois de cada arquivo, você pode comparar e simplesmente evitar baixar qualquer resultado que não seja realmente menor, ou reduzir o controle de qualidade e tentar novamente.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -579,7 +619,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Есть ли ограничение на размер файла или количество изображений, которые можно сжать за раз?",
     "faq.a4": "Вы можете сжать до 10 изображений за один раз; если выбрать больше, лишние файлы будут пропущены с соответствующим сообщением. Сам инструмент не устанавливает жёсткого ограничения по размеру файла, но очень крупные изображения (много мегапикселей) декодируются и перекодируются дольше, поскольку всё происходит на процессоре вашего устройства, а не на сервере, а очень большие пакеты могут заметно нагружать память вкладки браузера. Если конкретное изображение не удаётся обработать, оно помечается отдельно, чтобы остальная часть пакета всё равно завершилась.",
     "faq.q5": "Загружаются ли мои фото куда-либо, и почему сжатый файл иногда получается больше исходного?",
-    "faq.a5": "Нет — каждый шаг, от чтения файла до отрисовки на canvas и перекодирования, происходит локально во вкладке вашего браузера; ничего не загружается, а закрытие вкладки стирает всё. Иногда «сжатый» файл получается больше оригинала — это случается, когда ползунок качества установлен очень высоко, когда перекодируется уже оптимизированное маленькое изображение, или при конвертации простой PNG-графики в JPEG, что добавляет накладные расходы, которых раньше не было. Поскольку этот инструмент всегда показывает размер до и после для каждого файла, вы можете сравнить и просто не скачивать результат, который на самом деле не стал меньше, либо снизить качество и попробовать снова."
+    "faq.a5": "Нет — каждый шаг, от чтения файла до отрисовки на canvas и перекодирования, происходит локально во вкладке вашего браузера; ничего не загружается, а закрытие вкладки стирает всё. Иногда «сжатый» файл получается больше оригинала — это случается, когда ползунок качества установлен очень высоко, когда перекодируется уже оптимизированное маленькое изображение, или при конвертации простой PNG-графики в JPEG, что добавляет накладные расходы, которых раньше не было. Поскольку этот инструмент всегда показывает размер до и после для каждого файла, вы можете сравнить и просто не скачивать результат, который на самом деле не стал меньше, либо снизить качество и попробовать снова.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -642,7 +687,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ایک وقت میں کمپریس کی جانے والی تصاویر کی تعداد یا فائل سائز کی کوئی حد ہے؟",
     "faq.a4": "آپ ایک وقت میں زیادہ سے زیادہ 10 تصاویر کمپریس کر سکتے ہیں؛ اگر آپ زیادہ منتخب کریں تو اضافی فائلیں چھوڑ دی جاتی ہیں اور اس کا پیغام دکھایا جاتا ہے۔ ٹول خود کوئی سخت فائل سائز کی حد لاگو نہیں کرتا، لیکن بہت بڑی تصاویر (کئی میگاپکسلز والی) کو ڈی کوڈ اور دوبارہ اینکوڈ کرنے میں زیادہ وقت لگتا ہے کیونکہ سب کچھ سرور کے بجائے آپ کی ڈیوائس کے CPU پر ہوتا ہے، اور بہت بڑے بیچز براؤزر ٹیب میں کافی میموری استعمال کر سکتے ہیں۔ اگر کوئی خاص تصویر پروسیس نہ ہو سکے تو اسے الگ سے نشان زد کر دیا جاتا ہے تاکہ باقی بیچ مکمل ہو سکے۔",
     "faq.q5": "کیا میری تصاویر کہیں اپ لوڈ ہوتی ہیں، اور کمپریسڈ فائل کبھی کبھار اصل سے بڑی کیوں ہو جاتی ہے؟",
-    "faq.a5": "نہیں — فائل پڑھنے سے لے کر کینوس پر بنانے اور دوبارہ اینکوڈ کرنے تک، ہر مرحلہ آپ کے براؤزر ٹیب میں مقامی طور پر ہوتا ہے؛ کچھ بھی اپ لوڈ نہیں ہوتا، اور ٹیب بند کرتے ہی سب کچھ مٹ جاتا ہے۔ کبھی کبھار ایک \"کمپریسڈ\" فائل اصل سے بڑی نکل آتی ہے — ایسا اس وقت ہوتا ہے جب کوالٹی سلائیڈر بہت زیادہ سیٹ ہو، جب پہلے سے بہتر بنائی گئی چھوٹی تصویر دوبارہ اینکوڈ کی جائے، یا جب کسی سادہ PNG گرافک کو JPEG میں تبدیل کرنے سے وہ اضافی بوجھ شامل ہو جائے جو پہلے نہیں تھا۔ چونکہ یہ ٹول ہمیشہ ہر فائل کا پہلے اور بعد کا سائز دکھاتا ہے، آپ موازنہ کر سکتے ہیں اور جو نتیجہ حقیقتاً چھوٹا نہ ہو اسے ڈاؤن لوڈ کرنے سے بس گریز کر سکتے ہیں، یا کوالٹی سلائیڈر کم کر کے دوبارہ کوشش کر سکتے ہیں۔"
+    "faq.a5": "نہیں — فائل پڑھنے سے لے کر کینوس پر بنانے اور دوبارہ اینکوڈ کرنے تک، ہر مرحلہ آپ کے براؤزر ٹیب میں مقامی طور پر ہوتا ہے؛ کچھ بھی اپ لوڈ نہیں ہوتا، اور ٹیب بند کرتے ہی سب کچھ مٹ جاتا ہے۔ کبھی کبھار ایک \"کمپریسڈ\" فائل اصل سے بڑی نکل آتی ہے — ایسا اس وقت ہوتا ہے جب کوالٹی سلائیڈر بہت زیادہ سیٹ ہو، جب پہلے سے بہتر بنائی گئی چھوٹی تصویر دوبارہ اینکوڈ کی جائے، یا جب کسی سادہ PNG گرافک کو JPEG میں تبدیل کرنے سے وہ اضافی بوجھ شامل ہو جائے جو پہلے نہیں تھا۔ چونکہ یہ ٹول ہمیشہ ہر فائل کا پہلے اور بعد کا سائز دکھاتا ہے، آپ موازنہ کر سکتے ہیں اور جو نتیجہ حقیقتاً چھوٹا نہ ہو اسے ڈاؤن لوڈ کرنے سے بس گریز کر سکتے ہیں، یا کوالٹی سلائیڈر کم کر کے دوبارہ کوشش کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -705,7 +755,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah ada batas ukuran file atau jumlah gambar yang bisa saya kompres sekaligus?",
     "faq.a4": "Anda bisa mengompres hingga 10 gambar dalam satu batch; jika memilih lebih banyak, file tambahan akan dilewati dan pesan akan memberi tahu Anda. Alat ini sendiri tidak menerapkan batas ukuran file yang ketat, tetapi gambar yang sangat besar (banyak megapiksel) memerlukan waktu lebih lama untuk di-decode dan di-encode ulang karena semuanya terjadi di CPU perangkat Anda, bukan di server, dan batch yang sangat besar bisa menggunakan memori yang cukup banyak di tab browser. Jika satu gambar tertentu gagal diproses, gambar itu ditandai secara individual sehingga sisa batch tetap selesai.",
     "faq.q5": "Apakah foto saya diunggah ke suatu tempat, dan mengapa file terkompresi kadang lebih besar dari aslinya?",
-    "faq.a5": "Tidak — setiap langkah, mulai dari membaca file, menggambarnya di canvas, hingga meng-encode ulang, terjadi secara lokal di tab browser Anda; tidak ada yang diunggah, dan menutup tab akan menghapus semuanya. Terkadang file \"terkompresi\" keluar lebih besar dari aslinya — ini terjadi ketika slider kualitas diatur sangat tinggi, ketika gambar kecil yang sudah dioptimalkan di-encode ulang, atau ketika mengonversi grafis PNG sederhana ke JPEG menambahkan overhead yang sebelumnya tidak ada. Karena alat ini selalu menampilkan ukuran sebelum dan sesudah untuk setiap file, Anda bisa membandingkan dan cukup melewati pengunduhan hasil yang sebenarnya tidak lebih kecil, atau menurunkan slider kualitas dan mencoba lagi."
+    "faq.a5": "Tidak — setiap langkah, mulai dari membaca file, menggambarnya di canvas, hingga meng-encode ulang, terjadi secara lokal di tab browser Anda; tidak ada yang diunggah, dan menutup tab akan menghapus semuanya. Terkadang file \"terkompresi\" keluar lebih besar dari aslinya — ini terjadi ketika slider kualitas diatur sangat tinggi, ketika gambar kecil yang sudah dioptimalkan di-encode ulang, atau ketika mengonversi grafis PNG sederhana ke JPEG menambahkan overhead yang sebelumnya tidak ada. Karena alat ini selalu menampilkan ukuran sebelum dan sesudah untuk setiap file, Anda bisa membandingkan dan cukup melewati pengunduhan hasil yang sebenarnya tidak lebih kecil, atau menurunkan slider kualitas dan mencoba lagi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -768,7 +823,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Gibt es ein Limit für die Dateigröße oder wie viele Bilder ich gleichzeitig komprimieren kann?",
     "faq.a4": "Du kannst bis zu 10 Bilder in einem Durchgang komprimieren; wählst du mehr aus, werden die zusätzlichen Dateien übersprungen und eine Meldung informiert dich darüber. Das Tool selbst erzwingt kein hartes Dateigrößenlimit, aber sehr große Bilder (viele Megapixel) brauchen länger zum Decodieren und erneuten Codieren, da alles auf der CPU deines Geräts statt auf einem Server läuft, und sehr große Stapel können im Browser-Tab spürbar Speicher belegen. Falls ein bestimmtes Bild nicht verarbeitet werden kann, wird es einzeln markiert, damit der Rest des Stapels trotzdem abgeschlossen wird.",
     "faq.q5": "Werden meine Fotos irgendwohin hochgeladen, und warum ist eine komprimierte Datei manchmal größer als das Original?",
-    "faq.a5": "Nein — jeder Schritt, vom Einlesen der Datei über das Zeichnen auf ein Canvas bis zur erneuten Codierung, geschieht lokal in deinem Browser-Tab; nichts wird hochgeladen, und das Schließen des Tabs löscht alles. Gelegentlich fällt eine \"komprimierte\" Datei größer aus als das Original — das passiert, wenn der Qualitätsregler sehr hoch eingestellt ist, wenn ein bereits optimiertes kleines Bild erneut codiert wird, oder wenn die Umwandlung einer einfachen PNG-Grafik in JPEG einen Overhead hinzufügt, den sie vorher nicht hatte. Da dieses Tool immer die Größe vorher und nachher für jede Datei anzeigt, kannst du vergleichen und den Download eines Ergebnisses, das tatsächlich nicht kleiner ist, einfach überspringen oder den Qualitätsregler senken und es erneut versuchen."
+    "faq.a5": "Nein — jeder Schritt, vom Einlesen der Datei über das Zeichnen auf ein Canvas bis zur erneuten Codierung, geschieht lokal in deinem Browser-Tab; nichts wird hochgeladen, und das Schließen des Tabs löscht alles. Gelegentlich fällt eine \"komprimierte\" Datei größer aus als das Original — das passiert, wenn der Qualitätsregler sehr hoch eingestellt ist, wenn ein bereits optimiertes kleines Bild erneut codiert wird, oder wenn die Umwandlung einer einfachen PNG-Grafik in JPEG einen Overhead hinzufügt, den sie vorher nicht hatte. Da dieses Tool immer die Größe vorher und nachher für jede Datei anzeigt, kannst du vergleichen und den Download eines Ergebnisses, das tatsächlich nicht kleiner ist, einfach überspringen oder den Qualitätsregler senken und es erneut versuchen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -831,7 +891,12 @@ window.I18N_LOCALES = {
     "faq.q4": "一度に圧縮できるファイルサイズや画像枚数に制限はありますか？",
     "faq.a4": "一度に最大10枚の画像を圧縮できます。それ以上選択した場合、余分なファイルはスキップされ、その旨のメッセージが表示されます。ツール自体に厳密なファイルサイズ制限はありませんが、非常に大きな画像（数メガピクセル）はデコードと再エンコードに時間がかかります。すべての処理がサーバーではなくお使いの端末のCPUで行われるためです。また非常に大きなバッチはブラウザタブでかなりのメモリを使用することがあります。特定の画像の処理に失敗した場合は個別にフラグが付けられ、残りのバッチはそのまま完了します。",
     "faq.q5": "私の写真はどこかにアップロードされますか？また、なぜ圧縮後のファイルが元より大きくなることがあるのですか？",
-    "faq.a5": "いいえ — ファイルの読み込みからキャンバスへの描画、再エンコードまで、すべての処理はブラウザタブ内でローカルに行われます。何もアップロードされず、タブを閉じればすべて消去されます。「圧縮後」のファイルが元より大きくなることがまれにあります — これは品質スライダーが非常に高く設定されている場合、すでに最適化された小さな画像を再エンコードした場合、またはシンプルなPNG画像をJPEGに変換したことで以前はなかったオーバーヘッドが加わった場合に起こります。このツールは常に各ファイルの圧縮前後のサイズを表示するため、比較したうえで実際には小さくなっていない結果のダウンロードを見送ったり、品質スライダーを下げて再度試したりできます。"
+    "faq.a5": "いいえ — ファイルの読み込みからキャンバスへの描画、再エンコードまで、すべての処理はブラウザタブ内でローカルに行われます。何もアップロードされず、タブを閉じればすべて消去されます。「圧縮後」のファイルが元より大きくなることがまれにあります — これは品質スライダーが非常に高く設定されている場合、すでに最適化された小さな画像を再エンコードした場合、またはシンプルなPNG画像をJPEGに変換したことで以前はなかったオーバーヘッドが加わった場合に起こります。このツールは常に各ファイルの圧縮前後のサイズを表示するため、比較したうえで実際には小さくなっていない結果のダウンロードを見送ったり、品質スライダーを下げて再度試したりできます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -894,6 +959,11 @@ window.I18N_LOCALES = {
     "faq.q4": "한 번에 압축할 수 있는 이미지 개수나 파일 크기에 제한이 있나요?",
     "faq.a4": "한 번에 최대 10개의 이미지를 압축할 수 있습니다. 더 많이 선택하면 나머지 파일은 건너뛰고 안내 메시지가 표시됩니다. 도구 자체에 엄격한 파일 크기 제한은 없지만, 매우 큰 이미지(수 메가픽셀)는 서버가 아닌 사용자의 기기 CPU에서 모든 처리가 이루어지기 때문에 디코딩과 재인코딩에 시간이 더 걸리며, 매우 큰 배치는 브라우저 탭에서 눈에 띄는 메모리를 사용할 수 있습니다. 특정 이미지 처리가 실패하면 개별적으로 표시되어 나머지 배치는 그대로 완료됩니다.",
     "faq.q5": "제 사진이 어딘가에 업로드되나요? 그리고 압축한 파일이 원본보다 커지는 경우는 왜 생기나요?",
-    "faq.a5": "아니요 — 파일을 읽고 캔버스에 그린 뒤 다시 인코딩하는 모든 단계는 브라우저 탭 안에서 로컬로 이루어지며, 아무것도 업로드되지 않고 탭을 닫으면 모두 사라집니다. 가끔 \"압축된\" 파일이 원본보다 크게 나오는 경우가 있는데, 이는 품질 슬라이더를 매우 높게 설정했거나, 이미 최적화된 작은 이미지를 다시 인코딩했거나, 단순한 PNG 그래픽을 JPEG로 변환하면서 원래 없던 오버헤드가 추가된 경우에 발생합니다. 이 도구는 항상 파일마다 압축 전후 용량을 보여주므로, 비교해 보고 실제로 작아지지 않은 결과는 다운로드하지 않고 넘어가거나 품질 슬라이더를 낮춰 다시 시도할 수 있습니다."
+    "faq.a5": "아니요 — 파일을 읽고 캔버스에 그린 뒤 다시 인코딩하는 모든 단계는 브라우저 탭 안에서 로컬로 이루어지며, 아무것도 업로드되지 않고 탭을 닫으면 모두 사라집니다. 가끔 \"압축된\" 파일이 원본보다 크게 나오는 경우가 있는데, 이는 품질 슬라이더를 매우 높게 설정했거나, 이미 최적화된 작은 이미지를 다시 인코딩했거나, 단순한 PNG 그래픽을 JPEG로 변환하면서 원래 없던 오버헤드가 추가된 경우에 발생합니다. 이 도구는 항상 파일마다 압축 전후 용량을 보여주므로, 비교해 보고 실제로 작아지지 않은 결과는 다운로드하지 않고 넘어가거나 품질 슬라이더를 낮춰 다시 시도할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -53,7 +53,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Are the prices I enter sent to a server?",
     "faq.a4": "No. This discount calculator runs entirely in your browser and never sends your inputs to any server. For convenience, your last entries are stored only in your device's localStorage, and nothing leaves the browser even after you close it.",
     "faq.q5": "Why does the discount shown in a store differ from my own calculation?",
-    "faq.a5": "Stores round differently. This tool rounds the discount percentage to one decimal place, while some platforms round down (truncate) to show a lower rate. Shipping fees and loyalty points can also change the effective sale price you feel versus the raw calculation."
+    "faq.a5": "Stores round differently. This tool rounds the discount percentage to one decimal place, while some platforms round down (truncate) to show a lower rate. Shipping fees and loyalty points can also change the effective sale price you feel versus the raw calculation.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -99,7 +104,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我输入的价格会被发送到服务器吗？",
     "faq.a4": "不会。本折扣计算器完全在你的浏览器中运行，绝不会把输入发送到任何服务器。为方便起见，最近的输入仅保存在设备的 localStorage 中，即使关闭浏览器也不会外传。",
     "faq.q5": "为什么商店显示的折扣和我自己算的不一样？",
-    "faq.a5": "各商店的四舍五入方式不同。本工具将折扣百分比四舍五入到小数点后一位，而有些平台采用向下取整（截断）以显示较低的折扣率。此外，运费和积分也会让你感受到的折后价与原始计算结果不同。"
+    "faq.a5": "各商店的四舍五入方式不同。本工具将折扣百分比四舍五入到小数点后一位，而有些平台采用向下取整（截断）以显示较低的折扣率。此外，运费和积分也会让你感受到的折后价与原始计算结果不同。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -145,7 +155,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मेरी डाली गई कीमतें किसी सर्वर पर भेजी जाती हैं?",
     "faq.a4": "नहीं। यह डिस्काउंट कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है और आपके इनपुट किसी सर्वर पर नहीं भेजता। सुविधा के लिए आपकी आख़िरी प्रविष्टियाँ सिर्फ़ आपके डिवाइस के localStorage में रहती हैं, और ब्राउज़र बंद करने पर भी बाहर नहीं जातीं।",
     "faq.q5": "दुकान में दिखी छूट मेरी गणना से अलग क्यों है?",
-    "faq.a5": "दुकानें अलग-अलग तरह से राउंड करती हैं। यह टूल छूट प्रतिशत को एक दशमलव तक राउंड करता है, जबकि कुछ प्लेटफ़ॉर्म नीचे की ओर (काटकर) राउंड करके कम दर दिखाते हैं। साथ ही डिलीवरी शुल्क और रिवॉर्ड पॉइंट से महसूस होने वाली सेल कीमत गणना से अलग हो सकती है।"
+    "faq.a5": "दुकानें अलग-अलग तरह से राउंड करती हैं। यह टूल छूट प्रतिशत को एक दशमलव तक राउंड करता है, जबकि कुछ प्लेटफ़ॉर्म नीचे की ओर (काटकर) राउंड करके कम दर दिखाते हैं। साथ ही डिलीवरी शुल्क और रिवॉर्ड पॉइंट से महसूस होने वाली सेल कीमत गणना से अलग हो सकती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -191,7 +206,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se envían a un servidor los precios que introduzco?",
     "faq.a4": "No. Esta calculadora de descuentos funciona completamente en tu navegador y nunca envía tus datos a ningún servidor. Por comodidad, tus últimas entradas se guardan solo en el localStorage de tu dispositivo, y nada sale del navegador ni siquiera al cerrarlo.",
     "faq.q5": "¿Por qué el descuento que muestra la tienda difiere de mi cálculo?",
-    "faq.a5": "Cada tienda redondea de forma distinta. Esta herramienta redondea el porcentaje de descuento a un decimal, mientras que algunas plataformas redondean hacia abajo (truncan) para mostrar una tasa menor. Además, los gastos de envío y los puntos de fidelidad pueden cambiar el precio de oferta real que percibes frente al cálculo puro."
+    "faq.a5": "Cada tienda redondea de forma distinta. Esta herramienta redondea el porcentaje de descuento a un decimal, mientras que algunas plataformas redondean hacia abajo (truncan) para mostrar una tasa menor. Además, los gastos de envío y los puntos de fidelidad pueden cambiar el precio de oferta real que percibes frente al cálculo puro.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -237,7 +257,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تُرسَل الأسعار التي أدخلها إلى خادم؟",
     "faq.a4": "لا. تعمل حاسبة الخصم هذه بالكامل داخل متصفحك ولا ترسل مدخلاتك إلى أي خادم. للتسهيل، تُحفظ آخر مدخلاتك فقط في localStorage على جهازك، ولا يخرج شيء من المتصفح حتى بعد إغلاقه.",
     "faq.q5": "لماذا يختلف الخصم المعروض في المتجر عن حسابي؟",
-    "faq.a5": "تختلف المتاجر في طريقة التقريب. تقرّب هذه الأداة نسبة الخصم إلى منزلة عشرية واحدة، بينما تقرّب بعض المنصّات للأسفل (اقتطاع) لإظهار نسبة أقل. كما أن رسوم الشحن ونقاط الولاء قد تغيّر سعر البيع الفعلي الذي تشعر به مقارنةً بالحساب المجرّد."
+    "faq.a5": "تختلف المتاجر في طريقة التقريب. تقرّب هذه الأداة نسبة الخصم إلى منزلة عشرية واحدة، بينما تقرّب بعض المنصّات للأسفل (اقتطاع) لإظهار نسبة أقل. كما أن رسوم الشحن ونقاط الولاء قد تغيّر سعر البيع الفعلي الذي تشعر به مقارنةً بالحساب المجرّد.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -283,7 +308,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Les prix que je saisis sont-ils envoyés à un serveur ?",
     "faq.a4": "Non. Cette calculatrice de remise fonctionne entièrement dans votre navigateur et n'envoie jamais vos saisies à un serveur. Pour plus de commodité, vos dernières entrées sont conservées uniquement dans le localStorage de votre appareil, et rien ne quitte le navigateur, même après sa fermeture.",
     "faq.q5": "Pourquoi la remise affichée en magasin diffère-t-elle de mon calcul ?",
-    "faq.a5": "Les magasins arrondissent différemment. Cet outil arrondit le pourcentage de réduction à une décimale, tandis que certaines plateformes arrondissent à l'inférieur (troncature) pour afficher un taux plus bas. De plus, les frais de livraison et les points de fidélité peuvent modifier le prix soldé réellement ressenti par rapport au calcul brut."
+    "faq.a5": "Les magasins arrondissent différemment. Cet outil arrondit le pourcentage de réduction à une décimale, tandis que certaines plateformes arrondissent à l'inférieur (troncature) pour afficher un taux plus bas. De plus, les frais de livraison et les points de fidélité peuvent modifier le prix soldé réellement ressenti par rapport au calcul brut.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -329,7 +359,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমি যে দাম লিখি তা কি কোনো সার্ভারে পাঠানো হয়?",
     "faq.a4": "না। এই ডিসকাউন্ট ক্যালকুলেটর সম্পূর্ণ আপনার ব্রাউজারে চলে এবং আপনার ইনপুট কোনো সার্ভারে পাঠায় না। সুবিধার জন্য আপনার সর্বশেষ ইনপুট কেবল আপনার ডিভাইসের localStorage-এ থাকে, ব্রাউজার বন্ধ করলেও বাইরে যায় না।",
     "faq.q5": "দোকানে দেখানো ছাড় আমার হিসাবের চেয়ে আলাদা কেন?",
-    "faq.a5": "দোকানগুলো ভিন্নভাবে রাউন্ড করে। এই টুল ছাড়ের শতাংশ এক দশমিক পর্যন্ত রাউন্ড করে, আর কিছু প্ল্যাটফর্ম নিচের দিকে (কেটে ফেলে) রাউন্ড করে কম হার দেখায়। এছাড়া ডেলিভারি ফি ও রিওয়ার্ড পয়েন্টের কারণে অনুভূত সেল দাম হিসাব থেকে আলাদা হতে পারে।"
+    "faq.a5": "দোকানগুলো ভিন্নভাবে রাউন্ড করে। এই টুল ছাড়ের শতাংশ এক দশমিক পর্যন্ত রাউন্ড করে, আর কিছু প্ল্যাটফর্ম নিচের দিকে (কেটে ফেলে) রাউন্ড করে কম হার দেখায়। এছাড়া ডেলিভারি ফি ও রিওয়ার্ড পয়েন্টের কারণে অনুভূত সেল দাম হিসাব থেকে আলাদা হতে পারে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -375,7 +410,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Os preços que eu informo são enviados a um servidor?",
     "faq.a4": "Não. Esta calculadora de desconto funciona inteiramente no seu navegador e nunca envia seus dados a nenhum servidor. Por conveniência, suas últimas entradas ficam apenas no localStorage do seu dispositivo, e nada sai do navegador mesmo depois de fechá-lo.",
     "faq.q5": "Por que o desconto exibido na loja difere do meu cálculo?",
-    "faq.a5": "As lojas arredondam de formas diferentes. Esta ferramenta arredonda a porcentagem de desconto para uma casa decimal, enquanto algumas plataformas arredondam para baixo (truncam) para mostrar uma taxa menor. Além disso, frete e pontos de fidelidade podem mudar o preço de oferta real percebido em relação ao cálculo puro."
+    "faq.a5": "As lojas arredondam de formas diferentes. Esta ferramenta arredonda a porcentagem de desconto para uma casa decimal, enquanto algumas plataformas arredondam para baixo (truncam) para mostrar uma taxa menor. Além disso, frete e pontos de fidelidade podem mudar o preço de oferta real percebido em relação ao cálculo puro.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -421,7 +461,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Отправляются ли введённые мной цены на сервер?",
     "faq.a4": "Нет. Этот калькулятор скидки работает полностью в вашем браузере и никогда не отправляет ваши данные на сервер. Для удобства последние введённые значения хранятся только в localStorage вашего устройства и не покидают браузер даже после его закрытия.",
     "faq.q5": "Почему скидка в магазине отличается от моего расчёта?",
-    "faq.a5": "Магазины округляют по-разному. Этот инструмент округляет процент скидки до одного знака после запятой, а некоторые платформы округляют вниз (отбрасывают), показывая более низкую ставку. Кроме того, стоимость доставки и бонусные баллы могут изменить фактическую цену со скидкой по сравнению с чистым расчётом."
+    "faq.a5": "Магазины округляют по-разному. Этот инструмент округляет процент скидки до одного знака после запятой, а некоторые платформы округляют вниз (отбрасывают), показывая более низкую ставку. Кроме того, стоимость доставки и бонусные баллы могут изменить фактическую цену со скидкой по сравнению с чистым расчётом.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -467,7 +512,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میری درج کردہ قیمتیں کسی سرور کو بھیجی جاتی ہیں؟",
     "faq.a4": "نہیں۔ یہ ڈسکاؤنٹ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے اور آپ کے اِن پٹ کسی سرور کو نہیں بھیجتا۔ سہولت کے لیے آپ کی آخری اندراجات صرف آپ کے آلے کے localStorage میں رہتی ہیں، اور براؤزر بند کرنے پر بھی باہر نہیں جاتیں۔",
     "faq.q5": "دکان میں دکھائی گئی رعایت میرے حساب سے مختلف کیوں ہوتی ہے؟",
-    "faq.a5": "دکانیں مختلف طریقے سے راؤنڈ کرتی ہیں۔ یہ ٹول رعایت کے فیصد کو ایک اعشاریہ تک راؤنڈ کرتا ہے، جبکہ کچھ پلیٹ فارم نیچے کی طرف (کاٹ کر) راؤنڈ کر کے کم شرح دکھاتے ہیں۔ اس کے علاوہ ڈیلیوری فیس اور ریوارڈ پوائنٹس کی وجہ سے محسوس ہونے والی سیل قیمت حساب سے مختلف ہو سکتی ہے۔"
+    "faq.a5": "دکانیں مختلف طریقے سے راؤنڈ کرتی ہیں۔ یہ ٹول رعایت کے فیصد کو ایک اعشاریہ تک راؤنڈ کرتا ہے، جبکہ کچھ پلیٹ فارم نیچے کی طرف (کاٹ کر) راؤنڈ کر کے کم شرح دکھاتے ہیں۔ اس کے علاوہ ڈیلیوری فیس اور ریوارڈ پوائنٹس کی وجہ سے محسوس ہونے والی سیل قیمت حساب سے مختلف ہو سکتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -513,7 +563,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah harga yang saya masukkan dikirim ke server?",
     "faq.a4": "Tidak. Kalkulator diskon ini berjalan sepenuhnya di browser Anda dan tidak pernah mengirim masukan Anda ke server mana pun. Demi kenyamanan, entri terakhir Anda hanya disimpan di localStorage perangkat, dan tidak ada yang keluar dari browser bahkan setelah ditutup.",
     "faq.q5": "Mengapa diskon yang ditampilkan toko berbeda dari perhitungan saya?",
-    "faq.a5": "Setiap toko membulatkan secara berbeda. Alat ini membulatkan persentase diskon ke satu angka desimal, sedangkan beberapa platform membulatkan ke bawah (memotong) untuk menampilkan tarif lebih rendah. Selain itu, ongkos kirim dan poin loyalitas bisa mengubah harga jual yang terasa dibanding perhitungan mentah."
+    "faq.a5": "Setiap toko membulatkan secara berbeda. Alat ini membulatkan persentase diskon ke satu angka desimal, sedangkan beberapa platform membulatkan ke bawah (memotong) untuk menampilkan tarif lebih rendah. Selain itu, ongkos kirim dan poin loyalitas bisa mengubah harga jual yang terasa dibanding perhitungan mentah.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -559,7 +614,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Werden die eingegebenen Preise an einen Server gesendet?",
     "faq.a4": "Nein. Dieser Rabattrechner läuft vollständig in deinem Browser und sendet deine Eingaben nie an einen Server. Der Bequemlichkeit halber werden deine letzten Eingaben nur im localStorage deines Geräts gespeichert und verlassen den Browser auch nach dem Schließen nicht.",
     "faq.q5": "Warum weicht der im Shop angezeigte Rabatt von meiner Berechnung ab?",
-    "faq.a5": "Shops runden unterschiedlich. Dieses Tool rundet den Rabattprozentsatz auf eine Nachkommastelle, während einige Plattformen abrunden (abschneiden), um einen niedrigeren Satz anzuzeigen. Außerdem können Versandkosten und Bonuspunkte den tatsächlich empfundenen Verkaufspreis gegenüber der reinen Berechnung verändern."
+    "faq.a5": "Shops runden unterschiedlich. Dieses Tool rundet den Rabattprozentsatz auf eine Nachkommastelle, während einige Plattformen abrunden (abschneiden), um einen niedrigeren Satz anzuzeigen. Außerdem können Versandkosten und Bonuspunkte den tatsächlich empfundenen Verkaufspreis gegenüber der reinen Berechnung verändern.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -605,7 +665,12 @@ window.I18N_LOCALES = {
     "faq.q4": "入力した価格はサーバーに送信されますか？",
     "faq.a4": "いいえ。この割引計算機はブラウザ内だけで計算し、入力値を外部サーバーに送信しません。利便性のため直近の入力は端末内のlocalStorageにのみ保存され、ブラウザを閉じても外部に出ることはありません。",
     "faq.q5": "店舗表示の割引率が自分の計算と違うのはなぜですか？",
-    "faq.a5": "店舗によって丸め方が異なります。このツールは割引率を小数第1位で四捨五入しますが、一部のプラットフォームは切り捨てを使い、表示割引率を低く見せることがあります。また送料やポイントの有無によって、体感の割引後価格が計算結果と変わることがあります。"
+    "faq.a5": "店舗によって丸め方が異なります。このツールは割引率を小数第1位で四捨五入しますが、一部のプラットフォームは切り捨てを使い、表示割引率を低く見せることがあります。また送料やポイントの有無によって、体感の割引後価格が計算結果と変わることがあります。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -651,6 +716,11 @@ window.I18N_LOCALES = {
     "faq.q4": "입력한 가격이 서버로 전송되나요?",
     "faq.a4": "아닙니다. 이 할인율 계산기는 브라우저 내에서만 계산하며 입력값을 외부 서버로 전송하지 않습니다. 계산 결과는 편의를 위해 기기 내 localStorage에만 임시 저장되고, 브라우저를 닫아도 외부로 나가지 않습니다.",
     "faq.q5": "쇼핑몰에 표시된 할인율이 직접 계산한 결과와 다른 이유는?",
-    "faq.a5": "쇼핑몰은 소수점 반올림 기준이 제각각입니다. 이 도구는 소수점 첫째 자리에서 반올림하며, 일부 플랫폼은 내림(버림)을 적용해 표시 할인율을 낮게 보여주기도 합니다. 또한 배송비·적립금 포함 여부에 따라 체감 할인가 계산기 결과가 달라질 수 있습니다."
+    "faq.a5": "쇼핑몰은 소수점 반올림 기준이 제각각입니다. 이 도구는 소수점 첫째 자리에서 반올림하며, 일부 플랫폼은 내림(버림)을 적용해 표시 할인율을 낮게 보여주기도 합니다. 또한 배송비·적립금 포함 여부에 따라 체감 할인가 계산기 결과가 달라질 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

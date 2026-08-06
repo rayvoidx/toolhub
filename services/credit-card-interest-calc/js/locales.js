@@ -75,7 +75,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How much could I save by keeping my payment amount fixed instead of paying only the minimum?",
     "faq.a4": "The simulator starts both paths from the exact same first-month payment: one lets the required minimum shrink every month as the balance drops (minimum payments only), and the other keeps paying that same starting amount every month until the balance reaches zero (fixed payment). Because a fixed payment doesn't shrink, more of it goes toward principal each month, so it consistently finishes years sooner and with far less total interest — the exact years and dollars saved depend on your balance, APR, and minimum-payment rule, and appear side by side once you calculate.",
     "faq.q5": "Is my card balance or APR sent to a server?",
-    "faq.a5": "No. Every calculation, including the month-by-month minimum-payment simulation, runs entirely in your browser. Nothing you type is uploaded, logged, or stored anywhere else — your last entry is only saved in your own browser's local storage so it's there next time you open the tool. This calculator is for education only; it isn't financial, credit, or debt advice and doesn't connect to your actual card account."
+    "faq.a5": "No. Every calculation, including the month-by-month minimum-payment simulation, runs entirely in your browser. Nothing you type is uploaded, logged, or stored anywhere else — your last entry is only saved in your own browser's local storage so it's there next time you open the tool. This calculator is for education only; it isn't financial, credit, or debt advice and doesn't connect to your actual card account.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -147,7 +152,12 @@ window.I18N_LOCALES = {
     "faq.q4": "把还款额固定不变，而不是只还最低还款额，能省下多少钱？",
     "faq.a4": "模拟器让两条路径都从完全相同的第一个月还款额出发：一条是让最低还款额随余额下降而逐月缩水（仅还最低还款额）；另一条则是把这个起始金额固定不变，每月照付，直到余额清零（固定还款）。由于固定还款不会缩水，每月流向本金的比例更高，因此总能更早还清、总利息也大幅减少——具体能提前多少年、省下多少钱，取决于你的余额、年利率和最低还款规则，计算后会并排显示给你看。",
     "faq.q5": "我的信用卡余额或年利率会被发送到服务器吗？",
-    "faq.a5": "不会。包括逐月最低还款模拟在内的所有计算，完全在你的浏览器本地完成。你输入的任何内容都不会被上传、记录或存储到别处——你上一次的输入只会保存在你自己浏览器的本地存储中，方便下次打开工具时继续使用。本计算器仅用于教育目的，不构成财务、信贷或债务建议，也不会连接你的真实信用卡账户。"
+    "faq.a5": "不会。包括逐月最低还款模拟在内的所有计算，完全在你的浏览器本地完成。你输入的任何内容都不会被上传、记录或存储到别处——你上一次的输入只会保存在你自己浏览器的本地存储中，方便下次打开工具时继续使用。本计算器仅用于教育目的，不构成财务、信贷或债务建议，也不会连接你的真实信用卡账户。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -219,7 +229,12 @@ window.I18N_LOCALES = {
     "faq.q4": "सिर्फ़ न्यूनतम भुगतान करने के बजाय भुगतान राशि स्थिर रखने से कितनी बचत हो सकती है?",
     "faq.a4": "सिम्युलेटर दोनों रास्तों की शुरुआत बिल्कुल एक ही पहले महीने के भुगतान से करता है: एक में बैलेंस घटने के साथ हर महीने न्यूनतम भुगतान घटता जाता है (सिर्फ़ न्यूनतम भुगतान), और दूसरे में वही शुरुआती राशि हर महीने तब तक चुकाई जाती है जब तक बैलेंस शून्य न हो जाए (स्थिर भुगतान)। चूँकि स्थिर भुगतान घटता नहीं, हर महीने उसका ज़्यादा हिस्सा मूलधन में जाता है, इसलिए यह हमेशा सालों पहले और कहीं कम कुल ब्याज में पूरा हो जाता है — सटीक साल और राशि आपके बैलेंस, APR और न्यूनतम-भुगतान नियम पर निर्भर करती है, और गणना करने पर साथ-साथ दिखाई जाती है।",
     "faq.q5": "क्या मेरा कार्ड बैलेंस या APR किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। महीने-दर-महीने की न्यूनतम-भुगतान सिम्युलेशन सहित हर गणना पूरी तरह आपके ब्राउज़र में होती है। आप जो कुछ भी टाइप करते हैं वह कहीं और अपलोड, रिकॉर्ड या स्टोर नहीं किया जाता — आपकी आख़िरी एंट्री सिर्फ़ आपके अपने ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार टूल खोलने पर वह वहीं मिले। यह कैलकुलेटर केवल शैक्षणिक उद्देश्य के लिए है; यह वित्तीय, क्रेडिट या कर्ज़ संबंधी सलाह नहीं है और आपके असली कार्ड खाते से जुड़ा नहीं है।"
+    "faq.a5": "नहीं। महीने-दर-महीने की न्यूनतम-भुगतान सिम्युलेशन सहित हर गणना पूरी तरह आपके ब्राउज़र में होती है। आप जो कुछ भी टाइप करते हैं वह कहीं और अपलोड, रिकॉर्ड या स्टोर नहीं किया जाता — आपकी आख़िरी एंट्री सिर्फ़ आपके अपने ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार टूल खोलने पर वह वहीं मिले। यह कैलकुलेटर केवल शैक्षणिक उद्देश्य के लिए है; यह वित्तीय, क्रेडिट या कर्ज़ संबंधी सलाह नहीं है और आपके असली कार्ड खाते से जुड़ा नहीं है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -291,7 +306,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuánto podría ahorrar manteniendo mi pago fijo en lugar de pagar solo el mínimo?",
     "faq.a4": "El simulador arranca ambos caminos desde exactamente el mismo pago del primer mes: uno deja que el mínimo exigido baje cada mes conforme baja el saldo (solo pago mínimo), y el otro sigue pagando esa misma cantidad inicial cada mes hasta que el saldo llega a cero (pago fijo). Como un pago fijo no se reduce, cada mes va más hacia el principal, así que siempre termina años antes y con muchísimo menos interés total — los años y el dinero exactos que ahorras dependen de tu saldo, tu TAE y tu regla de pago mínimo, y aparecen uno junto al otro al calcular.",
     "faq.q5": "¿Se envía mi saldo o mi TAE a un servidor?",
-    "faq.a5": "No. Todos los cálculos, incluida la simulación mes a mes del pago mínimo, se ejecutan enteramente en tu navegador. Nada de lo que escribes se sube, registra ni almacena en ningún otro sitio — tu última entrada solo se guarda en el almacenamiento local de tu propio navegador, para que esté ahí la próxima vez que abras la herramienta. Esta calculadora es solo con fines educativos; no es asesoramiento financiero, crediticio ni de deuda, y no se conecta a tu cuenta de tarjeta real."
+    "faq.a5": "No. Todos los cálculos, incluida la simulación mes a mes del pago mínimo, se ejecutan enteramente en tu navegador. Nada de lo que escribes se sube, registra ni almacena en ningún otro sitio — tu última entrada solo se guarda en el almacenamiento local de tu propio navegador, para que esté ahí la próxima vez que abras la herramienta. Esta calculadora es solo con fines educativos; no es asesoramiento financiero, crediticio ni de deuda, y no se conecta a tu cuenta de tarjeta real.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -363,7 +383,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كم يمكن أن أوفّر إذا أبقيت دفعتي ثابتة بدلًا من سداد الحد الأدنى فقط؟",
     "faq.a4": "يبدأ المحاكي المسارين من الدفعة نفسها تمامًا في الشهر الأول: أحدهما يترك الحد الأدنى المطلوب يتناقص كل شهر مع انخفاض الرصيد (الحد الأدنى فقط)، والآخر يستمر في دفع المبلغ الابتدائي نفسه كل شهر حتى يصل الرصيد إلى صفر (دفعة ثابتة). ولأن الدفعة الثابتة لا تتناقص، يذهب جزء أكبر منها إلى أصل الدين كل شهر، فتنتهي دائمًا أبكر بسنوات وبفائدة إجمالية أقل بكثير — وتعتمد السنوات والمبالغ الدقيقة الموفَّرة على رصيدك ومعدل فائدتك وقاعدة الحد الأدنى لديك، وتظهر جنبًا إلى جنب عند الحساب.",
     "faq.q5": "هل يُرسل رصيد بطاقتي أو معدل الفائدة إلى خادم؟",
-    "faq.a5": "لا. تتم جميع العمليات الحسابية، بما فيها محاكاة الحد الأدنى شهرًا بشهر، بالكامل داخل متصفحك. لا شيء مما تكتبه يُرفع أو يُسجَّل أو يُخزَّن في أي مكان آخر — يُحفظ آخر إدخال لك فقط في التخزين المحلي لمتصفحك الخاص ليكون جاهزًا في المرة القادمة التي تفتح فيها الأداة. هذه الحاسبة لأغراض تعليمية فقط؛ وهي ليست استشارة مالية أو ائتمانية أو متعلقة بالديون، ولا تتصل بحساب بطاقتك الفعلي."
+    "faq.a5": "لا. تتم جميع العمليات الحسابية، بما فيها محاكاة الحد الأدنى شهرًا بشهر، بالكامل داخل متصفحك. لا شيء مما تكتبه يُرفع أو يُسجَّل أو يُخزَّن في أي مكان آخر — يُحفظ آخر إدخال لك فقط في التخزين المحلي لمتصفحك الخاص ليكون جاهزًا في المرة القادمة التي تفتح فيها الأداة. هذه الحاسبة لأغراض تعليمية فقط؛ وهي ليست استشارة مالية أو ائتمانية أو متعلقة بالديون، ولا تتصل بحساب بطاقتك الفعلي.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -435,7 +460,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Combien pourrais-je économiser en gardant mon paiement fixe au lieu de payer seulement le minimum ?",
     "faq.a4": "Le simulateur fait démarrer les deux parcours avec exactement le même paiement du premier mois : l'un laisse le minimum requis diminuer chaque mois à mesure que le solde baisse (paiement minimum seul), l'autre continue de payer ce même montant de départ chaque mois jusqu'à ce que le solde atteigne zéro (paiement fixe). Comme un paiement fixe ne diminue pas, une part plus importante va au capital chaque mois, ce qui permet de terminer systématiquement des années plus tôt et avec bien moins d'intérêts au total — le nombre d'années et le montant exacts économisés dépendent de votre solde, de votre TAEG et de votre règle de paiement minimum, et s'affichent côte à côte une fois le calcul effectué.",
     "faq.q5": "Mon solde de carte ou mon TAEG sont-ils envoyés à un serveur ?",
-    "faq.a5": "Non. Tous les calculs, y compris la simulation mois par mois du paiement minimum, s'exécutent entièrement dans votre navigateur. Rien de ce que vous saisissez n'est téléversé, enregistré ou stocké ailleurs — votre dernière saisie n'est enregistrée que dans le stockage local de votre propre navigateur, afin d'être là la prochaine fois que vous ouvrirez l'outil. Ce calculateur est uniquement à des fins éducatives ; ce n'est pas un conseil financier, de crédit ou d'endettement, et il ne se connecte pas à votre compte de carte réel."
+    "faq.a5": "Non. Tous les calculs, y compris la simulation mois par mois du paiement minimum, s'exécutent entièrement dans votre navigateur. Rien de ce que vous saisissez n'est téléversé, enregistré ou stocké ailleurs — votre dernière saisie n'est enregistrée que dans le stockage local de votre propre navigateur, afin d'être là la prochaine fois que vous ouvrirez l'outil. Ce calculateur est uniquement à des fins éducatives ; ce n'est pas un conseil financier, de crédit ou d'endettement, et il ne se connecte pas à votre compte de carte réel.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -507,7 +537,12 @@ window.I18N_LOCALES = {
     "faq.q4": "শুধু সর্বনিম্ন পরিশোধের বদলে পরিশোধ পরিমাণ স্থির রাখলে কতটা সাশ্রয় হতে পারে?",
     "faq.a4": "সিমুলেটর দুটি পথই একদম একই প্রথম মাসের পরিশোধ দিয়ে শুরু করে: একটিতে ব্যালেন্স কমার সাথে সাথে প্রতি মাসে প্রয়োজনীয় সর্বনিম্ন পরিশোধ কমতে থাকে (শুধু সর্বনিম্ন পরিশোধ), আর অন্যটিতে ব্যালেন্স শূন্য না হওয়া পর্যন্ত প্রতি মাসে সেই একই শুরুর পরিমাণ পরিশোধ করা হয় (নির্দিষ্ট পরিশোধ)। যেহেতু নির্দিষ্ট পরিশোধ কমে না, প্রতি মাসে তার বেশি অংশ আসল ঋণে যায়, তাই এটি সবসময় কয়েক বছর আগে এবং অনেক কম মোট সুদে শেষ হয় — ঠিক কত বছর ও কত টাকা সাশ্রয় হবে তা নির্ভর করে আপনার ব্যালেন্স, APR ও সর্বনিম্ন-পরিশোধের নিয়মের ওপর, এবং হিসাব করার পর তা পাশাপাশি দেখানো হয়।",
     "faq.q5": "আমার কার্ডের ব্যালেন্স বা APR কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। মাস-ভিত্তিক সর্বনিম্ন-পরিশোধ সিমুলেশনসহ প্রতিটি হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারে চলে। আপনি যা কিছু টাইপ করেন তা অন্য কোথাও আপলোড, রেকর্ড বা সংরক্ষণ করা হয় না — আপনার শেষ এন্ট্রি শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার টুলটি খুললে তা পাওয়া যায়। এই ক্যালকুলেটর শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে; এটি আর্থিক, ক্রেডিট বা ঋণ সংক্রান্ত পরামর্শ নয় এবং আপনার প্রকৃত কার্ড অ্যাকাউন্টের সাথে সংযুক্ত নয়।"
+    "faq.a5": "না। মাস-ভিত্তিক সর্বনিম্ন-পরিশোধ সিমুলেশনসহ প্রতিটি হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারে চলে। আপনি যা কিছু টাইপ করেন তা অন্য কোথাও আপলোড, রেকর্ড বা সংরক্ষণ করা হয় না — আপনার শেষ এন্ট্রি শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার টুলটি খুললে তা পাওয়া যায়। এই ক্যালকুলেটর শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে; এটি আর্থিক, ক্রেডিট বা ঋণ সংক্রান্ত পরামর্শ নয় এবং আপনার প্রকৃত কার্ড অ্যাকাউন্টের সাথে সংযুক্ত নয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -579,7 +614,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quanto eu poderia economizar mantendo meu pagamento fixo em vez de pagar só o mínimo?",
     "faq.a4": "O simulador começa os dois caminhos a partir exatamente do mesmo pagamento do primeiro mês: um deixa o mínimo exigido diminuir todo mês conforme o saldo cai (só pagamento mínimo), e o outro continua pagando esse mesmo valor inicial todo mês até o saldo chegar a zero (pagamento fixo). Como um pagamento fixo não diminui, uma parte maior dele vai para o principal a cada mês, então ele sempre termina anos antes e com muito menos juros totais — os anos e o valor exatos economizados dependem do seu saldo, da sua taxa anual e da sua regra de pagamento mínimo, e aparecem lado a lado depois de calcular.",
     "faq.q5": "Meu saldo de cartão ou minha taxa de juros são enviados a um servidor?",
-    "faq.a5": "Não. Todos os cálculos, incluindo a simulação mês a mês do pagamento mínimo, rodam inteiramente no seu navegador. Nada do que você digita é enviado, registrado ou armazenado em outro lugar — sua última entrada só é salva no armazenamento local do seu próprio navegador, para estar lá na próxima vez que você abrir a ferramenta. Esta calculadora é apenas para fins educativos; não é aconselhamento financeiro, de crédito ou de dívida, e não se conecta à sua conta de cartão real."
+    "faq.a5": "Não. Todos os cálculos, incluindo a simulação mês a mês do pagamento mínimo, rodam inteiramente no seu navegador. Nada do que você digita é enviado, registrado ou armazenado em outro lugar — sua última entrada só é salva no armazenamento local do seu próprio navegador, para estar lá na próxima vez que você abrir a ferramenta. Esta calculadora é apenas para fins educativos; não é aconselhamento financeiro, de crédito ou de dívida, e não se conecta à sua conta de cartão real.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -651,7 +691,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Сколько я могу сэкономить, если буду держать платёж фиксированным вместо оплаты только минимума?",
     "faq.a4": "Симулятор запускает оба сценария с одного и того же платежа за первый месяц: в одном требуемый минимум уменьшается каждый месяц по мере снижения баланса (только минимальный платёж), а в другом та же начальная сумма выплачивается каждый месяц, пока баланс не станет равен нулю (фиксированный платёж). Поскольку фиксированный платёж не уменьшается, всё большая его часть каждый месяц идёт на основной долг, поэтому он неизменно завершается на годы раньше и с гораздо меньшей суммой процентов — точные сэкономленные годы и деньги зависят от вашего баланса, ставки и правила минимального платежа и отображаются рядом после расчёта.",
     "faq.q5": "Отправляется ли баланс моей карты или ставка на сервер?",
-    "faq.a5": "Нет. Все расчёты, включая помесячное моделирование минимального платежа, выполняются полностью в вашем браузере. Ничто из введённого вами не загружается, не записывается и не хранится где-либо ещё — ваш последний ввод сохраняется только в локальном хранилище вашего браузера, чтобы быть под рукой при следующем открытии инструмента. Этот калькулятор предназначен только для образовательных целей: это не финансовая, кредитная или долговая консультация, и он не подключается к вашему реальному счёту карты."
+    "faq.a5": "Нет. Все расчёты, включая помесячное моделирование минимального платежа, выполняются полностью в вашем браузере. Ничто из введённого вами не загружается, не записывается и не хранится где-либо ещё — ваш последний ввод сохраняется только в локальном хранилище вашего браузера, чтобы быть под рукой при следующем открытии инструмента. Этот калькулятор предназначен только для образовательных целей: это не финансовая, кредитная или долговая консультация, и он не подключается к вашему реальному счёту карты.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -723,7 +768,12 @@ window.I18N_LOCALES = {
     "faq.q4": "صرف کم از کم ادائیگی کرنے کے بجائے ادائیگی کی رقم مستقل رکھنے سے کتنی بچت ہو سکتی ہے؟",
     "faq.a4": "سمیولیٹر دونوں راستوں کا آغاز بالکل ایک ہی پہلے مہینے کی ادائیگی سے کرتا ہے: ایک میں بیلنس کم ہونے کے ساتھ ہر مہینے مطلوبہ کم از کم ادائیگی کم ہوتی جاتی ہے (صرف کم از کم ادائیگی)، اور دوسرے میں وہی ابتدائی رقم ہر مہینے اس وقت تک ادا کی جاتی ہے جب تک بیلنس صفر نہ ہو جائے (مقررہ ادائیگی)۔ چونکہ مقررہ ادائیگی کم نہیں ہوتی، ہر مہینے اس کا زیادہ حصہ اصل رقم میں جاتا ہے، اس لیے یہ ہمیشہ کئی سال پہلے اور کہیں کم کل سود کے ساتھ مکمل ہوتی ہے — بچنے والے سالوں اور رقم کا صحیح تعین آپ کے بیلنس، APR اور کم از کم ادائیگی کے اصول پر منحصر ہے، اور حساب کے بعد ساتھ ساتھ دکھایا جاتا ہے۔",
     "faq.q5": "کیا میرا کارڈ بیلنس یا APR کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ماہ بہ ماہ کم از کم ادائیگی کی سمیولیشن سمیت ہر حساب مکمل طور پر آپ کے براؤزر میں ہوتا ہے۔ آپ جو کچھ بھی ٹائپ کرتے ہیں وہ کہیں اور اپ لوڈ، ریکارڈ یا محفوظ نہیں کیا جاتا — آپ کی آخری اندراج صرف آپ کے اپنے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہے تاکہ اگلی بار ٹول کھولنے پر وہ موجود ہو۔ یہ کیلکولیٹر صرف تعلیمی مقاصد کے لیے ہے؛ یہ مالی، کریڈٹ یا قرض سے متعلق مشورہ نہیں ہے اور آپ کے اصل کارڈ اکاؤنٹ سے منسلک نہیں ہے۔"
+    "faq.a5": "نہیں۔ ماہ بہ ماہ کم از کم ادائیگی کی سمیولیشن سمیت ہر حساب مکمل طور پر آپ کے براؤزر میں ہوتا ہے۔ آپ جو کچھ بھی ٹائپ کرتے ہیں وہ کہیں اور اپ لوڈ، ریکارڈ یا محفوظ نہیں کیا جاتا — آپ کی آخری اندراج صرف آپ کے اپنے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہے تاکہ اگلی بار ٹول کھولنے پر وہ موجود ہو۔ یہ کیلکولیٹر صرف تعلیمی مقاصد کے لیے ہے؛ یہ مالی، کریڈٹ یا قرض سے متعلق مشورہ نہیں ہے اور آپ کے اصل کارڈ اکاؤنٹ سے منسلک نہیں ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -795,7 +845,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Berapa banyak yang bisa saya hemat dengan menjaga pembayaran tetap alih-alih hanya membayar minimum?",
     "faq.a4": "Simulator memulai kedua jalur dari pembayaran bulan pertama yang persis sama: satu membiarkan minimum yang diwajibkan menyusut setiap bulan seiring saldo turun (hanya pembayaran minimum), dan yang lain terus membayar jumlah awal yang sama setiap bulan hingga saldo mencapai nol (pembayaran tetap). Karena pembayaran tetap tidak menyusut, porsi yang lebih besar darinya masuk ke pokok utang setiap bulan, sehingga selalu selesai bertahun-tahun lebih cepat dan dengan total bunga yang jauh lebih sedikit — tahun dan jumlah tepat yang dihemat bergantung pada saldo, APR, dan aturan pembayaran minimum Anda, dan ditampilkan berdampingan setelah Anda menghitung.",
     "faq.q5": "Apakah saldo kartu atau APR saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan, termasuk simulasi pembayaran minimum bulan demi bulan, berjalan sepenuhnya di browser Anda. Tidak ada yang Anda ketik yang diunggah, dicatat, atau disimpan di tempat lain — entri terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri agar tersedia saat Anda membuka alat ini lagi. Kalkulator ini hanya untuk tujuan edukasi; ini bukan nasihat keuangan, kredit, atau utang, dan tidak terhubung ke akun kartu Anda yang sebenarnya."
+    "faq.a5": "Tidak. Semua perhitungan, termasuk simulasi pembayaran minimum bulan demi bulan, berjalan sepenuhnya di browser Anda. Tidak ada yang Anda ketik yang diunggah, dicatat, atau disimpan di tempat lain — entri terakhir Anda hanya disimpan di penyimpanan lokal browser Anda sendiri agar tersedia saat Anda membuka alat ini lagi. Kalkulator ini hanya untuk tujuan edukasi; ini bukan nasihat keuangan, kredit, atau utang, dan tidak terhubung ke akun kartu Anda yang sebenarnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -867,7 +922,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie viel könnte ich sparen, wenn ich meine Rate fest halte, statt nur die Mindestrate zu zahlen?",
     "faq.a4": "Der Simulator startet beide Wege mit genau derselben Rate im ersten Monat: Bei einem sinkt die geforderte Mindestrate jeden Monat, sobald der Saldo sinkt (nur Mindestrate), beim anderen wird dieser gleiche Startbetrag jeden Monat weiterbezahlt, bis der Saldo null erreicht (feste Rate). Da eine feste Rate nicht sinkt, fließt jeden Monat ein größerer Anteil in die Tilgung, sodass sie stets Jahre früher und mit deutlich weniger Gesamtzinsen endet — die genauen gesparten Jahre und Beträge hängen von deinem Saldo, deinem Zinssatz und deiner Mindestraten-Regel ab und werden nach der Berechnung nebeneinander angezeigt.",
     "faq.q5": "Werden mein Kartensaldo oder mein Zinssatz an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen, einschließlich der monatlichen Mindestzahlungs-Simulation, laufen vollständig in deinem Browser. Nichts, was du eingibst, wird hochgeladen, protokolliert oder anderswo gespeichert — deine letzte Eingabe wird nur im lokalen Speicher deines eigenen Browsers gesichert, damit sie beim nächsten Öffnen des Tools noch da ist. Dieser Rechner dient ausschließlich Bildungszwecken; er ist keine Finanz-, Kredit- oder Schuldenberatung und verbindet sich nicht mit deinem tatsächlichen Kartenkonto."
+    "faq.a5": "Nein. Alle Berechnungen, einschließlich der monatlichen Mindestzahlungs-Simulation, laufen vollständig in deinem Browser. Nichts, was du eingibst, wird hochgeladen, protokolliert oder anderswo gespeichert — deine letzte Eingabe wird nur im lokalen Speicher deines eigenen Browsers gesichert, damit sie beim nächsten Öffnen des Tools noch da ist. Dieser Rechner dient ausschließlich Bildungszwecken; er ist keine Finanz-, Kredit- oder Schuldenberatung und verbindet sich nicht mit deinem tatsächlichen Kartenkonto.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -939,7 +999,12 @@ window.I18N_LOCALES = {
     "faq.q4": "最低返済額のみを払う代わりに返済額を一定に保つと、どれくらい節約できますか？",
     "faq.a4": "このシミュレーターは、まったく同じ最初の月の返済額から両方の経路をスタートさせます。一方は残高が減るにつれて必要な最低返済額が毎月縮んでいくケース（最低返済額のみ）、もう一方は残高がゼロになるまで同じ最初の金額を毎月払い続けるケース（一定額返済）です。一定額返済は縮まないため、毎月より多くの部分が元本返済に充てられ、結果として常に数年早く、総利息もはるかに少なく完済できます——具体的に節約できる年数と金額は、残高・APR・最低返済額のルールによって異なり、計算後に両方の結果が並べて表示されます。",
     "faq.q5": "カードの残高やAPRはサーバーに送信されますか？",
-    "faq.a5": "いいえ。月ごとの最低返済額シミュレーションを含め、すべての計算はブラウザ内だけで完結します。入力した内容がアップロードされたり、記録・保存されたりすることは一切ありません——最後に入力した内容は、次回このツールを開いたときのためにお使いのブラウザのローカルストレージにのみ保存されます。この計算機はあくまで教育目的のものであり、金融・信用・債務に関する助言ではなく、実際のカード口座に接続することもありません。"
+    "faq.a5": "いいえ。月ごとの最低返済額シミュレーションを含め、すべての計算はブラウザ内だけで完結します。入力した内容がアップロードされたり、記録・保存されたりすることは一切ありません——最後に入力した内容は、次回このツールを開いたときのためにお使いのブラウザのローカルストレージにのみ保存されます。この計算機はあくまで教育目的のものであり、金融・信用・債務に関する助言ではなく、実際のカード口座に接続することもありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1011,6 +1076,11 @@ window.I18N_LOCALES = {
     "faq.q4": "최소결제만 하는 대신 결제금액을 고정하면 얼마나 절약할 수 있나요?",
     "faq.a4": "이 시뮬레이터는 두 시나리오를 정확히 같은 첫 회차 결제금액에서 출발시킵니다. 하나는 잔액이 줄어들 때마다 매달 요구되는 최소결제금액도 함께 줄어드는 경우(최소결제만), 다른 하나는 잔액이 0이 될 때까지 그 시작 금액을 매달 그대로 유지하는 경우(고정 결제)입니다. 고정 결제금액은 줄어들지 않으므로 매달 더 많은 금액이 원금 상환에 쓰이고, 그 결과 항상 몇 년 더 빨리, 훨씬 적은 총이자로 완납됩니다 — 정확히 몇 년, 얼마를 절약하는지는 잔액·연이율·최소결제 규칙에 따라 달라지며, 계산 후 두 결과가 나란히 표시됩니다.",
     "faq.q5": "제 카드 잔액이나 연이율이 서버로 전송되나요?",
-    "faq.a5": "아니요. 월 단위 최소결제 시뮬레이션을 포함한 모든 계산은 전적으로 사용자의 브라우저에서 실행됩니다. 입력한 어떤 내용도 업로드, 기록, 저장되지 않으며 — 마지막 입력값은 다음에 이 도구를 다시 열 때를 위해 사용자 본인 브라우저의 로컬 저장소에만 저장됩니다. 이 계산기는 교육 목적으로만 제공되며 금융·신용·부채 관련 자문이 아니고, 실제 카드 계좌에 연결되지도 않습니다."
+    "faq.a5": "아니요. 월 단위 최소결제 시뮬레이션을 포함한 모든 계산은 전적으로 사용자의 브라우저에서 실행됩니다. 입력한 어떤 내용도 업로드, 기록, 저장되지 않으며 — 마지막 입력값은 다음에 이 도구를 다시 열 때를 위해 사용자 본인 브라우저의 로컬 저장소에만 저장됩니다. 이 계산기는 교육 목적으로만 제공되며 금융·신용·부채 관련 자문이 아니고, 실제 카드 계좌에 연결되지도 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why can a date in late December or early January belong to a different ISO week-year than its calendar year?",
     "faq.a4": "Because week 1 is anchored to the year's first Thursday rather than to January 1st, the two or three days right before or after New Year's Day can end up in the 'wrong' year's week count. December 29-31 sometimes fall in week 1 of the following year — for example, December 30-31, 2024 are both in ISO week 1 of 2025. Symmetrically, January 1-3 can fall in the last week of the previous year — January 1, 2023 is in ISO week 52 of 2022. The date checker above flags this automatically whenever a date's calendar year and ISO week-year don't match.",
     "faq.q5": "Is my date sent to a server?",
-    "faq.a5": "No. Every calculation in this week number checker — today's week, any date you type in, and the full year table — runs entirely in your browser using plain JavaScript date math. Nothing you enter is uploaded, logged, or stored anywhere except your own browser's local storage, which only remembers your last lookup so the page can restore it next time you visit."
+    "faq.a5": "No. Every calculation in this week number checker — today's week, any date you type in, and the full year table — runs entirely in your browser using plain JavaScript date math. Nothing you enter is uploaded, logged, or stored anywhere except your own browser's local storage, which only remembers your last lookup so the page can restore it next time you visit.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -115,7 +120,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么十二月末或一月初的日期，其 ISO 周年可能与日历年份不同？",
     "faq.a4": "因为第 1 周是以当年首个星期四为基准，而不是以 1 月 1 日为基准，所以新年前后的两三天有时会被计入“不同”年份的周数。12 月 29 日至 31 日有时会落入次年的第 1 周——例如 2024 年 12 月 30 日和 31 日都属于 2025 年 ISO 第 1 周。反过来，1 月 1 日至 3 日有时会落入上一年的最后一周——例如 2023 年 1 月 1 日属于 2022 年 ISO 第 52 周。当您输入的日期出现日历年份与 ISO 周年不一致的情况时，上方的日期查询工具会自动提示这一点。",
     "faq.q5": "我输入的日期会被发送到服务器吗？",
-    "faq.a5": "不会。本周数查询工具的所有计算——包括今天的周数、您输入的任意日期，以及全年周数表——全部使用纯 JavaScript 日期运算，完全在您的浏览器本地完成。您输入的内容不会被上传、记录或存储在任何地方，唯一的例外是浏览器自身的本地存储，它只会记住您上次查询的内容，以便下次访问时自动恢复。"
+    "faq.a5": "不会。本周数查询工具的所有计算——包括今天的周数、您输入的任意日期，以及全年周数表——全部使用纯 JavaScript 日期运算，完全在您的浏览器本地完成。您输入的内容不会被上传、记录或存储在任何地方，唯一的例外是浏览器自身的本地存储，它只会记住您上次查询的内容，以便下次访问时自动恢复。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "दिसंबर के अंत या जनवरी की शुरुआत की तारीख का ISO सप्ताह-वर्ष उसके कैलेंडर वर्ष से अलग क्यों हो सकता है?",
     "faq.a4": "क्योंकि सप्ताह 1 साल के पहले गुरुवार पर आधारित होता है, न कि 1 जनवरी पर, इसलिए नए साल के आसपास के दो-तीन दिन कभी-कभी 'गलत' साल की सप्ताह-गिनती में आ जाते हैं। 29-31 दिसंबर कभी-कभी अगले साल के सप्ताह 1 में आ जाते हैं — जैसे 30-31 दिसंबर 2024, दोनों 2025 के ISO सप्ताह 1 में हैं। इसी तरह, 1-3 जनवरी पिछले साल के अंतिम सप्ताह में आ सकते हैं — 1 जनवरी 2023, 2022 के ISO सप्ताह 52 में है। जब भी डाली गई तारीख का कैलेंडर वर्ष और ISO सप्ताह-वर्ष मेल नहीं खाते, ऊपर दिया गया तारीख-जाँचक इसे अपने आप बता देता है।",
     "faq.q5": "क्या मेरी तारीख किसी सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। इस सप्ताह-नंबर जाँचक की हर गणना — आज का सप्ताह, आपकी डाली कोई भी तारीख, और पूरे साल की तालिका — पूरी तरह आपके ब्राउज़र में सामान्य JavaScript तारीख-गणित से होती है। आपकी डाली कोई भी जानकारी कहीं अपलोड, रिकॉर्ड या स्टोर नहीं होती, सिवाय आपके अपने ब्राउज़र के लोकल स्टोरेज के, जो सिर्फ़ आपकी पिछली खोज याद रखता है ताकि अगली बार पेज उसे अपने आप वापस दिखा सके।"
+    "faq.a5": "नहीं। इस सप्ताह-नंबर जाँचक की हर गणना — आज का सप्ताह, आपकी डाली कोई भी तारीख, और पूरे साल की तालिका — पूरी तरह आपके ब्राउज़र में सामान्य JavaScript तारीख-गणित से होती है। आपकी डाली कोई भी जानकारी कहीं अपलोड, रिकॉर्ड या स्टोर नहीं होती, सिवाय आपके अपने ब्राउज़र के लोकल स्टोरेज के, जो सिर्फ़ आपकी पिछली खोज याद रखता है ताकि अगली बार पेज उसे अपने आप वापस दिखा सके।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -215,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué una fecha de finales de diciembre o principios de enero puede pertenecer a un año-semana ISO distinto de su año calendario?",
     "faq.a4": "Como la semana 1 está anclada al primer jueves del año y no al 1 de enero, los dos o tres días justo antes o después de Año Nuevo pueden acabar en el conteo de semanas del año 'equivocado'. El 29-31 de diciembre a veces cae en la semana 1 del año siguiente — por ejemplo, el 30 y 31 de diciembre de 2024 están ambos en la semana ISO 1 de 2025. De forma simétrica, el 1-3 de enero puede caer en la última semana del año anterior — el 1 de enero de 2023 está en la semana ISO 52 de 2022. El comprobador de fechas de arriba señala esto automáticamente siempre que el año calendario y el año-semana ISO de una fecha no coincidan.",
     "faq.q5": "¿Se envía mi fecha a un servidor?",
-    "faq.a5": "No. Todos los cálculos de este comprobador de número de semana —la semana de hoy, cualquier fecha que escribas y la tabla anual completa— se ejecutan enteramente en tu navegador usando simples operaciones de fecha en JavaScript. Nada de lo que introduces se sube, se registra ni se guarda en ningún sitio, salvo en el almacenamiento local de tu propio navegador, que solo recuerda tu última consulta para poder restaurarla la próxima vez que visites la página."
+    "faq.a5": "No. Todos los cálculos de este comprobador de número de semana —la semana de hoy, cualquier fecha que escribas y la tabla anual completa— se ejecutan enteramente en tu navegador usando simples operaciones de fecha en JavaScript. Nada de lo que introduces se sube, se registra ni se guarda en ningún sitio, salvo en el almacenamiento local de tu propio navegador, que solo recuerda tu última consulta para poder restaurarla la próxima vez que visites la página.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -265,7 +285,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا قد ينتمي تاريخ في أواخر ديسمبر أو أوائل يناير إلى سنة أسبوع ISO مختلفة عن سنته التقويمية؟",
     "faq.a4": "لأن الأسبوع الأول مرتبط بأول خميس في السنة وليس بيوم 1 يناير، فقد ينتهي الأمر باليومين أو الثلاثة أيام المحيطة برأس السنة إلى عدّ أسابيع سنة 'مختلفة'. فأيام 29 إلى 31 ديسمبر تقع أحيانًا في الأسبوع الأول من السنة التالية — فمثلًا يقع يوما 30 و31 ديسمبر 2024 كلاهما في الأسبوع الأول وفق ISO من سنة 2025. وبالمثل، قد تقع أيام 1 إلى 3 يناير في آخر أسبوع من السنة السابقة — فيقع 1 يناير 2023 في الأسبوع 52 وفق ISO من سنة 2022. وتنبّه أداة التحقق من التاريخ أعلاه إلى ذلك تلقائيًا كلما اختلفت السنة التقويمية عن سنة أسبوع ISO لتاريخ ما.",
     "faq.q5": "هل يُرسَل تاريخي إلى خادم؟",
-    "faq.a5": "لا. تُنفَّذ جميع حسابات أداة التحقق من رقم الأسبوع هذه — أسبوع اليوم، وأي تاريخ تكتبه، وجدول السنة الكاملة — بالكامل داخل متصفحك باستخدام عمليات تاريخ بسيطة بلغة JavaScript. لا يُرفَع أو يُسجَّل أو يُخزَّن أي شيء تُدخله في أي مكان، باستثناء التخزين المحلي في متصفحك نفسه، الذي لا يتذكّر سوى آخر عملية بحث لك حتى تتمكن الصفحة من استعادتها في زيارتك التالية."
+    "faq.a5": "لا. تُنفَّذ جميع حسابات أداة التحقق من رقم الأسبوع هذه — أسبوع اليوم، وأي تاريخ تكتبه، وجدول السنة الكاملة — بالكامل داخل متصفحك باستخدام عمليات تاريخ بسيطة بلغة JavaScript. لا يُرفَع أو يُسجَّل أو يُخزَّن أي شيء تُدخله في أي مكان، باستثناء التخزين المحلي في متصفحك نفسه، الذي لا يتذكّر سوى آخر عملية بحث لك حتى تتمكن الصفحة من استعادتها في زيارتك التالية.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -315,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi une date de fin décembre ou début janvier peut-elle appartenir à une année-semaine ISO différente de son année civile ?",
     "faq.a4": "Comme la semaine 1 est ancrée au premier jeudi de l'année plutôt qu'au 1er janvier, les deux ou trois jours entourant le Nouvel An peuvent se retrouver dans le décompte de semaines de l'année « inattendue ». Les 29-31 décembre tombent parfois dans la semaine 1 de l'année suivante — par exemple, les 30 et 31 décembre 2024 sont tous deux dans la semaine ISO 1 de 2025. Symétriquement, les 1er-3 janvier peuvent tomber dans la dernière semaine de l'année précédente — le 1er janvier 2023 est dans la semaine ISO 52 de 2022. Le vérificateur de date ci-dessus signale automatiquement ce cas dès que l'année civile et l'année-semaine ISO d'une date ne coïncident pas.",
     "faq.q5": "Ma date est-elle envoyée à un serveur ?",
-    "faq.a5": "Non. Tous les calculs de ce vérificateur de numéro de semaine — la semaine du jour, toute date que vous saisissez, et le tableau annuel complet — s'exécutent entièrement dans votre navigateur à l'aide de simples calculs de date en JavaScript. Rien de ce que vous saisissez n'est envoyé, enregistré ou stocké où que ce soit, à l'exception du stockage local de votre propre navigateur, qui ne mémorise que votre dernière recherche afin que la page puisse la restaurer lors de votre prochaine visite."
+    "faq.a5": "Non. Tous les calculs de ce vérificateur de numéro de semaine — la semaine du jour, toute date que vous saisissez, et le tableau annuel complet — s'exécutent entièrement dans votre navigateur à l'aide de simples calculs de date en JavaScript. Rien de ce que vous saisissez n'est envoyé, enregistré ou stocké où que ce soit, à l'exception du stockage local de votre propre navigateur, qui ne mémorise que votre dernière recherche afin que la page puisse la restaurer lors de votre prochaine visite.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -365,7 +395,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ডিসেম্বরের শেষের বা জানুয়ারির শুরুর একটি তারিখ কেন তার ক্যালেন্ডার বছরের চেয়ে ভিন্ন ISO সপ্তাহ-বছরের অন্তর্গত হতে পারে?",
     "faq.a4": "যেহেতু ১ম সপ্তাহ বছরের প্রথম বৃহস্পতিবারের সাথে যুক্ত, ১ জানুয়ারির সাথে নয়, তাই নববর্ষের ঠিক আগে বা পরের দুই-তিন দিন কখনো কখনো 'ভুল' বছরের সপ্তাহ-গণনায় চলে যেতে পারে। ২৯-৩১ ডিসেম্বর কখনো কখনো পরের বছরের ১ম সপ্তাহে পড়ে — যেমন, ৩০-৩১ ডিসেম্বর ২০২৪ উভয়ই ২০২৫ সালের ISO ১ম সপ্তাহে। একইভাবে, ১-৩ জানুয়ারি আগের বছরের শেষ সপ্তাহে পড়তে পারে — ১ জানুয়ারি ২০২৩, ২০২২ সালের ISO ৫২তম সপ্তাহে পড়ে। উপরের তারিখ-চেকার এটি স্বয়ংক্রিয়ভাবে চিহ্নিত করে যখনই কোনো তারিখের ক্যালেন্ডার বছর ও ISO সপ্তাহ-বছর মিলে না।",
     "faq.q5": "আমার তারিখ কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই সপ্তাহ নম্বর চেকারের প্রতিটি হিসাব — আজকের সপ্তাহ, আপনার লেখা যেকোনো তারিখ, এবং সারাবছরের তালিকা — সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript তারিখ-গণিত ব্যবহার করে সম্পন্ন হয়। আপনার দেওয়া কোনো তথ্য কোথাও আপলোড, লগ বা সংরক্ষণ করা হয় না, শুধুমাত্র আপনার নিজের ব্রাউজারের লোকাল স্টোরেজ ছাড়া, যা কেবল আপনার শেষ অনুসন্ধানটি মনে রাখে যাতে পরের বার পেজে এলে তা পুনরুদ্ধার করা যায়।"
+    "faq.a5": "না। এই সপ্তাহ নম্বর চেকারের প্রতিটি হিসাব — আজকের সপ্তাহ, আপনার লেখা যেকোনো তারিখ, এবং সারাবছরের তালিকা — সম্পূর্ণভাবে আপনার ব্রাউজারে সাধারণ JavaScript তারিখ-গণিত ব্যবহার করে সম্পন্ন হয়। আপনার দেওয়া কোনো তথ্য কোথাও আপলোড, লগ বা সংরক্ষণ করা হয় না, শুধুমাত্র আপনার নিজের ব্রাউজারের লোকাল স্টোরেজ ছাড়া, যা কেবল আপনার শেষ অনুসন্ধানটি মনে রাখে যাতে পরের বার পেজে এলে তা পুনরুদ্ধার করা যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que uma data no fim de dezembro ou início de janeiro pode pertencer a um ano-semana ISO diferente do seu ano civil?",
     "faq.a4": "Como a semana 1 está ancorada na primeira quinta-feira do ano, e não no dia 1º de janeiro, os dois ou três dias logo antes ou depois do Ano Novo podem acabar na contagem de semanas do ano 'errado'. Os dias 29 a 31 de dezembro às vezes caem na semana 1 do ano seguinte — por exemplo, 30 e 31 de dezembro de 2024 estão ambos na semana ISO 1 de 2025. De forma simétrica, os dias 1 a 3 de janeiro podem cair na última semana do ano anterior — 1º de janeiro de 2023 está na semana ISO 52 de 2022. O verificador de datas acima sinaliza isso automaticamente sempre que o ano civil e o ano-semana ISO de uma data não coincidem.",
     "faq.q5": "Minha data é enviada para um servidor?",
-    "faq.a5": "Não. Todo cálculo neste verificador de número de semana — a semana de hoje, qualquer data que você digitar e a tabela anual completa — é feito inteiramente no seu navegador usando cálculos simples de data em JavaScript. Nada do que você digita é enviado, registrado ou armazenado em nenhum lugar, exceto no armazenamento local do seu próprio navegador, que só lembra sua última consulta para que a página possa restaurá-la na próxima visita."
+    "faq.a5": "Não. Todo cálculo neste verificador de número de semana — a semana de hoje, qualquer data que você digitar e a tabela anual completa — é feito inteiramente no seu navegador usando cálculos simples de data em JavaScript. Nada do que você digita é enviado, registrado ou armazenado em nenhum lugar, exceto no armazenamento local do seu próprio navegador, que só lembra sua última consulta para que a página possa restaurá-la na próxima visita.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -465,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему дата конца декабря или начала января может относиться к другому году недели ISO, чем её календарный год?",
     "faq.a4": "Поскольку 1-я неделя привязана к первому четвергу года, а не к 1 января, два-три дня непосредственно до или после Нового года могут попасть в отсчёт недель «не того» года. 29–31 декабря иногда попадают в 1-ю неделю следующего года — например, 30 и 31 декабря 2024 года оба относятся к 1-й неделе ISO 2025 года. Аналогично, 1–3 января могут попасть в последнюю неделю предыдущего года — 1 января 2023 года относится к 52-й неделе ISO 2022 года. Проверка даты выше автоматически отмечает это всякий раз, когда календарный год и год недели ISO для даты не совпадают.",
     "faq.q5": "Отправляется ли моя дата на сервер?",
-    "faq.a5": "Нет. Все расчёты в этом инструменте проверки номера недели — текущая неделя, любая введённая вами дата и таблица за весь год — выполняются полностью в вашем браузере с помощью обычных операций с датами на JavaScript. Ничто из введённого вами не загружается, не журналируется и не сохраняется где-либо, кроме локального хранилища вашего собственного браузера, которое запоминает только ваш последний запрос, чтобы страница могла восстановить его при следующем посещении."
+    "faq.a5": "Нет. Все расчёты в этом инструменте проверки номера недели — текущая неделя, любая введённая вами дата и таблица за весь год — выполняются полностью в вашем браузере с помощью обычных операций с датами на JavaScript. Ничто из введённого вами не загружается, не журналируется и не сохраняется где-либо, кроме локального хранилища вашего собственного браузера, которое запоминает только ваш последний запрос, чтобы страница могла восстановить его при следующем посещении.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -515,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "دسمبر کے آخر یا جنوری کے شروع کی تاریخ اپنے کیلنڈر سال سے مختلف ISO ہفتہ-سال میں کیوں آ سکتی ہے؟",
     "faq.a4": "چونکہ ہفتہ 1 سال کے پہلے جمعرات سے جڑا ہوتا ہے، نہ کہ یکم جنوری سے، اس لیے نئے سال کے آس پاس کے دو تین دن کبھی کبھار 'غلط' سال کے ہفتہ شمار میں چلے جاتے ہیں۔ 29 سے 31 دسمبر کبھی کبھار اگلے سال کے ہفتہ 1 میں آتے ہیں — مثال کے طور پر، 30 اور 31 دسمبر 2024 دونوں 2025 کے ISO ہفتہ 1 میں ہیں۔ اسی طرح، یکم سے 3 جنوری پچھلے سال کے آخری ہفتے میں آ سکتے ہیں — یکم جنوری 2023، 2022 کے ISO ہفتہ 52 میں ہے۔ اوپر دیا گیا تاریخ چیکر خود بخود اس کی نشاندہی کرتا ہے جب بھی کسی تاریخ کا کیلنڈر سال اور ISO ہفتہ-سال مماثل نہ ہوں۔",
     "faq.q5": "کیا میری تاریخ سرور کو بھیجی جاتی ہے؟",
-    "faq.a5": "نہیں۔ اس ہفتہ نمبر چیکر کا ہر حساب — آج کا ہفتہ، آپ کی درج کردہ کوئی بھی تاریخ، اور مکمل سالانہ جدول — مکمل طور پر آپ کے براؤزر میں سادہ JavaScript تاریخ حساب کتاب استعمال کرتے ہوئے ہوتا ہے۔ آپ کی درج کردہ کوئی بھی چیز کہیں اپ لوڈ، ریکارڈ یا محفوظ نہیں کی جاتی، سوائے آپ کے اپنے براؤزر کے مقامی اسٹوریج کے، جو صرف آپ کی آخری تلاش یاد رکھتا ہے تاکہ اگلی بار پیج اسے بحال کر سکے۔"
+    "faq.a5": "نہیں۔ اس ہفتہ نمبر چیکر کا ہر حساب — آج کا ہفتہ، آپ کی درج کردہ کوئی بھی تاریخ، اور مکمل سالانہ جدول — مکمل طور پر آپ کے براؤزر میں سادہ JavaScript تاریخ حساب کتاب استعمال کرتے ہوئے ہوتا ہے۔ آپ کی درج کردہ کوئی بھی چیز کہیں اپ لوڈ، ریکارڈ یا محفوظ نہیں کی جاتی، سوائے آپ کے اپنے براؤزر کے مقامی اسٹوریج کے، جو صرف آپ کی آخری تلاش یاد رکھتا ہے تاکہ اگلی بار پیج اسے بحال کر سکے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -565,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa tanggal di akhir Desember atau awal Januari bisa termasuk tahun minggu ISO yang berbeda dari tahun kalendernya?",
     "faq.a4": "Karena minggu ke-1 berpatokan pada Kamis pertama tahun itu, bukan pada 1 Januari, dua atau tiga hari tepat sebelum atau sesudah Tahun Baru bisa berakhir dalam hitungan minggu tahun yang 'salah'. Tanggal 29-31 Desember terkadang jatuh pada minggu ke-1 tahun berikutnya — misalnya, 30-31 Desember 2024 sama-sama berada di minggu ISO ke-1 tahun 2025. Sebaliknya, tanggal 1-3 Januari bisa jatuh pada minggu terakhir tahun sebelumnya — 1 Januari 2023 berada pada minggu ISO ke-52 tahun 2022. Alat pengecek tanggal di atas otomatis menandai hal ini setiap kali tahun kalender dan tahun minggu ISO suatu tanggal tidak cocok.",
     "faq.q5": "Apakah tanggal saya dikirim ke server?",
-    "faq.a5": "Tidak. Setiap perhitungan pada pengecek nomor minggu ini — minggu hari ini, tanggal mana pun yang Anda ketik, dan tabel satu tahun penuh — sepenuhnya berjalan di browser Anda menggunakan perhitungan tanggal JavaScript biasa. Tidak ada yang Anda masukkan diunggah, dicatat, atau disimpan di mana pun kecuali di local storage browser Anda sendiri, yang hanya mengingat pencarian terakhir Anda agar halaman dapat memulihkannya saat kunjungan berikutnya."
+    "faq.a5": "Tidak. Setiap perhitungan pada pengecek nomor minggu ini — minggu hari ini, tanggal mana pun yang Anda ketik, dan tabel satu tahun penuh — sepenuhnya berjalan di browser Anda menggunakan perhitungan tanggal JavaScript biasa. Tidak ada yang Anda masukkan diunggah, dicatat, atau disimpan di mana pun kecuali di local storage browser Anda sendiri, yang hanya mengingat pencarian terakhir Anda agar halaman dapat memulihkannya saat kunjungan berikutnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -615,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum kann ein Datum Ende Dezember oder Anfang Januar zu einem anderen ISO-Wochenjahr gehören als zu seinem Kalenderjahr?",
     "faq.a4": "Da Woche 1 am ersten Donnerstag des Jahres verankert ist und nicht am 1. Januar, können die zwei oder drei Tage kurz vor oder nach Neujahr in die Wochenzählung des 'falschen' Jahres fallen. Der 29. bis 31. Dezember fällt manchmal in Woche 1 des Folgejahres — zum Beispiel liegen der 30. und 31. Dezember 2024 beide in ISO-Woche 1 des Jahres 2025. Umgekehrt kann der 1. bis 3. Januar in die letzte Woche des Vorjahres fallen — der 1. Januar 2023 liegt in ISO-Woche 52 des Jahres 2022. Der Datumsprüfer oben weist automatisch darauf hin, sobald Kalenderjahr und ISO-Wochenjahr eines Datums nicht übereinstimmen.",
     "faq.q5": "Wird mein Datum an einen Server gesendet?",
-    "faq.a5": "Nein. Jede Berechnung in diesem Kalenderwochen-Prüfer — die heutige Woche, jedes von Ihnen eingegebene Datum und die vollständige Jahresübersicht — läuft komplett in Ihrem Browser mit einfacher JavaScript-Datumsberechnung. Nichts, was Sie eingeben, wird irgendwohin hochgeladen, protokolliert oder gespeichert — außer im lokalen Speicher Ihres eigenen Browsers, der sich nur Ihre letzte Suche merkt, damit die Seite sie bei Ihrem nächsten Besuch wiederherstellen kann."
+    "faq.a5": "Nein. Jede Berechnung in diesem Kalenderwochen-Prüfer — die heutige Woche, jedes von Ihnen eingegebene Datum und die vollständige Jahresübersicht — läuft komplett in Ihrem Browser mit einfacher JavaScript-Datumsberechnung. Nichts, was Sie eingeben, wird irgendwohin hochgeladen, protokolliert oder gespeichert — außer im lokalen Speicher Ihres eigenen Browsers, der sich nur Ihre letzte Suche merkt, damit die Seite sie bei Ihrem nächsten Besuch wiederherstellen kann.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -665,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "12月末や1月初めの日付が、暦年と異なるISO週の年に属することがあるのはなぜですか？",
     "faq.a4": "第1週はその年の最初の木曜日を基準にしており、1月1日を基準にしていないため、正月前後の2〜3日が「異なる」年の週数として扱われることがあります。12月29日〜31日は翌年の第1週に含まれることがあります — 例えば2024年12月30日と31日はどちらも2025年のISO第1週です。逆に、1月1日〜3日は前年の最終週に含まれることがあります — 2023年1月1日は2022年のISO第52週にあたります。上の日付検索ツールは、暦年とISO週の年が一致しない場合に自動的にこれを表示します。",
     "faq.q5": "入力した日付はサーバーに送信されますか？",
-    "faq.a5": "いいえ。今週の週番号、入力した任意の日付、年間一覧表など、この週番号ツールのすべての計算は、単純なJavaScriptの日付演算によりブラウザ内だけで完結します。入力内容がどこかにアップロード・記録・保存されることはありません。唯一の例外はお使いのブラウザ自体のローカルストレージで、次回訪問時に復元できるよう直近の検索内容のみを保持します。"
+    "faq.a5": "いいえ。今週の週番号、入力した任意の日付、年間一覧表など、この週番号ツールのすべての計算は、単純なJavaScriptの日付演算によりブラウザ内だけで完結します。入力内容がどこかにアップロード・記録・保存されることはありません。唯一の例外はお使いのブラウザ自体のローカルストレージで、次回訪問時に復元できるよう直近の検索内容のみを保持します。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -715,6 +780,11 @@ window.I18N_LOCALES = {
     "faq.q4": "12월 말이나 1월 초의 날짜가 달력 연도와 다른 ISO 주차 연도에 속하는 이유는 무엇인가요?",
     "faq.a4": "1주차는 1월 1일이 아니라 그 해 첫 목요일을 기준으로 정해지기 때문에, 새해 전후 이틀에서 사흘 정도는 달력상 연도와 '다른' 해의 주차로 계산될 수 있습니다. 12월 29일~31일은 종종 다음 해 1주차에 속합니다 — 예를 들어 2024년 12월 30일과 31일은 모두 2025년 ISO 1주차입니다. 반대로 1월 1일~3일은 전년도 마지막 주에 속할 수 있습니다 — 2023년 1월 1일은 2022년 ISO 52주차입니다. 위 날짜 조회 도구는 입력한 날짜의 달력 연도와 ISO 주차 연도가 다를 때 이를 자동으로 표시해 줍니다.",
     "faq.q5": "입력한 날짜가 서버로 전송되나요?",
-    "faq.a5": "아니요. 오늘의 주차, 직접 입력한 날짜, 연간 표까지 이 주차 조회 도구의 모든 계산은 순수 자바스크립트 날짜 연산만으로 브라우저 안에서 완전히 처리됩니다. 입력한 내용은 어디에도 업로드, 기록, 저장되지 않으며, 유일한 예외는 사용자 브라우저 자체의 로컬 저장소로 다음 방문 시 복원할 수 있도록 마지막 조회 내용만 기억합니다."
+    "faq.a5": "아니요. 오늘의 주차, 직접 입력한 날짜, 연간 표까지 이 주차 조회 도구의 모든 계산은 순수 자바스크립트 날짜 연산만으로 브라우저 안에서 완전히 처리됩니다. 입력한 내용은 어디에도 업로드, 기록, 저장되지 않으며, 유일한 예외는 사용자 브라우저 자체의 로컬 저장소로 다음 방문 시 복원할 수 있도록 마지막 조회 내용만 기억합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

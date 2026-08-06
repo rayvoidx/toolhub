@@ -75,7 +75,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What happens when the line between my two points is vertical?",
     "faq.a4": "When both points share the same x-coordinate (x₁ = x₂), the line connecting them is perfectly vertical, and its slope is mathematically undefined because the slope formula would require dividing by zero. Rather than showing an error, this calculator recognizes the vertical case, reports the slope as undefined, gives the line's equation as x = (the shared x-value), and shows the angle of incline as 90°. The distance between the points and their midpoint are still calculated normally in this case, since neither one depends on the slope.",
     "faq.q5": "Is the coordinate data I enter sent to a server?",
-    "faq.a5": "No. This slope calculator runs entirely in your browser — the coordinates you enter for both points never leave your device, and nothing is uploaded, logged, or stored on a server. There's no sign-up, account, or tracking involved, so you can use it freely for homework, geometry practice, construction grade checks, or engineering quick checks with full privacy."
+    "faq.a5": "No. This slope calculator runs entirely in your browser — the coordinates you enter for both points never leave your device, and nothing is uploaded, logged, or stored on a server. There's no sign-up, account, or tracking involved, so you can use it freely for homework, geometry practice, construction grade checks, or engineering quick checks with full privacy.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -135,7 +140,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如果两点之间的连线是垂直的，会怎样？",
     "faq.a4": "当两个点的 x 坐标相同（x₁ = x₂）时，连接它们的直线是一条垂直线，其斜率在数学上是无定义的，因为斜率公式会导致除以零。本计算器不会因此报错，而是会识别出这种垂直情形，将斜率标记为「无定义」，给出直线方程 x = （该共同的 x 值），并将倾角显示为 90°。由于两点间距离和中点都不依赖于斜率，这两项在这种情况下依然会正常计算出来。",
     "faq.q5": "我输入的坐标数据会被发送到服务器吗？",
-    "faq.a5": "不会。本斜率计算器完全在你的浏览器中运行——你为两个点输入的坐标永远不会离开你的设备，也不会被上传、记录或存储到任何服务器。无需注册、无需账号，也没有任何追踪，你可以放心地用它来做作业、练习几何、核对施工坡度或进行工程快速验算，全程保护隐私。"
+    "faq.a5": "不会。本斜率计算器完全在你的浏览器中运行——你为两个点输入的坐标永远不会离开你的设备，也不会被上传、记录或存储到任何服务器。无需注册、无需账号，也没有任何追踪，你可以放心地用它来做作业、练习几何、核对施工坡度或进行工程快速验算，全程保护隐私。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -195,7 +205,12 @@ window.I18N_LOCALES = {
     "faq.q4": "अगर मेरे दोनों बिंदुओं के बीच की रेखा ऊर्ध्वाधर हो तो क्या होगा?",
     "faq.a4": "जब दोनों बिंदुओं का x-निर्देशांक समान हो (x₁ = x₂), तो उन्हें जोड़ने वाली रेखा पूरी तरह ऊर्ध्वाधर होती है, और गणितीय रूप से इसकी ढाल अपरिभाषित होती है, क्योंकि ढाल के सूत्र में शून्य से भाग करना पड़ेगा। त्रुटि दिखाने के बजाय, यह कैलकुलेटर ऐसी ऊर्ध्वाधर स्थिति को पहचान लेता है, ढाल को 'अपरिभाषित' बताता है, रेखा का समीकरण x = (वह साझा x-मान) के रूप में देता है, और झुकाव के कोण को 90° दिखाता है। चूँकि दूरी और मध्यबिंदु दोनों ढाल पर निर्भर नहीं करते, इसलिए इस स्थिति में भी इन्हें सामान्य रूप से निकाला जाता है।",
     "faq.q5": "क्या मेरे द्वारा दर्ज किए गए निर्देशांक किसी सर्वर पर भेजे जाते हैं?",
-    "faq.a5": "नहीं। यह ढाल कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा दोनों बिंदुओं के लिए दर्ज किए गए निर्देशांक कभी भी आपकी डिवाइस से बाहर नहीं जाते, और न ही इन्हें किसी सर्वर पर अपलोड, रिकॉर्ड या संग्रहीत किया जाता है। इसमें न कोई साइन-अप है, न खाता, न ही किसी तरह की ट्रैकिंग — इसलिए आप इसे होमवर्क, ज्यामिति अभ्यास, निर्माण-ग्रेड जाँच या इंजीनियरिंग की त्वरित गणनाओं के लिए पूरी निजता के साथ बेझिझक इस्तेमाल कर सकते हैं।"
+    "faq.a5": "नहीं। यह ढाल कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा दोनों बिंदुओं के लिए दर्ज किए गए निर्देशांक कभी भी आपकी डिवाइस से बाहर नहीं जाते, और न ही इन्हें किसी सर्वर पर अपलोड, रिकॉर्ड या संग्रहीत किया जाता है। इसमें न कोई साइन-अप है, न खाता, न ही किसी तरह की ट्रैकिंग — इसलिए आप इसे होमवर्क, ज्यामिति अभ्यास, निर्माण-ग्रेड जाँच या इंजीनियरिंग की त्वरित गणनाओं के लिए पूरी निजता के साथ बेझिझक इस्तेमाल कर सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -255,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué ocurre cuando la recta entre mis dos puntos es vertical?",
     "faq.a4": "Cuando ambos puntos comparten la misma coordenada x (x₁ = x₂), la recta que los une es perfectamente vertical, y su pendiente no está matemáticamente definida porque la fórmula requeriría dividir entre cero. En lugar de mostrar un error, esta calculadora reconoce el caso vertical, indica que la pendiente no está definida, da la ecuación de la recta como x = (ese valor de x compartido) y muestra el ángulo de inclinación como 90°. La distancia entre los puntos y su punto medio se siguen calculando con normalidad en este caso, ya que ninguno de los dos depende de la pendiente.",
     "faq.q5": "¿Se envían mis coordenadas a un servidor?",
-    "faq.a5": "No. Esta calculadora de pendiente funciona completamente en tu navegador — las coordenadas que introduces para ambos puntos nunca salen de tu dispositivo, y no se suben, registran ni almacenan en ningún servidor. No hay registro, cuenta ni rastreo de ningún tipo, así que puedes usarla libremente para tareas escolares, práctica de geometría, comprobaciones de pendiente en construcción o cálculos rápidos de ingeniería con total privacidad."
+    "faq.a5": "No. Esta calculadora de pendiente funciona completamente en tu navegador — las coordenadas que introduces para ambos puntos nunca salen de tu dispositivo, y no se suben, registran ni almacenan en ningún servidor. No hay registro, cuenta ni rastreo de ningún tipo, así que puedes usarla libremente para tareas escolares, práctica de geometría, comprobaciones de pendiente en construcción o cálculos rápidos de ingeniería con total privacidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -315,7 +335,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ماذا يحدث عندما يكون الخط بين نقطتيّ رأسيًا؟",
     "faq.a4": "عندما تشترك النقطتان في نفس إحداثي x (x₁ = x₂)، يكون الخط الواصل بينهما رأسيًا تمامًا، ويكون ميله غير معرَّف رياضيًا لأن معادلة الميل ستتطلب القسمة على صفر. بدلًا من إظهار خطأ، تتعرف هذه الحاسبة على الحالة الرأسية، وتعرض الميل بأنه غير معرَّف، وتعطي معادلة الخط بصيغة x = (قيمة x المشتركة)، وتعرض زاوية الانحدار بقيمة 90°. أما المسافة بين النقطتين ونقطة المنتصف فتُحسبان بشكل طبيعي في هذه الحالة، لأن كلتيهما لا تعتمدان على الميل.",
     "faq.q5": "هل تُرسَل بيانات الإحداثيات التي أُدخلها إلى خادم؟",
-    "faq.a5": "لا. تعمل حاسبة الميل هذه بالكامل داخل متصفحك — فالإحداثيات التي تُدخلها للنقطتين لا تغادر جهازك أبدًا، ولا يتم رفعها أو تسجيلها أو تخزينها على أي خادم. لا يوجد تسجيل ولا حساب ولا أي نوع من التتبع، لذا يمكنك استخدامها بحرية لأداء الواجبات المدرسية أو التدرب على الهندسة أو التحقق من انحدارات البناء أو إجراء حسابات هندسية سريعة، مع خصوصية تامة."
+    "faq.a5": "لا. تعمل حاسبة الميل هذه بالكامل داخل متصفحك — فالإحداثيات التي تُدخلها للنقطتين لا تغادر جهازك أبدًا، ولا يتم رفعها أو تسجيلها أو تخزينها على أي خادم. لا يوجد تسجيل ولا حساب ولا أي نوع من التتبع، لذا يمكنك استخدامها بحرية لأداء الواجبات المدرسية أو التدرب على الهندسة أو التحقق من انحدارات البناء أو إجراء حسابات هندسية سريعة، مع خصوصية تامة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -375,7 +400,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que se passe-t-il lorsque la droite entre mes deux points est verticale ?",
     "faq.a4": "Lorsque les deux points partagent la même coordonnée x (x₁ = x₂), la droite qui les relie est parfaitement verticale, et sa pente n'est mathématiquement pas définie car la formule de la pente nécessiterait une division par zéro. Plutôt que d'afficher une erreur, ce calculateur reconnaît le cas vertical, indique que la pente n'est pas définie, donne l'équation de la droite sous la forme x = (cette valeur de x commune) et affiche l'angle d'inclinaison à 90°. La distance entre les points et leur point milieu continuent d'être calculés normalement dans ce cas, puisqu'aucun des deux ne dépend de la pente.",
     "faq.q5": "Les coordonnées que je saisis sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce calculateur de pente fonctionne entièrement dans votre navigateur — les coordonnées que vous saisissez pour les deux points ne quittent jamais votre appareil, et rien n'est envoyé, enregistré ou stocké sur un serveur. Il n'y a ni inscription, ni compte, ni aucun suivi, vous pouvez donc l'utiliser librement pour vos devoirs, vos exercices de géométrie, la vérification de pentes de construction ou des calculs rapides d'ingénierie, en toute confidentialité."
+    "faq.a5": "Non. Ce calculateur de pente fonctionne entièrement dans votre navigateur — les coordonnées que vous saisissez pour les deux points ne quittent jamais votre appareil, et rien n'est envoyé, enregistré ou stocké sur un serveur. Il n'y a ni inscription, ni compte, ni aucun suivi, vous pouvez donc l'utiliser librement pour vos devoirs, vos exercices de géométrie, la vérification de pentes de construction ou des calculs rapides d'ingénierie, en toute confidentialité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -435,7 +465,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার দুটি বিন্দুর মধ্যকার রেখা উল্লম্ব হলে কী হয়?",
     "faq.a4": "যখন দুটি বিন্দুর x-স্থানাঙ্ক একই হয় (x₁ = x₂), তখন তাদের সংযোগকারী রেখাটি সম্পূর্ণ উল্লম্ব হয়, এবং গাণিতিকভাবে এর ঢাল অসংজ্ঞায়িত থাকে কারণ ঢালের সূত্রে শূন্য দিয়ে ভাগ করতে হতো। ত্রুটি না দেখিয়ে, এই ক্যালকুলেটর এই উল্লম্ব পরিস্থিতি শনাক্ত করে, ঢালকে 'অসংজ্ঞায়িত' হিসেবে দেখায়, রেখার সমীকরণ x = (সেই সাধারণ x-মান) আকারে দেয় এবং ঢালের কোণ 90° হিসেবে দেখায়। এক্ষেত্রে দুই বিন্দুর মধ্যে দূরত্ব এবং মধ্যবিন্দু স্বাভাবিকভাবেই হিসাব করা হয়, কারণ এই দুটির কোনোটিই ঢালের উপর নির্ভর করে না।",
     "faq.q5": "আমার দেওয়া স্থানাঙ্ক তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই ঢাল ক্যালকুলেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — দুটি বিন্দুর জন্য আপনার দেওয়া স্থানাঙ্ক কখনোই আপনার ডিভাইস ছেড়ে যায় না, এবং কোনো সার্ভারে আপলোড, লগ বা সংরক্ষণ করা হয় না। এখানে কোনো সাইন-আপ, অ্যাকাউন্ট বা ট্র্যাকিং নেই, তাই আপনি নিশ্চিন্তে হোমওয়ার্ক, জ্যামিতি অনুশীলন, নির্মাণ গ্রেড যাচাই বা প্রকৌশল দ্রুত হিসাবের জন্য এটি সম্পূর্ণ গোপনীয়তার সাথে ব্যবহার করতে পারেন।"
+    "faq.a5": "না। এই ঢাল ক্যালকুলেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — দুটি বিন্দুর জন্য আপনার দেওয়া স্থানাঙ্ক কখনোই আপনার ডিভাইস ছেড়ে যায় না, এবং কোনো সার্ভারে আপলোড, লগ বা সংরক্ষণ করা হয় না। এখানে কোনো সাইন-আপ, অ্যাকাউন্ট বা ট্র্যাকিং নেই, তাই আপনি নিশ্চিন্তে হোমওয়ার্ক, জ্যামিতি অনুশীলন, নির্মাণ গ্রেড যাচাই বা প্রকৌশল দ্রুত হিসাবের জন্য এটি সম্পূর্ণ গোপনীয়তার সাথে ব্যবহার করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -495,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que acontece quando a reta entre meus dois pontos é vertical?",
     "faq.a4": "Quando ambos os pontos compartilham a mesma coordenada x (x₁ = x₂), a reta que os une é perfeitamente vertical, e sua inclinação é matematicamente indefinida porque a fórmula exigiria uma divisão por zero. Em vez de mostrar um erro, esta calculadora reconhece o caso vertical, informa que a inclinação é indefinida, apresenta a equação da reta como x = (esse valor de x compartilhado) e mostra o ângulo de inclinação como 90°. A distância entre os pontos e o ponto médio continuam sendo calculados normalmente nesse caso, já que nenhum dos dois depende da inclinação.",
     "faq.q5": "Os dados de coordenadas que insiro são enviados a um servidor?",
-    "faq.a5": "Não. Esta calculadora de inclinação funciona inteiramente no seu navegador — as coordenadas que você insere para os dois pontos nunca saem do seu dispositivo, e nada é enviado, registrado ou armazenado em nenhum servidor. Não há cadastro, conta ou qualquer tipo de rastreamento, então você pode usá-la livremente para tarefas escolares, prática de geometria, verificação de inclinação em obras ou cálculos rápidos de engenharia com total privacidade."
+    "faq.a5": "Não. Esta calculadora de inclinação funciona inteiramente no seu navegador — as coordenadas que você insere para os dois pontos nunca saem do seu dispositivo, e nada é enviado, registrado ou armazenado em nenhum servidor. Não há cadastro, conta ou qualquer tipo de rastreamento, então você pode usá-la livremente para tarefas escolares, prática de geometria, verificação de inclinação em obras ou cálculos rápidos de engenharia com total privacidade.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -555,7 +595,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что происходит, если прямая между моими двумя точками вертикальна?",
     "faq.a4": "Когда обе точки имеют одинаковую координату x (x₁ = x₂), соединяющая их прямая строго вертикальна, и её уклон математически не определён, поскольку формула уклона потребовала бы деления на ноль. Вместо того чтобы показывать ошибку, этот калькулятор распознаёт вертикальный случай, сообщает, что уклон не определён, приводит уравнение прямой в виде x = (это общее значение x) и показывает угол наклона как 90°. Расстояние между точками и их середина по-прежнему вычисляются как обычно в этом случае, поскольку ни то, ни другое не зависит от уклона.",
     "faq.q5": "Отправляются ли введённые мной координаты на сервер?",
-    "faq.a5": "Нет. Этот калькулятор уклона полностью работает в вашем браузере — координаты, которые вы вводите для обеих точек, никогда не покидают ваше устройство и не загружаются, не логируются и не сохраняются на каком-либо сервере. Здесь нет ни регистрации, ни аккаунта, ни какого-либо отслеживания, поэтому вы можете свободно использовать его для домашних заданий, практики по геометрии, проверки строительных уклонов или быстрых инженерных расчётов с полной конфиденциальностью."
+    "faq.a5": "Нет. Этот калькулятор уклона полностью работает в вашем браузере — координаты, которые вы вводите для обеих точек, никогда не покидают ваше устройство и не загружаются, не логируются и не сохраняются на каком-либо сервере. Здесь нет ни регистрации, ни аккаунта, ни какого-либо отслеживания, поэтому вы можете свободно использовать его для домашних заданий, практики по геометрии, проверки строительных уклонов или быстрых инженерных расчётов с полной конфиденциальностью.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -615,7 +660,12 @@ window.I18N_LOCALES = {
     "faq.q4": "اگر میرے دونوں پوائنٹس کے درمیان لائن عمودی ہو تو کیا ہوگا؟",
     "faq.a4": "جب دونوں پوائنٹس کا x محوری عدد ایک جیسا ہو (x₁ = x₂)، تو انہیں جوڑنے والی لائن مکمل طور پر عمودی ہوتی ہے، اور ریاضیاتی طور پر اس کی ڈھلان غیر متعین ہوتی ہے کیونکہ ڈھلان کے فارمولے میں صفر سے تقسیم درکار ہوگی۔ غلطی دکھانے کے بجائے، یہ کیلکولیٹر اس عمودی صورتحال کو پہچان لیتا ہے، ڈھلان کو 'غیر متعین' ظاہر کرتا ہے، لائن کی مساوات x = (وہ مشترکہ x قدر) کی صورت میں دیتا ہے، اور جھکاؤ کے زاویے کو 90° ظاہر کرتا ہے۔ اس صورت میں دونوں پوائنٹس کے درمیان فاصلہ اور درمیانی نقطہ معمول کے مطابق ہی شمار کیے جاتے ہیں، کیونکہ ان میں سے کوئی بھی ڈھلان پر منحصر نہیں ہے۔",
     "faq.q5": "کیا میرے درج کردہ محوری اعداد کا ڈیٹا کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ ڈھلان کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — دونوں پوائنٹس کے لیے آپ کے درج کردہ محوری اعداد کبھی بھی آپ کے آلے سے باہر نہیں جاتے، اور نہ ہی انہیں کسی سرور پر اپ لوڈ، ریکارڈ یا محفوظ کیا جاتا ہے۔ یہاں نہ کوئی سائن اپ ہے، نہ اکاؤنٹ، اور نہ ہی کسی قسم کی ٹریکنگ — اس لیے آپ اسے بلا جھجک ہوم ورک، جیومیٹری کی مشق، تعمیراتی گریڈ کی جانچ، یا انجینئرنگ کے فوری حسابات کے لیے مکمل رازداری کے ساتھ استعمال کر سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ ڈھلان کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — دونوں پوائنٹس کے لیے آپ کے درج کردہ محوری اعداد کبھی بھی آپ کے آلے سے باہر نہیں جاتے، اور نہ ہی انہیں کسی سرور پر اپ لوڈ، ریکارڈ یا محفوظ کیا جاتا ہے۔ یہاں نہ کوئی سائن اپ ہے، نہ اکاؤنٹ، اور نہ ہی کسی قسم کی ٹریکنگ — اس لیے آپ اسے بلا جھجک ہوم ورک، جیومیٹری کی مشق، تعمیراتی گریڈ کی جانچ، یا انجینئرنگ کے فوری حسابات کے لیے مکمل رازداری کے ساتھ استعمال کر سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -675,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa yang terjadi jika garis antara kedua titik saya vertikal?",
     "faq.a4": "Ketika kedua titik memiliki koordinat x yang sama (x₁ = x₂), garis yang menghubungkannya benar-benar vertikal, dan kemiringannya secara matematis tidak terdefinisi karena rumus kemiringan akan memerlukan pembagian dengan nol. Alih-alih menampilkan kesalahan, kalkulator ini mengenali kasus vertikal, melaporkan kemiringan sebagai tidak terdefinisi, memberikan persamaan garis sebagai x = (nilai x yang sama tersebut), dan menampilkan sudut kemiringan sebesar 90°. Jarak antara kedua titik dan titik tengahnya tetap dihitung secara normal dalam kasus ini, karena keduanya tidak bergantung pada kemiringan.",
     "faq.q5": "Apakah data koordinat yang saya masukkan dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator kemiringan ini sepenuhnya berjalan di browser Anda — koordinat yang Anda masukkan untuk kedua titik tidak pernah meninggalkan perangkat Anda, dan tidak ada yang diunggah, dicatat, atau disimpan di server mana pun. Tidak ada pendaftaran, akun, atau pelacakan apa pun, jadi Anda bisa bebas menggunakannya untuk PR, latihan geometri, pemeriksaan kemiringan konstruksi, atau perhitungan cepat teknik dengan privasi penuh."
+    "faq.a5": "Tidak. Kalkulator kemiringan ini sepenuhnya berjalan di browser Anda — koordinat yang Anda masukkan untuk kedua titik tidak pernah meninggalkan perangkat Anda, dan tidak ada yang diunggah, dicatat, atau disimpan di server mana pun. Tidak ada pendaftaran, akun, atau pelacakan apa pun, jadi Anda bisa bebas menggunakannya untuk PR, latihan geometri, pemeriksaan kemiringan konstruksi, atau perhitungan cepat teknik dengan privasi penuh.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -735,7 +790,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was passiert, wenn die Gerade zwischen meinen beiden Punkten vertikal ist?",
     "faq.a4": "Wenn beide Punkte dieselbe x-Koordinate haben (x₁ = x₂), ist die Verbindungsgerade genau vertikal, und ihre Steigung ist mathematisch nicht definiert, da die Steigungsformel eine Division durch null erfordern würde. Anstatt einen Fehler anzuzeigen, erkennt dieser Rechner den vertikalen Fall, meldet die Steigung als nicht definiert, gibt die Geradengleichung als x = (diesen gemeinsamen x-Wert) an und zeigt den Neigungswinkel als 90° an. Der Abstand zwischen den Punkten und ihr Mittelpunkt werden in diesem Fall weiterhin ganz normal berechnet, da keiner von beiden von der Steigung abhängt.",
     "faq.q5": "Werden die von mir eingegebenen Koordinaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Steigungsrechner läuft vollständig in Ihrem Browser — die Koordinaten, die Sie für beide Punkte eingeben, verlassen niemals Ihr Gerät, und nichts wird auf einen Server hochgeladen, protokolliert oder gespeichert. Es gibt keine Anmeldung, kein Konto und kein Tracking jeglicher Art, sodass Sie ihn bedenkenlos für Hausaufgaben, Geometrieübungen, die Überprüfung von Baugefällen oder schnelle technische Berechnungen mit vollständiger Privatsphäre nutzen können."
+    "faq.a5": "Nein. Dieser Steigungsrechner läuft vollständig in Ihrem Browser — die Koordinaten, die Sie für beide Punkte eingeben, verlassen niemals Ihr Gerät, und nichts wird auf einen Server hochgeladen, protokolliert oder gespeichert. Es gibt keine Anmeldung, kein Konto und kein Tracking jeglicher Art, sodass Sie ihn bedenkenlos für Hausaufgaben, Geometrieübungen, die Überprüfung von Baugefällen oder schnelle technische Berechnungen mit vollständiger Privatsphäre nutzen können.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -795,7 +855,12 @@ window.I18N_LOCALES = {
     "faq.q4": "2点間の直線が垂直になる場合はどうなりますか？",
     "faq.a4": "2点のx座標が等しい（x₁ = x₂）場合、それらを結ぶ直線は完全に垂直となり、傾きの公式がゼロ除算を必要とするため、数学的に傾きは定義されません。この計算機はエラーを表示する代わりにこの垂直なケースを認識し、傾きを「定義不可」として報告し、直線の方程式を x = （その共通のx値）として示し、傾斜角を90°として表示します。2点間の距離と中点はどちらも傾きに依存しないため、このケースでも通常どおり計算されます。",
     "faq.q5": "入力した座標データはサーバーに送信されますか？",
-    "faq.a5": "いいえ。この傾き計算機は完全にブラウザ内で動作します——入力した2点の座標がお使いの端末から外部に送信されることは一切なく、サーバーへのアップロード・記録・保存も行われません。登録やアカウント、トラッキングも一切ないため、宿題や幾何の練習、建築の勾配確認、工学的な簡易計算などに、完全なプライバシーのもとで自由にお使いいただけます。"
+    "faq.a5": "いいえ。この傾き計算機は完全にブラウザ内で動作します——入力した2点の座標がお使いの端末から外部に送信されることは一切なく、サーバーへのアップロード・記録・保存も行われません。登録やアカウント、トラッキングも一切ないため、宿題や幾何の練習、建築の勾配確認、工学的な簡易計算などに、完全なプライバシーのもとで自由にお使いいただけます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -855,6 +920,11 @@ window.I18N_LOCALES = {
     "faq.q4": "두 점 사이의 직선이 수직선이 되면 어떻게 되나요?",
     "faq.a4": "두 점의 x좌표가 같을 때(x₁ = x₂), 두 점을 잇는 직선은 완전한 수직선이 되며, 기울기 공식이 0으로 나누기를 요구하게 되므로 수학적으로 기울기가 정의되지 않습니다. 이 계산기는 오류를 표시하는 대신 이런 수직선 상황을 인식해 기울기를 '정의되지 않음'으로 안내하고, 직선의 방정식을 x = (공통 x값)으로 제시하며, 경사각을 90°로 표시합니다. 두 점 사이의 거리와 중점은 기울기에 의존하지 않으므로 이 경우에도 정상적으로 계산됩니다.",
     "faq.q5": "제가 입력한 좌표 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 기울기 계산기는 전적으로 사용자의 브라우저에서 실행됩니다 — 두 점에 대해 입력한 좌표는 사용자의 기기를 벗어나지 않으며, 서버에 업로드되거나 기록·저장되지 않습니다. 회원가입이나 계정, 추적 기능이 전혀 없으므로 숙제, 기하학 연습, 시공 경사도 확인, 공학 계산 등에 완전한 개인정보 보호 속에서 자유롭게 사용할 수 있습니다."
+    "faq.a5": "아니요. 이 기울기 계산기는 전적으로 사용자의 브라우저에서 실행됩니다 — 두 점에 대해 입력한 좌표는 사용자의 기기를 벗어나지 않으며, 서버에 업로드되거나 기록·저장되지 않습니다. 회원가입이나 계정, 추적 기능이 전혀 없으므로 숙제, 기하학 연습, 시공 경사도 확인, 공학 계산 등에 완전한 개인정보 보호 속에서 자유롭게 사용할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

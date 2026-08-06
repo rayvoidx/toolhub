@@ -83,7 +83,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What is gestational age, and why does it start before conception actually happens?",
     "faq.a4": "Gestational age is the medical convention for how far along a pregnancy is, and by tradition it is counted from the first day of the last menstrual period — about two weeks before ovulation and conception typically occur. So in week 4 of a pregnancy, the embryo itself is usually only about 2 weeks old. This calculator reports gestational age in completed weeks and days using that same convention, whichever method (LMP, conception date, or IVF transfer) you use to estimate it.",
     "faq.q5": "Is my due date or personal date information sent to a server?",
-    "faq.a5": "No. Every calculation in this pregnancy due date calculator runs locally in your browser using JavaScript. Your last period date, conception date, or transfer date is saved only in this browser's local storage so the form is ready next time you visit, and \"Clear saved dates\" removes it immediately. Nothing is uploaded, there is no account, and no one else can see what you entered."
+    "faq.a5": "No. Every calculation in this pregnancy due date calculator runs locally in your browser using JavaScript. Your last period date, conception date, or transfer date is saved only in this browser's local storage so the form is ready next time you visit, and \"Clear saved dates\" removes it immediately. Nothing is uploaded, there is no account, and no one else can see what you entered.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -159,7 +164,12 @@ window.I18N_LOCALES = {
     "faq.q4": "什么是孕周（孕龄），为什么它在受孕实际发生之前就开始计算？",
     "faq.a4": "孕周是医学上用来衡量妊娠进展的惯例，按传统从末次月经第一天开始计算 — 这比排卵和受孕通常发生的时间早约两周。因此在妊娠第4周时，胚胎本身实际上通常只有大约2周大。无论您使用末次月经、受孕日期还是试管婴儿移植日期中的哪种方式进行估算，本计算器都会按照相同的惯例，以整周和整天来报告孕周。",
     "faq.q5": "我的预产期或个人日期信息会被发送到服务器吗？",
-    "faq.a5": "不会。本孕期预产期计算器的所有计算都通过JavaScript在您的浏览器本地完成。您的末次月经日期、受孕日期或移植日期仅保存在本浏览器的本地存储中，以便下次访问时表单已准备就绪；点击\"清除已保存的日期\"会立即将其删除。没有任何数据会被上传，没有账户系统，也没有任何人能看到您输入的内容。"
+    "faq.a5": "不会。本孕期预产期计算器的所有计算都通过JavaScript在您的浏览器本地完成。您的末次月经日期、受孕日期或移植日期仅保存在本浏览器的本地存储中，以便下次访问时表单已准备就绪；点击\"清除已保存的日期\"会立即将其删除。没有任何数据会被上传，没有账户系统，也没有任何人能看到您输入的内容。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -235,7 +245,12 @@ window.I18N_LOCALES = {
     "faq.q4": "गर्भावधि आयु क्या है, और यह वास्तविक गर्भाधान होने से पहले ही गिनी क्यों जाने लगती है?",
     "faq.a4": "गर्भावधि आयु गर्भावस्था कितनी आगे बढ़ चुकी है, यह मापने की चिकित्सीय परंपरा है, और परंपरागत रूप से इसे आखिरी माहवारी के पहले दिन से गिना जाता है — जो सामान्यतः ओव्यूलेशन और गर्भाधान होने से लगभग दो सप्ताह पहले होता है। इसलिए गर्भावस्था के चौथे सप्ताह में, भ्रूण स्वयं आमतौर पर केवल लगभग 2 सप्ताह का होता है। यह कैलकुलेटर उसी परंपरा के अनुसार गर्भावधि आयु को पूर्ण सप्ताहों और दिनों में बताता है, चाहे आप इसे अनुमानित करने के लिए कोई भी तरीक़ा (LMP, गर्भाधान तारीख़, या IVF स्थानांतरण) इस्तेमाल करें।",
     "faq.q5": "क्या मेरी प्रसव तिथि या व्यक्तिगत तारीख़ की जानकारी किसी सर्वर पर भेजी जाती है?",
-    "faq.a5": "नहीं। इस प्रसव तिथि कैलकुलेटर की सभी गणनाएँ जावास्क्रिप्ट का उपयोग करते हुए आपके ब्राउज़र में स्थानीय रूप से चलती हैं। आपकी आखिरी माहवारी की तारीख़, गर्भाधान तारीख़, या स्थानांतरण तारीख़ केवल इस ब्राउज़र के लोकल स्टोरेज में सहेजी जाती है ताकि अगली बार फ़ॉर्म तैयार मिले, और \"सहेजी गई तारीखें मिटाएँ\" उसे तुरंत हटा देता है। कुछ भी अपलोड नहीं होता, कोई खाता नहीं है, और आपके द्वारा दर्ज की गई जानकारी कोई और नहीं देख सकता।"
+    "faq.a5": "नहीं। इस प्रसव तिथि कैलकुलेटर की सभी गणनाएँ जावास्क्रिप्ट का उपयोग करते हुए आपके ब्राउज़र में स्थानीय रूप से चलती हैं। आपकी आखिरी माहवारी की तारीख़, गर्भाधान तारीख़, या स्थानांतरण तारीख़ केवल इस ब्राउज़र के लोकल स्टोरेज में सहेजी जाती है ताकि अगली बार फ़ॉर्म तैयार मिले, और \"सहेजी गई तारीखें मिटाएँ\" उसे तुरंत हटा देता है। कुछ भी अपलोड नहीं होता, कोई खाता नहीं है, और आपके द्वारा दर्ज की गई जानकारी कोई और नहीं देख सकता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -311,7 +326,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué es la edad gestacional, y por qué empieza a contarse antes de que ocurra realmente la concepción?",
     "faq.a4": "La edad gestacional es la convención médica para medir cuánto ha avanzado un embarazo, y por tradición se cuenta desde el primer día de la última regla, unas dos semanas antes de que normalmente ocurran la ovulación y la concepción. Así, en la semana 4 de embarazo, el embrión en sí suele tener en realidad solo unas 2 semanas. Esta calculadora indica la edad gestacional en semanas y días completos siguiendo esa misma convención, sea cual sea el método (FUR, fecha de concepción o transferencia de FIV) que utilices para estimarla.",
     "faq.q5": "¿Se envía mi fecha de parto o mi información personal a un servidor?",
-    "faq.a5": "No. Todos los cálculos de esta calculadora de fecha de parto se ejecutan localmente en tu navegador mediante JavaScript. Tu última regla, tu fecha de concepción o tu fecha de transferencia se guardan únicamente en el almacenamiento local de este navegador para que el formulario esté listo la próxima vez, y \"Borrar fechas guardadas\" las elimina de inmediato. No se sube nada, no hay cuenta de usuario y nadie más puede ver lo que has introducido."
+    "faq.a5": "No. Todos los cálculos de esta calculadora de fecha de parto se ejecutan localmente en tu navegador mediante JavaScript. Tu última regla, tu fecha de concepción o tu fecha de transferencia se guardan únicamente en el almacenamiento local de este navegador para que el formulario esté listo la próxima vez, y \"Borrar fechas guardadas\" las elimina de inmediato. No se sube nada, no hay cuenta de usuario y nadie más puede ver lo que has introducido.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -387,7 +407,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هو عمر الحمل، ولماذا يبدأ حسابه قبل حدوث الإخصاب فعليًا؟",
     "faq.a4": "عمر الحمل هو العرف الطبي لقياس مدى تقدّم الحمل، ويُحسب تقليديًا من اليوم الأول لآخر دورة شهرية — أي قبل نحو أسبوعين من حدوث الإباضة والإخصاب عادةً. لذا في الأسبوع الرابع من الحمل، يكون عمر الجنين نفسه عادةً نحو أسبوعين فقط. تعرض هذه الحاسبة عمر الحمل بالأسابيع والأيام الكاملة وفق هذا العرف نفسه، أيًا كانت الطريقة (آخر دورة، أو تاريخ الإخصاب، أو تاريخ نقل أطفال الأنابيب) التي تستخدمينها للتقدير.",
     "faq.q5": "هل تُرسل بياناتي الشخصية أو مواعيدي إلى خادم؟",
-    "faq.a5": "لا. جميع الحسابات في حاسبة موعد الولادة هذه تعمل محليًا في متصفحك باستخدام جافاسكريبت. يُحفظ تاريخ آخر دورة أو تاريخ الإخصاب أو تاريخ النقل فقط في التخزين المحلي لهذا المتصفح ليكون النموذج جاهزًا في زيارتك التالية، وزر \"مسح التواريخ المحفوظة\" يحذفها فورًا. لا يُرفع أي شيء، ولا يوجد حساب مستخدم، ولا يمكن لأي شخص آخر رؤية ما أدخلتِه."
+    "faq.a5": "لا. جميع الحسابات في حاسبة موعد الولادة هذه تعمل محليًا في متصفحك باستخدام جافاسكريبت. يُحفظ تاريخ آخر دورة أو تاريخ الإخصاب أو تاريخ النقل فقط في التخزين المحلي لهذا المتصفح ليكون النموذج جاهزًا في زيارتك التالية، وزر \"مسح التواريخ المحفوظة\" يحذفها فورًا. لا يُرفع أي شيء، ولا يوجد حساب مستخدم، ولا يمكن لأي شخص آخر رؤية ما أدخلتِه.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -463,7 +488,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qu'est-ce que l'âge gestationnel, et pourquoi commence-t-il à être compté avant que la conception n'ait réellement lieu ?",
     "faq.a4": "L'âge gestationnel est la convention médicale pour mesurer l'avancement d'une grossesse, et il est traditionnellement compté à partir du premier jour des dernières règles — soit environ deux semaines avant que l'ovulation et la conception ne surviennent généralement. Ainsi, à la semaine 4 de grossesse, l'embryon lui-même n'a généralement qu'environ 2 semaines. Ce calculateur indique l'âge gestationnel en semaines et jours complets selon cette même convention, quelle que soit la méthode (DDR, date de conception ou transfert de FIV) que vous utilisez pour l'estimer.",
     "faq.q5": "Ma date d'accouchement ou mes informations personnelles sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Tous les calculs de ce calculateur de date d'accouchement s'exécutent localement dans votre navigateur en JavaScript. Vos dernières règles, votre date de conception ou votre date de transfert ne sont enregistrées que dans le stockage local de ce navigateur pour que le formulaire soit prêt lors de votre prochaine visite, et « Effacer les dates enregistrées » les supprime immédiatement. Rien n'est envoyé en ligne, il n'y a pas de compte, et personne d'autre ne peut voir ce que vous avez saisi."
+    "faq.a5": "Non. Tous les calculs de ce calculateur de date d'accouchement s'exécutent localement dans votre navigateur en JavaScript. Vos dernières règles, votre date de conception ou votre date de transfert ne sont enregistrées que dans le stockage local de ce navigateur pour que le formulaire soit prêt lors de votre prochaine visite, et « Effacer les dates enregistrées » les supprime immédiatement. Rien n'est envoyé en ligne, il n'y a pas de compte, et personne d'autre ne peut voir ce que vous avez saisi.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -539,7 +569,12 @@ window.I18N_LOCALES = {
     "faq.q4": "গর্ভকালীন বয়স কী, এবং প্রকৃত গর্ভধারণ ঘটার আগেই কেন এটি গণনা শুরু হয়?",
     "faq.a4": "গর্ভকালীন বয়স হলো গর্ভাবস্থা কতদূর এগিয়েছে তা পরিমাপের জন্য চিকিৎসাগত প্রথা, এবং প্রথাগতভাবে এটি শেষ মাসিকের প্রথম দিন থেকে গণনা করা হয় — যা ডিম্বস্ফোটন ও গর্ভধারণ সাধারণত ঘটার প্রায় দুই সপ্তাহ আগে। তাই গর্ভাবস্থার ৪র্থ সপ্তাহে, ভ্রূণটি নিজে সাধারণত মাত্র প্রায় ২ সপ্তাহ বয়সী হয়। এই ক্যালকুলেটর সেই একই প্রথা অনুসরণ করে সম্পূর্ণ সপ্তাহ ও দিনে গর্ভকালীন বয়স জানায়, আপনি যে পদ্ধতিই (LMP, গর্ভধারণের তারিখ, বা IVF স্থানান্তর) ব্যবহার করুন না কেন।",
     "faq.q5": "আমার প্রসবের তারিখ বা ব্যক্তিগত তারিখের তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই প্রসবের তারিখ ক্যালকুলেটরের সব হিসাব আপনার ব্রাউজারে স্থানীয়ভাবে জাভাস্ক্রিপ্ট ব্যবহার করে চলে। আপনার শেষ মাসিকের তারিখ, গর্ভধারণের তারিখ, বা স্থানান্তরের তারিখ শুধুমাত্র এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয় যাতে পরের বার ফর্মটি প্রস্তুত থাকে, এবং \"সংরক্ষিত তারিখ মুছুন\" তা সঙ্গে সঙ্গে মুছে ফেলে। কিছুই আপলোড করা হয় না, কোনো অ্যাকাউন্ট নেই, এবং আপনি যা লিখেছেন তা অন্য কেউ দেখতে পারে না।"
+    "faq.a5": "না। এই প্রসবের তারিখ ক্যালকুলেটরের সব হিসাব আপনার ব্রাউজারে স্থানীয়ভাবে জাভাস্ক্রিপ্ট ব্যবহার করে চলে। আপনার শেষ মাসিকের তারিখ, গর্ভধারণের তারিখ, বা স্থানান্তরের তারিখ শুধুমাত্র এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয় যাতে পরের বার ফর্মটি প্রস্তুত থাকে, এবং \"সংরক্ষিত তারিখ মুছুন\" তা সঙ্গে সঙ্গে মুছে ফেলে। কিছুই আপলোড করা হয় না, কোনো অ্যাকাউন্ট নেই, এবং আপনি যা লিখেছেন তা অন্য কেউ দেখতে পারে না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -615,7 +650,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que é idade gestacional, e por que ela começa a ser contada antes de a concepção realmente acontecer?",
     "faq.a4": "Idade gestacional é a convenção médica para medir o quanto uma gravidez avançou, e por tradição é contada a partir do primeiro dia da última menstruação — cerca de duas semanas antes de a ovulação e a concepção normalmente ocorrerem. Assim, na semana 4 de gravidez, o próprio embrião geralmente tem apenas cerca de 2 semanas. Esta calculadora informa a idade gestacional em semanas e dias completos seguindo essa mesma convenção, qualquer que seja o método (DUM, data de concepção ou transferência de FIV) que você use para estimá-la.",
     "faq.q5": "Minha data de parto ou informações pessoais são enviadas a um servidor?",
-    "faq.a5": "Não. Todos os cálculos desta calculadora de data de parto são executados localmente no seu navegador usando JavaScript. Sua última menstruação, data de concepção ou data de transferência são salvas apenas no armazenamento local deste navegador para que o formulário esteja pronto na próxima visita, e \"Limpar datas salvas\" as remove imediatamente. Nada é enviado, não há conta de usuário, e ninguém mais pode ver o que você digitou."
+    "faq.a5": "Não. Todos os cálculos desta calculadora de data de parto são executados localmente no seu navegador usando JavaScript. Sua última menstruação, data de concepção ou data de transferência são salvas apenas no armazenamento local deste navegador para que o formulário esteja pronto na próxima visita, e \"Limpar datas salvas\" as remove imediatamente. Nada é enviado, não há conta de usuário, e ninguém mais pode ver o que você digitou.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -691,7 +731,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что такое срок беременности и почему его отсчёт начинается ещё до фактического зачатия?",
     "faq.a4": "Срок беременности — это медицинское соглашение для измерения того, насколько продвинулась беременность, и по традиции его отсчитывают от первого дня последней менструации — примерно за две недели до того, как обычно происходят овуляция и зачатие. Поэтому на 4-й неделе беременности самому эмбриону обычно всего около 2 недель. Этот калькулятор указывает срок беременности в полных неделях и днях по тому же принципу, независимо от того, какой метод (ПМ, дата зачатия или перенос при ЭКО) вы используете для оценки.",
     "faq.q5": "Отправляются ли моя дата родов или личные данные о датах на сервер?",
-    "faq.a5": "Нет. Все расчёты в этом калькуляторе даты родов выполняются локально в вашем браузере с помощью JavaScript. Дата последней менструации, дата зачатия или дата переноса сохраняются только в локальном хранилище этого браузера, чтобы форма была готова при следующем визите, а кнопка «Очистить сохранённые даты» сразу их удаляет. Ничего не отправляется на сервер, учётной записи нет, и никто другой не может увидеть введённые вами данные."
+    "faq.a5": "Нет. Все расчёты в этом калькуляторе даты родов выполняются локально в вашем браузере с помощью JavaScript. Дата последней менструации, дата зачатия или дата переноса сохраняются только в локальном хранилище этого браузера, чтобы форма была готова при следующем визите, а кнопка «Очистить сохранённые даты» сразу их удаляет. Ничего не отправляется на сервер, учётной записи нет, и никто другой не может увидеть введённые вами данные.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -767,7 +812,12 @@ window.I18N_LOCALES = {
     "faq.q4": "حملی عمر کیا ہے، اور یہ حقیقی حمل ٹھہرنے سے پہلے ہی شمار ہونا کیوں شروع ہو جاتی ہے؟",
     "faq.a4": "حملی عمر حمل کتنا آگے بڑھ چکا ہے اسے ناپنے کا طبی طریقہ ہے، اور روایتی طور پر اسے آخری ماہواری کے پہلے دن سے شمار کیا جاتا ہے — یعنی بیضہ دانی اور حمل عام طور پر ٹھہرنے سے تقریباً دو ہفتے پہلے۔ اسی لیے حمل کے چوتھے ہفتے میں، ایمبریو خود عموماً صرف تقریباً 2 ہفتے کا ہوتا ہے۔ یہ کیلکولیٹر اسی روایت کے مطابق مکمل ہفتوں اور دنوں میں حملی عمر بتاتا ہے، چاہے آپ اسے معلوم کرنے کے لیے کوئی بھی طریقہ (LMP، حمل کی تاریخ، یا IVF ٹرانسفر) استعمال کریں۔",
     "faq.q5": "کیا میری متوقع تاریخِ پیدائش یا ذاتی تاریخ کی معلومات کسی سرور کو بھیجی جاتی ہے؟",
-    "faq.a5": "نہیں۔ اس متوقع تاریخِ پیدائش کیلکولیٹر کے تمام حسابات آپ کے براؤزر میں مقامی طور پر جاوا اسکرپٹ کے ذریعے چلتے ہیں۔ آپ کی آخری ماہواری کی تاریخ، حمل کی تاریخ، یا ٹرانسفر کی تاریخ صرف اسی براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہے تاکہ اگلی بار فارم تیار ہو، اور \"محفوظ شدہ تاریخیں صاف کریں\" اسے فوراً حذف کر دیتا ہے۔ کچھ بھی اپ لوڈ نہیں ہوتا، کوئی اکاؤنٹ نہیں ہے، اور کوئی اور آپ کے درج کردہ ڈیٹا کو نہیں دیکھ سکتا۔"
+    "faq.a5": "نہیں۔ اس متوقع تاریخِ پیدائش کیلکولیٹر کے تمام حسابات آپ کے براؤزر میں مقامی طور پر جاوا اسکرپٹ کے ذریعے چلتے ہیں۔ آپ کی آخری ماہواری کی تاریخ، حمل کی تاریخ، یا ٹرانسفر کی تاریخ صرف اسی براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہے تاکہ اگلی بار فارم تیار ہو، اور \"محفوظ شدہ تاریخیں صاف کریں\" اسے فوراً حذف کر دیتا ہے۔ کچھ بھی اپ لوڈ نہیں ہوتا، کوئی اکاؤنٹ نہیں ہے، اور کوئی اور آپ کے درج کردہ ڈیٹا کو نہیں دیکھ سکتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -843,7 +893,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa itu usia kehamilan, dan mengapa perhitungannya dimulai sebelum konsepsi benar-benar terjadi?",
     "faq.a4": "Usia kehamilan adalah konvensi medis untuk mengukur seberapa jauh kehamilan telah berlangsung, dan secara tradisional dihitung dari hari pertama haid terakhir — sekitar dua minggu sebelum ovulasi dan konsepsi biasanya terjadi. Jadi pada minggu ke-4 kehamilan, embrio itu sendiri biasanya baru berusia sekitar 2 minggu. Kalkulator ini melaporkan usia kehamilan dalam minggu dan hari penuh mengikuti konvensi yang sama, apa pun metode (HPHT, tanggal konsepsi, atau transfer IVF) yang Anda gunakan untuk memperkirakannya.",
     "faq.q5": "Apakah perkiraan hari lahir atau informasi tanggal pribadi saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua perhitungan di kalkulator perkiraan hari lahir ini berjalan secara lokal di browser Anda menggunakan JavaScript. Tanggal haid terakhir, tanggal konsepsi, atau tanggal transfer Anda hanya disimpan di penyimpanan lokal browser ini agar formulir siap saat kunjungan berikutnya, dan \"Hapus tanggal tersimpan\" akan langsung menghapusnya. Tidak ada yang diunggah, tidak ada akun, dan tidak ada orang lain yang bisa melihat apa yang Anda masukkan."
+    "faq.a5": "Tidak. Semua perhitungan di kalkulator perkiraan hari lahir ini berjalan secara lokal di browser Anda menggunakan JavaScript. Tanggal haid terakhir, tanggal konsepsi, atau tanggal transfer Anda hanya disimpan di penyimpanan lokal browser ini agar formulir siap saat kunjungan berikutnya, dan \"Hapus tanggal tersimpan\" akan langsung menghapusnya. Tidak ada yang diunggah, tidak ada akun, dan tidak ada orang lain yang bisa melihat apa yang Anda masukkan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -919,7 +974,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist das Schwangerschaftsalter, und warum beginnt seine Zählung schon vor der eigentlichen Empfängnis?",
     "faq.a4": "Das Schwangerschaftsalter ist die medizinische Konvention, um zu messen, wie weit eine Schwangerschaft fortgeschritten ist, und wird traditionell ab dem ersten Tag der letzten Periode gezählt — etwa zwei Wochen bevor Eisprung und Empfängnis normalerweise stattfinden. In der 4. Schwangerschaftswoche ist der Embryo selbst also meist erst etwa 2 Wochen alt. Dieser Rechner gibt das Schwangerschaftsalter in vollen Wochen und Tagen nach genau dieser Konvention an, unabhängig davon, welche Methode (letzte Periode, Empfängnisdatum oder IVF-Transfer) Sie zur Schätzung verwenden.",
     "faq.q5": "Werden mein Geburtstermin oder persönliche Datumsangaben an einen Server gesendet?",
-    "faq.a5": "Nein. Alle Berechnungen dieses Geburtsterminrechners laufen lokal in Ihrem Browser mit JavaScript ab. Ihr Datum der letzten Periode, das Empfängnisdatum oder das Transferdatum wird nur im lokalen Speicher dieses Browsers gespeichert, damit das Formular beim nächsten Besuch bereit ist, und „Gespeicherte Daten löschen\" entfernt es sofort. Es wird nichts hochgeladen, es gibt kein Konto, und niemand sonst kann sehen, was Sie eingegeben haben."
+    "faq.a5": "Nein. Alle Berechnungen dieses Geburtsterminrechners laufen lokal in Ihrem Browser mit JavaScript ab. Ihr Datum der letzten Periode, das Empfängnisdatum oder das Transferdatum wird nur im lokalen Speicher dieses Browsers gespeichert, damit das Formular beim nächsten Besuch bereit ist, und „Gespeicherte Daten löschen\" entfernt es sofort. Es wird nichts hochgeladen, es gibt kein Konto, und niemand sonst kann sehen, was Sie eingegeben haben.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -995,7 +1055,12 @@ window.I18N_LOCALES = {
     "faq.q4": "妊娠週数とは何ですか？なぜ実際の受精より前から数え始めるのですか？",
     "faq.a4": "妊娠週数は妊娠の進み具合を測るための医学的な慣例で、伝統的に最終月経開始日から数えます — これは通常、排卵と受精が起こるおよそ2週間前にあたります。そのため妊娠4週目の時点で、胚自体は通常まだ2週間ほどの大きさです。この計算機は、LMP・排卵/受精日・IVF移植日のどの方法を使っても、同じ慣例に従って妊娠週数を完了週と日で示します。",
     "faq.q5": "出産予定日や個人の日付情報がサーバーに送信されることはありますか？",
-    "faq.a5": "いいえ。この出産予定日計算機のすべての計算は、JavaScriptによってお使いのブラウザ内でローカルに実行されます。最終月経日、排卵/受精日、または移植日は、次回訪問時にフォームがすぐ使えるようこのブラウザのローカルストレージにのみ保存され、「保存した日付を消去」を押すとすぐに削除されます。何もアップロードされず、アカウントもなく、入力内容を他の誰かが見ることもできません。"
+    "faq.a5": "いいえ。この出産予定日計算機のすべての計算は、JavaScriptによってお使いのブラウザ内でローカルに実行されます。最終月経日、排卵/受精日、または移植日は、次回訪問時にフォームがすぐ使えるようこのブラウザのローカルストレージにのみ保存され、「保存した日付を消去」を押すとすぐに削除されます。何もアップロードされず、アカウントもなく、入力内容を他の誰かが見ることもできません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -1071,6 +1136,11 @@ window.I18N_LOCALES = {
     "faq.q4": "임신 주수란 무엇이며, 왜 실제 수정이 일어나기 전부터 계산을 시작하나요?",
     "faq.a4": "임신 주수는 임신이 얼마나 진행되었는지를 나타내는 의학적 관례로, 전통적으로 마지막 생리 시작일부터 계산합니다 — 이는 보통 배란과 수정이 일어나기 약 2주 전에 해당합니다. 그래서 임신 4주차에도 실제 배아 자체의 나이는 보통 약 2주에 불과합니다. 이 계산기는 LMP, 수정일, IVF 이식일 중 어떤 방법으로 추정하든 동일한 관례에 따라 완결된 주와 일수로 임신 주수를 알려줍니다.",
     "faq.q5": "제 출산예정일이나 개인 날짜 정보가 서버로 전송되나요?",
-    "faq.a5": "아닙니다. 이 출산예정일 계산기의 모든 계산은 자바스크립트를 이용해 브라우저 내에서 로컬로 처리됩니다. 마지막 생리일, 수정일, 이식일은 다음 방문 시 바로 사용할 수 있도록 이 브라우저의 로컬 저장소에만 저장되며, \"저장된 날짜 지우기\"를 누르면 즉시 삭제됩니다. 어떤 데이터도 업로드되지 않고, 계정도 없으며, 입력한 내용을 다른 사람이 볼 수 없습니다."
+    "faq.a5": "아닙니다. 이 출산예정일 계산기의 모든 계산은 자바스크립트를 이용해 브라우저 내에서 로컬로 처리됩니다. 마지막 생리일, 수정일, 이식일은 다음 방문 시 바로 사용할 수 있도록 이 브라우저의 로컬 저장소에만 저장되며, \"저장된 날짜 지우기\"를 누르면 즉시 삭제됩니다. 어떤 데이터도 업로드되지 않고, 계정도 없으며, 입력한 내용을 다른 사람이 볼 수 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

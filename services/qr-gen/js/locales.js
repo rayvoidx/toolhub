@@ -59,7 +59,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What is the difference between error correction levels L, M, Q and H?",
     "faq.a4": "It is how much of the code can be damaged and still scan: L ≈ 7%, M ≈ 15%, Q ≈ 25%, H ≈ 30%. Higher levels make the pattern denser and reduce the maximum text length. M suits most uses; pick H if a logo will overlap the code or it may get dirty.",
     "faq.q5": "Can I use the QR codes commercially?",
-    "faq.a5": "Yes. QR codes you generate and download as PNG are yours to use freely — business cards, menus, posters, packaging, slides and any other commercial use — with no watermark, no fees and no restrictions."
+    "faq.a5": "Yes. QR codes you generate and download as PNG are yours to use freely — business cards, menus, posters, packaging, slides and any other commercial use — with no watermark, no fees and no restrictions.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -103,7 +108,12 @@ window.I18N_LOCALES = {
     "faq.q4": "容错等级 L、M、Q、H 有什么区别？",
     "faq.a4": "区别在于二维码被污损后仍可识别的程度：L 约 7%、M 约 15%、Q 约 25%、H 约 30%。等级越高，图案越密，可容纳的字数越少。一般用途选 M；需要叠加 Logo 或环境易污损时选 H。",
     "faq.q5": "生成的二维码可以商用吗？",
-    "faq.a5": "可以。生成并下载的 PNG 二维码可自由使用 — 名片、菜单、海报、包装、演示文稿等商业用途均可，无水印、无费用、无任何限制。"
+    "faq.a5": "可以。生成并下载的 PNG 二维码可自由使用 — 名片、菜单、海报、包装、演示文稿等商业用途均可，无水印、无费用、无任何限制。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -147,7 +157,12 @@ window.I18N_LOCALES = {
     "faq.q4": "एरर करेक्शन लेवल L, M, Q, H में क्या अंतर है?",
     "faq.a4": "यह बताता है कि कोड कितना क्षतिग्रस्त होकर भी स्कैन हो सकेगा: L ≈ 7%, M ≈ 15%, Q ≈ 25%, H ≈ 30%। लेवल जितना ऊँचा, पैटर्न उतना घना और क्षमता उतनी कम। सामान्य उपयोग के लिए M; लोगो लगाना हो या गंदगी की आशंका हो तो H चुनें।",
     "faq.q5": "क्या बने QR कोड का व्यावसायिक उपयोग कर सकते हैं?",
-    "faq.a5": "हाँ। बनाए और PNG डाउनलोड किए गए QR कोड पूरी तरह आपके हैं — विज़िटिंग कार्ड, मेन्यू, पोस्टर, पैकेजिंग, प्रेज़ेंटेशन समेत हर व्यावसायिक उपयोग की अनुमति है। न वॉटरमार्क, न शुल्क, न कोई प्रतिबंध।"
+    "faq.a5": "हाँ। बनाए और PNG डाउनलोड किए गए QR कोड पूरी तरह आपके हैं — विज़िटिंग कार्ड, मेन्यू, पोस्टर, पैकेजिंग, प्रेज़ेंटेशन समेत हर व्यावसायिक उपयोग की अनुमति है। न वॉटरमार्क, न शुल्क, न कोई प्रतिबंध।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -191,7 +206,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿En qué se diferencian los niveles de corrección L, M, Q y H?",
     "faq.a4": "Indican cuánto daño puede sufrir el código y seguir leyéndose: L ≈ 7 %, M ≈ 15 %, Q ≈ 25 %, H ≈ 30 %. A mayor nivel, patrón más denso y menos capacidad de texto. Para uso general, M; si superpondrás un logo o habrá suciedad, H.",
     "faq.q5": "¿Puedo usar los códigos QR comercialmente?",
-    "faq.a5": "Sí. Los códigos que generas y descargas en PNG son tuyos: tarjetas de visita, menús, carteles, envases, presentaciones y cualquier uso comercial, sin marca de agua, sin costes y sin restricciones."
+    "faq.a5": "Sí. Los códigos que generas y descargas en PNG son tuyos: tarjetas de visita, menús, carteles, envases, presentaciones y cualquier uso comercial, sin marca de agua, sin costes y sin restricciones.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -235,7 +255,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الفرق بين مستويات التصحيح L وM وQ وH؟",
     "faq.a4": "تحدد مقدار التلف الذي يتحمله الرمز ويبقى قابلًا للمسح: L ≈ 7%، M ≈ 15%، Q ≈ 25%، H ≈ 30%. كلما ارتفع المستوى زادت كثافة النمط وقلّت السعة. للاستخدام العام اختر M، وإن كنت ستضع شعارًا فوق الرمز أو يُحتمل اتساخه فاختر H.",
     "faq.q5": "هل يمكنني استخدام الرموز تجاريًا؟",
-    "faq.a5": "نعم. الرموز التي تنشئها وتنزّلها بصيغة PNG ملكك تمامًا — بطاقات العمل والقوائم والملصقات والعبوات والعروض التقديمية وأي استخدام تجاري آخر، بلا علامة مائية ولا رسوم ولا قيود."
+    "faq.a5": "نعم. الرموز التي تنشئها وتنزّلها بصيغة PNG ملكك تمامًا — بطاقات العمل والقوائم والملصقات والعبوات والعروض التقديمية وأي استخدام تجاري آخر، بلا علامة مائية ولا رسوم ولا قيود.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -279,7 +304,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle différence entre les niveaux de correction L, M, Q et H ?",
     "faq.a4": "C'est la part du code qui peut être abîmée tout en restant lisible : L ≈ 7 %, M ≈ 15 %, Q ≈ 25 %, H ≈ 30 %. Plus le niveau est élevé, plus le motif est dense et moins il peut contenir de texte. M convient à la plupart des usages ; choisissez H pour superposer un logo ou en environnement salissant.",
     "faq.q5": "Puis-je utiliser les QR codes à des fins commerciales ?",
-    "faq.a5": "Oui. Les codes générés et téléchargés en PNG vous appartiennent : cartes de visite, menus, affiches, emballages, présentations et tout usage commercial, sans filigrane, sans frais et sans restriction."
+    "faq.a5": "Oui. Les codes générés et téléchargés en PNG vous appartiennent : cartes de visite, menus, affiches, emballages, présentations et tout usage commercial, sans filigrane, sans frais et sans restriction.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -323,7 +353,12 @@ window.I18N_LOCALES = {
     "faq.q4": "এরর কারেকশন লেভেল L, M, Q, H-এর পার্থক্য কী?",
     "faq.a4": "কোড কতটা নষ্ট হলেও স্ক্যান করা যাবে তার মাত্রা: L ≈ ৭%, M ≈ ১৫%, Q ≈ ২৫%, H ≈ ৩০%। লেভেল যত বেশি, প্যাটার্ন তত ঘন আর ধারণক্ষমতা তত কম। সাধারণ ব্যবহারে M; লোগো বসাতে চাইলে বা ময়লা হওয়ার আশঙ্কা থাকলে H বেছে নিন।",
     "faq.q5": "তৈরি QR কোড কি বাণিজ্যিকভাবে ব্যবহার করা যাবে?",
-    "faq.a5": "হ্যাঁ। তৈরি করে PNG ডাউনলোড করা QR কোড সম্পূর্ণ আপনার — ভিজিটিং কার্ড, মেনু, পোস্টার, প্যাকেজিং, প্রেজেন্টেশনসহ যেকোনো বাণিজ্যিক ব্যবহারে অনুমতি আছে। কোনো ওয়াটারমার্ক, ফি বা বিধিনিষেধ নেই।"
+    "faq.a5": "হ্যাঁ। তৈরি করে PNG ডাউনলোড করা QR কোড সম্পূর্ণ আপনার — ভিজিটিং কার্ড, মেনু, পোস্টার, প্যাকেজিং, প্রেজেন্টেশনসহ যেকোনো বাণিজ্যিক ব্যবহারে অনুমতি আছে। কোনো ওয়াটারমার্ক, ফি বা বিধিনিষেধ নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -367,7 +402,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual a diferença entre os níveis de correção L, M, Q e H?",
     "faq.a4": "É o quanto o código pode ser danificado e ainda ser lido: L ≈ 7%, M ≈ 15%, Q ≈ 25%, H ≈ 30%. Quanto maior o nível, mais denso o padrão e menor a capacidade de texto. Para uso geral, M; se for sobrepor um logo ou houver sujeira, H.",
     "faq.q5": "Posso usar os QR codes comercialmente?",
-    "faq.a5": "Sim. Os códigos gerados e baixados em PNG são seus — cartões de visita, cardápios, pôsteres, embalagens, apresentações e qualquer uso comercial, sem marca d'água, sem custos e sem restrições."
+    "faq.a5": "Sim. Os códigos gerados e baixados em PNG são seus — cartões de visita, cardápios, pôsteres, embalagens, apresentações e qualquer uso comercial, sem marca d'água, sem custos e sem restrições.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -411,7 +451,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Чем различаются уровни коррекции L, M, Q и H?",
     "faq.a4": "Это доля повреждений, при которой код всё ещё читается: L ≈ 7 %, M ≈ 15 %, Q ≈ 25 %, H ≈ 30 %. Чем выше уровень, тем плотнее узор и меньше ёмкость. Для обычных задач — M; если поверх кода будет логотип или возможны загрязнения — H.",
     "faq.q5": "Можно ли использовать QR-коды в коммерческих целях?",
-    "faq.a5": "Да. Созданные и скачанные в PNG коды полностью ваши: визитки, меню, плакаты, упаковка, презентации и любое коммерческое использование — без водяных знаков, платы и ограничений."
+    "faq.a5": "Да. Созданные и скачанные в PNG коды полностью ваши: визитки, меню, плакаты, упаковка, презентации и любое коммерческое использование — без водяных знаков, платы и ограничений.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -455,7 +500,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ایرر کریکشن لیول L، M، Q، H میں کیا فرق ہے؟",
     "faq.a4": "یہ بتاتا ہے کہ کوڈ کتنا خراب ہو کر بھی اسکین ہو سکے گا: L ≈ 7%، M ≈ 15%، Q ≈ 25%، H ≈ 30%۔ لیول جتنا اونچا، پیٹرن اتنا گھنا اور گنجائش اتنی کم۔ عام استعمال کے لیے M؛ لوگو لگانا ہو یا گندگی کا اندیشہ ہو تو H چنیں۔",
     "faq.q5": "کیا بنائے گئے QR کوڈ تجارتی طور پر استعمال ہو سکتے ہیں؟",
-    "faq.a5": "جی ہاں۔ بنائے اور PNG ڈاؤن لوڈ کیے گئے کوڈ مکمل طور پر آپ کے ہیں — وزیٹنگ کارڈ، مینیو، پوسٹر، پیکیجنگ، پریزنٹیشن سمیت ہر تجارتی استعمال کی اجازت ہے۔ نہ واٹر مارک، نہ فیس، نہ کوئی پابندی۔"
+    "faq.a5": "جی ہاں۔ بنائے اور PNG ڈاؤن لوڈ کیے گئے کوڈ مکمل طور پر آپ کے ہیں — وزیٹنگ کارڈ، مینیو، پوسٹر، پیکیجنگ، پریزنٹیشن سمیت ہر تجارتی استعمال کی اجازت ہے۔ نہ واٹر مارک، نہ فیس، نہ کوئی پابندی۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -499,7 +549,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa beda tingkat koreksi kesalahan L, M, Q, dan H?",
     "faq.a4": "Ini menentukan seberapa besar kerusakan yang masih bisa dipulihkan saat dipindai: L ≈ 7%, M ≈ 15%, Q ≈ 25%, H ≈ 30%. Makin tinggi tingkatnya, makin rapat polanya dan makin kecil kapasitas teksnya. Untuk pemakaian umum pilih M; jika akan menempelkan logo atau rawan kotor, pilih H.",
     "faq.q5": "Bolehkah kode QR dipakai untuk keperluan komersial?",
-    "faq.a5": "Boleh. Kode QR yang Anda buat dan unduh sebagai PNG sepenuhnya milik Anda — kartu nama, menu, poster, kemasan, presentasi, dan penggunaan komersial lainnya, tanpa watermark, tanpa biaya, tanpa batasan."
+    "faq.a5": "Boleh. Kode QR yang Anda buat dan unduh sebagai PNG sepenuhnya milik Anda — kartu nama, menu, poster, kemasan, presentasi, dan penggunaan komersial lainnya, tanpa watermark, tanpa biaya, tanpa batasan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -543,7 +598,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was unterscheidet die Fehlerkorrektur-Level L, M, Q und H?",
     "faq.a4": "Sie geben an, wie stark der Code beschädigt sein darf und trotzdem lesbar bleibt: L ≈ 7 %, M ≈ 15 %, Q ≈ 25 %, H ≈ 30 %. Je höher das Level, desto dichter das Muster und desto geringer die Textkapazität. Für den Normalfall M; bei Logo-Overlay oder Verschmutzungsgefahr H.",
     "faq.q5": "Darf ich die QR-Codes kommerziell nutzen?",
-    "faq.a5": "Ja. Die erzeugten und als PNG heruntergeladenen Codes gehören Ihnen — Visitenkarten, Speisekarten, Plakate, Verpackungen, Präsentationen und jede andere kommerzielle Nutzung, ohne Wasserzeichen, ohne Kosten, ohne Einschränkungen."
+    "faq.a5": "Ja. Die erzeugten und als PNG heruntergeladenen Codes gehören Ihnen — Visitenkarten, Speisekarten, Plakate, Verpackungen, Präsentationen und jede andere kommerzielle Nutzung, ohne Wasserzeichen, ohne Kosten, ohne Einschränkungen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -587,7 +647,12 @@ window.I18N_LOCALES = {
     "faq.q4": "誤り訂正レベルL・M・Q・Hは何が違いますか?",
     "faq.a4": "コードが汚れたり一部隠れたりしても読み取れる度合いの違いです。L≈7%、M≈15%、Q≈25%、H≈30%まで復元でき、レベルが高いほどパターンは細かくなり、入る文字数は減ります。通常はM、ロゴを重ねる場合や汚れやすい環境ではHがおすすめです。",
     "faq.q5": "作成したQRコードを商用利用できますか?",
-    "faq.a5": "できます。生成してPNGダウンロードしたQRコードは、名刺・メニュー・ポスター・パッケージ・プレゼン資料など商用を含め自由に使えます。透かし・料金・制限はありません。"
+    "faq.a5": "できます。生成してPNGダウンロードしたQRコードは、名刺・メニュー・ポスター・パッケージ・プレゼン資料など商用を含め自由に使えます。透かし・料金・制限はありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -631,6 +696,11 @@ window.I18N_LOCALES = {
     "faq.q4": "오류 복원 레벨 L·M·Q·H는 무엇이 다른가요?",
     "faq.a4": "코드가 더러워지거나 일부 가려져도 읽히도록 복원 정보를 얼마나 넣을지의 차이입니다. L은 약 7%, M은 약 15%, Q는 약 25%, H는 약 30%의 손상까지 복원하며, 레벨이 높을수록 담을 수 있는 글자 수는 줄고 패턴은 조밀해집니다. 일반 용도는 M, 로고를 겹치거나 오염이 많은 환경은 H를 권합니다.",
     "faq.q5": "만든 QR 코드를 상업적으로 사용해도 되나요?",
-    "faq.a5": "네. 생성해서 PNG 다운로드한 QR 코드 이미지는 자유롭게 사용할 수 있습니다. 명함, 메뉴판, 포스터, 제품 포장, 발표자료 등 상업적 용도를 포함해 제한도, 워터마크도, 별도 비용도 없습니다."
+    "faq.a5": "네. 생성해서 PNG 다운로드한 QR 코드 이미지는 자유롭게 사용할 수 있습니다. 명함, 메뉴판, 포스터, 제품 포장, 발표자료 등 상업적 용도를 포함해 제한도, 워터마크도, 별도 비용도 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

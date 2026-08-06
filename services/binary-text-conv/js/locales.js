@@ -49,7 +49,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What's the difference between the Binary, Hex, and Decimal tabs?",
     "faq.a4": "All three tabs represent the exact same underlying bytes, just written in a different number base: Binary shows each byte as 8 bits (0 and 1), Hex shows it as two base-16 digits (0-9, A-F), and Decimal shows it as a plain base-10 number from 0 to 255. Switch tabs any time and the code box updates to match your current text without losing anything.",
     "faq.q5": "Is my text sent to a server when I convert it?",
-    "faq.a5": "No. This binary translator runs entirely in your browser — your text and its binary, hex or decimal code never leave your device and nothing is uploaded or stored on a server. Only your last input and chosen tab are saved to this browser's local storage for convenience."
+    "faq.a5": "No. This binary translator runs entirely in your browser — your text and its binary, hex or decimal code never leave your device and nothing is uploaded or stored on a server. Only your last input and chosen tab are saved to this browser's local storage for convenience.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -97,7 +102,12 @@ window.I18N_LOCALES = {
     "faq.q4": "“二进制”“十六进制”“十进制”这三个标签页有什么区别?",
     "faq.a4": "这三个标签页表示的是完全相同的字节,只是用不同的进制书写:二进制把每个字节写成 8 位(0 和 1),十六进制把它写成两位十六进制数字(0-9、A-F),十进制则把它写成 0 到 255 之间的普通十进制数。随时切换标签页,代码框都会根据当前文本同步更新,不会丢失任何内容。",
     "faq.q5": "转换时我的文本会被发送到服务器吗?",
-    "faq.a5": "不会。这个二进制转换器完全在你的浏览器中运行 — 你的文本以及对应的二进制、十六进制或十进制代码都不会离开你的设备,也不会被上传或存储到服务器。为了方便使用,只有你最后一次输入的内容和所选标签页会保存在浏览器的本地存储中。"
+    "faq.a5": "不会。这个二进制转换器完全在你的浏览器中运行 — 你的文本以及对应的二进制、十六进制或十进制代码都不会离开你的设备,也不会被上传或存储到服务器。为了方便使用,只有你最后一次输入的内容和所选标签页会保存在浏览器的本地存储中。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -145,7 +155,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Binary, Hex और Decimal टैब में क्या फ़र्क़ है?",
     "faq.a4": "तीनों टैब बिल्कुल एक जैसी बाइट्स को दिखाते हैं, बस अलग-अलग नंबर बेस में लिखा हुआ: Binary हर बाइट को 8 बिट्स (0 और 1) में दिखाता है, Hex उसे दो बेस-16 अंकों (0-9, A-F) में दिखाता है, और Decimal उसे 0 से 255 के बीच की सामान्य बेस-10 संख्या के रूप में दिखाता है। कभी भी टैब बदलें, कोड बॉक्स आपके मौजूदा टेक्स्ट के हिसाब से अपडेट हो जाएगा, बिना कुछ खोए।",
     "faq.q5": "क्या कन्वर्ट करते समय मेरा टेक्स्ट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह बाइनरी ट्रांसलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपका टेक्स्ट और उसका बाइनरी, हेक्स या डेसिमल कोड कभी भी आपकी डिवाइस से बाहर नहीं जाता और न ही सर्वर पर अपलोड या स्टोर होता है। सुविधा के लिए सिर्फ़ आपका आख़िरी इनपुट और चुना हुआ टैब आपके ब्राउज़र के लोकल स्टोरेज में सेव होता है।"
+    "faq.a5": "नहीं। यह बाइनरी ट्रांसलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपका टेक्स्ट और उसका बाइनरी, हेक्स या डेसिमल कोड कभी भी आपकी डिवाइस से बाहर नहीं जाता और न ही सर्वर पर अपलोड या स्टोर होता है। सुविधा के लिए सिर्फ़ आपका आख़िरी इनपुट और चुना हुआ टैब आपके ब्राउज़र के लोकल स्टोरेज में सेव होता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -193,7 +208,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuál es la diferencia entre las pestañas Binario, Hex y Decimal?",
     "faq.a4": "Las tres pestañas representan exactamente los mismos bytes, solo escritos en una base numérica diferente: Binario muestra cada byte como 8 bits (0 y 1), Hex lo muestra como dos dígitos en base 16 (0-9, A-F), y Decimal lo muestra como un número normal en base 10 de 0 a 255. Cambia de pestaña en cualquier momento y el campo de código se actualizará según tu texto actual sin perder nada.",
     "faq.q5": "¿Se envía mi texto a un servidor cuando lo convierto?",
-    "faq.a5": "No. Este traductor binario se ejecuta completamente en tu navegador — tu texto y su código binario, hexadecimal o decimal nunca salen de tu dispositivo y no se sube ni se almacena en ningún servidor. Solo se guarda tu última entrada y la pestaña elegida en el almacenamiento local de este navegador, por comodidad."
+    "faq.a5": "No. Este traductor binario se ejecuta completamente en tu navegador — tu texto y su código binario, hexadecimal o decimal nunca salen de tu dispositivo y no se sube ni se almacena en ningún servidor. Solo se guarda tu última entrada y la pestaña elegida en el almacenamiento local de este navegador, por comodidad.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -241,7 +261,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الفرق بين تبويبات الثنائي والست عشري والعشري؟",
     "faq.a4": "تمثّل التبويبات الثلاثة نفس البايتات تمامًا، لكن مكتوبة بأساس رقمي مختلف: الثنائي يعرض كل بايت كـ 8 بتات (0 و1)، والست عشري يعرضه كرقمين بالأساس 16 (0-9، A-F)، والعشري يعرضه كرقم عادي بالأساس 10 من 0 إلى 255. بدّل بين التبويبات في أي وقت وسيتحدّث مربع الشفرة ليطابق نصك الحالي دون أن تفقد أي شيء.",
     "faq.q5": "هل يُرسَل نصي إلى خادم عند تحويله؟",
-    "faq.a5": "لا. يعمل مترجم الثنائي هذا بالكامل داخل متصفحك — نصك وشفرته الثنائية أو الست عشرية أو العشرية لا تغادر جهازك أبدًا ولا تُرفَع أو تُخزَّن على أي خادم. يُحفَظ فقط آخر إدخال لك والتبويب المختار في التخزين المحلي لهذا المتصفح لتسهيل الاستخدام."
+    "faq.a5": "لا. يعمل مترجم الثنائي هذا بالكامل داخل متصفحك — نصك وشفرته الثنائية أو الست عشرية أو العشرية لا تغادر جهازك أبدًا ولا تُرفَع أو تُخزَّن على أي خادم. يُحفَظ فقط آخر إدخال لك والتبويب المختار في التخزين المحلي لهذا المتصفح لتسهيل الاستخدام.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -289,7 +314,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la différence entre les onglets Binaire, Hex et Décimal ?",
     "faq.a4": "Les trois onglets représentent exactement les mêmes octets, simplement écrits dans une base numérique différente : Binaire montre chaque octet sous forme de 8 bits (0 et 1), Hex le montre sous forme de deux chiffres en base 16 (0-9, A-F), et Décimal le montre sous forme d'un nombre ordinaire en base 10 de 0 à 255. Changez d'onglet à tout moment et le champ de code se met à jour selon votre texte actuel, sans rien perdre.",
     "faq.q5": "Mon texte est-il envoyé à un serveur lors de la conversion ?",
-    "faq.a5": "Non. Ce traducteur binaire fonctionne entièrement dans votre navigateur — votre texte et son code binaire, hexadécimal ou décimal ne quittent jamais votre appareil et ne sont ni envoyés ni stockés sur un serveur. Seuls votre dernière saisie et l'onglet choisi sont enregistrés dans le stockage local de ce navigateur, par commodité."
+    "faq.a5": "Non. Ce traducteur binaire fonctionne entièrement dans votre navigateur — votre texte et son code binaire, hexadécimal ou décimal ne quittent jamais votre appareil et ne sont ni envoyés ni stockés sur un serveur. Seuls votre dernière saisie et l'onglet choisi sont enregistrés dans le stockage local de ce navigateur, par commodité.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -337,7 +367,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Binary, Hex এবং Decimal ট্যাবের মধ্যে পার্থক্য কী?",
     "faq.a4": "তিনটি ট্যাবই একদম একই বাইট প্রতিনিধিত্ব করে, শুধু ভিন্ন সংখ্যা-ভিত্তিতে লেখা: Binary প্রতিটি বাইটকে 8 বিট (0 ও 1) হিসেবে দেখায়, Hex সেটিকে দুটি বেস-16 সংখ্যা (0-9, A-F) হিসেবে দেখায়, এবং Decimal সেটিকে 0 থেকে 255-এর মধ্যে একটি সাধারণ বেস-10 সংখ্যা হিসেবে দেখায়। যেকোনো সময় ট্যাব পরিবর্তন করুন, কোড বক্স আপনার বর্তমান টেক্সট অনুযায়ী আপডেট হয়ে যাবে, কিছুই হারাবে না।",
     "faq.q5": "রূপান্তরের সময় আমার টেক্সট কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই বাইনারি ট্রান্সলেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার টেক্সট এবং তার বাইনারি, হেক্স বা ডেসিমেল কোড কখনোই আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। সুবিধার জন্য শুধু আপনার শেষ ইনপুট এবং বেছে নেওয়া ট্যাব এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়।"
+    "faq.a5": "না। এই বাইনারি ট্রান্সলেটরটি সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনার টেক্সট এবং তার বাইনারি, হেক্স বা ডেসিমেল কোড কখনোই আপনার ডিভাইস ছেড়ে যায় না এবং কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। সুবিধার জন্য শুধু আপনার শেষ ইনপুট এবং বেছে নেওয়া ট্যাব এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -385,7 +420,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a diferença entre as abas Binário, Hex e Decimal?",
     "faq.a4": "As três abas representam exatamente os mesmos bytes, apenas escritos em uma base numérica diferente: Binário mostra cada byte como 8 bits (0 e 1), Hex mostra como dois dígitos na base 16 (0-9, A-F), e Decimal mostra como um número comum na base 10 de 0 a 255. Troque de aba a qualquer momento e a caixa de código será atualizada de acordo com seu texto atual, sem perder nada.",
     "faq.q5": "Meu texto é enviado a um servidor quando eu o converto?",
-    "faq.a5": "Não. Este tradutor binário roda inteiramente no seu navegador — seu texto e seu código binário, hexadecimal ou decimal nunca saem do seu dispositivo e não são enviados nem armazenados em nenhum servidor. Apenas sua última entrada e a aba escolhida são salvas no armazenamento local deste navegador, por conveniência."
+    "faq.a5": "Não. Este tradutor binário roda inteiramente no seu navegador — seu texto e seu código binário, hexadecimal ou decimal nunca saem do seu dispositivo e não são enviados nem armazenados em nenhum servidor. Apenas sua última entrada e a aba escolhida são salvas no armazenamento local deste navegador, por conveniência.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -433,7 +473,12 @@ window.I18N_LOCALES = {
     "faq.q4": "В чём разница между вкладками Двоичный, Hex и Десятичный?",
     "faq.a4": "Все три вкладки представляют абсолютно одни и те же байты, только записанные в разных системах счисления: Двоичный показывает каждый байт как 8 бит (0 и 1), Hex — как две шестнадцатеричные цифры (0-9, A-F), а Десятичный — как обычное число по основанию 10 от 0 до 255. Переключайте вкладки в любой момент — поле кода обновится в соответствии с вашим текущим текстом, ничего не потеряется.",
     "faq.q5": "Отправляется ли мой текст на сервер при конвертации?",
-    "faq.a5": "Нет. Этот бинарный переводчик работает полностью в вашем браузере — ваш текст и его двоичный, шестнадцатеричный или десятичный код никогда не покидают ваше устройство и не загружаются и не хранятся на сервере. Для удобства в локальном хранилище браузера сохраняются только последний введённый текст и выбранная вкладка."
+    "faq.a5": "Нет. Этот бинарный переводчик работает полностью в вашем браузере — ваш текст и его двоичный, шестнадцатеричный или десятичный код никогда не покидают ваше устройство и не загружаются и не хранятся на сервере. Для удобства в локальном хранилище браузера сохраняются только последний введённый текст и выбранная вкладка.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -481,7 +526,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Binary، Hex اور Decimal ٹیبز میں کیا فرق ہے؟",
     "faq.a4": "تینوں ٹیبز بالکل ایک جیسی بائٹس کو ظاہر کرتے ہیں، بس مختلف نمبر بیس میں لکھا ہوا: Binary ہر بائٹ کو 8 بٹس (0 اور 1) میں دکھاتا ہے، Hex اسے دو بیس-16 ہندسوں (0-9، A-F) میں دکھاتا ہے، اور Decimal اسے 0 سے 255 کے درمیان ایک عام بیس-10 نمبر کے طور پر دکھاتا ہے۔ کسی بھی وقت ٹیب تبدیل کریں، کوڈ باکس آپ کے موجودہ متن کے مطابق اپڈیٹ ہو جائے گا، بغیر کچھ کھوئے۔",
     "faq.q5": "تبدیل کرتے وقت کیا میرا متن سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ بائنری ٹرانسلیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا متن اور اس کا بائنری، ہیکس یا اعشاری کوڈ کبھی بھی آپ کے آلے سے باہر نہیں جاتا اور نہ ہی کسی سرور پر اپ لوڈ یا محفوظ ہوتا ہے۔ سہولت کے لیے صرف آپ کا آخری ان پٹ اور منتخب ٹیب اس براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے۔"
+    "faq.a5": "نہیں۔ یہ بائنری ٹرانسلیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا متن اور اس کا بائنری، ہیکس یا اعشاری کوڈ کبھی بھی آپ کے آلے سے باہر نہیں جاتا اور نہ ہی کسی سرور پر اپ لوڈ یا محفوظ ہوتا ہے۔ سہولت کے لیے صرف آپ کا آخری ان پٹ اور منتخب ٹیب اس براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -529,7 +579,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa perbedaan antara tab Biner, Hex, dan Desimal?",
     "faq.a4": "Ketiga tab merepresentasikan byte yang persis sama, hanya ditulis dalam basis angka yang berbeda: Biner menampilkan setiap byte sebagai 8 bit (0 dan 1), Hex menampilkannya sebagai dua digit basis-16 (0-9, A-F), dan Desimal menampilkannya sebagai angka biasa berbasis 10 dari 0 sampai 255. Ganti tab kapan saja dan kotak kode akan diperbarui sesuai teks Anda saat ini tanpa kehilangan apa pun.",
     "faq.q5": "Apakah teks saya dikirim ke server saat dikonversi?",
-    "faq.a5": "Tidak. Penerjemah biner ini berjalan sepenuhnya di browser Anda — teks Anda dan kode biner, hex, atau desimalnya tidak pernah meninggalkan perangkat Anda serta tidak diunggah atau disimpan di server mana pun. Hanya input terakhir Anda dan tab yang dipilih yang disimpan di penyimpanan lokal browser ini demi kenyamanan."
+    "faq.a5": "Tidak. Penerjemah biner ini berjalan sepenuhnya di browser Anda — teks Anda dan kode biner, hex, atau desimalnya tidak pernah meninggalkan perangkat Anda serta tidak diunggah atau disimpan di server mana pun. Hanya input terakhir Anda dan tab yang dipilih yang disimpan di penyimpanan lokal browser ini demi kenyamanan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -577,7 +632,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist der Unterschied zwischen den Tabs Binär, Hex und Dezimal?",
     "faq.a4": "Alle drei Tabs stellen genau dieselben Bytes dar, nur in einem anderen Zahlensystem geschrieben: Binär zeigt jedes Byte als 8 Bit (0 und 1), Hex zeigt es als zwei Hexadezimalziffern (0-9, A-F), und Dezimal zeigt es als gewöhnliche Zahl im Zehnersystem von 0 bis 255. Wechsle jederzeit den Tab, und das Code-Feld aktualisiert sich passend zu deinem aktuellen Text, ohne dass etwas verloren geht.",
     "faq.q5": "Wird mein Text beim Umwandeln an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Binär-Übersetzer läuft vollständig in deinem Browser — dein Text und sein Binär-, Hex- oder Dezimalcode verlassen niemals dein Gerät und werden nicht hochgeladen oder auf einem Server gespeichert. Nur deine letzte Eingabe und der gewählte Tab werden zur Bequemlichkeit im lokalen Speicher dieses Browsers gesichert."
+    "faq.a5": "Nein. Dieser Binär-Übersetzer läuft vollständig in deinem Browser — dein Text und sein Binär-, Hex- oder Dezimalcode verlassen niemals dein Gerät und werden nicht hochgeladen oder auf einem Server gespeichert. Nur deine letzte Eingabe und der gewählte Tab werden zur Bequemlichkeit im lokalen Speicher dieses Browsers gesichert.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -625,7 +685,12 @@ window.I18N_LOCALES = {
     "faq.q4": "「2進数」「16進数」「10進数」タブの違いは何ですか?",
     "faq.a4": "3つのタブはまったく同じバイトを、異なる基数で表現しているだけです。2進数は各バイトを8ビット(0と1)で、16進数は16進の2桁(0-9、A-F)で、10進数は0から255までの通常の10進数で表示します。いつでもタブを切り替えられ、コードボックスは現在のテキストに合わせて更新されるため、内容が失われることはありません。",
     "faq.q5": "変換時にテキストはサーバーに送信されますか?",
-    "faq.a5": "いいえ。このバイナリ変換ツールはすべてブラウザ内だけで動作します — テキストとその2進数・16進数・10進数コードはデバイスの外に出ることはなく、サーバーへのアップロードや保存も行われません。利便性のため、最後に入力した内容と選択したタブのみ、このブラウザのローカルストレージに保存されます。"
+    "faq.a5": "いいえ。このバイナリ変換ツールはすべてブラウザ内だけで動作します — テキストとその2進数・16進数・10進数コードはデバイスの外に出ることはなく、サーバーへのアップロードや保存も行われません。利便性のため、最後に入力した内容と選択したタブのみ、このブラウザのローカルストレージに保存されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -673,6 +738,11 @@ window.I18N_LOCALES = {
     "faq.q4": "2진수, 16진수, 10진수 탭의 차이는 무엇인가요?",
     "faq.a4": "세 탭 모두 완전히 동일한 바이트를 표현하며, 단지 표기하는 진법만 다릅니다: 2진수는 각 바이트를 8비트(0과 1)로, 16진수는 두 자리 16진수(0-9, A-F)로, 10진수는 0에서 255 사이의 일반적인 10진수로 표시합니다. 언제든 탭을 전환해도 코드 상자는 현재 텍스트에 맞춰 업데이트되며 아무것도 손실되지 않습니다.",
     "faq.q5": "변환할 때 제 텍스트가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 바이너리 변환기는 전적으로 브라우저 안에서 실행됩니다 — 입력한 텍스트와 그 2진수·16진수·10진수 코드는 기기 밖으로 나가지 않으며 서버에 업로드되거나 저장되지 않습니다. 편의를 위해 마지막 입력 내용과 선택한 탭만 이 브라우저의 로컬 저장소에 저장됩니다."
+    "faq.a5": "아니요. 이 바이너리 변환기는 전적으로 브라우저 안에서 실행됩니다 — 입력한 텍스트와 그 2진수·16진수·10진수 코드는 기기 밖으로 나가지 않으며 서버에 업로드되거나 저장되지 않습니다. 편의를 위해 마지막 입력 내용과 선택한 탭만 이 브라우저의 로컬 저장소에 저장됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

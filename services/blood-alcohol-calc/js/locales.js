@@ -85,7 +85,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What are the legal BAC limits around the world?",
     "faq.a4": "Legal driving limits differ by country: about 0.03% in South Korea and Japan, 0.05% across much of Europe, and 0.08% in the United States and the United Kingdom. Many places set a zero or near-zero limit for novice, young or commercial drivers. Because the threshold that counts as over the limit depends on where you are, this tool shows reference lines rather than a single pass/fail — and being under a limit still does not mean you are safe to drive.",
     "faq.q5": "Is my drinking data sent anywhere?",
-    "faq.a5": "No. This blood alcohol calculator runs 100% in your browser. Your sex, weight, drinks and hours are used only to compute an estimate on your device and are never uploaded to any server. For convenience they are saved to your browser's localStorage so the form is ready next time, and you can clear them anytime by clearing your site data."
+    "faq.a5": "No. This blood alcohol calculator runs 100% in your browser. Your sex, weight, drinks and hours are used only to compute an estimate on your device and are never uploaded to any server. For convenience they are saved to your browser's localStorage so the form is ready next time, and you can clear them anytime by clearing your site data.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -155,7 +160,12 @@ window.I18N_LOCALES = {
     "faq.q4": "世界各地的法定血液酒精限值是多少？",
     "faq.a4": "各国的驾驶限值不同：韩国和日本约 0.03%，欧洲大部分地区 0.05%，美国和英国 0.08%。许多地区对新手、年轻或职业驾驶设为零或接近零。由于“超标”的门槛取决于你所在的地方，本工具给出的是参考线，而非单一的通过/不通过——而且低于限值也不代表你可以安全驾驶。",
     "faq.q5": "我的饮酒数据会被发送出去吗？",
-    "faq.a5": "不会。本血液酒精浓度计算器 100% 在你的浏览器中运行。你的性别、体重、饮酒和时间仅用于在本机计算估算值，绝不会上传到任何服务器。为方便下次使用，它们只保存在浏览器的 localStorage 中，你随时可以通过清除站点数据来删除。"
+    "faq.a5": "不会。本血液酒精浓度计算器 100% 在你的浏览器中运行。你的性别、体重、饮酒和时间仅用于在本机计算估算值，绝不会上传到任何服务器。为方便下次使用，它们只保存在浏览器的 localStorage 中，你随时可以通过清除站点数据来删除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -225,7 +235,12 @@ window.I18N_LOCALES = {
     "faq.q4": "दुनिया भर में क़ानूनी BAC सीमाएँ क्या हैं?",
     "faq.a4": "ड्राइविंग सीमाएँ देश के अनुसार अलग हैं: दक्षिण कोरिया और जापान में लगभग 0.03%, यूरोप के अधिकांश भाग में 0.05%, और अमेरिका व यूके में 0.08%। कई जगह नए, युवा या व्यावसायिक चालकों के लिए शून्य या लगभग शून्य सीमा है। चूँकि ‘सीमा पार’ मानी जाने वाली सीमा जगह पर निर्भर करती है, यह टूल एक पास/फ़ेल के बजाय संदर्भ रेखाएँ दिखाता है — और सीमा से नीचे होने का मतलब यह नहीं कि गाड़ी चलाना सुरक्षित है।",
     "faq.q5": "क्या मेरा पीने का डेटा कहीं भेजा जाता है?",
-    "faq.a5": "नहीं। यह ब्लड अल्कोहल कैलकुलेटर 100% आपके ब्राउज़र में चलता है। आपका लिंग, वज़न, ड्रिंक और घंटे केवल आपके डिवाइस पर अनुमान निकालने के लिए इस्तेमाल होते हैं और किसी सर्वर पर अपलोड नहीं होते। सुविधा के लिए ये केवल ब्राउज़र के localStorage में सहेजे जाते हैं ताकि अगली बार फ़ॉर्म तैयार रहे, और साइट डेटा साफ़ करके इन्हें कभी भी हटा सकते हैं।"
+    "faq.a5": "नहीं। यह ब्लड अल्कोहल कैलकुलेटर 100% आपके ब्राउज़र में चलता है। आपका लिंग, वज़न, ड्रिंक और घंटे केवल आपके डिवाइस पर अनुमान निकालने के लिए इस्तेमाल होते हैं और किसी सर्वर पर अपलोड नहीं होते। सुविधा के लिए ये केवल ब्राउज़र के localStorage में सहेजे जाते हैं ताकि अगली बार फ़ॉर्म तैयार रहे, और साइट डेटा साफ़ करके इन्हें कभी भी हटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -295,7 +310,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuáles son los límites legales de BAC en el mundo?",
     "faq.a4": "Los límites para conducir varían por país: unos 0.03% en Corea del Sur y Japón, 0.05% en gran parte de Europa y 0.08% en EE. UU. y Reino Unido. Muchos lugares fijan un límite de cero o casi cero para conductores noveles, jóvenes o profesionales. Como el umbral que cuenta como superar el límite depende de dónde estés, esta herramienta muestra líneas de referencia en lugar de un único aprobado/suspenso, y estar por debajo de un límite no significa que sea seguro conducir.",
     "faq.q5": "¿Se envían mis datos de consumo a algún sitio?",
-    "faq.a5": "No. Esta calculadora de alcohol en sangre funciona 100% en tu navegador. Tu sexo, peso, bebidas y horas solo se usan para calcular una estimación en tu dispositivo y nunca se suben a ningún servidor. Por comodidad se guardan solo en el localStorage de tu navegador para que el formulario esté listo la próxima vez, y puedes borrarlos cuando quieras vaciando los datos del sitio."
+    "faq.a5": "No. Esta calculadora de alcohol en sangre funciona 100% en tu navegador. Tu sexo, peso, bebidas y horas solo se usan para calcular una estimación en tu dispositivo y nunca se suben a ningún servidor. Por comodidad se guardan solo en el localStorage de tu navegador para que el formulario esté listo la próxima vez, y puedes borrarlos cuando quieras vaciando los datos del sitio.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -365,7 +385,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما هي الحدود القانونية لنسبة الكحول حول العالم؟",
     "faq.a4": "تختلف حدود القيادة حسب الدولة: نحو 0.03% في كوريا الجنوبية واليابان، و0.05% في معظم أوروبا، و0.08% في الولايات المتحدة والمملكة المتحدة. وتضع أماكن كثيرة حدًا صفريًا أو شبه صفري للسائقين الجدد أو الصغار أو المحترفين. ولأن العتبة التي تُعدّ «تجاوزًا» تعتمد على مكانك، تعرض هذه الأداة خطوط مرجعية بدل نتيجة نجاح/رسوب واحدة — والبقاء دون الحد لا يعني أن القيادة آمنة.",
     "faq.q5": "هل تُرسَل بيانات شربي إلى أي مكان؟",
-    "faq.a5": "لا. تعمل هذه الحاسبة 100% داخل متصفحك. يُستخدم جنسك ووزنك ومشروباتك وساعاتك فقط لحساب تقدير على جهازك ولا تُرفع إلى أي خادم. للراحة تُحفظ فقط في localStorage بمتصفحك ليكون النموذج جاهزًا في المرة القادمة، ويمكنك حذفها في أي وقت بمسح بيانات الموقع."
+    "faq.a5": "لا. تعمل هذه الحاسبة 100% داخل متصفحك. يُستخدم جنسك ووزنك ومشروباتك وساعاتك فقط لحساب تقدير على جهازك ولا تُرفع إلى أي خادم. للراحة تُحفظ فقط في localStorage بمتصفحك ليكون النموذج جاهزًا في المرة القادمة، ويمكنك حذفها في أي وقت بمسح بيانات الموقع.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -435,7 +460,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelles sont les limites légales d'alcoolémie dans le monde ?",
     "faq.a4": "Les limites de conduite varient selon le pays : environ 0,03% en Corée du Sud et au Japon, 0,05% dans une grande partie de l'Europe, et 0,08% aux États-Unis et au Royaume-Uni. De nombreux endroits imposent une limite nulle ou quasi nulle aux conducteurs novices, jeunes ou professionnels. Comme le seuil considéré comme un dépassement dépend de l'endroit, cet outil montre des repères plutôt qu'un simple réussite/échec — et être sous une limite ne signifie pas qu'il est sûr de conduire.",
     "faq.q5": "Mes données de consommation sont-elles envoyées quelque part ?",
-    "faq.a5": "Non. Ce calculateur d'alcoolémie fonctionne 100% dans votre navigateur. Votre sexe, votre poids, vos verres et vos heures ne servent qu'à calculer une estimation sur votre appareil et ne sont jamais envoyés à un serveur. Par commodité, ils sont enregistrés uniquement dans le localStorage de votre navigateur pour préremplir le formulaire, et vous pouvez les supprimer à tout moment en effaçant les données du site."
+    "faq.a5": "Non. Ce calculateur d'alcoolémie fonctionne 100% dans votre navigateur. Votre sexe, votre poids, vos verres et vos heures ne servent qu'à calculer une estimation sur votre appareil et ne sont jamais envoyés à un serveur. Par commodité, ils sont enregistrés uniquement dans le localStorage de votre navigateur pour préremplir le formulaire, et vous pouvez les supprimer à tout moment en effaçant les données du site.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -505,7 +535,12 @@ window.I18N_LOCALES = {
     "faq.q4": "বিশ্বজুড়ে আইনি BAC সীমা কত?",
     "faq.a4": "ড্রাইভিং সীমা দেশভেদে ভিন্ন: দক্ষিণ কোরিয়া ও জাপানে প্রায় 0.03%, ইউরোপের অনেকাংশে 0.05%, এবং যুক্তরাষ্ট্র ও যুক্তরাজ্যে 0.08%। বহু জায়গায় নতুন, তরুণ বা পেশাদার চালকদের জন্য শূন্য বা প্রায় শূন্য সীমা। যেহেতু ‘সীমা ছাড়ানো’ কোথায় আছেন তার উপর নির্ভর করে, এই টুল একক পাস/ফেল-এর বদলে রেফারেন্স রেখা দেখায় — আর সীমার নিচে থাকা মানেই নিরাপদে চালানো নয়।",
     "faq.q5": "আমার পানের তথ্য কি কোথাও পাঠানো হয়?",
-    "faq.a5": "না। এই ব্লাড অ্যালকোহল ক্যালকুলেটর 100% আপনার ব্রাউজারে চলে। আপনার লিঙ্গ, ওজন, পানীয় ও ঘণ্টা কেবল আপনার ডিভাইসে অনুমান হিসাব করতে ব্যবহার হয় এবং কোনো সার্ভারে আপলোড হয় না। সুবিধার জন্য এগুলো কেবল ব্রাউজারের localStorage-এ সংরক্ষণ হয় যাতে পরের বার ফর্ম তৈরি থাকে, আর সাইট ডেটা মুছে যেকোনো সময় সরাতে পারেন।"
+    "faq.a5": "না। এই ব্লাড অ্যালকোহল ক্যালকুলেটর 100% আপনার ব্রাউজারে চলে। আপনার লিঙ্গ, ওজন, পানীয় ও ঘণ্টা কেবল আপনার ডিভাইসে অনুমান হিসাব করতে ব্যবহার হয় এবং কোনো সার্ভারে আপলোড হয় না। সুবিধার জন্য এগুলো কেবল ব্রাউজারের localStorage-এ সংরক্ষণ হয় যাতে পরের বার ফর্ম তৈরি থাকে, আর সাইট ডেটা মুছে যেকোনো সময় সরাতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -575,7 +610,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quais são os limites legais de BAC pelo mundo?",
     "faq.a4": "Os limites para dirigir variam por país: cerca de 0,03% na Coreia do Sul e no Japão, 0,05% em grande parte da Europa e 0,08% nos EUA e Reino Unido. Muitos lugares definem limite zero ou quase zero para motoristas novatos, jovens ou profissionais. Como o limiar que conta como acima do limite depende de onde você está, esta ferramenta mostra linhas de referência em vez de um único aprovado/reprovado — e estar abaixo de um limite ainda não significa que é seguro dirigir.",
     "faq.q5": "Meus dados de consumo são enviados para algum lugar?",
-    "faq.a5": "Não. Esta calculadora de álcool no sangue funciona 100% no seu navegador. Seu sexo, peso, bebidas e horas são usados apenas para calcular uma estimativa no seu dispositivo e nunca são enviados a nenhum servidor. Por conveniência, ficam salvos apenas no localStorage do navegador para o formulário ficar pronto na próxima vez, e você pode apagá-los quando quiser limpando os dados do site."
+    "faq.a5": "Não. Esta calculadora de álcool no sangue funciona 100% no seu navegador. Seu sexo, peso, bebidas e horas são usados apenas para calcular uma estimativa no seu dispositivo e nunca são enviados a nenhum servidor. Por conveniência, ficam salvos apenas no localStorage do navegador para o formulário ficar pronto na próxima vez, e você pode apagá-los quando quiser limpando os dados do site.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -645,7 +685,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Каковы законные пределы BAC в мире?",
     "faq.a4": "Пределы для вождения различаются по странам: около 0,03% в Южной Корее и Японии, 0,05% в большей части Европы и 0,08% в США и Великобритании. Во многих местах установлен нулевой или почти нулевой предел для начинающих, молодых или профессиональных водителей. Поскольку порог «превышения» зависит от места, инструмент показывает справочные линии, а не единый результат «прошёл/не прошёл» — и быть ниже предела всё равно не значит, что вести машину безопасно.",
     "faq.q5": "Отправляются ли мои данные о выпитом куда-либо?",
-    "faq.a5": "Нет. Этот калькулятор алкоголя в крови работает на 100% в вашем браузере. Ваш пол, вес, напитки и часы используются только для расчёта оценки на вашем устройстве и никогда не загружаются на сервер. Для удобства они сохраняются лишь в localStorage браузера, чтобы форма была готова в следующий раз, и вы можете удалить их в любой момент, очистив данные сайта."
+    "faq.a5": "Нет. Этот калькулятор алкоголя в крови работает на 100% в вашем браузере. Ваш пол, вес, напитки и часы используются только для расчёта оценки на вашем устройстве и никогда не загружаются на сервер. Для удобства они сохраняются лишь в localStorage браузера, чтобы форма была готова в следующий раз, и вы можете удалить их в любой момент, очистив данные сайта.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -715,7 +760,12 @@ window.I18N_LOCALES = {
     "faq.q4": "دنیا بھر میں قانونی BAC حدیں کیا ہیں؟",
     "faq.a4": "ڈرائیونگ کی حدیں ملک کے حساب سے مختلف ہیں: جنوبی کوریا اور جاپان میں تقریباً 0.03%، یورپ کے بیشتر حصے میں 0.05%، اور امریکہ و برطانیہ میں 0.08%۔ کئی جگہ نئے، نوجوان یا پیشہ ور ڈرائیوروں کے لیے صفر یا قریب صفر حد ہے۔ چونکہ ‘حد سے تجاوز’ کی سطح آپ کے مقام پر منحصر ہے، یہ ٹول ایک پاس/فیل کے بجائے حوالہ لکیریں دکھاتا ہے — اور حد سے نیچے ہونا اس کا مطلب نہیں کہ گاڑی چلانا محفوظ ہے۔",
     "faq.q5": "کیا میرا پینے کا ڈیٹا کہیں بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ بلڈ الکحل کیلکولیٹر 100% آپ کے براؤزر میں چلتا ہے۔ آپ کی جنس، وزن، مشروبات اور گھنٹے صرف آپ کے آلے پر تخمینہ نکالنے کے لیے استعمال ہوتے ہیں اور کسی سرور پر اپ لوڈ نہیں ہوتے۔ سہولت کے لیے یہ صرف براؤزر کے localStorage میں محفوظ ہوتے ہیں تاکہ اگلی بار فارم تیار رہے، اور سائٹ ڈیٹا صاف کر کے انہیں کسی بھی وقت ہٹا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ یہ بلڈ الکحل کیلکولیٹر 100% آپ کے براؤزر میں چلتا ہے۔ آپ کی جنس، وزن، مشروبات اور گھنٹے صرف آپ کے آلے پر تخمینہ نکالنے کے لیے استعمال ہوتے ہیں اور کسی سرور پر اپ لوڈ نہیں ہوتے۔ سہولت کے لیے یہ صرف براؤزر کے localStorage میں محفوظ ہوتے ہیں تاکہ اگلی بار فارم تیار رہے، اور سائٹ ڈیٹا صاف کر کے انہیں کسی بھی وقت ہٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -785,7 +835,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Berapa batas hukum BAC di berbagai dunia?",
     "faq.a4": "Batas mengemudi berbeda tiap negara: sekitar 0,03% di Korea Selatan dan Jepang, 0,05% di sebagian besar Eropa, dan 0,08% di AS dan Inggris. Banyak tempat menetapkan batas nol atau nyaris nol untuk pengemudi pemula, muda, atau profesional. Karena ambang yang dianggap melebihi batas bergantung pada lokasi Anda, alat ini menampilkan garis acuan alih-alih satu lulus/gagal — dan berada di bawah batas pun tidak berarti aman menyetir.",
     "faq.q5": "Apakah data konsumsi saya dikirim ke suatu tempat?",
-    "faq.a5": "Tidak. Kalkulator alkohol dalam darah ini berjalan 100% di peramban Anda. Jenis kelamin, berat, minuman, dan jam hanya dipakai untuk menghitung perkiraan di perangkat Anda dan tak pernah diunggah ke server mana pun. Demi kenyamanan, semuanya hanya disimpan di localStorage peramban agar formulir siap saat berikutnya, dan Anda bisa menghapusnya kapan saja dengan membersihkan data situs."
+    "faq.a5": "Tidak. Kalkulator alkohol dalam darah ini berjalan 100% di peramban Anda. Jenis kelamin, berat, minuman, dan jam hanya dipakai untuk menghitung perkiraan di perangkat Anda dan tak pernah diunggah ke server mana pun. Demi kenyamanan, semuanya hanya disimpan di localStorage peramban agar formulir siap saat berikutnya, dan Anda bisa menghapusnya kapan saja dengan membersihkan data situs.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -855,7 +910,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie sind die gesetzlichen BAC-Grenzen weltweit?",
     "faq.a4": "Die Fahrgrenzen unterscheiden sich je Land: etwa 0,03% in Südkorea und Japan, 0,05% in weiten Teilen Europas und 0,08% in den USA und Großbritannien. Vielerorts gilt für Fahranfänger, junge oder Berufsfahrer eine Null- oder Fast-Null-Grenze. Da die Schwelle für ein Überschreiten vom Ort abhängt, zeigt dieses Tool Referenzlinien statt eines einzigen Bestanden/Nicht-bestanden — und unter einer Grenze zu liegen heißt trotzdem nicht, dass Fahren sicher ist.",
     "faq.q5": "Werden meine Trinkdaten irgendwohin gesendet?",
-    "faq.a5": "Nein. Dieser Blutalkohol-Rechner läuft zu 100% in deinem Browser. Geschlecht, Gewicht, Getränke und Stunden dienen nur der Schätzung auf deinem Gerät und werden nie an einen Server geladen. Aus Bequemlichkeit werden sie nur im localStorage deines Browsers gespeichert, damit das Formular beim nächsten Mal bereitsteht, und du kannst sie jederzeit durch Löschen der Website-Daten entfernen."
+    "faq.a5": "Nein. Dieser Blutalkohol-Rechner läuft zu 100% in deinem Browser. Geschlecht, Gewicht, Getränke und Stunden dienen nur der Schätzung auf deinem Gerät und werden nie an einen Server geladen. Aus Bequemlichkeit werden sie nur im localStorage deines Browsers gespeichert, damit das Formular beim nächsten Mal bereitsteht, und du kannst sie jederzeit durch Löschen der Website-Daten entfernen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -925,7 +985,12 @@ window.I18N_LOCALES = {
     "faq.q4": "世界の法定BAC基準はどのくらいですか？",
     "faq.a4": "運転の基準は国によって異なります。韓国・日本で約0.03%、ヨーロッパの多くで0.05%、米国・英国で0.08%です。多くの地域では初心者・若年・業務運転者にゼロまたはほぼゼロの基準を設けています。「基準超過」とみなす値は場所によって違うため、このツールは単一の合否ではなく参考ラインを示します。基準を下回っていても運転が安全というわけではありません。",
     "faq.q5": "私の飲酒データはどこかに送信されますか？",
-    "faq.a5": "いいえ。この血中アルコール濃度計算機は100%ブラウザ内で動作します。性別・体重・お酒・時間は端末上で推定を計算するためだけに使われ、どのサーバーにもアップロードされません。次回のために入力はブラウザのlocalStorageにのみ保存され、サイトデータを消去すればいつでも削除できます。"
+    "faq.a5": "いいえ。この血中アルコール濃度計算機は100%ブラウザ内で動作します。性別・体重・お酒・時間は端末上で推定を計算するためだけに使われ、どのサーバーにもアップロードされません。次回のために入力はブラウザのlocalStorageにのみ保存され、サイトデータを消去すればいつでも削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -995,6 +1060,11 @@ window.I18N_LOCALES = {
     "faq.q4": "세계 각국의 법정 혈중 알코올농도 기준은 어떻게 되나요?",
     "faq.a4": "운전 기준은 나라마다 다릅니다. 한국과 일본은 약 0.03%, 유럽 상당수는 0.05%, 미국과 영국은 0.08%입니다. 많은 곳에서 초보·청소년·영업용 운전자에게는 0이나 0에 가까운 기준을 둡니다. ‘기준 초과’로 보는 값이 지역마다 다르기 때문에, 이 도구는 하나의 합격/불합격 대신 참고선을 보여줍니다. 기준 아래라고 해서 운전해도 안전하다는 뜻은 아닙니다.",
     "faq.q5": "제 음주 데이터가 어딘가로 전송되나요?",
-    "faq.a5": "아니요. 이 혈중 알코올농도 계산기는 100% 브라우저 안에서 동작합니다. 성별·체중·마신 술·시간은 내 기기에서 추정값을 계산하는 데만 쓰이며 어떤 서버로도 전송되지 않습니다. 편의를 위해 브라우저 localStorage에만 저장되어 다음 방문 시 양식이 준비되며, 사이트 데이터를 지우면 언제든 삭제할 수 있습니다."
+    "faq.a5": "아니요. 이 혈중 알코올농도 계산기는 100% 브라우저 안에서 동작합니다. 성별·체중·마신 술·시간은 내 기기에서 추정값을 계산하는 데만 쓰이며 어떤 서버로도 전송되지 않습니다. 편의를 위해 브라우저 localStorage에만 저장되어 다음 방문 시 양식이 준비되며, 사이트 데이터를 지우면 언제든 삭제할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

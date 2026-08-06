@@ -61,7 +61,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What's the difference between generating by paragraphs, sentences, or words?",
     "faq.a4": "Paragraphs mode builds full multi-sentence paragraphs (roughly 3–6 sentences each) and is the best fit for filling in body copy or article mockups. Sentences mode produces a single run of complete sentences, handy for captions, alt text, or a short blurb. Words mode outputs a plain stream of individual words with no paragraph breaks, useful for testing how a UI truncates or wraps a fixed word count. Each mode has its own allowed range shown next to the count field, and out-of-range values are automatically clamped.",
     "faq.q5": "Is my generated text saved or sent anywhere?",
-    "faq.a5": "No. Every passage is generated entirely inside your browser using a local word bank — nothing is uploaded, and no request is sent to any server. Your last-used settings (mode, count, and the two toggles) are saved only in your browser's local storage so the tool remembers your preference next time, and you can clear that at any time by clearing your browser data."
+    "faq.a5": "No. Every passage is generated entirely inside your browser using a local word bank — nothing is uploaded, and no request is sent to any server. Your last-used settings (mode, count, and the two toggles) are saved only in your browser's local storage so the tool remembers your preference next time, and you can clear that at any time by clearing your browser data.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -107,7 +112,12 @@ window.I18N_LOCALES = {
     "faq.q4": "按段落、句子、单词生成有什么区别？",
     "faq.a4": "段落模式会生成完整的多句段落（每段大约 3–6 句），最适合填充正文或文章类设计稿。句子模式生成一连串完整的句子，适合说明文字、替代文本或简短介绍。单词模式则输出没有段落分隔的纯单词流，便于测试界面在固定词数下的截断或换行效果。每种模式在数量输入框旁都标注了各自的允许范围，超出范围的数值会被自动调整。",
     "faq.q5": "生成的文本会被保存或发送到别处吗？",
-    "faq.a5": "不会。每段文本都完全在你的浏览器内、使用本地词库生成——不会上传，也不会向任何服务器发送请求。你上次使用的设置（模式、数量和两个开关）仅保存在浏览器的本地存储中，方便工具下次记住你的偏好；你可以随时通过清除浏览器数据来清空这些记录。"
+    "faq.a5": "不会。每段文本都完全在你的浏览器内、使用本地词库生成——不会上传，也不会向任何服务器发送请求。你上次使用的设置（模式、数量和两个开关）仅保存在浏览器的本地存储中，方便工具下次记住你的偏好；你可以随时通过清除浏览器数据来清空这些记录。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -153,7 +163,12 @@ window.I18N_LOCALES = {
     "faq.q4": "पैराग्राफ, वाक्य या शब्दों के हिसाब से जनरेट करने में क्या अंतर है?",
     "faq.a4": "पैराग्राफ मोड पूरे बहु-वाक्य पैराग्राफ बनाता है (हर एक में लगभग 3–6 वाक्य) और बॉडी कॉपी या आर्टिकल मॉकअप भरने के लिए सबसे उपयुक्त है। वाक्य मोड पूर्ण वाक्यों की एक लगातार श्रृंखला बनाता है, जो कैप्शन, ऑल्ट टेक्स्ट या छोटे परिचय के लिए काम आता है। शब्द मोड बिना पैराग्राफ ब्रेक के अलग-अलग शब्दों की सीधी धारा देता है, जो यह जांचने के लिए उपयोगी है कि UI एक निश्चित शब्द संख्या को कैसे ट्रंकेट या रैप करता है। हर मोड की अपनी अनुमत सीमा काउंट फ़ील्ड के बगल में दिखाई जाती है, और सीमा से बाहर के मान अपने-आप समायोजित हो जाते हैं।",
     "faq.q5": "क्या मेरा जनरेट किया गया टेक्स्ट सहेजा जाता है या कहीं भेजा जाता है?",
-    "faq.a5": "नहीं। हर अनुच्छेद पूरी तरह आपके ब्राउज़र के भीतर, एक स्थानीय शब्द-भंडार का उपयोग करके जनरेट होता है — कुछ भी अपलोड नहीं होता, और किसी भी सर्वर को कोई अनुरोध नहीं भेजा जाता। आपकी पिछली सेटिंग्स (मोड, संख्या और दोनों टॉगल) केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजी जाती हैं ताकि टूल अगली बार आपकी पसंद याद रखे, और आप कभी भी अपने ब्राउज़र डेटा को साफ़ करके इसे मिटा सकते हैं।"
+    "faq.a5": "नहीं। हर अनुच्छेद पूरी तरह आपके ब्राउज़र के भीतर, एक स्थानीय शब्द-भंडार का उपयोग करके जनरेट होता है — कुछ भी अपलोड नहीं होता, और किसी भी सर्वर को कोई अनुरोध नहीं भेजा जाता। आपकी पिछली सेटिंग्स (मोड, संख्या और दोनों टॉगल) केवल आपके ब्राउज़र के लोकल स्टोरेज में सहेजी जाती हैं ताकि टूल अगली बार आपकी पसंद याद रखे, और आप कभी भी अपने ब्राउज़र डेटा को साफ़ करके इसे मिटा सकते हैं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -199,7 +214,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuál es la diferencia entre generar por párrafos, oraciones o palabras?",
     "faq.a4": "El modo párrafos construye párrafos completos de varias oraciones (unas 3–6 cada uno) y es lo mejor para rellenar cuerpo de texto o maquetas de artículos. El modo oraciones produce una secuencia de oraciones completas, útil para leyendas, texto alternativo o una descripción breve. El modo palabras entrega un flujo de palabras sueltas sin saltos de párrafo, útil para probar cómo una interfaz trunca o envuelve una cantidad fija de palabras. Cada modo tiene su propio rango permitido junto al campo de cantidad, y los valores fuera de rango se ajustan automáticamente.",
     "faq.q5": "¿Se guarda o se envía a algún lado el texto que genero?",
-    "faq.a5": "No. Cada pasaje se genera enteramente dentro de tu navegador usando un banco de palabras local — nada se sube y no se envía ninguna solicitud a un servidor. Tu última configuración (modo, cantidad y los dos interruptores) se guarda solo en el almacenamiento local de tu navegador para que la herramienta recuerde tu preferencia la próxima vez, y puedes borrarla en cualquier momento eliminando los datos de tu navegador."
+    "faq.a5": "No. Cada pasaje se genera enteramente dentro de tu navegador usando un banco de palabras local — nada se sube y no se envía ninguna solicitud a un servidor. Tu última configuración (modo, cantidad y los dos interruptores) se guarda solo en el almacenamiento local de tu navegador para que la herramienta recuerde tu preferencia la próxima vez, y puedes borrarla en cualquier momento eliminando los datos de tu navegador.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -245,7 +265,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الفرق بين الإنشاء حسب الفقرات أو الجمل أو الكلمات؟",
     "faq.a4": "وضع الفقرات يبني فقرات كاملة متعددة الجمل (نحو 3–6 جمل لكل فقرة) وهو الأنسب لملء نص أساسي أو تصاميم مقالات أولية. وضع الجمل ينتج سلسلة واحدة من جمل كاملة، مفيد للتسميات التوضيحية أو النص البديل أو مقدمة قصيرة. وضع الكلمات يُخرج تدفقًا بسيطًا من كلمات منفردة دون فواصل فقرات، مفيد لاختبار كيفية اقتصاص الواجهة أو التفافها عند عدد كلمات ثابت. لكل وضع نطاقه المسموح الخاص المعروض بجانب حقل العدد، وتُضبَط القيم خارج النطاق تلقائيًا.",
     "faq.q5": "هل يُحفَظ النص الذي أُنشئه أو يُرسَل إلى أي مكان؟",
-    "faq.a5": "لا. يُنشأ كل مقطع بالكامل داخل متصفحك باستخدام بنك كلمات محلي — لا شيء يُرفع، ولا يُرسَل أي طلب إلى أي خادم. تُحفَظ إعداداتك الأخيرة (الوضع والعدد والخيارين) فقط في التخزين المحلي لمتصفحك ليتذكر التطبيق تفضيلك في المرة القادمة، ويمكنك مسحها في أي وقت بمسح بيانات متصفحك."
+    "faq.a5": "لا. يُنشأ كل مقطع بالكامل داخل متصفحك باستخدام بنك كلمات محلي — لا شيء يُرفع، ولا يُرسَل أي طلب إلى أي خادم. تُحفَظ إعداداتك الأخيرة (الوضع والعدد والخيارين) فقط في التخزين المحلي لمتصفحك ليتذكر التطبيق تفضيلك في المرة القادمة، ويمكنك مسحها في أي وقت بمسح بيانات متصفحك.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -291,7 +316,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la différence entre générer par paragraphes, phrases ou mots ?",
     "faq.a4": "Le mode paragraphes construit des paragraphes complets à plusieurs phrases (environ 3 à 6 chacun) et convient le mieux pour remplir un corps de texte ou une maquette d'article. Le mode phrases produit une suite unique de phrases complètes, utile pour des légendes, du texte alternatif ou une courte description. Le mode mots fournit un simple flux de mots sans saut de paragraphe, utile pour tester comment une interface tronque ou renvoie à la ligne un nombre de mots fixe. Chaque mode a sa propre plage autorisée affichée à côté du champ de quantité, et les valeurs hors plage sont automatiquement ajustées.",
     "faq.q5": "Mon texte généré est-il enregistré ou envoyé quelque part ?",
-    "faq.a5": "Non. Chaque passage est généré entièrement dans votre navigateur à partir d'un banc de mots local — rien n'est envoyé, et aucune requête n'est adressée à un serveur. Vos derniers réglages (mode, quantité et les deux options) sont enregistrés uniquement dans le stockage local de votre navigateur afin que l'outil se souvienne de votre préférence la prochaine fois, et vous pouvez les effacer à tout moment en supprimant les données de votre navigateur."
+    "faq.a5": "Non. Chaque passage est généré entièrement dans votre navigateur à partir d'un banc de mots local — rien n'est envoyé, et aucune requête n'est adressée à un serveur. Vos derniers réglages (mode, quantité et les deux options) sont enregistrés uniquement dans le stockage local de votre navigateur afin que l'outil se souvienne de votre préférence la prochaine fois, et vous pouvez les effacer à tout moment en supprimant les données de votre navigateur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -337,7 +367,12 @@ window.I18N_LOCALES = {
     "faq.q4": "অনুচ্ছেদ, বাক্য বা শব্দ অনুযায়ী তৈরি করার মধ্যে পার্থক্য কী?",
     "faq.a4": "অনুচ্ছেদ মোড সম্পূর্ণ বহু-বাক্যের অনুচ্ছেদ তৈরি করে (প্রতিটিতে প্রায় ৩–৬ বাক্য), যা মূল লেখা বা আর্টিকেল মকআপ ভরাটের জন্য সবচেয়ে উপযোগী। বাক্য মোড সম্পূর্ণ বাক্যের একটানা ধারা তৈরি করে, যা ক্যাপশন, অল্ট টেক্সট বা সংক্ষিপ্ত বিবরণের জন্য কাজে লাগে। শব্দ মোড অনুচ্ছেদ বিরতি ছাড়াই আলাদা শব্দের প্রবাহ দেয়, যা একটি নির্দিষ্ট শব্দসংখ্যায় UI কীভাবে ছোট করে বা মোড়ায় তা পরীক্ষা করতে উপযোগী। প্রতিটি মোডের নিজস্ব অনুমোদিত পরিসর কাউন্ট ফিল্ডের পাশে দেখানো হয়, এবং সীমার বাইরের মান স্বয়ংক্রিয়ভাবে সমন্বয় করা হয়।",
     "faq.q5": "আমার তৈরি করা টেক্সট কি সংরক্ষণ করা হয় বা কোথাও পাঠানো হয়?",
-    "faq.a5": "না। প্রতিটি অনুচ্ছেদ সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরে একটি স্থানীয় শব্দভাণ্ডার ব্যবহার করে তৈরি হয় — কিছুই আপলোড হয় না, এবং কোনো সার্ভারে কোনো অনুরোধ পাঠানো হয় না। আপনার সর্বশেষ ব্যবহৃত সেটিংস (মোড, সংখ্যা এবং দুটি টগল) শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে টুলটি পরেরবার আপনার পছন্দ মনে রাখে, এবং আপনি যেকোনো সময় ব্রাউজার ডেটা মুছে এটি সাফ করতে পারেন।"
+    "faq.a5": "না। প্রতিটি অনুচ্ছেদ সম্পূর্ণভাবে আপনার ব্রাউজারের ভেতরে একটি স্থানীয় শব্দভাণ্ডার ব্যবহার করে তৈরি হয় — কিছুই আপলোড হয় না, এবং কোনো সার্ভারে কোনো অনুরোধ পাঠানো হয় না। আপনার সর্বশেষ ব্যবহৃত সেটিংস (মোড, সংখ্যা এবং দুটি টগল) শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে টুলটি পরেরবার আপনার পছন্দ মনে রাখে, এবং আপনি যেকোনো সময় ব্রাউজার ডেটা মুছে এটি সাফ করতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -383,7 +418,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a diferença entre gerar por parágrafos, frases ou palavras?",
     "faq.a4": "O modo parágrafos constrói parágrafos completos de várias frases (cerca de 3–6 cada) e é o mais indicado para preencher corpo de texto ou mockups de artigos. O modo frases produz uma sequência única de frases completas, útil para legendas, texto alternativo ou uma breve descrição. O modo palavras fornece um fluxo simples de palavras individuais sem quebras de parágrafo, útil para testar como uma interface trunca ou quebra uma quantidade fixa de palavras. Cada modo tem seu próprio intervalo permitido mostrado ao lado do campo de quantidade, e valores fora do intervalo são ajustados automaticamente.",
     "faq.q5": "Meu texto gerado é salvo ou enviado para algum lugar?",
-    "faq.a5": "Não. Cada passagem é gerada inteiramente dentro do seu navegador usando um banco de palavras local — nada é enviado, e nenhuma requisição é feita a um servidor. Suas últimas configurações (modo, quantidade e as duas opções) são salvas apenas no armazenamento local do seu navegador, para que a ferramenta lembre sua preferência na próxima vez, e você pode limpar isso a qualquer momento apagando os dados do seu navegador."
+    "faq.a5": "Não. Cada passagem é gerada inteiramente dentro do seu navegador usando um banco de palavras local — nada é enviado, e nenhuma requisição é feita a um servidor. Suas últimas configurações (modo, quantidade e as duas opções) são salvas apenas no armazenamento local do seu navegador, para que a ferramenta lembre sua preferência na próxima vez, e você pode limpar isso a qualquer momento apagando os dados do seu navegador.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -429,7 +469,12 @@ window.I18N_LOCALES = {
     "faq.q4": "В чём разница между генерацией по абзацам, предложениям или словам?",
     "faq.a4": "Режим абзацев строит полноценные многопредложенческие абзацы (примерно 3–6 предложений каждый) и лучше всего подходит для заполнения основного текста или макетов статей. Режим предложений выдаёт единую цепочку законченных предложений — удобно для подписей, alt-текста или короткого описания. Режим слов выводит простой поток отдельных слов без разрывов абзацев — полезно для проверки того, как интерфейс обрезает или переносит фиксированное количество слов. У каждого режима свой допустимый диапазон, показанный рядом с полем количества, а значения вне диапазона автоматически корректируются.",
     "faq.q5": "Сохраняется ли сгенерированный текст или отправляется куда-либо?",
-    "faq.a5": "Нет. Каждый отрывок генерируется полностью внутри вашего браузера с использованием локального банка слов — ничего не загружается, и никакой запрос не отправляется на сервер. Ваши последние настройки (режим, количество и два переключателя) сохраняются только в локальном хранилище браузера, чтобы инструмент запомнил ваши предпочтения в следующий раз, и вы можете очистить их в любой момент, удалив данные браузера."
+    "faq.a5": "Нет. Каждый отрывок генерируется полностью внутри вашего браузера с использованием локального банка слов — ничего не загружается, и никакой запрос не отправляется на сервер. Ваши последние настройки (режим, количество и два переключателя) сохраняются только в локальном хранилище браузера, чтобы инструмент запомнил ваши предпочтения в следующий раз, и вы можете очистить их в любой момент, удалив данные браузера.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -475,7 +520,12 @@ window.I18N_LOCALES = {
     "faq.q4": "پیراگراف، جملوں یا الفاظ کے حساب سے بنانے میں کیا فرق ہے؟",
     "faq.a4": "پیراگراف موڈ مکمل کثیر جملوں والے پیراگراف بناتا ہے (ہر ایک میں تقریباً 3–6 جملے) اور یہ باڈی کاپی یا آرٹیکل ماک اپ بھرنے کے لیے سب سے موزوں ہے۔ جملوں کا موڈ مکمل جملوں کی ایک لگاتار قطار بناتا ہے، جو کیپشنز، آلٹ ٹیکسٹ یا مختصر تعارف کے لیے کارآمد ہے۔ الفاظ کا موڈ بغیر پیراگراف وقفے کے انفرادی الفاظ کا سادہ سلسلہ دیتا ہے، جو یہ جانچنے کے لیے مفید ہے کہ UI مقررہ تعداد کے الفاظ کو کیسے مختصر یا لپیٹتا ہے۔ ہر موڈ کی اپنی اجازت یافتہ حد کاؤنٹ فیلڈ کے ساتھ دکھائی جاتی ہے، اور حد سے باہر کی قدریں خودکار طور پر ایڈجسٹ ہو جاتی ہیں۔",
     "faq.q5": "کیا میرا تیار کردہ متن محفوظ ہوتا ہے یا کہیں بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر حصہ مکمل طور پر آپ کے براؤزر کے اندر، ایک مقامی ذخیرہ الفاظ استعمال کرتے ہوئے بنایا جاتا ہے — کچھ بھی اپ لوڈ نہیں ہوتا، اور کسی سرور کو کوئی درخواست نہیں بھیجی جاتی۔ آپ کی آخری استعمال شدہ سیٹنگز (موڈ، تعداد اور دونوں ٹوگل) صرف آپ کے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہیں تاکہ ٹول اگلی بار آپ کی ترجیح یاد رکھے، اور آپ کسی بھی وقت اپنے براؤزر کا ڈیٹا صاف کر کے اسے مٹا سکتے ہیں۔"
+    "faq.a5": "نہیں۔ ہر حصہ مکمل طور پر آپ کے براؤزر کے اندر، ایک مقامی ذخیرہ الفاظ استعمال کرتے ہوئے بنایا جاتا ہے — کچھ بھی اپ لوڈ نہیں ہوتا، اور کسی سرور کو کوئی درخواست نہیں بھیجی جاتی۔ آپ کی آخری استعمال شدہ سیٹنگز (موڈ، تعداد اور دونوں ٹوگل) صرف آپ کے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہیں تاکہ ٹول اگلی بار آپ کی ترجیح یاد رکھے، اور آپ کسی بھی وقت اپنے براؤزر کا ڈیٹا صاف کر کے اسے مٹا سکتے ہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -521,7 +571,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa bedanya membuat berdasarkan paragraf, kalimat, atau kata?",
     "faq.a4": "Mode paragraf membangun paragraf lengkap multi-kalimat (sekitar 3–6 kalimat masing-masing) dan paling cocok untuk mengisi teks isi atau mockup artikel. Mode kalimat menghasilkan satu rangkaian kalimat lengkap, berguna untuk keterangan, teks alternatif, atau deskripsi singkat. Mode kata menghasilkan aliran kata individual tanpa jeda paragraf, berguna untuk menguji bagaimana UI memotong atau membungkus jumlah kata tetap. Setiap mode memiliki rentang yang diizinkan sendiri yang ditampilkan di samping kolom jumlah, dan nilai di luar rentang akan disesuaikan secara otomatis.",
     "faq.q5": "Apakah teks yang saya buat disimpan atau dikirim ke suatu tempat?",
-    "faq.a5": "Tidak. Setiap bagian dibuat sepenuhnya di dalam browser Anda menggunakan bank kata lokal — tidak ada yang diunggah, dan tidak ada permintaan yang dikirim ke server mana pun. Pengaturan terakhir Anda (mode, jumlah, dan dua sakelar) hanya disimpan di penyimpanan lokal browser Anda sehingga alat ini mengingat preferensi Anda di lain waktu, dan Anda bisa menghapusnya kapan saja dengan membersihkan data browser Anda."
+    "faq.a5": "Tidak. Setiap bagian dibuat sepenuhnya di dalam browser Anda menggunakan bank kata lokal — tidak ada yang diunggah, dan tidak ada permintaan yang dikirim ke server mana pun. Pengaturan terakhir Anda (mode, jumlah, dan dua sakelar) hanya disimpan di penyimpanan lokal browser Anda sehingga alat ini mengingat preferensi Anda di lain waktu, dan Anda bisa menghapusnya kapan saja dengan membersihkan data browser Anda.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -567,7 +622,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist der Unterschied zwischen der Erzeugung nach Absätzen, Sätzen oder Wörtern?",
     "faq.a4": "Der Absatzmodus erstellt vollständige, mehrsätzige Absätze (jeweils etwa 3–6 Sätze) und eignet sich am besten zum Füllen von Fließtext oder Artikel-Mockups. Der Satzmodus erzeugt eine einzelne Folge vollständiger Sätze — nützlich für Bildunterschriften, Alt-Text oder eine kurze Beschreibung. Der Wortmodus liefert einen einfachen Strom einzelner Wörter ohne Absatzumbrüche, nützlich um zu testen, wie eine Oberfläche eine feste Wortanzahl abschneidet oder umbricht. Jeder Modus hat seinen eigenen zulässigen Bereich neben dem Anzahlfeld, und Werte außerhalb des Bereichs werden automatisch angepasst.",
     "faq.q5": "Wird mein erzeugter Text gespeichert oder irgendwohin gesendet?",
-    "faq.a5": "Nein. Jede Passage wird vollständig in Ihrem Browser mit einem lokalen Wortschatz erzeugt — nichts wird hochgeladen, und es wird keine Anfrage an einen Server gesendet. Ihre zuletzt verwendeten Einstellungen (Modus, Anzahl und die beiden Schalter) werden nur im lokalen Speicher Ihres Browsers gespeichert, damit sich das Tool Ihre Präferenz beim nächsten Mal merkt, und Sie können dies jederzeit durch Löschen Ihrer Browserdaten entfernen."
+    "faq.a5": "Nein. Jede Passage wird vollständig in Ihrem Browser mit einem lokalen Wortschatz erzeugt — nichts wird hochgeladen, und es wird keine Anfrage an einen Server gesendet. Ihre zuletzt verwendeten Einstellungen (Modus, Anzahl und die beiden Schalter) werden nur im lokalen Speicher Ihres Browsers gespeichert, damit sich das Tool Ihre Präferenz beim nächsten Mal merkt, und Sie können dies jederzeit durch Löschen Ihrer Browserdaten entfernen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -613,7 +673,12 @@ window.I18N_LOCALES = {
     "faq.q4": "段落・文・単語で生成する場合、それぞれ何が違うのですか?",
     "faq.a4": "段落モードは、複数の文からなる完全な段落（それぞれおよそ3〜6文）を組み立てるので、本文や記事のモックアップを埋めるのに最適です。文モードは完結した文が連続する一続きの文章を生成し、キャプションやalt属性、短い紹介文に便利です。単語モードは段落の区切りなしに単語だけの単純な流れを出力し、固定の単語数でUIがどのように切り詰められたり折り返されたりするかをテストするのに役立ちます。各モードには件数フィールドの横に許容範囲が表示され、範囲外の値は自動的に調整されます。",
     "faq.q5": "生成したテキストは保存されたり、どこかに送信されたりしますか?",
-    "faq.a5": "いいえ。すべての文章はローカルの単語バンクを使ってブラウザ内で完全に生成され、アップロードされることも、サーバーへリクエストが送信されることもありません。直近の設定(モード、件数、2つのトグル)はお使いのブラウザのローカルストレージにのみ保存され、次回ツールを開いたときに好みを記憶します。ブラウザのデータを消去すれば、いつでもこれをクリアできます。"
+    "faq.a5": "いいえ。すべての文章はローカルの単語バンクを使ってブラウザ内で完全に生成され、アップロードされることも、サーバーへリクエストが送信されることもありません。直近の設定(モード、件数、2つのトグル)はお使いのブラウザのローカルストレージにのみ保存され、次回ツールを開いたときに好みを記憶します。ブラウザのデータを消去すれば、いつでもこれをクリアできます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -659,6 +724,11 @@ window.I18N_LOCALES = {
     "faq.q4": "문단, 문장, 단어 단위로 생성하는 것은 어떻게 다른가요?",
     "faq.a4": "문단 모드는 여러 문장으로 이루어진 완전한 문단(각각 약 3~6문장)을 만들어, 본문이나 기사 목업을 채우는 데 가장 적합합니다. 문장 모드는 완결된 문장이 이어지는 하나의 덩어리를 생성해, 캡션이나 대체 텍스트(alt text), 짧은 소개 문구에 유용합니다. 단어 모드는 문단 구분 없이 개별 단어의 흐름만 출력해, UI가 정해진 단어 수를 어떻게 자르거나 줄바꿈하는지 테스트할 때 유용합니다. 각 모드는 개수 입력란 옆에 고유한 허용 범위가 표시되며, 범위를 벗어난 값은 자동으로 조정됩니다.",
     "faq.q5": "생성한 텍스트가 저장되거나 어딘가로 전송되나요?",
-    "faq.a5": "아닙니다. 모든 문단은 로컬 단어 뱅크를 사용해 브라우저 안에서만 생성되며, 어떤 것도 업로드되지 않고 서버로 전송되는 요청도 없습니다. 마지막으로 사용한 설정(생성 단위, 개수, 두 가지 토글)은 브라우저의 로컬 저장소에만 저장되어 다음에 도구를 열 때 선호를 기억하며, 언제든 브라우저 데이터를 지우면 이 정보도 함께 삭제됩니다."
+    "faq.a5": "아닙니다. 모든 문단은 로컬 단어 뱅크를 사용해 브라우저 안에서만 생성되며, 어떤 것도 업로드되지 않고 서버로 전송되는 요청도 없습니다. 마지막으로 사용한 설정(생성 단위, 개수, 두 가지 토글)은 브라우저의 로컬 저장소에만 저장되어 다음에 도구를 열 때 선호를 기억하며, 언제든 브라우저 데이터를 지우면 이 정보도 함께 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

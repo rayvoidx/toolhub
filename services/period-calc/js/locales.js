@@ -74,7 +74,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What if my cycle length or period length isn't always the same?",
     "faq.a4": "Enter the average of your last 3–6 cycles and treat every date below as a rough estimate rather than a guarantee. If your cycle length swings by more than a few days, falls outside 21–45 days, or your period length falls outside 2–10 days, these projections become less reliable — an ovulation test kit (LH strips), basal body temperature tracking, or a doctor's advice will serve you better than the calendar alone.",
     "faq.q5": "Is my period data stored or sent anywhere?",
-    "faq.a5": "No. Every date is calculated locally in your browser with JavaScript — your last period date, cycle length and period length are saved only in this browser's local storage so the form is ready next time, and “Clear saved data” removes them immediately. Nothing is uploaded, there's no account, and no one else can see what you enter."
+    "faq.a5": "No. Every date is calculated locally in your browser with JavaScript — your last period date, cycle length and period length are saved only in this browser's local storage so the form is ready next time, and “Clear saved data” removes them immediately. Nothing is uploaded, there's no account, and no one else can see what you enter.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -147,7 +152,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如果我的周期长度或经期天数不总是一样怎么办？",
     "faq.a4": "请填写最近 3–6 个周期的平均值，并把下面的每个日期都当作粗略估计，而非确定的结果。如果你的周期波动超过几天、不在 21–45 天范围内，或经期天数不在 2–10 天范围内，这些推算的可靠性都会下降——排卵试纸（LH 试纸）、基础体温监测或医生的建议，都会比单纯依赖日历更可靠。",
     "faq.q5": "我的经期数据会被保存或上传吗？",
-    "faq.a5": "不会。所有日期都由浏览器中的 JavaScript 在本地计算完成——上次月经日期、周期长度和经期天数只保存在本浏览器的本地存储中，方便下次自动填好，点击“清除已保存数据”即可立即删除。没有任何数据上传，无需注册账号，也不会有任何人看到你输入的内容。"
+    "faq.a5": "不会。所有日期都由浏览器中的 JavaScript 在本地计算完成——上次月经日期、周期长度和经期天数只保存在本浏览器的本地存储中，方便下次自动填好，点击“清除已保存数据”即可立即删除。没有任何数据上传，无需注册账号，也不会有任何人看到你输入的内容。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -220,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "अगर मेरी साइकिल लंबाई या पीरियड की अवधि हमेशा एक जैसी न हो तो?",
     "faq.a4": "अपने पिछले 3–6 साइकिल की औसत लंबाई डालें और नीचे दी गई हर तारीख को एक मोटा अनुमान ही मानें, गारंटी नहीं। अगर आपकी साइकिल लंबाई कुछ दिनों से ज़्यादा बदलती है, 21–45 दिन की सीमा से बाहर है, या पीरियड की अवधि 2–10 दिन की सीमा से बाहर है, तो ये अनुमान कम भरोसेमंद हो जाते हैं — ओव्यूलेशन टेस्ट किट (LH स्ट्रिप), बेसल बॉडी टेम्परेचर या डॉक्टर की सलाह अकेले कैलेंडर से बेहतर काम करेंगे।",
     "faq.q5": "क्या मेरा पीरियड डेटा कहीं सेव या भेजा जाता है?",
-    "faq.a5": "नहीं। हर तारीख आपके ब्राउज़र में जावास्क्रिप्ट से स्थानीय रूप से निकाली जाती है — पिछले पीरियड की तारीख, साइकिल लंबाई और पीरियड की अवधि सिर्फ़ इसी ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार फ़ॉर्म तैयार मिले, और “सेव किया डेटा मिटाएँ” दबाते ही यह तुरंत हट जाता है। कुछ भी अपलोड नहीं होता, कोई अकाउंट नहीं है, और जो आप डालती हैं उसे कोई और नहीं देख सकता।"
+    "faq.a5": "नहीं। हर तारीख आपके ब्राउज़र में जावास्क्रिप्ट से स्थानीय रूप से निकाली जाती है — पिछले पीरियड की तारीख, साइकिल लंबाई और पीरियड की अवधि सिर्फ़ इसी ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार फ़ॉर्म तैयार मिले, और “सेव किया डेटा मिटाएँ” दबाते ही यह तुरंत हट जाता है। कुछ भी अपलोड नहीं होता, कोई अकाउंट नहीं है, और जो आप डालती हैं उसे कोई और नहीं देख सकता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -293,7 +308,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Y si la duración de mi ciclo o de mi regla no es siempre la misma?",
     "faq.a4": "Introduce el promedio de tus últimos 3 a 6 ciclos y trata cada fecha de abajo como una estimación aproximada, no como una garantía. Si la duración de tu ciclo varía más de unos pocos días, queda fuera de 21–45 días, o la duración de tu regla queda fuera de 2–10 días, estas proyecciones se vuelven menos fiables: un test de ovulación (tiras de LH), el seguimiento de la temperatura basal o el consejo de tu médico te servirán mejor que el calendario por sí solo.",
     "faq.q5": "¿Se guardan o envían mis datos de la regla a algún sitio?",
-    "faq.a5": "No. Cada fecha se calcula localmente en tu navegador con JavaScript: la fecha de tu última regla, la duración del ciclo y la duración de la regla se guardan solo en el almacenamiento local de este navegador para que el formulario esté listo la próxima vez, y «Borrar datos guardados» los elimina al instante. No se sube nada, no hay cuenta y nadie más puede ver lo que escribes."
+    "faq.a5": "No. Cada fecha se calcula localmente en tu navegador con JavaScript: la fecha de tu última regla, la duración del ciclo y la duración de la regla se guardan solo en el almacenamiento local de este navegador para que el formulario esté listo la próxima vez, y «Borrar datos guardados» los elimina al instante. No se sube nada, no hay cuenta y nadie más puede ver lo que escribes.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -366,7 +386,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ماذا لو لم يكن طول دورتي أو مدتها ثابتًا دائمًا؟",
     "faq.a4": "أدخلي متوسط آخر 3 إلى 6 دورات، واعتبري كل تاريخ أدناه تقديرًا تقريبيًا لا ضمانًا مؤكدًا. فإذا كان طول دورتك يتفاوت أكثر من بضعة أيام، أو يخرج عن نطاق 21–45 يومًا، أو كانت مدة دورتك خارج نطاق 2–10 أيام، تصبح هذه التوقعات أقل موثوقية — واختبار التبويض (شرائط LH) أو متابعة حرارة الجسم القاعدية أو استشارة الطبيب أدق من الاعتماد على التقويم وحده.",
     "faq.q5": "هل تُحفظ بيانات دورتي أو تُرسَل إلى أي جهة؟",
-    "faq.a5": "لا. تُحسب كل التواريخ محليًا داخل متصفحك بلغة جافاسكريبت — يُحفظ تاريخ آخر دورة وطول الدورة وعدد أيامها فقط في التخزين المحلي لهذا المتصفح ليكون النموذج جاهزًا في المرة القادمة، وزر «حذف البيانات المحفوظة» يمسحها فورًا. لا يُرفع شيء، ولا يوجد حساب، ولا يمكن لأي شخص آخر رؤية ما تُدخلينه."
+    "faq.a5": "لا. تُحسب كل التواريخ محليًا داخل متصفحك بلغة جافاسكريبت — يُحفظ تاريخ آخر دورة وطول الدورة وعدد أيامها فقط في التخزين المحلي لهذا المتصفح ليكون النموذج جاهزًا في المرة القادمة، وزر «حذف البيانات المحفوظة» يمسحها فورًا. لا يُرفع شيء، ولا يوجد حساب، ولا يمكن لأي شخص آخر رؤية ما تُدخلينه.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -439,7 +464,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Et si la durée de mon cycle ou de mes règles n'est pas toujours la même ?",
     "faq.a4": "Indiquez la moyenne de vos 3 à 6 derniers cycles et considérez chaque date ci-dessous comme une estimation approximative plutôt qu'une garantie. Si la durée de votre cycle varie de plus de quelques jours, sort de la fourchette 21–45 jours, ou si la durée de vos règles sort de la fourchette 2–10 jours, ces projections deviennent moins fiables : un test d'ovulation (bandelettes LH), le suivi de la température basale ou l'avis d'un médecin vous seront plus utiles que le calendrier seul.",
     "faq.q5": "Mes données de règles sont-elles enregistrées ou envoyées quelque part ?",
-    "faq.a5": "Non. Chaque date est calculée localement dans votre navigateur en JavaScript : la date de vos dernières règles, la durée du cycle et la durée des règles sont enregistrées uniquement dans le stockage local de ce navigateur, pour que le formulaire soit prêt la prochaine fois ; « Effacer les données enregistrées » les supprime aussitôt. Rien n'est envoyé en ligne, il n'y a pas de compte, et personne d'autre ne peut voir ce que vous saisissez."
+    "faq.a5": "Non. Chaque date est calculée localement dans votre navigateur en JavaScript : la date de vos dernières règles, la durée du cycle et la durée des règles sont enregistrées uniquement dans le stockage local de ce navigateur, pour que le formulaire soit prêt la prochaine fois ; « Effacer les données enregistrées » les supprime aussitôt. Rien n'est envoyé en ligne, il n'y a pas de compte, et personne d'autre ne peut voir ce que vous saisissez.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -512,7 +542,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার চক্রের দৈর্ঘ্য বা পিরিয়ডের দৈর্ঘ্য সবসময় একরকম না হলে কী করব?",
     "faq.a4": "আপনার শেষ ৩–৬টি চক্রের গড় দৈর্ঘ্য দিন এবং নিচের প্রতিটি তারিখকে নিশ্চয়তা নয়, বরং একটি মোটামুটি অনুমান হিসেবে ধরুন। যদি আপনার চক্রের দৈর্ঘ্য কয়েক দিনের বেশি ওঠানামা করে, ২১–৪৫ দিনের বাইরে যায়, বা পিরিয়ডের দৈর্ঘ্য ২–১০ দিনের বাইরে যায়, তাহলে এই পূর্বাভাস কম নির্ভরযোগ্য হয়ে পড়ে — ওভুলেশন টেস্ট কিট (LH স্ট্রিপ), বেসাল বডি টেম্পারেচার পর্যবেক্ষণ বা ডাক্তারের পরামর্শ শুধু ক্যালেন্ডারের চেয়ে বেশি কাজে দেবে।",
     "faq.q5": "আমার পিরিয়ডের তথ্য কি কোথাও সংরক্ষিত বা পাঠানো হয়?",
-    "faq.a5": "না। প্রতিটি তারিখ আপনার ব্রাউজারে জাভাস্ক্রিপ্ট দিয়ে স্থানীয়ভাবে হিসাব করা হয় — শেষ পিরিয়ডের তারিখ, চক্রের দৈর্ঘ্য ও পিরিয়ডের দৈর্ঘ্য শুধু এই ব্রাউজারের লোকাল স্টোরেজে জমা থাকে যাতে পরের বার ফর্ম প্রস্তুত থাকে, আর “সংরক্ষিত তথ্য মুছুন” চাপলেই তা সঙ্গে সঙ্গে মুছে যায়। কিছুই আপলোড হয় না, কোনো অ্যাকাউন্ট নেই, আর আপনি যা লেখেন তা অন্য কেউ দেখতে পারে না।"
+    "faq.a5": "না। প্রতিটি তারিখ আপনার ব্রাউজারে জাভাস্ক্রিপ্ট দিয়ে স্থানীয়ভাবে হিসাব করা হয় — শেষ পিরিয়ডের তারিখ, চক্রের দৈর্ঘ্য ও পিরিয়ডের দৈর্ঘ্য শুধু এই ব্রাউজারের লোকাল স্টোরেজে জমা থাকে যাতে পরের বার ফর্ম প্রস্তুত থাকে, আর “সংরক্ষিত তথ্য মুছুন” চাপলেই তা সঙ্গে সঙ্গে মুছে যায়। কিছুই আপলোড হয় না, কোনো অ্যাকাউন্ট নেই, আর আপনি যা লেখেন তা অন্য কেউ দেখতে পারে না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -585,7 +620,12 @@ window.I18N_LOCALES = {
     "faq.q4": "E se a duração do meu ciclo ou da minha menstruação nem sempre for a mesma?",
     "faq.a4": "Informe a média dos seus últimos 3 a 6 ciclos e trate cada data abaixo como uma estimativa aproximada, não uma garantia. Se a duração do seu ciclo variar mais do que alguns dias, ficar fora de 21–45 dias, ou a duração da sua menstruação ficar fora de 2–10 dias, essas projeções se tornam menos confiáveis — um teste de ovulação (tiras de LH), o acompanhamento da temperatura basal ou o conselho de um médico ajudarão mais do que o calendário sozinho.",
     "faq.q5": "Meus dados de menstruação são armazenados ou enviados para algum lugar?",
-    "faq.a5": "Não. Cada data é calculada localmente no seu navegador com JavaScript — a data da sua última menstruação, a duração do ciclo e a duração da menstruação são salvas apenas no armazenamento local deste navegador, para que o formulário esteja pronto na próxima vez, e «Limpar dados salvos» as remove imediatamente. Nada é enviado, não há conta e ninguém mais pode ver o que você digita."
+    "faq.a5": "Não. Cada data é calculada localmente no seu navegador com JavaScript — a data da sua última menstruação, a duração do ciclo e a duração da menstruação são salvas apenas no armazenamento local deste navegador, para que o formulário esteja pronto na próxima vez, e «Limpar dados salvos» as remove imediatamente. Nada é enviado, não há conta e ninguém mais pode ver o que você digita.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -658,7 +698,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что если длина моего цикла или продолжительность месячных не всегда одинаковы?",
     "faq.a4": "Введите среднее значение за последние 3–6 циклов и относитесь к каждой дате ниже как к приблизительной оценке, а не гарантии. Если длина вашего цикла колеблется более чем на несколько дней, выходит за пределы 21–45 дней, или продолжительность месячных выходит за пределы 2–10 дней, эти прогнозы становятся менее надёжными — тест на овуляцию (ЛГ-полоски), отслеживание базальной температуры или консультация врача помогут больше, чем один только календарь.",
     "faq.q5": "Сохраняются ли мои данные о цикле где-то или отправляются куда-либо?",
-    "faq.a5": "Нет. Каждая дата рассчитывается локально в вашем браузере с помощью JavaScript — дата последних месячных, длина цикла и продолжительность месячных сохраняются только в локальном хранилище этого браузера, чтобы форма была готова в следующий раз, а кнопка «Удалить сохранённые данные» немедленно их стирает. Ничего не отправляется на сервер, аккаунт не нужен, и никто другой не увидит введённые вами данные."
+    "faq.a5": "Нет. Каждая дата рассчитывается локально в вашем браузере с помощью JavaScript — дата последних месячных, длина цикла и продолжительность месячных сохраняются только в локальном хранилище этого браузера, чтобы форма была готова в следующий раз, а кнопка «Удалить сохранённые данные» немедленно их стирает. Ничего не отправляется на сервер, аккаунт не нужен, и никто другой не увидит введённые вами данные.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -731,7 +776,12 @@ window.I18N_LOCALES = {
     "faq.q4": "اگر میری سائیکل یا پیریڈ کا دورانیہ ہمیشہ ایک جیسا نہ ہو تو؟",
     "faq.a4": "اپنے پچھلے 3–6 سائیکلز کی اوسط درج کریں اور نیچے دی گئی ہر تاریخ کو ایک اندازہ سمجھیں، ضمانت نہیں۔ اگر آپ کی سائیکل کی لمبائی چند دنوں سے زیادہ بدلتی ہے، 21–45 دن کی حد سے باہر ہے، یا پیریڈ کا دورانیہ 2–10 دن کی حد سے باہر ہے، تو یہ پیش گوئیاں کم قابلِ اعتماد ہو جاتی ہیں — بیضہ دانی ٹیسٹ کٹ (LH سٹرپس)، بیسل باڈی ٹمپریچر یا ڈاکٹر کا مشورہ اکیلے کیلنڈر سے بہتر رہنمائی دے گا۔",
     "faq.q5": "کیا میرا پیریڈ ڈیٹا کہیں محفوظ یا بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ ہر تاریخ آپ کے براؤزر میں جاوا اسکرپٹ سے مقامی طور پر حساب کی جاتی ہے — آخری پیریڈ کی تاریخ، سائیکل کی لمبائی اور پیریڈ کا دورانیہ صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں تاکہ فارم اگلی بار تیار ملے، اور “محفوظ شدہ ڈیٹا حذف کریں” دبانے سے فوراً مٹ جاتا ہے۔ کچھ بھی اپ لوڈ نہیں ہوتا، کوئی اکاؤنٹ نہیں، اور جو آپ درج کرتی ہیں وہ کوئی اور نہیں دیکھ سکتا۔"
+    "faq.a5": "نہیں۔ ہر تاریخ آپ کے براؤزر میں جاوا اسکرپٹ سے مقامی طور پر حساب کی جاتی ہے — آخری پیریڈ کی تاریخ، سائیکل کی لمبائی اور پیریڈ کا دورانیہ صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں تاکہ فارم اگلی بار تیار ملے، اور “محفوظ شدہ ڈیٹا حذف کریں” دبانے سے فوراً مٹ جاتا ہے۔ کچھ بھی اپ لوڈ نہیں ہوتا، کوئی اکاؤنٹ نہیں، اور جو آپ درج کرتی ہیں وہ کوئی اور نہیں دیکھ سکتا۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -804,7 +854,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana jika panjang siklus atau lama haid saya tidak selalu sama?",
     "faq.a4": "Masukkan rata-rata dari 3–6 siklus terakhir Anda dan anggap setiap tanggal di bawah sebagai perkiraan kasar, bukan jaminan. Jika panjang siklus Anda berubah lebih dari beberapa hari, berada di luar 21–45 hari, atau lama haid Anda di luar 2–10 hari, proyeksi ini menjadi kurang bisa diandalkan — alat tes ovulasi (strip LH), pemantauan suhu basal tubuh, atau saran dokter akan lebih membantu daripada kalender saja.",
     "faq.q5": "Apakah data haid saya disimpan atau dikirim ke suatu tempat?",
-    "faq.a5": "Tidak. Setiap tanggal dihitung secara lokal di browser Anda dengan JavaScript — tanggal haid terakhir, panjang siklus, dan lama haid hanya disimpan di penyimpanan lokal browser ini agar formulir siap untuk kunjungan berikutnya, dan “Hapus data tersimpan” langsung menghapusnya. Tidak ada yang diunggah, tidak ada akun, dan tidak ada orang lain yang bisa melihat apa yang Anda masukkan."
+    "faq.a5": "Tidak. Setiap tanggal dihitung secara lokal di browser Anda dengan JavaScript — tanggal haid terakhir, panjang siklus, dan lama haid hanya disimpan di penyimpanan lokal browser ini agar formulir siap untuk kunjungan berikutnya, dan “Hapus data tersimpan” langsung menghapusnya. Tidak ada yang diunggah, tidak ada akun, dan tidak ada orang lain yang bisa melihat apa yang Anda masukkan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -877,7 +932,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was, wenn meine Zykluslänge oder Periodendauer nicht immer gleich ist?",
     "faq.a4": "Geben Sie den Durchschnitt Ihrer letzten 3–6 Zyklen ein und betrachten Sie jedes Datum unten als grobe Schätzung, nicht als Garantie. Wenn Ihre Zykluslänge um mehr als ein paar Tage schwankt, außerhalb von 21–45 Tagen liegt oder Ihre Periodendauer außerhalb von 2–10 Tagen liegt, werden diese Prognosen weniger zuverlässig — ein Ovulationstest (LH-Streifen), das Verfolgen der Basaltemperatur oder ärztlicher Rat helfen dann mehr als der Kalender allein.",
     "faq.q5": "Werden meine Periodendaten irgendwo gespeichert oder gesendet?",
-    "faq.a5": "Nein. Jedes Datum wird lokal in Ihrem Browser mit JavaScript berechnet — das Datum Ihrer letzten Periode, die Zykluslänge und die Periodendauer werden nur im lokalen Speicher dieses Browsers abgelegt, damit das Formular beim nächsten Mal bereit ist, und „Gespeicherte Daten löschen“ entfernt sie sofort. Es wird nichts hochgeladen, es gibt kein Konto, und niemand sonst kann sehen, was Sie eingeben."
+    "faq.a5": "Nein. Jedes Datum wird lokal in Ihrem Browser mit JavaScript berechnet — das Datum Ihrer letzten Periode, die Zykluslänge und die Periodendauer werden nur im lokalen Speicher dieses Browsers abgelegt, damit das Formular beim nächsten Mal bereit ist, und „Gespeicherte Daten löschen“ entfernt sie sofort. Es wird nichts hochgeladen, es gibt kein Konto, und niemand sonst kann sehen, was Sie eingeben.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -950,7 +1010,12 @@ window.I18N_LOCALES = {
     "faq.q4": "周期日数や生理期間がいつも同じでない場合はどうすればいいですか？",
     "faq.a4": "直近3〜6周期の平均値を入力し、以下の各日付はあくまで目安であり確定ではないと考えてください。周期日数が数日以上変動する、21〜45日の範囲外である、あるいは生理期間が2〜10日の範囲外である場合、この予測の信頼性は下がります。排卵検査薬（LHテスト）、基礎体温の記録、または医師への相談のほうが、カレンダーだけに頼るより確実です。",
     "faq.q5": "生理データはどこかに保存・送信されますか？",
-    "faq.a5": "いいえ。すべての日付はブラウザ内でJavaScriptによりローカルに計算されます。前回の生理日、周期日数、生理期間は次回のためにこのブラウザのローカルストレージにのみ保存され、「保存データを削除」を押せばすぐに消去されます。どこにもアップロードされず、アカウントも不要で、入力内容を他の誰かが見ることはありません。"
+    "faq.a5": "いいえ。すべての日付はブラウザ内でJavaScriptによりローカルに計算されます。前回の生理日、周期日数、生理期間は次回のためにこのブラウザのローカルストレージにのみ保存され、「保存データを削除」を押せばすぐに消去されます。どこにもアップロードされず、アカウントも不要で、入力内容を他の誰かが見ることはありません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1023,6 +1088,11 @@ window.I18N_LOCALES = {
     "faq.q4": "생리주기나 생리 기간이 매번 똑같지 않다면 어떻게 하나요?",
     "faq.a4": "최근 3~6주기의 평균값을 입력하고, 아래에 나오는 각 날짜는 확정값이 아니라 대략적인 추정치로 받아들이세요. 생리주기가 며칠 이상 들쭉날쭉하거나 21–45일 범위를 벗어나는 경우, 또는 생리 기간이 2–10일 범위를 벗어나는 경우에는 이 예측의 신뢰도가 떨어집니다 — 배란테스트기(LH 스트립), 기초체온 측정, 또는 의사의 조언이 달력 계산보다 더 정확한 도움이 됩니다.",
     "faq.q5": "제 생리 데이터가 저장되거나 어딘가로 전송되나요?",
-    "faq.a5": "아니요. 모든 날짜는 브라우저 안에서 자바스크립트로 로컬 계산됩니다 — 마지막 생리일, 생리주기, 생리 기간은 다음 방문 시 폼이 바로 채워지도록 이 브라우저의 로컬 저장소에만 저장되며, “저장된 데이터 지우기”를 누르면 즉시 삭제됩니다. 어디로도 업로드되지 않고 계정도 필요 없으며, 입력한 내용은 다른 누구도 볼 수 없습니다."
+    "faq.a5": "아니요. 모든 날짜는 브라우저 안에서 자바스크립트로 로컬 계산됩니다 — 마지막 생리일, 생리주기, 생리 기간은 다음 방문 시 폼이 바로 채워지도록 이 브라우저의 로컬 저장소에만 저장되며, “저장된 데이터 지우기”를 누르면 즉시 삭제됩니다. 어디로도 업로드되지 않고 계정도 필요 없으며, 입력한 내용은 다른 누구도 볼 수 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

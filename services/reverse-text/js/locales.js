@@ -41,7 +41,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What's the difference between reversing word order and reversing the letters in each word?",
     "faq.a4": "They act on different parts of your text. Reversing word order treats each word as a single unit and only changes the sequence they appear in — great for turning a sentence backwards while keeping every word readable. Reversing letters in each word does the opposite: it keeps every word in its original position but flips the letters inside it back-to-front, which is useful for word games, puzzles, or testing how a name looks spelled backwards. For example, \"Hello world foo\" becomes \"foo world Hello\" with word order reversed, but \"olleH dlrow oof\" with letters reversed inside each word.",
     "faq.q5": "Is my text sent to a server?",
-    "faq.a5": "No. This reverse text generator runs entirely in your browser — nothing you type or paste is uploaded, logged, or shared with any server. Your most recent input is optionally saved to this browser's local storage so it's still here next time you open the page; untick \"Save my text in this browser\" to keep it private to the current session, and clearing the box removes any stored copy immediately."
+    "faq.a5": "No. This reverse text generator runs entirely in your browser — nothing you type or paste is uploaded, logged, or shared with any server. Your most recent input is optionally saved to this browser's local storage so it's still here next time you open the page; untick \"Save my text in this browser\" to keep it private to the current session, and clearing the box removes any stored copy immediately.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -78,7 +83,12 @@ window.I18N_LOCALES = {
     "faq.q4": "“反转单词顺序”和“反转每个单词内的字母”有什么区别？",
     "faq.a4": "它们作用于文本的不同部分。反转单词顺序把每个单词当作一个完整的整体，只改变单词出现的先后次序——适合把一句话倒过来说，同时保持每个单词仍然可读。反转每个单词内的字母则相反：每个单词还留在原来的位置，但单词内部的字母被前后颠倒——适合用来做文字游戏、谜题，或者看看某个名字倒着拼是什么样子。例如，“Hello world foo”在反转单词顺序后变成“foo world Hello”，而在反转每个单词内的字母后变成“olleH dlrow oof”。",
     "faq.q5": "我的文本会被发送到服务器吗？",
-    "faq.a5": "不会。这个反转文字生成器完全在你的浏览器中运行——你输入或粘贴的任何内容都不会被上传、记录或分享给任何服务器。你最近输入的内容会被选择性地保存在浏览器本地存储中，以便下次打开页面时仍然保留；取消勾选“在此浏览器中保存我的文本”可以让当前会话保持私密且不被保存，清空文本框也会立即删除已保存的内容。"
+    "faq.a5": "不会。这个反转文字生成器完全在你的浏览器中运行——你输入或粘贴的任何内容都不会被上传、记录或分享给任何服务器。你最近输入的内容会被选择性地保存在浏览器本地存储中，以便下次打开页面时仍然保留；取消勾选“在此浏览器中保存我的文本”可以让当前会话保持私密且不被保存，清空文本框也会立即删除已保存的内容。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -115,7 +125,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"शब्द क्रम पलटने\" और \"हर शब्द के अंदर अक्षर पलटने\" में क्या फ़र्क़ है?",
     "faq.a4": "ये टेक्स्ट के अलग-अलग हिस्सों पर काम करते हैं। शब्द क्रम पलटना हर शब्द को एक पूरी इकाई मानता है और सिर्फ़ उनके आने का क्रम बदलता है — यह किसी वाक्य को उल्टा करने के लिए अच्छा है जबकि हर शब्द पढ़ने लायक बना रहता है। हर शब्द के अंदर अक्षर पलटना इसके उलट है: हर शब्द अपनी जगह पर रहता है, लेकिन उसके अंदर के अक्षर आगे-पीछे हो जाते हैं — यह शब्द खेलों, पहेलियों, या किसी नाम को उल्टा लिखकर देखने के लिए उपयोगी है। उदाहरण के लिए, \"Hello world foo\" शब्द क्रम पलटने पर \"foo world Hello\" बनता है, लेकिन हर शब्द के अंदर अक्षर पलटने पर \"olleH dlrow oof\" बनता है।",
     "faq.q5": "क्या मेरा टेक्स्ट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह टेक्स्ट रिवर्स जनरेटर पूरी तरह से आपके ब्राउज़र में चलता है — आपका टाइप या पेस्ट किया गया कुछ भी किसी सर्वर पर अपलोड, रिकॉर्ड या शेयर नहीं होता। आपका सबसे हाल का इनपुट वैकल्पिक रूप से इस ब्राउज़र के लोकल स्टोरेज में सेव किया जाता है ताकि अगली बार पेज खोलने पर वह मौजूद रहे; \"मेरा टेक्स्ट इस ब्राउज़र में सेव करें\" को अनचेक करके इसे सिर्फ़ मौजूदा सेशन तक निजी रखें, और बॉक्स साफ़ करने पर सेव किया गया कॉपी भी तुरंत हट जाता है।"
+    "faq.a5": "नहीं। यह टेक्स्ट रिवर्स जनरेटर पूरी तरह से आपके ब्राउज़र में चलता है — आपका टाइप या पेस्ट किया गया कुछ भी किसी सर्वर पर अपलोड, रिकॉर्ड या शेयर नहीं होता। आपका सबसे हाल का इनपुट वैकल्पिक रूप से इस ब्राउज़र के लोकल स्टोरेज में सेव किया जाता है ताकि अगली बार पेज खोलने पर वह मौजूद रहे; \"मेरा टेक्स्ट इस ब्राउज़र में सेव करें\" को अनचेक करके इसे सिर्फ़ मौजूदा सेशन तक निजी रखें, और बॉक्स साफ़ करने पर सेव किया गया कॉपी भी तुरंत हट जाता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -152,7 +167,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuál es la diferencia entre invertir el orden de las palabras e invertir las letras de cada palabra?",
     "faq.a4": "Actúan sobre partes distintas del texto. Invertir el orden de las palabras trata cada palabra como una unidad y solo cambia la secuencia en que aparecen — ideal para poner una frase al revés manteniendo cada palabra legible. Invertir las letras de cada palabra hace lo contrario: cada palabra queda en su posición original, pero las letras dentro de ella se voltean de adelante hacia atrás, útil para juegos de palabras, acertijos o ver cómo se lee un nombre al revés. Por ejemplo, \"Hello world foo\" se convierte en \"foo world Hello\" con el orden de palabras invertido, pero en \"olleH dlrow oof\" con las letras invertidas dentro de cada palabra.",
     "faq.q5": "¿Se envía mi texto a un servidor?",
-    "faq.a5": "No. Este generador de texto invertido funciona completamente en tu navegador — nada de lo que escribas o pegues se sube, se registra ni se comparte con ningún servidor. Tu entrada más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga ahí la próxima vez que abras la página; desmarca \"Guardar mi texto en este navegador\" para mantenerlo privado solo durante la sesión actual, y al borrar el cuadro se elimina de inmediato cualquier copia guardada."
+    "faq.a5": "No. Este generador de texto invertido funciona completamente en tu navegador — nada de lo que escribas o pegues se sube, se registra ni se comparte con ningún servidor. Tu entrada más reciente se guarda opcionalmente en el almacenamiento local de este navegador para que siga ahí la próxima vez que abras la página; desmarca \"Guardar mi texto en este navegador\" para mantenerlo privado solo durante la sesión actual, y al borrar el cuadro se elimina de inmediato cualquier copia guardada.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -189,7 +209,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما الفرق بين عكس ترتيب الكلمات وعكس الحروف داخل كل كلمة؟",
     "faq.a4": "يعملان على جزأين مختلفين من النص. عكس ترتيب الكلمات يعامل كل كلمة كوحدة واحدة ويغيّر فقط تسلسل ظهورها — مناسب لقلب جملة كاملة مع إبقاء كل كلمة قابلة للقراءة. عكس الحروف داخل كل كلمة يفعل العكس: تبقى كل كلمة في مكانها الأصلي، لكن الحروف بداخلها تُقلَب من الأمام إلى الخلف — وهو مفيد لألعاب الكلمات والألغاز أو لمعرفة كيف يبدو اسم ما عند كتابته بالمقلوب. فمثلًا، تتحول \"Hello world foo\" إلى \"foo world Hello\" عند عكس ترتيب الكلمات، لكنها تصبح \"olleH dlrow oof\" عند عكس الحروف داخل كل كلمة.",
     "faq.q5": "هل يُرسَل نصي إلى خادم؟",
-    "faq.a5": "لا. يعمل مولّد النص المعكوس هذا بالكامل داخل متصفحك — لا يُرفَع أو يُسجَّل أو يُشارَك أي شيء تكتبه أو تلصقه مع أي خادم. يُحفَظ أحدث إدخال لك اختياريًا في التخزين المحلي لهذا المتصفح ليبقى موجودًا في المرة القادمة التي تفتح فيها الصفحة؛ ألغِ تحديد \"احفظ نصي في هذا المتصفح\" لإبقائه خاصًا بهذه الجلسة فقط، ومسح المربع يحذف فورًا أي نسخة محفوظة."
+    "faq.a5": "لا. يعمل مولّد النص المعكوس هذا بالكامل داخل متصفحك — لا يُرفَع أو يُسجَّل أو يُشارَك أي شيء تكتبه أو تلصقه مع أي خادم. يُحفَظ أحدث إدخال لك اختياريًا في التخزين المحلي لهذا المتصفح ليبقى موجودًا في المرة القادمة التي تفتح فيها الصفحة؛ ألغِ تحديد \"احفظ نصي في هذا المتصفح\" لإبقائه خاصًا بهذه الجلسة فقط، ومسح المربع يحذف فورًا أي نسخة محفوظة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -226,7 +251,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle est la différence entre inverser l'ordre des mots et inverser les lettres de chaque mot ?",
     "faq.a4": "Ils agissent sur des parties différentes du texte. Inverser l'ordre des mots traite chaque mot comme une seule unité et ne change que leur ordre d'apparition — idéal pour retourner une phrase tout en gardant chaque mot lisible. Inverser les lettres de chaque mot fait l'inverse : chaque mot reste à sa position d'origine, mais les lettres à l'intérieur sont retournées — utile pour les jeux de mots, les énigmes, ou pour voir à quoi ressemble un nom écrit à l'envers. Par exemple, \"Hello world foo\" devient \"foo world Hello\" avec l'ordre des mots inversé, mais \"olleH dlrow oof\" avec les lettres inversées dans chaque mot.",
     "faq.q5": "Mon texte est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Ce générateur de texte inversé fonctionne entièrement dans votre navigateur — rien de ce que vous saisissez ou collez n'est téléversé, enregistré ou partagé avec un serveur. Votre saisie la plus récente est éventuellement sauvegardée dans le stockage local de ce navigateur pour être encore là la prochaine fois que vous ouvrez la page ; décochez \"Enregistrer mon texte dans ce navigateur\" pour la garder privée le temps de la session en cours, et vider le champ supprime immédiatement toute copie enregistrée."
+    "faq.a5": "Non. Ce générateur de texte inversé fonctionne entièrement dans votre navigateur — rien de ce que vous saisissez ou collez n'est téléversé, enregistré ou partagé avec un serveur. Votre saisie la plus récente est éventuellement sauvegardée dans le stockage local de ce navigateur pour être encore là la prochaine fois que vous ouvrez la page ; décochez \"Enregistrer mon texte dans ce navigateur\" pour la garder privée le temps de la session en cours, et vider le champ supprime immédiatement toute copie enregistrée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -263,7 +293,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"শব্দক্রম উল্টানো\" এবং \"প্রতিটি শব্দের ভেতরের বর্ণ উল্টানো\"-র মধ্যে পার্থক্য কী?",
     "faq.a4": "এগুলো টেক্সটের ভিন্ন ভিন্ন অংশে কাজ করে। শব্দক্রম উল্টানো প্রতিটি শব্দকে একটি সম্পূর্ণ একক হিসেবে ধরে এবং শুধু তাদের আসার ক্রম বদলায় — একটি বাক্য উল্টো করতে চাইলে এটি ভালো, প্রতিটি শব্দ পড়ার যোগ্য থাকে। প্রতিটি শব্দের ভেতরের বর্ণ উল্টানো এর উল্টো কাজ করে: প্রতিটি শব্দ তার আসল জায়গায় থাকে, কিন্তু তার ভেতরের বর্ণগুলো সামনে-পেছনে উল্টে যায় — শব্দ খেলা, ধাঁধা, বা কোনো নাম উল্টো লিখলে কেমন দেখায় তা যাচাই করার জন্য উপযোগী। যেমন, \"Hello world foo\" শব্দক্রম উল্টালে হয় \"foo world Hello\", কিন্তু প্রতিটি শব্দের ভেতরের বর্ণ উল্টালে হয় \"olleH dlrow oof\"।",
     "faq.q5": "আমার টেক্সট কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই রিভার্স টেক্সট জেনারেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যা টাইপ বা পেস্ট করেন তার কিছুই কোনো সার্ভারে আপলোড, রেকর্ড বা শেয়ার করা হয় না। আপনার সাম্প্রতিক ইনপুট ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়, যাতে পরের বার পেজ খুললে তা থেকে যায়; \"এই ব্রাউজারে আমার টেক্সট সংরক্ষণ করুন\" আনচেক করে এটি শুধু বর্তমান সেশনের জন্য প্রাইভেট রাখুন, এবং বক্স খালি করলে সংরক্ষিত কপি সাথে সাথে মুছে যায়।"
+    "faq.a5": "না। এই রিভার্স টেক্সট জেনারেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যা টাইপ বা পেস্ট করেন তার কিছুই কোনো সার্ভারে আপলোড, রেকর্ড বা শেয়ার করা হয় না। আপনার সাম্প্রতিক ইনপুট ঐচ্ছিকভাবে এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়, যাতে পরের বার পেজ খুললে তা থেকে যায়; \"এই ব্রাউজারে আমার টেক্সট সংরক্ষণ করুন\" আনচেক করে এটি শুধু বর্তমান সেশনের জন্য প্রাইভেট রাখুন, এবং বক্স খালি করলে সংরক্ষিত কপি সাথে সাথে মুছে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -300,7 +335,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a diferença entre inverter a ordem das palavras e inverter as letras de cada palavra?",
     "faq.a4": "Eles agem em partes diferentes do texto. Inverter a ordem das palavras trata cada palavra como uma única unidade e só muda a sequência em que aparecem — ótimo para virar uma frase ao contrário mantendo cada palavra legível. Inverter as letras de cada palavra faz o oposto: cada palavra permanece na posição original, mas as letras dentro dela são viradas de frente para trás — útil para jogos de palavras, charadas, ou para ver como um nome fica escrito ao contrário. Por exemplo, \"Hello world foo\" vira \"foo world Hello\" com a ordem das palavras invertida, mas vira \"olleH dlrow oof\" com as letras invertidas dentro de cada palavra.",
     "faq.q5": "Meu texto é enviado para um servidor?",
-    "faq.a5": "Não. Este gerador de texto invertido funciona inteiramente no seu navegador — nada do que você digita ou cola é enviado, registrado ou compartilhado com nenhum servidor. Sua entrada mais recente é opcionalmente salva no armazenamento local deste navegador para continuar lá na próxima vez que você abrir a página; desmarque \"Salvar meu texto neste navegador\" para mantê-la privada apenas durante a sessão atual, e limpar a caixa remove imediatamente qualquer cópia salva."
+    "faq.a5": "Não. Este gerador de texto invertido funciona inteiramente no seu navegador — nada do que você digita ou cola é enviado, registrado ou compartilhado com nenhum servidor. Sua entrada mais recente é opcionalmente salva no armazenamento local deste navegador para continuar lá na próxima vez que você abrir a página; desmarque \"Salvar meu texto neste navegador\" para mantê-la privada apenas durante a sessão atual, e limpar a caixa remove imediatamente qualquer cópia salva.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -337,7 +377,12 @@ window.I18N_LOCALES = {
     "faq.q4": "В чём разница между переворотом порядка слов и переворотом букв в каждом слове?",
     "faq.a4": "Они действуют на разные части текста. Переворот порядка слов рассматривает каждое слово как единое целое и меняет только последовательность их появления — это удобно, чтобы перевернуть предложение целиком, оставив каждое слово читаемым. Переворот букв в каждом слове делает наоборот: каждое слово остаётся на своём исходном месте, но буквы внутри него переворачиваются задом наперёд — это полезно для словесных игр, загадок или проверки, как выглядит имя, написанное наоборот. Например, \"Hello world foo\" превращается в \"foo world Hello\" при перевороте порядка слов, но в \"olleH dlrow oof\" при перевороте букв внутри каждого слова.",
     "faq.q5": "Отправляется ли мой текст на сервер?",
-    "faq.a5": "Нет. Этот генератор обратного текста работает полностью в вашем браузере — ничего из того, что вы вводите или вставляете, не загружается, не записывается и не передаётся ни на какой сервер. Ваш последний ввод по желанию сохраняется в локальном хранилище браузера, чтобы остаться там при следующем открытии страницы; снимите флажок «Сохранить мой текст в этом браузере», чтобы оставить его приватным только на текущую сессию, а очистка поля сразу удаляет любую сохранённую копию."
+    "faq.a5": "Нет. Этот генератор обратного текста работает полностью в вашем браузере — ничего из того, что вы вводите или вставляете, не загружается, не записывается и не передаётся ни на какой сервер. Ваш последний ввод по желанию сохраняется в локальном хранилище браузера, чтобы остаться там при следующем открытии страницы; снимите флажок «Сохранить мой текст в этом браузере», чтобы оставить его приватным только на текущую сессию, а очистка поля сразу удаляет любую сохранённую копию.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -374,7 +419,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"لفظی ترتیب پلٹنے\" اور \"ہر لفظ کے اندر حروف پلٹنے\" میں کیا فرق ہے؟",
     "faq.a4": "یہ متن کے مختلف حصوں پر کام کرتے ہیں۔ لفظی ترتیب پلٹنا ہر لفظ کو ایک مکمل اکائی سمجھتا ہے اور صرف ان کے آنے کی ترتیب بدلتا ہے — یہ کسی جملے کو الٹا کرنے کے لیے اچھا ہے جبکہ ہر لفظ پڑھنے کے قابل رہتا ہے۔ ہر لفظ کے اندر حروف پلٹنا اس کے برعکس کرتا ہے: ہر لفظ اپنی اصل جگہ پر رہتا ہے، مگر اس کے اندر کے حروف آگے پیچھے ہو جاتے ہیں — یہ لفظی کھیلوں، پہیلیوں، یا کسی نام کو الٹا لکھ کر دیکھنے کے لیے مفید ہے۔ مثال کے طور پر، \"Hello world foo\" لفظی ترتیب پلٹنے پر \"foo world Hello\" بنتا ہے، مگر ہر لفظ کے اندر حروف پلٹنے پر \"olleH dlrow oof\" بنتا ہے۔",
     "faq.q5": "کیا میرا متن سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ ریورس ٹیکسٹ جنریٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو کچھ بھی ٹائپ یا پیسٹ کرتے ہیں وہ کسی سرور پر اپ لوڈ، ریکارڈ یا شیئر نہیں ہوتا۔ آپ کا حالیہ ان پٹ اختیاری طور پر اس براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ اگلی بار صفحہ کھولنے پر یہ موجود رہے؛ \"میرا متن اس براؤزر میں محفوظ کریں\" کو ان چیک کر کے اسے صرف موجودہ سیشن کے لیے نجی رکھیں، اور باکس صاف کرنے سے محفوظ شدہ کاپی فوراً حذف ہو جاتی ہے۔"
+    "faq.a5": "نہیں۔ یہ ریورس ٹیکسٹ جنریٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ جو کچھ بھی ٹائپ یا پیسٹ کرتے ہیں وہ کسی سرور پر اپ لوڈ، ریکارڈ یا شیئر نہیں ہوتا۔ آپ کا حالیہ ان پٹ اختیاری طور پر اس براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ اگلی بار صفحہ کھولنے پر یہ موجود رہے؛ \"میرا متن اس براؤزر میں محفوظ کریں\" کو ان چیک کر کے اسے صرف موجودہ سیشن کے لیے نجی رکھیں، اور باکس صاف کرنے سے محفوظ شدہ کاپی فوراً حذف ہو جاتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -411,7 +461,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa bedanya membalik urutan kata dengan membalik huruf dalam setiap kata?",
     "faq.a4": "Keduanya bekerja pada bagian teks yang berbeda. Membalik urutan kata memperlakukan setiap kata sebagai satu unit utuh dan hanya mengubah urutan kemunculannya — cocok untuk membalik sebuah kalimat sambil menjaga setiap kata tetap terbaca. Membalik huruf dalam setiap kata melakukan sebaliknya: setiap kata tetap pada posisi aslinya, tetapi huruf di dalamnya dibalik dari depan ke belakang — berguna untuk permainan kata, teka-teki, atau melihat bagaimana sebuah nama terlihat jika dieja terbalik. Misalnya, \"Hello world foo\" menjadi \"foo world Hello\" dengan urutan kata dibalik, tetapi menjadi \"olleH dlrow oof\" dengan huruf dibalik di dalam setiap kata.",
     "faq.q5": "Apakah teks saya dikirim ke server?",
-    "faq.a5": "Tidak. Generator teks terbalik ini sepenuhnya berjalan di browser Anda — apa pun yang Anda ketik atau tempel tidak diunggah, dicatat, atau dibagikan ke server mana pun. Input terbaru Anda secara opsional disimpan di penyimpanan lokal browser ini agar tetap ada saat Anda membuka halaman ini lagi; hapus centang \"Simpan teks saya di browser ini\" untuk menjaganya tetap privat hanya selama sesi ini, dan mengosongkan kotak akan langsung menghapus salinan yang tersimpan."
+    "faq.a5": "Tidak. Generator teks terbalik ini sepenuhnya berjalan di browser Anda — apa pun yang Anda ketik atau tempel tidak diunggah, dicatat, atau dibagikan ke server mana pun. Input terbaru Anda secara opsional disimpan di penyimpanan lokal browser ini agar tetap ada saat Anda membuka halaman ini lagi; hapus centang \"Simpan teks saya di browser ini\" untuk menjaganya tetap privat hanya selama sesi ini, dan mengosongkan kotak akan langsung menghapus salinan yang tersimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -448,7 +503,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was ist der Unterschied zwischen dem Umkehren der Wortreihenfolge und dem Umkehren der Buchstaben in jedem Wort?",
     "faq.a4": "Sie wirken auf unterschiedliche Teile deines Texts. Das Umkehren der Wortreihenfolge behandelt jedes Wort als eine einzige Einheit und ändert nur die Reihenfolge, in der sie erscheinen — ideal, um einen Satz rückwärts zu drehen und dabei jedes Wort lesbar zu halten. Das Umkehren der Buchstaben in jedem Wort macht das Gegenteil: Jedes Wort bleibt an seiner ursprünglichen Position, aber die Buchstaben darin werden von vorne nach hinten umgedreht — nützlich für Wortspiele, Rätsel oder um zu sehen, wie ein Name rückwärts geschrieben aussieht. Zum Beispiel wird aus \"Hello world foo\" bei umgekehrter Wortreihenfolge \"foo world Hello\", aber bei umgekehrten Buchstaben innerhalb jedes Worts \"olleH dlrow oof\".",
     "faq.q5": "Wird mein Text an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Text-Umkehr-Generator läuft vollständig in deinem Browser — nichts von dem, was du eingibst oder einfügst, wird hochgeladen, protokolliert oder mit einem Server geteilt. Deine zuletzt eingegebene Eingabe wird optional im lokalen Speicher dieses Browsers gespeichert, damit sie beim nächsten Öffnen der Seite noch da ist; entferne das Häkchen bei \"Meinen Text in diesem Browser speichern\", um sie nur für die aktuelle Sitzung privat zu halten — und das Leeren des Felds entfernt sofort jede gespeicherte Kopie."
+    "faq.a5": "Nein. Dieser Text-Umkehr-Generator läuft vollständig in deinem Browser — nichts von dem, was du eingibst oder einfügst, wird hochgeladen, protokolliert oder mit einem Server geteilt. Deine zuletzt eingegebene Eingabe wird optional im lokalen Speicher dieses Browsers gespeichert, damit sie beim nächsten Öffnen der Seite noch da ist; entferne das Häkchen bei \"Meinen Text in diesem Browser speichern\", um sie nur für die aktuelle Sitzung privat zu halten — und das Leeren des Felds entfernt sofort jede gespeicherte Kopie.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -485,7 +545,12 @@ window.I18N_LOCALES = {
     "faq.q4": "「単語の順序を反転」と「各単語内の文字を反転」はどう違いますか?",
     "faq.a4": "この2つはテキストの異なる部分に作用します。単語の順序を反転は各単語を1つのまとまりとして扱い、単語が現れる順番だけを変えます——文全体をひっくり返しつつ、各単語は読める状態を保ちたいときに便利です。各単語内の文字を反転はその逆で、各単語は元の位置のままにしつつ、その単語の中の文字を前後逆にします——言葉遊びやなぞなぞ、名前を逆から書くとどう見えるか試したいときに役立ちます。たとえば「Hello world foo」は、単語の順序を反転すると「foo world Hello」に、各単語内の文字を反転すると「olleH dlrow oof」になります。",
     "faq.q5": "入力したテキストはサーバーに送信されますか?",
-    "faq.a5": "いいえ。このテキスト反転ジェネレーターはすべてブラウザ内で完結しており、入力または貼り付けた内容がサーバーにアップロードされたり、記録されたり、共有されたりすることはありません。直近に入力した内容は、次回このページを開いたときのためにこのブラウザのローカルストレージへ任意で保存されます。「このブラウザにテキストを保存する」のチェックを外せば現在のセッション限りの非公開にでき、ボックスをクリアすると保存済みのコピーもすぐに削除されます。"
+    "faq.a5": "いいえ。このテキスト反転ジェネレーターはすべてブラウザ内で完結しており、入力または貼り付けた内容がサーバーにアップロードされたり、記録されたり、共有されたりすることはありません。直近に入力した内容は、次回このページを開いたときのためにこのブラウザのローカルストレージへ任意で保存されます。「このブラウザにテキストを保存する」のチェックを外せば現在のセッション限りの非公開にでき、ボックスをクリアすると保存済みのコピーもすぐに削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -522,6 +587,11 @@ window.I18N_LOCALES = {
     "faq.q4": "\"단어 순서 반전\"과 \"각 단어 내부 철자 반전\"은 어떻게 다른가요?",
     "faq.a4": "이 둘은 텍스트의 서로 다른 부분에 작용합니다. 단어 순서 반전은 각 단어를 하나의 온전한 단위로 취급하고 단어가 나타나는 순서만 바꿉니다 — 각 단어는 그대로 읽히면서 문장 전체를 거꾸로 만들고 싶을 때 유용합니다. 각 단어 내부 철자 반전은 그 반대로, 각 단어는 원래 위치에 그대로 두고 그 단어 안의 철자만 앞뒤로 뒤집습니다 — 말놀이, 퍼즐, 또는 어떤 이름을 거꾸로 쓰면 어떻게 보이는지 확인할 때 유용합니다. 예를 들어 \"Hello world foo\"는 단어 순서를 반전하면 \"foo world Hello\"가 되지만, 각 단어 내부 철자를 반전하면 \"olleH dlrow oof\"가 됩니다.",
     "faq.q5": "제 텍스트가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 텍스트 뒤집기 생성기는 전적으로 브라우저 안에서 실행됩니다 — 입력하거나 붙여넣은 내용은 어떤 서버에도 업로드, 기록, 공유되지 않습니다. 가장 최근 입력한 내용은 다음에 이 페이지를 열었을 때도 남아 있도록 선택적으로 이 브라우저의 로컬 스토리지에 저장됩니다. \"이 브라우저에 내 텍스트 저장\" 체크를 해제하면 현재 세션에서만 비공개로 유지되고, 상자를 지우면 저장된 복사본도 즉시 삭제됩니다."
+    "faq.a5": "아니요. 이 텍스트 뒤집기 생성기는 전적으로 브라우저 안에서 실행됩니다 — 입력하거나 붙여넣은 내용은 어떤 서버에도 업로드, 기록, 공유되지 않습니다. 가장 최근 입력한 내용은 다음에 이 페이지를 열었을 때도 남아 있도록 선택적으로 이 브라우저의 로컬 스토리지에 저장됩니다. \"이 브라우저에 내 텍스트 저장\" 체크를 해제하면 현재 세션에서만 비공개로 유지되고, 상자를 지우면 저장된 복사본도 즉시 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -71,7 +71,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What happens to a /*! license */ comment when I strip comments, and can I un-minify CSS I already have?",
     "faq.a4": "Comments that start with /*! are treated as license or attribution banners — the same convention used by tools like Terser and clean-css — so they're kept even when 'Strip comments' is checked; every other comment is removed. To go the other direction, switch to Beautify mode and paste in minified or hand-compressed CSS: the tool re-indents it with one selector or declaration per line and matching brace indentation, so you can read or edit a stylesheet that arrived as a single unreadable line.",
     "faq.q5": "Is my CSS uploaded anywhere, and is there a size limit?",
-    "faq.a5": "No. Every step — tokenizing, minifying, beautifying and measuring the size saved — runs locally in your browser using plain JavaScript; nothing you paste is ever sent to a server or saved outside your own device's local storage (which only remembers your last input and option choices, for convenience). Extremely large pastes, above roughly 3 MB, are rejected with a clear message instead of freezing the tab, since a file that size is almost always pasted by accident."
+    "faq.a5": "No. Every step — tokenizing, minifying, beautifying and measuring the size saved — runs locally in your browser using plain JavaScript; nothing you paste is ever sent to a server or saved outside your own device's local storage (which only remembers your last input and option choices, for convenience). Extremely large pastes, above roughly 3 MB, are rejected with a clear message instead of freezing the tab, since a file that size is almost always pasted by accident.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -127,7 +132,12 @@ window.I18N_LOCALES = {
     "faq.q4": "开启去除注释后，/*! license */ 这样的注释会怎样？我能把已有的 CSS 还原(反压缩)吗？",
     "faq.a4": "以 /*! 开头的注释会被当作许可证或版权声明保留——这与 Terser、clean-css 等工具的约定一致——即使勾选了「去除注释」也会保留；其余注释则会被全部移除。反过来，你可以切换到「美化」模式，粘贴已压缩或格式混乱的 CSS：工具会用统一的选择器/声明换行和匹配的大括号缩进重新排版，方便你阅读或编辑那些挤成一行的样式表。",
     "faq.q5": "我的 CSS 会被上传到任何地方吗？有大小限制吗？",
-    "faq.a5": "不会。分词、压缩、美化以及计算节省体积的每一步都只使用纯 JavaScript 在你的浏览器本地完成；你粘贴的内容绝不会发送到服务器，也不会存储在设备本地存储之外的任何地方(本地存储仅为了方便记住你上次输入的内容和选项)。超过约 3 MB 的超大粘贴内容会被明确提示拒绝处理，而不是让页面卡死，因为这么大的内容几乎总是误粘贴。"
+    "faq.a5": "不会。分词、压缩、美化以及计算节省体积的每一步都只使用纯 JavaScript 在你的浏览器本地完成；你粘贴的内容绝不会发送到服务器，也不会存储在设备本地存储之外的任何地方(本地存储仅为了方便记住你上次输入的内容和选项)。超过约 3 MB 的超大粘贴内容会被明确提示拒绝处理，而不是让页面卡死，因为这么大的内容几乎总是误粘贴。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -183,7 +193,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कमेंट हटाने पर /*! license */ जैसे कमेंट का क्या होता है? क्या मैं पहले से मौजूद CSS को वापस पढ़ने-लायक बना सकता हूँ?",
     "faq.a4": "/*! से शुरू होने वाले कमेंट को लाइसेंस या क्रेडिट बैनर माना जाता है — यह वही परंपरा है जो Terser और clean-css जैसे टूल इस्तेमाल करते हैं — इसलिए 'कमेंट हटाएँ' चालू होने पर भी ये बचे रहते हैं; बाकी सभी कमेंट हटा दिए जाते हैं। उल्टी दिशा में जाने के लिए, ब्यूटीफाई मोड पर स्विच करें और मिनिफाई या बिखरे हुए CSS को पेस्ट करें: टूल हर सेलेक्टर या डिक्लेरेशन को अलग लाइन में और ब्रेस के हिसाब से इंडेंट करके फिर से व्यवस्थित करता है, ताकि आप एक ही लाइन में सिमटी स्टाइलशीट को आसानी से पढ़ या एडिट कर सकें।",
     "faq.q5": "क्या मेरा CSS कहीं अपलोड होता है? क्या कोई साइज़ लिमिट है?",
-    "faq.a5": "नहीं। टोकनाइज़ करना, मिनिफाई करना, ब्यूटीफाई करना और बचाई गई साइज़ नापना — हर कदम सिर्फ़ प्लेन जावास्क्रिप्ट के ज़रिए आपके ब्राउज़र में स्थानीय रूप से चलता है; आपके पेस्ट किए गए किसी भी हिस्से को कभी सर्वर पर नहीं भेजा जाता, और आपकी डिवाइस के लोकल स्टोरेज (जो सुविधा के लिए सिर्फ़ आपका आख़िरी इनपुट और विकल्प याद रखता है) के अलावा कहीं संग्रहीत भी नहीं किया जाता। लगभग 3 MB से बड़े पेस्ट को साफ़ मैसेज के साथ रिजेक्ट कर दिया जाता है ताकि टैब फ़्रीज़ न हो, क्योंकि इतनी बड़ी फ़ाइल लगभग हमेशा गलती से पेस्ट होती है।"
+    "faq.a5": "नहीं। टोकनाइज़ करना, मिनिफाई करना, ब्यूटीफाई करना और बचाई गई साइज़ नापना — हर कदम सिर्फ़ प्लेन जावास्क्रिप्ट के ज़रिए आपके ब्राउज़र में स्थानीय रूप से चलता है; आपके पेस्ट किए गए किसी भी हिस्से को कभी सर्वर पर नहीं भेजा जाता, और आपकी डिवाइस के लोकल स्टोरेज (जो सुविधा के लिए सिर्फ़ आपका आख़िरी इनपुट और विकल्प याद रखता है) के अलावा कहीं संग्रहीत भी नहीं किया जाता। लगभग 3 MB से बड़े पेस्ट को साफ़ मैसेज के साथ रिजेक्ट कर दिया जाता है ताकि टैब फ़्रीज़ न हो, क्योंकि इतनी बड़ी फ़ाइल लगभग हमेशा गलती से पेस्ट होती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -239,7 +254,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué pasa con un comentario /*! license */ al eliminar comentarios? ¿Puedo revertir (dar formato) a un CSS que ya tengo minificado?",
     "faq.a4": "Los comentarios que empiezan con /*! se tratan como avisos de licencia o atribución — la misma convención que usan herramientas como Terser y clean-css — así que se conservan aunque 'Eliminar comentarios' esté activado; el resto de comentarios se eliminan. Para ir en sentido contrario, cambia al modo Dar formato y pega CSS minificado o mal formateado: la herramienta lo vuelve a indentar con un selector o declaración por línea y llaves alineadas, para que puedas leer o editar una hoja de estilos que llegó comprimida en una sola línea.",
     "faq.q5": "¿Se sube mi CSS a algún sitio? ¿Hay un límite de tamaño?",
-    "faq.a5": "No. Cada paso — tokenizar, minificar, dar formato y medir el tamaño ahorrado — se ejecuta localmente en tu navegador con JavaScript puro; nada de lo que pegues se envía nunca a un servidor ni se guarda fuera del almacenamiento local de tu propio dispositivo (que solo recuerda tu última entrada y tus opciones, por comodidad). Los pegados extremadamente grandes, por encima de unos 3 MB, se rechazan con un mensaje claro en lugar de congelar la pestaña, ya que un archivo de ese tamaño casi siempre se pega por error."
+    "faq.a5": "No. Cada paso — tokenizar, minificar, dar formato y medir el tamaño ahorrado — se ejecuta localmente en tu navegador con JavaScript puro; nada de lo que pegues se envía nunca a un servidor ni se guarda fuera del almacenamiento local de tu propio dispositivo (que solo recuerda tu última entrada y tus opciones, por comodidad). Los pegados extremadamente grandes, por encima de unos 3 MB, se rechazan con un mensaje claro en lugar de congelar la pestaña, ya que un archivo de ese tamaño casi siempre se pega por error.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -295,7 +315,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ماذا يحدث لتعليق /*! license */ عند إزالة التعليقات؟ وهل يمكنني إعادة تنسيق CSS مضغوط لديّ بالفعل؟",
     "faq.a4": "تُعامَل التعليقات التي تبدأ بـ /*! على أنها إشعارات ترخيص أو نسب حقوق — وهو نفس العرف المتبع في أدوات مثل Terser وclean-css — لذا تبقى حتى عند تفعيل خيار 'إزالة التعليقات'؛ بينما تُزال كل التعليقات الأخرى. للاتجاه المعاكس، بدّل إلى وضع التنسيق والصق كود CSS مضغوطًا أو سيئ التنسيق: تعيد الأداة تنسيقه بمسافات بادئة، بمحدِّد أو تصريح واحد في كل سطر ومطابقة لمستويات الأقواس، لتتمكن من قراءة أو تعديل ورقة أنماط وصلت مضغوطة في سطر واحد غير مقروء.",
     "faq.q5": "هل يُرفع كود CSS الخاص بي إلى أي مكان؟ وهل هناك حد لحجمه؟",
-    "faq.a5": "لا. كل خطوة — التقسيم إلى وحدات، والضغط، والتنسيق، وقياس الحجم الموفَّر — تعمل محليًا داخل متصفحك بجافاسكريبت خالص؛ لا يُرسَل أي شيء تلصقه إلى خادم أبدًا، ولا يُخزَّن خارج التخزين المحلي لجهازك (الذي لا يتذكر سوى آخر إدخال واختياراتك، من أجل الراحة فقط). أما النصوص الملصوقة الضخمة جدًا، التي تتجاوز نحو 3 ميجابايت، فتُرفَض برسالة واضحة بدلًا من تجميد علامة التبويب، لأن ملفًا بهذا الحجم يكاد يكون دائمًا نتيجة لصق عن طريق الخطأ."
+    "faq.a5": "لا. كل خطوة — التقسيم إلى وحدات، والضغط، والتنسيق، وقياس الحجم الموفَّر — تعمل محليًا داخل متصفحك بجافاسكريبت خالص؛ لا يُرسَل أي شيء تلصقه إلى خادم أبدًا، ولا يُخزَّن خارج التخزين المحلي لجهازك (الذي لا يتذكر سوى آخر إدخال واختياراتك، من أجل الراحة فقط). أما النصوص الملصوقة الضخمة جدًا، التي تتجاوز نحو 3 ميجابايت، فتُرفَض برسالة واضحة بدلًا من تجميد علامة التبويب، لأن ملفًا بهذا الحجم يكاد يكون دائمًا نتيجة لصق عن طريق الخطأ.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -351,7 +376,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Que devient un commentaire /*! license */ quand je supprime les commentaires ? Puis-je reformater du CSS déjà minifié ?",
     "faq.a4": "Les commentaires commençant par /*! sont traités comme des bannières de licence ou d'attribution — la même convention utilisée par des outils comme Terser et clean-css — donc ils sont conservés même quand « Supprimer les commentaires » est coché ; tous les autres commentaires sont supprimés. Pour l'opération inverse, passez en mode Formater et collez du CSS minifié ou mal formaté : l'outil le réindente avec un sélecteur ou une déclaration par ligne et des accolades alignées, pour que vous puissiez lire ou modifier une feuille de style arrivée compressée sur une seule ligne illisible.",
     "faq.q5": "Mon CSS est-il envoyé quelque part ? Y a-t-il une limite de taille ?",
-    "faq.a5": "Non. Chaque étape — tokenisation, minification, formatage et calcul de la taille économisée — s'exécute localement dans votre navigateur en JavaScript pur ; rien de ce que vous collez n'est jamais envoyé à un serveur ni stocké ailleurs que dans le stockage local de votre propre appareil (qui ne mémorise que votre dernière saisie et vos options, par confort). Les collages extrêmement volumineux, au-delà d'environ 3 Mo, sont refusés avec un message clair plutôt que de figer l'onglet, car un fichier de cette taille est presque toujours collé par erreur."
+    "faq.a5": "Non. Chaque étape — tokenisation, minification, formatage et calcul de la taille économisée — s'exécute localement dans votre navigateur en JavaScript pur ; rien de ce que vous collez n'est jamais envoyé à un serveur ni stocké ailleurs que dans le stockage local de votre propre appareil (qui ne mémorise que votre dernière saisie et vos options, par confort). Les collages extrêmement volumineux, au-delà d'environ 3 Mo, sont refusés avec un message clair plutôt que de figer l'onglet, car un fichier de cette taille est presque toujours collé par erreur.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -407,7 +437,12 @@ window.I18N_LOCALES = {
     "faq.q4": "কমেন্ট মোছার সময় /*! license */-এর মতো কমেন্টের কী হয়? আগে থেকে থাকা মিনিফাই করা CSS কি আবার পড়ার-উপযোগী করা যায়?",
     "faq.a4": "/*! দিয়ে শুরু হওয়া কমেন্টগুলোকে লাইসেন্স বা ক্রেডিট ব্যানার হিসেবে গণ্য করা হয় — Terser ও clean-css-এর মতো টুলগুলোও একই নিয়ম মানে — তাই 'কমেন্ট মুছুন' চালু থাকলেও এগুলো রাখা হয়; বাকি সব কমেন্ট মুছে ফেলা হয়। উল্টো দিকে যেতে, বিউটিফাই মোডে যান এবং মিনিফাই করা বা এলোমেলোভাবে ফরম্যাট করা CSS পেস্ট করুন: টুলটি প্রতিটি সিলেক্টর বা ডিক্লারেশন আলাদা লাইনে এবং ব্রেসের সাথে মিল রেখে ইন্ডেন্ট করে সাজায়, যাতে আপনি এক লাইনে জড়ো হওয়া অপাঠ্য স্টাইলশিট সহজে পড়তে বা এডিট করতে পারেন।",
     "faq.q5": "আমার CSS কি কোথাও আপলোড হয়? সাইজের কোনো সীমা আছে কি?",
-    "faq.a5": "না। টোকেনাইজ করা, মিনিফাই করা, বিউটিফাই করা এবং সাশ্রয়ী সাইজ মাপা — প্রতিটি ধাপ শুধু প্লেইন জাভাস্ক্রিপ্ট দিয়ে আপনার ব্রাউজারেই স্থানীয়ভাবে চলে; আপনি যা পেস্ট করেন তা কখনো সার্ভারে পাঠানো হয় না, এবং আপনার ডিভাইসের লোকাল স্টোরেজ (যা শুধু সুবিধার জন্য আপনার শেষ ইনপুট ও অপশন মনে রাখে) ছাড়া অন্য কোথাও সংরক্ষিতও হয় না। প্রায় 3 MB-র বেশি বড় পেস্ট স্পষ্ট বার্তাসহ প্রত্যাখ্যান করা হয়, ট্যাব জমে যাওয়ার বদলে, কারণ এত বড় ফাইল প্রায় সবসময় ভুলবশত পেস্ট হয়।"
+    "faq.a5": "না। টোকেনাইজ করা, মিনিফাই করা, বিউটিফাই করা এবং সাশ্রয়ী সাইজ মাপা — প্রতিটি ধাপ শুধু প্লেইন জাভাস্ক্রিপ্ট দিয়ে আপনার ব্রাউজারেই স্থানীয়ভাবে চলে; আপনি যা পেস্ট করেন তা কখনো সার্ভারে পাঠানো হয় না, এবং আপনার ডিভাইসের লোকাল স্টোরেজ (যা শুধু সুবিধার জন্য আপনার শেষ ইনপুট ও অপশন মনে রাখে) ছাড়া অন্য কোথাও সংরক্ষিতও হয় না। প্রায় 3 MB-র বেশি বড় পেস্ট স্পষ্ট বার্তাসহ প্রত্যাখ্যান করা হয়, ট্যাব জমে যাওয়ার বদলে, কারণ এত বড় ফাইল প্রায় সবসময় ভুলবশত পেস্ট হয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -463,7 +498,12 @@ window.I18N_LOCALES = {
     "faq.q4": "O que acontece com um comentário /*! license */ ao remover comentários? Dá para reformatar um CSS que já está minificado?",
     "faq.a4": "Comentários que começam com /*! são tratados como avisos de licença ou atribuição — a mesma convenção usada por ferramentas como Terser e clean-css — então são mantidos mesmo com 'Remover comentários' marcado; todos os outros comentários são removidos. Para ir na direção contrária, mude para o modo Formatar e cole CSS minificado ou malformatado: a ferramenta reindenta com um seletor ou declaração por linha e chaves alinhadas, para você poder ler ou editar uma folha de estilos que chegou comprimida em uma única linha ilegível.",
     "faq.q5": "Meu CSS é enviado para algum lugar? Existe um limite de tamanho?",
-    "faq.a5": "Não. Cada etapa — tokenizar, minificar, formatar e medir o tamanho economizado — roda localmente no seu navegador usando JavaScript puro; nada do que você cola é enviado a um servidor, nem armazenado fora do armazenamento local do seu próprio dispositivo (que só lembra sua última entrada e opções, por conveniência). Colagens extremamente grandes, acima de cerca de 3 MB, são rejeitadas com uma mensagem clara em vez de travar a aba, já que um arquivo desse tamanho quase sempre é colado por engano."
+    "faq.a5": "Não. Cada etapa — tokenizar, minificar, formatar e medir o tamanho economizado — roda localmente no seu navegador usando JavaScript puro; nada do que você cola é enviado a um servidor, nem armazenado fora do armazenamento local do seu próprio dispositivo (que só lembra sua última entrada e opções, por conveniência). Colagens extremamente grandes, acima de cerca de 3 MB, são rejeitadas com uma mensagem clara em vez de travar a aba, já que um arquivo desse tamanho quase sempre é colado por engano.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -519,7 +559,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что происходит с комментарием /*! license */ при удалении комментариев? Можно ли восстановить читаемость уже минифицированного CSS?",
     "faq.a4": "Комментарии, начинающиеся с /*!, считаются лицензионными или указывающими авторство баннерами — та же практика, что и в инструментах вроде Terser и clean-css, — поэтому они сохраняются, даже если включено «Удалять комментарии»; все остальные комментарии удаляются. Чтобы пойти в обратную сторону, переключитесь в режим «Форматировать» и вставьте минифицированный или неаккуратно оформленный CSS: инструмент расставит отступы заново — по одному селектору или объявлению на строку с соответствующими отступами для фигурных скобок, — чтобы вы могли читать или редактировать таблицу стилей, пришедшую сжатой в одну нечитаемую строку.",
     "faq.q5": "Отправляется ли мой CSS куда-либо? Есть ли ограничение по размеру?",
-    "faq.a5": "Нет. Каждый шаг — токенизация, минификация, форматирование и подсчёт сэкономленного размера — выполняется локально в вашем браузере на чистом JavaScript; ничего из вставленного вами никогда не отправляется на сервер и не сохраняется нигде, кроме локального хранилища вашего собственного устройства (которое запоминает только последний ввод и настройки — для удобства). Чрезмерно большие вставки, свыше примерно 3 МБ, отклоняются с понятным сообщением, а не приводят к зависанию вкладки, поскольку файл такого размера почти всегда вставлен по ошибке."
+    "faq.a5": "Нет. Каждый шаг — токенизация, минификация, форматирование и подсчёт сэкономленного размера — выполняется локально в вашем браузере на чистом JavaScript; ничего из вставленного вами никогда не отправляется на сервер и не сохраняется нигде, кроме локального хранилища вашего собственного устройства (которое запоминает только последний ввод и настройки — для удобства). Чрезмерно большие вставки, свыше примерно 3 МБ, отклоняются с понятным сообщением, а не приводят к зависанию вкладки, поскольку файл такого размера почти всегда вставлен по ошибке.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -575,7 +620,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کمنٹس ہٹاتے وقت /*! license */ جیسے کمنٹ کا کیا ہوتا ہے؟ کیا میں پہلے سے موجود منیفائی شدہ CSS کو دوبارہ پڑھنے کے قابل بنا سکتا ہوں؟",
     "faq.a4": "/*! سے شروع ہونے والے کمنٹس کو لائسنس یا کریڈٹ بینر سمجھا جاتا ہے — یہی روایت Terser اور clean-css جیسے ٹولز میں بھی اپنائی جاتی ہے — اس لیے 'کمنٹس ہٹائیں' آن ہونے کے باوجود یہ برقرار رہتے ہیں؛ باقی تمام کمنٹس ہٹا دیے جاتے ہیں۔ الٹی سمت جانے کے لیے، بیوٹیفائی موڈ پر جائیں اور منیفائی شدہ یا بکھرے ہوئے CSS کو پیسٹ کریں: ٹول ہر سلیکٹر یا ڈیکلریشن کو الگ لائن میں اور بریسز کے مطابق انڈینٹ کر کے دوبارہ ترتیب دیتا ہے، تاکہ آپ ایک لائن میں سمٹی ہوئی اسٹائل شیٹ کو آسانی سے پڑھ یا ایڈٹ کر سکیں۔",
     "faq.q5": "کیا میرا CSS کہیں اپ لوڈ ہوتا ہے؟ کیا کوئی سائز کی حد ہے؟",
-    "faq.a5": "نہیں۔ ٹوکنائز کرنا، منیفائی کرنا، بیوٹیفائی کرنا اور بچائی گئی سائز ناپنا — ہر مرحلہ صرف سادہ جاوا اسکرپٹ کے ذریعے آپ کے براؤزر میں مقامی طور پر چلتا ہے؛ آپ جو کچھ بھی پیسٹ کرتے ہیں وہ کبھی سرور کو نہیں بھیجا جاتا، اور نہ ہی آپ کی ڈیوائس کے لوکل اسٹوریج (جو صرف سہولت کے لیے آپ کی آخری انپٹ اور آپشنز یاد رکھتا ہے) کے علاوہ کہیں محفوظ ہوتا ہے۔ تقریباً 3 MB سے بڑے پیسٹ کو ٹیب جمنے کے بجائے واضح پیغام کے ساتھ مسترد کر دیا جاتا ہے، کیونکہ اتنے بڑے سائز کی فائل تقریباً ہمیشہ غلطی سے پیسٹ ہوتی ہے۔"
+    "faq.a5": "نہیں۔ ٹوکنائز کرنا، منیفائی کرنا، بیوٹیفائی کرنا اور بچائی گئی سائز ناپنا — ہر مرحلہ صرف سادہ جاوا اسکرپٹ کے ذریعے آپ کے براؤزر میں مقامی طور پر چلتا ہے؛ آپ جو کچھ بھی پیسٹ کرتے ہیں وہ کبھی سرور کو نہیں بھیجا جاتا، اور نہ ہی آپ کی ڈیوائس کے لوکل اسٹوریج (جو صرف سہولت کے لیے آپ کی آخری انپٹ اور آپشنز یاد رکھتا ہے) کے علاوہ کہیں محفوظ ہوتا ہے۔ تقریباً 3 MB سے بڑے پیسٹ کو ٹیب جمنے کے بجائے واضح پیغام کے ساتھ مسترد کر دیا جاتا ہے، کیونکہ اتنے بڑے سائز کی فائل تقریباً ہمیشہ غلطی سے پیسٹ ہوتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -631,7 +681,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apa yang terjadi pada komentar /*! license */ saat komentar dihapus? Bisakah saya merapikan kembali CSS yang sudah diminify?",
     "faq.a4": "Komentar yang diawali /*! diperlakukan sebagai banner lisensi atau atribusi — konvensi yang sama digunakan oleh tool seperti Terser dan clean-css — sehingga tetap dipertahankan meskipun 'Hapus komentar' dicentang; semua komentar lain akan dihapus. Untuk arah sebaliknya, beralih ke mode Rapikan dan tempel CSS yang sudah diminify atau berantakan formatnya: tool akan mengindentasi ulang dengan satu selektor atau deklarasi per baris serta indentasi kurung kurawal yang sesuai, sehingga Anda bisa membaca atau mengedit stylesheet yang tadinya terkompres jadi satu baris yang sulit dibaca.",
     "faq.q5": "Apakah CSS saya diunggah ke suatu tempat? Apakah ada batas ukurannya?",
-    "faq.a5": "Tidak. Setiap langkah — tokenisasi, minify, merapikan, dan mengukur ukuran yang dihemat — berjalan secara lokal di browser Anda menggunakan JavaScript murni; apa pun yang Anda tempel tidak pernah dikirim ke server, dan tidak disimpan di luar penyimpanan lokal perangkat Anda sendiri (yang hanya mengingat input dan pilihan opsi terakhir Anda, demi kenyamanan). Tempelan yang sangat besar, di atas sekitar 3 MB, akan ditolak dengan pesan yang jelas alih-alih membuat tab macet, karena file sebesar itu hampir selalu tertempel secara tidak sengaja."
+    "faq.a5": "Tidak. Setiap langkah — tokenisasi, minify, merapikan, dan mengukur ukuran yang dihemat — berjalan secara lokal di browser Anda menggunakan JavaScript murni; apa pun yang Anda tempel tidak pernah dikirim ke server, dan tidak disimpan di luar penyimpanan lokal perangkat Anda sendiri (yang hanya mengingat input dan pilihan opsi terakhir Anda, demi kenyamanan). Tempelan yang sangat besar, di atas sekitar 3 MB, akan ditolak dengan pesan yang jelas alih-alih membuat tab macet, karena file sebesar itu hampir selalu tertempel secara tidak sengaja.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -687,7 +742,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Was passiert mit einem /*! license */-Kommentar beim Entfernen von Kommentaren? Kann ich bereits minifiziertes CSS wieder lesbar machen?",
     "faq.a4": "Kommentare, die mit /*! beginnen, werden als Lizenz- oder Urheberrechtshinweise behandelt — dieselbe Konvention, die auch Tools wie Terser und clean-css verwenden — und bleiben daher erhalten, selbst wenn 'Kommentare entfernen' aktiviert ist; alle anderen Kommentare werden entfernt. Für die umgekehrte Richtung wechseln Sie in den Formatieren-Modus und fügen minifiziertes oder unordentlich formatiertes CSS ein: Das Tool rückt es mit einem Selektor oder einer Deklaration pro Zeile und passender Klammer-Einrückung neu ein, sodass Sie ein Stylesheet lesen oder bearbeiten können, das als eine einzige unlesbare Zeile ankam.",
     "faq.q5": "Wird mein CSS irgendwohin hochgeladen? Gibt es eine Größenbeschränkung?",
-    "faq.a5": "Nein. Jeder Schritt — Tokenisierung, Minifizierung, Formatierung und Berechnung der gesparten Größe — läuft lokal in Ihrem Browser mit reinem JavaScript ab; nichts, was Sie einfügen, wird jemals an einen Server gesendet oder außerhalb des lokalen Speichers Ihres eigenen Geräts gespeichert (der der Bequemlichkeit halber nur Ihre letzte Eingabe und Ihre Optionen merkt). Extrem große Einfügungen über etwa 3 MB werden mit einer klaren Meldung abgelehnt, statt den Tab einfrieren zu lassen, da eine Datei dieser Größe fast immer versehentlich eingefügt wird."
+    "faq.a5": "Nein. Jeder Schritt — Tokenisierung, Minifizierung, Formatierung und Berechnung der gesparten Größe — läuft lokal in Ihrem Browser mit reinem JavaScript ab; nichts, was Sie einfügen, wird jemals an einen Server gesendet oder außerhalb des lokalen Speichers Ihres eigenen Geräts gespeichert (der der Bequemlichkeit halber nur Ihre letzte Eingabe und Ihre Optionen merkt). Extrem große Einfügungen über etwa 3 MB werden mit einer klaren Meldung abgelehnt, statt den Tab einfrieren zu lassen, da eine Datei dieser Größe fast immer versehentlich eingefügt wird.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -743,7 +803,12 @@ window.I18N_LOCALES = {
     "faq.q4": "コメント削除をオンにすると /*! license */ のようなコメントはどうなりますか？すでに圧縮済みの CSS を読みやすく戻すことはできますか？",
     "faq.a4": "/*! で始まるコメントは、Terser や clean-css などのツールと同じ慣習に従ってライセンスやクレジット表記として扱われるため、「コメントを削除」がオンでも保持されます。それ以外のコメントはすべて削除されます。逆方向の操作をしたい場合は「整形」モードに切り替え、圧縮済みまたは整形が崩れた CSS を貼り付けてください。1 行に押し込まれて読みにくくなったスタイルシートを読んだり編集したりできるよう、1 行に 1 つのセレクタまたは宣言、対応する括弧のインデントで再整形されます。",
     "faq.q5": "私の CSS はどこかにアップロードされますか？サイズに上限はありますか？",
-    "faq.a5": "いいえ。トークン化、圧縮、整形、削減サイズの計算まで、すべての処理は純粋な JavaScript によりブラウザ内でローカルに実行されます。貼り付けた内容がサーバーへ送信されることは一切なく、利便性のために最後の入力とオプションだけを記憶するお使いの端末のローカルストレージ以外には保存されません。約 3MB を超える極端に大きな貼り付けは、タブがフリーズする代わりに分かりやすいメッセージとともに拒否されます。これほどのサイズはほとんどの場合、誤って貼り付けたものだからです。"
+    "faq.a5": "いいえ。トークン化、圧縮、整形、削減サイズの計算まで、すべての処理は純粋な JavaScript によりブラウザ内でローカルに実行されます。貼り付けた内容がサーバーへ送信されることは一切なく、利便性のために最後の入力とオプションだけを記憶するお使いの端末のローカルストレージ以外には保存されません。約 3MB を超える極端に大きな貼り付けは、タブがフリーズする代わりに分かりやすいメッセージとともに拒否されます。これほどのサイズはほとんどの場合、誤って貼り付けたものだからです。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -799,6 +864,11 @@ window.I18N_LOCALES = {
     "faq.q4": "주석 제거를 켜면 /*! license */ 같은 주석은 어떻게 되나요? 이미 압축된 CSS를 다시 읽기 좋게 되돌릴 수도 있나요?",
     "faq.a4": "/*!로 시작하는 주석은 라이선스나 저작권 표시 배너로 취급되어 — Terser, clean-css 같은 도구들과 같은 관례입니다 — '주석 제거'를 켜도 그대로 유지되며, 나머지 주석은 모두 제거됩니다. 반대로 되돌리려면 정렬 모드로 전환해 압축되었거나 형식이 흐트러진 CSS를 붙여넣으세요. 한 줄로 뭉쳐 읽기 힘들었던 스타일시트를 읽거나 수정할 수 있도록, 선택자나 선언 하나당 한 줄씩, 중괄호 깊이에 맞춰 들여쓰기를 다시 정리해 줍니다.",
     "faq.q5": "내 CSS가 어딘가로 업로드되나요? 용량 제한이 있나요?",
-    "faq.a5": "아니요. 토큰화, 압축, 정렬, 절감 용량 계산까지 모든 단계가 순수 자바스크립트로 브라우저 안에서만 로컬로 실행됩니다. 붙여넣은 내용은 서버로 전송되지 않으며, 편의를 위해 마지막 입력값과 옵션만 기억하는 사용자 기기의 로컬 저장소 외에는 어디에도 저장되지 않습니다. 약 3MB를 넘는 지나치게 큰 붙여넣기는 탭이 멈추는 대신 명확한 안내 메시지와 함께 거부됩니다. 이 정도 크기는 거의 항상 실수로 붙여넣은 경우이기 때문입니다."
+    "faq.a5": "아니요. 토큰화, 압축, 정렬, 절감 용량 계산까지 모든 단계가 순수 자바스크립트로 브라우저 안에서만 로컬로 실행됩니다. 붙여넣은 내용은 서버로 전송되지 않으며, 편의를 위해 마지막 입력값과 옵션만 기억하는 사용자 기기의 로컬 저장소 외에는 어디에도 저장되지 않습니다. 약 3MB를 넘는 지나치게 큰 붙여넣기는 탭이 멈추는 대신 명확한 안내 메시지와 함께 거부됩니다. 이 정도 크기는 거의 항상 실수로 붙여넣은 경우이기 때문입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

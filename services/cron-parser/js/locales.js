@@ -116,7 +116,12 @@ window.I18N_LOCALES = {
     "faq.q4": "What timezone are the \"next run times\" calculated in?",
     "faq.a4": "The next run times are computed using your device's local date, time, and timezone, exactly like your computer's clock. A real crontab, however, runs in whatever timezone the server or scheduler is configured for (often UTC), which may not match your browser's timezone. If your server uses a different timezone, mentally shift the times shown here by the difference, or check the scheduler's own timezone setting before relying on the exact times.",
     "faq.q5": "Is my cron expression sent to a server?",
-    "faq.a5": "No. Parsing, the plain-English description, and the next-run calculation all happen locally in your browser using plain JavaScript — nothing you type is uploaded, logged, or stored anywhere except your own browser's local storage, which just remembers your last expression for convenience. You can keep using this tool offline once the page has loaded, and no account or sign-up is required."
+    "faq.a5": "No. Parsing, the plain-English description, and the next-run calculation all happen locally in your browser using plain JavaScript — nothing you type is uploaded, logged, or stored anywhere except your own browser's local storage, which just remembers your last expression for convenience. You can keep using this tool offline once the page has loaded, and no account or sign-up is required.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
 
   zh: {
@@ -223,7 +228,12 @@ window.I18N_LOCALES = {
     "faq.q4": "“接下来的运行时间”是按什么时区计算的？",
     "faq.a4": "接下来的运行时间是根据你设备的本地日期、时间和时区计算的，就像你电脑上显示的时钟一样。而实际的 crontab 通常运行在服务器或调度程序配置的时区（往往是 UTC），可能与你的时区不同。如果服务器使用了不同的时区，请在心里换算时差，或在依赖这里显示的确切时间之前，先确认调度程序自身的时区设置。",
     "faq.q5": "我输入的 cron 表达式会被发送到服务器吗？",
-    "faq.a5": "不会。解析、生成通俗说明以及计算下次运行时间，全部都在你的浏览器本地通过 JavaScript 完成——你输入的内容不会被上传、记录或存储在任何地方，唯一的例外是浏览器自身的本地存储，它只是为了方便而记住你上次输入的表达式。页面加载完成后，你甚至可以离线继续使用本工具，无需注册或登录。"
+    "faq.a5": "不会。解析、生成通俗说明以及计算下次运行时间，全部都在你的浏览器本地通过 JavaScript 完成——你输入的内容不会被上传、记录或存储在任何地方，唯一的例外是浏览器自身的本地存储，它只是为了方便而记住你上次输入的表达式。页面加载完成后，你甚至可以离线继续使用本工具，无需注册或登录。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
 
   hi: {
@@ -330,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"अगले रन टाइम\" किस टाइमज़ोन में कैलकुलेट किए जाते हैं?",
     "faq.a4": "अगले रन टाइम आपकी डिवाइस की लोकल तारीख़, समय और टाइमज़ोन के आधार पर, बिल्कुल आपके कंप्यूटर की घड़ी की तरह कैलकुलेट किए जाते हैं। लेकिन असली crontab सर्वर या शेड्यूलर में सेट किए गए टाइमज़ोन (अक्सर UTC) में चलता है, जो आपके ब्राउज़र के टाइमज़ोन से अलग हो सकता है। अगर आपका सर्वर अलग टाइमज़ोन इस्तेमाल करता है, तो यहाँ दिखाए गए समय में अंतर को ख़ुद जोड़-घटाकर देखें, या सटीक समय पर भरोसा करने से पहले शेड्यूलर की टाइमज़ोन सेटिंग जाँच लें।",
     "faq.q5": "क्या मेरा क्रॉन एक्सप्रेशन किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। पार्सिंग, सरल भाषा में विवरण, और अगले रन टाइम की कैलकुलेशन — यह सब आपके ब्राउज़र में ही JavaScript से लोकली होता है — आपकी टाइप की गई कोई भी चीज़ अपलोड, लॉग या कहीं स्टोर नहीं होती, सिवाय आपके अपने ब्राउज़र की लोकल स्टोरेज के, जो सिर्फ़ सुविधा के लिए आपका आख़िरी एक्सप्रेशन याद रखती है। पेज लोड होने के बाद आप इसे ऑफ़लाइन भी इस्तेमाल कर सकते हैं, किसी अकाउंट या साइन-अप की ज़रूरत नहीं।"
+    "faq.a5": "नहीं। पार्सिंग, सरल भाषा में विवरण, और अगले रन टाइम की कैलकुलेशन — यह सब आपके ब्राउज़र में ही JavaScript से लोकली होता है — आपकी टाइप की गई कोई भी चीज़ अपलोड, लॉग या कहीं स्टोर नहीं होती, सिवाय आपके अपने ब्राउज़र की लोकल स्टोरेज के, जो सिर्फ़ सुविधा के लिए आपका आख़िरी एक्सप्रेशन याद रखती है। पेज लोड होने के बाद आप इसे ऑफ़लाइन भी इस्तेमाल कर सकते हैं, किसी अकाउंट या साइन-अप की ज़रूरत नहीं।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
 
   es: {
@@ -437,7 +452,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿En qué zona horaria se calculan las \"próximas ejecuciones\"?",
     "faq.a4": "Las próximas ejecuciones se calculan usando la fecha, hora y zona horaria locales de tu dispositivo, igual que el reloj de tu ordenador. Sin embargo, un crontab real se ejecuta en la zona horaria configurada en el servidor o planificador (a menudo UTC), que puede no coincidir con la de tu navegador. Si tu servidor usa una zona horaria distinta, ajusta mentalmente la diferencia horaria o revisa la configuración de zona horaria del planificador antes de confiar en las horas exactas mostradas aquí.",
     "faq.q5": "¿Se envía mi expresión cron a un servidor?",
-    "faq.a5": "No. El análisis, la descripción en lenguaje claro y el cálculo de las próximas ejecuciones ocurren localmente en tu navegador con JavaScript — nada de lo que escribes se sube, se registra ni se almacena en ningún sitio, salvo en el almacenamiento local de tu propio navegador, que solo recuerda tu última expresión por comodidad. Puedes seguir usando esta herramienta sin conexión una vez cargada la página, y no hace falta registrarse."
+    "faq.a5": "No. El análisis, la descripción en lenguaje claro y el cálculo de las próximas ejecuciones ocurren localmente en tu navegador con JavaScript — nada de lo que escribes se sube, se registra ni se almacena en ningún sitio, salvo en el almacenamiento local de tu propio navegador, que solo recuerda tu última expresión por comodidad. Puedes seguir usando esta herramienta sin conexión una vez cargada la página, y no hace falta registrarse.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
 
   ar: {
@@ -544,7 +564,12 @@ window.I18N_LOCALES = {
     "faq.q4": "بأي منطقة زمنية تُحسب \"أوقات التشغيل القادمة\"؟",
     "faq.a4": "تُحسب أوقات التشغيل القادمة باستخدام التاريخ والوقت والمنطقة الزمنية المحلية لجهازك، تمامًا مثل ساعة حاسوبك. لكن ملف crontab الفعلي يعمل وفق المنطقة الزمنية المُعدّة على الخادم أو المجدوِل (غالبًا UTC)، والتي قد تختلف عن منطقتك الزمنية في المتصفح. إذا كان خادمك يستخدم منطقة زمنية مختلفة، فاحسب الفرق ذهنيًا في الأوقات المعروضة هنا، أو تحقّق من إعداد المنطقة الزمنية الخاص بالمجدوِل قبل الاعتماد على الأوقات الدقيقة.",
     "faq.q5": "هل يُرسَل تعبير cron الخاص بي إلى خادم؟",
-    "faq.a5": "لا. يتم التحليل والوصف بلغة بسيطة وحساب وقت التشغيل القادم كلها محليًا داخل متصفحك باستخدام JavaScript — لا يُرفع أي شيء تكتبه أو يُسجَّل أو يُخزَّن في أي مكان، باستثناء التخزين المحلي لمتصفحك، الذي يتذكّر فقط آخر تعبير أدخلته للتسهيل عليك. يمكنك الاستمرار في استخدام هذه الأداة دون اتصال بعد تحميل الصفحة، ولا حاجة لأي حساب أو تسجيل."
+    "faq.a5": "لا. يتم التحليل والوصف بلغة بسيطة وحساب وقت التشغيل القادم كلها محليًا داخل متصفحك باستخدام JavaScript — لا يُرفع أي شيء تكتبه أو يُسجَّل أو يُخزَّن في أي مكان، باستثناء التخزين المحلي لمتصفحك، الذي يتذكّر فقط آخر تعبير أدخلته للتسهيل عليك. يمكنك الاستمرار في استخدام هذه الأداة دون اتصال بعد تحميل الصفحة، ولا حاجة لأي حساب أو تسجيل.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
 
   fr: {
@@ -651,7 +676,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Dans quel fuseau horaire les « prochaines exécutions » sont-elles calculées ?",
     "faq.a4": "Les prochaines exécutions sont calculées à partir de la date, l'heure et le fuseau horaire locaux de votre appareil, exactement comme l'horloge de votre ordinateur. Une crontab réelle s'exécute cependant dans le fuseau horaire configuré sur le serveur ou l'ordonnanceur (souvent UTC), qui peut différer du vôtre. Si votre serveur utilise un fuseau horaire différent, décalez mentalement les heures affichées ici, ou vérifiez le fuseau horaire de l'ordonnanceur avant de vous fier aux heures exactes indiquées.",
     "faq.q5": "Mon expression cron est-elle envoyée à un serveur ?",
-    "faq.a5": "Non. L'analyse, la description en langage clair et le calcul des prochaines exécutions se font entièrement localement dans votre navigateur en JavaScript — rien de ce que vous saisissez n'est envoyé, enregistré ou stocké où que ce soit, à l'exception du stockage local de votre propre navigateur, qui se souvient simplement de votre dernière expression par commodité. Vous pouvez continuer à utiliser cet outil hors ligne une fois la page chargée, sans compte ni inscription."
+    "faq.a5": "Non. L'analyse, la description en langage clair et le calcul des prochaines exécutions se font entièrement localement dans votre navigateur en JavaScript — rien de ce que vous saisissez n'est envoyé, enregistré ou stocké où que ce soit, à l'exception du stockage local de votre propre navigateur, qui se souvient simplement de votre dernière expression par commodité. Vous pouvez continuer à utiliser cet outil hors ligne une fois la page chargée, sans compte ni inscription.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
 
   bn: {
@@ -758,7 +788,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"পরবর্তী রান টাইম\" কোন টাইমজোনে হিসাব করা হয়?",
     "faq.a4": "পরবর্তী রান টাইমগুলো আপনার ডিভাইসের লোকাল তারিখ, সময় ও টাইমজোন ব্যবহার করে হিসাব করা হয়, ঠিক আপনার কম্পিউটারের ঘড়ির মতো। কিন্তু একটি প্রকৃত crontab সাধারণত সার্ভার বা শিডিউলারে সেট করা টাইমজোনে (প্রায়ই UTC) চলে, যা আপনার ব্রাউজারের টাইমজোনের থেকে ভিন্ন হতে পারে। আপনার সার্ভার ভিন্ন টাইমজোন ব্যবহার করলে, এখানে দেখানো সময়গুলোতে পার্থক্যটুকু নিজে হিসাব করে নিন, অথবা সঠিক সময়ের ওপর নির্ভর করার আগে শিডিউলারের নিজস্ব টাইমজোন সেটিং যাচাই করুন।",
     "faq.q5": "আমার ক্রন এক্সপ্রেশন কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। পার্সিং, সহজ ভাষায় বর্ণনা, এবং পরবর্তী রান টাইমের হিসাব — সবকিছুই আপনার ব্রাউজারে জাভাস্ক্রিপ্ট ব্যবহার করে স্থানীয়ভাবে হয় — আপনি যা টাইপ করেন তা আপলোড, লগ বা কোথাও সংরক্ষণ করা হয় না, শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজ ছাড়া, যা সুবিধার জন্য কেবল আপনার শেষ এক্সপ্রেশনটি মনে রাখে। পেজ লোড হয়ে যাওয়ার পর আপনি অফলাইনেও এই টুল ব্যবহার চালিয়ে যেতে পারেন, কোনো অ্যাকাউন্ট বা সাইন-আপের প্রয়োজন নেই।"
+    "faq.a5": "না। পার্সিং, সহজ ভাষায় বর্ণনা, এবং পরবর্তী রান টাইমের হিসাব — সবকিছুই আপনার ব্রাউজারে জাভাস্ক্রিপ্ট ব্যবহার করে স্থানীয়ভাবে হয় — আপনি যা টাইপ করেন তা আপলোড, লগ বা কোথাও সংরক্ষণ করা হয় না, শুধু আপনার নিজের ব্রাউজারের লোকাল স্টোরেজ ছাড়া, যা সুবিধার জন্য কেবল আপনার শেষ এক্সপ্রেশনটি মনে রাখে। পেজ লোড হয়ে যাওয়ার পর আপনি অফলাইনেও এই টুল ব্যবহার চালিয়ে যেতে পারেন, কোনো অ্যাকাউন্ট বা সাইন-আপের প্রয়োজন নেই।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
 
   pt: {
@@ -865,7 +900,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Em qual fuso horário as \"próximas execuções\" são calculadas?",
     "faq.a4": "As próximas execuções são calculadas usando a data, hora e fuso horário locais do seu dispositivo, exatamente como o relógio do seu computador. Um crontab real, porém, roda no fuso horário configurado no servidor ou agendador (geralmente UTC), que pode ser diferente do seu. Se o seu servidor usa um fuso horário diferente, ajuste mentalmente a diferença nos horários mostrados aqui, ou verifique a configuração de fuso horário do agendador antes de confiar nos horários exatos.",
     "faq.q5": "Minha expressão cron é enviada para um servidor?",
-    "faq.a5": "Não. A análise, a descrição em linguagem simples e o cálculo das próximas execuções acontecem totalmente no seu navegador usando JavaScript — nada do que você digita é enviado, registrado ou armazenado em nenhum lugar, exceto no armazenamento local do seu próprio navegador, que apenas lembra sua última expressão por conveniência. Você pode continuar usando esta ferramenta offline depois que a página carregar, sem necessidade de conta ou cadastro."
+    "faq.a5": "Não. A análise, a descrição em linguagem simples e o cálculo das próximas execuções acontecem totalmente no seu navegador usando JavaScript — nada do que você digita é enviado, registrado ou armazenado em nenhum lugar, exceto no armazenamento local do seu próprio navegador, que apenas lembra sua última expressão por conveniência. Você pode continuar usando esta ferramenta offline depois que a página carregar, sem necessidade de conta ou cadastro.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
 
   ru: {
@@ -972,7 +1012,12 @@ window.I18N_LOCALES = {
     "faq.q4": "В каком часовом поясе рассчитываются «следующие запуски»?",
     "faq.a4": "Следующие запуски рассчитываются на основе локальной даты, времени и часового пояса вашего устройства — точно так же, как часы на вашем компьютере. Реальный crontab, однако, работает в часовом поясе, настроенном на сервере или планировщике (часто UTC), который может отличаться от вашего. Если ваш сервер использует другой часовой пояс, мысленно скорректируйте показанное здесь время на разницу или проверьте настройку часового пояса планировщика, прежде чем полагаться на точное время.",
     "faq.q5": "Отправляется ли моё cron-выражение на сервер?",
-    "faq.a5": "Нет. Разбор, описание простыми словами и расчёт следующих запусков полностью происходят локально в вашем браузере на JavaScript — ничего из введённого вами не загружается, не логируется и нигде не хранится, за исключением локального хранилища вашего собственного браузера, которое просто запоминает последнее введённое выражение для удобства. Вы можете продолжать пользоваться инструментом офлайн после загрузки страницы, регистрация не требуется."
+    "faq.a5": "Нет. Разбор, описание простыми словами и расчёт следующих запусков полностью происходят локально в вашем браузере на JavaScript — ничего из введённого вами не загружается, не логируется и нигде не хранится, за исключением локального хранилища вашего собственного браузера, которое просто запоминает последнее введённое выражение для удобства. Вы можете продолжать пользоваться инструментом офлайн после загрузки страницы, регистрация не требуется.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
 
   ur: {
@@ -1079,7 +1124,12 @@ window.I18N_LOCALES = {
     "faq.q4": "\"اگلے رن ٹائمز\" کس ٹائم زون میں شمار کیے جاتے ہیں؟",
     "faq.a4": "اگلے رن ٹائمز آپ کے ڈیوائس کی مقامی تاریخ، وقت، اور ٹائم زون کی بنیاد پر شمار کیے جاتے ہیں، بالکل آپ کے کمپیوٹر کی گھڑی کی طرح۔ لیکن اصل crontab سرور یا شیڈیولر پر مقرر کردہ ٹائم زون (اکثر UTC) میں چلتا ہے، جو آپ کے براؤزر کے ٹائم زون سے مختلف ہو سکتا ہے۔ اگر آپ کا سرور مختلف ٹائم زون استعمال کرتا ہے، تو یہاں دکھائے گئے اوقات میں فرق ذہنی طور پر شامل کریں، یا درست اوقات پر انحصار کرنے سے پہلے شیڈیولر کی اپنی ٹائم زون سیٹنگ چیک کریں۔",
     "faq.q5": "کیا میرا کرون ایکسپریشن کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ پارسنگ، آسان زبان میں وضاحت، اور اگلے رن ٹائم کا حساب — یہ سب کچھ آپ کے براؤزر میں JavaScript کے ذریعے مقامی طور پر ہوتا ہے — آپ جو کچھ ٹائپ کرتے ہیں وہ اپ لوڈ، لاگ، یا کہیں بھی محفوظ نہیں ہوتا، سوائے آپ کے اپنے براؤزر کے لوکل اسٹوریج کے، جو صرف سہولت کے لیے آپ کا آخری ایکسپریشن یاد رکھتا ہے۔ پیج لوڈ ہونے کے بعد آپ اسے آف لائن بھی استعمال کر سکتے ہیں، کسی اکاؤنٹ یا سائن اپ کی ضرورت نہیں۔"
+    "faq.a5": "نہیں۔ پارسنگ، آسان زبان میں وضاحت، اور اگلے رن ٹائم کا حساب — یہ سب کچھ آپ کے براؤزر میں JavaScript کے ذریعے مقامی طور پر ہوتا ہے — آپ جو کچھ ٹائپ کرتے ہیں وہ اپ لوڈ، لاگ، یا کہیں بھی محفوظ نہیں ہوتا، سوائے آپ کے اپنے براؤزر کے لوکل اسٹوریج کے، جو صرف سہولت کے لیے آپ کا آخری ایکسپریشن یاد رکھتا ہے۔ پیج لوڈ ہونے کے بعد آپ اسے آف لائن بھی استعمال کر سکتے ہیں، کسی اکاؤنٹ یا سائن اپ کی ضرورت نہیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
 
   id: {
@@ -1186,7 +1236,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Zona waktu apa yang digunakan untuk menghitung \"waktu jalan berikutnya\"?",
     "faq.a4": "Waktu jalan berikutnya dihitung menggunakan tanggal, waktu, dan zona waktu lokal perangkat Anda, persis seperti jam di komputer Anda. Namun, crontab yang sebenarnya berjalan pada zona waktu yang dikonfigurasi di server atau scheduler (sering kali UTC), yang mungkin berbeda dari zona waktu browser Anda. Jika server Anda menggunakan zona waktu berbeda, sesuaikan secara manual selisih waktu yang ditampilkan di sini, atau periksa pengaturan zona waktu scheduler sebelum mengandalkan waktu yang tepat.",
     "faq.q5": "Apakah ekspresi cron saya dikirim ke server?",
-    "faq.a5": "Tidak. Penguraian, penjelasan dalam bahasa sederhana, dan perhitungan waktu jalan berikutnya semuanya terjadi secara lokal di browser Anda menggunakan JavaScript — apa pun yang Anda ketik tidak diunggah, dicatat, atau disimpan di mana pun, kecuali di penyimpanan lokal browser Anda sendiri, yang hanya mengingat ekspresi terakhir Anda demi kenyamanan. Anda tetap bisa menggunakan alat ini secara offline setelah halaman dimuat, tanpa perlu akun atau pendaftaran."
+    "faq.a5": "Tidak. Penguraian, penjelasan dalam bahasa sederhana, dan perhitungan waktu jalan berikutnya semuanya terjadi secara lokal di browser Anda menggunakan JavaScript — apa pun yang Anda ketik tidak diunggah, dicatat, atau disimpan di mana pun, kecuali di penyimpanan lokal browser Anda sendiri, yang hanya mengingat ekspresi terakhir Anda demi kenyamanan. Anda tetap bisa menggunakan alat ini secara offline setelah halaman dimuat, tanpa perlu akun atau pendaftaran.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
 
   de: {
@@ -1293,7 +1348,12 @@ window.I18N_LOCALES = {
     "faq.q4": "In welcher Zeitzone werden die „nächsten Ausführungen\" berechnet?",
     "faq.a4": "Die nächsten Ausführungen werden anhand des lokalen Datums, der Uhrzeit und der Zeitzone Ihres Geräts berechnet — genau wie die Uhr Ihres Computers. Eine echte Crontab läuft jedoch in der Zeitzone, die auf dem Server oder Scheduler konfiguriert ist (häufig UTC), was von Ihrer abweichen kann. Wenn Ihr Server eine andere Zeitzone verwendet, rechnen Sie die hier angezeigten Zeiten gedanklich um oder prüfen Sie die Zeitzoneneinstellung des Schedulers, bevor Sie sich auf die genauen Zeiten verlassen.",
     "faq.q5": "Wird mein Cron-Ausdruck an einen Server gesendet?",
-    "faq.a5": "Nein. Das Parsen, die Klartext-Beschreibung und die Berechnung der nächsten Ausführungen erfolgen vollständig lokal in Ihrem Browser mit JavaScript — nichts, was Sie eingeben, wird hochgeladen, protokolliert oder irgendwo gespeichert, außer im lokalen Speicher Ihres eigenen Browsers, der sich lediglich Ihren letzten Ausdruck merkt. Sie können dieses Tool nach dem Laden der Seite auch offline weiter nutzen, ohne Konto oder Anmeldung."
+    "faq.a5": "Nein. Das Parsen, die Klartext-Beschreibung und die Berechnung der nächsten Ausführungen erfolgen vollständig lokal in Ihrem Browser mit JavaScript — nichts, was Sie eingeben, wird hochgeladen, protokolliert oder irgendwo gespeichert, außer im lokalen Speicher Ihres eigenen Browsers, der sich lediglich Ihren letzten Ausdruck merkt. Sie können dieses Tool nach dem Laden der Seite auch offline weiter nutzen, ohne Konto oder Anmeldung.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
 
   ja: {
@@ -1400,7 +1460,12 @@ window.I18N_LOCALES = {
     "faq.q4": "「次回の実行時刻」はどのタイムゾーンで計算されますか？",
     "faq.a4": "次回の実行時刻は、お使いの端末のローカルな日付・時刻・タイムゾーンを使って、コンピューターの時計と同じ基準で計算されます。一方、実際のcrontabはサーバーやスケジューラーに設定されたタイムゾーン（多くの場合UTC）で動作するため、ブラウザのタイムゾーンと一致しないことがあります。サーバーが異なるタイムゾーンを使用している場合は、表示された時刻を頭の中で時差分ずらすか、正確な時刻として利用する前にスケジューラー側のタイムゾーン設定を確認してください。",
     "faq.q5": "入力したcron式はサーバーに送信されますか？",
-    "faq.a5": "いいえ。解析、平易な言葉による説明、次回実行時刻の計算はすべてブラウザ内でJavaScriptによりローカルに行われます — 入力内容がアップロードされたり、記録されたり、どこかに保存されたりすることはありません。唯一の例外はブラウザ自身のローカルストレージで、利便性のために直前に入力した式を記憶するだけです。ページの読み込み後はオフラインでも利用でき、アカウント登録も不要です。"
+    "faq.a5": "いいえ。解析、平易な言葉による説明、次回実行時刻の計算はすべてブラウザ内でJavaScriptによりローカルに行われます — 入力内容がアップロードされたり、記録されたり、どこかに保存されたりすることはありません。唯一の例外はブラウザ自身のローカルストレージで、利便性のために直前に入力した式を記憶するだけです。ページの読み込み後はオフラインでも利用でき、アカウント登録も不要です。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
 
   ko: {
@@ -1507,6 +1572,11 @@ window.I18N_LOCALES = {
     "faq.q4": "\"다음 실행 시각\"은 어떤 시간대 기준으로 계산되나요?",
     "faq.a4": "다음 실행 시각은 사용자의 기기에 설정된 로컬 날짜·시간·시간대를 기준으로, 컴퓨터 시계와 동일하게 계산됩니다. 하지만 실제 crontab은 서버나 스케줄러에 설정된 시간대(흔히 UTC)를 기준으로 동작하므로 브라우저의 시간대와 다를 수 있습니다. 서버가 다른 시간대를 사용한다면 여기 표시된 시각에서 시차만큼 조정해서 보거나, 정확한 시각으로 의존하기 전에 스케줄러 자체의 시간대 설정을 먼저 확인하세요.",
     "faq.q5": "입력한 크론 표현식이 서버로 전송되나요?",
-    "faq.a5": "아니요. 분석, 이해하기 쉬운 문장 설명, 다음 실행 시각 계산은 모두 브라우저 안에서 JavaScript로 로컬로 처리됩니다 — 입력한 내용은 업로드되거나 기록되거나 어디에도 저장되지 않으며, 유일한 예외는 편의를 위해 마지막 입력값만 기억하는 브라우저 자체의 로컬 저장소뿐입니다. 페이지를 한 번 불러온 뒤에는 오프라인 상태에서도 계속 사용할 수 있고, 가입이나 로그인도 필요 없습니다."
+    "faq.a5": "아니요. 분석, 이해하기 쉬운 문장 설명, 다음 실행 시각 계산은 모두 브라우저 안에서 JavaScript로 로컬로 처리됩니다 — 입력한 내용은 업로드되거나 기록되거나 어디에도 저장되지 않으며, 유일한 예외는 편의를 위해 마지막 입력값만 기억하는 브라우저 자체의 로컬 저장소뿐입니다. 페이지를 한 번 불러온 뒤에는 오프라인 상태에서도 계속 사용할 수 있고, 가입이나 로그인도 필요 없습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

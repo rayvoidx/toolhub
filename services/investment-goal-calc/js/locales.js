@@ -73,7 +73,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How much of my goal comes from my money versus market growth?",
     "faq.a4": "The tool splits your goal into two parts. Total contributions is what you actually pay in — your starting amount plus every required monthly investment. Market growth is the rest of the goal, the compounding that lands on top of your money. The highlighted line — market growth covers X% of your goal — shows that split for your exact inputs. Over short horizons your own contributions do nearly all the work; over twenty, thirty or more years, market growth often becomes the larger slice, which is why starting early lets a smaller monthly amount reach the same target. Because the calculator makes market growth cover part of the goal, the monthly figure it asks for is smaller than simply dividing the target by the number of months.",
     "faq.q5": "How do I adjust my goal for inflation?",
-    "faq.a5": "A target set in today's terms will not buy the same thing decades from now, because inflation erodes purchasing power. Enter an annual inflation rate and this goal calculator shows your goal in today's money — the target divided by (1 + inflation) for each year of the horizon — so you can see what that future number is really worth now. If your goal is a real-world cost such as a house deposit or a child's education that itself rises with inflation, consider setting the target higher, or treat the today's-money figure as the honest yardstick. Leave inflation at 0 to work purely in nominal amounts. The required monthly investment is always calculated against the nominal target you enter."
+    "faq.a5": "A target set in today's terms will not buy the same thing decades from now, because inflation erodes purchasing power. Enter an annual inflation rate and this goal calculator shows your goal in today's money — the target divided by (1 + inflation) for each year of the horizon — so you can see what that future number is really worth now. If your goal is a real-world cost such as a house deposit or a child's education that itself rises with inflation, consider setting the target higher, or treat the today's-money figure as the honest yardstick. Leave inflation at 0 to work purely in nominal amounts. The required monthly investment is always calculated against the nominal target you enter.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -131,7 +136,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的目标里有多少来自自己的钱，多少来自市场增长？",
     "faq.a4": "工具把你的目标拆成两部分。累计投入是你实际投入的钱——起始金额加上每一笔所需的每月投资。市场增长是目标的其余部分，即复利叠加上去的部分。突出显示的那一行——市场增长覆盖你目标的 X%——按你的具体输入展示这一比例。短期内你的投入几乎完成全部工作；到二十、三十年或更久，市场增长往往成为更大的一块，这就是为什么越早开始，越小的每月金额就能达成同一目标。由于计算器让市场增长覆盖目标的一部分，它要求的每月数字会小于简单地用目标除以月数。",
     "faq.q5": "如何按通胀调整我的目标？",
-    "faq.a5": "以今天口径设定的目标，几十年后买不到同样的东西，因为通胀会侵蚀购买力。输入年通胀率，这个目标计算器就会显示按今天购买力计的目标——目标除以（1 + 通胀率）对期限的每一年——让你看清那个未来数字现在究竟值多少。如果你的目标是像购房首付或子女教育这类本身会随通胀上涨的实际开支，可以考虑把目标设得更高，或把今天购买力这个数字当作诚实的标尺。把通胀设为 0 可纯粹按名义金额计算。所需每月投资额始终以你输入的名义目标为准计算。"
+    "faq.a5": "以今天口径设定的目标，几十年后买不到同样的东西，因为通胀会侵蚀购买力。输入年通胀率，这个目标计算器就会显示按今天购买力计的目标——目标除以（1 + 通胀率）对期限的每一年——让你看清那个未来数字现在究竟值多少。如果你的目标是像购房首付或子女教育这类本身会随通胀上涨的实际开支，可以考虑把目标设得更高，或把今天购买力这个数字当作诚实的标尺。把通胀设为 0 可纯粹按名义金额计算。所需每月投资额始终以你输入的名义目标为准计算。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -189,7 +199,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मेरे लक्ष्य में कितना मेरे पैसे से आता है और कितना बाजार वृद्धि से?",
     "faq.a4": "टूल आपके लक्ष्य को दो हिस्सों में बाँटता है। कुल निवेश वह है जो आप असल में लगाते हैं — आपकी शुरुआती राशि और हर आवश्यक मासिक निवेश। बाजार वृद्धि लक्ष्य का बाकी हिस्सा है, वह चक्रवृद्धि जो आपके पैसे के ऊपर जुड़ती है। हाइलाइट की गई पंक्ति — बाजार वृद्धि आपके लक्ष्य का X% पूरा करती है — आपके सटीक इनपुट के लिए यह विभाजन दिखाती है। छोटी अवधि में आपका निवेश ही लगभग सारा काम करता है; बीस, तीस या अधिक वर्षों में बाजार वृद्धि अक्सर बड़ा हिस्सा बन जाती है, इसीलिए जल्दी शुरू करने से एक छोटी मासिक राशि उसी लक्ष्य तक पहुँच जाती है। चूँकि कैलकुलेटर बाजार वृद्धि से लक्ष्य का एक हिस्सा भरवाता है, इसलिए यह जो मासिक आंकड़ा माँगता है वह लक्ष्य को महीनों से भाग देने से मिलने वाले आंकड़े से कम होता है।",
     "faq.q5": "मैं अपने लक्ष्य को महंगाई के लिए कैसे समायोजित करूँ?",
-    "faq.a5": "आज के हिसाब से तय किया गया लक्ष्य दशकों बाद वही चीज नहीं खरीदेगा, क्योंकि महंगाई क्रय-शक्ति घटाती है। वार्षिक महंगाई दर डालें और यह लक्ष्य कैलकुलेटर आपका लक्ष्य आज के पैसे में दिखाता है — अवधि के हर वर्ष के लिए लक्ष्य को (1 + महंगाई) से भाग देकर — ताकि आप देख सकें कि वह भविष्य की संख्या अभी असल में कितनी कीमत की है। यदि आपका लक्ष्य घर की डाउन पेमेंट या बच्चे की शिक्षा जैसी असली लागत है जो खुद महंगाई के साथ बढ़ती है, तो लक्ष्य को अधिक रखने पर विचार करें, या आज-के-पैसे वाले आंकड़े को ईमानदार मापदंड मानें। शुद्ध नाममात्र राशि में काम करने के लिए महंगाई 0 रखें। आवश्यक मासिक निवेश हमेशा आपके डाले गए नाममात्र लक्ष्य के विरुद्ध गणना होता है।"
+    "faq.a5": "आज के हिसाब से तय किया गया लक्ष्य दशकों बाद वही चीज नहीं खरीदेगा, क्योंकि महंगाई क्रय-शक्ति घटाती है। वार्षिक महंगाई दर डालें और यह लक्ष्य कैलकुलेटर आपका लक्ष्य आज के पैसे में दिखाता है — अवधि के हर वर्ष के लिए लक्ष्य को (1 + महंगाई) से भाग देकर — ताकि आप देख सकें कि वह भविष्य की संख्या अभी असल में कितनी कीमत की है। यदि आपका लक्ष्य घर की डाउन पेमेंट या बच्चे की शिक्षा जैसी असली लागत है जो खुद महंगाई के साथ बढ़ती है, तो लक्ष्य को अधिक रखने पर विचार करें, या आज-के-पैसे वाले आंकड़े को ईमानदार मापदंड मानें। शुद्ध नाममात्र राशि में काम करने के लिए महंगाई 0 रखें। आवश्यक मासिक निवेश हमेशा आपके डाले गए नाममात्र लक्ष्य के विरुद्ध गणना होता है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -247,7 +262,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuánto de mi meta viene de mi dinero y cuánto del crecimiento del mercado?",
     "faq.a4": "La herramienta divide tu meta en dos partes. El total aportado es lo que realmente pones — tu importe inicial más cada inversión mensual necesaria. El crecimiento del mercado es el resto de la meta, la capitalización que se añade encima de tu dinero. La línea destacada — el crecimiento del mercado cubre el X% de tu meta — muestra ese reparto para tus datos exactos. En horizontes cortos tus aportaciones hacen casi todo el trabajo; a veinte, treinta o más años, el crecimiento del mercado suele ser la mayor parte, por eso empezar pronto permite que un importe mensual menor alcance la misma meta. Como la calculadora hace que el crecimiento del mercado cubra parte de la meta, la cifra mensual que pide es menor que dividir simplemente el objetivo entre el número de meses.",
     "faq.q5": "¿Cómo ajusto mi meta por la inflación?",
-    "faq.a5": "Una meta fijada en términos de hoy no comprará lo mismo dentro de décadas, porque la inflación erosiona el poder adquisitivo. Introduce una tasa de inflación anual y esta calculadora de metas muestra tu meta en dinero de hoy — el objetivo dividido por (1 + inflación) por cada año del horizonte — para que veas cuánto vale realmente ahora esa cifra futura. Si tu meta es un coste real como la entrada de una casa o la educación de un hijo, que a su vez sube con la inflación, considera fijar el objetivo más alto, o toma la cifra en dinero de hoy como la vara honesta. Deja la inflación en 0 para trabajar en importes nominales. La inversión mensual necesaria siempre se calcula frente al objetivo nominal que introduces."
+    "faq.a5": "Una meta fijada en términos de hoy no comprará lo mismo dentro de décadas, porque la inflación erosiona el poder adquisitivo. Introduce una tasa de inflación anual y esta calculadora de metas muestra tu meta en dinero de hoy — el objetivo dividido por (1 + inflación) por cada año del horizonte — para que veas cuánto vale realmente ahora esa cifra futura. Si tu meta es un coste real como la entrada de una casa o la educación de un hijo, que a su vez sube con la inflación, considera fijar el objetivo más alto, o toma la cifra en dinero de hoy como la vara honesta. Deja la inflación en 0 para trabajar en importes nominales. La inversión mensual necesaria siempre se calcula frente al objetivo nominal que introduces.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -305,7 +325,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كم من هدفي يأتي من مالي وكم من نمو السوق؟",
     "faq.a4": "تقسم الأداة هدفك إلى جزأين. إجمالي المساهمات هو ما تدفعه فعلاً — مبلغك الابتدائي زائد كل استثمار شهري مطلوب. أما نمو السوق فهو بقية الهدف، أي التراكم الذي يُضاف فوق مالك. يعرض السطر المميز — يغطي نمو السوق X% من هدفك — هذا التوزيع لمدخلاتك الدقيقة. في المدد القصيرة تؤدي مساهماتك كل العمل تقريباً؛ وعلى عشرين أو ثلاثين سنة أو أكثر يصبح نمو السوق غالباً الحصة الأكبر، ولهذا يتيح البدء المبكر لمبلغ شهري أصغر بلوغ الهدف نفسه. ولأن الحاسبة تجعل نمو السوق يغطي جزءاً من الهدف، فإن الرقم الشهري الذي تطلبه أقل من مجرد قسمة الهدف على عدد الأشهر.",
     "faq.q5": "كيف أعدّل هدفي حسب التضخم؟",
-    "faq.a5": "الهدف المحدد بقيمة اليوم لن يشتري الشيء نفسه بعد عقود، لأن التضخم يأكل القوة الشرائية. أدخل معدل تضخم سنوي وستُظهر حاسبة الأهداف هذه هدفك بقيمة اليوم — الهدف مقسوماً على (1 + التضخم) عن كل سنة من المدة — كي ترى كم يساوي ذلك الرقم المستقبلي الآن فعلاً. إذا كان هدفك كلفة واقعية مثل دفعة مقدمة لمنزل أو تعليم طفل ترتفع هي نفسها مع التضخم، ففكّر في رفع الهدف، أو اعتبر رقم قيمة اليوم المقياس الصادق. اترك التضخم عند 0 للعمل بالمبالغ الاسمية فقط. يُحسب الاستثمار الشهري المطلوب دائماً مقابل الهدف الاسمي الذي تدخله."
+    "faq.a5": "الهدف المحدد بقيمة اليوم لن يشتري الشيء نفسه بعد عقود، لأن التضخم يأكل القوة الشرائية. أدخل معدل تضخم سنوي وستُظهر حاسبة الأهداف هذه هدفك بقيمة اليوم — الهدف مقسوماً على (1 + التضخم) عن كل سنة من المدة — كي ترى كم يساوي ذلك الرقم المستقبلي الآن فعلاً. إذا كان هدفك كلفة واقعية مثل دفعة مقدمة لمنزل أو تعليم طفل ترتفع هي نفسها مع التضخم، ففكّر في رفع الهدف، أو اعتبر رقم قيمة اليوم المقياس الصادق. اترك التضخم عند 0 للعمل بالمبالغ الاسمية فقط. يُحسب الاستثمار الشهري المطلوب دائماً مقابل الهدف الاسمي الذي تدخله.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -363,7 +388,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelle part de mon objectif vient de mon argent par rapport à la croissance du marché ?",
     "faq.a4": "L'outil divise votre objectif en deux parts. Le total versé est ce que vous payez réellement — votre montant de départ plus chaque investissement mensuel requis. La croissance du marché est le reste de l'objectif, la capitalisation qui s'ajoute par-dessus votre argent. La ligne mise en avant — la croissance du marché couvre X% de votre objectif — montre cette répartition pour vos données exactes. Sur des horizons courts, vos versements font presque tout le travail ; à vingt, trente ans ou plus, la croissance du marché devient souvent la plus grande part, c'est pourquoi commencer tôt permet à un montant mensuel plus faible d'atteindre le même objectif. Comme le calculateur fait couvrir une partie de l'objectif par la croissance du marché, le chiffre mensuel demandé est inférieur à une simple division de la cible par le nombre de mois.",
     "faq.q5": "Comment ajuster mon objectif à l'inflation ?",
-    "faq.a5": "Un objectif fixé en valeur d'aujourd'hui n'achètera pas la même chose dans des décennies, car l'inflation érode le pouvoir d'achat. Saisissez un taux d'inflation annuel et ce calculateur d'objectif montre votre objectif en argent d'aujourd'hui — la cible divisée par (1 + inflation) pour chaque année de l'horizon — afin de voir ce que ce chiffre futur vaut réellement maintenant. Si votre objectif est un coût réel comme un apport immobilier ou les études d'un enfant, qui augmente lui-même avec l'inflation, envisagez de fixer la cible plus haut, ou prenez le chiffre en argent d'aujourd'hui comme étalon honnête. Laissez l'inflation à 0 pour travailler en montants nominaux. L'investissement mensuel requis est toujours calculé par rapport à la cible nominale que vous saisissez."
+    "faq.a5": "Un objectif fixé en valeur d'aujourd'hui n'achètera pas la même chose dans des décennies, car l'inflation érode le pouvoir d'achat. Saisissez un taux d'inflation annuel et ce calculateur d'objectif montre votre objectif en argent d'aujourd'hui — la cible divisée par (1 + inflation) pour chaque année de l'horizon — afin de voir ce que ce chiffre futur vaut réellement maintenant. Si votre objectif est un coût réel comme un apport immobilier ou les études d'un enfant, qui augmente lui-même avec l'inflation, envisagez de fixer la cible plus haut, ou prenez le chiffre en argent d'aujourd'hui comme étalon honnête. Laissez l'inflation à 0 pour travailler en montants nominaux. L'investissement mensuel requis est toujours calculé par rapport à la cible nominale que vous saisissez.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -421,7 +451,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার লক্ষ্যের কতটা আমার টাকা আর কতটা বাজার বৃদ্ধি থেকে?",
     "faq.a4": "টুল আপনার লক্ষ্যকে দুই ভাগে ভাগ করে। মোট বিনিয়োগ হলো আপনি আসলে যা দেন — আপনার শুরুর অঙ্ক যোগ প্রতিটি প্রয়োজনীয় মাসিক বিনিয়োগ। বাজার বৃদ্ধি হলো লক্ষ্যের বাকিটা, চক্রবৃদ্ধি যা আপনার টাকার ওপর যোগ হয়। হাইলাইট করা লাইন — বাজার বৃদ্ধি আপনার লক্ষ্যের X% পূরণ করে — আপনার সঠিক ইনপুটের জন্য এই ভাগ দেখায়। স্বল্প মেয়াদে আপনার বিনিয়োগই প্রায় সব কাজ করে; বিশ, ত্রিশ বা তার বেশি বছরে বাজার বৃদ্ধি প্রায়ই বড় অংশ হয়ে যায়, এ কারণেই তাড়াতাড়ি শুরু করলে একটি ছোট মাসিক অঙ্কই একই লক্ষ্যে পৌঁছায়। যেহেতু ক্যালকুলেটর বাজার বৃদ্ধিকে লক্ষ্যের একটি অংশ পূরণ করায়, তাই এটি যে মাসিক সংখ্যা চায় তা লক্ষ্যকে মাস দিয়ে ভাগ করার চেয়ে কম।",
     "faq.q5": "আমি কীভাবে আমার লক্ষ্যকে মুদ্রাস্ফীতির জন্য সমন্বয় করব?",
-    "faq.a5": "আজকের হিসাবে সেট করা লক্ষ্য কয়েক দশক পরে একই জিনিস কিনতে পারবে না, কারণ মুদ্রাস্ফীতি ক্রয়ক্ষমতা ক্ষয় করে। বার্ষিক মুদ্রাস্ফীতির হার দিন এবং এই লক্ষ্য ক্যালকুলেটর আপনার লক্ষ্য আজকের টাকায় দেখায় — মেয়াদের প্রতি বছরের জন্য লক্ষ্যকে (1 + মুদ্রাস্ফীতি) দিয়ে ভাগ করে — যাতে আপনি দেখতে পারেন সেই ভবিষ্যৎ সংখ্যা এখন আসলে কতটা মূল্যবান। যদি আপনার লক্ষ্য বাড়ির ডাউন পেমেন্ট বা সন্তানের শিক্ষার মতো বাস্তব খরচ হয় যা নিজেই মুদ্রাস্ফীতির সঙ্গে বাড়ে, তবে লক্ষ্য আরও বেশি রাখার কথা ভাবুন, অথবা আজকের-টাকার সংখ্যাটিকে সৎ মাপকাঠি ধরুন। শুধু নামমাত্র অঙ্কে কাজ করতে মুদ্রাস্ফীতি 0 রাখুন। প্রয়োজনীয় মাসিক বিনিয়োগ সবসময় আপনার দেওয়া নামমাত্র লক্ষ্যের বিপরীতে হিসাব হয়।"
+    "faq.a5": "আজকের হিসাবে সেট করা লক্ষ্য কয়েক দশক পরে একই জিনিস কিনতে পারবে না, কারণ মুদ্রাস্ফীতি ক্রয়ক্ষমতা ক্ষয় করে। বার্ষিক মুদ্রাস্ফীতির হার দিন এবং এই লক্ষ্য ক্যালকুলেটর আপনার লক্ষ্য আজকের টাকায় দেখায় — মেয়াদের প্রতি বছরের জন্য লক্ষ্যকে (1 + মুদ্রাস্ফীতি) দিয়ে ভাগ করে — যাতে আপনি দেখতে পারেন সেই ভবিষ্যৎ সংখ্যা এখন আসলে কতটা মূল্যবান। যদি আপনার লক্ষ্য বাড়ির ডাউন পেমেন্ট বা সন্তানের শিক্ষার মতো বাস্তব খরচ হয় যা নিজেই মুদ্রাস্ফীতির সঙ্গে বাড়ে, তবে লক্ষ্য আরও বেশি রাখার কথা ভাবুন, অথবা আজকের-টাকার সংখ্যাটিকে সৎ মাপকাঠি ধরুন। শুধু নামমাত্র অঙ্কে কাজ করতে মুদ্রাস্ফীতি 0 রাখুন। প্রয়োজনীয় মাসিক বিনিয়োগ সবসময় আপনার দেওয়া নামমাত্র লক্ষ্যের বিপরীতে হিসাব হয়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -479,7 +514,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quanto da minha meta vem do meu dinheiro versus crescimento do mercado?",
     "faq.a4": "A ferramenta divide sua meta em duas partes. O total aportado é o que você realmente coloca — seu valor inicial mais cada investimento mensal necessário. O crescimento do mercado é o resto da meta, a capitalização que se soma por cima do seu dinheiro. A linha destacada — o crescimento do mercado cobre X% da sua meta — mostra essa divisão para seus dados exatos. Em horizontes curtos seus aportes fazem quase todo o trabalho; em vinte, trinta ou mais anos, o crescimento do mercado costuma ser a maior fatia, por isso começar cedo permite que um valor mensal menor alcance a mesma meta. Como a calculadora faz o crescimento do mercado cobrir parte da meta, o número mensal que ela pede é menor do que simplesmente dividir o alvo pelo número de meses.",
     "faq.q5": "Como ajusto minha meta pela inflação?",
-    "faq.a5": "Uma meta definida em termos de hoje não comprará a mesma coisa daqui a décadas, porque a inflação corrói o poder de compra. Informe uma taxa de inflação anual e esta calculadora de metas mostra sua meta em dinheiro de hoje — o alvo dividido por (1 + inflação) para cada ano do horizonte — para você ver quanto esse número futuro vale de fato agora. Se sua meta é um custo real como a entrada de uma casa ou a educação de um filho, que sobe com a inflação, considere definir o alvo mais alto, ou trate o número em dinheiro de hoje como a régua honesta. Deixe a inflação em 0 para trabalhar em valores nominais. O investimento mensal necessário é sempre calculado contra o alvo nominal que você informa."
+    "faq.a5": "Uma meta definida em termos de hoje não comprará a mesma coisa daqui a décadas, porque a inflação corrói o poder de compra. Informe uma taxa de inflação anual e esta calculadora de metas mostra sua meta em dinheiro de hoje — o alvo dividido por (1 + inflação) para cada ano do horizonte — para você ver quanto esse número futuro vale de fato agora. Se sua meta é um custo real como a entrada de uma casa ou a educação de um filho, que sobe com a inflação, considere definir o alvo mais alto, ou trate o número em dinheiro de hoje como a régua honesta. Deixe a inflação em 0 para trabalhar em valores nominais. O investimento mensal necessário é sempre calculado contra o alvo nominal que você informa.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -537,7 +577,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Сколько в моей цели от моих денег, а сколько от рыночного роста?",
     "faq.a4": "Инструмент делит вашу цель на две части. Всего взносов — это то, что вы реально вносите: ваша начальная сумма плюс каждый необходимый ежемесячный взнос. Рыночный рост — остальная часть цели, капитализация, которая добавляется поверх ваших денег. Выделенная строка — рыночный рост покрывает X% вашей цели — показывает это распределение для ваших точных данных. На коротких сроках почти всю работу делают ваши взносы; за двадцать, тридцать и более лет рыночный рост часто становится большей долей, поэтому ранний старт позволяет меньшим ежемесячным взносом достичь той же цели. Поскольку калькулятор заставляет рыночный рост покрывать часть цели, запрашиваемое ежемесячное число меньше, чем простое деление цели на число месяцев.",
     "faq.q5": "Как скорректировать цель с учётом инфляции?",
-    "faq.a5": "Цель, заданная в сегодняшних мерках, через десятилетия не купит то же самое, потому что инфляция размывает покупательную способность. Введите годовую инфляцию, и этот калькулятор целей покажет вашу цель в сегодняшних деньгах — цель, делённую на (1 + инфляция) за каждый год срока, — чтобы вы увидели, сколько это будущее число стоит на самом деле сейчас. Если ваша цель — реальная стоимость, например первоначальный взнос за жильё или образование ребёнка, которая сама растёт с инфляцией, подумайте о том, чтобы задать цель выше, или считайте цифру в сегодняшних деньгах честной меркой. Оставьте инфляцию 0, чтобы работать в номинальных суммах. Необходимый ежемесячный взнос всегда рассчитывается относительно номинальной цели, которую вы вводите."
+    "faq.a5": "Цель, заданная в сегодняшних мерках, через десятилетия не купит то же самое, потому что инфляция размывает покупательную способность. Введите годовую инфляцию, и этот калькулятор целей покажет вашу цель в сегодняшних деньгах — цель, делённую на (1 + инфляция) за каждый год срока, — чтобы вы увидели, сколько это будущее число стоит на самом деле сейчас. Если ваша цель — реальная стоимость, например первоначальный взнос за жильё или образование ребёнка, которая сама растёт с инфляцией, подумайте о том, чтобы задать цель выше, или считайте цифру в сегодняшних деньгах честной меркой. Оставьте инфляцию 0, чтобы работать в номинальных суммах. Необходимый ежемесячный взнос всегда рассчитывается относительно номинальной цели, которую вы вводите.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -595,7 +640,12 @@ window.I18N_LOCALES = {
     "faq.q4": "میرے ہدف کا کتنا میرے پیسے سے آتا ہے اور کتنا مارکیٹ نمو سے؟",
     "faq.a4": "ٹول آپ کے ہدف کو دو حصوں میں بانٹتا ہے۔ کل سرمایہ کاری وہ ہے جو آپ اصل میں لگاتے ہیں — آپ کی ابتدائی رقم جمع ہر مطلوبہ ماہانہ سرمایہ کاری۔ مارکیٹ نمو ہدف کا باقی حصہ ہے، وہ مرکب اثر جو آپ کے پیسے کے اوپر جڑتا ہے۔ نمایاں لائن — مارکیٹ نمو آپ کے ہدف کا X% پورا کرتی ہے — آپ کے درست اِن پٹ کے لیے یہ تقسیم دکھاتی ہے۔ مختصر مدت میں آپ کی سرمایہ کاری ہی تقریباً سارا کام کرتی ہے؛ بیس، تیس یا اس سے زیادہ سالوں میں مارکیٹ نمو اکثر بڑا حصہ بن جاتی ہے، اسی لیے جلدی شروع کرنے سے ایک چھوٹی ماہانہ رقم اسی ہدف تک پہنچ جاتی ہے۔ چونکہ کیلکولیٹر مارکیٹ نمو سے ہدف کا ایک حصہ پُر کرواتا ہے، اس لیے یہ جو ماہانہ عدد مانگتا ہے وہ ہدف کو مہینوں سے تقسیم کرنے سے ملنے والے عدد سے کم ہوتا ہے۔",
     "faq.q5": "میں اپنے ہدف کو مہنگائی کے لیے کیسے ایڈجسٹ کروں؟",
-    "faq.a5": "آج کے حساب سے طے کیا گیا ہدف کئی دہائیوں بعد وہی چیز نہیں خریدے گا، کیونکہ مہنگائی قوتِ خرید گھٹاتی ہے۔ سالانہ مہنگائی کی شرح درج کریں اور یہ ہدف کیلکولیٹر آپ کا ہدف آج کے پیسوں میں دکھاتا ہے — مدت کے ہر سال کے لیے ہدف کو (1 + مہنگائی) سے تقسیم کر کے — تاکہ آپ دیکھ سکیں کہ وہ مستقبل کا عدد اب اصل میں کتنا قیمتی ہے۔ اگر آپ کا ہدف کوئی حقیقی لاگت ہے جیسے مکان کی ڈاؤن پیمنٹ یا بچے کی تعلیم جو خود مہنگائی کے ساتھ بڑھتی ہے، تو ہدف زیادہ رکھنے پر غور کریں، یا آج-کے-پیسوں والے عدد کو ایماندار پیمانہ سمجھیں۔ خالص برائے نام رقم میں کام کرنے کے لیے مہنگائی 0 رکھیں۔ مطلوبہ ماہانہ سرمایہ کاری ہمیشہ آپ کے درج کردہ برائے نام ہدف کے مقابل حساب ہوتی ہے۔"
+    "faq.a5": "آج کے حساب سے طے کیا گیا ہدف کئی دہائیوں بعد وہی چیز نہیں خریدے گا، کیونکہ مہنگائی قوتِ خرید گھٹاتی ہے۔ سالانہ مہنگائی کی شرح درج کریں اور یہ ہدف کیلکولیٹر آپ کا ہدف آج کے پیسوں میں دکھاتا ہے — مدت کے ہر سال کے لیے ہدف کو (1 + مہنگائی) سے تقسیم کر کے — تاکہ آپ دیکھ سکیں کہ وہ مستقبل کا عدد اب اصل میں کتنا قیمتی ہے۔ اگر آپ کا ہدف کوئی حقیقی لاگت ہے جیسے مکان کی ڈاؤن پیمنٹ یا بچے کی تعلیم جو خود مہنگائی کے ساتھ بڑھتی ہے، تو ہدف زیادہ رکھنے پر غور کریں، یا آج-کے-پیسوں والے عدد کو ایماندار پیمانہ سمجھیں۔ خالص برائے نام رقم میں کام کرنے کے لیے مہنگائی 0 رکھیں۔ مطلوبہ ماہانہ سرمایہ کاری ہمیشہ آپ کے درج کردہ برائے نام ہدف کے مقابل حساب ہوتی ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -653,7 +703,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Berapa banyak tujuan saya berasal dari uang saya versus pertumbuhan pasar?",
     "faq.a4": "Alat ini membagi tujuan Anda menjadi dua bagian. Total setoran adalah yang benar-benar Anda bayar — jumlah awal ditambah setiap investasi bulanan yang dibutuhkan. Pertumbuhan pasar adalah sisa tujuan, bunga majemuk yang menumpuk di atas uang Anda. Baris yang disorot — pertumbuhan pasar menutup X% dari tujuan Anda — menunjukkan pembagian itu untuk masukan tepat Anda. Pada jangka pendek setoran Anda melakukan hampir semua pekerjaan; pada dua puluh, tiga puluh tahun atau lebih, pertumbuhan pasar sering menjadi bagian terbesar, itulah mengapa memulai lebih awal memungkinkan jumlah bulanan lebih kecil mencapai tujuan yang sama. Karena kalkulator membuat pertumbuhan pasar menutup sebagian tujuan, angka bulanan yang diminta lebih kecil dari sekadar membagi target dengan jumlah bulan.",
     "faq.q5": "Bagaimana menyesuaikan tujuan saya dengan inflasi?",
-    "faq.a5": "Tujuan yang ditetapkan dalam ukuran hari ini tidak akan membeli hal yang sama beberapa dekade mendatang, karena inflasi menggerus daya beli. Masukkan tingkat inflasi tahunan dan kalkulator tujuan ini menampilkan tujuan Anda dalam nilai hari ini — target dibagi (1 + inflasi) untuk setiap tahun jangka waktu — agar Anda melihat berapa nilai angka masa depan itu sekarang. Jika tujuan Anda adalah biaya nyata seperti uang muka rumah atau pendidikan anak yang sendiri naik dengan inflasi, pertimbangkan menetapkan target lebih tinggi, atau perlakukan angka nilai hari ini sebagai tolok ukur jujur. Biarkan inflasi 0 untuk bekerja dalam jumlah nominal. Investasi bulanan yang dibutuhkan selalu dihitung terhadap target nominal yang Anda masukkan."
+    "faq.a5": "Tujuan yang ditetapkan dalam ukuran hari ini tidak akan membeli hal yang sama beberapa dekade mendatang, karena inflasi menggerus daya beli. Masukkan tingkat inflasi tahunan dan kalkulator tujuan ini menampilkan tujuan Anda dalam nilai hari ini — target dibagi (1 + inflasi) untuk setiap tahun jangka waktu — agar Anda melihat berapa nilai angka masa depan itu sekarang. Jika tujuan Anda adalah biaya nyata seperti uang muka rumah atau pendidikan anak yang sendiri naik dengan inflasi, pertimbangkan menetapkan target lebih tinggi, atau perlakukan angka nilai hari ini sebagai tolok ukur jujur. Biarkan inflasi 0 untuk bekerja dalam jumlah nominal. Investasi bulanan yang dibutuhkan selalu dihitung terhadap target nominal yang Anda masukkan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -711,7 +766,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie viel meines Ziels stammt aus meinem Geld gegenüber Marktwachstum?",
     "faq.a4": "Das Tool teilt Ihr Ziel in zwei Teile. Gesamte Einzahlungen ist, was Sie tatsächlich zahlen — Ihr Startbetrag plus jede erforderliche monatliche Investition. Marktwachstum ist der Rest des Ziels, die Verzinsung, die oben auf Ihr Geld kommt. Die hervorgehobene Zeile — Marktwachstum deckt X% Ihres Ziels — zeigt diese Aufteilung für Ihre genauen Eingaben. Über kurze Horizonte leisten Ihre Einzahlungen fast die ganze Arbeit; über zwanzig, dreißig oder mehr Jahre wird das Marktwachstum oft der größere Anteil, weshalb ein früher Start mit kleinerem Monatsbetrag dasselbe Ziel erreicht. Weil der Rechner das Marktwachstum einen Teil des Ziels decken lässt, ist die geforderte Monatszahl kleiner als das bloße Teilen des Ziels durch die Anzahl der Monate.",
     "faq.q5": "Wie passe ich mein Ziel an die Inflation an?",
-    "faq.a5": "Ein in heutigen Werten gesetztes Ziel kauft in Jahrzehnten nicht dasselbe, weil Inflation die Kaufkraft aushöhlt. Geben Sie eine jährliche Inflationsrate ein, und dieser Ziel-Rechner zeigt Ihr Ziel in heutigem Geld — das Ziel geteilt durch (1 + Inflation) für jedes Jahr des Horizonts — damit Sie sehen, was diese Zukunftszahl heute wirklich wert ist. Ist Ihr Ziel eine reale Ausgabe wie eine Anzahlung fürs Haus oder die Ausbildung eines Kindes, die selbst mit der Inflation steigt, sollten Sie das Ziel höher ansetzen oder die Zahl in heutigem Geld als ehrlichen Maßstab nehmen. Lassen Sie die Inflation bei 0, um in nominalen Beträgen zu rechnen. Die erforderliche monatliche Investition wird stets gegen das nominale Ziel berechnet, das Sie eingeben."
+    "faq.a5": "Ein in heutigen Werten gesetztes Ziel kauft in Jahrzehnten nicht dasselbe, weil Inflation die Kaufkraft aushöhlt. Geben Sie eine jährliche Inflationsrate ein, und dieser Ziel-Rechner zeigt Ihr Ziel in heutigem Geld — das Ziel geteilt durch (1 + Inflation) für jedes Jahr des Horizonts — damit Sie sehen, was diese Zukunftszahl heute wirklich wert ist. Ist Ihr Ziel eine reale Ausgabe wie eine Anzahlung fürs Haus oder die Ausbildung eines Kindes, die selbst mit der Inflation steigt, sollten Sie das Ziel höher ansetzen oder die Zahl in heutigem Geld als ehrlichen Maßstab nehmen. Lassen Sie die Inflation bei 0, um in nominalen Beträgen zu rechnen. Die erforderliche monatliche Investition wird stets gegen das nominale Ziel berechnet, das Sie eingeben.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -769,7 +829,12 @@ window.I18N_LOCALES = {
     "faq.q4": "目標のうち、自分のお金と市場成長はそれぞれどれくらいですか?",
     "faq.a4": "ツールは目標を2つに分けます。積立総額は実際に支払う分 — 初期額と必要な毎月の投資すべての合計です。市場成長は目標の残りで、あなたのお金の上に乗る複利です。強調された行 — 市場成長が目標のX%をまかなう — が、あなたの正確な入力に対するこの内訳を示します。短期ではあなたの積立がほぼすべてを担いますが、20年・30年以上になると市場成長が大きい割合になることが多く、だからこそ早く始めれば小さい毎月額でも同じ目標に届きます。計算機は市場成長に目標の一部をまかなわせるため、求める毎月額は目標を月数で割るだけの値より小さくなります。",
     "faq.q5": "目標をインフレに合わせて調整するには?",
-    "faq.a5": "今日の基準で決めた目標は、数十年後には同じものを買えません。インフレが購買力を削るからです。年間インフレ率を入力すると、この目標計算機は目標を今日のお金で表示します — 期間の各年について目標を(1 + インフレ)で割ります — その将来の数値が今どれだけの価値かがわかります。目標が住宅頭金や子どもの教育費のようにインフレとともに上がる現実の費用なら、目標を高めに設定するか、今日のお金の数値を正直な物差しと考えましょう。名目額だけで計算するにはインフレを0にします。必要な毎月の投資額は常に、入力した名目の目標に対して計算されます。"
+    "faq.a5": "今日の基準で決めた目標は、数十年後には同じものを買えません。インフレが購買力を削るからです。年間インフレ率を入力すると、この目標計算機は目標を今日のお金で表示します — 期間の各年について目標を(1 + インフレ)で割ります — その将来の数値が今どれだけの価値かがわかります。目標が住宅頭金や子どもの教育費のようにインフレとともに上がる現実の費用なら、目標を高めに設定するか、今日のお金の数値を正直な物差しと考えましょう。名目額だけで計算するにはインフレを0にします。必要な毎月の投資額は常に、入力した名目の目標に対して計算されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -827,6 +892,11 @@ window.I18N_LOCALES = {
     "faq.q4": "내 목표 중 얼마가 내 돈이고 얼마가 시장 성장인가요?",
     "faq.a4": "도구는 목표를 두 부분으로 나눕니다. 총 납입액은 실제로 넣는 돈 — 시작 금액과 필요한 모든 매달 투자의 합입니다. 시장 성장은 목표의 나머지로, 당신의 돈 위에 얹히는 복리입니다. 강조된 줄 — 시장 성장이 목표의 X%를 채운다 — 이 당신의 정확한 입력에 대한 이 분할을 보여줍니다. 짧은 기간에는 당신의 납입이 거의 모든 일을 하지만, 20년·30년 이상이 되면 시장 성장이 더 큰 몫이 되는 경우가 많습니다. 그래서 일찍 시작하면 더 작은 매달 금액으로도 같은 목표에 도달합니다. 계산기가 시장 성장에 목표의 일부를 채우게 하므로, 요구하는 매달 숫자는 목표를 개월 수로 그냥 나눈 값보다 작습니다.",
     "faq.q5": "목표를 물가상승에 맞게 어떻게 조정하나요?",
-    "faq.a5": "오늘 기준으로 정한 목표는 수십 년 뒤에 같은 것을 사지 못합니다. 물가상승이 구매력을 깎기 때문입니다. 연 물가상승률을 입력하면 이 목표 계산기는 목표를 오늘 돈 기준으로 보여줍니다 — 기간의 각 해마다 목표를 (1 + 물가상승률)로 나눕니다 — 그 미래 숫자가 지금 실제로 얼마의 가치인지 알 수 있습니다. 목표가 주택 계약금이나 자녀 교육비처럼 그 자체가 물가와 함께 오르는 실제 비용이라면 목표를 더 높게 잡거나, 오늘 돈 기준 숫자를 정직한 잣대로 삼으세요. 명목 금액만으로 계산하려면 물가를 0으로 두세요. 필요한 매달 투자액은 항상 당신이 입력한 명목 목표를 기준으로 계산됩니다."
+    "faq.a5": "오늘 기준으로 정한 목표는 수십 년 뒤에 같은 것을 사지 못합니다. 물가상승이 구매력을 깎기 때문입니다. 연 물가상승률을 입력하면 이 목표 계산기는 목표를 오늘 돈 기준으로 보여줍니다 — 기간의 각 해마다 목표를 (1 + 물가상승률)로 나눕니다 — 그 미래 숫자가 지금 실제로 얼마의 가치인지 알 수 있습니다. 목표가 주택 계약금이나 자녀 교육비처럼 그 자체가 물가와 함께 오르는 실제 비용이라면 목표를 더 높게 잡거나, 오늘 돈 기준 숫자를 정직한 잣대로 삼으세요. 명목 금액만으로 계산하려면 물가를 0으로 두세요. 필요한 매달 투자액은 항상 당신이 입력한 명목 목표를 기준으로 계산됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

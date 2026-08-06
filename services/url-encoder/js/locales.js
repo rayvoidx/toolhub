@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why do Korean, emoji and other non-ASCII characters encode correctly here?",
     "faq.a4": "Because encoding runs on UTF-8 bytes. encodeURIComponent first converts each character to its UTF-8 byte sequence and then percent-encodes those bytes, so Korean (한글), Japanese, Chinese and emoji become valid %XX%XX sequences and decode back to exactly the original text — no mojibake. That makes this a reliable URL 인코더 디코더 for any language, not just ASCII.",
     "faq.q5": "Is my text or URL sent to a server?",
-    "faq.a5": "No. All encoding and decoding happens 100% in your browser with the built-in encodeURIComponent/encodeURI and decodeURIComponent/decodeURI functions — nothing is uploaded and there are no external requests. Only your last text plus your mode and form-encoding choices are saved to this browser's local storage for convenience; clear the box or your site data to remove them."
+    "faq.a5": "No. All encoding and decoding happens 100% in your browser with the built-in encodeURIComponent/encodeURI and decodeURIComponent/decodeURI functions — nothing is uploaded and there are no external requests. Only your last text plus your mode and form-encoding choices are saved to this browser's local storage for convenience; clear the box or your site data to remove them.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -115,7 +120,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么中文、emoji 等非 ASCII 字符在这里能正确编码？",
     "faq.a4": "因为编码基于 UTF-8 字节。encodeURIComponent 先把每个字符转换为其 UTF-8 字节序列，再对这些字节进行百分号编码，因此中文、韩文（한글）、日文和 emoji 都会变成有效的 %XX%XX 序列，并能精确还原为原文——不会出现乱码。这让它成为一款可靠的 URL 인코더 디코더，适用于任何语言而不仅是 ASCII。",
     "faq.q5": "我的文本或 URL 会被发送到服务器吗？",
-    "faq.a5": "不会。所有编码和解码都 100% 在你的浏览器中完成，使用内置的 encodeURIComponent/encodeURI 和 decodeURIComponent/decodeURI 函数——不上传任何内容，也没有外部请求。仅为方便起见，会把你最近的文本以及范围和 form 编码选项保存到浏览器本地存储；清空输入框或站点数据即可删除。"
+    "faq.a5": "不会。所有编码和解码都 100% 在你的浏览器中完成，使用内置的 encodeURIComponent/encodeURI 和 decodeURIComponent/decodeURI 函数——不上传任何内容，也没有外部请求。仅为方便起见，会把你最近的文本以及范围和 form 编码选项保存到浏览器本地存储；清空输入框或站点数据即可删除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "कोरियन, इमोजी और अन्य गैर-ASCII अक्षर यहाँ सही तरीके से क्यों एन्कोड होते हैं?",
     "faq.a4": "क्योंकि एन्कोडिंग UTF-8 बाइट्स पर चलती है। encodeURIComponent पहले प्रत्येक अक्षर को उसके UTF-8 बाइट अनुक्रम में बदलता है और फिर उन बाइट्स को पर्सेंट-एन्कोड करता है, इसलिए कोरियन (한글), जापानी, चीनी और इमोजी मान्य %XX%XX अनुक्रम बन जाते हैं और ठीक मूल टेक्स्ट में वापस डिकोड होते हैं — कोई गड़बड़ी नहीं। यह इसे किसी भी भाषा के लिए एक भरोसेमंद URL 인코더 디코더 बनाता है, सिर्फ़ ASCII के लिए नहीं।",
     "faq.q5": "क्या मेरा टेक्स्ट या URL किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। सारी एन्कोडिंग और डिकोडिंग 100% आपके ब्राउज़र में, बिल्ट-इन encodeURIComponent/encodeURI और decodeURIComponent/decodeURI फ़ंक्शनों से होती है — कुछ भी अपलोड नहीं होता और कोई बाहरी अनुरोध नहीं। केवल सुविधा के लिए आपका अंतिम टेक्स्ट और मोड व form-एन्कोडिंग विकल्प इस ब्राउज़र के लोकल स्टोरेज में सहेजे जाते हैं; बॉक्स या साइट डेटा साफ़ करके उन्हें हटा दें।"
+    "faq.a5": "नहीं। सारी एन्कोडिंग और डिकोडिंग 100% आपके ब्राउज़र में, बिल्ट-इन encodeURIComponent/encodeURI और decodeURIComponent/decodeURI फ़ंक्शनों से होती है — कुछ भी अपलोड नहीं होता और कोई बाहरी अनुरोध नहीं। केवल सुविधा के लिए आपका अंतिम टेक्स्ट और मोड व form-एन्कोडिंग विकल्प इस ब्राउज़र के लोकल स्टोरेज में सहेजे जाते हैं; बॉक्स या साइट डेटा साफ़ करके उन्हें हटा दें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -215,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué el coreano, los emojis y otros caracteres no ASCII se codifican correctamente aquí?",
     "faq.a4": "Porque la codificación funciona sobre bytes UTF-8. encodeURIComponent convierte primero cada carácter en su secuencia de bytes UTF-8 y luego codifica esos bytes en porcentaje, así que el coreano (한글), el japonés, el chino y los emojis se vuelven secuencias %XX%XX válidas y se decodifican exactamente al texto original, sin caracteres corruptos. Eso lo convierte en un URL 인코더 디코더 fiable para cualquier idioma, no solo ASCII.",
     "faq.q5": "¿Se envía mi texto o URL a un servidor?",
-    "faq.a5": "No. Toda la codificación y decodificación ocurre 100% en tu navegador con las funciones integradas encodeURIComponent/encodeURI y decodeURIComponent/decodeURI: no se sube nada y no hay solicitudes externas. Solo se guardan en el almacenamiento local de este navegador tu último texto y tus opciones de modo y codificación de formulario, por comodidad; borra el cuadro o los datos del sitio para eliminarlos."
+    "faq.a5": "No. Toda la codificación y decodificación ocurre 100% en tu navegador con las funciones integradas encodeURIComponent/encodeURI y decodeURIComponent/decodeURI: no se sube nada y no hay solicitudes externas. Solo se guardan en el almacenamiento local de este navegador tu último texto y tus opciones de modo y codificación de formulario, por comodidad; borra el cuadro o los datos del sitio para eliminarlos.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -265,7 +285,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا تُرمَّز الكورية والإيموجي والأحرف غير ASCII بشكل صحيح هنا؟",
     "faq.a4": "لأن الترميز يعمل على بايتات UTF-8. يحوّل encodeURIComponent أولًا كل حرف إلى تسلسل بايتات UTF-8 الخاص به ثم يُرمِّز تلك البايتات بالنسبة المئوية، فتصبح الكورية (한글) واليابانية والصينية والإيموجي تسلسلات %XX%XX صالحة وتُفكّ إلى النص الأصلي تمامًا — دون تشويش. هذا يجعله URL 인코더 디코더 موثوقًا لأي لغة، وليس ASCII فقط.",
     "faq.q5": "هل يُرسَل نصي أو رابطي إلى خادم؟",
-    "faq.a5": "لا. كل الترميز وفك الترميز يجري 100% داخل متصفحك باستخدام الدوال المدمجة encodeURIComponent/encodeURI و decodeURIComponent/decodeURI — لا يُرفع أي شيء ولا توجد أي طلبات خارجية. يُحفظ فقط آخر نص لك واختياراتك للنطاق وترميز النموذج في التخزين المحلي لهذا المتصفح للتيسير؛ امسح المربع أو بيانات الموقع لإزالتها."
+    "faq.a5": "لا. كل الترميز وفك الترميز يجري 100% داخل متصفحك باستخدام الدوال المدمجة encodeURIComponent/encodeURI و decodeURIComponent/decodeURI — لا يُرفع أي شيء ولا توجد أي طلبات خارجية. يُحفظ فقط آخر نص لك واختياراتك للنطاق وترميز النموذج في التخزين المحلي لهذا المتصفح للتيسير؛ امسح المربع أو بيانات الموقع لإزالتها.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -315,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi le coréen, les emojis et les autres caractères non-ASCII s'encodent-ils correctement ici ?",
     "faq.a4": "Parce que l'encodage travaille sur des octets UTF-8. encodeURIComponent convertit d'abord chaque caractère en sa séquence d'octets UTF-8 puis encode ces octets en pourcentage, si bien que le coréen (한글), le japonais, le chinois et les emojis deviennent des séquences %XX%XX valides et se décodent exactement en texte original — sans caractères corrompus. Cela en fait un URL 인코더 디코더 fiable pour toute langue, pas seulement l'ASCII.",
     "faq.q5": "Mon texte ou mon URL est-il envoyé à un serveur ?",
-    "faq.a5": "Non. Tout l'encodage et le décodage se déroulent à 100% dans votre navigateur avec les fonctions intégrées encodeURIComponent/encodeURI et decodeURIComponent/decodeURI — rien n'est envoyé et il n'y a aucune requête externe. Seuls votre dernier texte et vos choix de portée et d'encodage de formulaire sont enregistrés dans le stockage local de ce navigateur, par commodité ; videz la zone ou les données du site pour les supprimer."
+    "faq.a5": "Non. Tout l'encodage et le décodage se déroulent à 100% dans votre navigateur avec les fonctions intégrées encodeURIComponent/encodeURI et decodeURIComponent/decodeURI — rien n'est envoyé et il n'y a aucune requête externe. Seuls votre dernier texte et vos choix de portée et d'encodage de formulaire sont enregistrés dans le stockage local de ce navigateur, par commodité ; videz la zone ou les données du site pour les supprimer.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -365,7 +395,12 @@ window.I18N_LOCALES = {
     "faq.q4": "কোরিয়ান, ইমোজি ও অন্যান্য নন-ASCII অক্ষর এখানে সঠিকভাবে এনকোড হয় কেন?",
     "faq.a4": "কারণ এনকোডিং UTF-8 বাইটের উপর চলে। encodeURIComponent প্রথমে প্রতিটি অক্ষরকে তার UTF-8 বাইট ক্রমে রূপান্তর করে এবং তারপর সেই বাইটগুলো পার্সেন্ট-এনকোড করে, তাই কোরিয়ান (한글), জাপানি, চীনা ও ইমোজি বৈধ %XX%XX ক্রমে পরিণত হয় এবং হুবহু মূল টেক্সটে ফিরে ডিকোড হয় — কোনো বিকৃতি ছাড়াই। এটি একে যেকোনো ভাষার জন্য একটি নির্ভরযোগ্য URL 인코더 디코더 করে তোলে, শুধু ASCII নয়।",
     "faq.q5": "আমার টেক্সট বা URL কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। সমস্ত এনকোডিং ও ডিকোডিং ১০০% আপনার ব্রাউজারে বিল্ট-ইন encodeURIComponent/encodeURI ও decodeURIComponent/decodeURI ফাংশন দিয়ে হয় — কিছুই আপলোড হয় না এবং কোনো বাহ্যিক অনুরোধ নেই। কেবল সুবিধার জন্য আপনার শেষ টেক্সট এবং মোড ও form-এনকোডিং পছন্দ এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়; বাক্স বা সাইট ডেটা মুছে সেগুলো সরিয়ে দিন।"
+    "faq.a5": "না। সমস্ত এনকোডিং ও ডিকোডিং ১০০% আপনার ব্রাউজারে বিল্ট-ইন encodeURIComponent/encodeURI ও decodeURIComponent/decodeURI ফাংশন দিয়ে হয় — কিছুই আপলোড হয় না এবং কোনো বাহ্যিক অনুরোধ নেই। কেবল সুবিধার জন্য আপনার শেষ টেক্সট এবং মোড ও form-এনকোডিং পছন্দ এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয়; বাক্স বা সাইট ডেটা মুছে সেগুলো সরিয়ে দিন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que coreano, emojis e outros caracteres não-ASCII são codificados corretamente aqui?",
     "faq.a4": "Porque a codificação funciona sobre bytes UTF-8. O encodeURIComponent primeiro converte cada caractere na sua sequência de bytes UTF-8 e depois codifica esses bytes em porcentagem, então coreano (한글), japonês, chinês e emojis viram sequências %XX%XX válidas e decodificam exatamente para o texto original — sem caracteres corrompidos. Isso o torna um URL 인코더 디코더 confiável para qualquer idioma, não só ASCII.",
     "faq.q5": "Meu texto ou URL é enviado para um servidor?",
-    "faq.a5": "Não. Toda a codificação e decodificação acontece 100% no seu navegador com as funções nativas encodeURIComponent/encodeURI e decodeURIComponent/decodeURI — nada é enviado e não há requisições externas. Apenas o seu último texto e as suas escolhas de escopo e codificação de formulário são salvos no armazenamento local deste navegador, por comodidade; limpe a caixa ou os dados do site para removê-los."
+    "faq.a5": "Não. Toda a codificação e decodificação acontece 100% no seu navegador com as funções nativas encodeURIComponent/encodeURI e decodeURIComponent/decodeURI — nada é enviado e não há requisições externas. Apenas o seu último texto e as suas escolhas de escopo e codificação de formulário são salvos no armazenamento local deste navegador, por comodidade; limpe a caixa ou os dados do site para removê-los.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -465,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему корейский, эмодзи и другие не-ASCII символы кодируются здесь правильно?",
     "faq.a4": "Потому что кодирование работает с байтами UTF-8. encodeURIComponent сначала преобразует каждый символ в его последовательность байтов UTF-8, а затем кодирует эти байты процентами, поэтому корейский (한글), японский, китайский и эмодзи становятся допустимыми последовательностями %XX%XX и декодируются точно в исходный текст — без искажений. Это делает его надёжным URL 인코더 디코더 для любого языка, а не только ASCII.",
     "faq.q5": "Отправляется ли мой текст или URL на сервер?",
-    "faq.a5": "Нет. Всё кодирование и декодирование происходит на 100% в вашем браузере встроенными функциями encodeURIComponent/encodeURI и decodeURIComponent/decodeURI — ничего не загружается и нет внешних запросов. В локальном хранилище этого браузера ради удобства сохраняются только ваш последний текст и выбранные область и кодирование форм; очистите поле или данные сайта, чтобы удалить их."
+    "faq.a5": "Нет. Всё кодирование и декодирование происходит на 100% в вашем браузере встроенными функциями encodeURIComponent/encodeURI и decodeURIComponent/decodeURI — ничего не загружается и нет внешних запросов. В локальном хранилище этого браузера ради удобства сохраняются только ваш последний текст и выбранные область и кодирование форм; очистите поле или данные сайта, чтобы удалить их.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -515,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کورین، ایموجی اور دیگر غیر ASCII حروف یہاں درست طور پر کیوں اینکوڈ ہوتے ہیں؟",
     "faq.a4": "کیونکہ اینکوڈنگ UTF-8 بائٹس پر چلتی ہے۔ encodeURIComponent پہلے ہر حرف کو اس کی UTF-8 بائٹ ترتیب میں بدلتا ہے اور پھر ان بائٹس کو پرسنٹ اینکوڈ کرتا ہے، اس لیے کورین (한글)، جاپانی، چینی اور ایموجی درست %XX%XX ترتیبیں بن جاتے ہیں اور بعینہٖ اصل متن میں واپس ڈی کوڈ ہوتے ہیں — بغیر کسی خرابی کے۔ یہ اسے کسی بھی زبان کے لیے ایک قابلِ اعتماد URL 인코더 디코더 بناتا ہے، صرف ASCII کے لیے نہیں۔",
     "faq.q5": "کیا میرا متن یا URL کسی سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ تمام اینکوڈنگ اور ڈی کوڈنگ 100% آپ کے براؤزر میں بلٹ اِن encodeURIComponent/encodeURI اور decodeURIComponent/decodeURI فنکشنز سے ہوتی ہے — کچھ بھی اپ لوڈ نہیں ہوتا اور کوئی بیرونی درخواست نہیں۔ صرف سہولت کے لیے آپ کا آخری متن اور موڈ و form اینکوڈنگ کے انتخاب اس براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں؛ خانہ یا سائٹ ڈیٹا صاف کر کے انہیں ہٹا دیں۔"
+    "faq.a5": "نہیں۔ تمام اینکوڈنگ اور ڈی کوڈنگ 100% آپ کے براؤزر میں بلٹ اِن encodeURIComponent/encodeURI اور decodeURIComponent/decodeURI فنکشنز سے ہوتی ہے — کچھ بھی اپ لوڈ نہیں ہوتا اور کوئی بیرونی درخواست نہیں۔ صرف سہولت کے لیے آپ کا آخری متن اور موڈ و form اینکوڈنگ کے انتخاب اس براؤزر کے لوکل اسٹوریج میں محفوظ ہوتے ہیں؛ خانہ یا سائٹ ڈیٹا صاف کر کے انہیں ہٹا دیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -565,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa Korea, emoji, dan karakter non-ASCII lain ter-encode dengan benar di sini?",
     "faq.a4": "Karena encoding bekerja pada byte UTF-8. encodeURIComponent lebih dulu mengubah tiap karakter menjadi urutan byte UTF-8-nya lalu meng-percent-encode byte itu, sehingga Korea (한글), Jepang, Tionghoa, dan emoji menjadi urutan %XX%XX yang valid dan ter-decode persis ke teks asli — tanpa teks kacau. Ini menjadikannya URL 인코더 디코더 yang andal untuk bahasa apa pun, bukan hanya ASCII.",
     "faq.q5": "Apakah teks atau URL saya dikirim ke server?",
-    "faq.a5": "Tidak. Semua encoding dan decoding terjadi 100% di browser Anda dengan fungsi bawaan encodeURIComponent/encodeURI dan decodeURIComponent/decodeURI — tidak ada yang diunggah dan tidak ada permintaan eksternal. Hanya teks terakhir serta pilihan mode dan form encoding Anda yang disimpan ke local storage browser ini demi kenyamanan; bersihkan kotak atau data situs untuk menghapusnya."
+    "faq.a5": "Tidak. Semua encoding dan decoding terjadi 100% di browser Anda dengan fungsi bawaan encodeURIComponent/encodeURI dan decodeURIComponent/decodeURI — tidak ada yang diunggah dan tidak ada permintaan eksternal. Hanya teks terakhir serta pilihan mode dan form encoding Anda yang disimpan ke local storage browser ini demi kenyamanan; bersihkan kotak atau data situs untuk menghapusnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -615,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum werden Koreanisch, Emojis und andere Nicht-ASCII-Zeichen hier korrekt codiert?",
     "faq.a4": "Weil die Codierung auf UTF-8-Bytes arbeitet. encodeURIComponent wandelt jedes Zeichen zuerst in seine UTF-8-Bytefolge um und prozentcodiert dann diese Bytes, sodass Koreanisch (한글), Japanisch, Chinesisch und Emojis zu gültigen %XX%XX-Folgen werden und exakt zum Originaltext zurück-decodiert werden — ohne Zeichensalat. Das macht ihn zu einem zuverlässigen URL 인코더 디코더 für jede Sprache, nicht nur ASCII.",
     "faq.q5": "Wird mein Text oder meine URL an einen Server gesendet?",
-    "faq.a5": "Nein. Die gesamte Codierung und Decodierung läuft zu 100% in deinem Browser mit den eingebauten Funktionen encodeURIComponent/encodeURI und decodeURIComponent/decodeURI — nichts wird hochgeladen, und es gibt keine externen Anfragen. Nur dein letzter Text sowie deine Bereichs- und Formular-Codierungswahl werden zur Bequemlichkeit im lokalen Speicher dieses Browsers abgelegt; leere das Feld oder die Websitedaten, um sie zu entfernen."
+    "faq.a5": "Nein. Die gesamte Codierung und Decodierung läuft zu 100% in deinem Browser mit den eingebauten Funktionen encodeURIComponent/encodeURI und decodeURIComponent/decodeURI — nichts wird hochgeladen, und es gibt keine externen Anfragen. Nur dein letzter Text sowie deine Bereichs- und Formular-Codierungswahl werden zur Bequemlichkeit im lokalen Speicher dieses Browsers abgelegt; leere das Feld oder die Websitedaten, um sie zu entfernen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -665,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "なぜ韓国語・絵文字などの非 ASCII 文字がここで正しくエンコードされるのですか？",
     "faq.a4": "エンコードが UTF-8 バイトで動作するからです。encodeURIComponent は各文字をまず UTF-8 バイト列に変換し、そのバイトをパーセントエンコードします。そのため韓国語（한글）・日本語・中国語・絵文字は有効な %XX%XX シーケンスになり、元のテキストへ正確にデコードされます — 文字化けしません。これにより、ASCII だけでなくあらゆる言語に対応した信頼できる URL 인코더 디코더 になります。",
     "faq.q5": "私のテキストや URL はサーバーに送信されますか？",
-    "faq.a5": "いいえ。エンコードとデコードはすべて 100% ブラウザー内で、組み込みの encodeURIComponent/encodeURI と decodeURIComponent/decodeURI 関数を使って行われます。何もアップロードされず、外部リクエストもありません。利便性のため、最後のテキストとモード・form エンコードの選択のみがこのブラウザーのローカルストレージに保存されます。欄またはサイトデータを消去すれば削除できます。"
+    "faq.a5": "いいえ。エンコードとデコードはすべて 100% ブラウザー内で、組み込みの encodeURIComponent/encodeURI と decodeURIComponent/decodeURI 関数を使って行われます。何もアップロードされず、外部リクエストもありません。利便性のため、最後のテキストとモード・form エンコードの選択のみがこのブラウザーのローカルストレージに保存されます。欄またはサイトデータを消去すれば削除できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -715,6 +780,11 @@ window.I18N_LOCALES = {
     "faq.q4": "왜 한글·이모지 등 비 ASCII 문자가 여기서 올바르게 인코딩되나요?",
     "faq.a4": "인코딩이 UTF-8 바이트를 기준으로 동작하기 때문입니다. encodeURIComponent는 각 문자를 먼저 UTF-8 바이트열로 바꾼 뒤 그 바이트를 퍼센트 인코딩합니다. 그래서 한글, 일본어, 중국어, 이모지가 유효한 %XX%XX 시퀀스가 되고 원문 그대로 정확히 디코딩됩니다 — 글자 깨짐이 없습니다. 덕분에 ASCII뿐 아니라 어떤 언어에도 믿을 수 있는 URL 인코더 디코더가 됩니다.",
     "faq.q5": "제 텍스트나 URL이 서버로 전송되나요?",
-    "faq.a5": "아니요. 모든 인코딩과 디코딩은 브라우저 내장 encodeURIComponent/encodeURI 및 decodeURIComponent/decodeURI 함수로 100% 브라우저 안에서 이뤄지며, 아무것도 업로드되지 않고 외부 요청도 없습니다. 편의를 위해 마지막 텍스트와 범위·form 인코딩 선택만 이 브라우저의 로컬 스토리지에 저장되며, 입력칸이나 사이트 데이터를 지우면 삭제됩니다."
+    "faq.a5": "아니요. 모든 인코딩과 디코딩은 브라우저 내장 encodeURIComponent/encodeURI 및 decodeURIComponent/decodeURI 함수로 100% 브라우저 안에서 이뤄지며, 아무것도 업로드되지 않고 외부 요청도 없습니다. 편의를 위해 마지막 텍스트와 범위·form 인코딩 선택만 이 브라우저의 로컬 스토리지에 저장되며, 입력칸이나 사이트 데이터를 지우면 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

@@ -155,7 +155,12 @@ window.I18N_LOCALES = {
     "tool.copied": "Copied",
     "tool.copyfail": "Copy failed — select and copy manually",
     "tool.blank": "{n} blank row(s) were ignored.",
-    "tool.example.data": "Item\tCartons\tL(cm)\tW(cm)\tH(cm)\tWeight(kg)\nCeramic floor tile\t120\t60\t40\t30\t22.5\nLED panel light\t80\t62\t62\t9\t3.2\nStainless bolt M8\t45\t35\t35\t35\t18\nCotton bath towel\t60\t58\t42\t46\t9.5\nGlass tumbler set\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "Item\tCartons\tL(cm)\tW(cm)\tH(cm)\tWeight(kg)\nCeramic floor tile\t120\t60\t40\t30\t22.5\nLED panel light\t80\t62\t62\t9\t3.2\nStainless bolt M8\t45\t35\t35\t35\t18\nCotton bath towel\t60\t58\t42\t46\t9.5\nGlass tumbler set\t150\t33\t33\t28\t7.8",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -295,7 +300,12 @@ window.I18N_LOCALES = {
     "tool.copied": "已复制",
     "tool.copyfail": "复制失败——请手动选择并复制",
     "tool.blank": "已忽略 {n} 个空白行。",
-    "tool.example.data": "品名\t数量\t长(cm)\t宽(cm)\t高(cm)\t重量(kg)\n陶瓷地砖\t120\t60\t40\t30\t22.5\nLED 面板灯\t80\t62\t62\t9\t3.2\n不锈钢螺栓 M8\t45\t35\t35\t35\t18\n纯棉浴巾\t60\t58\t42\t46\t9.5\n玻璃杯套装\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "品名\t数量\t长(cm)\t宽(cm)\t高(cm)\t重量(kg)\n陶瓷地砖\t120\t60\t40\t30\t22.5\nLED 面板灯\t80\t62\t62\t9\t3.2\n不锈钢螺栓 M8\t45\t35\t35\t35\t18\n纯棉浴巾\t60\t58\t42\t46\t9.5\n玻璃杯套装\t150\t33\t33\t28\t7.8",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -435,7 +445,12 @@ window.I18N_LOCALES = {
     "tool.copied": "कॉपी हुआ",
     "tool.copyfail": "कॉपी विफल — चुनकर स्वयं कॉपी करें",
     "tool.blank": "{n} खाली पंक्तियाँ अनदेखी की गईं।",
-    "tool.example.data": "वस्तु\tकार्टन\tलंबाई(cm)\tचौड़ाई(cm)\tऊंचाई(cm)\tवजन(kg)\nसिरेमिक फर्श टाइल\t120\t60\t40\t30\t22.5\nLED पैनल लाइट\t80\t62\t62\t9\t3.2\nस्टेनलेस बोल्ट M8\t45\t35\t35\t35\t18\nसूती स्नान तौलिया\t60\t58\t42\t46\t9.5\nकाँच के गिलास सेट\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "वस्तु\tकार्टन\tलंबाई(cm)\tचौड़ाई(cm)\tऊंचाई(cm)\tवजन(kg)\nसिरेमिक फर्श टाइल\t120\t60\t40\t30\t22.5\nLED पैनल लाइट\t80\t62\t62\t9\t3.2\nस्टेनलेस बोल्ट M8\t45\t35\t35\t35\t18\nसूती स्नान तौलिया\t60\t58\t42\t46\t9.5\nकाँच के गिलास सेट\t150\t33\t33\t28\t7.8",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -575,7 +590,12 @@ window.I18N_LOCALES = {
     "tool.copied": "Copiado",
     "tool.copyfail": "Error al copiar: selecciona y copia a mano",
     "tool.blank": "Se ignoraron {n} fila(s) en blanco.",
-    "tool.example.data": "Artículo\tCajas\tLargo(cm)\tAncho(cm)\tAlto(cm)\tPeso(kg)\nBaldosa cerámica\t120\t60\t40\t30\t22.5\nPanel LED\t80\t62\t62\t9\t3.2\nPerno inox M8\t45\t35\t35\t35\t18\nToalla de algodón\t60\t58\t42\t46\t9.5\nVasos de vidrio (juego)\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "Artículo\tCajas\tLargo(cm)\tAncho(cm)\tAlto(cm)\tPeso(kg)\nBaldosa cerámica\t120\t60\t40\t30\t22.5\nPanel LED\t80\t62\t62\t9\t3.2\nPerno inox M8\t45\t35\t35\t35\t18\nToalla de algodón\t60\t58\t42\t46\t9.5\nVasos de vidrio (juego)\t150\t33\t33\t28\t7.8",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -715,7 +735,12 @@ window.I18N_LOCALES = {
     "tool.copied": "تم النسخ",
     "tool.copyfail": "فشل النسخ — حدّد وانسخ يدويًا",
     "tool.blank": "تم تجاهل {n} صف فارغ.",
-    "tool.example.data": "الصنف\tعدد الكراتين\tالطول(cm)\tالعرض(cm)\tالارتفاع(cm)\tالوزن(kg)\nبلاط أرضي سيراميك\t120\t60\t40\t30\t22.5\nلوح إضاءة LED\t80\t62\t62\t9\t3.2\nمسمار ملولب ستانلس M8\t45\t35\t35\t35\t18\nمنشفة حمّام قطنية\t60\t58\t42\t46\t9.5\nطقم أكواب زجاجية\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "الصنف\tعدد الكراتين\tالطول(cm)\tالعرض(cm)\tالارتفاع(cm)\tالوزن(kg)\nبلاط أرضي سيراميك\t120\t60\t40\t30\t22.5\nلوح إضاءة LED\t80\t62\t62\t9\t3.2\nمسمار ملولب ستانلس M8\t45\t35\t35\t35\t18\nمنشفة حمّام قطنية\t60\t58\t42\t46\t9.5\nطقم أكواب زجاجية\t150\t33\t33\t28\t7.8",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -855,7 +880,12 @@ window.I18N_LOCALES = {
     "tool.copied": "Copié",
     "tool.copyfail": "Échec de la copie — sélectionnez et copiez manuellement",
     "tool.blank": "{n} ligne(s) vide(s) ignorée(s).",
-    "tool.example.data": "Article\tCartons\tLongueur(cm)\tLargeur(cm)\tHauteur(cm)\tPoids(kg)\nCarreau céramique\t120\t60\t40\t30\t22.5\nDalle LED\t80\t62\t62\t9\t3.2\nBoulon inox M8\t45\t35\t35\t35\t18\nServiette de bain coton\t60\t58\t42\t46\t9.5\nCoffret de verres\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "Article\tCartons\tLongueur(cm)\tLargeur(cm)\tHauteur(cm)\tPoids(kg)\nCarreau céramique\t120\t60\t40\t30\t22.5\nDalle LED\t80\t62\t62\t9\t3.2\nBoulon inox M8\t45\t35\t35\t35\t18\nServiette de bain coton\t60\t58\t42\t46\t9.5\nCoffret de verres\t150\t33\t33\t28\t7.8",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -995,7 +1025,12 @@ window.I18N_LOCALES = {
     "tool.copied": "কপি হয়েছে",
     "tool.copyfail": "কপি ব্যর্থ — নিজে নির্বাচন করে কপি করুন",
     "tool.blank": "{n}টি ফাঁকা সারি উপেক্ষা করা হয়েছে।",
-    "tool.example.data": "পণ্য\tকার্টন\tদৈর্ঘ্য(cm)\tপ্রস্থ(cm)\tউচ্চতা(cm)\tওজন(kg)\nসিরামিক ফ্লোর টাইল\t120\t60\t40\t30\t22.5\nLED প্যানেল লাইট\t80\t62\t62\t9\t3.2\nস্টেইনলেস বোল্ট M8\t45\t35\t35\t35\t18\nসুতির গোসল তোয়ালে\t60\t58\t42\t46\t9.5\nকাচের গ্লাস সেট\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "পণ্য\tকার্টন\tদৈর্ঘ্য(cm)\tপ্রস্থ(cm)\tউচ্চতা(cm)\tওজন(kg)\nসিরামিক ফ্লোর টাইল\t120\t60\t40\t30\t22.5\nLED প্যানেল লাইট\t80\t62\t62\t9\t3.2\nস্টেইনলেস বোল্ট M8\t45\t35\t35\t35\t18\nসুতির গোসল তোয়ালে\t60\t58\t42\t46\t9.5\nকাচের গ্লাস সেট\t150\t33\t33\t28\t7.8",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -1135,7 +1170,12 @@ window.I18N_LOCALES = {
     "tool.copied": "Copiado",
     "tool.copyfail": "Falha ao copiar — selecione e copie manualmente",
     "tool.blank": "{n} linha(s) em branco foram ignoradas.",
-    "tool.example.data": "Item\tCaixas\tComprimento(cm)\tLargura(cm)\tAltura(cm)\tPeso(kg)\nPiso cerâmico\t120\t60\t40\t30\t22.5\nPainel de LED\t80\t62\t62\t9\t3.2\nParafuso inox M8\t45\t35\t35\t35\t18\nToalha de banho de algodão\t60\t58\t42\t46\t9.5\nJogo de copos de vidro\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "Item\tCaixas\tComprimento(cm)\tLargura(cm)\tAltura(cm)\tPeso(kg)\nPiso cerâmico\t120\t60\t40\t30\t22.5\nPainel de LED\t80\t62\t62\t9\t3.2\nParafuso inox M8\t45\t35\t35\t35\t18\nToalha de banho de algodão\t60\t58\t42\t46\t9.5\nJogo de copos de vidro\t150\t33\t33\t28\t7.8",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -1275,7 +1315,12 @@ window.I18N_LOCALES = {
     "tool.copied": "Скопировано",
     "tool.copyfail": "Не удалось скопировать — выделите и скопируйте вручную",
     "tool.blank": "Пустых строк проигнорировано: {n}.",
-    "tool.example.data": "Наименование\tКоробки\tДлина(см)\tШирина(см)\tВысота(см)\tВес(кг)\nКерамическая плитка\t120\t60\t40\t30\t22.5\nСветодиодная панель\t80\t62\t62\t9\t3.2\nБолт нерж. M8\t45\t35\t35\t35\t18\nХлопковое полотенце\t60\t58\t42\t46\t9.5\nНабор стеклянных стаканов\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "Наименование\tКоробки\tДлина(см)\tШирина(см)\tВысота(см)\tВес(кг)\nКерамическая плитка\t120\t60\t40\t30\t22.5\nСветодиодная панель\t80\t62\t62\t9\t3.2\nБолт нерж. M8\t45\t35\t35\t35\t18\nХлопковое полотенце\t60\t58\t42\t46\t9.5\nНабор стеклянных стаканов\t150\t33\t33\t28\t7.8",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -1415,7 +1460,12 @@ window.I18N_LOCALES = {
     "tool.copied": "کاپی ہو گیا",
     "tool.copyfail": "کاپی ناکام — خود منتخب کر کے کاپی کریں",
     "tool.blank": "{n} خالی قطاریں نظرانداز کی گئیں۔",
-    "tool.example.data": "شے\tکارٹن کی تعداد\tلمبائی(cm)\tچوڑائی(cm)\tاونچائی(cm)\tوزن(kg)\nسیرامک فرش ٹائل\t120\t60\t40\t30\t22.5\nLED پینل لائٹ\t80\t62\t62\t9\t3.2\nاسٹینلیس بولٹ M8\t45\t35\t35\t35\t18\nسوتی نہانے کا تولیہ\t60\t58\t42\t46\t9.5\nشیشے کے گلاس سیٹ\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "شے\tکارٹن کی تعداد\tلمبائی(cm)\tچوڑائی(cm)\tاونچائی(cm)\tوزن(kg)\nسیرامک فرش ٹائل\t120\t60\t40\t30\t22.5\nLED پینل لائٹ\t80\t62\t62\t9\t3.2\nاسٹینلیس بولٹ M8\t45\t35\t35\t35\t18\nسوتی نہانے کا تولیہ\t60\t58\t42\t46\t9.5\nشیشے کے گلاس سیٹ\t150\t33\t33\t28\t7.8",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -1555,7 +1605,12 @@ window.I18N_LOCALES = {
     "tool.copied": "Tersalin",
     "tool.copyfail": "Gagal menyalin — pilih dan salin manual",
     "tool.blank": "{n} baris kosong diabaikan.",
-    "tool.example.data": "Barang\tDus\tPanjang(cm)\tLebar(cm)\tTinggi(cm)\tBerat(kg)\nUbin keramik lantai\t120\t60\t40\t30\t22.5\nLampu panel LED\t80\t62\t62\t9\t3.2\nBaut stainless M8\t45\t35\t35\t35\t18\nHanduk mandi katun\t60\t58\t42\t46\t9.5\nSet gelas kaca\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "Barang\tDus\tPanjang(cm)\tLebar(cm)\tTinggi(cm)\tBerat(kg)\nUbin keramik lantai\t120\t60\t40\t30\t22.5\nLampu panel LED\t80\t62\t62\t9\t3.2\nBaut stainless M8\t45\t35\t35\t35\t18\nHanduk mandi katun\t60\t58\t42\t46\t9.5\nSet gelas kaca\t150\t33\t33\t28\t7.8",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -1695,7 +1750,12 @@ window.I18N_LOCALES = {
     "tool.copied": "Kopiert",
     "tool.copyfail": "Kopieren fehlgeschlagen — manuell markieren und kopieren",
     "tool.blank": "{n} leere Zeile(n) wurden ignoriert.",
-    "tool.example.data": "Artikel\tKartons\tLänge(cm)\tBreite(cm)\tHöhe(cm)\tGewicht(kg)\nKeramik-Bodenfliese\t120\t60\t40\t30\t22.5\nLED-Panelleuchte\t80\t62\t62\t9\t3.2\nEdelstahlschraube M8\t45\t35\t35\t35\t18\nBadetuch aus Baumwolle\t60\t58\t42\t46\t9.5\nGläser-Set\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "Artikel\tKartons\tLänge(cm)\tBreite(cm)\tHöhe(cm)\tGewicht(kg)\nKeramik-Bodenfliese\t120\t60\t40\t30\t22.5\nLED-Panelleuchte\t80\t62\t62\t9\t3.2\nEdelstahlschraube M8\t45\t35\t35\t35\t18\nBadetuch aus Baumwolle\t60\t58\t42\t46\t9.5\nGläser-Set\t150\t33\t33\t28\t7.8",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -1835,7 +1895,12 @@ window.I18N_LOCALES = {
     "tool.copied": "コピーしました",
     "tool.copyfail": "コピーに失敗 — 手動で選択してコピーしてください",
     "tool.blank": "{n} 件の空行を無視しました。",
-    "tool.example.data": "品名\t箱数\t長さ(cm)\t幅(cm)\t高さ(cm)\t重量(kg)\nセラミック床タイル\t120\t60\t40\t30\t22.5\nLED パネルライト\t80\t62\t62\t9\t3.2\nステンレスボルト M8\t45\t35\t35\t35\t18\n綿バスタオル\t60\t58\t42\t46\t9.5\nガラスタンブラーセット\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "品名\t箱数\t長さ(cm)\t幅(cm)\t高さ(cm)\t重量(kg)\nセラミック床タイル\t120\t60\t40\t30\t22.5\nLED パネルライト\t80\t62\t62\t9\t3.2\nステンレスボルト M8\t45\t35\t35\t35\t18\n綿バスタオル\t60\t58\t42\t46\t9.5\nガラスタンブラーセット\t150\t33\t33\t28\t7.8",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -1975,6 +2040,11 @@ window.I18N_LOCALES = {
     "tool.copied": "복사됨",
     "tool.copyfail": "복사 실패 — 직접 선택해 복사하세요",
     "tool.blank": "빈 행 {n}개를 무시했습니다.",
-    "tool.example.data": "품목\t수량\t가로(cm)\t세로(cm)\t높이(cm)\t중량(kg)\n세라믹 바닥타일\t120\t60\t40\t30\t22.5\nLED 패널등\t80\t62\t62\t9\t3.2\n스테인리스 볼트 M8\t45\t35\t35\t35\t18\n면 목욕수건\t60\t58\t42\t46\t9.5\n유리컵 세트\t150\t33\t33\t28\t7.8"
+    "tool.example.data": "품목\t수량\t가로(cm)\t세로(cm)\t높이(cm)\t중량(kg)\n세라믹 바닥타일\t120\t60\t40\t30\t22.5\nLED 패널등\t80\t62\t62\t9\t3.2\n스테인리스 볼트 M8\t45\t35\t35\t35\t18\n면 목욕수건\t60\t58\t42\t46\t9.5\n유리컵 세트\t150\t33\t33\t28\t7.8",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

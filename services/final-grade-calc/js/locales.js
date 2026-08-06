@@ -67,7 +67,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is my grade information sent to a server?",
     "faq.a4": "No. Every calculation runs entirely in your browser — your current grade, target grade, and exam weight are never uploaded or sent anywhere. Your last entries are saved only in your browser's local storage so they're there when you come back, and this tool has no sign-up, no ads, and no tracking of what you type.",
     "faq.q5": "Where do the A, B, and C targets in the table come from?",
-    "faq.a5": "The table uses common US-style letter grade cutoffs — A at 90%, B at 80%, and C at 70% — to quickly show the score you'd need on the final for each. Grading scales vary widely by school and country (for example, many universities outside the US use different letter cutoffs or a GPA-based scale), so treat the table as a quick reference and check your syllabus for your institution's exact scale."
+    "faq.a5": "The table uses common US-style letter grade cutoffs — A at 90%, B at 80%, and C at 70% — to quickly show the score you'd need on the final for each. Grading scales vary widely by school and country (for example, many universities outside the US use different letter cutoffs or a GPA-based scale), so treat the table as a quick reference and check your syllabus for your institution's exact scale.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -119,7 +124,12 @@ window.I18N_LOCALES = {
     "faq.q4": "我的成绩信息会被发送到服务器吗？",
     "faq.a4": "不会。所有计算都完全在你的浏览器中进行——你的当前成绩、目标成绩和考试权重都不会被上传或发送到任何地方。你上次输入的数值只会保存在浏览器本地存储中，方便你下次访问时继续使用；本工具无需注册、没有广告，也不会追踪你输入的任何内容。",
     "faq.q5": "表格里的 A、B、C 目标是怎么来的？",
-    "faq.a5": "该表格使用了常见的美式字母等级划分——A 为 90%，B 为 80%，C 为 70%——用来快速显示达到每个等级期末所需的分数。不同学校和国家的评分标准差异很大（例如，美国以外的许多大学采用不同的字母等级划分或 GPA 制），因此这个表格仅供快速参考，具体请以你所在学校的教学大纲为准。"
+    "faq.a5": "该表格使用了常见的美式字母等级划分——A 为 90%，B 为 80%，C 为 70%——用来快速显示达到每个等级期末所需的分数。不同学校和国家的评分标准差异很大（例如，美国以外的许多大学采用不同的字母等级划分或 GPA 制），因此这个表格仅供快速参考，具体请以你所在学校的教学大纲为准。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -171,7 +181,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या मेरी ग्रेड जानकारी किसी सर्वर पर भेजी जाती है?",
     "faq.a4": "नहीं। हर कैलकुलेशन पूरी तरह आपके ब्राउज़र में होती है — आपका मौजूदा ग्रेड, लक्ष्य ग्रेड और एग्ज़ाम वेटेज कहीं भी अपलोड या भेजे नहीं जाते। आपकी आख़िरी एंट्री सिर्फ़ आपके ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार भी वहीं मिले; इस टूल में कोई साइन-अप नहीं, कोई विज्ञापन नहीं, और आप जो भी टाइप करें उसकी कोई ट्रैकिंग नहीं।",
     "faq.q5": "टेबल में दिए गए A, B, C लक्ष्य कहाँ से आते हैं?",
-    "faq.a5": "यह टेबल आम US-स्टाइल लेटर-ग्रेड सीमाओं का इस्तेमाल करती है — A यानी 90%, B यानी 80%, और C यानी 70% — ताकि हर एक के लिए फाइनल में चाहिए स्कोर झटपट दिख सके। स्कूल और देश के हिसाब से ग्रेडिंग स्केल काफ़ी अलग-अलग होते हैं (जैसे, US के बाहर कई यूनिवर्सिटीज़ अलग लेटर सीमाएँ या GPA-आधारित स्केल इस्तेमाल करती हैं), इसलिए इस टेबल को सिर्फ़ एक झटपट रेफ़रेंस मानें और अपने संस्थान के सही स्केल के लिए सिलेबस ज़रूर देखें।"
+    "faq.a5": "यह टेबल आम US-स्टाइल लेटर-ग्रेड सीमाओं का इस्तेमाल करती है — A यानी 90%, B यानी 80%, और C यानी 70% — ताकि हर एक के लिए फाइनल में चाहिए स्कोर झटपट दिख सके। स्कूल और देश के हिसाब से ग्रेडिंग स्केल काफ़ी अलग-अलग होते हैं (जैसे, US के बाहर कई यूनिवर्सिटीज़ अलग लेटर सीमाएँ या GPA-आधारित स्केल इस्तेमाल करती हैं), इसलिए इस टेबल को सिर्फ़ एक झटपट रेफ़रेंस मानें और अपने संस्थान के सही स्केल के लिए सिलेबस ज़रूर देखें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -223,7 +238,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se envía mi información de notas a un servidor?",
     "faq.a4": "No. Todos los cálculos se realizan enteramente en tu navegador — tu nota actual, tu nota objetivo y el peso del examen nunca se suben ni se envían a ningún sitio. Tus últimos datos introducidos se guardan solo en el almacenamiento local de tu navegador para que estén ahí cuando vuelvas, y esta herramienta no requiere registro, no tiene anuncios y no rastrea lo que escribes.",
     "faq.q5": "¿De dónde salen los objetivos A, B y C de la tabla?",
-    "faq.a5": "La tabla usa los cortes de nota habituales al estilo estadounidense — A a partir del 90%, B a partir del 80% y C a partir del 70% — para mostrar rápidamente la nota que necesitarías en el final para cada una. Las escalas de calificación varían mucho según el centro y el país (por ejemplo, muchas universidades fuera de Estados Unidos usan cortes distintos o una escala basada en el GPA), así que trata la tabla como una referencia rápida y consulta el programa de tu centro para conocer su escala exacta."
+    "faq.a5": "La tabla usa los cortes de nota habituales al estilo estadounidense — A a partir del 90%, B a partir del 80% y C a partir del 70% — para mostrar rápidamente la nota que necesitarías en el final para cada una. Las escalas de calificación varían mucho según el centro y el país (por ejemplo, muchas universidades fuera de Estados Unidos usan cortes distintos o una escala basada en el GPA), así que trata la tabla como una referencia rápida y consulta el programa de tu centro para conocer su escala exacta.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -275,7 +295,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل تُرسَل معلومات درجاتي إلى خادم؟",
     "faq.a4": "لا. تتم جميع الحسابات بالكامل داخل متصفحك — لا يتم رفع أو إرسال درجتك الحالية أو المستهدفة أو وزن الامتحان إلى أي مكان. تُحفظ آخر القيم التي أدخلتها فقط في التخزين المحلي لمتصفحك لتكون موجودة عند عودتك، ولا تتطلب هذه الأداة تسجيلًا ولا تحتوي على إعلانات ولا تتتبّع ما تكتبه.",
     "faq.q5": "من أين تأتي أهداف A وB وC في الجدول؟",
-    "faq.a5": "يستخدم الجدول حدود التقديرات الشائعة على الطريقة الأمريكية — A عند 90%، وB عند 80%، وC عند 70% — لإظهار الدرجة التي تحتاجها في النهائي لكل منها بسرعة. تختلف مقاييس التقييم كثيرًا حسب المدرسة والبلد (فكثير من الجامعات خارج الولايات المتحدة تستخدم حدودًا مختلفة أو مقياس GPA)، لذا اعتبر الجدول مرجعًا سريعًا وراجع منهج مؤسستك لمعرفة المقياس الدقيق."
+    "faq.a5": "يستخدم الجدول حدود التقديرات الشائعة على الطريقة الأمريكية — A عند 90%، وB عند 80%، وC عند 70% — لإظهار الدرجة التي تحتاجها في النهائي لكل منها بسرعة. تختلف مقاييس التقييم كثيرًا حسب المدرسة والبلد (فكثير من الجامعات خارج الولايات المتحدة تستخدم حدودًا مختلفة أو مقياس GPA)، لذا اعتبر الجدول مرجعًا سريعًا وراجع منهج مؤسستك لمعرفة المقياس الدقيق.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -327,7 +352,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mes informations de notes sont-elles envoyées à un serveur ?",
     "faq.a4": "Non. Tous les calculs s'effectuent entièrement dans votre navigateur — votre note actuelle, votre note visée et le poids de l'examen ne sont jamais téléversés ni envoyés où que ce soit. Vos dernières saisies sont enregistrées uniquement dans le stockage local de votre navigateur pour être retrouvées à votre retour, et cet outil ne nécessite aucune inscription, ne contient aucune publicité et ne suit pas ce que vous tapez.",
     "faq.q5": "D'où viennent les objectifs A, B et C du tableau ?",
-    "faq.a5": "Le tableau utilise des seuils de notation courants de style américain — A à partir de 90 %, B à partir de 80 % et C à partir de 70 % — pour montrer rapidement la note qu'il vous faudrait au final pour chacun. Les échelles de notation varient beaucoup selon l'établissement et le pays (par exemple, de nombreuses universités hors des États-Unis utilisent des seuils différents ou une échelle basée sur le GPA), donc considérez ce tableau comme une référence rapide et vérifiez le plan de cours de votre établissement pour son échelle exacte."
+    "faq.a5": "Le tableau utilise des seuils de notation courants de style américain — A à partir de 90 %, B à partir de 80 % et C à partir de 70 % — pour montrer rapidement la note qu'il vous faudrait au final pour chacun. Les échelles de notation varient beaucoup selon l'établissement et le pays (par exemple, de nombreuses universités hors des États-Unis utilisent des seuils différents ou une échelle basée sur le GPA), donc considérez ce tableau comme une référence rapide et vérifiez le plan de cours de votre établissement pour son échelle exacte.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -379,7 +409,12 @@ window.I18N_LOCALES = {
     "faq.q4": "আমার গ্রেডের তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
     "faq.a4": "না। প্রতিটি হিসাব সম্পূর্ণভাবে আপনার ব্রাউজারেই হয় — আপনার বর্তমান গ্রেড, লক্ষ্য গ্রেড আর পরীক্ষার ওজন কখনো আপলোড বা কোথাও পাঠানো হয় না। আপনার শেষ দেওয়া তথ্য শুধু আপনার ব্রাউজারের লোকাল স্টোরেজে সেভ থাকে যাতে পরের বার ফিরে এলেও পান; এই টুলে কোনো সাইন-আপ নেই, কোনো বিজ্ঞাপন নেই, আর আপনি যা টাইপ করেন তার কোনো ট্র্যাকিং নেই।",
     "faq.q5": "টেবিলে দেওয়া A, B, C লক্ষ্যগুলো কোথা থেকে এসেছে?",
-    "faq.a5": "এই টেবিল সাধারণ US-স্টাইল লেটার-গ্রেড সীমা ব্যবহার করে — A মানে 90%, B মানে 80%, আর C মানে 70% — যাতে প্রতিটির জন্য ফাইনালে দরকারি স্কোর দ্রুত দেখা যায়। স্কুল আর দেশভেদে গ্রেডিং স্কেল অনেক আলাদা হয় (যেমন, US-এর বাইরে অনেক বিশ্ববিদ্যালয় ভিন্ন লেটার সীমা বা GPA-ভিত্তিক স্কেল ব্যবহার করে), তাই এই টেবিলকে শুধু একটি দ্রুত রেফারেন্স হিসেবে দেখুন এবং আপনার প্রতিষ্ঠানের সঠিক স্কেলের জন্য সিলেবাস দেখুন।"
+    "faq.a5": "এই টেবিল সাধারণ US-স্টাইল লেটার-গ্রেড সীমা ব্যবহার করে — A মানে 90%, B মানে 80%, আর C মানে 70% — যাতে প্রতিটির জন্য ফাইনালে দরকারি স্কোর দ্রুত দেখা যায়। স্কুল আর দেশভেদে গ্রেডিং স্কেল অনেক আলাদা হয় (যেমন, US-এর বাইরে অনেক বিশ্ববিদ্যালয় ভিন্ন লেটার সীমা বা GPA-ভিত্তিক স্কেল ব্যবহার করে), তাই এই টেবিলকে শুধু একটি দ্রুত রেফারেন্স হিসেবে দেখুন এবং আপনার প্রতিষ্ঠানের সঠিক স্কেলের জন্য সিলেবাস দেখুন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -431,7 +466,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Minhas informações de nota são enviadas a um servidor?",
     "faq.a4": "Não. Todo cálculo é feito inteiramente no seu navegador — sua nota atual, sua meta e o peso da prova nunca são enviados a lugar nenhum. Seus últimos dados digitados são salvos apenas no armazenamento local do seu navegador, para estarem lá quando você voltar, e esta ferramenta não exige cadastro, não tem anúncios e não rastreia o que você digita.",
     "faq.q5": "De onde vêm as metas A, B e C da tabela?",
-    "faq.a5": "A tabela usa cortes de conceito comuns no estilo americano — A a partir de 90%, B a partir de 80% e C a partir de 70% — para mostrar rapidamente a nota que você precisaria na final para cada um. As escalas de avaliação variam muito conforme a instituição e o país (por exemplo, muitas universidades fora dos EUA usam cortes diferentes ou uma escala baseada em GPA), então trate a tabela como uma referência rápida e consulte o plano de curso da sua instituição para a escala exata."
+    "faq.a5": "A tabela usa cortes de conceito comuns no estilo americano — A a partir de 90%, B a partir de 80% e C a partir de 70% — para mostrar rapidamente a nota que você precisaria na final para cada um. As escalas de avaliação variam muito conforme a instituição e o país (por exemplo, muitas universidades fora dos EUA usam cortes diferentes ou uma escala baseada em GPA), então trate a tabela como uma referência rápida e consulte o plano de curso da sua instituição para a escala exata.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -483,7 +523,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Отправляется ли информация об оценках на сервер?",
     "faq.a4": "Нет. Все расчёты полностью выполняются в вашем браузере — текущая оценка, желаемая оценка и вес экзамена никогда никуда не загружаются и не отправляются. Последние введённые данные сохраняются только в локальном хранилище вашего браузера, чтобы быть под рукой при следующем визите; инструмент не требует регистрации, не содержит рекламы и не отслеживает вводимые данные.",
     "faq.q5": "Откуда берутся цели A, B и C в таблице?",
-    "faq.a5": "Таблица использует распространённые границы буквенных оценок в американском стиле — A от 90%, B от 80% и C от 70% — чтобы быстро показать нужный балл на финале для каждой из них. Шкалы оценивания сильно различаются в зависимости от учебного заведения и страны (например, многие университеты за пределами США используют другие границы или шкалу на основе GPA), поэтому воспринимайте таблицу как быстрый ориентир и сверяйтесь с программой вашего учебного заведения для точной шкалы."
+    "faq.a5": "Таблица использует распространённые границы буквенных оценок в американском стиле — A от 90%, B от 80% и C от 70% — чтобы быстро показать нужный балл на финале для каждой из них. Шкалы оценивания сильно различаются в зависимости от учебного заведения и страны (например, многие университеты за пределами США используют другие границы или шкалу на основе GPA), поэтому воспринимайте таблицу как быстрый ориентир и сверяйтесь с программой вашего учебного заведения для точной шкалы.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -535,7 +580,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا میری گریڈ کی معلومات کسی سرور کو بھیجی جاتی ہیں؟",
     "faq.a4": "نہیں۔ ہر حساب مکمل طور پر آپ کے براؤزر میں ہوتا ہے — آپ کا موجودہ گریڈ، مطلوبہ گریڈ اور امتحان کا وزن کہیں بھی اپ لوڈ یا بھیجے نہیں جاتے۔ آپ کی آخری درج کردہ قدریں صرف آپ کے براؤزر کے لوکل سٹوریج میں محفوظ ہوتی ہیں تاکہ اگلی بار بھی موجود ہوں؛ اس ٹول میں کوئی سائن اپ نہیں، کوئی اشتہار نہیں، اور آپ جو کچھ ٹائپ کرتے ہیں اس کی کوئی ٹریکنگ نہیں۔",
     "faq.q5": "جدول میں دیے گئے A، B، C اہداف کہاں سے آتے ہیں؟",
-    "faq.a5": "یہ جدول عام امریکی طرز کی لیٹر گریڈ حدود استعمال کرتا ہے — A یعنی 90%، B یعنی 80%، اور C یعنی 70% — تاکہ ہر ایک کے لیے فائنل میں درکار اسکور فوری طور پر دکھایا جا سکے۔ سکول اور ملک کے لحاظ سے گریڈنگ پیمانے کافی مختلف ہوتے ہیں (مثلاً امریکہ سے باہر کئی جامعات مختلف لیٹر حدود یا GPA پر مبنی پیمانہ استعمال کرتی ہیں)، اس لیے اس جدول کو صرف ایک فوری حوالہ سمجھیں اور اپنے ادارے کے درست پیمانے کے لیے نصاب ضرور دیکھیں۔"
+    "faq.a5": "یہ جدول عام امریکی طرز کی لیٹر گریڈ حدود استعمال کرتا ہے — A یعنی 90%، B یعنی 80%، اور C یعنی 70% — تاکہ ہر ایک کے لیے فائنل میں درکار اسکور فوری طور پر دکھایا جا سکے۔ سکول اور ملک کے لحاظ سے گریڈنگ پیمانے کافی مختلف ہوتے ہیں (مثلاً امریکہ سے باہر کئی جامعات مختلف لیٹر حدود یا GPA پر مبنی پیمانہ استعمال کرتی ہیں)، اس لیے اس جدول کو صرف ایک فوری حوالہ سمجھیں اور اپنے ادارے کے درست پیمانے کے لیے نصاب ضرور دیکھیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -587,7 +637,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah informasi nilai saya dikirim ke server?",
     "faq.a4": "Tidak. Semua perhitungan sepenuhnya berjalan di browser Anda — nilai saat ini, nilai target, dan bobot ujian tidak pernah diunggah atau dikirim ke mana pun. Data terakhir yang Anda masukkan hanya disimpan di penyimpanan lokal browser Anda agar tetap ada saat Anda kembali; alat ini tidak memerlukan pendaftaran, tidak ada iklan, dan tidak melacak apa pun yang Anda ketik.",
     "faq.q5": "Dari mana asal target A, B, dan C pada tabel?",
-    "faq.a5": "Tabel ini menggunakan batas nilai huruf bergaya Amerika yang umum — A mulai 90%, B mulai 80%, dan C mulai 70% — untuk menunjukkan dengan cepat nilai yang Anda butuhkan di final untuk masing-masing. Skala penilaian sangat bervariasi menurut sekolah dan negara (misalnya, banyak universitas di luar AS menggunakan batas huruf berbeda atau skala berbasis IPK), jadi anggap tabel ini sebagai referensi cepat dan periksa silabus institusi Anda untuk skala yang pasti."
+    "faq.a5": "Tabel ini menggunakan batas nilai huruf bergaya Amerika yang umum — A mulai 90%, B mulai 80%, dan C mulai 70% — untuk menunjukkan dengan cepat nilai yang Anda butuhkan di final untuk masing-masing. Skala penilaian sangat bervariasi menurut sekolah dan negara (misalnya, banyak universitas di luar AS menggunakan batas huruf berbeda atau skala berbasis IPK), jadi anggap tabel ini sebagai referensi cepat dan periksa silabus institusi Anda untuk skala yang pasti.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -639,7 +694,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Werden meine Notendaten an einen Server gesendet?",
     "faq.a4": "Nein. Jede Berechnung läuft vollständig in deinem Browser — deine aktuelle Note, Zielnote und die Gewichtung der Prüfung werden nirgendwohin hochgeladen oder gesendet. Deine letzten Eingaben werden nur im lokalen Speicher deines Browsers gesichert, damit sie beim nächsten Besuch noch da sind. Das Tool erfordert keine Anmeldung, enthält keine Werbung und verfolgt nicht, was du eingibst.",
     "faq.q5": "Woher kommen die Ziele A, B und C in der Tabelle?",
-    "faq.a5": "Die Tabelle verwendet gängige Notengrenzen im US-Stil — A ab 90%, B ab 80% und C ab 70% —, um schnell die für jedes Ziel benötigte Endexamennote zu zeigen. Notensysteme unterscheiden sich stark je nach Schule und Land (viele Universitäten außerhalb der USA verwenden zum Beispiel andere Grenzen oder eine GPA-basierte Skala), also betrachte die Tabelle als schnelle Orientierung und prüfe den Lehrplan deiner Einrichtung für die genaue Skala."
+    "faq.a5": "Die Tabelle verwendet gängige Notengrenzen im US-Stil — A ab 90%, B ab 80% und C ab 70% —, um schnell die für jedes Ziel benötigte Endexamennote zu zeigen. Notensysteme unterscheiden sich stark je nach Schule und Land (viele Universitäten außerhalb der USA verwenden zum Beispiel andere Grenzen oder eine GPA-basierte Skala), also betrachte die Tabelle als schnelle Orientierung und prüfe den Lehrplan deiner Einrichtung für die genaue Skala.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -691,7 +751,12 @@ window.I18N_LOCALES = {
     "faq.q4": "成績情報はサーバーに送信されますか？",
     "faq.a4": "いいえ。計算はすべてブラウザ内で完結し、現在の成績、目標の成績、試験の配点がどこかにアップロードされたり送信されたりすることはありません。最後に入力した内容はブラウザのローカルストレージにのみ保存され、次回訪問時にも残っています。このツールには登録も広告もなく、入力内容が追跡されることもありません。",
     "faq.q5": "表にあるA・B・Cの目標はどこから来ていますか？",
-    "faq.a5": "この表は一般的なアメリカ式の成績区分（A は90%以上、B は80%以上、C は70%以上）を使い、それぞれに必要な期末試験の点数をすぐに示します。成績の基準は学校や国によって大きく異なります（例えば、アメリカ以外の多くの大学では区分やGPA基準の尺度が異なります）。そのためこの表はあくまで簡単な目安として扱い、正確な基準は学校のシラバスで確認してください。"
+    "faq.a5": "この表は一般的なアメリカ式の成績区分（A は90%以上、B は80%以上、C は70%以上）を使い、それぞれに必要な期末試験の点数をすぐに示します。成績の基準は学校や国によって大きく異なります（例えば、アメリカ以外の多くの大学では区分やGPA基準の尺度が異なります）。そのためこの表はあくまで簡単な目安として扱い、正確な基準は学校のシラバスで確認してください。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -743,6 +808,11 @@ window.I18N_LOCALES = {
     "faq.q4": "제 성적 정보가 서버로 전송되나요?",
     "faq.a4": "아니요. 모든 계산은 전적으로 브라우저에서 이루어지며, 현재 성적·목표 성적·시험 반영 비율은 어디로도 업로드되거나 전송되지 않습니다. 마지막으로 입력한 값은 브라우저의 로컬 저장소에만 저장되어 다음에 다시 방문했을 때도 남아 있으며, 이 도구는 회원가입도, 광고도, 입력 내용 추적도 없습니다.",
     "faq.q5": "표에 있는 A·B·C 목표는 어떻게 정해졌나요?",
-    "faq.a5": "이 표는 흔히 쓰이는 미국식 등급 기준 — A는 90% 이상, B는 80% 이상, C는 70% 이상 — 을 사용해 각 등급에 필요한 기말고사 점수를 빠르게 보여줍니다. 등급 기준은 학교와 국가마다 크게 다르므로(예: 미국 외 많은 대학은 다른 등급 기준이나 GPA 기반 척도를 사용합니다), 이 표는 참고용으로만 활용하고 정확한 기준은 소속 기관의 강의계획서에서 확인하세요."
+    "faq.a5": "이 표는 흔히 쓰이는 미국식 등급 기준 — A는 90% 이상, B는 80% 이상, C는 70% 이상 — 을 사용해 각 등급에 필요한 기말고사 점수를 빠르게 보여줍니다. 등급 기준은 학교와 국가마다 크게 다르므로(예: 미국 외 많은 대학은 다른 등급 기준이나 GPA 기반 척도를 사용합니다), 이 표는 참고용으로만 활용하고 정확한 기준은 소속 기관의 강의계획서에서 확인하세요.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

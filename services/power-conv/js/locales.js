@@ -62,7 +62,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How does BTU/h relate to watts and horsepower?",
     "faq.a4": "BTU/h (British thermal units per hour) measures heating and cooling power, most often seen on air conditioner and furnace ratings. 1 BTU/h equals 0.29307107017222222 W. Air conditioners are commonly sold by \"tons\" of cooling, where 1 ton = 12,000 BTU/h ≈ 3.517 kW — useful when comparing a US-spec AC rated in BTU/h against a unit rated in kW or hp elsewhere.",
     "faq.q5": "Is my input sent to a server?",
-    "faq.a5": "No. This power converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example horsepower to kilowatts), kept in your browser's local storage so it's ready next time. The value itself is not stored."
+    "faq.a5": "No. This power converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example horsepower to kilowatts), kept in your browser's local storage so it's ready next time. The value itself is not stored.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -109,7 +114,12 @@ window.I18N_LOCALES = {
     "faq.q4": "BTU/h 和瓦特、马力之间是什么关系？",
     "faq.a4": "BTU/h（每小时英热单位）用于衡量制冷制热功率，常见于空调和暖炉的铭牌。1 BTU/h 等于 0.29307107017222222 W。空调常以“吨”标注制冷量，其中 1 吨 = 12000 BTU/h ≈ 3.517 kW — 便于将美制 BTU/h 规格与其他地区常见的 kW 或 hp 规格对比。",
     "faq.q5": "我输入的数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个功率换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如马力换千瓦），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存。"
+    "faq.a5": "不会。这个功率换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如马力换千瓦），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -156,7 +166,12 @@ window.I18N_LOCALES = {
     "faq.q4": "BTU/h का वॉट और हॉर्सपावर से क्या संबंध है?",
     "faq.a4": "BTU/h (प्रति घंटा ब्रिटिश थर्मल यूनिट) हीटिंग और कूलिंग पावर मापता है, जो अक्सर एयर कंडीशनर और फर्नेस की रेटिंग में दिखता है। 1 BTU/h, 0.29307107017222222 W के बराबर है। एयर कंडीशनर अक्सर कूलिंग के \"टन\" में बेचे जाते हैं, जहाँ 1 टन = 12000 BTU/h ≈ 3.517 kW होता है — यह तब उपयोगी है जब BTU/h में रेटेड किसी US-स्पेक AC की तुलना कहीं और kW या hp में रेटेड यूनिट से करनी हो।",
     "faq.q5": "क्या मेरा इनपुट सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह पावर कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आप जो संख्या टाइप करते हैं वह कभी कहीं अपलोड नहीं होती। केवल आपकी आख़िरी चुनी गई इकाई-जोड़ी (जैसे हॉर्सपावर से किलोवाट) सेव होती है, आपके ब्राउज़र के लोकल स्टोरेज में, ताकि अगली बार तैयार रहे। मान खुद सेव नहीं होता।"
+    "faq.a5": "नहीं। यह पावर कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आप जो संख्या टाइप करते हैं वह कभी कहीं अपलोड नहीं होती। केवल आपकी आख़िरी चुनी गई इकाई-जोड़ी (जैसे हॉर्सपावर से किलोवाट) सेव होती है, आपके ब्राउज़र के लोकल स्टोरेज में, ताकि अगली बार तैयार रहे। मान खुद सेव नहीं होता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -203,7 +218,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Qué relación tiene el BTU/h con los vatios y los caballos de fuerza?",
     "faq.a4": "El BTU/h (unidades térmicas británicas por hora) mide la potencia de calefacción y refrigeración, y aparece sobre todo en aires acondicionados y calderas. 1 BTU/h equivale a 0.29307107017222222 W. Los aires acondicionados suelen venderse por «toneladas» de refrigeración, donde 1 tonelada = 12,000 BTU/h ≈ 3.517 kW — útil para comparar un equipo con ficha en BTU/h frente a otro con ficha en kW o hp.",
     "faq.q5": "¿Se envían mis datos a un servidor?",
-    "faq.a5": "No. Este conversor de potencia funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es el último par de unidades que elegiste (por ejemplo, caballos de fuerza a kilovatios), en el almacenamiento local del navegador para tenerlo listo la próxima vez. El valor en sí no se guarda."
+    "faq.a5": "No. Este conversor de potencia funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es el último par de unidades que elegiste (por ejemplo, caballos de fuerza a kilovatios), en el almacenamiento local del navegador para tenerlo listo la próxima vez. El valor en sí no se guarda.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -250,7 +270,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ما علاقة BTU/h بالواط والحصان؟",
     "faq.a4": "تقيس BTU/h (الوحدة الحرارية البريطانية في الساعة) قدرة التبريد والتدفئة، وتظهر غالبًا في تصنيفات مكيفات الهواء وأفران التدفئة. 1 BTU/h تساوي 0.29307107017222222 واط. تُباع مكيفات الهواء عادة بـ«أطنان» التبريد، حيث الطن الواحد = 12000 BTU/h ≈ 3.517 kW — وهذا مفيد عند مقارنة مكيّف مصنَّف بـBTU/h مع وحدة مصنَّفة بالكيلوواط أو الحصان.",
     "faq.q5": "هل تُرسَل بياناتي إلى خادم؟",
-    "faq.a5": "لا. يعمل محول الطاقة هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفَع إلى أي مكان أبدًا. الشيء الوحيد الذي يُحفَظ هو زوج الوحدات الذي اخترته آخر مرة (مثلاً الحصان إلى كيلوواط)، ويُخزَّن في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة. القيمة نفسها لا تُحفَظ."
+    "faq.a5": "لا. يعمل محول الطاقة هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفَع إلى أي مكان أبدًا. الشيء الوحيد الذي يُحفَظ هو زوج الوحدات الذي اخترته آخر مرة (مثلاً الحصان إلى كيلوواط)، ويُخزَّن في التخزين المحلي لمتصفحك ليكون جاهزًا في المرة القادمة. القيمة نفسها لا تُحفَظ.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -297,7 +322,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quel est le rapport entre BTU/h et les watts ou les chevaux ?",
     "faq.a4": "Le BTU/h (unités thermiques britanniques par heure) mesure la puissance de chauffage et de climatisation, souvent indiquée sur les climatiseurs et chaudières. 1 BTU/h équivaut à 0.29307107017222222 W. Les climatiseurs sont souvent vendus en « tonnes » de froid, où 1 tonne = 12000 BTU/h ≈ 3.517 kW — utile pour comparer un appareil noté en BTU/h à un autre noté en kW ou en hp.",
     "faq.q5": "Mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur de puissance fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais téléversé nulle part. La seule chose enregistrée est la dernière paire d'unités choisie (par exemple chevaux vers kilowatts), conservée dans le stockage local de votre navigateur pour être prête la prochaine fois. La valeur elle-même n'est pas enregistrée."
+    "faq.a5": "Non. Ce convertisseur de puissance fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais téléversé nulle part. La seule chose enregistrée est la dernière paire d'unités choisie (par exemple chevaux vers kilowatts), conservée dans le stockage local de votre navigateur pour être prête la prochaine fois. La valeur elle-même n'est pas enregistrée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -344,7 +374,12 @@ window.I18N_LOCALES = {
     "faq.q4": "BTU/h ওয়াট এবং হর্সপাওয়ারের সঙ্গে কীভাবে সম্পর্কিত?",
     "faq.a4": "BTU/h (প্রতি ঘণ্টায় ব্রিটিশ থার্মাল ইউনিট) হিটিং ও কুলিং পাওয়ার পরিমাপ করে, সাধারণত এসি ও ফার্নেসের রেটিংয়ে দেখা যায়। 1 BTU/h সমান 0.29307107017222222 W। এসি প্রায়ই কুলিং-এর “টন” হিসেবে বিক্রি হয়, যেখানে 1 টন = 12000 BTU/h ≈ 3.517 kW — BTU/h-এ রেট করা মার্কিন এসিকে kW বা hp-তে রেট করা অন্য কোনো ইউনিটের সঙ্গে তুলনা করতে এটি কাজে লাগে।",
     "faq.q5": "আমার ইনপুট কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই পাওয়ার কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যা লেখেন তা কখনোই কোথাও আপলোড করা হয় না। শুধু আপনার সবশেষ বেছে নেওয়া এককের জোড়া (যেমন হর্সপাওয়ার থেকে কিলোওয়াট) সংরক্ষিত হয়, আপনার ব্রাউজারের লোকাল স্টোরেজে, পরের বার প্রস্তুত রাখতে। মানটি নিজে সংরক্ষিত হয় না।"
+    "faq.a5": "না। এই পাওয়ার কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যা লেখেন তা কখনোই কোথাও আপলোড করা হয় না। শুধু আপনার সবশেষ বেছে নেওয়া এককের জোড়া (যেমন হর্সপাওয়ার থেকে কিলোওয়াট) সংরক্ষিত হয়, আপনার ব্রাউজারের লোকাল স্টোরেজে, পরের বার প্রস্তুত রাখতে। মানটি নিজে সংরক্ষিত হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -391,7 +426,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Qual é a relação entre BTU/h e watts ou cavalos?",
     "faq.a4": "O BTU/h (unidades térmicas britânicas por hora) mede a potência de aquecimento e refrigeração, geralmente vista em ar-condicionados e fornalhas. 1 BTU/h equivale a 0.29307107017222222 W. Ar-condicionados costumam ser vendidos em “toneladas” de refrigeração, em que 1 tonelada = 12000 BTU/h ≈ 3.517 kW — útil para comparar um aparelho com ficha em BTU/h com outro em kW ou hp.",
     "faq.q5": "Meus dados são enviados para um servidor?",
-    "faq.a5": "Não. Este conversor de potência funciona inteiramente no seu navegador — o número que você digita nunca é enviado a lugar nenhum. A única coisa salva é o último par de unidades escolhido (por exemplo, cavalos para quilowatts), guardado no armazenamento local do navegador para ficar pronto na próxima vez. O valor em si não é salvo."
+    "faq.a5": "Não. Este conversor de potência funciona inteiramente no seu navegador — o número que você digita nunca é enviado a lugar nenhum. A única coisa salva é o último par de unidades escolhido (por exemplo, cavalos para quilowatts), guardado no armazenamento local do navegador para ficar pronto na próxima vez. O valor em si não é salvo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -438,7 +478,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как БТЕ/ч связаны с ваттами и лошадиными силами?",
     "faq.a4": "БТЕ/ч (британские тепловые единицы в час) измеряют мощность отопления и охлаждения, чаще всего указываются на кондиционерах и печах. 1 BTU/h равна 0.29307107017222222 Вт. Кондиционеры часто продаются по «тоннам» охлаждения, где 1 тонна = 12000 BTU/h ≈ 3.517 кВт — это удобно при сравнении устройства с характеристикой в BTU/h с устройством, указанным в кВт или hp.",
     "faq.q5": "Отправляются ли мои данные на сервер?",
-    "faq.a5": "Нет. Этот конвертер мощности полностью работает в вашем браузере — введённое число никогда никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, лошадиные силы → киловатты) — в локальном хранилище браузера, чтобы быть под рукой в следующий раз. Само значение не сохраняется."
+    "faq.a5": "Нет. Этот конвертер мощности полностью работает в вашем браузере — введённое число никогда никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, лошадиные силы → киловатты) — в локальном хранилище браузера, чтобы быть под рукой в следующий раз. Само значение не сохраняется.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -485,7 +530,12 @@ window.I18N_LOCALES = {
     "faq.q4": "BTU/h کا واٹ اور ہارس پاور سے کیا تعلق ہے؟",
     "faq.a4": "BTU/h (فی گھنٹہ برطانوی تھرمل یونٹس) حرارتی اور کولنگ پاور ناپتا ہے، جو اکثر ایئر کنڈیشنر اور فرنس کی ریٹنگز پر نظر آتا ہے۔ 1 BTU/h برابر ہے 0.29307107017222222 W کے۔ ایئر کنڈیشنرز اکثر کولنگ کے \"ٹنز\" میں فروخت ہوتے ہیں، جہاں 1 ٹن = 12000 BTU/h ≈ 3.517 kW — یہ تب مفید ہے جب BTU/h میں ریٹ کیے گئے یو ایس اسپیک AC کا کہیں اور kW یا hp میں ریٹ کی گئی یونٹ سے موازنہ کرنا ہو۔",
     "faq.q5": "کیا میرا ان پٹ سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ پاور کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — جو نمبر آپ ٹائپ کرتے ہیں وہ کبھی کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کی آخری منتخب کردہ یونٹ جوڑی (مثلاً ہارس پاور سے کلو واٹ) محفوظ ہوتی ہے، آپ کے براؤزر کے لوکل اسٹوریج میں، اگلی بار کے لیے تیار رکھنے کو۔ قدر خود محفوظ نہیں ہوتی۔"
+    "faq.a5": "نہیں۔ یہ پاور کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — جو نمبر آپ ٹائپ کرتے ہیں وہ کبھی کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کی آخری منتخب کردہ یونٹ جوڑی (مثلاً ہارس پاور سے کلو واٹ) محفوظ ہوتی ہے، آپ کے براؤزر کے لوکل اسٹوریج میں، اگلی بار کے لیے تیار رکھنے کو۔ قدر خود محفوظ نہیں ہوتی۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -532,7 +582,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana hubungan BTU/h dengan watt dan tenaga kuda?",
     "faq.a4": "BTU/h (British thermal unit per jam) mengukur daya pemanasan dan pendinginan, paling sering terlihat pada rating AC dan tungku. 1 BTU/h sama dengan 0.29307107017222222 W. AC biasanya dijual dalam satuan \"ton\" pendinginan, di mana 1 ton = 12000 BTU/h ≈ 3.517 kW — berguna saat membandingkan AC dengan rating BTU/h terhadap unit lain yang dirating dalam kW atau hp.",
     "faq.q5": "Apakah input saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter daya ini berjalan sepenuhnya di browser Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya hal yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya tenaga kuda ke kilowatt), disimpan di penyimpanan lokal browser Anda agar siap untuk lain kali. Nilainya sendiri tidak disimpan."
+    "faq.a5": "Tidak. Konverter daya ini berjalan sepenuhnya di browser Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya hal yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya tenaga kuda ke kilowatt), disimpan di penyimpanan lokal browser Anda agar siap untuk lain kali. Nilainya sendiri tidak disimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -579,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie hängt BTU/h mit Watt und PS zusammen?",
     "faq.a4": "BTU/h (British Thermal Units pro Stunde) misst Heiz- und Kühlleistung und findet sich meist auf Klimaanlagen- und Heizungslabeln. 1 BTU/h entspricht 0.29307107017222222 W. Klimaanlagen werden oft in „Tonnen“ Kühlleistung verkauft, wobei 1 Tonne = 12000 BTU/h ≈ 3.517 kW entspricht — nützlich, um ein in BTU/h angegebenes US-Klimagerät mit einem in kW oder hp angegebenen Gerät zu vergleichen.",
     "faq.q5": "Werden meine Eingaben an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Leistungsumrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird niemals irgendwohin hochgeladen. Gespeichert wird nur das zuletzt gewählte Einheitenpaar (zum Beispiel PS zu Kilowatt), im lokalen Speicher Ihres Browsers, damit es beim nächsten Mal bereit ist. Der Wert selbst wird nicht gespeichert."
+    "faq.a5": "Nein. Dieser Leistungsumrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird niemals irgendwohin hochgeladen. Gespeichert wird nur das zuletzt gewählte Einheitenpaar (zum Beispiel PS zu Kilowatt), im lokalen Speicher Ihres Browsers, damit es beim nächsten Mal bereit ist. Der Wert selbst wird nicht gespeichert.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -626,7 +686,12 @@ window.I18N_LOCALES = {
     "faq.q4": "BTU/hはワットや馬力とどう関係しますか？",
     "faq.a4": "BTU/h（1時間あたりの英国熱量単位）は冷暖房能力を表し、エアコンや暖房機の定格でよく見られます。1 BTU/hは0.29307107017222222 Wに相当します。エアコンは冷房能力を「トン」単位で表すことが多く、1トン = 12000 BTU/h ≈ 3.517 kWです — BTU/h表記の米国製エアコンを、kWやhp表記の機種と比較する際に役立ちます。",
     "faq.q5": "入力したデータはサーバーに送信されますか？",
-    "faq.a5": "いいえ。この出力変換ツールはすべてブラウザ内で完結し、入力した数値がどこかにアップロードされることはありません。保存されるのは直前に選んだ単位の組み合わせ（例：馬力からキロワット）だけで、ブラウザのローカルストレージに保存され、次回すぐに使えるようにします。数値そのものは保存されません。"
+    "faq.a5": "いいえ。この出力変換ツールはすべてブラウザ内で完結し、入力した数値がどこかにアップロードされることはありません。保存されるのは直前に選んだ単位の組み合わせ（例：馬力からキロワット）だけで、ブラウザのローカルストレージに保存され、次回すぐに使えるようにします。数値そのものは保存されません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -673,6 +738,11 @@ window.I18N_LOCALES = {
     "faq.q4": "BTU/h는 와트, 마력과 어떤 관계가 있나요?",
     "faq.a4": "BTU/h(시간당 영국식 열량 단위)는 냉난방 능력을 나타내며, 에어컨과 보일러의 정격에서 흔히 볼 수 있습니다. 1 BTU/h는 0.29307107017222222 W에 해당합니다. 에어컨은 흔히 냉방 능력을 \"톤\" 단위로 표시하며, 1톤 = 12000 BTU/h ≈ 3.517 kW입니다 — BTU/h로 표기된 미국 규격 에어컨을 kW나 hp로 표기된 다른 제품과 비교할 때 유용합니다.",
     "faq.q5": "입력한 값이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 전력 변환기는 전적으로 브라우저에서 동작하며, 입력한 숫자는 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 조합(예: 마력 → 킬로와트)뿐이며, 다음에 바로 쓸 수 있도록 브라우저의 로컬 저장소에 보관됩니다. 값 자체는 저장되지 않습니다."
+    "faq.a5": "아니요. 이 전력 변환기는 전적으로 브라우저에서 동작하며, 입력한 숫자는 어디로도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 조합(예: 마력 → 킬로와트)뿐이며, 다음에 바로 쓸 수 있도록 브라우저의 로컬 저장소에 보관됩니다. 값 자체는 저장되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

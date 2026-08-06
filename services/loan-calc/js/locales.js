@@ -72,7 +72,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do I read an amortization schedule?",
     "faq.a4": "Each row is one installment. 'Payment' is what you pay that month, split into 'Principal' (the part that reduces what you owe) and 'Interest' (the lender's charge on the remaining balance). 'Balance' is what's still owed after that payment. Early on, most of an amortized payment is interest; over time the principal share grows. The last balance always reaches zero, and the principal column sums exactly to your loan amount.",
     "faq.q5": "How much does a 0.5%p rate difference change total interest?",
-    "faq.a5": "More than most people expect on long loans. Because interest compounds over the whole term, even half a percentage point can shift total interest by a large amount on a 20-to-30-year loan. To judge a refinance, enter your current rate, note the total interest, then change only the rate by the offered amount and compare — if the interest saved clearly beats the refinancing fees, the switch usually pays off."
+    "faq.a5": "More than most people expect on long loans. Because interest compounds over the whole term, even half a percentage point can shift total interest by a large amount on a 20-to-30-year loan. To judge a refinance, enter your current rate, note the total interest, then change only the rate by the offered amount and compare — if the interest saved clearly beats the refinancing fees, the switch usually pays off.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -129,7 +134,12 @@ window.I18N_LOCALES = {
     "faq.q4": "如何看懂摊销还款计划表？",
     "faq.a4": "每一行是一期还款。「还款额」是当月支付的金额，分为「本金」（减少欠款的部分）和「利息」（按剩余本金收取的费用）。「剩余本金」是该期还款后仍欠的金额。等额本息前期大部分是利息，随时间推移本金占比增加。最后一期剩余本金总为零，本金列合计恰好等于贷款金额。",
     "faq.q5": "利率相差 0.5 个百分点，总利息会变化多少？",
-    "faq.a5": "在长期贷款上，变化比多数人预期的更大。由于利息在整个期限内复利，即便半个百分点也能使 20 至 30 年贷款的总利息发生很大变化。判断是否转贷时，先输入当前利率记下总利息，再仅按报价调整利率并对比 — 若节省的利息明显超过转贷费用，通常就值得。"
+    "faq.a5": "在长期贷款上，变化比多数人预期的更大。由于利息在整个期限内复利，即便半个百分点也能使 20 至 30 年贷款的总利息发生很大变化。判断是否转贷时，先输入当前利率记下总利息，再仅按报价调整利率并对比 — 若节省的利息明显超过转贷费用，通常就值得。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -186,7 +196,12 @@ window.I18N_LOCALES = {
     "faq.q4": "अमॉर्टाइज़ेशन शेड्यूल कैसे पढ़ें?",
     "faq.a4": "हर पंक्ति एक किस्त है। 'किस्त' उस महीने का भुगतान है, जो 'मूलधन' (बकाया घटाने वाला हिस्सा) और 'ब्याज' (शेष राशि पर शुल्क) में बंटा है। 'शेष राशि' उस भुगतान के बाद बचा बकाया है। शुरुआत में EMI का अधिकांश हिस्सा ब्याज होता है; समय के साथ मूलधन का हिस्सा बढ़ता है। अंतिम शेष हमेशा शून्य होता है और मूलधन कॉलम का योग बिल्कुल लोन राशि के बराबर होता है।",
     "faq.q5": "0.5%p दर अंतर से कुल ब्याज कितना बदलता है?",
-    "faq.a5": "लंबे लोन पर अधिकांश लोगों की सोच से ज़्यादा। चूंकि ब्याज पूरी अवधि तक चक्रवृद्धि होता है, आधा प्रतिशत बिंदु भी 20 से 30 साल के लोन पर कुल ब्याज को काफी बदल सकता है। रीफाइनेंस तय करने के लिए अपनी वर्तमान दर डालें, कुल ब्याज नोट करें, फिर केवल दर को पेशकश के अनुसार बदलें और तुलना करें — यदि बचा ब्याज रीफाइनेंस शुल्कों से स्पष्ट रूप से अधिक है, तो बदलना आमतौर पर फायदेमंद है।"
+    "faq.a5": "लंबे लोन पर अधिकांश लोगों की सोच से ज़्यादा। चूंकि ब्याज पूरी अवधि तक चक्रवृद्धि होता है, आधा प्रतिशत बिंदु भी 20 से 30 साल के लोन पर कुल ब्याज को काफी बदल सकता है। रीफाइनेंस तय करने के लिए अपनी वर्तमान दर डालें, कुल ब्याज नोट करें, फिर केवल दर को पेशकश के अनुसार बदलें और तुलना करें — यदि बचा ब्याज रीफाइनेंस शुल्कों से स्पष्ट रूप से अधिक है, तो बदलना आमतौर पर फायदेमंद है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -243,7 +258,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo se lee una tabla de amortización?",
     "faq.a4": "Cada fila es una cuota. 'Cuota' es lo que pagas ese mes, dividido en 'Capital' (la parte que reduce lo que debes) e 'Interés' (el cargo sobre el saldo restante). 'Saldo' es lo que aún debes tras ese pago. Al principio, la mayor parte de una cuota fija es interés; con el tiempo crece la parte de capital. El último saldo siempre llega a cero y la columna de capital suma exactamente el importe del préstamo.",
     "faq.q5": "¿Cuánto cambia el interés total una diferencia de 0,5 puntos?",
-    "faq.a5": "Más de lo que la mayoría espera en préstamos largos. Como el interés se capitaliza durante todo el plazo, incluso medio punto puede mover mucho el interés total en un préstamo de 20 a 30 años. Para valorar un refinanciamiento, introduce tu tasa actual, anota el interés total, luego cambia solo la tasa por la ofrecida y compara — si el interés ahorrado supera claramente las comisiones de refinanciación, el cambio suele compensar."
+    "faq.a5": "Más de lo que la mayoría espera en préstamos largos. Como el interés se capitaliza durante todo el plazo, incluso medio punto puede mover mucho el interés total en un préstamo de 20 a 30 años. Para valorar un refinanciamiento, introduce tu tasa actual, anota el interés total, luego cambia solo la tasa por la ofrecida y compara — si el interés ahorrado supera claramente las comisiones de refinanciación, el cambio suele compensar.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -300,7 +320,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف أقرأ جدول الإطفاء؟",
     "faq.a4": "كل صف قسط واحد. 'الدفعة' هي ما تدفعه ذلك الشهر، مقسومة إلى 'الأصل' (الجزء الذي يخفّض ما عليك) و'الفائدة' (الرسم على الرصيد المتبقي). 'الرصيد' هو ما تبقّى بعد تلك الدفعة. في البداية يكون معظم القسط الثابت فائدة، ثم تكبر حصة الأصل مع الوقت. يصل الرصيد الأخير دائمًا إلى صفر، ويكون مجموع عمود الأصل مساويًا لمبلغ القرض تمامًا.",
     "faq.q5": "كم يغيّر فرق 0.5 نقطة مئوية إجمالي الفائدة؟",
-    "faq.a5": "أكثر مما يتوقع معظم الناس في القروض الطويلة. لأن الفائدة تتراكم طوال المدة، فحتى نصف نقطة مئوية قد يغيّر إجمالي الفائدة كثيرًا في قرض من 20 إلى 30 سنة. لتقييم إعادة التمويل، أدخل نسبتك الحالية وسجّل إجمالي الفائدة، ثم غيّر النسبة وحدها بالقيمة المعروضة وقارن — إذا فاقت الفائدة الموفَّرة رسوم إعادة التمويل بوضوح، فغالبًا يستحق التبديل."
+    "faq.a5": "أكثر مما يتوقع معظم الناس في القروض الطويلة. لأن الفائدة تتراكم طوال المدة، فحتى نصف نقطة مئوية قد يغيّر إجمالي الفائدة كثيرًا في قرض من 20 إلى 30 سنة. لتقييم إعادة التمويل، أدخل نسبتك الحالية وسجّل إجمالي الفائدة، ثم غيّر النسبة وحدها بالقيمة المعروضة وقارن — إذا فاقت الفائدة الموفَّرة رسوم إعادة التمويل بوضوح، فغالبًا يستحق التبديل.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -357,7 +382,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment lire un tableau d'amortissement ?",
     "faq.a4": "Chaque ligne est une échéance. 'Échéance' est ce que vous payez ce mois-là, réparti entre 'Capital' (la part qui réduit votre dette) et 'Intérêts' (le coût sur le solde restant). 'Solde' est ce qu'il reste dû après ce paiement. Au début, la majeure partie d'une mensualité constante est constituée d'intérêts ; avec le temps, la part de capital augmente. Le dernier solde atteint toujours zéro et la colonne capital totalise exactement le montant du prêt.",
     "faq.q5": "Combien un écart de 0,5 point change-t-il les intérêts totaux ?",
-    "faq.a5": "Plus que la plupart ne le pensent sur les prêts longs. Comme les intérêts se capitalisent sur toute la durée, même un demi-point peut fortement modifier les intérêts totaux sur un prêt de 20 à 30 ans. Pour juger un rachat de crédit, saisissez votre taux actuel, notez les intérêts totaux, puis changez seulement le taux par celui proposé et comparez — si les intérêts économisés dépassent nettement les frais de rachat, l'opération est généralement rentable."
+    "faq.a5": "Plus que la plupart ne le pensent sur les prêts longs. Comme les intérêts se capitalisent sur toute la durée, même un demi-point peut fortement modifier les intérêts totaux sur un prêt de 20 à 30 ans. Pour juger un rachat de crédit, saisissez votre taux actuel, notez les intérêts totaux, puis changez seulement le taux par celui proposé et comparez — si les intérêts économisés dépassent nettement les frais de rachat, l'opération est généralement rentable.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -414,7 +444,12 @@ window.I18N_LOCALES = {
     "faq.q4": "অ্যামর্টাইজেশন তালিকা কীভাবে পড়বেন?",
     "faq.a4": "প্রতিটি সারি একটি কিস্তি। 'কিস্তি' সেই মাসে আপনি যা দেন, যা 'মূল' (বকেয়া কমানোর অংশ) ও 'সুদ' (অবশিষ্ট বকেয়ার ওপর চার্জ) এ বিভক্ত। 'অবশিষ্ট' হলো সেই কিস্তির পর যা বাকি থাকে। শুরুতে সমান কিস্তির বেশিরভাগই সুদ; সময়ের সাথে মূলের অংশ বাড়ে। শেষ অবশিষ্ট সর্বদা শূন্যে পৌঁছায় এবং মূল কলামের যোগফল ঠিক ঋণের পরিমাণের সমান হয়।",
     "faq.q5": "0.5%p হারের পার্থক্যে মোট সুদ কতটা বদলায়?",
-    "faq.a5": "দীর্ঘ ঋণে বেশিরভাগ মানুষের ধারণার চেয়ে বেশি। যেহেতু সুদ পুরো মেয়াদজুড়ে চক্রবৃদ্ধি হয়, অর্ধেক শতাংশ পয়েন্টও ২০ থেকে ৩০ বছরের ঋণে মোট সুদে বড় পরিবর্তন আনতে পারে। রিফাইন্যান্স যাচাই করতে আপনার বর্তমান হার দিন, মোট সুদ লিখে রাখুন, তারপর শুধু হার প্রস্তাবিত মান অনুযায়ী বদলে তুলনা করুন — সঞ্চিত সুদ রিফাইন্যান্স ফি-এর চেয়ে স্পষ্টভাবে বেশি হলে সাধারণত বদল লাভজনক।"
+    "faq.a5": "দীর্ঘ ঋণে বেশিরভাগ মানুষের ধারণার চেয়ে বেশি। যেহেতু সুদ পুরো মেয়াদজুড়ে চক্রবৃদ্ধি হয়, অর্ধেক শতাংশ পয়েন্টও ২০ থেকে ৩০ বছরের ঋণে মোট সুদে বড় পরিবর্তন আনতে পারে। রিফাইন্যান্স যাচাই করতে আপনার বর্তমান হার দিন, মোট সুদ লিখে রাখুন, তারপর শুধু হার প্রস্তাবিত মান অনুযায়ী বদলে তুলনা করুন — সঞ্চিত সুদ রিফাইন্যান্স ফি-এর চেয়ে স্পষ্টভাবে বেশি হলে সাধারণত বদল লাভজনক।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -471,7 +506,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como ler uma tabela de amortização?",
     "faq.a4": "Cada linha é uma parcela. 'Parcela' é o que você paga naquele mês, dividido em 'Principal' (a parte que reduz o que você deve) e 'Juros' (o custo sobre o saldo restante). 'Saldo' é o que ainda resta após esse pagamento. No início, a maior parte de uma parcela Price é juros; com o tempo, a fatia de principal cresce. O último saldo sempre chega a zero e a coluna de principal soma exatamente o valor do empréstimo.",
     "faq.q5": "Quanto uma diferença de 0,5 ponto muda os juros totais?",
-    "faq.a5": "Mais do que a maioria espera em empréstimos longos. Como os juros capitalizam ao longo de todo o prazo, até meio ponto percentual pode mudar muito os juros totais em um empréstimo de 20 a 30 anos. Para avaliar uma portabilidade, informe sua taxa atual, anote os juros totais, depois mude apenas a taxa pela oferecida e compare — se os juros economizados superarem claramente as tarifas, a troca costuma valer a pena."
+    "faq.a5": "Mais do que a maioria espera em empréstimos longos. Como os juros capitalizam ao longo de todo o prazo, até meio ponto percentual pode mudar muito os juros totais em um empréstimo de 20 a 30 anos. Para avaliar uma portabilidade, informe sua taxa atual, anote os juros totais, depois mude apenas a taxa pela oferecida e compare — se os juros economizados superarem claramente as tarifas, a troca costuma valer a pena.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -528,7 +568,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как читать график погашения?",
     "faq.a4": "Каждая строка — один платёж. 'Платёж' — сколько вы платите в этом месяце, разделён на 'Основной долг' (часть, уменьшающую задолженность) и 'Проценты' (плату на остаток). 'Остаток' — сколько ещё должны после этого платежа. Вначале большая часть аннуитетного платежа — проценты; со временем доля основного долга растёт. Последний остаток всегда достигает нуля, а столбец основного долга в сумме точно равен сумме кредита.",
     "faq.q5": "Насколько разница в 0,5 п.п. меняет переплату?",
-    "faq.a5": "Больше, чем думает большинство, на длинных кредитах. Поскольку проценты капитализируются весь срок, даже полпроцента могут сильно изменить переплату по кредиту на 20–30 лет. Чтобы оценить рефинансирование, введите текущую ставку, запишите переплату, затем измените только ставку на предложенную и сравните — если сэкономленные проценты явно превышают комиссии за рефинансирование, переход обычно выгоден."
+    "faq.a5": "Больше, чем думает большинство, на длинных кредитах. Поскольку проценты капитализируются весь срок, даже полпроцента могут сильно изменить переплату по кредиту на 20–30 лет. Чтобы оценить рефинансирование, введите текущую ставку, запишите переплату, затем измените только ставку на предложенную и сравните — если сэкономленные проценты явно превышают комиссии за рефинансирование, переход обычно выгоден.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -585,7 +630,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ادائیگی شیڈول کیسے پڑھیں؟",
     "faq.a4": "ہر قطار ایک قسط ہے۔ 'قسط' وہ ہے جو آپ اس ماہ ادا کرتے ہیں، جو 'اصل' (بقایا کم کرنے والا حصہ) اور 'سود' (بقایا رقم پر چارج) میں تقسیم ہے۔ 'بقایا' اس ادائیگی کے بعد باقی رقم ہے۔ شروع میں مساوی قسط کا زیادہ حصہ سود ہوتا ہے؛ وقت کے ساتھ اصل کا حصہ بڑھتا ہے۔ آخری بقایا ہمیشہ صفر تک پہنچتا ہے اور اصل کالم کا مجموعہ بالکل لون کی رقم کے برابر ہوتا ہے۔",
     "faq.q5": "0.5%p شرح کے فرق سے کل سود کتنا بدلتا ہے؟",
-    "faq.a5": "طویل لون پر زیادہ تر لوگوں کی توقع سے زیادہ۔ چونکہ سود پوری مدت میں کمپاؤنڈ ہوتا ہے، آدھا فیصد پوائنٹ بھی 20 سے 30 سال کے لون پر کل سود کو کافی بدل سکتا ہے۔ ری فنانس پرکھنے کے لیے اپنی موجودہ شرح درج کریں، کل سود نوٹ کریں، پھر صرف شرح کو پیش کردہ قدر پر بدلیں اور موازنہ کریں — اگر بچایا گیا سود ری فنانس فیس سے واضح زیادہ ہو تو تبدیلی عموماً فائدہ مند ہے۔"
+    "faq.a5": "طویل لون پر زیادہ تر لوگوں کی توقع سے زیادہ۔ چونکہ سود پوری مدت میں کمپاؤنڈ ہوتا ہے، آدھا فیصد پوائنٹ بھی 20 سے 30 سال کے لون پر کل سود کو کافی بدل سکتا ہے۔ ری فنانس پرکھنے کے لیے اپنی موجودہ شرح درج کریں، کل سود نوٹ کریں، پھر صرف شرح کو پیش کردہ قدر پر بدلیں اور موازنہ کریں — اگر بچایا گیا سود ری فنانس فیس سے واضح زیادہ ہو تو تبدیلی عموماً فائدہ مند ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -642,7 +692,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana membaca tabel amortisasi?",
     "faq.a4": "Setiap baris adalah satu cicilan. 'Cicilan' adalah yang Anda bayar bulan itu, terbagi menjadi 'Pokok' (bagian yang mengurangi utang) dan 'Bunga' (biaya atas sisa pokok). 'Sisa' adalah utang yang tersisa setelah pembayaran itu. Di awal, sebagian besar cicilan anuitas adalah bunga; seiring waktu porsi pokok bertambah. Sisa terakhir selalu mencapai nol, dan kolom pokok berjumlah tepat sama dengan jumlah pinjaman.",
     "faq.q5": "Seberapa besar selisih 0,5 poin mengubah total bunga?",
-    "faq.a5": "Lebih besar dari dugaan kebanyakan orang pada pinjaman panjang. Karena bunga berbunga sepanjang tenor, bahkan setengah poin persen bisa mengubah total bunga cukup banyak pada pinjaman 20 sampai 30 tahun. Untuk menilai refinancing, masukkan suku bunga Anda saat ini, catat total bunganya, lalu ubah hanya suku bunga sesuai penawaran dan bandingkan — jika bunga yang dihemat jelas melampaui biaya refinancing, beralih biasanya menguntungkan."
+    "faq.a5": "Lebih besar dari dugaan kebanyakan orang pada pinjaman panjang. Karena bunga berbunga sepanjang tenor, bahkan setengah poin persen bisa mengubah total bunga cukup banyak pada pinjaman 20 sampai 30 tahun. Untuk menilai refinancing, masukkan suku bunga Anda saat ini, catat total bunganya, lalu ubah hanya suku bunga sesuai penawaran dan bandingkan — jika bunga yang dihemat jelas melampaui biaya refinancing, beralih biasanya menguntungkan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -699,7 +754,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie liest man einen Tilgungsplan?",
     "faq.a4": "Jede Zeile ist eine Rate. 'Rate' ist der Betrag, den Sie in diesem Monat zahlen, aufgeteilt in 'Tilgung' (der Teil, der Ihre Schuld verringert) und 'Zinsen' (die Kosten auf die Restschuld). 'Restschuld' ist der nach dieser Zahlung noch offene Betrag. Anfangs besteht eine Annuität überwiegend aus Zinsen; mit der Zeit wächst der Tilgungsanteil. Die letzte Restschuld erreicht immer null, und die Tilgungsspalte summiert sich exakt auf den Kreditbetrag.",
     "faq.q5": "Wie stark ändert ein Unterschied von 0,5 Prozentpunkten die Gesamtzinsen?",
-    "faq.a5": "Stärker, als die meisten bei langen Krediten erwarten. Da sich Zinsen über die gesamte Laufzeit verzinsen, kann schon ein halber Prozentpunkt die Gesamtzinsen bei einem 20- bis 30-jährigen Kredit deutlich verändern. Um eine Umschuldung zu prüfen, geben Sie Ihren aktuellen Zinssatz ein, notieren Sie die Gesamtzinsen, ändern Sie dann nur den Zinssatz auf den angebotenen Wert und vergleichen Sie — übersteigen die gesparten Zinsen die Umschuldungskosten deutlich, lohnt sich der Wechsel meist."
+    "faq.a5": "Stärker, als die meisten bei langen Krediten erwarten. Da sich Zinsen über die gesamte Laufzeit verzinsen, kann schon ein halber Prozentpunkt die Gesamtzinsen bei einem 20- bis 30-jährigen Kredit deutlich verändern. Um eine Umschuldung zu prüfen, geben Sie Ihren aktuellen Zinssatz ein, notieren Sie die Gesamtzinsen, ändern Sie dann nur den Zinssatz auf den angebotenen Wert und vergleichen Sie — übersteigen die gesparten Zinsen die Umschuldungskosten deutlich, lohnt sich der Wechsel meist.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -756,7 +816,12 @@ window.I18N_LOCALES = {
     "faq.q4": "返済予定表の見方は？",
     "faq.a4": "各行が1回分の返済です。「返済額」はその月に払う金額で、「元金」（借入残高を減らす部分）と「利息」（残高にかかる費用）に分かれます。「残高」はその返済後に残る借入額です。元利均等では初めは返済額の大半が利息で、時間とともに元金の割合が増えます。最終残高は必ずゼロになり、元金の列の合計はローン金額と正確に一致します。",
     "faq.q5": "金利が0.5ポイント違うと総利息はどれだけ変わる？",
-    "faq.a5": "長期ローンでは多くの人の予想以上に変わります。利息は全期間にわたって複利で効くため、わずか0.5ポイントでも20〜30年ローンの総利息は大きく動きます。借り換えを判断するには、現在の金利を入力して総利息を控え、次に金利だけを提示された値に変えて比較します — 節約できる利息が借り換え手数料を明らかに上回るなら、乗り換える価値がある場合が多いです。"
+    "faq.a5": "長期ローンでは多くの人の予想以上に変わります。利息は全期間にわたって複利で効くため、わずか0.5ポイントでも20〜30年ローンの総利息は大きく動きます。借り換えを判断するには、現在の金利を入力して総利息を控え、次に金利だけを提示された値に変えて比較します — 節約できる利息が借り換え手数料を明らかに上回るなら、乗り換える価値がある場合が多いです。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -813,6 +878,11 @@ window.I18N_LOCALES = {
     "faq.q4": "상환 스케줄(원금·이자 배분)은 어떻게 읽나요?",
     "faq.a4": "각 행은 한 회차입니다. '납입액'은 그 달에 내는 금액으로, '원금'(빚을 줄이는 부분)과 '이자'(잔금에 붙는 비용)로 나뉩니다. '잔금'은 그 납입 후 남은 대출액입니다. 원리금균등은 초기에 납입액 대부분이 이자이고, 시간이 지날수록 원금 비중이 커집니다. 마지막 잔금은 항상 0이 되고, 원금 열의 합계는 대출 금액과 정확히 일치합니다.",
     "faq.q5": "금리가 0.5%p 차이 나면 총이자는 얼마나 달라지나요?",
-    "faq.a5": "장기 대출에서는 대부분의 예상보다 큽니다. 이자는 전 기간에 걸쳐 복리로 작용하므로, 0.5%p 차이만으로도 20~30년 대출의 총이자가 크게 달라질 수 있습니다. 대환을 판단하려면 현재 금리를 입력해 총이자를 기록한 뒤, 금리만 제시받은 값으로 바꿔 비교하세요 — 절약되는 이자가 대환 수수료를 뚜렷이 넘으면 갈아타는 편이 대체로 이득입니다."
+    "faq.a5": "장기 대출에서는 대부분의 예상보다 큽니다. 이자는 전 기간에 걸쳐 복리로 작용하므로, 0.5%p 차이만으로도 20~30년 대출의 총이자가 크게 달라질 수 있습니다. 대환을 판단하려면 현재 금리를 입력해 총이자를 기록한 뒤, 금리만 제시받은 값으로 바꿔 비교하세요 — 절약되는 이자가 대환 수수료를 뚜렷이 넘으면 갈아타는 편이 대체로 이득입니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

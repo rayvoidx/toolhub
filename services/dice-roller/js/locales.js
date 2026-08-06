@@ -58,7 +58,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Is anything sent to a server?",
     "faq.a4": "No. When you roll a dice online here, every roll happens locally in your browser — no accounts, no ads and nothing is uploaded. You can even install it as an app and keep rolling offline.",
     "faq.q5": "Can I roll many dice at once for D&D or board games?",
-    "faq.a5": "Yes. Set the number of dice up to 100 and add a single modifier to the total — handy for a fistful of DnD dice, a d20 attack with a bonus, or a board-game handful. Each die is shown separately and your last 20 rolls are kept in the roll history so you can check a previous result."
+    "faq.a5": "Yes. Set the number of dice up to 100 and add a single modifier to the total — handy for a fistful of DnD dice, a d20 attack with a bonus, or a board-game handful. Each die is shown separately and your last 20 rolls are kept in the roll history so you can check a previous result.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -101,7 +106,12 @@ window.I18N_LOCALES = {
     "faq.q4": "会向服务器发送任何数据吗？",
     "faq.a4": "不会。在这里在线掷骰时，每一次掷骰都在你的浏览器本地完成 —— 无账号、无广告、不上传任何内容。你甚至可以把它安装为应用，离线继续掷骰。",
     "faq.q5": "能一次为 D&D 或桌游掷很多骰子吗？",
-    "faq.a5": "可以。骰子数量最多设为 100，并给合计加上一个加值 —— 适合一把 DnD 骰子、带加值的 d20 攻击，或桌游中的一大把骰子。每颗骰子单独显示，最近 20 次掷骰保存在记录中，方便回看之前的结果。"
+    "faq.a5": "可以。骰子数量最多设为 100，并给合计加上一个加值 —— 适合一把 DnD 骰子、带加值的 d20 攻击，或桌游中的一大把骰子。每颗骰子单独显示，最近 20 次掷骰保存在记录中，方便回看之前的结果。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -144,7 +154,12 @@ window.I18N_LOCALES = {
     "faq.q4": "क्या सर्वर पर कुछ भेजा जाता है?",
     "faq.a4": "नहीं। जब आप यहाँ ऑनलाइन पासा रोल करते हैं, हर रोल आपके ब्राउज़र में स्थानीय रूप से होता है — कोई खाता नहीं, कोई विज्ञापन नहीं और कुछ भी अपलोड नहीं होता। आप इसे ऐप की तरह इंस्टॉल करके ऑफ़लाइन भी रोल करते रह सकते हैं।",
     "faq.q5": "क्या D&D या बोर्ड गेम के लिए एक साथ कई पासे रोल कर सकते हैं?",
-    "faq.a5": "हाँ। पासों की संख्या 100 तक सेट करें और कुल में एक मॉडिफ़ायर जोड़ें — एक मुट्ठी DnD डाइस, बोनस के साथ d20 अटैक, या बोर्ड-गेम की मुट्ठी के लिए उपयोगी। हर पासा अलग दिखता है और आपके पिछले 20 रोल रोल इतिहास में रहते हैं ताकि आप पिछला परिणाम देख सकें।"
+    "faq.a5": "हाँ। पासों की संख्या 100 तक सेट करें और कुल में एक मॉडिफ़ायर जोड़ें — एक मुट्ठी DnD डाइस, बोनस के साथ d20 अटैक, या बोर्ड-गेम की मुट्ठी के लिए उपयोगी। हर पासा अलग दिखता है और आपके पिछले 20 रोल रोल इतिहास में रहते हैं ताकि आप पिछला परिणाम देख सकें।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -187,7 +202,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Se envía algo a un servidor?",
     "faq.a4": "No. Cuando tiras un dado en línea aquí, cada tirada ocurre localmente en tu navegador — sin cuentas, sin anuncios y sin subir nada. Incluso puedes instalarlo como app y seguir tirando sin conexión.",
     "faq.q5": "¿Puedo tirar muchos dados a la vez para D&D o juegos de mesa?",
-    "faq.a5": "Sí. Ajusta el número de dados hasta 100 y añade un único modificador al total — práctico para un puñado de dados de DnD, un ataque d20 con bonificación o un puñado de juego de mesa. Cada dado se muestra por separado y tus últimas 20 tiradas se guardan en el historial para consultar un resultado anterior."
+    "faq.a5": "Sí. Ajusta el número de dados hasta 100 y añade un único modificador al total — práctico para un puñado de dados de DnD, un ataque d20 con bonificación o un puñado de juego de mesa. Cada dado se muestra por separado y tus últimas 20 tiradas se guardan en el historial para consultar un resultado anterior.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -230,7 +250,12 @@ window.I18N_LOCALES = {
     "faq.q4": "هل يُرسَل أي شيء إلى خادم؟",
     "faq.a4": "لا. عندما ترمي نردًا على الإنترنت هنا، تحدث كل رمية محليًا في متصفحك — بلا حسابات ولا إعلانات ولا رفع لأي شيء. بل يمكنك تثبيته كتطبيق ومواصلة الرمي دون اتصال.",
     "faq.q5": "هل يمكنني رمي نرد كثير دفعة واحدة لـ D&D أو ألعاب الطاولة؟",
-    "faq.a5": "نعم. اضبط عدد النرد حتى 100 وأضف معدّلًا واحدًا إلى المجموع — مفيد لحفنة من نرد DnD، أو هجوم d20 مع مكافأة، أو حفنة في لعبة طاولة. تظهر كل نردة على حدة، وتُحفَظ آخر 20 رمية في سجل الرميات لتراجع نتيجة سابقة."
+    "faq.a5": "نعم. اضبط عدد النرد حتى 100 وأضف معدّلًا واحدًا إلى المجموع — مفيد لحفنة من نرد DnD، أو هجوم d20 مع مكافأة، أو حفنة في لعبة طاولة. تظهر كل نردة على حدة، وتُحفَظ آخر 20 رمية في سجل الرميات لتراجع نتيجة سابقة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -273,7 +298,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quelque chose est-il envoyé à un serveur ?",
     "faq.a4": "Non. Quand vous lancez un dé en ligne ici, chaque lancer a lieu localement dans votre navigateur — pas de compte, pas de pub et rien n'est téléversé. Vous pouvez même l'installer comme appli et continuer à lancer hors ligne.",
     "faq.q5": "Puis-je lancer beaucoup de dés d'un coup pour D&D ou les jeux de société ?",
-    "faq.a5": "Oui. Réglez le nombre de dés jusqu'à 100 et ajoutez un seul modificateur au total — pratique pour une poignée de dés DnD, une attaque d20 avec bonus ou une poignée de jeu de société. Chaque dé s'affiche séparément et vos 20 derniers lancers sont conservés dans l'historique pour revoir un résultat."
+    "faq.a5": "Oui. Réglez le nombre de dés jusqu'à 100 et ajoutez un seul modificateur au total — pratique pour une poignée de dés DnD, une attaque d20 avec bonus ou une poignée de jeu de société. Chaque dé s'affiche séparément et vos 20 derniers lancers sont conservés dans l'historique pour revoir un résultat.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -316,7 +346,12 @@ window.I18N_LOCALES = {
     "faq.q4": "সার্ভারে কি কিছু পাঠানো হয়?",
     "faq.a4": "না। এখানে অনলাইনে পাশা রোল করলে প্রতিটি রোল আপনার ব্রাউজারে স্থানীয়ভাবে ঘটে — কোনো অ্যাকাউন্ট নয়, বিজ্ঞাপন নয়, কিছুই আপলোড হয় না। এমনকি অ্যাপ হিসেবে ইনস্টল করে অফলাইনেও রোল করে যেতে পারেন।",
     "faq.q5": "D&D বা বোর্ড গেমের জন্য একবারে অনেক পাশা রোল করা যায়?",
-    "faq.a5": "হ্যাঁ। পাশার সংখ্যা ১০০ পর্যন্ত সেট করুন এবং মোটের সঙ্গে একটি মডিফায়ার যোগ করুন — এক মুঠো DnD ডাইস, বোনাস সহ d20 অ্যাটাক, বা বোর্ড গেমের এক মুঠোর জন্য সুবিধাজনক। প্রতিটি পাশা আলাদাভাবে দেখানো হয় এবং আপনার শেষ ২০টি রোল রোল ইতিহাসে থাকে যাতে আগের ফল দেখতে পারেন।"
+    "faq.a5": "হ্যাঁ। পাশার সংখ্যা ১০০ পর্যন্ত সেট করুন এবং মোটের সঙ্গে একটি মডিফায়ার যোগ করুন — এক মুঠো DnD ডাইস, বোনাস সহ d20 অ্যাটাক, বা বোর্ড গেমের এক মুঠোর জন্য সুবিধাজনক। প্রতিটি পাশা আলাদাভাবে দেখানো হয় এবং আপনার শেষ ২০টি রোল রোল ইতিহাসে থাকে যাতে আগের ফল দেখতে পারেন।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -359,7 +394,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Algo é enviado a um servidor?",
     "faq.a4": "Não. Quando você rola um dado on-line aqui, cada rolagem acontece localmente no seu navegador — sem contas, sem anúncios e nada é enviado. Você pode até instalá-lo como app e continuar rolando off-line.",
     "faq.q5": "Posso rolar muitos dados de uma vez para D&D ou jogos de tabuleiro?",
-    "faq.a5": "Sim. Defina o número de dados até 100 e adicione um único modificador ao total — útil para um punhado de dados de DnD, um ataque d20 com bônus ou um punhado de jogo de tabuleiro. Cada dado é mostrado separadamente e suas últimas 20 rolagens ficam no histórico para conferir um resultado anterior."
+    "faq.a5": "Sim. Defina o número de dados até 100 e adicione um único modificador ao total — útil para um punhado de dados de DnD, um ataque d20 com bônus ou um punhado de jogo de tabuleiro. Cada dado é mostrado separadamente e suas últimas 20 rolagens ficam no histórico para conferir um resultado anterior.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -402,7 +442,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Что-нибудь отправляется на сервер?",
     "faq.a4": "Нет. Когда вы бросаете кубик онлайн здесь, каждый бросок происходит локально в вашем браузере — без аккаунтов, без рекламы и без загрузки чего-либо. Можно даже установить его как приложение и бросать офлайн.",
     "faq.q5": "Можно бросить много кубиков сразу для D&D или настольных игр?",
-    "faq.a5": "Да. Задайте число кубиков до 100 и добавьте один модификатор к итогу — удобно для горсти кубиков DnD, атаки d20 с бонусом или горсти для настольной игры. Каждый кубик показан отдельно, а последние 20 бросков хранятся в истории, чтобы проверить прошлый результат."
+    "faq.a5": "Да. Задайте число кубиков до 100 и добавьте один модификатор к итогу — удобно для горсти кубиков DnD, атаки d20 с бонусом или горсти для настольной игры. Каждый кубик показан отдельно, а последние 20 бросков хранятся в истории, чтобы проверить прошлый результат.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -445,7 +490,12 @@ window.I18N_LOCALES = {
     "faq.q4": "کیا سرور پر کچھ بھیجا جاتا ہے؟",
     "faq.a4": "نہیں۔ جب آپ یہاں آن لائن پانسہ پھینکتے ہیں تو ہر رول آپ کے براؤزر میں مقامی طور پر ہوتا ہے — نہ اکاؤنٹ، نہ اشتہار اور نہ کچھ اپ لوڈ ہوتا ہے۔ آپ اسے ایپ کے طور پر انسٹال کر کے آف لائن بھی رول کرتے رہ سکتے ہیں۔",
     "faq.q5": "کیا میں D&D یا بورڈ گیمز کے لیے ایک ساتھ کئی پانسے پھینک سکتا/سکتی ہوں؟",
-    "faq.a5": "جی ہاں۔ پانسوں کی تعداد 100 تک مقرر کریں اور کل میں ایک موڈیفائر جوڑیں — ایک مٹھی بھر DnD ڈائس، بونس کے ساتھ d20 حملہ، یا بورڈ گیم کی مٹھی کے لیے مفید۔ ہر پانسہ الگ دکھایا جاتا ہے اور آپ کے پچھلے 20 رول رول ہسٹری میں رہتے ہیں تاکہ پچھلا نتیجہ دیکھ سکیں۔"
+    "faq.a5": "جی ہاں۔ پانسوں کی تعداد 100 تک مقرر کریں اور کل میں ایک موڈیفائر جوڑیں — ایک مٹھی بھر DnD ڈائس، بونس کے ساتھ d20 حملہ، یا بورڈ گیم کی مٹھی کے لیے مفید۔ ہر پانسہ الگ دکھایا جاتا ہے اور آپ کے پچھلے 20 رول رول ہسٹری میں رہتے ہیں تاکہ پچھلا نتیجہ دیکھ سکیں۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -488,7 +538,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Apakah ada yang dikirim ke server?",
     "faq.a4": "Tidak. Saat Anda melempar dadu online di sini, setiap lemparan terjadi secara lokal di peramban Anda — tanpa akun, tanpa iklan, dan tidak ada yang diunggah. Anda bahkan bisa memasangnya sebagai aplikasi dan terus melempar secara offline.",
     "faq.q5": "Bisakah saya melempar banyak dadu sekaligus untuk D&D atau permainan papan?",
-    "faq.a5": "Bisa. Atur jumlah dadu hingga 100 dan tambahkan satu pengubah ke total — praktis untuk segenggam dadu DnD, serangan d20 dengan bonus, atau segenggam permainan papan. Tiap dadu ditampilkan terpisah dan 20 lemparan terakhir Anda tersimpan di riwayat untuk memeriksa hasil sebelumnya."
+    "faq.a5": "Bisa. Atur jumlah dadu hingga 100 dan tambahkan satu pengubah ke total — praktis untuk segenggam dadu DnD, serangan d20 dengan bonus, atau segenggam permainan papan. Tiap dadu ditampilkan terpisah dan 20 lemparan terakhir Anda tersimpan di riwayat untuk memeriksa hasil sebelumnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -531,7 +586,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wird etwas an einen Server gesendet?",
     "faq.a4": "Nein. Wenn du hier online würfelst, passiert jeder Wurf lokal in deinem Browser — keine Konten, keine Werbung und nichts wird hochgeladen. Du kannst es sogar als App installieren und offline weiterwürfeln.",
     "faq.q5": "Kann ich für D&D oder Brettspiele viele Würfel auf einmal werfen?",
-    "faq.a5": "Ja. Stelle die Anzahl der Würfel bis 100 ein und addiere einen einzigen Modifikator zur Summe — praktisch für eine Handvoll DnD-Würfel, einen d20-Angriff mit Bonus oder eine Brettspiel-Handvoll. Jeder Würfel wird einzeln angezeigt und deine letzten 20 Würfe bleiben im Wurfverlauf, um ein früheres Ergebnis nachzusehen."
+    "faq.a5": "Ja. Stelle die Anzahl der Würfel bis 100 ein und addiere einen einzigen Modifikator zur Summe — praktisch für eine Handvoll DnD-Würfel, einen d20-Angriff mit Bonus oder eine Brettspiel-Handvoll. Jeder Würfel wird einzeln angezeigt und deine letzten 20 Würfe bleiben im Wurfverlauf, um ein früheres Ergebnis nachzusehen.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -574,7 +634,12 @@ window.I18N_LOCALES = {
     "faq.q4": "サーバーへ何か送信されますか？",
     "faq.a4": "いいえ。ここでオンラインでサイコロを振るとき、各ロールはあなたのブラウザ内でローカルに行われます — アカウントも広告もなく、何もアップロードされません。アプリとしてインストールすれば、オフラインでも振り続けられます。",
     "faq.q5": "D&Dやボードゲーム用に一度にたくさん振れますか？",
-    "faq.a5": "はい。サイコロの数を最大100に設定し、合計に補正値を1つ加えられます — 大量のDnDダイス、ボーナス付きのd20攻撃、ボードゲームでのひとつかみに便利です。各ダイスは個別に表示され、直近20回のロールがロール履歴に残るので、前の結果も確認できます。"
+    "faq.a5": "はい。サイコロの数を最大100に設定し、合計に補正値を1つ加えられます — 大量のDnDダイス、ボーナス付きのd20攻撃、ボードゲームでのひとつかみに便利です。各ダイスは個別に表示され、直近20回のロールがロール履歴に残るので、前の結果も確認できます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -617,6 +682,11 @@ window.I18N_LOCALES = {
     "faq.q4": "서버로 전송되는 게 있나요?",
     "faq.a4": "없습니다. 여기서 온라인으로 주사위를 굴릴 때 모든 굴림은 브라우저 안에서 처리됩니다 — 계정도 광고도 없고 아무것도 업로드되지 않습니다. 앱으로 설치하면 오프라인에서도 계속 굴릴 수 있습니다.",
     "faq.q5": "D&D나 보드게임을 위해 여러 개를 한 번에 굴릴 수 있나요?",
-    "faq.a5": "네. 주사위 개수를 최대 100까지 정하고 합계에 보정치 하나를 더할 수 있습니다 — DnD 주사위 한 움큼, 보너스가 붙은 d20 공격, 보드게임의 한 줌에 유용합니다. 각 주사위가 따로 표시되고 최근 20회가 굴림 기록에 남아 이전 결과를 확인할 수 있습니다."
+    "faq.a5": "네. 주사위 개수를 최대 100까지 정하고 합계에 보정치 하나를 더할 수 있습니다 — DnD 주사위 한 움큼, 보너스가 붙은 d20 공격, 보드게임의 한 줌에 유용합니다. 각 주사위가 따로 표시되고 최근 20회가 굴림 기록에 남아 이전 결과를 확인할 수 있습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

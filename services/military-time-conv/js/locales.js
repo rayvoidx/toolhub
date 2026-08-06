@@ -52,7 +52,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How do you say military time out loud?",
     "faq.a4": "Each pair of digits is read as a number, and 'hundred' replaces the minutes when they're 00. So 0900 is said 'oh-nine-hundred,' and 2130 is said 'twenty-one-thirty.' Hours under 10 are usually prefixed with 'oh' — 0930 becomes 'oh-nine-thirty' — while 10 and above are read as ordinary numbers. The converter above shows this spoken form under every result, so you can check any time at a glance.",
     "faq.q5": "Is my time data sent to a server?",
-    "faq.a5": "No. This military time converter runs entirely in your browser — the time you type and every conversion stay on your device and are never uploaded or stored on a server. Your last input is saved only in your browser's local storage, so the tool remembers it the next time you open the page."
+    "faq.a5": "No. This military time converter runs entirely in your browser — the time you type and every conversion stay on your device and are never uploaded or stored on a server. Your last input is saved only in your browser's local storage, so the tool remembers it the next time you open the page.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -99,7 +104,12 @@ window.I18N_LOCALES = {
     "faq.q4": "24小时制时间用英语怎么读？",
     "faq.a4": "每两位数字被当作一个数字来读，当分钟为00时用“hundred(百)”代替分钟部分。因此0900读作“oh-nine-hundred”，2130读作“twenty-one-thirty”。小于10的小时通常在前面加“oh”——0930会读作“oh-nine-thirty”——而10以上的小时按普通数字读出。上方转换器会在每个结果下方显示这种读法，方便随时查看。",
     "faq.q5": "我的时间数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个24小时制转换器完全在你的浏览器中运行——你输入的时间以及每一次换算都只保留在你的设备上，绝不会被上传或存储到服务器。你上一次输入的内容仅保存在浏览器的本地存储中，方便你下次打开页面时继续使用。"
+    "faq.a5": "不会。这个24小时制转换器完全在你的浏览器中运行——你输入的时间以及每一次换算都只保留在你的设备上，绝不会被上传或存储到服务器。你上一次输入的内容仅保存在浏览器的本地存储中，方便你下次打开页面时继续使用。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -146,7 +156,12 @@ window.I18N_LOCALES = {
     "faq.q4": "मिलिट्री समय को ज़ोर से कैसे बोला जाता है?",
     "faq.a4": "अंकों के हर जोड़े को एक संख्या की तरह पढ़ा जाता है, और जब मिनट 00 हों तो उनकी जगह 'hundred' बोला जाता है। इसलिए 0900 को 'oh-nine-hundred' कहा जाता है, और 2130 को 'twenty-one-thirty' कहा जाता है। 10 से कम घंटों के आगे आमतौर पर 'oh' लगाया जाता है — 0930, 'oh-nine-thirty' बन जाता है — जबकि 10 और उससे ज़्यादा को सामान्य संख्या की तरह पढ़ा जाता है। ऊपर दिया गया कन्वर्टर हर परिणाम के नीचे यह बोलने का तरीक़ा दिखाता है, ताकि आप किसी भी समय को एक नज़र में जांच सकें।",
     "faq.q5": "क्या मेरा समय डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह मिलिट्री टाइम कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप किया गया समय और हर कन्वर्ज़न सिर्फ़ आपकी डिवाइस पर रहते हैं और कभी भी सर्वर पर अपलोड या स्टोर नहीं किए जाते। आपकी आख़िरी एंट्री केवल आपके ब्राउज़र के लोकल स्टोरेज में सेव होती है, ताकि अगली बार पेज खोलने पर टूल उसे याद रख सके।"
+    "faq.a5": "नहीं। यह मिलिट्री टाइम कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप किया गया समय और हर कन्वर्ज़न सिर्फ़ आपकी डिवाइस पर रहते हैं और कभी भी सर्वर पर अपलोड या स्टोर नहीं किए जाते। आपकी आख़िरी एंट्री केवल आपके ब्राउज़र के लोकल स्टोरेज में सेव होती है, ताकि अगली बार पेज खोलने पर टूल उसे याद रख सके।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -193,7 +208,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cómo se dice la hora militar en voz alta?",
     "faq.a4": "Cada par de dígitos se lee como un número, y 'hundred' (cien) sustituye a los minutos cuando son 00. Así, 0900 se dice 'oh-nine-hundred', y 2130 se dice 'twenty-one-thirty'. Las horas menores de 10 suelen llevar el prefijo 'oh' — 0930 se convierte en 'oh-nine-thirty' — mientras que 10 en adelante se leen como números normales. El conversor de arriba muestra esta forma hablada debajo de cada resultado, para que puedas comprobar cualquier hora de un vistazo.",
     "faq.q5": "¿Se envían mis datos de hora a un servidor?",
-    "faq.a5": "No. Este conversor de hora militar se ejecuta completamente en tu navegador — la hora que escribes y cada conversión permanecen en tu dispositivo y nunca se suben ni se guardan en un servidor. Tu última entrada solo se guarda en el almacenamiento local de tu navegador, para que la herramienta la recuerde la próxima vez que abras la página."
+    "faq.a5": "No. Este conversor de hora militar se ejecuta completamente en tu navegador — la hora que escribes y cada conversión permanecen en tu dispositivo y nunca se suben ni se guardan en un servidor. Tu última entrada solo se guarda en el almacenamiento local de tu navegador, para que la herramienta la recuerde la próxima vez que abras la página.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -240,7 +260,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كيف يُنطق الوقت العسكري بصوت عالٍ؟",
     "faq.a4": "يُقرأ كل زوج من الأرقام كرقم واحد، وتحل كلمة 'hundred' محل الدقائق عندما تكون 00. لذلك يُقال عن 0900 'oh-nine-hundred'، ويُقال عن 2130 'twenty-one-thirty'. عادة ما تُسبق الساعات الأقل من 10 بكلمة 'oh' — فتصبح 0930 هي 'oh-nine-thirty' — بينما تُقرأ الساعات من 10 فما فوق كأرقام عادية. يعرض المحوّل أعلاه طريقة النطق هذه أسفل كل نتيجة، حتى تتمكن من التحقق من أي وقت بلمحة سريعة.",
     "faq.q5": "هل تُرسَل بيانات الوقت الخاصة بي إلى خادم؟",
-    "faq.a5": "لا. يعمل محوّل الوقت العسكري هذا بالكامل داخل متصفحك — الوقت الذي تكتبه وكل عملية تحويل تبقى على جهازك ولا تُرفع أو تُخزَّن أبدًا على خادم. يُحفظ آخر إدخال لك فقط في التخزين المحلي لمتصفحك، ليتذكره الأداة في المرة القادمة التي تفتح فيها الصفحة."
+    "faq.a5": "لا. يعمل محوّل الوقت العسكري هذا بالكامل داخل متصفحك — الوقت الذي تكتبه وكل عملية تحويل تبقى على جهازك ولا تُرفع أو تُخزَّن أبدًا على خادم. يُحفظ آخر إدخال لك فقط في التخزين المحلي لمتصفحك، ليتذكره الأداة في المرة القادمة التي تفتح فيها الصفحة.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -287,7 +312,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Comment prononce-t-on l'heure militaire à voix haute ?",
     "faq.a4": "Chaque paire de chiffres se lit comme un nombre, et 'hundred' (cent) remplace les minutes lorsqu'elles sont à 00. Ainsi, 0900 se dit 'oh-nine-hundred', et 2130 se dit 'twenty-one-thirty'. Les heures inférieures à 10 sont généralement précédées de 'oh' — 0930 devient 'oh-nine-thirty' — tandis que les heures à partir de 10 se lisent comme des nombres ordinaires. Le convertisseur ci-dessus affiche cette prononciation sous chaque résultat, pour vérifier n'importe quelle heure en un coup d'œil.",
     "faq.q5": "Mes données horaires sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur d'heure militaire fonctionne entièrement dans votre navigateur — l'heure que vous saisissez et chaque conversion restent sur votre appareil et ne sont jamais envoyées ni stockées sur un serveur. Votre dernière saisie est enregistrée uniquement dans le stockage local de votre navigateur, afin que l'outil s'en souvienne à votre prochaine visite."
+    "faq.a5": "Non. Ce convertisseur d'heure militaire fonctionne entièrement dans votre navigateur — l'heure que vous saisissez et chaque conversion restent sur votre appareil et ne sont jamais envoyées ni stockées sur un serveur. Votre dernière saisie est enregistrée uniquement dans le stockage local de votre navigateur, afin que l'outil s'en souvienne à votre prochaine visite.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -334,7 +364,12 @@ window.I18N_LOCALES = {
     "faq.q4": "মিলিটারি টাইম জোরে কীভাবে বলা হয়?",
     "faq.a4": "প্রতিটি অঙ্কের জোড়া একটি সংখ্যা হিসেবে পড়া হয়, আর মিনিট 00 হলে তার জায়গায় 'hundred' বলা হয়। তাই 0900-কে বলা হয় 'oh-nine-hundred', আর 2130-কে বলা হয় 'twenty-one-thirty'। ১০-এর কম ঘণ্টার আগে সাধারণত 'oh' বসানো হয় — 0930 হয়ে যায় 'oh-nine-thirty' — আর ১০ ও তার বেশি ঘণ্টা সাধারণ সংখ্যার মতোই পড়া হয়। উপরের কনভার্টার প্রতিটি ফলাফলের নিচে এই বলার ধরনটি দেখায়, যাতে আপনি এক নজরে যেকোনো সময় যাচাই করতে পারেন।",
     "faq.q5": "আমার সময়ের তথ্য কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই মিলিটারি টাইম কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সময় টাইপ করেন এবং প্রতিটি রূপান্তর শুধু আপনার ডিভাইসেই থাকে এবং কখনো কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। আপনার শেষ ইনপুটটি কেবল আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার পেজটি খুললে টুলটি তা মনে রাখতে পারে।"
+    "faq.a5": "না। এই মিলিটারি টাইম কনভার্টার সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সময় টাইপ করেন এবং প্রতিটি রূপান্তর শুধু আপনার ডিভাইসেই থাকে এবং কখনো কোনো সার্ভারে আপলোড বা সংরক্ষণ করা হয় না। আপনার শেষ ইনপুটটি কেবল আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে, যাতে পরের বার পেজটি খুললে টুলটি তা মনে রাখতে পারে।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -381,7 +416,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Como se fala a hora militar em voz alta?",
     "faq.a4": "Cada par de dígitos é lido como um número, e 'hundred' (cem) substitui os minutos quando eles são 00. Assim, 0900 se diz 'oh-nine-hundred', e 2130 se diz 'twenty-one-thirty'. Horas menores que 10 costumam levar o prefixo 'oh' — 0930 vira 'oh-nine-thirty' — enquanto 10 em diante são lidas como números comuns. O conversor acima mostra essa forma falada abaixo de cada resultado, para você conferir qualquer horário rapidamente.",
     "faq.q5": "Meus dados de horário são enviados a um servidor?",
-    "faq.a5": "Não. Este conversor de hora militar roda inteiramente no seu navegador — o horário que você digita e cada conversão permanecem no seu dispositivo e nunca são enviados ou armazenados em um servidor. Sua última entrada é salva apenas no armazenamento local do seu navegador, para que a ferramenta se lembre dela na próxima vez que você abrir a página."
+    "faq.a5": "Não. Este conversor de hora militar roda inteiramente no seu navegador — o horário que você digita e cada conversão permanecem no seu dispositivo e nunca são enviados ou armazenados em um servidor. Sua última entrada é salva apenas no armazenamento local do seu navegador, para que a ferramenta se lembre dela na próxima vez que você abrir a página.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -428,7 +468,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Как произносится военное время вслух?",
     "faq.a4": "Каждая пара цифр читается как число, а слово «hundred» (сто) заменяет минуты, когда они равны 00. Так, 0900 произносится как «oh-nine-hundred», а 2130 — как «twenty-one-thirty». Часы меньше 10 обычно произносятся с приставкой «oh» — 0930 становится «oh-nine-thirty», — а часы от 10 и выше читаются как обычные числа. Конвертер выше показывает такое произношение под каждым результатом, чтобы вы могли быстро проверить любое время.",
     "faq.q5": "Отправляются ли мои данные о времени на сервер?",
-    "faq.a5": "Нет. Этот конвертер военного времени работает полностью в вашем браузере — введённое время и каждая конвертация остаются только на вашем устройстве и никогда не загружаются и не хранятся на сервере. Ваш последний ввод сохраняется только в локальном хранилище браузера, чтобы инструмент запомнил его при следующем открытии страницы."
+    "faq.a5": "Нет. Этот конвертер военного времени работает полностью в вашем браузере — введённое время и каждая конвертация остаются только на вашем устройстве и никогда не загружаются и не хранятся на сервере. Ваш последний ввод сохраняется только в локальном хранилище браузера, чтобы инструмент запомнил его при следующем открытии страницы.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -475,7 +520,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ملٹری وقت بلند آواز میں کیسے بولا جاتا ہے؟",
     "faq.a4": "ہر دو ہندسوں کے جوڑے کو ایک عدد کی طرح پڑھا جاتا ہے، اور جب منٹ 00 ہوں تو ان کی جگہ 'hundred' بولا جاتا ہے۔ اس لیے 0900 کو 'oh-nine-hundred' کہا جاتا ہے، اور 2130 کو 'twenty-one-thirty' کہا جاتا ہے۔ 10 سے کم گھنٹوں کے آگے عام طور پر 'oh' لگایا جاتا ہے — 0930، 'oh-nine-thirty' بن جاتا ہے — جبکہ 10 اور اس سے زیادہ کو عام اعداد کی طرح پڑھا جاتا ہے۔ اوپر دیا گیا کنورٹر ہر نتیجے کے نیچے یہ بولنے کا انداز دکھاتا ہے، تاکہ آپ ایک نظر میں کسی بھی وقت کی جانچ کر سکیں۔",
     "faq.q5": "کیا میرا وقت کا ڈیٹا سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ ملٹری ٹائم کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا ٹائپ کیا گیا وقت اور ہر تبدیلی صرف آپ کے آلے پر رہتی ہے اور کبھی بھی سرور پر اپ لوڈ یا محفوظ نہیں کی جاتی۔ آپ کی آخری اندراج صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہے، تاکہ ٹول اگلی بار صفحہ کھولنے پر اسے یاد رکھ سکے۔"
+    "faq.a5": "نہیں۔ یہ ملٹری ٹائم کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا ٹائپ کیا گیا وقت اور ہر تبدیلی صرف آپ کے آلے پر رہتی ہے اور کبھی بھی سرور پر اپ لوڈ یا محفوظ نہیں کی جاتی۔ آپ کی آخری اندراج صرف آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ ہوتی ہے، تاکہ ٹول اگلی بار صفحہ کھولنے پر اسے یاد رکھ سکے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -522,7 +572,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Bagaimana cara mengucapkan waktu militer dengan lantang?",
     "faq.a4": "Setiap pasangan digit dibaca sebagai sebuah angka, dan 'hundred' menggantikan menit saat nilainya 00. Jadi 0900 diucapkan 'oh-nine-hundred', dan 2130 diucapkan 'twenty-one-thirty'. Jam di bawah 10 biasanya diberi awalan 'oh' — 0930 menjadi 'oh-nine-thirty' — sementara 10 ke atas dibaca seperti angka biasa. Konverter di atas menampilkan cara pengucapan ini di bawah setiap hasil, sehingga Anda bisa memeriksa waktu mana pun sekilas.",
     "faq.q5": "Apakah data waktu saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter waktu militer ini berjalan sepenuhnya di browser Anda — waktu yang Anda ketik dan setiap hasil konversi tetap berada di perangkat Anda dan tidak pernah diunggah atau disimpan ke server. Input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda, sehingga alat ini mengingatnya saat Anda membuka halaman ini lagi."
+    "faq.a5": "Tidak. Konverter waktu militer ini berjalan sepenuhnya di browser Anda — waktu yang Anda ketik dan setiap hasil konversi tetap berada di perangkat Anda dan tidak pernah diunggah atau disimpan ke server. Input terakhir Anda hanya disimpan di penyimpanan lokal browser Anda, sehingga alat ini mengingatnya saat Anda membuka halaman ini lagi.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -569,7 +624,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie spricht man Militärzeit laut aus?",
     "faq.a4": "Jedes Ziffernpaar wird als Zahl gelesen, und 'hundred' (hundert) ersetzt die Minuten, wenn diese 00 sind. So wird 0900 als 'oh-nine-hundred' ausgesprochen und 2130 als 'twenty-one-thirty'. Stunden unter 10 erhalten meist die Vorsilbe 'oh' — aus 0930 wird 'oh-nine-thirty' — während Stunden ab 10 wie gewöhnliche Zahlen gelesen werden. Der Umrechner oben zeigt diese Aussprache unter jedem Ergebnis an, sodass Sie jede Uhrzeit auf einen Blick prüfen können.",
     "faq.q5": "Werden meine Zeitdaten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Militärzeit-Umrechner läuft vollständig in Ihrem Browser — die eingegebene Uhrzeit und jede Umrechnung verbleiben auf Ihrem Gerät und werden niemals hochgeladen oder auf einem Server gespeichert. Ihre letzte Eingabe wird nur im lokalen Speicher Ihres Browsers gesichert, damit das Tool sie beim nächsten Öffnen der Seite wiedererkennt."
+    "faq.a5": "Nein. Dieser Militärzeit-Umrechner läuft vollständig in Ihrem Browser — die eingegebene Uhrzeit und jede Umrechnung verbleiben auf Ihrem Gerät und werden niemals hochgeladen oder auf einem Server gespeichert. Ihre letzte Eingabe wird nur im lokalen Speicher Ihres Browsers gesichert, damit das Tool sie beim nächsten Öffnen der Seite wiedererkennt.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -616,7 +676,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ミリタリータイムは声に出すとどう読みますか?",
     "faq.a4": "2桁ずつの組を1つの数字として読み、分が00のときは「hundred」に置き換えます。そのため0900は「oh-nine-hundred」、2130は「twenty-one-thirty」と読みます。10未満の時には通常「oh」を前に付け — 0930は「oh-nine-thirty」になります — 10以上は普通の数字として読みます。上の変換ツールでは各結果の下にこの読み方が表示されるので、どの時刻もひと目で確認できます。",
     "faq.q5": "入力した時刻データはサーバーに送信されますか?",
-    "faq.a5": "いいえ。このミリタリータイム変換ツールはすべてブラウザ内で動作します — 入力した時刻や変換結果はお使いの端末内にのみ保存され、サーバーへアップロードされたり保存されたりすることは一切ありません。最後に入力した内容はブラウザのローカルストレージにのみ保存されるため、次回このページを開いたときにツールが記憶しています。"
+    "faq.a5": "いいえ。このミリタリータイム変換ツールはすべてブラウザ内で動作します — 入力した時刻や変換結果はお使いの端末内にのみ保存され、サーバーへアップロードされたり保存されたりすることは一切ありません。最後に入力した内容はブラウザのローカルストレージにのみ保存されるため、次回このページを開いたときにツールが記憶しています。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -663,6 +728,11 @@ window.I18N_LOCALES = {
     "faq.q4": "군대시간은 소리 내어 어떻게 읽나요?",
     "faq.a4": "두 자리씩 묶어 하나의 숫자처럼 읽으며, 분이 00일 때는 'hundred'로 대신 읽습니다. 그래서 0900은 'oh-nine-hundred'로, 2130은 'twenty-one-thirty'로 읽습니다. 10 미만의 시(時)는 보통 앞에 'oh'를 붙여 — 0930은 'oh-nine-thirty'가 됩니다 — 10 이상은 일반 숫자처럼 읽습니다. 위 변환기는 각 결과 아래에 이 읽는 방식을 함께 보여주므로 한눈에 확인할 수 있습니다.",
     "faq.q5": "제 시간 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 군대시간 변환기는 전적으로 브라우저 안에서만 동작합니다 — 입력한 시간과 모든 변환 결과는 사용자의 기기에만 남고 서버로 업로드되거나 저장되는 일이 없습니다. 마지막으로 입력한 값은 브라우저의 로컬 저장소에만 저장되어, 다음에 페이지를 열었을 때 도구가 이를 기억합니다."
+    "faq.a5": "아니요. 이 군대시간 변환기는 전적으로 브라우저 안에서만 동작합니다 — 입력한 시간과 모든 변환 결과는 사용자의 기기에만 남고 서버로 업로드되거나 저장되는 일이 없습니다. 마지막으로 입력한 값은 브라우저의 로컬 저장소에만 저장되어, 다음에 페이지를 열었을 때 도구가 이를 기억합니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

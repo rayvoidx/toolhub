@@ -65,7 +65,12 @@ window.I18N_LOCALES = {
     "faq.q4": "How many kilojoules are in a banana?",
     "faq.a4": "A medium banana has about 105 kcal of food energy. Multiply by 4.184 to convert: 105 kcal × 4.184 ≈ 439.3 kJ. That is roughly the same energy as 122 Wh of electricity — enough to run a 10 W LED bulb for about 12 hours. Try entering 105 in this converter with kcal as From and kJ as To to see the exact figure.",
     "faq.q5": "Is my input sent to a server?",
-    "faq.a5": "No. This energy converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example kWh → kJ), kept in your browser's local storage so it is ready next time. The value itself is not stored."
+    "faq.a5": "No. This energy converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example kWh → kJ), kept in your browser's local storage so it is ready next time. The value itself is not stored.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   "zh": {
     "_label": "中文",
@@ -115,7 +120,12 @@ window.I18N_LOCALES = {
     "faq.q4": "一根香蕉含多少千焦能量？",
     "faq.a4": "一根中等大小的香蕉大约含有 105 kcal 的食物能量。乘以 4.184 进行换算：105 kcal × 4.184 ≈ 439.3 kJ。这大约相当于 122 Wh 的电能 — 足以让一个 10 W 的 LED 灯泡点亮约 12 小时。你可以在本换算器中输入 105，将“从”设为 kcal，“到”设为 kJ，查看精确数值。",
     "faq.q5": "我输入的数据会被发送到服务器吗？",
-    "faq.a5": "不会。这个能量换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如 kWh → kJ），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存。"
+    "faq.a5": "不会。这个能量换算器完全在您的浏览器中运行 — 您输入的数字绝不会被上传到任何地方。唯一保存的是您上次选择的单位对（例如 kWh → kJ），存放在浏览器本地存储中，方便下次直接使用。数值本身不会被保存。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   "hi": {
     "_label": "हिन्दी",
@@ -165,7 +175,12 @@ window.I18N_LOCALES = {
     "faq.q4": "एक केले में कितने किलोजूल होते हैं?",
     "faq.a4": "एक मध्यम आकार के केले में लगभग 105 kcal भोजन ऊर्जा होती है। 4.184 से गुणा करें: 105 kcal × 4.184 ≈ 439.3 kJ। यह लगभग 122 Wh बिजली के बराबर है — जो एक 10 W LED बल्ब को लगभग 12 घंटे जलाने के लिए पर्याप्त है। इस कन्वर्टर में From में kcal और To में kJ चुनकर 105 दर्ज करें और सटीक आँकड़ा देखें।",
     "faq.q5": "क्या मेरा इनपुट किसी सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह एनर्जी कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं अपलोड नहीं होती। केवल आपकी अंतिम चुनी हुई इकाई जोड़ी (उदाहरण के लिए kWh → kJ) आपके ब्राउज़र की लोकल स्टोरेज में सहेजी जाती है ताकि अगली बार तैयार रहे। मान स्वयं सहेजा नहीं जाता।"
+    "faq.a5": "नहीं। यह एनर्जी कन्वर्टर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा टाइप की गई संख्या कहीं अपलोड नहीं होती। केवल आपकी अंतिम चुनी हुई इकाई जोड़ी (उदाहरण के लिए kWh → kJ) आपके ब्राउज़र की लोकल स्टोरेज में सहेजी जाती है ताकि अगली बार तैयार रहे। मान स्वयं सहेजा नहीं जाता।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   "es": {
     "_label": "Español",
@@ -215,7 +230,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Cuántos kilojulios tiene un plátano?",
     "faq.a4": "Un plátano mediano tiene unas 105 kcal de energía alimentaria. Multiplica por 4,184 para convertir: 105 kcal × 4,184 ≈ 439,3 kJ. Eso equivale aproximadamente a 122 Wh de electricidad — suficiente para encender una bombilla LED de 10 W durante unas 12 horas. Prueba a introducir 105 en este conversor con kcal como De y kJ como A para ver la cifra exacta.",
     "faq.q5": "¿Se envían mis datos a un servidor?",
-    "faq.a5": "No. Este conversor de energía funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es el último par de unidades elegido (por ejemplo, kWh → kJ), almacenado en el almacenamiento local de tu navegador para tenerlo listo la próxima vez. El valor en sí no se guarda."
+    "faq.a5": "No. Este conversor de energía funciona por completo en tu navegador — el número que escribes nunca se sube a ningún sitio. Lo único que se guarda es el último par de unidades elegido (por ejemplo, kWh → kJ), almacenado en el almacenamiento local de tu navegador para tenerlo listo la próxima vez. El valor en sí no se guarda.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   "ar": {
     "_label": "العربية",
@@ -265,7 +285,12 @@ window.I18N_LOCALES = {
     "faq.q4": "كم عدد الكيلوجول في الموزة؟",
     "faq.a4": "تحتوي الموزة متوسطة الحجم على حوالي 105 kcal من طاقة الطعام. اضرب في 4.184 للتحويل: 105 kcal × 4.184 ≈ 439.3 kJ. وهذا يعادل تقريبًا 122 Wh من الكهرباء — يكفي لتشغيل مصباح LED بقدرة 10 واط لمدة 12 ساعة تقريبًا. جرّب إدخال 105 في هذا المحوّل مع اختيار kcal كوحدة \"من\" وkJ كوحدة \"إلى\" لرؤية الرقم الدقيق.",
     "faq.q5": "هل تُرسَل مدخلاتي إلى خادم؟",
-    "faq.a5": "لا. يعمل محوّل الطاقة هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفع إلى أي مكان. الشيء الوحيد الذي يُحفَظ هو آخر زوج وحدات اخترته (مثل kWh → kJ)، ويُخزَّن في التخزين المحلي للمتصفح ليكون جاهزًا في المرة القادمة. أما القيمة نفسها فلا تُحفَظ."
+    "faq.a5": "لا. يعمل محوّل الطاقة هذا بالكامل داخل متصفحك — الرقم الذي تكتبه لا يُرفع إلى أي مكان. الشيء الوحيد الذي يُحفَظ هو آخر زوج وحدات اخترته (مثل kWh → kJ)، ويُخزَّن في التخزين المحلي للمتصفح ليكون جاهزًا في المرة القادمة. أما القيمة نفسها فلا تُحفَظ.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   "fr": {
     "_label": "Français",
@@ -315,7 +340,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Combien de kilojoules contient une banane ?",
     "faq.a4": "Une banane moyenne contient environ 105 kcal d'énergie alimentaire. Multipliez par 4,184 pour convertir : 105 kcal × 4,184 ≈ 439,3 kJ. Cela correspond à peu près à 122 Wh d'électricité — de quoi allumer une ampoule LED de 10 W pendant environ 12 heures. Essayez de saisir 105 dans ce convertisseur avec kcal comme unité De et kJ comme unité Vers pour voir le chiffre exact.",
     "faq.q5": "Mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce convertisseur d'énergie fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais envoyé où que ce soit. La seule chose enregistrée est votre dernière paire d'unités choisie (par exemple kWh → kJ), conservée dans le stockage local de votre navigateur pour la fois suivante. La valeur elle-même n'est pas enregistrée."
+    "faq.a5": "Non. Ce convertisseur d'énergie fonctionne entièrement dans votre navigateur — le nombre que vous saisissez n'est jamais envoyé où que ce soit. La seule chose enregistrée est votre dernière paire d'unités choisie (par exemple kWh → kJ), conservée dans le stockage local de votre navigateur pour la fois suivante. La valeur elle-même n'est pas enregistrée.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   "bn": {
     "_label": "বাংলা",
@@ -365,7 +395,12 @@ window.I18N_LOCALES = {
     "faq.q4": "একটি কলায় কত কিলোজুল থাকে?",
     "faq.a4": "একটি মাঝারি আকারের কলায় প্রায় 105 kcal খাদ্য শক্তি থাকে। রূপান্তর করতে 4.184 দিয়ে গুণ করুন: 105 kcal × 4.184 ≈ 439.3 kJ। এটি প্রায় 122 Wh বিদ্যুতের সমান — একটি 10 W LED বাল্ব প্রায় 12 ঘণ্টা জ্বালাতে যথেষ্ট। এই কনভার্টারে From-এ kcal এবং To-তে kJ বেছে নিয়ে 105 লিখে সঠিক সংখ্যাটি দেখুন।",
     "faq.q5": "আমার ইনপুট কি কোনো সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই এনার্জি কনভার্টার পুরোপুরি আপনার ব্রাউজারে চলে — আপনার টাইপ করা সংখ্যা কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ বেছে নেওয়া একক জোড়া (যেমন kWh → kJ) আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার প্রস্তুত থাকে। মানটি নিজে সংরক্ষণ করা হয় না।"
+    "faq.a5": "না। এই এনার্জি কনভার্টার পুরোপুরি আপনার ব্রাউজারে চলে — আপনার টাইপ করা সংখ্যা কোথাও আপলোড হয় না। শুধু আপনার সর্বশেষ বেছে নেওয়া একক জোড়া (যেমন kWh → kJ) আপনার ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত থাকে যাতে পরের বার প্রস্তুত থাকে। মানটি নিজে সংরক্ষণ করা হয় না।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   "pt": {
     "_label": "Português",
@@ -415,7 +450,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Quantos quilojoules tem uma banana?",
     "faq.a4": "Uma banana média tem cerca de 105 kcal de energia alimentar. Multiplique por 4,184 para converter: 105 kcal × 4,184 ≈ 439,3 kJ. Isso equivale a aproximadamente 122 Wh de eletricidade — suficiente para acender uma lâmpada LED de 10 W por cerca de 12 horas. Tente digitar 105 neste conversor com kcal como De e kJ como Para para ver o valor exato.",
     "faq.q5": "Meus dados são enviados para um servidor?",
-    "faq.a5": "Não. Este conversor de energia funciona inteiramente no seu navegador — o número que você digita nunca é enviado para lugar algum. A única coisa salva é o último par de unidades escolhido (por exemplo, kWh → kJ), guardado no armazenamento local do navegador para estar pronto na próxima vez. O valor em si não é salvo."
+    "faq.a5": "Não. Este conversor de energia funciona inteiramente no seu navegador — o número que você digita nunca é enviado para lugar algum. A única coisa salva é o último par de unidades escolhido (por exemplo, kWh → kJ), guardado no armazenamento local do navegador para estar pronto na próxima vez. O valor em si não é salvo.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   "ru": {
     "_label": "Русский",
@@ -465,7 +505,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Сколько килоджоулей в банане?",
     "faq.a4": "Средний банан содержит около 105 ккал пищевой энергии. Умножьте на 4,184 для перевода: 105 ккал × 4,184 ≈ 439,3 кДж. Это примерно равно 122 Вт·ч электроэнергии — достаточно, чтобы светодиодная лампа мощностью 10 Вт горела около 12 часов. Попробуйте ввести 105 в этот конвертер, выбрав ккал как «Из» и кДж как «В», чтобы увидеть точное значение.",
     "faq.q5": "Отправляются ли мои данные на сервер?",
-    "faq.a5": "Нет. Этот конвертер энергии полностью работает в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, кВт·ч → кДж), хранящаяся в локальном хранилище вашего браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется."
+    "faq.a5": "Нет. Этот конвертер энергии полностью работает в вашем браузере — введённое число никуда не загружается. Сохраняется только последняя выбранная пара единиц (например, кВт·ч → кДж), хранящаяся в локальном хранилище вашего браузера, чтобы быть готовой в следующий раз. Само значение не сохраняется.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   "ur": {
     "_label": "اردو",
@@ -515,7 +560,12 @@ window.I18N_LOCALES = {
     "faq.q4": "ایک کیلے میں کتنے کلوجول ہوتے ہیں؟",
     "faq.a4": "ایک درمیانے سائز کے کیلے میں تقریباً 105 kcal خوراک کی توانائی ہوتی ہے۔ تبدیل کرنے کے لیے 4.184 سے ضرب دیں: 105 kcal × 4.184 ≈ 439.3 kJ۔ یہ تقریباً 122 Wh بجلی کے برابر ہے — ایک 10 W LED بلب کو تقریباً 12 گھنٹے جلانے کے لیے کافی۔ اس کنورٹر میں From میں kcal اور To میں kJ منتخب کر کے 105 درج کریں اور درست عدد دیکھیں۔",
     "faq.q5": "کیا میرا ان پٹ کسی سرور کو بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ انرجی کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا ٹائپ کیا گیا نمبر کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری منتخب کردہ یونٹ جوڑا (مثلاً kWh → kJ) آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ رہتا ہے تاکہ اگلی بار تیار ہو۔ ویلیو خود محفوظ نہیں کی جاتی۔"
+    "faq.a5": "نہیں۔ یہ انرجی کنورٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کا ٹائپ کیا گیا نمبر کہیں اپ لوڈ نہیں ہوتا۔ صرف آپ کا آخری منتخب کردہ یونٹ جوڑا (مثلاً kWh → kJ) آپ کے براؤزر کے لوکل اسٹوریج میں محفوظ رہتا ہے تاکہ اگلی بار تیار ہو۔ ویلیو خود محفوظ نہیں کی جاتی۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   "id": {
     "_label": "Bahasa Indonesia",
@@ -565,7 +615,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Berapa kilojoule dalam sebuah pisang?",
     "faq.a4": "Pisang berukuran sedang memiliki sekitar 105 kcal energi makanan. Kalikan dengan 4,184 untuk mengonversi: 105 kcal × 4,184 ≈ 439,3 kJ. Itu kira-kira setara dengan 122 Wh listrik — cukup untuk menyalakan bohlam LED 10 W selama sekitar 12 jam. Coba masukkan 105 di konverter ini dengan kcal sebagai Dari dan kJ sebagai Ke untuk melihat angka pastinya.",
     "faq.q5": "Apakah input saya dikirim ke server?",
-    "faq.a5": "Tidak. Konverter energi ini berjalan sepenuhnya di browser Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya kWh → kJ), disimpan di penyimpanan lokal browser Anda agar siap digunakan lagi nanti. Nilainya sendiri tidak disimpan."
+    "faq.a5": "Tidak. Konverter energi ini berjalan sepenuhnya di browser Anda — angka yang Anda ketik tidak pernah diunggah ke mana pun. Satu-satunya yang disimpan adalah pasangan satuan terakhir yang Anda pilih (misalnya kWh → kJ), disimpan di penyimpanan lokal browser Anda agar siap digunakan lagi nanti. Nilainya sendiri tidak disimpan.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   "de": {
     "_label": "Deutsch",
@@ -615,7 +670,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Wie viele Kilojoule stecken in einer Banane?",
     "faq.a4": "Eine mittelgroße Banane hat etwa 105 kcal Nahrungsenergie. Multiplizieren Sie mit 4,184, um umzurechnen: 105 kcal × 4,184 ≈ 439,3 kJ. Das entspricht etwa 122 Wh Strom — genug, um eine 10-W-LED-Lampe rund 12 Stunden lang leuchten zu lassen. Geben Sie 105 in diesen Umrechner ein, mit kcal als Von und kJ als Nach, um den genauen Wert zu sehen.",
     "faq.q5": "Werden meine Eingaben an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Energie-Umrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwohin hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (z. B. kWh → kJ) im lokalen Speicher Ihres Browsers, damit es beim nächsten Mal bereit ist. Der Wert selbst wird nicht gespeichert."
+    "faq.a5": "Nein. Dieser Energie-Umrechner läuft vollständig in Ihrem Browser — die eingegebene Zahl wird nirgendwohin hochgeladen. Gespeichert wird nur Ihr zuletzt gewähltes Einheitenpaar (z. B. kWh → kJ) im lokalen Speicher Ihres Browsers, damit es beim nächsten Mal bereit ist. Der Wert selbst wird nicht gespeichert.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   "ja": {
     "_label": "日本語",
@@ -665,7 +725,12 @@ window.I18N_LOCALES = {
     "faq.q4": "バナナ1本には何キロジュールありますか？",
     "faq.a4": "中サイズのバナナには約105 kcalの食品エネルギーが含まれています。4.184を掛けて変換すると：105 kcal × 4.184 ≈ 439.3 kJ。これは約122 Whの電力に相当し、10WのLED電球を約12時間点灯させるのに十分なエネルギーです。この変換ツールで変換元にkcal、変換先にkJを選んで105を入力し、正確な数値を確認してみてください。",
     "faq.q5": "入力した内容はサーバーに送信されますか？",
-    "faq.a5": "いいえ。このエネルギー変換ツールは完全にブラウザ内で動作します — 入力した数値がどこかにアップロードされることはありません。保存されるのは最後に選択した単位のペア（例：kWh → kJ）のみで、ブラウザのローカルストレージに保存され、次回すぐに使えるようになります。値そのものは保存されません。"
+    "faq.a5": "いいえ。このエネルギー変換ツールは完全にブラウザ内で動作します — 入力した数値がどこかにアップロードされることはありません。保存されるのは最後に選択した単位のペア（例：kWh → kJ）のみで、ブラウザのローカルストレージに保存され、次回すぐに使えるようになります。値そのものは保存されません。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   "ko": {
     "_label": "한국어",
@@ -715,6 +780,11 @@ window.I18N_LOCALES = {
     "faq.q4": "바나나 한 개에는 몇 킬로줄이 들어있나요?",
     "faq.a4": "중간 크기 바나나에는 약 105 kcal의 식품 에너지가 들어있습니다. 4.184를 곱해 변환하면: 105 kcal × 4.184 ≈ 439.3 kJ. 이는 약 122 Wh의 전기와 맞먹는 양으로, 10W LED 전구를 약 12시간 켤 수 있는 에너지입니다. 이 변환기에서 변환 전을 kcal, 변환 후를 kJ로 선택하고 105를 입력해 정확한 수치를 확인해보세요.",
     "faq.q5": "입력한 내용이 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 에너지 변환기는 전적으로 브라우저 안에서 작동합니다 — 입력한 숫자는 어디에도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 쌍(예: kWh → kJ)뿐이며, 브라우저의 로컬 저장소에 보관되어 다음에 바로 사용할 수 있습니다. 값 자체는 저장되지 않습니다."
+    "faq.a5": "아니요. 이 에너지 변환기는 전적으로 브라우저 안에서 작동합니다 — 입력한 숫자는 어디에도 업로드되지 않습니다. 저장되는 것은 마지막으로 선택한 단위 쌍(예: kWh → kJ)뿐이며, 브라우저의 로컬 저장소에 보관되어 다음에 바로 사용할 수 있습니다. 값 자체는 저장되지 않습니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };

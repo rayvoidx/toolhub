@@ -66,7 +66,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Why does GCF × LCM = a × b only work for two numbers?",
     "faq.a4": "For exactly two numbers, multiplying the GCF by the LCM always equals the product of the two original numbers — for 12 and 18, GCF × LCM = 6 × 36 = 216, which equals 12 × 18 = 216. This shortcut breaks down once a third number joins in: for 4, 6, and 15, the GCF is 1 and the LCM is 60, so GCF × LCM = 60, but 4 × 6 × 15 = 360 — the two numbers no longer match. The identity is a special property of pairs, not a general rule for any number of values.",
     "faq.q5": "Is my data sent to a server?",
-    "faq.a5": "No. This calculator runs entirely in your browser — the numbers you enter, the GCF, the LCM, and every step shown are computed on your device and never uploaded anywhere. There's no sign-up and no tracking. Your last entry is saved only in this browser's local storage so it's there when you come back, and clearing your browser data removes it completely."
+    "faq.a5": "No. This calculator runs entirely in your browser — the numbers you enter, the GCF, the LCM, and every step shown are computed on your device and never uploaded anywhere. There's no sign-up and no tracking. Your last entry is saved only in this browser's local storage so it's there when you come back, and clearing your browser data removes it completely.",
+    "ux.share": "Share this tool",
+    "ux.example": "Try an example",
+    "ux.copyHint": "Tap to copy",
+    "ux.copied": "Copied",
+    "tools.recent": "Recently used",
   },
   zh: {
     "_label": "中文",
@@ -117,7 +122,12 @@ window.I18N_LOCALES = {
     "faq.q4": "为什么 GCF × LCM = a × b 只在两个数字时成立？",
     "faq.a4": "对于恰好两个数字，GCF 乘以 LCM 永远等于这两个原始数字的乘积——以 12 和 18 为例，GCF × LCM = 6 × 36 = 216，正好等于 12 × 18 = 216。但只要加入第三个数字，这个规律就不再适用：以 4、6、15 为例，GCF 是 1，LCM 是 60，GCF × LCM = 60，而 4 × 6 × 15 = 360，两者不再相等。这个等式是两数之间特有的性质，并不是适用于任意数量数字的通用规则。",
     "faq.q5": "我的数据会被发送到服务器吗？",
-    "faq.a5": "不会。本计算器完全在你的浏览器中运行——你输入的数字、GCF、LCM 以及展示的每一个步骤都只在你的设备上计算，不会上传到任何地方。无需注册，也没有任何追踪。你最后一次输入的内容仅保存在本浏览器的本地存储中，方便下次访问时自动填回，清除浏览器数据即可完全删除。"
+    "faq.a5": "不会。本计算器完全在你的浏览器中运行——你输入的数字、GCF、LCM 以及展示的每一个步骤都只在你的设备上计算，不会上传到任何地方。无需注册，也没有任何追踪。你最后一次输入的内容仅保存在本浏览器的本地存储中，方便下次访问时自动填回，清除浏览器数据即可完全删除。",
+    "ux.share": "分享此工具",
+    "ux.example": "填入示例",
+    "ux.copyHint": "点按复制",
+    "ux.copied": "已复制",
+    "tools.recent": "最近使用",
   },
   hi: {
     "_label": "हिन्दी",
@@ -168,7 +178,12 @@ window.I18N_LOCALES = {
     "faq.q4": "GCF × LCM = a × b सिर्फ़ दो संख्याओं पर ही क्यों लागू होता है?",
     "faq.a4": "ठीक दो संख्याओं के लिए, GCF को LCM से गुणा करने पर हमेशा दोनों मूल संख्याओं का गुणनफल मिलता है — 12 और 18 के लिए GCF × LCM = 6 × 36 = 216, जो 12 × 18 = 216 के बराबर है। तीसरी संख्या जुड़ते ही यह नियम टूट जाता है: 4, 6 और 15 के लिए GCF है 1 और LCM है 60, तो GCF × LCM = 60, लेकिन 4 × 6 × 15 = 360 — दोनों अब बराबर नहीं हैं। यह समीकरण सिर्फ़ जोड़ी (pair) की एक ख़ास विशेषता है, किसी भी संख्या-समूह के लिए सामान्य नियम नहीं है।",
     "faq.q5": "क्या मेरा डेटा सर्वर पर भेजा जाता है?",
-    "faq.a5": "नहीं। यह कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा डाली गई संख्याएँ, GCF, LCM और दिखाया गया हर चरण आपके डिवाइस पर ही गिना जाता है और कहीं अपलोड नहीं होता। न कोई साइन-अप चाहिए, न कोई ट्रैकिंग होती है। आपकी आख़िरी प्रविष्टि सिर्फ़ इस ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार वापस आने पर मिल जाए, और ब्राउज़र डेटा साफ़ करते ही यह पूरी तरह मिट जाती है।"
+    "faq.a5": "नहीं। यह कैलकुलेटर पूरी तरह आपके ब्राउज़र में चलता है — आपके द्वारा डाली गई संख्याएँ, GCF, LCM और दिखाया गया हर चरण आपके डिवाइस पर ही गिना जाता है और कहीं अपलोड नहीं होता। न कोई साइन-अप चाहिए, न कोई ट्रैकिंग होती है। आपकी आख़िरी प्रविष्टि सिर्फ़ इस ब्राउज़र के लोकल स्टोरेज में सेव होती है ताकि अगली बार वापस आने पर मिल जाए, और ब्राउज़र डेटा साफ़ करते ही यह पूरी तरह मिट जाती है।",
+    "ux.share": "यह टूल साझा करें",
+    "ux.example": "उदाहरण आज़माएँ",
+    "ux.copyHint": "कॉपी करने के लिए टैप करें",
+    "ux.copied": "कॉपी हो गया",
+    "tools.recent": "हाल में उपयोग किए गए",
   },
   es: {
     "_label": "Español",
@@ -219,7 +234,12 @@ window.I18N_LOCALES = {
     "faq.q4": "¿Por qué MCD × mcm = a × b solo funciona con dos números?",
     "faq.a4": "Con exactamente dos números, multiplicar el MCD por el mcm siempre da el producto de los dos números originales — para 12 y 18, MCD × mcm = 6 × 36 = 216, que coincide con 12 × 18 = 216. Este atajo deja de funcionar en cuanto se añade un tercer número: para 4, 6 y 15, el MCD es 1 y el mcm es 60, así que MCD × mcm = 60, pero 4 × 6 × 15 = 360 — ya no coinciden. Esta identidad es una propiedad especial de las parejas, no una regla general para cualquier cantidad de números.",
     "faq.q5": "¿Se envían mis datos a un servidor?",
-    "faq.a5": "No. Esta calculadora funciona completamente en tu navegador — los números que introduces, el MCD, el mcm y cada paso mostrado se calculan en tu dispositivo y nunca se suben a ningún sitio. No hace falta registrarse ni hay seguimiento alguno. Tu última entrada solo se guarda en el almacenamiento local de este navegador para que esté ahí cuando vuelvas, y borrar los datos del navegador la elimina por completo."
+    "faq.a5": "No. Esta calculadora funciona completamente en tu navegador — los números que introduces, el MCD, el mcm y cada paso mostrado se calculan en tu dispositivo y nunca se suben a ningún sitio. No hace falta registrarse ni hay seguimiento alguno. Tu última entrada solo se guarda en el almacenamiento local de este navegador para que esté ahí cuando vuelvas, y borrar los datos del navegador la elimina por completo.",
+    "ux.share": "Compartir esta herramienta",
+    "ux.example": "Probar un ejemplo",
+    "ux.copyHint": "Toca para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recientemente",
   },
   ar: {
     "_label": "العربية",
@@ -270,7 +290,12 @@ window.I18N_LOCALES = {
     "faq.q4": "لماذا تنطبق العلاقة GCF × LCM = a × b على عددين فقط؟",
     "faq.a4": "مع عددين بالضبط، يساوي حاصل ضرب القاسم المشترك الأكبر في المضاعف المشترك الأصغر دائمًا حاصل ضرب العددين الأصليين — بالنسبة لـ 12 و18، القاسم المشترك الأكبر × المضاعف المشترك الأصغر = 6 × 36 = 216، وهو يساوي 12 × 18 = 216. تتوقف هذه العلاقة عن الانطباق بمجرد إضافة عدد ثالث: بالنسبة لـ 4 و6 و15، القاسم المشترك الأكبر هو 1 والمضاعف المشترك الأصغر هو 60، فيكون حاصل ضربهما 60، بينما 4 × 6 × 15 = 360 — ولم يعودا متطابقين. هذه العلاقة خاصية مميزة للأزواج فقط، وليست قاعدة عامة لأي عدد من القيم.",
     "faq.q5": "هل تُرسَل بياناتي إلى خادم؟",
-    "faq.a5": "لا. تعمل هذه الحاسبة بالكامل داخل متصفحك — فالأعداد التي تُدخلها، والقاسم المشترك الأكبر، والمضاعف المشترك الأصغر، وكل خطوة تظهر يتم حسابها على جهازك ولا تُرفع إلى أي مكان أبدًا. لا حاجة للتسجيل، ولا يوجد أي تتبع. يُحفظ آخر إدخال لك فقط في التخزين المحلي لهذا المتصفح ليكون جاهزًا عند عودتك، ومسح بيانات المتصفح يحذفه بالكامل."
+    "faq.a5": "لا. تعمل هذه الحاسبة بالكامل داخل متصفحك — فالأعداد التي تُدخلها، والقاسم المشترك الأكبر، والمضاعف المشترك الأصغر، وكل خطوة تظهر يتم حسابها على جهازك ولا تُرفع إلى أي مكان أبدًا. لا حاجة للتسجيل، ولا يوجد أي تتبع. يُحفظ آخر إدخال لك فقط في التخزين المحلي لهذا المتصفح ليكون جاهزًا عند عودتك، ومسح بيانات المتصفح يحذفه بالكامل.",
+    "ux.share": "مشاركة هذه الأداة",
+    "ux.example": "جرّب مثالاً",
+    "ux.copyHint": "انقر للنسخ",
+    "ux.copied": "تم النسخ",
+    "tools.recent": "المستخدمة مؤخراً",
   },
   fr: {
     "_label": "Français",
@@ -321,7 +346,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Pourquoi PGCD × PPCM = a × b ne fonctionne-t-il qu'avec deux nombres ?",
     "faq.a4": "Avec exactement deux nombres, multiplier le PGCD par le PPCM donne toujours le produit des deux nombres d'origine — pour 12 et 18, PGCD × PPCM = 6 × 36 = 216, ce qui correspond à 12 × 18 = 216. Ce raccourci ne fonctionne plus dès qu'un troisième nombre entre en jeu : pour 4, 6 et 15, le PGCD est 1 et le PPCM est 60, donc PGCD × PPCM = 60, alors que 4 × 6 × 15 = 360 — les deux résultats ne correspondent plus. Cette identité est une propriété propre aux paires, pas une règle générale valable pour n'importe quel nombre de valeurs.",
     "faq.q5": "Mes données sont-elles envoyées à un serveur ?",
-    "faq.a5": "Non. Ce calculateur fonctionne entièrement dans votre navigateur — les nombres que vous saisissez, le PGCD, le PPCM et chaque étape affichée sont calculés sur votre appareil et ne sont jamais envoyés où que ce soit. Aucune inscription n'est nécessaire, et il n'y a aucun suivi. Votre dernière saisie est enregistrée uniquement dans le stockage local de ce navigateur pour la retrouver à votre retour, et effacer les données du navigateur la supprime complètement."
+    "faq.a5": "Non. Ce calculateur fonctionne entièrement dans votre navigateur — les nombres que vous saisissez, le PGCD, le PPCM et chaque étape affichée sont calculés sur votre appareil et ne sont jamais envoyés où que ce soit. Aucune inscription n'est nécessaire, et il n'y a aucun suivi. Votre dernière saisie est enregistrée uniquement dans le stockage local de ce navigateur pour la retrouver à votre retour, et effacer les données du navigateur la supprime complètement.",
+    "ux.share": "Partager cet outil",
+    "ux.example": "Essayer un exemple",
+    "ux.copyHint": "Appuyer pour copier",
+    "ux.copied": "Copié",
+    "tools.recent": "Utilisés récemment",
   },
   bn: {
     "_label": "বাংলা",
@@ -372,7 +402,12 @@ window.I18N_LOCALES = {
     "faq.q4": "GCF × LCM = a × b কেন শুধু দুটি সংখ্যার ক্ষেত্রেই কাজ করে?",
     "faq.a4": "ঠিক দুটি সংখ্যার ক্ষেত্রে, GCF-কে LCM দিয়ে গুণ করলে সবসময় মূল দুটি সংখ্যার গুণফল পাওয়া যায় — ১২ ও ১৮-এর জন্য, GCF × LCM = ৬ × ৩৬ = ২১৬, যা ১২ × ১৮ = ২১৬-এর সমান। তৃতীয় একটি সংখ্যা যুক্ত হলেই এই শর্টকাট আর কাজ করে না: ৪, ৬ ও ১৫-এর জন্য GCF হলো ১ এবং LCM হলো ৬০, তাই GCF × LCM = ৬০, কিন্তু ৪ × ৬ × ১৫ = ৩৬০ — দুটি আর মেলে না। এই সম্পর্কটি শুধু জোড়া সংখ্যার একটি বিশেষ বৈশিষ্ট্য, যেকোনো সংখ্যক মানের জন্য প্রযোজ্য সাধারণ নিয়ম নয়।",
     "faq.q5": "আমার তথ্য কি সার্ভারে পাঠানো হয়?",
-    "faq.a5": "না। এই ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যাগুলো লেখেন, GCF, LCM এবং দেখানো প্রতিটি ধাপ আপনার ডিভাইসেই হিসাব করা হয় এবং কোথাও আপলোড করা হয় না। কোনো সাইন-আপের প্রয়োজন নেই, কোনো ট্র্যাকিংও নেই। আপনার শেষ এন্ট্রি শুধু এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয় যাতে পরের বার ফিরে এলে পাওয়া যায়, আর ব্রাউজারের ডেটা মুছে ফেললে তা সম্পূর্ণভাবে মুছে যায়।"
+    "faq.a5": "না। এই ক্যালকুলেটর সম্পূর্ণভাবে আপনার ব্রাউজারে চলে — আপনি যে সংখ্যাগুলো লেখেন, GCF, LCM এবং দেখানো প্রতিটি ধাপ আপনার ডিভাইসেই হিসাব করা হয় এবং কোথাও আপলোড করা হয় না। কোনো সাইন-আপের প্রয়োজন নেই, কোনো ট্র্যাকিংও নেই। আপনার শেষ এন্ট্রি শুধু এই ব্রাউজারের লোকাল স্টোরেজে সংরক্ষিত হয় যাতে পরের বার ফিরে এলে পাওয়া যায়, আর ব্রাউজারের ডেটা মুছে ফেললে তা সম্পূর্ণভাবে মুছে যায়।",
+    "ux.share": "এই টুল শেয়ার করুন",
+    "ux.example": "একটি উদাহরণ দেখুন",
+    "ux.copyHint": "কপি করতে ট্যাপ করুন",
+    "ux.copied": "কপি হয়েছে",
+    "tools.recent": "সম্প্রতি ব্যবহৃত",
   },
   pt: {
     "_label": "Português",
@@ -423,7 +458,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Por que MDC × MMC = a × b só funciona com dois números?",
     "faq.a4": "Com exatamente dois números, multiplicar o MDC pelo MMC sempre resulta no produto dos dois números originais — para 12 e 18, MDC × MMC = 6 × 36 = 216, que é igual a 12 × 18 = 216. Esse atalho deixa de funcionar assim que um terceiro número entra em cena: para 4, 6 e 15, o MDC é 1 e o MMC é 60, então MDC × MMC = 60, mas 4 × 6 × 15 = 360 — os dois valores não coincidem mais. Essa identidade é uma propriedade especial de pares, não uma regra geral para qualquer quantidade de valores.",
     "faq.q5": "Meus dados são enviados para um servidor?",
-    "faq.a5": "Não. Esta calculadora funciona inteiramente no seu navegador — os números que você digita, o MDC, o MMC e cada passo mostrado são calculados no seu dispositivo e nunca são enviados a lugar nenhum. Não é preciso se cadastrar, e não há nenhum rastreamento. Sua última entrada é salva apenas no armazenamento local deste navegador, para estar ali quando você voltar, e limpar os dados do navegador a remove completamente."
+    "faq.a5": "Não. Esta calculadora funciona inteiramente no seu navegador — os números que você digita, o MDC, o MMC e cada passo mostrado são calculados no seu dispositivo e nunca são enviados a lugar nenhum. Não é preciso se cadastrar, e não há nenhum rastreamento. Sua última entrada é salva apenas no armazenamento local deste navegador, para estar ali quando você voltar, e limpar os dados do navegador a remove completamente.",
+    "ux.share": "Compartilhar esta ferramenta",
+    "ux.example": "Testar um exemplo",
+    "ux.copyHint": "Toque para copiar",
+    "ux.copied": "Copiado",
+    "tools.recent": "Usados recentemente",
   },
   ru: {
     "_label": "Русский",
@@ -474,7 +514,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Почему равенство НОД × НОК = a × b работает только для двух чисел?",
     "faq.a4": "Для ровно двух чисел произведение НОД и НОК всегда равно произведению исходных чисел — для 12 и 18: НОД × НОК = 6 × 36 = 216, что равно 12 × 18 = 216. Этот приём перестаёт работать, как только добавляется третье число: для 4, 6 и 15 НОД равен 1, а НОК равен 60, поэтому НОД × НОК = 60, тогда как 4 × 6 × 15 = 360 — числа больше не совпадают. Это равенство — особое свойство именно пары чисел, а не общее правило для любого их количества.",
     "faq.q5": "Отправляются ли мои данные на сервер?",
-    "faq.a5": "Нет. Этот калькулятор полностью работает в вашем браузере — введённые числа, НОД, НОК и каждый показанный шаг вычисляются на вашем устройстве и никуда не загружаются. Регистрация не нужна, отслеживание отсутствует. Последний введённый вами набор чисел сохраняется только в локальном хранилище этого браузера, чтобы быть под рукой при следующем визите, а очистка данных браузера полностью его удаляет."
+    "faq.a5": "Нет. Этот калькулятор полностью работает в вашем браузере — введённые числа, НОД, НОК и каждый показанный шаг вычисляются на вашем устройстве и никуда не загружаются. Регистрация не нужна, отслеживание отсутствует. Последний введённый вами набор чисел сохраняется только в локальном хранилище этого браузера, чтобы быть под рукой при следующем визите, а очистка данных браузера полностью его удаляет.",
+    "ux.share": "Поделиться инструментом",
+    "ux.example": "Попробовать пример",
+    "ux.copyHint": "Нажмите, чтобы скопировать",
+    "ux.copied": "Скопировано",
+    "tools.recent": "Недавние",
   },
   ur: {
     "_label": "اردو",
@@ -525,7 +570,12 @@ window.I18N_LOCALES = {
     "faq.q4": "GCF × LCM = a × b صرف دو اعداد کے لیے ہی کیوں کام کرتا ہے؟",
     "faq.a4": "ٹھیک دو اعداد کے لیے، GCF کو LCM سے ضرب دینے پر ہمیشہ دونوں اصل اعداد کا حاصلِ ضرب ملتا ہے — 12 اور 18 کے لیے GCF × LCM = 6 × 36 = 216، جو 12 × 18 = 216 کے برابر ہے۔ جیسے ہی تیسرا عدد شامل ہوتا ہے یہ اصول ٹوٹ جاتا ہے: 4، 6 اور 15 کے لیے GCF ہے 1 اور LCM ہے 60، تو GCF × LCM = 60، جبکہ 4 × 6 × 15 = 360 — دونوں اب برابر نہیں۔ یہ برابری صرف جوڑے کی ایک خاص خصوصیت ہے، کسی بھی تعداد کے اعداد کے لیے عمومی اصول نہیں۔",
     "faq.q5": "کیا میرا ڈیٹا سرور پر بھیجا جاتا ہے؟",
-    "faq.a5": "نہیں۔ یہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کے درج کردہ اعداد، GCF، LCM اور دکھایا گیا ہر مرحلہ آپ کے آلے پر ہی شمار کیا جاتا ہے اور کہیں بھی اپ لوڈ نہیں ہوتا۔ نہ سائن اپ کی ضرورت ہے، نہ کوئی ٹریکنگ ہوتی ہے۔ آپ کا آخری اندراج صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ اگلی بار واپس آنے پر مل جائے، اور براؤزر ڈیٹا صاف کرنے سے یہ مکمل طور پر مٹ جاتا ہے۔"
+    "faq.a5": "نہیں۔ یہ کیلکولیٹر مکمل طور پر آپ کے براؤزر میں چلتا ہے — آپ کے درج کردہ اعداد، GCF، LCM اور دکھایا گیا ہر مرحلہ آپ کے آلے پر ہی شمار کیا جاتا ہے اور کہیں بھی اپ لوڈ نہیں ہوتا۔ نہ سائن اپ کی ضرورت ہے، نہ کوئی ٹریکنگ ہوتی ہے۔ آپ کا آخری اندراج صرف اسی براؤزر کے لوکل اسٹوریج میں محفوظ ہوتا ہے تاکہ اگلی بار واپس آنے پر مل جائے، اور براؤزر ڈیٹا صاف کرنے سے یہ مکمل طور پر مٹ جاتا ہے۔",
+    "ux.share": "یہ ٹول شیئر کریں",
+    "ux.example": "ایک مثال آزمائیں",
+    "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
+    "ux.copied": "کاپی ہو گیا",
+    "tools.recent": "حال ہی میں استعمال شدہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -576,7 +626,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Mengapa FPB × KPK = a × b hanya berlaku untuk dua bilangan?",
     "faq.a4": "Untuk tepat dua bilangan, mengalikan FPB dengan KPK selalu menghasilkan hasil kali kedua bilangan aslinya — untuk 12 dan 18, FPB × KPK = 6 × 36 = 216, yang sama dengan 12 × 18 = 216. Cara singkat ini berhenti berlaku begitu bilangan ketiga ikut serta: untuk 4, 6, dan 15, FPB-nya adalah 1 dan KPK-nya adalah 60, jadi FPB × KPK = 60, tetapi 4 × 6 × 15 = 360 — keduanya tidak lagi sama. Identitas ini adalah sifat khusus dari sepasang bilangan, bukan aturan umum untuk berapa pun jumlah nilainya.",
     "faq.q5": "Apakah data saya dikirim ke server?",
-    "faq.a5": "Tidak. Kalkulator ini sepenuhnya berjalan di browser Anda — bilangan yang Anda masukkan, FPB, KPK, dan setiap langkah yang ditampilkan dihitung di perangkat Anda dan tidak pernah diunggah ke mana pun. Tidak perlu mendaftar, dan tidak ada pelacakan. Input terakhir Anda hanya disimpan di penyimpanan lokal browser ini agar tersedia saat Anda kembali, dan menghapus data browser akan menghapusnya sepenuhnya."
+    "faq.a5": "Tidak. Kalkulator ini sepenuhnya berjalan di browser Anda — bilangan yang Anda masukkan, FPB, KPK, dan setiap langkah yang ditampilkan dihitung di perangkat Anda dan tidak pernah diunggah ke mana pun. Tidak perlu mendaftar, dan tidak ada pelacakan. Input terakhir Anda hanya disimpan di penyimpanan lokal browser ini agar tersedia saat Anda kembali, dan menghapus data browser akan menghapusnya sepenuhnya.",
+    "ux.share": "Bagikan alat ini",
+    "ux.example": "Coba contoh",
+    "ux.copyHint": "Ketuk untuk menyalin",
+    "ux.copied": "Disalin",
+    "tools.recent": "Baru digunakan",
   },
   de: {
     "_label": "Deutsch",
@@ -627,7 +682,12 @@ window.I18N_LOCALES = {
     "faq.q4": "Warum gilt ggT × kgV = a × b nur bei zwei Zahlen?",
     "faq.a4": "Bei genau zwei Zahlen ergibt die Multiplikation von ggT und kgV immer das Produkt der beiden ursprünglichen Zahlen — für 12 und 18 gilt ggT × kgV = 6 × 36 = 216, was 12 × 18 = 216 entspricht. Diese Abkürzung funktioniert nicht mehr, sobald eine dritte Zahl hinzukommt: Für 4, 6 und 15 ist der ggT 1 und das kgV 60, also ggT × kgV = 60, aber 4 × 6 × 15 = 360 — die beiden stimmen nicht mehr überein. Diese Identität ist eine besondere Eigenschaft von Zahlenpaaren, keine allgemeine Regel für eine beliebige Anzahl von Werten.",
     "faq.q5": "Werden meine Daten an einen Server gesendet?",
-    "faq.a5": "Nein. Dieser Rechner läuft vollständig in Ihrem Browser — die von Ihnen eingegebenen Zahlen, der ggT, das kgV und jeder angezeigte Schritt werden auf Ihrem Gerät berechnet und nie irgendwohin hochgeladen. Es ist keine Anmeldung nötig, und es findet kein Tracking statt. Ihre letzte Eingabe wird nur im lokalen Speicher dieses Browsers gespeichert, damit sie bei Ihrer Rückkehr wieder da ist, und das Löschen der Browserdaten entfernt sie vollständig."
+    "faq.a5": "Nein. Dieser Rechner läuft vollständig in Ihrem Browser — die von Ihnen eingegebenen Zahlen, der ggT, das kgV und jeder angezeigte Schritt werden auf Ihrem Gerät berechnet und nie irgendwohin hochgeladen. Es ist keine Anmeldung nötig, und es findet kein Tracking statt. Ihre letzte Eingabe wird nur im lokalen Speicher dieses Browsers gespeichert, damit sie bei Ihrer Rückkehr wieder da ist, und das Löschen der Browserdaten entfernt sie vollständig.",
+    "ux.share": "Dieses Tool teilen",
+    "ux.example": "Beispiel ausprobieren",
+    "ux.copyHint": "Zum Kopieren tippen",
+    "ux.copied": "Kopiert",
+    "tools.recent": "Zuletzt verwendet",
   },
   ja: {
     "_label": "日本語",
@@ -678,7 +738,12 @@ window.I18N_LOCALES = {
     "faq.q4": "なぜGCF × LCM = a × bは2つの数のときしか成り立たないのですか？",
     "faq.a4": "ちょうど2つの数の場合、GCFとLCMの積は常に元の2つの数の積に等しくなります — 12と18の場合、GCF × LCM = 6 × 36 = 216で、12 × 18 = 216と一致します。しかし3つ目の数が加わると、この関係は成り立たなくなります。4、6、15の場合、GCFは1、LCMは60なので、GCF × LCM = 60ですが、4 × 6 × 15 = 360で、両者は一致しません。この等式はあくまで2つの数のペアに特有の性質であり、任意の個数の数に成り立つ一般的な法則ではありません。",
     "faq.q5": "入力したデータはサーバーに送信されますか？",
-    "faq.a5": "いいえ。この計算機はすべてお使いのブラウザ内で動作します — 入力した数値、GCF、LCM、表示されるすべての手順は、あなたの端末上で計算され、どこにもアップロードされません。登録は不要で、トラッキングも行いません。最後に入力した内容はこのブラウザのローカルストレージにのみ保存され、次回訪問時に復元されます。ブラウザのデータを消去すれば完全に削除されます。"
+    "faq.a5": "いいえ。この計算機はすべてお使いのブラウザ内で動作します — 入力した数値、GCF、LCM、表示されるすべての手順は、あなたの端末上で計算され、どこにもアップロードされません。登録は不要で、トラッキングも行いません。最後に入力した内容はこのブラウザのローカルストレージにのみ保存され、次回訪問時に復元されます。ブラウザのデータを消去すれば完全に削除されます。",
+    "ux.share": "このツールを共有",
+    "ux.example": "例を入力",
+    "ux.copyHint": "タップしてコピー",
+    "ux.copied": "コピーしました",
+    "tools.recent": "最近使用",
   },
   ko: {
     "_label": "한국어",
@@ -729,6 +794,11 @@ window.I18N_LOCALES = {
     "faq.q4": "GCF × LCM = a × b는 왜 두 개의 숫자에서만 성립하나요?",
     "faq.a4": "정확히 두 개의 숫자에서는 GCF와 LCM을 곱하면 항상 원래 두 수의 곱과 같아집니다 — 12와 18의 경우 GCF × LCM = 6 × 36 = 216이고, 12 × 18도 216으로 같습니다. 하지만 세 번째 숫자가 추가되는 순간 이 규칙은 깨집니다: 4, 6, 15의 경우 GCF는 1, LCM은 60이므로 GCF × LCM = 60이지만, 4 × 6 × 15 = 360으로 서로 일치하지 않습니다. 이 등식은 숫자 쌍(pair)에서만 성립하는 특별한 성질이며, 개수에 상관없이 항상 성립하는 일반적인 규칙이 아닙니다.",
     "faq.q5": "제 데이터가 서버로 전송되나요?",
-    "faq.a5": "아니요. 이 계산기는 전적으로 브라우저에서만 실행됩니다 — 입력한 숫자, GCF, LCM, 그리고 화면에 표시되는 모든 계산 과정은 사용자의 기기에서 계산되며 어디로도 업로드되지 않습니다. 가입이 필요 없고 추적도 하지 않습니다. 마지막으로 입력한 내용은 이 브라우저의 로컬 저장소에만 저장되어 다시 방문했을 때 남아 있으며, 브라우저 데이터를 지우면 완전히 삭제됩니다."
+    "faq.a5": "아니요. 이 계산기는 전적으로 브라우저에서만 실행됩니다 — 입력한 숫자, GCF, LCM, 그리고 화면에 표시되는 모든 계산 과정은 사용자의 기기에서 계산되며 어디로도 업로드되지 않습니다. 가입이 필요 없고 추적도 하지 않습니다. 마지막으로 입력한 내용은 이 브라우저의 로컬 저장소에만 저장되어 다시 방문했을 때 남아 있으며, 브라우저 데이터를 지우면 완전히 삭제됩니다.",
+    "ux.share": "이 도구 공유",
+    "ux.example": "예시로 채우기",
+    "ux.copyHint": "탭하여 복사",
+    "ux.copied": "복사됨",
+    "tools.recent": "최근 사용",
   }
 };
