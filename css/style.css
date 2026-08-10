@@ -9,26 +9,34 @@
   --surface: #ffffff;
   --ink: #1f2937;
   --muted: #6b7280;
-  --line: #e5e7eb;
-  --radius: 14px;
-  --maxw: 720px;
+  --line: #e4e7ec;
+  --line-strong: #d0d5dd;
+  --radius: 16px;
+  --maxw: 960px;
+  --shadow-card: 0 1px 2px rgba(16,24,40,.04), 0 4px 16px -4px rgba(16,24,40,.06);
+  --ring: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+  --ease: cubic-bezier(.2,.7,.3,1);
   --font: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
           'Apple SD Gothic Neo', 'Segoe UI', 'Malgun Gothic', sans-serif;
 }
 [data-theme="dark"] {
-  --bg: #0b1220;
-  --surface: #131c2e;
-  --ink: #e2e8f0;
-  --muted: #94a3b8;
-  --line: #253349;
+  --bg: #101216;
+  --surface: #17191f;
+  --ink: #e7e9ee;
+  --muted: #98a2b3;
+  --line: #262a33;
+  --line-strong: #343a46;
+  --shadow-card: 0 1px 2px rgba(0,0,0,.4), 0 6px 20px -6px rgba(0,0,0,.5);
 }
 @media (prefers-color-scheme: dark) {
   [data-theme="auto"] {
-    --bg: #0b1220;
-    --surface: #131c2e;
-    --ink: #e2e8f0;
-    --muted: #94a3b8;
-    --line: #253349;
+    --bg: #101216;
+    --surface: #17191f;
+    --ink: #e7e9ee;
+    --muted: #98a2b3;
+    --line: #262a33;
+    --line-strong: #343a46;
+    --shadow-card: 0 1px 2px rgba(0,0,0,.4), 0 6px 20px -6px rgba(0,0,0,.5);
   }
 }
 
@@ -47,9 +55,17 @@ a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
 .site-header {
+  position: sticky; top: 0; z-index: 40;
   display: flex; justify-content: space-between; align-items: center;
-  max-width: var(--maxw); margin: 0 auto; padding: 16px 20px;
+  padding: 10px max(20px, calc((100% - var(--maxw)) / 2));
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  -webkit-backdrop-filter: saturate(1.4) blur(10px);
+  backdrop-filter: saturate(1.4) blur(10px);
+  border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
 }
+.brand { min-width: 0; flex: 1 1 auto; margin-right: 8px; }
+.brand span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.header-actions { display: flex; align-items: center; flex: 0 0 auto; }
 .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 18px; color: var(--ink); letter-spacing: -0.02em; }
 .brand:hover { text-decoration: none; }
 .header-actions button {
@@ -68,9 +84,9 @@ a:hover { text-decoration: underline; }
 
 main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 64px; }
 
-.hero { text-align: center; padding: 28px 0 8px; }
-.hero h1 { font-size: clamp(26px, 5vw, 36px); letter-spacing: -0.03em; line-height: 1.25; margin: 0 0 12px; }
-.hero .lede { color: var(--muted); font-size: 17px; margin: 0 auto; max-width: 54ch; }
+.hero { text-align: center; padding: 40px 0 6px; }
+.hero h1 { font-size: clamp(30px, 5vw, 42px); font-weight: 800; letter-spacing: -0.04em; line-height: 1.12; margin: 0 0 12px; }
+.hero .lede { color: var(--muted); font-size: 17px; line-height: 1.6; margin: 0 auto; max-width: 52ch; }
 
 .tool-card {
   background: var(--surface);
@@ -78,7 +94,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 64px; }
   border-radius: var(--radius);
   padding: 28px 24px;
   margin: 28px 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-card);
 }
 .placeholder-note { color: var(--muted); text-align: center; }
 
@@ -86,12 +102,14 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 64px; }
 .tool-card label { display: block; font-weight: 600; font-size: 14px; margin: 14px 0 6px; }
 .tool-card input[type="text"], .tool-card input[type="number"],
 .tool-card select, .tool-card textarea {
-  width: 100%; padding: 12px 14px; font-size: 16px; font-family: inherit;
-  border: 1px solid var(--line); border-radius: 10px;
-  background: var(--bg); color: var(--ink);
+  width: 100%; padding: 14px 18px; font-size: 16px; font-family: inherit;
+  border: 1px solid var(--line-strong); border-radius: 12px;
+  background: var(--surface); color: var(--ink);
+  transition: border-color .16s var(--ease), box-shadow .16s var(--ease);
 }
+.tool-card input:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line-strong)); }
 .tool-card input:focus, .tool-card select:focus, .tool-card textarea:focus {
-  outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent;
+  outline: none; border-color: var(--accent); box-shadow: var(--ring);
 }
 .btn {
   display: inline-block; padding: 12px 22px; font-size: 16px; font-weight: 700;
@@ -114,11 +132,19 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 64px; }
 
 .faq h2 { font-size: 20px; margin: 40px 0 12px; letter-spacing: -0.01em; }
 .faq details {
-  background: var(--surface); border: 1px solid var(--line);
-  border-radius: 10px; padding: 12px 16px; margin-bottom: 8px;
+  background: transparent; border: 0; border-bottom: 1px solid var(--line);
+  border-radius: 0; padding: 2px 0; margin: 0;
 }
-.faq summary { font-weight: 600; cursor: pointer; }
-.faq p { color: var(--muted); margin: 8px 0 4px; }
+.faq details:first-of-type { border-top: 1px solid var(--line); }
+.faq summary { font-weight: 600; font-size: 15.5px; cursor: pointer; padding: 14px 28px 14px 2px; position: relative; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: ""; position: absolute; right: 6px; top: 50%; width: 8px; height: 8px; margin-top: -6px;
+  border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg); transition: transform .2s var(--ease);
+}
+.faq details[open] summary::after { transform: rotate(225deg); margin-top: -2px; }
+.faq p { color: var(--muted); font-size: 15px; line-height: 1.7; margin: 0 0 16px; }
 
 .site-footer {
   border-top: 1px solid var(--line);
@@ -138,7 +164,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 64px; }
 .tool-group-title { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin: 0 0 12px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
 .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
 .tool-item { display: flex; align-items: center; gap: 12px; padding: 13px 14px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); color: var(--ink); text-decoration: none; transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease; }
-.tool-item:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 6px 18px rgba(79,70,229,.12); }
+.tool-item:hover { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); transform: translateY(-2px); box-shadow: var(--shadow-card); }
 .tool-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .tool-ico { flex-shrink: 0; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; font-size: 20px; line-height: 1; border-radius: 9px; background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
 .tool-name { font-size: 14.5px; font-weight: 600; line-height: 1.3; letter-spacing: -.01em; }
@@ -152,7 +178,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 64px; }
 }
 
 /* ── 도구 해설 가이드 (콘텐츠 본문) ──────────────────────────── */
-.guide { margin: 40px 0 8px; }
+.guide { margin: 44px auto 8px; max-width: 720px; }
 .guide h2 { font-size: 21px; margin: 0 0 14px; letter-spacing: -0.02em; line-height: 1.3; }
 .guide h3 { font-size: 16px; margin: 24px 0 6px; letter-spacing: -0.01em; }
 .guide p { color: var(--muted); margin: 0 0 12px; }
@@ -220,3 +246,21 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   body { background: #fff; }
   .hero { padding: 8px 0; }
 }
+
+
+/* ── 카테고리 점프 내비 (2026-08-10 홈 디자이너 패스) ── */
+.cat-nav {
+  position: sticky; top: 55px; z-index: 30;
+  display: flex; gap: 8px; overflow-x: auto; padding: 10px 2px;
+  margin: 4px 0 2px; scrollbar-width: none;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.cat-nav::-webkit-scrollbar { display: none; }
+.cat-nav button {
+  flex: 0 0 auto; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--surface); color: var(--ink); font-family: inherit;
+  font-size: 13.5px; font-weight: 600; padding: 8px 14px; cursor: pointer;
+  transition: border-color .16s var(--ease), color .16s var(--ease);
+}
+.cat-nav button:hover { border-color: var(--accent); color: var(--accent); }
