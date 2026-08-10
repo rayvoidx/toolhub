@@ -193,10 +193,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     (function(){var nav=document.getElementById("cat-nav");if(!nav)return;
     function build(){nav.textContent="";var any=false;
     document.querySelectorAll(".tool-group").forEach(function(g){var h=g.querySelector(".tool-group-title");if(!h)return;
-    var b=document.createElement("button");b.type="button";b.textContent=h.textContent.trim();
+    var b=document.createElement("button");b.type="button";b.setAttribute("data-group",g.getAttribute("data-group")||"");
+    var d=document.createElement("span");d.className="dot";b.appendChild(d);
+    b.appendChild(document.createTextNode(h.textContent.trim()));
+    var n=g.querySelectorAll(".tool-item").length;
+    if(n){var c=document.createElement("span");c.className="cat-count";c.textContent=" "+n;b.appendChild(c);}
     b.addEventListener("click",function(){g.scrollIntoView({behavior:"smooth",block:"start"});});
     nav.appendChild(b);any=true;});nav.hidden=!any;}
-    build();document.addEventListener("i18n:change",build);})();</script>
+    function counts(){document.querySelectorAll(".tool-group").forEach(function(g){var h=g.querySelector(".tool-group-title");if(!h||h.querySelector(".cat-count"))return;var n=g.querySelectorAll(".tool-item").length;if(!n)return;var c=document.createElement("span");c.className="cat-count";c.textContent=n;h.appendChild(c);});}
+    build();counts();document.addEventListener("i18n:change",function(){build();});})();</script>
     <script>/* ux-recent (2026-08-02) — 최근 사용 도구 줄 (localStorage, 서버 미전송) */
     (function(){try{var rec=JSON.parse(localStorage.getItem("ux:recent")||"[]");if(!rec.length)return;
     var box=document.getElementById("recent-tools");if(!box)return;

@@ -108,6 +108,21 @@ a:hover { text-decoration: underline; }
 
 main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 72px; }
 
+/* 브레드크럼 스트립 (gen-crumbs-strip) */
+.crumbs { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); padding: 14px 0 0; flex-wrap: wrap; }
+.crumbs a { color: var(--muted); text-decoration: none; }
+.crumbs a:hover { color: var(--ink); text-decoration: none; }
+.crumb-sep { opacity: .55; }
+.crumbs .crumb-cat {
+  display: inline-flex; align-items: center; gap: 6px;
+  border: 1px solid color-mix(in srgb, var(--cat, var(--accent)) 35%, var(--line));
+  color: color-mix(in srgb, var(--cat, var(--accent)) 80%, var(--ink));
+  background: color-mix(in srgb, var(--cat, var(--accent)) 7%, var(--surface));
+  border-radius: 999px; padding: 3px 11px; font-weight: 600;
+}
+.crumbs .crumb-cat:hover { border-color: var(--cat, var(--accent)); color: var(--cat, var(--accent)); }
+.crumb-cur { color: var(--ink); font-weight: 600; }
+
 /* 히어로 — 밀도 있는 타이포 */
 .hero { text-align: center; padding: 34px 0 6px; }
 .hero h1 {

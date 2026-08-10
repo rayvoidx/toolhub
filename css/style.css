@@ -264,3 +264,37 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   transition: border-color .16s var(--ease), color .16s var(--ease);
 }
 .cat-nav button:hover { border-color: var(--accent); color: var(--accent); }
+
+
+/* ── 카테고리 색 코딩 (2026-08-10, Omni 패턴) ── */
+.tool-group[data-group="finance"] { --cat: #059669; }
+.tool-group[data-group="date"]    { --cat: #0284c7; }
+.tool-group[data-group="health"]  { --cat: #e11d48; }
+.tool-group[data-group="units"]   { --cat: #d97706; }
+.tool-group[data-group="text"]    { --cat: #7c3aed; }
+.tool-group[data-group="dev"]     { --cat: #4f46e5; }
+.tool-group[data-group="science"] { --cat: #0d9488; }
+.tool-group[data-group="random"]  { --cat: #c026d3; }
+.tool-group[data-group="life"]    { --cat: #ea580c; }
+.tool-group[data-group="utility"] { --cat: #0891b2; }
+.tool-group-title { display: flex; align-items: center; gap: 8px; }
+.tool-group-title::before {
+  content: ""; width: 8px; height: 8px; border-radius: 3px;
+  background: var(--cat, var(--accent)); flex: 0 0 auto;
+}
+.tool-group .tool-ico { background: color-mix(in srgb, var(--cat, var(--accent)) 14%, var(--surface)); }
+.tool-group .tool-item:hover { border-color: color-mix(in srgb, var(--cat, var(--accent)) 55%, var(--line)); }
+.tool-group .cat-more { color: var(--cat, var(--accent)) !important; }
+.cat-count { font-weight: 500; color: var(--muted); margin-left: 2px; letter-spacing: 0; }
+.cat-nav button { display: inline-flex; align-items: center; gap: 7px; }
+.cat-nav button .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cat, var(--accent)); }
+.cat-nav button[data-group="finance"] { --cat: #059669; }
+.cat-nav button[data-group="date"]    { --cat: #0284c7; }
+.cat-nav button[data-group="health"]  { --cat: #e11d48; }
+.cat-nav button[data-group="units"]   { --cat: #d97706; }
+.cat-nav button[data-group="text"]    { --cat: #7c3aed; }
+.cat-nav button[data-group="dev"]     { --cat: #4f46e5; }
+.cat-nav button[data-group="science"] { --cat: #0d9488; }
+.cat-nav button[data-group="random"]  { --cat: #c026d3; }
+.cat-nav button[data-group="life"]    { --cat: #ea580c; }
+.cat-nav button[data-group="utility"] { --cat: #0891b2; }
