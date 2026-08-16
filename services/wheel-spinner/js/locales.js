@@ -53,6 +53,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Tap to copy",
     "ux.copied": "Copied",
     "tools.recent": "Recently used",
+      "sources.heading": "Sources & further reading",
   },
   zh: {
     "_label": "中文",
@@ -90,6 +91,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "点按复制",
     "ux.copied": "已复制",
     "tools.recent": "最近使用",
+      "sources.heading": "来源与延伸阅读",
   },
   hi: {
     "_label": "हिन्दी",
@@ -127,6 +129,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "कॉपी करने के लिए टैप करें",
     "ux.copied": "कॉपी हो गया",
     "tools.recent": "हाल में उपयोग किए गए",
+      "sources.heading": "स्रोत और आगे पढ़ें",
   },
   es: {
     "_label": "Español",
@@ -164,6 +167,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Toca para copiar",
     "ux.copied": "Copiado",
     "tools.recent": "Usados recientemente",
+      "sources.heading": "Fuentes y lecturas adicionales",
   },
   ar: {
     "_label": "العربية",
@@ -201,6 +205,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "انقر للنسخ",
     "ux.copied": "تم النسخ",
     "tools.recent": "المستخدمة مؤخراً",
+      "sources.heading": "المصادر وقراءات إضافية",
   },
   fr: {
     "_label": "Français",
@@ -238,6 +243,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Appuyer pour copier",
     "ux.copied": "Copié",
     "tools.recent": "Utilisés récemment",
+      "sources.heading": "Sources et lectures complémentaires",
   },
   bn: {
     "_label": "বাংলা",
@@ -275,6 +281,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "কপি করতে ট্যাপ করুন",
     "ux.copied": "কপি হয়েছে",
     "tools.recent": "সম্প্রতি ব্যবহৃত",
+      "sources.heading": "সূত্র ও আরও পড়ুন",
   },
   pt: {
     "_label": "Português",
@@ -312,6 +319,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Toque para copiar",
     "ux.copied": "Copiado",
     "tools.recent": "Usados recentemente",
+      "sources.heading": "Fontes e leituras adicionais",
   },
   ru: {
     "_label": "Русский",
@@ -349,6 +357,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Нажмите, чтобы скопировать",
     "ux.copied": "Скопировано",
     "tools.recent": "Недавние",
+      "sources.heading": "Источники и дополнительные материалы",
   },
   ur: {
     "_label": "اردو",
@@ -386,6 +395,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
     "ux.copied": "کاپی ہو گیا",
     "tools.recent": "حال ہی میں استعمال شدہ",
+      "sources.heading": "ماخذ اور مزید مطالعہ",
   },
   id: {
     "_label": "Bahasa Indonesia",
@@ -423,6 +433,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Ketuk untuk menyalin",
     "ux.copied": "Disalin",
     "tools.recent": "Baru digunakan",
+      "sources.heading": "Sumber & bacaan lanjutan",
   },
   de: {
     "_label": "Deutsch",
@@ -460,6 +471,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Zum Kopieren tippen",
     "ux.copied": "Kopiert",
     "tools.recent": "Zuletzt verwendet",
+      "sources.heading": "Quellen & weiterführende Links",
   },
   ja: {
     "_label": "日本語",
@@ -497,6 +509,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "タップしてコピー",
     "ux.copied": "コピーしました",
     "tools.recent": "最近使用",
+      "sources.heading": "出典・参考資料",
   },
   ko: {
     "_label": "한국어",
@@ -534,5 +547,6 @@ window.I18N_LOCALES = {
     "ux.copyHint": "탭하여 복사",
     "ux.copied": "복사됨",
     "tools.recent": "최근 사용",
+      "sources.heading": "출처·더 읽을거리",
   }
 };

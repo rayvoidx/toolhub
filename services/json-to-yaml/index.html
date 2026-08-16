@@ -254,6 +254,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>It does not invent anchors or aliases. If the same block appears five times in your JSON it appears five times in the YAML, because JSON has no shared-reference concept to detect. Add &amp;anchor and *alias by hand if you want the deduplication. It also cannot carry comments, since JSON has none to carry, and it does not reorder or sort keys — insertion order from your JSON is preserved so that a diff against the original stays readable. Duplicate keys are impossible to preserve for the same reason: JSON.parse keeps the last one, exactly as your JSON consumer already did.</p>
   </section>
 
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc8259" target="_blank" rel="noopener">IETF RFC 8259 — the JSON data interchange format, including type and duplicate-key rules</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="noopener">MDN Web Docs — how JSON.parse and JSON.stringify handle strings, numbers and escapes</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/YAML" target="_blank" rel="noopener">MDN Web Docs — YAML overview and how it relates to JSON as a superset</a></li>
+    </ul>
+  </section>
+
+
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
   </section>

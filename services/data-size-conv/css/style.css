@@ -153,6 +153,7 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 72px; }
 .tool-card input[type="search"], .tool-card input[type="tel"],
 .tool-card select, .tool-card textarea {
   width: 100%; padding: 12px 14px; font-size: 16px; font-family: inherit;
+  appearance: none; -webkit-appearance: none;
   border: 1px solid var(--line-strong); border-radius: var(--radius-sm);
   background: var(--surface-2); color: var(--ink);
   transition: border-color .16s var(--ease), box-shadow .16s var(--ease), background-color .16s var(--ease);
@@ -164,6 +165,15 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 72px; }
   box-shadow: var(--ring);
 }
 .tool-card ::placeholder { color: color-mix(in srgb, var(--muted) 72%, transparent); }
+.tool-card select {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23868e9c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px;
+}
+.tool-card textarea { appearance: auto; -webkit-appearance: auto; }
+/* 포커스된 필드의 라벨 강조 */
+.tool-card div:has(> input:focus) > label,
+.tool-card div:has(> select:focus) > label,
+.tool-card div:has(> textarea:focus) > label { color: var(--accent); }
 .tool-card input[type="radio"], .tool-card input[type="checkbox"] { width: 17px; height: 17px; }
 
 /* 버튼 — 확실한 프라이머리, 물리적 프레스 */
@@ -194,6 +204,13 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 72px; }
 [data-theme="dark"] .result strong,
 [data-theme="auto"] .result strong { color: var(--accent); }
 #tool .rc-val { font-variant-numeric: tabular-nums; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.result:not([hidden]), #result:not([hidden]) { animation: fadeUp .28s var(--ease); }
+#tool .err:not([hidden]), #tool .error:not([hidden]) {
+  border-inline-start: 3px solid #dc2626; padding: 8px 12px; border-radius: 8px;
+  background: color-mix(in srgb, #dc2626 6%, var(--surface));
+  animation: fadeUp .2s var(--ease);
+}
 
 .ad-slot { margin: 24px 0; min-height: 0; text-align: center; }
 
@@ -210,6 +227,14 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 72px; }
 .guide-content table { border-collapse: collapse; font-size: 14.5px; }
 .guide-content th, .guide-content td { border: 1px solid var(--line); padding: 8px 12px; text-align: start; }
 .guide-content th { background: var(--surface-2); font-weight: 650; }
+
+/* 출처 블록 (2026-08-15 E-E-A-T 인용) */
+.sources { margin-top: 36px; padding: 18px 20px; border: 1px solid var(--line); border-radius: var(--radius-sm); background: var(--surface-2); }
+.sources h2 { font-size: 15px; letter-spacing: -0.01em; margin: 0 0 10px; }
+.sources ul { margin: 0; padding-inline-start: 20px; }
+.sources li { font-size: 14px; color: var(--muted); margin: 6px 0; line-height: 1.55; }
+.sources a { color: color-mix(in srgb, var(--accent) 80%, var(--ink)); text-decoration: underline; text-underline-offset: 2px; }
+.sources a:hover { color: var(--accent); }
 
 /* FAQ — 디바이더 리스트 + 회전 셰브런 */
 .faq h2 { font-size: 20px; margin: 44px 0 10px; letter-spacing: -0.02em; }

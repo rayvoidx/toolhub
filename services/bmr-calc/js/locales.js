@@ -80,6 +80,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Tap to copy",
     "ux.copied": "Copied",
     "tools.recent": "Recently used",
+      "sources.heading": "Sources & further reading",
   },
   zh: {
     "tool.rate.label": "每日热量赤字 / 盈余",
@@ -144,6 +145,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "点按复制",
     "ux.copied": "已复制",
     "tools.recent": "最近使用",
+      "sources.heading": "来源与延伸阅读",
   },
   hi: {
     "tool.rate.label": "प्रति दिन कैलोरी घाटा / अधिशेष",
@@ -208,6 +210,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "कॉपी करने के लिए टैप करें",
     "ux.copied": "कॉपी हो गया",
     "tools.recent": "हाल में उपयोग किए गए",
+      "sources.heading": "स्रोत और आगे पढ़ें",
   },
   es: {
     "tool.rate.label": "Déficit / superávit de calorías por día",
@@ -272,6 +275,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Toca para copiar",
     "ux.copied": "Copiado",
     "tools.recent": "Usados recientemente",
+      "sources.heading": "Fuentes y lecturas adicionales",
   },
   ar: {
     "tool.rate.label": "العجز / الفائض من السعرات يوميًا",
@@ -336,6 +340,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "انقر للنسخ",
     "ux.copied": "تم النسخ",
     "tools.recent": "المستخدمة مؤخراً",
+      "sources.heading": "المصادر وقراءات إضافية",
   },
   fr: {
     "tool.rate.label": "Déficit / surplus calorique par jour",
@@ -400,6 +405,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Appuyer pour copier",
     "ux.copied": "Copié",
     "tools.recent": "Utilisés récemment",
+      "sources.heading": "Sources et lectures complémentaires",
   },
   bn: {
     "tool.rate.label": "প্রতিদিন ক্যালোরি ঘাটতি / উদ্বৃত্ত",
@@ -464,6 +470,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "কপি করতে ট্যাপ করুন",
     "ux.copied": "কপি হয়েছে",
     "tools.recent": "সম্প্রতি ব্যবহৃত",
+      "sources.heading": "সূত্র ও আরও পড়ুন",
   },
   pt: {
     "tool.rate.label": "Déficit / superávit calórico por dia",
@@ -528,6 +535,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Toque para copiar",
     "ux.copied": "Copiado",
     "tools.recent": "Usados recentemente",
+      "sources.heading": "Fontes e leituras adicionais",
   },
   ru: {
     "tool.rate.label": "Дефицит / профицит калорий в день",
@@ -592,6 +600,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Нажмите, чтобы скопировать",
     "ux.copied": "Скопировано",
     "tools.recent": "Недавние",
+      "sources.heading": "Источники и дополнительные материалы",
   },
   ur: {
     "tool.rate.label": "روزانہ کیلوری کی کمی / زیادتی",
@@ -656,6 +665,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "کاپی کرنے کے لیے ٹیپ کریں",
     "ux.copied": "کاپی ہو گیا",
     "tools.recent": "حال ہی میں استعمال شدہ",
+      "sources.heading": "ماخذ اور مزید مطالعہ",
   },
   id: {
     "tool.rate.label": "Defisit / surplus kalori per hari",
@@ -720,6 +730,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Ketuk untuk menyalin",
     "ux.copied": "Disalin",
     "tools.recent": "Baru digunakan",
+      "sources.heading": "Sumber & bacaan lanjutan",
   },
   de: {
     "tool.rate.label": "Kaloriendefizit / -überschuss pro Tag",
@@ -784,6 +795,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "Zum Kopieren tippen",
     "ux.copied": "Kopiert",
     "tools.recent": "Zuletzt verwendet",
+      "sources.heading": "Quellen & weiterführende Links",
   },
   ja: {
     "tool.rate.label": "1日あたりのカロリー不足 / 過剰",
@@ -848,6 +860,7 @@ window.I18N_LOCALES = {
     "ux.copyHint": "タップしてコピー",
     "ux.copied": "コピーしました",
     "tools.recent": "最近使用",
+      "sources.heading": "出典・参考資料",
   },
   ko: {
     "tool.rate.label": "하루 칼로리 적자 / 흑자",
@@ -912,5 +925,6 @@ window.I18N_LOCALES = {
     "ux.copyHint": "탭하여 복사",
     "ux.copied": "복사됨",
     "tools.recent": "최근 사용",
+      "sources.heading": "출처·더 읽을거리",
   }
 };
