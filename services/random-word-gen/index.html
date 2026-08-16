@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-11"
+  "dateModified": "2026-08-16"
 }
 </script>
 <script type="application/ld+json">
@@ -301,6 +301,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Many quick "random pick" scripts use <code>Math.random()</code> combined with a modulo operation, which is fast but can very slightly favor some positions over others, especially near the edges of a list. This generator instead uses the Web Crypto API's <code>crypto.getRandomValues()</code> together with rejection sampling — drawing 32-bit values and discarding the small sliver that would introduce bias — so every matching word has a genuinely equal chance of being chosen, the same technique used for generating passwords and cryptographic keys.</p>
   </section>
   <!-- CONTENT:END -->
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues" target="_blank" rel="noopener">MDN Web Docs — Crypto.getRandomValues(), the browser API used to pick each word</a></li>
+      <li><a href="https://www.w3.org/TR/WebCryptoAPI/" target="_blank" rel="noopener">W3C Web Cryptography API — the specification defining cryptographically strong random values</a></li>
+      <li><a href="https://csrc.nist.gov/projects/random-bit-generation" target="_blank" rel="noopener">NIST Random Bit Generation project — standards for unbiased random number generation</a></li>
+      <li><a href="https://www.nist.gov/itl/applied-cybersecurity/tig/back-basics-multi-factor-authentication" target="_blank" rel="noopener">NIST — guidance on passphrases and authentication, relevant to random-word passphrases</a></li>
+    </ul>
+  </section>
 
   <section class="ad-slot" id="ad-slot" hidden>
     <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->

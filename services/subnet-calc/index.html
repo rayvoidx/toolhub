@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-11"
+  "dateModified": "2026-08-16"
 }
 </script>
 <script type="application/ld+json">
@@ -367,6 +367,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><strong>Confusing the network address with a usable host:</strong> <code>192.168.1.0/24</code>'s network address (<code>192.168.1.0</code>) can't be assigned to a device — the first usable host is <code>192.168.1.1</code>.</li>
       <li><strong>Assuming every mask is a valid netmask:</strong> a netmask's 1 bits must be contiguous from the left (like <code>255.255.255.192</code>); something like <code>255.255.255.64</code> is not a valid netmask, and this calculator flags it rather than guessing what you meant.</li>
       <li><strong>Forgetting the /31 and /32 exceptions:</strong> applying the "minus 2" formula to a /31 or /32 undercounts the usable addresses — see the section above for why those two prefixes behave differently.</li>
+    </ul>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc4632" target="_blank" rel="noopener">RFC 4632 (RFC Editor) — Classless Inter-Domain Routing (CIDR) address assignment and aggregation</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc1918" target="_blank" rel="noopener">RFC 1918 (RFC Editor) — address allocation for private internets (10/8, 172.16/12, 192.168/16)</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc3021" target="_blank" rel="noopener">RFC 3021 (RFC Editor) — using /31 prefixes on point-to-point links</a></li>
+      <li><a href="https://www.nist.gov/publications" target="_blank" rel="noopener">NIST Publications — network and IP addressing security guidance</a></li>
     </ul>
   </section>
   <!-- CONTENT:END -->

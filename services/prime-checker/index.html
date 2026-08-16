@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-18",
-  "dateModified": "2026-08-11"
+  "dateModified": "2026-08-16"
 }
 </script>
 <script type="application/ld+json">
@@ -283,6 +283,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h3>Practical notes and limits</h3>
     <p>Because the engine uses arbitrary-precision BigInt arithmetic, you are not restricted to ordinary integer sizes — you can paste numbers with dozens of digits. The limiting step is factorization, not the primality test: a large number that is the product of two big primes can be genuinely slow to factor, and if the search passes its time budget the tool tells you instead of freezing. Note too that "probable prime" for very large inputs means the chance of error is astronomically small but not mathematically zero. For everyday use — checking a number, teaching factorization, or verifying a result — the deterministic range covers far more than you are likely to need.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/publications" target="_blank" rel="noopener">NIST — publications on cryptographic standards and primality testing requirements</a></li>
+      <li><a href="https://www.khanacademy.org/computing/computer-science/cryptography" target="_blank" rel="noopener">Khan Academy — introduction to primes, factorization and modular arithmetic</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt" target="_blank" rel="noopener">MDN Web Docs — BigInt arbitrary-precision integers used by this tool</a></li>
+    </ul>
   </section>
   <!-- CONTENT:END -->
 

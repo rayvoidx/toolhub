@@ -67,7 +67,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "price": "0"
   },
   "datePublished": "2026-07-30",
-  "dateModified": "2026-08-11"
+  "dateModified": "2026-08-16"
 }
 </script>
 <script type="application/ld+json">
@@ -318,6 +318,15 @@ ORDER BY order_count DESC;</pre>
     <h2>What the tokenizer protects — and its honest limits</h2>
     <p>Before any line-breaking happens, the input is split into strings ('...', with the standard '' escape for an embedded quote), quoted identifiers ("..."/`...`/[...]), line comments (--) and block comments (/* ... */), numbers, operators, and words. Only words that match a list of common SQL reserved keywords are ever recased or used to decide where a line breaks — everything inside a string, comment, or quoted identifier is copied through untouched, so a comment that happens to contain the word SELECT, or a column literally named "order", won't be misread as a keyword.</p>
     <p>That said, this tool is a formatter for readability, not a full parser or validator: it doesn't check whether a query is syntactically valid, doesn't know every keyword or function of every dialect (MySQL, PostgreSQL, SQL Server, SQLite, BigQuery and others all differ slightly), and complex nested expressions can occasionally format less elegantly than a hand-tuned style. If something looks off, the Unchanged case option plus a quick scroll through the output usually makes the cause obvious — and nothing about your query ever leaves your browser to be checked anyway.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.iso.org/" target="_blank" rel="noopener">ISO — publisher of the ISO/IEC 9075 SQL standard that defines the language's reserved keywords and syntax</a></li>
+      <li><a href="https://www.nist.gov/" target="_blank" rel="noopener">NIST — historical SQL conformance testing and standards reference for database interoperability</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" target="_blank" rel="noopener">MDN Web Docs — how browser local storage keeps your formatting options on your device only</a></li>
+    </ul>
   </section>
   <!-- CONTENT:END -->
 
