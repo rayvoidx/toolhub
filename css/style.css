@@ -298,3 +298,40 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 .cat-nav button[data-group="random"]  { --cat: #c026d3; }
 .cat-nav button[data-group="life"]    { --cat: #ea580c; }
 .cat-nav button[data-group="utility"] { --cat: #0891b2; }
+
+/* ── v3 정돈 패스 (2026-08-22) — 에디토리얼 히어로·검색 승격·섹션 리듬 ── */
+.hero { text-align: start; padding: 46px 0 10px; }
+.hero h1 { font-size: clamp(32px, 5vw, 44px); letter-spacing: -0.045em; margin-bottom: 10px; }
+.hero .lede { margin: 0; max-width: 56ch; }
+
+/* 검색 — 도구 카드의 부속이 아니라 첫 번째 행동 */
+#tool { padding-top: 22px; }
+#tool > h2 { font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin: 0 0 10px; }
+#tool > label[for="tool-search"] { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+#tool-search {
+  padding: 15px 18px 15px 46px !important; font-size: 16.5px !important; border-radius: 14px !important;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3E%3Ccircle cx='7' cy='7' r='5.2' fill='none' stroke='%23868e9c' stroke-width='1.8'/%3E%3Cpath d='M11.2 11.2L15 15' stroke='%23868e9c' stroke-width='1.8' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: 16px center;
+}
+
+/* 섹션 헤더 — 한 행에 제목·개수·전체보기, 아래 헤어라인 */
+.tool-group { margin-top: 38px; position: relative; }
+.tool-group-title { font-size: 13px; color: var(--ink); padding-bottom: 9px; padding-right: 96px; }
+.tool-group-title::before { width: 9px; height: 9px; border-radius: 3.5px; }
+.cat-more {
+  position: absolute; top: 1px; right: 0;
+  font-size: 12.5px !important; font-weight: 600; margin: 0 !important;
+  text-decoration: none;
+}
+.cat-more::after { content: " →"; }
+.cat-more:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* 타일 — 은은한 아이콘 칩, 호버에서만 카테고리 색이 산다 */
+.tool-item { border-radius: 11px; }
+.tool-ico { width: 36px; height: 36px; font-size: 18px; border-radius: 10px; }
+.tool-group .tool-ico { background: color-mix(in srgb, var(--cat, var(--accent)) 9%, var(--surface)); transition: background-color .15s ease; }
+.tool-group .tool-item:hover .tool-ico { background: color-mix(in srgb, var(--cat, var(--accent)) 17%, var(--surface)); }
+
+/* Why·FAQ — 디렉토리 뒤 보조 콘텐츠 톤 */
+.guide { margin-top: 56px; }
+.guide h2 { font-size: 19px; }
