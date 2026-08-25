@@ -200,3 +200,60 @@
     if (sb) { var sl = t("ux.share", "Share this tool"); sb.setAttribute("aria-label", sl); sb.title = sl; }
   });
 })();
+
+/* v2.2 (2026-08-25) — 입력 퍼머링크: 계산 시 입력을 ?q= 로 직렬화, 진입 시 복원+자동 계산.
+   레거시(Omni 류)의 결과 공유 링크 대응 — 공유 버튼이 그대로 "결과 링크"가 된다.
+   lang 파라미터는 i18n 소유라 보존. 값은 .value 로만 주입(HTML 미해석). */
+(function permalink() {
+  "use strict";
+  var tool = document.getElementById("tool");
+  if (!tool) return;
+  var primary = tool.querySelector("#calc-btn, button.primary, button[type=submit]");
+  function fields() {
+    return Array.prototype.filter.call(
+      tool.querySelectorAll("input[id], select[id], textarea[id]"),
+      function (el) {
+        return ["button", "submit", "file", "color", "range"].indexOf(el.type) === -1 &&
+          !el.readOnly && el.offsetParent !== null;
+      });
+  }
+  function save() {
+    try {
+      var lang = new URLSearchParams(location.search).get("lang");
+      var q = [];
+      fields().forEach(function (el) {
+        var v = el.type === "checkbox" || el.type === "radio" ? (el.checked ? "1" : "") : el.value;
+        if (v !== "" && v != null && String(v).length <= 120) q.push(el.id + ":" + encodeURIComponent(String(v)));
+      });
+      if (q.length > 40) return;
+      var next = new URLSearchParams();
+      if (q.length) next.set("q", q.join("|"));
+      if (lang) next.set("lang", lang);
+      var qs = next.toString();
+      history.replaceState(null, "", location.pathname + (qs ? "?" + qs : ""));
+    } catch (e) { /* noop */ }
+  }
+  function restore() {
+    try {
+      var q = new URLSearchParams(location.search).get("q");
+      if (!q) return;
+      var applied = 0;
+      q.split("|").slice(0, 40).forEach(function (pair) {
+        var i = pair.indexOf(":");
+        if (i < 1) return;
+        var el = document.getElementById(pair.slice(0, i));
+        if (!el || !tool.contains(el)) return;
+        if (["button", "submit", "file"].indexOf(el.type) !== -1) return;
+        var v = decodeURIComponent(pair.slice(i + 1));
+        if (el.type === "checkbox" || el.type === "radio") el.checked = v === "1";
+        else el.value = v;
+        el.dispatchEvent(new Event("input", { bubbles: true }));
+        el.dispatchEvent(new Event("change", { bubbles: true }));
+        applied++;
+      });
+      if (applied && primary) setTimeout(function () { primary.click(); }, 150);
+    } catch (e) { /* noop */ }
+  }
+  if (primary) primary.addEventListener("click", function () { setTimeout(save, 60); });
+  restore();
+})();
