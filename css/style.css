@@ -335,3 +335,26 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 /* Why·FAQ — 디렉토리 뒤 보조 콘텐츠 톤 */
 .guide { margin-top: 56px; }
 .guide h2 { font-size: 19px; }
+
+/* ── v3.1 트렌드 패스 (2026-08-25) — 벤토 why·글래스 칩·프레스 피드백 ── */
+.hero h1 { font-weight: 850; }
+#why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: none; }
+#why h2 { grid-column: 1 / -1; margin-bottom: 4px; }
+#why .why-card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+  padding: 20px 18px; box-shadow: var(--shadow-card);
+  transition: transform .18s var(--ease), border-color .18s var(--ease);
+}
+#why .why-card:hover { transform: translateY(-2px); border-color: var(--line-strong); }
+#why .why-card h3 { margin: 0 0 8px; font-size: 15.5px; letter-spacing: -0.01em; }
+#why .why-card p { margin: 0; font-size: 14px; line-height: 1.65; }
+@media (max-width: 720px) { #why { grid-template-columns: 1fr; } }
+.cat-nav button {
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+.tool-item:active { transform: translateY(0) scale(.99); }
+[data-theme="dark"] .tool-card { box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255,255,255,.045); }
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] .tool-card { box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255,255,255,.045); }
+}

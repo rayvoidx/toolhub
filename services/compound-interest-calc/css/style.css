@@ -328,3 +328,10 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 72px; }
   body { background: #fff; }
   .hero { padding: 8px 0; }
 }
+
+/* ── v3.1 트렌드 패스 (2026-08-25) — 다크 카드 톱 하이라이트·프레스 피드백 ── */
+[data-theme="dark"] .tool-card { box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255,255,255,.045); }
+@media (prefers-color-scheme: dark) {
+  [data-theme="auto"] .tool-card { box-shadow: var(--shadow-card), inset 0 1px 0 rgba(255,255,255,.045); }
+}
+.related-item:active { transform: translateY(0) scale(.99); }
