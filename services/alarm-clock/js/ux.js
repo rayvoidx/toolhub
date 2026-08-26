@@ -211,9 +211,10 @@
   var primary = tool.querySelector("#calc-btn, button.primary, button[type=submit]");
   function fields() {
     return Array.prototype.filter.call(
-      tool.querySelectorAll("input[id], select[id], textarea[id]"),
+      tool.querySelectorAll("input[id], select[id]"),
       function (el) {
-        return ["button", "submit", "file", "color", "range"].indexOf(el.type) === -1 &&
+        // textarea·password 제외: 자유입력/비밀값은 공유 링크에 실으면 안 된다 (2026-08-26 보안 수정).
+        return ["button", "submit", "file", "color", "range", "password"].indexOf(el.type) === -1 &&
           !el.readOnly && el.offsetParent !== null;
       });
   }
