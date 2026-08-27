@@ -423,6 +423,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <details><summary data-i18n="faq.q5">How do I compare two CSVs with different headers, and how large a file can it handle?</summary><p data-i18n="faq.a5">If the two files use different column names, the tool shows a "Match columns" panel where you map each New column to its Old counterpart with a dropdown; columns that exist on only one side are labelled New-only or Old-only and are skipped when detecting changes. Tick "First row is a header" so the header is not compared as data. On size: a few tens of thousands of rows compare in milliseconds on the main thread, so there is no overkill machinery for small files. When the two files together exceed about 50,000 rows the parsing and join run in cancelable chunks with a progress bar, and very large inputs (beyond 200,000 rows per side or a 20 MB file) prompt you before processing instead of crashing or silently truncating — and any capping is always shown as a badge, never hidden.</p></details>
     <!-- FAQ:END -->
   </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc4180" target="_blank" rel="noopener">RFC 4180 — the CSV format specification (delimiters, quoting, line breaks)</a></li>
+      <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs — parsing and handling text data in the browser</a></li>
+    </ul>
+  </section>
 </main>
 
 <footer class="site-footer">
