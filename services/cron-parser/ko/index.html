@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-Z9vAZS+AKFcj9ELi3sTCkOjfqIuSBUKXhJGsaU5U+Nk=' 'sha256-/6y0y2K6MRmj9cGwvCapCFkYEW4hIzRGG4EaRfduf4o=' 'sha256-qDvJ0KjqBJ+7TgrC2OxH47VXAd9sYI9lCQ3OCRWOw90='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>크론 표현식 파서 — 일정 설명 및 다음 실행 시각</title>
+<meta name="description" content="5필드 크론 표현식을 입력하면 이해하기 쉬운 문장 설명, 다음 5회 실행 시각, 필드별 분석 결과를 바로 확인할 수 있습니다. 무료이며 브라우저에서 즉시 계산됩니다.">
+<meta name="keywords" content="cron expression, cron parser, crontab generator, cron every 5 minutes, cron syntax explained, 크론 표현식">
+<link rel="canonical" href="https://tool-hub.me/cron-parser/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/cron-parser/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/cron-parser/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/cron-parser/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/cron-parser/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/cron-parser/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/cron-parser/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/cron-parser/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/cron-parser/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/cron-parser/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/cron-parser/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/cron-parser/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/cron-parser/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/cron-parser/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/cron-parser/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/cron-parser/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="크론 표현식 파서 — 일정 설명 및 다음 실행 시각">
+<meta property="og:description" content="5필드 크론 표현식을 입력하면 이해하기 쉬운 문장 설명, 다음 5회 실행 시각, 필드별 분석 결과를 바로 확인할 수 있습니다. 무료이며 브라우저에서 즉시 계산됩니다.">
+<meta property="og:url" content="https://tool-hub.me/cron-parser/ko/">
+<meta property="og:image" content="https://tool-hub.me/cron-parser/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b91c1c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Cron Expression Parser",
+  "description": "Paste a 5-field cron expression for a plain-English schedule, the next 5 run times, and a field-by-field breakdown. Free and instant in your browser.",
+  "url": "https://tool-hub.me/cron-parser/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Cron Expression Parser", "item": "https://tool-hub.me/cron-parser/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What do the 5 fields in a cron expression mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard cron expression has five space-separated fields, always in this order: minute (0-59), hour (0-23), day of the month (1-31), month (1-12 or JAN-DEC), and day of the week (0-6 or SUN-SAT, where both 0 and 7 mean Sunday). Each field can be a single value, a wildcard *, a comma-separated list like 1,15, a range like 9-17, or a step like */5. For example, 30 4 1,15 * * means \"at 04:30, on the 1st and 15th of every month\" — minute 30, hour 4, days 1 and 15, every month, any day of the week."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between * and */5 in a cron expression?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A bare asterisk * means every value is allowed for that field — every minute, every hour, and so on. Adding a step with /N, as in */5, means every Nth value starting from the field's minimum, so */5 in the minute field matches 0, 5, 10, 15 ... 55, in other words every 5 minutes. A step can also follow a range, like 9-17/2, which matches every other hour from 9 through 17 (9, 11, 13, 15, 17)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does cron handle day-of-month and day-of-week together, like 0 0 1 * MON?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is a classic cron gotcha: when both the day-of-month and day-of-week fields are restricted (neither is *), most cron implementations — including this parser — treat them as OR, not AND. So 0 0 1 * MON runs at midnight on the 1st of the month OR on any Monday, whichever comes first, not only on a Monday that happens to land on the 1st. If you only want the 1st of the month, leave the day-of-week field as *; if you only want Mondays, leave the day-of-month field as *."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What timezone are the \"next run times\" calculated in?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The next run times are computed using your device's local date, time, and timezone, exactly like your computer's clock. A real crontab, however, runs in whatever timezone the server or scheduler is configured for (often UTC), which may not match your browser's timezone. If your server uses a different timezone, mentally shift the times shown here by the difference, or check the scheduler's own timezone setting before relying on the exact times."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my cron expression sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Parsing, the plain-English description, and the next-run calculation all happen locally in your browser using plain JavaScript — nothing you type is uploaded, logged, or stored anywhere except your own browser's local storage, which just remembers your last expression for convenience. You can keep using this tool offline once the page has loaded, and no account or sign-up is required."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Cron Expression Parser</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Cron Expression Parser</span></nav>
+  <section class="hero">
+    <h1>Cron Expression Parser</h1>
+    <p class="lede" data-i18n="hero.lede">Paste a cron expression like */15 9-17 * * 1-5 and see what it means in plain English, plus the next 5 times it will run.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Cron expression parser" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .cp-input-row input { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 16px; letter-spacing: .02em; }
+      #tool .cp-hint { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); }
+      #tool .cp-error {
+        margin-top: 12px; padding: 12px 14px; border-radius: 10px; font-size: 14.5px; line-height: 1.5;
+        background: color-mix(in srgb, #dc2626 10%, var(--surface)); border: 1px solid color-mix(in srgb, #dc2626 30%, var(--line)); color: #dc2626;
+        overflow-wrap: anywhere;
+      }
+      #tool .cp-empty { margin: 14px 0 0; padding: 12px 14px; color: var(--muted); font-size: 14px; border: 1px dashed var(--line); border-radius: 10px; }
+      #tool .cp-desc {
+        margin: 16px 0 0; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px;
+        background: color-mix(in srgb, var(--accent) 6%, var(--surface)); font-size: 16px; font-weight: 700; line-height: 1.5; color: var(--ink);
+        overflow-wrap: anywhere;
+      }
+      #tool .cp-section-label { font-weight: 700; font-size: 14px; margin: 18px 0 6px; color: var(--ink); }
+      #tool .cp-next-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+      #tool .cp-next-head .cp-section-label { margin-bottom: 6px; }
+      #tool #cp-count { padding: 5px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); font-family: inherit; font-size: 13px; }
+      #tool .cp-next-note { margin: 0 0 8px; font-size: 12.5px; color: var(--muted); }
+      #tool .cp-next-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+      #tool .cp-next-item {
+        padding: 9px 12px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface);
+        font-size: 14px; font-variant-numeric: tabular-nums; cursor: copy; overflow-wrap: anywhere;
+      }
+      #tool .cp-fields-table { width: 100%; border-collapse: collapse; margin: 4px 0 0; font-size: 13.5px; }
+      #tool .cp-fields-table th, #tool .cp-fields-table td { text-align: left; padding: 7px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+      #tool .cp-fields-table th { color: var(--muted); font-weight: 650; }
+      #tool .cp-raw { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: nowrap; color: var(--accent-strong); }
+      #tool .cp-common { margin-top: 20px; }
+      #tool .cp-common-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+      #tool .cp-common-btn {
+        display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left;
+        padding: 8px 10px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg);
+        color: var(--ink); font-family: inherit; cursor: pointer;
+      }
+      #tool .cp-common-btn:hover { border-color: var(--accent); }
+      #tool .cp-common-label { font-size: 13px; font-weight: 650; }
+      #tool .cp-common-code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; color: var(--muted);
+      }
+      @media (max-width: 420px) {
+        #tool .cp-common-list { grid-template-columns: 1fr; }
+        #tool .cp-fields-table { font-size: 12.5px; }
+        #tool .cp-fields-table th, #tool .cp-fields-table td { padding: 6px 5px; }
+      }
+    </style>
+
+    <div class="input-group cp-input-row">
+      <label for="cron-input" data-i18n="tool.input.label">Cron expression</label>
+      <input id="cron-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+        placeholder="*/15 * * * *" data-i18n-placeholder="tool.input.ph" aria-label="Cron expression" data-i18n-aria-label="tool.input.label" autofocus>
+      <p class="cp-hint" data-i18n="tool.input.hint">Format: minute hour day-of-month month day-of-week</p>
+    </div>
+
+    <p id="err" class="cp-error" role="alert" hidden></p>
+    <p id="cp-empty" class="cp-empty" data-i18n="tool.placeholder">Enter a cron expression above to see its schedule, next run times, and a field-by-field breakdown.</p>
+
+    <div id="cp-result" hidden>
+      <p class="cp-desc" id="cp-desc" aria-live="polite"></p>
+
+      <div class="cp-next-head">
+        <p class="cp-section-label" id="cp-next-heading">Next 5 run times</p>
+        <select id="cp-count" aria-label="How many run times to show" data-i18n-aria-label="tool.next.count">
+          <option value="5" selected>5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+          <option value="50">50</option>
+        </select>
+      </div>
+      <p class="cp-next-note" data-i18n="tool.next.localNote">Calculated in your device's local timezone.</p>
+      <ol class="cp-next-list" id="cp-next-list" aria-live="polite"></ol>
+
+      <p class="cp-section-label" data-i18n="tool.fields.label">Field-by-field breakdown</p>
+      <div style="overflow-x:auto;">
+        <table class="cp-fields-table">
+          <thead>
+            <tr>
+              <th data-i18n="tool.fields.field">Field</th>
+              <th data-i18n="tool.fields.value">You entered</th>
+              <th data-i18n="tool.fields.meaning">Meaning</th>
+            </tr>
+          </thead>
+          <tbody id="cp-fields-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="cp-common">
+      <p class="cp-section-label" data-i18n="tool.common.label">Common expressions — tap to try one</p>
+      <div class="cp-common-list" id="cp-common-list" role="list"></div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:1px 5px;border-radius:5px}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How to read a cron expression</h2>
+    <p>A cron expression is five space-separated fields that tell a scheduler when to run a job: <code>minute hour day-of-month month day-of-week</code>. Each field narrows down the exact minutes a job is allowed to fire. This tool parses that syntax with a hand-written matcher (no external cron library), turns it into a plain-English sentence, lists the next 5 times it would actually run from right now, and breaks each of the 5 fields down individually so you can see exactly what you typed.</p>
+
+    <h2>The five fields</h2>
+    <table>
+      <thead><tr><th>Field</th><th>Allowed values</th><th>Special syntax</th></tr></thead>
+      <tbody>
+        <tr><td>Minute</td><td>0–59</td><td>*, lists, ranges, steps</td></tr>
+        <tr><td>Hour</td><td>0–23</td><td>*, lists, ranges, steps</td></tr>
+        <tr><td>Day of month</td><td>1–31</td><td>*, lists, ranges, steps</td></tr>
+        <tr><td>Month</td><td>1–12</td><td>*, JAN–DEC, lists, ranges, steps</td></tr>
+        <tr><td>Day of week</td><td>0–6 (and 7)</td><td>*, SUN–SAT, lists, ranges, steps (0 and 7 both mean Sunday)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Wildcards, steps, ranges, and lists</h2>
+    <ul>
+      <li><strong>Wildcard <code>*</code></strong> — every value is allowed for that field.</li>
+      <li><strong>Step <code>*/5</code></strong> — every 5th value, starting from the field's minimum (0, 5, 10, 15... for minutes).</li>
+      <li><strong>Range <code>9-17</code></strong> — every value from 9 through 17 inclusive.</li>
+      <li><strong>Stepped range <code>9-17/2</code></strong> — every other value in that range: 9, 11, 13, 15, 17.</li>
+      <li><strong>List <code>1,15,30</code></strong> — exactly those values, comma-separated, in any combination with the syntax above.</li>
+    </ul>
+
+    <h2>The day-of-month / day-of-week "OR" trap</h2>
+    <p>This is the single most common cron surprise. When <em>both</em> the day-of-month and day-of-week fields are restricted (neither one is left as <code>*</code>), cron treats them as an OR condition, not AND. <code>0 0 1 * MON</code> does not mean "the 1st, but only if it's a Monday" — it means "midnight on the 1st, OR midnight on any Monday," so it typically fires several times a month. To target only the 1st, leave day-of-week as <code>*</code>; to target only Mondays, leave day-of-month as <code>*</code>.</p>
+
+    <h2>Common patterns</h2>
+    <table>
+      <thead><tr><th>Expression</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><code>*/5 * * * *</code></td><td>Every 5 minutes</td></tr>
+        <tr><td><code>0 * * * *</code></td><td>Every hour, on the hour (@hourly)</td></tr>
+        <tr><td><code>0 0 * * *</code></td><td>Every day at midnight (@daily)</td></tr>
+        <tr><td><code>0 9 * * 1-5</code></td><td>Every weekday at 09:00</td></tr>
+        <tr><td><code>0 0 * * 0</code></td><td>Every Sunday at midnight (@weekly)</td></tr>
+        <tr><td><code>0 0 1 * *</code></td><td>Midnight on the 1st of every month (@monthly)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Worked examples</h2>
+    <div class="example">
+      <p><strong>Example 1.</strong> <code>30 4 1,15 * *</code> reads as "at 04:30, on days 1 and 15 of the month" — minute 30, hour 4, the 1st and 15th of every month, any day of the week. A billing job that needs to run twice a month, before business hours, is a typical use for this shape.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2.</strong> <code>*/15 9-17 * * 1-5</code> reads as "every 15 minutes during hours 9 through 17, on Monday through Friday" — a health-check or sync job that only needs to run during business hours on weekdays, not around the clock.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3.</strong> <code>0 0 29 2 *</code> reads as "at 00:00, on day 29 of the month, in February" — a leap-day-only job. Because February 29th only exists on leap years, the next-run list will correctly skip straight to the next leap year instead of showing a run every year.</p>
+    </div>
+
+    <h2>Timezones and privacy</h2>
+    <p>The next-run times are calculated against your device's own local clock and timezone — the same clock your operating system already shows. A production crontab usually runs in the server's configured timezone (frequently UTC), which can differ from yours, so double-check the scheduler's timezone setting before treating the exact times shown here as final. Everything on this page — parsing, the description, and the next-run calculation — runs locally in your browser; your cron expression is never uploaded or sent to a server.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc3339" target="_blank" rel="noopener">RFC 3339 — date and time formats used when recording scheduled run times</a></li>
+      <li><a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank" rel="noopener">ISO 8601 — the international standard for representing dates, times and intervals</a></li>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — authoritative civil time, UTC and clock synchronisation</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">MDN — JavaScript Date behaviour behind the local next-run calculation</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/css-minifier/"><span class="related-ico" aria-hidden="true">🧰</span><span class="related-name">CSS Minifier</span></a><a class="related-item" href="https://tool-hub.me/csv-to-json/"><span class="related-ico" aria-hidden="true">📋</span><span class="related-name">CSV to JSON Converter</span></a><a class="related-item" href="https://tool-hub.me/download-time-calc/"><span class="related-ico" aria-hidden="true">⬇️</span><span class="related-name">Download Time Calculator</span></a><a class="related-item" href="https://tool-hub.me/gradient-generator/"><span class="related-ico" aria-hidden="true">🌈</span><span class="related-name">CSS Gradient Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What do the 5 fields in a cron expression mean?</summary>
+      <p data-i18n="faq.a1">A standard cron expression has five space-separated fields, always in this order: minute (0-59), hour (0-23), day of the month (1-31), month (1-12 or JAN-DEC), and day of the week (0-6 or SUN-SAT, where both 0 and 7 mean Sunday). Each field can be a single value, a wildcard *, a comma-separated list like 1,15, a range like 9-17, or a step like */5. For example, 30 4 1,15 * * means "at 04:30, on the 1st and 15th of every month" — minute 30, hour 4, days 1 and 15, every month, any day of the week.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between * and */5 in a cron expression?</summary>
+      <p data-i18n="faq.a2">A bare asterisk * means every value is allowed for that field — every minute, every hour, and so on. Adding a step with /N, as in */5, means every Nth value starting from the field's minimum, so */5 in the minute field matches 0, 5, 10, 15 ... 55, in other words every 5 minutes. A step can also follow a range, like 9-17/2, which matches every other hour from 9 through 17 (9, 11, 13, 15, 17).</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How does cron handle day-of-month and day-of-week together, like 0 0 1 * MON?</summary>
+      <p data-i18n="faq.a3">This is a classic cron gotcha: when both the day-of-month and day-of-week fields are restricted (neither is *), most cron implementations — including this parser — treat them as OR, not AND. So 0 0 1 * MON runs at midnight on the 1st of the month OR on any Monday, whichever comes first, not only on a Monday that happens to land on the 1st. If you only want the 1st of the month, leave the day-of-week field as *; if you only want Mondays, leave the day-of-month field as *.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What timezone are the "next run times" calculated in?</summary>
+      <p data-i18n="faq.a4">The next run times are computed using your device's local date, time, and timezone, exactly like your computer's clock. A real crontab, however, runs in whatever timezone the server or scheduler is configured for (often UTC), which may not match your browser's timezone. If your server uses a different timezone, mentally shift the times shown here by the difference, or check the scheduler's own timezone setting before relying on the exact times.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my cron expression sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Parsing, the plain-English description, and the next-run calculation all happen locally in your browser using plain JavaScript — nothing you type is uploaded, logged, or stored anywhere except your own browser's local storage, which just remembers your last expression for convenience. You can keep using this tool offline once the page has loaded, and no account or sign-up is required.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

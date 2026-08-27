@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-4gEHXx6373v+yUp6gApHyKhwniCg1MVHSeITW2FATUo=' 'sha256-d47Zogtf9f/ieUzWpHDLttMK13vVdpMVGvOP9kPqkOI=' 'sha256-sPHgGpsmAnypk09QxxoZ6261Ral/8YEaUVftEjwV3T0='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>사이딩 계산기 — 스퀘어·박스·트림 산출</title>
+<meta name="description" content="외벽 사이딩 소요량을 계산합니다. 순 벽면적, 사이딩 스퀘어, 비닐 박스 수, 스타터 스트립, J채널, 코너 포스트를 로스율까지 반영해 산출합니다.">
+<meta name="keywords" content="siding calculator, vinyl siding calculator, how much siding do i need, siding squares, siding estimator, siding material calculator">
+<link rel="canonical" href="https://tool-hub.me/siding-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/siding-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/siding-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/siding-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/siding-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/siding-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/siding-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/siding-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/siding-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/siding-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/siding-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/siding-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/siding-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/siding-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/siding-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/siding-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="사이딩 계산기 — 스퀘어·박스·트림 산출">
+<meta property="og:description" content="외벽 사이딩 소요량을 계산합니다. 순 벽면적, 사이딩 스퀘어, 비닐 박스 수, 스타터 스트립, J채널, 코너 포스트를 로스율까지 반영해 산출합니다.">
+<meta property="og:url" content="https://tool-hub.me/siding-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/siding-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#475569">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Siding Calculator",
+  "description": "Work out how much siding you need: net wall area, siding squares, vinyl boxes, starter strip, J-channel and corner posts, with a waste allowance.",
+  "url": "https://tool-hub.me/siding-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Siding Calculator",
+      "item": "https://tool-hub.me/siding-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a square of siding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A square is the trade unit of area: 100 square feet of finished wall. Siding, roofing and house wrap are all quoted this way, so 1,338 sq ft of wall is 13.4 squares before waste. Suppliers price by the square or by the box, and boxes are sized to cover a fixed fraction of one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the trim cost so much more than expected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Accessories — starter strip, J-channel, corner posts, utility trim, soffit and fascia — routinely run 30 to 40 percent of a vinyl siding material budget. The panels are the cheap part; the extruded profiles that hold them are not. Price the accessory list separately instead of treating trim as a rounding error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need house wrap under the siding?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost always. Vinyl siding is not watertight — it drains, and the water-resistive barrier behind it is what actually keeps the wall dry. US code (IRC R703) requires a WRB over sheathing in most situations, and manufacturers make it a warranty condition. Buy wrap by the square, same as the siding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many boxes will my supplier actually send?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool assumes two boxes per square, the usual packaging for double 4 and double 5 vinyl panels. Coverage varies by brand and profile: some boxes cover 200 sq ft, others 100. Take the square count to the yard and let them convert it against the label before you order."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Siding Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Siding Calculator</span></nav>
+  <section class="hero">
+    <h1>Siding Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Perimeter, wall height and gables in — siding squares, boxes and trim linear feet out.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .field-row-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:520px){ #tool .field-row, #tool .field-row-3 { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Measurement unit</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+      <option value="m" data-i18n="tool.unit.m">Meters</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="perim" data-i18n="tool.perim.label">House perimeter</label>
+        <input type="number" id="perim" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="140">
+      </div>
+      <div>
+        <label for="wallh" data-i18n="tool.wallh.label">Wall height at the eave</label>
+        <input type="number" id="wallh" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="9">
+      </div>
+    </div>
+
+    <div class="field-row-3">
+      <div>
+        <label for="gables" data-i18n="tool.gables.label">Number of gables</label>
+        <input type="number" id="gables" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="2">
+      </div>
+      <div>
+        <label for="gw" data-i18n="tool.gw.label">Gable width at base</label>
+        <input type="number" id="gw" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="30">
+      </div>
+      <div>
+        <label for="gh" data-i18n="tool.gh.label">Gable height to peak</label>
+        <input type="number" id="gh" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="8">
+      </div>
+    </div>
+
+    <div class="field-row-3">
+      <div>
+        <label for="doors" data-i18n="tool.doors.label">Doors</label>
+        <input type="number" id="doors" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="2">
+      </div>
+      <div>
+        <label for="windows" data-i18n="tool.windows.label">Windows</label>
+        <input type="number" id="windows" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="8">
+      </div>
+      <div>
+        <label for="corners" data-i18n="tool.corners.label">Outside corners</label>
+        <input type="number" id="corners" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="4">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+        <select id="waste">
+          <option value="5" data-i18n="tool.waste.5">5% — long straight walls, pro install</option>
+          <option value="10" selected data-i18n="tool.waste.10">10% — simple boxy walls</option>
+          <option value="12" data-i18n="tool.waste.12">12% — a few gables or dormers</option>
+          <option value="15" data-i18n="tool.waste.15">15% — many gables, dormers, cut-ups</option>
+          <option value="20" data-i18n="tool.waste.20">20% — heavy cut-ups, patterns or first DIY</option>
+        </select>
+      </div>
+      <div>
+        <label for="boxcov" data-i18n="tool.boxcov.label">Coverage per box (sq ft, optional)</label>
+        <input type="number" id="boxcov" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="50">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate siding</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.squares">Siding squares (100 sq ft each)</div>
+          <div class="rc-val" id="r-squares">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Net wall area</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.boxes">Vinyl siding boxes</div><div class="rc-val" id="r-boxes">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.starter">Starter strip (linear ft)</div><div class="rc-val" id="r-starter">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.jchannel">J-channel (linear ft)</div><div class="rc-val" id="r-jchannel">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.posts">Corner posts (10 ft each)</div><div class="rc-val" id="r-posts">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.method" style="margin-top:12px;">Deducts 21 sq ft per door and 15 sq ft per window, then adds the waste allowance. Boxes assume 2 boxes per square — verify coverage on the label. Metric entries are converted to feet.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much siding do I need? Start with the walls, not the floor plan</h2>
+    <p>Siding is sold by wall area, not by house size. A 2,000 sq ft ranch and a 2,000 sq ft two-storey need very different orders, because the two-storey has half the footprint and twice the height. So the only measurement that matters is the perimeter of the exterior walls multiplied by the height you are covering, plus the triangles of any gable ends, minus the openings you will not be siding over.</p>
+    <p>Walk the house with a tape and add up each wall run: front, side, back, side. Bump-outs and bays add their own runs. That total is the perimeter. For height, measure from the bottom of the starter strip to the soffit — the eave height — not to the roof peak. Gables are handled separately because they are triangles.</p>
+
+    <h3>Worked example: a 140 ft colonial</h3>
+    <p>Take a two-storey colonial with a 140 ft perimeter, 9 ft eave walls, two gable ends 30 ft wide and 8 ft to the peak, two exterior doors, eight windows and four outside corners.</p>
+    <p>Field walls: 140 x 9 = 1,260 sq ft. Gables: each is 30 x 8 / 2 = 120 sq ft, so two add 240. Gross wall area is 1,500 sq ft. Deduct the openings at 21 sq ft per door and 15 sq ft per window: 42 + 120 = 162 sq ft. Net area is 1,338 sq ft, or 13.4 squares bare. Add a 10 percent waste allowance and the order becomes 14.7 squares — about 30 boxes of vinyl at the usual two-boxes-per-square packaging.</p>
+    <p>The accessories follow from the same measurements. Starter strip runs the full perimeter: 140 linear feet. Corner posts: four corners at 9 ft of wall, and since posts come in 10 ft lengths, that is four posts. J-channel is the long one: roughly 17 ft around each door and 14 ft around each window (2 x 17 = 34, plus 8 x 14 = 112, so 146 lf), plus both rakes of each gable. A 30 ft wide, 8 ft tall gable has rakes of sqrt(15² + 8²) = 17 ft each, so two gables add 68 lf. Total J-channel about 214 linear feet, which is eighteen 12 ft 6 in sticks.</p>
+
+    <h3>Why the deduction rule is deliberately stingy</h3>
+    <p>A standard 3 ft x 6 ft 8 in door is 20 sq ft and a common double-hung window is about 15. Many estimators deduct nothing at all for openings, because every opening creates cut waste at its edges that roughly cancels the area saved. This calculator takes the middle road: it deducts a modest 21 and 15 sq ft, then adds waste on top. If your house has a wall of glass — a big picture window or sliders — measure those openings and treat the extra as part of your waste cushion rather than deducting them fully.</p>
+
+    <h2>What drives the waste percentage</h2>
+    <p>Ten percent covers a plain rectangular house with long, uninterrupted runs. Fifteen percent is the realistic number when you have several gables, dormers, bay windows, staggered rooflines or a lot of short walls, because each cut leaves an offcut too short to reuse. Two other factors push it up: a strong colour or woodgrain pattern that has to be matched across a wall, and a first-time DIY install, where the first two walls tend to teach you an expensive lesson.</p>
+    <p>Order the whole job at once. Vinyl colour varies subtly between production lots, and a mid-project top-up in a slightly different batch shows up in daylight on a large wall.</p>
+
+    <h2>Limitations worth knowing before you order</h2>
+    <p>This is a materials estimate, not a quote. It does not price labour, tear-off, disposal of old siding, insulation board, house wrap, soffit and fascia, or the flashing that belongs at every window head and wall-roof junction. It assumes a single height for all walls, so if one side is a walkout basement with 18 ft of exposure, run that wall as its own calculation and add the results. It also assumes rectangular walls plus simple triangular gables — turrets, curved walls and hip-and-valley cut-ups need takeoff by hand.</p>
+    <p>Finally, take the square figure to the supplier rather than the box figure. Box coverage differs by manufacturer and profile; the square count is the number that translates cleanly across every brand on the shelf.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.energy.gov/energysaver/insulation" target="_blank" rel="noopener">U.S. Department of Energy, Energy Saver — insulation and exterior wall assemblies behind siding</a></li>
+      <li><a href="https://www.energy.gov/energysaver/weatherize" target="_blank" rel="noopener">U.S. Department of Energy — weatherization, air sealing and moisture control for exterior walls</a></li>
+      <li><a href="https://www.epa.gov/lead/renovation-repair-and-painting-program" target="_blank" rel="noopener">U.S. EPA Renovation, Repair and Painting Program — lead-safe rules when re-siding pre-1978 homes</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/sleep-cycle-calc/"><span class="related-ico" aria-hidden="true">😴</span><span class="related-name">Sleep Cycle Calculator</span></a><a class="related-item" href="https://tool-hub.me/smoking-cost-calc/"><span class="related-ico" aria-hidden="true">🚭</span><span class="related-name">Smoking Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/sod-calc/"><span class="related-ico" aria-hidden="true">🌿</span><span class="related-name">Sod Calculator</span></a><a class="related-item" href="https://tool-hub.me/solar-panel-calc/"><span class="related-ico" aria-hidden="true">☀️</span><span class="related-name">Solar Panel Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is a square of siding?</summary><p data-i18n="faq.a1">A square is the trade unit of area: 100 square feet of finished wall. Siding, roofing and house wrap are all quoted this way, so 1,338 sq ft of wall is 13.4 squares before waste. Suppliers price by the square or by the box, and boxes are sized to cover a fixed fraction of one.</p></details>
+    <details><summary data-i18n="faq.q2">Why does the trim cost so much more than expected?</summary><p data-i18n="faq.a2">Accessories — starter strip, J-channel, corner posts, utility trim, soffit and fascia — routinely run 30 to 40 percent of a vinyl siding material budget. The panels are the cheap part; the extruded profiles that hold them are not. Price the accessory list separately instead of treating trim as a rounding error.</p></details>
+    <details><summary data-i18n="faq.q3">Do I need house wrap under the siding?</summary><p data-i18n="faq.a3">Almost always. Vinyl siding is not watertight — it drains, and the water-resistive barrier behind it is what actually keeps the wall dry. US code (IRC R703) requires a WRB over sheathing in most situations, and manufacturers make it a warranty condition. Buy wrap by the square, same as the siding.</p></details>
+    <details><summary data-i18n="faq.q4">How many boxes will my supplier actually send?</summary><p data-i18n="faq.a4">This tool assumes two boxes per square, the usual packaging for double 4 and double 5 vinyl panels. Coverage varies by brand and profile: some boxes cover 200 sq ft, others 100. Take the square count to the yard and let them convert it against the label before you order.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

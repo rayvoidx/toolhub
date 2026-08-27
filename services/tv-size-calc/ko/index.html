@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-NVTRb4apxHc0DP+nfF4fa65oH9ue8TGbU2n1r872B7k=' 'sha256-vzkAjXupFCBMKIlMZD/cdrCoy079F1dD6LZUyPhO21Y=' 'sha256-7ZDeG4NnUgYCoWd4j7gjoaotPzJpv0fsz9VhEaZFF+c='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TV 크기 계산기 — 시청 거리로 화면 크기 정하기</title>
+<meta name="description" content="시청 거리에 맞는 TV 크기, 또는 지금 쓰는 TV에 맞는 시청 거리를 계산합니다. THX·SMPTE 시야각 기준을 그대로 적용하며 피트와 미터를 모두 지원합니다.">
+<meta name="keywords" content="tv size calculator, what size tv should i get, tv viewing distance, tv distance calculator, tv size for room, viewing angle calculator">
+<link rel="canonical" href="https://tool-hub.me/tv-size-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/tv-size-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/tv-size-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/tv-size-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/tv-size-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/tv-size-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/tv-size-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/tv-size-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/tv-size-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/tv-size-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/tv-size-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/tv-size-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/tv-size-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/tv-size-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/tv-size-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/tv-size-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TV 크기 계산기 — 시청 거리로 화면 크기 정하기">
+<meta property="og:description" content="시청 거리에 맞는 TV 크기, 또는 지금 쓰는 TV에 맞는 시청 거리를 계산합니다. THX·SMPTE 시야각 기준을 그대로 적용하며 피트와 미터를 모두 지원합니다.">
+<meta property="og:url" content="https://tool-hub.me/tv-size-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/tv-size-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "TV Size Calculator",
+  "description": "Work out what size TV to get for your viewing distance, or how far to sit from the TV you already own. THX and SMPTE viewing-angle math, in feet or metres.",
+  "url": "https://tool-hub.me/tv-size-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "TV Size Calculator",
+      "item": "https://tool-hub.me/tv-size-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can a TV be too big for a room?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Once the screen fills more than about 40 degrees of your field of view you have to move your eyes and neck to follow the action, which most people find tiring after an hour. On a 1080p source you also start to see the pixel structure. Sitting 8 ft from a 100-inch screen lands near 50 degrees — front-row cinema territory."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does 4K let you sit closer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Detail stops being visible once a pixel is smaller than about one arcminute — a sixtieth of a degree — of your field of view. 4K packs four times as many pixels into the same panel, so the distance at which the grid disappears moves much closer in. On a 65-inch screen full 4K detail resolves at roughly 4 ft, while 1080p already looks smooth by 8 ft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 8K worth it at normal viewing distances?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In a typical living room, no. To actually resolve 8K on a 65-inch screen you would have to sit about 2 ft away, and even on an 85-inch set the limit is under 3 ft. Unless the sofa is pushed against the screen those extra pixels are invisible, so the money goes further on panel type, brightness and contrast."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How high should the TV be mounted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Centre the screen on seated eye level, which is about 42 in from the floor for an adult on a sofa. On a 65-inch TV that puts the bottom edge roughly 26 in up. Mounting above a fireplace forces an upward tilt that tires the eyes and washes out most LCD panels off-axis."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>TV Size Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">TV Size Calculator</span></nav>
+  <section class="hero">
+    <h1>TV Size Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Screen size is really a viewing-angle question. Give it your sofa distance and it does the rest.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:2fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .rcard.wide .rc-note { font-size:14px; margin-top:3px; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:6px; }
+      #tool .chip { border:1px solid var(--line); border-radius:999px; padding:5px 12px; font-size:13px; color:var(--muted); }
+      #tool .chip.on { border-color:var(--accent); color:var(--accent); font-weight:700; }
+      #tool .chips-label { margin:14px 0 0; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What should I work out?</label>
+    <select id="mode">
+      <option value="size" data-i18n="tool.mode.size">Best TV size for my seating distance</option>
+      <option value="dist" data-i18n="tool.mode.dist">Best seating distance for my TV</option>
+    </select>
+
+    <div class="field-row" id="dist-field">
+      <div>
+        <label for="dist" data-i18n="tool.dist.label">Viewing distance</label>
+        <input type="number" id="dist" inputmode="decimal" min="0" max="60" step="any" autocomplete="off" placeholder="8">
+      </div>
+      <div>
+        <label for="distunit" data-i18n="tool.unit.ft">Feet</label>
+        <select id="distunit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Meters</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="size-field" hidden>
+      <label for="size" data-i18n="tool.size.label">TV size (diagonal, inches)</label>
+      <input type="number" id="size" inputmode="decimal" min="0" max="150" step="any" autocomplete="off" placeholder="65">
+    </div>
+
+    <label for="content" data-i18n="tool.content.label">Mostly watching</label>
+    <select id="content">
+      <option value="cine" data-i18n="tool.content.cine">4K movies — most immersive (THX, about 40°)</option>
+      <option value="mixed" data-i18n="tool.content.mixed">Mixed 4K TV and streaming (about 30°)</option>
+      <option value="hd" data-i18n="tool.content.hd">1080p, cable and sports (about 20°)</option>
+      <option value="custom" data-i18n="tool.content.custom">Custom viewing angle</option>
+    </select>
+
+    <div id="angle-field" hidden>
+      <label for="angle" data-i18n="tool.angle.label">Viewing angle (degrees)</label>
+      <input type="number" id="angle" inputmode="decimal" min="10" max="60" step="any" autocomplete="off" placeholder="30">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-main-label" data-i18n="tool.r.size">Recommended TV size</div>
+          <div class="rc-val" id="r-main">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.angle">Viewing angle</div><div class="rc-val" id="r-angle">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.range">Comfortable range</div><div class="rc-val" id="r-range">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.closest">Closest common sizes</div><div class="rc-val" id="r-closest">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.dims">Screen width x height</div><div class="rc-val" id="r-dims">—</div></div>
+        <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.4k">4K vs 1080p at this distance</div><div class="rc-note" id="r-4k">—</div></div>
+      </div>
+      <p class="subtle chips-label" data-i18n="tool.chips.label">Common screen sizes</p>
+      <div class="chips" id="chips"></div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Rules of thumb built on THX and SMPTE viewing-angle targets. Room layout, seat position and eyesight still have the final say.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What size TV should I get?</h2>
+    <p>Screen size is the wrong question to start with. What your eyes actually respond to is how much of your field of view the picture fills, measured as a horizontal viewing angle. SMPTE, the body behind cinema standards, treats 30 degrees as the reference for a good seat. THX pushes further and recommends about 40 degrees for a front-row cinema feel. Every size chart you have ever seen is one of those two angles converted into inches for a normal 16:9 panel.</p>
+    <p>That conversion is simple enough to do in your head. Measure the distance from your seat to the wall in inches, then divide: by 1.2 for the immersive THX angle, by 1.6 for the SMPTE reference, by 2.5 if you still watch a lot of 1080p cable or sport. The answer is the screen diagonal in inches.</p>
+
+    <h3>Worked example: a typical 8 ft living room</h3>
+    <p>Eight feet is 96 inches, which is where most sofas end up in a British or American living room. Run the three divisions and you get three very different answers. For 4K films at the THX angle, 96 / 1.2 = 80 inches, so you buy a 75 or 85 and land at 38 or 42 degrees. For mixed 4K TV and streaming, 96 / 1.6 = 60 inches, so a 55 or 65 puts you at 28 to 33 degrees. If most of your viewing is still 1080p, 96 / 2.5 = 38 inches and a 43-inch set at 22 degrees keeps the pixel grid invisible.</p>
+    <p>Notice that all three answers are defensible. The chart is not telling you a 43 is correct and an 85 is a mistake; it is telling you which content each choice is optimised for. Most people at 8 ft end up happiest with a 65 or 75, because the majority of what they watch is now 4K streaming.</p>
+
+    <h2>The viewing angle science, briefly</h2>
+    <p>A 16:9 screen is 0.87 times its diagonal wide and 0.49 times its diagonal tall. Put a 65-inch screen 96 inches away and the picture is 56.7 inches wide, which works out to 2 x arctan(28.3 / 96) = 33 degrees. Below roughly 20 degrees the image reads as a window rather than an experience. Above about 40 degrees you begin to scan, moving your eyes and neck to catch the edges of the frame — thrilling for a film, tiring for a three-hour sports broadcast.</p>
+    <p>Resolution sets the other boundary. Human vision with 20/20 acuity resolves detail down to about one arcminute, a sixtieth of a degree. Divide the screen height by the number of pixel rows and you get the pixel pitch; the distance at which that pitch shrinks to one arcminute is the furthest you can sit and still see everything the format offers. The arithmetic gives a tidy pair of constants: full 4K detail needs a distance of roughly 0.78 times the diagonal, and full 1080p detail 1.56 times. A 65-inch 4K panel therefore delivers all its pixels at about 4 ft 3 in, and stops out-resolving 1080p entirely at about 8 ft 5 in.</p>
+    <p>This is also why 8K is a hard sell at home. The threshold halves again: about 0.39 times the diagonal, which is 2 ft 1 in for a 65-inch screen and 2 ft 9 in for an 85. Nobody arranges a lounge that way.</p>
+
+    <h2>Common sizes and where to sit</h2>
+    <table>
+      <thead><tr><th>Screen</th><th>4K cinematic (x1.2)</th><th>Mixed 4K (x1.6)</th><th>1080p safe (x2.5)</th></tr></thead>
+      <tbody>
+        <tr><td>43 in</td><td>4.3 ft</td><td>5.7 ft</td><td>9.0 ft</td></tr>
+        <tr><td>50 in</td><td>5.0 ft</td><td>6.7 ft</td><td>10.4 ft</td></tr>
+        <tr><td>55 in</td><td>5.5 ft</td><td>7.3 ft</td><td>11.5 ft</td></tr>
+        <tr><td>65 in</td><td>6.5 ft</td><td>8.7 ft</td><td>13.5 ft</td></tr>
+        <tr><td>75 in</td><td>7.5 ft</td><td>10.0 ft</td><td>15.6 ft</td></tr>
+        <tr><td>85 in</td><td>8.5 ft</td><td>11.3 ft</td><td>17.7 ft</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Why the TV shrinks on the way home</h3>
+    <p>Showroom walls are 20 ft across, lit to several thousand lux, and every set on display is the same shape. A 75-inch panel in that context looks sensible; the same panel on a 10 ft wall at home looks enormous for a week and then normal forever. Buyers who size down at the shop are the ones who post regrets a month later. If two sizes are within budget and both clear your wall and stand, the larger one is almost always the one people keep.</p>
+
+    <h3>Limits worth knowing</h3>
+    <p>These are rules of thumb, not physics for your specific room. They assume 16:9 content, a seat square to the screen and average eyesight; a corner seat, a projector-style 2.35:1 film or glasses you have not updated in five years all shift the answer. Check the practical constraints too — wall width, the stand your set will sit on, and mounting height, which should put the centre of the screen at seated eye level, around 42 in from the floor. Finally, size cannot rescue a bad panel: at 8 ft a good 55-inch OLED beats a cheap 75-inch LCD on almost everything except the number on the box.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.itu.int/" target="_blank" rel="noopener">ITU — international recommendations for television picture formats and viewing conditions</a></li>
+      <li><a href="https://www.smpte.org/" target="_blank" rel="noopener">SMPTE — motion imaging standards behind the 30-degree reference viewing angle</a></li>
+      <li><a href="https://www.nei.nih.gov/" target="_blank" rel="noopener">National Eye Institute (NIH) — visual acuity basics that set the pixel-resolving distance limit</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/typing-test/"><span class="related-ico" aria-hidden="true">⌨️</span><span class="related-name">Typing Speed Test</span></a><a class="related-item" href="https://tool-hub.me/wallpaper-calc/"><span class="related-ico" aria-hidden="true">🖼️</span><span class="related-name">Wallpaper Calculator</span></a><a class="related-item" href="https://tool-hub.me/water-heater-size-calc/"><span class="related-ico" aria-hidden="true">🚿</span><span class="related-name">Water Heater Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/wedding-budget-calc/"><span class="related-ico" aria-hidden="true">💒</span><span class="related-name">Wedding Budget Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Can a TV be too big for a room?</summary><p data-i18n="faq.a1">Yes. Once the screen fills more than about 40 degrees of your field of view you have to move your eyes and neck to follow the action, which most people find tiring after an hour. On a 1080p source you also start to see the pixel structure. Sitting 8 ft from a 100-inch screen lands near 50 degrees — front-row cinema territory.</p></details>
+    <details><summary data-i18n="faq.q2">Why does 4K let you sit closer?</summary><p data-i18n="faq.a2">Detail stops being visible once a pixel is smaller than about one arcminute — a sixtieth of a degree — of your field of view. 4K packs four times as many pixels into the same panel, so the distance at which the grid disappears moves much closer in. On a 65-inch screen full 4K detail resolves at roughly 4 ft, while 1080p already looks smooth by 8 ft.</p></details>
+    <details><summary data-i18n="faq.q3">Is 8K worth it at normal viewing distances?</summary><p data-i18n="faq.a3">In a typical living room, no. To actually resolve 8K on a 65-inch screen you would have to sit about 2 ft away, and even on an 85-inch set the limit is under 3 ft. Unless the sofa is pushed against the screen those extra pixels are invisible, so the money goes further on panel type, brightness and contrast.</p></details>
+    <details><summary data-i18n="faq.q4">How high should the TV be mounted?</summary><p data-i18n="faq.a4">Centre the screen on seated eye level, which is about 42 in from the floor for an adult on a sofa. On a 65-inch TV that puts the bottom edge roughly 26 in up. Mounting above a fireplace forces an upward tilt that tires the eyes and washes out most LCD panels off-axis.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

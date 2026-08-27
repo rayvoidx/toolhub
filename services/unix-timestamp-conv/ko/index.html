@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-OsVUxIiHc+y1kTV2eFhLp1M9LIoX7Y+7jEGamOhftGA=' 'sha256-O6DarWupCjh6M9vPbSyFfzc70y8sX/uEdZ3lQLjHm8Q=' 'sha256-+9+tRHy73c21q4EKhMT4V+RljS00Igcu1PMKGcEGubw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unix 타임스탬프 변환기 — 붙여넣으면 바로 날짜</title>
+<meta name="description" content="무료 Unix 타임스탬프 변환기. 로그에서 복사한 epoch 값을 붙여넣으면 한국 시간(로컬)과 UTC 날짜를 동시에 보여줍니다. 초·밀리초·마이크로초 자릿수 자동 인식, 날짜→타임스탬프 역변환, 현재 타임스탬프 복사까지 브라우저 안에서 광고 없이 처리합니다.">
+<meta name="keywords" content="unix timestamp converter, epoch converter, timestamp to date, unix time converter, 유닉스 타임스탬프 변환, timestamp 변환기, 타임스탬프 날짜 변환">
+<link rel="canonical" href="https://tool-hub.me/unix-timestamp-conv/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/unix-timestamp-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/unix-timestamp-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/unix-timestamp-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/unix-timestamp-conv/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/unix-timestamp-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/unix-timestamp-conv/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/unix-timestamp-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/unix-timestamp-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/unix-timestamp-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/unix-timestamp-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/unix-timestamp-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/unix-timestamp-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/unix-timestamp-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/unix-timestamp-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/unix-timestamp-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Unix 타임스탬프 변환기 — 붙여넣으면 바로 날짜">
+<meta property="og:description" content="무료 Unix 타임스탬프 변환기. 로그에서 복사한 epoch 값을 붙여넣으면 한국 시간(로컬)과 UTC 날짜를 동시에 보여줍니다. 초·밀리초·마이크로초 자릿수 자동 인식, 날짜→타임스탬프 역변환, 현재 타임스탬프 복사까지 브라우저 안에서 광고 없이 처리합니다.">
+<meta property="og:url" content="https://tool-hub.me/unix-timestamp-conv/ko/">
+<meta property="og:image" content="https://tool-hub.me/unix-timestamp-conv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16a34a">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Unix Timestamp Converter",
+  "description": "Free online Unix timestamp converter. Paste an epoch timestamp and read it as your local time and UTC at once — seconds, milliseconds and microseconds detected automatically — plus date → timestamp conversion and the current Unix time. Runs in your browser, ad-free.",
+  "url": "https://tool-hub.me/unix-timestamp-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-17",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Unix Timestamp Converter",
+      "item": "https://tool-hub.me/unix-timestamp-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Unix timestamp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Unix timestamp (also called epoch time or POSIX time) is simply the number of seconds that have passed since 1970-01-01 00:00:00 UTC, the moment known as the epoch. Because it is one plain number, it is easy to store, sort and subtract, which is why logs, databases and API responses use it instead of a written-out date. The number 1720512345, for example, is roughly 54 years' worth of seconds after the epoch. Times before 1970 are written as negative numbers, and this Unix timestamp converter handles those too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between a 10-digit and a 13-digit timestamp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 10-digit timestamp counts seconds; a 13-digit one counts milliseconds and is exactly 1000 times bigger. That is why the same instant is 1720512345 in Python or PHP but 1720512345678 in JavaScript's Date.now() or Java's System.currentTimeMillis(). A 16-digit number is usually microseconds, common in Postgres and Python's time_ns()/1000. The quick rule: 10 digits = seconds, 13 = milliseconds, 16 = microseconds. This epoch converter counts the digits for you, shows which unit it detected, and lets you override the guess with the Unit selector if your data is unusual."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a Unix timestamp contain a time zone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A timestamp is a single moment counted from the UTC epoch, so it carries no time zone at all — the same number means the same instant everywhere on Earth. A time zone only appears when you display it: 1720512345 is 09:25 in Seoul and 00:25 in London on the same day. That is why this converter always shows your local time and UTC side by side. If a converted date looks a few hours off, the timestamp is not wrong; you are most likely comparing a UTC reading with a local one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the year 2038 problem, and does it limit this converter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Systems that store Unix time in a signed 32-bit integer run out of room at 03:14:07 UTC on 19 January 2038 (timestamp 2147483647), and the counter can wrap around to 1901 — the reason it is called the Y2K38 problem. It affects old C programs and embedded devices, not this tool: your browser keeps the value as a 64-bit floating point number, so this converter works from about 275,760 BC to AD 275,760 (±8.64e15 milliseconds). Anything beyond that range gets an explicit out-of-range message rather than a wrong date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the timestamp I paste sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every conversion runs inside your browser with the built-in Date and Intl features — there is no API call, no analytics on your input, and nothing is uploaded or logged. The page also stores nothing about your conversions: the timestamp and unit you choose live only in the open tab and disappear when you close it. That means production log data or customer timestamps are safe to paste here, and the converter keeps working offline once the page has loaded."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Unix Timestamp Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Unix Timestamp Converter</span></nav>
+  <section class="hero">
+    <h1>Unix Timestamp Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste the number you copied out of a log. We work out the unit for you.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+
+    <!-- 현재 타임스탬프 (1초 갱신) -->
+    <div class="result" id="uts-live" style="margin-top:0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;">
+      <div style="min-width:0;">
+        <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.nowLabel">Current Unix timestamp (seconds)</div>
+        <strong id="uts-now" style="font-variant-numeric:tabular-nums;">—</strong>
+      </div>
+      <button type="button" class="btn" id="uts-now-copy" data-copy="uts-now" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+    </div>
+
+    <!-- 패널 A: 타임스탬프 → 날짜 -->
+    <h2 style="font-size:17px;margin:30px 0 0;letter-spacing:-0.01em;" data-i18n="tool.panelA">Timestamp → Date</h2>
+
+    <label for="uts-input" data-i18n="tool.tsLabel">Unix timestamp</label>
+    <input type="text" id="uts-input" inputmode="numeric" autocomplete="off" spellcheck="false"
+           placeholder="1720512345" data-i18n-placeholder="tool.tsPlaceholder"
+           style="font-variant-numeric:tabular-nums;">
+
+    <label for="uts-unit" data-i18n="tool.unitLabel">Unit</label>
+    <select id="uts-unit">
+      <option value="auto" data-i18n="tool.unitAuto">Auto-detect</option>
+      <option value="s" data-i18n="tool.unitS">Seconds (10 digits)</option>
+      <option value="ms" data-i18n="tool.unitMs">Milliseconds (13 digits)</option>
+      <option value="us" data-i18n="tool.unitUs">Microseconds (16 digits)</option>
+      <option value="ns" data-i18n="tool.unitNs">Nanoseconds (19 digits)</option>
+    </select>
+
+    <div class="result" id="uts-a-result" aria-live="polite">
+      <p id="uts-a-hint" data-i18n="tool.hintA" style="margin:0;font-size:15px;color:var(--muted);">Paste a timestamp above — the date shows up here as you type.</p>
+      <p id="uts-a-error" hidden style="margin:0;font-size:15px;font-weight:600;"></p>
+
+      <div id="uts-a-out" hidden>
+        <div style="font-size:13px;color:var(--muted);margin-bottom:12px;">
+          <span data-i18n="tool.detectedLabel">Detected unit</span>: <span id="uts-detected">—</span>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--muted);">
+              <span data-i18n="tool.localLabel">Local time</span>
+              <span id="uts-tz" style="font-weight:400;"></span>
+            </div>
+            <strong id="uts-local" style="font-variant-numeric:tabular-nums;">—</strong>
+          </div>
+          <button type="button" class="btn" data-copy="uts-local" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.utcLabel">UTC</div>
+            <strong id="uts-utc" style="font-variant-numeric:tabular-nums;">—</strong>
+          </div>
+          <button type="button" class="btn" data-copy="uts-utc" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+        </div>
+
+        <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.relativeLabel">Relative</div>
+        <div id="uts-relative" style="font-size:15px;">—</div>
+      </div>
+    </div>
+
+    <!-- 패널 B: 날짜 → 타임스탬프 -->
+    <h2 style="font-size:17px;margin:34px 0 0;letter-spacing:-0.01em;" data-i18n="tool.panelB">Date → Timestamp</h2>
+
+    <label for="uts-datetime" data-i18n="tool.dtLabel">Date and time</label>
+    <input type="datetime-local" id="uts-datetime" step="1" style="width:100%;padding:12px 14px;font-size:16px;font-family:inherit;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);">
+
+    <label for="uts-basis" data-i18n="tool.basisLabel">Read this time as</label>
+    <select id="uts-basis">
+      <option value="local" data-i18n="tool.basisLocal">Local time</option>
+      <option value="utc" data-i18n="tool.basisUtc">UTC</option>
+    </select>
+
+    <div class="result" id="uts-b-result" aria-live="polite">
+      <p id="uts-b-hint" hidden data-i18n="tool.hintB" style="margin:0;font-size:15px;color:var(--muted);">Pick a date and time above to get its Unix timestamp.</p>
+      <p id="uts-b-error" hidden style="margin:0;font-size:15px;font-weight:600;"></p>
+
+      <div id="uts-b-out">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.unitS">Seconds (10 digits)</div>
+            <strong id="uts-out-s" style="font-variant-numeric:tabular-nums;">—</strong>
+          </div>
+          <button type="button" class="btn" data-copy="uts-out-s" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.unitMs">Milliseconds (13 digits)</div>
+            <strong id="uts-out-ms" style="font-variant-numeric:tabular-nums;">—</strong>
+          </div>
+          <button type="button" class="btn" data-copy="uts-out-ms" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.unitUs">Microseconds (16 digits)</div>
+            <strong id="uts-out-us" style="font-variant-numeric:tabular-nums;">—</strong>
+          </div>
+          <button type="button" class="btn" data-copy="uts-out-us" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+        </div>
+
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:12px;">
+          <div style="min-width:0;">
+            <div style="font-size:13px;font-weight:600;color:var(--muted);" data-i18n="tool.unitNs">Nanoseconds (19 digits)</div>
+            <strong id="uts-out-ns" style="font-variant-numeric:tabular-nums;">—</strong>
+          </div>
+          <button type="button" class="btn" data-copy="uts-out-ns" data-i18n="tool.copy" style="margin:0;padding:9px 16px;font-size:14px;white-space:nowrap;">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <p id="uts-copy-error" hidden role="status" data-i18n="tool.copyFail" style="margin:14px 0 0;font-size:14px;font-weight:600;">Copying failed. Select the value and copy it manually.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What a Unix timestamp is, and why logs use it</h2>
+    <p>A Unix timestamp (also called epoch or POSIX time) is a single number: the count of seconds since 1970-01-01 00:00:00 UTC, the moment known as the epoch. Because it is one plain integer, it is trivial to store, sort, and subtract — which is why databases, log files, JWT tokens, and API responses record time this way instead of as a written-out date. The catch is that the same instant can appear in different units and always without a time zone, so reading one correctly takes a couple of rules. This converter handles both directions: a number to a readable date, and a date back to a number.</p>
+
+    <h2>Seconds, milliseconds, or microseconds?</h2>
+    <p>The unit is usually clear from the digit count for any timestamp in the current era. Panel A counts the digits, tells you which unit it detected, and lets you override the guess:</p>
+    <table>
+      <thead><tr><th>Digits</th><th>Unit</th><th>Example</th><th>Common source</th></tr></thead>
+      <tbody>
+        <tr><td>10</td><td>Seconds</td><td>1700000000</td><td>Python <code>time()</code>, PHP <code>time()</code>, <code>date +%s</code></td></tr>
+        <tr><td>13</td><td>Milliseconds</td><td>1700000000000</td><td>JavaScript <code>Date.now()</code>, Java <code>currentTimeMillis()</code></td></tr>
+        <tr><td>16</td><td>Microseconds</td><td>1700000000000000</td><td>PostgreSQL, Python <code>time_ns()</code> &divide; 1000</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example">
+      <p><strong>Example 1 — a number to a date.</strong> The 10-digit value <strong>1700000000</strong> is detected as seconds and converts to <strong>2023-11-14 22:13:20 UTC</strong>. It also shows your own local time beside the UTC reading and a relative phrase such as "N years ago."</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — the 1000&times; trap.</strong> The 13-digit value <strong>1700000000000</strong> is the exact same instant, but in milliseconds. Feed it to code that expects seconds and you get a date roughly in the year 55,891 — the classic off-by-1000 bug. The digit count is what saves you here.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a date to a number.</strong> In Panel B, pick 2024-01-01 00:00:00 and read it as UTC. The result is <strong>1704067200</strong> seconds (and <strong>1704067200000</strong> milliseconds). Switch the basis to "Local time" and the number shifts by your UTC offset.</p>
+    </div>
+
+    <h2>A timestamp carries no time zone</h2>
+    <p>The number counts from the UTC epoch, so it means the same instant everywhere on Earth; a time zone only appears when you display it. That is why 1700000000 reads as 22:13 in London and 07:13 the next morning in Tokyo, yet it is one moment. If a converted date looks a few hours off, the number is almost certainly right and you are comparing a UTC reading against a local one.</p>
+
+    <h2>Common mistakes and limits</h2>
+    <ul>
+      <li><strong>Seconds vs. milliseconds:</strong> the single most common error. Check the digit count before trusting a date, and use the Unit selector if your data is unusual.</li>
+      <li><strong>Reading local as UTC:</strong> when converting a date back to a timestamp, set the "Read this time as" basis to match how the value was originally recorded.</li>
+      <li><strong>Leap seconds:</strong> POSIX time deliberately ignores them, so it is a smooth count and not a perfect astronomical clock.</li>
+      <li><strong>The year 2038:</strong> systems that store the value in a signed 32-bit integer overflow at 03:14:07 UTC on 19 January 2038. This tool is not affected — the browser holds the value as a 64-bit number and flags anything genuinely out of range instead of showing a wrong date.</li>
+    </ul>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc3339" target="_blank" rel="noopener">RFC 3339 — the internet date and time format used for timestamps</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" rel="noopener">MDN Web Docs — JavaScript Date, epoch milliseconds and parsing rules</a></li>
+      <li><a href="https://www.nist.gov/pml/time-and-frequency-division" target="_blank" rel="noopener">NIST Time and Frequency Division — UTC, leap seconds and official time</a></li>
+      <li><a href="https://www.iso.org/iso-8601-date-and-time-format.html" target="_blank" rel="noopener">ISO 8601 — international standard for representing dates and times</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/url-encoder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/url-parser/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">URL Parser</span></a><a class="related-item" href="https://tool-hub.me/utm-builder/"><span class="related-ico" aria-hidden="true">🔗</span><span class="related-name">Bulk UTM Builder</span></a><a class="related-item" href="https://tool-hub.me/uuid-gen/"><span class="related-ico" aria-hidden="true">🆔</span><span class="related-name">UUID Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details><summary data-i18n="faq.q1">What is a Unix timestamp?</summary><p data-i18n="faq.a1">A Unix timestamp (also called epoch time or POSIX time) is simply the number of seconds that have passed since 1970-01-01 00:00:00 UTC, the moment known as the epoch. Because it is one plain number, it is easy to store, sort and subtract, which is why logs, databases and API responses use it instead of a written-out date. The number 1720512345, for example, is roughly 54 years' worth of seconds after the epoch. Times before 1970 are written as negative numbers, and this Unix timestamp converter handles those too.</p></details>
+    <details><summary data-i18n="faq.q2">What is the difference between a 10-digit and a 13-digit timestamp?</summary><p data-i18n="faq.a2">A 10-digit timestamp counts seconds; a 13-digit one counts milliseconds and is exactly 1000 times bigger. That is why the same instant is 1720512345 in Python or PHP but 1720512345678 in JavaScript's Date.now() or Java's System.currentTimeMillis(). A 16-digit number is usually microseconds, common in Postgres and Python's time_ns()/1000. The quick rule: 10 digits = seconds, 13 = milliseconds, 16 = microseconds. This epoch converter counts the digits for you, shows which unit it detected, and lets you override the guess with the Unit selector if your data is unusual.</p></details>
+    <details><summary data-i18n="faq.q3">Does a Unix timestamp contain a time zone?</summary><p data-i18n="faq.a3">No. A timestamp is a single moment counted from the UTC epoch, so it carries no time zone at all — the same number means the same instant everywhere on Earth. A time zone only appears when you display it: 1720512345 is 09:25 in Seoul and 00:25 in London on the same day. That is why this converter always shows your local time and UTC side by side. If a converted date looks a few hours off, the timestamp is not wrong; you are most likely comparing a UTC reading with a local one.</p></details>
+    <details><summary data-i18n="faq.q4">What is the year 2038 problem, and does it limit this converter?</summary><p data-i18n="faq.a4">Systems that store Unix time in a signed 32-bit integer run out of room at 03:14:07 UTC on 19 January 2038 (timestamp 2147483647), and the counter can wrap around to 1901 — the reason it is called the Y2K38 problem. It affects old C programs and embedded devices, not this tool: your browser keeps the value as a 64-bit floating point number, so this converter works from about 275,760 BC to AD 275,760 (±8.64e15 milliseconds). Anything beyond that range gets an explicit out-of-range message rather than a wrong date.</p></details>
+    <details><summary data-i18n="faq.q5">Is the timestamp I paste sent to a server?</summary><p data-i18n="faq.a5">No. Every conversion runs inside your browser with the built-in Date and Intl features — there is no API call, no analytics on your input, and nothing is uploaded or logged. The page also stores nothing about your conversions: the timestamp and unit you choose live only in the open tab and disappear when you close it. That means production log data or customer timestamps are safe to paste here, and the converter keeps working offline once the page has loaded.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

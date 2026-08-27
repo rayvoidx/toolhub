@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-aKYdpg0eR1lOLGdRINxrSH8m5/eWHJEJABVHjcTMwUg=' 'sha256-gt5deCyKEz3RC5aeOTSKt9UgnwvFP90iKsq7mmqjZ3s=' 'sha256-3g0P+uIi1GAmXtu1rLiOFrVGSzhBOMiobmc7tRTItuw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>소수 판별기 — 소수 여부 + 소인수분해</title>
+<meta name="description" content="무료 온라인 소수 판별기이자 소인수분해 도구입니다. 정수를 입력하면 소수인지 합성수인지 즉시 판별하고, 지수 표기의 완전한 소인수분해(예: 360 = 2³ × 3² × 5)와 함께 약수 개수·약수 합까지 보여줍니다. BigInt로 아주 큰 수도 처리하며 모든 계산이 브라우저 안에서 이루어집니다 — 광고 없음, 가입 없음.">
+<meta name="keywords" content="prime number checker, 소수 판별기, prime factorization calculator, 소인수분해, is this number prime, prime checker, 소수 확인, prime factors">
+<link rel="canonical" href="https://tool-hub.me/prime-checker/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/prime-checker/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/prime-checker/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/prime-checker/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/prime-checker/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/prime-checker/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/prime-checker/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/prime-checker/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/prime-checker/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/prime-checker/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/prime-checker/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/prime-checker/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/prime-checker/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/prime-checker/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/prime-checker/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/prime-checker/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="소수 판별기 — 소수 여부 + 소인수분해">
+<meta property="og:description" content="무료 온라인 소수 판별기이자 소인수분해 도구입니다. 정수를 입력하면 소수인지 합성수인지 즉시 판별하고, 지수 표기의 완전한 소인수분해(예: 360 = 2³ × 3² × 5)와 함께 약수 개수·약수 합까지 보여줍니다. BigInt로 아주 큰 수도 처리하며 모든 계산이 브라우저 안에서 이루어집니다 — 광고 없음, 가입 없음.">
+<meta property="og:url" content="https://tool-hub.me/prime-checker/ko/">
+<meta property="og:image" content="https://tool-hub.me/prime-checker/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Prime Number Checker",
+  "description": "Free online prime number checker and factorization tool. Enter any whole number to instantly see whether it's prime or composite, plus its full prime factorization in exponent form (e.g. 360 = 2³ × 3² × 5) with divisor count and sum. Handles very large numbers via BigInt and runs entirely in your browser — no ads, no sign-up.",
+  "url": "https://tool-hub.me/prime-checker/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-18",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Prime Number Checker",
+      "item": "https://tool-hub.me/prime-checker/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I know if a number is prime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A prime number is a whole number greater than 1 whose only divisors are 1 and itself — 7 is prime, but 9 = 3 × 3 is not. This prime number checker first tries dividing by small primes, then runs a Miller–Rabin primality test, so it decides in a split second even for large numbers. Just type a number and it tells you \"Prime\" or \"Not prime\" instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is prime factorization and how do I read exponent form?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Prime factorization breaks a number into the prime numbers that multiply to make it. This prime factorization calculator writes repeated factors as exponents: 360 = 2³ × 3² × 5 means 2 × 2 × 2 × 3 × 3 × 5. The small raised number (the exponent) is how many times that prime appears, so 2³ is \"three twos multiplied together.\""
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How large a number can it check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The tool uses JavaScript BigInt, so it isn't limited to ordinary integers. Below roughly 3.3 × 10²⁴ the Miller–Rabin test is deterministic — the answer is exact. Above that it switches to a strong probabilistic test and labels the result \"probable prime.\" Factorization of huge numbers with two large prime factors can be slow; if it hits the time limit it tells you rather than freezing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are 0 and 1 prime? Is 2 prime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — 0 and 1 are not prime, because a prime must be greater than 1 and have exactly two divisors. 1 has only one divisor (itself), and 0 is divisible by everything. 2 is the smallest prime and the only even prime; every other even number is divisible by 2. This checker handles all of these edge cases explicitly instead of erroring out."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my number sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation — the primality test and the prime factorization — runs entirely in your browser with local JavaScript. Nothing you type is uploaded, logged or stored on a server, and there are no ads or sign-up. Your last input is saved only in your own browser (localStorage) so it's still there when you come back."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Prime Number Checker</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0891b2" href="https://tool-hub.me/business-tools/">Business</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Prime Number Checker</span></nav>
+  <section class="hero">
+    <h1>Prime Number Checker</h1>
+    <p class="lede" data-i18n="hero.lede">Enter a whole number — find out instantly if it's prime, and see its prime factorization.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool">
+    <label for="pc-input" data-i18n="tool.inputLabel">Enter a whole number</label>
+    <input type="text" id="pc-input" inputmode="numeric" autocomplete="off" spellcheck="false"
+      dir="ltr" enterkeyhint="done"
+      placeholder="e.g. 360" data-i18n-placeholder="tool.inputPlaceholder"
+      style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:18px;letter-spacing:.02em;">
+
+    <div class="result" id="pc-result" aria-live="polite">
+      <!-- 판정 배지 -->
+      <div id="pc-verdict" style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;">
+        <span id="pc-badge"
+          style="display:inline-block;padding:.35rem .9rem;border-radius:999px;font-weight:800;font-size:1.05rem;line-height:1.3;background:color-mix(in srgb, var(--accent) 14%, var(--surface));color:var(--accent-strong);border:1px solid color-mix(in srgb, var(--accent) 30%, var(--line));">—</span>
+        <span id="pc-subject" style="font-weight:600;color:var(--muted);font-size:.95rem;"></span>
+      </div>
+      <!-- 힌트 / 오류 문구 (빈 입력·잘못된 입력) -->
+      <p id="pc-hint" style="margin:.7rem 0 0;color:var(--muted);" data-i18n="tool.hint">Type a whole number above — you'll instantly see if it's prime and its prime factorization.</p>
+
+      <!-- 상세 카드 (유효한 n≥2 에서만 표시) -->
+      <div id="pc-detail" hidden style="margin-top:.9rem;">
+        <!-- 소인수분해 -->
+        <div style="border-top:1px solid var(--line);padding-top:.8rem;">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.4rem;">
+            <span style="font-weight:700;font-size:.9rem;color:var(--muted);" data-i18n="tool.factorTitle">Prime factorization</span>
+            <button type="button" class="pc-copy" id="pc-copy-factor" data-i18n="tool.copy"
+              style="padding:.22rem .7rem;font-size:.8rem;font-weight:600;border:1px solid var(--line);border-radius:.5rem;background:var(--surface);color:var(--accent);cursor:pointer;font-family:inherit;">Copy</button>
+          </div>
+          <code id="pc-factor" style="display:block;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:1.05rem;word-break:break-all;color:var(--ink);line-height:1.6;">—</code>
+          <p id="pc-factor-note" hidden style="margin:.5rem 0 0;font-weight:600;color:#b45309;font-size:.88rem;"></p>
+        </div>
+        <!-- 부가 정보: 약수 개수·약수 합 -->
+        <div id="pc-extra" style="display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem;">
+          <div style="flex:1;min-width:9rem;border:1px solid var(--line);border-radius:.6rem;padding:.55rem .7rem;background:var(--bg);">
+            <div style="font-size:.78rem;color:var(--muted);font-weight:600;" data-i18n="tool.divisorCount">Number of divisors</div>
+            <div id="pc-divcount" style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:1rem;word-break:break-all;">—</div>
+          </div>
+          <div style="flex:1;min-width:9rem;border:1px solid var(--line);border-radius:.6rem;padding:.55rem .7rem;background:var(--bg);">
+            <div style="font-size:.78rem;color:var(--muted);font-weight:600;" data-i18n="tool.divisorSum">Sum of divisors</div>
+            <div id="pc-divsum" style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:1rem;word-break:break-all;">—</div>
+          </div>
+          <div style="flex:1;min-width:9rem;border:1px solid var(--line);border-radius:.6rem;padding:.55rem .7rem;background:var(--bg);">
+            <div style="font-size:.78rem;color:var(--muted);font-weight:600;" data-i18n="tool.nearestPrimes">Previous / next prime</div>
+            <div id="pc-nearest" style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-weight:700;font-size:1rem;word-break:break-all;">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 순간 피드백(복사 등) -->
+      <p id="pc-feedback" aria-live="polite" hidden style="margin:.55rem 0 0;font-weight:600;color:var(--accent);"></p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English enrichment (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How the prime checker and factorizer work</h2>
+    <p>A prime number is a whole number greater than 1 with exactly two divisors: 1 and itself. Every other whole number above 1 is composite, meaning it can be built by multiplying smaller primes together. That single idea underlies cryptography, hashing, and much of number theory, which is why quickly deciding whether a number is prime — and, if not, what it factors into — is such a common task.</p>
+    <p>Testing small numbers is easy: to check whether n is prime you only need to try dividing by values up to the square root of n, because any factor larger than √n pairs with one smaller than it. For large numbers trial division becomes far too slow, so this tool switches to the Miller–Rabin primality test, which decides primality without finding factors. Below about 3.3 × 10²⁴ it uses a fixed set of witnesses and is deterministic; above that it becomes a strong probabilistic test and labels the answer a "probable prime."</p>
+
+    <h3>Reading a factorization</h3>
+    <p>Prime factorization rewrites a number as a product of primes, collapsing repeats into exponents. In 2³ × 3² × 5 the small raised digit is the exponent — how many times that prime is multiplied in. Once you have the factorization you can read off two useful quantities with no extra work:</p>
+    <ul>
+      <li><strong>Number of divisors:</strong> add 1 to each exponent, then multiply the results.</li>
+      <li><strong>Sum of divisors:</strong> for each prime, add up 1 + p + p² + … to its exponent, then multiply those totals.</li>
+    </ul>
+
+    <div class="example">
+      <strong>Example 1 — 360.</strong> The factorization is 2³ × 3² × 5. The number of divisors is (3+1)(2+1)(1+1) = 24, and the sum of divisors is (1+2+4+8)(1+3+9)(1+5) = 15 × 13 × 6 = 1170.
+    </div>
+    <div class="example">
+      <strong>Example 2 — 97.</strong> The square root of 97 is about 9.85, so it is enough to test the primes 2, 3, 5, and 7. None divides 97 evenly, so 97 is prime — no larger divisor needs checking.
+    </div>
+    <div class="example">
+      <strong>Example 3 — 561.</strong> This looks prime to some quick tests but is not: 561 = 3 × 11 × 17. It is a Carmichael number, a composite that fools the simple Fermat test — exactly why the tool relies on the stronger Miller–Rabin test to catch it.
+    </div>
+
+    <h3>Edge cases the tool handles</h3>
+    <table>
+      <thead><tr><th>Input</th><th>Result</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>0</td><td>Not prime</td><td>Divisible by every number; not greater than 1</td></tr>
+        <tr><td>1</td><td>Not prime</td><td>Has only one divisor, itself</td></tr>
+        <tr><td>2</td><td>Prime</td><td>The smallest prime and the only even one</td></tr>
+        <tr><td>−7</td><td>Rejected</td><td>Primality is defined for positive integers</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Practical notes and limits</h3>
+    <p>Because the engine uses arbitrary-precision BigInt arithmetic, you are not restricted to ordinary integer sizes — you can paste numbers with dozens of digits. The limiting step is factorization, not the primality test: a large number that is the product of two big primes can be genuinely slow to factor, and if the search passes its time budget the tool tells you instead of freezing. Note too that "probable prime" for very large inputs means the chance of error is astronomically small but not mathematically zero. For everyday use — checking a number, teaching factorization, or verifying a result — the deterministic range covers far more than you are likely to need.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/publications" target="_blank" rel="noopener">NIST — publications on cryptographic standards and primality testing requirements</a></li>
+      <li><a href="https://www.khanacademy.org/computing/computer-science/cryptography" target="_blank" rel="noopener">Khan Academy — introduction to primes, factorization and modular arithmetic</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt" target="_blank" rel="noopener">MDN Web Docs — BigInt arbitrary-precision integers used by this tool</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/pythagorean-calc/"><span class="related-ico" aria-hidden="true">📐</span><span class="related-name">Pythagorean Theorem Calculator</span></a><a class="related-item" href="https://tool-hub.me/qr-gen/"><span class="related-ico" aria-hidden="true">▦</span><span class="related-name">QR Code Generator</span></a><a class="related-item" href="https://tool-hub.me/quadratic-solver/"><span class="related-ico" aria-hidden="true">✖️</span><span class="related-name">Quadratic Equation Solver</span></a><a class="related-item" href="https://tool-hub.me/ratio-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">Ratio Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I know if a number is prime?</summary>
+      <p data-i18n="faq.a1">A prime number is a whole number greater than 1 whose only divisors are 1 and itself — 7 is prime, but 9 = 3 × 3 is not. This prime number checker first tries dividing by small primes, then runs a Miller–Rabin primality test, so it decides in a split second even for large numbers. Just type a number and it tells you "Prime" or "Not prime" instantly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What is prime factorization and how do I read exponent form?</summary>
+      <p data-i18n="faq.a2">Prime factorization breaks a number into the prime numbers that multiply to make it. This prime factorization calculator writes repeated factors as exponents: 360 = 2³ × 3² × 5 means 2 × 2 × 2 × 3 × 3 × 5. The small raised number (the exponent) is how many times that prime appears, so 2³ is "three twos multiplied together."</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How large a number can it check?</summary>
+      <p data-i18n="faq.a3">The tool uses JavaScript BigInt, so it isn't limited to ordinary integers. Below roughly 3.3 × 10²⁴ the Miller–Rabin test is deterministic — the answer is exact. Above that it switches to a strong probabilistic test and labels the result "probable prime." Factorization of huge numbers with two large prime factors can be slow; if it hits the time limit it tells you rather than freezing.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Are 0 and 1 prime? Is 2 prime?</summary>
+      <p data-i18n="faq.a4">No — 0 and 1 are not prime, because a prime must be greater than 1 and have exactly two divisors. 1 has only one divisor (itself), and 0 is divisible by everything. 2 is the smallest prime and the only even prime; every other even number is divisible by 2. This checker handles all of these edge cases explicitly instead of erroring out.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my number sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation — the primality test and the prime factorization — runs entirely in your browser with local JavaScript. Nothing you type is uploaded, logged or stored on a server, and there are no ads or sign-up. Your last input is saved only in your own browser (localStorage) so it's still there when you come back.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

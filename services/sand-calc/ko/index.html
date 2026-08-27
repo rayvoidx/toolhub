@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-cH1AgG3bm8n038TL2TUE7l85rRTCcw7Fk59/7q2KkS0=' 'sha256-dPsqTQZ1cjLSwGKJFVk/9NtfGWJLhk+hs6CQs9otbow=' 'sha256-xPpmOph/FVcA8KuU1WjnEaaxql8GatzCGAyee0sxDS4='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>모래 계산기 — 부피·무게·포대 수 계산</title>
+<meta name="description" content="보도블록 기초, 모래놀이터, 평탄화 작업에 필요한 모래 양을 계산합니다. 가로·세로·깊이를 넣으면 세제곱야드, 톤, 50파운드 포대 수가 나옵니다.">
+<meta name="keywords" content="sand calculator, how much sand do i need, paver sand calculator, cubic yards of sand, play sand calculator, sand bags calculator">
+<link rel="canonical" href="https://tool-hub.me/sand-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/sand-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/sand-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/sand-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/sand-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/sand-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/sand-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/sand-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/sand-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/sand-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/sand-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/sand-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/sand-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/sand-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/sand-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/sand-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="모래 계산기 — 부피·무게·포대 수 계산">
+<meta property="og:description" content="보도블록 기초, 모래놀이터, 평탄화 작업에 필요한 모래 양을 계산합니다. 가로·세로·깊이를 넣으면 세제곱야드, 톤, 50파운드 포대 수가 나옵니다.">
+<meta property="og:url" content="https://tool-hub.me/sand-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/sand-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ca8a04">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sand Calculator",
+  "description": "Work out how much sand you need for a paver base, sandbox or levelling job. Enter length, width and depth to get cubic yards, tons and 50 lb bag counts.",
+  "url": "https://tool-hub.me/sand-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sand Calculator",
+      "item": "https://tool-hub.me/sand-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How deep should paver base sand be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One inch, screeded flat and left uncompacted before the pavers go down. Bedding sand seats the stones; it is not there to build height, so a thicker layer keeps settling under traffic and leaves ruts. If the patio needs to come up higher, add compacted crushed stone underneath and keep the sand at 1 in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Polymeric sand or regular joint sand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Polymeric sand carries a binder that sets hard once watered in, so joints resist weeds, ants and washout — the right pick for patios and driveways. Plain masonry sand is far cheaper and stays loose, which suits informal paths and flexible joints. Polymeric comes in 50 lb bags with a coverage figure on the label, so buy it by joint length rather than by the cubic yard."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is play sand safe for a sandbox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use sand labelled washed and screened play sand: it is graded for fineness and rinsed of silt. Keep masonry and construction sand out of sandboxes — it is coarser, dustier and can carry crystalline silica fines. A 4 ft by 4 ft box filled 6 in deep takes 8 ft³, which is about fifteen 50 lb bags of play sand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is bulk sand cheaper than bags?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Roughly at one cubic yard. A cubic yard of masonry sand weighs about 2,700 lb, which is 54 fifty-pound bags, and bagged sand typically costs several times the bulk rate at that volume. Under half a yard, bags win on convenience and no delivery fee; over a yard, order bulk by the ton and have somewhere to tip it."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Sand Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Sand Calculator</span></nav>
+  <section class="hero">
+    <h1>Sand Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Length, width and depth in — cubic yards, tons and bag count out.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+      #tool .unit-suffix { color:var(--muted); font-weight:400; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard .rc-sub { font-size:12px; color:var(--muted); margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .notes { margin-top:12px; }
+      #tool .notes p { font-size:13px; color:var(--muted); margin:6px 0; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:520px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+    <select id="unit">
+      <option value="ft" data-i18n="tool.unit.ft">Feet and inches</option>
+      <option value="m" data-i18n="tool.unit.m">Meters and centimeters</option>
+    </select>
+
+    <label for="preset" data-i18n="tool.preset.label">What is the sand for?</label>
+    <select id="preset">
+      <option value="paver" data-i18n="tool.preset.paver">Paver base / bedding sand — 1 in</option>
+      <option value="level" data-i18n="tool.preset.level">Levelling a lawn or pool base — 1 in</option>
+      <option value="sandbox" data-i18n="tool.preset.sandbox">Sandbox fill — 6 in</option>
+      <option value="custom" data-i18n="tool.preset.custom">Custom depth</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="len"><span data-i18n="tool.len.label">Length</span> <span class="unit-suffix" id="u-len">(ft)</span></label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+      <div>
+        <label for="wid"><span data-i18n="tool.wid.label">Width</span> <span class="unit-suffix" id="u-wid">(ft)</span></label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+      </div>
+      <div>
+        <label for="depth"><span data-i18n="tool.depth.label">Depth</span> <span class="unit-suffix" id="u-depth">(in)</span></label>
+        <input type="number" id="depth" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1">
+      </div>
+    </div>
+
+    <label for="stype" data-i18n="tool.type.label">Sand type</label>
+    <select id="stype">
+      <option value="masonry" data-i18n="tool.type.masonry">Masonry / concrete sand — 2,700 lb per yd³</option>
+      <option value="play" data-i18n="tool.type.play">Play sand — 2,400 lb per yd³</option>
+      <option value="poly" data-i18n="tool.type.poly">Polymeric joint sand — sold by the bag</option>
+      <option value="custom" data-i18n="tool.type.custom">Custom — enter weight per cubic yard</option>
+    </select>
+
+    <div id="dens-wrap" hidden>
+      <label for="dens" data-i18n="tool.dens.label">Weight per cubic yard (lb)</label>
+      <input type="number" id="dens" inputmode="decimal" min="500" max="4000" step="any" autocomplete="off" placeholder="2700">
+    </div>
+
+    <label for="bagsize" data-i18n="tool.bag.label">Bag size</label>
+    <select id="bagsize">
+      <option value="50" data-i18n="tool.r.bags">50 lb bags (22.7 kg)</option>
+      <option value="100" data-i18n="tool.bag.b100">100 lb bags (45.4 kg)</option>
+      <option value="55.1156" data-i18n="tool.bag.b25">25 kg bags (55 lb)</option>
+      <option value="44.0925" data-i18n="tool.bag.b20">20 kg bags (44 lb)</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate sand</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.volume">Sand needed (cubic yards)</div>
+          <div class="rc-val" id="r-vol">—</div>
+          <div class="rc-sub" id="r-vol-sub"></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.weight">Weight (US short tons)</div>
+          <div class="rc-val" id="r-tons">—</div>
+          <div class="rc-sub" id="r-kg"></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" id="r-bags-label" data-i18n="tool.r.bags">50 lb bags (22.7 kg)</div>
+          <div class="rc-val" id="r-bags">—</div>
+          <div class="rc-sub" id="r-bags-sub"></div>
+        </div>
+        <div class="rcard">
+          <div class="rc-label" data-i18n="tool.r.area">Area covered</div>
+          <div class="rc-val" id="r-area">—</div>
+          <div class="rc-sub" id="r-area-sub"></div>
+        </div>
+      </div>
+      <div class="notes" id="notes"></div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.order" style="margin-top:12px;">Order about 10% extra for compaction and spillage. Above roughly one cubic yard — 54 fifty-pound bags — bulk sand by the ton is usually cheaper than bagged.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much sand do I need?</h2>
+    <p>Every sand estimate is the same four steps. Multiply length by width to get the area, multiply by the depth in feet to get cubic feet, divide by 27 for cubic yards, then multiply by the weight of a yard of that sand to get pounds. Masonry and concrete sand runs about 2,700 lb per cubic yard; washed play sand is lighter at roughly 2,400 lb. Divide the pounds by 2,000 for US short tons or by 50 for the number of standard bags. The calculator above does all of it, but the arithmetic is worth knowing because the supplier will quote you in a unit you did not ask for.</p>
+    <p>The single number people get wrong is depth. A patio that sounds like it needs a deep bed of sand almost never does — depth belongs in the crushed stone base underneath, not in the sand. Get the depth right and everything downstream is just multiplication.</p>
+
+    <h3>Worked example: a 12 ft x 10 ft paver patio</h3>
+    <p>The area is 120 sq ft. Bedding sand goes down 1 in, which is 1/12 ft, so the volume is 120 x 0.0833 = 10 cubic feet. Divide by 27 and you get 0.37 cubic yards. At 2,700 lb per yard that is about 1,000 lb, or 0.5 US tons, or 20 bags of 50 lb. Add the usual 10% for spillage and screeding losses and you are buying 22 bags, or half a cubic yard delivered loose if the supplier will drop that small a load.</p>
+    <p>Note what is not in that number: the compacted crushed stone base beneath it. A pedestrian patio typically wants 4 in of compacted base, a driveway 8 to 12 in. That material is bought separately by the ton, and it is where the structural depth lives.</p>
+
+    <h3>Screeding: why 1 in and not more</h3>
+    <p>Bedding sand is a levelling course, not a foundation. The standard method is to lay two lengths of 1 in outside-diameter pipe or electrical conduit on the compacted base, fill between them with sand, and pull a straight board across the pipes to strike the sand flat. Then lift the pipes, fill the grooves by hand, and start laying pavers without ever walking on or compacting the screeded bed. The plate compactor comes out only after the pavers are down and joint sand is swept in — that pass beds the stones into the sand and locks the surface.</p>
+    <p>Go deeper than about an inch and the layer behaves like a cushion. It keeps consolidating under wheel and foot loads for months, and the surface develops dips and ruts that cannot be fixed without lifting the pavers. If your levels are short, add compacted stone, not sand.</p>
+
+    <h3>Joint sand: the add-on nobody budgets for</h3>
+    <p>Bedding sand and joint sand are separate purchases. Once the pavers are laid, the joints are swept full — with plain masonry sand for informal work, or polymeric sand where you want weed and ant resistance. Polymeric is sold by coverage, not volume: a 50 lb bag typically covers 75 to 100 sq ft with narrow 1/8 in joints and only 30 to 40 sq ft where joints are wide or the pavers are thick. For the 120 sq ft patio above that is roughly two bags with tight joints, three to four with wide ones. Buy one spare bag; running out mid-job leaves half the joints unbound and you cannot water in a partial application twice.</p>
+
+    <h3>Sandbox example: a 4 ft x 4 ft box</h3>
+    <p>Sixteen square feet filled 6 in deep is 16 x 0.5 = 8 cubic feet, or 0.30 cubic yards. Play sand at 2,400 lb per yard gives about 711 lb, which rounds up to 15 bags of 50 lb. Kids who like digging appreciate 8 in of depth, which pushes it to about 20 bags. Choose sand labelled washed and screened; construction sand is dustier and coarser than what belongs in a box children sit in.</p>
+
+    <h3>Levelling a lawn or a pool base</h3>
+    <p>Top-dressing 500 sq ft of lawn with 1 in of sand takes 41.7 cubic feet, or 1.54 cubic yards — about 4,170 lb, 2.08 tons, or 84 bags. That is the point where bagging stops making sense. Above roughly one cubic yard, order bulk by the ton and have a tarp and a wheelbarrow ready; below half a yard, bags are easier and there is no delivery charge to amortise.</p>
+
+    <h2>Limits of this estimate</h2>
+    <p>Bulk density is the soft spot. Damp sand can weigh 15 to 20% more per yard than the dry figures used here, so a load billed by weight may deliver less volume than you expected. Sand also consolidates: a loose screeded bed loses a little thickness once compacted, and an uneven subgrade quietly swallows extra material in the low spots. Treat the result as a purchase quantity, not a physics answer, keep the 10% margin, and confirm your supplier's yard weight before ordering by the ton — quoted values in the trade range from 2,400 to 3,000 lb per cubic yard depending on the pit and the moisture.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.usgs.gov/centers/national-minerals-information-center" target="_blank" rel="noopener">USGS National Minerals Information Center — construction sand and gravel production, densities and supply data</a></li>
+      <li><a href="https://www.osha.gov/silica" target="_blank" rel="noopener">OSHA Crystalline Silica — handling and dust exposure rules for construction sand</a></li>
+      <li><a href="https://www.cdc.gov/niosh/" target="_blank" rel="noopener">CDC / NIOSH — respirable silica dust health guidance for sand work</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — volume and weight unit conversion standards</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/shingle-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Shingle Calculator</span></a><a class="related-item" href="https://tool-hub.me/siding-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Siding Calculator</span></a><a class="related-item" href="https://tool-hub.me/sleep-cycle-calc/"><span class="related-ico" aria-hidden="true">😴</span><span class="related-name">Sleep Cycle Calculator</span></a><a class="related-item" href="https://tool-hub.me/smoking-cost-calc/"><span class="related-ico" aria-hidden="true">🚭</span><span class="related-name">Smoking Cost Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How deep should paver base sand be?</summary><p data-i18n="faq.a1">One inch, screeded flat and left uncompacted before the pavers go down. Bedding sand seats the stones; it is not there to build height, so a thicker layer keeps settling under traffic and leaves ruts. If the patio needs to come up higher, add compacted crushed stone underneath and keep the sand at 1 in.</p></details>
+    <details><summary data-i18n="faq.q2">Polymeric sand or regular joint sand?</summary><p data-i18n="faq.a2">Polymeric sand carries a binder that sets hard once watered in, so joints resist weeds, ants and washout — the right pick for patios and driveways. Plain masonry sand is far cheaper and stays loose, which suits informal paths and flexible joints. Polymeric comes in 50 lb bags with a coverage figure on the label, so buy it by joint length rather than by the cubic yard.</p></details>
+    <details><summary data-i18n="faq.q3">Is play sand safe for a sandbox?</summary><p data-i18n="faq.a3">Use sand labelled washed and screened play sand: it is graded for fineness and rinsed of silt. Keep masonry and construction sand out of sandboxes — it is coarser, dustier and can carry crystalline silica fines. A 4 ft by 4 ft box filled 6 in deep takes 8 ft³, which is about fifteen 50 lb bags of play sand.</p></details>
+    <details><summary data-i18n="faq.q4">When is bulk sand cheaper than bags?</summary><p data-i18n="faq.a4">Roughly at one cubic yard. A cubic yard of masonry sand weighs about 2,700 lb, which is 54 fifty-pound bags, and bagged sand typically costs several times the bulk rate at that volume. Under half a yard, bags win on convenience and no delivery fee; over a yard, order bulk by the ton and have somewhere to tip it.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-84P27dBK3XtrqK7TdnUsRAvMH1RBEV0u+L1wFqTZzik=' 'sha256-FbFNzcdj7sUfXJbWSubhrgM/2hatRMA1L4iIRXp7CkI=' 'sha256-iwKLJVNfnzlGrbVNeaU3kY00E6w3hCfnE+Wr7K3qMwM='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>출석률 계산기 — 몇 번까지 결석할 수 있나</title>
+<meta name="description" content="출석률을 계산하고 75% 기준 충족 여부를 확인하세요. 앞으로 몇 번 더 결석할 수 있는지, 회복하려면 몇 번 연속 출석해야 하는지 알려줍니다.">
+<meta name="keywords" content="attendance calculator, attendance percentage calculator, 75 percent attendance, how many classes can i miss, class attendance tracker, college attendance calculator">
+<link rel="canonical" href="https://tool-hub.me/attendance-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/attendance-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/attendance-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/attendance-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/attendance-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/attendance-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/attendance-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/attendance-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/attendance-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/attendance-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/attendance-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/attendance-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/attendance-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/attendance-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/attendance-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/attendance-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="출석률 계산기 — 몇 번까지 결석할 수 있나">
+<meta property="og:description" content="출석률을 계산하고 75% 기준 충족 여부를 확인하세요. 앞으로 몇 번 더 결석할 수 있는지, 회복하려면 몇 번 연속 출석해야 하는지 알려줍니다.">
+<meta property="og:url" content="https://tool-hub.me/attendance-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/attendance-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Attendance Percentage Calculator",
+  "description": "Work out your attendance percentage, see whether you clear the 75% rule, and find how many classes you can still miss or must attend in a row to recover.",
+  "url": "https://tool-hub.me/attendance-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Attendance Percentage Calculator",
+      "item": "https://tool-hub.me/attendance-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is 75% attendance the usual minimum?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most universities and colleges tie exam eligibility to a fixed floor, and 75% is the figure that stuck across UK, US and Commonwealth institutions. Below it you can be marked detained, barred from a final, or given a condonation only with documented medical grounds. The number is a policy threshold, not a rounding target, so 74.6% usually counts as a fail rather than a near miss."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does medical or approved leave count as attendance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends entirely on the institution. Some universities exclude documented medical absences from the denominator, some credit them as attended, and many simply allow a condonation of five to ten percent on appeal. This calculator counts every class held, so if your school excludes approved leave, subtract those sessions from the total before entering it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the number of classes I can miss change over time?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it changes after every single session. Each class you attend adds a little slack, and each one you miss removes more than it added, because the denominator grows either way. Recalculate weekly rather than trusting a figure from the start of term."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is attendance separate from internal marks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually yes, but the two often interact. Many courses award internal or continuous-assessment marks partly for attendance, so a low percentage costs you points as well as eligibility. Check whether your syllabus has an attendance component before treating the minimum as your goal."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Attendance Percentage Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0d9488" href="https://tool-hub.me/math-calculators/">Math &amp; Science</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Attendance Percentage Calculator</span></nav>
+  <section class="hero">
+    <h1>Attendance Percentage Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Your percentage, your safety margin, and exactly how many classes you can skip.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:30px; }
+      #tool .ok { color:#15803d; }
+      #tool .bad { color:#dc2626; }
+      #tool .msg { margin-top:12px; font-size:15px; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="attended" data-i18n="tool.attended.label">Classes attended</label>
+        <input type="number" id="attended" inputmode="numeric" min="0" step="1" autocomplete="off" placeholder="68">
+      </div>
+      <div>
+        <label for="total" data-i18n="tool.total.label">Total classes held</label>
+        <input type="number" id="total" inputmode="numeric" min="1" step="1" autocomplete="off" placeholder="90">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="req" data-i18n="tool.req.label">Required attendance</label>
+        <select id="req">
+          <option value="70" data-i18n="tool.req.70">70%</option>
+          <option value="75" selected data-i18n="tool.req.75">75% — common university minimum</option>
+          <option value="80" data-i18n="tool.req.80">80%</option>
+          <option value="85" data-i18n="tool.req.85">85%</option>
+          <option value="90" data-i18n="tool.req.90">90%</option>
+          <option value="custom" data-i18n="tool.req.custom">Custom percentage</option>
+        </select>
+      </div>
+      <div>
+        <label for="perweek" data-i18n="tool.week.label">Classes per week (optional)</label>
+        <input type="number" id="perweek" inputmode="numeric" min="1" step="1" autocomplete="off" placeholder="5">
+      </div>
+    </div>
+
+    <div id="reqc-wrap" hidden>
+      <label for="reqc" data-i18n="tool.reqcustom.label">Your required percentage</label>
+      <input type="number" id="reqc" inputmode="decimal" min="1" max="100" step="any" autocomplete="off" placeholder="75">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate attendance</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.current">Current attendance</div>
+          <div class="rc-val" id="r-current">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.status">Status</div><div class="rc-val" id="r-status">—</div></div>
+        <div class="rcard"><div class="rc-label" id="r-action-label">—</div><div class="rc-val" id="r-action">—</div></div>
+        <div class="rcard" id="card-weeks" hidden><div class="rc-label" data-i18n="tool.r.weeks">In weeks</div><div class="rc-val" id="r-weeks">—</div></div>
+      </div>
+      <p class="msg" id="r-msg"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.est" style="margin-top:12px;">Institutions differ on labs, tutorials and approved medical leave. Check your official record before you decide to skip anything.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How attendance percentage is actually calculated</h2>
+    <p>The percentage itself is the easy part: classes attended divided by classes held, times one hundred. What students actually search for is the second question — how many classes can I miss and still clear the 75 percent rule, or how many do I have to attend in a row to climb back over it. Those two answers come from the same inequality, solved in opposite directions, and this calculator does both at once.</p>
+    <p>The trap is that attendance is not a simple running balance. Every session that happens increases the denominator whether you turn up or not. Skipping one class does more damage than attending one class repairs, which is why a comfortable-looking figure in week four can quietly become a problem by week ten.</p>
+
+    <h3>Worked example: 68 attended out of 90 held</h3>
+    <p>Start with the raw figure: 68 / 90 = 0.7555…, so 75.56 percent. Against a 75 percent requirement you are above the line, but only just. To find the slack, ask how many more classes you could miss while the total keeps growing. If you miss m more classes, attendance becomes 68 / (90 + m), and you need that to stay at or above 0.75:</p>
+    <p><strong>68 / (90 + m) &ge; 0.75</strong> &rarr; 68 &ge; 67.5 + 0.75m &rarr; m &le; 0.667. Taking the whole number, m = 0. You can miss zero more classes. One absence puts you at 68 / 91 = 74.7 percent — below the line.</p>
+    <p>The general form of that is m = floor((100 &times; attended &minus; required &times; total) / required), which is exactly what the tool evaluates: (6800 &minus; 6750) / 75 = 0.667, floored to 0.</p>
+
+    <h3>The same numbers from below the line</h3>
+    <p>Now suppose you had attended only 60 of those 90 classes — 66.7 percent, clearly short. To recover you must attend x classes in a row, so both the numerator and the denominator grow: (60 + x) / (90 + x) &ge; 0.75. Multiply out: 60 + x &ge; 67.5 + 0.75x, so 0.25x &ge; 7.5, giving x &ge; 30. You need thirty consecutive classes with no absences to reach 75 percent.</p>
+    <p>The general form is x = ceil((required &times; total &minus; 100 &times; attended) / (100 &minus; required)). Notice the denominator: the closer the requirement sits to 100, the larger the recovery cost. At a 90 percent requirement the same shortfall would need 210 straight classes; at a 100 percent requirement the denominator becomes zero and there is no recovery at all, which is why the tool returns a message instead of a number in that case.</p>
+
+    <h3>Turning classes into weeks</h3>
+    <p>Thirty classes is an abstraction. Enter your classes per week and the tool converts it: at five sessions a week, thirty classes is about six weeks of perfect attendance. If only eight teaching weeks remain in the semester, six of them spent recovering tells you something important — the margin for one bad flu week is gone, and you should be talking to your department now, not in the last fortnight.</p>
+
+    <h2>Planning a semester around the threshold</h2>
+    <p>Front-load your attendance. Because the denominator only grows, absences taken early are cheaper to repair than absences taken late; a class missed in week two can be offset by dozens of later sessions, while one missed in the final week cannot be offset at all. Students who bank a buffer in the first month tend to end the term comfortably above the line even after illness.</p>
+    <p>Recalculate weekly rather than monthly. The can-miss number is a snapshot, not a budget: it shifts after every session, upward when you attend and downward when you do not. Treat any figure older than a week as stale.</p>
+    <p>Track each subject separately. Most institutions apply the minimum per course, not to your overall average, so a strong record in three modules will not rescue a fourth sitting at 70 percent. Run the calculation once per subject and act on the worst one.</p>
+
+    <h3>If you are already borderline</h3>
+    <p>Talk to the administration early, while you still have options. Condonation, make-up sessions, remedial classes and documented medical exemptions are almost always easier to arrange before the shortfall is final than during an appeal after results are published. Bring the numbers with you: the percentage, the shortfall, and how many consecutive sessions would fix it.</p>
+
+    <h2>Limits of this calculator</h2>
+    <p>It assumes every session counts equally and that all future classes will be held as scheduled. Real timetables include cancelled lectures, labs that count double, tutorials counted in a separate pool, and public holidays. It also assumes your institution counts approved leave in the denominator — if yours excludes documented absences, subtract those sessions from the total before entering it. The arithmetic here is exact; the policy around it is not, so treat the result as a planning figure and your official record as the authority.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.gov.uk/school-attendance-absence" target="_blank" rel="noopener">GOV.UK — official rules on school attendance, authorised absence and term-time leave</a></li>
+      <li><a href="https://www.ed.gov/" target="_blank" rel="noopener">U.S. Department of Education — federal guidance on attendance and chronic absenteeism</a></li>
+      <li><a href="https://nces.ed.gov/" target="_blank" rel="noopener">National Center for Education Statistics — published data on absenteeism and enrolment</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/cgpa-to-percentage/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">CGPA to Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/density-calc/"><span class="related-ico" aria-hidden="true">🧊</span><span class="related-name">Density Calculator</span></a><a class="related-item" href="https://tool-hub.me/dilution-calc/"><span class="related-ico" aria-hidden="true">🧪</span><span class="related-name">Dilution Calculator</span></a><a class="related-item" href="https://tool-hub.me/half-life-calc/"><span class="related-ico" aria-hidden="true">☢️</span><span class="related-name">Half-Life Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is 75% attendance the usual minimum?</summary><p data-i18n="faq.a1">Most universities and colleges tie exam eligibility to a fixed floor, and 75% is the figure that stuck across UK, US and Commonwealth institutions. Below it you can be marked detained, barred from a final, or given a condonation only with documented medical grounds. The number is a policy threshold, not a rounding target, so 74.6% usually counts as a fail rather than a near miss.</p></details>
+    <details><summary data-i18n="faq.q2">Does medical or approved leave count as attendance?</summary><p data-i18n="faq.a2">It depends entirely on the institution. Some universities exclude documented medical absences from the denominator, some credit them as attended, and many simply allow a condonation of five to ten percent on appeal. This calculator counts every class held, so if your school excludes approved leave, subtract those sessions from the total before entering it.</p></details>
+    <details><summary data-i18n="faq.q3">Does the number of classes I can miss change over time?</summary><p data-i18n="faq.a3">Yes, and it changes after every single session. Each class you attend adds a little slack, and each one you miss removes more than it added, because the denominator grows either way. Recalculate weekly rather than trusting a figure from the start of term.</p></details>
+    <details><summary data-i18n="faq.q4">Is attendance separate from internal marks?</summary><p data-i18n="faq.a4">Usually yes, but the two often interact. Many courses award internal or continuous-assessment marks partly for attendance, so a low percentage costs you points as well as eligibility. Check whether your syllabus has an attendance component before treating the minimum as your goal.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

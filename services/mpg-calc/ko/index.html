@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-lhYvEWUgxKwKmJwCHqcsfHjXbkMr/HRFnTHi1AJtGNE=' 'sha256-7QtcKbpdz0TEkXAuemSdWqeR5qCIWytTxXdBAsz0ouc=' 'sha256-dbavFL3wc2YFrZ3PIT4IvXQSZkvo6N8nQyFQ6Wn5xnc='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>연비 계산기 — MPG·L/100km 변환</title>
+<meta name="description" content="주행거리와 주유량으로 차량 연비를 계산합니다. 미국식 MPG, 영국식 MPG, L/100km, 마일당 연료비까지 한 번에 확인하세요.">
+<meta name="keywords" content="mpg calculator, miles per gallon calculator, fuel economy calculator, gas mileage, fuel cost per mile, l/100km converter">
+<link rel="canonical" href="https://tool-hub.me/mpg-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/mpg-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/mpg-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/mpg-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/mpg-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/mpg-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/mpg-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/mpg-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/mpg-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/mpg-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/mpg-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/mpg-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/mpg-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/mpg-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/mpg-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/mpg-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="연비 계산기 — MPG·L/100km 변환">
+<meta property="og:description" content="주행거리와 주유량으로 차량 연비를 계산합니다. 미국식 MPG, 영국식 MPG, L/100km, 마일당 연료비까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/mpg-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/mpg-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ea580c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "MPG Calculator",
+  "description": "Work out your car's MPG from miles driven and gallons filled. Get miles per gallon, imperial MPG, L/100 km and fuel cost per mile for any trip.",
+  "url": "https://tool-hub.me/mpg-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "MPG Calculator",
+      "item": "https://tool-hub.me/mpg-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What counts as good gas mileage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a petrol sedan, 30 to 40 MPG on the highway and 25 to 32 combined is solid. A mid-size SUV lands around 22 to 28 combined, and a full-size pickup nearer 17 to 22. Hybrids commonly run 45 to 55 combined, while EVs use MPGe, an energy-equivalent score of about 100 to 140 that cannot be compared with a fuel bill directly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure MPG accurately?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the fill-to-fill method: brim the tank, reset the trip meter, drive normally, then brim again at the same pump. Divide the trip miles by the gallons the pump just dispensed. One tank is noisy, so average three or four fills before you judge anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does MPG relate to L/100 km?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They run in opposite directions: higher MPG is better, lower L/100 km is better. The conversion is L/100 km = 235.215 divided by US MPG, so 25 MPG is 9.4 L/100 km and 40 MPG is 5.9 L/100 km. Note that the same car is quoted about 20 percent higher in imperial MPG because a UK gallon is larger."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What actually improves MPG?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ranked by payoff: cut highway speed from 80 to 65 mph (up to 15 percent), stop hard acceleration and braking (10 to 30 percent in town), keep tyres at the door-placard pressure (up to 3 percent), and drop roof boxes and dead weight when not needed (2 to 8 percent). Air filters and fresh oil matter far less on modern engines than driving style does."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>MPG Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">MPG Calculator</span></nav>
+  <section class="hero">
+    <h1>MPG Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Two numbers from your last fill-up tell you what your car is really doing.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What do you want to work out?</label>
+    <select id="mode">
+      <option value="trip" data-i18n="tool.mode.trip">Fuel economy only</option>
+      <option value="cost" data-i18n="tool.mode.cost">Fuel economy and fuel cost</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="miles" data-i18n="tool.miles.label">Miles driven</label>
+        <input type="number" id="miles" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="320">
+      </div>
+      <div>
+        <label for="gallons" data-i18n="tool.fuel.label">Fuel used</label>
+        <input type="number" id="gallons" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12.5">
+        <select id="unit" data-i18n-aria-label="tool.unit.label" aria-label="Fuel unit" style="margin-top:6px;">
+          <option value="us" data-i18n="tool.unit.us">US gallons</option>
+          <option value="imp" data-i18n="tool.unit.imp">Imperial gallons (UK)</option>
+          <option value="l" data-i18n="tool.unit.l">Litres</option>
+        </select>
+      </div>
+      <div id="price-wrap" hidden>
+        <label for="price" id="price-label">Price per US gallon</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="3.60">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.mpg">Miles per gallon (US)</div>
+          <div class="rc-val" id="r-mpg">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.mpgimp">Imperial MPG (UK)</div><div class="rc-val" id="r-mpgimp">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.l100">Litres per 100 km</div><div class="rc-val" id="r-l100">—</div></div>
+        <div class="rcard" id="costmile-card" hidden><div class="rc-label" data-i18n="tool.r.costmile">Cost per mile</div><div class="rc-val" id="r-costmile">—</div></div>
+        <div class="rcard" id="trip-card" hidden><div class="rc-label" data-i18n="tool.r.trip">Trip fuel cost</div><div class="rc-val" id="r-trip">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.units" style="margin-top:12px;">US gallons (3.785 L) are assumed; the imperial figure converts to UK gallons (4.546 L). Cost results use whatever currency you type in.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How to calculate MPG from a single fill-up</h2>
+    <p>Miles per gallon is one division: miles driven divided by gallons burned. The hard part is not the arithmetic, it is getting two honest numbers. The reliable way is the fill-to-fill method, and it takes two visits to the pump. Fill the tank until the nozzle clicks off, reset the trip odometer to zero, then drive the way you normally drive. At the next fill-up, use the same pump if you can, fill to the first click again, and write down two things: the trip meter reading and the gallons on the receipt.</p>
+    <p>Those gallons are exactly the fuel you burned over those miles, because you started full and finished full. That is why the method works and why a half-tank estimate does not.</p>
+
+    <h3>Worked example: a commuter sedan</h3>
+    <p>You reset the trip meter at a full tank, drive for a week and a half, and the pump takes 12.5 gallons to fill you back up. The trip meter reads 320 miles. Your economy is 320 divided by 12.5, which is 25.6 MPG. In UK terms that is 25.6 x 1.201 = 30.7 imperial MPG, and in metric it is 235.215 divided by 25.6 = 9.19 L/100 km. Three ways of stating the same car.</p>
+
+    <h3>Turning MPG into money</h3>
+    <p>At 3.60 per gallon, cost per mile is the price divided by the economy: 3.60 / 25.6 = 0.141 per mile, or roughly 14 cents. That tank cost 12.5 x 3.60 = 45.00. Now scale it to your life. A 40-mile round-trip commute for 22 working days is 880 miles a month, which at 14 cents a mile is about 124 a month, near 1,490 a year in fuel alone.</p>
+    <p>Run the same numbers for a car that returns 34 MPG and cost per mile falls to 0.106. The same commute costs about 93 a month. That 31-a-month gap is what people are actually asking about when they search whether a more efficient car is worth it. Notice also that the saving from 15 to 20 MPG is bigger than the saving from 30 to 40 MPG over the same distance, because MPG is a ratio and its benefit flattens out. This is the well-known MPG illusion, and it is the reason regulators quote L/100 km or gallons per 100 miles, where the scale stays linear.</p>
+
+    <h2>US gallons, imperial gallons and why the numbers differ</h2>
+    <p>A US gallon is 3.785 litres. A UK imperial gallon is 4.546 litres, about 20 percent larger. A car sold on both sides of the Atlantic therefore carries two different MPG figures for identical physical performance: 40 MPG in the US is 48 MPG in the UK. If you are comparing a review from one country with a spec sheet from the other, convert first or the comparison is meaningless. This calculator shows both from the same input so you never have to do that step manually.</p>
+
+    <h3>Quick reference</h3>
+    <table>
+      <thead><tr><th>US MPG</th><th>Imperial MPG</th><th>L/100 km</th><th>Cost/mile at 3.60</th></tr></thead>
+      <tbody>
+        <tr><td>15</td><td>18.0</td><td>15.68</td><td>0.240</td></tr>
+        <tr><td>20</td><td>24.0</td><td>11.76</td><td>0.180</td></tr>
+        <tr><td>25</td><td>30.0</td><td>9.41</td><td>0.144</td></tr>
+        <tr><td>30</td><td>36.0</td><td>7.84</td><td>0.120</td></tr>
+        <tr><td>35</td><td>42.0</td><td>6.72</td><td>0.103</td></tr>
+        <tr><td>40</td><td>48.0</td><td>5.88</td><td>0.090</td></tr>
+        <tr><td>50</td><td>60.1</td><td>4.70</td><td>0.072</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why your number will not match the window sticker</h2>
+    <p>EPA and WLTP figures come from standardised test cycles run on a dynamometer at controlled temperature with a trained driver. Your commute has hills, headwinds, cold starts, roof bars, a boot full of gear, traffic lights and a right foot with opinions. Real-world results commonly land 10 to 20 percent below the combined sticker figure, and short winter trips can be far worse because the engine spends most of its time warming up.</p>
+    <p>Other sources of noise worth knowing about. Trip computers are usually optimistic by 2 to 5 percent, so trust the pump over the dashboard. Auto shut-off points vary between pumps, which adds a fraction of a gallon of error to any single measurement. Winter blend fuel and ethanol content carry slightly less energy per gallon. And a tank measured mostly on the highway will flatter you compared with the same car in town.</p>
+    <p>None of this makes the calculation useless; it just means one tank is a data point, not a verdict. Log three or four consecutive fills and average them. That average is the number to use for budgeting, for comparing cars, and for checking whether a maintenance issue has quietly started costing you money. A sudden drop of more than 10 percent with no change in driving pattern is worth investigating: underinflated tyres, a dragging brake, a failing oxygen sensor or a thermostat stuck open are the usual suspects.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.fueleconomy.gov/" target="_blank" rel="noopener">FuelEconomy.gov (US DOE/EPA) — official MPG ratings and real-world fuel economy data</a></li>
+      <li><a href="https://www.epa.gov/greenvehicles" target="_blank" rel="noopener">US EPA Green Vehicle Guide — how EPA test cycles produce window-sticker figures</a></li>
+      <li><a href="https://www.eia.gov/petroleum/gasdiesel/" target="_blank" rel="noopener">US EIA Gasoline and Diesel Fuel Update — weekly average fuel prices for cost-per-mile math</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — legal definitions of the gallon and litre</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/mulch-calc/"><span class="related-ico" aria-hidden="true">🌳</span><span class="related-name">Mulch Calculator</span></a><a class="related-item" href="https://tool-hub.me/online-notepad/"><span class="related-ico" aria-hidden="true">🗒️</span><span class="related-name">Online Notepad</span></a><a class="related-item" href="https://tool-hub.me/paint-calc/"><span class="related-ico" aria-hidden="true">🎨</span><span class="related-name">Paint Calculator</span></a><a class="related-item" href="https://tool-hub.me/party-drink-calc/"><span class="related-ico" aria-hidden="true">🥂</span><span class="related-name">Party Drink Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What counts as good gas mileage?</summary><p data-i18n="faq.a1">For a petrol sedan, 30 to 40 MPG on the highway and 25 to 32 combined is solid. A mid-size SUV lands around 22 to 28 combined, and a full-size pickup nearer 17 to 22. Hybrids commonly run 45 to 55 combined, while EVs use MPGe, an energy-equivalent score of about 100 to 140 that cannot be compared with a fuel bill directly.</p></details>
+    <details><summary data-i18n="faq.q2">How do I measure MPG accurately?</summary><p data-i18n="faq.a2">Use the fill-to-fill method: brim the tank, reset the trip meter, drive normally, then brim again at the same pump. Divide the trip miles by the gallons the pump just dispensed. One tank is noisy, so average three or four fills before you judge anything.</p></details>
+    <details><summary data-i18n="faq.q3">How does MPG relate to L/100 km?</summary><p data-i18n="faq.a3">They run in opposite directions: higher MPG is better, lower L/100 km is better. The conversion is L/100 km = 235.215 divided by US MPG, so 25 MPG is 9.4 L/100 km and 40 MPG is 5.9 L/100 km. Note that the same car is quoted about 20 percent higher in imperial MPG because a UK gallon is larger.</p></details>
+    <details><summary data-i18n="faq.q4">What actually improves MPG?</summary><p data-i18n="faq.a4">Ranked by payoff: cut highway speed from 80 to 65 mph (up to 15 percent), stop hard acceleration and braking (10 to 30 percent in town), keep tyres at the door-placard pressure (up to 3 percent), and drop roof boxes and dead weight when not needed (2 to 8 percent). Air filters and fresh oil matter far less on modern engines than driving style does.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-dUOaG5zWZxUvaBg1aCUgxRUEujLqZm4rEbEIdw4WsJI=' 'sha256-3IzQfIMjKMQHYUSWbjzTO3VzuylR2mANjwfTT0Kacvs=' 'sha256-VARMazWBmfXNrxe6ylk8Zko3E6tOL1/xHQeeDbs3dhI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>나이 차이 계산기 — 두 생년월일 사이 나이 차</title>
+<meta name="description" content="두 생년월일 사이 나이 차이를 연·월·일 단위로 정확히 계산하고 총 일수, 총 개월 수, 그리고 '나이 절반 더하기 7' 규칙까지 함께 확인하세요.">
+<meta name="keywords" content="age difference calculator, age gap calculator, age gap between dates, half your age plus seven, age difference between two dates, age gap between two people">
+<link rel="canonical" href="https://tool-hub.me/age-gap-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/age-gap-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/age-gap-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/age-gap-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/age-gap-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/age-gap-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/age-gap-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/age-gap-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/age-gap-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/age-gap-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/age-gap-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/age-gap-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/age-gap-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/age-gap-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/age-gap-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/age-gap-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="나이 차이 계산기 — 두 생년월일 사이 나이 차">
+<meta property="og:description" content="두 생년월일 사이 나이 차이를 연·월·일 단위로 정확히 계산하고 총 일수, 총 개월 수, 그리고 '나이 절반 더하기 7' 규칙까지 함께 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/age-gap-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/age-gap-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9d174d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Age Gap Calculator",
+  "description": "Find the exact age difference between two birthdays in years, months and days, plus total days, total months and the half-your-age-plus-seven check.",
+  "url": "https://tool-hub.me/age-gap-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is the age gap calculated — calendar months or 365.25 days?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Calendar months, the same way a date difference calculator counts them. The tool subtracts day from day, month from month and year from year, borrowing the real length of the preceding month when the day count goes negative. Dividing total days by 365.25 gives a decimal that drifts by up to a couple of days around leap years, so the years-months-days figure here is the more precise answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the half-your-age-plus-seven rule come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It appears in nineteenth-century French and English etiquette writing as courtship advice, and it was popularised in English by the 1901 book Her Royal Highness Woman by Max O'Rell. It has no scientific basis and was never a legal standard. This tool shows it because people search for it, not because it decides anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the size of an age gap actually matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Research on couples finds that age difference correlates weakly with relationship outcomes once you account for the things that matter more: shared goals, life stage, financial alignment, health and how conflict is handled. Larger gaps show up alongside bigger differences in energy, retirement timing and family planning, which is a practical alignment question rather than a verdict on the number itself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens with a 29 February birthday?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The calculator uses real calendar lengths, so a leap-day birthday is handled exactly: the borrowing step pulls 28 or 29 days from February depending on the year involved. In non-leap years the common convention is to treat 1 March as the anniversary, which is what the months-and-days figure effectively reflects once the day count rolls over."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Age Gap Calculator",
+      "item": "https://tool-hub.me/age-gap-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Age Gap Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Age Gap Calculator</span></nav>
+  <section class="hero">
+    <h1>Age Gap Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Calendar-accurate years, months and days between two birthdays — with the old half-your-age-plus-seven line.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rule-line { margin-top:12px; font-size:14px; line-height:1.6; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="date-a" data-i18n="tool.a.label">First date of birth</label>
+        <input type="date" id="date-a" min="1900-01-01" max="2100-12-31" value="1988-04-12" autocomplete="off" placeholder="1988-04-12">
+      </div>
+      <div>
+        <label for="date-b" data-i18n="tool.b.label">Second date of birth</label>
+        <input type="date" id="date-b" min="1900-01-01" max="2100-12-31" value="1995-09-30" autocomplete="off" placeholder="1995-09-30">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.hint">Order does not matter — the calculator works out which date is older.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate gap</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.gap">Age gap</div>
+          <div class="rc-val" id="r-gap">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.days">Total days</div><div class="rc-val" id="r-days">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.months">Total months</div><div class="rc-val" id="r-months">—</div></div>
+      </div>
+      <p class="rule-line"><strong data-i18n="tool.rule.head">Half your age plus seven:</strong> <span id="r-rule"></span></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.info" style="margin-top:12px;">Half-your-age-plus-seven is informal Victorian-era etiquette, not advice, law or a verdict. Ages of consent and marriage are set by local law.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How an age gap is actually measured</h2>
+    <p>Most people describe an age gap with a single number — "seven years" — but the honest answer usually has three parts. Two birthdays are rarely a whole number of years apart, and the leftover months and days are what decide whether someone is "seven years older" or "nearly eight". This calculator reports the gap the way a registrar or a date-difference tool would: whole calendar years, then whole calendar months, then the remaining days.</p>
+    <p>The counting rule is subtraction with borrowing, the same arithmetic you learned for columns of figures. Subtract day from day, month from month, year from year. If the day count comes out negative, borrow the real length of the month before the later date — 28, 29, 30 or 31, whatever that month actually had. If the month count then comes out negative, borrow twelve months from the years column.</p>
+
+    <h3>Worked example: 12 April 1988 and 30 September 1995</h3>
+    <p>These are the two dates the tool loads by default. Days: 30 minus 12 gives 18, no borrowing needed. Months: September (9) minus April (4) gives 5. Years: 1995 minus 1988 gives 7. The gap is <strong>7 years, 5 months and 18 days</strong>, which is 89 whole months, and 2,727 days end to end. Notice that 2,727 divided by 365.25 gives 7.466 years — the same gap, but as a decimal that hides where the months and days went.</p>
+
+    <h3>Worked example with borrowing: 12 April 1988 and 5 March 1995</h3>
+    <p>Now the arithmetic gets interesting. Days: 5 minus 12 is negative 7, so borrow from the month before March 1995, which is February. 1995 was not a leap year, so February had 28 days: negative 7 plus 28 gives 21 days, and the month column drops by one. Months: 3 minus 4 minus 1 equals negative 2, so borrow twelve: 10 months, and the year column drops by one. Years: 1995 minus 1988 minus 1 equals 6. The answer is <strong>6 years, 10 months and 21 days</strong>. Check it forward: April 1988 plus six years is April 1994, plus ten months is 12 February 1995, plus 21 days is 5 March 1995. It closes.</p>
+    <p>Had the same pair fallen in 1996, February would have contributed 29 days instead of 28 and the result would read 22 days. That single day is exactly why dividing by 365.25 is not good enough when you want the calendar answer rather than an average one.</p>
+
+    <h2>Total days and total months</h2>
+    <p>The two smaller cards answer different questions. Total days is the raw count between the dates, computed at UTC midnight so daylight-saving changes cannot shave or add an hour. It is the number you want for anniversaries measured in days, or for anyone who enjoys knowing they are 10,000 days apart from someone. Total months is the years-and-months figure flattened out: 7 years and 5 months becomes 89 months. It ignores the leftover days on purpose, because a partial month is not a month.</p>
+
+    <h2>Half your age plus seven</h2>
+    <p>The rule states that the youngest socially acceptable partner is half the older person's age plus seven. It shows up in nineteenth-century French and English etiquette writing and reached a wide English-speaking audience through Max O'Rell's 1901 book <em>Her Royal Highness Woman</em>. In the default example the older person is in their late thirties, which puts the rule's floor in the mid-twenties, and the younger person clears it comfortably.</p>
+    <p>Treat that line as trivia, not as a test. It has no research behind it, it was never a legal standard, and it behaves strangely at the edges: applied to a 14-year-old it produces an answer of 14, and applied to people in their seventies it permits gaps most couples would find unremarkable anyway. Ages of consent and marriage are set by statute in every jurisdiction and have nothing to do with a Victorian dinner-party maxim. The tool prints the line because people search for it, and because seeing the arithmetic makes it easier to stop treating it as an authority.</p>
+
+    <h2>What the research says, neutrally</h2>
+    <p>Studies of couples generally find that age difference is a weak predictor of how a relationship goes once stronger factors are accounted for: shared goals, life stage, financial alignment, health, family plans and how conflict gets handled. Larger gaps do correlate with practical asymmetries — one partner retiring a decade earlier, different energy levels, different assumptions about when or whether to have children — and those asymmetries, not the number, are what couples actually negotiate. Some large-sample studies report lower satisfaction over time in wide-gap couples; others find the effect largely disappears after controlling for education and income. The sensible reading is that the gap describes a set of questions to talk about, not an answer.</p>
+
+    <h3>Limits worth knowing</h3>
+    <p>The calculator accepts dates from 1900 to 2100 and assumes the proleptic Gregorian calendar, so historical dates recorded under the Julian calendar will be off by the usual eleven-to-thirteen days. It uses whole dates only, not times of birth, so two people born hours apart on the same date show a zero gap — which is correct for every purpose except a birth-certificate tiebreaker. Both dates being identical is a valid input and returns zero years, zero months, zero days rather than an error. If either date is in the future the gap still calculates, but the half-plus-seven line is suppressed, because current ages do not exist yet.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.census.gov/" target="_blank" rel="noopener">U.S. Census Bureau — national data on marriage, divorce and the age of spouses</a></li>
+      <li><a href="https://www.cdc.gov/nchs/" target="_blank" rel="noopener">CDC National Center for Health Statistics — official U.S. marriage and divorce statistics</a></li>
+      <li><a href="https://www.gov.uk/marriages-civil-partnerships" target="_blank" rel="noopener">GOV.UK — legal age and rules for marriage and civil partnership in the UK</a></li>
+      <li><a href="https://www.nist.gov/pml/time" target="_blank" rel="noopener">NIST Time and Frequency — how the calendar, leap years and civil dates are defined</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/alarm-clock/"><span class="related-ico" aria-hidden="true">⏰</span><span class="related-name">Online Alarm Clock</span></a><a class="related-item" href="https://tool-hub.me/chinese-zodiac-calc/"><span class="related-ico" aria-hidden="true">🐉</span><span class="related-name">Chinese Zodiac Calculator</span></a><a class="related-item" href="https://tool-hub.me/countdown-timer/"><span class="related-ico" aria-hidden="true">⏲️</span><span class="related-name">Countdown Timer</span></a><a class="related-item" href="https://tool-hub.me/date-add-calc/"><span class="related-ico" aria-hidden="true">➕</span><span class="related-name">Date Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How is the age gap calculated — calendar months or 365.25 days?</summary><p data-i18n="faq.a1">Calendar months, the same way a date difference calculator counts them. The tool subtracts day from day, month from month and year from year, borrowing the real length of the preceding month when the day count goes negative. Dividing total days by 365.25 gives a decimal that drifts by up to a couple of days around leap years, so the years-months-days figure here is the more precise answer.</p></details>
+    <details><summary data-i18n="faq.q2">Where does the half-your-age-plus-seven rule come from?</summary><p data-i18n="faq.a2">It appears in nineteenth-century French and English etiquette writing as courtship advice, and it was popularised in English by the 1901 book Her Royal Highness Woman by Max O'Rell. It has no scientific basis and was never a legal standard. This tool shows it because people search for it, not because it decides anything.</p></details>
+    <details><summary data-i18n="faq.q3">Does the size of an age gap actually matter?</summary><p data-i18n="faq.a3">Research on couples finds that age difference correlates weakly with relationship outcomes once you account for the things that matter more: shared goals, life stage, financial alignment, health and how conflict is handled. Larger gaps show up alongside bigger differences in energy, retirement timing and family planning, which is a practical alignment question rather than a verdict on the number itself.</p></details>
+    <details><summary data-i18n="faq.q4">What happens with a 29 February birthday?</summary><p data-i18n="faq.a4">The calculator uses real calendar lengths, so a leap-day birthday is handled exactly: the borrowing step pulls 28 or 29 days from February depending on the year involved. In non-leap years the common convention is to treat 1 March as the anniversary, which is what the months-and-days figure effectively reflects once the day count rolls over.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-NKeszQDnIIYtjrvmXOD8+Zfwwmip7OIyom2ta3VRxFw=' 'sha256-WDSUXT+gGLmjBJHV9Yh859GmPrVdXwYxWiUXdCGRQIM=' 'sha256-zA0yk7pdbffaeVK+sDixcKTZH54dUYlu112buK6r/2Y='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>타임카드 계산기 — 주간 근무시간과 초과근무 수당</title>
+<meta name="description" content="매일 출근·퇴근·휴게 시간을 입력하면 주간 근무시간(소수+시:분)과 주 40시간 초과분 1.5배를 반영한 급여를 계산합니다. 무료, 브라우저에서 바로 계산됩니다.">
+<meta name="keywords" content="time card calculator, timesheet calculator, work hours calculator weekly, payroll hours calculator, timesheet with lunch break, 주간 근무시간 계산기">
+<link rel="canonical" href="https://tool-hub.me/timesheet-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/timesheet-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/timesheet-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/timesheet-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/timesheet-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/timesheet-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/timesheet-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/timesheet-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/timesheet-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/timesheet-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/timesheet-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/timesheet-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/timesheet-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/timesheet-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/timesheet-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/timesheet-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="타임카드 계산기 — 주간 근무시간과 초과근무 수당">
+<meta property="og:description" content="매일 출근·퇴근·휴게 시간을 입력하면 주간 근무시간(소수+시:분)과 주 40시간 초과분 1.5배를 반영한 급여를 계산합니다. 무료, 브라우저에서 바로 계산됩니다.">
+<meta property="og:url" content="https://tool-hub.me/timesheet-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/timesheet-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Time Card Calculator",
+  "description": "Enter start, end and break times per day to get weekly hours (decimal + hh:mm) and gross pay with 1.5x overtime past 40 hours. Free, computed in your browser.",
+  "url": "https://tool-hub.me/timesheet-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Time Card Calculator", "item": "https://tool-hub.me/timesheet-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate weekly hours worked from a time card with a lunch break?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter each day's start time, end time, and any unpaid break in minutes — the calculator subtracts the break from the time between start and end to get that day's net hours, shown as both decimal hours and hours:minutes. Add up all seven days and the weekly total updates automatically at the top of the summary. For example, working 9:00 AM to 5:30 PM with a 30-minute lunch gives 8 hours net (8.5 hours gross minus 0.5 hours break). Leave a day's start and end blank if you didn't work that day — it's simply counted as 0 hours, not an error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does this timesheet calculator handle an overnight or night shift, like 10 PM to 6 AM?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "If the end time is earlier than the start time, the calculator assumes the shift crosses midnight and automatically adds 24 hours before subtracting the break, so 22:00 to 06:00 correctly computes as 8 hours rather than a negative number. This works for any overnight pattern, including split late shifts that end just after midnight. If you accidentally enter the same start and end time, the row is treated as 0 hours rather than a full 24-hour day, since that's almost always a typo rather than an actual full-day shift. No date is required for this to work — only the time of day for each entry matters."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is overtime always calculated as 1.5x pay after 40 hours per week?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "By default, yes: when the overtime toggle is on, any weekly hours beyond 40 are paid at 1.5 times your entered hourly rate, while the first 40 hours are paid at your regular rate — this mirrors the standard time-and-a-half rule used in the United States under the FLSA. You can turn the toggle off if your total should simply be paid at a flat rate with no overtime split, which is common for salaried estimates or countries with different rules. Overtime law varies significantly by country, state, and industry (some places use daily overtime, different thresholds, or different multipliers), so treat this as a quick estimate and confirm the exact rule that applies to your job. The regular-hours and overtime-hours figures are shown separately so you can see exactly how the split was applied."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this as a printable weekly timesheet for payroll or timekeeping?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — fill in each day's times and breaks, optionally add the week's start date so each row shows an actual calendar date, and press \"Print timesheet\" to get a clean printout with the navigation, ads, and related links removed. The printed page keeps the day-by-day table, the weekly total, and the pay estimate if you entered an hourly rate, so it can be handed to a manager or kept as a personal record. Your entries are also saved automatically in your browser between visits, so you don't need to print immediately or lose data if you close the tab. This is meant as a personal or small-team convenience tool rather than a certified payroll system, so check your employer's or jurisdiction's official timekeeping requirements for formal payroll records."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my timesheet data — hours, pay rate, and schedule — sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation in this time card calculator runs directly in your browser using JavaScript; the times, break minutes, hourly rate, and any date you enter are never transmitted anywhere. Your entries are saved only in your browser's local storage so the form is still filled in the next time you visit, and clearing your browser data or using \"Clear week\" removes them completely. There's no account, no login, and no server-side database involved, so you can log a real work schedule or a sensitive pay rate without it leaving your device. This makes the tool suitable for quick personal use even on a shared or public computer, provided you clear the entries afterward."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Time Card Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Time Card Calculator</span></nav>
+  <section class="hero">
+    <h1>Time Card Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Log your start, end and unpaid break time for each day of the week — get daily and weekly hours in decimal and hh:mm, plus gross pay with automatic 1.5× overtime, right here in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Time card calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .weekof-row { display:flex; gap:10px; align-items:flex-end; flex-wrap:wrap; margin-bottom:16px; }
+      #tool .weekof-row > div { flex:1 1 200px; }
+      #tool .btn-secondary { flex:0 0 auto; padding:9px 14px; border:1px solid var(--line); border-radius:10px;
+        background:var(--bg); color:var(--ink); font-weight:600; font-size:14px; cursor:pointer; white-space:nowrap; }
+      #tool .btn-secondary:hover { border-color:var(--accent); }
+      #tool h2.ts-heading { font-size:16px; font-weight:700; margin:0 0 10px; }
+      #tool .table-wrap { overflow-x:auto; border:1px solid var(--line); border-radius:10px; -webkit-overflow-scrolling:touch; }
+      #tool table.timecard { width:100%; min-width:560px; border-collapse:collapse; font-size:14px; }
+      #tool table.timecard th, #tool table.timecard td { padding:8px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:middle; }
+      #tool table.timecard thead th { color:var(--muted); font-weight:650; font-size:12.5px; text-transform:uppercase; letter-spacing:.02em; background:var(--bg); }
+      #tool table.timecard tbody tr:last-child td { border-bottom:none; }
+      #tool .ts-day { white-space:nowrap; font-weight:650; }
+      #tool .ts-dayname { display:block; }
+      #tool .ts-daydate { display:block; font-size:11.5px; font-weight:500; color:var(--muted); }
+      #tool input.ts-time { width:110px; padding:6px 8px; font-size:14px; }
+      #tool input.ts-break { width:72px; padding:6px 8px; font-size:14px; text-align:right; }
+      #tool .ts-hours { min-width:120px; }
+      #tool .ts-hours-val { display:block; font-variant-numeric:tabular-nums; font-weight:650; }
+      #tool .ts-note { display:block; font-size:12px; color:var(--accent-strong); margin-top:2px; }
+      #tool .ts-summary { margin-top:16px; padding:14px 16px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+      #tool .ts-summary-label { font-size:13px; color:var(--muted); font-weight:600; }
+      #tool .ts-summary-val { font-size:26px; font-weight:800; color:var(--accent); font-variant-numeric:tabular-nums; margin-top:2px; }
+      #tool .ts-summary-hm { font-size:14px; color:var(--muted); margin-left:8px; font-weight:600; }
+      #tool .pay-section { margin-top:22px; }
+      #tool .pay-row { display:flex; gap:10px; flex-wrap:wrap; align-items:flex-end; }
+      #tool .pay-row > div { flex:1 1 140px; }
+      #tool .pay-row[hidden] { display:none; }
+      #tool .ot-row { display:flex; align-items:center; gap:8px; margin-top:12px; font-weight:600; font-size:14px; }
+      #tool .ot-row input { width:auto; flex:0 0 auto; }
+      #tool .pay-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:14px; }
+      #tool .pay-card { padding:12px 14px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+      #tool .pay-card.gross { grid-column:1 / -1; background:color-mix(in srgb, var(--accent) 8%, var(--surface)); }
+      #tool .pc-label { font-size:12.5px; color:var(--muted); font-weight:600; }
+      #tool .pc-val { font-size:19px; font-weight:800; margin-top:2px; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+      #tool .pc-val.gross-val { color:var(--accent); font-size:23px; }
+      #tool .actions-row { display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; }
+      #tool .notes { margin-top:18px; font-size:12.5px; line-height:1.6; color:var(--muted); }
+      #tool .notes p { margin:4px 0; }
+      @media print {
+        .site-header, .site-footer, #ad-slot, #related-tools, .faq, .guide-content,
+        #tool .weekof-row .btn-secondary, #tool .actions-row { display:none !important; }
+        #tool { border:none !important; box-shadow:none !important; padding:0 !important; }
+        body { background:#fff !important; }
+      }
+      @media(max-width:420px){
+        #tool .weekof-row { flex-direction:column; align-items:stretch; }
+        #tool .pay-grid { grid-template-columns:1fr; }
+      }
+    </style>
+
+    <div class="weekof-row">
+      <div>
+        <label for="week-start" data-i18n="tool.weekof.label">Week starting (optional)</label>
+        <input type="date" id="week-start" autocomplete="off">
+      </div>
+      <button type="button" class="btn-secondary" id="this-week-btn" data-i18n="tool.weekof.thisWeek">This week</button>
+    </div>
+
+    <h2 class="ts-heading" data-i18n="tool.table.heading">Weekly time card</h2>
+    <div class="table-wrap">
+      <table class="timecard">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.day">Day</th>
+            <th data-i18n="tool.field.start">Start</th>
+            <th data-i18n="tool.field.end">End</th>
+            <th data-i18n="tool.field.break">Break (min)</th>
+            <th data-i18n="tool.field.hours">Hours</th>
+          </tr>
+        </thead>
+        <tbody id="timecard-rows"><!-- JS로 7행 생성 --></tbody>
+      </table>
+    </div>
+
+    <p id="tool-placeholder" data-i18n="tool.placeholder" style="margin:14px 0 0;color:var(--muted);">Log your start, end and break time below to see the weekly total.</p>
+    <div class="ts-summary" id="tool-summary" hidden aria-live="polite">
+      <span class="ts-summary-label" data-i18n="tool.summary.total">Total hours this week</span>
+      <div><span class="ts-summary-val" id="total-dec">0</span><span class="ts-summary-hm" id="total-hm">(0:00)</span></div>
+    </div>
+
+    <div class="pay-section">
+      <h2 class="ts-heading" data-i18n="tool.pay.heading">Pay estimate (optional)</h2>
+      <div class="pay-row">
+        <div>
+          <label for="rate-input" data-i18n="tool.rate.label">Hourly rate (optional)</label>
+          <input type="number" id="rate-input" min="0" step="any" inputmode="decimal" placeholder="e.g. 20" data-i18n-placeholder="tool.rate.ph" autocomplete="off">
+        </div>
+        <div>
+          <label for="currency-select" data-i18n="tool.currency.label">Currency</label>
+          <select id="currency-select" aria-label="Currency" data-i18n-aria-label="tool.currency.aria"></select>
+        </div>
+      </div>
+      <label class="ot-row">
+        <input type="checkbox" id="ot-toggle" checked>
+        <span data-i18n="tool.ot.label">Apply overtime pay</span>
+      </label>
+      <div class="pay-row" id="ot-opts" style="margin-top:10px;">
+        <div>
+          <label for="ot-threshold" data-i18n="tool.ot.threshold">Overtime after (hours/week)</label>
+          <input type="number" id="ot-threshold" min="1" max="168" step="any" inputmode="decimal" placeholder="40" autocomplete="off">
+        </div>
+        <div>
+          <label for="ot-mult" data-i18n="tool.ot.mult">Overtime rate multiplier</label>
+          <input type="number" id="ot-mult" min="1" max="5" step="any" inputmode="decimal" placeholder="1.5" autocomplete="off">
+        </div>
+      </div>
+
+      <p id="pay-empty" data-i18n="tool.pay.enterRate" style="margin:14px 0 0;color:var(--muted);">Enter an hourly rate above to see your pay estimate.</p>
+      <div id="pay-body" hidden aria-live="polite">
+        <div class="pay-grid">
+          <div class="pay-card">
+            <div class="pc-label" data-i18n="tool.pay.regularHours">Regular hours</div>
+            <div class="pc-val" id="pay-reg-hours">0</div>
+          </div>
+          <div class="pay-card" id="pay-ot-row">
+            <div class="pc-label" data-i18n="tool.pay.otHours">Overtime hours</div>
+            <div class="pc-val" id="pay-ot-hours">0</div>
+          </div>
+          <div class="pay-card">
+            <div class="pc-label" data-i18n="tool.pay.regularPay">Regular pay</div>
+            <div class="pc-val" id="pay-reg-pay">—</div>
+          </div>
+          <div class="pay-card">
+            <div class="pc-label" data-i18n="tool.pay.overtimePay">Overtime pay</div>
+            <div class="pc-val" id="pay-ot-pay">—</div>
+          </div>
+          <div class="pay-card gross">
+            <div class="pc-label" data-i18n="tool.pay.gross">Gross pay</div>
+            <div class="pc-val gross-val" id="pay-gross">—</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions-row">
+      <button type="button" class="btn-secondary" id="print-btn" data-i18n="tool.print">Print timesheet</button>
+      <button type="button" class="btn-secondary" id="clear-btn" data-i18n="tool.clear">Clear week</button>
+    </div>
+
+    <div class="notes">
+      <p data-i18n="tool.note.disclaimer">This tool provides an estimate for personal reference only — it is not legal, payroll, or tax advice. Overtime rules vary by country, state or province, and employment contract, so confirm the exact requirement with your employer or a qualified professional.</p>
+      <p data-i18n="tool.note.privacy">All calculations run locally in your browser — nothing is uploaded or stored on a server.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>A weekly time card, not just a single duration</h2>
+    <p>Most "hours calculators" answer one question: how long was this one shift? A real timesheet needs seven of those answers at once, added up, with breaks removed and overtime applied correctly. This time card calculator gives you a full Monday-to-Sunday grid — enter each day's start time, end time, and unpaid break, and it fills in the daily hours, the weekly total (in both decimal and hh:mm), and, if you add an hourly rate, a full pay estimate with regular and overtime hours split out.</p>
+
+    <h3>How the daily hours are calculated</h3>
+    <ul>
+      <li><strong>Gross time</strong> = end time − start time. If the end time is earlier than the start (an overnight shift like 22:00–06:00), 24 hours is added automatically before subtracting.</li>
+      <li><strong>Net hours</strong> = gross time − unpaid break minutes. A break longer than the shift itself is capped at 0 rather than going negative.</li>
+      <li><strong>Weekly total</strong> = the sum of all seven days' net hours, shown as decimal hours (for payroll spreadsheets) and hours:minutes (for reading at a glance).</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Example — a standard 9-to-5 week.</strong> Five days of 9:00 AM–5:30 PM with a 30-minute lunch break each day: 8 hours net per day × 5 days = <strong>40 hours</strong> for the week — exactly at the overtime threshold, so regular pay applies to the whole week.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example — a week with overtime.</strong> The same schedule plus a 6th day of 9:00 AM–1:00 PM (4 hours, no break) brings the week to 44 hours. With overtime on at 1.5×, the first 40 hours pay at the regular rate and the last 4 hours pay at 1.5× — at $20/hour that's $800 regular pay + $120 overtime pay = <strong>$920 gross</strong>.</p>
+    </div>
+
+    <h3>How this differs from other Toolhub time tools</h3>
+    <p>If you only need the duration of a single shift (one start time, one end time, one break), the <a href="https://tool-hub.me/hours-calc/">Hours Calculator</a> is a faster, single-row tool for that. If you already know your regular and overtime hours as numbers and just need the overtime math, the <a href="https://tool-hub.me/overtime-pay-calc/">Overtime Pay Calculator</a> skips the time-card grid entirely. This tool is for the in-between case: a full week of daily start/end/break entries that need to be totaled and, optionally, turned into a gross-pay estimate in one place.</p>
+
+    <h3>Overtime rule used by default</h3>
+    <table>
+      <thead><tr><th>Weekly hours</th><th>Pay rate applied</th></tr></thead>
+      <tbody>
+        <tr><td>First 40 hours</td><td>Regular hourly rate (1×)</td></tr>
+        <tr><td>Hours beyond 40</td><td>1.5× hourly rate (time-and-a-half)</td></tr>
+      </tbody>
+    </table>
+    <p>This mirrors the standard U.S. FLSA time-and-a-half rule. Since overtime law varies by country, state/province, and employment contract, you can turn the overtime toggle off to pay every hour at a flat rate instead — useful for salaried estimates or jurisdictions with different rules. Treat the result as a quick personal estimate, not a certified payroll calculation.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.dol.gov/agencies/whd/flsa" target="_blank" rel="noopener">U.S. Department of Labor, Wage and Hour Division — FLSA rules on hours worked and overtime pay</a></li>
+      <li><a href="https://www.dol.gov/agencies/whd/fact-sheets/21-flsa-recordkeeping" target="_blank" rel="noopener">DOL Fact Sheet #21 — recordkeeping requirements for employee time cards</a></li>
+      <li><a href="https://www.gov.uk/maximum-weekly-working-hours" target="_blank" rel="noopener">GOV.UK — maximum weekly working hours and rest break rules in the UK</a></li>
+      <li><a href="https://www.bls.gov/ces/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — average weekly hours and earnings data</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/week-number-check/"><span class="related-ico" aria-hidden="true">📆</span><span class="related-name">Week Number Today</span></a><a class="related-item" href="https://tool-hub.me/workday-calc/"><span class="related-ico" aria-hidden="true">💼</span><span class="related-name">Business Days Calculator</span></a><a class="related-item" href="https://tool-hub.me/world-clock/"><span class="related-ico" aria-hidden="true">🌍</span><span class="related-name">World Clock</span></a><a class="related-item" href="https://tool-hub.me/zodiac-sign-calc/"><span class="related-ico" aria-hidden="true">♈</span><span class="related-name">Zodiac Sign Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I calculate weekly hours worked from a time card with a lunch break?</summary>
+      <p data-i18n="faq.a1">Enter each day's start time, end time, and any unpaid break in minutes — the calculator subtracts the break from the time between start and end to get that day's net hours, shown as both decimal hours and hours:minutes. Add up all seven days and the weekly total updates automatically at the top of the summary. For example, working 9:00 AM to 5:30 PM with a 30-minute lunch gives 8 hours net (8.5 hours gross minus 0.5 hours break). Leave a day's start and end blank if you didn't work that day — it's simply counted as 0 hours, not an error.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How does this timesheet calculator handle an overnight or night shift, like 10 PM to 6 AM?</summary>
+      <p data-i18n="faq.a2">If the end time is earlier than the start time, the calculator assumes the shift crosses midnight and automatically adds 24 hours before subtracting the break, so 22:00 to 06:00 correctly computes as 8 hours rather than a negative number. This works for any overnight pattern, including split late shifts that end just after midnight. If you accidentally enter the same start and end time, the row is treated as 0 hours rather than a full 24-hour day, since that's almost always a typo rather than an actual full-day shift. No date is required for this to work — only the time of day for each entry matters.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Is overtime always calculated as 1.5x pay after 40 hours per week?</summary>
+      <p data-i18n="faq.a3">By default, yes: when the overtime toggle is on, any weekly hours beyond 40 are paid at 1.5 times your entered hourly rate, while the first 40 hours are paid at your regular rate — this mirrors the standard time-and-a-half rule used in the United States under the FLSA. You can turn the toggle off if your total should simply be paid at a flat rate with no overtime split, which is common for salaried estimates or countries with different rules. Overtime law varies significantly by country, state, and industry (some places use daily overtime, different thresholds, or different multipliers), so treat this as a quick estimate and confirm the exact rule that applies to your job. The regular-hours and overtime-hours figures are shown separately so you can see exactly how the split was applied.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can I use this as a printable weekly timesheet for payroll or timekeeping?</summary>
+      <p data-i18n="faq.a4">Yes — fill in each day's times and breaks, optionally add the week's start date so each row shows an actual calendar date, and press "Print timesheet" to get a clean printout with the navigation, ads, and related links removed. The printed page keeps the day-by-day table, the weekly total, and the pay estimate if you entered an hourly rate, so it can be handed to a manager or kept as a personal record. Your entries are also saved automatically in your browser between visits, so you don't need to print immediately or lose data if you close the tab. This is meant as a personal or small-team convenience tool rather than a certified payroll system, so check your employer's or jurisdiction's official timekeeping requirements for formal payroll records.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my timesheet data — hours, pay rate, and schedule — sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Every calculation in this time card calculator runs directly in your browser using JavaScript; the times, break minutes, hourly rate, and any date you enter are never transmitted anywhere. Your entries are saved only in your browser's local storage so the form is still filled in the next time you visit, and clearing your browser data or using "Clear week" removes them completely. There's no account, no login, and no server-side database involved, so you can log a real work schedule or a sensitive pay rate without it leaving your device. This makes the tool suitable for quick personal use even on a shared or public computer, provided you clear the entries afterward.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

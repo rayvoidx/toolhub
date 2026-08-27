@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-8ge3MJI8n7nH7fV/QcK1flOg621PMPeFI2VqUCwrHSw=' 'sha256-zKXP4we3tN5CEeT54P0PpUjSqAs4g1PqvadwR7ik1N8=' 'sha256-9qPNU+FMZnfZoPxz9Zn7efdFjvEAQsT5XDA5pnfrHdg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>다운로드 시간 계산기 — 파일 받는 데 걸리는 시간</title>
+<meta name="description" content="파일 용량과 인터넷 속도로 다운로드 소요 시간을 계산합니다. Mbps와 MB/s 변환, 실제 프로토콜 오버헤드, 25~1000Mbps 속도 비교까지 한 번에 확인하세요.">
+<meta name="keywords" content="download time calculator, how long to download, file transfer time, download speed calculator, mbps to mb/s, internet speed time">
+<link rel="canonical" href="https://tool-hub.me/download-time-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/download-time-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/download-time-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/download-time-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/download-time-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/download-time-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/download-time-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/download-time-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/download-time-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/download-time-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/download-time-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/download-time-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/download-time-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/download-time-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/download-time-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/download-time-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="다운로드 시간 계산기 — 파일 받는 데 걸리는 시간">
+<meta property="og:description" content="파일 용량과 인터넷 속도로 다운로드 소요 시간을 계산합니다. Mbps와 MB/s 변환, 실제 프로토콜 오버헤드, 25~1000Mbps 속도 비교까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/download-time-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/download-time-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0e7490">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Download Time Calculator",
+  "description": "Work out how long a download takes from file size and connection speed. Handles Mbps vs MB/s, adds realistic protocol overhead and compares 25 to 1000 Mbps.",
+  "url": "https://tool-hub.me/download-time-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Download Time Calculator",
+      "item": "https://tool-hub.me/download-time-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between Mbps and MB/s?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mbps means megabits per second, and eight bits make one byte, so a 100 Mbps line moves at most 12.5 MB/s. ISPs advertise in bits because the number looks eight times bigger, while your operating system reports file sizes and download progress in bytes. Divide the advertised speed by eight before comparing it with anything Windows or macOS shows you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my real download slower than this estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Protocol overhead — TCP/IP headers, TLS handshakes, retransmissions — eats roughly 5 to 10% before any file data moves, which is why the realistic setting exists. Beyond that, the server may cap each connection, Wi-Fi and older routers rarely deliver the full line rate, and evening congestion shares the pipe with your neighbours. The calculator gives the ceiling; reality sits under it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does upload speed matter for downloads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only indirectly. Most home connections are asymmetric — a 500/50 Mbps plan gives 500 down and 50 up — so downloads use the fast direction. Uploads still carry the acknowledgements that keep a download flowing, so a saturated upload such as a cloud backup or a video call can throttle a download noticeably even though the download tier is untouched."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does a 100 GB game take to download?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 100 Mbps with 10% overhead a 100 GB console or Steam title needs about 2 hours 28 minutes. At 500 Mbps it drops to roughly 30 minutes and at 1 Gbps to about 15. On a 25 Mbps connection the same download runs close to 10 hours, which is why big patch days are an overnight job on slower lines."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Download Time Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Download Time Calculator</span></nav>
+  <section class="hero">
+    <h1>Download Time Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Your ISP sells bits, your files are measured in bytes. That factor of eight is where most estimates go wrong.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .cmp { margin-top:16px; }
+      #tool .cmp-title { font-size:13px; color:var(--muted); margin-bottom:6px; }
+      #tool .cmp table { width:100%; border-collapse:collapse; font-size:14px; }
+      #tool .cmp td { border-top:1px solid var(--line); padding:7px 4px; }
+      #tool .cmp td:last-child { text-align:right; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="size" data-i18n="tool.size.label">File size</label>
+        <input type="number" id="size" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="50">
+      </div>
+      <div>
+        <label for="sizeunit" data-i18n="tool.unit.label">Unit</label>
+        <select id="sizeunit">
+          <option value="mb" data-i18n="tool.size.mb">MB (megabytes)</option>
+          <option value="gb" selected data-i18n="tool.size.gb">GB (gigabytes)</option>
+          <option value="tb" data-i18n="tool.size.tb">TB (terabytes)</option>
+          <option value="gib" data-i18n="tool.size.gib">GiB (binary — as Windows shows)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="speed" data-i18n="tool.speed.label">Connection speed</label>
+        <input type="number" id="speed" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100">
+      </div>
+      <div>
+        <label for="speedunit" data-i18n="tool.unit.label">Unit</label>
+        <select id="speedunit">
+          <option value="mbps" selected data-i18n="tool.speed.mbps">Mbps (megabits/s)</option>
+          <option value="mbyte" data-i18n="tool.speed.mbyte">MB/s (megabytes/s)</option>
+          <option value="gbps" data-i18n="tool.speed.gbps">Gbps (gigabits/s)</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="overhead" data-i18n="tool.oh.label">Overhead</label>
+    <select id="overhead">
+      <option value="0" data-i18n="tool.oh.none">Theoretical — 0% overhead</option>
+      <option value="0.05" data-i18n="tool.oh.light">Wired, ideal — 5% overhead</option>
+      <option value="0.1" selected data-i18n="tool.oh.real">Realistic — 10% overhead</option>
+      <option value="0.2" data-i18n="tool.oh.heavy">Wi-Fi or mobile — 20% overhead</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.time">Download time</div>
+          <div class="rc-val" id="r-time">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.eff">Effective speed</div><div class="rc-val" id="r-eff">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.size">File size</div><div class="rc-val" id="r-size">—</div></div>
+      </div>
+      <div class="cmp">
+        <div class="cmp-title" data-i18n="tool.r.compare">Same file at other speeds</div>
+        <table><tbody id="cmp-body"></tbody></table>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">1 GB = 1,000 MB and 1 Mbps = 0.125 MB/s. Real transfers also depend on the server, Wi-Fi and network congestion.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How download time is actually calculated</h2>
+    <p>Every download estimate is one division: file size divided by transfer speed. The trap is that the two numbers almost never arrive in the same unit. Your internet plan is sold in megabits per second, your file manager reports gigabytes, and the two differ by a factor of eight before anything else goes wrong. Get the conversion right and the arithmetic is trivial; get it wrong and your estimate is off by 800%.</p>
+
+    <h3>Worked example: a 50 GB game on a 100 Mbps line</h3>
+    <p>Start with the connection. 100 Mbps means 100 million bits per second. Eight bits make one byte, so divide by eight: 12.5 megabytes per second. That is the theoretical ceiling of the line, and it is the number you should compare against the "12.4 MB/s" your browser shows during a download.</p>
+    <p>Now the file. 50 GB is 50,000 MB. At the theoretical 12.5 MB/s the download takes 50,000 ÷ 12.5 = 4,000 seconds, which is 1 hour 6 minutes 40 seconds. Switch to the realistic setting and 10% comes off the top: 12.5 × 0.9 = 11.25 MB/s, so 50,000 ÷ 11.25 = 4,444 seconds, or about 1 hour 14 minutes. That five-to-eight minute gap is the protocol tax, and on a big file it is real time you will wait.</p>
+
+    <h3>The eight-times confusion, and the bill it produces</h3>
+    <p>A customer upgrades from 100 Mbps to 500 Mbps and complains the download manager only shows 56 MB/s. Support explains, again, that 500 Mbps is 62.5 MB/s at best, and after overhead about 56 — the line is performing exactly as sold. Nothing is broken. The same confusion runs the other way: people budget "1 GB per second" for a gigabit line when the honest figure is 125 MB/s before overhead, roughly 112 MB/s after.</p>
+    <p>A quick rule for anything a UK or US ISP advertises: drop the "b", divide by eight. 25 Mbps is about 3 MB/s, 100 Mbps about 12.5 MB/s, 500 Mbps about 62.5 MB/s, 1 Gbps about 125 MB/s. Lowercase b means bits, uppercase B means bytes — the whole industry hangs on one letter of case.</p>
+
+    <h3>Why 10% overhead is the honest default</h3>
+    <p>TCP/IP headers, TLS handshakes, DNS lookups, retransmitted packets and acknowledgement traffic all ride the same pipe as your file. Measured overhead on a typical HTTPS transfer sits between 5% and 10%; the calculator uses the pessimistic end because most real sessions also lose a slice to something else. Wi-Fi is the usual suspect: a 2.4 GHz link in a busy flat rarely sustains 100 Mbps regardless of what fibre reaches the router. Then there is the far end, where the server may cap each connection to spread load fairly — the reason a torrent with 30 peers can outrun a single HTTPS stream on the same line.</p>
+
+    <h2>The same file across speed tiers</h2>
+    <p>The comparison table in the tool is where the upgrade question gets settled. A 100 GB console game at 10% overhead takes roughly 9 hours 53 minutes on 25 Mbps, 2 hours 28 minutes on 100 Mbps, 30 minutes on 500 Mbps and 15 minutes on 1 Gbps. Notice the shape of the curve: the jump from 25 to 100 Mbps saves seven and a half hours, while the jump from 500 Mbps to gigabit saves fifteen minutes. Most households feel the first upgrade dramatically and the last one barely at all, which is worth knowing before signing a two-year contract.</p>
+    <p>The same shape explains why streaming tiers stopped mattering. 4K video needs about 25 Mbps sustained; anything above that changes nothing about picture quality and only shortens large downloads. If nobody in the house downloads 100 GB games, the practical benefit of gigabit is mostly latency and simultaneous users, not the headline number.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>This calculator uses decimal units — 1 GB = 1,000 MB — which matches how drives and ISPs are sold. Windows reports the same file as 46.6 GiB using binary units, so a size copied from Explorer runs about 7% high here. Steam, PlayStation and Xbox all display decimal sizes, so pasting a store page number needs no adjustment.</p>
+    <p>The estimate also assumes a steady rate. Real transfers ramp up over the first few seconds (TCP slow start), dip when a shared network gets busy, and sometimes stall while a server thinks. Treat the result as the best case with a realistic haircut applied: if your actual download finishes within about 20% of it, your connection is behaving normally. If it lands at one eighth of the predicted speed, you converted bits to bytes in the wrong direction.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.fcc.gov/consumers/guides/broadband-speed-guide" target="_blank" rel="noopener">FCC Broadband Speed Guide — how advertised Mbps tiers map to real household usage</a></li>
+      <li><a href="https://physics.nist.gov/cuu/Units/binary.html" target="_blank" rel="noopener">NIST — prefixes for binary multiples, why 1 GB and 1 GiB differ</a></li>
+      <li><a href="https://www.rfc-editor.org/info/rfc9293" target="_blank" rel="noopener">RFC 9293 (TCP) — the transmission control protocol behind slow start and retransmission overhead</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance" target="_blank" rel="noopener">MDN Web Performance — transfer size, compression and network latency fundamentals</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/gradient-generator/"><span class="related-ico" aria-hidden="true">🌈</span><span class="related-name">CSS Gradient Generator</span></a><a class="related-item" href="https://tool-hub.me/hash-gen/"><span class="related-ico" aria-hidden="true">#️⃣</span><span class="related-name">Hash Generator</span></a><a class="related-item" href="https://tool-hub.me/html-entity-conv/"><span class="related-ico" aria-hidden="true">🔣</span><span class="related-name">HTML Entity Encoder / Decoder</span></a><a class="related-item" href="https://tool-hub.me/http-status-lookup/"><span class="related-ico" aria-hidden="true">🚦</span><span class="related-name">HTTP Status Code Lookup</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between Mbps and MB/s?</summary><p data-i18n="faq.a1">Mbps means megabits per second, and eight bits make one byte, so a 100 Mbps line moves at most 12.5 MB/s. ISPs advertise in bits because the number looks eight times bigger, while your operating system reports file sizes and download progress in bytes. Divide the advertised speed by eight before comparing it with anything Windows or macOS shows you.</p></details>
+    <details><summary data-i18n="faq.q2">Why is my real download slower than this estimate?</summary><p data-i18n="faq.a2">Protocol overhead — TCP/IP headers, TLS handshakes, retransmissions — eats roughly 5 to 10% before any file data moves, which is why the realistic setting exists. Beyond that, the server may cap each connection, Wi-Fi and older routers rarely deliver the full line rate, and evening congestion shares the pipe with your neighbours. The calculator gives the ceiling; reality sits under it.</p></details>
+    <details><summary data-i18n="faq.q3">Does upload speed matter for downloads?</summary><p data-i18n="faq.a3">Only indirectly. Most home connections are asymmetric — a 500/50 Mbps plan gives 500 down and 50 up — so downloads use the fast direction. Uploads still carry the acknowledgements that keep a download flowing, so a saturated upload such as a cloud backup or a video call can throttle a download noticeably even though the download tier is untouched.</p></details>
+    <details><summary data-i18n="faq.q4">How long does a 100 GB game take to download?</summary><p data-i18n="faq.a4">At 100 Mbps with 10% overhead a 100 GB console or Steam title needs about 2 hours 28 minutes. At 500 Mbps it drops to roughly 30 minutes and at 1 Gbps to about 15. On a 25 Mbps connection the same download runs close to 10 hours, which is why big patch days are an overnight job on slower lines.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

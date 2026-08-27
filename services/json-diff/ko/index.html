@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-yEectlEZpzLrcMMJHmlm9JupHv9c9J3sPR6I5eo0CJA=' 'sha256-kBN7oxpjA10OsSl6tbgqy3CvgOW5DonDJ/Kbnd7JRJQ=' 'sha256-N4Bpr5N5neQY1ZY6E1w6iyXNc4EfOg91Z0d0NjnG22Y='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON Diff — 두 JSON 비교 도구</title>
+<meta name="description" content="두 JSON 문서를 비교해 추가·삭제·변경된 값을 정확한 경로와 함께 보여줍니다. 브라우저 안에서만 실행되는 재귀 비교 도구입니다.">
+<meta name="keywords" content="json diff, json compare, compare two json online, json difference checker, json comparison tool, diff json files">
+<link rel="canonical" href="https://tool-hub.me/json-diff/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/json-diff/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/json-diff/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/json-diff/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/json-diff/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/json-diff/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/json-diff/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/json-diff/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/json-diff/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/json-diff/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/json-diff/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/json-diff/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/json-diff/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/json-diff/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/json-diff/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/json-diff/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JSON Diff — 두 JSON 비교 도구">
+<meta property="og:description" content="두 JSON 문서를 비교해 추가·삭제·변경된 값을 정확한 경로와 함께 보여줍니다. 브라우저 안에서만 실행되는 재귀 비교 도구입니다.">
+<meta property="og:url" content="https://tool-hub.me/json-diff/ko/">
+<meta property="og:image" content="https://tool-hub.me/json-diff/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9333ea">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "JSON Diff",
+  "description": "Compare two JSON files and see every added, removed and changed value with its exact path. A deep recursive diff that runs entirely in your browser.",
+  "url": "https://tool-hub.me/json-diff/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JSON Diff",
+      "item": "https://tool-hub.me/json-diff/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does key order matter in a JSON diff?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not for objects. An object with a before b is the same object as b before a, so this tool reports no difference. Arrays are the opposite: order is part of the data, so [1,2] against [2,1] comes back as two changed items."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is a moved array item shown as changed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The comparison is index-based: position 0 is compared with position 0, position 1 with position 1. Insert one item at the front and every later index shifts, so each one is reported as changed. That matches how parsers actually read the array, but when order is not meaningful you are usually better off comparing records by a stable id field."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my JSON uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Parsing and comparison both run in JavaScript inside this page, so nothing leaves your device. Load the page once, go offline, and it still works. That makes it safe for API responses or config files that contain customer data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How large can the two documents be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A few megabytes each is comfortable on a modern laptop, because the diff walks every node exactly once. What slows down first is the rendered list, so only the first 500 differences are drawn while the counters stay accurate. For files far bigger than that a command line diff is the better tool."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>JSON Diff</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">JSON Diff</span></nav>
+  <section class="hero">
+    <h1>JSON Diff</h1>
+    <p class="lede" data-i18n="hero.lede">Paste two JSON documents. Every difference comes back with its full path.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .pane-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool textarea { width:100%; min-height:170px; resize:vertical;
+        font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; line-height:1.5; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool h3.list-title { font-size:14px; margin:16px 0 6px; }
+      #tool .dlist { max-height:340px; overflow:auto; border:1px solid var(--line); border-radius:8px; }
+      #tool .drow { display:flex; flex-wrap:wrap; align-items:baseline; gap:8px; padding:8px 12px;
+        border-bottom:1px solid var(--line); font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; }
+      #tool .drow:last-child { border-bottom:0; }
+      #tool .badge { flex:none; font-family:inherit; font-size:11px; font-weight:700; letter-spacing:.02em;
+        padding:2px 7px; border-radius:999px; text-transform:uppercase; }
+      #tool .badge.add { background:#dcfce7; color:#15803d; }
+      #tool .badge.rem { background:#fee2e2; color:#b91c1c; }
+      #tool .badge.chg { background:#ede9fe; color:#6d28d9; }
+      #tool .dpath { font-weight:700; word-break:break-all; }
+      #tool .dval { color:var(--muted); word-break:break-all; }
+      #tool .dval.old { text-decoration:line-through; }
+      #tool .arrow { color:var(--muted); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; word-break:break-word; }
+      @media(max-width:560px){ #tool .pane-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="pane-row">
+      <div>
+        <label for="json-a" data-i18n="tool.a.label">Original JSON</label>
+        <textarea id="json-a" spellcheck="false" autocomplete="off" placeholder='{"name":"Ada","role":"admin","tags":["a","b"]}'></textarea>
+      </div>
+      <div>
+        <label for="json-b" data-i18n="tool.b.label">Changed JSON</label>
+        <textarea id="json-b" spellcheck="false" autocomplete="off" placeholder='{"name":"Ada","role":"editor","tags":["a","c"],"active":true}'></textarea>
+      </div>
+    </div>
+
+    <div style="margin-top:12px;max-width:220px;">
+      <label for="row-limit" data-i18n="tool.rows.label">Show in list</label>
+      <select id="row-limit">
+        <option value="100">100</option>
+        <option value="500" selected>500</option>
+        <option value="2000">2000</option>
+        <option value="all" data-i18n="tool.rows.all">All</option>
+      </select>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Compare</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.total">Differences</div>
+          <div class="rc-val" id="r-total">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.added">Added</div><div class="rc-val" id="r-added">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.removed">Removed</div><div class="rc-val" id="r-removed">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.changed">Changed</div><div class="rc-val" id="r-changed">—</div></div>
+      </div>
+      <h3 class="list-title" id="list-title" data-i18n="tool.r.list" hidden>Change list</h3>
+      <div class="dlist" id="dlist" hidden></div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.local" style="margin-top:12px;">Both documents are compared in your browser. Nothing is uploaded to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a JSON diff actually tells you</h2>
+    <p>Text diff tools compare lines. JSON is not made of lines — it is a tree, and a pretty-printer can move every line without changing a single value. That is why a normal line diff of two API responses is usually unreadable: reformat the payload and you get a hundred red lines describing zero real changes. A structural diff parses both documents first, then walks the two trees together and reports only what the data says. Formatting, indentation and key order fall away.</p>
+    <p>This tool classifies every finding into one of three buckets. <strong>Added</strong> means the path exists in the changed document but not in the original. <strong>Removed</strong> is the reverse. <strong>Changed</strong> means the path exists on both sides with different values — including a type change, where a field went from a number to a string and quietly broke a consumer downstream.</p>
+
+    <h3>Worked example: debugging an API response</h3>
+    <p>Say a staging endpoint returns <code>{"name":"Ada","role":"admin","tags":["a","b"]}</code> and production returns <code>{"name":"Ada","role":"editor","tags":["a","c"],"active":true}</code>. Paste one into each box and the summary reads Added 1, Removed 0, Changed 2, with three rows:</p>
+    <ul>
+      <li><code>role</code> — "admin" → "editor"</li>
+      <li><code>tags[1]</code> — "b" → "c"</li>
+      <li><code>active</code> — true (added)</li>
+    </ul>
+    <p>Three lines, and the bug report writes itself. Compare that with scrolling two 400-line responses side by side hoping to spot a changed enum value.</p>
+
+    <h3>How to read the paths</h3>
+    <p>Paths are written the way you would type them in JavaScript or in a <code>jq</code> filter. Object keys are joined with a dot, array elements use square brackets with a zero-based index, and the two nest freely: <code>user.orders[2].items[0].sku</code> means the SKU of the first item of the third order. Copy the path straight into your console against the same object and you will land on the exact value the row is talking about. When the two documents differ at the very top — a bare number against an object, say — the path column shows <code>(root)</code>, because there is no key to point at.</p>
+
+    <h3>Why arrays behave differently from objects</h3>
+    <p>In JSON, an object is an unordered bag of keys. Serialisers, hash maps and languages all reorder keys freely, so this tool treats an object as a set: reordering <code>{"a":1,"b":2}</code> to <code>{"b":2,"a":1}</code> produces no differences at all. Arrays are ordered by definition, so position is data. The comparison is index-based: element 0 against element 0, element 1 against element 1.</p>
+    <p>The practical consequence is worth internalising. Insert one entry at the top of a 50-item array and you will see roughly 50 changed rows plus one added row at the end, because everything shifted by one. That is not a bug, it is the honest answer to "is index 7 the same value in both documents?" If your array is really an unordered collection of records, sort both sides by a stable id before pasting, or diff the records one at a time. Many teams switch such payloads from arrays to keyed objects for exactly this reason.</p>
+
+    <h3>Config drift between environments</h3>
+    <p>The second big use case is configuration. Staging works, production throws a 500, and the two config files are meant to be identical apart from hostnames. Paste both in: the diff shows that <code>featureFlags.newCheckout</code> is <code>true</code> in staging and <code>false</code> in production, and that <code>timeouts.readMs</code> went from <code>3000</code> to <code>300</code> — a missing zero that no reviewer noticed. Type changes surface here too. A value quoted as <code>"3000"</code> in one file and left bare as <code>3000</code> in the other looks nearly identical on screen but is reported as changed, because a string and a number are genuinely different to whatever reads the file.</p>
+
+    <h3>Practical tips</h3>
+    <p>Keep the original on the left. The labels Added and Removed are relative to the left box, so swapping the two sides inverts the report and makes a rollback look like a release. If a document will not parse, the error names the side and repeats the parser's own message, which usually points at a trailing comma, a single quote or an unescaped newline inside a string — none of which are legal JSON even though most editors accept them.</p>
+    <p>Long values are truncated at 80 characters in the list so a base64 blob cannot push the path off screen; the counters and the classification still use the full value. And because both parsing and comparison happen in the page itself, you can paste a production response with real customer records without it ever leaving your machine — load the page once and it keeps working offline.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/info/rfc8259" target="_blank" rel="noopener">IETF RFC 8259 — the JSON data interchange format, including object key ordering and array semantics</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="noopener">MDN Web Docs — JSON object reference, parsing errors and serialisation behaviour</a></li>
+      <li><a href="https://www.w3.org/TR/json-ld11/" target="_blank" rel="noopener">W3C — JSON-LD 1.1 specification on structured JSON documents and value types</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/json-formatter/"><span class="related-ico" aria-hidden="true">⚙️</span><span class="related-name">JSON Formatter</span></a><a class="related-item" href="https://tool-hub.me/json-to-csv/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">JSON to CSV Converter</span></a><a class="related-item" href="https://tool-hub.me/json-to-yaml/"><span class="related-ico" aria-hidden="true">📜</span><span class="related-name">JSON to YAML Converter</span></a><a class="related-item" href="https://tool-hub.me/jwt-decoder/"><span class="related-ico" aria-hidden="true">🔑</span><span class="related-name">JWT Decoder</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Does key order matter in a JSON diff?</summary><p data-i18n="faq.a1">Not for objects. An object with a before b is the same object as b before a, so this tool reports no difference. Arrays are the opposite: order is part of the data, so [1,2] against [2,1] comes back as two changed items.</p></details>
+    <details><summary data-i18n="faq.q2">Why is a moved array item shown as changed?</summary><p data-i18n="faq.a2">The comparison is index-based: position 0 is compared with position 0, position 1 with position 1. Insert one item at the front and every later index shifts, so each one is reported as changed. That matches how parsers actually read the array, but when order is not meaningful you are usually better off comparing records by a stable id field.</p></details>
+    <details><summary data-i18n="faq.q3">Is my JSON uploaded anywhere?</summary><p data-i18n="faq.a3">No. Parsing and comparison both run in JavaScript inside this page, so nothing leaves your device. Load the page once, go offline, and it still works. That makes it safe for API responses or config files that contain customer data.</p></details>
+    <details><summary data-i18n="faq.q4">How large can the two documents be?</summary><p data-i18n="faq.a4">A few megabytes each is comfortable on a modern laptop, because the diff walks every node exactly once. What slows down first is the rendered list, so only the first 500 differences are drawn while the counters stay accurate. For files far bigger than that a command line diff is the better tool.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

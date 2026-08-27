@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-y1LQL87B4mMn0R+ttWRS0fs+2KxYuVt/6NL1mE7kmq4=' 'sha256-pw7MhkGEdHZSPXXC5oXHTLw1llLj5G0nlyGpTT8ztMo=' 'sha256-ndych3WitqEoMnF2udXCWB7H++yNjaAb/SHXduO0BbA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이자 계산기</title>
+<meta name="description" content="예금 이자 계산기. 원금·연이율·기간을 입력하면 단리/월복리/연복리, 일반과세·세금우대·비과세 기준 세후 이자와 만기 수령액을 즉시 계산하는 무료 도구">
+<meta name="keywords" content="interest calculator, deposit interest calculator, simple interest calculator, compound interest calculator, after-tax interest">
+<link rel="canonical" href="https://tool-hub.me/interest-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/interest-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/interest-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/interest-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/interest-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/interest-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/interest-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/interest-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/interest-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/interest-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/interest-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/interest-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/interest-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/interest-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/interest-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/interest-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="이자 계산기">
+<meta property="og:description" content="예금 이자 계산기. 원금·연이율·기간을 입력하면 단리/월복리/연복리, 일반과세·세금우대·비과세 기준 세후 이자와 만기 수령액을 즉시 계산하는 무료 도구">
+<meta property="og:url" content="https://tool-hub.me/interest-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/interest-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#16a34a">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Interest Calculator",
+  "description": "Free deposit interest calculator: enter principal, annual rate and term to instantly get simple, monthly-compound or annual-compound interest, tax (15.4%/9.5%/0%) and the after-tax maturity payout.",
+  "url": "https://tool-hub.me/interest-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Interest Calculator",
+      "item": "https://tool-hub.me/interest-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between simple, monthly compound and annual compound interest?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With simple interest, only the principal earns interest (principal x rate x years). With monthly or annual compounding, the interest earned each month or year is added to the principal and earns interest again. Most Korean time deposits pay simple interest at maturity, so Simple is the default — switch the radio buttons to use this tool as a simple or compound interest calculator and compare all three methods on one screen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes up the 15.4% interest income tax?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is 14% income tax plus 1.4% local income tax (10% of the income tax). Korean bank deposit interest is withheld at 15.4% by default, and the Standard option applies that rate, so the after-tax interest is close to what you actually receive. Members of mutual-finance cooperatives can pick Preferential 9.5%, and eligible tax-free comprehensive savings (e.g. aged 65+) can pick Tax-free 0%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Rule of 72?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide 72 by the annual rate (%) to estimate how many years it takes for money to double with compound interest. At 4% a year, 72 / 4 = about 18 years. Try the annual compound option of this interest calculator with different terms and watch the pre-tax interest approach the principal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does interest differ between a time deposit (lump sum) and installment savings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A time deposit keeps the whole lump sum invested for the entire term, while installment savings deposit money month by month, so the average deposit period is about half the term — at the same rate, pre-tax interest is roughly half. This deposit interest calculator assumes a lump sum; if you save monthly, use the savings maturity calculator. Open the savings maturity calculator →"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why can the result differ from the interest my bank actually pays?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This after-tax interest calculator assumes whole-month terms and rounds amounts down to the won. Banks count exact days, early withdrawal applies a lower early-termination rate, and bonus-rate conditions can change the applied rate — so the actual payout can differ by a few won to a few thousand won. Use the result as an estimate."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Interest Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Interest Calculator</span></nav>
+  <section class="hero">
+    <h1>Interest Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How much interest will a lump sum earn? Simple or compound, with tax deducted — see the actual payout instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): attach a data-i18n hook to every user-visible string and add
+         the same key to "all" language blocks (14) in js/locales.js. Look up dynamic JS strings via
+         window.I18N.t("key"), and subscribe to the document "i18n:change" event when a refresh is needed. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <label for="principal-input" data-i18n="tool.principal.label">Principal (KRW)</label>
+    <input type="text" id="principal-input" inputmode="numeric" autocomplete="off" spellcheck="false"
+           placeholder="e.g. 10,000,000" data-i18n-placeholder="tool.principal.placeholder" aria-describedby="result-box">
+
+    <label for="rate-input" data-i18n="tool.rate.label">Annual interest rate (%, before tax)</label>
+    <input type="number" id="rate-input" inputmode="decimal" min="0" max="30" step="0.01"
+           placeholder="e.g. 3.5" data-i18n-placeholder="tool.rate.placeholder">
+
+    <label for="months-input" data-i18n="tool.months.label">Term (months)</label>
+    <input type="number" id="months-input" inputmode="numeric" min="1" max="360" step="1"
+           placeholder="e.g. 12" data-i18n-placeholder="tool.months.placeholder">
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;">
+      <button type="button" class="preset-btn" data-months="3" data-i18n="tool.preset.m3" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">3 mo</button>
+      <button type="button" class="preset-btn" data-months="6" data-i18n="tool.preset.m6" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">6 mo</button>
+      <button type="button" class="preset-btn" data-months="12" data-i18n="tool.preset.m12" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">12 mo</button>
+      <button type="button" class="preset-btn" data-months="24" data-i18n="tool.preset.m24" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">24 mo</button>
+      <button type="button" class="preset-btn" data-months="36" data-i18n="tool.preset.m36" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">36 mo</button>
+      <button type="button" class="preset-btn" data-months="60" data-i18n="tool.preset.m60" style="background:none;border:1px solid var(--line);border-radius:8px;padding:6px 12px;cursor:pointer;font-family:inherit;font-size:14px;color:var(--ink);">60 mo</button>
+    </div>
+
+    <p id="method-heading" style="font-weight:600;font-size:14px;margin:14px 0 6px;" data-i18n="tool.method.label">Interest type</p>
+    <div role="radiogroup" aria-labelledby="method-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="method" value="simple" checked>
+        <span data-i18n="tool.method.simple">Simple</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="method" value="monthly">
+        <span data-i18n="tool.method.monthly">Monthly compound</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="method" value="yearly">
+        <span data-i18n="tool.method.yearly">Annual compound</span>
+      </label>
+    </div>
+
+    <p id="tax-heading" style="font-weight:600;font-size:14px;margin:14px 0 6px;" data-i18n="tool.tax.label">Tax</p>
+    <div role="radiogroup" aria-labelledby="tax-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="tax" value="154" checked>
+        <span data-i18n="tool.tax.normal">Standard 15.4%</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="tax" value="95">
+        <span data-i18n="tool.tax.pref">Preferential 9.5%</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="tax" value="0">
+        <span data-i18n="tool.tax.exempt">Tax-free 0%</span>
+      </label>
+    </div>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate</button>
+    <button class="btn" id="reset-btn" type="button" data-i18n="tool.reset" style="background:var(--muted);margin-inline-start:8px;">Reset</button>
+
+    <div class="result" id="result-box" hidden>
+      <div id="result-error" style="color:#dc2626;font-weight:600;" hidden></div>
+      <div id="result-body" hidden>
+        <p style="margin:0;color:var(--muted);font-size:14px;" data-i18n="tool.result.maturity">Maturity payout</p>
+        <p style="margin:2px 0 14px;"><strong id="r-maturity"></strong></p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;">
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.principal">Principal</div>
+            <div style="font-weight:700;" id="r-principal"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.pretax">Interest before tax</div>
+            <div style="font-weight:700;" id="r-pretax"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.tax">Tax withheld</div>
+            <div style="font-weight:700;" id="r-tax"></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:8px;padding:10px 12px;">
+            <div style="font-size:13px;color:var(--muted);" data-i18n="tool.result.aftertax">Interest after tax</div>
+            <div style="font-weight:700;" id="r-aftertax"></div>
+          </div>
+        </div>
+        <p id="r-compare" style="margin:14px 0 0;font-size:14px;color:var(--muted);"></p>
+        <p id="r-clip-note" style="margin:8px 0 0;font-size:13px;color:#dc2626;" data-i18n="tool.note.clipped" hidden>Some inputs were outside the supported range and were adjusted (principal 1,000-10,000,000,000 KRW / rate 0-30% / term 1-360 months).</p>
+        <p style="margin:10px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.floor">Assumes a lump-sum deposit paid out at maturity; amounts are rounded down to the won. Actual bank payouts may differ due to day-count rules and early-termination rates.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English in-depth guide (unique, no data-i18n). -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Simple and compound interest, and the tax in between</h2>
+    <p>Interest is the price of time. Deposit a sum today and the bank pays you a percentage for leaving it untouched; the two things that decide how much you actually receive are <strong>how the interest is calculated</strong> and <strong>how it is taxed</strong>. This calculator models both, using the standard rules for a lump-sum time deposit paid out at maturity.</p>
+    <p>The gap between simple and compound interest is small over a few months and large over many years. Simple interest is paid only on your original principal. Compound interest is paid on the principal plus the interest already added, so each period earns a little more than the last — the effect that makes long horizons powerful.</p>
+
+    <h2>The formulas</h2>
+    <div class="example">
+      <p>For principal P, annual rate r (as a decimal) and time t in years:</p>
+      <ul>
+        <li><strong>Simple:</strong> maturity = P &times; (1 + r &times; t)</li>
+        <li><strong>Annual compound:</strong> maturity = P &times; (1 + r)<sup>t</sup></li>
+        <li><strong>Monthly compound:</strong> maturity = P &times; (1 + r/12)<sup>12t</sup></li>
+      </ul>
+      <p>Interest is the maturity minus P. In Korea, deposit interest is then taxed at a flat <strong>15.4%</strong> — 14% income tax plus a 1.4% local surtax — withheld before the money reaches you. After-tax interest = pre-tax interest &times; (1 &minus; 0.154).</p>
+    </div>
+
+    <h3>Worked example 1 — 10,000,000 KRW, 3.5%, 12 months</h3>
+    <div class="example">
+      <p>Simple interest: 10,000,000 &times; 0.035 &times; 1 = <strong>350,000 KRW</strong> before tax. Tax withheld = 350,000 &times; 0.154 = 53,900. After-tax interest = <strong>296,100 KRW</strong>, so you receive 10,296,100 at maturity.</p>
+      <p>Monthly compound at the same rate: 10,000,000 &times; (1 + 0.035/12)<sup>12</sup> = 10,355,670, an interest of 355,670 — about 5,670 KRW more than simple, purely from compounding within the year.</p>
+    </div>
+
+    <h3>Worked example 2 — the tax break</h3>
+    <div class="example">
+      <p>On the 350,000 KRW simple interest above, a preferential 9.5% rate (available on some cooperative and policy deposits) withholds only 33,250 KRW, leaving 316,750 — about 20,650 KRW more in your pocket than the standard 15.4%. A fully tax-free product would return the whole 350,000.</p>
+    </div>
+
+    <h2>How compounding frequency adds up</h2>
+    <p>The more often interest compounds, the higher the effective yield, though the difference shrinks quickly. The table shows the pre-tax interest on 10,000,000 KRW at 3.5% for one year under each method.</p>
+    <table>
+      <tr><th>Method</th><th>Maturity (KRW)</th><th>Pre-tax interest</th></tr>
+      <tr><td>Simple</td><td>10,350,000</td><td>350,000</td></tr>
+      <tr><td>Annual compound</td><td>10,350,000</td><td>350,000</td></tr>
+      <tr><td>Monthly compound</td><td>10,355,670</td><td>355,670</td></tr>
+    </table>
+    <p>Over exactly one year, simple and annual compound coincide; the difference only opens up across multiple years.</p>
+    <p>This gap is captured by the effective annual rate. Monthly compounding at a 3.5% nominal rate produces an effective 3.56% a year, because each month's interest itself earns interest. The more frequent the compounding, the closer the effective rate creeps toward a continuous-compounding ceiling, but for everyday deposit rates the extra gain beyond monthly compounding is negligible — a few thousand won on ten million.</p>
+
+    <h2>The Rule of 72</h2>
+    <p>To estimate how long compound interest takes to double your money, divide 72 by the annual percentage rate. At 3.5% that is 72 &divide; 3.5 &asymp; 20.6 years; at 6% it is 12 years. It is a mental shortcut, accurate to within a fraction of a year for the rates ordinary savers see.</p>
+
+    <h2>Why your bank's figure may differ</h2>
+    <p>Real payouts can vary from any calculator. Banks use specific day-count conventions, may credit interest on installment savings only on each month's balance, apply lower rates for early termination, and round to the won. Treat these results as a planning estimate, not a guaranteed quote, and confirm the exact terms with your bank.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — consumer guides on savings, APY and interest terms</a></li>
+      <li><a href="https://www.federalreserve.gov/releases/h15/" target="_blank" rel="noopener">Federal Reserve H.15 — official selected interest rates published for the US</a></li>
+      <li><a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" target="_blank" rel="noopener">SEC Investor.gov — compound interest explained with an official calculator</a></li>
+      <li><a href="https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial" target="_blank" rel="noopener">Khan Academy — simple vs compound interest and the Rule of 72</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/investment-goal-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Investment Goal Calculator</span></a><a class="related-item" href="https://tool-hub.me/landed-cost-batch/"><span class="related-ico" aria-hidden="true">🚢</span><span class="related-name">Landed Cost Batch Calculator</span></a><a class="related-item" href="https://tool-hub.me/loan-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">Loan Calculator</span></a><a class="related-item" href="https://tool-hub.me/ltv-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">LTV Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         attach data-i18n="faq.qN|faq.aN" to each summary/p and fill every language in locales.js. -->
+    <details>
+      <summary data-i18n="faq.q1">What is the difference between simple, monthly compound and annual compound interest?</summary>
+      <p data-i18n="faq.a1">With simple interest, only the principal earns interest (principal x rate x years). With monthly or annual compounding, the interest earned each month or year is added to the principal and earns interest again. Most Korean time deposits pay simple interest at maturity, so Simple is the default — switch the radio buttons to use this tool as a simple or compound interest calculator and compare all three methods on one screen.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What makes up the 15.4% interest income tax?</summary>
+      <p data-i18n="faq.a2">It is 14% income tax plus 1.4% local income tax (10% of the income tax). Korean bank deposit interest is withheld at 15.4% by default, and the Standard option applies that rate, so the after-tax interest is close to what you actually receive. Members of mutual-finance cooperatives can pick Preferential 9.5%, and eligible tax-free comprehensive savings (e.g. aged 65+) can pick Tax-free 0%.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is the Rule of 72?</summary>
+      <p data-i18n="faq.a3">Divide 72 by the annual rate (%) to estimate how many years it takes for money to double with compound interest. At 4% a year, 72 / 4 = about 18 years. Try the annual compound option of this interest calculator with different terms and watch the pre-tax interest approach the principal.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How does interest differ between a time deposit (lump sum) and installment savings?</summary>
+      <p data-i18n="faq.a4">A time deposit keeps the whole lump sum invested for the entire term, while installment savings deposit money month by month, so the average deposit period is about half the term — at the same rate, pre-tax interest is roughly half. This deposit interest calculator assumes a lump sum; if you save monthly, use the savings maturity calculator.</p>
+      <p><a href="https://tool-hub.me/savings-calc/" data-i18n="faq.a4.link">Open the savings maturity calculator →</a></p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Why can the result differ from the interest my bank actually pays?</summary>
+      <p data-i18n="faq.a5">This after-tax interest calculator assumes whole-month terms and rounds amounts down to the won. Banks count exact days, early withdrawal applies a lower early-termination rate, and bonus-rate conditions can change the applied rate — so the actual payout can differ by a few won to a few thousand won. Use the result as an estimate.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

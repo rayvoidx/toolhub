@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-pRFnSY6RSI/bonQZMoVvslA17f8ojNw+wPcBMg/VaPs=' 'sha256-FfF5C3pOj8LLTrpSfGYwsTrPOGHIQLmhatM+zQn/pbI=' 'sha256-4xTg3L1qUhB+NOLfAfacxMA+A5oiGAC5uAATXhJPAjA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>발전기 용량 계산기 — 정전 대비 몇 kW가 필요할까</title>
+<meta name="description" content="정전 때 돌려야 할 가전을 체크하면 상시 소비전력, 기동 서지, 그리고 2,200~22,000W 표준 용량 중 알맞은 발전기 크기를 알려줍니다.">
+<meta name="keywords" content="generator size calculator, what size generator do i need, generator wattage calculator, whole house generator size, running watts vs surge watts, portable generator sizing">
+<link rel="canonical" href="https://tool-hub.me/generator-size-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/generator-size-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/generator-size-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/generator-size-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/generator-size-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/generator-size-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/generator-size-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/generator-size-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/generator-size-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/generator-size-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/generator-size-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/generator-size-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/generator-size-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/generator-size-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/generator-size-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/generator-size-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="발전기 용량 계산기 — 정전 대비 몇 kW가 필요할까">
+<meta property="og:description" content="정전 때 돌려야 할 가전을 체크하면 상시 소비전력, 기동 서지, 그리고 2,200~22,000W 표준 용량 중 알맞은 발전기 크기를 알려줍니다.">
+<meta property="og:url" content="https://tool-hub.me/generator-size-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/generator-size-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Generator Size Calculator",
+  "description": "Tick the appliances you need during an outage and see the generator size to buy: running watts, startup surge and the nearest common 2,200 to 22,000 W unit.",
+  "url": "https://tool-hub.me/generator-size-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Generator Size Calculator",
+      "item": "https://tool-hub.me/generator-size-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between running watts and surge watts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Running watts are the steady draw once a device is up to speed. Surge (starting) watts are the brief inrush an electric motor pulls for a second or two at start-up, typically two to three times its running figure. A fridge that runs at 700 W can demand 2,200 W the moment the compressor kicks in, so the generator has to cover both numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why not size the generator for everything starting at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Motors almost never start in the same second, and the ones that might can be staggered by hand. This calculator adds the full running load plus the single largest surge, which is how electricians size a system with a transfer switch and prioritised circuits. Sizing for simultaneous starts would push a typical outage kit from 7.5 kW past 12 kW and burn extra fuel every hour."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Inverter generator or conventional?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inverter units produce clean power, usually under 3% total harmonic distortion, and throttle the engine down to the load, so they are quieter and safer for laptops, TVs and modern furnace control boards. Conventional open-frame generators cost less per watt and scale bigger, which suits pumps, heaters and tools. Below about 5,000 W the inverter premium is worth it; above that many people pair a big conventional unit with a small inverter for electronics."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does a portable stop making sense and a standby take over?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Around 10 kW. Below that, a portable plus an interlock kit or manual transfer switch covers the essentials for a few hundred dollars of gear. Above it you are refuelling every 8 to 10 hours in the dark, and a permanently installed standby on natural gas or propane that starts itself is the better answer — especially if central air conditioning or a well pump is on the list."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Generator Size Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Generator Size Calculator</span></nav>
+  <section class="hero">
+    <h1>Generator Size Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Tick what has to keep running. We add the watts, then add the one motor that starts hardest.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .grp-label { font-weight:600; margin:0 0 8px; }
+      #tool .items { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:6px 16px; margin-bottom:16px; }
+      #tool .items label { display:flex; align-items:flex-start; gap:8px; font-weight:400; margin:0; padding:4px 0; cursor:pointer; }
+      #tool .items input { width:auto; margin:2px 0 0; flex:none; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.hero-card .rc-sub { font-size:13px; color:var(--muted); margin-top:4px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <p class="grp-label" data-i18n="tool.items.label">What do you need to run during an outage?</p>
+    <div class="items">
+      <label for="i-fridge"><input type="checkbox" id="i-fridge"><span data-i18n="tool.item.fridge">Refrigerator — 700 W running / 2,200 W start</span></label>
+      <label for="i-freezer"><input type="checkbox" id="i-freezer"><span data-i18n="tool.item.freezer">Chest freezer — 500 W running / 1,500 W start</span></label>
+      <label for="i-sump"><input type="checkbox" id="i-sump"><span data-i18n="tool.item.sump">Sump pump — 800 W running / 2,000 W start</span></label>
+      <label for="i-well"><input type="checkbox" id="i-well"><span data-i18n="tool.item.well">Well pump, 1/2 HP — 1,000 W running / 3,000 W start</span></label>
+      <label for="i-furnace"><input type="checkbox" id="i-furnace"><span data-i18n="tool.item.furnace">Furnace blower — 800 W running / 2,300 W start</span></label>
+      <label for="i-winac"><input type="checkbox" id="i-winac"><span data-i18n="tool.item.winac">Window air conditioner — 1,200 W running / 3,600 W start</span></label>
+      <label for="i-centralac"><input type="checkbox" id="i-centralac"><span data-i18n="tool.item.centralac">Central AC, 3 ton — 3,500 W running / 8,000 W start</span></label>
+      <label for="i-lights"><input type="checkbox" id="i-lights"><span data-i18n="tool.item.lights">Lighting circuit — 300 W</span></label>
+      <label for="i-tv"><input type="checkbox" id="i-tv"><span data-i18n="tool.item.tv">TV, router and chargers — 500 W</span></label>
+      <label for="i-micro"><input type="checkbox" id="i-micro"><span data-i18n="tool.item.micro">Microwave — 1,000 W</span></label>
+      <label for="i-ev"><input type="checkbox" id="i-ev"><span data-i18n="tool.item.ev">EV level 2 charger — 7,200 W</span></label>
+    </div>
+
+    <label for="custom" data-i18n="tool.custom.label">Other running watts (optional)</label>
+    <input type="number" id="custom" inputmode="numeric" min="0" max="100000" step="50" autocomplete="off" placeholder="0">
+
+    <label for="headroom" data-i18n="tool.headroom.label">Safety headroom</label>
+    <select id="headroom">
+      <option value="0">0%</option>
+      <option value="10" selected>10%</option>
+      <option value="15">15%</option>
+      <option value="20">20%</option>
+      <option value="25">25%</option>
+      <option value="30">30%</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate generator size</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.size">Recommended generator</div>
+          <div class="rc-val" id="r-size">—</div>
+          <div class="rc-sub" id="r-pick"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.running">Running load</div><div class="rc-val" id="r-running">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.peak">Startup peak</div><div class="rc-val" id="r-peak">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.headroom">Headroom</div><div class="rc-val" id="r-headroom">—</div></div>
+      </div>
+      <p class="subtle" id="r-biggest"></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.assume" style="margin-top:12px;">Assumes one motor starts at a time: startup peak = total running watts plus the largest single surge. Sizing for every motor starting together would nearly double the generator.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What size generator do I need?</h2>
+    <p>Generator sizing is two sums, not one. The first is the running load: everything that will be drawing power at the same time, added up in watts. The second is the startup peak: that running load plus the biggest inrush any single motor pulls when it kicks in. Compressors and pumps briefly demand two to three times their running figure, and a generator that cannot supply that spike will sag, trip its breaker or stall — even though the running numbers looked fine on paper.</p>
+    <p>This calculator uses nameplate-typical values for the appliances most households actually back up, adds your running total, then adds only the largest single surge. That last decision is the whole argument, and it is worth understanding before you spend money.</p>
+
+    <h3>Worked example: the classic outage kit</h3>
+    <p>Fridge (700 W), sump pump (800 W), furnace blower (800 W), a lighting circuit (300 W) and the TV, router and phone chargers (500 W). Running load: 3,100 W. The largest surge belongs to the fridge and the furnace blower, both adding about 1,500 W over their running draw, so the startup peak is 3,100 + 1,500 = 4,600 W. Add 10% headroom and you need 5,060 W, which lands on a 5,500 W portable — the size that shows up in every "what size generator do I need" thread for a reason. Headroom comes out at about 20%, enough to absorb a cold-start compressor without running the engine flat out.</p>
+
+    <h3>Worked example: add a well pump and a window air conditioner</h3>
+    <p>Same list, plus a 1/2 HP well pump (1,000 W running, 3,000 W start) and a window AC (1,200 W running, 3,600 W start). Running load rises to 5,300 W, and the biggest single surge is now the air conditioner at 2,400 W above its running figure. Peak: 7,700 W. With headroom that is 8,470 W, so a 9,500 W portable. Notice what happened — two appliances worth 2,200 running watts moved you up two whole size classes, because they brought their surges with them.</p>
+
+    <h3>Worked example: central air pushes you into standby territory</h3>
+    <p>A 3 ton central air conditioner runs at roughly 3,500 W and starts at 8,000 W. Pair it with just a fridge and lights and the running load is 4,500 W, but the peak is 9,000 W and the recommendation jumps to 12,000 W. That is the crossover where portables stop being practical and a permanently installed standby unit — or a soft-start kit on the compressor — becomes the cheaper answer.</p>
+
+    <h2>Why not size for everything starting at once?</h2>
+    <p>Because it would cost you roughly double for a scenario that does not happen. In the second example above, if the fridge, furnace, sump and AC all inrushed in the same instant you would need over 12,000 W instead of 9,500 W. In reality thermostats and float switches fire independently, and on a portable you control the order by hand: start the generator, let it stabilise, then switch on loads one at a time, biggest motor first. Home standby installations do the same thing automatically with load management modules that shed the air conditioner while the well pump starts.</p>
+
+    <h2>Fuel burn is the hidden cost of oversizing</h2>
+    <p>An engine sized far above your load still burns fuel to spin at 3,600 rpm. A conventional 7.5 kW open-frame unit running at a quarter load can drink 0.6 to 0.8 gallons an hour, which is a 5 gallon tank every seven or eight hours — plus a midnight refuelling trip in the rain. Inverter generators throttle the engine to match demand and can halve that at light load, which matters a lot in a three-day outage. Buy for your peak, not for a fantasy peak, and consider running a small inverter overnight for just the fridge and freezer.</p>
+
+    <h2>Transfer switches: the safety part you cannot skip</h2>
+    <p>Never plug a generator into a wall socket with a double-ended cord. Backfeeding energises the utility line outside your house, can kill a lineworker restoring power, and destroys the generator the moment the grid comes back. The legal options are extension cords straight to appliances, an interlock kit on your panel, or a manual transfer switch wired by an electrician. Run the generator outdoors, at least 20 feet from windows and doors with the exhaust pointed away — carbon monoxide from generators kills people every storm season. Bond-neutral requirements differ between a portable and a transfer switch installation, so ask the electrician which configuration your unit needs.</p>
+
+    <h2>Limitations of these numbers</h2>
+    <p>The wattages here are typical nameplate figures, not your appliances. Check the label on the back of each unit; a 1 HP well pump doubles the pump figures used here, and older fridges surge harder than new inverter-compressor models. Engine output derates with altitude (roughly 3% per 1,000 feet) and propane delivers around 10% less power than gasoline. Soft-start kits can cut an air conditioner's inrush by 60 to 70%, which sometimes keeps you on a portable instead of a standby. Treat the result as the size to shop for, and confirm anything load-critical with an electrician before you wire it into the house.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.cdc.gov/carbon-monoxide/" target="_blank" rel="noopener">CDC — carbon monoxide poisoning risks from portable generators</a></li>
+      <li><a href="https://www.energy.gov/energysaver/energy-saver" target="_blank" rel="noopener">U.S. Department of Energy — appliance energy use and backup power basics</a></li>
+      <li><a href="https://www.ready.gov/power-outages" target="_blank" rel="noopener">Ready.gov — power outage preparedness and safe generator use</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/golf-handicap-calc/"><span class="related-ico" aria-hidden="true">⛳</span><span class="related-name">Golf Handicap Calculator</span></a><a class="related-item" href="https://tool-hub.me/gpa-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">GPA Calculator</span></a><a class="related-item" href="https://tool-hub.me/grade-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">Grade Calculator</span></a><a class="related-item" href="https://tool-hub.me/grass-seed-calc/"><span class="related-ico" aria-hidden="true">🌾</span><span class="related-name">Grass Seed Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between running watts and surge watts?</summary><p data-i18n="faq.a1">Running watts are the steady draw once a device is up to speed. Surge (starting) watts are the brief inrush an electric motor pulls for a second or two at start-up, typically two to three times its running figure. A fridge that runs at 700 W can demand 2,200 W the moment the compressor kicks in, so the generator has to cover both numbers.</p></details>
+    <details><summary data-i18n="faq.q2">Why not size the generator for everything starting at once?</summary><p data-i18n="faq.a2">Motors almost never start in the same second, and the ones that might can be staggered by hand. This calculator adds the full running load plus the single largest surge, which is how electricians size a system with a transfer switch and prioritised circuits. Sizing for simultaneous starts would push a typical outage kit from 7.5 kW past 12 kW and burn extra fuel every hour.</p></details>
+    <details><summary data-i18n="faq.q3">Inverter generator or conventional?</summary><p data-i18n="faq.a3">Inverter units produce clean power, usually under 3% total harmonic distortion, and throttle the engine down to the load, so they are quieter and safer for laptops, TVs and modern furnace control boards. Conventional open-frame generators cost less per watt and scale bigger, which suits pumps, heaters and tools. Below about 5,000 W the inverter premium is worth it; above that many people pair a big conventional unit with a small inverter for electronics.</p></details>
+    <details><summary data-i18n="faq.q4">When does a portable stop making sense and a standby take over?</summary><p data-i18n="faq.a4">Around 10 kW. Below that, a portable plus an interlock kit or manual transfer switch covers the essentials for a few hundred dollars of gear. Above it you are refuelling every 8 to 10 hours in the dark, and a permanently installed standby on natural gas or propane that starts itself is the better answer — especially if central air conditioning or a well pump is on the list.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

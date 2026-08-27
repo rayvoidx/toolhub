@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-U6vTkx+5ucJt4QAkMBsdvXo0+vVWIuu4any9NpLwra0=' 'sha256-sGbT5385kEYWd06aaSsO70aHDb9n5gimk8Z+p9jQHLs=' 'sha256-kDmu1/qSVzoSI65qC67MMxi+0vaA3H6XWz0VnmoFD6s='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>행렬 계산기 — 2x2·3x3 행렬식과 역행렬</title>
+<meta name="description" content="2x2·3x3 행렬의 곱셈, 덧셈, 뺄셈, 전치, 역행렬을 브라우저에서 계산합니다. 행렬식과 첫 원소의 계산 과정을 함께 보여줍니다.">
+<meta name="keywords" content="matrix calculator, matrix multiplication calculator, determinant calculator, inverse matrix calculator, 3x3 matrix calculator, 2x2 matrix inverse">
+<link rel="canonical" href="https://tool-hub.me/matrix-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/matrix-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/matrix-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/matrix-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/matrix-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/matrix-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/matrix-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/matrix-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/matrix-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/matrix-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/matrix-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/matrix-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/matrix-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/matrix-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/matrix-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/matrix-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="행렬 계산기 — 2x2·3x3 행렬식과 역행렬">
+<meta property="og:description" content="2x2·3x3 행렬의 곱셈, 덧셈, 뺄셈, 전치, 역행렬을 브라우저에서 계산합니다. 행렬식과 첫 원소의 계산 과정을 함께 보여줍니다.">
+<meta property="og:url" content="https://tool-hub.me/matrix-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/matrix-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#3730a3">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Matrix Calculator",
+  "description": "Multiply, add, subtract, transpose or invert 2x2 and 3x3 matrices in your browser. Every answer shows the determinant and the arithmetic behind the first entry.",
+  "url": "https://tool-hub.me/matrix-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Matrix Calculator",
+      "item": "https://tool-hub.me/matrix-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is matrix multiplication done row by column?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because a matrix is a recipe for transforming vectors, and multiplying two of them means doing one transformation after the other. Entry (i, j) of the product asks what row i of A does to column j of B, so you pair them term by term and add. That is also why A × B and B × A are usually different: applying a rotation then a stretch is not the same as stretching then rotating."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does a matrix have no inverse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exactly when its determinant is 0. Geometrically the matrix squashes space flat — a 2x2 with det 0 maps the whole plane onto a single line, and a 3x3 maps space onto a plane or a line. Once that information is lost there is no way to undo the map, so no inverse exists. This tool reports that case as a result rather than an input error, because the matrix is perfectly valid — it just is not invertible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the determinant actually measure?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the factor by which the matrix scales area (2x2) or volume (3x3). A determinant of 3 means every shape comes out three times bigger; a determinant of 0.5 halves it. A negative determinant means the transformation also flips orientation, like reflecting in a mirror, and the absolute value is still the scale factor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this to solve a system of equations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, for small systems. Write the coefficients as matrix A and the constants as a column, then multiply the inverse of A by that column to get the solution. Compute the inverse here, then use the multiply mode with your constants in the first column of B. For anything bigger than 3x3, or when the determinant is near 0, Gaussian elimination is more accurate than inverting."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Matrix Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0d9488" href="https://tool-hub.me/math-calculators/">Math &amp; Science</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Matrix Calculator</span></nav>
+  <section class="hero">
+    <h1>Matrix Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Six operations, two sizes, and the working shown — not just the answer.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .mwrap { margin-top:14px; }
+      #tool .mat { display:grid; gap:8px; }
+      #tool .mat[data-n="2"] { grid-template-columns:repeat(2,minmax(0,1fr)); max-width:280px; }
+      #tool .mat[data-n="3"] { grid-template-columns:repeat(3,minmax(0,1fr)); max-width:400px; }
+      #tool .mat[data-n="2"] .x3 { display:none; }
+      #tool .mat input { width:100%; text-align:center; margin:0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:4px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .mout { display:grid; gap:6px; max-width:400px; }
+      #tool .mout[data-n="2"] { grid-template-columns:repeat(2,minmax(0,1fr)); max-width:280px; }
+      #tool .mout[data-n="3"] { grid-template-columns:repeat(3,minmax(0,1fr)); }
+      #tool .mcell { border:1px solid var(--line); border-radius:6px; padding:8px 6px; text-align:center; font-variant-numeric:tabular-nums; }
+      #tool .steps { font-weight:600; font-size:15px; line-height:1.5; word-break:break-word; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="size" data-i18n="tool.size.label">Matrix size</label>
+        <select id="size">
+          <option value="2" data-i18n="tool.size.2">2 × 2</option>
+          <option value="3" data-i18n="tool.size.3">3 × 3</option>
+        </select>
+      </div>
+      <div>
+        <label for="op" data-i18n="tool.op.label">Operation</label>
+        <select id="op">
+          <option value="mul" data-i18n="tool.op.multiply">A × B (multiply)</option>
+          <option value="det" data-i18n="tool.op.det">Determinant of A</option>
+          <option value="inv" data-i18n="tool.op.inverse">Inverse of A</option>
+          <option value="add" data-i18n="tool.op.add">A + B</option>
+          <option value="sub" data-i18n="tool.op.sub">A − B</option>
+          <option value="tra" data-i18n="tool.op.transpose">Transpose of A</option>
+        </select>
+      </div>
+      <div>
+        <label for="dp" data-i18n="tool.dp.label">Decimal places</label>
+        <select id="dp">
+          <option value="0">0</option>
+          <option value="2">2</option>
+          <option value="4" selected>4</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="mwrap" id="a-wrap">
+      <label data-i18n="tool.a.label">Matrix A</label>
+      <div class="mat" id="mat-a" data-n="2">
+        <input type="number" step="any" inputmode="decimal" id="a11" aria-label="A row 1 column 1" placeholder="1">
+        <input type="number" step="any" inputmode="decimal" id="a12" aria-label="A row 1 column 2" placeholder="2">
+        <input type="number" step="any" inputmode="decimal" id="a13" class="x3" aria-label="A row 1 column 3" placeholder="3">
+        <input type="number" step="any" inputmode="decimal" id="a21" aria-label="A row 2 column 1" placeholder="3">
+        <input type="number" step="any" inputmode="decimal" id="a22" aria-label="A row 2 column 2" placeholder="4">
+        <input type="number" step="any" inputmode="decimal" id="a23" class="x3" aria-label="A row 2 column 3" placeholder="5">
+        <input type="number" step="any" inputmode="decimal" id="a31" class="x3" aria-label="A row 3 column 1" placeholder="6">
+        <input type="number" step="any" inputmode="decimal" id="a32" class="x3" aria-label="A row 3 column 2" placeholder="7">
+        <input type="number" step="any" inputmode="decimal" id="a33" class="x3" aria-label="A row 3 column 3" placeholder="9">
+      </div>
+    </div>
+
+    <div class="mwrap" id="b-wrap">
+      <label data-i18n="tool.b.label">Matrix B</label>
+      <div class="mat" id="mat-b" data-n="2">
+        <input type="number" step="any" inputmode="decimal" id="b11" aria-label="B row 1 column 1" placeholder="5">
+        <input type="number" step="any" inputmode="decimal" id="b12" aria-label="B row 1 column 2" placeholder="6">
+        <input type="number" step="any" inputmode="decimal" id="b13" class="x3" aria-label="B row 1 column 3" placeholder="7">
+        <input type="number" step="any" inputmode="decimal" id="b21" aria-label="B row 2 column 1" placeholder="7">
+        <input type="number" step="any" inputmode="decimal" id="b22" aria-label="B row 2 column 2" placeholder="8">
+        <input type="number" step="any" inputmode="decimal" id="b23" class="x3" aria-label="B row 2 column 3" placeholder="9">
+        <input type="number" step="any" inputmode="decimal" id="b31" class="x3" aria-label="B row 3 column 1" placeholder="2">
+        <input type="number" step="any" inputmode="decimal" id="b32" class="x3" aria-label="B row 3 column 2" placeholder="3">
+        <input type="number" step="any" inputmode="decimal" id="b33" class="x3" aria-label="B row 3 column 3" placeholder="5">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card" id="card-matrix">
+          <div class="rc-label" data-i18n="tool.r.matrix">Result</div>
+          <div class="rc-val"><div class="mout" id="r-matrix" data-n="2"></div></div>
+        </div>
+        <div class="rcard" id="card-det"><div class="rc-label" data-i18n="tool.r.det">Determinant</div><div class="rc-val" id="r-det">—</div></div>
+        <div class="rcard hero-card" id="card-steps"><div class="rc-label" data-i18n="tool.r.steps">Working</div><div class="rc-val steps" id="r-steps">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Values are rounded to 4 decimal places. Inverting a nearly singular matrix magnifies rounding error, so treat very small entries as noise.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Matrix arithmetic, with the working shown</h2>
+    <p>This calculator handles the two sizes that come up in almost every first linear algebra course and most engineering coursework: 2x2 and 3x3 square matrices. Pick a size, pick an operation — multiply, add, subtract, transpose, determinant or inverse — type the entries and read the answer. Alongside the result you get the determinant where it matters and one line of arithmetic showing how the first entry was produced, because a number you cannot check is a number you cannot learn from.</p>
+
+    <h3>Worked example: multiplying two 2x2 matrices</h3>
+    <p>Take A = [1 2; 3 4] and B = [5 6; 7 8]. Every entry of the product is a row of A paired against a column of B. The top-left entry uses row 1 of A and column 1 of B: 1x5 + 2x7 = 19. The top-right uses row 1 against column 2: 1x6 + 2x8 = 22. The bottom row repeats the pattern: 3x5 + 4x7 = 43 and 3x6 + 4x8 = 50. So A x B = [19 22; 43 50].</p>
+    <p>Now swap the order. B x A = [23 34; 31 46] — a completely different matrix. Matrix multiplication is not commutative because each matrix is a transformation, and doing a stretch after a shear is not the same as doing the shear after the stretch. If you are checking homework and your answer is a permutation of the expected one, you probably multiplied in the wrong order.</p>
+
+    <h3>What the determinant is telling you</h3>
+    <p>For A = [1 2; 3 4] the determinant is ad - bc = 1x4 - 2x3 = -2. Read that as a scale factor: any shape you feed through A comes out with twice the area, and the minus sign means the plane has been flipped over, as if reflected. A determinant of exactly 0 means the matrix has crushed the plane onto a line, so area is gone entirely. In three dimensions the same story runs with volume: a 3x3 determinant of 6 means volumes are multiplied by six, and 0 means space has been flattened onto a plane or a line.</p>
+
+    <h3>The 2x2 inverse shortcut</h3>
+    <p>For a 2x2 matrix there is a formula worth memorising: swap the diagonal entries, negate the off-diagonal entries, and divide everything by the determinant. For A = [1 2; 3 4] that gives (1/-2) x [4 -2; -3 1] = [-2 1; 1.5 -0.5]. Check it by multiplying: A x A inverse = [1 0; 0 1], the identity. If your check does not produce the identity, the usual culprit is forgetting to negate b and c, or dividing by det before the swap.</p>
+
+    <h3>3x3 by cofactor expansion</h3>
+    <p>For three by three matrices the tool expands along the first row. With A = [1 2 3; 3 4 5; 6 7 9]: det = 1x(4x9 - 5x7) - 2x(3x9 - 5x6) + 3x(3x7 - 4x6) = 1x1 - 2x(-3) + 3x(-3) = 1 + 6 - 9 = -2. Notice the alternating plus, minus, plus signs — that sign pattern is the single most common source of errors when this is done by hand. The inverse then comes from the adjugate: build the 3x3 matrix of cofactors, transpose it, and divide every entry by the determinant.</p>
+
+    <h3>Solving a system of equations</h3>
+    <p>Suppose 2x + 3y = 8 and x + 4y = 9. Write the coefficients as A = [2 3; 1 4], with determinant 8 - 3 = 5, so the inverse is (1/5) x [4 -3; -1 2] = [0.8 -0.6; -0.2 0.4]. Multiply that by the constants column [8; 9]: x = 0.8x8 - 0.6x9 = 6.4 - 5.4 = 1, and y = -0.2x8 + 0.4x9 = -1.6 + 3.6 = 2. Substituting back, 2(1) + 3(2) = 8 and 1 + 4(2) = 9, so the solution checks out. In this tool, compute the inverse first, then use the multiply mode with your constants in the first column of matrix B and zeros elsewhere; the first column of the product is your solution.</p>
+
+    <h2>Limits worth knowing</h2>
+    <p>Results are rounded to four decimal places for readability, which is plenty for coursework but not for numerically delicate work. When the determinant is very close to zero the matrix is ill-conditioned: a tiny change in an input entry can swing the inverse wildly, and floating point rounding gets amplified along with it. In that situation Gaussian elimination with partial pivoting, or a least-squares solver, is the honest tool.</p>
+    <p>The calculator is deliberately limited to square 2x2 and 3x3 matrices, so rectangular products such as a 2x3 times a 3x2 are out of scope, as are eigenvalues, rank, LU decomposition and systems with more than three unknowns. For those, a computer algebra package or a numerical library is the right next step — but for checking a hand calculation, spotting a sign slip, or seeing why a determinant of zero kills the inverse, everything you need is on this page.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.khanacademy.org/math/linear-algebra" target="_blank" rel="noopener">Khan Academy Linear Algebra — matrix multiplication, determinants and inverses explained step by step</a></li>
+      <li><a href="https://dlmf.nist.gov/" target="_blank" rel="noopener">NIST Digital Library of Mathematical Functions — reference definitions for matrix and determinant notation</a></li>
+      <li><a href="https://www.nist.gov/itl/math" target="_blank" rel="noopener">NIST Applied and Computational Mathematics — numerical conditioning and error in linear systems</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/molar-mass-calc/"><span class="related-ico" aria-hidden="true">⚗️</span><span class="related-name">Molar Mass Calculator</span></a><a class="related-item" href="https://tool-hub.me/ohms-law-calc/"><span class="related-ico" aria-hidden="true">🔌</span><span class="related-name">Ohm's Law Calculator</span></a><a class="related-item" href="https://tool-hub.me/percent-error-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Percent Error Calculator</span></a><a class="related-item" href="https://tool-hub.me/permutation-combination-calc/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Combination Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is matrix multiplication done row by column?</summary><p data-i18n="faq.a1">Because a matrix is a recipe for transforming vectors, and multiplying two of them means doing one transformation after the other. Entry (i, j) of the product asks what row i of A does to column j of B, so you pair them term by term and add. That is also why A × B and B × A are usually different: applying a rotation then a stretch is not the same as stretching then rotating.</p></details>
+    <details><summary data-i18n="faq.q2">When does a matrix have no inverse?</summary><p data-i18n="faq.a2">Exactly when its determinant is 0. Geometrically the matrix squashes space flat — a 2x2 with det 0 maps the whole plane onto a single line, and a 3x3 maps space onto a plane or a line. Once that information is lost there is no way to undo the map, so no inverse exists. This tool reports that case as a result rather than an input error, because the matrix is perfectly valid — it just is not invertible.</p></details>
+    <details><summary data-i18n="faq.q3">What does the determinant actually measure?</summary><p data-i18n="faq.a3">It is the factor by which the matrix scales area (2x2) or volume (3x3). A determinant of 3 means every shape comes out three times bigger; a determinant of 0.5 halves it. A negative determinant means the transformation also flips orientation, like reflecting in a mirror, and the absolute value is still the scale factor.</p></details>
+    <details><summary data-i18n="faq.q4">Can I use this to solve a system of equations?</summary><p data-i18n="faq.a4">Yes, for small systems. Write the coefficients as matrix A and the constants as a column, then multiply the inverse of A by that column to get the solution. Compute the inverse here, then use the multiply mode with your constants in the first column of B. For anything bigger than 3x3, or when the determinant is near 0, Gaussian elimination is more accurate than inverting.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

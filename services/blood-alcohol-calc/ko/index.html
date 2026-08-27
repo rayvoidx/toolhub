@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-OdClpP5b68fGFX7MilG8OM8HTb/yUxKsWh2xWvNfSaQ=' 'sha256-YNLFSZqAvHym4z2MvyarE92VZtj9yHvsX8NJ2vSL12U=' 'sha256-70MhP+hJ8xM8Rar+5sEYxYZ96G6vEV5YtmY1s5RW3Pw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>혈중 알코올농도 계산기 (BAC) — 위드마크 공식 추정</title>
+<meta name="description" content="위드마크 공식을 사용하는 무료 혈중 알코올농도(BAC) 계산기. 성별·체중·마신 술·경과 시간을 입력하면 현재 혈중 알코올농도와 일반적인 법정 기준 아래로 내려가기까지 걸리는 대략의 시간을 추정합니다. 교육용 추정치일 뿐, 운전 여부 판단에는 절대 사용하지 마세요.">
+<meta name="keywords" content="blood alcohol calculator, BAC calculator, Widmark formula calculator, blood alcohol content, 혈중 알코올농도 계산기, 위드마크 공식 계산기">
+<link rel="canonical" href="https://tool-hub.me/blood-alcohol-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/blood-alcohol-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/blood-alcohol-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/blood-alcohol-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/blood-alcohol-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/blood-alcohol-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/blood-alcohol-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/blood-alcohol-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/blood-alcohol-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/blood-alcohol-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/blood-alcohol-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/blood-alcohol-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/blood-alcohol-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/blood-alcohol-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/blood-alcohol-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/blood-alcohol-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="혈중 알코올농도 계산기 (BAC) — 위드마크 공식 추정">
+<meta property="og:description" content="위드마크 공식을 사용하는 무료 혈중 알코올농도(BAC) 계산기. 성별·체중·마신 술·경과 시간을 입력하면 현재 혈중 알코올농도와 일반적인 법정 기준 아래로 내려가기까지 걸리는 대략의 시간을 추정합니다. 교육용 추정치일 뿐, 운전 여부 판단에는 절대 사용하지 마세요.">
+<meta property="og:url" content="https://tool-hub.me/blood-alcohol-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/blood-alcohol-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#d97706">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Blood Alcohol Calculator (BAC)",
+  "description": "Free blood alcohol content (BAC) calculator using the Widmark formula. Enter your sex, body weight, the drinks you had, and hours elapsed to estimate your current BAC and roughly how long until it falls below common legal limits (0.03% / 0.08%). An educational estimate only — never use it to decide whether to drive. Runs 100% in your browser.",
+  "url": "https://tool-hub.me/blood-alcohol-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blood Alcohol Calculator (BAC)",
+      "item": "https://tool-hub.me/blood-alcohol-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Widmark formula and how is BAC estimated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Widmark formula is the classic way to estimate blood alcohol content (BAC). This blood alcohol calculator adds up the pure ethanol in your drinks in grams (A), then computes peak BAC = A ÷ (body weight in grams × r) × 100, where r is a body-water constant (0.68 for men, 0.55 for women). It then subtracts the alcohol your liver has already burned off — about 0.015% per hour — to estimate your current BAC. It is the same Widmark formula calculator method used in textbooks, applied entirely in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is this, and why can't I trust it to decide to drive?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treat every number here as a rough educational estimate, not a measurement. Real BAC varies widely with food in your stomach, how fast you drank, body composition, liver health, medication and even the day. Two people of the same weight can end up far apart, and your true BAC can be higher than this calculator shows. Only a breathalyzer or blood test measures your actual level — so never use a BAC calculator to decide whether it is safe to drive. If you have been drinking, do not drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take for alcohol to leave your system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your body clears alcohol at a fairly steady rate of roughly 0.015% BAC per hour, and only time lets the liver do this work. Coffee, cold showers, water, food and fresh air can make you feel more alert but do not speed up how fast alcohol leaves your system. This calculator shows an estimated time until your BAC falls below common limits and back to about 0.00%, but the safest assumption is always to allow more time than the estimate suggests."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the legal BAC limits around the world?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Legal driving limits differ by country: about 0.03% in South Korea and Japan, 0.05% across much of Europe, and 0.08% in the United States and the United Kingdom. Many places set a zero or near-zero limit for novice, young or commercial drivers. Because the threshold that counts as \"over the limit\" depends on where you are, this tool shows reference lines rather than a single pass/fail — and being under a limit still does not mean you are safe to drive."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my drinking data sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This blood alcohol calculator runs 100% in your browser. Your sex, weight, drinks and hours are used only to compute an estimate on your device and are never uploaded to any server. For convenience they are saved to your browser's localStorage so the form is ready next time, and you can clear them anytime by clearing your site data."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Blood Alcohol Calculator (BAC)</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Blood Alcohol Calculator (BAC)</span></nav>
+  <section class="hero">
+    <h1>Blood Alcohol Calculator (BAC)</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your drinks and see an estimated BAC — an educational guide, never a green light to drive.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <div role="note" style="background:rgba(217,119,6,0.12);border:1px solid rgba(217,119,6,0.35);border-radius:10px;padding:10px 14px;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:8px;" data-i18n="tool.banner">Estimate only — never use this tool to decide whether to drive. If you have been drinking, do not drive.</div>
+
+    <p id="sex-heading" style="font-weight:600;font-size:14px;margin:8px 0 6px;" data-i18n="tool.sex.label">Sex</p>
+    <div role="radiogroup" aria-labelledby="sex-heading" style="display:flex;gap:14px;flex-wrap:wrap;">
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="male" checked>
+        <span data-i18n="tool.sex.male">Male</span>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;margin:0;cursor:pointer;">
+        <input type="radio" name="sex" value="female">
+        <span data-i18n="tool.sex.female">Female</span>
+      </label>
+    </div>
+    <p style="margin:6px 0 0;font-size:12.5px;color:var(--muted);" data-i18n="tool.sex.note">Sex sets the Widmark r factor (0.68 male / 0.55 female, population averages).</p>
+
+    <label for="weight-input" data-i18n="tool.weight.label">Body weight</label>
+    <div style="display:flex;gap:8px;align-items:stretch;">
+      <input type="number" id="weight-input" inputmode="decimal" min="30" max="250" step="0.1"
+             placeholder="e.g. 70" data-i18n-placeholder="tool.weight.placeholder" style="flex:1;min-width:0;">
+      <div role="radiogroup" aria-label="Weight unit" data-i18n-aria-label="tool.unit.aria" style="display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;flex:0 0 auto;">
+        <label style="margin:0;display:flex;align-items:center;padding:0 12px;font-weight:600;font-size:14px;cursor:pointer;">
+          <input type="radio" name="wunit" value="kg" checked style="margin-right:5px;"><span data-i18n="tool.unit.kg">kg</span>
+        </label>
+        <label style="margin:0;display:flex;align-items:center;padding:0 12px;font-weight:600;font-size:14px;cursor:pointer;border-left:1px solid var(--line);">
+          <input type="radio" name="wunit" value="lb" style="margin-right:5px;"><span data-i18n="tool.unit.lb">lb</span>
+        </label>
+      </div>
+    </div>
+
+    <p style="font-weight:600;font-size:14px;margin:18px 0 6px;" data-i18n="tool.drinks.label">Drinks</p>
+    <p style="margin:0 0 8px;font-size:12.5px;color:var(--muted);" data-i18n="tool.drinks.hint">Add each drink you had. Presets use typical serving sizes; choose Custom to enter your own volume and ABV.</p>
+    <div id="drink-rows"></div>
+    <button type="button" id="add-drink" style="background:none;border:1px dashed var(--line);color:var(--accent-strong);border-radius:10px;padding:10px;font-weight:700;font-size:14px;cursor:pointer;width:100%;font-family:inherit;margin-top:2px;" data-i18n="tool.drinks.add">+ Add a drink</button>
+
+    <label for="hours-input" data-i18n="tool.hours.label">Hours since you started drinking</label>
+    <input type="number" id="hours-input" inputmode="decimal" min="0" max="24" step="0.5"
+           placeholder="e.g. 2" data-i18n-placeholder="tool.hours.placeholder">
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Estimate my BAC</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <p style="margin:0;color:var(--muted);font-size:14px;" data-i18n="tool.result.current">Estimated current BAC</p>
+        <p style="margin:2px 0 8px;"><strong id="r-bac"></strong></p>
+        <p id="r-metabolized" style="margin:0 0 10px;color:#16a34a;font-weight:600;font-size:14px;" data-i18n="tool.result.metabolized" hidden>≈ 0.00 % — alcohol has likely been metabolized.</p>
+        <p id="r-gl" style="margin:0 0 8px;font-size:14px;color:var(--muted);"></p>
+        <p style="margin:0 0 12px;"><span id="r-badge"></span></p>
+        <p id="r-extreme" style="margin:0 0 12px;padding:10px 12px;border-radius:8px;background:rgba(220,38,38,0.12);color:#dc2626;font-weight:700;font-size:14px;" data-i18n="tool.result.lifethreat" hidden>Potentially life-threatening range — seek emergency help immediately.</p>
+        <p id="r-peak" style="margin:0 0 12px;font-size:14px;color:var(--muted);"></p>
+        <div id="r-times" style="display:flex;flex-direction:column;gap:6px;margin-bottom:12px;">
+          <div id="r-time-003" style="font-weight:600;" hidden></div>
+          <div id="r-time-008" style="font-weight:600;" hidden></div>
+          <div id="r-time-000" style="font-weight:600;color:var(--muted);" hidden></div>
+        </div>
+        <p style="margin:0 0 10px;font-size:13px;color:var(--muted);" data-i18n="tool.result.limits">Legal BAC limits vary by country — e.g. 0.03% in Korea and Japan, 0.05% across much of the EU, 0.08% in the US and UK, and zero for novice or commercial drivers in many places.</p>
+        <p style="margin:0;font-size:12.5px;color:var(--muted);" data-i18n="tool.note.disclaimer">This is a rough statistical estimate from the Widmark formula. Real BAC depends on food, metabolism, medication and health, and can be higher than shown. Never use this tool to decide whether to drive.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>How this calculator turns your drinks into a BAC estimate</h2>
+    <p>Blood alcohol content is normally only measured with a breathalyzer or a blood draw, but most people want a rough sense of where they stand well before either is on hand — at a party deciding whether to open one more beer, the morning after wondering if last night is still in their system, or a student working through the forensic-toxicology math behind drunk-driving law. This calculator answers that "roughly where am I" question using the Widmark formula, the model used in textbooks and expert testimony since the 1930s. Every number it produces is an educational estimate built from population averages, not a diagnostic reading — it cannot replace an actual test, and it should never decide whether you, or anyone else, is fit to drive.</p>
+
+    <h3>What each field actually changes</h3>
+    <ol>
+      <li><strong>Sex</strong> sets the Widmark distribution ratio, <em>r</em> — 0.68 for men and 0.55 for women. This factor stands in for the fraction of body weight that is water, which is where alcohol distributes; women have a lower average body-water fraction, so the same dose spreads through less volume and produces a higher BAC.</li>
+      <li><strong>Body weight</strong> is the tank size alcohol dilutes into. Doubling body weight roughly halves peak BAC for identical drinks — this is the single biggest reason two people at the same party can feel very differently after the same number of drinks.</li>
+      <li><strong>Drinks</strong> determine total grams of pure ethanol consumed. Each preset (beer, wine, soju, spirits) uses a realistic serving volume and ABV; choosing "Custom" lets you enter any volume and ABV, useful for craft beer, cocktails, or a poured-at-home measure that doesn't match a standard serving.</li>
+      <li><strong>Hours since you started drinking</strong> is how long your liver has had to metabolize alcohol at a fixed clearance rate. Longer elapsed time subtracts more from the peak figure, down to a floor of 0.00%.</li>
+    </ol>
+
+    <h3>The Widmark math, in plain terms</h3>
+    <div class="example">
+      <p style="margin:0 0 8px;"><strong>Step 1 — grams of alcohol per drink:</strong><br>grams = volume (mL) × (ABV ÷ 100) × 0.789 (ethanol's density in g/mL)</p>
+      <p style="margin:0 0 8px;"><strong>Step 2 — peak BAC:</strong><br>peak % = total grams ÷ (body weight in grams × r) × 100</p>
+      <p style="margin:0;"><strong>Step 3 — current BAC:</strong><br>current % = peak % − (0.015 × hours elapsed), floored at 0.00%</p>
+    </div>
+    <p>That last constant, 0.015% per hour, is the average rate a healthy liver oxidizes alcohol — roughly one standard drink's worth of ethanol every 60–90 minutes. It is treated as a straight line here for simplicity, which real elimination only approximates once your body has finished absorbing what you drank.</p>
+
+    <h3>Three worked examples</h3>
+    <div class="example">
+      <p style="margin:0;"><strong>Example 1 — a couple of beers, one hour in.</strong> Male, 80 kg, two 355 mL beers at 5% ABV, 1 hour since the first sip. Alcohol: 2 × (355 × 0.05 × 0.789) ≈ 28.0 g. Peak: 28.0 ÷ (80,000 × 0.68) × 100 ≈ 0.05%. Current: 0.05% − (0.015 × 1) ≈ 0.04% — inside the 0.03–0.079% band, roughly 26 minutes from dropping under 0.03% and about 2 hours 26 minutes from reading 0.00%.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0;"><strong>Example 2 — wine and soju right after the last pour.</strong> Female, 60 kg, one 150 mL glass of wine at 12% plus two 50 mL soju shots at 17%, 0 hours elapsed (peak reading). Alcohol: 14.2 g + 13.4 g ≈ 27.6 g. Peak = current: 27.6 ÷ (60,000 × 0.55) × 100 ≈ 0.08% — right at the U.S./U.K. legal threshold, about 15 minutes from dropping under it and roughly 5 hours 35 minutes from 0.00%.</p>
+    </div>
+    <div class="example">
+      <p style="margin:0;"><strong>Example 3 — same drinks, most of a night's sleep later.</strong> Male, 75 kg, three 355 mL beers at 5%, 8 hours elapsed. Peak comes out to about 0.08% again, but 0.08% − (0.015 × 8) = 0.08% − 0.12% is negative, so the estimate floors at 0.00% — the model treats this person as fully metabolized, illustrating why "I only had three beers" says much less than "three beers, eight hours ago."</p>
+    </div>
+
+    <h3>Reference tables</h3>
+    <table>
+      <tr><th>Preset drink</th><th>Serving used</th><th>ABV</th><th>Pure alcohol</th></tr>
+      <tr><td>Beer</td><td>355 mL (~12 oz can)</td><td>5%</td><td>≈14.0 g</td></tr>
+      <tr><td>Wine</td><td>150 mL (~5 oz glass)</td><td>12%</td><td>≈14.2 g</td></tr>
+      <tr><td>Soju shot</td><td>50 mL</td><td>17%</td><td>≈6.7 g</td></tr>
+      <tr><td>Spirits shot</td><td>44 mL (~1.5 oz)</td><td>40%</td><td>≈13.9 g</td></tr>
+    </table>
+    <p style="font-size:13px;color:var(--muted);margin:-4px 0 12px;">A soju shot carries roughly half the pure alcohol of a beer, wine glass or spirits shot — one reason soju rounds feel deceptively light until several add up.</p>
+    <table>
+      <tr><th>Peak BAC</th><th>Approx. time back to ~0.00%</th></tr>
+      <tr><td>0.02%</td><td>~1 h 20 m</td></tr>
+      <tr><td>0.05%</td><td>~3 h 20 m</td></tr>
+      <tr><td>0.08%</td><td>~5 h 20 m</td></tr>
+      <tr><td>0.15%</td><td>~10 h 00 m</td></tr>
+      <tr><td>0.20%</td><td>~13 h 20 m</td></tr>
+      <tr><td>0.30%</td><td>~20 h 00 m</td></tr>
+    </table>
+
+    <h3>Mistakes that throw the estimate off</h3>
+    <ul>
+      <li><strong>Assuming coffee, cold water or a nap speeds things up.</strong> The 0.015%/hour clearance rate is fixed by liver enzyme activity — nothing you do afterward changes its slope.</li>
+      <li><strong>Comparing two people's totals directly.</strong> Because <em>r</em> and body weight sit in the denominator, identical drinks can land at very different BAC for a lighter person, a woman, or someone who ate nothing beforehand — food intake isn't part of this model at all.</li>
+      <li><strong>Entering "0" hours right after the last drink and treating that as a ceiling.</strong> Real absorption continues for 30–90 minutes past your last sip, so true peak BAC can run a little higher than a same-moment estimate, especially on an empty stomach.</li>
+      <li><strong>Trusting a rounded-down ABV or a "generous" home pour.</strong> A restaurant glass or a self-mixed spirit is often larger than the preset serving; switch to Custom and measure honestly instead of relying on a preset that undercounts.</li>
+    </ul>
+
+    <h3>What this model can't see</h3>
+    <p>The Widmark formula is a population-average model, not a personalized one. It does not account for food in your stomach (which slows absorption and lowers the peak), genetic differences in alcohol-dehydrogenase activity, medication interactions, chronic drinking history, illness, or the early absorption phase where BAC is still climbing. Two people who enter identical numbers can have a real BAC that differs by 20–30% either direction from this estimate. Use it to understand roughly how the math works and to get a ballpark sense of your evening — never as a green light to get behind the wheel. If there is any doubt, the only safe assumption is to wait, arrange another way home, and let more time pass than the number on screen suggests.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nhtsa.gov/risky-driving/drunk-driving" target="_blank" rel="noopener">NHTSA — drunk driving laws, the 0.08% BAC limit and impairment effects</a></li>
+      <li><a href="https://www.cdc.gov/alcohol/" target="_blank" rel="noopener">CDC Alcohol Program — standard drink sizes and drinking guidelines</a></li>
+      <li><a href="https://www.niaaa.nih.gov/alcohols-effects-health/what-standard-drink" target="_blank" rel="noopener">NIAAA (NIH) — what counts as one standard drink and how alcohol is metabolized</a></li>
+      <li><a href="https://www.who.int/health-topics/alcohol" target="_blank" rel="noopener">World Health Organization — global evidence on alcohol and health risk</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/blood-pressure-checker/"><span class="related-ico" aria-hidden="true">🫀</span><span class="related-name">Blood Pressure Checker</span></a><a class="related-item" href="https://tool-hub.me/blood-sugar-conv/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">Blood Sugar Converter</span></a><a class="related-item" href="https://tool-hub.me/bmi-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">BMI Calculator</span></a><a class="related-item" href="https://tool-hub.me/bmr-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">BMR Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is the Widmark formula and how is BAC estimated?</summary>
+      <p data-i18n="faq.a1">The Widmark formula is the classic way to estimate blood alcohol content (BAC). This blood alcohol calculator adds up the pure ethanol in your drinks in grams (A), then computes peak BAC = A ÷ (body weight in grams × r) × 100, where r is a body-water constant (0.68 for men, 0.55 for women). It then subtracts the alcohol your liver has already burned off — about 0.015% per hour — to estimate your current BAC. It is the same Widmark formula calculator method used in textbooks, applied entirely in your browser.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How accurate is this, and why can't I trust it to decide to drive?</summary>
+      <p data-i18n="faq.a2">Treat every number here as a rough educational estimate, not a measurement. Real BAC varies widely with food in your stomach, how fast you drank, body composition, liver health, medication and even the day. Two people of the same weight can end up far apart, and your true BAC can be higher than this calculator shows. Only a breathalyzer or blood test measures your actual level — so never use a BAC calculator to decide whether it is safe to drive. If you have been drinking, do not drive.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How long does it take for alcohol to leave your system?</summary>
+      <p data-i18n="faq.a3">Your body clears alcohol at a fairly steady rate of roughly 0.015% BAC per hour, and only time lets the liver do this work. Coffee, cold showers, water, food and fresh air can make you feel more alert but do not speed up how fast alcohol leaves your system. This calculator shows an estimated time until your BAC falls below common limits and back to about 0.00%, but the safest assumption is always to allow more time than the estimate suggests.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What are the legal BAC limits around the world?</summary>
+      <p data-i18n="faq.a4">Legal driving limits differ by country: about 0.03% in South Korea and Japan, 0.05% across much of Europe, and 0.08% in the United States and the United Kingdom. Many places set a zero or near-zero limit for novice, young or commercial drivers. Because the threshold that counts as "over the limit" depends on where you are, this tool shows reference lines rather than a single pass/fail — and being under a limit still does not mean you are safe to drive.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my drinking data sent anywhere?</summary>
+      <p data-i18n="faq.a5">No. This blood alcohol calculator runs 100% in your browser. Your sex, weight, drinks and hours are used only to compute an estimate on your device and are never uploaded to any server. For convenience they are saved to your browser's localStorage so the form is ready next time, and you can clear them anytime by clearing your site data.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-ll7dvkdrsJcidstSjzVUNp3coIwVad5LJK06gpmKnE8=' 'sha256-SURmyFZk1B8GHR44B+V5YXTRw+urMERGSlDLzt4XrJM=' 'sha256-Dm32fIMRQeY1yGYY47dq2SYRzXx5E5SapryeKV2IT3g='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>별자리 계산기 — 생년월일로 내 별자리 확인</title>
+<meta name="description" content="생년월일을 입력하면 서양 별자리, 4원소, 3원성(고정성)과 함께 가볍게 즐기는 짧은 성격 소개를 바로 확인할 수 있습니다. 12개 별자리 전체 날짜 범위도 함께 제공. 무료, 광고 없음, 모든 계산은 브라우저에서 처리됩니다.">
+<meta name="keywords" content="zodiac sign calculator, what is my zodiac sign, star sign by date of birth, zodiac dates, horoscope signs, 별자리 계산기">
+<link rel="canonical" href="https://tool-hub.me/zodiac-sign-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/zodiac-sign-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/zodiac-sign-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/zodiac-sign-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/zodiac-sign-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/zodiac-sign-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/zodiac-sign-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/zodiac-sign-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/zodiac-sign-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/zodiac-sign-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/zodiac-sign-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/zodiac-sign-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/zodiac-sign-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/zodiac-sign-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/zodiac-sign-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/zodiac-sign-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="별자리 계산기 — 생년월일로 내 별자리 확인">
+<meta property="og:description" content="생년월일을 입력하면 서양 별자리, 4원소, 3원성(고정성)과 함께 가볍게 즐기는 짧은 성격 소개를 바로 확인할 수 있습니다. 12개 별자리 전체 날짜 범위도 함께 제공. 무료, 광고 없음, 모든 계산은 브라우저에서 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/zodiac-sign-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/zodiac-sign-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Zodiac Sign Calculator",
+  "description": "Enter your date of birth to instantly find your Western zodiac sign, element, modality, and a short for-fun trait blurb — plus the date ranges for all 12 signs. Free, no ads, computed locally in your browser.",
+  "url": "https://tool-hub.me/zodiac-sign-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Zodiac Sign Calculator", "item": "https://tool-hub.me/zodiac-sign-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is my zodiac sign determined from my birth date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your Western (tropical) zodiac sign is set by which of the 12 date ranges your birthday falls into — for example, anyone born between March 21 and April 19 is an Aries, and anyone born between October 23 and November 21 is a Scorpio. Type your date of birth into the calculator above and it instantly matches it against the standard date ranges to show your sign, element, and modality — no birth time or location needed, unlike a full astrological birth chart."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 12 zodiac signs and their date ranges?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 12 signs in order are: Aries (Mar 21–Apr 19), Taurus (Apr 20–May 20), Gemini (May 21–Jun 20), Cancer (Jun 21–Jul 22), Leo (Jul 23–Aug 22), Virgo (Aug 23–Sep 22), Libra (Sep 23–Oct 22), Scorpio (Oct 23–Nov 21), Sagittarius (Nov 22–Dec 21), Capricorn (Dec 22–Jan 19), Aquarius (Jan 20–Feb 18), and Pisces (Feb 19–Mar 20). The full table below the calculator lists every sign together with its element and modality for quick reference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does it mean to be born on a cusp, like March 20 or April 20?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 'cusp' is the day or two right at the edge of two neighboring signs. The date ranges used here are the standard, widely cited approximation, but the Sun's exact entry into each sign (the solar ingress) can shift by about a day depending on the year and your time zone, since a calendar year isn't an exact whole number of days. If you enter a birth date within a day of a boundary, the calculator flags it as a possible cusp so you know both neighboring signs are worth a look."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this based on science, or is it just for fun?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This is a for-fun entertainment tool, not a scientific or astronomical instrument. Zodiac signs and their personality traits are part of Western astrology, a cultural and entertainment tradition — they are not supported by scientific evidence and shouldn't be used to make real decisions about health, relationships, finances, or career. Think of the trait blurb here as a lighthearted icebreaker, not a personality assessment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my birth date sent to a server or saved anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This zodiac sign calculator runs entirely in your browser — your date of birth is only used locally to compute your sign and is never uploaded or sent to any server. The only thing saved is the last date you entered, kept in your browser's local storage, purely so it's still there if you come back to the page."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Zodiac Sign Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Zodiac Sign Calculator</span></nav>
+  <section class="hero">
+    <h1>Zodiac Sign Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your birth date to find your Western (tropical) zodiac sign, its element and modality, and a light, for-fun trait blurb — plus the exact date range for all 12 signs.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Zodiac sign calculator" data-i18n-aria-label="tool.aria" aria-live="polite">
+    <style>
+      #tool .res-hero { display:flex; align-items:center; gap:14px; margin-bottom:12px; }
+      #tool .res-symbol { font-size:44px; line-height:1; flex:0 0 auto; color:var(--accent); }
+      #tool .res-name { margin:0; font-size:22px; font-weight:800; letter-spacing:-.01em; }
+      #tool .res-range { margin:2px 0 0; font-size:14px; color:var(--muted); }
+      #tool .res-meta { display:flex; gap:18px; flex-wrap:wrap; margin:10px 0; font-size:14px; }
+      #tool .res-meta strong { color:var(--ink); }
+      #tool .res-trait { margin:10px 0 0; font-size:15.5px; }
+      #tool .res-cusp { margin:10px 0 0; padding:10px 12px; border-radius:8px; font-size:13.5px;
+        background:color-mix(in srgb, var(--accent) 10%, var(--surface)); color:var(--ink); }
+      #tool .res-note { margin:12px 0 0; font-size:12.5px; color:var(--muted); }
+      #tool .res-note + .res-note { margin-top:4px; }
+      #tool table.sign-table { width:100%; border-collapse:collapse; margin-top:8px; font-size:13.5px; }
+      #tool table.sign-table th, #tool table.sign-table td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); }
+      #tool table.sign-table th { color:var(--muted); font-weight:650; }
+      #tool .table-wrap { overflow-x:auto; margin-top:6px; }
+      #tool h2.table-heading { font-size:15px; margin:26px 0 4px; letter-spacing:-.01em; }
+      @media(max-width:420px){ #tool .res-hero { gap:10px; } #tool .res-symbol { font-size:36px; } }
+    </style>
+
+    <label for="birth-date" data-i18n="tool.date.label">Your date of birth</label>
+    <input type="date" id="birth-date" autocomplete="bday">
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.result.empty" style="margin:0;color:var(--muted);">Enter your date of birth to see your zodiac sign</p>
+      <p id="result-err" hidden data-i18n="tool.result.err" style="margin:0;color:#dc2626;font-weight:600;">Enter a valid date of birth</p>
+      <p id="result-future" hidden data-i18n="tool.result.future" style="margin:0;color:#dc2626;font-weight:600;">Date of birth can't be in the future</p>
+      <div id="result-card" hidden>
+        <div class="res-hero">
+          <span id="res-symbol" class="res-symbol" aria-hidden="true"></span>
+          <div>
+            <p id="res-name" class="res-name"></p>
+            <p id="res-range" class="res-range"></p>
+          </div>
+        </div>
+        <div class="res-meta">
+          <div><span data-i18n="tool.result.element">Element</span>: <strong id="res-element"></strong></div>
+          <div><span data-i18n="tool.result.modality">Modality</span>: <strong id="res-modality"></strong></div>
+        </div>
+        <p id="res-trait" class="res-trait"></p>
+        <p id="res-cusp" class="res-cusp" hidden></p>
+        <p class="res-note" data-i18n="tool.disclaimer">For entertainment purposes only — not scientific, astronomical, or predictive advice.</p>
+        <p class="res-note" data-i18n="tool.privacy">All calculations run in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+
+    <h2 class="table-heading" data-i18n="tool.table.heading">All 12 zodiac signs and their dates</h2>
+    <div class="table-wrap">
+      <table class="sign-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.sign">Sign</th>
+            <th data-i18n="tool.table.dates">Date range</th>
+            <th data-i18n="tool.table.element">Element</th>
+            <th data-i18n="tool.table.modality">Modality</th>
+          </tr>
+        </thead>
+        <tbody id="sign-table-body"></tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>A quick, for-fun way to find your star sign</h2>
+    <p>Western (tropical) astrology divides the year into 12 zodiac signs, each tied to a fixed range of calendar dates. This calculator takes your date of birth, matches it against those 12 date ranges, and instantly shows your sign, its element, its modality, and a light, for-fun trait blurb — the same kind of quick lookup you'd otherwise do by squinting at a printed chart. It's built purely for entertainment: a fun icebreaker, a birthday-card detail, or a quick answer to "wait, what sign are you again?"</p>
+
+    <h3>How the 12 signs and their dates work</h3>
+    <p>Each sign owns a roughly month-long slice of the calendar, based on where the Sun appears to be along the ecliptic (its path through the sky) at the time of your birth. The order and standard ranges are:</p>
+    <table>
+      <thead><tr><th>Sign</th><th>Dates</th><th>Element</th><th>Modality</th></tr></thead>
+      <tbody>
+        <tr><td>Aries ♈</td><td>Mar 21 – Apr 19</td><td>Fire</td><td>Cardinal</td></tr>
+        <tr><td>Taurus ♉</td><td>Apr 20 – May 20</td><td>Earth</td><td>Fixed</td></tr>
+        <tr><td>Gemini ♊</td><td>May 21 – Jun 20</td><td>Air</td><td>Mutable</td></tr>
+        <tr><td>Cancer ♋</td><td>Jun 21 – Jul 22</td><td>Water</td><td>Cardinal</td></tr>
+        <tr><td>Leo ♌</td><td>Jul 23 – Aug 22</td><td>Fire</td><td>Fixed</td></tr>
+        <tr><td>Virgo ♍</td><td>Aug 23 – Sep 22</td><td>Earth</td><td>Mutable</td></tr>
+        <tr><td>Libra ♎</td><td>Sep 23 – Oct 22</td><td>Air</td><td>Cardinal</td></tr>
+        <tr><td>Scorpio ♏</td><td>Oct 23 – Nov 21</td><td>Water</td><td>Fixed</td></tr>
+        <tr><td>Sagittarius ♐</td><td>Nov 22 – Dec 21</td><td>Fire</td><td>Mutable</td></tr>
+        <tr><td>Capricorn ♑</td><td>Dec 22 – Jan 19</td><td>Earth</td><td>Cardinal</td></tr>
+        <tr><td>Aquarius ♒</td><td>Jan 20 – Feb 18</td><td>Air</td><td>Fixed</td></tr>
+        <tr><td>Pisces ♓</td><td>Feb 19 – Mar 20</td><td>Water</td><td>Mutable</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Elements and modalities, briefly</h3>
+    <p>Every sign is also grouped by two extra labels that astrology tradition uses to describe its general flavor. The four <strong>elements</strong> — Fire, Earth, Air, and Water — loosely group signs by temperament (Fire: energetic; Earth: grounded; Air: idea-driven; Water: emotional). The three <strong>modalities</strong> — Cardinal, Fixed, and Mutable — describe a sign's role in each season: Cardinal signs start a season, Fixed signs hold steady through the middle of it, and Mutable signs help it transition into the next. Each of the 12 signs has a unique element-modality combination, which is why the reference table above lists both.</p>
+
+    <div class="example">
+      <p><strong>Worked example.</strong> Someone born on July 30 falls between July 23 and August 22, so their sign is Leo — a Fire sign with the Fixed modality. Typing "1996-07-30" (or any July 30 birthday) into the calculator above returns Leo ♌, Fire, Fixed, along with a short trait blurb.</p>
+    </div>
+
+    <h3>Cusp dates: when your birthday is right on the boundary</h3>
+    <p>If you were born within a day of a sign boundary — say March 20 or April 20 — you're on what's commonly called a "cusp." The date ranges shown here are the standard, widely used approximation, but the Sun's precise entry into each sign can drift by roughly a day depending on the year and your time zone, because a calendar year isn't an exact whole number of days. When your entered date lands right on one of these edges, the calculator flags the neighboring sign too, so you can see both possibilities.</p>
+
+    <h3>Entertainment only</h3>
+    <p>To be clear: this tool, and Western astrology generally, has no scientific or predictive basis. The trait blurbs are short, deliberately neutral, and meant purely as a bit of fun — not a personality test, and not something to base real decisions on. Nothing you enter here is uploaded anywhere; the date match happens entirely inside your browser.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://science.nasa.gov/" target="_blank" rel="noopener">NASA Science — how the Sun's apparent path along the ecliptic relates to the zodiac constellations</a></li>
+      <li><a href="https://aa.usno.navy.mil/" target="_blank" rel="noopener">U.S. Naval Observatory, Astronomical Applications — authoritative equinox, solstice and seasonal date data</a></li>
+      <li><a href="https://www.iau.org/public/themes/constellations/" target="_blank" rel="noopener">International Astronomical Union — the official constellation boundaries behind the 12 zodiac names</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/age-calc/"><span class="related-ico" aria-hidden="true">🎂</span><span class="related-name">Age Calculator</span></a><a class="related-item" href="https://tool-hub.me/age-gap-calc/"><span class="related-ico" aria-hidden="true">💞</span><span class="related-name">Age Gap Calculator</span></a><a class="related-item" href="https://tool-hub.me/alarm-clock/"><span class="related-ico" aria-hidden="true">⏰</span><span class="related-name">Online Alarm Clock</span></a><a class="related-item" href="https://tool-hub.me/chinese-zodiac-calc/"><span class="related-ico" aria-hidden="true">🐉</span><span class="related-name">Chinese Zodiac Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How is my zodiac sign determined from my birth date?</summary>
+      <p data-i18n="faq.a1">Your Western (tropical) zodiac sign is set by which of the 12 date ranges your birthday falls into — for example, anyone born between March 21 and April 19 is an Aries, and anyone born between October 23 and November 21 is a Scorpio. Type your date of birth into the calculator above and it instantly matches it against the standard date ranges to show your sign, element, and modality — no birth time or location needed, unlike a full astrological birth chart.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What are the 12 zodiac signs and their date ranges?</summary>
+      <p data-i18n="faq.a2">The 12 signs in order are: Aries (Mar 21–Apr 19), Taurus (Apr 20–May 20), Gemini (May 21–Jun 20), Cancer (Jun 21–Jul 22), Leo (Jul 23–Aug 22), Virgo (Aug 23–Sep 22), Libra (Sep 23–Oct 22), Scorpio (Oct 23–Nov 21), Sagittarius (Nov 22–Dec 21), Capricorn (Dec 22–Jan 19), Aquarius (Jan 20–Feb 18), and Pisces (Feb 19–Mar 20). The full table below the calculator lists every sign together with its element and modality for quick reference.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What does it mean to be born on a cusp, like March 20 or April 20?</summary>
+      <p data-i18n="faq.a3">A 'cusp' is the day or two right at the edge of two neighboring signs. The date ranges used here are the standard, widely cited approximation, but the Sun's exact entry into each sign (the solar ingress) can shift by about a day depending on the year and your time zone, since a calendar year isn't an exact whole number of days. If you enter a birth date within a day of a boundary, the calculator flags it as a possible cusp so you know both neighboring signs are worth a look.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is this based on science, or is it just for fun?</summary>
+      <p data-i18n="faq.a4">This is a for-fun entertainment tool, not a scientific or astronomical instrument. Zodiac signs and their personality traits are part of Western astrology, a cultural and entertainment tradition — they are not supported by scientific evidence and shouldn't be used to make real decisions about health, relationships, finances, or career. Think of the trait blurb here as a lighthearted icebreaker, not a personality assessment.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my birth date sent to a server or saved anywhere?</summary>
+      <p data-i18n="faq.a5">No. This zodiac sign calculator runs entirely in your browser — your date of birth is only used locally to compute your sign and is never uploaded or sent to any server. The only thing saved is the last date you entered, kept in your browser's local storage, purely so it's still there if you come back to the page.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

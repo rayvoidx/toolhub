@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-qhIROGuTGfPnJxJm35a8YdidECTQi0yeK8YGKDtMwh8=' 'sha256-gAhkiytr6k7cRXG+iiPqS6/Mz/U+lH8g+e+S/8khgDU=' 'sha256-kSZc1NfsR8nAZROlaBM3XUOlZ/1pmmNB0AjViicpGZ0='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>부가가치세 계산기 — 어떤 세율에서도 VAT 가산·차감</title>
+<meta name="description" content="가격과 부가가치세율을 입력하면 세전 가격에 VAT를 더하거나, 세금 포함 가격에서 거꾸로 세전 금액과 VAT를 계산할 수 있습니다. 무료, 광고 없음 — 모든 계산은 브라우저에서 로컬로 처리됩니다.">
+<meta name="keywords" content="vat calculator, add vat, remove vat calculator, vat inclusive exclusive, reverse vat calculator, 부가가치세 계산기">
+<link rel="canonical" href="https://tool-hub.me/vat-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/vat-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/vat-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/vat-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/vat-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/vat-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/vat-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/vat-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/vat-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/vat-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/vat-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/vat-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/vat-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/vat-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/vat-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/vat-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="부가가치세 계산기 — 어떤 세율에서도 VAT 가산·차감">
+<meta property="og:description" content="가격과 부가가치세율을 입력하면 세전 가격에 VAT를 더하거나, 세금 포함 가격에서 거꾸로 세전 금액과 VAT를 계산할 수 있습니다. 무료, 광고 없음 — 모든 계산은 브라우저에서 로컬로 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/vat-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/vat-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "VAT Calculator",
+  "description": "Add VAT to a net price or remove VAT from a gross price at any rate. See the net, VAT, and gross amounts instantly — free, no ads, calculated in your browser.",
+  "url": "https://tool-hub.me/vat-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "VAT Calculator", "item": "https://tool-hub.me/vat-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I add VAT to a net price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the net price by the VAT rate to get the VAT amount, then add it to the net price for the gross price. At 20% VAT, a net price of 100.00 gives VAT of 100 × 0.20 = 20.00, so the gross price is 120.00. Pick \"Net price (before VAT)\", enter the amount and the rate — or tap one of the rate chips (5, 7, 10, 15, 19, 20, 21, 25) for common VAT/GST rates — and the net, VAT, and gross amounts update instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I remove VAT from a gross price (reverse VAT)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide by (1 + rate), don't subtract the rate as a percentage of the gross price — that is the classic reverse-VAT mistake. At 20% VAT, a gross price of 120.00 is 120 ÷ 1.20 = 100.00 net, with VAT of 20.00. Subtracting 20% straight from 120.00 would wrongly give 96.00 net, a 4.00 error. Switch this VAT calculator to \"Gross price (with VAT)\" and enter the total to see the correct pre-VAT figure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which VAT rate should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "VAT and GST rates vary widely by country and by product category, so check your local tax authority for the exact figure. As a rough guide, the rate chips cover common standard rates: 5% (Canada's GST), 7% (Thailand), 10% (Australia's GST, Japan's consumption tax), 15% (South Africa, New Zealand's GST), 19% (Germany), 20% (the UK, France), 21% (Netherlands, Belgium, Czechia), and 25% (Sweden, Denmark, Norway). Many countries also apply reduced rates to food, books, or medicine, so double-check before relying on the standard rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this VAT calculator work with any currency, and is my data sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes to both. Adding or removing VAT is pure percentage math with no currency conversion involved, so the result is correct whether you're entering dollars, euros, yen, or any other unit — just type the number without a currency symbol. Everything runs locally in your browser: the amount and rate you enter are never uploaded or stored on a server, and there's no sign-up or tracking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I set the VAT rate to 0%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 0% VAT the net and gross prices are identical and the VAT amount is zero — useful for zero-rated goods and services, which are taxable at 0% rather than exempt (the distinction matters for VAT-registered businesses reclaiming input tax). Enter 0 in the rate field, or as a custom rate if it isn't one of the presets, to confirm a price shouldn't change after VAT."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>VAT Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">VAT Calculator</span></nav>
+  <section class="hero">
+    <h1>VAT Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Add VAT to a net price, or remove VAT from a gross price — the net, VAT, and gross amounts appear instantly.</p>
+  </section>
+
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite" aria-label="VAT calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 12px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .currency-note { margin:6px 0 0; font-size:13px; color:var(--muted); }
+      #tool .rate-row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+      #tool #rate-presets { display:flex; gap:8px; flex-wrap:wrap; flex:1 1 auto; }
+      #tool #rate { flex:0 1 96px; min-width:80px; width:auto; }
+      #tool #result-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:10px; }
+      #tool .res-card { text-align:left; display:flex; flex-direction:column; gap:4px; padding:14px 12px; border:1px solid var(--line); border-radius:10px; background:var(--surface); cursor:pointer; font-family:inherit; color:var(--ink); }
+      #tool .rc-label { font-size:12.5px; color:var(--muted); font-weight:600; }
+      #tool .rc-value { font-size:19px; font-weight:800; color:var(--accent); font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+      #tool #formula-note { margin:12px 0 0; font-size:13.5px; color:var(--muted); }
+      #tool #copy-hint { margin:12px 0 0; font-size:12.5px; color:var(--muted); text-align:center; }
+      #tool #err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media (max-width:420px) {
+        #tool #result-grid { grid-template-columns:1fr; }
+      }
+    </style>
+
+    <p id="mode-label" style="font-weight:600;font-size:14px;margin:0 0 2px;" data-i18n="tool.mode.label">What do you have?</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="mode-label">
+      <label><input type="radio" name="mode" value="add" checked><span data-i18n="tool.mode.add">Net price (before VAT)</span></label>
+      <label><input type="radio" name="mode" value="remove"><span data-i18n="tool.mode.remove">Gross price (with VAT)</span></label>
+    </div>
+
+    <label for="amount" data-i18n="tool.amount.label">Amount</label>
+    <input id="amount" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 100" data-i18n-placeholder="tool.amount.ph" autofocus>
+    <p class="currency-note" data-i18n="tool.note.currency">Works with any currency — it's pure percentage math, so just type the number without a symbol.</p>
+
+    <label data-i18n="tool.rate.label" style="margin-top:16px;">VAT rate %</label>
+    <div class="rate-row">
+      <div id="rate-presets" role="group" aria-label="VAT rate presets" data-i18n-aria-label="tool.rate.group"></div>
+      <input id="rate" type="number" inputmode="decimal" min="0" max="100" step="any" value="20" placeholder="e.g. 20" data-i18n-placeholder="tool.rate.ph" aria-label="VAT rate" data-i18n-aria-label="tool.rate.label" autocomplete="off">
+    </div>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter an amount to see the breakdown</p>
+      <div id="result-grid" hidden>
+        <button type="button" class="res-card" data-copy="net">
+          <span class="rc-label" data-i18n="tool.res.net">Net price (excl. VAT)</span>
+          <span class="rc-value">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="vat">
+          <span class="rc-label" data-i18n="tool.res.vat">VAT amount</span>
+          <span class="rc-value">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="gross">
+          <span class="rc-label" data-i18n="tool.res.gross">Gross price (incl. VAT)</span>
+          <span class="rc-value">&mdash;</span>
+        </button>
+      </div>
+      <p id="formula-note" hidden></p>
+      <p id="copy-hint" hidden data-i18n="tool.copyHint">Tap a card to copy the number</p>
+      <p id="err" role="alert" hidden></p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Adding VAT and removing VAT are different sums</h2>
+    <p>Adding VAT is a multiplication: take the net price, multiply by the rate, and add the result to the net price. Removing VAT from a gross price is a division, not a subtraction, because the VAT was originally calculated on the smaller net figure, not on the larger total you are holding now. Subtracting the rate straight from the gross price is the single most common VAT error, and it always understates the net price.</p>
+    <p>The gap is small on a coffee and material on an invoice. At 20% VAT, subtracting the rate from a gross price of 10,000 gives a net figure of 8,000 when the correct answer is 8,333.33 — a 333.33 difference that will not reconcile with an accounting system expecting the exact division.</p>
+
+    <h3>Worked example 1: adding VAT to a quote</h3>
+    <p>A freelance invoice for a net fee of 850.00 at the standard German rate of 19% needs VAT of 850 × 0.19 = 161.50 added on top. The gross amount the client pays is 850.00 + 161.50 = 1,011.50. Selecting "Net price (before VAT)" and tapping the 19% chip reproduces this instantly.</p>
+
+    <h3>Worked example 2: reclaiming the net amount from a receipt</h3>
+    <p>A receipt shows a gross total of 240.00 at 20% VAT and you need the net figure for an expense report. Switch the mode to "Gross price (with VAT)": 240.00 ÷ 1.20 = 200.00 net, with VAT of 40.00. The division undoes the original multiplication exactly, which subtraction never does.</p>
+
+    <h3>Worked example 3: comparing a price across two VAT rates</h3>
+    <p>A supplier quotes 500.00 net for the same goods whether the buyer is in a 21% or a 5% VAT jurisdiction. At 21% the gross price is 605.00; at 5% it is only 525.00 — an 80.00 gap driven entirely by the tax rate, not the underlying price. Comparing gross totals without checking the VAT rate behind them can make an identical deal look more or less expensive than it is.</p>
+
+    <h2>Common VAT and GST rates by country</h2>
+    <p>Standard rates below are for quick reference only — always confirm the current figure with your tax authority, since rates change and many goods qualify for reduced or zero rates.</p>
+    <table>
+      <thead><tr><th>Rate</th><th>Countries (standard rate)</th></tr></thead>
+      <tbody>
+        <tr><td>5%</td><td>Canada (federal GST)</td></tr>
+        <tr><td>7%</td><td>Thailand</td></tr>
+        <tr><td>10%</td><td>Australia (GST), Japan (consumption tax)</td></tr>
+        <tr><td>15%</td><td>South Africa, New Zealand (GST)</td></tr>
+        <tr><td>19%</td><td>Germany</td></tr>
+        <tr><td>20%</td><td>United Kingdom, France</td></tr>
+        <tr><td>21%</td><td>Netherlands, Belgium, Czechia</td></tr>
+        <tr><td>25%</td><td>Sweden, Denmark, Norway</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and edge cases</h2>
+    <ul>
+      <li><strong>Subtracting instead of dividing:</strong> to go from gross to net, divide by (1 + rate), never subtract the rate as a percentage of the gross figure — the two only agree when the rate is exactly 0%.</li>
+      <li><strong>Confusing the rate with the multiplier:</strong> a 20% rate corresponds to a ÷1.20 (or ×0.8333) reverse calculation, not ÷1.2 rounded to a different figure — small rounding shortcuts compound on large invoices.</li>
+      <li><strong>Zero-rated versus exempt:</strong> zero-rated goods are taxed at 0% (net equals gross) while exempt goods fall outside VAT entirely — the distinction affects whether a VAT-registered business can reclaim input tax on related purchases.</li>
+      <li><strong>Reduced rates on specific goods:</strong> many countries tax food, books, children's clothing, or medicine at a lower rate than the standard one, so the same country can have several correct answers depending on what is being priced.</li>
+    </ul>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.gov.uk/vat-rates" target="_blank" rel="noopener">GOV.UK — current UK VAT rates and which goods are reduced-rated, zero-rated or exempt</a></li>
+      <li><a href="https://www.gov.uk/vat-businesses" target="_blank" rel="noopener">HMRC (GOV.UK) — VAT rules for businesses, registration thresholds and reclaiming input tax</a></li>
+      <li><a href="https://www.oecd.org/tax/consumption/" target="_blank" rel="noopener">OECD — consumption tax trends and comparative VAT/GST rates across countries</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/zakat-calc/"><span class="related-ico" aria-hidden="true">🕌</span><span class="related-name">Zakat Calculator</span></a><a class="related-item" href="https://tool-hub.me/annuity-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Annuity Calculator</span></a><a class="related-item" href="https://tool-hub.me/apr-apy-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">APR to APY Calculator</span></a><a class="related-item" href="https://tool-hub.me/apy-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">APY Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details>
+      <summary data-i18n="faq.q1">How do I add VAT to a net price?</summary>
+      <p data-i18n="faq.a1">Multiply the net price by the VAT rate to get the VAT amount, then add it to the net price for the gross price. At 20% VAT, a net price of 100.00 gives VAT of 100 × 0.20 = 20.00, so the gross price is 120.00. Pick "Net price (before VAT)", enter the amount and the rate — or tap one of the rate chips (5, 7, 10, 15, 19, 20, 21, 25) for common VAT/GST rates — and the net, VAT, and gross amounts update instantly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I remove VAT from a gross price (reverse VAT)?</summary>
+      <p data-i18n="faq.a2">Divide by (1 + rate), don't subtract the rate as a percentage of the gross price — that is the classic reverse-VAT mistake. At 20% VAT, a gross price of 120.00 is 120 ÷ 1.20 = 100.00 net, with VAT of 20.00. Subtracting 20% straight from 120.00 would wrongly give 96.00 net, a 4.00 error. Switch this VAT calculator to "Gross price (with VAT)" and enter the total to see the correct pre-VAT figure.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Which VAT rate should I use?</summary>
+      <p data-i18n="faq.a3">VAT and GST rates vary widely by country and by product category, so check your local tax authority for the exact figure. As a rough guide, the rate chips cover common standard rates: 5% (Canada's GST), 7% (Thailand), 10% (Australia's GST, Japan's consumption tax), 15% (South Africa, New Zealand's GST), 19% (Germany), 20% (the UK, France), 21% (Netherlands, Belgium, Czechia), and 25% (Sweden, Denmark, Norway). Many countries also apply reduced rates to food, books, or medicine, so double-check before relying on the standard rate.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Does this VAT calculator work with any currency, and is my data sent anywhere?</summary>
+      <p data-i18n="faq.a4">Yes to both. Adding or removing VAT is pure percentage math with no currency conversion involved, so the result is correct whether you're entering dollars, euros, yen, or any other unit — just type the number without a currency symbol. Everything runs locally in your browser: the amount and rate you enter are never uploaded or stored on a server, and there's no sign-up or tracking.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">What happens if I set the VAT rate to 0%?</summary>
+      <p data-i18n="faq.a5">At 0% VAT the net and gross prices are identical and the VAT amount is zero — useful for zero-rated goods and services, which are taxable at 0% rather than exempt (the distinction matters for VAT-registered businesses reclaiming input tax). Enter 0 in the rate field, or as a custom rate if it isn't one of the presets, to confirm a price shouldn't change after VAT.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

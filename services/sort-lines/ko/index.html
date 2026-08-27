@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-TB+/LpD1aCY+8ueHwLeJw9y+VKmTWeicmFZOX85/qVo=' 'sha256-PbcK0bJvokUG9kfdGg+T1p2IPvGofp9qLIowegOaXME=' 'sha256-R4mrXEEST0+QINniNcxns77o34B/SZmJBSYbrHzzDd8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>알파벳 순서 정렬 도구 — 줄을 A-Z, 자연 순서, 무작위로 정렬</title>
+<meta name="description" content="목록을 붙여넣고 A-Z, Z-A, 자연 순서, 길이순 또는 무작위로 정렬하세요. 대소문자 구분이나 앞머리 관사 무시 옵션도 있습니다. 무료 — 브라우저에서만 실행되며 아무것도 업로드되지 않습니다.">
+<meta name="keywords" content="alphabetical order, sort alphabetically, abc order, sort lines online, alphabetize list, 가나다순 정렬, 줄 정렬">
+<link rel="canonical" href="https://tool-hub.me/sort-lines/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/sort-lines/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/sort-lines/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/sort-lines/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/sort-lines/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/sort-lines/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/sort-lines/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/sort-lines/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/sort-lines/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/sort-lines/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/sort-lines/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/sort-lines/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/sort-lines/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/sort-lines/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/sort-lines/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/sort-lines/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="알파벳 순서 정렬 도구 — 줄을 A-Z, 자연 순서, 무작위로 정렬">
+<meta property="og:description" content="목록을 붙여넣고 A-Z, Z-A, 자연 순서, 길이순 또는 무작위로 정렬하세요. 대소문자 구분이나 앞머리 관사 무시 옵션도 있습니다. 무료 — 브라우저에서만 실행되며 아무것도 업로드되지 않습니다.">
+<meta property="og:url" content="https://tool-hub.me/sort-lines/ko/">
+<meta property="og:image" content="https://tool-hub.me/sort-lines/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Alphabetical Order Tool",
+  "description": "Paste a list and sort A-Z, Z-A, naturally, by length, or shuffle. Ignore case or leading articles. Free — runs entirely in your browser, nothing uploaded.",
+  "url": "https://tool-hub.me/sort-lines/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Alphabetical Order Tool", "item": "https://tool-hub.me/sort-lines/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is natural sort order, and how is it different from plain alphabetical order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Plain alphabetical sorting compares text character by character, so \"item10\" comes before \"item2\" because the character \"1\" is smaller than \"2\". Natural order instead reads consecutive digits as one number, so item2 correctly sorts before item10. For the list item1, item2, item10, item20, plain A → Z gives item1, item10, item2, item20, while Natural order gives item1, item2, item10, item20. This makes Natural order the right choice for file names, chapter numbers, versions, and any list mixing text with numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does \"Ignore leading a / an / the\" sort book and movie titles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Libraries and media catalogs traditionally sort titles by their first meaningful word, ignoring a leading \"A\", \"An\" or \"The\" used only for display. Turn the option on and the comparison key drops that leading article — your original title is never changed, only how it is ordered. For example \"The Great Gatsby\", \"A Tale of Two Cities\", \"An American Tragedy\" and \"Moby Dick\" sort as An American Tragedy, The Great Gatsby, Moby Dick, A Tale of Two Cities — grouped by Gatsby, American, Moby and Tale rather than by A, An and The."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does case sensitivity change the sort order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With Case-sensitive off (the default) this alphabetize tool compares letters ignoring upper and lower case, so \"apple\", \"Apple\" and \"APPLE\" are treated as equal and stay in the order they appear for tie-breaking. Turn Case-sensitive on to use strict, locale-aware comparison, which in most languages sorts a lowercase letter and its uppercase form next to each other rather than grouping all-uppercase words separately. Either way sorting uses localeCompare, so accented letters and non-Latin scripts sort in a linguistically sensible order rather than by raw character codes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my list uploaded anywhere, and is there a size limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every sort runs entirely in your browser with plain JavaScript — nothing you paste is uploaded, logged, or sent to a server. Your last list and chosen options are optionally kept in this browser's local storage only, so they're still there next time you open the tool; clearing your browser data removes them. There's no hard line limit, but extremely large pastes (tens of thousands of lines) may feel sluggish since sorting happens on your own device."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to blank lines and duplicate entries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "\"Remove blank lines\" is on by default and filters out any line that is empty or contains only spaces before sorting, so they don't cluster at the top or bottom of your result. Turn it off to keep every blank line exactly where it falls. Duplicate entries are never merged or removed — if \"apple\" appears three times in your list, it appears three times in the sorted result, in its correct alphabetical position."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Alphabetical Order Tool</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Alphabetical Order Tool</span></nav>
+  <section class="hero">
+    <h1>Alphabetical Order Tool</h1>
+    <p class="lede" data-i18n="hero.lede">Paste any list and sort it A-Z, Z-A, naturally (item2 before item10), by length, or shuffle — all in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Sort lines tool" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool textarea#sl-input, #tool textarea#sl-output {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13.5px; line-height: 1.6; resize: vertical;
+      }
+      #tool .sl-count { margin: 6px 2px 0; font-size: 12.5px; color: var(--muted); min-height: 1.4em; }
+      #tool .sl-controls { display: grid; grid-template-columns: 1fr; gap: 4px; margin-top: 4px; }
+      #tool .sl-opts { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+      #tool .sl-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin: 0; font-weight: 600; font-size: 14.5px; }
+      #tool .sl-check input { width: auto; flex: 0 0 auto; margin: 0; }
+      #tool .sl-btnrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+      #tool .sl-btnrow .btn { margin-top: 0; padding: 11px 20px; }
+      #tool .btn.sl-ghost { background: none; border: 1px solid var(--line); color: var(--ink); }
+      #tool .btn.sl-ghost:hover { border-color: var(--accent); background: none; }
+      #tool .sl-msg { margin: 0; color: var(--muted); }
+      #tool .sl-hint { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); text-align: center; }
+      #tool label.sl-out-label { margin-top: 0; }
+      @media (max-width: 420px) {
+        #tool .sl-btnrow { gap: 8px; }
+        #tool .sl-btnrow .btn { flex: 1 1 auto; text-align: center; }
+      }
+    </style>
+
+    <label for="sl-input" data-i18n="tool.input.label">Lines to sort</label>
+    <textarea id="sl-input" rows="9" spellcheck="false" autocomplete="off" dir="auto"
+      placeholder="Paste one item per line…" data-i18n-placeholder="tool.input.ph"></textarea>
+    <p class="sl-count" id="sl-input-count"></p>
+
+    <div class="sl-controls">
+      <label for="sl-mode" data-i18n="tool.mode.label">Sort order</label>
+      <select id="sl-mode" autocomplete="off">
+        <option value="az" data-i18n="tool.mode.az">A → Z (alphabetical)</option>
+        <option value="za" data-i18n="tool.mode.za">Z → A (reverse alphabetical)</option>
+        <option value="natural" data-i18n="tool.mode.natural">Natural order (item2 before item10)</option>
+        <option value="length" data-i18n="tool.mode.length">By length (shortest first)</option>
+        <option value="lengthDesc" data-i18n="tool.mode.lengthDesc">By length (longest first)</option>
+        <option value="shuffle" data-i18n="tool.mode.shuffle">Random shuffle</option>
+        <option value="reverse" data-i18n="tool.mode.reverse">Reverse current order</option>
+      </select>
+    </div>
+
+    <div class="sl-opts">
+      <label class="sl-check" for="sl-case"><input type="checkbox" id="sl-case"><span data-i18n="tool.opt.case">Case-sensitive</span></label>
+      <label class="sl-check" for="sl-articles"><input type="checkbox" id="sl-articles"><span data-i18n="tool.opt.articles">Ignore leading "a / an / the" (title sort)</span></label>
+      <label class="sl-check" for="sl-blank"><input type="checkbox" id="sl-blank" checked><span data-i18n="tool.opt.blank">Remove blank lines</span></label>
+      <label class="sl-check" for="sl-dedupe"><input type="checkbox" id="sl-dedupe"><span data-i18n="tool.opt.dedupe">Remove duplicate lines</span></label>
+      <label class="sl-check" for="sl-trim"><input type="checkbox" id="sl-trim"><span data-i18n="tool.opt.trim">Trim spaces at line start/end</span></label>
+    </div>
+
+    <div class="sl-btnrow">
+      <button type="button" class="btn" id="sl-sort" data-i18n="tool.sort">Sort lines</button>
+      <button type="button" class="btn sl-ghost" id="sl-sample" data-i18n="tool.sample">Load sample</button>
+      <button type="button" class="btn sl-ghost" id="sl-clear" data-i18n="tool.clear">Clear</button>
+    </div>
+
+    <div class="result" id="sl-result" aria-live="polite">
+      <p class="sl-msg" id="sl-msg-empty" data-i18n="tool.placeholder">Paste a list above and choose a sort order.</p>
+      <p class="sl-msg" id="sl-msg-allblank" hidden data-i18n="tool.allBlank">Every line is blank — nothing to sort.</p>
+      <div id="sl-out-wrap" hidden>
+        <label class="sl-out-label" for="sl-output" data-i18n="tool.output.label">Sorted result</label>
+        <textarea id="sl-output" rows="9" readonly spellcheck="false" dir="auto"></textarea>
+        <p class="sl-count" id="sl-output-count"></p>
+        <div class="sl-btnrow">
+          <button type="button" class="btn" id="sl-copy" data-i18n="tool.copy">Copy result</button>
+          <button type="button" class="btn sl-ghost" id="sl-use" data-i18n="tool.useAsInput">Use as input</button>
+        </div>
+        <p class="sl-hint" id="sl-copy-hint" hidden></p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Sorting a list without opening a spreadsheet</h2>
+    <p>Alphabetizing a list by hand is slow and error-prone the moment it grows past a dozen items — a spreadsheet's sort button works, but pasting into one just to reorder a few lines is overkill. This tool takes whatever you paste, one item per line, and reorders it instantly: alphabetically forwards or backwards, numerically-aware ("natural" order), by line length, shuffled at random, or simply reversed — all inside the browser tab, with nothing uploaded.</p>
+
+    <h3>How each sort order works</h3>
+    <ul>
+      <li><strong>A → Z / Z → A</strong> compares lines using <code>localeCompare</code>, which orders accented letters and non-Latin scripts the way a human reader expects rather than by raw character code.</li>
+      <li><strong>Natural order</strong> reads runs of digits as numbers instead of comparing them character by character, so <code>item2</code> sorts before <code>item10</code> — plain alphabetical order gets this backwards.</li>
+      <li><strong>By length</strong> sorts shortest line first, with ties broken alphabetically so the order stays stable and predictable.</li>
+      <li><strong>Random shuffle</strong> uses a Fisher-Yates shuffle, giving every line an equal chance to land in any position — useful for randomizing raffle entries or a name-picking order.</li>
+      <li><strong>Reverse current order</strong> simply flips whatever order the lines are pasted in, without re-sorting them — handy for undoing a previous reverse or reading a log bottom-up.</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Example — natural vs. plain order.</strong> Input: <code>file1, file2, file10, file20</code>. Plain A → Z gives <code>file1, file10, file2, file20</code> because "1" sorts before "2" as a character. Natural order gives the expected <code>file1, file2, file10, file20</code>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example — title sort.</strong> Input: <code>The Great Gatsby, A Tale of Two Cities, An American Tragedy, Moby Dick</code>. With "Ignore leading a / an / the" on, the list sorts as a librarian would file it: <code>An American Tragedy, The Great Gatsby, Moby Dick, A Tale of Two Cities</code> — grouped by Gatsby, American, Moby and Tale.</p>
+    </div>
+
+    <h3>Case sensitivity and why it matters</h3>
+    <p>With Case-sensitive off, "apple", "Apple" and "APPLE" compare as equal, which is what most people expect from an alphabetize tool. Turning it on switches to strict comparison, which is useful when a list mixes constants like <code>API_KEY</code> and <code>api_key</code> and you need them to land in a predictable, distinct order rather than being treated as duplicates for sorting purposes.</p>
+
+    <table>
+      <thead><tr><th>Use case</th><th>Recommended sort order</th></tr></thead>
+      <tbody>
+        <tr><td>Names or a word list</td><td>A → Z, case-insensitive</td></tr>
+        <tr><td>File names like img2.png, img10.png</td><td>Natural order</td></tr>
+        <tr><td>Book, movie or song titles</td><td>A → Z + Ignore leading a/an/the</td></tr>
+        <tr><td>Picking a random order for a raffle</td><td>Random shuffle</td></tr>
+        <tr><td>Flipping an already-sorted list</td><td>Reverse current order</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Practical notes</h3>
+    <p>Blank lines are removed before sorting by default (toggle this off to keep them), and duplicate lines are always preserved — this tool reorders, it does not deduplicate. Your last pasted list and chosen options are remembered in this browser's local storage so they're there next time you return; nothing is ever sent to a server.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.unicode.org/reports/tr10/" target="_blank" rel="noopener">Unicode Technical Standard #10 — the Unicode Collation Algorithm behind language-aware alphabetical order</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator" target="_blank" rel="noopener">MDN Web Docs: Intl.Collator — locale-aware string comparison, case sensitivity and numeric (natural) sorting</a></li>
+      <li><a href="https://www.w3.org/International/" target="_blank" rel="noopener">W3C Internationalization — guidance on sorting and comparing text across languages and scripts</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/text-diff/"><span class="related-ico" aria-hidden="true">🔍</span><span class="related-name">Text Diff Checker</span></a><a class="related-item" href="https://tool-hub.me/text-to-speech/"><span class="related-ico" aria-hidden="true">🔊</span><span class="related-name">Text to Speech</span></a><a class="related-item" href="https://tool-hub.me/upside-down-text/"><span class="related-ico" aria-hidden="true">🙃</span><span class="related-name">Upside Down Text Generator</span></a><a class="related-item" href="https://tool-hub.me/whitespace-remover/"><span class="related-ico" aria-hidden="true">✂️</span><span class="related-name">Extra Space Remover</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is natural sort order, and how is it different from plain alphabetical order?</summary>
+      <p data-i18n="faq.a1">Plain alphabetical sorting compares text character by character, so "item10" comes before "item2" because the character "1" is smaller than "2". Natural order instead reads consecutive digits as one number, so item2 correctly sorts before item10. For the list item1, item2, item10, item20, plain A → Z gives item1, item10, item2, item20, while Natural order gives item1, item2, item10, item20. This makes Natural order the right choice for file names, chapter numbers, versions, and any list mixing text with numbers.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How does "Ignore leading a / an / the" sort book and movie titles?</summary>
+      <p data-i18n="faq.a2">Libraries and media catalogs traditionally sort titles by their first meaningful word, ignoring a leading "A", "An" or "The" used only for display. Turn the option on and the comparison key drops that leading article — your original title is never changed, only how it is ordered. For example "The Great Gatsby", "A Tale of Two Cities", "An American Tragedy" and "Moby Dick" sort as An American Tragedy, The Great Gatsby, Moby Dick, A Tale of Two Cities — grouped by Gatsby, American, Moby and Tale rather than by A, An and The.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Does case sensitivity change the sort order?</summary>
+      <p data-i18n="faq.a3">With Case-sensitive off (the default) this alphabetize tool compares letters ignoring upper and lower case, so "apple", "Apple" and "APPLE" are treated as equal and stay in the order they appear for tie-breaking. Turn Case-sensitive on to use strict, locale-aware comparison, which in most languages sorts a lowercase letter and its uppercase form next to each other rather than grouping all-uppercase words separately. Either way sorting uses localeCompare, so accented letters and non-Latin scripts sort in a linguistically sensible order rather than by raw character codes.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is my list uploaded anywhere, and is there a size limit?</summary>
+      <p data-i18n="faq.a4">No. Every sort runs entirely in your browser with plain JavaScript — nothing you paste is uploaded, logged, or sent to a server. Your last list and chosen options are optionally kept in this browser's local storage only, so they're still there next time you open the tool; clearing your browser data removes them. There's no hard line limit, but extremely large pastes (tens of thousands of lines) may feel sluggish since sorting happens on your own device.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">What happens to blank lines and duplicate entries?</summary>
+      <p data-i18n="faq.a5">"Remove blank lines" is on by default and filters out any line that is empty or contains only spaces before sorting, so they don't cluster at the top or bottom of your result. Turn it off to keep every blank line exactly where it falls. Duplicate entries are never merged or removed — if "apple" appears three times in your list, it appears three times in the sorted result, in its correct alphabetical position.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

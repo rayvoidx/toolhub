@@ -33,6 +33,12 @@
   }
 
   function detect() {
+    // 경로 세그먼트 최우선: /<slug>/<lang>/ 언어별 정적 페이지는 navigator 에 덮이면 안 된다 (2026-08-27).
+    try {
+      var seg = location.pathname.replace(/\/+$/, "").split("/").pop();
+      var pathLang = normalize(seg);
+      if (pathLang) return pathLang;
+    } catch (e) { /* noop */ }
     try {
       var p = normalize(new URLSearchParams(location.search).get("lang"));
       if (p) return p;
@@ -119,7 +125,10 @@
       if (lang !== "en" && !window.GUIDES && !window.__guideLoading) {
         window.__guideLoading = true;
         var gs = document.createElement("script");
-        gs.src = "js/guide-i18n.js";
+        // guide-i18n.js 는 i18n.js 와 같은 디렉터리 — 자기 src 에서 base 유도(언어 정적 페이지 /<lang>/ 는 ../js/)
+        var gbase = "js/";
+        try { var si = document.querySelector('script[src$="/i18n.js"]'); if (si) gbase = si.getAttribute("src").replace(/i18n\.js$/, ""); } catch (e) {}
+        gs.src = gbase + "guide-i18n.js";
         gs.onload = applyGuide;
         gs.onerror = function () { window.GUIDES = window.GUIDES || {}; };
         document.head.appendChild(gs);

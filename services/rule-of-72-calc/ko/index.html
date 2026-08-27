@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-SKLGgQWLASm7Gfe9YrlLnl2AfjXhuqNE7YKu2rrJZG0=' 'sha256-vUs/IJlNInVE2JQsbIQ0lOziUZH1R3FTZQudQYKgdfg=' 'sha256-EK2ScJxVk9ucKhjnDTmmo8CnYAvMrBqoSSbVlgIiXLM='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>72 법칙 계산기 — 돈이 두 배 되는 기간</title>
+<meta name="description" content="72 법칙으로 수익률별 자산이 두 배 되는 기간을 구하고, 정확한 복리 계산값과 나란히 비교합니다. 3배·4배가 되는 기간도 함께 보여줍니다.">
+<meta name="keywords" content="rule of 72, rule of 72 calculator, doubling time money, how long to double investment, rule of 114, rule of 144, inflation halving time">
+<link rel="canonical" href="https://tool-hub.me/rule-of-72-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/rule-of-72-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/rule-of-72-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/rule-of-72-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/rule-of-72-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/rule-of-72-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/rule-of-72-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/rule-of-72-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/rule-of-72-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/rule-of-72-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/rule-of-72-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/rule-of-72-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/rule-of-72-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/rule-of-72-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/rule-of-72-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/rule-of-72-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="72 법칙 계산기 — 돈이 두 배 되는 기간">
+<meta property="og:description" content="72 법칙으로 수익률별 자산이 두 배 되는 기간을 구하고, 정확한 복리 계산값과 나란히 비교합니다. 3배·4배가 되는 기간도 함께 보여줍니다.">
+<meta property="og:url" content="https://tool-hub.me/rule-of-72-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/rule-of-72-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#065f46">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Rule of 72 Calculator",
+  "description": "Use the Rule of 72 to find how long money takes to double at any return, with the exact compound answer beside it, plus tripling and quadrupling times.",
+  "url": "https://tool-hub.me/rule-of-72-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why 72 and not some other number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Doubling time under compound interest is ln(2) divided by ln(1 + r), and ln(2) is 0.693, so the true numerator at low rates is close to 69.3 when the rate is written as a percentage. Rounding up to 72 costs a sliver of accuracy and buys enormous convenience: 72 divides cleanly by 1, 2, 3, 4, 6, 8, 9 and 12, which are exactly the return rates people quote. You can do 72/9 in your head; 69.3/9 you cannot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is the Rule of 72?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "At 8% it is almost perfect: 72/8 = 9 years against a true 9.01 years. Between roughly 6% and 10% the error stays under about a tenth of a year. Outside that band it drifts — at 2% the rule says 36 years while the truth is 35, and at 25% it says 2.9 against a true 3.1. Use 69.3 for continuous compounding and 72 for ordinary annual compounding."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it for inflation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and that is the version households feel most. Divide 72 by the inflation rate and you get the years until your purchasing power halves. At 3% inflation money loses half its value in 24 years; at 6% that collapses to 12 years. It explains why a savings account paying less than inflation quietly loses real money even as the balance climbs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the Rule of 72 apply to debt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It works identically, just against you. A credit card at 22% APR doubles what you owe in roughly 72/22 = 3.3 years if you never pay. A 6% car loan balance would double in 12 years, and a 30% short-term rate in under two and a half. Running the number on your highest-rate debt usually settles the invest-versus-repay argument on the spot."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Rule of 72 Calculator",
+      "item": "https://tool-hub.me/rule-of-72-calc/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Rule of 72 Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Rule of 72 Calculator</span></nav>
+  <section class="hero">
+    <h1>Rule of 72 Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Divide 72 by your annual return and the doubling time falls out — no spreadsheet needed.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .rcard.wide .rc-val { font-size:16px; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What do you want to work out?</label>
+    <select id="mode">
+      <option value="years" data-i18n="tool.mode.years">Years to double my money</option>
+      <option value="rate" data-i18n="tool.mode.rate">Return needed to double in a set time</option>
+    </select>
+
+    <div id="rate-field">
+      <label for="rate" data-i18n="tool.rate.label">Annual return (%)</label>
+      <input type="number" id="rate" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="8">
+    </div>
+    <div id="years-field" hidden>
+      <label for="years" data-i18n="tool.years.label">Target years to double</label>
+      <input type="number" id="years" inputmode="decimal" min="0" max="200" step="any" autocomplete="off" placeholder="9">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-main-label" data-i18n="tool.r.double">Doubling time</div>
+          <div class="rc-val" id="r-main">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.exact">Exact compound answer</div><div class="rc-val" id="r-exact">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.delta">Rule of 72 error</div><div class="rc-val" id="r-delta">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.triple">Triple it (Rule of 114)</div><div class="rc-val" id="r-triple">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.quad">Quadruple it (Rule of 144)</div><div class="rc-val" id="r-quad">—</div></div>
+        <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.illus">$10,000 growing</div><div class="rc-val" id="r-illus">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.band" style="margin-top:12px;">The 72 shortcut is sharpest between 6% and 10% a year. Far outside that band, trust the exact compound figure shown beside it.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What the Rule of 72 actually does</h2>
+    <p>The Rule of 72 is a one-step shortcut for compound growth: divide 72 by an annual percentage rate and you get the number of years for the amount to double. At 8% a year, 72 divided by 8 is 9 — money doubles in about nine years. At 6% it is 12 years, at 9% it is 8 years, at 12% it is 6 years. No calculator, no logarithms, no spreadsheet. That is the whole appeal: it turns a compounding question into mental arithmetic you can run in a meeting or across a kitchen table.</p>
+
+    <h3>Worked example: 
+
+  0,000 at 8%</h3>
+    <p>Suppose you put 
+
+  0,000 into a fund returning 8% a year and leave it alone. The rule says 72 / 8 = 9 years to reach $20,000, and another nine years to reach $40,000. The exact answer is ln(2) / ln(1.08) = 9.006 years, so the shortcut is off by about three days over nine years. Check it directly: 10,000 x 1.08^9 = 
+
+  9,990. Nine years of compounding lands you within 
+
+  0 of doubling. This is why 8% is the poster child for the rule — the approximation and the truth sit almost on top of each other.</p>
+    <p>Push the rate to the edges and the gap opens. At 2%, the rule claims 36 years while the true figure is 35.0. At 25%, the rule says 2.88 years against a true 3.11 — an 8% overstatement of speed. The calculator above prints both numbers side by side and the signed error between them, so you never have to guess whether you are inside the reliable band.</p>
+
+    <h3>Why 72 rather than 69.3</h3>
+    <p>The mathematically pure constant is ln(2) = 0.693, which is where the "Rule of 69.3" comes from for continuously compounded returns. For ordinary once-a-year compounding, the small correction term nudges the ideal numerator upward, and somewhere in the 6% to 10% range 72 is a better fit than 69.3. It also happens to be the friendliest number in arithmetic: 72 divides evenly by 1, 2, 3, 4, 6, 8, 9 and 12. Those are exactly the rates people quote — a 6% bond, an 8% long-run equity assumption, a 12% credit card. Luca Pacioli wrote the rule down in 1494, centuries before anyone had a pocket calculator, and its survival is entirely down to that divisibility.</p>
+
+    <h3>The inflation flip side</h3>
+    <p>Run the same division on an inflation rate and you get the halving time of your purchasing power. At the 2% target most central banks aim for, money loses half its value in 36 years. At 4%, that drops to 18 years; at 6%, to just 12. Retirees planning a 30-year horizon should assume prices roughly double at least once during retirement, which is the single strongest argument against holding an entire nest egg in cash. If your savings account pays 1% while inflation runs 3%, the real rate is minus 2% and your buying power halves in 36 years even though the balance never falls.</p>
+
+    <h3>The debt warning</h3>
+    <p>Compounding is indifferent to which side of the ledger you sit on. A credit card at 22% APR doubles an untouched balance in 72 / 22 = 3.3 years. A $6,000 balance ignored for a decade becomes roughly $44,000. Set against a stock portfolio's long-run 7% to 10%, paying down high-rate debt is a guaranteed return that no fund can promise. Running 72 divided by your highest debt rate, then 72 divided by your expected investment return, usually ends the argument in one comparison.</p>
+
+    <h3>Where the rule breaks down</h3>
+    <p>It assumes a single constant rate, annual compounding, no contributions, no withdrawals, no taxes and no fees. Real portfolios have volatile returns, and volatility drags the compound average below the simple average, so a fund averaging 8% with wild swings doubles slower than one grinding out a steady 8%. Fees compound too: a 1% annual charge on an 8% gross return leaves 7%, stretching the doubling time from 9 years to 10.3. Use the shortcut for scale and sanity checks, and switch to a full compound interest calculation before you commit real money.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" target="_blank" rel="noopener">U.S. SEC Investor.gov — official compound interest calculator for exact doubling checks</a></li>
+      <li><a href="https://www.federalreserve.gov/monetarypolicy.htm" target="_blank" rel="noopener">Federal Reserve — monetary policy and the 2% inflation goal behind purchasing-power halving</a></li>
+      <li><a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — Consumer Price Index, the measured inflation rate to plug in</a></li>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/credit-cards/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — how credit card APR compounds against a balance</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/salary-calc/"><span class="related-ico" aria-hidden="true">💰</span><span class="related-name">Korean Salary Calculator</span></a><a class="related-item" href="https://tool-hub.me/salary-hike-calc/"><span class="related-ico" aria-hidden="true">📊</span><span class="related-name">Salary Hike Calculator</span></a><a class="related-item" href="https://tool-hub.me/sales-tax-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">Sales Tax Calculator</span></a><a class="related-item" href="https://tool-hub.me/savings-calc/"><span class="related-ico" aria-hidden="true">🐷</span><span class="related-name">Savings Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why 72 and not some other number?</summary><p data-i18n="faq.a1">Doubling time under compound interest is ln(2) divided by ln(1 + r), and ln(2) is 0.693, so the true numerator at low rates is close to 69.3 when the rate is written as a percentage. Rounding up to 72 costs a sliver of accuracy and buys enormous convenience: 72 divides cleanly by 1, 2, 3, 4, 6, 8, 9 and 12, which are exactly the return rates people quote. You can do 72/9 in your head; 69.3/9 you cannot.</p></details>
+    <details><summary data-i18n="faq.q2">How accurate is the Rule of 72?</summary><p data-i18n="faq.a2">At 8% it is almost perfect: 72/8 = 9 years against a true 9.01 years. Between roughly 6% and 10% the error stays under about a tenth of a year. Outside that band it drifts — at 2% the rule says 36 years while the truth is 35, and at 25% it says 2.9 against a true 3.1. Use 69.3 for continuous compounding and 72 for ordinary annual compounding.</p></details>
+    <details><summary data-i18n="faq.q3">Can I use it for inflation?</summary><p data-i18n="faq.a3">Yes, and that is the version households feel most. Divide 72 by the inflation rate and you get the years until your purchasing power halves. At 3% inflation money loses half its value in 24 years; at 6% that collapses to 12 years. It explains why a savings account paying less than inflation quietly loses real money even as the balance climbs.</p></details>
+    <details><summary data-i18n="faq.q4">Does the Rule of 72 apply to debt?</summary><p data-i18n="faq.a4">It works identically, just against you. A credit card at 22% APR doubles what you owe in roughly 72/22 = 3.3 years if you never pay. A 6% car loan balance would double in 12 years, and a 30% short-term rate in under two and a half. Running the number on your highest-rate debt usually settles the invest-versus-repay argument on the spot.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

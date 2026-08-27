@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-KEkXxtmI+CSqQuu68xe7LEmrX8AyJWzK8dJphhQmwdM=' 'sha256-ErpSeKVot+I5a0/gqmeBfsSyj8QWg5Fm7jPmbmb4suc=' 'sha256-5aXdWJ2W6k625Jl13F43T9F+VIo/JorZIHC4VZPZdjg='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>퍼센트 계산기 — 비율·증감률·변화량을 탭 하나로</title>
+<meta name="description" content="A는 B의 몇%인지, X% 오르면 얼마인지, A에서 B로 변하면 증감률이 얼마인지 — 3가지 퍼센트 질문을 즉시 계산합니다. 무료, 광고 없음.">
+<meta name="keywords" content="percentage calculator, percent change calculator, ratio calculator, percent increase calculator">
+<link rel="canonical" href="https://tool-hub.me/percent-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/percent-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/percent-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/percent-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/percent-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/percent-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/percent-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/percent-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/percent-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/percent-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/percent-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/percent-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/percent-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/percent-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/percent-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/percent-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="퍼센트 계산기 — 비율·증감률·변화량을 탭 하나로">
+<meta property="og:description" content="A는 B의 몇%인지, X% 오르면 얼마인지, A에서 B로 변하면 증감률이 얼마인지 — 3가지 퍼센트 질문을 즉시 계산합니다. 무료, 광고 없음.">
+<meta property="og:url" content="https://tool-hub.me/percent-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/percent-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Percentage Calculator",
+  "description": "Work out what percent A is of B, the result after an X% increase or decrease, and the percent change from A to B — three percentage questions answered instantly. Free and ad-free.",
+  "url": "https://tool-hub.me/percent-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Percentage Calculator",
+      "item": "https://tool-hub.me/percent-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between percent (%) and percentage points (pp)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Percent (%) and percentage points (pp) mean different things. If an interest rate rises from 10% to 12%, that is a 2 percentage-point increase, not a 2% increase. A 2% increase would mean 2% of 10%, i.e. 0.2pp. The change-rate tab (tab 3) computes the percent change, which is distinct from the difference in the rates themselves (percentage points)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When does the change rate come out below -100%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The change rate can fall below -100% when the before value A is positive and the after value B is negative, or when the before value A is negative. For example, A=100 and B=-50 gives a change rate of -150%. That is mathematically correct, but in real life a negative starting value needs careful interpretation. When the base value (A) is zero, this calculator tells you that the base value cannot be zero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do the decimals sometimes look slightly off?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Computers store numbers internally in binary (floating point), so tiny errors like 0.1 + 0.2 = 0.30000000000000004 can appear. This percentage calculator rounds results to two decimal places, which is plenty for everyday math. For precise accounting or tax work, use dedicated software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is a discount calculation different from a change-rate calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A discount calculation takes a list price and a sale price to find how much you saved, while a change-rate calculation finds the rate of change between two values. The formula is the same but the purpose differs. If you want a tool built for shopping discounts, use our discount calculator →"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are my results sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This percentage calculator processes the numbers you type entirely inside your browser. Every calculation runs locally in JavaScript with no server communication at all. Even sensitive financial figures never leave your device, so you can use it with peace of mind."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Percentage Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Percentage Calculator</span></nav>
+  <section class="hero">
+    <h1>Percentage Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">No formulas to memorize. Type the numbers and the answer appears instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+       mirrored in all 14 language blocks of js/locales.js. Dynamic JS strings go through
+       window.I18N.t("key"); the tool re-renders on the "i18n:change" event. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <!-- Tab navigation -->
+    <div class="tab-nav" role="tablist" aria-label="Select calculation type" data-i18n-aria-label="tool.tablabel">
+      <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="tab-ratio" id="btn-ratio" data-tab="ratio" data-i18n="tool.tab.ratio">What % is A of B</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-change" id="btn-change" data-tab="change" data-i18n="tool.tab.change">% increase / decrease</button>
+      <button class="tab-btn" role="tab" aria-selected="false" aria-controls="tab-rate" id="btn-rate" data-tab="rate" data-i18n="tool.tab.rate">Change rate</button>
+    </div>
+
+    <!-- Tab 1: what percent is A of B -->
+    <div class="tab-panel" id="tab-ratio" role="tabpanel" aria-labelledby="btn-ratio">
+      <div class="field-group">
+        <label for="ratio-a" data-i18n="tool.ratio.aLabel">Part value A</label>
+        <input type="number" id="ratio-a" class="input" placeholder="e.g. 30" data-i18n-placeholder="tool.ratio.aPh" inputmode="decimal">
+      </div>
+      <div class="field-group">
+        <label for="ratio-b" data-i18n="tool.ratio.bLabel">Whole value B</label>
+        <input type="number" id="ratio-b" class="input" placeholder="e.g. 120" data-i18n-placeholder="tool.ratio.bPh" inputmode="decimal">
+      </div>
+      <button type="button" class="btn" id="ratio-calc-btn" data-i18n="tool.calc">Calculate</button>
+      <div class="result" id="ratio-result" aria-live="polite"></div>
+    </div>
+
+    <!-- Tab 2: A after an X% increase / decrease -->
+    <div class="tab-panel" id="tab-change" role="tabpanel" aria-labelledby="btn-change" hidden>
+      <div class="field-group">
+        <label for="change-a" data-i18n="tool.change.aLabel">Base value A</label>
+        <input type="number" id="change-a" class="input" placeholder="e.g. 50000" data-i18n-placeholder="tool.change.aPh" inputmode="decimal">
+      </div>
+      <div class="field-group">
+        <label for="change-x" data-i18n="tool.change.xLabel">Percent X (%)</label>
+        <input type="number" id="change-x" class="input" placeholder="e.g. 15" data-i18n-placeholder="tool.change.xPh" inputmode="decimal">
+      </div>
+      <div class="field-group">
+        <label data-i18n="tool.change.modeLabel">Mode</label>
+        <div class="toggle-group" role="group" aria-label="Increase / decrease" data-i18n-aria-label="tool.change.modeGroup">
+          <button type="button" class="toggle-btn active" id="change-increase" data-mode="increase" data-i18n="tool.change.increase">Increase ▲</button>
+          <button type="button" class="toggle-btn" id="change-decrease" data-mode="decrease" data-i18n="tool.change.decrease">Decrease ▼</button>
+        </div>
+      </div>
+      <button type="button" class="btn" id="change-calc-btn" data-i18n="tool.calc">Calculate</button>
+      <div class="result" id="change-result" aria-live="polite"></div>
+    </div>
+
+    <!-- Tab 3: change rate from A to B -->
+    <div class="tab-panel" id="tab-rate" role="tabpanel" aria-labelledby="btn-rate" hidden>
+      <div class="field-group">
+        <label for="rate-a" data-i18n="tool.rate.aLabel">Before value A</label>
+        <input type="number" id="rate-a" class="input" placeholder="e.g. 80000" data-i18n-placeholder="tool.rate.aPh" inputmode="decimal">
+      </div>
+      <div class="field-group">
+        <label for="rate-b" data-i18n="tool.rate.bLabel">After value B</label>
+        <input type="number" id="rate-b" class="input" placeholder="e.g. 100000" data-i18n-placeholder="tool.rate.bPh" inputmode="decimal">
+      </div>
+      <button type="button" class="btn" id="rate-calc-btn" data-i18n="tool.calc">Calculate</button>
+      <div class="result" id="rate-result" aria-live="polite"></div>
+    </div>
+
+    <div class="field-group">
+      <label for="decimals" data-i18n="tool.decimalsLabel">Decimal places</label>
+      <select id="decimals" class="input">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+    </div>
+
+    <p class="copy-hint" id="copy-hint" data-i18n="tool.copyHint" hidden>Click the result to copy it to the clipboard.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>Percentages in everyday numbers</h2>
+    <p>A percentage is a ratio scaled to 100, and nearly every real-world question about percentages boils down to one of three shapes: what share does one number represent of another, how much does a value become after a percent change, and what percent connects two known values. This calculator's three tabs map directly onto those three shapes — but knowing which one to reach for, and how to run one of them in reverse, is what actually saves time on invoices, payslips, discounts, and reports.</p>
+
+    <h3>Which tab answers your question</h3>
+    <ul>
+      <li><strong>What % is A of B</strong> — use this when you know a part and a whole and want the share: a test score out of the maximum, a down payment out of a home price, or how much of a monthly budget goes to rent.</li>
+      <li><strong>% increase / decrease</strong> — use this when you know a starting value and a percent, and want the resulting number: a price after a markup, a salary after a raise, a population after a decline.</li>
+      <li><strong>Change rate</strong> — use this when you know both a before and an after value and want the percent that connects them: how much revenue grew year over year, or how far a stock has fallen from its peak.</li>
+    </ul>
+
+    <h3>The three formulas in plain words</h3>
+    <div class="example">
+      <p><strong>Ratio:</strong> percent = (A ÷ B) × 100</p>
+      <p><strong>Increase:</strong> result = A × (1 + X ÷ 100) &nbsp;·&nbsp; <strong>Decrease:</strong> result = A × (1 − X ÷ 100)</p>
+      <p><strong>Change rate:</strong> percent change = ((B − A) ÷ A) × 100 — positive means growth, negative means decline</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p><strong>Example 1 — grading a test.</strong> You answered 42 of 50 questions correctly. On the ratio tab: A = 42, B = 50, so 42 ÷ 50 × 100 = 84%, comfortably above an 80% cutoff.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a price after tax.</strong> An item costs $68 before an 8.25% sales tax. On the increase/decrease tab in increase mode: A = 68, X = 8.25, result = 68 × 1.0825 = $73.61. The tax itself is $73.61 − $68 = $5.61.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — reversing a discount.</strong> A jacket sells for $84 after a 30% markdown, and you want the original price. Since sale price = original × (1 − 0.30), the original is the sale price divided by the same 0.70 factor: 84 ÷ 0.70 = $120. This reverse direction — undoing a known percent change to recover the starting value — is the calculation people miss most often, because it needs division where the forward version needs multiplication.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 4 — measuring growth.</strong> Monthly visitors moved from 8,400 to 9,660. On the change-rate tab: A = 8400, B = 9660, so (9660 − 8400) ÷ 8400 × 100 = 15%. That 15% is the growth rate — not the same thing as the raw gain of 1,260 visitors.</p>
+    </div>
+
+    <h3>Quick reference</h3>
+    <table>
+      <tr><th>You want to find</th><th>Formula</th><th>Tab to use</th></tr>
+      <tr><td>Part as a % of a whole</td><td>(A ÷ B) × 100</td><td>What % is A of B</td></tr>
+      <tr><td>Value after +X% or −X%</td><td>A × (1 ± X/100)</td><td>% increase / decrease</td></tr>
+      <tr><td>% change between two values</td><td>((B − A) ÷ A) × 100</td><td>Change rate</td></tr>
+      <tr><td>Original value before a known % change</td><td>new value ÷ (1 ± X/100)</td><td>increase/decrease, run in reverse</td></tr>
+      <tr><td>Gap between two percentages</td><td>simple subtraction, in percentage points</td><td>manual — see below</td></tr>
+    </table>
+
+    <h3>Percentage points vs. percent — the mix-up that trips up most people</h3>
+    <p>If an interest rate rises from 5% to 7%, that is a 2 <strong>percentage-point</strong> increase, but a 40% <strong>relative</strong> increase (2 ÷ 5 × 100). News headlines and financial statements routinely blur the two, and swapping one for the other can make a small policy shift sound dramatic or a large one sound trivial. When comparing two percentages, decide first whether the number you need is the plain point difference or the relative percent change between them — they answer different questions and are not interchangeable.</p>
+
+    <h3>Other common mistakes</h3>
+    <ul>
+      <li>Assuming a decrease and the matching increase cancel out: a 50% drop followed by a 50% rise does not return the original value (100 → 50 → 75, not 100).</li>
+      <li>Using the wrong base in a change-rate calculation — percent change is always relative to the <em>starting</em> value, never the ending one.</li>
+      <li>Rounding intermediate results before the final step, which quietly compounds errors in multi-stage math like tax-then-tip or discount-then-tax.</li>
+    </ul>
+
+    <h3>What this tool does not do</h3>
+    <p>This calculator handles single-step percentage arithmetic: one ratio, one increase or decrease, or one change rate at a time. It does not automatically chain multiple percentage changes — for a discount followed by tax, run the increase/decrease tab twice, once per step — and it does not model compounding interest, loan amortization, or jurisdiction-specific tax and rounding rules. For financial or tax decisions, treat the result as a solid working estimate rather than a final figure.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.khanacademy.org/math/arithmetic/arith-review-percent" target="_blank" rel="noopener">Khan Academy — percentage basics, percent change and ratio problems</a></li>
+      <li><a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — how official percent-change figures such as CPI inflation are computed</a></li>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — percentage rates in everyday consumer finance</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — rounding and significant-digit guidance for reported values</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/position-size-calc/"><span class="related-ico" aria-hidden="true">🛡️</span><span class="related-name">Position Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/ppf-calc/"><span class="related-ico" aria-hidden="true">🏛️</span><span class="related-name">PPF Calculator</span></a><a class="related-item" href="https://tool-hub.me/prorated-rent-calc/"><span class="related-ico" aria-hidden="true">🗓️</span><span class="related-name">Prorated Rent Calculator</span></a><a class="related-item" href="https://tool-hub.me/rd-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">RD Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Each summary/p carries data-i18n="faq.qN|faq.aN", filled for every language in locales.js. -->
+    <details>
+      <summary data-i18n="faq.q1">What is the difference between percent (%) and percentage points (pp)?</summary>
+      <p data-i18n="faq.a1">Percent (%) and percentage points (pp) mean different things. If an interest rate rises from 10% to 12%, that is a 2 percentage-point increase, not a 2% increase. A 2% increase would mean 2% of 10%, i.e. 0.2pp. The change-rate tab (tab 3) computes the percent change, which is distinct from the difference in the rates themselves (percentage points).</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">When does the change rate come out below -100%?</summary>
+      <p data-i18n="faq.a2">The change rate can fall below -100% when the before value A is positive and the after value B is negative, or when the before value A is negative. For example, A=100 and B=-50 gives a change rate of -150%. That is mathematically correct, but in real life a negative starting value needs careful interpretation. When the base value (A) is zero, this calculator tells you that the base value cannot be zero.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why do the decimals sometimes look slightly off?</summary>
+      <p data-i18n="faq.a3">Computers store numbers internally in binary (floating point), so tiny errors like 0.1 + 0.2 = 0.30000000000000004 can appear. This percentage calculator rounds results to two decimal places, which is plenty for everyday math. For precise accounting or tax work, use dedicated software.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How is a discount calculation different from a change-rate calculation?</summary>
+      <p><span data-i18n="faq.a4">A discount calculation takes a list price and a sale price to find how much you saved, while a change-rate calculation finds the rate of change between two values. The formula is the same but the purpose differs. If you want a tool built for shopping discounts, use our</span> <a href="https://tool-hub.me/discount-calc/" rel="noopener" data-i18n="faq.a4.link">discount calculator →</a></p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Are my results sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This percentage calculator processes the numbers you type entirely inside your browser. Every calculation runs locally in JavaScript with no server communication at all. Even sensitive financial figures never leave your device, so you can use it with peace of mind.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

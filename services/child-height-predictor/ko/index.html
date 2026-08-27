@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-g/DL5nPPUNH9gaDgQJ2myTZuAd8fzKTKtcDqiKTz5Xg=' 'sha256-dqQ29m1eJNaKHnM2puJvJxIhmTClmVthFvh8PksdSqY=' 'sha256-RsKm3KbcI6TmCIzvLu7da9pcJRlOUQPv/qp5XBi+vjA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>아이 키 예측 계산기</title>
+<meta name="description" content="성별을 보정한 중부모(Tanner) 신장법을 쓰는 무료 아이 예상 키 계산기. 아빠와 엄마의 키, 아이의 성별을 입력하면 ±8.5cm 예상 범위와 함께 아이의 성인 키를 바로 추정합니다. cm 또는 ft/in 지원, 모든 계산은 브라우저 안에서 이뤄집니다.">
+<meta name="keywords" content="child height predictor, how tall will my child be, mid-parental height calculator, 아이 예상 키 계산기, 자녀 예상 키">
+<link rel="canonical" href="https://tool-hub.me/child-height-predictor/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/child-height-predictor/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/child-height-predictor/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/child-height-predictor/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/child-height-predictor/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/child-height-predictor/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/child-height-predictor/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/child-height-predictor/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/child-height-predictor/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/child-height-predictor/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/child-height-predictor/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/child-height-predictor/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/child-height-predictor/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/child-height-predictor/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/child-height-predictor/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/child-height-predictor/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="아이 키 예측 계산기">
+<meta property="og:description" content="성별을 보정한 중부모(Tanner) 신장법을 쓰는 무료 아이 예상 키 계산기. 아빠와 엄마의 키, 아이의 성별을 입력하면 ±8.5cm 예상 범위와 함께 아이의 성인 키를 바로 추정합니다. cm 또는 ft/in 지원, 모든 계산은 브라우저 안에서 이뤄집니다.">
+<meta property="og:url" content="https://tool-hub.me/child-height-predictor/ko/">
+<meta property="og:image" content="https://tool-hub.me/child-height-predictor/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#06b6d4">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Child Height Predictor",
+  "description": "Free child height predictor using the sex-adjusted mid-parental (Tanner) height method. Enter the father's and mother's height and the child's sex to instantly estimate the child's adult height with a ±8.5 cm likely range. Works in cm or ft/in, no sign-up, computed entirely in your browser.",
+  "url": "https://tool-hub.me/child-height-predictor/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Child Height Predictor",
+      "item": "https://tool-hub.me/child-height-predictor/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does the mid-parental height method work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mid-parental (Tanner) method is the quick formula pediatricians use to estimate a child's adult height from the parents' heights. You average the father's and mother's height, then adjust for sex: for a boy this child height predictor adds 13 cm (about 5 inches) to the parents' average, and for a girl it subtracts 13 cm. That shift reflects the roughly 13 cm difference between average adult men and women. The result is the mid-parental height — a single best guess for how tall your child will grow as an adult."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is this child height prediction?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mid-parental method gives a point estimate with a likely range of about ±8.5 cm (±3.3 in), roughly two standard deviations, and around 80% of children reach an adult height inside that band. So treat the number as the centre of a range, not an exact figure. Accuracy is best when both parents are near average height and drops when either parent is very short or very tall, which is why this tool flags a warning when a parent's height is far from average."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can nutrition, sleep or exercise make my child taller than predicted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Genetics set roughly 60–80% of a person's final height, so the parents' heights are by far the strongest predictor. The remaining share is shaped by environment: balanced nutrition, enough deep sleep (growth hormone is released during sleep), regular physical activity and good overall health during the growing years. These factors can help a child reach the upper part of their genetic range, but they rarely push adult height beyond it. Chronic illness or poor nutrition, on the other hand, can pull height toward the lower end."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "At what age is a height prediction reliable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The mid-parental method is age-independent — it estimates adult height from the parents alone, so it works the same whether your child is a toddler or a teenager. Methods that read the child directly, such as bone-age X-rays or plotting current height on a growth percentile chart, become more precise as the child approaches puberty, because more of their growth has already happened. For a family-heights estimate, though, this calculator gives you a reasonable ballpark at any age."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my family's height data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This child height predictor runs entirely in your browser — the father's height, mother's height and the child's sex never leave your device. Your last entry is saved only in your browser's localStorage so the form is pre-filled on your next visit, and you can clear it anytime from your browser settings. Nothing is uploaded, tracked or shared."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Child Height Predictor</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Child Height Predictor</span></nav>
+  <section class="hero">
+    <h1>Child Height Predictor</h1>
+    <p class="lede" data-i18n="hero.lede">How tall will your child be? Estimate adult height from mom and dad's heights in seconds.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool .chp-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 18px 0 6px; }
+      #tool .chp-row.chp-first { margin-top: 0; }
+      #tool .chp-row label { margin: 0; }
+      #tool .unit-toggle { font-size: 13px; white-space: nowrap; }
+      #tool .unit-toggle label { margin: 0 0 0 12px; font-weight: 600; cursor: pointer; display: inline-flex; gap: 4px; align-items: center; }
+      #tool .unit-toggle label:first-child { margin-left: 0; }
+      #tool .ftin { display: flex; gap: 8px; }
+      #tool .sex-group { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 6px; }
+      #tool .sex-group label { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 15px; margin: 0; cursor: pointer; }
+      #tool .chp-msg { margin: 0; color: var(--muted); font-weight: 600; }
+      #tool .chp-msg.is-error { color: #dc2626; }
+      #tool .chp-warn { margin: 0 0 12px; color: #d97706; font-weight: 600; font-size: 14px; }
+      #tool .chp-label { margin: 0 0 4px; font-weight: 600; font-size: 14px; color: var(--muted); }
+      #tool .chp-big { margin: 0; font-size: clamp(30px, 7vw, 44px); font-weight: 900; letter-spacing: -0.03em; line-height: 1.15; color: var(--accent-strong); }
+      #tool .chp-big .chp-sub { font-size: 0.5em; font-weight: 700; color: var(--ink); margin-inline-start: 8px; letter-spacing: 0; }
+      [data-theme="dark"] #tool .chp-big { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] #tool .chp-big { color: var(--accent); } }
+      #tool .chp-range-card { margin-top: 16px; border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--bg); }
+      #tool .chp-range-cap { font-size: 13px; color: var(--muted); }
+      #tool .chp-range-val { font-weight: 700; font-size: 20px; margin-top: 2px; }
+      #tool .chp-range-ftin { font-weight: 600; font-size: 14px; color: var(--muted); margin-top: 2px; }
+      #tool .chp-note { margin: 14px 0 0; font-size: 13px; color: var(--muted); }
+      #tool .chp-disclaimer { margin: 16px 0 0; padding: 10px 14px; font-size: 13px; color: var(--muted); background: var(--bg); border: 1px dashed var(--line); border-radius: 10px; }
+    </style>
+
+    <!-- Units -->
+    <div class="chp-row chp-first">
+      <label id="chp-unit-label" data-i18n="tool.unit.label">Units</label>
+      <span class="unit-toggle" role="radiogroup" aria-labelledby="chp-unit-label">
+        <label><input type="radio" name="hunit" value="cm" checked><span data-i18n="tool.unit.cm">cm</span></label>
+        <label><input type="radio" name="hunit" value="ft"><span data-i18n="tool.unit.ft">ft / in</span></label>
+      </span>
+    </div>
+
+    <!-- Father's height -->
+    <div class="chp-row"><label for="father-cm" data-i18n="tool.father.label">Father's height</label></div>
+    <div id="father-cm-wrap">
+      <input type="number" id="father-cm" inputmode="decimal" min="120" max="230" step="0.1"
+             placeholder="e.g. 178" data-i18n-placeholder="tool.father.ph" aria-label="Father's height in centimeters" data-i18n-aria-label="tool.father.aria.cm">
+    </div>
+    <div id="father-ftin-wrap" class="ftin" hidden>
+      <input type="number" id="father-ft" inputmode="numeric" min="3" max="8" step="1"
+             placeholder="ft" data-i18n-placeholder="tool.ph.ft" aria-label="Father's height, feet" data-i18n-aria-label="tool.father.aria.ft">
+      <input type="number" id="father-in" inputmode="decimal" min="0" max="11.9" step="0.1"
+             placeholder="in" data-i18n-placeholder="tool.ph.in" aria-label="Father's height, inches" data-i18n-aria-label="tool.father.aria.in">
+    </div>
+
+    <!-- Mother's height -->
+    <div class="chp-row"><label for="mother-cm" data-i18n="tool.mother.label">Mother's height</label></div>
+    <div id="mother-cm-wrap">
+      <input type="number" id="mother-cm" inputmode="decimal" min="120" max="220" step="0.1"
+             placeholder="e.g. 165" data-i18n-placeholder="tool.mother.ph" aria-label="Mother's height in centimeters" data-i18n-aria-label="tool.mother.aria.cm">
+    </div>
+    <div id="mother-ftin-wrap" class="ftin" hidden>
+      <input type="number" id="mother-ft" inputmode="numeric" min="3" max="8" step="1"
+             placeholder="ft" data-i18n-placeholder="tool.ph.ft" aria-label="Mother's height, feet" data-i18n-aria-label="tool.mother.aria.ft">
+      <input type="number" id="mother-in" inputmode="decimal" min="0" max="11.9" step="0.1"
+             placeholder="in" data-i18n-placeholder="tool.ph.in" aria-label="Mother's height, inches" data-i18n-aria-label="tool.mother.aria.in">
+    </div>
+
+    <!-- Child's sex -->
+    <div class="chp-row"><label id="chp-sex-label" data-i18n="tool.sex.label">Child's sex</label></div>
+    <div class="sex-group" role="radiogroup" aria-labelledby="chp-sex-label">
+      <label><input type="radio" name="sex" value="boy"><span data-i18n="tool.sex.boy">Boy</span></label>
+      <label><input type="radio" name="sex" value="girl"><span data-i18n="tool.sex.girl">Girl</span></label>
+    </div>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Predict adult height</button>
+
+    <div class="result" id="result" role="region" aria-label="Prediction result">
+      <p class="chp-msg" id="chp-msg"></p>
+      <div id="chp-body" hidden>
+        <p class="chp-warn" id="chp-warn" data-i18n="tool.warn.faraverage" hidden>Accuracy drops when parent heights are far from average.</p>
+        <p class="chp-label" data-i18n="tool.result.heading">Predicted adult height</p>
+        <p class="chp-big"><span id="chp-cm"></span><span class="chp-sub" id="chp-ftin"></span></p>
+        <div class="chp-range-card">
+          <div class="chp-range-cap"><span data-i18n="tool.result.range">Likely range</span> · <span data-i18n="tool.result.rangeSub">about 80% of children fall in this band</span></div>
+          <div class="chp-range-val" id="chp-range-cm"></div>
+          <div class="chp-range-ftin" id="chp-range-ftin"></div>
+        </div>
+        <p class="chp-note" data-i18n="tool.note.genetics">Genetics account for roughly 60–80% of height; nutrition, sleep and overall health shift the rest.</p>
+      </div>
+    </div>
+
+    <p class="chp-disclaimer" data-i18n="tool.disclaimer">Genetic estimate for reference only — not a medical prediction. See a pediatrician for growth concerns.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Where the mid-parental formula comes from</h2>
+    <p>Predicting adult height from the parents is not a modern invention. Francis Galton plotted parent and child heights in the 1880s and found the pattern this calculator relies on: taller-than-average parents tend to have taller-than-average children, and shorter parents the reverse, with a fairly tight statistical link between the two generations. Pediatric researchers James Tanner and Reginald Whitehouse later formalized that link into the averaging formula used today, as part of the 1970s UK growth studies that still underpin pediatric growth monitoring. Clinicians call the output the child's "target height" — a working estimate a pediatrician compares a child's own growth curve against, not a guarantee.</p>
+
+    <h3>Getting the inputs right</h3>
+    <ol>
+      <li>Use each parent's own adult standing height, measured barefoot against a flat wall, not a rounded guess — a 2–3 cm error in either parent shifts the estimate by 1–1.5 cm.</li>
+      <li>Enter biological parent heights specifically; the formula was built from biological-parent/biological-child pairs, so step-parent or donor heights won't track genetic potential the same way.</li>
+      <li>Select the child's sex, not either parent's — the sex toggle drives which direction the ±13 cm adjustment goes.</li>
+      <li>The child's current age or height is deliberately not asked for. This formula estimates final adult height from the parents alone, so it gives the same answer at age 2 or 15; tracking a child's own percentile curve over time is a different method entirely (see the table below).</li>
+    </ol>
+
+    <h3>The formula, step by step</h3>
+    <div class="example">
+      <strong>Boy:</strong> predicted height = (father's height + mother's height + 13 cm) ÷ 2<br>
+      <strong>Girl:</strong> predicted height = (father's height + mother's height − 13 cm) ÷ 2
+      <p style="margin-top:8px">Both children start from the same base — the average of the two parents' heights — and then the formula shifts that midpoint by half of the roughly 13 cm gap between average adult male and female height, in the direction that matches the child's own sex. That single shift is the entire mechanism behind the sex-adjusted mid-parental method; everything else this tool does is unit conversion and formatting.</p>
+    </div>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <strong>Example 1 — a boy, metric inputs</strong><br>
+      Father 180 cm, mother 165 cm.<br>
+      (180 + 165 + 13) ÷ 2 = 358 ÷ 2 = <strong>179 cm</strong> (about 5 ft 10 in).<br>
+      Likely range: 170.5–187.5 cm (about 5 ft 7 in – 6 ft 2 in).
+    </div>
+    <div class="example">
+      <strong>Example 2 — a girl, metric inputs</strong><br>
+      Father 170 cm, mother 155 cm.<br>
+      (170 + 155 − 13) ÷ 2 = 312 ÷ 2 = <strong>156 cm</strong> (about 5 ft 1 in).<br>
+      Likely range: 147.5–164.5 cm (about 4 ft 10 in – 5 ft 5 in).
+    </div>
+    <div class="example">
+      <strong>Example 3 — a boy, imperial inputs</strong><br>
+      Father 5 ft 11 in (180.3 cm), mother 5 ft 4 in (162.6 cm).<br>
+      (180.3 + 162.6 + 13) ÷ 2 = 355.9 ÷ 2 = <strong>177.9 cm</strong> (about 5 ft 10 in) — this tool converts your ft/in entries to cm internally, runs the same formula, then converts the result back for display.
+    </div>
+
+    <h3>How this compares to other ways of predicting height</h3>
+    <table>
+      <tr><th>Method</th><th>What it needs</th><th>Typical use</th></tr>
+      <tr><td>Mid-parental (Tanner) formula</td><td>Both parents' heights, child's sex</td><td>Quick family-based estimate, works at any child age — what this tool does</td></tr>
+      <tr><td>Growth-chart percentile tracking</td><td>Repeated height/age measurements over years</td><td>Checking a child is following their own curve, catching growth problems early</td></tr>
+      <tr><td>Bone-age X-ray (Greulich-Pyle / TW method)</td><td>Hand-and-wrist X-ray read by a radiologist</td><td>Clinical workup when growth looks unusually fast, slow, or delayed</td></tr>
+      <tr><td>Polygenic height score</td><td>DNA genotyping across height-linked gene variants</td><td>Research settings; not part of routine pediatric care</td></tr>
+    </table>
+
+    <h3>Why very tall or very short parents get a wider miss</h3>
+    <p>Galton's data revealed a second pattern, which he called "regression toward mediocrity" — now known as regression to the mean. Children of unusually tall parents are taller than average but usually not as extreme as their parents; children of unusually short parents trend shorter than average but land closer to the middle than their parents did. Straight averaging captures the direction of this correctly but not the pull back toward the population mean, so the miss grows specifically when a parent's height sits far from average — exactly the case this tool flags with an on-screen warning.</p>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Mixing centimeters and inches.</strong> Typing an inch value into a cm field (or vice versa) produces a wildly wrong result with no error — double-check the unit toggle before reading the output.</li>
+      <li><strong>Entering the child's own height by accident.</strong> Both height fields are for the parents; the child's current height plays no role in this formula.</li>
+      <li><strong>Forgetting to set the child's sex.</strong> Leaving it unset — or picking the wrong one — flips the ±13 cm adjustment in the wrong direction, which can shift the estimate by up to 13 cm.</li>
+      <li><strong>Reading the number as a guarantee.</strong> Treat the headline figure as the center of the likely range, not a precise forecast — puberty timing, nutrition, and health can still move an individual child within (and occasionally slightly outside) that band.</li>
+    </ul>
+
+    <h3>What this predictor cannot tell you</h3>
+    <p>The 13 cm sex adjustment was derived mainly from mid-20th-century UK and other Western growth studies, so the constant can run slightly off for populations with a different average height gap between men and women. The method also cannot detect medical conditions that override typical growth — growth hormone deficiency, precocious or delayed puberty, chromosomal conditions such as Turner syndrome, or skeletal dysplasias can all push a child's actual adult height well outside a mid-parental estimate. None of that is visible from two parent heights alone; it needs an in-person exam and sometimes bone-age imaging from a pediatrician. This calculator is a private, browser-only estimate for general interest — it is not a medical prediction, a diagnosis, or a substitute for pediatric care.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.cdc.gov/growthcharts/" target="_blank" rel="noopener">CDC Growth Charts — reference percentiles for children's height and weight in the US</a></li>
+      <li><a href="https://www.who.int/tools/child-growth-standards" target="_blank" rel="noopener">WHO Child Growth Standards — international standards for how children grow</a></li>
+      <li><a href="https://www.nichd.nih.gov/" target="_blank" rel="noopener">NIH NICHD — research on child growth, puberty timing and growth disorders</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/cholesterol-ratio-calc/"><span class="related-ico" aria-hidden="true">🫀</span><span class="related-name">Cholesterol Ratio Calculator</span></a><a class="related-item" href="https://tool-hub.me/heart-rate-zone-calc/"><span class="related-ico" aria-hidden="true">❤</span><span class="related-name">Heart Rate Zone Calculator</span></a><a class="related-item" href="https://tool-hub.me/ideal-weight-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Ideal Weight Calculator</span></a><a class="related-item" href="https://tool-hub.me/lbm-calc/"><span class="related-ico" aria-hidden="true">💪</span><span class="related-name">Lean Body Mass Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How does the mid-parental height method work?</summary>
+      <p data-i18n="faq.a1">The mid-parental (Tanner) method is the quick formula pediatricians use to estimate a child's adult height from the parents' heights. You average the father's and mother's height, then adjust for sex: for a boy this child height predictor adds 13 cm (about 5 inches) to the parents' average, and for a girl it subtracts 13 cm. That shift reflects the roughly 13 cm difference between average adult men and women. The result is the mid-parental height — a single best guess for how tall your child will grow as an adult.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How accurate is this child height prediction?</summary>
+      <p data-i18n="faq.a2">The mid-parental method gives a point estimate with a likely range of about ±8.5 cm (±3.3 in), roughly two standard deviations, and around 80% of children reach an adult height inside that band. So treat the number as the centre of a range, not an exact figure. Accuracy is best when both parents are near average height and drops when either parent is very short or very tall, which is why this tool flags a warning when a parent's height is far from average.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Can nutrition, sleep or exercise make my child taller than predicted?</summary>
+      <p data-i18n="faq.a3">Genetics set roughly 60–80% of a person's final height, so the parents' heights are by far the strongest predictor. The remaining share is shaped by environment: balanced nutrition, enough deep sleep (growth hormone is released during sleep), regular physical activity and good overall health during the growing years. These factors can help a child reach the upper part of their genetic range, but they rarely push adult height beyond it. Chronic illness or poor nutrition, on the other hand, can pull height toward the lower end.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">At what age is a height prediction reliable?</summary>
+      <p data-i18n="faq.a4">The mid-parental method is age-independent — it estimates adult height from the parents alone, so it works the same whether your child is a toddler or a teenager. Methods that read the child directly, such as bone-age X-rays or plotting current height on a growth percentile chart, become more precise as the child approaches puberty, because more of their growth has already happened. For a family-heights estimate, though, this calculator gives you a reasonable ballpark at any age.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my family's height data sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This child height predictor runs entirely in your browser — the father's height, mother's height and the child's sex never leave your device. Your last entry is saved only in your browser's localStorage so the form is pre-filled on your next visit, and you can clear it anytime from your browser settings. Nothing is uploaded, tracked or shared.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-e+7RCEGQ3ARFPN7cmITukSIMuj12vXSvM9gJ5Thit5k=' 'sha256-5F/lDerX3HVeuXPiZxm7x/1RN4IfisVmXnosYSVaAvw=' 'sha256-5Kwa0r/jd5pH3nlwX1S3ZO2ncM93SKpEKNmZzWky5ws='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>몰질량 계산기 — 화학식 분자량 계산</title>
+<meta name="description" content="화학식을 입력하면 몰질량과 질량 조성비를 계산합니다. 괄호·수화물 표기를 지원하고 118개 원소의 IUPAC 원자량을 내장했습니다.">
+<meta name="keywords" content="molar mass calculator, molecular weight calculator, molar mass of water, formula weight, percent composition calculator, atomic weight, g/mol calculator">
+<link rel="canonical" href="https://tool-hub.me/molar-mass-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/molar-mass-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/molar-mass-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/molar-mass-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/molar-mass-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/molar-mass-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/molar-mass-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/molar-mass-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/molar-mass-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/molar-mass-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/molar-mass-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/molar-mass-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/molar-mass-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/molar-mass-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/molar-mass-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/molar-mass-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="몰질량 계산기 — 화학식 분자량 계산">
+<meta property="og:description" content="화학식을 입력하면 몰질량과 질량 조성비를 계산합니다. 괄호·수화물 표기를 지원하고 118개 원소의 IUPAC 원자량을 내장했습니다.">
+<meta property="og:url" content="https://tool-hub.me/molar-mass-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/molar-mass-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Molar Mass Calculator",
+  "description": "Calculate the molar mass and percent composition of any chemical formula. Parentheses, hydrates and all 118 IUPAC atomic weights, instantly in g/mol.",
+  "url": "https://tool-hub.me/molar-mass-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Molar Mass Calculator",
+      "item": "https://tool-hub.me/molar-mass-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between molar mass, molecular weight and formula weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Numerically they are the same figure for a given formula. Molecular weight is a relative mass with no units and applies to molecules; formula weight does the same job for ionic compounds such as NaCl, which have no discrete molecules. Molar mass is that number given units of grams per mole, and it is what you actually weigh out in the lab."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why are atomic weights not whole numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost every element occurs as a mixture of isotopes, and the standard atomic weight is the abundance-weighted average of them. Chlorine sits at 35.45 because natural chlorine is roughly 76 percent chlorine-35 and 24 percent chlorine-37. Only single-isotope elements land near whole numbers, and even carbon is 12.011 rather than 12 because of the carbon-13 present in nature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert grams to moles with this result?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the mass you have by the molar mass: moles = grams / (g/mol). If you weigh 25 g of NaCl and the calculator returns 58.440 g/mol, that is 25 / 58.440 = 0.428 mol. To go the other way, multiply: 0.25 mol of glucose at 180.156 g/mol needs 45.04 g on the balance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I enter hydrates like copper sulfate pentahydrate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Write the dot as a full stop or a middle dot: CuSO4.5H2O and CuSO4·5H2O both work. The number after the dot multiplies everything that follows it, so the five waters contribute 5 x 18.015 = 90.075 g/mol of the 249.677 g/mol total. Leave the dot out and you get the anhydrous salt instead, which is a common source of weighing errors."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Molar Mass Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0d9488" href="https://tool-hub.me/math-calculators/">Math &amp; Science</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Molar Mass Calculator</span></nav>
+  <section class="hero">
+    <h1>Molar Mass Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Type a formula like Ca(OH)2 or CuSO4.5H2O and get grams per mole with a full percent composition breakdown.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool #formula { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:18px; letter-spacing:.02em; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool table { width:100%; border-collapse:collapse; margin-top:14px; font-size:14px; }
+      #tool th, #tool td { border-bottom:1px solid var(--line); padding:7px 6px; text-align:right; }
+      #tool th:first-child, #tool td:first-child { text-align:left; font-weight:600; }
+      #tool .sample-row { display:flex; gap:8px; align-items:center; }
+      #tool .sample-row input { flex:2 1 0; min-width:0; }
+      #tool .sample-row select { flex:1 1 0; min-width:0; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="formula" data-i18n="tool.formula.label">Chemical formula</label>
+    <input type="text" id="formula" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="H2O">
+    <p class="subtle" data-i18n="tool.formula.hint" style="margin-top:6px;">Case-sensitive: Co is cobalt, CO is carbon monoxide. Parentheses and hydrate dots are supported.</p>
+
+    <label for="sample" data-i18n="tool.sample.label" style="margin-top:12px;">Sample amount (optional)</label>
+    <div class="sample-row">
+      <input type="number" id="sample" min="0" step="any" inputmode="decimal" placeholder="25">
+      <select id="sample-unit">
+        <option value="g" data-i18n="tool.sample.unit.g">grams (g)</option>
+        <option value="mol" data-i18n="tool.sample.unit.mol">moles (mol)</option>
+      </select>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.mass">Molar mass</div>
+          <div class="rc-val" id="r-mass">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.elements">Distinct elements</div><div class="rc-val" id="r-elements">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.atoms">Total atoms</div><div class="rc-val" id="r-atoms">—</div></div>
+        <div class="rcard" id="moles-card" hidden><div class="rc-label" id="moles-label" data-i18n="tool.r.moles">Moles in your sample</div><div class="rc-val" id="r-moles">—</div></div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="tool.th.element">Element</th>
+            <th data-i18n="tool.th.count">Atoms</th>
+            <th data-i18n="tool.th.mass">Mass (g/mol)</th>
+            <th data-i18n="tool.th.pct">% of mass</th>
+          </tr>
+        </thead>
+        <tbody id="comp-body"></tbody>
+      </table>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Standard atomic weights (IUPAC 2021) to four decimal places. They are natural-abundance averages, which is why they are not whole numbers.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How the calculator reads a chemical formula</h2>
+    <p>Molar mass is nothing more than a weighted sum: count how many atoms of each element the formula contains, multiply each count by that element's standard atomic weight, and add everything up. The result carries units of grams per mole, so 18.015 g/mol means one mole of the substance weighs 18.015 grams on the balance. The only difficulty is counting atoms correctly, which is where parentheses and hydrate dots trip people up.</p>
+    <p>The parser here reads left to right. A capital letter starts an element symbol, any lowercase letters that follow belong to it, and digits after a symbol are its subscript. Capitalisation is not decoration: Co is cobalt at 58.9332, while CO is carbon monoxide at 28.010. If you type an unknown symbol the tool names it back to you instead of silently ignoring it, because a quietly dropped atom is a wrong answer that looks right.</p>
+
+    <h3>Worked example: H2O</h3>
+    <p>Two hydrogens at 1.0080 give 2.016. One oxygen contributes 15.999. Total: 18.015 g/mol. The composition table shows hydrogen at 11.19 percent and oxygen at 88.81 percent by mass, which surprises students who expect the element with more atoms to dominate the mass. Counting atoms and weighing mass are different questions.</p>
+
+    <h3>Worked example: Ca(OH)2</h3>
+    <p>The subscript outside the bracket multiplies everything inside it. Calcium hydroxide is one calcium plus two oxygen and two hydrogen, not one of each. Calcium contributes 40.078, oxygen 2 x 15.999 = 31.998, hydrogen 2 x 1.008 = 2.016, giving 74.092 g/mol. Miss the bracket and you get 57.085, a 23 percent error that will quietly wreck a titration. Nested brackets work the same way, so a formula such as Ca3(PO4)2 or Al2(SO4)3 needs no special handling.</p>
+
+    <h3>Worked example: CuSO4.5H2O</h3>
+    <p>Copper sulfate pentahydrate is the classic hydrate. The dot is a separator, and the number after it multiplies the whole fragment that follows: five waters at 18.015 add 90.075 g/mol on top of the anhydrous 159.602, for 249.677 g/mol in total. Water is therefore 36.1 percent of the crystal mass. This is why a recipe calling for 10 g of the pentahydrate is not satisfied by 10 g of the blue-white anhydrous powder, and why gently heated crystals lose more than a third of their weight. Both the full stop and the middle dot are accepted, so pasting a formula straight from a datasheet works.</p>
+
+    <h2>Percent composition in real stoichiometry</h2>
+    <p>Percent composition is the bridge between a formula on paper and a number on a balance. Three common uses come up in coursework and in the lab. First, purchasing and dosing: ammonium nitrate, NH4NO3 at 80.043 g/mol, is 35.00 percent nitrogen by mass, which is exactly how fertiliser grades are quoted. Second, empirical formula work: take a combustion analysis result in percent, divide each percent by that element's atomic weight, and the smallest whole-number ratio of those quotients is the empirical formula. Third, checking your own arithmetic — if your calculated percentages do not sum to 100, an atom went missing somewhere.</p>
+
+    <h2>A one-minute mole refresher</h2>
+    <p>A mole is 6.02214076 x 10^23 particles, a count rather than a mass, in the same way that a dozen is twelve of anything. The point of the mole is that reactions happen in whole-number particle ratios while balances read grams, and molar mass is the exchange rate between the two. Two conversions cover nearly everything: moles = grams divided by molar mass, and grams = moles multiplied by molar mass. To prepare 250 mL of 0.100 M sodium chloride you need 0.0250 mol, and at 58.440 g/mol that is 1.461 g weighed out and made up to the mark.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>The values here are standard atomic weights, meaning natural-abundance averages. If you are working with isotopically enriched or depleted material, deuterated solvents or heavy water, the average is wrong for your sample and you should use isotopic masses instead. Elements with no stable isotope, such as technetium or the superheavy elements, are listed at the mass number of their most stable isotope, which is a convention rather than a measurement. Finally, molar mass says nothing about purity: a reagent bottle labelled 98 percent needs its own correction factor before the weight you calculate here means what you think it means.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/atomic-weights-and-isotopic-compositions-relative-atomic-masses" target="_blank" rel="noopener">NIST — atomic weights and isotopic compositions reference data</a></li>
+      <li><a href="https://physics.nist.gov/cuu/Constants/" target="_blank" rel="noopener">NIST CODATA fundamental constants — the Avogadro constant and mole definition</a></li>
+      <li><a href="https://www.khanacademy.org/science/chemistry" target="_blank" rel="noopener">Khan Academy Chemistry — mole conversions, percent composition and stoichiometry lessons</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/ohms-law-calc/"><span class="related-ico" aria-hidden="true">🔌</span><span class="related-name">Ohm's Law Calculator</span></a><a class="related-item" href="https://tool-hub.me/percent-error-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Percent Error Calculator</span></a><a class="related-item" href="https://tool-hub.me/permutation-combination-calc/"><span class="related-ico" aria-hidden="true">🎲</span><span class="related-name">Combination Calculator</span></a><a class="related-item" href="https://tool-hub.me/sig-fig-calc/"><span class="related-ico" aria-hidden="true">🔬</span><span class="related-name">Sig Fig Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between molar mass, molecular weight and formula weight?</summary><p data-i18n="faq.a1">Numerically they are the same figure for a given formula. Molecular weight is a relative mass with no units and applies to molecules; formula weight does the same job for ionic compounds such as NaCl, which have no discrete molecules. Molar mass is that number given units of grams per mole, and it is what you actually weigh out in the lab.</p></details>
+    <details><summary data-i18n="faq.q2">Why are atomic weights not whole numbers?</summary><p data-i18n="faq.a2">Almost every element occurs as a mixture of isotopes, and the standard atomic weight is the abundance-weighted average of them. Chlorine sits at 35.45 because natural chlorine is roughly 76 percent chlorine-35 and 24 percent chlorine-37. Only single-isotope elements land near whole numbers, and even carbon is 12.011 rather than 12 because of the carbon-13 present in nature.</p></details>
+    <details><summary data-i18n="faq.q3">How do I convert grams to moles with this result?</summary><p data-i18n="faq.a3">Divide the mass you have by the molar mass: moles = grams / (g/mol). If you weigh 25 g of NaCl and the calculator returns 58.440 g/mol, that is 25 / 58.440 = 0.428 mol. To go the other way, multiply: 0.25 mol of glucose at 180.156 g/mol needs 45.04 g on the balance.</p></details>
+    <details><summary data-i18n="faq.q4">How do I enter hydrates like copper sulfate pentahydrate?</summary><p data-i18n="faq.a4">Write the dot as a full stop or a middle dot: CuSO4.5H2O and CuSO4·5H2O both work. The number after the dot multiplies everything that follows it, so the five waters contribute 5 x 18.015 = 90.075 g/mol of the 249.677 g/mol total. Leave the dot out and you get the anhydrous salt instead, which is a common source of weighing errors.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

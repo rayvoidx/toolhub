@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-sCWxMkBwAe1BFgitkmgzWWBj4bv1po+hhMmt4NDFWIk=' 'sha256-Hh0AtubGK0QbWo729/ZSBjr9jUifjBeF5qwV5kXX8n4=' 'sha256-G4pmnsACckbTrwoJCEQF5xL9jPVNen2IcWumamiVUlM='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>강아지 나이 계산기 — 개 나이를 사람 나이로</title>
+<meta name="description" content="체급별 수의학 차트와 후성유전 시계 공식으로 반려견 나이를 사람 나이로 환산합니다. 소형·중형·대형·초대형은 노화 속도가 다릅니다.">
+<meta name="keywords" content="dog age calculator, dog years to human years, puppy age chart, dog age in human years, senior dog age, dog aging by size">
+<link rel="canonical" href="https://tool-hub.me/dog-age-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/dog-age-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/dog-age-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/dog-age-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/dog-age-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/dog-age-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/dog-age-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/dog-age-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/dog-age-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/dog-age-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/dog-age-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/dog-age-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/dog-age-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/dog-age-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/dog-age-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/dog-age-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="강아지 나이 계산기 — 개 나이를 사람 나이로">
+<meta property="og:description" content="체급별 수의학 차트와 후성유전 시계 공식으로 반려견 나이를 사람 나이로 환산합니다. 소형·중형·대형·초대형은 노화 속도가 다릅니다.">
+<meta property="og:url" content="https://tool-hub.me/dog-age-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/dog-age-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a16207">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dog Age Calculator",
+  "description": "Convert your dog's age into human years using size-adjusted veterinary charts and the epigenetic clock formula. Small, medium, large and giant breeds age at different rates.",
+  "url": "https://tool-hub.me/dog-age-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-26",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Dog Age Calculator",
+      "item": "https://tool-hub.me/dog-age-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is one dog year really seven human years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Dogs mature fast then slow down: a one-year-old dog is roughly a 15-year-old human, and the second year adds about nine more. After that each year adds four to six human years depending on size, so the multiplier is never a flat seven."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does size change the answer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Large and giant breeds age faster after adulthood. A 7-year-old small dog is around 44 in human terms, while a 7-year-old giant breed is closer to 57. Big dogs reach senior status at 6 to 7 years; small dogs often not until 9 or 10."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the epigenetic estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 2020 study on DNA methylation proposed human age = 16 x ln(dog age) + 31. It matches lifespan biology well for adult dogs and is shown here alongside the size chart. It overshoots for puppies under one year, so the tool leaves it blank there."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Dog Age Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Dog Age Calculator</span></nav>
+  <section class="hero">
+    <h1>Dog Age Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">The multiply-by-seven rule is wrong. Size and life stage change everything.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="age" data-i18n="tool.age.label">Dog's age</label>
+        <input type="number" id="age" inputmode="decimal" min="0" max="1565" step="any" autocomplete="off" placeholder="7">
+      </div>
+      <div>
+        <label for="ageunit" data-i18n="tool.ageunit.years">Years</label>
+        <select id="ageunit">
+          <option value="years" data-i18n="tool.ageunit.years">Years</option>
+          <option value="months" data-i18n="tool.ageunit.months">Months</option>
+          <option value="weeks" data-i18n="tool.ageunit.weeks">Weeks</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="size" data-i18n="tool.size.label">Adult size</label>
+    <select id="size">
+      <option value="small" data-i18n="tool.size.small">Small — under 10 kg / 22 lb</option>
+      <option value="medium" data-i18n="tool.size.medium">Medium — 10 to 25 kg / 22 to 55 lb</option>
+      <option value="large" data-i18n="tool.size.large">Large — 25 to 45 kg / 55 to 100 lb</option>
+      <option value="giant" data-i18n="tool.size.giant">Giant — over 45 kg / 100 lb</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Convert</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.human">Human years</div>
+          <div class="rc-val" id="r-human">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.stage">Life stage</div><div class="rc-val" id="r-stage">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.epi">Epigenetic estimate</div><div class="rc-val" id="r-epi">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.vet" style="margin-top:12px;">A guide, not a diagnosis. Ageing varies by breed and health — your vet's assessment comes first.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Where the "one dog year equals seven" idea came from</h2>
+    <p>The seven-to-one rule appears to have started as marketing arithmetic: humans lived to about 70, dogs to about 10, so someone divided. It is memorable and wrong in both directions. A one-year-old dog is sexually mature, fully grown in most breeds, and behaviourally something like a teenager — not a seven-year-old child. Meanwhile a 13-year-old small dog is old but not the 91-year-old the rule implies.</p>
+    <p>Modern veterinary charts split ageing into phases. The first year covers roughly 15 human years of development, the second adds about nine more, and every year after that adds a smaller amount that depends on adult body size. This calculator follows that shape, then shows a second estimate from the epigenetic clock as a cross-check.</p>
+
+    <h3>Worked example 1: a 7-year-old Labrador</h3>
+    <p>A Labrador is a large breed at roughly 30 kg. Years one and two contribute 24 human years. The remaining five years add 5.5 each: 5 x 5.5 = 27.5. Total is about 52 human years, and the dog is entering the mature-to-senior transition — the age at which most vets start recommending twice-yearly checks and bloodwork.</p>
+
+    <h3>Worked example 2: the same age, a small dog</h3>
+    <p>A 7-year-old Jack Russell at 7 kg also banks 24 years from the first two, but the remaining five add only 4 each: 20. Total is around 44 human years — solidly middle-aged with several good years ahead. Two dogs, identical birthdays, eight human years apart. That gap is why the size selector matters more than any other input.</p>
+
+    <h3>Worked example 3: a Great Dane at 5</h3>
+    <p>Giant breeds compress everything. Five years for a Dane gives 24 + (3 x 6.5) = 43.5 human years, but the life-stage label already reads senior, because giant breeds typically enter their final third by age six. The human-year number and the life stage answer different questions: one is a rough comparison, the other is what actually drives care decisions.</p>
+
+    <h2>Human-year equivalents by size</h2>
+    <table>
+      <thead><tr><th>Dog age</th><th>Small</th><th>Medium</th><th>Large</th><th>Giant</th></tr></thead>
+      <tbody>
+        <tr><td>1 year</td><td>15</td><td>15</td><td>15</td><td>15</td></tr>
+        <tr><td>2 years</td><td>24</td><td>24</td><td>24</td><td>24</td></tr>
+        <tr><td>5 years</td><td>36</td><td>39</td><td>41</td><td>44</td></tr>
+        <tr><td>7 years</td><td>44</td><td>49</td><td>52</td><td>57</td></tr>
+        <tr><td>10 years</td><td>56</td><td>64</td><td>68</td><td>76</td></tr>
+        <tr><td>13 years</td><td>68</td><td>79</td><td>85</td><td>96</td></tr>
+        <tr><td>15 years</td><td>76</td><td>89</td><td>96</td><td>109</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The epigenetic clock, briefly</h2>
+    <p>In 2020 researchers compared DNA methylation patterns in Labrador retrievers and humans and derived a much cleaner mapping: human age = 16 x ln(dog age) + 31. It reproduces the rapid early ageing curve without needing separate phases, and it lines up with known milestones — puberty, average lifespan — better than the linear folk rule. Its weakness is the puppy end, where the logarithm overshoots, which is why this tool leaves it blank below one year.</p>
+    <p>Take both numbers as approximations. A dog's real biological age depends on breed predisposition, weight, dental health, exercise and luck. What the numbers are good for is context: knowing that a seven-year-old giant breed is already a senior citizen changes how you think about anaesthesia, joint supplements and how many good years are left to plan around.</p>
+    <p>If you want one practical takeaway, it is the screening schedule. Small dogs benefit from annual senior bloodwork from about nine; large dogs from about seven; giants from five or six. Catching kidney or thyroid changes early is worth far more than any conversion number.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed (NIH) &mdash; peer-reviewed research including the 2020 DNA methylation clock mapping dog age to human age</a></li>
+      <li><a href="https://www.avma.org/" target="_blank" rel="noopener">American Veterinary Medical Association &mdash; life-stage guidelines and senior screening recommendations by breed size</a></li>
+      <li><a href="https://www.fda.gov/animal-veterinary" target="_blank" rel="noopener">U.S. FDA Center for Veterinary Medicine &mdash; official guidance on pet health, drugs and aging-related care</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/drywall-calc/"><span class="related-ico" aria-hidden="true">🛠️</span><span class="related-name">Drywall Calculator</span></a><a class="related-item" href="https://tool-hub.me/ev-charging-calc/"><span class="related-ico" aria-hidden="true">🔋</span><span class="related-name">EV Charging Time Calculator</span></a><a class="related-item" href="https://tool-hub.me/fence-calc/"><span class="related-ico" aria-hidden="true">🚧</span><span class="related-name">Fence Calculator</span></a><a class="related-item" href="https://tool-hub.me/final-grade-calc/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Final Grade Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is one dog year really seven human years?</summary><p data-i18n="faq.a1">No. Dogs mature fast then slow down: a one-year-old dog is roughly a 15-year-old human, and the second year adds about nine more. After that each year adds four to six human years depending on size, so the multiplier is never a flat seven.</p></details>
+    <details><summary data-i18n="faq.q2">Why does size change the answer?</summary><p data-i18n="faq.a2">Large and giant breeds age faster after adulthood. A 7-year-old small dog is around 44 in human terms, while a 7-year-old giant breed is closer to 57. Big dogs reach senior status at 6 to 7 years; small dogs often not until 9 or 10.</p></details>
+    <details><summary data-i18n="faq.q3">What is the epigenetic estimate?</summary><p data-i18n="faq.a3">A 2020 study on DNA methylation proposed human age = 16 x ln(dog age) + 31. It matches lifespan biology well for adult dogs and is shown here alongside the size chart. It overshoots for puppies under one year, so the tool leaves it blank there.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

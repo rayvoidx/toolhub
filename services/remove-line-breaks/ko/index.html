@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-MQvAwEuaNVeY1Pb18J/j8ZS1YOYon9giL7wECScODTk=' 'sha256-2lioFgRRTvOxJqiiimfSqp8hoOyIywJmUqenwvkjmO4=' 'sha256-bmbKm9EHSYJ3hjUMKqbx5wqUXIj33T3L4gZzgfQvff8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>줄바꿈 제거 — 텍스트 한 줄로 합치기 · PDF 복사 줄바꿈 교정</title>
+<meta name="description" content="텍스트를 붙여넣으면 줄바꿈을 한 번에 제거합니다. 공백으로 합치기, 공백 없이 합치기, 또는 문단 구분(빈 줄)은 유지하면서 PDF 복사 시 생기는 강제 줄바꿈만 펼치는 스마트 모드를 선택할 수 있습니다. 무료이며 브라우저에서만 처리됩니다.">
+<meta name="keywords" content="remove line breaks, remove line breaks from text, line break remover, remove enter from text, pdf copy paste fix, 줄바꿈 제거">
+<link rel="canonical" href="https://tool-hub.me/remove-line-breaks/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/remove-line-breaks/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/remove-line-breaks/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/remove-line-breaks/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/remove-line-breaks/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/remove-line-breaks/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/remove-line-breaks/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/remove-line-breaks/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/remove-line-breaks/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/remove-line-breaks/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/remove-line-breaks/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/remove-line-breaks/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/remove-line-breaks/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/remove-line-breaks/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/remove-line-breaks/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/remove-line-breaks/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="줄바꿈 제거 — 텍스트 한 줄로 합치기 · PDF 복사 줄바꿈 교정">
+<meta property="og:description" content="텍스트를 붙여넣으면 줄바꿈을 한 번에 제거합니다. 공백으로 합치기, 공백 없이 합치기, 또는 문단 구분(빈 줄)은 유지하면서 PDF 복사 시 생기는 강제 줄바꿈만 펼치는 스마트 모드를 선택할 수 있습니다. 무료이며 브라우저에서만 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/remove-line-breaks/ko/">
+<meta property="og:image" content="https://tool-hub.me/remove-line-breaks/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0369a1">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Remove Line Breaks",
+  "description": "Paste text to remove line breaks — join with a space or nothing, or use Smart mode to keep paragraphs while unwrapping PDF copy-paste lines. Free, private, browser-only.",
+  "url": "https://tool-hub.me/remove-line-breaks/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Remove Line Breaks", "item": "https://tool-hub.me/remove-line-breaks/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I remove line breaks from a block of text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste your text into the box above and pick a join mode: “Join with a space” replaces every line break with a single space so words never run together, “Join with nothing” deletes every line break outright with no space added, and “Smart” keeps blank-line paragraph breaks while only unwrapping single hard-wrapped lines inside each paragraph. The result updates instantly as you type or paste, and a Copy result button puts the cleaned text on your clipboard in one click."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between “Join with a space” and “Join with nothing”?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "“Join with a space” turns every line break — including the blank line between paragraphs — into a single space, so “Hello” and “world” on two lines become “Hello world”. “Join with nothing” removes only the line break character and adds no space, so the same input becomes “Helloworld”; use this when your source text already ends each line with a trailing space, or when you specifically want two broken halves of a word glued back together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Smart mode fix text copied from a PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PDF readers and many apps insert a real line break at the end of every printed line, even in the middle of a paragraph — this is called hard wrapping. Smart mode looks for blank lines to find where paragraphs actually end, then joins every hard-wrapped line inside a paragraph with a single space while leaving the paragraph break untouched. The result reads like normal flowing text instead of a jagged column of short lines, which is exactly the PDF copy-paste fix most word processors don't offer on their own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will Smart mode delete the blank lines between my paragraphs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — Smart mode is designed to preserve paragraph structure, not remove it. Wherever your original text has one or more blank lines, the result keeps exactly one blank line, so paragraphs stay visually separated. Only the hard line breaks inside a paragraph — the ones caused by word-wrapping — are unwrapped into a single line. If you want paragraph breaks removed too, switch to “Join with a space” or “Join with nothing” instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every transformation runs entirely inside your browser — the text you paste is never sent to a server, logged, or shared anywhere. Your most recent text and selected mode are optionally saved to this browser's local storage so they're still here next time you open the page; untick “Save my text in this browser” to keep it in memory for this session only, and clearing the box removes the stored copy immediately."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Remove Line Breaks</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Remove Line Breaks</span></nav>
+  <section class="hero">
+    <h1>Remove Line Breaks</h1>
+    <p class="lede" data-i18n="hero.lede">Paste text with line breaks and instantly join it into one clean block — with a space, with nothing, or Smart mode that keeps paragraphs and fixes PDF copy-paste wrapping.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Remove line breaks tool" data-i18n-aria-label="tool.aria">
+    <label for="rlb-input" data-i18n="tool.input.label">Text with line breaks</label>
+    <textarea id="rlb-input" rows="8" dir="auto" autocomplete="off" spellcheck="false"
+      placeholder="Paste or type your text here…" data-i18n-placeholder="tool.input.ph"
+      style="resize:vertical;line-height:1.6;"></textarea>
+
+    <div class="rlb-modes" role="radiogroup" aria-label="Join mode" data-i18n-aria-label="tool.mode.legend" style="display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;">
+      <label style="display:flex;align-items:center;gap:6px;font-weight:500;font-size:14.5px;cursor:pointer;margin:0;">
+        <input type="radio" name="rlb-mode" id="rlb-mode-space" value="space" checked style="width:auto;margin:0;">
+        <span data-i18n="tool.mode.space">Join with a space</span>
+      </label>
+      <label style="display:flex;align-items:center;gap:6px;font-weight:500;font-size:14.5px;cursor:pointer;margin:0;">
+        <input type="radio" name="rlb-mode" id="rlb-mode-none" value="none" style="width:auto;margin:0;">
+        <span data-i18n="tool.mode.none">Join with nothing</span>
+      </label>
+      <label style="display:flex;align-items:center;gap:6px;font-weight:500;font-size:14.5px;cursor:pointer;margin:0;">
+        <input type="radio" name="rlb-mode" id="rlb-mode-smart" value="smart" style="width:auto;margin:0;">
+        <span data-i18n="tool.mode.smart">Smart — keep paragraphs</span>
+      </label>
+      <label style="display:flex;align-items:center;gap:6px;font-weight:500;font-size:14.5px;cursor:pointer;margin:0;">
+        <input type="radio" name="rlb-mode" id="rlb-mode-custom" value="custom" style="width:auto;margin:0;">
+        <span data-i18n="tool.mode.custom">Join with a custom separator</span>
+      </label>
+    </div>
+    <div id="rlb-sep-wrap" hidden style="margin-top:10px;">
+      <label for="rlb-sep" data-i18n="tool.sep.label" style="margin-top:0;">Separator</label>
+      <input type="text" id="rlb-sep" value=", " maxlength="20" autocomplete="off" spellcheck="false"
+        placeholder=", " data-i18n-placeholder="tool.sep.ph" style="max-width:220px;">
+    </div>
+    <p id="rlb-mode-hint" style="margin:8px 0 0;font-size:13px;color:var(--muted);line-height:1.5;">Every line break becomes a single space.</p>
+
+    <div style="display:flex;align-items:center;gap:.9rem;margin-top:16px;flex-wrap:wrap;">
+      <button type="button" class="btn" id="rlb-clear" data-i18n="tool.clear" style="width:auto;margin-top:0;">Clear</button>
+      <label style="display:flex;align-items:center;gap:.45rem;margin:0;font-weight:400;cursor:pointer;">
+        <input type="checkbox" id="rlb-remember" checked style="width:auto;margin:0;">
+        <span data-i18n="tool.remember">Save my text in this browser</span>
+      </label>
+    </div>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="rlb-empty" style="margin:0;color:var(--muted);" data-i18n="tool.placeholder">Paste text above to remove line breaks</p>
+      <div id="rlb-output-wrap" hidden>
+        <label for="rlb-output" data-i18n="tool.output.label" style="margin-top:0;">Result</label>
+        <textarea id="rlb-output" rows="8" readonly dir="auto" style="resize:vertical;line-height:1.6;background:var(--bg);"></textarea>
+        <p id="rlb-stats" style="margin:10px 0 0;font-size:13.5px;color:var(--muted);"></p>
+        <div style="display:flex;align-items:center;gap:.9rem;margin-top:10px;flex-wrap:wrap;">
+          <button type="button" class="btn" id="rlb-copy" data-i18n="tool.copy" style="width:auto;margin-top:0;">Copy result</button>
+          <p id="rlb-feedback" aria-live="polite" hidden style="margin:0;font-weight:600;color:var(--accent);"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:1px 5px;font-size:.92em}
+    </style>
+
+    <h2>Why removing line breaks is trickier than "just delete \n"</h2>
+    <p>A line break looks like a single, simple thing, but text arrives with line breaks for several different reasons, and each one calls for a different fix. A spreadsheet cell might have a manual line break you want gone entirely. A PDF paragraph copied into a text box comes with a hard line break at the end of <em>every printed line</em>, even mid-sentence — deleting those the wrong way glues words together (<code>helloworld</code>) instead of leaving a space (<code>hello world</code>). And a document with real paragraphs has blank lines you usually want to keep, so a blanket "delete all newlines" pass would flatten your paragraphs into one giant run-on block. This tool gives you three explicit, predictable ways to join lines instead of one guess-and-check regex, and shows you exactly how many line breaks were removed and how the character count changed.</p>
+
+    <h2>The three join modes explained</h2>
+    <ul>
+      <li><strong>Join with a space</strong> — every line break, including blank lines between paragraphs, becomes exactly one space. Best for turning a short multi-line list or address into one continuous line.</li>
+      <li><strong>Join with nothing</strong> — every line break is deleted and no space is added. Best when each line already ends with a trailing space in your source, or when you deliberately want two line-fragments glued into one token (for example, reassembling a word or code identifier that got split across lines).</li>
+      <li><strong>Smart — keep paragraphs</strong> — finds your blank-line paragraph breaks first, keeps exactly one blank line between paragraphs, and only unwraps the hard line breaks <em>inside</em> each paragraph by joining them with a space. This is the PDF copy-paste fix: it turns a jagged column of short printed lines back into normal flowing paragraphs.</li>
+    </ul>
+
+    <h2>Worked examples</h2>
+    <div class="example">
+      <p><strong>Example 1 — a list, "space" mode.</strong> Input:</p>
+      <p><code>Apples<br>Bananas<br>Cherries</code></p>
+      <p>Output: <code>Apples Bananas Cherries</code> — three lines become one line, cleanly separated by single spaces.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a split identifier, "nothing" mode.</strong> Input:</p>
+      <p><code>data-i18n-<br>placeholder</code></p>
+      <p>Output: <code>data-i18n-placeholder</code> — the two fragments were meant to be one token, so gluing them with no space reconstructs the original.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a PDF paragraph, "Smart" mode.</strong> Input (each line ends where the printed page happened to wrap):</p>
+      <p><code>This report summarizes the<br>quarterly results and outlines<br>next steps for the team.<br><br>A second paragraph starts<br>here, after the blank line.</code></p>
+      <p>Output: <code>This report summarizes the quarterly results and outlines next steps for the team.</code> followed by a blank line, then <code>A second paragraph starts here, after the blank line.</code> — the two paragraphs stay separated, but the awkward mid-sentence breaks are gone.</p>
+    </div>
+
+    <h2>Where this comes up</h2>
+    <table>
+      <thead><tr><th>Source</th><th>Typical problem</th><th>Best mode</th></tr></thead>
+      <tbody>
+        <tr><td>Text copied from a PDF</td><td>Every printed line has a real line break, even mid-paragraph</td><td>Smart</td></tr>
+        <tr><td>Spreadsheet or CSV cell</td><td>A manual line break inside one cell breaks import/export</td><td>Join with a space</td></tr>
+        <tr><td>Address or list pasted into a single-line field</td><td>Field only accepts one line</td><td>Join with a space</td></tr>
+        <tr><td>Word or code split across two lines by accident</td><td>Need the fragments glued back together exactly</td><td>Join with nothing</td></tr>
+        <tr><td>Song lyrics, poetry, or scripts with real stanza breaks</td><td>Want paragraph/stanza structure kept</td><td>Smart</td></tr>
+      </tbody>
+    </table>
+
+    <h2>What Smart mode does — and does not — do</h2>
+    <ul>
+      <li>It detects paragraph boundaries purely from blank lines (one or more consecutive empty lines), and normalizes any run of blank lines down to a single blank line between paragraphs.</li>
+      <li>It unwraps every hard line break that falls strictly inside a paragraph, joining the fragments with one space, regardless of how the original line lengths varied.</li>
+      <li>It does <strong>not</strong> reverse hyphenation. If a PDF broke a word across two lines with a trailing hyphen (for example <code>exam-</code> / <code>ple</code>), Smart mode joins them as <code>exam- ple</code>, not <code>example</code> — you may need to clean up hyphenated word breaks by hand afterward.</li>
+      <li>It does <strong>not</strong> detect sentence boundaries or re-flow text for a specific line width; it only removes breaks that shouldn't be there and keeps the ones that should.</li>
+    </ul>
+
+    <h2>Privacy and reliability</h2>
+    <p>Every transformation runs with plain JavaScript string operations directly in your browser tab. Nothing you paste is sent to a server, logged, or uploaded anywhere, which makes this safe to use on drafts, internal notes, or anything else you'd rather not paste into a random web form. Your last input and selected mode are optionally remembered in this browser's local storage so the tool is ready again next time you open it; you can turn that off at any time.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.unicode.org/reports/tr14/" target="_blank" rel="noopener">Unicode Standard Annex #14 — how line breaking and break opportunities are defined in plain text</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank" rel="noopener">MDN Web Docs — JavaScript regular expressions used to match and replace newline characters</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc5322" target="_blank" rel="noopener">RFC 5322 — why email and other plain-text formats use CRLF line endings and wrapped lines</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/reverse-text/"><span class="related-ico" aria-hidden="true">🔁</span><span class="related-name">Reverse Text Generator</span></a><a class="related-item" href="https://tool-hub.me/sort-lines/"><span class="related-ico" aria-hidden="true">🔤</span><span class="related-name">Alphabetical Order Tool</span></a><a class="related-item" href="https://tool-hub.me/text-diff/"><span class="related-ico" aria-hidden="true">🔍</span><span class="related-name">Text Diff Checker</span></a><a class="related-item" href="https://tool-hub.me/text-to-speech/"><span class="related-ico" aria-hidden="true">🔊</span><span class="related-name">Text to Speech</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I remove line breaks from a block of text?</summary>
+      <p data-i18n="faq.a1">Paste your text into the box above and pick a join mode: “Join with a space” replaces every line break with a single space so words never run together, “Join with nothing” deletes every line break outright with no space added, and “Smart” keeps blank-line paragraph breaks while only unwrapping single hard-wrapped lines inside each paragraph. The result updates instantly as you type or paste, and a Copy result button puts the cleaned text on your clipboard in one click.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between “Join with a space” and “Join with nothing”?</summary>
+      <p data-i18n="faq.a2">“Join with a space” turns every line break — including the blank line between paragraphs — into a single space, so “Hello” and “world” on two lines become “Hello world”. “Join with nothing” removes only the line break character and adds no space, so the same input becomes “Helloworld”; use this when your source text already ends each line with a trailing space, or when you specifically want two broken halves of a word glued back together.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How does Smart mode fix text copied from a PDF?</summary>
+      <p data-i18n="faq.a3">PDF readers and many apps insert a real line break at the end of every printed line, even in the middle of a paragraph — this is called hard wrapping. Smart mode looks for blank lines to find where paragraphs actually end, then joins every hard-wrapped line inside a paragraph with a single space while leaving the paragraph break untouched. The result reads like normal flowing text instead of a jagged column of short lines, which is exactly the PDF copy-paste fix most word processors don't offer on their own.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Will Smart mode delete the blank lines between my paragraphs?</summary>
+      <p data-i18n="faq.a4">No — Smart mode is designed to preserve paragraph structure, not remove it. Wherever your original text has one or more blank lines, the result keeps exactly one blank line, so paragraphs stay visually separated. Only the hard line breaks inside a paragraph — the ones caused by word-wrapping — are unwrapped into a single line. If you want paragraph breaks removed too, switch to “Join with a space” or “Join with nothing” instead.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text uploaded to a server?</summary>
+      <p data-i18n="faq.a5">No. Every transformation runs entirely inside your browser — the text you paste is never sent to a server, logged, or shared anywhere. Your most recent text and selected mode are optionally saved to this browser's local storage so they're still here next time you open the page; untick “Save my text in this browser” to keep it in memory for this session only, and clearing the box removes the stored copy immediately.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-wsFwwms/Mlh0J9HCdVf0XIpeeV8L6F6WIgKwXSx9q18=' 'sha256-MHuQjAC04NDerEzyZlUHKRyhSUtJ8s3FHAIZ1XUyjR4=' 'sha256-TEW814G2Jr61k8WeS1d4zFrS/3Q0qs8nD18aqMXu6V8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>단백질 섭취량 계산기 — 하루 단백질 권장량</title>
+<meta name="description" content="체중·활동량·목표로 하루 단백질 섭취량을 계산합니다. 그램 범위와 한 끼 목표량, 닭가슴살·달걀 환산량까지 한 번에 확인하세요.">
+<meta name="keywords" content="protein calculator, protein intake calculator, how much protein do i need, protein per day calculator, daily protein requirement, grams of protein per kg">
+<link rel="canonical" href="https://tool-hub.me/protein-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/protein-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/protein-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/protein-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/protein-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/protein-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/protein-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/protein-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/protein-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/protein-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/protein-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/protein-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/protein-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/protein-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/protein-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/protein-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="단백질 섭취량 계산기 — 하루 단백질 권장량">
+<meta property="og:description" content="체중·활동량·목표로 하루 단백질 섭취량을 계산합니다. 그램 범위와 한 끼 목표량, 닭가슴살·달걀 환산량까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/protein-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/protein-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be123c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Protein Intake Calculator",
+  "description": "Work out how much protein you need per day from your body weight, training and goal. Get a gram range, a per-meal target and real food equivalents.",
+  "url": "https://tool-hub.me/protein-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Protein Intake Calculator",
+      "item": "https://tool-hub.me/protein-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can the body only absorb 30 g of protein per meal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — that is a misreading of the research. Your gut absorbs almost all the protein you eat; what plateaus is the muscle-building response to a single dose, at roughly 0.4 g per kg of body weight. A 2023 trial found muscle protein synthesis still rose after a 100 g serving, just less efficiently. Spreading intake across three to five meals is still the easiest way to hit a high daily total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does too much protein damage your kidneys?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In people with healthy kidneys, no controlled trial or systematic review has shown harm from high-protein diets, including intakes above 2 g/kg held for months. Protein does raise the filtration rate, but that is a normal adaptation rather than damage. The caution is real for people who already have chronic kidney disease, where protein is usually restricted under medical supervision."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is animal protein better than plant protein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gram for gram most animal sources are more complete and higher in leucine, the amino acid that triggers muscle protein synthesis, so 25 g of whey does more than 25 g of rice protein. The gap closes when plant eaters take a bit more total protein and mix sources — legumes with grains, or soy and pea, which are close to animal quality on their own. Daily total and variety matter far more than the animal-versus-plant label."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does protein timing matter — is there an anabolic window?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Less than supplement marketing suggests. Once daily total is matched, meta-analyses show that training just before or after eating adds little; the window is closer to several hours than thirty minutes. What does help is avoiding long protein-free stretches — 25 to 40 g every three to five hours keeps synthesis topped up. If you train fasted first thing, eating soon after is sensible; otherwise, hit your daily number."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Protein Intake Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Protein Intake Calculator</span></nav>
+  <section class="hero">
+    <h1>Protein Intake Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How much protein you need depends on your weight and your goal, not on a single number for everyone.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .rcard.wide .rc-val { font-size:16px; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="weight" data-i18n="tool.weight.label">Body weight</label>
+        <input type="number" id="weight" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="165">
+      </div>
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Unit</label>
+        <select id="unit">
+          <option value="lb" data-i18n="tool.unit.lb">Pounds (lb)</option>
+          <option value="kg" data-i18n="tool.unit.kg">Kilograms (kg)</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="goal" data-i18n="tool.goal.label">Activity and goal</label>
+    <select id="goal">
+      <option value="sedentary" data-i18n="tool.goal.sedentary">Sedentary — RDA minimum (0.8 g/kg)</option>
+      <option value="active" data-i18n="tool.goal.active">Active lifestyle (1.2-1.6 g/kg)</option>
+      <option value="muscle" data-i18n="tool.goal.muscle">Building muscle (1.6-2.2 g/kg)</option>
+      <option value="cut" data-i18n="tool.goal.cut">Losing fat, keeping muscle (1.8-2.4 g/kg)</option>
+      <option value="endurance" data-i18n="tool.goal.endurance">Endurance athlete (1.2-1.8 g/kg)</option>
+      <option value="senior" data-i18n="tool.goal.senior">Over 65 (1.0-1.2 g/kg)</option>
+    </select>
+
+    <label for="meals" data-i18n="tool.meals.label">Meals per day</label>
+    <select id="meals">
+      <option value="1" data-i18n="tool.meals.1">1 meal (OMAD)</option>
+      <option value="2" data-i18n="tool.meals.2">2 meals</option>
+      <option value="3" data-i18n="tool.meals.3" selected>3 meals</option>
+      <option value="4" data-i18n="tool.meals.4">4 meals</option>
+      <option value="5" data-i18n="tool.meals.5">5 meals</option>
+      <option value="6" data-i18n="tool.meals.6">6 meals</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate protein</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.daily">Protein per day</div>
+          <div class="rc-val" id="r-daily">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.meal">Per meal</div><div class="rc-val" id="r-meal">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.tier">Target range</div><div class="rc-val" id="r-tier">—</div></div>
+        <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.food">Roughly equals</div><div class="rc-val" id="r-food">—</div></div>
+      </div>
+      <p class="subtle" id="r-note" style="margin-top:10px;"></p>
+      <p class="subtle" id="r-omad" style="margin-top:6px;" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disc" style="margin-top:12px;">General guidance for healthy adults. With kidney or liver disease, or in pregnancy, ask your doctor or a dietitian first.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much protein you actually need</h2>
+    <p>The number most people remember — 0.8 grams per kilogram of body weight — is the Recommended Dietary Allowance. It answers a deliberately narrow question: what is the smallest intake that keeps a sedentary adult out of deficiency? It was never meant to describe the intake that builds muscle, preserves lean mass during a diet, or keeps a 70-year-old strong enough to carry shopping up the stairs. Position stands from the International Society of Sports Nutrition and the American College of Sports Medicine put the useful range for people who train at roughly 1.4 to 2.0 g/kg, and higher still for lifters eating in a calorie deficit.</p>
+    <p>This calculator takes your body weight, converts pounds to kilograms where needed, and multiplies it by the band that matches what you are doing with your body. It returns a range rather than a single figure because the research supports a range: below the low end you leave results on the table, above the high end you spend money and appetite for no measured return.</p>
+
+    <h3>Worked example 1: a 75 kg lifter building muscle</h3>
+    <p>Select "building muscle" at 75 kg and the band is 1.6 to 2.2 g/kg: 120 g at the bottom, 165 g at the top. Split over four meals that is 30 to 41 g each, which comfortably clears the roughly 0.4 g/kg per-meal dose that maximises muscle protein synthesis in most studies. Translated into food, 150 g of protein is about five 100 g servings of cooked chicken breast — or, more realistically, 200 g of chicken (62 g), a 250 g tub of Greek yoghurt (25 g), a whey shake (25 g), 150 g of lentils (13 g) and roughly 25 g scattered through bread, oats, rice and vegetables across the day.</p>
+
+    <h3>Worked example 2: 90 kg and cutting</h3>
+    <p>The same person dieting picks "losing fat, keeping muscle" and gets 1.8 to 2.4 g/kg — 162 to 216 g per day at 90 kg. That looks aggressive next to the bulking figure, and it is deliberate. When calories are low, the body is more willing to break down muscle for amino acids, so the protective effect of high protein matters more, not less. Protein is also the most satiating macronutrient per calorie, which is a practical advantage when you are hungry. The trade-off is that at 216 g of protein plus training fuel, there is not much room left for fat and carbohydrate, so most people sit near the lower end and accept it.</p>
+
+    <h3>Worked example 3: a 68 kg 70-year-old</h3>
+    <p>Choosing "over 65" gives 1.0 to 1.2 g/kg, or 68 to 82 g per day — modest in total, but the distribution matters more here than at any other age. Older muscle shows anabolic resistance: the same 20 g dose that switches on synthesis in a 25-year-old often does not in a 70-year-old, and the threshold sits closer to 30 to 40 g of high-quality protein containing about 2.5 to 3 g of leucine. Three solid meals beat five snack-sized ones. Pair that with two resistance sessions a week and you have the best-evidenced intervention against sarcopenia that exists.</p>
+
+    <h2>Choosing your band honestly</h2>
+    <p>Most people overestimate their activity level and underestimate their intake. "Active lifestyle" means genuine structured training several times a week, not a step count. If you lift three or more times a week with progression, use the muscle band. If you run or cycle long distances, the endurance band accounts for the small amount of protein oxidised as fuel during long sessions plus the repair demand afterwards. If you are simply eating better without training, the sedentary-to-active range is where you belong, and the low end is fine.</p>
+    <p>One important adjustment: if you carry a lot of body fat, scaling protein to total body weight inflates the target, because fat tissue has little protein demand. Use your goal weight or an estimate of lean body mass instead — a 130 kg person aiming for 90 kg should calculate on something close to 90, not 130. At the other end, very lean athletes in a hard deficit are the group with genuine evidence for intakes at or above 2.4 g/kg.</p>
+
+    <h2>Planning it in real food</h2>
+    <p>Numbers are easy, groceries are the hard part. Useful anchors: 100 g of cooked chicken breast is about 31 g of protein, a large egg 6 g, 100 g of canned tuna 25 g, 200 g of Greek yoghurt 20 g, a scoop of whey 24 g, 100 g of firm tofu 16 g, 100 g of cooked lentils 9 g. Hitting 150 g per day usually means one substantial protein source at every meal plus one deliberate top-up — a shake, a yoghurt, a tin of fish. If your total keeps landing short, it is almost always breakfast: cereal, toast and fruit is a 10 g start to a 150 g day.</p>
+
+    <h2>Where this calculator stops</h2>
+    <p>It assumes a healthy adult. Chronic kidney disease changes the answer completely, and protein there is managed by a clinician, not a web page. Pregnancy and lactation raise requirements by roughly 25 g per day in ways this band model does not capture. Children and adolescents scale differently again. The ranges also blur at the edges — an untrained beginner grows on far less than 1.6 g/kg because their limiting factor is training stimulus rather than substrate, while a drug-free advanced lifter is unlikely to find anything above 2.2 g/kg doing much. Treat the output as a target to aim at over a week, not a daily quota to hit exactly.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nal.usda.gov/human-nutrition-and-food-safety/dri-calculator" target="_blank" rel="noopener">USDA National Agricultural Library — Dietary Reference Intakes, including the 0.8 g/kg protein RDA</a></li>
+      <li><a href="https://www.acsm.org/education-resources/trending-topics-resources/resource-library" target="_blank" rel="noopener">American College of Sports Medicine — position stands on protein needs for athletes and resistance training</a></li>
+      <li><a href="https://www.eatright.org/health/wellness/diet-trends" target="_blank" rel="noopener">Academy of Nutrition and Dietetics — practical guidance on protein sources and daily intake</a></li>
+      <li><a href="https://ods.od.nih.gov/factsheets/list-all/" target="_blank" rel="noopener">NIH Office of Dietary Supplements — evidence summaries on protein and amino acid supplements</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/protein-intake-calc/"><span class="related-ico" aria-hidden="true">🥩</span><span class="related-name">Protein Intake Calculator</span></a><a class="related-item" href="https://tool-hub.me/race-time-predictor/"><span class="related-ico" aria-hidden="true">🏅</span><span class="related-name">Race Time Predictor</span></a><a class="related-item" href="https://tool-hub.me/steps-to-miles-calc/"><span class="related-ico" aria-hidden="true">🚶</span><span class="related-name">Steps to Miles Calculator</span></a><a class="related-item" href="https://tool-hub.me/tdee-calc/"><span class="related-ico" aria-hidden="true">🏃</span><span class="related-name">TDEE Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Can the body only absorb 30 g of protein per meal?</summary><p data-i18n="faq.a1">No — that is a misreading of the research. Your gut absorbs almost all the protein you eat; what plateaus is the muscle-building response to a single dose, at roughly 0.4 g per kg of body weight. A 2023 trial found muscle protein synthesis still rose after a 100 g serving, just less efficiently. Spreading intake across three to five meals is still the easiest way to hit a high daily total.</p></details>
+    <details><summary data-i18n="faq.q2">Does too much protein damage your kidneys?</summary><p data-i18n="faq.a2">In people with healthy kidneys, no controlled trial or systematic review has shown harm from high-protein diets, including intakes above 2 g/kg held for months. Protein does raise the filtration rate, but that is a normal adaptation rather than damage. The caution is real for people who already have chronic kidney disease, where protein is usually restricted under medical supervision.</p></details>
+    <details><summary data-i18n="faq.q3">Is animal protein better than plant protein?</summary><p data-i18n="faq.a3">Gram for gram most animal sources are more complete and higher in leucine, the amino acid that triggers muscle protein synthesis, so 25 g of whey does more than 25 g of rice protein. The gap closes when plant eaters take a bit more total protein and mix sources — legumes with grains, or soy and pea, which are close to animal quality on their own. Daily total and variety matter far more than the animal-versus-plant label.</p></details>
+    <details><summary data-i18n="faq.q4">Does protein timing matter — is there an anabolic window?</summary><p data-i18n="faq.a4">Less than supplement marketing suggests. Once daily total is matched, meta-analyses show that training just before or after eating adds little; the window is closer to several hours than thirty minutes. What does help is avoiding long protein-free stretches — 25 to 40 g every three to five hours keeps synthesis topped up. If you train fasted first thing, eating soon after is sensible; otherwise, hit your daily number.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

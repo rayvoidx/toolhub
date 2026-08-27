@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-+S64oUf6Ato3UTBBwgYoSw5DtrTDrQz+1Oi+PxgFiXk=' 'sha256-tOjlhmHw9YoI6T2K0IzcUM16042gy+tzKG0iampd88Y=' 'sha256-8wCRR6g3XoLFa73K7ulNrrKfyEyHcZTOi9XQbs14ogU='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>대량 UTM 링크 생성기</title>
+<meta name="description" content="무료 대량 UTM 생성기. source·medium·campaign 값을 붙여넣으면 GA4에 맞는 추적 URL 수백 개를 한 번에 생성합니다. 소문자 강제와 채널 매핑 경고 포함. 모든 처리는 브라우저 안에서 끝나며 아무것도 업로드하지 않습니다.">
+<meta name="keywords" content="utm builder, bulk utm generator, campaign url builder, utm parameter generator, UTM 링크 생성기, utm 코드 생성">
+<link rel="canonical" href="https://tool-hub.me/utm-builder/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/utm-builder/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/utm-builder/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/utm-builder/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/utm-builder/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/utm-builder/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/utm-builder/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/utm-builder/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/utm-builder/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/utm-builder/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/utm-builder/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/utm-builder/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/utm-builder/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/utm-builder/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/utm-builder/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/utm-builder/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="대량 UTM 링크 생성기">
+<meta property="og:description" content="무료 대량 UTM 생성기. source·medium·campaign 값을 붙여넣으면 GA4에 맞는 추적 URL 수백 개를 한 번에 생성합니다. 소문자 강제와 채널 매핑 경고 포함. 모든 처리는 브라우저 안에서 끝나며 아무것도 업로드하지 않습니다.">
+<meta property="og:url" content="https://tool-hub.me/utm-builder/ko/">
+<meta property="og:image" content="https://tool-hub.me/utm-builder/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a21caf">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Bulk UTM Builder",
+  "description": "Free bulk UTM builder. Paste your sources, mediums and campaigns to generate hundreds of GA4-ready tracking URLs at once, with lowercase enforcement and channel-mapping warnings. Runs entirely in your browser — nothing is uploaded.",
+  "url": "https://tool-hub.me/utm-builder/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Formatting and safety options",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Force lowercase — GA4 is case-sensitive, so Facebook and facebook become two separate rows Trim spaces around every value Spaces inside a value Replace with a hyphen (spring-sale) Replace with an underscore (spring_sale) Keep them (encoded as %20) If the URL already has utm_ parameters Overwrite them and tell me what changed Keep the originals and tell me what was skipped Remember my last input on this device. Off by default — a campaign plan is not public, so only your options are stored, never your URLs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does a UTM builder force everything to lowercase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because GA4 stores utm values exactly as they arrive. Facebook, facebook and FACEBOOK are three different strings, so one campaign is split across three rows in your reports and you have to add them up by hand. It gets worse: GA4's default channel groups match lowercase only, so utm_medium=Email never reaches the Email channel and utm_medium=CPC never reaches Paid Search — both fall into Unassigned. That is why this bulk UTM generator lowercases every value by default and flags any capital letter before you ship the links."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "For Meta ads, should utm_source be meta or facebook?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use facebook. Google publishes the source category list that drives GA4's default channel groups, and facebook and fb are on it — meta is not. With utm_source=meta&utm_medium=cpc, GA4 cannot see a social source, so your paid campaign is reported as Referral or Paid Other instead of Paid Social. The campaign URL builder here flags meta and suggests facebook before you generate anything. Instagram ads are the same story: use instagram, not ig or insta."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What utm_source should I use for Naver, Kakao or LINE campaigns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the plain service name — naver, kakao, daum, line, yahoo, yandex, vk, baidu, wechat — and pick the country preset to fill them in as chips. Naver, Daum, Yandex and Baidu are search engines on Google's list, so naver + cpc lands in Paid Search just like google + cpc. Messenger and community platforms are less predictable: this UTM parameter generator ships a curated subset of Google's 800-plus entry list, so when it cannot verify a source it marks the predicted channel with ≈ rather than guessing. The rule that never changes is utm_medium: paid placements need cpc, ppc, retargeting or paid… no matter which country you are in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my Korean utm_term show up as %ED%95%9C… in reports?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is percent-encoding, and it is correct behaviour — URLs may only carry ASCII, so non-ASCII characters are encoded per character. GA4 usually decodes it back, but exports, third-party tools and shared links often show the raw form, which makes a keyword report unreadable. This UTM link generator shows the encoded result next to your value so you can decide before launch. Safest option: romanise the value (winter-coat) and keep the original wording in utm_content or your own naming sheet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between utm_id and utm_campaign, and are my links uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "utm_campaign is the human-readable name you read in reports (spring-sale); utm_id is the campaign ID that ties the click to imported cost data from your ad platform, so GA4 can join spend to sessions. Use both when you import cost data, and keep utm_id stable even if you rename the campaign. As for your links: nothing is uploaded. This bulk UTM builder runs entirely in your browser, there is no account and no server to send to, and a CSV you drop in is read with the File API in this tab. Your campaign plan is unreleased information, and it never leaves your device."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Bulk UTM Builder",
+      "item": "https://tool-hub.me/utm-builder/"
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Bulk UTM Builder</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Bulk UTM Builder</span></nav>
+  <section class="hero">
+    <h1>Bulk UTM Builder</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your value lists once — get every tagged campaign URL, checked against GA4 rules.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Bulk UTM builder" data-i18n-aria-label="tool.aria">
+
+    <div role="tablist" style="display:flex;gap:6px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:4px;">
+      <button id="tabbtn-matrix" type="button" role="tab" aria-selected="true" aria-controls="panel-matrix" data-i18n="tool.tab.matrix"
+        style="flex:1;padding:10px 8px;border:none;border-radius:9px;background:var(--accent);color:#fff;font-weight:700;font-family:inherit;font-size:14px;cursor:pointer;">Matrix — cross every value</button>
+      <button id="tabbtn-rows" type="button" role="tab" aria-selected="false" aria-controls="panel-rows" data-i18n="tool.tab.rows"
+        style="flex:1;padding:10px 8px;border:none;border-radius:9px;background:transparent;color:var(--ink);font-weight:700;font-family:inherit;font-size:14px;cursor:pointer;">Rows — one link per line</button>
+    </div>
+    <p id="tab-hint" style="color:var(--muted);font-size:13px;margin:8px 0 0;">One value per line. Every combination of your values becomes a link.</p>
+
+    <div id="base-field">
+      <label for="in-base" data-i18n="tool.baseUrl">Landing page URLs — one per line</label>
+      <textarea id="in-base" rows="3" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off"
+        placeholder="https://example.com/pricing" data-i18n-placeholder="tool.ph.baseUrl"></textarea>
+      <p style="color:var(--muted);font-size:13px;margin:6px 0 0;" data-i18n="tool.baseUrl.hint">No https://? We add it and say so. Existing query strings and #fragments are kept intact.</p>
+    </div>
+
+    <div id="panel-matrix" role="tabpanel" aria-labelledby="tabbtn-matrix">
+      <label for="in-region" data-i18n="tool.region">Channel presets</label>
+      <select id="in-region"></select>
+      <div id="chips" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;"></div>
+      <p style="color:var(--muted);font-size:13px;margin:8px 0 0;" data-i18n="tool.presetHint">Presets only fill values in — edit them however you like. Hover a preset to see the GA4 channel it lands in.</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:190px;">
+          <label for="in-utm_source"><code>utm_source</code> — <span data-i18n="tool.field.source">where the traffic comes from</span></label>
+          <textarea id="in-utm_source" rows="4" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off"
+            placeholder="google&#10;facebook" data-i18n-placeholder="tool.ph.source"></textarea>
+        </div>
+        <div style="flex:1;min-width:190px;">
+          <label for="in-utm_medium"><code>utm_medium</code> — <span data-i18n="tool.field.medium">how it was paid for or delivered</span></label>
+          <textarea id="in-utm_medium" rows="4" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off"
+            placeholder="cpc&#10;email" data-i18n-placeholder="tool.ph.medium"></textarea>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:190px;">
+          <label for="in-utm_campaign"><code>utm_campaign</code> — <span data-i18n="tool.field.campaign">the campaign name</span></label>
+          <textarea id="in-utm_campaign" rows="3" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off"
+            placeholder="spring-sale" data-i18n-placeholder="tool.ph.campaign"></textarea>
+        </div>
+        <div style="flex:1;min-width:190px;">
+          <label for="in-utm_id"><code>utm_id</code> — <span data-i18n="tool.field.id">the campaign ID from your ad platform</span></label>
+          <textarea id="in-utm_id" rows="3" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off"
+            placeholder="1234567890" data-i18n-placeholder="tool.ph.id"></textarea>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <div style="flex:1;min-width:190px;">
+          <label for="in-utm_term"><code>utm_term</code> — <span data-i18n="tool.field.term">the paid keyword</span></label>
+          <textarea id="in-utm_term" rows="3" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off"
+            placeholder="winter coat" data-i18n-placeholder="tool.ph.term"></textarea>
+        </div>
+        <div style="flex:1;min-width:190px;">
+          <label for="in-utm_content"><code>utm_content</code> — <span data-i18n="tool.field.content">which creative or link position</span></label>
+          <textarea id="in-utm_content" rows="3" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off"
+            placeholder="banner-a&#10;banner-b" data-i18n-placeholder="tool.ph.content"></textarea>
+        </div>
+      </div>
+      <p style="color:var(--muted);font-size:13px;margin:10px 0 0;" data-i18n="tool.field.hint">One value per line (commas work too). Leave a field empty and it is left off the link entirely — no dangling utm_term=.</p>
+    </div>
+
+    <div id="panel-rows" role="tabpanel" aria-labelledby="tabbtn-rows" hidden>
+      <label for="in-rows" data-i18n="tool.rows.label">Paste your table — one link per row</label>
+      <textarea id="in-rows" rows="7" spellcheck="false" autocapitalize="off" autocorrect="off" autocomplete="off"
+        placeholder="url&#9;utm_source&#9;utm_medium&#9;utm_campaign&#10;https://example.com/&#9;google&#9;cpc&#9;spring-sale" data-i18n-placeholder="tool.ph.rows"></textarea>
+      <p style="color:var(--muted);font-size:13px;margin:6px 0 0;" data-i18n="tool.rows.hint">Copy straight out of Excel, Google Sheets or Numbers. Tab, comma and semicolon tables are all detected, and a header row is matched by name. Without a header we read the columns as url, utm_source, utm_medium, utm_campaign, utm_id, utm_term, utm_content.</p>
+      <div id="dropzone" style="margin-top:12px;border:1px dashed var(--line);border-radius:10px;padding:14px;text-align:center;color:var(--muted);font-size:13.5px;">
+        <span data-i18n="tool.drop.hint">Drop a CSV anywhere on this card, or</span>
+        <label for="file-input" style="display:inline;font-weight:700;color:var(--accent);cursor:pointer;margin:0;" data-i18n="tool.drop.browse">choose a file</label>
+        <input type="file" id="file-input" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values,text/plain" style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;">
+        <span data-i18n="tool.drop.privacy">— it is read in this tab with the File API and never uploaded.</span>
+      </div>
+    </div>
+
+    <details id="opts" style="margin-top:18px;border:1px solid var(--line);border-radius:10px;padding:10px 14px;background:var(--bg);">
+      <summary style="font-weight:700;font-size:14px;cursor:pointer;" data-i18n="tool.opts.heading">Formatting and safety options</summary>
+
+      <label style="display:flex;align-items:flex-start;gap:8px;font-weight:500;margin:12px 0 0;">
+        <input type="checkbox" id="opt-lower" checked style="width:auto;margin-top:5px;flex:none;">
+        <span data-i18n="tool.opt.lowercase">Force lowercase — GA4 is case-sensitive, so Facebook and facebook become two separate rows</span>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:8px;font-weight:500;margin:10px 0 0;">
+        <input type="checkbox" id="opt-trim" checked style="width:auto;margin-top:5px;flex:none;">
+        <span data-i18n="tool.opt.trim">Trim spaces around every value</span>
+      </label>
+      <label for="opt-sep" data-i18n="tool.opt.spaces">Spaces inside a value</label>
+      <select id="opt-sep">
+        <option value="-" data-i18n="tool.opt.sep.dash">Replace with a hyphen (spring-sale)</option>
+        <option value="_" data-i18n="tool.opt.sep.underscore">Replace with an underscore (spring_sale)</option>
+        <option value="keep" data-i18n="tool.opt.sep.keep">Keep them (encoded as %20)</option>
+      </select>
+      <label for="opt-existing" data-i18n="tool.opt.existing">If the URL already has utm_ parameters</label>
+      <select id="opt-existing">
+        <option value="overwrite" data-i18n="tool.opt.existing.overwrite">Overwrite them and tell me what changed</option>
+        <option value="keep" data-i18n="tool.opt.existing.keep">Keep the originals and tell me what was skipped</option>
+      </select>
+      <label style="display:flex;align-items:flex-start;gap:8px;font-weight:500;margin:12px 0 0;">
+        <input type="checkbox" id="opt-remember" style="width:auto;margin-top:5px;flex:none;">
+        <span data-i18n="tool.opt.remember">Remember my last input on this device. Off by default — a campaign plan is not public, so only your options are stored, never your URLs.</span>
+      </label>
+      <p id="store-note" hidden style="color:#b45309;font-size:13px;margin:10px 0 0;"></p>
+    </details>
+
+    <p id="count-line" style="color:var(--muted);font-size:13.5px;font-weight:600;margin:16px 0 0;min-height:1.2em;"></p>
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <button id="btn-generate" class="btn" type="button" data-i18n="tool.btn.generate">Generate links</button>
+      <button id="btn-cancel" class="btn" type="button" hidden data-i18n="tool.btn.cancel"
+        style="background:transparent;color:var(--ink);border:1px solid var(--line);">Cancel</button>
+    </div>
+
+    <div id="progress-wrap" hidden style="margin-top:14px;">
+      <div style="height:8px;background:var(--bg);border:1px solid var(--line);border-radius:999px;overflow:hidden;">
+        <div id="progress-bar" style="height:100%;width:0;background:var(--accent);"></div>
+      </div>
+      <p id="progress-text" style="color:var(--muted);font-size:13px;margin:6px 0 0;"></p>
+    </div>
+
+    <div class="result" id="result" role="status" aria-live="polite" data-i18n="tool.msg.empty">Add a landing page URL plus utm_source and utm_medium — your links appear here.</div>
+
+    <div id="report" hidden>
+      <div id="lint-box"></div>
+      <div id="excluded-box"></div>
+      <div id="table-tools" hidden style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:18px;">
+        <label style="display:flex;align-items:center;gap:7px;font-weight:500;font-size:13.5px;margin:0;">
+          <input type="checkbox" id="opt-warnonly" style="width:auto;flex:none;">
+          <span data-i18n="tool.filter.warnOnly">Only rows with a warning</span>
+        </label>
+        <span style="flex:1;"></span>
+        <button id="btn-csv" type="button" class="btn" data-i18n="tool.export.csv" style="margin-top:0;padding:8px 14px;font-size:13.5px;">Download CSV</button>
+        <button id="btn-tsv" type="button" class="btn" data-i18n="tool.export.tsv" style="margin-top:0;padding:8px 14px;font-size:13.5px;background:transparent;color:var(--ink);border:1px solid var(--line);">Copy for Sheets</button>
+        <button id="btn-urls" type="button" class="btn" data-i18n="tool.export.urls" style="margin-top:0;padding:8px 14px;font-size:13.5px;background:transparent;color:var(--ink);border:1px solid var(--line);">Copy URLs only</button>
+      </div>
+      <div id="table-wrap"></div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/uuid-gen/"><span class="related-ico" aria-hidden="true">🆔</span><span class="related-name">UUID Generator</span></a><a class="related-item" href="https://tool-hub.me/xml-formatter/"><span class="related-ico" aria-hidden="true">📰</span><span class="related-name">XML Formatter</span></a><a class="related-item" href="https://tool-hub.me/ascii-table/"><span class="related-ico" aria-hidden="true">🔤</span><span class="related-name">ASCII Table</span></a><a class="related-item" href="https://tool-hub.me/aspect-ratio-calc/"><span class="related-ico" aria-hidden="true">▭</span><span class="related-name">Aspect Ratio Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">Why does a UTM builder force everything to lowercase?</summary>
+      <p data-i18n="faq.a1">Because GA4 stores utm values exactly as they arrive. Facebook, facebook and FACEBOOK are three different strings, so one campaign is split across three rows in your reports and you have to add them up by hand. It gets worse: GA4's default channel groups match lowercase only, so utm_medium=Email never reaches the Email channel and utm_medium=CPC never reaches Paid Search — both fall into Unassigned. That is why this bulk UTM generator lowercases every value by default and flags any capital letter before you ship the links.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">For Meta ads, should utm_source be meta or facebook?</summary>
+      <p data-i18n="faq.a2">Use facebook. Google publishes the source category list that drives GA4's default channel groups, and facebook and fb are on it — meta is not. With utm_source=meta&amp;utm_medium=cpc, GA4 cannot see a social source, so your paid campaign is reported as Referral or Paid Other instead of Paid Social. The campaign URL builder here flags meta and suggests facebook before you generate anything. Instagram ads are the same story: use instagram, not ig or insta.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What utm_source should I use for Naver, Kakao or LINE campaigns?</summary>
+      <p data-i18n="faq.a3">Use the plain service name — naver, kakao, daum, line, yahoo, yandex, vk, baidu, wechat — and pick the country preset to fill them in as chips. Naver, Daum, Yandex and Baidu are search engines on Google's list, so naver + cpc lands in Paid Search just like google + cpc. Messenger and community platforms are less predictable: this UTM parameter generator ships a curated subset of Google's 800-plus entry list, so when it cannot verify a source it marks the predicted channel with ≈ rather than guessing. The rule that never changes is utm_medium: paid placements need cpc, ppc, retargeting or paid… no matter which country you are in.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why does my Korean utm_term show up as %ED%95%9C… in reports?</summary>
+      <p data-i18n="faq.a4">That is percent-encoding, and it is correct behaviour — URLs may only carry ASCII, so non-ASCII characters are encoded per character. GA4 usually decodes it back, but exports, third-party tools and shared links often show the raw form, which makes a keyword report unreadable. This UTM link generator shows the encoded result next to your value so you can decide before launch. Safest option: romanise the value (winter-coat) and keep the original wording in utm_content or your own naming sheet.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">What is the difference between utm_id and utm_campaign, and are my links uploaded anywhere?</summary>
+      <p data-i18n="faq.a5">utm_campaign is the human-readable name you read in reports (spring-sale); utm_id is the campaign ID that ties the click to imported cost data from your ad platform, so GA4 can join spend to sessions. Use both when you import cost data, and keep utm_id stable even if you rename the campaign. As for your links: nothing is uploaded. This bulk UTM builder runs entirely in your browser, there is no account and no server to send to, and a CSV you drop in is read with the File API in this tab. Your campaign plan is unreleased information, and it never leaves your device.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

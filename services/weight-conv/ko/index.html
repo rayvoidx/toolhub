@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-kDYD7YO4XWVWyWAzzFAaR67dyKsVRsm/lU0QMAF6yo4=' 'sha256-XqrsY1Ll5LS5xBrpDYtk5GZuZWKz85pJ1ST/5WgO8g8=' 'sha256-kdXTybK1lAXJ+VTuYjvd7Oud7me5jFgb51wyjShhMFA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>무게 단위 변환기</title>
+<meta name="description" content="무료 온라인 무게·질량 단위 변환기. 숫자 하나만 입력하면 밀리그램·그램·킬로그램·톤·온스·파운드·스톤으로 즉시 환산 — 한국 전통 단위 근(geun)·돈(don)까지 — 모두 브라우저 안에서 처리됩니다.">
+<meta name="keywords" content="weight converter, kg to lbs, lbs to kg, pounds to kg, ounces to grams, stone to kg, 무게 단위 변환, 파운드 킬로그램 변환">
+<link rel="canonical" href="https://tool-hub.me/weight-conv/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/weight-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/weight-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/weight-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/weight-conv/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/weight-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/weight-conv/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/weight-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/weight-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/weight-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/weight-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/weight-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/weight-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/weight-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/weight-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/weight-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="무게 단위 변환기">
+<meta property="og:description" content="무료 온라인 무게·질량 단위 변환기. 숫자 하나만 입력하면 밀리그램·그램·킬로그램·톤·온스·파운드·스톤으로 즉시 환산 — 한국 전통 단위 근(geun)·돈(don)까지 — 모두 브라우저 안에서 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/weight-conv/ko/">
+<meta property="og:image" content="https://tool-hub.me/weight-conv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Weight Converter",
+  "description": "Free online weight & mass converter. Type one number and instantly see it in milligrams, grams, kilograms, tonnes, ounces, pounds and stone — plus Korean geun and don — all in your browser.",
+  "url": "https://tool-hub.me/weight-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Weight Converter",
+      "item": "https://tool-hub.me/weight-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many pounds are in a kilogram?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 kilogram = 2.2046226218 pounds, and 1 pound = 0.45359237 kg exactly — the exact value of the international avoirdupois pound, not a rounded 2.2. So going kg to lbs, 70 kg ≈ 154.32 lb; going pounds to kg, 150 lb ≈ 68.04 kg. This weight converter uses the exact factor, so kg-to-lbs and lbs-to-kg both stay accurate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What about ounces and stone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 ounce = 28.349523125 grams (so converting ounces to grams is handy for recipes and postage), 1 pound = 16 ounces, and 1 stone = 14 pounds = 6.35029318 kg. Stone is the everyday body-weight unit in the UK and Ireland, so 11 st = 154 lb ≈ 69.85 kg. Type a value once to see stone to kg and every other unit at the same time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are 근 (geun) and 돈 (don)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are traditional Korean mass units. One 근 (geun) is 600 g, used to weigh food such as meat and vegetables at markets. One 돈 (don) is 3.75 g, the standard unit for weighing gold and other precious metals at jewelers. Most global converters leave them out, so this tool adds both next to the metric and imperial units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How precise are the results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every conversion keeps up to 10 significant figures, then trims trailing zeros for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values use the exact SI definition of each unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my input sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This weight converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example pounds → kilograms), kept in your browser's local storage so it is ready next time. The value itself is not stored."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Weight Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#d97706" href="https://tool-hub.me/unit-converters/">Units</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Weight Converter</span></nav>
+  <section class="hero">
+    <h1>Weight Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in every mass unit instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .wc-row { display: flex; gap: 10px; align-items: flex-end; }
+      .wc-row > div { flex: 1 1 0; min-width: 0; }
+      .wc-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .wc-swap:hover { border-color: var(--accent); }
+      .tool-card label.wc-inline { margin-top: 0; }
+      .wc-result { margin-top: 22px; }
+      .wc-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .wc-eq { font-size: clamp(20px, 5.4vw, 26px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .wc-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .wc-eq { color: var(--accent); } }
+      .wc-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .wc-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .wc-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .wc-copybtn { color: var(--accent); } }
+      .wc-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .wc-tablewrap { margin-top: 24px; }
+      .wc-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .wc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .wc-table th, .wc-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      .wc-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .wc-table td.wc-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .wc-table tbody tr.wc-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+    </style>
+
+    <div class="wc-row">
+      <div>
+        <label for="wc-value" data-i18n="tool.value.label">Value</label>
+        <input id="wc-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="wc-row">
+      <div>
+        <label for="wc-from" class="wc-inline" data-i18n="tool.from.label">From</label>
+        <select id="wc-from">
+          <option value="mcg" data-i18n="tool.unit.mcg">Microgram (mcg)</option>
+          <option value="mg" data-i18n="tool.unit.mg">Milligram (mg)</option>
+          <option value="g" data-i18n="tool.unit.g">Gram (g)</option>
+          <option value="kg" data-i18n="tool.unit.kg">Kilogram (kg)</option>
+          <option value="t" data-i18n="tool.unit.t">Tonne (t)</option>
+          <option value="ton" data-i18n="tool.unit.ton">US ton (2,000 lb)</option>
+          <option value="oz" data-i18n="tool.unit.oz">Ounce (oz)</option>
+          <option value="lb" selected data-i18n="tool.unit.lb">Pound (lb)</option>
+          <option value="st" data-i18n="tool.unit.st">Stone (st)</option>
+          <option value="geun" data-i18n="tool.unit.geun">Geun 근 (600 g)</option>
+          <option value="don" data-i18n="tool.unit.don">Don 돈 (3.75 g)</option>
+          <option value="ozt" data-i18n="tool.unit.ozt">Troy ounce (ozt)</option>
+          <option value="ct" data-i18n="tool.unit.ct">Carat (ct)</option>
+        </select>
+      </div>
+      <button type="button" class="wc-swap" id="wc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="wc-to" class="wc-inline" data-i18n="tool.to.label">To</label>
+        <select id="wc-to">
+          <option value="mcg" data-i18n="tool.unit.mcg">Microgram (mcg)</option>
+          <option value="mg" data-i18n="tool.unit.mg">Milligram (mg)</option>
+          <option value="g" data-i18n="tool.unit.g">Gram (g)</option>
+          <option value="kg" selected data-i18n="tool.unit.kg">Kilogram (kg)</option>
+          <option value="t" data-i18n="tool.unit.t">Tonne (t)</option>
+          <option value="ton" data-i18n="tool.unit.ton">US ton (2,000 lb)</option>
+          <option value="oz" data-i18n="tool.unit.oz">Ounce (oz)</option>
+          <option value="lb" data-i18n="tool.unit.lb">Pound (lb)</option>
+          <option value="st" data-i18n="tool.unit.st">Stone (st)</option>
+          <option value="geun" data-i18n="tool.unit.geun">Geun 근 (600 g)</option>
+          <option value="don" data-i18n="tool.unit.don">Don 돈 (3.75 g)</option>
+          <option value="ozt" data-i18n="tool.unit.ozt">Troy ounce (ozt)</option>
+          <option value="ct" data-i18n="tool.unit.ct">Carat (ct)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result wc-result">
+      <div class="wc-primary">
+        <span class="wc-eq" id="wc-eq">—</span>
+        <button type="button" class="wc-copybtn" id="wc-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="wc-note" id="wc-note" data-i18n="tool.result.placeholder">Enter a number to see it in every unit.</p>
+    </div>
+
+    <div class="wc-tablewrap">
+      <h2 data-i18n="tool.table.heading">All units at once</h2>
+      <table class="wc-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.unit">Unit</th>
+            <th class="wc-val" data-i18n="tool.table.col.value">Value</th>
+          </tr>
+        </thead>
+        <tbody id="wc-tbody">
+          <tr data-unit="mcg"><td data-i18n="tool.unit.mcg">Microgram (mcg)</td><td class="wc-val" id="cell-mcg">—</td></tr>
+          <tr data-unit="mg"><td data-i18n="tool.unit.mg">Milligram (mg)</td><td class="wc-val" id="cell-mg">—</td></tr>
+          <tr data-unit="g"><td data-i18n="tool.unit.g">Gram (g)</td><td class="wc-val" id="cell-g">—</td></tr>
+          <tr data-unit="kg"><td data-i18n="tool.unit.kg">Kilogram (kg)</td><td class="wc-val" id="cell-kg">—</td></tr>
+          <tr data-unit="t"><td data-i18n="tool.unit.t">Tonne (t)</td><td class="wc-val" id="cell-t">—</td></tr>
+          <tr data-unit="ton"><td data-i18n="tool.unit.ton">US ton (2,000 lb)</td><td class="wc-val" id="cell-ton">—</td></tr>
+          <tr data-unit="oz"><td data-i18n="tool.unit.oz">Ounce (oz)</td><td class="wc-val" id="cell-oz">—</td></tr>
+          <tr data-unit="lb"><td data-i18n="tool.unit.lb">Pound (lb)</td><td class="wc-val" id="cell-lb">—</td></tr>
+          <tr data-unit="st"><td data-i18n="tool.unit.st">Stone (st)</td><td class="wc-val" id="cell-st">—</td></tr>
+          <tr data-unit="geun"><td data-i18n="tool.unit.geun">Geun 근 (600 g)</td><td class="wc-val" id="cell-geun">—</td></tr>
+          <tr data-unit="don"><td data-i18n="tool.unit.don">Don 돈 (3.75 g)</td><td class="wc-val" id="cell-don">—</td></tr>
+          <tr data-unit="ozt"><td data-i18n="tool.unit.ozt">Troy ounce (ozt)</td><td class="wc-val" id="cell-ozt">—</td></tr>
+          <tr data-unit="ct"><td data-i18n="tool.unit.ct">Carat (ct)</td><td class="wc-val" id="cell-ct">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Mass units across three traditions: metric, imperial, and Korean</h2>
+    <p>Weighing something sounds simple until the units come from different worlds: a bathroom scale in kilograms or pounds, a UK body weight in stone, a recipe in ounces, freight in tonnes, and — at a Korean market or jeweler — food in 근 (geun) and gold in 돈 (don). This converter defines every unit in terms of the gram and converts through that base, so one entry appears in all nine units at once, including the two Korean units most global tools leave out.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Enter the <strong>value</strong>.</li>
+      <li>Choose the <strong>From</strong> and <strong>To</strong> units; ⇄ swaps them, and the table below shows every unit simultaneously.</li>
+      <li>Your last unit pair is saved locally so the tool opens ready for the same conversion.</li>
+    </ol>
+
+    <h3>The exact factors (no rounded 2.2)</h3>
+    <p>The international avoirdupois pound is defined as exactly <strong>0.45359237 kg</strong>, so 1 kg = 2.2046226218 lb — not the schoolbook 2.2, which drifts noticeably over large weights. From the pound: 1 lb = 16 ounces (1 oz = 28.349523125 g) and 1 stone = 14 lb = 6.35029318 kg. The Korean units are metric by decree: 1 근 (geun) for food is <strong>600 g</strong>, and 1 돈 (don) is <strong>3.75 g</strong>, the standard for weighing gold and other precious metals.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. Body weight, pounds to kilograms.</strong> 150 lb × 0.45359237 = <strong>68.04 kg</strong>. Going the other way, 70 kg × 2.2046226218 = <strong>154.32 lb</strong>. The exact factor matters: using a flat 2.2 would give 154.0 lb, a 0.3 lb error that only grows with weight.</div>
+    <div class="example"><strong>2. A recipe in ounces.</strong> 8 oz of flour × 28.349523125 = <strong>226.8 g</strong>, and 1.5 lb of sugar = 1.5 × 453.59237 = <strong>680.4 g</strong>. Type the ounces once to read grams for a metric kitchen scale.</div>
+    <div class="example"><strong>3. Gold priced by the don.</strong> A "one-don" ring is 3.75 g, so five don of gold = 5 × 3.75 = <strong>18.75 g</strong> ≈ 0.603 troy ounces. Meanwhile 2 근 of beef at the market = 2 × 600 = <strong>1,200 g</strong> = 1.2 kg.</div>
+
+    <h3>Reference: one unit in grams</h3>
+    <table>
+      <thead><tr><th>Unit</th><th>Exact grams</th><th>Where it is used</th></tr></thead>
+      <tbody>
+        <tr><td>Milligram (mg)</td><td>0.001</td><td>Medicine, nutrition labels</td></tr>
+        <tr><td>Gram (g)</td><td>1 (base)</td><td>Cooking, science, most of the world</td></tr>
+        <tr><td>Kilogram (kg)</td><td>1,000</td><td>Body weight, groceries (metric)</td></tr>
+        <tr><td>Tonne (t)</td><td>1,000,000</td><td>Freight, vehicles, bulk goods</td></tr>
+        <tr><td>Ounce (oz)</td><td>28.349523125</td><td>US/UK cooking, postage</td></tr>
+        <tr><td>Pound (lb)</td><td>453.59237</td><td>US/UK body weight, groceries</td></tr>
+        <tr><td>Stone (st)</td><td>6,350.29318</td><td>UK &amp; Ireland body weight</td></tr>
+        <tr><td>Geun (근)</td><td>600</td><td>Korean food markets</td></tr>
+        <tr><td>Don (돈)</td><td>3.75</td><td>Korean gold &amp; precious metals</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Rounding the pound to 2.2.</strong> Fine for a rough guess, wrong for anything precise — use the exact 0.45359237 kg factor this tool applies.</li>
+      <li><strong>Confusing the avoirdupois ounce with the troy ounce.</strong> Precious metals are traded in troy ounces (31.1035 g), not the 28.35 g avoirdupois ounce here. For gold, the don is the relevant traditional unit; convert to grams first, then to troy ounces if you need them.</li>
+      <li><strong>Assuming one "geun."</strong> The food geun is 600 g, but a herbal-medicine geun is traditionally 375 g. This tool uses the everyday food value; specialist contexts may differ.</li>
+      <li><strong>Mass vs weight.</strong> Kilograms and pounds here measure mass. Your "weight" as a force changes with gravity; on the Moon your mass in kg is unchanged even though you feel lighter.</li>
+    </ul>
+
+    <h3>Precision and scope</h3>
+    <p>Every result keeps up to 10 significant figures and trims trailing zeros, switching to scientific notation for very large or very small magnitudes so nothing is lost to rounding. The converter handles mass only — it does not price gold or convert to troy ounces, and it cannot turn a volume like a cup of flour into grams, which depends on density.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — official US definitions of the pound, ounce and metric equivalents</a></li>
+      <li><a href="https://www.nist.gov/si-redefinition" target="_blank" rel="noopener">NIST SI Redefinition — how the kilogram, the SI base unit of mass, is defined</a></li>
+      <li><a href="https://www.gov.uk/weights-measures-and-packaging-the-law" target="_blank" rel="noopener">GOV.UK — UK rules on legal units of weight for trade, including stones and pounds</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/angle-conv/"><span class="related-ico" aria-hidden="true">📐</span><span class="related-name">Angle Converter</span></a><a class="related-item" href="https://tool-hub.me/area-conv/"><span class="related-ico" aria-hidden="true">📐</span><span class="related-name">Area Converter</span></a><a class="related-item" href="https://tool-hub.me/data-size-conv/"><span class="related-ico" aria-hidden="true">💾</span><span class="related-name">Data Size Converter</span></a><a class="related-item" href="https://tool-hub.me/energy-conv/"><span class="related-ico" aria-hidden="true">⚡</span><span class="related-name">Energy Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How many pounds are in a kilogram?</summary>
+      <p data-i18n="faq.a1">1 kilogram = 2.2046226218 pounds, and 1 pound = 0.45359237 kg exactly — the exact value of the international avoirdupois pound, not a rounded 2.2. So going kg to lbs, 70 kg ≈ 154.32 lb; going pounds to kg, 150 lb ≈ 68.04 kg. This weight converter uses the exact factor, so kg-to-lbs and lbs-to-kg both stay accurate.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What about ounces and stone?</summary>
+      <p data-i18n="faq.a2">1 ounce = 28.349523125 grams (so converting ounces to grams is handy for recipes and postage), 1 pound = 16 ounces, and 1 stone = 14 pounds = 6.35029318 kg. Stone is the everyday body-weight unit in the UK and Ireland, so 11 st = 154 lb ≈ 69.85 kg. Type a value once to see stone to kg and every other unit at the same time.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What are 근 (geun) and 돈 (don)?</summary>
+      <p data-i18n="faq.a3">They are traditional Korean mass units. One 근 (geun) is 600 g, used to weigh food such as meat and vegetables at markets. One 돈 (don) is 3.75 g, the standard unit for weighing gold and other precious metals at jewelers. Most global converters leave them out, so this tool adds both next to the metric and imperial units.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How precise are the results?</summary>
+      <p data-i18n="faq.a4">Every conversion keeps up to 10 significant figures, then trims trailing zeros for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values use the exact SI definition of each unit.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This weight converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example pounds → kilograms), kept in your browser's local storage so it is ready next time. The value itself is not stored.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

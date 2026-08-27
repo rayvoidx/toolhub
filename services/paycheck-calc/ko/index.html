@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-jl5u2mOWquGNS/D+rzHg86uo66kIZ+Ov3Z3k52uTG6s=' 'sha256-FEirvhj4iFSu7cLp+gVlPO8zEMi1sNQGAbwwlYhmT9E=' 'sha256-O6wXJNyh3Pd4ledN9XJHdSPJMwtn4rJKnUMg01EL/NQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>미국 실수령액 계산기 — 세후 급여 계산</title>
+<meta name="description" content="연방세·FICA·주세를 뺀 미국 실수령액을 계산합니다. 연봉, 급여 주기, 신고 유형, 401(k) 비율을 입력하면 급여 1회당 실수령액이 나옵니다.">
+<meta name="keywords" content="paycheck calculator, take home pay calculator, salary after taxes, net pay calculator, us payroll calculator, after tax salary">
+<link rel="canonical" href="https://tool-hub.me/paycheck-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/paycheck-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/paycheck-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/paycheck-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/paycheck-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/paycheck-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/paycheck-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/paycheck-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/paycheck-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/paycheck-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/paycheck-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/paycheck-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/paycheck-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/paycheck-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/paycheck-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/paycheck-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="미국 실수령액 계산기 — 세후 급여 계산">
+<meta property="og:description" content="연방세·FICA·주세를 뺀 미국 실수령액을 계산합니다. 연봉, 급여 주기, 신고 유형, 401(k) 비율을 입력하면 급여 1회당 실수령액이 나옵니다.">
+<meta property="og:url" content="https://tool-hub.me/paycheck-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/paycheck-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#047857">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Paycheck Calculator",
+  "description": "Estimate your US take-home pay after federal, FICA and state taxes. Enter salary, pay frequency, filing status and 401(k) percent for net pay per paycheck.",
+  "url": "https://tool-hub.me/paycheck-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Paycheck Calculator",
+      "item": "https://tool-hub.me/paycheck-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is this different from my real paycheck?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A real stub also subtracts health, dental and vision premiums, HSA or FSA money, life insurance and sometimes union dues or city tax. Those come out before or after tax depending on the item, and no calculator can guess your employer's plan costs. This tool covers the four biggest lines — federal income tax, FICA, state tax and your 401(k) — which usually account for most of the gap between gross and net."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between my marginal and effective tax rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your marginal rate is the bracket your last dollar falls into; your effective rate is total tax divided by total pay. On a 75,000 single salary the top bracket touched is 22%, but only the slice above 48,475 of taxable income is taxed at 22%. Federal income tax works out near 9.7% of gross, and roughly 21% once FICA and a 5% state rate are added."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a 401(k) contribution change my take-home pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A traditional 401(k) comes out before federal and state income tax, so each dollar contributed costs you less than a dollar of net pay. At a 22% federal bracket plus 5% state, 100 dollars deferred reduces take-home by about 73 dollars. It does not reduce Social Security or Medicare tax, which are always charged on gross wages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a bonus really taxed at a higher rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — it is only withheld at a higher rate. Employers commonly withhold supplemental wages at a flat 22% federal rate, which looks brutal on the stub if your normal bracket is 12%. Your actual tax owed is calculated on total annual income at filing time, so any over-withholding comes back as a refund."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Paycheck Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Paycheck Calculator</span></nav>
+  <section class="hero">
+    <h1>Paycheck Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">See what actually lands in your account — 2025 federal brackets, FICA and your own state rate.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin:4px 0 10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="salary" data-i18n="tool.salary.label">Annual gross salary</label>
+    <input type="text" id="salary" inputmode="decimal" autocomplete="off" placeholder="75000">
+
+    <div class="field-row">
+      <div>
+        <label for="freq" data-i18n="tool.freq.label">Pay frequency</label>
+        <select id="freq">
+          <option value="52" data-i18n="tool.freq.weekly">Weekly — 52 paychecks</option>
+          <option value="26" selected data-i18n="tool.freq.biweekly">Every 2 weeks — 26 paychecks</option>
+          <option value="24" data-i18n="tool.freq.semi">Twice a month — 24 paychecks</option>
+          <option value="12" data-i18n="tool.freq.monthly">Monthly — 12 paychecks</option>
+        </select>
+      </div>
+      <div>
+        <label for="filing" data-i18n="tool.filing.label">Filing status</label>
+        <select id="filing">
+          <option value="single" selected data-i18n="tool.filing.single">Single</option>
+          <option value="married" data-i18n="tool.filing.married">Married filing jointly</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="k401" data-i18n="tool.k401.label">401(k) contribution (%)</label>
+        <input type="number" id="k401" inputmode="decimal" min="0" max="50" step="any" autocomplete="off" placeholder="5">
+      </div>
+      <div>
+        <label for="state" data-i18n="tool.state.label">State income tax rate (%)</label>
+        <input type="number" id="state" inputmode="decimal" min="0" max="20" step="any" autocomplete="off" placeholder="5">
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.k401.hint">Traditional pre-tax 401(k). Enter 0 if you don't contribute.</p>
+    <p class="subtle" data-i18n="tool.state.hint">Varies 0–13% by state — enter yours, or 0 for no-income-tax states like Texas and Florida.</p>
+
+    <label for="pretax" data-i18n="tool.pretax.label">Other pre-tax deductions, per month</label>
+    <input type="number" id="pretax" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+    <p class="subtle" data-i18n="tool.pretax.hint">Health, dental and vision premiums, HSA or commuter benefits taken out before tax. Leave 0 if you have none.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.net">Take-home pay per paycheck</div>
+          <div class="rc-val" id="r-net">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.annual">Annual take-home pay</div><div class="rc-val" id="r-annual">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rate">Effective tax rate</div><div class="rc-val" id="r-rate">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.fed">Federal income tax, per year</div><div class="rc-val" id="r-fed">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.fica">FICA — Social Security + Medicare, per year</div><div class="rc-val" id="r-fica">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.state">State income tax, per year</div><div class="rc-val" id="r-state">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.401k">401(k) contributions, per year</div><div class="rc-val" id="r-401k">—</div></div>
+        <div class="rcard" id="card-pretax" hidden><div class="rc-label" data-i18n="tool.r.pretax">Other pre-tax deductions, per year</div><div class="rc-val" id="r-pretax">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.assume" style="margin-top:12px;">2025 federal tax year. Standard deduction only — no tax credits, and no local or city taxes.</p>
+    <p class="subtle" data-i18n="tool.note.fica">Other pre-tax deductions are subtracted from federal and state taxable income only. Many Section 125 plans also lower FICA wages, so your real Social Security and Medicare tax may be a little lower than shown.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>Where a US paycheck actually goes</h2>
+    <p>Gross salary is the number on the offer letter. Take-home pay is what survives four separate deductions: federal income tax, FICA (Social Security and Medicare), state income tax, and whatever you defer into a retirement plan. Each one is calculated on a different base, which is why the gap between gross and net rarely matches anyone's mental estimate. This calculator uses the 2025 federal tax year — standard deduction, no credits.</p>
+    <p>The order matters. Your 401(k) contribution comes out of gross pay before federal and state income tax are computed, so it shrinks your taxable income. FICA is different: Social Security and Medicare are charged on your full gross wages regardless of what you defer. State income tax varies enormously — nine states charge nothing, California tops out above 13% — so this tool asks you to enter your own rate rather than guess.</p>
+
+    <h3>Worked example: $75,000, single, paid every two weeks</h3>
+    <p>Take a $75,000 salary, single filer, 5% into a traditional 401(k), and a 5% state rate. The 401(k) takes $3,750. Federal taxable income is $75,000 − $3,750 − 
+
+  5,000 (2025 single standard deduction) = $56,250.</p>
+    <p>Now run the brackets. The first 
+
+  1,925 is taxed at 10% = 
+
+  ,192.50. The slice from 
+
+  1,925 to $48,475 is $36,550 at 12% = $4,386. The remainder, $48,475 to $56,250, is $7,775 at 22% = 
+
+  ,710.50. Federal income tax totals $7,289.</p>
+    <p>FICA is charged on the full $75,000: Social Security at 6.2% = $4,650, Medicare at 1.45% = 
+
+  ,087.50, for $5,737.50. State tax at 5% of $56,250 = $2,812.50. Total tax is 
+
+  5,839, which leaves $75,000 − 
+
+  5,839 − $3,750 = $55,411 of annual take-home, or <strong>$2,131.19</strong> per biweekly paycheck.</p>
+
+    <h3>Marginal rate versus effective rate</h3>
+    <p>That example lands in the 22% bracket, but the total federal bill is only 9.7% of gross pay. Brackets are slices, not switches — moving into a higher bracket only taxes the dollars above the threshold at the higher rate, never your whole income. The effective rate including FICA and state tax comes to 21.1%, which is the number worth remembering when you budget.</p>
+    <p>The marginal rate is still useful, just for a different question: what a raise, a bonus or an extra 401(k) dollar is actually worth. In this example each extra dollar earned keeps about 64 cents after 22% federal, 5% state and 7.65% FICA. Each extra dollar deferred into the 401(k) costs only about 73 cents of take-home, because it dodges the 22% and 5% income taxes but not FICA.</p>
+
+    <h2>Take-home by salary — single filer, 5% 401(k), 5% state</h2>
+    <table>
+      <thead><tr><th>Gross salary</th><th>Federal tax</th><th>FICA</th><th>Annual net</th><th>Biweekly net</th></tr></thead>
+      <tbody>
+        <tr><td>$50,000</td><td>$3,662</td><td>$3,825</td><td>$38,389</td><td>
+
+  ,476</td></tr>
+        <tr><td>$60,000</td><td>$4,802</td><td>$4,590</td><td>$45,509</td><td>
+
+  ,750</td></tr>
+        <tr><td>$75,000</td><td>$7,289</td><td>$5,738</td><td>$55,411</td><td>$2,131</td></tr>
+        <tr><td>
+
+  00,000</td><td>
+
+  2,514</td><td>$7,650</td><td>$70,836</td><td>$2,724</td></tr>
+        <tr><td>
+
+  50,000</td><td>$23,447</td><td>
+
+  1,475</td><td>
+
+  01,203</td><td>$3,892</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Pay frequency changes the paycheck, not the year</h3>
+    <p>The $55,411 annual net above is 
+
+  ,065.60 weekly across 52 checks, $2,131.19 biweekly across 26, $2,308.79 semi-monthly across 24, and $4,617.58 monthly across 12. Biweekly and semi-monthly sound identical and are not: biweekly gives you 26 payments, so twice a year you receive three checks in a calendar month. Budgeting on a "two checks a month" assumption quietly leaves those two extra checks as a bonus — or, if you budget on 26 and get 24, a shortfall every month.</p>
+
+    <h2>What this calculator leaves out</h2>
+    <p>Employer-specific lines can't be guessed, so the tool asks instead: the optional "other pre-tax deductions" field takes your monthly total for health, dental and vision premiums, HSA or FSA money, and commuter benefits. It multiplies that by 12 and removes it from federal and state taxable income, exactly like the 401(k). One honest caveat: most of those benefits run through a Section 125 cafeteria plan, which also exempts them from Social Security and Medicare — this tool leaves FICA on full gross wages, so it slightly overstates FICA if your plan qualifies. Group life insurance above $50,000 and union dues are usually post-tax and don't belong in that box, and Roth 401(k) contributions never lower taxable income.</p>
+    <p>On the tax side, this model applies only the standard deduction. If you itemize, claim the Child Tax Credit, have dependents, work multiple jobs, or file as head of household, your real liability will differ. Local income taxes — New York City, Philadelphia, much of Ohio — are not included, and some states use progressive brackets rather than the flat rate entered here. Married filers should also note that employer withholding of the 0.9% additional Medicare tax starts at $200,000 of wages per employer regardless of filing status, which is what this tool models.</p>
+    <p>Finally, this is annual tax liability spread evenly across paychecks, not an exact replica of IRS withholding tables and Form W-4 settings. Real withholding is an estimate your employer makes on the IRS's behalf, which is precisely why refunds and balances due exist. Use this to sanity-check an offer, compare states, or see what raising your 401(k) percentage really costs — then check the actual stub when it arrives.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/filing/federal-income-tax-rates-and-brackets" target="_blank" rel="noopener">IRS — federal income tax rates, brackets and standard deduction</a></li>
+      <li><a href="https://www.ssa.gov/oact/cola/cbb.html" target="_blank" rel="noopener">Social Security Administration — Social Security wage base and FICA rates</a></li>
+      <li><a href="https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits" target="_blank" rel="noopener">IRS — 401(k) elective deferral contribution limits</a></li>
+      <li><a href="https://www.bls.gov/ces/" target="_blank" rel="noopener">Bureau of Labor Statistics — national earnings and pay period statistics</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/percent-calc/"><span class="related-ico" aria-hidden="true">％</span><span class="related-name">Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/position-size-calc/"><span class="related-ico" aria-hidden="true">🛡️</span><span class="related-name">Position Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/ppf-calc/"><span class="related-ico" aria-hidden="true">🏛️</span><span class="related-name">PPF Calculator</span></a><a class="related-item" href="https://tool-hub.me/prorated-rent-calc/"><span class="related-ico" aria-hidden="true">🗓️</span><span class="related-name">Prorated Rent Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is this different from my real paycheck?</summary><p data-i18n="faq.a1">A real stub also subtracts health, dental and vision premiums, HSA or FSA money, life insurance and sometimes union dues or city tax. Those come out before or after tax depending on the item, and no calculator can guess your employer's plan costs. This tool covers the four biggest lines — federal income tax, FICA, state tax and your 401(k) — which usually account for most of the gap between gross and net.</p></details>
+    <details><summary data-i18n="faq.q2">What is the difference between my marginal and effective tax rate?</summary><p data-i18n="faq.a2">Your marginal rate is the bracket your last dollar falls into; your effective rate is total tax divided by total pay. On a 75,000 single salary the top bracket touched is 22%, but only the slice above 48,475 of taxable income is taxed at 22%. Federal income tax works out near 9.7% of gross, and roughly 21% once FICA and a 5% state rate are added.</p></details>
+    <details><summary data-i18n="faq.q3">How does a 401(k) contribution change my take-home pay?</summary><p data-i18n="faq.a3">A traditional 401(k) comes out before federal and state income tax, so each dollar contributed costs you less than a dollar of net pay. At a 22% federal bracket plus 5% state, 100 dollars deferred reduces take-home by about 73 dollars. It does not reduce Social Security or Medicare tax, which are always charged on gross wages.</p></details>
+    <details><summary data-i18n="faq.q4">Is a bonus really taxed at a higher rate?</summary><p data-i18n="faq.a4">No — it is only withheld at a higher rate. Employers commonly withhold supplemental wages at a flat 22% federal rate, which looks brutal on the stub if your normal bracket is 12%. Your actual tax owed is calculated on total annual income at filing time, so any over-withholding comes back as a refund.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

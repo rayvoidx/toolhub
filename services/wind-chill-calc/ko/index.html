@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-rKGIYZlMoqa7ZgfO/RScRjo3g0kAmQssolyhac6+8x4=' 'sha256-79w0S1ElW0D8i/KbkffSgaGxzOkox2CnEw5uat+k0tA=' 'sha256-MjiXwlS6Rh0wJf766w6PFEz9Dq/JIGVpxxVLW1gF/UQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>체감온도 계산기 — 바람에 의한 체감 기온</title>
+<meta name="description" content="기온과 풍속으로 체감온도(윈드칠)를 계산합니다. 미국 NWS 2001년 공식으로 체감 기온, 동상 위험 시간, 체감온도 표를 한 번에 확인하세요.">
+<meta name="keywords" content="wind chill calculator, wind chill, feels like temperature, wind chill chart, wind chill index, frostbite time calculator">
+<link rel="canonical" href="https://tool-hub.me/wind-chill-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/wind-chill-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/wind-chill-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/wind-chill-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/wind-chill-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/wind-chill-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/wind-chill-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/wind-chill-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/wind-chill-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/wind-chill-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/wind-chill-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/wind-chill-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/wind-chill-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/wind-chill-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/wind-chill-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/wind-chill-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="체감온도 계산기 — 바람에 의한 체감 기온">
+<meta property="og:description" content="기온과 풍속으로 체감온도(윈드칠)를 계산합니다. 미국 NWS 2001년 공식으로 체감 기온, 동상 위험 시간, 체감온도 표를 한 번에 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/wind-chill-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/wind-chill-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0891b2">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Wind Chill Calculator",
+  "description": "Calculate wind chill from temperature and wind speed with the official NWS 2001 formula. See the feels-like temperature, frostbite risk and a wind chill chart.",
+  "url": "https://tool-hub.me/wind-chill-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Wind Chill Calculator",
+      "item": "https://tool-hub.me/wind-chill-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is wind chill, exactly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Wind chill is not a change in air temperature — it measures how fast moving air pulls heat off bare skin. Your body warms a thin layer of air against your skin, and wind keeps stripping that layer away, so you lose heat as if the air were much colder. The number shown is the still-air temperature that would drain heat from exposed skin at the same rate."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "At what wind chill does frostbite happen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The National Weather Service uses three thresholds for exposed skin: frostbite in about 30 minutes at -18 °F, about 10 minutes at -32 °F, and about 5 minutes at -48 °F. Those times assume bare skin such as cheeks, nose and fingertips. Wet skin, poor circulation and children's smaller bodies all shorten them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does wind chill freeze pipes or car radiators faster?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Wind chill only applies to objects that make their own heat, such as people and animals. A pipe or an engine block cools down faster in wind but never drops below the actual air temperature, so a -5 °F night with a -30 °F wind chill still only freezes things to -5 °F. Use the real temperature for freeze protection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did wind chill numbers change in 2001?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 1945 formula came from measuring how fast water froze in plastic cylinders on an Antarctic expedition, and it exaggerated the cold badly. In 2001 the US and Canadian weather services replaced it with a model built from human face-cooling trials, using wind measured at face height rather than 33 feet up. Modern numbers are milder: conditions that read about -39 °F on the old chart come out near -22 °F today."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Wind Chill Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Wind Chill Calculator</span></nav>
+  <section class="hero">
+    <h1>Wind Chill Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Wind strips the warm layer off your skin. See what the air actually feels like.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard .rc-val.risk-warn { color:#b45309; }
+      #tool .rcard .rc-val.risk-danger { color:#dc2626; }
+      #tool .rcard .rc-val.risk-small { font-size:15px; line-height:1.35; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .note-range { font-size:13px; color:#b45309; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="temp" data-i18n="tool.temp.label">Air temperature</label>
+        <input type="number" id="temp" inputmode="decimal" step="any" autocomplete="off" placeholder="25">
+      </div>
+      <div>
+        <label for="tempunit" data-i18n="tool.tempunit.label">Temperature unit</label>
+        <select id="tempunit">
+          <option value="f" data-i18n="tool.tempunit.f">Fahrenheit (°F)</option>
+          <option value="c" data-i18n="tool.tempunit.c">Celsius (°C)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="wind" data-i18n="tool.wind.label">Wind speed</label>
+        <input type="number" id="wind" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="15">
+      </div>
+      <div>
+        <label for="windunit" data-i18n="tool.windunit.label">Wind speed unit</label>
+        <select id="windunit">
+          <option value="mph" data-i18n="tool.windunit.mph">mph</option>
+          <option value="kmh" data-i18n="tool.windunit.kmh">km/h</option>
+          <option value="ms" data-i18n="tool.windunit.ms">m/s</option>
+          <option value="kt" data-i18n="tool.windunit.kt">knots</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="ownspeed" data-i18n="tool.speed.label">Your own speed (optional)</label>
+        <input type="number" id="ownspeed" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0">
+        <p class="subtle" data-i18n="tool.speed.hint" style="margin-top:6px;">Cycling, skiing or riding? It is added to the wind speed, same unit.</p>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate wind chill</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.feels">Feels like</div>
+          <div class="rc-val" id="r-feels">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.drop">Colder than actual</div><div class="rc-val" id="r-drop">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cat">Conditions</div><div class="rc-val" id="r-cat">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.risk">Frostbite risk</div><div class="rc-val risk-small" id="r-risk">—</div></div>
+      </div>
+      <p class="note-range" id="note-range" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.info" style="margin-top:12px;">NWS and Environment Canada 2001 formula, measured in shade. Bright sun can feel up to 10 °F (6 °C) warmer.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How this wind chill calculator works</h2>
+    <p>Wind chill answers a single question: how cold does the air feel on bare skin once the wind is taken into account? The calculator uses the formula adopted by the US National Weather Service and Environment Canada in 2001, which is written for Fahrenheit and miles per hour:</p>
+    <p><strong>Wind chill = 35.74 + 0.6215T - 35.75V^0.16 + 0.4275T x V^0.16</strong>, where T is the air temperature in °F and V is the wind speed in mph.</p>
+    <p>If you enter Celsius or km/h, the tool converts first, runs the formula, then converts the answer back so you see both scales. The exponent of 0.16 is the important part: it means the first few miles per hour of wind do most of the damage, and each extra gust after that matters less and less.</p>
+
+    <h3>Worked example: 25 °F with a 15 mph wind</h3>
+    <p>Start with V^0.16. Fifteen raised to the power 0.16 is 1.542. Now feed the four terms: 35.74, plus 0.6215 x 25 = 15.54, minus 35.75 x 1.542 = 55.14, plus 0.4275 x 25 x 1.542 = 16.48. Adding them gives 12.6, which rounds to <strong>13 °F</strong>. The air is 25 °F but your exposed face loses heat as fast as it would in still air at 13 °F — a 12-degree penalty from the wind alone. In Celsius that is -4 °C reading as about -11 °C.</p>
+
+    <h3>Worked example: freezing point, gale-force wind</h3>
+    <p>Take 0 °F with a 30 mph wind, a common winter storm reading across the northern US and Scotland. V^0.16 is 1.723, so the result is 35.74 + 0 - 61.60 + 0 = -25.9, which rounds to -26 °F. Every term with T in it vanishes at zero, which is why the wind term dominates. At -26 °F the calculator flags frostbite in about 30 minutes on exposed skin.</p>
+
+    <h2>Wind chill chart (°F)</h2>
+    <table>
+      <thead><tr><th>Air temp</th><th>5 mph</th><th>10 mph</th><th>15 mph</th><th>20 mph</th><th>30 mph</th><th>40 mph</th></tr></thead>
+      <tbody>
+        <tr><td>40 °F</td><td>36</td><td>34</td><td>32</td><td>30</td><td>28</td><td>27</td></tr>
+        <tr><td>30 °F</td><td>25</td><td>21</td><td>19</td><td>17</td><td>15</td><td>13</td></tr>
+        <tr><td>20 °F</td><td>13</td><td>9</td><td>6</td><td>4</td><td>1</td><td>-1</td></tr>
+        <tr><td>10 °F</td><td>1</td><td>-4</td><td>-7</td><td>-9</td><td>-12</td><td>-15</td></tr>
+        <tr><td>0 °F</td><td>-11</td><td>-16</td><td>-19</td><td>-22</td><td>-26</td><td>-29</td></tr>
+        <tr><td>-10 °F</td><td>-22</td><td>-28</td><td>-32</td><td>-35</td><td>-39</td><td>-43</td></tr>
+        <tr><td>-20 °F</td><td>-34</td><td>-41</td><td>-45</td><td>-48</td><td>-53</td><td>-57</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why moving air feels colder</h2>
+    <p>Skin at 33 °C warms the air touching it, and that warmed film acts as insulation. Still air is a poor conductor, so the film survives and you feel reasonably comfortable. Wind destroys it. Fresh cold air arrives faster than your body can heat it, so the temperature gradient at the skin surface stays steep and heat flows out continuously. Physicists call this forced convection; the heat transfer coefficient rises roughly with the square root of wind speed at low speeds, which is why the formula flattens out at high wind. Going from 0 to 10 mph costs you far more than going from 30 to 40 mph.</p>
+
+    <h2>Frostbite times</h2>
+    <table>
+      <thead><tr><th>Wind chill</th><th>Frostbite on exposed skin</th></tr></thead>
+      <tbody>
+        <tr><td>-18 °F (-28 °C)</td><td>about 30 minutes</td></tr>
+        <tr><td>-32 °F (-36 °C)</td><td>about 10 minutes</td></tr>
+        <tr><td>-48 °F (-44 °C)</td><td>about 5 minutes</td></tr>
+      </tbody>
+    </table>
+    <p>These are National Weather Service thresholds and they assume dry, bare, healthy skin. Cheeks, the tip of the nose, earlobes and fingertips freeze first because they are thin, exposed and poorly perfused. Alcohol, nicotine, dehydration and Raynaud's all cut the times shorter, and children reach dangerous core cooling faster because they have more surface area per kilogram of body mass.</p>
+
+    <h2>Dressing for the number</h2>
+    <p>Above 32 °F wind chill, a windproof outer layer is usually enough. Between 32 and 0 °F, cover the head and hands and switch to a shell that actually blocks wind rather than a fleece that lets it through — most of the felt difference between two jackets at the same temperature is windproofing, not insulation. Below 0 °F, cover every square inch of skin: balaclava, goggles or glasses, mittens instead of gloves. Below -18 °F, plan trips in segments with a warm space at each end, and treat any patch of numb white skin as frostnip that needs slow rewarming, never rubbing.</p>
+
+    <h2>What wind chill does not tell you</h2>
+    <p>It is calculated for shade. In bright winter sun, radiation can add the equivalent of up to 10 °F to how you feel, which is why a calm sunny slope at 20 °F is pleasant while the shaded lift line is not. It also ignores humidity and rain, and wet skin loses heat many times faster than dry skin — a soaked jacket at 35 °F is more dangerous than a dry one at 10 °F. Wind chill assumes a walking pace of about 3 mph, so cycling, skiing or riding in an open vehicle adds your own speed to the wind. Finally, it applies only to things that generate heat. Pipes, car batteries and radiators cool faster in wind but never below the actual air temperature, so plan freeze protection on the real reading, not the wind chill.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.weather.gov/safety/cold-wind-chill-chart" target="_blank" rel="noopener">NOAA National Weather Service — official wind chill chart and frostbite time thresholds</a></li>
+      <li><a href="https://www.weather.gov/safety/cold" target="_blank" rel="noopener">National Weather Service Cold Safety — hypothermia and cold weather preparedness guidance</a></li>
+      <li><a href="https://www.cdc.gov/niosh/cold-stress/about/" target="_blank" rel="noopener">CDC / NIOSH — cold stress hazards and worker protection recommendations</a></li>
+      <li><a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener">NIST — authoritative temperature and speed unit conversion references</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/asphalt-calc/"><span class="related-ico" aria-hidden="true">🛣️</span><span class="related-name">Asphalt Calculator</span></a><a class="related-item" href="https://tool-hub.me/board-foot-calc/"><span class="related-ico" aria-hidden="true">🪵</span><span class="related-name">Board Foot Calculator</span></a><a class="related-item" href="https://tool-hub.me/bra-size-calc/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Bra Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/brick-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Brick Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is wind chill, exactly?</summary><p data-i18n="faq.a1">Wind chill is not a change in air temperature — it measures how fast moving air pulls heat off bare skin. Your body warms a thin layer of air against your skin, and wind keeps stripping that layer away, so you lose heat as if the air were much colder. The number shown is the still-air temperature that would drain heat from exposed skin at the same rate.</p></details>
+    <details><summary data-i18n="faq.q2">At what wind chill does frostbite happen?</summary><p data-i18n="faq.a2">The National Weather Service uses three thresholds for exposed skin: frostbite in about 30 minutes at -18 °F, about 10 minutes at -32 °F, and about 5 minutes at -48 °F. Those times assume bare skin such as cheeks, nose and fingertips. Wet skin, poor circulation and children's smaller bodies all shorten them.</p></details>
+    <details><summary data-i18n="faq.q3">Does wind chill freeze pipes or car radiators faster?</summary><p data-i18n="faq.a3">No. Wind chill only applies to objects that make their own heat, such as people and animals. A pipe or an engine block cools down faster in wind but never drops below the actual air temperature, so a -5 °F night with a -30 °F wind chill still only freezes things to -5 °F. Use the real temperature for freeze protection.</p></details>
+    <details><summary data-i18n="faq.q4">Why did wind chill numbers change in 2001?</summary><p data-i18n="faq.a4">The 1945 formula came from measuring how fast water froze in plastic cylinders on an Antarctic expedition, and it exaggerated the cold badly. In 2001 the US and Canadian weather services replaced it with a model built from human face-cooling trials, using wind measured at face height rather than 33 feet up. Modern numbers are milder: conditions that read about -39 °F on the old chart come out near -22 °F today.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

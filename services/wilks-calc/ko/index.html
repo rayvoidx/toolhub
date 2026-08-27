@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-CGn5aj53B2wUMICNNe50KnacVHxZYA7l+wBl7RbJAic=' 'sha256-UadkuSunBAUqVGFimzJMlEOXsyA+n6ZD/aUgVlQECMA=' 'sha256-Fn2AJqPKf26PD3N9JfH8N3YC47mh92/0qeejQZNa92g='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>윌크스 계산기 — DOTS·Wilks 파워리프팅 점수</title>
+<meta name="description" content="DOTS와 Wilks-2 공식으로 파워리프팅 토탈 점수를 계산합니다. 성별·체중·토탈을 kg 또는 lb로 입력하면 체급이 달라도 공정하게 비교할 수 있습니다.">
+<meta name="keywords" content="wilks calculator, wilks score, dots score calculator, powerlifting score, wilks coefficient, dots calculator powerlifting">
+<link rel="canonical" href="https://tool-hub.me/wilks-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/wilks-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/wilks-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/wilks-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/wilks-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/wilks-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/wilks-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/wilks-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/wilks-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/wilks-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/wilks-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/wilks-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/wilks-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/wilks-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/wilks-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/wilks-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="윌크스 계산기 — DOTS·Wilks 파워리프팅 점수">
+<meta property="og:description" content="DOTS와 Wilks-2 공식으로 파워리프팅 토탈 점수를 계산합니다. 성별·체중·토탈을 kg 또는 lb로 입력하면 체급이 달라도 공정하게 비교할 수 있습니다.">
+<meta property="og:url" content="https://tool-hub.me/wilks-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/wilks-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7f1d1d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Wilks Calculator",
+  "description": "Score your powerlifting total with the DOTS and Wilks-2 formulas. Enter sex, bodyweight and total in kg or lb to compare lifters fairly across weight classes.",
+  "url": "https://tool-hub.me/wilks-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Wilks Calculator",
+      "item": "https://tool-hub.me/wilks-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wilks, DOTS or IPF GL — which score should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are three generations of the same idea. Wilks (1994) was the standard for two decades, Wilks-2 refitted it in 2020, and DOTS re-derived the curve from a much larger modern data set. Most federations and meet software now rank by DOTS, while the IPF uses its own GL points for IPF-sanctioned meets, so quote DOTS unless your federation asks otherwise."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does powerlifting need a coefficient formula at all?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Strength does not scale one-to-one with bodyweight: a 60 kg lifter can never total what a 120 kg lifter totals, but relative to their frame they may be far stronger. A coefficient converts each total into a single number that is comparable across weight classes, which is how best-lifter awards and online rankings are decided."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I score a single lift instead of a full total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — enter the single lift as the total and the same coefficient applies. Bench-only and deadlift-only meets are scored exactly this way. Just never compare a single-lift score against a full three-lift score, because the coefficient was fitted on full totals and the numbers land on completely different scales."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can lifters game the score by moving weight class?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only slightly, and it usually backfires. The curve is steepest below about 70 kg, so cutting a few kilograms there raises your coefficient more than anywhere else, but any total you lose from a hard water cut wipes that gain out immediately. Above roughly 120 kg the curve flattens, so gaining bodyweight barely costs you score if the total goes up with it."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Wilks Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Wilks Calculator</span></nav>
+  <section class="hero">
+    <h1>Wilks Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">One total, two coefficient scores — DOTS is what most federations rank by now.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:2fr 1fr; gap:12px; align-items:end; }
+      #tool .sex-row { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 12px; }
+      #tool .sex-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .rcard.wide .rc-val { font-size:15px; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:8px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p id="sex-label" style="font-weight:600;font-size:14px;margin:0 0 2px;" data-i18n="tool.sex.label">Sex</p>
+    <div class="sex-row" role="radiogroup" aria-labelledby="sex-label">
+      <label><input type="radio" name="sex" value="male" checked><span data-i18n="tool.sex.male">Male</span></label>
+      <label><input type="radio" name="sex" value="female"><span data-i18n="tool.sex.female">Female</span></label>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="bw" data-i18n="tool.bw.label">Bodyweight</label>
+        <input type="number" id="bw" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="82.5">
+      </div>
+      <div>
+        <label for="bwunit" data-i18n="tool.unit.kg">kg</label>
+        <select id="bwunit">
+          <option value="kg" data-i18n="tool.unit.kg">kg</option>
+          <option value="lb" data-i18n="tool.unit.lb">pounds</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="total" data-i18n="tool.total.label">Total lifted</label>
+        <input type="number" id="total" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="500">
+      </div>
+      <div>
+        <label for="totunit" data-i18n="tool.unit.kg">kg</label>
+        <select id="totunit">
+          <option value="kg" data-i18n="tool.unit.kg">kg</option>
+          <option value="lb" data-i18n="tool.unit.lb">pounds</option>
+        </select>
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.total.hint">Squat + bench + deadlift. A single lift works too — the coefficient is the same.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate score</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.dots">DOTS score</div>
+          <div class="rc-val" id="r-dots">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.wilks">Wilks-2 (2020)</div><div class="rc-val" id="r-wilks">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.wilks1">Wilks (1994 classic)</div><div class="rc-val" id="r-wilks1">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.gl">IPF GL points (raw)</div><div class="rc-val" id="r-gl">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.level">Rough level band</div><div class="rc-val" id="r-level">—</div></div>
+        <div class="rcard wide"><div class="rc-label" data-i18n="tool.r.echo">Your entry</div><div class="rc-val" id="r-echo">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.dots" style="margin-top:12px;">DOTS replaced Wilks at most federations from 2020. The level bands are rough gym-culture labels, not official classifications.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a powerlifting coefficient score actually does</h2>
+    <p>Strength does not scale in a straight line with bodyweight. Double a lifter's mass and you do not double what they can squat, because muscle cross-section grows roughly with the square of a linear dimension while body mass grows with the cube. That is why a 60 kg woman totalling 400 kg and a 120 kg man totalling 700 kg cannot be ranked by their totals alone. A coefficient formula fixes the problem by fitting a curve to thousands of competition results, then dividing each total by the value that curve predicts for that bodyweight. The output is a single number: how far above or below the expected total for your size you lifted.</p>
+    <p>This calculator gives you two of them. DOTS is the current default at most federations and in most meet software. Wilks-2 (the 2020 refit of the original 1994 Wilks formula) is shown alongside it because plenty of gyms, coaches and old spreadsheets still speak Wilks. Both take the same three inputs: sex, bodyweight and total.</p>
+
+    <h3>Worked example: an 82.5 kg man with a 500 kg total</h3>
+    <p>That is 181.9 lb bodyweight and roughly a 175 kg squat, 120 kg bench and 205 kg deadlift. The DOTS denominator is a fourth-order polynomial in bodyweight; at 82.5 kg it evaluates to 738.12. The score is total &times; 500 &divide; 738.12 = 500 &times; 500 &divide; 738.12 = <strong>338.70 DOTS</strong>.</p>
+    <p>The Wilks-2 denominator is a fifth-order polynomial and comes out at 745.86, giving 500 &times; 600 &divide; 745.86 = <strong>402.22 Wilks-2</strong>. The same lifter under the original 1994 Wilks formula scores 334.95. Notice what happened: Wilks-2 is not a small correction to Wilks, it is roughly 20 percent higher across the board because the 2020 refit changed the numerator from 500 to 600. Never compare a Wilks-2 number to a classic Wilks number, and never compare either to DOTS. Within one formula the comparison is fair; across formulas it is noise.</p>
+
+    <h3>Second example: a 60 kg woman with a 400 kg total</h3>
+    <p>Her DOTS denominator is 451.04, so 400 &times; 500 &divide; 451.04 = <strong>443.42 DOTS</strong>, and her Wilks-2 works out to 527.61. She lifted 100 kg less than the man in the first example and scores more than a hundred DOTS points above him. That is the whole point of the exercise — pound for pound she is doing considerably more with the frame she has, and a best-lifter award decided on totals alone would never show it.</p>
+
+    <h2>Reading the level bands honestly</h2>
+    <p>The band shown with your result splits DOTS at 200, 300, 400 and 500: novice, intermediate, advanced, elite, world class. These are gym-culture shorthand, not official classifications. No federation issues a "DOTS 400 certificate", and the same number means slightly different things in raw versus equipped divisions, in tested versus untested feds, and across age brackets. As a rough calibration for raw, drug-tested lifters: a first meet often lands somewhere in the 200s, a few serious years of training push into the 300s, national-level competitors cluster in the low-to-mid 400s, and the podium at a world championship generally starts above 500. Use the band as orientation, not identity.</p>
+
+    <h2>Where these formulas came from</h2>
+    <p>Robert Wilks built the original coefficient in the early 1990s from IPF results, and it ran the sport for two decades. By the 2010s its shortcomings were well known: it treated the heaviest and lightest classes unevenly, and the men's and women's curves had drifted apart from actual results as the sport grew. Two answers appeared almost at once. The 2020 Wilks refit kept the same five-term polynomial shape and re-estimated the constants. DOTS, derived by Tim Konertz, re-fitted a fourth-order polynomial to a far larger modern data set and produced a curve most people find better behaved at the extremes. Meanwhile the IPF moved to its own GL points system for its sanctioned meets. If your federation names a formula, use that one; if nobody has told you, quote DOTS.</p>
+
+    <h2>Limits worth knowing before you post the number</h2>
+    <p>A coefficient is a scoreboard, not a training program. It says nothing about whether your bench is lagging your squat, whether your technique will survive heavier weight, or what to do next Monday. It also does not adjust for age, equipment, drug-testing status or federation standards, so an untested equipped total and a tested raw total scoring the same DOTS are not the same performance. Junior and masters lifters typically apply an additional age coefficient on top.</p>
+    <p>One last practical note: enter your weigh-in bodyweight, not your walking-around weight. In most federations that is your weight at the official weigh-in, two hours or twenty-four hours before you lift depending on the rules, and it is usually the lowest number you will see all week. Using a scale reading from a random Tuesday can move your score by several points in either direction, which matters when qualifying standards are written in DOTS.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.acsm.org/" target="_blank" rel="noopener">American College of Sports Medicine — position stands on resistance training and strength progression</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed (NIH) — peer-reviewed research on allometric scaling of strength to bodyweight</a></li>
+      <li><a href="https://health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines" target="_blank" rel="noopener">Physical Activity Guidelines for Americans — federal muscle-strengthening activity recommendations</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/a1c-calc/"><span class="related-ico" aria-hidden="true">🩸</span><span class="related-name">A1C Calculator</span></a><a class="related-item" href="https://tool-hub.me/army-body-fat-calc/"><span class="related-ico" aria-hidden="true">🎖️</span><span class="related-name">Army Body Fat Calculator</span></a><a class="related-item" href="https://tool-hub.me/blood-alcohol-calc/"><span class="related-ico" aria-hidden="true">🍺</span><span class="related-name">Blood Alcohol Calculator (BAC)</span></a><a class="related-item" href="https://tool-hub.me/blood-pressure-checker/"><span class="related-ico" aria-hidden="true">🫀</span><span class="related-name">Blood Pressure Checker</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Wilks, DOTS or IPF GL — which score should I use?</summary><p data-i18n="faq.a1">They are three generations of the same idea. Wilks (1994) was the standard for two decades, Wilks-2 refitted it in 2020, and DOTS re-derived the curve from a much larger modern data set. Most federations and meet software now rank by DOTS, while the IPF uses its own GL points for IPF-sanctioned meets, so quote DOTS unless your federation asks otherwise.</p></details>
+    <details><summary data-i18n="faq.q2">Why does powerlifting need a coefficient formula at all?</summary><p data-i18n="faq.a2">Strength does not scale one-to-one with bodyweight: a 60 kg lifter can never total what a 120 kg lifter totals, but relative to their frame they may be far stronger. A coefficient converts each total into a single number that is comparable across weight classes, which is how best-lifter awards and online rankings are decided.</p></details>
+    <details><summary data-i18n="faq.q3">Can I score a single lift instead of a full total?</summary><p data-i18n="faq.a3">Yes — enter the single lift as the total and the same coefficient applies. Bench-only and deadlift-only meets are scored exactly this way. Just never compare a single-lift score against a full three-lift score, because the coefficient was fitted on full totals and the numbers land on completely different scales.</p></details>
+    <details><summary data-i18n="faq.q4">Can lifters game the score by moving weight class?</summary><p data-i18n="faq.a4">Only slightly, and it usually backfires. The curve is steepest below about 70 kg, so cutting a few kilograms there raises your coefficient more than anywhere else, but any total you lose from a hard water cut wipes that gain out immediately. Above roughly 120 kg the curve flattens, so gaining bodyweight barely costs you score if the total goes up with it.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-n37SEZnie7DVftneDTw6QnQJXKVjopmFBjPls9ij4dE=' 'sha256-ov8bKiaxNlsLVdohwY+KSNfHNnz/YACAzZnQolndDiU=' 'sha256-8k7AD8buvTmsMjaNO2smiP7jWadas643XrEWf4G5L0k='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>인플레이션 계산기 — 미국 CPI 구매력 환산</title>
+<meta name="description" content="1913년부터 2025년까지 미국 CPI-U 연평균 자료로 달러 금액의 물가 반영 가치를 환산합니다. 같은 구매력의 금액, 누적 물가상승률, 연평균 상승률을 함께 보여줍니다.">
+<meta name="keywords" content="inflation calculator, CPI inflation calculator, purchasing power calculator, value of a dollar over time, us inflation rate by year, historical inflation calculator">
+<link rel="canonical" href="https://tool-hub.me/inflation-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/inflation-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/inflation-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/inflation-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/inflation-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/inflation-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/inflation-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/inflation-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/inflation-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/inflation-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/inflation-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/inflation-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/inflation-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/inflation-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/inflation-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/inflation-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="인플레이션 계산기 — 미국 CPI 구매력 환산">
+<meta property="og:description" content="1913년부터 2025년까지 미국 CPI-U 연평균 자료로 달러 금액의 물가 반영 가치를 환산합니다. 같은 구매력의 금액, 누적 물가상승률, 연평균 상승률을 함께 보여줍니다.">
+<meta property="og:url" content="https://tool-hub.me/inflation-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/inflation-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Inflation Calculator",
+  "description": "Adjust any dollar amount for inflation between 1913 and 2025 using official US CPI-U annual averages. See equivalent value, total inflation and annual rate.",
+  "url": "https://tool-hub.me/inflation-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Inflation Calculator",
+      "item": "https://tool-hub.me/inflation-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is CPI-U?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CPI-U is the Consumer Price Index for All Urban Consumers, published monthly by the US Bureau of Labor Statistics. It prices a fixed basket — housing, food, transport, medical care, apparel, recreation — for the roughly 93% of Americans who live in urban areas. This calculator uses the annual average of that index for each year, which is the standard series for comparing one year with another rather than one month with another."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is this lower than the inflation I feel?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CPI-U measures an average basket, and nobody buys the average basket. If rent, health insurance or tuition eat a large share of your budget, your personal inflation rate runs well above the headline number, because those categories have risen faster than the index for two decades. Homeowners with a fixed mortgage often run below it. The index is a benchmark, not a description of your household."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the 2025 figure final?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The 2025 annual average here is preliminary — it is built from the monthly index values published so far and firms up as the remaining months land. Every earlier year back to 1913 is final: BLS does not revise published CPI-U annual averages. Expect the 2025 result to move by a few tenths of a percent, not by whole points."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for the UK or other countries?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every figure here comes from the US CPI-U series, so the results only mean something for US dollars. The UK has its own history in the ONS CPI and RPI series, and the Bank of England runs a separate calculator for pounds. Applying the US index to another currency mixes the wrong basket with the wrong price history and can be off by tens of percent."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Inflation Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Inflation Calculator</span></nav>
+  <section class="hero">
+    <h1>Inflation Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">What a dollar was worth then, in today's money — and how much of it inflation took.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .rcard .rc-note { font-size:13px; color:var(--muted); margin-top:6px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="amount" data-i18n="tool.amount.label">Amount in US dollars</label>
+    <input type="text" id="amount" inputmode="decimal" autocomplete="off" placeholder="100">
+
+    <div class="field-row">
+      <div>
+        <label for="from-year" data-i18n="tool.from.label">From year</label>
+        <input type="number" id="from-year" inputmode="numeric" min="1913" max="2025" step="1" autocomplete="off" placeholder="1990">
+      </div>
+      <div>
+        <label for="to-year" data-i18n="tool.to.label">To year</label>
+        <input type="number" id="to-year" inputmode="numeric" min="1913" max="2025" step="1" autocomplete="off" placeholder="2025">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.adjusted">Equivalent amount</div>
+          <div class="rc-val" id="r-adjusted">—</div>
+          <div class="rc-note" id="r-summary"></div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total inflation</div><div class="rc-val" id="r-total">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.annual">Average annual inflation</div><div class="rc-val" id="r-annual">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.source" style="margin-top:12px;">US CPI-U annual averages (1982-84 = 100) from the Bureau of Labor Statistics. The 2025 figure is preliminary until the year closes.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How an inflation calculator actually works</h2>
+    <p>There is no mystery in the arithmetic. The Bureau of Labor Statistics prices the same basket of goods and services every month and publishes the result as an index number. In 2025 that index sits near 322.6; in 1990 it was 130.7. To move money between two years you take the ratio of the two index values and multiply:</p>
+    <p><strong>Adjusted amount = original amount x (CPI in target year / CPI in original year)</strong></p>
+    <p>That single line covers both directions. If the target year is later, the ratio is greater than one and the dollar figure grows. If you run it backwards — asking what a 2025 salary would have been in 1985 dollars — the ratio falls below one and the figure shrinks. Nothing else changes, which is why this calculator accepts the years in either order.</p>
+
+    <h3>Worked example: 
+
+  00 in 1990</h3>
+    <p>The ratio is 322.6 / 130.7 = 2.468, so 
+
+  00 in 1990 buys what $246.82 buys in 2025. Prices rose 146.8% over those 35 years, which works out to 2.62% a year compounded. Notice how modest the annual figure looks next to the cumulative one — that gap is the whole reason inflation surprises people. A rate you would barely notice in a single year more than doubles a price level over a working lifetime.</p>
+
+    <h3>Worked example: 
+
+  0,000 in 2000</h3>
+    <p>Run 2000 to 2025 and the ratio is 322.6 / 172.2 = 1.873. Ten thousand dollars becomes 
+
+  8,734, total inflation of 87.3% at an average of 2.54% a year. This is the calculation to reach for when you are comparing a house price, a tuition bill or a starting salary from the turn of the century with today's. A $42,000 graduate salary in 2000 needs to be about $78,700 now just to stand still.</p>
+
+    <h3>Worked example: a dollar in 1913</h3>
+    <p>The series starts in 1913 at an index of 9.9, so a single 1913 dollar corresponds to $32.59 today. Flip it around and today's dollar is worth about three cents in 1913 money. Over 112 years that is an average of 3.16% a year — higher than the post-1990 average, because the run includes two world wars, the 1970s oil shocks and the double-digit years of 1979 to 1981.</p>
+
+    <h2>What a dollar from each decade is worth in 2025</h2>
+    <table>
+      <thead><tr><th>
+
+  00 in…</th><th>Equals in 2025</th><th>Average annual rate</th></tr></thead>
+      <tbody>
+        <tr><td>1925</td><td>
+
+  ,843</td><td>2.96%</td></tr>
+        <tr><td>1945</td><td>
+
+  ,792</td><td>3.67%</td></tr>
+        <tr><td>1965</td><td>
+
+  ,024</td><td>3.95%</td></tr>
+        <tr><td>1975</td><td>$600</td><td>3.65%</td></tr>
+        <tr><td>1985</td><td>$300</td><td>2.78%</td></tr>
+        <tr><td>1995</td><td>$212</td><td>2.53%</td></tr>
+        <tr><td>2005</td><td>
+
+  65</td><td>2.54%</td></tr>
+        <tr><td>2015</td><td>
+
+  36</td><td>3.13%</td></tr>
+      </tbody>
+    </table>
+    <p>Two things stand out. First, the deflation of the early 1930s is real: prices fell 24% between 1929 and 1933, the only sustained decline in the whole series. Second, the calm looks recent. From 1995 to 2020 the index averaged close to 2%, then 2021 and 2022 added 8.0% in a single step — the fastest year since 1981 — which is why a 2015 dollar has lost more ground than a 1995 dollar did over its first decade.</p>
+
+    <h2>Deciding which years to use</h2>
+    <p>For salary comparisons, use the year the salary was actually paid and the current year; do not mix a mid-year offer with a calendar-year average and expect precision to the dollar. For long-running contracts, rent escalators and alimony clauses, check whether the agreement names a specific index — many specify CPI-U for a named metropolitan area rather than the US city average used here, and those regional series can diverge by several points over a decade. For historical curiosity — what a 1962 concert ticket or a 1948 car cost in today's money — the annual average is exactly the right series.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>CPI-U is a national urban average. It does not know that rents in Austin behaved nothing like rents in Cleveland, and it does not track rural households at all. It is also a composite: healthcare and higher education have run far above the headline for thirty years while televisions, clothing and long-distance calls have fallen outright, so any single household's experience sits somewhere off the average.</p>
+    <p>The index also adjusts for quality. When a $500 laptop replaces a $500 laptop that was half as fast, BLS records part of that as a price decrease, which some critics argue understates the cost of simply staying current. And the basket's weights are updated periodically, so the 1913 basket is not the 2025 basket — comparisons spanning a century are directionally sound rather than precise. Use the number as a well-grounded estimate, not a legal figure.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — Consumer Price Index data, methodology and release schedule</a></li>
+      <li><a href="https://www.federalreserve.gov/monetarypolicy.htm" target="_blank" rel="noopener">Federal Reserve — monetary policy and the 2% inflation objective</a></li>
+      <li><a href="https://www.ons.gov.uk/economy/inflationandpriceindices" target="_blank" rel="noopener">UK Office for National Statistics — CPI and RPI inflation series for the United Kingdom</a></li>
+      <li><a href="https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG" target="_blank" rel="noopener">World Bank — annual consumer price inflation by country</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/interest-calc/"><span class="related-ico" aria-hidden="true">💵</span><span class="related-name">Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/investment-goal-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Investment Goal Calculator</span></a><a class="related-item" href="https://tool-hub.me/landed-cost-batch/"><span class="related-ico" aria-hidden="true">🚢</span><span class="related-name">Landed Cost Batch Calculator</span></a><a class="related-item" href="https://tool-hub.me/loan-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">Loan Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is CPI-U?</summary><p data-i18n="faq.a1">CPI-U is the Consumer Price Index for All Urban Consumers, published monthly by the US Bureau of Labor Statistics. It prices a fixed basket — housing, food, transport, medical care, apparel, recreation — for the roughly 93% of Americans who live in urban areas. This calculator uses the annual average of that index for each year, which is the standard series for comparing one year with another rather than one month with another.</p></details>
+    <details><summary data-i18n="faq.q2">Why is this lower than the inflation I feel?</summary><p data-i18n="faq.a2">CPI-U measures an average basket, and nobody buys the average basket. If rent, health insurance or tuition eat a large share of your budget, your personal inflation rate runs well above the headline number, because those categories have risen faster than the index for two decades. Homeowners with a fixed mortgage often run below it. The index is a benchmark, not a description of your household.</p></details>
+    <details><summary data-i18n="faq.q3">Is the 2025 figure final?</summary><p data-i18n="faq.a3">No. The 2025 annual average here is preliminary — it is built from the monthly index values published so far and firms up as the remaining months land. Every earlier year back to 1913 is final: BLS does not revise published CPI-U annual averages. Expect the 2025 result to move by a few tenths of a percent, not by whole points.</p></details>
+    <details><summary data-i18n="faq.q4">Does this work for the UK or other countries?</summary><p data-i18n="faq.a4">No. Every figure here comes from the US CPI-U series, so the results only mean something for US dollars. The UK has its own history in the ONS CPI and RPI series, and the Bank of England runs a separate calculator for pounds. Applying the US index to another currency mixes the wrong basket with the wrong price history and can be off by tens of percent.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-wkd8UB0uSIGTqVxMRtuY7umx8g7BfQl3v3P2+QUbY8k=' 'sha256-EuKjYk9hskvdSA3+ckJ1GbMhpY0omWgN5ExET6zTXMo=' 'sha256-gxWHRMQ46+jHi9rZS11NHk0entxhLVZxQkv3efYR010='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FIRE 계산기: 나의 FIRE 넘버, 도달 시점, 4% 룰</title>
+<meta name="description" content="연 지출로 FIRE 넘버를 계산하고(4% 룰), 경제적 자유까지 남은 기간과 목표 시점, 린/레귤러/팻 FIRE 단계까지 한 번에 확인하세요. 무료, 전부 브라우저에서 계산.">
+<meta name="keywords" content="fire calculator, financial independence calculator, 4 percent rule, fire number, early retirement calculator, 파이어족 계산기, 조기은퇴 계산기">
+<link rel="canonical" href="https://tool-hub.me/fire-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/fire-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/fire-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/fire-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/fire-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/fire-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/fire-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/fire-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/fire-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/fire-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/fire-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/fire-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/fire-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/fire-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/fire-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/fire-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FIRE 계산기: 나의 FIRE 넘버, 도달 시점, 4% 룰">
+<meta property="og:description" content="연 지출로 FIRE 넘버를 계산하고(4% 룰), 경제적 자유까지 남은 기간과 목표 시점, 린/레귤러/팻 FIRE 단계까지 한 번에 확인하세요. 무료, 전부 브라우저에서 계산.">
+<meta property="og:url" content="https://tool-hub.me/fire-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/fire-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#be123c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "FIRE Calculator",
+  "description": "Get your FIRE number from annual expenses (4% rule), then see years to financial independence, your target date, and Lean/Regular/Fat tiers. Free, browser-only.",
+  "url": "https://tool-hub.me/fire-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FIRE Calculator: Your FIRE Number, Timeline & 4% Rule",
+      "item": "https://tool-hub.me/fire-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a FIRE number, and how does the 4% rule calculate mine?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "FIRE stands for Financial Independence, Retire Early — the point where your invested portfolio can sustainably cover your living costs without a paycheck. The 4% rule (drawn from retirement-withdrawal research) says you can withdraw about 4% of your portfolio in the first year of retirement and adjust for inflation after, so your FIRE number = annual expenses ÷ withdrawal rate. At 4% that's simply annual expenses × 25: spending 40,000 a year implies a 1,000,000 FIRE number. This calculator lets you adjust the withdrawal rate anywhere from 2% to 10%, with quick presets at 3%, 3.5%, 4%, and 5% for the range most FIRE planners actually use."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from the Coast FIRE and Barista FIRE calculators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This FIRE calculator answers the core question: given your annual expenses, current savings, monthly investing, and expected return, how many years until you can fully retire on your investments alone? Coast FIRE asks a narrower question — has what you've already saved grown enough that you could stop contributing today and still coast to your number by a target retirement age? Barista FIRE shrinks the target itself, because ongoing part-time income covers part of your expenses forever. All three use the same 4%-rule math underneath; they just apply it to different situations, so it's worth checking all three if you're not sure which describes your plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a 4% withdrawal rate still considered safe, and when should I use a different one?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The 4% figure comes from historical U.S. market research (often called the Trinity study) testing 30-year retirements starting in different years — a 4% first-year withdrawal, adjusted for inflation, held up in the large majority of historical periods. It's a planning rule of thumb, not a guarantee: a lower rate like 3% or 3.5% is more conservative and suits longer retirements or more cautious investors, while some people stretch to 5% for shorter horizons or flexible spending. This calculator's chips let you compare 3%, 3.5%, 4%, and 5% instantly, and you can type any rate from 2% to 10%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are Lean, Regular, and Fat FIRE, and how does the tiers table work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "These are informal tiers describing how much someone plans to spend in retirement, not fixed dollar amounts. Lean FIRE means a stripped-down budget well below your current lifestyle; Regular FIRE keeps roughly the lifestyle you entered; Fat FIRE means spending significantly more, for a more comfortable or flexible retirement. Because \"more\" or \"less\" depends entirely on your own numbers, the tiers table takes the annual expenses you typed and shows the FIRE number and years-to-reach at half that amount (Lean), the amount as entered (Regular), and double that amount (Fat) — using the same savings, monthly investing, and return you set above."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this financial advice, and is any of my data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This is an educational, arithmetic projection based on the numbers you type — real markets don't grow at a constant rate every year, and this isn't investment, tax, or retirement advice. Everything runs locally in your browser; nothing is uploaded, there's no login, and your inputs are only saved to your device's local storage so the form remembers them next time. Use it to sanity-check your FIRE timeline, then talk to a qualified financial advisor for your actual plan."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>FIRE Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">FIRE Calculator: Your FIRE Number, Timeline &amp; 4% Rule</span></nav>
+  <section class="hero">
+    <h1>FIRE Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Turn your annual expenses into a FIRE number using the 4% rule (or any withdrawal rate from 3–5%), then see how many years of saving and investing stand between you and financial independence — plus a Lean/Regular/Fat FIRE comparison. Works in any currency.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .fieldlabel { font-weight:600; font-size:14px; margin:14px 0 0; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .hint { font-size:13px; color:var(--muted); margin:4px 0 0; }
+      #tool .badge { display:inline-block; padding:4px 12px; border-radius:999px; font-weight:700; font-size:14px; }
+      #tool .badge.ok { background:rgba(16,185,129,.15); color:#059669; }
+      #tool .badge.no { background:rgba(190,18,60,.13); color:var(--accent-strong); }
+      #tool .fire-big { font-size:30px; font-weight:800; margin:8px 0 2px; line-height:1.1; }
+      #tool .primary-msg { margin:8px 0 2px; font-weight:600; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; min-width:0; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:17px; margin-top:2px; word-break:break-word; }
+      #tool .rcard .rc-val.pos { color:#059669; }
+      #tool .rcard .rc-val.neg { color:var(--accent-strong); }
+      #tool .bar { height:8px; border-radius:999px; background:var(--line); overflow:hidden; margin-top:12px; }
+      #tool .bar > span { display:block; height:100%; background:var(--accent); width:0; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .tiers-block { margin-top:20px; padding-top:16px; border-top:1px solid var(--line); }
+      #tool .tiers-block h3 { font-size:15px; margin:0 0 4px; }
+      #tool .tiers-wrap { overflow-x:auto; margin-top:10px; -webkit-overflow-scrolling:touch; }
+      #tool table.tiers { width:100%; min-width:420px; border-collapse:collapse; font-size:13.5px; }
+      #tool table.tiers th, #tool table.tiers td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); white-space:nowrap; }
+      #tool table.tiers th { color:var(--muted); font-weight:650; }
+      #tool .disclaimer { font-size:12px; color:var(--muted); margin:14px 0 0; padding-top:10px; border-top:1px solid var(--line); }
+      @media (max-width:420px) {
+        #tool table.tiers { min-width:0; font-size:12.5px; }
+        #tool table.tiers th, #tool table.tiers td { padding:6px 5px; }
+      }
+    </style>
+
+    <label for="expenses-input" data-i18n="tool.expenses.label">Annual expenses in retirement</label>
+    <input type="text" id="expenses-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 40,000" data-i18n-placeholder="tool.expenses.ph">
+    <p class="hint" data-i18n="tool.expenses.hint">What you expect to spend per year once retired, in today's money.</p>
+
+    <label for="wrate-input" data-i18n="tool.wrate.label">Withdrawal rate (%)</label>
+    <input type="number" id="wrate-input" inputmode="decimal" min="2" max="10" step="0.1"
+           placeholder="4" data-i18n-placeholder="tool.wrate.ph">
+    <div class="chips" id="wrate-chips" role="group" aria-label="Withdrawal rate presets" data-i18n-aria-label="tool.wrate.chipsAria">
+      <button type="button" class="chip" data-wrate="3">3%</button>
+      <button type="button" class="chip" data-wrate="3.5">3.5%</button>
+      <button type="button" class="chip" data-wrate="4">4%</button>
+      <button type="button" class="chip" data-wrate="5">5%</button>
+    </div>
+    <p class="hint" data-i18n="tool.wrate.hint">At 4% your FIRE number is your annual expenses × 25.</p>
+
+    <label for="savings-input" data-i18n="tool.savings.label">Current invested savings</label>
+    <input type="text" id="savings-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 50,000" data-i18n-placeholder="tool.savings.ph">
+    <p class="hint" data-i18n="tool.savings.hint">The portfolio you already have invested and growing toward FIRE.</p>
+
+    <label for="monthly-input" data-i18n="tool.monthly.label">Monthly investing</label>
+    <input type="text" id="monthly-input" inputmode="numeric" autocomplete="off"
+           placeholder="e.g. 1,000" data-i18n-placeholder="tool.monthly.ph">
+    <p class="hint" data-i18n="tool.monthly.hint">How much you add to your investments each month, on average.</p>
+
+    <label for="return-input" data-i18n="tool.return.label">Expected real return, after inflation (%)</label>
+    <input type="number" id="return-input" inputmode="decimal" min="0" max="15" step="0.1"
+           placeholder="6" data-i18n-placeholder="tool.return.ph">
+    <div class="chips" id="return-chips" role="group" aria-label="Expected return presets" data-i18n-aria-label="tool.return.chipsAria">
+      <button type="button" class="chip" data-return="4">4%</button>
+      <button type="button" class="chip" data-return="5">5%</button>
+      <button type="button" class="chip" data-return="6">6%</button>
+      <button type="button" class="chip" data-return="7">7%</button>
+    </div>
+    <p class="hint" data-i18n="tool.return.hint">An example only — future returns aren't guaranteed.</p>
+
+    <label for="age-input" data-i18n="tool.age.label">Current age (optional)</label>
+    <input type="number" id="age-input" inputmode="numeric" min="18" max="99" step="1"
+           placeholder="e.g. 35" data-i18n-placeholder="tool.age.ph">
+    <p class="hint" data-i18n="tool.age.hint">Add it to see how old you'll be when you hit your FIRE number.</p>
+
+    <button class="btn" id="calc-btn" type="button" data-i18n="tool.calc">Calculate my FIRE number</button>
+
+    <div class="result" id="result-box" hidden>
+      <p id="result-error" style="margin:0;color:#dc2626;font-weight:600;" hidden></p>
+      <div id="result-body" hidden>
+        <span class="badge" id="r-badge"></span>
+        <p class="subtle" style="margin:12px 0 0;" data-i18n="tool.result.firenumLabel">Your FIRE number</p>
+        <p class="fire-big" id="r-firenum"></p>
+        <p class="subtle" id="r-sub" style="margin:0 0 4px;"></p>
+        <p class="primary-msg" id="r-msg"></p>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.progress">Progress to FIRE</div><div class="rc-val" id="r-progress"></div></div>
+          <div class="rcard"><div class="rc-label" id="r-gaplabel"></div><div class="rc-val" id="r-gap"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.date">Target FIRE date</div><div class="rc-val" id="r-date"></div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.result.projection">Projected balance at target date</div><div class="rc-val" id="r-projection"></div></div>
+          <div class="rcard" id="r-agecard" hidden><div class="rc-label" data-i18n="tool.result.ageAtFire">Age at FIRE</div><div class="rc-val" id="r-age"></div></div>
+        </div>
+        <div class="bar" aria-hidden="true"><span id="r-progressbar"></span></div>
+
+        <div class="tiers-block">
+          <h3 data-i18n="tool.tiers.heading">Lean / Regular / Fat FIRE</h3>
+          <p class="hint" data-i18n="tool.tiers.intro">How your FIRE number and timeline change at lighter or richer spending levels, using the savings, monthly investing, and return above.</p>
+          <div class="tiers-wrap">
+            <table class="tiers">
+              <thead>
+                <tr>
+                  <th data-i18n="tool.tiers.col.tier">Tier</th>
+                  <th data-i18n="tool.tiers.col.expenses">Annual expenses</th>
+                  <th data-i18n="tool.tiers.col.firenum">FIRE number</th>
+                  <th data-i18n="tool.tiers.col.time">Time to reach</th>
+                </tr>
+              </thead>
+              <tbody id="tiers-body"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <p class="subtle" id="r-negreturn" style="margin:14px 0 0;color:#d97706;" data-i18n="tool.note.negReturn" hidden>A 0% return was used since a negative return isn't projected here.</p>
+        <p class="subtle" id="r-wrateclamp" style="margin:6px 0 0;color:#d97706;" data-i18n="tool.note.wrateClamp" hidden>The withdrawal rate was adjusted into the 2–10% range.</p>
+        <p class="subtle" id="r-clipped" style="margin:6px 0 0;color:#d97706;" data-i18n="tool.note.clipped" hidden>Some values were above the allowed range and were capped for this calculation.</p>
+        <p class="subtle" style="margin:12px 0 0;" data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+        <p class="disclaimer" data-i18n="tool.disclaimer">This is an educational projection, not financial, investment, or tax advice; actual returns and expenses vary.</p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+    <h2>The FIRE Number Is Just Annual Expenses, Rearranged</h2>
+    <p>FIRE — Financial Independence, Retire Early — reduces retirement planning to one core question: how large does your investment portfolio need to be before it can replace your paycheck forever? The 4% rule turns your annual expenses into that portfolio size directly. If a 4% withdrawal in year one (adjusted for inflation afterward) is considered sustainable, then the total you need is simply your annual expenses divided by 4%, or — the more memorable version — your annual expenses multiplied by 25. This calculator does that division for you, then goes a step further: given what you've already saved and how much you invest monthly, it estimates how many years stand between you and that number, and roughly when you'd cross it.</p>
+
+    <h2>What Each Field Is Asking</h2>
+    <ol>
+      <li>Annual expenses in retirement should reflect your expected cost of living once you stop earning a paycheck — not your current spending if you plan to downsize, relocate, or pay off a mortgage before then.</li>
+      <li>Withdrawal rate defaults to the classic 4%, but you can move it anywhere from 2% to 10%; a lower rate produces a larger, more conservative FIRE number, a higher rate a smaller, less conservative one.</li>
+      <li>Current invested savings should be money actually invested and compounding — brokerage accounts, index funds, retirement accounts — not cash sitting in a checking account.</li>
+      <li>Monthly investing is what you add to that portfolio on average each month; leave it at 0 to see how long compounding alone would take.</li>
+      <li>Expected real return should already be net of inflation — this keeps every figure in today's money, consistent with the FIRE number itself; many long-term FIRE plans assume something in the 4–7% range.</li>
+    </ol>
+
+    <h2>The Formula, With a Worked Example</h2>
+    <div class="example">
+      <p><strong>FIRE number</strong> = annual expenses ÷ (withdrawal rate ÷ 100)<br>
+      <strong>Time to FIRE</strong> solves for the number of months until your growing savings, plus ongoing contributions, reach that FIRE number.</p>
+      <p>Example: you plan to spend 40,000 a year in retirement and use the standard 4% rule. Your FIRE number is 40,000 ÷ 0.04 = 1,000,000. Suppose you already have 100,000 invested, add 1,500 a month, and assume a 6% real return. Compounding that forward, your balance crosses 1,000,000 in a little under 20 years — around 236 months, or roughly 19 years and 8 months from today.</p>
+    </div>
+
+    <h3>Three Worked Scenarios</h3>
+    <div class="example">
+      <p><strong>Starting from zero.</strong> Mia spends 30,000 a year (FIRE number 750,000 at 4%), has no savings yet, invests 800 a month, and assumes a 7% real return. Her FIRE number is still about 27 years away even with steady saving — the earlier those first contributions start compounding, the faster later years catch up.</p>
+    </div>
+    <div class="example">
+      <p><strong>Already there.</strong> Devon spends 45,000 a year (FIRE number 1,125,000 at 4%) and already has 1,200,000 invested. The calculator marks Devon as already FIRE — no more contributions are required for this target, though Devon can keep investing for a larger cushion.</p>
+    </div>
+    <div class="example">
+      <p><strong>Comparing withdrawal rates.</strong> With 60,000 in annual expenses, a 4% rate needs 1,500,000, while a more conservative 3.5% rate needs about 1,714,000 — roughly 214,000 more. A small change in assumed withdrawal rate moves the target by a meaningful margin, which is why the chips make it easy to compare a few rates side by side.</p>
+    </div>
+
+    <h3>Years to Financial Independence by Savings Rate</h3>
+    <p>A well-known rule of thumb in the FIRE community ties your savings rate directly to years-to-FI, assuming a constant real return and starting from zero savings. It's a simplification — this calculator's own projection using your actual numbers is more precise — but it's a useful gut check:</p>
+    <table>
+      <tr><th>Savings rate</th><th>Approx. years to FI</th></tr>
+      <tr><td>10%</td><td>~51 years</td></tr>
+      <tr><td>20%</td><td>~37 years</td></tr>
+      <tr><td>30%</td><td>~28 years</td></tr>
+      <tr><td>40%</td><td>~22 years</td></tr>
+      <tr><td>50%</td><td>~17 years</td></tr>
+      <tr><td>60%</td><td>~12.5 years</td></tr>
+      <tr><td>70%</td><td>~8.5 years</td></tr>
+    </table>
+
+    <h2>Lean, Regular, and Fat FIRE — the Tiers Table</h2>
+    <p>These labels describe lifestyle, not a fixed number. The tiers table under your results takes the annual expenses you entered and recalculates the FIRE number and years-to-reach at half that figure (Lean FIRE — a bare-bones budget), the figure as entered (Regular FIRE — your stated lifestyle), and double that figure (Fat FIRE — a noticeably more comfortable one) — all using the same savings, monthly investing, and return you set above. It's a fast way to see how much a leaner or richer retirement target moves your timeline.</p>
+
+    <h2>Related FIRE Milestones Worth Checking</h2>
+    <p>This calculator covers the classic, full-FIRE question — but it isn't the only useful milestone. If you want to know whether your current savings alone (with no further contributions) will compound to your number by a target retirement age, try the <a href="https://tool-hub.me/coast-fire-calc/">Coast FIRE Calculator</a>. If part-time or lower-stress work after leaving your career would cover some of your expenses, letting you shrink your target, the <a href="https://tool-hub.me/barista-fire-calc/">Barista FIRE Calculator</a> models exactly that. All three tools share the same 4%-rule foundation.</p>
+
+    <h2>Where People Get FIRE Math Wrong</h2>
+    <ul>
+      <li>Using a nominal market return (often 9–10% for stocks) instead of a real, after-inflation one. That overstates growth and makes the timeline look shorter than it likely is.</li>
+      <li>Treating the FIRE number as fixed forever. A change in housing, health insurance, dependents, or location shifts annual expenses — and therefore the FIRE number — so it's worth rechecking after any major life change.</li>
+      <li>Forgetting that a constant assumed return is a smoothed average, not a forecast. Real portfolios have down years; someone who crosses their FIRE number right before a downturn may dip below it again for a while even though the long-run math holds.</li>
+      <li>Assuming a lower withdrawal rate is always "safer" without considering it also demands a larger portfolio and more years of work — the right rate is a trade-off, not a universal answer.</li>
+      <li>Confusing "years to FIRE" with "years until I must stop working." Many people keep working past their FIRE date by choice, using the milestone as a floor, not a deadline.</li>
+    </ul>
+
+    <h2>What This Calculator Doesn't Do</h2>
+    <p>It doesn't account for taxes on withdrawals or account type (taxable vs. tax-advantaged), sequence-of-returns risk from real market volatility, Social Security or pension income, healthcare cost changes, or one-off expenses like a home purchase. Every figure — the FIRE number, the years-to-reach, the target date, and the tiers table — is an educational estimate built from a constant assumed return, not a forecast or financial advice. All of the math runs locally in your browser; nothing you type is uploaded or stored anywhere.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.consumerfinance.gov/consumer-tools/retirement/" target="_blank" rel="noopener">Consumer Financial Protection Bureau — retirement planning tools and guidance on income needs</a></li>
+      <li><a href="https://www.irs.gov/retirement-plans" target="_blank" rel="noopener">IRS Retirement Plans — contribution limits, account types, and withdrawal rules</a></li>
+      <li><a href="https://www.bls.gov/cex/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics Consumer Expenditure Surveys — reference data for annual spending estimates</a></li>
+      <li><a href="https://www.federalreserve.gov/econres/scfindex.htm" target="_blank" rel="noopener">Federal Reserve — Survey of Consumer Finances reporting on household savings and net worth</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/freelance-rate-calc/"><span class="related-ico" aria-hidden="true">💼</span><span class="related-name">Freelance Rate Calculator</span></a><a class="related-item" href="https://tool-hub.me/gold-purity-calc/"><span class="related-ico" aria-hidden="true">🥇</span><span class="related-name">Gold Purity Calculator</span></a><a class="related-item" href="https://tool-hub.me/gratuity-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Gratuity Calculator</span></a><a class="related-item" href="https://tool-hub.me/gst-calc/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">GST Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다.
+         ★ FAQ 작성 후 반드시: node factory/gen-faq-schema.js <slug> --apply
+           → FAQPage JSON-LD 를 주입해 검색결과 리치 스니펫(FAQ 펼침)을 받는다.
+           스키마는 여기 보이는 원문과 일치해야 하므로(Google 요건) 문구를 고치면 다시 돌린다. -->
+    <details><summary data-i18n="faq.q1">What is a FIRE number, and how does the 4% rule calculate mine?</summary><p data-i18n="faq.a1">FIRE stands for Financial Independence, Retire Early — the point where your invested portfolio can sustainably cover your living costs without a paycheck. The 4% rule (drawn from retirement-withdrawal research) says you can withdraw about 4% of your portfolio in the first year of retirement and adjust for inflation after, so your FIRE number = annual expenses ÷ withdrawal rate. At 4% that's simply annual expenses × 25: spending 40,000 a year implies a 1,000,000 FIRE number. This calculator lets you adjust the withdrawal rate anywhere from 2% to 10%, with quick presets at 3%, 3.5%, 4%, and 5% for the range most FIRE planners actually use.</p></details>
+    <details><summary data-i18n="faq.q2">How is this different from the Coast FIRE and Barista FIRE calculators?</summary><p data-i18n="faq.a2">This FIRE calculator answers the core question: given your annual expenses, current savings, monthly investing, and expected return, how many years until you can fully retire on your investments alone? Coast FIRE asks a narrower question — has what you've already saved grown enough that you could stop contributing today and still coast to your number by a target retirement age? Barista FIRE shrinks the target itself, because ongoing part-time income covers part of your expenses forever. All three use the same 4%-rule math underneath; they just apply it to different situations, so it's worth checking all three if you're not sure which describes your plan.</p></details>
+    <details><summary data-i18n="faq.q3">Is a 4% withdrawal rate still considered safe, and when should I use a different one?</summary><p data-i18n="faq.a3">The 4% figure comes from historical U.S. market research (often called the Trinity study) testing 30-year retirements starting in different years — a 4% first-year withdrawal, adjusted for inflation, held up in the large majority of historical periods. It's a planning rule of thumb, not a guarantee: a lower rate like 3% or 3.5% is more conservative and suits longer retirements or more cautious investors, while some people stretch to 5% for shorter horizons or flexible spending. This calculator's chips let you compare 3%, 3.5%, 4%, and 5% instantly, and you can type any rate from 2% to 10%.</p></details>
+    <details><summary data-i18n="faq.q4">What are Lean, Regular, and Fat FIRE, and how does the tiers table work?</summary><p data-i18n="faq.a4">These are informal tiers describing how much someone plans to spend in retirement, not fixed dollar amounts. Lean FIRE means a stripped-down budget well below your current lifestyle; Regular FIRE keeps roughly the lifestyle you entered; Fat FIRE means spending significantly more, for a more comfortable or flexible retirement. Because "more" or "less" depends entirely on your own numbers, the tiers table takes the annual expenses you typed and shows the FIRE number and years-to-reach at half that amount (Lean), the amount as entered (Regular), and double that amount (Fat) — using the same savings, monthly investing, and return you set above.</p></details>
+    <details><summary data-i18n="faq.q5">Is this financial advice, and is any of my data sent to a server?</summary><p data-i18n="faq.a5">No. This is an educational, arithmetic projection based on the numbers you type — real markets don't grow at a constant rate every year, and this isn't investment, tax, or retirement advice. Everything runs locally in your browser; nothing is uploaded, there's no login, and your inputs are only saved to your device's local storage so the form remembers them next time. Use it to sanity-check your FIRE timeline, then talk to a qualified financial advisor for your actual plan.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

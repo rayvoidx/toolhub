@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-p5TQWw6RsoyE+pWkho0fNki8MqLZtkb09NSGh3MVeWs=' 'sha256-nkPsxxaiGCzfQwd6ELYCLpJptmom5HbUjeSgqRJgQvc=' 'sha256-1t1RIat3TRPqEBcqCTjenhuLXLOaDtrNrmQCGuXEZzs='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>수면 사이클 계산기</title>
+<meta name="description" content="무료 수면 사이클 계산기로, 90분 수면 주기를 온전히 완성해 몽롱함 없이 개운하게 일어날 수 있도록 잠들거나 일어나기 가장 좋은 시간을 찾아 줍니다. 기상 시간을 입력해 추천 취침 시간을 확인하거나, '지금 자기'를 눌러 최적의 기상 시간을 확인하세요. 잠드는 시간 조절 가능, 가입 불필요, 모든 계산은 브라우저 안에서 이루어집니다.">
+<meta name="keywords" content="sleep calculator, sleep cycle calculator, bedtime calculator, when should I go to sleep, 수면 사이클 계산기, 취침 시간 계산기">
+<link rel="canonical" href="https://tool-hub.me/sleep-cycle-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/sleep-cycle-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/sleep-cycle-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/sleep-cycle-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/sleep-cycle-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/sleep-cycle-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/sleep-cycle-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/sleep-cycle-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/sleep-cycle-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/sleep-cycle-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/sleep-cycle-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/sleep-cycle-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/sleep-cycle-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/sleep-cycle-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/sleep-cycle-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/sleep-cycle-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="수면 사이클 계산기">
+<meta property="og:description" content="무료 수면 사이클 계산기로, 90분 수면 주기를 온전히 완성해 몽롱함 없이 개운하게 일어날 수 있도록 잠들거나 일어나기 가장 좋은 시간을 찾아 줍니다. 기상 시간을 입력해 추천 취침 시간을 확인하거나, '지금 자기'를 눌러 최적의 기상 시간을 확인하세요. 잠드는 시간 조절 가능, 가입 불필요, 모든 계산은 브라우저 안에서 이루어집니다.">
+<meta property="og:url" content="https://tool-hub.me/sleep-cycle-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/sleep-cycle-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d28d9">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sleep Cycle Calculator",
+  "description": "Free sleep cycle calculator that finds the best times to go to bed or wake up so you complete full 90-minute sleep cycles and wake up refreshed instead of groggy. Enter your wake-up time to see recommended bedtimes, or tap 'Sleep now' for the best wake-up times. Adjustable fall-asleep time, no sign-up, computed entirely in your browser.",
+  "url": "https://tool-hub.me/sleep-cycle-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sleep Cycle Calculator",
+      "item": "https://tool-hub.me/sleep-cycle-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a sleep cycle, and why 90 minutes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "During the night your brain moves through repeating sleep cycles — light sleep, then deep sleep, then REM (dreaming) — before starting over. One full cycle lasts about 90 minutes on average, so a good night is usually made of several complete cycles rather than a fixed number of hours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many sleep cycles or hours of sleep do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most adults feel best on 5 to 6 full cycles a night, which is roughly 7.5 to 9 hours of sleep. This sleep cycle calculator highlights the 5- and 6-cycle options as recommended, and still shows shorter 3- to 4-cycle plans for the nights when you simply can't get a full rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it better to wake up at the end of a cycle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Waking in the middle of deep sleep triggers sleep inertia — that heavy, groggy feeling that can linger for a while. If your alarm lands at the end of a cycle, when sleep is lightest, you tend to wake up more easily and feel refreshed, even after the same amount of sleep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the calculator add about 15 minutes to fall asleep?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost nobody falls asleep the instant their head hits the pillow. This gap is called sleep latency, and it shifts your real bedtime. The bedtime calculator adds your fall-asleep time (15 minutes by default, adjustable from 0 to 60) so the cycles are counted from when you actually drift off, not from when you get into bed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this medical advice, and is my sleep data private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the times here are averages meant for general reference, not medical advice; if you have ongoing sleep problems, talk to a doctor. Your privacy is fully protected: every calculation runs inside your browser, your times are saved only on your own device, and nothing is ever sent to a server."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Sleep Cycle Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Sleep Cycle Calculator</span></nav>
+  <section class="hero">
+    <h1>Sleep Cycle Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">When should you go to bed to wake up refreshed? Get bedtimes that finish full 90-minute sleep cycles in seconds.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Sleep cycle calculator" data-i18n-aria-label="tool.aria">
+    <div role="radiogroup" aria-label="What do you want to calculate" data-i18n-aria-label="tool.modeAria"
+         style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
+      <label style="flex:1;min-width:170px;display:flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;cursor:pointer;font-weight:600;font-size:14px;margin:0;">
+        <input type="radio" name="scc-mode" value="wake" checked style="accent-color:var(--accent);width:auto;">
+        <span data-i18n="tool.modeWake">I want to wake up at…</span>
+      </label>
+      <label style="flex:1;min-width:170px;display:flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;cursor:pointer;font-weight:600;font-size:14px;margin:0;">
+        <input type="radio" name="scc-mode" value="bed" style="accent-color:var(--accent);width:auto;">
+        <span data-i18n="tool.modeBed">I'm going to bed at…</span>
+      </label>
+    </div>
+
+    <label id="time-label" for="scc-time">What time do you want to wake up?</label>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:stretch;">
+      <input type="time" id="scc-time" style="flex:1;min-width:150px;font-size:20px;font-variant-numeric:tabular-nums;">
+      <button class="btn" id="scc-sleep-now" type="button" data-i18n="tool.sleepNow"
+              style="margin-top:0;white-space:nowrap;background:var(--muted);">Sleep now</button>
+    </div>
+
+    <label for="scc-latency" data-i18n="tool.latencyLabel">Time it takes you to fall asleep (minutes)</label>
+    <input type="number" id="scc-latency" min="0" max="120" step="1" value="15" inputmode="numeric" autocomplete="off">
+
+    <details style="margin-top:14px;">
+      <summary style="cursor:pointer;font-weight:600;font-size:14px;color:var(--muted);" data-i18n="tool.advanced">Advanced: sleep cycle length</summary>
+      <label for="scc-cycle" data-i18n="tool.cycleLabel">Average sleep cycle length (minutes)</label>
+      <input type="number" id="scc-cycle" min="70" max="120" step="1" value="90" inputmode="numeric" autocomplete="off">
+      <p style="color:var(--muted);font-size:13px;margin:6px 0 0;" data-i18n="tool.cycleHint">Most people average about 90 minutes. Leave it at 90 unless you know yours is different.</p>
+    </details>
+
+    <button class="btn" id="scc-calc" type="button" data-i18n="tool.calc">Show my times</button>
+
+    <div class="result" id="scc-result" aria-live="polite" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How the sleep cycle calculator works</h2>
+    <p>Sleep is not one long flat state — it runs in repeating cycles. Each cycle moves you from light sleep (stages N1 and N2) into deep slow-wave sleep (N3) and finally into REM sleep, where most vivid dreaming happens. A full cycle averages about 90 minutes, and a typical night is built from five to six of them. This tool works backward or forward in whole 90-minute cycles so that your alarm lands at the <em>end</em> of a cycle, in light sleep, rather than in the middle of deep sleep.</p>
+    <p>Waking during deep sleep is what produces that heavy, disoriented feeling called sleep inertia. Waking at a cycle boundary is why seven and a half hours can leave you sharper than eight hours that end mid-cycle.</p>
+
+    <h3>Using the tool</h3>
+    <ol>
+      <li>Pick a mode: enter the time you must <strong>wake up</strong>, or the time you are <strong>going to bed</strong>.</li>
+      <li>Set how long you take to fall asleep (sleep latency). Fifteen minutes is a common default; healthy adults often fall between 10 and 20.</li>
+      <li>Leave the cycle length at 90 minutes unless you have tracked your own and know it differs.</li>
+    </ol>
+
+    <h3>The arithmetic behind it</h3>
+    <p>To hit a wake-up time, the tool subtracts latency and then whole cycles: <em>bedtime = wake time − latency − (n × 90 min)</em>, offering several values of n (usually 6, 5, and 4 cycles). In bedtime mode it adds instead: <em>wake time = bedtime + latency + (n × 90 min)</em>.</p>
+
+    <div class="example">
+      <strong>Example 1 — target wake time.</strong> You want to be up at 6:30 AM, with 15 minutes to fall asleep. Five cycles = 450 min = 7 h 30 m of sleep; add the 15-minute latency and you should be in bed by 10:45 PM. Six cycles (9 h) points to 9:15 PM.
+    </div>
+    <div class="example">
+      <strong>Example 2 — "sleep now".</strong> It is 11:20 PM and you press sleep now. Add 15 minutes to fall asleep (asleep near 11:35 PM). Five cycles later is 7:05 AM; four cycles gives a shorter 6:05 AM if you must be up early.
+    </div>
+
+    <h3>Cycles at a glance</h3>
+    <table>
+      <thead><tr><th>Cycles</th><th>Sleep time</th><th>Best for</th></tr></thead>
+      <tbody>
+        <tr><td>4</td><td>6 h 00 m</td><td>A short night; fine occasionally, not as a habit</td></tr>
+        <tr><td>5</td><td>7 h 30 m</td><td>A solid target for many adults</td></tr>
+        <tr><td>6</td><td>9 h 00 m</td><td>Full rest, recovery, catching up</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes and limits</h3>
+    <ul>
+      <li>Forgetting latency: counting cycles from the moment you get into bed, not from when you actually fall asleep, pushes every result off by 10 to 20 minutes.</li>
+      <li>Treating 90 minutes as exact: real cycles run roughly 80 to 120 minutes and lengthen across the night, with more REM toward morning. The tool uses an average, so treat the times as a helpful window, not a precise alarm.</li>
+      <li>Chasing cycle counts over total sleep: five cycles is a good target, but consistent sleep and wake times matter more than shaving a night to land on a boundary.</li>
+    </ul>
+    <p>This is educational information, not medical advice. Persistent trouble falling asleep, staying asleep, or daytime exhaustion is worth discussing with a qualified clinician rather than solving with timing alone.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.cdc.gov/sleep/" target="_blank" rel="noopener">CDC Sleep and Sleep Disorders — recommended sleep durations by age and sleep health basics</a></li>
+      <li><a href="https://www.nhlbi.nih.gov/health/sleep" target="_blank" rel="noopener">NIH National Heart, Lung, and Blood Institute — sleep stages, circadian rhythm, and why sleep matters</a></li>
+      <li><a href="https://www.nih.gov/" target="_blank" rel="noopener">National Institutes of Health — peer-reviewed research on sleep cycles and REM patterns</a></li>
+      <li><a href="https://www.who.int/" target="_blank" rel="noopener">World Health Organization — global guidance on healthy sleep and daytime function</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/smoking-cost-calc/"><span class="related-ico" aria-hidden="true">🚭</span><span class="related-name">Smoking Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/sod-calc/"><span class="related-ico" aria-hidden="true">🌿</span><span class="related-name">Sod Calculator</span></a><a class="related-item" href="https://tool-hub.me/solar-panel-calc/"><span class="related-ico" aria-hidden="true">☀️</span><span class="related-name">Solar Panel Calculator</span></a><a class="related-item" href="https://tool-hub.me/stair-calc/"><span class="related-ico" aria-hidden="true">🪜</span><span class="related-name">Stair Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is a sleep cycle, and why 90 minutes?</summary>
+      <p data-i18n="faq.a1">During the night your brain moves through repeating sleep cycles — light sleep, then deep sleep, then REM (dreaming) — before starting over. One full cycle lasts about 90 minutes on average, so a good night is usually made of several complete cycles rather than a fixed number of hours.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How many sleep cycles or hours of sleep do I need?</summary>
+      <p data-i18n="faq.a2">Most adults feel best on 5 to 6 full cycles a night, which is roughly 7.5 to 9 hours of sleep. This sleep cycle calculator highlights the 5- and 6-cycle options as recommended, and still shows shorter 3- to 4-cycle plans for the nights when you simply can't get a full rest.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Why is it better to wake up at the end of a cycle?</summary>
+      <p data-i18n="faq.a3">Waking in the middle of deep sleep triggers sleep inertia — that heavy, groggy feeling that can linger for a while. If your alarm lands at the end of a cycle, when sleep is lightest, you tend to wake up more easily and feel refreshed, even after the same amount of sleep.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why does the calculator add about 15 minutes to fall asleep?</summary>
+      <p data-i18n="faq.a4">Almost nobody falls asleep the instant their head hits the pillow. This gap is called sleep latency, and it shifts your real bedtime. The bedtime calculator adds your fall-asleep time (15 minutes by default, adjustable from 0 to 60) so the cycles are counted from when you actually drift off, not from when you get into bed.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is this medical advice, and is my sleep data private?</summary>
+      <p data-i18n="faq.a5">No — the times here are averages meant for general reference, not medical advice; if you have ongoing sleep problems, talk to a doctor. Your privacy is fully protected: every calculation runs inside your browser, your times are saved only on your own device, and nothing is ever sent to a server.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

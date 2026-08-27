@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-62U4OCb4rEvhk20ShwkEtk5tkhFmJJe8wX4HkSiILp4=' 'sha256-4KVu1CmYZD6G4dMnfk8lqRbPsZax75gdB97kKi+2ag8=' 'sha256-6Es33ymJ1VfN7IgRbiPMKTnkIH+ZdRWMrgyLT0PfxNc='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>QR 코드 생성기</title>
+<meta name="description" content="URL이나 텍스트를 입력하면 브라우저 안에서 즉시 QR 코드를 만들고 PNG로 다운로드하는 무료 QR 코드 생성기. 가입 없음, 만료 없음, 서버 전송 없음.">
+<meta name="keywords" content="QR code generator, free QR code generator, QR code maker no sign up, permanent QR code, QR 코드 생성기, QR 코드 만들기">
+<link rel="canonical" href="https://tool-hub.me/qr-gen/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/qr-gen/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/qr-gen/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/qr-gen/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/qr-gen/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/qr-gen/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/qr-gen/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/qr-gen/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/qr-gen/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/qr-gen/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/qr-gen/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/qr-gen/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/qr-gen/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/qr-gen/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/qr-gen/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/qr-gen/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="QR 코드 생성기">
+<meta property="og:description" content="URL이나 텍스트를 입력하면 브라우저 안에서 즉시 QR 코드를 만들고 PNG로 다운로드하는 무료 QR 코드 생성기. 가입 없음, 만료 없음, 서버 전송 없음.">
+<meta property="og:url" content="https://tool-hub.me/qr-gen/ko/">
+<meta property="og:image" content="https://tool-hub.me/qr-gen/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#65a30d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "QR Code Generator",
+  "description": "Free QR code generator that creates permanent, never-expiring QR codes right in your browser and downloads them as PNG. No sign-up, no watermark, no server upload.",
+  "url": "https://tool-hub.me/qr-gen/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "QR Code Generator",
+      "item": "https://tool-hub.me/qr-gen/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does the QR code expire?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This QR code generator creates static QR codes: your content is encoded directly into the pattern itself, so there is nothing to expire. Codes that stop working come from dynamic QR services that route through a short link. A code made here keeps working forever, even in print."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my URL or text uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. QR code generation runs 100% in your browser — neither your input nor the generated image is ever transmitted. Only your settings (size and error correction level) are kept in this browser's localStorage; the text itself is never stored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My QR code won't scan — what should I check?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Check in order: ① the white margin (quiet zone) around the code hasn't been cropped, ② the printed size is large enough (roughly 1/10 of the scanning distance), ③ there is strong contrast with the background, ④ for long content, raise the error correction level or shorten the URL. This free QR code generator always outputs the required 4-module quiet zone."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between error correction levels L, M, Q and H?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is how much of the code can be damaged and still scan: L ≈ 7%, M ≈ 15%, Q ≈ 25%, H ≈ 30%. Higher levels make the pattern denser and reduce the maximum text length. M suits most uses; pick H if a logo will overlap the code or it may get dirty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use the QR codes commercially?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. QR codes you generate and download as PNG are yours to use freely — business cards, menus, posters, packaging, slides and any other commercial use — with no watermark, no fees and no restrictions."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>QR Code Generator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0891b2" href="https://tool-hub.me/business-tools/">Business</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">QR Code Generator</span></nav>
+  <section class="hero">
+    <h1>QR Code Generator</h1>
+    <p class="lede" data-i18n="hero.lede">Your QR code appears as you type. No sign-up, no expiration, and nothing is ever sent to a server.</p>
+  </section>
+
+  <!-- TOOL:START — QR code generator. Engine: vendor/qrcode.js (self-implemented, 100% client-side).
+       i18n: every visible string carries a data-i18n hook; keys live in js/locales.js (all 14 locales). -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <label for="qr-text" data-i18n="tool.textLabel">URL or text</label>
+    <textarea id="qr-text" rows="3" dir="auto" autocomplete="off" autocapitalize="off" spellcheck="false"
+              placeholder="https://tool-hub.me or any text" data-i18n-placeholder="tool.textPlaceholder"></textarea>
+
+    <label for="qr-size" data-i18n="tool.sizeLabel">Image size (PNG)</label>
+    <select id="qr-size">
+      <option value="128">128 × 128 px</option>
+      <option value="256">256 × 256 px</option>
+      <option value="512" selected>512 × 512 px</option>
+      <option value="1024">1024 × 1024 px</option>
+      <option value="2048">2048 × 2048 px</option>
+      <option value="custom" data-i18n="tool.size.custom">Custom size…</option>
+    </select>
+
+    <div id="qr-custom-row" hidden>
+      <label for="qr-custom-size" data-i18n="tool.customSizeLabel">Custom size (64–4096 px)</label>
+      <input id="qr-custom-size" type="number" inputmode="numeric" min="64" max="4096" step="1" value="512">
+    </div>
+
+    <label for="qr-ec" data-i18n="tool.ecLabel">Error correction level</label>
+    <select id="qr-ec">
+      <option value="L" data-i18n="tool.ec.l">L — recovers ~7% damage · highest capacity</option>
+      <option value="M" selected data-i18n="tool.ec.m">M — recovers ~15% damage (recommended)</option>
+      <option value="Q" data-i18n="tool.ec.q">Q — recovers ~25% damage</option>
+      <option value="H" data-i18n="tool.ec.h">H — recovers ~30% damage · for logo overlays</option>
+    </select>
+
+    <div class="result" id="qr-result" style="text-align:center">
+      <p id="qr-message" style="margin:0" data-i18n="tool.empty">Enter a URL or text above and your QR code will appear instantly.</p>
+      <div id="qr-preview-wrap" hidden>
+        <canvas id="qr-canvas" width="512" height="512" role="img"
+                aria-label="Generated QR code preview" data-i18n-aria-label="tool.preview"
+                style="width:100%;max-width:280px;height:auto;background:#fff;border:1px solid var(--line);border-radius:8px"></canvas>
+        <p id="qr-stats" style="margin:10px 0 0;font-size:13.5px;color:var(--muted)"></p>
+      </div>
+    </div>
+
+    <button id="qr-download" class="btn" type="button" disabled data-i18n="tool.download">Download PNG</button>
+    <p style="margin:14px 0 0;font-size:13.5px;color:var(--muted)" data-i18n="tool.privacy">Nothing you type is sent anywhere — the code is generated 100% inside your browser.</p>
+  </section>
+  <script src="../vendor/qrcode.js"></script>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English enrichment (unique). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>What a QR code actually stores</h2>
+    <p>A QR code is a two-dimensional barcode that holds text directly in its grid of black and white squares, called modules. When you encode a web address, a Wi-Fi network, a phone number, or a block of plain text, the characters themselves are baked into the image — there is no lookup and no server in the middle. That is what makes a code generated here <em>static</em>: because the data lives in the pattern, the code never expires and keeps working in print for as long as the ink survives.</p>
+    <p>This is the key difference from the "dynamic" QR codes sold by some marketing services. Those encode a short redirect link that points to the real destination, so they can be edited or tracked later — but they stop working if that service takes the link down. A static code has no such dependency, at the cost of not being editable once printed.</p>
+
+    <h3>Choosing size and error correction</h3>
+    <p>Two settings decide whether a code scans reliably: its printed size and its error-correction level. A useful rule of thumb is that the code should be at least one tenth of the distance it will be scanned from. Error correction adds redundant data so the code still reads when part of it is dirty, damaged, or covered by a logo — but higher correction makes the pattern denser and lowers how much text fits.</p>
+
+    <div class="example">
+      <strong>Example 1 — Poster on a wall.</strong> If people scan from about 3 metres away, aim for a printed code at least 30 cm on each side (3 m ÷ 10). Much smaller and phones struggle to lock on from across the room.
+    </div>
+    <div class="example">
+      <strong>Example 2 — Logo in the middle.</strong> Placing a logo over the centre covers part of the pattern. Choosing level H (about 30% recovery) lets the code absorb that loss and still scan, which is why H is the usual pick for branded codes.
+    </div>
+    <div class="example">
+      <strong>Example 3 — A long link.</strong> A long address such as shop.example/products/spring-2026?ref=flyer packs in many characters, making the grid denser. At level L the pattern stays sparser and easier to scan; if it still looks crowded, shortening the link helps more than enlarging the image.
+    </div>
+
+    <h3>Error-correction levels at a glance</h3>
+    <table>
+      <thead><tr><th>Level</th><th>Recovers up to</th><th>Capacity</th><th>Best for</th></tr></thead>
+      <tbody>
+        <tr><th>L</th><td>~7%</td><td>Highest</td><td>Clean screens, long links</td></tr>
+        <tr><th>M</th><td>~15%</td><td>High</td><td>Everyday use (default)</td></tr>
+        <tr><th>Q</th><td>~25%</td><td>Medium</td><td>Small prints, light wear</td></tr>
+        <tr><th>H</th><td>~30%</td><td>Lowest</td><td>Logo overlays, rough surfaces</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Why a code fails to scan</h3>
+    <p>When a code will not read, check four things in order: the plain margin around it (the "quiet zone") must not be cropped — this tool always outputs the required four-module border; the contrast should be strong, ideally dark on a light background rather than the reverse; the print must be large enough for the scanning distance; and very long content may need a shorter link or a higher correction level. Because everything is generated inside your browser, the text you encode is never uploaded, and the downloaded PNG is a plain image you can use anywhere — menus, packaging, slides, or handouts — with no watermark and no expiry.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.iso.org/" target="_blank" rel="noopener">ISO — publisher of ISO/IEC 18004, the QR code symbology standard covering module structure, quiet zone and error correction levels</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc3986" target="_blank" rel="noopener">RFC 3986 (IETF) — URI syntax rules that determine how a link encoded in a QR code must be written and escaped</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API" target="_blank" rel="noopener">MDN Web Docs — Canvas API reference for rendering and exporting the generated code as a PNG in the browser</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/quadratic-solver/"><span class="related-ico" aria-hidden="true">✖️</span><span class="related-name">Quadratic Equation Solver</span></a><a class="related-item" href="https://tool-hub.me/ratio-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">Ratio Calculator</span></a><a class="related-item" href="https://tool-hub.me/safety-stock-batch/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">Safety Stock &amp; Reorder Point Batch Calculato</span></a><a class="related-item" href="https://tool-hub.me/slope-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Slope Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — 5 Q&As, keys faq.q1-5/a1-5 in js/locales.js (all 14 locales) -->
+    <details>
+      <summary data-i18n="faq.q1">Does the QR code expire?</summary>
+      <p data-i18n="faq.a1">No. This QR code generator creates static QR codes: your content is encoded directly into the pattern itself, so there is nothing to expire. Codes that stop working come from dynamic QR services that route through a short link. A code made here keeps working forever, even in print.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Is my URL or text uploaded to a server?</summary>
+      <p data-i18n="faq.a2">No. QR code generation runs 100% in your browser — neither your input nor the generated image is ever transmitted. Only your settings (size and error correction level) are kept in this browser's localStorage; the text itself is never stored.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">My QR code won't scan — what should I check?</summary>
+      <p data-i18n="faq.a3">Check in order: ① the white margin (quiet zone) around the code hasn't been cropped, ② the printed size is large enough (roughly 1/10 of the scanning distance), ③ there is strong contrast with the background, ④ for long content, raise the error correction level or shorten the URL. This free QR code generator always outputs the required 4-module quiet zone.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What is the difference between error correction levels L, M, Q and H?</summary>
+      <p data-i18n="faq.a4">It is how much of the code can be damaged and still scan: L ≈ 7%, M ≈ 15%, Q ≈ 25%, H ≈ 30%. Higher levels make the pattern denser and reduce the maximum text length. M suits most uses; pick H if a logo will overlap the code or it may get dirty.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can I use the QR codes commercially?</summary>
+      <p data-i18n="faq.a5">Yes. QR codes you generate and download as PNG are yours to use freely — business cards, menus, posters, packaging, slides and any other commercial use — with no watermark, no fees and no restrictions.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

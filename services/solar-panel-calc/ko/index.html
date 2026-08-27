@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-9kihIbyD/ZD+9Olu1SVe21TdUOnwYcYtWRXVNQFw86A=' 'sha256-W0xAZzQs36XOmVikbg9Z/i0Eb5zo4AP+LMGwHZa+Bk4=' 'sha256-YeTZioIeOg61HBTLHrqWfkY2H6DUi2kmAZhLPwGXZyw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>태양광 패널 계산기 — 패널 몇 장이 필요할까</title>
+<meta name="description" content="월 전력 사용량(kWh)과 일조시간, 패널 출력으로 필요한 태양광 패널 수를 계산합니다. 시스템 용량(kW), 필요 지붕 면적, 연간 발전량까지 한 번에 확인하세요.">
+<meta name="keywords" content="solar panel calculator, how many solar panels do i need, solar system size calculator, kwh to solar panels, solar panel sizing, solar array size">
+<link rel="canonical" href="https://tool-hub.me/solar-panel-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/solar-panel-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/solar-panel-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/solar-panel-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/solar-panel-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/solar-panel-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/solar-panel-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/solar-panel-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/solar-panel-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/solar-panel-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/solar-panel-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/solar-panel-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/solar-panel-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/solar-panel-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/solar-panel-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/solar-panel-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="태양광 패널 계산기 — 패널 몇 장이 필요할까">
+<meta property="og:description" content="월 전력 사용량(kWh)과 일조시간, 패널 출력으로 필요한 태양광 패널 수를 계산합니다. 시스템 용량(kW), 필요 지붕 면적, 연간 발전량까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/solar-panel-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/solar-panel-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#ca8a04">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Solar Panel Calculator",
+  "description": "Work out how many solar panels you need from your monthly kWh usage, peak sun hours and panel wattage. Get system size in kW, roof area and annual output.",
+  "url": "https://tool-hub.me/solar-panel-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Solar Panel Calculator",
+      "item": "https://tool-hub.me/solar-panel-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why won't solar panels take my bill to zero?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Panels only make power in daylight, so anything you use at night comes back off the grid. Whether your daytime surplus pays for that depends on your utility's net metering or export rate, which is often well below the retail price you pay. Seasonality matters too: a system sized for the year overproduces in June and falls short in December. Most owners still see a fixed service charge on every bill."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do the panels have to face south?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In the northern hemisphere, true south at roughly your latitude tilt is ideal, but the penalty for being off is smaller than people expect. East or west facing roofs typically lose about 15 to 20 percent of annual output, and south-east or south-west only 5 to 8 percent. A flat roof with tilted racking gets close to optimal. In the southern hemisphere, flip all of that to north."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many batteries do I need with this system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Battery sizing is a separate question, driven by how much energy you want to carry through the night or an outage rather than by annual production. A rough starting point is your evening and overnight use — often 30 to 50 percent of daily kWh, so 9 to 15 kWh for a home using 30 kWh a day. Usable capacity is less than nameplate, because depth of discharge and round-trip efficiency each take a cut."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the payback period?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool deliberately does not compute payback, because it hinges on numbers no calculator can guess for you: your local electricity rate and how fast it rises, installed cost per watt in your area, national and state incentives, and your export rate. In the US, the 30 percent residential credit plus rates above 20 cents per kWh often puts payback in the 7 to 10 year range; cheap power stretches it past 15."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Solar Panel Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Solar Panel Calculator</span></nav>
+  <section class="hero">
+    <h1>Solar Panel Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Your bill's kWh, your sun hours, your roof — panel count in one step.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:6px; }
+      #tool .warn { font-size:13px; color:#b45309; font-weight:600; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="usage" data-i18n="tool.usage.label">Monthly electricity use (kWh)</label>
+    <input type="number" id="usage" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="900">
+    <p class="subtle" data-i18n="tool.usage.hint">Take the kWh figure from your latest utility bill.</p>
+
+    <div class="field-row">
+      <div>
+        <label for="sun" data-i18n="tool.sun.label">Peak sun hours per day</label>
+        <select id="sun">
+          <option value="2.8" data-i18n="tool.sun.uk">2.8 — UK and northern Europe</option>
+          <option value="3.5" data-i18n="tool.sun.low">3.5 — northern or cloudy (Seattle, Michigan)</option>
+          <option value="4.5" selected data-i18n="tool.sun.avg">4.5 — US average</option>
+          <option value="5.5" data-i18n="tool.sun.high">5.5 — sunbelt (Arizona, Nevada, west Texas)</option>
+          <option value="custom" data-i18n="tool.sun.custom">Custom value</option>
+        </select>
+      </div>
+      <div>
+        <label for="panelw" data-i18n="tool.panel.label">Panel wattage</label>
+        <select id="panelw">
+          <option value="350" data-i18n="tool.panel.p350">350 W — older or budget panels</option>
+          <option value="400" selected data-i18n="tool.panel.p400">400 W — typical residential today</option>
+          <option value="450" data-i18n="tool.panel.p450">450 W — premium high-efficiency</option>
+          <option value="500" data-i18n="tool.panel.p500">500 W — large-format panels</option>
+          <option value="custom" data-i18n="tool.panel.custom">Custom value</option>
+        </select>
+      </div>
+    </div>
+    <div id="sun-custom-wrap" hidden>
+      <label for="sunc" data-i18n="tool.sun.customlabel">Your peak sun hours</label>
+      <input type="number" id="sunc" inputmode="decimal" min="1" max="9" step="any" autocomplete="off" placeholder="4.5">
+    </div>
+    <div id="panel-custom-wrap" hidden>
+      <label for="panelc" data-i18n="tool.panel.customlabel">Your panel wattage (W)</label>
+      <input type="number" id="panelc" inputmode="decimal" min="50" max="800" step="any" autocomplete="off" placeholder="400">
+    </div>
+    <p class="subtle" data-i18n="tool.sun.note">Peak sun hours come from NREL insolation maps — pick the zone you actually live in, not your number of daylight hours.</p>
+
+    <label for="losses" data-i18n="tool.loss.label">System losses (%)</label>
+    <input type="number" id="losses" inputmode="decimal" min="0" max="60" step="any" autocomplete="off" placeholder="14">
+    <p class="subtle" data-i18n="tool.loss.note">Inverter conversion, wiring, soiling, heat and mismatch. 14% is the standard industry assumption.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.panels">Panels needed</div>
+          <div class="rc-val" id="r-panels">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.size">System size</div><div class="rc-val" id="r-size">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.roof">Roof area needed</div><div class="rc-val" id="r-roof">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.prod">Annual production</div><div class="rc-val" id="r-prod">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cover">Share of your usage</div><div class="rc-val" id="r-cover">—</div></div>
+      </div>
+      <p class="warn" id="r-warn" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.site" style="margin-top:12px;">A planning estimate, not a quote. Shading, roof pitch, orientation and your utility's rules decide the real system — a site survey wins.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How many solar panels do I need? The full chain, with numbers</h2>
+    <p>Every honest sizing estimate runs through the same four steps: how much electricity you use, how much sun your roof actually gets, how much of that survives the equipment, and how big each panel is. Everything else — quotes, financing, brand arguments — sits on top of that arithmetic. Here is the whole chain worked through with the default figures in the calculator above.</p>
+    <p>Start with a US home using <strong>900 kWh a month</strong>, which is close to the national average of roughly 10,500 kWh a year. Divide by 30 and you need about <strong>30 kWh per day</strong>. Take 4.5 peak sun hours (the rough US average) and 14% system losses, which leaves a derate factor of 0.86. Required array size is 30 / (4.5 x 0.86) = <strong>7.75 kW</strong>. With 400 W panels that is 7,752 / 400 = 19.4 panels, and since nobody sells four tenths of a panel you round up to <strong>20 panels</strong>.</p>
+    <p>Twenty 400 W panels is an installed 8.0 kW array. Run it forward: 8.0 x 4.5 x 365 x 0.86 = about <strong>11,300 kWh a year</strong> against 10,800 kWh of usage, so roughly 105% coverage on paper. At about 21 square feet per panel including framing and row gaps, you need around <strong>420 sq ft (39 m²)</strong> of unshaded roof — noticeably more than a single small roof face on many houses, which is why installers often split arrays across two planes.</p>
+
+    <h3>What "peak sun hours" actually means</h3>
+    <p>This is the single most misread input. Peak sun hours are not daylight hours. One peak sun hour equals 1,000 watts per square metre falling on the panel for one hour — the standard test condition panels are rated at. A location with 4.5 peak sun hours might have 14 hours of daylight in June; the metric compresses the whole day's varying irradiance into an equivalent number of full-strength hours. That is why Seattle sits near 3.5 and Phoenix near 6.0 despite similar day lengths, and why the NREL insolation maps are the right source rather than a weather app's "hours of sunshine".</p>
+    <p>UK readers should note the numbers run lower: much of England averages closer to 2.5 to 3.0 peak sun hours annually, so at 3.0 the same 900 kWh home would need about 11.6 kW — 30 panels rather than 20. That is a real constraint on British roofs and part of why UK sizing conversations lean on export tariffs and batteries more heavily than US ones.</p>
+
+    <h3>System losses: why 14%</h3>
+    <p>The 14% default is the PVWatts standard assumption and breaks down roughly as inverter conversion (2 to 4%), DC and AC wiring (2%), soiling (2%, more in dusty or pollen-heavy areas), heat derating (a panel at 65°C produces several percent less than at its 25°C rating), module mismatch, and light-induced degradation. Push it to 20% if you have dusty conditions, long cable runs, or a hot roof with no ventilation gap; drop it toward 10% only with microinverters, clean air and a cool climate. Note the calculator falls back to 14% rather than 0% if you clear the field, because a zero-loss assumption quietly inflates production by about a sixth.</p>
+
+    <h2>Should you oversize the array?</h2>
+    <p>This is genuinely policy-dependent, not a matter of taste. Under one-to-one net metering — where every exported kWh is credited at the retail rate — building to 100 to 110% of annual usage is usually the right call, since the grid acts as a free, lossless battery across seasons. Under net billing schemes like California's NEM 3.0, exports are credited at a fraction of retail, so oversizing sends surplus power out at a bad price. In those markets, sizing nearer 80% of usage and adding storage typically beats a bigger array. Check your utility's export rate before deciding — it changes the answer more than any hardware choice.</p>
+
+    <h3>The shade reality check</h3>
+    <p>Shade is where paper estimates die. A single chimney shadow crossing one panel can drag down a whole string on a traditional string inverter, which is why microinverters or DC optimisers are standard on complex roofs. Afternoon shade from a neighbour's oak costs far more than the same shade at 8am, because irradiance peaks midday. Before trusting any panel count, stand on your roof (or use a satellite tool) and check the arc from about 9am to 3pm year-round — winter shadows run three times longer than summer ones.</p>
+
+    <h3>Where this estimate stops</h3>
+    <p>Four things this calculator deliberately does not model: roof orientation and tilt penalties (east or west costs 15 to 20% of annual output), panel degradation (about 0.5% a year, so year 25 output is roughly 88% of year one), local permitting or interconnection caps that limit system size, and cost or payback. A professional site survey brings a shade analysis, a structural check on your rafters, and your utility's actual interconnection rules. Use the number above to know whether you are shopping for a 6 kW or a 12 kW system, then let a surveyor settle the last 20%.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://pvwatts.nrel.gov/" target="_blank" rel="noopener">NREL PVWatts Calculator — official production model behind peak sun hours and the 14% system-loss default</a></li>
+      <li><a href="https://www.energy.gov/eere/solar/homeowners-guide-going-solar" target="_blank" rel="noopener">U.S. Department of Energy — homeowner's guide to sizing, permitting and interconnection</a></li>
+      <li><a href="https://www.eia.gov/tools/faqs/faq.php?id=97" target="_blank" rel="noopener">U.S. Energy Information Administration — average household electricity use used as the starting kWh figure</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/stair-calc/"><span class="related-ico" aria-hidden="true">🪜</span><span class="related-name">Stair Calculator</span></a><a class="related-item" href="https://tool-hub.me/stud-calc/"><span class="related-ico" aria-hidden="true">🪚</span><span class="related-name">Stud Calculator</span></a><a class="related-item" href="https://tool-hub.me/tank-volume-calc/"><span class="related-ico" aria-hidden="true">🛢️</span><span class="related-name">Tank Volume Calculator</span></a><a class="related-item" href="https://tool-hub.me/tile-calc/"><span class="related-ico" aria-hidden="true">🔲</span><span class="related-name">Tile Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why won't solar panels take my bill to zero?</summary><p data-i18n="faq.a1">Panels only make power in daylight, so anything you use at night comes back off the grid. Whether your daytime surplus pays for that depends on your utility's net metering or export rate, which is often well below the retail price you pay. Seasonality matters too: a system sized for the year overproduces in June and falls short in December. Most owners still see a fixed service charge on every bill.</p></details>
+    <details><summary data-i18n="faq.q2">Do the panels have to face south?</summary><p data-i18n="faq.a2">In the northern hemisphere, true south at roughly your latitude tilt is ideal, but the penalty for being off is smaller than people expect. East or west facing roofs typically lose about 15 to 20 percent of annual output, and south-east or south-west only 5 to 8 percent. A flat roof with tilted racking gets close to optimal. In the southern hemisphere, flip all of that to north.</p></details>
+    <details><summary data-i18n="faq.q3">How many batteries do I need with this system?</summary><p data-i18n="faq.a3">Battery sizing is a separate question, driven by how much energy you want to carry through the night or an outage rather than by annual production. A rough starting point is your evening and overnight use — often 30 to 50 percent of daily kWh, so 9 to 15 kWh for a home using 30 kWh a day. Usable capacity is less than nameplate, because depth of discharge and round-trip efficiency each take a cut.</p></details>
+    <details><summary data-i18n="faq.q4">What is the payback period?</summary><p data-i18n="faq.a4">This tool deliberately does not compute payback, because it hinges on numbers no calculator can guess for you: your local electricity rate and how fast it rises, installed cost per watt in your area, national and state incentives, and your export rate. In the US, the 30 percent residential credit plus rates above 20 cents per kWh often puts payback in the 7 to 10 year range; cheap power stretches it past 15.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

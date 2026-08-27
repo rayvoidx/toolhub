@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-m/DjZKzOP721neitMHaCeBpUIW+I5ft2D3RbHI3pRV4=' 'sha256-J/5otqPsksGiTlg7U4A3HQjrKgVuJu9dT1LAhcjnlC0=' 'sha256-vIIpf7F0CMR1vIT/jMmYg8GXxgb2ZUoyYk+4wLDwMuA='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지붕 물매 계산기 — 경사도·각도·기울기 변환</title>
+<meta name="description" content="지붕 물매를 rise/run, 각도, 기울기 퍼센트로 서로 변환합니다. x/12 물매, 지붕 각도, 서까래 길이 배수와 자재 한계까지 한 번에 확인하세요.">
+<meta name="keywords" content="roof pitch calculator, roof pitch, rise over run roof, roof angle calculator, roof slope percentage, rafter length calculator">
+<link rel="canonical" href="https://tool-hub.me/roof-pitch-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/roof-pitch-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/roof-pitch-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/roof-pitch-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/roof-pitch-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/roof-pitch-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/roof-pitch-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/roof-pitch-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/roof-pitch-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/roof-pitch-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/roof-pitch-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/roof-pitch-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/roof-pitch-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/roof-pitch-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/roof-pitch-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/roof-pitch-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="지붕 물매 계산기 — 경사도·각도·기울기 변환">
+<meta property="og:description" content="지붕 물매를 rise/run, 각도, 기울기 퍼센트로 서로 변환합니다. x/12 물매, 지붕 각도, 서까래 길이 배수와 자재 한계까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/roof-pitch-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/roof-pitch-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7f1d1d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Roof Pitch Calculator",
+  "description": "Convert roof pitch between rise over run, degrees and slope percent. Get pitch in x/12, roof angle, rafter length multiplier and material limits.",
+  "url": "https://tool-hub.me/roof-pitch-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Roof Pitch Calculator",
+      "item": "https://tool-hub.me/roof-pitch-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between roof pitch, angle and slope?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pitch is the rise over a 12-unit run written as x/12, so 6/12 means 6 inches of rise per 12 inches of run. The angle is that same ratio in degrees: 6/12 is 26.57°. Slope percent is rise divided by run times 100, so 6/12 is 50%. All three describe one geometry — roofers use x/12, engineers use degrees, drainage codes use percent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum roof pitch for asphalt shingles?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manufacturers rate standard and architectural shingles for 4/12 and steeper with ordinary underlayment. Between 2/12 and 4/12 they are still allowed, but the instructions require a doubled or self-adhering underlayment across the whole deck. Below 2/12 shingles are not approved at all; that range needs a membrane or standing-seam metal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How steep can a roof be and still be walkable?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most roofers treat 6/12, about 26.6°, as the limit for walking a dry deck in normal boots. From 7/12 to 9/12 you want roof jacks or a harness, and anything above 9/12 becomes a staged job with fall protection. Wet, mossy or frosted surfaces pull that limit down by two or three pitch points."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What roof pitch is best for heavy snow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Snow country favours steep roofs. A pitch of 6/12 or more sheds most snow before it builds up, and mountain builders often go to 10/12 or 12/12. A shallow 3/12 roof holds snow, so it has to be framed for the load instead — and at low pitches ice-dam protection along the eaves matters more than the pitch number."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Roof Pitch Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Roof Pitch Calculator</span></nav>
+  <section class="hero">
+    <h1>Roof Pitch Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">One measurement, every number: x/12 pitch, degrees, slope percent and rafter length.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:28px; }
+      #tool .rcard.wide { grid-column:1 / -1; }
+      #tool .rc-note { font-size:13px; color:var(--muted); margin-top:6px; line-height:1.5; }
+      #tool .span-row { display:flex; gap:8px; align-items:center; }
+      #tool .span-row input { flex:1 1 auto; }
+      #tool .span-row select { flex:0 0 auto; width:auto; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="mode" data-i18n="tool.mode.label">What you already know</label>
+    <select id="mode">
+      <option value="riserun" data-i18n="tool.mode.riserun">Rise and run</option>
+      <option value="angle" data-i18n="tool.mode.angle">Roof angle in degrees</option>
+      <option value="pitch" data-i18n="tool.mode.pitch">Pitch (x in 12)</option>
+    </select>
+
+    <div id="row-riserun" class="field-row">
+      <div>
+        <label for="rise" data-i18n="tool.rise.label">Rise (vertical)</label>
+        <input type="number" id="rise" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="6">
+      </div>
+      <div>
+        <label for="run" data-i18n="tool.run.label">Run (horizontal)</label>
+        <input type="number" id="run" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="12">
+      </div>
+    </div>
+
+    <div id="row-angle" hidden>
+      <label for="angle" data-i18n="tool.angle.label">Roof angle (degrees)</label>
+      <input type="number" id="angle" inputmode="decimal" min="0" max="89" step="any" autocomplete="off" placeholder="26.57">
+    </div>
+
+    <div id="row-pitch" hidden>
+      <label for="pitch" data-i18n="tool.pitch.label">Pitch — rise per 12 of run</label>
+      <input type="number" id="pitch" inputmode="decimal" min="0" max="48" step="any" autocomplete="off" placeholder="6">
+    </div>
+
+    <div>
+      <label for="span" data-i18n="tool.span.label">Building span — optional</label>
+      <div class="span-row">
+        <input type="number" id="span" inputmode="decimal" min="0.3" max="200" step="any" autocomplete="off" placeholder="24">
+        <select id="span-unit" data-i18n-aria-label="tool.span.label" aria-label="Building span unit">
+          <option value="ft">ft</option>
+          <option value="m">m</option>
+        </select>
+      </div>
+    </div>
+
+    <p class="subtle" data-i18n="tool.units.note">Use the same unit for rise and run. US framing measures the rise over a 12-inch run, which is where x/12 comes from.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate pitch</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.pitch">Roof pitch</div>
+          <div class="rc-val" id="r-pitch">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.angle">Roof angle</div><div class="rc-val" id="r-angle">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.slope">Slope</div><div class="rc-val" id="r-slope">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.mult">Rafter multiplier</div><div class="rc-val" id="r-mult">—</div></div>
+        <div class="rcard"><div class="rc-label" id="r-rafter-label">Rafter for a 24 ft span</div><div class="rc-val" id="r-rafter">—</div></div>
+        <div class="rcard wide">
+          <div class="rc-label" data-i18n="tool.r.category">Category</div>
+          <div class="rc-val" id="r-cat">—</div>
+          <p class="rc-note" id="r-cat-note"></p>
+        </div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disc">Planning estimates. Rafter figures are the line length from ridge to wall plate — add the overhang and subtract half the ridge board before cutting.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What roof pitch actually measures</h2>
+    <p>Roof pitch is a ratio, not a length. It compares the vertical rise of the roof to the horizontal run underneath it, and in the US and UK trades that run is fixed at 12 units. A 6/12 roof climbs 6 inches for every 12 inches you travel horizontally. That single ratio decides the angle you cut the rafters, how long those rafters have to be, which roofing materials the manufacturer will warranty, and whether anyone can safely walk on the finished roof.</p>
+    <p>Three notations describe the same thing. Roofers say "six twelve". Engineers and solar installers use degrees. Drainage and code documents use percent. Converting between them is trigonometry: the angle is the arctangent of rise divided by run, and the percent is simply rise divided by run times 100.</p>
+
+    <h3>Worked example: a 6/12 roof, every way of saying it</h3>
+    <p>Start with rise 6 and run 12. The ratio is 6 / 12 = 0.5.</p>
+    <p>Pitch: 0.5 x 12 = <strong>6/12</strong>. Angle: arctan(0.5) = <strong>26.57 degrees</strong>. Slope: 0.5 x 100 = <strong>50 percent</strong>. Note that 50 percent slope is not a 45 degree roof — that catches people out constantly. A 45 degree roof is 12/12, which is 100 percent slope.</p>
+
+    <h3>Worked example: rafter length for a 24 ft span</h3>
+    <p>The rafter multiplier is the hypotenuse of a right triangle with legs 1 and rise/run, so it equals the square root of 1 + (rise/run) squared. For 6/12 that is the square root of 1.25, or <strong>1.1180</strong>. Multiply it by the horizontal run to get the sloped length.</p>
+    <p>On a simple gable, each rafter only spans half the building. A 24 ft wide house gives a 12 ft run per side. So 12 x 1.1180 = <strong>13.42 ft, or 13 ft 5 in</strong>, measured along the roof line from the ridge to the outside of the wall plate. Before cutting, add your eave overhang (commonly 12 to 24 in) and subtract half the thickness of the ridge board, since the calculation runs to the theoretical peak rather than to the face of the ridge.</p>
+    <p>A few multipliers are worth memorising: 4/12 is 1.0541, 6/12 is 1.1180, 8/12 is 1.2019, 9/12 is exactly 1.25 (the classic 3-4-5 triangle), and 12/12 is 1.4142. The same multiplier converts roof area: a 24 x 40 ft footprint is 960 sq ft of plan area, which at 6/12 becomes 960 x 1.1180 = about 1,073 sq ft of roof surface to shingle, before waste.</p>
+
+    <h2>Material minimums, and why they exist</h2>
+    <p>Water runs downhill slowly on a shallow roof, and wind pushes it uphill under the shingle laps. That is why every shingle manufacturer publishes a minimum pitch. Standard three-tab and architectural asphalt shingles are approved from 4/12 upward with ordinary underlayment. Between 2/12 and 4/12 they can still be installed, but only with doubled or fully self-adhering underlayment across the deck — miss that detail and the warranty is void. Below 2/12 shingles are not rated at all; that territory belongs to single-ply membranes such as TPO or EPDM, torch-down modified bitumen, or standing-seam metal, which can go down to about 1/4 in per foot on some systems.</p>
+    <p>Clay and concrete tiles usually want 4/12 or more, slate prefers 6/12 and above, and corrugated metal panels are typically rated from 3/12. Steeper roofs shed water and snow faster, stay drier and last longer — which is exactly why historic buildings in wet and snowy regions have such dramatic roofs.</p>
+
+    <h3>Walkability</h3>
+    <p>Around 6/12 (26.6 degrees) is the practical limit for walking a dry deck in normal work boots. From 7/12 to 9/12, roofers set up roof jacks or tie off. Above 9/12 the job needs staging and fall protection, and labour quotes rise accordingly. Moss, dew and frost each knock the safe limit down by two or three pitch points.</p>
+
+    <h2>Measuring your own roof</h2>
+    <p>The safest method uses the attic. Hold a 12 in level horizontally against the underside of a rafter, level it, then measure straight up from the 12 in mark to the rafter. That vertical measurement in inches is your pitch: 7 in means 7/12. Outside, you can do the same against the gable end trim from a ladder.</p>
+    <p>From the ground, measure the gable end: the total height from the eave line to the peak is the rise, and half the building width is the run. A 5 ft rise over a 15 ft run gives 5/15 = 0.333, or 4/12. Photo protractor apps work too, but only when the picture is taken square to the gable, otherwise perspective flattens the angle.</p>
+    <p>Limitations worth knowing: hip and valley rafters run diagonally and use a different multiplier (the square root of 2 + (rise/run) squared), so do not cut hips from these numbers. Older roofs sag, so measure at two or three points and use the shallowest reading when checking against a material minimum. And local codes, snow loads and wind zones can override every rule of thumb here — confirm with your building department or a structural engineer before framing.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.energy.gov/energysaver/energy-saver" target="_blank" rel="noopener">U.S. Department of Energy, Energy Saver — roofing choices, attic ventilation and insulation guidance</a></li>
+      <li><a href="https://www.osha.gov/fall-protection" target="_blank" rel="noopener">OSHA Fall Protection — work rules for steep and low-slope roof work</a></li>
+      <li><a href="https://www.weather.gov/" target="_blank" rel="noopener">National Weather Service — local snow, rain and wind data that drives minimum pitch decisions</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/sand-calc/"><span class="related-ico" aria-hidden="true">🏝️</span><span class="related-name">Sand Calculator</span></a><a class="related-item" href="https://tool-hub.me/shingle-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Shingle Calculator</span></a><a class="related-item" href="https://tool-hub.me/siding-calc/"><span class="related-ico" aria-hidden="true">🏠</span><span class="related-name">Siding Calculator</span></a><a class="related-item" href="https://tool-hub.me/sleep-cycle-calc/"><span class="related-ico" aria-hidden="true">😴</span><span class="related-name">Sleep Cycle Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between roof pitch, angle and slope?</summary><p data-i18n="faq.a1">Pitch is the rise over a 12-unit run written as x/12, so 6/12 means 6 inches of rise per 12 inches of run. The angle is that same ratio in degrees: 6/12 is 26.57°. Slope percent is rise divided by run times 100, so 6/12 is 50%. All three describe one geometry — roofers use x/12, engineers use degrees, drainage codes use percent.</p></details>
+    <details><summary data-i18n="faq.q2">What is the minimum roof pitch for asphalt shingles?</summary><p data-i18n="faq.a2">Manufacturers rate standard and architectural shingles for 4/12 and steeper with ordinary underlayment. Between 2/12 and 4/12 they are still allowed, but the instructions require a doubled or self-adhering underlayment across the whole deck. Below 2/12 shingles are not approved at all; that range needs a membrane or standing-seam metal.</p></details>
+    <details><summary data-i18n="faq.q3">How steep can a roof be and still be walkable?</summary><p data-i18n="faq.a3">Most roofers treat 6/12, about 26.6°, as the limit for walking a dry deck in normal boots. From 7/12 to 9/12 you want roof jacks or a harness, and anything above 9/12 becomes a staged job with fall protection. Wet, mossy or frosted surfaces pull that limit down by two or three pitch points.</p></details>
+    <details><summary data-i18n="faq.q4">What roof pitch is best for heavy snow?</summary><p data-i18n="faq.a4">Snow country favours steep roofs. A pitch of 6/12 or more sheds most snow before it builds up, and mountain builders often go to 10/12 or 12/12. A shallow 3/12 roof holds snow, so it has to be framed for the load instead — and at low pitches ice-dam protection along the eaves matters more than the pitch number.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

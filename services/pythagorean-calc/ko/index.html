@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-wK+ZjYfDOLrOBiKZQPmU65E+jXsDb5EWLSC3vEYy4+k=' 'sha256-be13bF4fpbieAV1B/oOcZtrGjdUi3klbVEtT8UiNHVI=' 'sha256-IrnCjOr7aWVQDR2Due77wsMKIA1EP2aSn+gyTBCofLo='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>피타고라스 정리 계산기 — a, b, c 즉시 구하기</title>
+<meta name="description" content="직각삼각형의 두 변만 입력하면 a² + b² = c² 공식으로 나머지 한 변을 즉시 구합니다. 풀이 과정, 넓이, 둘레까지 표시. 무료이며 모든 계산은 브라우저에서 이루어집니다.">
+<meta name="keywords" content="pythagorean theorem calculator, hypotenuse calculator, a2+b2=c2, right triangle calculator, find missing side, 피타고라스 정리 계산기">
+<link rel="canonical" href="https://tool-hub.me/pythagorean-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/pythagorean-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/pythagorean-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/pythagorean-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/pythagorean-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/pythagorean-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/pythagorean-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/pythagorean-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/pythagorean-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/pythagorean-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/pythagorean-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/pythagorean-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/pythagorean-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/pythagorean-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/pythagorean-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/pythagorean-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="피타고라스 정리 계산기 — a, b, c 즉시 구하기">
+<meta property="og:description" content="직각삼각형의 두 변만 입력하면 a² + b² = c² 공식으로 나머지 한 변을 즉시 구합니다. 풀이 과정, 넓이, 둘레까지 표시. 무료이며 모든 계산은 브라우저에서 이루어집니다.">
+<meta property="og:url" content="https://tool-hub.me/pythagorean-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/pythagorean-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b91c1c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pythagorean Theorem Calculator",
+  "description": "Enter any two sides of a right triangle to find the third instantly via a² + b² = c², with steps, area, and perimeter. Free, computed locally in your browser.",
+  "url": "https://tool-hub.me/pythagorean-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Pythagorean Theorem Calculator", "item": "https://tool-hub.me/pythagorean-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Pythagorean theorem formula?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Pythagorean theorem states that in any right triangle, the square of the hypotenuse (the longest side, opposite the right angle) equals the sum of the squares of the other two sides: a² + b² = c². It only applies to right triangles — triangles with one 90° angle. Named after the ancient Greek mathematician Pythagoras, it's one of the most widely used relationships in geometry, construction, navigation, and engineering, letting you find any one side of a right triangle as long as you know the other two."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the hypotenuse if I know both legs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Square each leg, add the results together, then take the square root: c = √(a² + b²). For example, with legs of 3 and 4, c = √(3² + 4²) = √(9 + 16) = √25 = 5 — the classic 3-4-5 triangle. This calculator does the substitution automatically and shows every step, so you can enter your own two leg lengths and get the hypotenuse, area, and perimeter instantly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find a missing leg if I know the hypotenuse and one leg?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Square the hypotenuse, subtract the square of the known leg, then take the square root: a = √(c² − b²). For example, with a hypotenuse of 13 and a known leg of 5, a = √(13² − 5²) = √(169 − 25) = √144 = 12. The hypotenuse must always be the longest side — if the length you entered as c isn't greater than the other leg, the calculator will flag it so you can check which side is really the hypotenuse."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are common Pythagorean triples?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Pythagorean triple is a set of three positive whole numbers that satisfy a² + b² = c² exactly, so the sides come out as neat integers instead of decimals. The most common ones are 3-4-5, 5-12-13, 8-15-17, 7-24-25, and 20-21-29, along with any whole-number multiple of them (like 6-8-10 or 9-12-15). Tap one of the preset buttons above to load a triple and see it verified instantly, or check the reference table further down the page for more examples."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can this calculator check whether three sides form a right triangle? Is my data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — enter all three sides at once and the calculator checks whether a² + b² = c² holds, telling you immediately if they form a valid right triangle or not, along with the area and perimeter when they do. And no, nothing is sent anywhere: this tool runs entirely in your browser, the numbers you type never leave your device, and there's no sign-up, tracking, or server storage involved."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Pythagorean Theorem Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0891b2" href="https://tool-hub.me/business-tools/">Business</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Pythagorean Theorem Calculator</span></nav>
+  <section class="hero">
+    <h1>Pythagorean Theorem Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter any two sides — leg a, leg b, or hypotenuse c — and the third appears instantly, along with the steps, area, and perimeter.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Pythagorean theorem calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .side-row { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+      #tool .side-row label { font-size:13px; }
+      @media(max-width:420px){ #tool .side-row { grid-template-columns:1fr; } }
+      #tool .presets-row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+      #tool .presets-label { font-size:13px; font-weight:600; color:var(--muted); flex:0 0 auto; }
+      #tool .triple-preset { flex:0 0 auto; padding:7px 12px; border:none; border-radius:10px; font-weight:700; font-size:13.5px; cursor:pointer; background:var(--muted); color:#fff; }
+      #tool .triple-preset:hover { background:var(--accent); }
+      #tool #clear-btn { flex:0 0 auto; margin-left:auto; padding:7px 12px; border:1px solid var(--line); border-radius:10px; background:none; color:var(--muted); font-size:13px; font-weight:600; cursor:pointer; }
+      #tool #clear-btn:hover { border-color:var(--accent); color:var(--accent); }
+      #tool .step-line { margin:8px 0 0; font-size:13.5px; line-height:1.6; color:var(--ink); font-variant-numeric:tabular-nums; overflow-wrap:anywhere; white-space:pre-line; }
+      #tool .step-line:first-child { margin-top:0; }
+      #tool details.adv { margin-top:18px; border:1px solid var(--line); border-radius:10px; padding:0 14px; }
+      #tool details.adv > summary { cursor:pointer; font-weight:600; padding:11px 0; font-size:14px; color:var(--muted); }
+      #tool details.adv[open] { padding-bottom:14px; }
+      #tool #tool-diagram { margin-top:16px; text-align:center; }
+      #tool #tool-diagram svg { display:block; margin:0 auto; max-width:220px; width:100%; height:auto; }
+      #tool .pyth-shape { fill:color-mix(in srgb, var(--accent) 14%, transparent); stroke:var(--accent); stroke-width:3; }
+      #tool .pyth-angle { fill:none; stroke:var(--muted); stroke-width:2; }
+      #tool .pyth-lbl { font-size:15px; font-weight:700; fill:var(--ink); }
+      #tool #diagram-caption { margin:8px 0 0; font-size:12.5px; color:var(--muted); font-variant-numeric:tabular-nums; }
+      #tool .res-card[hidden] { display:none; }
+    </style>
+
+    <div class="side-row">
+      <div class="input-group">
+        <label for="side-a" data-i18n="tool.a.label">Side a</label>
+        <input id="side-a" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 3" data-i18n-placeholder="tool.a.ph" autocomplete="off" autofocus>
+      </div>
+      <div class="input-group">
+        <label for="side-b" data-i18n="tool.b.label">Side b</label>
+        <input id="side-b" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 4" data-i18n-placeholder="tool.b.ph" autocomplete="off">
+      </div>
+      <div class="input-group">
+        <label for="side-c" data-i18n="tool.c.label">Hypotenuse c</label>
+        <input id="side-c" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 5" data-i18n-placeholder="tool.c.ph" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="presets-row" role="group" aria-label="Common Pythagorean triples" data-i18n-aria-label="tool.presets.group">
+      <span class="presets-label" data-i18n="tool.presets.label">Try:</span>
+      <button type="button" class="triple-preset" data-a="3" data-b="4" data-c="5">3-4-5</button>
+      <button type="button" class="triple-preset" data-a="5" data-b="12" data-c="13">5-12-13</button>
+      <button type="button" class="triple-preset" data-a="8" data-b="15" data-c="17">8-15-17</button>
+      <button type="button" class="triple-preset" data-a="7" data-b="24" data-c="25">7-24-25</button>
+      <button type="button" id="clear-btn" data-i18n="tool.clear">Clear</button>
+    </div>
+
+    <p id="tool-err" role="alert" hidden style="margin:14px 0 0;font-size:13.5px;line-height:1.5;color:#b91c1c;"></p>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter any two of the three sides to find the third</p>
+      <p id="result-badge" hidden style="margin:0 0 10px;font-size:13.5px;font-weight:700;color:var(--accent-strong);"></p>
+      <p id="result-note" hidden style="margin:0 0 12px;font-size:13.5px;line-height:1.55;color:var(--muted);"></p>
+      <div id="result-grid" hidden style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <button type="button" class="res-card" data-copy="side" hidden style="grid-column:1/-1;text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" style="font-size:13px;color:var(--muted);font-weight:600;">&nbsp;</span>
+          <span class="rc-value" style="font-size:26px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="area" hidden style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.area" style="font-size:13px;color:var(--muted);font-weight:600;">Area</span>
+          <span class="rc-value" style="font-size:20px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="perimeter" hidden style="text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.perimeter" style="font-size:13px;color:var(--muted);font-weight:600;">Perimeter</span>
+          <span class="rc-value" style="font-size:20px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+        <button type="button" class="res-card" data-copy="angles" hidden style="grid-column:1/-1;text-align:left;display:flex;flex-direction:column;gap:4px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--surface);cursor:pointer;font-family:inherit;color:var(--ink);">
+          <span class="rc-label" data-i18n="tool.res.angles" style="font-size:13px;color:var(--muted);font-weight:600;">Acute angles (A / B)</span>
+          <span class="rc-value" style="font-size:20px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;overflow-wrap:anywhere;">&mdash;</span>
+        </button>
+      </div>
+      <p id="copy-hint" hidden data-i18n="tool.copyHint" style="margin:12px 0 0;font-size:12.5px;color:var(--muted);text-align:center;">Tap a card to copy the number</p>
+
+      <div id="tool-diagram" hidden>
+        <svg viewBox="0 0 190 175" role="img" aria-label="Right triangle diagram" data-i18n-aria-label="tool.diagram.aria">
+          <polygon id="pyth-shape" class="pyth-shape" points=""></polygon>
+          <polyline id="pyth-angle" class="pyth-angle" points=""></polyline>
+          <text id="pyth-label-a" class="pyth-lbl" text-anchor="middle">a</text>
+          <text id="pyth-label-b" class="pyth-lbl" text-anchor="middle">b</text>
+          <text id="pyth-label-c" class="pyth-lbl" text-anchor="middle">c</text>
+        </svg>
+        <p id="diagram-caption"></p>
+      </div>
+    </div>
+
+    <details id="tool-more" class="adv" hidden>
+      <summary data-i18n="tool.details.summary">Show the steps</summary>
+      <p id="step-main" class="step-line" hidden></p>
+      <p id="step-area" class="step-line" hidden></p>
+      <p id="step-perimeter" class="step-line" hidden></p>
+    </details>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>The Pythagorean theorem, in one line</h2>
+    <p>For any right triangle — a triangle with one 90&deg; angle — the square of the hypotenuse equals the sum of the squares of the other two sides: <strong>a&sup2; + b&sup2; = c&sup2;</strong>. The two shorter sides that meet at the right angle are called the <em>legs</em> (a and b); the longest side, opposite the right angle, is the <em>hypotenuse</em> (c). Because the relationship is an equality, knowing any two of the three sides is enough to solve for the third — no protractor or trigonometry required.</p>
+
+    <h2>How the calculator solves each case</h2>
+    <p>Enter any two of the three fields and the calculator fills in the third automatically:</p>
+    <ul>
+      <li><strong>Hypotenuse from two legs:</strong> c = &radic;(a&sup2; + b&sup2;)</li>
+      <li><strong>A leg from the hypotenuse and the other leg:</strong> a = &radic;(c&sup2; &minus; b&sup2;), or b = &radic;(c&sup2; &minus; a&sup2;)</li>
+      <li><strong>Area</strong> = &frac12; &times; a &times; b (the two legs are always perpendicular, so they double as base and height)</li>
+      <li><strong>Perimeter</strong> = a + b + c</li>
+    </ul>
+    <p>If you type in all three sides at once, the calculator switches to <em>verify</em> mode: it checks whether a&sup2; + b&sup2; actually equals c&sup2; and tells you immediately whether the three lengths you have describe a genuine right triangle. Because the hypotenuse is always the longest side by definition, the calculator also flags the case where a length entered as c isn't actually longer than the other leg — that usually means the wrong side was labeled as the hypotenuse.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — two legs, find the hypotenuse.</strong> Legs of 6 and 8: c = &radic;(6&sup2; + 8&sup2;) = &radic;(36 + 64) = &radic;100 = <strong>10</strong>. Area = &frac12; &times; 6 &times; 8 = <strong>24</strong>. Perimeter = 6 + 8 + 10 = <strong>24</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — hypotenuse and one leg, find the other leg.</strong> Hypotenuse 17, one leg 8: the other leg = &radic;(17&sup2; &minus; 8&sup2;) = &radic;(289 &minus; 64) = &radic;225 = <strong>15</strong> — the 8-15-17 triple. Since 17 &gt; 8 the numbers check out; if 8 had been entered as the hypotenuse instead, the calculator would flag the mismatch.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — verifying three known sides.</strong> Sides 7, 24, and 25: 7&sup2; + 24&sup2; = 49 + 576 = 625, and 25&sup2; = 625 — they match, so it's a valid right triangle (area 84, perimeter 56). Sides 7, 24, and 26 would fail the same check (625 &ne; 676), confirming that triangle isn't right-angled.</p>
+    </div>
+
+    <h2>Common Pythagorean triples</h2>
+    <p>A Pythagorean triple is a set of three positive integers that satisfies a&sup2; + b&sup2; = c&sup2; exactly, so every side comes out as a whole number. The table below lists the smallest ("primitive") triples — any whole-number multiple of a row (like 6-8-10, which is 3-4-5 doubled) is also a valid triple:</p>
+    <table>
+      <thead><tr><th>a</th><th>b</th><th>c</th><th>Check</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>4</td><td>5</td><td>9 + 16 = 25</td></tr>
+        <tr><td>5</td><td>12</td><td>13</td><td>25 + 144 = 169</td></tr>
+        <tr><td>8</td><td>15</td><td>17</td><td>64 + 225 = 289</td></tr>
+        <tr><td>7</td><td>24</td><td>25</td><td>49 + 576 = 625</td></tr>
+        <tr><td>20</td><td>21</td><td>29</td><td>400 + 441 = 841</td></tr>
+        <tr><td>9</td><td>40</td><td>41</td><td>81 + 1600 = 1681</td></tr>
+        <tr><td>12</td><td>35</td><td>37</td><td>144 + 1225 = 1369</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Where this shows up in real life</h2>
+    <ul>
+      <li><strong>Construction and carpentry:</strong> the 3-4-5 triple is the classic way to square a corner — measure 3 units along one wall, 4 along the other, and the diagonal between those marks should be exactly 5 units if the corner is a true right angle.</li>
+      <li><strong>Screens and diagonals:</strong> a display's advertised size is the diagonal (the hypotenuse) of its width and height — the same formula that finds a missing triangle side also finds a screen's diagonal.</li>
+      <li><strong>Navigation and distance:</strong> the straight-line ("as the crow flies") distance between two points that differ in both an east-west and a north-south direction is the hypotenuse of those two differences.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.khanacademy.org/math/geometry/hs-geo-trig" target="_blank" rel="noopener">Khan Academy — right triangles, the Pythagorean theorem and its proofs</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — unit definitions and conversion guidance for length measurements</a></li>
+      <li><a href="https://www.nist.gov/pml/special-publication-811" target="_blank" rel="noopener">NIST SP 811 — rules for expressing numerical results and significant digits</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/qr-gen/"><span class="related-ico" aria-hidden="true">▦</span><span class="related-name">QR Code Generator</span></a><a class="related-item" href="https://tool-hub.me/quadratic-solver/"><span class="related-ico" aria-hidden="true">✖️</span><span class="related-name">Quadratic Equation Solver</span></a><a class="related-item" href="https://tool-hub.me/ratio-calc/"><span class="related-ico" aria-hidden="true">⚖️</span><span class="related-name">Ratio Calculator</span></a><a class="related-item" href="https://tool-hub.me/safety-stock-batch/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">Safety Stock &amp; Reorder Point Batch Calculato</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is the Pythagorean theorem formula?</summary>
+      <p data-i18n="faq.a1">The Pythagorean theorem states that in any right triangle, the square of the hypotenuse (the longest side, opposite the right angle) equals the sum of the squares of the other two sides: a² + b² = c². It only applies to right triangles — triangles with one 90° angle. Named after the ancient Greek mathematician Pythagoras, it's one of the most widely used relationships in geometry, construction, navigation, and engineering, letting you find any one side of a right triangle as long as you know the other two.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I find the hypotenuse if I know both legs?</summary>
+      <p data-i18n="faq.a2">Square each leg, add the results together, then take the square root: c = √(a² + b²). For example, with legs of 3 and 4, c = √(3² + 4²) = √(9 + 16) = √25 = 5 — the classic 3-4-5 triangle. This calculator does the substitution automatically and shows every step, so you can enter your own two leg lengths and get the hypotenuse, area, and perimeter instantly.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I find a missing leg if I know the hypotenuse and one leg?</summary>
+      <p data-i18n="faq.a3">Square the hypotenuse, subtract the square of the known leg, then take the square root: a = √(c² − b²). For example, with a hypotenuse of 13 and a known leg of 5, a = √(13² − 5²) = √(169 − 25) = √144 = 12. The hypotenuse must always be the longest side — if the length you entered as c isn't greater than the other leg, the calculator will flag it so you can check which side is really the hypotenuse.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">What are common Pythagorean triples?</summary>
+      <p data-i18n="faq.a4">A Pythagorean triple is a set of three positive whole numbers that satisfy a² + b² = c² exactly, so the sides come out as neat integers instead of decimals. The most common ones are 3-4-5, 5-12-13, 8-15-17, 7-24-25, and 20-21-29, along with any whole-number multiple of them (like 6-8-10 or 9-12-15). Tap one of the preset buttons above to load a triple and see it verified instantly, or check the reference table further down the page for more examples.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can this calculator check whether three sides form a right triangle? Is my data sent to a server?</summary>
+      <p data-i18n="faq.a5">Yes — enter all three sides at once and the calculator checks whether a² + b² = c² holds, telling you immediately if they form a valid right triangle or not, along with the area and perimeter when they do. And no, nothing is sent anywhere: this tool runs entirely in your browser, the numbers you type never leave your device, and there's no sign-up, tracking, or server storage involved.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-lpl/JTsv+087jDon+u8WD8OlTZgTljBRC5zDRb/GO3I=' 'sha256-0NWvFxHjC+nhlBjA0CaGvNvtazMdF0Gc3sNyUECN/2Y=' 'sha256-HvluSIrgq4EfFQBvQg5vjypDU+SWrWUc0qPZXEjliy0='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전기차 충전 시간 계산기 — 시간·kWh·요금</title>
+<meta name="description" content="전기차 충전에 걸리는 시간과 비용을 계산합니다. 배터리 용량, 현재·목표 충전율, 충전기 출력(kW), kWh당 전기요금을 입력하세요.">
+<meta name="keywords" content="ev charging time calculator, how long to charge electric car, ev charging cost, kwh charging calculator, electric car charging time, ev charging calculator">
+<link rel="canonical" href="https://tool-hub.me/ev-charging-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/ev-charging-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/ev-charging-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/ev-charging-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/ev-charging-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/ev-charging-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/ev-charging-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/ev-charging-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/ev-charging-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/ev-charging-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/ev-charging-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/ev-charging-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/ev-charging-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/ev-charging-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/ev-charging-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/ev-charging-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="전기차 충전 시간 계산기 — 시간·kWh·요금">
+<meta property="og:description" content="전기차 충전에 걸리는 시간과 비용을 계산합니다. 배터리 용량, 현재·목표 충전율, 충전기 출력(kW), kWh당 전기요금을 입력하세요.">
+<meta property="og:url" content="https://tool-hub.me/ev-charging-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/ev-charging-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "EV Charging Time Calculator",
+  "description": "Work out how long it takes to charge an electric car and what it costs. Enter battery size, current and target charge, charger kW and your price per kWh.",
+  "url": "https://tool-hub.me/ev-charging-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "EV Charging Time Calculator",
+      "item": "https://tool-hub.me/ev-charging-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do people only charge to 80%?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two reasons: battery life and time. Lithium-ion cells age faster when they sit at high voltage, so keeping daily charging near 80% is the cheapest thing you can do for long-term capacity. On a DC rapid charger the current also drops sharply past 80%, and the last fifth can take as long as the first three fifths."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does AC charging waste more energy than DC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AC power goes through the car's onboard charger, which converts it to DC and gives off heat. Typically 8-12% of what your meter records never reaches the battery. DC rapid chargers do that conversion in the roadside cabinet and feed the pack directly, so losses at the car are smaller, usually 3-6%. That is why the default here is about 90% for home AC."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can my EV actually use a 350 kW charger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if the car can take it. The real rate is the lower of what the charger supplies and what the vehicle accepts, and most EVs peak somewhere between 50 and 250 kW — briefly, in a narrow window of state of charge and temperature. Plugging a 120 kW car into a 350 kW post gets you 120 kW at best, so enter your car's maximum intake in the custom field."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does cold weather slow charging down?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A lot. Below roughly 10 °C the battery management system limits current to protect the cells, and a cold pack on a DC charger may accept half its usual peak until it warms up. Preconditioning — the car heating the battery while you navigate to a charger — recovers most of that. Cold also cuts range by 15-30%, so you charge slower and need more kWh."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>EV Charging Time Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">EV Charging Time Calculator</span></nav>
+  <section class="hero">
+    <h1>EV Charging Time Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Battery size, charger speed and a realistic efficiency figure — the three numbers that decide your charging time.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .field-row3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:6px; }
+      #tool .warn { font-size:13px; font-weight:600; color:#b45309; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:520px){ #tool .field-row, #tool .field-row3 { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="capacity" data-i18n="tool.capacity.label">Battery capacity (kWh)</label>
+    <input type="number" id="capacity" inputmode="decimal" min="1" max="300" step="any" autocomplete="off" placeholder="75">
+
+    <div class="field-row">
+      <div>
+        <label for="soc-now" data-i18n="tool.now.label">Current charge (%)</label>
+        <input type="number" id="soc-now" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="20">
+      </div>
+      <div>
+        <label for="soc-target" data-i18n="tool.target.label">Target charge (%)</label>
+        <input type="number" id="soc-target" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="80">
+      </div>
+    </div>
+
+    <label for="power-sel" data-i18n="tool.power.label">Charger power</label>
+    <select id="power-sel">
+      <option value="2.3" data-i18n="tool.power.p23">2.3 kW — 3-pin wall plug</option>
+      <option value="7.4" selected data-i18n="tool.power.p74">7.4 kW — home wallbox, single phase</option>
+      <option value="11" data-i18n="tool.power.p11">11 kW — three-phase wallbox</option>
+      <option value="22" data-i18n="tool.power.p22">22 kW — public AC post</option>
+      <option value="50" data-i18n="tool.power.p50">50 kW — DC rapid</option>
+      <option value="150" data-i18n="tool.power.p150">150 kW — DC ultra-rapid</option>
+      <option value="350" data-i18n="tool.power.p350">350 kW — DC ultra-fast</option>
+      <option value="custom" data-i18n="tool.power.custom">Custom — enter kW</option>
+    </select>
+
+    <div id="custom-row" hidden>
+      <label for="power-custom" data-i18n="tool.custom.label">Charger power (kW)</label>
+      <input type="number" id="power-custom" inputmode="decimal" min="0.1" max="1000" step="any" autocomplete="off" placeholder="7.4">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="eff" data-i18n="tool.eff.label">Charging efficiency (%)</label>
+        <input type="number" id="eff" inputmode="decimal" min="50" max="100" step="any" autocomplete="off" placeholder="90">
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Electricity price per kWh (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="0.17">
+      </div>
+    </div>
+    <div>
+      <label for="rate" data-i18n="tool.rate.label">Vehicle efficiency (mi/kWh, optional)</label>
+      <input type="number" id="rate" inputmode="decimal" min="0.5" max="20" step="any" autocomplete="off" placeholder="3.5">
+    </div>
+    <p class="subtle" data-i18n="tool.eff.note">AC charging loses roughly 10% in the car's onboard charger and cabling. Use 88-92% for AC, 94-97% for DC fast charging.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.time">Charging time</div>
+          <div class="rc-val" id="r-time">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.energy">Energy drawn</div><div class="rc-val" id="r-energy">—</div></div>
+        <div class="rcard" id="cost-card" hidden><div class="rc-label" data-i18n="tool.r.cost">Charging cost</div><div class="rc-val" id="r-cost">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.range">Range added</div><div class="rc-val" id="r-range">—</div></div>
+      </div>
+      <p class="warn" id="taper-note" hidden data-i18n="tool.note.taper">Past 80% a DC charger tapers hard. This estimate assumes a flat rate, so add 20-40 minutes for the last stretch.</p>
+      <p class="subtle" id="range-note" data-i18n="tool.note.range">Range assumes 3.5 mi/kWh (5.6 km/kWh) — a typical mid-size EV in mild weather.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.disclaimer" style="margin-top:12px;">An estimate. Your car's maximum charge rate, the battery temperature and the charger's real output all cap actual speed.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How charging time is actually calculated</h2>
+    <p>Every charging estimate comes down to one division: energy needed, divided by power delivered. The energy is the slice of the battery you want to fill — capacity multiplied by the gap between your current and target state of charge. The power is whichever is lower, the charger's output or your car's maximum intake. Between those two numbers sits the part most calculators ignore: charging losses, the electricity your meter records that never reaches the cells.</p>
+
+    <h3>Worked example: 75 kWh pack, 20% to 80%, 7.4 kW home charger</h3>
+    <p>The gap is 60% of 75 kWh, so 45 kWh has to end up in the battery. AC charging runs through the car's onboard charger, which converts alternating current to direct current and sheds heat doing it — assume 90% efficiency and you actually draw 45 / 0.9 = 50 kWh from the wall. Divide by 7.4 kW and you get 6.76 hours, or about 6 h 45 min. Plug it in at 10 pm and it finishes before 5 am, comfortably inside a cheap overnight tariff.</p>
+    <p>At a US average of $0.17/kWh that charge costs about $8.50 and adds roughly 158 miles at 3.5 mi/kWh — around 5.4 cents per mile. In the UK, an overnight EV tariff near 7p/kWh puts the same charge at about £3.50; on the standard cap near 25p it is closer to £12.50. Which tariff you are on changes the running cost of an EV more than the car you choose.</p>
+
+    <h3>The same charge on a 150 kW DC rapid charger</h3>
+    <p>DC rapid chargers bypass the onboard charger and feed the pack directly, so losses at the car drop to roughly 5%: 45 / 0.95 = 47.4 kWh drawn. Divide by 150 kW and the arithmetic says 19 minutes. Real life says 25 to 35 minutes, because no car holds its peak rate for the whole session. Rates ramp up as the pack warms, hold near peak through the middle of the curve, then taper as the state of charge climbs.</p>
+
+    <h2>Why the taper above 80% matters</h2>
+    <p>Charging speed is limited by how fast lithium ions can move into the anode without plating. As the battery fills, the acceptable current falls — sharply past 80% on most packs. A car pulling 150 kW at 30% may be down to 50 kW at 80% and 25 kW at 95%. In practice the last 20% of a rapid charge often takes as long as the first 60%, which is why this tool flags an honest warning whenever you ask for more than 80% on a 50 kW or faster charger. The flat-rate assumption is fine up to 80% and increasingly optimistic beyond it.</p>
+    <p>On AC there is no taper worth worrying about. A 7.4 kW wallbox is so far below what the pack can accept that the rate stays flat almost to 100%, which is why the "charge to 100% at home, stop at 80% on the road" rule exists.</p>
+
+    <h2>Home versus rapid charging, in money</h2>
+    <p>Take the same 45 kWh into the battery. At home on a 7p/kWh overnight rate in the UK, you draw 50 kWh and pay about £3.50. At a public rapid charger at 79p/kWh you draw 47.4 kWh and pay about £37 — more than ten times as much for the same miles, and roughly what a petrol car costs to run over that distance. The US spread is narrower but real: $0.17/kWh at home versus $0.48/kWh at a typical DC network is about $8.50 against $23.</p>
+    <p>The practical conclusion is that home charging is where the EV savings live, and public rapid charging is a convenience you buy on long trips. If you cannot charge at home, run the numbers with your local public tariff before assuming an EV is cheaper per mile than a hybrid.</p>
+
+    <h3>Road-trip rule of thumb</h3>
+    <p>Plan stops between 10% and 70-80%, not 0% to 100%. That band is where the charge curve is fastest and it keeps a safety buffer at the low end. For a car with a real-world 250-mile range, that means roughly 175 miles between stops and 20-30 minutes plugged in — about the length of a coffee and a comfort break. Two shorter stops almost always beat one long one.</p>
+
+    <h2>What this estimate cannot know</h2>
+    <p>Four things move the real number. Your car's maximum AC intake caps home charging: many EVs accept only 7.4 kW single-phase, so an 11 kW or 22 kW post gives no benefit. Battery temperature caps DC charging, and a cold pack can halve the rate until it warms — precondition on the way to a charger if your car supports it. Shared charging cabinets split power between two bays, so a "150 kW" post may deliver 75 kW when both stalls are busy. And the battery management system slows things down near full regardless of what the charger offers. Treat the output here as a good planning figure, then let the car's own estimate take over once you are plugged in.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.energy.gov/energysaver/electric-vehicles" target="_blank" rel="noopener">U.S. Department of Energy — electric vehicle charging levels, costs and home charging guidance</a></li>
+      <li><a href="https://afdc.energy.gov/fuels/electricity_charging_home.html" target="_blank" rel="noopener">DOE Alternative Fuels Data Center — charging equipment power ratings and charging time basics</a></li>
+      <li><a href="https://www.eia.gov/electricity/" target="_blank" rel="noopener">U.S. Energy Information Administration — average residential electricity prices used for cost estimates</a></li>
+      <li><a href="https://www.gov.uk/government/collections/electric-vehicle-charging-infrastructure" target="_blank" rel="noopener">GOV.UK — UK electric vehicle charging infrastructure and public charge point statistics</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/fence-calc/"><span class="related-ico" aria-hidden="true">🚧</span><span class="related-name">Fence Calculator</span></a><a class="related-item" href="https://tool-hub.me/final-grade-calc/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Final Grade Calculator</span></a><a class="related-item" href="https://tool-hub.me/fuel-cost-calc/"><span class="related-ico" aria-hidden="true">⛽</span><span class="related-name">Fuel Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/furnace-size-calc/"><span class="related-ico" aria-hidden="true">🔥</span><span class="related-name">Furnace Size Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why do people only charge to 80%?</summary><p data-i18n="faq.a1">Two reasons: battery life and time. Lithium-ion cells age faster when they sit at high voltage, so keeping daily charging near 80% is the cheapest thing you can do for long-term capacity. On a DC rapid charger the current also drops sharply past 80%, and the last fifth can take as long as the first three fifths.</p></details>
+    <details><summary data-i18n="faq.q2">Why does AC charging waste more energy than DC?</summary><p data-i18n="faq.a2">AC power goes through the car's onboard charger, which converts it to DC and gives off heat. Typically 8-12% of what your meter records never reaches the battery. DC rapid chargers do that conversion in the roadside cabinet and feed the pack directly, so losses at the car are smaller, usually 3-6%. That is why the default here is about 90% for home AC.</p></details>
+    <details><summary data-i18n="faq.q3">Can my EV actually use a 350 kW charger?</summary><p data-i18n="faq.a3">Only if the car can take it. The real rate is the lower of what the charger supplies and what the vehicle accepts, and most EVs peak somewhere between 50 and 250 kW — briefly, in a narrow window of state of charge and temperature. Plugging a 120 kW car into a 350 kW post gets you 120 kW at best, so enter your car's maximum intake in the custom field.</p></details>
+    <details><summary data-i18n="faq.q4">How much does cold weather slow charging down?</summary><p data-i18n="faq.a4">A lot. Below roughly 10 °C the battery management system limits current to protect the cells, and a cold pack on a DC charger may accept half its usual peak until it warms up. Preconditioning — the car heating the battery while you navigate to a charger — recovers most of that. Cold also cuts range by 15-30%, so you charge slower and need more kWh.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

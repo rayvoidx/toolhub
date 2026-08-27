@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-2Djq+kZ63k5ZHhiCwbqaoCkbPb3mGw7sSXzQDQhSStg=' 'sha256-9nuHdCUaNYzC/x1RlVnbNlVNzhanGM9PgFKXtZqRguA=' 'sha256-hbOQWrqag+tL8ZKfry7VZUMTXfckB//59OKyV5jwlMc='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>표준편차 계산기 — 표본 및 모집단 표준편차</title>
+<meta name="description" content="숫자 목록을 붙여넣거나 입력하면 표본 및 모집단 표준편차, 분산, 평균, 개수, 편차제곱합을 바로 확인할 수 있습니다. 각 값의 편차와 제곱을 보여주는 단계별 계산 표도 제공합니다. 무료, 로그인 불필요, 모든 계산은 브라우저에서 처리됩니다.">
+<meta name="keywords" content="standard deviation calculator, sample standard deviation, population standard deviation, variance calculator, std dev, 표준편차 계산기">
+<link rel="canonical" href="https://tool-hub.me/standard-deviation-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/standard-deviation-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/standard-deviation-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/standard-deviation-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/standard-deviation-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/standard-deviation-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/standard-deviation-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/standard-deviation-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/standard-deviation-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/standard-deviation-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/standard-deviation-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/standard-deviation-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/standard-deviation-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/standard-deviation-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/standard-deviation-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/standard-deviation-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="표준편차 계산기 — 표본 및 모집단 표준편차">
+<meta property="og:description" content="숫자 목록을 붙여넣거나 입력하면 표본 및 모집단 표준편차, 분산, 평균, 개수, 편차제곱합을 바로 확인할 수 있습니다. 각 값의 편차와 제곱을 보여주는 단계별 계산 표도 제공합니다. 무료, 로그인 불필요, 모든 계산은 브라우저에서 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/standard-deviation-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/standard-deviation-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#6d28d9">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Standard Deviation Calculator",
+  "description": "Paste or type a list of numbers to get the sample and population standard deviation, variance, mean, count, and sum of squares — plus a step-by-step deviation table. Free, no login, computed in your browser.",
+  "url": "https://tool-hub.me/standard-deviation-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Standard Deviation Calculator", "item": "https://tool-hub.me/standard-deviation-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is standard deviation, and how do I calculate it step by step?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard deviation measures how spread out a set of numbers is around its mean. Worked example: for 2, 4, 4, 4, 5, 5, 7, 9 the mean is 40 ÷ 8 = 5. Each deviation from the mean is −3, −1, −1, −1, 0, 0, 2, 4; squaring and adding them gives a sum of squares of 32. Dividing by 8 (population) gives a variance of 4, so the population standard deviation is √4 = 2. This calculator does every one of these steps for you and shows them in the expandable breakdown table."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between sample and population standard deviation, and why divide by n − 1?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use population standard deviation when your numbers are the entire group you care about — every student in a class, every day in a month. Use sample standard deviation when your numbers are a subset used to estimate a larger population, like 30 customers standing in for all customers. Dividing by n − 1 instead of n (Bessel's correction) slightly inflates the result to correct for the fact that a sample's own mean is closer to its data than the true population mean would be, which otherwise makes the sample variance an underestimate. For the same dataset, sample standard deviation is always a little larger than population standard deviation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is variance, and how does it relate to standard deviation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Variance is the average of the squared deviations from the mean — standard deviation is simply its square root. Squaring keeps deviations from cancelling out (since positive and negative differences would otherwise sum to zero) but leaves the result in squared units, like dollars² or cm², which is hard to interpret. Taking the square root brings the number back to the original units, which is why standard deviation is usually reported for readability while variance underlies other statistics like ANOVA and confidence intervals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can standard deviation be negative or zero, and why does the sample value show N/A for a single number?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard deviation can never be negative — it's a square root of squared numbers, which are always zero or positive. It equals exactly zero only when every value in the list is identical, since there's no spread at all to measure. With only one number entered, the sample standard deviation shows N/A because its formula divides by n − 1, which is zero for n = 1 — an undefined division. Population standard deviation still works with a single value (it's simply 0), since its formula divides by n instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What number formats are accepted, and is my data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Type or paste numbers separated by commas, spaces, or new lines, in any mix — negative numbers and decimals are both fine, and pasting a column straight from a spreadsheet works the same way. Anything that isn't a valid number is skipped, and the calculator tells you how many entries it ignored. Every calculation runs entirely in your browser — nothing you type or paste is uploaded or shared with anyone. Your last entry is saved only in this browser's local storage, so clearing your browser data removes it completely."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Standard Deviation Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0891b2" href="https://tool-hub.me/business-tools/">Business</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Standard Deviation Calculator</span></nav>
+  <section class="hero">
+    <h1>Standard Deviation Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Paste a list of numbers and instantly get the sample and population standard deviation, variance, mean, and sum of squares — with an expandable step-by-step deviation table. Every calculation runs in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Standard deviation calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool textarea { resize: vertical; line-height: 1.6; min-height: 120px; }
+      #tool .sd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: .7rem; margin-top: 1.1rem; }
+      #tool .stat-card { text-align: start; cursor: pointer; font-family: inherit; background: var(--bg); border: 1px solid var(--line); border-radius: .6rem; padding: .7rem .9rem; color: var(--ink); }
+      #tool .stat-card .stat-label { display: block; font-size: .78rem; color: var(--muted); margin-bottom: .2rem; }
+      #tool .stat-card .stat-val { font-size: 1.3rem; font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums; overflow-wrap: anywhere; display: block; }
+      #tool details.adv { margin-top: 16px; border: 1px solid var(--line); border-radius: 8px; padding: 0 12px; }
+      #tool details.adv > summary { cursor: pointer; font-weight: 600; padding: 11px 0; font-size: 15px; }
+      #tool details.adv[open] { padding-bottom: 12px; }
+      #tool .bd-scroll { overflow-x: auto; }
+      #tool table.bd { width: 100%; border-collapse: collapse; margin-top: 4px; font-size: 13.5px; min-width: 360px; }
+      #tool table.bd th, #tool table.bd td { text-align: right; padding: 6px 8px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+      #tool table.bd th:first-child, #tool table.bd td:first-child { text-align: left; }
+      #tool table.bd th { color: var(--muted); font-weight: 600; }
+      @media (max-width: 420px) { #tool .sd-grid { grid-template-columns: repeat(2, 1fr); } }
+    </style>
+    <label for="sd-input" data-i18n="tool.input.label">Numbers</label>
+    <textarea id="sd-input" rows="6" dir="auto" autocomplete="off" placeholder="e.g. 2, 4, 4, 4, 5, 5, 7, 9" data-i18n-placeholder="tool.input.ph"></textarea>
+    <p class="hint" data-i18n="tool.input.hint">Separate numbers with commas, spaces, or new lines. Pasting a column from a spreadsheet works too.</p>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter at least one number to see the standard deviation, variance, mean, and more.</p>
+      <div id="sd-grid" class="sd-grid" hidden>
+        <button type="button" class="stat-card" data-copy="count"><span class="stat-label" data-i18n="tool.res.count">Count (n)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="sum"><span class="stat-label" data-i18n="tool.res.sum">Sum</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="mean"><span class="stat-label" data-i18n="tool.res.mean">Mean</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="sampleStdDev"><span class="stat-label" data-i18n="tool.res.sampleStdDev">Sample standard deviation (s)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="popStdDev"><span class="stat-label" data-i18n="tool.res.popStdDev">Population standard deviation (σ)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="sampleVariance"><span class="stat-label" data-i18n="tool.res.sampleVariance">Sample variance (s²)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="popVariance"><span class="stat-label" data-i18n="tool.res.popVariance">Population variance (σ²)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="ss"><span class="stat-label" data-i18n="tool.res.ss">Sum of squares (SS)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="median"><span class="stat-label" data-i18n="tool.res.median">Median</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="range"><span class="stat-label" data-i18n="tool.res.range">Range (max &minus; min)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="sem"><span class="stat-label" data-i18n="tool.res.sem">Standard error of the mean (SEM)</span><span class="stat-val">&mdash;</span></button>
+        <button type="button" class="stat-card" data-copy="cv"><span class="stat-label" data-i18n="tool.res.cv">Coefficient of variation (CV)</span><span class="stat-val">&mdash;</span></button>
+      </div>
+
+      <details class="adv" id="breakdown-wrap" hidden>
+        <summary data-i18n="tool.breakdown.summary">Step-by-step breakdown</summary>
+        <div class="bd-scroll">
+          <table class="bd">
+            <thead><tr><th data-i18n="tool.breakdown.idx">#</th><th data-i18n="tool.breakdown.value">Value</th><th data-i18n="tool.breakdown.dev">Deviation (x − mean)</th><th data-i18n="tool.breakdown.sq">Squared deviation</th></tr></thead>
+            <tbody id="breakdown-body"></tbody>
+          </table>
+        </div>
+        <p id="breakdown-trunc" style="margin:8px 0 0;font-size:12.5px;color:var(--muted);" hidden></p>
+      </details>
+
+      <p id="sd-note" hidden style="margin:12px 0 0;font-size:13px;color:var(--muted);"></p>
+      <p class="subtle" data-i18n="tool.note.privacy" style="margin:12px 0 0;font-size:12.5px;color:var(--muted);">Every calculation runs in your browser — nothing is sent to a server.</p>
+      <p id="copy-hint" hidden data-i18n="tool.copyHint" style="margin:8px 0 0;font-size:12.5px;color:var(--muted);text-align:center;">Tap a card to copy the number</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Measuring Spread, Not Just the Middle</h2>
+    <p>An average tells you where the center of a dataset sits, but it says nothing about how tightly the numbers cluster around that center. Two classes can both average 75% on a test — one where every student scored between 70 and 80, another where scores ranged from 20 to 100. Standard deviation is the standard way to quantify that difference: a small standard deviation means the data hugs the mean, and a large one means it's spread wide. This calculator computes both the sample and population versions side by side, along with variance, the sum of squares, and a row-by-row breakdown of every deviation.</p>
+
+    <h2>The Formula, Step by Step</h2>
+    <ol>
+      <li><strong>Mean</strong> — add up all the numbers and divide by the count: mean = Σx ÷ n.</li>
+      <li><strong>Deviation</strong> — for each number, subtract the mean: x − mean.</li>
+      <li><strong>Squared deviation</strong> — square each deviation so negatives don't cancel positives: (x − mean)².</li>
+      <li><strong>Sum of squares (SS)</strong> — add up every squared deviation.</li>
+      <li><strong>Variance</strong> — divide SS by n (population) or by n − 1 (sample).</li>
+      <li><strong>Standard deviation</strong> — take the square root of the variance, which brings the units back to the original scale.</li>
+    </ol>
+
+    <div class="example">
+      <p><strong>Worked example.</strong> Data: 2, 4, 4, 4, 5, 5, 7, 9 (n = 8). Mean = 40 ÷ 8 = 5. Deviations: −3, −1, −1, −1, 0, 0, 2, 4. Squared: 9, 1, 1, 1, 0, 0, 4, 16. Sum of squares = <strong>32</strong>. Population variance = 32 ÷ 8 = <strong>4</strong>, so population standard deviation = √4 = <strong>2</strong>. Sample variance = 32 ÷ 7 ≈ <strong>4.571</strong>, so sample standard deviation ≈ <strong>2.138</strong>.</p>
+    </div>
+
+    <h2>Sample vs. Population — Which One Do You Need?</h2>
+    <p>This is the most common point of confusion, and it comes down to one question: do your numbers represent the entire group you care about, or just a slice of it?</p>
+    <table>
+      <thead><tr><th>Situation</th><th>Use</th><th>Divisor</th></tr></thead>
+      <tbody>
+        <tr><td>Every test score in one class</td><td>Population (σ)</td><td>n</td></tr>
+        <tr><td>30 survey respondents standing in for all customers</td><td>Sample (s)</td><td>n − 1</td></tr>
+        <tr><td>Every day's temperature in a specific month</td><td>Population (σ)</td><td>n</td></tr>
+        <tr><td>A handful of lab measurements estimating a true value</td><td>Sample (s)</td><td>n − 1</td></tr>
+      </tbody>
+    </table>
+    <p>Dividing by n − 1 instead of n — Bessel's correction — makes the sample formula produce a slightly larger number. This corrects a subtle bias: a sample's own mean is, on average, a bit closer to its own data points than the true population mean would be, which would otherwise make the sample variance an underestimate. When in doubt and your dataset is the whole population you're studying, use population standard deviation; when it's a subset used to infer something bigger, use sample standard deviation.</p>
+
+    <h2>Reading the Result Cards</h2>
+    <ul>
+      <li><strong>Count (n) and Sum</strong> — sanity-check that every number you pasted was actually parsed.</li>
+      <li><strong>Mean</strong> — the arithmetic average, the center that deviations are measured from.</li>
+      <li><strong>Sample / Population standard deviation</strong> — the headline numbers, in the same units as your original data.</li>
+      <li><strong>Sample / Population variance</strong> — the squared version, used as an input to other statistical tests (t-tests, ANOVA, regression) rather than reported directly.</li>
+      <li><strong>Sum of squares (SS)</strong> — the shared numerator both variances are built from; useful if you're checking your own by-hand calculation.</li>
+    </ul>
+
+    <h2>Common Mistakes</h2>
+    <ul>
+      <li><strong>Using the wrong divisor.</strong> Dividing a sample's sum of squares by n instead of n − 1 (or vice versa) is the single most common standard deviation error, and it always makes the population version look identical to a sample that's actually slightly larger.</li>
+      <li><strong>Forgetting to square before averaging.</strong> Averaging the raw deviations always gives zero — positive and negative deviations cancel out by definition, which is exactly why the deviations are squared first.</li>
+      <li><strong>Expecting a sample standard deviation from one data point.</strong> With n = 1 the sample formula divides by zero, so it's mathematically undefined — not a rounding error, and not something this calculator can paper over.</li>
+      <li><strong>Reporting variance when standard deviation was asked for.</strong> Variance is in squared units (dollars², cm²) and is rarely the number people actually want to see or compare.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.itl.nist.gov/div898/handbook/" target="_blank" rel="noopener">NIST/SEMATECH e-Handbook of Statistical Methods — standard definitions of variance, standard deviation and sample vs. population estimators</a></li>
+      <li><a href="https://www.bls.gov/opub/hom/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics Handbook of Methods — how dispersion and standard errors are computed in official survey statistics</a></li>
+      <li><a href="https://www.khanacademy.org/math/statistics-probability" target="_blank" rel="noopener">Khan Academy Statistics &amp; Probability — worked examples of sum of squares, variance and the n − 1 correction</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/stock-ledger-recon/"><span class="related-ico" aria-hidden="true">📒</span><span class="related-name">Stock Ledger Builder &amp; Count Reconciliation</span></a><a class="related-item" href="https://tool-hub.me/timesheet-batch-agg/"><span class="related-ico" aria-hidden="true">🗂️</span><span class="related-name">Timesheet Batch Aggregator</span></a><a class="related-item" href="https://tool-hub.me/vehicle-log-agg/"><span class="related-ico" aria-hidden="true">🚗</span><span class="related-name">Company Vehicle Log Aggregator (Korea)</span></a><a class="related-item" href="https://tool-hub.me/wbs-progress-rollup/"><span class="related-ico" aria-hidden="true">📋</span><span class="related-name">WBS Weighted Progress &amp; EVM Rollup</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is standard deviation, and how do I calculate it step by step?</summary>
+      <p data-i18n="faq.a1">Standard deviation measures how spread out a set of numbers is around its mean. Worked example: for 2, 4, 4, 4, 5, 5, 7, 9 the mean is 40 ÷ 8 = 5. Each deviation from the mean is −3, −1, −1, −1, 0, 0, 2, 4; squaring and adding them gives a sum of squares of 32. Dividing by 8 (population) gives a variance of 4, so the population standard deviation is √4 = 2. This calculator does every one of these steps for you and shows them in the expandable breakdown table.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between sample and population standard deviation, and why divide by n − 1?</summary>
+      <p data-i18n="faq.a2">Use population standard deviation when your numbers are the entire group you care about — every student in a class, every day in a month. Use sample standard deviation when your numbers are a subset used to estimate a larger population, like 30 customers standing in for all customers. Dividing by n − 1 instead of n (Bessel's correction) slightly inflates the result to correct for the fact that a sample's own mean is closer to its data than the true population mean would be, which otherwise makes the sample variance an underestimate. For the same dataset, sample standard deviation is always a little larger than population standard deviation.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What is variance, and how does it relate to standard deviation?</summary>
+      <p data-i18n="faq.a3">Variance is the average of the squared deviations from the mean — standard deviation is simply its square root. Squaring keeps deviations from cancelling out (since positive and negative differences would otherwise sum to zero) but leaves the result in squared units, like dollars² or cm², which is hard to interpret. Taking the square root brings the number back to the original units, which is why standard deviation is usually reported for readability while variance underlies other statistics like ANOVA and confidence intervals.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can standard deviation be negative or zero, and why does the sample value show N/A for a single number?</summary>
+      <p data-i18n="faq.a4">Standard deviation can never be negative — it's a square root of squared numbers, which are always zero or positive. It equals exactly zero only when every value in the list is identical, since there's no spread at all to measure. With only one number entered, the sample standard deviation shows N/A because its formula divides by n − 1, which is zero for n = 1 — an undefined division. Population standard deviation still works with a single value (it's simply 0), since its formula divides by n instead.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">What number formats are accepted, and is my data sent to a server?</summary>
+      <p data-i18n="faq.a5">Type or paste numbers separated by commas, spaces, or new lines, in any mix — negative numbers and decimals are both fine, and pasting a column straight from a spreadsheet works the same way. Anything that isn't a valid number is skipped, and the calculator tells you how many entries it ignored. Every calculation runs entirely in your browser — nothing you type or paste is uploaded or shared with anyone. Your last entry is saved only in this browser's local storage, so clearing your browser data removes it completely.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

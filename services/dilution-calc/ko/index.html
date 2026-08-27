@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-7x9E4Z6ioAklOIt2gKRXHEbU0HqX2eAz2lTjUXlmxhs=' 'sha256-GTOoth9beeJlDXm22xLVeNcrilLt4PIerN1QlkQoYz8=' 'sha256-KspB+pX3e0+66mgYJZAxh6NI9WYAdkXIOYWOCJqUr18='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>희석 계산기 — C1V1 = C2V2 풀이</title>
+<meta name="description" content="C1V1 = C2V2 희석 계산기. 원액 농도, 목표 농도, 최종 부피를 입력하면 필요한 원액 부피와 넣을 희석액 양, 희석 배수를 바로 계산합니다.">
+<meta name="keywords" content="dilution calculator, c1v1 c2v2, serial dilution calculator, stock solution dilution, dilution factor calculator, how to dilute a solution">
+<link rel="canonical" href="https://tool-hub.me/dilution-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/dilution-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/dilution-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/dilution-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/dilution-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/dilution-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/dilution-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/dilution-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/dilution-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/dilution-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/dilution-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/dilution-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/dilution-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/dilution-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/dilution-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/dilution-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="희석 계산기 — C1V1 = C2V2 풀이">
+<meta property="og:description" content="C1V1 = C2V2 희석 계산기. 원액 농도, 목표 농도, 최종 부피를 입력하면 필요한 원액 부피와 넣을 희석액 양, 희석 배수를 바로 계산합니다.">
+<meta property="og:url" content="https://tool-hub.me/dilution-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/dilution-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dilution Calculator",
+  "description": "Dilution calculator for C1V1 = C2V2. Enter stock concentration, target concentration and final volume to get the stock volume, diluent and dilution factor.",
+  "url": "https://tool-hub.me/dilution-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Dilution Calculator",
+      "item": "https://tool-hub.me/dilution-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why does C1V1 = C2V2 work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diluting adds solvent but no extra solute, so the amount of solute stays constant. Concentration times volume equals that amount, which forces C1V1 to equal C2V2. Rearranged, V1 = C2 x V2 / C1 gives the stock volume, and whatever is left of the final volume is diluent."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is a serial dilution better than one big step?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Whenever the factor is large — roughly above 1:100. Measuring 10 uL into 990 uL carries the full error of that one tiny volume, and it compounds with incomplete mixing of a viscous stock. Three 1:10 steps reach 1:1000 with much better precision because every step pipettes a comfortable volume."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the formula work with percentages or mg/mL?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. C1V1 = C2V2 is unit-agnostic as long as both concentrations use the same unit — molar, millimolar, % w/v, mg/mL or fold (X) all behave identically. The only rule is never to mix units inside the equation: convert 0.5 M to 500 mM before comparing it with a millimolar target."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the order of addition matter?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For most buffers it does not, but for concentrated acids it matters a great deal: always add acid to water, never water to acid, because the heat of mixing can boil and spatter. As a habit, measure the diluent first, add the stock into it, then top up to the final volume and mix."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Dilution Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0d9488" href="https://tool-hub.me/math-calculators/">Math &amp; Science</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Dilution Calculator</span></nav>
+  <section class="hero">
+    <h1>Dilution Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Stock volume, diluent to add and the dilution factor — with the recipe written out the way you would note it in a lab book.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:2fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .recipe { margin-top:12px; font-size:15px; font-weight:600; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="solve" data-i18n="tool.solve.label">Solve for</label>
+    <select id="solve">
+      <option value="v1" data-i18n="tool.solve.v1">Stock volume (V1)</option>
+      <option value="c2" data-i18n="tool.solve.c2">Final concentration (C2)</option>
+      <option value="factor" data-i18n="tool.solve.factor">Dilution factor</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="c1" data-i18n="tool.c1.label">Stock concentration (C1)</label>
+        <input type="number" id="c1" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+      </div>
+      <div>
+        <label for="cunit" data-i18n="tool.unit.label">Concentration unit</label>
+        <select id="cunit">
+          <option value="M">M</option>
+          <option value="mM">mM</option>
+          <option value="µM">µM</option>
+          <option value="%">%</option>
+          <option value="mg/mL">mg/mL</option>
+          <option value="g/L">g/L</option>
+          <option value="ppm">ppm</option>
+          <option value="X">X</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="f-c2">
+      <label for="c2" data-i18n="tool.c2.label">Desired concentration (C2)</label>
+      <input type="number" id="c2" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1">
+    </div>
+
+    <div id="f-v1" hidden>
+      <label for="v1" data-i18n="tool.v1.label">Stock volume you have (V1)</label>
+      <input type="number" id="v1" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="v2" data-i18n="tool.v2.label">Final volume (V2)</label>
+        <input type="number" id="v2" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="100">
+      </div>
+      <div>
+        <label for="vunit" data-i18n="tool.vunit.label">Volume unit</label>
+        <select id="vunit">
+          <option value="mL">mL</option>
+          <option value="µL">µL</option>
+          <option value="L">L</option>
+          <option value="tsp">tsp</option>
+          <option value="tbsp">tbsp</option>
+          <option value="fl oz">fl oz</option>
+          <option value="cup">cup</option>
+          <option value="gal">gal</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-hero-label">Stock volume (V1)</div>
+          <div class="rc-val" id="r-hero">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.v1">Stock volume (V1)</div><div class="rc-val" id="r-v1">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.diluent">Diluent to add</div><div class="rc-val" id="r-diluent">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.factor">Dilution factor</div><div class="rc-val" id="r-factor">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.c2">Final concentration (C2)</div><div class="rc-val" id="r-c2">—</div></div>
+      </div>
+      <p class="recipe" id="r-recipe"></p>
+      <p class="subtle" id="r-serial" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.units" style="margin-top:12px;">Both concentrations must share one unit; only their ratio matters. Every volume uses the volume unit you select.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The dilution equation, and what each letter is doing</h2>
+    <p>Every routine dilution in a lab, a brewery, a darkroom or a cleaning cupboard is the same arithmetic: C1V1 = C2V2. C1 is the concentration of the stock you already have, V1 is how much of that stock you will take, C2 is the concentration you want, and V2 is the total volume you want to end up with. Because adding solvent never adds solute, the amount of solute on the left of the equation has to match the amount on the right. Rearranging for the only unknown most people care about gives V1 = (C2 x V2) / C1.</p>
+    <p>The number the equation does not give you directly is the one you actually pour: the diluent. That is simply V2 minus V1. A calculator that stops at V1 leaves you doing the subtraction at the bench with gloves on, which is exactly where mistakes happen, so this tool prints both numbers and the sentence that combines them.</p>
+
+    <h3>Worked example: 10 M stock down to 1 M in 100 mL</h3>
+    <p>You have a 10 M NaOH stock and need 100 mL of 1 M. Put C1 = 10, C2 = 1, V2 = 100 mL. Then V1 = (1 x 100) / 10 = 10 mL of stock, and the diluent is 100 - 10 = 90 mL. The recipe reads: add 10 mL of stock to 90 mL of water for 100 mL total. The dilution factor is 10 / 1 = 1:10 — a single comfortable step with no accuracy concerns.</p>
+    <p>Note the order in that sentence. For a hydroxide it barely matters, but if the stock were concentrated sulfuric acid the wording would be doing safety work: water first, acid into the water, never the reverse. The heat released when strong acid meets water is enough to boil the droplet at the interface and throw it back out of the cylinder.</p>
+
+    <h3>Worked example: 1:1000 by serial dilution</h3>
+    <p>Say you need a 1:1000 dilution of a primary antibody in 1 mL of buffer. Done in one step, that is 1 µL of stock into 999 µL — a volume at the very bottom of a P2 pipette's range, where relative error is worst and a single air bubble ruins the result. The serial route is three 1:10 steps: 100 µL of stock into 900 µL of buffer gives 1:10; 100 µL of that into 900 µL gives 1:100; 100 µL of that into 900 µL gives 1:1000. Every transfer is 100 µL, a volume any pipette handles well.</p>
+    <p>The trade-off is that errors multiply rather than add across steps, so sloppy serial work is not automatically better. But a 2% error on three comfortable 100 µL transfers compounds to roughly 6%, while a 10% error on one 1 µL transfer is 10% on its own — and that is before mixing problems with a viscous glycerol stock. As a rule of thumb, split anything above 1:100, and always mix thoroughly between steps because an unmixed intermediate poisons every step after it.</p>
+
+    <h2>Where pipetting error actually comes from</h2>
+    <p>Manufacturers quote accuracy as a percentage of the set volume, and that percentage grows sharply near the bottom of a pipette's range. A P200 set to 20 µL is typically within about 1%; set to 2 µL it can be off by 5% or more. Beyond the instrument, the usual culprits are reverse-pipetting viscous solutions with forward technique, wet tips carrying extra volume, temperature differences between stock and diluent, and failing to pre-wet the tip. None of these show up in the calculation — the equation is exact, the hands are not.</p>
+    <p>Two habits fix most of it. Choose the pipette whose range puts your volume in the upper half, and scale the whole preparation up if the calculated V1 lands below about 5 µL. Making 10 mL instead of 1 mL turns a 1 µL transfer into a 10 µL transfer at no extra cost beyond a little more buffer.</p>
+
+    <h2>Units: molar, percent, mg/mL, or fold</h2>
+    <p>The equation does not care what the concentration unit is, only that both sides use the same one. Molar and millimolar, % w/v, mg/mL, and fold notation such as 10X TBE all work. What breaks the calculation is mixing them: entering C1 as 0.5 (molar) and C2 as 50 (millimolar) gives a nonsense answer because the tool has no way to know you switched scales. Convert first — 0.5 M is 500 mM — then enter both in the same unit. Fold notation is the easiest case of all: 10X stock to 1X working solution is a 1:10 dilution regardless of what is in the buffer.</p>
+
+    <h2>Writing it into a lab notebook</h2>
+    <p>A reviewable entry records four things: the stock identity and its concentration, the volume of stock taken, the diluent and the volume added, and the final volume. "10 mL of 10 M NaOH + 90 mL deionised water = 100 mL of 1 M NaOH (1:10), prepared 4 March" is complete; "diluted the NaOH 1:10" is not, because it does not say what the starting concentration was or how much you made. The recipe sentence this calculator produces is written in that first form deliberately, so it can be copied straight across.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>C1V1 = C2V2 assumes volumes add up. For dilute aqueous solutions that is close enough to true, but concentrated ethanol and water famously contract on mixing — 50 mL plus 50 mL gives about 96 mL, not 100. For those cases, and for anything prepared to a certified concentration, add the stock to a volumetric flask and top up to the mark rather than measuring the diluent separately. The equation also says nothing about solubility, pH shifts after dilution, or whether a buffer will still buffer at the working concentration. Those are chemistry questions, and the numbers here are only the starting point.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml" target="_blank" rel="noopener">NIST Physical Measurement Laboratory — SI units, concentration quantities and measurement uncertainty</a></li>
+      <li><a href="https://www.cdc.gov/infection-control/" target="_blank" rel="noopener">CDC Infection Control — preparing and using diluted disinfectant solutions safely</a></li>
+      <li><a href="https://www.epa.gov/pesticide-labels" target="_blank" rel="noopener">US EPA Pesticide Labels — how label mix rates and dilution instructions are expressed</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/half-life-calc/"><span class="related-ico" aria-hidden="true">☢️</span><span class="related-name">Half-Life Calculator</span></a><a class="related-item" href="https://tool-hub.me/kinetic-energy-calc/"><span class="related-ico" aria-hidden="true">⚡</span><span class="related-name">Kinetic Energy Calculator</span></a><a class="related-item" href="https://tool-hub.me/marks-percentage-calc/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Marks Percentage Calculator</span></a><a class="related-item" href="https://tool-hub.me/matrix-calc/"><span class="related-ico" aria-hidden="true">🔢</span><span class="related-name">Matrix Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why does C1V1 = C2V2 work?</summary><p data-i18n="faq.a1">Diluting adds solvent but no extra solute, so the amount of solute stays constant. Concentration times volume equals that amount, which forces C1V1 to equal C2V2. Rearranged, V1 = C2 x V2 / C1 gives the stock volume, and whatever is left of the final volume is diluent.</p></details>
+    <details><summary data-i18n="faq.q2">When is a serial dilution better than one big step?</summary><p data-i18n="faq.a2">Whenever the factor is large — roughly above 1:100. Measuring 10 uL into 990 uL carries the full error of that one tiny volume, and it compounds with incomplete mixing of a viscous stock. Three 1:10 steps reach 1:1000 with much better precision because every step pipettes a comfortable volume.</p></details>
+    <details><summary data-i18n="faq.q3">Does the formula work with percentages or mg/mL?</summary><p data-i18n="faq.a3">Yes. C1V1 = C2V2 is unit-agnostic as long as both concentrations use the same unit — molar, millimolar, % w/v, mg/mL or fold (X) all behave identically. The only rule is never to mix units inside the equation: convert 0.5 M to 500 mM before comparing it with a millimolar target.</p></details>
+    <details><summary data-i18n="faq.q4">Does the order of addition matter?</summary><p data-i18n="faq.a4">For most buffers it does not, but for concentrated acids it matters a great deal: always add acid to water, never water to acid, because the heat of mixing can boil and spatter. As a habit, measure the diluent first, add the stock into it, then top up to the final volume and mix.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

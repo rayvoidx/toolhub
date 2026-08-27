@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-h1NVPfHdS0/olKK/tSOqU/EbgXgD4DKddSPL37eMkcA=' 'sha256-NwDq0uDU0Fs/e9oihFryxyRattvconNaWOzAtz4fLw0=' 'sha256-m0PB9reRr5Kt99QOTE7D/Elv7bfToj1ZnjT+CgYrTHc='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>단위가격 계산기 — 어느 쪽이 더 싼지 3초 만에</title>
+<meta name="description" content="가격과 용량만 입력하면 100g당·100ml당·개당 단위가격을 비교해 어느 상품이 더 싼지 알려주는 무료 계산기">
+<meta name="keywords" content="unit price calculator, price per unit comparison, price per 100g, cost per unit, price comparison">
+<link rel="canonical" href="https://tool-hub.me/unit-price/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/unit-price/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/unit-price/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/unit-price/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/unit-price/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/unit-price/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/unit-price/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/unit-price/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/unit-price/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/unit-price/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/unit-price/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/unit-price/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/unit-price/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/unit-price/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/unit-price/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/unit-price/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="단위가격 계산기 — 어느 쪽이 더 싼지 3초 만에">
+<meta property="og:description" content="가격과 용량만 입력하면 100g당·100ml당·개당 단위가격을 비교해 어느 상품이 더 싼지 알려주는 무료 계산기">
+<meta property="og:url" content="https://tool-hub.me/unit-price/ko/">
+<meta property="og:image" content="https://tool-hub.me/unit-price/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#e11d48">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Unit Price Calculator",
+  "description": "Enter price and amount to compare the price per unit — per 100g, per 100ml or per item — and instantly see which product is cheaper. Free and ad-free.",
+  "url": "https://tool-hub.me/unit-price/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Unit Price Calculator",
+      "item": "https://tool-hub.me/unit-price/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is unit price (price per 100g)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unit price is a product's total price divided by its total amount — the price per gram, per milliliter or per item. This unit price calculator converts weight and volume products to price per 100g and price per 100ml so they are easy to compare at a glance. Even two products with different sizes can be compared directly once their unit prices line up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it compare kg and g mixed together?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. If one product is in kg and the other in g, the calculator automatically converts both to grams, so the price per unit is accurate. Volume works the same way — L and ml are normalized to ml. Just note that different types of units — weight (g), volume (ml) and count (item) — measure different things and cannot be compared, so enter units of the same type on both sides."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I enter a multipack (2+1 etc.)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter the number of items in the items-per-pack field. For example, if a 500g product is sold as a pack of 3 for 9,000, enter amount 500, unit g and items per pack 3. The unit price is calculated from the total amount (amount × items per pack) to tell you which is cheaper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The price, amount and other inputs are never sent to a server — everything is calculated inside your browser. Only your last inputs are saved in this browser's localStorage so you can pick up where you left off; nothing is transmitted anywhere else."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Unit Price Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Unit Price Calculator</span></nav>
+  <section class="hero">
+    <h1>Unit Price Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Just enter the price and amount. We'll instantly show you which one is the better deal.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       i18n contract (docs/I18N.md): every user-visible string carries a data-i18n hook,
+         with the same key added to all 14 language blocks in js/locales.js. Dynamic JS
+         strings are looked up via window.I18N.t("key"); subscribe to the document
+         "i18n:change" event when a re-render on language switch is needed. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <fieldset class="product-fields">
+      <legend data-i18n="tool.legendA">Product A</legend>
+      <label for="a-price" data-i18n="tool.price">Price</label>
+      <input type="number" inputmode="decimal" id="a-price" name="a-price" min="0" step="1" placeholder="e.g. 1000" data-i18n-placeholder="tool.ph.priceA">
+
+      <label for="a-capacity" data-i18n="tool.amount">Amount</label>
+      <input type="number" inputmode="decimal" id="a-capacity" name="a-capacity" min="0" step="any" placeholder="e.g. 500" data-i18n-placeholder="tool.ph.amountA">
+
+      <label for="a-unit" data-i18n="tool.unit">Unit</label>
+      <select id="a-unit" name="a-unit">
+        <option value="g">g</option>
+        <option value="kg">kg</option>
+        <option value="oz">oz</option>
+        <option value="lb">lb</option>
+        <option value="ml">ml</option>
+        <option value="L">L</option>
+        <option value="floz">fl oz</option>
+        <option value="pt">pt</option>
+        <option value="qt">qt</option>
+        <option value="gal">gal</option>
+        <option value="ea" data-i18n="tool.unitEach">item</option>
+      </select>
+
+      <label for="a-count" data-i18n="tool.packCount">Items per pack</label>
+      <input type="number" inputmode="numeric" id="a-count" name="a-count" min="1" step="1" value="1">
+    </fieldset>
+
+    <fieldset class="product-fields">
+      <legend data-i18n="tool.legendB">Product B</legend>
+      <label for="b-price" data-i18n="tool.price">Price</label>
+      <input type="number" inputmode="decimal" id="b-price" name="b-price" min="0" step="1" placeholder="e.g. 1800" data-i18n-placeholder="tool.ph.priceB">
+
+      <label for="b-capacity" data-i18n="tool.amount">Amount</label>
+      <input type="number" inputmode="decimal" id="b-capacity" name="b-capacity" min="0" step="any" placeholder="e.g. 1" data-i18n-placeholder="tool.ph.amountB">
+
+      <label for="b-unit" data-i18n="tool.unit">Unit</label>
+      <select id="b-unit" name="b-unit">
+        <option value="g">g</option>
+        <option value="kg" selected>kg</option>
+        <option value="oz">oz</option>
+        <option value="lb">lb</option>
+        <option value="ml">ml</option>
+        <option value="L">L</option>
+        <option value="floz">fl oz</option>
+        <option value="pt">pt</option>
+        <option value="qt">qt</option>
+        <option value="gal">gal</option>
+        <option value="ea" data-i18n="tool.unitEach">item</option>
+      </select>
+
+      <label for="b-count" data-i18n="tool.packCount">Items per pack</label>
+      <input type="number" inputmode="numeric" id="b-count" name="b-count" min="1" step="1" value="1">
+    </fieldset>
+
+    <button type="button" class="btn" id="compare-btn" data-i18n="tool.compare">Compare unit price</button>
+
+    <div class="result" id="result" hidden></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Comparing prices when the sizes never match</h2>
+    <p>Shelf prices are designed to be hard to compare: one product is 500 g, the next is 1.2 kg, a third is a "3 for the price of 2" bundle. The only fair way to judge them is the <strong>unit price</strong> — the cost of a single, common amount such as 100 g or 100 ml. Once every option is expressed that way, the cheapest one is obvious at a glance, regardless of packaging. This calculator does that conversion for two products side by side.</p>
+
+    <h2>How to enter each product</h2>
+    <ol>
+      <li>Type the <strong>price</strong> exactly as marked on the shelf.</li>
+      <li>Type the <strong>amount</strong> and pick its <strong>unit</strong> — g, kg, ml, L, or item. You can mix units between the two products; the tool normalizes them.</li>
+      <li>Set <strong>items per pack</strong> for multipacks. The total amount used in the math is amount &times; items per pack.</li>
+    </ol>
+
+    <h2>The formula</h2>
+    <p>Unit price = total price &divide; total amount, then scaled to a per-100 figure. Weights are normalized to grams and volumes to millilitres before comparing, so kg vs g and L vs ml line up automatically:</p>
+    <table>
+      <thead><tr><th>Given</th><th>Equals</th></tr></thead>
+      <tbody>
+        <tr><td>1 kg</td><td>1,000 g</td></tr>
+        <tr><td>1 L</td><td>1,000 ml</td></tr>
+      </tbody>
+    </table>
+
+    <div class="example">
+      <p><strong>Example 1 — weight, mixed units.</strong> Product A costs 1,000 for 500 g; Product B costs 1,800 for 1 kg. A per 100 g = 1,000 &divide; 500 &times; 100 = <strong>200</strong>. B per 100 g = 1,800 &divide; 1,000 &times; 100 = <strong>180</strong>. B is cheaper by 10% per 100 g, even though it costs more on the shelf.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — volume.</strong> Detergent A is 3.50 for 750 ml; detergent B is 5.00 for 1.5 L (1,500 ml). A per 100 ml = 3.50 &divide; 750 &times; 100 = <strong>0.467</strong>. B per 100 ml = 5.00 &divide; 1,500 &times; 100 = <strong>0.333</strong>. B wins clearly.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a multipack.</strong> A single 400 g can costs 1.20 (0.30 per 100 g). A 3-pack of the same 400 g cans costs 3.30, so its total amount is 1,200 g and its unit price is 3.30 &divide; 1,200 &times; 100 = <strong>0.275</strong> per 100 g — about 8% cheaper per gram.</p>
+    </div>
+
+    <h2>Reading the comparison</h2>
+    <table>
+      <thead><tr><th>Product</th><th>Price</th><th>Amount</th><th>Per 100 g</th></tr></thead>
+      <tbody>
+        <tr><td>A (single)</td><td>1,200</td><td>400 g &times; 1</td><td>300</td></tr>
+        <tr><td>B (3-pack)</td><td>3,300</td><td>400 g &times; 3</td><td>275</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Common mistakes and limits</h2>
+    <ul>
+      <li><strong>Different unit types are not comparable.</strong> Weight (g), volume (ml), and count (item) measure different things — enter the same type on both sides, or the "cheaper" answer is meaningless.</li>
+      <li><strong>Don't forget the pack count.</strong> A bundle looks expensive until you divide by how many items it contains.</li>
+      <li><strong>Bigger is not always cheaper.</strong> Family sizes sometimes carry a higher unit price than the medium pack — that is exactly what this tool exposes.</li>
+      <li><strong>Unit price is only one factor.</strong> It ignores quality, brand, and shelf life. The cheapest gram of something you throw away unused is not a saving — buy the size you will actually use.</li>
+      <li><strong>Cross-check the shelf label.</strong> Many countries require a printed unit price on the tag, but the reference amount can differ (per 100 g here, per kilogram there), so recompute to the same basis before you trust two labels against each other.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — U.S. standards for retail unit pricing and package labeling</a></li>
+      <li><a href="https://www.bls.gov/cpi/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics, Consumer Price Index — official average prices per unit for common goods</a></li>
+      <li><a href="https://www.gov.uk/browse/business/sale-goods-services-data" target="_blank" rel="noopener">GOV.UK selling goods and services — UK rules on price marking and unit prices shown to shoppers</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/vat-calc/"><span class="related-ico" aria-hidden="true">🧾</span><span class="related-name">VAT Calculator</span></a><a class="related-item" href="https://tool-hub.me/zakat-calc/"><span class="related-ico" aria-hidden="true">🕌</span><span class="related-name">Zakat Calculator</span></a><a class="related-item" href="https://tool-hub.me/annuity-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Annuity Calculator</span></a><a class="related-item" href="https://tool-hub.me/apr-apy-calc/"><span class="related-ico" aria-hidden="true">🏦</span><span class="related-name">APR to APY Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         Each summary/p carries data-i18n="faq.qN|faq.aN", filled for every language in locales.js. -->
+    <details>
+      <summary data-i18n="faq.q1">What is unit price (price per 100g)?</summary>
+      <p data-i18n="faq.a1">Unit price is a product's total price divided by its total amount — the price per gram, per milliliter or per item. This unit price calculator converts weight and volume products to price per 100g and price per 100ml so they are easy to compare at a glance. Even two products with different sizes can be compared directly once their unit prices line up.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Can it compare kg and g mixed together?</summary>
+      <p data-i18n="faq.a2">Yes. If one product is in kg and the other in g, the calculator automatically converts both to grams, so the price per unit is accurate. Volume works the same way — L and ml are normalized to ml. Just note that different types of units — weight (g), volume (ml) and count (item) — measure different things and cannot be compared, so enter units of the same type on both sides.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I enter a multipack (2+1 etc.)?</summary>
+      <p data-i18n="faq.a3">Enter the number of items in the items-per-pack field. For example, if a 500g product is sold as a pack of 3 for 9,000, enter amount 500, unit g and items per pack 3. The unit price is calculated from the total amount (amount × items per pack) to tell you which is cheaper.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is my data sent to a server?</summary>
+      <p data-i18n="faq.a4">No. The price, amount and other inputs are never sent to a server — everything is calculated inside your browser. Only your last inputs are saved in this browser's localStorage so you can pick up where you left off; nothing is transmitted anywhere else.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

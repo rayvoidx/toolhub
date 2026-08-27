@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-jkrlsnQC5+i5bXAxNgJDwTcJUlqZMRrIfyzChaJkow4=' 'sha256-W867vI+ORmUW0AnejPhJQ57ti2/2Kfjjp9wgu7szyJ4=' 'sha256-9/dHayoBqN3ohsvjl1teTz0JvCwCqzg600EpsA7scqM='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JWT 디코더 — 헤더·페이로드를 로컬에서 확인</title>
+<meta name="description" content="JSON Web Token을 붙여넣으면 헤더와 페이로드를 디코드하고 만료·발급 시각을 사람이 읽는 형식으로 보여주며 만료 여부를 판정합니다. 토큰은 브라우저 밖으로 나가지 않습니다.">
+<meta name="keywords" content="jwt decoder, decode jwt, json web token decoder, jwt payload viewer, jwt expiry check">
+<link rel="canonical" href="https://tool-hub.me/jwt-decoder/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/jwt-decoder/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/jwt-decoder/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/jwt-decoder/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/jwt-decoder/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/jwt-decoder/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/jwt-decoder/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/jwt-decoder/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/jwt-decoder/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/jwt-decoder/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/jwt-decoder/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/jwt-decoder/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/jwt-decoder/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/jwt-decoder/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/jwt-decoder/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/jwt-decoder/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JWT 디코더 — 헤더·페이로드를 로컬에서 확인">
+<meta property="og:description" content="JSON Web Token을 붙여넣으면 헤더와 페이로드를 디코드하고 만료·발급 시각을 사람이 읽는 형식으로 보여주며 만료 여부를 판정합니다. 토큰은 브라우저 밖으로 나가지 않습니다.">
+<meta property="og:url" content="https://tool-hub.me/jwt-decoder/ko/">
+<meta property="og:image" content="https://tool-hub.me/jwt-decoder/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c2d12">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "JWT Decoder",
+  "description": "Paste a JSON Web Token to decode its header and payload, see expiry and issued-at times in readable form, and check whether the token has expired. Nothing leaves your browser.",
+  "url": "https://tool-hub.me/jwt-decoder/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-28",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "JWT Decoder",
+      "item": "https://tool-hub.me/jwt-decoder/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does this tool verify the signature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No, and that is deliberate. Verifying requires the secret or public key, which you should never paste into a website. This tool only decodes the two base64url segments so you can read the claims. Treat a decoded token as untrusted until your server verifies it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to paste a token here?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The decoding runs entirely in your browser — no network request carries the token, which you can confirm in your devtools network tab. That said, a JWT is a credential: prefer expired or test tokens, and rotate anything you paste into any tool you did not write yourself."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do exp and iat look like large numbers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are Unix timestamps: seconds since 1 January 1970 UTC. 1767225600 is 1 January 2026. The decoder converts both into your local time so you can see at a glance whether a token is still valid and how long its lifetime was."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>JWT Decoder</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">JWT Decoder</span></nav>
+  <section class="hero">
+    <h1>JWT Decoder</h1>
+    <p class="lede" data-i18n="hero.lede">Decode a token, read the claims, see when it expires — without sending it anywhere.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool textarea { width:100%; min-height:110px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; }
+      #tool .seg { margin-top:14px; }
+      #tool .seg-head { display:flex; align-items:center; justify-content:space-between; gap:8px; }
+      #tool .seg-head h3 { font-size:14px; margin:0; }
+      #tool pre { margin:6px 0 0; padding:12px; border:1px solid var(--line); border-radius:8px; background:var(--bg);
+        font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:13px; line-height:1.5; overflow-x:auto; white-space:pre; }
+      #tool .copy-btn { padding:6px 11px; font-size:12px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .copy-btn:hover { border-color:var(--accent); }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:16px; margin-top:2px; word-break:break-word; }
+      #tool .rc-val.ok { color:#15803d; } #tool .rc-val.bad { color:#b91c1c; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+    </style>
+
+    <label for="jwt-input" data-i18n="tool.input.label">JWT</label>
+    <textarea id="jwt-input" spellcheck="false" autocomplete="off" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIn0.signature"></textarea>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Decode</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.status">Token status</div><div class="rc-val" id="r-status">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.expires">Expires</div><div class="rc-val" id="r-exp">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.issued">Issued at</div><div class="rc-val" id="r-iat">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ttl">Time left</div><div class="rc-val" id="r-ttl">—</div></div>
+      </div>
+      <div class="seg">
+        <div class="seg-head">
+          <h3 data-i18n="tool.r.header">Header</h3>
+          <button type="button" class="copy-btn" data-copy="out-header" data-i18n="tool.copy">Copy</button>
+        </div>
+        <pre id="out-header"></pre>
+      </div>
+      <div class="seg">
+        <div class="seg-head">
+          <h3 data-i18n="tool.r.payload">Payload</h3>
+          <button type="button" class="copy-btn" data-copy="out-payload" data-i18n="tool.copy">Copy</button>
+        </div>
+        <pre id="out-payload"></pre>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.local" style="margin-top:12px;">Decoding happens in your browser. The signature is NOT verified.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What is actually inside a JWT</h2>
+    <p>A JSON Web Token is three base64url strings joined by dots: header, payload, signature. The first two are plain JSON that anyone can read — base64 is an encoding, not encryption. The third is a signature over the first two, and it is the only part that proves the token was issued by someone holding the key.</p>
+    <p>That split explains what this decoder does and does not do. Reading the claims requires nothing but decoding. Trusting them requires verification with a secret or public key, which belongs on your server, never in a browser form.</p>
+
+    <h3>Worked example 1: reading the standard claims</h3>
+    <p>A typical payload looks like {"sub":"1234567890","name":"Ada Lovelace","iat":1767225600,"exp":1767229200}. The subject is the user id, iat is when it was issued and exp when it stops being valid — both Unix seconds. The gap here is 3600 seconds, a one-hour token. The decoder converts both stamps into your local time and flags whether now is past exp.</p>
+
+    <h3>Worked example 2: the "expired" surprise</h3>
+    <p>A token that worked five minutes ago and fails now almost always has a short exp. Decode it, read the expiry, and you have the answer without touching server logs. If exp is missing entirely, the token never expires by itself — a design that shifts the whole revocation burden onto a denylist, which is worth knowing before you ship it.</p>
+
+    <h3>Worked example 3: checking the algorithm</h3>
+    <p>The header names the signing algorithm, for example {"alg":"HS256","typ":"JWT"}. If you ever see "alg":"none" coming from a real system, treat it as an incident: it names a genuine vulnerability class where servers accepted unsigned tokens. Decoding the header is the quickest way to spot it.</p>
+
+    <h2>Common claims and what they mean</h2>
+    <table>
+      <thead><tr><th>Claim</th><th>Meaning</th><th>Typical value</th></tr></thead>
+      <tbody>
+        <tr><td>iss</td><td>Issuer — who minted the token</td><td>https://auth.example.com</td></tr>
+        <tr><td>sub</td><td>Subject — usually the user id</td><td>1234567890</td></tr>
+        <tr><td>aud</td><td>Audience — who it is meant for</td><td>api.example.com</td></tr>
+        <tr><td>exp</td><td>Expiry, Unix seconds</td><td>1767229200</td></tr>
+        <tr><td>iat</td><td>Issued at, Unix seconds</td><td>1767225600</td></tr>
+        <tr><td>nbf</td><td>Not valid before</td><td>1767225600</td></tr>
+        <tr><td>jti</td><td>Token id, for replay defence</td><td>a3f1…</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Safety notes worth repeating</h2>
+    <p>Never put a private key or shared secret into any online tool, including this one — there is no field for it here precisely so the temptation does not exist. Verification belongs in your backend library, where the key stays in your environment.</p>
+    <p>Treat any live token as a password. Decoding happens locally here and you can verify that in the devtools network tab, but the safest habit is to decode expired or test tokens and rotate anything you paste into a tool you did not write. Access tokens in particular grant real permissions until they expire.</p>
+    <p>Finally, remember that a decoded payload is user-controllable data as far as your application is concerned. Read it for debugging, but never make an authorisation decision from a token your server has not verified.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/info/rfc7519" target="_blank" rel="noopener">RFC Editor — RFC 7519, the JSON Web Token (JWT) specification and registered claims</a></li>
+      <li><a href="https://www.rfc-editor.org/info/rfc7515" target="_blank" rel="noopener">RFC Editor — RFC 7515, JSON Web Signature (JWS) header and signing rules</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" target="_blank" rel="noopener">MDN Web Docs — how Base64 and base64url encoding work in the browser</a></li>
+      <li><a href="https://csrc.nist.gov/publications/detail/sp/800-63b/final" target="_blank" rel="noopener">NIST SP 800-63B — digital identity guidance on session tokens and secret handling</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/markdown-preview/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Markdown Preview</span></a><a class="related-item" href="https://tool-hub.me/markdown-table-generator/"><span class="related-ico" aria-hidden="true">📋</span><span class="related-name">Markdown Table Generator</span></a><a class="related-item" href="https://tool-hub.me/meta-tag-generator/"><span class="related-ico" aria-hidden="true">🏷️</span><span class="related-name">Meta Tag Generator</span></a><a class="related-item" href="https://tool-hub.me/number-base-conv/"><span class="related-ico" aria-hidden="true">🔢</span><span class="related-name">Number Base Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Does this tool verify the signature?</summary><p data-i18n="faq.a1">No, and that is deliberate. Verifying requires the secret or public key, which you should never paste into a website. This tool only decodes the two base64url segments so you can read the claims. Treat a decoded token as untrusted until your server verifies it.</p></details>
+    <details><summary data-i18n="faq.q2">Is it safe to paste a token here?</summary><p data-i18n="faq.a2">The decoding runs entirely in your browser — no network request carries the token, which you can confirm in your devtools network tab. That said, a JWT is a credential: prefer expired or test tokens, and rotate anything you paste into any tool you did not write yourself.</p></details>
+    <details><summary data-i18n="faq.q3">Why do exp and iat look like large numbers?</summary><p data-i18n="faq.a3">They are Unix timestamps: seconds since 1 January 1970 UTC. 1767225600 is 1 January 2026. The decoder converts both into your local time so you can see at a glance whether a token is still valid and how long its lifetime was.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

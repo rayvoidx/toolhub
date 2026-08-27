@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-KU+9S4e3Q9ujhquUQPab/YpwZuV3DucVg0i3n1edUjY=' 'sha256-ixWPuaBX+CdmabB6O5mQS++UvuxWOL80x7K7kvk05gk=' 'sha256-q52XSOFeU/hyE/K9eGMUP88nzbFyqeCkYEwowkCpurM='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>달의 위상 계산기 — 오늘의 달 모양과 다음 보름달</title>
+<meta name="description" content="오늘 달의 위상과 조도를 바로 확인하거나 원하는 날짜를 조회하세요. 월령과 함께 다음 보름달·삭 날짜까지 — 무료이며 브라우저에서 계산됩니다.">
+<meta name="keywords" content="moon phase today, current moon phase, full moon calendar, what phase is the moon in, next full moon, 오늘 달 모양">
+<link rel="canonical" href="https://tool-hub.me/moon-phase-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/moon-phase-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/moon-phase-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/moon-phase-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/moon-phase-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/moon-phase-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/moon-phase-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/moon-phase-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/moon-phase-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/moon-phase-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/moon-phase-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/moon-phase-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/moon-phase-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/moon-phase-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/moon-phase-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/moon-phase-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="달의 위상 계산기 — 오늘의 달 모양과 다음 보름달">
+<meta property="og:description" content="오늘 달의 위상과 조도를 바로 확인하거나 원하는 날짜를 조회하세요. 월령과 함께 다음 보름달·삭 날짜까지 — 무료이며 브라우저에서 계산됩니다.">
+<meta property="og:url" content="https://tool-hub.me/moon-phase-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/moon-phase-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Moon Phase Calculator",
+  "description": "See today's moon phase and illumination instantly, or look up any date. Get moon age plus the next full and new moon dates — free, computed in your browser.",
+  "url": "https://tool-hub.me/moon-phase-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Moon Phase Calculator", "item": "https://tool-hub.me/moon-phase-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What moon phase is it today?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This calculator loads with today's date already selected and instantly shows the current moon phase, illumination percentage, and how many days old the Moon is in its current cycle. It also lists the next full moon and next new moon dates so you can plan ahead. Just open the page — no input required for today's answer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is this moon phase calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Moon's phase is calculated from a known reference new moon and the average length of a synodic month (about 29.53 days), the same lunar-cycle math used by many simple moon calendars. This gives results accurate to roughly plus or minus one day for any date, past or future. It is not precise enough for celestial navigation, tide prediction, or religious observances that require exact timing — those need a full astronomical ephemeris."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 8 moon phases and what do they mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A full lunar cycle moves through 8 named phases: New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, and Waning Crescent. Waxing means the lit portion is growing night by night, and waning means it's shrinking. New Moon marks the start of the cycle, when the Moon is essentially invisible, and Full Moon marks the midpoint, when the entire face is lit. The reference strip below the calculator shows the glyph and a short description for each phase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does moon phase relate to lunar calendars like Korea's eumnyeok or Japan's kyūreki?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional East Asian calendars such as Korea's 음력 (eumnyeok) and Japan's 旧暦 (kyūreki) are lunisolar: each calendar month begins on or near a new moon, and the 15th of the month falls close to a full moon. That's why holidays like Chuseok and Tsukimi (harvest moon festivals) and Lunar New Year always land on a new or full moon. This tool calculates the astronomical moon phase for any date — it doesn't convert dates to a lunisolar calendar, but it's a quick way to see why a given lunar-calendar date lines up with a particular moon phase."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the date I select sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This moon phase calculator runs entirely in your browser — the date you pick and the calculated results never leave your device and nothing is uploaded or stored on a server. The only thing saved locally is the last date you looked up, kept in your browser's local storage so it's there if you come back."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Moon Phase Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0284c7" href="https://tool-hub.me/date-calculators/">Date &amp; Time</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Moon Phase Calculator</span></nav>
+  <section class="hero">
+    <h1>Moon Phase Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">See today's moon phase, illumination, and age at a glance, or look up any past or future date — plus the next full and new moon.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Moon phase calculator" data-i18n-aria-label="tool.aria" aria-live="polite">
+    <style>
+      #tool .date-row { display:flex; gap:8px; }
+      #tool #today-btn { flex:0 0 auto; padding:0 16px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font-weight:700; font-size:14px; cursor:pointer; }
+      #tool #today-btn:hover { border-color:var(--accent); }
+      #tool .res-hero { display:flex; align-items:center; gap:14px; margin-bottom:12px; }
+      #tool .res-glyph { font-size:52px; line-height:1; flex:0 0 auto; }
+      #tool .res-name { margin:0; font-size:22px; font-weight:800; letter-spacing:-.01em; }
+      #tool .res-meta { display:grid; grid-template-columns:1fr 1fr; gap:10px 18px; margin:8px 0 4px; font-size:13.5px; }
+      #tool .res-meta span { color:var(--muted); }
+      #tool .res-meta strong { display:block; margin-top:2px; font-size:14.5px; color:var(--ink); }
+      #tool .res-note { margin:12px 0 0; font-size:12.5px; color:var(--muted); }
+      #tool .res-note + .res-note { margin-top:4px; }
+      #tool h2.table-heading { font-size:15px; margin:26px 0 4px; letter-spacing:-.01em; }
+      #tool .phase-strip { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:8px; }
+      #tool .phase-item { text-align:center; padding:10px 6px; border:1px solid var(--line); border-radius:10px; background:var(--bg); }
+      #tool .phase-item.cur { border-color:var(--accent); background:color-mix(in srgb, var(--accent) 10%, var(--surface)); }
+      #tool .phase-glyph { display:block; font-size:24px; }
+      #tool .phase-name { margin:4px 0 2px; font-size:11.5px; font-weight:700; }
+      #tool .phase-desc { margin:0; font-size:10.5px; line-height:1.35; color:var(--muted); }
+      @media(max-width:420px){
+        #tool .res-glyph { font-size:42px; }
+        #tool .res-meta { grid-template-columns:1fr; }
+        #tool .phase-strip { grid-template-columns:repeat(2,1fr); }
+      }
+    </style>
+
+    <div class="input-group">
+      <label for="moon-date" data-i18n="tool.date.label">Date</label>
+      <div class="date-row">
+        <input type="date" id="moon-date" autocomplete="off" min="1900-01-01" max="2100-12-31">
+        <button type="button" id="today-btn" data-i18n="tool.today.btn">Today</button>
+      </div>
+    </div>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.result.empty" style="margin:0;color:var(--muted);">Pick a date to see the moon phase</p>
+      <p id="result-err" hidden data-i18n="tool.result.err" style="margin:0;color:#dc2626;font-weight:600;">Enter a valid date</p>
+      <p id="result-range" hidden data-i18n="tool.result.range" style="margin:0;color:#dc2626;font-weight:600;">Enter a date between 1900 and 2100 — outside that range this approximation is no longer reliable</p>
+      <div id="result-card" hidden>
+        <div class="res-hero">
+          <span id="res-glyph" class="res-glyph" aria-hidden="true">🌕</span>
+          <p id="res-name" class="res-name">Full Moon</p>
+        </div>
+        <div class="res-meta">
+          <div><span data-i18n="tool.res.illumination">Illumination</span><strong id="res-illum"></strong></div>
+          <div><span data-i18n="tool.res.age">Moon age</span><strong id="res-age"></strong></div>
+          <div><span data-i18n="tool.res.nextFull">Next full moon</span><strong id="res-nextfull"></strong></div>
+          <div><span data-i18n="tool.res.nextNew">Next new moon</span><strong id="res-nextnew"></strong></div>
+        </div>
+        <p class="res-note" data-i18n="tool.disclaimer">Approximate calculation based on the average synodic month (~29.53 days) from a known reference new moon — accurate to roughly ±1 day. Not a substitute for precise astronomical, navigational, or religious/lunar-calendar timing.</p>
+        <p class="res-note" data-i18n="tool.privacy">All calculations run in your browser — nothing is sent to a server.</p>
+      </div>
+    </div>
+
+    <h2 class="table-heading" data-i18n="tool.table.heading">The 8 moon phases explained</h2>
+    <div class="phase-strip" id="phase-strip"></div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How this moon phase calculator works</h2>
+    <p>The Moon takes about 29.53 days to cycle from one new moon to the next — astronomers call this a <strong>synodic month</strong>. This calculator starts from a well-known reference new moon (January 6, 2000, 18:14 UTC) and measures how many days have elapsed since that reference point, wrapped to the current cycle. That elapsed time, the Moon's "age," is all it takes to estimate the phase, illumination, and the next full and new moon dates — no external astronomy service or API call required, so it works fully offline once the page has loaded.</p>
+    <ul>
+      <li><strong>Moon age</strong> = days since the last new moon, wrapped to a 29.53-day cycle.</li>
+      <li><strong>Phase</strong> = which of 8 equal slices (~3.69 days each) the age falls into.</li>
+      <li><strong>Illumination</strong> ≈ (1 − cos(2π × age ÷ 29.53)) ÷ 2, a smooth curve that is 0% at new moon, 100% at full moon.</li>
+      <li><strong>Next full/new moon</strong> = the next date, at or after the one you picked, that lines up with the half-cycle (full) or full-cycle (new) point from the reference new moon.</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Example — a full moon.</strong> Entering July 30, 2026 gives a moon age of about 15.7 days, landing in the <strong>Full Moon</strong> slice at roughly 99% illumination. The next new moon lands around August 13, 2026, and the next full moon after that around August 28, 2026.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example — a new moon.</strong> Entering July 14, 2026 gives a moon age near the very end of the cycle (about 29.2 days), which the calculator reports as <strong>New Moon</strong> at roughly 0% illumination — the reference algorithm places the exact new moon later that same day.</p>
+    </div>
+
+    <h2>The 8 moon phases explained</h2>
+    <table>
+      <thead><tr><th>Glyph</th><th>Phase</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td>🌑</td><td>New Moon</td><td>Invisible from Earth — the Moon sits between Earth and the Sun.</td></tr>
+        <tr><td>🌒</td><td>Waxing Crescent</td><td>A thin, growing sliver appears just after new moon.</td></tr>
+        <tr><td>🌓</td><td>First Quarter</td><td>Exactly half the face is lit, and growing.</td></tr>
+        <tr><td>🌔</td><td>Waxing Gibbous</td><td>More than half lit, still growing toward full.</td></tr>
+        <tr><td>🌕</td><td>Full Moon</td><td>The entire face is lit — the brightest phase.</td></tr>
+        <tr><td>🌖</td><td>Waning Gibbous</td><td>More than half lit, starting to shrink.</td></tr>
+        <tr><td>🌗</td><td>Last Quarter</td><td>Exactly half the face is lit, and shrinking.</td></tr>
+        <tr><td>🌘</td><td>Waning Crescent</td><td>A thin, shrinking sliver just before the next new moon.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Moon phases and lunar calendars around the world</h2>
+    <p>Many traditional calendars are anchored to the Moon rather than the Sun alone. Korea's <strong>음력 (eumnyeok)</strong> and Japan's <strong>旧暦 (kyūreki)</strong>, like the Chinese lunar calendar, are lunisolar systems: each month starts on or near a new moon, and the 15th of the lunar month lands close to a full moon. That's why harvest-moon festivals — Chuseok in Korea, Tsukimi (Otsukimi) in Japan, the Mid-Autumn Festival in China — always fall on or near a full moon, and why Lunar New Year always falls on a new moon. The Islamic Hijri calendar is fully lunar and traditionally starts each month at the sighting of a new crescent. This calculator doesn't convert a date into a lunisolar calendar date, but it's a fast way to check the underlying astronomical phase behind any of these traditions.</p>
+
+    <h2>Accuracy and limitations</h2>
+    <p>This tool uses the <em>average</em> synodic month, but the Moon's real orbit is elliptical, so any individual cycle can run several hours shorter or longer than the 29.53-day average — which is why results are accurate to roughly <strong>±1 day</strong>, not to the minute. That's honest and good enough for personal planning, content calendars, or curiosity about tonight's sky, but it is not a substitute for a full astronomical ephemeris where you need celestial navigation, precise tide prediction, or a religious observance that requires an official sighting or authoritative announcement. For those, consult a national observatory, almanac, or the relevant religious authority.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://aa.usno.navy.mil/" target="_blank" rel="noopener">U.S. Naval Observatory Astronomical Applications — official moon phase dates and rise/set data</a></li>
+      <li><a href="https://science.nasa.gov/moon/" target="_blank" rel="noopener">NASA Moon science portal — lunar phases, orbit and eclipse explanations</a></li>
+      <li><a href="https://www.weather.gov/" target="_blank" rel="noopener">National Weather Service — sky conditions and tide information for observing nights</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/pomodoro-timer/"><span class="related-ico" aria-hidden="true">🍅</span><span class="related-name">Pomodoro Timer</span></a><a class="related-item" href="https://tool-hub.me/stopwatch/"><span class="related-ico" aria-hidden="true">⏱️</span><span class="related-name">Online Stopwatch</span></a><a class="related-item" href="https://tool-hub.me/sunrise-sunset-calc/"><span class="related-ico" aria-hidden="true">🌅</span><span class="related-name">Sunrise Sunset Calculator</span></a><a class="related-item" href="https://tool-hub.me/time-zone-conv/"><span class="related-ico" aria-hidden="true">🕐</span><span class="related-name">Time Zone Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What moon phase is it today?</summary>
+      <p data-i18n="faq.a1">This calculator loads with today's date already selected and instantly shows the current moon phase, illumination percentage, and how many days old the Moon is in its current cycle. It also lists the next full moon and next new moon dates so you can plan ahead. Just open the page — no input required for today's answer.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How accurate is this moon phase calculator?</summary>
+      <p data-i18n="faq.a2">The Moon's phase is calculated from a known reference new moon and the average length of a synodic month (about 29.53 days), the same lunar-cycle math used by many simple moon calendars. This gives results accurate to roughly plus or minus one day for any date, past or future. It is not precise enough for celestial navigation, tide prediction, or religious observances that require exact timing — those need a full astronomical ephemeris.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What are the 8 moon phases and what do they mean?</summary>
+      <p data-i18n="faq.a3">A full lunar cycle moves through 8 named phases: New Moon, Waxing Crescent, First Quarter, Waxing Gibbous, Full Moon, Waning Gibbous, Last Quarter, and Waning Crescent. Waxing means the lit portion is growing night by night, and waning means it's shrinking. New Moon marks the start of the cycle, when the Moon is essentially invisible, and Full Moon marks the midpoint, when the entire face is lit. The reference strip below the calculator shows the glyph and a short description for each phase.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How does moon phase relate to lunar calendars like Korea's eumnyeok or Japan's kyūreki?</summary>
+      <p data-i18n="faq.a4">Traditional East Asian calendars such as Korea's 음력 (eumnyeok) and Japan's 旧暦 (kyūreki) are lunisolar: each calendar month begins on or near a new moon, and the 15th of the month falls close to a full moon. That's why holidays like Chuseok and Tsukimi (harvest moon festivals) and Lunar New Year always land on a new or full moon. This tool calculates the astronomical moon phase for any date — it doesn't convert dates to a lunisolar calendar, but it's a quick way to see why a given lunar-calendar date lines up with a particular moon phase.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is the date I select sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This moon phase calculator runs entirely in your browser — the date you pick and the calculated results never leave your device and nothing is uploaded or stored on a server. The only thing saved locally is the last date you looked up, kept in your browser's local storage so it's there if you come back.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

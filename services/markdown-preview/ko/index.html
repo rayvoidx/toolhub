@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-h9ISOKOeeQs3f5LW71ixzpfk+N4JFKfi2VuKVO22kEE=' 'sha256-g/0gOF8rq0A63qAs74rY8ZzmHuhHyC8+Nnnl+br0Shs=' 'sha256-J741h+NHl4D6yTF+iHVW7tppuVt9kFnqkVYY7bZBKtI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Markdown Preview — 실시간 Markdown to HTML 변환, 무료·안전</title>
+<meta name="description" content="마크다운을 입력하거나 붙여넣으면 즉시 안전한 HTML로 렌더링됩니다 — 제목, 굵게, 링크, 이미지, 표, 코드 블록. 무료이며 개인정보는 모두 브라우저에서 계산됩니다.">
+<meta name="keywords" content="markdown preview, markdown editor online, markdown to html, md preview, markdown cheat sheet, 마크다운 미리보기">
+<link rel="canonical" href="https://tool-hub.me/markdown-preview/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/markdown-preview/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/markdown-preview/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/markdown-preview/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/markdown-preview/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/markdown-preview/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/markdown-preview/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/markdown-preview/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/markdown-preview/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/markdown-preview/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/markdown-preview/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/markdown-preview/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/markdown-preview/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/markdown-preview/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/markdown-preview/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/markdown-preview/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Markdown Preview — 실시간 Markdown to HTML 변환, 무료·안전">
+<meta property="og:description" content="마크다운을 입력하거나 붙여넣으면 즉시 안전한 HTML로 렌더링됩니다 — 제목, 굵게, 링크, 이미지, 표, 코드 블록. 무료이며 개인정보는 모두 브라우저에서 계산됩니다.">
+<meta property="og:url" content="https://tool-hub.me/markdown-preview/ko/">
+<meta property="og:image" content="https://tool-hub.me/markdown-preview/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Markdown Preview",
+  "description": "Type or paste Markdown and watch it render as safe HTML instantly — headings, bold, links, images, tables, code blocks. Free, private, computed in your browser.",
+  "url": "https://tool-hub.me/markdown-preview/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Markdown Preview", "item": "https://tool-hub.me/markdown-preview/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What Markdown syntax does this online Markdown previewer support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool is a hand-written Markdown renderer covering the syntax people use every day: headings (# through ######), bold, italic and ~~strikethrough~~ text, [links](example.com) and images, inline `code` and fenced code blocks, blockquotes, horizontal rules, ordered and unordered lists (including nested lists), and GitHub-style pipe tables. Anything it doesn't recognize is left as plain text rather than guessed at, so the output stays predictable."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it safe to paste HTML or script tags into the Markdown editor?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Before any Markdown syntax is parsed, the entire input is HTML-escaped, so characters like <, > and & are converted to safe entities first. The renderer then only builds HTML tags for the Markdown tokens it recognizes — it never lets raw HTML pass through. If you paste a script tag into the editor, the preview shows that text on the page instead of running it, which is what keeps this Markdown to HTML converter safe to use on untrusted notes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I copy the rendered HTML output?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click \"Copy HTML\" above the preview pane. It copies the exact HTML markup the previewer generated — the same tags you see rendered, including headings, lists and tables — straight to your clipboard, ready to paste into a CMS, email or static site."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this Markdown editor support GFM tables and nested lists?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Type a header row, a separator row made of dashes (optionally with colons for alignment, like :---, ---: or :---:), and one or more data rows separated by pipes to get a table. For lists, indent a line by two or more spaces under a bullet or numbered item to nest a sub-list underneath it — the previewer renders the nesting as nested lists inside the parent item."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my Markdown text saved or sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything runs locally in your browser — typing, parsing and rendering all happen on your device. The only storage used is your browser's localStorage, purely so your draft is still there if you reload the page; nothing is uploaded, and there's no sign-up or tracking."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Markdown Preview</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Markdown Preview</span></nav>
+  <section class="hero">
+    <h1>Markdown Preview</h1>
+    <p class="lede" data-i18n="hero.lede">Type or paste Markdown on the left and watch the safely rendered HTML preview update instantly on the right — no sign-up, nothing leaves your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Markdown preview" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .md-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+      #tool .md-toolbar h2{font-size:13px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:0}
+      #tool .md-actions{display:flex;gap:8px;flex-wrap:wrap}
+      #tool .md-btn{padding:7px 13px;font-size:13px;font-weight:600;font-family:inherit;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);cursor:pointer}
+      #tool .md-btn:hover{border-color:var(--accent)}
+      #tool .md-btn.primary{background:var(--accent);color:#fff;border-color:transparent}
+      #tool .md-btn.primary:hover{background:var(--accent-strong)}
+      #tool .md-grid{display:grid;grid-template-columns:1fr;gap:14px}
+      @media(min-width:720px){ #tool .md-grid{grid-template-columns:1fr 1fr} }
+      #tool .md-pane{display:flex;flex-direction:column;min-width:0}
+      #tool .md-pane label{margin:0 0 6px;display:block;font-weight:600;font-size:14px}
+      #tool #md-input{width:100%;min-height:280px;resize:vertical;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86rem;line-height:1.55;padding:12px 14px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);box-sizing:border-box}
+      #tool #md-input:focus{outline:2px solid var(--accent);outline-offset:-1px;border-color:transparent}
+      #tool #md-warn{margin:8px 0 0;font-size:12.5px;color:var(--accent-strong)}
+      #tool #md-preview{min-height:280px;max-height:560px;overflow:auto;padding:14px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:.92rem;line-height:1.6;overflow-wrap:anywhere}
+      #tool #md-preview h1,#tool #md-preview h2,#tool #md-preview h3,#tool #md-preview h4{line-height:1.3;margin:.6em 0 .3em}
+      #tool #md-preview h1{font-size:1.5em}
+      #tool #md-preview h2{font-size:1.25em}
+      #tool #md-preview h3{font-size:1.08em}
+      #tool #md-preview p{margin:.5em 0}
+      #tool #md-preview ul,#tool #md-preview ol{margin:.4em 0;padding-inline-start:1.4em}
+      #tool #md-preview li{margin:.15em 0}
+      #tool #md-preview blockquote{margin:.6em 0;padding:.2em 1em;border-inline-start:3px solid var(--accent);color:var(--muted)}
+      #tool #md-preview pre{margin:.6em 0;padding:10px 12px;border-radius:8px;background:var(--bg);border:1px solid var(--line);overflow-x:auto;font-size:.82em}
+      #tool #md-preview code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--bg);border-radius:4px;padding:.1em .35em;font-size:.88em}
+      #tool #md-preview pre code{background:none;padding:0}
+      #tool #md-preview img{max-width:100%;border-radius:6px}
+      #tool #md-preview hr{border:none;border-top:1px solid var(--line);margin:1em 0}
+      #tool #md-preview .md-table-wrap{overflow-x:auto;margin:.6em 0}
+      #tool #md-preview table{border-collapse:collapse;width:100%;font-size:.88em}
+      #tool #md-preview th,#tool #md-preview td{border:1px solid var(--line);padding:6px 10px;text-align:left}
+      #tool #md-preview th{background:var(--bg)}
+      #tool #md-empty{color:var(--muted);margin:0}
+      #tool #md-copy-feedback{margin-top:10px;font-weight:600;color:var(--accent);font-size:.85rem}
+      @media(max-width:420px){ #tool #md-input,#tool #md-preview{min-height:220px} }
+    </style>
+
+    <div class="md-toolbar">
+      <h2 data-i18n="tool.badge">Live preview</h2>
+      <div class="md-actions">
+        <button type="button" class="md-btn" id="md-sample" data-i18n="tool.sample">Load example</button>
+        <button type="button" class="md-btn" id="md-clear" data-i18n="tool.clear">Clear</button>
+        <button type="button" class="md-btn primary" id="md-copy-html" data-i18n="tool.copyHtml">Copy HTML</button>
+      </div>
+    </div>
+
+    <div class="md-grid">
+      <div class="md-pane">
+        <label for="md-input" data-i18n="tool.inputLabel">Markdown source</label>
+        <textarea id="md-input" rows="14" dir="ltr" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="# Heading, **bold**, _italic_, a [link](example.com)..." data-i18n-placeholder="tool.inputPlaceholder"></textarea>
+        <p id="md-warn" hidden data-i18n="tool.err.tooLong">Only the first 200,000 characters are rendered — plenty for any note or README.</p>
+      </div>
+      <div class="md-pane">
+        <label id="md-preview-label" data-i18n="tool.previewLabel">Rendered preview</label>
+        <div id="md-preview" aria-labelledby="md-preview-label" aria-live="polite">
+          <p id="md-empty" data-i18n="tool.emptyHint">Start typing Markdown on the left — the safely rendered preview appears here.</p>
+          <div id="md-output" hidden></div>
+        </div>
+      </div>
+    </div>
+    <p id="md-copy-feedback" hidden role="status" data-i18n="tool.copied">Copied the rendered HTML to your clipboard.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:.05em .35em;font-size:.9em}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content .wrap{overflow-x:auto}
+    </style>
+
+    <h2>Markdown cheat sheet: every syntax this previewer supports</h2>
+    <p>This tool is a small, hand-written Markdown parser — not a wrapper around a third-party library. It recognizes the Markdown syntax people actually use day to day and converts it into clean, semantic HTML in real time as you type. The table below doubles as a quick reference for the whole syntax it understands.</p>
+    <div class="wrap">
+      <table>
+        <thead><tr><th>Element</th><th>Markdown syntax</th><th>Renders as</th></tr></thead>
+        <tbody>
+          <tr><td>Heading</td><td><code># H1</code> … <code>###### H6</code></td><td><code>&lt;h1&gt;</code> … <code>&lt;h6&gt;</code></td></tr>
+          <tr><td>Bold</td><td><code>**bold**</code> or <code>__bold__</code></td><td><code>&lt;strong&gt;</code></td></tr>
+          <tr><td>Italic</td><td><code>*italic*</code> or <code>_italic_</code></td><td><code>&lt;em&gt;</code></td></tr>
+          <tr><td>Strikethrough</td><td><code>~~gone~~</code></td><td><code>&lt;del&gt;</code></td></tr>
+          <tr><td>Link</td><td><code>[text](url "title")</code></td><td><code>&lt;a href&gt;</code></td></tr>
+          <tr><td>Image</td><td><code>![alt](url)</code></td><td><code>&lt;img&gt;</code></td></tr>
+          <tr><td>Inline code</td><td><code>`code`</code></td><td><code>&lt;code&gt;</code></td></tr>
+          <tr><td>Code block</td><td>&#96;&#96;&#96;lang … &#96;&#96;&#96;</td><td><code>&lt;pre&gt;&lt;code&gt;</code></td></tr>
+          <tr><td>Blockquote</td><td><code>&gt; quoted text</code></td><td><code>&lt;blockquote&gt;</code></td></tr>
+          <tr><td>Horizontal rule</td><td><code>---</code></td><td><code>&lt;hr&gt;</code></td></tr>
+          <tr><td>Unordered list</td><td><code>- item</code></td><td><code>&lt;ul&gt;&lt;li&gt;</code></td></tr>
+          <tr><td>Ordered list</td><td><code>1. item</code></td><td><code>&lt;ol&gt;&lt;li&gt;</code></td></tr>
+          <tr><td>Nested list</td><td>indent 2+ spaces under an item</td><td>nested <code>&lt;ul&gt;/&lt;ol&gt;</code></td></tr>
+          <tr><td>Table</td><td><code>| a | b |</code> + <code>| - | - |</code></td><td><code>&lt;table&gt;</code></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>How this Markdown to HTML converter stays XSS-safe</h2>
+    <p>Before a single character of Markdown syntax is interpreted, the entire input is HTML-escaped — every <code>&lt;</code>, <code>&gt;</code>, <code>&amp;</code>, <code>"</code> and <code>'</code> becomes a safe entity. Only after that does the parser scan for Markdown tokens like <code>**</code>, <code>#</code> or <code>[...]( ... )</code>, and it always builds the output by wrapping recognized tokens in its own fixed set of tags. There is no step where raw HTML you typed is copied through to the page. Paste a script tag or an <code>onerror</code> attribute into the editor and it prints as visible text in the preview instead of running — the same way a syntax-highlighted code sample would.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example">
+      <p><strong>Example 1 — mixed inline formatting.</strong> Typing <code>Use **bold**, _italic_ and `code` together.</code> renders as: Use <strong>bold</strong>, <em>italic</em> and <code>code</code> together.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a two-level nested list.</strong> Typing a bullet, then an indented bullet on the next line, then a third top-level bullet produces a proper nested <code>&lt;ul&gt;</code> inside the middle <code>&lt;li&gt;</code> — useful for outlines, meeting notes and README sections.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — an attempted injection.</strong> Typing <code>Hi &lt;script&gt;alert(1)&lt;/script&gt;</code> renders as the literal text "Hi &lt;script&gt;alert(1)&lt;/script&gt;" in the preview — nothing executes, because the escape happens before any tag is ever built.</p>
+    </div>
+
+    <h2>Common Markdown mistakes this tool helps you avoid</h2>
+    <ul>
+      <li><strong>Missing the separator row in a table:</strong> a pipe-delimited header alone isn't a table — the second line needs dashes (<code>---</code>) under each column, optionally with colons for alignment.</li>
+      <li><strong>Inconsistent nested-list indentation:</strong> mixing 2-space and 4-space indents in the same list can make a sub-item attach to the wrong parent — pick one indent width and stick with it.</li>
+      <li><strong>Forgetting the space after a heading hash:</strong> <code>#Heading</code> without a space is left as plain text on purpose, matching how most Markdown processors read it.</li>
+      <li><strong>Mismatched emphasis markers:</strong> opening with <code>**</code> and closing with a single <code>*</code> leaves the emphasis unclosed and visible as literal asterisks.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc7763" target="_blank" rel="noopener">RFC 7763 (IETF) — the text/markdown media type registration and Markdown variants</a></li>
+      <li><a href="https://html.spec.whatwg.org/multipage/" target="_blank" rel="noopener">WHATWG HTML Standard — the HTML elements Markdown renders into</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" rel="noopener">MDN Web Docs — reference for headings, lists, tables and code elements</a></li>
+      <li><a href="https://www.w3.org/WAI/tutorials/" target="_blank" rel="noopener">W3C Web Accessibility Initiative — heading structure and accessible table markup</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/markdown-table-generator/"><span class="related-ico" aria-hidden="true">📋</span><span class="related-name">Markdown Table Generator</span></a><a class="related-item" href="https://tool-hub.me/meta-tag-generator/"><span class="related-ico" aria-hidden="true">🏷️</span><span class="related-name">Meta Tag Generator</span></a><a class="related-item" href="https://tool-hub.me/number-base-conv/"><span class="related-ico" aria-hidden="true">🔢</span><span class="related-name">Number Base Converter</span></a><a class="related-item" href="https://tool-hub.me/password-strength-checker/"><span class="related-ico" aria-hidden="true">🔒</span><span class="related-name">Password Strength Checker</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What Markdown syntax does this online Markdown previewer support?</summary>
+      <p data-i18n="faq.a1">This tool is a hand-written Markdown renderer covering the syntax people use every day: headings (# through ######), bold, italic and ~~strikethrough~~ text, [links](example.com) and images, inline `code` and fenced code blocks, blockquotes, horizontal rules, ordered and unordered lists (including nested lists), and GitHub-style pipe tables. Anything it doesn't recognize is left as plain text rather than guessed at, so the output stays predictable.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Is it safe to paste HTML or script tags into the Markdown editor?</summary>
+      <p data-i18n="faq.a2">Yes. Before any Markdown syntax is parsed, the entire input is HTML-escaped, so characters like &lt;, &gt; and &amp; are converted to safe entities first. The renderer then only builds HTML tags for the Markdown tokens it recognizes — it never lets raw HTML pass through. If you paste a script tag into the editor, the preview shows that text on the page instead of running it, which is what keeps this Markdown to HTML converter safe to use on untrusted notes.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I copy the rendered HTML output?</summary>
+      <p data-i18n="faq.a3">Click "Copy HTML" above the preview pane. It copies the exact HTML markup the previewer generated — the same tags you see rendered, including headings, lists and tables — straight to your clipboard, ready to paste into a CMS, email or static site.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Does this Markdown editor support GFM tables and nested lists?</summary>
+      <p data-i18n="faq.a4">Yes. Type a header row, a separator row made of dashes (optionally with colons for alignment, like :---, ---: or :---:), and one or more data rows separated by pipes to get a table. For lists, indent a line by two or more spaces under a bullet or numbered item to nest a sub-list underneath it — the previewer renders the nesting as nested lists inside the parent item.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my Markdown text saved or sent to a server?</summary>
+      <p data-i18n="faq.a5">No. Everything runs locally in your browser — typing, parsing and rendering all happen on your device. The only storage used is your browser's localStorage, purely so your draft is still there if you reload the page; nothing is uploaded, and there's no sign-up or tracking.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

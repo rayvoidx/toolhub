@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-aBlXOdwGHiKgbpATuqJ2EbRowgMcekh+tmNEAobYhCY=' 'sha256-bSx7GppjjyxLKkbUoIJXeKqCz6MO2KmpRWcygOJol9o=' 'sha256-A9I6Pzj3l2fIsy3ajyKHfpdJmvUX5FqwxluIxB6RU1I='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>판매 수수료 계산기 — 정률·누진·기본급+요율</title>
+<meta name="description" content="정률, 2구간 누진, 기본급+요율 세 가지 구조로 판매 수수료를 계산합니다. 지급액과 실효 요율, 구간별 내역까지 한 번에 확인하세요.">
+<meta name="keywords" content="commission calculator, sales commission calculator, commission rate, tiered commission, base plus commission, effective commission rate">
+<link rel="canonical" href="https://tool-hub.me/commission-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/commission-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/commission-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/commission-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/commission-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/commission-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/commission-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/commission-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/commission-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/commission-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/commission-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/commission-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/commission-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/commission-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/commission-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/commission-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="판매 수수료 계산기 — 정률·누진·기본급+요율">
+<meta property="og:description" content="정률, 2구간 누진, 기본급+요율 세 가지 구조로 판매 수수료를 계산합니다. 지급액과 실효 요율, 구간별 내역까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/commission-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/commission-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#065f46">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Commission Calculator",
+  "description": "Calculate sales commission on any deal: flat percentage, two-band tiered, or base plus rate. See the payout, the effective rate and a band-by-band breakdown.",
+  "url": "https://tool-hub.me/commission-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Commission Calculator",
+      "item": "https://tool-hub.me/commission-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is commission paid on the gross sale or on net revenue?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on the contract, and the gap is large. Gross plans use the list price before discounts, so a rep who discounts 10% still earns on the full number; net plans apply the rate after discounts, returns, shipping or on gross margin only. Enter whichever base your plan names into the sale amount field: 5% of a $25,000 list price pays $1,250, while the same 5% of an $18,000 margin pays $900."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do tiered plans use accelerators?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An accelerator raises the rate once a rep passes a threshold — 3% up to $10,000 and 6% above it, for example. The higher marginal rate makes the last deal of a quarter worth more than the first, which is exactly when motivation usually sags. The cost stays capped because the higher rate applies only to the portion above the threshold, not retroactively to the whole sale."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does a draw against commission mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A draw is an advance the company pays before commission is earned, usually monthly. A recoverable draw is a loan: earn $2,000 after a $3,000 draw and the $1,000 shortfall comes out of future commissions. A non-recoverable draw is a floor you keep whatever you sell. This tool shows commission earned, so subtract any draw already paid to get the cash actually added to your cheque."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a real estate commission split work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical US listing charges 5-6% of the sale price, which is first split into two sides, listing and buyer, then split again between each brokerage and its agent. On a $400,000 home at 5%, the $20,000 total becomes $10,000 per side, and an agent on a 70/30 brokerage split keeps $7,000 before expenses and tax. To model your own slice, enter your side's amount as the sale and your personal split as the rate."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Commission Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Commission Calculator</span></nav>
+  <section class="hero">
+    <h1>Commission Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Three commission structures, one deal — see what the plan actually pays.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool table { width:100%; border-collapse:collapse; margin-top:14px; font-size:14px; }
+      #tool th, #tool td { border-bottom:1px solid var(--line); padding:7px 6px; text-align:right; }
+      #tool th:first-child, #tool td:first-child { text-align:left; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn { color:#b45309; font-size:13px; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="sale" data-i18n="tool.sale.label">Sale amount</label>
+    <input type="number" id="sale" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="25000">
+
+    <label for="structure" data-i18n="tool.structure.label">Commission structure</label>
+    <select id="structure">
+      <option value="flat" data-i18n="tool.structure.flat">Flat rate — one percentage</option>
+      <option value="tiered" data-i18n="tool.structure.tiered">Tiered — two rate bands</option>
+      <option value="base" data-i18n="tool.structure.base">Base + rate</option>
+    </select>
+
+    <div id="grp-rate">
+      <label for="rate" data-i18n="tool.rate.label">Commission rate (%)</label>
+      <input type="number" id="rate" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="5">
+    </div>
+
+    <div id="grp-tier" hidden>
+      <div class="field-row">
+        <div>
+          <label for="tier1" data-i18n="tool.tier1.label">Tier 1 rate (%)</label>
+          <input type="number" id="tier1" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="3">
+        </div>
+        <div>
+          <label for="thresh" data-i18n="tool.thresh.label">Tier 1 applies up to</label>
+          <input type="number" id="thresh" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10000">
+        </div>
+      </div>
+      <label for="tier2" data-i18n="tool.tier2.label">Tier 2 rate above threshold (%)</label>
+      <input type="number" id="tier2" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="6">
+    </div>
+
+    <div id="grp-base" hidden>
+      <label for="base" data-i18n="tool.base.label">Base amount</label>
+      <input type="number" id="base" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="500">
+    </div>
+
+    <label for="split" data-i18n="tool.split.label">Your split of the commission (%) — optional</label>
+    <input type="number" id="split" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="100">
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.commission">Commission</div>
+          <div class="rc-val" id="r-commission">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.effective">Effective rate</div><div class="rc-val" id="r-effective">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.net">Left after commission</div><div class="rc-val" id="r-net">—</div></div>
+        <div class="rcard" id="card-yours" hidden><div class="rc-label" data-i18n="tool.r.yours">Your share</div><div class="rc-val" id="r-yours">—</div></div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th data-i18n="tool.bd.component">Component</th>
+            <th data-i18n="tool.bd.basis">Basis</th>
+            <th data-i18n="tool.bd.amount">Amount</th>
+          </tr>
+        </thead>
+        <tbody id="bd-body"></tbody>
+      </table>
+    </div>
+    <p class="warn" id="warn-tier" hidden></p>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.gross" style="margin-top:12px;">Rates apply to the sale amount you enter. If your plan pays on gross margin or on revenue after discounts, enter that figure instead of the list price.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>The same $25,000 deal under three commission plans</h2>
+    <p>Commission arguments almost never come down to whether 5% is generous. They come down to what the percentage is applied to and where the rate changes. Take one deal — a $25,000 order — and run it through the three structures most sales plans in the US and UK actually use.</p>
+
+    <h3>Flat rate: 5% of everything</h3>
+    <p>The simplest plan pays one percentage on every dollar sold. At 5%, the $25,000 deal pays 
+
+  ,250 and the effective rate is exactly 5%, because a flat plan's effective rate never moves. Reps like it because it is predictable and can be worked out in their head at the customer's table; finance likes it because the cost of sales is a straight line. The weakness is that it pays the same for the easy first deal as for the hard tenth one.</p>
+
+    <h3>Tiered: 3% up to 
+
+  0,000, then 6%</h3>
+    <p>The tiered plan splits the deal into bands. The first 
+
+  0,000 earns 3% = $300. The remaining 
+
+  5,000 earns 6% = $900. Total commission is 
+
+  ,200, and the effective rate is 
+
+  ,200 / $25,000 = 4.8% — slightly below the flat plan, even though the headline top rate is higher. That surprise is the whole point of the effective rate row: a plan advertised as "up to 6%" pays less here than a plain 5%.</p>
+    <p>Crossover is easy to find. The tiered plan overtakes the 5% flat plan when the extra 1% earned above the threshold covers the 2% given up below it: 0.02 x 
+
+  0,000 = $200 of lost commission, recovered at $0.01 per dollar above 
+
+  0,000, so $20,000 of band-two volume is needed. That is a $30,000 deal. Below $30,000 the flat plan wins; above it the tiered plan wins, and the gap grows.</p>
+
+    <h3>Base + rate: $500 plus 5%</h3>
+    <p>Adding a fixed component changes the risk profile rather than the ceiling. The $25,000 deal pays $500 + 
+
+  ,250 = 
+
+  ,750, an effective rate of 7%. On a $5,000 deal the same plan pays $500 + $250 = $750, an effective rate of 15%. The base guarantees the rep a floor and disproportionately rewards small deals, which is why it is common for new hires, long sales cycles, and territories that are being built from nothing.</p>
+
+    <h2>How the three compare across deal sizes</h2>
+    <table>
+      <thead><tr><th>Deal size</th><th>Flat 5%</th><th>Tiered 3% / 6%</th><th>$500 + 5%</th></tr></thead>
+      <tbody>
+        <tr><td>$5,000</td><td>$250</td><td>
+
+  50</td><td>$750</td></tr>
+        <tr><td>
+
+  0,000</td><td>$500</td><td>$300</td><td>
+
+  ,000</td></tr>
+        <tr><td>$25,000</td><td>
+
+  ,250</td><td>
+
+  ,200</td><td>
+
+  ,750</td></tr>
+        <tr><td>$50,000</td><td>$2,500</td><td>$2,700</td><td>$3,000</td></tr>
+        <tr><td>
+
+  00,000</td><td>$5,000</td><td>$5,700</td><td>$5,500</td></tr>
+      </tbody>
+    </table>
+    <p>Read the table as a set of incentives rather than a set of numbers. The tiered column punishes small deals and pays best on the largest ones — it tells a rep to chase enterprise volume. The base column does the opposite. If the plan and the strategy disagree, the plan wins, because that is what gets paid.</p>
+
+    <h2>Quota attainment and accelerators</h2>
+    <p>Most real plans are tiered against a quota rather than against a single deal. A rep with a $200,000 quarterly quota might earn 4% on everything up to quota and 8% on everything past it. Sell 
+
+  80,000 and commission is $7,200 at an effective 4%. Sell $220,000 and it is $8,000 + 
+
+  ,600 = $9,600, an effective 4.36%. Sell $260,000 and it is $8,000 + $4,800 = 
+
+  2,800, an effective 4.92%. The effective rate creeps toward the accelerator without ever reaching it, which is exactly how the company keeps its total cost of sales inside budget while still making the overachiever's marginal hour twice as valuable.</p>
+    <p>To model quota attainment with this calculator, enter cumulative period revenue as the sale amount and the quota as the tier-1 threshold. The band breakdown then shows base-plan earnings and accelerator earnings as separate lines.</p>
+
+    <h3>What reps should check before signing</h3>
+    <p>Ask four questions about any written plan. First, what is the base: list price, net of discounts, or gross margin? A margin-based plan can halve the number without changing the percentage. Second, when does commission become payable — at order, at invoice, or at cash collection? Cash-collection plans transfer the customer's payment risk onto the rep. Third, is there a clawback if the customer cancels or refunds inside a set window, and how long is that window? Fourth, is any draw recoverable, and does the balance reset each year or roll forward indefinitely?</p>
+    <p>Caps deserve their own question. A plan with an accelerator and a cap is a plan that stops paying at exactly the moment the rep is most productive, and it is the single most common cause of deals slipping intentionally into the next quarter.</p>
+
+    <h2>Limitations of this calculator</h2>
+    <p>The maths here is deliberately transparent: flat is sale x rate, tiered is band one x rate one plus band two x rate two, base plus is a fixed amount added to the flat result. It does not model income tax, national insurance or self-employment tax, and it does not handle splits between multiple reps, three or more bands, per-product rate tables, or SPIFF bonuses. It also assumes one currency and takes the sale amount exactly as entered, so if your plan pays on margin, enter the margin. For a two-band plan, an accelerator against quota, or a simple base-plus-percentage offer, the numbers it produces are the same ones payroll will produce — and the effective-rate line is usually the number worth arguing about.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/publications/p15" target="_blank" rel="noopener">IRS Publication 15 (Circular E) — how commissions are treated as supplemental wages and withheld</a></li>
+      <li><a href="https://www.bls.gov/ooh/sales/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — pay structures and earnings data for sales occupations</a></li>
+      <li><a href="https://www.gov.uk/income-tax" target="_blank" rel="noopener">GOV.UK — UK income tax rules that apply to commission and bonus pay</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/compound-interest-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">Compound Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/credit-card-interest-calc/"><span class="related-ico" aria-hidden="true">💳</span><span class="related-name">Credit Card Interest Calculator</span></a><a class="related-item" href="https://tool-hub.me/crypto-average-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Crypto Average Calculator</span></a><a class="related-item" href="https://tool-hub.me/dca-calc/"><span class="related-ico" aria-hidden="true">📈</span><span class="related-name">DCA Investment Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is commission paid on the gross sale or on net revenue?</summary><p data-i18n="faq.a1">It depends on the contract, and the gap is large. Gross plans use the list price before discounts, so a rep who discounts 10% still earns on the full number; net plans apply the rate after discounts, returns, shipping or on gross margin only. Enter whichever base your plan names into the sale amount field: 5% of a $25,000 list price pays $1,250, while the same 5% of an $18,000 margin pays $900.</p></details>
+    <details><summary data-i18n="faq.q2">Why do tiered plans use accelerators?</summary><p data-i18n="faq.a2">An accelerator raises the rate once a rep passes a threshold — 3% up to $10,000 and 6% above it, for example. The higher marginal rate makes the last deal of a quarter worth more than the first, which is exactly when motivation usually sags. The cost stays capped because the higher rate applies only to the portion above the threshold, not retroactively to the whole sale.</p></details>
+    <details><summary data-i18n="faq.q3">What does a draw against commission mean?</summary><p data-i18n="faq.a3">A draw is an advance the company pays before commission is earned, usually monthly. A recoverable draw is a loan: earn $2,000 after a $3,000 draw and the $1,000 shortfall comes out of future commissions. A non-recoverable draw is a floor you keep whatever you sell. This tool shows commission earned, so subtract any draw already paid to get the cash actually added to your cheque.</p></details>
+    <details><summary data-i18n="faq.q4">How does a real estate commission split work?</summary><p data-i18n="faq.a4">A typical US listing charges 5-6% of the sale price, which is first split into two sides, listing and buyer, then split again between each brokerage and its agent. On a $400,000 home at 5%, the $20,000 total becomes $10,000 per side, and an agent on a 70/30 brokerage split keeps $7,000 before expenses and tax. To model your own slice, enter your side's amount as the sale and your personal split as the rate.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

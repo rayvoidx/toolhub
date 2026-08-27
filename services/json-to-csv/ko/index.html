@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-VlrTzZGFob6cJnjb3jzdJzVTpsU23tugg/XA/MvlGMs=' 'sha256-xxU+JNZ80nKC6CJSDRcsfI3VK4qYNUM9SQuboZHXzEs=' 'sha256-AvjAjNYyB1DnFlns4KLeMICBv7M0phOcb0uhgKBdh7o='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JSON to CSV 변환기 — JSON 배열을 무료로 CSV로 변환</title>
+<meta name="description" content="객체로 이루어진 JSON 배열을 붙여넣으면 즉시 깔끔한 CSV를 얻을 수 있습니다 — 중첩된 객체는 점(dot) 표기 열로 평탄화되고, RFC 4180 규격에 맞는 올바른 따옴표 처리와 쉼표/세미콜론/탭 구분자 선택이 가능합니다. 무료이며 개인정보를 안전하게 보호하고, 모든 처리는 브라우저 안에서 이루어집니다.">
+<meta name="keywords" content="json to csv, json to csv converter, convert json to excel, json array to csv, json to spreadsheet, JSON을 CSV로 변환">
+<link rel="canonical" href="https://tool-hub.me/json-to-csv/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/json-to-csv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/json-to-csv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/json-to-csv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/json-to-csv/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/json-to-csv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/json-to-csv/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/json-to-csv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/json-to-csv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/json-to-csv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/json-to-csv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/json-to-csv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/json-to-csv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/json-to-csv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/json-to-csv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/json-to-csv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JSON to CSV 변환기 — JSON 배열을 무료로 CSV로 변환">
+<meta property="og:description" content="객체로 이루어진 JSON 배열을 붙여넣으면 즉시 깔끔한 CSV를 얻을 수 있습니다 — 중첩된 객체는 점(dot) 표기 열로 평탄화되고, RFC 4180 규격에 맞는 올바른 따옴표 처리와 쉼표/세미콜론/탭 구분자 선택이 가능합니다. 무료이며 개인정보를 안전하게 보호하고, 모든 처리는 브라우저 안에서 이루어집니다.">
+<meta property="og:url" content="https://tool-hub.me/json-to-csv/ko/">
+<meta property="og:image" content="https://tool-hub.me/json-to-csv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "JSON to CSV Converter",
+  "description": "Paste a JSON array of objects and get a clean CSV instantly — nested objects flattened to dot-notation columns, proper RFC 4180 quoting, comma/semicolon/tab delimiters. Free, private, runs entirely in your browser.",
+  "url": "https://tool-hub.me/json-to-csv/",
+  "applicationCategory": "DeveloperApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "JSON to CSV Converter", "item": "https://tool-hub.me/json-to-csv/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert a JSON array of objects to CSV?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste a JSON array of objects into the input box — for example, [{\"name\":\"Alice\",\"age\":30},{\"name\":\"Bob\",\"age\":25}] — and the CSV appears in the output box instantly as you type, with no button to click. The converter reads the keys from your objects and uses them as column headers in the order they first appear, so the example above produces a two-column CSV with the header row name,age followed by one data row per object. Once the CSV looks right you can copy it to your clipboard or download it as a .csv file with one click. A single JSON object that isn't wrapped in an array is also accepted and is treated as a one-row table."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are nested objects and arrays converted to CSV columns?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CSV is a flat, two-dimensional format, so nested JSON has to be flattened before it fits into rows and columns. This converter flattens nested objects using dot notation — a value like {\"user\":{\"name\":\"Alice\",\"age\":30}} becomes two columns named user.name and user.age — so you can always trace a cell back to its original path. Arrays found inside a value, such as [\"red\",\"green\",\"blue\"], are kept as their raw JSON text in a single cell instead of being split across more columns, because array length can vary from object to object and splitting them would make the column count unpredictable. If you need array items in their own columns, flatten that part of your data first, or restructure it so each array element becomes its own object."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my JSON objects don't all have the same keys?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Real-world JSON exports are rarely perfectly uniform, so this tool builds its header row from the union of every key found across every object, in the order each key first appears. If one object is missing a key that other objects have, the cell in that row is simply left empty instead of causing an error or shifting the other columns out of alignment. That means you can safely paste JSON where, for instance, some records include a phone field and others don't — every row still lines up under the correct header. The count shown above the output box, such as \"3 rows × 5 columns\", reflects this combined header set rather than any single object's own key count."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My JSON won't convert — how do I find and fix the error?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When the pasted text isn't valid JSON, the converter doesn't just say \"invalid\" — it reports the exact line and column where parsing failed, shows the underlying parser message, and displays a short excerpt of that line with a caret (^) pointing at the problem character. The most common causes are a trailing comma after the last item in an array or object, single quotes used instead of double quotes around keys and strings, or an unescaped double quote inside a string value. Fix the highlighted spot and the CSV regenerates automatically the moment the JSON becomes valid again, with no button to click."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the CSV open correctly in Excel, and is my data uploaded anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The generated CSV follows the RFC 4180 standard: any value that contains the chosen delimiter, a double quote, or a line break is automatically wrapped in quotes with internal quotes doubled, so commas and line breaks inside your data never break the column alignment. If your Excel locale uses a comma as the decimal separator, switch the delimiter dropdown to semicolon or tab before downloading so the file opens in the correct number of columns; downloaded files also carry a UTF-8 byte-order mark so accented and non-Latin characters display correctly instead of turning into garbled symbols. Every conversion happens locally in your browser using JavaScript — your JSON is never uploaded to a server, logged, or stored anywhere except your own browser's local storage, which only remembers your last input so a page refresh doesn't lose it."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>JSON to CSV Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#4f46e5" href="https://tool-hub.me/developer-tools/">Developer</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">JSON to CSV Converter</span></nav>
+  <section class="hero">
+    <h1>JSON to CSV Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste a JSON array of objects and get a clean, properly quoted CSV instantly — nested objects flatten to dot-notation columns, headers merge across every object, and you can copy or download the result. Runs entirely in your browser.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="JSON to CSV converter" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool textarea { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; line-height:1.55; resize: vertical; }
+      #tool #jtc-input { min-height: 160px; }
+      #tool #jtc-output { min-height: 130px; background: var(--bg); }
+      #tool .jtc-row { display:flex; gap:10px; align-items:flex-end; flex-wrap:wrap; margin-top:14px; }
+      #tool .jtc-row > div { flex: 1 1 170px; }
+      #tool .jtc-row label { margin:0 0 6px; }
+      #tool #jtc-clear { flex:0 0 auto; margin-top:0; padding:12px 20px; background:var(--bg); color:var(--ink); border:1px solid var(--line); }
+      #tool #jtc-clear:hover { border-color: var(--accent); background: var(--bg); }
+      #tool #jtc-message { margin-top:14px; font-size:14px; color:var(--muted); font-weight:600; min-height:20px; }
+      #tool #jtc-message.jtc-msg-error { color:#dc2626; }
+      #tool #jtc-error { margin-top:8px; border:1px solid #dc2626; border-radius:8px; background:color-mix(in srgb,#dc2626 8%,var(--surface)); padding:10px 12px; overflow-x:auto; }
+      #tool #jtc-excerpt { margin:0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:13px; white-space:pre; color:#dc2626; }
+      #tool #jtc-stats { margin-top:2px; font-size:13px; color:var(--muted); min-height:0; }
+      #tool #jtc-actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:14px; }
+      #tool #jtc-actions .btn { margin-top:0; }
+      #tool #jtc-download { background: var(--accent-strong); }
+      #tool #jtc-feedback { font-size:13px; font-weight:700; color: var(--accent-strong); }
+      @media(max-width:420px){
+        #tool .jtc-row { flex-direction:column; align-items:stretch; }
+        #tool .jtc-row > div, #tool #jtc-clear { flex: 1 1 auto; width:100%; }
+      }
+    </style>
+
+    <label for="jtc-input" data-i18n="tool.input.label">JSON input</label>
+    <textarea id="jtc-input" spellcheck="false" autocomplete="off" placeholder='[{"name": "Alice", "age": 30}, {"name": "Bob", "age": 25}]' data-i18n-placeholder="tool.input.ph"></textarea>
+
+    <div class="jtc-row">
+      <div>
+        <label for="jtc-delim" data-i18n="tool.delim.label">Delimiter</label>
+        <select id="jtc-delim" aria-label="Delimiter" data-i18n-aria-label="tool.delim.label">
+          <option value="comma" data-i18n="tool.delim.comma">Comma (,)</option>
+          <option value="semicolon" data-i18n="tool.delim.semicolon">Semicolon (;)</option>
+          <option value="tab" data-i18n="tool.delim.tab">Tab</option>
+          <option value="pipe" data-i18n="tool.delim.pipe">Pipe (|)</option>
+          <option value="custom" data-i18n="tool.delim.custom">Custom…</option>
+        </select>
+      </div>
+      <div id="jtc-custom-wrap" hidden>
+        <label for="jtc-custom" data-i18n="tool.delim.custom">Custom…</label>
+        <input type="text" id="jtc-custom" maxlength="1" spellcheck="false" autocomplete="off" aria-label="Custom delimiter" data-i18n-aria-label="tool.delim.custom">
+      </div>
+      <button type="button" id="jtc-clear" class="btn" data-i18n="tool.clear">Clear</button>
+    </div>
+
+    <p id="jtc-message" role="status" aria-live="polite"></p>
+    <div id="jtc-error" class="error" hidden><pre id="jtc-excerpt"></pre></div>
+    <p id="jtc-stats" class="hint"></p>
+
+    <label for="jtc-output" data-i18n="tool.output.label" style="margin-top:18px;">CSV output</label>
+    <textarea id="jtc-output" readonly spellcheck="false" aria-label="CSV output" data-i18n-aria-label="tool.output.label"></textarea>
+
+    <div id="jtc-actions" hidden>
+      <button type="button" id="jtc-copy" class="btn" data-i18n="tool.copy">Copy CSV</button>
+      <button type="button" id="jtc-download" class="btn" data-i18n="tool.download">Download .csv</button>
+      <span id="jtc-feedback" role="status" hidden></span>
+    </div>
+
+    <p class="hint" data-i18n="tool.note.privacy">Every conversion runs in your browser — your JSON is never uploaded to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface));overflow-x:auto}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:13px;background:color-mix(in srgb,var(--accent) 8%,var(--surface));padding:1px 5px;border-radius:4px}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Turning JSON into a spreadsheet-ready CSV</h2>
+    <p>APIs, database exports, and log tools speak JSON, but spreadsheets, BI tools, and CRM importers want rows and columns. Converting by hand means writing a script for a one-off task, and general spreadsheet "open as CSV" tricks don't flatten nested objects or handle commas hidden inside text fields. This converter does the whole job in the browser: paste an array of JSON objects, and it works out the column headers, flattens nested fields, quotes anything that needs it, and gives you a CSV ready to paste into Excel, Google Sheets, or Airtable.</p>
+
+    <h2>How the conversion works</h2>
+    <ul>
+      <li><strong>Headers</strong> are the union of every key seen across every object, in first-appearance order — not just the keys of the first object.</li>
+      <li><strong>Nested objects</strong> flatten to dot-notation columns: <code>{"address":{"city":"Seoul"}}</code> becomes a column named <code>address.city</code>.</li>
+      <li><strong>Arrays</strong> stay as raw JSON text inside a single cell, since their length can vary row to row and splitting them would make the column count unstable.</li>
+      <li><strong>Missing keys</strong> in a given object simply produce an empty cell for that row — nothing shifts out of place.</li>
+      <li><strong>Quoting</strong> follows RFC 4180: any cell containing the delimiter, a double quote, or a line break is wrapped in quotes with internal quotes doubled.</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Example — flattening and union headers.</strong> Input: <code>[{"id":1,"name":"Alice","address":{"city":"Seoul"}},{"id":2,"name":"Bob"}]</code>. Because the second object has no <code>address</code>, the header row becomes <code>id,name,address.city</code> and Bob's row ends with an empty last cell — the CSV still lines up correctly.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example — a value that needs quoting.</strong> Input: <code>[{"city":"Seoul","note":"Great food, cheap rent"}]</code>. Because the note contains a comma, the tool outputs <code>"Great food, cheap rent"</code> in quotes so spreadsheet software still reads it as one field, not two.</p>
+    </div>
+
+    <h2>Choosing a delimiter</h2>
+    <p>Comma is the default and works almost everywhere. Some regional Excel builds treat comma as the decimal separator and expect semicolon-separated files instead — switch the delimiter dropdown to semicolon if numbers or columns look merged after opening the file. Tab-separated output is useful for pasting straight into a spreadsheet cell or a plain-text pipeline that treats commas as ordinary characters.</p>
+
+    <h2>Reading the error messages</h2>
+    <p>Invalid JSON is reported with the exact line and column of the failure and a short excerpt with a caret pointing at the problem character, so you don't have to scan a large paste line by line. The three most common issues are a trailing comma after the last array or object item, single quotes instead of the double quotes JSON requires, and an unescaped double quote inside a string. An empty array, or a JSON value that isn't an array or object (a bare number, string, boolean, or null), is reported separately since there's nothing to turn into table rows.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc4180" target="_blank" rel="noopener">RFC 4180 — the CSV format definition, including quoting and escaping rules</a></li>
+      <li><a href="https://www.rfc-editor.org/rfc/rfc8259" target="_blank" rel="noopener">RFC 8259 — the JSON data interchange format standard</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank" rel="noopener">MDN Web Docs — JSON parsing and serialization in JavaScript</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/json-to-yaml/"><span class="related-ico" aria-hidden="true">📜</span><span class="related-name">JSON to YAML Converter</span></a><a class="related-item" href="https://tool-hub.me/jwt-decoder/"><span class="related-ico" aria-hidden="true">🔑</span><span class="related-name">JWT Decoder</span></a><a class="related-item" href="https://tool-hub.me/markdown-preview/"><span class="related-ico" aria-hidden="true">📝</span><span class="related-name">Markdown Preview</span></a><a class="related-item" href="https://tool-hub.me/markdown-table-generator/"><span class="related-ico" aria-hidden="true">📋</span><span class="related-name">Markdown Table Generator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I convert a JSON array of objects to CSV?</summary>
+      <p data-i18n="faq.a1">Paste a JSON array of objects into the input box — for example, [{"name":"Alice","age":30},{"name":"Bob","age":25}] — and the CSV appears in the output box instantly as you type, with no button to click. The converter reads the keys from your objects and uses them as column headers in the order they first appear, so the example above produces a two-column CSV with the header row name,age followed by one data row per object. Once the CSV looks right you can copy it to your clipboard or download it as a .csv file with one click. A single JSON object that isn't wrapped in an array is also accepted and is treated as a one-row table.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How are nested objects and arrays converted to CSV columns?</summary>
+      <p data-i18n="faq.a2">CSV is a flat, two-dimensional format, so nested JSON has to be flattened before it fits into rows and columns. This converter flattens nested objects using dot notation — a value like {"user":{"name":"Alice","age":30}} becomes two columns named user.name and user.age — so you can always trace a cell back to its original path. Arrays found inside a value, such as ["red","green","blue"], are kept as their raw JSON text in a single cell instead of being split across more columns, because array length can vary from object to object and splitting them would make the column count unpredictable. If you need array items in their own columns, flatten that part of your data first, or restructure it so each array element becomes its own object.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What if my JSON objects don't all have the same keys?</summary>
+      <p data-i18n="faq.a3">Real-world JSON exports are rarely perfectly uniform, so this tool builds its header row from the union of every key found across every object, in the order each key first appears. If one object is missing a key that other objects have, the cell in that row is simply left empty instead of causing an error or shifting the other columns out of alignment. That means you can safely paste JSON where, for instance, some records include a phone field and others don't — every row still lines up under the correct header. The count shown above the output box, such as "3 rows × 5 columns", reflects this combined header set rather than any single object's own key count.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">My JSON won't convert — how do I find and fix the error?</summary>
+      <p data-i18n="faq.a4">When the pasted text isn't valid JSON, the converter doesn't just say "invalid" — it reports the exact line and column where parsing failed, shows the underlying parser message, and displays a short excerpt of that line with a caret (^) pointing at the problem character. The most common causes are a trailing comma after the last item in an array or object, single quotes used instead of double quotes around keys and strings, or an unescaped double quote inside a string value. Fix the highlighted spot and the CSV regenerates automatically the moment the JSON becomes valid again, with no button to click.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Will the CSV open correctly in Excel, and is my data uploaded anywhere?</summary>
+      <p data-i18n="faq.a5">The generated CSV follows the RFC 4180 standard: any value that contains the chosen delimiter, a double quote, or a line break is automatically wrapped in quotes with internal quotes doubled, so commas and line breaks inside your data never break the column alignment. If your Excel locale uses a comma as the decimal separator, switch the delimiter dropdown to semicolon or tab before downloading so the file opens in the correct number of columns; downloaded files also carry a UTF-8 byte-order mark so accented and non-Latin characters display correctly instead of turning into garbled symbols. Every conversion happens locally in your browser using JavaScript — your JSON is never uploaded to a server, logged, or stored anywhere except your own browser's local storage, which only remembers your last input so a page refresh doesn't lose it.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

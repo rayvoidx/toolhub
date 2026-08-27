@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-8g2sZgvyE4pvnR0pdoEimVnVlwPZFXkFnrHJVPD0t40=' 'sha256-o6Kre5VT7GM8eNYv1p4weDY96Ymq+ie/16HesV6O3vk=' 'sha256-0uw26+61ejlN1+LLJCFrYvMFiSE7kl69fDMlhs/aEf8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>전력 단위 변환기 — 마력(hp) ↔ 킬로와트(kW) 변환</title>
+<meta name="description" content="무료 온라인 전력(파워) 단위 변환기. 숫자 하나만 입력하면 와트, 킬로와트, 메가와트, 마력(hp·PS), BTU/h, 피트파운드/초로 즉시 변환됩니다 — 모든 계산은 브라우저에서 처리됩니다.">
+<meta name="keywords" content="power converter, hp to kw, kw to hp, watts to horsepower, ps to hp, horsepower to watts, btu to watts, 마력 변환, 전력 단위 변환">
+<link rel="canonical" href="https://tool-hub.me/power-conv/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/power-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/power-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/power-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/power-conv/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/power-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/power-conv/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/power-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/power-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/power-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/power-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/power-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/power-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/power-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/power-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/power-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="전력 단위 변환기 — 마력(hp) ↔ 킬로와트(kW) 변환">
+<meta property="og:description" content="무료 온라인 전력(파워) 단위 변환기. 숫자 하나만 입력하면 와트, 킬로와트, 메가와트, 마력(hp·PS), BTU/h, 피트파운드/초로 즉시 변환됩니다 — 모든 계산은 브라우저에서 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/power-conv/ko/">
+<meta property="og:image" content="https://tool-hub.me/power-conv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1d4ed8">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Power Converter",
+  "description": "Free online power converter. Type one number and instantly see it in watts, kilowatts, megawatts, horsepower (hp & PS), BTU/h, and ft-lb/s — all computed in your browser.",
+  "url": "https://tool-hub.me/power-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Power Converter",
+      "item": "https://tool-hub.me/power-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I convert horsepower to kilowatts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply horsepower by 0.7457 to get kilowatts (1 hp = 0.7456998715822702 kW exactly, since mechanical horsepower is defined as 550 foot-pounds per second). For example, a 300 hp car engine is about 223.71 kW, and a 10 hp motor is about 7.46 kW. To go the other way, divide kilowatts by 0.7457 — a 150 kW electric motor is roughly 201.15 hp."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between hp and PS (metric horsepower)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "hp is the mechanical (imperial) horsepower used in the US and UK, equal to exactly 745.6998715822702 W. PS (Pferdestärke, also called cv or hp(M)) is the metric horsepower common in Europe, Japan, and Korean car specs, equal to exactly 735.49875 W. The two are close but not identical: 1 PS ≈ 0.9863 hp, and 1 hp ≈ 1.0139 PS. A car rated at 100 PS is about 98.63 hp — a small but real gap that matters when comparing specs across regions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many watts does a horsepower motor draw?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 mechanical horsepower equals 745.6998715822702 W, so a 1.5 hp pool pump or shop motor is rated at roughly 1,118.5 W (about 1.12 kW) of mechanical output — its actual electrical draw will be somewhat higher because motors aren't 100% efficient. Appliance and tool nameplates often list hp instead of watts, so converting lets you compare against a household circuit's wattage limit or an inverter/generator's rated output."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does BTU/h relate to watts and horsepower?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BTU/h (British thermal units per hour) measures heating and cooling power, most often seen on air conditioner and furnace ratings. 1 BTU/h equals 0.29307107017222222 W. Air conditioners are commonly sold by 'tons' of cooling, where 1 ton = 12,000 BTU/h ≈ 3.517 kW — useful when comparing a US-spec AC rated in BTU/h against a unit rated in kW or hp elsewhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my input sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This power converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example horsepower to kilowatts), kept in your browser's local storage so it's ready next time. The value itself is not stored."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 2026-08-02 모바일 360px 오버플로 수리 (qa-deep) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Power Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#d97706" href="https://tool-hub.me/unit-converters/">Units</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Power Converter</span></nav>
+  <section class="hero">
+    <h1>Power Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in every power unit instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .pc-row { display: flex; gap: 10px; align-items: flex-end; }
+      .pc-row > div { flex: 1 1 0; min-width: 0; }
+      .pc-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .pc-swap:hover { border-color: var(--accent); }
+      .tool-card label.pc-inline { margin-top: 0; }
+      .pc-result { margin-top: 22px; }
+      .pc-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .pc-eq { font-size: clamp(19px, 5.2vw, 26px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .pc-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .pc-eq { color: var(--accent); } }
+      .pc-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .pc-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .pc-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .pc-copybtn { color: var(--accent); } }
+      .pc-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .pc-tablewrap { margin-top: 24px; }
+      .pc-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .pc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .pc-table th, .pc-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      .pc-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .pc-table td.pc-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .pc-table tbody tr.pc-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+      @media (max-width: 420px) {
+        .pc-row { flex-wrap: wrap; }
+        .pc-row > div { flex: 1 1 100%; }
+        .pc-swap { align-self: center; margin: 2px auto; }
+      }
+    </style>
+
+    <div class="pc-row">
+      <div>
+        <label for="pc-value" data-i18n="tool.value.label">Value</label>
+        <input id="pc-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="pc-row">
+      <div>
+        <label for="pc-from" class="pc-inline" data-i18n="tool.from.label">From</label>
+        <select id="pc-from">
+          <option value="w" data-i18n="tool.unit.w">Watt (W)</option>
+          <option value="milliw" data-i18n="tool.unit.milliw">Milliwatt (mW)</option>
+          <option value="kw" data-i18n="tool.unit.kw">Kilowatt (kW)</option>
+          <option value="mw" data-i18n="tool.unit.mw">Megawatt (MW)</option>
+          <option value="hp" selected data-i18n="tool.unit.hp">Horsepower (hp)</option>
+          <option value="ps" data-i18n="tool.unit.ps">Metric horsepower (PS)</option>
+          <option value="btuh" data-i18n="tool.unit.btuh">BTU per hour (BTU/h)</option>
+          <option value="ftlbs" data-i18n="tool.unit.ftlbs">Foot-pound per second (ft·lb/s)</option>
+          <option value="gw" data-i18n="tool.unit.gw">Gigawatt (GW)</option>
+          <option value="rt" data-i18n="tool.unit.rt">Ton of refrigeration (RT)</option>
+        </select>
+      </div>
+      <button type="button" class="pc-swap" id="pc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="pc-to" class="pc-inline" data-i18n="tool.to.label">To</label>
+        <select id="pc-to">
+          <option value="w" data-i18n="tool.unit.w">Watt (W)</option>
+          <option value="milliw" data-i18n="tool.unit.milliw">Milliwatt (mW)</option>
+          <option value="kw" selected data-i18n="tool.unit.kw">Kilowatt (kW)</option>
+          <option value="mw" data-i18n="tool.unit.mw">Megawatt (MW)</option>
+          <option value="hp" data-i18n="tool.unit.hp">Horsepower (hp)</option>
+          <option value="ps" data-i18n="tool.unit.ps">Metric horsepower (PS)</option>
+          <option value="btuh" data-i18n="tool.unit.btuh">BTU per hour (BTU/h)</option>
+          <option value="ftlbs" data-i18n="tool.unit.ftlbs">Foot-pound per second (ft·lb/s)</option>
+          <option value="gw" data-i18n="tool.unit.gw">Gigawatt (GW)</option>
+          <option value="rt" data-i18n="tool.unit.rt">Ton of refrigeration (RT)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result pc-result">
+      <div class="pc-primary">
+        <span class="pc-eq" id="pc-eq">—</span>
+        <button type="button" class="pc-copybtn" id="pc-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="pc-note" id="pc-note" data-i18n="tool.result.placeholder">Enter a number to see it in every unit.</p>
+    </div>
+
+    <div class="pc-tablewrap">
+      <h2 data-i18n="tool.table.heading">All units at once</h2>
+      <table class="pc-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.unit">Unit</th>
+            <th class="pc-val" data-i18n="tool.table.col.value">Value</th>
+          </tr>
+        </thead>
+        <tbody id="pc-tbody">
+          <tr data-unit="w"><td data-i18n="tool.unit.w">Watt (W)</td><td class="pc-val" id="cell-w">—</td></tr>
+          <tr data-unit="milliw"><td data-i18n="tool.unit.milliw">Milliwatt (mW)</td><td class="pc-val" id="cell-milliw">—</td></tr>
+          <tr data-unit="kw"><td data-i18n="tool.unit.kw">Kilowatt (kW)</td><td class="pc-val" id="cell-kw">—</td></tr>
+          <tr data-unit="mw"><td data-i18n="tool.unit.mw">Megawatt (MW)</td><td class="pc-val" id="cell-mw">—</td></tr>
+          <tr data-unit="hp"><td data-i18n="tool.unit.hp">Horsepower (hp)</td><td class="pc-val" id="cell-hp">—</td></tr>
+          <tr data-unit="ps"><td data-i18n="tool.unit.ps">Metric horsepower (PS)</td><td class="pc-val" id="cell-ps">—</td></tr>
+          <tr data-unit="btuh"><td data-i18n="tool.unit.btuh">BTU per hour (BTU/h)</td><td class="pc-val" id="cell-btuh">—</td></tr>
+          <tr data-unit="ftlbs"><td data-i18n="tool.unit.ftlbs">Foot-pound per second (ft·lb/s)</td><td class="pc-val" id="cell-ftlbs">—</td></tr>
+          <tr data-unit="gw"><td data-i18n="tool.unit.gw">Gigawatt (GW)</td><td class="pc-val" id="cell-gw">—</td></tr>
+          <tr data-unit="rt"><td data-i18n="tool.unit.rt">Ton of refrigeration (RT)</td><td class="pc-val" id="cell-rt">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — 영어 심화 설명(고유). data-i18n 없음. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Why hp, PS, and kW never quite line up</h2>
+    <p>Power ratings come from three different traditions that all still show up on the same spec sheet. Car engines are marketed in horsepower (hp) in the US and UK, in metric horsepower (PS) across most of Europe, Japan, and Korea, and increasingly in kilowatts (kW) because EU type-approval and electric-vehicle specs require it. Household appliances and pumps are usually rated in watts or hp on the nameplate. Air conditioners and furnaces are rated in BTU/h. None of these describe different physical quantities — they're all rates of energy transfer — but converting between them by memory is where most spec-sheet mistakes happen, especially between hp and PS, which look interchangeable and aren't quite.</p>
+
+    <h3>How to use it</h3>
+    <ol>
+      <li>Enter the number you have — for example the hp figure on an engine spec, or the wattage on an appliance label.</li>
+      <li>Set <strong>From</strong> to the unit that number is already in, and <strong>To</strong> to the unit you want. The swap button (⇄) flips both at once.</li>
+      <li>Read the highlighted result, or scroll the table below to see the same value expressed in all seven units simultaneously.</li>
+    </ol>
+
+    <h3>The math: why hp ≠ PS</h3>
+    <p>Every conversion here goes through watts (W) as the common base, and each factor comes from an exact definition rather than a rounded estimate. Mechanical horsepower (hp) was defined by James Watt from horses turning a mill, standardized as exactly <strong>550 foot-pounds of work per second</strong> — which works out to 745.6998715822702 W. Metric horsepower (PS, German <em>Pferdestärke</em>, also written cv or hp(M)) is defined instead as <strong>75 kilogram-force-meters per second</strong>, using standard gravity (9.80665 m/s²), which works out to exactly 735.49875 W. Because the two definitions start from different base units (imperial foot-pounds vs. metric kilogram-force), they land about 1.39% apart — close enough to confuse, far enough to matter on a spec sheet.</p>
+
+    <h3>Worked examples</h3>
+    <div class="example"><strong>1. Comparing a European spec sheet to a US one.</strong> A car listed as "150 PS" in Germany: 150 × 735.49875 = 110,324.8 W ≈ <strong>110.32 kW</strong> ≈ <strong>147.95 hp</strong>. So "150 PS" is not quite "150 hp" — it's a little under 148 hp, a gap worth knowing when cross-shopping engines quoted in different units.</div>
+    <div class="example"><strong>2. Sizing an appliance circuit.</strong> A 1.5 hp shop vacuum or pool pump motor: 1.5 × 745.6998715822702 ≈ <strong>1,118.5 W</strong> (about 1.12 kW) of rated mechanical output. Real electrical draw runs a bit higher because motors aren't perfectly efficient — useful to know before plugging into a 15 A / 1,800 W household circuit.</div>
+    <div class="example"><strong>3. Reading an air conditioner's BTU/h rating.</strong> A "1-ton" AC unit is rated at 12,000 BTU/h: 12,000 × 0.29307107017222222 ≈ 3,516.85 W ≈ <strong>3.517 kW</strong>. That's the figure to compare against a European unit's kW rating or a generator's output.</div>
+    <div class="example"><strong>4. Sizing a backup generator.</strong> A 5 kW portable generator, expressed in horsepower for an engine spec comparison: 5,000 ÷ 745.6998715822702 ≈ <strong>6.71 hp</strong> of continuous mechanical output equivalent.</div>
+
+    <h3>Reference: exact conversion factors to 1 W</h3>
+    <table>
+      <thead><tr><th>Unit</th><th>1 unit in W</th><th>Typical use</th></tr></thead>
+      <tbody>
+        <tr><td>Watt (W)</td><td>1 (base)</td><td>SI unit, electronics, small appliances</td></tr>
+        <tr><td>Kilowatt (kW)</td><td>1,000</td><td>Motors, generators, EV powertrains</td></tr>
+        <tr><td>Megawatt (MW)</td><td>1,000,000</td><td>Power plants, industrial turbines</td></tr>
+        <tr><td>Horsepower (hp)</td><td>745.6998715822702</td><td>US/UK engines, pumps, power tools</td></tr>
+        <tr><td>Metric horsepower (PS)</td><td>735.49875</td><td>EU/Japan/Korea car specs</td></tr>
+        <tr><td>BTU per hour (BTU/h)</td><td>0.29307107017222222</td><td>Air conditioners, furnaces, HVAC</td></tr>
+        <tr><td>Foot-pound per second (ft·lb/s)</td><td>1.3558179483314004</td><td>Physics and mechanics problems</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Common mistakes</h3>
+    <ul>
+      <li><strong>Treating hp and PS as the same number.</strong> They're close (about 1.4% apart) but a "300 PS" engine is not a "300 hp" engine — it's closer to 296 hp.</li>
+      <li><strong>Confusing power with torque.</strong> Engine specs also list torque (in N·m or lb-ft), a different physical quantity — this tool converts power units only, not torque.</li>
+      <li><strong>Assuming rated hp equals electrical watts on a motor nameplate.</strong> A motor's hp rating describes mechanical output; the electrical input in watts is higher due to motor efficiency losses, so don't use the hp-to-watt conversion alone to size a circuit breaker.</li>
+      <li><strong>Mixing up BTU (energy) with BTU/h (power).</strong> BTU/h is a rate — power — while a plain BTU is a unit of energy, the same way watts and watt-hours are not interchangeable.</li>
+    </ul>
+
+    <h3>What this tool doesn't do</h3>
+    <p>This is a unit converter, not an efficiency calculator — it converts the number you type at face value and can't account for motor efficiency, drivetrain losses, or an engine's real-world output versus its rated figure. For electrical safety work (breaker sizing, wiring, generator loads), always use the equipment's actual nameplate ratings and consult a qualified electrician; this tool is for quick comparisons, not code compliance.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/owm/metric-si/si-units" target="_blank" rel="noopener">NIST — SI units, including the watt as the unit of power</a></li>
+      <li><a href="https://physics.nist.gov/cuu/Units/" target="_blank" rel="noopener">NIST Reference on Constants, Units and Uncertainty — official unit definitions and conversion factors</a></li>
+      <li><a href="https://www.energy.gov/energysaver/energy-saver" target="_blank" rel="noopener">U.S. Department of Energy — appliance and motor power ratings in watts and BTU/h</a></li>
+      <li><a href="https://www.iso.org/standards.html" target="_blank" rel="noopener">ISO — ISO 80000 standards covering quantities and units such as power</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/pressure-conv/"><span class="related-ico" aria-hidden="true">🔩</span><span class="related-name">Pressure Converter</span></a><a class="related-item" href="https://tool-hub.me/ring-size-conv/"><span class="related-ico" aria-hidden="true">💍</span><span class="related-name">Ring Size Converter</span></a><a class="related-item" href="https://tool-hub.me/roman-numeral-conv/"><span class="related-ico" aria-hidden="true">Ⅹ</span><span class="related-name">Roman Numeral Converter</span></a><a class="related-item" href="https://tool-hub.me/shoe-size-conv/"><span class="related-ico" aria-hidden="true">👟</span><span class="related-name">Shoe Size Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I convert horsepower to kilowatts?</summary>
+      <p data-i18n="faq.a1">Multiply horsepower by 0.7457 to get kilowatts (1 hp = 0.7456998715822702 kW exactly, since mechanical horsepower is defined as 550 foot-pounds per second). For example, a 300 hp car engine is about 223.71 kW, and a 10 hp motor is about 7.46 kW. To go the other way, divide kilowatts by 0.7457 — a 150 kW electric motor is roughly 201.15 hp.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between hp and PS (metric horsepower)?</summary>
+      <p data-i18n="faq.a2">hp is the mechanical (imperial) horsepower used in the US and UK, equal to exactly 745.6998715822702 W. PS (Pferdestärke, also called cv or hp(M)) is the metric horsepower common in Europe, Japan, and Korean car specs, equal to exactly 735.49875 W. The two are close but not identical: 1 PS ≈ 0.9863 hp, and 1 hp ≈ 1.0139 PS. A car rated at 100 PS is about 98.63 hp — a small but real gap that matters when comparing specs across regions.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How many watts does a horsepower motor draw?</summary>
+      <p data-i18n="faq.a3">1 mechanical horsepower equals 745.6998715822702 W, so a 1.5 hp pool pump or shop motor is rated at roughly 1,118.5 W (about 1.12 kW) of mechanical output — its actual electrical draw will be somewhat higher because motors aren't 100% efficient. Appliance and tool nameplates often list hp instead of watts, so converting lets you compare against a household circuit's wattage limit or an inverter/generator's rated output.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">How does BTU/h relate to watts and horsepower?</summary>
+      <p data-i18n="faq.a4">BTU/h (British thermal units per hour) measures heating and cooling power, most often seen on air conditioner and furnace ratings. 1 BTU/h equals 0.29307107017222222 W. Air conditioners are commonly sold by "tons" of cooling, where 1 ton = 12,000 BTU/h ≈ 3.517 kW — useful when comparing a US-spec AC rated in BTU/h against a unit rated in kW or hp elsewhere.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a5">No. This power converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example horsepower to kilowatts), kept in your browser's local storage so it's ready next time. The value itself is not stored.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-aF6YvR4xwwdDrG45uqmy7yEjbthz60d9IBU8lMTfEPE=' 'sha256-76nSUw4qQZigVC7qwvevrs8yoni3ETYwvCyz6eCbBXU=' 'sha256-RQA0VngV1C/t49cIxcsGbLASE1h2HMMtAAFIiqznqR8='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>단어 빈도 계산기 — 키워드 밀도 분석</title>
+<meta name="description" content="텍스트에 각 단어가 몇 번 나오는지 세고 키워드 밀도(%)를 계산합니다. 불용어 제외, 최소 길이 필터, CSV 복사를 지원하며 브라우저에서 실행됩니다.">
+<meta name="keywords" content="word frequency counter, keyword density checker, word frequency analysis, most used words, word count by frequency, text analysis tool">
+<link rel="canonical" href="https://tool-hub.me/word-frequency-counter/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/word-frequency-counter/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/word-frequency-counter/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/word-frequency-counter/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/word-frequency-counter/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/word-frequency-counter/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/word-frequency-counter/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/word-frequency-counter/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/word-frequency-counter/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/word-frequency-counter/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/word-frequency-counter/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/word-frequency-counter/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/word-frequency-counter/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/word-frequency-counter/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/word-frequency-counter/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/word-frequency-counter/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="단어 빈도 계산기 — 키워드 밀도 분석">
+<meta property="og:description" content="텍스트에 각 단어가 몇 번 나오는지 세고 키워드 밀도(%)를 계산합니다. 불용어 제외, 최소 길이 필터, CSV 복사를 지원하며 브라우저에서 실행됩니다.">
+<meta property="og:url" content="https://tool-hub.me/word-frequency-counter/ko/">
+<meta property="og:image" content="https://tool-hub.me/word-frequency-counter/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#4338ca">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Word Frequency Counter",
+  "description": "Count how often each word appears in your text, with keyword density percentages, stop word filtering and a copyable CSV. Runs in your browser.",
+  "url": "https://tool-hub.me/word-frequency-counter/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Word Frequency Counter",
+      "item": "https://tool-hub.me/word-frequency-counter/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the ideal keyword density?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "There is no magic number. The old rule of thumb was 1-2% for a main keyword, but search engines have matched meaning rather than raw repetition for years, so hitting a target percentage buys you nothing. Use density the other way round: a phrase sitting at 4-5% usually reads as stuffed, and that is worth fixing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which stop words does the filter remove?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Around sixty of the most common English function words — the, and, of, to, is, it, that and their relatives. The list is English only, so text in other languages is counted exactly as written with no filtering. Untick the box to see the raw distribution including every 'the'."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it count 'run' and 'running' as the same word?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Each surface form gets its own row, so run, runs and running are three entries. That is deliberate: stemming guesses at word roots and hides what is actually on the page, and for editing or SEO work you usually want the literal text. Add the rows together yourself when you want the family total."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this useful for SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three ways. It flags over-optimisation before a reader notices it, it shows whether your supporting terms cover the topic or you simply repeated one phrase all the way down, and it lets you compare your draft against pages already ranking for the same query. It also exposes writing tics, like the adverb you reach for in every paragraph."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Word Frequency Counter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Word Frequency Counter</span></nav>
+  <section class="hero">
+    <h1>Word Frequency Counter</h1>
+    <p class="lede" data-i18n="hero.lede">Paste any text and see which words you actually lean on, with density percentages instead of guesses.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool textarea { width:100%; min-height:160px; resize:vertical; font-size:14px; line-height:1.6; }
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .check-row { display:flex; align-items:flex-start; gap:8px; margin:14px 0 6px; }
+      #tool .check-row input { width:auto; margin:3px 0 0; flex:none; }
+      #tool .check-row label { margin:0; font-weight:500; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; word-break:break-word; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .out-head { display:flex; justify-content:flex-end; margin-top:16px; }
+      #tool .copy-btn { padding:6px 11px; font-size:12px; font-weight:600; font-family:inherit;
+        border:1px solid var(--line); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .copy-btn:hover { border-color:var(--accent); }
+      #tool .tbl-wrap { max-height:430px; overflow:auto; margin-top:8px; }
+      #tool table { width:100%; border-collapse:collapse; font-size:14px; }
+      #tool th, #tool td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--line); }
+      #tool th { font-size:13px; color:var(--muted); font-weight:600; }
+      #tool td.num, #tool th.num { text-align:right; white-space:nowrap; }
+      #tool td.rank { color:var(--muted); width:34px; }
+      #tool td.word { font-weight:600; word-break:break-word; }
+      #tool td.dens { width:38%; }
+      #tool .bar { height:6px; border-radius:4px; background:var(--line); overflow:hidden; margin-top:4px; }
+      #tool .bar span { display:block; height:100%; width:0; background:var(--accent); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="text" data-i18n="tool.text.label">Text to analyse</label>
+    <textarea id="text" spellcheck="false" placeholder="Content marketing works when the content answers a real question a reader actually typed. Good content marketing is not keyword stuffing; it is writing content that answers that question better than the next page does. Write for readers first and the keyword density takes care of itself."></textarea>
+
+    <div class="check-row">
+      <input type="checkbox" id="stopwords" checked>
+      <label for="stopwords" data-i18n="tool.stop.label">Ignore common English stop words (the, and, of, to…)</label>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="minlen" data-i18n="tool.minlen.label">Minimum word length</label>
+        <select id="minlen">
+          <option value="1" data-i18n="tool.minlen.1">1 character or more</option>
+          <option value="2" data-i18n="tool.minlen.2">2 characters or more</option>
+          <option value="3" selected data-i18n="tool.minlen.3">3 characters or more</option>
+          <option value="4" data-i18n="tool.minlen.4">4 characters or more</option>
+          <option value="5" data-i18n="tool.minlen.5">5 characters or more</option>
+          <option value="6" data-i18n="tool.minlen.6">6 characters or more</option>
+          <option value="7" data-i18n="tool.minlen.7">7 characters or more</option>
+        </select>
+      </div>
+      <div>
+        <label for="topn" data-i18n="tool.topn.label">Rows to show</label>
+        <select id="topn">
+          <option value="10" data-i18n="tool.topn.10">Top 10 words</option>
+          <option value="25" data-i18n="tool.topn.25">Top 25 words</option>
+          <option value="50" data-i18n="tool.topn.50">Top 50 words</option>
+          <option value="all" data-i18n="tool.topn.all">All words</option>
+        </select>
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Count words</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.top">Most used word</div>
+          <div class="rc-val" id="r-top">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.total">Total words</div><div class="rc-val" id="r-total">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.unique">Unique words</div><div class="rc-val" id="r-unique">—</div></div>
+      </div>
+      <div class="out-head">
+        <button type="button" class="copy-btn" id="copy-btn" data-i18n="tool.copy">Copy CSV</button>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr>
+            <th data-i18n="tool.th.rank">#</th>
+            <th data-i18n="tool.th.word">Word</th>
+            <th class="num" data-i18n="tool.th.count">Count</th>
+            <th data-i18n="tool.th.density">Density</th>
+          </tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.local" style="margin-top:12px;">Density is each word's share of every word in the text, stop words included. Nothing is uploaded — the count runs in your browser.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a word frequency count actually tells you</h2>
+    <p>Reading your own draft is unreliable. You know what you meant, so your eye slides over the fourth repetition of the same phrase in one section. A frequency count removes the guesswork: it lists every word in the text with how many times it appears and what share of the document it occupies. Editors use it to catch repetition, students use it to check their vocabulary spread, and anyone doing SEO uses it to see whether a page reads like a page or like a keyword list.</p>
+    <p>This counter lowercases the text, strips punctuation but keeps apostrophes and hyphens inside words, then tallies what is left. Density is the count divided by every word in the text, stop words included, which is the definition search tools have used since the phrase keyword density was coined. All of it happens in the page, so drafts you have not published stay on your machine.</p>
+
+    <h3>Worked example: auditing a 912-word blog post</h3>
+    <p>Say you have written a 912-word guide to cold brew coffee and you want to know whether it is over-baked. Paste it in with stop words ignored and the minimum length at three characters. The top of the table comes back like this:</p>
+    <table>
+      <thead><tr><th>Word</th><th>Count</th><th>Density</th></tr></thead>
+      <tbody>
+        <tr><td>coffee</td><td>34</td><td>3.73%</td></tr>
+        <tr><td>cold</td><td>21</td><td>2.30%</td></tr>
+        <tr><td>brew</td><td>18</td><td>1.97%</td></tr>
+        <tr><td>grounds</td><td>9</td><td>0.99%</td></tr>
+        <tr><td>water</td><td>8</td><td>0.88%</td></tr>
+        <tr><td>steep</td><td>6</td><td>0.66%</td></tr>
+      </tbody>
+    </table>
+    <p>Coffee at 3.73% is the flag. One noun taking nearly one word in twenty-five usually means sentences that could have said it, the drink or this method are all saying coffee instead. Cut ten of those thirty-four and density drops to about 2.6% without losing a single idea. Meanwhile cold and brew sitting near 2% are fine; they are the actual subject and a reader expects them. The bottom of the table is often more interesting than the top: if grind, ratio, dilution and filter all appear once or twice, the article mentions the practical questions without answering them, and that is a content gap you can fill.</p>
+
+    <h2>The keyword density myth, briefly</h2>
+    <p>In the late 1990s search engines really did rank pages largely on term counts, so density was a lever you could pull. That is where the 1-2% rule of thumb comes from, and where the era of white-text-on-white-background stuffing came from too. Every major ranking update since has moved further away from raw counts: engines now expand queries, read synonyms, weigh the whole page and score how well a passage answers an intent. There is no target percentage to hit and there has not been one for a long time.</p>
+    <p>Density still has a use, but only as a smell test. A page where one exact phrase runs above roughly 4% almost always reads badly out loud, and pages that read badly do not earn links or repeat visits. Treat the number as an editor would: high means rewrite for variety, not that you have unlocked a ranking bonus.</p>
+
+    <h3>A practical workflow for a page you want to rank</h3>
+    <p>Run your draft first and note the top fifteen rows. Then run the two or three pages already ranking in the top five for your query, one at a time, using the same settings. You are not looking for a density to copy. You are looking for words that appear on all three of their pages and none of yours: for a mortgage page that might be escrow, amortisation or points; for a running shoe review it might be drop, midsole and pronation. Those absences say more about topical coverage than any density figure, and they are cheap to fix.</p>
+
+    <h3>Finding your writing tics</h3>
+    <p>Turn the stop word filter off and set the minimum length to one, then look at the middle of the list rather than the top. This is where the tics live: the actually you insert three times a page, the however that opens every second paragraph, the just that weakens a sentence. Writers who do this once tend to remember their own top three offenders for years afterwards.</p>
+
+    <h2>Limits worth knowing</h2>
+    <p>Word forms are counted separately, so run, runs and running are three rows, and the stop word list covers English only. Numbers are treated as words. The counter also has no idea about phrases: a two-word keyword such as cold brew shows up as two independent rows, so for phrase-level checks use your browser find function alongside this table. None of that changes the main job, which is telling you honestly which words are carrying your page.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.unicode.org/reports/tr29/" target="_blank" rel="noopener">Unicode Standard Annex #29 — the standard definition of word boundaries in text</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank" rel="noopener">MDN Web Docs — regular expressions used to split and normalise words in the browser</a></li>
+      <li><a href="https://www.w3.org/International/articles/definitions-characters/" target="_blank" rel="noopener">W3C Internationalization — characters, punctuation and what counts as a letter across languages</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/words-to-pages/"><span class="related-ico" aria-hidden="true">📄</span><span class="related-name">Words to Pages Converter</span></a><a class="related-item" href="https://tool-hub.me/ad-copy-limit-check/"><span class="related-ico" aria-hidden="true">📣</span><span class="related-name">Ad Copy Length Checker</span></a><a class="related-item" href="https://tool-hub.me/binary-text-conv/"><span class="related-ico" aria-hidden="true">💻</span><span class="related-name">Binary Translator</span></a><a class="related-item" href="https://tool-hub.me/case-converter/"><span class="related-ico" aria-hidden="true">🔠</span><span class="related-name">Case Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the ideal keyword density?</summary><p data-i18n="faq.a1">There is no magic number. The old rule of thumb was 1-2% for a main keyword, but search engines have matched meaning rather than raw repetition for years, so hitting a target percentage buys you nothing. Use density the other way round: a phrase sitting at 4-5% usually reads as stuffed, and that is worth fixing.</p></details>
+    <details><summary data-i18n="faq.q2">Which stop words does the filter remove?</summary><p data-i18n="faq.a2">Around sixty of the most common English function words — the, and, of, to, is, it, that and their relatives. The list is English only, so text in other languages is counted exactly as written with no filtering. Untick the box to see the raw distribution including every 'the'.</p></details>
+    <details><summary data-i18n="faq.q3">Does it count 'run' and 'running' as the same word?</summary><p data-i18n="faq.a3">No. Each surface form gets its own row, so run, runs and running are three entries. That is deliberate: stemming guesses at word roots and hides what is actually on the page, and for editing or SEO work you usually want the literal text. Add the rows together yourself when you want the family total.</p></details>
+    <details><summary data-i18n="faq.q4">How is this useful for SEO?</summary><p data-i18n="faq.a4">Three ways. It flags over-optimisation before a reader notices it, it shows whether your supporting terms cover the topic or you simply repeated one phrase all the way down, and it lets you compare your draft against pages already ranking for the same query. It also exposes writing tics, like the adverb you reach for in every paragraph.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

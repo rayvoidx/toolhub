@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-IXasIJ2FdRE6RqD56MsMJvxWo3Db0hawk8+YnUeZB2Q=' 'sha256-L+byIGYNOgsIHFdJ6Lppmk4QAet8Xcm5azRNrlQrN9k=' 'sha256-atmj8pis08RrqngTagEHzPLGOjfXxuPJHZcPcgmNPpE='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GST 계산기 — GST 추가·제거 및 CGST/SGST 분할</title>
+<meta name="description" content="어떤 세율에서도 GST를 추가하거나 제거하세요: 인도 세율 구간(5/12/18/28%), 호주(10%), 뉴질랜드(15%), 싱가포르(9%)에 CGST/SGST 분할까지. 무료, 모든 계산은 브라우저에서 처리됩니다.">
+<meta name="keywords" content="gst calculator, gst calculator india, add gst, remove gst, cgst sgst calculator, 18 percent gst, gst rate calculator">
+<link rel="canonical" href="https://tool-hub.me/gst-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/gst-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/gst-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/gst-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/gst-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/gst-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/gst-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/gst-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/gst-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/gst-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/gst-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/gst-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/gst-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/gst-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/gst-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/gst-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GST 계산기 — GST 추가·제거 및 CGST/SGST 분할">
+<meta property="og:description" content="어떤 세율에서도 GST를 추가하거나 제거하세요: 인도 세율 구간(5/12/18/28%), 호주(10%), 뉴질랜드(15%), 싱가포르(9%)에 CGST/SGST 분할까지. 무료, 모든 계산은 브라우저에서 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/gst-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/gst-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "GST Calculator",
+  "description": "Add or remove GST at any rate: India slabs (5/12/18/28%), Australia (10%), NZ (15%), Singapore (9%), plus a CGST/SGST split. Free, runs in your browser.",
+  "url": "https://tool-hub.me/gst-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "GST Calculator", "item": "https://tool-hub.me/gst-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's the difference between adding GST and removing GST from a total?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Adding GST is a multiplication on a net (pre-tax) amount: GST = net × rate ÷ 100, and the gross total is net + GST. Removing GST works backward from a tax-inclusive total, so it's a division, not a subtraction: net = gross ÷ (1 + rate ÷ 100), and GST = gross − net. For example, at 18% GST a net amount of 1,000 becomes 1,180 gross (GST of 180). Going the other way, a gross total of 1,180 divides back to a net of exactly 1,000 — subtracting 18% from 1,180 would wrongly give 967.60, off by more than 32."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the current GST rates in India, Australia, New Zealand and Singapore?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "India uses four main GST slabs — 5%, 12%, 18% and 28% — assigned by product or service category, with 18% covering most goods and services and 28% reserved for luxury and sin goods (plus cess on some items). Australia charges a flat 10% GST on most goods and services. New Zealand charges 15% GST, one of the higher flat rates worldwide. Singapore's GST is 9% as of 2024, after a staged increase from 7% between 2022 and 2024. This calculator's quick-select chips cover all seven common rates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between CGST, SGST and IGST in India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a sale within the same state, India splits the GST rate into two equal halves: CGST (Central GST) goes to the central government and SGST (State GST) goes to the state government — each is exactly half the total GST rate, so 18% GST becomes 9% CGST + 9% SGST. For a sale between two different states, the full rate is instead charged as a single IGST (Integrated GST), which the central government later apportions to the destination state. The total tax collected is the same either way — CGST+SGST and IGST are just different ways of splitting the same GST rate depending on whether the transaction crosses a state border."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does removing GST use division instead of just subtracting the percentage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because the tax rate was applied to the smaller net amount, not to the larger total you're holding. Subtracting the rate straight from the total assumes the rate applies to the total itself, which overstates the tax removed and understates the net price. Dividing by (1 + rate ÷ 100) correctly reverses the original multiplication, so a 1,180 total at 18% GST divides back to exactly 1,000 net — not the 967.60 you'd get by simply subtracting 18%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this GST calculator tax advice, and is my amount sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No to both. This tool performs a fixed arithmetic calculation — it is not tax, legal or financial advice, and GST/VAT rules vary by product category, exemption and jurisdiction, so confirm the exact rate that applies to your transaction with your local tax authority or a professional. Every calculation runs entirely in your browser: the amount and rate you enter are never uploaded or stored on a server, and your last input is saved only in your own browser's local storage."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>GST Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">GST Calculator</span></nav>
+  <section class="hero">
+    <h1>GST Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Add GST to a net amount or pull it out of a total — pick an India slab (5/12/18/28%) or an Australia/NZ/Singapore rate, or enter your own. See net, GST and gross instantly, with a CGST + SGST split for India.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="GST calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .mode-row { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 14px; }
+      #tool .mode-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .chip-block { margin:10px 0 14px; }
+      #tool .chip-block-label { display:block; font-size:12.5px; font-weight:700; color:var(--muted); margin-bottom:6px; letter-spacing:.01em; }
+      #tool .chips { display:flex; flex-wrap:wrap; gap:8px; }
+      #tool .chip { padding:7px 14px; font-size:14px; font-weight:700; font-family:inherit; border:1px solid var(--line); border-radius:999px; background:var(--bg); color:var(--ink); cursor:pointer; }
+      #tool .chip:hover { border-color:var(--accent); }
+      #tool .chip.is-active { background:var(--accent); color:#fff; border-color:var(--accent); }
+      #tool .split-row { display:flex; align-items:center; gap:10px; margin:16px 0 4px; cursor:pointer; font-weight:600; font-size:14.5px; }
+      #tool .split-row input { width:auto; flex:0 0 auto; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:10px; margin-top:14px; }
+      #tool .split-cards { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:10px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; color:var(--accent-strong); }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .result-cards { grid-template-columns:1fr 1fr; } #tool .split-cards { grid-template-columns:1fr 1fr; } }
+    </style>
+
+    <p id="mode-label" style="font-weight:600;font-size:14px;margin:0 0 2px;" data-i18n="tool.mode.label">What do you have?</p>
+    <div class="mode-row" role="radiogroup" aria-labelledby="mode-label">
+      <label><input type="radio" name="mode" value="add" checked><span data-i18n="tool.mode.add">Amount before GST (add GST)</span></label>
+      <label><input type="radio" name="mode" value="remove"><span data-i18n="tool.mode.remove">Amount after GST (remove GST)</span></label>
+    </div>
+
+    <label for="amount" data-i18n="tool.amount.label">Amount</label>
+    <input id="amount" type="text" inputmode="decimal" autocomplete="off" placeholder="e.g. 1,000" data-i18n-placeholder="tool.amount.ph" autofocus>
+
+    <label for="rate" data-i18n="tool.rate.label" style="margin-top:16px;">GST rate %</label>
+    <div class="chip-block">
+      <span class="chip-block-label" data-i18n="tool.chips.india">India GST slabs</span>
+      <div id="india-chips" class="chips" role="group" aria-label="India GST rate presets" data-i18n-aria-label="tool.chips.indiaAria">
+        <button type="button" class="chip" data-rate="0.25" data-india="1" aria-pressed="false">0.25%</button>
+        <button type="button" class="chip" data-rate="3" data-india="1" aria-pressed="false">3%</button>
+        <button type="button" class="chip" data-rate="5" data-india="1" aria-pressed="false">5%</button>
+        <button type="button" class="chip" data-rate="12" data-india="1" aria-pressed="false">12%</button>
+        <button type="button" class="chip" data-rate="18" data-india="1" aria-pressed="false">18%</button>
+        <button type="button" class="chip" data-rate="28" data-india="1" aria-pressed="false">28%</button>
+        <button type="button" class="chip" data-rate="40" data-india="1" aria-pressed="false">40%</button>
+      </div>
+    </div>
+    <div class="chip-block">
+      <span class="chip-block-label" data-i18n="tool.chips.other">Australia · New Zealand · Singapore</span>
+      <div id="other-chips" class="chips" role="group" aria-label="Australia, New Zealand and Singapore GST rate presets" data-i18n-aria-label="tool.chips.otherAria">
+        <button type="button" class="chip" data-rate="10" data-india="0" aria-pressed="false">10% AU</button>
+        <button type="button" class="chip" data-rate="15" data-india="0" aria-pressed="false">15% NZ</button>
+        <button type="button" class="chip" data-rate="9" data-india="0" aria-pressed="false">9% SG</button>
+      </div>
+    </div>
+    <input id="rate" type="number" inputmode="decimal" min="0" max="100" step="any" value="18" placeholder="e.g. 18" data-i18n-placeholder="tool.rate.ph" aria-label="GST rate %" data-i18n-aria-label="tool.rate.label" autocomplete="off">
+
+    <label class="split-row" for="india-split">
+      <input type="checkbox" id="india-split">
+      <span data-i18n="tool.split.label">Split GST into CGST + SGST (India, same-state sale)</span>
+    </label>
+
+    <button type="button" id="calc-btn" class="btn" data-i18n="tool.calc">Calculate</button>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:12px 0 0;color:var(--muted);">Enter an amount to calculate GST</p>
+      <p class="err" id="err" role="alert" hidden style="margin:12px 0 0;"></p>
+      <div id="result-grid" hidden>
+        <div class="result-cards">
+          <div class="rcard"><div class="rc-label" data-i18n="tool.r.net">Net amount (before GST)</div><div class="rc-val" id="r-net">—</div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.r.gst">GST amount</div><div class="rc-val" id="r-gst">—</div></div>
+          <div class="rcard hero-card"><div class="rc-label" data-i18n="tool.r.gross">Gross amount (total)</div><div class="rc-val" id="r-gross">—</div></div>
+        </div>
+        <div class="split-cards" id="split-cards" hidden>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.r.cgst">CGST (50% of GST)</div><div class="rc-val" id="r-cgst">—</div></div>
+          <div class="rcard"><div class="rc-label" data-i18n="tool.r.sgst">SGST (50% of GST)</div><div class="rc-val" id="r-sgst">—</div></div>
+        </div>
+        <p class="subtle" id="r-sub" hidden style="margin-top:10px;"></p>
+      </div>
+    </div>
+    <p class="subtle" data-i18n="tool.note.disclaimer" style="margin-top:16px;">Educational estimate only — not tax, legal or financial advice. Confirm the exact GST/VAT rate and rules with your local tax authority.</p>
+    <p class="subtle" data-i18n="tool.note.privacy" style="margin-top:4px;">All calculations run in your browser — nothing is sent to a server.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>Adding GST and removing GST are opposite operations</h2>
+    <p>Goods and Services Tax (GST) is charged as a single percentage on top of a net price, but the everyday problem comes in two directions. Sometimes you know the pre-tax price and need the tax-inclusive total — a shopkeeper pricing a product, a freelancer writing an invoice. Other times you're holding a receipt or a vendor quote that already includes GST and need to work out the underlying price and the tax component separately — for bookkeeping, expense claims, or checking that a supplier charged the right rate. This calculator handles both directions and, for India, also splits the GST amount into the CGST and SGST halves that appear separately on an Indian tax invoice.</p>
+
+    <h3>How to use this calculator</h3>
+    <ol>
+      <li>Choose whether you have an <strong>amount before GST</strong> (you're adding tax) or an <strong>amount after GST</strong> (you're removing it).</li>
+      <li>Enter the <strong>amount</strong>.</li>
+      <li>Pick a rate: tap an <strong>India slab</strong> chip (5%, 12%, 18%, 28%) or an <strong>Australia / New Zealand / Singapore</strong> chip (10%, 15%, 9%), or type any custom rate directly.</li>
+      <li>For an intra-state Indian sale, tick <strong>Split GST into CGST + SGST</strong> to see the two equal halves that a same-state invoice must show.</li>
+      <li>Press <strong>Calculate</strong> to see the net amount, the GST amount, and the gross total together.</li>
+    </ol>
+
+    <h3>The two formulas</h3>
+    <div class="example">
+      <strong>Adding GST:</strong> GST = net &times; rate &divide; 100, then gross = net + GST.<br>
+      <strong>Removing GST:</strong> net = gross &divide; (1 + rate &divide; 100), then GST = gross &minus; net.
+      <p style="margin:10px 0 0">The second formula is a division precisely because the original tax was calculated on the smaller net figure, not on the total you're now holding — subtracting the percentage from the total instead of dividing is the single most common GST error.</p>
+    </div>
+
+    <h3>Three worked examples</h3>
+    <div class="example"><strong>Example 1 — pricing a product at India's standard 18% slab.</strong> A net price of 2,500 gets GST = 2,500 &times; 0.18 = 450, so the gross price on the shelf is 2,950. Ticking the CGST/SGST split for a same-state sale shows CGST 225 and SGST 225, adding back to the same 450 total.</div>
+    <div class="example"><strong>Example 2 — reading a GST-inclusive invoice.</strong> A supplier's invoice shows a total of 11,800 at 18% GST. Net = 11,800 &divide; 1.18 = 10,000 exactly, and GST = 1,800. Subtracting 18% from 11,800 instead would incorrectly give 9,676, understating the true net price by 324.</div>
+    <div class="example"><strong>Example 3 — Australia's flat 10% rate.</strong> A net service fee of AUD 800 gets GST = 80, for a gross invoice of 880 — the same add-GST formula used worldwide, just at Australia's single flat rate instead of an India slab.</div>
+
+    <h2>GST / VAT rates this calculator covers</h2>
+    <table>
+      <thead><tr><th>Country</th><th>Rate(s)</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>India</td><td>5%, 12%, 18%, 28%</td><td>Slab depends on the product/service category; 18% is the default for most items, 28% for luxury and sin goods</td></tr>
+        <tr><td>Australia</td><td>10%</td><td>Single flat GST rate on most goods and services</td></tr>
+        <tr><td>New Zealand</td><td>15%</td><td>Single flat GST rate, among the highest flat rates worldwide</td></tr>
+        <tr><td>Singapore</td><td>9%</td><td>Reached 9% in 2024 after a staged rise from 7% (2022–2024)</td></tr>
+      </tbody>
+    </table>
+
+    <h2>CGST, SGST and IGST — same tax, split two ways</h2>
+    <p>India's GST is a dual system. For a sale within one state, the rate is split exactly in half: CGST (Central GST) is collected by the central government and SGST (State GST) by the state government, so 18% GST becomes 9% + 9%. For a sale across a state border, the full rate is instead charged once as IGST (Integrated GST), which the central government later settles with the destination state. The rate a customer pays and the total revenue collected are identical either way — only the accounting split changes depending on whether the buyer and seller are in the same state.</p>
+
+    <h2>Common mistakes</h2>
+    <ul>
+      <li><strong>Subtracting instead of dividing.</strong> Removing GST from a total is never "total minus rate% of total" — it always understates the net price and overstates the tax. Divide by (1 + rate/100) instead.</li>
+      <li><strong>Applying the wrong India slab.</strong> India's slabs are assigned by category, not chosen freely — a restaurant bill, a luxury car, and a grocery staple can sit in three different slabs, so confirm the rate that applies to the specific good or service before relying on the result.</li>
+      <li><strong>Forgetting cess.</strong> A handful of India's 28% items (like tobacco, aerated drinks and large cars) carry an additional compensation cess on top of GST, which this calculator does not model — treat those results as the GST portion only.</li>
+      <li><strong>Mixing up CGST/SGST with IGST.</strong> The split only applies within the same state; an inter-state sale uses IGST at the full combined rate, not CGST + SGST.</li>
+    </ul>
+
+    <h2>What this calculator doesn't do</h2>
+    <p>This tool applies one flat rate to one amount — it doesn't look up which slab a specific product falls into, doesn't add cess or other surcharges, and doesn't account for exemptions, reverse charge, or composition-scheme rules. Rates also change with government notifications faster than any static reference can track. Treat the output as a quick, transparent arithmetic check, and confirm the exact rate, cess and filing treatment for your specific transaction with your local tax authority or a tax professional before relying on it for compliance.</p>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.gst.gov.in/" target="_blank" rel="noopener">Goods and Services Tax Network (India) — official GST portal, slabs, registration and return filing</a></li>
+      <li><a href="https://www.ato.gov.au/" target="_blank" rel="noopener">Australian Taxation Office — how Australia's 10% GST is charged, claimed and reported</a></li>
+      <li><a href="https://www.ird.govt.nz/" target="_blank" rel="noopener">Inland Revenue New Zealand — GST registration thresholds and the 15% rate</a></li>
+      <li><a href="https://www.iras.gov.sg/" target="_blank" rel="noopener">Inland Revenue Authority of Singapore — current GST rate and tax-inclusive pricing rules</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/home-affordability-calc/"><span class="related-ico" aria-hidden="true">🏡</span><span class="related-name">Home Affordability Calculator</span></a><a class="related-item" href="https://tool-hub.me/hourly-to-salary/"><span class="related-ico" aria-hidden="true">⏱</span><span class="related-name">Hourly to Salary Calculator</span></a><a class="related-item" href="https://tool-hub.me/hourly-to-salary-calc/"><span class="related-ico" aria-hidden="true">⏰</span><span class="related-name">Hourly to Salary Calculator</span></a><a class="related-item" href="https://tool-hub.me/hra-calc/"><span class="related-ico" aria-hidden="true">🏘️</span><span class="related-name">HRA Exemption Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What's the difference between adding GST and removing GST from a total?</summary>
+      <p data-i18n="faq.a1">Adding GST is a multiplication on a net (pre-tax) amount: GST = net × rate ÷ 100, and the gross total is net + GST. Removing GST works backward from a tax-inclusive total, so it's a division, not a subtraction: net = gross ÷ (1 + rate ÷ 100), and GST = gross − net. For example, at 18% GST a net amount of 1,000 becomes 1,180 gross (GST of 180). Going the other way, a gross total of 1,180 divides back to a net of exactly 1,000 — subtracting 18% from 1,180 would wrongly give 967.60, off by more than 32.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What are the current GST rates in India, Australia, New Zealand and Singapore?</summary>
+      <p data-i18n="faq.a2">India uses four main GST slabs — 5%, 12%, 18% and 28% — assigned by product or service category, with 18% covering most goods and services and 28% reserved for luxury and sin goods (plus cess on some items). Australia charges a flat 10% GST on most goods and services. New Zealand charges 15% GST, one of the higher flat rates worldwide. Singapore's GST is 9% as of 2024, after a staged increase from 7% between 2022 and 2024. This calculator's quick-select chips cover all seven common rates.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What's the difference between CGST, SGST and IGST in India?</summary>
+      <p data-i18n="faq.a3">For a sale within the same state, India splits the GST rate into two equal halves: CGST (Central GST) goes to the central government and SGST (State GST) goes to the state government — each is exactly half the total GST rate, so 18% GST becomes 9% CGST + 9% SGST. For a sale between two different states, the full rate is instead charged as a single IGST (Integrated GST), which the central government later apportions to the destination state. The total tax collected is the same either way — CGST+SGST and IGST are just different ways of splitting the same GST rate depending on whether the transaction crosses a state border.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Why does removing GST use division instead of just subtracting the percentage?</summary>
+      <p data-i18n="faq.a4">Because the tax rate was applied to the smaller net amount, not to the larger total you're holding. Subtracting the rate straight from the total assumes the rate applies to the total itself, which overstates the tax removed and understates the net price. Dividing by (1 + rate ÷ 100) correctly reverses the original multiplication, so a 1,180 total at 18% GST divides back to exactly 1,000 net — not the 967.60 you'd get by simply subtracting 18%.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is this GST calculator tax advice, and is my amount sent anywhere?</summary>
+      <p data-i18n="faq.a5">No to both. This tool performs a fixed arithmetic calculation — it is not tax, legal or financial advice, and GST/VAT rules vary by product category, exemption and jurisdiction, so confirm the exact rate that applies to your transaction with your local tax authority or a professional. Every calculation runs entirely in your browser: the amount and rate you enter are never uploaded or stored on a server, and your last input is saved only in your own browser's local storage.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

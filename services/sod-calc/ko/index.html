@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-j97JdDpq4hDf5PonQXYKsDQQyhIIC91/+v1uLCd0RgU=' 'sha256-JU9F0gnelRfAPFLOjqiDCSlXX8pZby29Png1Vrhd65k=' 'sha256-ZkgGyS7Fi8GUNkrlFueNFrv8s7ptp0Q8bWlfOiKKbrQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>잔디 뗏장 계산기 — 필요한 sod 수량·비용</title>
+<meta name="description" content="잔디밭 면적으로 필요한 뗏장(롤·슬래브·팔레트) 수량을 계산합니다. 재단·곡선 손실률을 반영하고 팔레트 수와 예상 비용까지 한 번에 확인하세요.">
+<meta name="keywords" content="sod calculator, how much sod do i need, sod cost calculator, pallets of sod, sod rolls calculator, turf calculator">
+<link rel="canonical" href="https://tool-hub.me/sod-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/sod-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/sod-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/sod-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/sod-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/sod-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/sod-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/sod-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/sod-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/sod-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/sod-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/sod-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/sod-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/sod-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/sod-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/sod-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="잔디 뗏장 계산기 — 필요한 sod 수량·비용">
+<meta property="og:description" content="잔디밭 면적으로 필요한 뗏장(롤·슬래브·팔레트) 수량을 계산합니다. 재단·곡선 손실률을 반영하고 팔레트 수와 예상 비용까지 한 번에 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/sod-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/sod-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sod Calculator",
+  "description": "Work out how much sod you need in rolls, slabs or pallets from your lawn size, with a waste allowance for cuts and curves plus an instant cost estimate.",
+  "url": "https://tool-hub.me/sod-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sod Calculator",
+      "item": "https://tool-hub.me/sod-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many square feet is a pallet of sod?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most suppliers load 400 to 500 sq ft per pallet, and this calculator uses 450 as the middle. Coverage depends on whether the pallet holds rolls or slabs and how thickly the sod was cut, so a pallet is a delivery unit, not a fixed measurement. Always confirm the number with your own supplier before you order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long can sod sit on the pallet before I lay it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Treat sod as perishable produce: lay it the same day it arrives, and within 24 hours at the absolute latest. Stacked sod heats up in the middle of the pallet and can yellow or rot in a single warm afternoon. If you cannot install immediately, keep the pallet in shade, mist the edges and cut the delay as short as possible."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is sod or seed the better value?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seed costs roughly $0.05 to $0.15 per sq ft against $0.35 to $0.85 for sod delivered, so seed is far cheaper on materials. What you buy with sod is time: an instantly usable lawn versus six to twelve weeks of watering, weeding and reseeding thin patches. On slopes prone to washout, sod also holds soil immediately, which seed cannot."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I measure an irregular lawn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Break the shape into rectangles and circles you can measure, run each one through the calculator, then add the results. Ignore small planting beds under about 20 sq ft — the waste allowance absorbs them. For very wavy borders, measure to the widest point and let the 10% allowance cover the offcuts."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Sod Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Sod Calculator</span></nav>
+  <section class="hero">
+    <h1>Sod Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Measure once, add for cuts and curves, and order the right number of rolls or pallets the first time.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Metres</option>
+        </select>
+      </div>
+      <div>
+        <label for="shape" data-i18n="tool.shape.label">Lawn shape</label>
+        <select id="shape">
+          <option value="rect" data-i18n="tool.shape.rect">Rectangle or square</option>
+          <option value="circle" data-i18n="tool.shape.circle">Circle</option>
+          <option value="direct" data-i18n="tool.shape.direct">I already know the area</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row" id="rect-fields">
+      <div>
+        <label for="len" data-i18n="tool.len.label">Length</label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="50">
+      </div>
+      <div>
+        <label for="wid" data-i18n="tool.wid.label">Width</label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="30">
+      </div>
+    </div>
+
+    <div id="circle-fields" hidden>
+      <label for="dia" data-i18n="tool.dia.label">Diameter</label>
+      <input type="number" id="dia" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="20">
+    </div>
+
+    <div id="direct-fields" hidden>
+      <label for="area" data-i18n="tool.area.label">Lawn area (sq ft or m²)</label>
+      <input type="number" id="area" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1500">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance</label>
+        <select id="waste">
+          <option value="0" data-i18n="tool.waste.0">0% — area already includes my margin</option>
+          <option value="5" data-i18n="tool.waste.5">5% — straight edges, few cuts</option>
+          <option value="10" selected data-i18n="tool.waste.10">10% — curves, beds and obstacles</option>
+          <option value="15" data-i18n="tool.waste.15">15% — slopes, tree rings, heavy cutting</option>
+          <option value="20" data-i18n="tool.waste.20">20% — very irregular plot, many obstacles</option>
+        </select>
+      </div>
+      <div>
+        <label for="sold" data-i18n="tool.sold.label">Sod sold as</label>
+        <select id="sold">
+          <option value="10" data-i18n="tool.sold.rolls">Rolls — 10 sq ft each</option>
+          <option value="2.66" data-i18n="tool.sold.slabs">Slabs — 2.66 sq ft (16 x 24 in)</option>
+          <option value="450" data-i18n="tool.sold.pallets">Pallets — 450 sq ft each</option>
+          <option value="custom" data-i18n="tool.sold.custom">Custom — enter coverage</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div id="cover-field" hidden>
+        <label for="cover" data-i18n="tool.cover.label">Coverage per unit (sq ft)</label>
+        <input type="number" id="cover" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="8">
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Price per unit (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="6.50">
+      </div>
+      <div>
+        <label for="pallet" data-i18n="tool.pallet.label">Pallet coverage (sq ft, optional)</label>
+        <input type="number" id="pallet" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="450">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate sod</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.units">Sod to order</div>
+          <div class="rc-val" id="r-units">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Area including waste</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.pallets">Pallets to deliver</div><div class="rc-val" id="r-pallets">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cost">Estimated sod cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.fresh" style="margin-top:12px;">Sod is perishable. Book delivery for a morning you can lay it the same day, and confirm pallet coverage with your supplier — it runs 400 to 500 sq ft.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much sod do I need? The arithmetic behind the answer</h2>
+    <p>Every sod order is the same three-step sum. Measure the area you want covered, add a waste allowance for the pieces you will cut off at curves and edges, then divide by whatever your supplier calls a unit — a roll, a slab or a whole pallet. The only reason the question feels hard is that suppliers use different units and none of them are standard. This page does the sum for you and shows the pallet count alongside, because that is the number the delivery truck cares about.</p>
+
+    <h3>Worked example: a 50 ft by 30 ft back lawn</h3>
+    <p>Start with 50 x 30 = 1,500 sq ft of bare ground. The lawn has a curved bed along one side, so a 10% waste allowance is realistic: 1,500 x 1.10 = 1,650 sq ft of sod to buy. Divide by the coverage of one unit and you have the order.</p>
+    <ul>
+      <li><strong>Rolls at 10 sq ft:</strong> 1,650 / 10 = 165 rolls.</li>
+      <li><strong>Slabs at 2.66 sq ft (16 x 24 in):</strong> 1,650 / 2.66 = 620.3, rounded up to 621 slabs.</li>
+      <li><strong>Pallets at 450 sq ft:</strong> 1,650 / 450 = 3.67, rounded up to 4 pallets.</li>
+    </ul>
+    <p>At $6.50 a roll, 165 rolls is 
+
+  ,072.50 in materials before delivery. Order the same lawn with a 5% allowance instead and you need 158 rolls — seven rolls and about $45 less, but far less margin for a bad cut. On a rectangle with straight edges, 5% is fine; anywhere with tree rings, a patio corner or a curved border, take the 10%.</p>
+
+    <h3>Why the pallet number matters even if you buy rolls</h3>
+    <p>Sod is heavy: a 450 sq ft pallet weighs roughly 1,500 to 3,000 lb depending on soil moisture and cut thickness. Four pallets is a forklift or a boom truck and a solid place to set them down, not something you carry home in a hatchback. Knowing you need four pallets before you call the supplier changes the conversation from "how much sod" to "where does the truck park and how many pallets can it drop in one trip".</p>
+
+    <h2>Order for the day you can lay it</h2>
+    <p>Freshly harvested sod is a living crop with its roots cut off. It starts breaking down the moment it is stacked, and the middle of a pallet heats up like a compost pile. The rule installers follow is simple: lay it the same day it lands, and never later than 24 hours. In summer heat above 85°F that window shrinks to a few hours.</p>
+    <p>Practical sequencing: finish all soil prep the day before, take delivery early in the morning, and have the help lined up before the truck arrives. If you must hold sod, park the pallet in shade, water the outside edges lightly, and lay the top layers first — the middle is what cooks.</p>
+
+    <h3>Ground prep checklist</h3>
+    <ul>
+      <li><strong>Clear and kill:</strong> remove old turf and weeds; if you use a non-selective herbicide, allow the label's waiting period before laying.</li>
+      <li><strong>Till and amend:</strong> loosen the top 4 to 6 in, work in compost if the soil is compacted clay or pure sand.</li>
+      <li><strong>Grade:</strong> rake level and slope away from the house at about 1 in per 4 ft of run. Finish grade should sit around 1 in below paths and driveways so the laid sod ends up flush.</li>
+      <li><strong>Starter fertiliser:</strong> a phosphorus-containing starter raked into the surface right before laying gives roots something to reach for.</li>
+      <li><strong>Moisten:</strong> water the prepared soil so the top inch is damp but not muddy. Sod laid on dry dust struggles to knit.</li>
+    </ul>
+
+    <h3>Watering the first two weeks</h3>
+    <p>The first fortnight decides whether the sod roots or dies. Days 1 to 7: water deeply within 30 minutes of laying, then keep the soil beneath continuously moist — usually two or three short cycles a day in warm weather, enough that lifting a corner shows wet soil an inch down. Days 8 to 14: cut back to once a day and start pushing water deeper. From week three, water every second or third day and stay off the lawn as much as possible. Wait until the sod resists a gentle tug, typically 10 to 14 days, before the first mow, and take no more than a third of the blade height.</p>
+
+    <h2>Limits of this calculator</h2>
+    <p>The numbers here are a materials estimate, not a quote. Pallet coverage genuinely varies between 400 and 500 sq ft by region and by whether the pallet is loaded with rolls or slabs, so confirm the figure with your supplier and use the custom coverage option if it differs. Delivery fees, installation labour, soil amendments and starter fertiliser are not included, and steep or heavily obstructed sites can push real waste past 15%. When in doubt, round up: one spare roll costs a few dollars, while a second delivery for one missing strip costs a trip fee and a colour-mismatched patch.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.epa.gov/watersense" target="_blank" rel="noopener">US EPA WaterSense &mdash; outdoor watering guidance for establishing and maintaining lawns</a></li>
+      <li><a href="https://www.nrcs.usda.gov/" target="_blank" rel="noopener">USDA Natural Resources Conservation Service &mdash; soil preparation, grading and erosion control on turf areas</a></li>
+      <li><a href="https://www.usda.gov/" target="_blank" rel="noopener">US Department of Agriculture &mdash; turfgrass research and regional growing-zone information</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/solar-panel-calc/"><span class="related-ico" aria-hidden="true">☀️</span><span class="related-name">Solar Panel Calculator</span></a><a class="related-item" href="https://tool-hub.me/stair-calc/"><span class="related-ico" aria-hidden="true">🪜</span><span class="related-name">Stair Calculator</span></a><a class="related-item" href="https://tool-hub.me/stud-calc/"><span class="related-ico" aria-hidden="true">🪚</span><span class="related-name">Stud Calculator</span></a><a class="related-item" href="https://tool-hub.me/tank-volume-calc/"><span class="related-ico" aria-hidden="true">🛢️</span><span class="related-name">Tank Volume Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How many square feet is a pallet of sod?</summary><p data-i18n="faq.a1">Most suppliers load 400 to 500 sq ft per pallet, and this calculator uses 450 as the middle. Coverage depends on whether the pallet holds rolls or slabs and how thickly the sod was cut, so a pallet is a delivery unit, not a fixed measurement. Always confirm the number with your own supplier before you order.</p></details>
+    <details><summary data-i18n="faq.q2">How long can sod sit on the pallet before I lay it?</summary><p data-i18n="faq.a2">Treat sod as perishable produce: lay it the same day it arrives, and within 24 hours at the absolute latest. Stacked sod heats up in the middle of the pallet and can yellow or rot in a single warm afternoon. If you cannot install immediately, keep the pallet in shade, mist the edges and cut the delay as short as possible.</p></details>
+    <details><summary data-i18n="faq.q3">Is sod or seed the better value?</summary><p data-i18n="faq.a3">Seed costs roughly $0.05 to $0.15 per sq ft against $0.35 to $0.85 for sod delivered, so seed is far cheaper on materials. What you buy with sod is time: an instantly usable lawn versus six to twelve weeks of watering, weeding and reseeding thin patches. On slopes prone to washout, sod also holds soil immediately, which seed cannot.</p></details>
+    <details><summary data-i18n="faq.q4">How do I measure an irregular lawn?</summary><p data-i18n="faq.a4">Break the shape into rectangles and circles you can measure, run each one through the calculator, then add the results. Ignore small planting beds under about 20 sq ft — the waste allowance absorbs them. For very wavy borders, measure to the widest point and let the 10% allowance cover the offcuts.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

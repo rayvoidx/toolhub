@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-ijRPsKCGEt4+ARtjXXzxqFJFNIljLH5Ia6AQqseGnBQ=' 'sha256-vH4yibargBCY2ld9SmbxfaEkdEZp4R1KMmteqfsSMF8=' 'sha256-DqSGnyd7NCCBxm9kU0xbl9KvbBITl9xHJ/8m4thPbhw='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>퍼니스 용량 계산기 — 난방 BTU 산정</title>
+<meta name="description" content="우리 집에 필요한 난방기 용량을 BTU로 계산합니다. 면적, 기후대, 단열 상태, 천장고를 입력하면 난방 부하와 95% AFUE 기준 입력 용량을 알려줍니다.">
+<meta name="keywords" content="furnace size calculator, what size furnace do i need, furnace btu calculator, heating btu per square foot, furnace sizing chart, btu calculator for heating">
+<link rel="canonical" href="https://tool-hub.me/furnace-size-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/furnace-size-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/furnace-size-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/furnace-size-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/furnace-size-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/furnace-size-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/furnace-size-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/furnace-size-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/furnace-size-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/furnace-size-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/furnace-size-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/furnace-size-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/furnace-size-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/furnace-size-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/furnace-size-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/furnace-size-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="퍼니스 용량 계산기 — 난방 BTU 산정">
+<meta property="og:description" content="우리 집에 필요한 난방기 용량을 BTU로 계산합니다. 면적, 기후대, 단열 상태, 천장고를 입력하면 난방 부하와 95% AFUE 기준 입력 용량을 알려줍니다.">
+<meta property="og:url" content="https://tool-hub.me/furnace-size-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/furnace-size-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#c2410c">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Furnace Size Calculator",
+  "description": "Work out what size furnace you need in BTU. Enter square footage, US climate zone, insulation and ceiling height to get your heating load and furnace size.",
+  "url": "https://tool-hub.me/furnace-size-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Furnace Size Calculator",
+      "item": "https://tool-hub.me/furnace-size-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What goes wrong if the furnace is oversized?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An oversized furnace short cycles: it satisfies the thermostat in a few minutes, shuts down, then fires again soon after. That gives you temperature swings, cold rooms at the end of long duct runs, noisy starts and extra wear on the igniter, blower and heat exchanger. Bigger is not safer — a correctly sized unit runs longer, quieter cycles and mixes air far better."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does 95% AFUE actually mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "AFUE is Annual Fuel Utilisation Efficiency: the share of fuel energy that becomes usable heat across a whole heating season. A 95% AFUE furnace turns 100,000 BTU of gas into about 95,000 BTU of heat in your rooms, and the other 5% leaves up the flue. Furnaces are advertised by input BTU, so the heating load has to be divided by the AFUE to get the number on the label."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I be looking at a heat pump instead?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Heat pumps are rated by capacity and COP rather than AFUE, and cold-climate models still run at 200-300% efficiency well below freezing. In zones 1-4 a heat pump usually beats gas on running cost; in zones 5-7 a dual-fuel setup pairs a heat pump with a smaller furnace for the worst nights. Either way you size it from the same heating load this calculator gives you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does the climate zone move the answer so much?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Heating load is driven by the design temperature difference between indoors and the coldest outdoor conditions. A zone 2 house may only defend a 30 °F gap while a zone 6 house faces 70 °F or more, so it loses heat more than twice as fast through identical walls. The same 1,800 sq ft home lands near 58,000 BTU in Florida and 104,000 BTU in Minnesota."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Furnace Size Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Furnace Size Calculator</span></nav>
+  <section class="hero">
+    <h1>Furnace Size Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Square footage alone never answers it — the climate zone can almost double the number.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:2fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="area" data-i18n="tool.area.label">Heated floor area</label>
+        <input type="number" id="area" inputmode="decimal" min="1" max="20000" step="any" autocomplete="off" placeholder="1800">
+      </div>
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Unit</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Square feet</option>
+          <option value="m" data-i18n="tool.unit.m">Square metres</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="zone" data-i18n="tool.zone.label">Climate zone (US DOE map)</label>
+    <select id="zone">
+      <option value="32.5" data-i18n="tool.zone.z12">Zone 1-2 hot — FL, south TX, HI (30-35 BTU/sq ft)</option>
+      <option value="37.5" data-i18n="tool.zone.z3">Zone 3 mild — GA, AZ, coastal CA (35-40)</option>
+      <option value="45" selected data-i18n="tool.zone.z4">Zone 4 moderate — VA, TN, KS, OR (45)</option>
+      <option value="50" data-i18n="tool.zone.z5">Zone 5 cold — NY, MI, CO, north IL (50)</option>
+      <option value="57.5" data-i18n="tool.zone.z67">Zone 6-7 very cold — MN, ND, VT, ME (55-60)</option>
+    </select>
+
+    <label for="insul" data-i18n="tool.insul.label">Insulation and air sealing</label>
+    <select id="insul">
+      <option value="0.9" data-i18n="tool.insul.good">Good — recent build, tight, upgraded windows (-10%)</option>
+      <option value="1" selected data-i18n="tool.insul.avg">Average — typical existing home (no change)</option>
+      <option value="1.1" data-i18n="tool.insul.poor">Poor — older, draughty, single glazing (+10%)</option>
+    </select>
+
+    <label for="ceil" data-i18n="tool.ceil.label">Ceiling height</label>
+    <select id="ceil">
+      <option value="1" selected data-i18n="tool.ceil.8">8 ft — standard</option>
+      <option value="1.06" data-i18n="tool.ceil.9">9 ft (+6%)</option>
+      <option value="1.12" data-i18n="tool.ceil.10">10 ft or vaulted (+12%)</option>
+    </select>
+
+    <label for="afue" data-i18n="tool.afue.label">Furnace efficiency (AFUE)</label>
+    <select id="afue">
+      <option value="0.8" data-i18n="tool.afue.80">80% — older non-condensing</option>
+      <option value="0.9" data-i18n="tool.afue.90">90% — mid efficiency</option>
+      <option value="0.95" selected data-i18n="tool.afue.95">95% — condensing (standard today)</option>
+      <option value="0.98" data-i18n="tool.afue.98">98% — high-efficiency condensing</option>
+    </select>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate furnace size</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.load">Heating load (heat delivered)</div>
+          <div class="rc-val" id="r-load">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.input">Furnace input needed</div><div class="rc-val" id="r-input">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.size">Nearest common furnace size</div><div class="rc-val" id="r-size">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.factor">Effective factor used</div><div class="rc-val" id="r-factor">—</div></div>
+      </div>
+      <p class="subtle" id="note-big" data-i18n="tool.note.big" hidden>Over 6,000 sq ft this is Manual J territory: rule-of-thumb factors stop tracking reality, and a zoned or two-furnace design is usually the answer.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.cooling">Sizing air conditioning is a different sum — cooling load turns on humidity and solar gain, so use a cooling BTU calculator for that.</p>
+    <p class="subtle" data-i18n="tool.note.disclaim">A planning estimate for sanity-checking contractor quotes. A Manual J calculation using your real windows, orientation and air leakage is the standard your installer should follow.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What size furnace do I need?</h2>
+    <p>Furnaces are not sized by the square footage on the listing sheet. They are sized by heating load: the rate at which your house leaks heat on the coldest design day of the year, measured in BTU per hour. Square footage is only the first term in that sum. A 1,800 sq ft bungalow in Tampa and the same 1,800 sq ft in Duluth lose heat at completely different rates, because the load is driven by the temperature difference the building has to hold against, and by how leaky the envelope is while it does so.</p>
+    <p>This calculator uses the rule of thumb that HVAC contractors reach for before they run the full numbers: BTU per square foot by climate zone, corrected for insulation quality and ceiling height. It is deliberately on the generous side, which is exactly what you want from a first pass — it tells you which class of furnace you are shopping in and whether a quote you have been handed is plausible.</p>
+
+    <h3>Worked example: 1,800 sq ft in climate zone 4</h3>
+    <p>Zone 4 covers Virginia, Tennessee, Kansas and much of Oregon, and the rule of thumb there is 45 BTU/h per square foot. With average insulation and standard 8 ft ceilings, 1,800 x 45 = 81,000 BTU/h. That is the heat that has to arrive in your rooms, and it is where most online calculators stop.</p>
+    <p>The number on a furnace label is not that. Furnaces are sold by input BTU, the heat in the gas they burn, and the AFUE rating says how much of it survives the trip. At 95% AFUE you need 81,000 / 0.95 = 85,263 BTU/h of input to deliver 81,000 BTU/h of heat. Common residential sizes come in 40,000, 60,000, 80,000, 100,000 and 120,000 BTU/h, so the honest answer for this house is a 100,000 BTU/h unit — the smallest standard size that covers the calculated load.</p>
+    <p>Here is the part most calculators will not tell you: your contractor may well quote 80,000 and be right. A proper Manual J calculation on a reasonably tight 1,800 sq ft house in zone 4 often lands between 45,000 and 60,000 BTU/h, well under the 81,000 the rule of thumb produces, because it accounts for your actual window area, wall R-values and measured air leakage instead of assuming the worst. Treat the number here as a ceiling and a sanity check, not as a purchase order.</p>
+
+    <h3>What the adjustments actually change</h3>
+    <p>Insulation moves the factor by 10% in either direction. Take the same house with a recent build spec — sealed rim joists, R-49 attic, new double glazing — and 45 becomes 40.5 BTU/h per sq ft, dropping the load to 72,900 BTU/h and the required input to 76,737, which fits an 80,000 BTU/h furnace comfortably. Go the other way to an uninsulated 1940s house with single glazing and the factor rises to 49.5, pushing the load to 89,100. Envelope work is the cheapest way to shrink the equipment you have to buy and heat with for the next twenty years.</p>
+    <p>Ceiling height matters because you heat volume, not floor area. A 9 ft ceiling adds about 6% and a 10 ft or vaulted ceiling about 12%, and vaulted spaces also stratify — the warm air sits above head height until a ceiling fan pushes it back down.</p>
+
+    <h2>Heating load by climate zone, 1,800 sq ft</h2>
+    <table>
+      <thead><tr><th>Zone</th><th>BTU/h per sq ft</th><th>Load (output)</th><th>Input at 95% AFUE</th><th>Common size</th></tr></thead>
+      <tbody>
+        <tr><td>1-2 hot (FL, south TX)</td><td>32.5</td><td>58,500</td><td>61,579</td><td>80,000</td></tr>
+        <tr><td>3 mild (GA, AZ)</td><td>37.5</td><td>67,500</td><td>71,053</td><td>80,000</td></tr>
+        <tr><td>4 moderate (VA, TN)</td><td>45</td><td>81,000</td><td>85,263</td><td>100,000</td></tr>
+        <tr><td>5 cold (NY, MI, CO)</td><td>50</td><td>90,000</td><td>94,737</td><td>100,000</td></tr>
+        <tr><td>6-7 very cold (MN, VT)</td><td>57.5</td><td>103,500</td><td>108,947</td><td>120,000</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Why oversizing is the failure mode to fear</h2>
+    <p>The instinct when spending several thousand dollars is to buy headroom. With furnaces that instinct backfires. A unit twice the size it needs to be reaches the thermostat setpoint in four or five minutes, shuts off, and the house cools until it fires again — perhaps eight times an hour on a mild evening. Every cycle is a cold start with a purge, an ignition, and a blower ramp, so you get noise, temperature swings of several degrees, and rooms at the ends of long duct runs that never receive a full run of warm air. The wear falls on the igniter, the inducer motor and the heat exchanger, the three components you least want to replace early.</p>
+    <p>The reverse case is far less common than homeowners fear. A slightly undersized furnace runs continuously on the coldest nights and may lose a degree or two indoors for a few hours a year. That is a much better trade than a decade of short cycling.</p>
+
+    <h3>Two-stage and modulating units</h3>
+    <p>If your load sits awkwardly between two standard sizes, a two-stage furnace resolves it. It runs at roughly 65% of capacity for most of the season and only opens up on design-temperature days, which gives you the long, quiet cycles of a smaller unit with the reserve of a larger one. Modulating furnaces go further, sliding continuously between about 40% and 100%. They cost more up front and are worth it in zones 5 to 7 where a furnace runs for months, less so in zone 3 where it runs for weeks.</p>
+
+    <h2>Where this estimate stops</h2>
+    <p>Rule-of-thumb sizing ignores window orientation, shading, the number of exterior corners, duct losses in unconditioned attics, and the actual air changes per hour that a blower door test would show. Those factors can move the answer 30% either way. ACCA Manual J is the standard your installer should be following, and most jurisdictions require it on permit applications. Ask for the report, not just the number. If a contractor sizes your furnace off square footage alone and quotes the biggest unit on the truck, you have learned something important about the contractor.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.energy.gov/energysaver/home-heating-systems" target="_blank" rel="noopener">U.S. Department of Energy — home heating system types, sizing and efficiency guidance</a></li>
+      <li><a href="https://www.energystar.gov/products/furnaces" target="_blank" rel="noopener">ENERGY STAR — AFUE ratings and furnace selection criteria</a></li>
+      <li><a href="https://www.eia.gov/consumption/residential/" target="_blank" rel="noopener">U.S. Energy Information Administration — residential energy consumption and heating fuel data</a></li>
+      <li><a href="https://www.nrel.gov/buildings/" target="_blank" rel="noopener">NREL Buildings Research — climate zone building load and heating analysis</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/generator-size-calc/"><span class="related-ico" aria-hidden="true">🔌</span><span class="related-name">Generator Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/golf-handicap-calc/"><span class="related-ico" aria-hidden="true">⛳</span><span class="related-name">Golf Handicap Calculator</span></a><a class="related-item" href="https://tool-hub.me/gpa-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">GPA Calculator</span></a><a class="related-item" href="https://tool-hub.me/grade-calc/"><span class="related-ico" aria-hidden="true">🎓</span><span class="related-name">Grade Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What goes wrong if the furnace is oversized?</summary><p data-i18n="faq.a1">An oversized furnace short cycles: it satisfies the thermostat in a few minutes, shuts down, then fires again soon after. That gives you temperature swings, cold rooms at the end of long duct runs, noisy starts and extra wear on the igniter, blower and heat exchanger. Bigger is not safer — a correctly sized unit runs longer, quieter cycles and mixes air far better.</p></details>
+    <details><summary data-i18n="faq.q2">What does 95% AFUE actually mean?</summary><p data-i18n="faq.a2">AFUE is Annual Fuel Utilisation Efficiency: the share of fuel energy that becomes usable heat across a whole heating season. A 95% AFUE furnace turns 100,000 BTU of gas into about 95,000 BTU of heat in your rooms, and the other 5% leaves up the flue. Furnaces are advertised by input BTU, so the heating load has to be divided by the AFUE to get the number on the label.</p></details>
+    <details><summary data-i18n="faq.q3">Should I be looking at a heat pump instead?</summary><p data-i18n="faq.a3">Heat pumps are rated by capacity and COP rather than AFUE, and cold-climate models still run at 200-300% efficiency well below freezing. In zones 1-4 a heat pump usually beats gas on running cost; in zones 5-7 a dual-fuel setup pairs a heat pump with a smaller furnace for the worst nights. Either way you size it from the same heating load this calculator gives you.</p></details>
+    <details><summary data-i18n="faq.q4">Why does the climate zone move the answer so much?</summary><p data-i18n="faq.a4">Heating load is driven by the design temperature difference between indoors and the coldest outdoor conditions. A zone 2 house may only defend a 30 °F gap while a zone 6 house faces 70 °F or more, so it loses heat more than twice as fast through identical walls. The same 1,800 sq ft home lands near 58,000 BTU in Florida and 104,000 BTU in Minnesota.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

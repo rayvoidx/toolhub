@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-0wmOS6PR2ArkYHvWVepGlJN+xevWwnT3KvTjyiHQqi8=' 'sha256-iHYKMU9plLurDZxBCOcrP7qQOO+px1g6hNCDAZZdAng=' 'sha256-b4Ch1H+yKTlg9nv7y5eh2dLtsq6wKF0UD9gH/pOvLRk='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>금 순도 계산기 — 캐럿을 순도·함량으로 환산</title>
+<meta name="description" content="금 캐럿을 순도 퍼센트, 순금 중량, 밀레시멀 순도(916·750)로 환산합니다. 22K·18K·14K에 실제로 든 금의 양과 시세 기준 가치를 확인하세요.">
+<meta name="keywords" content="gold purity calculator, 22k gold purity, karat to percentage, gold karat calculator, 916 hallmark, millesimal fineness, pure gold content, gold melt value">
+<link rel="canonical" href="https://tool-hub.me/gold-purity-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/gold-purity-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/gold-purity-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/gold-purity-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/gold-purity-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/gold-purity-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/gold-purity-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/gold-purity-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/gold-purity-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/gold-purity-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/gold-purity-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/gold-purity-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/gold-purity-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/gold-purity-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/gold-purity-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/gold-purity-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="금 순도 계산기 — 캐럿을 순도·함량으로 환산">
+<meta property="og:description" content="금 캐럿을 순도 퍼센트, 순금 중량, 밀레시멀 순도(916·750)로 환산합니다. 22K·18K·14K에 실제로 든 금의 양과 시세 기준 가치를 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/gold-purity-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/gold-purity-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a16207">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gold Purity Calculator",
+  "description": "Convert gold karat to purity percentage, pure gold weight and millesimal fineness. See what 22K, 18K or 14K really contains and estimate melt value.",
+  "url": "https://tool-hub.me/gold-purity-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Gold Purity Calculator",
+      "item": "https://tool-hub.me/gold-purity-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why isn't gold jewellery made from pure 24K gold?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pure gold is too soft to hold a setting, so a 24K ring bends, dents and scratches with daily wear. Jewellers alloy it with copper, silver, zinc or nickel to add hardness, and that is exactly what creates 22K, 18K and 14K. The trade-off is direct: more alloy means more durability and less gold."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the 916 hallmark mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "916 is the millesimal fineness of 22K gold: 22 divided by 24 is 0.9166, so 916 parts in every 1,000 are gold. India's BIS hallmark stamps it as 22K916, and the same arithmetic gives 750 for 18K and 585 for 14K. A hallmark is an assay office's verification of that number, not the seller's own claim."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does karat affect the price I pay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Metal value moves linearly with gold content: 18K holds 75% of the gold in the same weight of 24K, so its melt value is 75% as much. Retail price does not follow that line, because making charges of roughly 8% to 25%, plus GST, VAT or sales tax and any stone cost, sit on top. Ask for the rate, the net weight and the making charge as three separate numbers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do rose gold and white gold have a different purity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the karat maths is identical. 18K rose gold and 18K white gold both contain 75% gold; only the other 25% differs, copper for rose and palladium, nickel or silver for white. White gold is usually rhodium plated, which changes the colour but not the gold content."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Gold Purity Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Gold Purity Calculator</span></nav>
+  <section class="hero">
+    <h1>Gold Purity Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">22K is 91.67% gold. Here is exactly how much metal you actually own.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="karat" data-i18n="tool.karat.label">Gold karat</label>
+        <select id="karat">
+          <option value="24" data-i18n="tool.karat.24">24K — pure gold (999)</option>
+          <option value="22" selected data-i18n="tool.karat.22">22K — 916 hallmark</option>
+          <option value="21" data-i18n="tool.karat.21">21K — 875 (Gulf standard)</option>
+          <option value="18" data-i18n="tool.karat.18">18K — 750</option>
+          <option value="14" data-i18n="tool.karat.14">14K — 585</option>
+          <option value="10" data-i18n="tool.karat.10">10K — 417 (US minimum)</option>
+          <option value="9" data-i18n="tool.karat.9">9K — 375 (UK minimum)</option>
+          <option value="custom" data-i18n="tool.karat.custom">Custom karat</option>
+        </select>
+      </div>
+      <div>
+        <label for="weight" data-i18n="tool.weight.label">Item weight</label>
+        <input type="number" id="weight" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+      </div>
+    </div>
+
+    <label for="wunit" data-i18n="tool.wunit.label">Weight unit</label>
+    <select id="wunit">
+      <option value="g" selected data-i18n="tool.wunit.g">Grams (g)</option>
+      <option value="ozt" data-i18n="tool.wunit.ozt">Troy ounces (ozt)</option>
+      <option value="dwt" data-i18n="tool.wunit.dwt">Pennyweight (dwt)</option>
+    </select>
+
+    <div id="custom-wrap" hidden>
+      <label for="karat-custom" data-i18n="tool.karatc.label">Custom karat (1-24)</label>
+      <input type="number" id="karat-custom" inputmode="decimal" min="1" max="24" step="any" autocomplete="off" placeholder="22">
+    </div>
+
+    <label for="price" data-i18n="tool.price.label">24K gold rate per gram (optional)</label>
+    <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="85">
+    <p class="subtle" data-i18n="tool.price.hint" style="margin:6px 0 0;">Today's 24K rate in your currency. Leave it blank to skip the value estimate.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate purity</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.purity">Gold purity</div>
+          <div class="rc-val" id="r-purity">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.pure">Pure gold content</div><div class="rc-val" id="r-pure">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.fine">Millesimal fineness</div><div class="rc-val" id="r-fine">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.value">Estimated melt value</div><div class="rc-val" id="r-value">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.making" style="margin-top:12px;">Melt value only. Jeweller making charges and wastage — typically 8% to 25% — are not included, and buy-back offers usually land below melt.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a karat actually measures</h2>
+    <p>A karat is a fraction with a fixed denominator of 24. Pure gold is 24 parts out of 24, so every karat mark is simply karat divided by 24. That single line of arithmetic drives everything on this page: 22K is 22/24 = 91.67% gold, 18K is 18/24 = 75%, 14K is 14/24 = 58.3% and 10K — the legal minimum that can be sold as gold in the United States — is 10/24 = 41.7%. In the UK, 9K (37.5%) is legal and common, which is why a British "gold" chain often weighs the same as an American one but carries far less metal value.</p>
+    <p>Do not confuse the karat of gold with the carat of a gemstone. A diamond carat is a unit of mass equal to 0.2 grams. Gold karat is a purity ratio and has no weight meaning at all. A 22K, 10-gram bangle and a 14K, 10-gram bangle weigh the same and are worth very different sums.</p>
+
+    <h3>Worked example: a 10 g 22K bangle, start to finish</h3>
+    <p>Take a 22K bangle weighing 10 grams, with 24K trading at 85 per gram in your currency.</p>
+    <p>Step 1 — purity: 22 / 24 = 0.91666, so 91.67% gold.<br>
+    Step 2 — pure gold content: 10 g x 0.91666 = 9.167 g of fine gold. The other 0.833 g is copper, silver or zinc and is worth close to nothing.<br>
+    Step 3 — fineness: 916 parts per thousand, which is why the hallmark reads 22K916.<br>
+    Step 4 — melt value: 9.167 g x 85 = 779.17.</p>
+    <p>Now compare the shop price. If the same bangle is ticketed at 950, the gap of roughly 171 is the making charge plus tax — about 22% over metal. That is within the normal band but worth negotiating; on a plain, machine-made piece there is little craft to pay for.</p>
+
+    <h3>The same weight in other karats</h3>
+    <table>
+      <thead><tr><th>Karat</th><th>Purity</th><th>Fineness</th><th>Pure gold in 10 g</th><th>Melt at 85/g</th></tr></thead>
+      <tbody>
+        <tr><td>24K</td><td>100%</td><td>999</td><td>10.000 g</td><td>850.00</td></tr>
+        <tr><td>22K</td><td>91.67%</td><td>916</td><td>9.167 g</td><td>779.17</td></tr>
+        <tr><td>21K</td><td>87.5%</td><td>875</td><td>8.750 g</td><td>743.75</td></tr>
+        <tr><td>18K</td><td>75%</td><td>750</td><td>7.500 g</td><td>637.50</td></tr>
+        <tr><td>14K</td><td>58.33%</td><td>585</td><td>5.833 g</td><td>495.83</td></tr>
+        <tr><td>10K</td><td>41.67%</td><td>417</td><td>4.167 g</td><td>354.17</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Hallmarks: reading the stamp instead of trusting the seller</h2>
+    <p>A hallmark is an independent assay office's statement of fineness, not a manufacturer's claim. In India, BIS hallmarking has been mandatory for gold jewellery since 2021 and carries three marks: the BIS logo, the purity grade (22K916, 18K750, 14K585) and a six-character HUID that can be checked in the BIS Care app. In the UK, the Assay Offices of London, Birmingham, Sheffield and Edinburgh stamp a sponsor's mark, a millesimal fineness number such as 750, and the office's town mark; anything sold as gold above 1 gram must be hallmarked. The United States has no compulsory hallmarking regime — the National Gold and Silver Stamping Act only requires that any stamp applied be accurate, so a "14K" mark is the maker's own assertion backed by law rather than a test.</p>
+    <p>Practical consequence: in a US shop, if the piece is unmarked or you doubt the mark, ask for an XRF scan. It is non-destructive, takes seconds and most serious buyers have the machine on the counter. Acid testing is cheaper but scratches the item and only reads the surface, which is exactly where a plated fake hides its lie.</p>
+
+    <h2>Buying and selling with the numbers in hand</h2>
+    <p>When buying, insist on three separate figures: the day's rate per gram, the net gold weight after deducting stones and any lac or resin filler, and the making charge as a percentage or a flat sum. A quote that bundles them into one number is a quote you cannot check. Gross weight on a stone-set piece can overstate the gold by 20% or more, and you should never pay the gold rate on the weight of a ruby.</p>
+    <p>When selling, expect less than the melt figure this calculator shows. Refiners and pawnbrokers typically pay 70% to 90% of melt for scrap, because they carry the refining cost and the price risk between your counter and their smelter. Jewellery bought at retail therefore has to survive a double haircut — the making charge you paid on the way in, and the buyer's margin on the way out. Coins and bars avoid most of that, which is why bullion and jewellery are genuinely different purchases even at identical purity.</p>
+
+    <h2>Limits of this calculator</h2>
+    <p>The output is a metal-content estimate, not an appraisal. It assumes the stated karat is truthful and that the weight you enter is gold only, so gemstones, clasps in a different alloy, hollow tube construction and enamel will all inflate the result. It also ignores craftsmanship, brand premium and antique value, which for a signed piece can exceed the metal value many times over. For anything unusual, use the number here as your floor and get a professional valuation before you sell.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.ftc.gov/business-guidance" target="_blank" rel="noopener">U.S. Federal Trade Commission — rules on how precious metal quality marks such as 14K may be used</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — legal metrology for weighing gold accurately</a></li>
+      <li><a href="https://www.gov.uk/" target="_blank" rel="noopener">GOV.UK — UK hallmarking law and assay office fineness marks</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/gratuity-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Gratuity Calculator</span></a><a class="related-item" href="https://tool-hub.me/gst-calc/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">GST Calculator</span></a><a class="related-item" href="https://tool-hub.me/home-affordability-calc/"><span class="related-ico" aria-hidden="true">🏡</span><span class="related-name">Home Affordability Calculator</span></a><a class="related-item" href="https://tool-hub.me/hourly-to-salary/"><span class="related-ico" aria-hidden="true">⏱</span><span class="related-name">Hourly to Salary Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why isn't gold jewellery made from pure 24K gold?</summary><p data-i18n="faq.a1">Pure gold is too soft to hold a setting, so a 24K ring bends, dents and scratches with daily wear. Jewellers alloy it with copper, silver, zinc or nickel to add hardness, and that is exactly what creates 22K, 18K and 14K. The trade-off is direct: more alloy means more durability and less gold.</p></details>
+    <details><summary data-i18n="faq.q2">What does the 916 hallmark mean?</summary><p data-i18n="faq.a2">916 is the millesimal fineness of 22K gold: 22 divided by 24 is 0.9166, so 916 parts in every 1,000 are gold. India's BIS hallmark stamps it as 22K916, and the same arithmetic gives 750 for 18K and 585 for 14K. A hallmark is an assay office's verification of that number, not the seller's own claim.</p></details>
+    <details><summary data-i18n="faq.q3">How does karat affect the price I pay?</summary><p data-i18n="faq.a3">Metal value moves linearly with gold content: 18K holds 75% of the gold in the same weight of 24K, so its melt value is 75% as much. Retail price does not follow that line, because making charges of roughly 8% to 25%, plus GST, VAT or sales tax and any stone cost, sit on top. Ask for the rate, the net weight and the making charge as three separate numbers.</p></details>
+    <details><summary data-i18n="faq.q4">Do rose gold and white gold have a different purity?</summary><p data-i18n="faq.a4">No — the karat maths is identical. 18K rose gold and 18K white gold both contain 75% gold; only the other 25% differs, copper for rose and palladium, nickel or silver for white. White gold is usually rhodium plated, which changes the colour but not the gold content.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

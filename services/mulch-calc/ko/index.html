@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-ghvltwms0+PeTba+qSJCwiecIsXgYbC/g4DhR+peoDQ=' 'sha256-1TGMi92ELtYbXtdEbgqXOeEMdaAXO2hL1WPruE2qfRo=' 'sha256-H8PLvHZJJ96mZUA1nzmLW9e7ArBK+9XyI11n2A6At0E='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>멀칭 계산기 — 멀치 소요량(야드³·봉지)</title>
+<meta name="description" content="화단 크기와 깊이를 넣으면 필요한 멀치 양을 세제곱야드와 봉지 수로 계산합니다. 직사각형·원형 화단, 피트·미터 모두 지원합니다.">
+<meta name="keywords" content="mulch calculator, how much mulch do i need, cubic yards of mulch, mulch coverage, mulch bags per yard, mulch depth calculator">
+<link rel="canonical" href="https://tool-hub.me/mulch-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/mulch-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/mulch-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/mulch-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/mulch-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/mulch-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/mulch-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/mulch-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/mulch-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/mulch-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/mulch-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/mulch-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/mulch-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/mulch-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/mulch-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/mulch-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="멀칭 계산기 — 멀치 소요량(야드³·봉지)">
+<meta property="og:description" content="화단 크기와 깊이를 넣으면 필요한 멀치 양을 세제곱야드와 봉지 수로 계산합니다. 직사각형·원형 화단, 피트·미터 모두 지원합니다.">
+<meta property="og:url" content="https://tool-hub.me/mulch-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/mulch-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#365314">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Mulch Calculator",
+  "description": "Work out how much mulch you need in cubic yards and bags. Enter bed length and width or diameter, pick a depth, and get coverage and bag counts.",
+  "url": "https://tool-hub.me/mulch-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Mulch Calculator",
+      "item": "https://tool-hub.me/mulch-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How deep should mulch be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Two to three inches suits most established beds, and four inches is for bare ground where weed suppression matters more than anything else. Deeper than four inches and the layer stops rain reaching the soil while starving roots of air. Whatever depth you choose, pull the mulch three to six inches back from trunks and stems."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is bulk mulch cheaper than bags?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The break-even point is about one cubic yard, which is 13.5 bags of two cubic feet. Below that, bags usually win once you count the delivery fee. Above it, bulk delivered mulch often costs half as much per cubic yard — provided you have somewhere to dump it and a wheelbarrow to move it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bags of mulch are in a cubic yard?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A cubic yard is 27 cubic feet, so it takes 13.5 bags of the two cubic foot size or 9 bags of the three cubic foot size. That one yard spreads roughly 108 square feet at three inches deep. Bag sizes vary by brand, so check the label before you multiply."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often does mulch need replacing?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most beds need a top-up of about an inch every spring rather than a full replacement, because organic mulch breaks down into the soil. Rake or fluff the old layer first so it does not mat, then add only enough to reach your target depth. A complete strip and replace is usually a two to three year job."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Mulch Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Mulch Calculator</span></nav>
+  <section class="hero">
+    <h1>Mulch Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Bed size and depth in, cubic yards and bag counts out — before you drive to the garden centre.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool [hidden] { display:none !important; }
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn { color:#b45309; font-size:13px; margin-top:12px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Metres</option>
+        </select>
+      </div>
+      <div>
+        <label for="shape" data-i18n="tool.shape.label">Bed shape</label>
+        <select id="shape">
+          <option value="rect" data-i18n="tool.shape.rect">Rectangle or square</option>
+          <option value="circle" data-i18n="tool.shape.circle">Circle</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row" id="rect-fields">
+      <div>
+        <label for="len" data-i18n="tool.len.label">Length</label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="20">
+      </div>
+      <div>
+        <label for="wid" data-i18n="tool.wid.label">Width</label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="4">
+      </div>
+    </div>
+
+    <div id="circle-fields" hidden>
+      <label for="dia" data-i18n="tool.dia.label">Diameter</label>
+      <input type="number" id="dia" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="10">
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="depth" data-i18n="tool.depth.label">Mulch depth</label>
+        <select id="depth">
+          <option value="2" data-i18n="tool.depth.2">2 in (5 cm) — topping up</option>
+          <option value="3" selected data-i18n="tool.depth.3">3 in (7.5 cm) — standard</option>
+          <option value="4" data-i18n="tool.depth.4">4 in (10 cm) — weed control</option>
+          <option value="6" data-i18n="tool.depth.6">6 in (15 cm) — bare ground only</option>
+          <option value="custom" data-i18n="tool.depth.custom">Custom depth</option>
+        </select>
+      </div>
+      <div>
+        <label for="beds" data-i18n="tool.beds.label">Beds this size</label>
+        <input type="number" id="beds" inputmode="numeric" min="1" step="1" autocomplete="off" placeholder="1">
+      </div>
+    </div>
+
+    <div id="depth-custom-field" hidden>
+      <label for="depth-custom" data-i18n="tool.depth.cust.label">Custom depth (inches)</label>
+      <input type="number" id="depth-custom" inputmode="decimal" min="0.5" max="12" step="0.5" autocomplete="off" placeholder="3.5">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate mulch</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.yards">Mulch needed</div>
+          <div class="rc-val" id="r-yards">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.cuft">Cubic feet</div><div class="rc-val" id="r-cuft">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Area covered</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.bags2">Bags (2 cu ft)</div><div class="rc-val" id="r-bags2">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.bags3">Bags (3 cu ft)</div><div class="rc-val" id="r-bags3">—</div></div>
+      </div>
+      <p class="warn" id="warn-deep" hidden data-i18n="tool.warn.deep">6 in is deeper than most plants tolerate. Mulch over 4 in traps water against stems and starves roots of air — use this depth only on bare ground with nothing planted in it.</p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.coverage" style="margin-top:12px;">One cubic yard covers about 108 sq ft at 3 in deep — 162 sq ft at 2 in, 81 sq ft at 4 in. Bulk mulch settles, so order roughly 10% extra.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How mulch quantity is worked out</h2>
+    <p>Every mulch order comes down to one sum: area times depth. Measure the bed in feet, convert the depth from inches to feet by dividing by twelve, multiply the two, and you have cubic feet. Divide by 27 and you have cubic yards, which is how bulk suppliers sell it. Divide by the bag size instead and you have the number of bags to load into the car. The calculator above runs exactly that chain, including the circle formula for tree rings and island beds.</p>
+
+    <h3>Worked example: a 20 ft by 4 ft border</h3>
+    <p>The bed is 80 square feet. At the standard 3 inch depth, that is 0.25 feet, so 80 x 0.25 = 20 cubic feet of mulch. In cubic yards that is 20 / 27 = 0.74, and in retail bags it is 10 bags of the two cubic foot size or 7 bags of the three cubic foot size. Note how the bag counts round up: you cannot buy 0.74 of a yard or 6.7 bags, so always order the whole unit above.</p>
+    <p>Change the depth and the answer scales in a straight line. The same border at 2 inches needs 13.3 cubic feet — 7 small bags. At 4 inches it needs 26.7 cubic feet, or 14 small bags. That is the whole reason the depth selector sits next to the measurements: an inch either way moves the bill by a third.</p>
+
+    <h3>Worked example: a circular tree ring</h3>
+    <p>A 10 foot diameter ring is pi x 10² / 4 = 78.5 square feet, near enough the same as the border above. At 3 inches it takes 19.6 cubic feet, so 10 two cubic foot bags again. If you have four such rings around the front lawn, set the bed count to 4 and the tool returns 78.5 cubic feet, or 2.9 cubic yards — which has just crossed into bulk delivery territory.</p>
+
+    <h3>Bags or bulk: where the price flips</h3>
+    <p>One cubic yard equals 13.5 bags of two cubic feet. In the US, bagged hardwood mulch typically runs $4 to $6 a bag, so a yard's worth in bags costs roughly $55 to $80. The same yard delivered in bulk is commonly $35 to $50 plus a flat delivery fee of $50 to 
+
+  00. Below about one cubic yard, bags win because the delivery fee dominates. Above two to three yards, bulk is usually half the price per yard even after delivery.</p>
+    <p>The catch is labour. A cubic yard of damp hardwood mulch weighs 600 to 1,000 pounds and arrives as a pile on your driveway, which you then move by wheelbarrow. Bags cost more per cubic foot but can be carried one at a time and stored until the weekend. In the UK, where bulk is sold in cubic metres and bags in 50 to 70 litre sacks, the same crossover logic applies — one cubic metre is roughly 1.31 cubic yards, or about 20 of the 70 litre sacks.</p>
+
+    <h2>Never build a mulch volcano</h2>
+    <p>The single most common and most damaging mulching mistake is piling mulch in a cone against a tree trunk. Bark is not root tissue and is not adapted to constant moisture. Buried under mulch it stays wet, softens, and gives insects, fungi and rodents a protected route into the cambium. Trees mulched this way often look fine for five years and then decline for reasons the owner never connects to the mulch. Roots also grow into the mulch cone and circle the trunk, eventually girdling the tree they belong to.</p>
+    <p>The fix is trivial: spread mulch flat like a doughnut, not a volcano, and keep a bare gap of three to six inches around every trunk and stem. The same rule applies to shrub bases and perennial crowns. Depth over four inches anywhere in the bed carries a milder version of the same risk, which is why this calculator flags the six inch option.</p>
+
+    <h2>Choosing the material</h2>
+    <p>Shredded hardwood knits together and stays put on slopes, making it the default for most beds. Bark nuggets last longer but float in heavy rain and end up on the path. Pine straw is light, cheap in the southern US and excellent around acid-loving plants. Cedar and cypress resist decay and smell good but break down slowly, so they add little to the soil. Rubber mulch never decomposes, which sounds like an advantage until you want to change the bed or improve the soil; it also holds heat and offers no organic benefit.</p>
+
+    <h2>What the numbers do not cover</h2>
+    <p>Bulk mulch settles and compacts by roughly 10 to 15 percent in the first season, so ordering a little over is normal practice rather than waste. Existing mulch counts toward your target depth — measure what is already there and add only the difference. Uneven ground, deep hollows and the volume displaced by established plants all shift the real figure. Bag sizes also vary: 1.5, 2 and 3 cubic feet are all sold as standard, and some suppliers quote litres, so check the label before you convert. Treat the result as a shopping figure accurate to within about ten percent, which is exactly the tolerance the job needs.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.usda.gov/" target="_blank" rel="noopener">USDA — national guidance on soils, planting and landscape care</a></li>
+      <li><a href="https://www.nrcs.usda.gov/conservation-basics/natural-resource-concerns/soils" target="_blank" rel="noopener">USDA NRCS Soils — how organic matter and cover affect soil moisture</a></li>
+      <li><a href="https://www.epa.gov/soakuptherain" target="_blank" rel="noopener">US EPA Soak Up the Rain — mulching to cut runoff and retain water</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — official volume unit definitions</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/online-notepad/"><span class="related-ico" aria-hidden="true">🗒️</span><span class="related-name">Online Notepad</span></a><a class="related-item" href="https://tool-hub.me/paint-calc/"><span class="related-ico" aria-hidden="true">🎨</span><span class="related-name">Paint Calculator</span></a><a class="related-item" href="https://tool-hub.me/party-drink-calc/"><span class="related-ico" aria-hidden="true">🥂</span><span class="related-name">Party Drink Calculator</span></a><a class="related-item" href="https://tool-hub.me/paver-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Paver Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">How deep should mulch be?</summary><p data-i18n="faq.a1">Two to three inches suits most established beds, and four inches is for bare ground where weed suppression matters more than anything else. Deeper than four inches and the layer stops rain reaching the soil while starving roots of air. Whatever depth you choose, pull the mulch three to six inches back from trunks and stems.</p></details>
+    <details><summary data-i18n="faq.q2">Is bulk mulch cheaper than bags?</summary><p data-i18n="faq.a2">The break-even point is about one cubic yard, which is 13.5 bags of two cubic feet. Below that, bags usually win once you count the delivery fee. Above it, bulk delivered mulch often costs half as much per cubic yard — provided you have somewhere to dump it and a wheelbarrow to move it.</p></details>
+    <details><summary data-i18n="faq.q3">How many bags of mulch are in a cubic yard?</summary><p data-i18n="faq.a3">A cubic yard is 27 cubic feet, so it takes 13.5 bags of the two cubic foot size or 9 bags of the three cubic foot size. That one yard spreads roughly 108 square feet at three inches deep. Bag sizes vary by brand, so check the label before you multiply.</p></details>
+    <details><summary data-i18n="faq.q4">How often does mulch need replacing?</summary><p data-i18n="faq.a4">Most beds need a top-up of about an inch every spring rather than a full replacement, because organic mulch breaks down into the soil. Rake or fluff the old layer first so it does not mat, then add only enough to reach your target depth. A complete strip and replace is usually a two to three year job.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

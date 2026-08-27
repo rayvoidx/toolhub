@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-8JPhOILJT0xL4tEsztwJEgAMKObcNEUHKjSV0Ia35q8=' 'sha256-zJdsn+kllkfHPv8uIWburO+zi472XhDn8Y7hR2kZr0g=' 'sha256-6AvH1kPVbgiRSZcUPo1zQFNsO45tZHbZR0a/93Kup2A='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>잔디 씨앗 계산기 — 필요한 씨앗량 계산</title>
+<meta name="description" content="잔디밭에 필요한 씨앗량을 계산합니다. 가로·세로 또는 전체 면적을 넣고 초종을 고르면 파운드·킬로그램과 봉지 조합까지 알려줍니다.">
+<meta name="keywords" content="grass seed calculator, how much grass seed do i need, grass seed per square foot, overseeding rate, lawn seed calculator, grass seed coverage">
+<link rel="canonical" href="https://tool-hub.me/grass-seed-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/grass-seed-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/grass-seed-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/grass-seed-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/grass-seed-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/grass-seed-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/grass-seed-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/grass-seed-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/grass-seed-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/grass-seed-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/grass-seed-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/grass-seed-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/grass-seed-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/grass-seed-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/grass-seed-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/grass-seed-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="잔디 씨앗 계산기 — 필요한 씨앗량 계산">
+<meta property="og:description" content="잔디밭에 필요한 씨앗량을 계산합니다. 가로·세로 또는 전체 면적을 넣고 초종을 고르면 파운드·킬로그램과 봉지 조합까지 알려줍니다.">
+<meta property="og:url" content="https://tool-hub.me/grass-seed-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/grass-seed-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#166534">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Grass Seed Calculator",
+  "description": "Work out how much grass seed you need for any lawn. Enter length and width or a total area, pick your grass type, and get pounds, kilos and a bag list.",
+  "url": "https://tool-hub.me/grass-seed-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Grass Seed Calculator",
+      "item": "https://tool-hub.me/grass-seed-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why do seeding rates differ between grass types?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The rate is really about seed count, not weight. Kentucky bluegrass packs roughly 2 million tiny seeds per pound, so 3 lb per 1,000 sq ft is plenty, while tall fescue has about 230,000 much larger seeds per pound and needs 8 lb for the same ground cover. Hulled bermudagrass seed is smaller still, which is why 1 to 2 lb goes a long way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the best time to plant grass seed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cool-season grasses — fescue, bluegrass and ryegrass — do best sown from late summer into early autumn, roughly mid-August to mid-October across most of the US and UK, when soil is still warm and weed pressure has dropped. Spring is the fallback, but crabgrass competes hard. Warm-season grasses such as bermudagrass and zoysia go down in late spring to early summer, once soil temperature holds above 65-70°F (18-21°C)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is the overseeding rate half the new lawn rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Overseeding drops seed into turf that already covers most of the soil, so you are only filling gaps rather than starting from bare ground. Half the new-lawn rate is the standard nursery recommendation and it is what this calculator applies. Going heavier wastes seed and crowds the seedlings, which then lose the water race against established grass."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does grass seed take to germinate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perennial ryegrass is the sprinter at 5 to 10 days, tall fescue takes 7 to 12, fine fescue 7 to 14, and Kentucky bluegrass is the slow one at 14 to 30 days. Bermudagrass needs warm soil and shows in 10 to 30 days. Keep the top inch of soil damp with short, light waterings two or three times a day until the seedlings are up."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Grass Seed Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Grass Seed Calculator</span></nav>
+  <section class="hero">
+    <h1>Grass Seed Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Sow too little and weeds move in; sow too much and the seedlings smother each other.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="unit" data-i18n="tool.unit.label">Measurement units</label>
+        <select id="unit">
+          <option value="ft" data-i18n="tool.unit.ft">Feet</option>
+          <option value="m" data-i18n="tool.unit.m">Metres</option>
+        </select>
+      </div>
+      <div>
+        <label for="mode" data-i18n="tool.mode.label">Area input</label>
+        <select id="mode">
+          <option value="dims" data-i18n="tool.mode.dims">Length x width</option>
+          <option value="direct" data-i18n="tool.mode.direct">Total area</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row" id="dims-row">
+      <div>
+        <label for="len" data-i18n="tool.len.label">Length</label>
+        <input type="number" id="len" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="50">
+      </div>
+      <div>
+        <label for="wid" data-i18n="tool.wid.label">Width</label>
+        <input type="number" id="wid" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="40">
+      </div>
+    </div>
+
+    <div id="direct-row" hidden>
+      <label for="area" data-i18n="tool.area.label">Total lawn area</label>
+      <input type="number" id="area" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="2000">
+    </div>
+
+    <label for="project" data-i18n="tool.project.label">Project type</label>
+    <select id="project">
+      <option value="new" data-i18n="tool.project.new">New lawn or bare soil</option>
+      <option value="over" data-i18n="tool.project.over">Overseeding existing lawn (half rate)</option>
+    </select>
+
+    <label for="grass" data-i18n="tool.grass.label">Grass type</label>
+    <select id="grass">
+      <option value="tf" selected data-i18n="tool.grass.tf">Tall fescue — 8 lb / 1,000 sq ft</option>
+      <option value="kbg" data-i18n="tool.grass.kbg">Kentucky bluegrass — 3 lb / 1,000 sq ft</option>
+      <option value="prg" data-i18n="tool.grass.prg">Perennial ryegrass — 7 lb / 1,000 sq ft</option>
+      <option value="ff" data-i18n="tool.grass.ff">Fine fescue — 5 lb / 1,000 sq ft</option>
+      <option value="ber" data-i18n="tool.grass.ber">Bermudagrass, hulled — 1.5 lb / 1,000 sq ft</option>
+      <option value="zoy" data-i18n="tool.grass.zoy">Zoysia — 2 lb / 1,000 sq ft</option>
+      <option value="custom" data-i18n="tool.grass.custom">Custom rate — enter your own</option>
+    </select>
+
+    <div id="rate-row" hidden>
+      <label for="rate" data-i18n="tool.rate.label">Your seeding rate (lb per 1,000 sq ft)</label>
+      <input type="number" id="rate" inputmode="decimal" min="0.1" max="50" step="any" autocomplete="off" placeholder="6">
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate seed</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.seed">Grass seed needed</div>
+          <div class="rc-val" id="r-seed">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.area">Lawn area</div><div class="rc-val" id="r-area">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.rate">Seeding rate</div><div class="rc-val" id="r-rate">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.bags">Suggested bags</div><div class="rc-val" id="r-bags">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.covers">Those bags cover</div><div class="rc-val" id="r-covers">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.extra" style="margin-top:12px;">Bag sizes assume 3, 7 and 20 lb boxes. Buy about 10% extra for edges, thin patches and hungry birds.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How much grass seed do I actually need?</h2>
+    <p>Every seeding rate you see on a bag is quoted the same way: pounds of seed per 1,000 square feet. So the whole job is two steps. Measure the lawn, then multiply. The calculator above does the arithmetic, but it is worth seeing it once by hand so you can sanity-check the number on the bag in the shop.</p>
+    <p>The formula is: pounds of seed = (lawn area in sq ft ÷ 1,000) × seeding rate. For overseeding an existing lawn you halve the result, because you are filling gaps rather than covering bare soil.</p>
+
+    <h3>Worked example: a 2,000 sq ft tall fescue lawn</h3>
+    <p>Say the back garden measures 50 ft by 40 ft, which is 2,000 sq ft. Tall fescue is sown at 8 lb per 1,000 sq ft for a new lawn. That gives 2,000 ÷ 1,000 = 2, and 2 × 8 = 16 lb of seed. In shop terms that is two 7 lb boxes plus a 3 lb box (17 lb), or a single 20 lb bag if you would rather have spare for touch-ups next spring.</p>
+    <p>Now overseed the same lawn instead: 16 ÷ 2 = 8 lb. If you switched the species to Kentucky bluegrass at 3 lb per 1,000 sq ft, a new lawn would need only 6 lb, and overseeding just 3 lb. Same patch of grass, a five-fold difference in seed — which is why picking the right species in the dropdown matters more than measuring to the inch.</p>
+
+    <h3>Typical seeding rates</h3>
+    <table>
+      <thead><tr><th>Grass</th><th>New lawn (lb / 1,000 sq ft)</th><th>Overseeding</th><th>Season</th></tr></thead>
+      <tbody>
+        <tr><td>Kentucky bluegrass</td><td>3</td><td>1.5</td><td>Cool</td></tr>
+        <tr><td>Tall fescue</td><td>8</td><td>4</td><td>Cool</td></tr>
+        <tr><td>Perennial ryegrass</td><td>7</td><td>3.5</td><td>Cool</td></tr>
+        <tr><td>Fine fescue</td><td>5</td><td>2.5</td><td>Cool</td></tr>
+        <tr><td>Bermudagrass (hulled)</td><td>1.5</td><td>0.75</td><td>Warm</td></tr>
+        <tr><td>Zoysia</td><td>2</td><td>1</td><td>Warm</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Cool-season versus warm-season grass</h3>
+    <p>The species list splits along a line that runs roughly through Tennessee and Oklahoma in the US. North of it, and across all of the UK and Ireland, cool-season grasses dominate: tall fescue, Kentucky bluegrass, perennial ryegrass and the fine fescues. They grow hardest in spring and autumn and sulk in mid-summer heat. South of that line, bermudagrass and zoysia take over — they love heat, go dormant and brown after frost, and are usually sown in late spring once soil temperatures hold above 65-70°F.</p>
+    <p>The transition zone in between is the awkward middle, and most people there hedge with tall fescue, which tolerates both ends better than anything else. That is why tall fescue is the default selection in this tool.</p>
+
+    <h3>Seedbed preparation, in order</h3>
+    <p>Seed lying on hard ground is bird food. Before you spread anything: mow the existing grass short, at 1 to 1.5 inches, and bag the clippings. Rake or dethatch until you can see soil between the plants — seed needs soil contact, not thatch contact. Core aerate if the ground is compacted, which for most family lawns it is. Level any hollows with a thin topdressing of screened soil or compost, no more than half an inch at a time.</p>
+    <p>Spread half your seed walking north-south and the other half east-west. A single pass always leaves stripes. Set a broadcast spreader to roughly half the rate the bag suggests and do two passes rather than one heavy one. Finish by raking very lightly so seed settles into the top quarter-inch, and roll or tread it down if the surface is loose.</p>
+
+    <h3>Watering: the part people get wrong</h3>
+    <p>Germinating seed dies within hours of drying out. For the first two weeks water lightly two or three times a day, just enough to keep the top inch damp — not soaked, which floats seed into drifts. Once seedlings are up and mowed twice, switch to deep watering once or twice a week to push roots downward. Hold off nitrogen-heavy feeds until after the second mow; use a starter fertiliser high in phosphorus at seeding time instead, where local rules allow it.</p>
+
+    <h3>Limits of this calculator</h3>
+    <p>Rates here are mid-range figures used by seed suppliers in the US and UK. Your bag may state something different because of coating (coated seed weighs more per viable seed), a mixture rather than a single species, or a supplier who assumes irrigation. When the bag disagrees with this tool, follow the bag. Also add 5-10% if your lawn is an irregular shape and you measured a bounding rectangle, or if birds are a known problem and you are not covering the seed with a thin mulch.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nrcs.usda.gov/" target="_blank" rel="noopener">USDA Natural Resources Conservation Service — seeding rates, soil preparation and turf establishment guidance</a></li>
+      <li><a href="https://www.epa.gov/watersense" target="_blank" rel="noopener">US EPA WaterSense — efficient landscape watering practices for new and established lawns</a></li>
+      <li><a href="https://www.weather.gov/" target="_blank" rel="noopener">NOAA National Weather Service — local frost dates and soil-warming conditions that set the seeding window</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/gravel-calc/"><span class="related-ico" aria-hidden="true">🪨</span><span class="related-name">Gravel Calculator</span></a><a class="related-item" href="https://tool-hub.me/grout-calc/"><span class="related-ico" aria-hidden="true">🪣</span><span class="related-name">Grout Calculator</span></a><a class="related-item" href="https://tool-hub.me/heat-index-calc/"><span class="related-ico" aria-hidden="true">🥵</span><span class="related-name">Heat Index Calculator</span></a><a class="related-item" href="https://tool-hub.me/insulation-calc/"><span class="related-ico" aria-hidden="true">🧤</span><span class="related-name">Insulation Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why do seeding rates differ between grass types?</summary><p data-i18n="faq.a1">The rate is really about seed count, not weight. Kentucky bluegrass packs roughly 2 million tiny seeds per pound, so 3 lb per 1,000 sq ft is plenty, while tall fescue has about 230,000 much larger seeds per pound and needs 8 lb for the same ground cover. Hulled bermudagrass seed is smaller still, which is why 1 to 2 lb goes a long way.</p></details>
+    <details><summary data-i18n="faq.q2">When is the best time to plant grass seed?</summary><p data-i18n="faq.a2">Cool-season grasses — fescue, bluegrass and ryegrass — do best sown from late summer into early autumn, roughly mid-August to mid-October across most of the US and UK, when soil is still warm and weed pressure has dropped. Spring is the fallback, but crabgrass competes hard. Warm-season grasses such as bermudagrass and zoysia go down in late spring to early summer, once soil temperature holds above 65-70°F (18-21°C).</p></details>
+    <details><summary data-i18n="faq.q3">Why is the overseeding rate half the new lawn rate?</summary><p data-i18n="faq.a3">Overseeding drops seed into turf that already covers most of the soil, so you are only filling gaps rather than starting from bare ground. Half the new-lawn rate is the standard nursery recommendation and it is what this calculator applies. Going heavier wastes seed and crowds the seedlings, which then lose the water race against established grass.</p></details>
+    <details><summary data-i18n="faq.q4">How long does grass seed take to germinate?</summary><p data-i18n="faq.a4">Perennial ryegrass is the sprinter at 5 to 10 days, tall fescue takes 7 to 12, fine fescue 7 to 14, and Kentucky bluegrass is the slow one at 14 to 30 days. Bermudagrass needs warm soil and shows in 10 to 30 days. Keep the top inch of soil damp with short, light waterings two or three times a day until the seedlings are up.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

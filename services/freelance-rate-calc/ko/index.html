@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-ENqoWrrG2hST90axNdIGVDGte8TwZBYiz6O5+w5NT+E=' 'sha256-ru4XXkHUQXJdIl2/PmwzLwTTKNdSN3aC3U0ub/MwgDo=' 'sha256-V8l/zzxvJ80/n4HUOAmD/z9iMGSwTCYmoeN9nghMuaQ='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>프리랜서 단가 계산기 — 청구 시급 산출</title>
+<meta name="description" content="목표 소득, 사업 경비, 세금 적립률, 청구 가능 시간을 입력해 프리랜서가 실제로 받아야 할 시급과 일당을 계산합니다.">
+<meta name="keywords" content="freelance rate calculator, freelance hourly rate, how much to charge freelance, consulting rate calculator, freelance day rate, contractor rate calculator">
+<link rel="canonical" href="https://tool-hub.me/freelance-rate-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/freelance-rate-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/freelance-rate-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/freelance-rate-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/freelance-rate-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/freelance-rate-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/freelance-rate-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/freelance-rate-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/freelance-rate-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/freelance-rate-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/freelance-rate-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/freelance-rate-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/freelance-rate-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/freelance-rate-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/freelance-rate-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/freelance-rate-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="프리랜서 단가 계산기 — 청구 시급 산출">
+<meta property="og:description" content="목표 소득, 사업 경비, 세금 적립률, 청구 가능 시간을 입력해 프리랜서가 실제로 받아야 할 시급과 일당을 계산합니다.">
+<meta property="og:url" content="https://tool-hub.me/freelance-rate-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/freelance-rate-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Freelance Rate Calculator",
+  "description": "Work out the freelance hourly rate you need to charge: enter your target income, expenses, tax set-aside and billable hours to get hourly and day rates.",
+  "url": "https://tool-hub.me/freelance-rate-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Freelance Rate Calculator",
+      "item": "https://tool-hub.me/freelance-rate-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why is my freelance rate so much higher than my old salary hourly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "An employer paid your payroll taxes, health cover, pension, paid leave, software and idle hours between tasks. Freelancing moves all of that onto your invoice, and you only bill a fraction of the hours you work. A rough rule is that a freelance rate lands near double the salary-equivalent hourly, which is exactly what this calculator reconstructs from the ground up."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I charge hourly or price by the value of the project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hourly is honest while you are still learning how long work takes, and it protects you on open-ended jobs. Once you can predict the scope, value or fixed-fee pricing pays you for the result rather than for slow typing. Keep this hourly number anyway: it is the floor you check every fixed quote against before you say yes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I raise rates with clients I already have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Give 60 to 90 days of notice, name the new rate once and do not apologise for it. Grandfathering long-standing clients for one more project cycle is a fair compromise, and new enquiries go straight to the new number. Expect to lose your lowest-paying client and be relieved when you do."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tax percentage should I set aside?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "US sole traders usually start around 25 to 30%: self-employment tax is 15.3% on net earnings and federal plus state income tax sits on top. UK sole traders often use 25 to 30% for income tax plus Class 2 and 4 National Insurance. Treat any number here as a placeholder until an accountant sees your actual figures."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Freelance Rate Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#059669" href="https://tool-hub.me/financial-calculators/">Finance</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Freelance Rate Calculator</span></nav>
+  <section class="hero">
+    <h1>Freelance Rate Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Charge less than this and you are paying for the privilege of working for yourself.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .hint { font-size:12px; color:var(--muted); margin:4px 0 0; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .warn { color:#b45309; font-size:13px; font-weight:600; margin-top:10px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="income" data-i18n="tool.income.label">Desired annual income (take-home)</label>
+    <input type="text" id="income" inputmode="decimal" autocomplete="off" placeholder="80000">
+
+    <label for="expenses" data-i18n="tool.expenses.label">Annual business expenses</label>
+    <input type="text" id="expenses" inputmode="decimal" autocomplete="off" placeholder="8000">
+    <p class="hint" data-i18n="tool.expenses.hint">Software, insurance, gear, accounting, coworking.</p>
+
+    <label for="tax" data-i18n="tool.tax.label">Tax set-aside %</label>
+    <input type="number" id="tax" inputmode="decimal" min="0" max="90" step="any" autocomplete="off" placeholder="25">
+    <p class="hint" data-i18n="tool.tax.hint">Self-employment plus income tax — varies by country and bracket.</p>
+
+    <div class="field-row">
+      <div>
+        <label for="hours" data-i18n="tool.hours.label">Billable hours per week</label>
+        <input type="number" id="hours" inputmode="decimal" min="1" max="80" step="any" autocomplete="off" placeholder="25">
+        <p class="hint" data-i18n="tool.hours.hint">Admin and sales eat 30–50% of a 40-hour week.</p>
+      </div>
+      <div>
+        <label for="off" data-i18n="tool.off.label">Weeks off per year</label>
+        <input type="number" id="off" inputmode="numeric" min="0" max="51" step="any" autocomplete="off" placeholder="6">
+        <p class="hint" data-i18n="tool.off.hint">Holiday, sick days and dry spells between projects.</p>
+      </div>
+      <div>
+        <label for="hpd" data-i18n="tool.hpd.label">Hours per working day</label>
+        <input type="number" id="hpd" inputmode="decimal" min="1" max="24" step="any" autocomplete="off" placeholder="8">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate my rate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.hourly">Hourly rate to charge</div>
+          <div class="rc-val" id="r-hourly">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" id="r-day-label" data-i18n="tool.r.day">Day rate (8 hours)</div><div class="rc-val" id="r-day">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.retainer">Monthly retainer (160 h, 15% off)</div><div class="rc-val" id="r-retainer">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.gross">Gross revenue needed</div><div class="rc-val" id="r-gross">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.hours">Billable hours per year</div><div class="rc-val" id="r-hours">—</div></div>
+      </div>
+      <p class="warn" id="warn" hidden></p>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.est" style="margin-top:12px;">This is a floor, not a ceiling: the minimum rate that protects your income target. Value-based pricing can sit far above it.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How to work out what to charge as a freelancer</h2>
+    <p>Most people set their first freelance rate by taking their old salary, dividing by 2,080 hours, and adding a bit for luck. That number is always too low, because a salary was never the full cost of employing you and 2,080 hours were never billable. The honest way round is to start from the money you want to keep and work backwards through tax, overhead and the hours you can realistically invoice.</p>
+
+    <h3>The full chain on an 80,000 target</h3>
+    <p>Say you want 80,000 in your pocket, you spend 8,000 a year on software, insurance, a laptop refresh and an accountant, you set aside 25% for tax, you can bill 25 hours a week, and you take 6 weeks off.</p>
+    <p>Working weeks come to 52 − 6 = 46. Billable hours for the year are 46 × 25 = 1,150. Gross revenue has to cover income plus expenses before tax takes its cut, so (80,000 + 8,000) ÷ (1 − 0.25) = 117,333. Divide that by 1,150 billable hours and you get 102.03, which rounds up to a rate of <strong>103 per hour</strong>. A standard eight-hour day is 824, and a monthly retainer at 160 hours with a 15% commitment discount is about 14,008.</p>
+    <p>Compare that with the naive method: 80,000 ÷ 2,080 = 38.46. The gap between 38 and 103 is not greed. It is tax, overhead, unpaid holiday, and the two-thirds of your week that nobody pays you for.</p>
+
+    <h3>The unbillable-time reality</h3>
+    <p>Nobody bills 40 hours a week for long. Proposals, invoicing, chasing late payments, calls that generate no work, marketing, bookkeeping, learning, and the gaps between projects all consume real hours. Surveys of independent consultants regularly land between 40% and 60% utilisation. Running the same 80,000 target at 20 billable hours instead of 25 lifts the required rate from 103 to 128; at 30 hours it falls to 86. Your utilisation assumption moves the rate more than any other input, so be pessimistic on purpose. If you beat it, you have a buffer instead of a shortfall.</p>
+
+    <h3>A rate-raise playbook</h3>
+    <p>Rates decay. Costs rise, your work gets better, and the number you set two years ago quietly becomes a discount. Recalculate every year with your real expense total and real billable hours from your invoicing tool, not the optimistic version. When the number moves, give existing clients 60 to 90 days' notice in writing, state the new rate once, and skip the apology paragraph — it invites negotiation. Grandfathering a long-standing client for one more project cycle is a reasonable gesture; grandfathering them forever is a pay cut you administer yourself. New enquiries go straight to the new rate from the day you decide it, which is also the cheapest way to test whether the market accepts it.</p>
+
+    <h3>Retainers versus hourly</h3>
+    <p>A retainer trades rate for predictability. The 160-hour monthly figure above applies a 15% discount because guaranteed volume and guaranteed cash flow have genuine value to you: no re-selling every month, no gap weeks, no chasing three invoices instead of one. Two rules keep retainers from turning sour. Cap the hours in writing, so "always available" does not become unlimited, and set an expiry on unused hours (usually no rollover, or one month) so a quiet month does not create a debt you owe in a busy one. If a client wants priority access rather than a set number of hours, price the availability itself — that is a different product from discounted labour.</p>
+
+    <h3>Limitations worth knowing</h3>
+    <p>This calculator gives you a floor, not a market price. It cannot see what your competitors charge, what the client's budget looks like, or what the work is worth to their revenue. A project that saves a company 200,000 a year is not priced by your hours. It also assumes an even spread of work across the year, uses a flat tax percentage where real systems are progressive, and ignores VAT or sales tax, which you collect on top and remit rather than keep. In the US, self-employment tax alone is 15.3% of net earnings before any federal or state income tax; in the UK, income tax plus Class 2 and Class 4 National Insurance drives most sole traders to a similar set-aside. Use the number here to know when a quote is losing you money, then let an accountant fix the tax figure and let the market push the price up from there.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed" target="_blank" rel="noopener">IRS — self-employed tax obligations, estimated payments and deductible business expenses</a></li>
+      <li><a href="https://www.irs.gov/businesses/small-businesses-self-employed/self-employment-tax-social-security-and-medicare-taxes" target="_blank" rel="noopener">IRS — self-employment tax (Social Security and Medicare) rates and thresholds</a></li>
+      <li><a href="https://www.gov.uk/working-for-yourself" target="_blank" rel="noopener">GOV.UK — working for yourself: registration, records and National Insurance for sole traders</a></li>
+      <li><a href="https://www.bls.gov/" target="_blank" rel="noopener">U.S. Bureau of Labor Statistics — occupational earnings and hours data for benchmarking rates</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/gold-purity-calc/"><span class="related-ico" aria-hidden="true">🥇</span><span class="related-name">Gold Purity Calculator</span></a><a class="related-item" href="https://tool-hub.me/gratuity-calc/"><span class="related-ico" aria-hidden="true">🪙</span><span class="related-name">Gratuity Calculator</span></a><a class="related-item" href="https://tool-hub.me/gst-calc/"><span class="related-ico" aria-hidden="true">🧮</span><span class="related-name">GST Calculator</span></a><a class="related-item" href="https://tool-hub.me/home-affordability-calc/"><span class="related-ico" aria-hidden="true">🏡</span><span class="related-name">Home Affordability Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why is my freelance rate so much higher than my old salary hourly?</summary><p data-i18n="faq.a1">An employer paid your payroll taxes, health cover, pension, paid leave, software and idle hours between tasks. Freelancing moves all of that onto your invoice, and you only bill a fraction of the hours you work. A rough rule is that a freelance rate lands near double the salary-equivalent hourly, which is exactly what this calculator reconstructs from the ground up.</p></details>
+    <details><summary data-i18n="faq.q2">Should I charge hourly or price by the value of the project?</summary><p data-i18n="faq.a2">Hourly is honest while you are still learning how long work takes, and it protects you on open-ended jobs. Once you can predict the scope, value or fixed-fee pricing pays you for the result rather than for slow typing. Keep this hourly number anyway: it is the floor you check every fixed quote against before you say yes.</p></details>
+    <details><summary data-i18n="faq.q3">How do I raise rates with clients I already have?</summary><p data-i18n="faq.a3">Give 60 to 90 days of notice, name the new rate once and do not apologise for it. Grandfathering long-standing clients for one more project cycle is a fair compromise, and new enquiries go straight to the new number. Expect to lose your lowest-paying client and be relieved when you do.</p></details>
+    <details><summary data-i18n="faq.q4">What tax percentage should I set aside?</summary><p data-i18n="faq.a4">US sole traders usually start around 25 to 30%: self-employment tax is 15.3% on net earnings and federal plus state income tax sits on top. UK sole traders often use 25 to 30% for income tax plus Class 2 and 4 National Insurance. Treat any number here as a placeholder until an accountant sees your actual figures.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

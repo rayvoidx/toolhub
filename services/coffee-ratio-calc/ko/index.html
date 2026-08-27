@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-1LKbJ04djU4m0kH0R1N7Sel5+CGc6Xvz54Rw7oYesm8=' 'sha256-F+dvGdVZFgTvJwfVZbCSEdxn6SBjzbcU4KnQd2ZZTRA=' 'sha256-6OhfFibOS2MiNqq0GEjpZoN1utidawBtGl6erVpueSs='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>커피 물 비율 계산기 — 원두 몇 g이 맞을까</title>
+<meta name="description" content="핸드드립, 커피메이커, 프렌치프레스, 에어로프레스, 콜드브루, 에스프레소의 원두량과 물량을 계산합니다. 한쪽 무게만 넣으면 나머지가 나옵니다.">
+<meta name="keywords" content="coffee to water ratio, coffee ratio calculator, how much coffee per cup, pour over ratio, french press ratio, cold brew ratio, coffee grams per cup">
+<link rel="canonical" href="https://tool-hub.me/coffee-ratio-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/coffee-ratio-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/coffee-ratio-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/coffee-ratio-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/coffee-ratio-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/coffee-ratio-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/coffee-ratio-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/coffee-ratio-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/coffee-ratio-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/coffee-ratio-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/coffee-ratio-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/coffee-ratio-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/coffee-ratio-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/coffee-ratio-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/coffee-ratio-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/coffee-ratio-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="커피 물 비율 계산기 — 원두 몇 g이 맞을까">
+<meta property="og:description" content="핸드드립, 커피메이커, 프렌치프레스, 에어로프레스, 콜드브루, 에스프레소의 원두량과 물량을 계산합니다. 한쪽 무게만 넣으면 나머지가 나옵니다.">
+<meta property="og:url" content="https://tool-hub.me/coffee-ratio-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/coffee-ratio-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#78350f">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Coffee Ratio Calculator",
+  "description": "Work out how much coffee and water to use for pour over, drip, French press, AeroPress, cold brew or espresso. Enter one weight in grams, get the other.",
+  "url": "https://tool-hub.me/coffee-ratio-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Coffee to Water Ratio Calculator",
+      "item": "https://tool-hub.me/coffee-ratio-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why weigh coffee instead of using scoops?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ground coffee density swings by roast level and grind size, so one level tablespoon can be anywhere from 4.5 g to 7 g. That is a 50% dose error hiding inside a measurement that feels precise. A cheap 0.1 g kitchen scale is the single biggest upgrade most home brewers can make, because it turns a good cup into a repeatable one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does the golden ratio come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Specialty Coffee Association's golden cup standard describes a brew band of roughly 1:18 to 1:16.7 coffee to water, which is where the phrase golden ratio started. Most modern pour over recipes sit slightly stronger at 1:16, and immersion methods like French press go stronger again because the grounds are coarser and extraction is gentler. All of these are starting points, not rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the cold brew ratio the same as ready-to-drink?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The 1:8 figure here makes a concentrate, which is meant to be cut before serving. Dilute it about 1:1 with water, milk or ice for a normal-strength cup, which effectively lands you near 1:16. If you want to brew cold coffee you can drink straight from the jug, use 1:15 to 1:17 and expect a longer steep."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does grind size change the ratio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "They are two separate levers. The ratio sets strength — how much dissolved coffee ends up in the cup. Grind size, water temperature and contact time set extraction — how much of each ground particle you actually pull out. If your coffee tastes weak and also sour, grind finer rather than adding more coffee; if it tastes strong and bitter, coarsen the grind before you cut the dose."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Coffee Ratio Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Coffee to Water Ratio Calculator</span></nav>
+  <section class="hero">
+    <h1>Coffee Ratio Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter your water, get your coffee dose — or the other way round, for any brew method.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <label for="method" data-i18n="tool.method.label">Brew method</label>
+    <select id="method">
+      <option value="16" data-i18n="tool.method.pourover">Pour over — 1:16</option>
+      <option value="17" data-i18n="tool.method.drip">Drip machine — 1:17</option>
+      <option value="15" data-i18n="tool.method.french">French press — 1:15</option>
+      <option value="14" data-i18n="tool.method.aeropress">AeroPress — 1:14</option>
+      <option value="8" data-i18n="tool.method.coldbrew">Cold brew concentrate — 1:8</option>
+      <option value="2" data-i18n="tool.method.espresso">Espresso — 1:2</option>
+    </select>
+
+    <div class="field-row">
+      <div>
+        <label for="solve" data-i18n="tool.solve.label">What do you want to know?</label>
+        <select id="solve">
+          <option value="coffee" data-i18n="tool.solve.coffee">Coffee from water</option>
+          <option value="water" data-i18n="tool.solve.water">Water from coffee</option>
+        </select>
+      </div>
+      <div>
+        <label for="amount" id="amount-label" data-i18n="tool.amount.water">Water you are brewing (g / ml)</label>
+        <input type="number" id="amount" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="500">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="strength" data-i18n="tool.strength.label">Strength</label>
+        <select id="strength">
+          <option value="2" data-i18n="tool.strength.mild">Mild — weaker by 2 on the ratio</option>
+          <option value="0" selected data-i18n="tool.strength.standard">Standard — as stated</option>
+          <option value="-2" data-i18n="tool.strength.strong">Strong — stronger by 2 on the ratio</option>
+        </select>
+      </div>
+      <div>
+        <label for="custom" data-i18n="tool.custom.label">Custom ratio 1:x — optional, overrides the method</label>
+        <input type="number" id="custom" inputmode="decimal" min="1" max="30" step="any" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="cupml" data-i18n="tool.cup.label">Cup size (ml) — optional, default 240</label>
+        <input type="number" id="cupml" inputmode="decimal" min="30" max="2000" step="any" autocomplete="off" placeholder="240">
+      </div>
+      <div></div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" id="r-main-label" data-i18n="tool.r.coffee">Coffee needed</div>
+          <div class="rc-val" id="r-main">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.ratio">Ratio used</div><div class="rc-val" id="r-ratio">—</div></div>
+        <div class="rcard"><div class="rc-label" id="r-cups-label" data-i18n="tool.r.cups">Cups (240 ml)</div><div class="rc-val" id="r-cups">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.tbsp">Roughly, in tablespoons</div><div class="rc-val" id="r-tbsp">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Weights are grams; 1 ml of water weighs 1 g. A tablespoon of ground coffee is only about 5-6 g and varies with roast, so treat the spoon figure as a fallback, not the plan.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>How the coffee to water ratio actually works</h2>
+    <p>A brew ratio is one number: the weight of water divided by the weight of dry coffee. When a recipe says 1:16, it means 16 grams of water for every 1 gram of ground coffee. Everything else in this calculator is arithmetic on that single number, which is exactly why the ratio is the first thing to fix and the last thing to blame. Water is easy here because 1 millilitre of water weighs 1 gram, so a 500 ml kettle pour and 500 g on the scale are the same measurement.</p>
+
+    <h3>Worked example: 500 g of water, pour over</h3>
+    <p>Pick pour over at 1:16 and enter 500 for the water. The coffee dose is 500 divided by 16, which is 31.25 g, shown as 31.3 g. That water makes about 2.1 cups at the 240 ml US cup size, and the dose works out to roughly 5.7 level tablespoons if you have no scale. Push the strength selector to strong and the ratio becomes 1:14, lifting the dose to 35.7 g; choose mild and it drops to 1:18 and 27.8 g. Those two numbers, 27.8 and 35.7, bracket almost every reasonable filter coffee you will ever make with half a litre of water.</p>
+
+    <h3>Going the other way: you have 18 g of coffee</h3>
+    <p>Switch the second selector to water from coffee and enter 18. At 1:16 you need 288 g of water, which is a single large mug. This direction is the one to use when you buy pre-portioned beans, when you are finishing a bag, or when your grinder throws a fixed dose. It is also the honest way to plan a single cup: decide the dose you want to taste, then pour to match, rather than filling the mug first and hoping.</p>
+
+    <h2>The ratio ladder across methods</h2>
+    <p>Different brewers sit at different points on the ladder for physical reasons, not fashion. Percolation methods, where water passes through a bed and leaves, extract efficiently and can afford more water per gram. Immersion methods, where grounds sit in water for minutes, extract more gently and are usually pulled tighter. Espresso is a separate species: it uses a ratio around 1:2 and produces a concentrated liquid measured by what comes out, not what goes in.</p>
+    <table>
+      <thead><tr><th>Method</th><th>Typical ratio</th><th>Coffee for 500 g water</th></tr></thead>
+      <tbody>
+        <tr><td>Drip machine</td><td>1:17</td><td>29.4 g</td></tr>
+        <tr><td>Pour over (V60, Kalita)</td><td>1:16</td><td>31.3 g</td></tr>
+        <tr><td>French press</td><td>1:15</td><td>33.3 g</td></tr>
+        <tr><td>AeroPress</td><td>1:14</td><td>35.7 g</td></tr>
+        <tr><td>Cold brew concentrate</td><td>1:8</td><td>62.5 g</td></tr>
+        <tr><td>Espresso</td><td>1:2 (dose to liquid out)</td><td>not comparable</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Strength and extraction are different levers</h2>
+    <p>Strength is how much dissolved coffee ends up in the cup, and the ratio controls it directly. Extraction is what fraction of each ground particle you managed to dissolve, and it is controlled by grind size, water temperature, agitation and contact time. Confusing the two is the most common home brewing mistake. Coffee that tastes thin and sour is under-extracted, and adding more grounds makes it thicker but still sour; grinding finer or brewing hotter is the actual fix. Coffee that tastes harsh and bitter is over-extracted, and cutting the dose makes it weaker but still bitter; coarsening the grind is the fix. Change one lever at a time and taste after each change.</p>
+
+    <h2>Scaling up for a crowd</h2>
+    <p>Batch brewing is where the calculator earns its keep. A twelve-cup drip carafe at 240 ml per cup is 2,880 g of water, which at 1:17 needs 169.4 g of coffee — a number nobody guesses correctly with a scoop. A one litre French press at 1:15 wants 66.7 g. For cold brew, 1,000 g of water at 1:8 needs 125 g of coffee and produces a concentrate, so plan on diluting it about one to one before serving, which lands the finished drink near 1:16. When you scale past about a litre, expect to grind marginally coarser, because larger beds slow the flow and push extraction up.</p>
+
+    <h2>Limitations worth knowing</h2>
+    <p>Grounds keep some of the water. A wet coffee bed retains roughly two grams of liquid per gram of dry coffee, so a 500 g pour over yields around 435 ml in the carafe, not 500. The cups figure here is based on water in, so treat it as a planning number and add ten percent of water if you need an exact serving volume. Espresso is the other caveat: its 1:2 is a yield ratio measured on the liquid leaving the basket, so an 18 g dose targets 36 g in the cup, and the water figure this tool prints is a rough proxy rather than a brew instruction. Finally, every ratio here is a starting point calibrated for medium roasts and average grinders. Brew it, taste it, move one lever, and write down what worked.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.fda.gov/consumers/consumer-updates/spilling-beans-how-much-caffeine-too-much" target="_blank" rel="noopener">U.S. Food and Drug Administration — how much caffeine a typical cup of coffee contains and daily limits</a></li>
+      <li><a href="https://fdc.nal.usda.gov/" target="_blank" rel="noopener">USDA FoodData Central — reference composition data for brewed coffee</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — mass and volume measurement standards behind gram-based dosing</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/commute-cost-calc/"><span class="related-ico" aria-hidden="true">🚉</span><span class="related-name">Commute Cost Calculator</span></a><a class="related-item" href="https://tool-hub.me/concrete-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Concrete Calculator</span></a><a class="related-item" href="https://tool-hub.me/cooking-conv/"><span class="related-ico" aria-hidden="true">🥄</span><span class="related-name">Cups to Grams Converter</span></a><a class="related-item" href="https://tool-hub.me/decking-calc/"><span class="related-ico" aria-hidden="true">🏗️</span><span class="related-name">Decking Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Why weigh coffee instead of using scoops?</summary><p data-i18n="faq.a1">Ground coffee density swings by roast level and grind size, so one level tablespoon can be anywhere from 4.5 g to 7 g. That is a 50% dose error hiding inside a measurement that feels precise. A cheap 0.1 g kitchen scale is the single biggest upgrade most home brewers can make, because it turns a good cup into a repeatable one.</p></details>
+    <details><summary data-i18n="faq.q2">Where does the golden ratio come from?</summary><p data-i18n="faq.a2">The Specialty Coffee Association's golden cup standard describes a brew band of roughly 1:18 to 1:16.7 coffee to water, which is where the phrase golden ratio started. Most modern pour over recipes sit slightly stronger at 1:16, and immersion methods like French press go stronger again because the grounds are coarser and extraction is gentler. All of these are starting points, not rules.</p></details>
+    <details><summary data-i18n="faq.q3">Is the cold brew ratio the same as ready-to-drink?</summary><p data-i18n="faq.a3">No. The 1:8 figure here makes a concentrate, which is meant to be cut before serving. Dilute it about 1:1 with water, milk or ice for a normal-strength cup, which effectively lands you near 1:16. If you want to brew cold coffee you can drink straight from the jug, use 1:15 to 1:17 and expect a longer steep.</p></details>
+    <details><summary data-i18n="faq.q4">Does grind size change the ratio?</summary><p data-i18n="faq.a4">They are two separate levers. The ratio sets strength — how much dissolved coffee ends up in the cup. Grind size, water temperature and contact time set extraction — how much of each ground particle you actually pull out. If your coffee tastes weak and also sour, grind finer rather than adding more coffee; if it tastes strong and bitter, coarsen the grind before you cut the dose.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

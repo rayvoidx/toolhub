@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-fj2aU/O0JXSY/QDqmnpIIABEoTvCvt1GKcSr9S609b4=' 'sha256-OI9iH/0KDSnEUEUeTgDMjFs167oNAYNLoIJbmCukt94=' 'sha256-xzgMo+rzZf6A6W7nxCuMlkmZLf/vtxsgNFXCMOkfF9g='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>중복 줄 제거 — 목록 중복 온라인 정리, 무료</title>
+<meta name="description" content="목록을 붙여넣으면 각 항목이 처음 등장한 줄만 남기고 중복 줄을 제거합니다. 대소문자 무시, 공백 trim, 정렬, 중복만 보기 옵션 제공. 무료이며 모든 처리는 브라우저에서 이뤄집니다.">
+<meta name="keywords" content="remove duplicate lines, duplicate line remover, remove duplicates from list, dedupe text, unique lines, 중복 줄 제거">
+<link rel="canonical" href="https://tool-hub.me/remove-duplicate-lines/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/remove-duplicate-lines/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/remove-duplicate-lines/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/remove-duplicate-lines/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/remove-duplicate-lines/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/remove-duplicate-lines/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/remove-duplicate-lines/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/remove-duplicate-lines/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/remove-duplicate-lines/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/remove-duplicate-lines/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/remove-duplicate-lines/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/remove-duplicate-lines/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/remove-duplicate-lines/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/remove-duplicate-lines/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/remove-duplicate-lines/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/remove-duplicate-lines/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="중복 줄 제거 — 목록 중복 온라인 정리, 무료">
+<meta property="og:description" content="목록을 붙여넣으면 각 항목이 처음 등장한 줄만 남기고 중복 줄을 제거합니다. 대소문자 무시, 공백 trim, 정렬, 중복만 보기 옵션 제공. 무료이며 모든 처리는 브라우저에서 이뤄집니다.">
+<meta property="og:url" content="https://tool-hub.me/remove-duplicate-lines/ko/">
+<meta property="og:image" content="https://tool-hub.me/remove-duplicate-lines/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#15803d">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Remove Duplicate Lines",
+  "description": "Paste a list to remove duplicate lines, keeping the first occurrence of each. Case-insensitive, trim, sort, and duplicates-only options. Free, all in your browser.",
+  "url": "https://tool-hub.me/remove-duplicate-lines/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Remove Duplicate Lines", "item": "https://tool-hub.me/remove-duplicate-lines/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I remove duplicate lines from a list while keeping the first occurrence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste your list into the box, one item per line, and click \"Remove duplicates.\" The tool scans top to bottom and keeps the first time each line appears, deleting every later repeat — so the surviving lines stay in their original order instead of being resorted. This is the standard behavior for cleaning email lists, keyword lists, or log lines where the first entry usually matters most. Turn on \"Also sort the output alphabetically\" afterward if you want the cleaned list ordered too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between case-sensitive and case-insensitive duplicate removal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With \"Case-insensitive\" on, \"Apple\", \"apple\" and \"APPLE\" are treated as the same line, so only the first one you pasted survives and the rest are removed as duplicates. With it off, capitalization matters, so \"Apple\" and \"apple\" are kept as two separate, distinct lines even though a human reader would call them the same word. Turn case-insensitive matching on for names, emails, and everyday word lists, and leave it off for anything where capitalization is meaningful, like code identifiers or product SKUs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does trimming whitespace affect which lines count as duplicates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pasted lists — especially from spreadsheets or emails — often carry invisible leading or trailing spaces, so \"banana\" and \"banana \" look identical but are technically different strings. Turning on \"Trim whitespace before comparing\" strips leading and trailing spaces before checking for matches, so those two lines are correctly recognized as duplicates. The trimming only affects the comparison — your original line text in the result is left exactly as you pasted it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I see only the lines that were duplicates, instead of the deduplicated list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Turn on \"Show only the duplicate lines\" to flip the output from the cleaned, unique list to a report of just the values that appeared more than once — each one listed a single time. This is useful when you want to audit what was repeated in a list, like finding which email addresses or SKUs show up twice, rather than just getting a cleaned copy. The unique-count and removed-count stats above the result stay accurate either way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my pasted list uploaded to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This tool runs entirely in your browser using plain JavaScript — the list you paste, the options you choose, and the result are never sent to a server or logged anywhere. Your last input and settings are optionally kept in this browser's local storage only, so they're still there next time you open the tool; clearing your browser data removes them. There's no sign-up, no upload, and no size limit beyond what your own device can comfortably handle."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Remove Duplicate Lines</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Remove Duplicate Lines</span></nav>
+  <section class="hero">
+    <h1>Remove Duplicate Lines</h1>
+    <p class="lede" data-i18n="hero.lede">Paste your list below — duplicate lines disappear instantly, keeping the first occurrence of each one.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Remove duplicate lines tool" data-i18n-aria-label="tool.aria">
+    <style>
+      /* 도구 전용 스타일 — #tool 스코프 한정. 셸 style.css 공통부는 수정하지 않는다. */
+      #tool textarea#rdl-input, #tool textarea#rdl-output {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-size: 13.5px; line-height: 1.6; resize: vertical;
+      }
+      #tool .rdl-count { margin: 6px 2px 0; font-size: 12.5px; color: var(--muted); min-height: 1.4em; }
+      #tool .rdl-opts { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
+      #tool .rdl-check { display: flex; align-items: center; gap: 9px; cursor: pointer; margin: 0; font-weight: 600; font-size: 14.5px; }
+      #tool .rdl-check input { width: auto; flex: 0 0 auto; margin: 0; }
+      #tool .rdl-btnrow { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+      #tool .rdl-btnrow .btn { margin-top: 0; padding: 11px 20px; }
+      #tool .btn.rdl-ghost { background: none; border: 1px solid var(--line); color: var(--ink); }
+      #tool .btn.rdl-ghost:hover { border-color: var(--accent); background: none; }
+      #tool .rdl-msg { margin: 0; color: var(--muted); }
+      #tool .rdl-stats { margin: 0 0 12px; font-size: 14px; font-weight: 700; color: var(--accent-strong); }
+      [data-theme="dark"] #tool .rdl-stats, [data-theme="auto"] #tool .rdl-stats { color: var(--accent); }
+      #tool .rdl-hint { margin: 10px 0 0; font-size: 12.5px; color: var(--muted); text-align: center; }
+      #tool label.rdl-out-label { margin-top: 0; }
+      @media (max-width: 420px) {
+        #tool .rdl-btnrow { gap: 8px; }
+        #tool .rdl-btnrow .btn { flex: 1 1 auto; text-align: center; }
+      }
+    </style>
+
+    <label for="rdl-input" data-i18n="tool.input.label">Lines to deduplicate</label>
+    <textarea id="rdl-input" rows="9" spellcheck="false" autocomplete="off" dir="auto"
+      placeholder="Paste one item per line…" data-i18n-placeholder="tool.input.ph"></textarea>
+    <p class="rdl-count" id="rdl-input-count"></p>
+
+    <div class="rdl-opts">
+      <label class="rdl-check" for="rdl-case"><input type="checkbox" id="rdl-case"><span data-i18n="tool.opt.case">Case-insensitive (Apple = apple)</span></label>
+      <label class="rdl-check" for="rdl-trim"><input type="checkbox" id="rdl-trim"><span data-i18n="tool.opt.trim">Trim whitespace before comparing</span></label>
+      <label class="rdl-check" for="rdl-sort"><input type="checkbox" id="rdl-sort"><span data-i18n="tool.opt.sort">Also sort the output alphabetically</span></label>
+      <label class="rdl-check" for="rdl-blank"><input type="checkbox" id="rdl-blank"><span data-i18n="tool.opt.blank">Remove empty lines</span></label>
+      <label class="rdl-check" for="rdl-onlydups"><input type="checkbox" id="rdl-onlydups"><span data-i18n="tool.opt.onlydups">Show only the duplicate lines</span></label>
+      <label class="rdl-check" for="rdl-counts"><input type="checkbox" id="rdl-counts"><span data-i18n="tool.opt.counts">Add occurrence count to each line (duplicates-only view)</span></label>
+    </div>
+
+    <div class="rdl-btnrow">
+      <button type="button" class="btn" id="rdl-run" data-i18n="tool.run">Remove duplicates</button>
+      <button type="button" class="btn rdl-ghost" id="rdl-sample" data-i18n="tool.sample">Load sample</button>
+      <button type="button" class="btn rdl-ghost" id="rdl-clear" data-i18n="tool.clear">Clear</button>
+    </div>
+
+    <div class="result" id="rdl-result" aria-live="polite">
+      <p class="rdl-msg" id="rdl-msg-empty" data-i18n="tool.placeholder">Paste a list above to remove duplicate lines.</p>
+      <p class="rdl-msg" id="rdl-msg-nodups" hidden></p>
+      <div id="rdl-out-wrap" hidden>
+        <p class="rdl-stats" id="rdl-stats"></p>
+        <label class="rdl-out-label" for="rdl-output" data-i18n="tool.output.label">Result</label>
+        <textarea id="rdl-output" rows="9" readonly spellcheck="false" dir="auto"></textarea>
+        <div class="rdl-btnrow">
+          <button type="button" class="btn" id="rdl-copy" data-i18n="tool.copy">Copy result</button>
+          <button type="button" class="btn rdl-ghost" id="rdl-use" data-i18n="tool.useAsInput">Use as input</button>
+        </div>
+        <p class="rdl-hint" id="rdl-copy-hint" hidden></p>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+      .guide-content code{background:color-mix(in srgb,var(--accent) 10%,var(--surface));padding:1px 6px;border-radius:5px;font-size:0.92em}
+    </style>
+
+    <h2>Cleaning a list without opening a spreadsheet</h2>
+    <p>Mailing lists, keyword exports, log files and copy-pasted spreadsheet columns almost always end up with repeated entries. Scrolling through by eye to find and delete them is slow and error-prone, and a spreadsheet's own dedupe feature usually forces you to load the whole file just to fix a short list. This tool takes whatever you paste, one item per line, and removes every repeat while keeping the very first time each line appeared — instantly, entirely inside the browser tab, with nothing uploaded.</p>
+
+    <h2>How duplicate detection works</h2>
+    <p>By default, two lines count as duplicates only if they match exactly, character for character. Three options change how "the same" is decided, and they can be combined:</p>
+    <ul>
+      <li><strong>Case-insensitive</strong> treats <code>Apple</code>, <code>apple</code> and <code>APPLE</code> as one value — only the first spelling you pasted is kept.</li>
+      <li><strong>Trim whitespace before comparing</strong> ignores leading and trailing spaces, so <code>banana</code> and <code>banana&nbsp;</code> (with a trailing space from a copy-paste) are recognized as duplicates — the visible text of the surviving line is left exactly as pasted.</li>
+      <li><strong>Also sort the output alphabetically</strong> re-orders the cleaned list A→Z once duplicates are gone, instead of preserving the order lines first appeared in.</li>
+    </ul>
+    <p>Turning on <strong>Show only the duplicate lines</strong> flips the result: instead of the cleaned list, you get a short report of just the values that showed up more than once, each listed a single time — handy for auditing what was repeated rather than only getting a cleaned copy.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — exact duplicates.</strong> Input: <code>apple, banana, apple, cherry, banana</code>. With every option off, the result is <code>apple, banana, cherry</code> — 3 unique lines, 2 duplicates removed.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — case and whitespace variants.</strong> Input: <code>Apple, apple, APPLE&nbsp;</code> (one has a trailing space). With every option off, all three survive as distinct lines. Turn on both <em>Case-insensitive</em> and <em>Trim whitespace</em> and they collapse to a single <code>Apple</code> — 1 unique line, 2 duplicates removed.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — duplicates-only view.</strong> Input: a 200-line email export where 12 addresses each appear twice. Turning on <em>Show only the duplicate lines</em> outputs just those 12 addresses — one line each — instead of the full 188-line cleaned list, so you can see at a glance exactly what was repeated.</p>
+    </div>
+
+    <h3>Common use cases</h3>
+    <table>
+      <thead><tr><th>Task</th><th>Recommended options</th></tr></thead>
+      <tbody>
+        <tr><td>Clean a mailing or contact list</td><td>Case-insensitive + Trim whitespace</td></tr>
+        <tr><td>Deduplicate keyword research exports</td><td>Case-insensitive</td></tr>
+        <tr><td>Find which values repeat in a large list</td><td>Show only the duplicate lines</td></tr>
+        <tr><td>Deduplicate case-sensitive identifiers (codes, SKUs)</td><td>Leave case-insensitive off</td></tr>
+        <tr><td>Produce a clean, alphabetized reference list</td><td>Also sort the output alphabetically</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Things to know</h3>
+    <ul>
+      <li>The cleaned list preserves the original order lines appeared in — the tool removes repeats, it doesn't shuffle anything, unless you turn sorting on.</li>
+      <li>Blank lines are treated like any other line: several blank lines in a row collapse into the one that appeared first, same as any other repeated value.</li>
+      <li>Comparison options only affect which lines are treated as matches — the text of every surviving line is kept exactly as you pasted it, never altered.</li>
+      <li>Everything runs locally in plain JavaScript; nothing you paste is uploaded, logged, or sent to a server.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set" target="_blank" rel="noopener">MDN Web Docs — Set, the JavaScript structure used to detect duplicate values</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize" target="_blank" rel="noopener">MDN Web Docs — String.normalize(), why visually identical text can compare as different</a></li>
+      <li><a href="https://www.unicode.org/reports/tr15/" target="_blank" rel="noopener">Unicode Consortium — UAX #15 Normalization Forms, the standard behind text equivalence</a></li>
+      <li><a href="https://www.w3.org/International/questions/qa-casefolding" target="_blank" rel="noopener">W3C Internationalization — case folding and the limits of case-insensitive matching</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/remove-line-breaks/"><span class="related-ico" aria-hidden="true">↩️</span><span class="related-name">Remove Line Breaks</span></a><a class="related-item" href="https://tool-hub.me/reverse-text/"><span class="related-ico" aria-hidden="true">🔁</span><span class="related-name">Reverse Text Generator</span></a><a class="related-item" href="https://tool-hub.me/sort-lines/"><span class="related-ico" aria-hidden="true">🔤</span><span class="related-name">Alphabetical Order Tool</span></a><a class="related-item" href="https://tool-hub.me/text-diff/"><span class="related-ico" aria-hidden="true">🔍</span><span class="related-name">Text Diff Checker</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I remove duplicate lines from a list while keeping the first occurrence?</summary>
+      <p data-i18n="faq.a1">Paste your list into the box, one item per line, and click "Remove duplicates." The tool scans top to bottom and keeps the first time each line appears, deleting every later repeat — so the surviving lines stay in their original order instead of being resorted. This is the standard behavior for cleaning email lists, keyword lists, or log lines where the first entry usually matters most. Turn on "Also sort the output alphabetically" afterward if you want the cleaned list ordered too.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between case-sensitive and case-insensitive duplicate removal?</summary>
+      <p data-i18n="faq.a2">With "Case-insensitive" on, "Apple", "apple" and "APPLE" are treated as the same line, so only the first one you pasted survives and the rest are removed as duplicates. With it off, capitalization matters, so "Apple" and "apple" are kept as two separate, distinct lines even though a human reader would call them the same word. Turn case-insensitive matching on for names, emails, and everyday word lists, and leave it off for anything where capitalization is meaningful, like code identifiers or product SKUs.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">Does trimming whitespace affect which lines count as duplicates?</summary>
+      <p data-i18n="faq.a3">Yes. Pasted lists — especially from spreadsheets or emails — often carry invisible leading or trailing spaces, so "banana" and "banana " look identical but are technically different strings. Turning on "Trim whitespace before comparing" strips leading and trailing spaces before checking for matches, so those two lines are correctly recognized as duplicates. The trimming only affects the comparison — your original line text in the result is left exactly as you pasted it.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can I see only the lines that were duplicates, instead of the deduplicated list?</summary>
+      <p data-i18n="faq.a4">Yes. Turn on "Show only the duplicate lines" to flip the output from the cleaned, unique list to a report of just the values that appeared more than once — each one listed a single time. This is useful when you want to audit what was repeated in a list, like finding which email addresses or SKUs show up twice, rather than just getting a cleaned copy. The unique-count and removed-count stats above the result stay accurate either way.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my pasted list uploaded to a server?</summary>
+      <p data-i18n="faq.a5">No. This tool runs entirely in your browser using plain JavaScript — the list you paste, the options you choose, and the result are never sent to a server or logged anywhere. Your last input and settings are optionally kept in this browser's local storage only, so they're still there next time you open the tool; clearing your browser data removes them. There's no sign-up, no upload, and no size limit beyond what your own device can comfortably handle.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

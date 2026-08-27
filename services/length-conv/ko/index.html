@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-35BzlGb7fqKU/lOo5PYGDjeKpZ3MMXeazlcHyYKVA7k=' 'sha256-YOS6z0o7cAy7HNrksXYYUXbI+klo9bsK5kQUn0Yfax8=' 'sha256-/FuSS1D9yyiLIVICT9v+UX2Dxp3FFGi2jNzqMYsxXhs='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>길이 단위 변환기 — cm↔인치, 피트↔미터, 마일↔km</title>
+<meta name="description" content="무료 온라인 길이 단위 변환기. 숫자 하나만 입력하면 밀리미터·센티미터·미터·킬로미터·인치·피트·야드·마일로 즉시 환산 — 모두 브라우저 안에서 처리됩니다.">
+<meta name="keywords" content="length converter, cm to inches, inches to cm, feet to meters, miles to km, 길이 단위 변환, 인치 cm 변환">
+<link rel="canonical" href="https://tool-hub.me/length-conv/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/length-conv/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/length-conv/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/length-conv/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/length-conv/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/length-conv/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/length-conv/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/length-conv/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/length-conv/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/length-conv/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/length-conv/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/length-conv/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/length-conv/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/length-conv/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/length-conv/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/length-conv/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="길이 단위 변환기 — cm↔인치, 피트↔미터, 마일↔km">
+<meta property="og:description" content="무료 온라인 길이 단위 변환기. 숫자 하나만 입력하면 밀리미터·센티미터·미터·킬로미터·인치·피트·야드·마일로 즉시 환산 — 모두 브라우저 안에서 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/length-conv/ko/">
+<meta property="og:image" content="https://tool-hub.me/length-conv/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0d9488">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Length Converter",
+  "description": "Free online length converter. Type one number and instantly see it in millimeters, centimeters, meters, kilometers, inches, feet, yards and miles — all in your browser.",
+  "url": "https://tool-hub.me/length-conv/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-13",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Length Converter",
+      "item": "https://tool-hub.me/length-conv/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many centimeters are in an inch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Exactly 2.54. One inch equals 2.54 centimeters — an exact value fixed by the 1959 international yard and pound agreement, not a rounded approximation. So 10 in = 25.4 cm and 12 in (1 foot) = 30.48 cm. To convert cm to inches, divide the centimeters by 2.54."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the feet, yards and miles to meters conversion factors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "1 foot = 0.3048 m, 1 yard = 0.9144 m, and 1 mile = 1609.344 m (1.609344 km). These all follow from the inch: a foot is 12 inches, a yard is 3 feet, and a mile is 1760 yards. This converter uses these exact factors, so 5 miles = 8.04672 km and 100 m ≈ 328.08 ft."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How precise are the results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every conversion keeps up to 10 significant figures, then trailing zeros are trimmed for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values come from the exact metric definition of each unit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my input sent to a server?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This length converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example inches → centimeters), kept in your browser's local storage so it is ready next time. The value itself is not stored."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I convert weight, temperature and other units?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This tool focuses on length. For other conversions — weight, temperature, area, volume, speed and data size — visit the Toolhub home, where the matching converters live alongside this one, all free and ad-light."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Length Converter</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#d97706" href="https://tool-hub.me/unit-converters/">Units</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Length Converter</span></nav>
+  <section class="hero">
+    <h1>Length Converter</h1>
+    <p class="lede" data-i18n="hero.lede">Type a number once — see it in all 8 length units instantly.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      /* 도구 전용 스킨 — TOOL 영역 한정 (공통 style.css 는 건드리지 않음) */
+      .lc-row { display: flex; gap: 10px; align-items: flex-end; }
+      .lc-row > div { flex: 1 1 0; min-width: 0; }
+      .lc-swap { flex: 0 0 auto; width: 46px; height: 46px; font-size: 18px; font-family: inherit; border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink); cursor: pointer; }
+      .lc-swap:hover { border-color: var(--accent); }
+      .tool-card label.lc-inline { margin-top: 0; }
+      .lc-result { margin-top: 22px; }
+      .lc-primary { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+      .lc-eq { font-size: clamp(20px, 5.4vw, 26px); font-weight: 800; color: var(--accent-strong); word-break: break-word; line-height: 1.3; }
+      [data-theme="dark"] .lc-eq { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .lc-eq { color: var(--accent); } }
+      .lc-copybtn { flex: 0 0 auto; padding: 8px 14px; font-size: 13.5px; font-weight: 700; font-family: inherit; border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--line)); border-radius: 8px; background: var(--surface); color: var(--accent-strong); cursor: pointer; }
+      .lc-copybtn:hover { border-color: var(--accent); }
+      [data-theme="dark"] .lc-copybtn { color: var(--accent); }
+      @media (prefers-color-scheme: dark) { [data-theme="auto"] .lc-copybtn { color: var(--accent); } }
+      .lc-note { margin: 8px 0 0; font-size: 13.5px; color: var(--muted); }
+      .lc-tablewrap { margin-top: 24px; }
+      .lc-tablewrap h2 { font-size: 15px; margin: 0 0 10px; letter-spacing: -0.01em; }
+      .lc-table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+      .lc-table th, .lc-table td { text-align: start; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+      .lc-table thead th { font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+      .lc-table td.lc-val { text-align: end; font-weight: 700; word-break: break-all; }
+      .lc-table tbody tr.lc-active { background: color-mix(in srgb, var(--accent) 9%, transparent); }
+    </style>
+
+    <div class="lc-row">
+      <div>
+        <label for="lc-value" data-i18n="tool.value.label">Value</label>
+        <input id="lc-value" type="number" inputmode="decimal" step="any" value="1" placeholder="e.g. 1" data-i18n-placeholder="tool.value.placeholder" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="lc-row">
+      <div>
+        <label for="lc-from" class="lc-inline" data-i18n="tool.from.label">From</label>
+        <select id="lc-from">
+          <option value="um" data-i18n="tool.unit.um">Micrometer (µm)</option>
+          <option value="mm" data-i18n="tool.unit.mm">Millimeter (mm)</option>
+          <option value="cm" data-i18n="tool.unit.cm">Centimeter (cm)</option>
+          <option value="m" data-i18n="tool.unit.m">Meter (m)</option>
+          <option value="km" data-i18n="tool.unit.km">Kilometer (km)</option>
+          <option value="in" selected data-i18n="tool.unit.in">Inch (in)</option>
+          <option value="ft" data-i18n="tool.unit.ft">Foot (ft)</option>
+          <option value="yd" data-i18n="tool.unit.yd">Yard (yd)</option>
+          <option value="mi" data-i18n="tool.unit.mi">Mile (mi)</option>
+          <option value="nmi" data-i18n="tool.unit.nmi">Nautical mile (nmi)</option>
+        </select>
+      </div>
+      <button type="button" class="lc-swap" id="lc-swap" aria-label="Swap units" data-i18n-aria-label="tool.swap" title="Swap units" data-i18n-title="tool.swap">⇄</button>
+      <div>
+        <label for="lc-to" class="lc-inline" data-i18n="tool.to.label">To</label>
+        <select id="lc-to">
+          <option value="um" data-i18n="tool.unit.um">Micrometer (µm)</option>
+          <option value="mm" data-i18n="tool.unit.mm">Millimeter (mm)</option>
+          <option value="cm" selected data-i18n="tool.unit.cm">Centimeter (cm)</option>
+          <option value="m" data-i18n="tool.unit.m">Meter (m)</option>
+          <option value="km" data-i18n="tool.unit.km">Kilometer (km)</option>
+          <option value="in" data-i18n="tool.unit.in">Inch (in)</option>
+          <option value="ft" data-i18n="tool.unit.ft">Foot (ft)</option>
+          <option value="yd" data-i18n="tool.unit.yd">Yard (yd)</option>
+          <option value="mi" data-i18n="tool.unit.mi">Mile (mi)</option>
+          <option value="nmi" data-i18n="tool.unit.nmi">Nautical mile (nmi)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="result lc-result">
+      <div class="lc-primary">
+        <span class="lc-eq" id="lc-eq">—</span>
+        <button type="button" class="lc-copybtn" id="lc-copy" data-i18n="tool.copy" hidden>Copy</button>
+      </div>
+      <p class="lc-note" id="lc-note" data-i18n="tool.result.placeholder">Enter a number to see it in every unit.</p>
+    </div>
+
+    <div class="lc-tablewrap">
+      <h2 data-i18n="tool.table.heading">All units at once</h2>
+      <table class="lc-table">
+        <thead>
+          <tr>
+            <th data-i18n="tool.table.col.unit">Unit</th>
+            <th class="lc-val" data-i18n="tool.table.col.value">Value</th>
+          </tr>
+        </thead>
+        <tbody id="lc-tbody">
+          <tr data-unit="um"><td data-i18n="tool.unit.um">Micrometer (µm)</td><td class="lc-val" id="cell-um">—</td></tr>
+          <tr data-unit="mm"><td data-i18n="tool.unit.mm">Millimeter (mm)</td><td class="lc-val" id="cell-mm">—</td></tr>
+          <tr data-unit="cm"><td data-i18n="tool.unit.cm">Centimeter (cm)</td><td class="lc-val" id="cell-cm">—</td></tr>
+          <tr data-unit="m"><td data-i18n="tool.unit.m">Meter (m)</td><td class="lc-val" id="cell-m">—</td></tr>
+          <tr data-unit="km"><td data-i18n="tool.unit.km">Kilometer (km)</td><td class="lc-val" id="cell-km">—</td></tr>
+          <tr data-unit="in"><td data-i18n="tool.unit.in">Inch (in)</td><td class="lc-val" id="cell-in">—</td></tr>
+          <tr data-unit="ft"><td data-i18n="tool.unit.ft">Foot (ft)</td><td class="lc-val" id="cell-ft">—</td></tr>
+          <tr data-unit="yd"><td data-i18n="tool.unit.yd">Yard (yd)</td><td class="lc-val" id="cell-yd">—</td></tr>
+          <tr data-unit="mi"><td data-i18n="tool.unit.mi">Mile (mi)</td><td class="lc-val" id="cell-mi">—</td></tr>
+          <tr data-unit="nmi"><td data-i18n="tool.unit.nmi">Nautical mile (nmi)</td><td class="lc-val" id="cell-nmi">—</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English in-depth guide (unique, no data-i18n). -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>One base unit, eight everyday units</h2>
+    <p>Length conversion is really a single idea applied repeatedly: express every unit in terms of one base unit — the metre — and any conversion becomes multiply-then-divide. This tool converts among eight units, four metric (mm, cm, m, km) and four imperial (inch, foot, yard, mile), and shows all of them at once so you can read across the whole scale from a single input.</p>
+    <p>The bridge between the two systems has been fixed by international agreement since 1959: one inch is defined as <strong>exactly 2.54 centimetres</strong>. Every other imperial-to-metric factor follows from that one definition, which is why the conversions here are exact rather than rounded approximations.</p>
+
+    <h2>The conversion factors</h2>
+    <p>Each unit's value in metres is shown below. To convert, multiply the input by its factor to get metres, then divide by the target unit's factor.</p>
+    <table>
+      <tr><th>Unit</th><th>Metres per unit</th></tr>
+      <tr><td>Millimetre (mm)</td><td>0.001</td></tr>
+      <tr><td>Centimetre (cm)</td><td>0.01</td></tr>
+      <tr><td>Metre (m)</td><td>1</td></tr>
+      <tr><td>Kilometre (km)</td><td>1000</td></tr>
+      <tr><td>Inch (in)</td><td>0.0254</td></tr>
+      <tr><td>Foot (ft)</td><td>0.3048</td></tr>
+      <tr><td>Yard (yd)</td><td>0.9144</td></tr>
+      <tr><td>Mile (mi)</td><td>1609.344</td></tr>
+    </table>
+
+    <h3>Worked example 1 — 175 cm to feet and inches</h3>
+    <div class="example">
+      <p>175 cm &times; 0.01 = 1.75 m. Divide by 0.0254 to get inches: 1.75 &divide; 0.0254 = 68.90 in. That is 5 ft (60 in) with 8.90 in left over, so <strong>175 cm &asymp; 5 ft 8.9 in</strong> — a handy check when a form asks for height in imperial units.</p>
+    </div>
+
+    <h3>Worked example 2 — a 10 km run in miles</h3>
+    <div class="example">
+      <p>10 km &times; 1000 = 10,000 m. Divide by 1609.344: 10,000 &divide; 1609.344 = <strong>6.214 miles</strong>. The reverse — a mile in kilometres — is 1609.344 &divide; 1000 = 1.609 km, the number worth memorising for race distances.</p>
+    </div>
+
+    <h3>Worked example 3 — 6 feet in centimetres</h3>
+    <div class="example">
+      <p>6 ft &times; 0.3048 = 1.8288 m, and 1.8288 &divide; 0.01 = <strong>182.88 cm</strong>. Because the inch is defined as exactly 2.54 cm, this is not an approximation — it is precise to the last digit.</p>
+    </div>
+
+    <h2>Precision and rounding</h2>
+    <ul>
+      <li>Conversions between metric units (mm &harr; cm &harr; m &harr; km) are just shifts of the decimal point, so they are always exact.</li>
+      <li>Imperial-to-metric results can carry long decimals; the tool rounds for display but keeps full precision internally, so chained conversions do not accumulate error.</li>
+      <li>The nautical mile (1852 m) and the US survey foot differ slightly from the units here and are used only in specialised navigation and land-survey contexts.</li>
+    </ul>
+
+    <h2>Where each unit shows up</h2>
+    <p>Knowing the natural scale of each unit makes conversions feel intuitive and helps you catch errors. Millimetres measure rainfall and machined parts; centimetres measure body height and paper sizes; metres measure rooms and swimming pools; kilometres measure travel and road signs. On the imperial side, inches measure screens and short lengths, feet measure height and ceilings, yards measure fabric and American-football fields, and miles measure road distance. When a result looks wrong, checking whether the unit suits the thing being measured usually exposes the mistake — a person who comes out as "1.75 mm" tall has clearly picked the wrong row, and should have chosen metres or centimetres instead.</p>
+
+    <h2>Related conversions</h2>
+    <p>This tool covers straight-line length only. Area (square metres, acres), volume (litres, gallons), weight, and temperature each follow different factors and belong to their own converters. For length, though, the eight units above cover virtually every everyday need — from a screen measured in inches to a road sign posted in kilometres.</p>
+  </section>
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures — official metric/customary unit conversion factors</a></li>
+      <li><a href="https://www.bipm.org/en/measurement-units" target="_blank" rel="noopener">BIPM — definitions of the SI base units, including the metre</a></li>
+      <li><a href="https://www.iso.org/" target="_blank" rel="noopener">ISO — international standards for quantities and units (ISO 80000 series)</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/oven-temp-conv/"><span class="related-ico" aria-hidden="true">🍞</span><span class="related-name">Oven Temperature Converter</span></a><a class="related-item" href="https://tool-hub.me/power-conv/"><span class="related-ico" aria-hidden="true">🔌</span><span class="related-name">Power Converter</span></a><a class="related-item" href="https://tool-hub.me/pressure-conv/"><span class="related-ico" aria-hidden="true">🔩</span><span class="related-name">Pressure Converter</span></a><a class="related-item" href="https://tool-hub.me/ring-size-conv/"><span class="related-ico" aria-hidden="true">💍</span><span class="related-name">Ring Size Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How many centimeters are in an inch?</summary>
+      <p data-i18n="faq.a1">Exactly 2.54. One inch equals 2.54 centimeters — an exact value fixed by the 1959 international yard and pound agreement, not a rounded approximation. So 10 in = 25.4 cm and 12 in (1 foot) = 30.48 cm. To convert cm to inches, divide the centimeters by 2.54.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What are the feet, yards and miles to meters conversion factors?</summary>
+      <p data-i18n="faq.a2">1 foot = 0.3048 m, 1 yard = 0.9144 m, and 1 mile = 1609.344 m (1.609344 km). These all follow from the inch: a foot is 12 inches, a yard is 3 feet, and a mile is 1760 yards. This converter uses these exact factors, so 5 miles = 8.04672 km and 100 m ≈ 328.08 ft.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How precise are the results?</summary>
+      <p data-i18n="faq.a3">Every conversion keeps up to 10 significant figures, then trailing zeros are trimmed for readability. Very large or very small numbers (roughly 1e15 and above, or below 1e-9) switch to scientific notation, so nothing is silently rounded away to zero. All values come from the exact metric definition of each unit.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Is my input sent to a server?</summary>
+      <p data-i18n="faq.a4">No. This length converter runs entirely in your browser — the number you type is never uploaded anywhere. The only thing saved is your last chosen unit pair (for example inches → centimeters), kept in your browser's local storage so it is ready next time. The value itself is not stored.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Where can I convert weight, temperature and other units?</summary>
+      <p data-i18n="faq.a5">This tool focuses on length. For other conversions — weight, temperature, area, volume, speed and data size — visit the Toolhub home, where the matching converters live alongside this one, all free and ad-light.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

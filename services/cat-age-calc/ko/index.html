@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-CxYPBQvhrXXueKpKSqWfqYO4rf12ZM6/2kgYGM88+jg=' 'sha256-pwpJWVc8qYkFgC7zUPzasfBp3Sb6UALrx8OOEtHcpao=' 'sha256-V6/bqylH7ar5w8jB+PSqnZrPCFeFVe5gYRknuLhhW3o='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>고양이 나이 계산기 — 냥이 나이를 사람 나이로 + 생애주기</title>
+<meta name="description" content="수의학 공식으로 고양이 나이를 사람 나이로 환산하고, 새끼묘부터 노령묘까지 생애주기를 확인하세요. 역변환 모드도 지원. 무료, 개인정보 보호, 브라우저에서 즉시 계산.">
+<meta name="keywords" content="cat age calculator, cat years to human years, how old is my cat, cat age chart, cat years, 고양이 나이 계산기">
+<link rel="canonical" href="https://tool-hub.me/cat-age-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/cat-age-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/cat-age-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/cat-age-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/cat-age-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/cat-age-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/cat-age-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/cat-age-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/cat-age-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/cat-age-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/cat-age-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/cat-age-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/cat-age-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/cat-age-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/cat-age-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/cat-age-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="고양이 나이 계산기 — 냥이 나이를 사람 나이로 + 생애주기">
+<meta property="og:description" content="수의학 공식으로 고양이 나이를 사람 나이로 환산하고, 새끼묘부터 노령묘까지 생애주기를 확인하세요. 역변환 모드도 지원. 무료, 개인정보 보호, 브라우저에서 즉시 계산.">
+<meta property="og:url" content="https://tool-hub.me/cat-age-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/cat-age-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#a21caf">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Cat Age Calculator",
+  "description": "Convert cat age to human years with the vet formula, see its life stage from kitten to geriatric, plus reverse mode. Free, private, instant in your browser.",
+  "url": "https://tool-hub.me/cat-age-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Cat Age Calculator", "item": "https://tool-hub.me/cat-age-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the formula to convert cat years to human years?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Vets use a step formula, not a flat multiplier: a cat's first year of life equals about 15 human years, the second year adds about 9 more (24 total), and every year after that adds about 4 human years. For example, a 5-year-old cat is 24 + (5−2)×4 = 36 in human years. This calculator applies the same formula continuously, so a 2.5-year-old cat gets a precise, in-between result instead of being rounded to the nearest whole year."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is 'one cat year equals seven human years' actually true?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — that old rule of thumb is a myth. Cats mature very quickly in their first two years and then age more slowly, so a flat 7-to-1 ratio badly underestimates a kitten's development and overestimates an older cat's age. A 1-year-old cat is closer to a 15-year-old human than a 7-year-old, and a 10-year-old cat is closer to 56 human years than 70. The vet-approved step formula used by this calculator reflects that real growth curve much more accurately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the six cat life stages, and when does my cat become a senior?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Veterinary feline life-stage guidelines group cats into six bands: kitten (0–6 months), junior (6 months–2 years), adult (3–6 years), mature (7–10 years), senior (11–14 years), and geriatric (15 years and up). Your cat is generally considered a senior once it turns 11, which is when many vets recommend more frequent checkups, bloodwork, and closer attention to weight, teeth, and joint health. This calculator labels the life stage automatically based on the age you enter."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does living indoors versus outdoors change how the age is calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — the age conversion formula is the same for every cat, since it is based on biological maturity, not lifestyle. The indoor/outdoor choice only changes the informational note shown with your result: indoor-only cats face far fewer risks from traffic, predators, and disease and typically live around 12–18 years, while cats with regular outdoor access face more of those risks and tend to have shorter average lifespans. Your cat's age in human years stays the same either way."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert the other way, from human age to cat age, and is my data private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — switch to the Human years to cat age mode, enter a human age, and the calculator runs the same formula in reverse to estimate the equivalent cat age. Your privacy is fully protected too: every calculation happens locally in your browser, nothing you type is uploaded or stored on a server, and this tool is for general educational information only, not a substitute for veterinary advice."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Cat Age Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Cat Age Calculator</span></nav>
+  <section class="hero">
+    <h1>Cat Age Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">How old is your cat in human years? Enter your cat's age (or reverse it from a human age) for an instant vet-formula conversion plus its life stage, from kitten to geriatric.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Cat age calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .mode-tabs{display:flex;gap:8px;margin-bottom:18px;flex-wrap:wrap}
+      #tool .mode-tab{flex:1 1 auto;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--muted);font-family:inherit;font-weight:700;font-size:13.5px;cursor:pointer;text-align:center;}
+      #tool .mode-tab[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff;}
+      #tool .age-row{display:flex;gap:8px;align-items:center;}
+      #tool .age-row input{flex:1 1 auto;min-width:0;}
+      #tool .age-row select{flex:0 0 auto;width:auto;}
+      #tool .lifestyle-group{display:flex;gap:10px;flex-wrap:wrap;margin-top:2px;}
+      #tool .lifestyle-opt{flex:1 1 160px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;font-size:14px;font-weight:600;}
+      #tool .lifestyle-opt input{width:auto;flex:0 0 auto;}
+      #tool .lifestyle-opt:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,var(--surface));}
+      #tool .result-hero{display:flex;flex-direction:column;gap:2px;padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);text-align:center;}
+      #tool .rh-label{font-size:13px;color:var(--muted);font-weight:600;}
+      #tool .rh-value{font-size:38px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums;line-height:1.15;}
+      #tool .rh-sub{font-size:13.5px;color:var(--muted);margin-top:4px;}
+      #tool .stage-badge{display:inline-flex;align-self:center;margin-top:14px;padding:8px 16px;border-radius:999px;background:color-mix(in srgb,var(--accent) 14%,var(--surface));border:1px solid color-mix(in srgb,var(--accent) 30%,var(--line));font-weight:700;font-size:14px;color:var(--accent-strong);}
+      [data-theme="dark"] #tool .stage-badge,[data-theme="auto"] #tool .stage-badge{color:var(--accent);}
+      #tool .note-block{margin-top:14px;padding:12px 14px;border-radius:10px;background:var(--bg);font-size:13.5px;line-height:1.55;color:var(--muted);}
+      #tool .foot-notes{margin-top:16px;display:flex;flex-direction:column;gap:6px;font-size:12.5px;color:var(--muted);}
+      @media (max-width:420px){
+        #tool .rh-value{font-size:30px;}
+        #tool .lifestyle-opt{flex:1 1 100%;}
+      }
+    </style>
+
+    <div class="mode-tabs" role="tablist" aria-label="Calculation direction" data-i18n-aria-label="tool.mode.aria">
+      <button type="button" class="mode-tab" id="mode-forward" role="tab" aria-selected="true" data-mode="forward" data-i18n="tool.mode.forward">Cat age → Human years</button>
+      <button type="button" class="mode-tab" id="mode-reverse" role="tab" aria-selected="false" data-mode="reverse" data-i18n="tool.mode.reverse">Human years → Cat age</button>
+    </div>
+
+    <div id="panel-forward">
+      <div class="input-group">
+        <label for="cat-age" data-i18n="tool.catAge.label">Cat's age</label>
+        <div class="age-row">
+          <input id="cat-age" type="number" inputmode="decimal" min="0" max="30" step="0.1" placeholder="e.g. 2.5" data-i18n-placeholder="tool.catAge.ph" autocomplete="off" autofocus>
+          <select id="cat-age-unit" aria-label="Age unit" data-i18n-aria-label="tool.unit.label">
+            <option value="years" data-i18n="tool.unit.years">Years</option>
+            <option value="months" data-i18n="tool.unit.months">Months</option>
+          </select>
+        </div>
+      </div>
+      <div class="input-group">
+        <label data-i18n="tool.lifestyle.label">Lifestyle</label>
+        <div class="lifestyle-group" role="radiogroup" aria-label="Lifestyle" data-i18n-aria-label="tool.lifestyle.label">
+          <label class="lifestyle-opt"><input type="radio" name="lifestyle" id="lifestyle-indoor" value="indoor" checked><span data-i18n="tool.lifestyle.indoor">Indoor only</span></label>
+          <label class="lifestyle-opt"><input type="radio" name="lifestyle" id="lifestyle-outdoor" value="outdoor"><span data-i18n="tool.lifestyle.outdoor">Outdoor / indoor-outdoor</span></label>
+        </div>
+      </div>
+    </div>
+
+    <div id="panel-reverse" hidden>
+      <div class="input-group">
+        <label for="human-age" data-i18n="tool.humanAge.label">Equivalent human age (years)</label>
+        <input id="human-age" type="number" inputmode="decimal" min="0" max="140" step="1" placeholder="e.g. 40" data-i18n-placeholder="tool.humanAge.ph" autocomplete="off">
+      </div>
+    </div>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder.forward" style="margin:0;color:var(--muted);">Enter your cat's age to see its human-equivalent age</p>
+      <div id="result-body" hidden>
+        <div class="result-hero">
+          <span class="rh-label" id="rh-label" data-i18n="tool.res.human">Human-equivalent age</span>
+          <span class="rh-value result-value" id="rh-value">—</span>
+          <span class="rh-sub" id="rh-sub"></span>
+        </div>
+        <div class="stage-badge" id="stage-badge" hidden><span id="stage-label"></span></div>
+        <p class="note-block" id="lifestyle-note" hidden></p>
+        <div class="foot-notes">
+          <p id="clipped-note" hidden data-i18n="tool.note.clipped">The value was outside the supported range and was capped for this calculation.</p>
+          <p data-i18n="tool.note.disclaimer">This is an educational estimate, not veterinary advice — ask your vet about your cat's actual health and life stage.</p>
+          <p data-i18n="tool.note.privacy">Every calculation runs in your browser — nothing is sent to a server.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>How cat years turn into human years</h2>
+    <p>Cats don't age at a constant rate. They rocket through kittenhood and adolescence in their first two years, reaching physical and reproductive maturity that would take a human well over a decade, and then settle into a much slower, steadier pace for every year after that. A cat age calculator that just multiplies by a flat number can't capture that curve — so this one uses the step-based formula that veterinarians actually use.</p>
+
+    <h2>The vet formula, step by step</h2>
+    <ul>
+      <li><strong>Year 1</strong> = 15 human years (from birth to age 1, scaled continuously so a 6-month-old kitten reads as about 7.5).</li>
+      <li><strong>Year 2</strong> adds 9 more human years, for 24 total at age 2.</li>
+      <li><strong>Every year after that</strong> adds 4 human years: age = 24 + (years − 2) × 4.</li>
+    </ul>
+    <p>Because the formula is continuous rather than a lookup table, you can enter a decimal age like 2.5 or 7.25 and get a precise, in-between result instead of a value rounded to the nearest whole year.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a young cat.</strong> A cat that is 1.5 years old: 15 + (1.5 − 1) × 9 = <strong>19.5 human years</strong>. Most of the growth already happened in year one.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — a middle-aged cat.</strong> A 5-year-old cat: 24 + (5 − 2) × 4 = <strong>36 human years</strong> — solidly in the "adult" life stage.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — a senior cat.</strong> A 12-year-old cat: 24 + (12 − 2) × 4 = <strong>64 human years</strong>, placing it in the senior life-stage band that starts at 11.</p>
+    </div>
+
+    <h2>Cat age chart: cat years to human years</h2>
+    <p>A quick-reference table using the same formula, for whole-year ages:</p>
+    <table>
+      <thead><tr><th>Cat age</th><th>Human years</th><th>Life stage</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>15</td><td>Junior</td></tr>
+        <tr><td>2</td><td>24</td><td>Junior</td></tr>
+        <tr><td>3</td><td>28</td><td>Adult</td></tr>
+        <tr><td>4</td><td>32</td><td>Adult</td></tr>
+        <tr><td>5</td><td>36</td><td>Adult</td></tr>
+        <tr><td>6</td><td>40</td><td>Adult</td></tr>
+        <tr><td>7</td><td>44</td><td>Mature</td></tr>
+        <tr><td>8</td><td>48</td><td>Mature</td></tr>
+        <tr><td>9</td><td>52</td><td>Mature</td></tr>
+        <tr><td>10</td><td>56</td><td>Mature</td></tr>
+        <tr><td>11</td><td>60</td><td>Senior</td></tr>
+        <tr><td>12</td><td>64</td><td>Senior</td></tr>
+        <tr><td>13</td><td>68</td><td>Senior</td></tr>
+        <tr><td>14</td><td>72</td><td>Senior</td></tr>
+        <tr><td>15</td><td>76</td><td>Geriatric</td></tr>
+        <tr><td>18</td><td>88</td><td>Geriatric</td></tr>
+        <tr><td>20</td><td>96</td><td>Geriatric</td></tr>
+      </tbody>
+    </table>
+
+    <h2>The six feline life stages</h2>
+    <p>Veterinary life-stage guidelines split a cat's life into six bands, each with different health priorities:</p>
+    <ul>
+      <li><strong>Kitten (0–6 months):</strong> rapid growth, vaccination schedule, socialization window.</li>
+      <li><strong>Junior (6 months–2 years):</strong> reaches full size and sexual maturity, still playful and high-energy.</li>
+      <li><strong>Adult (3–6 years):</strong> physically mature and typically the healthiest, lowest-risk stretch of life.</li>
+      <li><strong>Mature (7–10 years):</strong> metabolism starts to slow; many vets suggest annual bloodwork from here.</li>
+      <li><strong>Senior (11–14 years):</strong> higher risk of kidney, thyroid, and joint issues; twice-yearly checkups are common advice.</li>
+      <li><strong>Geriatric (15+ years):</strong> needs closer monitoring of weight, hydration, mobility, and cognitive changes.</li>
+    </ul>
+
+    <h2>Indoor vs. outdoor: same age math, different life expectancy</h2>
+    <p>Whether a cat lives strictly indoors or has regular outdoor access has no effect on the age conversion formula itself — a 5-year-old cat is 36 in human years either way. What differs is life expectancy: indoor-only cats are shielded from cars, predators, poisons, and contagious disease, and commonly reach 12 to 18 years, while cats that roam outdoors face those hazards daily and average a noticeably shorter lifespan. The lifestyle toggle in this calculator only changes the informational note shown with your result — never the math.</p>
+
+    <h2>Why the old "×7" rule is wrong</h2>
+    <p>The multiply-by-seven rule was never based on veterinary research — it was a rough guess that stuck around because it's easy to remember. It fails worst at the extremes: it says a 1-year-old cat, already sexually mature and full-grown, is only "7," and it says a well-aged 10-year-old cat is "70," overstating just how elderly the cat really is. The step formula used here — 15, then +9, then +4 per year — was built from studies of feline growth, dental development, and skeletal maturity, so it tracks a cat's actual biological age far more closely.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.fda.gov/animal-veterinary" target="_blank" rel="noopener">U.S. FDA Animal &amp; Veterinary — official guidance on pet health, nutrition, and medicines</a></li>
+      <li><a href="https://www.aaha.org/" target="_blank" rel="noopener">American Animal Hospital Association — feline life stage guidelines behind kitten/junior/adult/senior banding</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" rel="noopener">PubMed (NIH) — peer-reviewed research on feline growth, dental development, and lifespan</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/child-height-predictor/"><span class="related-ico" aria-hidden="true">🧒</span><span class="related-name">Child Height Predictor</span></a><a class="related-item" href="https://tool-hub.me/cholesterol-ratio-calc/"><span class="related-ico" aria-hidden="true">🫀</span><span class="related-name">Cholesterol Ratio Calculator</span></a><a class="related-item" href="https://tool-hub.me/heart-rate-zone-calc/"><span class="related-ico" aria-hidden="true">❤</span><span class="related-name">Heart Rate Zone Calculator</span></a><a class="related-item" href="https://tool-hub.me/ideal-weight-calc/"><span class="related-ico" aria-hidden="true">🎯</span><span class="related-name">Ideal Weight Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">What is the formula to convert cat years to human years?</summary>
+      <p data-i18n="faq.a1">Vets use a step formula, not a flat multiplier: a cat's first year of life equals about 15 human years, the second year adds about 9 more (24 total), and every year after that adds about 4 human years. For example, a 5-year-old cat is 24 + (5−2)×4 = 36 in human years. This calculator applies the same formula continuously, so a 2.5-year-old cat gets a precise, in-between result instead of being rounded to the nearest whole year.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">Is 'one cat year equals seven human years' actually true?</summary>
+      <p data-i18n="faq.a2">No — that old rule of thumb is a myth. Cats mature very quickly in their first two years and then age more slowly, so a flat 7-to-1 ratio badly underestimates a kitten's development and overestimates an older cat's age. A 1-year-old cat is closer to a 15-year-old human than a 7-year-old, and a 10-year-old cat is closer to 56 human years than 70. The vet-approved step formula used by this calculator reflects that real growth curve much more accurately.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">What are the six cat life stages, and when does my cat become a senior?</summary>
+      <p data-i18n="faq.a3">Veterinary feline life-stage guidelines group cats into six bands: kitten (0–6 months), junior (6 months–2 years), adult (3–6 years), mature (7–10 years), senior (11–14 years), and geriatric (15 years and up). Your cat is generally considered a senior once it turns 11, which is when many vets recommend more frequent checkups, bloodwork, and closer attention to weight, teeth, and joint health. This calculator labels the life stage automatically based on the age you enter.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Does living indoors versus outdoors change how the age is calculated?</summary>
+      <p data-i18n="faq.a4">No — the age conversion formula is the same for every cat, since it is based on biological maturity, not lifestyle. The indoor/outdoor choice only changes the informational note shown with your result: indoor-only cats face far fewer risks from traffic, predators, and disease and typically live around 12–18 years, while cats with regular outdoor access face more of those risks and tend to have shorter average lifespans. Your cat's age in human years stays the same either way.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Can I convert the other way, from human age to cat age, and is my data private?</summary>
+      <p data-i18n="faq.a5">Yes — switch to the Human years to cat age mode, enter a human age, and the calculator runs the same formula in reverse to estimate the equivalent cat age. Your privacy is fully protected too: every calculation happens locally in your browser, nothing you type is uploaded or stored on a server, and this tool is for general educational information only, not a substitute for veterinary advice.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

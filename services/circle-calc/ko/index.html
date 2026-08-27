@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-8MztW9ownoqp9KbHjXlTBz8MSUAtJuYPGmTlfS+r818=' 'sha256-QYgxORi4pDxUywgzMAzIFUnul6+KE30Y0oY++FoT+mc=' 'sha256-/UvsVi/XjTu/3y1zPYjnZJ6y7mOYbOlh0ZJEdov6220='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>원 계산기 — 반지름·지름·둘레·넓이 즉시 계산</title>
+<meta name="description" content="원의 반지름, 지름, 둘레, 넓이 중 하나만 입력하면 나머지 세 값이 사용된 공식과 함께 즉시 계산됩니다. 무료이며 모든 계산은 브라우저에서 처리됩니다.">
+<meta name="keywords" content="circle calculator, circumference calculator, area of a circle, radius calculator, circumference to diameter, 원 넓이 계산기, 원 둘레 계산기">
+<link rel="canonical" href="https://tool-hub.me/circle-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/circle-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/circle-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/circle-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/circle-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/circle-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/circle-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/circle-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/circle-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/circle-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/circle-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/circle-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/circle-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/circle-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/circle-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/circle-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="원 계산기 — 반지름·지름·둘레·넓이 즉시 계산">
+<meta property="og:description" content="원의 반지름, 지름, 둘레, 넓이 중 하나만 입력하면 나머지 세 값이 사용된 공식과 함께 즉시 계산됩니다. 무료이며 모든 계산은 브라우저에서 처리됩니다.">
+<meta property="og:url" content="https://tool-hub.me/circle-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/circle-calc/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Circle Calculator",
+  "description": "Enter a circle's radius, diameter, circumference, or area and instantly get the other three, with the formula shown for each. Free, calculated in your browser.",
+  "url": "https://tool-hub.me/circle-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-31",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Circle Calculator", "item": "https://tool-hub.me/circle-calc/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I calculate the area of a circle from the radius?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply π (about 3.14159) by the radius squared: Area = π × r². For example, a circle with a 5 cm radius has an area of π × 5² ≈ 78.54 cm². Enter the radius into this circle calculator and the area, diameter, and circumference are computed and displayed instantly, with the formula shown for each."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the diameter or radius from the circumference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Divide the circumference by π to get the diameter (d = C ÷ π), or by 2π to get the radius (r = C ÷ 2π). For example, a circumference of 31.42 cm gives a diameter of about 10 cm and a radius of about 5 cm. Type the circumference into this calculator and both are filled in automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate the circumference from the area of a circle, or the area from the circumference?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "First solve for the radius, then plug it into the other formula. From area: r = √(A ÷ π), then circumference = 2πr. For example, an area of 100 cm² gives a radius of about 5.64 cm and a circumference of about 35.45 cm. This calculator does both steps for you — enter the area and the circumference, diameter, and radius all appear at once."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this calculator convert between units like centimeters and inches?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The unit label is for display only — it's attached to the numbers you see, but no unit conversion happens. Enter your radius, diameter, circumference, or area in whichever unit you're working with (centimeters, inches, meters, or anything else), and the results come back in that same unit. If you need to convert between units first, use a dedicated length converter before entering the number here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my data sent to a server when I use this circle calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every calculation runs locally in your browser using JavaScript — the numbers you enter are never uploaded or transmitted anywhere. The only thing saved is your last input, unit label, and decimal-place preference, stored in your browser's localStorage so they're there next time you open the page on the same device."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Circle Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#0891b2" href="https://tool-hub.me/business-tools/">Business</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Circle Calculator</span></nav>
+  <section class="hero">
+    <h1>Circle Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Enter the radius, diameter, circumference, or area of any circle — the other three fill in instantly, with the formula used shown below.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Circle calculator" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .circ-row { display: flex; gap: 14px; flex-wrap: wrap; }
+      #tool .circ-row .circ-field { flex: 1 1 140px; }
+      #tool .circ-field label { margin-top: 14px; }
+      #tool .hint { margin: 6px 0 16px; font-size: 13px; color: var(--muted); line-height: 1.55; }
+      #tool .circ-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 4px; }
+      #tool .circ-grid .circ-field label { margin-top: 0; }
+      #tool .btn-secondary {
+        margin-top: 18px; padding: 10px 18px; font-size: 14.5px; font-weight: 700;
+        font-family: inherit; border: 1px solid var(--line); border-radius: 10px;
+        background: var(--bg); color: var(--ink); cursor: pointer;
+      }
+      #tool .btn-secondary:hover { border-color: var(--accent); }
+      #tool .circ-heading { font-weight: 700; font-size: 14px; margin: 0 0 10px; color: var(--ink); }
+      #tool .circ-line { font-size: 14.5px; margin: 6px 0; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; line-height: 1.5; }
+      #tool .circ-note { font-size: 13px; color: var(--muted); margin: 10px 0 0; line-height: 1.5; }
+      @media (max-width: 420px) {
+        #tool .circ-grid { gap: 8px; }
+        #tool .circ-row { flex-direction: column; gap: 4px; }
+      }
+    </style>
+
+    <div class="circ-row">
+      <div class="circ-field">
+        <label for="unit" data-i18n="tool.unit.label">Unit label (display only)</label>
+        <input id="unit" type="text" maxlength="12" value="cm" placeholder="cm" data-i18n-placeholder="tool.unit.ph" autocomplete="off">
+      </div>
+      <div class="circ-field">
+        <label for="precision" data-i18n="tool.precision.label">Decimal places</label>
+        <select id="precision">
+          <option value="0">0</option>
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="8">8</option>
+          <option value="10">10</option>
+        </select>
+      </div>
+    </div>
+    <p class="hint" data-i18n="tool.unit.hint">For display only — values aren't converted between units. Enter numbers in whichever unit you're already working with.</p>
+
+    <div class="circ-grid">
+      <div class="circ-field">
+        <label for="radius" data-i18n="tool.radius.label">Radius (r)</label>
+        <input id="radius" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 5" data-i18n-placeholder="tool.radius.ph" autocomplete="off" autofocus>
+      </div>
+      <div class="circ-field">
+        <label for="diameter" data-i18n="tool.diameter.label">Diameter (d)</label>
+        <input id="diameter" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 10" data-i18n-placeholder="tool.diameter.ph" autocomplete="off">
+      </div>
+      <div class="circ-field">
+        <label for="circumference" data-i18n="tool.circumference.label">Circumference (C)</label>
+        <input id="circumference" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 31.42" data-i18n-placeholder="tool.circumference.ph" autocomplete="off">
+      </div>
+      <div class="circ-field">
+        <label for="area" data-i18n="tool.area.label">Area (A)</label>
+        <input id="area" type="number" inputmode="decimal" min="0" step="any" placeholder="e.g. 78.54" data-i18n-placeholder="tool.area.ph" autocomplete="off">
+      </div>
+    </div>
+
+    <button type="button" id="clear-btn" class="btn-secondary" data-i18n="tool.clear">Clear all</button>
+
+    <div class="result" id="result" aria-live="polite">
+      <p id="result-empty" data-i18n="tool.placeholder" style="margin:0;color:var(--muted);">Enter any one value above — the other three fill in automatically.</p>
+      <p id="tool-error" role="alert" hidden data-i18n="tool.err.negative" style="margin:0;color:var(--accent-strong);font-weight:600;">Enter a positive number — a circle can't have a negative radius, diameter, circumference, or area.</p>
+
+      <div id="result-details" hidden>
+        <p id="result-heading" data-i18n="tool.result.heading" class="circ-heading">Formulas used for this circle</p>
+        <p class="circ-line" id="line-radius"></p>
+        <p class="circ-line" id="line-diameter"></p>
+        <p class="circ-line" id="line-circumference"></p>
+        <p class="circ-line" id="line-area"></p>
+        <p id="zero-note" hidden data-i18n="tool.zero.note" class="circ-note">A radius of 0 is a single point — every measurement collapses to 0.</p>
+        <p id="cap-note" hidden class="circ-note"></p>
+      </div>
+      <p class="subtle" data-i18n="tool.note.privacy" style="margin:12px 0 0;font-size:12.5px;color:var(--muted);">Every calculation runs in your browser — nothing is sent to a server.</p>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+    </style>
+
+    <h2>The four circle measurements, and how they relate</h2>
+    <p>A circle is fully described by a single number — its radius — but people rarely think in radius alone. Depending on what you're measuring, you might know the diameter (the width straight across), the circumference (the distance around the edge), or the area (the space inside). Because all four values are tied to the same radius through fixed formulas, knowing any one of them is enough to work out the other three exactly.</p>
+
+    <h2>The formulas behind every circle calculation</h2>
+    <p>Every value in this calculator comes from these six relationships. &pi; (pi) is a constant, approximately 3.14159, that appears anywhere a circle's curvature is involved:</p>
+    <ul>
+      <li><strong>Diameter</strong> = 2 &times; r</li>
+      <li><strong>Circumference</strong> = 2 &times; &pi; &times; r (equivalently, &pi; &times; d)</li>
+      <li><strong>Area</strong> = &pi; &times; r&sup2;</li>
+      <li><strong>Radius from diameter</strong>: r = d &divide; 2</li>
+      <li><strong>Radius from circumference</strong>: r = C &divide; (2 &times; &pi;)</li>
+      <li><strong>Radius from area</strong>: r = &radic;(A &divide; &pi;)</li>
+    </ul>
+
+    <div class="example">
+      <p><strong>Example 1 — starting from the radius.</strong> A circle with a radius of 5 cm has a diameter of 2 &times; 5 = <strong>10 cm</strong>, a circumference of 2 &times; &pi; &times; 5 &approx; <strong>31.42 cm</strong>, and an area of &pi; &times; 5&sup2; &approx; <strong>78.54 cm&sup2;</strong>.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — starting from the circumference.</strong> A wheel with a circumference of 200 cm has a diameter of 200 &divide; &pi; &approx; <strong>63.66 cm</strong> and a radius of 200 &divide; (2&pi;) &approx; <strong>31.83 cm</strong> — useful when you've measured the distance a wheel travels in one rotation and need to work backward to its size.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — starting from the area.</strong> A circular table with 1.5 m&sup2; of surface area has a radius of &radic;(1.5 &divide; &pi;) &approx; <strong>0.69 m</strong>, a diameter of about <strong>1.38 m</strong>, and a circumference of about <strong>4.34 m</strong> — handy for checking whether the table will fit through a doorway.</p>
+    </div>
+
+    <h2>Where &pi; comes from, and why the decimals never end</h2>
+    <p>&pi; is the ratio of any circle's circumference to its diameter — it's the same number whether the circle is a coin or a planet's orbit, because circumference and diameter always scale together. &pi; is irrational, so its decimal digits never repeat or terminate; 3.14159 is accurate enough for nearly any everyday calculation, and this calculator uses JavaScript's full built-in precision (about 15 significant digits) internally before rounding the display to whichever number of decimal places you choose.</p>
+
+    <h2>Common mistakes when calculating circles</h2>
+    <ul>
+      <li><strong>Confusing radius and diameter:</strong> the most common error is plugging the diameter into a formula that expects the radius, or vice versa — since area uses r&sup2; but not d&sup2;, that's an easy factor-of-4 mistake to make. Enter whichever one you actually have and let the calculator sort out the rest.</li>
+      <li><strong>Squaring the wrong quantity:</strong> circumference is proportional to r, but area is proportional to r&sup2; — doubling the radius doubles the circumference but quadruples the area.</li>
+      <li><strong>Mixing units mid-calculation:</strong> the formulas assume every value is in the same unit. If the radius is in centimeters, the area comes out in square centimeters, not square meters — convert first if you need a different unit.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.khanacademy.org/math/geometry" target="_blank" rel="noopener">Khan Academy Geometry — circle area, circumference and &pi; explained step by step</a></li>
+      <li><a href="https://www.nist.gov/pml/owm/metric-si/unit-conversion" target="_blank" rel="noopener">NIST Office of Weights and Measures — official unit conversion factors for length and area</a></li>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI" target="_blank" rel="noopener">MDN Web Docs: Math.PI — the &pi; constant and floating-point precision used by this calculator</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/fraction-calc/"><span class="related-ico" aria-hidden="true">½</span><span class="related-name">Fraction Calculator</span></a><a class="related-item" href="https://tool-hub.me/gcf-lcm-calc/"><span class="related-ico" aria-hidden="true">➗</span><span class="related-name">GCF and LCM Calculator</span></a><a class="related-item" href="https://tool-hub.me/image-compressor/"><span class="related-ico" aria-hidden="true">🗜️</span><span class="related-name">Image Compressor</span></a><a class="related-item" href="https://tool-hub.me/image-resizer/"><span class="related-ico" aria-hidden="true">🖼️</span><span class="related-name">Image Resizer</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I calculate the area of a circle from the radius?</summary>
+      <p data-i18n="faq.a1">Multiply π (about 3.14159) by the radius squared: Area = π × r². For example, a circle with a 5 cm radius has an area of π × 5² ≈ 78.54 cm². Enter the radius into this circle calculator and the area, diameter, and circumference are computed and displayed instantly, with the formula shown for each.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">How do I find the diameter or radius from the circumference?</summary>
+      <p data-i18n="faq.a2">Divide the circumference by π to get the diameter (d = C ÷ π), or by 2π to get the radius (r = C ÷ 2π). For example, a circumference of 31.42 cm gives a diameter of about 10 cm and a radius of about 5 cm. Type the circumference into this calculator and both are filled in automatically.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How do I calculate the circumference from the area of a circle, or the area from the circumference?</summary>
+      <p data-i18n="faq.a3">First solve for the radius, then plug it into the other formula. From area: r = √(A ÷ π), then circumference = 2πr. For example, an area of 100 cm² gives a radius of about 5.64 cm and a circumference of about 35.45 cm. This calculator does both steps for you — enter the area and the circumference, diameter, and radius all appear at once.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Does this calculator convert between units like centimeters and inches?</summary>
+      <p data-i18n="faq.a4">No. The unit label is for display only — it's attached to the numbers you see, but no unit conversion happens. Enter your radius, diameter, circumference, or area in whichever unit you're working with (centimeters, inches, meters, or anything else), and the results come back in that same unit. If you need to convert between units first, use a dedicated length converter before entering the number here.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my data sent to a server when I use this circle calculator?</summary>
+      <p data-i18n="faq.a5">No. Every calculation runs locally in your browser using JavaScript — the numbers you enter are never uploaded or transmitted anywhere. The only thing saved is your last input, unit label, and decimal-place preference, stored in your browser's localStorage so they're there next time you open the page on the same device.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

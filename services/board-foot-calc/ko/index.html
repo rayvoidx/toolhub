@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-ciaNn50IZNNWwlp1e/LPxzDK7wpspz2bGU71vT3Q4Po=' 'sha256-+Q2qQLm2T0RSWkwU7Om8ww8cykIoNsNiLiPasi1tK08=' 'sha256-FnxMHSJ0ebpFj/P0JB/rZ5L4l8yPLAm+PdwD87VC7F4='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>보드피트 계산기 — 제재목 물량·비용</title>
+<meta name="description" content="목재 주문에 필요한 보드피트를 계산합니다. 두께(쿼터), 너비(인치), 길이(피트), 장수를 입력하면 총 보드피트, 장당 보드피트, 금액이 바로 나옵니다.">
+<meta name="keywords" content="board foot calculator, board feet, lumber calculator, bf calculator, board foot formula, hardwood pricing calculator">
+<link rel="canonical" href="https://tool-hub.me/board-foot-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/board-foot-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/board-foot-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/board-foot-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/board-foot-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/board-foot-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/board-foot-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/board-foot-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/board-foot-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/board-foot-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/board-foot-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/board-foot-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/board-foot-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/board-foot-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/board-foot-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/board-foot-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="보드피트 계산기 — 제재목 물량·비용">
+<meta property="og:description" content="목재 주문에 필요한 보드피트를 계산합니다. 두께(쿼터), 너비(인치), 길이(피트), 장수를 입력하면 총 보드피트, 장당 보드피트, 금액이 바로 나옵니다.">
+<meta property="og:url" content="https://tool-hub.me/board-foot-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/board-foot-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#78350f">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Board Foot Calculator",
+  "description": "Work out board feet for any lumber order. Enter thickness in quarters, width in inches, length in feet and piece count for total BF, per piece and cost.",
+  "url": "https://tool-hub.me/board-foot-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Board Foot Calculator",
+      "item": "https://tool-hub.me/board-foot-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between a board foot and a linear foot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A board foot is a volume: 144 cubic inches, or a piece 1 inch thick, 12 inches wide and 1 foot long. A linear foot only counts length, so it tells you nothing until you also know thickness and width. A 12-foot 2x6 is 12 linear feet and 12 board feet, while a 12-foot 1x4 is also 12 linear feet but only 4 board feet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What do 4/4, 5/4 and 8/4 mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hardwood thickness is quoted in quarters of an inch of rough stock, so 4/4 is one inch, 5/4 is 1.25 inches and 8/4 is two inches. Yards say it out loud as four-quarter and eight-quarter. That quarter figure is the thickness before surfacing, and it is the thickness you pay for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I use the rough size or the surfaced size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the rough size. A 4/4 board surfaced on two sides (S2S) arrives at about 13/16 inch thick but still bills as a full inch, and hardwood width is taken before the edges are straight-lined. Measuring your planed boards and entering those numbers will make your total come in below the invoice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much extra should I order for waste?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Add 15 to 20 percent on straightforward work, and up to 30 percent if you are matching grain, cutting around knots or making short parts. Rough lumber comes in random widths and lengths, so part of every board becomes offcut. On a 40 board foot project, buying 46 to 48 board feet is normal."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Board Foot Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#ea580c" href="https://tool-hub.me/everyday-calculators/">Everyday</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Board Foot Calculator</span></nav>
+  <section class="hero">
+    <h1>Board Foot Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Quarters thick, inches wide, feet long — the one number your lumberyard bills you on.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="field-row">
+      <div>
+        <label for="thick" data-i18n="tool.thick.label">Thickness</label>
+        <select id="thick">
+          <option value="1" data-i18n="tool.thick.44">4/4 — 1 in</option>
+          <option value="1.25" data-i18n="tool.thick.54">5/4 — 1.25 in</option>
+          <option value="1.5" data-i18n="tool.thick.64">6/4 — 1.5 in</option>
+          <option value="2" data-i18n="tool.thick.84">8/4 — 2 in</option>
+          <option value="2.5" data-i18n="tool.thick.104">10/4 — 2.5 in</option>
+          <option value="3" data-i18n="tool.thick.124">12/4 — 3 in</option>
+          <option value="4" data-i18n="tool.thick.164">16/4 — 4 in</option>
+          <option value="custom" data-i18n="tool.thick.custom">Custom thickness</option>
+        </select>
+      </div>
+      <div id="thick-in-wrap" hidden>
+        <label for="thick-in" data-i18n="tool.thickin.label">Thickness (inches)</label>
+        <input type="number" id="thick-in" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="1.75">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="width" data-i18n="tool.width.label">Width (inches)</label>
+        <input type="number" id="width" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="6">
+      </div>
+      <div>
+        <label for="length" data-i18n="tool.length.label">Length (feet)</label>
+        <input type="number" id="length" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="8">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="pieces" data-i18n="tool.pieces.label">Pieces</label>
+        <input type="number" id="pieces" inputmode="numeric" min="1" step="1" autocomplete="off" placeholder="10">
+      </div>
+      <div>
+        <label for="price" data-i18n="tool.price.label">Price per board foot (optional)</label>
+        <input type="number" id="price" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="4.50">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="waste" data-i18n="tool.waste.label">Waste allowance (%, optional)</label>
+        <input type="number" id="waste" inputmode="decimal" min="0" max="100" step="any" autocomplete="off" placeholder="15">
+      </div>
+    </div>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate board feet</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.total">Total board feet</div>
+          <div class="rc-val" id="r-total">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.each">Board feet per piece</div><div class="rc-val" id="r-each">—</div></div>
+        <div class="rcard" id="order-card" hidden><div class="rc-label" data-i18n="tool.r.order">Board feet to order</div><div class="rc-val" id="r-order">—</div></div>
+        <div class="rcard" id="cost-card" hidden><div class="rc-label" data-i18n="tool.r.cost">Total cost</div><div class="rc-val" id="r-cost">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note" style="margin-top:12px;">Hardwood is measured and billed on rough (nominal) size, so enter the quoted thickness and width — not what a planed board actually measures.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What a board foot actually measures</h2>
+    <p>A board foot is a unit of volume, not of length or of surface. One board foot is 144 cubic inches: a piece one inch thick, twelve inches wide and one foot long. Every hardwood yard in the United States, and most in Canada, prices its stock this way, because it is the only measure that stays fair across the random widths and lengths that come off a log. The formula is thickness in inches times width in inches times length in feet, divided by twelve.</p>
+    <p>That division by twelve is where most people go wrong. Length is in feet while the other two dimensions are in inches, so the twelve converts feet to inches without you having to write out 144 cubic inches every time. Get the units mixed up — length entered in inches, say — and your total will be twelve times too big.</p>
+
+    <h3>Worked example: ten boards of 4/4 walnut</h3>
+    <p>You want ten pieces of 4/4 walnut, 6 inches wide and 8 feet long. Thickness is 1 inch, so one board is 1 x 6 x 8 / 12 = 4 board feet. Ten pieces gives 40 board feet. At $4.50 per board foot the lumber comes to 
+
+  80.00 before tax and before any delivery charge. Notice that the per-piece figure is the useful one when you are standing at the rack: anything 6 inches wide and 8 feet long in 4/4 is 4 board feet, so you can total a cart in your head.</p>
+    <p>Switch that order to 8/4 and the arithmetic doubles: 2 x 6 x 8 / 12 = 8 board feet per piece, 80 board feet total, $360.00 at the same price. Thickness is the most expensive variable in any hardwood order, which is why yards quote 8/4 stock at a higher per-board-foot rate on top of the doubled volume.</p>
+
+    <h2>The quarter system</h2>
+    <p>Hardwood thickness is quoted in quarters of an inch, measured on the rough board before it is planed. Say it out loud the way the yard does: four-quarter, five-quarter, eight-quarter.</p>
+    <table>
+      <thead><tr><th>Quoted</th><th>Rough thickness</th><th>After S2S surfacing</th><th>Typical use</th></tr></thead>
+      <tbody>
+        <tr><td>4/4</td><td>1 in</td><td>13/16 in</td><td>Panels, drawer sides, general furniture</td></tr>
+        <tr><td>5/4</td><td>1.25 in</td><td>1-1/16 in</td><td>Stair treads, thick tabletops, decking</td></tr>
+        <tr><td>6/4</td><td>1.5 in</td><td>1-5/16 in</td><td>Chair parts, heavy frames</td></tr>
+        <tr><td>8/4</td><td>2 in</td><td>1-3/4 in</td><td>Table legs, workbench tops, turning stock</td></tr>
+        <tr><td>12/4</td><td>3 in</td><td>2-3/4 in</td><td>Bench legs, large turnings</td></tr>
+      </tbody>
+    </table>
+
+    <h3>The surfaced-lumber trap</h3>
+    <p>This is the single most common mistake in checking a lumber invoice. A 4/4 board surfaced on two sides arrives at roughly 13/16 inch thick, and you measure it, enter 0.8125 in the calculator, and conclude the yard overcharged you by about twenty percent. It did not. Hardwood is tallied at the rough size before surfacing, and width is measured before the edges are straight-lined. Enter the nominal figures — the ones on the quote — and the numbers will match.</p>
+    <p>Softwood construction lumber works differently again. A 2x4 is nominally two inches by four inches but actually measures 1.5 by 3.5 inches, and it is usually sold by the piece or by the linear foot rather than by board foot. If you do need board feet for framing material, use the nominal 2 and 4, not the actual dimensions.</p>
+
+    <h2>Estimating a real project</h2>
+    <p>Work out the finished parts first, then add for waste. Take a small side table: four legs at 8/4, 2 inches square and 28 inches long, plus a top of 4/4 stock 18 by 30 inches. The legs come to roughly 2 x 2 x 2.33 / 12 = 0.78 board feet each, so about 3.1 board feet for four. The top is 1 x 18 x 2.5 / 12 = 3.75 board feet. That is just under 7 board feet of finished parts.</p>
+    <p>Now add the waste allowance. Fifteen to twenty percent covers ordinary work: saw kerf, jointing losses, trimming ends square. Push it to thirty percent if you are matching grain across a panel, cutting around knots and sapwood, or making a lot of short parts where board ends are unusable. For this table you would buy around 9 board feet, and you would round up to whatever the yard's boards actually give you, since you cannot buy a fraction of a plank.</p>
+    <p>One last practical note: pricing is normally per board foot and varies by species, grade and thickness, and many yards apply a minimum order or a surcharge for widths over ten inches. Use the cost figure here as a planning number, then confirm the grade and the surfacing charge before you place the order.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.fpl.fs.usda.gov/" target="_blank" rel="noopener">USDA Forest Products Laboratory &mdash; Wood Handbook and research on lumber properties, sizing and moisture</a></li>
+      <li><a href="https://www.nist.gov/pml/owm" target="_blank" rel="noopener">NIST Office of Weights and Measures &mdash; national standards for commercial measurement and packaged goods quantity</a></li>
+      <li><a href="https://www.fs.usda.gov/" target="_blank" rel="noopener">USDA Forest Service &mdash; timber measurement, board-foot scaling and hardwood market reporting</a></li>
+    </ul>
+  </section>
+
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/bra-size-calc/"><span class="related-ico" aria-hidden="true">📏</span><span class="related-name">Bra Size Calculator</span></a><a class="related-item" href="https://tool-hub.me/brick-calc/"><span class="related-ico" aria-hidden="true">🧱</span><span class="related-name">Brick Calculator</span></a><a class="related-item" href="https://tool-hub.me/btu-calc/"><span class="related-ico" aria-hidden="true">❄️</span><span class="related-name">BTU Calculator</span></a><a class="related-item" href="https://tool-hub.me/carpet-calc/"><span class="related-ico" aria-hidden="true">🟫</span><span class="related-name">Carpet Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">What is the difference between a board foot and a linear foot?</summary><p data-i18n="faq.a1">A board foot is a volume: 144 cubic inches, or a piece 1 inch thick, 12 inches wide and 1 foot long. A linear foot only counts length, so it tells you nothing until you also know thickness and width. A 12-foot 2x6 is 12 linear feet and 12 board feet, while a 12-foot 1x4 is also 12 linear feet but only 4 board feet.</p></details>
+    <details><summary data-i18n="faq.q2">What do 4/4, 5/4 and 8/4 mean?</summary><p data-i18n="faq.a2">Hardwood thickness is quoted in quarters of an inch of rough stock, so 4/4 is one inch, 5/4 is 1.25 inches and 8/4 is two inches. Yards say it out loud as four-quarter and eight-quarter. That quarter figure is the thickness before surfacing, and it is the thickness you pay for.</p></details>
+    <details><summary data-i18n="faq.q3">Should I use the rough size or the surfaced size?</summary><p data-i18n="faq.a3">Use the rough size. A 4/4 board surfaced on two sides (S2S) arrives at about 13/16 inch thick but still bills as a full inch, and hardwood width is taken before the edges are straight-lined. Measuring your planed boards and entering those numbers will make your total come in below the invoice.</p></details>
+    <details><summary data-i18n="faq.q4">How much extra should I order for waste?</summary><p data-i18n="faq.a4">Add 15 to 20 percent on straightforward work, and up to 30 percent if you are matching grain, cutting around knots or making short parts. Rough lumber comes in random widths and lengths, so part of every board becomes offcut. On a 40 board foot project, buying 46 to 48 board feet is normal.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

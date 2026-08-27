@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-vrPsslv2uz3NNOX/IVCvj51+iz29vYZPu3Y8/LsIh8U=' 'sha256-NcKsXwXWrnpoYWkPPryZXCHuxUgFnPtAu7GECCMupeQ=' 'sha256-1apXC2xkqgbcbbJXW49b2gOW4KV/DWePbVTkP3fbpG4='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>찾아 바꾸기 — 텍스트 일괄 치환 온라인 도구</title>
+<meta name="description" content="텍스트를 즉시 찾아 바꾸세요 — 대소문자 구분, 단어 단위, 정규식 옵션과 실시간 일치 개수·하이라이트 미리보기를 지원합니다. 무료, 브라우저에서 바로 실행됩니다.">
+<meta name="keywords" content="find and replace online, replace text online, find and replace tool, bulk replace text, search and replace, 찾아바꾸기, 텍스트 일괄 치환">
+<link rel="canonical" href="https://tool-hub.me/find-replace-text/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/find-replace-text/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/find-replace-text/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/find-replace-text/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/find-replace-text/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/find-replace-text/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/find-replace-text/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/find-replace-text/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/find-replace-text/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/find-replace-text/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/find-replace-text/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/find-replace-text/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/find-replace-text/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/find-replace-text/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/find-replace-text/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/find-replace-text/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="찾아 바꾸기 — 텍스트 일괄 치환 온라인 도구">
+<meta property="og:description" content="텍스트를 즉시 찾아 바꾸세요 — 대소문자 구분, 단어 단위, 정규식 옵션과 실시간 일치 개수·하이라이트 미리보기를 지원합니다. 무료, 브라우저에서 바로 실행됩니다.">
+<meta property="og:url" content="https://tool-hub.me/find-replace-text/ko/">
+<meta property="og:image" content="https://tool-hub.me/find-replace-text/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b45309">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Find and Replace Text",
+  "description": "Find and replace text instantly — case-sensitive, whole-word, and regex options with live match count and highlight preview. Free, runs in your browser.",
+  "url": "https://tool-hub.me/find-replace-text/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-07-30",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Toolhub", "item": "https://tool-hub.me/" },
+    { "@type": "ListItem", "position": 2, "name": "Find and Replace Text", "item": "https://tool-hub.me/find-replace-text/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I find and replace text online for free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paste or type your text into the box, enter the word or phrase you want to find, and type what you want in its place, then click \"Replace All\". For example, searching for \"color\" and replacing with \"colour\" across a paragraph updates every instance at once. The live preview highlights every match before you apply anything, so you can check exactly what will change first. Everything runs locally in your browser — nothing is uploaded."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Match case and Whole word only?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Match case makes the search distinguish uppercase from lowercase, so searching for \"Log\" with Match case on will not touch \"log\" or \"LOG\". Whole word only stops partial matches inside longer words — searching for \"cat\" normally also matches the \"cat\" inside \"category\" or \"concatenate\", but with Whole word only turned on it matches just the standalone word \"cat\". You can combine both options at once for a precise, case-exact, whole-word search."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does regex mode work, and what happens if my pattern is invalid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Turning on Regular expression treats the Find field as a JavaScript regular expression instead of plain text, so patterns like \\d+ (one or more digits) or colou?r (matches both spellings) become usable, and $1-style references in Replace with reuse captured groups. If the pattern is invalid — for example an unmatched parenthesis — the tool shows the exact error message instead of silently failing, and the Replace All button is disabled until the pattern is fixed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I undo a find and replace after applying it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. After clicking Replace All, an Undo button appears that restores the text exactly as it was one step back. The tool keeps a single level of undo — enough to recover from an unwanted replacement — but it doesn't keep a longer history, so it's still worth checking the highlighted preview before applying if you want to be extra careful."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my text uploaded to a server when I use this tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Find and Replace Text runs entirely in your browser using standard JavaScript string and regular-expression functions — your text, find term, and replacement never leave your device and nothing is stored on a server. The only place anything is saved is your own browser's local storage, so you can close the tab and come back to your last text later."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0000000000000000" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Find and Replace Text</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#7c3aed" href="https://tool-hub.me/text-tools/">Text</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Find and Replace Text</span></nav>
+  <section class="hero">
+    <h1>Find and Replace Text</h1>
+    <p class="lede" data-i18n="hero.lede">Replace every match in your text at once. Type what to find and what to replace it with, preview the highlighted matches, then apply.</p>
+  </section>
+
+  <!-- TOOL:START — builder agent replaces everything inside this section.
+       ★ i18n 계약 (docs/I18N.md): 사용자에게 보이는 모든 문구에 data-i18n 훅을 달고,
+         js/locales.js 의 "모든" 언어 블록(14개)에 같은 키를 추가한다. JS 동적 문구는
+         window.I18N.t("key") 로 조회하고, 언어 전환 시 갱신이 필요하면
+         document 의 "i18n:change" 이벤트를 구독한다. -->
+  <section class="tool-card" id="tool" aria-label="Find and replace text tool" data-i18n-aria-label="tool.aria">
+    <style>
+      #tool .frt-row { display: flex; gap: 14px; flex-wrap: wrap; }
+      #tool .frt-col { flex: 1 1 220px; min-width: 0; }
+      #tool #frt-text {
+        min-height: 160px; resize: vertical;
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14.5px;
+      }
+      #tool #frt-find, #tool #frt-replace {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 14.5px;
+      }
+      #tool .frt-options { display: flex; gap: 16px; flex-wrap: wrap; margin: 14px 0 0; }
+      #tool .frt-options label { display: flex; align-items: center; gap: 7px; margin: 0; font-weight: 600; font-size: 14px; cursor: pointer; }
+      #tool .frt-options input[type="checkbox"] { width: auto; margin: 0; flex: 0 0 auto; }
+      #tool .frt-error {
+        margin: 14px 0 0; padding: 12px 14px; border-radius: 10px; font-size: 14px; line-height: 1.5;
+        background: color-mix(in srgb, #dc2626 10%, var(--surface));
+        border: 1px solid color-mix(in srgb, #dc2626 30%, var(--line));
+        color: #dc2626; overflow-wrap: anywhere;
+      }
+      #tool .frt-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 18px; }
+      #tool .frt-actions .btn { margin-top: 0; }
+      #tool .btn.frt-secondary { background: var(--bg); color: var(--ink); border: 1px solid var(--line); }
+      #tool .btn.frt-secondary:hover { border-color: var(--accent); }
+      #tool .frt-feedback { margin: 12px 0 0; font-size: 13.5px; font-weight: 600; color: var(--accent-strong); }
+      #tool .frt-status { margin: 0 0 10px; font-size: 14px; font-weight: 700; color: var(--ink); }
+      #tool .frt-preview-empty { margin: 0; color: var(--muted); font-size: 14px; }
+      #tool .frt-preview {
+        margin: 0; padding: 12px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--bg);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13.5px; line-height: 1.6;
+        white-space: pre-wrap; overflow-wrap: anywhere; max-height: 280px; overflow-y: auto;
+      }
+      #tool mark.frt-mark { background: color-mix(in srgb, var(--accent) 40%, transparent); color: var(--ink); border-radius: 3px; padding: 0 1px; }
+      #tool .frt-trunc { color: var(--muted); font-size: 12px; }
+      @media (max-width: 420px) {
+        #tool .frt-row { flex-direction: column; }
+        #tool .frt-actions { flex-direction: column; }
+        #tool .frt-actions .btn { width: 100%; text-align: center; }
+      }
+    </style>
+
+    <div class="input-group">
+      <label for="frt-text" data-i18n="tool.text.label">Your text</label>
+      <textarea id="frt-text" rows="8" dir="auto" autocomplete="off" spellcheck="false"
+        placeholder="Type or paste your text here…" data-i18n-placeholder="tool.text.ph"></textarea>
+    </div>
+
+    <div class="frt-row">
+      <div class="input-group frt-col">
+        <label for="frt-find" data-i18n="tool.find.label">Find</label>
+        <input id="frt-find" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+          placeholder="e.g. color" data-i18n-placeholder="tool.find.ph">
+      </div>
+      <div class="input-group frt-col">
+        <label for="frt-replace" data-i18n="tool.replace.label">Replace with</label>
+        <input id="frt-replace" type="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false"
+          placeholder="e.g. colour" data-i18n-placeholder="tool.replace.ph">
+      </div>
+    </div>
+
+    <div class="frt-options" role="group" aria-label="Replace options" data-i18n-aria-label="tool.options.legend">
+      <label><input type="checkbox" id="frt-case"><span data-i18n="tool.case.label">Match case</span></label>
+      <label><input type="checkbox" id="frt-word"><span data-i18n="tool.word.label">Whole word only</span></label>
+      <label><input type="checkbox" id="frt-regex"><span data-i18n="tool.regex.label">Regular expression</span></label>
+    </div>
+
+    <p id="frt-error" class="frt-error" role="alert" hidden></p>
+
+    <div class="frt-actions">
+      <button type="button" id="frt-apply" class="btn primary" data-i18n="tool.apply">Replace All</button>
+      <button type="button" id="frt-undo" class="btn frt-secondary" hidden data-i18n="tool.undo">Undo</button>
+      <button type="button" id="frt-copy" class="btn frt-secondary" data-i18n="tool.copy">Copy result</button>
+      <button type="button" id="frt-clear" class="btn frt-secondary" data-i18n="tool.clear">Clear</button>
+    </div>
+    <p id="frt-feedback" class="frt-feedback" role="status" aria-live="polite" hidden></p>
+
+    <div class="result" id="result">
+      <p id="frt-status" class="frt-status" role="status" aria-live="polite"></p>
+      <p id="frt-preview-empty" class="frt-preview-empty" data-i18n="tool.preview.empty">Type something in "Find" to see a live match preview here.</p>
+      <div id="frt-preview" class="frt-preview" hidden aria-label="Match preview" data-i18n-aria-label="tool.preview.aria"></div>
+    </div>
+  </section>
+  <!-- TOOL:END -->
+
+  <!-- CONTENT:START — English deep-dive (unique to this tool). No data-i18n. -->
+  <section class="guide-content">
+    <style>
+      .guide-content{max-width:none;margin:32px 0 8px;line-height:1.7}
+      .guide-content h2{font-size:22px;font-weight:700;margin:28px 0 10px;letter-spacing:-.01em}
+      .guide-content h3{font-size:17px;font-weight:650;margin:20px 0 6px}
+      .guide-content p{margin:0 0 12px;color:var(--ink)}
+      .guide-content ul,.guide-content ol{margin:0 0 12px;padding-left:22px}
+      .guide-content li{margin:4px 0}
+      .guide-content .example{border:1px solid var(--line);border-radius:10px;padding:14px 16px;margin:14px 0;background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
+      .guide-content code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--bg);padding:1px 6px;border-radius:5px;font-size:.92em}
+      .guide-content table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+      .guide-content th,.guide-content td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line)}
+      .guide-content th{color:var(--muted);font-weight:650}
+    </style>
+
+    <h2>A faster way to clean up and edit text</h2>
+    <p>Find and replace is one of the oldest tricks in text editing for a reason: it turns a tedious, error-prone manual scan into one click. Instead of scrolling through a document hunting for every "teh" or every outdated product name, you type the term once, type its replacement once, and every occurrence changes together — consistently, without the fatigue-driven typos that creep in when you fix things by hand one at a time.</p>
+
+    <h2>How this tool works</h2>
+    <ul>
+      <li>Paste or type your text into the box.</li>
+      <li>Type the word or phrase you want to find.</li>
+      <li>Type what you want to replace it with (leave this empty to delete every match instead).</li>
+      <li>Check the live match count and the highlighted preview — nothing changes yet at this point.</li>
+      <li>Click <strong>Replace All</strong> to apply, or adjust the options first if the preview shows matches you didn't expect.</li>
+    </ul>
+    <p>The preview updates as you type, so you always see exactly what will change before you commit to it. If a search term matches nothing, the tool says so plainly instead of leaving you guessing.</p>
+
+    <div class="example">
+      <p><strong>Example 1 — a simple word swap.</strong> Text: "The color of the logo matches the color of the packaging." Find <code>color</code>, replace with <code>colour</code>. Result: "The colour of the logo matches the colour of the packaging." — both instances update, and the match count shows <strong>2</strong> before you apply.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 2 — Whole word only avoids partial matches.</strong> Text: "cat, category, concatenate, bobcat". Find <code>cat</code> without any options: it matches inside every one of those words (<strong>4</strong> matches total). Turn on <em>Whole word only</em> and it matches just the standalone word "cat" (<strong>1</strong> match) — "category", "concatenate" and "bobcat" are left untouched.</p>
+    </div>
+    <div class="example">
+      <p><strong>Example 3 — regex mode with capture groups.</strong> Text: "John Smith, Jane Doe". Turn on <em>Regular expression</em>, find <code>(\w+) (\w+)</code>, replace with <code>$2, $1</code>. Result: "Smith, John, Doe, Jane" — the two capture groups swap first and last name for every name in the list at once.</p>
+    </div>
+
+    <h2>Choosing the right options</h2>
+    <table>
+      <thead><tr><th>Option</th><th>What it does</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr><td>Match case</td><td>Distinguishes uppercase from lowercase</td><td>"Sun" won't match "sun" or "SUN"</td></tr>
+        <tr><td>Whole word only</td><td>Skips matches that are part of a longer word</td><td>"cat" won't match inside "category"</td></tr>
+        <tr><td>Regular expression</td><td>Treats Find as a pattern, not literal text; Replace can use <code>$1</code>, <code>$2</code> group references</td><td><code>\d{3}-\d{4}</code> matches any phone-style number</td></tr>
+      </tbody>
+    </table>
+    <p>The three options can be combined. For instance, a case-sensitive whole-word regex search is useful for renaming a specific identifier in code or configuration text without touching similarly named variables.</p>
+
+    <h2>Common uses and safe-editing tips</h2>
+    <ul>
+      <li><strong>Cleaning up pasted text:</strong> collapse repeated spaces with regex <code>\s+</code> replaced by a single space, or strip stray characters copied from a PDF or webpage.</li>
+      <li><strong>Renaming consistently:</strong> update a product name, variable name, or placeholder everywhere it appears in a draft, config file, or script snippet.</li>
+      <li><strong>Preview before you commit:</strong> always glance at the highlighted matches first — it's the fastest way to catch an overly broad search before it changes something you didn't intend.</li>
+      <li><strong>Made a mistake anyway?</strong> Click <em>Undo</em> right after applying to restore the text to the moment before that replacement.</li>
+    </ul>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_expressions" target="_blank" rel="noopener">MDN Web Docs — regular expression syntax, flags, and capture group references</a></li>
+      <li><a href="https://www.unicode.org/reports/tr18/" target="_blank" rel="noopener">Unicode Technical Standard #18 — how regular expressions should handle Unicode text</a></li>
+      <li><a href="https://www.unicode.org/reports/tr15/" target="_blank" rel="noopener">Unicode Normalization Forms — why visually identical text can fail an exact match</a></li>
+    </ul>
+  </section>
+  <!-- CONTENT:END -->
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/list-compare/"><span class="related-ico" aria-hidden="true">🔀</span><span class="related-name">Compare Two Lists</span></a><a class="related-item" href="https://tool-hub.me/lorem-ipsum-gen/"><span class="related-ico" aria-hidden="true">📄</span><span class="related-name">Lorem Ipsum Generator</span></a><a class="related-item" href="https://tool-hub.me/morse-code-translator/"><span class="related-ico" aria-hidden="true">📡</span><span class="related-name">Morse Code Translator</span></a><a class="related-item" href="https://tool-hub.me/number-to-words/"><span class="related-ico" aria-hidden="true">✍️</span><span class="related-name">Number to Words Converter</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START — builder agent fills 3-5 SEO-relevant Q&A.
+         각 summary/p 에 data-i18n="faq.qN|faq.aN" 을 달고 locales.js 전 언어에 채운다. -->
+    <details>
+      <summary data-i18n="faq.q1">How do I find and replace text online for free?</summary>
+      <p data-i18n="faq.a1">Paste or type your text into the box, enter the word or phrase you want to find, and type what you want in its place, then click "Replace All". For example, searching for "color" and replacing with "colour" across a paragraph updates every instance at once. The live preview highlights every match before you apply anything, so you can check exactly what will change first. Everything runs locally in your browser — nothing is uploaded.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q2">What's the difference between Match case and Whole word only?</summary>
+      <p data-i18n="faq.a2">Match case makes the search distinguish uppercase from lowercase, so searching for "Log" with Match case on will not touch "log" or "LOG". Whole word only stops partial matches inside longer words — searching for "cat" normally also matches the "cat" inside "category" or "concatenate", but with Whole word only turned on it matches just the standalone word "cat". You can combine both options at once for a precise, case-exact, whole-word search.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q3">How does regex mode work, and what happens if my pattern is invalid?</summary>
+      <p data-i18n="faq.a3">Turning on Regular expression treats the Find field as a JavaScript regular expression instead of plain text, so patterns like \d+ (one or more digits) or colou?r (matches both spellings) become usable, and $1-style references in Replace with reuse captured groups. If the pattern is invalid — for example an unmatched parenthesis — the tool shows the exact error message instead of silently failing, and the Replace All button is disabled until the pattern is fixed.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q4">Can I undo a find and replace after applying it?</summary>
+      <p data-i18n="faq.a4">Yes. After clicking Replace All, an Undo button appears that restores the text exactly as it was one step back. The tool keeps a single level of undo — enough to recover from an unwanted replacement — but it doesn't keep a longer history, so it's still worth checking the highlighted preview before applying if you want to be extra careful.</p>
+    </details>
+    <details>
+      <summary data-i18n="faq.q5">Is my text uploaded to a server when I use this tool?</summary>
+      <p data-i18n="faq.a5">No. Find and Replace Text runs entirely in your browser using standard JavaScript string and regular-expression functions — your text, find term, and replacement never leave your device and nothing is stored on a server. The only place anything is saved is your own browser's local storage, so you can close the tab and come back to your last text later.</p>
+    </details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>

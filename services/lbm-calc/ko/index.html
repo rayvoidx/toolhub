@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<!-- Google Consent Mode v2 default (must run before the Google tag) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+
+  // Regulated regions (EEA + UK + Switzerland): deny by default until the
+  // Google-certified CMP updates consent. wait_for_update lets the async CMP
+  // respond before tags fire.
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'wait_for_update': 500,
+    'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH']
+  });
+  // Every other region: granted by default.
+  gtag('consent', 'default', {
+    'ad_storage': 'granted',
+    'ad_user_data': 'granted',
+    'ad_personalization': 'granted',
+    'analytics_storage': 'granted'
+  });
+  // Advanced consent mode: redact ad identifiers when ad_storage is denied,
+  // and pass ad-click / session IDs through URLs when cookies are unavailable.
+  gtag('set', 'ads_data_redaction', true);
+  gtag('set', 'url_passthrough', true);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TFBT774X');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="script-src 'self' https://www.googletagmanager.com https://pagead2.googlesyndication.com https://static.cloudflareinsights.com https://*.adtrafficquality.google https://googleads.g.doubleclick.net 'sha256-c6h3L0hxAUKqMQfikAZU5ZnocQ7pJVTc6n8QfarY6J8=' 'sha256-VRhSKcbs3TbZyzPehEmfB5HycQ5LWE36z87OSzii1v8=' 'sha256-nRnhsPyZDaYgY32RUFlX+jyUUlDDtuMjsQo4PWhSh6Y=' 'sha256-JmJ4rBw09yZx/70MvikRAud3quA1cWvSgJEOQtIU9E8=' 'sha256-OQhwgTgfm+w7C6NqvXCOvJXsMExcqQ3Yz6QqqkzxziI='; default-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://open.er-api.com https://api.frankfurter.dev https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net https://*.adtrafficquality.google; img-src 'self' data: https:; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-src https://www.googletagmanager.com https://td.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com https://*.adtrafficquality.google; object-src 'none'; base-uri 'self'">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제지방량 계산기 — LBM·체지방 제외 체중</title>
+<meta name="description" content="키·체중·성별로 Boer, James, Hume 공식의 제지방량을 계산하고, 체지방률을 알면 직접 계산법으로 정확한 LBM을 확인하세요.">
+<meta name="keywords" content="lean body mass calculator, lbm calculator, lean mass formula, fat free mass, boer formula, james formula, hume formula, fat free mass calculator">
+<link rel="canonical" href="https://tool-hub.me/lbm-calc/ko/">
+<link rel="alternate" hreflang="x-default" href="https://tool-hub.me/lbm-calc/">
+<link rel="alternate" hreflang="en" href="https://tool-hub.me/lbm-calc/">
+<link rel="alternate" hreflang="ko" href="https://tool-hub.me/lbm-calc/ko/">
+<link rel="alternate" hreflang="ja" href="https://tool-hub.me/lbm-calc/?lang=ja">
+<link rel="alternate" hreflang="zh" href="https://tool-hub.me/lbm-calc/?lang=zh">
+<link rel="alternate" hreflang="es" href="https://tool-hub.me/lbm-calc/?lang=es">
+<link rel="alternate" hreflang="fr" href="https://tool-hub.me/lbm-calc/?lang=fr">
+<link rel="alternate" hreflang="de" href="https://tool-hub.me/lbm-calc/?lang=de">
+<link rel="alternate" hreflang="pt" href="https://tool-hub.me/lbm-calc/?lang=pt">
+<link rel="alternate" hreflang="ru" href="https://tool-hub.me/lbm-calc/?lang=ru">
+<link rel="alternate" hreflang="ar" href="https://tool-hub.me/lbm-calc/?lang=ar">
+<link rel="alternate" hreflang="hi" href="https://tool-hub.me/lbm-calc/?lang=hi">
+<link rel="alternate" hreflang="bn" href="https://tool-hub.me/lbm-calc/?lang=bn">
+<link rel="alternate" hreflang="id" href="https://tool-hub.me/lbm-calc/?lang=id">
+<link rel="alternate" hreflang="ur" href="https://tool-hub.me/lbm-calc/?lang=ur">
+<meta property="og:type" content="website">
+<meta property="og:title" content="제지방량 계산기 — LBM·체지방 제외 체중">
+<meta property="og:description" content="키·체중·성별로 Boer, James, Hume 공식의 제지방량을 계산하고, 체지방률을 알면 직접 계산법으로 정확한 LBM을 확인하세요.">
+<meta property="og:url" content="https://tool-hub.me/lbm-calc/ko/">
+<meta property="og:image" content="https://tool-hub.me/lbm-calc/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#9f1239">
+<link rel="icon" href="../icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icons/icon-192.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<link rel="stylesheet" href="../css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Lean Body Mass Calculator",
+  "description": "Work out your lean body mass from height, weight and sex with the Boer, James and Hume formulas, or directly from a known body fat percentage.",
+  "url": "https://tool-hub.me/lbm-calc/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0"
+  },
+  "datePublished": "2026-08-01",
+  "dateModified": "2026-08-16"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Toolhub",
+      "item": "https://tool-hub.me/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Lean Body Mass Calculator",
+      "item": "https://tool-hub.me/lbm-calc/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is lean body mass the same as muscle mass?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — lean body mass is everything that is not fat: skeletal muscle plus bone, organs, skin, blood and body water. Skeletal muscle is only about half of it, so a 60 kg LBM usually means roughly 30 kg of muscle. Muscle mass is a subset of LBM, which is why gaining 2 kg of lean mass never means gaining 2 kg of pure muscle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do the three formulas disagree with each other?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each one is a regression fitted to a different group of people. Boer came from healthy adults in a renal study, James from a broad clinical sample, and Hume from hospital patients in the 1960s. When your build sits near the population average the three land within a kilogram or two; the further you are from average — very muscular, very tall, very heavy — the wider the spread."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I dose protein by lean body mass instead of body weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For anyone carrying a lot of fat, yes — fat tissue has almost no protein turnover, so scaling intake by total weight overshoots. Research on athletes in a deficit points to roughly 2.3 to 3.1 g of protein per kg of lean body mass per day to protect muscle while cutting. The same logic drives clinical dosing of drugs that clear through lean tissue."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is this compared with a DEXA scan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The formulas typically land within 2 to 3 kg of a DEXA result for average adults, and drift further for very lean, very obese or heavily muscled bodies. If you enter a measured body fat percentage the tool skips the estimate entirely and uses the direct calculation, which is only as accurate as that measurement. DEXA, and hydrostatic weighing behind it, remain the reference methods."
+      }
+    }
+  ]
+}
+</script>
+<!-- ADSENSE:START (enabled via js/config.js — paste the AdSense loader here at launch)
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6324953789479730" crossorigin="anonymous"></script>
+ADSENSE:END -->
+<style id="mobile-fit">/* 모바일 360px 오버플로 방어 (gen-mobile-fit) */
+#tool, #tool * { min-width: 0; }
+#tool { max-width: 100%; }
+#tool table { display: block; max-width: 100%; overflow-x: auto; }
+#tool pre, #tool code, #tool output, #tool .rc-val { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; }
+#tool input, #tool select, #tool textarea { max-width: 100%; box-sizing: border-box; }
+.guide-content table { display: block; max-width: 100%; overflow-x: auto; }
+main { overflow-wrap: anywhere; }
+main pre, main code { white-space: pre-wrap; overflow-wrap: anywhere; word-break: break-word; max-width: 100%; }
+</style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFBT774X"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+  <a class="brand" href="./">
+    <img src="../icons/icon.svg" alt="" width="28" height="28">
+    <span>Lean Body Mass Calculator</span>
+  </a>
+  <nav class="header-actions">
+    <a class="home-btn" href="https://tool-hub.me/" aria-label="Toolhub home" data-i18n-aria-label="nav.home" title="Toolhub home" data-i18n-title="nav.home"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></a>
+    <select id="lang-select" class="lang-select" aria-label="Language" data-i18n-aria-label="nav.language" title="Language" data-i18n-title="nav.language"></select>
+    <button id="theme-toggle" type="button" aria-label="Toggle theme" data-i18n-aria-label="nav.theme" title="Toggle theme" data-i18n-title="nav.theme">◐</button>
+    <button id="share-btn" type="button" aria-label="Share" data-i18n-aria-label="nav.share" title="Share" data-i18n-title="nav.share">↗</button>
+  </nav>
+</header>
+
+<main>
+  <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"><a href="https://tool-hub.me/">Toolhub</a><span class="crumb-sep" aria-hidden="true">›</span><a class="crumb-cat" style="--cat:#e11d48" href="https://tool-hub.me/health-calculators/">Health</a><span class="crumb-sep" aria-hidden="true">›</span><span class="crumb-cur">Lean Body Mass Calculator</span></nav>
+  <section class="hero">
+    <h1>Lean Body Mass Calculator</h1>
+    <p class="lede" data-i18n="hero.lede">Everything you are made of except fat — three published formulas plus the direct body-fat method.</p>
+  </section>
+  <!-- TOOL:START -->
+  <section class="tool-card" id="tool" aria-live="polite">
+    <style>
+      #tool .field-row { display:grid; grid-template-columns:2fr 1fr; gap:12px; align-items:end; }
+      #tool .sex-row { display:flex; gap:18px; flex-wrap:wrap; margin:4px 0 12px; }
+      #tool .sex-row label { display:inline-flex; align-items:center; gap:6px; font-weight:600; font-size:14px; margin:0; cursor:pointer; }
+      #tool .result-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin-top:14px; }
+      #tool .rcard { border:1px solid var(--line); border-radius:8px; padding:10px 12px; }
+      #tool .rcard .rc-label { font-size:13px; color:var(--muted); }
+      #tool .rcard .rc-val { font-weight:700; font-size:18px; margin-top:2px; }
+      #tool .rcard.hero-card { grid-column:1 / -1; }
+      #tool .rcard.hero-card .rc-val { font-size:26px; }
+      #tool .subtle { font-size:13px; color:var(--muted); margin-top:8px; }
+      #tool .err { color:#dc2626; font-weight:600; font-size:14px; margin-top:10px; }
+      @media(max-width:420px){ #tool .field-row { grid-template-columns:1fr; } }
+    </style>
+
+    <p id="sex-label" style="font-weight:600;font-size:14px;margin:0 0 2px;" data-i18n="tool.sex.label">Sex</p>
+    <div class="sex-row" role="radiogroup" aria-labelledby="sex-label">
+      <label><input type="radio" name="sex" value="male" checked><span data-i18n="tool.sex.male">Male</span></label>
+      <label><input type="radio" name="sex" value="female"><span data-i18n="tool.sex.female">Female</span></label>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="height" data-i18n="tool.height.label">Height</label>
+        <input type="number" id="height" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="175">
+      </div>
+      <div id="h2-wrap" hidden>
+        <label for="height2" data-i18n="tool.hunit.in">inches</label>
+        <input type="number" id="height2" inputmode="decimal" min="0" max="11" step="any" autocomplete="off" placeholder="9">
+      </div>
+      <div>
+        <label for="hunit" data-i18n="tool.hunit.cm">cm</label>
+        <select id="hunit">
+          <option value="cm" data-i18n="tool.hunit.cm">cm</option>
+          <option value="in" data-i18n="tool.hunit.in">inches</option>
+          <option value="ftin" data-i18n="tool.hunit.ftin">ft + in</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div>
+        <label for="weight" data-i18n="tool.weight.label">Weight</label>
+        <input type="number" id="weight" inputmode="decimal" min="0" step="any" autocomplete="off" placeholder="80">
+      </div>
+      <div id="w2-wrap" hidden>
+        <label for="weight2" data-i18n="tool.wunit.lb">pounds</label>
+        <input type="number" id="weight2" inputmode="decimal" min="0" max="13" step="any" autocomplete="off" placeholder="5">
+      </div>
+      <div>
+        <label for="wunit" data-i18n="tool.wunit.kg">kg</label>
+        <select id="wunit">
+          <option value="kg" data-i18n="tool.wunit.kg">kg</option>
+          <option value="lb" data-i18n="tool.wunit.lb">pounds</option>
+          <option value="stlb" data-i18n="tool.wunit.stlb">stone + lb</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="bodyfat" data-i18n="tool.bf.label">Body fat % (optional)</label>
+    <input type="number" id="bodyfat" inputmode="decimal" min="2" max="60" step="any" autocomplete="off">
+    <p class="subtle" data-i18n="tool.bf.hint">Have a DEXA, BIA or caliper reading? Enter it and the direct method becomes the headline figure.</p>
+
+    <button type="button" id="calc-btn" class="primary" data-i18n="tool.calc">Calculate LBM</button>
+
+    <div id="result" hidden>
+      <div class="result-cards">
+        <div class="rcard hero-card">
+          <div class="rc-label" data-i18n="tool.r.lbm">Lean body mass</div>
+          <div class="rc-val" id="r-lbm">—</div>
+        </div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.method">Method used</div><div class="rc-val" id="r-method">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.fatmass">Fat mass</div><div class="rc-val" id="r-fat">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.pct">LBM share of weight</div><div class="rc-val" id="r-pct">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.boer">Boer</div><div class="rc-val" id="r-boer">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.james">James</div><div class="rc-val" id="r-james">—</div></div>
+        <div class="rcard"><div class="rc-label" data-i18n="tool.r.hume">Hume</div><div class="rc-val" id="r-hume">—</div></div>
+      </div>
+    </div>
+    <p class="err" id="err" hidden></p>
+    <p class="subtle" data-i18n="tool.note.method" style="margin-top:12px;">Estimates for healthy adults. When tracking change over time, stick to one method — a DEXA scan stays the reference standard.</p>
+  </section>
+  <!-- TOOL:END -->
+
+  <section class="guide-content">
+    <h2>What lean body mass actually is</h2>
+    <p>Lean body mass (LBM), also called fat-free mass, is your total body weight minus all of your fat. It bundles together skeletal muscle, bone, organs, skin, blood and the large volume of water your body carries. Because almost everything metabolically active lives inside that fraction, LBM is what drives your resting energy expenditure, how much protein you can usefully absorb, and how quickly your body clears many medications. Two people can weigh exactly the same 80 kg and differ by 15 kg of lean mass, which is why the scale on its own tells you very little.</p>
+    <p>There are two honest ways to get the number. If you have a measured body fat percentage from a DEXA scan, a bioimpedance device or skinfold calipers, LBM is simple arithmetic: weight multiplied by (1 minus body fat divided by 100). If you do not, you fall back on a regression formula that predicts LBM from height, weight and sex. This calculator does both, and shows all three of the classic formulas side by side so you can see how much the estimate depends on which one you pick.</p>
+
+    <h3>Worked example: a man at 175 cm and 80 kg</h3>
+    <p><strong>Boer (1984):</strong> LBM = 0.407 &times; 80 + 0.267 &times; 175 &minus; 19.2 = 32.56 + 46.73 &minus; 19.2 = <strong>60.1 kg</strong> (132.5 lb).</p>
+    <p><strong>James (1976):</strong> LBM = 1.1 &times; 80 &minus; 128 &times; (80/175)&sup2; = 88 &minus; 128 &times; 0.2090 = 88 &minus; 26.75 = <strong>61.3 kg</strong> (135.0 lb).</p>
+    <p><strong>Hume (1966):</strong> LBM = 0.32810 &times; 80 + 0.33929 &times; 175 &minus; 29.5336 = 26.25 + 59.38 &minus; 29.53 = <strong>56.1 kg</strong> (123.7 lb).</p>
+    <p>The spread is 5.2 kg, or roughly nine percent. That is normal, and it is the single most important thing to understand about these formulas: they are population averages, not measurements of you.</p>
+
+    <h3>The same man with a measured body fat percentage</h3>
+    <p>Now suppose a DEXA scan puts him at 18 percent body fat. The direct calculation gives LBM = 80 &times; (1 &minus; 0.18) = <strong>65.6 kg</strong>, with 14.4 kg of fat mass and an LBM share of 82 percent. Every formula underestimated him, because at 175 cm and 80 kg the average person in those source populations carried more fat than he does. Run it again at 25 percent body fat and you get 80 &times; 0.75 = 60.0 kg, almost exactly the Boer prediction. The formulas are, in effect, guessing your body fat percentage for you: Boer implicitly assumes about 25 percent here. If you know better than that guess, the direct method always wins, which is why this tool promotes it to the headline whenever you supply a number.</p>
+
+    <h3>A worked example for women</h3>
+    <p>For a woman at 165 cm and 65 kg, Boer gives 0.252 &times; 65 + 0.473 &times; 165 &minus; 48.3 = 16.38 + 78.05 &minus; 48.3 = 46.1 kg of lean mass, implying 18.9 kg of fat and a body fat percentage near 29 percent. That sits inside the typical healthy range for adult women, which runs roughly 21 to 33 percent, versus about 8 to 20 percent for men. The sex coefficients exist precisely because essential fat is higher in women; using the male equation on a woman overstates lean mass by several kilograms.</p>
+
+    <h2>Which formula should you use?</h2>
+    <p>Boer is the usual default in clinical and nutrition settings and is the one this calculator features when you have no body fat reading. James applies a squared penalty term to the weight-to-height ratio, so it drifts low as BMI climbs and tends to underestimate lean mass in people with obesity. Hume, derived from hospital patients in the 1960s, generally sits below the other two for tall subjects. None of them handle very muscular bodies well: a 100 kg strength athlete at 12 percent body fat has 88 kg of lean mass, and no height-and-weight formula will ever produce that figure.</p>
+
+    <h2>Putting the number to work</h2>
+    <p>The most common use is protein. Scaling intake by total weight overshoots for anyone carrying substantial fat, because adipose tissue has almost no protein turnover. Research on lean athletes in a calorie deficit points to roughly 2.3 to 3.1 g of protein per kg of LBM per day to preserve muscle while cutting; at 60.1 kg of lean mass that is about 140 to 185 g. Resting metabolic rate formulas that use LBM, such as Katch-McArdle, are also more accurate than weight-only equations for very lean or very heavy people, and several drug classes are dosed on lean or adjusted body weight for the same reason.</p>
+    <p>The second use is tracking. A diet that drops 6 kg of scale weight but only 1 kg of lean mass went well; one that drops 6 kg with 4 kg from lean mass did not. To see that you need consistency, not precision: use the same method, the same scale, the same time of day, and compare trends over four to eight weeks rather than day to day. Hydration alone can swing a bioimpedance reading by a kilogram or more.</p>
+    <p>Finally, the limits. These are estimates for healthy adults, not for children, pregnancy, oedema, amputation or serious illness, all of which break the assumptions the regressions were fitted on. DEXA remains the practical reference standard, with hydrostatic weighing and air displacement plethysmography behind it. Treat the numbers here as a well-calibrated starting point for planning, and let a measured body composition test settle anything that actually matters.</p>
+  </section>
+
+  <section class="sources">
+    <h2 data-i18n="sources.heading">Sources &amp; further reading</h2>
+    <ul>
+      <li><a href="https://www.cdc.gov/healthyweight/" target="_blank" rel="noopener">CDC Healthy Weight — body composition, BMI limits and weight assessment basics</a></li>
+      <li><a href="https://www.niddk.nih.gov/health-information/weight-management" target="_blank" rel="noopener">NIH NIDDK Weight Management — body fat, lean tissue and evidence-based weight guidance</a></li>
+      <li><a href="https://www.acsm.org/" target="_blank" rel="noopener">American College of Sports Medicine — body composition assessment and exercise standards</a></li>
+      <li><a href="https://www.eatright.org/" target="_blank" rel="noopener">Academy of Nutrition and Dietetics — protein needs and lean-mass-based intake planning</a></li>
+    </ul>
+  </section>
+
+  <section class="ad-slot" id="ad-slot" hidden>
+    <!-- AdSense unit is injected by app.js only when config.adsense.enabled -->
+  </section>
+
+  <section id="related-tools" class="related"><h2>Related tools</h2><div class="related-grid"><a class="related-item" href="https://tool-hub.me/macro-calc/"><span class="related-ico" aria-hidden="true">🍗</span><span class="related-name">Macro Calculator</span></a><a class="related-item" href="https://tool-hub.me/nap-calc/"><span class="related-ico" aria-hidden="true">😴</span><span class="related-name">Nap Calculator</span></a><a class="related-item" href="https://tool-hub.me/one-rep-max-calc/"><span class="related-ico" aria-hidden="true">🏋</span><span class="related-name">One Rep Max Calculator</span></a><a class="related-item" href="https://tool-hub.me/ovulation-calc/"><span class="related-ico" aria-hidden="true">♀</span><span class="related-name">Ovulation Calculator</span></a></div></section>
+
+  <section class="faq" id="faq">
+    <h2 data-i18n="faq.heading">Frequently asked questions</h2>
+    <!-- FAQ:START -->
+    <details><summary data-i18n="faq.q1">Is lean body mass the same as muscle mass?</summary><p data-i18n="faq.a1">No — lean body mass is everything that is not fat: skeletal muscle plus bone, organs, skin, blood and body water. Skeletal muscle is only about half of it, so a 60 kg LBM usually means roughly 30 kg of muscle. Muscle mass is a subset of LBM, which is why gaining 2 kg of lean mass never means gaining 2 kg of pure muscle.</p></details>
+    <details><summary data-i18n="faq.q2">Why do the three formulas disagree with each other?</summary><p data-i18n="faq.a2">Each one is a regression fitted to a different group of people. Boer came from healthy adults in a renal study, James from a broad clinical sample, and Hume from hospital patients in the 1960s. When your build sits near the population average the three land within a kilogram or two; the further you are from average — very muscular, very tall, very heavy — the wider the spread.</p></details>
+    <details><summary data-i18n="faq.q3">Should I dose protein by lean body mass instead of body weight?</summary><p data-i18n="faq.a3">For anyone carrying a lot of fat, yes — fat tissue has almost no protein turnover, so scaling intake by total weight overshoots. Research on athletes in a deficit points to roughly 2.3 to 3.1 g of protein per kg of lean body mass per day to protect muscle while cutting. The same logic drives clinical dosing of drugs that clear through lean tissue.</p></details>
+    <details><summary data-i18n="faq.q4">How accurate is this compared with a DEXA scan?</summary><p data-i18n="faq.a4">The formulas typically land within 2 to 3 kg of a DEXA result for average adults, and drift further for very lean, very obese or heavily muscled bodies. If you enter a measured body fat percentage the tool skips the estimate entirely and uses the direct calculation, which is only as accurate as that measurement. DEXA, and hydrostatic weighing behind it, remain the reference methods.</p></details>
+    <!-- FAQ:END -->
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>© <span id="year"></span> Toolhub · <a href="../privacy.html" data-i18n="footer.privacy">Privacy Policy</a> · <a href="https://tool-hub.me/" data-i18n="footer.more">More tools</a> · <a href="https://github.com/rayvoidx" target="_blank" rel="noopener noreferrer" title="github.com/rayvoidx" data-i18n="footer.credit">Created by rayv</a> · <a class="coffee-link" href="https://ctee.kr/place/rayv" target="_blank" rel="noopener noreferrer" data-i18n="footer.coffee">☕ Buy me a coffee</a></p>
+</footer>
+
+<script src="../js/config.js"></script>
+<script src="../js/locales.js"></script>
+<script src="../js/i18n.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/ux.js"></script>
+<script src="../js/related.js"></script>
+</body>
+</html>
