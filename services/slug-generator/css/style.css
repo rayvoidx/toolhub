@@ -275,7 +275,9 @@ main { max-width: var(--maxw); margin: 0 auto; padding: 8px 20px 72px; }
   text-decoration: none; border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
   box-shadow: var(--shadow-card); transform: translateY(-1px);
 }
-.related-ico { font-size: 17px; }
+/* v4 아이콘 정돈 (2026-08-29) — 관련도구 이모지도 평소 차분·호버 시 원색 (홈과 일관) */
+.related-ico { font-size: 17px; filter: saturate(.72) contrast(1.02); transition: filter .18s var(--ease); }
+.related-item:hover .related-ico { filter: none; }
 
 .site-footer {
   border-top: 1px solid var(--line);

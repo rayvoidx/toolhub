@@ -336,6 +336,11 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 .guide { margin-top: 56px; }
 .guide h2 { font-size: 19px; }
 
+/* ── v4 아이콘 정돈 (2026-08-29) — 무지개 이모지 덤프 → 차분한 아이콘 시스템 ──
+   평소엔 채도를 낮춰 그리드가 조용하고 일관되게, 호버 시 원색이 피어난다(의도된 인터랙션). */
+.tool-ico, .related-ico { filter: saturate(.72) contrast(1.02); transition: filter .18s var(--ease); }
+.tool-item:hover .tool-ico, .related-item:hover .related-ico { filter: none; }
+
 /* ── v3.1 트렌드 패스 (2026-08-25) — 벤토 why·글래스 칩·프레스 피드백 ── */
 .hero h1 { font-weight: 850; }
 #why { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: none; }
