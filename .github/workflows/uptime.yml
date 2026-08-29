@@ -1,0 +1,27 @@
+# 외부 업타임 모니터 (2026-08-29) — 30분 주기 프로덕션 프로브.
+# 실패 시 GitHub 워크플로우 실패 알림 메일이 소유자에게 발송된다. 비용 0, 자격증명 0.
+name: uptime
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: probe production
+        run: |
+          set -e
+          fail=0
+          for u in \
+            https://tool-hub.me/ \
+            https://tool-hub.me/financial-calculators/ \
+            https://tool-hub.me/mortgage-calc/ \
+            https://tool-hub.me/bmi-calc/ \
+            https://tool-hub.me/json-diff/ \
+            https://tool-hub.me/sitemap.xml ; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "$u" || echo 000)
+            echo "$code $u"
+            [ "$code" = "200" ] || fail=1
+          done
+          exit $fail
