@@ -167,3 +167,18 @@
   if (primary) primary.addEventListener("click", function () { setTimeout(save, 60); });
   restore();
 })();
+
+/* err-telemetry (2026-08-27) — 프로덕션 JS 에러를 GA4 이벤트로 (개인정보 미포함, 메시지+위치만).
+   실사용 브라우저/로케일 조합의 실패를 QA 합성입력이 못 보던 사각을 메운다. CSP connect-src 에 GA 허용됨. */
+(function errTelemetry() {
+  "use strict";
+  function send(kind, msg) {
+    try { if (typeof gtag === "function") gtag("event", "js_error", { error_kind: kind, description: String(msg || "").slice(0, 150), page: location.pathname }); } catch (e) {}
+  }
+  window.addEventListener("error", function (e) {
+    send("error", (e.message || "") + " @" + ((e.filename || "").split("/").pop()) + ":" + (e.lineno || ""));
+  }, { passive: true });
+  window.addEventListener("unhandledrejection", function (e) {
+    send("promise", (e.reason && (e.reason.message || e.reason)) || "unhandledrejection");
+  }, { passive: true });
+})();

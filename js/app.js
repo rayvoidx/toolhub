@@ -98,10 +98,19 @@
   function normalize(s) {
     return (s || "").toLowerCase().trim();
   }
+  // 의도 질의 대응: 문장을 토큰으로 쪼개고 불용어를 버린 뒤, 남은 토큰이 전부 있으면 매칭.
+  // "how much protein" → [protein], "loan interest" → [loan, interest] (AND). 단일 substring 의 한계 해소.
+  var STOP = { how: 1, much: 1, many: 1, what: 1, is: 1, are: 1, to: 1, a: 1, an: 1, the: 1, my: 1, of: 1, for: 1, in: 1, on: 1, calculate: 1, calculator: 1, calc: 1, online: 1, free: 1, "": 1 };
+  function tokens(q) {
+    var raw = q.split(/[^a-z0-9가-힣]+/), out = [];
+    for (var i = 0; i < raw.length; i++) if (raw[i] && !STOP[raw[i]]) out.push(raw[i]);
+    return out.length ? out : raw.filter(Boolean); // 전부 불용어면 원문 토큰으로 폴백
+  }
 
   function filterCards() {
     if (!searchEl || !listEl) return; // 카드 목록이 없는 상태에서도 조용히 실패하지 않음
     var query = normalize(searchEl.value);
+    var toks = query ? tokens(query) : [];
     var cards = listEl.querySelectorAll(".tool-item");
     var visibleCount = 0;
 
@@ -109,7 +118,8 @@
       var card = cards[i];
       // data-name(영·한 키워드) + 화면에 표시된 현재 언어 텍스트 둘 다 검색 대상 — 어느 언어로 검색해도 매칭
       var haystack = normalize((card.getAttribute("data-name") || "") + " " + card.textContent);
-      var match = query === "" || haystack.indexOf(query) !== -1;
+      var match = true;
+      for (var k = 0; k < toks.length; k++) if (haystack.indexOf(toks[k]) === -1) { match = false; break; }
       card.hidden = !match;
       if (match) visibleCount++;
     }
